@@ -19,11 +19,11 @@ Per inviare i dati del segmento a Oracle Eloqua, è innanzitutto necessario [col
 
 ## Connetti alla destinazione {#connect-destination}
 
-1. In **[!UICONTROL Connessioni > Destinazioni]**, selezionare Oracle Eloqua, quindi selezionare la destinazione **[!UICONTROL di]** Connect.
+1. In **[!UICONTROL Connections > Destinations]**, selezionare Oracle Eloqua, quindi **[!UICONTROL Connect destination]**.
 
    ![Connetti a Eloqua](/help/rtcdp/destinations/assets/connect-oracle-eloqua.png)
 
-1. Nella procedura guidata di destinazione di Connect, selezionate il tipo **[!UICONTROL di]** connessione per il percorso di memorizzazione. Per Oracle Eloqua, è possibile scegliere tra **SFTP con password** e **SFTP con chiave** SSH. Compila le informazioni riportate di seguito, a seconda del tipo di connessione, e seleziona **[!UICONTROL Connect]**.
+1. Nella procedura guidata di destinazione di Connect, selezionate il percorso **[!UICONTROL Connection type]** di memorizzazione. Per Oracle Eloqua, è possibile scegliere tra **SFTP con password** e **SFTP con chiave** SSH. Compila le informazioni riportate di seguito, a seconda del tipo di connessione, e seleziona **[!UICONTROL Connect]**.
 
    ![Configurare la procedura guidata Eloqua](/help/rtcdp/destinations/assets/eloqua-wizard.png)
 
