@@ -40,13 +40,13 @@ Metriche aggiuntive, ad esempio per profili e segmenti, sono disponibili in altr
 
 ### Set di dati
 
-Il contatore **[!UICONTROL Set]** dati mostra il numero di set di dati nel sistema e la quantità di dati in Piattaforma. Questo contatore viene aggiornato quando viene creato un set di dati.
+Il **[!UICONTROL Datasets]** contatore mostra il numero di set di dati nel sistema e la quantità di dati in Piattaforma. Questo contatore viene aggiornato quando viene creato un set di dati.
 
 Per ulteriori informazioni sui set di dati, consulta [Acquisire dati in Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
 
 ### Profili
 
-Il conteggio **[!UICONTROL dei profili]** mostra il numero totale di persone con profili nel profilo cliente in tempo reale. Non include frammenti di profilo. Questa è la tua audience completa indirizzabile.
+Il **[!UICONTROL Profiles]** conteggio mostra il numero totale di persone con profili nel profilo cliente in tempo reale. Non include frammenti di profilo. Questa è la tua audience completa indirizzabile.
 
 Questo conteggio utilizza il criterio [di](profile/merge-policies.md) unione predefinito impostato nella configurazione del criterio di unione nel profilo unificato.
 
@@ -56,13 +56,13 @@ Per ulteriori informazioni sui profili, consulta [Una vista unificata del client
 
 ### Segmenti
 
-**[!UICONTROL Segmenti]** mostra il numero totale di segmenti creati per l&#39;organizzazione. Questo numero viene aggiornato al momento della creazione di nuovi segmenti.
+**[!UICONTROL Segments]** mostra il numero totale di segmenti creati per l&#39;organizzazione. Questo numero viene aggiornato al momento della creazione di nuovi segmenti.
 
 Per ulteriori informazioni sui segmenti, consulta Panoramica [del servizio](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)di segmentazione.
 
 ### Destinazioni
 
-**[!UICONTROL Le destinazioni]** mostrano il numero totale di destinazioni create per l&#39;organizzazione. Questo numero viene aggiornato al momento della creazione di nuove destinazioni.
+**[!UICONTROL Destinations]** mostra il numero totale di destinazioni create per l&#39;organizzazione. Questo numero viene aggiornato al momento della creazione di nuove destinazioni.
 
 Per ulteriori informazioni sulle destinazioni, consulta Panoramica sulle [destinazioni](destinations/destinations-overview.md).
 
@@ -102,32 +102,32 @@ The number of failed profile records is updated hourly. -->
 
 ### Set di dati recenti
 
-La scheda Set di dati **** recenti mostra i cinque set di dati più recenti creati all&#39;interno dell&#39;organizzazione. Questo elenco viene aggiornato al momento della creazione di un nuovo set di dati.
+La **[!UICONTROL Recent datasets]** scheda mostra i cinque set di dati più recenti creati all&#39;interno dell&#39;organizzazione. Questo elenco viene aggiornato al momento della creazione di un nuovo set di dati.
 
-Fare clic su un set di dati per visualizzare i dettagli dell&#39;elemento, oppure **[!UICONTROL visualizzare tutti]** per visualizzare l&#39;elenco dei set di dati. Da qui potete fare clic su una sorgente specifica per i dettagli.
+Fare clic su un dataset per visualizzare i dettagli dell&#39;elemento o **[!UICONTROL View all]** per visualizzare l&#39;elenco dei set di dati. Da qui potete fare clic su una sorgente specifica per i dettagli.
 
 Per ulteriori informazioni sui set di dati, consulta [Acquisire dati in Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
 
 ### Fonti recenti
 
-La scheda delle metriche **[!UICONTROL Origini]** recenti mostra le cinque origini più recenti create all&#39;interno dell&#39;organizzazione. Questo elenco viene aggiornato quando viene creata una nuova origine.
+La scheda **[!UICONTROL Recent sources]** metrica mostra le cinque origini più recenti create all&#39;interno dell&#39;organizzazione. Questo elenco viene aggiornato quando viene creata una nuova origine.
 
-Fate clic su un&#39;origine per visualizzare i dettagli dell&#39;elemento, oppure **[!UICONTROL visualizzate tutti]** per visualizzare l&#39;elenco delle origini. Da qui potete fare clic su una sorgente specifica per i dettagli.
+Fate clic su un&#39;origine per visualizzare i dettagli dell&#39;elemento o **[!UICONTROL View all]** per visualizzare l&#39;elenco delle origini. Da qui potete fare clic su una sorgente specifica per i dettagli.
 
 Per ulteriori informazioni sulle origini, consulta [Panoramica](sources/sources-overview.md)delle origini.
 
 ### Segmenti recenti
 
-La scheda delle metriche dei segmenti **** recenti mostra i cinque segmenti più recenti creati all&#39;interno dell&#39;organizzazione. Questo elenco viene aggiornato al momento della creazione di un nuovo segmento.
+La scheda **[!UICONTROL Recent segments]** metrica mostra i cinque segmenti più recenti creati all&#39;interno dell&#39;organizzazione. Questo elenco viene aggiornato al momento della creazione di un nuovo segmento.
 
-Fai clic su un segmento per visualizzare i dettagli dell&#39;elemento, oppure **[!UICONTROL visualizza tutti]** per visualizzare informazioni su altri segmenti.
+Fai clic su un segmento per visualizzare i dettagli dell&#39;elemento o **[!UICONTROL View all]** per visualizzare informazioni su altri segmenti.
 
 Per ulteriori informazioni sui segmenti, consulta Panoramica [del servizio](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)di segmentazione.
 
 ### Destinazioni recenti
 
-La scheda delle metriche Destinazioni **** recenti mostra le cinque destinazioni più recenti create all&#39;interno dell&#39;organizzazione. Questo elenco viene aggiornato al momento della creazione di una nuova destinazione.
+La scheda **[!UICONTROL Recent destinations]** metrica mostra le cinque destinazioni più recenti create all&#39;interno dell&#39;organizzazione. Questo elenco viene aggiornato al momento della creazione di una nuova destinazione.
 
-Fate clic su una destinazione per visualizzare i dettagli dell’elemento, oppure **[!UICONTROL visualizzate tutte]** le informazioni relative ad altre destinazioni.
+Fate clic su una destinazione per visualizzare i dettagli dell’elemento o **[!UICONTROL View all]** per visualizzare informazioni su altre destinazioni.
 
 Per ulteriori informazioni sulle destinazioni, consulta Panoramica sulle [destinazioni](destinations/destinations-overview.md).
