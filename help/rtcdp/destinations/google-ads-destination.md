@@ -4,7 +4,7 @@ seo-title: Destinazione annunci Google
 description: Google Ads, precedentemente noto come Google AdWords, è un servizio pubblicitario online che consente alle aziende di pagare per clic pubblicità tra ricerche basate su testo, display grafici, video YouTube e display mobili in-app.
 seo-description: Google Ads, precedentemente noto come Google AdWords, è un servizio pubblicitario online che consente alle aziende di pagare per clic pubblicità tra ricerche basate su testo, display grafici, video YouTube e display mobili in-app.
 translation-type: tm+mt
-source-git-commit: d42e4d60d273b08824e177f9aca0f208578ff099
+source-git-commit: 3e510c891c84fb3dc1632bd1182ef1e010ea898f
 
 ---
 
@@ -49,10 +49,10 @@ Prima di creare la destinazione Google Ads in Adobe Real-time CDP, è necessario
 ## Crea destinazione
 
 1. In **[!UICONTROL Connessioni > Destinazioni]**, seleziona Google Ads e seleziona **[!UICONTROL Crea destinazione]**.
-   ![Destinazione di Connect Google Ads](/help/rtcdp/destinations/assets/google-ads-destination.png)
+   ![Destinazione di Connect Google Ads](/help/rtcdp/destinations/assets/google-2-destination.png)
 
 2. Nella procedura guidata Crea destinazione, compila le informazioni di base per la destinazione.
-   ![Informazioni di base Google Ads](/help/rtcdp/destinations/assets/google-ads-basic-information.png)
+   ![Informazioni di base Google Ads](/help/rtcdp/destinations/assets/google-2-basic-information.png)
 * **Nome**: Compila il nome preferito per questa destinazione.
 * **Descrizione**: Facoltativo. Ad esempio, potete specificare per quale campagna state utilizzando questa destinazione.
 * **Tipo** account: AdWords è l&#39;unica opzione disponibile.
