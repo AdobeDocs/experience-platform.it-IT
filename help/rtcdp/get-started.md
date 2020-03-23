@@ -154,7 +154,7 @@ Ad esempio, per acquisire i dati CRM di Luma, filtrare il catalogo in base a *CR
 
    <!--    ![image](assets/luma-source-import.png) -->
 
-   Ad esempio, selezionare **[!UICONTROL Contatti]**. L&#39;anteprima dei dati dei contatti viene caricata automaticamente in modo da poter verificare che l&#39;aspetto sia quello previsto.
+   Ad esempio, selezionare **[!UICONTROL Contacts]**. L&#39;anteprima dei dati dei contatti viene caricata automaticamente in modo da poter verificare che l&#39;aspetto sia quello previsto.
 
    La piattaforma Adobe Experience trae molto del lavoro manuale da questo processo mappando automaticamente i campi standard allo schema di profilo Experience Data Model (XDM).
 
@@ -231,7 +231,7 @@ Dato che Sarah ha aggiunto un oggetto regalo apparente nel carrello e lo ha abba
 
 Quando hai aggiunto il segmento &quot;Regalo agli abbandonatori del carrello&quot;, puoi vedere più o meno quante persone fanno parte di questo segmento. Puoi agire su di esso e renderlo disponibile per la personalizzazione su più canali.
 
-Fate clic su **[!UICONTROL Invia a destinazioni]**.
+Fai clic su **[!UICONTROL Send to destinations]**.
 
 In Adobe Real-time CDP, Luma può agire direttamente sui segmenti di pubblico per la personalizzazione.\
 Qui vediamo tutte le destinazioni disponibili per Luma per inviare questa destinazione, sia alle soluzioni Adobe che a quelle non Adobe:
@@ -255,7 +255,7 @@ Puoi anche pianificare l’inizio o la fine del segmento in un dato momento. Il 
 >[!NOTE]
 >Se si fa clic nel campo data, il programma viene pianificato automaticamente per 90 giorni.
 
-Fate clic su **[!UICONTROL Salva]** per passare alla pagina successiva.
+Fare clic **[!UICONTROL Save]** per passare alla pagina successiva.
 
 Quando un cliente di questo pubblico effettua un acquisto, la sua appartenenza a questo pubblico viene soppressa in tempo reale. Non si qualificano più perché il loro stato è cambiato.
 
