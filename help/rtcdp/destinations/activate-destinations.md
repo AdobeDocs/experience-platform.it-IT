@@ -38,7 +38,7 @@ Per attivare i dati sulle destinazioni, è necessario aver [collegato correttame
 Per modificare i flussi di attivazione esistenti nel CDP in tempo reale, effettuate le seguenti operazioni:
 
 1. Selezionate **Destinazioni** nella barra di navigazione a sinistra, fate clic sulla scheda **Sfoglia** e fate clic sul nome della destinazione.
-2. Selezionate **[!UICONTROL Modifica attivazione]** nella barra a destra per cambiare i segmenti da inviare alla destinazione.
+2. Seleziona **[!UICONTROL Edit activation]** nella barra a destra per cambiare i segmenti da inviare alla destinazione.
 
 ## Verificare che l&#39;attivazione del segmento sia stata eseguita correttamente {#verify-activation}
 
@@ -66,6 +66,6 @@ Controllate la rispettiva destinazione pubblicitaria a cui state attivando i dat
 Per disattivare un flusso di attivazione esistente, effettuate le seguenti operazioni:
 
 1. Selezionate **Destinazioni** nella barra di navigazione a sinistra, fate clic sulla scheda **Sfoglia** e fate clic sul nome della destinazione.
-2. Fate clic sul controllo **[!UICONTROL Abilitato]** nella barra a destra per modificare lo stato del flusso di attivazione.
+2. Fate clic sul **[!UICONTROL Enabled]** controllo nella barra a destra per modificare lo stato del flusso di attivazione.
 3. Nella finestra **Aggiorna stato** flusso dati, selezionare **Conferma** per disattivare il flusso di attivazione.
 
