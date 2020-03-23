@@ -21,11 +21,11 @@ Nel flusso di destinazione di connessione, descritto nella sezione seguente, col
 
 ## Passaggio 1 - Connetti destinazione {#connect-destination}
 
-1. In **[!UICONTROL Connessioni > Destinazioni]**, seleziona la destinazione di e-mail marketing a cui vuoi connetterti, quindi seleziona la destinazione **[!UICONTROL di]** Connect.
+1. In **[!UICONTROL Connections > Destinations]**, seleziona la destinazione di e-mail marketing a cui vuoi connetterti, quindi seleziona **[!UICONTROL Connect destination]**.
 
    ![Connetti alla destinazione](/help/rtcdp/destinations/assets/connect-destination.png)
 
-2. Nella procedura guidata di Connect, selezionate il tipo **[!UICONTROL di]** connessione per il percorso di memorizzazione. Potete scegliere tra **Amazon S3**, **SFTP con password**, **SFTP con chiave** SSH. Compila le informazioni seguenti, a seconda del tipo di connessione, quindi seleziona **[!UICONTROL Connect]**.
+2. Nella procedura guidata di Connect, selezionate il percorso **[!UICONTROL Connection type]** di memorizzazione. Potete scegliere tra **Amazon S3**, **SFTP con password**, **SFTP con chiave** SSH. Compila le informazioni riportate di seguito, a seconda del tipo di connessione, quindi seleziona **[!UICONTROL Connect]**.
 
 Per le connessioni **** S3, dovete fornire il vostro ID chiave di accesso e la chiave di accesso segreta.
 
