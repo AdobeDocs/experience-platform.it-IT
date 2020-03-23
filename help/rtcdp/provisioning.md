@@ -25,4 +25,4 @@ Estensioni
 
 > [!VIDEO](https://youtu.be/ypS_CKym5NQ)
 
-Scegliere Modifica > Regole [!UICONTROL di] elaborazione per eseguire delle operazioni. Utilizza gli [!DNL Microsoft Visual Code].
+Scegliere Modifica > [!UICONTROL Processing Rules] per eseguire un&#39;operazione. Utilizza gli [!DNL Microsoft Visual Code].
