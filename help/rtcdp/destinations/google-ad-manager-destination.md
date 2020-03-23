@@ -4,7 +4,7 @@ seo-title: Destinazione Google Ad Manager
 description: 'Google Ad Manager, precedentemente noto come DoubleClick for Publishers o DoubleClick AdX, è una piattaforma di annunci pubblicitari di Google che offre agli editori i mezzi per gestire la visualizzazione degli annunci sui loro siti Web, attraverso video e nelle app mobili. '
 seo-description: 'Google Ad Manager, precedentemente noto come DoubleClick for Publishers o DoubleClick AdX, è una piattaforma di annunci pubblicitari di Google che offre agli editori i mezzi per gestire la visualizzazione degli annunci sui loro siti Web, attraverso video e nelle app mobili. '
 translation-type: tm+mt
-source-git-commit: d42e4d60d273b08824e177f9aca0f208578ff099
+source-git-commit: 3e510c891c84fb3dc1632bd1182ef1e010ea898f
 
 ---
 
@@ -46,10 +46,10 @@ Prima di creare la destinazione Google Ad Manager in Adobe Real-time CDP, è nec
 ## Crea destinazione
 
 1. In **[!UICONTROL Connessioni > Destinazioni]**, seleziona Google Ad Manager, quindi seleziona **[!UICONTROL Crea destinazione]**.
-   ![Connect, destinazione Google Ad Manager](/help/rtcdp/destinations/assets/google-ad-manager-destination.png)
+   ![Connect, destinazione Google Ad Manager](/help/rtcdp/destinations/assets/google-1-destination.png)
 
 2. Nella procedura guidata Crea destinazione, compila le informazioni di base per la destinazione.
-   ![Informazioni di base Google Ad Manager](/help/rtcdp/destinations/assets/google-ad-manager-basic-information.png)
+   ![Informazioni di base Google Ad Manager](/help/rtcdp/destinations/assets/google-1-basic-information.png)
 * **Nome**: Compila il nome preferito per questa destinazione.
 * **Descrizione**: Facoltativo. Ad esempio, potete specificare per quale campagna state utilizzando questa destinazione.
 * **Tipo** account: Selezionate un’opzione, a seconda dell’account con Google:
