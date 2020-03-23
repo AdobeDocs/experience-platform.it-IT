@@ -4,11 +4,61 @@ seo-title: Destinazione annunci Google
 description: Google Ads, precedentemente noto come Google AdWords, è un servizio pubblicitario online che consente alle aziende di pagare per clic pubblicità tra ricerche basate su testo, display grafici, video YouTube e display mobili in-app.
 seo-description: Google Ads, precedentemente noto come Google AdWords, è un servizio pubblicitario online che consente alle aziende di pagare per clic pubblicità tra ricerche basate su testo, display grafici, video YouTube e display mobili in-app.
 translation-type: tm+mt
-source-git-commit: c52905d57baaa4554c4cf3b20c8eac1066e06a41
+source-git-commit: d42e4d60d273b08824e177f9aca0f208578ff099
 
 ---
 
 
 # Destinazione annunci Google
 
-La documentazione relativa alla destinazione Google Ad Manager sarà disponibile a breve qui. Fino ad allora, si prega di vedere la nostra documentazione generale di destinazione [](/help/rtcdp/destinations/google-destination.md) Google.
+## Panoramica
+
+Google Ads, precedentemente noto come Google AdWords, è un servizio pubblicitario online che consente alle aziende di pagare per clic pubblicità tra ricerche basate su testo, display grafici, video YouTube e display mobili in-app.
+
+## Specifiche di destinazione
+
+Nota i seguenti dettagli specifici per le destinazioni Google Ads:
+
+* Puoi inviare le seguenti [identità](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md) alle destinazioni Google Ads: ID di cookie **Google, IDFA, GAID, ID Roku, ID Microsoft, ID Amazon Fire TV**.
+* I tipi di pubblico attivati vengono creati a livello di programmazione nella piattaforma Google.
+* Adobe Real-time CDP al momento non include una metrica di misurazione per convalidare l’attivazione. Per convalidare l&#39;integrazione e comprendere le dimensioni del targeting dell&#39;audience, fare riferimento ai conteggi dell&#39;audience in Google.
+
+>[!IMPORTANT]
+>
+>Se stai cercando di creare la tua prima destinazione con Google Ads e non hai attivato in passato la funzionalità [di sincronizzazione](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) ID nel servizio Experience Cloud ID (con Audience Manager o altre applicazioni), contatta Adobe Consulting o l’Assistenza clienti per abilitare la sincronizzazione ID. Se in precedenza avevate impostato le integrazioni Google in Audience Manager, le sincronizzazioni ID che avevate configurato riportano ad Adobe Real-time CDP.
+
+## Prerequisiti
+
+### Account Google Ads esistente
+
+Google ha messo in pausa tutte le nuove integrazioni Google Ads con fornitori di terze parti. Devi disporre di un&#39;integrazione esistente con Google Ads per poter eseguire i passaggi di whitelist nella sezione successiva e per creare una destinazione Google Ads in Adobe Real-time CDP.
+
+### Whitelist
+
+>[!NOTE]
+>
+>La whitelist è obbligatoria prima di configurare la prima destinazione Google Ads in Adobe Real-time CDP. Prima di creare una destinazione, verificare che il processo di whitelist descritto di seguito sia stato completato da Google.
+
+Prima di creare la destinazione Google Ads in Adobe Real-time CDP, è necessario contattare Google chiedendo che Adobe sia inserito nella lista bianca come provider di dati e che l&#39;account sia inserito nella lista bianca. Contattate Google e fornite le seguenti informazioni:
+
+* **ID** account: questo è l&#39;ID account di Adobe con Google. Per ottenere questo ID, contatta l’Assistenza clienti Adobe o il tuo rappresentante Adobe.
+* **ID** cliente: questo è l&#39;ID account cliente di Adobe con Google. Per ottenere questo ID, contatta l’Assistenza clienti Adobe o il tuo rappresentante Adobe.
+* Tipo di account: **AdWords**
+* **ID** Google AdWords: Questo è il tuo ID con Google. Il formato ID è in genere 123-456-7890.
+
+## Crea destinazione
+
+1. In **[!UICONTROL Connessioni > Destinazioni]**, seleziona Google Ads e seleziona **[!UICONTROL Crea destinazione]**.
+   ![Destinazione di Connect Google Ads](/help/rtcdp/destinations/assets/google-ads-destination.png)
+
+2. Nella procedura guidata Crea destinazione, compila le informazioni di base per la destinazione.
+   ![Informazioni di base Google Ads](/help/rtcdp/destinations/assets/google-ads-basic-information.png)
+* **Nome**: Compila il nome preferito per questa destinazione.
+* **Descrizione**: Facoltativo. Ad esempio, potete specificare per quale campagna state utilizzando questa destinazione.
+* **Tipo** account: AdWords è l&#39;unica opzione disponibile.
+* **ID** account: Compila il tuo ID account con Google Ads. Il formato ID è in genere 123-456-7890.
+
+## Attivare i segmenti su Google Ads
+
+Per istruzioni su come attivare i segmenti in Google Ads, consulta [Attivare i dati sulle destinazioni](/help/rtcdp/destinations/activate-destinations.md).
+
