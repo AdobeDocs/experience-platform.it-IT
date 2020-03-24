@@ -4,14 +4,16 @@ seo-title: Catalogo destinazioni
 description: Il Catalogo destinazioni fornisce un elenco delle destinazioni disponibili pronte per ricevere i dati. Tali destinazioni includono soluzioni Adobe, piattaforme pubblicitarie, sistemi CRM (Customer Relationship Management), piattaforme di marketing per e-mail e altro ancora.
 seo-description: Il Catalogo destinazioni fornisce un elenco delle destinazioni disponibili pronte per ricevere i dati. Tali destinazioni includono soluzioni Adobe, piattaforme pubblicitarie, sistemi CRM (Customer Relationship Management), piattaforme di marketing per e-mail e altro ancora.
 translation-type: tm+mt
-source-git-commit: b4b02913467c43d004574a1aa5cb2f793964ad1e
+source-git-commit: e66f4df13afb3c9f9ddb440ccb5e479caeef2142
 
 ---
 
 
 # Catalogo destinazioni
 
-Il Catalogo **** Destinazioni fornisce un elenco delle piattaforme di destinazione disponibili pronte per la ricezione dei dati. Queste piattaforme di destinazione includono soluzioni Adobe, piattaforme pubblicitarie, sistemi CRM (Customer Relationship Management), piattaforme di marketing per e-mail e altro ancora. Sfogliate il catalogo per determinare quali piattaforme di destinazione sono migliori per i casi di utilizzo di pubblicità e personalizzazione, quindi configurate i flussi per attivare i segmenti nelle destinazioni.
+Il Catalogo **** Destinazioni fornisce un elenco delle piattaforme di destinazione disponibili pronte per la ricezione dei dati. Queste piattaforme di destinazione includono soluzioni Adobe, piattaforme pubblicitarie, sistemi CRM (Customer Relationship Management), piattaforme di marketing per e-mail e altro ancora.
+
+Sfogliate il catalogo per determinare quali piattaforme di destinazione sono migliori per i casi di utilizzo di pubblicità e personalizzazione, quindi configurate i flussi per attivare i segmenti nelle destinazioni.
 
 ## Categorie di destinazione
 
