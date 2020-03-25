@@ -4,7 +4,7 @@ seo-title: Flusso di lavoro per destinazioni di archiviazione cloud
 description: Istruzioni per la connessione alle posizioni di archiviazione cloud
 seo-description: Istruzioni per la connessione alle posizioni di archiviazione cloud
 translation-type: tm+mt
-source-git-commit: c4f1c0a6ef4d16e5fe763826016d56506fdca5dc
+source-git-commit: 60b10aa823af55d6f38651308dc93eeb57a7fee6
 
 ---
 
@@ -32,9 +32,7 @@ Per le destinazioni Amazon S3, inserite i file **[!UICONTROL Bucket name]** e **
 
    ![Connessione alla destinazione di archiviazione cloud Amazon S3 - passaggio di autenticazione](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
 
-
-
-   <br>Per le destinazioni SFTP, inserite il **[!UICONTROL Folder path]**
+   Per le destinazioni SFTP, inserite la **[!UICONTROL Folder path]** posizione in cui verranno inviati i file.
 
    ![Connessione alla destinazione di archiviazione cloud SFTP - passaggio di autenticazione](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
 
