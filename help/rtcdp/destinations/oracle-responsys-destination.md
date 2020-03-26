@@ -4,7 +4,7 @@ seo-title: Destinazione Oracle Responsys
 description: Responsys è uno strumento di marketing e-mail aziendale per campagne di marketing multicanale offerto da Oracle per personalizzare le interazioni tra e-mail, dispositivi mobili, visualizzazione e social.
 seo-description: Responsys è uno strumento di marketing e-mail aziendale per campagne di marketing multicanale offerto da Oracle per personalizzare le interazioni tra e-mail, dispositivi mobili, visualizzazione e social.
 translation-type: tm+mt
-source-git-commit: fe56fe71c36e06f2eeed45436cb36b5a371d0484
+source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
 
 ---
 
@@ -23,21 +23,21 @@ Per inviare i dati del segmento a Oracle Responsys, è innanzitutto necessario [
 
    ![Connetti alle risposte](/help/rtcdp/destinations/assets/connect-oracle-responsys.png)
 
-1. Nel passaggio **Autenticazione** , se in precedenza avete impostato una connessione alla destinazione di archiviazione cloud, selezionate **[!UICONTROL Existing Account]** e selezionate la connessione esistente. In alternativa, potete selezionare **[!UICONTROL New Account]** di impostare una nuova connessione. Compilate le credenziali di autenticazione dell&#39;account e selezionate **[!UICONTROL Connect to destination]**. Per Oracle Responsys, è possibile scegliere tra **SFTP con password** e **SFTP con chiave** SSH. Compila le informazioni riportate di seguito, a seconda del tipo di connessione, e seleziona **[!UICONTROL Connect to destination]**.
+2. Nel passaggio **Autenticazione** , se in precedenza avete impostato una connessione alla destinazione di archiviazione cloud, selezionate **[!UICONTROL Existing Account]** e selezionate una delle connessioni esistenti. In alternativa, potete selezionare **[!UICONTROL New Account]** di impostare una nuova connessione. Compilate le credenziali di autenticazione dell&#39;account e selezionate **[!UICONTROL Connect to destination]**. Per Oracle Responsys, è possibile scegliere tra **SFTP con password** e **SFTP con chiave** SSH. Compila le informazioni riportate di seguito, a seconda del tipo di connessione, e seleziona **[!UICONTROL Connect to destination]**.
 
    Per **SFTP con connessioni con password** , dovete fornire Domain, Port, UserName e Password.
 Per **SFTP con connessioni chiavi** SSH, dovete fornire Domain, Port, Username e Chiave SSH.
 
    ![Compila le informazioni sulle risposte](/help/rtcdp/destinations/assets/responsys-authentication.png)
 
-1. Nel passaggio **Configurazione** , compila le informazioni relative alla destinazione come indicato di seguito:
+3. Nel passaggio **Configurazione** , compila le informazioni relative alla destinazione come indicato di seguito:
    * **Nome**: Scegli un nome appropriato per la tua destinazione.
    * **Descrizione**: Inserite una descrizione per la destinazione.
    * **Percorso** cartella: Specificate il percorso nel percorso di archiviazione in cui CDP in tempo reale depositerà i dati di esportazione come file CSV o delimitati da tabulazioni.
    * **Formato** file: **CSV** o **TAB_DELIMITED**. Selezionare il formato di file da esportare nel percorso di memorizzazione.
    ![Rispondi alle informazioni di base](/help/rtcdp/destinations/assets/responsys-basic-information.png)
 
-1. Fate clic su **Crea destinazioni** dopo aver compilato i campi qui sopra. La destinazione è ora connessa e puoi [attivare i segmenti](/help/rtcdp/destinations/activate-destinations.md) alla destinazione.
+4. Fate clic su **Crea destinazione** dopo aver compilato i campi qui sopra. La destinazione è ora connessa e puoi [attivare i segmenti](/help/rtcdp/destinations/activate-destinations.md) alla destinazione.
 
 ## Attributi di destinazione {#destination-attributes}
 
