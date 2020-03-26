@@ -4,7 +4,7 @@ seo-title: Destinazione SFTP
 description: Crea una connessione in uscita dal vivo al server SFTP per esportare periodicamente file di dati delimitati da Experience Platform.
 seo-description: Crea una connessione in uscita dal vivo al server SFTP per esportare periodicamente file di dati delimitati da Experience Platform.
 translation-type: tm+mt
-source-git-commit: f3c6c27b7ad07ada0df18aabe0e8503253b38342
+source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
 
 ---
 
@@ -23,7 +23,6 @@ Consulta Flusso di lavoro delle destinazioni di archiviazione [Cloud ](/help/rtc
 
 Per le destinazioni SFTP, immetti le seguenti informazioni nel flusso di lavoro di creazione della destinazione, nel passaggio **Autenticazione** :
 
-* **Host**
-* **Nome utente**
-* **Password**
-
+* **Host**: l&#39;indirizzo della posizione di archiviazione SFTP
+* **Nome utente**: il nome utente per accedere al percorso di archiviazione SFTP
+* **Password**: la password per accedere al percorso di archiviazione SFTP
