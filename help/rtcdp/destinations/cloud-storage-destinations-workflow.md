@@ -4,7 +4,7 @@ seo-title: Flusso di lavoro per destinazioni di archiviazione cloud
 description: Istruzioni per la connessione alle posizioni di archiviazione cloud
 seo-description: Istruzioni per la connessione alle posizioni di archiviazione cloud
 translation-type: tm+mt
-source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -19,7 +19,7 @@ In questa pagina viene illustrato come connettersi alle posizioni di archiviazio
 
    ![Connessione alla destinazione di archiviazione cloud](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
-2. Nel passaggio **Autenticazione** , se in precedenza avete impostato una connessione alla destinazione di archiviazione cloud, selezionate **[!UICONTROL Existing Account]** e selezionate la connessione esistente. In alternativa, potete scegliere **[!UICONTROL New Account]** di impostare una nuova connessione alla destinazione di archiviazione cloud. Compilate le credenziali di autenticazione dell&#39;account e selezionate **[!UICONTROL Connect to destination]**. Per informazioni specifiche sulle credenziali immesse nel passaggio [Autenticazione](/help/rtcdp/destinations/amazon-s3-destination.md) , vedere destinazione [Amazon S3 e destinazione](/help/rtcdp/destinations/sftp-destination.md) **** SFTP.
+2. Nel **[!UICONTROL Authentication]** passaggio, se in precedenza avete impostato una connessione alla destinazione di archiviazione cloud, selezionate **[!UICONTROL Existing Account]** e selezionate la connessione esistente. In alternativa, potete scegliere **[!UICONTROL New Account]** di impostare una nuova connessione alla destinazione di archiviazione cloud. Compilate le credenziali di autenticazione dell&#39;account e selezionate **[!UICONTROL Connect to destination]**. Per informazioni specifiche sulle credenziali immesse nel passaggio [Autenticazione](/help/rtcdp/destinations/amazon-s3-destination.md) , vedere destinazione [Amazon S3 e destinazione](/help/rtcdp/destinations/sftp-destination.md) **** SFTP.
 
    >[!NOTE]
    >
