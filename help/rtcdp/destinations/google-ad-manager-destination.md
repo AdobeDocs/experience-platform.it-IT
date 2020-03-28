@@ -4,7 +4,7 @@ seo-title: Destinazione Google Ad Manager
 description: 'Google Ad Manager, precedentemente noto come DoubleClick for Publishers o DoubleClick AdX, è una piattaforma di annunci pubblicitari di Google che offre agli editori i mezzi per gestire la visualizzazione degli annunci sui loro siti Web, attraverso video e nelle app mobili. '
 seo-description: 'Google Ad Manager, precedentemente noto come DoubleClick for Publishers o DoubleClick AdX, è una piattaforma di annunci pubblicitari di Google che offre agli editori i mezzi per gestire la visualizzazione degli annunci sui loro siti Web, attraverso video e nelle app mobili. '
 translation-type: tm+mt
-source-git-commit: 3e510c891c84fb3dc1632bd1182ef1e010ea898f
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -48,14 +48,14 @@ Prima di creare la destinazione Google Ad Manager in Adobe Real-time CDP, è nec
 1. In **[!UICONTROL Connections > Destinations]**, seleziona Google Ad Manager e seleziona **[!UICONTROL Create destination]**.
    ![Connect, destinazione Google Ad Manager](/help/rtcdp/destinations/assets/google-1-destination.png)
 
-2. Nella procedura guidata Crea destinazione, compila le informazioni di base per la destinazione.
+2. Nel flusso di lavoro Crea destinazione, compila il modulo [!UICONTROL Basic Information] per la destinazione.
    ![Informazioni di base Google Ad Manager](/help/rtcdp/destinations/assets/google-1-basic-information.png)
-* **Nome**: Compila il nome preferito per questa destinazione.
-* **Descrizione**: Facoltativo. Ad esempio, potete specificare per quale campagna state utilizzando questa destinazione.
-* **Tipo** account: Selezionate un’opzione, a seconda dell’account con Google:
+* **[!UICONTROL Name]**: Compila il nome preferito per questa destinazione.
+* **[!UICONTROL Description]**: Facoltativo. Ad esempio, potete specificare per quale campagna state utilizzando questa destinazione.
+* **[!UICONTROL Account Type]**: Selezionate un’opzione, a seconda dell’account con Google:
    * Usa `DFP by Google` per doppio clic per gli editori
    * Usa `AdX buyer` per Google AdX
-* **ID** account: Compila il tuo ID account con Google. Può trattarsi dell’ID di rete o dell’ID collegamento pubblico. In genere si tratta di un ID di otto cifre.
+* **[!UICONTROL Account ID]**: Compila il tuo ID account con Google. Può trattarsi dell’ID di rete o dell’ID collegamento pubblico. In genere si tratta di un ID di otto cifre.
 
 >[!NOTE]
 >
