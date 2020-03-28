@@ -4,7 +4,7 @@ seo-title: Adobe Campaign
 description: Adobe Campaign è un insieme di soluzioni che consentono di personalizzare e distribuire le campagne su tutti i canali online e offline.
 seo-description: Adobe Campaign è un insieme di soluzioni che consentono di personalizzare e distribuire le campagne su tutti i canali online e offline.
 translation-type: tm+mt
-source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -23,25 +23,25 @@ Per inviare i dati del segmento ad Adobe Campaign, devi prima [collegare la dest
 
    ![Connetti ad adobe campaign](/help/rtcdp/destinations/assets/connect-adobe-campaign.png)
 
-1. Nella procedura guidata di destinazione di Connect, selezionate il percorso **[!UICONTROL Connection type]** di memorizzazione. Per Adobe Campaign, puoi scegliere tra **Amazon S3**, **SFTP con password** e **SFTP con chiave** SSH. Compila le informazioni riportate di seguito, a seconda del tipo di connessione, quindi seleziona **[!UICONTROL Connect]**.
+1. Nel flusso di lavoro di destinazione di Connect, selezionate il percorso **[!UICONTROL Connection type]** di memorizzazione. Per Adobe Campaign, puoi scegliere tra **[!UICONTROL Amazon S3]**, **[!UICONTROL SFTP with Password]** e **[!UICONTROL SFTP with SSH Key]**. Compila le informazioni riportate di seguito, a seconda del tipo di connessione, quindi seleziona **[!UICONTROL Connect]**.
 
    ![Configurazione guidata campagna](/help/rtcdp/destinations/assets/adobe-campaign-wizard.png)
 
-   Per le connessioni **S3** , dovete fornire il vostro ID chiave di accesso e la chiave di accesso segreta.
-Per **SFTP con connessioni con password** , dovete fornire Domain, Port, UserName e Password.
-Per **SFTP con connessioni chiavi** SSH, dovete fornire Domain, Port, Username e Chiave SSH.
+   Per **[!UICONTROL Amazon S3]** le connessioni, dovete fornire il vostro ID chiave di accesso e la chiave di accesso segreta.
+Per **[!UICONTROL SFTP with Password]** le connessioni, dovete fornire Domain, Port, UserName e Password.
+Per **[!UICONTROL SFTP with SSH Key]** le connessioni, è necessario fornire Domain, Port, Username e SSH Key.
 
    ![Compila le informazioni sulla campagna](/help/rtcdp/destinations/assets/adobe-campaign-step2.png)
 
-1. In Informazioni **** di base, compila le informazioni relative alla tua destinazione, come indicato di seguito:
-   * **Nome**: Scegli un nome appropriato per la tua destinazione.
-   * **Descrizione**: Inserite una descrizione per la destinazione.
-   * **Nome** intervallo: *Per connessioni* S3. Immettete la posizione del bucket S3 in cui CDP in tempo reale depositerà i dati di esportazione come file CSV o delimitati da tabulazioni.
-   * **Percorso** cartella: Specificate il percorso nel percorso di archiviazione in cui CDP in tempo reale depositerà i dati di esportazione come file CSV o delimitati da tabulazioni.
-   * **Formato** file: **CSV** o **TAB_DELIMITED**. Selezionare il formato di file da esportare nel percorso di memorizzazione.
+1. In **[!UICONTROL Basic Information]**, compila le informazioni pertinenti per la tua destinazione, come mostrato di seguito:
+   * **[!UICONTROL Name]**: Scegli un nome appropriato per la tua destinazione.
+   * **[!UICONTROL Description]**: Inserite una descrizione per la destinazione.
+   * **[!UICONTROL Bucket Name]**: *Per connessioni* S3. Immettete la posizione del bucket S3 in cui CDP in tempo reale depositerà i dati di esportazione come file CSV o delimitati da tabulazioni.
+   * **[!UICONTROL Folder Path]**: Specificate il percorso nel percorso di archiviazione in cui CDP in tempo reale depositerà i dati di esportazione come file CSV o delimitati da tabulazioni.
+   * **[!UICONTROL File Format]**: **CSV** o **TAB_DELIMITED**. Selezionare il formato di file da esportare nel percorso di memorizzazione.
    ![Informazioni di base sulla campagna](/help/rtcdp/destinations/assets/adobe-campaign-basic-information.png)
 
-1. Fate clic su **Crea** dopo aver compilato i campi in Informazioni **di** base. La destinazione è ora connessa e puoi [attivare i segmenti](/help/rtcdp/destinations/activate-destinations.md) alla destinazione.
+1. Fare clic **[!UICONTROL Create]** dopo aver compilato i campi sopra. La destinazione è ora connessa e puoi [attivare i segmenti](/help/rtcdp/destinations/activate-destinations.md) alla destinazione.
 
 ## Attributi di destinazione {#destination-attributes}
 
