@@ -4,7 +4,7 @@ seo-title: Destinazione annunci Google
 description: Google Ads, precedentemente noto come Google AdWords, è un servizio pubblicitario online che consente alle aziende di pagare per clic pubblicità tra ricerche basate su testo, display grafici, video YouTube e display mobili in-app.
 seo-description: Google Ads, precedentemente noto come Google AdWords, è un servizio pubblicitario online che consente alle aziende di pagare per clic pubblicità tra ricerche basate su testo, display grafici, video YouTube e display mobili in-app.
 translation-type: tm+mt
-source-git-commit: 3e510c891c84fb3dc1632bd1182ef1e010ea898f
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -51,12 +51,12 @@ Prima di creare la destinazione Google Ads in Adobe Real-time CDP, è necessario
 1. In **[!UICONTROL Connections > Destinations]**, selezionate Google Ads, quindi **[!UICONTROL Create destination]**.
    ![Destinazione di Connect Google Ads](/help/rtcdp/destinations/assets/google-2-destination.png)
 
-2. Nella procedura guidata Crea destinazione, compila le informazioni di base per la destinazione.
+2. Nel flusso di lavoro Crea destinazione, compila il modulo [!UICONTROL Basic Information] per la destinazione.
    ![Informazioni di base Google Ads](/help/rtcdp/destinations/assets/google-2-basic-information.png)
-* **Nome**: Compila il nome preferito per questa destinazione.
-* **Descrizione**: Facoltativo. Ad esempio, potete specificare per quale campagna state utilizzando questa destinazione.
-* **Tipo** account: AdWords è l&#39;unica opzione disponibile.
-* **ID** account: Compila il tuo ID account con Google Ads. Il formato ID è in genere 123-456-7890.
+* **[!UICONTROL Name]**: Compila il nome preferito per questa destinazione.
+* **[!UICONTROL Description]**: Facoltativo. Ad esempio, potete specificare per quale campagna state utilizzando questa destinazione.
+* **[!UICONTROL Account Type]**: AdWords è l&#39;unica opzione disponibile.
+* **[!UICONTROL Account ID]**: Compila il tuo ID account con Google Ads. Il formato ID è in genere 123-456-7890.
 
 ## Attivare i segmenti su Google Ads
 
