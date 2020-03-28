@@ -4,7 +4,7 @@ seo-title: Destinazione Google Display e Video 360
 description: Display & Video 360, precedentemente noto come DoubleClick Bid Manager è uno strumento che consente di eseguire campagne di retargeting e di targeting delle audience su diverse fonti di inventario di Display, Video e Mobile.
 seo-description: 'Display & Video 360, precedentemente noto come DoubleClick Bid Manager è uno strumento che consente di eseguire campagne di retargeting e di targeting delle audience su diverse fonti di inventario di Display, Video e Mobile. '
 translation-type: tm+mt
-source-git-commit: 810028edc662a7f52484e37cf0fbdfafe5db650f
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -46,14 +46,14 @@ Prima di creare la destinazione Google Display &amp; Video 360 in Adobe Real-tim
 1. In **[!UICONTROL Connections > Destinations]**, selezionate Google Display &amp; Video 360, quindi **[!UICONTROL Create destination]**.
    ![Destinazione Google Display e Video 360 di Connect](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
-2. Nella procedura guidata Crea destinazione, compila le informazioni di base per la destinazione.
+2. Nel flusso di lavoro Crea destinazione, compila il modulo [!UICONTROL Basic Information] per la destinazione.
    ![Informazioni di base Google Display &amp; Video 360](/help/rtcdp/destinations/assets/google-dv360-basic-information.png)
-* **Nome**: Compila il nome preferito per questa destinazione.
-* **Descrizione**: Facoltativo. Ad esempio, potete specificare per quale campagna state utilizzando questa destinazione.
-* **Tipo** account: Selezionate un’opzione, a seconda dell’account con Google:
+* **[!UICONTROL Name]**: Compila il nome preferito per questa destinazione.
+* **[!UICONTROL Description]**: Facoltativo. Ad esempio, potete specificare per quale campagna state utilizzando questa destinazione.
+* **[!UICONTROL Account Type]**: Selezionate un’opzione, a seconda dell’account con Google:
    * Consente `Invite Advertiser` di condividere i tipi di pubblico solo con un marchio specifico nell&#39;account Display &amp; Video 360.
    * Consente `Invite Partner` di condividere i tipi di pubblico su tutti i marchi dell&#39;account Display &amp; Video 360.
-* **ID** account: Compila il tuo **[!DNL Invite partner]** o il tuo **[!DNL Invite advertiser]** ID account con Google. In genere si tratta di un ID di sei o sette cifre.
+* **[!UICONTROL Account ID]**: Compila il tuo **[!DNL Invite partner]** o il tuo **[!DNL Invite advertiser]** ID account con Google. In genere si tratta di un ID di sei o sette cifre.
 
 >[!NOTE]
 >
