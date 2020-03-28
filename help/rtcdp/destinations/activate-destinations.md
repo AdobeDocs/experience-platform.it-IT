@@ -4,7 +4,7 @@ seo-title: Attivare profili e segmenti su una destinazione
 description: Attiva i dati di cui disponi in Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 seo-description: Attiva i dati di cui disponi in Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 translation-type: tm+mt
-source-git-commit: 73925aa59f9981d8945fb0be6c4924e1831cf902
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -19,17 +19,17 @@ Per attivare i dati sulle destinazioni, è necessario aver [collegato correttame
 
 ## Attivare i dati {#activate-data}
 
-1. In **Destinazioni > Sfoglia**, seleziona la destinazione in cui vuoi attivare i segmenti.
+1. In **[!UICONTROL Destinations > Browse]**, seleziona la destinazione in cui vuoi attivare i segmenti.
 2. Fare clic sul nome della destinazione. Viene quindi visualizzato il flusso Activate (Attiva).
-   ![activate-flow](/help/rtcdp/destinations/assets/activate-flow.png)Si noti che se esiste già un flusso di attivazione per una destinazione, è possibile visualizzare i segmenti attualmente inviati alla destinazione. Selezionate **Modifica attivazione** nella parte destra e seguite i passaggi indicati di seguito per modificare i dettagli di attivazione.
-3. Selezionate **Attiva**;
-4. Nella procedura guidata **Attiva destinazione** , nella pagina **Seleziona segmenti** , selezionare i segmenti da inviare alla destinazione.
+   ![activate-flow](/help/rtcdp/destinations/assets/activate-flow.png)Si noti che se esiste già un flusso di attivazione per una destinazione, è possibile visualizzare i segmenti attualmente inviati alla destinazione. Selezionate **[!UICONTROL Edit activation]** nella barra a destra e seguite i passaggi descritti di seguito per modificare i dettagli di attivazione.
+3. Seleziona **[!UICONTROL Activate]**;
+4. Nel **[!UICONTROL Activate destination]** flusso di lavoro, nella **[!UICONTROL Select Segments]** pagina, seleziona i segmenti da inviare alla destinazione.
    ![segmenti-a-destinazione](/help/rtcdp/destinations/assets/select-segments.png)
-5. *Condizionale*. Questo passaggio si applica solo ai segmenti mappati a destinazioni di marketing e-mail. <br> Nella pagina Attributi **di** destinazione, selezionate **Aggiungi nuovo campo** e selezionate gli attributi che desiderate inviare alla destinazione.
+5. *Condizionale*. Questo passaggio si applica solo ai segmenti mappati a destinazioni di marketing e-mail. <br> Nella **[!UICONTROL Destination Attributes]** pagina, selezionate **[!UICONTROL Add new field]** e selezionate gli attributi che desiderate inviare alla destinazione.
 È consigliabile che uno degli attributi sia un identificatore [](/help/rtcdp/destinations/email-marketing-destinations.md#identity) univoco dello schema di unione. Per ulteriori informazioni sugli attributi obbligatori, vedi Identità nell&#39;articolo Destinazioni [di marketing](/help/rtcdp/destinations/email-marketing-destinations.md#identity) e-mail.
    ![destination-attribute](/help/rtcdp/destinations/assets/destination-attributes.png)
-6. Nella pagina **Pianificazione** è possibile visualizzare la data di inizio per l&#39;invio dei dati alla destinazione, nonché la frequenza di invio dei dati alla destinazione.
-7. Nella pagina **Revisione** potete vedere un riepilogo della selezione. Selezionare **Annulla** per interrompere il flusso, **Indietro** per modificare le impostazioni oppure **Fine** per confermare la selezione e iniziare a inviare i dati alla destinazione.
+6. Sulla **[!UICONTROL Schedule]** pagina è possibile visualizzare la data di inizio dell&#39;invio dei dati alla destinazione, nonché la frequenza dell&#39;invio dei dati alla destinazione.
+7. Nella **[!UICONTROL Review]** pagina viene visualizzato un riepilogo della selezione. Selezionare **[!UICONTROL Cancel]** per interrompere il flusso, **[!UICONTROL Back]** modificare le impostazioni o **[!UICONTROL Finish]** per confermare la selezione e iniziare a inviare i dati alla destinazione.
 
 ![conferma selezione](/help/rtcdp/destinations/assets/confirm-selection.png)
 
@@ -37,7 +37,7 @@ Per attivare i dati sulle destinazioni, è necessario aver [collegato correttame
 
 Per modificare i flussi di attivazione esistenti nel CDP in tempo reale, effettuate le seguenti operazioni:
 
-1. Selezionate **Destinazioni** nella barra di navigazione a sinistra, fate clic sulla scheda **Sfoglia** e fate clic sul nome della destinazione.
+1. Selezionate **[!UICONTROL Destinations]** nella barra di navigazione a sinistra, fate clic sulla **[!UICONTROL Browse]** scheda e quindi sul nome della destinazione.
 2. Seleziona **[!UICONTROL Edit activation]** nella barra a destra per cambiare i segmenti da inviare alla destinazione.
 
 ## Verificare che l&#39;attivazione del segmento sia stata eseguita correttamente {#verify-activation}
@@ -65,7 +65,7 @@ Controllate la rispettiva destinazione pubblicitaria a cui state attivando i dat
 
 Per disattivare un flusso di attivazione esistente, effettuate le seguenti operazioni:
 
-1. Selezionate **Destinazioni** nella barra di navigazione a sinistra, fate clic sulla scheda **Sfoglia** e fate clic sul nome della destinazione.
+1. Selezionate **[!UICONTROL Destinations]** nella barra di navigazione a sinistra, fate clic sulla **[!UICONTROL Browse]** scheda e quindi sul nome della destinazione.
 2. Fate clic sul **[!UICONTROL Enabled]** controllo nella barra a destra per modificare lo stato del flusso di attivazione.
 3. Nella finestra **Aggiorna stato** flusso dati, selezionare **Conferma** per disattivare il flusso di attivazione.
 
