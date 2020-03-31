@@ -1,0 +1,110 @@
+---
+keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics
+solution: Experience Platform
+title: Creare lo schema di vendita al dettaglio e il dataset
+topic: Tutorial
+translation-type: tm+mt
+source-git-commit: 91c7b7e285a4745da20ea146f2334510ca11b994
+
+---
+
+
+# Creare lo schema di vendita al dettaglio e il dataset
+
+Questa esercitazione fornisce i prerequisiti e le risorse richiesti per tutte le altre esercitazioni di Adobe Experience Platform Data Science Workspace. Al termine, lo schema Vendite al dettaglio e i set di dati saranno disponibili per voi e per i membri dell&#39;organizzazione IMS sulla piattaforma Experience.
+
+## Introduzione
+
+Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prerequisiti:
+- Accesso ad Adobe Experience Platform. Se non disponete dell&#39;accesso a un&#39;organizzazione IMS in Experience Platform, rivolgetevi al vostro amministratore di sistema prima di continuare.
+- Autorizzazione per effettuare chiamate API Experience Platform. Completa l’esercitazione [Authenticate e accedi all’esercitazione API](../../tutorials/authentication.md) Adobe Experience Platform per ottenere i seguenti valori al fine di completare con successo questa esercitazione:
+   - Autorizzazione: `{ACCESS_TOKEN}`
+   - x-api-key: `{API_KEY}`
+   - x-gw-ims-org-id: `{IMS_ORG}`
+   - Segreto cliente: `{CLIENT_SECRET}`
+   - Certificato client: `{PRIVATE_KEY}`
+- Dati di esempio e file sorgente per la Ricetta vendite [al dettaglio](../pre-built-recipes/retail-sales.md). Scarica le risorse necessarie per questa e altre esercitazioni di Data Science Workspace dall’archivio <a href="https://github.com/adobe/experience-platform-dsw-reference/" target="_blank">Git pubblico di</a>Adobe.
+- <a href="https://www.python.org/downloads/" target="_blank">Python >= 2.7</a> e i seguenti pacchetti Python:
+   - <a href="https://pypi.org/project/pip/" target="_blank">pip</a>
+   - <a href="https://pyyaml.org/" target="_blank">PyYAML</a>
+   - <a href="https://pypi.org/project/dictor/" target="_blank">dictor</a>
+   - <a href="https://pypi.org/project/jwt/" target="_blank">JWT</a>
+- Conoscenza approfondita dei seguenti concetti utilizzati in questa esercitazione:
+   - [Modello dati esperienza (XDM)](../../xdm/home.md)
+   - [Nozioni di base sulla composizione dello schema](../../xdm/schema/field-dictionary.md)
+
+## Crea schema vendite al dettaglio e dataset
+
+Lo schema Vendite al dettaglio e i set di dati vengono creati automaticamente utilizzando lo script di avvio fornito. Seguite i passaggi indicati di seguito nell&#39;ordine seguente:
+
+### Configurare i file
+
+1. All’interno del pacchetto di risorse per l’esercitazione Experience Platform, andate alla directory `bootstrap`e aprite `config.yaml` utilizzando un editor di testo appropriato.
+2. Nella sezione `Enterprise` immettere i seguenti valori:
+
+   ```yaml
+   Enterprise:
+       api_key: {API_KEY}
+       org_id: {IMS_ORG}
+       tech_acct: {technical_account_id}
+       client_secret: {CLIENT_SECRET}
+       priv_key_filename: {PRIVATE_KEY}
+   ```
+
+3. Modificate i valori trovati sotto la `Platform` sezione, Esempio riportato di seguito:
+
+   ```yaml
+   Platform:
+       platform_gateway: https://platform.adobe.io
+       ims_token: {ACCESS_TOKEN}
+       ingest_data: "True"
+       build_recipe_artifacts: "False"
+       kernel_type: Python
+   ```
+
+   - `platform_gateway` : Percorso di base per le chiamate API. Non modificate questo valore.
+   - `ims_token` : La tua `{ACCESS_TOKEN}` va qui.
+   - `ingest_data` : Ai fini di questa esercitazione, impostare questo valore come `"True"` per creare gli schemi di vendita al dettaglio e i set di dati. Un valore di `"False"` verrà creato solo per gli schemi.
+   - `build_recipe_artifacts` : Con questa esercitazione, impostare questo valore in modo `"False"` da impedire che lo script generi un artefatto Recipe.
+   - `kernel_type` : Il tipo di esecuzione dell&#39;artifact della ricetta. Lasciate questo valore come `Python` se `build_recipe_artifacts` fosse impostato come `"False"`, altrimenti specificate il tipo di esecuzione corretto.
+
+4. Nella sezione `Titles` , fornite le seguenti informazioni appropriate per i dati di esempio Vendite al dettaglio, salvate e chiudete il file dopo aver apportato le modifiche. Esempio riportato di seguito:
+
+   ```yaml
+   Titles:
+       input_class_title: retail_sales_input_class
+       input_mixin_title: retail_sales_input_mixin
+       input_mixin_definition_title: retail_sales_input_mixin_definition
+       input_schema_title: retail_sales_input_schema
+       input_dataset_title: retail_sales_input_dataset
+       file_replace_tenant_id: DSWRetailSalesForXDM0.9.9.9.json
+       file_with_tenant_id: DSWRetailSales_with_tenant_id.json
+       is_output_schema_different: "True"
+       output_mixin_title: retail_sales_output_mixin
+       output_mixin_definition_title: retail_sales_output_mixin_definition
+       output_schema_title: retail_sales_output_title
+       output_dataset_title: retail_sales_output_dataset
+   ```
+
+### Eseguire lo script bootstrap
+
+1. Apri l’applicazione terminale e passa alla directory delle risorse per l’esercitazione della piattaforma Experience.
+2. Impostate la `bootstrap` directory come percorso di lavoro corrente ed eseguite lo script `bootstrap.py` python immettendo il seguente comando:
+
+   ```bash
+   python bootstrap.py
+   ```
+
+   > [!NOTE] Il completamento dello script potrebbe richiedere alcuni minuti.
+
+## Passaggi successivi
+
+Al completamento dello script di avvio, gli schemi di input e output di Vendita al dettaglio e i set di dati possono essere visualizzati su Experience Platform. Per ulteriori informazioni, vedere l&#39;esercitazione [sullo schema di](./preview-schema-data.md)anteprima.
+
+Sono stati anche acquisiti con successo dati di esempio di Vendite al dettaglio in Experience Platform utilizzando lo script di avvio fornito.
+
+Per continuare a utilizzare i dati acquisiti:
+- [Analizzare i dati utilizzando i notebook Jupyter](../jupyterlab/analyze-your-data.md)
+   - Utilizza i notebook Jupyter in Data Science Workspace per accedere, esplorare, visualizzare e comprendere i tuoi dati.
+- [Creare pacchetti di file sorgente in una casella](./package-source-files-recipe.md)
+   - Segui questa esercitazione per scoprire come portare il tuo modello in Data Science Workspace creando pacchetti di file sorgente in un importante file Recipe.
