@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Valutazione di un segmento
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1e4155374b5d164fe5d955db65fe07880e246e3b
+source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
 
 ---
 
 
 # Valutazione e accesso ai risultati dei segmenti
 
-Questo documento fornisce un&#39;esercitazione per valutare i segmenti e accedere ai risultati dei segmenti utilizzando l&#39;API [Profilo cliente](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)in tempo reale.
+Questo documento fornisce un&#39;esercitazione per valutare i segmenti e accedere ai risultati dei segmenti utilizzando l&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)Segmentazione.
 
 ## Introduzione
 
@@ -92,7 +92,7 @@ curl -X POST \
 | `name` | **(Obbligatorio)** Nome della pianificazione. Deve essere una stringa. |
 | `type` | **(Obbligatorio)** Il tipo di processo in formato stringa. I tipi supportati sono `batch_segmentation` e `export`. |
 | `properties` | **(Obbligatorio)** Un oggetto contenente proprietà aggiuntive correlate alla pianificazione. |
-| `properties.segments` | **(Obbligatorio quando`type`è uguale`batch_segmentation`)** L&#39;utilizzo di `["*"]` assicura che tutti i segmenti siano inclusi. |
+| `properties.segments` | **(Obbligatorio se`type`è uguale a`batch_segmentation`)** L&#39;utilizzo di `["*"]` assicura che tutti i segmenti siano inclusi. |
 | `schedule` | **(Obbligatorio)** Una stringa contenente la pianificazione del processo. È possibile pianificare l’esecuzione dei processi solo una volta al giorno, pertanto non è possibile pianificare l’esecuzione di un processo più volte durante un periodo di 24 ore. L’esempio mostrato (`0 0 1 * * ?`) indica che il processo viene attivato ogni giorno alle 1:00:00 UTC. Per ulteriori informazioni, consulta la documentazione relativa al formato [delle espressioni](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) cron. |
 | `state` | *(Facoltativo)* Stringa contenente lo stato di pianificazione. Valori disponibili: `active` e `inactive`. Il valore predefinito è `inactive`. Un&#39;organizzazione IMS può creare una sola pianificazione. I passaggi per aggiornare la pianificazione sono disponibili più avanti in questa esercitazione. |
 
