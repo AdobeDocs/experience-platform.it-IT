@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare una ricetta utilizzando i notebook Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: a681ea832dcc4d97439c8122ba12ab97db7de9ad
+source-git-commit: 3190f2f01ae13d25cc3a3a540b83cc1fc0819f0a
 
 ---
 
@@ -495,6 +495,6 @@ Per continuare a imparare a utilizzare le risorse in Data Science Workspace, vis
 
 Il seguente video è stato progettato per consentire agli utenti di comprendere meglio come creare e implementare modelli.
 
->[!VIDEO](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-science-workspace/build-and-deploy-a-model.html)
+>[!VIDEO](https://images-tv.adobe.com/mpcv3/65884d30-94fe-47ef-8d4e-efafe5303260_1578451719.1920x1080at3000_h264.mp4)
 
 
