@@ -1,0 +1,199 @@
+---
+keywords: Experience Platform;import packaged recipe;Data Science Workspace;popular topics
+solution: Experience Platform
+title: Importare una ricetta in pacchetti (API)
+topic: Tutorial
+translation-type: tm+mt
+source-git-commit: 92dad525123d321e987de527ae6c7aab40b22bc4
+
+---
+
+
+# Importare una ricetta in pacchetti (API)
+
+Questa esercitazione utilizza l&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) Sensei Machine Learning per creare un [motore](../api/engines.md), noto anche come Ricetta nell&#39;interfaccia utente.
+
+Prima di iniziare, è importante notare che Adobe Experience Platform Data Science Workspace utilizza termini diversi per fare riferimento a elementi simili all&#39;interno dell&#39;API e dell&#39;interfaccia utente. I termini API vengono utilizzati in questa esercitazione e nella tabella seguente sono riportati i termini correlati:
+
+| Termine interfaccia utente | Termine API |
+| ---- | ---- |
+| Ricetta | [Motore](../api/engines.md) |
+| Modello | [MLInance](../api/mlinstances.md) |
+| Formazione e valutazione | [Sperimentazione](../api/experiments.md) |
+| Servizio | [MLService](../api/mlservices.md) |
+
+Un Motore contiene algoritmi di machine learning e logica per risolvere problemi specifici. Il diagramma seguente fornisce una visualizzazione del flusso di lavoro API in Data Science Workspace. Questa esercitazione si concentra sulla creazione di un Motore, il cervello di un Modello di apprendimento automatico.
+
+![](../images/models-recipes/import-package-api/engine_hierarchy_api.png)
+
+## Introduzione
+
+Questa esercitazione richiede un file Recipe compresso sotto forma di artefatto binario o URL Docker. Seguite i file sorgente del [pacchetto in un&#39;esercitazione sulla ricetta](./package-source-files-recipe.md) per creare un file Recipe in pacchetto o fornitene uno personalizzato.
+
+- Artefatto binario: L&#39;artefatto binario (ad esempio JAR, EGG) utilizzato per creare un motore.
+- `{DOCKER_URL}` : Un indirizzo URL a un&#39;immagine Docker di un servizio intelligente.
+
+Questa esercitazione richiede che sia stata completata l&#39;esercitazione [](../../tutorials/authentication.md) Autenticazione in Adobe Experience Platform per effettuare correttamente le chiamate alle API della piattaforma. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come illustrato di seguito:
+
+- `{ACCESS_TOKEN}`: Il valore del token del portatore specificato dopo l&#39;autenticazione.
+- `{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione unica con Adobe Experience Platform.
+- `{API_KEY}`: Il valore chiave API specifico trovato nella vostra integrazione unica con Adobe Experience Platform.
+
+## Creare un motore
+
+A seconda del modulo del file Recipe del pacchetto da includere come parte della richiesta API, viene creato un motore in uno dei due modi seguenti:
+- [Creare un motore con un artefatto binario](#create-an-engine-with-a-binary-artifact)
+- [Creare un motore con un URL Docker](#create-an-engine-with-a-docker-url)
+
+### Creare un motore con un artefatto binario
+
+Per creare un Motore utilizzando un artifact locale compresso `.jar` o `.egg` binario, è necessario fornire il percorso assoluto del file binario artifact nel file system locale. Prendere in considerazione la navigazione alla directory contenente l&#39;artifact binario in un ambiente Terminal ed eseguire il comando `pwd` Unix per il percorso assoluto.
+
+La seguente chiamata crea un motore con un artefatto binario:
+
+#### Formato API
+
+```http
+POST /engines
+```
+
+#### Richiesta
+
+```shell
+curl -X POST \
+    https://platform.adobe.io/data/sensei/engines \
+    -H 'Authorization: {ACCESS_TOKEN}' \
+    -H 'X-API-KEY: {API_KEY}' \
+    -H 'content-type: multipart/form-data' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -F 'engine={
+        "name": "Retail Sales Engine PySpark",
+        "description": "A description for Retail Sales Engine, this Engines execution type is PySpark",
+        "type": "PySpark"
+    }' \
+    -F 'defaultArtifact=@path/to/binary/artifact/file/pysparkretailapp-0.1.0-py3.7.egg'
+```
+
+- `engine > name` : Nome desiderato per il motore. La ricetta corrispondente a questo Motore erediterà questo valore per essere visualizzato nell&#39;interfaccia utente di Data Science Workspace come nome della Ricetta.
+- `engine > description` : Una descrizione facoltativa per il motore. La ricetta corrispondente a questo motore erediterà questo valore da visualizzare nell&#39;interfaccia utente di Data Science Workspace come descrizione della ricetta. Non rimuovere questa proprietà, lasciare che questo valore sia una stringa vuota se si sceglie di non fornire una descrizione.
+- `engine > type`: Il tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui è stato sviluppato l&#39;artefatto binario.
+
+   >[!NOTE] Quando si carica un artefatto binario per creare un motore, `type` è `Spark` o `PySpark`.
+
+- `defaultArtifact` : Percorso assoluto del file binario dell&#39;artifact utilizzato per creare il motore.
+
+   >[!NOTE] Assicurarsi di includere `@` prima del percorso del file.
+
+#### Risposta
+
+```JSON
+{
+    "id": "00000000-1111-2222-3333-abcdefghijkl",
+    "name": "Retail Sales Engine PySpark",
+    "description": "A description for Retail Sales Engine, this Engines execution type is PySpark",
+    "type": "PySpark",
+    "created": "2019-01-01T00:00:00.000Z",
+    "createdBy": {
+        "userId": "your_user_id@AdobeID"
+    },
+    "updated": "2019-01-01T00:00:00.000Z",
+    "artifacts": {
+        "default": {
+            "image": {
+                "location": "wasbs://some-storage-location.net/some-path/your-uploaded-binary-artifact.egg",
+                "name": "pysparkretailapp-0.1.0-py3.7.egg",
+                "executionType": "PySpark",
+                "packagingType": "egg"
+            }
+        }
+    }
+}
+```
+
+Una risposta corretta mostra un payload JSON con informazioni relative al motore appena creato. La `id` chiave rappresenta l’identificatore univoco del motore ed è necessaria nell’esercitazione successiva per creare un’istanza MLI. Prima di continuare con i [passaggi](#next-steps)successivi, assicurarsi di salvare l’identificatore del motore.
+
+### Creare un motore con un URL Docker
+
+Per creare un Motore con un file Recipe in pacchetto memorizzato in un contenitore Docker, dovete fornire l&#39;URL Docker al file Recipe in pacchetto.
+
+La seguente chiamata crea un motore con un URL Docker:
+
+#### Formato API
+
+```http
+POST /engines
+```
+
+#### Richiesta
+
+```shell
+curl -X POST \
+    https://platform.adobe.io/data/sensei/engines \
+    -H 'Authorization: {ACCESS_TOKEN}' \
+    -H 'X-API-KEY: {API_KEY}' \
+    -H 'content-type: multipart/form-data' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -F 'engine={
+        "name": "Retail Sales Engine Python",
+        "description": "A description for Retail Sales Engine, this Engines execution type is Python",
+        "type": "Python"
+        "artifacts": {
+            "default": {
+                "image": {
+                    "location": "{DOCKER_URL}",
+                    "name": "retail_sales_python",
+                    "executionType": "Python"
+                }
+            }
+        }
+    }' 
+```
+
+- `engine > name` : Nome desiderato per il motore. La ricetta corrispondente a questo Motore erediterà questo valore per essere visualizzato nell&#39;interfaccia utente di Data Science Workspace come nome della Ricetta.
+- `engine > description` : Una descrizione facoltativa per il motore. La ricetta corrispondente a questo motore erediterà questo valore da visualizzare nell&#39;interfaccia utente di Data Science Workspace come descrizione della ricetta. Non rimuovere questa proprietà, lasciare che questo valore sia una stringa vuota se si sceglie di non fornire una descrizione.
+- `engine > type`: Il tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui è sviluppata l&#39;immagine Docker.
+
+   >[!NOTE] Quando viene fornito un URL Docker per creare un motore, `type` è `Python`, `R`o `Tensorflow`.
+
+- `artifacts > default > image > location` : La tua `{DOCKER_URL}` va qui. Un URL Docker completo ha la struttura seguente:
+
+   ```
+   your_docker_host.azurecr.io/docker_image_file:version
+   ```
+
+- `artifacts > default > image > name` : Un nome aggiuntivo per il file immagine Docker. Non rimuovere questa proprietà, lasciare che questo valore sia una stringa vuota se si sceglie di non fornire un nome di file immagine Docker aggiuntivo.
+- `artifacts > default > image > executionType` : Il tipo di esecuzione di questo motore. Questo valore corrisponde alla lingua in cui è sviluppata l&#39;immagine Docker.
+
+   >[!NOTE] Quando viene fornito un URL Docker per creare un motore, `executionType` è `Python`, `R`o `Tensorflow`.
+
+#### Risposta
+
+```JSON
+{
+    "id": "00000000-1111-2222-3333-abcdefghijkl",
+    "name": "Retail Sales Engine Python",
+    "description": "A description for Retail Sales Engine, this Engines execution type is Python",
+    "type": "Python",
+    "created": "2019-01-01T00:00:00.000Z",
+    "createdBy": {
+        "userId": "your_user_id@AdobeID"
+    },
+    "updated": "2019-01-01T00:00:00.000Z",
+    "artifacts": {
+        "default": {
+            "image": {
+                "location": "{DOCKER_URL}",
+                "name": "retail_sales_python",
+                "executionType": "Python",
+                "packagingType": "docker"
+            }
+        }
+    }
+}
+```
+
+Una risposta corretta mostra un payload JSON con informazioni relative al motore appena creato. La `id` chiave rappresenta l’identificatore univoco del motore ed è necessaria nell’esercitazione successiva per creare un’istanza MLI. Prima di continuare con i passaggi successivi, assicurarsi che l’identificatore del motore sia salvato.
+
+## Passaggi successivi
+
+Avete creato un Motore utilizzando l&#39;API ed è stato ottenuto un identificatore univoco del Motore come parte del corpo della risposta. Potete utilizzare questo identificatore del motore nell&#39;esercitazione successiva per apprendere come [creare, formare e valutare un modello utilizzando l&#39;API](./train-evaluate-model-api.md).
