@@ -5,7 +5,7 @@ description: Questa esercitazione fornisce istruzioni sull'utilizzo dell'interfa
 seo-description: Questa esercitazione fornisce istruzioni sull'utilizzo dell'interfaccia utente (alpha) del cliente
 index: false
 translation-type: tm+mt
-source-git-commit: 1118983ce8f5704ef3a347c8c316a9cc5cc62815
+source-git-commit: e0d11adb7f0ece9344efb118b4199ecb1fc37bb3
 
 ---
 
@@ -88,7 +88,7 @@ Escludete gli eventi in base alle esigenze, quindi fate clic su **Fine** per cre
 
 Se l&#39;istanza viene creata correttamente, verrà attivata immediatamente un&#39;esecuzione di previsione e quelle successive verranno eseguite in base alla pianificazione definita.
 
->   **Nota:** A seconda della dimensione dei dati di input, l&#39;esecuzione della previsione può richiedere fino a 24 ore per essere completata.
+>[!NOTE] A seconda della dimensione dei dati di input, l&#39;esecuzione della previsione può richiedere fino a 24 ore per essere completata.
 
 Seguendo questa sezione, hai configurato un&#39;istanza dell&#39;AI cliente ed è stata eseguita un&#39;esecuzione di previsione. Al completamento dell&#39;esecuzione, le informazioni di punteggio verranno automaticamente idratate nei Profili con punteggi previsti. Attendere 24 ore prima di continuare con la sezione successiva dell&#39;esercitazione.
 
