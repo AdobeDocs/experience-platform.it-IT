@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Unioni
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: fabaabc3cc5b82cba084bddd081f5bba670b89f0
+source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
 
 ---
 
@@ -31,7 +31,7 @@ L&#39; `timeSeriesEvents` array è un elenco di eventi delle serie temporali rel
 
 ### Mappa appartenenza segmento
 
-La `segmentMembership` mappa memorizza i risultati delle valutazioni dei segmenti. Quando i processi del segmento vengono eseguiti correttamente tramite l’API [Profilo cliente in tempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)reale, la mappa viene aggiornata. `segmentMembership` memorizza inoltre tutti i segmenti di pubblico già valutati che vengono trasferiti in Piattaforma, consentendo l&#39;integrazione con altre soluzioni come Adobe Audience Manager.
+La `segmentMembership` mappa memorizza i risultati delle valutazioni dei segmenti. Quando i processi del segmento vengono eseguiti correttamente tramite l&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)Segmentazione, la mappa viene aggiornata. `segmentMembership` memorizza inoltre tutti i segmenti di pubblico già valutati che vengono trasferiti in Piattaforma, consentendo l&#39;integrazione con altre soluzioni come Adobe Audience Manager.
 
 Per ulteriori informazioni, consulta l’esercitazione sulla [creazione di segmenti tramite API](../../segmentation/tutorials/create-a-segment.md) .
 
