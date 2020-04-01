@@ -106,5 +106,5 @@ Sono stati anche acquisiti con successo dati di esempio di Vendite al dettaglio 
 Per continuare a utilizzare i dati acquisiti:
 - [Analizzare i dati utilizzando i notebook Jupyter](../jupyterlab/analyze-your-data.md)
    - Utilizza i notebook Jupyter in Data Science Workspace per accedere, esplorare, visualizzare e comprendere i tuoi dati.
-- [Creare pacchetti di file sorgente in una casella](./package-source-files-recipe.md)
+- [Creare pacchetti di file sorgente in una composizione](./package-source-files-recipe.md)
    - Segui questa esercitazione per scoprire come portare il tuo modello in Data Science Workspace creando pacchetti di file sorgente in un importante file Recipe.
