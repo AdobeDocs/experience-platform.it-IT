@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica di Analysis Workspace
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1f756e7bc71c9ff227757aee64af29e0772c24af
+source-git-commit: 3190f2f01ae13d25cc3a3a540b83cc1fc0819f0a
 
 ---
 
@@ -213,6 +213,5 @@ Per ulteriori informazioni, ad esempio un flusso di lavoro giornaliero completo,
 
 Il seguente video è stato progettato per consentire agli utenti di comprendere meglio l’area di lavoro di analisi dei dati.
 
->[!VIDEO](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-science-workspace/understanding-data-science-workspace.html)
+>[!VIDEO](https://images-tv.adobe.com/mpcv3/2fbf62c1-44ed-4162-8eed-f47ab8599701_1578435939.1920x1080at3000_h264.mp4)
 
-<!-- <a href="https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-science-workspace/understanding-data-science-workspace.html" target="_blank"><img src="images/home/understanding_data_science_workspace.png"></a> -->
