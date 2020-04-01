@@ -4,7 +4,7 @@ seo-title: Governance dei dati in tempo reale della piattaforma dati del cliente
 description: 'Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all''uso dei dati. '
 seo-description: 'Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all''uso dei dati. '
 translation-type: tm+mt
-source-git-commit: f5fbb1434b7154dcdbef12de7882ecd3d2f18d52
+source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
 
 ---
 
@@ -17,11 +17,11 @@ Adobe Experience Platform Data Governance consente di gestire i dati dei clienti
 
 CDP in tempo reale è basato su Adobe Experience Platform e pertanto la maggior parte delle funzionalità di governance dei dati è trattata nella documentazione della piattaforma. Questo documento è destinato a completare la panoramica [sulla governance dei](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) dati per Experience Platform e illustra le funzioni di governance disponibili in Real-time CDP. Vengono trattati i seguenti argomenti:
 
-* [Applicazione di etichette di utilizzo ai dati](#apply-usage-labels-to-your-data)
-* [Gestire i criteri di utilizzo dei dati](#manage-data-usage-policies)
-* [Applica conformità all&#39;utilizzo dei dati](#enforce-data-usage-compliance)
+* [Applicazione di etichette di utilizzo ai dati](#labels)
+* [Gestire i criteri di utilizzo dei dati](#policies)
+* [Applica conformità all&#39;utilizzo dei dati](#enforcement)
 
-## Applicazione di etichette di utilizzo ai dati
+## Applicazione di etichette di utilizzo ai dati {#labels}
 
 Governance dei dati consente di applicare etichette di utilizzo ai dati, a livello di dataset o di dataset. Le etichette di utilizzo dei dati consentono di classificare i dati in base ai criteri di utilizzo applicati a tali dati.
 
@@ -34,7 +34,7 @@ Puoi impostare restrizioni di utilizzo dei dati su una destinazione definendo i 
 I casi di utilizzo del marketing possono essere definiti durante la fase di _configurazione_ del flusso di lavoro _Modifica destinazione_ . Per ulteriori informazioni, consulta la documentazione di destinazione.
 
 
-## Gestire i criteri di utilizzo dei dati
+## Gestire i criteri di utilizzo dei dati {#policies}
 
 Affinché le etichette di utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario definire e abilitare i criteri di utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing consentite o con cui è consentito eseguire attività sui dati all’interno di un CDP in tempo reale. Per ulteriori informazioni, consulta la sezione &quot;Criteri di utilizzo dei dati&quot; nella panoramica [sulla governance dei](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) dati della piattaforma esperienza.
 
@@ -56,7 +56,7 @@ Quando un segmento viene attivato per la prima volta, il servizio Criteri DULE v
 * Le etichette di utilizzo dei dati applicate ai campi e ai set di dati all’interno del segmento da attivare.
 * Scopo di marketing della destinazione.
 
-### Messaggi sulle violazioni dei criteri
+### Messaggi sulle violazioni dei criteri {#enforcement}
 
 Se si verifica una violazione del criterio durante il tentativo di attivare un segmento (o di [apportare modifiche a un segmento](#policy-enforcement-for-activated-segments)già attivato), l&#39;azione viene impedita e viene visualizzato un puntatore che indica che sono stati violati uno o più criteri. Selezionate una violazione di criterio nella colonna a sinistra del puntatore per visualizzare i dettagli relativi a tale violazione.
 
