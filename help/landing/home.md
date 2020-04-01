@@ -1,43 +1,52 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Documentazione del prodotto Adobe Experience Platform
+title: Panoramica di Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 4eea32af108c8e2655639b3a2d6202d3b791b4e4
+source-git-commit: 51aa09e5eff86c480946bcf706f10864b82841d2
 
 ---
 
 
-# Adobe Experience Platform
+# Panoramica di Adobe Experience Platform
 
-![](/help/assets/platform-banner-1.png)
+>[!NOTE]
+>La documentazione di Adobe Experience Platform è stata spostata di recente. Esaminare la nuova navigazione e aggiornare eventuali segnalibri esistenti.
 
-**[La panoramica](https://www.adobe.io/apis/experienceplatform/home/overview.html)**<br/>di Adobe Experience Platform (Piattaforma esperienza Adobe Experience Platform) consente alle organizzazioni di centralizzare e standardizzare i dati e i contenuti dei clienti da qualsiasi sistema e di applicare la scienza dei dati e l&#39;apprendimento automatico per migliorare notevolmente la progettazione e la distribuzione di esperienze ricche e personalizzate.
+Adobe Experience Platform è il sistema più potente, flessibile e aperto sul mercato per la creazione e la gestione di soluzioni complete che stimolano l&#39;esperienza dei clienti. Experience Platform consente alle organizzazioni di centralizzare e standardizzare i dati e i contenuti dei clienti da qualsiasi sistema e di applicare la scienza dei dati e l&#39;apprendimento automatico per migliorare notevolmente la progettazione e la distribuzione di esperienze ricche e personalizzate.
 
-## Documenti di riferimento
-
-* **[Note sulla versione](https://www.adobe.io/apis/experienceplatform/home/services/release-notes.html#!end-user/markdown/release-notes/release-notes.md)**<br/>Ottenere informazioni sulla versione più recente e rivedere le versioni precedenti.
-
-* **[Glossario](https://www.adobe.io/apis/experienceplatform/home/services/acp-glossary.html)**<br/>Rivedi la terminologia di Adobe Experience Platform.
-
-* **[Guida](https://www.adobe.io/apis/experienceplatform/home/services/troubleshooting.html)**<br/>alla risoluzione dei problemi Informazioni su errori e risoluzioni comuni.
+Basata su API aperte, Experience Platform espone agli sviluppatori tutte le funzionalità del sistema, sostenendo la facile integrazione delle soluzioni aziendali utilizzando strumenti familiari. Experience Platform supporta inoltre i partner per creare e integrare i propri prodotti e tecnologie in base alle esigenze. Questa potenza e flessibilità rendono Experience Platform unica sul mercato. Offre ai partner, ai clienti e a una comunità di sviluppatori una base su cui costruire innovazioni che guidino The Experience Business: superare le aspettative dei clienti, offrendo un&#39;esperienza sempre migliore e completamente personalizzata grazie a una visione a 360 gradi del cliente e delle sue preferenze individuali.
 
 ## Documentazione della piattaforma di esperienze
 
-* **[La documentazione](https://www.adobe.io/apis/experienceplatform/home/services.html)**<br/>di Experience Platform sui servizi di Experience Platform consente di gestire profili, dati, privacy e altri elementi importanti per la tua attività.
+La documentazione relativa alla piattaforma di esperienze è disponibile in diversi formati per una serie di funzioni e servizi. Per ulteriori informazioni sui tipi di documentazione disponibili e per leggere brevi descrizioni di ogni servizio Piattaforma, consulta la panoramica [della documentazione relativa alla Piattaforma](documentation/overview.md)esperienza. Oppure, per iniziare subito a conoscere un servizio specifico della piattaforma, seleziona una guida dall&#39;elenco alfabetico nel menu di navigazione a sinistra.
 
-* **[Real-time Customer Data Platform](/help/rtcdp/overview.md)**<br/>Real-time CDP combina più origini dati aziendali per creare profili unificati in tempo reale che possono essere utilizzati per fornire esperienze cliente personalizzate uno-a-uno su tutti i canali e dispositivi.
+## Esercitazioni sulla piattaforma Experience
 
-* **[API Reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)**<br/>Details (Dettagli API di riferimento API) su ciascuna API della piattaforma Experience.
+Inizia subito con la piattaforma seguendo con semplicità e rapidità esercitazioni passo passo per ogni tipo di attività, dalla preparazione dei dati per l&#39;assimilazione agli algoritmi di machine learning avanzati. Queste esercitazioni sono state progettate per arricchire le informazioni presenti nella documentazione della piattaforma Experience, per garantire risultati ottimali e tenere a portata di mano i documenti durante il completamento delle esercitazioni. Per iniziare, visita le esercitazioni [della piattaforma](../tutorials/home.md) Experience.
 
-* **[Experience Platform Launch](https://docs.adobe.com/content/help/en/launch/using/overview.html)**<br/>Launch offre ai clienti un modo semplice per implementare e gestire tutti i tag di analisi, marketing e pubblicità necessari per sviluppare esperienze cliente rilevanti.
+## Documenti di riferimento e risorse
 
-* **[Experience Platform Auditor](https://docs.adobe.com/content/help/en/auditor/using/overview.html)**<br/>Auditor valuta l’implementazione di Adobe Experience Cloud e fornisce suggerimenti su come migliorarla. Auditor aiuta a ottenere più valore dai prodotti Adobe, individualmente e collettivamente.
+* [**Note sulla versione **](../release-notes/latest/latest.md)<br/>Informazioni sulla versione più recente della piattaforma Experience e sulle versioni precedenti.
 
-* **[Experience Cloud Debugger](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html)**<br/>L’estensione Adobe Experience Cloud Debugger per Chrome esamina le pagine Web e aiuta a trovare problemi con le modalità di implementazione delle soluzioni Experience Cloud.
+* [**Glossario **](glossary.md)<br/>Rivedi la terminologia di Adobe Experience Platform.
 
-<!--
+* [**Guida alla risoluzione dei problemi **](troubleshooting.md)<br/>Risolvere gli errori più comuni e le risposte alle domande frequenti.
+
+* [**Nozioni di base sulle **](api-fundamentals.md)<br/>API Scopri le nozioni di base sull&#39;utilizzo delle API della piattaforma.
+
+* [**API di riferimento **](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>Discover Experience Platform APIs, incluse intestazioni, parametri, richieste di esempio e risposte.*Questi documenti sono in hosting su Adobe I/O.*
+
+
+
+
+
+
+
+
+
+<!-- 
 ## What's New
 
 * **[Privacy management](https://helpx.adobe.com/campaign/kb/campaign-privacy.html)**<br/>
@@ -106,5 +115,4 @@ Learn more about general guidelines for mobile deliveries.
 * [Technical notes](https://helpx.adobe.com/campaign/kb/acs-article-list.html)
 
 * [Adobe Campaign Standard Implementation guide](https://helpx.adobe.com/campaign/kb/campaign-standard-implementation-guide.html)
-
--->
+ -->
