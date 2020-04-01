@@ -1,0 +1,43 @@
+---
+title: 'Note sulla versione di Adobe Experience Platform '
+description: Note sulla versione di Experience Platform, 8 aprile 2020
+doc-type: release notes
+last-update: March 4, 2020
+author: ens71067
+translation-type: tm+mt
+source-git-commit: 38acbb4a0130763fe0c565215eda7c0713e1ff6e
+
+---
+
+
+# Note sulla versione di Adobe Experience Platform
+
+## Data di rilascio: 8 aprile 2020
+
+## Controllo di accesso
+
+Experience Platform sfrutta i profili di prodotto di [Adobe Admin Console](https://adminconsole.adobe.com) per collegare gli utenti con autorizzazioni e sandbox. Le autorizzazioni controllano l&#39;accesso a diverse funzionalità della piattaforma, tra cui la modellazione dei dati, la gestione dei profili e l&#39;amministrazione della sandbox.
+
+### Funzioni chiave
+
+| Funzione | Descrizione |
+|--- | ---|
+| Autorizzazioni | In Admin Console, la scheda _Autorizzazioni_ all&#39;interno di un profilo di prodotto Piattaforma consente di personalizzare le funzionalità della piattaforma disponibili per gli utenti collegati a tale profilo. Le categorie di autorizzazioni disponibili includono: Modellazione dei dati, gestione dei dati, gestione dei profili, identità, monitoraggio dei dati, amministrazione sandbox, destinazioni, origini. |
+| Accesso alle sandbox | La scheda _Autorizzazioni_ all&#39;interno di un profilo di prodotto Piattaforma può consentire agli utenti l&#39;accesso a sandbox specifiche. Per ulteriori informazioni, consultate la sezione sulle [sandbox](#sandboxes) di seguito. |
+
+Per ulteriori informazioni, consulta la panoramica [sul controllo](../../access-control/home.md)degli accessi.
+
+## Sandbox
+
+Experience Platform è stata progettata per arricchire le applicazioni per esperienze digitali su scala globale. Le aziende spesso eseguono più applicazioni di esperienza digitale in parallelo e devono provvedere allo sviluppo, al test e all&#39;implementazione di tali applicazioni, garantendo al contempo la conformità operativa. Per rispondere a questa esigenza, Experience Platform fornisce sandbox che dividono una singola istanza della piattaforma in ambienti virtuali separati per aiutare a sviluppare e sviluppare applicazioni per esperienze digitali.
+
+### Funzioni chiave
+
+| Funzione | Descrizione |
+|--- | ---|
+| Sandbox produzione | Experience Platform fornisce un unico sandbox di produzione, che non può essere eliminato o reimpostato. |
+| Sandbox non di produzione | È possibile creare più sandbox non di produzione per una singola istanza della piattaforma, per testare le funzioni, eseguire esperimenti e creare configurazioni personalizzate senza influire sul sandbox di produzione. |
+| Switcher sandbox | Nell’interfaccia utente di Experience Platform, lo switcher sandbox nell’angolo in alto a sinistra dello schermo consente di passare dalle sandbox disponibili tramite un menu a discesa. |
+| `x-sandbox-name` header | Tutte le chiamate alle API di Experience Platform ora devono includere la nuova `x-sandbox-name` intestazione, il cui valore fa riferimento all&#39; `name` attributo della sandbox in cui avrà luogo l&#39;operazione. |
+
+Per ulteriori informazioni, consultate la panoramica sulle [sandbox](../../sandboxes/home.md).
