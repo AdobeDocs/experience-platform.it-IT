@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Accesso ai punteggi in Attribution AI
 topic: Accessing scores
 translation-type: tm+mt
-source-git-commit: 0f6424c5afbf9b23016e1c40d156f6226f853cd6
+source-git-commit: 689b4c7a96856e1167ee435a6740fed006136256
 
 ---
 
@@ -35,7 +35,7 @@ Fare clic su **Seleziona schema** nell&#39;angolo superiore destro dello schermo
 
 ![trovare uno schema](./images/download-scores/edited_snowflake_2.png)
 
-## Download dei punteggi grezzi da Snowflake
+## Download dei punteggi non elaborati
 
 Per ulteriori informazioni sui download di valutazioni non elaborate, contattate attributionai-support@adobe.com.
 
