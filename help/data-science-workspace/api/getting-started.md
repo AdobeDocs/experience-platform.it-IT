@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida per gli sviluppatori di API Sensei Machine Learning
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 9e12c8087524f692a123b3389df4fdc324c4238d
+source-git-commit: b0b44f4aaf365f58086cfa17d27fbba6ed2a2a97
 
 ---
 
@@ -37,10 +37,10 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 Dopo aver raccolto le credenziali di autenticazione richieste, potete procedere alle sezioni successive di questa guida per gli sviluppatori per le chiamate API di esempio ai seguenti gruppi di endpoint:
 
-* [Motori](engines.md)
-* [Esperimenti](experiments.md)
-* [Approfondimenti](insights.md)
-* [MLInances (Ricette)](mlinstances.md)
-* [MLServices](mlservices.md)
-* [Modelli](models.md)
-* [Appendice](appendix.md)
+* [Motori](./engines.md)
+* [Esperimenti](./experiments.md)
+* [Approfondimenti](./insights.md)
+* [MLInances (Ricette)](./mlinstances.md)
+* [MLServices](./mlservices.md)
+* [Modelli](./models.md)
+* [Appendice](./appendix.md)
