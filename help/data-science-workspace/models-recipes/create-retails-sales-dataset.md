@@ -23,12 +23,12 @@ Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prer
    - x-gw-ims-org-id: `{IMS_ORG}`
    - Segreto cliente: `{CLIENT_SECRET}`
    - Certificato client: `{PRIVATE_KEY}`
-- Dati di esempio e file sorgente per la Ricetta vendite [al dettaglio](../pre-built-recipes/retail-sales.md). Scarica le risorse necessarie per questa e altre esercitazioni di Data Science Workspace dall’archivio <a href="https://github.com/adobe/experience-platform-dsw-reference/" target="_blank">Git pubblico di</a>Adobe.
-- <a href="https://www.python.org/downloads/" target="_blank">Python >= 2.7</a> e i seguenti pacchetti Python:
-   - <a href="https://pypi.org/project/pip/" target="_blank">pip</a>
-   - <a href="https://pyyaml.org/" target="_blank">PyYAML</a>
-   - <a href="https://pypi.org/project/dictor/" target="_blank">dictor</a>
-   - <a href="https://pypi.org/project/jwt/" target="_blank">JWT</a>
+- Dati di esempio e file sorgente per la Ricetta vendite [al dettaglio](../pre-built-recipes/retail-sales.md). Scarica le risorse necessarie per questa e altre esercitazioni di Data Science Workspace dall’archivio [Git pubblico di](https://github.com/adobe/experience-platform-dsw-reference/)Adobe.
+- [Python >= 2.7](https://www.python.org/downloads/) e i seguenti pacchetti Python:
+   - [pip](https://pypi.org/project/pip/)
+   - [PyYAML](https://pyyaml.org/)
+   - [dictor](https://pypi.org/project/dictor/)
+   - [JWT](https://pypi.org/project/jwt/)
 - Conoscenza approfondita dei seguenti concetti utilizzati in questa esercitazione:
    - [Modello dati esperienza (XDM)](../../xdm/home.md)
    - [Nozioni di base sulla composizione dello schema](../../xdm/schema/field-dictionary.md)
