@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida all'interfaccia utente di Generatore di segmenti
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 91792f81a50d5752e46236d61b6ad645e3fda86c
 
 ---
 
@@ -173,6 +173,14 @@ Per abilitare le definizioni dei segmenti per lo streaming, puoi utilizzare l’
 ![](../images/segment-builder/enable-streaming-segmentation.png)
 
 Una volta attivata la segmentazione in streaming, è necessario stabilire una linea di base (si tratta dell’esecuzione iniziale dopo la quale il segmento sarà sempre aggiornato). Il sistema gestisce automaticamente la gestione della base, tuttavia ciò è possibile solo se è stata abilitata la segmentazione pianificata. Per informazioni dettagliate sull&#39;abilitazione della segmentazione pianificata, consultate [la sezione precedente in questa guida](#enable-scheduled-segmentation)utente.
+
+## DULE violazioni dei criteri
+
+>[!NOTE] Le violazioni dei criteri DULE si applicano solo se si crea un segmento assegnato a una destinazione.
+
+Dopo aver creato il segmento, il segmento verrà analizzato dalla governance dei dati per garantire che non vi siano violazioni dei criteri all&#39;interno del segmento. Per informazioni dettagliate sulle violazioni DULE e dei criteri, fare riferimento alla panoramica [delle etichette di utilizzo dei](../../data-governance/labels/overview.md)dati.
+
+![](../images/segment-builder/segment-dule-policy-violations.png)
 
 ## Passaggi successivi
 
