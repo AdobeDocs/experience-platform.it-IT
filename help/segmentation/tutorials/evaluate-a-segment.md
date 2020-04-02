@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Valutazione di un segmento
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -92,7 +92,7 @@ curl -X POST \
 | `name` | **(Obbligatorio)** Nome della pianificazione. Deve essere una stringa. |
 | `type` | **(Obbligatorio)** Il tipo di processo in formato stringa. I tipi supportati sono `batch_segmentation` e `export`. |
 | `properties` | **(Obbligatorio)** Un oggetto contenente proprietà aggiuntive correlate alla pianificazione. |
-| `properties.segments` | **(Obbligatorio se`type`è uguale a`batch_segmentation`)** L&#39;utilizzo di `["*"]` assicura che tutti i segmenti siano inclusi. |
+| `properties.segments` | **(Obbligatorio quando`type`è uguale`batch_segmentation`)** L&#39;utilizzo di `["*"]` assicura che tutti i segmenti siano inclusi. |
 | `schedule` | **(Obbligatorio)** Una stringa contenente la pianificazione del processo. È possibile pianificare l’esecuzione dei processi solo una volta al giorno, pertanto non è possibile pianificare l’esecuzione di un processo più volte durante un periodo di 24 ore. L’esempio mostrato (`0 0 1 * * ?`) indica che il processo viene attivato ogni giorno alle 1:00:00 UTC. Per ulteriori informazioni, consulta la documentazione relativa al formato [delle espressioni](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) cron. |
 | `state` | *(Facoltativo)* Stringa contenente lo stato di pianificazione. Valori disponibili: `active` e `inactive`. Il valore predefinito è `inactive`. Un&#39;organizzazione IMS può creare una sola pianificazione. I passaggi per aggiornare la pianificazione sono disponibili più avanti in questa esercitazione. |
 
@@ -951,7 +951,7 @@ curl -X GET \
 
 Una volta completata l&#39;esportazione, i dati sono disponibili all&#39;interno del Data Lake in Experience Platform. Potete quindi utilizzare l&#39;API [di accesso ai](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) dati per accedere ai dati utilizzando l&#39; `batchId` API associata all&#39;esportazione. A seconda della dimensione del segmento, i dati possono essere in blocchi e il batch può essere composto da diversi file.
 
-Per istruzioni dettagliate su come utilizzare l&#39;API di accesso ai dati per accedere e scaricare file batch, segui l&#39;esercitazione [sull&#39;accesso ai](../../data-access/api.md)dati.
+Per istruzioni dettagliate su come utilizzare l&#39;API di accesso ai dati per accedere e scaricare file batch, segui l&#39;esercitazione [sull&#39;accesso ai](../../data-access/tutorials/dataset-data.md)dati.
 
 Puoi anche accedere ai dati del segmento esportati correttamente tramite Adobe Experience Platform Query Service. Utilizzando l&#39;interfaccia utente o l&#39;API RESTful, Query Service consente di scrivere, convalidare ed eseguire query sui dati all&#39;interno del Data Lake.
 
