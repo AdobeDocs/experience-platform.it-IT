@@ -4,7 +4,7 @@ seo-title: Utilizzo dei criteri di unione nella piattaforma dati cliente in temp
 description: Utilizzo dei criteri di unione nella piattaforma dati cliente in tempo reale
 seo-description: Utilizzo dei criteri di unione nella piattaforma dati cliente in tempo reale
 translation-type: tm+mt
-source-git-commit: f23a025336875adec1f4182fee451741833a1b63
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -15,5 +15,5 @@ Basata sulla piattaforma Adobe Experience Platform, la piattaforma dati cliente 
 
 Tramite l&#39;interfaccia utente è possibile creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per l&#39;organizzazione. È inoltre possibile specificare le preferenze relative alle origini dati e determinare quali dati hanno priorità in caso di conflitto durante l&#39;unione.
 
-Per istruzioni dettagliate sull’utilizzo dei criteri di unione, puoi utilizzare l’interfaccia utente di Adobe Experience Platform seguendo l’esercitazione [sull’unione dei criteri in Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/merge_policies/create-merge-policies.md).
+Per istruzioni dettagliate sull’utilizzo dei criteri di unione, puoi utilizzare l’interfaccia utente di Adobe Experience Platform seguendo la guida [utente dei criteri di](../../profile/ui/merge-policies.md)unione.
 
