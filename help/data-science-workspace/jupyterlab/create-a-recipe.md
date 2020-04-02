@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare una ricetta utilizzando i notebook Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 3190f2f01ae13d25cc3a3a540b83cc1fc0819f0a
+source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
 
 ---
 
@@ -425,7 +425,7 @@ Tenere presente che la funzione restituisce un `metric` oggetto contenente un ar
 
 ### File Data Saver
 
-Il `datasaver.py` file contiene la `save()` funzione per salvare la previsione durante il test del punteggio. La `save()` funzione prende la previsione e utilizza le API del catalogo della piattaforma di esperienza, scrive i dati nel `scoringResultsDataSetId` `scoring.conf` file specificato.
+Il `datasaver.py` file contiene la `save()` funzione per salvare la previsione durante il test del punteggio. La `save()` funzione prende la previsione e utilizza le API del catalogo della piattaforma di esperienza, scrive i dati nel `scoringResultsDataSetId` file specificato nel `scoring.conf` file.
 
 L&#39;esempio utilizzato nella ricetta di esempio per le vendite al dettaglio è riportato di seguito. Prendete nota dell&#39;utilizzo della `DataSetWriter` libreria per scrivere dati su Platform:
 
@@ -495,6 +495,6 @@ Per continuare a imparare a utilizzare le risorse in Data Science Workspace, vis
 
 Il seguente video è stato progettato per consentire agli utenti di comprendere meglio come creare e implementare modelli.
 
->[!VIDEO](https://images-tv.adobe.com/mpcv3/65884d30-94fe-47ef-8d4e-efafe5303260_1578451719.1920x1080at3000_h264.mp4)
+>[!VIDEO](https://video.tv.adobe.com/v/30575?quality=12&enable10seconds=on&speedcontrol=on)
 
 
