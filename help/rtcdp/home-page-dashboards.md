@@ -4,7 +4,7 @@ seo-title: Pagina principale e dashboard della piattaforma dati cliente in tempo
 description: Dashboard, home page ed esperienza utente iniziale di Adobe Experience Platform
 seo-description: Dashboard, home page ed esperienza utente iniziale di Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 6c8d0757d7e7568b1976823d9c52221374e67cbb
+source-git-commit: 69692f100389abb3fdb251b9b9258421254a2494
 
 ---
 
@@ -15,7 +15,7 @@ La pagina principale Adobe Real-time Customer Data Platform (CDP in tempo reale)
 
 La pagina principale è solo uno dei punti in cui vengono visualizzate le schede metriche. Il CDP in tempo reale fornisce schede metriche per tutta l&#39;esperienza. Queste metriche ti informano sui dati, il profilo e il pubblico del segmento nel sistema.
 
-![image](assets/home2.jpg)
+![immagine](assets/home2.jpg)
 
 Se non sono presenti dati nel sistema al momento dell&#39;accesso a CDP in tempo reale, il dashboard nella pagina principale non viene visualizzato. In questo caso, la pagina principale fornisce materiale didattico per la prima esperienza utente. Quando i dati vengono raccolti, ovvero quando vengono creati <!--sources-->insiemi di dati, profili, segmenti e destinazioni e i dati fluiscono nel sistema, il dashboard si aggiorna automaticamente per visualizzare le informazioni su tali dati<!-- in metric cards-->.
 
@@ -27,14 +27,14 @@ Il dashboard è diviso in<!-- two areas.-->:
 
 * **La classifica** si trova nella parte superiore del dashboard. La classifica mostra il numero di set di dati, profili, segmenti e destinazioni nel sistema.
 
-   ![image](assets/home-leaderboard2.jpg)
+   ![immagine](assets/home-leaderboard2.jpg)
 
 <!-- * **Metric cards** display beneath the leaderboard. Metric cards show additional information, such as percentages or trends. Metric cards appear as data is collected.
     ![image](assets/home-metrics.jpg)
 Some information is shown in different ways on both the leaderboard and metric cards. -->
 * **Gli elementi** recenti elencano i cinque set di dati, le origini, i segmenti e le destinazioni più recenti aggiunti al sistema.
 
-   ![image](assets/home-recent.jpg)
+   ![immagine](assets/home-recent.jpg)
 
 Metriche aggiuntive, ad esempio per profili e segmenti, sono disponibili in altre parti della Piattaforma dati cliente in tempo reale.
 
@@ -42,7 +42,7 @@ Metriche aggiuntive, ad esempio per profili e segmenti, sono disponibili in altr
 
 Il **[!UICONTROL Datasets]** contatore mostra il numero di set di dati nel sistema e la quantità di dati in Piattaforma. Questo contatore viene aggiornato quando viene creato un set di dati.
 
-Per ulteriori informazioni sui set di dati, consulta [Acquisire dati in Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
+Per ulteriori informazioni sui set di dati, vedere la panoramica [dei](../catalog/datasets/overview.md)set di dati.
 
 ### Profili
 
@@ -58,7 +58,7 @@ Per ulteriori informazioni sui profili, consulta [Una vista unificata del client
 
 **[!UICONTROL Segments]** mostra il numero totale di segmenti creati per l&#39;organizzazione. Questo numero viene aggiornato al momento della creazione di nuovi segmenti.
 
-Per ulteriori informazioni sui segmenti, consulta Panoramica [del servizio](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)di segmentazione.
+Per ulteriori informazioni sui segmenti, consulta Panoramica [del servizio](segmentation/segmentation-overview.md)di segmentazione.
 
 ### Destinazioni
 
@@ -106,7 +106,7 @@ La **[!UICONTROL Recent datasets]** scheda mostra i cinque set di dati più rece
 
 Fare clic su un dataset per visualizzare i dettagli dell&#39;elemento o **[!UICONTROL View all]** per visualizzare l&#39;elenco dei set di dati. Da qui potete fare clic su una sorgente specifica per i dettagli.
 
-Per ulteriori informazioni sui set di dati, consulta [Acquisire dati in Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
+Per ulteriori informazioni sui set di dati, vedere la panoramica [dei](../catalog/datasets/overview.md)set di dati.
 
 ### Fonti recenti
 
@@ -122,7 +122,7 @@ La scheda **[!UICONTROL Recent segments]** metrica mostra i cinque segmenti più
 
 Fai clic su un segmento per visualizzare i dettagli dell&#39;elemento o **[!UICONTROL View all]** per visualizzare informazioni su altri segmenti.
 
-Per ulteriori informazioni sui segmenti, consulta Panoramica [del servizio](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)di segmentazione.
+Per ulteriori informazioni sui segmenti, consulta Panoramica [del servizio](segmentation/segmentation-overview.md)di segmentazione.
 
 ### Destinazioni recenti
 
