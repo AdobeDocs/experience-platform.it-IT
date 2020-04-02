@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica di Analysis Workspace
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3190f2f01ae13d25cc3a3a540b83cc1fc0819f0a
+source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
 
 ---
 
@@ -141,7 +141,7 @@ Le sandbox sono partizioni virtuali all&#39;interno di una singola istanza di Ex
 
 Al momento, Data Science Workspace presenta due limitazioni sandbox:
 
-- Le risorse di calcolo sono condivise tra le sandbox di produzione e non di produzione. L&#39;isolamento per le sandbox di produzione sarà disponibile in futuro.
+- Le risorse di calcolo sono condivise tra le sandbox di produzione e quelle non di produzione. L&#39;isolamento per le sandbox di produzione sarà disponibile in futuro.
 - I carichi di lavoro Scala/Spark e PySpark per notebook e ricette sono attualmente supportati solo nella sandbox di produzione. Il supporto per sandbox non destinate alla produzione verrà impostato in futuro.
 
 ## Data Science Workspace in azione
@@ -213,5 +213,5 @@ Per ulteriori informazioni, ad esempio un flusso di lavoro giornaliero completo,
 
 Il seguente video è stato progettato per consentire agli utenti di comprendere meglio l’area di lavoro di analisi dei dati.
 
->[!VIDEO](https://images-tv.adobe.com/mpcv3/2fbf62c1-44ed-4162-8eed-f47ab8599701_1578435939.1920x1080at3000_h264.mp4)
+>[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&amp;enable10seconds=on&amp;speedcontrol=on)
 
