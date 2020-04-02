@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creazione di un set di dati tramite le API
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -454,7 +454,7 @@ Con l’ID batch, potete utilizzare l’API di accesso ai dati per la lettura e 
 
 È inoltre possibile utilizzare l&#39;API di accesso ai dati per restituire il nome, la dimensione in byte e un collegamento per scaricare il file o la cartella.
 
-I passaggi dettagliati per l&#39;utilizzo dell&#39;API Data Access sono disponibili nella guida [per gli sviluppatori](../../data-access/api.md)Data Access.
+I passaggi dettagliati per l&#39;utilizzo dell&#39;API Data Access sono disponibili nella guida [per gli sviluppatori](../../data-access/home.md)Data Access.
 
 ## Aggiornare lo schema del set di dati
 
