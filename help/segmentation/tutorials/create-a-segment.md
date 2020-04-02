@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creazione di un segmento
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -53,7 +53,7 @@ Il primo passo nella segmentazione consiste nel definire un segmento, rappresent
 
 Puoi creare una nuova definizione del segmento effettuando una richiesta POST all’ `/segment/definitions` endpoint nell’API Profilo cliente in tempo reale. L&#39;esempio seguente illustra come formattare una richiesta di definizione, incluse le informazioni necessarie per definire correttamente un segmento.
 
-Le definizioni dei segmenti possono essere valutate in due modi: segmentazione batch e segmentazione in streaming. La segmentazione in batch valuta i segmenti in base a una pianificazione preimpostata o quando la valutazione viene attivata manualmente, mentre la segmentazione in streaming valuta i segmenti non appena i dati vengono acquisiti in Piattaforma. Questa esercitazione utilizzerà la segmentazione **batch**. Per ulteriori informazioni sulla segmentazione in streaming, consultate la [panoramica sulla segmentazione](../ui/streaming-segmentation.md)in streaming.
+Le definizioni dei segmenti possono essere valutate in due modi: segmentazione batch e segmentazione in streaming. La segmentazione in batch valuta i segmenti in base a una pianificazione preimpostata o quando la valutazione viene attivata manualmente, mentre la segmentazione in streaming valuta i segmenti non appena i dati vengono acquisiti in Piattaforma. Questa esercitazione utilizzerà la segmentazione **batch**. Per ulteriori informazioni sulla segmentazione in streaming, consultate la [panoramica sulla segmentazione](../api/streaming-segmentation.md)in streaming.
 
 **Formato API**
 
@@ -142,7 +142,7 @@ La dimensione del campione dipende dal numero complessivo di entità nell&#39;ar
 | Da 1 a 20 milioni | 1 milione |
 | Oltre 20 milioni | 5% del totale |
 
-Le stime generalmente vengono eseguite su un periodo di 10-15 secondi, a partire da una stima approssimativa e con un perfezionamento man mano che vengono letti più record.
+Le stime generalmente vengono eseguite su un intervallo di 10-15 secondi, a partire da una stima approssimativa e affinamento man mano che vengono letti più record.
 
 ### Creare un processo di anteprima
 
