@@ -4,7 +4,7 @@ seo-title: Qualità dei dati sulla piattaforma dati Adobe in tempo reale
 description: Un documento sulla qualità dei dati sulla piattaforma dati cliente in tempo reale
 seo-description: Un documento che descrive il funzionamento della qualità dei dati attraverso l'assimilazione batch e dei dati sulla piattaforma dati cliente Adobe in tempo reale
 translation-type: tm+mt
-source-git-commit: d7a2f7707b36c73f33ad52122d4debedc0877c7a
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -15,4 +15,4 @@ Real-time Customer Data Platform (CDP in tempo reale) ti permette di unire dati 
 
 CDP in tempo reale è basato sulla piattaforma Adobe Experience e utilizza molti dei servizi e delle funzionalità della piattaforma Experience. In questo modo, potete essere certi che i vostri dati saranno verificati e convalidati al momento dell’assimilazione.
 
-Per ulteriori informazioni sulla qualità dei dati, consulta la documentazione sulla qualità [dei dati disponibile in Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/data-ingestion/data-ingestion-services.html#!api-specification/markdown/narrative/technical_overview/data_ingestion_quality/data_ingestion_quality.md).
+Per ulteriori informazioni sulla qualità dei dati, consulta la documentazione sulla qualità [dei dati disponibile in Adobe I/O](../../ingestion/quality/overview.md).
