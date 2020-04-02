@@ -4,7 +4,7 @@ seo-title: Destinazioni marketing e-mail
 description: I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio per l’invio di campagne e-mail promozionali.
 seo-description: I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio per l’invio di campagne e-mail promozionali.
 translation-type: tm+mt
-source-git-commit: 463212a8fabb9dd5962b4d3f523a6f2d88bb1d9d
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -41,11 +41,11 @@ In questo passaggio, stai selezionando quali campi esportare per le destinazioni
 
 ### Identità {#identity}
 
-È consigliabile selezionare un identificatore univoco dallo schema [](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)unione. Questo è il campo di cui vengono cancellate le identità degli utenti. Nella maggior parte dei casi, questo campo è l&#39;indirizzo e-mail, ma può anche essere un ID programma fedeltà o un numero di telefono. Vedere la tabella seguente per gli identificatori univoci più comuni e il relativo campo XDM nello schema unificato.
+È consigliabile selezionare un identificatore univoco dallo schema [](../../profile/home.md#profile-fragments-and-union-schemas)unione. Questo è il campo di cui vengono cancellate le identità degli utenti. Nella maggior parte dei casi, questo campo è l&#39;indirizzo e-mail, ma può anche essere un ID programma fedeltà o un numero di telefono. Vedere la tabella seguente per gli identificatori univoci più comuni e il relativo campo XDM nello schema unificato.
 
 | Identificatore univoco | Campo XDM nello schema unificato |
 ---------|----------
-| Email Address | `personalEmail.address` |
+| Indirizzo e-mail | `personalEmail.address` |
 | Telefono | `mobilePhone.number` |
 | ID programma fedeltà | `Customer-defined XDM field` |
 
