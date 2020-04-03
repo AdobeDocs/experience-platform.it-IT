@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Servizio di segmentazione di Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -47,7 +47,7 @@ Per informazioni sulla creazione di definizioni di segmenti tramite l&#39;API, c
 
 La segmentazione in streaming è un processo continuo di selezione dei dati che aggiorna i segmenti in risposta all&#39;attività degli utenti. Una volta creato e salvato un segmento, la definizione del segmento viene applicata in base ai dati in entrata nel profilo cliente in tempo reale. L&#39;aggiunta e l&#39;eliminazione di segmenti vengono elaborati regolarmente, garantendo che il pubblico di destinazione rimanga rilevante.
 
-Per ulteriori informazioni sulla segmentazione in streaming, consulta la documentazione [sulla segmentazione in](./ui/streaming-segmentation.md)streaming.
+Per ulteriori informazioni sulla segmentazione in streaming, consulta la documentazione [sulla segmentazione in](./api/streaming-segmentation.md)streaming.
 
 ### Segmentazione batch
 
@@ -204,8 +204,8 @@ I dati data consentono di assegnare contesto basato sull&#39;ora alle definizion
 
 | Esempio di campo | Indicazioni relative alla data | Timeline   |
 | ------------- | ------------------------ | --------- |
-| Persona.firstPurchase | oggi, ieri, questo mese, quest&#39;anno | Rilevante per il giorno in cui il segmento è stato creato. |
-| Persona.lastPurchase | last, durante, prima, dopo, entro | Pertinente entro una data settimana/mese. |
+| person.firstPurchase | oggi, ieri, questo mese, quest&#39;anno | Rilevante per il giorno in cui il segmento è stato creato. |
+| person.lastPurchase | last, durante, prima, dopo, entro | Pertinente entro una data settimana/mese. |
 
 ### Eventi esperienza
 
