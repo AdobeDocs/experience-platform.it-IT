@@ -4,7 +4,7 @@ seo-title: Profilo cliente in tempo reale nella piattaforma dati cliente in temp
 description: Panoramica di come la piattaforma dati cliente in tempo reale consente di creare esperienze coordinate, coerenti e pertinenti per i clienti utilizzando i profili cliente in tempo reale.
 seo-description: Piattaforma dati cliente in tempo reale, profilo, dati, esperienze, canali
 translation-type: tm+mt
-source-git-commit: 5cba5a1e8139dd85f23250d42a1cd8d2318eb916
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -31,4 +31,4 @@ La piattaforma consente di visualizzare facilmente i profili dei clienti e di ce
 
 ## Passaggi successivi
 
-Dopo aver letto questa panoramica, ora devi capire in che modo il CDP in tempo reale utilizza il profilo cliente in tempo reale per potenziare la personalizzazione tra canali su larga scala. Mettendo insieme identità provenienti da diverse fonti, puoi vedere un quadro completo di ogni singolo cliente, consentendo di portare le campagne di marketing a un nuovo livello. Per informazioni più dettagliate, comprese le best practice e le esercitazioni per lavorare con i dati del profilo cliente in tempo reale nell&#39;interfaccia utente e tramite le API, consultare la documentazione del profilo cliente in tempo [reale su Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md).
+Dopo aver letto questa panoramica, ora devi capire in che modo il CDP in tempo reale utilizza il profilo cliente in tempo reale per potenziare la personalizzazione tra canali su larga scala. Mettendo insieme identità provenienti da diverse fonti, puoi vedere un quadro completo di ogni singolo cliente, consentendo di portare le campagne di marketing a un nuovo livello. Per informazioni più dettagliate, comprese le procedure ottimali e le esercitazioni per lavorare con i dati del profilo cliente in tempo reale nell&#39;interfaccia utente e tramite le API, consultare la documentazione [sul profilo cliente in tempo](../../profile/home.md)reale.
