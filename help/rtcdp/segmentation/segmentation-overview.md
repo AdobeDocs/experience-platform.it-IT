@@ -4,7 +4,7 @@ seo-title: Servizio di segmentazione in Adobe Real-time Customer Data Platform
 description: Panoramica che descrive il servizio di segmentazione.
 seo-description: Panoramica che descrive i servizi di segmentazione e i segmenti sulla piattaforma dati cliente Adobe in tempo reale.
 translation-type: tm+mt
-source-git-commit: bcb4279d04e39905fa64b817fdadd8a875e27697
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -25,4 +25,4 @@ La piattaforma consente di creare e accedere facilmente ai segmenti, nonché di 
 
 ## Passaggi successivi
 
-Dopo aver letto questa panoramica, ora devi comprendere in che modo CDP in tempo reale utilizza il servizio di segmentazione per migliorare la personalizzazione e la personalizzazione delle campagne di marketing. Per ulteriori informazioni sul servizio di segmentazione, consulta la documentazione relativa alla [segmentazione in Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md).
+Dopo aver letto questa panoramica, ora devi comprendere in che modo CDP in tempo reale utilizza il servizio di segmentazione per migliorare la personalizzazione e la personalizzazione delle campagne di marketing. Per ulteriori informazioni sul servizio di segmentazione, consulta la documentazione [relativa alla](../../segmentation/home.md)segmentazione.
