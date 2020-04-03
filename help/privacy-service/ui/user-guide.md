@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida utente del servizio sulla privacy
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 4b7cbfcbcbaa602d92f3dfe814b1269f770e3fe7
+source-git-commit: 8a488944d530a4850f8946ed30af769ecb6e954f
 
 ---
 
@@ -74,16 +74,18 @@ Per scaricare i dati del processo completo come file CSV, fate clic su **Esporta
 
 ## Creare una nuova richiesta di lavoro per la privacy
 
+>[!NOTE] Per creare una richiesta di lavoro per la privacy, è necessario fornire informazioni sull&#39;identità per i clienti specifici i cui dati devono essere accessibili o eliminati. Prima di continuare con questa sezione, consulta il documento sui dati di [identità per le richieste](../identity-data.md) di privacy.
+
 L’interfaccia utente del servizio Privacy offre due metodi per creare nuove richieste di lavoro:
 
-* Utilizzare il Generatore di richieste
-* Caricare un file JSON
+* [Utilizzare il Generatore di richieste](#request-builder)
+* [Caricare un file JSON](#json)
 
 I passaggi per utilizzare ciascuno di questi metodi sono descritti nelle sezioni seguenti.
 
-### Utilizzare il Generatore di richieste
+### Utilizzare il Generatore di richieste {#request-builder}
 
-Utilizzando Request Builder, potete creare manualmente una nuova richiesta di processo per la privacy nell’interfaccia utente. Il Generatore di richieste è indicato per set di richieste sempre più semplici, perché il Generatore di richieste limita le richieste a disporre solo di ID per utente. Per richieste più complesse, potrebbe essere meglio [caricare un file](#upload-a-json-file) JSON.
+Utilizzando Request Builder, potete creare manualmente una nuova richiesta di processo per la privacy nell’interfaccia utente. Il Generatore di richieste è indicato per set di richieste sempre più semplici, perché il Generatore di richieste limita le richieste a disporre solo di ID per utente. Per richieste più complesse, potrebbe essere meglio [caricare un file](#json) JSON.
 
 Per iniziare a utilizzare il generatore di richieste, fate clic su **Crea richiesta** sotto il widget Rapporto di stato sul lato destro della schermata.
 
@@ -91,19 +93,31 @@ Per iniziare a utilizzare il generatore di richieste, fate clic su **Crea richie
 
 Viene visualizzata la finestra di dialogo *Crea richiesta* , con le opzioni disponibili per l’invio di una richiesta di lavoro per la privacy per il tipo di regolamento attualmente selezionato.
 
-![](../images/user-guide/request-builder.png)
+<img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
-Selezionare il Tipo **di** processo della richiesta (&quot;Elimina&quot; o &quot;Accesso&quot;) e uno o più **Prodotti** disponibili dall&#39;elenco. In ID **** cliente, seleziona un tipo di ID dal menu a discesa (e-mail, ECID o AAID). Digitate a destra i valori ID nella casella di testo, premendo **\&lt;enter>** per ciascun ID per aggiungerlo all&#39;elenco.
+Selezionare il Tipo **di** processo della richiesta (&quot;Elimina&quot; o &quot;Accesso&quot;) e uno o più **Prodotti** disponibili dall&#39;elenco.
 
-![](../images/user-guide/request-builder-fillout.png)
+<img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-Gli ID inclusi in questo elenco riceveranno una copia di tutte le notifiche e-mail inviate dal Servizio Privacy quando un processo viene completato, terminato con errori o timeout. Al termine, fate clic su **Crea**.
+In Tipo ** spazio nomi, selezionare il tipo di spazio nomi appropriato per gli ID cliente che vengono inviati al servizio Privacy.
 
-![](../images/user-guide/request-builder-create.png)
+<img src="../images/user-guide/namespace-type.png" width="500" /><br/>
+
+Quando si utilizza il tipo di spazio dei nomi _standard_ , selezionare uno spazio dei nomi dal menu a discesa (e-mail, ECID o AAID), quindi digitare i valori ID nella casella di testo a destra, premendo **\&lt;enter>** affinché ciascun ID venga aggiunto all&#39;elenco.
+
+<img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
+
+Quando si utilizza il tipo di spazio dei nomi _personalizzato_ , è necessario digitare manualmente lo spazio dei nomi prima di fornire i valori ID riportati di seguito.
+
+<img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
+
+Al termine, fate clic su **Crea**.
+
+<img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
 
 La finestra di dialogo scompare e il nuovo processo (o i nuovi processi) sono elencati nel widget Richieste di processo insieme al relativo stato di elaborazione corrente.
 
-### Caricare un file JSON
+### Caricare un file JSON {#json}
 
 Quando crei richieste più complesse, ad esempio quelle che utilizzano più tipi di ID per ciascun oggetto dati in fase di elaborazione, puoi creare una richiesta caricando un file JSON.
 
@@ -113,12 +127,12 @@ Fate clic sulla freccia accanto a **Crea richiesta**, sotto il widget Rapporto s
 
 Viene visualizzata la finestra di dialogo *Carica JSON* , che consente di trascinare e rilasciare il file JSON.
 
-![](../images/user-guide/upload-json.png)
+<img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
 Se non disponete di un file JSON da caricare, fate clic su **Scarica Adobe-GDPR-Request.json** per scaricare un modello che potete compilare in base ai valori raccolti dai vostri soggetti dati.
 
 
-![](../images/user-guide/privacy-template.png)
+<img src="../images/user-guide/privacy-template.png" width="500" /><br/>
 
 
 Individuate il file JSON sul computer e trascinatelo nella finestra di dialogo. Se il caricamento ha esito positivo, il nome del file viene visualizzato nella finestra di dialogo. Per continuare ad aggiungere altri file JSON, trascinateli e rilasciateli nella finestra di dialogo.
