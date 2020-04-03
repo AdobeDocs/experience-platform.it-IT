@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Processi
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 8102610e2733a75f22cf62d70c0408e3832d0803
 
 ---
 
@@ -105,7 +105,7 @@ curl -X POST \
 | `expandIDs` | Una proprietà opzionale che, se impostata su `true`, rappresenta un&#39;ottimizzazione per l&#39;elaborazione degli ID nelle applicazioni (attualmente supportata solo da Analytics). Se omesso, il valore predefinito sarà `false`. |
 | `priority` | Proprietà facoltativa utilizzata da Adobe Analytics che imposta la priorità per l&#39;elaborazione delle richieste. I valori accettati sono `normal` e `low`. Se `priority` viene omesso, il comportamento predefinito è `normal`. |
 | `analyticsDeleteMethod` | Una proprietà opzionale che specifica in che modo Adobe Analytics deve gestire i dati personali. Per questo attributo sono accettati due possibili valori: <ul><li>`anonymize`: Tutti i dati a cui fa riferimento la raccolta di ID utente specificata vengono resi anonimi. Se `analyticsDeleteMethod` viene omesso, questo è il comportamento predefinito.</li><li>`purge`: Tutti i dati vengono rimossi completamente.</li></ul> |
-| `regulation` **(Obbligatorio)** | Il regolamento per la richiesta (deve essere &quot;gdpr&quot; o &quot;ccpa&quot;). |
+| `regulation` **(Obbligatorio)** | Il regolamento per la richiesta. Deve essere uno dei tre valori seguenti: <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
 
 **Risposta**
 
@@ -399,7 +399,7 @@ GET ?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{REGULATION}` | Il tipo di regolamento per cui eseguire la query. I valori accettati sono `gdpr` e `ccpa`. |
+| `{REGULATION}` | Il tipo di regolamento per cui eseguire la query. I valori accettati sono `gdpr`, `ccpa`, e `pdpa_tha`. |
 | `{PAGE}` | Pagina di dati da visualizzare, con numerazione basata su 0. Il valore predefinito è `0`. |
 | `{SIZE}` | Il numero di risultati da visualizzare su ogni pagina. Il valore predefinito è `1` e il valore massimo è `100`. Se si supera il limite massimo, l&#39;API restituisce un errore di 400 codice. |
 
