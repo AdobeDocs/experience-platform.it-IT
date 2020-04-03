@@ -142,7 +142,7 @@ La dimensione del campione dipende dal numero complessivo di entità nell&#39;ar
 | Da 1 a 20 milioni | 1 milione |
 | Oltre 20 milioni | 5% del totale |
 
-Le stime generalmente vengono eseguite su un intervallo di 10-15 secondi, a partire da una stima approssimativa e affinamento man mano che vengono letti più record.
+Le stime generalmente vengono eseguite su un periodo di 10-15 secondi, a partire da una stima approssimativa e con un perfezionamento man mano che vengono letti più record.
 
 ### Creare un processo di anteprima
 
