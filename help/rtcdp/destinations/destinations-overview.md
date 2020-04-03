@@ -4,7 +4,7 @@ seo-title: Panoramica delle destinazioni
 description: Le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che consentono l'attivazione senza soluzione di continuità dei dati dalla piattaforma dati cliente in tempo reale. Puoi utilizzare Destinazioni nella piattaforma dati cliente Adobe in tempo reale per attivare i dati noti e sconosciuti per campagne di marketing multicanale, campagne e-mail, pubblicità mirata e molti altri casi di utilizzo.
 seo-description: Le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che consentono l'attivazione senza soluzione di continuità dei dati dalla piattaforma dati cliente in tempo reale. Puoi utilizzare Destinazioni nella piattaforma dati cliente Adobe in tempo reale per attivare i dati noti e sconosciuti per campagne di marketing multicanale, campagne e-mail, pubblicità mirata e molti altri casi di utilizzo.
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -33,7 +33,7 @@ I controlli nell&#39;area di lavoro [](/help/rtcdp/destinations/destinations-wor
 * Creare, modificare, attivare e disattivare i flussi di dati verso le destinazioni nel catalogo;
 * creare un account in una posizione di archiviazione o collegare CDP in tempo reale all&#39;account nella piattaforma di destinazione;
 * Selezionare i segmenti da attivare nelle destinazioni;
-* Seleziona i campi [di](https://www.adobe.io/apis/experienceplatform/home/xdm/xdmservices.html#!api-specification/markdown/narrative/technical_overview/schema_registry/xdm_system/xdm_system_in_experience_platform.md) Experience Data Model (XDM) da esportare quando attivi i segmenti in destinazioni di marketing tramite e-mail.
+* Seleziona i campi [](../../xdm/home.md) Experience Data Model (XDM) da esportare quando attivi i segmenti nelle destinazioni di marketing tramite e-mail.
 
 ## Tipi e categorie di destinazione - Panoramica video
 
@@ -55,6 +55,6 @@ Le destinazioni nel catalogo [](/help/rtcdp/destinations/destinations-catalog.md
 
 ## Destinazioni e controlli di accesso
 
-La funzionalità delle destinazioni in CDP in tempo reale funziona con le autorizzazioni di controllo degli accessi della piattaforma Adobe Experience. A seconda del livello di autorizzazione dell’utente, potete visualizzare, gestire e attivare le destinazioni. Per informazioni sulle singole autorizzazioni, vedi Controllo [accesso in Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) e scorri verso il basso fino alla parte inferiore della pagina.
+La funzionalità delle destinazioni in CDP in tempo reale funziona con le autorizzazioni di controllo degli accessi della piattaforma Adobe Experience. A seconda del livello di autorizzazione dell’utente, potete visualizzare, gestire e attivare le destinazioni. Per informazioni sulle singole autorizzazioni, vedi Controllo [accesso in Adobe Experience Platform](../../access-control/home.md) e scorri verso il basso fino alla parte inferiore della pagina.
 
-Per ulteriori informazioni sui controlli di accesso, vedere la guida [utente relativa al controllo di](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-user-guide.md)accesso.
+Per ulteriori informazioni sui controlli di accesso, vedere la guida [utente relativa al controllo di](../../access-control/ui/overview.md)accesso.
