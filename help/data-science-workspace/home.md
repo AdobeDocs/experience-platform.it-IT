@@ -141,7 +141,7 @@ Le sandbox sono partizioni virtuali all&#39;interno di una singola istanza di Ex
 
 Al momento, Data Science Workspace presenta due limitazioni sandbox:
 
-- Le risorse di calcolo sono condivise tra le sandbox di produzione e quelle non di produzione. L&#39;isolamento per le sandbox di produzione sarà disponibile in futuro.
+- Le risorse di calcolo sono condivise tra le sandbox di produzione e non di produzione. L&#39;isolamento per le sandbox di produzione sarà disponibile in futuro.
 - I carichi di lavoro Scala/Spark e PySpark per notebook e ricette sono attualmente supportati solo nella sandbox di produzione. Il supporto per sandbox non destinate alla produzione verrà impostato in futuro.
 
 ## Data Science Workspace in azione
