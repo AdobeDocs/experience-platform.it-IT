@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guida utente per i criteri di unione
 topic: guide
 translation-type: tm+mt
-source-git-commit: 83c7ff45af7266904121b7ff6edcb0f9b0559fee
+source-git-commit: 3669d740b22b650d4079d83026f122ffee42b9a0
 
 ---
 
@@ -86,6 +86,15 @@ Dopo aver apportato le modifiche necessarie, fare clic su **Salva** per tornare 
 
 ![](../images/merge-policies/edited.png)
 
+## Violazioni dei criteri di governance dei dati
+
+Durante la creazione o l&#39;aggiornamento di un criterio di unione, viene eseguito un controllo per determinare se il criterio di unione viola uno qualsiasi dei criteri di utilizzo dei dati definiti dall&#39;organizzazione. I criteri di utilizzo dei dati fanno parte di Adobe Experience Platform Data Governance e sono regole che descrivono i tipi di azioni di marketing che puoi eseguire su dati specifici della Piattaforma o da cui ti sono limitate. Ad esempio, se un criterio di unione è stato utilizzato per creare un segmento che si è attivato a una destinazione terza e l&#39;organizzazione dispone di un criterio di utilizzo dei dati che impedisce l&#39;esportazione di dati specifici a terzi, durante il tentativo di salvare il criterio di unione riceverai una notifica di &quot;violazione dei criteri di governance dei dati rilevata&quot;.
+
+Questa notifica include un elenco di criteri di utilizzo dei dati che sono stati violati e consente di visualizzare i dettagli della violazione selezionando un criterio dall&#39;elenco. Quando si seleziona un criterio violato, la scheda *Dati* fornisce il *Motivo della violazione* e le attivazioni ** interessate, ciascuno fornendo maggiori dettagli sulle modalità di violazione dei criteri di utilizzo dei dati.
+
+Per ulteriori informazioni sulle modalità di gestione dei dati in Adobe Experience Platform, consulta la panoramica [sulla governance dei](../../data-governance/home.md)dati.
+
+![](../images/merge-policies/policy-violation.png)
 
 ## Passaggi successivi
 
