@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Note sulla versione del servizio sulla privacy
 topic: release notes
 translation-type: tm+mt
-source-git-commit: d7aa1b4e3e697a504964d6eb485f536065c6718a
+source-git-commit: 682436b29df4696e98ef96fe5a65ab32221098ba
 
 ---
 
@@ -13,12 +13,22 @@ source-git-commit: d7aa1b4e3e697a504964d6eb485f536065c6718a
 
 Questo documento contiene informazioni sulle nuove funzioni di Adobe Experience Platform Privacy Service, nonché miglioramenti e correzioni di bug importanti.
 
+## 8 aprile 2020
+
+### Nuove funzionalità
+
+| Funzione | Descrizione |
+| --- | --- |
+| Supporto PDPA | Le richieste di privacy possono ora essere create e monitorate in base al Personal Data Protection Act (PDPA) in Thailandia. Quando si effettuano richieste di privacy nell&#39;API, l&#39; `regulation` array accetta il valore &quot;pdpa_tha&quot;. |
+| Tipi di namespace nell’interfaccia | È ora possibile specificare diversi tipi di spazio nomi in Request Builder nell&#39;interfaccia utente del servizio per la privacy. Per ulteriori informazioni, consultate la guida [](ui/user-guide.md) utente. |
+| Obsoleto endpoint precedente | Il vecchio endpoint API (`data/privacy/gdpr`) è stato dichiarato obsoleto. |
+
 ## 14 gennaio 2020
 
 ### Nuove funzionalità
 
 | Funzione | Descrizione |
---- | ---
+| --- | --- |
 | Ripristino del servizio sulla privacy | L&#39;ex &quot;GDPR Service&quot; è stato riassegnato al Privacy Service, in quanto il servizio è cresciuto per supportare altre normative oltre al GDPR. |
 | Nuovi endpoint API | Il percorso di base per l&#39;API del servizio Privacy è stato aggiornato da `/data/privacy/gdpr` a `/data/core/privacy/jobs` |
 | Nuova `regulation` proprietà obbligatoria | Quando si creano nuovi processi nell’API del servizio Privacy, nel payload della richiesta deve essere specificata una `regulation` proprietà per indicare quale regola tenere traccia del processo. I valori accettati sono `gdpr` e `ccpa`. Per ulteriori informazioni, consulta il documento sui processi di [privacy](api/privacy-jobs.md) nella guida per gli sviluppatori del servizio per la privacy. |
@@ -35,7 +45,7 @@ Questo documento contiene informazioni sulle nuove funzioni di Adobe Experience 
 ### Nuove funzionalità
 
 | Funzione | Descrizione |
---- | ---
+| --- | --- |
 | Pannello Metriche richieste | Il nuovo dashboard delle metriche nell’interfaccia utente del servizio Privacy offre visibilità sulle richieste GDPR inviate, errate e completate. |
 | Request Builder | Per le organizzazioni di assistenza con utenti tecnici e non tecnici che inviano richieste GDPR, all’interfaccia utente è stata aggiunta la funzionalità &quot;Crea richiesta&quot;. La funzionalità di invio dei file JSON è ancora disponibile nell’interfaccia utente del servizio Privacy per le organizzazioni che preferiscono continuare a utilizzarla. |
 | Notifiche evento processo GDPR | Le notifiche degli eventi relative agli stati dei processi GDPR sono un elemento critico per molti flussi di lavoro. Sebbene in precedenza le notifiche venivano servite tramite notifiche e-mail singole, le notifiche evento GDPR sono messaggi che sfruttano gli eventi di I/O di Adobe, che vengono inviati a un webhook configurato per facilitare l’automazione della richiesta di un processo. Gli utenti dell’interfaccia utente del servizio per la privacy possono iscriversi agli eventi Adobe I/O GDPR per ricevere aggiornamenti al termine di un processo relativo a un prodotto o al GDPR. |
