@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida utente etichette di utilizzo dati
 topic: labels
 translation-type: tm+mt
-source-git-commit: 4a60956ade2d742ac83e138a2921a6a4893e06ef
+source-git-commit: a19a9a31743002eb5fd3a5ecb6668b4c760faa9a
 
 ---
 
@@ -98,6 +98,8 @@ L&#39;area di lavoro _Governance_ dei dati viene visualizzata nuovamente, con le
 ## Passaggi successivi
 
 Dopo aver aggiunto etichette di utilizzo dei dati a livello di set di dati e di campo, puoi iniziare a assimilare i dati in Experience Platform. Per saperne di più, leggi la documentazione [sull’inserimento dei](../../ingestion/home.md)dati.
+
+È inoltre possibile definire criteri di utilizzo dei dati in base alle etichette applicate. Per ulteriori informazioni, vedere la panoramica [dei criteri di utilizzo dei](../policies/overview.md)dati.
 
 ## Risorse aggiuntive
 
