@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Applica la conformità all'utilizzo dei dati per i segmenti di pubblico
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 ---
 
@@ -42,7 +42,7 @@ Tutte le risorse in Experience Platform sono isolate in sandbox virtuali specifi
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
-> [!NOTE] Per ulteriori informazioni sulle sandbox in Piattaforma, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+>[!NOTE] Per ulteriori informazioni sulle sandbox in Piattaforma, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva:
 
@@ -253,7 +253,7 @@ Una risposta corretta restituisce un elenco di etichette di utilizzo dei dati as
 
 ## Filtrare i campi dati
 
-> [!NOTE] Questo passaggio è facoltativo. Se non desideri regolare i dati inclusi nel tuo segmento in base ai risultati ottenuti nel passaggio precedente, ovvero [cercare etichette](#lookup-data-usage-labels-for-the-source-datasets)di utilizzo dei dati, puoi passare al passaggio finale di [valutazione dei dati per le violazioni](#evaluate-data-for-policy-violations)dei criteri.
+>[!NOTE] Questo passaggio è facoltativo. Se non desideri regolare i dati inclusi nel tuo segmento in base ai risultati ottenuti nel passaggio precedente, ovvero [cercare etichette](#lookup-data-usage-labels-for-the-source-datasets)di utilizzo dei dati, puoi passare al passaggio finale di [valutazione dei dati per le violazioni](#evaluate-data-for-policy-violations)dei criteri.
 
 Se desiderate regolare i dati inclusi nel segmento di pubblico, potete farlo utilizzando uno dei due metodi seguenti:
 
