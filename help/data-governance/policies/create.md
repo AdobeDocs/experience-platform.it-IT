@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creazione di un criterio di utilizzo dei dati
 topic: policies
 translation-type: tm+mt
-source-git-commit: 04b2e07ba39df9f530c9c93c4bf1af9e2cf30169
+source-git-commit: da4fe8be360d5530d96078e4ef024bccf7f080f5
 
 ---
 
@@ -409,6 +409,8 @@ Una risposta di successo restituisce lo stato HTTP 200 (OK) e i dettagli del cri
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione hai creato con successo un criterio DULE per un&#39;azione di marketing. È ora possibile continuare l&#39;esercitazione sull&#39; [applicazione dei criteri](../enforcement/api-enforcement.md) DULE per apprendere come verificare la presenza di violazioni dei criteri e gestirle nell&#39;applicazione dell&#39;esperienza.
+Seguendo questa esercitazione hai creato con successo un criterio di utilizzo dei dati per un&#39;azione di marketing. È ora possibile continuare l&#39;esercitazione sull&#39; [applicazione dei criteri](../enforcement/api-enforcement.md) di utilizzo dei dati per apprendere come verificare la presenza di violazioni dei criteri e gestirle nell&#39;applicazione di esperienza.
 
-Per ulteriori informazioni sulle diverse operazioni disponibili nell&#39;API di Policy Service, consultate la guida [per gli sviluppatori di](../api/getting-started.md)Policy Service. Per informazioni su come applicare criteri DULE per i dati del profilo cliente in tempo reale, consulta l’esercitazione sull’ [applicazione della conformità dell’utilizzo dei dati per i segmenti](../../segmentation/tutorials/governance.md)di pubblico.
+Per ulteriori informazioni sulle diverse operazioni disponibili nell&#39;API di Policy Service, consultate la guida [per gli sviluppatori di](../api/getting-started.md)Policy Service. Per informazioni su come applicare criteri per i dati del profilo cliente in tempo reale, consulta l’esercitazione sull’ [applicazione della conformità dell’utilizzo dei dati per i segmenti](../../segmentation/tutorials/governance.md)di pubblico.
+
+Per informazioni su come gestire i criteri di utilizzo nell&#39;interfaccia utente della piattaforma Experience, consulta la guida [utente ai](user-guide.md)criteri.
