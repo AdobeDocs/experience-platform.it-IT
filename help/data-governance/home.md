@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Governance dei dati della piattaforma Adobe Experience
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4a60956ade2d742ac83e138a2921a6a4893e06ef
+source-git-commit: 42efd7295dd8002869694a146ea166ad21bd14bb
 
 ---
 
@@ -74,15 +74,11 @@ Affinché le etichette di utilizzo dei dati supportino efficacemente la conformi
 
 Un esempio di un&#39;azione di marketing potrebbe essere il desiderio di esportare un dataset in un servizio di terze parti. Se è presente un criterio che indica che tipi specifici di dati, come Informazioni personali (PII), non possono essere esportati e che al set di dati è stata applicata un&#39;etichetta &quot;I&quot; (Dati identità), riceverete una risposta dal Servizio criteri in cui viene indicato che è stata violata una policy di utilizzo dei dati.
 
-### Come creare e utilizzare i criteri di utilizzo dei dati
+Una volta applicate le etichette di utilizzo dei dati, gli amministratori dei dati possono creare criteri utilizzando l&#39;API del servizio DULE Policy o l&#39;interfaccia utente della piattaforma Experience.
 
-Una volta applicate le etichette di utilizzo dei dati, gli amministratori dei dati possono creare criteri tramite l&#39;API del servizio DULE Policy Service.
+Per ulteriori informazioni sull&#39;esecuzione delle operazioni chiave fornite dall&#39;API di DULE Policy Service, consultate la guida [per gli sviluppatori di](api/getting-started.md)Policy Service. Per istruzioni dettagliate sull&#39;utilizzo dei criteri DULE, vedete l&#39;esercitazione sulla [creazione e la valutazione di criteri DULE tramite l&#39;API](policies/create.md).
 
-Come amministratore dei dati, puoi utilizzare l&#39;API di Policy Service per gestire e valutare i criteri relativi alle azioni di marketing eseguite sui dati contenenti etichette DULE. Utilizzando l&#39;API, puoi creare e aggiornare criteri, determinare lo stato di un criterio e lavorare con azioni di marketing per valutare se un&#39;azione specifica viola un criterio di utilizzo dei dati.
-
-All&#39;interno dell&#39;API del servizio criteri, tutti i criteri e le azioni di marketing sono denominati o `core` `custom` risorse. `core` le risorse sono definite e gestite da Adobe, mentre `custom` le risorse vengono create e gestite dai singoli clienti. Le `custom` risorse sono pertanto uniche e visibili esclusivamente all&#39;organizzazione che le ha create.
-
-Per ulteriori informazioni sull&#39;esecuzione delle operazioni chiave fornite dall&#39;API di DULE Policy Service, consultate la guida [per gli sviluppatori di](api/getting-started.md)Policy Service. Per istruzioni dettagliate sull&#39;utilizzo dei criteri DULE, vedete l&#39;esercitazione sulla [creazione e la valutazione di criteri](policies/create.md)DULE.
+Per informazioni su come gestire i criteri nell&#39;interfaccia utente della piattaforma Experience, consulta la guida [utente](policies/user-guide.md)ai criteri.
 
 ## Versioni future
 
