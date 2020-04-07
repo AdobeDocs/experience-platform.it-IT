@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: March 4, 2020
 author: ens71067
 translation-type: tm+mt
-source-git-commit: c3166bea873572fe6ee2e63dfd13bc64d81e252b
+source-git-commit: b3ee2839412c9949d67c2ae976e3df32fea7731e
 
 ---
 
@@ -31,6 +31,26 @@ Problemi noti
 * None
 
 Per ulteriori informazioni sul servizio Privacy, consultare la panoramica [del servizio](../../privacy-service/home.md)Privacy.
+
+## Origini
+
+Adobe Experience Platform è in grado di acquisire dati da origini esterne e allo stesso tempo di strutturarli, etichettarli e ottimizzarli tramite i servizi della piattaforma. È possibile acquisire dati da origini diverse, come applicazioni Adobe, archiviazione basata su cloud, software di terze parti e il sistema CRM in uso.
+
+Experience Platform fornisce un&#39;API RESTful e un&#39;interfaccia utente interattiva che consente di impostare connessioni sorgente per vari provider di dati con facilità. Queste connessioni di origine consentono di autenticare e connettersi a sistemi di storage e servizi CRM esterni, impostare i tempi per l&#39;esecuzione dell&#39;assimilazione e gestire il throughput di assimilazione dei dati.
+
+### Nuove funzionalità
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Supporto API e interfaccia utente per i database | Nuovi connettori sorgente per Apache Spark (su HDInsights), Azure Synapse Analytics, Azure Table Storage, Hive (su HDInsights) e Phoenix. |
+| Supporto API e interfaccia utente per applicazioni basate su pagamenti | Nuovi connettori sorgente per PayPal. |
+| Supporto API e interfaccia utente per applicazioni basate su protocolli | Nuovi connettori sorgente per OData generico. |
+
+### Problemi noti
+
+* None
+
+Per ulteriori informazioni sulle origini, consultate la panoramica sulle [origini](../../source-connectors/home.md).
 
 <!-- ## Access control
 
