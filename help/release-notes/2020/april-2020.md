@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: March 4, 2020
 author: ens71067
 translation-type: tm+mt
-source-git-commit: b3ee2839412c9949d67c2ae976e3df32fea7731e
+source-git-commit: 3f3704cc1e11a4d11278a34800c8bfdc24a80753
 
 ---
 
@@ -13,6 +13,23 @@ source-git-commit: b3ee2839412c9949d67c2ae976e3df32fea7731e
 # Note sulla versione di Adobe Experience Platform
 
 ## Data di rilascio: 8 aprile 2020
+
+## Servizi intelligenti
+
+I servizi intelligenti consentono agli analisti e ai professionisti del marketing di sfruttare la potenza dell&#39;intelligenza artificiale e dell&#39;apprendimento automatico nei casi di utilizzo dell&#39;esperienza cliente. Questo consente agli analisti di marketing di impostare previsioni specifiche per le esigenze di un&#39;azienda utilizzando configurazioni a livello di business, senza bisogno di conoscenze scientifiche. Inoltre, i professionisti del marketing possono attivare le previsioni in Adobe Experience Cloud, Adobe Experience Platform e applicazioni di terze parti.
+
+**Funzionalità chiave**
+
+| Funzione | Descrizione |
+|---|---|
+| AI cliente | L&#39;AI del cliente fornisce agli esperti di marketing il potere di generare previsioni dei clienti a livello individuale con spiegazioni. Con l&#39;aiuto di fattori influenti, l&#39;intelligenza artificiale del cliente può dirvi cosa è probabile fare e perché. Inoltre, gli esperti di marketing possono trarre vantaggio dalle previsioni e dalle informazioni dell&#39;AI cliente per personalizzare l&#39;esperienza dei clienti, servendo le offerte e i messaggi più appropriati. |
+| Attribuzione AI | L&#39;AI di attribuzione è un servizio di attribuzione algoritmica multicanale che calcola l&#39;influenza e l&#39;impatto incrementale delle interazioni dei clienti rispetto a determinati risultati. Con Attribution AI, gli addetti al marketing possono misurare e ottimizzare le spese di marketing e pubblicitarie comprendendo l&#39;impatto di ogni singola interazione con i clienti in ogni fase dei viaggi dei clienti. |
+
+**Problemi noti**
+
+* Nessun problema noto al momento.
+
+Per maggiori informazioni sui servizi intelligenti e sui servizi offerti, consulta la panoramica [sui servizi](../../intelligent-services/home.md)intelligenti.
 
 ## Servizio Privacy
 
