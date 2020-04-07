@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida per gli sviluppatori di SDK
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 13b6c08b1038d48cdff7147dfcd7b65ea2f95599
+source-git-commit: 897e897c80421c8eddd779222ddfa20298e72298
 
 ---
 
@@ -245,7 +245,7 @@ Nella tabella seguente sono descritti i metodi astratti di una classe Spark Data
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">save(configProperties, sparkSession)</code></p>
+                <p><code class=" language-undefined">save(configProperties, dataFrame)</code></p>
                 <p>Ricevi i dati di output come DataFrame e li memorizza in un dataset della piattaforma</p>
             </td>
             <td>
