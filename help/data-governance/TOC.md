@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Data Governance Help
+user-guide-title: Guida di Adobe Experience Platform Data Governance
 translation-type: tm+mt
-source-git-commit: 2997243622a7483ae23e21487128cea6badecb80
+source-git-commit: 608f3f61764e6b578107f4ea7991bca12621330a
 
 ---
 
@@ -17,6 +17,7 @@ source-git-commit: 2997243622a7483ae23e21487128cea6badecb80
    * [Etichette di utilizzo dati supportate](labels/reference.md)
 * Criteri di utilizzo dei dati {#policies}
    * [Panoramica sui criteri di utilizzo dei dati](policies/overview.md)
+   * [Guida utente per i criteri di utilizzo dei dati](policies/user-guide.md)
    * [Creare un criterio di utilizzo dei dati utilizzando l&#39;API di Servizio criteri](policies/create.md)
 * Applicazione delle regole {#enforcement}
    * [Panoramica dell&#39;applicazione dei criteri](enforcement/overview.md)
