@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Domande frequenti sul servizio Privacy
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 7e2e36e13cffdb625b7960ff060f8158773c0fe3
+source-git-commit: 64cb2de507921fcb4aaade67132024a3fc0d3dee
 
 ---
 
@@ -14,6 +14,52 @@ source-git-commit: 7e2e36e13cffdb625b7960ff060f8158773c0fe3
 Questo documento contiene le risposte alle domande frequenti sul servizio per la privacy di Adobe Experience Platform.
 
 Il servizio Privacy fornisce un&#39;API RESTful e un&#39;interfaccia utente per aiutare le aziende a gestire le richieste di privacy dei dati dei clienti. Con il servizio Privacy puoi inviare richieste di accesso ed eliminazione di dati di clienti privati o personali, facilitando la conformità automatica alle normative aziendali e legali sulla privacy.
+
+## Quando si effettuano richieste di privacy nell&#39;API, qual è la differenza tra un utente e un ID utente? {#user-ids}
+
+Per eseguire un nuovo processo di privacy nell&#39;API, il payload JSON della richiesta deve contenere un `users` array che elenca informazioni specifiche per ogni utente a cui si applica la richiesta di privacy. Ciascun elemento dell&#39; `users` array è un oggetto che rappresenta un utente particolare, identificato dal relativo `key` valore.
+
+A sua volta, ogni oggetto utente (o `key`) contiene un proprio `userIDs` array. Questa matrice elenca i valori ID specifici **per quel particolare utente**.
+
+Consider the following example `users` array:
+
+```json
+"users": [
+  {
+    "key": "DavidSmith",
+    "action": ["access"],
+    "userIDs": [
+      {
+        "namespace": "email",
+        "value": "dsmith@acme.com",
+        "type": "standard"
+      }
+    ]
+  },
+  {
+    "key": "user12345",
+    "action": ["access", "delete"],
+    "userIDs": [
+      {
+        "namespace": "email",
+        "value": "ajones@acme.com",
+        "type": "standard"
+      },
+      {
+        "namespace": "ECID",
+        "type": "standard",
+        "value":  "443636576799758681021090721276",
+        "isDeletedClientSide": false
+      }
+    ]
+  }
+]
+```
+
+L&#39;array contiene due oggetti, che rappresentano i singoli utenti identificati dai rispettivi `key` valori (&quot;DavidSmith&quot; e &quot;user12345&quot;). &quot;DavidSmith&quot; ha un solo ID elencato (il loro indirizzo e-mail), mentre &quot;user12345&quot; ne ha due (il loro indirizzo e-mail ed ECID).
+
+Per ulteriori informazioni sulla fornitura di informazioni sull&#39;identità dell&#39;utente, consultate la guida sui dati di [identità per le richieste](identity-data.md)di privacy.
+
 
 ## Posso usare il servizio Privacy per pulire i dati inviati accidentalmente a Platform?
 
