@@ -4,11 +4,13 @@ solution: Experience Platform
 title: Documentazione del prodotto Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: fe52890122555223b4000413a1f016e4ac062fdb
+source-git-commit: 9e5273c077b8bd27bcab69c3391340e95295b990
 
 ---
 
 
 # Guida introduttiva ad Adobe Experience Platform
 
->[!VIDEO](https://video.tv.adobe.com/v/27361?quality=12)
+Questo video fornisce una breve introduzione a Experience Platform e illustra le sfide aziendali che risolve. Sono disponibili diverse esercitazioni video per completare la documentazione della piattaforma. Per ulteriori video utili per iniziare a usare la piattaforma, consultate la serie [](https://docs.adobe.com/content/help/en/platform-learn/tutorials/intro-to-platform/overview.html)video &quot;Introduzione alla piattaforma&quot;.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)
