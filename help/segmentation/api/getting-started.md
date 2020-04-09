@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida per gli sviluppatori di Segmentation Service
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 38762fa57188ed018c4347c07765f3d09daef2e6
+source-git-commit: 3fbacf57d5f6741726cb54fb55eab05042046f49
 
 ---
 
@@ -40,7 +40,7 @@ Tutte le risorse in Experience Platform sono isolate in sandbox virtuali specifi
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->**Nota:** Per ulteriori informazioni sull’utilizzo delle sandbox in Experience Platform, consulta la documentazione [sulla panoramica delle](../../sandboxes/home.md)sandbox.
+>[!NOTE] Per ulteriori informazioni sull’utilizzo delle sandbox in Experience Platform, consulta la documentazione [sulla panoramica delle](../../sandboxes/home.md)sandbox.
 
 <!-- ## Estimates
 
