@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Metriche disponibili
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a988c990d3d4df706a44cdbc82f77bef20c2ea1
+source-git-commit: ff299a69a81f00cad3e90a83f7411e4b15d4f850
 
 ---
 
@@ -18,7 +18,7 @@ Le tabelle seguenti elencano tutte le metriche esposte da Observability Insights
 La tabella seguente delinea le metriche per l&#39;inserimento dei dati in Adobe Experience Platform. Le metriche in **grassetto** sono metriche di assimilazione in streaming.
 
 | Metrica Insights | Descrizione | Parametro query ID |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.ingestion.dataset.new.count | Numero totale di set di dati creati. | N/D |
 | timeseries.ingestion.dataset.size | Dimensione cumulativa di tutti i dati acquisiti per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
 | timeseries.ingestion.dataset.dailysize | Dimensione dei dati acquisiti su base giornaliera per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
@@ -46,7 +46,7 @@ La tabella seguente delinea le metriche per l&#39;inserimento dei dati in Adobe 
 La tabella seguente delinea le metriche per Adobe Experience Platform Identity Service.
 
 | Metrica Insights | Descrizione | Parametro query ID |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | Numero di record scritti nell&#39;origine dati da Servizio identità per un set di dati o tutti i set di dati. | ID set di dati (facoltativo) |
 | timeseries.identity.dataset.recordfailed.count | Numero di record non riusciti dal servizio identità, per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
 | timeseries.identity.dataset.namespacecode.recordsuccess.count | Numero di record di identità acquisiti correttamente per uno spazio dei nomi. | ID spazio nomi (**obbligatorio**) |
@@ -62,7 +62,7 @@ La tabella seguente delinea le metriche per Adobe Experience Platform Identity S
 Nella tabella seguente sono illustrate le metriche relative al servizio per la privacy di Adobe Experience Platform.
 
 | Metrica Insights | Descrizione | Parametro query ID |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.gdpr.jobs.totaljobs.count | Numero totale di posti di lavoro creati dal GDPR. | ENV (**obbligatorio**) |
 | timeseries.gdpr.jobs.completedjobs.count | Numero totale di processi completati dal GDPR. | ENV (**obbligatorio**) |
 | timeseries.gdpr.jobs.errorjobs.count | Numero totale di processi di errore da GDPR. | ENV (**obbligatorio**) |
@@ -72,7 +72,7 @@ Nella tabella seguente sono illustrate le metriche relative al servizio per la p
 Nella tabella seguente sono illustrate le metriche per Adobe Experience Platform Query Service.
 
 | Metrica Insights | Descrizione | Parametro query ID |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.queryservice.query.scheduleonce.count | Numero totale di query pianificate non ricorrenti. | N/D |
 | timeseries.queryservice.query.scheduledrecurring.count | Numero totale di query programmate ricorrenti. | N/D |
 | timeseries.queryservice.query.batchquery.count | Numero totale di query batch eseguite. | N/D |
@@ -85,7 +85,7 @@ Nella tabella seguente sono illustrate le metriche per Adobe Experience Platform
 La tabella seguente delinea le metriche per il profilo cliente in tempo reale.
 
 | Metrica Insights | Descrizione | Parametro query ID |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.profiles.dataset.recordread.count | Numero di record letti dal lago di dati per profilo, per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
 | timeseries.profiles.dataset.recordsuccess.count | Numero di record scritti nella propria origine dati da Profilo, per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
 | timeseries.profiles.dataset.recordfailed.count | Numero di record non riusciti da Profilo, per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
