@@ -4,7 +4,7 @@ seo-title: Estensione D&B Visitor Intelligence
 description: L’estensione D&B Visitor Intelligence è una destinazione di personalizzazione nella piattaforma dati cliente Adobe in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell'estensione in Adobe Exchange.
 seo-description: L’estensione D&B Visitor Intelligence è una destinazione di personalizzazione nella piattaforma dati cliente Adobe in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell'estensione in Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -18,6 +18,8 @@ Analizzare i visitatori sconosciuti e convertirli in lead.
 D&amp;B Visitor Intelligence è un&#39;estensione di personalizzazione nella piattaforma dati cliente Adobe in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, consultate il sito Web [](https://www.dnb.com/)D&amp;B.
 
 Questa destinazione è un’estensione Experience Platform Launch. Per ulteriori informazioni sul funzionamento delle estensioni Launch in Adobe Real-time CDP, consulta Panoramica [delle estensioni](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
+
+![Estensione D&amp;B Visitor Intelligence](assets/dnb-extension.png)
 
 ## Prerequisiti  {#prerequisites}
 
