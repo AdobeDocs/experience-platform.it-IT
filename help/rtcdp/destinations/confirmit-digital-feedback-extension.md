@@ -4,7 +4,7 @@ seo-title: Conferma estensione Digital Feedback
 description: L'estensione Conferma feedback digitale è una voce della destinazione del cliente nella piattaforma dati cliente Adobe in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell'estensione in Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -25,6 +25,9 @@ La soluzione Digital Feedback conferma la possibilità di trasformare il traffic
 Conferma feedback digitale è una voce dell&#39;estensione del cliente nella piattaforma dati cliente Adobe in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html).
 
 Questa destinazione è un’estensione Experience Platform Launch. Per ulteriori informazioni sul funzionamento delle estensioni Launch in Adobe Real-time CDP, consulta Panoramica [delle estensioni](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
+
+
+![Conferma estensione Digital Feedback](assets/confirmit-digital-feedback-extension.png)
 
 ## Prerequisiti  {#prerequisites}
 
