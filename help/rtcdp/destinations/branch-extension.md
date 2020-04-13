@@ -4,7 +4,7 @@ seo-title: Estensione ramo
 description: L'estensione Branch è una destinazione pubblicitaria nella piattaforma dati cliente Adobe in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell'estensione in Adobe Exchange.
 seo-description: L'estensione Branch è una destinazione pubblicitaria nella piattaforma dati cliente Adobe in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell'estensione in Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 2a94444b35cac0c002d729798d96fd54aaafbacd
 
 ---
 
@@ -18,6 +18,8 @@ Branch fornisce collegamenti e soluzioni potenti che consentono di acquisire, in
 Branch è un&#39;estensione pubblicitaria nella piattaforma dati cliente Adobe in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina [delle](https://branch.io/features/) funzionalità nel sito Web Filiale.
 
 Questa destinazione è un’estensione Experience Platform Launch. Per ulteriori informazioni sul funzionamento delle estensioni Launch in Adobe Real-time CDP, consulta Panoramica [delle estensioni](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
+
+![Estensione ramo](assets/branch-extension.png)
 
 ## Prerequisiti  {#prerequisites}
 
