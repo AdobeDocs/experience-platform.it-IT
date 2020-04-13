@@ -1,0 +1,74 @@
+---
+title: Tipi e categorie di destinazioni
+seo-title: Tipi e categorie di destinazioni
+description: 'In Adobe Real-time Customer Data Platform, le destinazioni di esportazione dei profili/segmenti acquisiscono i dati dell''evento, li combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Avviate le estensioni per inoltrare i dati degli eventi non elaborati a diversi tipi di destinazioni. '
+seo-description: In Adobe Real-time Customer Data Platform, le destinazioni di esportazione dei profili/segmenti acquisiscono i dati dell'evento, li combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Avviate le estensioni per inoltrare i dati degli eventi non elaborati a diversi tipi di destinazioni.
+translation-type: tm+mt
+source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+
+---
+
+
+# Tipi di destinazione e categorie
+
+Leggi questa pagina per comprendere i diversi tipi e categorie di destinazioni della piattaforma dati cliente Adobe in tempo reale.
+
+## Tipi di destinazione
+
+In Adobe Real-time Customer Data Platform, distinguiamo tra due tipi di destinazione: connessioni ed estensioni. Esistono due tipi di destinazioni di connessione, le destinazioni di esportazione dei profili e le destinazioni di esportazione dei segmenti.
+
+![Tipi di destinazioni](/help/rtcdp/destinations/assets/types-of-destinations.png)
+
+<br> 
+
+### Connessioni
+
+**Le destinazioni di esportazione** dei profili e di esportazione **dei** segmenti in Adobe Real-time Customer Data Platform acquisiscono i dati dell&#39;evento, li combinano con altre origini dati per formare il profilo [cliente in tempo](https://docs.adobe.com/content/help/en/experience-platform/profile/home.html)reale, applicare segmentazione ed esportare segmenti e profili qualificati per destinazioni.
+
+<br> 
+
+#### Destinazioni di esportazione profilo
+
+Le destinazioni di esportazione dei profili generano un file contenente profili e/o attributi. Queste destinazioni utilizzano dati non elaborati, spesso con l&#39;indirizzo e-mail come chiave primaria. La destinazione [di archiviazione cloud](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 è un esempio di destinazione in cui è possibile depositare i file contenenti esportazioni di profilo.
+
+#### Destinazioni di esportazione dei segmenti
+
+Le destinazioni di esportazione dei segmenti inviano i profili e i segmenti per i quali si sono qualificati alle piattaforme di destinazione. Queste destinazioni utilizzano ID segmento o ID utente. Le destinazioni pubblicitarie come [Google Display &amp; Video 360](/help/rtcdp/destinations/google-dv360-destination.md) o [Google Ads](/help/rtcdp/destinations/google-ads-destination.md) sono esempi di questo tipo di destinazioni.
+
+#### Destinazioni di esportazione dei profili e dei segmenti - Panoramica video
+
+Il video seguente illustra le particolarità dei due tipi di destinazioni:
+
+>[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
+
+<br> 
+
+### Estensioni
+
+Adobe Real-time CDP sfrutta la potenza e la flessibilità di Experience Platform Launch per includere le estensioni Launch nell’interfaccia Adobe Real-time CDP.
+
+Avviate le estensioni per inoltrare i dati degli eventi non elaborati a diversi tipi di destinazioni. Considerate le estensioni come un tipo di destinazione di inoltro **** degli eventi. Si tratta di un tipo di integrazione più semplice con le piattaforme di destinazione, che inoltra solo dati di evento non elaborati. Esempi di questi sono l&#39;estensione [di personalizzazione](/help/rtcdp/destinations/gainsight-extension.md) Gainsight o la [voce Conferma dell&#39;estensione](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)del cliente.
+
+Per informazioni dettagliate sulle estensioni Experience Platform Launch, consultate la panoramica [sulle estensioni](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Launch.
+
+
+![Estensioni lancio della piattaforma Experience rispetto ad altre destinazioni](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
+
+<br> 
+
+### Quando utilizzare connessioni ed estensioni
+
+Come esperto di marketing, puoi usare una combinazione di connessioni ed estensioni per risolvere i tuoi casi d&#39;uso.
+
+Le connessioni sono utili quando è necessario sfruttare un profilo cliente centralizzato completo o un segmento cliente per l&#39;attivazione. Ad esempio, utilizza le connessioni se unisci dati comportamentali da un sistema di analisi con dati CRM caricati per qualificare un utente per un determinato segmento prima di inviare un messaggio personalizzato a tale utente.
+
+Le estensioni sono utili quando i dati dell&#39;evento vengono utilizzati per attivare un&#39;azione o per eseguire la segmentazione in un ambiente esterno. Ad esempio, se i dati comportamentali devono essere inoltrati a un sistema esterno senza essere uniti ad altre origini dati sul file per un determinato utente.
+
+<br> 
+
+## Categorie di destinazione
+
+Le destinazioni e le estensioni nel catalogo [delle](https://platform.adobe.com/destination/catalog) destinazioni sono raggruppate per categoria di destinazione (**Annuncio**, Archivio **** Cloud, piattaforme **** d’indagine, marketing **tramite** e-mail, ecc.), a seconda del caso d’uso commerciale che consentono di ottenere. Per ulteriori informazioni su ciascuna categoria, nonché sulle destinazioni incluse in ciascuna categoria, consulta la documentazione [del catalogo](/help/rtcdp/destinations/destinations-catalog.md)Destinazioni.
+
+![Categorie di destinazione](/help/rtcdp/destinations/assets/destination-categories.png)
+
