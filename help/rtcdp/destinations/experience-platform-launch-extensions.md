@@ -4,7 +4,7 @@ seo-title: Estensioni del lancio della piattaforma Experience
 description: Launch è la soluzione Adobe di nuova generazione per la gestione dei tag. Launch offre ai clienti un modo semplice di implementare e gestire tutti i tag di analisi, marketing e annunci pubblicitari necessari per fornire ai clienti esperienze personalizzate.
 seo-description: Launch è la soluzione Adobe di nuova generazione per la gestione dei tag. Launch offre ai clienti un modo semplice di implementare e gestire tutti i tag di analisi, marketing e annunci pubblicitari necessari per fornire ai clienti esperienze personalizzate.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 2a082dc46b50eba1a38eb9d6946e17f851b2fd3f
 
 ---
 
@@ -16,6 +16,12 @@ Experience Platform Launch è la soluzione Adobe di nuova generazione per la ges
 Per un&#39;introduzione alle funzionalità Experience Platform Launch, consulta le risorse seguenti:
 * Experience Platform Launch [documentation](https://docs.adobe.com/content/help/it-IT/launch/using/overview.html)
 * Video introduttivi [rapidi su Experience Platform Launch](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/videos.html). Inizia con [Introduzione al lancio](https://www.youtube.com/embed/rwqqkG1SERU) della piattaforma Experience e alla panoramica [del processo di](https://helpx.adobe.com/it/analytics/how-to/adobe-launch-publishing-process.html)pubblicazione, quindi passa ai concetti successivi.
+
+## Come trovare le estensioni Launch nell&#39;interfaccia Adobe Real-time CDP
+
+Per trovare le estensioni Launch nell&#39;interfaccia Adobe Real-time CDP, individuare **[!UICONTROL Destinations > Catalog]** e selezionare **[!UICONTROL Extensions]** il **[!UICONTROL Types]** filtro.
+
+![Filtro delle estensioni nell&#39;interfaccia](/help/rtcdp/destinations/assets/extensions-filter.png)
 
 ## Funzionamento delle estensioni Launch
 
