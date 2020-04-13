@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Panoramica del profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: d349ffab7c0de72d38b5195585c14a4a8f80e37c
 
 ---
 
@@ -15,9 +15,7 @@ Adobe Experience Platform consente di creare esperienze coordinate, coerenti e p
 
 ## Informazioni sul profilo cliente in tempo reale
 
-Profilo cliente in tempo reale è un archivio di entità di ricerca generico che unisce i dati da varie risorse di dati aziendali e fornisce l&#39;accesso a tali dati sotto forma di profili cliente individuali ed eventi serie temporali correlati. Questa funzione consente agli esperti di marketing di promuovere esperienze coordinate, coerenti e pertinenti con il pubblico attraverso più canali, come illustrato nel video seguente:
-
->[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12&enable10seconds=on&speedcontrol=on)
+Profilo cliente in tempo reale è un archivio di entità di ricerca generico che unisce i dati da varie risorse di dati aziendali e fornisce l&#39;accesso a tali dati sotto forma di profili cliente individuali ed eventi serie temporali correlati. Questa funzione consente agli esperti di marketing di promuovere esperienze coordinate, coerenti e pertinenti con il pubblico attraverso più canali.
 
 ### Archivio dati profilo
 
@@ -45,13 +43,20 @@ Ogni azienda vuole comunicare con i propri clienti in un modo che si senta perso
 
 Il servizio di segmentazione di Adobe Experience Platform produce i tipi di pubblico necessari per sviluppare esperienze per i singoli clienti. Quando viene creato un segmento di pubblico, l&#39;ID di tale segmento viene aggiunto all&#39;elenco delle appartenenze del segmento per tutti i profili idonei. Le regole dei segmenti sono create e applicate ai dati del profilo cliente in tempo reale mediante le API RESTful e l’interfaccia utente di Generatore di segmenti. Per ulteriori informazioni sulla segmentazione, consultare la panoramica [del servizio di](../segmentation/home.md)segmentazione.
 
-### Frammenti di profilo e visualizzazioni unione {#profile-fragments-and-union-schemas}
+### Frammenti di profilo e schemi di unione {#profile-fragments-and-union-schemas}
 
-Una delle caratteristiche chiave del profilo cliente in tempo reale è la capacità di unificare i dati multicanale. Quando si utilizza il profilo cliente in tempo reale per accedere a un&#39;entità, è possibile ottenere una visualizzazione unita di tutti i frammenti di profilo per tale entità tra i set di dati, denominata visualizzazione unione. I dati del profilo cliente in tempo reale vengono uniti tra le origini quando l&#39;ID di un&#39;entità o di un profilo vi permette di accedervi o esportati come segmento. Per ulteriori informazioni sull&#39;accesso ai profili e alle viste dell&#39;unione, visita la guida secondaria per gli sviluppatori di API profilo cliente in tempo reale sulle [entità, nota anche come &quot;Accesso profilo&quot;](api/entities.md).
+Una delle caratteristiche chiave del profilo cliente in tempo reale è la capacità di unificare i dati multicanale. Quando si utilizza il profilo cliente in tempo reale per accedere a un&#39;entità, è possibile ottenere una visualizzazione unita di tutti i frammenti di profilo per tale entità tra i set di dati, denominati visualizzazione unione e resi possibili tramite ciò che è noto come schema unione. I dati del profilo cliente in tempo reale vengono uniti tra le origini quando l&#39;ID di un&#39;entità o di un profilo vi permette di accedervi o esportati come segmento. Per ulteriori informazioni sull&#39;accesso ai profili e alle viste dell&#39;unione, visita la guida secondaria per gli sviluppatori di API profilo cliente in tempo reale sulle [entità, nota anche come &quot;Accesso profilo&quot;](api/entities.md).
 
 ### Unisci criteri
 
 Quando si uniscono i dati da più origini e si combinano per visualizzare una visualizzazione completa di ciascuno dei singoli clienti, i criteri di unione sono le regole utilizzate dalla piattaforma per determinare in che modo i dati verranno assegnati alle priorità e quali verranno combinati per creare tale visualizzazione unificata. Utilizzando le API RESTful o l&#39;interfaccia utente, puoi creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la tua organizzazione. Per ulteriori informazioni sull&#39;utilizzo dei criteri di unione tramite le API, vedere la guida [secondaria dei criteri di](api/merge-policies.md) unione delle API dei profili cliente in tempo reale o la guida [utente dei criteri di](ui/merge-policies.md) unione per informazioni su come utilizzare i criteri di unione utilizzando l&#39;interfaccia utente della piattaforma.
+
+## (Alfa) Configurare gli attributi calcolati
+
+>[!IMPORTANT]
+>La funzionalità degli attributi calcolati descritta in questo documento è in alfa. La documentazione e la funzionalità sono soggette a modifiche.
+
+Gli attributi calcolati consentono di calcolare automaticamente il valore dei campi in base ad altri valori, calcoli ed espressioni. Gli attributi calcolati operano a livello di profilo, il che significa che puoi aggregare i valori per tutti i record ed eventi. Ogni attributo calcolato contiene un&#39;espressione, o &quot;regola&quot;, che valuta i dati in arrivo e memorizza il valore risultante in un attributo di profilo o in un evento. Questi calcoli consentono di rispondere facilmente a domande relative a cose come il valore di acquisto del ciclo di vita, il tempo tra acquisti o il numero di aperture di applicazioni, senza che sia necessario eseguire manualmente calcoli complessi ogni volta che le informazioni sono necessarie. Per ulteriori informazioni sugli attributi calcolati e istruzioni dettagliate per utilizzarli, consultate la [guida secondaria API Profilo cliente in tempo reale sugli attributi](api/computed-attributes.md)calcolati. Questa guida ti aiuterà a comprendere meglio il ruolo che gli attributi calcolati giocano all’interno di Adobe Experience Platform e include chiamate API di esempio per eseguire operazioni CRUD di base tramite l’API Profilo cliente in tempo reale.
 
 ## Componenti in tempo reale
 
@@ -63,9 +68,18 @@ L&#39;ingresso in tempo reale è possibile attraverso un processo chiamato caric
 
 ### Proiezioni Edge
 
-Al fine di promuovere esperienze coordinate, coerenti e personalizzate per i clienti attraverso più canali in tempo reale, i dati giusti devono essere prontamente disponibili e costantemente aggiornati man mano che si verificano le modifiche. Adobe Experience Platform consente l&#39;accesso in tempo reale ai dati tramite l&#39;utilizzo di ciò che sono noti come edge. Un server periferico è un server collocato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni. Ad esempio, le applicazioni Adobe come Adobe Target e Adobe Campaign utilizzano i bordi per fornire esperienze cliente personalizzate in tempo reale. I dati vengono indirizzati a un bordo da una proiezione, con una destinazione di proiezione che definisce il bordo a cui verranno inviati i dati, e una configurazione di proiezione che definisce le informazioni specifiche che verranno rese disponibili sul bordo.
+Al fine di promuovere esperienze coordinate, coerenti e personalizzate per i clienti attraverso più canali in tempo reale, i dati giusti devono essere prontamente disponibili e costantemente aggiornati man mano che si verificano le modifiche. Adobe Experience Platform consente l&#39;accesso in tempo reale ai dati tramite l&#39;utilizzo di ciò che sono noti come edge. Un server periferico è un server collocato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni. Ad esempio, le applicazioni Adobe come Adobe Target e Adobe Campaign utilizzano i bordi per fornire esperienze cliente personalizzate in tempo reale. I dati vengono indirizzati a un bordo da una proiezione, con una destinazione di proiezione che definisce il bordo a cui verranno inviati i dati, e una configurazione di proiezione che definisce le informazioni specifiche che verranno rese disponibili sul bordo. Per saperne di più e iniziare a lavorare con margini e proiezioni, consulta la guida secondaria Proiezioni [Edge API profilo cliente in tempo reale](api/edge-projections.md).
 
-Per saperne di più e iniziare a lavorare con margini e proiezioni, consulta la guida secondaria Proiezioni [Edge API profilo cliente in tempo reale](api/edge-projections.md).
+## Aggiungere dati al profilo cliente in tempo reale
+
+La piattaforma può essere configurata per inviare i dati relativi a record e serie temporali a Profile, per supportare l’assimilazione in tempo reale dei flussi e l’assimilazione batch. Per ulteriori informazioni, consulta l’esercitazione che illustra come [aggiungere dati al profilo](tutorials/add-profile-data.md)cliente in tempo reale.
+
+>[!Note]
+>I dati raccolti tramite le soluzioni Adobe, inclusi Analytics Cloud, Marketing Cloud e Advertising Cloud, fluiscono nella piattaforma Experience e vengono trasferiti in Profile.
+
+### Metriche di assimilazione dello streaming dei profili
+
+Observability Insights consente di esporre le metriche chiave in Adobe Experience Platform. Oltre alle statistiche sull’utilizzo della piattaforma e agli indicatori di prestazioni per diverse funzionalità della piattaforma, sono disponibili metriche specifiche relative al profilo che consentono di conoscere meglio le percentuali di richieste in entrata, i tassi di acquisizione di successo, le dimensioni dei record ingeriti e altro ancora. Per saperne di più, leggi innanzitutto la panoramica [](../observability/home.md)Approfondimenti sull&#39;osservazione e per un elenco completo delle metriche Profilo, consulta la documentazione sulle metriche [](../observability/metrics.md)disponibili.
 
 ## Governance dei dati e privacy
 
@@ -82,26 +96,8 @@ La governance dei dati è gestita in diversi punti. Tra queste, puoi decidere qu
 
 Experience Platform consente ai clienti di inviare richieste di rifiuto correlate all&#39;utilizzo e all&#39;archiviazione dei loro dati nel profilo cliente in tempo reale. Per ulteriori informazioni sulla gestione delle richieste di rifiuto, consultate la documentazione relativa al [rispetto delle richieste](../segmentation/honoring-opt-outs.md)di rifiuto.
 
-## Aggiungere dati al profilo cliente in tempo reale
+## Passaggi successivi e risorse aggiuntive
 
-La piattaforma può essere configurata per inviare i dati relativi a record e serie temporali a Profile, per supportare l’assimilazione in tempo reale dei flussi e l’assimilazione batch. Per ulteriori informazioni, consulta l’esercitazione che illustra come [aggiungere dati al profilo](tutorials/add-profile-data.md)cliente in tempo reale.
+Per saperne di più sul profilo del cliente in tempo reale, continua a leggere la documentazione fornita in questa guida e completa le tue conoscenze guardando il video sottostante o esplorando altre esercitazioni [video sulla piattaforma](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html)Experience.
 
->[!Note]
->I dati raccolti tramite le soluzioni Adobe, inclusi Analytics Cloud, Marketing Cloud e Advertising Cloud, fluiscono nella piattaforma Experience e vengono trasferiti in Profile.
-
-## Creare segmenti di pubblico
-
-Il fulcro della tua campagna di marketing è il tuo pubblico. Il profilo cliente in tempo reale fornisce gli strumenti per segmentare la base cliente in audience composte da membri che soddisfano i criteri precisi richiesti. Con la segmentazione, potete isolare i membri del pubblico utilizzando criteri quali:
-
-* Clienti per i quali è passata una settimana dall&#39;ultima operazione di acquisto.
-* Clienti per i quali la somma degli acquisti è maggiore di $10.000.
-* I clienti che hanno visto un certo numero di campagne marketing univoche da un elenco predefinito, specificato dal proprio ID campagna, e le hanno esplorate entro 30 minuti.
-
-Per iniziare a usare la segmentazione, consulta la panoramica sulla [segmentazione](../segmentation/home.md).
-
-## (Alfa) Configurare gli attributi calcolati
-
->[!IMPORTANT]
->La funzionalità degli attributi calcolati descritta in questo documento è in alfa. La documentazione e la funzionalità sono soggette a modifiche.
-
-Gli attributi calcolati consentono di calcolare automaticamente il valore dei campi in base ad altri valori, calcoli ed espressioni. Gli attributi calcolati operano a livello di profilo, il che significa che puoi aggregare i valori per tutti i record ed eventi. Ogni attributo calcolato contiene un&#39;espressione, o &quot;regola&quot;, che valuta i dati in arrivo e memorizza il valore risultante in un attributo di profilo o in un evento. Questi calcoli consentono di rispondere facilmente a domande relative a cose come il valore di acquisto del ciclo di vita, il tempo tra acquisti o il numero di aperture di applicazioni, senza che sia necessario eseguire manualmente calcoli complessi ogni volta che le informazioni sono necessarie. Per ulteriori informazioni sugli attributi calcolati e istruzioni dettagliate per utilizzarli, consultate la [guida secondaria API Profilo cliente in tempo reale sugli attributi](api/computed-attributes.md)calcolati. Questa guida ti aiuterà a comprendere meglio il ruolo che gli attributi calcolati giocano all’interno di Adobe Experience Platform e include chiamate API di esempio per eseguire operazioni CRUD di base tramite l’API Profilo cliente in tempo reale.
+>[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12)
