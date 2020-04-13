@@ -4,7 +4,7 @@ seo-title: Destinazioni pubblicitarie
 description: Connetti la tua Piattaforma dati cliente in tempo reale a una piattaforma pubblicitaria 3rd-party (ad es. DSP, rete pubblicitaria, SSP) e condividi tipi di pubblico pseudonimi con queste piattaforme.
 seo-description: Connetti la tua Piattaforma dati cliente in tempo reale a una piattaforma pubblicitaria 3rd-party (ad es. DSP, rete pubblicitaria, SSP) e condividi tipi di pubblico pseudonimi con queste piattaforme.
 translation-type: tm+mt
-source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
+source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
 
 ---
 
@@ -18,8 +18,8 @@ Quando ci si connette a una destinazione pubblicitaria, le audience vengono invi
 Attualmente, Real-time CDP supporta le destinazioni pubblicitarie elencate di seguito. Per informazioni su come connettersi a queste destinazioni, consulta i singoli collegamenti:
 
 * [Adobe Advertising Cloud (estensione Experience Platform Launch)](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
-* [Tag Awin Adveritising Conversion Tag (estensione Experience Platform Launch)](/help/rtcdp/destinations/awin-conversiontag-extension.md)
-* [Mastertag pubblicitario Awin (estensione lancio della piattaforma Experience)](/help/rtcdp/destinations/awin-mastertag-extension.md)
+* [Tag Awin Advertising Conversion Tag (estensione Experience Platform Launch)](/help/rtcdp/destinations/awin-conversiontag-extension.md)
+* [Awin Advertising Mastertag (estensione Experience Platform Launch)](/help/rtcdp/destinations/awin-mastertag-extension.md)
 * [Beemray (estensione Experience Platform Launch)](beemray-extension.md)
 * [Tracciamento eventi universali Bing Ads (estensione Launch della piattaforma Experience)](/help/rtcdp/destinations/bing-ads-extension.md)
 * [Branch (estensione Experience Platform Launch)](/help/rtcdp/destinations/branch-extension.md)
