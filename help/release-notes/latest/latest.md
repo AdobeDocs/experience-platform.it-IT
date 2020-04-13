@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: c2495b463d713f85ba621a7bf687c5959ec13adb
+source-git-commit: f90da5067121f7e00fd26a4dd5462cf567a7b09d
 
 ---
 
@@ -34,6 +34,22 @@ Il framework DULE semplifica e semplifica il processo di classificazione dei dat
 * None.
 
 Per ulteriori informazioni, consulta la panoramica sulla governance dei [dati](../../data-governance/home.md).
+
+
+## Destinazioni
+
+In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che attivano i dati per tali partner in modo semplice.
+
+### Nuove destinazioni
+
+Adobe Real-time CDP ora supporta l&#39;attivazione dei dati per oltre cinquanta estensioni Experience Cloud Launch, abilitando analisi, personalizzazione e altri casi di utilizzo. Per ulteriori informazioni, vedere di seguito:
+
+| Documentazione | Descrizione |
+|--- | ---|
+| [Tipi e categorie di destinazione](/help/rtcdp/destinations/destination-types.md) | Questo articolo spiega la differenza tra connessioni ed estensioni nell&#39;interfaccia Adobe Real-time CDP e consiglia quando utilizzare ciascuna di queste destinazioni. |
+| [Estensioni del lancio della piattaforma Experience](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | In questa pagina sono illustrate le estensioni Launch, sono elencati i casi di utilizzo per le estensioni Launch e sono disponibili collegamenti alla documentazione per ciascuna estensione Launch di Adobe Real-time CDP. |
+
+Per ulteriori informazioni, consulta la panoramica [](/help/rtcdp/destinations/destinations-overview.md)Destinazioni.
 
 ## Servizi intelligenti
 
