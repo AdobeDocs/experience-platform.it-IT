@@ -4,7 +4,7 @@ seo-title: Estensione InMoment
 description: L’estensione InMoment è una destinazione di sondaggio nella piattaforma dati cliente Adobe in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell'estensione in Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -18,6 +18,8 @@ L&#39;integrazione di Launch InMoment consente di abilitare rapidamente e facilm
 InMoment è un’estensione del sondaggio nella piattaforma dati cliente Adobe in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100847.html).
 
 Questa destinazione è un’estensione Experience Platform Launch. Per ulteriori informazioni sul funzionamento delle estensioni Launch in Adobe Real-time CDP, consulta Panoramica [delle estensioni](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
+
+![Estensione in ingresso](/help/rtcdp/destinations/assets/inmoment-extension.png)
 
 ## Prerequisiti  {#prerequisites}
 
