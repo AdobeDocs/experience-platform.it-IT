@@ -4,12 +4,12 @@ seo-title: Estensione Adobe Target v2
 description: L'estensione Adobe Target v2 è una destinazione di personalizzazione nella piattaforma dati cliente Adobe in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell'estensione in Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 51963edad2f903a4a91e1b7c5114bf81323346bc
 
 ---
 
 
-# Adobe Target v2 Extension (#adobe-target-v2-extension)
+# Estensione di Adobe Target v2{#adobe-target-v2-extension}
 
 ## Panoramica {#overview}
 
