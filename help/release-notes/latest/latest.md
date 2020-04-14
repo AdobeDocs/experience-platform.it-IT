@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: f90da5067121f7e00fd26a4dd5462cf567a7b09d
+source-git-commit: dc1c9b7dd9ff4c8b20de96e4ee123d90be4580cc
 
 ---
 
@@ -14,6 +14,28 @@ source-git-commit: f90da5067121f7e00fd26a4dd5462cf567a7b09d
 # Note sulla versione di Adobe Experience Platform
 
 ## Data di rilascio: 8 aprile 2020
+
+## Sistema XDM (Experience Data Model)
+
+Standardizzazione e interoperabilità sono concetti chiave della piattaforma Experience. Experience Data Model (XDM), guidato da Adobe, è uno sforzo per standardizzare i dati sull&#39;esperienza cliente e definire schemi per la gestione dell&#39;esperienza cliente.
+
+XDM è una specifica documentata pubblicamente progettata per migliorare la potenza delle esperienze digitali. Fornisce strutture e definizioni comuni per qualsiasi applicazione che desideri comunicare con i servizi in Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati relativi all&#39;esperienza dei clienti possono essere incorporati in una rappresentazione comune, fornendo informazioni approfondite in modo più rapido e integrato. Puoi ricavare informazioni utili dalle azioni dei clienti, definire il pubblico dei clienti attraverso i segmenti e utilizzare gli attributi del cliente a scopo di personalizzazione.
+
+### Nuove funzionalità
+
+| Funzione | Descrizione |
+| --- | --- |
+| Informazioni di visualizzazione alternative automatiche | Il Registro di sistema dello schema applica automaticamente i valori personalizzati di titolo e descrizione configurati nel `alternateDisplayInfo` descrittore. |
+| Limitazioni per i campi scalari | Il Registro di sistema dello schema non consente più di 6000 campi scalari in un unico schema. |
+| Revisione delle prestazioni | Il Registro di sistema dello schema è stato modificato per soddisfare meglio le esigenze della piattaforma Experience. |
+
+**Correzioni di bug**
+
+* È stato aggiornato XDM in XED convertito per supportare un formato XED più pulito per i campi URI nidificati in XDM standard.
+
+**Problemi noti**
+
+* Noto
 
 ## Governance dei dati
 
