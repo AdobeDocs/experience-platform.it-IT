@@ -4,7 +4,7 @@ seo-title: Destinazioni social network
 description: Con le destinazioni dei social network, puoi attivare profili per le tue campagne di targeting dell'audience, personalizzazione e soppressione basate su e-mail con hash.
 seo-description: Con le destinazioni dei social network, puoi attivare profili per le tue campagne di targeting dell'audience, personalizzazione e soppressione basate su e-mail con hash.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
 
 ---
 
@@ -15,5 +15,5 @@ Con le destinazioni dei social network, puoi attivare profili per le tue campagn
 
 Adobe Real-time Customer Data Platform supporta attualmente le seguenti destinazioni di social network:
 
-* [Adobe Livefyre (estensione Experience Platform Launch)](/help/rtcdp/destinations/adobe-livefyre-extension.md)
+* [Estensione Adobe Livefyre](/help/rtcdp/destinations/adobe-livefyre-extension.md)
 * [Facebook](/help/rtcdp/destinations/facebook-destination.md)
