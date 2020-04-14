@@ -4,7 +4,7 @@ seo-title: Estensioni del lancio della piattaforma Experience
 description: Launch è la soluzione Adobe di nuova generazione per la gestione dei tag. Launch offre ai clienti un modo semplice di implementare e gestire tutti i tag di analisi, marketing e annunci pubblicitari necessari per fornire ai clienti esperienze personalizzate.
 seo-description: Launch è la soluzione Adobe di nuova generazione per la gestione dei tag. Launch offre ai clienti un modo semplice di implementare e gestire tutti i tag di analisi, marketing e annunci pubblicitari necessari per fornire ai clienti esperienze personalizzate.
 translation-type: tm+mt
-source-git-commit: 2a082dc46b50eba1a38eb9d6946e17f851b2fd3f
+source-git-commit: 98c3356db178507e0a8d94b47030e9490e721e46
 
 ---
 
@@ -17,13 +17,13 @@ Per un&#39;introduzione alle funzionalità Experience Platform Launch, consulta 
 * Experience Platform Launch [documentation](https://docs.adobe.com/content/help/it-IT/launch/using/overview.html)
 * Video introduttivi [rapidi su Experience Platform Launch](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/videos.html). Inizia con [Introduzione al lancio](https://www.youtube.com/embed/rwqqkG1SERU) della piattaforma Experience e alla panoramica [del processo di](https://helpx.adobe.com/it/analytics/how-to/adobe-launch-publishing-process.html)pubblicazione, quindi passa ai concetti successivi.
 
-## Come trovare le estensioni Launch nell&#39;interfaccia Adobe Real-time CDP
+## Come trovare le estensioni Launch nell&#39;interfaccia Adobe Real-time CDP {#how-to-find-extensions-in-interface}
 
 Per trovare le estensioni Launch nell&#39;interfaccia Adobe Real-time CDP, individuare **[!UICONTROL Destinations > Catalog]** e selezionare **[!UICONTROL Extensions]** il **[!UICONTROL Types]** filtro.
 
 ![Filtro delle estensioni nell&#39;interfaccia](/help/rtcdp/destinations/assets/extensions-filter.png)
 
-## Funzionamento delle estensioni Launch
+## Funzionamento delle estensioni Launch {#how-extensions-work}
 
 Avviate le estensioni per inoltrare i dati degli eventi non elaborati a diversi tipi di destinazioni. Considerate le estensioni come un tipo di destinazione di inoltro **** degli eventi. Si tratta di un tipo di integrazione più semplice con le piattaforme di destinazione, che inoltra solo dati di evento non elaborati. Esempi di questi sono l&#39;estensione [di personalizzazione](/help/rtcdp/destinations/gainsight-extension.md) Gainsight o la [voce Conferma dell&#39;estensione](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)del cliente.
 
@@ -31,7 +31,7 @@ Avviate le estensioni per inoltrare i dati degli eventi non elaborati a diversi 
 
 ![Estensioni lancio della piattaforma Experience rispetto ad altre destinazioni](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
-## Vantaggi dell’utilizzo delle estensioni Launch
+## Vantaggi dell’utilizzo delle estensioni Launch {#extensions-benefits}
 
 Experience Platform Launch è gratuito per i clienti esistenti di Experience Cloud. Launch semplifica la distribuzione dei tag nel sito Web mediante estensioni facili da usare che possono essere installate, configurate, aggiornate ed eliminate. Launch presenta un piccolo ingombro sul sito Web e consente di mantenere il caricamento delle pagine rapidamente.
 
@@ -41,7 +41,7 @@ Experience Platform Launch è gratuito per i clienti esistenti di Experience Clo
 
 È possibile creare *regole* che determinano quando inoltrare i dati dell&#39;evento alle estensioni. Questa potente funzionalità consente di inoltrare i dati dell&#39;evento solo in determinate situazioni, anziché inviare i dati dell&#39;evento su ogni interazione. Per ulteriori informazioni, consulta le regole nella documentazione [](https://docs.adobe.com/help/it-IT/launch/using/reference/manage-resources/rules.html)Launch.
 
-## Esempi di utilizzo per le estensioni Launch
+## Esempi di utilizzo per le estensioni Launch {#extensions-use-cases}
 
 Le estensioni Launch consentono di soddisfare diversi casi di utilizzo da parte del cliente. Alcuni esempi di utilizzo delle estensioni Launch sono:
 
@@ -50,7 +50,7 @@ Le estensioni Launch consentono di soddisfare diversi casi di utilizzo da parte 
 * Potete attivare un&#39;app chatbox lato client al momento giusto in base a come gli utenti interagiscono con le pagine, in base alle regole impostate in Launch.
 
 
-## Categorie di estensioni
+## Categorie di estensioni {#extension-categories}
 
 Le estensioni di avvio possono rientrare nelle seguenti categorie in Adobe Real-time CDP:
 
