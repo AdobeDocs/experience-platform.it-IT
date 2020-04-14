@@ -4,7 +4,7 @@ seo-title: Tipi e categorie di destinazioni
 description: 'In Adobe Real-time Customer Data Platform, le destinazioni di esportazione dei profili/segmenti acquisiscono i dati dell''evento, li combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Avviate le estensioni per inoltrare i dati degli eventi non elaborati a diversi tipi di destinazioni. '
 seo-description: In Adobe Real-time Customer Data Platform, le destinazioni di esportazione dei profili/segmenti acquisiscono i dati dell'evento, li combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Avviate le estensioni per inoltrare i dati degli eventi non elaborati a diversi tipi di destinazioni.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: bc3f57d636c363c94555b2a779f5bb98a9eca13f
 
 ---
 
@@ -23,7 +23,7 @@ In Adobe Real-time Customer Data Platform, distinguiamo tra due tipi di destinaz
 
 ### Connessioni
 
-**Le destinazioni di esportazione** dei profili e di esportazione **dei** segmenti in Adobe Real-time Customer Data Platform acquisiscono i dati dell&#39;evento, li combinano con altre origini dati per formare il profilo [cliente in tempo](https://docs.adobe.com/content/help/en/experience-platform/profile/home.html)reale, applicare segmentazione ed esportare segmenti e profili qualificati per destinazioni.
+**Le destinazioni di esportazione** dei profili e di esportazione **dei** segmenti in Adobe Real-time Customer Data Platform acquisiscono i dati dell&#39;evento, li combinano con altre origini dati per formare il profilo [cliente in tempo](/help/profile/home.md)reale, applicare segmentazione ed esportare segmenti e profili qualificati per destinazioni.
 
 <br> 
 
@@ -68,7 +68,7 @@ Le estensioni sono utili quando i dati dell&#39;evento vengono utilizzati per at
 
 ## Categorie di destinazione
 
-Le destinazioni e le estensioni nel catalogo [delle](https://platform.adobe.com/destination/catalog) destinazioni sono raggruppate per categoria di destinazione (**Annuncio**, Archivio **** Cloud, piattaforme **** d’indagine, marketing **tramite** e-mail, ecc.), a seconda del caso d’uso commerciale che consentono di ottenere. Per ulteriori informazioni su ciascuna categoria, nonché sulle destinazioni incluse in ciascuna categoria, consulta la documentazione [del catalogo](/help/rtcdp/destinations/destinations-catalog.md)Destinazioni.
+Le connessioni e le estensioni nel catalogo [delle](https://platform.adobe.com/destination/catalog) destinazioni sono raggruppate per categoria di destinazione (**Annuncio**, Archivio **** Cloud, Piattaforme **** per sondaggi, Marketing **tramite** e-mail, ecc.), a seconda del caso di utilizzo del marketing che aiutano a ottenere. Per ulteriori informazioni su ciascuna categoria, nonché sulle destinazioni incluse in ciascuna categoria, consulta la documentazione [del catalogo](/help/rtcdp/destinations/destinations-catalog.md)Destinazioni.
 
-![Categorie di destinazione](/help/rtcdp/destinations/assets/destination-categories.png)
+![Categorie di destinazione](/help/rtcdp/destinations/assets/destination-categories-menu.png)
 
