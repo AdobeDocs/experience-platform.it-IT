@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Monitoraggio dell’assimilazione dei dati
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8577d9b93098d5d6ec778d549bf5fc1e29c32d86
+source-git-commit: 9cbc22a34613aeb58a2c5090b10978ae4428dbdb
 
 ---
 
@@ -21,15 +21,21 @@ Nell’interfaccia [della piattaforma](https://platform.adobe.com)Experience, fa
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-Viene visualizzata la pagina *Streaming end-to-end* monitoring (Monitoraggio end-to-end dello streaming). Questa area di lavoro offre un grafico con la frequenza di streaming dei messaggi e un elenco dettagliato dei dati in arrivo.
+Viene visualizzata la pagina *Streaming end-to-end* monitoring (Monitoraggio end-to-end dello streaming). Questa area di lavoro fornisce un grafico che mostra la frequenza degli eventi in streaming ricevuti dalla piattaforma, un grafico che mostra la frequenza degli eventi in streaming elaborati correttamente dal profilo [cliente](../../profile/home.md)in tempo reale, nonché un elenco dettagliato dei dati in arrivo.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
-Per impostazione predefinita, il grafico mostra il tasso di assimilazione degli ultimi sette giorni. È possibile modificare questo intervallo di date per visualizzare diversi periodi di tempo facendo clic sul pulsante evidenziato.
+Per impostazione predefinita, il grafico superiore mostra il tasso di assimilazione degli ultimi sette giorni. È possibile modificare questo intervallo di date per visualizzare diversi periodi di tempo facendo clic sul pulsante evidenziato.
 
-![](../images/quality/monitor-data-flows/list-streams-focus-on-graph.png)
+![](../images/quality/monitor-data-flows/list-streams-focus-on-top-graph.png)
 
-Sotto il grafico è riportato un elenco di tutti i record di assimilazione in streaming corrispondenti all’intervallo di date visualizzato sopra. Ciascun batch elencato visualizza il proprio ID, il nome del set di dati, al momento dell&#39;ultimo aggiornamento, il numero di record nel batch, nonché il numero di eventuali errori (se presenti). È possibile fare clic su uno dei record per ottenere informazioni più dettagliate su tale record.
+Il grafico inferiore mostra la frequenza degli eventi in streaming elaborati correttamente da Profile negli ultimi sette giorni. È possibile modificare questo intervallo di date per visualizzare diversi periodi di tempo facendo clic sul pulsante evidenziato.
+
+> [!NOTE] Affinché i dati vengano visualizzati su questo grafico, i dati devono essere **esplicitamente** attivati per il profilo. Per informazioni su come abilitare i dati di streaming per il profilo, consulta la guida [utente](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)per i set di dati.
+
+![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
+
+Sotto i grafici è riportato un elenco di tutti i record di assimilazione in streaming corrispondenti all’intervallo di date visualizzato sopra. Ciascun batch elencato visualizza il proprio ID, il nome del set di dati, al momento dell&#39;ultimo aggiornamento, il numero di record nel batch, nonché il numero di eventuali errori (se presenti). È possibile fare clic su uno dei record per ottenere informazioni più dettagliate su tale record.
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-streams.png)
 
