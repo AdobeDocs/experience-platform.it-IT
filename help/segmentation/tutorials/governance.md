@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Applica la conformità all'utilizzo dei dati per i segmenti di pubblico
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+source-git-commit: 97ba7aeb8a67735bd65af372fbcba5e71aee6aae
 
 ---
 
@@ -22,7 +22,9 @@ Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Ad
 - [Segmentazione](../home.md): In che modo il profilo cliente in tempo reale divide un ampio gruppo di individui contenuti nello store del profilo in gruppi più piccoli che condividono caratteristiche simili e risponderanno in modo simile alle strategie di marketing.
 - [Governance](../../data-governance/home.md)dei dati: La governance dei dati fornisce l&#39;infrastruttura per l&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati (DULE), utilizzando i seguenti componenti:
    - [Etichette](../../data-governance/labels/user-guide.md)di utilizzo dati: Etichette utilizzate per descrivere insiemi di dati e campi in termini di livello di sensibilità con cui gestire i rispettivi dati.
-   - [Criteri](../../data-governance/api/getting-started.md)di utilizzo dei dati: Configurazioni che indicano quali azioni di marketing sono consentite sui dati classificati da particolari etichette di utilizzo dei dati.
+   - [Criteri](../../data-governance/policies/overview.md)di utilizzo dei dati: Configurazioni che indicano quali azioni di marketing sono consentite sui dati classificati da particolari etichette di utilizzo dei dati.
+   - [Applicazione](../../data-governance/enforcement/overview.md)delle regole: Consente di applicare criteri di utilizzo dei dati e di impedire le operazioni di dati che costituiscono violazioni dei criteri.
+- [Sandbox](../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per effettuare correttamente chiamate alle API della piattaforma.
 
@@ -48,7 +50,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 - Content-Type: application/json
 
-## Ricerca di un criterio di unione per la definizione di un segmento
+## Cercare un criterio di unione per la definizione di un segmento {#merge-policy}
 
 Questo flusso di lavoro inizia con l&#39;accesso a un segmento di pubblico noto. I segmenti abilitati per l’uso in Profilo cliente in tempo reale contengono un ID criterio di unione all’interno della definizione del segmento. Questo criterio di unione contiene informazioni sui set di dati da includere nel segmento, che a loro volta contengono eventuali etichette di utilizzo dei dati applicabili.
 
@@ -117,9 +119,9 @@ Una risposta corretta restituisce i dettagli della definizione del segmento.
 | -------- | ----------- |
 | `mergePolicyId` | ID del criterio di unione utilizzato per la definizione del segmento. Questo verrà utilizzato nel passaggio successivo. |
 
-## Trovare i set di dati di origine dal criterio di unione
+## Trovare i set di dati di origine dal criterio di unione {#datasets}
 
-I criteri di unione contengono informazioni sui set di dati di origine, che a loro volta contengono etichette DULE. Potete consultare i dettagli di un criterio di unione fornendo l&#39;ID del criterio di unione in una richiesta GET all&#39;API del profilo.
+I criteri di unione contengono informazioni sui set di dati di origine, che a loro volta contengono etichette di utilizzo dei dati. Potete consultare i dettagli di un criterio di unione fornendo l&#39;ID del criterio di unione in una richiesta GET all&#39;API del profilo.
 
 **Formato API**
 
@@ -129,7 +131,7 @@ GET /config/mergePolicies/{MERGE_POLICY_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{MERGE_POLICY_ID}` | ID del criterio di unione ottenuto nel passaggio [](#lookup-a-merge-policy-for-a-segment-definition)precedente. |
+| `{MERGE_POLICY_ID}` | ID del criterio di unione ottenuto nel passaggio [](#merge-policy)precedente. |
 
 **Richiesta**
 
@@ -174,92 +176,195 @@ Una risposta corretta restituisce i dettagli del criterio di unione.
 | `attributeMerge.type` | Tipo di configurazione della precedenza dei dati per il criterio di unione. Se il valore è `dataSetPrecedence`, i set di dati associati a questo criterio di unione sono elencati in `attributeMerge > data > order`. Se il valore è `timestampOrdered`, tutti i set di dati associati allo schema a cui si fa riferimento in `schema.name` vengono utilizzati dal criterio di unione. |
 | `attributeMerge.data.order` | Se `attributeMerge.type` è `dataSetPrecedence`, questo attributo sarà una matrice contenente gli ID dei set di dati utilizzati da questo criterio di unione. Questi ID vengono utilizzati nel passaggio successivo. |
 
-## Ricerca delle etichette di utilizzo dei dati per i set di dati di origine
+## Valutazione dei set di dati per le violazioni dei criteri
 
-Dopo aver raccolto gli ID dei set di dati di origine del criterio di unione, puoi utilizzare questi ID per cercare le etichette di utilizzo dei dati configurate per i set di dati stessi ed eventuali campi di dati specifici in essi contenuti.
+>[!NOTE]  Questo passaggio presuppone che sia presente almeno un criterio di utilizzo dei dati attivo che impedisca l&#39;esecuzione di azioni di marketing specifiche su dati contenenti determinate etichette. Se non si dispone di criteri di utilizzo applicabili per i set di dati in fase di valutazione, seguire l&#39;esercitazione [sulla creazione dei](../../data-governance/policies/create.md) criteri per crearne uno prima di continuare con questo passaggio.
 
-La seguente chiamata all’API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) Catalog Service recupera le etichette di utilizzo dei dati associate a un singolo dataset fornendo il relativo ID nel percorso della richiesta:
+Dopo aver ottenuto gli ID dei set di dati di origine del criterio di unione, puoi utilizzare l&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE Policy Service per valutare tali set di dati in base ad azioni di marketing specifiche, al fine di verificare la presenza di violazioni dei criteri di utilizzo dei dati.
+
+Per valutare i set di dati, è necessario fornire il nome dell&#39;azione di marketing nel percorso di una richiesta POST, fornendo al contempo gli ID dei set di dati all&#39;interno del corpo della richiesta, come illustrato nell&#39;esempio seguente.
 
 **Formato API**
 
 ```http
-GET /dataSets/{DATASET_ID}/dule
+POST /marketingActions/core/{MARKETING_ACTION_NAME}/constraints
+POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 ```
 
-| Proprietà | Descrizione |
-| -------- | ----------- |
-| `{DATASET_ID}` | ID del set di dati di cui si desidera cercare le etichette di utilizzo dei dati. |
+| Parametro | Descrizione |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | Nome dell&#39;azione di marketing associata al criterio di utilizzo dei dati per il quale si stanno valutando i set di dati. A seconda che il criterio sia stato definito da Adobe o dalla vostra organizzazione, dovete utilizzare `/marketingActions/core` o `/marketingActions/custom`, rispettivamente. |
 
 **Richiesta**
 
+La richiesta seguente verifica l&#39;azione di `exportToThirdParty` marketing rispetto ai set di dati ottenuti nel passaggio [](#datasets)precedente. Il payload della richiesta è un array contenente gli ID di ogni dataset.
+
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5b95b155419ec801e6eee780/dule \
+curl -X POST \
+  https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty/constraints
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '[
+    {
+      "entityType": "dataSet",
+      "entityId": "5b95b155419ec801e6eee780"
+    },
+    {
+      "entityType": "dataSet",
+      "entityId": "5b7c86968f7b6501e21ba9df"
+    }
+  ]'
 ```
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `entityType` | Ogni elemento nell&#39;array di payload deve indicare il tipo di entità da definire. In questo caso d’uso, il valore sarà sempre &quot;dataSet&quot;. |
+| `entityID` | Ogni elemento nell&#39;array di payload deve fornire l&#39;ID univoco per un dataset. |
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di etichette di utilizzo dei dati associate al set di dati nel suo insieme ed eventuali specifici campi di dati associati allo schema di origine.
+Una risposta corretta restituisce l’URI per l’azione di marketing, le etichette di utilizzo dei dati raccolte dai set di dati forniti e un elenco di eventuali criteri di utilizzo dei dati violati a seguito del test dell’azione rispetto a tali etichette. In questo esempio, il criterio &quot;Esporta dati in terze parti&quot; viene visualizzato nell&#39; `violatedPolicies` array, a indicare che l&#39;azione di marketing ha generato una violazione del criterio.
 
 ```json
 {
-    "connection": {},
-    "dataset": {
-        "identity": [],
-        "contract": [
-            "C3"
-        ],
-        "sensitive": [],
-        "contracts": [
-            "C3"
-        ],
-        "identifiability": [],
-        "specialTypes": []
+  "timestamp": 1556324277895,
+  "clientId": "{CLIENT_ID}",
+  "userId": "{USER_ID}",
+  "imsOrg": "{IMS_ORG}",
+  "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty",
+  "duleLabels": [
+    "C1",
+    "C2",
+    "C4",
+    "C5"
+  ],
+  "discoveredLabels": [
+    {
+      "entityType": "dataSet",
+      "entityId": "5b95b155419ec801e6eee780",
+      "dataSetLabels": {
+        "connection": {
+          "labels": []
+        },
+        "dataSet": {
+          "labels": [
+            "C5"
+          ]
+        },
+        "fields": [
+          {
+            "labels": [
+              "C2",
+            ],
+            "path": "/properties/_customer"
+          },
+          {
+            "labels": [
+              "C5"
+            ],
+            "path": "/properties/geoUnit"
+          },
+          {
+            "labels": [
+              "C1"
+            ],
+            "path": "/properties/identityMap"
+          }
+        ]
+      }
     },
-    "fields": [],
-    "schemaFields": [
-        {
-            "path": "/properties/personalEmail/properties/address",
-            "identity": [
-                "I1"
+    {
+      "entityType": "dataSet",
+      "entityId": "5b7c86968f7b6501e21ba9df",
+      "dataSetLabels": {
+        "connection": {
+          "labels": []
+        },
+        "dataSet": {
+          "labels": [
+            "C5"
+          ]
+        },
+        "fields": [
+          {
+            "labels": [
+              "C5"
             ],
-            "contract": [
-                "C2",
-                "C9"
+            "path": "/properties/createdByBatchID"
+          },
+          {
+            "labels": [
+              "C5"
             ],
-            "sensitive": [],
-            "contracts": [
-                "C2",
-                "C9"
-            ],
-            "identifiability": [
-                "I1"
-            ],
-            "specialTypes": []
+            "path": "/properties/faxPhone"
+          }
+        ]
+      }
+    }
+  ],
+  "violatedPolicies": [
+    {
+      "name": "Export Data to Third Party",
+      "status": "ENABLED",
+      "marketingActionRefs": [
+        "https://platform-stage.adobe.io:443/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty"
+      ],
+      "description": "Conditions under which data cannot be exported to a third party",
+      "deny": {
+        "operator": "OR",
+        "operands": [
+          {
+            "label": "C1"
+          },
+          {
+            "operator": "AND",
+            "operands": [
+              {
+                "label": "C3"
+              },
+              {
+                "label": "C7"
+              }
+            ]
+          }
+        ]
+      },
+      "imsOrg": "{IMS_ORG}",
+      "created": 1565651746693,
+      "createdClient": "{CREATED_CLIENT}",
+      "createdUser": "{CREATED_USER",
+      "updated": 1565723012139,
+      "updatedClient": "{UPDATED_CLIENT}",
+      "updatedUser": "{UPDATED_USER}",
+      "_links": {
+        "self": {
+          "href": "https://platform-stage.adobe.io/data/foundation/dulepolicy/policies/custom/5d51f322e553c814e67af1a3"
         }
-    ]
+      },
+      "id": "5d51f322e553c814e67af1a3"
+    }
+  ]
 }
 ```
 
 | Proprietà | Descrizione |
-| -------- | ----------- |
-| `dataset` | Un oggetto che contiene le etichette di utilizzo dei dati applicate all&#39;insieme di dati. |
-| `schemaFields` | Un array di oggetti che rappresenta specifici campi dello schema a cui sono applicate etichette di utilizzo dei dati. |
-| `schemaFields.path` | Percorso del campo dello schema le cui etichette di utilizzo dei dati sono elencate nello stesso oggetto. |
+| --- | --- |
+| `duleLabels` | Elenco di etichette di utilizzo dei dati estratte dai set di dati forniti. |
+| `discoveredLabels` | Un elenco dei set di dati forniti nel payload della richiesta, in cui sono visualizzate le etichette a livello di set di dati e di campi presenti in ciascuno di essi. |
+| `violatedPolicies` | Un array che elenca tutti i criteri di utilizzo dei dati violati eseguendo il test dell&#39;azione di marketing (specificata in `marketingActionRef`) rispetto a quella fornita `duleLabels`. |
+
+Utilizzando i dati restituiti nella risposta API, potete impostare protocolli all&#39;interno dell&#39;applicazione dell&#39;esperienza per applicare correttamente le violazioni dei criteri quando si verificano.
 
 ## Filtrare i campi dati
 
->[!NOTE] Questo passaggio è facoltativo. Se non desideri regolare i dati inclusi nel tuo segmento in base ai risultati ottenuti nel passaggio precedente, ovvero [cercare etichette](#lookup-data-usage-labels-for-the-source-datasets)di utilizzo dei dati, puoi passare al passaggio finale di [valutazione dei dati per le violazioni](#evaluate-data-for-policy-violations)dei criteri.
-
-Se desiderate regolare i dati inclusi nel segmento di pubblico, potete farlo utilizzando uno dei due metodi seguenti:
+Se il segmento di pubblico non supera la valutazione, puoi regolare i dati inclusi nel segmento tramite uno dei due metodi descritti di seguito.
 
 ### Aggiorna il criterio di unione della definizione del segmento
 
-Quando si aggiorna il criterio di unione di una definizione di segmento, vengono regolati i set di dati e i campi che verranno inclusi durante l&#39;esecuzione del processo di segmento. Per ulteriori informazioni, consulta la sezione sull&#39; [aggiornamento di un criterio](../../profile/api/merge-policies.md) di unione esistente nell&#39;esercitazione sulla politica di unione.
+Quando si aggiorna il criterio di unione di una definizione di segmento, vengono regolati i set di dati e i campi che verranno inclusi durante l&#39;esecuzione del processo di segmento. Per ulteriori informazioni, consulta la sezione sull&#39; [aggiornamento di un criterio](../../profile/api/merge-policies.md#update) di unione esistente nell&#39;esercitazione per l&#39;unione delle API.
 
 ### Limita campi dati specifici durante l&#39;esportazione del segmento
 
@@ -267,11 +372,7 @@ Quando si esporta un segmento in un dataset utilizzando l&#39;API Profilo client
 
 Considerate un segmento con campi di dati denominati &quot;A&quot;, &quot;B&quot; e &quot;C&quot;. Se si desidera esportare solo il campo &quot;C&quot;, il `fields` parametro conterrà solo il campo &quot;C&quot;. In questo modo, i campi &quot;A&quot; e &quot;B&quot; sarebbero esclusi durante l’esportazione del segmento.
 
-Per ulteriori informazioni, consulta la sezione sull’ [esportazione di un segmento](./evaluate-a-segment.md#export-a-segment) nell’esercitazione sulla segmentazione.
-
-## Valutazione dei dati per le violazioni dei criteri
-
-Dopo aver raccolto le etichette di utilizzo dei dati associate al segmento di pubblico, puoi sottoporre a test queste etichette in base alle azioni di marketing per valutare eventuali violazioni dei criteri di utilizzo dei dati. Per i passaggi dettagliati su come eseguire le valutazioni dei criteri utilizzando l&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)DULE Policy Service, vedete il documento sulla valutazione [dei](../../data-governance/enforcement/overview.md)criteri.
+Per ulteriori informazioni, consulta la sezione sull’ [esportazione di un segmento](./evaluate-a-segment.md#export) nell’esercitazione sulla segmentazione.
 
 ## Passaggi successivi
 
