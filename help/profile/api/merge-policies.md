@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guida per lo sviluppatore di API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
 
 ---
 
@@ -418,7 +418,7 @@ Una risposta corretta restituisce i dettagli del criterio di unione appena creat
 
 Per informazioni dettagliate su ciascuno dei singoli elementi che compongono un criterio di unione, vedere la sezione [Componenti di criteri](#components-of-merge-policies) di unione all&#39;inizio del documento.
 
-## Aggiornare un criterio di unione
+## Aggiornare un criterio di unione {#update}
 
 È possibile modificare un criterio di unione esistente modificando singoli attributi (PATCH) o sovrascrivendo l&#39;intero criterio di unione con nuovi attributi (PUT). Di seguito sono riportati alcuni esempi.
 
