@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Valutazione di un segmento
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 8d77fc6c5b2824624ba308269f743a432a5288d2
+source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
 
 ---
 
@@ -452,7 +452,7 @@ Le sezioni seguenti descrivono queste opzioni in modo più dettagliato.
 
 Se conosci il profilo specifico a cui vuoi accedere, puoi farlo utilizzando l&#39;API Profilo cliente in tempo reale. I passaggi completi per accedere ai singoli profili sono disponibili nei dati [Access Real-time Customer Profile (Profilo cliente in tempo reale) tramite l&#39;esercitazione Profile API](../../profile/api/entities.md) (API profilo).
 
-## Esportare un segmento
+## Esportare un segmento {#export}
 
 Dopo che un processo di segmentazione è stato completato correttamente (il valore dell&#39; `status` attributo è &quot;SUCCEEDED&quot;), potete esportare il pubblico in un set di dati in cui è possibile accedervi e agire.
 
