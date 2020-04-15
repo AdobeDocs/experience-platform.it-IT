@@ -4,7 +4,7 @@ seo-title: Tipi e categorie di destinazioni
 description: 'In Adobe Real-time Customer Data Platform, le destinazioni di esportazione dei profili/segmenti acquisiscono i dati dell''evento, li combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Avviate le estensioni per inoltrare i dati degli eventi non elaborati a diversi tipi di destinazioni. '
 seo-description: In Adobe Real-time Customer Data Platform, le destinazioni di esportazione dei profili/segmenti acquisiscono i dati dell'evento, li combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Avviate le estensioni per inoltrare i dati degli eventi non elaborati a diversi tipi di destinazioni.
 translation-type: tm+mt
-source-git-commit: bc3f57d636c363c94555b2a779f5bb98a9eca13f
+source-git-commit: 617cf1934402b9001647d7704fb24d6256069ff3
 
 ---
 
@@ -33,7 +33,7 @@ Le destinazioni di esportazione dei profili generano un file contenente profili 
 
 #### Destinazioni di esportazione dei segmenti
 
-Le destinazioni di esportazione dei segmenti inviano i profili e i segmenti per i quali si sono qualificati alle piattaforme di destinazione. Queste destinazioni utilizzano ID segmento o ID utente. Le destinazioni pubblicitarie come [Google Display &amp; Video 360](/help/rtcdp/destinations/google-dv360-destination.md) o [Google Ads](/help/rtcdp/destinations/google-ads-destination.md) sono esempi di questo tipo di destinazioni.
+Le destinazioni di esportazione dei segmenti inviano i profili e i segmenti per i quali si sono qualificati alle piattaforme di destinazione. Queste destinazioni utilizzano ID segmento o ID utente. Destinazioni pubblicitarie come [Google Display &amp; Video 360](/help/rtcdp/destinations/google-dv360-destination.md) o [Google Ads](/help/rtcdp/destinations/google-ads-destination.md) sono esempi di questo tipo di destinazioni.
 
 #### Destinazioni di esportazione dei profili e dei segmenti - Panoramica video
 
@@ -47,10 +47,11 @@ Il video seguente illustra le particolarità dei due tipi di destinazioni:
 
 Adobe Real-time CDP sfrutta la potenza e la flessibilità di Experience Platform Launch per includere le estensioni Launch nell’interfaccia Adobe Real-time CDP.
 
+>[!TIP]
+>
+>Per informazioni dettagliate sulle estensioni Experience Platform Launch, compresi i casi di utilizzo e come trovarle nell&#39;interfaccia, consultate la panoramica [sulle estensioni](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Launch.
+
 Avviate le estensioni per inoltrare i dati degli eventi non elaborati a diversi tipi di destinazioni. Considerate le estensioni come un tipo di destinazione di inoltro **** degli eventi. Si tratta di un tipo di integrazione più semplice con le piattaforme di destinazione, che inoltra solo dati di evento non elaborati. Esempi di questi sono l&#39;estensione [di personalizzazione](/help/rtcdp/destinations/gainsight-extension.md) Gainsight o la [voce Conferma dell&#39;estensione](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)del cliente.
-
-Per informazioni dettagliate sulle estensioni Experience Platform Launch, consultate la panoramica [sulle estensioni](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Launch.
-
 
 ![Estensioni lancio della piattaforma Experience rispetto ad altre destinazioni](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
