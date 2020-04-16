@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Schemi e descrittori XDM
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: ee08f43400fa72abce95ed52aff879f954f4b4d6
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -23,7 +23,7 @@ La capacità di comprendere le relazioni tra i clienti e le loro interazioni con
 
 ## Creare uno schema ad hoc
 
-In circostanze specifiche, potrebbe essere necessario creare uno schema Experience Data Model (XDM) con campi che vengono denominati separati per l&#39;uso solo da un singolo dataset. Tale schema è denominato &quot;ad hoc&quot;. Gli schemi ad hoc sono utilizzati in vari flussi di lavoro di assimilazione [dei](../ingestion/home.md) dati per Experience Platform, inclusi l’assimilazione di file CSV e la creazione di determinati tipi di connessioni [](../source-connectors/home.md)sorgente. La creazione di uno schema ad hoc viene eseguita utilizzando l&#39;API del Registro di sistema dello schema e deve essere utilizzata insieme ad altre esercitazioni della Piattaforma esperienza che richiedono la creazione di uno schema ad hoc come parte del loro flusso di lavoro. Per iniziare a creare uno schema ad hoc, vedete l&#39;esercitazione per la [creazione di uno schema ad hoc tramite l&#39;API](../xdm/tutorials/ad-hoc.md).
+In circostanze specifiche, potrebbe essere necessario creare uno schema Experience Data Model (XDM) con campi che vengono denominati separati per l&#39;uso solo da un singolo dataset. Tale schema è denominato &quot;ad hoc&quot;. Gli schemi ad hoc sono utilizzati in vari flussi di lavoro di assimilazione [dei](../ingestion/home.md) dati per Experience Platform, inclusi l’assimilazione di file CSV e la creazione di determinati tipi di connessioni [](../sources/home.md)sorgente. La creazione di uno schema ad hoc viene eseguita utilizzando l&#39;API del Registro di sistema dello schema e deve essere utilizzata insieme ad altre esercitazioni della Piattaforma esperienza che richiedono la creazione di uno schema ad hoc come parte del loro flusso di lavoro. Per iniziare a creare uno schema ad hoc, vedete l&#39;esercitazione per la [creazione di uno schema ad hoc tramite l&#39;API](../xdm/tutorials/ad-hoc.md).
 
 ## Passaggi successivi
 
