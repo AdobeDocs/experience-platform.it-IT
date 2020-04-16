@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: dc1c9b7dd9ff4c8b20de96e4ee123d90be4580cc
+source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
 
 ---
 
@@ -126,4 +126,4 @@ Experience Platform fornisce un&#39;API RESTful e un&#39;interfaccia utente inte
 
 * None
 
-Per ulteriori informazioni sulle origini, consultate la panoramica sulle [origini](../../source-connectors/home.md).
+Per ulteriori informazioni sulle origini, consultate la panoramica sulle [origini](../../sources/home.md).
