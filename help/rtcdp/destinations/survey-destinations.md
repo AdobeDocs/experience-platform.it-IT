@@ -4,7 +4,7 @@ seo-title: Destinazioni sondaggio
 description: Le piattaforme di sondaggi rilevano gli eventi dei sondaggi, acquisiscono il feedback dei clienti in tempo reale attraverso gli elementi dei dati e condividono i dati con Adobe Real-time CDP.
 seo-description: Le piattaforme di sondaggi rilevano gli eventi dei sondaggi, acquisiscono il feedback dei clienti in tempo reale attraverso gli elementi dei dati e condividono i dati con Adobe Real-time CDP.
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
 
 ---
 
