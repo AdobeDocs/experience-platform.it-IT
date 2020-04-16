@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica sull’inserimento dei dati in Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -35,7 +35,7 @@ Experience Platform consente di impostare connessioni di origine a vari provider
 
 Le connessioni di origine possono essere configurate per raccogliere dati da altre applicazioni Adobe (come Adobe Analytics e Adobe Audience Manager), origini di archiviazione cloud di terze parti (come Azure Blob, Amazon S3, server FTP e server SFTP) e sistemi CRM di terze parti (come Microsoft Dynamics e Salesforce).
 
-Per ulteriori informazioni, consulta la panoramica [](../source-connectors/home.md) Origini.
+Per ulteriori informazioni, consulta la panoramica [](../sources/home.md) Origini.
 
 ## Passaggi successivi
 
