@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 9bfb2ca8726421363c8446ecf581ed58d427eabf
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -98,7 +98,7 @@ Experience Platform fornisce un&#39;API RESTful e un&#39;interfaccia utente inte
 
 * I connettori di origine per gli archivi basati su cloud non supportano l&#39;inserimento di file compressi.
 
-Per ulteriori informazioni sulle origini, consulta [Panoramica](../../source-connectors/home.md)delle origini.
+Per ulteriori informazioni sulle origini, consulta [Panoramica](../../sources/home.md)delle origini.
 
 ## Area di lavoro Data Science
 
