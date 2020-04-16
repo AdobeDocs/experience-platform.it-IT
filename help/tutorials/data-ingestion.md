@@ -4,18 +4,18 @@ solution: Experience Platform
 title: Esercitazioni sull’inserimento dei dati
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 2020f4b88f81f2d4fe3cfbd91cd18119ae580f4f
+source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
 
 ---
 
 
 # Caricamento di dati in Experience Platform
 
-Adobe Experience Platform riunisce i dati provenienti da più origini per aiutare gli esperti di marketing a comprendere meglio il comportamento dei loro clienti. L&#39;inserimento dei dati in Adobe Experience Platform rappresenta i diversi metodi mediante i quali la piattaforma acquisisce i dati da tali origini, nonché il modo in cui tali dati vengono memorizzati all&#39;interno del Data Lake per essere utilizzati dai servizi della piattaforma a valle. L’inserimento dei dati include l’assimilazione batch, l’assimilazione in streaming e l’assimilazione mediante connettori sorgente. Per saperne di più, leggi la panoramica [sull&#39;inserimento dei](../ingestion/home.md) dati o procedi direttamente alla documentazione [](../source-connectors/home.md)Origini.
+Adobe Experience Platform riunisce i dati provenienti da più origini per aiutare gli esperti di marketing a comprendere meglio il comportamento dei loro clienti. L&#39;inserimento dei dati in Adobe Experience Platform rappresenta i diversi metodi mediante i quali la piattaforma acquisisce i dati da tali origini, nonché il modo in cui tali dati vengono memorizzati all&#39;interno del Data Lake per essere utilizzati dai servizi della piattaforma a valle. L’inserimento dei dati include l’assimilazione batch, l’assimilazione in streaming e l’assimilazione mediante connettori sorgente. Per saperne di più, leggi la panoramica [sull&#39;inserimento dei](../ingestion/home.md) dati o procedi direttamente alla documentazione [](../sources/home.md)Origini.
 
 ## Creare un connettore sorgente nell’interfaccia utente e nell’API
 
-I connettori di origine consentono di acquisire dati da più origini, dove possono essere etichettati, strutturati e migliorati utilizzando i servizi della piattaforma. Per iniziare a creare un connettore utilizzando l&#39;interfaccia utente, consultare la sezione relativa alla [creazione di un connettore sorgente nella panoramica](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/sources-ui-tutorial.md)dell&#39;interfaccia utente. Per creare i connettori sorgente mediante l’API, visitate la pagina [Creazione di un connettore sorgente mediante la panoramica](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-api-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/api/sources-api-tutorial.md)dell’API del servizio di flusso.
+I connettori di origine consentono di acquisire dati da più origini, dove possono essere etichettati, strutturati e migliorati utilizzando i servizi della piattaforma. Per iniziare a creare un connettore di origine, vedere la panoramica [delle](../sources/home.md)origini.
 
 ## Assegna dati batch
 
