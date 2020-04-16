@@ -4,7 +4,7 @@ seo-title: Voce delle destinazioni dei clienti
 description: Le piattaforme vocali raccolgono e raccolgono i dati da varie fonti, compresi i messaggi vocali, i dati delle chiamate e le conversazioni via chat. Le informazioni raccolte possono essere filtrate e analizzate per consentire alle aziende di ottimizzare il sito Web in base alle proprie esigenze.
 seo-description: Le piattaforme vocali raccolgono e raccolgono i dati da varie fonti, compresi i messaggi vocali, i dati delle chiamate e le conversazioni via chat. Le informazioni raccolte possono essere filtrate e analizzate per consentire alle aziende di ottimizzare il sito Web in base alle proprie esigenze.
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
 
 ---
 
