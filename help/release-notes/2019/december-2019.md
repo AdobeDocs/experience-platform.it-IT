@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 28a8fc496c85b334e89d0f0a130d3cc5c8956399
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -66,7 +66,7 @@ Experience Platform fornisce un&#39;API RESTful e un&#39;interfaccia utente inte
 
 * None.
 
-Per ulteriori informazioni sulle origini, consultate la panoramica sulle [origini](../../source-connectors/home.md).
+Per ulteriori informazioni sulle origini, consultate la panoramica sulle [origini](../../sources/home.md).
 
 ## Sistema XDM (Experience Data Model)
 
