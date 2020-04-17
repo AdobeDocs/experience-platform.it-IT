@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Preparare i dati per l'utilizzo in Intelligent Services
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 1d827d1637da05d3d2afc338f48911bb23039949
+source-git-commit: 03135f564bd72fb60e41b02557cb9ca9ec11e6e8
 
 ---
 
 
 # Preparare i dati per l&#39;utilizzo in Intelligent Services
 
-Per consentire ai servizi intelligenti di scoprire informazioni ricavate dai dati degli eventi di marketing, i dati devono essere arricchiti e mantenuti in modo semantico in una struttura standard. I servizi intelligenti sfruttano gli schemi XDM (Experience Data Model) per ottenere questo risultato. Nello specifico, tutti i set di dati utilizzati in Intelligent Services devono essere conformi allo schema XDM **Consumer Experience Events (CEE)** .
+Per consentire ai servizi intelligenti di scoprire informazioni ricavate dai dati degli eventi di marketing, i dati devono essere arricchiti e mantenuti in modo semantico in una struttura standard. I servizi intelligenti sfruttano gli schemi XDM (Experience Data Model) per ottenere questo risultato. Nello specifico, tutti i set di dati utilizzati in Intelligent Services devono essere conformi allo schema XDM **Consumer ExperienceEvent (CEE)** .
 
 Questo documento fornisce linee guida generali sulla mappatura dei dati degli eventi di marketing da più canali a questo schema, delineando le informazioni sui campi importanti all&#39;interno dello schema per consentire di determinare in modo efficace come mappare i dati alla relativa struttura.
 
@@ -52,7 +52,7 @@ Il `xdm:channel` campo rappresenta il canale di marketing relativo a ExperienceE
 
 ## Mapping e acquisizione dei dati
 
-Una volta determinato se i dati delle serie temporali possono essere mappati allo schema CEE, è possibile avviare il processo di inserimento dei dati in servizi intelligenti. Contattate i servizi di consulenza Adobe per facilitare la mappatura dei dati sullo schema e l&#39;inserimento nel servizio.
+Una volta determinato se i dati degli eventi di marketing possono essere mappati allo schema CEE, è possibile avviare il processo di inserimento dei dati in Servizi intelligenti. Contattate i servizi di consulenza Adobe per facilitare la mappatura dei dati sullo schema e l&#39;inserimento nel servizio.
 
 Se disponete di un’iscrizione Adobe Experience Platform e desiderate mappare e assimilare i dati voi stessi, seguite i passaggi descritti nella sezione seguente.
 
