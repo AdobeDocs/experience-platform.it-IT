@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connettore dati di Analytics
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9f0200af0310eafbcc1851b089cfc254cb34af8f
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -37,7 +37,7 @@ Per ulteriori informazioni su XDM, vedere la panoramica [del sistema](../../../x
 
 ## Come vengono mappati i campi da Adobe Analytics a XDM?
 
-Quando viene stabilita una connessione di origine per l&#39;inserimento dei dati di Analytics nella piattaforma Experience tramite l&#39;interfaccia utente della piattaforma, i campi di dati vengono automaticamente mappati e trasferiti nel profilo cliente in tempo reale in pochi minuti. Per istruzioni sulla creazione di una connessione di origine con Adobe Analytics tramite l&#39;interfaccia utente della piattaforma, consulta l&#39;esercitazione [sui connettori dati di](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/adobe-analytics-ui-tutorial.md)Analytics.
+Quando viene stabilita una connessione di origine per l&#39;inserimento dei dati di Analytics nella piattaforma Experience tramite l&#39;interfaccia utente della piattaforma, i campi di dati vengono automaticamente mappati e trasferiti nel profilo cliente in tempo reale in pochi minuti. Per istruzioni sulla creazione di una connessione di origine con Adobe Analytics tramite l&#39;interfaccia utente della piattaforma, consulta l&#39;esercitazione [sui connettori dati di](../../tutorials/ui/create/adobe-applications/analytics.md)Analytics.
 
 Per informazioni dettagliate sulla mappatura dei campi che si verifica tra Analytics e Experience Platform, consultate la guida alla mappatura [dei campi di](./analytics-mapping.md) Adobe Analytics.
 
