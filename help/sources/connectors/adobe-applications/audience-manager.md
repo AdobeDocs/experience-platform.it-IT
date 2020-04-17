@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connettore Audience Manager
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9f0200af0310eafbcc1851b089cfc254cb34af8f
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -19,7 +19,7 @@ Il connettore dati di Adobe Audience Manager trasferisce i dati di prime parti r
 
 Il connettore di Audience Manager mappa queste categorie di dati sullo schema Experience Data Model (XDM) e le invia alla piattaforma. I dati in tempo reale e quelli caricati vengono inviati come dati XDM ExperienceEvent, mentre i dati di profilo vengono inviati come profili XDM singoli.
 
-Per istruzioni su come creare una connessione con Adobe Audience Manager utilizzando l&#39;interfaccia utente della piattaforma, consulta l&#39;esercitazione [sui connettori di](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/aam-ui-tutorial.md)Audience Manager.
+Per istruzioni su come creare una connessione con Adobe Audience Manager utilizzando l&#39;interfaccia utente della piattaforma, consulta l&#39;esercitazione [sui connettori di](../../tutorials/ui/create/adobe-applications/audience-manager.md)Audience Manager.
 
 ## Cos&#39;è Experience Data Model (XDM)?
 
