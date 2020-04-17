@@ -4,7 +4,7 @@ seo-title: Avvio rapido dell’SDK Web per Adobe Experience Platform
 description: Guida di avvio rapido per l’utilizzo dell’estensione SDK Web di Experience Platform per la raccolta dei dati
 seo-description: Guida di avvio rapido per l’utilizzo dell’estensione SDK Web di Experience Platform per la raccolta dei dati
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -17,7 +17,7 @@ source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
 
 Al momento, l’SDK Web per Adobe Experience Platform supporta solo l’invio di dati ad Adobe Experience Platform tramite XDM. Dovete soddisfare i seguenti prerequisiti.
 
-- Accertati che sia attivato un dominio di [prime parti (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) . Se hai già un CNAME per Analytics, devi usarlo.
+- Accertati che sia attivato un dominio di [prime parti (CNAME)](https://docs.adobe.com/content/help/it-IT/core-services/interface/ec-cookies/cookies-first-party.html) . Se hai già un CNAME per Analytics, devi usarlo.
 - Accedere ad Adobe Experience Platform
 - Usa la versione più recente del servizio ID visitatore
 
@@ -25,7 +25,7 @@ Al momento, l’SDK Web per Adobe Experience Platform supporta solo l’invio di
 
 Per poter inviare dati ad Adobe Experience Platform, è necessario creare uno schema XDM e un dataset che utilizzino tale schema.
 
-- [Create uno schema](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/schema_editor_tutorial/schema_editor_tutorial.md) con i seguenti mixin:
+- [Create uno schema](../../xdm/tutorials/create-schema-ui.md) con i seguenti mixin:
    - Dettagli implementazione di ExperienceEvent
    - Dettagli ambiente ExperienceEvent
    - Dettagli Web ExperienceEvent
@@ -36,7 +36,7 @@ Per poter inviare dati ad Adobe Experience Platform, è necessario creare uno sc
 
 Per usare l’SDK devi disporre di un ID di configurazione. L&#39;ID di configurazione garantisce che i dati vengano indirizzati al posto giusto. Puoi ottenere un ID di configurazione dal tuo consulente o tramite Client Care. Avranno bisogno delle seguenti informazioni:
 
-- **ID organizzazione:** Potete trovarlo utilizzando le istruzioni [qui](https://docs.adobe.com/content/help/en/core-services/interface/manage-users-and-products/organizations.html)
+- **ID organizzazione:** Potete trovarlo utilizzando le istruzioni [qui](https://docs.adobe.com/content/help/it-IT/core-services/interface/manage-users-and-products/organizations.html)
 - **ID set di dati:** Questa funzione è disponibile nell&#39;interfaccia utente del set di dati quando si fa clic su un set di dati
 - **ID schema:** È disponibile nell’URL della schermata di creazione dello schema
 - **Nome descrittivo:** Questo è il nome descrittivo che verrà utilizzato nelle interfacce future per questa configurazione
