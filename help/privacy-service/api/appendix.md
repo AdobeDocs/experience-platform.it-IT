@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Spazi dei nomi e qualificatori di identità accettati
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
 
 ## Spazi dei nomi identità standard
 
-Tutte le identità inviate al servizio Privacy devono essere fornite in uno specifico namespace di identità. Gli spazi dei nomi delle identità sono un componente di [Adobe Experience Platform Identity Service](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_services_architectural_overview/identity_services_architectural_overview.md) che indica il contesto a cui si riferisce un&#39;identità.
+Tutte le identità inviate al servizio Privacy devono essere fornite in uno specifico namespace di identità. Gli spazi dei nomi delle identità sono un componente di [Adobe Experience Platform Identity Service](../../identity-service/home.md) che indica il contesto a cui si riferisce un&#39;identità.
 
 Nella tabella seguente sono riportati diversi tipi di identità predefiniti di uso comune resi disponibili da Experience Platform, con i relativi `namespace` valori associati:
 
@@ -31,7 +31,7 @@ Nella tabella seguente sono riportati diversi tipi di identità predefiniti di u
 
 >[!NOTE] Ogni tipo di identità ha anche un valore `namespaceId` intero, che può essere utilizzato al posto della `namespace` stringa quando si imposta la `type` proprietà dell&#39;identità su &quot;namespaceId&quot;. Per ulteriori informazioni, vedere la sezione sui qualificatori [dello](#namespace-qualifiers) spazio nomi.
 
-È possibile recuperare un elenco di spazi dei nomi di identità utilizzati dalla propria organizzazione effettuando una richiesta GET all&#39; `idnamespace/identities` endpoint nell&#39;API del servizio identità. Per ulteriori informazioni, consulta la guida [per gli sviluppatori del servizio](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_services_architectural_overview/identity_services_api.md) identità.
+È possibile recuperare un elenco di spazi dei nomi di identità utilizzati dalla propria organizzazione effettuando una richiesta GET all&#39; `idnamespace/identities` endpoint nell&#39;API del servizio identità. Per ulteriori informazioni, consulta la guida [per gli sviluppatori del servizio](../../identity-service/api/getting-started.md) identità.
 
 ## Qualificatori dello spazio dei nomi
 
