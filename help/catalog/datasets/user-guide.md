@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida utente dei set di dati
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: 7d3f64db787aebe46179c0e08ad01878b0ad2877
 
 ---
 
@@ -50,7 +50,7 @@ Per metodi più affidabili per accedere ai dati, Experience Platform fornisce se
 * [Panoramica di Servizio query](../../query-service/home.md)
 * [Guida utente di JupyterLab](../../data-science-workspace/jupyterlab/overview.md)
 
-## Creare un dataset
+## Creare un dataset {#create}
 
 Per creare un nuovo set di dati, fai clic su **Crea set di dati** nel dashboard *Set* dati.
 
