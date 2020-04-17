@@ -1,9 +1,9 @@
 ---
-source-git-commit: d6149bdf74ef8cec10264c414bd21bfdf3491bef
+source-git-commit: 792d6962154a8cdca74b3c4e72d6f7a7663cbd6f
 translation-type: tm+mt
 
 ---
-# Contribuire agli articoli
+# Contribuire al contenuto
 
 Apprezziamo contributi di contenuti dalla community e dai dipendenti Adobe al di fuori dei team della documentazione.
 
@@ -11,7 +11,7 @@ Apprezziamo contributi di contenuti dalla community e dai dipendenti Adobe al di
 
 Questo progetto ha adottato il [Codice di condotta open source di Adobe](code-of-conduct.md) o il [Codice di condotta di .NET Foundation](https://dotnetfoundation.org/code-of-conduct). Per ulteriori informazioni, consulta l’articolo [Come contribuire](contributing.md).
 
-## Informazioni sui contributi ai contenuti Adobe
+## Modi di contribuire al contenuto Adobe
 
 Consulta la [Guida collaboratore per i documenti di Adobe](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html).
 
@@ -33,26 +33,32 @@ Se fai parte della community di Adobe e desideri creare un articolo o inviare mo
 If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). You must complete the online form before we can review your pull request.
 -->
 
-### Modifiche principali da dipendenti Adobe
+### Modifiche principali o nuovi articoli dai dipendenti Adobe
 
-Se sei un autore, un responsabile di programma o uno sviluppatore del team di prodotto per una soluzione [!UICONTROL Adobe Experience Cloud] e il tuo lavoro è contribuire a o creare articoli tecnici, devi utilizzare l’archivio privato all’indirizzo `https://git.corp.adobe.com/AdobeDocs`. Consulta la Guida alla collaborazione [interna](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html).
+Se sei un autore, un responsabile di programma o uno sviluppatore del team di prodotto per una soluzione Adobe Experience Cloud e il tuo lavoro è contribuire a o creare articoli tecnici, devi utilizzare l’archivio privato all’indirizzo `https://git.corp.adobe.com/AdobeDocs`. Per ulteriori informazioni, consulta la Guida [alla collaborazione](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html) interna.
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
+## Contattare il team di documentazione di Experience Platform
+
+Come già detto, i membri della comunità Adobe possono inviare un&#39;edizione che verrà assegnata allo scrittore appropriato. Se sei un dipendente Adobe, puoi inviare un problema o contattare direttamente il team di documentazione di Experience Platform. Per trovare il lead writer per un&#39;area specifica della piattaforma, consulta il wiki [Documentazione sulla piattaforma](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation)Adobe Experience.
+
 ## Strumenti e configurazione
+
+### Interfaccia utente GitHub
 
 I collaboratori della community possono utilizzare l’interfaccia utente di GitHub per le modifiche di base o effettuare il forking dell’archivio per apportare contributi principali.
 
 Per informazioni, consulta la [Guida collaboratore per i documenti di Adobe](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html).
 
-## Come utilizzare Markdown per formattare l’argomento
+### Markdown
 
 Tutti gli articoli in questo archivio utilizzano GitHub Flavored Markdown. Se non conosci Markdown, consulta:
 
 * [Nozioni di base su Markdown](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 * [Cheat sheet Markdown stampabile](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 
-## Etichette
+### Etichette
 
 Nell’archivio pubblico, le etichette automatizzate vengono assegnate alle richieste di pull per consentire di gestire il flusso di lavoro di richieste di pull e conoscere lo stato della richiesta di pull:
 
