@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Dati identità per richieste di privacy
 topic: overview
 translation-type: tm+mt
-source-git-commit: f2fe9c01c8355d0b312a0236f76085d1743aa8cc
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -23,13 +23,13 @@ Ad esempio, quando gestisci le richieste di dati dei clienti in Servizio privacy
 
 È pertanto necessario che ogni identità inviata al Servizio Privacy sia accompagnata da uno **spazio dei nomi** che fornisca contesto, collegando il valore dell&#39;identità al proprio sistema di origine. Uno spazio dei nomi può rappresentare un concetto generico come un indirizzo e-mail (&quot;E-mail&quot;) o associare l&#39;identità a un&#39;applicazione specifica, ad esempio un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o un Adobe Target ID (&quot;TNTID&quot;).
 
-Adobe Experience Platform Identity Service conserva un archivio di spazi dei nomi di identità definiti a livello globale e definiti dall&#39;utente. Per informazioni più dettagliate sugli spazi dei nomi, consultate la panoramica [dello spazio dei nomi](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md)identità. Per un elenco degli spazi dei nomi e dei qualificatori standard comunemente utilizzati nel servizio Privacy, consultate la sezione [](api/appendix.md) appendice della guida per gli sviluppatori.
+Adobe Experience Platform Identity Service conserva un archivio di spazi dei nomi di identità definiti a livello globale e definiti dall&#39;utente. Per informazioni più dettagliate sugli spazi dei nomi, consultate la panoramica [dello spazio dei nomi](../identity-service/namespaces.md)identità. Per un elenco degli spazi dei nomi e dei qualificatori standard comunemente utilizzati nel servizio Privacy, consultate la sezione [](api/appendix.md) appendice della guida per gli sviluppatori.
 
 ## ECID e servizio di consenso
 
-Il servizio Adobe Experience Cloud Identity Service funge da framework di identificazione comune per Experience Cloud e assegna un ID univoco e costante a ciascun visitatore del sito. L&#39;Experience Cloud ID (ECID) monitora l&#39;attività di un cliente tramite l&#39;uso di un cookie di prime parti, può identificare in modo univoco un dispositivo tra più applicazioni e consente di identificare lo stesso visitatore del sito e i relativi dati in diverse applicazioni Experience Cloud. See the [Experience Cloud Identity Service overview](https://docs.adobe.com/content/help/en/id-service/using/intro/overview.html) for more information.
+Il servizio Adobe Experience Cloud Identity Service funge da framework di identificazione comune per Experience Cloud e assegna un ID univoco e costante a ciascun visitatore del sito. L&#39;Experience Cloud ID (ECID) monitora l&#39;attività di un cliente tramite l&#39;uso di un cookie di prime parti, può identificare in modo univoco un dispositivo tra più applicazioni e consente di identificare lo stesso visitatore del sito e i relativi dati in diverse applicazioni Experience Cloud. See the [Experience Cloud Identity Service overview](https://docs.adobe.com/content/help/it-IT/id-service/using/intro/overview.html) for more information.
 
-Il servizio di consenso, un&#39;estensione del servizio Experience Cloud Identity, consente di impostare protocolli sull&#39;applicazione per consentire ai visitatori di determinare se è possibile impostare un cookie sul dispositivo o sul browser del visitatore. Per informazioni più dettagliate sul servizio di consenso, comprese le modalità di configurazione del servizio per l&#39;applicazione, fare riferimento alla documentazione [del servizio di](https://docs.adobe.com/content/help/en/id-service/using/implementation/opt-in-service/optin-overview.html)consenso.
+Il servizio di consenso, un&#39;estensione del servizio Experience Cloud Identity, consente di impostare protocolli sull&#39;applicazione per consentire ai visitatori di determinare se è possibile impostare un cookie sul dispositivo o sul browser del visitatore. Per informazioni più dettagliate sul servizio di consenso, comprese le modalità di configurazione del servizio per l&#39;applicazione, fare riferimento alla documentazione [del servizio di](https://docs.adobe.com/content/help/it-IT/id-service/using/implementation/opt-in-service/optin-overview.html)consenso.
 
 Una volta assegnati ai visitatori del sito ECID, potete utilizzare la libreria Adobe Privacy JavaScript per recuperare gli ID da usare nelle richieste di privacy, come descritto nella sezione successiva.
 
