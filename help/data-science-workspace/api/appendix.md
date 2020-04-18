@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Appendice
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 0081cbd414e983d767b4a6f3aceed85d72a34816
+source-git-commit: 2940f69d193ff8a4ec6ad4a58813b5426201ef45
 
 ---
 
@@ -67,7 +67,7 @@ Esempio di configurazione che specifica l’utilizzo di una CPU per la formazion
 
 ## Configurazioni delle risorse PySpark e Spark {#resource-config}
 
-I motori PySpark e Spark sono in grado di modificare le risorse computazionali a scopo di formazione e valutazione. Tali risorse sono descritte nella tabella seguente:
+I motori Spark sono in grado di modificare le risorse computazionali per scopi di formazione e punteggio. Queste risorse sono descritte nella tabella seguente:
 
 | Risorsa | Descrizione | Tipo |
 | -------- | ----------- | ---- |
