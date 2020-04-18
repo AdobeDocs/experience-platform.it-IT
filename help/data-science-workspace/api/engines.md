@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Motori
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
+source-git-commit: 2940f69d193ff8a4ec6ad4a58813b5426201ef45
 
 ---
 
@@ -14,6 +14,9 @@ source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
 I motori sono le basi per i modelli di apprendimento automatico in Data Science Workspace. Contengono algoritmi di machine learning che risolvono problemi specifici, oleodotti per eseguire la progettazione di funzionalità o entrambi.
 
 ## Cerca il tuo registro di Docker
+
+>[!TIP]
+>Se non disponete di un URL Docker, visitate i file sorgente del [pacchetto in un&#39;esercitazione di ricetta](../models-recipes/package-source-files-recipe.md) per una dettagliata procedura per la creazione di un URL host Docker.
 
 Le credenziali del Registro di sistema del Docker sono necessarie per caricare un file Recipe incluso l&#39;URL host Docker, il nome utente e la password. Potete cercare queste informazioni eseguendo la seguente richiesta GET:
 
@@ -37,7 +40,8 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 
 Una risposta corretta restituisce un payload contenente i dettagli del Registro di sistema del Docker, inclusi l’URL (`host`), il nome utente (`username`) e la password (`password`) del Docker.
 
->[!NOTE] La password del Docker cambia ogni volta che `{ACCESS_TOKEN}` viene aggiornato.
+>[!NOTE]
+>La password del Docker cambia ogni volta che `{ACCESS_TOKEN}` viene aggiornato.
 
 ```json
 {
@@ -47,7 +51,7 @@ Una risposta corretta restituisce un payload contenente i dettagli del Registro 
 }
 ```
 
-## Creare un motore utilizzando gli URL Docker
+## Creare un motore utilizzando gli URL Docker {#docker-image}
 
 È possibile creare un motore eseguendo una richiesta POST fornendo i relativi metadati e un URL Docker che fa riferimento a un&#39;immagine Docker in più moduli.
 
@@ -57,7 +61,7 @@ Una risposta corretta restituisce un payload contenente i dettagli del Registro 
 POST /engines
 ```
 
-**Richiesta**
+**Richiesta Python/R**
 
 ```shell
 curl -X POST \
@@ -93,10 +97,48 @@ curl -X POST \
 | `artifacts.default.image.location` | Posizione dell&#39;immagine Docker collegata a un URL Docker. |
 | `artifacts.default.image.executionType` | Il tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui è basata l&#39;immagine Docker e può essere &quot;Python&quot;, &quot;R&quot; o &quot;Tensorflow&quot;. |
 
+**Richiesta PySpark/Scala**
+
+Quando si fa una richiesta per le ricette PySpark, il `executionType` ed `type` è &quot;PySpark&quot;. Quando si fa una richiesta per ricette Scala, il `executionType` ed `type` è &quot;Spark&quot;. Nell&#39;esempio di ricetta Scala riportato di seguito viene utilizzato Spark:
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/sensei/engines \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'content-type: multipart/form-data' \
+    -F 'engine={
+    "name": "Spark retail sales recipe",
+    "description": "A description for this Engine",
+    "type": "Spark",
+    "mlLibrary":"databricks-spark",
+    "artifacts": {
+        "default": {
+            "image": {
+                "name": "modelspark",
+                "executionType": "Spark",
+                "packagingType": "docker",
+                "location": "v1d2cs4mimnlttw.azurecr.io/sarunbatchtest:0.0.1"
+            }
+        }
+    }
+}'
+```
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `name` | Nome desiderato per il motore. La ricetta corrispondente a questo motore erediterà questo valore per essere visualizzata nell&#39;interfaccia utente come nome della ricetta. |
+| `description` | Una descrizione facoltativa per il motore. La ricetta corrispondente a questo motore erediterà il valore che verrà visualizzato nell&#39;interfaccia utente come descrizione della ricetta. Questa proprietà è obbligatoria. Se non si desidera fornire una descrizione, impostare il relativo valore su una stringa vuota. |
+| `type` | Il tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui è basata l&#39;immagine Docker. Il valore può essere impostato su Spark o PySpark. |
+| `mlLibrary` | Campo richiesto per la creazione di motori per le ricette PySpark e Scala. Questo campo deve essere impostato su `databricks-spark`. |
+| `artifacts.default.image.location` | Posizione dell&#39;immagine Docker. È supportato solo Azure ACR o Public (non autenticato) Dockerhub. |
+| `artifacts.default.image.executionType` | Il tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui è basata l&#39;immagine Docker. Può essere &quot;Spark&quot; o &quot;PySpark&quot;. |
 
 **Risposta**
 
-Una risposta corretta restituisce un payload contenente i dettagli del motore appena creato, incluso il relativo identificatore univoco (`id`).
+Una risposta corretta restituisce un payload contenente i dettagli del motore appena creato, incluso il relativo identificatore univoco (`id`). L’esempio di seguito illustra la risposta relativa a un motore Python. Tutte le risposte del motore seguono questo formato:
 
 ```json
 {
@@ -117,138 +159,6 @@ Una risposta corretta restituisce un payload contenente i dettagli del motore ap
                 "name": "An additional name for the Docker image",
                 "executionType": "Python",
                 "packagingType": "docker"
-            }
-        }
-    }
-}
-```
-
-## Creare un motore utilizzando artefatti binari
-
-È possibile creare un Motore utilizzando artefatti locali `.jar` o `.egg` binari eseguendo una richiesta POST fornendo i metadati e il percorso dell&#39;artifact nei moduli multiparte.
-
-**Formato API**
-
-```http
-POST /engines
-```
-
-**Richiesta**
-
-```shell
-curl -X POST \
-    https://platform.adobe.io/data/sensei/engines \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'content-type: multipart/form-data' \
-    -F 'engine={
-        "name": "A name for this Engine",
-        "description": "A description for this Engine",
-        "algorithm": "Classification",
-        "type": "PySpark",
-    }' \
-    -F 'defaultArtifact=@path/to/binary/artifact/file.egg'
-```
-
-| Proprietà | Descrizione |
-| --- | --- |
-| `name` | Nome desiderato per il motore. La ricetta corrispondente a questo motore erediterà questo valore per essere visualizzata nell&#39;interfaccia utente come nome della ricetta. |
-| `description` | Una descrizione facoltativa per il motore. La ricetta corrispondente a questo motore erediterà il valore che verrà visualizzato nell&#39;interfaccia utente come descrizione della ricetta. Questa proprietà è obbligatoria. Se non si desidera fornire una descrizione, impostare il relativo valore su una stringa vuota. |
-| `algorithm` | Una stringa che specifica il tipo di algoritmo di machine learning. I tipi di algoritmo supportati includono &quot;Classification&quot;, &quot;Regression&quot; o &quot;Custom&quot;. |
-| `type` | Il tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui l&#39;artefatto binario è basato e può essere &quot;PySpark&quot; o &quot;Spark&quot;. |
-
-
-**Risposta**
-
-Una risposta corretta restituisce un payload contenente i dettagli del motore appena creato, incluso il relativo identificatore univoco (`id`).
-
-```json
-{
-    "id": "{ENGINE_ID}",
-    "name": "A name for this Engine",
-    "description": "A description for this Engine",
-    "type": "PySpark",
-    "algorithm": "Classification",
-    "created": "2019-01-01T00:00:00.000Z",
-    "createdBy": {
-        "userId": "Jane_Doe@AdobeID"
-    },
-    "updated": "2019-01-01T00:00:00.000Z",
-    "artifacts": {
-        "default": {
-            "image": {
-                "location": "wasbs://artifact-location.blob.core.windows.net/Engine_ID/default.egg",
-                "name": "file.egg",
-                "executionType": "PySpark",
-                "packagingType": "egg"
-            }
-        }
-    }
-}
-```
-
-## Creare un motore di pipeline delle funzionalità utilizzando artefatti binari
-
-È possibile creare un motore di pipeline delle funzioni utilizzando artefatti locali `.jar` o `.egg` binari eseguendo una richiesta POST fornendo i metadati e i percorsi dell&#39;artifact in moduli multiparte. Un motore PySpark o Spark Engine può specificare risorse di calcolo, ad esempio il numero di core o la quantità di memoria. Per ulteriori informazioni, consulta la sezione appendice sulle configurazioni [delle risorse](./appendix.md#resource-config) PySpark e Spark.
-
-**Formato API**
-
-```http
-POST /engines
-```
-
-**Richiesta**
-
-```shell
-curl -X POST \
-    https://platform.adobe.io/data/sensei/engines \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'content-type: multipart/form-data' \
-    -F 'engine={
-        "name": "Feature Pipeline Engine",
-        "description": "A feature pipeline Engine",
-        "algorithm":"fp",
-        "type": "PySpark"
-    }' \
-    -F 'featurePipelineOverrideArtifact=@path/to/binary/artifact/feature_pipeline.egg' \
-    -F 'defaultArtifact=@path/to/binary/artifact/feature_pipeline.egg'
-```
-
-| Proprietà | Descrizione |
-| --- | --- |
-| `name` | Nome desiderato per il motore. La ricetta corrispondente a questo motore erediterà questo valore per essere visualizzata nell&#39;interfaccia utente come nome della ricetta. |
-| `description` | Una descrizione facoltativa per il motore. La ricetta corrispondente a questo motore erediterà il valore che verrà visualizzato nell&#39;interfaccia utente come descrizione della ricetta. Questa proprietà è obbligatoria. Se non si desidera fornire una descrizione, impostare il relativo valore su una stringa vuota. |
-| `algorithm` | Una stringa che specifica il tipo di algoritmo di machine learning. Impostate questo valore come &quot;fp&quot; per specificare che la creazione deve essere un motore pipeline di feature. |
-| `type` | Il tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui sono generati gli artefatti binari e può essere &quot;PySpark&quot; o &quot;Spark&quot;. |
-
-**Risposta**
-
-Una risposta corretta restituisce un payload contenente i dettagli del motore appena creato, incluso il relativo identificatore univoco (`id`).
-
-```json
-{
-    "id": "{ENGINE_ID}",
-    "name": "Feature Pipeline Engine",
-    "description": "A feature pipeline Engine",
-    "type": "PySpark",
-    "algorithm": "fp",
-    "created": "2019-01-01T00:00:00.000Z",
-    "createdBy": {
-        "userId": "Jane_Doe@AdobeID"
-    },
-    "updated": "2019-01-01T00:00:00.000Z",
-    "artifacts": {
-        "default": {
-            "image": {
-                "location": "wasbs://artifact-location.blob.core.windows.net/Engine_ID/default.egg",
-                "name": "file.egg",
-                "executionType": "PySpark",
-                "packagingType": "egg"
             }
         }
     }
@@ -505,5 +415,145 @@ curl -X DELETE \
     "title": "Success",
     "status": 200,
     "detail": "Engine deletion was successful"
+}
+```
+
+## Richieste obsolete
+
+>[!IMPORTANT]
+>Gli artefatti binari non sono più supportati e sono impostati per essere rimossi in una data successiva. Le nuove ricette PySpark e Scala dovrebbero ora seguire gli esempi di immagini [](#docker-image) docker per creare un motore.
+
+## Creare un motore utilizzando artefatti binari - obsoleti
+
+È possibile creare un Motore utilizzando artefatti locali `.jar` o `.egg` binari eseguendo una richiesta POST fornendo i metadati e il percorso dell&#39;artifact nei moduli multiparte.
+
+**Formato API**
+
+```http
+POST /engines
+```
+
+**Richiesta**
+
+```shell
+curl -X POST \
+    https://platform.adobe.io/data/sensei/engines \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'content-type: multipart/form-data' \
+    -F 'engine={
+        "name": "A name for this Engine",
+        "description": "A description for this Engine",
+        "algorithm": "Classification",
+        "type": "PySpark",
+    }' \
+    -F 'defaultArtifact=@path/to/binary/artifact/file.egg'
+```
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `name` | Nome desiderato per il motore. La ricetta corrispondente a questo motore erediterà questo valore per essere visualizzata nell&#39;interfaccia utente come nome della ricetta. |
+| `description` | Una descrizione facoltativa per il motore. La ricetta corrispondente a questo motore erediterà il valore che verrà visualizzato nell&#39;interfaccia utente come descrizione della ricetta. Questa proprietà è obbligatoria. Se non si desidera fornire una descrizione, impostare il relativo valore su una stringa vuota. |
+| `algorithm` | Una stringa che specifica il tipo di algoritmo di machine learning. I tipi di algoritmo supportati includono &quot;Classification&quot;, &quot;Regression&quot; o &quot;Custom&quot;. |
+| `type` | Il tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui l&#39;artefatto binario è basato e può essere &quot;PySpark&quot; o &quot;Spark&quot;. |
+
+
+**Risposta**
+
+Una risposta corretta restituisce un payload contenente i dettagli del motore appena creato, incluso il relativo identificatore univoco (`id`).
+
+```json
+{
+    "id": "{ENGINE_ID}",
+    "name": "A name for this Engine",
+    "description": "A description for this Engine",
+    "type": "PySpark",
+    "algorithm": "Classification",
+    "created": "2019-01-01T00:00:00.000Z",
+    "createdBy": {
+        "userId": "Jane_Doe@AdobeID"
+    },
+    "updated": "2019-01-01T00:00:00.000Z",
+    "artifacts": {
+        "default": {
+            "image": {
+                "location": "wasbs://artifact-location.blob.core.windows.net/Engine_ID/default.egg",
+                "name": "file.egg",
+                "executionType": "PySpark",
+                "packagingType": "egg"
+            }
+        }
+    }
+}
+```
+
+## Creare un motore di pipeline delle funzionalità utilizzando artefatti binari - obsoleti
+
+>[!IMPORTANT]
+>Gli artefatti binari non sono più supportati e sono impostati per essere rimossi in una data successiva.
+
+È possibile creare un motore di pipeline delle funzioni utilizzando artefatti locali `.jar` o `.egg` binari eseguendo una richiesta POST fornendo i relativi metadati e i percorsi dell&#39;artifact in moduli multiparte. Un motore PySpark o Spark Engine può specificare risorse di calcolo, ad esempio il numero di core o la quantità di memoria. Per ulteriori informazioni, consulta la sezione appendice sulle configurazioni [delle risorse](./appendix.md#resource-config) PySpark e Spark.
+
+**Formato API**
+
+```http
+POST /engines
+```
+
+**Richiesta**
+
+```shell
+curl -X POST \
+    https://platform.adobe.io/data/sensei/engines \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'content-type: multipart/form-data' \
+    -F 'engine={
+        "name": "Feature Pipeline Engine",
+        "description": "A feature pipeline Engine",
+        "algorithm":"fp",
+        "type": "PySpark"
+    }' \
+    -F 'featurePipelineOverrideArtifact=@path/to/binary/artifact/feature_pipeline.egg' \
+    -F 'defaultArtifact=@path/to/binary/artifact/feature_pipeline.egg'
+```
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `name` | Nome desiderato per il motore. La ricetta corrispondente a questo motore erediterà questo valore per essere visualizzata nell&#39;interfaccia utente come nome della ricetta. |
+| `description` | Una descrizione facoltativa per il motore. La ricetta corrispondente a questo motore erediterà il valore che verrà visualizzato nell&#39;interfaccia utente come descrizione della ricetta. Questa proprietà è obbligatoria. Se non si desidera fornire una descrizione, impostare il relativo valore su una stringa vuota. |
+| `algorithm` | Una stringa che specifica il tipo di algoritmo di machine learning. Impostate questo valore come &quot;fp&quot; per specificare che la creazione deve essere un motore pipeline di feature. |
+| `type` | Il tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui sono generati gli artefatti binari e può essere &quot;PySpark&quot; o &quot;Spark&quot;. |
+
+**Risposta**
+
+Una risposta corretta restituisce un payload contenente i dettagli del motore appena creato, incluso il relativo identificatore univoco (`id`).
+
+```json
+{
+    "id": "{ENGINE_ID}",
+    "name": "Feature Pipeline Engine",
+    "description": "A feature pipeline Engine",
+    "type": "PySpark",
+    "algorithm": "fp",
+    "created": "2019-01-01T00:00:00.000Z",
+    "createdBy": {
+        "userId": "Jane_Doe@AdobeID"
+    },
+    "updated": "2019-01-01T00:00:00.000Z",
+    "artifacts": {
+        "default": {
+            "image": {
+                "location": "wasbs://artifact-location.blob.core.windows.net/Engine_ID/default.egg",
+                "name": "file.egg",
+                "executionType": "PySpark",
+                "packagingType": "egg"
+            }
+        }
+    }
 }
 ```
