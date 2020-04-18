@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida utente di JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 700c927680d9b9ba4dabc2d2e068e4da3c801cce
+source-git-commit: d42a5de7094d305249b05454ce4aba79776a46e1
 
 ---
 
@@ -56,7 +56,7 @@ Le informazioni sulle caratteristiche chiave di JupyterLab e le istruzioni sulle
 
 ### Access JupyterLab
 
-In <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>, fai clic su **Modelli** nella colonna di navigazione a sinistra, quindi fai clic su **Notebook** nella barra di navigazione superiore per accedere a JupyterLab. Lasciare un po&#39; di tempo per l&#39;inizializzazione completa di JupyterLab.
+In [Adobe Experience Platform](https://platform.adobe.com), seleziona **Notebook** dalla colonna di navigazione a sinistra. Lasciare un po&#39; di tempo per l&#39;inizializzazione completa di JupyterLab.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -116,11 +116,9 @@ Di seguito sono descritte le azioni comuni delle celle:
 
 ### Kernel {#kernels}
 
-<!-- will need to edit this sparkmagic %% for data bricks not supported -->
-
 I kernel per notebook sono i motori informatici specifici per la lingua per l&#39;elaborazione delle celle per notebook. Oltre a Python, JupyterLab offre supporto linguistico aggiuntivo in R, PySpark e Spark. Quando si apre un documento del blocco appunti, viene avviato il kernel associato. Quando viene eseguita una cella del blocco appunti, il kernel esegue il calcolo e produce risultati che possono richiedere notevoli risorse di CPU e di memoria. Tenere presente che la memoria allocata non viene liberata fino alla chiusura del kernel.
 
->[!NOTE] Le funzionalità PySpark e Spark sono supportate da <a href="https://github.com/jupyter-incubator/sparkmagic" target="_blank">Sparkmagic</a>.
+>[!IMPORTANT] JupyterLab Launcher aggiornato da Spark 2.3 a Spark 2.4. I kernel Spark e PySpark non sono più supportati nei notebook Spark 2.4.
 
 Alcune caratteristiche e funzionalità sono limitate a specifici kernel come descritto nella tabella seguente:
 
@@ -128,8 +126,9 @@ Alcune caratteristiche e funzionalità sono limitate a specifici kernel come des
 | :----: | :--------------------------: | :-------------------- |
 | **Python** | Sì | <ul><li>Sensei ML Framework</li><li>Servizio catalogo</li><li>Servizio query</li></ul> |
 | **R** | Sì | <ul><li>Sensei ML Framework</li><li>Servizio catalogo</li></ul> |
-| **PySpark** | No | <ul><li>Sensei ML Framework</li><li>Servizio catalogo</li></ul> |
-| **Spark** | No | <ul><li>Sensei ML Framework</li><li>Servizio catalogo</li></ul> |
+| **PySpark - obsoleto** | No | <ul><li>Sensei ML Framework</li><li>Servizio catalogo</li></ul> |
+| **Spark - obsoleto** | No | <ul><li>Sensei ML Framework</li><li>Servizio catalogo</li></ul> |
+| **Scala** | No | <ul><li>Sensei ML Framework</li><li>Servizio catalogo</li></ul> |
 
 ### Sessioni kernel
 
@@ -143,9 +142,23 @@ Se il kernel è spento o inattivo per un periodo prolungato, allora **nessun ker
 
 ### Risorsa di esecuzione PySpark/Spark {#execution-resource}
 
-<!-- need to update with databricks -->
+>[!IMPORTANT]
+>Con la transizione da Spark 2.3 a Spark 2.4, entrambi i kernel Spark e PySpark sono obsoleti.
+>
+>I nuovi notebook PySpark 3 (Spark 2.4) utilizzano il kernel Python3. Consulta la guida sulla conversione di [Pyspark 3 (Spark 2.3) in PySpark 3 (Spark 2.4)](../recipe-notebook-migration.md) per un&#39;esercitazione approfondita sull&#39;aggiornamento dei notebook esistenti.
+>
+>I nuovi notebook Spark dovrebbero utilizzare il kernel Scala. Consulta la guida sulla conversione da [Spark 2.3 a Scala (Spark 2.4)](../recipe-notebook-migration.md) per un&#39;esercitazione approfondita sull&#39;aggiornamento dei notebook esistenti.
 
 I kernel PySpark e Spark consentono di configurare le risorse del cluster Spark all&#39;interno del notebook PySpark o Spark utilizzando il comando di configurazione (`%%configure`) e fornendo un elenco di configurazioni. Idealmente, queste configurazioni vengono definite prima dell&#39;inizializzazione dell&#39;applicazione Spark. La modifica delle configurazioni mentre l&#39;applicazione Spark è attiva richiede un flag di forza aggiuntivo dopo il comando (`%%configure -f`), che riavvierà l&#39;applicazione per applicare le modifiche, come illustrato di seguito:
+
+>[!CAUTION]
+>Con i notebook PySpark 3 (Spark 2.4) e Scala (Spark 2.4), non `%%` è più supportato lo scintillio. Non è più possibile utilizzare le operazioni seguenti:
+* `%%help`
+* `%%info`
+* `%%cleanup`
+* `%%delete`
+* `%%configure`
+* `%%local`
 
 ```python
 %%configure -f 
@@ -160,8 +173,6 @@ I kernel PySpark e Spark consentono di configurare le risorse del cluster Spark 
     }
 }
 ```
-
->[!TIP] Usate il comando help (`%%help`) per visualizzare tutti i comandi disponibili.
 
 Tutte le proprietà configurabili sono elencate nella tabella seguente:
 
@@ -183,8 +194,6 @@ Tutte le proprietà configurabili sono elencate nella tabella seguente:
 | conf | Spark, proprietà di configurazione | Mappa di key=val |
 
 ### Launcher
-
-<!-- Databricks update -->
 
 [//]: # (Talk about the different Notebooks, introduce that certain starter notebooks are limited to particular kernels)
 
@@ -242,7 +251,7 @@ Alcuni modelli per notebook sono limitati a determinati kernel. La disponibilit�
         <td >no</td>
     </tr>
     <tr>
-        <th  ><strong>PySpark</strong></th>
+        <th  ><strong>PySpark 3 (Spark 2.3 - obsoleto)</strong></th>
         <td >sì</td>
         <td >sì</td>
         <td >no</td>
@@ -254,7 +263,31 @@ Alcuni modelli per notebook sono limitati a determinati kernel. La disponibilit�
         <td >no</td>
     </tr>
     <tr>
-        <th ><strong>Spark</strong></th>
+        <th ><strong>Spark (Spark 2.3 - obsoleto)</strong></th>
+        <td >sì</td>
+        <td >sì</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >sì</td>
+    </tr>
+      <tr>
+        <th  ><strong>PySpark 3 (Spark 2.4)</strong></th>
+        <td >no</td>
+        <td >sì</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >sì</td>
+        <td >sì</td>
+        <td >no</td>
+    </tr>
+    <tr>
+        <th ><strong>Scala</strong></th>
         <td >sì</td>
         <td >sì</td>
         <td >no</td>
@@ -341,12 +374,21 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 
 * `{DATASET_ID}`: L&#39;identità univoca del dataset a cui accedere
 
-### Leggi da un set di dati in PySpark/Spark
+### Leggi da un set di dati in PySpark/Spark/Scala
+
+>[!IMPORTANT]
+>Con la transizione da Spark 2.3 a Spark 2.4, entrambi i kernel Spark e PySpark sono obsoleti.
+>
+>I nuovi notebook PySpark 3 (Spark 2.4) utilizzano il kernel Python3. Per convertire il codice Spark 2.3 esistente, consultate la guida alla conversione da [Pyspark 3 (Spark 2.3) a PySpark 3 (Spark 2.4)](../recipe-notebook-migration.md) . I nuovi notebook devono seguire l&#39;esempio [PySpark 3 (Spark 2.4)](#pyspark2.4) riportato di seguito.
+>
+>I nuovi notebook Spark dovrebbero utilizzare il kernel Scala. Per convertire il codice Spark 2.3 esistente, consultate la guida alla conversione da [Spark 2.3 a Scala (Spark 2.4)](../recipe-notebook-migration.md) . I nuovi notebook devono seguire l&#39;esempio [Scala (Spark 2.4)](#spark2.4) riportato di seguito.
 
 Con un blocco appunti PySpark o Spark attivo aperto, espandere la scheda **Esplora** dati dalla barra laterale sinistra e fare doppio clic su **Set** dati per visualizzare un elenco dei set di dati disponibili. Fare clic con il pulsante destro del mouse sull&#39;elenco di set di dati a cui si desidera accedere e scegliere **Esplora dati nel blocco appunti**. Vengono generate le seguenti celle di codice:
 
+#### PySpark (Spark 2.3 - obsoleto)
+
 ```python
-# PySpark
+# PySpark 3 (Spark 2.3 - deprecated)
 
 pd0 = spark.read.format("com.adobe.platform.dataset").\
     option('orgId', "YOUR_IMS_ORG_ID@AdobeOrg").\
@@ -355,8 +397,22 @@ pd0.describe()
 pd0.show(10, False)
 ```
 
+#### PySpark (Spark 2.4) {#pyspark2.4}
+
+Con l&#39;introduzione di Spark 2.4, [`%dataset`](#magic) la magia personalizzata è in dotazione.
+
+```python
+# PySpark 3 (Spark 2.4)
+
+%dataset read --datasetId {DATASET_ID} --dataFrame pd0
+pd0.describe()
+pd0.show(10, False)
+```
+
+#### Spark (Spark 2.3 - obsoleto)
+
 ```scala
-// Spark
+// Spark (Spark 2.3 - deprecated)
 
 import com.adobe.platform.dataset.DataSetOptions
 val dataFrame = spark.read.
@@ -366,6 +422,54 @@ val dataFrame = spark.read.
 dataFrame.printSchema()
 dataFrame.show()
 ```
+
+#### Scala (Spark 2.4) {#spark2.4}
+
+```scala
+// Scala (Spark 2.4)
+
+// initialize the session
+import org.apache.spark.sql.{Dataset, SparkSession}
+val spark = SparkSession.builder().master("local").getOrCreate()
+
+val dataFrame = spark.read.format("com.adobe.platform.query")
+    .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
+    .option("ims-org", sys.env("IMS_ORG_ID"))
+    .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))
+    .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN"))
+    .option("mode", "batch")
+    .option("dataset-id", "{DATASET_ID}")
+    .load()
+dataFrame.printSchema()
+dataFrame.show()
+```
+
+>[!TIP]
+>In Scala è possibile utilizzare `sys.env()` per dichiarare e restituire un valore dall&#39;interno `option`.
+
+### Utilizzo di %dataset Magic nei notebook PySpark 3 (Spark 2.4) {#magic}
+
+Con l&#39;introduzione di Spark 2.4, `%dataset` la magia personalizzata viene fornita per l&#39;uso nei nuovi notebook PySpark 3 (Spark 2.4) (kernel Python 3).
+
+**Utilizzo**
+
+`%dataset {action} --datasetId {id} --dataFrame {df}`
+
+**Descrizione**
+
+Un comando magico personalizzato di Data Science Workspace per la lettura o la scrittura di un set di dati da un notebook Python (kernel Python 3).
+
+* **{action}**: Tipo di azione da eseguire sul set di dati. Sono disponibili due azioni: &quot;read&quot; o &quot;write&quot;.
+* **—datasetId {id}**: Utilizzato per fornire l&#39;ID del set di dati da leggere o scrivere. Questo è un argomento obbligatorio.
+* **—dataFrame {df}**: Il dataframe panda. Questo è un argomento obbligatorio.
+   * Quando l&#39;azione è &quot;read&quot;, {df} è la variabile in cui sono disponibili i risultati dell&#39;operazione di lettura del dataset.
+   * Quando l&#39;azione è &quot;scrivi&quot;, il dataframe {df} viene scritto nel dataset.
+* **—mode (facoltativo)**: I parametri consentiti sono &quot;batch&quot; e &quot;interattivo&quot;. Per impostazione predefinita, la modalità è impostata su &quot;interattivo&quot;. Si consiglia di utilizzare la modalità &quot;batch&quot; durante la lettura di grandi quantità di dati.
+
+**Esempi**
+
+* **Leggi l&#39;esempio**: `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
+* **Esempio** di scrittura: `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
 
 ### Dati query con il servizio query in Python
 
@@ -453,12 +557,21 @@ df <- dataset_reader$
 
 ### Filtrare i dati ExperienceEvent in PySpark/Spark
 
+>[!IMPORTANT]
+>Con la transizione da Spark 2.3 a Spark 2.4, entrambi i kernel Spark e PySpark sono obsoleti.
+>
+>I nuovi notebook PySpark 3 (Spark 2.4) utilizzano il kernel Python3. Consulta la guida sulla conversione di [Pyspark 3 (Spark 2.3) in PySpark 3 (Spark 2.4)](../recipe-notebook-migration.md) per ulteriori informazioni sulla conversione del codice esistente. Se state creando un nuovo blocco appunti PySpark, utilizzate l&#39;esempio [PySpark 3 (scintilla 2.4)](#pyspark3-spark2.4) per filtrare i dati ExperienceEvent.
+>
+>I nuovi notebook Spark dovrebbero utilizzare il kernel Scala. Consulta la guida sulla conversione di [Spark 2.3 in Scala (Spark 2.4)](../recipe-notebook-migration.md) per ulteriori informazioni sulla conversione del codice esistente. Se state creando un nuovo blocco appunti Spark, utilizzate l&#39;esempio [Scala (scintilla 2.4)](#scala-spark) per filtrare i dati ExperienceEvent.
+
 Per accedere e filtrare un set di dati ExperienceEvent in un blocco appunti PySpark o Spark è necessario fornire l&#39;identità del set di dati (`{DATASET_ID}`), l&#39;identità IMS della propria organizzazione e le regole del filtro che definiscono un intervallo di tempo specifico. Un intervallo di tempo di filtro è definito utilizzando la funzione `spark.sql()`, dove il parametro della funzione è una stringa di query SQL.
 
 Le celle seguenti filtrano un set di dati ExperienceEvent in dati esistenti esclusivamente tra il 1 gennaio 2019 e la fine del 31 dicembre 2019.
 
+#### PySpark 3 (Spark 2.3 - obsoleto)
+
 ```python
-# PySpark
+# PySpark 3 (Spark 2.3 - deprecated)
 
 pd = spark.read.format("com.adobe.platform.dataset").\
     option("orgId", "YOUR_IMS_ORG_ID@AdobeOrg").\
@@ -473,8 +586,30 @@ timepd = spark.sql("""
 """)
 ```
 
+#### PySpark 3 (Spark 2.4) {#pyspark3-spark2.4}
+
+```python
+# PySpark 3 (Spark 2.4)
+
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.getOrCreate()
+
+%dataset read --datasetId {DATASET_ID} --dataFrame df
+
+df.createOrReplaceTempView("event")
+timepd = spark.sql("""
+    SELECT *
+    FROM event
+    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
+    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
+""")
+timepd.show()
+```
+
+#### Spark (Spark 2.3 - obsoleto)
+
 ```scala
-// Spark
+// Spark (Spark 2.3 - deprecated)
 
 import com.adobe.platform.dataset.DataSetOptions
 val dataFrame = spark.read.
@@ -491,6 +626,53 @@ val timedf = spark.sql("""
 """)
 ```
 
+#### Scala (Spark 2.4) {#scala-spark}
+
+```scala
+// Spark (Spark 2.4)
+
+// Turn off extra logging
+import org.apache.log4j.{Level, Logger}
+Logger.getLogger("org").setLevel(Level.OFF)
+Logger.getLogger("com").setLevel(Level.OFF)
+
+import org.apache.spark.sql.{Dataset, SparkSession}
+val spark = org.apache.spark.sql.SparkSession.builder().appName("Notebook")
+  .master("local")
+  .getOrCreate()
+
+// Stage Exploratory
+val dataSetId: String = "{DATASET_ID}"
+val orgId: String = sys.env("IMS_ORG_ID")
+val clientId: String = sys.env("PYDASDK_IMS_CLIENT_ID")
+val userToken: String = sys.env("PYDASDK_IMS_USER_TOKEN")
+val serviceToken: String = sys.env("PYDASDK_IMS_SERVICE_TOKEN")
+val mode: String = "batch"
+
+var df = spark.read.format("com.adobe.platform.query")
+  .option("user-token", userToken)
+  .option("ims-org", orgId)
+  .option("api-key", clientId)
+  .option("mode", mode)
+  .option("dataset-id", dataSetId)
+  .option("service-token", serviceToken)
+  .load()
+df.createOrReplaceTempView("event")
+val timedf = spark.sql("""
+    SELECT * 
+    FROM event 
+    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
+    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
+""")
+timedf.show()
+```
+
+>[!TIP]
+>In Scala è possibile utilizzare `sys.env()` per dichiarare e restituire un valore dall&#39;interno `option`. Questo elimina la necessità di definire le variabili se sai che verranno utilizzate solo una volta. L&#39;esempio seguente prende `val userToken` spunto dall&#39;esempio precedente e lo dichiara in linea `option` come alternativa:
+> 
+```scala
+> .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
+> ```
 
 ## Librerie supportate {#supported-libraries}
 
