@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide per la migrazione a componenti e notebook
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 105317c0b9a7cf74d55e3436a49e1dc6eeb31b32
+source-git-commit: bb6fe494933606d428d7bdf20ee38b7ac51c23ea
 
 ---
 
@@ -427,11 +427,11 @@ Con PySpark 3 (Spark 2.4) `sc = spark.sparkContext` è definito nel caricamento.
 
 ![Carica 1](./images/migration/pyspark-migration/2.4-load.png)
 
-**Caricamento dei dati della piattaforma Experience Potrebbe essere in PySpark 2.3 - obsoleto**
+**Caricamento dei dati della piattaforma Experience Cloud in PySpark 2.3 - obsoleto**
 
 ![Carico 2](./images/migration/pyspark-migration/2.3-load-alt.png)
 
-**Caricamento dei dati della piattaforma Experience Potrebbe essere eseguito in PySpark 2.4**
+**Caricamento dei dati della piattaforma Experience Cloud in PySpark 2.4**
 
 Con PySpark 3 (Spark 2.4) non è più necessario definire `org_id` e `dataset_id` non è più necessario definirlo. Inoltre, `df = spark.read.format` è stato sostituito con una magia personalizzata [`%dataset`](#magic) per semplificare la lettura e la scrittura dei dataset.
 
