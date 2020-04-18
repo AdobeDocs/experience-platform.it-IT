@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare una ricetta utilizzando i notebook Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
+source-git-commit: 10f157e0c9f8ab6e487b7dc83416b9e3b2f324c4
 
 ---
 
@@ -38,9 +38,10 @@ La creazione di una ricetta da zero può essere realizzata in Data Science Works
 
 Il notebook Recipe Builder consente di eseguire corsi di formazione e punteggio all&#39;interno del notebook. Questo vi offre la flessibilità di apportare modifiche ai loro `train()` e `score()` metodi tra l&#39;esecuzione di esperimenti sui dati di formazione e punteggio. Una volta soddisfatti i risultati della formazione e del punteggio, è possibile creare una ricetta da utilizzare in Data Science Workspace utilizzando il notebook per la funzionalità di ricetta integrata nel notebook Recipe Builder.
 
->[!NOTE] Il notebook Recipe Builder supporta l&#39;utilizzo di tutti i formati di file, ma al momento la funzionalità Create Recipe supporta solo Python.
+>[!NOTE]
+>Il notebook Recipe Builder supporta l&#39;utilizzo di tutti i formati di file, ma al momento la funzionalità Create Recipe supporta solo Python.
 
-![](../images/jupyterlab/create-recipe/notebook_launcher.png)
+![](../images/jupyterlab/create-recipe/recipe-builder.png)
 
 Quando si fa clic sul blocco appunti di Recipe Builder dall&#39;avvio, il blocco appunti viene aperto nella scheda. Il modello utilizzato nel blocco appunti è la Ricetta di previsione delle vendite al dettaglio Python che si trova anche in [questo archivio pubblico](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
@@ -50,7 +51,6 @@ Nella barra degli strumenti sono disponibili tre azioni aggiuntive: **Treno**, *
 
 ## Apportare modifiche ai file di ricette
 
-<!-- Databricks update to recipe needed -->
 Per apportare modifiche ai file di ricetta, andate alla cella in Jupyter corrispondente al percorso del file. Ad esempio, se desiderate apportare modifiche a `evaluator.py`, cercate `%%writefile demo-recipe/evaluator.py`.
 
 Iniziare a apportare le modifiche necessarie alla cella e, al termine, eseguire semplicemente la cella. Il `%%writefile filename.py` comando scriverà il contenuto della cella sul `filename.py`. Sarà necessario eseguire manualmente la cella per ogni file con modifiche.
@@ -69,9 +69,6 @@ Ora che si conoscono le basi per l&#39;ambiente dei notebook JupyterLab, è poss
 - [File di valutazione](#evaluator-file)
 - [File Data Saver](#data-saver-file)
 
-
-
-
 ### File dei requisiti
 
 Il file dei requisiti viene utilizzato per dichiarare librerie aggiuntive da utilizzare nella ricetta. È possibile specificare il numero di versione in presenza di una dipendenza. Per ulteriori librerie, visitate https://anaconda.org. L&#39;elenco delle librerie principali già in uso include:
@@ -84,9 +81,8 @@ numpy
 data_access_sdk_python
 ```
 
->[!NOTE] Le librerie o versioni specifiche aggiunte potrebbero essere incompatibili con le librerie elencate sopra.
-
-
+>[!NOTE]
+>Le librerie o versioni specifiche aggiunte potrebbero essere incompatibili con le librerie elencate sopra.
 
 ### File di configurazione
 
@@ -101,9 +97,9 @@ Gli utenti devono compilare le seguenti variabili prima di eseguire formazione e
 
 Per trovare il set di dati e gli ID dello schema, andate alla scheda Dati all&#39;interno dei blocchi appunti nella barra di navigazione a sinistra (sotto l&#39;icona della cartella).
 
-![](../images/jupyterlab/create-recipe/data_tab.png)
+![](../images/jupyterlab/create-recipe/datasets.png)
 
-Le stesse informazioni si trovano in [Adobe Experience Platform](https://platform.adobe.com/) nelle schede **[Schema](https://platform.adobe.com/schema)**e**[ Set](https://platform.adobe.com/dataset/overview)** dati.
+Le stesse informazioni si trovano in [Adobe Experience Platform](https://platform.adobe.com/) nelle schede **[Schema](https://platform.adobe.com/schema)**e**[Set](https://platform.adobe.com/dataset/overview)** dati.
 
 Per impostazione predefinita, quando si accede ai dati vengono impostati i seguenti parametri di configurazione:
 
@@ -111,8 +107,6 @@ Per impostazione predefinita, quando si accede ai dati vengono impostati i segue
 - `ML_FRAMEWORK_IMS_TOKEN`
 - `ML_FRAMEWORK_IMS_ML_TOKEN`
 - `ML_FRAMEWORK_IMS_TENANT_ID`
-
-
 
 ## Caricatore dati formazione
 
@@ -129,7 +123,8 @@ In questo passaggio viene utilizzato il [frame di dati](https://pandas.pydata.or
 - [SDK per piattaforma](#platform-sdk)
 - [Fonti esterne](#external-sources)
 
->[!NOTE] Nel blocco appunti di Recipe Builder, i dati vengono caricati tramite il `platform_sdk` caricatore dati.
+>[!NOTE]
+>Nel blocco appunti di Recipe Builder, i dati vengono caricati tramite il `platform_sdk` caricatore dati.
 
 ### SDK per piattaforma
 
@@ -155,11 +150,10 @@ df = pd.read_json(data)
 
 Ora i dati si trovano nell&#39;oggetto dataframe e possono essere analizzati e modificati nella sezione [](#data-preparation-and-feature-engineering)successiva.
 
-
-
 ### Dall&#39;SDK per l&#39;accesso ai dati (obsoleto)
 
->[!CAUTION]  non `data_access_sdk_python` è più consigliato. Consulta [Converti codice di accesso ai dati in SDK](../authoring/platform-sdk.md) piattaforma per una guida sull&#39;utilizzo del caricatore di `platform_sdk` dati.
+>[!CAUTION]
+> `data_access_sdk_python` non è più consigliato. Consulta [Converti codice di accesso dati in SDK](../authoring/platform-sdk.md) piattaforma per una guida sull&#39;utilizzo del `platform_sdk` caricatore dati.
 
 Gli utenti possono caricare i dati utilizzando l&#39;SDK per l&#39;accesso ai dati. La libreria può essere importata nella parte superiore della pagina includendo la riga:
 
@@ -176,7 +170,8 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
                      ims_org=configProperties['ML_FRAMEWORK_IMS_TENANT_ID'])
 ```
 
->[!NOTE] Come indicato nella sezione [File di](#configuration-files)configurazione, quando accedete ai dati da Experience Platform, vengono impostati i seguenti parametri di configurazione:
+>[!NOTE]
+>Come indicato nella sezione [File di](#configuration-files)configurazione, quando accedete ai dati da Experience Platform, vengono impostati i seguenti parametri di configurazione:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -297,17 +292,16 @@ df.dropna(0, inplace=True)
 
 La `load()` funzione nel caricatore dei dati di punteggio deve essere completa con il set di dati di punteggio come output.
 
-
-
 ### File pipeline
 
-Il `pipeline.py` file include logica per la formazione e il punteggio. Andremo oltre entrambi nelle prossime due sezioni.
+Il `pipeline.py` file include logica per la formazione e il punteggio.
 
 ### Formazione
 
 Lo scopo della formazione è quello di creare un modello utilizzando le funzioni e le etichette presenti nel dataset di formazione.
 
->[!NOTE]  Le _funzioni_ fanno riferimento alla variabile di input utilizzata dal modello di apprendimento automatico per prevedere le _etichette_.
+>[!NOTE]\
+>_Le funzioni_ fanno riferimento alla variabile di input utilizzata dal modello di apprendimento automatico per prevedere le _etichette_.
 
 La `train()` funzione deve includere il modello di addestramento e restituire il modello addestrato. Alcuni esempi di diversi modelli sono disponibili nella documentazione [della guida](https://scikit-learn.org/stable/user_guide.html)scikit-learn utente.
 
@@ -346,8 +340,6 @@ def train(configProperties, data):
 ```
 
 A seconda dell&#39;applicazione, la `GradientBoostingRegressor()` funzione avrà argomenti. `xTrainingDataset` devono contenere le funzioni utilizzate per la formazione, mentre `yTrainingDataset` devono contenere le etichette.
-
-
 
 ### Punteggio
 
@@ -425,7 +417,7 @@ Tenere presente che la funzione restituisce un `metric` oggetto contenente un ar
 
 ### File Data Saver
 
-Il `datasaver.py` file contiene la `save()` funzione per salvare la previsione durante il test del punteggio. La `save()` funzione prende la previsione e utilizza le API del catalogo della piattaforma di esperienza, scrive i dati nel `scoringResultsDataSetId` file specificato nel `scoring.conf` file.
+Il `datasaver.py` file contiene la `save()` funzione per salvare la previsione durante il test del punteggio. La `save()` funzione prende la previsione e utilizza le API del catalogo della piattaforma di esperienza, scrive i dati nel `scoringResultsDataSetId` `scoring.conf` file specificato.
 
 L&#39;esempio utilizzato nella ricetta di esempio per le vendite al dettaglio è riportato di seguito. Prendete nota dell&#39;utilizzo della `DataSetWriter` libreria per scrivere dati su Platform:
 
@@ -456,7 +448,6 @@ def save(configProperties, prediction):
     print(prediction)
 ```
 
-
 ## Formazione e punteggio
 
 Dopo aver apportato le modifiche al blocco appunti e aver scelto di addestrare la ricetta, potete fare clic sui pulsanti associati nella parte superiore della barra per creare una sequenza di formazione nella cella. Facendo clic sul pulsante, nel blocco appunti (sotto la `evaluator.py` cella) viene visualizzato un registro di comandi e output dello script di formazione. Conda prima installa tutte le dipendenze, quindi la formazione viene avviata.
@@ -467,7 +458,11 @@ Per il debug, se si desidera visualizzare l&#39;output nascosto, aggiungere `deb
 
 ## Creare una ricetta
 
-Dopo aver modificato la ricetta e aver ottenuto l&#39;output di formazione/punteggio, è possibile creare una ricetta dal blocco appunti premendo **Crea ricetta**. Dopo aver premuto il pulsante, vi verrà richiesto di inserire un nome di ricetta. Questo nome rappresenta la ricetta effettiva creata su Piattaforma.
+Dopo aver modificato la ricetta e aver ottenuto l’output di formazione/punteggio, è possibile creare una ricetta dal blocco appunti premendo **Crea ricetta** nella navigazione in alto a destra.
+
+![](../images/jupyterlab/create-recipe/create-recipe.png)
+
+Dopo aver premuto il pulsante, viene richiesto di immettere un nome per la ricetta. Questo nome rappresenta la ricetta effettiva creata su Piattaforma.
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
