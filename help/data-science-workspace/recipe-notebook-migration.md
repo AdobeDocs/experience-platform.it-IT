@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide per la migrazione a componenti e notebook
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bb6fe494933606d428d7bdf20ee38b7ac51c23ea
+source-git-commit: 61cf05b989bfbae4e26978fa915347f350d7364c
 
 ---
 
@@ -291,6 +291,10 @@ Le recenti modifiche apportate ai notebook JupyterLab richiedono l’aggiornamen
 
 - [Guida alla migrazione a PySpark 2.3-2.4](#pyspark-notebook-migration)
 - [Guida alla migrazione da Spark 2.3 a Spark 2.4 (Scala)](#spark-notebook-migration)
+
+Il seguente video è stato creato per agevolare la comprensione delle modifiche necessarie per i notebook JupyterLab:
+
+>[!VIDEO](https://video.tv.adobe.com/v/33444?quality=12&learn=on)
 
 ## Guida alla migrazione dei notebook PySpark 2.3-2.4 {#pyspark-notebook-migration}
 
