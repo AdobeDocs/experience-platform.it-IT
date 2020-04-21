@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Guida di Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: fcab7fbb955e85006eeebe5fb45b2a62188adaa7
+source-git-commit: 85af933c14b3768790100a649de05a5e6bdb8560
 
 ---
 
@@ -105,8 +105,8 @@ source-git-commit: fcab7fbb955e85006eeebe5fb45b2a62188adaa7
 - Esercitazioni sull’interfaccia utente {#ui-tutorials}
    - Creare un connettore di origine {#create}
       - Applicazioni Adobe {#adobe-applications}
-         - [Connettore Adobe Audience Manager](tutorials/ui/create/adobe-applications/analytics.md)
-         - [Connettore Adobe Analytics](tutorials/ui/create/adobe-applications/audience-manager.md)
+         - [Connettore Adobe Analytics](tutorials/ui/create/adobe-applications/analytics.md)
+         - [Connettore Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Connettore attributi cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - Pubblicità {#create}
          - [Connettore Google Ads](tutorials/ui/create/advertising/ads.md)
