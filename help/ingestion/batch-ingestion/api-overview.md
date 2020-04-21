@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida per lo sviluppatore Adobe Experience Platform Batch Ingestion
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
 
 ---
 
@@ -54,7 +54,7 @@ Le richieste che contengono un payload (POST, PUT, PATCH) possono richiedere un&
 
 Durante l’assimilazione dei dati, è importante comprendere il funzionamento degli schemi Experience Data Model (XDM). Per ulteriori informazioni sulla mappatura dei tipi di campo XDM in formati diversi, consultare la guida [per gli sviluppatori del Registro di](../../xdm/api/getting-started.md)schema.
 
-Durante l&#39;assimilazione dei dati vi è una certa flessibilità: se un tipo non corrisponde a quello presente nello schema di destinazione, i dati verranno convertiti nel tipo di destinazione espresso.  In caso contrario, il batch non riuscirà con un `TypeCompatibilityException`.
+Durante l&#39;assimilazione dei dati vi è una certa flessibilità: se un tipo non corrisponde a quello presente nello schema di destinazione, i dati verranno convertiti nel tipo di destinazione espresso. In caso contrario, il batch non riuscirà con un `TypeCompatibilityException`.
 
 Ad esempio, né JSON né CSV hanno un tipo data o ora. Di conseguenza, questi valori vengono espressi utilizzando stringhe [formattate](https://www.iso.org/iso-8601-date-and-time-format.html) ISO 8061 (&quot;2018-07-10T15:05:59.000-08:00&quot;) o Tempo Unix formattato in millisecondi (15312639590 00) e sono convertiti al momento dell&#39;assimilazione nel tipo XDM di destinazione.
 
@@ -382,7 +382,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 ```
 
 | Parametro | Descrizione |
-| --------- | -----------  |
+| --------- | ----------- |
 | `{DATASET_ID}` | ID del set di dati di riferimento. |
 
 **Risposta**
@@ -790,7 +790,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
-## Eliminare un batch
+## Eliminare un batch {#delete-a-batch}
 
 Un batch può essere eliminato eseguendo la seguente richiesta POST con il parametro `action=REVERT` query all’ID del batch che si desidera eliminare. Il batch è contrassegnato come &quot;inattivo&quot; e può quindi essere utilizzato per la raccolta dei rifiuti. Il batch verrà raccolto in modo asincrono, al momento in cui verrà contrassegnato come &quot;eliminato&quot;.
 
