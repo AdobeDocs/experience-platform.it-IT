@@ -1,0 +1,177 @@
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: 'Gestione delle etichette di utilizzo dei dati tramite API '
+topic: developer guide
+translation-type: tm+mt
+source-git-commit: cac6ab568f030cf86ee68a1df9e45a3ac9d421cb
+
+---
+
+
+# Gestione delle etichette di utilizzo dei dati tramite API
+
+In questo documento sono descritti i passaggi da seguire per gestire le etichette di utilizzo dei dati a livello di set di dati e di campo mediante l’API Catalog Service.
+
+## Introduzione
+
+Prima di leggere questa guida, si consiglia di leggere la panoramica [del servizio](../../catalog/home.md) Catalogo per una presentazione più affidabile del servizio. Inoltre, per raccogliere le credenziali necessarie per effettuare chiamate all&#39;API Catalog, è necessario seguire i passaggi descritti nella sezione [](../../catalog/api/getting-started.md) introduttiva della guida per gli sviluppatori di Catalog.
+
+Per effettuare chiamate agli endpoint descritti nelle sezioni seguenti, è necessario disporre del `id` valore univoco per un set di dati specifico. Se non disponete di questo valore, consultate la sezione relativa alla guida per gli sviluppatori nell&#39; [elenco degli oggetti](../../catalog/api/list-objects.md) catalogo per trovare gli ID dei set di dati esistenti.
+
+## Cerca etichette per un set di dati {#lookup}
+
+È possibile ricercare le etichette di utilizzo dei dati applicate a un dataset esistente effettuando una richiesta GET.
+
+**Formato API**
+
+```http
+GET /dataSets/{DATASET_ID}/labels
+```
+
+| Parametro | Descrizione |
+| --- | --- |
+| `{DATASET_ID}` | Il `id` valore univoco del set di dati di cui si desidera cercare le etichette. |
+
+**Richiesta**
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/catalog/dataSets/5abd49645591445e1ba04f87/labels' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Risposta**
+
+Una risposta corretta restituisce le etichette di utilizzo dei dati applicate al set di dati.
+
+```json
+{
+  "AEP:dataset:5abd49645591445e1ba04f87": {
+    "imsOrg": "{IMS_ORG}",
+    "labels": [ "C1", "C2", "C3", "I1", "I2" ],
+    "optionalLabels": [
+      {
+        "option": {
+          "id": "https://ns.adobe.com/{TENANT_ID}/schemas/c6b1b09bc3f2ad2627c1ecc719826836",
+          "contentType": "application/vnd.adobe.xed-full+json;version=1",
+          "schemaPath": "/properties/repositoryCreatedBy"
+        },
+        "labels": [ "S1", "S2" ]
+      }
+    ]
+  }
+}
+```
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `labels` | Elenco di etichette di utilizzo dati applicate al set di dati. |
+| `optionalLabels` | Elenco di singoli campi all’interno del dataset a cui sono applicate etichette di utilizzo dei dati. |
+
+## Applicare etichette a un dataset
+
+Potete creare un set di etichette per un set di dati inserendovi nel payload di una richiesta POST o PUT. L’utilizzo di uno di questi metodi sovrascrive tutte le etichette esistenti e le sostituisce con quelle fornite nel payload.
+
+**Formato API**
+
+```http
+POST /dataSets/{DATASET_ID}/labels
+PUT /dataSets/{DATASET_ID}/labels
+```
+
+| Parametro | Descrizione |
+| --- | --- |
+| `{DATASET_ID}` | Il `id` valore univoco del set di dati per il quale si creano le etichette. |
+
+**Richiesta**
+
+La seguente richiesta POST aggiunge una serie di etichette al set di dati, oltre a un campo specifico all’interno del set di dati. I campi forniti nel payload sono gli stessi richiesti per una richiesta PUT.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/catalog/dataSets/5abd49645591445e1ba04f87/labels' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "labels": [ "C1", "C2", "C3", "I1", "I2" ],
+  "optionalLabels": [
+    {
+      "option": {
+        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/c6b1b09bc3f2ad2627c1ecc719826836",
+        "contentType": "application/vnd.adobe.xed-full+json;version=1",
+        "schemaPath": "/properties/repositoryCreatedBy"
+      },
+      "labels": [ "S1", "S2" ]
+    }
+  ]
+}'
+```
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `labels` | Elenco di etichette di utilizzo dati da aggiungere al dataset. |
+| `optionalLabels` | Un elenco di tutti i singoli campi all&#39;interno del set di dati a cui si desidera aggiungere etichette. Ogni elemento di questa matrice deve avere le seguenti proprietà: <br/><br/>`option`: Un oggetto che contiene gli attributi Experience Data Model (XDM) del campo. Sono richieste le tre proprietà seguenti:<ul><li>id</code>: Il valore URI $id</code> dello schema associato al campo.</li><li>contentType</code>: Il tipo di contenuto e il numero di versione dello schema. Questo deve assumere la forma di una delle intestazioni <a href="../../xdm/api/look-up-resource.md"></a> Accetta valide per una richiesta di ricerca XDM.</li><li>schemaPath</code>: Percorso del campo all&#39;interno dello schema del set di dati.</li></ul>`labels`: Elenco di etichette di utilizzo dati da aggiungere al campo. |
+
+**Risposta**
+
+Una risposta corretta restituisce le etichette aggiunte al set di dati.
+
+```json
+{
+  "labels": [ "C1", "C2", "C3", "I1", "I2" ],
+  "optionalLabels": [
+    {
+      "option": {
+        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/c6b1b09bc3f2ad2627c1ecc719826836",
+        "contentType": "application/vnd.adobe.xed-full+json;version=1",
+        "schemaPath": "/properties/repositoryCreatedBy"
+      },
+      "labels": [ "S1", "S2" ]
+    }
+  ]
+}
+```
+
+## Eliminare etichette per un set di dati
+
+È possibile eliminare le etichette applicate a un dataset effettuando una richiesta DELETE.
+
+>[!NOTE] Utilizzare questa operazione solo per preparare il set di dati padre per l&#39;eliminazione.
+
+**Formato API**
+
+```http
+DELETE /dataSets/{DATASET_ID}/labels
+```
+
+| Parametro | Descrizione |
+| --- | --- |
+| `{DATASET_ID}` | Il `id` valore univoco del set di dati di cui si desidera eliminare le etichette. |
+
+**Richiesta**
+
+```shell
+curl -X DELETE \
+  'https://platform.adobe.io/data/foundation/catalog/dataSets/5abd49645591445e1ba04f87/labels' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Risposta**
+
+Una risposta corretta, lo stato HTTP 200 (OK), indica che le etichette sono state eliminate. Potete [cercare le etichette](#lookup) esistenti per il set di dati in una chiamata separata per confermarlo.
+
+## Passaggi successivi
+
+Ora che hai aggiunto etichette di utilizzo dei dati a livello di set di dati e di campo, puoi iniziare a assimilare i dati in Experience Platform. Per saperne di più, leggi la documentazione [sull’inserimento dei](../../ingestion/home.md)dati.
+
+È inoltre possibile definire criteri di utilizzo dei dati in base alle etichette applicate. Per ulteriori informazioni, vedere la panoramica [dei criteri di utilizzo dei](../policies/overview.md)dati.
