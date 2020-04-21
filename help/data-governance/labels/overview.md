@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica delle etichette di utilizzo dei dati
 topic: labels
 translation-type: tm+mt
-source-git-commit: 4d817a439cbc277c3df03e08554d5003b9f68a76
+source-git-commit: 4411018aa1d531b53bbe2431df71829fa07fee75
 
 ---
 
@@ -25,4 +25,4 @@ Per ulteriori informazioni sulle etichette di utilizzo dei dati disponibili in E
 
 ## Passaggi successivi
 
-Dopo aver introdotto le etichette di utilizzo dei dati, puoi continuare a leggere la guida [](user-guide.md) utente per apprendere come gestire le etichette nell’interfaccia utente della piattaforma Experience.
+Dopo aver introdotto le etichette di utilizzo dei dati, puoi continuare a leggere la guida [](user-guide.md) utente per apprendere come gestire le etichette nell’interfaccia utente della piattaforma Experience. Per i passaggi relativi alla gestione delle etichette mediante le API, consultate la sezione appropriata nella guida [per gli sviluppatori di](../../catalog/api/labels.md)Catalog Service.
