@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Catalog and Datasets Help
+user-guide-title: Guida relativa ai cataloghi e ai set di dati
 translation-type: tm+mt
-source-git-commit: ee500b03bc0984fa24666867867d19a5d7446ced
+source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
 
 ---
 
@@ -22,6 +22,7 @@ source-git-commit: ee500b03bc0984fa24666867867d19a5d7446ced
    * [Eliminare un oggetto](api/delete-object.md)
    * [Creare un dataset](api/create-dataset.md)
    * [Creare un batch](api/create-batch.md)
+   * [Etichette di utilizzo dati](api/labels.md)
    * [Appendice](api/appendix.md)
 * Set di dati {#datasets}
    * [Panoramica sui set di dati](datasets/overview.md)
