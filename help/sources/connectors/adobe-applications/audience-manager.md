@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connettore Audience Manager
 topic: overview
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
 
 ---
 
@@ -43,7 +43,7 @@ Di seguito sono riportati alcuni esempi della struttura di Audience Manager mapp
 
 ## Come vengono mappati i campi da Adobe Audience Manager a XDM?
 
-Per ulteriori informazioni, consulta la documentazione relativa ai campi [di mappatura di][audience-manager-mapping-fields] Audience Manager.
+Per ulteriori informazioni, consulta la documentazione relativa ai campi [di mappatura di](./mapping/audience-manager.md) Audience Manager.
 
 ## Gestione dei dati sulla piattaforma
 
