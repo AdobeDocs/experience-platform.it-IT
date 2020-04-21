@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Guida di Adobe Experience Platform Data Governance
 translation-type: tm+mt
-source-git-commit: 608f3f61764e6b578107f4ea7991bca12621330a
+source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
 
 ---
 
@@ -13,7 +13,8 @@ source-git-commit: 608f3f61764e6b578107f4ea7991bca12621330a
 * [Panoramica sulla governance dei dati](home.md)
 * Etichette di utilizzo dati {#labels}
    * [Panoramica delle etichette di utilizzo dei dati](labels/overview.md)
-   * [Guida utente etichette di utilizzo dati](labels/user-guide.md)
+   * [Gestione delle etichette di utilizzo dei dati nell’interfaccia utente](labels/user-guide.md)
+   * [Gestire le etichette di utilizzo dei dati nell&#39;API](labels/api.md)
    * [Etichette di utilizzo dati supportate](labels/reference.md)
 * Criteri di utilizzo dei dati {#policies}
    * [Panoramica sui criteri di utilizzo dei dati](policies/overview.md)
