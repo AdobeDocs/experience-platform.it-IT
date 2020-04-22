@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Preparare i dati per l'utilizzo in Intelligent Services
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 03135f564bd72fb60e41b02557cb9ca9ec11e6e8
+source-git-commit: 702ac3860e06951574fe48f7d8771a11f68bedc4
 
 ---
 
@@ -23,32 +23,150 @@ Come tutti gli schemi XDM, il mixin CEE è estensibile. In altre parole, è poss
 
 Un esempio completo del mixin può essere trovato nel repository [XDM](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)pubblico e dovrebbe essere utilizzato come riferimento per i campi chiave descritti nella sezione seguente.
 
-### Campi chiave
+## Campi chiave
 
-La tabella seguente evidenzia i campi chiave all&#39;interno del mixin CEE che dovrebbero essere utilizzati per consentire ai servizi intelligenti di generare informazioni utili, tra cui descrizioni e collegamenti alla documentazione di riferimento per ulteriori esempi.
+Le sezioni seguenti evidenziano i campi chiave all&#39;interno del mixin CEE che dovrebbero essere utilizzati per consentire ai servizi intelligenti di generare informazioni utili, tra cui descrizioni e collegamenti alla documentazione di riferimento per ulteriori esempi.
 
-| Campo XDM | Descrizione | Riferimenti |
-| --- | --- | --- |
-| `xdm:channel` | Canale di marketing correlato a ExperienceEvent. Il campo include informazioni sul tipo di canale, il tipo di supporto e il tipo di posizione. **Questo campo _deve_essere fornito per consentire l&#39;utilizzo dei dati** da parte di AI di attribuzione. Per alcuni esempi di mappature, vedere la [tabella seguente](#example-channels) . | [Schema canale esperienza](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) |
-| `xdm:productListItems` | Un array di elementi che rappresentano i prodotti selezionati da un cliente, inclusi SKU di prodotto, nome, prezzo e quantità. | [Schema dettagli Commerce](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) |
-| `xdm:commerce` | Contiene informazioni commerciali sull’ExperienceEvent, compreso il numero dell’ordine di acquisto e le informazioni di pagamento. | [Schema dettagli Commerce](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) |
-| `xdm:web` | Rappresenta i dettagli Web relativi all’evento ExperienceEvent, ad esempio l’interazione, i dettagli della pagina e il referente. | [Schema dei dettagli Web ExperienceEvent](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-web.schema.md) |
+### xdm:channel
 
-### Canali di esempio {#example-channels}
+Questo campo rappresenta il canale di marketing correlato a ExperienceEvent. Il campo include informazioni sul tipo di canale, il tipo di supporto e il tipo di posizione. **Questo campo _deve_essere fornito per consentire l&#39;utilizzo dei dati** da parte di AI di attribuzione.
 
-Il `xdm:channel` campo rappresenta il canale di marketing relativo a ExperienceEvent. Nella tabella seguente sono riportati alcuni esempi di canali di marketing mappati su XDM:
+**Esempio di schema**
 
-| Canale | `channel.mediaType` | `channel._type` | `channel.mediaAction` |
+```json
+{
+  "@id": "https://ns.adobe.com/xdm/channels/facebook-feed",
+  "@type": "https://ns.adobe.com/xdm/channel-types/social",
+  "xdm:mediaType": "earned",
+  "xdm:mediaAction": "clicks"
+}
+```
+
+Per informazioni complete su ciascuno dei campi secondari richiesti per `xdm:channel`, consultate la specifica dello schema [del canale](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) esperienza. Per alcuni esempi di mappature, vedere la [tabella seguente](#example-channels).
+
+#### Esempio di mappature dei canali {#example-channels}
+
+Nella tabella seguente sono riportati alcuni esempi di canali di marketing mappati allo `xdm:channel` schema:
+
+| Canale | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
-| Ricerca a pagamento | PAGATO | CERCA | FATE CLIC |
-| Social - Marketing | EARNED | SOCIAL | FATE CLIC |
-| Visualizzazione | PAGATO | DISPLAY | FATE CLIC |
-| E-mail | PAGATO | E-MAIL | FATE CLIC |
-| Referente interno | PROPRIETARIO | DIRECT | FATE CLIC |
-| VisualizzazioneTramite | PAGATO | DISPLAY | IMPRESSIONE |
-| Reindirizzamento del codice QR | PROPRIETARIO | DIRECT | FATE CLIC |
-| SMS Text Message | PROPRIETARIO | SMS | FATE CLIC |
-| Dispositivi mobili | PROPRIETARIO | MOBILE | FATE CLIC |
+| Ricerca a pagamento | https:/<span>/ns.adobe.com/xdm/channel-types/search | pagato | click |
+| Social - Marketing | https:/<span>/ns.adobe.com/xdm/channel-types/social | guadagnato | click |
+| Visualizzazione | https:/<span>/ns.adobe.com/xdm/channel-types/display | pagato | click |
+| E-mail | https:/<span>/ns.adobe.com/xdm/channel-types/email | pagato | click |
+| Referente interno | https:/<span>/ns.adobe.com/xdm/channel-types/direct | di proprietà | click |
+| VisualizzazioneTramite | https:/<span>/ns.adobe.com/xdm/channel-types/display | pagato | impressioni |
+| Reindirizzamento del codice QR | https:/<span>/ns.adobe.com/xdm/channel-types/direct | di proprietà | click |
+| Dispositivi mobili | https:/<span>/ns.adobe.com/xdm/channel-types/mobile | di proprietà | click |
+
+### xdm:productListItems
+
+Questo campo è un array di elementi che rappresentano i prodotti selezionati da un cliente, inclusi SKU di prodotto, nome, prezzo e quantità.
+
+**Esempio di schema**
+
+```json
+[
+  {
+    "xdm:SKU": "1002352692",
+    "xdm:lineItemId": "12345678",
+    "xdm:name": "24-Watt 8-Light Chrome Integrated LED Bath Light",
+    "xdm:currencyCode": "USD",
+    "xdm:quantity": 1,
+    "xdm:priceTotal": 159
+  },
+  {
+    "xdm:SKU": "3398033623",
+    "xdm:lineItemId": "48693817",
+    "xdm:name": "16ft RGB LED Strips",
+    "xdm:currencyCode": "USD",
+    "xdm:quantity": 1,
+    "xdm:priceTotal": 80
+  }
+]
+```
+
+Per informazioni complete su ciascuno dei campi secondari richiesti per `xdm:productListItems`, fare riferimento alla specifica dello schema [dei dettagli](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) commerciali.
+
+### xdm:commerce
+
+Questo campo contiene informazioni commerciali specifiche sull’ExperienceEvent, compreso il numero dell’ordine di acquisto e le informazioni di pagamento.
+
+**Esempio di schema**
+
+```json
+{
+    "xdm:order": {
+      "xdm:purchaseID": "a8g784hjq1mnp3",
+      "xdm:purchaseOrderNumber": "123456",
+      "xdm:payments": [
+        {
+          "xdm:transactionID": "transactid-a111",
+          "xdm:paymentAmount": 59,
+          "xdm:paymentType": "credit_card",
+          "xdm:currencyCode": "USD"
+        },
+        {
+          "xdm:transactionId": "transactid-a222",
+          "xdm:paymentAmount": 100,
+          "xdm:paymentType": "gift_card",
+          "xdm:currencyCode": "USD"
+        }
+      ],
+      "xdm:currencyCode": "USD",
+      "xdm:priceTotal": 159
+    },
+    "xdm:purchases": {
+      "xdm:value": 1
+    }
+  }
+```
+
+Per informazioni complete su ciascuno dei campi secondari richiesti per `xdm:commerce`, fare riferimento alla specifica dello schema [dei dettagli](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) commerciali.
+
+### xdm:web
+
+Questo campo rappresenta i dettagli Web relativi a ExperienceEvent, ad esempio l’interazione, i dettagli della pagina e il referente.
+
+**Esempio di schema**
+
+```json
+{
+  "xdm:webPageDetails": {
+    "xdm:siteSection": "Shopping Cart",
+    "xdm:server": "example.com",
+    "xdm:name": "Purchase Confirmation",
+    "xdm:URL": "https://www.example.com/orderConf",
+    "xdm:errorPage": false,
+    "xdm:homePage": false,
+    "xdm:pageViews": {
+      "xdm:value": 1
+    }
+  },
+  "xdm:webReferrer": {
+    "xdm:URL": "https://www.example.com/checkout",
+    "xdm:referrerType": "internal"
+  }
+}
+```
+
+Per informazioni complete su ciascuno dei campi secondari richiesti per `xdm:productListItems`, consulta la specifica dello schema [dei dettagli Web](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-web.schema.md) ExperienceEvent.
+
+### xdm:marketing
+
+Questo campo contiene informazioni relative alle attività di marketing attive con il punto di contatto.
+
+**Esempio di schema**
+
+```json
+{
+  "xdm:trackingCode": "marketingcampaign111",
+  "xdm:campaignGroup": "50%_DISCOUNT",
+  "xdm:campaignName": "50%_DISCOUNT_USA"
+}
+```
+
+Per informazioni complete su ciascuno dei campi secondari richiesti per `xdm:productListItems`, consulta le specifiche sechma [di](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) marketing.
 
 ## Mapping e acquisizione dei dati
 
