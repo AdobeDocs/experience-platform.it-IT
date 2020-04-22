@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Sandboxes in Adobe Experience Platform Help
+user-guide-title: Sandbox nell’Aiuto di Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 0910c653219d13e260aaf4aeab7c9f124e0e0fd9
+source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 
 ---
 
@@ -26,3 +26,4 @@ source-git-commit: 0910c653219d13e260aaf4aeab7c9f124e0e0fd9
    * [Eliminare una sandbox](api/delete-sandbox.md)
 * [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
 * [Riferimento API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml)
+* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-en)
