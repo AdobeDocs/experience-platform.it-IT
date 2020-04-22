@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida alla risoluzione dei problemi per l'area di lavoro di analisi dati
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: 1f756e7bc71c9ff227757aee64af29e0772c24af
+source-git-commit: ef7c37438990d3bc42024e7fb106d781a5ebbd12
 
 ---
 
@@ -15,9 +15,9 @@ Questo documento contiene le risposte alle domande frequenti su Adobe Experience
 
 ## L&#39;ambiente JupyterLab non si sta caricando in Google Chrome
 
-Con l&#39;ultimo aggiornamento del browser Google Chrome alla versione 80.x, tutti i cookie 3rd party sono bloccati per impostazione predefinita. Questo nuovo criterio può impedire il caricamento di JupyterLab all&#39;interno di Adobe Experience Platform.
+>[!IMPORTANT] Questo problema è stato risolto ma potrebbe essere ancora presente nel browser Google Chrome 80.x. Verificare che il browser Chrome sia aggiornato.
 
->[!NOTE] Questo è un problema temporaneo. La dipendenza dai cookie di terze parti è impostata per essere rimossa in una versione futura.
+Con il browser Google Chrome versione 80.x, tutti i cookie di terze parti sono bloccati per impostazione predefinita. Questo criterio può impedire il caricamento di JupyterLab all&#39;interno di Adobe Experience Platform.
 
 Per risolvere questo problema, attenersi alla procedura seguente:
 
@@ -45,7 +45,19 @@ Dopo il passaggio 2, viene richiesto di riavviare il browser. Dopo il riavvio, J
 
 ## Perché non è possibile accedere a JupyterLab in Safari?
 
-Per impostazione predefinita, Safari disattiva i cookie di terze parti. Poiché l’istanza della macchina virtuale Jupyter risiede in un dominio diverso da quello del relativo frame principale, Adobe Experience Platform richiede attualmente l’abilitazione dei cookie di terze parti. Abilita i cookie di terze parti o passa a un altro browser come Google Chrome.
+Per impostazione predefinita, Safari disattiva i cookie di terze parti in Safari &lt; 12. Poiché l’istanza della macchina virtuale Jupyter risiede in un dominio diverso da quello del relativo frame principale, Adobe Experience Platform richiede attualmente l’abilitazione dei cookie di terze parti. Abilita i cookie di terze parti o passa a un altro browser come Google Chrome.
+
+Per Safari 12, è necessario passare l&#39;agente utente a &#39;Chrome&#39; o &#39;Firefox&#39;. Per cambiare agente utente, aprite il menu *Safari* e selezionate **Preferenze**. Viene visualizzata la finestra delle preferenze.
+
+![Preferenze di Safari](./images/faq/preferences.png)
+
+Nella finestra delle preferenze di Safari, selezionate **Avanzate**. Dal menu *Mostra sviluppo nella casella della barra* dei menu. Al termine di questo passaggio, potete chiudere la finestra delle preferenze.
+
+![Safari avanzato](./images/faq/advanced.png)
+
+Quindi, dalla barra di navigazione superiore, selezionate il menu **Sviluppo** . Dall’interno del menu a discesa *Sviluppo* , passa il puntatore del mouse sull’agente ** utente. È possibile selezionare la stringa agente utente **Chrome** o **Firefox** che si desidera utilizzare.
+
+![Menu Sviluppo](./images/faq/user-agent.png)
 
 ## Perché viene visualizzato un messaggio &#39;403 Vietato&#39; quando si tenta di caricare o eliminare un file in JupyterLab?
 
