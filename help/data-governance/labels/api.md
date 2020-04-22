@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 'Gestione delle etichette di utilizzo dei dati tramite API '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cac6ab568f030cf86ee68a1df9e45a3ac9d421cb
+source-git-commit: d685f1851badf54ce1d1ac3cbacd69d62894c33f
 
 ---
 
@@ -143,8 +143,6 @@ Una risposta corretta restituisce le etichette aggiunte al set di dati.
 
 È possibile eliminare le etichette applicate a un dataset effettuando una richiesta DELETE.
 
->[!NOTE] Utilizzare questa operazione solo per preparare il set di dati padre per l&#39;eliminazione.
-
 **Formato API**
 
 ```http
@@ -168,7 +166,7 @@ curl -X DELETE \
 
 **Risposta**
 
-Una risposta corretta, lo stato HTTP 200 (OK), indica che le etichette sono state eliminate. Potete [cercare le etichette](#lookup) esistenti per il set di dati in una chiamata separata per confermarlo.
+Risposta corretta: stato HTTP 200 (OK), che indica che le etichette sono state eliminate. Potete [cercare le etichette](#lookup) esistenti per il set di dati in una chiamata separata per confermarlo.
 
 ## Passaggi successivi
 
