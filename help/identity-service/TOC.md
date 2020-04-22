@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Identity Service
+user-guide-title: Servizio Adobe Experience Platform Identity
 translation-type: tm+mt
-source-git-commit: 3ad7d99c518468529fb4c8f57e674800a0399163
+source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 
 ---
 
@@ -24,3 +24,4 @@ source-git-commit: 3ad7d99c518468529fb4c8f57e674800a0399163
 - [Panoramica ECID](ecid.md)
 - [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
 - [Riferimento API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)
+- [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-en)
