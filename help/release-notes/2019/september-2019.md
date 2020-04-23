@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 translation-type: tm+mt
-source-git-commit: 28a8fc496c85b334e89d0f0a130d3cc5c8956399
+source-git-commit: 26568ebbbe48b5a82e4f6b5cf035c354c11e8ed1
 
 ---
 
@@ -14,7 +14,13 @@ source-git-commit: 28a8fc496c85b334e89d0f0a130d3cc5c8956399
 
 ## Data di rilascio: 10 settembre 2019
 
-## Ingestione dati
+Aggiornamenti alle funzionalità esistenti in Adobe Experience Platform:
+
+* [Ingestione dati](#ingestion)
+* [Area di lavoro Data Science](#dsw)
+* [Servizio query](#query)
+
+## Ingestione dati {#ingestion}
 
 Adobe Experience Platform offre un set completo di funzioni per acquisire qualsiasi tipo e latenza di dati. L’inserimento dei dati in Adobe Experience Platform offre diverse alternative per l’assimilazione dei dati, tra cui API per batch, API per lo streaming, connettori Adobe nativi, partner per l’integrazione dei dati o l’interfaccia utente di Adobe Experience Platform.
 
@@ -26,7 +32,7 @@ Adobe Experience Platform offre un set completo di funzioni per acquisire qualsi
 
 Per ulteriori informazioni, consulta la documentazione [sull’inserimento dei](../../ingestion/home.md)dati.
 
-## Area di lavoro Data Science
+## Area di lavoro Data Science {#dsw}
 
 Adobe Experience Platform Data Science Workspace è un servizio completamente gestito all&#39;interno della piattaforma Experience che consente agli esperti di dati di generare in modo semplice informazioni dai dati e dai contenuti tra le soluzioni Adobe e i sistemi di terze parti, creando e operando modelli di apprendimento automatico. Data Science Workspace è strettamente integrato con la Piattaforma e migliora il ciclo di vita completo della scienza dei dati, compresa l&#39;esplorazione e la preparazione di dati XDM, seguita dallo sviluppo e dall&#39;operazionalizzazione di modelli per arricchire automaticamente il profilo cliente in tempo reale con informazioni sull&#39;apprendimento automatico.
 
@@ -46,7 +52,7 @@ Adobe Experience Platform Data Science Workspace è un servizio completamente ge
 
 Per ulteriori informazioni, consulta [Panoramica](../../data-science-workspace/home.md)di Data Science Workspace.
 
-## Servizio query
+## Servizio query {#query}
 
 Servizio query consente di utilizzare SQL standard per eseguire query sui dati in Adobe Experience Platform per supportare diversi casi di utilizzo di analisi e gestione dei dati. Si tratta di uno strumento senza server che consente di unire set di dati dal Data Lake e acquisire i risultati della query come nuovo set di dati da utilizzare nei report, in Data Science Workspace o per l&#39;inserimento in Real-time Customer Profile.
 
