@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Streaming di più messaggi in una singola richiesta HTTP
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: cd251c0816a7e653596b6c3faaceb0cebad367ea
 
 ---
 
@@ -47,7 +47,7 @@ Invece di utilizzare un dataset esistente, potete creare un nuovo dataset. Per u
 **Formato API**
 
 ```http
-POST /collection/{CONNECTION_ID}
+POST /collection/batch/{CONNECTION_ID}
 ```
 
 | Proprietà | Descrizione |
@@ -57,7 +57,7 @@ POST /collection/{CONNECTION_ID}
 **Richiesta**
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
+curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
   -H 'Content-Type: application/json' \
   -d '{
   "messages": [
@@ -229,7 +229,7 @@ Il payload della richiesta è un array di oggetti JSON che rappresenta l&#39;eve
 **Formato API**
 
 ```http
-POST /collection/{CONNECTION_ID}
+POST /collection/batch/{CONNECTION_ID}
 ```
 
 | Proprietà | Descrizione |
@@ -239,7 +239,7 @@ POST /collection/{CONNECTION_ID}
 **Richiesta**
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
+curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
   -H 'Content-Type: application/json' \
   -d '{
   "messages": [
@@ -547,7 +547,7 @@ I messaggi batch che superano la convalida dello streaming sulla piattaforma ven
 
 ## Passaggi successivi
 
-Ora che sai come inviare più messaggi in un&#39;unica richiesta e quando i messaggi vengono correttamente inseriti nel set di dati di destinazione, puoi iniziare a trasferire i tuoi dati su Piattaforma. Per una panoramica su come eseguire query e recuperare dati acquisiti dalla piattaforma, consulta la guida [Accesso](../../data-access/tutorials/dataset-data.md) ai dati.
+Ora che sai come inviare più messaggi in una singola richiesta e verificare quando i messaggi vengono correttamente inviati nel dataset di destinazione, puoi iniziare a inviare i tuoi dati in streaming alla piattaforma. Per una panoramica su come eseguire query e recuperare dati acquisiti dalla piattaforma, consulta la guida [Accesso](../../data-access/tutorials/dataset-data.md) ai dati.
 
 ## Appendice
 
