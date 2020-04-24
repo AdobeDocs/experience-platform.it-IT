@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Pianificazione di un modello (interfaccia utente)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 541acd9e1df8a53ae372f71230a705fb6a95d92b
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -24,7 +24,7 @@ Per completare questa esercitazione, è necessario disporre dell&#39;accesso a E
 
 Questa esercitazione richiede un servizio esistente. Se non disponete di un servizio accessibile con cui lavorare, potete crearne uno seguendo l&#39;esercitazione [Pubblica il modello come servizio nell&#39;interfaccia utente](./publish-model-service-ui.md) .
 
-## Configurare il punteggio pianificato
+## Configurare il punteggio pianificato {#configure-scheduled-scoring}
 
 Il punteggio del modello può essere configurato in modo da essere automatizzato su base programmata. Una volta creato il servizio, puoi seguire i passaggi descritti di seguito per configurare e applicare una pianificazione del punteggio:
 
@@ -41,7 +41,7 @@ Il punteggio del modello può essere configurato in modo da essere automatizzato
    ![](../images/models-recipes/schedule/service_with_scoring_schedule.png)
 
 
-## Configurare la formazione pianificata
+## Configurare la formazione pianificata {#configure-scheduled-training}
 
 La configurazione delle esecuzioni di formazione pianificate su un servizio assicura che il modello di apprendimento automatico venga aggiornato ai pattern di dati più recenti. Ogni volta che viene completata un&#39;esecuzione di formazione pianificata, il modello di formazione risultante viene utilizzato per alimentare il Servizio fino all&#39;esecuzione di formazione pianificata successiva.
 
