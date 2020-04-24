@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Elenco delle risorse
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: fe7b6acf86ebf39da728bb091334785a24d86b49
+source-git-commit: 4b052cdd3aca9c771855b2dc2a97ca48c7b8ffb0
 
 ---
 
@@ -12,6 +12,10 @@ source-git-commit: fe7b6acf86ebf39da728bb091334785a24d86b49
 # Elenco delle risorse
 
 È possibile visualizzare un elenco di tutte le risorse (schemi, classi, mixin o tipi di dati) all&#39;interno di un contenitore eseguendo una singola richiesta GET.
+
+>[!NOTE] Quando si elencano le risorse, il Registro di sistema dello schema limita i set di risultati a 300 elementi. Per restituire risorse oltre questo limite, è necessario utilizzare i parametri [di](#paging)paging. È inoltre consigliabile utilizzare i parametri di query per [filtrare i risultati](#filtering) e ridurre il numero di risorse restituite.
+>
+> Se desiderate ignorare completamente il limite di 300 elementi, dovete utilizzare l’intestazione Accetto `application/vnd.adobe.xdm-v2+json` per restituire tutti i risultati in un’unica richiesta.
 
 **Formato API**
 
@@ -42,8 +46,9 @@ Il formato della risposta dipende dall’intestazione Accetta inviata nella rich
 
 | Accetta intestazione | Descrizione |
 | ------- | ------------ |
-| application/vnd.adobe.xed-id+json | Restituisce un breve riepilogo di ciascuna risorsa, generalmente l&#39;intestazione preferita per l&#39;elenco |
-| application/vnd.adobe.xed+json | Restituisce lo schema JSON completo per ogni risorsa, con originale `$ref` e `allOf` incluso |
+| application/vnd.adobe.xed-id+json | Restituisce un breve riepilogo di ciascuna risorsa. Intestazione consigliata per elencare le risorse. (Limite: 300) |
+| application/vnd.adobe.xed+json | Restituisce lo schema JSON completo per ciascuna risorsa, con originale `$ref` e `allOf` incluso. (Limite: 300) |
+| application/vnd.adobe.xdm-v2+json | Restituisce lo schema JSON completo per tutti i risultati in un&#39;unica richiesta, superando il limite di 300 elementi. |
 
 **Risposta**
 
@@ -74,7 +79,7 @@ Il Registro di sistema dello schema supporta l&#39;utilizzo di parametri di quer
 
 >[!NOTE] Quando si combinano più parametri di query, questi devono essere separati da e commerciale (`&`).
 
-### Pagine
+### Pagine {#paging}
 
 I parametri di query più comuni per il paging includono:
 
@@ -84,7 +89,7 @@ I parametri di query più comuni per il paging includono:
 | `limit` | Limita il numero di risorse restituite. Esempio: `limit=5` restituirà un elenco di cinque risorse. |
 | `orderby` | Ordinare i risultati in base a una proprietà specifica. Esempio: i risultati `orderby=title` verranno ordinati in ordine crescente (A-Z) in base al titolo. Se si aggiunge un titolo `-` prima del titolo (`orderby=-title`), gli elementi vengono ordinati per titolo in ordine decrescente (Z-A). |
 
-### Filtro
+### Filtro {#filtering}
 
 Potete filtrare i risultati utilizzando il `property` parametro, utilizzato per applicare un operatore specifico a una determinata proprietà JSON all&#39;interno delle risorse recuperate. Gli operatori supportati includono:
 
