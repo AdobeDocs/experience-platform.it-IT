@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Arricchisci il profilo cliente in tempo reale con informazioni approfondite sull'apprendimento automatico
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: b0b44f4aaf365f58086cfa17d27fbba6ed2a2a97
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -32,7 +32,7 @@ Oltre ai documenti di cui sopra, si consiglia di consultare anche le seguenti gu
 * [Nozioni di base sulla composizione](../../xdm/schema/composition.md)dello schema: Descrive gli schemi XDM, i blocchi costitutivi, i principi e le procedure ottimali per la composizione degli schemi da utilizzare in Experience Platform.
 * [Esercitazione](../../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Fornisce istruzioni dettagliate per la creazione di schemi utilizzando l&#39;Editor di schema in Experience Platform.
 
-## Creare uno schema di output e un dataset
+## Creare uno schema di output e un dataset {#create-an-output-schema-and-dataset}
 
 Il primo passo verso l&#39;arricchimento del profilo cliente in tempo reale con informazioni di punteggio è sapere quale oggetto reale (come una persona) definisce i tuoi dati. La comprensione dei dati consente di descrivere e progettare una struttura che ha un significato per i dati, come la progettazione di un database relazionale.
 
@@ -73,7 +73,7 @@ La composizione di uno schema inizia con l&#39;assegnazione di una classe. Le cl
 
 Ora che è stato creato un set di dati dello schema di output, è possibile continuare fino alla sezione successiva per configurarlo e abilitarlo per l&#39;arricchimento del profilo.
 
-## Configurare uno schema di output e un dataset
+## Configurare uno schema di output e un dataset {#configure-an-output-schema-and-dataset}
 
 Prima di abilitare un dataset per il profilo, è necessario configurare lo schema del dataset in modo che abbia un campo identità principale e quindi attivare lo schema per il profilo. Se si desidera creare e abilitare un nuovo schema, è possibile fare riferimento all&#39;esercitazione sulla [creazione di uno schema utilizzando l&#39;Editor](../../xdm/tutorials/create-schema-ui.md)di schema. In caso contrario, seguire le istruzioni riportate di seguito per abilitare uno schema e un dataset esistenti.
 
@@ -97,7 +97,7 @@ Prima di abilitare un dataset per il profilo, è necessario configurare lo schem
 
 Quando i dati vengono trasferiti in un dataset abilitato per il profilo, gli stessi dati vengono anche assimilati come record di profilo. Ora che lo schema e il set di dati sono preparati, genera alcuni dati nel dataset eseguendo l&#39;esecuzione del punteggio utilizzando un modello appropriato, quindi continua con questa esercitazione per creare segmenti di approfondimento utilizzando Segment Builder (Generatore di segmenti).
 
-## Creazione di segmenti con Segment Builder (Generatore di segmenti)
+## Creazione di segmenti con Segment Builder (Generatore di segmenti) {#create-segments-using-the-segment-builder}
 
 Ora che hai generato e acquisito informazioni approfondite nel set di dati abilitato per il profilo, puoi gestire tali dati identificando sottoinsiemi di elementi correlati tramite Segment Builder (Generatore di segmenti). Segui i passaggi indicati di seguito per creare i tuoi segmenti.
 
@@ -117,6 +117,6 @@ Ora che hai generato e acquisito informazioni approfondite nel set di dati abili
    ![](../images/models-recipes/enrich-rtcdp/save_segment.png)
 
 
-## Passaggi successivi
+## Passaggi successivi {#next-steps}
 
 Questo documento illustra i passaggi necessari per abilitare uno schema e un set di dati per il profilo e illustra brevemente il flusso di lavoro per la creazione di segmenti di approfondimento mediante il Generatore di segmenti. Per ulteriori informazioni sui segmenti e sul Generatore di segmenti, consulta la panoramica [del servizio](../../segmentation/home.md)Segmentazione.
