@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida introduttiva all'intelligenza artificiale
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 0eeb41fa06864cc28b3a76c2a69c76ea5430d45a
+source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
 
 ---
 
@@ -22,7 +22,7 @@ Le guide per l&#39;AI del cliente richiedono una conoscenza approfondita dei var
 
 ## Download dei punteggi dell&#39;API del cliente
 
->[!NOTE] Se non è necessario scaricare i punteggi non elaborati, puoi saltare questo passaggio e passare alla guida dell’interfaccia utente.
+>[!NOTE] Se non è necessario scaricare i punteggi non elaborati, puoi saltare questo passaggio e passare alla guida [alla](./user-guide/configure.md)configurazione.
 
 Il download dei punteggi di AI del cliente viene effettuato tramite una combinazione di chiamate API. Per effettuare chiamate alle API della piattaforma, dovete prima completare l&#39;esercitazione [di](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come illustrato di seguito:
 
@@ -42,4 +42,4 @@ Questa guida fornisce esempi di chiamate API per dimostrare come formattare le r
 
 ## Passaggi successivi
 
-Una volta pronti e dotati di tutte le credenziali e gli schemi, iniziate seguendo la guida [all&#39;interfaccia utente AI](./user-guide.md)cliente. Questa guida illustra come creare un’istanza e inviarla per la formazione e il punteggio.
+Una volta completati i passaggi descritti nel documento precedente, consultare la documentazione [Input e Output](./input-output.md) . Questo documento fornisce una breve panoramica dei tipi di dati utilizzati e prodotti nell&#39;AI del cliente.
