@@ -4,18 +4,16 @@ solution: Experience Platform
 title: Elenco delle risorse
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 4b052cdd3aca9c771855b2dc2a97ca48c7b8ffb0
+source-git-commit: 58549241f05f1bd604f33762f681c60946fa52f5
 
 ---
 
 
 # Elenco delle risorse
 
-È possibile visualizzare un elenco di tutte le risorse (schemi, classi, mixin o tipi di dati) all&#39;interno di un contenitore eseguendo una singola richiesta GET.
+È possibile visualizzare un elenco di tutte le risorse del Registro di sistema dello schema di un determinato tipo (classi, mixin, schemi, tipi di dati o descrittori) all&#39;interno di un contenitore eseguendo una singola richiesta GET.
 
 >[!NOTE] Quando si elencano le risorse, il Registro di sistema dello schema limita i set di risultati a 300 elementi. Per restituire risorse oltre questo limite, è necessario utilizzare i parametri [di](#paging)paging. È inoltre consigliabile utilizzare i parametri di query per [filtrare i risultati](#filtering) e ridurre il numero di risorse restituite.
->
-> Se desiderate ignorare completamente il limite di 300 elementi, dovete utilizzare l’intestazione Accetto `application/vnd.adobe.xdm-v2+json` per restituire tutti i risultati in un’unica richiesta.
 
 **Formato API**
 
@@ -27,7 +25,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
 | Parametro | Descrizione |
 | --- | --- |
 | `{CONTAINER_ID}` | Il contenitore in cui si trovano le risorse (&quot;global&quot; o &quot;tenant&quot;). |
-| `{RESOURCE_TYPE}` | Il tipo di risorsa da recuperare dalla Libreria schema. I tipi validi sono `datatypes`, `mixins`, `schemas`e `classes`. |
+| `{RESOURCE_TYPE}` | Il tipo di risorsa da recuperare dalla Libreria schema. I tipi validi sono `classes`, `mixins`, `schemas`, `datatypes`e `descriptors`. |
 | `{QUERY_PARAMS`} | Parametri di query facoltativi per filtrare i risultati per. Per ulteriori informazioni, consulta la sezione sui parametri [di](#query) query. |
 
 **Richiesta**
@@ -48,7 +46,7 @@ Il formato della risposta dipende dall’intestazione Accetta inviata nella rich
 | ------- | ------------ |
 | application/vnd.adobe.xed-id+json | Restituisce un breve riepilogo di ciascuna risorsa. Intestazione consigliata per elencare le risorse. (Limite: 300) |
 | application/vnd.adobe.xed+json | Restituisce lo schema JSON completo per ciascuna risorsa, con originale `$ref` e `allOf` incluso. (Limite: 300) |
-| application/vnd.adobe.xdm-v2+json | Restituisce lo schema JSON completo per tutti i risultati in un&#39;unica richiesta, superando il limite di 300 elementi. |
+| application/vnd.adobe.xdm-v2+json | Quando si utilizza l&#39; `/descriptors` endpoint, questa intestazione Accetta deve essere utilizzata per utilizzare le funzionalità di paging. |
 
 **Risposta**
 
