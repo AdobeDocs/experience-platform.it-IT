@@ -6,14 +6,14 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: e90dba1fb7419a77139c6b25c8701451bf20b14e
+source-git-commit: e5fa12b92f7006f2c5c428b25f81dade57733498
 
 ---
 
 
 # Note sulla versione di Adobe Experience Platform
 
-## Data di rilascio: 11 marzo 2020
+**Data di rilascio: 11 marzo 2020**
 
 Aggiornamenti alle funzionalità esistenti in Adobe Experience Platform:
 
