@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Pubblicare un modello come servizio (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -123,7 +123,7 @@ A seconda del caso d’uso e dei requisiti specifici, la creazione di un servizi
 
 È possibile creare un servizio ML utilizzando un&#39;istanza ML senza pianificare alcuna formazione o valutazione. Tale servizio ML creerà entità di prova ordinarie e un singolo esperimento viene eseguito per la formazione e il punteggio.
 
-### Servizio ML con l&#39;esperimento pianificato per il punteggio
+### Servizio ML con l&#39;esperimento pianificato per il punteggio {#ml-service-with-scheduled-experiment-for-scoring}
 
 La creazione di un servizio ML mediante la pubblicazione di un&#39;istanza ML con esecuzioni di esperti pianificate per il punteggio darà luogo alla creazione di un&#39;entità Sperimentale ordinaria per la formazione. L&#39;esecuzione dell&#39;esperimento di formazione generato verrà utilizzata per tutte le esecuzioni dell&#39;esperimento di punteggio pianificate. Verifica di disporre dei `mlInstanceId`, `trainingDataSetId`e `scoringDataSetId` necessari per la creazione del servizio ML, nonché della loro esistenza e della loro validità.
 
@@ -197,7 +197,7 @@ curl -X POST
 
 Dalla `JSON` risposta, le chiavi `trainingExperimentId` e `scoringExperimentId` suggerisce che per questo servizio ML sia stata creata una nuova entità di formazione e valutazione di Sperimenti. La presenza dell&#39; `scoringSchedule` oggetto fa riferimento ai dettagli sulla pianificazione di esecuzione dell&#39;esperimento di punteggio. La `id` chiave nella risposta fa riferimento al servizio ML appena creato.
 
-### Servizio ML con Sperimentazioni programmate per la formazione e il punteggio
+### Servizio ML con Sperimentazioni programmate per la formazione e il punteggio {#ml-service-with-scheduled-experiments-for-training-and-scoring}
 
 Per pubblicare un&#39;istanza ML esistente come servizio ML con formazione programmata ed esecuzione di prove di punteggio, devi fornire sia programmi di formazione che programmi di punteggio. Quando viene creato un servizio ML di questa configurazione, vengono create anche entità Sperimento pianificate per la formazione e il punteggio. Tieni presente che i programmi di formazione e valutazione non devono necessariamente corrispondere. Durante l&#39;esecuzione di un processo di punteggio, verrà recuperato e utilizzato l&#39;ultimo modello addestrato prodotto da Test Runs di formazione programmata per l&#39;esecuzione del punteggio.
 
@@ -281,7 +281,7 @@ curl -X POST "https://platform-int.adobe.io/data/sensei/mlServices"
 
 L&#39;aggiunta di `trainingExperimentId` e `scoringExperimentId` nel corpo di risposta suggerisce la creazione di entità di esperti sia per la formazione che per il punteggio. La presenza di `trainingSchedule` e suggerisce `scoringSchedule` che i suddetti enti di esperti per la formazione e il punteggio sono previsti Esperimenti. La `id` chiave nella risposta fa riferimento al servizio ML appena creato.
 
-## Recupero dei servizi ML
+## Recupero dei servizi ML {#retrieving-ml-services}
 
 Per recuperare un servizio ML esistente è sufficiente effettuare una `GET` richiesta all&#39; `/mlServices` endpoint. Assicurarsi di avere l&#39;identificazione del servizio ML per il servizio ML specifico che si sta tentando di recuperare.
 
