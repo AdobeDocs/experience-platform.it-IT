@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Download dei punteggi nell'AI del cliente
 topic: Downloading scores
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 387cbdebccb9ae54a2907d1afe220e9711927ca6
 
 ---
 
@@ -34,7 +34,7 @@ Viene visualizzata una nuova finestra di dialogo contenente un collegamento alla
 
 ![ID set di dati](./images/download-scores/access-scores.png)
 
-## Recupero dell’ID batch
+## Recupero dell’ID batch {#retrieve-your-batch-id}
 
 Utilizzando l’ID del set di dati del passaggio precedente, è necessario effettuare una chiamata all’API del catalogo per recuperare un ID batch. Per questa chiamata API vengono utilizzati parametri di query aggiuntivi per restituire un singolo batch invece di un elenco di batch appartenenti all’organizzazione. Per ulteriori informazioni sui tipi di parametri di query disponibili, consulta la guida sul [filtro dei dati del catalogo tramite i parametri](../../catalog/api/filter-data.md)di query.
 
@@ -98,7 +98,7 @@ All&#39;interno dell&#39;oggetto ID batch punteggio è presente un `relatedObjec
 }
 ```
 
-## Recuperate la prossima chiamata API con il vostro ID batch
+## Recuperate la prossima chiamata API con il vostro ID batch {#retrieve-the-next-api-call-with-your-batch-id}
 
 Una volta ottenuto l&#39;ID batch, potete effettuare una nuova richiesta GET a `/batches`. La richiesta restituisce un collegamento utilizzato come richiesta API successiva.
 
@@ -152,7 +152,7 @@ Una risposta corretta restituisce un payload contenente un `_links` oggetto. All
 }
 ```
 
-## Recuperare i file
+## Recuperare i file {#retrieving-your-files}
 
 Utilizzando il `href` valore ottenuto nel passaggio precedente come chiamata API, esegui una nuova richiesta GET per recuperare la directory dei file.
 
