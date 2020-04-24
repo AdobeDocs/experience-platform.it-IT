@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida all'SDK per la piattaforma
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: a68aa62c3c3cc3e42083d6b0a1d1003f4137840f
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -17,7 +17,7 @@ Questa esercitazione fornisce informazioni sulla conversione `data_access_sdk_py
 - [Lettura di base dei dati](#basic-reading-of-data)
 - [Scrittura di base dei dati](#basic-writing-of-data)
 
-## Autenticazione build
+## Autenticazione build {#build-authentication}
 
 L’autenticazione è necessaria per effettuare chiamate ad Adobe Experience Platform ed è composta da Chiave API, ID organizzazione IMS, un token utente e un token di servizio.
 
@@ -64,7 +64,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
               service_token={SERVICE_TOKEN})
 ```
 
-## Lettura di base dei dati
+## Lettura di base dei dati {#basic-reading-of-data}
 
 Con il nuovo SDK della piattaforma, la dimensione massima di lettura è 32 GB, con un tempo massimo di lettura di 10 minuti.
 
@@ -99,7 +99,7 @@ df <- dataset_reader$read()
 df
 ```
 
-## Filtrare per offset e limite
+## Filtrare per offset e limite {#filter-by-offset-and-limit}
 
 Poiché il filtro per ID batch non è più supportato, per estendere la lettura dei dati è necessario utilizzare `offset` e `limit`.
 
@@ -117,7 +117,7 @@ df <- dataset_reader$limit(100L)$offset(1L)$read()
 df
 ```
 
-## Filtrare per data
+## Filtrare per data {#filter-by-date}
 
 La granularità del filtro delle date ora è definita dalla marca temporale, anziché essere impostata dal giorno.
 
@@ -153,7 +153,7 @@ Il nuovo SDK della piattaforma supporta le seguenti operazioni:
 | And (`&`) | `And()` |
 | Oppure (`|`) | `Or()` |
 
-## Filtra per colonne selezionate
+## Filtra per colonne selezionate {#filter-by-selected-columns}
 
 Per migliorare ulteriormente la lettura dei dati, è inoltre possibile filtrare in base al nome della colonna.
 
@@ -169,7 +169,7 @@ df = dataset_reader.select(['column-a','column-b']).read()
 df <- dataset_reader$select(c('column-a','column-b'))$read() 
 ```
 
-## Ottieni risultati ordinati
+## Ottieni risultati ordinati {#get-sorted-results}
 
 I risultati ricevuti possono essere ordinati in base alle colonne specificate del dataset di destinazione e nel relativo ordine (asc/desc), rispettivamente.
 
@@ -187,7 +187,7 @@ df = dataset_reader.sort([('column-a', 'asc'), ('column-b', 'desc')])
 df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 ```
 
-## Scrittura di base dei dati
+## Scrittura di base dei dati {#basic-writing-of-data}
 
 >[!NOTE] L’organizzazione IMS è impostata all’interno dell’ `client_context`.
 
