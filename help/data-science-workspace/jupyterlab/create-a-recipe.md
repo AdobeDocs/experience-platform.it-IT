@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare una ricetta utilizzando i notebook Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 10f157e0c9f8ab6e487b7dc83416b9e3b2f324c4
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -12,18 +12,6 @@ source-git-commit: 10f157e0c9f8ab6e487b7dc83416b9e3b2f324c4
 # Creare una ricetta utilizzando i notebook Jupyter
 
 Questa esercitazione si sovrappone a due sezioni principali. Innanzitutto, si crea un modello di machine learning utilizzando un modello all&#39;interno di JupyterLab Notebook. Successivamente, si eserciterà il notebook per il flusso di lavoro delle ricette in JupyterLab per creare una ricetta all&#39;interno di Data Science Workspace.
-- [Introduzione all&#39;ambiente notebook JupyterLab](#get-started-with-the-jupyterlab-notebook-environment)
-- [Apportare modifiche ai file di ricette](#make-edits-to-recipe-files)
-- [Introduzione al notebook Recipe Builder](#get-started-with-the-recipe-builder-notebook)
-   - [File dei requisiti](#requirements-file)
-   - [File di configurazione](#configuration-files)
-   - [Caricatore dati formazione](#training-data-loader)
-   - [Caricatore dati punteggio](#scoring-data-loader)
-   - [File pipeline](#pipeline-file)
-   - [File di valutazione](#evaluator-file)
-   - [File Data Saver](#data-saver-file)
-- [Formazione e punteggio](#training-and-scoring)
-- [Creare una ricetta](#create-recipe)
 
 ## Concetti introdotti:
 
@@ -45,7 +33,7 @@ Il notebook Recipe Builder consente di eseguire corsi di formazione e punteggio 
 
 Quando si fa clic sul blocco appunti di Recipe Builder dall&#39;avvio, il blocco appunti viene aperto nella scheda. Il modello utilizzato nel blocco appunti è la Ricetta di previsione delle vendite al dettaglio Python che si trova anche in [questo archivio pubblico](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-Nella barra degli strumenti sono disponibili tre azioni aggiuntive: **Treno**, **Punteggio** e **Crea ricetta**. Queste icone verranno visualizzate solo nel blocco appunti di Recipe Builder. Ulteriori informazioni su queste azioni verranno discusse [nella sezione](#training-and-scoring) Formazione e punteggio dopo la creazione della Ricetta nel blocco appunti.
+Nella barra degli strumenti sono disponibili tre azioni aggiuntive: - **[!UICONTROL Train]**, **[!UICONTROL Score]** e **[!UICONTROL Create Recipe]**. Queste icone verranno visualizzate solo nel blocco appunti di Recipe Builder. Ulteriori informazioni su queste azioni verranno discusse [nella sezione](#training-and-scoring) Formazione e punteggio dopo la creazione della Ricetta nel blocco appunti.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -69,7 +57,7 @@ Ora che si conoscono le basi per l&#39;ambiente dei notebook JupyterLab, è poss
 - [File di valutazione](#evaluator-file)
 - [File Data Saver](#data-saver-file)
 
-### File dei requisiti
+### File dei requisiti {#requirements-file}
 
 Il file dei requisiti viene utilizzato per dichiarare librerie aggiuntive da utilizzare nella ricetta. È possibile specificare il numero di versione in presenza di una dipendenza. Per ulteriori librerie, visitate https://anaconda.org. L&#39;elenco delle librerie principali già in uso include:
 
@@ -84,7 +72,7 @@ data_access_sdk_python
 >[!NOTE]
 >Le librerie o versioni specifiche aggiunte potrebbero essere incompatibili con le librerie elencate sopra.
 
-### File di configurazione
+### File di configurazione {#configuration-files}
 
 I file di configurazione `training.conf` e `scoring.conf`vengono utilizzati per specificare i set di dati da utilizzare per la formazione e il punteggio, nonché per aggiungere parametri ipertestuali. Sono disponibili configurazioni separate per la formazione e il punteggio.
 
@@ -108,7 +96,7 @@ Per impostazione predefinita, quando si accede ai dati vengono impostati i segue
 - `ML_FRAMEWORK_IMS_ML_TOKEN`
 - `ML_FRAMEWORK_IMS_TENANT_ID`
 
-## Caricatore dati formazione
+## Caricatore dati formazione {#training-data-loader}
 
 Lo scopo di Training Data Loader è di creare un&#39;istanza dei dati utilizzati per creare il modello di apprendimento automatico. In genere, il caricatore dati formazione esegue due attività:
 - Carica dati dalla piattaforma
@@ -116,7 +104,7 @@ Lo scopo di Training Data Loader è di creare un&#39;istanza dei dati utilizzati
 
 Nelle due sezioni seguenti verranno analizzati il caricamento dei dati e la preparazione dei dati.
 
-### Caricamento dei dati
+### Caricamento dei dati {#loading-data}
 
 In questo passaggio viene utilizzato il [frame di dati](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)panda. I dati possono essere caricati da file in Adobe Experience Platform utilizzando l&#39;SDK (`platform_sdk`) della piattaforma oppure da origini esterne utilizzando i panda `read_csv()` o `read_json()` le funzioni.
 
@@ -126,11 +114,11 @@ In questo passaggio viene utilizzato il [frame di dati](https://pandas.pydata.or
 >[!NOTE]
 >Nel blocco appunti di Recipe Builder, i dati vengono caricati tramite il `platform_sdk` caricatore dati.
 
-### SDK per piattaforma
+### SDK per piattaforma {#platform-sdk}
 
 Per un&#39;esercitazione dettagliata sull&#39;utilizzo del `platform_sdk` caricatore dati, visita la guida [SDK per la](../authoring/platform-sdk.md)piattaforma. Questa esercitazione fornisce informazioni sull&#39;autenticazione della build, sulla lettura di base dei dati e sulla scrittura di base dei dati.
 
-### Fonti esterne
+### Fonti esterne {#external-sources}
 
 In questa sezione viene illustrato come importare un file JSON o CSV in un oggetto panda. La documentazione ufficiale della biblioteca pandas è disponibile qui:
 - [read_csv](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
@@ -180,7 +168,7 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 
 Ora che hai i tuoi dati, puoi iniziare con la preparazione dei dati e la progettazione di funzionalità.
 
-### Preparazione dei dati e progettazione di funzionalità
+### Preparazione dei dati e progettazione di funzionalità {#data-preparation-and-feature-engineering}
 
 Una volta caricati i dati, questi vengono sottoposti a preparazione e quindi suddivisi nei `train` set di dati e `val` nei set di dati. Di seguito è riportato un esempio di codice:
 
@@ -222,7 +210,7 @@ Questi dati sono suddivisi tra `train` set di dati e `val` set di dati.
 
 La `load()` funzione deve completare con il `train` `val` set di dati e il set di dati come output.
 
-### Caricatore dati punteggio
+### Caricatore dati punteggio {#scoring-data-loader}
 
 La procedura per caricare i dati per il punteggio è simile ai dati di formazione di caricamento nella `split()` funzione. Utilizziamo l’SDK per l’accesso ai dati per caricare i dati dal `scoringDataSetId` `recipe.conf` file trovato.
 
@@ -292,11 +280,11 @@ df.dropna(0, inplace=True)
 
 La `load()` funzione nel caricatore dei dati di punteggio deve essere completa con il set di dati di punteggio come output.
 
-### File pipeline
+### File pipeline {#pipeline-file}
 
 Il `pipeline.py` file include logica per la formazione e il punteggio.
 
-### Formazione
+### Training {#training}
 
 Lo scopo della formazione è quello di creare un modello utilizzando le funzioni e le etichette presenti nel dataset di formazione.
 
@@ -341,7 +329,7 @@ def train(configProperties, data):
 
 A seconda dell&#39;applicazione, la `GradientBoostingRegressor()` funzione avrà argomenti. `xTrainingDataset` devono contenere le funzioni utilizzate per la formazione, mentre `yTrainingDataset` devono contenere le etichette.
 
-### Punteggio
+### Punteggio {#scoring}
 
 La `score()` funzione deve contenere l&#39;algoritmo di valutazione e restituire una misura per indicare l&#39;efficacia del modello. La `score()` funzione utilizza le etichette del set di dati di punteggio e il modello addestrato per generare un insieme di funzioni previste. Questi valori predetti vengono quindi confrontati con le funzioni effettive nel dataset di valutazione. In questo esempio, la `score()` funzione utilizza il modello preparato per prevedere le feature utilizzando le etichette del set di dati di punteggio. Vengono restituite le funzioni previste.
 
@@ -363,11 +351,11 @@ def score(configProperties, data, model):
     return data
 ```
 
-### File di valutazione
+### File di valutazione {#evaluator-file}
 
 Il `evaluator.py` file contiene la logica per la valutazione della ricetta formata e per la suddivisione dei dati di formazione. Nell’esempio di vendita al dettaglio, verrà inclusa la logica per il caricamento e la preparazione dei dati di formazione. Passeremo alle due sezioni seguenti.
 
-### Dividere il set di dati
+### Dividere il set di dati {#split-the-dataset}
 
 La fase di preparazione dei dati per la formazione richiede la suddivisione del set di dati per la formazione e il test. Questi `val` dati saranno utilizzati in modo implicito per valutare il modello dopo che sarà stato addestrato. Questo processo è separato dal punteggio.
 
@@ -386,7 +374,7 @@ def split(self, configProperties={}, dataframe=None):
     return train, val
 ```
 
-### Valutare il modello preparato
+### Valutare il modello preparato {#evaluate-the-trained-model}
 
 La `evaluate()` funzione viene eseguita dopo che il modello è stato addestrato e restituirà una metrica per indicare il successo del modello. La `evaluate()` funzione utilizza le etichette del set di dati di prova e il modello Traine per prevedere un insieme di funzioni. Questi valori predetti vengono quindi confrontati con le funzioni effettive nel set di dati di test. Gli algoritmi comuni di punteggio includono:
 - [Errore medio percentuale assoluta (MAPE)](https://en.wikipedia.org/wiki/Mean_absolute_percentage_error)
@@ -415,7 +403,7 @@ def evaluate(self, data=[], model={}, configProperties={}):
 
 Tenere presente che la funzione restituisce un `metric` oggetto contenente un array di metriche di valutazione. Tali metriche verranno utilizzate per valutare le prestazioni del modello preparato.
 
-### File Data Saver
+### File Data Saver {#data-saver-file}
 
 Il `datasaver.py` file contiene la `save()` funzione per salvare la previsione durante il test del punteggio. La `save()` funzione prende la previsione e utilizza le API del catalogo della piattaforma di esperienza, scrive i dati nel `scoringResultsDataSetId` `scoring.conf` file specificato.
 
@@ -448,17 +436,17 @@ def save(configProperties, prediction):
     print(prediction)
 ```
 
-## Formazione e punteggio
+## Formazione e punteggio {#training-and-scoring}
 
 Dopo aver apportato le modifiche al blocco appunti e aver scelto di addestrare la ricetta, potete fare clic sui pulsanti associati nella parte superiore della barra per creare una sequenza di formazione nella cella. Facendo clic sul pulsante, nel blocco appunti (sotto la `evaluator.py` cella) viene visualizzato un registro di comandi e output dello script di formazione. Conda prima installa tutte le dipendenze, quindi la formazione viene avviata.
 
-È necessario eseguire la formazione almeno una volta prima di poter eseguire il punteggio. Facendo clic sul pulsante **Esegui punteggio** si ottiene un punteggio sul modello preparato generato durante l&#39;addestramento. Lo script di punteggio verrà visualizzato sotto `datasaver.py`.
+È necessario eseguire la formazione almeno una volta prima di poter eseguire il punteggio. Facendo clic sul **[!UICONTROL Run Scoring]** pulsante si ottiene un punteggio sul modello preparato generato durante l&#39;addestramento. Lo script di punteggio verrà visualizzato sotto `datasaver.py`.
 
 Per il debug, se si desidera visualizzare l&#39;output nascosto, aggiungere `debug` alla fine della cella di output e rieseguirla.
 
-## Creare una ricetta
+## Creare una ricetta {#create-recipe}
 
-Dopo aver modificato la ricetta e aver ottenuto l’output di formazione/punteggio, è possibile creare una ricetta dal blocco appunti premendo **Crea ricetta** nella navigazione in alto a destra.
+Dopo aver modificato la ricetta e aver ottenuto l’output di formazione/punteggio, è possibile creare una ricetta dal blocco appunti premendo **[!UICONTROL Create Recipe]** nella navigazione in alto a destra.
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
@@ -466,7 +454,7 @@ Dopo aver premuto il pulsante, viene richiesto di immettere un nome per la ricet
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Premendo **OK** , potrai accedere alla nuova ricetta su [Adobe Experience Platform](https://platform.adobe.com/). È possibile fare clic sul pulsante **Visualizza ricette** per passare alla scheda **Ricette** sotto Modelli **ML**
+Premendo **[!UICONTROL Ok]** potrai accedere alla nuova ricetta su [Adobe Experience Platform](https://platform.adobe.com/). Puoi fare clic sul **[!UICONTROL View Recipes]** pulsante per portarti alla **[!UICONTROL Recipes]** scheda sotto **[!UICONTROL ML Models]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
@@ -480,13 +468,13 @@ Una volta completato il processo, la ricetta avrà un aspetto simile al seguente
 > - Non creare allo stesso tempo ricette in diversi notebook
 
 
-## Passaggi successivi
+## Passaggi successivi {#next-steps}
 
 Completando questa esercitazione hai imparato a creare un modello di machine learning nel notebook Recipe Builder. Hai anche imparato a utilizzare il notebook per definire il flusso di lavoro all&#39;interno del notebook per creare una ricetta all&#39;interno di Data Science Workspace.
 
 Per continuare a imparare a utilizzare le risorse in Data Science Workspace, visita il menu a discesa Ricette e modelli di Data Science Workspace.
 
-## Risorse aggiuntive
+## Risorse aggiuntive {#additional-resources}
 
 Il seguente video è stato progettato per consentire agli utenti di comprendere meglio come creare e implementare modelli.
 
