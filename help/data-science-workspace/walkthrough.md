@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Procedura dettagliata di Data Science Workspace
 topic: Walkthrough
 translation-type: tm+mt
-source-git-commit: 1f756e7bc71c9ff227757aee64af29e0772c24af
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -45,7 +45,7 @@ Nella nostra esercitazione, utilizzeremo Python 3 nel notebook Jupyter per mostr
 
 ![](./images/walkthrough/retail_sales.png)
 
-### Configurazione
+### Configurazione {#setup}
 
 Con il notebook Retail Sales aperto, la prima cosa da fare è caricare le librerie necessarie per il nostro flusso di lavoro. Nell&#39;elenco seguente viene fornita una breve descrizione di ciascuno degli elementi utilizzati:
 - **numpy** - libreria scientifica di calcolo che aggiunge il supporto per array e matrici multidimensionali di grandi dimensioni
@@ -55,7 +55,7 @@ Con il notebook Retail Sales aperto, la prima cosa da fare è caricare le librer
 - **sklearn** - libreria di machine learning con classificazione, regressione, supporto di algoritmi vettoriali e cluster
 - **avvisi** : libreria che controlla i messaggi di avviso
 
-### Esplorare i dati
+### Esplorare i dati {#exploring-data}
 
 #### Carica dati
 
@@ -129,7 +129,7 @@ Utilizzando lo stesso dataset per la vendita al dettaglio, possiamo generare la 
 
 Osservate la diagonale di quelle che si trovano al centro. Questo indica che quando confronta una variabile con se stessa, ha una correlazione positiva completa. Una forte correlazione positiva avrà una grandezza più vicina a 1, mentre le correlazioni deboli saranno più vicine a 0. La correlazione negativa è mostrata con un coefficiente negativo che mostra una tendenza inversa.
 
-### Progettazione di funzioni
+### Progettazione di funzioni {#feature-engineering}
 
 In questa sezione verranno apportate modifiche al set di dati per la vendita al dettaglio. Verranno eseguite le seguenti operazioni:
 
@@ -177,7 +177,7 @@ Di seguito è riportato un riepilogo del set di dati dopo le modifiche apportate
 
 ![](./images/walkthrough/df_info_new.png)
 
-### Formazione e verifica
+### Formazione e verifica {#training-and-verification}
 
 Ora, è il momento di creare alcuni modelli di dati e selezionare quale modello è il migliore per prevedere le vendite future. Verranno valutati i 5 algoritmi seguenti:
 
