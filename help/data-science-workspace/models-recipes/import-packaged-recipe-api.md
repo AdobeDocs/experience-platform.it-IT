@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Importare una ricetta in pacchetti (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: ebf7c883ce89fdf8b0d468ab21d1c3a1ba8aca06
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -46,7 +46,7 @@ A seconda del modulo del file Recipe del pacchetto da includere come parte della
 - [Creare un motore con un URL Docker](#create-an-engine-with-a-docker-url)
 - [Creare un motore con un artefatto binario (obsoleto)](#create-an-engine-with-a-binary-artifact-deprecated)
 
-### Creare un motore con un URL Docker
+### Creare un motore con un URL Docker {#create-an-engine-with-a-docker-url}
 
 Per creare un Motore con un file Recipe in pacchetto memorizzato in un contenitore Docker, dovete fornire l&#39;URL Docker al file Recipe in pacchetto.
 
@@ -199,11 +199,11 @@ Una risposta corretta restituisce un payload contenente i dettagli del motore ap
 
 Una risposta corretta mostra un payload JSON con informazioni relative al motore appena creato. La `id` chiave rappresenta l’identificatore univoco del motore ed è necessaria nell’esercitazione successiva per creare un’istanza MLI. Prima di continuare con i passaggi successivi, assicurarsi che l’identificatore del motore sia salvato.
 
-## Passaggi successivi
+## Passaggi successivi {#next-steps}
 
 Avete creato un Motore utilizzando l&#39;API ed è stato ottenuto un identificatore univoco del Motore come parte del corpo della risposta. Potete utilizzare questo identificatore del motore nell&#39;esercitazione successiva per apprendere come [creare, formare e valutare un modello utilizzando l&#39;API](./train-evaluate-model-api.md).
 
-### Creare un motore con un artefatto binario (obsoleto)
+### Creare un motore con un artefatto binario (obsoleto) {#create-an-engine-with-a-binary-artifact-deprecated}
 
 <!-- Will need to remove binary artifact documentation once the old flags are turned off -->
 
