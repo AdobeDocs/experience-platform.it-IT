@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare pacchetti di file sorgente in una ricetta
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4001e4fd6a2e04a04e7ea594175d9e3e5c8a00d6
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -29,7 +29,7 @@ Concetti da comprendere:
 
 La creazione di ricette inizia con la creazione di pacchetti di file sorgente per creare un file di archivio. I file di origine definiscono la logica di machine learning e gli algoritmi utilizzati per risolvere un problema specifico a portata di mano e sono scritti in Python, R, PySpark o Scala. I file di archivio generati hanno la forma di un&#39;immagine Docker. Una volta creato, il file di archivio del pacchetto viene importato in Data Science Workspace per creare una ricetta [nell&#39;interfaccia utente](./import-packaged-recipe-ui.md) o [utilizzando l&#39;API](./import-packaged-recipe-api.md).
 
-### Authoring di modelli basato su docker
+### Authoring di modelli basato su docker {#docker-based-model-authoring}
 
 Un&#39;immagine Docker consente a uno sviluppatore di creare un pacchetto con tutte le parti necessarie, come librerie e altre dipendenze, e inviarlo come un unico pacchetto.
 
