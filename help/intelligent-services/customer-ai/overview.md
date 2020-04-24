@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica dell'AI del cliente
 topic: Customer AI overview
 translation-type: tm+mt
-source-git-commit: 7987cec12c22e9b48ddc9fdc263d7cd28bd172f2
+source-git-commit: f4deee30f0f03b75dc7ee02152ceb6c519858c7c
 
 ---
 
@@ -42,4 +42,4 @@ L&#39;AI del cliente funziona analizzando i dati esistenti relativi all&#39;even
 
 ## Passaggi successivi
 
-Per iniziare, segui la guida [introduttiva](./getting-started.md) . Questa guida illustra come impostare tutte le richieste preliminari necessarie per l&#39;AI del cliente. Se disponi già di tutte le tue credenziali e i tuoi dati, visita la guida [utente AI del](./user-guide.md)cliente. Fornisce i passaggi per utilizzare l&#39;intelligenza artificiale del cliente e illustra la creazione di segmenti di clienti utilizzando i punteggi di propensione.
+Per iniziare, segui la guida [introduttiva](./getting-started.md) . Questa guida illustra come impostare tutti i prerequisiti richiesti per l&#39;AI del cliente. Se disponi già di tutte le tue credenziali e dati, visita [la sezione dedicata alla configurazione di un&#39;istanza](./user-guide/configure.md)AI del cliente. Fornisce i passaggi per utilizzare l&#39;intelligenza artificiale del cliente.
