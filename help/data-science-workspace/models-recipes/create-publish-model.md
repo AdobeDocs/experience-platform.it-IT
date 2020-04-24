@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creazione e pubblicazione di un modello di machine learning
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -47,7 +47,7 @@ Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prer
    * Batch: I set di dati sono costituiti da batch. Un batch è un insieme di dati raccolti in un periodo di tempo ed elaborati insieme come un&#39;unica unità.
    * JupyterLab: [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) è un&#39;interfaccia open-source basata su Web per Project Jupyter ed è strettamente integrata nella piattaforma Experience.
 
-## Preparare i dati
+## Preparare i dati {#prepare-your-data}
 
 Per creare un modello di machine learning che fornisca ai clienti raccomandazioni personalizzate sui prodotti, è necessario analizzare i precedenti acquisti sul sito Web. In questa sezione viene spiegato come questi dati vengono trasferiti in Piattaforma tramite Adobe Analytics e come tali dati vengono trasformati in un set di dati della funzione da utilizzare nel modello di apprendimento automatico.
 
@@ -68,9 +68,9 @@ Gli altri set di dati sono stati precompilati con batch per la visualizzazione d
 | Set di dati di input di Recommendations | Schema di input di Recommendations | I dati di Analytics vengono trasformati in un set di dati di formazione tramite una pipeline di funzioni. Questi dati vengono utilizzati per formare il modello di apprendimento automatico di Product Recommendations. `itemid` e `userid` corrispondono a un prodotto acquistato da tale cliente. |
 | Set di dati di output delle raccomandazioni | Schema di output di Recommendations | Il dataset per il quale sono memorizzati i risultati del punteggio, conterrà l&#39;elenco dei prodotti consigliati per ogni cliente. |
 
-## Creazione del modello
+## Creazione del modello {#author-your-model}
 
-Il secondo componente del ciclo di vita di Data Science Workspace riguarda l’authoring di Ricette e Modelli. La ricetta di Recommendations prodotto è progettata per generare raccomandazioni sui prodotti su larga scala utilizzando i dati di acquisto passati e l&#39;apprendimento automatico.
+Il secondo componente del ciclo di vita di Data Science Workspace riguarda l’authoring di Ricette e Modelli. La ricetta di Recommendations prodotto è progettata per generare raccomandazioni di prodotto su scala utilizzando i dati di acquisto passati e l&#39;apprendimento automatico.
 
 Le entrate sono la base per un modello in quanto contengono algoritmi di machine learning e logica progettati per risolvere problemi specifici. Ancora più importante, le entrate consentono di democratizzare l&#39;apprendimento automatico all&#39;interno dell&#39;organizzazione, consentendo ad altri utenti di accedere a un Modello per diversi casi di utilizzo senza scrivere alcun codice.
 
@@ -85,7 +85,7 @@ Le entrate sono la base per un modello in quanto contengono algoritmi di machine
 
 Ora sono stati revisionati gli schemi di input e output richiesti da Product Recommendations Recipe. È ora possibile continuare con la sezione successiva per scoprire come creare, formare e valutare un modello di raccomandazioni sui prodotti.
 
-## Formazione e valutazione del modello
+## Formazione e valutazione del modello {#train-and-evaluate-your-model}
 
 Ora che i dati sono preparati e la Ricetta è pronta per essere utilizzata, è possibile creare, formare e valutare il modello di apprendimento della macchina.
 
@@ -130,7 +130,7 @@ Ogni volta che un&#39;esecuzione di formazione viene completata, potete visualiz
 3. Potete visualizzare i parametri di set di dati, schema e configurazione utilizzati per ogni formazione sulla barra a destra.
 4. Tornate alla pagina Modello e individuate l’esecuzione di formazione con le prestazioni migliori osservando le relative metriche di valutazione.
 
-## Operazionalizzare il modello
+## Operazionalizzare il modello {#operationalize-your-model}
 
 Il passaggio finale del flusso di lavoro di Data Science consiste nell&#39;operazionalizzare il modello per ottenere un punteggio e acquisire informazioni dall&#39;archivio dati.
 
