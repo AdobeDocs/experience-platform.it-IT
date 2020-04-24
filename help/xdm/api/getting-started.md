@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida per lo sviluppo API del Registro di sistema dello schema
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: eec5b07427aa9daa44d23f09cfaf1b38f8e811f3
+source-git-commit: 387cbdebccb9ae54a2907d1afe220e9711927ca6
 
 ---
 
@@ -52,7 +52,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 * Content-Type: application/json
 
-## Conosci il tuo TENANT_ID {#know-your-tenant-id}
+## Conosci il tuo TENANT_ID {#know-your-tenant_id}
 
 In questa guida verranno visualizzati i riferimenti a un `TENANT_ID`. Questo ID viene utilizzato per garantire che le risorse create siano correttamente denominate e contenute all’interno dell’organizzazione IMS. Se non conosci il tuo ID, puoi accedervi eseguendo la seguente richiesta GET:
 
