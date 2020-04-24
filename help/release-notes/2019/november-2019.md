@@ -5,14 +5,14 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 817f994fc0622b1c46e98f8d773a4d91c1064824
+source-git-commit: e5fa12b92f7006f2c5c428b25f81dade57733498
 
 ---
 
 
 # Note sulla versione di Adobe Experience Platform
 
-## Data di rilascio: 18 novembre 2019
+**Data di rilascio: 18 novembre 2019**
 
 Nuove funzioni in Adobe Experience Platform:
 * [Piattaforma dati cliente in tempo reale](#rtcdp)
