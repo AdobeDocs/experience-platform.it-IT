@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida utente di JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: d42a5de7094d305249b05454ce4aba79776a46e1
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -51,16 +51,16 @@ Le informazioni sulle caratteristiche chiave di JupyterLab e le istruzioni sulle
 * [Celle di codice](#code-cells)
 * [Kernel](#kernels)
 * [Sessioni kernel](#kernel-sessions)
-* [Risorsa di esecuzione PySpark/Spark](#pysparkspark-execution-resource)
+* [Risorsa di esecuzione PySpark/Spark](#execution-resource)
 * [Launcher](#launcher)
 
-### Access JupyterLab
+### Access JupyterLab {#access-jupyterlab}
 
 In [Adobe Experience Platform](https://platform.adobe.com), seleziona **Notebook** dalla colonna di navigazione a sinistra. Lasciare un po&#39; di tempo per l&#39;inizializzazione completa di JupyterLab.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
-### Interfaccia JupyterLab
+### Interfaccia JupyterLab {#jupyterlab-interface}
 
 L&#39;interfaccia JupyterLab è composta da una barra dei menu, una barra laterale sinistra comprimibile e l&#39;area di lavoro principale contenente schede di documenti e attività.
 
@@ -98,7 +98,7 @@ L&#39;area di lavoro principale di JupyterLab consente di disporre documenti e a
 
 ![](../images/jupyterlab/user-guide/main_work_area.gif)
 
-### Celle di codice
+### Celle di codice {#code-cells}
 
 Le celle di codice sono il contenuto principale dei blocchi appunti. Contengono codice sorgente nella lingua del kernel associato al notebook e l&#39;output come risultato dell&#39;esecuzione della cella di codice. Viene visualizzato un conteggio di esecuzione a destra di ogni cella di codice che rappresenta il relativo ordine di esecuzione.
 
@@ -130,7 +130,7 @@ Alcune caratteristiche e funzionalità sono limitate a specifici kernel come des
 | **Spark - obsoleto** | No | <ul><li>Sensei ML Framework</li><li>Servizio catalogo</li></ul> |
 | **Scala** | No | <ul><li>Sensei ML Framework</li><li>Servizio catalogo</li></ul> |
 
-### Sessioni kernel
+### Sessioni kernel {#kernel-sessions}
 
 Ogni blocco appunti o attività attiva su JupyterLab utilizza una sessione del kernel. Tutte le sessioni attive si trovano espandendo la scheda Terminali **in esecuzione e kernel** dalla barra laterale sinistra. Il tipo e lo stato del kernel di un notebook possono essere identificati osservando l&#39;interfaccia superiore destra del notebook. Nel diagramma seguente, il kernel associato al notebook è **Python 3** e lo stato corrente è rappresentato da un cerchio grigio a destra. Un cerchio vuoto implica un kernel inattivo e un cerchio pieno implica un kernel occupato.
 
@@ -193,7 +193,7 @@ Tutte le proprietà configurabili sono elencate nella tabella seguente:
 | nome | Nome della domanda | string |
 | conf | Spark, proprietà di configurazione | Mappa di key=val |
 
-### Launcher
+### Launcher {#launcher}
 
 [//]: # (Talk about the different Notebooks, introduce that certain starter notebooks are limited to particular kernels)
 
@@ -799,7 +799,7 @@ timedf.show()
 | pitone | 3.6.7 |
 | mkl-rt | 11.1 |
 
-## Flag SQL facoltativi per il servizio query
+## Flag SQL facoltativi per il servizio query {#optional-sql-flags-for-query-service}
 
 Nella tabella seguente sono illustrati i flag SQL facoltativi utilizzabili per il servizio di query.
 
