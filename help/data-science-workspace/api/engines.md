@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Motori
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 2940f69d193ff8a4ec6ad4a58813b5426201ef45
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -489,7 +489,7 @@ Una risposta corretta restituisce un payload contenente i dettagli del motore ap
 }
 ```
 
-## Creare un motore di pipeline delle funzionalità utilizzando artefatti binari - obsoleti
+## Creare un motore di pipeline delle funzionalità utilizzando artefatti binari - obsoleti {#create-a-feature-pipeline-engine-using-binary-artifacts}
 
 >[!IMPORTANT]
 >Gli artefatti binari non sono più supportati e sono impostati per essere rimossi in una data successiva.
