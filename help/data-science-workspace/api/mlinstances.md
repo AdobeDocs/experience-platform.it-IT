@@ -4,7 +4,7 @@ solution: Experience Platform
 title: MLInances
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
 
 Un&#39;istanza MLI è un accoppiamento di un [motore](./engines.md) esistente con un set appropriato di configurazioni che definisce eventuali parametri di formazione, parametri di punteggio o configurazioni di risorse hardware.
 
-## Creare un&#39;istanza MLI
+## Creare un&#39;istanza MLI {#create-an-mlinstance}
 
 Potete creare un&#39;istanza MLI eseguendo una richiesta POST fornendo al contempo un payload di richiesta costituito da un ID motore (`{ENGINE_ID}`) valido e da un set appropriato di configurazioni predefinite.
 
