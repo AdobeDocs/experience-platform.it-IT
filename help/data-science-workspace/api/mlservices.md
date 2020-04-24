@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Servizi
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: dabeee04dd6ec2bbdd37a6987efcb54b285df7ca
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -15,7 +15,7 @@ Un servizio MLService è un modello di formazione pubblicato che consente alla v
 
 I programmi di formazione e valutazione automatizzati sono definiti con una marca temporale iniziale, una marca temporale finale e una frequenza rappresentata come espressione <a href="https://en.wikipedia.org/wiki/Cron" target="_blank"></a>cron. Le pianificazioni possono essere definite durante la [creazione di un servizio MLService](#create-an-mlservice) o applicate [aggiornando un servizio MLService](#update-an-mlservice)esistente.
 
-## Creare un servizio MLS
+## Creare un servizio MLS {#create-an-mlservice}
 
 Potete creare un servizio MLS eseguendo una richiesta POST e un payload che fornisce un nome per il servizio e un ID MLInvalido. L’istanza MLI utilizzata per creare un servizio MLS non è necessaria per disporre di sperimentazioni di formazione esistenti, ma potete scegliere di creare il servizio MLS con un modello già esistente fornendo l’ID di esperienza e l’ID di esecuzione della formazione corrispondenti.
 
@@ -103,7 +103,7 @@ Una risposta di successo restituisce un payload contenente i dettagli del serviz
 }
 ```
 
-## Recuperare un elenco di MLServices
+## Recuperare un elenco di MLServices {#retrieve-a-list-of-mlservices}
 
 È possibile recuperare un elenco di MLServices eseguendo una singola richiesta GET. Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri delle [query per il recupero](./appendix.md#query)delle risorse.
 
@@ -162,7 +162,7 @@ Una risposta di successo restituisce un elenco di MLServices con i relativi dett
 }
 ```
 
-## Recuperare un servizio MLService specifico
+## Recuperare un servizio MLService specifico {#retrieve-a-specific-mlservice}
 
 Potete recuperare i dettagli di un esperimento specifico eseguendo una richiesta GET che include l&#39;ID del servizio MLS desiderato nel percorso della richiesta.
 
@@ -206,7 +206,7 @@ Una risposta corretta restituisce un payload contenente i dettagli del servizio 
 }
 ```
 
-## Aggiornare un servizio MLService
+## Aggiornare un servizio MLService {#update-an-mlservice}
 
 Potete aggiornare un servizio MLS esistente sovrascrivendone le proprietà tramite una richiesta PUT che include l&#39;ID del servizio MLService di destinazione nel percorso della richiesta e fornisce un payload JSON contenente le proprietà aggiornate.
 
