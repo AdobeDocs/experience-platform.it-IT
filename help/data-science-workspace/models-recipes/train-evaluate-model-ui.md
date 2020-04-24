@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Formazione e valutazione di un modello (interfaccia utente)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -79,7 +79,7 @@ Questa esercitazione richiede una composizione esistente. Se non disponete di un
 
 Questa esercitazione illustra come creare, formarsi e valutare un modello in Data Science Workspace. Una volta raggiunto un modello ottimizzato, è possibile utilizzare il modello preparato per generare informazioni seguendo l&#39;esercitazione [Punteggio a Model (Punteggio a Model) nell&#39;esercitazione dell&#39;interfaccia utente](./score-model-ui.md) .
 
-## Riferimenti
+## Riferimenti {#reference}
 
 ### Configurazioni Ricetta vendite al dettaglio
 
