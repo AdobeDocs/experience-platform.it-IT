@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida per gli sviluppatori di SDK
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 897e897c80421c8eddd779222ddfa20298e72298
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -13,18 +13,9 @@ source-git-commit: 897e897c80421c8eddd779222ddfa20298e72298
 
 L’SDK per l’authoring dei modelli consente di sviluppare ricette di machine learning personalizzate e pipeline di funzionalità utilizzabili in Adobe Experience Platform Data Science Workspace, fornendo modelli implementabili in PySpark e Spark.
 
-Questo documento fornisce informazioni sulle varie classi rilevate nell’SDK per l’authoring dei modelli:
+Questo documento fornisce informazioni sulle varie classi rilevate nell’SDK per l’authoring dei modelli.
 
-- [DataLoader](#dataloader)
-   - [Carica dati da un dataset piattaforma](#load-data-from-a-platform-dataset)
-- [DataSaver](#datasaver)
-   - [Salvataggio di dati in un dataset piattaforma](#save-data-to-a-platform-dataset)
-- [DatasetTransformer](#datasettransformer)
-- [FeaturePipelineFactory](#featurepipelinefactory)
-- [PipelineFactory](#pipelinefactory)
-- [MLEvalue](#mlevaluator)
-
-## DataLoader
+## DataLoader {#dataloader}
 
 La classe DataLoader racchiude qualsiasi elemento correlato al recupero, al filtraggio e alla restituzione di dati di input non elaborati. Esempi di dati di input includono quelli per la formazione, il punteggio o la progettazione di funzionalità. I caricatori di dati estendono la classe astratta `DataLoader` e devono sostituire il metodo abstract `load`.
 
@@ -83,7 +74,7 @@ Nella tabella seguente sono descritti i metodi astratti di una classe Spark Data
     </tbody>
 </table>
 
-### Carica dati da un dataset piattaforma
+### Carica dati da un dataset piattaforma {#load-data-from-a-platform-dataset}
 
 L&#39;esempio seguente recupera i dati della piattaforma per ID e restituisce un DataFrame, dove l&#39;ID del set di dati (`datasetId`) è una proprietà definita nel file di configurazione.
 
@@ -199,7 +190,7 @@ class MyDataLoader extends DataLoader {
 }
 ```
 
-## DataSaver
+## DataSaver {#datasaver}
 
 La classe DataSaver racchiude qualsiasi elemento correlato alla memorizzazione dei dati di output, inclusi quelli derivanti dal punteggio o dalla progettazione di funzionalità. I salvatori di dati estendono la classe astratta `DataSaver` e devono ignorare il metodo abstract `save`.
 
@@ -258,7 +249,7 @@ Nella tabella seguente sono descritti i metodi astratti di una classe Spark Data
     </tbody>
 </table>
 
-### Salvataggio di dati in un dataset piattaforma
+### Salvataggio di dati in un dataset piattaforma {#save-data-to-a-platform-dataset}
 
 Per memorizzare i dati in un set di dati della piattaforma, le proprietà devono essere fornite o definite nel file di configurazione:
 
@@ -398,7 +389,7 @@ class ScoringDataSaver extends DataSaver {
 }
 ```
 
-## DatasetTransformer
+## DatasetTransformer {#datasettransformer}
 
 La classe DatasetTransformer modifica e trasforma la struttura di un dataset. Sensei Machine Learning Runtime non richiede la definizione di questo componente ed è implementato in base ai requisiti dell&#39;utente.
 
@@ -459,7 +450,7 @@ Nella tabella seguente sono descritti i metodi astratti di una classe di trasfor
     </tbody>
 </table>
 
-## FeaturePipelineFactory
+## FeaturePipelineFactory {#featurepipelinefactory}
 
 La classe FeaturePipelineFactory contiene algoritmi di estrazione delle feature e definisce le fasi di una feature Pipeline dall&#39;inizio alla fine.
 
@@ -541,7 +532,7 @@ Nella tabella seguente sono descritti i metodi di classe di Spark FeaturePipelin
     </tbody>
 </table>
 
-## PipelineFactory
+## PipelineFactory {#pipelinefactory}
 
 La classe PipelineFactory racchiude metodi e definizioni per la formazione e il punteggio dei modelli, in cui la logica e gli algoritmi di formazione sono definiti sotto forma di Spark Pipeline.
 
@@ -650,7 +641,7 @@ Nella tabella seguente sono descritti i metodi di classe di Spark PipelineFactor
     </tbody>
 </table>
 
-## MLEvalue
+## MLEvalue {#mlevaluator}
 
 La classe MLEvalue fornisce metodi per definire le metriche di valutazione e determinare i set di dati di formazione e test.
 
