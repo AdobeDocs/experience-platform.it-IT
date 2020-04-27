@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida utente per i criteri di utilizzo dei dati
 topic: policies
 translation-type: tm+mt
-source-git-commit: 304a84b81758b2f2a343977533f9120857a1fb33
+source-git-commit: 235a43ad72dee45db1b3d35ae84ce9a1c4d729b8
 
 ---
 
@@ -66,4 +66,4 @@ La *[!UICONTROL Browse]* scheda viene visualizzata di nuovo, in cui ora viene vi
 
 ## Passaggi successivi
 
-Questo documento fornisce una panoramica su come gestire i criteri di utilizzo dei dati nell’interfaccia utente della piattaforma Experience. Per i passaggi su come gestire i criteri tramite l&#39;API DULE Policy, consultate l&#39;esercitazione [sulla creazione dei criteri](./create.md)API. Per informazioni su come applicare i criteri di utilizzo dei dati, consultate la panoramica [sull&#39;applicazione dei](../enforcement/overview.md)criteri.
+Questo documento fornisce una panoramica su come gestire i criteri di utilizzo dei dati nell’interfaccia utente della piattaforma Experience. Per i passaggi su come gestire i criteri tramite l&#39;API DULE Policy, vedete la guida [](../api/getting-started.md)per gli sviluppatori. Per informazioni su come applicare i criteri di utilizzo dei dati, consultate la panoramica [sull&#39;applicazione dei](../enforcement/overview.md)criteri.
