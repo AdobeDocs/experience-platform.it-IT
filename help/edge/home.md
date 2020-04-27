@@ -4,7 +4,7 @@ seo-title: Guida all’SDK Web per Adobe Experience Platform
 description: Scopri cos’è Adobe Experience Platform Web SDK e come può essere utilizzato.
 seo-description: consentire ai clienti di Adobe Experience Cloud di interagire con i vari servizi in Experience Cloud
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: 68361835437026c86af2402cc8400a3b3f32cb81
 
 ---
 
@@ -15,7 +15,7 @@ source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
 >
 >L’SDK Web per Adobe Experience Platform è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e la funzionalità sono soggette a modifiche.
 
-Adobe Experience Platform Web SDK è una libreria JavaScript lato client che consente ai clienti di Adobe Experience Cloud di interagire con i vari servizi in Experience Cloud.
+Adobe Experience Platform Web SDK è una libreria JavaScript lato client che consente ai clienti di Adobe Experience Cloud di interagire con i vari servizi di Experience Cloud tramite Adobe Experience Platform Edge Network.
 
 ## SDK sostituiti da Adobe Experience Platform Web SDK
 
