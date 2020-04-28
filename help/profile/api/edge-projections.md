@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guida per lo sviluppatore di API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: bb7aad4de681316cc9f9fd1d9310695bd220adb1
 
 ---
 
@@ -136,7 +136,12 @@ curl -X POST \
       }'
 ```
 
-|Proprietà|Descrizione||`type` **(richiesto)** |Il tipo di destinazione da creare. L’unico valore accettato, &quot;EDGE&quot;, crea una destinazione edge.||`dataCenters` **(richiesto)** |Un array di stringhe che elenca i bordi verso i quali le proiezioni devono essere instradate. Può contenere uno o più dei seguenti valori: &quot;OR1&quot; - Stati Uniti occidentali, &quot;VA5&quot; - Stati Uniti orientali, &quot;NLD1&quot; - EMEA.||`ttl` **(richiesto)** |Specifica la scadenza della proiezione. Intervallo valori accettato: Da 600 a 604800. Valore predefinito: 3600.||`replicationPolicy` **(richiesto)** |Definisce il comportamento della replica dei dati dall&#39;hub ai bordi.  Valori supportati: PROATTIVO, REATTIVO. Valore predefinito: REATTIVO.|
+| Proprietà | Descrizione |
+|---|---|
+| `type` **(Obbligatorio)** | Il tipo di destinazione da creare. L’unico valore accettato, &quot;EDGE&quot;, crea una destinazione edge. |
+| `dataCenters` **(Obbligatorio)** | Un array di stringhe che elenca i bordi verso i quali le proiezioni devono essere instradate. Può contenere uno o più dei seguenti valori: &quot;OR1&quot; - Stati Uniti occidentali, &quot;VA5&quot; - Stati Uniti orientali, &quot;NLD1&quot; - EMEA. |
+| `ttl` **(Obbligatorio)** | Specifica la scadenza della proiezione. Intervallo valori accettato: Da 600 a 604800. Valore predefinito: 3600. |
+| `replicationPolicy` **(Obbligatorio)** | Definisce il comportamento della replica dei dati dall&#39;hub ai bordi.  Valori supportati: PROATTIVO, REATTIVO. Valore predefinito: REATTIVO. |
 
 **Risposta**
 
