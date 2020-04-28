@@ -2,9 +2,9 @@
 title: Guida all’SDK Web per Adobe Experience Platform
 seo-title: Guida all’SDK Web per Adobe Experience Platform
 description: Scopri cos’è Adobe Experience Platform Web SDK e come può essere utilizzato.
-seo-description: consentire ai clienti di Adobe Experience Cloud di interagire con i vari servizi in Experience Cloud
+seo-description: consentire ai clienti di Adobe Experience Cloud di interagire con i vari servizi in Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 6ad09df6f6867ebe057d0043dea4bc97de2b66b3
+source-git-commit: 5027ae2cd083631d7122346796ef93572c129d3f
 
 ---
 
