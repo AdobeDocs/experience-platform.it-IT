@@ -4,19 +4,21 @@ solution: Experience Platform
 title: Panoramica sull’assimilazione parziale di Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: d560e8dd07e9590376728ae6575766cc382325a5
 
 ---
 
 
 
-# Iniezione parziale del batch
+# Iniezione batch parziale (versione beta)
 
 L&#39;assimilazione parziale dei batch è la capacità di assimilare i dati contenenti errori, fino a una determinata soglia. Grazie a questa funzionalità, gli utenti possono trasferire con successo tutti i dati corretti in Adobe Experience Platform mentre tutti i dati errati vengono inseriti in batch separatamente, insieme ai dettagli sul motivo per cui non sono validi.
 
 Questo documento fornisce un’esercitazione per la gestione dell’assimilazione parziale dei batch.
 
-Inoltre, l&#39; [appendice](#partial-batch-ingestion-error-types) di questa esercitazione fornisce un riferimento per i tipi di errori di caricamento batch parziale.
+Inoltre, l&#39; [appendice](#appendix) di questa esercitazione fornisce un riferimento per i tipi di errori di caricamento batch parziale.
+
+>[!IMPORTANT] Questa funzione esiste solo utilizzando l&#39;API. Per accedere a questa funzione, contattate il team.
 
 ## Introduzione
 
@@ -47,7 +49,7 @@ Tutte le risorse in Experience Platform sono isolate in sandbox virtuali specifi
 
 ## Abilitare un set di dati per l&#39;assimilazione parziale dei batch nell&#39;API
 
->[!NOTE] Questa sezione descrive come abilitare un dataset per l&#39;assimilazione parziale dei batch utilizzando l&#39;API. Per istruzioni sull’utilizzo dell’interfaccia utente, leggete il passaggio [Abilita un set di dati per l’inserimento parziale dei batch nel passaggio dell’interfaccia utente](#enable-a-dataset-for-partial-batch-ingestion-in-the-ui) .
+<!-- >[!NOTE] This section describes enabling a dataset for partial batch ingestion using the API. For instructions on using the UI, please read the [enable a dataset for partial batch ingestion in the UI](#enable-a-dataset-for-partial-batch-ingestion-in-the-ui) step. -->
 
 È possibile creare un nuovo set di dati o modificare un set di dati esistente con l&#39;inserimento parziale abilitato.
 
@@ -71,35 +73,35 @@ Analogamente, per modificare un dataset esistente, seguite i passaggi descritti 
 
 All&#39;interno del set di dati, dovrete aggiungere il tag descritto in precedenza.
 
-## Abilitare un set di dati per l’assimilazione parziale dei batch nell’interfaccia utente
+<!-- ## Enable a dataset for partial batch ingestion in the UI
 
->[!NOTE] Questa sezione descrive come abilitare un dataset per l’assimilazione parziale dei batch utilizzando l’interfaccia utente. Se hai già attivato un dataset per l&#39;assimilazione parziale dei batch utilizzando l&#39;API, puoi passare alla sezione successiva.
+>[!NOTE] This section describes enabling a dataset for partial batch ingestion using the UI. If you have already enabled a dataset for partial batch ingestion using the API, you can skip ahead to the next section.
 
-Per abilitare un dataset per l&#39;assimilazione parziale tramite l&#39;interfaccia utente della piattaforma, fai clic su **Set** di dati nella sezione di navigazione a sinistra. È possibile [creare un nuovo dataset](#create-a-new-dataset-with-partial-batch-ingestion-enabled) o [modificare un dataset](#modify-an-existing-dataset-to-enable-partial-batch-ingestion)esistente.
+To enable a dataset for partial ingestion through the Platform UI, click **Datasets** in the left navigation. You can either [create a new dataset](#create-a-new-dataset-with-partial-batch-ingestion-enabled) or [modify an existing dataset](#modify-an-existing-dataset-to-enable-partial-batch-ingestion).
 
-### Creare un nuovo dataset con l&#39;inserimento batch parziale abilitato
+### Create a new dataset with partial batch ingestion enabled
 
-Per creare un nuovo dataset, segui i passaggi descritti nella guida [utente del](../../catalog/datasets/user-guide.md)dataset. Una volta raggiunto il passaggio *Configura set di dati* , prendete nota dei campi *Ingestione* parziale e Diagnostica ** errori.
+To create a new dataset, follow the steps in the [dataset user guide](../../catalog/datasets/user-guide.md). Once you reach the *Configure dataset* step, take note of the *Partial Ingestion* and *Error Diagnostics* fields.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-dataset-focus.png)
 
-L’ *opzione di inserimento* parziale consente di attivare o disattivare l’uso dell’inserimento parziale dei batch.
+The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
 
-L&#39;interruttore *Diagnostica* errori viene visualizzato solo quando l&#39; *interruttore di inserimento* parziale è disattivato. Questa funzione consente alla piattaforma di generare messaggi di errore dettagliati sui batch acquisiti. Se l&#39;opzione *Ingestione* parziale è attivata, la diagnostica degli errori avanzata viene applicata automaticamente.
+The *Error Diagnostics* toggle only appears when the *Partial Ingestion* toggle is off. This feature allows Platform to generate detailed error messages about your ingested batches. If the *Partial Ingestion* toggle is turned on, enhanced error diagnostics are automatically enforced.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-dataset-partial-ingestion-focus.png)
 
-La soglia *di* errore consente di impostare la percentuale di errori accettabili prima che l&#39;intero batch non riesca. Per impostazione predefinita, questo valore è impostato su 5%.
+The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
 
-### Modificare un dataset esistente per abilitare l&#39;assimilazione parziale dei batch
+### Modify an existing dataset to enable partial batch ingestion
 
-Per modificare un set di dati esistente, selezionare il set di dati da modificare. La barra laterale a destra include informazioni sul set di dati.
+To modify an existing dataset, select the dataset you want to modify. The sidebar on the right populates with information about the dataset. 
 
 ![](../images/batch-ingestion/partial-ingestion/modify-dataset-focus.png)
 
-L’ *opzione di inserimento* parziale consente di attivare o disattivare l’uso dell’inserimento parziale dei batch.
+The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
 
-La soglia *di* errore consente di impostare la percentuale di errori accettabili prima che l&#39;intero batch non riesca. Per impostazione predefinita, questo valore è impostato su 5%.
+The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%. -->
 
 ## Recupero degli errori di caricamento batch parziale
 
@@ -176,7 +178,7 @@ Se il batch presenta un errore e la diagnostica degli errori è abilitata, lo st
 
 In questa esercitazione è stato illustrato come creare o modificare un dataset per abilitare l’assimilazione parziale dei batch. Per ulteriori informazioni sull&#39;assimilazione batch, leggere la guida [per gli sviluppatori di](./api-overview.md)inserimento batch.
 
-## Tipi di errori di assimilazione parziale dei batch
+## Tipi di errori di assimilazione parziale dei batch {#appendix}
 
 L’assimilazione parziale dei batch presenta quattro tipi di errore diversi durante l’assimilazione dei dati.
 
