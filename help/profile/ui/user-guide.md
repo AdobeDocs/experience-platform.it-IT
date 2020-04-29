@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guida utente del profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: b5412b891a9457fa5e801d1f0479fc59fb08bf1b
+source-git-commit: ab289f07475abcbe966c723423825fd392eb3615
 
 ---
 
@@ -73,7 +73,7 @@ Fare clic su **Unisci criteri** per visualizzare un elenco di criteri di unione 
 
 ![](../images/user-guide/profile-merge-policies.png)
 
-Per ulteriori informazioni sull&#39;utilizzo dei criteri di unione nell&#39;interfaccia utente, consulta la guida [utente ai criteri di](merge-policies.md)unione.
+Per ulteriori informazioni sull&#39;utilizzo dei criteri di unione nell&#39;interfaccia utente, consulta la guida [utente](merge-policies.md)Unisci criteri.
 
 ## Schema unione
 
