@@ -4,7 +4,7 @@ seo-title: Tracciamento degli eventi SDK Web per Adobe Experience Platform
 description: Scopri come tenere traccia degli eventi SDK Web per la piattaforma Experience
 seo-description: Scopri come tenere traccia degli eventi SDK Web per la piattaforma Experience
 translation-type: tm+mt
-source-git-commit: 3c6f9663ef5b83ceeb93539171017e2b282a613f
+source-git-commit: 45ee1f79ac5953b7c407083b4352b2c751e8aec9
 
 ---
 
@@ -43,7 +43,7 @@ alloy("event", {
 });
 ```
 
->[!Note]
+>[!NOTE]
 >Esiste un limite di 32 KB per i dati che possono essere inviati in ogni evento nel campo XDM.
 
 ### Invio di dati non XDM
