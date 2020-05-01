@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica sui connettori sorgente della piattaforma Adobe Experience
 topic: overview
 translation-type: tm+mt
-source-git-commit: e81f138f933d4bb2c36260480e360dfacd412da0
+source-git-commit: 8ee88b27c79610827ff2627999e303b5fc43e1c6
 
 ---
 
@@ -67,12 +67,15 @@ Experience Platform supporta l’acquisizione di dati da un database di terze pa
 - [Connettore Amazon Redshift](connectors/databases/redshift.md)
 - [Apache Hive sul connettore Azure HDInsights](connectors/databases/hive.md)
 - [Apache Spark sul connettore Azure HDInsights](connectors/databases/spark.md)
+- [Connettore Azure Data Explorer](connectors/databases/data-explorer.md)
 - [Connettore Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
 - [Connettore archiviazione tabella Azure](connectors/databases/ats.md)
 - [Connettore Google BigQuery](connectors/databases/bigquery.md)
+- [Connettore IBM DB2](connectors/databases/ibm-db2.md)
 - [Connettore MariaDB](connectors/databases/mariadb.md)
 - [Connettore di Microsoft SQL Server](connectors/databases/sql-server.md)
 - [Connettore MySQL](connectors/databases/mysql.md)
+- [Connettore Oracle](connectors/databases/oracle.md)
 - [Connettore Phoenix](connectors/databases/phoenix.md)
 - [Connettore PostgreSQL](connectors/databases/postgres.md)
 
