@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Spazi dei nomi e qualificatori di identità accettati
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: cc296670db91640e75fd7a47b874a46eaf57ecde
 
 ---
 
 
 # Appendice
 
-## Spazi dei nomi identità standard
+## Spazi dei nomi identità standard {#standard-namespaces}
 
 Tutte le identità inviate al servizio Privacy devono essere fornite in uno specifico namespace di identità. Gli spazi dei nomi delle identità sono un componente di [Adobe Experience Platform Identity Service](../../identity-service/home.md) che indica il contesto a cui si riferisce un&#39;identità.
 
