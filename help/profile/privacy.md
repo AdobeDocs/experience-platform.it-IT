@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Elaborazione delle richieste di privacy in Real-time Customer Profile
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5f0e0deb4a2fae636ac4d2313a6541c25309c294
+source-git-commit: cc296670db91640e75fd7a47b874a46eaf57ecde
 
 ---
 
@@ -33,7 +33,7 @@ Per ulteriori informazioni sugli spazi dei nomi di identità in Experience Platf
 
 ## Invio di richieste {#submit}
 
->[!NOTE] Questa sezione descrive come formattare le richieste di privacy per il Data Lake. È vivamente consigliato di consultare la documentazione API [del servizio](../privacy-service/api/getting-started.md) Privacy o dell&#39;interfaccia utente [del servizio](../privacy-service/ui/overview.md) Privacy per i passaggi completi su come inviare un processo di privacy, incluso come formattare correttamente i dati di identità dell&#39;utente inviati nei payload della richiesta.
+>[!NOTE] Questa sezione descrive come creare richieste di privacy per l’archivio dati del profilo. È vivamente consigliato di consultare la documentazione API [del servizio](../privacy-service/api/getting-started.md) Privacy o dell&#39;interfaccia utente [del servizio](../privacy-service/ui/overview.md) Privacy per i passaggi completi su come inviare un processo di privacy, incluso come formattare correttamente i dati di identità dell&#39;utente inviati nei payload della richiesta.
 
 Nella sezione seguente viene illustrato come effettuare richieste di privacy per Real-time Customer Profile (Profilo cliente in tempo reale) e per Data Lake mediante l&#39;API o l&#39;interfaccia utente del servizio per la privacy.
 
