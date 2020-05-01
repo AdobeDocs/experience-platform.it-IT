@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare un connettore Azure Table Storage utilizzando l'API Flow Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 69ea79aff57ad82d8bc462984526b2126858c0b1
+source-git-commit: 9556b85b26e2eb3d4a2b3e41db5f0c3a14459d32
 
 ---
 
@@ -68,7 +68,6 @@ POST /connections
 **Richiesta**
 
 Per creare una connessione ATS, è necessario fornire l&#39;ID univoco della specifica di connessione come parte della richiesta POST. L&#39;ID della specifica di connessione per ATS è `ecde33f2-c56f-46cc-bdea-ad151c16cd69`.
-
 
 ```shell
 curl -X POST \
