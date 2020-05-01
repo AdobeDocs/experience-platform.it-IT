@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Guida di Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: 30f36d18f0e670ede02041db04f1cc8be55d11a3
 
 ---
 
@@ -37,12 +37,15 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
       - [Connettore Amazon Redshift](connectors/databases/redshift.md)
       - [Apache Hive sul connettore Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark sul connettore Azure HDInsights](connectors/databases/spark.md)
+      - [Connettore Azure Data Explorer](connectors/databases/data-explorer.md)
       - [Connettore Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
       - [Connettore archiviazione tabella Azure](connectors/databases/ats.md)
       - [Connettore Google BigQuery](connectors/databases/bigquery.md)
+      - [Connettore IBM DB2](connectors/databases/ibm-db2.md)
       - [Connettore MariaDB](connectors/databases/mariadb.md)
       - [Connettore di Microsoft SQL Server](connectors/databases/sql-server.md)
       - [Connettore MySQL](connectors/databases/mysql.md)
+      - [Connettore Oracle](connectors/databases/oracle.md)
       - [Connettore Phoenix](connectors/databases/phoenix.md)
       - [Connettore PostgreSQL](connectors/databases/postgres.md)
    - Automazione del marketing {#marketing-automation}
@@ -70,13 +73,16 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
          - [Connettore ServiceNow](tutorials/api/create/customer-success/servicenow.md)
       - Database {#databases}
          - [Connettore Amazon Redshift](tutorials/api/create/databases/redshift.md)
+         - [Apache Hive sul connettore Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark sul connettore Azure HDInsights](tutorials/api/create/databases/spark.md)
+         - [Connettore Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
          - [Connettore Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Connettore archiviazione tabella Azure](tutorials/api/create/databases/ats.md)
          - [Connettore Google BigQuery](tutorials/api/create/databases/bigquery.md)
-         - [Connettore Hive](tutorials/api/create/databases/hive.md)
+         - [Connettore IBM DB2](tutorials/api/create/databases/ibm-db2.md)
          - [Connettore MariaDB](tutorials/api/create/databases/mariadb.md)
          - [Connettore MySQL](tutorials/api/create/databases/mysql.md)
+         - [Connettore Oracle](tutorials/api/create/databases/oracle.md)
          - [Connettore Phoenix](tutorials/api/create/databases/phoenix.md)
          - [Connettore PostgreSQL](tutorials/api/create/databases/postgres.md)
          - [Connettore SQL Server](tutorials/api/create/databases/sql-server.md)
@@ -126,16 +132,16 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
          - [Connettore ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
       - Database {#databases}
          - [Connettore Amazon Redshift](tutorials/ui/create/databases/redshift.md)
+         - [Apache Hive sul connettore Azure HDInsights](tutorials/ui/create/databases/hive.md)
+         - [Apache Spark sul connettore Azure HDInsights](tutorials/ui/create/databases/spark.md)
          - [Connettore Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Connettore archiviazione tabella Azure](tutorials/ui/create/databases/ats.md)
          - [Connettore Google Big Query](tutorials/ui/create/databases/bigquery.md)
-         - [Connettore Hive](tutorials/ui/create/databases/hive.md)
          - [Connettore MariaDB](tutorials/ui/create/databases/mariadb.md)
          - [Connettore di Microsoft SQL Server](tutorials/ui/create/databases/sql-server.md)
          - [Connettore MySQL](tutorials/ui/create/databases/mysql.md)
          - [Connettore Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [Connettore PostgreSQL](tutorials/ui/create/databases/postgres.md)
-         - [Connettore Spark](tutorials/ui/create/databases/spark.md)
       - Automazione del marketing {#marketing-automation}
          - [Connettore HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
       - Pagamenti {#payments}
