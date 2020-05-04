@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Nozioni di base sulla composizione dello schema
 topic: overview
 translation-type: tm+mt
-source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
 
 ---
 
@@ -60,7 +60,7 @@ Gli schemi vengono utilizzati per assimilare i dati in Experience Platform. Ques
 
 Per facilitare questo processo, i campi chiave possono essere contrassegnati come &quot;Identità&quot;. Al momento dell&#39;inserimento dei dati, i dati contenuti in tali campi saranno inseriti nel &quot;Grafico identità&quot; per l&#39;individuo in questione. I dati del grafico sono quindi accessibili tramite il profilo [cliente in tempo](../../profile/home.md) reale e altri servizi della piattaforma di esperienze, per fornire una visualizzazione unificata di ciascun cliente.
 
-I campi generalmente contrassegnati come &quot;Identità&quot; includono: indirizzo e-mail, numero di telefono, ID [Experience Cloud (ECID)](https://marketing.adobe.com/resources/help/en_US/mcvid/), ID CRM o altri campi ID univoci. È inoltre necessario considerare eventuali identificatori univoci specifici della propria organizzazione, in quanto possono essere buoni anche i campi &quot;Identità&quot;.
+I campi generalmente contrassegnati come &quot;Identità&quot; includono: indirizzo e-mail, numero di telefono, ID [Experience Cloud (ECID)](https://docs.adobe.com/content/help/it-IT/id-service/using/home.html), ID CRM o altri campi ID univoci. È inoltre necessario considerare eventuali identificatori univoci specifici della propria organizzazione, in quanto possono essere buoni anche i campi &quot;Identità&quot;.
 
 È importante considerare le identità dei clienti durante la fase di pianificazione dello schema, in modo da garantire che i dati vengano uniti per creare il profilo più affidabile possibile. Consulta la panoramica [del servizio](../../identity-service/home.md) identità per scoprire come le informazioni sull&#39;identità possono aiutarti a fornire esperienze digitali ai tuoi clienti.
 
@@ -108,7 +108,7 @@ Ad esempio, uno schema che rappresenta i membri di un programma Fedeltà descriv
 
 Un mixin è un componente riutilizzabile che definisce uno o più campi che implementano determinate funzioni come i dati personali, le preferenze alberghiere o l&#39;indirizzo. Le mixine sono destinate ad essere incluse come parte di uno schema che implementa una classe compatibile.
 
-Le combinazioni definiscono le classi con cui sono compatibili in base al comportamento dei dati che rappresentano (serie di record o temporali). Ciò significa che non tutti i mixin sono disponibili per l&#39;uso con tutte le classi.
+Le combinazioni definiscono le classi con cui sono compatibili in base al comportamento dei dati che rappresentano (record o serie temporali). Ciò significa che non tutti i mixin sono disponibili per l&#39;uso con tutte le classi.
 
 I mixin hanno lo stesso ambito e la stessa definizione delle classi: esistono mixin di settore, mixin di fornitori e mixin di clienti definiti dalle singole organizzazioni che utilizzano la piattaforma. La piattaforma Experience include molti mixin standard di settore, consentendo al contempo ai fornitori di definire mixin per i propri utenti e ai singoli utenti di definire mixin base ai propri concetti specifici.
 
