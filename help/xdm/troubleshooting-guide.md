@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida alla risoluzione dei problemi del sistema XDM (Experience Data Model)
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: f7c87cc86bfc5017ec5c712d05e39be5c14a7147
+source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
 
 ---
 
@@ -49,7 +49,7 @@ Per ulteriori informazioni sui tipi di campo, vedere la sezione [Definizione dei
 
 ### Come si definiscono le identità per lo schema?
 
-In Experience Platform, le identità vengono utilizzate per identificare un oggetto (in genere una singola persona) indipendentemente dalle origini dei dati che vengono interpretate. Sono definiti negli schemi contrassegnando i campi chiave come &quot;Identità&quot;. I campi comunemente utilizzati per l&#39;identità includono indirizzo e-mail, numero di telefono, ID [Experience Cloud (ECID)](https://marketing.adobe.com/resources/help/en_US/mcvid/), ID CRM e altri campi ID univoci.
+In Experience Platform, le identità vengono utilizzate per identificare un oggetto (in genere una singola persona) indipendentemente dalle origini dei dati che vengono interpretate. Sono definiti negli schemi contrassegnando i campi chiave come &quot;Identità&quot;. I campi comunemente utilizzati per l&#39;identità includono indirizzo e-mail, numero di telefono, ID [Experience Cloud (ECID)](https://docs.adobe.com/content/help/it-IT/id-service/using/home.html), ID CRM e altri campi ID univoci.
 
 I campi possono essere contrassegnati come identità tramite l&#39;API o l&#39;interfaccia utente.
 
