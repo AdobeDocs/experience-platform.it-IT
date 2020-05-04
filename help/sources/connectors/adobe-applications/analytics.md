@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connettore dati di Analytics
 topic: overview
 translation-type: tm+mt
-source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
+source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
 
 ---
 
@@ -23,9 +23,7 @@ Adobe Analytics è un potente strumento per aiutarti a conoscere meglio i tuoi c
 
 Ad un livello elevato, Adobe Analytics raccoglie dati da diversi canali digitali e da più centri dati in tutto il mondo. Una volta raccolti i dati, le regole VISTA (Visitor Identification, Segmentation and Transformation Architecture) e le regole di elaborazione vengono applicate per modellare i dati in arrivo. Dopo che i dati grezzi sono stati sottoposti a questa elaborazione leggera, vengono considerati pronti per il consumo dal profilo cliente in tempo reale. In un processo parallelo a quanto sopra, gli stessi dati elaborati vengono sottoposti a micro-batch e trasferiti in set di dati della piattaforma da utilizzare in Data Science Workspace, Query Service e altre applicazioni di rilevamento dati.
 
-Per ulteriori informazioni su VISTA e sulle regole di elaborazione, consulta i documenti seguenti:
-* [Panoramica delle regole VISTA](https://marketing.adobe.com/resources/help/en_US/reference/VISTA.html)
-* [Panoramica sulle regole di elaborazione](https://docs.adobe.com/content/help/it-IT/analytics/admin/admin-tools/processing-rules/processing-rules.html)
+Per ulteriori informazioni sulle regole di elaborazione, vedere Panoramica [delle regole di](https://docs.adobe.com/content/help/it-IT/analytics/admin/admin-tools/processing-rules/processing-rules.html) elaborazione.
 
 ## Modello dati esperienza (XDM)
 
