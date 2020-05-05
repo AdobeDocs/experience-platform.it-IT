@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Ricetta di acquisto del prodotto
 topic: overview
 translation-type: tm+mt
-source-git-commit: f548fb6431b7bc71c205a2b2b7ca3884e57340b1
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -56,6 +56,6 @@ Questa ricetta utilizza gli schemi [](../../xdm/home.md) XDM per modellare i dat
 
 ## Algoritmo
 
-Innanzitutto, viene caricato il dataset di formazione nello schema **ProductPredizione** . Da qui, il modello viene addestrato utilizzando un classificatore [Foresta](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)casuale. Il classificatore della foresta casuale è un tipo di algoritmo di ensembled che fa riferimento a un algoritmo che combina più algoritmi per ottenere prestazioni predittive migliorate. L&#39;idea alla base dell&#39;algoritmo è che il classificatore casuale della foresta crea più alberi decisionali e li unisce per creare una previsione più accurata e stabile.
+Innanzitutto, viene caricato il dataset di formazione nello schema *ProductPredizione* . Da qui, il modello viene addestrato utilizzando un classificatore [Foresta](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)casuale. Il classificatore della foresta casuale è un tipo di algoritmo di ensembled che fa riferimento a un algoritmo che combina più algoritmi per ottenere prestazioni predittive migliorate. L&#39;idea alla base dell&#39;algoritmo è che il classificatore casuale della foresta crea più alberi decisionali e li unisce per creare una previsione più accurata e stabile.
 
 Questo processo inizia con la creazione di una serie di strutture decisionali che selezionano in modo casuale sottoinsiemi di dati di formazione. In seguito, i risultati di ogni albero decisionale vengono calcolati come media.
