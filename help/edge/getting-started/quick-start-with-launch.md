@@ -4,7 +4,7 @@ seo-title: Avvio rapido dell’SDK Web per Adobe Experience Platform
 description: Guida di avvio rapido per l’utilizzo dell’estensione SDK Web di Experience Platform per la raccolta dei dati
 seo-description: Guida di avvio rapido per l’utilizzo dell’estensione SDK Web di Experience Platform per la raccolta dei dati
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: e23b0ce9c20d5d2d770d1c1261fe08de5743325a
 
 ---
 
@@ -32,14 +32,11 @@ Per poter inviare dati ad Adobe Experience Platform, è necessario creare uno sc
 - Aggiungere il mixin SDK Web di Adobe Experience Platform allo schema creato
 - [Creare un dataset](https://platform.adobe.com/dataset/overview) con lo schema in cui si desidera che i dati vengano inseriti
 
-## Richiesta di un ID di configurazione
+## Creare un ID di configurazione
 
-Per usare l’SDK devi disporre di un ID di configurazione. L&#39;ID di configurazione garantisce che i dati vengano indirizzati al posto giusto. Puoi ottenere un ID di configurazione dal tuo consulente o tramite Client Care. Avranno bisogno delle seguenti informazioni:
+Potete creare un ID di configurazione utilizzando lo strumento [di configurazione](../fundamentals/edge-configuration.md) edge all’avvio.
 
-- **ID organizzazione:** Potete trovarlo utilizzando le istruzioni [qui](https://docs.adobe.com/content/help/it-IT/core-services/interface/manage-users-and-products/organizations.html)
-- **ID set di dati:** Questa funzione è disponibile nell&#39;interfaccia utente del set di dati quando si fa clic su un set di dati
-- **ID schema:** È disponibile nell’URL della schermata di creazione dello schema
-- **Nome descrittivo:** Questo è il nome descrittivo che verrà utilizzato nelle interfacce future per questa configurazione
+>Nota: La whitelist dell&#39;organizzazione deve essere utilizzata per la funzione. Contatta il tuo CSM per essere inserito nella lista per eventuali whitelist.
 
 ## Installa l’SDK in Launch
 
