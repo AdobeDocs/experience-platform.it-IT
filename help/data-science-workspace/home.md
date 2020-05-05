@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica di Analysis Workspace
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -141,7 +141,7 @@ Le sandbox sono partizioni virtuali all&#39;interno di una singola istanza di Ex
 
 Al momento, Data Science Workspace presenta due limitazioni sandbox:
 
-- Le risorse di calcolo sono condivise tra le sandbox di produzione e non di produzione. L&#39;isolamento per le sandbox di produzione sarà disponibile in futuro.
+- Le risorse di calcolo sono condivise tra le sandbox di produzione e quelle non di produzione. L&#39;isolamento per le sandbox di produzione sarà disponibile in futuro.
 - I carichi di lavoro Scala/Spark e PySpark per notebook e ricette sono attualmente supportati solo nella sandbox di produzione. Il supporto per sandbox non destinate alla produzione verrà impostato in futuro.
 
 ## Data Science Workspace in azione
@@ -172,7 +172,6 @@ Tutti i dati in Adobe Experience Platform sono conformi a uno schema XDM standar
 Se non trovate immediatamente i dati necessari, ma esistono al di fuori di Adobe Experience Platform, è relativamente semplice acquisire set di dati aggiuntivi, che si trasformeranno anche nello schema XDM standard.\
 È possibile utilizzare il blocco appunti Jupyter per semplificare la pre-elaborazione dei dati, a partire da un modello di blocco appunti o da un blocco appunti precedentemente utilizzato per la propensione all&#39;acquisto.
 
-<!-- databricks update-->
 ![](./images/home/notebook_templates.png)
 
 ### Creazione della ricetta
