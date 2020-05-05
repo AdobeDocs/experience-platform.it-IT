@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Scopri informazioni approfondite in Attribution AI
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: 0f6424c5afbf9b23016e1c40d156f6226f853cd6
+source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ---
 
@@ -152,3 +152,9 @@ La scheda *Campagne* principali visualizza una panoramica delle campagne e delle
 ## Passaggi successivi
 
 Dopo aver filtrato i dati e aver visualizzato le informazioni appropriate, potete accedere ai punteggi. Per una guida dettagliata su come accedere ai punteggi, consulta i punteggi di [accesso nell’esercitazione AI](./download-scores.md) di attribuzione. Inoltre, puoi scaricare i dati di riepilogo come indicato in [più azioni](#more-actions). Se selezionate &quot;Scarica dati di riepilogo&quot;, vengono scaricati i dati di riepilogo aggregati per data.
+
+## Risorse aggiuntive
+
+Il seguente video è stato progettato per aiutare a imparare a utilizzare la pagina di approfondimenti di Attribution AI per comprendere il ROI dei canali e delle campagne di marketing.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32669?learn=on&quality=12)
