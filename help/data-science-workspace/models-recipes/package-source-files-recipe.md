@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare pacchetti di file sorgente in una ricetta
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -35,24 +35,24 @@ Un&#39;immagine Docker consente a uno sviluppatore di creare un pacchetto con tu
 
 L&#39;immagine Docker predefinita viene inviata al Registro di sistema del contenitore di Azure utilizzando le credenziali fornite durante il flusso di lavoro di creazione della ricetta.
 
-Per ottenere le credenziali del Registro di sistema del contenitore di Azure, accedi ad <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>. Nella colonna di navigazione a sinistra, andate a **Flussi di lavoro**. Selezionate **Importa ricetta** , quindi selezionate **Avvia**. Per riferimento, vedere la schermata sottostante.
+Per ottenere le credenziali del Registro di sistema del contenitore di Azure, accedi ad <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>. Nella colonna di navigazione a sinistra, andate a **[!UICONTROL Workflows]**. Selezionate **[!UICONTROL Import Recipe]** seguito da **[!UICONTROL Launch]**. Per riferimento, vedere la schermata sottostante.
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-Viene visualizzata la pagina *Configura* . Fornite un Nome **** ricetta appropriato, ad esempio &quot;Ricetta vendite al dettaglio&quot;, e facoltativamente fornite una descrizione o un URL della documentazione. Al termine, fate clic su **Avanti**.
+Viene visualizzata la pagina *Configura* . Fornite un Nome ** ricetta appropriato, ad esempio &quot;Ricetta vendite al dettaglio&quot;, e facoltativamente fornite una descrizione o un URL della documentazione. Al termine, fate clic **[!UICONTROL Next]**.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
-Selezionare il *runtime* appropriato, quindi scegliere una **classificazione** per *Tipo*. Le credenziali del Registro di sistema del contenitore di Azure vengono generate una volta completate.
+Selezionate il *runtime* appropriato, quindi scegliete un **[!UICONTROL Classification]** per *Tipo*. Le credenziali del Registro di sistema del contenitore di Azure vengono generate una volta completate.
 
 >[!NOTE]
 >*Tipo *è la classe di problema di apprendimento automatico per cui la ricetta è progettata ed è utilizzata dopo la formazione per aiutare a personalizzare la valutazione dell&#39;esecuzione della formazione.
 
 >[!TIP]
->- Per le ricette Python selezionate il runtime **Python** .
->- Per le ricette R, selezionate il runtime **R** .
->- Per le ricette PySpark, selezionate il runtime **PySpark** . Un tipo di artefatto compila automaticamente.
->- Per le ricette Scala, selezionate il runtime **Spark** . Un tipo di artefatto compila automaticamente.
+>- Per le ricette Python selezionate il **[!UICONTROL Python]** runtime.
+>- Per le ricette R, selezionate il **[!UICONTROL R]** runtime.
+>- Per le ricette PySpark, selezionate il **[!UICONTROL PySpark]** runtime. Un tipo di artefatto compila automaticamente.
+>- Per le ricette Scala, selezionate il **[!UICONTROL Spark]** runtime. Un tipo di artefatto compila automaticamente.
 
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
@@ -189,7 +189,7 @@ Copiate questo URL e passate ai passaggi [successivi](#next-steps).
 
 ## Passaggi successivi {#next-steps}
 
-Questa esercitazione ha passato i file di origine del pacchetto in una Ricetta, il passaggio preliminare per l&#39;importazione di una Ricetta in Data Science Workspace. È ora necessario disporre di un&#39;immagine Docker nel Registro di sistema del contenitore di Azure insieme all&#39;URL immagine corrispondente. È ora possibile iniziare l&#39;esercitazione sull&#39; **importazione di una ricetta in un pacchetto in Data Science Workspace**. Per iniziare, seleziona uno dei collegamenti di esercitazione riportati di seguito.
+Questa esercitazione ha passato i file di origine del pacchetto in una Ricetta, il passaggio preliminare per l&#39;importazione di una Ricetta in Data Science Workspace. È ora necessario disporre di un&#39;immagine Docker nel Registro di sistema del contenitore di Azure insieme all&#39;URL immagine corrispondente. È ora possibile iniziare l&#39;esercitazione sull&#39;importazione di una ricetta in un pacchetto in Data Science Workspace. Per iniziare, seleziona uno dei collegamenti di esercitazione seguenti:
 
 - [Importare una ricetta in un pacchetto nell’interfaccia utente](./import-packaged-recipe-ui.md)
 - [Importare una composizione in pacchetti utilizzando l&#39;API](./import-packaged-recipe-api.md)
