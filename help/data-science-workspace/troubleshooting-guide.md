@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida alla risoluzione dei problemi per l'area di lavoro di analisi dati
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: ef7c37438990d3bc42024e7fb106d781a5ebbd12
+source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
 
 ---
 
@@ -103,4 +103,4 @@ Per un elenco delle librerie PySpark preinstallate, consultate la sezione [appen
 }
 ```
 
-Per ulteriori informazioni sulla configurazione delle risorse del cluster Spark, compreso l&#39;elenco completo delle proprietà configurabili, consulta la Guida [utente di](./jupyterlab/overview.md#pyspark-spark-execution-resource)JupyterLab.
+Per ulteriori informazioni sulla configurazione delle risorse del cluster Spark, compreso l&#39;elenco completo delle proprietà configurabili, consulta la Guida [utente di](./jupyterlab/overview.md#kernels)JupyterLab.
