@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica dell'AI del cliente
 topic: Customer AI overview
 translation-type: tm+mt
-source-git-commit: f4deee30f0f03b75dc7ee02152ceb6c519858c7c
+source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ---
 
@@ -35,6 +35,10 @@ Il cliente non è costruito per:
 - L&#39;AI del cliente non è uno strumento di raccomandazione del prodotto. Se disponete di migliaia di SKU, non utilizzate l&#39;AI cliente come proxy per una soluzione di raccomandazioni sui prodotti reale come Adobe Target.
 - L&#39;AI del cliente non può prevedere in quale fase del viaggio di acquisto il cliente si trovi, ad esempio, se si trova nelle fasi di &quot;consapevolezza&quot;, &quot;considerazione&quot;, &quot;acquisto&quot; o &quot;conservazione&quot;.
 - Non utilizzate l&#39;API del cliente per determinare i clienti che probabilmente acquisteranno un prodotto per il lancio in futuro. Ciò richiede che in passato siano presenti alcuni eventi di successo affinché l&#39;AI del cliente possa addestrare con successo l&#39;algoritmo di machine learning sui dati.
+
+Il seguente video è stato progettato per supportare la comprensione dell&#39;API cliente.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
 
 ## Come funziona?
 
