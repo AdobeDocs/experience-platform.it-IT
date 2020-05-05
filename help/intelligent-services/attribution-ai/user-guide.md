@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida utente AI per attribuzione
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 3e1e7bea7113b5db6b9bd02ce0dbe8cfd486206c
 
 ---
 
@@ -174,3 +174,9 @@ Dopo aver selezionato la finestra di formazione, fate clic su **Fine** nell’an
 ## Passaggi successivi
 
 Seguendo questa esercitazione, è stata creata correttamente un&#39;istanza di servizio in Attribution AI. Una volta che l&#39;istanza ha terminato il punteggio (fino a 24 ore), è possibile [scoprire informazioni](./discover-insights.md)sull&#39;analisi dell&#39;attribuzione. Inoltre, se desideri scaricare i risultati del punteggio, consulta la documentazione [sul download dei punteggi](./download-scores.md) non elaborati.
+
+## Risorse aggiuntive
+
+Il seguente video illustra un flusso di lavoro end-to-end per la creazione di una nuova istanza in Attribution AI.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32668?learn=on&quality=12)
