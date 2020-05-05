@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida introduttiva all’interfaccia di attribuzione AI
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 14d47f99f1edd7734245b25b7c39f3a71e7aac50
+source-git-commit: 6161f5a9ca0df341272a96a8a19ce6c34f6d5d3e
 
 ---
 
@@ -25,18 +25,26 @@ L&#39;AI di attribuzione richiede che i set di dati siano conformi allo schema E
 
 - **Punto di contatto:** Qualsiasi evento digitale o interazione digitale che i clienti fanno nel percorso verso un obiettivo. Alcuni esempi includono le attività di marketing relative al periodo precedente l&#39;acquisto, la visualizzazione delle impression pubblicitarie visualizzate e i clic di ricerca a pagamento.
 
-## Accesso e query ai punteggi
+## Download dei punteggi AI di Attribution
 
->[!NOTE] Se non è necessario eseguire query o accedere ai punteggi non elaborati, è possibile saltare questo passaggio e passare alla guida [all&#39;interfaccia](./user-guide.md)utente.
+>[!NOTE] Se non è necessario scaricare i punteggi non elaborati, puoi saltare questo passaggio e passare ai passaggi [successivi](#next-steps).
 
-Accedere e interrogare i punteggi per Attribution AI è fatto tramite Snowflake. Al momento, è necessario inviare tramite e-mail il supporto Adobe all&#39;indirizzo attributionai-support@adobe.com per configurare e ricevere le credenziali per l&#39;account del lettore per Snowflake o per l&#39;esportazione in massa di dati non elaborati.
+Il download dei punteggi AI di attribuzione viene effettuato tramite una combinazione di chiamate API. Per effettuare chiamate alle API della piattaforma, dovete prima completare l&#39;esercitazione [di](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come illustrato di seguito:
 
-Una volta che il supporto Adobe ha elaborato la richiesta, vi viene fornito un URL per l’account del lettore a Snowflake e le credenziali corrispondenti riportate di seguito:
+- Autorizzazione: Portatore `{ACCESS_TOKEN}`
+- x-api-key: `{API_KEY}`
+- x-gw-ims-org-id: `{IMS_ORG}`
 
-- URL fiocco di neve
-- Nome utente
-- Password
+Tutte le risorse in Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API della piattaforma richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
-## Passaggi successivi
+- x-sandbox-name: `{SANDBOX_NAME}`
+
+>[!NOTE] Per ulteriori informazioni sulle sandbox in Piattaforma, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+
+### Lettura di chiamate API di esempio
+
+Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione [come leggere le chiamate](../../landing/troubleshooting.md) API di esempio nella guida alla risoluzione dei problemi della piattaforma Experience.
+
+## Passaggi successivi {#next-steps}
 
 Una volta pronti e dotati di tutte le credenziali e gli schemi, iniziate seguendo la guida [all&#39;interfaccia utente AI di](./user-guide.md)Attribution. Questa guida illustra come creare un’istanza e inviarla per la formazione e il punteggio.
