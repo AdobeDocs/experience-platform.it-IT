@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Servizio query nel blocco appunti Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: d0596dc3c744e192c4d2ad04d6365846a0115371
+source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
 
 ---
 
@@ -13,16 +13,7 @@ source-git-commit: d0596dc3c744e192c4d2ad04d6365846a0115371
 
 Adobe Experience Platform consente di utilizzare il linguaggio SQL (Structures Query Language) in Data Science Workspace integrando il servizio Query in JupyterLab come funzione standard.
 
-Questa esercitazione illustra i seguenti esempi di query SQL per i casi di utilizzo più comuni per esplorare, trasformare e analizzare i dati di Adobe Analytics:
-
-- [Accesso a JupyterLab e al servizio Query](#access-jupyterlab-and-query-service)
-- [Query dei dati](#query-your-data)
-   - [Conteggio orario dei visitatori](#hourly-visitor-count)
-   - [Conteggio attività orario](#hourly-activity-count)
-   - [Numero di eventi per sessione visitatore](#number-of-events-per-visitor-session)
-   - [Pagine popolari per un dato giorno](#popular-pages-for-a-given-day)
-   - [Utenti attivi per un dato giorno](#active-users-for-a-given-day)
-   - [Città attive per attività utente](#active-cities-by-user-activity)
+Questa esercitazione illustra alcuni esempi di query SQL per i casi di utilizzo più comuni per esplorare, trasformare e analizzare i dati di Adobe Analytics.
 
 ## Introduzione
 
@@ -38,25 +29,25 @@ Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prer
    - [Sintassi SQL Servizio query](../../query-service/sql/overview.md)
    - Adobe Analytics
 
-## Accesso a JupyterLab e al servizio Query
+## Accesso a JupyterLab e al servizio Query {#access-jupyterlab-and-query-service}
 
-1. In [Experience Platform](https://platform.adobe.com), andate a **Modelli** dalla colonna di navigazione a sinistra. Fate clic su **Blocco note** nell’intestazione superiore per aprire JupyterLab. Lasciate che venga caricato JupyterLab al momento.
+1. In [Experience Platform](https://platform.adobe.com), andate **[!UICONTROL Notebooks]** dalla colonna di navigazione a sinistra. Lasciate che venga caricato JupyterLab al momento.
 
-   ![](../images/jupyterlab/query/notebook_ui.png)
+   ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-   > [!NOTE] Se non viene visualizzata automaticamente una nuova scheda Avvio, apri una nuova scheda Avvio facendo clic su **File > Nuovo avvio**.
+   > [!NOTE] Se non viene visualizzata automaticamente una nuova scheda Avvio, apri una nuova scheda Avvio facendo clic su **[!UICONTROL File]** e seleziona **[!UICONTROL New Launcher]**.
 
-2. Nella scheda Launcher, fai clic sull&#39;icona **Vuoto** in un ambiente Python 3 per aprire un blocco appunti vuoto.
+2. Nella scheda Launcher, fare clic sull&#39; **[!UICONTROL Blank]** icona in un ambiente Python 3 per aprire un blocco appunti vuoto.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
    > [!NOTE] Python 3 è attualmente l&#39;unico ambiente supportato per il servizio query nei notebook.
 
-3. Nella barra di selezione a sinistra, fai clic sull&#39;icona **Dati** e fai doppio clic sulla directory **Set** dati per elencare tutti i set di dati.
+3. Nella barra di selezione a sinistra, fate clic sull&#39; **[!UICONTROL Data]** icona e fate doppio clic sulla **[!UICONTROL Datasets]** directory per elencare tutti i set di dati.
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. Trovate un set di dati di Adobe Analytics da esplorare e fate clic con il pulsante destro del mouse sull&#39;elenco, fate clic su Dati **query nel blocco appunti** per generare query SQL nel blocco appunti vuoto.
+4. Trova un set di dati di Adobe Analytics da esplorare e fai clic con il pulsante destro del mouse sull&#39;elenco, quindi fai clic **[!UICONTROL Query Data in Notebook]** per generare query SQL nel blocco appunti vuoto.
 
 5. Fare clic sulla prima cella generata contenente la funzione `qs_connect()` ed eseguirla facendo clic sul pulsante di riproduzione. Questa funzione crea una connessione tra l&#39;istanza del blocco appunti e il servizio di query.
 
@@ -93,17 +84,17 @@ Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prer
    - `target_day` : Giorno specifico da cui provengono i dati di destinazione.
    >[!NOTE] Potete modificare questi valori in qualsiasi momento. In questo modo, accertatevi di eseguire la cella delle variabili per le modifiche da applicare.
 
-## Query dei dati
+## Query dei dati {#query-your-data}
 
-Immettere le seguenti query SQL nelle singole celle del blocco appunti. Per eseguire una query, fare clic sulla cella corrispondente, quindi fare clic sul pulsante di **riproduzione** . I risultati delle query o i registri degli errori vengono visualizzati sotto la cella eseguita.
+Immettere le seguenti query SQL nelle singole celle del blocco appunti. Per eseguire una query, fare clic sulla cella corrispondente, quindi fare clic sul **[!UICONTROL play]** pulsante. I risultati delle query o i registri degli errori vengono visualizzati sotto la cella eseguita.
 
-Quando un blocco appunti è inattivo per un periodo di tempo prolungato, la connessione tra il blocco appunti e il servizio query potrebbe interrompersi. In questi casi, riavviare JupyterLab facendo clic sul pulsante **Power** situato nell&#39;angolo superiore destro.
+Quando un blocco appunti è inattivo per un periodo di tempo prolungato, la connessione tra il blocco appunti e il servizio query potrebbe interrompersi. In questi casi, riavviare JupyterLab facendo clic sul **[!UICONTROL Power]** pulsante situato nell&#39;angolo superiore destro.
 
 ![](../images/jupyterlab/query/restart_button.png)
 
-Il kernel del notebook verrà reimpostato, ma le celle rimarranno, rieseguire **tutte** le celle per continuare dove si era lasciato.
+Il kernel del notebook verrà reimpostato ma le celle rimarranno, rieseguire **[!UICONTROL all]** le celle per continuare dove si era lasciato.
 
-### Conteggio orario dei visitatori
+### Conteggio orario dei visitatori {#hourly-visitor-count}
 
 La seguente query restituisce il conteggio orario dei visitatori per una data specificata:
 
@@ -144,7 +135,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-### Conteggio attività orario
+### Conteggio attività orario {#hourly-activity-count}
 
 La seguente query restituisce il conteggio delle azioni orarie per una data specificata:
 
@@ -195,7 +186,7 @@ Se si esegue la query modificata, i risultati vengono memorizzati `hourly_action
 hourly_actions_date_rage.head()
 ```
 
-### Numero di eventi per sessione visitatore
+### Numero di eventi per sessione visitatore {#number-of-events-per-visitor-session}
 
 La seguente query restituisce il numero di eventi per sessione visitatore per una data specificata:
 
@@ -230,7 +221,7 @@ fig = go.Figure(data = data, layout = layout)
 iplot(fig)
 ```
 
-### Pagine popolari per un dato giorno
+### Pagine popolari per un dato giorno {#popular-pages-for-a-given-day}
 
 La seguente query restituisce le dieci pagine più popolari per una data specificata:
 
@@ -249,7 +240,7 @@ ORDER  BY page_views DESC
 LIMIT  10;
 ```
 
-### Utenti attivi per un dato giorno
+### Utenti attivi per un dato giorno {#active-users-for-a-given-day}
 
 La seguente query restituisce i dieci utenti più attivi per una data specificata:
 
@@ -268,7 +259,7 @@ ORDER  BY Count DESC
 LIMIT  10;
 ```
 
-### Città attive per attività utente
+### Città attive per attività utente {#active-cities-by-user-activity}
 
 La seguente query restituisce le dieci città che stanno generando la maggior parte delle attività utente per una data specificata:
 
