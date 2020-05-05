@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare una ricetta utilizzando i notebook Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
 
 ---
 
@@ -22,7 +22,7 @@ Questa esercitazione si sovrappone a due sezioni principali. Innanzitutto, si cr
 
 ## Introduzione all&#39;ambiente notebook JupyterLab
 
-La creazione di una ricetta da zero può essere realizzata in Data Science Workspace. Per iniziare, vai ad [Adobe Experience Platform](https://platform.adobe.com) e fai clic sulla scheda Modelli **** ML a sinistra per accedere a Data Science Workspace. Da qui, fate clic sulla sottoscheda **Notebook** e, nella schermata iniziale di Jupyterlab, create un nuovo blocco appunti selezionando il modello di Generatore di ricette.
+La creazione di una ricetta da zero può essere realizzata in Data Science Workspace. Per iniziare, vai ad [Adobe Experience Platform](https://platform.adobe.com) e fai clic sulla **[!UICONTROL Notebooks]** scheda a sinistra. Per creare un nuovo notebook, selezionate il modello di Generatore di ricette dal modulo di avvio JupyterLab.
 
 Il notebook Recipe Builder consente di eseguire corsi di formazione e punteggio all&#39;interno del notebook. Questo vi offre la flessibilità di apportare modifiche ai loro `train()` e `score()` metodi tra l&#39;esecuzione di esperimenti sui dati di formazione e punteggio. Una volta soddisfatti i risultati della formazione e del punteggio, è possibile creare una ricetta da utilizzare in Data Science Workspace utilizzando il notebook per la funzionalità di ricetta integrata nel notebook Recipe Builder.
 
@@ -405,7 +405,7 @@ Tenere presente che la funzione restituisce un `metric` oggetto contenente un ar
 
 ### File Data Saver {#data-saver-file}
 
-Il `datasaver.py` file contiene la `save()` funzione per salvare la previsione durante il test del punteggio. La `save()` funzione prende la previsione e utilizza le API del catalogo della piattaforma di esperienza, scrive i dati nel `scoringResultsDataSetId` `scoring.conf` file specificato.
+Il `datasaver.py` file contiene la `save()` funzione per salvare la previsione durante il test del punteggio. La `save()` funzione prende la previsione e utilizza le API del catalogo della piattaforma di esperienza, scrive i dati nel `scoringResultsDataSetId` file specificato nel `scoring.conf` file.
 
 L&#39;esempio utilizzato nella ricetta di esempio per le vendite al dettaglio è riportato di seguito. Prendete nota dell&#39;utilizzo della `DataSetWriter` libreria per scrivere dati su Platform:
 
