@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Ricetta di vendita al dettaglio
 topic: overview
 translation-type: tm+mt
-source-git-commit: f548fb6431b7bc71c205a2b2b7ca3884e57340b1
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -53,7 +53,7 @@ Questa ricetta utilizza gli schemi [](../../xdm/schema/field-dictionary.md) XDM 
 
 ## Algoritmo
 
-Innanzitutto, viene caricato il dataset di formazione nello schema **DSWRetailSales** . Da qui, il modello viene addestrato utilizzando un algoritmo [di regressione con](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)gradiente. Il miglioramento della sfumatura utilizza l&#39;idea che gli utenti in formazione deboli (almeno leggermente migliori delle possibilità casuali) possano formare una serie di studenti focalizzati sul miglioramento delle debolezze degli studenti precedenti. Insieme, possono essere utilizzati per creare un potente modello predittivo.
+Innanzitutto, viene caricato il dataset di formazione nello schema *DSWRetailSales* . Da qui, il modello viene addestrato utilizzando un algoritmo [di regressione con](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)gradiente. Il miglioramento della sfumatura utilizza l&#39;idea che gli utenti in formazione deboli (almeno leggermente migliori delle possibilità casuali) possano formare una serie di studenti focalizzati sul miglioramento delle debolezze degli studenti precedenti. Insieme, possono essere utilizzati per creare un potente modello predittivo.
 
 Il processo comprende tre elementi: una funzione di perdita, uno studente debole e un modello additivo.
 
