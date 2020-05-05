@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Configurazione di un'istanza dell'AI cliente
 topic: Instance creation
 translation-type: tm+mt
-source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
+source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ---
 
@@ -49,7 +49,7 @@ Fare clic **[!UICONTROL Enter Field Name]** e selezionare un campo dall&#39;elen
 
 ![](../images/user-guide/goal.png)
 
-### Configurare una pianificazione *(facoltativo)*{#configure-a-schedule}
+### Configurare una pianificazione *(facoltativo)* {#configure-a-schedule}
 
 Viene visualizzato il passaggio *avanzato* . Questo passaggio facoltativo consente di configurare una pianificazione per l&#39;automazione delle esecuzioni di previsione, definire esclusioni di previsione per filtrare determinati eventi, oppure fare clic su **[!UICONTROL Finish]** se non è necessario nulla.
 
@@ -76,4 +76,10 @@ Seguendo questa sezione, hai configurato un&#39;istanza dell&#39;AI cliente ed �
 ## Passaggi successivi {#next-steps}
 
 Seguendo questa esercitazione, hai configurato con successo un&#39;istanza di AI del cliente e generato valutazioni di propensione. Ora puoi scegliere di utilizzare il generatore di segmenti per [creare segmenti di clienti con punteggi](./create-segment.md) previsti o per [scoprire informazioni approfondite con l&#39;API](./discover-insights.md)cliente.
+
+## Risorse aggiuntive
+
+Il seguente video è stato progettato per aiutarti a comprendere il flusso di lavoro di configurazione per l&#39;AI cliente. Inoltre, vengono fornite le best practice e gli esempi di casi di utilizzo.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)
 
