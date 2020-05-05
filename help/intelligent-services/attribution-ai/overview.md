@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica di AI per attribuzione
 topic: Attribution AI
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ---
 
@@ -22,6 +22,10 @@ Le uscite AI di attribuzione possono essere suddivise in diverse dimensioni e ut
 I dati AI di attribuzione possono provenire da origini dati Adobe (ad esempio Analytics) o non Adobe.
 
 L&#39;AI di attribuzione supporta due categorie di punteggi, algoritmici e basati su regole. I punteggi algoritmici includono punteggi incrementali e influenzati. I punteggi basati su regole includono Primo tocco, Ultimo tocco, Lineare, A forma di U e Time-Decay.
+
+Il seguente video è stato progettato per consentire agli utenti di comprendere meglio l’attribuzione AI.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32667?learn=on&quality=12)
 
 ## Valutazioni algoritmiche AI di attribuzione
 
