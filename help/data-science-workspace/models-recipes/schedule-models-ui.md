@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Pianificazione di un modello (interfaccia utente)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -28,13 +28,13 @@ Questa esercitazione richiede un servizio esistente. Se non disponete di un serv
 
 Il punteggio del modello può essere configurato in modo da essere automatizzato su base programmata. Una volta creato il servizio, puoi seguire i passaggi descritti di seguito per configurare e applicare una pianificazione del punteggio:
 
-1. In Adobe Experience Platform, fai clic sulla scheda **Servizi** presente nella colonna di navigazione a sinistra per accedere a *Service Gallery*. Individua il servizio su cui desideri pianificare le esecuzioni dei punteggi e fai clic su **Apri** per visualizzare la relativa pagina *Panoramica* .
+1. In Adobe Experience Platform, fai clic sulla **[!UICONTROL Services]** scheda situata nella colonna di navigazione a sinistra per accedere alla *Galleria* dei servizi. Trova il servizio su cui desideri pianificare le esecuzioni dei punteggi e fai clic **[!UICONTROL Open]** per visualizzarne la pagina *Panoramica* .
    ![](../images/models-recipes/schedule/click_to_open.png)
 
-2. Nella pagina Panoramica sono visualizzate le informazioni relative al punteggio del servizio. Fate clic sul collegamento **Aggiorna pianificazione** per configurare una pianificazione del punteggio.
+2. Nella pagina Panoramica sono visualizzate le informazioni relative al punteggio del servizio. Fate clic sul **[!UICONTROL Update Schedule]** collegamento per configurare una pianificazione del punteggio.
    ![](../images/models-recipes/schedule/service_overview_score.png)
 
-3. Configura la frequenza, la data di inizio, la data di fine, il dataset di input e il dataset di output per la pianificazione del punteggio. Una volta completate le configurazioni, fate clic su **Crea** per aggiornare la pianificazione del punteggio del Servizio.
+3. Configura la frequenza, la data di inizio, la data di fine, il dataset di input e il dataset di output per la pianificazione del punteggio. Una volta completate le configurazioni, fare clic su **[!UICONTROL Create]** per aggiornare la pianificazione del punteggio del Servizio.
    ![](../images/models-recipes/schedule/14_configure_scoring_schedule.png)
 
 4. La pianificazione aggiornata del punteggio viene visualizzata nella pagina *Panoramica* del servizio.
@@ -47,13 +47,13 @@ La configurazione delle esecuzioni di formazione pianificate su un servizio assi
 
 Una volta creato il servizio, potete seguire i passaggi descritti di seguito per configurare e applicare un programma di formazione:
 
-1. In Adobe Experience Platform, fai clic sulla scheda **Servizi** presente nella colonna di navigazione a sinistra per accedere a *Service Gallery*. Individuate il servizio sul quale desiderate pianificare le esecuzioni di formazione e fate clic su **Apri** per visualizzarne la pagina *Panoramica* .
+1. In Adobe Experience Platform, fai clic sulla **[!UICONTROL Services]** scheda situata nella colonna di navigazione a sinistra per accedere alla *Galleria* dei servizi. Individuate il servizio sul quale desiderate pianificare l&#39;esecuzione della formazione e fate clic **[!UICONTROL Open]** per visualizzarne la pagina *Panoramica* .
    ![](../images/models-recipes/schedule/click_to_open.png)
 
-2. Nella pagina Panoramica sono visualizzate le informazioni di formazione del Servizio. Fate clic sul collegamento **Aggiorna pianificazione** per configurare una pianificazione della formazione.
+2. Nella pagina Panoramica sono visualizzate le informazioni di formazione del Servizio. Fate clic sul **[!UICONTROL Update Schedule]** collegamento per configurare una pianificazione della formazione.
    ![](../images/models-recipes/schedule/service_overview_train.png)
 
-3. Configurate la frequenza, la data di inizio, la data di fine e il set di dati di input utilizzati per la pianificazione della formazione. Una volta completate le configurazioni, fate clic su **Crea** per aggiornare la pianificazione della formazione del Servizio.
+3. Configurate la frequenza, la data di inizio, la data di fine e il set di dati di input utilizzati per la pianificazione della formazione. Una volta completate le configurazioni, fate clic su **[!UICONTROL Create]** per aggiornare la pianificazione della formazione del Servizio.
    ![](../images/models-recipes/schedule/12_configure_training_schedule.png)
 
 4. La pianificazione della formazione aggiornata viene visualizzata nella pagina *Panoramica* del servizio.
