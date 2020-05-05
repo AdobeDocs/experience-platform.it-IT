@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Arricchisci il profilo cliente in tempo reale con informazioni approfondite sull'apprendimento automatico
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -38,37 +38,37 @@ Il primo passo verso l&#39;arricchimento del profilo cliente in tempo reale con 
 
 La composizione di uno schema inizia con l&#39;assegnazione di una classe. Le classi definiscono gli aspetti comportamentali dei dati che lo schema conterrà (record o serie temporali). Questa sezione fornisce istruzioni di base per creare uno schema utilizzando il generatore di schemi. Per un&#39;esercitazione più dettagliata, fare riferimento all&#39;esercitazione sulla [creazione di uno schema con l&#39;Editor](../../xdm/tutorials/create-schema-ui.md)di schema.
 
-1. In Adobe Experience Platform, fai clic sulla scheda **Schema** per accedere al browser dello schema. Fare clic su **Crea schema** per accedere all&#39;Editor **schema, dove è possibile creare e creare schemi in modo interattivo.
+1. In Adobe Experience Platform, fai clic sulla **[!UICONTROL Schema]** scheda per accedere al browser dello schema. Fare clic **[!UICONTROL Create Schema]** per accedere all&#39;Editor **schema, in cui è possibile creare e creare schemi in modo interattivo.
    ![](../images/models-recipes/enrich-rtcdp/schema_browser.png)
 
-2. Nella finestra *Composizione* , fate clic su **Assegna** per esplorare le classi disponibili.
-   * Per assegnare una classe esistente, fare clic sulla classe desiderata ed evidenziarla, quindi fare clic su **Assegna classe**.
+2. Nella finestra *Composizione* , fate clic **[!UICONTROL Assign]** per esplorare le classi disponibili.
+   * Per assegnare una classe esistente, fate clic sulla classe desiderata ed evidenziatela, quindi fate clic su **[!UICONTROL Assign Class]**.
       ![](../images/models-recipes/enrich-rtcdp/existing_class.png)
 
-   * Per creare una classe personalizzata, fate clic su **Crea nuova classe** disponibile accanto al centro nella parte superiore della finestra del browser. Immettete un nome di classe, una descrizione e scegliete il comportamento della classe. Al termine, fate clic su **Assegna classe** .
+   * Per creare una classe personalizzata, fate clic **[!UICONTROL Create New Class]** sul pulsante situato nella parte centrale della finestra del browser. Immettete un nome di classe, una descrizione e scegliete il comportamento della classe. Fate clic **[!UICONTROL Assign Class]** una volta terminato.
       ![](../images/models-recipes/enrich-rtcdp/create_new_class.png)
    A questo punto, la struttura dello schema deve contenere alcuni campi di classe ed è possibile assegnare i mixin. Un mixin è un gruppo di uno o più campi che descrivono un concetto particolare.
 
-3. Nella finestra *Composizione* , fate clic su **Aggiungi** nella sottosezione *Mixins* .
-   * Per assegnare un mixin esistente, fate clic ed evidenziate il mixin desiderato, quindi fate clic su **Aggiungi mixin**. A differenza delle classi, è possibile assegnare più mixin a un singolo schema, purché sia appropriato.
+3. Nella finestra *Composizione* , fate clic **[!UICONTROL Add]** nella sottosezione *Mixins* .
+   * Per assegnare un mixin esistente, fate clic ed evidenziate il mixin desiderato, quindi fate clic **[!UICONTROL Add Mixin]**. A differenza delle classi, è possibile assegnare più mixin a un singolo schema, purché sia appropriato.
       ![](../images/models-recipes/enrich-rtcdp/existing_mixin.png)
 
-   * Per creare un nuovo mixin, fate clic su **Create New Mixin (Crea nuovo mixin** ) vicino al centro nella parte superiore della finestra del browser. Al termine, specificate un nome e una descrizione per il mixin, quindi fate clic su **Assegna mixin** .
+   * Per creare un nuovo mixin, fate clic **[!UICONTROL Create New Mixin]** sul pulsante situato nella parte centrale della finestra del browser. Inserisci un nome e una descrizione per il mixin, quindi fai clic **[!UICONTROL Assign Mixin]** una volta terminato.
       ![](../images/models-recipes/enrich-rtcdp/create_new_mixin.png)
 
-   * Per aggiungere campi mixin, fate clic sul nome del mixin nella finestra *Composizione* . Verrà quindi fornita l&#39;opzione per aggiungere campi mixin facendo clic su **Aggiungi campo** nella finestra *Struttura* . Assicurarsi di fornire le proprietà di mixin di conseguenza.
+   * Per aggiungere campi mixin, fate clic sul nome del mixin nella finestra *Composizione* . Viene quindi fornita l’opzione per aggiungere campi mixin facendo clic **[!UICONTROL Add Field]** nella finestra *Struttura* . Assicurarsi di fornire le proprietà di mixin di conseguenza.
       ![](../images/models-recipes/enrich-rtcdp/mixin_properties.png)
 
-4. Dopo aver creato lo schema, fare clic sul campo di livello superiore dello schema all&#39;interno della finestra *Struttura* per visualizzare le proprietà dello schema nella finestra delle proprietà a destra. Immettete un nome e una descrizione, quindi fate clic su **Salva** per creare lo schema.
+4. Dopo aver creato lo schema, fare clic sul campo di livello superiore dello schema all&#39;interno della finestra *Struttura* per visualizzare le proprietà dello schema nella finestra delle proprietà a destra. Specificare un nome e una descrizione, quindi fare clic **[!UICONTROL Save]** per creare lo schema.
    ![](../images/models-recipes/enrich-rtcdp/save_schema.png)
 
-5. Crea un set di dati di output utilizzando lo schema appena creato facendo clic su **Set** di dati dalla colonna di navigazione a sinistra, quindi fai clic su **Crea set di dati**. Nella schermata successiva, scegliete **Crea set di dati dallo schema**.
+5. Crea un set di dati di output utilizzando lo schema appena creato facendo clic **[!UICONTROL Datasets]** dalla colonna di navigazione a sinistra, quindi fai clic su **[!UICONTROL Create dataset]**. Nella schermata successiva, scegliete **[!UICONTROL Create dataset from schema]**.
    ![](../images/models-recipes/enrich-rtcdp/dataset_overview.png)
 
-6. Utilizzando il browser dello schema, individuare e selezionare lo schema appena creato, quindi fare clic su **Avanti**.
+6. Utilizzando il browser dello schema, individuare e selezionare lo schema appena creato, quindi fare clic **[!UICONTROL Next]**.
    ![](../images/models-recipes/enrich-rtcdp/choose_schema.png)
 
-7. Immettete un nome e una descrizione facoltativa, quindi fate clic su **Fine** per creare il set di dati.
+7. Immettete un nome e una descrizione facoltativa, quindi fate clic **[!UICONTROL Finish]** per creare il set di dati.
    ![](../images/models-recipes/enrich-rtcdp/configure_dataset.png)
 
 Ora che è stato creato un set di dati dello schema di output, è possibile continuare fino alla sezione successiva per configurarlo e abilitarlo per l&#39;arricchimento del profilo.
@@ -83,16 +83,16 @@ Prima di abilitare un dataset per il profilo, è necessario configurare lo schem
 2. Espandere la struttura dello schema e trovare un campo appropriato da impostare come identificatore principale. Fate clic sul campo desiderato per visualizzarne le proprietà.
    ![](../images/models-recipes/enrich-rtcdp/schema_structure.png)
 
-3. Impostare il campo come identità principale abilitando la proprietà **Identità** del campo, la proprietà Identità **** principale, quindi selezionando uno spazio dei nomi **** identità appropriato. Fate clic su **Applica** dopo aver apportato le modifiche.
+3. Impostare il campo come identità principale abilitando la **[!UICONTROL Identity]** proprietà, la **[!UICONTROL Primary Identity]** proprietà del campo e selezionando quindi un&#39; **[!UICONTROL Identity Namespace]** opzione appropriata. Fate clic su **[!UICONTROL Apply]** una volta apportate le modifiche.
    ![](../images/models-recipes/enrich-rtcdp/set_identity.png)
 
-4. Fare clic sull&#39;oggetto di primo livello della struttura dello schema per visualizzare le proprietà dello schema e attivare lo schema per Profilo attivando lo switch **Profilo** . Fai clic su **Salva** per finalizzare le modifiche. È ora possibile abilitare per il profilo il set di dati creato con questo schema.
+4. Fare clic sull&#39;oggetto di primo livello della struttura dello schema per visualizzare le proprietà dello schema e attivare lo schema per Profile attivando il **[!UICONTROL Profile]** passaggio. Fare clic **[!UICONTROL Save]** per finalizzare le modifiche. È ora possibile abilitare il set di dati creato con questo schema per il profilo.
    ![](../images/models-recipes/enrich-rtcdp/enable_schema.png)
 
 5. Utilizzate il browser del set di dati per trovare il set di dati su cui desiderate abilitare il profilo e fate clic sul suo nome per accedere ai relativi dettagli.
    ![](../images/models-recipes/enrich-rtcdp/datasets.png)
 
-6. Attivate il set di dati per il profilo attivando lo switch **Profilo** presente nella colonna delle informazioni corrette.
+6. Attiva il set di dati per il profilo attivando lo **[!UICONTROL Profile]** switch trovato nella colonna delle informazioni corrette.
    ![](../images/models-recipes/enrich-rtcdp/enable_dataset.png)
 
 Quando i dati vengono trasferiti in un dataset abilitato per il profilo, gli stessi dati vengono anche assimilati come record di profilo. Ora che lo schema e il set di dati sono preparati, genera alcuni dati nel dataset eseguendo l&#39;esecuzione del punteggio utilizzando un modello appropriato, quindi continua con questa esercitazione per creare segmenti di approfondimento utilizzando Segment Builder (Generatore di segmenti).
@@ -101,7 +101,7 @@ Quando i dati vengono trasferiti in un dataset abilitato per il profilo, gli ste
 
 Ora che hai generato e acquisito informazioni approfondite nel set di dati abilitato per il profilo, puoi gestire tali dati identificando sottoinsiemi di elementi correlati tramite Segment Builder (Generatore di segmenti). Segui i passaggi indicati di seguito per creare i tuoi segmenti.
 
-1. In Adobe Experience Platform, fai clic sulla scheda **Segmenti** , seguita da **Crea segmento** per accedere al Generatore di segmenti.
+1. In Adobe Experience Platform, fai clic sulla **[!UICONTROL Segments]** scheda seguita da **[!UICONTROL Create Segment]** per accedere al Generatore di segmenti.
    ![](../images/models-recipes/enrich-rtcdp/segments_overview.png)
 
 2. In Segment Builder (Generatore di segmenti), la barra a sinistra consente di accedere ai blocchi di generazione principali dei segmenti: attributi, eventi e segmenti esistenti. Ciascun blocco predefinito viene visualizzato nella relativa scheda. Seleziona la classe alla quale si estende lo schema abilitato per il profilo, quindi individua e individua i blocchi di generazione per il segmento.
@@ -113,7 +113,7 @@ Ora che hai generato e acquisito informazioni approfondite nel set di dati abili
 4. Durante la creazione del segmento potete visualizzare in anteprima i risultati stimati del segmento osservando il pannello Proprietà ** segmento.
    ![](../images/models-recipes/enrich-rtcdp/preview_segment.gif)
 
-5. Seleziona un criterio **di** unione appropriato, specifica un nome e una descrizione facoltativa, quindi fai clic su **Salva** per completare il nuovo segmento.
+5. Seleziona un nome appropriato **[!UICONTROL Merge Policy]**, specifica un nome e una descrizione facoltativa, quindi fai clic **[!UICONTROL Save]** per completare il nuovo segmento.
    ![](../images/models-recipes/enrich-rtcdp/save_segment.png)
 
 
