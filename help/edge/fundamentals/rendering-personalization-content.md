@@ -4,22 +4,26 @@ seo-title: Adobe Experience Platform Web SDK Rendering del contenuto personalizz
 description: Scopri come eseguire il rendering del contenuto personalizzato con l’SDK Web della piattaforma Experience
 seo-description: Scopri come eseguire il rendering del contenuto personalizzato con l’SDK Web della piattaforma Experience
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: bb3841da8a566105fde1b7ac78dccd79a7ea15d4
 
 ---
 
 
-# (Beta) Rendering di contenuti personalizzati
+# (Beta) Panoramica delle opzioni di personalizzazione
 
 >[!IMPORTANT]
 >
 >L’SDK Web per Adobe Experience Platform è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e la funzionalità sono soggette a modifiche.
 
-L’SDK esegue automaticamente il rendering del contenuto personalizzato quando si invia un evento al server e si imposta `viewStart` come opzione `true` sull’evento.
+L’SDK Web di Adobe Experience Platform supporta l’esecuzione di query sulle soluzioni di personalizzazione in Adobe, incluso Adobe Target. Esistono due modalità di personalizzazione: recupero del contenuto che può essere rappresentato automaticamente e del contenuto di cui lo sviluppatore deve eseguire il rendering. L’SDK fornisce inoltre le strutture per [gestire lo sfarfallio](managing-flicker.md).
+
+## Rendering automatico del contenuto
+
+L’SDK esegue automaticamente il rendering del contenuto personalizzato quando si invia un evento al server e si imposta `renderDecisions` come opzione `true` sull’evento.
 
 ```javascript
 alloy("event", {
-  "viewStart": true,
+  "renderDecisions": true,
   "xdm": {
     "commerce": {
       "order": {
@@ -35,66 +39,61 @@ alloy("event", {
 
 Il rendering del contenuto personalizzato è asincrono, pertanto non dovrebbe essere previsto se una particolare parte del contenuto fa parte della pagina.
 
-## Gestione dello sfarfallio
+## Rendering manuale del contenuto
 
-Quando si tenta di eseguire il rendering del contenuto di personalizzazione, l’SDK deve assicurarsi che non vi siano sfarfallii. Flicker, detto anche FOOC (Flash of Original Content), è quando un contenuto originale viene visualizzato brevemente prima che l’alternativa venga visualizzata durante il test o la personalizzazione. L’SDK tenta di applicare stili CSS agli elementi della pagina per assicurarsi che tali elementi siano nascosti finché il rendering del contenuto di personalizzazione non viene eseguito correttamente.
+È possibile richiedere la restituzione dell&#39;elenco di decisioni come promessa sul `event` comando utilizzando `scopes`. Un ambito è una stringa che consente alla soluzione di personalizzazione di sapere quale decisione si desidera prendere.
 
-La funzionalità di gestione dello sfarfallio prevede alcune fasi:
-
-1. Verifica preliminare
-1. Pre-elaborazione
-1. Rendering
-
-### Verifica preliminare
-
-Durante la fase di predisattivazione, l’SDK utilizza l’opzione di `prehidingStyle` configurazione per creare un tag di stile HTML e aggiungerlo al DOM per assicurarsi che parti grandi della pagina siano nascoste. Se non sei sicuro di quali parti della pagina saranno personalizzate, si consiglia di impostare `prehidingStyle` su `body { opacity: 0 !important }`. In questo modo l’intera pagina viene nascosta. Questo, tuttavia, comporta un peggioramento delle prestazioni di rendering della pagina segnalate da strumenti come Lighthouse, Web Page Test, ecc. Per ottenere le migliori prestazioni di rendering della pagina, si consiglia di impostare `prehidingStyle` un elenco di elementi contenitore che contengono le parti della pagina che verranno personalizzate.
-
-Presupponendo di disporre di una pagina HTML come quella riportata di seguito e sapendo che solo gli elementi `bar` e `bazz` contenitori saranno mai personalizzati:
-
-```html
-<html>
-  <head>
-  </head>
-  <body>
-    <div id="foo">
-      Foo foo foo
-    </div>
-
-    <div id="bar">
-      Bar bar bar
-    </div>
-
-    <div id="bazz">
-      Bazz bazz bazz
-    </div>
-  </body>
-</html>
+```javascript
+alloy("event",{
+    xdm:{...},
+    scopes:['demo-1', 'demo-2']
+  }).then(function(result){
+    if (result.decisions){
+      //do something with the decisions
+    }
+  })
 ```
 
-Allora `prehidingStyle` dovrebbe essere impostato su qualcosa come `#bar, #bazz { opacity: 0 !important }`.
+Questo restituirà un elenco di decisioni come oggetto JSON per ogni decisione.
 
-### Pre-elaborazione
-
-La fase di preelaborazione inizia quando l’SDK riceve il contenuto personalizzato dal server. Durante questa fase, la risposta viene preelaborata, verificando che gli elementi che devono contenere contenuti personalizzati siano nascosti. Una volta nascosti questi elementi, il tag di stile HTML creato in base all&#39;opzione di `prehidingStyle` configurazione viene rimosso e vengono visualizzati il corpo HTML o gli elementi contenitori nascosti.
-
-### Rendering
-
-Dopo che il rendering di tutto il contenuto di personalizzazione è stato eseguito correttamente, o in caso di errore, vengono visualizzati tutti gli elementi precedentemente nascosti per essere certi che non ci siano elementi nascosti sulla pagina che erano nascosti dall’SDK.
-
-## Gestione dello sfarfallio quando l’SDK viene caricato in modo asincrono
-
-Si consiglia di caricare sempre l&#39;SDK in modo asincrono per ottenere le migliori prestazioni di rendering delle pagine. Tuttavia, questo ha alcune implicazioni per il rendering di contenuti personalizzati. Quando l’SDK viene caricato in modo asincrono, è necessario utilizzare lo snippet di pregenerazione. Lo snippet di pregenerazione deve essere aggiunto prima dell’SDK nella pagina HTML. Di seguito è riportato un frammento di esempio che nasconde l’intero corpo:
-
-```html
-<script>
-  !function(e,a,n,t){
-    if (a) return;
-    var i=e.head;if(i){
-    var o=e.createElement("style");
-    o.id="alloy-prehiding",o.innerText=n,i.appendChild(o),
-    setTimeout(function(){o.parentNode&&o.parentNode.removeChild(o)},t)}}
-    (document, document.location.href.indexOf("mboxEdit") !== -1, "body { opacity: 0 !important }", 3000);
-</script>
+```javascript
+{
+  "decisions": [
+    {
+      "id": "TNT:123456:0",
+      "scope": "demo-1",
+      "items": [
+        {
+          "schema": "https://ns.adobe.com/personalization/html-content-item",
+          "data": {
+            "id": "11223344",
+            "content": "<h2 style=\"color: yellow\">Scoped Decision for location \"alloy-location-1\"</h2>"
+          }
+        }
+      ]
+    },
+    {
+      "id": "TNT:654321:1",
+      "scope": "demo-2",
+      "items": [
+        {
+          "schema": "https://ns.adobe.com/personalization/json-content-item",
+          "data": {
+            "id": "4433221",
+            "content": {
+              "name":"Scoped decision in JSON"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
 ```
 
-Per garantire che il corpo HTML o gli elementi contenitore non siano nascosti per un periodo di tempo prolungato, lo snippet di pregenerazione utilizza un timer che per impostazione predefinita rimuove lo snippet dopo `3000` millisecondi. Il tempo di attesa massimo `3000` in millisecondi. Se la risposta dal server è stata ricevuta ed elaborata prima, il tag di stile HTML di pre-nascondere viene rimosso il prima possibile.
+{info}Se utilizzi gli ambiti di Target per diventare mBox sul server, solo queste sono tutte richieste allo stesso tempo anziché singolarmente. La mbox globale viene sempre inviata.
+{info}
+
+### Recupera contenuto automatico
+
+Se si desidera che il modulo `result.decisions` includa le decisioni di rendering automatico, è possibile impostare `renderDecisions` su false e includere l&#39;ambito speciale `__view__`
