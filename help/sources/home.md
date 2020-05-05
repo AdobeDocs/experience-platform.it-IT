@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica sui connettori sorgente della piattaforma Adobe Experience
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8ee88b27c79610827ff2627999e303b5fc43e1c6
+source-git-commit: b58b933fce9d1abe658a908ec07f390e4991c5c6
 
 ---
 
@@ -65,6 +65,7 @@ Experience Platform supporta l’acquisizione di dati da un’applicazione di su
 Experience Platform supporta l’acquisizione di dati da un database di terze parti. Per ulteriori informazioni su connettori sorgente specifici, consultate i seguenti documenti correlati:
 
 - [Connettore Amazon Redshift](connectors/databases/redshift.md)
+- [Connettore Apache Cassandra](connectors/databases/cassandra.md)
 - [Apache Hive sul connettore Azure HDInsights](connectors/databases/hive.md)
 - [Apache Spark sul connettore Azure HDInsights](connectors/databases/spark.md)
 - [Connettore Azure Data Explorer](connectors/databases/data-explorer.md)
