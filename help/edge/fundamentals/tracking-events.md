@@ -4,7 +4,7 @@ seo-title: Tracciamento degli eventi SDK Web per Adobe Experience Platform
 description: Scopri come tenere traccia degli eventi SDK Web per la piattaforma Experience
 seo-description: Scopri come tenere traccia degli eventi SDK Web per la piattaforma Experience
 translation-type: tm+mt
-source-git-commit: 45ee1f79ac5953b7c407083b4352b2c751e8aec9
+source-git-commit: c49ac064d310fbe12e19d58b80c2267a35d585e8
 
 ---
 
@@ -81,35 +81,6 @@ alloy("event", {
 });
 ```
 
-### Avvio di una visualizzazione
-
-Una volta avviata la visualizzazione, è importante inviare una notifica all’SDK impostando `viewStart` l’opzione all’ `true` interno del `event` comando. Ciò indica, tra l’altro, che l’SDK deve recuperare e rendere il contenuto personalizzato. Anche se al momento non utilizzate la personalizzazione, semplifica notevolmente l&#39;abilitazione della personalizzazione o di altre funzioni in un secondo momento, perché non sarà necessario modificare il codice sulla pagina. Inoltre, il tracciamento delle viste è utile quando si visualizzano i report di analisi dopo la raccolta dei dati.
-
-La definizione di una vista può dipendere dal contesto.
-
-* In un normale sito Web, ogni pagina Web viene generalmente considerata una visualizzazione univoca. In questo caso, un evento con `viewStart` impostato su `true` deve essere eseguito il prima possibile nella parte superiore della pagina.
-* In un&#39;applicazione a pagina singola \(SPA\), una vista è meno definita. In genere indica che l&#39;utente ha navigato all&#39;interno dell&#39;applicazione e che la maggior parte del contenuto è cambiata. Per coloro che hanno familiarità con le basi tecniche delle applicazioni a pagina singola, questo è tipicamente quando l&#39;applicazione carica un nuovo percorso. Ogni volta che un utente passa a una nuova vista, tuttavia si sceglie di definire una _vista_, `viewStart` deve essere eseguito un evento con impostato per `true` .
-
-L’evento con `viewStart` impostato su `true` è il meccanismo principale per inviare dati ad Adobe Experience Cloud e richiedere contenuti da Adobe Experience Cloud. È possibile iniziare una visualizzazione nel modo seguente:
-
-```javascript
-alloy("event", {
-  "viewStart": true,
-  "xdm": {
-    "commerce": {
-      "order": {
-        "purchaseID": "a8g784hjq1mnp3",
-        "purchaseOrderNumber": "VAU3123",
-        "currencyCode": "USD",
-        "priceTotal": 999.98
-      }
-    }
-  }
-});
-```
-
-Dopo l&#39;invio dei dati, il server risponde, tra l&#39;altro, con contenuti personalizzati. Questo contenuto personalizzato viene automaticamente visualizzato nella vista. I gestori di collegamenti vengono inoltre collegati automaticamente al contenuto della nuova visualizzazione.
-
 ## Utilizzo dell&#39;API sendBeacon
 
 Può essere difficile inviare i dati dell&#39;evento subito prima che l&#39;utente della pagina Web se ne vada. Se la richiesta richiede troppo tempo, il browser potrebbe annullare la richiesta. Alcuni browser hanno implementato un&#39;API standard Web chiamata `sendBeacon` per consentire una raccolta più semplice dei dati durante questo periodo. Quando si utilizza `sendBeacon`, il browser effettua la richiesta Web nel contesto di navigazione globale. Questo significa che il browser esegue la richiesta del beacon in background e non blocca la navigazione della pagina. Per comunicare all’SDK Web di Adobe Experience Platform di utilizzarlo `sendBeacon`, aggiungi l’opzione `"documentUnloading": true` al comando dell’evento.  Ecco un esempio:
@@ -138,7 +109,7 @@ Se desiderate gestire una risposta da un evento, potete ricevere una notifica di
 
 ```javascript
 alloy("event", {
-  "viewStart": true,
+  "renderDecisions": true,
   "xdm": {
     "commerce": {
       "order": {
@@ -149,7 +120,7 @@ alloy("event", {
       }
     }
   }
-}).then(function() {
+}).then(function(results) {
     // Tracking the event succeeded.
   })
   .catch(function(error) {
