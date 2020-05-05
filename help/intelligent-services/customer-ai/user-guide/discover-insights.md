@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Scopri informazioni approfondite con l'AI del cliente
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
+source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
 
 ---
 
@@ -122,3 +122,9 @@ Per visualizzare il nuovo segmento nell’interfaccia utente della piattaforma, 
 ## Passaggi successivi
 
 Questo documento descrive le informazioni fornite da un&#39;istanza del servizio Customer AI. Ora puoi continuare a seguire l&#39;esercitazione sul [download dei punteggi in Customer AI](./download-scores.md) o consultare le altre guide dei servizi [intelligenti di](../../home.md) Adobe disponibili.
+
+## Risorse aggiuntive
+
+Il seguente video illustra come utilizzare l&#39;API cliente per vedere l&#39;output dei modelli e dei fattori influenti.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32666?learn=on&quality=12)
