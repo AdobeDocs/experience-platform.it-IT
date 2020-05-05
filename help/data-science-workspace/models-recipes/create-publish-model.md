@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creazione e pubblicazione di un modello di machine learning
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 ---
 
@@ -53,9 +53,9 @@ Per creare un modello di machine learning che fornisca ai clienti raccomandazion
 
 ### Esplorare i dati e comprendere gli schemi
 
-1. Accedi ad [Adobe Experience Platform](https://platform.adobe.com/) e fai clic su **Set** di dati per elencare tutti i set di dati esistenti e selezionare il set di dati da esplorare. In questo caso, il set di dati di Analytics **Golden Data Set postValues**.
+1. Accedi ad [Adobe Experience Platform](https://platform.adobe.com/) e fai clic **[!UICONTROL Datasets]** per elencare tutti i set di dati esistenti e selezionare il set di dati da esplorare. In questo caso, il set di dati di Analytics **Golden Data Set postValues**.
    ![](../images/models-recipes/model-walkthrough/datasets_110.png)
-2. Selezionate **Anteprima set** di dati in alto a destra per esaminare i record di esempio, quindi fate clic su **Chiudi**.
+2. Seleziona **[!UICONTROL Preview Dataset]** vicino alla parte superiore destra per esaminare i record di esempio, quindi fai clic su **[!UICONTROL Close]**.
    ![](../images/models-recipes/model-walkthrough/golden_data_set_110.png)
 3. Selezionare il collegamento in Schema nella barra a destra per visualizzare lo schema per il dataset, quindi tornare alla pagina dei dettagli del dataset.&quot;
    ![](../images/models-recipes/model-walkthrough/golden_schema_110.png)
@@ -70,17 +70,17 @@ Gli altri set di dati sono stati precompilati con batch per la visualizzazione d
 
 ## Creazione del modello {#author-your-model}
 
-Il secondo componente del ciclo di vita di Data Science Workspace riguarda l’authoring di Ricette e Modelli. La ricetta di Recommendations prodotto è progettata per generare raccomandazioni di prodotto su scala utilizzando i dati di acquisto passati e l&#39;apprendimento automatico.
+Il secondo componente del ciclo di vita di Data Science Workspace riguarda l’authoring di Ricette e Modelli. La ricetta di Recommendations prodotto è progettata per generare raccomandazioni sui prodotti su larga scala utilizzando i dati di acquisto passati e l&#39;apprendimento automatico.
 
 Le entrate sono la base per un modello in quanto contengono algoritmi di machine learning e logica progettati per risolvere problemi specifici. Ancora più importante, le entrate consentono di democratizzare l&#39;apprendimento automatico all&#39;interno dell&#39;organizzazione, consentendo ad altri utenti di accedere a un Modello per diversi casi di utilizzo senza scrivere alcun codice.
 
 ### Esplora la ricetta delle raccomandazioni sui prodotti
 
-1. In Adobe Experience Platform, andate a **Modelli** dalla colonna di navigazione a sinistra, quindi fate clic su **Ricette** nella parte superiore per visualizzare un elenco di Ricette disponibili per la vostra organizzazione.
+1. In Adobe Experience Platform, andate **[!UICONTROL Models]** dalla colonna di navigazione a sinistra, quindi fate clic **[!UICONTROL Recipes]** in alto per visualizzare un elenco delle entrate disponibili per la vostra organizzazione.
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2. Individuate e aprite la ricetta **di Recommendations** fornita facendo clic sul suo nome.
+2. Individuate e aprite il file fornito **[!UICONTROL Recommendations Recipe]** facendo clic sul suo nome.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. Nella barra a destra, fate clic su **Recommendations Input Schema** (Schema di input di Recommendations) per visualizzare lo schema che anima la ricetta. I campi dello schema **itemId** e **userId** corrispondono a un prodotto acquistato (**interactiveType**) dal cliente in un momento specifico (**timestamp**). Seguire gli stessi passaggi per esaminare i campi per lo schema **di output di**Recommendations.
+3. Nella barra a destra, fate clic **[!UICONTROL Recommendations Input Schema]** per visualizzare lo schema che dà origine alla ricetta. I campi dello schema **[!UICONTROL itemId]** e **[!UICONTROL userId]** corrispondono a un prodotto acquistato (**[!UICONTROL interactionType]**) dal cliente in un momento (**[!UICONTROL timestamp]**) specifico. Seguire gli stessi passaggi per esaminare i campi per l&#39; **[!UICONTROL Recommendations Output Schema]**.
    ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
 
 Ora sono stati revisionati gli schemi di input e output richiesti da Product Recommendations Recipe. È ora possibile continuare con la sezione successiva per scoprire come creare, formare e valutare un modello di raccomandazioni sui prodotti.
@@ -93,13 +93,13 @@ Ora che i dati sono preparati e la Ricetta è pronta per essere utilizzata, è p
 
 Un modello è un&#39;istanza di una ricetta, che consente di addestrare e segnare con i dati in scala.
 
-1. In Adobe Experience Platform, andate a **Modelli** dalla colonna di navigazione a sinistra, quindi fate clic su **Ricette** nella parte superiore della pagina per visualizzare un elenco di tutte le ricette disponibili per la vostra organizzazione.
+1. In Adobe Experience Platform, andate **[!UICONTROL Models]** dalla colonna di navigazione a sinistra, quindi fate clic **[!UICONTROL Recipes]** nella parte superiore della pagina per visualizzare un elenco di tutte le entrate disponibili per la vostra organizzazione.
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2. Individuate e aprite la ricetta **** di Recommendations fornita facendo clic sul nome, entrando nella pagina di panoramica della ricetta. Fate clic su **Crea un modello** dal centro (se non sono presenti modelli) o dall&#39;alto a destra della pagina Panoramica ricetta.
+2. Individuate e aprite il file fornito **[!UICONTROL Recommendations Recipe]** facendo clic sul suo nome, entrando nella pagina di panoramica della ricetta. Fate clic **[!UICONTROL Create a Model]** dal centro (se non sono presenti modelli) o dall&#39;alto a destra della pagina Panoramica ricetta.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. Viene visualizzato un elenco dei set di dati di input disponibili per la formazione, selezionate **il set** di dati di input di Recommendations e fate clic su **Avanti**.
+3. Viene visualizzato un elenco dei set di dati di input disponibili per la formazione, selezionarli **[!UICONTROL Recommendations Input Dataset]** e fare clic su **[!UICONTROL Next]**.
    ![](../images/models-recipes/model-walkthrough/select_dataset.png)
-4. Specificare un nome per il modello, ad esempio &quot;Modello di raccomandazione prodotto&quot;. Sono elencate le configurazioni disponibili per il modello, che contengono le impostazioni per i comportamenti di formazione e valutazione predefiniti del modello. Non sono necessarie modifiche in quanto queste configurazioni sono specifiche per la vostra organizzazione. Esaminate le configurazioni e fate clic su **Fine**.
+4. Specificare un nome per il modello, ad esempio &quot;Modello di raccomandazione prodotto&quot;. Sono elencate le configurazioni disponibili per il modello, che contengono le impostazioni per i comportamenti di formazione e valutazione predefiniti del modello. Non sono necessarie modifiche in quanto queste configurazioni sono specifiche per la vostra organizzazione. Esaminate le configurazioni e fate clic su **[!UICONTROL Finish]**.
    ![](../images/models-recipes/model-walkthrough/configure_model.png)
 5. Il modello è stato creato e la pagina *Panoramica* del modello viene visualizzata all&#39;interno di un&#39;esecuzione di formazione appena generata. Per impostazione predefinita, durante la creazione di un modello viene generata un&#39;esecuzione di formazione.
    ![](../images/models-recipes/model-walkthrough/model_post_creation.png)
@@ -108,13 +108,13 @@ Potete scegliere di attendere il completamento dell’esecuzione della formazion
 
 ### Formazione del modello utilizzando i parametri ipertestuali personalizzati
 
-1. Nella pagina Panoramica ** modello, fate clic su **Treno** in alto a destra per creare una nuova esecuzione di formazione. Selezionare lo stesso set di dati di input utilizzato per la creazione del modello e fare clic su **Avanti**.
+1. Nella pagina Panoramica ** modello, fate clic **[!UICONTROL Train]** in alto a destra per creare una nuova esecuzione della formazione. Selezionare lo stesso set di dati di input utilizzato per creare il modello e fare clic su **[!UICONTROL Next]**.
    ![](../images/models-recipes/model-walkthrough/training_select_dataset.png)
-2. Viene visualizzata la pagina *Configurazione* . Qui puoi configurare il valore **num_recommendations** dell’esecuzione della formazione, noto anche come parametro Hyperparameter. Un modello qualificato e ottimizzato utilizzerà i parametri Hyperparameters più performanti in base ai risultati dell&#39;esecuzione di formazione.
+2. Viene visualizzata la pagina *Configurazione* . Qui puoi configurare il **[!UICONTROL num_recommendations]** valore dell’esecuzione della formazione, noto anche come Hyperparameter. Un modello qualificato e ottimizzato utilizzerà i parametri Hyperparameters più performanti in base ai risultati dell&#39;esecuzione di formazione.
 
    I parametri ipertestuali non possono essere appresi, pertanto devono essere assegnati prima dell&#39;esecuzione della formazione. La regolazione dei parametri Hyperparameters può modificare la precisione del modello Tradotto. Poiché l&#39;ottimizzazione di un modello è un processo iterativo, prima di ottenere una valutazione soddisfacente possono essere necessarie più esecuzioni di formazione.
 
-   >[!TIP] Impostate **num_recommendations** su 10.
+   >[!TIP] Impostare **[!UICONTROL num_recommendations]** su 10.
 
    ![](../images/models-recipes/model-walkthrough/configure_hyperparameter.png)
 3. Una volta completata la nuova esecuzione della formazione, nel grafico di valutazione dei modelli verrà visualizzato un punto dati aggiuntivo. L&#39;operazione potrebbe richiedere fino a diversi minuti.
@@ -137,12 +137,12 @@ Il passaggio finale del flusso di lavoro di Data Science consiste nell&#39;opera
 ### Punteggio e generazione di approfondimenti
 
 1. Nella pagina *Panoramica* modello di raccomandazioni prodotto, fate clic sul nome dell&#39;esecuzione di formazione con le prestazioni migliori, con i valori di richiamo e precisione più elevati.
-2. Nella parte superiore destra della pagina dei dettagli dell’esecuzione della formazione, fate clic su **Valutazione**.
-3. Selezionare il set **di dati di input di** Recommendations come set di dati di input di punteggio, che è lo stesso set di dati utilizzato al momento della creazione del modello ed esecuzione delle relative esecuzioni di formazione. Quindi fate clic su **Avanti**.
+2. In alto a destra della pagina dei dettagli dell’esecuzione della formazione, fate clic su **[!UICONTROL Score]**.
+3. Selezionare **[!UICONTROL Recommendations Input Dataset]** come set di dati di input per il punteggio, che è lo stesso set di dati utilizzato al momento della creazione del modello ed esecuzione delle relative esecuzioni di formazione. Then, click **[!UICONTROL Next]**.
    ![](../images/models-recipes/model-walkthrough/scoring_input.png)
-4. Selezionare il set di dati **di output di** Recommendations come set di dati di output per il punteggio. I risultati del punteggio verranno memorizzati in questo dataset come batch.
+4. Selezionare il set **[!UICONTROL Recommendations Output Dataset]** di dati di output per il punteggio. I risultati del punteggio verranno memorizzati in questo dataset come batch.
    ![](../images/models-recipes/model-walkthrough/scoring_output.png)
-5. Esaminare le configurazioni di punteggio. Questi parametri contengono i set di dati di input e output selezionati in precedenza insieme agli schemi appropriati. Fare clic su **Fine** per avviare l&#39;esecuzione del punteggio. L&#39;esecuzione potrebbe richiedere alcuni minuti.
+5. Esaminare le configurazioni di punteggio. Questi parametri contengono i set di dati di input e output selezionati in precedenza insieme agli schemi appropriati. Fare clic **[!UICONTROL Finish]** per iniziare l&#39;esecuzione del punteggio. L&#39;esecuzione potrebbe richiedere alcuni minuti.
    ![](../images/models-recipes/model-walkthrough/scoring_configure.png)
 
 
@@ -150,10 +150,12 @@ Il passaggio finale del flusso di lavoro di Data Science consiste nell&#39;opera
 
 Una volta completata l&#39;esecuzione del punteggio, potrai visualizzare in anteprima i risultati e le informazioni generate.
 
-1. Nella pagina delle esecuzioni del punteggio fare clic sull&#39;esecuzione del punteggio completato, quindi fare clic su **Anteprima set** di dati dei risultati del punteggio nella parte destra.
+1. Nella pagina delle esecuzioni del punteggio fare clic sull&#39;esecuzione del punteggio completato, quindi fare clic **[!UICONTROL Preview Scoring Results Dataset]** sulla barra a destra.
    ![](../images/models-recipes/model-walkthrough/score_complete.png)
-2. Nella tabella di anteprima, ogni riga contiene raccomandazioni sui prodotti per un cliente specifico, etichettate rispettivamente come **raccomandazioni** e **userId** . Poiché il parametro Hyperparameter **num_recommendations** è stato impostato su 10 nelle schermate di esempio, ciascuna riga di raccomandazioni può contenere fino a 10 identità di prodotto delimitate da un numero (#).
+2. Nella tabella di anteprima, ogni riga contiene raccomandazioni sui prodotti per un cliente specifico, etichettate rispettivamente come **[!UICONTROL recommendations]** e **[!UICONTROL userId]** . Poiché il parametro **[!UICONTROL num_recommendations]** Hyperparameter è stato impostato su 10 nelle schermate di esempio, ciascuna riga di raccomandazioni può contenere fino a 10 identità di prodotto delimitate da un numero (#).
    ![](../images/models-recipes/model-walkthrough/preview_score_results.png)
+
+## Passaggi successivi {#next-steps}
 
 Ben fatto, avete generato con successo le raccomandazioni sui prodotti!
 
