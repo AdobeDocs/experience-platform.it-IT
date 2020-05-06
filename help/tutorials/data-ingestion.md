@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Esercitazioni sull’inserimento dei dati
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
+source-git-commit: 0eecd802fc8d0ace3a445f3f188a7f095b97d0c8
+workflow-type: tm+mt
+source-wordcount: '516'
+ht-degree: 0%
 
 ---
 
@@ -27,11 +30,11 @@ Per assimilare i dati CSV in Adobe Experience Platform, questi devono essere map
 
 ## Creare una connessione in streaming
 
-Per avviare lo streaming dei dati in Experience Platform, è innanzitutto necessario creare una connessione HTTP in streaming. Durante la creazione di una connessione di streaming, è necessario fornire dettagli chiave come l&#39;origine dei dati di streaming e specificare se si intende inviare o meno dati da un&#39;origine attendibile (autenticata) o non attendibile (non autenticata). Questo può essere fatto utilizzando l&#39;interfaccia utente della piattaforma o le API della piattaforma Experience. Per saperne di più, seguite le esercitazioni per [creare una connessione in streaming utilizzando l&#39;interfaccia utente](../ingestion/tutorials/create-streaming-connection-ui.md) o [creando una connessione in streaming mediante le API](../ingestion/tutorials/create-streaming-connection.md).
+Per avviare lo streaming dei dati in Experience Platform, devi prima richiedere un endpoint HTTP. Puoi configurare questo endpoint per applicare il comportamento autenticato. Questo può essere fatto utilizzando l&#39;interfaccia utente della piattaforma o le API della piattaforma Experience. Per saperne di più, seguite le esercitazioni per [creare una connessione in streaming utilizzando l&#39;interfaccia utente](../ingestion/tutorials/create-streaming-connection-ui.md) o [creando una connessione in streaming mediante le API](../ingestion/tutorials/create-streaming-connection.md).
 
 ## Creare una connessione in streaming autenticata
 
-La raccolta dei dati autenticata consente ai servizi Adobe Experience Platform, come Profilo cliente e Identità in tempo reale, di distinguere tra record provenienti da fonti attendibili e fonti non affidabili. Per iniziare, segui l’esercitazione per [creare una connessione](../ingestion/tutorials/create-authenticated-streaming-connection.md)in streaming autenticata.
+La raccolta dei dati autenticata consente ai servizi Adobe Experience Platform, come Profilo cliente e Identità in tempo reale, di distinguere tra record provenienti da fonti attendibili e fonti non attendibili. Per iniziare, segui l’esercitazione per [creare una connessione](../ingestion/tutorials/create-authenticated-streaming-connection.md)in streaming autenticata.
 
 ## Dati del record del flusso e delle serie temporali
 
