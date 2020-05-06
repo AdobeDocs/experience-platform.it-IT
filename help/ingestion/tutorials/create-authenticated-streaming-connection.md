@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Creare una connessione in streaming autenticata
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: d9ce9506e43c4deed01f18e5913fda5a5c3cee84
+workflow-type: tm+mt
+source-wordcount: '649'
+ht-degree: 2%
 
 ---
 
@@ -194,11 +197,3 @@ Se l’ `Authorization` intestazione non è presente o viene inviato un token di
     }
 }
 ```
-
-### Invio di messaggi a una connessione in streaming non autenticata con autorizzazione
-
-Se l&#39;autenticazione non è abilitata per una connessione di streaming, il client può comunque (facoltativamente) aggiungere l&#39; `Authorization` intestazione alla propria richiesta.
-
-Se l&#39; `Authorization` intestazione non è presente o viene inviato un token di accesso non valido/scaduto, viene restituita una risposta non autorizzata HTTP 401. I dati verranno comunque pubblicati, ma con il `authenticatedRequest` campo impostato su `false`.
-
-Se l&#39; `Authorization` intestazione è presente e valida, i dati verranno pubblicati con il `authenticatedRequest` campo impostato su `true`.
