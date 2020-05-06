@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Creare una connessione in streaming mediante l'API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 181719e729748adcde62199c9406a97b7a807182
+source-git-commit: 0eecd802fc8d0ace3a445f3f188a7f095b97d0c8
+workflow-type: tm+mt
+source-wordcount: '659'
+ht-degree: 2%
 
 ---
 
@@ -177,6 +180,6 @@ Questa sezione fornisce informazioni supplementari sulla creazione di connession
 
 ### Connessioni di streaming autenticate
 
-La raccolta di dati autenticata consente ai servizi Adobe Experience Platform, come Real-time Customer Profile and Identity, di distinguere tra record provenienti da fonti attendibili e fonti non affidabili. I client che desiderano inviare informazioni personali (PII) possono farlo inviando Token di accesso IMS come parte della richiesta POST. Se il Token IMS è valido, i record vengono contrassegnati come raccolti da origini valide.
+La raccolta di dati autenticata consente ai servizi Adobe Experience Platform, come Real-time Customer Profile and Identity, di distinguere tra record provenienti da fonti attendibili e fonti non attendibili. I client che desiderano inviare informazioni personali (PII) possono farlo inviando Token di accesso IMS come parte della richiesta POST. Se il Token IMS è valido, i record vengono contrassegnati come raccolti da fonti attendibili.
 
 Per ulteriori informazioni sulla creazione di una connessione in streaming autenticata, consulta l’esercitazione sulla [creazione di una connessione in streaming](create-authenticated-streaming-connection.md)autenticata.
