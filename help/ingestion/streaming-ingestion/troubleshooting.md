@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Risoluzione dei problemi di caricamento in streaming
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 0eecd802fc8d0ace3a445f3f188a7f095b97d0c8
+workflow-type: tm+mt
+source-wordcount: '1046'
+ht-degree: 0%
 
 ---
 
@@ -39,7 +42,7 @@ I payload di richieste possono essere valutati solo dopo che sono stati inviati 
 
 Se la convalida sincrona non è supportata per la posizione richiesta, viene restituita una risposta di errore 501. Per ulteriori informazioni sulla convalida sincrona, vedere la panoramica [sulla convalida](../quality/streaming-validation.md) in streaming.
 
-### Come si autenticano i dati inviati?
+### Come posso garantire che i dati vengano raccolti solo da fonti attendibili?
 
 Experience Platform supporta la raccolta dati protetta. Quando la raccolta di dati autenticati è abilitata, i client devono inviare un token Web JSON (JWT) e il relativo ID organizzazione IMS come intestazioni della richiesta. Per ulteriori informazioni su come inviare dati autenticati a Platform, consulta la guida sulla raccolta [di dati](../tutorials/create-authenticated-streaming-connection.md)autenticati.
 
