@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Analizzare i dati utilizzando i notebook
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 606ae8784760e54a597b189958889199f85ebd0d
+source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
 workflow-type: tm+mt
 source-wordcount: '1746'
 ht-degree: 0%
@@ -54,7 +54,7 @@ La ricetta Vendite al dettaglio è un esempio standalone che utilizza lo stesso 
 
 L&#39;accesso ai dati verrà eseguito internamente da Adobe Experience Platform e all&#39;esterno dei dati. Utilizzeremo la `data_access_sdk_python` libreria per accedere ai dati interni, ad esempio set di dati e schemi XDM. Per i dati esterni, utilizzeremo la libreria Pandas Python.
 
-#### Dati esterni {#external-data}
+#### Dati esterni
 
 Con il blocco appunti Vendite al dettaglio aperto, trovate l&#39;intestazione &quot;Carica dati&quot;. Il seguente codice Python utilizza la struttura dei `DataFrame` dati dei panda e la funzione [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) per leggere il CSV ospitato su Github nel DataFrame:
 
@@ -72,7 +72,7 @@ Infine, possiamo dare un&#39;occhiata a come sono fatti i nostri dati. È possib
 
 Ora passeremo ai dati della piattaforma Experience.
 
-#### Per ID set di dati
+##### Per ID set di dati
 
 Per questa sezione, utilizziamo il set di dati Vendite al dettaglio, che è lo stesso set di dati utilizzato nel blocco appunti di esempio Vendite al dettaglio.
 
@@ -148,7 +148,7 @@ Osservando i valori minimo e massimo per `store`, possiamo vedere che ci sono 45
 
 Ciò significa che 22 negozi sono di `storeType` , 17 sono `A``storeType` e 6 sono `B``storeType` `C`.
 
-### Visualizzazione dati
+#### Visualizzazione dati
 
 Ora che conosciamo i nostri valori di frame dei dati, vogliamo completarli con visualizzazioni per rendere le cose più chiare e più facili da identificare. I grafici sono utili anche per trasmettere i risultati a un pubblico. Alcune librerie Python utili per la visualizzazione includono:
 - [Matplotlib](https://matplotlib.org/)
@@ -167,7 +167,7 @@ In questa sezione presenteremo rapidamente alcuni vantaggi per l&#39;utilizzo di
 [ggplot](https://ggplot2.tidyverse.org/) è un pacchetto anch&#39;esso basato su matplotlib. Tuttavia la differenza principale è che lo strumento è una porta di ggplot2 per R. Come per il mare, l&#39;obiettivo è quello di migliorare su matplotlib. Gli utenti che hanno familiarità con gplot2 per R devono considerare questa libreria.
 
 
-### Grafici univoci
+##### Grafici univoci
 
 I grafici univoci sono grafici di una singola variabile. Un grafico universale comune è usato per visualizzare i dati è la trama scatola e sussurro.
 
@@ -177,7 +177,7 @@ Utilizzando il nostro set di dati per la vendita al dettaglio da prima, possiamo
 
 Una trama scatola e sussurro è usato per mostrare la distribuzione dei dati. Le linee esterne della trama mostrano i quartili superiore e inferiore, mentre la scatola si estende per l&#39;intervallo interquartile. La linea nella casella indica la mediana. I punti di dati più di 1,5 volte il quartile superiore o inferiore sono contrassegnati come un cerchio. Questi punti sono considerati fuorvianti.
 
-### Grafici multivariati
+##### Grafici multivariati
 
 I grafici multivariati sono utilizzati per visualizzare l&#39;interazione tra le variabili. Con la visualizzazione, gli esperti di dati possono verificare se esistono correlazioni o pattern tra le variabili. Un grafico multivariato comune usato è una matrice di correlazione. Con una matrice di correlazione, le dipendenze tra più variabili vengono quantificate con il coefficiente di correlazione.
 
