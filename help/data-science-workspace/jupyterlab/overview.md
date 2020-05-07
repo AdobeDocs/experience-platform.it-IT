@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida utente di JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 606ae8784760e54a597b189958889199f85ebd0d
+source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
 workflow-type: tm+mt
 source-wordcount: '3356'
 ht-degree: 5%
@@ -54,7 +54,7 @@ Le informazioni sulle caratteristiche chiave di JupyterLab e le istruzioni sulle
 * [Celle di codice](#code-cells)
 * [Kernel](#kernels)
 * [Sessioni kernel](#kernel-sessions)
-* [Risorsa di esecuzione PySpark/Spark](#pyspark-spark-execution-resource)
+* [Risorsa di esecuzione PySpark/Spark](#execution-resource)
 * [Launcher](#launcher)
 
 ### Access JupyterLab {#access-jupyterlab}
@@ -143,7 +143,7 @@ Se il kernel è spento o inattivo per un periodo prolungato, allora **nessun ker
 
 ![](../images/jupyterlab/user-guide/switch_kernel.gif)
 
-### Risorsa di esecuzione PySpark/Spark {#pyspark-spark-execution-resource}
+### Risorsa di esecuzione PySpark/Spark {#execution-resource}
 
 >[!IMPORTANT]
 >Con la transizione da Spark 2.3 a Spark 2.4, entrambi i kernel Spark e PySpark sono obsoleti.
