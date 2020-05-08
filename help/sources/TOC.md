@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Guida di Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: 958decd19c0b2063e0e242dcd3ce321c02660707
+source-git-commit: e046054b871026c32858e06c022ea86f53fbafd5
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '522'
 ht-degree: 0%
 
 ---
@@ -137,6 +137,7 @@ ht-degree: 0%
          - [Connettore Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Apache Hive sul connettore Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark sul connettore Azure HDInsights](tutorials/ui/create/databases/spark.md)
+         - [Connettore Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
          - [Connettore Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Connettore archiviazione tabella Azure](tutorials/ui/create/databases/ats.md)
          - [Connettore Google Big Query](tutorials/ui/create/databases/bigquery.md)
