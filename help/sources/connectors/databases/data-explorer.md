@@ -4,21 +4,29 @@ solution: Experience Platform
 title: Connettore Azure Data Explorer
 topic: overview
 translation-type: tm+mt
-source-git-commit: c4162d88a688ce2028de08b63e7b7eab954a0e29
+source-git-commit: 1fb07723aedcf6dfd49765c10342b70b0a7d24f3
+workflow-type: tm+mt
+source-wordcount: '140'
+ht-degree: 0%
 
 ---
 
 
 # Connettore Azure Data Explorer
 
-Adobe Experience Platform consente di acquisire dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi della piattaforma. È possibile acquisire dati da origini diverse come applicazioni Adobe, archiviazione basata su cloud, database e molti altri.
+Adobe Experience Platform offre connettività nativa per provider di database come Microsoft, MySQL e Azure. È possibile trasferire i dati da questi sistemi in Piattaforma.
 
-Experience Platform supporta l’acquisizione di dati da un database di terze parti. La piattaforma può connettersi a diversi tipi di database come relazionale, NoSQL o data warehouse. Il supporto per i provider di database include Azure Data Explorer.
+Sono supportati diversi tipi di database di terze parti, tra cui relazionale, NoSQL o data warehouse. Il supporto per i provider di database include Azure Data Explorer.
 
-La documentazione seguente fornisce informazioni su come collegare Azure Data Explorer alla piattaforma utilizzando le API:
+La documentazione seguente fornisce informazioni su come collegare Azure Data Explorer alla piattaforma utilizzando le API o l&#39;interfaccia utente:
 
 ## Connessione di Azure Data Explorer alla piattaforma tramite API
 
 - [Creare un connettore Azure Data Explorer utilizzando l&#39;API del servizio di flusso](../../tutorials/api/create/databases/data-explorer.md)
 - [Esplora un sistema di database utilizzando l&#39;API del servizio di flusso](../../tutorials/api/explore/database-nosql.md)
 - [Raccolta di dati da un database tramite l&#39;API del servizio di flusso](../../tutorials/api/collect/database-nosql.md)
+
+## Connessione di Azure Data Explorer alla piattaforma tramite l’interfaccia utente
+
+- [Creare un connettore di origine Azure Data Explorer nell&#39;interfaccia utente](../../tutorials/ui/create/databases/ats.md)
+- [Configurare un flusso di dati per un connettore di database nell&#39;interfaccia utente](../../tutorials/ui/dataflow/databases.md)
