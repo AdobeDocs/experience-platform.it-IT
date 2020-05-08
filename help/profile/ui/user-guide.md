@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: Guida utente del profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: ab289f07475abcbe966c723423825fd392eb3615
+source-git-commit: 667aadde831a1d010f8cbbbb20bd92f914558bd1
+workflow-type: tm+mt
+source-wordcount: '882'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +46,9 @@ Potete personalizzare gli attributi visualizzati nell’elenco facendo clic sull
 
 Il conteggio dei profili visualizza il numero totale di profili di cui dispone l&#39;organizzazione all&#39;interno di Experience Platform, dopo che il criterio di unione predefinito dell&#39;organizzazione ha unito i frammenti di profilo per formare un unico profilo per ciascun cliente. In altre parole, l&#39;organizzazione potrebbe avere più frammenti di profilo correlati a un singolo cliente che interagisce con il proprio marchio tra canali diversi, ma tali frammenti sarebbero uniti (in base al criterio di unione predefinito) e restituirebbero un conteggio di profilo pari a &quot;1&quot; perché tutti correlati allo stesso individuo.
 
-Il conteggio dei profili include anche profili con attributi (dati di record) e profili (come i profili di Adobe Analytics) contenenti solo dati sulle serie temporali (evento). Il conteggio viene aggiornato regolarmente per fornire un numero totale aggiornato di profili all&#39;interno della piattaforma. Ogni volta che un&#39;assimilazione di profili aumenta o diminuisce il conteggio di oltre il 5%, viene attivato automaticamente un processo per aggiornare il conteggio. Se l’organizzazione utilizza l’assimilazione in streaming, i processi vengono pianificati ogni ora per recuperare i dati appena acquisiti.
+Il conteggio dei profili include anche profili con attributi (dati di record) e profili contenenti solo dati di serie temporali (eventi), come i profili di Adobe Analytics. Il conteggio dei profili viene aggiornato regolarmente per fornire un numero totale aggiornato di profili all&#39;interno della piattaforma.
+
+Quando l’inserimento di profili nell’archivio profili aumenta o diminuisce il conteggio di oltre il 5%, viene attivato un processo per aggiornare il conteggio. Per i flussi di lavoro dei dati in streaming, viene effettuato un controllo ogni ora per determinare se è stata raggiunta la soglia di incremento o riduzione del 5%. In caso affermativo, viene attivato automaticamente un processo per aggiornare il conteggio dei profili. Per l’assimilazione batch, entro 15 minuti dal corretto inserimento di un batch nell’archivio profili, se viene raggiunta la soglia di incremento o riduzione del 5%, viene eseguito un processo per aggiornare il conteggio dei profili.
 
 ![](../images/user-guide/profile-count.png)
 
