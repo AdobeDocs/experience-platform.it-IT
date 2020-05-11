@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Guida di Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: e046054b871026c32858e06c022ea86f53fbafd5
+source-git-commit: b3512cd4d1e024597a47e1aa52a2e23e5fce5e44
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '534'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,7 @@ ht-degree: 0%
    - Archiviazione cloud {#cloud-storage}
       - [Connettore Azure Data Lake Storage Gen2](connectors/cloud-storage/adls-gen2.md)
       - [Connettore Azure Blob e Amazon S3](connectors/cloud-storage/blob-s3.md)
+      - [Connettore archiviazione file Azure](connectors/cloud-storage/azure-file-storage.md)
       - [Connettore FTP e SFTP](connectors/cloud-storage/ftp-sftp.md)
       - [Connettore di archiviazione Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
    - CRM {#crm}
@@ -65,6 +66,7 @@ ht-degree: 0%
          - [Connettore Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Connettore BLOB di Azure](tutorials/api/create/cloud-storage/blob.md)
          - [Connettore Azure Data Lake Storage Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
+         - [Connettore archiviazione file Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Connettore di archiviazione Google Cloud](tutorials/api/create/cloud-storage/google.md)
          - [Connettore SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
@@ -126,6 +128,7 @@ ht-degree: 0%
       - Archiviazione cloud {#cloud-storage}
          - [Connettore Azure Data Lake Storage Gen2](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Connettore Azure Blob e Amazon S3](tutorials/ui/create/cloud-storage/blob-s3.md)
+         - [Connettore archiviazione file Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [Connettore FTP e SFTP](tutorials/ui/create/cloud-storage/ftp-sftp.md)
          - [Connettore di archiviazione Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
       - CRM {#crm}
