@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Panoramica sull'accesso ai dati
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: d9aa21a7439a6c40f6f51dfbdf5c7b3690c4593a
+workflow-type: tm+mt
+source-wordcount: '488'
+ht-degree: 4%
 
 ---
 
@@ -237,7 +240,6 @@ Contents of the file
 
 Per ulteriori esempi, fare riferimento all&#39;esercitazione sull&#39;accesso ai [dati](tutorials/dataset-data.md).
 
-
 ## Iscrizione agli eventi di assimilazione dei dati
 
-La piattaforma rende disponibili per l’iscrizione specifici eventi di alto valore tramite la console [I/O di](https://console.adobe.io/)Adobe. Ad esempio, puoi abbonarti agli eventi di inserimento dei dati per ricevere una notifica di potenziali ritardi e guasti. Per ulteriori informazioni sull’utilizzo degli eventi di I/O di Adobe, consulta la guida [introduttiva](https://www.adobe.io/apis/experienceplatform/events/docs.html).
+La piattaforma rende disponibili per l&#39;iscrizione specifici eventi di alto valore tramite [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Ad esempio, puoi abbonarti agli eventi di inserimento dei dati per ricevere una notifica di potenziali ritardi e guasti. Per ulteriori informazioni, consulta l’esercitazione sulla [sottoscrizione alle notifiche](../ingestion/quality/subscribe-events.md) di assimilazione dei dati.
