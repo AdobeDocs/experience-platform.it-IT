@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: Guida per lo sviluppatore di API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
+source-git-commit: 33091568c850375b399435f375e854667493152c
+workflow-type: tm+mt
+source-wordcount: '2057'
+ht-degree: 1%
 
 ---
 
@@ -170,7 +173,7 @@ Se il valore di `name` è il nome della classe XDM su cui si basa lo schema asso
 
 ## Accedere ai criteri di unione {#access-merge-policies}
 
-Utilizzando l&#39;API Profilo cliente in tempo reale, l&#39; `/config/mergePolicies` endpoint consente di eseguire una richiesta di ricerca per visualizzare un criterio di unione specifico in base al relativo ID, oppure di accedere a tutti i criteri di unione nell&#39;organizzazione IMS, filtrati in base a criteri specifici.
+Utilizzando l&#39;API Profilo cliente in tempo reale, l&#39; `/config/mergePolicies` endpoint consente di eseguire una richiesta di ricerca per visualizzare un criterio di unione specifico in base al relativo ID, oppure di accedere a tutti i criteri di unione nell&#39;organizzazione IMS, filtrati in base a criteri specifici. Potete inoltre utilizzare l&#39; `/config/mergePolicies/bulk-get` endpoint per recuperare più criteri di unione in base ai relativi ID. I passaggi per eseguire ciascuna di queste chiamate sono descritti nelle sezioni seguenti.
 
 ### Accesso a un singolo criterio di unione tramite ID
 
@@ -217,6 +220,99 @@ Una risposta corretta restituisce i dettagli del criterio di unione.
     },
     "default": false,
     "updateEpoch": 1551127597
+}
+```
+
+Per informazioni dettagliate su ciascuno dei singoli elementi che compongono un criterio di unione, vedere la sezione [Componenti di criteri](#components-of-merge-policies) di unione all&#39;inizio del documento.
+
+### Recuperare più criteri di unione in base ai relativi ID
+
+È possibile recuperare più criteri di unione eseguendo una richiesta POST all&#39; `/config/mergePolicies/bulk-get` endpoint e includendo gli ID dei criteri di unione che si desidera recuperare nel corpo della richiesta.
+
+**Formato API**
+
+```http
+POST /config/mergePolicies/bulk-get
+```
+
+**Richiesta**
+
+Il corpo della richiesta include un array &quot;ids&quot; con singoli oggetti contenenti &quot;id&quot; per ciascun criterio di unione per il quale si desidera recuperare i dettagli.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/core/ups/config/mergePolicies/bulk-get' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "ids": [
+          {
+            "id": "0bf16e61-90e9-4204-b8fa-ad250360957b"
+          }
+          {
+            "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130"
+          }
+        ]
+      }'
+```
+
+**Risposta**
+
+Una risposta corretta restituisce lo stato HTTP 207 (Stato multiplo) e i dettagli dei criteri di unione i cui ID sono stati forniti nella richiesta POST.
+
+```json
+{
+    "id": "0bf16e61-90e9-4204-b8fa-ad250360957b",
+    "name": "Profile Default Merge Policy",
+    "imsOrgId": "{IMS_ORG}",
+    "sandbox": {
+        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "version": 1,
+    "identityGraph": {
+        "type": "none"
+    },
+    "attributeMerge": {
+        "type": "timestampOrdered"
+    },
+    "default": true,
+    "updateEpoch": 1552086578
+},
+{
+    "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130",
+    "name": "Dataset Precedence Merge Policy",
+    "imsOrgId": "{IMS_ORG}",
+    "sandbox": {
+        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "version": 1,
+    "identityGraph": {
+        "type": "pdg"
+    },
+    "attributeMerge": {
+        "type": "dataSetPrecedence",
+        "order": [
+            "5b76f86b85d0e00000be5c8b",
+            "5b76f8d787a6af01e2ceda18"
+        ]
+    },
+    "default": false,
+    "updateEpoch": 1576099719
 }
 ```
 
