@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sui connettori sorgente della piattaforma Adobe Experience
 topic: overview
 translation-type: tm+mt
-source-git-commit: eadf285ef5fd373eec54e6680b5f253b0b16dcf9
+source-git-commit: 492adad9b38c8850130931d3d393f28c67057d07
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '746'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,7 @@ Le origini di archiviazione cloud possono portare i tuoi dati in Platform senza 
 
 - [Connettore Azure Data Lake Storage Gen2](connectors/cloud-storage/adls-gen2.md)
 - [Connettore Azure Blob e Amazon S3](connectors/cloud-storage/blob-s3.md)
+- [Connettore archiviazione file Azure](connectors/cloud-storage/azure-file-storage.md)
 - [Connettore FTP e SFTP](connectors/cloud-storage/ftp-sftp.md)
 - [Connettore di archiviazione Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
 
