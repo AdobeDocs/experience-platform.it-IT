@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connettore archiviazione file Azure
 topic: overview
 translation-type: tm+mt
-source-git-commit: a5925c76ced3384e5eb3fc269dd8ffdbb2b820d2
+source-git-commit: 70c8f4657fcc54e87b91f7b263b7da9e1e3d9677
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 0%
@@ -29,4 +29,4 @@ La documentazione seguente fornisce informazioni su come collegare Azure File St
 ## Connessione di Azure File Storage alla piattaforma tramite l’interfaccia utente
 
 - [Creare un connettore di origine Azure File Storage nell&#39;interfaccia utente](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
-- [Configurare un flusso di dati per un connettore di archiviazione cloud nell&#39;interfaccia utente](../../tutorials/ui/dataflow/cloud-storage.md)
+- [Configurare un flusso di dati per un connettore di archiviazione cloud nell&#39;interfaccia utente](../../tutorials/ui/dataflow/batch/cloud-storage.md)
