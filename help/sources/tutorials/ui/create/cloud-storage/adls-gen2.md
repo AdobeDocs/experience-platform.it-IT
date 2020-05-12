@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Creare un connettore di origine Azure Data Lake Storage Gen2 nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: f09ff4d1b159a6989868c5cfc35b361cfb640a99
+source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+workflow-type: tm+mt
+source-wordcount: '507'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Ad
    - [Esercitazione](../../../../../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
 - [Profilo](../../../../../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
-Se si dispone già di una connessione di base ADLS Gen2, è possibile ignorare il resto del documento e procedere all&#39;esercitazione sulla [configurazione di un flusso di dati](../../dataflow/cloud-storage.md).
+Se si dispone già di una connessione di base ADLS Gen2, è possibile ignorare il resto del documento e procedere all&#39;esercitazione sulla [configurazione di un flusso di dati](../../dataflow/batch/cloud-storage.md).
 
 ### Raccogli credenziali richieste
 
@@ -63,4 +66,4 @@ Per collegare un account esistente, selezionare l&#39;account ADLS Gen2 con cui 
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, è stata stabilita una connessione di base all&#39;account ADLS Gen2. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per trasferire i dati dall’archiviazione cloud alla piattaforma](../../dataflow/cloud-storage.md).
+Seguendo questa esercitazione, è stata stabilita una connessione di base all&#39;account ADLS Gen2. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per trasferire i dati dall’archiviazione cloud alla piattaforma](../../dataflow/batch/cloud-storage.md).
