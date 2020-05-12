@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Configurare un flusso di dati per un connettore di database nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: c55e48a90d57e538f3d096b31eae639a1cca882c
+source-git-commit: 415b59fc3fa20c09372549e92571c1b41006e540
+workflow-type: tm+mt
+source-wordcount: '1019'
+ht-degree: 0%
 
 ---
 
@@ -26,14 +29,14 @@ Inoltre, questa esercitazione richiede che sia già stato creato un connettore p
 
 ## Seleziona dati
 
-Dopo aver creato il connettore del database, viene visualizzato il passaggio *Seleziona dati* , che fornisce un&#39;interfaccia interattiva per esplorare la gerarchia del database.
+Dopo aver creato il connettore del database, viene visualizzato il *[!UICONTROL Select data]* passaggio che fornisce un&#39;interfaccia interattiva per esplorare la gerarchia del database.
 
 - La metà sinistra dell&#39;interfaccia è un browser, che visualizza l&#39;elenco dei database dell&#39;account.
 - La metà destra dell&#39;interfaccia consente di visualizzare un&#39;anteprima di fino a 100 righe di dati.
 
-Selezionate il database da utilizzare, quindi fate clic su **Avanti**.
+Selezionate il database da utilizzare, quindi fate clic su **[!UICONTROL Next]**.
 
-![](../../../images/tutorials/dataflow/databases/select-data-next.png)
+![](../../../images/tutorials/dataflow/databases/add-data.png)
 
 ## Mappatura dei campi dati su uno schema XDM
 
@@ -43,33 +46,35 @@ Scegliere un set di dati in entrata in cui assimilare i dati. È possibile utili
 
 ### Utilizzare un dataset esistente
 
-Per assimilare i dati in un set di dati esistente, selezionare **Usa set di dati** esistente, quindi fare clic sull&#39;icona del set di dati.
+Per assimilare i dati in un dataset esistente, selezionare **[!UICONTROL Existing dataset]**, quindi fare clic sull&#39;icona del dataset.
 
-![](../../../images/tutorials/dataflow/databases/use-existing-dataset.png)
+![](../../../images/tutorials/dataflow/databases/existing-dataset.png)
 
-Viene visualizzata la finestra di dialogo _Seleziona set di dati_ . Individuate il set di dati da utilizzare, selezionatelo, quindi fate clic su **Continue (Continua)**.
+Viene visualizzata *[!UICONTROL Select dataset]* la finestra di dialogo. Trovare il set di dati che si desidera utilizzare, selezionarlo, quindi fare clic **[!UICONTROL Continue]**.
 
-![](../../../images/tutorials/dataflow/databases/select-dataset.png)
+![](../../../images/tutorials/dataflow/databases/select-existing-dataset.png)
 
 ### Utilizza un nuovo set di dati
 
-Per inserire i dati in un nuovo dataset, selezionare **Crea nuovo dataset** e immettere un nome e una descrizione per il dataset nei campi forniti. Quindi, fare clic sull&#39;icona dello schema.
+Per assimilare i dati in un nuovo dataset, selezionare **[!UICONTROL New dataset]** e immettere un nome e una descrizione per il dataset nei campi forniti.
 
-![](../../../images/tutorials/dataflow/databases/use-new-dataset.png)
+È possibile allegare un campo dello schema digitando un nome dello schema nella barra di **[!UICONTROL Select schema]** ricerca. Potete anche selezionare l&#39;icona a discesa per visualizzare un elenco degli schemi esistenti. In alternativa, potete selezionare **[!UICONTROL Advanced search]** a una schermata gli schemi esistenti, con i rispettivi dettagli.
 
-Viene visualizzata la finestra di dialogo _Seleziona schema_ . Selezionare lo schema da applicare al nuovo dataset, quindi fare clic su **Fine**.
+![](../../../images/tutorials/dataflow/databases/new-dataset.png)
 
-![](../../../images/tutorials/dataflow/databases/select-schema.png)
+Viene visualizzata la finestra di dialogo *[!UICONTROL Select schema] . Selezionare lo schema che si desidera applicare al nuovo dataset, quindi fare clic su **[!UICONTROL Done]**.
+
+![](../../../images/tutorials/dataflow/databases/select-existing-schema.png)
 
 In base alle esigenze, è possibile scegliere di mappare direttamente i campi oppure utilizzare le funzioni di mappatura per trasformare i dati di origine in modo da derivare i valori calcolati o calcolati. Per ulteriori informazioni sulla mappatura dei dati e sulle funzioni di mappatura, consulta l’esercitazione sulla [mappatura dei dati CSV ai campi](../../../../ingestion/tutorials/map-a-csv-file.md)dello schema XDM.
 
-Una volta mappati i dati di origine, fare clic su **Avanti**.
+Una volta mappati i dati di origine, fai clic su **[!UICONTROL Next]**.
 
-![](../../../images/tutorials/dataflow/databases/mapping-data.png)
+![](../../../images/tutorials/dataflow/databases/mapping.png)
 
 ## Pianificare le esecuzioni dell&#39;assimilazione
 
-Viene visualizzato il passaggio *Pianificazione* , che consente di configurare una pianificazione di assimilazione per l&#39;acquisizione automatica dei dati di origine selezionati tramite le mappature configurate. Nella tabella seguente sono riportati i diversi campi configurabili per la pianificazione:
+Viene visualizzato il *[!UICONTROL Scheduling]* passaggio che consente di configurare una pianificazione di assimilazione per l&#39;acquisizione automatica dei dati di origine selezionati tramite le mappature configurate. Nella tabella seguente sono riportati i diversi campi configurabili per la pianificazione:
 
 | Field | Descrizione |
 | --- | --- |
@@ -77,48 +82,35 @@ Viene visualizzato il passaggio *Pianificazione* , che consente di configurare u
 | Intervallo | Un numero intero che imposta l&#39;intervallo per la frequenza selezionata. |
 | Ora di inizio | Una marca temporale UTC per la quale si verificherà la prima assimilazione. |
 | Backfill | Un valore booleano che determina i dati inizialmente acquisiti. Se *Backfill* è abilitato, tutti i file correnti nel percorso specificato verranno acquisiti durante la prima assimilazione pianificata. Se *Backfill* è disattivato, verranno acquisiti solo i file caricati tra la prima esecuzione dell&#39;assimilazione e l&#39;ora *di* inizio. I file caricati prima dell&#39;ora *di* inizio non vengono acquisiti. |
+| Colonna Delta | Opzione con un set filtrato di campi dello schema di origine di tipo, data o ora. Questo campo è utilizzato per distinguere tra dati nuovi ed esistenti. I dati incrementali verranno acquisiti in base alla marca temporale della colonna selezionata. |
 
-I flussi di dati sono progettati per l&#39;acquisizione automatica dei dati su base programmata. Se desiderate effettuare il caricamento solo una volta in questo flusso di lavoro, potete farlo configurando la **Frequenza** su &quot;Giorno&quot; e applicando un numero molto elevato per l&#39; **Intervallo**, ad esempio 10000 o simile.
+I flussi di dati sono progettati per l&#39;acquisizione automatica dei dati su base programmata. Se desiderate effettuare il caricamento solo una volta in questo flusso di lavoro, potete farlo configurando il **[!UICONTROL Frequency]** pulsante &quot;Giorno&quot; e applicando un numero molto elevato per il **[!UICONTROL Interval]**, ad esempio 10000 o simile.
 
-Immettete i valori per la pianificazione e fate clic su **Avanti**.
+Specificare i valori per la pianificazione e selezionare **[!UICONTROL Next]**.
 
-![](../../../images/tutorials/dataflow/databases/scheduling.png)
+![](../../../images/tutorials/dataflow/databases/schedule.png)
 
 ## Denominazione del flusso di dati
 
-Viene visualizzato il passaggio del flusso *di* nomi, in cui è necessario specificare un nome e una descrizione facoltativa per il flusso di dati. Al termine, fate clic su Avanti.&quot;
+Viene visualizzato il *[!UICONTROL dataflow detail]* passaggio in cui è necessario specificare un nome e una descrizione facoltativa per il flusso di dati. Selezionate **[!UICONTROL Next]** al termine.
 
-![](../../../images/tutorials/dataflow/databases/name-flow.png)
+![](../../../images/tutorials/dataflow/databases/dataflow-detail.png)
 
 ## Controllare il flusso di dati
 
-Viene visualizzato il passaggio *Revisione* , che consente di rivedere il nuovo flusso di dati prima della creazione. I dettagli sono raggruppati nelle seguenti categorie:
+Viene visualizzato il *[!UICONTROL Review]* passaggio che consente di rivedere il nuovo flusso di dati prima della creazione. I dettagli sono raggruppati nelle seguenti categorie:
 
-- *Dettagli* connessione: Mostra il tipo di origine, il percorso pertinente del file di origine scelto e la quantità di colonne all&#39;interno del file di origine.
-- *Dettagli* mappatura: Mostra il set di dati in cui vengono acquisiti i dati di origine, incluso lo schema a cui il set di dati aderisce.
-- *Dettagli* pianificazione: Mostra il periodo, la frequenza e l’intervallo attivi della pianificazione di assimilazione.
+- *Connessione*: Mostra il tipo di origine, il percorso pertinente del file di origine scelto e la quantità di colonne all&#39;interno del file di origine.
+- *Assegna campi* dataset e mappa: Mostra il set di dati in cui vengono acquisiti i dati di origine, incluso lo schema a cui il set di dati aderisce.
+- *Pianificazione*: Mostra il periodo, la frequenza e l’intervallo attivi della pianificazione di assimilazione.
 
-Dopo aver rivisto il flusso di dati, fai clic su **Fine** e concedi un po&#39; di tempo per la creazione del flusso di dati.
+Dopo aver rivisto il flusso di dati, fai clic su **[!UICONTROL Finish]** e consenti la creazione del flusso di dati.
 
 ![](../../../images/tutorials/dataflow/databases/review.png)
 
 ## Monitorare il flusso di dati
 
-Una volta creato il flusso di dati, potete monitorare i dati che vengono acquisiti tramite di esso. Seguite i passaggi riportati di seguito per accedere al monitor dei dataset di un flusso di dati.
-
-Nell&#39;area di lavoro _Origini_ , fare clic sulla scheda **Sfoglia** per elencare le connessioni di base. Nell&#39;elenco visualizzato, individuare la connessione che contiene il flusso di dati che si desidera monitorare facendo clic sul suo nome.
-
-![](../../../images/tutorials/dataflow/databases/browse-base-connectors.png)
-
-Viene visualizzata la schermata Attività ** di origine. Da qui, fate clic sul nome di un set di dati di cui desiderate monitorare l&#39;attività.
-
-![](../../../images/tutorials/dataflow/databases/select-dataflow-dataset.png)
-
-Viene visualizzata la schermata Attività ** DataSet. In questa pagina viene visualizzata la frequenza dei messaggi utilizzati sotto forma di grafico.
-
-![](../../../images/tutorials/dataflow/databases/dataset-activity.png)
-
-Per ulteriori informazioni sul monitoraggio dei set di dati e sull’assimilazione, fare riferimento all’esercitazione sul [monitoraggio dei flussi di dati](../../../../ingestion/quality/monitor-data-flows.md).
+Una volta creato il flusso di dati, potete monitorare i dati che vengono acquisiti tramite di esso. Per ulteriori informazioni su come monitorare i flussi di dati, consulta l’esercitazione sugli [account e i flussi di dati](../monitor.md).
 
 ## Passaggi successivi
 
@@ -135,13 +127,13 @@ Le sezioni seguenti forniscono informazioni aggiuntive sull&#39;utilizzo dei con
 
 Quando un flusso di dati viene creato, diventa immediatamente attivo e i dati vengono acquisiti in base alla pianificazione specificata. Puoi disattivare un flusso di dati attivo in qualsiasi momento seguendo le istruzioni riportate di seguito.
 
-Nell&#39;area di lavoro _Origini_ , fate clic sulla scheda **Sfoglia** . Quindi, fare clic sul nome della connessione di base associata al flusso di dati che si desidera disattivare.
+Nell’area di *[!UICONTROL Sources]* lavoro, selezionate la **[!UICONTROL Dataflowss]** scheda. Quindi, selezionate il flusso di dati da disattivare.
 
-![](../../../images/tutorials/dataflow/databases/browse-base-connectors.png)
+![](../../../images/tutorials/dataflow/databases/list-of-dataflows.png)
 
-Viene visualizzata la pagina Attività __ di origine. Selezionate il flusso di dati attivo dall’elenco per aprire la colonna *Proprietà* sul lato destro della schermata, che contiene un pulsante di attivazione **abilitata** . Fate clic sull’interruttore per disattivare il flusso di dati. La stessa opzione può essere utilizzata per riattivare un flusso di dati dopo che è stato disabilitato.
+La colonna *Proprietà* viene visualizzata sul lato destro dello schermo, incluso un pulsante di **[!UICONTROL Enabled]** attivazione/disattivazione. Selezionate l’opzione per disattivare il flusso di dati. La stessa opzione può essere utilizzata per riattivare un flusso di dati dopo che è stato disabilitato.
 
-![](../../../images/tutorials/dataflow/databases/toggle-enabled.png)
+![](../../../images/tutorials/dataflow/databases/disable.png)
 
 ### Attivare i dati in entrata per la popolazione del profilo
 
