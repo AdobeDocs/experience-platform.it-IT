@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare un connettore di origine Azure File Storage nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: a5925c76ced3384e5eb3fc269dd8ffdbb2b820d2
+source-git-commit: aa1c6cb0f5702cfe444cb2046e4460e404f13e57
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 1%
@@ -25,7 +25,7 @@ Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Ad
    - [Esercitazione](../../../../../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
 - [Profilo](../../../../../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
-Se si dispone già di una connessione Archiviazione file, è possibile ignorare il resto del documento e procedere all&#39;esercitazione sulla [configurazione di un flusso di dati](../../dataflow/cloud-storage.md).
+Se si dispone già di una connessione Archiviazione file, è possibile ignorare il resto del documento e procedere all&#39;esercitazione sulla [configurazione di un flusso di dati](../../dataflow/batch/cloud-storage.md).
 
 ### Raccogli credenziali richieste
 
@@ -67,4 +67,4 @@ Per collegare un account esistente, selezionare l&#39;account Azure File Storage
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, è stata stabilita una connessione all&#39;account Azure File Storage. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per trasferire i dati dall’archiviazione cloud alla piattaforma](../../dataflow/cloud-storage.md).
+Seguendo questa esercitazione, è stata stabilita una connessione all&#39;account Azure File Storage. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per trasferire i dati dall’archiviazione cloud alla piattaforma](../../dataflow/batch/cloud-storage.md).
