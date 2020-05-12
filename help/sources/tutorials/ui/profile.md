@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Attivare i dati di origine in entrata per compilare i profili cliente
 topic: overview
 translation-type: tm+mt
-source-git-commit: d6d2faf3d5eabcd8e948d3717fd8f8df4b9cb85a
+source-git-commit: 3e43e043df296c29cafb4c6933c8be1105c985ab
+workflow-type: tm+mt
+source-wordcount: '499'
+ht-degree: 0%
 
 ---
 
@@ -34,27 +37,27 @@ Per arricchire i profili dei clienti, lo schema di origine del set di dati di de
 
 Nell&#39;area di lavoro Origini, fare clic sulla scheda **Sfoglia** per elencare le connessioni di base. Nell’elenco visualizzato, individuate la connessione che contiene il flusso di dati con cui desiderate compilare i profili. Fate clic sul nome della connessione per accedere ai relativi dettagli.
 
-![](../../images/tutorials/dataflow/cloud-storage/browse.png)
+![](../../images/tutorials/dataflow/cloud-storage/batch/browse.png)
 
 Viene visualizzata la schermata dell&#39;attività ** Origine della connessione, in cui sono visualizzati i set di dati in cui la connessione sta trasferendo i dati di origine. Fare clic sul nome del set di dati che si desidera abilitare per il profilo.
 
-![](../../images/tutorials/dataflow/cloud-storage/dataset-dataflow.png)
+![](../../images/tutorials/dataflow/cloud-storage/batch/dataset-dataflow.png)
 
 Viene visualizzata la schermata Attività ** DataSet. La colonna *Proprietà* sul lato destro della schermata mostra i dettagli del dataset, include uno switch **Profilo** e un collegamento allo schema a cui il dataset aderisce. Fate clic sul nome dello schema per visualizzarne la composizione.
 
-![](../../images/tutorials/dataflow/cloud-storage/select-dataset-schema.png)
+![](../../images/tutorials/dataflow/cloud-storage/batch/select-dataset-schema.png)
 
 Viene visualizzato l&#39;Editor ** schema, che mostra la struttura dello schema nel quadro centrale. All&#39;interno del quadro, selezionare il campo da impostare come identità principale. Nella scheda Proprietà ** campo visualizzata, selezionare la casella di controllo **Identità** , quindi l&#39;identità **** principale. Infine, selezionare uno spazio dei nomi **** Identità appropriato, quindi fare clic su **Applica**.
 
-![](../../images/tutorials/dataflow/cloud-storage/set-schema-identity.png)
+![](../../images/tutorials/dataflow/cloud-storage/batch/set-schema-identity.png)
 
 Fare clic sull&#39;oggetto di primo livello della struttura dello schema e viene visualizzata la colonna Proprietà ** schema. Attivate lo schema per il profilo attivando lo switch **Profilo** . Fate clic su **Salva** per finalizzare le modifiche.
 
-![](../../images/tutorials/dataflow/cloud-storage/enable-profile.png)
+![](../../images/tutorials/dataflow/cloud-storage/batch/enable-profile.png)
 
 Ora che lo schema è abilitato per Profilo, tornare alla schermata Attività ** DataSet e abilitare il dataset per Profilo facendo clic sull&#39;opzione **Profilo** all&#39;interno della colonna *Proprietà* .
 
-![](../../images/tutorials/dataflow/cloud-storage/enable-dataset-profile.png)
+![](../../images/tutorials/dataflow/cloud-storage/batch/enable-dataset-profile.png)
 
 Con lo schema e il set di dati abilitati per il profilo, i dati acquisiti in tale set di dati ora popoleranno anche i profili dei clienti.
 
