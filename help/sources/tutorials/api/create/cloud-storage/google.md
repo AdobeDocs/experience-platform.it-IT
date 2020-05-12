@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Creare un connettore di archiviazione Google Cloud utilizzando l'API del servizio di flusso
 topic: overview
 translation-type: tm+mt
-source-git-commit: 96be7084d5d2efb86b7bba27f1a92bd9c0055fba
+source-git-commit: 7ffe560f455973da3a37ad102fbb8cc5969d5043
+workflow-type: tm+mt
+source-wordcount: '556'
+ht-degree: 2%
 
 ---
 
@@ -55,80 +58,9 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 * Content-Type: `application/json`
 
-## Cercare le specifiche di connessione
+## Creazione di una connessione
 
-Prima di collegare la piattaforma a un archivio Google Cloud, è necessario verificare l&#39;esistenza delle specifiche di connessione per l&#39;archiviazione Google Cloud. Se le specifiche di connessione non esistono, non è possibile stabilire una connessione.
-
-Ogni origine disponibile dispone di un proprio set di specifiche di connessione per descrivere le proprietà del connettore, ad esempio i requisiti di autenticazione. Puoi cercare le specifiche di connessione per Google Cloud Storage eseguendo una richiesta GET e utilizzando i parametri di query.
-
-**Formato API**
-
-L&#39;invio di una richiesta GET senza parametri di query restituirà le specifiche di connessione per tutte le origini disponibili. Potete includere la query `property=name=="google-cloud"` per ottenere informazioni specifiche per Google Cloud Storage.
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name==google-cloud
-```
-
-**Richiesta**
-
-La richiesta seguente recupera le specifiche di connessione per l&#39;archiviazione Google Cloud.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="google-cloud"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Risposta**
-
-Una risposta corretta restituisce le specifiche di connessione per Google Cloud Storage, incluso il relativo identificatore univoco (`id`). Questo ID è richiesto nel passaggio successivo per creare una connessione di base.
-
-```json
-{
-    "items": [
-        {
-            "id": "32e8f412-cdf7-464c-9885-78184cb113fd",
-            "name": "google-cloud",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Basic Authentication for google-cloud",
-                    "type": "Basic Authentication",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to google-cloud storage connector.",
-                        "properties": {
-                            "accessKeyId": {
-                                "type": "string",
-                                "description": "Access Key Id for the user account"
-                            },
-                            "secretAccessKey": {
-                                "type": "string",
-                                "description": "Secret Access Key for the user account",
-                                "format": "password"
-                            }
-                        },
-                        "required": [
-                            "accessKeyId",
-                            "secretAccessKey"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
-
-## Creazione di una connessione di base
-
-Una connessione di base specifica un&#39;origine e contiene le credenziali per tale origine. È necessaria una sola connessione di base per l&#39;account di archiviazione Google Cloud, in quanto può essere utilizzata per creare più connettori sorgente per inserire dati diversi.
+Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. Per l&#39;account di archiviazione Google Cloud è necessaria una sola connessione, in quanto può essere utilizzata per creare più connettori sorgente per inserire dati diversi.
 
 **Formato API**
 
@@ -147,8 +79,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Google Cloud Storage base connection",
-        "description": "Base connector for Google Cloud Storage",
+        "name": "Google Cloud Storage connection",
+        "description": "Connector for Google Cloud Storage",
         "auth": {
             "specName": "Basic Authentication for google-cloud",
             "params": {
@@ -167,11 +99,11 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.accessKeyId` | ID chiave di accesso associato al tuo account di archiviazione Google Cloud. |
 | `auth.params.secretAccessKey` | La chiave di accesso segreta associata al tuo account di archiviazione Google Cloud. |
-| `connectionSpec.id` | Specifica di connessione `id` dell&#39;account Google Cloud Storage recuperato nel passaggio precedente. |
+| `connectionSpec.id` | ID specifica di connessione di Google Cloud Storage: `32e8f412-cdf7-464c-9885-78184cb113fd` |
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della connessione di base appena creata, incluso il relativo identificatore univoco (`id`). Questo ID è necessario per esplorare i dati di archiviazione cloud nell&#39;esercitazione successiva.
+Una risposta corretta restituisce i dettagli della nuova connessione creata, incluso il relativo identificatore univoco (`id`). Questo ID è necessario per esplorare i dati di archiviazione cloud nell&#39;esercitazione successiva.
 
 ```json
 {
