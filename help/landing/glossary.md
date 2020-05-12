@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Documentazione del prodotto Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
+source-git-commit: a5268c2d31d356ce479bdcc143050cd513259235
+workflow-type: tm+mt
+source-wordcount: '6973'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 ## A
 
-**Controllo accesso:** Il controllo {#access-control} di accesso per la piattaforma Experience collega gli utenti con autorizzazioni di accesso e ambienti sandbox tramite i profili di prodotto in Adobe Admin Console.
+**Controllo accesso:** {#access-control} Il controllo degli accessi per la piattaforma Experience collega gli utenti con autorizzazioni di accesso e ambienti sandbox tramite i profili di prodotto in Adobe Admin Console.
 
 **ID chiave di accesso:** ID chiave di accesso è un identificatore univoco associato a una chiave di accesso segreta Amazon S3. L&#39;ID chiave di accesso e la chiave di accesso segreta sono utilizzati insieme per firmare le richieste AWS.
 
@@ -49,6 +52,8 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Attributi:** Gli attributi sono caratteristiche specifiche che rappresentano un profilo.
 
+**Unione attributo:** L&#39;unione degli attributi definisce il modo in cui un criterio di unione dà priorità al valore dell&#39;attributo di profilo in caso di conflitti di dati.
+
 **Attribuzione AI:** Attribution AI è un servizio Adobe Sensei che offre funzionalità algoritmiche di attribuzione multicanale per l&#39;intero ciclo di vita del cliente.
 
 **Pubblico**: Un&#39;audience è l&#39;insieme risultante di profili che soddisfano i criteri di una definizione di segmento.
@@ -61,7 +66,7 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Backfill:** In Real-time Customer Data Platform, nelle connessioni di origine pianificate, il backfill consente l&#39;inserimento di dati storici.
 
-**Periodo di backfill:** è `Backfill period` un&#39;opzione che consente di impostare il tempo necessario per l&#39;assimilazione di dati storici di terze parti tramite una connessione. Se si seleziona un periodo di backfill per sempre, verrà acquisita l’intera cronologia dei dati di origine in Experience Platform.
+**Periodo di backfill:** `Backfill period` è un&#39;opzione che consente di impostare il tempo necessario per l&#39;assimilazione di dati storici di terze parti tramite una connessione. Se si seleziona un periodo di backfill per sempre, verrà acquisita l’intera cronologia dei dati di origine in Experience Platform.
 
 **Batch:** Batch è un insieme di dati raccolti in un periodo di tempo ed elaborati insieme come un&#39;unica unità.
 
@@ -103,23 +108,23 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Etichette Dati Contratto &quot;C&quot;:** Le `C` etichette dei contratti vengono utilizzate per classificare i dati che hanno obbligazioni contrattuali o che sono correlati alle politiche di governance dei dati di un cliente.
 
-**Etichetta contratto C1:** l&#39;etichetta `C1` di governance dei dati del contratto specifica che i dati possono essere esportati da Adobe Experience Cloud in un modulo aggregato solo senza includere identificatori individuali o dispositivo. Ad esempio, i dati originati dai social network.
+**Etichetta contratto C1:** `C1` l’etichetta di governance dei dati del contratto specifica che i dati possono essere esportati da Adobe Experience Cloud in un modulo aggregato solo senza includere identificatori individuali o dispositivo. Ad esempio, i dati originati dai social network.
 
-**Etichetta contratto C2:** l&#39;etichetta `C2` di governance dei dati del contratto specifica i dati che non possono essere esportati a terzi. Alcuni provider di dati hanno termini nei loro contratti che vietano l&#39;esportazione di dati da dove è stato originariamente raccolto.  Ad esempio, i contratti con i social network spesso limitano il trasferimento di dati che ricevi da loro. C2 è più restrittivo di C1, che richiede solo aggregazione e dati anonimi.
+**Etichetta contratto C2:** `C2` l&#39;etichetta di governance dei dati del contratto specifica i dati che non possono essere esportati a terzi. Alcuni provider di dati hanno termini nei loro contratti che vietano l&#39;esportazione di dati da dove è stato originariamente raccolto.  Ad esempio, i contratti con i social network spesso limitano il trasferimento di dati che ricevi da loro. C2 è più restrittivo di C1, che richiede solo aggregazione e dati anonimi.
 
-**Etichetta contratto C3:** l&#39;etichetta `C3` di governance dei dati del contratto specifica i dati che non possono essere combinati o altrimenti utilizzati con informazioni direttamente identificabili. Alcuni fornitori di dati hanno termini nei loro contratti che vietano la combinazione o l&#39;uso di tali dati con informazioni direttamente identificabili.  Ad esempio, i contratti per i dati originati da reti pubblicitarie, server di annunci e fornitori di dati di terze parti spesso includono specifici divieti contrattuali sull&#39;uso di dati direttamente identificabili.
+**Etichetta contratto C3:** `C3` l&#39;etichetta di governance dei dati del contratto specifica i dati che non possono essere combinati o altrimenti utilizzati con informazioni direttamente identificabili. Alcuni fornitori di dati hanno termini nei loro contratti che vietano la combinazione o l&#39;uso di tali dati con informazioni direttamente identificabili.  Ad esempio, i contratti per i dati originati da reti pubblicitarie, server di annunci e fornitori di dati di terze parti spesso includono specifici divieti contrattuali sull&#39;uso di dati direttamente identificabili.
 
-**Etichetta contratto C4:** l&#39;etichetta `C4` di governance dei dati del contratto specifica che i dati non possono essere utilizzati per il targeting di annunci o contenuti, sia sul sito che tra siti. C4 è l’etichetta più restrittiva in quanto comprende le etichette C5, C6 e C7.
+**Etichetta contratto C4:** `C4` l&#39;etichetta di governance dei dati del contratto specifica che i dati non possono essere utilizzati per il targeting di annunci o contenuti, né sul sito né tra siti. C4 è l’etichetta più restrittiva in quanto comprende le etichette C5, C6 e C7.
 
-**Etichetta contratto C5:** l&#39;etichetta di governance dei dati del `C5` contratto specifica che i dati non possono essere utilizzati per il targeting intersito di contenuti o annunci. Il targeting basato sugli interessi, o personalizzazione, si verifica se sono soddisfatte tre condizioni:  I dati raccolti sul sito vengono utilizzati per fare deduzioni sull&#39;interesse dell&#39;utente, vengono utilizzati in un altro contesto, ad esempio in un altro sito o in un&#39;altra app, e vengono utilizzati per selezionare il contenuto o gli annunci che vengono serviti in base a tali inferenze.
+**Etichetta contratto C5:** `C5` l&#39;etichetta di governance dei dati del contratto specifica che i dati non possono essere utilizzati per il targeting intersito di contenuti o annunci. Il targeting basato sugli interessi, o personalizzazione, si verifica se sono soddisfatte tre condizioni:  I dati raccolti sul sito vengono utilizzati per fare deduzioni sull&#39;interesse dell&#39;utente, vengono utilizzati in un altro contesto, ad esempio in un altro sito o in un&#39;altra app, e vengono utilizzati per selezionare il contenuto o gli annunci che vengono serviti in base a tali inferenze.
 
-**Etichetta contratto C6:** l&#39;etichetta di governance dei dati del `C6` contratto specifica che i dati non possono essere utilizzati per il targeting degli annunci in sito. I dati non possono essere utilizzati per il targeting di annunci on-site, inclusa la selezione e la consegna di annunci pubblicitari sui siti Web o sulle app dell&#39;organizzazione, né per misurare la consegna e l&#39;efficacia di tali annunci.  Ciò include l&#39;utilizzo di dati raccolti in precedenza sul sito in merito all&#39;interesse degli utenti per selezionare gli annunci, elaborare i dati su quali annunci sono stati visualizzati, quando e dove sono stati visualizzati, e se gli utenti hanno intrapreso qualsiasi azione correlata all&#39;annuncio, ad esempio facendo clic su un annuncio o effettuando un acquisto.
+**Etichetta contratto C6:** `C6` l&#39;etichetta di governance dei dati del contratto specifica che i dati non possono essere utilizzati per il targeting degli annunci sul sito. I dati non possono essere utilizzati per il targeting di annunci on-site, inclusa la selezione e la consegna di annunci pubblicitari sui siti Web o sulle app dell&#39;organizzazione, né per misurare la consegna e l&#39;efficacia di tali annunci.  Ciò include l&#39;utilizzo di dati raccolti in precedenza sul sito in merito all&#39;interesse degli utenti per selezionare gli annunci, elaborare i dati su quali annunci sono stati visualizzati, quando e dove sono stati visualizzati, e se gli utenti hanno intrapreso qualsiasi azione correlata all&#39;annuncio, ad esempio facendo clic su un annuncio o effettuando un acquisto.
 
-**Etichetta contratto C7:** l&#39;etichetta di governance dei dati del `C7` contratto specifica che i dati non possono essere utilizzati per il targeting on-site del contenuto.  I dati non possono essere utilizzati per il targeting dei contenuti on-site, inclusa la selezione e la distribuzione di contenuti sui siti Web o sulle app dell&#39;organizzazione, né per misurare la consegna e l&#39;efficacia di tali contenuti.  Ciò include informazioni precedentemente raccolte sull’interesse degli utenti per la selezione del contenuto, l’elaborazione dei dati su quale contenuto è stato visualizzato, la frequenza o il periodo di visualizzazione, quando e dove è stato visualizzato, e se gli utenti hanno eseguito azioni relative al contenuto, ad esempio facendo clic sul contenuto.
+**Etichetta contratto C7:** `C7` l&#39;etichetta di governance dei dati del contratto specifica che i dati non possono essere utilizzati per il targeting on-site del contenuto.  I dati non possono essere utilizzati per il targeting dei contenuti on-site, inclusa la selezione e la distribuzione di contenuti sui siti Web o sulle app dell&#39;organizzazione, né per misurare la consegna e l&#39;efficacia di tali contenuti.  Ciò include informazioni precedentemente raccolte sull’interesse degli utenti per la selezione del contenuto, l’elaborazione dei dati su quale contenuto è stato visualizzato, la frequenza o il periodo di visualizzazione, quando e dove è stato visualizzato, e se gli utenti hanno eseguito azioni relative al contenuto, ad esempio facendo clic sul contenuto.
 
-**Etichetta contratto C8:** l&#39;etichetta di governance dei dati del `C8` contratto specifica che i dati non possono essere utilizzati per la misurazione dei siti Web o delle app dell&#39;organizzazione. I dati non possono essere utilizzati per misurare, comprendere e segnalare l&#39;utilizzo da parte degli utenti dei siti o delle app dell&#39;organizzazione. Ciò non include il targeting basato sugli interessi, ovvero la raccolta di informazioni sull&#39;utilizzo di questo servizio per personalizzare successivamente contenuti e/o pubblicità in altri contesti.
+**Etichetta contratto C8:** `C8` l&#39;etichetta di governance dei dati del contratto specifica che i dati non possono essere utilizzati per la misurazione dei siti Web o delle app dell&#39;organizzazione. I dati non possono essere utilizzati per misurare, comprendere e segnalare l&#39;utilizzo da parte degli utenti dei siti o delle app dell&#39;organizzazione. Ciò non include il targeting basato sugli interessi, ovvero la raccolta di informazioni sull&#39;utilizzo di questo servizio per personalizzare successivamente contenuti e/o pubblicità in altri contesti.
 
-**Etichetta contratto C9:** l&#39;etichetta di governance dei dati del `C9` contratto specifica che i dati non possono essere utilizzati nei flussi di lavoro Data Science. Alcuni contratti includono divieti espliciti sui dati utilizzati per la scienza dei dati.  Talvolta tali termini sono formulati in termini che vietano l&#39;uso di dati per l&#39;intelligenza artificiale (AI), l&#39;apprendimento automatico (ML) o la modellazione.
+**Etichetta contratto C9:** `C9` l&#39;etichetta di governance dei dati del contratto specifica che i dati non possono essere utilizzati nei flussi di lavoro Data Science. Alcuni contratti includono divieti espliciti sui dati utilizzati per la scienza dei dati.  Talvolta tali termini sono formulati in termini che vietano l&#39;uso di dati per l&#39;intelligenza artificiale (AI), l&#39;apprendimento automatico (ML) o la modellazione.
 
 **Colonna data di creazione:** La selezione di una `Created Date` colonna è un&#39;opzione quando si specificano dati di terze parti tramite una connessione. Quando si seleziona l&#39;opzione Aggiungi strategia di salvataggio e il dataset contiene uno schema correlato a più date, l&#39;utente deve scegliere dallo schema data/ora disponibile per specificare una colonna `Created Date` chiave. `Created Date` non è disponibile quando è selezionata la strategia di salvataggio per la sovrascrittura.
 
@@ -145,14 +150,6 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Flusso di dati:** Un flusso di dati è un insieme o una raccolta di messaggi che condividono lo stesso schema e vengono inviati dalla stessa origine.
 
-**Set di dati:** Un dataset è un costrutto di archiviazione e gestione per una raccolta di dati, in genere una tabella, che contiene schema (colonne) e campi (righe).
-
-**Flusso set di dati:** In Real-time Customer Data Platform, un flusso di dati è una rappresentazione visiva dei set di dati sorgente che scorrono nel profilo cliente in tempo reale verso le destinazioni.
-
-**ID set di dati:** Identificatore generato da Adobe per un set di dati acquisito.
-
-**Output set di dati:** L&#39;output del set di dati fornisce un meccanismo per determinare l&#39;opzione *Crea tabella come selezione* da utilizzare per una particolare esecuzione del servizio di query.
-
 **Governance dei dati:** La governance dei dati include le strategie e le tecnologie utilizzate per garantire che i dati siano conformi alle normative e alle politiche aziendali in materia di utilizzo dei dati.
 
 **Etichette sulla governance dei dati:** Le etichette sulla governance dei dati consentono agli utenti di classificare i dati che riflettono considerazioni relative alla privacy e condizioni contrattuali in modo da essere conformi alle normative e alle politiche aziendali. Le etichette di governance dei dati aggiunte a un dataset vengono ereditate o applicate a tutti i campi all&#39;interno di tale dataset.  Le etichette di governance dei dati possono essere applicate direttamente ai campi.
@@ -171,6 +168,14 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Etichette di utilizzo dei dati:** Le etichette di utilizzo dei dati consentono agli utenti di classificare i dati che riflettono considerazioni relative alla privacy e condizioni contrattuali in modo da essere conformi alle normative e alle politiche aziendali.
 
+**Flusso di dati:** In Real-time Customer Data Platform, un flusso di dati è una pipeline virtuale di dati che confluisce nella piattaforma da un&#39;origine a una destinazione.
+
+**Set di dati:** Un dataset è un costrutto di archiviazione e gestione per una raccolta di dati, in genere una tabella, che contiene schema (colonne) e campi (righe).
+
+**ID set di dati:** Identificatore generato da Adobe per un set di dati acquisito.
+
+**Output set di dati:** L&#39;output del set di dati fornisce un meccanismo per determinare l&#39;opzione *Crea tabella come selezione* da utilizzare per una particolare esecuzione del servizio di query.
+
 **Evento decisionale:** Un evento decisionale è utilizzato per acquisire le osservazioni sul risultato e il contesto di un&#39;attività decisionale. L&#39;evento di decisione raccoglie informazioni su come la decisione presa, quando si è verificata, quali opzioni sono state proposte (scelte) e quale stato contestuale esisteva che ha influenzato la decisione o che poteva essere osservato durante il processo decisionale. L&#39;evento di decisione acquisisce anche l&#39;ID della proposta, un identificatore univoco globale che può essere utilizzato per correlare la decisione ad altri eventi.
 
 **Regola decisionale:** Nel servizio di decisione, una regola di decisione è la logica che definisce e controlla cosa, quando, dove e come un&#39;offerta viene presentata agli utenti finali.
@@ -179,7 +184,7 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Colonna Delta:** In Real-time Customer Data Platform, la colonna delta abilita la selezione del campo dei dati di origine per una marca temporale per l&#39;assimilazione incrementale
 
-**Strategia di salvataggio Delta:** è `Delta save strategy` un&#39;opzione per l&#39;acquisizione di dati di terze parti tramite una connessione. L&#39;opzione consente all&#39;utente di specificare che le righe nuove o modificate dei dati di origine vengono caricate in Experience Platform. Nuove righe vengono aggiunte alla fine del dataset e le righe modificate vengono aggiornate nel dataset in Experience Platform.
+**Strategia di salvataggio Delta:** `Delta save strategy` è un&#39;opzione per l&#39;acquisizione di dati di terze parti tramite una connessione. L&#39;opzione consente all&#39;utente di specificare che le righe nuove o modificate dei dati di origine vengono caricate in Experience Platform. Nuove righe vengono aggiunte alla fine del dataset e le righe modificate vengono aggiornate nel dataset in Experience Platform.
 
 **Destinazione:** In Real-time Customer Data Platform, una destinazione è un termine generico per qualsiasi sistema, ad esempio un&#39;applicazione Adobe, un server di annunci o una rete di annunci in cui un&#39;audience viene attivata e consegnata.
 
@@ -214,6 +219,8 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 **Modello dati esperienza (XDM):** Experience Data Model (XDM) è l&#39;idea di utilizzare schemi standard per unificare i dati da utilizzare con le applicazioni Experience Platform e Adobe Experience Cloud. XDM standardizza la struttura dei dati e accelera e semplifica il processo di acquisizione di informazioni da enormi quantità di dati.
 
 **Lancio della piattaforma Experience:** Launch è un ecosistema di gestione tag e SDK, integrato con le applicazioni Experience Platform e Experience Cloud. Launch fornisce strumenti per distribuire, unificare e gestire le integrazioni di analisi, marketing e pubblicità necessarie per fornire esperienze cliente rilevanti su tutti i dispositivi client.
+
+**Estensioni lancio della piattaforma Experience:** Le estensioni Experience Platform Launch consentono la trasmissione di dati evento non elaborati direttamente alle destinazioni della piattaforma dati cliente in tempo reale. L&#39;installazione delle estensioni Launch richiede l&#39;accesso alle proprietà Launch.
 
 **Esperimento:** Un esperimento è un processo di creazione di un modello qualificato formando l&#39;istanza con una porzione campione dei dati di produzione live.
 
@@ -263,7 +270,7 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Identità:** L&#39;identità è un identificatore, ad esempio un ID cookie, un ID dispositivo o un ID e-mail che rappresenta in modo univoco un cliente finale.
 
-**Etichette Dati Identità &quot;I&quot;:** Le `Identity I` etichette sono utilizzate per classificare i dati in grado di identificare o contattare una persona specifica.
+**Etichette Dati Identità &quot;I&quot;:** `Identity I` le etichette sono utilizzate per classificare i dati che possono identificare o contattare una persona specifica.
 
 **Grafico identità:** Il grafico dell&#39;identità è una mappa delle relazioni tra identità unite e unite, che si aggiorna quasi in tempo reale con l&#39;attività del cliente.
 
@@ -274,6 +281,8 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 **Cucitura identità:** L&#39;unione delle identità è il processo di identificazione dei frammenti di dati e di unione dei frammenti per creare un record completo di un profilo.
 
 **Simbolo di identità:** Il simbolo di identità è un&#39;abbreviazione di uno spazio nomi di identità che può essere utilizzato come riferimento nelle API.
+
+**Valore identità:** Il valore dell&#39;identità è dato associato a un&#39;identità assegnata nello schema. Quando i dati del record corrispondono tra i frammenti di profilo, il valore dell&#39;identità e lo spazio dei nomi devono corrispondere.
 
 **Etichetta dati I1:** L&#39;etichetta `I1` dati viene utilizzata per classificare i dati direttamente identificabili che possono identificare o contattare una persona specifica anziché un dispositivo.
 
@@ -347,7 +356,7 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Organizzazione:** Per organizzazione si intende il nome utilizzato per identificare una società o un gruppo specifico all’interno di una società tra i prodotti Adobe. L&#39;amministratore può configurare e gestire l&#39;accesso e le autorizzazioni delle funzionalità per gli utenti di un&#39;organizzazione.
 
-**Sovrascrivi strategia di salvataggio:** strategia di `Overwrite` salvataggio è un&#39;opzione per l&#39;acquisizione di dati di terze parti tramite una connessione, in cui l&#39;utente specifica se i dati acquisiti verranno sovrascritti in base a una pianificazione specificata. Experience Platform acquisirà il set di dati specificato dall&#39;origine di terze parti e sovrascriverà il set di dati in Experience Platform.
+**Sovrascrivi strategia di salvataggio:** `Overwrite` strategia di salvataggio è un&#39;opzione per l&#39;acquisizione di dati di terze parti tramite una connessione, in cui l&#39;utente specifica se i dati acquisiti verranno sovrascritti in base a una pianificazione specificata. Experience Platform acquisirà il set di dati specificato dall&#39;origine di terze parti e sovrascriverà il set di dati in Experience Platform.
 
 [Torna all&#39;inizio](#adobe-experience-platform-glossary)
 
@@ -377,6 +386,8 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Esportazione profilo:** L&#39;esportazione dei profili è uno dei due tipi di destinazioni nella piattaforma dati cliente in tempo reale. L’esportazione di profili genera un file contenente profili e attributi, utilizza dati PII non elaborati con le e-mail e viene utilizzato per l’integrazione con le piattaforme di automazione marketing ed e-mail.
 
+**Frammento FProfile profilo:** Un frammento di profilo è l&#39;informazione di profilo per una sola identità inclusa nell&#39;elenco di identità esistenti per un particolare utente.
+
 **ID profilo:** Un ID profilo è un identificatore generato automaticamente associato a un tipo di identità e rappresenta un profilo.
 
 **Proprietà:** In Experience Platform Launch, una proprietà è un contenitore per tutto il necessario per distribuire un set di tag.
@@ -389,7 +400,7 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Editor query:** Query Editor è uno strumento per scrivere, convalidare e inviare istruzioni SQL in Query Service.
 
-**Servizio query per Adobe Experience Platform:** Il servizio *Query di* Experience Platform consente agli analisti di dati di eseguire query su ExperienceEvents e XDM da utilizzare nelle analisi e nell&#39;apprendimento automatico. Con Query Service, gli esperti di analisi e data-scienziati saranno in grado di estrarre tutti i loro set di dati memorizzati in Experience Platform, inclusi i dati comportamentali, i POS (Point-of-sale), CRM (Customer Relationship Management) e altro ancora, e di eseguire query su tali set di dati per rispondere a domande specifiche sui dati.
+**Servizio query per Adobe Experience Platform:** *Experience Platform Query Service* consente agli analisti di dati di eseguire query su ExperienceEvents e XDM da utilizzare in analisi e machine learning. Con Query Service, gli esperti di analisi e data-scienziati saranno in grado di estrarre tutti i loro set di dati memorizzati in Experience Platform, inclusi i dati comportamentali, i POS (Point-of-sale), CRM (Customer Relationship Management) e altro ancora, e di eseguire query su tali set di dati per rispondere a domande specifiche sui dati.
 
 [Torna all&#39;inizio](#adobe-experience-platform-glossary)
 
@@ -465,9 +476,9 @@ source-git-commit: 6ed6f7a6930cc757f4ac80544bf08180c1541f35
 
 **Servizi:** Un framework potente per l&#39;operazionalizzazione dei servizi AI e ML sfruttando i servizi intelligenti di Adobe. I servizi offrono esperienze cliente personalizzate in tempo reale o offrono servizi intelligenti personalizzati.
 
-**Etichetta dati S1:** L&#39;etichetta `S1` dati viene utilizzata per classificare i dati che specificano latitudine e longitudine, utilizzabili per determinare la posizione esatta di un dispositivo.
+**Etichetta dati S1:** `S1` l&#39;etichetta dati viene utilizzata per classificare i dati che specificano latitudine e longitudine, utilizzabili per determinare la posizione esatta di un dispositivo.
 
-**Etichetta dati S2:** L&#39;etichetta `S2` dati viene utilizzata per classificare i dati che possono essere utilizzati per determinare un&#39;area di geofencing definita in senso ampio.
+**Etichetta dati S2:** `S2` l&#39;etichetta di dati viene utilizzata per classificare i dati che possono essere utilizzati per determinare un&#39;area di delimitazione geografica ampiamente definita.
 
 **Origine:** Origine è un termine generico per qualsiasi connettore di ingresso nella piattaforma dati cliente in tempo reale.
 
