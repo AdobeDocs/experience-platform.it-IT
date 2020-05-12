@@ -4,7 +4,10 @@ seo-title: Esecuzione di comandi SDK Web per Adobe Experience Platform
 description: Scopri come eseguire i comandi SDK Web della piattaforma Experience
 seo-description: Scopri come eseguire i comandi SDK Web della piattaforma Experience
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: 9bd6feb767e39911097bbe15eb2c370d61d9842a
+workflow-type: tm+mt
+source-wordcount: '445'
+ht-degree: 4%
 
 ---
 
@@ -27,7 +30,7 @@ L’ `commandName` SDK spiega all’SDK cosa fare, mentre `options` sono i param
 
 ## Una nota sulle promesse
 
-[Le promesse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) sono fondamentali per il modo in cui l’SDK comunica con il codice sulla tua pagina Web. Una promessa è una struttura di programmazione comune e non è specifica per questo SDK o JavaScript. Una promessa funge da proxy per un valore non noto al momento della creazione della promessa. Una volta noto il valore, la promessa viene &quot;risolta&quot; con il valore. Le funzioni del gestore possono essere associate a una promessa, in modo che sia possibile ricevere una notifica quando la promessa è stata risolta o quando si è verificato un errore nel processo di risoluzione della promessa. Per saperne di più sulle promesse, leggete [questa esercitazione](https://javascript.info/promise-basics) o una delle altre risorse disponibili sul Web.
+[Le promesse](https://developer.mozilla.org/it-IT/docs/Web/JavaScript/Reference/Global_Objects/Promise) sono fondamentali per il modo in cui l’SDK comunica con il codice sulla tua pagina Web. Una promessa è una struttura di programmazione comune e non è specifica per questo SDK o JavaScript. Una promessa funge da proxy per un valore non noto al momento della creazione della promessa. Una volta noto il valore, la promessa viene &quot;risolta&quot; con il valore. Le funzioni del gestore possono essere associate a una promessa, in modo che sia possibile ricevere una notifica quando la promessa è stata risolta o quando si è verificato un errore nel processo di risoluzione della promessa. Per saperne di più sulle promesse, leggete [questa esercitazione](https://javascript.info/promise-basics) o una delle altre risorse disponibili sul Web.
 
 ## Gestione del successo o del fallimento
 
@@ -35,7 +38,7 @@ Ogni volta che viene eseguito un comando, viene restituita una promessa. La prom
 
 ```javascript
 alloy("commandName", options)
-  .then(function(value) {
+  .then(function(result) {
     // The command succeeded.
     // "value" is whatever the command returned
   })
@@ -59,12 +62,22 @@ Allo stesso modo, se sapere quando il comando non riesce non è importante per v
 
 ```javascript
 alloy("commandName", options)
-  .then(function(value) {
+  .then(function(result) {
     // The command succeeded.
     // "value" will be whatever the command returned
   })
 ```
 
-## Eliminazione degli errori
+### Oggetti di risposta
 
-Se la promessa viene rifiutata e non hai aggiunto una `catch` chiamata, l’errore &quot;bubbles up&quot; viene visualizzato nella console sviluppatore del browser, indipendentemente dal fatto che la registrazione sia abilitata o meno nell’SDK Web di Adobe Experience Platform. Se questo è un problema, puoi impostare l’opzione di `suppressErrors` configurazione su `true` come descritto in [Configurazione dell’SDK](configuring-the-sdk.md).
+Tutte le promesse restituite dai comandi vengono risolte con un `result` oggetto. L&#39;oggetto result conterrà i dati in base al comando e al consenso dell&#39;utente. Ad esempio, le informazioni sulla libreria vengono trasmesse come proprietà dell&#39;oggetto result nel comando seguente.
+
+```js
+alloy("getLibraryInfo").then(function(result) {
+  console.log(results.libraryInfo.version);
+});
+```
+
+### Consenso
+
+Se un utente non ha dato il proprio consenso per uno scopo particolare, la promessa sarà ancora risolta; tuttavia, l&#39;oggetto response conterrà solo le informazioni che possono essere fornite nel contesto a cui l&#39;utente ha acconsentito.
