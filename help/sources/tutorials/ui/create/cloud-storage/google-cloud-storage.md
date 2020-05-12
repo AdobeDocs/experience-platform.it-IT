@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Creare un connettore di origine di archiviazione Google Cloud nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: f09ff4d1b159a6989868c5cfc35b361cfb640a99
+source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+workflow-type: tm+mt
+source-wordcount: '539'
+ht-degree: 1%
 
 ---
 
@@ -22,7 +25,7 @@ Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Ad
    * [Esercitazione](../../../../../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
 * [Profilo](../../../../../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
-Se disponete già di una connessione di base GCS, potete ignorare il resto del documento e procedere all&#39;esercitazione sulla [configurazione di un flusso di dati](../../dataflow/cloud-storage.md).
+Se disponete già di una connessione di base GCS, potete ignorare il resto del documento e procedere all&#39;esercitazione sulla [configurazione di un flusso di dati](../../dataflow/batch/cloud-storage.md).
 
 ### Formati di file supportati
 
@@ -54,4 +57,4 @@ Una volta stabilita la connessione di base, puoi continuare con la sezione succe
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai stabilito una connessione di base al tuo account GCS. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per l’inserimento di dati nella piattaforma](../../dataflow/cloud-storage.md).
+Seguendo questa esercitazione, hai stabilito una connessione di base al tuo account GCS. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per l’inserimento di dati nella piattaforma](../../dataflow/batch/cloud-storage.md).
