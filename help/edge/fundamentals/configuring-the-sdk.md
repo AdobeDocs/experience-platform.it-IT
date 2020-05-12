@@ -4,7 +4,10 @@ seo-title: Configurazione di Adobe Experience Platform Web SDK
 description: Scopri come configurare l’SDK Web per la piattaforma Experience
 seo-description: Scopri come configurare l’SDK Web per la piattaforma Experience
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: 767f0e1bfdfcc898313b546c804ba1287f2aec50
+workflow-type: tm+mt
+source-wordcount: '765'
+ht-degree: 8%
 
 ---
 
@@ -17,7 +20,7 @@ source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
 
 La configurazione per l’SDK viene effettuata con il `configure` comando.
 
->[!Iimportante]
+>[!IImportante]
 >`configure` deve essere _sempre_ il primo comando chiamato.
 
 ```javascript
@@ -67,14 +70,6 @@ Indica se il debug deve essere abilitato. Impostando questa configurazione si `t
 | Stringa | No | `beta.adobedc.net` |
 
 Dominio utilizzato per interagire con Adobe Services. Questo viene utilizzato solo se disponete di un dominio di prime parti (CNAME) che esegue il proxy delle richieste all&#39;infrastruttura periferica di Adobe.
-
-### `errorsEnabled`
-
-| **Tipo** | **Obbligatorio** | **Valore predefinito** |
-| -------- | ------------ | ----------------- |
-| Booleano | No | `true` |
-
-Indica se gli errori devono essere eliminati. Come descritto in [Esecuzione di comandi](executing-commands.md), gli errori _non rilevati_ vengono registrati nella console dello sviluppatore, indipendentemente dal fatto che il debug sia abilitato in Adobe Experience Platform Web SDK. Impostando `errorsEnabled` su `false`, le promesse restituite dall’SDK Web di Adobe Experience Platform non vengono mai rifiutate, anche se gli errori vengono comunque registrati nella console se la registrazione è abilitata nell’SDK Web di Adobe Experience Platform.
 
 ### `orgId`
 
