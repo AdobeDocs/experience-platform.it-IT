@@ -4,16 +4,19 @@ solution: Experience Platform
 title: Connettore Azure Blob e Amazon S3
 topic: overview
 translation-type: tm+mt
-source-git-commit: ca3d2e7ac6d32b71e19e150f301f21b2d87c08ad
+source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+workflow-type: tm+mt
+source-wordcount: '193'
+ht-degree: 0%
 
 ---
 
 
 # Connettore Azure Blob e Amazon S3
 
-Adobe Experience Platform consente di acquisire dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi della piattaforma. È possibile acquisire dati da origini diverse come applicazioni Adobe, archiviazione basata su cloud, database e molti altri.
+Adobe Experience Platform offre connettività nativa per fornitori di cloud come AWS, Google Cloud Platform e Azure. È possibile trasferire i dati da questi sistemi in Piattaforma.
 
-Le origini di archiviazione cloud possono portare i tuoi dati in Platform senza bisogno di scaricare, formattare o caricare. I dati ingeriti possono essere formattati come JSON XDM, parquet XDM o delimitati. Ogni fase del processo è integrata nel flusso di lavoro Origini tramite l&#39;interfaccia utente. Il supporto per i provider di archiviazione cloud include Azure Blob e Amazon S3.
+Le origini di archiviazione cloud possono portare i tuoi dati in Platform senza bisogno di scaricare, formattare o caricare. I dati ingeriti possono essere formattati come JSON XDM, parquet XDM o delimitati. Ogni fase del processo è integrata nel flusso di lavoro Origini. La piattaforma consente di inserire i dati da Azure Blob e S3 tramite batch.
 
 La documentazione seguente fornisce informazioni su come collegare Azure Blob e S3 alla piattaforma utilizzando le API o l&#39;interfaccia utente:
 
@@ -27,4 +30,4 @@ La documentazione seguente fornisce informazioni su come collegare Azure Blob e 
 ## Collegare Blob e S3 alla piattaforma mediante l’interfaccia utente
 
 - [Creare un connettore di origine Azure Blob o Amazon S3 nell&#39;interfaccia utente](../../tutorials/ui/create/cloud-storage/blob-s3.md)
-- [Configurare un flusso di dati per un connettore di archiviazione cloud nell&#39;interfaccia utente](../../tutorials/ui/dataflow/cloud-storage.md)
+- [Configurare un flusso di dati per un connettore di archiviazione cloud nell&#39;interfaccia utente](../../tutorials/ui/dataflow/batch/cloud-storage.md)
