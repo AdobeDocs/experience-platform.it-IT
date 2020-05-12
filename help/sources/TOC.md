@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Guida di Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: b3512cd4d1e024597a47e1aa52a2e23e5fce5e44
+source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,10 @@ ht-degree: 0%
    - Pubblicità {#advertising}
       - [Connettore Google Ads](connectors/advertising/ads.md)
    - Archiviazione cloud {#cloud-storage}
+      - [Connettore Amazon Kinesis](connectors/cloud-storage/kinesis.md)
       - [Connettore Azure Data Lake Storage Gen2](connectors/cloud-storage/adls-gen2.md)
       - [Connettore Azure Blob e Amazon S3](connectors/cloud-storage/blob-s3.md)
+      - [Connettore Azure Event Hubs](connectors/cloud-storage/eventhub.md)
       - [Connettore archiviazione file Azure](connectors/cloud-storage/azure-file-storage.md)
       - [Connettore FTP e SFTP](connectors/cloud-storage/ftp-sftp.md)
       - [Connettore di archiviazione Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
@@ -159,7 +161,8 @@ ht-degree: 0%
          - [Connettore OData generico](tutorials/ui/create/protocols/odata.md)
    - Configurare un flusso di dati {#dataflow}
       - [Configurare un flusso di dati per un connettore pubblicitario](tutorials/ui/dataflow/advertising.md)
-      - [Configurare un flusso di dati per un connettore di archiviazione cloud](tutorials/ui/dataflow/cloud-storage.md)
+      - [Configurare un flusso di dati per un connettore di archiviazione cloud batch](tutorials/ui/dataflow/batch/cloud-storage.md)
+      - [Configurare un flusso di dati per un connettore di archiviazione cloud in streaming](tutorials/ui/dataflow/streaming/cloud-storage.md)
       - [Configurare un flusso di dati per un connettore di database](tutorials/ui/dataflow/databases.md)
       - [Configurare un flusso di dati per un connettore CRM](tutorials/ui/dataflow/crm.md)
       - [Configurare un flusso di dati per un connettore di successo cliente](tutorials/ui/dataflow/customer-success.md)
