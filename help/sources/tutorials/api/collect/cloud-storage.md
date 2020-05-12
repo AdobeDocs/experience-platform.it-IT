@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Raccolta di dati di archiviazione cloud tramite connettori di origine e API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4309d668acf43a237648b405973ebd0701b6f977
+source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+workflow-type: tm+mt
+source-wordcount: '1489'
+ht-degree: 1%
 
 ---
 
@@ -19,12 +22,12 @@ Questa esercitazione richiede l&#39;accesso a un archivio cloud di terze parti t
 
 Questa esercitazione richiede anche di avere una conoscenza approfondita dei seguenti componenti di Adobe Experience Platform:
 
-* [Sistema](../../../../xdm/home.md)XDM (Experience Data Model): Il framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza dei clienti.
-   * [Nozioni di base sulla composizione](../../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
-   * [Schema Guida](../../../../xdm/api/getting-started.md)per lo sviluppatore del Registro di sistema: Include informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all&#39;API del Registro di sistema dello schema. Ciò include il vostro `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all’intestazione Accetta e ai suoi possibili valori).
-* [Servizio](../../../../catalog/home.md)catalogo: Catalog è il sistema di record per la posizione dei dati e la linea di collegamento all’interno di Experience Platform.
-* [Caricamento](../../../../ingestion/batch-ingestion/overview.md)batch: L’API Batch Ingestion consente di trasferire i dati in Experience Platform come file batch.
-* [Sandbox](../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+- [Sistema](../../../../xdm/home.md)XDM (Experience Data Model): Il framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza dei clienti.
+   - [Nozioni di base sulla composizione](../../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
+   - [Schema Guida](../../../../xdm/api/getting-started.md)per lo sviluppatore del Registro di sistema: Include informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all&#39;API del Registro di sistema dello schema. Ciò include il vostro `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all’intestazione Accetta e ai suoi possibili valori).
+- [Servizio](../../../../catalog/home.md)catalogo: Catalog è il sistema di record per la posizione dei dati e la linea di collegamento all’interno di Experience Platform.
+- [Caricamento](../../../../ingestion/batch-ingestion/overview.md)batch: L’API Batch Ingestion consente di trasferire i dati in Experience Platform come file batch.
+- [Sandbox](../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegarsi correttamente a un archivio cloud tramite l&#39;API del servizio di flusso.
 
@@ -36,17 +39,17 @@ Questa esercitazione fornisce esempi di chiamate API per dimostrare come formatt
 
 Per effettuare chiamate alle API della piattaforma, dovete prima completare l&#39;esercitazione [di](../../../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come illustrato di seguito:
 
-* Autorizzazione: Portatore `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+- Autorizzazione: Portatore `{ACCESS_TOKEN}`
+- x-api-key: `{API_KEY}`
+- x-gw-ims-org-id: `{IMS_ORG}`
 
 Tutte le risorse in Experience Platform, incluse quelle appartenenti a Flow Service, sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API della piattaforma richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva per il tipo di supporto:
 
-* Content-Type: `application/json`
+- Content-Type: `application/json`
 
 ## Creare una classe e uno schema XDM ad hoc
 
@@ -456,7 +459,7 @@ Una risposta corretta restituisce i dettagli della mappatura appena creata, incl
 }
 ```
 
-## Ricerca delle specifiche del flusso di dati {#specs}
+## Recupero delle specifiche del flusso di dati {#specs}
 
 Un flusso di dati è responsabile della raccolta di dati da origini e del loro inserimento in Piattaforma. Per creare un flusso di dati, è innanzitutto necessario ottenere le specifiche del flusso di dati responsabili della raccolta dei dati di archiviazione cloud.
 
@@ -575,10 +578,10 @@ Una risposta corretta restituisce i dettagli della specifica del flusso di dati 
 
 L&#39;ultimo passo verso la raccolta dei dati di archiviazione cloud è creare un flusso di dati. A questo punto sono stati preparati i seguenti valori obbligatori:
 
-* [ID connessione di origine](#source)
-* [ID connessione di destinazione](#target)
-* [ID mappatura](#mapping)
-* [ID specifica Dataflow](#specs)
+- [ID connessione di origine](#source)
+- [ID connessione di destinazione](#target)
+- [ID mappatura](#mapping)
+- [ID specifica Dataflow](#specs)
 
 Un flusso di dati è responsabile della pianificazione e della raccolta dei dati da un&#39;origine. È possibile creare un flusso di dati eseguendo una richiesta POST fornendo al contempo i valori indicati in precedenza all&#39;interno del payload.
 
@@ -653,5 +656,21 @@ Una risposta corretta restituisce l’ID (`id`) del flusso di dati appena creato
 
 Seguendo questa esercitazione, hai creato un connettore di origine per raccogliere i dati dall&#39;archiviazione cloud su base pianificata. I dati in entrata possono ora essere utilizzati dai servizi della piattaforma a valle, come Profilo cliente in tempo reale e Data Science Workspace. Per ulteriori informazioni, consulta i documenti seguenti:
 
-* [Panoramica del profilo cliente in tempo reale](../../../../profile/home.md)
-* [Panoramica di Analysis Workspace](../../../../data-science-workspace/home.md)
+- [Panoramica del profilo cliente in tempo reale](../../../../profile/home.md)
+- [Panoramica di Analysis Workspace](../../../../data-science-workspace/home.md)
+
+## Appendice
+
+Nella sezione seguente sono elencati i diversi connettori di origine dell&#39;archivio cloud e le relative specifiche di connessione.
+
+### Specifica di connessione
+
+| Nome connettore | Specifica di connessione |
+| -------------- | --------------- |
+| Amazon S3 (S3) | `ecadc60c-7455-4d87-84dc-2a0e293d997b` |
+| Amazon Kinesis (Kinesis) | `86043421-563b-46ec-8e6c-e23184711bf6` |
+| BLOB di Azure (BLOB) | `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| Azure Data Lake Storage Gen2 (ADLS Gen2) | `0ed90a81-07f4-4586-8190-b40eccef1c5a` |
+| Hubs evento di Azure (EventHub) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| Archiviazione Google Cloud | `32e8f412-cdf7-464c-9885-78184cb113fd` |
+| SFTP | `bf367b0d-3d9b-4060-b67b-0d3d9bd06094` |
