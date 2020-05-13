@@ -4,7 +4,7 @@ solution: Experience Platform
 title: API Authenticate e Access Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: e1ba476fffc164b78decd7168192714993c791bc
+source-git-commit: 8c73363e88aab242ae258037deb80eeec872e519
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 1%
@@ -127,9 +127,9 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-Se la risposta è simile a quella mostrata di seguito, le credenziali sono valide e funzionanti. Questa risposta è stata troncata per lo spazio.
-
 **Risposta**
+
+Se la risposta è simile a quella mostrata di seguito, le credenziali sono valide e funzionanti. Questa risposta è stata troncata per lo spazio.
 
 ```JSON
 {
