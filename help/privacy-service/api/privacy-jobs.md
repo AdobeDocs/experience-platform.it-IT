@@ -4,16 +4,19 @@ solution: Experience Platform
 title: Processi
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 64cb2de507921fcb4aaade67132024a3fc0d3dee
+source-git-commit: a3178ab54a7ab5eacd6c5f605b8bd894779f9e85
+workflow-type: tm+mt
+source-wordcount: '1669'
+ht-degree: 2%
 
 ---
 
 
 # Lavori di privacy
 
-Le sezioni seguenti descrivono le chiamate che puoi effettuare utilizzando l&#39;endpoint principale (`/`) nell&#39;API del servizio sulla privacy. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
+Le sezioni seguenti descrivono le chiamate che puoi effettuare utilizzando l&#39; `/jobs` endpoint nell&#39;API del servizio sulla privacy. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
 
-## Creazione di un processo di privacy
+## Creazione di un processo di privacy {#create-job}
 
 Prima di creare una nuova richiesta di processo, è necessario innanzitutto raccogliere informazioni identificative sugli interessati di cui si desidera accedere, eliminare o rifiutare la vendita. Una volta ricevuti i dati richiesti, questi devono essere forniti nel payload di una richiesta POST all&#39;endpoint principale.
 
@@ -33,7 +36,7 @@ Questa sezione illustra come effettuare una richiesta di accesso/eliminazione tr
 **Formato API**
 
 ```http
-POST /
+POST /jobs
 ```
 
 **Richiesta**
@@ -157,7 +160,7 @@ Una risposta corretta restituisce i dettagli dei processi appena creati.
 | --- | --- |
 | `jobId` | ID univoco generato dal sistema di sola lettura per un processo. Questo valore viene utilizzato nel passaggio successivo per cercare un processo specifico. |
 
-Dopo aver inviato correttamente la richiesta di processo, potete procedere alla fase successiva del [controllo dello stato](#check-the-status-of-a-job)del processo.
+Dopo aver inviato correttamente la richiesta di processo, potete procedere alla fase successiva del [controllo dello stato](#check-status)del processo.
 
 ### Creare un processo di rinuncia alla vendita {#opt-out}
 
@@ -166,7 +169,7 @@ In questa sezione viene illustrato come effettuare una richiesta di OdL per la r
 **Formato API**
 
 ```http
-POST /
+POST /jobs
 ```
 
 **Richiesta**
@@ -281,7 +284,7 @@ Una risposta corretta restituisce i dettagli dei processi appena creati.
 
 Dopo aver inviato correttamente la richiesta di processo, potete procedere al passaggio successivo per controllare lo stato del processo.
 
-## Verificare lo stato di un processo
+## Verificare lo stato di un processo {#check-status}
 
 Utilizzando uno dei `jobId` valori restituiti nel passaggio precedente, potete recuperare informazioni su quel processo, ad esempio il suo stato di elaborazione corrente.
 
@@ -290,12 +293,12 @@ Utilizzando uno dei `jobId` valori restituiti nel passaggio precedente, potete r
 **Formato API**
 
 ```http
-GET /{JOB_ID}
+GET /jobs/{JOB_ID}
 ```
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{JOB_ID}` | L’ID del processo da cercare, restituito `jobId` nella risposta del passaggio [](#create-a-job-request)precedente. |
+| `{JOB_ID}` | L’ID del processo da cercare, restituito `jobId` nella risposta del passaggio [](#create-job)precedente. |
 
 **Richiesta**
 
@@ -391,10 +394,10 @@ Potete visualizzare un elenco di tutte le richieste di processo disponibili all&
 Questo formato di richiesta utilizza un parametro di `regulation` query sull&#39;endpoint principale (`/`), quindi inizia con un punto interrogativo (`?`) come mostrato di seguito. La risposta è impaginata e consente di utilizzare altri parametri di query (`page` e `size`) per filtrare la risposta. Potete separare più parametri utilizzando le e commerciale (`&`).
 
 ```http
-GET ?regulation={REGULATION}
-GET ?regulation={REGULATION}&page={PAGE}
-GET ?regulation={REGULATION}&size={SIZE}
-GET ?regulation={REGULATION}&page={PAGE}&size={SIZE}
+GET /jobs?regulation={REGULATION}
+GET /jobs?regulation={REGULATION}&page={PAGE}
+GET /jobs?regulation={REGULATION}&size={SIZE}
+GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 ```
 
 | Parametro | Descrizione |
