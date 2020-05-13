@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica di Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 96faba8d608d2fd057d256855b8b82af10558324
+source-git-commit: 7a36a3e3180c4ed4a9db23c0a33f6af3d7a3a5ec
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '505'
 ht-degree: 1%
 
 ---
@@ -27,11 +27,11 @@ La documentazione relativa alla piattaforma di esperienze è disponibile in dive
 
 >[!NOTE]
 >
->A partire da maggio 2020, Adobe ha introdotto aggiornamenti al dominio e alla barra dell’intestazione per unificare e migliorare la tua esperienza in tutte le applicazioni Experience Cloud. Include un nuovo menu Aiuto. Il nuovo menu Aiuto include le seguenti opzioni:
+>A partire da maggio 2020, Adobe sta distribuendo aggiornamenti al dominio e alla barra di intestazione per unificare e migliorare la tua esperienza in tutte le applicazioni Experience Cloud. Include un nuovo menu Aiuto. Il nuovo menu Aiuto include le seguenti opzioni:
 >
 >* Collegamenti agli articoli contenuti
 >* Consigli della documentazione pertinenti al contesto
->* Possibilità di fornire feedback sui problemi relativi alla documentazione e ai rapporti
+>* La capacità di fornire feedback sulla piattaforma Experience e di segnalare i problemi
 >* Risultati di ricerca migliorati che includono anche risultati dai forum della community e contenuti video.
 >
 > 
