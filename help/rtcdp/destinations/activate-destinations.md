@@ -4,7 +4,10 @@ seo-title: Attivare profili e segmenti su una destinazione
 description: Attiva i dati di cui disponi in Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 seo-description: Attiva i dati di cui disponi in Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 translation-type: tm+mt
-source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
+source-git-commit: 7dafdf0dd1ad3af2defab3bf6b784fd37e777062
+workflow-type: tm+mt
+source-wordcount: '612'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ Per attivare i dati sulle destinazioni, è necessario aver [collegato correttame
 3. Seleziona **[!UICONTROL Activate]**;
 4. Nel **[!UICONTROL Activate destination]** flusso di lavoro, nella **[!UICONTROL Select Segments]** pagina, seleziona i segmenti da inviare alla destinazione.
    ![segmenti-a-destinazione](/help/rtcdp/destinations/assets/select-segments.png)
-5. *Condizionale*. Questo passaggio si applica solo ai segmenti mappati a destinazioni di marketing e-mail. <br> Nella **[!UICONTROL Destination Attributes]** pagina, selezionate **[!UICONTROL Add new field]** e selezionate gli attributi che desiderate inviare alla destinazione.
+5. *Condizionale*. Questo passaggio si applica solo ai segmenti mappati a destinazioni di archiviazione cloud e di marketing e-mail. <br> Nella **[!UICONTROL Destination Attributes]** pagina, selezionate **[!UICONTROL Add new field]** e selezionate gli attributi che desiderate inviare alla destinazione.
 È consigliabile che uno degli attributi sia un identificatore [](/help/rtcdp/destinations/email-marketing-destinations.md#identity) univoco dello schema di unione. Per ulteriori informazioni sugli attributi obbligatori, vedi Identità nell&#39;articolo Destinazioni [di marketing](/help/rtcdp/destinations/email-marketing-destinations.md#identity) e-mail.
    ![destination-attribute](/help/rtcdp/destinations/assets/destination-attributes.png)
 6. Sulla **[!UICONTROL Segment schedule]** pagina è possibile visualizzare la data di inizio dell&#39;invio dei dati alla destinazione, nonché la frequenza dell&#39;invio dei dati alla destinazione.
