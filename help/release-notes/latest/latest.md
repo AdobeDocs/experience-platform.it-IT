@@ -1,122 +1,63 @@
 ---
 title: 'Note sulla versione di Adobe Experience Platform '
-description: Note sulla versione di Experience Platform, 8 aprile 2020
+description: Note sulla versione della piattaforma Experience 13 maggio 2020
 doc-type: release notes
-last-update: April 13, 2020
-author: ens71067
-keywords: release notes;
+last-update: May 13, 2020
+author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 43db1992ae45e27134bc0c4405963c405275750e
+source-git-commit: 9d4c645e830790a7d5430fe3d514464ca8bef025
+workflow-type: tm+mt
+source-wordcount: '664'
+ht-degree: 4%
 
 ---
 
 
 # Note sulla versione di Adobe Experience Platform
 
-**Data di rilascio: 8 aprile 2020**
+**Data di rilascio: 13 maggio 2020**
 
-Nuove funzioni in Adobe Experience Platform:
-* [Servizi intelligenti](#intelligent)
+Aggiornamenti alle funzionalità esistenti in Adobe Experience Platform:
 
-Aggiornamenti alle funzioni esistenti:
-* [Modello dati esperienza (XDM)](#xdm)
-* [Governance dei dati](#governance)
-* [Destinazioni](#destinations)
-* [Servizio Privacy](#privacy)
-* [Origini](#sources)
+- [Area di lavoro Data Science](#dsw)
+- [SDK Web per la piattaforma Experience e la rete Edge per la piattaforma Experience](#edge)
+- [Origini](#sources)
 
-## Servizi intelligenti {#intelligent}
+## Area di lavoro Data Science {#dsw}
 
-I servizi intelligenti consentono agli analisti e ai professionisti del marketing di sfruttare la potenza dell&#39;intelligenza artificiale e dell&#39;apprendimento automatico nei casi di utilizzo dell&#39;esperienza cliente. Questo consente agli analisti di marketing di impostare previsioni specifiche per le esigenze di un&#39;azienda utilizzando configurazioni a livello di business, senza bisogno di conoscenze scientifiche. Inoltre, i professionisti del marketing possono attivare le previsioni in Adobe Experience Cloud, Adobe Experience Platform e applicazioni di terze parti.
-
-**Funzionalità chiave**
-
-| Funzione | Descrizione |
-|---|---|
-| AI cliente | L&#39;AI del cliente fornisce agli esperti di marketing il potere di generare previsioni dei clienti a livello individuale con spiegazioni. Con l&#39;aiuto di fattori influenti, l&#39;intelligenza artificiale del cliente può dirvi cosa è probabile fare e perché. Inoltre, gli esperti di marketing possono trarre vantaggio dalle previsioni e dalle informazioni dell&#39;AI cliente per personalizzare l&#39;esperienza dei clienti, servendo le offerte e i messaggi più appropriati. |
-| Attribuzione AI | L&#39;AI di attribuzione è un servizio di attribuzione algoritmica multicanale che calcola l&#39;influenza e l&#39;impatto incrementale delle interazioni dei clienti rispetto a determinati risultati. Con Attribution AI, gli addetti al marketing possono misurare e ottimizzare le spese di marketing e pubblicitarie comprendendo l&#39;impatto di ogni singola interazione con i clienti in ogni fase dei viaggi dei clienti. |
-
-**Problemi noti**
-
-* Nessun problema noto al momento.
-
-Per maggiori informazioni sui servizi intelligenti e sui servizi offerti, consulta la panoramica [sui servizi](../../intelligent-services/home.md)intelligenti.
-
-## Sistema XDM (Experience Data Model) {#xdm}
-
-Standardizzazione e interoperabilità sono concetti chiave della piattaforma Experience. Experience Data Model (XDM), guidato da Adobe, è uno sforzo per standardizzare i dati sull&#39;esperienza cliente e definire schemi per la gestione dell&#39;esperienza cliente.
-
-XDM è una specifica documentata pubblicamente progettata per migliorare la potenza delle esperienze digitali. Fornisce strutture e definizioni comuni per qualsiasi applicazione che desideri comunicare con i servizi in Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati relativi all&#39;esperienza dei clienti possono essere incorporati in una rappresentazione comune, fornendo informazioni approfondite in modo più rapido e integrato. Puoi ricavare informazioni utili dalle azioni dei clienti, definire il pubblico dei clienti attraverso i segmenti e utilizzare gli attributi del cliente a scopo di personalizzazione.
+Data Science Workspace utilizza l&#39;apprendimento automatico e l&#39;intelligenza artificiale per liberare informazioni dai tuoi dati. Integrato in Adobe Experience Platform, Data Science Workspace ti aiuta a fare previsioni utilizzando i tuoi contenuti e le risorse di dati nelle soluzioni Adobe. Uno dei modi in cui Data Science Workspace ottiene questo risultato è attraverso l&#39;uso di JupyterLab. JupyterLab è un&#39;interfaccia utente basata sul Web per <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> ed è strettamente integrata in Adobe Experience Platform. Fornisce un ambiente di sviluppo interattivo che consente agli scienziati dei dati di lavorare con notebook, codice e dati Jupyter.
 
 **Nuove funzionalità**
 
 | Funzione | Descrizione |
-| --- | --- |
-| Informazioni di visualizzazione alternative automatiche | Il Registro di sistema dello schema applica automaticamente i valori personalizzati di titolo e descrizione configurati nel `alternateDisplayInfo` descrittore. |
-| Limitazioni per i campi scalari | Il Registro di sistema dello schema non consente più di 6000 campi scalari in un unico schema. |
-| Revisione delle prestazioni | Il Registro di sistema dello schema è stato modificato per soddisfare meglio le esigenze della piattaforma Experience. |
-
-**Correzioni di bug**
-
-* È stato aggiornato XDM in XED convertito per supportare un formato XED più pulito per i campi URI nidificati in XDM standard.
-
-**Problemi noti**
-
-* Noto
-
-## Governance dei dati {#governance}
-
-Adobe Experience Platform Data Governance è una serie di strategie e tecnologie utilizzate per gestire i dati dei clienti e garantire la conformità a normative, restrizioni e criteri applicabili all&#39;utilizzo dei dati. Essa svolge un ruolo chiave all’interno di Experience Platform a vari livelli, tra cui catalogazione, line-up di dati, etichettatura dell’utilizzo dei dati, criteri di accesso ai dati e controllo dell’accesso ai dati per le azioni di marketing.
-
-Per iniziare a utilizzare la gestione dei dati è necessario conoscere a fondo le normative, gli obblighi contrattuali e le politiche aziendali applicabili ai dati dei clienti. Da qui, i dati possono essere classificati applicando le etichette di utilizzo dei dati appropriate e il loro utilizzo può essere controllato tramite la definizione di criteri di utilizzo dei dati.
-
-Il framework DULE semplifica e semplifica il processo di classificazione dei dati e creazione di criteri di utilizzo dei dati tramite l’interfaccia utente della piattaforma Experience e l’API del servizio DULE Policy.
-
-**Nuove funzionalità**
-
-| Funzione | Descrizione |
-| -----------| ---------- |
-| Gestione dei criteri di utilizzo dei dati nell’interfaccia utente | I criteri di utilizzo dei dati possono ora essere gestiti nell&#39;area di lavoro _Criteri_ dell&#39;interfaccia utente della piattaforma Experience. Per ulteriori informazioni, consultate la guida [utente ai](../../data-governance/policies/user-guide.md) criteri. |
-
-**Problemi noti**
-
-* None.
-
-Per ulteriori informazioni, consulta la panoramica sulla governance dei [dati](../../data-governance/home.md).
-
-
-## Destinazioni {#destinations}
-
-In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che attivano i dati per tali partner in modo semplice.
-
-**Nuove destinazioni**
-
-Adobe Real-time CDP ora supporta l&#39;attivazione dei dati per oltre cinquanta estensioni Experience Cloud Launch, abilitando analisi, personalizzazione e altri casi di utilizzo. Per ulteriori informazioni, vedere di seguito:
-
-| Documentazione | Descrizione |
 |--- | ---|
-| [Tipi e categorie di destinazione](/help/rtcdp/destinations/destination-types.md) | Questo articolo spiega la differenza tra connessioni ed estensioni nell&#39;interfaccia Adobe Real-time CDP e consiglia quando utilizzare ciascuna di queste destinazioni. |
-| [Estensioni del lancio della piattaforma Experience](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | In questa pagina sono illustrate le estensioni Launch, sono elencati i casi di utilizzo per le estensioni Launch e sono disponibili collegamenti alla documentazione per ciascuna estensione Launch di Adobe Real-time CDP. |
+| JupyterLab Launcher | JupyterLab Launcher ora include avviatori per i notebook Spark 2.4. Gli avviatori dei notebook Spark 2.3 ora sono contrassegnati come obsoleti e impostati per essere rimossi in una versione successiva. |
+| Spark 2.4 | Le nuove ricette Scala (Spark) e PySpark ora utilizzano Spark 2.4. |
+| Kernel | I notebook Scala (Spark) ora vengono creati tramite il kernel Scala. I notebook PySpark sono ora creati tramite il kernel Python. Il kernel Spark e PySpark sono obsoleti e sono impostati per essere rimossi in una release successiva. |
+| Ricette | Le nuove ricette PySpark e Spark ora seguono il flusso di lavoro Docker simile alle ricette Python e R. |
 
-Per ulteriori informazioni, consulta la panoramica [](/help/rtcdp/destinations/destinations-overview.md)Destinazioni.
+Per ulteriori informazioni sulla migrazione dei notebook e delle ricette per utilizzare Spark 2.4, consulta la guida [alla migrazione dei](../../data-science-workspace/recipe-notebook-migration.md)notebook. Per ulteriori informazioni generali su Data Science Workspace, consulta la documentazione [](../../data-science-workspace/home.md)di panoramica.
 
-## Servizio Privacy {#privacy}
+## SDK Web per la piattaforma Experience e la rete Edge per la piattaforma Experience {#edge}
 
-Le nuove normative legali e organizzative danno agli utenti il diritto di accedere o cancellare i propri dati personali dall&#39;archivio dei dati su richiesta. Il servizio Adobe Experience Platform Privacy Service fornisce un&#39;API RESTful e un&#39;interfaccia utente per aiutarti a gestire queste richieste di dati dai tuoi clienti. Il servizio Privacy consente di inviare richieste per l&#39;accesso e l&#39;eliminazione di dati privati o personali dei clienti dalle applicazioni Adobe Experience Cloud, facilitando la conformità automatizzata alle normative sulla privacy legali e organizzative.
+L’SDK per la piattaforma Web Experience Platform e l’Experience Platform Edge Network consentono agli utenti di inviare dati ad Adobe Experience Platform e ad altre soluzioni Adobe in tempo reale per i dispositivi e i browser degli utenti finali. L’elenco più recente dei casi di utilizzo è riportato nella roadmap [](https://github.com/adobe/alloy/projects/5) pubblica, che viene aggiornata spesso.
 
 **Nuove funzionalità**
 
 | Funzione | Descrizione |
-| --- | --- |
-| Supporto PDPA | Le richieste di privacy possono ora essere create e monitorate in base al Personal Data Protection Act (PDPA) in Thailandia. Quando si effettuano richieste di privacy nell&#39;API, l&#39; `regulation` array accetta il valore &quot;pdpa_tha&quot;. |
-| Tipi di namespace nell’interfaccia | È ora possibile specificare diversi tipi di spazio nomi in Request Builder nell&#39;interfaccia utente del servizio per la privacy. Per ulteriori informazioni, consultate la guida [](../../privacy-service/ui/user-guide.md) utente. |
-| Obsoleto endpoint precedente | Il vecchio endpoint API (`data/privacy/gdpr`) è stato dichiarato obsoleto. |
+|--- | ---|
+| Supporto per ECID | L’SDK supporta l’ECID in dotazione senza ulteriori librerie o informazioni da installare |
+| Interfaccia utente di configurazione | Per gestire le impostazioni ID di configurazione con la nuova interfaccia utente di configurazione edge in Launch, è necessario che sia presente una whitelist per accedere a |
+| Adobe Experience Platform Web SDK Mixin | Un mixin da usare con l’SDK Web della piattaforma Experience che include tutti i campi supportati. |
+| Controlli per il consenso al corso | Fornisce alle aziende i controlli relativi all’opzione di rifiuto e di iscrizione all’SDK Web per la piattaforma Experience |
+| Supporto per il debug lato client nella nuova estensione Experience Cloud Debugger | Consulta le richieste dell’SDK per Web della piattaforma Experience e le tracce Edge per vedere in che modo i dati scorrono nel sistema. |
+| Adobe Analytics | Invia i dati alle suite di rapporti di Analytics tramite la configurazione edge. XDM viene appiattito nei dati contestuali e supporta l&#39;assegnazione di tag a più suite |
+| Adobe Target | Supporto per Adobe Target. Compositore VEC, composer basato su modulo, A/B, XT, Automated Personalization (Personalizzazione automatizzata), MVT |
+| Supporto di Adobe Audience Manager | Supporto per le sincronizzazioni ID di Audience Manager, le destinazioni URL e le destinazioni dei cookie |
+| `synceIdnetity` | Rinominato `setCustomersIds` per `syncIdentity` renderlo più chiaro |
+| Generatore di oggetti XDM | Nell&#39;estensione del lancio è ora possibile creare oggetti XDM come elementi dati |
 
-Problemi noti
-
-* None
-
-Per ulteriori informazioni sul servizio Privacy, consultare la panoramica [del servizio](../../privacy-service/home.md)Privacy.
+Per ulteriori informazioni su Platform Web SDK e Edge Network, consulta la [documentazione](../../edge/home.md).
 
 ## Origini {#sources}
 
@@ -128,12 +69,11 @@ Experience Platform fornisce un&#39;API RESTful e un&#39;interfaccia utente inte
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Supporto API e interfaccia utente per i database | Nuovi connettori sorgente per Apache Spark (su HDInsights), Azure Synapse Analytics, Azure Table Storage, Hive (su HDInsights) e Phoenix. |
-| Supporto API e interfaccia utente per applicazioni basate su pagamenti | Nuovi connettori sorgente per PayPal. |
-| Supporto API e interfaccia utente per applicazioni basate su protocolli | Nuovi connettori sorgente per OData generico. |
+| Supporto aggiuntivo per API e interfaccia utente per i sistemi di storage cloud | Nuovi connettori di origine per Azure File Storage. |
+| Supporto aggiuntivo per API e interfaccia utente per i database | Nuovi connettori di origine per Azure Data Explorer, IBM DB2 e Oracle DB. |
 
 **Problemi noti**
 
-* None
+- None
 
 Per ulteriori informazioni sulle origini, consultate la panoramica sulle [origini](../../sources/home.md).
