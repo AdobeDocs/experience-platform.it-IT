@@ -4,15 +4,20 @@ seo-title: destinazione Amazon Kinesis
 description: Crea una connessione in uscita in tempo reale con il tuo archivio Amazon Kinesis per lo streaming dei dati da Adobe Experience Platform.
 seo-description: Crea una connessione in uscita in tempo reale con il tuo archivio Amazon Kinesis per lo streaming dei dati da Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: a18f89531cf024f61b054b47a660bd26766bebf6
+source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 0%
+source-wordcount: '446'
+ht-degree: 2%
 
 ---
 
 
-# destinazione Amazon Kinesis
+# (Beta) Destinazione Amazon Kinesis
+
+
+>[!IMPORTANT]
+>
+>La [!DNL Amazon Kinesis] destinazione in Adobe Real-time CDP è attualmente in versione beta. La documentazione e la funzionalità sono soggette a modifiche.
 
 ## Panoramica {#overview}
 
@@ -21,7 +26,7 @@ Il [!DNL Kinesis Data Streams] servizio di Amazon Web Services consente di racco
 È possibile creare una connessione in uscita in tempo reale allo [!DNL Amazon Kinesis] storage per lo streaming dei dati da Adobe Experience Platform.
 
 * Per ulteriori informazioni su [!DNL Amazon Kinesis]questo argomento, consultate la documentazione [di](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)Amazon.
-* Per connettersi a [!DNL Amazon Kinesis] utilizzando le chiamate API, consulta l’esercitazione [API]Streaming destinations.
+* Per connettersi a [!DNL Amazon Kinesis] utilizzando le chiamate API, consulta l’esercitazione [API](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)Streaming destinations.
 * Per collegarsi [!DNL Amazon Kinesis] utilizzando l&#39;interfaccia utente Adobe Real-time CDP, consulta le sezioni riportate di seguito.
 
 ![Amazon Kinesis nell’interfaccia utente](/help/rtcdp/destinations/assets/aws-kinesis-destination.png)
@@ -97,7 +102,7 @@ I dati della piattaforma Experience vengono esportati in formato [!DNL Amazon Ki
 
 >[!MORELIKETHIS]
 >
->* Collegamento all’esercitazione API Amazon Kinesis
+>* [Connessione ad Amazon Kinesis e attivazione dei dati tramite chiamate API](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
 >* [Destinazione Hubs evento Azure](/help/rtcdp/destinations/azure-event-hubs-destination.md)
 >* [Tipi e categorie di destinazione](/help/rtcdp/destinations/destination-types.md)
 
