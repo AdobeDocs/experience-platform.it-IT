@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Panoramica delle etichette di utilizzo dei dati
 topic: labels
 translation-type: tm+mt
-source-git-commit: 4411018aa1d531b53bbe2431df71829fa07fee75
+source-git-commit: 4b6b9ca5ae7861f8e8b974550be14fbce6efdcf1
+workflow-type: tm+mt
+source-wordcount: '365'
+ht-degree: 0%
 
 ---
 
@@ -22,6 +25,14 @@ Le etichette di utilizzo dei dati consentono di classificare set di dati e campi
 Le etichette di utilizzo dei dati applicate a livello di dataset vengono propagate a tutti i campi all&#39;interno del dataset. Le etichette possono anche essere applicate direttamente a singoli campi (intestazioni di colonna) di un dataset, senza propagazione.
 
 Per ulteriori informazioni sulle etichette di utilizzo dei dati disponibili in Experience Platform e sui criteri di utilizzo che rappresentano, consulta la guida sulle etichette [di utilizzo dei dati](reference.md)supportate.
+
+## Ereditarietà delle etichette per i segmenti di pubblico
+
+Tutti i segmenti di pubblico creati da [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) ereditano le etichette di utilizzo dei set di dati corrispondenti. Questo consente alle applicazioni basate sulla piattaforma Experience Platform (come la piattaforma dati cliente in tempo reale) di fornire l&#39;applicazione automatica dei criteri di utilizzo dei dati quando si attivano i segmenti alle destinazioni.
+
+Oltre a ereditare le etichette a livello di set di dati, per impostazione predefinita i segmenti ereditano tutte le etichette a livello di campo dai set di dati associati. A seconda del modo in cui l’applicazione basata sulla piattaforma consuma i segmenti, potete potenzialmente specificare quali campi vengono utilizzati, impedendo al segmento di ereditare le etichette dai campi esclusi.
+
+Per ulteriori informazioni sul funzionamento dell’applicazione automatica in CDP in tempo reale, consulta la panoramica [sulla governance dei dati CDP in tempo](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)reale.
 
 ## Passaggi successivi
 
