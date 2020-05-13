@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Guida di Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: 71080a1741ea0d660f63e2009f045c0e34f6c44b
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '563'
 ht-degree: 0%
 
 ---
@@ -65,9 +65,11 @@ ht-degree: 0%
       - Pubblicità {#advertising}
          - [Connettore Google Ads](tutorials/api/create/advertising/ads.md)
       - Archiviazione cloud {#cloud-storage}
+         - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Connettore Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Connettore BLOB di Azure](tutorials/api/create/cloud-storage/blob.md)
          - [Connettore Azure Data Lake Storage Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
+         - [Connettore Azure Event Hubs](tutorials/api/create/cloud-storage/eventhub.md)
          - [Connettore archiviazione file Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Connettore di archiviazione Google Cloud](tutorials/api/create/cloud-storage/google.md)
          - [Connettore SFTP](tutorials/api/create/cloud-storage/sftp.md)
@@ -128,8 +130,10 @@ ht-degree: 0%
       - Pubblicità {#create}
          - [Connettore Google Ads](tutorials/ui/create/advertising/ads.md)
       - Archiviazione cloud {#cloud-storage}
+         - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Connettore Azure Data Lake Storage Gen2](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Connettore Azure Blob e Amazon S3](tutorials/ui/create/cloud-storage/blob-s3.md)
+         - [Connettore Azure Event Hubs](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Connettore archiviazione file Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [Connettore FTP e SFTP](tutorials/ui/create/cloud-storage/ftp-sftp.md)
          - [Connettore di archiviazione Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
