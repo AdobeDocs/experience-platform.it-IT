@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guida utente del profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: 667aadde831a1d010f8cbbbb20bd92f914558bd1
+source-git-commit: 5718a3930f1e12e62a7bbe60f249c7f6f3434fa7
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '880'
 ht-degree: 0%
 
 ---
@@ -26,21 +26,17 @@ Questa guida utente richiede una comprensione dei diversi servizi della piattafo
 * [Servizio](../../identity-service/home.md)identità: Abilita il profilo cliente in tempo reale collegando identità da origini dati diverse che vengono caricate nella piattaforma.
 * [Experience Data Model (XDM)](../../xdm/home.md): Il framework standardizzato tramite il quale la piattaforma organizza i dati sull&#39;esperienza cliente.
 
-## Panoramica del profilo
+## Panoramica
 
-Nell’interfaccia utente [della piattaforma](http://platform.adobe.com)Experience, fai clic su **Profili** nella barra di navigazione a sinistra per aprire la scheda _Panoramica_ nell’area di lavoro _Profili_ . In questa scheda sono visualizzati diversi widget che forniscono informazioni di alto livello sull&#39;archivio dei profili, tra cui il pubblico indirizzabile totale, il numero di record dei profili acquisiti nell&#39;ultima settimana, nonché statistiche relative ai record riusciti e non riusciti per lo stesso periodo di tempo.
+Nell’interfaccia utente [della piattaforma](http://platform.adobe.com)Experience, fai clic su **Profili** nella barra di navigazione a sinistra per aprire la scheda _Panoramica_ . Questa scheda fornisce collegamenti alla documentazione e ai video per agevolare la comprensione e l&#39;utilizzo dei profili.
 
-![](../images/user-guide/profile-overview.png)
+![](../images/user-guide/profiles-overview.png)
 
-## Visualizzare gli esempi di profilo
+## Sfoglia profilo
 
-Fate clic su **Sfoglia** per visualizzare un elenco di esempio dei profili disponibili. Questo esempio include fino a 50 profili dal conteggio [totale dei](#profile-count)profili. Gli esempi vengono aggiornati da un processo automatico che rileva i nuovi dati del profilo durante l’assimilazione. Ciascun profilo elencato visualizza il relativo ID, nome, cognome ed e-mail personale. Facendo clic sull’ID di un profilo elencato vengono visualizzati i relativi dettagli nel visualizzatore [](#profile-viewer)profilo.
+Fate clic sulla scheda **Sfoglia** per individuare i profili in base alle identità. Questa scheda contiene anche il numero totale di [profili](#profile-count).
 
-![](../images/user-guide/profile-samples.png)
-
-Potete personalizzare gli attributi visualizzati nell’elenco facendo clic sull’icona del selettore delle colonne. Viene visualizzato un elenco a discesa contenente gli attributi di profilo comuni che è possibile aggiungere o rimuovere.
-
-![](../images/user-guide/column-selector.png)
+![](../images/user-guide/profiles-browse.png)
 
 ### Conteggio profili {#profile-count}
 
@@ -50,43 +46,53 @@ Il conteggio dei profili include anche profili con attributi (dati di record) e 
 
 Quando l’inserimento di profili nell’archivio profili aumenta o diminuisce il conteggio di oltre il 5%, viene attivato un processo per aggiornare il conteggio. Per i flussi di lavoro dei dati in streaming, viene effettuato un controllo ogni ora per determinare se è stata raggiunta la soglia di incremento o riduzione del 5%. In caso affermativo, viene attivato automaticamente un processo per aggiornare il conteggio dei profili. Per l’assimilazione batch, entro 15 minuti dal corretto inserimento di un batch nell’archivio profili, se viene raggiunta la soglia di incremento o riduzione del 5%, viene eseguito un processo per aggiornare il conteggio dei profili.
 
-![](../images/user-guide/profile-count.png)
+### Spazio dei nomi identità
 
-### Ricerca profilo
+Il selettore dello spazio dei nomi **di** identità apre una finestra di dialogo in cui è possibile scegliere lo spazio dei nomi di identità per il quale eseguire la ricerca. È inoltre possibile personalizzare gli attributi visualizzati nella ricerca selezionando l&#39;icona del filtro e scegliendo gli attributi da aggiungere o rimuovere.
 
-Se si conosce un&#39;identità collegata per un particolare profilo (ad esempio l&#39;indirizzo e-mail), è possibile cercarlo facendo clic su **Trova un profilo**. Questo è il modo più affidabile per accedere a un profilo specifico, indipendentemente dal fatto che sia visualizzato o meno nell&#39;elenco dei campioni.
+![](../images/user-guide/profiles-search-filter.png)
 
-![](../images/user-guide/find-a-profile.png)
+Dalla finestra di dialogo *Seleziona spazio nomi* identità, scegliete lo spazio nomi in base al quale eseguire la ricerca oppure utilizzate la barra di **ricerca** nella finestra di dialogo per iniziare a digitare il nome di uno spazio nomi. È possibile selezionare uno spazio dei nomi per visualizzare ulteriori dettagli. Una volta trovato lo spazio dei nomi da cercare, è possibile selezionare il pulsante di scelta e premere **Seleziona** per continuare.
 
-Nella finestra di dialogo visualizzata, selezionate uno spazio nomi ID appropriato dall&#39;elenco a discesa (&quot;E-mail&quot; in questo esempio) e immettete il valore ID di seguito prima di fare clic su **OK**. Se trovati, i dettagli del profilo di destinazione vengono visualizzati nel visualizzatore del profilo, come descritto nella sezione successiva.
+![](../images/user-guide/profiles-select-identity-namespace.png)
 
-![](../images/user-guide/find-a-profile-details.png)
+### Valore identità
 
-### Visualizzatore profilo {#profile-viewer}
+Dopo aver selezionato uno spazio dei nomi **** Identità, si torna alla scheda *Sfoglia* , dove è possibile immettere un valore **** Identità. Questo valore è specifico di un profilo cliente singolo e deve essere una voce valida per lo spazio dei nomi fornito. Ad esempio, se si seleziona lo spazio nomi **** Identità &quot;E-mail&quot; sarà necessario un valore **** Identità sotto forma di indirizzo e-mail valido.
 
-Dopo aver selezionato o cercato un profilo specifico, si apre la schermata _Dettagli_ del visualizzatore del profilo. In questa pagina vengono visualizzate informazioni sul profilo selezionato, ad esempio gli attributi di base del profilo, le identità collegate e i canali di contatto disponibili. Le informazioni di profilo visualizzate sono state unite da più frammenti di profilo per formare una singola vista del singolo cliente.
+![](../images/user-guide/profiles-show-profile.png)
 
-![](../images/user-guide/profile-viewer-detail.png)
+Dopo aver immesso un valore, selezionare **Mostra profilo** e viene restituito un profilo singolo che corrisponde al valore. Selezionate l’ID **** profilo per visualizzare i dettagli del profilo.
 
-Il visualizzatore del profilo fornisce anche schede che consentono di visualizzare gli eventi e le appartenenze al segmento associati a questo profilo, se presenti.
+![](../images/user-guide/profiles-display-profile.png)
 
-![](../images/user-guide/profile-viewer-events-seg.png)
+### Dettagli profilo
+
+Dopo aver selezionato l’ID **del** profilo, si apre la scheda _Dettagli_ . In questa pagina vengono visualizzate informazioni sul profilo selezionato, inclusi gli attributi di base, le identità collegate e i canali di contatto disponibili. Le informazioni di profilo visualizzate sono state unite da più frammenti di profilo per formare una singola vista del singolo cliente.
+
+![](../images/user-guide/profiles-profile-detail.png)
+
+Potete visualizzare informazioni aggiuntive correlate al profilo, inclusi Attributi, Eventi e Segmenti a cui il profilo è membro.
+
+![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Unisci criteri
 
 Fare clic su **Unisci criteri** per visualizzare un elenco di criteri di unione appartenenti alla propria organizzazione. Ogni criterio elencato visualizza il nome, indipendentemente dal fatto che si tratti del criterio di unione predefinito, e lo schema a cui si applica.
 
-![](../images/user-guide/profile-merge-policies.png)
-
 Per ulteriori informazioni sull&#39;utilizzo dei criteri di unione nell&#39;interfaccia utente, consulta la guida [utente](merge-policies.md)Unisci criteri.
+
+![](../images/user-guide/profiles-merge-policies.png)
 
 ## Schema unione
 
-Fare clic su Schema **** unione per visualizzare gli schemi unione per l&#39;archivio dati del profilo. Uno schema di unione è un&#39;unione di tutti i campi Experience Data Model (XDM) della stessa classe, i cui schemi sono stati abilitati per l&#39;utilizzo in Real-time Customer Profile (Profilo cliente in tempo reale). Fare clic su una classe nell&#39;elenco a sinistra per visualizzare la struttura dello schema di unione nel quadro.
+Fate clic su Schema **** unione per visualizzare gli schemi unione per l&#39;archivio profili. Uno schema di unione è un&#39;unione di tutti i campi Experience Data Model (XDM) della stessa classe, i cui schemi sono stati abilitati per l&#39;utilizzo in Real-time Customer Profile (Profilo cliente in tempo reale). Fare clic su una classe nell&#39;elenco a sinistra per visualizzare la struttura dello schema di unione nel quadro.
 
-![](../images/user-guide/profile-union-schema.png)
+Ad esempio, selezionando &quot;Profilo XDM&quot; viene visualizzato lo schema di unione per la classe Profilo singolo XDM.
 
 Per ulteriori informazioni sugli schemi di unione e sul loro ruolo nel profilo cliente in tempo reale, consulta la sezione sugli schemi di unione nella guida [alla composizione](../../xdm/schema/composition.md) dello schema.
+
+![](../images/user-guide/profiles-union-schema.png)
 
 ## Passaggi successivi
 
