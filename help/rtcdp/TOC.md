@@ -3,10 +3,10 @@ product: adobe experience platform
 audience: user
 user-guide-title: Guida della piattaforma dati cliente in tempo reale
 translation-type: tm+mt
-source-git-commit: 72511172c07b79c485660d59595aa6c8fdd6bdaa
+source-git-commit: be885faf8c1408f372d2eb6cd8d6a8fa8fc69e14
 workflow-type: tm+mt
-source-wordcount: '413'
-ht-degree: 12%
+source-wordcount: '439'
+ht-degree: 11%
 
 ---
 
@@ -122,9 +122,12 @@ ht-degree: 12%
          * [Estensione Invoca Tags](/help/rtcdp/destinations/invoca-extension.md)
          * [Estensione Medallia](destinations/medallia-extension.md)
          * [Estensione Inbox URL conversazione](destinations/talkurl-extension.md)
-   * Esercitazioni sulle destinazioni {#dest-tutorials}
+   * Esercitazioni sull’interfaccia utente Destinazioni {#dest-tutorials}
       * [Connessione a una destinazione](/help/rtcdp/destinations/connect-destination.md)
       * [Attivare profili e segmenti su una destinazione](destinations/activate-destinations.md)
+   * Esercitazioni API di destinazione {api-tutorials}
+      * [Connettersi alle destinazioni di streaming (AWS Kinesis e Azure Event Hubs) e attivare i dati](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
+      * [Connessione alle destinazioni di e-mail marketing e attivazione dei dati](/help/tutorials/destinations/email-marketing-api.md)
 * Privacy e governance dei dati {#privacy}
    * [Panoramica sulla privacy](privacy/privacy-overview.md)
    * [Panoramica sulla governance dei dati](privacy/data-governance-overview.md)
