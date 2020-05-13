@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Panoramica di Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 51aa09e5eff86c480946bcf706f10864b82841d2
+source-git-commit: 96faba8d608d2fd057d256855b8b82af10558324
+workflow-type: tm+mt
+source-wordcount: '503'
+ht-degree: 1%
 
 ---
 
@@ -21,6 +24,20 @@ Basata su API aperte, Experience Platform espone agli sviluppatori tutte le funz
 ## Documentazione della piattaforma di esperienze
 
 La documentazione relativa alla piattaforma di esperienze è disponibile in diversi formati per una serie di funzioni e servizi. Per ulteriori informazioni sui tipi di documentazione disponibili e per leggere brevi descrizioni di ogni servizio Piattaforma, consulta la panoramica [della documentazione relativa alla Piattaforma](documentation/overview.md)esperienza. Oppure, per iniziare subito a conoscere un servizio specifico della piattaforma, seleziona una guida dall&#39;elenco alfabetico nel menu di navigazione a sinistra.
+
+>[!NOTE]
+>
+>A partire da maggio 2020, Adobe ha introdotto aggiornamenti al dominio e alla barra dell’intestazione per unificare e migliorare la tua esperienza in tutte le applicazioni Experience Cloud. Include un nuovo menu Aiuto. Il nuovo menu Aiuto include le seguenti opzioni:
+>
+>* Collegamenti agli articoli contenuti
+>* Consigli della documentazione pertinenti al contesto
+>* Possibilità di fornire feedback sui problemi relativi alla documentazione e ai rapporti
+>* Risultati di ricerca migliorati che includono anche risultati dai forum della community e contenuti video.
+>
+> 
+Di tanto in tanto, potreste ricevere un sondaggio per ricevere un feedback aggiuntivo.
+>
+>Questo rollout è graduale, pertanto le modifiche potrebbero non essere visualizzate immediatamente. Potete visualizzare l&#39;esperienza aggiornata in qualsiasi momento accedendo a [https://experience.adobe.com/platform](https://experience.adobe.com/platform).
 
 ## Esercitazioni sulla piattaforma Experience
 
