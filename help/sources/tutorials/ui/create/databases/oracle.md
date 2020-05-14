@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Creare un connettore di origine Oracle DB nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2e10056a3dcbff1075d786327ea7a7ea2ccc776c
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '477'
 ht-degree: 1%
 
 ---
 
 
 # Creare un connettore di origine Oracle nell&#39;interfaccia utente
+
+> [!NOTE]
+> Il connettore Oracle è in versione beta. Le funzioni e la documentazione sono soggette a modifiche.
 
 I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente su base programmata. Questa esercitazione fornisce i passaggi necessari per creare un connettore di origine Oracle utilizzando l&#39;interfaccia utente della piattaforma.
 
