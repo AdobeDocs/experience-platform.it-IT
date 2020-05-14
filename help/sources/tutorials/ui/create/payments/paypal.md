@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Creare un connettore di origine PayPal nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8c67ba710b486501374020ab505b04931f327c0f
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+workflow-type: tm+mt
+source-wordcount: '489'
+ht-degree: 1%
 
 ---
 
 
 # Creare un connettore di origine PayPal nell&#39;interfaccia utente
+
+> [!NOTE]
+> Il connettore PayPal è in versione beta. Le funzioni e la documentazione sono soggette a modifiche.
 
 I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente su base programmata. Questa esercitazione fornisce i passaggi per creare un connettore di origine PayPal utilizzando l&#39;interfaccia utente della piattaforma.
 
