@@ -4,12 +4,15 @@ solution: Experience Platform
 title: Connettore MySQL
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8a8e0f48cb4c5cad44e808a740ad70f2d0ea3332
+source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+workflow-type: tm+mt
+source-wordcount: '160'
+ht-degree: 0%
 
 ---
 
 
-# Connettore MySQL
+# (Beta) Connettore MySQL
 
 Adobe Experience Platform consente di acquisire dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi della piattaforma. È possibile acquisire dati da origini diverse come applicazioni Adobe, archiviazione basata su cloud, database e molti altri.
 
