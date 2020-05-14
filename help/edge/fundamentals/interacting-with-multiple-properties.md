@@ -4,18 +4,17 @@ seo-title: SDK Web per Adobe Experience Platform che interagisce con più propri
 description: Scopri come interagire con più proprietà SDK Web della piattaforma Experience
 seo-description: Scopri come interagire con più proprietà SDK Web della piattaforma Experience
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '256'
+ht-degree: 1%
 
 ---
 
 
-# (Beta) Interazione con più proprietà
+# Interazione con più proprietà
 
->[!IMPORTANT]
->
->L’SDK Web per Adobe Experience Platform è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e la funzionalità sono soggette a modifiche.
-
-In alcuni casi può essere utile interagire con due proprietà diverse sulla stessa pagina. Questi includono:
+In alcuni casi può essere utile interagire con due proprietà diverse sulla stessa pagina. Comprendono:
 
 * Aziende acquisite e che stanno lavorando per integrare i propri siti Web
 * Relazioni di condivisione dei dati tra più società
@@ -65,6 +64,6 @@ mycustomname2("event", {
 
 Assicurarsi di eseguire il `configure` comando per ogni istanza prima di eseguire altri comandi sulla stessa istanza.
 
-## Limitazioni
+## Limitazioni 
 
 Per evitare conflitti con i cookie, una sola istanza di Adobe Experience Platform Web SDK all’interno di una pagina può avere una particolare `configId`.  Analogamente, solo un’istanza dell’SDK Web per Adobe Experience Platform può avere un particolare `orgId`.
