@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Creare un connettore Azure File Storage utilizzando l'API del servizio di flusso
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8beee3f15aa867026b28f9c395553d1c934ef7a3
+source-git-commit: 3a882656f93b86093b356be5dbc12b3e4321cfb8
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '636'
 ht-degree: 1%
 
 ---
 
 
 # Creare un connettore Azure File Storage utilizzando l&#39;API del servizio di flusso
+
+>[!NOTE]
+>Il connettore Azure File Storage è in versione beta. Le funzioni e la documentazione sono soggette a modifiche.
 
 Flow Service è utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini diverse all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
@@ -60,7 +63,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 * Content-Type: `application/json`
 
-## Creazione di una connessione
+## Creare una connessione
 
 Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. È necessaria una sola connessione per l&#39;account Azure File Storage, in quanto può essere utilizzata per creare più connettori sorgente per inserire dati diversi.
 
