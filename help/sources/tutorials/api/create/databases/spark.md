@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Creare un Apache Spark sul connettore Azure HDInsights utilizzando l'API del servizio di flusso
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2fd9f38673750af705021d1e8f160be9304039a0
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '614'
+ht-degree: 1%
 
 ---
 
 
 # Creare un Apache Spark sul connettore Azure HDInsights utilizzando l&#39;API del servizio di flusso
+
+>[!NOTE]
+>Apache Spark sul connettore Azure HDInsights è in versione beta. Le funzioni e la documentazione sono soggette a modifiche.
 
 Flow Service è utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini diverse all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
@@ -57,7 +63,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 * Content-Type: `application/json`
 
-## Creazione di una connessione
+## Creare una connessione
 
 Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. Per ogni account Spark è necessaria una sola connessione, in quanto può essere utilizzata per creare più connettori sorgente per inserire dati diversi.
 
