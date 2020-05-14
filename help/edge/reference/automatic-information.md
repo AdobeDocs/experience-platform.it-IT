@@ -4,16 +4,15 @@ seo-title: Informazioni raccolte automaticamente da Adobe Experience Platform We
 description: Descrizione di ciascuna informazione che l’SDK di Adobe Experience Cloud raccoglie automaticamente
 seo-description: Descrizione di ciascuna informazione che l’SDK di Adobe Experience Cloud raccoglie automaticamente
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '382'
+ht-degree: 4%
 
 ---
 
 
-# (Beta) Informazioni raccolte automaticamente
-
->[!IMPORTANT]
->
->L’SDK Web per Adobe Experience Platform è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e la funzionalità sono soggette a modifiche.
+# Informazioni raccolte automaticamente
 
 L’SDK di Adobe Experience Cloud raccoglie automaticamente una serie di informazioni senza bisogno di particolari configurazioni. Tuttavia, queste informazioni possono essere disattivate se necessario utilizzando l&#39; `context` opzione nel `configure` comando. [Consultate Configurazione dell’SDK](../fundamentals/configuring-the-sdk.md). Di seguito è riportato un elenco di queste informazioni. Il nome tra parentesi indica la stringa da utilizzare per la configurazione del contesto.
 
