@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Applicazioni di servizi sulla privacy ed Experience Cloud
 topic: overview
 translation-type: tm+mt
-source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+source-git-commit: f4a007b66806cb0d322226e1e1837cfce7ca4095
+workflow-type: tm+mt
+source-wordcount: '600'
+ht-degree: 14%
 
 ---
 
@@ -30,13 +33,11 @@ Segue un elenco delle applicazioni Experience Cloud integrate con il servizio pe
 | Adobe Analytics | ✓ | ✓ | <ul><li>[Accedere/eliminare la documentazione](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html)</li><li>Analytics gestisce le richieste di rifiuto utilizzando le variabili di reporting della [privacy](https://docs.adobe.com/content/help/it-IT/analytics/admin/data-governance/consent-variables.html)</li></ul> |
 | Adobe Audience Manager | ✓ | ✓ | <ul><li>[Accedere/eliminare la documentazione](https://docs.adobe.com/content/help/it-IT/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[Documentazione per il rifiuto](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
 | Adobe Campaign Standard | ✓ | ✓ | <ul><li>[Accedere/eliminare la documentazione](https://docs.campaign.adobe.com/doc/standard/getting_started/en/ACS_GDPR.html)</li><li>[Documentazione per il rifiuto](../segmentation/honoring-opt-outs.md)</li></ul> |
+| Attributi del cliente Adobe (CRS) | ✓ | N/D | <ul><li>[Accedere/eliminare la documentazione per il GDPR](https://docs.adobe.com/content/help/en/core-services/interface/customer-attributes/gdpr.html)</li><li>[Accedere/eliminare la documentazione per l&#39;applicazione CCPA](https://docs.adobe.com/content/help/en/core-services/interface/customer-attributes/ccpa.html)</li><li>Gli attributi del cliente non sono in grado di trasferire i dati, pertanto le richieste di rinuncia alla vendita non sono applicabili.</li></ul> |
 | Adobe Experience Platform | ✓ | ✓ | <ul><li>[Accedere/eliminare la documentazione per il Data Lake](../catalog/privacy.md)</li><li>[Accedere/eliminare la documentazione per il profilo cliente in tempo reale](../profile/privacy.md)</li><li>Experience Platform rispetta le richieste di [rifiuto per i segmenti](../segmentation/honoring-opt-outs.md)di pubblico.</li></ul> |
 | Autenticazione Adobe Primetime | ✓ | N/D | <ul><li>[Accedere/eliminare la documentazione](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>Primetime non è in grado di trasferire i dati, pertanto le richieste di rinuncia alla vendita non sono applicabili.</li></ul> |
 | Adobe Target | ✓ | N/D | <ul><li>[Accedere/eliminare la documentazione](https://docs.adobe.com/content/help/it-IT/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.translate.html)</li><li>Target non è in grado di trasferire i dati, pertanto le richieste di rinuncia alla vendita non sono applicabili.</li></ul> |
 
-<!-- (To include once access/delete documentation is available)
-Adobe Customer Attributes (CRS) | ✓ | N/A | <ul><li>Customer Attributes does not have the capability to transfer data, therefore opt-out-of-sale requests are not applicable.</li></ul>
--->
 
 ## Applicazioni self-service {#self-serve}
 
