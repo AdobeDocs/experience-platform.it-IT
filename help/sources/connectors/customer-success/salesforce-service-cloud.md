@@ -4,12 +4,15 @@ solution: Experience Platform
 title: Connettore Salesforce Service Cloud
 topic: overview
 translation-type: tm+mt
-source-git-commit: b5ab1bfc3d2b3ff69579f1745576938258ccbe75
+source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+workflow-type: tm+mt
+source-wordcount: '167'
+ht-degree: 0%
 
 ---
 
 
-# Connettore Salesforce Service Cloud
+# (Beta) Connettore Salesforce Service Cloud
 
 Adobe Experience Platform consente di acquisire dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi della piattaforma. È possibile acquisire dati da origini diverse come applicazioni Adobe, archiviazione basata su cloud, database e molti altri.
 
