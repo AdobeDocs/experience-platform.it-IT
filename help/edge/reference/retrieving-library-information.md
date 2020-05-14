@@ -4,16 +4,15 @@ seo-title: Recupero delle informazioni sulla libreria con Adobe Experience Platf
 description: Scoprite come recuperare informazioni sulla libreria caricata nel sito Web
 seo-description: Scopri come recuperare informazioni sulla libreria caricata nel sito Web dall’SDK di Adobe Experience Cloud, che viene raccolta automaticamente
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '104'
+ht-degree: 0%
 
 ---
 
 
-# (Beta) Recupero delle informazioni sulla libreria
-
->[!IMPORTANT]
->
->L’SDK Web per Adobe Experience Platform è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e la funzionalità sono soggette a modifiche.
+# Recupero delle informazioni sulla libreria
 
 Spesso è utile accedere ad alcuni dei dettagli della libreria caricata sul sito Web. A questo scopo, eseguite il `getLibraryInfo` comando come segue:
 
