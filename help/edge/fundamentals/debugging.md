@@ -4,16 +4,15 @@ seo-title: Debug dell’SDK Web di Adobe Experience Platform
 description: Scopri come attivare/disattivare il debug dell’SDK Web per la piattaforma Experience
 seo-description: Scopri come attivare/disattivare il debug dell’SDK Web per la piattaforma Experience
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '323'
+ht-degree: 0%
 
 ---
 
 
-# (Beta) Debug
-
->[!IMPORTANT]
->
->L’SDK Web per Adobe Experience Platform è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e la funzionalità sono soggette a modifiche.
+# Eseguire il debug
 
 Quando il debug è abilitato, l’SDK invia messaggi alla console del browser che possono essere utili per eseguire il debug dell’implementazione e comprendere il funzionamento dell’SDK. Il debug comporta inoltre una convalida sincrona lato server dei dati raccolti rispetto allo schema configurato.
 
