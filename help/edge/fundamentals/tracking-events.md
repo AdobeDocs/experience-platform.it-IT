@@ -4,16 +4,15 @@ seo-title: Tracciamento degli eventi SDK Web per Adobe Experience Platform
 description: Scopri come tenere traccia degli eventi SDK Web per la piattaforma Experience
 seo-description: Scopri come tenere traccia degli eventi SDK Web per la piattaforma Experience
 translation-type: tm+mt
-source-git-commit: c49ac064d310fbe12e19d58b80c2267a35d585e8
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '637'
+ht-degree: 0%
 
 ---
 
 
 # Tracciamento degli eventi
-
->[!IMPORTANT]
->
->L’SDK Web per Adobe Experience Platform è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e la funzionalità sono soggette a modifiche.
 
 Per inviare i dati dell&#39;evento ad Adobe Experience Cloud, usa il `event` comando. Il `event` comando è il modo principale per inviare dati a Experience Cloud e per recuperare contenuti, identità e destinazioni personalizzate.
 
