@@ -4,12 +4,15 @@ solution: Experience Platform
 title: Connettore PayPal
 topic: overview
 translation-type: tm+mt
-source-git-commit: e1c92c010ee718138d4234abcb7b9f2f75187b8c
+source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+workflow-type: tm+mt
+source-wordcount: '147'
+ht-degree: 0%
 
 ---
 
 
-# Connettore PayPal
+# (Beta) Connettore PayPal
 
 Adobe Experience Platform consente di acquisire dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi della piattaforma. È possibile acquisire dati da origini diverse come applicazioni Adobe, archiviazione basata su cloud, database e molti altri.
 
