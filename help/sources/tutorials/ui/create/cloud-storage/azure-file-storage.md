@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Creare un connettore di origine Azure File Storage nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: aa1c6cb0f5702cfe444cb2046e4460e404f13e57
+source-git-commit: b8ebe57482fdd10ccd8bdcf1a86009a373ea579e
 workflow-type: tm+mt
-source-wordcount: '487'
-ht-degree: 1%
+source-wordcount: '501'
+ht-degree: 0%
 
 ---
 
 
 # Creare un connettore di origine Azure File Storage nell&#39;interfaccia utente
+
+>[!NOTE]
+>Azure Table Storage è in versione beta. Le funzioni e la documentazione sono soggette a modifiche.
 
 I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente su base programmata. Questa esercitazione fornisce i passaggi per l&#39;autenticazione di un connettore origine di archiviazione file di Azure tramite l&#39;interfaccia utente della piattaforma.
 
