@@ -4,12 +4,15 @@ solution: Experience Platform
 title: Connettore Azure Synapse Analytics
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41aa36f146834537813fb7e05a17291dbd4f9d9b
+source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+workflow-type: tm+mt
+source-wordcount: '176'
+ht-degree: 0%
 
 ---
 
 
-# Connettore Azure Synapse Analytics
+# (Beta) Connettore Azure Synapse Analytics
 
 Adobe Experience Platform consente di acquisire dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi della piattaforma. È possibile acquisire dati da origini diverse come applicazioni Adobe, archiviazione basata su cloud, database e molti altri.
 
