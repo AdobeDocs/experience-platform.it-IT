@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Creare un connettore di origine Azure Data Explorer nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1fb07723aedcf6dfd49765c10342b70b0a7d24f3
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '525'
 ht-degree: 0%
 
 ---
 
 
 # Creare un connettore di origine Azure Data Explorer nell&#39;interfaccia utente
+
+> [!NOTE]
+> Il connettore di Azure Data Explorer è in versione beta. Le funzioni e la documentazione sono soggette a modifiche.
 
 I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente su base programmata. Questa esercitazione fornisce passaggi per la creazione di un connettore di origine di Azure Data Explorer (in seguito denominato &quot;Esplora dati&quot;) tramite l&#39;interfaccia utente della piattaforma.
 
