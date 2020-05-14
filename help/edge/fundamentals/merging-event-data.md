@@ -4,19 +4,19 @@ seo-title: Unione dei dati evento Web SDK di Adobe Experience Platform
 description: Scopri come unire i dati dell’evento SDK Web della piattaforma Experience
 seo-description: Scopri come unire i dati dell’evento SDK Web della piattaforma Experience
 translation-type: tm+mt
-source-git-commit: 767f0e1bfdfcc898313b546c804ba1287f2aec50
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
-source-wordcount: '444'
-ht-degree: 2%
+source-wordcount: '436'
+ht-degree: 0%
 
 ---
 
 
-# (Beta) Unione dei dati evento
+# Unione dei dati evento
 
 >[!IMPORTANT]
 >
->L’SDK Web per Adobe Experience Platform è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e la funzionalità sono soggette a modifiche.
+>Questa funzione è ancora in fase di sviluppo e pertanto non tutte le soluzioni saranno in grado di unire questi dati.
 
 A volte, non tutti i dati sono disponibili quando si verifica un evento. Potrebbe essere utile acquisire i dati _disponibili_ , in modo che non vadano perduti se, ad esempio, l&#39;utente chiude il browser. D&#39;altro canto, è possibile includere anche qualsiasi dato che diventerà disponibile in un secondo momento.
 
