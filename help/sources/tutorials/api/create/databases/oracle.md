@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Creare un connettore Oracle utilizzando l'API di servizio di flusso
 topic: overview
 translation-type: tm+mt
-source-git-commit: e77808990de4ad6e9620a5ce7e7839817c70e336
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '547'
+ht-degree: 2%
 
 ---
 
 
 # Creare un connettore Oracle utilizzando l&#39;API di servizio di flusso
+
+>[!NOTE]
+>Il connettore Oracle è in versione beta. Le funzioni e la documentazione sono soggette a modifiche.
 
 Flow Service è utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini diverse all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
@@ -51,7 +57,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 * Content-Type: `application/json`
 
-## Creazione di una connessione
+## Creare una connessione
 
 Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. Per l&#39;account Oracle è necessario un solo connettore, in quanto può essere utilizzato per creare più connettori sorgente per inserire dati diversi.
 
