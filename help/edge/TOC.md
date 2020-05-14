@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Guida di Adobe Experience Platform Edge Network
 translation-type: tm+mt
-source-git-commit: e00dc3e8dec0117617081ca4fc9ffa752b01b3b7
+source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
 workflow-type: tm+mt
-source-wordcount: '91'
+source-wordcount: '85'
 ht-degree: 12%
 
 ---
@@ -16,7 +16,6 @@ ht-degree: 12%
 * [Panoramica di Edge Network](home.md)
 * Introduzione {#get-started}
    * [Avvio rapido con Launch](getting-started/quick-start-with-launch.md)
-   * [Distribuzione di tutti i prodotti](getting-started/deploying-all-products.md)
 * Nozioni di base {#fundamentals}
    * [Installazione dell’SDK](fundamentals/installing-the-sdk.md)
    * [Esecuzione di comandi](fundamentals/executing-commands.md)
@@ -28,7 +27,6 @@ ht-degree: 12%
    * [Interazione con più proprietà](fundamentals/interacting-with-multiple-properties.md)
    * [Rendering di contenuti personalizzati](fundamentals/rendering-personalization-content.md)
    * [Consenso di sostegno](fundamentals/supporting-consent.md)
-   * [Supporto dei browser in-app](fundamentals/supporting-in-app-browsers.md)
    * [Identità](fundamentals/identity.md)
 * Cosa implementare {#implement}
    * [Prodotti](what-to-implement/commerce.md)
