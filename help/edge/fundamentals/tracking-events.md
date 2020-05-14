@@ -4,7 +4,7 @@ seo-title: Tracciamento degli eventi SDK Web per Adobe Experience Platform
 description: Scopri come tenere traccia degli eventi SDK Web per la piattaforma Experience
 seo-description: Scopri come tenere traccia degli eventi SDK Web per la piattaforma Experience
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Tracciamento degli eventi
 
-Per inviare i dati dell&#39;evento ad Adobe Experience Cloud, usa il `event` comando. Il `event` comando è il modo principale per inviare dati a Experience Cloud e per recuperare contenuti, identità e destinazioni personalizzate.
+Per inviare i dati dell&#39;evento ad Adobe Experience Cloud, usa il `sendEvent` comando. Il `sendEvent` comando è il modo principale per inviare dati a Experience Cloud e per recuperare contenuti, identità e destinazioni personalizzate.
 
 I dati inviati ad Adobe Experience Cloud sono suddivisi in due categorie:
 
@@ -28,7 +28,7 @@ I dati XDM sono un oggetto il cui contenuto e la cui struttura corrispondono a u
 Eventuali dati XDM che desiderate far parte di analisi, personalizzazione, audience o destinazioni devono essere inviati utilizzando l&#39; `xdm` opzione.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "xdm": {
     "commerce": {
       "order": {
@@ -54,7 +54,7 @@ Al momento, l&#39;invio di dati che non corrispondono a uno schema XDM non è su
 In un evento di esperienza XDM, è presente un `eventType` campo. Contiene il tipo di evento principale per il record. Questo può essere trasmesso come parte dell&#39; `xdm` opzione.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "xdm": {
     "eventType": "commerce.purchases",
     "commerce": {
@@ -74,7 +74,7 @@ In alternativa, `eventType` è possibile passare al comando dell&#39;evento util
 ```javascript
 var myXDMData = { ... };
 
-alloy("event", {
+alloy("sendEvent", {
   "xdm": myXDMData,
   "type": "commerce.purchases"
 });
@@ -85,7 +85,7 @@ alloy("event", {
 Può essere difficile inviare i dati dell&#39;evento subito prima che l&#39;utente della pagina Web se ne vada. Se la richiesta richiede troppo tempo, il browser potrebbe annullare la richiesta. Alcuni browser hanno implementato un&#39;API standard Web chiamata `sendBeacon` per consentire una raccolta più semplice dei dati durante questo periodo. Quando si utilizza `sendBeacon`, il browser effettua la richiesta Web nel contesto di navigazione globale. Questo significa che il browser esegue la richiesta del beacon in background e non blocca la navigazione della pagina. Per comunicare all’SDK Web di Adobe Experience Platform di utilizzarlo `sendBeacon`, aggiungi l’opzione `"documentUnloading": true` al comando dell’evento.  Ecco un esempio:
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "documentUnloading": true,
   "xdm": {
     "commerce": {
@@ -107,7 +107,7 @@ I browser hanno imposto limiti alla quantità di dati che possono essere inviati
 Se desiderate gestire una risposta da un evento, potete ricevere una notifica di esito positivo o negativo come segue:
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "renderDecisions": true,
   "xdm": {
     "commerce": {
@@ -148,7 +148,7 @@ alloy("configure", {
 
 `xdm` i campi sono impostati in questo ordine:
 
-1. Valori passati come opzioni al comando evento `alloy("event", { xdm: ... });`
+1. Valori passati come opzioni al comando evento `alloy("sendEvent", { xdm: ... });`
 2. Raccolti automaticamente i valori.  Consultate Informazioni [](../reference/automatic-information.md)automatiche.
 3. Modifiche apportate al `onBeforeEventSend` callback.
 
