@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Creare un connettore sorgente Amazon Redshift nell’interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: f09ff4d1b159a6989868c5cfc35b361cfb640a99
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+workflow-type: tm+mt
+source-wordcount: '503'
+ht-degree: 1%
 
 ---
 
 
 # Creare un connettore sorgente Amazon Redshift nell’interfaccia utente
+
+>Le selezioni del menu [!NOTE]
+>Il connettore Amazon Redshift è in versione beta. Le funzioni e la documentazione sono soggette a modifiche.
 
 I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente su base programmata. Questa esercitazione fornisce i passaggi per la creazione di un connettore sorgente Amazon Redshift (in seguito denominato &quot;Redshift&quot;) tramite l&#39;interfaccia utente della piattaforma.
 
