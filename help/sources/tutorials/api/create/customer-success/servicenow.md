@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Creare un connettore ServiceNow utilizzando l'API del servizio di flusso
 topic: overview
 translation-type: tm+mt
-source-git-commit: 90f00d726c94f2f13e7c52991fa59e7e5d3ecd31
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '697'
+ht-degree: 1%
 
 ---
 
 
 # Creare un connettore ServiceNow utilizzando l&#39;API del servizio di flusso
+
+>[!NOTE]
+>Il connettore ServiceNow è in versione beta. Le funzioni e la documentazione sono soggette a modifiche.
 
 Flow Service è utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini diverse all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
