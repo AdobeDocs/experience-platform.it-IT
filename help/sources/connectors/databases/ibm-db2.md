@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Connettore IBM DB2
 topic: overview
 translation-type: tm+mt
-source-git-commit: e77dadb4257c16e19113f6224790fbb3b8207a52
+source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '133'
 ht-degree: 0%
 
 ---
 
 
-# Connettore IBM DB2
+# (Beta) Connettore IBM DB2
 
 Adobe Experience Platform offre connettività nativa per provider di database come Microsoft, MySQL e Azure. È possibile trasferire i dati da questi sistemi in Piattaforma.
 
