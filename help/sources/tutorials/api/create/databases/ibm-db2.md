@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Creare un connettore IBM DB2 utilizzando l'API Flow Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: c4162d88a688ce2028de08b63e7b7eab954a0e29
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '596'
+ht-degree: 2%
 
 ---
 
 
 # Creare un connettore IBM DB2 utilizzando l&#39;API Flow Service
+
+>[!NOTE]
+>Il connettore IBM DB2 è in versione beta. Le funzioni e la documentazione sono soggette a modifiche.
 
 Flow Service è utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini diverse all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
@@ -54,7 +60,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 * Content-Type: `application/json`
 
-## Creazione di una connessione
+## Creare una connessione
 
 Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. È necessario un solo connettore per account DB2, in quanto può essere utilizzato per creare più connettori sorgente per inserire dati diversi.
 
