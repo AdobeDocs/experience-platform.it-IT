@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Creare un connettore di origine Azure Table Storage nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 899c4fbe8a1bb3fef24f606e77f13ef5184d1eda
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
 
 
 # Creare un connettore di origine Azure Table Storage nell&#39;interfaccia utente
+
+>[!NOTE]
+>Il connettore Azure Table Storage è in versione beta. Le funzioni e la documentazione sono soggette a modifiche.
 
 I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente su base programmata. Questa esercitazione fornisce i passaggi per la creazione di un connettore di origine Azure Table Storage (di seguito &quot;ATS&quot;) tramite l&#39;interfaccia utente della piattaforma.
 
