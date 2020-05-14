@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Creare un connettore SQL Server utilizzando l'API di servizio di flusso
 topic: overview
 translation-type: tm+mt
-source-git-commit: 173faf861ca8feb6dd4e2159b0708e41fa0f601f
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '679'
+ht-degree: 1%
 
 ---
 
 
 # Creare un connettore di Microsoft SQL Server utilizzando l&#39;API del servizio di flusso
+
+>[!NOTE]
+>Il connettore di Microsoft SQL Server è in versione beta. Le funzioni e la documentazione sono soggette a modifiche.
 
 Flow Service è utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini diverse all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
