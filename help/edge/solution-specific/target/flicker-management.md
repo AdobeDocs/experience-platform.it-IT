@@ -1,11 +1,17 @@
 ---
-source-git-commit: e00dc3e8dec0117617081ca4fc9ffa752b01b3b7
-workflow-type: tm+mt
+title: Gestione di Flicker per esperienze personalizzate
+seo-title: Adobe Experience Platform Web SDK gestione dello sfarfallio
+description: Scopri come gestire lo sfarfallio sulle esperienze utente
+seo-description: Scopri come gestire lo sfarfallio con le proprietà SDK Web della piattaforma Experience
 translation-type: tm+mt
-source-wordcount: '459'
+source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+workflow-type: tm+mt
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
+
+
 # Gestione dello sfarfallio
 
 Quando si tenta di eseguire il rendering del contenuto di personalizzazione, l’SDK deve assicurarsi che non vi siano sfarfallii. Flicker, detto anche FOOC (Flash of Original Content), è quando un contenuto originale viene visualizzato brevemente prima che l’alternativa venga visualizzata durante il test/la personalizzazione. L’SDK tenta di applicare stili CSS agli elementi della pagina per assicurarsi che tali elementi siano nascosti finché il rendering del contenuto di personalizzazione non viene eseguito correttamente.
