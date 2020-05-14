@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK Rendering del contenuto personalizz
 description: Scopri come eseguire il rendering del contenuto personalizzato con l’SDK Web della piattaforma Experience
 seo-description: Scopri come eseguire il rendering del contenuto personalizzato con l’SDK Web della piattaforma Experience
 translation-type: tm+mt
-source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
@@ -21,7 +21,7 @@ L’SDK Web di Adobe Experience Platform supporta l’esecuzione di query sulle 
 L’SDK esegue automaticamente il rendering del contenuto personalizzato quando si invia un evento al server e si imposta `renderDecisions` come opzione `true` sull’evento.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "renderDecisions": true,
   "xdm": {
     "commerce": {
@@ -43,7 +43,7 @@ Il rendering del contenuto personalizzato è asincrono, pertanto non dovrebbe es
 È possibile richiedere la restituzione dell&#39;elenco di decisioni come promessa sul `event` comando utilizzando `scopes`. Un ambito è una stringa che consente alla soluzione di personalizzazione di sapere quale decisione si desidera prendere.
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
     xdm:{...},
     scopes:['demo-1', 'demo-2']
   }).then(function(result){
