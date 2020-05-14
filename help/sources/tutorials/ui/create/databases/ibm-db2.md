@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare un connettore sorgente IBM DB2 nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: e77dadb4257c16e19113f6224790fbb3b8207a52
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '518'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,9 @@ ht-degree: 0%
 
 
 # Creare un connettore sorgente IBM DB2 nell&#39;interfaccia utente
+
+> [!NOTE]
+> Il connettore IBM DB2 è in versione beta. Le funzioni e la documentazione sono soggette a modifiche.
 
 I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente su base programmata. Questa esercitazione fornisce i passaggi per la creazione di un connettore sorgente IBM DB2 (in seguito denominato &quot;DB2&quot;) tramite l&#39;interfaccia utente della piattaforma.
 
