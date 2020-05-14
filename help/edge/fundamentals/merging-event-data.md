@@ -4,7 +4,7 @@ seo-title: Unione dei dati evento Web SDK di Adobe Experience Platform
 description: Scopri come unire i dati dell’evento SDK Web della piattaforma Experience
 seo-description: Scopri come unire i dati dell’evento SDK Web della piattaforma Experience
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 0%
@@ -23,7 +23,7 @@ A volte, non tutti i dati sono disponibili quando si verifica un evento. Potrebb
 In questi casi, è possibile unire i dati con gli eventi precedenti passando `eventMergeId` come opzione ai `event` comandi come segue:
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "xdm": {
     "commerce": {
       "order": {
@@ -39,7 +39,7 @@ alloy("event", {
 
 // Time passes and more data becomes available
 
-alloy("event", {
+alloy("sendEvent", {
   "xdm": {
     "commerce": {
       "order": {
@@ -72,7 +72,7 @@ Come per tutti i comandi, viene restituita una promessa perché è possibile ese
 var eventMergeIdPromise = alloy("createEventMergeId");
 
 eventMergeIdPromise.then(function(results) {
-  alloy("event", {
+  alloy("sendEvent", {
     "xdm": {
       "commerce": {
         "order": {
@@ -90,7 +90,7 @@ eventMergeIdPromise.then(function(results) {
 // Time passes and more data becomes available
 
 eventMergeIdPromise.then(function(results) {
-  alloy("event", {
+  alloy("sendEvent", {
     "xdm": {
       "commerce": {
         "order": {
@@ -126,7 +126,7 @@ eventMergeIdPromise.then(function(results) {
 All&#39;interno del comando dell&#39;evento, l&#39;evento `mergeId` viene effettivamente aggiunto al `xdm` payload.  Se lo desiderate, `mergeId` possono essere inviati come parte dell&#39;opzione xdm, come segue:
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "xdm": {
     "commerce": {
       "order": {
