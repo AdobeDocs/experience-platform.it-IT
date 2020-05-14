@@ -4,7 +4,7 @@ seo-title: SDK Web per Adobe Experience Platform e utilizzo di Adobe Target
 description: Scopri come eseguire il rendering del contenuto personalizzato con l’SDK Web della piattaforma Experience tramite Adobe Target
 seo-description: Scopri come eseguire il rendering del contenuto personalizzato con l’SDK Web della piattaforma Experience tramite Adobe Target
 translation-type: tm+mt
-source-git-commit: 9d66e926ff86f23b3dea34f37d3bb16ba97eb0ef
+source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
 workflow-type: tm+mt
 source-wordcount: '651'
 ht-degree: 2%
@@ -42,7 +42,7 @@ L’SDK Web AEP può rappresentare automaticamente sul Web le esperienze definit
 
 ```javascript
 alloy
-("event", 
+("sendEvent", 
   { 
   "renderDecisions": true, 
   "xdm": {
@@ -65,7 +65,7 @@ Experience Composer basato su modulo è un&#39;interfaccia non visiva utile per 
 
 ```javascript
 alloy
-  ("event", { 
+  ("sendEvent", { 
     decisionScopes: [
       "foo", "bar"], 
       "xdm": {
@@ -91,7 +91,7 @@ alloy
 L’SDK Web AEP fornisce una funzionalità che consente di recuperare le azioni VEC senza affidarsi all’SDK Web AEP per eseguire il rendering delle azioni VEC. Invia un evento con `__view__` definito come `decisionScopes`.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   decisionScopes: [“__view__”,"foo", "bar"], 
   "xdm": { 
     "web": { 
