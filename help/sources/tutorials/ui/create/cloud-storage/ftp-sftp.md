@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Creare un connettore sorgente FTP o SFTP nell’interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '529'
 ht-degree: 1%
 
 ---
 
 
 # Creare un connettore sorgente FTP o SFTP nell’interfaccia utente
+
+>[!NOTE]
+>I connettori FTP e SFTP sono in versione beta. Le funzioni e la documentazione sono soggette a modifiche.
 
 I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente su base programmata. Questa esercitazione fornisce i passaggi per creare un connettore sorgente FTP o SFTP utilizzando l&#39;interfaccia utente della piattaforma.
 
