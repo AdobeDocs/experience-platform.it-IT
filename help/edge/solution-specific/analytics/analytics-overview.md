@@ -4,16 +4,15 @@ seo-title: Invio di dati ad Adobe Analytics con Adobe Experience Platform Web SD
 description: Scopri come inviare dati ad Adobe Analytics con l’SDK Web della piattaforma Experience
 seo-description: Scopri come inviare dati ad Adobe Analytics con l’SDK Web della piattaforma Experience
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
 
-# (Beta) Invio di dati ad Adobe Analytics
-
->[!IMPORTANT]
->
->L’SDK Web per Adobe Experience Platform è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e la funzionalità sono soggette a modifiche.
+# Invio di dati ad Adobe Analytics
 
 L’SDK Web di Adobe Experience Platform può inviare dati ad Adobe Analytics. Questo funziona traducendo `xdm` in un formato utilizzabile da Adobe Analytics.
 
