@@ -4,12 +4,15 @@ solution: Experience Platform
 title: Connettore HubSpot
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1afa5e6acd5e4fd983505df11f4a76f6835ac30f
+source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+workflow-type: tm+mt
+source-wordcount: '149'
+ht-degree: 0%
 
 ---
 
 
-# Connettore HubSpot
+# Connettore HubSpot (Beta)
 
 Adobe Experience Platform consente di acquisire dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi della piattaforma. È possibile acquisire dati da origini diverse come applicazioni Adobe, archiviazione basata su cloud, database e molti altri.
 
