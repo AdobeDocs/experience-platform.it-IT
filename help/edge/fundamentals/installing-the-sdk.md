@@ -4,16 +4,15 @@ seo-title: SDK Web per Adobe Experience Platform per l'installazione dell'SDK
 description: Scopri come installare l’SDK Web per la piattaforma Experience
 seo-description: Scopri come installare l’SDK Web per la piattaforma Experience
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '498'
+ht-degree: 2%
 
 ---
 
 
-# (Beta) Installazione dell&#39;SDK
-
->[!IMPORTANT]
->
->L’SDK Web per Adobe Experience Platform è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e la funzionalità sono soggette a modifiche.
+# Installazione dell’SDK
 
 Il primo passo per implementare l’SDK per Adobe Experience Platform Web è copiare e incollare il seguente &quot;codice di base&quot; il più possibile nel `<head>` tag del codice HTML:
 
@@ -48,7 +47,7 @@ Questo codice di base, oltre a creare una funzione globale, carica anche il codi
 
 ## Supporto di Internet Explorer
 
-Questo SDK fa uso delle promesse, che è un metodo per comunicare il completamento delle attività asincrone. L’implementazione [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) utilizzata dall’SDK è supportata in modo nativo da tutti i browser di destinazione eccetto Internet Explorer. Per utilizzare l’SDK in Internet Explorer, è necessario disporre di un `window.Promise` riempimento [polivalente](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+Questo SDK fa uso delle promesse, che è un metodo per comunicare il completamento delle attività asincrone. L’implementazione [Promise](https://developer.mozilla.org/it-IT/docs/Web/JavaScript/Reference/Global_Objects/Promise) utilizzata dall’SDK è supportata in modo nativo da tutti i browser di destinazione eccetto Internet Explorer. Per utilizzare l’SDK in Internet Explorer, è necessario disporre di un `window.Promise` riempimento [polivalente](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
 Per determinare se è già presente un `window.Promise` polivaletto:
 
