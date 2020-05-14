@@ -1,19 +1,18 @@
 ---
-title: 'Variabile  '
+title: Prodotti
 seo-title: Supporto di prodotti con Adobe Experience Platform Web SDK
 description: Scopri come aggiungere dati se hai prodotti o un carrello con l’SDK Web di Experience Platform
 seo-description: Scopri come aggiungere dati se hai prodotti o un carrello con l’SDK Web di Experience Platform
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '1314'
+ht-degree: 4%
 
 ---
 
 
-# (Beta) Prodotti
-
->[!IMPORTANT]
->
->L’SDK Web per Adobe Experience Platform è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e la funzionalità sono soggette a modifiche.
+# Prodotti
 
 Se sul sito sono presenti prodotti, si tratta di un insieme predefinito di elementi che potreste desiderare inviare per abilitare il maggior numero di funzionalità da Adobe. Anche se questo è un suggerimento, fornisce una serie molto forte di dati fin dall&#39;inizio.
 
@@ -112,7 +111,7 @@ alloy("event",{
 
 L&#39;elenco dei prodotti indica quali prodotti sono correlati all&#39;azione corrispondente. È un elenco di [productListItems](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md). Ogni prodotto ha una serie di campi opzionali.
 
-| **Campo** | **Consiglio** | **Descrizione** |
+| **Field** | **Consiglio** | **Descrizione** |
 |---|---|---|
 | [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmcurrencycode) | Facoltativo | La valuta [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) per il prodotto. Questa funzione è utile solo quando è possibile avere prodotti con codici valuta diversi e quando viene applicata. Ad esempio, in caso di acquisto o aggiunta al carrello. |
 | [priceTotal](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmpricetotal) | Altamente consigliato | Deve essere impostato solo se applicabile. Ad esempio, potrebbe non essere possibile impostare `productView` perché diverse variazioni del prodotto possono avere prezzi diversi ma su un `productListAdds`. |
@@ -124,7 +123,7 @@ L&#39;elenco dei prodotti indica quali prodotti sono correlati all&#39;azione co
 
 ## Esempi
 
-`productView` evento
+`productView` event
 
 ```javascript
 alloy("event",{
@@ -148,7 +147,7 @@ alloy("event",{
 });
 ```
 
-`productView` evento
+`productView` event
 
 ```javascript
 alloy("event",{
@@ -178,7 +177,7 @@ alloy("event",{
 });
 ```
 
-`checkout` evento
+`checkout` event
 
 ```javascript
 alloy("event",{
@@ -206,7 +205,7 @@ alloy("event",{
 });
 ```
 
-`purchase` evento
+`purchase` event
 
 ```javascript
 alloy("event",{
