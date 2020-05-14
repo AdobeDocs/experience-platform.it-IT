@@ -4,19 +4,15 @@ seo-title: Adobe Experience Platform Web SDK Rendering del contenuto personalizz
 description: Scopri come eseguire il rendering del contenuto personalizzato con l’SDK Web della piattaforma Experience
 seo-description: Scopri come eseguire il rendering del contenuto personalizzato con l’SDK Web della piattaforma Experience
 translation-type: tm+mt
-source-git-commit: 938e0e56111c96f6b0b378c9e14fb92af70c5e10
+source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
 workflow-type: tm+mt
-source-wordcount: '262'
-ht-degree: 3%
+source-wordcount: '236'
+ht-degree: 0%
 
 ---
 
 
-# (Beta) Panoramica delle opzioni di personalizzazione
-
->[!IMPORTANT]
->
->L’SDK Web per Adobe Experience Platform è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e la funzionalità sono soggette a modifiche.
+# Panoramica delle opzioni di personalizzazione
 
 L’SDK Web di Adobe Experience Platform supporta l’esecuzione di query sulle soluzioni di personalizzazione in Adobe, incluso Adobe Target. Esistono due modalità di personalizzazione: recupero del contenuto che può essere rappresentato automaticamente e del contenuto di cui lo sviluppatore deve eseguire il rendering. L’SDK fornisce inoltre le strutture per [gestire lo sfarfallio](../../edge/solution-specific/target/flicker-management.md).
 
