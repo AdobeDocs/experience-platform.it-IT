@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 53d72e6460c1ab3bc4459d8e108630f652b62dd6
+source-git-commit: e6731b54840eaf9dd2cdaeff5205e14277e78a3b
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 6%
+source-wordcount: '1026'
+ht-degree: 5%
 
 ---
 
@@ -104,6 +104,7 @@ Experience Platform fornisce un&#39;API RESTful e un&#39;interfaccia utente inte
 | ------- | ----------- |
 | Supporto aggiuntivo per API e interfaccia utente per i sistemi di storage cloud | Nuovi connettori di origine per Azure File Storage. |
 | Supporto aggiuntivo per API e interfaccia utente per i database | Nuovi connettori di origine per Azure Data Explorer, IBM DB2 e Oracle DB. |
+| Adobe Audience Manager per la condivisione dei dati della piattaforma Experience | Il processo di provisioning per il connettore Audience Manager è stato aggiornato. I set di dati di Audience Manager per il profilo cliente in tempo reale ora sono disattivati per impostazione predefinita. Potete scegliere manualmente i set di dati da promuovere nel profilo. Le nuove impostazioni predefinite non sono retroattive e influiscono solo sul provisioning per i nuovi connettori Audience Manager. Per ulteriori informazioni, consulta la guida [utente](../../catalog/datasets/user-guide.md)DataSet. |
 
 **Problemi noti**
 
