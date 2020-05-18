@@ -4,7 +4,10 @@ seo-title: Panoramica delle destinazioni
 description: Le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che consentono l'attivazione senza soluzione di continuità dei dati dalla piattaforma dati cliente in tempo reale. Puoi utilizzare Destinazioni nella piattaforma dati cliente Adobe in tempo reale per attivare i dati noti e sconosciuti per campagne di marketing multicanale, campagne e-mail, pubblicità mirata e molti altri casi di utilizzo.
 seo-description: Le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che consentono l'attivazione senza soluzione di continuità dei dati dalla piattaforma dati cliente in tempo reale. Puoi utilizzare Destinazioni nella piattaforma dati cliente Adobe in tempo reale per attivare i dati noti e sconosciuti per campagne di marketing multicanale, campagne e-mail, pubblicità mirata e molti altri casi di utilizzo.
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: 49479cd1520bd2407ecd5140265661aefe0817a3
+workflow-type: tm+mt
+source-wordcount: '392'
+ht-degree: 0%
 
 ---
 
@@ -33,7 +36,7 @@ I controlli nell&#39;area di lavoro [](/help/rtcdp/destinations/destinations-wor
 * Creare, modificare, attivare e disattivare i flussi di dati verso le destinazioni nel catalogo;
 * creare un account in una posizione di archiviazione o collegare CDP in tempo reale all&#39;account nella piattaforma di destinazione;
 * Selezionare i segmenti da attivare nelle destinazioni;
-* Seleziona i campi [di](../../xdm/home.md) Experience Data Model (XDM) da esportare quando attivi i segmenti in destinazioni di marketing tramite e-mail.
+* Seleziona i campi [](../../xdm/home.md) Experience Data Model (XDM) da esportare quando attivi i segmenti nelle destinazioni di marketing tramite e-mail.
 
 ## Tipi e categorie di destinazione
 
@@ -44,3 +47,15 @@ Per informazioni dettagliate, consultate la panoramica [dei tipi di](/help/rtcdp
 La funzionalità delle destinazioni in CDP in tempo reale funziona con le autorizzazioni di controllo degli accessi della piattaforma Adobe Experience. A seconda del livello di autorizzazione dell’utente, potete visualizzare, gestire e attivare le destinazioni. Per informazioni sulle singole autorizzazioni, vedi Controllo [accesso in Adobe Experience Platform](../../access-control/home.md) e scorri verso il basso fino alla parte inferiore della pagina.
 
 Per ulteriori informazioni sui controlli di accesso, vedere la guida [utente relativa al controllo di](../../access-control/ui/overview.md)accesso.
+
+<!--
+
+// Commenting out DULE in Destinations service
+
+## Destinations and Data Usage Labeling and Enforcement (DULE)
+
+Data Usage Labeling and Enforcement (DULE) is the core mechanism of Adobe Experience Platform Data Governance. DULE is currently *not* enforced in Adobe Real-time CDP destinations.
+
+You are responsible for understanding the limitations and obligations of your data and how you use that data in Experience Platform.
+
+-->
