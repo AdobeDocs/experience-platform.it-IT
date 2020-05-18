@@ -4,23 +4,21 @@ seo-title: Flusso di lavoro destinazioni social network
 description: Istruzioni per la connessione agli account degli annunci social network
 seo-description: Istruzioni per la connessione agli account degli annunci social network
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: ab53e2efffed536e8028beabd64aee843d1eeee8
+workflow-type: tm+mt
+source-wordcount: '360'
+ht-degree: 0%
 
 ---
 
 
-# (Beta) Flusso di lavoro di autenticazione delle destinazioni social network {#social-network-destinations-workflow}
+# Flusso di lavoro di autenticazione delle destinazioni social network {#social-network-destinations-workflow}
 
+## Flusso di lavoro per creare destinazioni social network
 
->[!IMPORTANT]
->
->Il flusso di lavoro per la creazione di destinazioni social network in Adobe Real-time CDP è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e la funzionalità sono soggette a modifiche.
+Questa esercitazione utilizza Facebook come esempio, ma il flusso di lavoro in Adobe Real-time Customer Data Platform sarà lo stesso per tutte le destinazioni dei social network, una volta aggiunto di nuovo al prodotto.
 
-## Flusso di lavoro per creare destinazioni di archiviazione cloud
-
-Questa esercitazione utilizza Facebook come esempio, ma il flusso di lavoro in Adobe Real-time Customer Data Platform sarà lo stesso per tutte le destinazioni Social Network, una volta aggiunto al prodotto.
-
-1. In **[!UICONTROL Connections > Destinations]**, scorrete fino alla **[!UICONTROL Social]** categoria. Seleziona la destinazione preferita del social network, quindi seleziona **[!UICONTROL Connect destination]**.
+1. In **[!UICONTROL Destinations > Catalog]**, scorrete fino alla **[!UICONTROL Social]** categoria. Seleziona la destinazione preferita del social network, quindi seleziona **[!UICONTROL Connect destination]**.
 
    ![Connessione alla destinazione social network](/help/rtcdp/destinations/assets/facebook-catalog-view.png)
 
@@ -36,16 +34,28 @@ Questa esercitazione utilizza Facebook come esempio, ma il flusso di lavoro in A
 
    ![Credenziali confermate](/help/rtcdp/destinations/assets/facebook-post-connection-view.png)
 
-4. Nel **[!UICONTROL Setup]** passaggio, immettete un **[!UICONTROL Name]** e un **[!UICONTROL Description]** per il flusso di attivazione e inserite il contenuto **[!UICONTROL Account ID]** del social network e dell’account. Selezionate **[!UICONTROL Create Destination]** dopo aver compilato i campi riportati sopra.
+4. Nel **[!UICONTROL Setup]** passaggio, immettete un **[!UICONTROL Name]** e un **[!UICONTROL Description]** per il flusso di attivazione e inserite il contenuto **[!UICONTROL Account ID]** del social network e dell’account. Seleziona tutti i casi di utilizzo marketing da applicare a questa destinazione. Selezionate **[!UICONTROL Create Destination]** dopo aver compilato i campi riportati sopra.
 
    >[!IMPORTANT]
    >
-   >Destinazioni Facebook. **[!UICONTROL Account ID]** è l&#39;ID del tuo account pubblicitario Facebook. Puoi trovare questo ID in Facebook Ads Manager. Aggiungi l’ID con il prefisso `act_` indicato di seguito:
+   > Destinazioni Facebook. **[!UICONTROL Account ID]** è l&#39;ID del tuo account pubblicitario Facebook. Puoi trovare questo ID in Facebook Ads Manager. Aggiungi l’ID con il prefisso `act_` indicato di seguito:
 
-   ![Connessione alla destinazione social network - passaggio di configurazione](/help/rtcdp/destinations/assets/social-network-step.png)
+   ![Connessione alla destinazione social network - passaggio di configurazione](/help/rtcdp/destinations/assets/social-network-setup-step.png)
 
 5. La destinazione è stata creata. Puoi scegliere **[!UICONTROL Save & Exit]** se attivare i segmenti in un secondo momento oppure puoi selezionare **[!UICONTROL Next]** per continuare il flusso di lavoro e selezionare i segmenti da attivare. In entrambi i casi, consulta la sezione successiva, [Attivare i segmenti sui social network](#activate-segments), per il resto del flusso di lavoro.
 
 ## Attivare i segmenti sui social network {#activate-segments}
 
 Per istruzioni su come attivare i segmenti nei social network, vedi [Attivare i dati sulle destinazioni](/help/rtcdp/destinations/activate-destinations.md).
+
+
+<!--
+
+// update IMPORTANT note in step 4 after marketing use cases are released for RTCDP
+
+    >[!IMPORTANT]
+    >
+    > * The *Single Identity Personalization* marketing use case is selected by default for social network destinations and cannot be removed. 
+    > * For Facebook destinations. **[!UICONTROL Account ID]** is your Facebook Ad Account ID. You can find this ID in the Facebook Ads Manager. Prefix the ID with `act_` as shown below: 
+
+    ![Connect to social network destination - setup step](/help/rtcdp/destinations/assets/social-networks-setup-step.png)
