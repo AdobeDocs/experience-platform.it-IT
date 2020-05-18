@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: e6731b54840eaf9dd2cdaeff5205e14277e78a3b
+source-git-commit: d41952e5905d4ebc579a29ad3282a8f732b7c331
 workflow-type: tm+mt
-source-wordcount: '1026'
+source-wordcount: '1075'
 ht-degree: 5%
 
 ---
@@ -55,7 +55,15 @@ Per ulteriori informazioni sulla migrazione dei notebook e delle ricette per uti
 
 In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che attivano i dati per tali partner in modo semplice.
 
-**Nuove destinazioni**
+**Facebook**
+
+Adobe Real-time CDP ora supporta l’attivazione dei dati su Facebook, consentendo di attivare profili per le campagne Facebook per il targeting dell’audience, la personalizzazione e la soppressione basate su e-mail con hash.
+
+Per ulteriori informazioni sulla nuova funzionalità, consultate la pagina di destinazione [di](/help/rtcdp/destinations/facebook-destination.md) Facebook.
+
+<br> 
+
+**Destinazioni di archiviazione cloud per eventi Amazon Kinesis e Azure Event Hubs**
 
 Adobe Real-time CDP ora supporta l&#39;attivazione dei dati per lo streaming delle destinazioni di archiviazione cloud, consentendo di esportare i dati e gli eventi del pubblico in queste destinazioni in formato JSON. Puoi quindi descrivere la logica di business sopra questi eventi nelle tue destinazioni. Per ulteriori informazioni, vedere di seguito:
 
