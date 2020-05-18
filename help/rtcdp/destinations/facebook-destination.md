@@ -4,9 +4,9 @@ seo-title: Destinazione Facebook
 description: Attiva profili per le tue campagne Facebook per il targeting dell'audience, la personalizzazione e la soppressione basate su e-mail con hash.
 seo-description: Attiva profili per le tue campagne Facebook per il targeting dell'audience, la personalizzazione e la soppressione basate su e-mail con hash.
 translation-type: tm+mt
-source-git-commit: faaa4eda5174bb8d27a76d767891df15df69e30a
+source-git-commit: 522014f8e5f3de0f553a69763d3a37482953b7c4
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '665'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,8 @@ ht-degree: 0%
 ## Panoramica {#overview}
 
 Attiva profili per le tue campagne Facebook per il targeting dell&#39;audience, la personalizzazione e la soppressione basate su e-mail con hash.
+
+![Destinazione Facebook nell’interfaccia CDP in tempo reale](/help/rtcdp/destinations/assets/facebook-destination.png)
 
 ## Casi d’uso
 
