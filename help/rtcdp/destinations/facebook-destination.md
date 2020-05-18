@@ -4,43 +4,88 @@ seo-title: Destinazione Facebook
 description: Attiva profili per le tue campagne Facebook per il targeting dell'audience, la personalizzazione e la soppressione basate su e-mail con hash.
 seo-description: Attiva profili per le tue campagne Facebook per il targeting dell'audience, la personalizzazione e la soppressione basate su e-mail con hash.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: faaa4eda5174bb8d27a76d767891df15df69e30a
+workflow-type: tm+mt
+source-wordcount: '658'
+ht-degree: 0%
 
 ---
 
 
-# (Beta) Destinazione Facebook
+# Destinazione Facebook
 
->[!IMPORTANT]
->
->La destinazione Facebook in Adobe Real-time CDP è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e la funzionalità sono soggette a modifiche.
-
-## Panoramica
+## Panoramica {#overview}
 
 Attiva profili per le tue campagne Facebook per il targeting dell&#39;audience, la personalizzazione e la soppressione basate su e-mail con hash.
 
-## Specifiche di destinazione
+## Casi d’uso
 
-### Tipo di attivazione
+Per comprendere meglio come e quando utilizzare la destinazione Facebook, ecco due esempi di casi d’uso che i clienti della piattaforma dati cliente Adobe in tempo reale possono risolvere utilizzando questa funzione.
 
-Esportazione segmento - vengono esportati tutti i membri di un segmento (pubblico) con i loro identificatori (nome, numero di telefono, ecc.) utilizzato nella destinazione Facebook
 
-## Prerequisiti
+### Caso di utilizzo n. 1
+
+
+Un rivenditore online vuole raggiungere i clienti esistenti tramite piattaforme social e mostrare loro offerte personalizzate in base ai loro ordini precedenti. Il rivenditore online può inserire indirizzi e-mail da CRM a Adobe Real-time CDP, creare segmenti dai propri dati offline e inviare questi segmenti alla piattaforma social di Facebook, ottimizzando le spese pubblicitarie.
+
+
+### Caso di utilizzo n. 2
+
+
+Una compagnia aerea ha diversi livelli di clienti (Bronzo, Argento e Oro) e vuole fornire a ciascuno dei livelli offerte personalizzate tramite piattaforme social. Tuttavia, non tutti i clienti utilizzano l&#39;app mobile della compagnia aerea e alcuni di essi non hanno effettuato l&#39;accesso al sito Web della società. Gli unici identificatori della società per questi clienti sono gli ID iscrizione e gli indirizzi e-mail.
+Per utilizzarli tra i social media, possono tenere a bordo i dati del cliente dal CRM in Adobe Real-time CDP, utilizzando come identificatori gli indirizzi e-mail con hash.
+In seguito, possono combinare i dati offline con i dati dell&#39;attività online esistenti, per creare nuovi segmenti di pubblico ai quali indirizzare i dati attraverso la destinazione Facebook.
+
+## Specifiche di destinazione {#destination-specs}
+
+### Gestione dei dati per le destinazioni Facebook {#data-governance}
+
+>[!IMPORTANT]
+>
+>I dati inviati a Facebook non devono includere identità unite. L&#39;Utente è tenuto a rispettare tale obbligo e può farlo accertandosi che i segmenti selezionati per l&#39;attivazione non utilizzino un&#39;opzione di cucitura nel proprio criterio di unione. Ulteriori informazioni sui criteri di [unione](/help/profile/ui/merge-policies.md).
+
+### Tipo di attivazione {#activation-type}
+
+**Esportazione** segmento - vengono esportati tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono, ecc.) utilizzato nella destinazione Facebook.
+
+### Prerequisiti per l’account Facebook {#facebook-account-prerequisites}
 
 Prima di inviare i segmenti di pubblico a [!DNL Facebook], accertati di soddisfare i seguenti requisiti:
 
-1. Il tuo account [!DNL Facebook] utente deve avere l&#39;autorizzazione **Gestisci campagne** abilitata per l&#39;account annuncio che intendi utilizzare.
-2. Aggiungi l&#39;account aziendale di **Adobe Experience Cloud** come partner pubblicitario all&#39;interno dell&#39; [!DNL Facebook Ad Account]azienda. Seleziona `business ID=206617933627973`. Per informazioni, consulta [Aggiunta di partner al tuo Business Manager](https://www.facebook.com/business/help/1717412048538897) .
+1. L&#39;account [!DNL Facebook] utente deve avere l&#39; **[!DNL Manage campaigns]** autorizzazione abilitata per l&#39;account annuncio che intendi utilizzare.
+2. Aggiungi l&#39;account aziendale di **Adobe Experience Cloud** come partner pubblicitario all&#39;interno dell&#39; [!DNL Facebook Ad Account]azienda. Seleziona `business ID=206617933627973`. Per informazioni, consulta [Aggiungere partner al tuo Business Manager](https://www.facebook.com/business/help/1717412048538897) nella documentazione di Facebook.
    >[!IMPORTANT]
    > Quando configuri le autorizzazioni per Adobe Experience Cloud, devi abilitare l&#39;autorizzazione **Gestisci campagne** . Questo è richiesto per l&#39; [!DNL Adobe Real-time CDP] integrazione.
 3. Leggi e firma le [!DNL Facebook Custom Audiences] Condizioni del servizio. Per fare questo, andate a `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, dov&#39; `accountID` è il vostro [!DNL Facebook Ad Account ID].
 
+### Requisiti di hashing e-mail {#email-hashing-requirements}
 
-## Destinazione Connect
+Facebook richiede che non vengano inviate informazioni personali (PII). Pertanto, le audience attivate su Facebook devono essere cancellate dagli indirizzi e-mail *con hash* . Puoi scegliere di hash gli indirizzi e-mail prima di inviarli in Adobe Experience Platform, oppure puoi scegliere di lavorare con gli indirizzi e-mail in modo chiaro in Experience Platform e ottenere l’hash del nostro algoritmo al momento dell’attivazione.
 
-Per collegare la destinazione Facebook, vedi Flusso di lavoro [di autenticazione delle destinazioni della rete](/help/rtcdp/destinations/social-network-destinations-workflow.md)social.
+Per informazioni sull’assimilazione degli indirizzi e-mail in Experience Platform, consulta la panoramica [sull’assimilazione dei](/help/ingestion/batch-ingestion/overview.md) batch e la panoramica [sull’assimilazione](/help/ingestion/streaming-ingestion/overview.md)dinamica.
+
+Se selezionate l’hash degli indirizzi e-mail, accertatevi di soddisfare i seguenti requisiti:
+
+* Rifila tutti gli spazi iniziali e finali dalla stringa e-mail; esempio: `johndoe@example.com`, not `<space>johndoe@example.com<space>`;
+* Durante l&#39;hashing delle stringhe e-mail, assicurarsi di eseguire l&#39;hash della stringa minuscola;
+   * Esempio: `example@email.com`, not `EXAMPLE@EMAIL.COM`;
+* Verificate che la stringa con hash sia in lettere minuscole
+   * Esempio: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, not `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
+* Non saldare la stringa.
 
 
-## Attivare i segmenti su Facebook
+>[!IMPORTANT]
+>
+>Se scegliete di non utilizzare l’hash degli indirizzi e-mail, Adobe Real-time CDP lo farà automaticamente quando attivate i segmenti su Facebook. Nel flusso di lavoro [di](/help/rtcdp/destinations/activate-destinations.md#activate-data) attivazione (vedere il punto 5), selezionate l’ `Email` opzione come mostrato di seguito per gli indirizzi *e-mail* non elaborati e `Email_LC_SHA256` per gli indirizzi e-mail *con* hash.
+
+
+![Hashing all&#39;attivazione](/help/rtcdp/destinations/assets/identity-mapping.png)
+
+## Connetti alla destinazione {#connect-destination}
+
+Per connettersi alla destinazione Facebook, vedi Flusso di lavoro [di autenticazione delle destinazioni della rete](/help/rtcdp/destinations/social-network-destinations-workflow.md)social.
+
+
+## Attivare i segmenti su Facebook {#activate-segments}
 
 Per istruzioni su come attivare i segmenti in Facebook, vedi [Attivare i dati sulle destinazioni](/help/rtcdp/destinations/activate-destinations.md).
