@@ -4,9 +4,9 @@ seo-title: Destinazioni di archiviazione cloud
 description: Adobe Real-time CDP può inviare i segmenti come file di dati alle posizioni di archiviazione cloud Amazon S3, AWS Kinesis, Azure Event Hubs o SFTP.
 seo-description: Adobe Real-time CDP può inviare i segmenti come file di dati alle posizioni di archiviazione cloud Amazon S3, AWS Kinesis, Azure Event Hubs o SFTP.
 translation-type: tm+mt
-source-git-commit: a18f89531cf024f61b054b47a660bd26766bebf6
+source-git-commit: 75581529ede3772606bc18fea683da5d396996c5
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '185'
 ht-degree: 0%
 
 ---
@@ -32,4 +32,4 @@ Per informazioni su come connettersi alle destinazioni di archiviazione cloud, v
 ## Destinazioni di streaming per l&#39;archiviazione cloud disponibili
 
 * [destinazione Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md)
-* [Destinazione Azure EventHubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)
+* [Destinazione Hubs evento Azure](/help/rtcdp/destinations/azure-event-hubs-destination.md)
