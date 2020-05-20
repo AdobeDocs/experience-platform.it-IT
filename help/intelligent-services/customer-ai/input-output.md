@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Ingresso e uscita AI del cliente
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 66ccea896846c1da4310c1077e2dc7066a258063
+source-git-commit: 5cab341138e809bae79623bb65e499ac6b955f27
+workflow-type: tm+mt
+source-wordcount: '828'
+ht-degree: 0%
 
 ---
 
@@ -16,6 +19,31 @@ Il seguente documento delinea i diversi input e output utilizzati nell&#39;AI de
 ## Dati di input AI del cliente
 
 L&#39;AI del cliente utilizza i dati Evento esperienza cliente per calcolare i punteggi di propensione. Per ulteriori informazioni su Consumer Experience Event, consulta la sezione [Prepara dati per l&#39;utilizzo nella documentazione](../data-preparation.md)dei servizi intelligenti.
+
+### Dati storici
+
+L&#39;AI del cliente richiede dati storici per la formazione dei modelli, ma la quantità di dati richiesta è basata su due elementi chiave: finestra dei risultati e popolazione ammissibile.
+
+Per impostazione predefinita, l&#39;API del cliente cerca che un utente abbia avuto attività negli ultimi 120 giorni, se durante la configurazione dell&#39;applicazione non viene fornita alcuna definizione di popolazione idonea. Oltre alla quantità minima di dati sull&#39;evento di esperienza del consumatore richiesta, l&#39;AI del cliente necessita anche di una quantità minima di eventi di successo basati su una definizione di obiettivo prevista. Attualmente, l&#39;AI del cliente richiede almeno 500 eventi di successo.
+
+Gli esempi seguenti hanno fornito una semplice formula per determinare la quantità minima di dati richiesti. Se il requisito minimo è superiore, è probabile che il modello fornisca risultati più precisi. Se la quantità minima richiesta è inferiore, il modello non riuscirà in quanto non è disponibile una quantità sufficiente di dati per la formazione dei modelli.
+
+**Formula**:
+
+Lunghezza minima dei dati richiesti = popolazione ammissibile + finestra dei risultati
+
+>[!NOTE]
+> 30 è il numero minimo di giorni richiesti per la popolazione ammissibile. Se non viene fornito, il valore predefinito è 120 giorni.
+
+Esempi :
+
+- Si desidera prevedere se è probabile che un cliente acquisti un orologio nei prossimi 30 giorni. Desiderate anche segnare gli utenti che hanno un&#39;attività Web negli ultimi 60 giorni. In questo caso la lunghezza minima dei dati richiesti = 60 giorni + 30 giorni. La popolazione ammissibile è di 60 giorni e la finestra di risultato è di 30 giorni per un totale di 90 giorni.
+
+- Si desidera prevedere se è probabile che l&#39;utente acquisti un orologio nei prossimi 7 giorni. In questo caso la lunghezza minima dei dati richiesti = 120 giorni + 7 giorni. Il valore predefinito della popolazione ammissibile è 120 giorni e la finestra di risultato è di 7 giorni per un totale di 127 giorni.
+
+- Si desidera prevedere se è probabile che il cliente acquisti un orologio nei prossimi 7 giorni. Desiderate anche segnare gli utenti che hanno un&#39;attività Web negli ultimi 7 giorni. In questo caso la lunghezza minima dei dati richiesti = 30 giorni + 7 giorni. La popolazione ammissibile ha bisogno di almeno 30 giorni e il periodo finale è di 7 giorni per un totale di 37 giorni.
+
+Oltre ai dati minimi richiesti, anche l&#39;API del cliente funziona meglio con i dati recenti. In questo caso d&#39;uso, l&#39;AI cliente sta facendo una previsione per il futuro sulla base dei dati comportamentali recenti di un utente. In altre parole, dati più recenti produrranno probabilmente una previsione più accurata.
 
 ## Dati di output AI del cliente
 
