@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sui connettori sorgente della piattaforma Adobe Experience
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: 7c94d7a0aace7525e776f13e2975f91cf2b29e23
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '758'
 ht-degree: 0%
 
 ---
@@ -77,6 +77,8 @@ Experience Platform supporta l’acquisizione di dati da un database di terze pa
 - [Connettore Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
 - [Connettore archiviazione tabella Azure](connectors/databases/ats.md)
 - [Connettore Google BigQuery](connectors/databases/bigquery.md)
+- [Connettore GreenPlum](connectors/databases/greenplum.md)
+- [Connettore HP Vertica](connectors/databases/hp-vertica.md)
 - [Connettore IBM DB2](connectors/databases/ibm-db2.md)
 - [Connettore MariaDB](connectors/databases/mariadb.md)
 - [Connettore di Microsoft SQL Server](connectors/databases/sql-server.md)
