@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare un connettore Azure Event Hubs utilizzando l'API del servizio di flusso
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: fdffdd34d1ccb61d6c82fecc249ddeb501d79d0e
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '590'
 ht-degree: 2%
 
 ---
@@ -38,9 +38,10 @@ Affinché il servizio di flusso possa connettersi all&#39;account Azure Event Hu
 | ---------- | ----------- |
 | `sasKeyName` | Nome della regola di autorizzazione, noto anche come nome della chiave SAS. |
 | `sasKey` | La firma di accesso condiviso generata. |
-| `namespace` | Spazio dei nomi dell’EventHub a cui si accede. |
+| `namespace` | Lo spazio dei nomi degli hub eventi a cui si accede. |
+| `connectionSpec.id` | ID specifica connessione Hubs evento di Azure: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
-Per ulteriori informazioni su questi valori, consultate [questo documento](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)EventHub.
+Per ulteriori informazioni su questi valori, consultate [questo documento](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)sugli hub eventi.
 
 ### Lettura di chiamate API di esempio
 
@@ -62,7 +63,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 - Content-Type: `application/json`
 
-## Creazione di una connessione
+## Creare una connessione
 
 Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. È necessaria una sola connessione per l&#39;account Hubs dell&#39;evento di Azure, in quanto può essere utilizzata per creare più connettori sorgente per inserire dati diversi.
 
@@ -86,10 +87,11 @@ curl -X POST \
         "name": "Azure Event Hubs connection",
         "description": "Connector for Azure Event Hubs",
         "auth": {
-            "specName": "Basic Authentication for EventHub",
+            "specName": "Basic Authentication for Event Hubs",
             "params": {
                 "sasKeyName": "sasKeyName",
-                "sasKey": "sasKey"
+                "sasKey": "sasKey",
+                "namespace": "namespace"
             }
         },
         "connectionSpec": {
@@ -103,6 +105,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.sasKeyName` | Nome della regola di autorizzazione, noto anche come nome della chiave SAS. |
 | `auth.params.sasKey` | La firma di accesso condiviso generata. |
+| `namespace` | Lo spazio dei nomi degli hub eventi a cui si accede. |
 | `connectionSpec.id` | ID specifica connessione Hubs evento di Azure: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 **Risposta**
