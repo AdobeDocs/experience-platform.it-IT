@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Guida di Adobe Experience Platform Edge Network
+user-guide-title: Guida all’SDK Web per Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 5998473c665cb80ffddc092847533f51d81cf581
+source-git-commit: 73e0c245191c88025e59cf226ec5b07a55064b97
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 12%
@@ -11,9 +11,9 @@ ht-degree: 12%
 ---
 
 
-# Adobe Experience Platform Edge Network {#edge}
+# Adobe Experience Platform Web SDK {#edge}
 
-* [Panoramica di Edge Network](home.md)
+* [Panoramica SDK per Web](home.md)
 * Introduzione {#get-started}
    * [Avvio rapido con Launch](getting-started/quick-start-with-launch.md)
    * [Avvio rapido senza avvio](getting-started/quick-start-without-launch.md)
