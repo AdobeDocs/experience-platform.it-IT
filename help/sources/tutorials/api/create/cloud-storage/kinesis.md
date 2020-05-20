@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare un connettore Amazon Kinesis utilizzando l'API del servizio di flusso
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: dcd6293a71178fee14647f5b2c8b56d03d1ec7df
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '563'
 ht-degree: 2%
 
 ---
@@ -38,9 +38,10 @@ Affinché il servizio di flusso possa connettersi con il vostro account Amazon K
 | ---------- | ----------- |
 | `accessKeyId` | ID chiave di accesso per il tuo account Kinesis. |
 | `secretKey` | La chiave di accesso segreta per il tuo account Kinesis. |
+| `region` |  | La regione per il tuo account Kinesis. |
 | `connectionSpec.id` | ID specifica di connessione Kinesis: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
-Per ulteriori informazioni su questi valori, consultate [questo documento](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)EventHub.
+Per ulteriori informazioni su questi valori, consultate [questo documento](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html)Kinesis.
 
 ### Lettura di chiamate API di esempio
 
@@ -62,7 +63,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 * Content-Type: `application/json`
 
-## Creazione di una connessione
+## Creare una connessione
 
 Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. È necessaria una sola connessione per l&#39;account Amazon Kinesis, in quanto può essere utilizzata per creare più connettori sorgente per inserire dati diversi.
 
@@ -103,6 +104,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.accessKeyId` | ID chiave di accesso per il tuo account Kinesis. |
 | `auth.params.secretKey` | La chiave di accesso segreta per il tuo account Kinesis. |
+| `auth.params.region` | La regione per il tuo account Kinesis. |
 | `connectionSpec.id` | ID specifica di connessione Kinesis: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
 **Risposta**
