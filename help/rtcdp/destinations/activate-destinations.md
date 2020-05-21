@@ -4,9 +4,9 @@ seo-title: Attivare profili e segmenti su una destinazione
 description: Attiva i dati di cui disponi in Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 seo-description: Attiva i dati di cui disponi in Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 translation-type: tm+mt
-source-git-commit: faaa4eda5174bb8d27a76d767891df15df69e30a
+source-git-commit: 237ca5fc950b46ae4718850ab1360cdf52b8b112
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '860'
 ht-degree: 0%
 
 ---
@@ -30,9 +30,26 @@ Per attivare i dati sulle destinazioni, è necessario aver [collegato correttame
    ![segmenti-a-destinazione](/help/rtcdp/destinations/assets/select-segments.png)
 5. *Condizionale*. Questo passaggio varia a seconda del tipo di destinazione in cui vengono attivati i segmenti. <br> Per le destinazioni *di marketing* e-mail e le destinazioni *di archiviazione* cloud, nella **[!UICONTROL Select Attributes]** pagina selezionate **[!UICONTROL Add new field]** e selezionate gli attributi che desiderate inviare alla destinazione.
 È consigliabile che uno degli attributi sia un identificatore [](/help/rtcdp/destinations/email-marketing-destinations.md#identity) univoco dello schema di unione. Per ulteriori informazioni sugli attributi obbligatori, vedi Identità nell&#39;articolo Destinazioni [di marketing](/help/rtcdp/destinations/email-marketing-destinations.md#identity) e-mail.
-   ![destinazione-attributi](/help/rtcdp/destinations/assets/select-attributes-step.png)Per le destinazioni *dei* social network, nel **[!UICONTROL Identity mapping]** passaggio selezionate gli attributi di origine da mappare alle identità di destinazione.
-   ![mappatura dell&#39;identità prima di compilare i campi](/help/rtcdp/destinations/assets/facebook-identity-mapping-1.png)Nell&#39;esempio seguente, l&#39;indirizzo e-mail personale nello schema dell&#39;identità è stato crittografato al momento dell&#39;inserimento in Experience Platform per soddisfare i requisiti [di hashing](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)e-mail di Facebook. Premere **[!UICONTROL Next]** dopo aver selezionato la mappatura.
-   ![mappatura identità dopo la compilazione dei campi](/help/rtcdp/destinations/assets/facebook-identity-mapping-2.png)
+   ![destination-attribute](/help/rtcdp/destinations/assets/select-attributes-step.png)
+
+   <br> 
+
+   Per le destinazioni ** social, nel **[!UICONTROL Identity mapping]** passaggio potete selezionare gli attributi di origine da mappare come identità di destinazione nella destinazione. Questo passaggio è facoltativo o obbligatorio, a seconda dell&#39;identità primaria utilizzata nello schema. <br> 
+
+   *Indirizzo e-mail come identità* principale: Se nello schema si utilizza l&#39;indirizzo e-mail come identità principale, è possibile ignorare il passaggio di mappatura identità, come illustrato di seguito:
+
+   ![Indirizzo e-mail come identità](/help/rtcdp/destinations/assets/email-as-identity.gif)
+
+   <br> 
+
+   *Un altro ID come identità* principale: Se si utilizza un altro ID, ad esempio *Rewards ID* o *Loyalty ID*, come identità primaria nello schema, è necessario mappare manualmente l&#39;indirizzo e-mail dallo schema di identità come identità di destinazione nella destinazione social, come illustrato di seguito:
+
+   ![ID fedeltà come identità](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
+
+
+   Selezionate `Email_LC_SHA256` come identità di destinazione se avete hashing degli indirizzi e-mail dei clienti durante l&#39;inserimento di dati in Adobe Experience Platform, in base ai requisiti [di hashing delle](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)e-mail di Facebook. <br> Selezionate `Email` come identità di destinazione se gli indirizzi e-mail utilizzati non sono crittografati. Adobe Real-time CDP invierà gli indirizzi e-mail in conformità ai requisiti di Facebook.
+
+   ![mappatura identità dopo la compilazione dei campi](/help/rtcdp/destinations/assets/identity-mapping.png)
 
 6. Sulla **[!UICONTROL Segment schedule]** pagina è possibile visualizzare la data di inizio dell&#39;invio dei dati alla destinazione, nonché la frequenza dell&#39;invio dei dati alla destinazione.
 
