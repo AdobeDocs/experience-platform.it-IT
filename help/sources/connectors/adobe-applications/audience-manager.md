@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Connettore Audience Manager
 topic: overview
 translation-type: tm+mt
-source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
+source-git-commit: fb4ffa2c95365905f5417586fa7ecf88523009a0
+workflow-type: tm+mt
+source-wordcount: '742'
+ht-degree: 0%
 
 ---
 
@@ -51,7 +54,7 @@ Per ulteriori informazioni, consulta la documentazione relativa ai campi [di map
 
 I set di dati sono un costrutto di archiviazione e gestione per una raccolta di dati, in genere una tabella, che contiene schema (colonne) e campi (righe) ed è resa disponibile da una connessione dati. I dati di Audience Manager sono costituiti da dati in tempo reale, dati in entrata e dati di profilo. Per individuare i set di dati di Audience Manager, utilizzate la funzione di ricerca nell’interfaccia utente con le convenzioni di denominazione fornite per ciascun tipo di dati.
 
-Sebbene gli utenti siano in grado di disabilitare i set di dati, non è consigliabile disabilitare i set di dati che verranno utilizzati per l&#39;appartenenza al segmento in Profile.
+I set di dati di Audience Manager sono disabilitati per il profilo per impostazione predefinita e gli utenti possono attivare o disattivare i set di dati in base ai casi di utilizzo. Non è consigliabile disabilitare i set di dati che verranno utilizzati per l&#39;appartenenza al segmento in Profile.
 
 | Nome set di dati | Descrizione |
 | ------------ | ----------- |
