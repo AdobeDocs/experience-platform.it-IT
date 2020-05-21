@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Preparare i dati per l'utilizzo in Intelligent Services
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 1b367eb65d1e592412d601d089725671e42b7bbd
+source-git-commit: 8e24c7c50d700bc3644ce710f77073e537207a6f
+workflow-type: tm+mt
+source-wordcount: '1445'
+ht-degree: 0%
 
 ---
 
@@ -30,6 +33,8 @@ Un esempio completo del mixin può essere trovato nel repository [XDM](https://g
 ## Campi chiave
 
 Le sezioni seguenti evidenziano i campi chiave all&#39;interno del mixin CEE che dovrebbero essere utilizzati per consentire ai servizi intelligenti di generare informazioni utili, tra cui descrizioni e collegamenti alla documentazione di riferimento per ulteriori esempi.
+
+>[!IMPORTANT] Il `xdm:channel` campo (illustrato nella prima sezione di seguito) è **richiesto** per consentire l&#39;utilizzo dei dati da parte dell&#39;AI di attribuzione, mentre l&#39;AI cliente non dispone di campi obbligatori. Tutti gli altri campi chiave sono fortemente consigliati, ma non obbligatori.
 
 ### xdm:channel
 
@@ -182,7 +187,9 @@ Per informazioni complete su ciascuno dei campi secondari richiesti per `xdm:pro
 
 ## Mapping e acquisizione dei dati
 
-Una volta determinato se i dati degli eventi di marketing possono essere mappati allo schema CEE, è possibile avviare il processo di inserimento dei dati in Servizi intelligenti. Contattate i servizi di consulenza Adobe per facilitare la mappatura dei dati sullo schema e l&#39;inserimento nel servizio.
+Una volta determinato se i dati degli eventi di marketing possono essere mappati sullo schema CEE, il passaggio successivo consiste nel determinare quali dati includere nei servizi intelligenti. Tutti i dati storici utilizzati in Intelligent Services devono rientrare nel periodo minimo di quattro mesi di dati, più il numero di giorni previsti come periodo di lookback.
+
+Dopo aver deciso l&#39;intervallo di dati da inviare, contatta i servizi di consulenza Adobe per facilitare la mappatura dei dati sullo schema e l&#39;assimilazione nel servizio.
 
 Se disponete di un’iscrizione Adobe Experience Platform e desiderate mappare e assimilare i dati voi stessi, seguite i passaggi descritti nella sezione seguente.
 
@@ -208,9 +215,81 @@ Dopo aver creato e salvato lo schema, è possibile creare un nuovo dataset basat
 * [Creare un set di dati nell’interfaccia](../catalog/datasets/user-guide.md#create) (seguire il flusso di lavoro per utilizzare uno schema esistente)
 * [Creare un set di dati nell&#39;API](../catalog/datasets/create.md)
 
-#### Mappa e acquisizione dei dati
+#### Aggiunta di un tag dello spazio dei nomi dell&#39;identità primaria al dataset
+
+Se trasferisci dati da Adobe Audience Manager, Adobe Analytics o da un&#39;altra origine esterna, devi aggiungere un `primaryIdentityNameSpace` tag al set di dati. Questo può essere fatto eseguendo una richiesta PATCH all’API del servizio catalogo.
+
+Se state acquisendo dati da un file CSV locale, potete passare alla sezione successiva sulla [mappatura e l’assimilazione dei dati](#ingest).
+
+Prima di seguire la chiamata API di esempio riportata di seguito, consultate la sezione [](../catalog/api/getting-started.md) introduttiva nella guida per gli sviluppatori di Catalog per informazioni importanti sulle intestazioni richieste.
+
+**Formato API**
+
+```http
+PATCH /dataSets/{DATASET_ID}
+```
+
+| Parametro | Descrizione |
+| --- | --- |
+| `{DATASET_ID}` | ID del set di dati creato in precedenza. |
+
+**Richiesta**
+
+A seconda dell’origine da cui vengono acquisiti i dati, nel payload della richiesta dovete fornire valori `primaryIdentityNamespace` e `sourceConnectorId` tag appropriati.
+
+La seguente richiesta aggiunge i valori tag appropriati per Audience Manager:
+
+```shell
+curl -X PATCH \
+  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "tags": {
+          "primaryIdentityNameSpace": ["mcid"],
+          "sourceConnectorId": ["audiencemanager"],
+        }
+      }'
+```
+
+La seguente richiesta aggiunge i valori tag appropriati per Analytics:
+
+```shell
+curl -X PATCH \
+  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "tags": {
+          "primaryIdentityNameSpace": ["aaid"],
+          "sourceConnectorId": ["analytics"],
+        }
+      }'
+```
+
+>[!NOTE] Per ulteriori informazioni sull&#39;utilizzo degli spazi dei nomi di identità in Piattaforma, consultate la panoramica [dello spazio dei nomi](../identity-service/namespaces.md)di identità.
+
+**Risposta**
+
+Una risposta corretta restituisce un array contenente l&#39;ID del set di dati aggiornato. Questo ID deve corrispondere a quello inviato nella richiesta PATCH.
+
+```json
+[
+    "@/dataSets/5ba9452f7de80400007fc52a"
+]
+```
+
+#### Mappa e acquisizione dei dati {#ingest}
 
 Dopo aver creato uno schema CEE e un set di dati, è possibile iniziare a mappare le tabelle di dati sullo schema e a assimilare i dati in Platform. Per informazioni su come eseguire questa operazione nell’interfaccia utente, consultate l’esercitazione sulla [mappatura di un file CSV su uno schema](../ingestion/tutorials/map-a-csv-file.md) XDM. Una volta compilato il set di dati, lo stesso set di dati può essere utilizzato per acquisire file di dati aggiuntivi.
+
+Se i dati sono memorizzati in un&#39;applicazione di terze parti supportata, puoi anche scegliere di creare un connettore [](../sources/home.md) sorgente per trasferire in tempo reale i dati degli eventi di marketing in Piattaforma.
 
 ## Passaggi successivi {#next-steps}
 
