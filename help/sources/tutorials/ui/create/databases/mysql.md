@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare un connettore sorgente MySQL nell’interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '484'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Per accedere all&#39;account MySQL sulla piattaforma, è necessario fornire il s
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `connectionString` | Stringa di connessione MySQL associata all&#39;account. |
+| `connectionString` | Stringa di connessione MySQL associata all&#39;account. Il pattern della stringa di connessione MySQL è: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 
 Per ulteriori informazioni sulle stringhe di connessione e su come ottenerle, leggere il documento [](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html)MySQL.
 
