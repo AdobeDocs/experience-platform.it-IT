@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare un connettore sorgente HP Vertica nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: a015d2612bc5a72004e15dc5706c7718617a0af4
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 1%
@@ -36,7 +36,7 @@ Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario cono
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `connectionString` | Stringa di connessione utilizzata per connettersi all&#39;istanza HP Vertica. Il pattern della stringa di connessione per HP Vertica è `Server=<server>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>` |
+| `connectionString` | Stringa di connessione utilizzata per connettersi all&#39;istanza HP Vertica. Il pattern della stringa di connessione per HP Vertica è `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 
 Per ulteriori informazioni su come iniziare, consulta [questo documento](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm)HP Vertica.
 
