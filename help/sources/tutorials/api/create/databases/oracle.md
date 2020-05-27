@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare un connettore Oracle utilizzando l'API di servizio di flusso
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '555'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,7 @@ Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario cono
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `connectionString` | Stringa di connessione utilizzata per connettersi a Oracle. Il pattern della stringa di connessione Oracle è: `Host=<host>;Port=<port>;Sid=<sid>;User Id=<username>;Password=<password>`. |
+| `connectionString` | Stringa di connessione utilizzata per connettersi a Oracle. Il pattern della stringa di connessione Oracle è: `Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | Identificatore univoco necessario per creare una connessione. L&#39;ID della specifica di connessione per Oracle è `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 Per ulteriori informazioni su come iniziare, fare riferimento a [questo documento](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)Oracle.
@@ -85,7 +85,7 @@ curl -X POST \
         "auth": {
             "specName": "ConnectionString",
             "params": {
-                    "connectionString": "{CONNECTION_STRING}"
+                    "connectionString": "Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}"
                 }
         },
         "connectionSpec": {
@@ -97,7 +97,7 @@ curl -X POST \
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `auth.params.connectionString` | Stringa di connessione associata all&#39;account Oracle. |
+| `auth.params.connectionString` | Stringa di connessione utilizzata per connettersi al database Oracle. Il pattern della stringa di connessione Oracle è: `Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | ID specifica di connessione Oracle: `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 **Risposta**
