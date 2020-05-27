@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare un connettore HP Vertica utilizzando l'API del servizio di flusso
 topic: overview
 translation-type: tm+mt
-source-git-commit: a015d2612bc5a72004e15dc5706c7718617a0af4
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '630'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Affinché il servizio di flusso possa connettersi con HP Vertica, è necessario 
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `connectionString` | Stringa di connessione utilizzata per connettersi all&#39;istanza HP Vertica. Il pattern della stringa di connessione per HP Vertica è `Server=<server>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>` |
+| `connectionString` | Stringa di connessione utilizzata per connettersi all&#39;istanza HP Vertica. Il pattern della stringa di connessione per HP Vertica è `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 | `connectionSpec.id` | Identificatore necessario per creare una connessione. L&#39;ID della specifica di connessione fissa per HP Vertica è: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5` |
 
 Per ulteriori informazioni sull&#39;acquisizione di una stringa di connessione, consultare [questo documento](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm)HP Vertica.
@@ -89,7 +89,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "Server=<server>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>"
+                "connectionString": "Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}"
             }
         },
         "connectionSpec": {
@@ -101,7 +101,7 @@ curl -X POST \
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `auth.params.connectionString` | Stringa di connessione associata al tuo account HP Vertica. |
+| `auth.params.connectionString` | Stringa di connessione associata al tuo account HP Vertica. Il pattern della stringa di connessione per HP Vertica è: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 | `connectionSpec.id` | ID della specifica di connessione HP Vertica: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |
 
 **Risposta**
