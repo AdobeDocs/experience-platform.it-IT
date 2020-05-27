@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare un connettore Azure Table Storage utilizzando l'API Flow Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '597'
 ht-degree: 2%
 
 ---
@@ -36,10 +36,10 @@ Affinché il servizio di flusso possa connettersi con ATS, è necessario fornire
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `connectionString` | Stringa di connessione per la connessione all&#39;istanza di Azure Table Storage. |
-| `connectionSpec.id` | Identificatore univoco necessario per creare una connessione. L&#39;ID della specifica di connessione per ATS è `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `connectionString` | Stringa di connessione utilizzata per connettersi a un&#39;istanza ATS. Il pattern della stringa di connessione per ATS è: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | ID utilizzato per generare una connessione. L&#39;ID della specifica di connessione fissa per ATS è `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
-Per ulteriori informazioni su come iniziare, consulta [questo documento](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction)ATS.
+Per ulteriori informazioni su come ottenere una stringa di connessione, consultare [questo documento](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction)ATS.
 
 ### Lettura di chiamate API di esempio
 
@@ -73,7 +73,7 @@ POST /connections
 
 **Richiesta**
 
-Per creare una connessione ATS, è necessario fornire l&#39;ID univoco della specifica di connessione come parte della richiesta POST. L&#39;ID della specifica di connessione per ATS è `ecde33f2-c56f-46cc-bdea-ad151c16cd69`.
+Per creare una connessione ATS, è necessario fornire il relativo ID della specifica di connessione univoco come parte della richiesta POST. L&#39;ID della specifica di connessione per ATS è `ecde33f2-c56f-46cc-bdea-ad151c16cd69`.
 
 ```shell
 curl -X POST \
@@ -89,7 +89,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}"
             }
         },
         "connectionSpec": {
@@ -101,8 +101,8 @@ curl -X POST \
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `auth.params.connectionString` | Stringa di connessione associata all&#39;account ATS. |
-| `connectionSpec.id` | ID specifica di connessione ATS: `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `auth.params.connectionString` | Stringa di connessione utilizzata per connettersi a un&#39;istanza ATS. Il pattern della stringa di connessione per ATS è: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | L&#39;ID della specifica di connessione ATS è: `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
 **Risposta**
 
