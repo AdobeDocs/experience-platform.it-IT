@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Guida di Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: f23684ee152836bab85eeb8360436e4059f44417
+source-git-commit: 165d76224f4aeb292e72df1e2574ae1d0821c44c
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
          - [Campi di mappatura di Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Campi di mappatura di destinazione](connectors/adobe-applications/mapping/target.md)
    - Pubblicità {#advertising}
-      - [Connettore Google Ads](connectors/advertising/ads.md)
+      - [Connettore Google AdWords](connectors/advertising/ads.md)
    - Archiviazione cloud {#cloud-storage}
       - [Connettore Amazon Kinesis](connectors/cloud-storage/kinesis.md)
       - [Connettore Azure Data Lake Storage Gen2](connectors/cloud-storage/adls-gen2.md)
@@ -65,7 +65,7 @@ ht-degree: 0%
 - Esercitazioni API {#api-tutorials}
    - Creare un connettore di origine {#create}
       - Pubblicità {#advertising}
-         - [Connettore Google Ads](tutorials/api/create/advertising/ads.md)
+         - [Connettore Google AdWords](tutorials/api/create/advertising/ads.md)
       - Archiviazione cloud {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Connettore Amazon S3](tutorials/api/create/cloud-storage/s3.md)
@@ -132,7 +132,7 @@ ht-degree: 0%
          - [Connettore Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Connettore attributi cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - Pubblicità {#create}
-         - [Connettore Google Ads](tutorials/ui/create/advertising/ads.md)
+         - [Connettore Google AdWords](tutorials/ui/create/advertising/ads.md)
       - Archiviazione cloud {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Connettore Azure Data Lake Storage Gen2](tutorials/ui/create/cloud-storage/adls-gen2.md)
