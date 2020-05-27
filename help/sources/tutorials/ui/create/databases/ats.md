@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare un connettore di origine Azure Table Storage nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Per accedere al tuo account ATS su Piattaforma, devi fornire i seguenti valori:
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `connectionString` | Stringa di connessione per la connessione all&#39;istanza di Azure Table Storage. |
+| `connectionString` | Stringa di connessione per la connessione all&#39;istanza di Azure Table Storage. Stringa di connessione per la connessione all&#39;istanza ATS. Il pattern della stringa di connessione per ATS è `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
 
 Per ulteriori informazioni su come iniziare, fare riferimento a [questo documento](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction)Azure Table Storage.
 
