@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare un connettore sorgente GreenPlum nell’interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: a015d2612bc5a72004e15dc5706c7718617a0af4
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
 source-wordcount: '483'
 ht-degree: 1%
@@ -36,7 +36,7 @@ Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario cono
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `connectionString` | Stringa di connessione utilizzata per connettersi all&#39;istanza GreenPlum. Il pattern della stringa di connessione per GreenPlum è `HOST=<server>;PORT=<port>;DB=<database>;UID=<user name>;PWD=<password>` |
+| `connectionString` | Stringa di connessione utilizzata per connettersi all&#39;istanza GreenPlum. Il pattern della stringa di connessione per GreenPlum è `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 
 Per ulteriori informazioni su come iniziare, consulta [questo documento](https://gpdb.docs.pivotal.io/580/security-guide/topics/Authenticate.html#topic_fzv_wb2_jr__config_ssl_client_conn)GreenPlum.
 
