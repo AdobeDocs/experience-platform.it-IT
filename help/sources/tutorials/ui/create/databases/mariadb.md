@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare un connettore sorgente MariaDB nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '489'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Per accedere all&#39;account Maria DB sulla piattaforma, è necessario fornire i
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `connectionString` | Stringa di connessione associata all&#39;autenticazione MariaDB. |
+| `connectionString` | Stringa di connessione associata all&#39;autenticazione MariaDB. Il pattern della stringa di connessione MariaDB è: `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 
 Per ulteriori informazioni su come iniziare a utilizzare MariaDB, fare riferimento a [questo documento](https://mariadb.com/kb/en/about-mariadb-connector-odbc/) .
 
