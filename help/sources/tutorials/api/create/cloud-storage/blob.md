@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Creare un connettore BLOB di Azure utilizzando l'API del servizio di flusso
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7ffe560f455973da3a37ad102fbb8cc5969d5043
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '556'
-ht-degree: 2%
+source-wordcount: '619'
+ht-degree: 1%
 
 ---
 
@@ -35,9 +35,10 @@ Affinché il servizio di flusso possa connettersi all&#39;archivio Blob, è nece
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `connectionString` | Stringa di connessione necessaria per accedere ai dati nell&#39;archivio Blob. |
+| `connectionString` | Stringa di connessione necessaria per accedere ai dati nell&#39;archivio Blob. Il pattern della stringa di connessione BLOB è: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | Identificatore univoco necessario per creare una connessione. L&#39;ID della specifica di connessione per Blob è: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
-Per ulteriori informazioni su come iniziare, visitare [questo documento](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)BLOB di Azure.
+Per ulteriori informazioni su come ottenere una stringa di connessione, fare riferimento a [questo documento](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)Azure Blob.
 
 ### Lettura di chiamate API di esempio
 
@@ -59,7 +60,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 * Content-Type: `application/json`
 
-## Creazione di una connessione
+## Creare una connessione
 
 Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. È necessaria una sola connessione per account Blob, in quanto può essere utilizzata per creare più connettori sorgente per inserire dati diversi.
 
@@ -70,6 +71,8 @@ POST /connections
 ```
 
 **Richiesta**
+
+Per creare una connessione Blob, è necessario fornire l’ID univoco della specifica di connessione come parte della richiesta POST. L&#39;ID della specifica di connessione per Blob è `4c10e202-c428-4796-9208-5f1f5732b1cf`.
 
 ```shell
 curl -X POST \
@@ -85,7 +88,7 @@ curl -X POST \
         "auth": {
             "specName": "ConnectionString",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}"
             }
         },
         "connectionSpec": {
@@ -97,8 +100,8 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `auth.params.connectionString` | Stringa di connessione per l&#39;archiviazione Blob. |
-| `connectionSpec.id` | ID specifica connessione archiviazione BLOB: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| `auth.params.connectionString` | Stringa di connessione necessaria per accedere ai dati nell&#39;archivio Blob. Il pattern della stringa di connessione BLOB è: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | L&#39;ID della specifica di connessione di archiviazione BLOB è: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
 **Risposta**
 
