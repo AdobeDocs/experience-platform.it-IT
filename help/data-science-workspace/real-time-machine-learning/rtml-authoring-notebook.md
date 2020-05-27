@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida utente del notebook Real-time Machine Learning
 topic: Training and scoring a ML model
 translation-type: tm+mt
-source-git-commit: dc63ad0c0764355aed267eccd1bcc4965b04dba4
+source-git-commit: 695eba3885dc319a9b7f73eb710b2ada0b17d24d
 workflow-type: tm+mt
-source-wordcount: '1561'
+source-wordcount: '1650'
 ht-degree: 0%
 
 ---
@@ -82,6 +82,8 @@ Iniziate caricando i dati di formazione.
 >[!NOTE]
 >Nel modello ML **in** tempo reale, il set di dati [CSV dell&#39;assicurazione](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) auto viene preso da Github.
 
+![Dati di formazione del carico](../images/rtml/load_training.png)
+
 Se desiderate utilizzare un dataset da Adobe Experience Platform, rimuovete il commento dalla cella sottostante. Successivamente, è necessario sostituire `DATASET_ID` con il valore appropriato.
 
 ![set di dati rtml](../images/rtml/rtml-dataset.png)
@@ -114,7 +116,7 @@ Utilizzando il modello ML *in tempo* reale, è necessario analizzare, pre-elabor
 La cella *Real-time ML* templates *Data Transformations (Trasformazioni* dati XML in tempo reale) deve essere modificata per funzionare con il set di dati personalizzato. In genere si tratta di rinominare le colonne, il rollup dei dati e la preparazione/progettazione di funzioni.
 
 >[!NOTE]
->L&#39;esempio seguente è stato condensato a fini di leggibilità utilizzando `[ ... ]`. Visualizzare il modello ML *in tempo* reale per l&#39;intera cella del codice.
+>L&#39;esempio seguente è stato condensato a fini di leggibilità utilizzando `[ ... ]`. Visualizzare ed espandere la sezione Trasformazioni dati dei modelli ML *in tempo* reale per l&#39;intera cella di codice.
 
 ```python
 df1.rename(columns = {config_properties['ten_id']+'.identification.ecid' : 'ecid',
@@ -237,18 +239,23 @@ import skl2onnx, subprocess
 model.generate_onnx_resources()
 ```
 
+>[!NOTE]
+>Modificate il valore `model_path` stringa (`model.onnx`) per cambiare il nome del modello.
+
 ```python
 model_path = "model.onnx"
+```
 
+>[!NOTE]
+>La cella seguente non è modificabile o eliminabile e è necessaria per il funzionamento dell&#39;applicazione Real-time Machine Learning.
+
+```python
 model = ModelUpload(params={'model_path': model_path})
 msg_model = model.process(None, 1)
 model_id = msg_model.model['model_id']
  
 print("Model ID : ", model_id)
 ```
-
->[!NOTE]
->Modificate il valore della `model_path` stringa per denominare il modello.
 
 ![ONNX, modello](../images/rtml/onnx-model-rail.png)
 
@@ -272,7 +279,7 @@ In questa sezione viene illustrato come creare un DSL. Stai per creare i nodi ch
 ### Authoring dei nodi
 
 >[!NOTE]
-> È probabile che si abbiano più nodi in base al tipo di dati utilizzato. L&#39;esempio seguente delinea un solo nodo nel modello ML *in tempo* reale. Visualizzare il modello ML *in tempo* reale per l&#39;intera cella del codice.
+> È probabile che si abbiano più nodi in base al tipo di dati utilizzato. L&#39;esempio seguente delinea un solo nodo nel modello ML *in tempo* reale. Visualizza la sezione Creazione *di* nodi XML *in tempo* reale per l&#39;intera cella del codice.
 
 Il nodo Pandas seguente utilizza `"import": "map"` per importare il nome del metodo come una stringa nei parametri, seguito dall&#39;inserimento dei parametri come una funzione mappa. L&#39;esempio seguente esegue questa operazione utilizzando `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`. Dopo aver posizionato la mappa, potete impostare `inplace` come `True` o `False`. Impostate `inplace` come `True` o `False` in base al fatto che desiderate applicare o meno la trasformazione al suo interno. Per impostazione predefinita `"inplace": False` crea una nuova colonna. Il supporto per fornire un nuovo nome di colonna è impostato per essere aggiunto in una versione successiva. L&#39;ultima riga `cols` può essere un nome di colonna singolo o un elenco di colonne. Specificare le colonne sulle quali si desidera applicare la trasformazione. In questo esempio `leasing` è specificato. Per ulteriori informazioni sui nodi disponibili e su come utilizzarli, consultare la guida [al riferimento ai](./node-reference.md)nodi.
 
@@ -323,7 +330,7 @@ Quindi, collegare i nodi ai bordi. Ogni tupla è una connessione Edge.
 edges = [(nodes[i], nodes[i+1]) for i in range(len(nodes)-1)]
 ```
 
-Una volta connessi i nodi, create il grafico.
+Una volta connessi i nodi, create il grafico. La cella sottostante è obbligatoria e non può essere modificata o eliminata.
 
 ```python
 dsl = GraphBuilder.generate_dsl(nodes=nodes, edges=edges)
@@ -413,10 +420,33 @@ Utilizzate la cella seguente nel modello ML *in tempo* reale per eseguire il pun
 
 Una volta completato il punteggio, vengono restituiti l’URL Edge, il payload e l’output con punteggio da Edge.
 
-## Eliminazione di un&#39;app distribuita da Edge (facoltativo)
+## Elenca le app distribuite da Edge
 
->!![CAUTION]
-Questa cella viene utilizzata per eliminare l&#39;applicazione Edge distribuita. Non utilizzare la cella seguente a meno che non sia necessario eliminare un&#39;applicazione Edge distribuita.
+Per generare un elenco delle app attualmente distribuite sul bordo, eseguite la seguente cella di codice. Impossibile modificare o eliminare la cella.
+
+```python
+services = edge_utils.list_deployed_services()
+print(services)
+```
+
+La risposta restituita è un array dei servizi distribuiti.
+
+```json
+[
+    {
+        "created": "2020-05-25T19:18:52.731Z",
+        "deprecated": false,
+        "id": "40eq76c0-1c6f-427a-8f8f-54y9cdf041b7",
+        "type": "edge",
+        "updated": "2020-05-25T19:18:52.731Z"
+    }
+]
+```
+
+## Eliminare un&#39;app o un ID di servizio distribuiti da Edge (facoltativo)
+
+>[!CAUTION]
+>Questa cella viene utilizzata per eliminare l&#39;applicazione Edge distribuita. Non utilizzare la cella seguente a meno che non sia necessario eliminare un&#39;applicazione Edge distribuita.
 
 ```python
 if edge_utils.delete_from_edge(service_id=service_id):
