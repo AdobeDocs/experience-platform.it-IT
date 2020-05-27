@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare un connettore di origine PostgreSQL nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '482'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Per accedere all&#39;account PSQL sulla piattaforma, è necessario fornire il se
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `connectionString` | Stringa di connessione associata all&#39;account PSQL. |
+| `connectionString` | Stringa di connessione associata all&#39;account PSQL. Il pattern della stringa di connessione PSQL è: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
 
 Per ulteriori informazioni su come iniziare, consultate questo documento [](https://www.postgresql.org/docs/9.2/app-psql.html)PSQL.
 
