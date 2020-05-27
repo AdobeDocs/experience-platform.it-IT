@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida introduttiva all'apprendimento automatico in tempo reale
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: dc63ad0c0764355aed267eccd1bcc4965b04dba4
+source-git-commit: 626bb7a0856a663e235ecd2b19954f4617fe9b6f
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Per utilizzare l&#39;apprendimento automatico in tempo reale, è necessario aver
 
 Le guide per l&#39;apprendimento automatico in tempo reale richiedono una conoscenza operativa di Python 3, [Jupyter notebook](../jupyterlab/overview.md), data science e machine learning.
 
-Termini chiave:
+**Termini chiave:**
 
 - **DSL:** Lingua specifica del dominio.
 - **Bordo:** Il servizio di valutazione del Machine Learning in tempo reale può essere eseguito su cluster Edge più vicini alle attivazioni e alle applicazioni.
