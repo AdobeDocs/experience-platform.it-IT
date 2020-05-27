@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare un connettore di origine Microsoft SQL Server nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '511'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Per connettersi a SQL Server sulla piattaforma, è necessario specificare la seg
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `connectionString` | Stringa di connessione associata all&#39;account SQL Server. |
+| `connectionString` | Stringa di connessione associata all&#39;account SQL Server. Il pattern della stringa di connessione di SQL Server è: `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
 
 Per ulteriori informazioni sull&#39;utilizzo di SQL Server, consultate [questo documento](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server) .
 
