@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Descrittori
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 599991af774e283d9fb60216e3d3bd5b17cf8193
+source-git-commit: c8cc57a8629f04c7af68b6f5cfee365527caa3c1
+workflow-type: tm+mt
+source-wordcount: '1499'
+ht-degree: 1%
 
 ---
 
@@ -301,20 +304,25 @@ Un descrittore di identità segnala che &quot;sourceProperty&quot; di &quot;sour
 
 #### descrittore di nome descrittivo
 
-I descrittori di nomi descrittivi descrittivi consentono all&#39;utente di modificare i `title` e `description` i valori dei campi dello schema della libreria di base. Particolarmente utile quando si utilizzano &quot;eVar&quot; e altri campi &quot;generici&quot; che si desidera etichettare come contenenti informazioni specifiche per la propria organizzazione. L’interfaccia utente può utilizzarli per visualizzare un nome più descrittivo o per mostrare solo i campi con un nome descrittivo.
+I descrittori di nomi descrittivi descrittivi consentono all&#39;utente di modificare i `title`, `description`e `meta:enum` i valori dei campi dello schema della libreria di base. Particolarmente utile quando si utilizzano &quot;eVar&quot; e altri campi &quot;generici&quot; che si desidera etichettare come contenenti informazioni specifiche per la propria organizzazione. L’interfaccia utente può utilizzarli per visualizzare un nome più descrittivo o per mostrare solo i campi con un nome descrittivo.
 
 ```json
 {
   "@type": "xdm:alternateDisplayInfo",
   "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18",
-  "xdm:sourceVersion": 1
-  "xdm:sourceProperty": "/eVars/eVar1",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/xdm:eventType",
   "xdm:title": {
-    "en_us":{"Loyalty ID"}
+    "en_us": "Event Type"
   },
   "xdm:description": {
-    "en_us":{"Unique ID of loyalty program member."}
+    "en_us": "The type of experience event detected by the system."
   },
+  "meta:enum": {
+    "click": "Mouse Click",
+    "addCart": "Add to Cart",
+    "checkout": "Cart Checkout"
+  }
 }
 ```
 
@@ -326,6 +334,7 @@ I descrittori di nomi descrittivi descrittivi consentono all&#39;utente di modif
 | `xdm:sourceProperty` | Percorso della proprietà specifica che sarà l&#39;identità. Il percorso deve iniziare con &quot;/&quot; e non terminare con uno. Non includere &quot;proprietà&quot; nel percorso (ad esempio, utilizzare &quot;/personalEmail/address&quot; invece di &quot;/properties/personalEmail/properties/address&quot;) |
 | `xdm:title` | Il nuovo titolo che si desidera visualizzare per questo campo, scritto in Case titolo. |
 | `xdm:description` | È possibile aggiungere una descrizione facoltativa insieme al titolo. |
+| `meta:enum` | Se il campo indicato da `xdm:sourceProperty` è un campo stringa, `meta:enum` determina l’elenco dei valori consigliati per il campo nell’interfaccia utente della piattaforma esperienza. È importante notare che non `meta:enum` dichiara un&#39;enumerazione né fornisce alcuna convalida di dati per il campo XDM.<br><br>Deve essere utilizzato solo per i campi XDM di base definiti da Adobe. Se la proprietà source è un campo personalizzato definito dall&#39;organizzazione, è invece necessario modificare la `meta:enum` proprietà del campo direttamente tramite una richiesta [](./update-resource.md)PUT. |
 
 #### Descrittore della relazione
 
