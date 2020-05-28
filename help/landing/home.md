@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Panoramica di Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 7a36a3e3180c4ed4a9db23c0a33f6af3d7a3a5ec
+source-git-commit: efc8598d14bcae9637ce80c25f1285d93aeee742
 workflow-type: tm+mt
-source-wordcount: '505'
-ht-degree: 1%
+source-wordcount: '526'
+ht-degree: 3%
 
 ---
 
@@ -15,13 +15,14 @@ ht-degree: 1%
 # Panoramica di Adobe Experience Platform
 
 >[!NOTE]
+>
 >La documentazione di Adobe Experience Platform è stata spostata di recente. Esaminare la nuova navigazione e aggiornare eventuali segnalibri esistenti.
 
 Adobe Experience Platform è il sistema più potente, flessibile e aperto sul mercato per la creazione e la gestione di soluzioni complete che stimolano l&#39;esperienza dei clienti. Experience Platform consente alle organizzazioni di centralizzare e standardizzare i dati e i contenuti dei clienti da qualsiasi sistema e di applicare la scienza dei dati e l&#39;apprendimento automatico per migliorare notevolmente la progettazione e la distribuzione di esperienze ricche e personalizzate.
 
 Basata su API aperte, Experience Platform espone agli sviluppatori tutte le funzionalità del sistema, sostenendo la facile integrazione delle soluzioni aziendali utilizzando strumenti familiari. Experience Platform supporta inoltre i partner per creare e integrare i propri prodotti e tecnologie in base alle esigenze. Questa potenza e flessibilità rendono Experience Platform unica sul mercato. Offre ai partner, ai clienti e a una comunità di sviluppatori una base su cui costruire innovazioni che guidino The Experience Business: superare le aspettative dei clienti, offrendo un&#39;esperienza sempre migliore e completamente personalizzata grazie a una visione a 360 gradi del cliente e delle sue preferenze individuali.
 
-## Documentazione della piattaforma di esperienze
+## Documentazione di Experience Platform
 
 La documentazione relativa alla piattaforma di esperienze è disponibile in diversi formati per una serie di funzioni e servizi. Per ulteriori informazioni sui tipi di documentazione disponibili e per leggere brevi descrizioni di ogni servizio Piattaforma, consulta la panoramica [della documentazione relativa alla Piattaforma](documentation/overview.md)esperienza. Oppure, per iniziare subito a conoscere un servizio specifico della piattaforma, seleziona una guida dall&#39;elenco alfabetico nel menu di navigazione a sinistra.
 
@@ -42,6 +43,10 @@ Di tanto in tanto, potreste ricevere un sondaggio per ricevere un feedback aggiu
 ## Esercitazioni sulla piattaforma Experience
 
 Inizia subito con la piattaforma seguendo con semplicità e rapidità esercitazioni passo passo per ogni tipo di attività, dalla preparazione dei dati per l&#39;assimilazione agli algoritmi di machine learning avanzati. Queste esercitazioni sono state progettate per arricchire le informazioni presenti nella documentazione della piattaforma Experience, per garantire risultati ottimali e tenere a portata di mano i documenti durante il completamento delle esercitazioni. Per iniziare, visita le esercitazioni [della piattaforma](../tutorials/home.md) Experience.
+
+## Esercitazioni video
+
+Guardate le esercitazioni [](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html) video per un&#39;ampia gamma di argomenti relativi alla piattaforma Experience.
 
 ## Documenti di riferimento e risorse
 
