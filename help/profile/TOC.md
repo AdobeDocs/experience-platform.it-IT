@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Aiuto sul profilo cliente in tempo reale
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: 59831f5c2445f65371d1897f66dfc45507a9955c
+workflow-type: tm+mt
+source-wordcount: '78'
+ht-degree: 17%
 
 ---
 
@@ -17,7 +20,6 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
    * [Proiezioni Edge](api/edge-projections.md)
    * [Entità (accesso profilo)](api/entities.md)
    * [Unisci criteri](api/merge-policies.md)
-   * [Ricerca profilo](api/profile-search.md)
    * [Processi del sistema dei profili (richieste di eliminazione)](api/profile-system-jobs.md)
 * Interfaccia utente profilo {#ui}
    * [Guida utente profilo](ui/user-guide.md)
