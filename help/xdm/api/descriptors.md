@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Descrittori
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: c8cc57a8629f04c7af68b6f5cfee365527caa3c1
+source-git-commit: c3d23ce0081932e61f50d426ac6d98ab7f4dfa3b
 workflow-type: tm+mt
 source-wordcount: '1499'
 ht-degree: 1%
@@ -334,7 +334,7 @@ I descrittori di nomi descrittivi descrittivi consentono all&#39;utente di modif
 | `xdm:sourceProperty` | Percorso della proprietà specifica che sarà l&#39;identità. Il percorso deve iniziare con &quot;/&quot; e non terminare con uno. Non includere &quot;proprietà&quot; nel percorso (ad esempio, utilizzare &quot;/personalEmail/address&quot; invece di &quot;/properties/personalEmail/properties/address&quot;) |
 | `xdm:title` | Il nuovo titolo che si desidera visualizzare per questo campo, scritto in Case titolo. |
 | `xdm:description` | È possibile aggiungere una descrizione facoltativa insieme al titolo. |
-| `meta:enum` | Se il campo indicato da `xdm:sourceProperty` è un campo stringa, `meta:enum` determina l’elenco dei valori consigliati per il campo nell’interfaccia utente della piattaforma esperienza. È importante notare che non `meta:enum` dichiara un&#39;enumerazione né fornisce alcuna convalida di dati per il campo XDM.<br><br>Deve essere utilizzato solo per i campi XDM di base definiti da Adobe. Se la proprietà source è un campo personalizzato definito dall&#39;organizzazione, è invece necessario modificare la `meta:enum` proprietà del campo direttamente tramite una richiesta [](./update-resource.md)PUT. |
+| `meta:enum` | Se il campo indicato da `xdm:sourceProperty` è un campo stringa, `meta:enum` determina l’elenco dei valori consigliati per il campo nell’interfaccia utente della piattaforma esperienza. È importante notare che non `meta:enum` dichiara un&#39;enumerazione né fornisce alcuna convalida di dati per il campo XDM.<br><br>Deve essere utilizzato solo per i campi XDM di base definiti da Adobe. Se la proprietà source è un campo personalizzato definito dall&#39;organizzazione, è necessario modificare la `meta:enum` proprietà del campo direttamente tramite una richiesta [](./update-resource.md)PATCH. |
 
 #### Descrittore della relazione
 
