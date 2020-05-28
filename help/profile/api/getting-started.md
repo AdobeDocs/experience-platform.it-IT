@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: Guida per lo sviluppatore di API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+source-git-commit: 8449681a7fd0fc5dccf4837a1e8e512f1e2f2601
+workflow-type: tm+mt
+source-wordcount: '954'
+ht-degree: 0%
 
 ---
 
@@ -76,13 +79,9 @@ Utilizzando l&#39;API Profilo cliente in tempo reale, puoi creare nuovi criteri 
 
 Per una guida all&#39;utilizzo dei criteri di unione tramite l&#39;interfaccia utente della piattaforma, consultate la guida [utente](../ui/merge-policies.md)Unisci criteri.
 
-## Ricerca profilo
-
-La ricerca del profilo viene utilizzata per cercare e indicizzare i campi configurabili contenuti in varie origini dati e restituirli in tempo quasi reale. Per iniziare a utilizzare la ricerca Profilo, consulta la guida secondaria [di ricerca](profile-search.md)
-
 ## Processi del sistema di profili
 
-I dati acquisiti in Piattaforma vengono memorizzati nel Data Lake e nell&#39;archivio dati del profilo cliente in tempo reale. Talvolta potrebbe essere necessario eliminare un set di dati o un batch dall&#39;archivio dei profili per rimuovere i dati che non sono più necessari o che sono stati aggiunti per errore. Ciò richiede l’utilizzo dell’API per creare un processo del sistema dei profili, noto come &quot;richiesta di eliminazione&quot;, che può anche essere, modificato, monitorato o eliminato se necessario.
+I dati acquisiti in Piattaforma vengono memorizzati nel Data Lake e nell&#39;archivio dati del profilo cliente in tempo reale. Talvolta potrebbe essere necessario eliminare un set di dati o un batch dall&#39;archivio dei profili per rimuovere i dati che non sono più necessari o che sono stati aggiunti per errore. Ciò richiede l’utilizzo dell’API per creare un processo di sistema dei profili, noto come &quot;richiesta di eliminazione&quot;, che può anche essere, modificato, monitorato o eliminato se necessario.
 
 Per informazioni su come gestire le richieste di eliminazione tramite gli `/system/jobs` endpoint nell’API Profilo cliente in tempo reale, segui i passaggi descritti nella guida secondaria [ai processi del sistema di](profile-system-jobs.md)profilo.
 
