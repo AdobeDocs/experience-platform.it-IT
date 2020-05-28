@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica sui connettori sorgente della piattaforma Adobe Experience
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7c94d7a0aace7525e776f13e2975f91cf2b29e23
+source-git-commit: 22425c33e39cf788eec6fd0a54f65fb89fdaff4f
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Experience Platform consente di acquisire dati da altre applicazioni Adobe, tra 
 
 Experience Platform supporta l’acquisizione di dati da un sistema pubblicitario di terze parti. Per ulteriori informazioni su connettori sorgente specifici, consultate i seguenti documenti correlati:
 
-- [Connettore Google Ads](connectors/advertising/ads.md)
+- [Connettore Google AdWords](connectors/advertising/ads.md)
 
 ### Archiviazione cloud
 
