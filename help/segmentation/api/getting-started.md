@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guida per gli sviluppatori di Segmentation Service
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 3fbacf57d5f6741726cb54fb55eab05042046f49
+source-git-commit: e25ce403034a94d7024e8c244cb438bd9dfe0c5f
+workflow-type: tm+mt
+source-wordcount: '429'
+ht-degree: 0%
 
 ---
 
@@ -83,6 +86,10 @@ For more information on using this endpoint, please read the [segment definition
 I processi di segmento hanno definito precedentemente le definizioni dei segmenti per generare un segmento di pubblico. Potete utilizzare l&#39; `/segment/jobs` endpoint per recuperare un elenco di processi di segmento, creare un nuovo processo di segmento, recuperare i dettagli di un processo di segmento specifico o eliminare un processo di segmento specifico.
 
 Per ulteriori informazioni sull&#39;utilizzo di questo endpoint, consultate la guida [per gli sviluppatori di processi di](./segment-jobs.md)segmento.
+
+## Ricerca di segmenti
+
+La ricerca dei segmenti viene utilizzata per cercare e indicizzare i campi configurabili contenuti in varie origini dati e restituirli in tempo quasi reale. Per iniziare a lavorare con la ricerca Segmento, consulta la guida per gli sviluppatori [di ricerche](segment-search.md)
 
 ## Passaggi successivi
 
