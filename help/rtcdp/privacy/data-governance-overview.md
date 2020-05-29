@@ -4,7 +4,10 @@ seo-title: Governance dei dati in tempo reale della piattaforma dati del cliente
 description: 'Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all''uso dei dati. '
 seo-description: 'Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all''uso dei dati. '
 translation-type: tm+mt
-source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
+source-git-commit: af7fa6048fa60392a98975fe6fc36e8302355a05
+workflow-type: tm+mt
+source-wordcount: '946'
+ht-degree: 1%
 
 ---
 
@@ -84,3 +87,7 @@ Se una delle azioni di cui sopra genera una violazione, tale azione non viene sa
 ## Passaggi successivi
 
 Ora che hai introdotto le funzioni chiave di governance dei dati su CDP in tempo reale e come Experience Platform le consente, continua a consultare la [documentazione per la governance dei dati su Adobe Experience Platform](../../data-governance/home.md). La documentazione fornisce panoramiche dei concetti fondamentali di governance dei dati, nonché flussi di lavoro dettagliati per la gestione delle etichette e dei criteri di utilizzo dei dati.
+
+Il seguente video fornisce una panoramica sulla governance dei dati in tempo reale nel CDP, compreso l’utilizzo di casi di utilizzo del marketing su destinazioni e di flussi di lavoro di esempio per diversi scenari:
+
+>[!VIDEO](https://video.tv.adobe.com/v/33631?quality=12&learn=on)
