@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: Guida per lo sviluppatore di API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: 95e002c60389ca7e4c1dcf32bbcf6f552cd55d95
+source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
+workflow-type: tm+mt
+source-wordcount: '1694'
+ht-degree: 1%
 
 ---
 
@@ -773,7 +776,7 @@ Utilizzando questo payload nel corpo della richiesta, potete eseguire un&#39;ult
 
 ## Accesso agli eventi delle serie temporali in più entità dello schema
 
-Potete accedere a più entità collegate tramite un descrittore di relazione. La seguente chiamata API di esempio presuppone che sia già stata definita una relazione tra due schemi. Per ulteriori informazioni sui descrittori delle relazioni, consultare la [guida per lo sviluppo API del Registro di sistema dello schema (Guida secondaria]per gli sviluppatori) (../../xdm/api/descriptors.md).
+Potete accedere a più entità collegate tramite un descrittore di relazione. La seguente chiamata API di esempio presuppone che sia già stata definita una relazione tra due schemi. Per ulteriori informazioni sui descrittori di relazione, consultare la [guida](../../xdm/api/descriptors.md)secondaria relativa ai descrittori di guida per gli sviluppatori di API del Registro di sistema.
 
 È possibile includere parametri di query nel percorso della richiesta per specificare quali dati accedere. Potete includere più parametri, separati da e commerciale (&amp;). Un elenco completo di parametri validi è fornito nella sezione dei parametri [di](#query-parameters) query dell&#39;appendice.
 
