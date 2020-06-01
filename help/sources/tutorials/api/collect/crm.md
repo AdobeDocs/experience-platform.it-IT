@@ -4,18 +4,23 @@ solution: Experience Platform
 title: Raccolta di dati CRM tramite connettori di origine e API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 88376a67e064208ab62dd339e820adb8e47d3c4e
+source-git-commit: 1fbc348f6355bbecf20616bb72193777b966b878
+workflow-type: tm+mt
+source-wordcount: '1623'
+ht-degree: 1%
 
 ---
 
 
 # Raccolta di dati CRM tramite connettori di origine e API
 
-Questa esercitazione descrive i passaggi per recuperare i dati da un sistema CRM e portarli in piattaforma attraverso connettori sorgente e API.
+Flow Service è utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini diverse all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
+
+Questa esercitazione descrive i passaggi necessari per recuperare i dati da un sistema CRM di terze parti e inserirli nella piattaforma tramite connettori di origine e API.
 
 ## Introduzione
 
-Questa esercitazione richiede l&#39;accesso a un sistema CRM attraverso una connessione di base valida e informazioni sulla tabella che si desidera inserire in Piattaforma, incluso il percorso e la struttura della tabella. Se non disponi di queste informazioni, consulta l’esercitazione sull’ [esplorazione dei sistemi CRM tramite l’API](../explore/crm.md) del servizio di flusso prima di provare a seguire questa esercitazione.
+Questa esercitazione richiede l&#39;accesso a un sistema CRM di terze parti tramite una connessione valida e informazioni sulla tabella che desideri portare in Piattaforma, incluso il percorso e la struttura della tabella. Se non disponi di queste informazioni, consulta l’esercitazione sull’ [esplorazione dei sistemi CRM tramite l’API](../explore/crm.md) del servizio di flusso prima di provare a seguire questa esercitazione.
 
 Questa esercitazione richiede anche di avere una conoscenza approfondita dei seguenti componenti di Adobe Experience Platform:
 
@@ -54,11 +59,23 @@ Per inserire dati esterni in Platform tramite connettori di origine, è necessar
 
 Per creare una classe e uno schema ad hoc, segui i passaggi descritti nell&#39;esercitazione [sullo schema](../../../../xdm/tutorials/ad-hoc.md)ad hoc. Quando create una classe ad hoc, tutti i campi trovati nei dati di origine devono essere descritti all&#39;interno del corpo della richiesta.
 
-Continuate a seguire i passaggi descritti nella guida per gli sviluppatori fino a quando non avete creato uno schema ad hoc. Ottenete e archiviate l&#39;identificatore univoco (`$id`) dello schema ad hoc, quindi passate alla fase successiva dell&#39;esercitazione.
+Continuate a seguire i passaggi descritti nella guida per gli sviluppatori fino a quando non avete creato uno schema ad hoc. L&#39;identificatore univoco (`$id`) dello schema ad hoc è richiesto per passare al passaggio successivo di questa esercitazione.
 
 ## Creazione di una connessione di origine {#source}
 
-Con la creazione di uno schema XDM ad hoc, ora è possibile creare una connessione di origine utilizzando una richiesta POST all&#39;API del servizio di flusso. Una connessione di origine è costituita da una connessione di base, un file di dati di origine e un riferimento allo schema che descrive i dati di origine.
+Con la creazione di uno schema XDM ad hoc, ora è possibile creare una connessione di origine utilizzando una richiesta POST all&#39;API del servizio di flusso. Una connessione di origine è costituita da un ID connessione, un file di dati di origine e un riferimento allo schema che descrive i dati di origine.
+
+Per creare una connessione di origine, è inoltre necessario definire un valore enum per l&#39;attributo del formato dati.
+
+Utilizzate i seguenti valori enum per i connettori **basati su** file:
+
+| Data.format | Valore Enum |
+| ----------- | ---------- |
+| File delimitati | `delimited` |
+| File JSON | `json` |
+| Parquet, file | `parquet` |
+
+Per tutti i connettori **basati su** tabelle, utilizzate il valore enum: `tabular`.
 
 **Formato API**
 
@@ -70,7 +87,7 @@ POST /sourceConnections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -81,7 +98,7 @@ curl -X POST \
         "baseConnectionId": "4cb0c374-d3bb-4557-b139-5712880adc55",
         "description": "Source Connection for a CRM system",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/140c03de81b959db95879033945cfd4c",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -118,17 +135,19 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `baseConnectionId` | ID di una connessione di base per un sistema CRM. |
+| `baseConnectionId` | L&#39;ID di connessione univoco del sistema CRM di terze parti a cui si accede. |
 | `data.schema.id` | ID dello schema XDM ad hoc. |
 | `params.path` | Percorso del file di origine. |
+| `connectionSpec.id` | L&#39;ID della specifica di connessione associato al sistema CRM di terze parti specifico. Vedi l&#39; [appendice](#appendix) per un elenco degli ID delle specifiche di connessione. |
 
 **Risposta**
 
-Una risposta corretta restituisce l’identificatore univoco (`id`) della connessione di origine appena creata. Archiviate questo valore come richiesto nei passaggi successivi per la creazione di una connessione di destinazione.
+Una risposta corretta restituisce l’identificatore univoco (`id`) della connessione di origine appena creata. Questo ID è richiesto in un passaggio successivo per creare un flusso di dati.
 
 ```json
 {
     "id": "9a603322-19d2-4de9-89c6-c98bd54eb184"
+    "etag": "\"4a00038b-0000-0200-0000-5ebc47fd0000\""
 }
 ```
 
@@ -180,7 +199,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dello schema appena creato, incluso il relativo identificatore univoco (`$id`). Archivia l’ID così come è richiesto nei passaggi successivi per creare un set di dati di destinazione, una mappatura e un flusso di dati.
+Una risposta corretta restituisce i dettagli dello schema appena creato, incluso il relativo identificatore univoco (`$id`). Questo ID è richiesto nei passaggi successivi per creare un set di dati di destinazione, una mappatura e un flusso di dati.
 
 ```json
 {
@@ -220,7 +239,7 @@ Una risposta corretta restituisce i dettagli dello schema appena creato, incluso
 
 ## Creare un dataset di destinazione
 
-Un set di dati di destinazione può essere creato eseguendo una richiesta POST all&#39;API Catalog Service, fornendo l&#39;ID dello schema di destinazione all&#39;interno del payload.
+Un set di dati di destinazione può essere creato eseguendo una richiesta POST all&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)Catalog Service, fornendo l&#39;ID dello schema di destinazione all&#39;interno del payload.
 
 **Formato API**
 
@@ -253,7 +272,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituisce un array contenente l&#39;ID del set di dati appena creato nel formato `"@/datasets/{DATASET_ID}"`. L&#39;ID del set di dati è una stringa di sola lettura generata dal sistema che viene utilizzata per fare riferimento al set di dati nelle chiamate API. Archiviate l&#39;ID del set di dati di destinazione come richiesto nei passaggi successivi per creare una connessione di destinazione e un flusso di dati.
+Una risposta corretta restituisce un array contenente l&#39;ID del set di dati appena creato nel formato `"@/datasets/{DATASET_ID}"`. L&#39;ID del set di dati è una stringa di sola lettura generata dal sistema che viene utilizzata per fare riferimento al set di dati nelle chiamate API. L&#39;ID del set di dati di destinazione è richiesto nei passaggi successivi per creare una connessione di destinazione e un flusso di dati.
 
 ```json
 [
@@ -261,15 +280,9 @@ Una risposta corretta restituisce un array contenente l&#39;ID del set di dati a
 ]
 ```
 
-## Creazione di una connessione di base di dataset
-
-Per creare una connessione di destinazione e assimilare dati esterni in Platform, è necessario innanzitutto acquisire una connessione di base di dataset.
-
-Per creare una connessione alla base di dati, seguire i passaggi descritti nell&#39;esercitazione [sulla connessione alla base di](../create-dataset-base-connection.md)dati.
-
-Continuate a seguire i passaggi descritti nella guida per gli sviluppatori fino a quando non avete creato una connessione di base per i dataset. Ottenete e archiviate l&#39;identificatore univoco (`$id`) della connessione di base, quindi passate alla fase successiva dell&#39;esercitazione.
-
 ## Creare una connessione di destinazione
+
+Una connessione di destinazione rappresenta la connessione alla destinazione in cui i dati acquisiti entrano. Per creare una connessione di destinazione, è necessario fornire l&#39;ID di specifica di connessione fisso associato al data Lake. Questo ID della specifica di connessione è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 Ora sono disponibili identificatori univoci per una connessione di base di set di dati, uno schema di destinazione e un set di dati di destinazione. Utilizzando questi identificatori, potete creare una connessione di destinazione utilizzando l&#39;API del servizio di flusso per specificare il set di dati che conterrà i dati di origine in entrata.
 
@@ -283,18 +296,16 @@ POST /targetConnections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+    'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "baseConnectionId": "d6c3988d-14ef-4000-8398-8d14ef000021",
-        "name": "Target Connection",
+        "name": "Target Connection for a CRM connector",
         "description": "Target Connection for CRM data",
         "data": {
-            "format": "parquet_xdm",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/417a33eg81a221bd10495920574gfa2d",
                 "version": "application/vnd.adobe.xed-full+json;version=1.0"
@@ -304,7 +315,7 @@ curl -X POST \
             "dataSetId": "5c8c3c555033b814b69f947f"
         },
         "connectionSpec": {
-            "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
             "version": "1.0"
         }
     }'
@@ -312,12 +323,9 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `baseConnectionId` | ID della connessione di base del set di dati. |
 | `data.schema.id` | Il valore `$id` dello schema XDM di destinazione. |
 | `params.dataSetId` | ID del set di dati di destinazione. |
-| `connectionSpec.id` | ID specifica di connessione per CRM. |
-
->[!NOTE] Quando create una connessione di destinazione, accertatevi di utilizzare il valore della connessione di base del dataset per la connessione di base `id` anziché la connessione di base del connettore di origine di terze parti.
+| `connectionSpec.id` | L&#39;ID della specifica di connessione fissa al data Lake. Questo ID è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 ```json
 {
@@ -386,7 +394,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della mappatura appena creata, incluso il relativo identificatore univoco (`id`). Archiviate questo valore come richiesto nel passaggio successivo per la creazione di un flusso di dati.
+Una risposta corretta restituisce i dettagli della mappatura appena creata, incluso il relativo identificatore univoco (`id`). Questo valore è richiesto in un passaggio successivo per creare un flusso di dati.
 
 ```json
 {
@@ -456,7 +464,7 @@ Una risposta corretta restituisce i dettagli della mappatura appena creata, incl
 }
 ```
 
-## Ricerca delle specifiche del flusso di dati {#specs}
+## Recupero delle specifiche del flusso di dati {#specs}
 
 Un flusso di dati è responsabile della raccolta di dati da origini e del loro inserimento in Piattaforma. Per creare un flusso di dati, devi innanzitutto ottenere le specifiche del flusso di dati che sono responsabili della raccolta dei dati CRM.
 
@@ -478,7 +486,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta di successo restituisce i dettagli della specifica del flusso di dati che è responsabile per l&#39;inserimento dei dati dal sistema CRM nella piattaforma. Memorizzare il valore del `id` campo come richiesto nel passaggio successivo per creare un nuovo flusso di dati.
+Una risposta di successo restituisce i dettagli della specifica del flusso di dati che è responsabile per l&#39;inserimento dei dati dal sistema CRM nella piattaforma. Questo ID è richiesto nel passaggio successivo per creare un nuovo flusso di dati.
 
 ```json
 {
@@ -611,6 +619,8 @@ L&#39;ultimo passaggio per la raccolta dei dati CRM è creare un flusso di dati.
 
 Un flusso di dati è responsabile della pianificazione e della raccolta dei dati da un&#39;origine. È possibile creare un flusso di dati eseguendo una richiesta POST fornendo al contempo i valori indicati in precedenza all&#39;interno del payload.
 
+Per pianificare un&#39;assimilazione, è innanzitutto necessario impostare il valore dell&#39;ora di inizio in modo che l&#39;ora dell&#39;epoch sia espressa in secondi. Quindi, è necessario impostare il valore della frequenza su una delle cinque opzioni: `once`, `minute`, `hour`, `day`o `week`. Il valore dell&#39;intervallo indica il periodo tra due assimilazioni consecutive e la creazione di un&#39;assimilazione una tantum non richiede l&#39;impostazione di un intervallo. Per tutte le altre frequenze, il valore dell&#39;intervallo deve essere impostato su uguale o maggiore di `15`.
+
 **Formato API**
 
 ```http
@@ -641,12 +651,6 @@ curl -X POST \
         ],
         "transformations": [
             {
-                "name": "Copy",
-                "params": {
-                    "mode": "append"
-                }
-            },
-            {
                 "name": "Mapping",
                 "params": {
                     "mappingId": "ab91c736-1f3d-4b09-8424-311d3d3e3cea"
@@ -663,10 +667,13 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `flowSpec.id` | ID specifica Dataflow |
-| `sourceConnectionIds` | ID connessione di origine |
-| `targetConnectionIds` | ID connessione di destinazione |
-| `transformations.params.mappingId` | ID mappatura |
+| `flowSpec.id` | L’ID della specifica di flusso recuperato nel passaggio precedente. |
+| `sourceConnectionIds` | L&#39;ID connessione di origine recuperato in un passaggio precedente. |
+| `targetConnectionIds` | L&#39;ID connessione di destinazione recuperato in un passaggio precedente. |
+| `transformations.params.mappingId` | L’ID di mappatura recuperato in un passaggio precedente. |
+| `scheduleParams.startTime` | Ora di inizio per il flusso di dati, espressa in secondi. |
+| `scheduleParams.frequency` | I valori di frequenza selezionabili includono: `once`, `minute`, `hour`, `day`o `week`. |
+| `scheduleParams.interval` | L&#39;intervallo indica il periodo tra due esecuzioni di flusso consecutive. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero. L&#39;intervallo non è richiesto quando la frequenza è impostata come `once` e deve essere maggiore o uguale a `15` per altri valori di frequenza. |
 
 **Risposta**
 
@@ -675,6 +682,8 @@ Una risposta corretta restituisce l’ID (`id`) del flusso di dati appena creato
 ```json
 {
     "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
+
 }
 ```
 
@@ -684,3 +693,14 @@ Seguendo questa esercitazione, hai creato un connettore di origine per raccoglie
 
 * [Panoramica del profilo cliente in tempo reale](../../../../profile/home.md)
 * [Panoramica di Analysis Workspace](../../../../data-science-workspace/home.md)
+
+## Appendice
+
+Nella sezione seguente sono elencati i diversi connettori di origine CRM e le relative specifiche di connessione.
+
+### Specifica di connessione
+
+| Nome connettore | Specifica di connessione |
+| -------------- | --------------- |
+| Microsoft Dynamics | `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
+| Salesforce | `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` |
