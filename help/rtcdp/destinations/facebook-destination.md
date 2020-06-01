@@ -4,7 +4,7 @@ seo-title: Destinazione Facebook
 description: Attiva profili per le tue campagne Facebook per il targeting dell'audience, la personalizzazione e la soppressione basate su e-mail con hash.
 seo-description: Attiva profili per le tue campagne Facebook per il targeting dell'audience, la personalizzazione e la soppressione basate su e-mail con hash.
 translation-type: tm+mt
-source-git-commit: 522014f8e5f3de0f553a69763d3a37482953b7c4
+source-git-commit: 79aecf4955507622ac7879c148cdcd23e893dd65
 workflow-type: tm+mt
 source-wordcount: '665'
 ht-degree: 0%
@@ -35,8 +35,10 @@ Un rivenditore online vuole raggiungere i clienti esistenti tramite piattaforme 
 
 
 Una compagnia aerea ha diversi livelli di clienti (Bronzo, Argento e Oro) e vuole fornire a ciascuno dei livelli offerte personalizzate tramite piattaforme social. Tuttavia, non tutti i clienti utilizzano l&#39;app mobile della compagnia aerea e alcuni di essi non hanno effettuato l&#39;accesso al sito Web della società. Gli unici identificatori della società per questi clienti sono gli ID iscrizione e gli indirizzi e-mail.
-Per utilizzarli tra i social media, possono tenere a bordo i dati del cliente dal CRM in Adobe Real-time CDP, utilizzando come identificatori gli indirizzi e-mail con hash.
-In seguito, possono combinare i dati offline con i dati dell&#39;attività online esistenti, per creare nuovi segmenti di pubblico ai quali indirizzare i dati attraverso la destinazione Facebook.
+
+Per utilizzarli tra i social media, possono tenere a bordo i dati del cliente dal CRM in Adobe Real-time CDP, utilizzando gli indirizzi e-mail come identificatori.
+
+In seguito, possono utilizzare i dati offline, inclusi gli ID di appartenenza associati e i livelli cliente, per creare nuovi segmenti di pubblico ai quali indirizzare tramite la destinazione Facebook.
 
 ## Specifiche di destinazione {#destination-specs}
 
