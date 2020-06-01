@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida per gli sviluppatori di Segmentation Service
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: e25ce403034a94d7024e8c244cb438bd9dfe0c5f
+source-git-commit: bbca6d8f4ab7a684e8bfb1d39b538d937a99244f
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
@@ -73,13 +73,13 @@ For more information on using this endpoint, please read the [PQL conversions de
 
 Schedules are a tool that can be used to automatically run export jobs once a day. You can use the `/config/schedules` endpoint to retrieve a list of schedules, create a new schedule, retrieve details of a specific schedule, update a specific schedule, or delete a specific schedule. 
 
-For more information on using this endpoint, please read the [schedules developer guide](./schedules.md).
+For more information on using this endpoint, please read the [schedules developer guide](./schedules.md). -->
 
-## Segment definitions
+## Definizioni dei segmenti
 
-Segment definitions define which profiles will be part of which audience segments. You can use the `/segment/definitions` endpoint to retrieve a list of segment definitions, create a new segment definition, retrieve details of a specific segment definition, delete a specific segment definition, or overwrite details of a specific segment definition.
+Le definizioni dei segmenti definiscono quali profili faranno parte dei segmenti di pubblico. Puoi utilizzare l’ `/segment/definitions` endpoint per recuperare un elenco di definizioni di segmenti, creare una nuova definizione di segmento, recuperare dettagli di una definizione di segmento specifica, eliminare una definizione di segmento specifica o sovrascrivere i dettagli di una definizione di segmento specifica.
 
-For more information on using this endpoint, please read the [segment definitions developer guide](./segment-definitions.md). -->
+Per ulteriori informazioni sull&#39;utilizzo di questo endpoint, consulta la guida [per gli sviluppatori delle definizioni dei](./segment-definitions.md)segmenti.
 
 ## Processi segmento
 
