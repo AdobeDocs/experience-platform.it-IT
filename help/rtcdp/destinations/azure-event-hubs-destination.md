@@ -4,9 +4,9 @@ seo-title: (Beta) Destinazione degli hub eventi di Azure
 description: Crea una connessione in uscita in tempo reale all'archivio degli hub eventi di Azure per lo streaming dei dati dalla piattaforma Experience.
 seo-description: Crea una connessione in uscita in tempo reale all'archivio degli hub eventi di Azure per lo streaming dei dati dalla piattaforma Experience.
 translation-type: tm+mt
-source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
+source-git-commit: 883bea4aba0548e96b891987f17b8535c4d2eba7
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '472'
 ht-degree: 2%
 
 ---
@@ -64,31 +64,45 @@ Consulta [Attivare profili e segmenti su una destinazione](/help/rtcdp/destinati
 
 ## Dati esportati {#exported-data}
 
-I dati della piattaforma Experience vengono esportati in formato [!DNL Azure Event Hubs] JSON. Ad esempio, un flusso di eventi contenente l&#39;identità e-mail con hash di un&#39;audience che è uscita da un determinato segmento potrebbe essere simile al seguente:
+I dati della piattaforma Experience vengono esportati in formato [!DNL Azure Event Hubs] JSON. Ad esempio, l&#39;evento seguente contiene l&#39;attributo di profilo dell&#39;indirizzo e-mail di un&#39;audience qualificata per un determinato segmento ed uscita da un altro segmento. Le identità di questo potenziale sono ECID ed e-mail.
 
 ```
 {
-   "segmentMembership":{
-      "ups":{
-         "7841ba61-23c1-4bb3-a495-00d695fe1e93":{
-            "lastQualificationTime":"2020-03-03T21:24:39Z",
-            "status":"exited"
-         }
+  "person": {
+    "email": "yourstruly@adobe.con"
+  },
+  "segmentMembership": {
+    "ups": {
+      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93": {
+        "lastQualificationTime": "2020-05-25T21:24:39Z",
+        "status": "exited"
+      },
+      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
+        "lastQualificationTime": "2020-05-25T23:37:33Z",
+        "status": "existing"
       }
-   }
-},
-"identityMap":{
-   "email_lc_sha256":[
+    }
+  },
+  "identityMap": {
+    "ecid": [
       {
-         "id":"655332b5fa2aea4498bf7a290cff017cb4"
+        "id": "14575006536349286404619648085736425115"
       },
       {
-         "id":"66baf76ef9de8b42df8903f00e0e3dc0b7"
+        "id": "66478888669296734530114754794777368480"
       }
-   ]
-},
+    ],
+    "email_lc_sha256": [
+      {
+        "id": "655332b5fa2aea4498bf7a290cff017cb4"
+      },
+      {
+        "id": "66baf76ef9de8b42df8903f00e0e3dc0b7"
+      }
+    ]
+  }
+}
 ```
-
 
 
 >[!MORELIKETHIS]
