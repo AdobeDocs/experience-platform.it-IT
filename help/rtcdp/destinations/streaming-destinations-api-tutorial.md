@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Connessione alle destinazioni di streaming e attivazione dei dati
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
+source-git-commit: 883bea4aba0548e96b891987f17b8535c4d2eba7
 workflow-type: tm+mt
-source-wordcount: '1861'
-ht-degree: 1%
+source-wordcount: '1847'
+ht-degree: 2%
 
 ---
 
@@ -310,8 +310,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "region": "{REGION}"
     },
     "params": { // use these values for Azure Event Hubs connections
-        "eventHubName": "{EVENT_HUB_NAME}",
-        "namespace": "EVENT_HUB_NAMESPACE"
+        "eventHubName": "{EVENT_HUB_NAME}"
     }
 }'
 ```
@@ -321,7 +320,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{NAME_OF_DATA_STREAM}`: *Per le connessioni Amazon Kinesis.* Immettete il nome del flusso di dati esistente nel vostro account Amazon Kinesis. Adobe Real-time CDP esporta i dati in questo flusso.
 * `{REGION}`: *Per le connessioni Amazon Kinesis.* La regione nel vostro account Amazon Kinesis in cui Adobe Real-time CDP trasmetterà i dati in streaming.
 * `{EVENT_HUB_NAME}`: *Per le connessioni di Azure Event Hubs.* Compilare il nome dell&#39;hub eventi di Azure in cui Adobe Real-time CDP eseguirà lo streaming dei dati. Per ulteriori informazioni, consultate [Creare un hub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) eventi nella documentazione Microsoft.
-* `{EVENT_HUB_NAMESPACE}`: *Per le connessioni di Azure Event Hubs.* Compilare lo spazio dei nomi Azure Event Hubs in cui Adobe Real-time CDP eseguirà lo streaming dei dati. Per ulteriori informazioni, consultate [Creare uno spazio dei nomi](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) per gli hub eventi nella documentazione Microsoft.
 
 **Risposta**
 
@@ -376,7 +374,7 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`: Utilizzate il flusso per la destinazione di streaming a cui desiderate connettervi. Per ottenere la specifica di flusso, eseguite un&#39;operazione GET sull&#39; `flowspecs` endpoint. Consulta la documentazione Swagger qui: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. Nella risposta, cercate `upsTo` e copiate l’ID corrispondente della destinazione di streaming a cui desiderate connettervi.
+* `{FLOW_SPEC_ID}`: L&#39;ID della specifica di flusso per le destinazioni basate sul profilo è `71471eba-b620-49e4-90fd-23f1fa0174d8`. Utilizzate questo valore nella chiamata.
 * `{SOURCE_CONNECTION_ID}`: Utilizzate l&#39;ID di connessione di origine ottenuto nel passaggio [Connetti alla piattaforma](#connect-to-your-experience-platform-data)Experience.
 * `{TARGET_CONNECTION_ID}`: Utilizzate l&#39;ID di connessione di destinazione ottenuto nel passaggio [Connetti alla destinazione](#connect-to-streaming-destination)di streaming.
 
@@ -392,7 +390,7 @@ Una risposta corretta restituisce l’ID (`id`) del flusso di dati appena creato
 ```
 
 
-## Attivare i dati per la nuova destinazione
+## Attivare i dati per la nuova destinazione {#activate-data}
 
 ![Passaggi di destinazione - Panoramica passo 5](/help/rtcdp/destinations/assets/step5-create-streaming-destination-api.png)
 
@@ -451,6 +449,18 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
                 "path": "{PROFILE_ATTRIBUTE}"
             }
         }
+    },
+        },
+        {
+        "op": "add",
+        "path": "/transformations/0/params/profileSelectors/selectors/-",
+        "value": {
+            "type": "JSON_PATH",
+            "value": {
+                "operator": "EXISTS",
+                "path": "{PROFILE_ATTRIBUTE}"
+            }
+        }
     }
 ]
 ```
@@ -458,7 +468,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 * `{DATAFLOW_ID}`: Utilizzare il flusso di dati ottenuto nel passaggio precedente.
 * `{ETAG}`: Utilizzate il tag ottenuto nel passaggio precedente.
 * `{SEGMENT_ID}`: Specifica l&#39;ID del segmento da esportare in questa destinazione. Per recuperare gli ID del segmento per i segmenti che si desidera attivare, andate a https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/, selezionate **Segmentation Service API** nel menu di navigazione a sinistra e cercate l&#39; `GET /segment/jobs` operazione.
-* `{PROFILE_ATTRIBUTE}`: Ad esempio, `"person.lastName"`
+* `{PROFILE_ATTRIBUTE}`: Ad esempio, `personalEmail.address` oppure `person.lastName`
 
 **Risposta**
 
@@ -503,8 +513,23 @@ La risposta restituita deve includere nel `transformations` parametro i segmenti
         "name": "GeneralTransform",
         "params": {
             "profileSelectors": {
-                "selectors": []
-            },
+                        "selectors": [
+                            {
+                                "type": "JSON_PATH",
+                                "value": {
+                                    "path": "personalEmail.address",
+                                    "operator": "EXISTS"
+                                }
+                            },
+                            {
+                                "type": "JSON_PATH",
+                                "value": {
+                                    "path": "person.lastname",
+                                    "operator": "EXISTS"
+                                }
+                            }
+                        ]
+                    },
             "segmentSelectors": {
                 "selectors": [
                     {
@@ -520,6 +545,50 @@ La risposta restituita deve includere nel `transformations` parametro i segmenti
         }
     }
 ],
+```
+
+**Dati esportati**
+
+>[!IMPORTANT]
+>
+> Oltre agli attributi di profilo e ai segmenti nel passaggio [Attivare i dati per la nuova destinazione](#activate-data), i dati esportati in AWS Kinesis e Azure Event Hubs includeranno anche informazioni sulla mappa di identità. Rappresenta le identità dei profili esportati (ad esempio [ECID](https://docs.adobe.com/content/help/it-IT/id-service/using/intro/id-request.html), ID mobile, ID Google, indirizzo e-mail, ecc.). Di seguito è riportato un esempio.
+
+```
+{
+  "person": {
+    "email": "yourstruly@adobe.con"
+  },
+  "segmentMembership": {
+    "ups": {
+      "72ddd79b-6b0a-4e97-a8d2-112ccd81bd02": {
+        "lastQualificationTime": "2020-03-03T21:24:39Z",
+        "status": "exited"
+      },
+      "7841ba61-23c1-4bb3-a495-00d695fe1e93": {
+        "lastQualificationTime": "2020-03-04T23:37:33Z",
+        "status": "existing"
+      }
+    }
+  },
+  "identityMap": {
+    "ecid": [
+      {
+        "id": "14575006536349286404619648085736425115"
+      },
+      {
+        "id": "66478888669296734530114754794777368480"
+      }
+    ],
+    "email_lc_sha256": [
+      {
+        "id": "655332b5fa2aea4498bf7a290cff017cb4"
+      },
+      {
+        "id": "66baf76ef9de8b42df8903f00e0e3dc0b7"
+      }
+    ]
+  }
+}
 ```
 
 ## Passaggi successivi
