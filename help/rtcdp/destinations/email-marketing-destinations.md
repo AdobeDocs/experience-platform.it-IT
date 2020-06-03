@@ -4,7 +4,10 @@ seo-title: Destinazioni marketing e-mail
 description: I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio per l’invio di campagne e-mail promozionali.
 seo-description: I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio per l’invio di campagne e-mail promozionali.
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+workflow-type: tm+mt
+source-wordcount: '491'
+ht-degree: 1%
 
 ---
 
@@ -23,7 +26,7 @@ Nel flusso di destinazione di connessione, descritto nella sezione seguente, col
 
 1. In **[!UICONTROL Connections > Destinations]**, seleziona la destinazione di e-mail marketing a cui vuoi connetterti, quindi seleziona **[!UICONTROL Connect destination]**.
 
-   ![Connetti alla destinazione](/help/rtcdp/destinations/assets/connect-destination.png)
+   ![Connetti alla destinazione](/help/rtcdp/destinations/assets/connect-destination-1.png)
 
 2. Nella procedura guidata di Connect, selezionate il percorso **[!UICONTROL Connection type]** di memorizzazione. Potete scegliere tra **Amazon S3**, **SFTP con password**, **SFTP con chiave** SSH. Compila le informazioni riportate di seguito, a seconda del tipo di connessione, quindi seleziona **[!UICONTROL Connect]**.
 
