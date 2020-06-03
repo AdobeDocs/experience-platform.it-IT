@@ -4,7 +4,10 @@ seo-title: Destinazione annunci Google
 description: Google Ads, precedentemente noto come Google AdWords, è un servizio pubblicitario online che consente alle aziende di pagare per clic pubblicità tra ricerche basate su testo, display grafici, video YouTube e display mobili in-app.
 seo-description: Google Ads, precedentemente noto come Google AdWords, è un servizio pubblicitario online che consente alle aziende di pagare per clic pubblicità tra ricerche basate su testo, display grafici, video YouTube e display mobili in-app.
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+workflow-type: tm+mt
+source-wordcount: '520'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ Google Ads, precedentemente noto come Google AdWords, è un servizio pubblicitar
 
 Nota i seguenti dettagli specifici per le destinazioni Google Ads:
 
-* Puoi inviare le seguenti [identità](../../identity-service/namespaces.md) alle destinazioni Google Ads: ID di cookie **Google, IDFA, GAID, ID Roku, ID Microsoft, ID Amazon Fire TV**.
+* Puoi inviare le seguenti [identità](../../identity-service/namespaces.md) alle destinazioni Google Ads: **ID cookie Google, IDFA, GAID, ID Roku, ID Microsoft, ID Amazon Fire TV**.
 * I tipi di pubblico attivati vengono creati a livello di programmazione nella piattaforma Google.
 * Adobe Real-time CDP al momento non include una metrica di misurazione per convalidare l’attivazione. Per convalidare l&#39;integrazione e comprendere le dimensioni del targeting dell&#39;audience, fare riferimento ai conteggi dell&#39;audience in Google.
 
@@ -51,7 +54,7 @@ Prima di creare la destinazione Google Ads in Adobe Real-time CDP, è necessario
 1. In **[!UICONTROL Connections > Destinations]**, selezionate Google Ads, quindi **[!UICONTROL Create destination]**.
    ![Destinazione di Connect Google Ads](/help/rtcdp/destinations/assets/google-2-destination.png)
 
-2. Nel flusso di lavoro Crea destinazione, compila il modulo [!UICONTROL Basic Information] per la destinazione.
+2. Nel flusso di lavoro Crea destinazione, compila il modulo [!UICONTROL Basic Information] per la destinazione. <br>
    ![Informazioni di base Google Ads](/help/rtcdp/destinations/assets/google-2-basic-information.png)
 * **[!UICONTROL Name]**: Compila il nome preferito per questa destinazione.
 * **[!UICONTROL Description]**: Facoltativo. Ad esempio, potete specificare per quale campagna state utilizzando questa destinazione.
