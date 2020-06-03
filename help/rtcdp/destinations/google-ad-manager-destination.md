@@ -4,7 +4,10 @@ seo-title: Destinazione Google Ad Manager
 description: 'Google Ad Manager, precedentemente noto come DoubleClick for Publishers o DoubleClick AdX, è una piattaforma di annunci pubblicitari di Google che offre agli editori i mezzi per gestire la visualizzazione degli annunci sui loro siti Web, attraverso video e nelle app mobili. '
 seo-description: 'Google Ad Manager, precedentemente noto come DoubleClick for Publishers o DoubleClick AdX, è una piattaforma di annunci pubblicitari di Google che offre agli editori i mezzi per gestire la visualizzazione degli annunci sui loro siti Web, attraverso video e nelle app mobili. '
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+workflow-type: tm+mt
+source-wordcount: '576'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ Google Ad Manager, precedentemente noto come DoubleClick for Publishers o Double
 
 Tieni presente i seguenti dettagli specifici per le destinazioni Google Ad Manager:
 
-* Puoi inviare le seguenti [identità](../../identity-service/namespaces.md) alle destinazioni Google Ad Manager: ID di cookie **Google, IDFA, GAID, ID Roku, ID Microsoft, ID Amazon Fire TV**.
+* Puoi inviare le seguenti [identità](../../identity-service/namespaces.md) alle destinazioni Google Ad Manager: **ID cookie Google, IDFA, GAID, ID Roku, ID Microsoft, ID Amazon Fire TV**.
 * I tipi di pubblico attivati vengono creati a livello di programmazione nella piattaforma Google.
 * Adobe Real-time CDP al momento non include una metrica di misurazione per convalidare l’attivazione. Per convalidare l&#39;integrazione e comprendere le dimensioni del targeting dell&#39;audience, fare riferimento ai conteggi dell&#39;audience in Google.
 
@@ -48,7 +51,7 @@ Prima di creare la destinazione Google Ad Manager in Adobe Real-time CDP, è nec
 1. In **[!UICONTROL Connections > Destinations]**, seleziona Google Ad Manager e seleziona **[!UICONTROL Create destination]**.
    ![Connect, destinazione Google Ad Manager](/help/rtcdp/destinations/assets/google-1-destination.png)
 
-2. Nel flusso di lavoro Crea destinazione, compila il modulo [!UICONTROL Basic Information] per la destinazione.
+2. Nel flusso di lavoro Crea destinazione, compila il modulo [!UICONTROL Basic Information] per la destinazione. <br>
    ![Informazioni di base Google Ad Manager](/help/rtcdp/destinations/assets/google-1-basic-information.png)
 * **[!UICONTROL Name]**: Compila il nome preferito per questa destinazione.
 * **[!UICONTROL Description]**: Facoltativo. Ad esempio, potete specificare per quale campagna state utilizzando questa destinazione.
