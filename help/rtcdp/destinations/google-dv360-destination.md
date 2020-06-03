@@ -4,7 +4,10 @@ seo-title: Destinazione Google Display e Video 360
 description: Display & Video 360, precedentemente noto come DoubleClick Bid Manager è uno strumento che consente di eseguire campagne di retargeting e di targeting delle audience su diverse fonti di inventario di Display, Video e Mobile.
 seo-description: 'Display & Video 360, precedentemente noto come DoubleClick Bid Manager è uno strumento che consente di eseguire campagne di retargeting e di targeting delle audience su diverse fonti di inventario di Display, Video e Mobile. '
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+workflow-type: tm+mt
+source-wordcount: '562'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ Display &amp; Video 360, precedentemente noto come DoubleClick Bid Manager, è u
 
 Tenete presente i seguenti dettagli specifici per le destinazioni Google Display e Video 360:
 
-* Puoi inviare le seguenti [identità](../../identity-service/namespaces.md) alle destinazioni Google Display e Video 360: ID di cookie **Google, IDFA, GAID, ID Roku, ID Microsoft, ID Amazon Fire TV**.
+* Puoi inviare le seguenti [identità](../../identity-service/namespaces.md) alle destinazioni Google Display e Video 360: **ID cookie Google, IDFA, GAID, ID Roku, ID Microsoft, ID Amazon Fire TV**.
 * I tipi di pubblico attivati vengono creati a livello di programmazione nella piattaforma Google.
 * Adobe Real-time CDP al momento non include una metrica di misurazione per convalidare l’attivazione. Per convalidare l&#39;integrazione e comprendere le dimensioni del targeting dell&#39;audience, fare riferimento ai conteggi dell&#39;audience in Google.
 
@@ -46,7 +49,7 @@ Prima di creare la destinazione Google Display &amp; Video 360 in Adobe Real-tim
 1. In **[!UICONTROL Connections > Destinations]**, selezionate Google Display &amp; Video 360, quindi **[!UICONTROL Create destination]**.
    ![Destinazione Google Display e Video 360 di Connect](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
-2. Nel flusso di lavoro Crea destinazione, compila il modulo [!UICONTROL Basic Information] per la destinazione.
+2. Nel flusso di lavoro Crea destinazione, compila il modulo [!UICONTROL Basic Information] per la destinazione. <br>
    ![Informazioni di base Google Display &amp; Video 360](/help/rtcdp/destinations/assets/google-dv360-basic-information.png)
 * **[!UICONTROL Name]**: Compila il nome preferito per questa destinazione.
 * **[!UICONTROL Description]**: Facoltativo. Ad esempio, potete specificare per quale campagna state utilizzando questa destinazione.
