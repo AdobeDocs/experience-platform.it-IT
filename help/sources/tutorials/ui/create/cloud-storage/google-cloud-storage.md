@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare un connettore di origine di archiviazione Google Cloud nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '537'
 ht-degree: 1%
 
 ---
@@ -41,20 +41,30 @@ Per accedere ai dati GCS sulla piattaforma, è necessario fornire un ID **chiave
 
 ## Collegamento dell&#39;account GCS
 
-Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi descritti di seguito per creare una nuova connessione di base in entrata per collegare l&#39;account GCS alla piattaforma.
+Dopo aver raccolto le credenziali richieste, potete seguire i passaggi descritti di seguito per creare un nuovo account GCS per collegarvi alla piattaforma.
 
-Accedi ad <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> , quindi seleziona **Origini** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro *Origini* . Nella schermata *Catalogo* sono visualizzate diverse sorgenti con cui è possibile creare connessioni di base in entrata e ogni origine mostra il numero di connessioni di base esistenti ad esse associate.
+Accedete ad [Adobe Experience Platform](https://platform.adobe.com) , quindi selezionate **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39; *[!UICONTROL Sources]* area di lavoro. Nella *[!UICONTROL Catalog]* schermata sono visualizzate diverse origini con le quali è possibile creare un account in entrata e ogni origine mostra il numero di account e flussi di dati esistenti associati a tali account.
 
-Nella categoria *Cloud Storage* , selezionate **Google Cloud Storage** per esporre una barra delle informazioni sul lato destro dello schermo. La barra delle informazioni fornisce una breve descrizione dell’origine selezionata e le opzioni per connettersi alla relativa documentazione o per connettersi all’origine. Per creare una nuova connessione di base in entrata, fate clic su **Connetti sorgente**.
+Potete selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l&#39;origine specifica con cui si desidera lavorare utilizzando l&#39;opzione di ricerca.
 
-![](../../../../images/tutorials/create/google-cloud-storage/sources-catalog.png)
+Sotto la *[!UICONTROL Databases]* categoria, selezionare **[!UICONTROL Google Cloud Storage]** fare clic **sull&#39;icona + (+)** per creare un nuovo connettore GCS.
 
-Viene visualizzata la finestra di dialogo _Connetti a Google Cloud Storage_ . Nel modulo di input, fornite alla connessione di base un nome, una descrizione facoltativa e le credenziali GCS. Al termine, fate clic su **Connect** , quindi consentite un po&#39; di tempo per l&#39;impostazione della nuova connessione di base.
+![catalogo](../../../../images/tutorials/create/google-cloud-storage/catalog.png)
 
-![](../../../../images/tutorials/create/google-cloud-storage/gcs-credentials.png)
+Viene *[!UICONTROL Connect to Google Cloud Storage]* visualizzata la pagina. In questa pagina è possibile utilizzare credenziali nuove o già esistenti.
 
-Una volta stabilita la connessione di base, puoi continuare con la sezione successiva e configurare un flusso di dati per l&#39;inserimento di dati in Platform.
+### Nuovo account
+
+Se si utilizzano nuove credenziali, selezionare **[!UICONTROL New account]**. Nel modulo di input visualizzato, fornite alla connessione un nome, una descrizione facoltativa e le credenziali GCS. Al termine, selezionate **[!UICONTROL Connect]** e concedete un po&#39; di tempo per l&#39;impostazione del nuovo account.
+
+![connect](../../../../images/tutorials/create/google-cloud-storage/connect.png)
+
+### Account esistente
+
+Per collegare un account esistente, selezionate l&#39;account GCS con cui desiderate connettervi, quindi selezionate **[!UICONTROL Next]** per continuare.
+
+![esistenti](../../../../images/tutorials/create/google-cloud-storage/existing.png)
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai stabilito una connessione di base al tuo account GCS. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per l’inserimento di dati nella piattaforma](../../dataflow/batch/cloud-storage.md).
+Seguendo questa esercitazione hai stabilito una connessione al tuo account GCS. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per trasferire i dati dall’archiviazione cloud alla piattaforma](../../dataflow/batch/cloud-storage.md).
