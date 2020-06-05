@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Creare un connettore Microsoft Dynamics utilizzando l'API del servizio di flusso
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6c86cec91774f3444dc90042cd7ad5c71429aabd
+source-git-commit: 72c1d53295d5c4204c02959c857edc06f246534c
+workflow-type: tm+mt
+source-wordcount: '729'
+ht-degree: 1%
 
 ---
 
@@ -15,7 +18,7 @@ Flow Service è utilizzato per raccogliere e centralizzare i dati dei clienti da
 
 Questa esercitazione utilizza l&#39;API del servizio di flusso per guidarti attraverso i passaggi necessari per connettere la piattaforma a un account Microsoft Dynamics (in seguito denominato &quot;Dynamics&quot;) per la raccolta dei dati CRM.
 
-Se preferisci utilizzare l’interfaccia utente in Experience Platform, l’esercitazione [dell’interfaccia utente del connettore sorgente](../../../ui/create/crm/dynamics-salesforce.md) Dynamics o Salesforce fornisce istruzioni dettagliate per eseguire azioni simili.
+Se preferisci utilizzare l’interfaccia utente in Experience Platform, l’esercitazione [dell’interfaccia utente del connettore di origine](../../../ui/create/crm/dynamics.md) Dynamics fornisce istruzioni dettagliate per eseguire azioni simili.
 
 ## Introduzione
 
