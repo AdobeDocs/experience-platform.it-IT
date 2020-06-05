@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Creare un connettore Salesforce utilizzando l'API del servizio di flusso
 topic: overview
 translation-type: tm+mt
-source-git-commit: cc999ce1ab426f412c0cc2b69173a336a14024f3
+source-git-commit: 72c1d53295d5c4204c02959c857edc06f246534c
+workflow-type: tm+mt
+source-wordcount: '732'
+ht-degree: 1%
 
 ---
 
@@ -15,7 +18,7 @@ Flow Service è utilizzato per raccogliere e centralizzare i dati dei clienti da
 
 Questa esercitazione utilizza l&#39;API del servizio di flusso per guidarti nei passaggi necessari per connettere la piattaforma a un account Salesforce per la raccolta dei dati CRM.
 
-Se preferisci utilizzare l’interfaccia utente in Experience Platform, l’esercitazione [dell’interfaccia utente del connettore sorgente](../../../ui/create/crm/dynamics-salesforce.md) Dynamics o Salesforce fornisce istruzioni dettagliate per eseguire azioni simili.
+Se preferisci utilizzare l’interfaccia utente in Experience Platform, l’esercitazione [dell’interfaccia utente del connettore sorgente di](../../../ui/create/crm/salesforce.md) Salesforce fornisce istruzioni dettagliate per eseguire azioni simili.
 
 ## Introduzione
 
