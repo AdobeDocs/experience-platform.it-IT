@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guida all'SDK per la piattaforma
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '451'
+ht-degree: 2%
 
 ---
 
@@ -19,7 +22,7 @@ Questa esercitazione fornisce informazioni sulla conversione `data_access_sdk_py
 
 ## Autenticazione build {#build-authentication}
 
-L’autenticazione è necessaria per effettuare chiamate ad Adobe Experience Platform ed è composta da Chiave API, ID organizzazione IMS, un token utente e un token di servizio.
+L’autenticazione è necessaria per effettuare chiamate a [!DNL Adobe Experience Platform]e comprende chiave API, ID organizzazione IMS, token utente e token di servizio.
 
 ### Python
 
@@ -146,7 +149,7 @@ Il nuovo SDK della piattaforma supporta le seguenti operazioni:
 | Funzionamento | Funzione |
 | --------- | -------- |
 | È uguale a (`=`) | `eq()` |
-| Maggiore di (`>`) | `gt()` |
+| Greater than (`>`) | `gt()` |
 | Maggiore o uguale a (`>=`) | `ge()` |
 | Less than (`<`) | `lt()` |
 | Minore o uguale a (`<=`) | `le()` |
