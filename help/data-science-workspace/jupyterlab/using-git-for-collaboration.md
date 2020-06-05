@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Collaborazione in JupyterLab tramite Git
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 0134c21bc35c0cb1bde7f0201a33517a81addae3
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '270'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ L’ambiente Data Science Workspace JupyterLab è un ambiente ospitato e non è 
 
 ## Connetti Git all’ambiente Notebook JupyterLab di Data Science Workspace
 
-Per iniziare, avvia Adobe Experience Platform e passa all&#39;ambiente [JupyterLabs Notebooks](https://platform.adobe.com/notebooks/jupyterLab) .
+Per iniziare, avvia [!DNL Adobe Experience Platform] e passa all’ambiente [JupyterLabs Notebooks](https://platform.adobe.com/notebooks/jupyterLab) .
 
 In JupyterLab, selezionate **[!UICONTROL File]** quindi passate il mouse sopra **[!UICONTROL New]**. Dal menu a discesa visualizzato, selezionate **[!UICONTROL Terminal]**.
 
