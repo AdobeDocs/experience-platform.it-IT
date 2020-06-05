@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Guida di Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: 165d76224f4aeb292e72df1e2574ae1d0821c44c
+source-git-commit: 328b897c54453f23ad7b68fb2a288712cb4fe538
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 0%
@@ -142,7 +142,8 @@ ht-degree: 0%
          - [Connettore FTP e SFTP](tutorials/ui/create/cloud-storage/ftp-sftp.md)
          - [Connettore di archiviazione Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
       - CRM {#crm}
-         - [Connettore Microsoft Dynamics e Salesforce](tutorials/ui/create/crm/dynamics-salesforce.md)
+         - [Connettore Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
+         - [Connettore Salesforce](tutorials/ui/create/crm/salesforce.md)
       - Successo cliente {#customer-success}
          - [Connettore Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [Connettore ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
