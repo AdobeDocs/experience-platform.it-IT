@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guida per gli sviluppatori di API Sensei Machine Learning
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: b0b44f4aaf365f58086cfa17d27fbba6ed2a2a97
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 2%
 
 ---
 
@@ -17,7 +20,7 @@ Questa guida per gli sviluppatori illustra i passaggi necessari per iniziare a u
 
 ## Introduzione
 
-Per poter accedere alle seguenti intestazioni di richiesta per effettuare chiamate alle API Adobe Experience Platform, è necessario completare l’esercitazione [di autenticazione](../../tutorials/authentication.md) :
+È necessario completare l&#39;esercitazione sull&#39; [autenticazione](../../tutorials/authentication.md) per poter accedere alle seguenti intestazioni di richiesta per effettuare chiamate alle [!DNL Adobe Experience Platform] API:
 
 * Autorizzazione: Portatore `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
