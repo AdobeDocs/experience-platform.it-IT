@@ -4,30 +4,33 @@ solution: Experience Platform
 title: Servizio query nel blocco appunti Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '785'
+ht-degree: 1%
 
 ---
 
 
 # Servizio query nel blocco appunti Jupyter
 
-Adobe Experience Platform consente di utilizzare il linguaggio SQL (Structures Query Language) in Data Science Workspace integrando il servizio Query in JupyterLab come funzione standard.
+[!DNL Adobe Experience Platform] consente di utilizzare il linguaggio SQL in Data Science Workspace integrando il servizio Query in JupyterLab come funzione standard.
 
-Questa esercitazione illustra alcuni esempi di query SQL per i casi di utilizzo più comuni per esplorare, trasformare e analizzare i dati di Adobe Analytics.
+Questa esercitazione illustra le query SQL di esempio per i casi di utilizzo più comuni per esplorare, trasformare e analizzare [!DNL Adobe Analytics] i dati.
 
 ## Introduzione
 
 Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prerequisiti:
 
-- Accesso ad Adobe Experience Platform. Se non disponete dell&#39;accesso a un&#39;organizzazione IMS in Experience Platform, rivolgetevi al vostro amministratore di sistema prima di procedere
+- Accesso a [!DNL Adobe Experience Platform]. Se non disponete dell&#39;accesso a un&#39;organizzazione IMS in Experience Platform, rivolgetevi al vostro amministratore di sistema prima di procedere
 
-- Un dataset di Adobe Analytics
+- Un [!DNL Adobe Analytics] dataset
 
 - Una conoscenza approfondita dei seguenti concetti chiave utilizzati in questa esercitazione:
    - [Experience Data Model (XDM) e XDM System](../../xdm/home.md)
    - [Servizio query](../../query-service/home.md)
    - [Sintassi SQL Servizio query](../../query-service/sql/overview.md)
-   - Adobe Analytics
+   - [!DNL Adobe Analytics]
 
 ## Accesso a JupyterLab e al servizio Query {#access-jupyterlab-and-query-service}
 
@@ -47,13 +50,13 @@ Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prer
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. Trova un set di dati di Adobe Analytics da esplorare e fai clic con il pulsante destro del mouse sull&#39;elenco, quindi fai clic **[!UICONTROL Query Data in Notebook]** per generare query SQL nel blocco appunti vuoto.
+4. Trovare un [!DNL Adobe Analytics] dataset da esplorare e fare clic con il pulsante destro del mouse sull&#39;elenco, fare clic **[!UICONTROL Query Data in Notebook]** per generare query SQL nel blocco appunti vuoto.
 
 5. Fare clic sulla prima cella generata contenente la funzione `qs_connect()` ed eseguirla facendo clic sul pulsante di riproduzione. Questa funzione crea una connessione tra l&#39;istanza del blocco appunti e il servizio di query.
 
    ![](../images/jupyterlab/query/execute.png)
 
-6. Copiate il nome del set di dati di Adobe Analytics dalla seconda query SQL generata, che sarà il valore successivo `FROM`.
+6. Copiate il nome del [!DNL Adobe Analytics] dataset dalla seconda query SQL generata, che sarà il valore successivo `FROM`.
 
    ![](../images/jupyterlab/query/dataset_name.png)
 
@@ -78,7 +81,7 @@ Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prer
    target_day = "01"
    ```
 
-   - `target_table` : Nome del set di dati di Adobe Analytics.
+   - `target_table` : Nome del [!DNL Adobe Analytics] set di dati.
    - `target_year` : Anno specifico da cui provengono i dati obiettivo.
    - `target_month` : Mese specifico da cui proviene il target.
    - `target_day` : Giorno specifico da cui provengono i dati di destinazione.
