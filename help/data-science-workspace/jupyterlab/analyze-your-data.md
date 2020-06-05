@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Analizzare i dati utilizzando i notebook
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1746'
+source-wordcount: '1729'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Questa esercitazione si concentra sull&#39;utilizzo dei notebook Jupyter, creati
 
 Vengono introdotti i seguenti concetti:
 
-- **JupyterLab:** [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) è l&#39;interfaccia Web di nuova generazione per Project Jupyter ed è strettamente integrata in Adobe Experience Platform.
+- **JupyterLab:** [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) è l&#39;interfaccia Web di nuova generazione per Project Jupyter ed è strettamente integrata in [!DNL Adobe Experience Platform].
 - **Batch:** I set di dati sono costituiti da batch. Un batch è un insieme di dati raccolti in un periodo di tempo ed elaborati insieme come un&#39;unica unità. Vengono creati nuovi batch quando i dati vengono aggiunti a un dataset.
 - **SDK accesso ai dati (obsoleto):** L&#39;SDK per l&#39;accesso ai dati ora è obsoleto. Utilizzate la guida SDK [per la](../authoring/platform-sdk.md) piattaforma.
 
@@ -38,7 +38,7 @@ Per impostazione predefinita, la ricetta Tensorflow funziona in un cluster GPU e
 
 ### Creare un nuovo blocco appunti
 
-Nell’interfaccia utente di Adobe Experience Platform, fai clic sulla scheda Data Science nel menu principale per passare a Data Science Workspace. Da questa pagina, fate clic sulla scheda JupyterLab che aprirà il lancio di JupyterLab. Dovrebbe essere visualizzata una pagina simile a questa.
+Nell&#39; [!DNL Adobe Experience Platform] interfaccia utente, fai clic sulla scheda Data Science nel menu principale per passare all&#39;area di lavoro Data Science. Da questa pagina, fate clic sulla scheda JupyterLab che aprirà il lancio di JupyterLab. Dovrebbe essere visualizzata una pagina simile a questa.
 
 ![](../images/jupyterlab/analyze-data/jupyterlab_launcher.png)
 
@@ -52,7 +52,7 @@ La ricetta Vendite al dettaglio è un esempio standalone che utilizza lo stesso 
 
 >[!NOTE] L&#39; `data_access_sdk_python` oggetto è obsoleto e non è più consigliato. Per convertire il codice, fai riferimento all’esercitazione sulla [conversione dell’SDK per l’accesso ai dati in SDK](../authoring/platform-sdk.md) per la piattaforma. Per questa esercitazione si applicano gli stessi passaggi indicati di seguito.
 
-L&#39;accesso ai dati verrà eseguito internamente da Adobe Experience Platform e all&#39;esterno dei dati. Utilizzeremo la `data_access_sdk_python` libreria per accedere ai dati interni, ad esempio set di dati e schemi XDM. Per i dati esterni, utilizzeremo la libreria Pandas Python.
+Verranno analizzati l&#39;accesso ai dati internamente da [!DNL Adobe Experience Platform] e all&#39;esterno. Utilizzeremo la `data_access_sdk_python` libreria per accedere ai dati interni, ad esempio set di dati e schemi XDM. Per i dati esterni, utilizzeremo la libreria Pandas Python.
 
 #### Dati esterni
 
@@ -70,7 +70,7 @@ Infine, possiamo dare un&#39;occhiata a come sono fatti i nostri dati. È possib
 
 #### Dati della piattaforma Experience
 
-Ora passeremo ai dati della piattaforma Experience.
+Ora, passeremo oltre i [!DNL Experience Platform] dati di accesso.
 
 ##### Per ID set di dati
 
@@ -96,7 +96,7 @@ df = reader.load(data_set_id="xxxxxxxx", ims_org="xxxxxxxx@AdobeOrg")
 df.head()
 ```
 
-Se lavori su altri kernel diversi da Python, fai riferimento a [questa pagina](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) per accedere ai dati in Adobe Experience Platform.
+Se si lavora su altri kernel diversi da Python, fare riferimento a [questa pagina](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) per accedere ai dati sul [!DNL Adobe Experience Platform].
 
 Se si seleziona la cella eseguibile e si preme il pulsante di riproduzione nella barra degli strumenti, verrà eseguito il codice eseguibile. L&#39;output per `head()` sarà una tabella con le chiavi del dataset come colonne e le prime n righe nel dataset. `head()` accetta un argomento integer per specificare il numero di righe da restituire. Per impostazione predefinita, è 5.
 
@@ -190,7 +190,7 @@ Osservate la diagonale di 1 in basso al centro. Questo indica che quando confron
 
 ## Passaggi successivi
 
-Questa esercitazione spiega come creare un nuovo notebook Jupyter in Data Science Workspace e come accedere ai dati sia esternamente che da Adobe Experience Platform. In particolare, abbiamo eseguito i seguenti passaggi:
+Questa esercitazione spiega come creare un nuovo notebook Jupyter in Data Science Workspace e come accedere ai dati sia esternamente che da [!DNL Adobe Experience Platform]. In particolare, abbiamo eseguito i seguenti passaggi:
 - Creare un nuovo blocco appunti Jupyter
 - Accesso a dataset e schemi
 - Esplora set di dati
