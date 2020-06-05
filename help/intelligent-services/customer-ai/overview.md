@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Panoramica dell'AI del cliente
 topic: Customer AI overview
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '487'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +35,7 @@ Il cliente non è costruito per:
 
 - L&#39;AI del cliente non deve essere utilizzata per prevedere un prezzo dinamico, o il punto in cui il cliente effettuerà un acquisto.
 - L&#39;AI del cliente non è in grado di determinare se l&#39;offerta renda più probabile l&#39;acquisto di un articolo da parte del cliente. Anche se potete decidere di inviare offerte di sconto basate sui punteggi di propensione, non è necessariamente il modo migliore per convertire tali clienti.
-- L&#39;AI del cliente non è uno strumento di raccomandazione del prodotto. Se disponete di migliaia di SKU, non utilizzate l&#39;AI cliente come proxy per una soluzione di raccomandazioni sui prodotti reale come Adobe Target.
+- L&#39;AI del cliente non è uno strumento di raccomandazione del prodotto. Se disponete di migliaia di SKU, non utilizzate l&#39;AI del cliente come proxy per una soluzione di raccomandazioni sui prodotti reale come [!DNL Adobe Target].
 - L&#39;AI del cliente non può prevedere in quale fase del viaggio di acquisto il cliente si trovi, ad esempio, se si trova nelle fasi di &quot;consapevolezza&quot;, &quot;considerazione&quot;, &quot;acquisto&quot; o &quot;conservazione&quot;.
 - Non utilizzate l&#39;API del cliente per determinare i clienti che probabilmente acquisteranno un prodotto per il lancio in futuro. Ciò richiede che in passato siano presenti alcuni eventi di successo affinché l&#39;AI del cliente possa addestrare con successo l&#39;algoritmo di machine learning sui dati.
 
