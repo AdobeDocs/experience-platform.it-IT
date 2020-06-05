@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare un connettore di origine ServiceNow nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
 source-wordcount: '519'
 ht-degree: 0%
@@ -60,13 +60,13 @@ Viene visualizzata la pagina *Connetti a ServiceNow* . In questa pagina è possi
 
 Se si utilizzano nuove credenziali, selezionare **Nuovo account**. Nel modulo di input visualizzato, specificare un nome, una descrizione facoltativa e le credenziali di ServiceNow. Al termine, selezionate **Connect** , quindi concedete un po&#39; di tempo per la creazione del nuovo account.
 
-![](../../../../images/tutorials/create/servicenow/new-credentials.png)
+![](../../../../images/tutorials/create/servicenow/new.png)
 
 ### Account esistente
 
 Per collegare un account esistente, selezionate l&#39;account ServiceNow con cui desiderate connettervi, quindi selezionate **Avanti** per continuare.
 
-![](../../../../images/tutorials/create/servicenow/existing-credentials.png)
+![](../../../../images/tutorials/create/servicenow/existing.png)
 
 ## Passaggi successivi
 
