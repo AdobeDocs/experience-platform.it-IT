@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare un connettore di origine Google Big Query nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 0%
@@ -51,7 +51,7 @@ Accedi ad <a href="https://platform.adobe.com" target="_blank">Adobe Experience 
 
 Nella categoria *Database* , selezionate **Google Big Query** per visualizzare una barra delle informazioni sul lato destro dello schermo. La barra delle informazioni fornisce una breve descrizione della sorgente selezionata e le opzioni per collegarsi alla sorgente o visualizzare la documentazione. Per creare una nuova connessione di base in entrata, selezionate l&#39;origine **** Connect.
 
-![](../../../../images/tutorials/create/google-big-query/sources-catalog.png)
+![](../../../../images/tutorials/create/google-big-query/catalog.png)
 
 Viene visualizzata la pagina *Connetti a Google Big Query* . In questa pagina è possibile utilizzare credenziali nuove o già esistenti.
 
@@ -59,13 +59,13 @@ Viene visualizzata la pagina *Connetti a Google Big Query* . In questa pagina è
 
 Se si utilizzano nuove credenziali, selezionare **Nuovo account**. Nel modulo di input visualizzato, fornite alla connessione di base un nome, una descrizione facoltativa e le credenziali GBQ. Al termine, selezionate **Connect** , quindi concedete un po&#39; di tempo per stabilire la nuova connessione di base.
 
-![](../../../../images/tutorials/create/google-big-query/gbq-new-credentials.png)
+![](../../../../images/tutorials/create/google-big-query/new.png)
 
 ### Account esistente
 
 Per collegare un account esistente, selezionate l&#39;account GBQ con cui desiderate connettervi, quindi selezionate **Avanti** per continuare.
 
-![](../../../../images/tutorials/create/google-big-query/gbq-existing-credentials.png)
+![](../../../../images/tutorials/create/google-big-query/existing.png)
 
 ## Passaggi successivi
 
