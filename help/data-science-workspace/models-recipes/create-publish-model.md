@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Creazione e pubblicazione di un modello di machine learning
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '1529'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 
 Fingi di possedere un sito web di vendita online. Quando i clienti effettuano acquisti sul sito Web del cliente, è necessario presentare loro raccomandazioni personalizzate per presentare una serie di altri prodotti offerti dal cliente. Nel corso dell&#39;esistenza del sito Web, hai raccolto continuamente i dati dei clienti e vuoi in qualche modo utilizzare questi dati per generare raccomandazioni di prodotto personalizzate.
 
-Adobe Experience Platform Data Science Workspace offre i mezzi per raggiungere il tuo obiettivo utilizzando la funzionalità di [raccomandazione](../pre-built-recipes/product-recommendations.md)sui prodotti preconfigurata. Segui questa esercitazione per scoprire come accedere e comprendere i dati di vendita al dettaglio, creare e ottimizzare un modello di machine learning e generare informazioni in Data Science Workspace.
+[!DNL Adobe Experience Platform] Data Science Workspace fornisce i mezzi per raggiungere il tuo obiettivo utilizzando la funzionalità di [raccomandazione](../pre-built-recipes/product-recommendations.md)sui prodotti precostruita. Segui questa esercitazione per scoprire come accedere e comprendere i dati di vendita al dettaglio, creare e ottimizzare un modello di machine learning e generare informazioni in Data Science Workspace.
 
 Questa esercitazione riflette il flusso di lavoro di Data Science Workspace e illustra i seguenti passaggi per la creazione di un modello di apprendimento automatico:
 
@@ -28,7 +31,7 @@ Questa esercitazione riflette il flusso di lavoro di Data Science Workspace e il
 
 Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prerequisiti:
 
-* Accesso ad Adobe Experience Platform. Se non disponete dell&#39;accesso a un&#39;organizzazione IMS in Experience Platform, rivolgetevi al vostro amministratore di sistema prima di continuare.
+* Accesso a [!DNL Adobe Experience Platform]. Se non disponete dell&#39;accesso a un&#39;organizzazione IMS in Experience Platform, rivolgetevi al vostro amministratore di sistema prima di continuare.
 
 * Risorse di abilitazione. Rivolgetevi al rappresentante commerciale di riferimento per richiedere il provisioning dei seguenti elementi.
    * Recommendations Recipe
@@ -49,7 +52,7 @@ Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prer
 
 ## Preparare i dati {#prepare-your-data}
 
-Per creare un modello di machine learning che fornisca ai clienti raccomandazioni personalizzate sui prodotti, è necessario analizzare i precedenti acquisti sul sito Web. In questa sezione viene spiegato come questi dati vengono trasferiti in Piattaforma tramite Adobe Analytics e come tali dati vengono trasformati in un set di dati della funzione da utilizzare nel modello di apprendimento automatico.
+Per creare un modello di machine learning che fornisca ai clienti raccomandazioni personalizzate sui prodotti, è necessario analizzare i precedenti acquisti sul sito Web. In questa sezione viene illustrato come questi dati vengono trasferiti in Piattaforma attraverso [!DNL Adobe Analytics]e come tali dati vengono trasformati in un set di dati delle feature da utilizzare nel modello di apprendimento automatico.
 
 ### Esplorare i dati e comprendere gli schemi
 
@@ -76,7 +79,7 @@ Le entrate sono la base per un modello in quanto contengono algoritmi di machine
 
 ### Esplora la ricetta delle raccomandazioni sui prodotti
 
-1. In Adobe Experience Platform, andate **[!UICONTROL Models]** dalla colonna di navigazione a sinistra, quindi fate clic **[!UICONTROL Recipes]** in alto per visualizzare un elenco delle entrate disponibili per la vostra organizzazione.
+1. In [!DNL Adobe Experience Platform], andate **[!UICONTROL Models]** dalla colonna di navigazione a sinistra, quindi fate clic **[!UICONTROL Recipes]** in alto per visualizzare un elenco delle entrate disponibili per la vostra organizzazione.
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2. Individuate e aprite il file fornito **[!UICONTROL Recommendations Recipe]** facendo clic sul suo nome.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
@@ -93,7 +96,7 @@ Ora che i dati sono preparati e la Ricetta è pronta per essere utilizzata, è p
 
 Un modello è un&#39;istanza di una ricetta, che consente di addestrare e segnare con i dati in scala.
 
-1. In Adobe Experience Platform, andate **[!UICONTROL Models]** dalla colonna di navigazione a sinistra, quindi fate clic **[!UICONTROL Recipes]** nella parte superiore della pagina per visualizzare un elenco di tutte le entrate disponibili per la vostra organizzazione.
+1. In [!DNL Adobe Experience Platform], andate **[!UICONTROL Models]** dalla colonna di navigazione a sinistra, quindi fate clic **[!UICONTROL Recipes]** nella parte superiore della pagina per visualizzare un elenco di tutte le entrate disponibili per la vostra organizzazione.
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2. Individuate e aprite il file fornito **[!UICONTROL Recommendations Recipe]** facendo clic sul suo nome, entrando nella pagina di panoramica della ricetta. Fate clic **[!UICONTROL Create a Model]** dal centro (se non sono presenti modelli) o dall&#39;alto a destra della pagina Panoramica ricetta.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
@@ -140,7 +143,7 @@ Il passaggio finale del flusso di lavoro di Data Science consiste nell&#39;opera
 2. In alto a destra della pagina dei dettagli dell’esecuzione della formazione, fate clic su **[!UICONTROL Score]**.
 3. Selezionare **[!UICONTROL Recommendations Input Dataset]** come set di dati di input per il punteggio, che è lo stesso set di dati utilizzato al momento della creazione del modello ed esecuzione delle relative esecuzioni di formazione. Then, click **[!UICONTROL Next]**.
    ![](../images/models-recipes/model-walkthrough/scoring_input.png)
-4. Selezionare il set **[!UICONTROL Recommendations Output Dataset]** di dati di output per il punteggio. I risultati del punteggio verranno memorizzati in questo dataset come batch.
+4. Selezionare il set **[!UICONTROL Recommendations Output Dataset]** di dati di output del punteggio. I risultati del punteggio verranno memorizzati in questo dataset come batch.
    ![](../images/models-recipes/model-walkthrough/scoring_output.png)
 5. Esaminare le configurazioni di punteggio. Questi parametri contengono i set di dati di input e output selezionati in precedenza insieme agli schemi appropriati. Fare clic **[!UICONTROL Finish]** per iniziare l&#39;esecuzione del punteggio. L&#39;esecuzione potrebbe richiedere alcuni minuti.
    ![](../images/models-recipes/model-walkthrough/scoring_configure.png)
