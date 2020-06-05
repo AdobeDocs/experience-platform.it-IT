@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Creare una ricetta utilizzando i notebook Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '2315'
+ht-degree: 0%
 
 ---
 
@@ -106,7 +109,7 @@ Nelle due sezioni seguenti verranno analizzati il caricamento dei dati e la prep
 
 ### Caricamento dei dati {#loading-data}
 
-In questo passaggio viene utilizzato il [frame di dati](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)panda. I dati possono essere caricati da file in Adobe Experience Platform utilizzando l&#39;SDK (`platform_sdk`) della piattaforma oppure da origini esterne utilizzando i panda `read_csv()` o `read_json()` le funzioni.
+In questo passaggio viene utilizzato il [frame di dati](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)panda. I dati possono essere caricati da file [!DNL Adobe Experience Platform] utilizzando l&#39;SDK della piattaforma (`platform_sdk`) o da origini esterne utilizzando i panda `read_csv()` o `read_json()` le funzioni.
 
 - [SDK per piattaforma](#platform-sdk)
 - [Fonti esterne](#external-sources)
