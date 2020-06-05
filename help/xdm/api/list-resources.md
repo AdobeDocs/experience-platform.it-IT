@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Elenco delle risorse
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 58549241f05f1bd604f33762f681c60946fa52f5
+source-git-commit: b4d8a6f8006d55c7aac19d705c6880fec915c147
+workflow-type: tm+mt
+source-wordcount: '519'
+ht-degree: 2%
 
 ---
 
@@ -83,9 +86,9 @@ I parametri di query più comuni per il paging includono:
 
 | Parametro | Descrizione |
 | --- | --- |
-| `start` | Specificate dove devono essere inviati i risultati elencati. Esempio: in seguito `start=2` verranno elencati i risultati del terzo elemento restituito. |
+| `start` | Specificate dove devono iniziare i risultati elencati. Questo valore può essere ottenuto dall&#39; `_page.next` attributo di una risposta a un elenco e utilizzato per accedere alla pagina successiva dei risultati. Se il `_page.next` valore è null, non è disponibile alcuna pagina aggiuntiva. |
 | `limit` | Limita il numero di risorse restituite. Esempio: `limit=5` restituirà un elenco di cinque risorse. |
-| `orderby` | Ordinare i risultati in base a una proprietà specifica. Esempio: i risultati `orderby=title` verranno ordinati in ordine crescente (A-Z) in base al titolo. Se si aggiunge un titolo `-` prima del titolo (`orderby=-title`), gli elementi vengono ordinati per titolo in ordine decrescente (Z-A). |
+| `orderby` | Ordinare i risultati in base a una proprietà specifica. Esempio: `orderby=title` ordinerà i risultati in ordine crescente (A-Z) in base al titolo. Se si aggiunge un titolo `-` prima del titolo (`orderby=-title`), gli elementi vengono ordinati per titolo in ordine decrescente (Z-A). |
 
 ### Filtro {#filtering}
 
@@ -100,6 +103,6 @@ Potete filtrare i risultati utilizzando il `property` parametro, utilizzato per 
 | `<=` | Filtra se la proprietà è minore o uguale al valore specificato. | `property=version<=5` |
 | `>=` | Filtra in base al fatto che la proprietà sia maggiore o uguale al valore fornito. | `property=version>=5` |
 | `~` | Filtra in base al fatto che la proprietà corrisponda o meno a un&#39;espressione regolare specificata. | `property=title~test$` |
-| (None) | Se si specifica solo il nome della proprietà, vengono restituite solo le voci in cui esiste la proprietà. | `property=title` |
+| (Nessuno) | Se si specifica solo il nome della proprietà, vengono restituite solo le voci in cui esiste la proprietà. | `property=title` |
 
 >[!TIP] Potete usare il `property` parametro per filtrare i mixin in base alla classe compatibile. Ad esempio, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` restituisce solo i mixin compatibili con la classe Profilo singolo XDM.
