@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Guida per gli sviluppatori di SDK
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '943'
+ht-degree: 1%
 
 ---
 
 
 # Guida per gli sviluppatori di SDK
 
-L’SDK per l’authoring dei modelli consente di sviluppare ricette di machine learning personalizzate e pipeline di funzionalità utilizzabili in Adobe Experience Platform Data Science Workspace, fornendo modelli implementabili in PySpark e Spark.
+L’SDK per l’authoring dei modelli consente di sviluppare ricette di machine learning personalizzate e pipeline di funzionalità utilizzabili in [!DNL Adobe Experience Platform] Data Science Workspace, fornendo modelli implementabili in PySpark e Spark.
 
 Questo documento fornisce informazioni sulle varie classi rilevate nell’SDK per l’authoring dei modelli.
 
