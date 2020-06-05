@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Arricchisci il profilo cliente in tempo reale con informazioni approfondite sull'apprendimento automatico
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '1174'
+ht-degree: 0%
 
 ---
 
 
 # Arricchisci il profilo cliente in tempo reale con informazioni approfondite sull&#39;apprendimento automatico
 
-Adobe Experience Platform Data Science Workspace offre gli strumenti e le risorse per creare, valutare e utilizzare modelli di machine learning per generare previsioni e approfondimenti sui dati. Quando le informazioni di machine learning vengono inserite in un dataset abilitato per il profilo, gli stessi dati vengono anche assimilati come record di profilo che possono essere poi segmentati in sottoinsiemi di elementi correlati utilizzando Experience Platform Segmentation Service.
+[!DNL Adobe Experience Platform] Data Science Workspace fornisce gli strumenti e le risorse per creare, valutare e utilizzare modelli di machine learning per generare previsioni e approfondimenti sui dati. Quando le informazioni di machine learning vengono inserite in un dataset abilitato per il profilo, gli stessi dati vengono anche assimilati come record di profilo che possono essere poi segmentati in sottoinsiemi di elementi correlati utilizzando Experience Platform Segmentation Service.
 
 Questo documento fornisce un&#39;esercitazione dettagliata per arricchire il profilo cliente in tempo reale con informazioni approfondite sull&#39;apprendimento automatico. I passaggi sono suddivisi nelle seguenti sezioni:
 
@@ -21,7 +24,7 @@ Questo documento fornisce un&#39;esercitazione dettagliata per arricchire il pro
 
 ## Introduzione
 
-Questa esercitazione richiede una conoscenza approfondita dei vari aspetti di Adobe Experience Platform coinvolti nell&#39;acquisizione dei dati del profilo e nella creazione di segmenti. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
+Questa esercitazione richiede una comprensione approfondita dei vari aspetti del [!DNL Adobe Experience Platform] coinvolgimento nel processo di acquisizione dei dati del profilo e nella creazione di segmenti. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
 * [Profilo](../../rtcdp/overview.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 * [Servizio](../../identity-service/home.md)identità: Abilita il profilo cliente in tempo reale collegando identità da origini dati diverse che vengono caricate nella piattaforma.
