@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Preparare i dati per l'utilizzo in Intelligent Services
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 8e24c7c50d700bc3644ce710f77073e537207a6f
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1437'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ Nella tabella seguente sono riportati alcuni esempi di canali di marketing mappa
 
 | Canale | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
-| Ricerca a pagamento | https:/<span>/ns.adobe.com/xdm/channel-types/search | pagato | click |
+| Ricerca pagata | https:/<span>/ns.adobe.com/xdm/channel-types/search | pagato | click |
 | Social - Marketing | https:/<span>/ns.adobe.com/xdm/channel-types/social | guadagnato | click |
 | Visualizzazione | https:/<span>/ns.adobe.com/xdm/channel-types/display | pagato | click |
 | E-mail | https:/<span>/ns.adobe.com/xdm/channel-types/email | pagato | click |
@@ -191,7 +191,7 @@ Una volta determinato se i dati degli eventi di marketing possono essere mappati
 
 Dopo aver deciso l&#39;intervallo di dati da inviare, contatta i servizi di consulenza Adobe per facilitare la mappatura dei dati sullo schema e l&#39;assimilazione nel servizio.
 
-Se disponete di un’iscrizione Adobe Experience Platform e desiderate mappare e assimilare i dati voi stessi, seguite i passaggi descritti nella sezione seguente.
+Se disponete di un’ [!DNL Adobe Experience Platform] iscrizione e desiderate mappare e assimilare i dati voi stessi, seguite i passaggi descritti nella sezione seguente.
 
 ### Utilizzo di Adobe Experience Platform
 
@@ -217,7 +217,7 @@ Dopo aver creato e salvato lo schema, è possibile creare un nuovo dataset basat
 
 #### Aggiunta di un tag dello spazio dei nomi dell&#39;identità primaria al dataset
 
-Se trasferisci dati da Adobe Audience Manager, Adobe Analytics o da un&#39;altra origine esterna, devi aggiungere un `primaryIdentityNameSpace` tag al set di dati. Questo può essere fatto eseguendo una richiesta PATCH all’API del servizio catalogo.
+Se trasferisci dati da [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]o da un&#39;altra origine esterna, devi aggiungere un `primaryIdentityNameSpace` tag al dataset. Questo può essere fatto eseguendo una richiesta PATCH all’API del servizio catalogo.
 
 Se state acquisendo dati da un file CSV locale, potete passare alla sezione successiva sulla [mappatura e l’assimilazione dei dati](#ingest).
 
