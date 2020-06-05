@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Scopri informazioni approfondite in Attribution AI
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '1164'
+ht-degree: 1%
 
 ---
 
@@ -21,7 +24,7 @@ Per utilizzare le informazioni per l&#39;analisi dell&#39;attribuzione AI, è ne
 
 ## Panoramica delle informazioni sulle istanze del servizio
 
-Nell’interfaccia utente di Adobe Experience Platform, fai clic su **Servizi** nella barra di navigazione a sinistra. Viene visualizzato il browser *Servizi* , che presenta i servizi intelligenti Adobe. Nel contenitore per l&#39;AI di attribuzione, fate clic su **Apri**.
+Nell’ [!DNL Adobe Experience Platform] interfaccia utente, fai clic su **Servizi** nella barra di navigazione a sinistra. Viene visualizzato il browser *Servizi* , che presenta i servizi intelligenti Adobe. Nel contenitore per l&#39;AI di attribuzione, fate clic su **Apri**.
 
 ![Accesso all’istanza](./images/insights/open_Attribution_ai.png)
 
