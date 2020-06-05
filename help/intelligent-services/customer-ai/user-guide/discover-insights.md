@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Scopri informazioni approfondite con l'AI del cliente
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '1032'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ Per utilizzare le informazioni per l&#39;AI cliente, è necessario disporre di u
 
 ## Panoramica dell’istanza del servizio
 
-Nell’interfaccia utente di Adobe Experience Platform, fai clic su **[!UICONTROL Services]** nella barra di navigazione a sinistra. Viene visualizzato il browser *Servizi* , che presenta i servizi intelligenti disponibili. Nel contenitore per l&#39;API cliente, fate clic su **[!UICONTROL Open]**.
+Nell’ [!DNL Adobe Experience Platform] interfaccia utente, fate clic **[!UICONTROL Services]** nel menu di navigazione a sinistra. Viene visualizzato il browser *Servizi* , che presenta i servizi intelligenti disponibili. Nel contenitore per l&#39;API cliente, fate clic su **[!UICONTROL Open]**.
 
 ![Accesso all’istanza](../images/insights/navigate-to-service.png)
 
@@ -111,7 +114,7 @@ Facendo clic sul **[!UICONTROL Create Segment]** pulsante in uno qualsiasi dei p
 
 Il generatore di segmenti viene utilizzato per definire un segmento. Quando si seleziona **[!UICONTROL Create Segment]** dalla pagina Insights (Approfondimenti), l&#39;AI cliente aggiunge automaticamente al segmento le informazioni del bucket selezionato. Per completare la creazione del segmento, è sufficiente compilare i contenitori *Nome* e *Descrizione* nella parte destra dell’interfaccia utente del generatore di segmenti. Dopo aver assegnato al segmento un nome e una descrizione, fai clic **[!UICONTROL Save]** in alto a destra.
 
->!![NOTE] Poiché i punteggi di propensione sono scritti sul singolo profilo, sono disponibili nel generatore di segmenti come qualsiasi altro attributo di profilo. Quando vai al generatore di segmenti per creare nuovi segmenti, puoi vedere tutti i vari punteggi di propensione nello spazio dei nomi Customer AI (AI cliente).
+>!![NOTE] Poiché i punteggi di propensione sono scritti nel singolo profilo, sono disponibili nel generatore di segmenti come qualsiasi altro attributo di profilo. Quando vai al generatore di segmenti per creare nuovi segmenti, puoi vedere tutti i vari punteggi di propensione nello spazio dei nomi Customer AI (AI cliente).
 
 ![Riempimento segmento in](../images/insights/segment-saving.png)
 
