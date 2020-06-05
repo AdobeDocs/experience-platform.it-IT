@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Creare una tubazione di feature
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '971'
+ht-degree: 0%
 
 ---
 
 
 # Creare una tubazione di feature
 
-Adobe Experience Platform consente di creare e creare pipeline di funzionalità personalizzate per eseguire la progettazione di funzionalità su scala tramite il runtime Sensei Machine Learning Framework (di seguito &quot;Runtime&quot;).
+[!DNL Adobe Experience Platform] consente di creare e creare tubazioni di feature personalizzate per eseguire la progettazione di feature in scala tramite il runtime Sensei Machine Learning Framework (di seguito &quot;Runtime&quot;).
 
 Questo documento descrive le varie classi rilevate in una pipeline delle feature e fornisce un&#39;esercitazione dettagliata per la creazione di una pipeline delle feature personalizzata mediante l&#39;SDK [per l&#39;authoring dei](./sdk.md) modelli in PySpark e Spark.
 
@@ -35,7 +38,7 @@ Il seguente diagramma di flusso mostra l&#39;ordine di esecuzione del runtime:
 
 ## Implementare le classi di Feature Pipeline {#implement-your-feature-pipeline-classes}
 
-Le sezioni seguenti forniscono dettagli ed esempi sull&#39;implementazione delle classi richieste per una tubazione di feature.
+Le sezioni seguenti forniscono dettagli ed esempi sull&#39;implementazione delle classi necessarie per una tubazione di feature.
 
 ### Definire le variabili nel file JSON di configurazione {#define-variables-in-the-configuration-json-file}
 
@@ -518,7 +521,7 @@ Per creare una pipeline delle feature PySpark, eseguite lo script `setup.py` Pyt
 python3 setup.py bdist_egg
 ```
 
-La creazione corretta della feature Pipeline genera un `.egg` artefatto nella `/dist` directory. Questo artefatto viene utilizzato per creare una feature Pipeline.
+La creazione corretta della feature Pipeline genera un `.egg` artefatto nella `/dist` directory, che viene utilizzato per creare una feature Pipeline.
 
 **Spark**
 
@@ -534,7 +537,7 @@ La creazione corretta della feature Pipeline genera un `.jar` artefatto nella `/
 
 ## Creazione di un motore di pipeline delle funzioni tramite l&#39;API {#create-a-feature-pipeline-engine-using-the-api}
 
-Dopo aver creato la pipeline delle feature e aver creato l&#39;artefatto binario, è possibile [creare un motore di tubazione delle feature utilizzando l&#39;API](../api/engines.md#create-a-feature-pipeline-engine-using-binary-artifacts)Sensei Machine Learning. La creazione corretta di un modulo di gestione tubazioni di feature fornirà un ID motore come parte del corpo della risposta. Accertatevi di salvare questo valore prima di continuare con i passaggi successivi.
+Dopo aver creato la pipeline delle feature e aver creato l&#39;artefatto binario, è possibile [creare un motore di tubazione delle feature utilizzando l&#39;API](../api/engines.md#create-a-feature-pipeline-engine-using-binary-artifacts)Sensei Machine Learning. La creazione corretta di un motore di tubazione delle feature fornisce un ID motore come parte del corpo della risposta. Accertatevi di salvare questo valore prima di continuare con i passaggi successivi.
 
 ## Passaggi successivi {#next-steps}
 
