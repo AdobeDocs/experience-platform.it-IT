@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Panoramica di AI per attribuzione
 topic: Attribution AI
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '654'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +22,7 @@ L&#39;AI di attribuzione è utilizzata per attribuire i crediti ai punti di cont
 
 Le uscite AI di attribuzione possono essere suddivise in diverse dimensioni e utilizzate in diverse fasi del percorso del cliente. Ciò è possibile senza dover tradurre le esigenze aziendali in problemi di machine learning, algoritmi di scelta, formazione o implementazione di modelli.
 
-I dati AI di attribuzione possono provenire da origini dati Adobe (ad esempio Analytics) o non Adobe.
+I dati AI di attribuzione possono provenire da Adobe (ad es. [!DNL Analytics]) o origini dati non Adobe.
 
 L&#39;AI di attribuzione supporta due categorie di punteggi, algoritmici e basati su regole. I punteggi algoritmici includono punteggi incrementali e influenzati. I punteggi basati su regole includono Primo tocco, Ultimo tocco, Lineare, A forma di U e Time-Decay.
 
@@ -57,7 +60,7 @@ Attribution AI può essere utilizzato per assistere con i seguenti casi di utili
 
 ### Funzioni aggiuntive
 
-L&#39;attribuzione AI offre anche l&#39;integrazione con altre soluzioni Adobe come Adobe Analytics. Questo consente di utilizzare queste soluzioni per utilizzare il modello algoritmico personalizzabile per valutare le prestazioni dei supporti e fornire informazioni analitiche.
+L&#39;attribuzione AI offre inoltre l&#39;integrazione con altre soluzioni Adobe come [!DNL Adobe Analytics]. Questo consente di utilizzare queste soluzioni per utilizzare il modello algoritmico personalizzabile per valutare le prestazioni dei supporti e fornire informazioni analitiche.
 
 ## Passaggi successivi
 
