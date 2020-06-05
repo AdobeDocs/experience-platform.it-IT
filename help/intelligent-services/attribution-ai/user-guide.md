@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida utente AI per attribuzione
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
 workflow-type: tm+mt
 source-wordcount: '1430'
 ht-degree: 0%
@@ -52,7 +52,7 @@ Esistono tre tipi diversi di dati di input utilizzati per definire gli eventi:
 - **Finestra di ricerca:** Fornisce un intervallo di tempo che indica quanti giorni prima dei punti di contatto dell&#39;evento di conversione devono essere inclusi.
 - **Punti di contatto:** eventi di marketing a livello di destinatari, singoli e o cookie utilizzati per valutare l&#39;impatto numerico o basato sulle entrate delle conversioni.
 
-### Definizione degli eventi di conversione
+### Definizione degli eventi di conversione {#define-conversion-events}
 
 Per definire un evento di conversione, è necessario assegnare all&#39;evento un nome e selezionare il tipo di evento facendo clic sul menu a discesa **Inserisci nome** campo.
 
@@ -144,7 +144,7 @@ Per modificare l&#39;ora del giorno in cui si desidera che venga eseguito il pun
 
 ![icona orologio](./images/user-guide/time_of_day.png)
 
-### Modellazione basata sulle regioni (facoltativo)
+### Modellazione basata sulle regioni (facoltativo) {#region-based-modeling-optional}
 
 I comportamenti dei clienti possono essere significativamente diversi per paese e area geografica. Per le aziende globali, l&#39;utilizzo di modelli basati su paesi o regioni può aumentare la precisione di attribuzione. Ogni area aggiunta crea un nuovo modello con i dati di tale regione.
 
