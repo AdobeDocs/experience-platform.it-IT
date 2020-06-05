@@ -1,10 +1,10 @@
 ---
 title: Eseguire il debug
-seo-title: Debug dell’SDK Web di Adobe Experience Platform
-description: Scopri come attivare/disattivare il debug dell’SDK Web per la piattaforma Experience
-seo-description: Scopri come attivare/disattivare il debug dell’SDK Web per la piattaforma Experience
+seo-title: Adobe Experience Platform Web SDK debugging
+description: Learn how to toggle Experience Platform Web SDK debugging
+seo-description: Learn how to toggle Experience Platform Web SDK debugging
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 31a527cb4ad1348262131f827c7e932404542c4b
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 0%
@@ -14,12 +14,12 @@ ht-degree: 0%
 
 # Eseguire il debug
 
-Quando il debug è abilitato, l’SDK invia messaggi alla console del browser che possono essere utili per eseguire il debug dell’implementazione e comprendere il funzionamento dell’SDK. Il debug comporta inoltre una convalida sincrona lato server dei dati raccolti rispetto allo schema configurato.
+When debugging is enabled, the SDK outputs messages to the browser console that can be helpful in debugging your implementation and understanding how the SDK is behaving. Debugging also results in a server-side synchronous validation of the data being collected against the schema you have configured.
 
 Il debug è disattivato per impostazione predefinita, ma può essere attivato in tre modi diversi:
 
 * `configure` command
-* `debug` command
+* `setDebug` command
 * parametro stringa query
 
 ## Attivazione del debug con il comando Configura
@@ -42,7 +42,7 @@ alloy("configure", {
 Attiva il debug con un `debug` comando separato, come segue:
 
 ```javascript
-alloy("debug", {
+alloy("setDebug", {
   "enabled": true
 });
 ```
