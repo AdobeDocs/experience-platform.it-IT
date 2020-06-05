@@ -4,19 +4,22 @@ solution: Experience Platform
 title: Creare lo schema di vendita al dettaglio e il dataset
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 91c7b7e285a4745da20ea146f2334510ca11b994
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '526'
+ht-degree: 0%
 
 ---
 
 
 # Creare lo schema di vendita al dettaglio e il dataset
 
-Questa esercitazione fornisce i prerequisiti e le risorse richiesti per tutte le altre esercitazioni di Adobe Experience Platform Data Science Workspace. Al termine, lo schema Vendite al dettaglio e i set di dati saranno disponibili per voi e per i membri dell&#39;organizzazione IMS sulla piattaforma Experience.
+Questa esercitazione fornisce i prerequisiti e le risorse richiesti per tutte le altre esercitazioni di [!DNL Adobe Experience Platform] Data Science Workspace. Al termine, lo schema Vendite al dettaglio e i set di dati saranno disponibili per voi e per i membri dell&#39;organizzazione IMS sulla piattaforma Experience.
 
 ## Introduzione
 
 Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prerequisiti:
-- Accesso ad Adobe Experience Platform. Se non disponete dell&#39;accesso a un&#39;organizzazione IMS in Experience Platform, rivolgetevi al vostro amministratore di sistema prima di continuare.
+- Accesso a [!DNL Adobe Experience Platform]. Se non disponete dell&#39;accesso a un&#39;organizzazione IMS in Experience Platform, rivolgetevi al vostro amministratore di sistema prima di continuare.
 - Autorizzazione per effettuare chiamate API Experience Platform. Completa l’esercitazione [Authenticate e accedi all’esercitazione API](../../tutorials/authentication.md) Adobe Experience Platform per ottenere i seguenti valori al fine di completare con successo questa esercitazione:
    - Autorizzazione: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
