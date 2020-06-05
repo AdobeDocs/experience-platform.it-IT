@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guida utente AI per attribuzione
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 3e1e7bea7113b5db6b9bd02ce0dbe8cfd486206c
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+workflow-type: tm+mt
+source-wordcount: '1430'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,7 @@ Questo documento funge da guida per l&#39;interazione con Attribution AI nell&#3
 
 ## Creare un&#39;istanza
 
-Nell’interfaccia utente di Adobe Experience Platform, fai clic su **Servizi** nella barra di navigazione a sinistra. Viene visualizzato il browser *Servizi* , con i servizi intelligenti Adobe disponibili. Nel contenitore per l&#39;AI di attribuzione, fate clic su **Apri**.
+Nell’ [!DNL Adobe Experience Platform] interfaccia utente, fai clic su **Servizi** nella barra di navigazione a sinistra. Viene visualizzato il browser *Servizi* , con i servizi intelligenti Adobe disponibili. Nel contenitore per l&#39;AI di attribuzione, fate clic su **Apri**.
 
 ![Accesso all’istanza](./images/user-guide/open_Attribution_ai.png)
 
