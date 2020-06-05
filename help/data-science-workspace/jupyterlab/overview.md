@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida utente di JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '3356'
+source-wordcount: '3349'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # Guida utente di JupyterLab
 
-JupyterLab è un&#39;interfaccia utente basata sul Web per <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> ed è strettamente integrata in Adobe Experience Platform. Fornisce un ambiente di sviluppo interattivo che consente agli scienziati dei dati di lavorare con notebook, codice e dati Jupyter.
+JupyterLab è un&#39;interfaccia utente basata sul Web per <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> ed è strettamente integrata in [!DNL Adobe Experience Platform]. Fornisce un ambiente di sviluppo interattivo che consente agli scienziati dei dati di lavorare con notebook, codice e dati Jupyter.
 
 Questo documento fornisce una panoramica di JupyterLab e delle sue funzioni, oltre alle istruzioni per eseguire azioni comuni.
 
@@ -29,7 +29,7 @@ L&#39;elenco seguente illustra alcune delle funzioni esclusive di JupyterLab sul
 | **Kernel** | I kernel forniscono ai notebook e ad altri front-end JupyterLab la possibilità di eseguire e analizzare il codice in diversi linguaggi di programmazione. Experience Platform fornisce ulteriori kernel per supportare lo sviluppo in Python, R, PySpark e Spark. Per ulteriori dettagli, consulta la sezione [kernel](#kernels) . |
 | **Accesso ai dati** | Accedete ai set di dati esistenti direttamente da JupyterLab con il supporto completo per le funzionalità di lettura e scrittura. |
 | **Integrazione del servizio piattaforma** | Le integrazioni integrate consentono di utilizzare altri servizi della piattaforma direttamente da JupyterLab. Un elenco completo delle integrazioni supportate è disponibile nella sezione [Integrazione con altri servizi](#service-integration)della piattaforma. |
-| **Autenticazione** | Oltre al modello <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">di sicurezza integrato di</a>JupyterLab, ogni interazione tra l&#39;applicazione e la piattaforma Experience Platform, inclusa la comunicazione tra servizi della piattaforma, viene crittografata e autenticata tramite il sistema IMS ( <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">Adobe Identity Management System)</a>. |
+| **Autenticazione** | Oltre al modello <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">di sicurezza integrato di</a>JupyterLab, ogni interazione tra l&#39;applicazione e la piattaforma Experience Platform, inclusa la comunicazione tra i servizi della piattaforma, viene crittografata e autenticata tramite <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
 | **Librerie di Sviluppo** | In Experience Platform, JupyterLab offre librerie preinstallate per Python, R e PySpark. Consultate l&#39; [appendice](#supported-libraries) per un elenco completo delle librerie supportate. |
 | **Controller libreria** | Se le librerie preinstallate non sono adatte alle vostre esigenze, è possibile installare librerie aggiuntive per Python e R e memorizzare temporaneamente in contenitori isolati per mantenere l&#39;integrità della Piattaforma e proteggere i dati. Per ulteriori dettagli, consulta la sezione [kernel](#kernels) . |
 
