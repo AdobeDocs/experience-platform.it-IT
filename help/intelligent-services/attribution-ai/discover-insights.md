@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Scopri informazioni approfondite in Attribution AI
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 1%
@@ -57,7 +57,7 @@ Viene visualizzata la finestra di dialogo di modifica, che consente di modificar
 
 ![edit pover](./images/insights/edit-popover.png)
 
-### Altre azioni
+### Altre azioni {#more-actions}
 
 Il pulsante *Altre azioni* si trova nella barra di navigazione in alto a destra accanto a *Modifica*. Facendo clic su **Altre azioni** si apre un menu a discesa che consente di selezionare una delle operazioni seguenti:
 
