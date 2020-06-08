@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Creare pacchetti di file sorgente in una ricetta
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+workflow-type: tm+mt
+source-wordcount: '1096'
+ht-degree: 0%
 
 ---
 
@@ -193,46 +196,3 @@ Questa esercitazione ha passato i file di origine del pacchetto in una Ricetta, 
 
 - [Importare una ricetta in un pacchetto nell’interfaccia utente](./import-packaged-recipe-ui.md)
 - [Importare una composizione in pacchetti utilizzando l&#39;API](./import-packaged-recipe-api.md)
-
-## Creazione di file binari (obsoleto)
-
->[!CAUTION]
-> I binari non sono supportati nelle nuove ricette PySpark e Scala e sono impostati per essere rimossi in una release futura. Segui i flussi di lavoro [](#docker-based-model-authoring) Docker quando lavori con PySpark e Scala. I seguenti flussi di lavoro sono applicabili solo alle ricette Spark 2.3.
-
-### Creare file binari PySpark (obsoleto)
-
-Se non lo avete fatto, clonate il repository github nel sistema locale con il seguente comando:
-
-```BASH
-git clone https://github.com/adobe/experience-platform-dsw-reference.git
-```
-
-Accedete all&#39;archivio clonato nel sistema locale ed eseguite i seguenti comandi per creare il `.egg` file richiesto per l&#39;importazione di una ricetta PySpark:
-
-```BASH
-cd recipes/pyspark
-./build.sh
-```
-
-Il `.egg` file viene generato nella `dist` cartella.
-
-Ora puoi passare ai passaggi [successivi](#next-steps).
-
-#### Creare file binari Scala (obsoleto)
-
-Se non lo avete ancora fatto, eseguite il comando seguente per duplicare il repository di Github nel sistema locale:
-
-```BASH
-git clone https://github.com/adobe/experience-platform-dsw-reference.git
-```
-
-Per creare l&#39; `.jar` artefatto utilizzato per importare una ricetta Scala, andate al repository clonato e seguite la procedura seguente:
-
-```BASH
-cd recipes/scala/
-./build.sh
-```
-
-L&#39; `.jar` artifact generato con dipendenze si trova nella `/target` directory.
-
-Ora puoi passare ai passaggi [successivi](#next-steps).
