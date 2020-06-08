@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guide per la migrazione a componenti e notebook
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 36305d9098f24b40efd333e7d8a331ebca41ca59
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+workflow-type: tm+mt
+source-wordcount: '3459'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 36305d9098f24b40efd333e7d8a331ebca41ca59
 # Guide per la migrazione a componenti e notebook
 
 >[!NOTE]
->I notebook e le ricette che utilizzano Python/R rimangono invariati. La migrazione si applica solo alle ricette e ai blocchi appunti PySpark/Spark esistenti.
+>I notebook e le ricette che utilizzano Python/R rimangono invariati. La migrazione si applica solo alle ricette e ai notebook PySpark/Spark (2.3).
 
 Le guide seguenti descrivono i passaggi e le informazioni necessari per migrare ricette e blocchi appunti esistenti.
 
