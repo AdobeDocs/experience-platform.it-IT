@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Connettore di archiviazione Google Cloud
 topic: overview
 translation-type: tm+mt
-source-git-commit: 256a193e56e69078d1c01c622656f0b1a18e73ff
+source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '363'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Connettore di archiviazione Google Cloud
 
-Adobe Experience Platform offre connettività nativa per fornitori di cloud come AWS, Google Cloud Platform e Azure. È possibile trasferire i dati da questi sistemi in Piattaforma.
+Adobe Experience Platform offre connettività nativa per fornitori di cloud come AWS, Google Cloud Platform e Azure, consentendo di portare i dati da questi sistemi.
 
 Le origini di archiviazione cloud possono portare i tuoi dati in Platform senza bisogno di scaricare, formattare o caricare. I dati ingeriti possono essere formattati come JSON XDM, parquet XDM o delimitati. Ogni fase del processo è integrata nel flusso di lavoro Origini. La piattaforma consente di inserire i dati da Google Cloud Storage tramite batch.
 
