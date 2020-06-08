@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guida utente di JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: 440310339003bf23c9fcfc69a6ec1eacddc9f413
 workflow-type: tm+mt
-source-wordcount: '2773'
-ht-degree: 6%
+source-wordcount: '3672'
+ht-degree: 11%
 
 ---
 
@@ -37,13 +37,14 @@ L&#39;elenco seguente illustra alcune delle funzioni esclusive di JupyterLab sul
 
 ## Integrazione con altri servizi della piattaforma {#service-integration}
 
-Standardizzazione e interoperabilità sono concetti chiave della piattaforma Experience. L&#39;integrazione di JupyterLab sulla piattaforma come IDE integrato consente di interagire con altri servizi della piattaforma, consentendoti di utilizzare la piattaforma al massimo potenziale. I seguenti servizi della piattaforma sono disponibili in JupyterLab:
+Standardizzazione e interoperabilità sono concetti chiave alla base di [!DNL Experience Platform]. L&#39;integrazione di JupyterLab su [!DNL Platform] come IDE integrato consente di interagire con altri [!DNL Platform] servizi, consentendoti di sfruttare [!DNL Platform] al massimo il suo potenziale. I seguenti [!DNL Platform] servizi sono disponibili in JupyterLab:
 
 * **Servizio catalogo:** Accesso ed esplorazione di set di dati con funzionalità di lettura e scrittura.
 * **Servizio query:** Accesso ed esplorazione di dataset utilizzando SQL, fornendo costi generali di accesso ai dati inferiori quando si tratta di grandi quantità di dati.
 * **Sensei ML Framework:** Sviluppo di modelli con la capacità di formare e valutare i dati, nonché creazione di ricette con un solo clic.
+* **Modello dati esperienza (XDM):** Standardizzazione e interoperabilità sono concetti chiave di Adobe Experience Platform. [Experience Data Model (XDM)](https://www.adobe.com/go/xdm-home-en), guidato da Adobe, è uno sforzo per standardizzare i dati sull&#39;esperienza cliente e definire schemi per la gestione dell&#39;esperienza cliente.
 
->[!NOTE] Alcune integrazioni dei servizi della piattaforma su JupyterLab sono limitate a specifici kernel. Per ulteriori informazioni, consulta la sezione sui [kernel](#kernels) .
+>[!NOTE] Alcune integrazioni di [!DNL Platform] servizio su JupyterLab sono limitate a specifici kernel. Per ulteriori informazioni, consulta la sezione sui [kernel](#kernels) .
 
 ## Funzioni principali e operazioni comuni
 
@@ -230,6 +231,82 @@ Per aprire un nuovo *avvio*, fai clic su **File > Nuovo avvio**. In alternativa,
 
 Ogni kernel supportato fornisce funzionalità integrate che consentono di leggere i dati della piattaforma da un dataset all&#39;interno di un blocco appunti. Tuttavia, il supporto per l&#39;impaginazione dei dati è limitato ai notebook Python e R.
 
+### Limiti dei dati per notebook
+
+Le informazioni seguenti definiscono la quantità massima di dati leggibili, il tipo di dati utilizzato e il periodo di tempo stimato necessario per la lettura dei dati. Per Python e R, per i benchmark è stato utilizzato un server notebook configurato a 40 GB di RAM. Per PySpark e Scala, un cluster di database configurato a 64 GB di RAM, 8 core, 2 DBU con un massimo di 4 dipendenti è stato utilizzato per i benchmark indicati di seguito.
+
+I dati dello schema ExperienceEvent utilizzati variavano nelle dimensioni a partire da mille (1K) righe fino a un miliardo di righe (1B). Per le metriche PySpark e Spark, è stato utilizzato un intervallo di date di 10 giorni per i dati XDM.
+
+I dati dello schema ad hoc sono stati preelaborati utilizzando CTAS (Query Service Create Table as Select). Questi dati sono anche variati in dimensioni a partire da mille (1K) righe che vanno fino a un miliardo (1B) righe.
+
+#### Limiti dei dati del notebook Python
+
+**Schema ExperienceEvent XDM:** È necessario essere in grado di leggere un massimo di 2 milioni di righe (circa 6,1 GB di dati su disco) di dati XDM in meno di 22 minuti. L&#39;aggiunta di righe aggiuntive potrebbe causare errori.
+
+| Numero di righe | 1K | 10K | 100K | 1M | 2M |
+| ----------------------- | ------ | ------ | ----- | ----- | ----- |
+| Dimensioni su disco (MB) | 18.73 | 187.5 | 308 | 3000 | 6050 |
+| SDK (in secondi) | 20.3 | 86.8 | 63 | 659 | 1315 |
+
+**schema ad hoc:** È necessario essere in grado di leggere un massimo di 5 milioni di righe (circa 5,6 GB di dati su disco) di dati non XDM (ad hoc) in meno di 14 minuti. L&#39;aggiunta di righe aggiuntive potrebbe causare errori.
+
+| Numero di righe | 1K | 10K | 100K | 1M | 2M | 3M | 5M |
+| ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- | ------ |
+| Dimensioni su disco (in MB) | 1.21 | 11.72 | 115 | 1120 | 2250 | 3380 | 5630 |
+| SDK (in secondi) | 7.27 | 9.04 | 27.3 | 180 | 346 | 487 | 819 |
+
+#### Limiti dei dati del notebook R
+
+**Schema ExperienceEvent XDM:** In meno di 13 minuti è possibile leggere al massimo 1 milione di righe di dati XDM (3 GB di dati su disco).
+
+| Numero di righe | 1K | 10K | 100K | 1M |
+| ----------------------- | ------ | ------ | ----- | ----- |
+| Dimensioni su disco (MB) | 18.73 | 187.5 | 308 | 3000 |
+| R Kernel (in secondi) | 14.03 | 69.6 | 86.8 | 775 |
+
+**schema ad hoc:** Dovrebbe essere possibile leggere un massimo di 3 milioni di righe di dati ad hoc (293 MB di dati su disco) in circa 10 minuti.
+
+| Numero di righe | 1K | 10K | 100K | 1M | 2M | 3M |
+| ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- |
+| Dimensioni su disco (in MB) | 0.082 | 0.612 | 9.0 | 91 | 188 | 293 |
+| SDK R (in sec) | 7.7 | 4.58 | 35.9 | 233 | 470.5 | 603 |
+
+#### Limiti dei dati del notebook PySpark (kernel Python):
+
+**Schema ExperienceEvent XDM:** In modalità interattiva è possibile leggere fino a 5 milioni di righe (circa 13,42 GB di dati su disco) di dati XDM in circa 20 minuti. La modalità interattiva supporta solo fino a 5 milioni di righe. Se si desidera leggere set di dati più grandi, è consigliabile passare alla modalità Batch. In modalità Batch dovreste essere in grado di leggere un massimo di 500 milioni di righe (circa 1,31 TB di dati su disco) di dati XDM in circa 14 ore.
+
+| Numero di righe | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M |
+|-------------------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
+| Dimensioni su disco | 2.93MB | 4.38MB | 29.02 | 2.69 GB | 5.39 GB | 8.09 GB | 13.42 GB | 26.82 GB | 134.24 GB | 268.39 GB | 1.31TB |
+| SDK (modalità interattiva) | 33s | 32.4s | 55.1s | 253.5s | 489.2s | 729.6s | 1206.8s | - | - | - | - |
+| SDK (modalità batch) | 815.8s | 492.8s | 379.1s | 637.4s | 624.5s | 869.2s | 1104.1s | 1786s | 5387.2s | 10624.6s | 50547s |
+
+**schema ad hoc:** In modalità interattiva è necessario essere in grado di leggere un massimo di 1 miliardo di righe (circa 1,05 TB di dati su disco) di dati non XDM in meno di 3 minuti. In modalità Batch dovreste essere in grado di leggere un massimo di 1 miliardo di righe (circa 1,05 TB di dati su disco) di dati non XDM in circa 18 minuti.
+
+| Numero di righe | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
+|--------------|--------|---------|---------|-------|-------|-------|--------|--------|---------|--------|---------|-------|
+| Dimensioni su disco | 1.12MB | 11.24MB | 109.48MB | 2.69 GB | 2.14 GB | 3.21 GB | 5.36 GB | 10.71 GB | 53.58 GB | 107.52 GB | 535.88 GB | 1.05TB |
+| Modalità interattiva SDK (in secondi) | 28.2s | 18.6s | 20.8s | 20.9s | 23.8s | 21.7s | 24.7s | 22s | 28.4s | 40s | 97.4s | 154.5s |
+| Modalità batch SDK (in secondi) | 428.8s | 578.8s | 641.4s | 538.5s | 630.9s | 467.3s | 411s | 675s | 702s | 719.2s | 1022.1s | 1122.3s |
+
+#### Limiti dei dati del notebook Spark (kernel Scala):
+
+**Schema ExperienceEvent XDM:** In modalità interattiva è possibile leggere fino a 5 milioni di righe (circa 13,42 GB di dati su disco) di dati XDM in circa 18 minuti. La modalità interattiva supporta solo fino a 5 milioni di righe. Se si desidera leggere set di dati più grandi, è consigliabile passare alla modalità Batch. In modalità Batch dovreste essere in grado di leggere un massimo di 500 milioni di righe (circa 1,31 TB di dati su disco) di dati XDM in circa 14 ore.
+
+| Numero di righe | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M |
+|---------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
+| Dimensioni su disco | 2.93MB | 4.38MB | 29.02 | 2.69 GB | 5.39 GB | 8.09 GB | 13.42 GB | 26.82 GB | 134.24 GB | 268.39 GB | 1.31TB |
+| Modalità interattiva SDK (in secondi) | 37.9s | 22.7s | 45.6s | 231.7s | 444.7s | 660.6s | 1100s | - | - | - | - |
+| Modalità batch SDK (in secondi) | 374.4s | 398.5s | 527s | 487.9s | 588.9s | 829s | 939.1s | 1441s | 5473.2s | 10118.8 | 49207.6 |
+
+**schema ad hoc:** In modalità interattiva è necessario essere in grado di leggere un massimo di 1 miliardo di righe (circa 1,05 TB di dati su disco) di dati non XDM in meno di 3 minuti. In modalità Batch dovreste essere in grado di leggere un massimo di 1 miliardo di righe (circa 1,05 TB di dati su disco) di dati non XDM in circa 16 minuti.
+
+| Numero di righe | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
+|--------------|--------|---------|---------|-------|-------|-------|---------|---------|---------|--------|---------|-------|
+| Dimensioni su disco | 1.12MB | 11.24MB | 109.48MB | 2.69 GB | 2.14 GB | 3.21 GB | 5.36 GB | 10.71 GB | 53.58 GB | 107.52 GB | 535.88 GB | 1.05TB |
+| Modalità interattiva SDK (in secondi) | 35.7s | 31s | 19.5s | 25.3s | 23s | 33.2s | 25.5s | 29.2s | 29.7s | 36.9s | 83.5s | 139s |
+| Modalità batch SDK (in secondi) | 448.8s | 459.7s | 519s | 475.8s | 599.9s | 347.6s | 407.8s | 397s | 518.8s | 487.9s | 760.2s | 975.4s |
+
 ### Leggi da un set di dati in Python/R
 
 I notebook Python e R consentono di impaginare i dati quando si accede ai set di dati. Di seguito è illustrato il codice di esempio per leggere i dati con e senza impaginazione.
@@ -296,7 +373,7 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 
 * `{DATASET_ID}`: L&#39;identità univoca del dataset a cui accedere
 
-### Leggi da un set di dati in PySpark/Scala
+### Leggi da un set di dati in PySpark/Spark/Scala
 
 Con un blocco appunti PySpark o Scala attivo aperto, espandere la scheda **Esplora** dati dalla barra laterale sinistra e fare doppio clic su **Set** dati per visualizzare un elenco dei set di dati disponibili. Fare clic con il pulsante destro del mouse sull&#39;elenco di set di dati a cui si desidera accedere e scegliere **Esplora dati nel blocco appunti**. Vengono generate le seguenti celle di codice:
 
