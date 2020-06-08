@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sui connettori sorgente della piattaforma Adobe Experience
 topic: overview
 translation-type: tm+mt
-source-git-commit: 22425c33e39cf788eec6fd0a54f65fb89fdaff4f
+source-git-commit: f181d544e93f0924bf4c239fad93d78c974afdc0
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -51,6 +51,7 @@ Le origini di archiviazione cloud possono portare i tuoi dati in Platform senza 
 - [Connettore archiviazione file Azure](connectors/cloud-storage/azure-file-storage.md)
 - [Connettore FTP e SFTP](connectors/cloud-storage/ftp-sftp.md)
 - [Connettore di archiviazione Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
+- [Connettore HDFS](connectors/cloud-storage/hdfs.md)
 
 ### Gestione delle relazioni con i clienti (CRM)
 
@@ -76,6 +77,7 @@ Experience Platform supporta l’acquisizione di dati da un database di terze pa
 - [Connettore Azure Data Explorer](connectors/databases/data-explorer.md)
 - [Connettore Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
 - [Connettore archiviazione tabella Azure](connectors/databases/ats.md)
+- [Connettore CouchBase](connectors/databases/couchbase.md)
 - [Connettore Google BigQuery](connectors/databases/bigquery.md)
 - [Connettore GreenPlum](connectors/databases/greenplum.md)
 - [Connettore HP Vertica](connectors/databases/hp-vertica.md)
