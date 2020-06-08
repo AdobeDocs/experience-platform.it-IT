@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Documentazione del prodotto Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: a5268c2d31d356ce479bdcc143050cd513259235
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
 workflow-type: tm+mt
-source-wordcount: '6973'
+source-wordcount: '6961'
 ht-degree: 0%
 
 ---
@@ -426,7 +426,7 @@ ht-degree: 0%
 
 **Componente regola:** In Experience Platform Launch, i componenti regola sono eventi, condizioni e azioni che costituiscono una regola.
 
-**Runtime:** Runtime specifica un ambiente di runtime per una ricetta di machine learning. I tempi di esecuzione di Spark e PySpark consentono il caricamento diretto di un file sorgente di ricette binarie (.jar). I runtime Python, R e Tensorflow consentono di inserire un URL in un&#39;immagine docker per una sorgente di ricette.
+**Runtime:** Runtime specifica un ambiente di runtime per una ricetta di machine learning. I runtime Python, R, Spark, PySpark e Tensorflow consentono di inserire un URL a un&#39;immagine docker per una sorgente di ricette.
 
 [Torna all&#39;inizio](#adobe-experience-platform-glossary)
 
