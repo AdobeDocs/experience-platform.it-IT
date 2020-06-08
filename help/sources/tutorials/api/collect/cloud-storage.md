@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Raccolta di dati di archiviazione cloud tramite connettori di origine e API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4a66be0b49bdcd765fd5dcbd0e646d35df54c7e4
+source-git-commit: 2a8e8f2deffca06782f0ad9b8154ee763c05f06d
 workflow-type: tm+mt
-source-wordcount: '1688'
+source-wordcount: '1689'
 ht-degree: 1%
 
 ---
@@ -668,7 +668,7 @@ Seguendo questa esercitazione, hai creato un connettore di origine per raccoglie
 - [Panoramica del profilo cliente in tempo reale](../../../../profile/home.md)
 - [Panoramica di Analysis Workspace](../../../../data-science-workspace/home.md)
 
-## Appendice
+## Appendice {#appendix}
 
 Nella sezione seguente sono elencati i diversi connettori di origine dell&#39;archivio cloud e le relative specifiche di connessione.
 
@@ -683,4 +683,5 @@ Nella sezione seguente sono elencati i diversi connettori di origine dell&#39;ar
 | Hubs evento di Azure (Hubs evento) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 | Archiviazione file Azure | `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
 | Archiviazione Google Cloud | `32e8f412-cdf7-464c-9885-78184cb113fd` |
+| HDFS | `54e221aa-d342-4707-bcff-7a4bceef0001` |
 | SFTP | `bf367b0d-3d9b-4060-b67b-0d3d9bd06094` |
