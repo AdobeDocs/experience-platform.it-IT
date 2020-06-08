@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Connettore Azure Data Lake Storage Gen2
 topic: overview
 translation-type: tm+mt
-source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '175'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Connettore Azure Data Lake Storage Gen2
 
-Adobe Experience Platform offre connettività nativa per fornitori di cloud come AWS, Google Cloud Platform e Azure. È possibile trasferire i dati da questi sistemi in Piattaforma.
+Adobe Experience Platform offre connettività nativa per fornitori di cloud come AWS, Google Cloud Platform e Azure, consentendo di portare i dati da questi sistemi.
 
 Le origini di archiviazione cloud possono portare i tuoi dati in Platform senza bisogno di scaricare, formattare o caricare. I dati ingeriti possono essere formattati come JSON XDM, parquet XDM o delimitati. Ogni fase del processo è integrata nel flusso di lavoro Origini. La piattaforma consente di inserire i dati da Azure Data Lake Storage Gen2 tramite batch.
 
