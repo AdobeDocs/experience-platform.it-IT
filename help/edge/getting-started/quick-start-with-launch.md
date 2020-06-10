@@ -4,9 +4,9 @@ seo-title: Avvio rapido dell’SDK Web per Adobe Experience Platform
 description: Guida di avvio rapido per l’utilizzo dell’estensione SDK Web di Experience Platform per la raccolta dei dati
 seo-description: Guida di avvio rapido per l’utilizzo dell’estensione SDK Web di Experience Platform per la raccolta dei dati
 translation-type: tm+mt
-source-git-commit: 2ccb2c17590780f7f1bd5e553164209763ab9e24
+source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '548'
 ht-degree: 3%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # Benvenuti
 
-Questa guida illustra le diverse modalità di configurazione dell’SDK Web per Adobe Experience Platform in Launch. Per poter utilizzare questa funzione è necessario essere inseriti nella white list. Se vuoi entrare nella lista d&#39;attesa, ti invitiamo a contattarti il CSM.
+Questa guida illustra i diversi passaggi per configurare l’SDK Web per Adobe Experience Platform in Launch. Per poter utilizzare questa funzione, è necessario disporre di autorizzazioni ed essere nell&#39;elenco di autorizzazioni. Se vuoi entrare nella lista d&#39;attesa, ti invitiamo a contattarti il CSM.
 
 - Accertati che sia attivato un dominio di [prime parti (CNAME)](https://docs.adobe.com/content/help/it-IT/core-services/interface/ec-cookies/cookies-first-party.html) . Se hai già un CNAME per Analytics, devi usarlo. La verifica in fase di sviluppo funzionerà senza un CNAME, ma ne avrai bisogno prima di andare in produzione
 - Accedi ad Adobe Experience Platform Data Platform. Se non hai acquistato la piattaforma, ti forniremo Experience Platform Data Services Foundation da utilizzare in modo limitato con l’SDK senza costi aggiuntivi.
@@ -26,7 +26,7 @@ Potete creare un ID di configurazione utilizzando lo strumento [di configurazion
 
 >[!NOTE]
 >
->La whitelist dell&#39;organizzazione deve essere utilizzata per la funzione. Contatta il tuo CSM per essere inserito nella lista per eventuali whitelist.
+>L&#39;organizzazione deve essere inclusa nell&#39;elenco Consenti per la funzione. Contattate il CSM per inserire l&#39;elenco dei permessi.
 
 ## Preparare uno schema
 
@@ -61,6 +61,6 @@ Una volta che i dati scorrono, è possibile effettuare le seguenti operazioni.
 - [Informazioni sul debug](../fundamentals/debugging.md)
 - Scoprite come [personalizzare l&#39;esperienza](../fundamentals/rendering-personalization-content.md)
 - Scopri come inviare dati a più soluzioni
-   - [Adobe Analytics](../solution-specific/analytics/analytics-overview.md) 
+   - [Adobe Analytics](../solution-specific/analytics/analytics-overview.md)
    - [Adobe Audience Manager](../solution-specific/audience-manager/audience-manager-overview.md)
    - [Adobe Target](../solution-specific/target/target-overview.md)
