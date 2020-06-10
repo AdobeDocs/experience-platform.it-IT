@@ -4,9 +4,9 @@ seo-title: Destinazione Google Display e Video 360
 description: Display & Video 360, precedentemente noto come DoubleClick Bid Manager è uno strumento che consente di eseguire campagne di retargeting e di targeting delle audience su diverse fonti di inventario di Display, Video e Mobile.
 seo-description: 'Display & Video 360, precedentemente noto come DoubleClick Bid Manager è uno strumento che consente di eseguire campagne di retargeting e di targeting delle audience su diverse fonti di inventario di Display, Video e Mobile. '
 translation-type: tm+mt
-source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '574'
 ht-degree: 0%
 
 ---
@@ -32,13 +32,13 @@ Tenete presente i seguenti dettagli specifici per le destinazioni Google Display
 
 ## Prerequisiti
 
-### Whitelist
+### Consenti elenco
 
 >[!NOTE]
 >
->La whitelist è obbligatoria prima di configurare la prima destinazione Google Display &amp; Video 360 in Adobe Real-time CDP. Prima di creare una destinazione, verificare che il processo di whitelist descritto di seguito sia stato completato da Google.
+>L&#39;elenco di autorizzazioni è obbligatorio prima di configurare la prima destinazione Google Display &amp; Video 360 in Adobe Real-time CDP. Prima di creare una destinazione, verificare che la procedura di autorizzazione elenco descritta di seguito sia stata completata da Google.
 
-Prima di creare la destinazione Google Display &amp; Video 360 in Adobe Real-time CDP, è necessario contattare Google chiedendo che Adobe sia inserito nella lista bianca come provider di dati e che il tuo account sia inserito nella lista bianca. Contattate Google e fornite le seguenti informazioni:
+Prima di creare la destinazione Google Display &amp; Video 360 in Adobe Real-time CDP, è necessario contattare Google chiedendo che Adobe sia incluso nell&#39;elenco dei provider di dati consentiti e che il tuo account sia aggiunto all&#39;elenco dei provider di dati consentiti. Contattate Google e fornite le seguenti informazioni:
 
 * **ID** account: questo è l&#39;ID account di Adobe con Google. Per ottenere questo ID, contatta l’Assistenza clienti Adobe o il tuo rappresentante Adobe.
 * **ID** cliente: questo è l&#39;ID account cliente di Adobe con Google. Per ottenere questo ID, contatta l’Assistenza clienti Adobe o il tuo rappresentante Adobe.
