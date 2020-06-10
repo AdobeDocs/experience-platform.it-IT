@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Creare un connettore CouchBase utilizzando l'API del servizio di flusso
+title: Creare un connettore Couchbase utilizzando l'API del servizio di flusso
 topic: overview
 translation-type: tm+mt
-source-git-commit: 566db28997dce2c7e1181d140f12adc4250f5e0d
+source-git-commit: e5789a10c49b2933a0727692dedf2601a214dbc2
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 2%
@@ -12,14 +12,14 @@ ht-degree: 2%
 ---
 
 
-# Creare un connettore CouchBase utilizzando l&#39;API del servizio di flusso
+# Creare un connettore Couchbase utilizzando l&#39;API del servizio di flusso
 
 >[!NOTE]
->Il connettore CouchBase è in versione beta. Le funzioni e la documentazione sono soggette a modifiche.
+>Il connettore Couchbase è in versione beta. Le funzioni e la documentazione sono soggette a modifiche.
 
 Flow Service è utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti diverse e portarli in Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
-Questa esercitazione utilizza l’API del servizio di flusso per seguire i passaggi necessari per connettere CouchBase alla piattaforma Experience.
+Questa esercitazione utilizza l’API del servizio di flusso per guidarti attraverso i passaggi necessari per connettere Couchbase alla piattaforma Experience.
 
 ## Introduzione
 
@@ -28,14 +28,14 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Expe
 * [Origini](../../../../home.md): Experience Platform consente di acquisire dati da varie fonti, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi della piattaforma.
 * [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegarsi correttamente a CouchBase utilizzando l&#39;API del servizio di flusso.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegarsi correttamente a Couchbase utilizzando l&#39;API del servizio di flusso.
 
 ### Raccogli credenziali richieste
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `connectionString` | Stringa di connessione utilizzata per connettersi all&#39;istanza CouchBase. Il pattern della stringa di connessione per CouchBase è `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. Per ulteriori informazioni sull&#39;acquisizione di una stringa di connessione, vedere [questo documento](https://docs.couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview)CouchBase. |
-| `connectionSpec.id` | Identificatore necessario per creare una connessione. L&#39;ID della specifica di connessione fissa per CouchBase è `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
+| `connectionString` | Stringa di connessione utilizzata per connettersi all&#39;istanza di Couchbase. Il pattern della stringa di connessione per Couchbase è `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. Per ulteriori informazioni sull&#39;acquisizione di una stringa di connessione, vedere [questo documento](https://docs.Couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview)Couchbase. |
+| `connectionSpec.id` | Identificatore necessario per creare una connessione. L&#39;ID della specifica di connessione fissa per Couchbase è `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
 
 ### Lettura di chiamate API di esempio
 
@@ -59,7 +59,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 ## Creare una connessione
 
-Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. Per l&#39;account CouchBase è necessario un solo connettore, in quanto può essere utilizzato per creare più connettori sorgente per inserire dati diversi.
+Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. Per l&#39;account Couchbase è necessario un solo connettore, in quanto può essere utilizzato per creare più connettori sorgente per inserire dati diversi.
 
 **Formato API**
 
@@ -69,7 +69,7 @@ POST /connections
 
 **Richiesta**
 
-La richiesta seguente crea una nuova connessione CouchBase, configurata dalle proprietà fornite nel payload:.
+La richiesta seguente crea una nuova connessione Couchbase, configurata dalle proprietà fornite nel payload:.
 
 ```shell
 curl -X POST \
@@ -80,8 +80,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "CouchBase test connection",
-        "description": "A test connection for a CouchBase source",
+        "name": "Couchbase test connection",
+        "description": "A test connection for a Couchbase source",
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
@@ -97,8 +97,8 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --------- | ----------- |
-| `auth.params.connectionString` | Stringa di connessione utilizzata per connettersi a un account CouchBase. Il pattern della stringa di connessione è: `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. |
-| `connectionSpec.id` | ID specifica connessione CouchBase: `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
+| `auth.params.connectionString` | Stringa di connessione utilizzata per connettersi a un account Couchbase. Il pattern della stringa di connessione è: `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. |
+| `connectionSpec.id` | ID specifica connessione Couchbase: `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
 
 **Risposta**
 
@@ -113,4 +113,4 @@ Una risposta corretta restituisce i dettagli della nuova connessione appena crea
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato una connessione CouchBase utilizzando l&#39;API del servizio di flusso e hai ottenuto il valore ID univoco della connessione. Puoi usare questo ID nell’esercitazione successiva per imparare a [esplorare i database utilizzando l’API](../../explore/database-nosql.md)del servizio di flusso.
+Seguendo questa esercitazione, hai creato una connessione Couchbase utilizzando l&#39;API del servizio di flusso e hai ottenuto il valore ID univoco della connessione. Puoi usare questo ID nell’esercitazione successiva per imparare a [esplorare i database utilizzando l’API](../../explore/database-nosql.md)del servizio di flusso.
