@@ -4,9 +4,9 @@ seo-title: Destinazione annunci Google
 description: Google Ads, precedentemente noto come Google AdWords, è un servizio pubblicitario online che consente alle aziende di pagare per clic pubblicità tra ricerche basate su testo, display grafici, video YouTube e display mobili in-app.
 seo-description: Google Ads, precedentemente noto come Google AdWords, è un servizio pubblicitario online che consente alle aziende di pagare per clic pubblicità tra ricerche basate su testo, display grafici, video YouTube e display mobili in-app.
 translation-type: tm+mt
-source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '532'
 ht-degree: 0%
 
 ---
@@ -34,15 +34,15 @@ Nota i seguenti dettagli specifici per le destinazioni Google Ads:
 
 ### Account Google Ads esistente
 
-Google ha messo in pausa tutte le nuove integrazioni Google Ads con fornitori di terze parti. Devi disporre di un&#39;integrazione esistente con Google Ads per poter eseguire i passaggi di whitelist nella sezione successiva e per creare una destinazione Google Ads in Adobe Real-time CDP.
+Google ha messo in pausa tutte le nuove integrazioni Google Ads con fornitori di terze parti. Devi disporre di un&#39;integrazione esistente con Google Ads per poter eseguire i passaggi di elenco di autorizzazioni nella sezione successiva e per creare una destinazione Google Ads in Adobe Real-time CDP.
 
-### Whitelist
+### Consenti elenco
 
 >[!NOTE]
 >
->La whitelist è obbligatoria prima di configurare la prima destinazione Google Ads in Adobe Real-time CDP. Prima di creare una destinazione, verificare che il processo di whitelist descritto di seguito sia stato completato da Google.
+>L&#39;elenco di autorizzazioni è obbligatorio prima di configurare la prima destinazione Google Ads in Adobe Real-time CDP. Prima di creare una destinazione, verificare che la procedura di autorizzazione elenco descritta di seguito sia stata completata da Google.
 
-Prima di creare la destinazione Google Ads in Adobe Real-time CDP, è necessario contattare Google chiedendo che Adobe sia inserito nella lista bianca come provider di dati e che l&#39;account sia inserito nella lista bianca. Contattate Google e fornite le seguenti informazioni:
+Prima di creare la destinazione Google Ads in Adobe Real-time CDP, è necessario contattare Google affinché Adobe sia incluso nell&#39;elenco dei provider di dati consentiti e che il tuo account sia aggiunto all&#39;elenco dei provider di dati consentiti. Contattate Google e fornite le seguenti informazioni:
 
 * **ID** account: questo è l&#39;ID account di Adobe con Google. Per ottenere questo ID, contatta l’Assistenza clienti Adobe o il tuo rappresentante Adobe.
 * **ID** cliente: questo è l&#39;ID account cliente di Adobe con Google. Per ottenere questo ID, contatta l’Assistenza clienti Adobe o il tuo rappresentante Adobe.
