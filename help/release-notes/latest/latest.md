@@ -1,13 +1,13 @@
 ---
 title: 'Note sulla versione di Adobe Experience Platform '
-description: Note sulla versione della piattaforma Experience - 10 giugno 2020
+description: Note aggiornate sulla versione di Experience Platform
 doc-type: release notes
 last-update: June 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 35af498a41d779cc155cff7f030cccb57f68b8fa
+source-git-commit: 1dad479708291e911719c3f3dd5edd2e9b497973
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '431'
 ht-degree: 5%
 
 ---
