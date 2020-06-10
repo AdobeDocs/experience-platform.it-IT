@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guida alla risoluzione dei problemi per l'area di lavoro di analisi dati
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+source-git-commit: e77b76bdcfa5137d9bd77400b15f2fe8db3b7c0b
+workflow-type: tm+mt
+source-wordcount: '704'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,7 @@ Infine, scegliete &quot;Blocca cookie di terze parti&quot; su &quot;OFF&quot;.
 
 ![chrome avanzato](./images/faq/toggle-off.png)
 
->[!NOTE] In alternativa, puoi disattivare i cookie di terze parti e la whitelist [*.]ds.adobe.net
+>[!NOTE] In alternativa, puoi disattivare i cookie di terze parti e aggiungere [*.]ds.adobe.net nell&#39;elenco allow.
 
 Andate a &quot;chrome://flags/&quot; nella barra degli indirizzi. Cercate e disattivate il flag *&quot;SameSite by default cookies&quot;* utilizzando il menu a discesa a destra.
 
@@ -61,7 +64,7 @@ Quindi, dalla barra di navigazione superiore, selezionate il menu **Sviluppo** .
 
 ## Perché viene visualizzato un messaggio &#39;403 Vietato&#39; quando si tenta di caricare o eliminare un file in JupyterLab?
 
-Se il browser è abilitato con un software pubblicitario di blocco, come Ghostery o AdBlock Plus, il dominio &quot;\*.adobe.net&quot; deve essere inserito nella white list di ciascun software pubblicitario di blocco, affinché JupyterLab possa funzionare normalmente. Questo perché le macchine virtuali JupyterLab vengono eseguite su un dominio diverso da quello della piattaforma Experience.
+Se il browser è abilitato con un software pubblicitario di blocco come Ghostery o AdBlock Plus, il dominio &quot;\*.adobe.net&quot; deve essere consentito in ogni software pubblicitario di blocco per il funzionamento normale di JupyterLab. Questo perché le macchine virtuali JupyterLab vengono eseguite su un dominio diverso da quello della piattaforma Experience.
 
 ## Perché alcune parti del mio blocco appunti Jupyter sembrano frammentate o non vengono rappresentate come codice?
 
