@@ -1,127 +1,40 @@
 ---
 title: 'Note sulla versione di Adobe Experience Platform '
-description: Note sulla versione della piattaforma Experience 13 maggio 2020
+description: Note sulla versione della piattaforma Experience - 10 giugno 2020
 doc-type: release notes
-last-update: May 13, 2020
+last-update: June 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: db3acec75c24a0cb75d1d88e7aa2171e794abc4f
+source-git-commit: b6cfdf56c20065bdc3e8a9fedf6007ddd74eaeaa
 workflow-type: tm+mt
-source-wordcount: '1299'
-ht-degree: 5%
+source-wordcount: '306'
+ht-degree: 6%
 
 ---
 
 
 # Note sulla versione di Adobe Experience Platform
 
-**Data di rilascio: 13 maggio 2020**
+**Data di rilascio: 10 giugno 2020**
 
 Aggiornamenti alle funzionalità esistenti in Adobe Experience Platform:
 
-- [Aggiornamenti dell&#39;interfaccia utente](#ux)
 - [Area di lavoro Data Science](#dsw)
-- [Destinazioni](#destinations)
-- [SDK Web per la piattaforma Experience e la rete Edge per la piattaforma Experience](#edge)
-- [Profilo cliente in tempo reale](#profile)
 - [Origini](#sources)
-
-## Aggiornamenti dell&#39;interfaccia utente {#ux}
-
-Adobe Experience Platform sta rilasciando aggiornamenti al dominio e alla barra di intestazione per migliorare la tua esperienza e unificarsi con altre applicazioni Experience Cloud.
-
-- Un passaggio più semplice tra le organizzazioni o verso un’altra applicazione
-- Miglioramento dell’aiuto degli utenti, inclusi gli articoli in evidenza e la documentazione pertinente al contesto nel menu Aiuto
-- Possibilità di fornire feedback sulla piattaforma Experience e sui biglietti di supporto per i file
-
-L&#39;introduzione della nuova esperienza è graduale. Potete visualizzare l&#39;esperienza all&#39;indirizzo [https://experience.adobe.com/platform](https://experience.adobe.com/platform).
 
 ## Area di lavoro Data Science {#dsw}
 
-Data Science Workspace utilizza l&#39;apprendimento automatico e l&#39;intelligenza artificiale per liberare informazioni dai tuoi dati. Integrato in Adobe Experience Platform, Data Science Workspace ti aiuta a fare previsioni utilizzando i tuoi contenuti e le risorse di dati nelle soluzioni Adobe. Uno dei modi in cui Data Science Workspace ottiene questo risultato è attraverso l&#39;uso di JupyterLab. JupyterLab è un&#39;interfaccia utente basata sul Web per <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> ed è strettamente integrata in Adobe Experience Platform. Fornisce un ambiente di sviluppo interattivo che consente agli scienziati dei dati di lavorare con notebook, codice e dati Jupyter.
+Data Science Workspace utilizza l&#39;apprendimento automatico e l&#39;intelligenza artificiale per liberare informazioni dai tuoi dati. Integrato in Adobe Experience Platform, Data Science Workspace ti aiuta a fare previsioni utilizzando i tuoi contenuti e le risorse di dati nelle soluzioni Adobe.
 
-**Nuove funzionalità**
+Data Science Workspace ha lavorato su nuovi modi per consentire esperienze e previsioni migliori attraverso l&#39;uso dell&#39;apprendimento automatico in tempo reale. L&#39;apprendimento automatico in tempo reale consente di creare, testare e implementare modelli di machine learning personalizzati o importati in formati di modelli interoperabili standard di settore per l&#39;assegnazione di punteggi/attivazione in tempo reale tramite un endpoint API.
 
-| Funzione | Descrizione |
-|--- | ---|
-| JupyterLab Launcher | JupyterLab Launcher ora include avviatori per i notebook Spark 2.4. Gli avviatori dei notebook Spark 2.3 ora sono contrassegnati come obsoleti e impostati per essere rimossi in una versione successiva. |
-| Spark 2.4 | Le nuove ricette Scala (Spark) e PySpark ora utilizzano Spark 2.4. |
-| Kernel | I notebook Scala (Spark) ora vengono creati tramite il kernel Scala. I notebook PySpark sono ora creati tramite il kernel Python. Il kernel Spark e PySpark sono obsoleti e sono impostati per essere rimossi in una release successiva. |
-| Ricette | Le nuove ricette PySpark e Spark ora seguono il flusso di lavoro Docker simile alle ricette Python e R. |
-
-Per ulteriori informazioni sulla migrazione dei notebook e delle ricette per utilizzare Spark 2.4, consulta la guida [alla migrazione dei](../../data-science-workspace/recipe-notebook-migration.md)notebook. Per ulteriori informazioni generali su Data Science Workspace, consulta la documentazione [](../../data-science-workspace/home.md)di panoramica.
-
-## Destinazioni {#destinations}
-
-In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che attivano i dati per tali partner in modo semplice.
-
-**Facebook**
-
-Adobe Real-time CDP ora supporta l’attivazione dei dati su Facebook, consentendo di attivare profili per le campagne Facebook per il targeting dell’audience, la personalizzazione e la soppressione basate su e-mail con hash.
-
-Per ulteriori informazioni sulla nuova funzionalità, consultate la pagina di destinazione [di](/help/rtcdp/destinations/facebook-destination.md) Facebook.
-
-<br> 
-
-**Destinazioni di archiviazione cloud per eventi Amazon Kinesis e Azure Event Hubs**
-
-Adobe Real-time CDP ora supporta l&#39;attivazione dei dati per lo streaming delle destinazioni di archiviazione cloud, consentendo di esportare i dati e gli eventi del pubblico in queste destinazioni in formato JSON. Puoi quindi descrivere la logica di business sopra questi eventi nelle tue destinazioni. Per ulteriori informazioni, vedere di seguito:
-
->[!NOTE]
->
->Le destinazioni [!DNL Amazon Kinesis] e [!DNL Azure Event Hubs] le destinazioni in Adobe Real-time CDP sono attualmente in versione beta. La documentazione e la funzionalità sono soggette a modifiche.
-
-| Documentazione | Descrizione |
-|--- | ---|
-| [(Beta) Destinazione Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) | In questo articolo viene illustrato come creare una connessione in uscita in tempo reale allo [!DNL Amazon Kinesis] storage per lo streaming dei dati da Adobe Experience Platform. |
-| [(Beta) Destinazione degli hub eventi di Azure](/help/rtcdp/destinations/azure-event-hubs-destination.md) | In questo articolo viene illustrato come creare una connessione in uscita in tempo reale allo [!DNL Azure Event Hubs] storage per lo streaming dei dati da Adobe Experience Platform. |
-| [Esercitazione API - Connessione alle destinazioni di streaming e attivazione dei dati](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md) | Questa esercitazione illustra come utilizzare le chiamate API per connettersi ai dati della piattaforma Adobe Experience, creare una connessione a una destinazione di archiviazione cloud in streaming (hub eventi Amazon Kinesis o Azure), creare un flusso di dati per la nuova destinazione creata e attivare i dati per la nuova destinazione creata. |
-
-Per ulteriori informazioni, consulta la panoramica [](/help/rtcdp/destinations/destinations-overview.md)Destinazioni.
-
-## SDK Web per la piattaforma Experience e la rete Edge per la piattaforma Experience {#edge}
-
-L’SDK per la piattaforma Web Experience Platform e l’Experience Platform Edge Network consentono agli utenti di inviare dati ad Adobe Experience Platform e ad altre soluzioni Adobe in tempo reale per i dispositivi e i browser degli utenti finali. L’elenco più recente dei casi di utilizzo è riportato nella roadmap [](https://github.com/adobe/alloy/projects/5) pubblica, che viene aggiornata spesso.
-
-**Nuove funzionalità**
+Tenere presente che l&#39;apprendimento automatico in tempo reale è in alfa e in fase di sviluppo.
 
 | Funzione | Descrizione |
 |--- | ---|
-| Supporto per ECID | L’SDK supporta l’ECID in dotazione senza ulteriori librerie o informazioni da installare |
-| Interfaccia utente di configurazione | Per gestire le impostazioni ID di configurazione con la nuova interfaccia utente di configurazione edge in Launch, è necessario che sia presente una whitelist per accedere a |
-| Adobe Experience Platform Web SDK Mixin | Un mixin da usare con l’SDK Web della piattaforma Experience che include tutti i campi supportati. |
-| Controlli per il consenso al corso | Fornisce alle aziende i controlli relativi all’opzione di rifiuto e di iscrizione all’SDK Web per la piattaforma Experience |
-| Supporto per il debug lato client nella nuova estensione Experience Cloud Debugger | Consulta le richieste dell’SDK per Web della piattaforma Experience e le tracce Edge per vedere in che modo i dati scorrono nel sistema. |
-| Adobe Analytics | Invia i dati alle suite di rapporti di Analytics tramite la configurazione edge. XDM viene appiattito nei dati contestuali e supporta l&#39;assegnazione di tag a più suite |
-| Adobe Target | Supporto per Adobe Target. Compositore VEC, composer basato su modulo, A/B, XT, Automated Personalization (Personalizzazione automatizzata), MVT |
-| Supporto di Adobe Audience Manager | Supporto per le sincronizzazioni ID di Audience Manager, le destinazioni URL e le destinazioni dei cookie |
-| Sincronizzazione identità | Rinominato `setCustomersIds` per `syncIdentity` renderlo più chiaro |
-| Generatore di oggetti XDM | Nell&#39;estensione del lancio è ora possibile creare oggetti XDM come elementi dati |
+| JupyterLab Lancio del codice ML in tempo reale | JupyterLab Launcher ora include un notebook Python per l&#39;apprendimento automatico in tempo reale (Alpha). |
 
-Per ulteriori informazioni su Platform Web SDK e Edge Network, consulta la [documentazione](../../edge/home.md).
-
-## Profilo cliente in tempo reale {#profile}
-
-Adobe Experience Platform consente di creare esperienze coordinate, coerenti e pertinenti per i clienti, ovunque e quando interagiscono con il tuo marchio. Con il profilo cliente in tempo reale, puoi vedere una visualizzazione olistica di ogni singolo cliente che combina dati da più canali, inclusi dati online, offline, CRM e di terze parti. Il profilo consente di consolidare i diversi dati dei clienti in una visualizzazione unificata che offre un account utilizzabile e con marca temporale per ogni interazione con il cliente.
-
-**Nuove funzionalità**
-
-| Funzione | Descrizione |
-| -----------| ---------- |
-| Nuove metriche di esportazione dei profili | Sono state aggiunte metriche ai processi di esportazione del profilo che mostrano il numero totale di profili esportati e il numero di profili in ogni spazio nomi. |
-| Nuove metriche di esplorazione dell&#39;osservabilità | L&#39;API Observability Insights ora dispone delle metriche seguenti per l&#39;assimilazione in streaming nel profilo: Frequenza Di Richieste In Entrata, Tasso Di Ingestione Riuscito, Dimensione Record Ingestionata. |
-| Endpoint GET di massa | È stato aggiunto l&#39;endpoint GET in blocco all&#39;API Profilo cliente in tempo reale per consentire il recupero di più risultati in una singola chiamata API. Ora puoi ottenere fino a 100 ID in massa per le definizioni dei segmenti, i processi dei segmenti e i criteri di unione. |
-| Sfoglia profilo per identità | Nell&#39;interfaccia utente della piattaforma è ora possibile selezionare uno spazio dei nomi di identità e fornire un valore di identità per esplorare un profilo. |
-
-**Correzioni di bug**
-
-- Nessuno.
-
-**Problemi noti**
-
-- Nessuno.
-
-Per ulteriori informazioni sul profilo cliente in tempo reale, comprese esercitazioni e best practice per lavorare con i dati del profilo, consulta la panoramica [sul profilo cliente in tempo](../../profile/home.md)reale.
+Per ulteriori informazioni sull&#39;alfa Real-time Machine Learning, vedere la panoramica [sull&#39;apprendimento automatico in tempo](../../data-science-workspace/real-time-machine-learning/home.md)reale.
 
 ## Origini {#sources}
 
@@ -133,12 +46,7 @@ Experience Platform fornisce un&#39;API RESTful e un&#39;interfaccia utente inte
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Supporto aggiuntivo per API e interfaccia utente per i sistemi di storage cloud | Nuovi connettori di origine per Azure File Storage. |
-| Supporto aggiuntivo per API e interfaccia utente per i database | Nuovi connettori di origine per Azure Data Explorer, IBM DB2 e Oracle DB. |
-| Adobe Audience Manager per la condivisione dei dati della piattaforma Experience | Il processo di provisioning per il connettore Audience Manager è stato aggiornato. I set di dati di Audience Manager per il profilo cliente in tempo reale ora sono disattivati per impostazione predefinita. Potete scegliere manualmente i set di dati da promuovere nel profilo. Le nuove impostazioni predefinite non sono retroattive e influiscono solo sul provisioning per i nuovi connettori Audience Manager. Per ulteriori informazioni, consulta la guida [utente](../../catalog/datasets/user-guide.md)DataSet. |
-
-**Problemi noti**
-
-- Nessuno.
+| Supporto aggiuntivo per API e interfaccia utente per i sistemi di storage cloud | Nuovo connettore sorgente per Apache HDFS |
+| Supporto aggiuntivo per API e interfaccia utente per i database | Nuovo connettore sorgente per Couchbase. |
 
 Per ulteriori informazioni sulle origini, consultate la panoramica sulle [origini](../../sources/home.md).
