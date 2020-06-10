@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: June 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: b6cfdf56c20065bdc3e8a9fedf6007ddd74eaeaa
+source-git-commit: 35af498a41d779cc155cff7f030cccb57f68b8fa
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 6%
+source-wordcount: '429'
+ht-degree: 5%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 6%
 Aggiornamenti alle funzionalità esistenti in Adobe Experience Platform:
 
 - [Area di lavoro Data Science](#dsw)
+- [Segmentazione](#segmentation)
 - [Origini](#sources)
 
 ## Area di lavoro Data Science {#dsw}
@@ -35,6 +36,20 @@ Tenere presente che l&#39;apprendimento automatico in tempo reale è in alfa e i
 | JupyterLab Lancio del codice ML in tempo reale | JupyterLab Launcher ora include un notebook Python per l&#39;apprendimento automatico in tempo reale (Alpha). |
 
 Per ulteriori informazioni sull&#39;alfa Real-time Machine Learning, vedere la panoramica [sull&#39;apprendimento automatico in tempo](../../data-science-workspace/real-time-machine-learning/home.md)reale.
+
+## Segmentazione {#segmentation}
+
+Il servizio di segmentazione di Adobe Experience Platform fornisce un&#39;interfaccia utente e RESTful API che consente di creare segmenti e generare audience dai dati del profilo cliente in tempo reale. Questi segmenti sono configurati e mantenuti a livello centrale sulla piattaforma, rendendoli facilmente accessibili da qualsiasi applicazione Adobe.
+
+Il servizio di segmentazione definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo di persone commerciabili all&#39;interno della base cliente. I segmenti possono essere basati su dati di record (come informazioni demografiche) o eventi di serie temporali che rappresentano le interazioni dei clienti con il tuo marchio.
+
+**Nuove funzionalità**
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Campi data | È stata aggiunta una funzione &quot;anniversario&quot; per le funzioni data, che consente agli utenti di valutare le date senza l&#39;anno. |
+
+Per ulteriori informazioni sulla segmentazione, consulta Panoramica sulla [segmentazione.](../../segmentation/home.md)
 
 ## Origini {#sources}
 
