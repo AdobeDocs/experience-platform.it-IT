@@ -4,7 +4,7 @@ seo-title: Supporto delle preferenze di consenso per l’SDK Web di Adobe Experi
 description: Scopri come supportare le preferenze di consenso con l’SDK Web della piattaforma Experience
 seo-description: Scopri come supportare le preferenze di consenso con l’SDK Web della piattaforma Experience
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: c86ae6d887f52d8bb4b78dadc06060791c7a02c0
 workflow-type: tm+mt
 source-wordcount: '518'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Per impostazione predefinita, l’utente può accedere a tutti gli scopi. Per ev
 
 ```javascript
 alloy("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "imsOrgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
   "defaultConsent": { "general": "pending" }
 });
@@ -45,7 +45,13 @@ Se l&#39;utente sceglie di eseguire il `setConsent` comando con l&#39; `general`
 
 ```javascript
 alloy("setConsent", {
-  "general": "in"
+    consent: [{ 
+      standard: "Adobe",
+      version: "1.0",
+      value: { 
+        general: "in" 
+      }
+    }]
 });
 ```
 
@@ -55,7 +61,13 @@ Se l&#39;utente sceglie di rifiutare, eseguire il `setConsent` comando con l&#39
 
 ```javascript
 alloy("setConsent", {
-  "general": "out"
+    consent: [{ 
+      standard: "Adobe",
+      version: "1.0",
+      value: { 
+        general: "out" 
+      }
+    }]
 });
 ```
 
