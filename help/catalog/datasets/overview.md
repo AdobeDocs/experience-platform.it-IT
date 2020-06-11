@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Panoramica sui set di dati
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 06733eb374d1b9409102a7cf13d61ed266cedaad
+source-git-commit: dcdd94a3a13a13b4104e57b74ecf613bc316b0af
+workflow-type: tm+mt
+source-wordcount: '776'
+ht-degree: 2%
 
 ---
 
@@ -31,7 +34,7 @@ Per ulteriori informazioni su XDM, consultate la panoramica [di sistema](../../x
 
 ## Inserimento di dati nei set di dati
 
-L&#39;inserimento dei dati in Adobe Experience Platform rappresenta i diversi metodi mediante i quali la piattaforma acquisisce i dati da varie origini. Indipendentemente dal metodo di assimilazione, tutti i dati acquisiti con successo vengono convertiti in file batch. I batch sono unità di dati costituite da uno o più file da assimilare come singola unità. Questi file batch vengono quindi aggiunti ai dataset dedicati e memorizzati all&#39;interno del Data Lake.
+L&#39;inserimento dei dati in Adobe Experience Platform rappresenta i diversi metodi mediante i quali la piattaforma acquisisce i dati da varie origini. Indipendentemente dal metodo di assimilazione, tutti i dati acquisiti con successo vengono convertiti in file batch. I batch sono unità di dati costituite da uno o più file da acquisire come una singola unità. Questi file batch vengono quindi aggiunti ai dataset dedicati e memorizzati all&#39;interno del Data Lake.
 
 Per ulteriori informazioni, consulta la panoramica [sull’inserimento dei](../../ingestion/home.md) dati.
 
@@ -41,7 +44,10 @@ Adobe Experience Platform Data Governance consente di gestire i dati dei clienti
 
 Le etichette di utilizzo dei dati possono essere applicate a set di dati interi o a singoli campi di set di dati. Le etichette aggiunte a livello di dataset sono ereditate da tutti i campi all&#39;interno di tale dataset.
 
-Per ulteriori informazioni sul servizio, consulta la panoramica [sulla governance dei](../../data-governance/home.md) dati. Per i passaggi su come utilizzare le etichette di utilizzo nell&#39;interfaccia utente della piattaforma Experience, consulta la guida [utente delle etichette di utilizzo dei](../../data-governance/labels/user-guide.md)dati.
+Per ulteriori informazioni sul servizio, consulta la panoramica [sulla governance dei](../../data-governance/home.md) dati. Per i passaggi su come utilizzare le etichette di utilizzo in [!DNL Platform], consulta le guide seguenti:
+
+* [Gestire le etichette nell’interfaccia](../../data-governance/labels/user-guide.md)
+* [Gestire le etichette nell&#39;API](../../data-governance/labels/api.md)
 
 ## Set di dati nei servizi della piattaforma a valle
 
@@ -61,4 +67,4 @@ Di seguito è riportato un elenco di servizi a valle che utilizzano set di dati 
 
 Leggendo questo documento, sono stati introdotti gli usi principali dei set di dati in Experience Platform, nonché i vari servizi della piattaforma che utilizzano i set di dati. Per ulteriori dettagli sui diversi modi in cui i set di dati vengono utilizzati in Piattaforma, consulta la documentazione del servizio collegata in questa panoramica.
 
-Per i passaggi su come interagire con i set di dati nell’interfaccia utente della piattaforma Experience, consulta la guida [utente](user-guide.md)ai set di dati.
+Per informazioni su come interagire con i set di dati nell’interfaccia utente della piattaforma Experience, consulta la guida [utente](user-guide.md)ai set di dati.
