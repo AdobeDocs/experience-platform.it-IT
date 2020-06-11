@@ -4,20 +4,25 @@ solution: Experience Platform
 title: 'Gestione delle etichette di utilizzo dei dati tramite API '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d685f1851badf54ce1d1ac3cbacd69d62894c33f
+source-git-commit: 1fce86193bc1660d0f16408ed1b9217368549f6c
+workflow-type: tm+mt
+source-wordcount: '610'
+ht-degree: 3%
 
 ---
 
 
 # Gestione delle etichette di utilizzo dei dati tramite API
 
-In questo documento sono descritti i passaggi da seguire per gestire le etichette di utilizzo dei dati a livello di set di dati e di campo mediante l’API Catalog Service.
+L&#39;API del servizio DataSet consente di gestire in modo programmatico le etichette di utilizzo per i set di dati. Fa parte delle funzionalità del catalogo dati di Adobe Experience Platform, ma è separato dall&#39;API del servizio catalogo che gestisce i metadati del set di dati.
+
+In questo documento sono descritti i passaggi necessari per gestire le etichette di utilizzo dei dati a livello di set di dati e di campo mediante l&#39;API del servizio DataSet.
 
 ## Introduzione
 
-Prima di leggere questa guida, si consiglia di leggere la panoramica [del servizio](../../catalog/home.md) Catalogo per una presentazione più affidabile del servizio. Inoltre, per raccogliere le credenziali necessarie per effettuare chiamate all&#39;API Catalog, è necessario seguire i passaggi descritti nella sezione [](../../catalog/api/getting-started.md) introduttiva della guida per gli sviluppatori di Catalog.
+Prima di leggere questa guida, segui i passaggi descritti nella sezione [](../../catalog/api/getting-started.md) introduttiva della guida per gli sviluppatori del catalogo per raccogliere le credenziali necessarie per effettuare chiamate alle [!DNL Platform] API.
 
-Per effettuare chiamate agli endpoint descritti nelle sezioni seguenti, è necessario disporre del `id` valore univoco per un set di dati specifico. Se non disponete di questo valore, consultate la sezione relativa alla guida per gli sviluppatori nell&#39; [elenco degli oggetti](../../catalog/api/list-objects.md) catalogo per trovare gli ID dei set di dati esistenti.
+Per effettuare chiamate agli endpoint descritti nelle sezioni seguenti, è necessario disporre del `id` valore univoco per un set di dati specifico. Se non hai questo valore, consulta la guida sull’ [elenco degli oggetti](../../catalog/api/list-objects.md) catalogo per trovare gli ID dei set di dati esistenti.
 
 ## Cerca etichette per un set di dati {#lookup}
 
@@ -26,7 +31,7 @@ Per effettuare chiamate agli endpoint descritti nelle sezioni seguenti, è neces
 **Formato API**
 
 ```http
-GET /dataSets/{DATASET_ID}/labels
+GET /datasets/{DATASET_ID}/labels
 ```
 
 | Parametro | Descrizione |
@@ -37,7 +42,7 @@ GET /dataSets/{DATASET_ID}/labels
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5abd49645591445e1ba04f87/labels' \
+  'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -79,8 +84,8 @@ Potete creare un set di etichette per un set di dati inserendovi nel payload di 
 **Formato API**
 
 ```http
-POST /dataSets/{DATASET_ID}/labels
-PUT /dataSets/{DATASET_ID}/labels
+POST /datasets/{DATASET_ID}/labels
+PUT /datasets/{DATASET_ID}/labels
 ```
 
 | Parametro | Descrizione |
@@ -93,7 +98,7 @@ La seguente richiesta POST aggiunge una serie di etichette al set di dati, oltre
 
 ```shell
 curl -X POST \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5abd49645591445e1ba04f87/labels' \
+  'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -146,7 +151,7 @@ Una risposta corretta restituisce le etichette aggiunte al set di dati.
 **Formato API**
 
 ```http
-DELETE /dataSets/{DATASET_ID}/labels
+DELETE /datasets/{DATASET_ID}/labels
 ```
 
 | Parametro | Descrizione |
@@ -157,7 +162,7 @@ DELETE /dataSets/{DATASET_ID}/labels
 
 ```shell
 curl -X DELETE \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5abd49645591445e1ba04f87/labels' \
+  'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -173,3 +178,5 @@ Risposta corretta: stato HTTP 200 (OK), che indica che le etichette sono state e
 Ora che hai aggiunto etichette di utilizzo dei dati a livello di set di dati e di campo, puoi iniziare a assimilare i dati in Experience Platform. Per saperne di più, leggi la documentazione [sull’inserimento dei](../../ingestion/home.md)dati.
 
 È inoltre possibile definire criteri di utilizzo dei dati in base alle etichette applicate. Per ulteriori informazioni, vedere la panoramica [dei criteri di utilizzo dei](../policies/overview.md)dati.
+
+Per ulteriori informazioni sulla gestione dei set di dati in [!DNL Experience Platform], vedere la panoramica [dei](../../catalog/datasets/overview.md)set di dati.
