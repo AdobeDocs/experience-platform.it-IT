@@ -4,7 +4,7 @@ seo-title: Configurazione di Adobe Experience Platform Web SDK
 description: Scopri come configurare l’SDK Web per la piattaforma Experience
 seo-description: Scopri come configurare l’SDK Web per la piattaforma Experience
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
 workflow-type: tm+mt
 source-wordcount: '739'
 ht-degree: 7%
@@ -21,7 +21,7 @@ La configurazione per l’SDK viene effettuata con il `configure` comando.
 
 ```javascript
 alloy("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId":"ADB3LETTERSANDNUMBERS@AdobeOrg"
 });
 ```
@@ -30,13 +30,13 @@ alloy("configure", {
 
 ## Opzioni generali
 
-### `configId`
+### `edgeConfigId`
 
 | **Tipo** | **Obbligatorio** | **Valore predefinito** |
 | -------- | ------------ | ----------------- |
 | Stringa | Sì | none |
 
-L’ID di configurazione assegnato, che collega l’SDK agli account e alla configurazione appropriati.  Quando si configurano più istanze all&#39;interno di una singola pagina, è necessario configurare un&#39;altra istanza `configId` per ciascuna.
+L’ID di configurazione assegnato, che collega l’SDK agli account e alla configurazione appropriati.  Quando si configurano più istanze all&#39;interno di una singola pagina, è necessario configurare un&#39;altra istanza `edgeConfigId` per ciascuna.
 
 ### `context`
 
