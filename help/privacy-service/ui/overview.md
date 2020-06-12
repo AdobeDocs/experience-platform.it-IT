@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Panoramica dell’interfaccia utente del servizio Privacy
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
+source-git-commit: 8704d762ea71b44133cd6d394587342198c54b99
+workflow-type: tm+mt
+source-wordcount: '174'
+ht-degree: 1%
 
 ---
 
@@ -17,15 +20,17 @@ Il servizio Adobe Experience Platform Privacy Service fornisce un’API RESTful 
 
 È necessario disporre di un Adobe ID per l’autenticazione nell’interfaccia utente del servizio per la privacy. Inoltre, è necessario disporre dei privilegi di amministratore di sistema all&#39;interno dell&#39;organizzazione a cui è associato l&#39;Adobe ID.
 
-Andate alla pagina di accesso di Adobe Experience Cloud all&#39;indirizzo https://experience.adobe.com. Fate clic su **Accedi con un Adobe ID** e immettete le credenziali Adobe ID quando richiesto. Dopo aver effettuato l’accesso, fate clic su **Amministrazione**.
+Andate alla pagina di accesso di Adobe Experience Cloud all&#39;indirizzo https://experience.adobe.com. Fate clic su **[!UICONTROL Sign In with an Adobe ID]** e immettete le credenziali ID Adobe quando richiesto.
 
-![Scheda Amministrazione](../images/ui-overview/admin-tab.png)
+Dopo aver effettuato l’accesso, fate clic su **[!UICONTROL Privacy UI]**.
 
->[!NOTE] La scheda Amministrazione viene visualizzata solo se disponete dei privilegi di amministratore di sistema all&#39;interno dell&#39;organizzazione.
+![](../images/ui-overview/quick-access.png)
 
-Infine, seleziona **Avvia interfaccia utente** per la privacy nella schermata successiva per aprire l’interfaccia utente del servizio per la privacy.
+### Accesso da Experience Platform
 
-![Pagina di amministrazione](../images/ui-overview/admin-page.png)
+Se hai accesso all’interfaccia utente di Adobe Experience Platform, puoi accedere anche all’interfaccia utente del servizio Privacy tramite la **[!UICONTROL Requests]** scheda nel menu di navigazione a sinistra.
+
+![](../images/ui-overview/platform.png)
 
 ## Passaggi successivi
 
