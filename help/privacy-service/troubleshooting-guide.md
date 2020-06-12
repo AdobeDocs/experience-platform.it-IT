@@ -4,16 +4,19 @@ solution: Experience Platform
 title: Domande frequenti sul servizio Privacy
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 64cb2de507921fcb4aaade67132024a3fc0d3dee
+source-git-commit: 5921f89ce551a4bdec4c5038d579cebd0451f5f2
+workflow-type: tm+mt
+source-wordcount: '899'
+ht-degree: 0%
 
 ---
 
 
-# Domande frequenti sul servizio Privacy
+# Guida alla risoluzione dei problemi del servizio sulla privacy
 
-Questo documento contiene le risposte alle domande frequenti sul servizio per la privacy di Adobe Experience Platform.
+Il servizio Adobe Experience Platform Privacy Service fornisce un&#39;API RESTful e un&#39;interfaccia utente per aiutare le aziende a gestire le richieste di privacy dei dati dei clienti. Con il servizio Privacy puoi inviare richieste di accesso ed eliminazione di dati di clienti privati o personali, facilitando la conformità automatica alle normative aziendali e legali sulla privacy.
 
-Il servizio Privacy fornisce un&#39;API RESTful e un&#39;interfaccia utente per aiutare le aziende a gestire le richieste di privacy dei dati dei clienti. Con il servizio Privacy puoi inviare richieste di accesso ed eliminazione di dati di clienti privati o personali, facilitando la conformità automatica alle normative aziendali e legali sulla privacy.
+Questo documento contiene le risposte alle domande frequenti sul servizio per la privacy, nonché informazioni sugli errori riscontrati comunemente nell&#39;API.
 
 ## Quando si effettuano richieste di privacy nell&#39;API, qual è la differenza tra un utente e un ID utente? {#user-ids}
 
@@ -92,3 +95,18 @@ Per ulteriori dettagli, consultate la sezione sulla [ricerca di un lavoro in bas
 ### Utilizzo dell’interfaccia
 
 Nel dashboard dell’interfaccia utente del servizio per la privacy, trova il processo che desideri scaricare dal widget Richieste **di** lavoro. Fate clic sull’ID del processo per aprire la pagina Dettagli __ processo. Da qui, fate clic su **Scarica** nell&#39;angolo in alto a destra per scaricare il file ZIP. Per ulteriori informazioni, consulta la guida [utente del servizio](ui/user-guide.md) Privacy.
+
+## Messaggi di errore comuni
+
+Nella tabella seguente sono riportati alcuni errori comuni relativi al servizio per la privacy, con descrizioni utili per risolvere i rispettivi problemi.
+
+| Messaggio di errore | Descrizione |
+| --- | --- |
+| ID utente non trovati. | Non è stato possibile trovare alcuni ID utente forniti nella richiesta e sono stati ignorati. Assicurati di utilizzare i nomi e i valori ID corretti nel payload della richiesta. Per una spiegazione più dettagliata, vedere il documento [che fornisce i dati](./identity-data.md) di identità. |
+| Spazio dei nomi non valido | Spazio dei nomi di identità fornito per un ID utente non valido. Per un elenco dei namespace accettati, consulta la sezione relativa agli spazi dei nomi delle identità [standard](./api/appendix.md#standard-namespaces) nell’appendice della guida per gli sviluppatori del servizio per la privacy. Se utilizzi uno spazio dei nomi personalizzato, accertati di impostare la `type` proprietà ID su &quot;custom&quot;. |
+| Completato parzialmente | Il processo è stato completato correttamente, ma alcuni dati non erano applicabili per la richiesta specificata ed è stato ignorato. |
+| I dati non sono nel formato richiesto. | Uno o più valori di dati per l&#39;applicazione specificata non sono stati formattati correttamente. Per ulteriori informazioni, consultate i dettagli del processo. |
+| Il provisioning dell&#39;organizzazione IMS non è stato effettuato. | Questo messaggio si verifica quando non è stato eseguito il provisioning dell&#39;organizzazione IMS per il servizio Privacy. Per ulteriori informazioni, contattare l’amministratore. |
+| Sono necessari accesso e autorizzazioni. | Per poter utilizzare il servizio Privacy sono necessari l&#39;accesso e le autorizzazioni. Contattate l’amministratore per ottenere l’accesso. |
+| Si è verificato un problema durante il caricamento e l&#39;archiviazione dei dati di accesso. | Quando si verifica questo errore, caricate nuovamente i dati di accesso e riprovate. |
+| Il carico di lavoro è stato superato per il limite di frequenza del documento corrente. | Quando si verifica questo errore, ridurre la frequenza di invio e riprovare. |
