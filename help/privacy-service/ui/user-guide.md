@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guida utente del servizio sulla privacy
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 8a488944d530a4850f8946ed30af769ecb6e954f
+source-git-commit: 9fc95dd9194dca0fada603643c3de949764b2f17
+workflow-type: tm+mt
+source-wordcount: '1088'
+ht-degree: 0%
 
 ---
 
@@ -15,16 +18,17 @@ Questo documento fornisce i passaggi necessari per creare e gestire le richieste
 
 ## Sfogliare il dashboard dell’interfaccia utente del servizio sulla privacy
 
-Il dashboard per l’interfaccia utente del servizio Privacy offre due widget che consentono di visualizzare lo stato dei processi relativi alla privacy: Report **** stato e richieste **** processo. Il dashboard visualizza anche il regolamento selezionato corrente per i processi visualizzati.
+Il dashboard per l’interfaccia utente del servizio Privacy offre due widget che consentono di visualizzare lo stato dei processi relativi alla privacy: **Rapporto** di stato e richieste **di** processo. Il dashboard visualizza anche il regolamento selezionato corrente per i processi visualizzati.
 
 ![Pannello interfaccia](../images/user-guide/dashboard.png)
 
 ### Tipo di regolamento
 
-Il servizio Privacy supporta le richieste di lavoro per due tipi di regolamentazione:
+Il servizio Privacy supporta le richieste di lavoro per tre tipi di regolamentazione:
 
-* Regolamento generale sulla protezione dei dati (GDPR)
-* Il California Consumer Privacy Act (CCPA).
+* Regolamento generale sulla protezione dei dati (GDPR) dell&#39;Unione europea
+* California Consumer Privacy Act (CCPA)
+* Legge tailandese sulla protezione dei dati personali (PDPA_THA)
 
 I processi per ciascun tipo di regolamento vengono tracciati separatamente. Per passare da un tipo di regola all&#39;altro, fare clic sul menu a discesa Tipo **** regolamento e selezionare la regola desiderata dall&#39;elenco.
 
