@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Preparare i dati per l'utilizzo in Intelligent Services
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 9a2e6f7db441b804f17ec91d06d359439c3d5da5
 workflow-type: tm+mt
-source-wordcount: '1437'
+source-wordcount: '1595'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,26 @@ Per consentire ai servizi intelligenti di scoprire informazioni ricavate dai dat
 
 Questo documento fornisce linee guida generali sulla mappatura dei dati degli eventi di marketing da più canali a questo schema, delineando le informazioni sui campi importanti all&#39;interno dello schema per consentire di determinare in modo efficace come mappare i dati alla relativa struttura.
 
-## Informazioni sullo schema CEE
+## Riepilogo flusso di lavoro
+
+Il processo di preparazione varia a seconda che i dati siano memorizzati in Adobe Experience Platform o esternamente. In questa sezione vengono riepilogati i passi necessari da intraprendere, in base a uno dei due scenari.
+
+### Preparazione dati esterni
+
+Se i dati sono memorizzati al di fuori di [!DNL Experience Platform], attenetevi alla procedura seguente:
+
+1. Contattare Adobe Consulting Services per richiedere le credenziali di accesso per un contenitore di archiviazione BLOB di Azure dedicato.
+1. Utilizzando le credenziali di accesso, caricate i dati nel contenitore BLOB.
+1. Consulta Adobe Consulting Services per mappare i tuoi dati sullo schema [](#cee-schema) Consumer ExperienceEvent e trasferirli in Servizi intelligenti.
+
+### [!DNL Experience Platform] preparazione dei dati
+
+Se i dati sono già memorizzati in [!DNL Platform], segui i passaggi indicati di seguito:
+
+1. Esaminare la struttura dello schema [](#cee-schema) Consumer ExperienceEvent e determinare se i dati possono essere mappati ai relativi campi.
+1. Contatta i servizi di consulenza Adobe per facilitare la mappatura dei dati sullo schema e l&#39;assimilazione nei servizi intelligenti, oppure [segui i passaggi descritti in questa guida](#mapping) se vuoi mappare i dati da solo.
+
+## Informazioni sullo schema CEE {#cee-schema}
 
 Lo schema Consumer ExperienceEvent descrive il comportamento di un individuo in quanto si riferisce a eventi di marketing digitale (Web o mobile) nonché alle attività commerciali online o offline. L&#39;utilizzo di questo schema è richiesto per i servizi intelligenti a causa dei relativi campi (colonne) semanticamente ben definiti, evitando nomi sconosciuti che altrimenti renderebbero i dati meno chiari.
 
@@ -59,7 +78,7 @@ Per informazioni complete su ciascuno dei campi secondari richiesti per `xdm:cha
 
 Nella tabella seguente sono riportati alcuni esempi di canali di marketing mappati allo `xdm:channel` schema:
 
-| Canale | `@type` | `mediaType` | `mediaAction` |
+| Channel | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
 | Ricerca pagata | https:/<span>/ns.adobe.com/xdm/channel-types/search | pagato | click |
 | Social - Marketing | https:/<span>/ns.adobe.com/xdm/channel-types/social | guadagnato | click |
@@ -185,7 +204,7 @@ Questo campo contiene informazioni relative alle attività di marketing attive c
 
 Per informazioni complete su ciascuno dei campi secondari richiesti per `xdm:productListItems`, consulta le specifiche sechma [di](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) marketing.
 
-## Mapping e acquisizione dei dati
+## Mappatura e assimilazione dei dati (#mapping)
 
 Una volta determinato se i dati degli eventi di marketing possono essere mappati sullo schema CEE, il passaggio successivo consiste nel determinare quali dati includere nei servizi intelligenti. Tutti i dati storici utilizzati in Intelligent Services devono rientrare nel periodo minimo di quattro mesi di dati, più il numero di giorni previsti come periodo di lookback.
 
