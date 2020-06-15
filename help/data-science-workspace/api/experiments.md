@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Esperimenti
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
+source-git-commit: 63a128202826ec39911e70d34dda9dfb2bc585b2
+workflow-type: tm+mt
+source-wordcount: '744'
+ht-degree: 4%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
 
 Lo sviluppo di modelli e la formazione si svolgono a livello di Esperimento, dove un Esperimento consiste in un&#39;istanza MLI, in esecuzioni di formazione e in esecuzioni di punteggio.
 
-## Creare un esperimento
+## Creare un esperimento {#create-an-experiment}
 
 Potete creare un esperimento eseguendo una richiesta POST fornendo al contempo un nome e un ID MLInvalido nel payload della richiesta.
 
@@ -64,7 +67,7 @@ Una risposta corretta restituisce un payload contenente i dettagli dell’esperi
 }
 ```
 
-## Creazione ed esecuzione di un&#39;esecuzione di formazione o punteggio
+## Creazione ed esecuzione di un&#39;esecuzione di formazione o punteggio {#experiment-training-scoring}
 
 Potete creare le esecuzioni di formazione o punteggio eseguendo una richiesta POST e fornendo un ID di esperimento valido e specificando l&#39;attività di esecuzione. Le esecuzioni di punteggio possono essere create solo se l’esperimento dispone di un’esecuzione di formazione esistente e di successo. La creazione di un&#39;esecuzione di formazione corretta inizializzerà la procedura di formazione del modello e il suo completamento genererà un modello qualificato. La generazione di modelli formati sostituirà quelli esistenti in precedenza, in modo che un esperimento possa utilizzare un solo modello addestrato in qualsiasi momento.
 
@@ -95,7 +98,7 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `{TASK}` | Specifica l&#39;attività dell&#39;esecuzione. Impostate questo valore come `train` per la formazione, `score` per il punteggio o `fp` per la pipeline delle funzioni. |
+| `{TASK}` | Specifica l&#39;attività dell&#39;esecuzione. Impostate questo valore come `train` per la formazione, `score` per il punteggio o `featurePipeline` per la pipeline delle funzioni. |
 
 **Risposta**
 
@@ -216,7 +219,6 @@ curl -X GET \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
-
 
 **Risposta**
 
@@ -401,7 +403,7 @@ curl -X DELETE \
 
 ## Elimina esperimenti per ID istanza
 
-Potete eliminare tutti gli esperimenti appartenenti a una particolare istanza MLI eseguendo una richiesta DELETE che include l’ID istanza MLI come parametro di query.
+Potete eliminare tutti gli Esperimenti appartenenti a una particolare istanza MLI eseguendo una richiesta DELETE che include l’ID di istanza MLI come parametro di query.
 
 **Formato API**
 
