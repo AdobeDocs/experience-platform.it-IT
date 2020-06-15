@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Importare una ricetta in pacchetti (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: 20e26c874204da75cac7e8d001770702658053f1
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '976'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Questa esercitazione utilizza l&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) Sensei Machine Learning per creare un [motore](../api/engines.md), noto anche come Ricetta nell&#39;interfaccia utente.
 
-Prima di iniziare, è importante notare che Adobe Experience Platform Data Science Workspace utilizza termini diversi per fare riferimento a elementi simili all&#39;interno dell&#39;API e dell&#39;interfaccia utente. I termini API vengono utilizzati in questa esercitazione e nella tabella seguente sono riportati i termini correlati:
+Prima di iniziare, è importante notare che  Adobe Experience Platform Data Science Workspace utilizza termini diversi per fare riferimento a elementi simili all&#39;interno dell&#39;API e dell&#39;interfaccia utente. I termini API vengono utilizzati in questa esercitazione e nella tabella seguente sono riportati i termini correlati:
 
 | Termine interfaccia utente | Termine API |
 | ---- | ---- |
@@ -35,17 +35,15 @@ Questa esercitazione richiede un file Recipe compresso sotto forma di URL Docker
 
 - `{DOCKER_URL}`: Un indirizzo URL a un&#39;immagine Docker di un servizio intelligente.
 
-Questa esercitazione richiede che sia stata completata l&#39;esercitazione [](../../tutorials/authentication.md) Autenticazione in Adobe Experience Platform per effettuare correttamente le chiamate alle API della piattaforma. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come illustrato di seguito:
+Questa esercitazione richiede che sia stata completata l&#39; [autenticazione per &#39;esercitazione](../../tutorials/authentication.md) Adobe Experience Platform al fine di effettuare correttamente le chiamate alle API Platform. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API Experience Platform, come illustrato di seguito:
 
 - `{ACCESS_TOKEN}`: Il valore del token del portatore specificato dopo l&#39;autenticazione.
-- `{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione unica con Adobe Experience Platform.
-- `{API_KEY}`: Il valore chiave API specifico trovato nella vostra integrazione unica con Adobe Experience Platform.
+- `{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione  Adobe Experience Platform.
+- `{API_KEY}`: Il valore della chiave API specifico trovato nell&#39;integrazione del Adobe Experience Platform  univoco.
 
 ## Creare un motore
 
-A seconda del modulo del file Recipe del pacchetto da includere come parte della richiesta API, viene creato un motore in uno dei due modi seguenti:
-
-- [Creare un motore con un URL Docker](#create-an-engine-with-a-docker-url)
+I motori possono essere creati eseguendo una richiesta POST all&#39;endpoint /Engine. Il motore creato è configurato in base al modulo del file Recipe del pacchetto che deve essere incluso come parte della richiesta API.
 
 ### Creare un motore con un URL Docker {#create-an-engine-with-a-docker-url}
 
