@@ -4,7 +4,10 @@ solution: Experience Platform
 title: MLInances
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 0197c2f5e304f2fc194289b064cc37c91bb658c8
+workflow-type: tm+mt
+source-wordcount: '575'
+ht-degree: 4%
 
 ---
 
@@ -38,7 +41,7 @@ curl -X POST \
     -d '{
         "name": "A name for this MLInstance",
         "description": "A description for this MLInstance",
-        "engineId": "{ENGINE_ID}",
+        "engineId": "22f4166f-85ba-4130-a995-a2b8e1edde32",
         "tasks": [
             {
                 "name": "train",
@@ -84,10 +87,10 @@ Una risposta corretta restituisce un payload contenente i dettagli dell’istanz
 
 ```json
 {
-    "id": "{MLINSTANCE_ID}",
+    "id": "46986c8f-7739-4376-8509-0178bdf32cda",
     "name": "A name for this MLInstance",
     "description": "A description for this MLInstance",
-    "engineId": "{ENGINE_ID}",
+    "engineId": "22f4166f-85ba-4130-a995-a2b8e1edde32",
     "created": "2019-01-01T00:00:00.000Z",
     "createdBy": {
         "userId": "Jane_Doe@AdobeID"
@@ -161,10 +164,10 @@ Una risposta corretta restituisce un elenco di istanze MLI e i relativi dettagli
 {
     "children": [
         {
-            "id": "{MLINSTANCE_ID}",
+            "id": "46986c8f-7739-4376-8509-0178bdf32cda",
             "name": "A name for this MLInstance",
             "description": "A description for this MLInstance",
-            "engineId": "{ENGINE_ID}",
+            "engineId": "22f4166f-85ba-4130-a995-a2b8e1edde32",
             "created": "2019-01-01T00:00:00.000Z",
             "createdBy": {
                 "displayName": "Jane Doe",
@@ -173,10 +176,10 @@ Una risposta corretta restituisce un elenco di istanze MLI e i relativi dettagli
             "updated": "2019-01-01T00:00:00.000Z"
         },
         {
-            "id": "{MLINSTANCE_ID}",
+            "id": "56986c8f-7739-4376-8509-0178bdf32cda",
             "name": "Retail Sales Model",
             "description": "A Model created with the Retail Sales Recipe",
-            "engineId": "{ENGINE_ID}",
+            "engineId": "32f4166f-85ba-4130-a995-a2b8e1edde32",
             "created": "2019-01-01T00:00:00.000Z",
             "createdBy": {
                 "displayName": "Jane Doe",
@@ -211,7 +214,7 @@ GET /mlInstances/{MLINSTANCE_ID}
 
 ```shell
 curl -X GET \
-    https://platform.adobe.io/data/sensei/mlInstances/{MLINSTANCE_ID} \
+    https://platform.adobe.io/data/sensei/mlInstances/46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -224,10 +227,10 @@ Una risposta corretta restituisce i dettagli dell&#39;istanza MLIninstance.
 
 ```json
 {
-    "id": "{MLINSTANCE_ID}",
+    "id": "46986c8f-7739-4376-8509-0178bdf32cda",
     "name": "A name for this MLInstance",
     "description": "A description for this MLInstance",
-    "engineId": "{ENGINE_ID}",
+    "engineId": "22f4166f-85ba-4130-a995-a2b8e1edde32",
     "created": "2019-01-01T00:00:00.000Z",
     "createdBy": {
         "displayName": "Jane Doe",
@@ -254,7 +257,7 @@ Una risposta corretta restituisce i dettagli dell&#39;istanza MLIninstance.
             ]
         },
         {
-            "name": "fp",
+            "name": "featurePipeline",
             "parameters": [
                 {
                     "key": "feature pipeline parameter",
@@ -272,7 +275,7 @@ Potete aggiornare un&#39;istanza MLI esistente sovrascrivendone le proprietà tr
 
 >[!TIP] Per garantire il successo di questa richiesta PUT, si consiglia innanzitutto di eseguire una richiesta GET per [recuperare l&#39;istanza MLI per ID](#retrieve-specific). Quindi, modificate e aggiornate l&#39;oggetto JSON restituito e applicate l&#39;intero oggetto JSON modificato come payload per la richiesta PUT.
 
-La seguente chiamata API di esempio aggiornerà i parametri di formazione e punteggio di un&#39;istanza MLIn, pur disponendo inizialmente di queste proprietà:
+La seguente chiamata API di esempio aggiornerà i parametri di formazione e punteggio di un&#39;istanza MLInpur disponendo inizialmente di queste proprietà:
 
 ```json
 {
@@ -321,7 +324,7 @@ PUT /mlInstances/{MLINSTANCE_ID}
 
 ```shell
 curl -X PUT \
-    https://platform.adobe.io/data/sensei/mlInstances/{MLINSTANCE_ID} \
+    https://platform.adobe.io/data/sensei/mlInstances/46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -365,7 +368,7 @@ Una risposta corretta restituisce un payload contenente i dettagli aggiornati de
 
 ```json
 {
-    "id": "{MLINSTANCE_ID}",
+    "id": "46986c8f-7739-4376-8509-0178bdf32cda",
     "name": "A name for this MLInstance",
     "description": "A description for this MLInstance",
     "engineId": "00000000-0000-0000-0000-000000000000",
@@ -400,7 +403,7 @@ Una risposta corretta restituisce un payload contenente i dettagli aggiornati de
 
 ## Eliminare le istanze MLI per ID motore
 
-Potete eliminare tutte le istanze MLI che condividono lo stesso motore eseguendo una richiesta DELETE che include l’ID del motore come parametro di query.
+Potete eliminare tutte le istanze MLI che condividono lo stesso motore eseguendo una richiesta di DELETE che include l’ID del motore come parametro di query.
 
 **Formato API**
 
@@ -416,7 +419,7 @@ DELETE /mlInstances?engineId={ENGINE_ID}
 
 ```shell
 curl -X DELETE \
-    https://platform.adobe.io/data/sensei/mlInstances?engineId={ENGINE_ID} \
+    https://platform.adobe.io/data/sensei/mlInstances?engineId=22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -435,7 +438,7 @@ curl -X DELETE \
 
 ## Eliminare un&#39;istanza MLI
 
-È possibile eliminare una singola istanza MLI eseguendo una richiesta DELETE che include l&#39;ID dell&#39;istanza MLI di destinazione nel percorso della richiesta.
+È possibile eliminare una singola istanza MLI eseguendo una richiesta DELETE che include l&#39;ID MLInance di destinazione nel percorso della richiesta.
 
 **Formato API**
 
@@ -451,7 +454,7 @@ DELETE /mlInstances/{MLINSTANCE_ID}
 
 ```shell
 curl -X DELETE \
-    https://platform.adobe.io/data/sensei/mlInstances/{MLINSTANCE_ID} \
+    https://platform.adobe.io/data/sensei/mlInstances/46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
