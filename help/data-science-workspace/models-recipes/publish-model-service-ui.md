@@ -4,23 +4,21 @@ solution: Experience Platform
 title: Pubblicare un modello come servizio (interfaccia utente)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 7dc5075d3101b4780af92897c0381e73a9c5aef0
+workflow-type: tm+mt
+source-wordcount: '405'
+ht-degree: 0%
 
 ---
 
 
 # Pubblicare un modello come servizio (interfaccia utente)
 
-Adobe Experience Platform Data Science Workspace consente di pubblicare i modelli formati e valutati come un servizio, consentendo agli utenti all&#39;interno dell&#39;organizzazione IMS di valutare i dati senza la necessità di creare i propri modelli.
-
-Questa esercitazione descrive i passaggi necessari per pubblicare un modello come servizio e per segnare i dati con un servizio tramite *Service Gallery*. È suddiviso nelle seguenti sezioni principali:
-
-- [Pubblicare un modello](#publish-a-model)
-- [Punteggio con un servizio](#access-a-service)
+ Adobe Experience Platform Data Science Workspace consente di pubblicare il modello di formazione e valutazione come servizio, consentendo agli utenti all&#39;interno dell&#39;organizzazione IMS di valutare i dati senza la necessità di creare i propri modelli.
 
 ## Introduzione
 
-Per completare questa esercitazione, è necessario disporre dell&#39;accesso a Experience Platform. Se non disponete dell&#39;accesso a un&#39;organizzazione IMS in Experience Platform, rivolgetevi al vostro amministratore di sistema prima di continuare.
+Per completare questa esercitazione, è necessario avere accesso a [!DNL Experience Platform]. Se non disponete dell&#39;accesso a un&#39;organizzazione IMS in [!DNL Experience Platform], rivolgetevi all&#39;amministratore di sistema prima di procedere.
 
 Questa esercitazione richiede un modello esistente con una corretta esecuzione della formazione. Se non si dispone di un modello pubblicabile, seguire il [treno e valutare un modello nell’esercitazione dell’interfaccia utente](./train-evaluate-model-ui.md) prima di continuare.
 
@@ -28,7 +26,7 @@ Se si preferisce pubblicare un modello utilizzando le API Sensei Machine Learnin
 
 ## Pubblicare un modello {#publish-a-model}
 
-1. In Adobe Experience Platform, fai clic sul **[!UICONTROL Models]** collegamento situato nella colonna di navigazione a sinistra per elencare tutti i modelli esistenti. Individuate e fate clic sul nome del modello da pubblicare come servizio.
+1. In  Adobe Experience Platform, fare clic sul **[!UICONTROL Models]** collegamento situato nella colonna di navigazione a sinistra per elencare tutti i modelli esistenti. Individuate e fate clic sul nome del modello da pubblicare come servizio.
    ![](../images/models-recipes/publish-model/1_browse_model.png)
 2. Fare clic **[!UICONTROL Publish]** in alto a destra nella pagina Panoramica modello per avviare un processo di creazione del servizio.
    ![](../images/models-recipes/publish-model/2_view_training_runs.png)
@@ -41,7 +39,7 @@ Se si preferisce pubblicare un modello utilizzando le API Sensei Machine Learnin
 
 ## Punteggio con un servizio {#access-a-service}
 
-1. In Adobe Experience Platform, fai clic sulla **[!UICONTROL Services]** scheda situata nella colonna di navigazione a sinistra per accedere alla *Galleria* dei servizi. Trova il Servizio che desideri utilizzare e fai clic su **[!UICONTROL Score]**.
+1. In  Adobe Experience Platform, fare clic sulla **[!UICONTROL Services]** scheda situata nella colonna di navigazione a sinistra per accedere alla *Galleria* servizi. Trova il Servizio che desideri utilizzare e fai clic su **[!UICONTROL Score]**.
    ![](../images/models-recipes/publish-model/click_to_score.png)
 2. Selezionare un set di dati di input appropriato per l&#39;esecuzione del punteggio, quindi fare clic su **[!UICONTROL Next]**.
    ![](../images/models-recipes/publish-model/6_scoring_input.png)
