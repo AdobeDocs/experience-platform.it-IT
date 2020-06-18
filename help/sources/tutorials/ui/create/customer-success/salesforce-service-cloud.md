@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare un connettore sorgente Salesforce Service Cloud nell’interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: cada7c7eff7597015caa7333559bef16a59eab65
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '543'
 ht-degree: 0%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 0%
 # Creare un connettore sorgente Salesforce Service Cloud nell’interfaccia utente
 
 >[!NOTE]
->Il connettore Salesforce Service Cloud è in versione beta. Le funzioni e la documentazione sono soggette a modifiche.
+>Il connettore Salesforce Service Cloud è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la panoramica [](../../../../home.md#terms-and-conditions) Origini.
 
-I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente su base programmata. Questa esercitazione fornisce i passaggi per la creazione di un connettore sorgente Salesforce Service Cloud (in seguito denominato &quot;SSC&quot;) tramite l&#39;interfaccia utente della piattaforma.
+I connettori di origine in  Adobe Experience Platform consentono di trasferire i dati esternamente originati su base programmata. Questa esercitazione fornisce i passaggi per la creazione di un connettore sorgente Salesforce Service Cloud (in seguito denominato &quot;SSC&quot;) tramite l&#39;interfaccia utente di Platform.
 
 ## Introduzione
 
-Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa esercitazione richiede una conoscenza approfondita dei seguenti componenti del  Adobe Experience Platform:
 
-* [Sistema](../../../../../xdm/home.md)XDM (Experience Data Model): Il framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza dei clienti.
+* [Sistema](../../../../../xdm/home.md)XDM (Experience Data Model): Framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
    * [Nozioni di base sulla composizione](../../../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
    * [Esercitazione](../../../../../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
 * [Profilo](../../../../../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
@@ -32,7 +32,7 @@ Se si dispone già di una connessione SSC valida, è possibile ignorare il resto
 
 ### Raccogli credenziali richieste
 
-Per accedere al tuo account SSC sulla piattaforma, devi fornire i seguenti valori:
+Per accedere al tuo account SSC su Platform, devi fornire i seguenti valori:
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
@@ -44,9 +44,9 @@ Per ulteriori informazioni su come iniziare, consulta [questo documento](https:/
 
 ## Collegamento dell&#39;account Salesforce Service Cloud
 
-Dopo aver raccolto le credenziali necessarie, puoi seguire i passaggi descritti di seguito per creare un nuovo account SSC da collegare alla piattaforma.
+Dopo aver raccolto le credenziali necessarie, puoi seguire i passaggi descritti di seguito per creare un nuovo account SSC da collegare ad Platform.
 
-Accedi ad <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> , quindi seleziona **Origini** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro *Origini* . Nella schermata *Catalogo* sono visualizzate una varietà di origini per le quali è possibile creare un account in ingresso. Ogni origine mostra il numero di account e flussi di dati esistenti associati a tali account.
+Accedete a <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> , quindi selezionate **Origini** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro *Origini* . Nella schermata *Catalogo* sono visualizzate una varietà di origini per le quali è possibile creare un account in ingresso. Ogni origine mostra il numero di account e flussi di dati esistenti associati a tali account.
 
 Potete selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l&#39;origine specifica con cui si desidera lavorare utilizzando l&#39;opzione di ricerca.
 
@@ -70,4 +70,4 @@ Per collegare un account esistente, selezionare l&#39;account SSC con cui connet
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, si è stabilito un collegamento al proprio account SSC. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per portare i dati di successo dei clienti nella piattaforma](../../dataflow/customer-success.md).
+Seguendo questa esercitazione, si è stabilito un collegamento al proprio account SSC. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per portare i dati sul successo dei clienti in Platform](../../dataflow/customer-success.md).
