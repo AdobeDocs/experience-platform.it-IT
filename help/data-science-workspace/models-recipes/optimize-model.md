@@ -4,21 +4,17 @@ solution: Experience Platform
 title: Ottimizzare un modello
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 7dc5075d3101b4780af92897c0381e73a9c5aef0
+workflow-type: tm+mt
+source-wordcount: '1242'
+ht-degree: 0%
 
 ---
 
 
-# Ottimizzare un modello
+# Ottimizzare un modello utilizzando il framework Model Insights
 
-
-Questa esercitazione passerà oltre:
-
-- Configurazione del codice di ricetta
-- Definizione di metriche personalizzate
-- Utilizzo di metriche di valutazione e grafici di visualizzazione predefiniti
-
-Al termine di questa esercitazione, dovresti essere in grado di configurare il codice della ricetta, definire metriche personalizzate, utilizzare metriche di valutazione predefinite e grafici di visualizzazione predefiniti.
+Model Insights Framework fornisce agli esperti di dati strumenti in Data Science Workspace per effettuare scelte rapide e informate per modelli ottimali di machine learning basati su esperimenti. Il quadro migliorerà la velocità e l&#39;efficacia del flusso di lavoro di apprendimento automatico e migliorerà la facilità d&#39;uso per gli esperti in materia di dati. A tal fine, viene fornito un modello predefinito per ciascun tipo di algoritmo di machine learning per facilitare l&#39;ottimizzazione del modello. Il risultato finale consente agli esperti di data mining e ai cittadini di prendere decisioni migliori in merito all&#39;ottimizzazione dei modelli per i clienti finali.
 
 ## Cosa sono le metriche?
 
@@ -27,10 +23,6 @@ Dopo aver implementato e addestrato un modello, il passo successivo che uno scie
 - Area sotto curva
 - Matrice di fusione
 - Report classificazione
-
-## Cos&#39;è il Framework di Approfondimenti modello?
-
-Model Insights Framework fornisce agli esperti di dati strumenti in Data Science Workspace per effettuare scelte rapide e informate per modelli ottimali di machine learning basati su esperimenti. Il quadro migliorerà la velocità e l&#39;efficacia del flusso di lavoro di apprendimento automatico e migliorerà la facilità d&#39;uso per gli esperti in materia di dati. A tal fine, viene fornito un modello predefinito per ciascun tipo di algoritmo di machine learning per facilitare l&#39;ottimizzazione del modello. Il risultato finale consente agli esperti di data mining e ai cittadini di prendere decisioni migliori in merito all&#39;ottimizzazione dei modelli per i clienti finali.
 
 ## Configurazione del codice di ricetta
 
@@ -166,7 +158,7 @@ Sensei Model Insights Framework supporterà un modello predefinito per ciascun t
 --- | --- | ---
 | Regressione | - RMSE<br>- MAPE<br>- MASE<br>- MASE | Curva di sovrapposizione valori previsti e valori effettivi |
 | Classificazione binaria | - Matrice<br>di fusione - Precisione-richiamo<br>- Precisione<br>- punteggio F (in particolare F1,F2)<br>- AUC<br>- ROC | Curva ROC e matrice confusione |
-| Classificazione multiclasse | -Matrice di conversione <br>- Per ogni classe: precisione <br>- precisione del richiamo <br>- punteggio F (in particolare F1, F2) | Curva ROC e matrice confusione |
+| Classificazione multiclasse | -Matrice di conversione <br>- Per ogni classe: <br>- precisione del richiamo <br>- punteggio F (in particolare F1, F2) | Curva ROC e matrice confusione |
 | Clustering (con verità a terra) | - NMI (valutazione normalizzata delle informazioni reciproche), AMI (valutazione rettificata delle informazioni reciproche)<br>- RI (indice Rand), ARI (indice Rand rettificato)<br>- punteggio di omogeneità, punteggio di completezza e misura<br>V- FMI (indice Fowlkes-Mallow)<br>- Purezza<br>- indice Jaccard | Grafico cluster che mostra cluster e centroidi con dimensioni cluster relative che riflettono i punti dati del cluster |
 | Clustering (senza verità di fondo) | - Inerzia<br>- Coefficiente<br>della silhouette- CHI (indice di Calinski-Harabaz)<br>- DBI (indice di Davies-Bouldin)<br>- Indice di Dunn | Grafico cluster che mostra cluster e centroidi con dimensioni cluster relative che riflettono i punti dati del cluster |
 | Consiglio | -Media Media di precisione (MAP) <br>normalizzata - Guadagno cumulativo <br>medio <br>metrico K | TBD |
