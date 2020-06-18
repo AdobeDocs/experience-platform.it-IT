@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Connettore Google BigQuery
 topic: overview
 translation-type: tm+mt
-source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+source-git-commit: b92f33627636b351dbd7b490e461d4f6b2866310
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '185'
 ht-degree: 0%
 
 ---
@@ -14,19 +14,22 @@ ht-degree: 0%
 
 # (Beta) Connettore Google BigQuery
 
-Adobe Experience Platform consente di acquisire dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi della piattaforma. È possibile acquisire dati da origini diverse come applicazioni Adobe, archiviazione basata su cloud, database e molti altri.
+>[!NOTE]
+>Google BigQuery è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la panoramica [](../../home.md#terms-and-conditions) Origini.
 
-Experience Platform supporta l’acquisizione di dati da un database di terze parti. La piattaforma può connettersi a diversi tipi di database come relazionale, NoSQL o data warehouse. Il supporto per i provider di database include Google BigQuery.
+ Adobe Experience Platform consente l&#39;acquisizione di dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. È possibile acquisire dati da origini diverse come applicazioni Adobe, archiviazione basata su cloud, database e molti altri.
 
-La documentazione seguente fornisce informazioni su come collegare Google BigQuery alla piattaforma utilizzando le API o l&#39;interfaccia utente:
+ Experience Platform supporta l’acquisizione di dati da un database di terze parti. Platform può connettersi a diversi tipi di database come relazionale, NoSQL o date warehouse. Il supporto per i provider di database include Google BigQuery.
 
-## Connessione di Google BigQuery alla piattaforma tramite API
+La documentazione seguente fornisce informazioni su come collegare Google BigQuery ad Platform utilizzando le API o l&#39;interfaccia utente:
+
+## Connessione di Google BigQuery ad Platform tramite API
 
 - [Creare un connettore Google BigQuery utilizzando l&#39;API del servizio di flusso](../../tutorials/api/create/databases/bigquery.md)
 - [Esplora un sistema di database utilizzando l&#39;API del servizio di flusso](../../tutorials/api/explore/database-nosql.md)
 - [Raccolta di dati da un database tramite l&#39;API del servizio di flusso](../../tutorials/api/collect/database-nosql.md)
 
-## Connessione di Google BigQuery alla piattaforma tramite l&#39;interfaccia utente
+## Connessione di Google BigQuery ad Platform tramite l&#39;interfaccia utente
 
 - [Creare un connettore di origine Google BigQuery nell&#39;interfaccia utente](../../tutorials/ui/create/databases/bigquery.md)
 - [Configurare un flusso di dati per un connettore di database nell&#39;interfaccia utente](../../tutorials/ui/dataflow/databases.md)
