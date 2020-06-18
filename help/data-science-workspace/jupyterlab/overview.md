@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guida utente di JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 440310339003bf23c9fcfc69a6ec1eacddc9f413
+source-git-commit: 49f0678cf8bf4349d0b63f3525a1f707f725ede9
 workflow-type: tm+mt
-source-wordcount: '3672'
-ht-degree: 11%
+source-wordcount: '3780'
+ht-degree: 10%
 
 ---
 
@@ -18,31 +18,31 @@ JupyterLab è un&#39;interfaccia utente basata sul Web per <a href="https://jupy
 
 Questo documento fornisce una panoramica di JupyterLab e delle sue funzioni, oltre alle istruzioni per eseguire azioni comuni.
 
-## JupyterLab sulla piattaforma Experience
+## JupyterLab su  Experience Platform
 
-L&#39;integrazione JupyterLab della Experience Platform è accompagnata da modifiche architettoniche, considerazioni di progettazione, estensioni personalizzate dei notebook, librerie preinstallate e un&#39;interfaccia a tema Adobe.
+&#39;integrazione di Experience Platform JupyterLab è accompagnata da modifiche architettoniche, considerazioni di progettazione, estensioni personalizzate dei notebook, librerie preinstallate e un&#39;interfaccia a tema Adobe.
 
-L&#39;elenco seguente illustra alcune delle funzioni esclusive di JupyterLab sulla piattaforma:
+L&#39;elenco seguente illustra alcune delle funzioni esclusive di JupyterLab su Platform:
 
 | Funzione | Descrizione |
 | --- | --- |
-| **Kernel** | I kernel forniscono ai notebook e ad altri front-end JupyterLab la possibilità di eseguire e analizzare il codice in diversi linguaggi di programmazione. Experience Platform fornisce ulteriori kernel per supportare lo sviluppo in Python, R, PySpark e Spark. Per ulteriori dettagli, consulta la sezione [kernel](#kernels) . |
+| **Kernel** | I kernel forniscono ai notebook e ad altri front-end JupyterLab la possibilità di eseguire e analizzare il codice in diversi linguaggi di programmazione.  Experience Platform fornisce ulteriori kernel per supportare lo sviluppo in Python, R, PySpark e Spark. Per ulteriori dettagli, consulta la sezione [kernel](#kernels) . |
 | **Accesso ai dati** | Accedete ai set di dati esistenti direttamente da JupyterLab con il supporto completo per le funzionalità di lettura e scrittura. |
-| **Integrazione del servizio piattaforma** | Le integrazioni integrate consentono di utilizzare altri servizi della piattaforma direttamente da JupyterLab. Un elenco completo delle integrazioni supportate è disponibile nella sezione [Integrazione con altri servizi](#service-integration)della piattaforma. |
-| **Autenticazione** | Oltre al modello <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">di sicurezza integrato di</a>JupyterLab, ogni interazione tra l&#39;applicazione e la piattaforma Experience Platform, inclusa la comunicazione tra i servizi della piattaforma, viene crittografata e autenticata tramite <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
-| **Librerie di Sviluppo** | In Experience Platform, JupyterLab offre librerie preinstallate per Python, R e PySpark. Consultate l&#39; [appendice](#supported-libraries) per un elenco completo delle librerie supportate. |
-| **Controller libreria** | Se le librerie preinstallate non sono adatte alle vostre esigenze, è possibile installare librerie aggiuntive per Python e R e memorizzare temporaneamente in contenitori isolati per mantenere l&#39;integrità della Piattaforma e proteggere i dati. Per ulteriori dettagli, consulta la sezione [kernel](#kernels) . |
+| **Integrazione dei servizi Platform** | Le integrazioni integrate consentono di utilizzare altri servizi Platform direttamente da JupyterLab. Un elenco completo delle integrazioni supportate è disponibile nella sezione [Integrazione con altri servizi](#service-integration)Platform. |
+| **Autenticazione** | Oltre al modello <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">di sicurezza integrato di</a>JupyterLab, ogni interazione tra l&#39;applicazione e  Experience Platform, inclusa la comunicazione tra servizi Platform, è criptata e autenticata tramite <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
+| **Librerie di Sviluppo** | In  Experience Platform, JupyterLab offre librerie preinstallate per Python, R e PySpark. Consultate l&#39; [appendice](#supported-libraries) per un elenco completo delle librerie supportate. |
+| **Controller libreria** | Se le librerie preinstallate non sono adatte alle vostre esigenze, è possibile installare librerie aggiuntive per Python e R e memorizzare temporaneamente in contenitori isolati per mantenere l&#39;integrità di Platform e mantenere al sicuro i dati. Per ulteriori dettagli, consulta la sezione [kernel](#kernels) . |
 
 >[!NOTE] Le librerie aggiuntive sono disponibili solo per la sessione in cui sono state installate. È necessario reinstallare tutte le librerie aggiuntive necessarie all&#39;avvio delle nuove sessioni.
 
-## Integrazione con altri servizi della piattaforma {#service-integration}
+## Integrazione con altri servizi Platform {#service-integration}
 
 Standardizzazione e interoperabilità sono concetti chiave alla base di [!DNL Experience Platform]. L&#39;integrazione di JupyterLab su [!DNL Platform] come IDE integrato consente di interagire con altri [!DNL Platform] servizi, consentendoti di sfruttare [!DNL Platform] al massimo il suo potenziale. I seguenti [!DNL Platform] servizi sono disponibili in JupyterLab:
 
 * **Servizio catalogo:** Accesso ed esplorazione di set di dati con funzionalità di lettura e scrittura.
 * **Servizio query:** Accesso ed esplorazione di dataset utilizzando SQL, fornendo costi generali di accesso ai dati inferiori quando si tratta di grandi quantità di dati.
 * **Sensei ML Framework:** Sviluppo di modelli con la capacità di formare e valutare i dati, nonché creazione di ricette con un solo clic.
-* **Modello dati esperienza (XDM):** Standardizzazione e interoperabilità sono concetti chiave di Adobe Experience Platform. [Experience Data Model (XDM)](https://www.adobe.com/go/xdm-home-en), guidato da Adobe, è uno sforzo per standardizzare i dati sull&#39;esperienza cliente e definire schemi per la gestione dell&#39;esperienza cliente.
+* **Modello dati esperienza (XDM):** Standardizzazione e interoperabilità sono concetti chiave  Adobe Experience Platform. [Experience Data Model (XDM)](https://www.adobe.com/go/xdm-home-en), guidato da Adobe, è uno sforzo per standardizzare i dati sull&#39;esperienza cliente e definire schemi per la gestione dell&#39;esperienza cliente.
 
 >[!NOTE] Alcune integrazioni di [!DNL Platform] servizio su JupyterLab sono limitate a specifici kernel. Per ulteriori informazioni, consulta la sezione sui [kernel](#kernels) .
 
@@ -60,7 +60,7 @@ Le informazioni sulle caratteristiche chiave di JupyterLab e le istruzioni sulle
 
 ### Access JupyterLab {#access-jupyterlab}
 
-In [Adobe Experience Platform](https://platform.adobe.com), seleziona **Notebook** dalla colonna di navigazione a sinistra. Lasciare un po&#39; di tempo per l&#39;inizializzazione completa di JupyterLab.
+In [Adobe Experience Platform](https://platform.adobe.com), selezionate **Blocco note** dalla colonna di navigazione a sinistra. Lasciare un po&#39; di tempo per l&#39;inizializzazione completa di JupyterLab.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -124,7 +124,7 @@ I kernel per notebook sono i motori informatici specifici per la lingua per l&#3
 
 Alcune caratteristiche e funzionalità sono limitate a specifici kernel come descritto nella tabella seguente:
 
-| Kernel | Supporto per l&#39;installazione della libreria | Integrazioni di piattaforme |
+| Kernel | Supporto per l&#39;installazione della libreria | Integrazioni Platform |
 | :----: | :--------------------------: | :-------------------- |
 | **Python** | Sì | <ul><li>Sensei ML Framework</li><li>Servizio catalogo</li><li>Servizio query</li></ul> |
 | **R** | Sì | <ul><li>Sensei ML Framework</li><li>Servizio catalogo</li></ul> |
@@ -227,9 +227,18 @@ Per aprire un nuovo *avvio*, fai clic su **File > Nuovo avvio**. In alternativa,
 
 ![](../images/jupyterlab/user-guide/new_launcher.gif)
 
-## Accesso ai dati della piattaforma tramite i notebook
+### Configurazione di GPU e server di memoria in Python/R
 
-Ogni kernel supportato fornisce funzionalità integrate che consentono di leggere i dati della piattaforma da un dataset all&#39;interno di un blocco appunti. Tuttavia, il supporto per l&#39;impaginazione dei dati è limitato ai notebook Python e R.
+Nell&#39; [!DNL JupyterLab] angolo superiore destro selezionate l&#39;icona a forma di ingranaggio per aprire la configurazione *del server* Notebook. È possibile attivare la GPU e allocare la quantità di memoria necessaria utilizzando il cursore. La quantità di memoria che è possibile allocare dipende dalla quantità di provisioning dell&#39;organizzazione. Selezionare **[!UICONTROL Update configs]** per salvare.
+
+>[!NOTE]
+>Per i notebook viene fornita una sola GPU per organizzazione. Se la GPU è in uso, è necessario attendere che l&#39;utente che ha attualmente riservato la GPU la rilasci. A questo scopo, disconnettetevi o uscite dalla GPU in uno stato di inattività per quattro o più ore.
+
+![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
+
+## Accedere ai dati Platform tramite i notebook
+
+Ogni kernel supportato fornisce funzionalità integrate che consentono di leggere dati Platform da un dataset all&#39;interno di un blocco appunti. Tuttavia, il supporto per l&#39;impaginazione dei dati è limitato ai notebook Python e R.
 
 ### Limiti dei dati per notebook
 
@@ -439,7 +448,7 @@ Un comando magico personalizzato di Data Science Workspace per la lettura o la s
 
 ### Dati query con il servizio query in Python
 
-JupyterLab sulla piattaforma consente di utilizzare SQL in un notebook Python per accedere ai dati tramite il servizio <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">query</a>Adobe Experience Platform. L&#39;accesso ai dati tramite Query Service può essere utile per gestire insiemi di dati di grandi dimensioni a causa dei suoi tempi di esecuzione superiori. Tenere presente che l&#39;esecuzione di query sui dati tramite il servizio Query ha un limite di tempo di elaborazione di dieci minuti.
+JupyterLab su Platform consente di utilizzare SQL in un notebook Python per accedere ai dati tramite <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">Adobe Experience Platform Query Service</a>. L&#39;accesso ai dati tramite Query Service può essere utile per gestire insiemi di dati di grandi dimensioni a causa dei suoi tempi di esecuzione superiori. Tenere presente che l&#39;esecuzione di query sui dati tramite il servizio Query ha un limite di tempo di elaborazione di dieci minuti.
 
 Prima di utilizzare Query Service in JupyterLab, verificare di disporre di una conoscenza approfondita della sintassi <a href="https://www.adobe.com/go/query-service-sql-syntax-en" target="_blank">SQL di</a>Query Service.
 
