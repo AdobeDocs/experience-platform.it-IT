@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida per gli sviluppatori di API Sensei Machine Learning
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 4f74acdc41d5049c1aa8eb3dfcef4e9d75c785ca
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Guida per gli sviluppatori di API Sensei Machine Learning
 
-L&#39;API Sensei Machine Learning offre un meccanismo che consente alle scienze dei dati di organizzare e gestire i servizi di machine learning, dall&#39;installazione degli algoritmi alla sperimentazione e all&#39;implementazione dei servizi.
+L&#39;API Sensei Machine Learning fornisce un meccanismo che consente agli esperti di dati di organizzare e gestire i servizi di machine learning, dall&#39;inserimento di algoritmi alla sperimentazione e all&#39;implementazione di servizi.
 
 Questa guida per gli sviluppatori illustra i passaggi necessari per iniziare a utilizzare [Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)e illustra le chiamate API per l&#39;esecuzione di operazioni CRUD su varie risorse di Data Science Workspace.
 
@@ -26,11 +26,11 @@ Questa guida per gli sviluppatori illustra i passaggi necessari per iniziare a u
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API della piattaforma richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in  Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API Platform richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Per ulteriori informazioni sulle sandbox in Piattaforma, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+Per ulteriori informazioni sulle sandbox in Platform, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva:
 
