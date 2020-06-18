@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Connettore Azure Event Hubs
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '196'
 ht-degree: 0%
 
 ---
@@ -14,19 +14,22 @@ ht-degree: 0%
 
 # (Beta) Connettore Azure Event Hubs
 
-Adobe Experience Platform offre connettività nativa per fornitori di cloud come AWS, Google Cloud Platform e Azure. È possibile trasferire i dati da questi sistemi in Piattaforma.
+>[!NOTE]
+>Il connettore Azure Event Hubs è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la panoramica [](../../home.md#terms-and-conditions) Origini.
 
-Le origini di archiviazione cloud possono portare i tuoi dati in Platform senza bisogno di scaricare, formattare o caricare. I dati ingeriti possono essere formattati come JSON XDM, parquet XDM o delimitati. Ogni fase del processo è integrata nel flusso di lavoro Origini. La piattaforma consente di inserire i dati dagli hub eventi di Azure in tempo reale.
+ Adobe Experience Platform fornisce connettività nativa per i fornitori di cloud come AWS, Google Cloud Platform e Azure. È possibile trasferire i dati da questi sistemi ad Platform.
 
-La documentazione seguente fornisce informazioni su come collegare gli hub eventi di Azure alla piattaforma utilizzando le API o l&#39;interfaccia utente:
+Le origini di archiviazione cloud possono importare i tuoi dati in Platform senza bisogno di scaricare, formattare o caricare. I dati ingeriti possono essere formattati come JSON XDM, parquet XDM o delimitati. Ogni fase del processo è integrata nel flusso di lavoro Origini. Platform consente di importare i dati dagli hub eventi di Azure in tempo reale.
 
-## Collegare gli hub eventi di Azure alla piattaforma mediante le API
+La documentazione seguente fornisce informazioni su come collegare gli hub eventi di Azure ad Platform utilizzando le API o l&#39;interfaccia utente:
+
+## Collegare gli hub eventi di Azure ad Platform mediante le API
 
 - [Creare un connettore Azure Event Hubs utilizzando l&#39;API del servizio di flusso](../../tutorials/api/create/cloud-storage/eventhub.md)
 - [Esplora un sistema di archiviazione cloud utilizzando l&#39;API del servizio di flusso](../../tutorials/api/explore/cloud-storage.md)
 - [Raccolta di dati di archiviazione cloud tramite l&#39;API del servizio di flusso](../../tutorials/api/collect/cloud-storage.md)
 
-## Collegare gli hub eventi di Azure alla piattaforma tramite l’interfaccia utente
+## Collegare gli hub eventi di Azure ad Platform utilizzando l&#39;interfaccia utente
 
 - [Creare un connettore di origine Azure Event Hubs nell&#39;interfaccia utente](../../tutorials/ui/create/cloud-storage/eventhub.md)
 - [Configurare un flusso di dati per un connettore di archiviazione cloud nell&#39;interfaccia utente](../../tutorials/ui/dataflow/streaming/cloud-storage.md)
