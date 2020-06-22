@@ -4,9 +4,9 @@ seo-title: Flusso di lavoro destinazioni social network
 description: Istruzioni per la connessione agli account degli annunci social network
 seo-description: Istruzioni per la connessione agli account degli annunci social network
 translation-type: tm+mt
-source-git-commit: ab53e2efffed536e8028beabd64aee843d1eeee8
+source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '444'
 ht-degree: 0%
 
 ---
@@ -34,28 +34,18 @@ Questa esercitazione utilizza Facebook come esempio, ma il flusso di lavoro in A
 
    ![Credenziali confermate](/help/rtcdp/destinations/assets/facebook-post-connection-view.png)
 
-4. Nel **[!UICONTROL Setup]** passaggio, immettete un **[!UICONTROL Name]** e un **[!UICONTROL Description]** per il flusso di attivazione e inserite il contenuto **[!UICONTROL Account ID]** del social network e dell’account. Seleziona tutti i casi di utilizzo marketing da applicare a questa destinazione. Selezionate **[!UICONTROL Create Destination]** dopo aver compilato i campi riportati sopra.
+4. Nel **[!UICONTROL Setup]** passaggio, immettete un **[!UICONTROL Name]** e un **[!UICONTROL Description]** per il flusso di attivazione e inserite il contenuto **[!UICONTROL Account ID]** del social network e dell’account. <br> Inoltre, in questo passaggio potete selezionare tutte le opzioni **[!UICONTROL Marketing use case]** che devono essere applicate a questa destinazione. I casi di utilizzo del marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra i casi di utilizzo di marketing definiti da Adobe oppure creare un tuo caso di utilizzo di marketing. Per ulteriori informazioni sui casi di utilizzo del marketing, consulta la pagina [Governance dei dati in CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) in tempo reale. Per informazioni sui singoli casi di utilizzo marketing definiti da Adobe, consulta la panoramica [dei criteri di utilizzo dei](/help/data-governance/policies/overview.md#core-actions)dati. <br> Selezionate **[!UICONTROL Create Destination]** dopo aver compilato i campi riportati sopra.
 
    >[!IMPORTANT]
    >
-   > Destinazioni Facebook. **[!UICONTROL Account ID]** è l&#39;ID del tuo account pubblicitario Facebook. Puoi trovare questo ID in Facebook Ads Manager. Aggiungi l’ID con il prefisso `act_` indicato di seguito:
+   > * Il caso d’uso marketing *Single Identity Personalization (Personalizzazione identità* singola) è selezionato per impostazione predefinita per le destinazioni dei social network e non può essere rimosso.
+   > * Destinazioni Facebook. **[!UICONTROL Account ID]** è l&#39;ID del tuo account pubblicitario Facebook. Puoi trovare questo ID in Facebook Ads Manager. Aggiungi l’ID con il prefisso `act_` indicato di seguito:
 
-   ![Connessione alla destinazione social network - passaggio di configurazione](/help/rtcdp/destinations/assets/social-network-setup-step.png)
+
+   ![Connessione alla destinazione social network - passaggio di configurazione](/help/rtcdp/destinations/assets/social-networks-setup-step.png)
 
 5. La destinazione è stata creata. Puoi scegliere **[!UICONTROL Save & Exit]** se attivare i segmenti in un secondo momento oppure puoi selezionare **[!UICONTROL Next]** per continuare il flusso di lavoro e selezionare i segmenti da attivare. In entrambi i casi, consulta la sezione successiva, [Attivare i segmenti sui social network](#activate-segments), per il resto del flusso di lavoro.
 
 ## Attivare i segmenti sui social network {#activate-segments}
 
 Per istruzioni su come attivare i segmenti nei social network, vedi [Attivare i dati sulle destinazioni](/help/rtcdp/destinations/activate-destinations.md).
-
-
-<!--
-
-// update IMPORTANT note in step 4 after marketing use cases are released for RTCDP
-
-    >[!IMPORTANT]
-    >
-    > * The *Single Identity Personalization* marketing use case is selected by default for social network destinations and cannot be removed. 
-    > * For Facebook destinations. **[!UICONTROL Account ID]** is your Facebook Ad Account ID. You can find this ID in the Facebook Ads Manager. Prefix the ID with `act_` as shown below: 
-
-    ![Connect to social network destination - setup step](/help/rtcdp/destinations/assets/social-networks-setup-step.png)
