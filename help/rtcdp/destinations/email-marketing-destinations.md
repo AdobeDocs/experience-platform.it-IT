@@ -4,9 +4,9 @@ seo-title: Destinazioni marketing e-mail
 description: I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio per l’invio di campagne e-mail promozionali.
 seo-description: I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio per l’invio di campagne e-mail promozionali.
 translation-type: tm+mt
-source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '703'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Destinazioni di marketing e-mail {#email-marketing-destinations}
 
-I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio l&#39;invio di campagne e-mail promozionali. La piattaforma dati cliente Adobe in tempo reale si integra con ESP consentendo di attivare i segmenti per le destinazioni di e-mail marketing.
+I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio l&#39;invio di campagne e-mail promozionali. Adobe Real-time Customer Data Platform si integra con ESP consentendo di attivare i segmenti nelle destinazioni di e-mail marketing.
 
 Per inviare segmenti alle destinazioni di marketing tramite e-mail per le campagne, Adobe Real-time CDP deve prima connettersi alla destinazione.
 
@@ -26,17 +26,28 @@ Nel flusso di destinazione di connessione, descritto nella sezione seguente, col
 
 1. In **[!UICONTROL Connections > Destinations]**, seleziona la destinazione di e-mail marketing a cui vuoi connetterti, quindi seleziona **[!UICONTROL Connect destination]**.
 
-   ![Connetti alla destinazione](/help/rtcdp/destinations/assets/connect-destination-1.png)
+   ![Connetti alla destinazione](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
-2. Nella procedura guidata di Connect, selezionate il percorso **[!UICONTROL Connection type]** di memorizzazione. Potete scegliere tra **Amazon S3**, **SFTP con password**, **SFTP con chiave** SSH. Compila le informazioni riportate di seguito, a seconda del tipo di connessione, quindi seleziona **[!UICONTROL Connect]**.
+2. Nel **[!UICONTROL Authentication]** passaggio, se in precedenza hai impostato una connessione alla destinazione di marketing per le e-mail, seleziona **[!UICONTROL Existing Account]** e seleziona la connessione esistente. In alternativa, potete scegliere **[!UICONTROL New Account]** di impostare una nuova connessione alla destinazione di e-mail marketing. Nel **[!UICONTROL Connection type]** selettore, potete scegliere tra **Amazon S3**, **SFTP con password**, **SFTP con chiave** SSH. Compila le informazioni riportate di seguito, a seconda del tipo di connessione, quindi seleziona **[!UICONTROL Connect]**.
 
-Per le connessioni **** S3, dovete fornire il vostro ID chiave di accesso e la chiave di accesso segreta.
+   Per le connessioni **** S3, dovete fornire il vostro ID chiave di accesso Amazon e la chiave di accesso segreta.
 
-Per **SFTP con connessioni con password** , dovete fornire Domain, Port, UserName e Password.
+   Per **SFTP con connessioni con password** , dovete fornire Domain, Port, Username e Password per il vostro server SFTP.
 
-Per **SFTP con connessioni chiavi** SSH, dovete fornire Domain, Port, Username e Chiave SSH.
+   Per **SFTP con connessioni chiavi** SSH, dovete fornire Domain, Port, Username e Chiave SSH per il vostro server SFTP.
 
-## Passaggio 2: selezionare i campi dello schema da utilizzare come attributi di destinazione nei file esportati {#destination-attributes}
+3. Nel **[!UICONTROL Setup]** passaggio, immettete un **[!UICONTROL Name]** e un **[!UICONTROL Description]** per la nuova destinazione, nonché l’ **[!UICONTROL File format]** per i file esportati. <br>
+Se avete selezionato l&#39;opzione di archiviazione Amazon S3 nel passaggio precedente, inserite i file **[!UICONTROL Bucket name]** e **[!UICONTROL Folder path]** nella destinazione di archiviazione cloud in cui verranno consegnati. Per l&#39;opzione di archiviazione SFTP, inserite la **[!UICONTROL Folder path]** posizione in cui verranno inviati i file. <br>
+Inoltre, in questo passaggio potete selezionare tutte le opzioni **[!UICONTROL Marketing use case]** che devono essere applicate a questa destinazione. I casi di utilizzo del marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra i casi di utilizzo di marketing definiti da Adobe oppure creare un tuo caso di utilizzo di marketing. Per ulteriori informazioni sui casi di utilizzo del marketing, consulta la pagina [Governance dei dati in CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) in tempo reale. Per informazioni sui singoli casi di utilizzo marketing definiti da Adobe, consulta la panoramica [dei criteri di utilizzo dei](/help/data-governance/policies/overview.md#core-actions)dati. <br>
+   ![Passaggio di impostazione e-mail](/help/rtcdp/destinations/assets/email-setup-step.png)
+
+## Passaggio 2 - Selezionare i membri del segmento da includere nelle esportazioni di destinazione {#select-segments}
+
+Nella **[!UICONTROL Select Segments]** pagina, seleziona i segmenti da inviare alla destinazione. Per ulteriori informazioni sui campi, consulta le sezioni seguenti.
+
+![Seleziona segmenti](/help/rtcdp/destinations/assets/email-select-segments.png)
+
+## Passaggio 3: selezionare i campi dello schema da utilizzare come attributi di destinazione nei file esportati {#destination-attributes}
 
 In questo passaggio, stai selezionando quali campi esportare per le destinazioni di marketing tramite e-mail.
 
@@ -44,7 +55,7 @@ In questo passaggio, stai selezionando quali campi esportare per le destinazioni
 
 ### Identità {#identity}
 
-È consigliabile selezionare un identificatore univoco dallo schema [](../../profile/home.md#profile-fragments-and-union-schemas)unione. Questo è il campo di cui vengono cancellate le identità degli utenti. Nella maggior parte dei casi, questo campo è l&#39;indirizzo e-mail, ma può anche essere un ID programma fedeltà o un numero di telefono. Vedere la tabella seguente per gli identificatori univoci più comuni e il relativo campo XDM nello schema unificato.
+È consigliabile selezionare un identificatore univoco dallo schema [](../../profile/home.md#profile-fragments-and-union-schemas)unione. Questo è il campo di cui vengono cancellate le identità degli utenti. Nella maggior parte dei casi, questo campo è l&#39;indirizzo e-mail, ma può anche essere un ID programma fedeltà o un numero di telefono. Vedere la tabella seguente per gli identificatori univoci più comuni e il relativo campo XDM nello schema unione.
 
 | Identificatore univoco | Campo XDM nello schema unificato |
 ---------|----------
