@@ -4,9 +4,9 @@ seo-title: Destinazione Google Display e Video 360
 description: Display & Video 360, precedentemente noto come DoubleClick Bid Manager è uno strumento che consente di eseguire campagne di retargeting e di targeting delle audience su diverse fonti di inventario di Display, Video e Mobile.
 seo-description: 'Display & Video 360, precedentemente noto come DoubleClick Bid Manager è uno strumento che consente di eseguire campagne di retargeting e di targeting delle audience su diverse fonti di inventario di Display, Video e Mobile. '
 translation-type: tm+mt
-source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
+source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Tenete presente i seguenti dettagli specifici per le destinazioni Google Display
 
 >[!IMPORTANT]
 >
->Se stai cercando di creare la tua prima destinazione con Google Display e Video 360 e non hai già attivato in passato la funzionalità [di sincronizzazione degli](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) ID nel servizio Experience Cloud ID (con Adobe Audience Manager o altre applicazioni), rivolgiti ad Adobe Consulting o all’Assistenza clienti per abilitare la sincronizzazione degli ID. Se in precedenza avevate impostato le integrazioni Google in Audience Manager, le sincronizzazioni ID che avevate configurato riportano ad Adobe Real-time CDP.
+>Se stai cercando di creare la tua prima destinazione con Google Display &amp; Video 360 e non hai attivato la funzionalità [di sincronizzazione](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) ID in  Experience Cloud ID Service in passato (con  Adobe Audience Manager o altre applicazioni), contatta il Consulente Adobe o l’Assistenza clienti per abilitare la sincronizzazione degli ID. Se in precedenza avevate impostato integrazioni Google in  Audience Manager, le sincronizzazioni ID che avevate configurato riportano ad Adobe Real-time CDP.
 
 ## Prerequisiti
 
@@ -49,14 +49,15 @@ Prima di creare la destinazione Google Display &amp; Video 360 in Adobe Real-tim
 1. In **[!UICONTROL Connections > Destinations]**, selezionate Google Display &amp; Video 360, quindi **[!UICONTROL Create destination]**.
    ![Destinazione Google Display e Video 360 di Connect](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
-2. Nel flusso di lavoro Crea destinazione, compila il modulo [!UICONTROL Basic Information] per la destinazione. <br>
-   ![Informazioni di base Google Display &amp; Video 360](/help/rtcdp/destinations/assets/google-dv360-basic-information.png)
+2. Nel passaggio **Configurazione** del flusso di lavoro di creazione della destinazione, compila i casi di utilizzo [!UICONTROL Basic Information] per la destinazione e marketing da applicare a tale destinazione. <br>
+   ![Informazioni di base Google Display &amp; Video 360](/help/rtcdp/destinations/assets/dv360-setup-step.png)
 * **[!UICONTROL Name]**: Compila il nome preferito per questa destinazione.
 * **[!UICONTROL Description]**: Facoltativo. Ad esempio, potete specificare per quale campagna state utilizzando questa destinazione.
 * **[!UICONTROL Account Type]**: Selezionate un’opzione, a seconda dell’account con Google:
    * Consente `Invite Advertiser` di condividere i tipi di pubblico solo con un marchio specifico nell&#39;account Display &amp; Video 360.
    * Consente `Invite Partner` di condividere i tipi di pubblico su tutti i marchi dell&#39;account Display &amp; Video 360.
 * **[!UICONTROL Account ID]**: Compila il tuo **[!DNL Invite partner]** o il tuo **[!DNL Invite advertiser]** ID account con Google. In genere si tratta di un ID di sei o sette cifre.
+* **[!UICONTROL Marketing use case]**: I casi di utilizzo del marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra i casi di utilizzo di marketing definiti da Adobe oppure creare un tuo caso di utilizzo di marketing. Per ulteriori informazioni sui casi di utilizzo del marketing, consulta la pagina [Governance dei dati in CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) in tempo reale. Per informazioni sui singoli casi di utilizzo marketing definiti da Adobe, consulta la panoramica [dei criteri di utilizzo dei](/help/data-governance/policies/overview.md#core-actions)dati.
 
 >[!NOTE]
 >
