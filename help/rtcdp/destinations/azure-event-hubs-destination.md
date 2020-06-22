@@ -1,10 +1,10 @@
 ---
 title: (Beta) Destinazione degli hub eventi di Azure
 seo-title: (Beta) Destinazione degli hub eventi di Azure
-description: Crea una connessione in uscita in tempo reale all'archivio degli hub eventi di Azure per lo streaming dei dati dalla piattaforma Experience.
-seo-description: Crea una connessione in uscita in tempo reale all'archivio degli hub eventi di Azure per lo streaming dei dati dalla piattaforma Experience.
+description: Crea una connessione in uscita in tempo reale all'archivio degli hub eventi di Azure per lo streaming dei dati da  Experience Platform.
+seo-description: Crea una connessione in uscita in tempo reale all'archivio degli hub eventi di Azure per lo streaming dei dati da  Experience Platform.
 translation-type: tm+mt
-source-git-commit: 883bea4aba0548e96b891987f17b8535c4d2eba7
+source-git-commit: e93bfc028d5e23c3add55677c4003ca549a902c6
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 2%
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 [!DNL Azure Event Hubs] è una grande piattaforma di streaming dati e un servizio di caricamento eventi. Può ricevere ed elaborare milioni di eventi al secondo. I dati inviati a un hub eventi possono essere trasformati e memorizzati utilizzando qualsiasi provider di analisi in tempo reale o adattatori di batch/storage.
 
-È possibile creare una connessione in uscita in tempo reale allo [!DNL Azure Event Hubs] storage per lo streaming dei dati da Adobe Experience Platform.
+È possibile creare una connessione in uscita in tempo reale allo [!DNL Azure Event Hubs] storage per lo streaming dei dati da  Adobe Experience Platform.
 
 * Per ulteriori informazioni [!DNL Azure Event Hubs], consulta la documentazione [](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about)Microsoft.
 * Per connettersi a [!DNL Azure Event Hubs] utilizzando le chiamate API, consulta l’esercitazione [API](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)Streaming destinations.
@@ -42,20 +42,20 @@ Consulta Flusso di lavoro delle destinazioni di archiviazione [Cloud ](/help/rtc
 
 Per [!DNL Azure Event Hubs] le destinazioni, immetti le seguenti informazioni nel flusso di lavoro di creazione della destinazione:
 
-### Nel passaggio Account {#account-step}
+### Nel passaggio Autenticazione {#authentication-step}
 
 * **[!UICONTROL SAS Key Name]** e **[!UICONTROL SAS Key]**: Inserisci il nome e la chiave della chiave SAS. Informazioni sull&#39;autenticazione con [!DNL Azure Event Hubs] le chiavi SAS nella documentazione [](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)Microsoft.
 * **[!UICONTROL Namespace]**: Compilare lo [!DNL Azure Event Hubs] spazio dei nomi. Ulteriori informazioni sugli [!DNL Azure Event Hubs] spazi dei nomi nella documentazione [di](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)Microsoft.
 
-![Input richiesto nel passaggio di autenticazione](/help/rtcdp/destinations/assets/event-hubs-account-step.png)
+![Input richiesto nel passaggio di autenticazione](/help/rtcdp/destinations/assets/event-hubs-authentication.png)
 
-### Nel passaggio Autenticazione {#authentication-step}
+### Nel passaggio Configurazione {#setup-step}
 
 * **[!UICONTROL Name]**: Compilate un nome per la connessione a [!DNL Azure Event Hubs].
 * **[!UICONTROL Description]**: Fornire una descrizione della connessione.  Esempi: &quot;Clienti di livello Premium&quot;, &quot;Maschi interessati a kitesurfing&quot;.
 * **[!UICONTROL eventHubName]**: Specifica un nome per il flusso alla [!DNL Azure Event Hubs] destinazione.
 
-![Dati richiesti nel passaggio di configurazione](/help/rtcdp/destinations/assets/event-hubs-authentication-step.png)
+![Dati richiesti nel passaggio di configurazione](/help/rtcdp/destinations/assets/event-hubs-setup-step.png)
 
 ## Attivare i segmenti {#activate-segments}
 
@@ -64,7 +64,7 @@ Consulta [Attivare profili e segmenti su una destinazione](/help/rtcdp/destinati
 
 ## Dati esportati {#exported-data}
 
-I dati della piattaforma Experience vengono esportati in formato [!DNL Azure Event Hubs] JSON. Ad esempio, l&#39;evento seguente contiene l&#39;attributo di profilo dell&#39;indirizzo e-mail di un&#39;audience qualificata per un determinato segmento ed uscita da un altro segmento. Le identità di questo potenziale sono ECID ed e-mail.
+I dati  Experience Platform esportati vengono inviati in formato [!DNL Azure Event Hubs] JSON. Ad esempio, l&#39;evento seguente contiene l&#39;attributo di profilo dell&#39;indirizzo e-mail di un&#39;audience qualificata per un determinato segmento ed uscita da un altro segmento. Le identità di questo potenziale sono ECID ed e-mail.
 
 ```
 {
