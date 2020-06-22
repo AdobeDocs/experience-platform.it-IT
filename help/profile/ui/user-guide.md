@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guida utente del profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: da3793a528fa919633e777423d77e7be9cbc0154
+source-git-commit: 4589d0cdca36992feea208850abdda1a9dc246c0
 workflow-type: tm+mt
-source-wordcount: '1206'
+source-wordcount: '1208'
 ht-degree: 0%
 
 ---
@@ -32,19 +32,21 @@ Nell’interfaccia utente [di](http://platform.adobe.com)Experience Platform, fa
 
 ![](../images/user-guide/profiles-overview.png)
 
-## Sfoglia profilo
+## Sfoglia
 
-Fate clic sulla scheda **Sfoglia** per individuare i profili in base all&#39;identità.
+Selezionate la scheda *Sfoglia* per individuare i profili in base all’identità.
+
+![](../images/user-guide/profiles-browse.png)
 
 ### Metriche profilo {#profile-metrics}
 
-Sul lato destro della scheda **Sfoglia** sono presenti diverse metriche di profilo importanti correlate ai dati del profilo, tra cui il conteggio [totale dei](#profile-count) profili e un elenco di [profili per namespace](#profiles-by-namespace).
+Sul lato destro della scheda *Sfoglia* sono presenti diverse metriche importanti correlate ai dati del profilo, tra cui il conteggio [totale dei](#profile-count) profili e un elenco di [profili per namespace](#profiles-by-namespace).
 
 Queste metriche del profilo vengono valutate utilizzando il criterio di unione predefinito dell&#39;organizzazione. Per ulteriori informazioni sull&#39;utilizzo dei criteri di unione, inclusa la modalità di definizione di un criterio di unione predefinito, vedere la guida [utente](merge-policies.md)Unisci criteri.
 
 Oltre a queste metriche, la sezione delle metriche del profilo fornisce anche una data e un&#39;ora *dell&#39;ultimo aggiornamento* , che mostrano quando sono state valutate le metriche per l&#39;ultima volta.
 
-![](../images/user-guide/profiles-browse.png)
+![](../images/user-guide/profiles-profile-metrics.png)
 
 ### Conteggio profili {#profile-count}
 
@@ -56,7 +58,7 @@ Quando l’inserimento di profili nell’archivio profili aumenta o diminuisce i
 
 ### Profili per namespace {#profiles-by-namespace}
 
-La metrica *Profili per namespace* visualizza il conteggio totale e la suddivisione degli spazi di nomi in tutti i profili uniti nel tuo archivio profili. Il numero totale di profili per namespace (in altre parole, aggiungendo insieme i valori mostrati per ogni namespace) sarà sempre superiore alla metrica del conteggio dei profili, perché a un profilo potrebbero essere associati più spazi dei nomi. Ad esempio, se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente saranno associati più spazi dei nomi.
+I *profili per metrica namespace* mostrano il conteggio totale e la suddivisione degli spazi di nomi in tutti i profili uniti nel tuo archivio profili. Il numero totale di profili per namespace (in altre parole, aggiungendo insieme i valori mostrati per ogni namespace) sarà sempre superiore alla metrica del conteggio dei profili, perché a un profilo potrebbero essere associati più spazi dei nomi. Ad esempio, se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente saranno associati più spazi dei nomi.
 
 Simile alla metrica del conteggio [dei](#profile-count) profili, quando l&#39;inserimento dei profili nell&#39;archivio profili aumenta o diminuisce il conteggio di oltre il 5%, viene attivato un processo per aggiornare le metriche dello spazio nomi. Per i flussi di lavoro dei dati in streaming, viene effettuato un controllo ogni ora per determinare se è stata raggiunta la soglia di incremento o riduzione del 5%. In caso affermativo, viene attivato automaticamente un processo per aggiornare il conteggio dei profili. Per l’assimilazione batch, entro 15 minuti dal corretto inserimento di un batch nell’archivio profili, se viene raggiunta la soglia di incremento o riduzione del 5%, viene eseguito un processo per aggiornare le metriche.
 
@@ -92,13 +94,13 @@ Dopo aver selezionato l’ID **del** profilo, si apre la scheda _Dettagli_ . In 
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-Potete visualizzare informazioni aggiuntive correlate al profilo, inclusi Attributi, Eventi e Segmenti a cui il profilo è membro.
+Potete visualizzare informazioni aggiuntive correlate al profilo, inclusi *Attributi*, *Eventi* e *Segmenti* ai quali il profilo è membro.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Unisci criteri
 
-Fare clic su **Unisci criteri** per visualizzare un elenco di criteri di unione appartenenti alla propria organizzazione. Ogni criterio elencato visualizza il nome, indipendentemente dal fatto che si tratti del criterio di unione predefinito, e lo schema a cui si applica.
+Selezionate la scheda *Unisci criteri* per visualizzare un elenco di criteri di unione appartenenti alla vostra organizzazione. Ogni criterio elencato visualizza il nome, indipendentemente dal fatto che si tratti del criterio di unione predefinito, e lo schema a cui si applica.
 
 Per ulteriori informazioni sui criteri di unione, consultare la guida [utente](merge-policies.md)Unisci criteri.
 
@@ -106,7 +108,7 @@ Per ulteriori informazioni sui criteri di unione, consultare la guida [utente](m
 
 ## Schema unione
 
-Fate clic su Schema **** unione per visualizzare gli schemi unione per l&#39;archivio profili. Uno schema di unione è un&#39;unione di tutti i campi Experience Data Model (XDM) della stessa classe, i cui schemi sono stati abilitati per l&#39;utilizzo in Real-time Customer Profile (Profilo cliente in tempo reale). Fare clic su una classe nell&#39;elenco a sinistra per visualizzare la struttura dello schema di unione nel quadro.
+Selezionate la scheda Schema ** unione per visualizzare gli schemi di unione per l&#39;archivio profili. Uno schema di unione è un&#39;unione di tutti i campi Experience Data Model (XDM) della stessa classe, i cui schemi sono stati abilitati per l&#39;utilizzo in Real-time Customer Profile (Profilo cliente in tempo reale). Selezionare una classe nell&#39;elenco a sinistra per visualizzare la struttura dello schema di unione nel quadro.
 
 Ad esempio, selezionando &quot;Profilo XDM&quot; viene visualizzato lo schema di unione per la classe Profilo singolo XDM.
 
