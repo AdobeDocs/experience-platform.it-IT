@@ -4,9 +4,9 @@ seo-title: Flusso di lavoro per destinazioni di archiviazione cloud
 description: Istruzioni per la connessione alle posizioni di archiviazione cloud
 seo-description: Istruzioni per la connessione alle posizioni di archiviazione cloud
 translation-type: tm+mt
-source-git-commit: 37c51435ce8330dbd61857bda408df03ff21a491
+source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
 workflow-type: tm+mt
-source-wordcount: '303'
+source-wordcount: '468'
 ht-degree: 0%
 
 ---
@@ -16,13 +16,13 @@ ht-degree: 0%
 
 ## Panoramica
 
-In questa pagina viene illustrato come connettersi alle posizioni di archiviazione cloud nella piattaforma dati cliente Adobe in tempo reale.
+Questa pagina spiega come collegarsi alle posizioni di archiviazione cloud in Adobe Real-time Customer Data Platform.
 
 1. In **[!UICONTROL Connections > Destinations]**, seleziona la destinazione di archiviazione cloud preferita, quindi seleziona **[!UICONTROL Connect destination]**.
 
    ![Connessione alla destinazione di archiviazione cloud](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
-2. Nel **[!UICONTROL Authentication]** passaggio, se in precedenza avete impostato una connessione alla destinazione di archiviazione cloud, selezionate **[!UICONTROL Existing Account]** e selezionate la connessione esistente. In alternativa, potete scegliere **[!UICONTROL New Account]** di impostare una nuova connessione alla destinazione di archiviazione cloud. Compilate le credenziali di autenticazione dell&#39;account e selezionate **[!UICONTROL Connect to destination]**. <br> Per informazioni specifiche sulle credenziali immesse nel passaggio [Autenticazione](/help/rtcdp/destinations/amazon-s3-destination.md) , vedere destinazione [Amazon S3](/help/rtcdp/destinations/amazon-kinesis-destination.md) , destinazione [Amazon Kinesis](/help/rtcdp/destinations/azure-event-hubs-destination.md) , destinazione [Azure Event Hubs](/help/rtcdp/destinations/sftp-destination.md) e destinazione **SFTP** .
+2. Nel **[!UICONTROL Authentication]** passaggio, se in precedenza era stata impostata una connessione alla destinazione di archiviazione cloud, selezionare **[!UICONTROL Existing Account]** e selezionare la connessione esistente. In alternativa, potete scegliere **[!UICONTROL New Account]** di impostare una nuova connessione alla destinazione di archiviazione cloud. Compilate le credenziali di autenticazione dell&#39;account e selezionate **[!UICONTROL Connect to destination]**. <br> Per informazioni specifiche sulle credenziali immesse nel passaggio [Autenticazione](/help/rtcdp/destinations/amazon-s3-destination.md) , vedere destinazione [Amazon S3](/help/rtcdp/destinations/amazon-kinesis-destination.md) , destinazione [Amazon Kinesis](/help/rtcdp/destinations/azure-event-hubs-destination.md) , destinazione [Azure Event Hubs](/help/rtcdp/destinations/sftp-destination.md) e destinazione **SFTP** .
 
    >[!NOTE]
    >
@@ -31,13 +31,22 @@ In questa pagina viene illustrato come connettersi alle posizioni di archiviazio
    ![Connessione alla destinazione di archiviazione cloud - passaggio di autenticazione](/help/rtcdp/destinations/assets/cloud-destinations-authentication-step.png)
 
 3. Nel **[!UICONTROL Setup]** passaggio, immettete un **[!UICONTROL Name]** e un **[!UICONTROL Description]** per il flusso di attivazione. <br>
+Inoltre, in questo passaggio potete selezionare tutte le opzioni **[!UICONTROL Marketing use case]** che devono essere applicate a questa destinazione. I casi di utilizzo del marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra i casi di utilizzo di marketing definiti da Adobe oppure creare un tuo caso di utilizzo di marketing. Per ulteriori informazioni sui casi di utilizzo del marketing, consulta la pagina [Governance dei dati in CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) in tempo reale. Per informazioni sui singoli casi di utilizzo marketing definiti da Adobe, consulta la panoramica [dei criteri di utilizzo dei](/help/data-governance/policies/overview.md#core-actions)dati. <br>
 Per le destinazioni Amazon S3, inserite i file **[!UICONTROL Bucket name]** e **[!UICONTROL Folder path]** nella destinazione di archiviazione cloud in cui verranno consegnati. Selezionate **[!UICONTROL Create Destination]** dopo aver compilato i campi riportati sopra.
 
-   ![Connessione alla destinazione di archiviazione cloud Amazon S3 - passaggio di autenticazione](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
+   ![Connessione alla destinazione di archiviazione cloud Amazon S3 - passaggio di autenticazione](/help/rtcdp/destinations/assets/amazon-s3-setup-step.png)
 
-   Per le destinazioni SFTP, inserite la **[!UICONTROL Folder path]** posizione in cui verranno inviati i file.
+   Per le destinazioni SFTP, inserite la **[!UICONTROL Folder path]** posizione in cui verranno inviati i file. Selezionate **[!UICONTROL Create Destination]** dopo aver compilato i campi riportati sopra.
 
    ![Connessione alla destinazione di archiviazione cloud SFTP - passaggio di autenticazione](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
+
+   Per le destinazioni Amazon Kinesis, specifica il nome del flusso di dati esistente nel tuo [!DNL Amazon Kinesis] account. Adobe Real-time CDP esporta i dati in questo flusso. Selezionate **[!UICONTROL Create Destination]** dopo aver compilato i campi riportati sopra.
+
+   ![Connessione alla destinazione di archiviazione cloud Kinesis - passaggio di autenticazione](/help/rtcdp/destinations/assets/kinesis-destinations-setup-step.png)
+
+   Per le destinazioni degli hub eventi di Azure, specificare il nome del flusso di dati esistente nell&#39; [!DNL Amazon Kinesis] account. Adobe Real-time CDP esporta i dati in questo flusso. Selezionate **[!UICONTROL Create Destination]** dopo aver compilato i campi riportati sopra.
+
+   ![Connessione alla destinazione di archiviazione cloud Kinesis - passaggio di autenticazione](/help/rtcdp/destinations/assets/eventhubs-destinations-setup-step.png)
 
 4. La destinazione è stata creata. Puoi scegliere **[!UICONTROL Save & Exit]** se attivare i segmenti in un secondo momento oppure puoi selezionare **[!UICONTROL Next]** per continuare il flusso di lavoro e selezionare i segmenti da attivare. In entrambi i casi, consulta la sezione successiva, [Attivare i segmenti](#activate-segments), per consentire al resto del flusso di lavoro di esportare i dati.
 
