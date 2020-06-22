@@ -1,19 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Governance dei dati della piattaforma Adobe Experience
+title: Governance dei dati  Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 42efd7295dd8002869694a146ea166ad21bd14bb
+source-git-commit: 42d4fe7eecf1f64fab1c9554cfdc4bfeb42ffdeb
+workflow-type: tm+mt
+source-wordcount: '1462'
+ht-degree: 0%
 
 ---
 
 
 # Panoramica sulla governance dei dati
 
-Una delle funzionalità principali di Adobe Experience Platform è quella di unire i dati provenienti da più sistemi aziendali per consentire ai professionisti del marketing di identificare, capire e coinvolgere meglio i clienti. Questi dati possono essere soggetti a restrizioni d&#39;uso definite dalla tua organizzazione o dalle normative legali. È quindi importante garantire che le operazioni sui dati all&#39;interno di Piattaforma siano conformi ai criteri di utilizzo dei dati.
+Una delle funzionalità principali di  Adobe Experience Platform consiste nel mettere insieme i dati provenienti da più sistemi aziendali per consentire ai professionisti del marketing di identificare, comprendere e coinvolgere meglio i clienti. Questi dati possono essere soggetti a restrizioni d&#39;uso definite dalla tua organizzazione o dalle normative legali. È pertanto importante garantire che le operazioni relative ai dati in Platform siano conformi ai criteri di utilizzo dei dati.
 
-Adobe Experience Platform Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all&#39;uso dei dati. Essa svolge un ruolo chiave all’interno di Experience Platform a vari livelli, tra cui catalogazione, line-up di dati, etichettatura dell’utilizzo dei dati, criteri di utilizzo dei dati e controllo dell’utilizzo dei dati per le azioni di marketing.
+ Adobe Experience Platform Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all&#39;uso dei dati. Esso svolge un ruolo chiave all&#39;interno  Experience Platform a vari livelli, tra cui catalogazione, linea di dati, etichettatura dell&#39;uso dei dati, criteri di utilizzo dei dati e controllo dell&#39;utilizzo dei dati per le azioni di marketing.
 
 ## Ruoli di governance dei dati
 
@@ -41,7 +44,7 @@ Gli esperti di marketing sono il punto finale della governance dei dati. Richied
 
 ## DULE Framework
 
-L’etichettatura e l’applicazione dell’uso dei dati (DULE) è il framework di base per la governance dei dati della piattaforma di esperienze. DULE semplifica e semplifica il processo di classificazione dei dati e creazione di criteri di utilizzo dei dati. Una volta applicate le etichette dati e applicate le policy di utilizzo dei dati, è possibile valutare le azioni di marketing per garantire l&#39;uso corretto dei dati.
+L&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati (DULE) è il framework di base per  gestione dei dati Experience Platform. DULE semplifica e semplifica il processo di classificazione dei dati e creazione di criteri di utilizzo dei dati. Una volta applicate le etichette dati e applicate le policy di utilizzo dei dati, è possibile valutare le azioni di marketing per garantire l&#39;uso corretto dei dati.
 
 Il quadro DULE contiene tre elementi chiave: Etichette, politiche e applicazione.
 
@@ -53,32 +56,31 @@ Il quadro DULE contiene tre elementi chiave: Etichette, politiche e applicazione
 
 La governance dei dati consente agli amministratori dei dati di applicare etichette di utilizzo a livello di set di dati e di campi per classificare i dati in base al tipo di criteri applicabili.
 
-Il framework DULE include etichette di utilizzo dei dati predefinite che possono essere utilizzate per classificare i dati in quattro modi:
+Il framework DULE include etichette di utilizzo dei dati predefinite che possono essere utilizzate per classificare i dati in tre modi:
 
 ![Categorie delle etichette di utilizzo dei dati](./images/overview/label-categories.png)
 
 * **Etichette dati contratto &quot;C&quot;:** Etichettare e classificare i dati che hanno obblighi contrattuali o che sono correlati a criteri di governance dei dati dei clienti.
 * **Etichette Dati Identità &quot;I&quot;:** Etichettare e classificare i dati in grado di identificare o contattare una persona specifica.
 * **Etichette dati sensibili &quot;S&quot;:** Etichettare e classificare i dati relativi a dati sensibili, ad esempio dati geografici.
-* **Etichette dati GDPR:** Etichettare e classificare i dati che possono contenere identificatori personali da utilizzare nelle richieste di accesso e/o di eliminazione GDPR.
 
 >[!NOTE] Per un elenco completo delle etichette disponibili e per le definizioni per ciascun tipo di etichetta, consultare la guida sulle etichette [di utilizzo dei dati](labels/reference.md) supportate.
 
-Le etichette possono essere applicate in qualsiasi momento, fornendo la flessibilità nella modalità di gestione dei dati. Le best practice incoraggiano l&#39;etichettatura dei dati non appena vengono trasferiti in Experience Platform o non appena i dati diventano disponibili in Platform.
+Le etichette possono essere applicate in qualsiasi momento, fornendo la flessibilità nella modalità di gestione dei dati. Le best practice incoraggiano l&#39;etichettatura dei dati non appena vengono trasferiti  Experience Platform, o non appena i dati diventano disponibili in Platform.
 
-Per istruzioni dettagliate su come applicare le etichette ai set di dati e ai campi tramite l’interfaccia utente, consultate la panoramica sulle etichette [di utilizzo dei](./labels/overview.md) dati.
+Per ulteriori informazioni, vedere la panoramica sulle etichette [di utilizzo dei](./labels/overview.md) dati.
 
 ## Criteri di utilizzo dei dati
 
-Affinché le etichette di utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario implementare dei criteri di utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing consentite o con cui è consentito eseguire determinate limitazioni ai dati in Experience Platform.
+Affinché le etichette di utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario implementare dei criteri di utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing consentite o da cui è consentito eseguire attività sui dati all&#39;interno  Experience Platform.
 
 Un esempio di un&#39;azione di marketing potrebbe essere il desiderio di esportare un dataset in un servizio di terze parti. Se è presente un criterio che indica che tipi specifici di dati, come Informazioni personali (PII), non possono essere esportati e che al set di dati è stata applicata un&#39;etichetta &quot;I&quot; (Dati identità), riceverete una risposta dal Servizio criteri in cui viene indicato che è stata violata una policy di utilizzo dei dati.
 
-Una volta applicate le etichette di utilizzo dei dati, gli amministratori dei dati possono creare criteri utilizzando l&#39;API del servizio DULE Policy o l&#39;interfaccia utente della piattaforma Experience.
+Una volta applicate le etichette di utilizzo dei dati, gli amministratori dei dati possono creare criteri utilizzando l&#39;API DULE Policy Service o l&#39;interfaccia utente  Experience Platform.
 
-Per ulteriori informazioni sull&#39;esecuzione delle operazioni chiave fornite dall&#39;API di DULE Policy Service, consultate la guida [per gli sviluppatori di](api/getting-started.md)Policy Service. Per istruzioni dettagliate sull&#39;utilizzo dei criteri DULE, vedete l&#39;esercitazione sulla [creazione e la valutazione di criteri DULE tramite l&#39;API](policies/create.md).
+>[!IMPORTANT] Tutti i criteri di utilizzo dei dati (inclusi i criteri di base forniti da Adobe) sono disattivati per impostazione predefinita. Affinché un singolo criterio possa essere preso in considerazione per l&#39;applicazione, è necessario abilitare manualmente tale criterio.
 
-Per informazioni su come gestire i criteri nell&#39;interfaccia utente della piattaforma Experience, consulta la guida [utente](policies/user-guide.md)ai criteri.
+Per ulteriori informazioni sui criteri di utilizzo dei dati e sulle azioni di marketing, consulta la panoramica [dei](./policies/overview.md)criteri.
 
 ## Versioni future
 
@@ -115,7 +117,7 @@ La tabella seguente delinea i termini chiave relativi alla governance dei dati e
 | **Geofence** | Una geofence è un limite geografico virtuale, definito dalla tecnologia GPS o RFID, che consente al software di attivare una risposta quando un dispositivo mobile entra o esce da un&#39;area particolare. |
 | **Etichette identità** | Le etichette di identità &quot;I&quot; vengono utilizzate per classificare i dati in grado di identificare o contattare una persona specifica. |
 | **Targeting basato su interessi** | Il targeting basato sugli interessi, noto anche come personalizzazione, si verifica se sono soddisfatte tre condizioni: i dati raccolti sul sito vengono utilizzati per ricavare deduzioni sull&#39;interesse degli utenti, in un altro contesto, ad esempio in un altro sito o in un&#39;altra app (fuori sito), e vengono utilizzati per selezionare il contenuto o gli annunci che vengono serviti in base a tali inferenze. |
-| **Azione marketing** | Un&#39;azione di marketing, nel contesto del framework di governance dei dati, è un&#39;azione eseguita da un consumatore di dati della piattaforma Experience, per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati |
+| **Azione marketing** | Un&#39;azione di marketing, nel contesto del framework di governance dei dati, è un&#39;azione che un consumatore di dati Experience Platform  esegue, per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati |
 | **Criterio** | Nel framework di governance dei dati, un criterio è una regola che descrive il tipo di azioni di marketing consentite o non consentite per dati specifici. |
 | **Etichette sensibili** | Le etichette &quot;S&quot; sensibili vengono utilizzate per classificare i dati che voi e la vostra organizzazione considerate sensibili. |
 
