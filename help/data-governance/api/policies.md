@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Criteri
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 08d02e7323f75c450e7a250835f26a569685cdd1
+source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
+workflow-type: tm+mt
+source-wordcount: '866'
+ht-degree: 1%
 
 ---
 
 
 # Criteri
 
-I criteri di utilizzo dei dati sono regole adottate dalla tua organizzazione che descrivono i tipi di azioni di marketing consentite o da cui ti è consentito eseguire determinate attività sui dati all&#39;interno di Experience Platform.
+I criteri di utilizzo dei dati sono regole adottate dalla tua organizzazione che descrivono i tipi di azioni di marketing che puoi eseguire su dati all&#39;interno  Experience Platform o da cui ti sono limitate.
 
 L&#39; `/policies` endpoint viene utilizzato per tutte le chiamate API relative alla visualizzazione, alla creazione, all&#39;aggiornamento o all&#39;eliminazione dei criteri di utilizzo dei dati.
 
@@ -130,7 +133,7 @@ La risposta include un &quot;conteggio&quot; che mostra il numero totale di crit
 }
 ```
 
-## Cercare criteri specifici
+## Cercare una politica
 
 Ogni criterio contiene un `id` campo che può essere utilizzato per richiedere i dettagli di un criterio specifico. Se il criterio `id` di un criterio è sconosciuto, può essere trovato utilizzando la richiesta di elenco (GET) per elencare tutti i criteri all&#39;interno di un contenitore (`core` o `custom`) specifico come mostrato nel passaggio precedente.
 
@@ -503,7 +506,7 @@ Una richiesta di aggiornamento corretta restituirà uno stato HTTP 200 (OK) e il
 
 ## Eliminare un criterio
 
-Se è necessario rimuovere un criterio creato, è possibile farlo inviando una richiesta DELETE al criterio `id` da eliminare. È consigliabile eseguire prima una richiesta di ricerca (GET) per visualizzare il criterio e confermare che si tratta del criterio corretto da rimuovere. **Una volta eliminati, i criteri non possono essere recuperati.**
+Se è necessario rimuovere un criterio creato, è possibile farlo emettendo una richiesta DELETE all&#39;interno `id` del criterio che si desidera eliminare. È consigliabile eseguire prima una richiesta di ricerca (GET) per visualizzare il criterio e confermare che si tratta del criterio corretto da rimuovere. **Una volta eliminati, i criteri non possono essere recuperati.**
 
 **Formato API**
 
