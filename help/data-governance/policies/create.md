@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Creazione di un criterio di utilizzo dei dati
 topic: policies
 translation-type: tm+mt
-source-git-commit: da4fe8be360d5530d96078e4ef024bccf7f080f5
+source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
+workflow-type: tm+mt
+source-wordcount: '1216'
+ht-degree: 2%
 
 ---
 
 
-# Creazione di un criterio di utilizzo dei dati
+# Creare un criterio di utilizzo dei dati nell&#39;API
 
-L’etichettatura e l’applicazione dell’uso dei dati (DULE) è il meccanismo fondamentale di governance dei dati della piattaforma Adobe Experience. L&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE Policy Service consente di creare e gestire criteri DULE per determinare quali azioni di marketing possono essere eseguite rispetto ai dati che contengono determinate etichette DULE.
+L&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati (DULE) è il meccanismo fondamentale  governance dei dati del Adobe Experience Platform. L&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE Policy Service consente di creare e gestire criteri DULE per determinare quali azioni di marketing possono essere eseguite rispetto ai dati che contengono determinate etichette DULE.
 
 Questo documento fornisce un&#39;esercitazione dettagliata per la creazione di un criterio DULE tramite l&#39;API del servizio criteri. Per una guida più completa alle diverse operazioni disponibili nell&#39;API, vedete la guida [per gli sviluppatori di](../api/getting-started.md)Policy Service.
 
@@ -19,16 +22,16 @@ Questo documento fornisce un&#39;esercitazione dettagliata per la creazione di u
 
 Questa esercitazione richiede una conoscenza approfondita dei seguenti concetti chiave relativi alla creazione e alla valutazione di criteri DULE:
 
-* [Governance](../home.md)dei dati: Il framework tramite il quale la piattaforma applica la conformità all&#39;utilizzo dei dati.
+* [Governance](../home.md)dei dati: Framework con cui Platform applica la conformità all’utilizzo dei dati.
 * [Etichette](../labels/overview.md)di utilizzo dati: Le etichette di utilizzo dei dati vengono applicate ai campi di dati XDM, specificando le restrizioni relative alle modalità di accesso ai dati.
-* [Experience Data Model (XDM)](../../xdm/home.md): Il framework standardizzato tramite il quale la piattaforma organizza i dati sull&#39;esperienza cliente.
-* [Sandbox](../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [Experience Data Model (XDM)](../../xdm/home.md): Framework standard con cui Platform organizza i dati sull&#39;esperienza dei clienti.
+* [Sandbox](../../sandboxes/home.md):  Experience Platform fornisce sandbox virtuali che dividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 Prima di avviare questa esercitazione, consultare la guida [](../api/getting-started.md) allo sviluppatore per informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all&#39;API di servizio Criteri DULE, incluse le intestazioni richieste e come leggere le chiamate API di esempio.
 
 ## Definire un&#39;azione di marketing {#define-action}
 
-Nel framework di governance dei dati, un&#39;azione di marketing è un&#39;azione che un consumatore di dati della piattaforma di esperienze deve intraprendere, per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati.
+Nel framework Data Governance, un&#39;azione di marketing è un&#39;azione che un consumatore di dati Experience Platform  esegue, per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati.
 
 Il primo passo per creare un criterio DULE consiste nel determinare quale azione marketing verrà valutata dal criterio. Questa operazione può essere eseguita utilizzando una delle seguenti opzioni:
 
@@ -41,7 +44,7 @@ Puoi cercare le azioni di marketing esistenti da valutare in base ai criteri DUL
 
 **Formato API**
 
-A seconda se stai cercando un&#39;azione di marketing fornita da Experience Platform o un&#39;azione di marketing personalizzata creata dalla tua organizzazione, usa rispettivamente gli `marketingActions/core` endpoint o `marketingActions/custom` .
+A seconda se stai cercando un&#39;azione di marketing fornita da  Experience Platform o un&#39;azione di marketing personalizzata creata dalla tua organizzazione, utilizza rispettivamente gli `marketingActions/core` endpoint o `marketingActions/custom` .
 
 ```http
 GET /marketingActions/core
@@ -413,4 +416,4 @@ Seguendo questa esercitazione hai creato con successo un criterio di utilizzo de
 
 Per ulteriori informazioni sulle diverse operazioni disponibili nell&#39;API di Policy Service, consultate la guida [per gli sviluppatori di](../api/getting-started.md)Policy Service. Per informazioni su come applicare criteri per i dati del profilo cliente in tempo reale, consulta l’esercitazione sull’ [applicazione della conformità dell’utilizzo dei dati per i segmenti](../../segmentation/tutorials/governance.md)di pubblico.
 
-Per informazioni su come gestire i criteri di utilizzo nell&#39;interfaccia utente della piattaforma Experience, consulta la guida [utente ai](user-guide.md)criteri.
+Per informazioni su come gestire i criteri di utilizzo nell&#39;interfaccia utente  Experience Platform, consultate la guida [utente ai](user-guide.md)criteri.
