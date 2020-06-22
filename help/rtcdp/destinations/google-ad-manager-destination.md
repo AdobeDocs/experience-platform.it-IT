@@ -4,9 +4,9 @@ seo-title: Destinazione Google Ad Manager
 description: 'Google Ad Manager, precedentemente noto come DoubleClick for Publishers o DoubleClick AdX, è una piattaforma di annunci pubblicitari di Google che offre agli editori i mezzi per gestire la visualizzazione degli annunci sui loro siti Web, attraverso video e nelle app mobili. '
 seo-description: 'Google Ad Manager, precedentemente noto come DoubleClick for Publishers o DoubleClick AdX, è una piattaforma di annunci pubblicitari di Google che offre agli editori i mezzi per gestire la visualizzazione degli annunci sui loro siti Web, attraverso video e nelle app mobili. '
 translation-type: tm+mt
-source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
+source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
 workflow-type: tm+mt
-source-wordcount: '587'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Tieni presente i seguenti dettagli specifici per le destinazioni Google Ad Manag
 
 >[!IMPORTANT]
 >
->Se stai cercando di creare la tua prima destinazione con Google Ad Manager e non hai attivato in passato la funzionalità [](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) di sincronizzazione ID nel servizio Experience Cloud ID (con Audience Manager o altre applicazioni), contatta Adobe Consulting o l’Assistenza clienti per abilitare la sincronizzazione ID. Se in precedenza avevate impostato le integrazioni Google in Audience Manager, le sincronizzazioni ID che avevate configurato riportano ad Adobe Real-time CDP.
+>Se stai cercando di creare la tua prima destinazione con Google Ad Manager e non hai attivato la funzionalità [di sincronizzazione degli](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) ID in  Experience Cloud ID Service in passato (con  Audience Manager o altre applicazioni), contatta Adobe Consulting o l&#39;Assistenza clienti per abilitare la sincronizzazione degli ID. Se in precedenza avevate impostato integrazioni Google in  Audience Manager, le sincronizzazioni ID che avevate configurato riportano ad Adobe Real-time CDP.
 
 ## Prerequisiti
 
@@ -51,18 +51,19 @@ Prima di creare la destinazione Google Ad Manager in Adobe Real-time CDP, è nec
 1. In **[!UICONTROL Connections > Destinations]**, seleziona Google Ad Manager e seleziona **[!UICONTROL Create destination]**.
    ![Connect, destinazione Google Ad Manager](/help/rtcdp/destinations/assets/google-1-destination.png)
 
-2. Nel flusso di lavoro Crea destinazione, compila il modulo [!UICONTROL Basic Information] per la destinazione. <br>
-   ![Informazioni di base Google Ad Manager](/help/rtcdp/destinations/assets/google-1-basic-information.png)
+2. Nel passaggio **Configurazione** del flusso di lavoro di creazione della destinazione, compila il modulo [!UICONTROL Basic Information] per la destinazione. <br>
+   ![Informazioni di base Google Ad Manager](/help/rtcdp/destinations/assets/ad-manager-setup-step.png)
 * **[!UICONTROL Name]**: Compila il nome preferito per questa destinazione.
 * **[!UICONTROL Description]**: Facoltativo. Ad esempio, potete specificare per quale campagna state utilizzando questa destinazione.
 * **[!UICONTROL Account Type]**: Selezionate un’opzione, a seconda dell’account con Google:
    * Usa `DFP by Google` per doppio clic per gli editori
    * Usa `AdX buyer` per Google AdX
 * **[!UICONTROL Account ID]**: Compila il tuo ID account con Google. Può trattarsi dell’ID di rete o dell’ID collegamento pubblico. In genere si tratta di un ID di otto cifre.
+* **[!UICONTROL Marketing use case]**: I casi di utilizzo del marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra i casi di utilizzo di marketing definiti da Adobe oppure creare un tuo caso di utilizzo di marketing. Per ulteriori informazioni sui casi di utilizzo del marketing, consulta la pagina [Governance dei dati in CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) in tempo reale. Per informazioni sui singoli casi di utilizzo marketing definiti da Adobe, consulta la panoramica [dei criteri di utilizzo dei](/help/data-governance/policies/overview.md#core-actions)dati.
 
->[!NOTE]
+> [!NOTE]
 >
->Quando configuri una destinazione Google Ad Manager, ti consigliamo di collaborare con il tuo account manager Google o con il rappresentante Adobe per capire quale tipo di account hai.
+> Quando configuri una destinazione Google Ad Manager, ti consigliamo di collaborare con il tuo account manager Google o con il rappresentante Adobe per capire quale tipo di account hai.
 
 ## Attivare i segmenti in Google Ad Manager
 
