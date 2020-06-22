@@ -1,12 +1,12 @@
 ---
 title: Attivare profili e segmenti su una destinazione
 seo-title: Attivare profili e segmenti su una destinazione
-description: Attiva i dati di cui disponi in Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
-seo-description: Attiva i dati di cui disponi in Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
+description: Attiva i dati in Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
+seo-description: Attiva i dati in Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 translation-type: tm+mt
-source-git-commit: 24e4746b28620210c138a1e803b6afadff79ab30
+source-git-commit: b1f8cbe245f73e31a8941fc45cefcee595968a70
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '989'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Attivare profili e segmenti su una destinazione
 
-Attiva i dati di cui disponi in Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
+Attiva i dati in Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 
 ## Prerequisiti  {#prerequisites}
 
-Per attivare i dati sulle destinazioni, è necessario aver [collegato correttamente una destinazione](/help/rtcdp/destinations/assets/connect-destination-1.png). Se non lo avete ancora fatto, andate al catalogo [delle](/help/rtcdp/destinations/destinations-catalog.md)destinazioni, sfogliate le destinazioni supportate e configurate una o più destinazioni.
+Per attivare i dati sulle destinazioni, è necessario aver [collegato correttamente una destinazione](/help/rtcdp/destinations/connect-destination.md). Se non lo avete ancora fatto, andate al catalogo [delle](/help/rtcdp/destinations/destinations-catalog.md)destinazioni, sfogliate le destinazioni supportate e configurate una o più destinazioni.
 
 ## Attivare i dati {#activate-data}
 
@@ -27,9 +27,18 @@ Per attivare i dati sulle destinazioni, è necessario aver [collegato correttame
    ![activate-flow](/help/rtcdp/destinations/assets/activate-flow.png)Si noti che se esiste già un flusso di attivazione per una destinazione, è possibile visualizzare i segmenti attualmente inviati alla destinazione. Selezionate **[!UICONTROL Edit activation]** nella barra a destra e seguite i passaggi descritti di seguito per modificare i dettagli di attivazione.
 3. Seleziona **[!UICONTROL Activate]**;
 4. Nel **[!UICONTROL Activate destination]** flusso di lavoro, nella **[!UICONTROL Select Segments]** pagina, seleziona i segmenti da inviare alla destinazione.
-   ![segmenti-a-destinazione](/help/rtcdp/destinations/assets/select-segments.png)
+   ![segmenti-a-destinazione](/help/rtcdp/destinations/assets/email-select-segments.png)
 5. *Condizionale*. Questo passaggio varia a seconda del tipo di destinazione in cui vengono attivati i segmenti. <br> Per le destinazioni *di marketing* e-mail e le destinazioni *di archiviazione* cloud, nella **[!UICONTROL Select Attributes]** pagina selezionate **[!UICONTROL Add new field]** e selezionate gli attributi che desiderate inviare alla destinazione.
 È consigliabile che uno degli attributi sia un identificatore [](/help/rtcdp/destinations/email-marketing-destinations.md#identity) univoco dello schema di unione. Per ulteriori informazioni sugli attributi obbligatori, vedi Identità nell&#39;articolo Destinazioni [di marketing](/help/rtcdp/destinations/email-marketing-destinations.md#identity) e-mail.
+
+   >[!NOTE]
+   > 
+   >Se sono state applicate etichette di utilizzo dei dati a determinati campi all’interno di un set di dati (anziché all’intero set di dati), l’applicazione di tali etichette a livello di campo all’attivazione avviene alle seguenti condizioni:
+   >* I campi vengono utilizzati nella definizione del segmento.
+   >* I campi sono configurati come attributi proiettati per la destinazione di destinazione.
+   >
+   > Considerate lo screenshot riportato di seguito. Se, ad esempio, nel campo `person.name.first.Name` erano presenti alcune etichette di utilizzo dei dati in conflitto con il caso di utilizzo marketing della destinazione, nel passaggio 7 viene mostrata una violazione del criterio di utilizzo dei dati. Per ulteriori informazioni, consulta Governance dei [dati in CDP in tempo reale](/help/rtcdp/privacy/data-governance-overview.md#destinations)
+
    ![destination-attribute](/help/rtcdp/destinations/assets/select-attributes-step.png)
 
    <br> 
@@ -47,7 +56,7 @@ Per attivare i dati sulle destinazioni, è necessario aver [collegato correttame
    ![ID fedeltà come identità](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
 
 
-   Selezionate `Email_LC_SHA256` come identità di destinazione se avete hashing degli indirizzi e-mail dei clienti durante l&#39;inserimento di dati in Adobe Experience Platform, in base ai requisiti [di hashing delle](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)e-mail di Facebook. <br> Selezionate `Email` come identità di destinazione se gli indirizzi e-mail utilizzati non sono crittografati. Adobe Real-time CDP invierà gli indirizzi e-mail in conformità ai requisiti di Facebook.
+   Selezionate `Email_LC_SHA256` come identità di destinazione se avete hashing gli indirizzi e-mail del cliente sull&#39;inserimento dei dati in  Adobe Experience Platform, in base ai requisiti [di hashing](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)e-mail di Facebook. <br> Selezionate `Email` come identità di destinazione se gli indirizzi e-mail utilizzati non sono crittografati. Adobe Real-time CDP invierà gli indirizzi e-mail in conformità ai requisiti di Facebook.
 
    ![mappatura identità dopo la compilazione dei campi](/help/rtcdp/destinations/assets/identity-mapping.png)
 
@@ -61,7 +70,17 @@ Per attivare i dati sulle destinazioni, è necessario aver [collegato correttame
 
 7. Nella **[!UICONTROL Review]** pagina viene visualizzato un riepilogo della selezione. Selezionare **[!UICONTROL Cancel]** per interrompere il flusso, **[!UICONTROL Back]** modificare le impostazioni o **[!UICONTROL Finish]** per confermare la selezione e iniziare a inviare i dati alla destinazione.
 
+   >[!IMPORTANT]
+   >
+   >In questo passaggio, la funzione CDP in tempo reale verifica la presenza di violazioni dei criteri di utilizzo dei dati. Di seguito è riportato un esempio di violazione di un criterio. Non puoi completare il flusso di lavoro di attivazione del segmento finché non hai risolto la violazione. Per informazioni su come risolvere le violazioni dei criteri, consulta [Applicazione](/help/rtcdp/privacy/data-governance-overview.md#enforcement) dei criteri nella sezione relativa alla governance dei dati.
+
+![conferma selezione](/help/rtcdp/destinations/assets/data-policy-violation.png)
+
+Se non sono state rilevate violazioni dei criteri, selezionate **[!UICONTROL Finish]** per confermare la selezione e iniziare a inviare i dati alla destinazione.
+
 ![conferma selezione](/help/rtcdp/destinations/assets/confirm-selection.png)
+
+
 
 ## Modifica attivazione {#edit-activation}
 
@@ -106,5 +125,3 @@ Per disattivare un flusso di attivazione esistente, effettuate le seguenti opera
 1. Selezionate **[!UICONTROL Destinations]** nella barra di navigazione a sinistra, fate clic sulla **[!UICONTROL Browse]** scheda e quindi sul nome della destinazione.
 2. Fate clic sul **[!UICONTROL Enabled]** controllo nella barra a destra per modificare lo stato del flusso di attivazione.
 3. Nella finestra **Aggiorna stato** flusso dati, selezionare **Conferma** per disattivare il flusso di attivazione.
-
-In AWS Kinesis, genera una coppia chiave di accesso segreta per consentire ad Adobe Real-time CDP di accedere al tuo account AWS Kinesis. Ulteriori informazioni sono disponibili nella documentazione [di](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)AWS Kinesis.
