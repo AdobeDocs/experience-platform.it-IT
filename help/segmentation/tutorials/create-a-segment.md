@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Creazione di un segmento
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
+source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+workflow-type: tm+mt
+source-wordcount: '1328'
+ht-degree: 2%
 
 ---
 
@@ -17,31 +20,31 @@ Per informazioni su come creare segmenti utilizzando l’interfaccia utente, con
 
 ## Introduzione
 
-Questa esercitazione richiede una conoscenza approfondita dei vari servizi Adobe Experience Platform coinvolti nella creazione di segmenti di pubblico. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
+Questa esercitazione richiede una conoscenza approfondita dei vari servizi di Adobe Experience Platform  coinvolti nella creazione di segmenti di pubblico. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
 - [Profilo](../../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-- [Servizio](../home.md)di segmentazione della piattaforma Adobe Experience: Consente di creare segmenti di pubblico dai dati del profilo cliente in tempo reale.
-- [Experience Data Model (XDM)](../../xdm/home.md): Il framework standardizzato tramite il quale la piattaforma organizza i dati sull&#39;esperienza cliente.
+- [servizio](../home.md)di segmentazione Adobe Experience Platform: Consente di creare segmenti di pubblico dai dati del profilo cliente in tempo reale.
+- [Experience Data Model (XDM)](../../xdm/home.md): Framework standard con cui Platform organizza i dati sull&#39;esperienza dei clienti.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per effettuare correttamente chiamate alle API della piattaforma.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per effettuare correttamente chiamate alle API Platform.
 
 ### Lettura di chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi della piattaforma Experience.
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi di  Experience Platform.
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle API della piattaforma, dovete prima completare l&#39;esercitazione [di](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come illustrato di seguito:
+Per effettuare chiamate alle API Platform, è prima necessario completare l&#39;esercitazione [di](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API Experience Platform, come illustrato di seguito:
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API della piattaforma richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in  Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API Platform richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Per ulteriori informazioni sulle sandbox in Piattaforma, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+>[!NOTE] Per ulteriori informazioni sulle sandbox in Platform, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva:
 
@@ -53,7 +56,7 @@ Il primo passo nella segmentazione consiste nel definire un segmento, rappresent
 
 Puoi creare una nuova definizione del segmento effettuando una richiesta POST all’ `/segment/definitions` endpoint nell’API Profilo cliente in tempo reale. L&#39;esempio seguente illustra come formattare una richiesta di definizione, incluse le informazioni necessarie per definire correttamente un segmento.
 
-Le definizioni dei segmenti possono essere valutate in due modi: segmentazione batch e segmentazione in streaming. La segmentazione in batch valuta i segmenti in base a una pianificazione preimpostata o quando la valutazione viene attivata manualmente, mentre la segmentazione in streaming valuta i segmenti non appena i dati vengono acquisiti in Piattaforma. Questa esercitazione utilizzerà la segmentazione **batch**. Per ulteriori informazioni sulla segmentazione in streaming, consultate la [panoramica sulla segmentazione](../api/streaming-segmentation.md)in streaming.
+Le definizioni dei segmenti possono essere valutate in due modi: segmentazione batch e segmentazione in streaming. La segmentazione in batch valuta i segmenti in base a una pianificazione preimpostata o quando la valutazione viene attivata manualmente, mentre la segmentazione in streaming valuta i segmenti non appena i dati vengono acquisiti in Platform. Questa esercitazione utilizzerà la segmentazione **batch**. Per ulteriori informazioni sulla segmentazione in streaming, consultate la [panoramica sulla segmentazione](../api/streaming-segmentation.md)in streaming.
 
 **Formato API**
 
@@ -119,7 +122,7 @@ Una risposta corretta restituisce i dettagli della definizione del segmento appe
 }
 ```
 
-## Stima e anteprima di un&#39;audience
+## Stima e anteprima di un&#39;audience {#estimate-and-preview-an-audience}
 
 Mentre sviluppate la definizione del segmento, potete utilizzare gli strumenti di stima e anteprima nel profilo cliente in tempo reale per visualizzare le informazioni a livello di riepilogo per garantire che stiate isolando il pubblico previsto. Le stime forniscono informazioni statistiche sulla definizione di un segmento, come la dimensione dell&#39;audience e l&#39;intervallo di confidenza proiettati. Le anteprime forniscono elenchi impaginati di profili di qualifica per una definizione di segmento, consentendo di confrontare i risultati con quanto previsto.
 
@@ -142,7 +145,7 @@ La dimensione del campione dipende dal numero complessivo di entità nell&#39;ar
 | Da 1 a 20 milioni | 1 milione |
 | Oltre 20 milioni | 5% del totale |
 
-Le stime generalmente vengono eseguite su un periodo di 10-15 secondi, a partire da una stima approssimativa e con un perfezionamento man mano che vengono letti più record.
+Le stime generalmente vengono eseguite su un intervallo di 10-15 secondi, a partire da una stima approssimativa e affinamento man mano che vengono letti più record.
 
 ### Creare un processo di anteprima
 
