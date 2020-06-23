@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Connessione alle destinazioni di streaming e attivazione dei dati
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 883bea4aba0548e96b891987f17b8535c4d2eba7
+source-git-commit: ed9d6eadeb00db51278ea700f7698a1b5590632f
 workflow-type: tm+mt
-source-wordcount: '1847'
+source-wordcount: '1857'
 ht-degree: 2%
 
 ---
 
 
-# Connessione alle destinazioni di streaming e attivazione dei dati nella piattaforma dati cliente in tempo reale di Adobe tramite API
+# Connessione alle destinazioni di streaming e attivazione dei dati nell&#39;Platform dati cliente in tempo reale di Adobe tramite API
 
 >[!NOTE]
 >
 >Le destinazioni [!DNL Amazon Kinesis] e [!DNL Azure Event Hubs] le destinazioni in Adobe Real-time CDP sono attualmente in versione beta. La documentazione e la funzionalità sono soggette a modifiche.
 
-Questa esercitazione illustra come utilizzare le chiamate API per connettersi ai dati della piattaforma Adobe Experience, creare una connessione a una destinazione di archiviazione cloud in streaming ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) o [Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), creare un flusso di dati per la nuova destinazione creata e attivare i dati per la nuova destinazione creata.
+Questa esercitazione illustra come utilizzare le chiamate API per connettersi ai dati del Adobe Experience Platform , creare una connessione a una destinazione di archiviazione cloud in streaming ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) o [Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), creare un flusso di dati per la nuova destinazione creata e attivare i dati per la nuova destinazione creata.
 
 Questa esercitazione utilizza la [!DNL Amazon Kinesis] destinazione in tutti gli esempi, ma i passaggi sono identici per [!DNL Azure Event Hubs].
 
@@ -28,11 +28,11 @@ Se preferisci utilizzare l’interfaccia utente nel CDP in tempo reale di Adobe 
 
 ## introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
 
-* [Sistema](../../xdm/home.md)XDM (Experience Data Model): Il framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza dei clienti.
-* [Servizio](../../catalog/home.md)catalogo: Catalog è il sistema di record per la posizione dei dati e la linea di collegamento all’interno di Experience Platform.
-* [Sandbox](../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [Sistema](../../xdm/home.md)XDM (Experience Data Model): Framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
+* [Servizio](../../catalog/home.md)catalogo: Catalog è il sistema di registrazione per la posizione dei dati e la linea di dati in  Experience Platform.
+* [Sandbox](../../sandboxes/home.md):  Experience Platform fornisce sandbox virtuali che dividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per attivare i dati per le destinazioni di streaming in Adobe Real-time CDP.
 
@@ -45,22 +45,22 @@ Per completare i passaggi di questa esercitazione, devi disporre delle seguenti 
 
 ### Lettura di chiamate API di esempio {#reading-sample-api-calls}
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi della piattaforma Experience.
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi di  Experience Platform.
 
 ### Raccogli i valori delle intestazioni obbligatorie e facoltative {#gather-values}
 
-Per effettuare chiamate alle API della piattaforma, dovete prima completare l&#39;esercitazione [di](/help/tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come illustrato di seguito:
+Per effettuare chiamate alle API Platform, è prima necessario completare l&#39;esercitazione [di](/help/tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API Experience Platform, come illustrato di seguito:
 
 * Autorizzazione: Portatore `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Le risorse in Experience Platform possono essere isolate in sandbox virtuali specifiche. Nelle richieste alle API della piattaforma, potete specificare il nome e l&#39;ID della sandbox in cui avrà luogo l&#39;operazione. Questi sono parametri facoltativi.
+Le risorse in  Experience Platform possono essere isolate in sandbox virtuali specifiche. Nelle richieste alle API Platform, potete specificare il nome e l&#39;ID della sandbox in cui avrà luogo l&#39;operazione. Questi sono parametri facoltativi.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!Note]
->Per ulteriori informazioni sulle sandbox in Experience Platform, consulta la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+>[!Nota]
+>Per ulteriori informazioni sulle sandbox in  Experience Platform, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva per il tipo di supporto:
 
@@ -68,7 +68,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 ### Swagger, documentazione {#swagger-docs}
 
-In questa esercitazione potete trovare la documentazione di riferimento associata a tutte le chiamate API in Swagger. Consultate https://platform.adobe.io/data/foundation/flowservice/swagger#/. È consigliabile utilizzare questa esercitazione e la pagina della documentazione Swagger in parallelo.
+In questa esercitazione potete trovare la documentazione di riferimento associata a tutte le chiamate API in Swagger. Consulta la documentazione API del servizio [di flusso su Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). È consigliabile utilizzare questa esercitazione e la pagina della documentazione Swagger in parallelo.
 
 ## Ottenere l&#39;elenco delle destinazioni di streaming disponibili {#get-the-list-of-available-streaming-destinations}
 
@@ -114,17 +114,17 @@ Una risposta corretta contiene un elenco delle destinazioni disponibili e dei re
 }
 ```
 
-## Connessione ai dati della piattaforma Experience {#connect-to-your-experience-platform-data}
+## Connessione ai dati Experience Platform  {#connect-to-your-experience-platform-data}
 
 ![Passaggi di destinazione - Panoramica passo 2](/help/rtcdp/destinations/assets/step2-create-streaming-destination-api.png)
 
-Successivamente, devi connetterti ai dati della tua Experience Platform per permetterti di esportare i dati del profilo e attivarli nella destinazione desiderata. Si tratta di due sottogruppi descritti di seguito.
+Successivamente, è necessario connettersi ai dati Experience Platform , in modo da poter esportare i dati del profilo e attivarli nella destinazione desiderata. Si tratta di due sottogruppi descritti di seguito.
 
-1. Innanzitutto, devi eseguire una chiamata per autorizzare l’accesso ai dati in Experience Platform, configurando una connessione di base.
-2. Quindi, utilizzando l&#39;ID connessione di base, effettuerai un&#39;altra chiamata in cui creerai una connessione di origine, che stabilisce la connessione ai dati della tua Experience Platform.
+1. Innanzitutto, è necessario eseguire una chiamata per autorizzare l&#39;accesso ai dati in  Experience Platform, configurando una connessione di base.
+2. Quindi, utilizzando l&#39;ID connessione di base, effettuerai un&#39;altra chiamata in cui creerai una connessione di origine, che stabilisce la connessione ai tuoi dati Experience Platform .
 
 
-### Autorizzare l&#39;accesso ai dati in Experience Platform
+### Autorizzare l&#39;accesso ai dati in  Experience Platform
 
 **Formato API**
 
@@ -164,7 +164,7 @@ Una risposta corretta contiene l&#39;identificatore univoco (`id`) della conness
 }
 ```
 
-### Connessione ai dati della piattaforma Experience
+### Connessione ai dati Experience Platform 
 
 **Formato API**
 
@@ -201,7 +201,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Risposta**
 
-Una risposta corretta restituisce l’identificatore univoco (`id`) per la nuova connessione di origine a Unified Profile Service creata. Questo conferma la connessione con i dati della Piattaforma esperienza. Memorizza questo valore come richiesto in un passaggio successivo.
+Una risposta corretta restituisce l’identificatore univoco (`id`) per la nuova connessione di origine a Unified Profile Service creata. Questo conferma che la connessione ai dati Experience Platform  è stata completata. Memorizza questo valore come richiesto in un passaggio successivo.
 
 ```json
 {
@@ -335,7 +335,7 @@ Una risposta corretta restituisce l’identificatore univoco (`id`) per la nuova
 
 ![Passaggi di destinazione - Panoramica passo 4](/help/rtcdp/destinations/assets/step4-create-streaming-destination-api.png)
 
-Utilizzando gli ID ottenuti nei passaggi precedenti, ora puoi creare un flusso di dati tra i dati della tua Experience Platform e la destinazione in cui attiverai i dati. Considera questo passaggio come la creazione della pipeline, attraverso la quale i dati scorreranno in un secondo momento, tra Experience Platform e la destinazione desiderata.
+Utilizzando gli ID ottenuti nei passaggi precedenti, ora puoi creare un flusso di dati tra i dati Experience Platform  e la destinazione in cui verranno attivati i dati. Considerate questo passaggio come la costruzione della pipeline, attraverso la quale i dati scorreranno successivamente, tra  Experience Platform e la destinazione desiderata.
 
 Per creare un flusso di dati, eseguite una richiesta POST, come mostrato di seguito, fornendo al contempo i valori indicati di seguito all&#39;interno del payload.
 
@@ -375,7 +375,7 @@ curl -X POST \
 ```
 
 * `{FLOW_SPEC_ID}`: L&#39;ID della specifica di flusso per le destinazioni basate sul profilo è `71471eba-b620-49e4-90fd-23f1fa0174d8`. Utilizzate questo valore nella chiamata.
-* `{SOURCE_CONNECTION_ID}`: Utilizzate l&#39;ID di connessione di origine ottenuto nel passaggio [Connetti alla piattaforma](#connect-to-your-experience-platform-data)Experience.
+* `{SOURCE_CONNECTION_ID}`: Utilizzate l&#39;ID di connessione di origine ottenuto nel passaggio [Connetti all&#39;Experience Platform](#connect-to-your-experience-platform-data).
 * `{TARGET_CONNECTION_ID}`: Utilizzate l&#39;ID di connessione di destinazione ottenuto nel passaggio [Connetti alla destinazione](#connect-to-streaming-destination)di streaming.
 
 **Risposta**
