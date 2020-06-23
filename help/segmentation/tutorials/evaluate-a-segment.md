@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Valutazione di un segmento
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
+source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+workflow-type: tm+mt
+source-wordcount: '2841'
+ht-degree: 1%
 
 ---
 
@@ -15,26 +18,26 @@ Questo documento fornisce un&#39;esercitazione per valutare i segmenti e acceder
 
 ## Introduzione
 
-Questa esercitazione richiede una conoscenza approfondita dei vari servizi Adobe Experience Platform coinvolti nella creazione di segmenti di pubblico. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
+Questa esercitazione richiede una conoscenza approfondita dei vari servizi di Adobe Experience Platform  coinvolti nella creazione di segmenti di pubblico. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
 - [Profilo](../../profile/home.md)cliente in tempo reale: Fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
-- [Servizio](../home.md)di segmentazione della piattaforma Adobe Experience: Consente di creare segmenti di pubblico dai dati del profilo cliente in tempo reale.
-- [Experience Data Model (XDM)](../../xdm/home.md): Il framework standardizzato tramite il quale la piattaforma organizza i dati sull&#39;esperienza cliente.
-- [Sandbox](../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+- [servizio](../home.md)di segmentazione Adobe Experience Platform: Consente di creare segmenti di pubblico dai dati del profilo cliente in tempo reale.
+- [Experience Data Model (XDM)](../../xdm/home.md): Framework standard con cui Platform organizza i dati sull&#39;esperienza dei clienti.
+- [Sandbox](../../sandboxes/home.md):  Experience Platform fornisce sandbox virtuali che dividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 ### Intestazioni necessarie
 
-Questa esercitazione richiede anche di aver completato l&#39;esercitazione [di](../../tutorials/authentication.md) autenticazione per effettuare correttamente le chiamate alle API della piattaforma. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come illustrato di seguito:
+Questa esercitazione richiede anche di aver completato l&#39;esercitazione [di](../../tutorials/authentication.md) autenticazione per effettuare correttamente le chiamate alle API Platform. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API Experience Platform, come illustrato di seguito:
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in Experience Platform sono isolate in sandbox virtuali specifiche. Le richieste alle API della piattaforma richiedono un&#39;intestazione che specifica il nome della sandbox in cui si svolgerà l&#39;operazione:
+Tutte le risorse in  Experience Platform sono isolate in sandbox virtuali specifiche. Le richieste alle API Platform richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Per ulteriori informazioni sulle sandbox in Piattaforma, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+>[!NOTE] Per ulteriori informazioni sulle sandbox in Platform, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
 Tutte le richieste POST, PUT e PATCH richiedono un&#39;intestazione aggiuntiva:
 
@@ -48,7 +51,7 @@ Dopo aver sviluppato, testato e salvato la definizione del segmento, puoi valuta
 
 Se non hai ancora completato l’esercitazione [Crea un segmento utilizzando l’esercitazione API](./create-a-segment.md) Profilo cliente in tempo reale o hai creato una definizione di segmento utilizzando [Segment Builder](../ui/overview.md), effettua questa operazione prima di continuare con questa esercitazione.
 
-## Valutazione programmata
+## Valutazione programmata {#scheduled-evaulation}
 
 Mediante la valutazione pianificata, l’organizzazione IMS può creare una pianificazione periodica per eseguire automaticamente i processi di esportazione.
 
@@ -410,7 +413,7 @@ Una risposta corretta restituisce i dettagli del processo di segmentazione e for
 
 ## Interpreta i risultati del segmento
 
-Quando i processi del segmento vengono eseguiti correttamente, la `segmentMembership` mappa viene aggiornata per ogni profilo incluso nel segmento. `segmentMembership` memorizza inoltre tutti i segmenti di pubblico già valutati che vengono trasferiti in Piattaforma, consentendo l&#39;integrazione con altre soluzioni come Adobe Audience Manager.
+Quando i processi del segmento vengono eseguiti correttamente, la `segmentMembership` mappa viene aggiornata per ogni profilo incluso nel segmento. `segmentMembership` memorizza inoltre tutti i segmenti di pubblico già valutati che vengono trasferiti in Platform, consentendo l&#39;integrazione con altre soluzioni come  Adobe Audience Manager.
 
 L&#39;esempio seguente mostra l&#39;aspetto `segmentMembership` dell&#39;attributo per ciascun record di profilo:
 
@@ -472,7 +475,7 @@ Una delle considerazioni chiave è lo schema su cui si basa il dataset (`schemaR
 Esistono due modi per creare il set di dati necessario:
 
 - **Utilizzo delle API:** I passaggi che seguono in questa esercitazione descrivono come creare un dataset che faccia riferimento allo schema dell&#39;unione dei profili XDM utilizzando l&#39;API Catalog.
-- **Utilizzo dell’interfaccia utente:** Per utilizzare l&#39;interfaccia utente di Adobe Experience Platform per creare un dataset che faccia riferimento allo schema dell&#39;unione, segui i passaggi dell&#39;esercitazione [](../ui/overview.md) dell&#39;interfaccia utente, quindi torna a questa esercitazione per procedere con i passaggi necessari per [generare i profili](#generate-xdm-profiles-for-audience-members)dell&#39;audience.
+- **Utilizzo dell’interfaccia utente:** Per utilizzare l&#39;interfaccia utente del Adobe Experience Platform  per creare un dataset che faccia riferimento allo schema dell&#39;unione, seguire i passaggi dell&#39;esercitazione [](../ui/overview.md) dell&#39;interfaccia utente, quindi tornare a questa esercitazione per procedere con i passaggi necessari per [generare i profili](#generate-xdm-profiles-for-audience-members)dell&#39;audience.
 
 Se disponete già di un set di dati compatibile e ne conoscete l’ID, potete procedere direttamente alla fase di [generazione dei profili](#generate-xdm-profiles-for-audience-members)di audience.
 
@@ -600,7 +603,7 @@ curl -X POST \
 | `filter.segments` | *(Facoltativo)* Specifica i segmenti da esportare. Se si omette questo valore, verranno esportati tutti i dati di tutti i profili. Accetta un array di oggetti segmento, ciascuno dei quali contiene i campi seguenti: |
 | `filter.segments.segmentId` | **(Obbligatorio se si utilizza`segments`)** ID segmento per i profili da esportare. |
 | `filter.segments.segmentNs` | *(Facoltativo)* Spazio dei nomi del segmento per il dato `segmentID`. |
-| `filter.segments.status` | *(Facoltativo)* Un array di stringhe che fornisce un filtro di stato per l&#39;oggetto `segmentID`. Per impostazione predefinita, `status` il valore `["realized", "existing"]` rappresenta tutti i profili che rientrano nel segmento al momento corrente. I valori possibili sono: `"realized"`, `"existing"`, e `"exited"`. |
+| `filter.segments.status` | *(Facoltativo)* Un array di stringhe che fornisce un filtro di stato per l&#39;oggetto `segmentID`. Per impostazione predefinita, `status` il valore `["realized", "existing"]` rappresenta tutti i profili che rientrano nel segmento al momento corrente. I valori possibili sono: `"realized"`, `"existing"`e `"exited"`. |
 | `filter.segmentQualificationTime` | *(Facoltativo)* Filtra in base al tempo di qualificazione del segmento. È possibile specificare l&#39;ora di inizio e/o di fine. |
 | `filter.segmentQualificationTime.startTime` | *(Facoltativo)* Ora di inizio qualifica segmento per un ID segmento per un dato stato. Non viene fornito, non verrà applicato alcun filtro all&#39;ora di inizio per la qualifica ID segmento. La marca temporale deve essere fornita in formato [RFC 3339](https://tools.ietf.org/html/rfc3339) . |
 | `filter.segmentQualificationTime.endTime` | *(Facoltativo)* Tempo di fine qualifica segmento per un ID segmento per un dato stato. Non viene fornito, non verrà applicato alcun filtro all&#39;ora di fine per la qualifica di ID segmento. La marca temporale deve essere fornita in formato [RFC 3339](https://tools.ietf.org/html/rfc3339) . |
@@ -948,10 +951,10 @@ curl -X GET \
 
 ## Passaggi successivi
 
-Una volta completata l&#39;esportazione, i dati sono disponibili all&#39;interno del Data Lake in Experience Platform. Potete quindi utilizzare l&#39;API [di accesso ai](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) dati per accedere ai dati utilizzando l&#39; `batchId` API associata all&#39;esportazione. A seconda della dimensione del segmento, i dati possono essere in blocchi e il batch può essere composto da diversi file.
+Una volta completata l&#39;esportazione, i dati sono disponibili all&#39;interno del Data Lake in  Experience Platform. Potete quindi utilizzare l&#39;API [di accesso ai](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) dati per accedere ai dati utilizzando l&#39; `batchId` API associata all&#39;esportazione. A seconda della dimensione del segmento, i dati possono essere in blocchi e il batch può essere composto da diversi file.
 
 Per istruzioni dettagliate su come utilizzare l&#39;API di accesso ai dati per accedere e scaricare file batch, segui l&#39;esercitazione [sull&#39;accesso ai](../../data-access/tutorials/dataset-data.md)dati.
 
-Puoi anche accedere ai dati del segmento esportati correttamente tramite Adobe Experience Platform Query Service. Utilizzando l&#39;interfaccia utente o l&#39;API RESTful, Query Service consente di scrivere, convalidare ed eseguire query sui dati all&#39;interno del Data Lake.
+È inoltre possibile accedere ai dati del segmento esportati correttamente utilizzando  Adobe Experience Platform Query Service. Utilizzando l&#39;interfaccia utente o l&#39;API RESTful, Query Service consente di scrivere, convalidare ed eseguire query sui dati all&#39;interno del Data Lake.
 
 Per ulteriori informazioni su come eseguire query sui dati del pubblico, consulta la documentazione [del servizio](../../query-service/home.md)Query.
