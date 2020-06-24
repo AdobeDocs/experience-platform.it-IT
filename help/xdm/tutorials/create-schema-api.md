@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare uno schema utilizzando l'API del Registro di sistema dello schema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 7cf873d19d26df9ebb70d11ee6e6513173ab45bb
+source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
 workflow-type: tm+mt
 source-wordcount: '2418'
 ht-degree: 1%
@@ -14,18 +14,18 @@ ht-degree: 1%
 
 # Creare uno schema utilizzando l&#39;API del Registro di sistema dello schema
 
-Il Registro di sistema dello schema viene utilizzato per accedere alla Libreria schema all&#39;interno di Adobe Experience Platform. La Libreria schema contiene le risorse rese disponibili da Adobe, dai partner della piattaforma Experience e dai fornitori di cui si utilizzano le applicazioni. Il Registro di sistema fornisce un&#39;interfaccia utente e RESTful API da cui sono accessibili tutte le risorse libreria disponibili.
+Il Registro di sistema dello schema viene utilizzato per accedere alla Libreria schema all&#39;interno  Adobe Experience Platform. La Libreria schema contiene le risorse messe a disposizione da Adobe,  partner Experience Platform e fornitori di cui si utilizzano le applicazioni. Il Registro di sistema fornisce un&#39;interfaccia utente e RESTful API da cui sono accessibili tutte le risorse libreria disponibili.
 
-Questa esercitazione utilizza l&#39;API del Registro di sistema dello schema per illustrare i passaggi necessari per comporre uno schema utilizzando una classe standard. Se si preferisce utilizzare l&#39;interfaccia utente in Experience Platform, l&#39;esercitazione [Editor di](create-schema-ui.md) schema fornisce istruzioni dettagliate per eseguire azioni simili nell&#39;editor di schema.
+Questa esercitazione utilizza l&#39;API del Registro di sistema dello schema per illustrare i passaggi necessari per comporre uno schema utilizzando una classe standard. Se si preferisce utilizzare l&#39;interfaccia utente in  Experience Platform, l&#39;esercitazione [Editor](create-schema-ui.md) schema fornisce istruzioni dettagliate per eseguire azioni simili nell&#39;editor dello schema.
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
 
-* [Sistema](../home.md)XDM (Experience Data Model): Il framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza dei clienti.
+* [Sistema](../home.md)XDM (Experience Data Model): Framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
    * [Nozioni di base sulla composizione](../schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
 * [Profilo](../../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-* [Sandbox](../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [Sandbox](../../sandboxes/home.md):  Experience Platform fornisce sandbox virtuali che dividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 Prima di avviare questa esercitazione, consultare la guida [allo](../api/getting-started.md) sviluppatore per informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all&#39;API del Registro di sistema dello schema. Ciò include il vostro `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all’intestazione Accetta e ai suoi possibili valori).
 
@@ -33,7 +33,7 @@ Questa esercitazione illustra i passaggi necessari per comporre uno schema Membr
 
 ## Comporre uno schema con una classe standard
 
-Uno schema può essere considerato come il modello per i dati che desideri inserire in Experience Platform. Ogni schema è composto da una classe e da zero o più mixin. In altre parole, non è necessario aggiungere un mixin per definire uno schema, ma nella maggior parte dei casi viene utilizzato almeno un mixin.
+Uno schema può essere considerato come il modello per i dati da inserire in  Experience Platform. Ogni schema è composto da una classe e da zero o più mixin. In altre parole, non è necessario aggiungere un mixin per definire uno schema, ma nella maggior parte dei casi viene utilizzato almeno un mixin.
 
 ### Assegnazione di una classe
 
@@ -135,7 +135,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed+json; version=1'
 ```
 
-**Risposta **
+**Risposta**
 
 Il formato della risposta dipende dall’intestazione Accetta inviata insieme alla richiesta. Prova a provare con diverse intestazioni Accetta per vedere quale soddisfa al meglio le tue esigenze.
 
@@ -952,9 +952,9 @@ L&#39;esecuzione di una richiesta GET per la ricerca dello schema ora mostra il 
 
 ### Definire un descrittore di identità
 
-Gli schemi vengono utilizzati per assimilare i dati in Experience Platform. Questi dati vengono utilizzati in più servizi per creare una singola visualizzazione unificata di un singolo utente. Per facilitare questo processo, i campi chiave possono essere contrassegnati come &quot;Identità&quot; e, al momento dell&#39;inserimento dei dati, i dati in tali campi vengono inseriti nel &quot;Grafico identità&quot; per l&#39;individuo in questione. I dati del grafico sono quindi accessibili da [Real-time Customer Profile](../../profile/home.md) e altri servizi Experience Platform, per fornire una vista unica di ciascun cliente.
+Gli schemi vengono utilizzati per assimilare i dati in  Experience Platform. Questi dati vengono utilizzati in più servizi per creare una singola visualizzazione unificata di un singolo utente. Per facilitare questo processo, i campi chiave possono essere contrassegnati come &quot;Identità&quot; e, al momento dell&#39;inserimento dei dati, i dati in tali campi vengono inseriti nel &quot;Grafico identità&quot; per l&#39;individuo in questione. I dati del grafico sono quindi accessibili dal profilo [cliente in tempo](../../profile/home.md) reale e da altri servizi Experience Platform  per fornire una vista unica di ciascun cliente.
 
-I campi generalmente contrassegnati come &quot;Identità&quot; includono: indirizzo e-mail, numero di telefono, ID [Experience Cloud (ECID)](https://docs.adobe.com/content/help/it-IT/id-service/using/home.html), ID CRM o altri campi ID univoci.
+I campi generalmente contrassegnati come &quot;Identità&quot; includono: indirizzo e-mail, numero di telefono, [ID Experience Cloud (ECID)](https://docs.adobe.com/content/help/it-IT/id-service/using/home.html), ID CRM o altri campi ID univoci.
 
 Considerate eventuali identificatori univoci specifici della vostra organizzazione, in quanto possono essere buoni anche campi di identità.
 
@@ -970,7 +970,7 @@ POST /tenant/descriptors
 
 **Richiesta**
 
-La richiesta seguente definisce un descrittore di identità nel campo &quot;loyaltyId&quot;. Questo indica a Experience Platform di utilizzare l&#39;identificatore univoco del membro del programma fedeltà (in questo caso, l&#39;indirizzo e-mail del membro) per unire le informazioni sull&#39;individuo.
+La richiesta seguente definisce un descrittore di identità nel campo &quot;loyaltyId&quot;. Questo indica  Experience Platform di utilizzare l&#39;identificatore univoco del membro del programma fedeltà (in questo caso, l&#39;indirizzo e-mail del membro) per unire le informazioni sull&#39;individuo.
 
 ```SHELL
 curl -X POST \
@@ -1165,7 +1165,7 @@ La risposta è un elenco filtrato di schemi, contenente solo quelli che soddisfa
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, è stato composto correttamente uno schema utilizzando sia i mixin standard che un mixin definito dall&#39;utente. Ora puoi utilizzare questo schema per creare un dataset e acquisire dati del record in Adobe Experience Platform.
+Seguendo questa esercitazione, è stato composto correttamente uno schema utilizzando sia i mixin standard che un mixin definito dall&#39;utente. Ora è possibile utilizzare questo schema per creare un dataset e per assimilare i dati del record  Adobe Experience Platform.
 
 Lo schema Membri fedeltà completo, come creato durante questa esercitazione, è disponibile nell&#39;appendice che segue. Osservando lo schema, puoi vedere in che modo i mixin contribuiscono alla struttura generale e quali campi sono disponibili per l&#39;inserimento dei dati.
 
