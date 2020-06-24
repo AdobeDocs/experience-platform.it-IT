@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida all'interfaccia utente di Generatore di segmenti
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: d00973a07c5fb137f756040fb1dc6eac5a1630f5
+source-git-commit: b5a425714b6d69ca241c8ad81eff779b993633a5
 workflow-type: tm+mt
-source-wordcount: '2470'
+source-wordcount: '2583'
 ht-degree: 0%
 
 ---
@@ -103,11 +103,23 @@ Per aggiungere una nuova regola alla definizione del segmento, trascinate una se
 
 Puoi trascinare un&#39;audience dalla *[!UICONTROL Audience]* scheda nell&#39;area di lavoro del generatore di regole per fare riferimento all&#39;appartenenza all&#39;audience nella nuova definizione di segmento. Questo consente di includere o escludere l&#39;appartenenza all&#39;audience come attributo nella nuova regola del segmento.
 
-Per i [!DNL Platform] tipi di pubblico creati con Segment Builder (Generatore di segmenti), potete scegliere di convertire l&#39;audience in un set di regole utilizzate nella definizione del segmento per quell&#39;audience. Questa conversione crea una copia della logica della regola, che può essere modificata senza influenzare la definizione del segmento originale.
+Per [!DNL Platform] i tipi di pubblico creati utilizzando [!UICONTROL Segment Builder], viene offerta l&#39;opzione per convertire l&#39;audience in un set di regole utilizzate nella definizione del segmento per quell&#39;audience. Questa conversione crea una copia della logica della regola, che può essere modificata senza influenzare la definizione del segmento originale. Prima di convertire le modifiche recenti nella definizione del segmento in logica regola, accertatevi di aver salvato le modifiche recenti.
 
 >[!NOTE] Quando si aggiunge un&#39;audience da un&#39;origine esterna, viene fatto riferimento solo all&#39;appartenenza all&#39;audience. Non è possibile convertire l&#39;audience in regole, pertanto le regole utilizzate per creare l&#39;audience originale non possono essere modificate nella nuova definizione di segmento.
 
 ![](../images/segment-builder/add-audience-to-segment.png)
+
+Se si verificano dei conflitti durante la conversione dei tipi di pubblico in regole, [!UICONTROL Segment Builder] tenterà di mantenere al meglio le opzioni esistenti.
+
+### Vista Codice
+
+In alternativa, è possibile visualizzare una versione basata su codice di una regola creata in [!UICONTROL Segment Builder]. Dopo aver creato la regola all&#39;interno del quadro del generatore di regole, potete selezionare **[!UICONTROL Code view]** per visualizzare il segmento come PQL.
+
+![](../images/segment-builder/code-view.png)
+
+La vista Codice fornisce un pulsante che consente di copiare il valore del segmento da utilizzare nelle chiamate API. Per ottenere la versione più recente del segmento, accertati di aver salvato le ultime modifiche al segmento.
+
+![](../images/segment-builder/copy-code.png)
 
 ## Contenitori
 
