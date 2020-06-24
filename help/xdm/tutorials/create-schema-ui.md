@@ -1,43 +1,46 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Creazione di uno schema con l'Editor di schema
+title: Creare uno schema tramite l’Editor di schema.
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: c07f926a71447e840c692ed15e85c9e02f1106ab
+source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
+workflow-type: tm+mt
+source-wordcount: '3409'
+ht-degree: 0%
 
 ---
 
 
-# Creazione di uno schema con l&#39;Editor di schema
+# Creare uno schema tramite l’Editor di schema.
 
-Il Registro di sistema dello schema fornisce un&#39;interfaccia utente e RESTful API da cui è possibile visualizzare e gestire tutte le risorse nella Libreria schema di Adobe Experience Platform. La Libreria schema contiene le risorse messe a disposizione da Adobe, dai partner della Piattaforma esperienza e dai fornitori di cui si utilizzano le applicazioni, nonché le risorse definite e salvate nel Registro di sistema dello schema.
+Il Registro di sistema dello schema fornisce un&#39;interfaccia utente e RESTful API da cui è possibile visualizzare e gestire tutte le risorse nella  Libreria schema Adobe Experience Platform. La Libreria schema contiene le risorse rese disponibili da Adobe,  partner Experience Platform e fornitori le cui applicazioni vengono utilizzate, nonché le risorse definite e salvate nel Registro di sistema dello schema.
 
-Questa esercitazione descrive i passaggi necessari per creare uno schema utilizzando l&#39;Editor di schema in Experience Platform. Se si preferisce comporre uno schema utilizzando l&#39;API del Registro di sistema dello schema, iniziare leggendo la guida [per lo sviluppatore del Registro di](../api/getting-started.md) schema prima di provare a [creare uno schema utilizzando l&#39;API](create-schema-api.md).
+Questa esercitazione descrive i passaggi necessari per creare uno schema utilizzando l&#39;Editor di schema in  Experience Platform. Se si preferisce comporre uno schema utilizzando l&#39;API del Registro di sistema dello schema, iniziare leggendo la guida [per lo sviluppatore del Registro di](../api/getting-started.md) schema prima di provare a [creare uno schema utilizzando l&#39;API](create-schema-api.md).
 
 Questa esercitazione include anche i passaggi per [definire una nuova classe](#create-new-class) da utilizzare per comporre uno schema.
 
 ## Introduzione
 
-Questa esercitazione richiede una conoscenza approfondita dei vari aspetti di Adobe Experience Platform coinvolti nell&#39;utilizzo dell&#39;Editor di schema. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti concetti:
+Questa esercitazione richiede una conoscenza approfondita dei vari aspetti del Adobe Experience Platform  coinvolto nell&#39;utilizzo dell&#39;Editor di schema. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti concetti:
 
-* [Experience Data Model (XDM)](../home.md): Il framework standardizzato tramite il quale la piattaforma organizza i dati sull&#39;esperienza cliente.
+* [Experience Data Model (XDM)](../home.md): Framework standard con cui Platform organizza i dati sull&#39;esperienza dei clienti.
 * [Nozioni di base sulla composizione](../schema/composition.md)dello schema: Panoramica degli schemi XDM e dei relativi blocchi costitutivi, incluse classi, mixin, tipi di dati e campi.
 * [Profilo](../../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
-Questa esercitazione richiede l&#39;accesso a Experience Platform. Se non disponete dell&#39;accesso a un&#39;organizzazione IMS in Experience Platform, rivolgetevi al vostro amministratore di sistema prima di continuare.
+Questa esercitazione richiede l&#39;accesso a  Experience Platform. Se non disponete dell&#39;accesso a un&#39;organizzazione IMS in  Experience Platform, rivolgetevi al vostro amministratore di sistema prima di procedere.
 
-## Sfogliare gli schemi esistenti nell’area di lavoro Schemi
+## Sfogliare gli schemi esistenti nell’area di lavoro Schemi {#browse}
 
-L&#39;area di lavoro Schemi all&#39;interno di Experience Platform (Piattaforma esperienza) fornisce una visualizzazione della Libreria schemi, che consente di visualizzare e gestire tutti gli schemi disponibili e di comporne di nuovi. L&#39;area di lavoro include anche l&#39;Editor schema, l&#39;area di lavoro su cui verrà composto uno schema durante l&#39;esercitazione.
+L&#39;area di lavoro Schemi all&#39;interno  Experience Platform fornisce una visualizzazione della Libreria schema, consentendo di visualizzare e gestire tutti gli schemi disponibili e di comporne di nuovi. L&#39;area di lavoro include anche l&#39;Editor schema, l&#39;area di lavoro su cui verrà composto uno schema durante l&#39;esercitazione.
 
-Dopo aver effettuato l’accesso a Experience Platform, fai clic su **Schemi** nella barra di navigazione a sinistra per passare all’area di lavoro Schemi. Viene visualizzato un elenco di schemi (una rappresentazione della Libreria schemi) in cui è possibile visualizzare, gestire e personalizzare tutti gli schemi disponibili. L&#39;elenco include il nome, il tipo, la classe e il comportamento (record o serie temporali) su cui si basa lo schema, nonché la data e l&#39;ora dell&#39;ultima modifica dello schema.
+Dopo aver effettuato l&#39;accesso  Experience Platform, fate clic su **Schemi** nella barra di navigazione a sinistra per passare all&#39;area di lavoro Schemi. Viene visualizzato un elenco di schemi (una rappresentazione della Libreria schemi) in cui è possibile visualizzare, gestire e personalizzare tutti gli schemi disponibili. L&#39;elenco include il nome, il tipo, la classe e il comportamento (record o serie temporali) su cui si basa lo schema, nonché la data e l&#39;ora dell&#39;ultima modifica dello schema.
 
 Fate clic sull’icona del filtro accanto alla barra di ricerca per utilizzare le funzionalità di filtro per tutte le risorse del Registro di sistema, incluse classi, mixin e tipi di dati.
 
 ![Visualizzazione della libreria Schema](../images/tutorials/create-schema/schemas_filter.png)
 
-## Creare e assegnare un nome a uno schema
+## Creare e assegnare un nome a uno schema {#create}
 
 Per iniziare a comporre uno schema, fare clic su **Crea schema** nell&#39;angolo superiore destro dell&#39;area di lavoro Schemi.
 
@@ -59,7 +62,7 @@ Quando si decide un nome per lo schema, è necessario tenere presenti diverse co
 
 Questa esercitazione costituisce uno schema per l&#39;acquisizione di dati relativi ai membri di un programma fedeltà, pertanto lo schema è denominato &quot;Membri fedeltà&quot;.
 
-## Assegnazione di una classe
+## Assegnazione di una classe {#class}
 
 Sul lato sinistro dell&#39;editor è presente la sezione *Composizione* . Attualmente contiene due sottosezioni: *Schema* e *classe*.
 
@@ -79,13 +82,13 @@ Il quadro viene nuovamente visualizzato. La sezione *Classe* ora contiene la cla
 
 ![Classe profilo singolo XDM assegnata](../images/tutorials/create-schema/class_assigned_structure.png)
 
-I campi vengono visualizzati nel formato &quot;fieldName&quot;| Tipo di dati&quot;. I passaggi per definire i campi dello schema nell&#39;interfaccia utente sono disponibili più avanti in questa esercitazione.
+I campi vengono visualizzati nel formato &quot;fieldName&quot; | Tipo di dati&quot;. I passaggi per definire i campi dello schema nell&#39;interfaccia utente sono disponibili più avanti in questa esercitazione.
 
 >[!NOTE] È possibile [modificare la classe di uno schema](#change-class) in qualsiasi momento durante il processo di composizione iniziale prima che lo schema sia stato salvato, ma questo deve essere fatto con estrema cautela. I mixin sono compatibili solo con determinate classi, pertanto la modifica della classe reimposterà il quadro ed eventuali campi aggiunti.
 
-## Aggiungere un mixin
+## Aggiungere un mixin {#mixin}
 
-Ora che è stata assegnata una classe, la sezione *Composizione* contiene una terza sottosezione: *Mixins*.
+Ora che è stata assegnata una classe, la sezione *Composizione* contiene una terza sottosezione: *Mixin*.
 
 È ora possibile iniziare ad aggiungere campi allo schema aggiungendo mixin. Un mixin è un gruppo di uno o più campi che descrivono un concetto particolare. Questa esercitazione utilizza i mixin per descrivere i membri del programma fedeltà e acquisire informazioni chiave come nome, compleanno, numero di telefono, indirizzo e molto altro.
 
@@ -111,7 +114,7 @@ Il campo &quot;nome&quot; ha un tipo di dati &quot;Nome persona&quot;, che signi
 
 Fare clic su campi diversi all&#39;interno del quadro per visualizzare tutti i campi aggiuntivi che contribuiscono alla struttura dello schema.
 
-## Aggiungere un altro mixin
+## Aggiungere un altro mixin {#mixin-2}
 
 Ora potete ripetere gli stessi passaggi per aggiungere un altro mixin. Quando visualizzate la finestra di dialogo *Aggiungi mixin* , il mixin &quot;Dettagli persona profilo&quot; è stato disattivato e il pulsante di scelta accanto non può essere selezionato. Ciò impedisce la duplicazione accidentale di mixin già inclusi nello schema corrente.
 
@@ -125,7 +128,7 @@ Analogamente al campo &quot;nome&quot;, i campi appena aggiunti rappresentano co
 
 ![](../images/tutorials/create-schema/personal_details_structure.png)
 
-## Definire un nuovo mixin
+## Definire un nuovo mixin {#define-mixin}
 
 Lo schema &quot;Membri fedeltà&quot; è concepito per acquisire i dati relativi ai membri di un programma fedeltà, pertanto richiederà alcuni campi specifici relativi alla fedeltà. Non sono disponibili mixin standard che contengono i campi necessari, pertanto sarà necessario definire un nuovo mixin.
 
@@ -139,7 +142,7 @@ Per questa esercitazione, denominate il nuovo mixin &quot;Dettagli fedeltà&quot
 
 Fare clic su **Aggiungi mixin** per tornare all&#39;editor dello schema. &quot;Dettagli fedeltà&quot; dovrebbe ora essere visualizzato in *Mixins* sul lato sinistro del quadro, ma non ci sono ancora campi associati ad esso e quindi nessun nuovo campo viene visualizzato in *Struttura*.
 
-## Aggiunta di campi al mixin
+## Aggiunta di campi al mixin {#mixin-fields}
 
 Dopo aver creato il mixin &quot;Dettagli fedeltà&quot;, è ora di definire i campi che il mixin contribuirà allo schema.
 
@@ -178,7 +181,7 @@ Sono disponibili diverse opzioni di vincolo a seconda del tipo di dati seleziona
 
 ![](../images/tutorials/create-schema/loyaltyId_field.png)
 
-## Aggiunta di altri campi al mixin
+## Aggiunta di altri campi al mixin {#mixin-fields-2}
 
 Ora che avete aggiunto il campo &quot;loyaltyId&quot;, potete aggiungere altri campi per acquisire informazioni relative alla fedeltà come:
 
@@ -191,7 +194,7 @@ Al termine, l&#39;oggetto Fedeltà conterrà campi per: ID fedeltà, punti e mem
 
 ![](../images/tutorials/create-schema/loyalty_object_fields.png)
 
-## Aggiungi il campo &#39;enum&#39; al mixin
+## Aggiungi il campo &#39;enum&#39; al mixin {#enum}
 
 Durante la definizione dei campi nell&#39;Editor schema, è possibile applicare alcune opzioni aggiuntive ai tipi di campo di base per creare ulteriori vincoli sui dati che il campo può contenere.
 
@@ -212,7 +215,7 @@ Ulteriori informazioni sui vincoli aggiuntivi disponibili:
 * **Enum:** Indica che questo campo deve contenere uno dei valori di un elenco enumerato di possibili valori.
 * **Identità:** Indica che questo campo è un campo identità. Ulteriori informazioni sui campi di identità sono disponibili [più avanti in questa esercitazione](#identity-field).
 
-## Conversione di un oggetto multicampo in un tipo di dati
+## Conversione di un oggetto multicampo in un tipo di dati {#datatype}
 
 Dopo aver aggiunto diversi campi specifici per la fedeltà, l&#39;oggetto &quot;fedeltà&quot; ora contiene una struttura dati comune che potrebbe essere utile in altri schemi.
 
@@ -230,9 +233,9 @@ In uno schema futuro, è ora possibile assegnare a un campo il **Tipo** di Fedel
 
 ## Impostare un campo dello schema come campo di identità {#identity-field}
 
-Gli schemi vengono utilizzati per assimilare i dati in Experience Platform, e tali dati vengono utilizzati per identificare gli individui e unire le informazioni provenienti da più fonti. Per facilitare questo processo, i campi chiave possono essere contrassegnati come campi &quot;Identità&quot;.
+Gli schemi vengono utilizzati per l&#39;assimilazione di dati in  Experience Platform e i dati vengono utilizzati per identificare individui e unire insieme informazioni provenienti da più fonti. Per facilitare questo processo, i campi chiave possono essere contrassegnati come campi &quot;Identità&quot;.
 
-Experience Platform (Piattaforma esperienza) consente di identificare facilmente un campo di identità mediante l&#39;uso di una casella di controllo **Identità** nell&#39;Editor di schema.
+ Experience Platform semplifica la denotazione di un campo identità attraverso l&#39;uso di una casella di controllo **Identità** nell&#39;Editor di schema.
 
 Ad esempio, ci possono essere migliaia di membri del programma fedeltà appartenenti allo stesso &quot;livello&quot;, ma ogni membro del programma fedeltà ha un &quot;loyaltyId&quot; univoco (che in questo caso è l&#39;indirizzo e-mail del singolo membro). Il fatto che &quot;loyaltyId&quot; sia un identificatore univoco per ciascun membro lo rende un valido candidato per un campo di identità, mentre &quot;level&quot; non lo è.
 
@@ -260,7 +263,7 @@ More information about relationships and other schema metadata can be found in t
 
 ## Abilitare lo schema per l&#39;utilizzo in Real-time Customer Profile {#profile}
 
-L&#39;Editor schema consente di abilitare uno schema da utilizzare con il profilo [cliente in tempo](../../profile/home.md)reale. Il profilo fornisce una visione olistica di ogni singolo cliente creando un profilo affidabile e a 360° degli attributi del cliente, oltre a un account con marca temporale di ogni interazione che il cliente ha avuto tra i sistemi integrati con Experience Platform.
+L&#39;Editor schema consente di abilitare uno schema da utilizzare con il profilo [cliente in tempo](../../profile/home.md)reale. Il profilo fornisce una visione olistica di ogni singolo cliente creando un profilo affidabile e a 360° degli attributi del cliente e un account con marca temporale di ogni interazione che il cliente ha avuto tra i sistemi integrati con  Experience Platform.
 
 Affinché uno schema possa essere abilitato per l&#39;uso con il profilo cliente in tempo reale, è necessario che sia definita un&#39;identità primaria. Se si tenta di abilitare uno schema senza prima definire un&#39;identità primaria, verrà visualizzato un messaggio di errore &quot;Identità principale mancante&quot;.
 
@@ -292,7 +295,7 @@ Le seguenti informazioni sono supplementari rispetto all&#39;esercitazione sull&
 
 ### Create a new class {#create-new-class}
 
-Experience Platform offre la flessibilità di definire uno schema basato su una classe univoca per la vostra organizzazione.
+ Experience Platform offre la flessibilità di definire uno schema basato su una classe univoca per l&#39;organizzazione.
 
 Aprire la finestra di dialogo *Assegna classe* facendo clic su **Assegna** nella sezione *Classe* dell&#39;Editor di schema. All&#39;interno della finestra di dialogo, selezionare **Crea nuova classe**.
 
