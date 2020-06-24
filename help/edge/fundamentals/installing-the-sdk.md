@@ -1,12 +1,12 @@
 ---
-title: Installazione di Adobe Experience Platform Web SDK
-seo-title: SDK Web per Adobe Experience Platform per l'installazione dell'SDK
-description: Scopri come installare l’SDK Web per la piattaforma Experience
-seo-description: Scopri come installare l’SDK Web per la piattaforma Experience
+title: 'Installazione dell’SDK Web per il Adobe Experience Platform '
+seo-title: ' Adobe Experience Platform SDK Web per l''installazione dell''SDK'
+description: Scoprite come installare  Experience Platform Web SDK
+seo-description: Scoprite come installare  Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 5998473c665cb80ffddc092847533f51d81cf581
+source-git-commit: e0dee4e39143ae9d7f5e4aaf9c352555f1c7f5d0
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '571'
 ht-degree: 1%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 1%
 
 # Installazione dell’SDK
 
-L’SDK Web AEP è disponibile su una rete CDN da usare. È possibile fare riferimento a questo file o scaricarlo e ospitarlo nella propria infrastruttura. È disponibile in una versione ridotta e non minificata. La versione non limitata è utile per il debug.
+L’SDK Web per Adobi Experience Platform  è disponibile su una rete CDN (content delivery network) da usare. È possibile fare riferimento a questo file o scaricarlo e ospitarlo nella propria infrastruttura. È disponibile in una versione ridotta e non minificata. La versione non limitata è utile per il debug.
 
 [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)[https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
 
 ## Aggiunta del codice
 
-Il primo passo per implementare l’SDK per Adobe Experience Platform Web è copiare e incollare il seguente &quot;codice di base&quot; il più possibile nel `<head>` tag del codice HTML:
+Il primo passaggio nell’implementazione dell’SDK Web  Adobe Experience Platform consiste nel copiare e incollare il seguente &quot;codice di base&quot; il più possibile alto nel `<head>` tag del codice HTML:
 
 ```markup
 <script>
