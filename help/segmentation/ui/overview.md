@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida all'interfaccia utente di Generatore di segmenti
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+source-git-commit: d00973a07c5fb137f756040fb1dc6eac5a1630f5
 workflow-type: tm+mt
 source-wordcount: '2470'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## Introduzione
 
-Per utilizzare le definizioni dei segmenti è necessario conoscere i vari [!DNL Experience Platform] servizi coinvolti nella segmentazione. Prima di leggere questa guida utente, consulta la documentazione relativa ai seguenti servizi:
+Per utilizzare le definizioni dei segmenti è necessario conoscere i diversi [!DNL Experience Platform] servizi coinvolti nella segmentazione. Prima di leggere questa guida utente, consulta la documentazione relativa ai seguenti servizi:
 
 - [!DNL Segmentation Service](../home.md): Il servizio di segmentazione consente di dividere i dati memorizzati in [!DNL Experience Platform] relazione a individui (come clienti, potenziali, utenti o organizzazioni) in gruppi più piccoli che condividono caratteristiche simili e risponderanno in modo simile alle strategie di marketing.
 - [!DNL Real-time Customer Profile](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
@@ -165,7 +165,7 @@ Le pianificazioni al momento possono essere create solo tramite l&#39;API. Per i
 
 ![](../images/segment-builder/scheduled-segmentation.png)
 
-## Segmentazione in streaming
+## Segmentazione in streaming {#streaming-segmentation}
 
 >[!NOTE] Affinché la segmentazione in streaming possa funzionare, il cliente dovrà attivare la segmentazione pianificata per l’organizzazione. Per informazioni dettagliate sull&#39;abilitazione della segmentazione pianificata, consultate [la sezione precedente in questa guida](#enable-scheduled-segmentation)utente.
 
