@@ -4,15 +4,17 @@ solution: Experience Platform
 title: Segmentazione in streaming
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+source-git-commit: d00973a07c5fb137f756040fb1dc6eac5a1630f5
 workflow-type: tm+mt
-source-wordcount: '1343'
+source-wordcount: '1370'
 ht-degree: 1%
 
 ---
 
 
 # Valutazione degli eventi in tempo quasi reale con segmentazione in streaming
+
+>[!NOTE] Il seguente documento spiega come utilizzare la segmentazione in streaming mediante l&#39;API. Per informazioni sull’utilizzo della segmentazione in streaming tramite l’interfaccia utente, consulta la guida [di](../ui/overview.md#streaming-segmentation)Segment Builder (Generatore di segmenti).
 
 Lo streaming della segmentazione su [!DNL Adobe Experience Platform] consente ai clienti di effettuare la segmentazione in tempo quasi reale, concentrandosi sulla ricchezza dei dati. Con la segmentazione in streaming, la qualificazione del segmento ora avviene con l&#39;arrivo dei dati, [!DNL Platform]riducendo la necessità di pianificare ed eseguire processi di segmentazione. Grazie a questa funzionalità, ora è possibile valutare la maggior parte delle regole del segmento nel momento in cui i dati vengono passati, [!DNL Platform]il che significa che l&#39;appartenenza al segmento verrà mantenuta aggiornata senza eseguire processi di segmentazione pianificati.
 
