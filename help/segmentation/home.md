@@ -1,19 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Servizio di segmentazione di Adobe Experience Platform
+title: 'Servizio Segmentazione Adobe Experience Platform '
 topic: overview
 translation-type: tm+mt
-source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
+source-git-commit: b0ef50e25c27aba121bb01c602867953eb2a5f7e
+workflow-type: tm+mt
+source-wordcount: '2386'
+ht-degree: 0%
 
 ---
 
 
 # Panoramica del servizio di segmentazione
 
-Il servizio di segmentazione di Adobe Experience Platform fornisce un&#39;interfaccia utente e RESTful API che consente di creare segmenti e generare audience dai dati del profilo cliente in tempo reale. Questi segmenti sono configurati e mantenuti a livello centrale sulla piattaforma e sono facilmente accessibili da qualsiasi soluzione Adobe.
+ Adobe Experience Platform Segmentation Service fornisce un&#39;interfaccia utente e RESTful API che consente di creare segmenti e generare audience dai dati del profilo cliente in tempo reale. Questi segmenti sono configurati e mantenuti a livello centrale su Platform e sono facilmente accessibili da qualsiasi soluzione Adobe.
 
-Questo documento fornisce una panoramica del servizio di segmentazione e del ruolo che esso svolge in Adobe Experience Platform.
+Questo documento fornisce una panoramica del servizio di segmentazione e del ruolo che esso svolge in  Adobe Experience Platform.
 
 ## Guida introduttiva a Segmentation Service
 
@@ -27,7 +30,7 @@ Questo documento fornisce una panoramica del servizio di segmentazione e del ruo
 
 La segmentazione è il processo di definizione di attributi o comportamenti specifici condivisi da un sottoinsieme di profili dall&#39;archivio profili per distinguere un gruppo commerciabile di persone dalla base cliente. Ad esempio, in una campagna e-mail intitolata &quot;Hai dimenticato di comprare le tue scarpe da ginnastica?&quot;, potresti voler avere un pubblico di tutti gli utenti che hanno cercato di correre scarpe negli ultimi 30 giorni, ma che non hanno completato un acquisto.
 
-Una volta concettualmente definito un segmento, questo viene integrato in Experience Platform. In genere, i segmenti sono realizzati dagli esperti di marketing o dagli specialisti di audience, anche se alcune organizzazioni preferiscono essere creati dal loro reparto marketing, in collaborazione con i loro analisti di dati. Dopo aver rivisto i dati inviati a Platform, l&#39;analista dei dati compone la definizione del segmento selezionando quali campi e valori verranno utilizzati per creare le regole o le condizioni del segmento. Questa operazione viene eseguita utilizzando l&#39;interfaccia utente o l&#39;API.
+Una volta concettualmente definito un segmento, questo viene integrato in  Experience Platform. In genere, i segmenti sono realizzati dagli esperti di marketing o dagli specialisti di audience, anche se alcune organizzazioni preferiscono essere creati dal loro reparto marketing, in collaborazione con i loro analisti di dati. Dopo aver rivisto i dati inviati ad Platform, l&#39;analista dei dati compone la definizione del segmento selezionando quali campi e valori verranno utilizzati per creare le regole o le condizioni del segmento. Questa operazione viene eseguita utilizzando l&#39;interfaccia utente o l&#39;API.
 
 ## Creare un segmento
 
@@ -42,8 +45,6 @@ Per informazioni sulla creazione di definizioni di segmenti tramite l&#39;API, c
 ## Valutazione dei segmenti
 
 ### Segmentazione in streaming
-
->[!NOTE] La segmentazione in streaming è una funzione beta e sarà disponibile su richiesta.
 
 La segmentazione in streaming è un processo continuo di selezione dei dati che aggiorna i segmenti in risposta all&#39;attività degli utenti. Una volta creato e salvato un segmento, la definizione del segmento viene applicata in base ai dati in entrata nel profilo cliente in tempo reale. L&#39;aggiunta e l&#39;eliminazione di segmenti vengono elaborati regolarmente, garantendo che il pubblico di destinazione rimanga rilevante.
 
@@ -74,7 +75,7 @@ Quando crei un nuovo segmento, devi fornire un nome di segmento. Il nome del seg
 ### Unisci criteri
 
 I criteri di unione sono regole utilizzate dal profilo per determinare in che modo i dati verranno classificati in ordine di priorità e combinati in una visualizzazione unificata a determinate condizioni.
-Se non è definito alcun criterio di unione, viene utilizzato il criterio di unione predefinito della piattaforma. Se preferite utilizzare un criterio di unione specifico per l&#39;organizzazione, potete crearne uno personalizzato e contrassegnarlo come predefinito dell&#39;organizzazione.
+Se non è definito alcun criterio di unione, viene utilizzato il criterio di unione predefinito di Platform. Se preferite utilizzare un criterio di unione specifico per l&#39;organizzazione, potete crearne uno personalizzato e contrassegnarlo come predefinito dell&#39;organizzazione.
 
 >[!NOTE] La stima delle dimensioni del pubblico si basa sui criteri di unione dei profili predefiniti dell&#39;organizzazione.
 
@@ -93,7 +94,7 @@ Queste funzioni avanzate sono descritte più dettagliatamente nelle sezioni segu
 
 ## Segmentazione sequenziale {#sequential}
 
-Un percorso standard dell&#39;utente è sequenziale.  Adobe Experience Platform consente di definire una serie ordinata di segmenti per riflettere questo percorso, acquisendo così le sequenze di eventi man mano che si verificano. Potete organizzare gli eventi nell&#39;ordine desiderato utilizzando la timeline dell&#39;evento visivo nel Generatore di segmenti.
+Un percorso standard dell&#39;utente è sequenziale.   Adobe Experience Platform consente di definire una serie ordinata di segmenti per riflettere questo percorso, acquisendo così le sequenze di eventi man mano che si verificano. Potete organizzare gli eventi nell&#39;ordine desiderato utilizzando la timeline dell&#39;evento visivo nel Generatore di segmenti.
 
 Un esempio di percorso cliente che richiederebbe segmentazione sequenziale sarebbe la visualizzazione prodotto > aggiunta prodotto > checkout > Nessun acquisto.
 
@@ -202,14 +203,14 @@ I dati stringa sono inclusi nelle definizioni dei segmenti utilizzando istruzion
 
 I dati data consentono di assegnare contesto basato sull&#39;ora alle definizioni dei segmenti, utilizzando date di inizio/fine specifiche o utilizzando istruzioni relative alla data come mostrato nella tabella seguente. Un&#39;implementazione potrebbe consistere nel creare un pubblico di clienti che hanno interagito con il tuo marchio in *quest&#39;anno* e che è stato attivo anche *negli* ultimi giorni.
 
-| Esempio di campo | Indicazioni relative alla data | Timeline   |
+| Esempio di campo | Indicazioni relative alla data | Timeline  |
 | ------------- | ------------------------ | --------- |
 | person.firstPurchase | oggi, ieri, questo mese, quest&#39;anno | Rilevante per il giorno in cui il segmento è stato creato. |
 | person.lastPurchase | last, durante, prima, dopo, entro | Pertinente entro una data settimana/mese. |
 
 ### Eventi esperienza
 
-Come schema di Adobe Experience Platform, XDM ExperienceEvents registra le interazioni esplicite e implicite dei clienti con le applicazioni integrate nella piattaforma, inclusa un&#39;istantanea del sistema al momento dell&#39;interazione. ExperienceEvents sono record di fatti. Sono pertanto un&#39;origine dati disponibile durante la definizione del segmento.
+Come schema di Adobe Experience Platform , XDM ExperienceEvents registra le interazioni esplicite ed implicite dei clienti con le applicazioni integrate Platform, inclusa un&#39;istantanea del sistema al momento dell&#39;interazione. ExperienceEvents sono record di fatti. Sono pertanto un&#39;origine dati disponibile durante la definizione del segmento.
 
 Come illustrato nella tabella seguente, i dati dell&#39;evento vengono rappresentati utilizzando le parole chiave che consentono di definire il comportamento dell&#39;evento e specificare gli attributi dell&#39;evento.
 
@@ -224,11 +225,11 @@ Come illustrato nella tabella seguente, i dati dell&#39;evento vengono rappresen
 
 Le definizioni di segmento esistenti possono essere utilizzate anche come componenti di una nuova definizione di segmento, aggiungendo al nuovo segmento i relativi attributi e regole basate sugli eventi.
 
-### Audiences
+### Tipi di pubblico
 
 Le audience esterne possono essere utilizzate anche come componenti di una nuova definizione di segmento, aggiungendo le relative regole di attributi al nuovo segmento.
 
-Attualmente, come pubblico è supportato solo Adobe Audience Manager. In futuro verranno attivate ulteriori fonti.
+Al momento, è supportato solo  Adobe Audience Manager come pubblico. In futuro verranno attivate ulteriori fonti.
 
 ### Altri tipi di dati
 
@@ -256,6 +257,6 @@ Il servizio di segmentazione fornisce un flusso di lavoro consolidato per creare
 - La segmentazione è il processo di definizione di un sottoinsieme di profili dallo store del profilo, che consente di caratterizzare il comportamento o gli attributi di un gruppo commerciabile desiderato. Il servizio di segmentazione rende possibile questo processo.
 - Durante la pianificazione di un segmento, tenere presente che a un segmento può essere fatto riferimento e combinato con qualsiasi altro segmento.
 - Un segmento può essere generato da regole basate sui dati del profilo, sui dati delle serie temporali correlati o su entrambi.
-- I segmenti possono essere valutati su richiesta o in modo continuo. Quando viene valutato su richiesta, tutti i dati del profilo vengono passati attraverso le definizioni del segmento alla volta. Quando viene valutato in modo continuo, i dati scorrono le definizioni dei segmenti mentre entrano in Platform.
+- I segmenti possono essere valutati su richiesta o in modo continuo. Quando viene valutato su richiesta, tutti i dati del profilo vengono passati attraverso le definizioni del segmento alla volta. Quando viene valutato in modo continuo, i dati scorrono le definizioni dei segmenti mentre questi vengono immessi in Platform.
 
 Per informazioni su come definire i segmenti nell’interfaccia utente, consulta la guida [di Generatore di](./ui/overview.md)segmenti. Per informazioni sulla creazione di definizioni di segmenti tramite l&#39;API, consulta l&#39;esercitazione sulla [creazione di segmenti tramite l&#39;API](./tutorials/create-a-segment.md).
