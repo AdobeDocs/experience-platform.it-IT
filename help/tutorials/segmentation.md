@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Esercitazioni sulla segmentazione
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 636fae71f9c826ce9715bd96a974e5f6afbffb42
+source-git-commit: b0ef50e25c27aba121bb01c602867953eb2a5f7e
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '556'
 ht-degree: 0%
 
 ---
@@ -36,10 +36,7 @@ Per esportare i segmenti contenenti dati di profilo è necessario innanzitutto [
 
 I segmenti abilitati per l’uso in Profilo cliente in tempo reale contengono un ID criterio di unione all’interno della definizione del segmento. Questo criterio di unione contiene informazioni sui set di dati da includere nel segmento, che a loro volta contengono eventuali etichette di utilizzo dei dati applicabili. Per passaggi specifici relativi all&#39;applicazione della conformità dell&#39;utilizzo dei dati per un segmento di pubblico, segui l&#39;esercitazione sull&#39;applicazione della conformità dell&#39;uso [dei dati per i segmenti](../segmentation/tutorials/governance.md).
 
-## (Beta) Segmentazione in streaming
-
->[!NOTE]
->La segmentazione dello streaming è in versione beta e sarà disponibile su richiesta. Le funzioni e la documentazione sono soggette a modifiche.
+## Segmentazione in streaming
 
 La segmentazione in streaming consente di valutare istantaneamente un cliente non appena un evento entra in un particolare gruppo di segmenti. Grazie a questa funzionalità, ora è possibile valutare la maggior parte delle regole del segmento in quanto i dati vengono passati  Adobe Experience Platform, il che significa che l&#39;appartenenza al segmento verrà mantenuta aggiornata senza eseguire processi di segmentazione pianificati. Per saperne di più, visita la panoramica sulla segmentazione [in streaming](../segmentation/api/streaming-segmentation.md).
 
