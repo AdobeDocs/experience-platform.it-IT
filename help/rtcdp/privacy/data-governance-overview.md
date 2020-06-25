@@ -4,10 +4,10 @@ seo-title: Governance dei dati in tempo reale Platform
 description: 'Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all''uso dei dati. '
 seo-description: 'Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all''uso dei dati. '
 translation-type: tm+mt
-source-git-commit: c81723d00f6b0a9338c8dd3be8c79385677b4e93
+source-git-commit: 490154c23b0ae764ac30b7e93d42b33d09b8a5d6
 workflow-type: tm+mt
-source-wordcount: '1083'
-ht-degree: 1%
+source-wordcount: '1054'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +22,7 @@ La CDP in tempo reale è basata su  Adobe Experience Platform, e pertanto la mag
 
 * [Applicazione di etichette di utilizzo ai dati](#labels)
 * [Gestire i criteri di utilizzo dei dati](#policies)
-* [Applica conformità all&#39;utilizzo dei dati](#enforcement)
+* [Applica conformità all&#39;utilizzo dei dati](#enforce-data-usage-compliance)
 
 ## Applicazione di etichette di utilizzo ai dati {#labels}
 
@@ -47,10 +47,7 @@ Affinché le etichette di utilizzo dei dati supportino efficacemente la conformi
 
  Adobe Experience Platform fornisce diversi criteri **** fondamentali per i casi di utilizzo comuni dell&#39;esperienza cliente. Questi criteri possono essere visualizzati nell&#39;interfaccia utente accedendo all&#39;area di lavoro e selezionando la **[!UICONTROL Policies]** **[!UICONTROL Browse]** scheda. Per informazioni dettagliate sull&#39;utilizzo dei criteri nell&#39;interfaccia utente, consultate la guida [utente ai](../../data-governance/policies/user-guide.md) criteri nella documentazione Experience Platform , inclusa la procedura per l&#39;elaborazione di criteri personalizzati.
 
-## (Beta) Applica la conformità all&#39;utilizzo dei dati {#enforce-data-usage-compliance}
-
->[!IMPORTANT]
->Al momento questa funzione è in versione beta e non è disponibile per tutti gli utenti. Può essere attivato su richiesta. La documentazione e la funzionalità sono soggette a modifiche.
+## Applica conformità all&#39;utilizzo dei dati {#enforce-data-usage-compliance}
 
 Una volta etichettati i dati e definiti i criteri di utilizzo, potete applicare la conformità dell&#39;utilizzo dei dati ai criteri. Quando si attivano i segmenti di pubblico verso destinazioni in CDP in tempo reale, la governance dei dati applica automaticamente i criteri di utilizzo in caso di violazioni.
 
