@@ -1,10 +1,10 @@
 ---
 title: Configurazione dell’SDK
-seo-title: Configurazione di Adobe Experience Platform Web SDK
-description: Scopri come configurare l’SDK Web per la piattaforma Experience
-seo-description: Scopri come configurare l’SDK Web per la piattaforma Experience
+seo-title: 'Configurazione dell’SDK Web per il Adobe Experience Platform '
+description: Scoprite come configurare  Experience Platform Web SDK
+seo-description: Scoprite come configurare  Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
 source-wordcount: '739'
 ht-degree: 7%
@@ -16,8 +16,9 @@ ht-degree: 7%
 
 La configurazione per l’SDK viene effettuata con il `configure` comando.
 
->[!IImportante]
->`configure` deve essere _sempre_ il primo comando chiamato.
+>[!IMPORTANT]
+>
+>`configure` deve essere *sempre* il primo comando chiamato.
 
 ```javascript
 alloy("configure", {
@@ -54,7 +55,7 @@ Indica le categorie di contesto da raccogliere automaticamente come descritto in
 
 Indica se il debug deve essere abilitato. Impostando questa configurazione si `true` abilitano le seguenti funzionalità:
 
-| **Funzione** |  |  |
+| **Funzione** | **Funzione** |
 | ---------------------- | ------------------ |
 | Convalida sincrona | Convalida i dati raccolti rispetto allo schema e restituisce un errore nella risposta sotto la seguente etichetta: `collect:error OR success` |
 | Registrazione della console | Abilita la visualizzazione dei messaggi di debug nella console JavaScript del browser |
@@ -65,7 +66,7 @@ Indica se il debug deve essere abilitato. Impostando questa configurazione si `t
 | -------- | ------------ | ------------------ |
 | Stringa | No | `beta.adobedc.net` |
 
-Dominio utilizzato per interagire con Adobe Services. Questo viene utilizzato solo se disponete di un dominio di prime parti (CNAME) che esegue il proxy delle richieste all&#39;infrastruttura periferica di Adobe.
+Dominio utilizzato per interagire con i servizi Adobe. Questo viene utilizzato solo se disponete di un dominio di prime parti (CNAME) che esegue il proxy delle richieste all&#39;infrastruttura periferica di Adobe.
 
 ### `orgId`
 
@@ -73,7 +74,7 @@ Dominio utilizzato per interagire con Adobe Services. Questo viene utilizzato so
 | -------- | ------------ | ----------------- |
 | Stringa | Sì | none |
 
-L’ID organizzazione Experience Cloud assegnato.  Quando si configurano più istanze all&#39;interno di una pagina, è necessario configurare un&#39;altra istanza `orgId` per ciascuna.
+L&#39;ID organizzazione Experience Cloud assegnato .  Quando si configurano più istanze all&#39;interno di una pagina, è necessario configurare un&#39;altra istanza `orgId` per ciascuna.
 
 ## Raccolta dati
 
@@ -85,7 +86,7 @@ L’ID organizzazione Experience Cloud assegnato.  Quando si configurano più is
 
 Indica se i dati associati ai clic del collegamento devono essere raccolti automaticamente. Per i clic considerati come clic del collegamento, vengono raccolti i seguenti dati di interazione [](https://github.com/adobe/xdm/blob/master/docs/reference/context/webinteraction.schema.md) Web:
 
-| **Proprietà** |  |
+| **Proprietà** | **Descrizione** |
 | ------------ | ----------------------------------- |
 | Nome collegamento | Nome determinato dal contesto del collegamento |
 | URL collegamento | URL normalizzato |
@@ -97,7 +98,7 @@ Indica se i dati associati ai clic del collegamento devono essere raccolti autom
 | -------- | ------------ | ----------------- |
 | Funzione | No | () => non definito |
 
-Impostate questa opzione per configurare un callback che viene chiamato per ogni evento appena prima che venga inviato.  Un oggetto con il campo `xdm` viene inviato al callback.  Modificare l&#39;oggetto xdm per modificare l&#39;elemento inviato.  All&#39;interno del callback, l&#39; `xdm` oggetto avrà già i dati passati nel comando dell&#39;evento e le informazioni raccolte automaticamente.  Per ulteriori informazioni sui tempi di questa callback e un esempio, vedere [Modifica degli eventi a livello globale](tracking-events.md#modifying-events-globally).
+Impostate questa opzione per configurare un callback che viene chiamato per ogni evento appena prima che venga inviato.  Un oggetto con il campo `xdm` viene inviato al callback.  Modificare l&#39; `xdm` oggetto per modificare l&#39;oggetto inviato.  All&#39;interno del callback, l&#39; `xdm` oggetto avrà già i dati passati nel comando dell&#39;evento e le informazioni raccolte automaticamente.  Per ulteriori informazioni sui tempi di questa callback e un esempio, vedere [Modifica degli eventi a livello globale](tracking-events.md#modifying-events-globally).
 
 ## Opzioni sulla privacy
 
@@ -133,7 +134,7 @@ Ad esempio, se nella pagina Web era presente un elemento con un ID del `containe
 | -------- | ------------ | ----------------- |
 | Booleano | No | `true` |
 
-Abilita le destinazioni dei cookie, che consentono di impostare i cookie in base alla qualifica del segmento.
+Abilita  Audience Manager [!UICONTROL cookie destinations], che consente di impostare i cookie in base alla qualifica del segmento.
 
 ### `urlDestinationsEnabled`
 
@@ -141,7 +142,7 @@ Abilita le destinazioni dei cookie, che consentono di impostare i cookie in base
 | -------- | ------------ | ----------------- |
 | Booleano | No | `true` |
 
-Abilita le destinazioni URL, che consentono di attivare gli URL in base alla qualifica del segmento.
+Abilita  Audience Manager [!UICONTROL URL destinations], che consente di attivare gli URL in base alla qualifica del segmento.
 
 ## Opzioni identità
 
@@ -167,4 +168,4 @@ Abilita la funzione di sincronizzazione ID, che consente di attivare gli URL per
 | -------- | ------------ | ----------------- |
 | Booleano | No | true |
 
-Abilita l&#39;impostazione dei cookie di terze parti di Adobe. L’SDK può mantenere l’ID visitatore in un contesto di terze parti per consentire l’utilizzo dello stesso ID visitatore in più siti. Questa funzione è utile se si dispone di più siti o si desidera condividere i dati con i partner; tuttavia, a volte questo non è desiderato per motivi di privacy.
+Abilita l&#39;impostazione dei cookie di terze parti di Adobe. L’SDK può mantenere l’ID visitatore in un contesto di terze parti per consentire l’utilizzo dello stesso ID visitatore nei diversi siti. Questa funzione è utile se si dispone di più siti o si desidera condividere i dati con i partner; tuttavia, a volte questo non è desiderato per motivi di privacy.
