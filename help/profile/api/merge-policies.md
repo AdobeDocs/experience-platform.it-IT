@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guida per lo sviluppatore di API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
 workflow-type: tm+mt
-source-wordcount: '2057'
+source-wordcount: '2052'
 ht-degree: 1%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 1%
 
 # Unisci criteri
 
-Adobe Experience Platform consente di unire dati provenienti da più origini e combinarli per visualizzare una visione completa di ogni singolo cliente. Quando si uniscono questi dati, i criteri di unione sono le regole utilizzate dalla Piattaforma per determinare in che modo i dati verranno classificati come priorità e quali dati verranno combinati per creare tale visualizzazione unificata. Utilizzando le API RESTful o l&#39;interfaccia utente, puoi creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la tua organizzazione. Questa guida illustra i passaggi per l&#39;utilizzo dei criteri di unione tramite l&#39;API. Per utilizzare i criteri di unione utilizzando l&#39;interfaccia utente, fare riferimento alla guida [utente dei criteri di](../ui/merge-policies.md)unione.
+ Adobe Experience Platform consente di unire dati provenienti da più origini e combinarli per visualizzare una visione completa di ogni singolo cliente. Quando si uniscono questi dati, i criteri di unione sono le regole utilizzate da Platform per determinare in che modo i dati verranno classificati come priorità e quali dati verranno combinati per creare tale visualizzazione unificata. Utilizzando le API RESTful o l&#39;interfaccia utente, puoi creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la tua organizzazione. Questa guida illustra i passaggi per l&#39;utilizzo dei criteri di unione tramite l&#39;API. Per utilizzare i criteri di unione utilizzando l&#39;interfaccia utente, fare riferimento alla guida [utente dei criteri di](../ui/merge-policies.md)unione.
 
 ## Introduzione
 
-Gli endpoint API utilizzati in questa guida fanno parte dell&#39;API Profilo cliente in tempo reale. Prima di continuare, consulta la guida [per lo sviluppatore di API profilo cliente in tempo](getting-started.md)reale. In particolare, la sezione [](getting-started.md#getting-started) introduttiva della guida per gli sviluppatori di profili include collegamenti a argomenti correlati, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni richieste necessarie per eseguire correttamente chiamate a qualsiasi API della piattaforma Experience.
+L&#39;endpoint API utilizzato in questa guida fa parte dell&#39;API [Profilo cliente in tempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)reale. Prima di continuare, consultate la guida [](getting-started.md) introduttiva per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente chiamate a qualsiasi API Experience Platform .
 
 ## Componenti dei criteri di unione {#components-of-merge-policies}
 
-I criteri di unione sono privati per l&#39;organizzazione IMS e consentono di creare criteri diversi per unire gli schemi nel modo desiderato. Qualsiasi API che accede ai dati del profilo richiede un criterio di unione, anche se un valore predefinito verrà utilizzato se non viene fornito in modo esplicito. La piattaforma fornisce un criterio di unione predefinito, oppure è possibile creare un criterio di unione per uno schema specifico e contrassegnarlo come predefinito per l&#39;organizzazione. Ogni organizzazione può avere potenzialmente più criteri di unione per schema, tuttavia ogni schema può avere un solo criterio di unione predefinito. I criteri di unione impostati come predefiniti verranno utilizzati nei casi in cui il nome dello schema è fornito e un criterio di unione è obbligatorio ma non fornito. Quando si imposta un criterio di unione come predefinito, tutti i criteri di unione esistenti precedentemente impostati come predefiniti verranno automaticamente aggiornati in modo da non essere più utilizzati come predefiniti.
+I criteri di unione sono privati per l&#39;organizzazione IMS e consentono di creare criteri diversi per unire gli schemi nel modo desiderato. Qualsiasi API che accede ai dati del profilo richiede un criterio di unione, anche se un valore predefinito verrà utilizzato se non viene fornito in modo esplicito. Platform fornisce un criterio di unione predefinito, oppure è possibile creare un criterio di unione per uno schema specifico e contrassegnarlo come predefinito per l&#39;organizzazione. Ogni organizzazione può avere potenzialmente più criteri di unione per schema, tuttavia ogni schema può avere un solo criterio di unione predefinito. I criteri di unione impostati come predefiniti verranno utilizzati nei casi in cui il nome dello schema è fornito e un criterio di unione è obbligatorio ma non fornito. Quando si imposta un criterio di unione come predefinito, tutti i criteri di unione esistenti precedentemente impostati come predefiniti verranno automaticamente aggiornati in modo da non essere più utilizzati come predefiniti.
 
 ### Oggetto criteri di unione completo
 
@@ -59,7 +59,7 @@ L&#39;oggetto criteri di unione completo rappresenta un insieme di preferenze ch
 | `attributeMerge` | [Oggetto unione](#attribute-merge) attributi che indica il modo in cui il criterio di unione darà priorità ai valori degli attributi di profilo in caso di conflitti di dati. |
 | `schema` | L&#39;oggetto [schema](#schema) su cui è possibile utilizzare il criterio di unione. |
 | `default` | Valore booleano che indica se il criterio di unione è il valore predefinito per lo schema specificato. |
-| `version` | Versione gestita dalla piattaforma del criterio di unione. Questo valore di sola lettura viene incrementato ogni volta che viene aggiornato un criterio di unione. |
+| `version` | Versione dei criteri di unione gestita da Platform. Questo valore di sola lettura viene incrementato ogni volta che viene aggiornato un criterio di unione. |
 | `updateEpoch` | Data dell&#39;ultimo aggiornamento del criterio di unione. |
 
 **Esempio di criteri di unione**
@@ -86,7 +86,7 @@ L&#39;oggetto criteri di unione completo rappresenta un insieme di preferenze ch
 
 ### Grafico identità {#identity-graph}
 
-[Adobe Experience Platform Identity Service](../../identity-service/home.md) gestisce i grafici di identità utilizzati a livello globale e per ciascuna organizzazione tramite Experience Platform. L&#39; `identityGraph` attributo del criterio di unione definisce come determinare le identità correlate per un utente.
+[Adobe Experience Platform Identity Service](../../identity-service/home.md) gestisce i grafici di identità utilizzati a livello globale e per ciascuna organizzazione  Experience Platform. L&#39; `identityGraph` attributo del criterio di unione definisce come determinare le identità correlate per un utente.
 
 **oggetto identityGraph**
 
@@ -693,7 +693,7 @@ Una risposta corretta restituisce i dettagli del criterio di unione aggiornato.
 
 ## Eliminare un criterio di unione
 
-È possibile eliminare un criterio di unione eseguendo una richiesta DELETE all&#39; `/config/mergePolicies` endpoint e includendo l&#39;ID del criterio di unione che si desidera eliminare nel percorso della richiesta.
+È possibile eliminare un criterio di unione eseguendo una richiesta di DELETE all&#39; `/config/mergePolicies` endpoint e includendo l&#39;ID del criterio di unione che si desidera eliminare nel percorso della richiesta.
 
 **Formato API**
 
@@ -724,7 +724,7 @@ Una richiesta di eliminazione riuscita restituisce lo stato HTTP 200 (OK) e un c
 
 ## Passaggi successivi
 
-Ora che sai come creare e configurare criteri di unione per la tua organizzazione IMS, puoi utilizzarli per creare segmenti di pubblico dai dati del profilo cliente in tempo reale. Per iniziare a definire e utilizzare i segmenti, consulta la documentazione [di](../../segmentation/home.md) Adobe Experience Platform Segmentation Service.
+Ora che sai come creare e configurare criteri di unione per la tua organizzazione IMS, puoi utilizzarli per creare segmenti di pubblico dai dati del profilo cliente in tempo reale. Per iniziare a definire e utilizzare i segmenti, consulta la documentazione [del servizio di segmentazione del Adobe Experience Platform](../../segmentation/home.md) .
 
 
 
