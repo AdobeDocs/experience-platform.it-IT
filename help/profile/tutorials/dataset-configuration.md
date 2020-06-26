@@ -4,7 +4,10 @@ solution: Adobe Experience Platform
 title: Configurare un set di dati per il servizio Profilo e identità utilizzando le API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
+source-git-commit: 93aae0e394e1ea9b6089d01c585a94871863818e
+workflow-type: tm+mt
+source-wordcount: '1121'
+ht-degree: 1%
 
 ---
 
@@ -22,22 +25,22 @@ Questa esercitazione descrive il processo di attivazione di un dataset da utiliz
 
 ## Introduzione
 
-Questa esercitazione richiede una buona conoscenza dei vari servizi Adobe Experience Platform coinvolti nella gestione dei set di dati abilitati per i profili. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi della piattaforma:
+Questa esercitazione richiede una conoscenza approfondita dei diversi servizi di Adobe Experience Platform  coinvolti nella gestione dei set di dati abilitati per il profilo. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi Platform:
 
 - [Profilo](../home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-- [Servizio](../../identity-service/home.md)identità: Abilita il profilo cliente in tempo reale collegando identità da origini dati diverse che vengono caricate nella piattaforma.
+- [Servizio](../../identity-service/home.md)identità: Abilita il profilo cliente in tempo reale collegando identità da origini dati diverse che vengono caricate in Platform.
 - [Servizio](../../catalog/home.md)catalogo: API RESTful che consente di creare set di dati e configurarli per il profilo cliente e il servizio identità in tempo reale.
-- [Experience Data Model (XDM)](../../xdm/home.md): Il framework standardizzato tramite il quale la piattaforma organizza i dati sull&#39;esperienza cliente.
+- [Experience Data Model (XDM)](../../xdm/home.md): Framework standard con cui Platform organizza i dati sull&#39;esperienza dei clienti.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per effettuare correttamente chiamate alle API della piattaforma.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per effettuare correttamente chiamate alle API Platform.
 
 ### Lettura di chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi della piattaforma Experience.
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi di  Experience Platform.
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle API della piattaforma, dovete prima completare l&#39;esercitazione [di](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come illustrato di seguito:
+Per effettuare chiamate alle API Platform, è prima necessario completare l&#39;esercitazione [di](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API Experience Platform, come illustrato di seguito:
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -47,7 +50,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 - Content-Type: application/json
 
-Tutte le risorse in Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API della piattaforma richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione. Per ulteriori informazioni sulle sandbox in Piattaforma, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+Tutte le risorse in  Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API Platform richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione. Per ulteriori informazioni sulle sandbox in Platform, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -245,7 +248,7 @@ Sia il profilo cliente in tempo reale che il servizio identità utilizzano i dat
 
 ## Conferma acquisizione dati per profilo cliente in tempo reale {#confirm-data-ingest-by-real-time-customer-profile}
 
-Quando si caricano i dati in un nuovo dataset per la prima volta, o come parte di un processo che coinvolge una nuova ETL o una nuova origine dati, si consiglia di controllare attentamente i dati per assicurarsi che siano stati caricati come previsto. Utilizzando l&#39;API Real-time Customer Profile Access, potete recuperare i dati batch mentre vengono caricati in un dataset. Se non riesci a recuperare nessuna delle entità previste, il set di dati potrebbe non essere abilitato per il profilo cliente in tempo reale. Dopo aver confermato che il set di dati è stato abilitato, accertati che il formato e gli identificatori dei dati di origine supportino le tue aspettative. Per istruzioni dettagliate su come utilizzare l&#39;API del profilo cliente in tempo reale per accedere ai dati del profilo, segui la [guida secondaria sulle entità, nota anche come &quot;API di accesso profilo&quot;](../api/entities.md).
+Quando si caricano i dati in un nuovo dataset per la prima volta, o come parte di un processo che coinvolge una nuova ETL o una nuova origine dati, si consiglia di controllare attentamente i dati per assicurarsi che siano stati caricati come previsto. Utilizzando l&#39;API Real-time Customer Profile Access, potete recuperare i dati batch mentre vengono caricati in un dataset. Se non riesci a recuperare nessuna delle entità previste, il set di dati potrebbe non essere abilitato per il profilo cliente in tempo reale. Dopo aver confermato che il set di dati è stato abilitato, accertati che il formato e gli identificatori dei dati di origine supportino le tue aspettative. Per istruzioni dettagliate su come utilizzare l&#39;API del profilo cliente in tempo reale per accedere ai dati del profilo, segui la guida [all&#39;endpoint](../api/entities.md)entità, nota anche come &quot;API di accesso profilo&quot;.
 
 ## Conferma dell&#39;acquisizione dei dati da parte del servizio identità {#confirm-data-ingest-by-identity-service}
 
