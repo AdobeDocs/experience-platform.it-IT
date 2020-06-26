@@ -4,21 +4,21 @@ solution: Adobe Experience Platform
 title: Guida per lo sviluppatore di API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1919'
 ht-degree: 2%
 
 ---
 
 
-# Destinazioni e proiezioni Edge
+# Configurazioni di proiezione Edge e endpoint di destinazioni
 
-Al fine di promuovere esperienze coordinate, coerenti e personalizzate per i clienti attraverso più canali in tempo reale, i dati giusti devono essere prontamente disponibili e costantemente aggiornati man mano che si verificano le modifiche. Adobe Experience Platform consente l&#39;accesso in tempo reale ai dati tramite l&#39;utilizzo di ciò che sono noti come edge. Un server periferico è un server collocato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni. Ad esempio, le applicazioni Adobe come Adobe Target e Adobe Campaign utilizzano i bordi per fornire esperienze cliente personalizzate in tempo reale. I dati vengono indirizzati a un bordo da una proiezione, con una destinazione di proiezione che definisce il bordo a cui verranno inviati i dati, e una configurazione di proiezione che definisce le informazioni specifiche che verranno rese disponibili sul bordo. Questa guida fornisce istruzioni dettagliate per l’utilizzo dell’API Profilo cliente in tempo reale per lavorare con proiezioni Edge, incluse destinazioni e configurazioni.
+Al fine di promuovere esperienze coordinate, coerenti e personalizzate per i clienti attraverso più canali in tempo reale, i dati giusti devono essere prontamente disponibili e costantemente aggiornati man mano che si verificano le modifiche.  Adobe Experience Platform consente l&#39;accesso in tempo reale ai dati attraverso l&#39;uso di ciò che sono noti come edge. Un server periferico è un server collocato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni. Ad esempio, applicazioni Adobe come  Adobe Target e  Adobe Campaign utilizzano i bordi per fornire esperienze personalizzate ai clienti in tempo reale. I dati vengono indirizzati a un bordo da una proiezione, con una destinazione di proiezione che definisce il bordo a cui verranno inviati i dati, e una configurazione di proiezione che definisce le informazioni specifiche che verranno rese disponibili sul bordo. Questa guida fornisce istruzioni dettagliate per l’utilizzo dell’API Profilo cliente in tempo reale per lavorare con proiezioni Edge, incluse destinazioni e configurazioni.
 
 ## Introduzione
 
-Gli endpoint API utilizzati in questa guida fanno parte dell&#39;API Profilo cliente in tempo reale. Prima di continuare, consulta la guida [per lo sviluppatore del profilo cliente in tempo](getting-started.md)reale. In particolare, la sezione [](getting-started.md#getting-started) introduttiva della guida per gli sviluppatori di profili include collegamenti a argomenti correlati, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni richieste necessarie per eseguire correttamente chiamate a qualsiasi API della piattaforma Experience.
+L&#39;endpoint API utilizzato in questa guida fa parte dell&#39;API [Profilo cliente in tempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)reale. Prima di continuare, consultate la guida [](getting-started.md) introduttiva per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente chiamate a qualsiasi API Experience Platform .
 
 >[!NOTE]
 >Le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39; `Content-Type` intestazione. Nel documento `Content-Type` vengono utilizzati più di uno. Prestate particolare attenzione alle intestazioni delle chiamate di esempio per verificare di utilizzare la versione corretta `Content-Type` per ogni richiesta.
@@ -292,7 +292,7 @@ La risposta include i dettagli aggiornati per la destinazione, incluso il relati
 
 ### Eliminare una destinazione
 
-Se l&#39;organizzazione non richiede più una destinazione di proiezione, può essere eliminata effettuando una richiesta DELETE all&#39; `/config/destinations` endpoint e includendo l&#39;ID della destinazione che si desidera eliminare nel percorso della richiesta.
+Se l&#39;organizzazione non richiede più una destinazione di proiezione, può essere eliminata effettuando una richiesta di DELETE all&#39; `/config/destinations` endpoint e includendo l&#39;ID della destinazione che si desidera eliminare nel percorso della richiesta.
 
 >[!CAUTION]
 >La risposta API alla richiesta di eliminazione è immediata, ma le modifiche effettive ai dati sui bordi avvengono in modo asincrono. In altre parole, i dati del profilo verranno rimossi da tutti i bordi ( `dataCenters` specificati nella destinazione di proiezione), ma il processo richiederà del tempo per essere completato.
@@ -349,7 +349,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 
 **Richiesta**
 
-Nella richiesta seguente sono elencate tutte le configurazioni di proiezione associate alla classe dello schema Experience Data Model, XDM Individuale Profile. Per ulteriori informazioni su XDM e sul suo ruolo all&#39;interno della piattaforma, si prega di iniziare leggendo la panoramica [del sistema](../../xdm/home.md)XDM.
+Nella richiesta seguente sono elencate tutte le configurazioni di proiezione associate alla classe dello schema Experience Data Model, XDM Individuale Profile. Per ulteriori informazioni su XDM e sul suo ruolo all&#39;interno di Platform, consultare la panoramica [del sistema](../../xdm/home.md)XDM.
 
 ```shell
 curl -X GET \
@@ -639,4 +639,4 @@ Restituisce solo i valori dei campi `type` e `city` per ogni elemento dell&#39; 
 
 ## Passaggi successivi
 
-Questa guida illustra i passaggi necessari per configurare le proiezioni e le destinazioni dei bordi, incluso come formattare correttamente il `selector` parametro. Ora puoi creare nuove destinazioni e proiezioni Edge specifiche per le esigenze della tua organizzazione. Per scoprire ulteriori azioni disponibili tramite l&#39;API profilo, consulta la guida [per gli sviluppatori dell&#39;API del profilo cliente in tempo](getting-started.md)reale.
+Questa guida illustra i passaggi necessari per configurare le proiezioni e le destinazioni, incluso come formattare correttamente il `selector` parametro. Ora puoi creare nuove destinazioni di proiezione e configurazioni specifiche per le esigenze della tua organizzazione.
