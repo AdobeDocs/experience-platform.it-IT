@@ -4,12 +4,15 @@ solution: Adobe Experience Platform
 title: Guida per lo sviluppatore di API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+workflow-type: tm+mt
+source-wordcount: '2431'
+ht-degree: 1%
 
 ---
 
 
-# (Alfa) Attributi calcolati
+# (Alfa) Endpoint attributi calcolati
 
 >[!IMPORTANT]
 >La funzionalità degli attributi calcolati descritta in questo documento è attualmente in alfa e non è disponibile per tutti gli utenti. La documentazione e la funzionalità sono soggette a modifiche.
@@ -18,17 +21,15 @@ Gli attributi calcolati consentono di calcolare automaticamente il valore dei ca
 
 Ogni attributo calcolato contiene un&#39;espressione, o &quot;regola&quot;, che valuta i dati in arrivo e memorizza il valore risultante in un attributo di profilo o in un evento. Questi calcoli consentono di rispondere facilmente a domande relative a cose come il valore di acquisto del ciclo di vita, il tempo tra acquisti o il numero di aperture di applicazioni, senza che sia necessario eseguire manualmente calcoli complessi ogni volta che le informazioni sono necessarie.
 
-Questa guida aiuterà a comprendere meglio gli attributi calcolati in Adobe Experience Platform e include chiamate API di esempio per eseguire operazioni CRUD di base utilizzando l&#39; `/config/computedAttributes` endpoint.
+Questa guida aiuterà a comprendere meglio gli attributi calcolati all&#39;interno  Adobe Experience Platform e include chiamate API di esempio per eseguire operazioni CRUD di base utilizzando l&#39; `/config/computedAttributes` endpoint.
 
 ## Introduzione
 
-Gli endpoint API utilizzati in questa guida fanno parte dell&#39;API Profilo cliente in tempo reale. Prima di continuare, consulta la guida [per lo sviluppatore del profilo cliente in tempo](getting-started.md)reale.
-
-In particolare, la sezione [](getting-started.md) introduttiva della guida per gli sviluppatori di profili include collegamenti a argomenti correlati, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni richieste necessarie per eseguire correttamente chiamate a qualsiasi API della piattaforma Experience.
+L&#39;endpoint API utilizzato in questa guida fa parte dell&#39;API [Profilo cliente in tempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)reale. Prima di continuare, consultate la guida [](getting-started.md) introduttiva per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente chiamate a qualsiasi API Experience Platform .
 
 ## Informazioni sugli attributi calcolati
 
-Adobe Experience Platform consente di importare e unire facilmente dati da più origini per generare profili cliente in tempo reale. Ogni profilo contiene informazioni importanti relative a un individuo, come le informazioni di contatto, le preferenze e la cronologia degli acquisti, fornendo una visualizzazione a 360 gradi del cliente.
+ Adobe Experience Platform consente di importare e unire facilmente dati da più origini per generare profili cliente in tempo reale. Ogni profilo contiene informazioni importanti relative a un individuo, come le informazioni di contatto, le preferenze e la cronologia degli acquisti, fornendo una visualizzazione a 360 gradi del cliente.
 
 Alcune delle informazioni raccolte nel profilo sono facilmente comprensibili quando si leggono direttamente i campi di dati (ad esempio, &quot;nome&quot;), mentre altri dati richiedono l&#39;esecuzione di più calcoli o l&#39;utilizzo di altri campi e valori per generare le informazioni (ad esempio, &quot;totale dell&#39;acquisto nel corso del ciclo di vita&quot;). Per semplificare la comprensione di questi dati, Platform consente di creare attributi **** calcolati che eseguono automaticamente tali riferimenti e calcoli, restituendo il valore nel campo appropriato.
 
@@ -55,7 +56,7 @@ Il flusso di lavoro di questa esercitazione utilizza uno schema abilitato per il
 
 ### Visualizzare uno schema
 
-I passaggi successivi utilizzano l’interfaccia utente di Adobe Experience Platform per individuare uno schema, aggiungere un mixin e definire un campo. Se si preferisce utilizzare l&#39;API del Registro di sistema dello schema, fare riferimento alla guida [per gli sviluppatori del Registro di](../../xdm/api/getting-started.md) schema per i passaggi relativi alla creazione di un mixin, all&#39;aggiunta di un mixin a uno schema e all&#39;attivazione di uno schema da utilizzare con il profilo cliente in tempo reale.
+I passaggi successivi utilizzano l&#39;interfaccia utente del Adobe Experience Platform  per individuare uno schema, aggiungere un mixin e definire un campo. Se si preferisce utilizzare l&#39;API del Registro di sistema dello schema, fare riferimento alla guida [per gli sviluppatori del Registro di](../../xdm/api/getting-started.md) schema per i passaggi relativi alla creazione di un mixin, all&#39;aggiunta di un mixin a uno schema e all&#39;attivazione di uno schema da utilizzare con il profilo cliente in tempo reale.
 
 Nell&#39;interfaccia utente, fare clic su **Schemi** nella barra a sinistra e utilizzare la barra di ricerca nella scheda *Sfoglia* per individuare rapidamente lo schema da aggiornare.
 
@@ -151,7 +152,7 @@ curl -X POST \
 | `{TENANT_ID}` | Se non si ha familiarità con l&#39;ID tenant, fare riferimento ai passaggi per trovare l&#39;ID tenant nella guida [per gli sviluppatori del Registro di](../../xdm/api/getting-started.md#know-your-tenant_id)schema. |
 | `description` | Una descrizione dell&#39;attributo calcolato. Questa funzione è particolarmente utile se sono stati definiti più attributi calcolati in quanto aiuterà gli altri utenti all&#39;interno dell&#39;organizzazione IMS a determinare l&#39;attributo calcolato corretto da utilizzare. |
 | `expression.value` | Un&#39;espressione PQL (Profile Query Language) valida. Per ulteriori informazioni su PQL e collegamenti alle query supportate, consultate la panoramica [](../../segmentation/pql/overview.md)PQL. |
-| `schema.name` | La classe su cui si basa lo schema contenente il campo dell&#39;attributo calcolato. Esempio: per `_xdm.context.experienceevent` uno schema basato sulla classe ExperienceEvent XDM. |
+| `schema.name` | La classe su cui si basa lo schema contenente il campo dell&#39;attributo calcolato. Esempio: `_xdm.context.experienceevent` per uno schema basato sulla classe ExperienceEvent XDM. |
 
 **Risposta**
 
@@ -479,9 +480,9 @@ Un aggiornamento riuscito restituisce lo stato HTTP 204 (nessun contenuto) e un 
 
 ## Eliminare un attributo calcolato
 
-È inoltre possibile eliminare un attributo calcolato utilizzando l&#39;API. Questa operazione viene eseguita eseguendo una richiesta DELETE all&#39; `/config/computedAttributes` endpoint e includendo l&#39;ID dell&#39;attributo calcolato che si desidera eliminare nel percorso della richiesta.
+È inoltre possibile eliminare un attributo calcolato utilizzando l&#39;API. Questa operazione viene eseguita eseguendo una richiesta di DELETE all&#39; `/config/computedAttributes` endpoint e includendo l&#39;ID dell&#39;attributo calcolato che si desidera eliminare nel percorso della richiesta.
 
->[!Note]
+>[!Nota]
 >Prestare attenzione quando si elimina un attributo calcolato perché potrebbe essere in uso in più schemi e l&#39;operazione DELETE non può essere annullata.
 
 **Formato API**
