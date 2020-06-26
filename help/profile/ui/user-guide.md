@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guida utente del profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: 62ed8892b4f359da3f0368013b5bfd0b9380cc22
+source-git-commit: 59dff7687f8a0c5b5084eb1ce7dd222cc18d8dbf
 workflow-type: tm+mt
 source-wordcount: '1208'
 ht-degree: 0%
@@ -60,7 +60,7 @@ Quando l&#39;inserimento di record nell&#39;archivio profili aumenta o diminuisc
 
 I *profili per metrica namespace* mostrano il conteggio totale e la suddivisione degli spazi di nomi in tutti i profili uniti nel tuo archivio profili. Il numero totale di profili per namespace (in altre parole, aggiungendo insieme i valori mostrati per ogni namespace) sarà sempre superiore alla metrica del conteggio dei profili, perché a un profilo potrebbero essere associati più spazi dei nomi. Ad esempio, se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente saranno associati più spazi dei nomi.
 
-Simile alla metrica del conteggio [dei](#profile-count) profili, quando l&#39;inserimento dei profili nell&#39;archivio profili aumenta o diminuisce il conteggio di oltre il 5%, viene attivato un processo per aggiornare le metriche dello spazio nomi. Per i flussi di lavoro dei dati in streaming, viene effettuato un controllo ogni ora per determinare se è stata raggiunta la soglia di incremento o riduzione del 5%. In caso affermativo, viene attivato automaticamente un processo per aggiornare il conteggio dei profili. Per l’assimilazione batch, entro 15 minuti dal corretto inserimento di un batch nell’archivio profili, se viene raggiunta la soglia di incremento o riduzione del 5%, viene eseguito un processo per aggiornare le metriche.
+Simile alla metrica del conteggio [del](#profile-count) profilo, quando l&#39;inserimento di record nell&#39;archivio profili aumenta o diminuisce il conteggio di oltre il 5%, viene attivato un processo per aggiornare le metriche dello spazio nomi. Per i flussi di lavoro dei dati in streaming, viene effettuato un controllo ogni ora per determinare se è stata raggiunta la soglia di incremento o riduzione del 5%. In caso affermativo, viene attivato automaticamente un processo per aggiornare il conteggio dei profili. Per l’assimilazione batch, entro 15 minuti dal corretto inserimento di un batch nell’archivio profili, se viene raggiunta la soglia di incremento o riduzione del 5%, viene eseguito un processo per aggiornare le metriche.
 
 ### Unisci criterio
 
