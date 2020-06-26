@@ -4,16 +4,19 @@ solution: Experience Platform
 title: Eliminare un oggetto
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
+source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
+workflow-type: tm+mt
+source-wordcount: '178'
+ht-degree: 2%
 
 ---
 
 
 # Eliminare un oggetto
 
-È possibile eliminare un oggetto Catalog inserendo il relativo ID nel percorso di una richiesta DELETE.
+Potete eliminare un oggetto Catalog inserendo il relativo ID nel percorso di una richiesta di DELETE.
 
->[!WARNING] Presta particolare attenzione quando elimini gli oggetti, in quanto questo non può essere annullato e può produrre modifiche rivoluzionarie altrove in Experience Platform.
+>[!WARNING] Prestate particolare attenzione quando eliminate degli oggetti, in quanto questo non può essere annullato e potrebbe causare modifiche di interruzione in altre aree di  Experience Platform.
 
 **Formato API**
 
@@ -21,7 +24,9 @@ source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
 DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 ```
 
->[!IMPORTANT] L&#39; `DELETE /batches/{ID}` endpoint è stato dichiarato obsoleto. Per eliminare un batch, è necessario utilizzare l&#39;API [di](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)inserimento batch.
+>[!IMPORTANT]
+>
+>L&#39; `DELETE /batches/{ID}` endpoint è stato dichiarato obsoleto. Per eliminare un batch, è necessario utilizzare l&#39;API [di](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)inserimento batch.
 
 | Parametro | Descrizione |
 | --- | --- |
