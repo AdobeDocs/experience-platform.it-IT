@@ -4,21 +4,24 @@ solution: Adobe Experience Platform
 title: Guida per lo sviluppatore di API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+workflow-type: tm+mt
+source-wordcount: '1501'
+ht-degree: 2%
 
 ---
 
 
 # Processi del sistema dei profili (richieste di eliminazione)
 
-Adobe Experience Platform consente di acquisire dati da più origini e di creare profili affidabili per i singoli clienti. I dati acquisiti in Piattaforma vengono memorizzati nel Data Lake e nell&#39;archivio dati del profilo cliente in tempo reale. Talvolta potrebbe essere necessario eliminare un set di dati o un batch dall&#39;archivio dei profili per rimuovere i dati non più necessari o che sono stati aggiunti per errore. Ciò richiede l’utilizzo dell’API Profilo cliente in tempo reale per creare un processo del sistema di profili, noto anche come &quot;richiesta di eliminazione&quot;, che può anche essere modificato, monitorato o rimosso, se necessario.
+ Adobe Experience Platform consente di acquisire dati da più origini e di creare profili affidabili per i singoli clienti. I dati acquisiti in Platform sono memorizzati nel Data Lake e nell&#39;archivio dati del profilo cliente in tempo reale. Talvolta potrebbe essere necessario eliminare un set di dati o un batch dall&#39;archivio profili per rimuovere i dati non più necessari o che sono stati aggiunti per errore. Ciò richiede l’utilizzo dell’API Profilo cliente in tempo reale per creare un processo del sistema di profili, noto anche come &quot;richiesta di eliminazione&quot;, che può anche essere modificato, monitorato o rimosso, se necessario.
 
 >[!NOTE]
 >Se state tentando di eliminare insiemi di dati o batch dal Data Lake, consultate la panoramica [del servizio](../../catalog/home.md) catalogo per le istruzioni.
 
 ## Introduzione
 
-Gli endpoint API utilizzati in questa guida fanno parte dell&#39;API Profilo cliente in tempo reale. Prima di continuare, consulta la guida [per lo sviluppatore di API profilo cliente in tempo](getting-started.md)reale. In particolare, la sezione [](getting-started.md#getting-started) introduttiva della guida per gli sviluppatori di profili include collegamenti a argomenti correlati, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni richieste necessarie per eseguire correttamente chiamate a qualsiasi API della piattaforma Experience.
+L&#39;endpoint API utilizzato in questa guida fa parte dell&#39;API [Profilo cliente in tempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)reale. Prima di continuare, consultate la guida [](getting-started.md) introduttiva per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente chiamate a qualsiasi API Experience Platform .
 
 ## Visualizza richieste di eliminazione
 
@@ -100,10 +103,10 @@ L&#39;avvio di una nuova richiesta di eliminazione viene eseguito tramite una ri
 
 ### Eliminare un dataset
 
-Per eliminare un set di dati, l’ID del set di dati deve essere incluso nel corpo della richiesta POST. Questa azione eliminerà TUTTI i dati per un dato dataset. Experience Platform consente di eliminare i set di dati basati su schemi di record e serie temporali.
+Per eliminare un set di dati, l’ID del set di dati deve essere incluso nel corpo della richiesta POST. Questa azione eliminerà TUTTI i dati per un dato dataset.  Experience Platform consente di eliminare i set di dati basati su schemi di record e serie temporali.
 
 >[!CAUTION]
-> Quando si tenta di eliminare un dataset abilitato per il profilo utilizzando l&#39;interfaccia utente della piattaforma Experience, il dataset viene disattivato per l&#39;inserimento ma non verrà eliminato finché non viene creata una richiesta di eliminazione tramite l&#39;API. Per ulteriori informazioni, vedere l&#39; [appendice](#appendix) di questo documento.
+> Quando si tenta di eliminare un dataset abilitato per il profilo utilizzando l&#39;interfaccia utente  di Experience Platform, il dataset viene disabilitato per l&#39;inserimento ma non verrà eliminato finché non viene creata una richiesta di eliminazione tramite l&#39;API. Per ulteriori informazioni, vedere l&#39; [appendice](#appendix) di questo documento.
 
 **Formato API**
 
@@ -274,7 +277,7 @@ Una volta che lo stato della richiesta di eliminazione è &quot;COMPLETATO&quot;
 
 ## Rimozione di una richiesta di eliminazione
 
-Experience Platform consente di eliminare una richiesta precedente, che può essere utile per diversi motivi, ad esempio se il processo di eliminazione non è stato completato o si è bloccato nella fase di elaborazione. Per rimuovere una richiesta di eliminazione, potete eseguire una richiesta DELETE all&#39; `/system/jobs` endpoint e includere l&#39;ID della richiesta di eliminazione che desiderate rimuovere nel percorso della richiesta.
+ Experience Platform consente di eliminare una richiesta precedente, che può essere utile per una serie di motivi, ad esempio se il processo di eliminazione non è stato completato o si è bloccato nella fase di elaborazione. Per rimuovere una richiesta di eliminazione, potete eseguire una richiesta di DELETE all&#39; `/system/jobs` endpoint e includere l&#39;ID della richiesta di eliminazione che desiderate rimuovere nel percorso della richiesta.
 
 **Formato API**
 
@@ -303,15 +306,15 @@ Una richiesta di eliminazione riuscita restituisce lo stato HTTP 200 (OK) e un c
 
 ## Passaggi successivi
 
-Ora che conosci i passaggi necessari per eliminare set di dati e batch dallo store Profilo all’interno di Experience Platform, puoi eliminare in modo sicuro i dati che sono stati aggiunti erroneamente o che la tua organizzazione non ha più bisogno. Ricorda che una richiesta di eliminazione non può essere annullata, pertanto devi solo eliminare i dati che sono sicuri di non aver bisogno ora e non sarà necessario in futuro.
+Ora che si conoscono i passaggi necessari per eliminare i set di dati e i batch dall&#39;archivio profili all&#39;interno  Experience Platform, è possibile eliminare in modo sicuro i dati che sono stati aggiunti erroneamente o che l&#39;azienda non ha più bisogno. Ricorda che una richiesta di eliminazione non può essere annullata, pertanto devi solo eliminare i dati che sono sicuri di non aver bisogno ora e non sarà necessario in futuro.
 
 ## Appendice {#appendix}
 
 Le seguenti informazioni sono complementari all’eliminazione di un set di dati dallo store Profilo.
 
-### Eliminazione di un set di dati tramite l’interfaccia utente della piattaforma Experience
+### Eliminazione di un set di dati tramite l’interfaccia  di Experience Platform
 
-Quando si utilizza l&#39;interfaccia utente di Experience Platform per eliminare un set di dati abilitato per il profilo, si apre una finestra di dialogo in cui si chiede: &quot;Eliminare il set di dati dal lago di dati esperienza? Utilizzate l&#39;API &#39;profile systems jobs&#39; per eliminare questo set di dati dal servizio profili.&quot;
+Quando si utilizza l&#39;interfaccia utente  Experience Platform per eliminare un set di dati abilitato per il profilo, si apre una finestra di dialogo in cui si chiede: &quot;Eliminare il set di dati dal lago di dati esperienza? Utilizzate l&#39;API &#39;profile systems jobs&#39; per eliminare questo set di dati dal servizio profili.&quot;
 
 Facendo clic su **Elimina** nell&#39;interfaccia utente, il set di dati viene disattivato per l&#39;inserimento, ma NON viene eliminato automaticamente il set di dati nel backend. Per eliminare definitivamente il set di dati, è necessario creare manualmente una richiesta di eliminazione tramite i passaggi descritti in questa guida per [creare una richiesta](#create-a-delete-request)di eliminazione.
 
