@@ -1,12 +1,12 @@
 ---
 title: Eseguire il debug
-seo-title: Debug dell’SDK Web di Adobe Experience Platform
-description: Scopri come attivare/disattivare il debug dell’SDK Web per la piattaforma Experience
-seo-description: Scopri come attivare/disattivare il debug dell’SDK Web per la piattaforma Experience
+seo-title: Debug  Adobe Experience Platform SDK Web
+description: Scoprite come attivare/disattivare  debug dell'SDK Web per Experience Platform
+seo-description: Scoprite come attivare/disattivare  debug dell'SDK Web per Experience Platform
 translation-type: tm+mt
-source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,8 @@ alloy("configure", {
 });
 ```
 
->[!Hint]
+>[!TIP]
+>
 >Questo consente il debug per tutti gli utenti della pagina Web anziché solo per il browser personale.
 
 ## Attivazione del debug con il comando Debug
