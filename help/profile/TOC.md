@@ -3,25 +3,26 @@ product: experience-platform
 audience: user
 user-guide-title: Aiuto sul profilo cliente in tempo reale
 translation-type: tm+mt
-source-git-commit: 59831f5c2445f65371d1897f66dfc45507a9955c
+source-git-commit: 93aae0e394e1ea9b6089d01c585a94871863818e
 workflow-type: tm+mt
-source-wordcount: '78'
-ht-degree: 17%
+source-wordcount: '81'
+ht-degree: 18%
 
 ---
 
 
-# Profilo cliente in tempo reale {#profile}
+# Profilo del cliente in tempo reale {#profile}
 
 * [Panoramica del profilo](home.md)
-* API profilo {#api}
+* Guida per lo sviluppatore di API profilo {#api}
+   * [Panoramica](api/overview.md)
    * [Introduzione](api/getting-started.md)
    * [(Alfa) Attributi calcolati](api/computed-attributes.md)
    * [Proiezioni Edge](api/edge-projections.md)
    * [Entità (accesso profilo)](api/entities.md)
    * [Unisci criteri](api/merge-policies.md)
    * [Processi del sistema dei profili (richieste di eliminazione)](api/profile-system-jobs.md)
-* Interfaccia utente profilo {#ui}
+* Guide dell&#39;interfaccia {#ui}
    * [Guida utente profilo](ui/user-guide.md)
    * [Guida utente per i criteri di unione](ui/merge-policies.md)
 * Esercitazioni {#tutorials}
@@ -30,4 +31,4 @@ ht-degree: 17%
    * [Altre esercitazioni](https://docs.adobe.com/content/help/it-IT/experience-platform/tutorials/home.html)
 * [Elaborazione delle richieste di privacy](privacy.md)
 * [Riferimento API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)
-* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-en)
+* [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
