@@ -1,12 +1,12 @@
 ---
 title: Rendering di contenuti personalizzati
-seo-title: Adobe Experience Platform Web SDK Rendering del contenuto personalizzato
-description: Scopri come eseguire il rendering del contenuto personalizzato con l’SDK Web della piattaforma Experience
-seo-description: Scopri come eseguire il rendering del contenuto personalizzato con l’SDK Web della piattaforma Experience
+seo-title: ' Adobe Experience Platform Web SDK Rendering del contenuto personalizzato'
+description: Scopri come eseguire il rendering del contenuto personalizzato con  Experience Platform Web SDK
+seo-description: Scopri come eseguire il rendering del contenuto personalizzato con  Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Panoramica delle opzioni di personalizzazione
 
-L’SDK Web di Adobe Experience Platform supporta l’esecuzione di query sulle soluzioni di personalizzazione in Adobe, incluso Adobe Target. Esistono due modalità di personalizzazione: recupero del contenuto che può essere rappresentato automaticamente e del contenuto di cui lo sviluppatore deve eseguire il rendering. L’SDK fornisce inoltre le strutture per [gestire lo sfarfallio](../../edge/solution-specific/target/flicker-management.md).
+L&#39;SDK Web per  Adobe Experience Platform supporta la query delle soluzioni di personalizzazione in Adobe, incluso  Adobe Target. Esistono due modalità di personalizzazione: recupero del contenuto che può essere rappresentato automaticamente e del contenuto di cui lo sviluppatore deve eseguire il rendering. L’SDK fornisce inoltre le strutture per [gestire lo sfarfallio](../../edge/solution-specific/target/flicker-management.md).
 
 ## Rendering automatico del contenuto
 
@@ -90,9 +90,10 @@ Questo restituirà un elenco di decisioni come oggetto JSON per ogni decisione.
 }
 ```
 
-{info}Se utilizzi gli ambiti di Target per diventare mBox sul server, solo queste sono tutte richieste allo stesso tempo anziché singolarmente. La mbox globale viene sempre inviata.
-{info}
+>[!TIP]
+>
+> Se usi gli ambiti Target diventano mBox sul server, solo queste sono tutte richieste contemporaneamente anziché singolarmente. La mbox globale viene sempre inviata.
 
 ### Recupera contenuto automatico
 
-Se si desidera che il modulo `result.decisions` includa le decisioni di rendering automatico, è possibile impostare `renderDecisions` su false e includere l&#39;ambito speciale `__view__`
+Se desiderate che il modulo `result.decisions` includa le decisioni di rendering automatico, potete impostare `renderDecisions` su false e includere l&#39;ambito speciale `__view__`.
