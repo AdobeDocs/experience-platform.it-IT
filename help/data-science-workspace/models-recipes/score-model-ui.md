@@ -4,20 +4,23 @@ solution: Experience Platform
 title: Punteggio di un modello (interfaccia utente)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+workflow-type: tm+mt
+source-wordcount: '555'
+ht-degree: 0%
 
 ---
 
 
 # Punteggio di un modello (interfaccia utente)
 
-Il punteggio in Adobe Experience Platform Data Science Workspace può essere ottenuto inserendo i dati in un modello già preparato. I risultati del punteggio vengono quindi memorizzati e visualizzati in un set di dati di output specificato come nuovo batch.
+Il punteggio nel Adobe Experience Platform  [!DNL Data Science Workspace] può essere ottenuto inserendo i dati in un modello già preparato. I risultati del punteggio vengono quindi memorizzati e visualizzati in un set di dati di output specificato come nuovo batch.
 
-Questa esercitazione illustra i passaggi necessari per segnare un modello nell&#39;interfaccia utente di Data Science Workspace.
+Questa esercitazione illustra i passaggi necessari per segnare un modello nell&#39;interfaccia [!DNL Data Science Workspace] utente.
 
 ## Introduzione
 
-Per completare questa esercitazione, è necessario disporre dell&#39;accesso a Experience Platform. Se non disponete dell&#39;accesso a un&#39;organizzazione IMS in Experience Platform, rivolgetevi al vostro amministratore di sistema prima di continuare.
+Per completare questa esercitazione, è necessario avere accesso a [!DNL Experience Platform]. Se non disponete dell&#39;accesso a un&#39;organizzazione IMS in [!DNL Experience Platform], rivolgetevi all&#39;amministratore di sistema prima di procedere.
 
 Questa esercitazione richiede un modello qualificato. Se non si dispone di un modello qualificato, seguire il [treno e valutare un modello nell’esercitazione dell’interfaccia utente](./train-evaluate-model-ui.md) prima di continuare.
 
@@ -60,4 +63,4 @@ Un&#39;esecuzione del punteggio visualizzerà uno dei quattro stati seguenti: In
 
 ## Passaggi successivi
 
-Questa esercitazione illustra i passaggi necessari per valutare i dati utilizzando un modello qualificato in Data Science Workspace. Seguite l&#39;esercitazione sulla [pubblicazione di un modello come servizio nell&#39;interfaccia utente](./publish-model-service-ui.md) per consentire agli utenti all&#39;interno dell&#39;organizzazione di valutare i dati fornendo un accesso semplice a un servizio di machine learning.
+Questa esercitazione illustra i passaggi necessari per eseguire la valutazione dei dati utilizzando un Modello addestrato in [!DNL Data Science Workspace]. Seguite l&#39;esercitazione sulla [pubblicazione di un modello come servizio nell&#39;interfaccia utente](./publish-model-service-ui.md) per consentire agli utenti all&#39;interno dell&#39;organizzazione di valutare i dati fornendo un accesso semplice a un servizio di machine learning.
