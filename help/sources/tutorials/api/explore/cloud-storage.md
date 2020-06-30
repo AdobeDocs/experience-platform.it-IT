@@ -4,29 +4,32 @@ solution: Experience Platform
 title: Esplora un sistema di archiviazione cloud utilizzando l'API del servizio di flusso
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7cd9bec7336d0e1d9f3036cf862633f498002af8
+source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+workflow-type: tm+mt
+source-wordcount: '682'
+ht-degree: 2%
 
 ---
 
 
-# Esplora un sistema di archiviazione cloud utilizzando l&#39;API del servizio di flusso
+# Esplora un sistema di archiviazione cloud utilizzando l&#39; [!DNL Flow Service] API
 
-Flow Service è utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini diverse all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
+[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti diverse all&#39;interno  Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
-Questa esercitazione utilizza l’API del servizio di flusso per esplorare un sistema di archiviazione cloud di terze parti.
+Questa esercitazione utilizza l&#39; [!DNL Flow Service] API per esplorare un sistema di archiviazione cloud di terze parti.
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
 
-* [Origini](../../../home.md): Experience Platform consente di acquisire dati da varie fonti, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi della piattaforma.
-* [Sandbox](../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [Origini](../../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi.
+* [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegarsi correttamente a un sistema di archiviazione cloud utilizzando l&#39;API del servizio di flusso.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegarsi correttamente a un sistema di archiviazione cloud utilizzando l&#39; [!DNL Flow Service] API.
 
 ### Ottenere una connessione di base
 
-Per esplorare un archivio cloud di terze parti utilizzando le API della piattaforma, è necessario possedere un ID di connessione di base valido. Se non si dispone già di una connessione di base per l&#39;archivio con cui si desidera lavorare, è possibile crearne una tramite le seguenti esercitazioni:
+Per esplorare un archivio cloud di terze parti tramite [!DNL Platform] le API, è necessario possedere un ID di connessione di base valido. Se non si dispone già di una connessione di base per l&#39;archivio con cui si desidera lavorare, è possibile crearne una tramite le seguenti esercitazioni:
 
 * [Amazon S3](../create/cloud-storage/s3.md)
 * [BLOB di Azure](../create/cloud-storage/blob.md)
@@ -36,17 +39,17 @@ Per esplorare un archivio cloud di terze parti utilizzando le API della piattafo
 
 ### Lettura di chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione [come leggere le chiamate](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi della piattaforma Experience.
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere chiamate](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla [!DNL Experience Platform] risoluzione dei problemi.
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle API della piattaforma, dovete prima completare l&#39;esercitazione [di](../../../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
 
 * Autorizzazione: Portatore `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in Experience Platform, incluse quelle appartenenti a Flow Service, sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API della piattaforma richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -63,7 +66,7 @@ Utilizzando la connessione di base per l&#39;archiviazione cloud, potete esplora
 | `objectType` | Il tipo di oggetto che si desidera esplorare. Imposta questo valore come: <ul><li>`folder`: Esplora una directory specifica</li><li>`root`: Esplora la directory principale.</li></ul> |
 | `object` | Questo parametro è richiesto solo quando si visualizza una directory specifica. Il suo valore rappresenta il percorso della directory che desiderate esplorare. |
 
-Utilizzate la seguente chiamata per trovare il percorso del file che desiderate portare in Piattaforma:
+Utilizzate la seguente chiamata per trovare il percorso del file in cui desiderate inserire [!DNL Platform]:
 
 **Formato API**
 
@@ -165,4 +168,4 @@ Una risposta corretta restituisce la struttura del file interrogato, inclusi i n
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai esplorato il sistema di storage cloud, trovato il percorso del file che desideri portare in Piattaforma e ne hai visualizzato la struttura. Potete utilizzare queste informazioni nell&#39;esercitazione successiva per [raccogliere i dati dall&#39;archiviazione cloud e portarli nella piattaforma](../collect/cloud-storage.md).
+Seguendo questa esercitazione, hai esplorato il sistema di archiviazione cloud, trovato il percorso del file a cui desideri accedere [!DNL Platform]e ne hai visualizzato la struttura. Potete utilizzare queste informazioni nell&#39;esercitazione successiva per [raccogliere i dati dall&#39;archivio cloud e portarli in Platform](../collect/cloud-storage.md).
