@@ -4,9 +4,9 @@ solution: Adobe Experience Platform Data Science Workspace
 title: Creazione di una pipeline di feature
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 20e26c874204da75cac7e8d001770702658053f1
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1367'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ Il seguente diagramma di flusso mostra l&#39;ordine di esecuzione del runtime:
 
 ## Implementare le classi di Feature Pipeline {#implement-your-feature-pipeline-classes}
 
-Le sezioni seguenti forniscono dettagli ed esempi sull&#39;implementazione delle classi richieste per una tubazione di feature.
+Le sezioni seguenti forniscono dettagli ed esempi sull&#39;implementazione delle classi necessarie per una tubazione di feature.
 
 ### Definire le variabili nel file JSON di configurazione {#define-variables-in-the-configuration-json-file}
 
@@ -387,7 +387,7 @@ scoring.dataSaver: MyDatasetSaver
 
 ## Creare il motore della pipeline delle funzionalità utilizzando l&#39;API {#create-feature-pipeline-engine-api}
 
-Dopo aver creato la pipeline di funzioni, è necessario creare un&#39;immagine Docker per effettuare una chiamata agli endpoint della pipeline di funzioni nell&#39;API di apprendimento di Sensei Machine. È necessario un URL immagine Docker per effettuare una chiamata agli endpoint della pipeline delle funzioni.
+Dopo aver creato la pipeline delle funzioni, è necessario creare un&#39;immagine Docker per effettuare una chiamata agli endpoint della pipeline delle funzioni nell&#39; [!DNL Sensei Machine Learning] API. È necessario un URL immagine Docker per effettuare una chiamata agli endpoint della pipeline delle funzioni.
 
 >[!TIP]
 >Se non disponete di un URL Docker, visitate i file sorgente del [pacchetto in un&#39;esercitazione di ricetta](../models-recipes/package-source-files-recipe.md) per una dettagliata procedura per la creazione di un URL host Docker.
@@ -398,7 +398,7 @@ https://www.getpostman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### Creare un motore di pipeline delle feature {#create-engine-api}
 
-Una volta ottenuta la posizione dell&#39;immagine Docker, è possibile [creare un motore](../api/engines.md#feature-pipeline-docker) di pipeline delle funzionalità utilizzando l&#39;API di apprendimento di Sensei Machine eseguendo un POST a `/engines`. La creazione corretta di un motore della pipeline delle funzioni fornisce un identificatore univoco del motore (`id`). Prima di continuare, salvate questo valore.
+Una volta ottenuta la posizione dell&#39;immagine Docker, potete [creare un motore](../api/engines.md#feature-pipeline-docker) di pipeline delle funzionalità utilizzando l&#39; [!DNL Sensei Machine Learning] API eseguendo un POST a `/engines`. La creazione corretta di un motore della pipeline delle funzioni fornisce un identificatore univoco del motore (`id`). Prima di continuare, salvate questo valore.
 
 ### Creare un&#39;istanza MLI {#create-mlinstance}
 
@@ -435,4 +435,4 @@ Una volta completato il punteggio, la pipeline delle caratteristiche deve essere
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-Leggendo questo documento, hai creato una pipeline di feature utilizzando l’SDK per l’authoring dei modelli, creato un’immagine Docker e utilizzato l’URL dell’immagine Docker per creare un modello di tubazione di feature utilizzando l’API di apprendimento di Sensei Machine. È ora possibile continuare a trasformare i set di dati ed estrarre le funzionalità di dati in scala utilizzando [Sensei Machine Learning API](../api/getting-started.md).
+Leggendo questo documento, hai creato una pipeline di feature utilizzando l’SDK per l’authoring dei modelli, creato un’immagine Docker e utilizzato l’URL dell’immagine Docker per creare un modello di pipeline delle feature utilizzando l’ [!DNL Sensei Machine Learning] API. È ora possibile continuare a trasformare i set di dati ed estrarre le funzioni di dati in scala utilizzando l&#39; [!DNL Sensei Machine Learning API](../api/getting-started.md).
