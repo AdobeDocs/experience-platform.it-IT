@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Azioni di marketing
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 08d02e7323f75c450e7a250835f26a569685cdd1
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+workflow-type: tm+mt
+source-wordcount: '536'
+ht-degree: 1%
 
 ---
 
 
 # Azioni di marketing
 
-Un’azione di marketing, nel contesto della governance dei dati della piattaforma Adobe Experience, è un’azione che un consumatore di dati della piattaforma Experience svolge, per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati.
+Un&#39;azione di marketing, nel contesto del Adobe Experience Platform  Governance dei dati, è un&#39;azione che un consumatore di [!DNL Experience Platform] dati prende, per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati.
 
 Per utilizzare le azioni di marketing nell&#39;API è necessario utilizzare l&#39; `/marketingActions` endpoint.
 
@@ -139,7 +142,7 @@ L&#39;oggetto response contiene i dettagli dell&#39;azione di marketing, incluso
 
 ## Creazione o aggiornamento di un&#39;azione di marketing
 
-L&#39;API Policy Service consente di definire azioni di marketing personalizzate e di aggiornare quelle esistenti. La creazione e l&#39;aggiornamento vengono entrambi eseguiti utilizzando un&#39;operazione PUT con il nome dell&#39;azione di marketing.
+L&#39; [!DNL Policy Service] API consente di definire azioni di marketing personalizzate e di aggiornare quelle esistenti. La creazione e l&#39;aggiornamento vengono entrambi eseguiti utilizzando un&#39;operazione PUT con il nome dell&#39;azione di marketing.
 
 **Formato API**
 
@@ -192,7 +195,7 @@ Se creata correttamente, riceverete uno stato HTTP 201 (Creato) e il corpo della
 
 ## Eliminazione di un&#39;azione di marketing
 
-È possibile eliminare le azioni di marketing inviando una richiesta DELETE all&#39;azione `{marketingActionName}` di marketing da rimuovere.
+È possibile eliminare le azioni di marketing inviando una richiesta DELETE all&#39;azione `{marketingActionName}` di marketing che si desidera rimuovere.
 
 >[!NOTE] Non puoi eliminare azioni di marketing a cui fanno riferimento i criteri esistenti. Se si tenta di farlo, si verificherà un errore 400 (Richiesta non valida) con un messaggio di errore che include gli `id` (o più ID) di qualsiasi criterio (o criterio) contenente un riferimento all&#39;azione di marketing che si sta tentando di eliminare.
 
