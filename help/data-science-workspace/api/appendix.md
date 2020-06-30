@@ -4,18 +4,21 @@ solution: Experience Platform
 title: Appendice
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 2940f69d193ff8a4ec6ad4a58813b5426201ef45
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+workflow-type: tm+mt
+source-wordcount: '298'
+ht-degree: 1%
 
 ---
 
 
 # Appendice
 
-Le sezioni seguenti forniscono informazioni di riferimento per le varie funzionalità di Sensei Machine Learning API.
+Le sezioni seguenti forniscono informazioni di riferimento per le varie funzioni dell&#39; [!DNL Sensei Machine Learning] API.
 
 ## Parametri di query per il recupero delle risorse {#query}
 
-L&#39;API Sensei Machine Learning fornisce il supporto per i parametri di query con il recupero delle risorse. I parametri di query disponibili e i relativi utilizzi sono descritti nella tabella seguente:
+L&#39; [!DNL Sensei Machine Learning] API fornisce il supporto per i parametri di query con il recupero delle risorse. I parametri di query disponibili e i relativi utilizzi sono descritti nella tabella seguente:
 
 | Parametro query | Descrizione | Valore predefinito |
 | --------------- | ----------- | ------- |
