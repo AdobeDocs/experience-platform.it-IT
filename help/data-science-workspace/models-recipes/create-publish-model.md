@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creazione e pubblicazione di un modello di machine learning
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '1529'
+source-wordcount: '1489'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,9 @@ ht-degree: 0%
 
 Fingi di possedere un sito web di vendita online. Quando i clienti effettuano acquisti sul sito Web del cliente, è necessario presentare loro raccomandazioni personalizzate per presentare una serie di altri prodotti offerti dal cliente. Nel corso dell&#39;esistenza del sito Web, hai raccolto continuamente i dati dei clienti e vuoi in qualche modo utilizzare questi dati per generare raccomandazioni di prodotto personalizzate.
 
-[!DNL Adobe Experience Platform] Data Science Workspace fornisce i mezzi per raggiungere il tuo obiettivo utilizzando la funzionalità di [raccomandazione](../pre-built-recipes/product-recommendations.md)sui prodotti precostruita. Segui questa esercitazione per scoprire come accedere e comprendere i dati di vendita al dettaglio, creare e ottimizzare un modello di machine learning e generare informazioni in Data Science Workspace.
+[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] fornisce i mezzi per raggiungere l&#39;obiettivo utilizzando la funzionalità di ricetta [delle raccomandazioni](../pre-built-recipes/product-recommendations.md)sui prodotti precostruita. Segui questa esercitazione per scoprire come accedere e comprendere i dati di vendita al dettaglio, creare e ottimizzare un modello di apprendimento automatico e generare informazioni approfondite in [!DNL Data Science Workspace].
 
-Questa esercitazione riflette il flusso di lavoro di Data Science Workspace e illustra i seguenti passaggi per la creazione di un modello di apprendimento automatico:
+Questa esercitazione riflette il flusso di lavoro di [!DNL Data Science Workspace]e illustra i seguenti passaggi per la creazione di un modello di apprendimento automatico:
 
 1. [Preparare i dati](#prepare-your-data)
 2. [Creazione del modello](#author-your-model)
@@ -31,7 +31,7 @@ Questa esercitazione riflette il flusso di lavoro di Data Science Workspace e il
 
 Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prerequisiti:
 
-* Accesso a [!DNL Adobe Experience Platform]. Se non disponete dell&#39;accesso a un&#39;organizzazione IMS in Experience Platform, rivolgetevi al vostro amministratore di sistema prima di continuare.
+* Accesso a [!DNL Adobe Experience Platform]. Se non disponete dell&#39;accesso a un&#39;organizzazione IMS in [!DNL Experience Platform], rivolgetevi all&#39;amministratore di sistema prima di procedere.
 
 * Risorse di abilitazione. Rivolgetevi al rappresentante commerciale di riferimento per richiedere il provisioning dei seguenti elementi.
    * Recommendations Recipe
@@ -42,21 +42,21 @@ Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prer
    * Golden Data Set postValues
    * Schema set di dati dorati
 
-* Scaricate i tre file Jupyter Notebook richiesti dall&#39;archivio <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">Git pubblico di</a>Adobe, che verranno utilizzati per illustrare il flusso di lavoro JupyterLab in Data Science Workspace.
+* Scaricate i tre [!DNL Jupyter Notebook] file richiesti dall&#39;archivio <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">pubblico di [!DNL Git] Adobe, che verranno utilizzati per illustrare il</a>flusso di lavoro in [!DNL JupyterLab] [!DNL Data Science Workspace].
 
 * Una conoscenza approfondita dei seguenti concetti chiave utilizzati in questa esercitazione:
-   * [Modello](../../xdm/home.md)dati esperienza: Lo sforzo di standardizzazione condotto da Adobe per definire schemi standard come Profile e ExperienceEvent per la gestione dell&#39;esperienza cliente.
+   * [!DNL Experience Data Model](../../xdm/home.md): Lo sforzo di standardizzazione condotto da Adobe per definire schemi standard come [!DNL Profile] e ExperienceEvent per la gestione dell&#39;esperienza cliente.
    * Set di dati: Un costrutto di storage e gestione per i dati effettivi. Un&#39;istanza fisica istanziata di uno schema [](../../xdm/schema/field-dictionary.md)XDM.
    * Batch: I set di dati sono costituiti da batch. Un batch è un insieme di dati raccolti in un periodo di tempo ed elaborati insieme come un&#39;unica unità.
-   * JupyterLab: [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) è un&#39;interfaccia open-source basata su Web per Project Jupyter ed è strettamente integrata nella piattaforma Experience.
+   * [!DNL JupyterLab]: [!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) è un&#39;interfaccia Web open-source per Project [!DNL Jupyter] ed è strettamente integrata in [!DNL Experience Platform].
 
-## Preparare i dati {#prepare-your-data}
+## Prepare your data {#prepare-your-data}
 
-Per creare un modello di machine learning che fornisca ai clienti raccomandazioni personalizzate sui prodotti, è necessario analizzare i precedenti acquisti sul sito Web. In questa sezione viene illustrato come questi dati vengono trasferiti in Piattaforma attraverso [!DNL Adobe Analytics]e come tali dati vengono trasformati in un set di dati delle feature da utilizzare nel modello di apprendimento automatico.
+Per creare un modello di machine learning che fornisca ai clienti raccomandazioni personalizzate sui prodotti, è necessario analizzare i precedenti acquisti sul sito Web. In questa sezione viene spiegato in che modo questi dati vengono assimilati [!DNL Platform] attraverso [!DNL Adobe Analytics]e come vengono trasformati in un set di dati delle feature da utilizzare nel modello di apprendimento automatico.
 
 ### Esplorare i dati e comprendere gli schemi
 
-1. Accedi ad [Adobe Experience Platform](https://platform.adobe.com/) e fai clic **[!UICONTROL Datasets]** per elencare tutti i set di dati esistenti e selezionare il set di dati da esplorare. In questo caso, il set di dati di Analytics **Golden Data Set postValues**.
+1. Accedete a [Adobe Experience Platform](https://platform.adobe.com/) e fate clic **[!UICONTROL Datasets]** per elencare tutti i set di dati esistenti e selezionate il set di dati da esplorare. In questo caso, il [!DNL Analytics] set di dati **Golden Data Set postValues**.
    ![](../images/models-recipes/model-walkthrough/datasets_110.png)
 2. Seleziona **[!UICONTROL Preview Dataset]** vicino alla parte superiore destra per esaminare i record di esempio, quindi fai clic su **[!UICONTROL Close]**.
    ![](../images/models-recipes/model-walkthrough/golden_data_set_110.png)
@@ -67,13 +67,13 @@ Gli altri set di dati sono stati precompilati con batch per la visualizzazione d
 
 | Nome set di dati | Schema | Descrizione |
 | ----- | ----- | ----- |
-| Golden Data Set postValues | Golden Data Set, schema | Dati di origine di Analytics dal sito Web |
-| Set di dati di input di Recommendations | Schema di input di Recommendations | I dati di Analytics vengono trasformati in un set di dati di formazione tramite una pipeline di funzioni. Questi dati vengono utilizzati per formare il modello di apprendimento automatico di Product Recommendations. `itemid` e `userid` corrispondono a un prodotto acquistato da tale cliente. |
+| Golden Data Set postValues | Golden Data Set, schema | [!DNL Analytics] i dati di origine del sito Web |
+| Set di dati di input di Recommendations | Schema di input di Recommendations | I [!DNL Analytics] dati vengono trasformati in un set di dati per la formazione utilizzando una pipeline delle funzioni. Questi dati vengono utilizzati per formare il modello di apprendimento automatico di Product Recommendations. `itemid` e `userid` corrispondono a un prodotto acquistato da tale cliente. |
 | Set di dati di output delle raccomandazioni | Schema di output di Recommendations | Il dataset per il quale sono memorizzati i risultati del punteggio, conterrà l&#39;elenco dei prodotti consigliati per ogni cliente. |
 
 ## Creazione del modello {#author-your-model}
 
-Il secondo componente del ciclo di vita di Data Science Workspace riguarda l’authoring di Ricette e Modelli. La ricetta di Recommendations prodotto è progettata per generare raccomandazioni sui prodotti su larga scala utilizzando i dati di acquisto passati e l&#39;apprendimento automatico.
+Il secondo componente del [!DNL Data Science Workspace] ciclo di vita prevede l’authoring di remix e modelli. La ricetta di Recommendations prodotto è progettata per generare raccomandazioni sui prodotti su larga scala utilizzando i dati di acquisto passati e l&#39;apprendimento automatico.
 
 Le entrate sono la base per un modello in quanto contengono algoritmi di machine learning e logica progettati per risolvere problemi specifici. Ancora più importante, le entrate consentono di democratizzare l&#39;apprendimento automatico all&#39;interno dell&#39;organizzazione, consentendo ad altri utenti di accedere a un Modello per diversi casi di utilizzo senza scrivere alcun codice.
 
@@ -162,4 +162,4 @@ Una volta completata l&#39;esecuzione del punteggio, potrai visualizzare in ante
 
 Ben fatto, avete generato con successo le raccomandazioni sui prodotti!
 
-Questa esercitazione illustra il flusso di lavoro di Data Science Workspace, in cui viene illustrato come i dati non elaborati possono essere trasformati in informazioni utili attraverso l&#39;apprendimento automatico. Per ulteriori informazioni sull&#39;utilizzo di Data Science Workspace, continua con la guida successiva sulla [creazione dello schema di vendita al dettaglio e del dataset](./create-retails-sales-dataset.md).
+Questa esercitazione illustra il flusso di lavoro di [!DNL Data Science Workspace], in cui viene illustrato come i dati non elaborati possono essere trasformati in informazioni utili grazie all&#39;apprendimento automatico. Per saperne di più sull&#39;utilizzo di [!DNL Data Science Workspace], continuare con la guida successiva sulla [creazione dello schema di vendita al dettaglio e del dataset](./create-retails-sales-dataset.md).
