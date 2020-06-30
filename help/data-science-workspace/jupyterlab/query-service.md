@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Servizio query nel blocco appunti Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '750'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Servizio query nel blocco appunti Jupyter
 
-[!DNL Adobe Experience Platform] consente di utilizzare il linguaggio SQL in Data Science Workspace integrando il servizio Query in JupyterLab come funzione standard.
+[!DNL Adobe Experience Platform] consente di utilizzare il linguaggio SQL [!DNL Data Science Workspace] integrando [!DNL Query Service] in [!DNL JupyterLab] una funzione standard.
 
 Questa esercitazione illustra le query SQL di esempio per i casi di utilizzo più comuni per esplorare, trasformare e analizzare [!DNL Adobe Analytics] i dati.
 
@@ -22,19 +22,19 @@ Questa esercitazione illustra le query SQL di esempio per i casi di utilizzo pi�
 
 Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prerequisiti:
 
-- Accesso a [!DNL Adobe Experience Platform]. Se non disponete dell&#39;accesso a un&#39;organizzazione IMS in Experience Platform, rivolgetevi al vostro amministratore di sistema prima di procedere
+- Accesso a [!DNL Adobe Experience Platform]. Se non disponete dell&#39;accesso a un&#39;organizzazione IMS in [!DNL Experience Platform], rivolgetevi al vostro amministratore di sistema prima di procedere
 
 - Un [!DNL Adobe Analytics] dataset
 
 - Una conoscenza approfondita dei seguenti concetti chiave utilizzati in questa esercitazione:
-   - [Experience Data Model (XDM) e XDM System](../../xdm/home.md)
-   - [Servizio query](../../query-service/home.md)
-   - [Sintassi SQL Servizio query](../../query-service/sql/overview.md)
-   - [!DNL Adobe Analytics]
+   - [!DNL Experience Data Model (XDM) and XDM System](../../xdm/home.md)
+   - [!DNL Query Service](../../query-service/home.md)
+   - [!DNL Query Service SQL Syntax](../../query-service/sql/overview.md)
+   - [Adobe Analytics]
 
-## Accesso a JupyterLab e al servizio Query {#access-jupyterlab-and-query-service}
+## Accesso [!DNL JupyterLab] e [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. In [Experience Platform](https://platform.adobe.com), andate **[!UICONTROL Notebooks]** dalla colonna di navigazione a sinistra. Lasciate che venga caricato JupyterLab al momento.
+1. In [!DNL Experience Platform](https://platform.adobe.com), andate **[!UICONTROL Notebooks]** dalla colonna di navigazione a sinistra. Lasciate che venga caricato JupyterLab al momento.
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
@@ -52,7 +52,7 @@ Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prer
 
 4. Trovare un [!DNL Adobe Analytics] dataset da esplorare e fare clic con il pulsante destro del mouse sull&#39;elenco, fare clic **[!UICONTROL Query Data in Notebook]** per generare query SQL nel blocco appunti vuoto.
 
-5. Fare clic sulla prima cella generata contenente la funzione `qs_connect()` ed eseguirla facendo clic sul pulsante di riproduzione. Questa funzione crea una connessione tra l&#39;istanza del blocco appunti e il servizio di query.
+5. Fare clic sulla prima cella generata contenente la funzione `qs_connect()` ed eseguirla facendo clic sul pulsante di riproduzione. Questa funzione crea una connessione tra l&#39;istanza del blocco appunti e l&#39; [!DNL Query Service].
 
    ![](../images/jupyterlab/query/execute.png)
 
@@ -91,7 +91,7 @@ Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prer
 
 Immettere le seguenti query SQL nelle singole celle del blocco appunti. Per eseguire una query, fare clic sulla cella corrispondente, quindi fare clic sul **[!UICONTROL play]** pulsante. I risultati delle query o i registri degli errori vengono visualizzati sotto la cella eseguita.
 
-Quando un blocco appunti è inattivo per un periodo di tempo prolungato, la connessione tra il blocco appunti e il servizio query potrebbe interrompersi. In questi casi, riavviare JupyterLab facendo clic sul **[!UICONTROL Power]** pulsante situato nell&#39;angolo superiore destro.
+Quando un blocco appunti è inattivo per un periodo di tempo prolungato, la connessione tra il blocco appunti e [!DNL Query Service] potrebbe interrompersi. In questi casi, riavviare [!DNL JupyterLab] facendo clic sul **[!UICONTROL Power]** pulsante situato nell&#39;angolo superiore destro.
 
 ![](../images/jupyterlab/query/restart_button.png)
 
@@ -119,7 +119,7 @@ ORDER  BY Hour;
 
 Nella query precedente, la destinazione `_acp_year` nella `WHERE` clausola è impostata sul valore di `target_year`. Includere le variabili nelle query SQL includendole tra parentesi graffe (`{}`).
 
-La prima riga della query contiene la variabile opzionale `hourly_visitor`. I risultati della query verranno memorizzati in questa variabile come fotogramma dati Pandas. La memorizzazione dei risultati in un dataframe consente di visualizzare in seguito i risultati della query utilizzando un pacchetto Python desiderato. Per generare un grafico a barre, eseguite il seguente codice Python in una nuova cella:
+La prima riga della query contiene la variabile opzionale `hourly_visitor`. I risultati della query verranno memorizzati in questa variabile come fotogramma dati Pandas. La memorizzazione dei risultati in un dataframe consente di visualizzare in seguito i risultati della query utilizzando un [!DNL Python] pacchetto desiderato. Esegui il seguente [!DNL Python] codice in una nuova cella per generare un grafico a barre:
 
 ```python
 trace = go.Bar(
@@ -209,7 +209,7 @@ GROUP BY aaid_sess_key
 ORDER BY Count DESC;
 ```
 
-Eseguite il seguente codice Python per generare un istogramma per il numero di eventi per sessione visita:
+Esegui il seguente [!DNL Python] codice per generare un istogramma per il numero di eventi per sessione visita:
 
 ```python
 data = [go.Histogram(x = events_per_session['Count'])]
@@ -283,4 +283,4 @@ LIMIT  10;
 
 ## Passaggi successivi <!-- omit in toc -->
 
-Questa esercitazione ha mostrato alcuni esempi di utilizzo di Query Service nei notebook Jupyter. Segui l’esercitazione [Analizza i dati utilizzando Jupyter Notebooks](./analyze-your-data.md) per vedere come vengono eseguite operazioni simili con l’SDK per l’accesso ai dati.
+Questa esercitazione ha mostrato alcuni esempi di utilizzo [!DNL Query Service] in [!DNL Jupyter] notebook. Segui l’esercitazione [Analizza i dati utilizzando Jupyter Notebooks](./analyze-your-data.md) per vedere come vengono eseguite operazioni simili con l’SDK per l’accesso ai dati.
