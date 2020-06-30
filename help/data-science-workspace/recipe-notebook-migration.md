@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide per la migrazione a componenti e notebook
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '3459'
+source-wordcount: '3311'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 # Guide per la migrazione a componenti e notebook
 
 >[!NOTE]
->I notebook e le ricette che utilizzano Python/R rimangono invariati. La migrazione si applica solo alle ricette e ai notebook PySpark/Spark (2.3).
+>I notebook e le ricette che utilizzano [!DNL Python]/R rimangono invariati. La migrazione si applica solo alle ricette e ai notebook PySpark/[!DNL Spark] (2.3).
 
 Le guide seguenti descrivono i passaggi e le informazioni necessari per migrare ricette e blocchi appunti esistenti.
 
@@ -24,7 +24,7 @@ Le guide seguenti descrivono i passaggi e le informazioni necessari per migrare 
 
 ## Guide alla migrazione delle ricette {#recipe-migration}
 
-Le recenti modifiche a Data Science Workspace richiedono l&#39;aggiornamento delle ricette Spark e PySpark esistenti. Utilizzate i seguenti flussi di lavoro per facilitare la transizione delle ricette.
+Modifiche recenti [!DNL Data Science Workspace] richiedono l&#39;aggiornamento delle ricette esistenti [!DNL Spark] e PySpark. Utilizzate i seguenti flussi di lavoro per facilitare la transizione delle ricette.
 
 - [Guida alla migrazione Spark](#spark-migration-guide)
    - [Modifica della modalità di lettura e scrittura dei set di dati](#read-write-recipe-spark)
@@ -40,17 +40,17 @@ Le recenti modifiche a Data Science Workspace richiedono l&#39;aggiornamento del
    - [Preparare gli script docker](#pyspark-prepare-docker)
    - [creare la ricetta con il docker](#pyspark-create-recipe)
 
-## Guida alla migrazione Spark {#spark-migration-guide}
+## [!DNL Spark] guida alla migrazione {#spark-migration-guide}
 
-L&#39;artefatto della ricetta generato dai passaggi di creazione è ora un&#39;immagine Docker che contiene il file binario .jar. Inoltre, la sintassi utilizzata per leggere e scrivere i set di dati con l’SDK della piattaforma è cambiata e richiede di modificare il codice di ricetta.
+L&#39;artefatto della ricetta generato dai passaggi di creazione è ora un&#39;immagine Docker che contiene il file binario .jar. Inoltre, la sintassi utilizzata per leggere e scrivere i set di dati con l&#39; [!DNL Platform] SDK è cambiata e richiede di modificare il codice di ricetta.
 
-Il seguente video è stato creato per agevolare la comprensione delle modifiche necessarie per le ricette Spark:
+Il seguente video è stato creato per agevolare la comprensione delle modifiche necessarie per [!DNL Spark] le ricette:
 
 >[!VIDEO](https://video.tv.adobe.com/v/33243)
 
-### Set di dati di lettura e scrittura (Spark) {#read-write-recipe-spark}
+### Set di dati di lettura e scrittura ([!DNL Spark]) {#read-write-recipe-spark}
 
-Prima di creare l&#39;immagine Docker, controlla gli esempi per la lettura e la scrittura di set di dati nell&#39;SDK della piattaforma, forniti nelle sezioni seguenti. Se state convertendo ricette esistenti, il codice SDK della piattaforma deve essere aggiornato.
+Prima di creare l&#39;immagine Docker, controlla gli esempi per la lettura e la scrittura di set di dati nell&#39; [!DNL Platform] SDK, forniti nelle sezioni seguenti. Se stai convertendo ricette esistenti, il codice [!DNL Platform] SDK deve essere aggiornato.
 
 #### Lettura di un dataset
 
@@ -69,7 +69,7 @@ Questa sezione illustra le modifiche necessarie per la lettura di un dataset e u
 
 **Nuovo metodo di lettura di un dataset**
 
-Con gli aggiornamenti alle ricette Spark, è necessario aggiungere e modificare una serie di valori. Innanzitutto, `DataSetOptions` non viene più utilizzato. Replace `DataSetOptions` with `QSOption`. Inoltre, sono necessari nuovi `option` parametri. Sia `QSOption.mode` che `QSOption.datasetId` sono necessari. Infine, `orgId` e `serviceApiKey` devono essere modificati in `imsOrg` e `apiKey`. Per un confronto tra i set di dati di lettura, consultare l&#39;esempio seguente:
+Con gli aggiornamenti alle [!DNL Spark] ricette, è necessario aggiungere e modificare una serie di valori. Innanzitutto, `DataSetOptions` non viene più utilizzato. Replace `DataSetOptions` with `QSOption`. Inoltre, sono necessari nuovi `option` parametri. Sia `QSOption.mode` che `QSOption.datasetId` sono necessari. Infine, `orgId` e `serviceApiKey` devono essere modificati in `imsOrg` e `apiKey`. Per un confronto tra i set di dati di lettura, consultare l&#39;esempio seguente:
 
 ```scala
 import com.adobe.platform.query.QSOption
@@ -103,7 +103,7 @@ df.write.format("com.adobe.platform.dataset")
 
 **Nuovo modo di scrivere un dataset**
 
-Con gli aggiornamenti alle ricette Spark, è necessario aggiungere e modificare una serie di valori. Innanzitutto, `DataSetOptions` non viene più utilizzato. Replace `DataSetOptions` with `QSOption`. Inoltre, sono necessari nuovi `option` parametri. `QSOption.datasetId` è necessario e sostituisce la necessità di caricare il `{dataSetId}` contenuto `.save()`. Infine, `orgId` e `serviceApiKey` devono essere modificati in `imsOrg` e `apiKey`. Esaminare l&#39;esempio seguente per un confronto sulla scrittura di set di dati:
+Con gli aggiornamenti alle [!DNL Spark] ricette, è necessario aggiungere e modificare una serie di valori. Innanzitutto, `DataSetOptions` non viene più utilizzato. Replace `DataSetOptions` with `QSOption`. Inoltre, sono necessari nuovi `option` parametri. `QSOption.datasetId` è necessario e sostituisce la necessità di caricare il `{dataSetId}` contenuto `.save()`. Infine, `orgId` e `serviceApiKey` devono essere modificati in `imsOrg` e `apiKey`. Esaminare l&#39;esempio seguente per un confronto sulla scrittura di set di dati:
 
 ```scala
 import com.adobe.platform.query.QSOption
@@ -116,13 +116,13 @@ df.write.format("com.adobe.platform.query")
   .save()
 ```
 
-### Pacchetto di file sorgente basati su Docker (Spark) {#package-docker-spark}
+### Pacchetto di file sorgente basati su Docker ([!DNL Spark]) {#package-docker-spark}
 
 Per iniziare, andate alla directory in cui si trova la ricetta.
 
 Nelle sezioni seguenti viene utilizzata la nuova ricetta di vendita al dettaglio Scala disponibile nell&#39;archivio [pubblico di Github di](https://github.com/adobe/experience-platform-dsw-reference)Data Science Workspace.
 
-### Scarica la ricetta di esempio (Spark) {#download-sample-spark}
+### Scaricate la ricetta di esempio ([!DNL Spark]) {#download-sample-spark}
 
 La ricetta di esempio contiene file che devono essere copiati nella ricetta esistente. Per duplicare il Github pubblico che contiene tutte le ricette campione, immettete quanto segue in terminale:
 
@@ -132,7 +132,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 
 La ricetta Scala si trova nella seguente directory `experience-platform-dsw-reference/recipes/scala/retail`.
 
-### Aggiungere il file Dockerfile (Spark) {#add-dockerfile-spark}
+### Aggiungi il file del documento ([!DNL Spark]) {#add-dockerfile-spark}
 
 Per utilizzare il flusso di lavoro basato sul docker è necessario un nuovo file nella cartella di ricetta. Copiate e incollate il file Dockerfile dalla cartella delle ricette in `experience-platform-dsw-reference/recipes/scala/Dockerfile`. Facoltativamente, potete anche copiare e incollare il codice riportato di seguito in un nuovo file denominato `Dockerfile`.
 
@@ -145,9 +145,9 @@ FROM adobe/acp-dsw-ml-runtime-spark:0.0.1
 COPY target/ml-retail-sample-spark-*-jar-with-dependencies.jar /application.jar
 ```
 
-### Modificare le dipendenze (Spark) {#change-dependencies-spark}
+### Modifica dipendenze ([!DNL Spark]) {#change-dependencies-spark}
 
-Se utilizzate una ricetta esistente, per le dipendenze sono necessarie modifiche nel file pom.xml. Cambia in 2.0.0 la versione della dipendenza model-authoring-sdk. Quindi, aggiornate la versione Spark nel file pom a 2.4.3 e la versione Scala a a 2.11.12.
+Se utilizzate una ricetta esistente, per le dipendenze sono necessarie modifiche nel file pom.xml. Cambia in 2.0.0 la versione della dipendenza model-authoring-sdk. Quindi, aggiornate la [!DNL Spark] versione nel file pom a 2.4.3 e la versione Scala a a 2.11.12.
 
 ```json
 <groupId>com.adobe.platform.ml</groupId>
@@ -156,9 +156,9 @@ Se utilizzate una ricetta esistente, per le dipendenze sono necessarie modifiche
 <classifier>jar-with-dependencies</classifier>
 ```
 
-### Preparare gli script Docker (Spark) {#prepare-docker-spark}
+### Preparare gli script Docker ([!DNL Spark]) {#prepare-docker-spark}
 
-Le ricette Spark non utilizzano più gli artefatti binari e richiedono invece la creazione di un&#39;immagine Docker. Se non lo avete fatto, [scaricate e installate Docker](https://www.docker.com/products/docker-desktop).
+[!DNL Spark] le ricette non utilizzano più gli artefatti binari e richiedono invece la creazione di un&#39;immagine Docker. Se non lo avete fatto, [scaricate e installate Docker](https://www.docker.com/products/docker-desktop).
 
 Nella ricetta di esempio Scala fornita, è possibile trovare gli script `login.sh` e `build.sh` individuare in `experience-platform-dsw-reference/recipes/scala/` . Copiate e incollate questi file nella ricetta esistente.
 
@@ -168,7 +168,7 @@ La struttura delle cartelle deve ora essere simile al seguente esempio (i file a
 
 Il passaggio successivo consiste nel seguire i file sorgente del [pacchetto in un&#39;esercitazione sulle ricette](./models-recipes/package-source-files-recipe.md) . Questa esercitazione include una sezione che descrive come creare un&#39;immagine docker per una ricetta Scala (Spark). Al termine, viene fornita l&#39;immagine Docker in un Registro di sistema del contenitore di Azure con l&#39;URL immagine corrispondente.
 
-### Creare una ricetta (Spark) {#create-recipe-spark}
+### Creare una ricetta ([!DNL Spark]) {#create-recipe-spark}
 
 Per creare una ricetta, dovete prima completare l&#39;esercitazione sui file [sorgente del](./models-recipes/package-source-files-recipe.md) pacchetto e avere l&#39;URL dell&#39;immagine docker pronto. Potete creare una ricetta con l&#39;interfaccia utente o l&#39;API.
 
@@ -178,7 +178,7 @@ Per creare la ricetta utilizzando l&#39;API, seguite l&#39;esercitazione API ( [
 
 ## Guida alla migrazione a PySpark {#pyspark-migration-guide}
 
-L&#39;artefatto della ricetta generato dai passaggi di creazione è ora un&#39;immagine Docker che contiene il file binario .egg. Inoltre, la sintassi utilizzata per leggere e scrivere i set di dati con l’SDK della piattaforma è cambiata e richiede di modificare il codice di ricetta.
+L&#39;artefatto della ricetta generato dai passaggi di creazione è ora un&#39;immagine Docker che contiene il file binario .egg. Inoltre, la sintassi utilizzata per leggere e scrivere i set di dati con l&#39; [!DNL Platform] SDK è cambiata e richiede di modificare il codice di ricetta.
 
 Il seguente video è stato creato per agevolare la comprensione delle modifiche necessarie per le ricette PySpark:
 
@@ -186,7 +186,7 @@ Il seguente video è stato creato per agevolare la comprensione delle modifiche 
 
 ### Set di dati di lettura e scrittura (PySpark) {#pyspark-read-write}
 
-Prima di creare l&#39;immagine Docker, controlla gli esempi per la lettura e la scrittura di set di dati nell&#39;SDK della piattaforma, forniti nelle sezioni seguenti. Se state convertendo ricette esistenti, il codice SDK della piattaforma deve essere aggiornato.
+Prima di creare l&#39;immagine Docker, controlla gli esempi per la lettura e la scrittura di set di dati nell&#39; [!DNL Platform] SDK, forniti nelle sezioni seguenti. Se stai convertendo ricette esistenti, il codice [!DNL Platform] SDK deve essere aggiornato.
 
 #### Lettura di un dataset
 
@@ -206,7 +206,7 @@ pd = spark.read.format("com.adobe.platform.dataset")
 
 **Nuovo metodo di lettura di un dataset**
 
-Con gli aggiornamenti alle ricette Spark, è necessario aggiungere e modificare una serie di valori. Innanzitutto, `DataSetOptions` non viene più utilizzato. Replace `DataSetOptions` with `qs_option`. Inoltre, sono necessari nuovi `option` parametri. Sia `qs_option.mode` che `qs_option.datasetId` sono necessari. Infine, `orgId` e `serviceApiKey` devono essere modificati in `imsOrg` e `apiKey`. Per un confronto tra i set di dati di lettura, consultare l&#39;esempio seguente:
+Con gli aggiornamenti alle [!DNL Spark] ricette, è necessario aggiungere e modificare una serie di valori. Innanzitutto, `DataSetOptions` non viene più utilizzato. Replace `DataSetOptions` with `qs_option`. Inoltre, sono necessari nuovi `option` parametri. Sia `qs_option.mode` che `qs_option.datasetId` sono necessari. Infine, `orgId` e `serviceApiKey` devono essere modificati in `imsOrg` e `apiKey`. Per un confronto tra i set di dati di lettura, consultare l&#39;esempio seguente:
 
 ```python
 qs_option = spark_context._jvm.com.adobe.platform.query.QSOption
@@ -261,7 +261,7 @@ Per questo esempio, la nuova ricetta di vendita al dettaglio PySpark viene utili
 
 ### Scarica la ricetta di esempio (PySpark) {#pyspark-download-sample}
 
-La ricetta di esempio contiene file che devono essere copiati nella ricetta esistente. Per duplicare il Github pubblico che contiene tutte le ricette campione, immettete quanto segue in terminale.
+La ricetta di esempio contiene file che devono essere copiati nella ricetta esistente. Per duplicare il pubblico [!DNL Github] che contiene tutte le ricette di esempio, immettete quanto segue nel terminale.
 
 ```BASH
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
@@ -311,28 +311,28 @@ Per creare la ricetta utilizzando l&#39;API, seguite l&#39;esercitazione API ( [
 
 ## Guide alla migrazione dei notebook {#notebook-migration}
 
-Le recenti modifiche apportate ai notebook JupyterLab richiedono l’aggiornamento dei notebook PySpark e Spark 2.3 a 2.4. Con questa modifica, JupyterLab Launcher è stato aggiornato con nuovi notebook. Per una guida dettagliata su come convertire i notebook, selezionare una delle seguenti guide:
+Le modifiche recenti apportate ai [!DNL JupyterLab] blocchi appunti richiedono l’aggiornamento dei notebook PySpark e [!DNL Spark] 2.3 esistenti a 2.4. Con questa modifica, [!DNL JupyterLab Launcher] è stato aggiornato con nuovi blocchi appunti iniziali. Per una guida dettagliata su come convertire i notebook, selezionare una delle seguenti guide:
 
 - [Guida alla migrazione a PySpark 2.3-2.4](#pyspark-notebook-migration)
 - [Guida alla migrazione da Spark 2.3 a Spark 2.4 (Scala)](#spark-notebook-migration)
 
-Il seguente video è stato creato per agevolare la comprensione delle modifiche necessarie per i notebook JupyterLab:
+Il seguente video è stato creato per agevolare la comprensione delle modifiche necessarie per [!DNL JupyterLab Notebooks]:
 
 >[!VIDEO](https://video.tv.adobe.com/v/33444?quality=12&learn=on)
 
 ## Guida alla migrazione dei notebook PySpark 2.3-2.4 {#pyspark-notebook-migration}
 
-Con l&#39;introduzione di PySpark 2.4 ai notebook JupyterLab, i nuovi notebook Python con PySpark 2.4 utilizzano ora il kernel Python 3 invece del kernel PySpark 3. Ciò significa che il codice esistente in esecuzione su PySpark 2.3 non è supportato in PySpark 2.4.
+Con l&#39;introduzione di PySpark 2.4 a [!DNL JupyterLab Notebooks], nuovi [!DNL Python] notebook con PySpark 2.4 ora utilizzano il kernel [!DNL Python] 3 invece del kernel PySpark 3. Ciò significa che il codice esistente in esecuzione su PySpark 2.3 non è supportato in PySpark 2.4.
 
 >[!IMPORTANT] PySpark 2.3 è obsoleto e deve essere rimosso in una versione successiva. Tutti gli esempi esistenti sono impostati in modo da essere sostituiti con gli esempi PySpark 2.4.
 
-Per convertire i notebook PySpark 3 (Spark 2.3) esistenti in Spark 2.4, seguire gli esempi riportati di seguito:
+Per convertire i notebook PySpark 3 ([!DNL Spark] 2.3) esistenti in [!DNL Spark] 2.4, seguire gli esempi riportati di seguito:
 
 ### Kernel
 
-I notebook PySpark 3 (Spark 2.4) utilizzano il kernel Python 3 invece del kernel PySpark obsoleto utilizzato nei notebook PySpark 3 (Spark 2.3 - obsoleto).
+I notebook PySpark 3 ([!DNL Spark] 2.4) utilizzano il kernel Python 3 invece del kernel PySpark obsoleto utilizzato nei notebook PySpark 3 (Spark 2.3 - obsoleto).
 
-Per confermare o modificare il kernel nell’interfaccia utente di JupyterLab, selezionate il pulsante del kernel nella barra di navigazione in alto a destra del notebook. Se si utilizza uno dei blocchi appunti di avvio predefiniti, il kernel è già selezionato. Nell&#39;esempio riportato di seguito viene utilizzato l&#39;avvio del blocco appunti *Aggregazione* PySpark 3 (Spark 2.4).
+Per confermare o modificare il kernel nell&#39; [!DNL JupyterLab] interfaccia utente, selezionare il pulsante del kernel situato nella barra di navigazione in alto a destra del blocco appunti. Se si utilizza uno dei blocchi appunti di avvio predefiniti, il kernel è già selezionato. Nell&#39;esempio riportato di seguito viene utilizzato l&#39;avvio del blocco appunti[!DNL Spark] Aggregation *PySpark 3 (* 2.4).
 
 ![check kernel](./images/migration/pyspark-migration/check-kernel.png)
 
@@ -342,18 +342,18 @@ Selezionando il menu a discesa si apre un elenco dei kernel disponibili.
 
 ![menu a discesa kernel](./images/migration/pyspark-migration/select-kernel.png)
 
-Per i notebook PySpark 3 (Spark 2.4), selezionate il kernel Python 3 e confermate facendo clic sul pulsante **Seleziona** .
+Per i notebook PySpark 3 ([!DNL Spark] 2.4), selezionate il kernel Python 3 e confermate facendo clic sul pulsante **Seleziona** .
 
 ![conferma kernel](./images/migration/pyspark-migration/confirm-kernel.png)
 
 ## Inizializzazione di sparkSession
 
-Tutti i notebook Spark 2.4 richiedono l’inizializzazione della sessione con il nuovo codice standard.
+Tutti i notebook [!DNL Spark] 2.4 richiedono l’inizializzazione della sessione con il nuovo codice standard.
 
 <table>
   <th>Notebook</th>
-  <th>PySpark 3 (Spark 2.3 - obsoleto)</th>
-  <th>PySpark 3 (Spark 2.4)</th>
+  <th>PySpark 3 ([!DNL Spark] 2.3 - obsoleto)</th>
+  <th>PySpark 3 ([!DNL Spark] 2.4)</th>
   <tr>
   <th>Kernel</th>
   <td align="center">PySpark 3</td>
@@ -363,7 +363,7 @@ Tutti i notebook Spark 2.4 richiedono l’inizializzazione della sessione con il
   <th>Codice</th>
   <td>
   <pre class="JSON language-JSON hljs">
-  scintilla
+  [!DNL scintilla]
 </pre>
   </td>
   <td>
@@ -374,7 +374,7 @@ da pyspark.sql importare SparkSessionspark = SparkSession.builder.getOrCreate()
   </tr>
 </table>
 
-Le immagini seguenti evidenziano le differenze di configurazione per PySpark 2.3 e PySpark 2.4. In questo esempio vengono utilizzati i notebook *Aggregation* Starter forniti in JupyterLab Launcher.
+Le immagini seguenti evidenziano le differenze di configurazione per PySpark 2.3 e PySpark 2.4. In questo esempio vengono utilizzati i blocchi appunti iniziali *Aggregazione* forniti in [!DNL JupyterLab Launcher].
 
 **Esempio di configurazione per 2.3 (obsoleto)**
 
@@ -386,7 +386,7 @@ Le immagini seguenti evidenziano le differenze di configurazione per PySpark 2.3
 
 ## Utilizzo di %dataset {#magic}
 
-Con l&#39;introduzione di Spark 2.4, `%dataset` la magia personalizzata viene fornita per l&#39;uso nei nuovi notebook PySpark 3 (Spark 2.4) (kernel Python 3).
+Con l&#39;introduzione di [!DNL Spark] 2.4, `%dataset` la magia personalizzata è fornita per l&#39;uso in nuovi notebook PySpark 3 ([!DNL Spark] 2.4) ([!DNL Python] 3 kernel).
 
 **Utilizzo**
 
@@ -394,7 +394,7 @@ Con l&#39;introduzione di Spark 2.4, `%dataset` la magia personalizzata viene fo
 
 **Descrizione**
 
-Un comando magico personalizzato di Data Science Workspace per la lettura o la scrittura di un set di dati da un notebook Python (kernel Python 3).
+Comando [!DNL Data Science Workspace] magico personalizzato per la lettura o la scrittura di un dataset da un [!DNL Python] blocco appunti ([!DNL Python] 3 kernel).
 
 - **{action}**: Tipo di azione da eseguire sul set di dati. Sono disponibili due azioni: &quot;read&quot; o &quot;write&quot;.
 - **—datasetId {id}**: Utilizzato per fornire l&#39;ID del set di dati da leggere o scrivere. Questo è un argomento obbligatorio.
@@ -410,9 +410,9 @@ Un comando magico personalizzato di Data Science Workspace per la lettura o la s
 
 ## Carica in un dataframe in LocalContext
 
-Con l&#39;introduzione di Spark 2.4, [`%dataset`](#magic) la magia personalizzata è in dotazione. L&#39;esempio seguente evidenzia le differenze chiave per il caricamento del dataframe nei notebook PySpark (Spark 2.3) e PySpark (Spark 2.4):
+Con l&#39;introduzione di [!DNL Spark] 2.4, [`%dataset`](#magic) magia personalizzata è fornito. L&#39;esempio seguente evidenzia le differenze chiave per il caricamento del dataframe nei notebook PySpark ([!DNL Spark] 2.3) e PySpark ([!DNL Spark] 2.4):
 
-**Utilizzo di PySpark 3 (Spark 2.3 - obsoleto) - Kernel PySpark 3**
+**Utilizzo di PySpark 3 ([!DNL Spark]2.3 - obsoleto) - Kernel PySpark 3**
 
 ```python
 dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptions
@@ -421,7 +421,7 @@ pd0 = spark.read.format("com.adobe.platform.dataset")
   .load("5e68141134492718af974844")
 ```
 
-**Utilizzo di PySpark 3 (Spark 2.4) - Kernel Python 3**
+**Utilizzo di PySpark 3 ([!DNL Spark]2.4) - Python 3 Kernel**
 
 ```python
 %dataset read --datasetId 5e68141134492718af974844 --dataFrame pd0
@@ -430,9 +430,9 @@ pd0 = spark.read.format("com.adobe.platform.dataset")
 | Elemento | Descrizione |
 | ------- | ----------- |
 | pd0 | Nome dell&#39;oggetto dataframe panas da utilizzare o creare. |
-| [%dataset](#magic) | Magia personalizzata per l&#39;accesso ai dati nel kernel Python3. |
+| [%dataset](#magic) | Magia personalizzata per l&#39;accesso ai dati in [!DNL Python] 3 kernel. |
 
-Le immagini seguenti evidenziano le differenze chiave nel caricamento dei dati per PySpark 2.3 e PySpark 2.4. In questo esempio vengono utilizzati i notebook *Aggregation* Starter forniti in JupyterLab Launcher.
+Le immagini seguenti evidenziano le differenze chiave nel caricamento dei dati per PySpark 2.3 e PySpark 2.4. In questo esempio vengono utilizzati i blocchi appunti iniziali *Aggregazione* forniti in [!DNL JupyterLab Launcher].
 
 **Caricamento di dati in PySpark 2.3 (dataset Luma) - obsoleto**
 
@@ -444,25 +444,25 @@ Con PySpark 3 (Spark 2.4) `sc = spark.sparkContext` è definito nel caricamento.
 
 ![Carica 1](./images/migration/pyspark-migration/2.4-load.png)
 
-**Caricamento dei dati della piattaforma Experience Cloud in PySpark 2.3 - obsoleto**
+**Caricamento[!DNL Experience Cloud Platform]dei dati in PySpark 2.3 - obsoleto**
 
 ![Carico 2](./images/migration/pyspark-migration/2.3-load-alt.png)
 
-**Caricamento dei dati della piattaforma Experience Cloud in PySpark 2.4**
+**Caricamento[!DNL Experience Cloud Platform]dei dati in PySpark 2.4**
 
-Con PySpark 3 (Spark 2.4) non è più necessario definire `org_id` e `dataset_id` non è più necessario definirlo. Inoltre, `df = spark.read.format` è stato sostituito con una magia personalizzata [`%dataset`](#magic) per semplificare la lettura e la scrittura dei dataset.
+Con PySpark 3 ([!DNL Spark] 2.4) non è più necessario definire `org_id` e `dataset_id` non è più necessario definirlo. Inoltre, `df = spark.read.format` è stato sostituito con una magia personalizzata [`%dataset`](#magic) per semplificare la lettura e la scrittura dei dataset.
 
 ![Carico 2](./images/migration/pyspark-migration/2.4-load-alt.png)
 
 | Elemento | description |
 | ------- | ----------- |
-| [%dataset](#magic) | Magia personalizzata per l&#39;accesso ai dati nel kernel Python3. |
+| [%dataset](#magic) | Magia personalizzata per l&#39;accesso ai dati in [!DNL Python] 3 kernel. |
 
 >[!TIP] —mode può essere impostato su `interactive` o `batch`. Il valore predefinito per —mode è `interactive`. Si consiglia di utilizzare la `batch` modalità quando si leggono grandi quantità di dati.
 
 ## Creazione di un fotogramma dati locale
 
-Con PySpark 3 (Spark 2.4) `%%` sparkmagic non è più supportato. Non è più possibile utilizzare le operazioni seguenti:
+Con PySpark 3 ([!DNL Spark] 2.4) `%%` sparkmagic non è più supportato. Non è più possibile utilizzare le operazioni seguenti:
 
 - `%%help`
 - `%%info`
@@ -475,12 +475,12 @@ Nella tabella seguente sono illustrate le modifiche necessarie per convertire le
 
 <table>
   <th>Notebook</th>
-  <th>PySpark 3 (Spark 2.3 - obsoleto)</th>
-  <th>PySpark 3 (Spark 2.4)</th>
+  <th>PySpark 3 ([!DNL Spark] 2.3 - obsoleto)</th>
+  <th>PySpark 3 ([!DNL Spark] 2.4)</th>
   <tr>
   <th>Kernel</th>
   <td align="center">PySpark 3</td>
-  <td align="center">Python 3</td>
+  <td align="center">[!DNL Python] 3</td>
   </tr>
   <tr>
   <th>Codice</th>
@@ -513,7 +513,7 @@ sample_df = df.sample(fraction)
 
 >[!TIP] È inoltre possibile specificare un campione di sementi facoltativo, ad esempio un valore booleano conSostituzione, una doppia frazione o un valore seed lungo.
 
-Le immagini seguenti evidenziano le differenze chiave per la creazione di un fotogramma dati locale in PySpark 2.3 e PySpark 2.4. In questo esempio vengono utilizzati i notebook *Aggregation* Starter forniti in JupyterLab Launcher.
+Le immagini seguenti evidenziano le differenze chiave per la creazione di un fotogramma dati locale in PySpark 2.3 e PySpark 2.4. In questo esempio vengono utilizzati i blocchi appunti iniziali *Aggregazione* forniti in [!DNL JupyterLab Launcher].
 
 **Crea dataframe locale PySpark 2.3 - obsoleto**
 
@@ -521,15 +521,15 @@ Le immagini seguenti evidenziano le differenze chiave per la creazione di un fot
 
 **Crea dataframe locale PySpark 2.4**
 
-Con PySpark 3 (Spark 2.4) `%%sql` Sparkmagic non è più supportato ed è stato sostituito con il seguente:
+Con PySpark 3 ([!DNL Spark] 2.4) `%%sql` Sparkmagic non è più supportato ed è stato sostituito con il seguente:
 
 ![dataframe 2](./images/migration/pyspark-migration/2.4-dataframe.png)
 
 ## Scrivere in un dataset
 
-Con l&#39;introduzione di Spark 2.4, [`%dataset`](#magic) è disponibile una magia personalizzata che rende la scrittura di dataset più pulita. Per scrivere in un dataset, usate il seguente esempio di Spark 2.4:
+Con l&#39;introduzione di [!DNL Spark] 2.4, viene fornita la magia [`%dataset`](#magic) personalizzata che rende la scrittura di dataset più pulita. Per scrivere in un dataset, utilizzare il seguente esempio [!DNL Spark] 2.4:
 
-**Utilizzo di PySpark 3 (Spark 2.3 - obsoleto) - Kernel PySpark 3**
+**Utilizzo di PySpark 3 ([!DNL Spark]2.3 - obsoleto) - Kernel PySpark 3**
 
 ```python
 userToken = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.USER_TOKEN")
@@ -546,7 +546,7 @@ pd0.write.format("com.adobe.platform.dataset")
   .save("5e68141134492718af974844")
 ```
 
-**Utilizzo di PySpark 3 (Spark 2.4) - Kernel Python 3**
+**Utilizzo di PySpark 3 ([!DNL Spark]2.4) -[!DNL Python]3 Kernel**
 
 ```python
 %dataset write --datasetId 5e68141134492718af974844 --dataFrame pd0
@@ -557,35 +557,35 @@ pd0.show(10, False)
 | Elemento | description |
 | ------- | ----------- |
 | pd0 | Nome dell&#39;oggetto dataframe panas da utilizzare o creare. |
-| [%dataset](#magic) | Magia personalizzata per l&#39;accesso ai dati nel kernel Python3. |
+| [%dataset](#magic) | Magia personalizzata per l&#39;accesso ai dati in [!DNL Python] 3 kernel. |
 
 >[!TIP] —mode può essere impostato su `interactive` o `batch`. Il valore predefinito per —mode è `interactive`. Si consiglia di utilizzare la `batch` modalità quando si leggono grandi quantità di dati.
 
-Le immagini seguenti evidenziano le differenze chiave per la riscrittura dei dati sulla piattaforma in PySpark 2.3 e PySpark 2.4. In questo esempio vengono utilizzati i notebook *Aggregation* Starter forniti in JupyterLab Launcher.
+Le immagini seguenti evidenziano le differenze chiave per la riscrittura dei dati [!DNL Platform] in PySpark 2.3 e PySpark 2.4. In questo esempio vengono utilizzati i blocchi appunti iniziali *Aggregazione* forniti in [!DNL JupyterLab Launcher].
 
-**Scrittura dei dati in Platform PySpark 2.3 - obsoleto**
+**Scrittura dei dati su[!DNL Platform]PySpark 2.3 - obsoleto**
 
 ![dataframe 1](./images/migration/pyspark-migration/2.3-write.png)![dataframe 1](./images/migration/pyspark-migration/2.3-write-2.png)![dataframe 1](./images/migration/pyspark-migration/2.3-write-3.png)
 
-**Scrittura dei dati su Platform PySpark 2.4**
+**Scrittura dei dati su[!DNL Platform]PySpark 2.4**
 
-Con PySpark 3 (Spark 2.4) la magia `%dataset` personalizzata elimina la necessità di definire valori quali `userToken`, `serviceToken`, `serviceApiKey`e `.option`. Inoltre, `orgId` non è più necessario definirla.
+Con PySpark 3 ([!DNL Spark] 2.4) la magia `%dataset` personalizzata elimina la necessità di definire valori quali `userToken`, `serviceToken`, `serviceApiKey`e `.option`. Inoltre, `orgId` non è più necessario definirla.
 
 ![dataframe 2](./images/migration/pyspark-migration/2.4-write.png)![dataframe 2](./images/migration/pyspark-migration/2.4-write-2.png)
 
-## Spark 2.3 - Spark 2.4 (Scala) - guida alla migrazione dei notebook {#spark-notebook-migration}
+## [!DNL Spark] Guida alla migrazione dei notebook da 2,3 a [!DNL Spark] 2,4 (Scala) {#spark-notebook-migration}
 
-Con l&#39;introduzione di Spark 2.4 a JupyterLab Notebooks, i notebook Spark (Spark 2.3) esistenti ora utilizzano il kernel Scala invece del kernel Spark. Ciò significa che il codice esistente in esecuzione su Spark (Spark 2.3) non è supportato in Scala (Spark 2.4). Inoltre, tutti i nuovi notebook Spark dovrebbero utilizzare Scala (Spark 2.4) nel lancio di JupyterLab.
+Con l&#39;introduzione di [!DNL Spark] 2.4 a [!DNL JupyterLab Notebooks], i notebook esistenti [!DNL Spark] ([!DNL Spark] 2.3) ora utilizzano il kernel Scala invece del [!DNL Spark] kernel. Ciò significa che il codice esistente in esecuzione su [!DNL Spark] ([!DNL Spark] 2.3) non è supportato in Scala ([!DNL Spark] 2.4). Inoltre, tutti i nuovi [!DNL Spark] notebook devono utilizzare Scala ([!DNL Spark] 2.4) nel [!DNL JupyterLab Launcher].
 
->[!IMPORTANT] Spark (Spark 2.3) è obsoleto e viene impostato per essere rimosso in una versione successiva. Tutti gli esempi esistenti sono impostati in modo da essere sostituiti con gli esempi Scala (Spark 2.4).
+>[!IMPORTANT] [!DNL Spark] ([!DNL Spark] 2.3) è obsoleto e deve essere rimosso in una versione successiva. Tutti gli esempi esistenti sono impostati in modo da essere sostituiti con gli esempi Scala ([!DNL Spark] 2.4).
 
-Per convertire i notebook Spark (Spark 2.3) esistenti in Scala (Spark 2.4), attenetevi agli esempi riportati di seguito:
+Per convertire i notebook esistenti [!DNL Spark] ([!DNL Spark] 2.3) in Scala ([!DNL Spark] 2.4), seguire gli esempi riportati di seguito:
 
 ## Kernel
 
-I notebook Scala (Spark 2.4) utilizzano il kernel Scala invece del kernel Spark obsoleto utilizzato nei notebook Spark (Spark 2.3 - obsoleto).
+I notebook Scala (Spark 2.4) utilizzano il kernel Scala invece del [!DNL Spark] kernel obsoleto utilizzato nei [!DNL Spark] ([!DNL Spark] 2.3 - obsoleto) notebook.
 
-Per confermare o modificare il kernel nell’interfaccia utente di JupyterLab, selezionate il pulsante del kernel nella barra di navigazione in alto a destra del notebook. Viene visualizzato il *pulsante Seleziona kernel* . Se si utilizza uno dei blocchi appunti di avvio predefiniti, il kernel è già selezionato. Nell&#39;esempio seguente viene utilizzato il notebook Scala *Clustering* in JupyterLab Launcher.
+Per confermare o modificare il kernel nell&#39; [!DNL JupyterLab] interfaccia utente, selezionare il pulsante del kernel situato nella barra di navigazione in alto a destra del blocco appunti. Viene visualizzato il *pulsante Seleziona kernel* . Se si utilizza uno dei blocchi appunti di avvio predefiniti, il kernel è già selezionato. Nell&#39;esempio seguente viene utilizzato il blocco appunti *Clustering* Scala in [!DNL JupyterLab Launcher].
 
 ![check kernel](./images/migration/spark-scala/scala-kernel.png)
 
@@ -601,15 +601,15 @@ Per i notebook Scala (Spark 2.4), selezionate il kernel Scala e confermate facen
 
 ## Inizializzazione di SparkSession {#initialize-sparksession-scala}
 
-Tutti i notebook Scala (Spark 2.4) richiedono l’inizializzazione della sessione con il seguente codice standard:
+Tutti i notebook Scala ([!DNL Spark] 2.4) richiedono l’inizializzazione della sessione con il seguente codice standard:
 
 <table>
   <th>Notebook</th>
-  <th>Spark (Spark 2.3 - obsoleto)</th>
-  <th>Scala (Spark 2.4)</th>
+  <th>Spark ([!DNL Spark] 2.3 - obsoleto)</th>
+  <th>Scala ([!DNL Spark] 2.4)</th>
   <tr>
   <th>Kernel</th>
-  <td align="center">Spark</td>
+  <td align="center">[!DNL Spark]</td>
   <td align="center">Scala</td>
   </tr>
   <tr>
@@ -625,21 +625,21 @@ import org.apache.spark.sql.{ SparkSession } val spark = SparkSession .builder()
   </tr>
 </table>
 
-L&#39;immagine Scala (Spark 2.4) riportata di seguito evidenzia la differenza fondamentale nell&#39;inizializzazione di sparkSession con il kernel Spark 2.3 e il kernel Spark 2.4 Scala. In questo esempio vengono utilizzati i notebook *Clustering* iniziali forniti in JupyterLab Launcher.
+L&#39;immagine Scala ([!DNL Spark] 2.4) riportata di seguito evidenzia la differenza fondamentale nell&#39;inizializzazione di sparkSession con il kernel [!DNL Spark] 2.3 [!DNL Spark] e il kernel [!DNL Spark] 2.4 Scala. In questo esempio vengono utilizzati i notebook *Clustering* iniziali forniti in [!DNL JupyterLab Launcher].
 
-**Spark (Spark 2.3 - obsoleto)**
+**[!DNL Spark]([!DNL Spark]2.3 - obsoleto)**
 
-Spark (Spark 2.3 - obsoleto) utilizza il kernel Spark, pertanto non era necessario definire Spark.
+[!DNL Spark] ([!DNL Spark] 2.3 - obsoleto) utilizza il [!DNL Spark] kernel e quindi non era necessario definire [!DNL Spark].
 
-**Scala (Spark 2.4)**
+**Scala ([!DNL Spark]2.4)**
 
-L&#39;utilizzo di Spark 2.4 con il kernel Scala richiede che vengano definiti `val spark` e importati `SparkSesson` per poter leggere o scrivere:
+L&#39;utilizzo di [!DNL Spark] 2.4 con il kernel Scala richiede che vengano definiti `val spark` e importati `SparkSesson` per poter leggere o scrivere:
 
 ![importazione e definizione di scintilla](./images/migration/spark-scala/start-session.png)
 
 ## Dati query
 
-Con Scala (Spark 2.4) `%%` sparkmagic non è più supportato. Non è più possibile utilizzare le operazioni seguenti:
+Con Scala ([!DNL Spark] 2.4) `%%` sparkmagic non è più supportato. Non è più possibile utilizzare le operazioni seguenti:
 
 - `%%help`
 - `%%info`
@@ -652,11 +652,11 @@ Nella tabella seguente sono illustrate le modifiche necessarie per convertire le
 
 <table>
   <th>Notebook</th>
-  <th>Spark (Spark 2.3 - obsoleto)</th>
-  <th>Scala (Spark 2.4)</th>
+  <th>[!DNL Spark] ([!DNL Spark] 2.3 - obsoleto)</th>
+  <th>Scala ([!DNL Spark] 2.4)</th>
   <tr>
   <th>Kernel</th>
-  <td align="center">Spark</td>
+  <td align="center">[!DNL Spark]</td>
   <td align="center">Scala</td>
   </tr>
   <tr>
@@ -691,15 +691,15 @@ val_sample_df = df.sample(fraction) </pre>
    </tr>
 </table>
 
-L&#39;immagine Scala (Spark 2.4) riportata di seguito evidenzia le differenze chiave nell&#39;eseguire query con il kernel Spark 2.3 e Spark 2.4 Scala. In questo esempio vengono utilizzati i notebook *Clustering* iniziali forniti in JupyterLab Launcher.
+L&#39;immagine Scala ([!DNL Spark] 2.4) riportata di seguito evidenzia le differenze chiave nella creazione di query con il kernel [!DNL Spark] 2.3 [!DNL Spark] e Spark 2.4 Scala. In questo esempio vengono utilizzati i notebook *Clustering* iniziali forniti in [!DNL JupyterLab Launcher].
 
-**Spark (Spark 2.3 - obsoleto)**
+**[!DNL Spark]([!DNL Spark]2.3 - obsoleto)**
 
-Il notebook Spark (Spark 2.3 - obsoleto) utilizza il kernel Spark. Il kernel Spark supporta e utilizza `%%sql` scintillio.
+Il notebook [!DNL Spark] ([!DNL Spark] 2.3 - obsoleto) utilizza il [!DNL Spark] kernel. Il [!DNL Spark] kernel supporta e utilizza `%%sql` sparkmagic.
 
 ![](./images/migration/spark-scala/sql-2.3.png)
 
-**Scala (Spark 2.4)**
+**Scala ([!DNL Spark]2.4)**
 
 Il kernel Scala non supporta più `%%sql` sparkmagic. Il codice sparkmagic esistente deve essere convertito.
 
@@ -707,9 +707,9 @@ Il kernel Scala non supporta più `%%sql` sparkmagic. Il codice sparkmagic esist
 
 ## Lettura di un dataset {#notebook-read-dataset-spark}
 
-In Spark 2.3 era necessario definire le variabili per `option` i valori utilizzati per leggere i dati o utilizzare i valori non elaborati nella cella del codice. In Scala è possibile utilizzare `sys.env("PYDASDK_IMS_USER_TOKEN")` per dichiarare e restituire un valore, eliminando la necessità di definire variabili come `var userToken`. Nell&#39;esempio di Scala (Spark 2.4) riportato di seguito, `sys.env` viene utilizzato per definire e restituire tutti i valori richiesti per la lettura di un dataset.
+In [!DNL Spark] 2.3 era necessario definire le variabili per `option` i valori utilizzati per leggere i dati o utilizzare i valori non elaborati nella cella del codice. In Scala è possibile utilizzare `sys.env("PYDASDK_IMS_USER_TOKEN")` per dichiarare e restituire un valore, eliminando la necessità di definire variabili come `var userToken`. Nell&#39;esempio di Scala (Spark 2.4) riportato di seguito, `sys.env` viene utilizzato per definire e restituire tutti i valori richiesti per la lettura di un dataset.
 
-**Utilizzo di Spark (Spark 2.3 - obsoleto) - Kernel Spark**
+**Utilizzo[!DNL Spark]([!DNL Spark]2.3 - obsoleto) -[!DNL Spark]Kernel**
 
 ```scala
 import com.adobe.platform.dataset.DataSetOptions
@@ -719,7 +719,7 @@ var df1 = spark.read.format("com.adobe.platform.dataset")
   .load("5e68141134492718af974844")
 ```
 
-**Utilizzo di Scala (Spark 2.4) - Kernel Scala**
+**Utilizzo di Scala ([!DNL Spark]2.4) - Kernel Scala**
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -742,17 +742,17 @@ val df1 = spark.read.format("com.adobe.platform.query")
 | ims-org | Il vostro ID ims-org che viene recuperato automaticamente utilizzando `sys.env("IMS_ORG_ID")`. |
 | api-key | Il tasto API che viene recuperato automaticamente utilizzando `sys.env("PYDASDK_IMS_CLIENT_ID")`. |
 
-Le immagini riportate di seguito evidenziano le differenze chiave nel caricamento dei dati con Spark 2.3 e Spark 2.4. In questo esempio vengono utilizzati i notebook *Clustering* iniziali forniti in JupyterLab Launcher.
+Le immagini riportate di seguito evidenziano le differenze chiave nel caricamento dei dati con i punti [!DNL Spark] 2.3 e [!DNL Spark] 2.4. In questo esempio vengono utilizzati i notebook *Clustering* iniziali forniti in [!DNL JupyterLab Launcher].
 
-**Spark (Spark 2.3 - obsoleto)**
+**[!DNL Spark]([!DNL Spark]2.3 - obsoleto)**
 
-Il notebook Spark (Spark 2.3 - obsoleto) utilizza il kernel Spark. Le due celle seguenti mostrano un esempio di caricamento del set di dati con un ID set di dati specificato nell&#39;intervallo di date di (2019-3-21, 2019-3-29).
+Il notebook [!DNL Spark] ([!DNL Spark] 2.3 - obsoleto) utilizza il [!DNL Spark] kernel. Le due celle seguenti mostrano un esempio di caricamento del set di dati con un ID set di dati specificato nell&#39;intervallo di date di (2019-3-21, 2019-3-29).
 
 ![scintilla di carico 2.3](./images/migration/spark-scala/load-2.3.png)
 
-**Scala (Spark 2.4)**
+**Scala ([!DNL Spark]2.4)**
 
-Il notebook Scala (Spark 2.4) utilizza il kernel Scala, che richiede più valori al momento della configurazione, come evidenziato nella prima cella di codice. Inoltre, `var mdata` richiede la compilazione di più `option` valori. In questo blocco appunti, il codice precedentemente menzionato per [l&#39;inizializzazione di SparkSession](#initialize-sparksession-scala) è incluso nella cella di `var mdata` codice.
+Il notebook Scala ([!DNL Spark] 2.4) utilizza il kernel Scala, che richiede più valori al momento dell&#39;impostazione, come evidenziato nella prima cella di codice. Inoltre, `var mdata` richiede la compilazione di più `option` valori. In questo blocco appunti, il codice precedentemente menzionato per [l&#39;inizializzazione di SparkSession](#initialize-sparksession-scala) è incluso nella cella di `var mdata` codice.
 
 ![scintilla di carico 2.4](./images/migration/spark-scala/load-2.4.png)
 
@@ -766,7 +766,7 @@ Il notebook Scala (Spark 2.4) utilizza il kernel Scala, che richiede più valori
 
 Come per la [lettura di un set di dati](#notebook-read-dataset-spark), la scrittura in un set di dati richiede `option` valori aggiuntivi descritti nell&#39;esempio seguente. In Scala è possibile utilizzare `sys.env("PYDASDK_IMS_USER_TOKEN")` per dichiarare e restituire un valore, eliminando la necessità di definire variabili come `var userToken`. Nell&#39;esempio di Scala riportato di seguito, `sys.env` è utilizzato per definire e restituire tutti i valori richiesti necessari per la scrittura in un dataset.
 
-**Utilizzo di Spark (Spark 2.3 - obsoleto) - Kernel Spark**
+**Utilizzo[!DNL Spark]([!DNL Spark]2.3 - obsoleto) -[!DNL Spark]Kernel**
 
 ```scala
 import com.adobe.platform.dataset.DataSetOptions
@@ -783,7 +783,7 @@ df1.write.format("com.adobe.platform.dataset")
   .save("5e68141134492718af974844")
 ```
 
-**Utilizzo di Scala (Spark 2.4) - Kernel Scala**
+**Utilizzo di Scala ([!DNL Spark]2.4) - Kernel Scala**
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
