@@ -4,43 +4,46 @@ solution: Experience Platform
 title: Esplora un sistema di pagamento tramite l’API di servizio di flusso
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3d8682eb1a33b7678ed814e5d6d2cb54d233c03e
+source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+workflow-type: tm+mt
+source-wordcount: '576'
+ht-degree: 1%
 
 ---
 
 
-# Esplora un sistema di pagamento tramite l’API di servizio di flusso
+# Esplora un sistema di pagamento tramite l&#39; [!DNL Flow Service] API
 
-Flow Service è utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini diverse all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
+[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti diverse all&#39;interno  Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
-Questa esercitazione utilizza l&#39;API del servizio di flusso per esplorare le applicazioni di pagamento.
+Questa esercitazione utilizza l&#39; [!DNL Flow Service] API per esplorare le applicazioni di pagamento.
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
 
-* [Origini](../../../home.md): Experience Platform consente di acquisire dati da varie fonti, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi della piattaforma.
-* [Sandbox](../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [Origini](../../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi.
+* [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegarsi correttamente a un&#39;applicazione di pagamento tramite l&#39;API del servizio di flusso.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegarsi correttamente a un&#39;applicazione di pagamento tramite l&#39; [!DNL Flow Service] API.
 
 ### Raccogli credenziali richieste
 
-Questa esercitazione richiede una connessione valida con l&#39;applicazione di pagamento di terze parti da cui si desidera acquisire i dati. Una connessione valida include l&#39;ID della specifica di connessione dell&#39;applicazione e l&#39;ID di connessione. Per ulteriori informazioni sulla creazione di una connessione di pagamento e sul recupero di tali valori, consulta l’ [esercitazione sulla connessione di un’origine di pagamento a Platform](../../api/create/payments/paypal.md) .
+Questa esercitazione richiede una connessione valida con l&#39;applicazione di pagamento di terze parti da cui si desidera acquisire i dati. Una connessione valida include l&#39;ID della specifica di connessione dell&#39;applicazione e l&#39;ID di connessione. Per ulteriori informazioni sulla creazione di una connessione di pagamento e sul recupero di tali valori, consulta l’esercitazione [per la connessione di un’origine di pagamento all’esercitazione Platform](../../api/create/payments/paypal.md) .
 
 ### Lettura di chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione [come leggere le chiamate](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi della piattaforma Experience.
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere chiamate](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla [!DNL Experience Platform] risoluzione dei problemi.
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle API della piattaforma, dovete prima completare l&#39;esercitazione [di](../../../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
 
 * Autorizzazione: Portatore `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in Experience Platform, incluse quelle appartenenti a Flow Service, sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API della piattaforma richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -50,7 +53,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 ## Esplora le tabelle di dati
 
-Utilizzando l&#39;ID connessione per il sistema di pagamento, è possibile esplorare le tabelle di dati eseguendo richieste GET. Utilizzate la seguente chiamata per trovare il percorso della tabella che desiderate ispezionare o assimilare in Piattaforma.
+Utilizzando l&#39;ID connessione per il sistema di pagamento, è possibile esplorare le tabelle di dati eseguendo richieste GET. Utilizzate la seguente chiamata per trovare il percorso della tabella in cui desiderate ispezionare o assimilare [!DNL Platform].
 
 **Formato API**
 
@@ -75,7 +78,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un array di tabelle dal sistema di pagamento. Trovare la tabella che si desidera inserire in Piattaforma e prendere nota della relativa `path` proprietà, in quanto è necessario fornirla nel passaggio successivo per ispezionare la struttura.
+Una risposta corretta restituisce un array di tabelle dal sistema di pagamento. Trovare la tabella che si desidera inserire [!DNL Platform] e prendere nota della relativa `path` proprietà, in quanto è necessario fornire nel passaggio successivo per ispezionare la struttura.
 
 ```json
 [
@@ -178,4 +181,4 @@ Una risposta corretta restituisce la struttura della tabella specificata. I dett
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai esplorato il sistema di pagamenti, trovato il percorso della tabella che desideri inserire in Piattaforma, e ottenuto informazioni sulla sua struttura. Puoi utilizzare queste informazioni nell&#39;esercitazione successiva per [raccogliere i dati dal tuo sistema di pagamento e portarli in Piattaforma](../collect/payments.md).
+Seguendo questa esercitazione, hai esplorato il tuo sistema di pagamenti, trovato il percorso della tabella in cui desideri immergerti [!DNL Platform]e ottenuto informazioni sulla sua struttura. Puoi utilizzare queste informazioni nell&#39;esercitazione successiva per [raccogliere dati dal tuo sistema di pagamento e portarli in Platform](../collect/payments.md).
