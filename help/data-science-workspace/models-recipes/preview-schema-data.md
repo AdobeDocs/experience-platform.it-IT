@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Anteprima di schemi e set di dati
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+workflow-type: tm+mt
+source-wordcount: '211'
+ht-degree: 0%
 
 ---
 
 
 # Anteprima di schemi e set di dati
 
-Al completamento dello script di avvio da [Create the retail sales schema and dataset](./create-retails-sales-dataset.md) tutorial (Creare lo schema di vendita al dettaglio e l&#39;esercitazione sui dataset). Gli schemi di output e i set di dati possono essere visualizzati su Experience Platform. Per visualizzare gli schemi e i set di dati, procedere come segue:
+Al completamento dello script di avvio da [Create the retail sales schema and dataset](./create-retails-sales-dataset.md) tutorial (Creare lo schema di vendita al dettaglio e l&#39;esercitazione sui dataset). Gli schemi di output e i set di dati possono essere visualizzati su [!DNL Experience Platform]. Per visualizzare gli schemi e i set di dati, procedere come segue:
 
 1. Fate clic sul **[!UICONTROL Schemas]** collegamento situato nella colonna di navigazione a sinistra e individuate lo schema di input creato dallo script di avvio. Il nome dello schema corrisponderà a quello definito `config.yaml` dal passaggio precedente. Visualizzare i dettagli dello schema e la relativa composizione facendo clic su di esso.
 
@@ -27,10 +30,10 @@ Al completamento dello script di avvio da [Create the retail sales schema and da
 
 ## Passaggi successivi
 
-I dati di esempio Vendite al dettaglio sono stati ora assimilati correttamente in Experience Platform utilizzando lo script di avvio fornito.
+I dati di esempio Vendite al dettaglio sono stati inviati correttamente [!DNL Experience Platform] utilizzando lo script di avvio fornito.
 
 Per continuare a utilizzare i dati acquisiti:
 - [Analizzare i dati utilizzando i notebook Jupyter](../jupyterlab/analyze-your-data.md)
-   - Utilizza i notebook Jupyter in Data Science Workspace per accedere, esplorare, visualizzare e comprendere i tuoi dati.
+   - Utilizza i notebook Jupyter [!DNL Data Science Workspace] per accedere, esplorare, visualizzare e comprendere i tuoi dati.
 - [Creare pacchetti di file sorgente in una composizione](./package-source-files-recipe.md)
-   - Segui questa esercitazione per scoprire come portare il tuo modello in Data Science Workspace creando pacchetti di file sorgente in un importante file Recipe.
+   - Segui questa esercitazione per scoprire come inserire un modello personalizzato [!DNL Data Science Workspace] creando pacchetti di file sorgente in un file Recipe importabile.
