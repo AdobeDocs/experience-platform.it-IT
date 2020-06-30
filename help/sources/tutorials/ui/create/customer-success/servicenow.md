@@ -4,70 +4,70 @@ solution: Experience Platform
 title: Creare un connettore di origine ServiceNow nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: cada7c7eff7597015caa7333559bef16a59eab65
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 0%
+source-wordcount: '489'
+ht-degree: 1%
 
 ---
 
 
-# Creare un connettore di origine ServiceNow nell&#39;interfaccia utente
+# Creare un connettore [!DNL ServiceNow] sorgente nell’interfaccia utente
 
 >[!NOTE]
->Il connettore ServiceNow è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la panoramica [](../../../../home.md#terms-and-conditions) Origini.
+>Il [!DNL ServiceNow] connettore è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la panoramica [](../../../../home.md#terms-and-conditions) Origini.
 
-I connettori di origine in  Adobe Experience Platform consentono di trasferire i dati esternamente originati su base programmata. Questa esercitazione fornisce i passaggi per la creazione di un connettore di origine ServiceNow utilizzando l&#39;interfaccia utente di Platform.
+I connettori di origine in  Adobe Experience Platform consentono di trasferire i dati esternamente originati su base programmata. Questa esercitazione fornisce i passaggi necessari per creare un connettore [!DNL ServiceNow] sorgente utilizzando l&#39;interfaccia [!DNL Platform] utente.
 
 ## Introduzione
 
 Questa esercitazione richiede una conoscenza approfondita dei seguenti componenti del  Adobe Experience Platform:
 
-* [Sistema](../../../../../xdm/home.md)XDM (Experience Data Model): Framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
+* [Sistema](../../../../../xdm/home.md)XDM (Experience Data Model): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
    * [Nozioni di base sulla composizione](../../../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
    * [Esercitazione](../../../../../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
 * [Profilo](../../../../../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
-Se disponete già di una connessione ServiceNow, potete ignorare il resto del documento e procedere all&#39;esercitazione sulla [configurazione di un flusso di dati](../../dataflow/customer-success.md)
+Se disponete già di una [!DNL ServiceNow] connessione, potete ignorare il resto del documento e procedere all&#39;esercitazione sulla [configurazione di un flusso di dati](../../dataflow/customer-success.md)
 
 ### Raccogli credenziali richieste
 
-Per accedere al tuo account ServiceNow su Platform, devi fornire i seguenti valori:
+Per accedere al tuo [!DNL ServiceNow] account su [!DNL Platform], devi fornire i seguenti valori:
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `endpoint` | Endpoint del server ServiceNow. |
-| `username` | Il nome utente utilizzato per connettersi al server ServiceNow per l&#39;autenticazione. |
-| `password` | La password per connettersi al server ServiceNow per l&#39;autenticazione. |
+| `endpoint` | L&#39;endpoint del [!DNL ServiceNow] server. |
+| `username` | Il nome utente utilizzato per connettersi al [!DNL ServiceNow] server per l&#39;autenticazione. |
+| `password` | La password per connettersi al [!DNL ServiceNow] server per l&#39;autenticazione. |
 
 Per ulteriori informazioni su come iniziare, consulta [questo documento](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET)ServiceNow.
 
-## Connessione dell&#39;account ServiceNow
+## Collegamento dell&#39; [!DNL ServiceNow] account
 
-Dopo aver raccolto le credenziali necessarie, puoi seguire i passaggi descritti di seguito per creare un nuovo account ServiceNow da connettere ad Platform.
+Dopo aver raccolto le credenziali necessarie, potete seguire i passaggi descritti di seguito per creare un nuovo [!DNL ServiceNow] account a cui collegarvi [!DNL Platform].
 
-Accedete a <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> , quindi selezionate **Origini** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro *Origini* . Nella schermata *Catalogo* sono visualizzate diverse origini per le quali è possibile creare un account e ogni origine mostra il numero di account e flussi di dati esistenti associati a tali account.
+Accedete a <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> , quindi selezionate **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39; *[!UICONTROL Sources]* area di lavoro. Nella *[!UICONTROL Catalog]* schermata sono visualizzate diverse origini per le quali è possibile creare un account e ogni origine mostra il numero di account e flussi di dati esistenti associati a tali account.
 
 Potete selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l&#39;origine specifica con cui si desidera lavorare utilizzando l&#39;opzione di ricerca.
 
-Nella categoria *Customer Success* (Successo **cliente), selezionate** ServiceNowper esporre una barra delle informazioni sul lato destro dello schermo. La barra delle informazioni fornisce una breve descrizione della sorgente selezionata e le opzioni per collegarsi alla sorgente o visualizzare la documentazione. Per creare un nuovo account, selezionate l&#39;origine **** Connect.
+Sotto la *[!UICONTROL Customer Success]* categoria, selezionate **[!UICONTROL ServiceNow]** per esporre una barra delle informazioni sul lato destro dello schermo. La barra delle informazioni fornisce una breve descrizione della sorgente selezionata e le opzioni per collegarsi alla sorgente o visualizzare la documentazione. Per creare un nuovo account, selezionate **[!UICONTROL Connect source]**.
 
 ![](../../../../images/tutorials/create/servicenow/catalog.png)
 
-Viene visualizzata la pagina *Connetti a ServiceNow* . In questa pagina è possibile utilizzare credenziali nuove o già esistenti.
+Viene *[!UICONTROL Connect to ServiceNow]* visualizzata la pagina. In questa pagina è possibile utilizzare credenziali nuove o già esistenti.
 
 ### Nuovo account
 
-Se si utilizzano nuove credenziali, selezionare **Nuovo account**. Nel modulo di input visualizzato, specificare un nome, una descrizione facoltativa e le credenziali di ServiceNow. Al termine, selezionate **Connect** , quindi concedete un po&#39; di tempo per la creazione del nuovo account.
+Se si utilizzano nuove credenziali, selezionare **[!UICONTROL New account]**. Nel modulo di input visualizzato, specificare un nome, una descrizione facoltativa e [!DNL ServiceNow] le credenziali per la connessione. Al termine, selezionate **[!UICONTROL Connect]** e concedete un po&#39; di tempo per l&#39;impostazione del nuovo account.
 
 ![](../../../../images/tutorials/create/servicenow/new.png)
 
 ### Account esistente
 
-Per collegare un account esistente, selezionate l&#39;account ServiceNow con cui desiderate connettervi, quindi selezionate **Avanti** per continuare.
+Per collegare un account esistente, selezionate l&#39; [!DNL ServiceNow] account con cui desiderate connettervi, quindi selezionate **[!UICONTROL Next]** per continuare.
 
 ![](../../../../images/tutorials/create/servicenow/existing.png)
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai stabilito una connessione al tuo account ServiceNow. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per l’inserimento di dati in Platform](../../dataflow/customer-success.md).
+Seguendo questa esercitazione, è stata stabilita una connessione all&#39; [!DNL ServiceNow] account. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per l’inserimento di dati in Platform](../../dataflow/customer-success.md).
