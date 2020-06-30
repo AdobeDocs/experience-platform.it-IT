@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Raccolta di dati da un sistema di successo cliente tramite connettori di origine e API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6df2ccd06f506ada0be5805143c487edb853396b
+source-git-commit: 84ea3e45a3db749359f3ce4a0ea25429eee8bb66
 workflow-type: tm+mt
-source-wordcount: '1663'
+source-wordcount: '1615'
 ht-degree: 1%
 
 ---
@@ -14,38 +14,38 @@ ht-degree: 1%
 
 # Raccolta di dati da un sistema di successo cliente tramite connettori di origine e API
 
-Flow Service è utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini diverse all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
+[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti diverse all&#39;interno  Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
-Questa esercitazione descrive i passaggi necessari per recuperare i dati da un sistema di successo cliente e trasferirli in Piattaforma tramite connettori di origine e API.
+Questa esercitazione descrive i passaggi necessari per recuperare i dati da un sistema di successo cliente e trasferirli [!DNL Platform] attraverso connettori sorgente e API.
 
 ## Introduzione
 
-Questa esercitazione richiede l&#39;accesso a un sistema di successo cliente di terze parti tramite una connessione valida e informazioni sul file che si desidera portare in Piattaforma, incluso il percorso e la struttura del file. Se non disponete di queste informazioni, prima di provare questa esercitazione vedete l&#39;esercitazione sull&#39; [esplorazione di un database o di un sistema NoSQL mediante l&#39;API](../explore/customer-success.md) del servizio di flusso.
+Questa esercitazione richiede l&#39;accesso a un sistema di successo cliente di terze parti tramite una connessione valida e informazioni sul file in cui si desidera inserire [!DNL Platform], incluso il percorso e la struttura del file. Se non disponete di queste informazioni, prima di provare questa esercitazione vedete l&#39;esercitazione sull&#39; [esplorazione di un database o di un sistema NoSQL mediante l&#39;API](../explore/customer-success.md) del servizio di flusso.
 
-Questa esercitazione richiede anche di avere una conoscenza approfondita dei seguenti componenti di Adobe Experience Platform:
+Questa esercitazione richiede inoltre di conoscere in modo approfondito i seguenti componenti del  Adobe Experience Platform:
 
-* [Sistema](../../../../xdm/home.md)XDM (Experience Data Model): Il framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza dei clienti.
+* [Sistema](../../../../xdm/home.md)XDM (Experience Data Model): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
    * [Nozioni di base sulla composizione](../../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
    * [Schema Guida](../../../../xdm/api/getting-started.md)per lo sviluppatore del Registro di sistema: Include informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all&#39;API del Registro di sistema dello schema. Ciò include il vostro `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all’intestazione Accetta e ai suoi possibili valori).
-* [Servizio](../../../../catalog/home.md)catalogo: Catalog è il sistema di record per la posizione dei dati e la linea di collegamento all’interno di Experience Platform.
-* [Caricamento](../../../../ingestion/batch-ingestion/overview.md)batch: L’API Batch Ingestion consente di trasferire i dati in Experience Platform come file batch.
-* [Sandbox](../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [Servizio](../../../../catalog/home.md)catalogo: Catalogo è il sistema di registrazione per la posizione dei dati e la linea all&#39;interno [!DNL Experience Platform].
+* [Caricamento](../../../../ingestion/batch-ingestion/overview.md)batch: L&#39;API Batch Ingestion consente di assimilare i dati in [!DNL Experience Platform] file batch.
+* [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegarsi correttamente a un sistema di successo cliente tramite l&#39;API del servizio di flusso.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegarsi correttamente a un sistema di successo cliente tramite l&#39; [!DNL Flow Service] API.
 
 ### Lettura di chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione [come leggere le chiamate](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi della piattaforma Experience.
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere chiamate](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla [!DNL Experience Platform] risoluzione dei problemi.
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle API della piattaforma, dovete prima completare l&#39;esercitazione [di](../../../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
 
 * Autorizzazione: Portatore `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in Experience Platform, incluse quelle appartenenti a Flow Service, sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API della piattaforma richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -55,7 +55,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 ## Creare una classe e uno schema XDM ad hoc
 
-Per inserire dati esterni in Platform tramite connettori di origine, è necessario creare una classe e uno schema XDM ad hoc per i dati di origine non elaborati.
+Per inserire dati esterni nei connettori di origine, è necessario creare una classe e uno schema XDM ad hoc per i dati di origine non elaborati. [!DNL Platform]
 
 Per creare una classe e uno schema ad hoc, segui i passaggi descritti nell&#39;esercitazione [sullo schema](../../../../xdm/tutorials/ad-hoc.md)ad hoc. Quando create una classe ad hoc, tutti i campi trovati nei dati di origine devono essere descritti all&#39;interno del corpo della richiesta.
 
@@ -63,7 +63,7 @@ Continuate a seguire i passaggi descritti nella guida per gli sviluppatori fino 
 
 ## Creazione di una connessione di origine {#source}
 
-Con la creazione di uno schema XDM ad hoc, ora è possibile creare una connessione di origine utilizzando una richiesta POST all&#39;API del servizio di flusso. Una connessione di origine è costituita da un ID connessione, un file di dati di origine e un riferimento allo schema che descrive i dati di origine.
+Con la creazione di uno schema XDM ad hoc, ora è possibile creare una connessione di origine utilizzando una richiesta POST all&#39; [!DNL Flow Service] API. Una connessione di origine è costituita da un ID connessione, un file di dati di origine e un riferimento allo schema che descrive i dati di origine.
 
 Per creare una connessione di origine, è inoltre necessario definire un valore enum per l&#39;attributo del formato dati.
 
@@ -134,11 +134,11 @@ Una risposta corretta restituisce l’identificatore univoco (`id`) della connes
 
 ## Creare uno schema XDM di destinazione {#target}
 
-Nei passaggi precedenti, era stato creato uno schema XDM ad hoc per strutturare i dati di origine. Affinché i dati di origine siano utilizzati in Piattaforma, è necessario creare anche uno schema di destinazione per strutturare i dati di origine in base alle esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati della piattaforma in cui sono contenuti i dati di origine. Questo schema XDM di destinazione estende inoltre la classe di profilo singolo XDM.
+Nei passaggi precedenti, era stato creato uno schema XDM ad hoc per strutturare i dati di origine. Affinché i dati di origine siano utilizzati in [!DNL Platform], è necessario creare anche uno schema di destinazione per strutturare i dati di origine in base alle esigenze. Lo schema di destinazione viene quindi utilizzato per creare un [!DNL Platform] dataset in cui sono contenuti i dati di origine. Questo schema XDM di destinazione estende inoltre la classe di profilo singolo XDM.
 
 È possibile creare uno schema XDM di destinazione eseguendo una richiesta POST all&#39;API [del Registro di](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)schema.
 
-Se si preferisce utilizzare l&#39;interfaccia utente in Experience Platform, l&#39;esercitazione [Editor di](../../../../xdm/tutorials/create-schema-ui.md) schema fornisce istruzioni dettagliate per eseguire azioni simili nell&#39;Editor di schema.
+Se si preferisce utilizzare l&#39;interfaccia utente in [!DNL Experience Platform], l&#39;esercitazione [Editor](../../../../xdm/tutorials/create-schema-ui.md) schema fornisce istruzioni dettagliate per eseguire azioni simili nell&#39;Editor schema.
 
 **Formato API**
 
@@ -289,7 +289,7 @@ Una risposta corretta restituisce un array contenente l&#39;ID del set di dati a
 
 Una connessione di destinazione rappresenta la connessione alla destinazione in cui i dati acquisiti entrano. Per creare una connessione di destinazione, è necessario fornire l&#39;ID di specifica di connessione fisso associato al data Lake. Questo ID della specifica di connessione è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Ora sono disponibili gli identificatori univoci, uno schema di destinazione, un set di dati di destinazione e l&#39;ID delle specifiche di connessione al data Lake. Utilizzando questi identificatori, potete creare una connessione di destinazione utilizzando l&#39;API del servizio di flusso per specificare il set di dati che conterrà i dati di origine in entrata.
+Ora sono disponibili gli identificatori univoci, uno schema di destinazione, un set di dati di destinazione e l&#39;ID delle specifiche di connessione al data Lake. Utilizzando questi identificatori, potete creare una connessione di destinazione utilizzando l&#39; [!DNL Flow Service] API per specificare il dataset che conterrà i dati di origine in ingresso.
 
 **Formato API**
 
@@ -345,7 +345,7 @@ Una risposta corretta restituisce l&#39;identificatore univoco (`id`) della nuov
 
 ## Creare una mappatura {#mapping}
 
-Affinché i dati di origine siano assimilati in un set di dati di destinazione, devono essere mappati sullo schema di destinazione a cui aderisce il set di dati di destinazione. Questo si ottiene eseguendo una richiesta POST all&#39;API di servizio di conversione con mappature dati definite all&#39;interno del payload della richiesta.
+Affinché i dati di origine siano assimilati in un set di dati di destinazione, devono essere mappati sullo schema di destinazione a cui aderisce il set di dati di destinazione. Questo si ottiene eseguendo una richiesta POST all&#39; [!DNL Conversion Service] API con mappature dati definite all&#39;interno del payload della richiesta.
 
 **Formato API**
 
@@ -438,7 +438,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta di successo restituisce i dettagli della specifica del flusso di dati che è responsabile dell&#39;inserimento dei dati dal sistema di successo del cliente in Piattaforma. Questo ID è richiesto nel passaggio successivo per creare un nuovo flusso di dati.
+Una risposta corretta restituisce i dettagli della specifica del flusso di dati che è responsabile dell&#39;inserimento dei dati dal sistema di successo del cliente in [!DNL Platform]. Questo ID è richiesto nel passaggio successivo per creare un nuovo flusso di dati.
 
 ```json
 {
@@ -565,7 +565,7 @@ Una risposta di successo restituisce i dettagli della specifica del flusso di da
 L&#39;ultimo passo verso la raccolta dei dati è creare un flusso di dati. A questo punto, è necessario che siano preparati i seguenti valori obbligatori:
 
 * [ID connessione di origine](#source)
-* [ID connessione di destinazione](#target)
+* [ID connessione Target](#target)
 * [ID mappatura](#mapping)
 * [ID specifica Dataflow](#specs)
 
@@ -648,7 +648,7 @@ Una risposta corretta restituisce l’ID `id` del flusso di dati appena creato.
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato un connettore di origine per raccogliere i dati da un sistema di successo cliente su base programmata. I dati in entrata possono ora essere utilizzati dai servizi della piattaforma a valle, come Profilo cliente in tempo reale e Data Science Workspace. Per ulteriori informazioni, consulta i documenti seguenti:
+Seguendo questa esercitazione, hai creato un connettore di origine per raccogliere i dati da un sistema di successo cliente su base programmata. I dati in entrata possono ora essere utilizzati dai [!DNL Platform] servizi a valle come [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i documenti seguenti:
 
 * [Panoramica del profilo cliente in tempo reale](../../../../profile/home.md)
 * [Panoramica di Analysis Workspace](../../../../data-science-workspace/home.md)
@@ -661,5 +661,5 @@ Nella sezione seguente sono elencati i diversi connettori di origine dell&#39;ar
 
 | Nome connettore | Specifica di connessione |
 | -------------- | --------------- |
-| Salesforce Service Cloud | `cb66ab34-8619-49cb-96d1-39b37ede86ea` |
-| ServiceNow | `eb13cb25-47ab-407f-ba89-c0125281c563` |
+| [!DNL Salesforce Service Cloud] | `cb66ab34-8619-49cb-96d1-39b37ede86ea` |
+| [!DNL ServiceNow] | `eb13cb25-47ab-407f-ba89-c0125281c563` |
