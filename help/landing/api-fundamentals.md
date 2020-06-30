@@ -1,21 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Nozioni di base sulle API di Adobe Experience Platform
+title: ' Principi di base delle API Adobi Experience Platform'
 topic: getting started
 translation-type: tm+mt
-source-git-commit: c94f065a5d56ac495dd2d541531aaec94c187612
+source-git-commit: 2e5668a8b1d5fb831188fbd4e453b9f4aa7474df
+workflow-type: tm+mt
+source-wordcount: '425'
+ht-degree: 2%
 
 ---
 
 
-# Nozioni di base sulle API di Adobe Experience Platform
+#  Principi di base delle API Adobi Experience Platform
 
-Le API di Adobe Experience Platform utilizzano diverse tecnologie e sintassi di base importanti per gestire efficacemente le risorse della piattaforma basate su JSON. Il presente documento fornisce una breve panoramica di queste tecnologie e collegamenti alla documentazione esterna per ulteriori informazioni.
+ API di Adobe Experience Platform utilizzano diverse tecnologie e sintassi di base importanti per gestire efficacemente le risorse basate su JSON [!DNL Platform] . Il presente documento fornisce una breve panoramica di queste tecnologie e collegamenti alla documentazione esterna per ulteriori informazioni.
 
 ## Puntatore JSON {#json-pointer}
 
-JSON Pointer è una sintassi di stringa standard ([RFC 6901](https://tools.ietf.org/html/rfc6901)) per identificare valori specifici all&#39;interno dei documenti JSON. Un puntatore JSON è una stringa di token separati da `/` caratteri, che specificano le chiavi oggetto o gli indici di array e i token possono essere una stringa o un numero. Le stringhe Puntatore JSON vengono utilizzate in molte operazioni PATCH per le API della piattaforma, come descritto più avanti in questo documento. Per maggiori informazioni su JSON Pointer, consulta la documentazione [sulla panoramica di](https://rapidjson.org/md_doc_pointer.html)JSON Pointer.
+JSON Pointer è una sintassi di stringa standard ([RFC 6901](https://tools.ietf.org/html/rfc6901)) per identificare valori specifici all&#39;interno dei documenti JSON. Un puntatore JSON è una stringa di token separati da `/` caratteri, che specificano le chiavi oggetto o gli indici di array e i token possono essere una stringa o un numero. Le stringhe Puntatore JSON vengono utilizzate in molte operazioni PATCH per [!DNL Platform] le API, come descritto più avanti in questo documento. Per maggiori informazioni su JSON Pointer, consulta la documentazione [sulla panoramica di](https://rapidjson.org/md_doc_pointer.html)JSON Pointer.
 
 ### Esempio di oggetto schema JSON
 
@@ -77,12 +80,12 @@ JSON Pointer è una sintassi di stringa standard ([RFC 6901](https://tools.ietf.
 | `"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
 | `"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
->[!Note]
->Quando si utilizzano gli `xdm:sourceProperty` e `xdm:destinationProperty` gli attributi dei descrittori Experience Data Model (XDM), qualsiasi `properties` chiave deve essere **esclusa** dalla stringa JSON Pointer. Per ulteriori informazioni, consulta la Guida secondaria per gli sviluppatori di API del Registro di sistema dello schema sui [descrittori](../xdm/api/descriptors.md) .
+>[!Nota]
+>Quando si utilizzano gli `xdm:sourceProperty` attributi e `xdm:destinationProperty` gli attributi dei descrittori [!DNL Experience Data Model] (XDM), qualsiasi `properties` chiave deve essere **esclusa** dalla stringa Puntatore JSON. Per ulteriori informazioni, consulta la Guida secondaria per gli sviluppatori di API del Registro di sistema dello schema sui [descrittori](../xdm/api/descriptors.md) .
 
 ## Patch JSON
 
-Esistono molte operazioni PATCH per le API della piattaforma che accettano oggetti JSON Patch per i payload di richiesta. La patch JSON è un formato standard ([RFC 6902](https://tools.ietf.org/html/rfc6902)) per descrivere le modifiche a un documento JSON. Consente di definire aggiornamenti parziali a JSON senza dover inviare l’intero documento in un corpo della richiesta.
+Esistono molte operazioni PATCH per [!DNL Platform] le API che accettano oggetti JSON Patch per i payload di richiesta. La patch JSON è un formato standard ([RFC 6902](https://tools.ietf.org/html/rfc6902)) per descrivere le modifiche a un documento JSON. Consente di definire aggiornamenti parziali a JSON senza dover inviare l’intero documento in un corpo della richiesta.
 
 ### Esempio di oggetto patch JSON
 
@@ -93,7 +96,7 @@ Esistono molte operazioni PATCH per le API della piattaforma che accettano ogget
 }
 ```
 
-* `op`: Tipo di operazione della patch. Sebbene la patch JSON supporti diversi tipi di operazioni, non tutte le operazioni PATCH nelle API della piattaforma sono compatibili con ogni tipo di operazione. I tipi di operazioni disponibili sono:
+* `op`: Tipo di operazione della patch. Sebbene la patch JSON supporti diversi tipi di operazioni, non tutte le operazioni PATCH nelle [!DNL Platform] API sono compatibili con ogni tipo di operazione. I tipi di operazioni disponibili sono:
    * `add`
    * `remove`
    * `replace`
@@ -110,4 +113,4 @@ Lo schema JSON è un formato utilizzato per descrivere e convalidare la struttur
 
 ## Passaggi successivi
 
-In questo documento sono state introdotte alcune tecnologie e sintassi per la gestione delle risorse basate su JSON per Experience Platform. Per ulteriori informazioni sull&#39;utilizzo delle API della piattaforma, comprese le procedure ottimali e le risposte alle domande frequenti, consultate la guida alla risoluzione dei problemi della [piattaforma](troubleshooting.md).
+In questo documento sono state introdotte alcune tecnologie e sintassi relative alla gestione delle risorse basate su JSON per [!DNL Experience Platform]. Per ulteriori informazioni sull&#39;utilizzo delle [!DNL Platform] API, comprese le procedure ottimali e le risposte alle domande frequenti, consultare la guida [alla risoluzione dei problemi di](troubleshooting.md)Platform.
