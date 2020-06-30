@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Etichettare un campo come identità
 topic: api guide
 translation-type: tm+mt
-source-git-commit: 40ce232e39f62f1ee478ef05229dd2fc125ee4c0
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+workflow-type: tm+mt
+source-wordcount: '145'
+ht-degree: 1%
 
 ---
 
 
 # Etichettare un campo come identità
 
-I campi che contengono informazioni personali (PII) possono essere etichettati come campi di identità. Un valore fornito in un campo di identità viene interpretato come identità dal servizio identità. Lo spazio dei nomi dell&#39;identità è specificato come parte dell&#39;etichettatura del campo.
+I campi che contengono informazioni personali (PII) possono essere etichettati come campi di identità. Un valore fornito in un campo identità viene interpretato come identità da [!DNL Identity Service]. Lo spazio dei nomi dell&#39;identità è specificato come parte dell&#39;etichettatura del campo.
 
 Affinché un campo sia etichettato come identità, è necessario soddisfare i seguenti criteri:
 
