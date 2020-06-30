@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Esercitazioni su Data Science Workspace
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 4d7d61660e6691d77701db1c089b84eee7f60974
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1252'
 ht-degree: 0%
 
 ---
@@ -137,7 +137,7 @@ Per ulteriori informazioni, vedere l&#39;esercitazione per [creare una pipeline]
 
 ## Creare un&#39;applicazione di apprendimento automatico in tempo reale (alfa)
 
-La combinazione di un calcolo semplice sia su Hub che su Edge riduce drasticamente la latenza tradizionalmente associata all&#39;alimentazione di esperienze iper-personalizzate rilevanti e reattive. Di conseguenza, l&#39;apprendimento automatico in tempo reale offre inferenze con una latenza incredibilmente bassa per il processo decisionale sincrono. Alcuni esempi includono il rendering di contenuti personalizzati per le pagine Web, la visualizzazione di un&#39;offerta e gli sconti per ridurre il churn pur aumentando le conversioni in uno store Web.
+Una combinazione di un calcolo senza soluzione di continuità sia sull&#39;Hub che [!DNL Edge] riduce drasticamente la latenza tradizionalmente impegnata nel fornire esperienze iper-personalizzate rilevanti e reattive. Di conseguenza, l&#39;apprendimento automatico in tempo reale offre inferenze con una latenza incredibilmente bassa per il processo decisionale sincrono. Alcuni esempi includono il rendering di contenuti personalizzati per le pagine Web, la visualizzazione di un&#39;offerta e gli sconti per ridurre il churn pur aumentando le conversioni in uno store Web.
 
 **Questa guida è utile per:**
 - Conoscere l&#39;architettura di apprendimento automatico in tempo reale.
