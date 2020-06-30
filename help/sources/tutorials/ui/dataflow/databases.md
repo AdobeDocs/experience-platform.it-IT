@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurare un flusso di dati per un connettore di database nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 415b59fc3fa20c09372549e92571c1b41006e540
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '1019'
+source-wordcount: '1012'
 ht-degree: 0%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # Configurare un flusso di dati per un connettore di database nell&#39;interfaccia utente
 
-Un flusso di dati è un&#39;attività pianificata che recupera e trasferisce dati da un&#39;origine a un set di dati della piattaforma. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando il connettore di base del database.
+Un flusso di dati è un&#39;attività pianificata che recupera e trasferisce dati da un&#39;origine a un set di dati Platform. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando il connettore di base del database.
 
 ## Introduzione
 
-Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa esercitazione richiede una conoscenza approfondita dei seguenti componenti del  Adobe Experience Platform:
 
-- [Sistema](../../../../xdm/home.md)XDM (Experience Data Model): Il framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza dei clienti.
+- [Sistema](../../../../xdm/home.md)XDM (Experience Data Model): Framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
    - [Nozioni di base sulla composizione](../../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
    - [Esercitazione](../../../../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
 - [Profilo](../../../../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
@@ -40,7 +40,7 @@ Selezionate il database da utilizzare, quindi fate clic su **[!UICONTROL Next]**
 
 ## Mappatura dei campi dati su uno schema XDM
 
-Viene visualizzato il passaggio *Mapping* , che fornisce un&#39;interfaccia interattiva per mappare i dati di origine a un set di dati della piattaforma.
+Viene visualizzato il passaggio *Mapping* , che fornisce un&#39;interfaccia interattiva per mappare i dati di origine a un set di dati Platform.
 
 Scegliere un set di dati in entrata in cui assimilare i dati. È possibile utilizzare un set di dati esistente o crearne uno nuovo.
 
@@ -76,7 +76,7 @@ Una volta mappati i dati di origine, fai clic su **[!UICONTROL Next]**.
 
 Viene visualizzato il *[!UICONTROL Scheduling]* passaggio che consente di configurare una pianificazione di assimilazione per l&#39;acquisizione automatica dei dati di origine selezionati tramite le mappature configurate. Nella tabella seguente sono riportati i diversi campi configurabili per la pianificazione:
 
-| Field | Descrizione |
+| Campo | Descrizione |
 | --- | --- |
 | Frequenza | Le frequenze selezionabili sono: Minuto, Ora, Giorno e Settimana. |
 | Intervallo | Un numero intero che imposta l&#39;intervallo per la frequenza selezionata. |
@@ -114,7 +114,7 @@ Una volta creato il flusso di dati, potete monitorare i dati che vengono acquisi
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, è stato creato un flusso di dati per inserire i dati da un database esterno e ottenere informazioni dettagliate sul monitoraggio dei set di dati. I dati in entrata possono ora essere utilizzati dai servizi della piattaforma a valle, come Profilo cliente in tempo reale e Data Science Workspace. Per ulteriori informazioni, consulta i documenti seguenti:
+Seguendo questa esercitazione, è stato creato un flusso di dati per inserire i dati da un database esterno e ottenere informazioni dettagliate sul monitoraggio dei set di dati. I dati in entrata possono ora essere utilizzati dai servizi Platform a valle, come Profilo cliente in tempo reale e Data Science Workspace. Per ulteriori informazioni, consulta i documenti seguenti:
 
 - [Panoramica del profilo cliente in tempo reale](../../../../profile/home.md)
 - [Panoramica di Analysis Workspace](../../../../data-science-workspace/home.md)
@@ -131,10 +131,10 @@ Nell’area di *[!UICONTROL Sources]* lavoro, selezionate la **[!UICONTROL Dataf
 
 ![](../../../images/tutorials/dataflow/databases/list-of-dataflows.png)
 
-La colonna *Proprietà* viene visualizzata sul lato destro dello schermo, incluso un pulsante di **[!UICONTROL Enabled]** attivazione/disattivazione. Selezionate l’opzione per disattivare il flusso di dati. La stessa opzione può essere utilizzata per riattivare un flusso di dati dopo che è stato disabilitato.
+La *[!UICONTROL Properties]* colonna viene visualizzata sul lato destro dello schermo, con un pulsante di **[!UICONTROL Enabled]** attivazione/disattivazione. Selezionate l’opzione per disattivare il flusso di dati. La stessa opzione può essere utilizzata per riattivare un flusso di dati dopo che è stato disabilitato.
 
 ![](../../../images/tutorials/dataflow/databases/disable.png)
 
-### Attivare i dati in entrata per la popolazione del profilo
+### Attivare i dati in entrata per la [!DNL Profile] popolazione
 
-I dati in entrata provenienti dal connettore di origine possono essere utilizzati per arricchire e compilare i dati del profilo cliente in tempo reale. Per ulteriori informazioni sulla compilazione dei dati del profilo del cliente reale, consulta l’esercitazione sulla popolazione [del](../profile.md)profilo.
+I dati in entrata provenienti dal connettore di origine possono essere utilizzati per arricchire e compilare [!DNL Real-time Customer Profile] i dati. Per ulteriori informazioni sulla compilazione [!DNL Real-time Customer Profile] dei dati, consulta l’esercitazione sulla popolazione [di](../profile.md)profili.
