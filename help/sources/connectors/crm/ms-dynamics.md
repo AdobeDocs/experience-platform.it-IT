@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Connettore Microsoft Dynamics
 topic: overview
 translation-type: tm+mt
-source-git-commit: 565c8c4b084343e5488a725a6a93d5d50d59fe66
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '137'
 ht-degree: 0%
 
 ---
@@ -14,19 +14,19 @@ ht-degree: 0%
 
 # Connettore Microsoft Dynamics
 
-Adobe Experience Platform consente di acquisire dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi della piattaforma. È possibile acquisire dati da origini diverse come applicazioni Adobe, archiviazione basata su cloud, database e molti altri.
+ Adobe Experience Platform consente l&#39;acquisizione di dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi. È possibile acquisire dati da origini diverse come applicazioni Adobe, archiviazione basata su cloud, database e molti altri.
 
-Experience Platform supporta l&#39;acquisizione di dati da un sistema CRM di terze parti. Il supporto per i fornitori CRM include Microsoft Dynamics.
+[!DNL Experience Platform] fornisce il supporto per l&#39;acquisizione di dati da un sistema CRM di terze parti. Il supporto per i fornitori CRM include [!DNL Microsoft Dynamics].
 
-La documentazione seguente fornisce informazioni su come collegare Microsoft Dynamics alla piattaforma utilizzando le API o l&#39;interfaccia utente:
+La documentazione seguente fornisce informazioni su come connettersi [!DNL Microsoft Dynamics] all&#39; [!DNL Platform] utilizzo delle API o dell&#39;interfaccia utente:
 
-## Connessione di Microsoft Dynamics alla piattaforma tramite API
+## Connessione [!DNL Microsoft Dynamics] all&#39; [!DNL Platform] utilizzo delle API
 
 - [Creare un connettore Microsoft Dynamics utilizzando l&#39;API del servizio di flusso](../../tutorials/api/create/crm/ms-dynamics.md)
 - [Esplora un sistema CRM utilizzando l&#39;API del servizio di flusso](../../tutorials/api/explore/crm.md)
 - [Raccolta di dati CRM tramite l&#39;API del servizio di flusso](../../tutorials/api/collect/crm.md)
 
-## Collegare Microsoft Dynamics alla piattaforma mediante l&#39;interfaccia utente
+## Connessione [!DNL Microsoft Dynamics] all’ [!DNL Platform] interfaccia utente
 
 - [Creare un connettore di origine Microsoft Dynamics nell&#39;interfaccia utente](../../tutorials/ui/create/crm/dynamics.md)
 - [Configurare un flusso di dati per un connettore CRM nell&#39;interfaccia utente](../../tutorials/ui/dataflow/crm.md)
