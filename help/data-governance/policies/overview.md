@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sui criteri di utilizzo dei dati
 topic: policies
 translation-type: tm+mt
-source-git-commit: 92092620a7ba9129eef4bde852b1e0afc6612d74
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 0%
 
 # Panoramica sui criteri di utilizzo dei dati
 
-Affinché le etichette di utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario implementare dei criteri di utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing consentite o da cui è consentito eseguire attività sui dati all&#39;interno  Experience Platform.
+Affinché le etichette di utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario implementare dei criteri di utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing consentite o con cui è consentito eseguire determinate attività sui dati all&#39;interno [!DNL Experience Platform].
 
 Questo documento fornisce una panoramica di alto livello dei criteri di utilizzo dei dati e fornisce collegamenti ad ulteriore documentazione per l&#39;utilizzo dei criteri nell&#39;interfaccia utente o nell&#39;API.
 
 ## Azioni di marketing {#marketing-actions}
 
-**Le azioni** di marketing (o casi **di utilizzo** marketing) nel contesto del framework di governance dei dati sono azioni che un consumatore di dati Experience Platform  può intraprendere, per le quali l&#39;organizzazione intende limitare l&#39;uso dei dati. Di conseguenza, un criterio di utilizzo dei dati è definito come segue:
+**Le azioni** di marketing (o casi **di utilizzo** marketing) nel contesto del framework di governance dei dati sono azioni che un consumatore di [!DNL Experience Platform] dati può intraprendere, per le quali l&#39;organizzazione intende limitare l&#39;utilizzo dei dati. Di conseguenza, un criterio di utilizzo dei dati è definito come segue:
 
 1. Un&#39;azione di marketing specifica
 2. Le etichette di utilizzo dei dati a cui è stata limitata l&#39;esecuzione dell&#39;azione
 
-Un esempio di un&#39;azione di marketing potrebbe essere il desiderio di esportare un dataset in un servizio di terze parti. Se esiste un criterio che indica che tipi specifici di dati (come Informazioni personali (PII)) non possono essere esportati e si tenta di esportare un dataset contenente un&#39;etichetta &quot;I&quot; (Dati identità), riceverete una risposta dal Servizio criteri che indica che è stata violata una policy di utilizzo dei dati.
+Un esempio di un&#39;azione di marketing potrebbe essere il desiderio di esportare un dataset in un servizio di terze parti. Se è presente un criterio che indica che tipi specifici di dati (come Informazioni personali (PII)) non possono essere esportati e si tenta di esportare un set di dati contenente un&#39;etichetta &quot;I&quot; (Dati identità), si riceverà una risposta dalla [!DNL Policy Service] notifica che un criterio di utilizzo dei dati è stato violato.
 
 >[!NOTE] Le azioni di marketing di per sé non limitano l&#39;utilizzo dei dati. Devono essere inclusi nei criteri di utilizzo dei dati abilitati per poter valutare tali azioni in caso di violazioni dei criteri.
 
