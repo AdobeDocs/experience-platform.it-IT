@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Applicazione dei criteri di utilizzo dei dati tramite l'API di Servizio criteri
 topic: enforcement
 translation-type: tm+mt
-source-git-commit: 3e5245a718295cc5318c277a5cf9ee71da2a911b
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+workflow-type: tm+mt
+source-wordcount: '875'
+ht-degree: 2%
 
 ---
 
@@ -15,18 +18,18 @@ Dopo aver creato etichette di utilizzo dei dati per i dati e criteri di utilizzo
 
 >[!NOTE] Per impostazione predefinita, solo le politiche il cui stato è impostato per `ENABLED` poter partecipare alla valutazione. Per consentire `DRAFT` ai criteri di partecipare alla valutazione, è necessario includere il parametro query `includeDraft=true` nel percorso della richiesta.
 
-In questo documento sono descritti i passaggi necessari per utilizzare l&#39;API del servizio criteri per verificare la presenza di violazioni dei criteri in scenari diversi.
+In questo documento sono descritti i passaggi necessari per utilizzare l&#39; [!DNL Policy Service] API per verificare la presenza di violazioni dei criteri in scenari diversi.
 
 ## Introduzione
 
 Questa esercitazione richiede una conoscenza approfondita dei seguenti concetti chiave relativi all&#39;applicazione dei criteri DULE:
 
-* [Governance](../home.md)dei dati: Il framework tramite il quale la piattaforma applica la conformità all&#39;utilizzo dei dati.
+* [Governance](../home.md)dei dati: Il framework in base al quale [!DNL Platform] viene applicata la conformità all&#39;utilizzo dei dati.
    * [Etichette](../labels/overview.md)di utilizzo dati: Le etichette di utilizzo dei dati vengono applicate ai set di dati (e/o ai singoli campi all&#39;interno di tali set di dati), specificando le restrizioni relative alla modalità di utilizzo dei dati.
    * [Criteri](../policies/overview.md)di utilizzo dei dati: I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing consentite o limitate per determinati set di etichette DULE.
-* [Sandbox](../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
-Prima di avviare questa esercitazione, consultare la guida [](../api/getting-started.md) allo sviluppatore per informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all&#39;API di servizio Criteri DULE, incluse le intestazioni richieste e come leggere le chiamate API di esempio.
+Prima di avviare questa esercitazione, consulta la guida [](../api/getting-started.md) allo sviluppatore per informazioni importanti che devi conoscere per effettuare correttamente chiamate all’ [!DNL Policy Service] API DULE, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
 
 ## Valutazione tramite etichette DULE e un&#39;azione di marketing
 
@@ -362,4 +365,4 @@ Una risposta corretta restituisce l&#39;URL dell&#39;azione di marketing, le eti
 
 Leggendo questo documento, è stata verificata correttamente la presenza di violazioni dei criteri durante l&#39;esecuzione di un&#39;azione di marketing su un set di dati o un set di etichette DULE. Utilizzando i dati restituiti nelle risposte API, potete impostare protocolli all&#39;interno dell&#39;applicazione dell&#39;esperienza per applicare correttamente le violazioni dei criteri quando si verificano.
 
-Per i passaggi su come applicare criteri di utilizzo dei dati per segmenti di pubblico in Profilo cliente in tempo reale, consulta la seguente [esercitazione](../../segmentation/tutorials/governance.md).
+Per i passaggi su come applicare criteri di utilizzo dei dati per i segmenti di pubblico in [!DNL Real-time Customer Profile], consulta la seguente [esercitazione](../../segmentation/tutorials/governance.md).
