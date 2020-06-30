@@ -4,19 +4,22 @@ solution: Experience Platform
 title: Procedura dettagliata di Data Science Workspace
 topic: Walkthrough
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+workflow-type: tm+mt
+source-wordcount: '1638'
+ht-degree: 0%
 
 ---
 
 
-# Procedura dettagliata di Data Science Workspace
+# [!DNL Data Science Workspace] guida
 
-Questo documento fornisce una guida dettagliata per Adobe Experience Platform Data Science Workspace. Nello specifico, analizzeremo il flusso di lavoro generale che un esperto di dati dovrebbe seguire per risolvere un problema utilizzando l&#39;apprendimento automatico.
+Questo documento fornisce una procedura dettagliata per  Adobe Experience Platform [!DNL Data Science Workspace]. Nello specifico, analizzeremo il flusso di lavoro generale che un esperto di dati dovrebbe seguire per risolvere un problema utilizzando l&#39;apprendimento automatico.
 
 ## Prerequisiti
 
-- Un account Adobe ID registrato
-   - L’account Adobe ID deve essere stato aggiunto a un’organizzazione con accesso ad Adobe Experience Platform e a Data Science Workspace
+- Un account  Adobe ID registrato
+   - L&#39;account del Adobe ID  deve essere stato aggiunto a un&#39;organizzazione con accesso al Adobe Experience Platform  e [!DNL Data Science Workspace]
 
 ## Motivazione dello scienziato informatico
 
@@ -26,22 +29,22 @@ Un rivenditore deve affrontare molte sfide per rimanere competitivo nel mercato 
 
 La soluzione di uno scienziato informatico è quella di sfruttare la ricchezza di dati storici a cui un rivenditore ha accesso, di prevedere le tendenze future e di ottimizzare le decisioni di determinazione dei prezzi. Useremo i dati di vendita passati per formare il nostro modello di apprendimento automatico e utilizzeremo il modello per prevedere le tendenze di vendita future. In questo modo, il rivenditore potrà avere informazioni utili per apportare modifiche ai prezzi.
 
-In questa panoramica, seguiremo i passi che uno scienziato di dati dovrebbe compiere per prendere un set di dati e creare un modello per prevedere le vendite settimanali. Verranno analizzate le seguenti sezioni del Sample Retail Sales Notebook di Adobe Experience Platform Data Science Workspace:
+In questa panoramica, seguiremo i passi che uno scienziato di dati dovrebbe compiere per prendere un set di dati e creare un modello per prevedere le vendite settimanali. Verranno analizzate le seguenti sezioni nel Sample Retail Sales Notebook  Adobe Experience Platform [!DNL Data Science Workspace]:
 
 - [Configurazione](#setup)
 - [Esplorazione dei dati](#exploring-data)
 - [Progettazione delle funzioni](#feature-engineering)
 - [Formazione e verifica](#training-and-verification)
 
-### Notebook in Data Science Workspace
+### Blocco note in [!DNL Data Science Workspace]
 
-In primo luogo, vogliamo creare un notebook JupyterLab per aprire il notebook campione &quot;Vendite al dettaglio&quot;. Seguendo i passi fatti dallo scienziato informatico nel notebook, potremo comprendere meglio il flusso di lavoro tipico.
+In primo luogo, vogliamo creare un [!DNL JupyterLab] blocco appunti per aprire il blocco appunti di esempio &quot;Vendite al dettaglio&quot;. Seguendo i passi fatti dallo scienziato informatico nel notebook, potremo comprendere meglio il flusso di lavoro tipico.
 
-Nell’interfaccia utente di Adobe Experience Platform, fai clic sulla scheda Data Science nel menu principale per passare a Data Science Workspace. Da questa pagina, fate clic sulla scheda JupyterLab che aprirà il lancio di JupyterLab. Dovrebbe essere visualizzata una pagina simile a questa.
+Nell&#39;interfaccia utente del Adobe Experience Platform , fai clic sulla scheda Scienze dati nel menu principale per passare all&#39; [!DNL Data Science Workspace]. Da questa pagina, fare clic sulla [!DNL JupyterLab] scheda che aprirà il [!DNL JupyterLab] modulo di avvio. Dovrebbe essere visualizzata una pagina simile a questa.
 
 ![](./images/walkthrough/jupyterlab_launcher.png)
 
-Nella nostra esercitazione, utilizzeremo Python 3 nel notebook Jupyter per mostrare come accedere ed esplorare i dati. Nella pagina Launcher sono disponibili alcuni blocchi appunti di esempio. Useremo il campione &quot;Vendite al dettaglio&quot; per Python 3.
+Nella nostra esercitazione, useremo [!DNL Python] 3 in [!DNL Jupyter Notebook] per mostrare come accedere ed esplorare i dati. Nella pagina Launcher sono disponibili alcuni blocchi appunti di esempio. Utilizzeremo il campione &quot;Vendite al dettaglio&quot; per [!DNL Python] 3.
 
 ![](./images/walkthrough/retail_sales.png)
 
@@ -59,7 +62,7 @@ Con il notebook Retail Sales aperto, la prima cosa da fare è caricare le librer
 
 #### Carica dati
 
-Una volta caricate le librerie, è possibile iniziare a osservare i dati. Il seguente codice Python utilizza la struttura dei `DataFrame` dati dei panda e la funzione [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) per leggere il CSV ospitato su Github nel DataFrame panda:
+Una volta caricate le librerie, è possibile iniziare a osservare i dati. Il [!DNL Python] codice seguente utilizza la struttura di dati dei panda `DataFrame` e la funzione [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) per leggere il CSV ospitato [!DNL Github] nel DataFrame panda:
 
 ![](./images/walkthrough/read_csv.png)
 
@@ -73,7 +76,7 @@ Infine, possiamo dare un&#39;occhiata a come sono fatti i nostri dati. È possib
 
 #### Riepilogo statistico
 
-Possiamo sfruttare la libreria dei panda di Python per ottenere il tipo di dati di ogni attributo. L&#39;output della seguente chiamata fornisce informazioni sul numero di voci e sul tipo di dati per ciascuna colonna:
+Possiamo sfruttare la libreria [!DNL Python's] panda per ottenere il tipo di dati di ciascun attributo. L&#39;output della seguente chiamata fornisce informazioni sul numero di voci e sul tipo di dati per ciascuna colonna:
 
 ```PYTHON
 df.info()
