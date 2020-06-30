@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida di riferimento ai nodi di apprendimento automatico in tempo reale
 topic: Nodes reference
 translation-type: tm+mt
-source-git-commit: dc63ad0c0764355aed267eccd1bcc4965b04dba4
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '594'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ La seguente guida illustra le librerie di nodi supportate per l&#39;apprendiment
 
 ## Individuazione di nodi da utilizzare nella pipeline ML
 
-Copiare il codice seguente in un blocco appunti Python per visualizzare tutti i nodi disponibili per l&#39;uso.
+Copiare il codice seguente in un [!DNL Python] blocco appunti per visualizzare tutti i nodi disponibili per l&#39;uso.
 
 ```python
 from pprint import pprint
@@ -121,7 +121,7 @@ msg6 = model_train.process(msg5)
 | Valore | Descrizione |
 | --- | --- |
 | funzionalità | Inserire le feature nel modello (elenco di stringhe). <br> Ad esempio: `browser`, `device`, `login_page`, `product_page`, `search_page` |
-| label | Nome colonna di destinazione (stringa). |
+| label | Nome colonna Target (stringa). |
 | mode | Treno/prova (stringa). |
 | model_path | Percorso del modello di salvataggio locale in formato onnx. |
 | params.model | Percorso di importazione assoluto del modello (stringa), ad esempio: `sklearn.linear_model.LogisticRegression`. |
