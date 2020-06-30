@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Ottenere la cronologia cluster di un'identità
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+workflow-type: tm+mt
+source-wordcount: '303'
+ht-degree: 1%
 
 ---
 
 
 # Ottenere la cronologia cluster di un&#39;identità
 
-Le identità possono spostare i cluster nel corso di diverse esecuzioni del grafico del dispositivo. Il servizio identità fornisce visibilità alle associazioni cluster di una determinata identità nel tempo.
+Le identità possono spostare i cluster nel corso di diverse esecuzioni del grafico del dispositivo. [!DNL Identity Service] fornisce visibilità alle associazioni cluster di una determinata identità nel tempo.
 
 Utilizzate `graph-type` il parametro opzionale per indicare il tipo di output da cui ottenere il cluster. Le opzioni sono:
 
@@ -211,4 +214,4 @@ curl -X POST \
 
 ## Passaggi successivi
 
-Passare all&#39;esercitazione successiva per [elencare i mapping di identità](./list-identity-mappings.md)
+Passare all&#39;esercitazione successiva per [elencare le mappature delle identità](./list-identity-mappings.md)
