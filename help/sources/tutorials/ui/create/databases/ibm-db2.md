@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare un connettore sorgente IBM DB2 nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5ad763d2167c68f3293a2813248efaee22230a52
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
@@ -18,13 +18,13 @@ ht-degree: 0%
 > [!NOTE]
 > Il connettore IBM DB2 è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la panoramica [](../../../../home.md#terms-and-conditions) Origini.
 
-I connettori di origine in  Adobe Experience Platform consentono di trasferire i dati esternamente originati su base programmata. Questa esercitazione fornisce i passaggi per la creazione di un connettore sorgente IBM DB2 (in seguito denominato &quot;DB2&quot;) tramite l&#39;interfaccia utente di Platform.
+I connettori di origine in  Adobe Experience Platform consentono di trasferire i dati esternamente originati su base programmata. Questa esercitazione fornisce i passaggi per la creazione di un connettore sorgente IBM DB2 (in seguito denominato &quot;DB2&quot;) tramite l&#39;interfaccia [!DNL Platform] utente.
 
 ## Introduzione
 
 Questa esercitazione richiede una conoscenza approfondita dei seguenti componenti del  Adobe Experience Platform:
 
-* [Sistema](../../../../../xdm/home.md)XDM (Experience Data Model): Framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
+* [Sistema](../../../../../xdm/home.md)XDM (Experience Data Model): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
    * [Nozioni di base sulla composizione](../../../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
    * [Esercitazione](../../../../../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
 * [Profilo](../../../../../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
@@ -33,7 +33,7 @@ Se si dispone già di una connessione DB2 valida, è possibile ignorare il resto
 
 ### Raccogli credenziali richieste
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegarsi correttamente a DB2 utilizzando l&#39;API del servizio di flusso.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegarsi correttamente a DB2 utilizzando l&#39; [!DNL Flow Service] API.
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
@@ -46,7 +46,7 @@ Per ulteriori informazioni su come iniziare, consultare [questo documento](https
 
 ## Collegamento dell&#39;account IBM DB2
 
-Dopo aver raccolto le credenziali richieste, è possibile seguire i passaggi descritti di seguito per creare un nuovo account DB2 da connettere ad Platform.
+Dopo aver raccolto le credenziali richieste, è possibile seguire i passaggi descritti di seguito per creare un nuovo account DB2 a cui connettersi [!DNL Platform].
 
 Accedete a [Adobe Experience Platform](https://platform.adobe.com) , quindi selezionate **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39; *[!UICONTROL Sources]* area di lavoro. Nella *[!UICONTROL Catalog]* schermata sono visualizzate diverse origini con le quali è possibile creare un account in entrata e ogni origine mostra il numero di account e flussi di dati esistenti associati a tali account.
 
