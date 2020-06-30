@@ -4,20 +4,23 @@ solution: Experience Platform
 title: Connettore Apache Cassandra
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1fd2f526ee3efb4ae9f4d7af851bb5cd5d63cfa9
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 0%
 
 ---
 
 
-# Connettore Apache Cassandra
+# [!DNL Apache Cassandra ]connettore
 
-Adobe Experience Platform consente di acquisire dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi della piattaforma. È possibile acquisire dati da origini diverse come applicazioni Adobe, archiviazione basata su cloud, database e molti altri.
+ Adobe Experience Platform consente l&#39;acquisizione di dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi. È possibile acquisire dati da origini diverse come applicazioni Adobe, archiviazione basata su cloud, database e molti altri.
 
-Experience Platform supporta l’acquisizione di dati da un database di terze parti. La piattaforma può connettersi a diversi tipi di database come relazionale, NoSQL o data warehouse. Il supporto per i provider di database include Apache Cassandra.
+[!DNL Experience Platform] fornisce il supporto per l&#39;acquisizione di dati da un database di terze parti. [!DNL Platform] può connettersi a diversi tipi di database come relazionale, NoSQL o date warehouse. Il supporto per i provider di database include [!DNL Apache Cassandra].
 
-La documentazione seguente fornisce informazioni su come collegare Apache Cassandra alla piattaforma utilizzando le API:
+La documentazione seguente fornisce informazioni su come connettersi [!DNL Apache Cassandra] all&#39; [!DNL Platform] utilizzo delle API:
 
-## Connect Apache Cassandra alla piattaforma mediante le API
+## Connessione [!DNL Apache Cassandra] all&#39; [!DNL Platform] utilizzo delle API
 
 - [Creare un connettore Apache Cassandra utilizzando l&#39;API del servizio di flusso](../../tutorials/api/create/databases/cassandra.md)
 - [Esplora un sistema di database utilizzando l&#39;API del servizio di flusso](../../tutorials/api/explore/database-nosql.md)
