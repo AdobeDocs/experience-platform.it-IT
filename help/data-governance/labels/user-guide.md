@@ -4,18 +4,21 @@ solution: Experience Platform
 title: Guida utente etichette di utilizzo dati
 topic: labels
 translation-type: tm+mt
-source-git-commit: 475e774d5e7ebac036b42aa94736ba8e22c7185f
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+workflow-type: tm+mt
+source-wordcount: '925'
+ht-degree: 0%
 
 ---
 
 
 # Guida utente etichette di utilizzo dati
 
-Questa guida utente descrive i passaggi per l’utilizzo delle etichette di utilizzo dei dati (dette anche etichette DULE) nell’interfaccia utente della piattaforma Experience. Prima di utilizzare la guida, consulta la panoramica [sulla governance dei](../home.md) dati per un&#39;introduzione più efficace al framework DULE.
+Questa guida utente descrive i passaggi necessari per utilizzare le etichette di utilizzo dei dati (dette anche etichette DULE) all&#39;interno dell&#39;interfaccia [!DNL Experience Platform] utente. Prima di utilizzare la guida, consulta la panoramica [sulla governance dei](../home.md) dati per un&#39;introduzione più efficace al framework DULE.
 
 ## Gestione delle etichette di utilizzo dei dati a livello di dataset
 
-Per gestire le etichette di utilizzo dei dati a livello di dataset, è necessario selezionare un dataset esistente o crearne uno nuovo. Dopo aver effettuato l&#39;accesso ad Adobe Experience Platform, seleziona **[!UICONTROL Datasets]** nella barra di navigazione a sinistra per aprire l&#39;area di lavoro _Set_ dati. In questa pagina sono elencati tutti i set di dati creati appartenenti alla propria organizzazione, insieme a utili dettagli relativi a ciascun set di dati.
+Per gestire le etichette di utilizzo dei dati a livello di dataset, è necessario selezionare un dataset esistente o crearne uno nuovo. Dopo aver effettuato l&#39;accesso  Adobe Experience Platform, selezionate **[!UICONTROL Datasets]** nella navigazione a sinistra per aprire l&#39;area di lavoro _Set_ dati. In questa pagina sono elencati tutti i set di dati creati appartenenti alla propria organizzazione, insieme a utili dettagli relativi a ciascun set di dati.
 
 ![Scheda Set di dati in Area di lavoro dati](../images/labels/datasets.png)
 
@@ -97,12 +100,12 @@ L&#39; _[!UICONTROL Data Governance]_area di lavoro viene visualizzata nuovament
 
 ## Passaggi successivi
 
-Dopo aver aggiunto etichette di utilizzo dei dati a livello di set di dati e di campo, puoi iniziare a assimilare i dati in Experience Platform. Per saperne di più, leggi la documentazione [sull’inserimento dei](../../ingestion/home.md)dati.
+Ora che sono state aggiunte etichette di utilizzo dei dati a livello di set di dati e di campo, è possibile iniziare a assimilare i dati in [!DNL Experience Platform]. Per saperne di più, leggi la documentazione [sull’inserimento dei](../../ingestion/home.md)dati.
 
 È inoltre possibile definire criteri di utilizzo dei dati in base alle etichette applicate. Per ulteriori informazioni, vedere la panoramica [dei criteri di utilizzo dei](../policies/overview.md)dati.
 
 ## Risorse aggiuntive
 
-Il seguente video è stato realizzato per illustrare la governance dei dati e illustrare come applicare le etichette a un set di dati e a singoli campi.
+Il seguente video è pensato per illustrare [!DNL Data Governance]e illustrare come applicare etichette a un set di dati e a singoli campi.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on)
