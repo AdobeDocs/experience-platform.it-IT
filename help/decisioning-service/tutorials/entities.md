@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Gestire le entità del servizio di disattivazione tramite API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+workflow-type: tm+mt
+source-wordcount: '7207'
+ht-degree: 0%
 
 ---
 
 
 # Gestione di oggetti e regole di disattivazione tramite API
 
-Questo documento fornisce un&#39;esercitazione per lavorare con le entità aziendali di Decisioning Service utilizzando le API Adobe Experience Platform.
+Questo documento fornisce un&#39;esercitazione per lavorare con le entità aziendali utilizzando  API di Adobe Experience Platform. [!DNL Decisioning Service]
 
 L&#39;esercitazione è suddivisa in due parti:
 
@@ -21,31 +24,31 @@ L&#39;esercitazione è suddivisa in due parti:
 
 ## Introduzione
 
-Questa esercitazione richiede una buona conoscenza dei servizi della piattaforma Experience e delle convenzioni API. L&#39;archivio della piattaforma è un servizio utilizzato da molti altri servizi della piattaforma per memorizzare oggetti aziendali e vari tipi di metadati. Offre un modo sicuro e flessibile per gestire e interrogare gli oggetti da utilizzare in diversi servizi di runtime. Il servizio di gestione delle decisioni è uno di questi. Prima di iniziare questa esercitazione, consulta la documentazione per i seguenti elementi:
+Questa esercitazione richiede una conoscenza approfondita dei [!DNL Experience Platform] servizi e delle convenzioni API. Il [!DNL Platform] repository è un servizio utilizzato da molti altri [!DNL Platform] servizi per memorizzare oggetti aziendali e vari tipi di metadati. Offre un modo sicuro e flessibile per gestire e interrogare gli oggetti da utilizzare in diversi servizi di runtime. La [!DNL Decisioning Service] è una di quelle. Prima di iniziare questa esercitazione, consulta la documentazione per i seguenti elementi:
 
-- [Experience Data Model (XDM)](../../xdm/home.md): Il framework standardizzato tramite il quale la piattaforma organizza i dati sull&#39;esperienza cliente.
-- [Servizio](./../home.md)di disattivazione: Illustra i concetti e i componenti utilizzati per la decodifica delle esperienze in generale e per le decisioni sulle offerte in particolare. Illustra le strategie utilizzate per scegliere l&#39;opzione migliore da presentare durante l&#39;esperienza di un cliente.
-- [Lingua query profilo (PQL)](../../segmentation/pql/overview.md): PQL è un linguaggio potente per scrivere espressioni sulle istanze XDM. PQL viene utilizzato per definire le regole decisionali.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Framework standard con cui Platform organizza i dati sull&#39;esperienza dei clienti.
+- [!DNL Decisioning Service](./../home.md): Illustra i concetti e i componenti utilizzati per la decodifica delle esperienze in generale e per le decisioni sulle offerte in particolare. Illustra le strategie utilizzate per scegliere l&#39;opzione migliore da presentare durante l&#39;esperienza di un cliente.
+- [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md): PQL è un linguaggio potente per scrivere espressioni sulle istanze XDM. PQL viene utilizzato per definire le regole decisionali.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per effettuare correttamente chiamate alle API della piattaforma.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per eseguire correttamente le chiamate alle [!DNL Platform] API.
 
 ### Lettura di chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi della piattaforma Experience.
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla [!DNL Experience Platform] risoluzione dei problemi.
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle API della piattaforma, dovete prima completare l&#39;esercitazione [di](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API della piattaforma richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Per ulteriori informazioni sulle sandbox in Piattaforma, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+>[!NOTE] Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva:
 
@@ -53,7 +56,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 ## Convenzioni API repository
 
-Il servizio di disattivazione è controllato da una serie di oggetti aziendali correlati tra loro. Tutti gli oggetti aziendali sono memorizzati nell&#39;archivio oggetti aziendali della piattaforma. Una caratteristica chiave di questo repository è che le API sono ortogonali al tipo di oggetto business. Invece di utilizzare un&#39;API POST, GET, PUT, PATCH o DELETE che indica il tipo di risorsa nel suo endpoint API, ci sono solo 6 endpoint generici, ma accettano o restituiscono un parametro che indica il tipo di oggetto quando è necessario tale parametro. Lo schema deve essere registrato con l&#39;archivio, ma oltre a questo, l&#39;archivio è utilizzabile per un set di tipi di oggetto aperto.
+[!DNL Decisioning Service] è controllato da una serie di oggetti business correlati tra loro. Tutti gli oggetti aziendali sono memorizzati nel repository degli oggetti [!DNL Platform’s] aziendali. Una caratteristica chiave di questo repository è che le API sono ortogonali al tipo di oggetto business. Invece di utilizzare un&#39;API POST, GET, PUT, PATCH o DELETE che indica il tipo di risorsa nel suo endpoint API, ci sono solo 6 endpoint generici, ma accettano o restituiscono un parametro che indica il tipo di oggetto quando è necessario tale parametro. Lo schema deve essere registrato con l&#39;archivio, ma oltre a questo, l&#39;archivio è utilizzabile per un set di tipi di oggetto aperto.
 
 Oltre alle intestazioni elencate sopra, le API per creare, leggere, aggiornare, eliminare e interrogare gli oggetti del repository hanno le seguenti convenzioni:
 
@@ -66,7 +69,7 @@ I formati di payload API sono negoziati con un&#39; `Accept` intestazione o `Con
 | seguita<br>da un parametro `schema={schemaId}` | Il messaggio contiene un&#39;istanza descritta da uno schema JSON indicato dallo schema del parametro format. L’istanza viene racchiusa in una proprietà JSON `_instance`. Le altre proprietà di livello principale nel payload di risposta specificano le informazioni del repository disponibili per tutte le risorse.  I messaggi conformi al formato HAL hanno una `_links` proprietà che contiene riferimenti in formato HAL. |
 | `patch.hal` | Il messaggio contiene un payload JSON PATCH con il presupposto che l’istanza da patch sia conforme a HAL. Ciò significa che non solo le proprietà dell&#39;istanza, ma anche i collegamenti HAL dell&#39;istanza possono essere patch. Si noti che esistono restrizioni sulle proprietà che possono essere aggiornate dal client. |
 | `home.hal` | Il messaggio contiene una rappresentazione in formato JSON di una risorsa del documento principale per l&#39;archivio. |
-| xdm.Receipth | Il messaggio contiene una risposta in formato JSON per un&#39;operazione di creazione, aggiornamento (completo e patch) o eliminazione. Le ricevute contengono dati di controllo che indicano la revisione dell&#39;istanza sotto forma di ETag. |
+| xdm.receipt | Il messaggio contiene una risposta in formato JSON per un&#39;operazione di creazione, aggiornamento (completo e patch) o eliminazione. Le ricevute contengono dati di controllo che indicano la revisione dell&#39;istanza sotto forma di ETag. |
 
 L&#39;utilizzo di ciascuna variante **di** formato dipende dall&#39;API specifica:
 
@@ -89,7 +92,7 @@ L&#39;elenco dei contenitori accessibili viene ottenuto chiamando l&#39;endpoint
 
 ## Gestione dell&#39;accesso ai contenitori
 
-Un amministratore può raggruppare entità, risorse simili, autorizzazioni di accesso in profili. Questo riduce il carico di gestione ed è supportato dall’interfaccia utente [Admin Console di](https://adminconsole.adobe.com)Adobe. Devi essere un amministratore di prodotto per Adobe Experience Platform e Offers nella tua organizzazione per creare profili e assegnare gli utenti a tali profili.
+Un amministratore può raggruppare entità, risorse e autorizzazioni di accesso simili in profili. Questo riduce il carico di gestione ed è supportato dall’interfaccia utente [Admin Console  di](https://adminconsole.adobe.com)Adobe. È necessario essere un amministratore di prodotto per  Adobe Experience Platform nell&#39;organizzazione per creare profili e assegnare utenti a tali profili.
 
 È sufficiente creare profili di prodotto che corrispondano a determinate autorizzazioni in un unico passaggio e quindi aggiungere semplicemente gli utenti a tali profili. I profili fungono da gruppi ai quali sono state concesse autorizzazioni e ogni utente reale o tecnico del gruppo eredita tali autorizzazioni.
 
@@ -97,9 +100,9 @@ Un amministratore può raggruppare entità, risorse simili, autorizzazioni di ac
 
 Quando l’amministratore ha concesso l’accesso ai contenitori per utenti o integrazioni regolari, tali contenitori saranno visualizzati nell’elenco &quot;Home&quot; del repository. L’elenco può essere diverso per utenti o integrazioni diversi in quanto è un sottoinsieme di tutti i contenitori accessibili al chiamante. L&#39;elenco dei contenitori può essere filtrato in base alla loro associazione ai contesti dei prodotti. Il parametro del filtro viene chiamato `product` e può essere ripetuto. Se viene fornito più di un filtro contesto del prodotto, verrà restituita l&#39;unione dei contenitori che hanno associazioni con uno qualsiasi dei contesti del prodotto specificati. È possibile associare un singolo contenitore a più contesti di prodotto.
 
-Il contesto dei contenitori Servizio di disattivazione piattaforma è attualmente `dma_offers`.
+Il contesto dei [!DNL Platform][!DNL Decisioning Service] contenitori è attualmente `dma_offers`.
 
->[!NOTE] Il contesto per la decisione della piattaforma Contenitori sarà presto modificato in `acp`. Il filtraggio è facoltativo, ma i filtri solo per `dma_offers` una versione futura richiedono modifiche. Per prepararsi a questa modifica, i client non devono utilizzare filtri o applicare entrambi i contesti di prodotto come filtro.
+>[!NOTE] Il contesto per [!DNL Platform Decisioning Containers] sta per cambiare presto in `acp`. Il filtraggio è facoltativo, ma i filtri solo per `dma_offers` una versione futura richiedono modifiche. Per prepararsi a questa modifica, i client non devono utilizzare filtri o applicare entrambi i contesti di prodotto come filtro.
 
 **Richiesta**
 
@@ -350,7 +353,8 @@ La proprietà da confrontare con il valore specificato è identificata come perc
 
 Per le proprietà con valori stringa, numerici o data/ora, gli operatori consentiti sono: `==`, `!=`, `<`, `<=`, `>` e `>=`. Inoltre, per le proprietà con un valore stringa, `~` è possibile utilizzare un operatore. L&#39; `~` operatore corrisponde alla proprietà specificata in base a un&#39;espressione regolare. Il valore stringa della proprietà deve corrispondere all&#39; **intera** espressione affinché le entità vengano incluse nei risultati filtrati. Ad esempio, la ricerca della stringa `cars` in un punto qualsiasi all&#39;interno del valore della proprietà richiede l&#39;espressione regolare `.*cars.*`. Senza l&#39;interlinea o `.*`la fine, solo le entità corrispondono a un valore di proprietà che inizia o termina rispettivamente con `cars`. Per l&#39; `~` operatore, il confronto tra i caratteri lettera non fa distinzione tra maiuscole e minuscole. Per tutti gli altri operatori, il confronto fa distinzione tra maiuscole e minuscole.<br/><br/>
 Non solo le proprietà payload dell&#39;istanza possono essere utilizzate nelle espressioni filtro. Le proprietà dell&#39;involucro vengono confrontate allo stesso modo, ad esempio `property=repo:lastModifiedDate>=2019-02-23T16:30:00.000Z`. <br/>
-<br/>Il parametro di `property` query può essere ripetuto in modo da applicare più condizioni filtro, ad esempio per restituire tutte le istanze che sono state modificate dopo una determinata data e prima di una determinata data. I valori in tali espressioni devono essere codificati nell’URL. Se non viene specificata alcuna espressione e il nome della proprietà viene semplicemente elencato, gli elementi idonei sono quelli con una proprietà con il nome specificato.<br/>
+<br/>
+Il parametro di `property` query può essere ripetuto in modo da applicare più condizioni di filtro, ad esempio per restituire tutte le istanze che sono state modificate dopo una determinata data e prima di una determinata data. I valori in tali espressioni devono essere codificati nell’URL. Se non viene specificata alcuna espressione e il nome della proprietà viene semplicemente elencato, gli elementi idonei sono quelli con una proprietà con il nome specificato.<br/>
 <br/>
 
 - **`id`**: A volte un elenco deve essere filtrato dall’URI delle istanze. Il parametro di `property` query può essere utilizzato per filtrare un&#39;istanza, ma per ottenere più di un&#39;istanza, è possibile fornire alla richiesta un elenco di URI. Il `id` parametro viene ripetuto e ogni occorrenza specifica un valore URI. `id={URI_1}&id={URI_2},…` I valori URI devono essere codificati nell’URL.
@@ -453,7 +457,7 @@ Oltre ai parametri di paging e filtro delle API elenco, questa API consente ai c
 
 La ricerca full text è controllata dai seguenti parametri:
 
-- **`q`**: Contiene un elenco non ordinato separato da spazi di termini normalizzati prima che venga confrontato con eventuali proprietà stringa delle istanze. Le proprietà delle stringhe vengono analizzate in base ai termini e anche questi vengono normalizzati. La query di ricerca tenta di corrispondere a uno o più dei termini specificati nel `q` parametro. I caratteri +, -, =, &amp;&amp;,||, >, &lt;,!, (,), {, }, [,]^, &quot;, ~, *, ?, :, / hanno un significato speciale per determinare i limiti della parola all&#39;interno della stringa di query e devono essere preceduti da una barra rovesciata quando vengono visualizzati in un token che deve corrispondere al carattere. La stringa di query può essere racchiusa tra virgolette doppie per ottenere una corrispondenza esatta tra le stringhe e per evitare i caratteri speciali.
+- **`q`**: Contiene un elenco non ordinato separato da spazi di termini normalizzati prima che venga confrontato con eventuali proprietà stringa delle istanze. Le proprietà delle stringhe vengono analizzate in base ai termini e anche questi vengono normalizzati. La query di ricerca tenta di corrispondere a uno o più dei termini specificati nel `q` parametro. I caratteri +, -, =, &amp;&amp;, ||, >, &lt;,!, (,), {, }, [,]^, &quot;, ~, *, ?, :, / hanno un significato speciale per determinare i limiti della parola all&#39;interno della stringa di query e devono essere preceduti da una barra rovesciata quando vengono visualizzati in un token che deve corrispondere al carattere. La stringa di query può essere racchiusa tra virgolette doppie per ottenere una corrispondenza esatta tra le stringhe e per evitare i caratteri speciali.
 - **`field`**: Se i termini di ricerca devono essere associati solo a un sottoinsieme delle proprietà, il parametro field può indicare il percorso di tale proprietà. Il parametro può essere ripetuto per indicare più proprietà alle quali deve essere confrontata.
 - **`qop`**: Contiene un parametro di controllo utilizzato per modificare il comportamento corrispondente della ricerca. Quando il parametro è impostato su e allora tutti i termini di ricerca devono corrispondere e quando il parametro è assente o il suo valore è impostato su o allora uno qualsiasi dei termini può conteggiare per una corrispondenza.
 
@@ -831,7 +835,7 @@ Consultate [Aggiornamento e patch delle istanze](#updating-and-patching-instance
 
 Il valore nella proprietà condition della regola contiene un&#39;espressione PQL. Ai dati contestuali viene fatto riferimento tramite l&#39;espressione speciale del percorso @{schemaID}.
 
-Le regole si allineano naturalmente con i segmenti nella piattaforma Experience e spesso una regola riutilizza semplicemente l&#39;intento di un segmento testando la `segmentMembership` proprietà di un profilo. La `segmentMembership` proprietà contiene i risultati delle condizioni dei segmenti già valutate. Questo consente a un&#39;organizzazione di definire una volta i tipi di pubblico specifici del proprio dominio, denominarli e valutare le condizioni una volta sola.
+Le regole si allineano naturalmente con i segmenti nella regola [!DNL Experience Platform] e spesso una regola riutilizza semplicemente l&#39;intento di un segmento testando la `segmentMembership` proprietà di un profilo. La `segmentMembership` proprietà contiene i risultati delle condizioni dei segmenti già valutate. Questo consente a un&#39;organizzazione di definire una volta i tipi di pubblico specifici del proprio dominio, denominarli e valutare le condizioni una volta sola.
 
 ## Gestione delle raccolte di offerte
 
