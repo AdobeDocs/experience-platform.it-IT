@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare una ricetta utilizzando i notebook Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '2315'
+source-wordcount: '2273'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Creare una ricetta utilizzando i notebook Jupyter
 
-Questa esercitazione si sovrappone a due sezioni principali. Innanzitutto, si crea un modello di machine learning utilizzando un modello all&#39;interno di JupyterLab Notebook. Successivamente, si eserciterà il notebook per il flusso di lavoro delle ricette in JupyterLab per creare una ricetta all&#39;interno di Data Science Workspace.
+Questa esercitazione si sovrappone a due sezioni principali. Innanzitutto, creerete un modello di machine learning utilizzando un modello all&#39;interno [!DNL JupyterLab Notebook]. Successivamente, verrà eseguito il flusso di lavoro di ricetta del blocco appunti [!DNL JupyterLab] per creare una ricetta all&#39;interno [!DNL Data Science Workspace].
 
 ## Concetti introdotti:
 
@@ -23,20 +23,20 @@ Questa esercitazione si sovrappone a due sezioni principali. Innanzitutto, si cr
 - **Formazione:** La formazione è il processo di apprendimento di schemi e approfondimenti da dati etichettati.
 - **Punteggio:** Il punteggio è il processo di generazione di informazioni dai dati utilizzando un modello qualificato.
 
-## Introduzione all&#39;ambiente notebook JupyterLab
+## Introduzione all&#39;ambiente [!DNL JupyterLab] notebook
 
-La creazione di una ricetta da zero può essere realizzata in Data Science Workspace. Per iniziare, vai ad [Adobe Experience Platform](https://platform.adobe.com) e fai clic sulla **[!UICONTROL Notebooks]** scheda a sinistra. Per creare un nuovo notebook, selezionate il modello di Generatore di ricette dal modulo di avvio JupyterLab.
+È possibile creare una ricetta da zero all&#39;interno [!DNL Data Science Workspace]. Per iniziare, andate a [Adobe Experience Platform](https://platform.adobe.com) e fate clic sulla **[!UICONTROL Notebooks]** scheda a sinistra. Per creare un nuovo blocco appunti, selezionate il modello di Generatore di ricette dal pannello [!DNL JupyterLab Launcher].
 
-Il notebook Recipe Builder consente di eseguire corsi di formazione e punteggio all&#39;interno del notebook. Questo vi offre la flessibilità di apportare modifiche ai loro `train()` e `score()` metodi tra l&#39;esecuzione di esperimenti sui dati di formazione e punteggio. Una volta soddisfatti i risultati della formazione e del punteggio, è possibile creare una ricetta da utilizzare in Data Science Workspace utilizzando il notebook per la funzionalità di ricetta integrata nel notebook Recipe Builder.
+Il [!UICONTROL Recipe Builder] notebook consente di eseguire corsi di formazione e punteggio all&#39;interno del notebook. Questo vi offre la flessibilità di apportare modifiche ai loro `train()` e `score()` metodi tra l&#39;esecuzione di esperimenti sui dati di formazione e punteggio. Una volta soddisfatti i risultati della formazione e del punteggio, è possibile creare una ricetta da utilizzare nell&#39; [!DNL Data Science Workspace] utilizzo del notebook per utilizzare le funzionalità di ricetta integrate nel notebook Recipe Builder.
 
 >[!NOTE]
->Il notebook Recipe Builder supporta l&#39;utilizzo di tutti i formati di file, ma al momento la funzionalità Create Recipe supporta solo Python.
+>Il notebook Recipe Builder supporta l&#39;utilizzo di tutti i formati di file, ma al momento la funzionalità Crea ricetta supporta solo [!DNL Python].
 
 ![](../images/jupyterlab/create-recipe/recipe-builder.png)
 
 Quando si fa clic sul blocco appunti di Recipe Builder dall&#39;avvio, il blocco appunti viene aperto nella scheda. Il modello utilizzato nel blocco appunti è la Ricetta di previsione delle vendite al dettaglio Python che si trova anche in [questo archivio pubblico](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-Nella barra degli strumenti sono disponibili tre azioni aggiuntive: - **[!UICONTROL Train]**, **[!UICONTROL Score]** e **[!UICONTROL Create Recipe]**. Queste icone verranno visualizzate solo nel blocco appunti di Recipe Builder. Ulteriori informazioni su queste azioni verranno discusse [nella sezione](#training-and-scoring) Formazione e punteggio dopo la creazione della Ricetta nel blocco appunti.
+Nella barra degli strumenti sono disponibili tre azioni aggiuntive: - **[!UICONTROL Train]**, **[!UICONTROL Score]** e **[!UICONTROL Create Recipe]**. Queste icone verranno visualizzate solo nel [!UICONTROL Recipe Builder] blocco appunti. Ulteriori informazioni su queste azioni verranno discusse [nella sezione](#training-and-scoring) Formazione e punteggio dopo la creazione della Ricetta nel blocco appunti.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -50,7 +50,7 @@ Iniziare a apportare le modifiche necessarie alla cella e, al termine, eseguire 
 
 ## Introduzione al notebook Recipe Builder
 
-Ora che si conoscono le basi per l&#39;ambiente dei notebook JupyterLab, è possibile iniziare a guardare i file che compongono una ricetta modello di apprendimento automatico. I file di cui parleremo sono mostrati qui:
+Ora che si conoscono le basi per l&#39;ambiente [!DNL JupyterLab] notebook, è possibile iniziare a guardare i file che compongono una ricetta modello di apprendimento automatico. I file di cui parleremo sono mostrati qui:
 
 - [File dei requisiti](#requirements-file)
 - [File di configurazione](#configuration-files)
@@ -102,24 +102,24 @@ Per impostazione predefinita, quando si accede ai dati vengono impostati i segue
 ## Caricatore dati formazione {#training-data-loader}
 
 Lo scopo di Training Data Loader è di creare un&#39;istanza dei dati utilizzati per creare il modello di apprendimento automatico. In genere, il caricatore dati formazione esegue due attività:
-- Carica dati dalla piattaforma
+- Carica dati da [!DNL Platform]
 - Preparazione dei dati e progettazione di funzionalità
 
 Nelle due sezioni seguenti verranno analizzati il caricamento dei dati e la preparazione dei dati.
 
 ### Caricamento dei dati {#loading-data}
 
-In questo passaggio viene utilizzato il [frame di dati](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)panda. I dati possono essere caricati da file [!DNL Adobe Experience Platform] utilizzando l&#39;SDK della piattaforma (`platform_sdk`) o da origini esterne utilizzando i panda `read_csv()` o `read_json()` le funzioni.
+In questo passaggio viene utilizzato il [frame di dati](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)panda. I dati possono essere caricati da file [!DNL Adobe Experience Platform] utilizzando l&#39; [!DNL Platform] SDK (`platform_sdk`) o da origini esterne utilizzando i panda `read_csv()` o `read_json()` le funzioni.
 
-- [SDK per piattaforma](#platform-sdk)
+- [!DNL Platform SDK](#platform-sdk)
 - [Fonti esterne](#external-sources)
 
 >[!NOTE]
 >Nel blocco appunti di Recipe Builder, i dati vengono caricati tramite il `platform_sdk` caricatore dati.
 
-### SDK per piattaforma {#platform-sdk}
+### [!DNL Platform] SDK {#platform-sdk}
 
-Per un&#39;esercitazione dettagliata sull&#39;utilizzo del `platform_sdk` caricatore dati, visita la guida [SDK per la](../authoring/platform-sdk.md)piattaforma. Questa esercitazione fornisce informazioni sull&#39;autenticazione della build, sulla lettura di base dei dati e sulla scrittura di base dei dati.
+Per un&#39;esercitazione dettagliata sull&#39;utilizzo del `platform_sdk` caricatore dati, visita la guida [all&#39;SDK per](../authoring/platform-sdk.md)Platform. Questa esercitazione fornisce informazioni sull&#39;autenticazione della build, sulla lettura di base dei dati e sulla scrittura di base dei dati.
 
 ### Fonti esterne {#external-sources}
 
@@ -144,7 +144,7 @@ Ora i dati si trovano nell&#39;oggetto dataframe e possono essere analizzati e m
 ### Dall&#39;SDK per l&#39;accesso ai dati (obsoleto)
 
 >[!CAUTION]
-> `data_access_sdk_python` non è più consigliato. Consulta [Converti codice di accesso dati in SDK](../authoring/platform-sdk.md) piattaforma per una guida sull&#39;utilizzo del `platform_sdk` caricatore dati.
+> `data_access_sdk_python` non è più consigliato. Consulta [Converti codice di accesso ai dati in Platform SDK](../authoring/platform-sdk.md) per una guida sull&#39;utilizzo del `platform_sdk` caricatore di dati.
 
 Gli utenti possono caricare i dati utilizzando l&#39;SDK per l&#39;accesso ai dati. La libreria può essere importata nella parte superiore della pagina includendo la riga:
 
@@ -162,7 +162,7 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 ```
 
 >[!NOTE]
->Come indicato nella sezione [File di](#configuration-files)configurazione, quando accedete ai dati da Experience Platform, vengono impostati i seguenti parametri di configurazione:
+>Come indicato nella sezione [File di](#configuration-files)configurazione, i seguenti parametri di configurazione vengono impostati automaticamente quando si accede ai dati da [!DNL Experience Platform]:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -203,7 +203,7 @@ In questo esempio, al set di dati originale vengono eseguite cinque operazioni:
 - offset `weeklySales` per ottenere valore di vendita futuro e passato
 - suddividere i dati, per data, in `train` e `val` set di dati
 
-Innanzitutto, `week` vengono create `year` colonne e la `date` colonna originale viene convertita in Python [datetime](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html). I valori relativi a settimana e anno sono estratti dall&#39;oggetto datetime.
+Innanzitutto, `week` vengono create `year` colonne e la `date` colonna originale viene convertita in [!DNL Python] datetime [](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html). I valori relativi a settimana e anno sono estratti dall&#39;oggetto datetime.
 
 Successivamente `storeType` viene convertita in tre colonne che rappresentano i tre diversi tipi di store (`A`, `B`e `C`). Ciascuno di essi conterrà un valore booleano per indicare che `storeType` è vero. La `storeType` colonna verrà eliminata.
 
@@ -287,7 +287,7 @@ La `load()` funzione nel caricatore dei dati di punteggio deve essere completa c
 
 Il `pipeline.py` file include logica per la formazione e il punteggio.
 
-### Training {#training}
+### Formazione {#training}
 
 Lo scopo della formazione è quello di creare un modello utilizzando le funzioni e le etichette presenti nel dataset di formazione.
 
@@ -408,9 +408,9 @@ Tenere presente che la funzione restituisce un `metric` oggetto contenente un ar
 
 ### File Data Saver {#data-saver-file}
 
-Il `datasaver.py` file contiene la `save()` funzione per salvare la previsione durante il test del punteggio. La `save()` funzione prende la previsione e utilizza le API del catalogo della piattaforma di esperienza, scrive i dati nel `scoringResultsDataSetId` file specificato nel `scoring.conf` file.
+Il `datasaver.py` file contiene la `save()` funzione per salvare la previsione durante il test del punteggio. La `save()` funzione prenderà la previsione e utilizzando [!DNL Experience Platform Catalog] le API, scriverà i dati al `scoringResultsDataSetId` specificato nel `scoring.conf` file.
 
-L&#39;esempio utilizzato nella ricetta di esempio per le vendite al dettaglio è riportato di seguito. Prendete nota dell&#39;utilizzo della `DataSetWriter` libreria per scrivere dati su Platform:
+L&#39;esempio utilizzato nella ricetta di esempio per le vendite al dettaglio è riportato di seguito. Prendete nota dell&#39;utilizzo della `DataSetWriter` libreria per scrivere dati in Platform:
 
 ```PYTHON
 from data_access_sdk_python.writer import DataSetWriter
@@ -453,11 +453,11 @@ Dopo aver modificato la ricetta e aver ottenuto l’output di formazione/puntegg
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-Dopo aver premuto il pulsante, viene richiesto di immettere un nome per la ricetta. Questo nome rappresenta la ricetta effettiva creata su Piattaforma.
+Dopo aver premuto il pulsante, viene richiesto di immettere un nome per la ricetta. Questo nome rappresenta la ricetta effettiva creata in [!DNL Platform].
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Premendo **[!UICONTROL Ok]** potrai accedere alla nuova ricetta su [Adobe Experience Platform](https://platform.adobe.com/). Puoi fare clic sul **[!UICONTROL View Recipes]** pulsante per portarti alla **[!UICONTROL Recipes]** scheda sotto **[!UICONTROL ML Models]**
+Una volta premuto **[!UICONTROL Ok]** sarà possibile passare alla nuova ricetta sul [Adobe Experience Platform](https://platform.adobe.com/). Puoi fare clic sul **[!UICONTROL View Recipes]** pulsante per portarti alla **[!UICONTROL Recipes]** scheda sotto **[!UICONTROL ML Models]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
@@ -473,9 +473,9 @@ Una volta completato il processo, la ricetta avrà un aspetto simile al seguente
 
 ## Passaggi successivi {#next-steps}
 
-Completando questa esercitazione hai imparato a creare un modello di machine learning nel notebook Recipe Builder. Hai anche imparato a utilizzare il notebook per definire il flusso di lavoro all&#39;interno del notebook per creare una ricetta all&#39;interno di Data Science Workspace.
+Completando questa esercitazione hai imparato a creare un modello di machine learning nel notebook Recipe Builder. Hai anche imparato a utilizzare il blocco appunti per definire il flusso di lavoro all&#39;interno del blocco appunti per creare una ricetta all&#39;interno [!DNL Data Science Workspace].
 
-Per continuare a imparare a utilizzare le risorse in Data Science Workspace, visita il menu a discesa Ricette e modelli di Data Science Workspace.
+Per continuare a imparare a lavorare con le risorse all&#39;interno [!DNL Data Science Workspace], visita il menu a discesa [!DNL Data Science Workspace] ricette e modelli.
 
 ## Risorse aggiuntive {#additional-resources}
 
