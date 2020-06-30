@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Creare uno spazio dei nomi personalizzato
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+workflow-type: tm+mt
+source-wordcount: '75'
+ht-degree: 5%
 
 ---
 
 
 # Creazione di uno spazio dei nomi personalizzato
 
-Utilizzando l&#39;API Identity Namespace, potete creare uno spazio nomi identità personalizzato che sarà disponibile solo per la vostra organizzazione.
+Utilizzando l&#39; [!DNL Identity Namespace] API, potete creare uno spazio nomi identità personalizzato che sarà disponibile solo per la vostra organizzazione.
 
 Per consigli sulla creazione di spazi dei nomi personalizzati, consultate [la documentazione](../troubleshooting-guide.md)Domande frequenti sul servizio identità.
 
