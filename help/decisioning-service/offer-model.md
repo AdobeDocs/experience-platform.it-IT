@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Offer Decisition Domain Model
 topic: overview
 translation-type: tm+mt
-source-git-commit: fdaef24a23c1c1da064ca33e8bed522e506fead5
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+workflow-type: tm+mt
+source-wordcount: '2614'
+ht-degree: 0%
 
 ---
 
 
 # Panoramica sul modello di dominio di decisione offerta
 
-La decisione dell&#39;offerta è un caso d&#39;uso del servizio di gestione del servizio all&#39;interno del quale si formalizzano e si gestiscono centralmente le regole e le previsioni utilizzate per coinvolgere i clienti nelle offerte. La decisione dell&#39;offerta è considerata un tipo di decisione _**sul**_ contenuto. In questo caso d’uso, le opzioni _****_ decisionali sono denominate _**offerte**_ e sono caratterizzate in quanto tali dal contenuto ad esse allegato. Per un&#39;introduzione al modello a oggetti utilizzato dal servizio di gestione, fare riferimento a [Decisioning Service Domain Model](experience-model.md).
+La decisione dell&#39;offerta è un caso d&#39;uso [!DNL Decisioning Service] entro il quale si formalizzano e si gestiscono centralmente le regole e le previsioni utilizzate per coinvolgere i clienti nelle offerte. La decisione dell&#39;offerta è considerata un tipo di decisione _**sul**_ contenuto. In questo caso d’uso, le opzioni _****_ decisionali sono denominate _**offerte**_ e sono caratterizzate in quanto tali dal contenuto ad esse allegato. Per un&#39;introduzione al modello a oggetti utilizzato dal [!DNL Decisioning Service], fare riferimento a [Decisioning Service Domain Model](experience-model.md).
 
 L&#39;obiettivo è quello di presentare all&#39;utente finale una &quot;Migliore offerta&quot; in qualsiasi canale basata su criteri di targeting, vincoli di costi e di frequenza, nonché interazioni preliminari tra i canali, comprese le offerte precedenti.
 
@@ -44,7 +47,7 @@ L&#39;approccio generale consiste nel limitare la selezione delle offerte fino a
 | Risultati della decisione | Evento esperienza previsto con riferimento all&#39;offerta, ad esempio `eventType='opened'` |
 | Algoritmo decisionale | Logica interna del servizio, con parametri |
 | Vincoli | Vincoli di posizionamento, vincoli di calendario, vincoli globali e per ogni limite utente, vincoli di deduplicazione |
-| Norme di decisione | Regole di ammissibilità |
+| Norme di decisione | Eligibility rules (Regole di idoneità) |
 | Modello per utilità *prevista* | Livello o priorità dell&#39;offerta |
 
 Il numero totale di offerte nell&#39;inventario delle opzioni è in genere abbastanza grande (nell&#39;ordine di 10.000) e ogni attività di offerta può essere focalizzata su offerte che rientrano in una categoria diversa (argomento). La strategia di decisione dell&#39;offerta consente di allegare un filtro dell&#39;offerta a un&#39;attività dell&#39;offerta. Ulteriori vincoli saranno valutati al momento della richiesta della decisione.
@@ -60,7 +63,7 @@ Le offerte generali, denominate anche offerte personalizzate, sono le opzioni al
 
 I posizionamenti definiscono i vincoli di contenuto e vengono utilizzati con un&#39;attività per specificare il punto in cui viene distribuita l&#39;esperienza migliore successiva. Questo riduce ulteriormente il numero di opzioni che possono essere considerate ed è un altro vincolo imposto dall&#39;attività. Questo è detto vincolo di posizionamento. Saranno prese in considerazione solo le opzioni il cui contenuto soddisfa un vincolo di posizionamento, come le offerte. Tale valutazione viene effettuata nelle prime fasi della strategia decisionale. Quando gli oggetti di opzione modificano i vincoli di posizionamento di ogni attività vengono rivalutati e l&#39;opzione può prendere in considerazione o cadere per una o più attività.
 
-Non è responsabilità del Servizio di gestione delle decisioni formalizzare i dettagli complessi delle dipendenze dei contenuti. Al contrario, ogni client identificherà l&#39;elenco dei posizionamenti tra tutti i canali e assegnerà a tali posizionamenti identificatori e nomi univoci. Facendo riferimento a una posizione particolare, il designer afferma che il contenuto specificato rientrerà nella posizione.
+Non è responsabilità della [!DNL Decisioning Service] formalizzazione dei dettagli complessi delle dipendenze dei contenuti. Al contrario, ogni client identificherà l&#39;elenco dei posizionamenti tra tutti i canali e assegnerà a tali posizionamenti identificatori e nomi univoci. Facendo riferimento a una posizione particolare, il designer afferma che il contenuto specificato rientrerà nella posizione.
 
 Quando si sviluppa il contenuto, l&#39;esperto di marketing dell&#39;offerta e il progettista dei contenuti concorderanno semplicemente (devono) su un &quot;contratto implicito&quot; che sta dietro il nome &quot;Home Page Hero Image&quot; o &quot;Service Call Opening Script&quot;. Il primo può essere concordato come un&#39;immagine di larghezza di 600 px e altezza di 350 px e il secondo può limitare il contenuto al testo in due varianti linguistiche che non sia più di 50 parole in tre o quattro frasi con una struttura semantica. Posizionamento per non memorizzare tutti i significati del contratto nascosto.
 
@@ -98,7 +101,7 @@ Quando viene richiesta una decisione, il cliente può chiedere proposte per più
 
 I vincoli di duplicazione non sono attualmente scritti nell&#39;archivio oggetti aziendali. Al contrario, la deduplicazione è la strategia predefinita in fase di esecuzione. Un parametro di richiesta può ignorare il comportamento predefinito per eliminare il passaggio di deduplicazione.
 
-### Limitazioni del profilo - Regole di idoneità
+### [!DNL Profile] vincoli - Regole di idoneità
 
 Finora, i vincoli discussi sono stati applicabili indipendentemente da chi sia stata effettuata la selezione dell&#39;offerta. La decodifica delle esperienze supporta anche un caso di utilizzo in cui la personalizzazione delle proposizioni si basa sugli eventi record e sulle serie temporali di un cliente. Le regole vengono valutate per profilo, per decidere se un&#39;offerta è qualificata o deve essere soppressa per quell&#39;utente. A tale scopo, è possibile associare a ogni offerta una regola di idoneità. Oltre agli eventi di profilo e di esperienza di un utente finale, la regola di idoneità prenderà in considerazione i dati contestuali in tempo reale. Tali dati vengono forniti dal servizio di consegna e possono assumere la forma di dati non correlati a un profilo come livelli di scorte, condizioni meteorologiche, orari di volo.
 
