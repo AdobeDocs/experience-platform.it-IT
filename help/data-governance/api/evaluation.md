@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Criteri
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2997243622a7483ae23e21487128cea6badecb80
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+workflow-type: tm+mt
+source-wordcount: '940'
+ht-degree: 0%
 
 ---
 
@@ -490,6 +493,6 @@ Nella risposta seguente, l&#39;elenco di `duleLabels` è ora più breve, così c
 }
 ```
 
-## Valutazione dei criteri per il profilo cliente in tempo reale
+## Valutazione delle politiche [!DNL Real-time Customer Profile]
 
-L&#39;API Policy Service può essere utilizzata anche per verificare la presenza di violazioni dei criteri che comportano l&#39;utilizzo di segmenti di profilo cliente in tempo reale. Per ulteriori informazioni, consulta l’esercitazione sull’ [imposizione della conformità per l’utilizzo dei dati per i segmenti](../../segmentation/tutorials/governance.md) di pubblico.
+L&#39; [!DNL Policy Service] API può essere utilizzata anche per verificare la presenza di violazioni dei criteri che implicano l&#39;uso di [!DNL Real-time Customer Profile] segmenti. Per ulteriori informazioni, consulta l’esercitazione sull’ [imposizione della conformità per l’utilizzo dei dati per i segmenti](../../segmentation/tutorials/governance.md) di pubblico.
