@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creazione di un criterio di utilizzo dei dati
 topic: policies
 translation-type: tm+mt
-source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1194'
 ht-degree: 2%
 
 ---
@@ -16,22 +16,22 @@ ht-degree: 2%
 
 L&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati (DULE) è il meccanismo fondamentale  governance dei dati del Adobe Experience Platform. L&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE Policy Service consente di creare e gestire criteri DULE per determinare quali azioni di marketing possono essere eseguite rispetto ai dati che contengono determinate etichette DULE.
 
-Questo documento fornisce un&#39;esercitazione dettagliata per la creazione di un criterio DULE tramite l&#39;API del servizio criteri. Per una guida più completa alle diverse operazioni disponibili nell&#39;API, vedete la guida [per gli sviluppatori di](../api/getting-started.md)Policy Service.
+Questo documento fornisce un&#39;esercitazione dettagliata per la creazione di un criterio DULE tramite l&#39; [!DNL Policy Service] API. Per una guida più completa alle diverse operazioni disponibili nell&#39;API, vedete la guida [per gli sviluppatori di](../api/getting-started.md)Policy Service.
 
 ## Introduzione
 
 Questa esercitazione richiede una conoscenza approfondita dei seguenti concetti chiave relativi alla creazione e alla valutazione di criteri DULE:
 
-* [Governance](../home.md)dei dati: Framework con cui Platform applica la conformità all’utilizzo dei dati.
+* [Governance](../home.md)dei dati: Il framework in base al quale [!DNL Platform] viene applicata la conformità all&#39;utilizzo dei dati.
 * [Etichette](../labels/overview.md)di utilizzo dati: Le etichette di utilizzo dei dati vengono applicate ai campi di dati XDM, specificando le restrizioni relative alle modalità di accesso ai dati.
-* [Experience Data Model (XDM)](../../xdm/home.md): Framework standard con cui Platform organizza i dati sull&#39;esperienza dei clienti.
-* [Sandbox](../../sandboxes/home.md):  Experience Platform fornisce sandbox virtuali che dividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [Experience Data Model (XDM)](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
+* [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
-Prima di avviare questa esercitazione, consultare la guida [](../api/getting-started.md) allo sviluppatore per informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all&#39;API di servizio Criteri DULE, incluse le intestazioni richieste e come leggere le chiamate API di esempio.
+Prima di avviare questa esercitazione, consulta la guida [](../api/getting-started.md) allo sviluppatore per informazioni importanti che devi conoscere per effettuare correttamente chiamate all’ [!DNL Policy Service] API DULE, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
 
 ## Definire un&#39;azione di marketing {#define-action}
 
-Nel framework Data Governance, un&#39;azione di marketing è un&#39;azione che un consumatore di dati Experience Platform  esegue, per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati.
+Nel [!DNL Data Governance] quadro, un&#39;azione di marketing è un&#39;azione che un consumatore di [!DNL Experience Platform] dati esegue, per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati.
 
 Il primo passo per creare un criterio DULE consiste nel determinare quale azione marketing verrà valutata dal criterio. Questa operazione può essere eseguita utilizzando una delle seguenti opzioni:
 
@@ -44,7 +44,7 @@ Puoi cercare le azioni di marketing esistenti da valutare in base ai criteri DUL
 
 **Formato API**
 
-A seconda se stai cercando un&#39;azione di marketing fornita da  Experience Platform o un&#39;azione di marketing personalizzata creata dalla tua organizzazione, utilizza rispettivamente gli `marketingActions/core` endpoint o `marketingActions/custom` .
+A seconda che tu stia cercando un&#39;azione di marketing fornita dalla tua organizzazione [!DNL Experience Platform] o un&#39;azione di marketing personalizzata creata dalla tua organizzazione, usa rispettivamente gli `marketingActions/core` o `marketingActions/custom` gli endpoint.
 
 ```http
 GET /marketingActions/core
@@ -414,6 +414,6 @@ Una risposta di successo restituisce lo stato HTTP 200 (OK) e i dettagli del cri
 
 Seguendo questa esercitazione hai creato con successo un criterio di utilizzo dei dati per un&#39;azione di marketing. È ora possibile continuare l&#39;esercitazione sull&#39; [applicazione dei criteri](../enforcement/api-enforcement.md) di utilizzo dei dati per apprendere come verificare la presenza di violazioni dei criteri e gestirle nell&#39;applicazione di esperienza.
 
-Per ulteriori informazioni sulle diverse operazioni disponibili nell&#39;API di Policy Service, consultate la guida [per gli sviluppatori di](../api/getting-started.md)Policy Service. Per informazioni su come applicare criteri per i dati del profilo cliente in tempo reale, consulta l’esercitazione sull’ [applicazione della conformità dell’utilizzo dei dati per i segmenti](../../segmentation/tutorials/governance.md)di pubblico.
+Per ulteriori informazioni sulle diverse operazioni disponibili nell&#39; [!DNL Policy Service] API, consultate la guida [per gli sviluppatori di](../api/getting-started.md)Policy Service. Per informazioni su come applicare criteri per [!DNL Real-time Customer Profile] i dati, consulta l’esercitazione sull’ [imposizione della conformità per l’utilizzo dei dati da parte dei segmenti](../../segmentation/tutorials/governance.md)di pubblico.
 
-Per informazioni su come gestire i criteri di utilizzo nell&#39;interfaccia utente  Experience Platform, consultate la guida [utente ai](user-guide.md)criteri.
+Per informazioni su come gestire i criteri di utilizzo nell&#39;interfaccia [!DNL Experience Platform] utente, consultate la guida [utente ai](user-guide.md)criteri.
