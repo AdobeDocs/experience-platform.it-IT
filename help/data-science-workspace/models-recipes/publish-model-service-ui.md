@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Pubblicare un modello come servizio (interfaccia utente)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 7dc5075d3101b4780af92897c0381e73a9c5aef0
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '401'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Se si preferisce pubblicare un modello utilizzando le API Sensei Machine Learnin
 
 ## Punteggio con un servizio {#access-a-service}
 
-1. In  Adobe Experience Platform, fare clic sulla **[!UICONTROL Services]** scheda situata nella colonna di navigazione a sinistra per accedere alla *Galleria* servizi. Trova il Servizio che desideri utilizzare e fai clic su **[!UICONTROL Score]**.
+1. In  Adobe Experience Platform, fate clic sulla **[!UICONTROL Services]** scheda situata nella colonna di navigazione a sinistra per accedere al *[!UICONTROL Service Gallery]*. Trova il Servizio che desideri utilizzare e fai clic su **[!UICONTROL Score]**.
    ![](../images/models-recipes/publish-model/click_to_score.png)
 2. Selezionare un set di dati di input appropriato per l&#39;esecuzione del punteggio, quindi fare clic su **[!UICONTROL Next]**.
    ![](../images/models-recipes/publish-model/6_scoring_input.png)
@@ -52,4 +52,4 @@ Se si preferisce pubblicare un modello utilizzando le API Sensei Machine Learnin
 
 ## Passaggi successivi {#next-steps}
 
-Seguendo questa esercitazione, hai pubblicato correttamente un modello come servizio accessibile e i dati con punteggio utilizzando il nuovo servizio tramite *Service Gallery*. Seguite l&#39;esercitazione successiva per apprendere come [pianificare l&#39;esecuzione automatica della formazione e del punteggio su un servizio](./schedule-models-ui.md).
+Seguendo questa esercitazione, hai pubblicato correttamente un modello come servizio accessibile e i dati con punteggio utilizzando il nuovo servizio tramite *[!UICONTROL Service Gallery]*. Seguite l&#39;esercitazione successiva per apprendere come [pianificare l&#39;esecuzione automatica della formazione e del punteggio su un servizio](./schedule-models-ui.md).
