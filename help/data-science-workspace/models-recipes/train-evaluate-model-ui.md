@@ -4,26 +4,29 @@ solution: Experience Platform
 title: Formazione e valutazione di un modello (interfaccia utente)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+workflow-type: tm+mt
+source-wordcount: '961'
+ht-degree: 2%
 
 ---
 
 
 # Formazione e valutazione di un modello (interfaccia utente)
 
-In Adobe Experience Platform Data Science Workspace, viene creato un modello di apprendimento automatico che incorpora una ricetta esistente adatta all&#39;intento del modello. Il modello viene quindi addestrato e valutato per ottimizzare l&#39;efficienza operativa e l&#39;efficacia, affinando i relativi Hyperparameters associati. Le ricette sono riutilizzabili, il che significa che più modelli possono essere creati e personalizzati a scopi specifici con un&#39;unica ricetta.
+In  Adobe Experience Platform Data Science Workspace, un modello di apprendimento automatico viene creato incorporando una Ricetta esistente adatta all&#39;intento del modello. Il modello viene quindi addestrato e valutato per ottimizzare l&#39;efficienza operativa e l&#39;efficacia, affinando i relativi Hyperparameters associati. Le ricette sono riutilizzabili, il che significa che più modelli possono essere creati e personalizzati a scopi specifici con un&#39;unica ricetta.
 
 Questa esercitazione descrive i passaggi necessari per creare, formare e valutare un modello.
 
 ## Introduzione
 
-Per completare questa esercitazione, è necessario disporre dell&#39;accesso a Experience Platform. Se non disponete dell&#39;accesso a un&#39;organizzazione IMS in Experience Platform, rivolgetevi al vostro amministratore di sistema prima di continuare.
+Per completare questa esercitazione, è necessario avere accesso a [!DNL Experience Platform]. Se non disponete dell&#39;accesso a un&#39;organizzazione IMS in [!DNL Experience Platform], rivolgetevi all&#39;amministratore di sistema prima di procedere.
 
 Questa esercitazione richiede una composizione esistente. Se non disponete di una ricetta, seguite l&#39;esercitazione [Importa una ricetta in un pacchetto nell&#39;interfaccia utente](./import-packaged-recipe-ui.md) prima di continuare.
 
 ## Creare un modello
 
-1. In Adobe Experience Platform, fai clic sul **[!UICONTROL Models]** collegamento situato nella colonna di navigazione a sinistra per elencare tutti i modelli esistenti. Fare clic **[!UICONTROL Create Model]** vicino all&#39;angolo superiore destro della pagina per avviare il processo di creazione di un modello.
+1. In  Adobe Experience Platform, fare clic sul **[!UICONTROL Models]** collegamento situato nella colonna di navigazione a sinistra per elencare tutti i modelli esistenti. Fare clic **[!UICONTROL Create Model]** vicino all&#39;angolo superiore destro della pagina per avviare il processo di creazione di un modello.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
 2. Sfogliate l&#39;elenco delle ricette esistenti, individuate e selezionate la Ricetta da utilizzare per creare il modello e fate clic **[!UICONTROL Next]**.
@@ -39,10 +42,10 @@ Questa esercitazione richiede una composizione esistente. Se non disponete di un
 
 ## Creazione di un&#39;esecuzione di formazione
 
-1. In Adobe Experience Platform, fai clic sul **[!UICONTROL Models]** collegamento situato nella colonna di navigazione a sinistra per elencare tutti i modelli esistenti. Trovare e fare clic sul nome del modello da addestrare.
+1. In  Adobe Experience Platform, fare clic sul **[!UICONTROL Models]** collegamento situato nella colonna di navigazione a sinistra per elencare tutti i modelli esistenti. Trovare e fare clic sul nome del modello da addestrare.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-2. Vengono elencate tutte le esecuzioni di formazione esistenti con i rispettivi stati di formazione correnti. Per i modelli creati utilizzando l&#39;interfaccia utente di Data Science Workspace, un&#39;esecuzione di formazione viene generata automaticamente e eseguita utilizzando le configurazioni predefinite e il dataset di formazione di input.
+2. Vengono elencate tutte le esecuzioni di formazione esistenti con i rispettivi stati di formazione correnti. Per i modelli creati utilizzando l&#39;interfaccia [!DNL Data Science Workspace] utente, un&#39;esecuzione di formazione viene generata automaticamente e eseguita utilizzando le configurazioni predefinite e il dataset di formazione di input.
    ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
 3. Per creare una nuova esecuzione della formazione, fai clic **[!UICONTROL Train]** in alto a destra nella pagina Panoramica del modello.
@@ -58,7 +61,7 @@ Questa esercitazione richiede una composizione esistente. Se non disponete di un
 
 ## Valutazione del modello
 
-1. In Adobe Experience Platform, fai clic sul **[!UICONTROL Models]** collegamento situato nella colonna di navigazione a sinistra per elencare tutti i modelli esistenti. Individuare e fare clic sul nome del modello da valutare.
+1. In  Adobe Experience Platform, fare clic sul **[!UICONTROL Models]** collegamento situato nella colonna di navigazione a sinistra per elencare tutti i modelli esistenti. Individuare e fare clic sul nome del modello da valutare.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
 2. Vengono elencate tutte le esecuzioni di formazione esistenti con i rispettivi stati di formazione correnti. Con più esecuzioni di formazione completate, le metriche di valutazione possono essere confrontate tra diverse esecuzioni di formazione nel grafico di valutazione del modello, selezionate una metrica di valutazione utilizzando l&#39;elenco a discesa sopra il grafico.
@@ -77,7 +80,7 @@ Questa esercitazione richiede una composizione esistente. Se non disponete di un
 
 ## Passaggi successivi
 
-Questa esercitazione illustra come creare, formarsi e valutare un modello in Data Science Workspace. Una volta raggiunto un modello ottimizzato, è possibile utilizzare il modello preparato per generare informazioni seguendo l&#39;esercitazione [Punteggio a Model (Punteggio a Model) nell&#39;esercitazione dell&#39;interfaccia utente](./score-model-ui.md) .
+Questa esercitazione illustra come creare, addestrare e valutare un modello in [!DNL Data Science Workspace]. Una volta raggiunto un modello ottimizzato, è possibile utilizzare il modello preparato per generare informazioni seguendo l&#39;esercitazione [Punteggio a Model (Punteggio a Model) nell&#39;esercitazione dell&#39;interfaccia utente](./score-model-ui.md) .
 
 ## Riferimenti {#reference}
 
