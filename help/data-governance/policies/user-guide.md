@@ -4,30 +4,30 @@ solution: Experience Platform
 title: Guida utente per i criteri di utilizzo dei dati
 topic: policies
 translation-type: tm+mt
-source-git-commit: c4554e3fbc0dd527606b81e2767cb5777b6e81e7
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '699'
-ht-degree: 1%
+source-wordcount: '686'
+ht-degree: 0%
 
 ---
 
 
 # Guida utente per i criteri di utilizzo dei dati
 
- Adobe Experience Platform Data Governance fornisce un&#39;interfaccia utente che consente di creare e gestire i criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle azioni che è possibile eseguire nell&#39;area di lavoro _Criteri_ nell&#39;interfaccia utente di Experience Platform .
+ Adobe Experience Platform Data Governance fornisce un&#39;interfaccia utente che consente di creare e gestire i criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle azioni che è possibile eseguire nell&#39;area di lavoro _Criteri_ nell&#39;interfaccia [!DNL Experience Platform] utente.
 
 >[!IMPORTANT] Tutti i criteri di utilizzo dei dati (inclusi i criteri di base forniti da Adobe) sono disattivati per impostazione predefinita. Affinché un singolo criterio possa essere preso in considerazione per l&#39;applicazione, è necessario abilitare manualmente tale criterio. Per informazioni su come [abilitare i criteri](#enable) , consulta la sezione relativa all’attivazione dei criteri nell’interfaccia utente.
 
 ## Prerequisiti
 
-Questa guida richiede una conoscenza approfondita dei seguenti concetti  Experience Platform:
+Questa guida richiede una buona comprensione dei seguenti [!DNL Experience Platform] concetti:
 
-- [Governance dei dati](../home.md)
+- [!DNL Data Governance](../home.md)
 - [Criteri di utilizzo dei dati](./overview.md)
 
 ## Visualizzare i criteri di utilizzo dei dati {#view-policies}
 
-Nell’interfaccia  di Experience Platform, fate clic **[!UICONTROL Policies]** per aprire l’ *[!UICONTROL Policies]* area di lavoro. Nella **[!UICONTROL Browse]** scheda è possibile visualizzare un elenco dei criteri disponibili, incluse le etichette associate, le azioni di marketing e lo stato.
+Nell’ [!DNL Experience Platform] interfaccia utente, fate clic **[!UICONTROL Policies]** per aprire l’ *[!UICONTROL Policies]* area di lavoro. Nella **[!UICONTROL Browse]** scheda è possibile visualizzare un elenco dei criteri disponibili, incluse le etichette associate, le azioni di marketing e lo stato.
 
 ![](../images/policies/browse-policies.png)
 
@@ -37,7 +37,7 @@ Fate clic su un criterio elencato per visualizzarne la descrizione e il tipo. Se
 
 ## Creazione di un criterio di utilizzo dati personalizzato {#create-policy}
 
-Per creare un nuovo criterio di utilizzo dei dati personalizzato, fate clic **[!UICONTROL Create policy]** nell&#39;angolo superiore destro della **[!UICONTROL Browse]** scheda nell&#39;area di lavoro *Criteri* .
+Per creare un nuovo criterio di utilizzo dei dati personalizzato, fare clic **[!UICONTROL Create policy]** nell&#39;angolo superiore destro della **[!UICONTROL Browse]** scheda nell&#39;area di *[!UICONTROL Policies]* lavoro.
 
 ![](../images/policies/create-policy-button.png)
 
@@ -107,8 +107,8 @@ Se l&#39;azione di marketing non è utilizzata da alcun criterio di utilizzo esi
 
 ## Passaggi successivi
 
-In questo documento è stata fornita una panoramica su come gestire i criteri di utilizzo dei dati nell’interfaccia utente  Experience Platform. Per i passaggi su come gestire i criteri tramite l&#39;API DULE Policy, vedete la guida [](../api/getting-started.md)per gli sviluppatori. Per informazioni su come applicare i criteri di utilizzo dei dati, consultate la panoramica [sull&#39;applicazione dei](../enforcement/overview.md)criteri.
+Questo documento fornisce una panoramica su come gestire i criteri di utilizzo dei dati nell&#39; [!DNL Experience Platform] interfaccia utente. Per i passaggi su come gestire i criteri tramite l&#39;API DULE Policy, vedete la guida [](../api/getting-started.md)per gli sviluppatori. Per informazioni su come applicare i criteri di utilizzo dei dati, consultate la panoramica [sull&#39;applicazione dei](../enforcement/overview.md)criteri.
 
-Il seguente video illustra come utilizzare i criteri di utilizzo nell’interfaccia utente  di Experience Platform:
+Il video seguente illustra come utilizzare i criteri di utilizzo nell’ [!DNL Experience Platform] interfaccia utente:
 
 >[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)
