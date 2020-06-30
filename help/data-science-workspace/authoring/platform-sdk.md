@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Guida all'SDK per la piattaforma
+title: Guida all'SDK per Platform
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '447'
 ht-degree: 2%
 
 ---
 
 
-# Guida all&#39;SDK per la piattaforma
+# [!DNL Platform] Guida all&#39;SDK
 
 Questa esercitazione fornisce informazioni sulla conversione `data_access_sdk_python` al nuovo Python `platform_sdk` sia in Python che in R. Questa esercitazione fornisce informazioni sulle operazioni seguenti:
 
@@ -69,7 +69,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## Lettura di base dei dati {#basic-reading-of-data}
 
-Con il nuovo SDK della piattaforma, la dimensione massima di lettura è 32 GB, con un tempo massimo di lettura di 10 minuti.
+Con la nuova [!DNL Platform] SDK, la dimensione massima di lettura è 32 GB, con un tempo massimo di lettura di 10 minuti.
 
 Se il tempo di lettura è troppo lungo, è possibile provare a utilizzare una delle seguenti opzioni di filtro:
 
@@ -144,15 +144,15 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-Il nuovo SDK della piattaforma supporta le seguenti operazioni:
+Il nuovo [!DNL Platform] SDK supporta le seguenti operazioni:
 
 | Funzionamento | Funzione |
 | --------- | -------- |
 | È uguale a (`=`) | `eq()` |
 | Greater than (`>`) | `gt()` |
-| Maggiore o uguale a (`>=`) | `ge()` |
+| Greater than or equal to (`>=`) | `ge()` |
 | Less than (`<`) | `lt()` |
-| Minore o uguale a (`<=`) | `le()` |
+| Less than or equal to (`<=`) | `le()` |
 | And (`&`) | `And()` |
 | Oppure (`|`) | `Or()` |
 
@@ -217,4 +217,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Passaggi successivi
 
-Una volta configurato il `platform_sdk` data loader, i dati vengono preparati e quindi suddivisi nei `train` set di dati e `val` nei set di dati. Per saperne di più sulla preparazione dei dati e sulla progettazione di funzionalità, consulta la sezione sulla preparazione [dei dati e la progettazione](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) di funzionalità nell&#39;esercitazione per la creazione di una ricetta con i notebook JupyterLab.
+Una volta configurato il `platform_sdk` data loader, i dati vengono preparati e quindi suddivisi nei `train` set di dati e `val` nei set di dati. Per saperne di più sulla preparazione dei dati e sulla progettazione di funzionalità, consulta la sezione sulla preparazione [dei dati e la progettazione](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) di funzionalità nell’esercitazione per la creazione di una ricetta con [!DNL JupyterLab] notebook.
