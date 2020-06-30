@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criteri
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '862'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Criteri
 
-I criteri di utilizzo dei dati sono regole adottate dalla tua organizzazione che descrivono i tipi di azioni di marketing che puoi eseguire su dati all&#39;interno  Experience Platform o da cui ti sono limitate.
+I criteri di utilizzo dei dati sono regole adottate dalla tua organizzazione che descrivono i tipi di azioni di marketing consentite o da cui ti sono stati imposti limiti per l&#39;esecuzione di dati all&#39;interno [!DNL Experience Platform].
 
 L&#39; `/policies` endpoint viene utilizzato per tutte le chiamate API relative alla visualizzazione, alla creazione, all&#39;aggiornamento o all&#39;eliminazione dei criteri di utilizzo dei dati.
 
@@ -406,7 +406,7 @@ Una richiesta di aggiornamento riuscita restituisce uno stato HTTP 200 (OK) e il
 
 Una parte specifica di un criterio può essere aggiornata utilizzando una richiesta PATCH. A differenza delle richieste PUT che _riscritgono_ il criterio, PATCH richiede di aggiornare solo il percorso specificato nel corpo della richiesta. Questo è particolarmente utile quando desiderate abilitare o disabilitare un criterio, in quanto dovete inviare solo il percorso specifico che desiderate aggiornare (`/status`) e il relativo valore (`ENABLE` o `DISABLE`).
 
-L&#39;API Policy Service al momento supporta le operazioni PATCH &quot;add&quot;, &quot;replace&quot; e &quot;remove&quot; e consente di combinare diversi aggiornamenti in una singola chiamata aggiungendo ogni oggetto come oggetto all&#39;interno dell&#39;array, come illustrato negli esempi seguenti.
+L&#39; [!DNL Policy Service] API supporta attualmente le operazioni PATCH &quot;add&quot;, &quot;replace&quot; e &quot;remove&quot; e consente di combinare diversi aggiornamenti in una singola chiamata aggiungendo ogni oggetto come oggetto all&#39;interno dell&#39;array, come illustrato negli esempi seguenti.
 
 **Formato API**
 
