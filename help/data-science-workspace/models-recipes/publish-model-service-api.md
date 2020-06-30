@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Pubblicare un modello come servizio (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 967ca85efba315819c6241d034dc3c25a5b1fc70
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '1487'
+source-wordcount: '1478'
 ht-degree: 1%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 1%
 
 # Pubblicare un modello come servizio (API)
 
-Questa esercitazione illustra il processo di pubblicazione di un modello come servizio mediante l&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)Sensei Machine Learning.
+Questa esercitazione descrive il processo di pubblicazione di un modello come servizio mediante l&#39; [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
 
 ## Introduzione
 
-Questa esercitazione richiede una buona conoscenza di Adobe Experience Platform Data Science Workspace. Prima di iniziare questa esercitazione, consulta la panoramica [di](../home.md) Data Science Workspace per un&#39;introduzione di alto livello al servizio.
+Questa esercitazione richiede una conoscenza approfondita di  Adobe Experience Platform Data Science Workspace. Prima di iniziare questa esercitazione, consulta la panoramica [di](../home.md) Data Science Workspace per un&#39;introduzione di alto livello al servizio.
 
 Per seguire questa esercitazione, è necessario disporre di un motore ML, di un’istanza ML e di un’esperienza già esistenti. Per i passaggi su come crearli nell&#39;API, consultate l&#39;esercitazione sull&#39; [importazione di una ricetta](./import-packaged-recipe-api.md)inclusa nel pacchetto.
 
-Infine, prima di iniziare questa esercitazione, consultare la sezione [introduttiva](../api/getting-started.md) della guida per gli sviluppatori per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate all&#39;API Sensei Machine Learning, incluse le intestazioni necessarie utilizzate durante l&#39;esercitazione:
+Infine, prima di iniziare questa esercitazione, consulta la sezione [introduttiva](../api/getting-started.md) della guida per gli sviluppatori per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all&#39; [!DNL Sensei Machine Learning] API, comprese le intestazioni richieste utilizzate durante questa esercitazione:
 
 - `{ACCESS_TOKEN}`
 - `{IMS_ORG}`
@@ -38,11 +38,11 @@ La tabella seguente riassume alcuni termini comuni utilizzati in questa esercita
 
 | Termine | Definizione |
 --- | ---
-| **Istanza di apprendimento automatico (Istanza ML)** | Un’istanza di Sensei Engine per un tenant specifico, contenente dati, parametri e codice Sensei specifici. |
+| **Istanza di apprendimento automatico (Istanza ML)** | Un&#39;istanza del [!DNL Sensei] Motore per un tenant specifico, contenente dati, parametri e [!DNL Sensei] codice specifici. |
 | **Sperimentazione** | Un&#39;entità ombrello per tenere in esecuzione gli esperti di formazione, eseguire gli esperimenti di valutazione o entrambi. |
 | **Sperimentazione pianificata** | Termine per descrivere l’automazione della formazione o l’assegnazione di un punteggio alle esecuzioni di esperti, regolato da una pianificazione definita dall’utente. |
 | **Esecuzione Di Un Esperimento** | Un particolare esempio di formazione o di valutazione di Esperimenti. Le esecuzioni di più esperimenti da un particolare esperimento possono variare nei valori del set di dati utilizzati per la formazione o il punteggio. |
-| **Modello** | Un modello di machine learning creato dal processo di sperimentazione e di feature engineering prima di arrivare a un modello convalidato, valutato e finalizzato. |
+| **Modello** | Un modello di apprendimento automatico creato dal processo di sperimentazione e di progettazione di feature prima di arrivare a un modello convalidato, valutato e finalizzato. |
 | **Modello pubblicato** | Un modello finale e con versione raggiunto dopo formazione, convalida e valutazione. |
 | **Servizio di apprendimento automatico (servizio ML)** | Un&#39;istanza ML distribuita come servizio per supportare le richieste on-demand di formazione e punteggio tramite un endpoint API. È inoltre possibile creare un servizio ML utilizzando le esecuzioni sperimentali già formate. |
 
