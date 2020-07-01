@@ -4,10 +4,10 @@ seo-title: Governance dei dati in tempo reale Platform
 description: 'Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all''uso dei dati. '
 seo-description: 'Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all''uso dei dati. '
 translation-type: tm+mt
-source-git-commit: 490154c23b0ae764ac30b7e93d42b33d09b8a5d6
+source-git-commit: c4e5e8ccac1af976c890adb1c9f0ff7f7b5ed9b4
 workflow-type: tm+mt
-source-wordcount: '1054'
-ht-degree: 0%
+source-wordcount: '1083'
+ht-degree: 1%
 
 ---
 
@@ -43,11 +43,14 @@ I casi di utilizzo del marketing possono essere selezionati solo quando si confi
 
 ## Gestire i criteri di utilizzo dei dati {#policies}
 
-Affinché le etichette di utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario definire e abilitare i criteri di utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing consentite o con cui è consentito eseguire attività sui dati all’interno di un CDP in tempo reale. Per ulteriori informazioni, consulta la sezione &quot;Criteri di utilizzo dei dati&quot; nella  panoramica [sulla governance dei](../../data-governance/home.md) dati di Experience Platform.
+Affinché le etichette di utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario definire e abilitare i criteri di utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing consentite o con cui è consentito eseguire attività sui dati all’interno di un CDP in tempo reale. Per ulteriori informazioni, consulta la sezione &quot;Criteri di utilizzo dei dati&quot; nella  panoramica [sulla governance](../../data-governance/home.md) dei dati di Experience Platform.
 
  Adobe Experience Platform fornisce diversi criteri **** fondamentali per i casi di utilizzo comuni dell&#39;esperienza cliente. Questi criteri possono essere visualizzati nell&#39;interfaccia utente accedendo all&#39;area di lavoro e selezionando la **[!UICONTROL Policies]** **[!UICONTROL Browse]** scheda. Per informazioni dettagliate sull&#39;utilizzo dei criteri nell&#39;interfaccia utente, consultate la guida [utente ai](../../data-governance/policies/user-guide.md) criteri nella documentazione Experience Platform , inclusa la procedura per l&#39;elaborazione di criteri personalizzati.
 
-## Applica conformità all&#39;utilizzo dei dati {#enforce-data-usage-compliance}
+## (Beta) Applica la conformità all&#39;utilizzo dei dati {#enforce-data-usage-compliance}
+
+>[!IMPORTANT]
+>Al momento questa funzione è in versione beta e non è disponibile per tutti gli utenti. Può essere attivato su richiesta. La documentazione e la funzionalità sono soggette a modifiche.
 
 Una volta etichettati i dati e definiti i criteri di utilizzo, potete applicare la conformità dell&#39;utilizzo dei dati ai criteri. Quando si attivano i segmenti di pubblico verso destinazioni in CDP in tempo reale, la governance dei dati applica automaticamente i criteri di utilizzo in caso di violazioni.
 
