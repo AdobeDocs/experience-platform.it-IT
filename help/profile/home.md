@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Panoramica del profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: e34b0b92a8fdf0986b10753d6c983b66dde42503
+source-git-commit: 4d853dfee931789ca1badd410ce0b4b73c8c2803
 workflow-type: tm+mt
-source-wordcount: '1796'
+source-wordcount: '1795'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ Una delle caratteristiche chiave del profilo cliente in tempo reale è la capaci
 
 Quando si uniscono i dati da più origini e si combinano per visualizzare una visualizzazione completa di ciascuno dei propri clienti, i criteri di unione sono le regole utilizzate da Platform per determinare in che modo i dati verranno assegnati alle priorità e quali verranno combinati per creare tale visualizzazione unificata. Utilizzando le API RESTful o l&#39;interfaccia utente, puoi creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la tua organizzazione. Per ulteriori informazioni sull&#39;utilizzo dei criteri di unione tramite l&#39;API Profilo cliente in tempo reale, vedere la guida [all&#39;endpoint dei criteri di](api/merge-policies.md)unione. Per utilizzare i criteri di unione utilizzando l&#39;interfaccia utente  Experience Platform, fare riferimento alla guida [utente dei criteri di](ui/merge-policies.md)unione.
 
-## (Alfa) Configurare gli attributi calcolati
+### (Alfa) Configurare gli attributi calcolati
 
 >[!IMPORTANT]
 >La funzionalità degli attributi calcolati descritta in questo documento è in alfa. La documentazione e la funzionalità sono soggette a modifiche.
@@ -80,7 +80,7 @@ Platform può essere configurato per inviare i dati relativi a record e serie te
 >[!Nota]
 >I dati raccolti tramite le soluzioni Adobe, inclusi  Analytics Cloud, Marketing Cloud e  Advertising Cloud, fluiscono  Experience Platform e vengono trasferiti in Profile.
 
-### Metriche di assimilazione dello streaming dei profili
+### Metriche di assimilazione dei profili
 
 Observability Insights consente di esporre le metriche chiave nel  Adobe Experience Platform. Oltre alle statistiche sull’utilizzo di Platform e agli indicatori di prestazioni per diverse funzionalità di Platform, sono disponibili metriche specifiche relative al profilo che consentono di conoscere meglio le percentuali di richieste in entrata, le percentuali di acquisizione di successo, le dimensioni dei record acquisiti e altro ancora. Per saperne di più, leggi innanzitutto la panoramica [](../observability/home.md)Approfondimenti sull&#39;osservazione e per un elenco completo delle metriche Profilo, consulta la documentazione sulle metriche [](../observability/metrics.md)disponibili.
 
