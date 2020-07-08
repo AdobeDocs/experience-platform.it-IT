@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Connetti con Looker
 topic: connect
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '217'
+ht-degree: 0%
 
 ---
 
 
 # Connetti con Looker
 
-Per collegare Looker con Adobe Query Service su Adobe Experience Platform, segui i passaggi seguenti:
+Per connettere Looker ad Adobe Query Service  Adobe Experience Platform, procedere come segue:
 
 Dopo aver effettuato l&#39;accesso a Looker, fai clic su **Admin**, seguito da **Connessioni**.
 
@@ -31,7 +34,9 @@ Da qui, potete compilare i dettagli per le Impostazioni di connessione.
 - **Database:** Il database che verrà utilizzato.
 - **Nome utente e password:** Le credenziali di accesso che verranno utilizzate. Il nome utente sarà in forma di `ORG_ID@AdobeOrg`.
 
->[!NOTE] Per ulteriori informazioni su come trovare l&#39;host e la porta, il nome del database e le credenziali di accesso, visitare la pagina delle [credenziali sulla piattaforma](https://platform.adobe.com/query/configuration). Per trovare le credenziali, accedere alla piattaforma, fare clic su **Query**, quindi su **Credenziali**.
+>[!NOTE]
+>
+>Per ulteriori informazioni su come trovare l&#39;host e la porta, il nome del database e le credenziali di accesso, visitare la pagina delle [credenziali su Platform](https://platform.adobe.com/query/configuration). Per trovare le credenziali, accedere ad Platform, fare clic su **Query**, quindi su **Credenziali**.
 
 Dopo aver inserito i dettagli di connessione, fate clic su **Prova queste impostazioni** per verificare che le credenziali funzionino correttamente. In caso affermativo, di seguito verrà visualizzato un messaggio in cui si informa che è possibile connettersi. Se la connessione ha esito positivo, fare clic su **Aggiungi connessione** per creare la connessione.
 
