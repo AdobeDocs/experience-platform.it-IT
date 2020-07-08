@@ -4,22 +4,25 @@ solution: Experience Platform
 title: Creare uno schema ad hoc
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 956d1e5b4a994c9ea52d818f3dd6d3ff88cb16b6
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '742'
+ht-degree: 2%
 
 ---
 
 
 # Creare uno schema ad hoc
 
-In circostanze specifiche, potrebbe essere necessario creare uno schema Experience Data Model (XDM) con campi che vengono denominati separati per l&#39;uso solo da un singolo dataset. Tale schema è denominato &quot;ad hoc&quot;. Gli schemi ad hoc sono utilizzati in vari flussi di lavoro di assimilazione dei dati per Experience Platform, inclusi l’assimilazione di file CSV e la creazione di determinati tipi di connessioni sorgente.
+In circostanze specifiche, potrebbe essere necessario creare uno schema Experience Data Model (XDM) con campi che vengono denominati separati per l&#39;uso solo da un singolo dataset. Tale schema è denominato &quot;ad hoc&quot;. Gli schemi ad hoc vengono utilizzati in vari flussi di lavoro di assimilazione dei dati per  Experience Platform, inclusi l’assimilazione di file CSV e la creazione di determinati tipi di connessioni sorgente.
 
-Questo documento contiene i passaggi generali per la creazione di uno schema ad hoc mediante l&#39;API [del Registro di](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)schema. È destinato a essere utilizzato insieme ad altre esercitazioni della piattaforma Experience che richiedono la creazione di uno schema ad hoc come parte del loro flusso di lavoro. Ciascuno di questi documenti fornisce informazioni dettagliate su come configurare correttamente uno schema ad hoc per il relativo caso di utilizzo specifico.
+Questo documento contiene i passaggi generali per la creazione di uno schema ad hoc mediante l&#39;API [del Registro di](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)schema. È destinato ad essere utilizzato insieme ad altre esercitazioni  Experience Platform che richiedono la creazione di uno schema ad hoc come parte del flusso di lavoro. Ciascuno di questi documenti fornisce informazioni dettagliate su come configurare correttamente uno schema ad hoc per il relativo caso di utilizzo specifico.
 
 ## Introduzione
 
 Questa esercitazione richiede una buona conoscenza del sistema Experience Data Model (XDM). Prima di iniziare questa esercitazione, consulta la seguente documentazione XDM:
 
-- [Panoramica](../home.md)del sistema XDM: Panoramica di alto livello di XDM e della sua implementazione in Experience Platform.
+- [Panoramica](../home.md)del sistema XDM: Panoramica di alto livello di XDM e della relativa implementazione in  Experience Platform.
 - [Nozioni di base sulla composizione](../schema/composition.md)dello schema: Panoramica dei componenti di base degli schemi XDM.
 
 Prima di avviare questa esercitazione, consultare la guida [allo](../api/getting-started.md) sviluppatore per informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all&#39;API del Registro di sistema dello schema. Ciò include il vostro `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all’intestazione Accetta e ai suoi possibili valori).
@@ -38,7 +41,9 @@ POST /tenant/classes
 
 La richiesta seguente crea una nuova classe XDM, configurata dagli attributi forniti nel payload. Fornendo una `$ref` proprietà impostata su `https://ns.adobe.com/xdm/data/adhoc` nell&#39; `allOf` array, questa classe eredita il `adhoc` comportamento. La richiesta definisce anche un `_adhoc` oggetto, che contiene i campi personalizzati per la classe.
 
->[!NOTE] I campi personalizzati definiti in `_adhoc` variano a seconda del caso di utilizzo dello schema ad hoc. Fate riferimento al flusso di lavoro specifico nell&#39;esercitazione appropriata per i campi personalizzati richiesti in base al caso di utilizzo.
+>[!NOTE]
+>
+>I campi personalizzati definiti in `_adhoc` variano a seconda del caso di utilizzo dello schema ad hoc. Fate riferimento al flusso di lavoro specifico nell&#39;esercitazione appropriata per i campi personalizzati richiesti in base al caso di utilizzo.
 
 ```shell
 curl -X POST \
@@ -216,7 +221,9 @@ Una risposta corretta restituisce i dettagli del nuovo schema creato, incluso il
 
 ## Visualizza lo schema ad hoc completo
 
->[!NOTE] Questo passaggio è facoltativo. Se non si desidera esaminare la struttura del campo dello schema ad hoc, è possibile passare alla sezione dei passaggi [](#next-steps) successivi alla fine dell&#39;esercitazione.
+>[!NOTE]
+>
+>Questo passaggio è facoltativo. Se non si desidera esaminare la struttura del campo dello schema ad hoc, è possibile passare alla sezione dei passaggi [](#next-steps) successivi alla fine dell&#39;esercitazione.
 
 Una volta creato lo schema ad hoc, è possibile effettuare una richiesta di ricerca (GET) per visualizzare lo schema nel modulo espanso. A questo scopo, utilizzate l&#39;intestazione Accetto appropriata nella richiesta GET, come illustrato di seguito.
 
