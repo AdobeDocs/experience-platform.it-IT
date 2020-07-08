@@ -4,18 +4,21 @@ solution: Experience Platform
 title: Creare un dataset per l'esportazione di un segmento di pubblico
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '766'
+ht-degree: 0%
 
 ---
 
 
 # Creare un dataset per l&#39;esportazione di un segmento di pubblico
 
-Adobe Experience Platform consente di segmentare facilmente i profili dei clienti in audience in base a attributi specifici. Una volta creati i segmenti, puoi esportare il pubblico in un dataset dal quale è possibile accedervi e agire. Affinché l&#39;esportazione abbia esito positivo, il dataset deve essere configurato correttamente.
+ Adobe Experience Platform consente di segmentare facilmente i profili dei clienti in audience in base a attributi specifici. Una volta creati i segmenti, puoi esportare il pubblico in un dataset dal quale è possibile accedervi e agire. Affinché l&#39;esportazione abbia esito positivo, il dataset deve essere configurato correttamente.
 
-Questa esercitazione descrive i passaggi necessari per creare un dataset che possa essere utilizzato per esportare un segmento di pubblico mediante l&#39;interfaccia utente della piattaforma Experience.
+Questa esercitazione descrive i passaggi necessari per creare un dataset che può essere utilizzato per esportare un segmento di pubblico utilizzando l&#39;interfaccia  di Experience Platform.
 
-Questa esercitazione è direttamente correlata ai passaggi descritti nell&#39;esercitazione per la [valutazione e l&#39;accesso ai risultati](./evaluate-a-segment.md)del segmento. L&#39;esercitazione di valutazione di un segmento fornisce i passaggi per la creazione di un dataset mediante l&#39;API Catalog, mentre questa esercitazione descrive i passaggi per creare un dataset utilizzando l&#39;interfaccia utente della piattaforma Experience.
+Questa esercitazione è direttamente correlata ai passaggi descritti nell&#39;esercitazione per la [valutazione e l&#39;accesso ai risultati](./evaluate-a-segment.md)del segmento. L&#39;esercitazione di valutazione di un segmento fornisce i passaggi per la creazione di un set di dati mediante l&#39;API Catalog, mentre questa esercitazione descrive i passaggi per creare un set di dati utilizzando l&#39;interfaccia  di Experience Platform.
 
 ## Introduzione
 
@@ -23,16 +26,18 @@ Per esportare un segmento, il set di dati deve essere basato sullo schema uniona
 
 Per visualizzare gli schemi di unione nell&#39;interfaccia utente, fai clic su **Profili** nella navigazione a sinistra, quindi fai clic sulla scheda Schema ** unione come mostrato di seguito.
 
-![Scheda Schema unione nell&#39;interfaccia utente della piattaforma Experience](../images/tutorials/segment-export-dataset/union-schema-ui.png)
+![Scheda Schema unione nell&#39;interfaccia  Experience Platform](../images/tutorials/segment-export-dataset/union-schema-ui.png)
 
 
 ## Area di lavoro DataSet
 
-L’area di lavoro dei set di dati nell’interfaccia utente della piattaforma Experience consente di visualizzare e gestire tutti i set di dati creati dall’organizzazione IMS e di crearne di nuovi.
+L&#39;area di lavoro dei set di dati nell&#39;interfaccia  di Experience Platform consente di visualizzare e gestire tutti i set di dati creati dall&#39;organizzazione IMS e di crearne di nuovi.
 
 Per visualizzare l&#39;area di lavoro dei set di dati, fai clic su **Set** di dati nella barra di navigazione a sinistra, quindi fai clic sulla scheda *Sfoglia* . L&#39;area di lavoro dei set di dati contiene un elenco di set di dati, tra cui colonne con *Nome*, *Creato* (data e ora), *Origine*, *Schema* e Stato **** ultimo batch, nonché la data e l&#39;ora dell&#39;ultimo aggiornamento del set di dati. A seconda della larghezza di ciascuna colonna, potrebbe essere necessario scorrere verso sinistra o verso destra per visualizzare tutte le colonne.
 
->[!NOTE] Fate clic sull&#39;icona del filtro accanto alla barra di ricerca per utilizzare le funzionalità di filtro per visualizzare solo i set di dati abilitati per il profilo cliente in tempo reale.
+>[!NOTE]
+>
+>Fate clic sull&#39;icona del filtro accanto alla barra di ricerca per utilizzare le funzionalità di filtro per visualizzare solo i set di dati abilitati per il profilo cliente in tempo reale.
 
 ![Visualizza tutti i set di dati](../images/tutorials/segment-export-dataset/datasets-workspace.png)
 
