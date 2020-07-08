@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Elenca mappature identità
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '248'
+ht-degree: 2%
 
 ---
 
@@ -62,7 +65,9 @@ curl -X GET \
 
 Utilizzate il `POST` metodo come equivalente batch del `GET` metodo descritto sopra per recuperare mappature per più identità.
 
->[!NOTE] La richiesta non deve contenere più di 1000 identità. Le richieste che superano 1000 identità genereranno un codice di stato di 400.
+>[!NOTE]
+>
+>La richiesta non deve contenere più di 1000 identità. Le richieste che superano 1000 identità genereranno un codice di stato di 400.
 
 **Formato API**
 
