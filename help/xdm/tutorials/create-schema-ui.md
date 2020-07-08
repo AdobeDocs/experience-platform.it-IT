@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare uno schema tramite l’Editor di schema.
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '3409'
 ht-degree: 0%
@@ -84,7 +84,9 @@ Il quadro viene nuovamente visualizzato. La sezione *Classe* ora contiene la cla
 
 I campi vengono visualizzati nel formato &quot;fieldName&quot; | Tipo di dati&quot;. I passaggi per definire i campi dello schema nell&#39;interfaccia utente sono disponibili più avanti in questa esercitazione.
 
->[!NOTE] È possibile [modificare la classe di uno schema](#change-class) in qualsiasi momento durante il processo di composizione iniziale prima che lo schema sia stato salvato, ma questo deve essere fatto con estrema cautela. I mixin sono compatibili solo con determinate classi, pertanto la modifica della classe reimposterà il quadro ed eventuali campi aggiunti.
+>[!NOTE]
+>
+>È possibile [modificare la classe di uno schema](#change-class) in qualsiasi momento durante il processo di composizione iniziale prima che lo schema sia stato salvato, ma questo deve essere fatto con estrema cautela. I mixin sono compatibili solo con determinate classi, pertanto la modifica della classe reimposterà il quadro ed eventuali campi aggiunti.
 
 ## Aggiungere un mixin {#mixin}
 
@@ -108,7 +110,9 @@ Lo schema quadro viene nuovamente visualizzato. La sezione *Mixins* ora elenca i
 
 Questo mixin fornisce diversi campi sotto il nome di primo livello &quot;persona&quot; con il tipo di dati &quot;Persona&quot;. Questo gruppo di campi descrive informazioni su un individuo, quali nome, data di nascita e genere.
 
->[!NOTE] Tenere presente che i campi possono utilizzare tipi scalari (come stringa, integer, array o data) come tipo di dati, nonché qualsiasi &quot;tipo di dati&quot; (un gruppo di campi che rappresenta un concetto comune) nel Registro di sistema dello schema.
+>[!NOTE]
+>
+>Tenere presente che i campi possono utilizzare tipi scalari (come stringa, integer, array o data) come tipo di dati, nonché qualsiasi &quot;tipo di dati&quot; (un gruppo di campi che rappresenta un concetto comune) nel Registro di sistema dello schema.
 
 Il campo &quot;nome&quot; ha un tipo di dati &quot;Nome persona&quot;, che significa che descrive anche un concetto comune e contiene campi secondari relativi al nome come nome, cognome e nome completo.
 
@@ -247,7 +251,9 @@ Ora tutti i dati immessi nel campo &quot;loyaltyId&quot; saranno utilizzati per 
 
 ![](../images/tutorials/create-schema/loyaltyId_primary_identity.png)
 
->[!NOTE] Una volta impostato un campo dello schema come identità principale, si riceverà un messaggio di errore se si tenta in seguito di impostare come principale un altro campo dello schema. Ogni schema può contenere un solo campo identità principale.
+>[!NOTE]
+>
+>Una volta impostato un campo dello schema come identità principale, si riceverà un messaggio di errore se si tenta in seguito di impostare come principale un altro campo dello schema. Ogni schema può contenere un solo campo identità principale.
 
 Per ulteriori informazioni sull&#39;utilizzo delle identità, consulta la documentazione [Servizio](../../identity-service/home.md) identità.
 
@@ -279,7 +285,9 @@ Fate clic su **Profilo** e viene visualizzato un messaggio a comparsa in cui vie
 
 ![](../images/tutorials/create-schema/enable_unified_profile.png)
 
->[!NOTE] Una volta che uno schema è stato abilitato per il profilo cliente in tempo reale e salvato, non può essere disabilitato.
+>[!NOTE]
+>
+>Una volta che uno schema è stato abilitato per il profilo cliente in tempo reale e salvato, non può essere disabilitato.
 
 ## Passaggi successivi
 
@@ -303,13 +311,17 @@ Aprire la finestra di dialogo *Assegna classe* facendo clic su **Assegna** nella
 
 ![Dettagli nuova classe](../images/tutorials/create-schema/create_new_class.png)
 
->[!NOTE] Durante la creazione di uno schema che implementa una classe definita dall&#39;organizzazione, tenere presente che i mixin sono disponibili solo per le classi compatibili. Poiché la classe definita è nuova, nella finestra di dialogo *Aggiungi mixin* non sono presenti mixin compatibili. Al contrario, dovrete selezionare **Crea nuovo mixin** e definire un mixin da utilizzare con tale classe. Al successivo comporre uno schema che implementa la nuova classe, il mixin definito verrà elencato e sarà disponibile per l&#39;uso.
+>[!NOTE]
+>
+>Durante la creazione di uno schema che implementa una classe definita dall&#39;organizzazione, tenere presente che i mixin sono disponibili solo per le classi compatibili. Poiché la classe definita è nuova, nella finestra di dialogo *Aggiungi mixin* non sono presenti mixin compatibili. Al contrario, dovrete selezionare **Crea nuovo mixin** e definire un mixin da utilizzare con tale classe. Al successivo comporre uno schema che implementa la nuova classe, il mixin definito verrà elencato e sarà disponibile per l&#39;uso.
 
 ### Modificare la classe di uno schema {#change-class}
 
 In qualsiasi momento durante il processo di composizione dello schema iniziale, prima che lo schema venga salvato, è possibile modificare la classe su cui si basa lo schema.
 
->[!WARNING] Si prega di fare attenzione prima di cambiare la classe. Le miscele sono compatibili solo con determinate classi, pertanto la modifica della classe reimposta il quadro e rimuove tutti i campi aggiunti a tale punto.
+>[!WARNING]
+>
+>Si prega di fare attenzione prima di cambiare la classe. Le miscele sono compatibili solo con determinate classi, pertanto la modifica della classe reimposta il quadro e rimuove tutti i campi aggiunti a tale punto.
 
 Per modificare la classe, fate clic su **Assegna** accanto a *Classe* nella sezione *Composizione* dell’editor.
 
