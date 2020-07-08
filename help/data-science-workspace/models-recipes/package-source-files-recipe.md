@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare pacchetti di file sorgente in una ricetta
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 45461e3420f3b7e227f80fe775d80b8442a1069c
 workflow-type: tm+mt
-source-wordcount: '1067'
+source-wordcount: '1087'
 ht-degree: 0%
 
 ---
@@ -169,7 +169,7 @@ Per iniziare, clonate il [!DNL GitHub] repository sul sistema locale con il segu
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Quindi, passare alla directory `experience-platform-dsw-reference/recipes/scala/retail` in cui è possibile trovare gli script `login.sh` e `build.sh`. Questi script vengono utilizzati per accedere al Docker e generare l&#39;immagine Docker. Se disponete delle credenziali [](#docker-based-model-authoring) Docker, immettete i seguenti comandi per il terminale in ordine:
+Quindi, passare alla directory `experience-platform-dsw-reference/recipes/scala` in cui è possibile trovare gli script `login.sh` e `build.sh`. Questi script vengono utilizzati per accedere al Docker e generare l&#39;immagine Docker. Se disponete delle credenziali [](#docker-based-model-authoring) Docker, immettete i seguenti comandi per il terminale in ordine:
 
 ```BASH
 # for logging in to Docker
@@ -178,6 +178,9 @@ Quindi, passare alla directory `experience-platform-dsw-reference/recipes/scala/
 # for building Docker image
 ./build.sh
 ```
+
+>[!TIP]
+>Se ricevi un errore di autorizzazione durante il tentativo di accedere al Docker utilizzando `login.sh` lo script, prova a utilizzare il comando `bash login.sh`.
 
 Durante l&#39;esecuzione dello script di login, è necessario fornire l&#39;host Docker, il nome utente e la password. Durante la creazione, è necessario fornire l&#39;host Docker e un tag di versione per la build.
 
