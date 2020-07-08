@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Connessione con Power BI
 topic: connect
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '366'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +46,9 @@ Dopo aver eseguito i passaggi preliminari, è possibile collegare Power BI al se
 
 - *(Facoltativo ma consigliato quando per il database viene dichiarato &quot;all&quot;)* Immettere un&#39;istruzione SQL.
 
->[!NOTE] Se non viene fornita un&#39;istruzione SQL, Power BI visualizzerà l&#39;anteprima di tutte le tabelle nel database. Per i dati gerarchici, deve essere utilizzata un&#39;istruzione SQL personalizzata. Se lo schema della tabella è piano, funzionerà con o senza un&#39;istruzione SQL personalizzata. I tipi composti non sono ancora supportati da Power BI. Per ottenere tipi primitivi dai tipi composti, sarà necessario scrivere istruzioni SQL per derivarli.
+>[!NOTE]
+>
+>Se non viene fornita un&#39;istruzione SQL, Power BI visualizzerà l&#39;anteprima di tutte le tabelle nel database. Per i dati gerarchici, deve essere utilizzata un&#39;istruzione SQL personalizzata. Se lo schema della tabella è piano, funzionerà con o senza un&#39;istruzione SQL personalizzata. I tipi composti non sono ancora supportati da Power BI. Per ottenere tipi primitivi dai tipi composti, sarà necessario scrivere istruzioni SQL per derivarli.
 
 ```sql
 SELECT web.webPageDetails.name AS Page_Name, 
