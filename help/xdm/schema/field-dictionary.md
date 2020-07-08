@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Dizionario del campo Modello dati esperienza (XDM)
 topic: overview
 translation-type: tm+mt
-source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '25199'
 ht-degree: 0%
@@ -23,7 +23,9 @@ La tabella seguente include il nome del campo (non tutti i campi XDM sono denomi
 
 È possibile utilizzare la funzionalità di ricerca nell&#39;Editor schema per visualizzare i dettagli di tali risorse, come illustrato nell&#39;esercitazione [Editor](../tutorials/create-schema-ui.md)schema.
 
->[!NOTE] Se un campo è contrassegnato come &quot;**DEPRECATED**&quot;, significa che non deve più essere utilizzato nelle nuove implementazioni. Il campo continua ad essere disponibile per compatibilità con versioni precedenti, ma non sarà più supportato nelle release future.
+>[!NOTE]
+>
+>Se un campo è contrassegnato come &quot;**DEPRECATED**&quot;, significa che non deve più essere utilizzato nelle nuove implementazioni. Il campo continua ad essere disponibile per compatibilità con versioni precedenti, ma non sarà più supportato nelle release future.
 
 | Nome campo | Title | Descrizione | Tipo | Formato | Tipo XDM | Incluso in |
 |----------|----|------|--------|-----|-----------|--------------|
@@ -464,7 +466,7 @@ La tabella seguente include il nome del campo (non tutti i campi XDM sono denomi
 | xdm:iscrizioni | Iscrizioni | Iscrizioni a cui questo profilo può essere concesso per includere iscrizioni interrotte, scadute o esaurite. | array |  | array | https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions, https://ns.adobe.com/xdm/context/profile-subscriptions |
 | xdm:nomeFornitore | Nome fornitore | Distributore del prodotto. | string |  | string | https://ns.adobe.com/xdm/context/product |
 | xdm:syncedNoteAudiences | Segmenti sincronizzati | Elenco di entità Search retargeting che sono state sincronizzate con il partner adCloud per creare audience sulla piattaforma, ad esempio RLSA per Google o WCA per Facebook | array |  | array | https://ns.adobe.com/experience/adcloud-profile, https://ns.adobe.com/experience/adcloud/profile-all |
-| xdm:tags | Tag | I tag sono utilizzati per indicare come gli alias rappresentati da una data origine dati devono essere interpretati dalle applicazioni che utilizzano tali alias.Esempi:* `isAVID`: origini dati che rappresentano  ID visitatore Analytics.* `isCRSKey`: le origini dati che rappresentano gli alias da utilizzare come chiavi in CRS.Tags vengono impostate al momento della creazione dell&#39;origine dati, ma vengono anche incluse nei messaggi della pipeline quando si fa riferimento a una determinata origine dati. | array |  | array | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all, https://ns.adobe.com/experience/campaign/offer-detail, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-technical-details |
+| xdm:tags | Tag | I tag sono utilizzati per indicare in che modo gli alias rappresentati da una determinata origine dati dovrebbero essere interpretati dalle applicazioni che utilizzano tali alias.Esempi:* `isAVID`: origini dati che rappresentano  ID visitatore Analytics.* `isCRSKey`: le origini dati che rappresentano gli alias da utilizzare come chiavi in CRS.Tags vengono impostate al momento della creazione dell&#39;origine dati, ma vengono anche incluse nei messaggi della pipeline quando si fa riferimento a una determinata origine dati. | array |  | array | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all, https://ns.adobe.com/experience/campaign/offer-detail, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-technical-details |
 | xdm:templateID | Identificatore del modello | L&#39;ID del modello di consegna utilizzato per inizializzare il recapito. Il tipo di modello utilizzato nel Adobe Campaign  può essere identificato utilizzando il `messageClass`.* `messageClass` = `oneTime`: il modello è un modello di consegna standard.* `messageClass` = `continuous`: il modello è una consegna periodica.* `messageClass` = `transactional`: il modello è un modello di messaggio transazionale. | integer |  | int | https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all |
 | xdm:templateName | Nome interno del modello di consegna | Un identificatore descrittivo dell&#39;entità padre (nel caso di event_based o continue message Class) dell&#39;attività della campagna che ha generato il messaggio. | string |  | string | https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all |
 | xdm:term | Termine | Il valore numerico del termine. | integer |  | int | https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions, https://ns.adobe.com/xdm/context/profile-subscriptions, https://ns.adobe.com/xdm/context/subscription |
