@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Configurazione di un'istanza dell'AI cliente
 topic: Instance creation
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '695'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,7 @@ I servizi intelligenti forniscono ai clienti un servizio Adobe Sensei semplice d
 
 ## Configurare l’istanza {#set-up-your-instance}
 
-Nell’interfaccia utente della piattaforma, fate clic su **[!UICONTROL Services]** nella barra di navigazione a sinistra. Viene visualizzato il **[!UICONTROL Services]** browser e vengono visualizzati tutti i servizi disponibili. Nel contenitore per l&#39;API cliente, fate clic su **[!UICONTROL Open]**.
+Nell’interfaccia utente di Platform, fate clic **[!UICONTROL Services]** nella barra di navigazione a sinistra. Viene visualizzato il **[!UICONTROL Services]** browser e vengono visualizzati tutti i servizi disponibili. Nel contenitore per l&#39;API cliente, fate clic su **[!UICONTROL Open]**.
 
 ![](../images/user-guide/navigate-to-service.png)
 
@@ -69,7 +72,9 @@ Escludete gli eventi in base alle esigenze, quindi fate clic **[!UICONTROL Finis
 
 Se l&#39;istanza viene creata correttamente, viene attivata immediatamente un&#39;esecuzione della previsione ed eseguita in base alla pianificazione definita.
 
->[!NOTE] A seconda della dimensione dei dati di input, l&#39;esecuzione della previsione può richiedere fino a 24 ore per essere completata.
+>[!NOTE]
+>
+>A seconda della dimensione dei dati di input, l&#39;esecuzione della previsione può richiedere fino a 24 ore per essere completata.
 
 Seguendo questa sezione, hai configurato un&#39;istanza dell&#39;AI cliente ed è stata eseguita un&#39;esecuzione di previsione. Al completamento dell&#39;esecuzione, le informazioni con punteggio popolano automaticamente i profili con punteggi previsti. Attendere fino a 24 ore prima di continuare con la sezione successiva dell&#39;esercitazione.
 
