@@ -1,19 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guida all'editor di query di Adobe Experience Platform
+title: ' Guida all''Editor di query del servizio Query'
 topic: query editor
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1060'
+ht-degree: 1%
 
 ---
 
 
 # Guida utente per l’editor di query
 
-Query Editor è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati relativi all&#39;esperienza cliente all&#39;interno dell&#39;interfaccia utente di Experience Platform. Query Editor supporta lo sviluppo di query per l&#39;analisi e l&#39;esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per compilare set di dati in Experience Platform.
+Query Editor è uno strumento interattivo fornito da  Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati relativi all&#39;esperienza cliente all&#39;interno dell&#39;interfaccia utente  Experience Platform. Query Editor supporta lo sviluppo di query per l&#39;analisi e l&#39;esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per compilare set di dati in  Experience Platform.
 
-Per ulteriori informazioni sui concetti e sulle funzionalità di Query Service, consultate la panoramica [di][query-service-overview]Query Service. Per ulteriori informazioni su come navigare nell’interfaccia utente del servizio query sulla piattaforma, consultate la panoramica [dell’interfaccia utente del servizio][query-service-ui]query.
+Per ulteriori informazioni sui concetti e sulle funzionalità di Query Service, consultate la panoramica [di][query-service-overview]Query Service. Per ulteriori informazioni su come navigare nell&#39;interfaccia utente di Servizio query su Platform, vedere la panoramica [dell&#39;interfaccia utente di Servizio][query-service-ui]query.
 
 ## Introduzione
 
@@ -35,7 +38,7 @@ Utilizzando l&#39;editor di query è possibile scrivere, eseguire e salvare quer
 
 ### Accesso all&#39;Editor query
 
-Nell’interfaccia utente della piattaforma Experience, fai clic su **Query** nel menu di navigazione a sinistra per aprire l’area di lavoro Servizio query. Fare clic su **Crea query** in alto a destra nella schermata per iniziare a scrivere query. Questo collegamento è disponibile da una qualsiasi delle pagine nell&#39;area di lavoro Servizio query.
+Nell’interfaccia  Experience Platform, fate clic su **Query** nel menu di navigazione a sinistra per aprire l’area di lavoro Servizio query. Fare clic su **Crea query** in alto a destra nella schermata per iniziare a scrivere query. Questo collegamento è disponibile da una qualsiasi delle pagine nell&#39;area di lavoro Servizio query.
 
 ![Immagine](../images/queries/query-editor-overview/create-query.png)
 
@@ -77,7 +80,7 @@ Durante la visualizzazione di una query in Editor query, il pannello Dettagli **
 
 ![Immagine](../images/queries/query-editor-overview/query-details.png)
 
-Questo pannello consente di generare un set di dati di output direttamente dall&#39;interfaccia utente, eliminare o assegnare un nome alla query visualizzata e visualizzare il codice SQL in un formato di semplice copia nella scheda Query ** SQL. Questo pannello mostra anche utili metadati, ad esempio l’ultima volta che la query è stata modificata e l’utente che l’ha modificata, se applicabile. Per generare un set di dati, fare clic su **Output Dataset**. Viene visualizzata la finestra di dialogo DataSet di *output* . Immettete un nome e una descrizione, quindi fate clic su **Esegui query**. Il nuovo set di dati viene visualizzato nella scheda *Set* di dati dell&#39;interfaccia utente Servizio query sulla piattaforma.
+Questo pannello consente di generare un set di dati di output direttamente dall&#39;interfaccia utente, eliminare o assegnare un nome alla query visualizzata e visualizzare il codice SQL in un formato di semplice copia nella scheda Query ** SQL. Questo pannello mostra anche utili metadati, ad esempio l’ultima volta che la query è stata modificata e l’utente che l’ha modificata, se applicabile. Per generare un set di dati, fare clic su **Output Dataset**. Viene visualizzata la finestra di dialogo DataSet di *output* . Immettete un nome e una descrizione, quindi fate clic su **Esegui query**. Il nuovo set di dati viene visualizzato nella scheda *Set* di dati dell&#39;interfaccia utente Servizio query di Platform.
 
 ### Salvataggio delle query
 
@@ -89,7 +92,9 @@ Tutte le query eseguite dall&#39;Editor query vengono acquisite nella tabella Re
 
 Per ulteriori informazioni, consulta la panoramica [dell’interfaccia utente del servizio][query-service-ui] query.
 
->[!NOTE] Le query non eseguite non vengono salvate dal registro. Affinché la query sia disponibile in Query Service, è necessario eseguirla o salvarla in Query Editor.
+>[!NOTE]
+>
+>Le query non eseguite non vengono salvate dal registro. Affinché la query sia disponibile in Query Service, è necessario eseguirla o salvarla in Query Editor.
 
 ## Esecuzione di query con l&#39;Editor query
 
@@ -101,7 +106,9 @@ La console fornisce informazioni sullo stato e il funzionamento di Query Service
 
 ![Immagine](../images/queries/query-editor-overview/console.png)
 
->[!NOTE] Nella console sono visualizzati solo gli errori risultanti dall’esecuzione di una query. Non vengono visualizzati errori di convalida delle query prima dell&#39;esecuzione di una query.
+>[!NOTE]
+>
+>Nella console sono visualizzati solo gli errori risultanti dall’esecuzione di una query. Non vengono visualizzati errori di convalida delle query prima dell&#39;esecuzione di una query.
 
 ### Risultati query
 
@@ -111,7 +118,7 @@ Al termine di una query, i risultati vengono visualizzati nella scheda *Risultat
 
 ## Passaggi successivi
 
-Ora che si conoscono le funzionalità disponibili in Editor query e come navigare nell&#39;applicazione, è possibile iniziare a creare query personalizzate direttamente in Piattaforma. Per ulteriori informazioni sull&#39;esecuzione di query SQL rispetto ai dataset in Data Lake, vedere la guida sull&#39; [esecuzione di query][query-service-running-queries]. Per query SQL di esempio per l&#39;utilizzo dei dati di Adobe Analytics e Adobe Target, consultate il riferimento [alle query di][query-service-sample-queries]esempio.
+Ora che si conoscono le funzionalità disponibili in Editor query e come navigare nell&#39;applicazione, è possibile iniziare a creare query personalizzate direttamente in Platform. Per ulteriori informazioni sull&#39;esecuzione di query SQL rispetto ai dataset in Data Lake, vedere la guida sull&#39; [esecuzione di query][query-service-running-queries]. Per query SQL di esempio per lavorare con Adobe  Analytics e dati  Adobe Target, consultate il riferimento [alle query di][query-service-sample-queries]esempio.
 
 [query-service-overview]: ../home.md
 [query-service-ui]: overview.md
