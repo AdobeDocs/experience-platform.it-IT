@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Funzioni di array, elenco e set
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '740'
+ht-degree: 5%
 
 ---
 
@@ -35,7 +38,9 @@ person.birthMonth in [3, 6, 9]
 
 La `notIn` funzione viene utilizzata per determinare se un elemento non è un membro di una matrice o di un elenco.
 
->[!NOTE] La `notIn` funzione assicura *inoltre* che nessuno dei due valori sia uguale a null. Pertanto, i risultati non sono una negazione esatta della `in` funzione.
+>[!NOTE]
+>
+>La `notIn` funzione assicura *inoltre* che nessuno dei due valori sia uguale a null. Pertanto, i risultati non sono una negazione esatta della `in` funzione.
 
 **Formato**
 
