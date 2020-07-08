@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Appendice sviluppatore del Registro di sistema dello schema
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: f7c87cc86bfc5017ec5c712d05e39be5c14a7147
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1296'
+ht-degree: 3%
 
 ---
 
@@ -17,7 +20,7 @@ Questo documento fornisce informazioni supplementari relative all&#39;utilizzo d
 
 Experience Data Model (XDM) è una specifica documentata pubblicamente, spinta da Adobe per migliorare l&#39;interoperabilità, l&#39;espressività e il potere delle esperienze digitali. Adobe mantiene il codice sorgente e le definizioni XDM formali in un progetto [open source su GitHub](https://github.com/adobe/xdm/). Queste definizioni sono scritte in Notazione standard XDM, utilizzando la Notazione oggetto JSON-LD (JavaScript Object Notation for Linked Data) e lo schema JSON come grammatica per la definizione degli schemi XDM.
 
-Quando si esaminano le definizioni XDM formali nell&#39;archivio pubblico, è possibile notare che lo standard XDM è diverso da quello visualizzato in Adobe Experience Platform. Ciò che vedete in Experience Platform è denominata Modalità compatibilità e fornisce una semplice mappatura tra XDM standard e il modo in cui viene utilizzato all&#39;interno della piattaforma.
+Quando si esaminano le definizioni XDM formali nell&#39;archivio pubblico, è possibile notare che lo standard XDM è diverso da quello visualizzato nell&#39;Adobe Experience Platform . Ciò che si vede in  Experience Platform è denominata Modalità compatibilità e fornisce una semplice mappatura tra XDM standard e il modo in cui viene utilizzato in Platform.
 
 ### Funzionamento della modalità di compatibilità
 
@@ -46,19 +49,21 @@ Di seguito è riportato un confronto affiancato che mostra i campi relativi al c
 
 ### Perché è necessaria la modalità di compatibilità?
 
-Adobe Experience Platform è progettato per lavorare con più soluzioni e servizi, ognuno con le proprie problematiche e limitazioni tecniche (ad esempio, il modo in cui determinate tecnologie gestiscono caratteri speciali). Per superare questi limiti, è stata sviluppata la Modalità di compatibilità.
+ Adobe Experience Platform è progettato per lavorare con più soluzioni e servizi, ciascuno con le proprie sfide e limitazioni tecniche (ad esempio, come alcune tecnologie gestiscono caratteri speciali). Per superare questi limiti, è stata sviluppata la Modalità di compatibilità.
 
-La maggior parte dei servizi Experience Platform, tra cui Catalog, Data Lake e Real-time Customer Profile, utilizza la modalità di compatibilità al posto di XDM standard. Anche l&#39;API del Registro di sistema dello schema utilizza la modalità di compatibilità e gli esempi in questo documento vengono visualizzati utilizzando la modalità di compatibilità.
+La maggior parte dei servizi Experience Platform  tra cui Catalog, Data Lake e Real-time Customer Profile utilizza la modalità di compatibilità al posto di XDM standard. Anche l&#39;API del Registro di sistema dello schema utilizza la modalità di compatibilità e gli esempi in questo documento vengono visualizzati utilizzando la modalità di compatibilità.
 
-Vale la pena sapere che una mappatura viene eseguita tra XDM standard e il modo in cui viene gestita in Experience Platform, ma non deve influenzare l&#39;utilizzo dei servizi della piattaforma.
+Vale la pena sapere che una mappatura viene eseguita tra XDM standard e il modo in cui viene operata in  Experience Platform, ma non deve influenzare l&#39;utilizzo dei servizi Platform.
 
 Il progetto open source è disponibile, ma quando si tratta di interagire con le risorse attraverso il Registro di sistema dello schema, gli esempi di API in questo documento forniscono le procedure ottimali che si dovrebbero conoscere e seguire.
 
 ## Definizione dei tipi di campo XDM nell&#39;API {#field-types}
 
-Gli schemi XDM sono definiti utilizzando gli standard dello schema JSON e i tipi di campo di base, con vincoli aggiuntivi per i nomi di campo applicati da Experience Platform. XDM consente di definire ulteriori tipi di campi mediante l&#39;uso di formati e vincoli facoltativi. I tipi di campo XDM sono esposti dall&#39;attributo a livello di campo `meta:xdmType`.
+Gli schemi XDM sono definiti utilizzando gli standard dello schema JSON e i tipi di campo di base, con vincoli aggiuntivi per i nomi di campo applicati da  Experience Platform. XDM consente di definire ulteriori tipi di campi mediante l&#39;uso di formati e vincoli facoltativi. I tipi di campo XDM sono esposti dall&#39;attributo a livello di campo `meta:xdmType`.
 
->[!NOTE] è `meta:xdmType` un valore generato dal sistema e pertanto non è necessario aggiungere questa proprietà al JSON per il campo. Come procedura ottimale si consiglia di utilizzare tipi di schema JSON (come stringa e numero intero) con i vincoli min/max appropriati, come definito nella tabella seguente.
+>[!NOTE]
+>
+>`meta:xdmType` è un valore generato dal sistema e pertanto non è necessario aggiungere questa proprietà al JSON per il campo. Come procedura ottimale si consiglia di utilizzare tipi di schema JSON (come stringa e numero intero) con i vincoli min/max appropriati, come definito nella tabella seguente.
 
 La tabella seguente delinea la formattazione appropriata per definire i tipi di campi scalari e i tipi di campi più specifici utilizzando le proprietà facoltative. Ulteriori informazioni sulle proprietà facoltative e sulle parole chiave specifiche per i tipi sono disponibili nella documentazione [sullo schema](https://json-schema.org/understanding-json-schema/reference/type.html)JSON.
 
@@ -108,7 +113,7 @@ Per iniziare, trovate il tipo di campo desiderato e utilizzate il codice di esem
     </td>
   </tr>
   <tr>
-    <td>number</td>
+    <td>numero</td>
     <td>type: numero<br/>minimo: ±2,23×10^308<br/>massimo: ±1,80×10^308</td>
     <td>
       <pre class="JSON language-JSON hljs">
@@ -241,7 +246,7 @@ La tabella seguente descrive la mappatura tra &quot;meta:xdmType&quot; e altri f
 | XDM Type<br>(meta:xdmType) | JSON<br>(Schema JSON) | Parquet<br>(tipo/annotazione) | SQL Spark | Java | Scala | .NET | CosmosDB | MongoDB | Aerospike | Protobuf 2 |
 |---|---|---|---|---|---|---|---|---|---|---|
 | string | type:string | BYTE_ARRAY/UTF8 | StringType | java.lang.String | Stringa | System.String | Stringa | string | Stringa | string |
-| number | type:number | DOPPIO | DoubleType | java.lang.Double | Doppio | System.Double | Numero | double | Doppio | double |
+| numero | type:number | DOPPIO | DoubleType | java.lang.Double | Doppio | System.Double | Numero | double | Doppio | double |
 | long | tipo:<br>numero intero massimo:2^53+1<br>minimo:-2^53+1 | INT64 | LongType | java.lang.Long | Long | System.Int64 | Numero | long | Intero | int64 |
 | int | tipo:<br>numero intero massimo:2^31<br>minimo:-2^31 | INT32/INT_32 | IntegerType | java.lang.Integer | Int | System.Int32 | Numero | int | Intero | int32 |
 | short | tipo:<br>numero intero massimo:2^15<br>minimo:-2^15 | INT32/INT_16 | ShortType | java.lang.Short | Breve | System.Int16 | Numero | int | Intero | int32 |
