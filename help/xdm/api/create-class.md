@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Creazione di una classe
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 60911e32fd9235be2a258e60818011a42cd5ceba
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '485'
+ht-degree: 0%
 
 ---
 
@@ -13,9 +16,11 @@ source-git-commit: 60911e32fd9235be2a258e60818011a42cd5ceba
 
 Il blocco predefinito principale di uno schema è una classe. La classe contiene il set minimo di campi che è necessario definire per acquisire i dati di base di uno schema. Ad esempio, se si stava progettando uno schema per auto e camion, molto probabilmente utilizzerebbero una classe chiamata Veicolo che descriveva le proprietà comuni di base di tutti i veicoli.
 
-Esistono diverse classi standard fornite da Adobe e altri partner della piattaforma Experience, ma potete anche definire le vostre classi e salvarle nel Registro di sistema dello schema. È quindi possibile comporre uno schema che implementa la classe creata e definire mixin compatibili con la classe appena definita.
+Esistono diverse classi standard fornite da Adobe e altri partner  Experience Platform, ma è possibile definire classi personalizzate e salvarle nel Registro di sistema dello schema. È quindi possibile comporre uno schema che implementa la classe creata e definire mixin compatibili con la classe appena definita.
 
->[!NOTE] Quando si compone uno schema basato su una classe definita dall&#39;utente, non sarà possibile utilizzare i mixin standard. Ciascun mixin definisce le classi con cui è compatibile nel relativo `meta:intendedToExtend` attributo. Una volta iniziata la definizione di mixin compatibili con la nuova classe (utilizzando la `$id` nuova classe nel `meta:intendedToExtend` campo del mixin), sarà possibile riutilizzare tali mixin ogni volta che si definisce uno schema che implementa la classe definita. Per ulteriori informazioni, consulta le sezioni sulla [creazione di mixin](create-mixin.md) e sulla [creazione di schemi](create-schema.md) .
+>[!NOTE]
+>
+>Quando si compone uno schema basato su una classe definita dall&#39;utente, non sarà possibile utilizzare i mixin standard. Ciascun mixin definisce le classi con cui è compatibile nel relativo `meta:intendedToExtend` attributo. Una volta iniziata la definizione di mixin compatibili con la nuova classe (utilizzando la `$id` nuova classe nel `meta:intendedToExtend` campo del mixin), sarà possibile riutilizzare tali mixin ogni volta che si definisce uno schema che implementa la classe definita. Per ulteriori informazioni, consulta le sezioni sulla [creazione di mixin](create-mixin.md) e sulla [creazione di schemi](create-schema.md) .
 
 **Formato API**
 
