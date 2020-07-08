@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Raccolta di dati da un database di terze parti tramite connettori di origine e API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 84ea3e45a3db749359f3ce4a0ea25429eee8bb66
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1522'
 ht-degree: 1%
@@ -323,7 +323,9 @@ curl -X POST \
 | `params.dataSetId` | ID del set di dati di destinazione. |
 | `connectionSpec.id` | ID specifica di connessione del database di terze parti. |
 
->[!NOTE] Quando create una connessione di destinazione, accertatevi di utilizzare il valore della connessione di base del dataset per la connessione di base `id` anziché la connessione di base del connettore di origine di terze parti.
+>[!NOTE]
+>
+>Quando create una connessione di destinazione, accertatevi di utilizzare il valore della connessione di base del dataset per la connessione di base `id` anziché la connessione di base del connettore di origine di terze parti.
 
 **Risposta**
 
