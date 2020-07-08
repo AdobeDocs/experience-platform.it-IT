@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Azioni di marketing
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 1%
@@ -154,7 +154,9 @@ PUT /marketingActions/custom/{marketingActionName}
 
 Nella richiesta seguente, tenete presente che il payload della richiesta `name` è uguale a quello `{marketingActionName}` nella chiamata API. A differenza `id` di un criterio di sola lettura e generato dal sistema, la creazione di un&#39;azione di marketing richiede di fornire il nome _previsto_ per l&#39;azione di marketing al momento della creazione.
 
->[!NOTE] Se non viene fornito il contenuto `{marketingActionName}` della chiamata, si verificherà un errore 405 (Metodo non consentito) in quanto non è consentito eseguire direttamente un PUT all’ `/marketingActions/custom` endpoint. Inoltre, se il payload `name` nel payload non corrisponde a quello `{marketingActionName}` nel percorso, riceverete un errore 400 (Richiesta non valida).
+>[!NOTE]
+>
+>Se non viene fornito il contenuto `{marketingActionName}` della chiamata, si verificherà un errore 405 (Metodo non consentito) in quanto non è consentito eseguire direttamente un PUT all’ `/marketingActions/custom` endpoint. Inoltre, se il payload `name` nel payload non corrisponde a quello `{marketingActionName}` nel percorso, riceverete un errore 400 (Richiesta non valida).
 
 ```SHELL
 curl -X PUT \
@@ -197,7 +199,9 @@ Se creata correttamente, riceverete uno stato HTTP 201 (Creato) e il corpo della
 
 È possibile eliminare le azioni di marketing inviando una richiesta DELETE all&#39;azione `{marketingActionName}` di marketing che si desidera rimuovere.
 
->[!NOTE] Non puoi eliminare azioni di marketing a cui fanno riferimento i criteri esistenti. Se si tenta di farlo, si verificherà un errore 400 (Richiesta non valida) con un messaggio di errore che include gli `id` (o più ID) di qualsiasi criterio (o criterio) contenente un riferimento all&#39;azione di marketing che si sta tentando di eliminare.
+>[!NOTE]
+>
+>Non puoi eliminare azioni di marketing a cui fanno riferimento i criteri esistenti. Se si tenta di farlo, si verificherà un errore 400 (Richiesta non valida) con un messaggio di errore che include gli `id` (o più ID) di qualsiasi criterio (o criterio) contenente un riferimento all&#39;azione di marketing che si sta tentando di eliminare.
 
 **Formato API**
 
