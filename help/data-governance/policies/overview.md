@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica sui criteri di utilizzo dei dati
 topic: policies
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 0%
@@ -27,11 +27,15 @@ Questo documento fornisce una panoramica di alto livello dei criteri di utilizzo
 
 Un esempio di un&#39;azione di marketing potrebbe essere il desiderio di esportare un dataset in un servizio di terze parti. Se è presente un criterio che indica che tipi specifici di dati (come Informazioni personali (PII)) non possono essere esportati e si tenta di esportare un set di dati contenente un&#39;etichetta &quot;I&quot; (Dati identità), si riceverà una risposta dalla [!DNL Policy Service] notifica che un criterio di utilizzo dei dati è stato violato.
 
->[!NOTE] Le azioni di marketing di per sé non limitano l&#39;utilizzo dei dati. Devono essere inclusi nei criteri di utilizzo dei dati abilitati per poter valutare tali azioni in caso di violazioni dei criteri.
+>[!NOTE]
+>
+>Le azioni di marketing di per sé non limitano l&#39;utilizzo dei dati. Devono essere inclusi nei criteri di utilizzo dei dati abilitati per poter valutare tali azioni in caso di violazioni dei criteri.
 
 Quando si verifica l&#39;utilizzo dei dati nel servizio dell&#39;azienda, è necessario indicare le azioni di marketing rilevanti in modo da identificare eventuali violazioni dei criteri. Potete quindi utilizzare [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) per verificare la presenza di violazioni dei criteri nell&#39;integrazione.
 
->[!NOTE] Se utilizzi Real-time Customer Data Platform, puoi impostare casi di utilizzo del marketing sulle destinazioni per automatizzare l&#39;applicazione dei criteri. Per ulteriori informazioni, consulta il documento sulla governance dei [dati in CDP](../../rtcdp/privacy/data-governance-overview.md) in tempo reale.
+>[!NOTE]
+>
+>Se utilizzi Real-time Customer Data Platform, puoi impostare casi di utilizzo del marketing sulle destinazioni per automatizzare l&#39;applicazione dei criteri. Per ulteriori informazioni, consulta il documento sulla governance dei [dati in CDP](../../rtcdp/privacy/data-governance-overview.md) in tempo reale.
 
 Vedi l&#39;appendice di questo documento per un elenco delle azioni [di marketing definite da Adobe](#core-actions)disponibili. Puoi anche definire azioni di marketing personalizzate utilizzando l&#39;API di DULE Policy Service o l&#39;interfaccia utente Experience Platform . Ulteriori informazioni sull&#39;utilizzo delle azioni e dei criteri di marketing sono disponibili nella sezione successiva.
 
@@ -47,7 +51,9 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 Una volta applicate le etichette di utilizzo dei dati, gli amministratori dei dati possono utilizzare l&#39;API DULE Policy Service o l&#39;interfaccia  Experience Platform per gestire e valutare i criteri relativi alle azioni di marketing eseguite sui dati contenenti etichette di utilizzo dei dati. Puoi creare e aggiornare i criteri, determinare lo stato di un criterio e utilizzare azioni di marketing per valutare se un&#39;azione specifica viola un criterio di utilizzo dei dati.
 
->[!IMPORTANT] Tutti i criteri di utilizzo dei dati (inclusi i criteri di base forniti da Adobe) sono disattivati per impostazione predefinita. Affinché un singolo criterio venga preso in considerazione per l&#39;implementazione, è necessario attivarlo manualmente tramite l&#39;API o l&#39;interfaccia utente.
+>[!IMPORTANT]
+>
+>Tutti i criteri di utilizzo dei dati (inclusi i criteri di base forniti da Adobe) sono disattivati per impostazione predefinita. Affinché un singolo criterio possa essere preso in considerazione per l&#39;implementazione, è necessario attivarlo manualmente tramite l&#39;API o l&#39;interfaccia utente.
 
 Per istruzioni dettagliate sull&#39;utilizzo delle azioni di marketing e dei criteri di utilizzo dei dati nell&#39;API, consulta l&#39;esercitazione sulla [creazione e la valutazione dei criteri](create.md)di utilizzo dei dati. Per ulteriori informazioni sulle operazioni chiave fornite dall&#39;API di Servizio criteri, consultate la guida [per gli sviluppatori di Servizio](../api/getting-started.md)criteri.
 
@@ -65,7 +71,9 @@ La sezione seguente fornisce informazioni aggiuntive sui criteri di utilizzo dei
 
 La tabella seguente descrive le azioni di marketing di base fornite out-of-the-box da Adobe.
 
->[!NOTE] Le azioni di marketing di base dovrebbero essere viste come punto di partenza per aiutarti a identificare quali criteri di utilizzo creare e verificare la presenza di violazioni. Le definizioni e il modo in cui vengono interpretate dipendono dalle esigenze e dalle politiche aziendali.
+>[!NOTE]
+>
+>Le azioni di marketing di base dovrebbero essere viste come punto di partenza per aiutarti a identificare quali criteri di utilizzo creare e verificare la presenza di violazioni. Le definizioni e il modo in cui vengono interpretate dipendono dalle esigenze e dalle politiche aziendali.
 
 | Azione marketing | Descrizione |
 | --- | --- |
