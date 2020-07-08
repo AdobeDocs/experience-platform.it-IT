@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Funzioni SQL Spark
 topic: spark sql functions
 translation-type: tm+mt
-source-git-commit: a23ee02a9e801531a38b5ff70ef07497aa21b174
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '4903'
+ht-degree: 5%
 
 ---
 
@@ -13,9 +16,11 @@ source-git-commit: a23ee02a9e801531a38b5ff70ef07497aa21b174
 
 Gli assistenti SQL Spark forniscono funzioni SQL Spark integrate per estendere le funzionalità SQL.
 
-Riferimento: Documentazione della funzione SQL [Spark](https://spark.apache.org/docs/2.4.0/api/sql/index.html)
+Riferimento: [Documentazione della funzione SQL Spark](https://spark.apache.org/docs/2.4.0/api/sql/index.html)
 
->[!NOTE] Non tutte le funzioni della documentazione esterna sono supportate.
+>[!NOTE]
+>
+>Non tutte le funzioni della documentazione esterna sono supportate.
 
 ## Categorie
 
@@ -55,7 +60,7 @@ Esempio:
  6
 ```
 
-#### Aggiungi
+#### Add
 
 `expr1 + expr2`: Restituisce `expr1`+`expr2`.
 
@@ -573,7 +578,9 @@ Esempi:
  0.8446490682263027
 ```
 
->[!NOTE] Questa funzione non è deterministica in generale.
+>[!NOTE]
+>
+>Questa funzione non è deterministica in generale.
 
 #### randn
 
@@ -590,7 +597,9 @@ Esempi:
  1.1164209726833079
 ```
 
->[!NOTE] Questa funzione non è deterministica in generale.
+>[!NOTE]
+>
+>Questa funzione non è deterministica in generale.
 
 #### rint
 
@@ -1735,7 +1744,9 @@ Esempi:
 ```
 
 Dal: 1,5,0
->[!NOTE] La logica rse per gli array è disponibile dal 2.4.0.
+>[!NOTE]
+>
+>La logica rse per gli array è disponibile dal 2.4.0.
 
 #### mescolare
 
@@ -1751,7 +1762,9 @@ Esempi:
 ```
 
 Dal: 2.4.0
->[!NOTE] è non deterministica.
+>[!NOTE]
+>
+>è non deterministica.
 
 #### fetta
 
@@ -2386,7 +2399,9 @@ Esempio:
  46707d92-02f4-4817-8116-a4c3b23e6266
 ```
 
->[!NOTE] La funzione non è deterministica.
+>[!NOTE]
+>
+>La funzione non è deterministica.
 
 ### Valutazione dei dati
 
@@ -2422,7 +2437,9 @@ Esempi:
  [1,2,3,4,5,6]
 ```
 
->[!NOTE] La `concat` logica per gli array è disponibile dalla versione 2.4.0.
+>[!NOTE]
+>
+>`concat` logica per gli array è disponibile dal 2.4.0.
 
 #### concat_ws
 
