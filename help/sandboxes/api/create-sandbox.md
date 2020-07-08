@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Creare una sandbox
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: ef423a8c1b412315d03cddf7d8c351a232eb509b
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 2%
 
 ---
 
@@ -41,7 +44,7 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `name` | Identificatore che verrà utilizzato per accedere alla sandbox nelle richieste future. Questo valore deve essere univoco e la best practice consiste nel renderlo il più descrittivo possibile. Non può contenere spazi o lettere maiuscole. |
-| `title` | Un nome leggibile dall&#39;uomo utilizzato per la visualizzazione nell&#39;interfaccia utente della piattaforma. |
+| `title` | Un nome leggibile da un utente utilizzato per la visualizzazione nell&#39;interfaccia utente di Platform. |
 | `type` | Il tipo di sandbox da creare. Attualmente solo le sandbox di tipo &quot;development&quot; possono essere create da un&#39;organizzazione. |
 
 **Risposta**
@@ -58,4 +61,6 @@ Una risposta corretta restituisce i dettagli della nuova sandbox creata, mostran
 }
 ```
 
->[!NOTE] Le sandbox impiegano circa 15 minuti per essere fornite dal sistema, dopo di che `state` diventeranno &quot;attive&quot; o &quot;fallite&quot;.
+>[!NOTE]
+>
+>Le sandbox impiegano circa 15 minuti per essere fornite dal sistema, dopo di che `state` diventeranno &quot;attive&quot; o &quot;fallite&quot;.
