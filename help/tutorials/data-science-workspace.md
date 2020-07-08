@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Esercitazioni su Data Science Workspace
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1252'
 ht-degree: 0%
@@ -60,6 +60,8 @@ Per saperne di più, seguite i file sorgente del [pacchetto in un&#39;esercitazi
 ## Importare una ricetta
 
 >[!NOTE]
+>
+>
 >Questa esercitazione richiede l&#39;URL di un file sorgente Docker. Se non disponete di un URL del file sorgente Docker, visitate i file sorgente del [pacchetto in un&#39;esercitazione](../data-science-workspace/models-recipes/package-source-files-recipe.md) sulla ricetta.
 
 Le esercitazioni sulle ricette di importazione forniscono informazioni approfondite su come configurare e importare una ricetta in un pacchetto. Al termine di questa esercitazione, puoi creare, formare e valutare un modello in  Adobe Experience Platform Data Science Workspace.
