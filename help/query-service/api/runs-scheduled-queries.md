@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guida per gli sviluppatori di Query Service
 topic: runs for scheduled queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '659'
+ht-degree: 2%
 
 ---
 
@@ -144,7 +147,9 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di esecuzioni 
 }
 ```
 
->[!NOTE] È possibile utilizzare il valore di `_links.cancel` per [arrestare un&#39;esecuzione per una query](#immediately-stop-a-run-for-a-specific-scheduled-query)pianificata specificata.
+>[!NOTE]
+>
+>È possibile utilizzare il valore di `_links.cancel` per [arrestare un&#39;esecuzione per una query](#immediately-stop-a-run-for-a-specific-scheduled-query)pianificata specificata.
 
 ### Attivazione immediata di un&#39;esecuzione per una query pianificata specifica
 
