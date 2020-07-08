@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Gestione degli utenti per un profilo di prodotto
 topic: user guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +22,9 @@ Viene visualizzata la finestra di dialogo *Aggiungi utente* . Utilizzando il cam
 
 ![add-user-autocomplete](../images/add-user-autocomplete.png)
 
->[!NOTE] Se un utente non compare nella finestra di completamento automatico, immettete il proprio indirizzo e-mail completo nella barra di ricerca. Verrà inviato un invito all&#39;e-mail con istruzioni sulla configurazione di un account Adobe ID.
+>[!NOTE]
+>
+>Se un utente non compare nella finestra di completamento automatico, immettete il proprio indirizzo e-mail completo nella barra di ricerca. Verrà inviato un invito all&#39;e-mail con istruzioni sulla configurazione di un account di Adobe ID .
 
 Dopo aver selezionato un utente, fai clic su **Salva** per aggiungerlo al profilo di prodotto.
 
@@ -31,4 +36,4 @@ Viene nuovamente visualizzata la scheda *Utenti* del profilo di prodotto, in cui
 
 ## Passaggi successivi
 
-Ora che hai imparato a controllare l’accesso alle funzionalità della piattaforma tramite Admin Console, consulta la sezione dell’appendice nella panoramica [del controllo di](../home.md) accesso per ulteriori informazioni su ogni singola autorizzazione e sulle funzionalità della piattaforma a cui concedono l’accesso.
+Ora che hai imparato a controllare l’accesso alle funzionalità di Platform tramite l’Admin Console , consulta la sezione appendice della panoramica [sul controllo degli](../home.md) accessi per ulteriori informazioni su ogni singola autorizzazione e sulle funzionalità di Platform a cui concedono l’accesso.
