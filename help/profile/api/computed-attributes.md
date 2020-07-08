@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guida per lo sviluppatore di API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2431'
 ht-degree: 1%
@@ -483,6 +483,8 @@ Un aggiornamento riuscito restituisce lo stato HTTP 204 (nessun contenuto) e un 
 È inoltre possibile eliminare un attributo calcolato utilizzando l&#39;API. Questa operazione viene eseguita eseguendo una richiesta di DELETE all&#39; `/config/computedAttributes` endpoint e includendo l&#39;ID dell&#39;attributo calcolato che si desidera eliminare nel percorso della richiesta.
 
 >[!Nota]
+>
+>
 >Prestare attenzione quando si elimina un attributo calcolato perché potrebbe essere in uso in più schemi e l&#39;operazione DELETE non può essere annullata.
 
 **Formato API**
