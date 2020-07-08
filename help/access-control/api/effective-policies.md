@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Visualizza criteri efficaci
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '273'
+ht-degree: 1%
 
 ---
 
@@ -37,7 +40,9 @@ curl -X POST \
   ]'
 ```
 
->[!NOTE] Per un elenco completo delle autorizzazioni e dei tipi di risorse che possono essere forniti nell&#39;array di payload, consultate la sezione appendice sulle autorizzazioni e i tipi [di risorse](#accepted-permissions-and-resource-types)accettati.
+>[!NOTE]
+>
+>Per un elenco completo delle autorizzazioni e dei tipi di risorse che possono essere forniti nell&#39;array di payload, consultate la sezione appendice sulle autorizzazioni e i tipi [di risorse](#accepted-permissions-and-resource-types)accettati.
 
 **Risposta**
 
@@ -60,7 +65,7 @@ Una risposta corretta restituisce informazioni sulle autorizzazioni e i tipi di 
 
 ## Passaggi successivi
 
-In questo documento è stato illustrato come effettuare chiamate all&#39;API di controllo degli accessi per restituire informazioni sulle autorizzazioni attive e sui criteri correlati per i tipi di risorse. Per ulteriori informazioni sul controllo degli accessi per Experience Platform, consulta la panoramica [sul controllo degli](../home.md)accessi.
+In questo documento è stato illustrato come effettuare chiamate all&#39;API di controllo degli accessi per restituire informazioni sulle autorizzazioni attive e sui criteri correlati per i tipi di risorse. Per ulteriori informazioni sul controllo degli accessi per  Experience Platform, consultate la panoramica [sul controllo](../home.md)degli accessi.
 
 ## Appendice
 
