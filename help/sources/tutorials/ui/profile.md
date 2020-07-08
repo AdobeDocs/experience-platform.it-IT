@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Attivare i dati di origine in entrata per compilare i profili cliente
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%
@@ -61,7 +61,9 @@ Ora che lo schema è abilitato, [!DNL Profile]tornare alla *[!UICONTROL Dataset 
 
 Con lo schema e il set di dati abilitati per [!DNL Profile], i dati inseriti in tale set di dati ora popoleranno anche i profili dei clienti.
 
->[!NOTE] I dati esistenti in un dataset abilitato di recente non vengono utilizzati da [!DNL Profile]
+>[!NOTE]
+>
+>I dati esistenti in un dataset abilitato di recente non vengono utilizzati da [!DNL Profile]
 
 ## Passaggi successivi
 
