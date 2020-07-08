@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Servizio Adobe Experience Platform Identity
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1530'
 ht-degree: 0%
@@ -94,7 +94,9 @@ A seconda della strategia aziendale di raccolta dei dati, i campi dati etichetta
 
 Anche se [!DNL Experience Platform] offre diversi spazi dei nomi standard, potrebbe essere necessario creare spazi di nomi aggiuntivi per classificare correttamente le identità. Per ulteriori informazioni, consultate la sezione sulla [visualizzazione e la creazione di spazi dei nomi per la vostra organizzazione](./namespaces.md) nella panoramica dello spazio dei nomi delle identità.
 
->[!NOTE] Gli spazi dei nomi delle identità sono un qualificatore per le identità. Di conseguenza, una volta creato uno spazio nomi, non può essere eliminato.
+>[!NOTE]
+>
+>Gli spazi dei nomi delle identità sono un qualificatore per le identità. Di conseguenza, una volta creato uno spazio nomi, non può essere eliminato.
 
 ### Includi dati di identità in [!DNL Experience Data Model] (XDM)
 
@@ -109,7 +111,9 @@ Qualsiasi campo di tipo `string` negli schemi che implementa classi XDM di recor
 I campi di identità consentono inoltre il collegamento di identità se condividono dati PII comuni.
 Ad esempio, etichettando i campi dei numeri di telefono come campi di identità, [!DNL Identity Service] traccia automaticamente le relazioni con gli altri individui che utilizzano lo stesso numero di telefono.
 
->[!NOTE] Lo spazio dei nomi delle identità risultanti viene fornito al momento in cui il campo è etichettato.
+>[!NOTE]
+>
+>Lo spazio dei nomi delle identità risultanti viene fornito al momento in cui il campo è etichettato.
 
 ### Configurare un dataset per [!DNL Identity Service]
 
