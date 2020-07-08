@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Sostituire un oggetto
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a753c6460bfe89e2b78fb3e087e9ba7397206dec
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 2%
 
 ---
 
@@ -13,7 +16,9 @@ source-git-commit: a753c6460bfe89e2b78fb3e087e9ba7397206dec
 
 Potete sovrascrivere il contenuto di un oggetto Catalog utilizzando una richiesta PUT, in cui l&#39;intera risorsa viene sostituita con il payload della richiesta.
 
->[!NOTE] Se è necessario aggiornare solo alcuni campi specifici all&#39;interno di un oggetto Catalog, l&#39;utilizzo di una richiesta PATCH potrebbe risultare più efficiente.
+>[!NOTE]
+>
+>Se è necessario aggiornare solo alcuni campi specifici all&#39;interno di un oggetto Catalog, l&#39;utilizzo di una richiesta PATCH potrebbe risultare più efficiente.
 
 **Formato API**
 
