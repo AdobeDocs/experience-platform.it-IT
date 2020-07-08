@@ -4,42 +4,47 @@ solution: Experience Platform
 title: Creazione di un set di dati tramite le API
 topic: datasets
 translation-type: tm+mt
-source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1263'
+ht-degree: 1%
 
 ---
 
 
 # Creazione di un set di dati tramite le API
 
-Questo documento contiene i passaggi generali per la creazione di un set di dati mediante le API di Adobe Experience Platform e la compilazione del set di dati tramite un file.
+Questo documento fornisce passaggi generali per la creazione di un dataset utilizzando  API di Adobe Experience Platform e la compilazione del dataset tramite un file.
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
 
-* [Caricamento](../../ingestion/batch-ingestion/overview.md)batch: Experience Platform consente di assimilare i dati come file batch.
-* [Sistema](../../xdm/home.md)XDM (Experience Data Model): Il framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza dei clienti.
-* [Sandbox](../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [Caricamento](../../ingestion/batch-ingestion/overview.md)batch:  Experience Platform consente di assimilare i dati come file batch.
+* [Sistema](../../xdm/home.md)XDM (Experience Data Model): Framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
+* [Sandbox](../../sandboxes/home.md):  Experience Platform fornisce sandbox virtuali che dividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per effettuare correttamente chiamate alle API della piattaforma.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per effettuare correttamente chiamate alle API Platform.
 
 ### Lettura di chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi della piattaforma Experience.
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi di  Experience Platform.
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle API della piattaforma, dovete prima completare l&#39;esercitazione [di](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come illustrato di seguito:
+Per effettuare chiamate alle API Platform, è prima necessario completare l&#39;esercitazione [di](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API Experience Platform, come illustrato di seguito:
 
 * Autorizzazione: Portatore `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API della piattaforma richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in  Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API Platform richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Per ulteriori informazioni sulle sandbox in Piattaforma, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+>[!NOTE]
+>
+>Per ulteriori informazioni sulle sandbox in Platform, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva:
 
@@ -207,7 +212,9 @@ curl -X POST \
 }'
 ```
 
->[!NOTE] Questa esercitazione utilizza il formato di file [parquet](https://parquet.apache.org/documentation/latest/) per tutti i relativi esempi. Un esempio che utilizza il formato di file JSON è disponibile nella guida per gli sviluppatori di assimilazione [batch](../../ingestion/batch-ingestion/api-overview.md)
+>[!NOTE]
+>
+>Questa esercitazione utilizza il formato di file [parquet](https://parquet.apache.org/documentation/latest/) per tutti i relativi esempi. Un esempio che utilizza il formato di file JSON è disponibile nella guida per gli sviluppatori di assimilazione [batch](../../ingestion/batch-ingestion/api-overview.md)
 
 **Risposta**
 
@@ -289,7 +296,9 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un oggetto rispos
 
 Dopo aver creato un nuovo batch per il caricamento, ora potete caricare i file nel set di dati specifico. È importante ricordare che quando avete definito il dataset, avete specificato il formato di file come parquet. Pertanto, i file caricati devono essere in quel formato.
 
->[!NOTE] Il file di caricamento dei dati più grande supportato è 512 MB. Se il file di dati è più grande di questo, deve essere suddiviso in blocchi non superiori a 512 MB, per essere caricato uno alla volta. Potete caricare ciascun file nello stesso batch ripetendo questo passaggio per ciascun file, utilizzando lo stesso ID batch. Non esiste alcun limite al numero se i file possono essere caricati come parte di un batch.
+>[!NOTE]
+>
+>Il file di caricamento dei dati più grande supportato è 512 MB. Se il file di dati è più grande di questo, deve essere suddiviso in blocchi non superiori a 512 MB, per essere caricato uno alla volta. Potete caricare ciascun file nello stesso batch ripetendo questo passaggio per ciascun file, utilizzando lo stesso ID batch. Non esiste alcun limite al numero se i file possono essere caricati come parte di un batch.
 
 **Formato API**
 
@@ -446,7 +455,9 @@ Una risposta negativa restituisce un oggetto con il valore di `"failed"` nel rel
 }
 ```
 
->[!NOTE] Un intervallo di polling consigliato è di due minuti.
+>[!NOTE]
+>
+>Un intervallo di polling consigliato è di due minuti.
 
 ## Leggere i dati dal dataset
 
@@ -464,4 +475,4 @@ Per ulteriori informazioni sull&#39;aggiornamento degli schemi, vedere la [Schem
 
 Una volta aggiornato lo schema, è possibile seguire nuovamente i passaggi di questa esercitazione per acquisire nuovi dati conformi allo schema modificato.
 
-È importante ricordare che l&#39;evoluzione dello schema è puramente additiva, il che significa che non è possibile introdurre una modifica di interruzione a uno schema una volta che è stato salvato nel Registro di sistema e utilizzato per l&#39;inserimento dei dati. Per ulteriori informazioni sulle procedure ottimali per la composizione di schemi da utilizzare con Adobe Experience Platform, consulta la guida sulle [nozioni di base della composizione](../../xdm/schema/composition.md)dello schema.
+È importante ricordare che l&#39;evoluzione dello schema è puramente additiva, il che significa che non è possibile introdurre una modifica di interruzione a uno schema una volta che è stato salvato nel Registro di sistema e utilizzato per l&#39;inserimento dei dati. Per ulteriori informazioni sulle procedure ottimali per la composizione dello schema da utilizzare con  Adobe Experience Platform, vedere la guida sulle [nozioni di base della composizione](../../xdm/schema/composition.md)dello schema.
