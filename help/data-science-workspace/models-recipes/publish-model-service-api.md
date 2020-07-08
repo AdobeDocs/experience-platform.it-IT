@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Pubblicare un modello come servizio (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1478'
 ht-degree: 1%
@@ -338,7 +338,9 @@ Una risposta corretta restituisce i dettagli del servizio ML.
 }
 ```
 
->[!NOTE] Il recupero di diversi servizi ML potrebbe restituire una risposta con più o meno coppie chiave-valore. La risposta di cui sopra è una rappresentazione di un servizio [ML con formazione programmata ed esecuzione](#ml-service-with-scheduled-experiments-for-training-and-scoring)di prove di punteggio.
+>[!NOTE]
+>
+>Il recupero di diversi servizi ML potrebbe restituire una risposta con più o meno coppie chiave-valore. La risposta di cui sopra è una rappresentazione di un servizio [ML con formazione programmata ed esecuzione](#ml-service-with-scheduled-experiments-for-training-and-scoring)di prove di punteggio.
 
 
 ## Pianificazione formazione o punteggio
@@ -388,7 +390,9 @@ curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
       }'
 ```
 
->[!WARNING] Non tentare di modificare i processi `startTime` di formazione e valutazione già pianificati. Se è `startTime` necessario modificare il modello, prendete in considerazione la pubblicazione dello stesso modello e la riprogrammazione dei processi di formazione e assegnazione dei punteggi.
+>[!WARNING]
+>
+>Non tentare di modificare i processi `startTime` di formazione e valutazione già pianificati. Se è `startTime` necessario modificare il modello, prendete in considerazione la pubblicazione dello stesso modello e la riprogrammazione dei processi di formazione e assegnazione dei punteggi.
 
 **Risposta**
 
