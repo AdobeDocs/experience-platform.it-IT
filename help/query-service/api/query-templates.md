@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guida per gli sviluppatori di Query Service
 topic: query templates
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '643'
+ht-degree: 3%
 
 ---
 
@@ -102,7 +105,9 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di modelli di 
 }
 ```
 
->[!NOTE] È possibile utilizzare il valore di `_links.delete` per [eliminare il modello](#delete-a-specified-query-template)di query.
+>[!NOTE]
+>
+>È possibile utilizzare il valore di `_links.delete` per [eliminare il modello](#delete-a-specified-query-template)di query.
 
 ### Creare un modello di query
 
@@ -163,7 +168,9 @@ Una risposta corretta restituisce lo stato HTTP 202 (Accettato) con i dettagli d
 }
 ```
 
->[!NOTE] È possibile utilizzare il valore di `_links.delete` per [eliminare il modello](#delete-a-specified-query-template)di query.
+>[!NOTE]
+>
+>È possibile utilizzare il valore di `_links.delete` per [eliminare il modello](#delete-a-specified-query-template)di query.
 
 ### Recuperare un modello di query specificato
 
@@ -219,7 +226,9 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del modello d
 }
 ```
 
->[!NOTE] È possibile utilizzare il valore di `_links.delete` per [eliminare il modello](#delete-a-specified-query-template)di query.
+>[!NOTE]
+>
+>È possibile utilizzare il valore di `_links.delete` per [eliminare il modello](#delete-a-specified-query-template)di query.
 
 ### Aggiornare un modello di query specificato
 
@@ -237,7 +246,9 @@ PUT /query-templates/{TEMPLATE_ID}
 
 **Richiesta**
 
->[!NOTE] La richiesta PUT richiede la compilazione del campo sql e del campo name e **sovrascrive** il contenuto corrente del modello di query.
+>[!NOTE]
+>
+>La richiesta PUT richiede la compilazione del campo sql e del campo name e **sovrascrive** il contenuto corrente del modello di query.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -287,11 +298,13 @@ Una risposta corretta restituisce lo stato HTTP 202 (Accettato) con le informazi
 }
 ```
 
->[!NOTE] È possibile utilizzare il valore di `_links.delete` per [eliminare il modello](#delete-a-specified-query-template)di query.
+>[!NOTE]
+>
+>È possibile utilizzare il valore di `_links.delete` per [eliminare il modello](#delete-a-specified-query-template)di query.
 
 ### Eliminare un modello di query specificato
 
-È possibile eliminare un modello di query specifico effettuando una richiesta DELETE all&#39;utente `/query-templates/{TEMPLATE_ID}` e fornendo l&#39;ID del modello di query nel percorso della richiesta.
+È possibile eliminare un modello di query specifico effettuando una richiesta di DELETE al `/query-templates/{TEMPLATE_ID}` e fornendo l&#39;ID del modello di query nel percorso della richiesta.
 
 **Formato API**
 
