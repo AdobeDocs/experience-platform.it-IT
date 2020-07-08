@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Esportare i dati mediante le API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d0b9223aebca0dc510a7457e5a5c65ac4a567933
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1953'
 ht-degree: 1%
@@ -20,26 +20,28 @@ Oltre a creare un processo di esportazione, potete accedere ai dati del profilo 
 
 ## Introduzione
 
-Questa esercitazione richiede una buona conoscenza dei vari servizi Adobe Experience Platform coinvolti nell&#39;utilizzo dei dati di profilo. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
+Questa esercitazione richiede una conoscenza approfondita dei diversi servizi di Adobe Experience Platform  coinvolti nell&#39;utilizzo dei dati di profilo. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
 - [Profilo](../../profile/home.md)cliente in tempo reale: Fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
-- [Servizio](../home.md)di segmentazione della piattaforma Adobe Experience: Consente di creare segmenti di pubblico dai dati del profilo cliente in tempo reale.
-- [Experience Data Model (XDM)](../../xdm/home.md): Il framework standardizzato tramite il quale la piattaforma organizza i dati sull&#39;esperienza cliente.
-- [Sandbox](../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+- [servizio](../home.md)di segmentazione Adobe Experience Platform: Consente di creare segmenti di pubblico dai dati del profilo cliente in tempo reale.
+- [Experience Data Model (XDM)](../../xdm/home.md): Framework standard con cui Platform organizza i dati sull&#39;esperienza dei clienti.
+- [Sandbox](../../sandboxes/home.md):  Experience Platform fornisce sandbox virtuali che dividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 ### Intestazioni necessarie
 
-Questa esercitazione richiede anche di aver completato l&#39;esercitazione [di](../../tutorials/authentication.md) autenticazione per effettuare correttamente le chiamate alle API della piattaforma. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come illustrato di seguito:
+Questa esercitazione richiede anche di aver completato l&#39;esercitazione [di](../../tutorials/authentication.md) autenticazione per effettuare correttamente le chiamate alle API Platform. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API Experience Platform, come illustrato di seguito:
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in Experience Platform sono isolate in sandbox virtuali specifiche. Le richieste alle API della piattaforma richiedono un&#39;intestazione che specifica il nome della sandbox in cui si svolgerà l&#39;operazione:
+Tutte le risorse in  Experience Platform sono isolate in sandbox virtuali specifiche. Le richieste alle API Platform richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Per ulteriori informazioni sulle sandbox in Piattaforma, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+>[!NOTE]
+>
+>Per ulteriori informazioni sulle sandbox in Platform, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
 Tutte le richieste POST, PUT e PATCH richiedono un&#39;intestazione aggiuntiva:
 
@@ -47,7 +49,7 @@ Tutte le richieste POST, PUT e PATCH richiedono un&#39;intestazione aggiuntiva:
 
 ## Creare un processo di esportazione
 
-Per esportare i dati del profilo è innanzitutto necessario creare un set di dati in cui esportare i dati, quindi avviare un nuovo processo di esportazione. Entrambi questi passaggi possono essere eseguiti utilizzando le API della piattaforma Experience, con le API del servizio Catalog utilizzate e le API del profilo cliente in tempo reale. Le istruzioni dettagliate per completare ciascun passaggio sono descritte nelle sezioni che seguono.
+Per esportare i dati del profilo è innanzitutto necessario creare un set di dati in cui esportare i dati, quindi avviare un nuovo processo di esportazione. Entrambi questi passaggi possono essere eseguiti utilizzando  API Experience Platform, con le prime mediante l&#39;API Catalog Service e le seconde mediante l&#39;API Real-time Customer Profile. Le istruzioni dettagliate per completare ciascun passaggio sono descritte nelle sezioni che seguono.
 
 - [Creare un set di dati](#create-a-target-dataset) di destinazione: creare un set di dati in cui memorizzare i dati esportati.
 - [Avviare un nuovo processo](#initiate-export-job) di esportazione - Compilare il set di dati con i dati del profilo singolo XDM.
@@ -58,7 +60,7 @@ Quando si esportano i dati del profilo, è necessario creare prima un set di dat
 
 Una delle considerazioni chiave è lo schema su cui si basa il dataset (`schemaRef.id` nella richiesta di esempio API di seguito). Per esportare un segmento, il set di dati deve essere basato sullo schema unionale profilo singolo XDM (`https://ns.adobe.com/xdm/context/profile__union`). Uno schema unione è uno schema di sola lettura generato dal sistema che aggrega i campi degli schemi che condividono la stessa classe, in questo caso si tratta della classe XDM Singolo profilo. Per ulteriori informazioni sugli schemi di visualizzazione dell&#39;unione, vedere la sezione Profilo cliente in tempo [reale della guida](../../xdm/schema/composition.md#union)per gli sviluppatori del Registro di sistema dello schema.
 
-I passaggi che seguono in questa esercitazione descrivono come creare un dataset che faccia riferimento allo schema dell&#39;unione dei profili XDM utilizzando l&#39;API Catalog. Potete anche utilizzare l&#39;interfaccia utente di Adobe Experience Platform per creare un dataset che faccia riferimento allo schema unione. I passaggi per l’utilizzo dell’interfaccia utente sono descritti in [questa esercitazione sull’interfaccia utente per l’esportazione di segmenti](./create-dataset-export-segment.md) , ma sono applicabili anche qui. Al termine, potete tornare a questa esercitazione per procedere con i passaggi necessari per [avviare un nuovo processo](#initiate-export-job)di esportazione.
+I passaggi che seguono in questa esercitazione descrivono come creare un dataset che faccia riferimento allo schema dell&#39;unione dei profili XDM utilizzando l&#39;API Catalog. È inoltre possibile utilizzare l&#39;interfaccia utente del Adobe Experience Platform  per creare un dataset che faccia riferimento allo schema unione. I passaggi per l’utilizzo dell’interfaccia utente sono descritti in [questa esercitazione sull’interfaccia utente per l’esportazione di segmenti](./create-dataset-export-segment.md) , ma sono applicabili anche qui. Al termine, potete tornare a questa esercitazione per procedere con i passaggi necessari per [avviare un nuovo processo](#initiate-export-job)di esportazione.
 
 Se disponete già di un set di dati compatibile e ne conoscete l’ID, potete procedere direttamente al passaggio per [avviare un nuovo processo](#initiate-export-job)di esportazione.
 
@@ -197,7 +199,9 @@ curl -X POST \
 | `schema.name` | **(Obbligatorio)** Il nome dello schema associato al dataset in cui devono essere esportati i dati. |
 | `evaluationInfo.segmentation` | *(Facoltativo)* Un valore booleano che, se non viene fornito, utilizza per impostazione predefinita `false`. Un valore di `true` indica che la segmentazione deve essere eseguita nel processo di esportazione. |
 
->[!NOTE] Per esportare solo i dati del profilo e non includere i dati relativi a ExperienceEvent, rimuovete l’oggetto &quot;AdditionalFields&quot; dalla richiesta.
+>[!NOTE]
+>
+>Per esportare solo i dati del profilo e non includere i dati relativi a ExperienceEvent, rimuovete l’oggetto &quot;AdditionalFields&quot; dalla richiesta.
 
 **Risposta**
 
@@ -529,7 +533,7 @@ curl -X GET \
 
 ## Annullamento di un processo di esportazione
 
-Experience Platform (Piattaforma esperienza) consente di annullare un processo di esportazione esistente, che può essere utile per diversi motivi, ad esempio se il processo di esportazione non è stato completato o si è bloccato nella fase di elaborazione. Per annullare un processo di esportazione, potete eseguire una richiesta DELETE all’ `/export/jobs` endpoint e includere il processo `id` di esportazione che desiderate annullare nel percorso della richiesta.
+ Experience Platform consente di annullare un processo di esportazione esistente, che può essere utile per diversi motivi, ad esempio se il processo di esportazione non è stato completato o si è bloccato nella fase di elaborazione. Per annullare un processo di esportazione, potete eseguire una richiesta DELETE all’ `/export/jobs` endpoint e includere il processo `id` di esportazione che desiderate annullare nel percorso della richiesta.
 
 **Formato API**
 
@@ -558,10 +562,10 @@ Una richiesta di eliminazione riuscita restituisce lo stato HTTP 204 (nessun con
 
 ## Passaggi successivi
 
-Una volta completata l&#39;esportazione, i dati sono disponibili all&#39;interno del Data Lake in Experience Platform. Potete quindi utilizzare l&#39;API [di accesso ai](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) dati per accedere ai dati utilizzando l&#39; `batchId` API associata all&#39;esportazione. A seconda delle dimensioni dell’esportazione, i dati possono essere in blocchi e il batch può essere costituito da più file.
+Una volta completata l&#39;esportazione, i dati sono disponibili all&#39;interno del Data Lake in  Experience Platform. Potete quindi utilizzare l&#39;API [di accesso ai](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) dati per accedere ai dati utilizzando l&#39; `batchId` API associata all&#39;esportazione. A seconda delle dimensioni dell’esportazione, i dati possono essere in blocchi e il batch può essere costituito da più file.
 
 Per istruzioni dettagliate su come utilizzare l&#39;API di accesso ai dati per accedere e scaricare file batch, segui l&#39;esercitazione [sull&#39;accesso ai](../../data-access/tutorials/dataset-data.md)dati.
 
-È inoltre possibile accedere ai dati del profilo cliente in tempo reale esportati correttamente tramite Adobe Experience Platform Query Service. Utilizzando l&#39;interfaccia utente o l&#39;API RESTful, Query Service consente di scrivere, convalidare ed eseguire query sui dati all&#39;interno del Data Lake.
+Potete inoltre accedere ai dati del profilo cliente in tempo reale esportati correttamente utilizzando  Adobe Experience Platform Query Service. Utilizzando l&#39;interfaccia utente o l&#39;API RESTful, Query Service consente di scrivere, convalidare ed eseguire query sui dati all&#39;interno del Data Lake.
 
 Per ulteriori informazioni su come eseguire query sui dati del pubblico, consulta la documentazione [del servizio](../../query-service/home.md)Query.
