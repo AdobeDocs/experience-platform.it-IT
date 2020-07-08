@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Deduplicazione dei dati
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '414'
+ht-degree: 0%
 
 ---
 
 
 # Deduplicazione dei dati in Query Service
 
-Adobe Experience Platform Query Service supporta la deduplicazione dei dati quando potrebbe essere necessario rimuovere un&#39;intera riga da un calcolo o ignorare un set specifico di campi, perché solo parte dei dati nella riga è un duplicato. Il pattern comune per la deduplicazione prevede l&#39;utilizzo della `ROW_NUMBER()` funzione all&#39;interno di una finestra per un ID, o una coppia di ID, nel tempo ordinato (utilizzando il campo Experience Data Model (XDM) `timestamp` ) per restituire un nuovo campo che rappresenta il numero di volte in cui è stato rilevato un duplicato. Quando questo valore è `1`, si riferisce all&#39;istanza originale e, nella maggior parte dei casi, all&#39;istanza che si desidera utilizzare, ignorando ogni altra istanza. Nella maggior parte dei casi, questa operazione viene eseguita all&#39;interno di una sottoselezione, in cui la deduplicazione viene eseguita in un livello superiore, `SELECT` come per esempio l&#39;esecuzione di un conteggio aggregato.
+ Adobe Experience Platform Query Service supporta la deduplicazione dei dati quando potrebbe essere necessario rimuovere un&#39;intera riga da un calcolo o ignorare un insieme specifico di campi, perché solo parte dei dati nella riga è un duplicato. Il pattern comune per la deduplicazione prevede l&#39;utilizzo della `ROW_NUMBER()` funzione all&#39;interno di una finestra per un ID, o una coppia di ID, nel tempo ordinato (utilizzando il campo Experience Data Model (XDM) `timestamp` ) per restituire un nuovo campo che rappresenta il numero di volte in cui è stato rilevato un duplicato. Quando questo valore è `1`, si riferisce all&#39;istanza originale e, nella maggior parte dei casi, all&#39;istanza che si desidera utilizzare, ignorando ogni altra istanza. Nella maggior parte dei casi, questa operazione viene eseguita all&#39;interno di una sottoselezione, in cui la deduplicazione viene eseguita in un livello superiore, `SELECT` come per esempio l&#39;esecuzione di un conteggio aggregato.
 
 ## Casi di utilizzo
 
@@ -20,13 +23,15 @@ Alcuni casi di utilizzo per la deduplicazione sono globali nell’intervallo di 
 In questo documento sono riportati esempi di query di selezione secondaria e di esempio completo per la deduplicazione di tre casi d’uso comuni:
 - [ExperienceEvents](#experienceevents)
 - [Acquisti](#purchases)
-- [Metrics (Metriche)](#metrics)
+- [Metriche](#metrics)
 
 ### ExperienceEvents {#experienceevents}
 
 Nel caso di ExperienceEvents duplicati, probabilmente si desidera ignorare l’intera riga.
 
->[!CAUTION] Molti DataSet in Experience Platform, inclusi quelli prodotti dal Connettore dati Adobe Analytics, dispongono già della deduplicazione a livello di ExperienceEvent. Pertanto, la riapplicazione di questo livello di deduplicazione non è necessaria e rallenta la query. È importante comprendere l’origine dei DataSet e sapere se è già stata applicata la deduplicazione a livello di ExperienceEvent. Per qualsiasi DataSet trasmesso in streaming (ad esempio, quelli provenienti da Adobe Target), dovrete applicare la deduplicazione a livello ExperienceEvent perché tali origini dati hanno una semantica &quot;almeno una volta&quot;.
+>[!CAUTION]
+>
+>Molti DataSet  Experience Platform, inclusi quelli prodotti da Adobe  Analytics Data Connector, dispongono già di una deduplicazione a livello di ExperienceEvent. Pertanto, la riapplicazione di questo livello di deduplicazione non è necessaria e rallenta la query. È importante comprendere l’origine dei DataSet e sapere se è già stata applicata la deduplicazione a livello di ExperienceEvent. Per qualsiasi DataSet trasmesso in streaming (ad esempio, quelli provenienti da  Adobe Target), dovrete applicare la deduplicazione a livello ExperienceEvent perché tali origini dati hanno una semantica &quot;almeno una volta&quot;.
 
 **Ambito:** Globale
 
