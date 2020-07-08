@@ -1,10 +1,10 @@
 ---
 title: Prodotti
-seo-title: Supporto di prodotti con Adobe Experience Platform Web SDK
-description: Scopri come aggiungere dati se hai prodotti o un carrello con l’SDK Web di Experience Platform
-seo-description: Scopri come aggiungere dati se hai prodotti o un carrello con l’SDK Web di Experience Platform
+seo-title: Supporto di prodotti con  Adobe Experience Platform Web SDK
+description: Scoprite come aggiungere dati in caso di prodotti o di un carrello con  Experience Platform Web SDK
+seo-description: Scoprite come aggiungere dati in caso di prodotti o di un carrello con  Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1314'
 ht-degree: 4%
@@ -19,13 +19,17 @@ Se sul sito sono presenti prodotti, si tratta di un insieme predefinito di eleme
 In questo documento viene utilizzato il mixin [ExperienceEvent Commerce Details](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) . La `commerce` miscelazione è suddivisa in due parti: l&#39; `commerce` oggetto e l&#39; `productListItems` array. L&#39; `commerce` oggetto consente di indicare quali azioni vengono eseguite sull&#39; `productListItems` array.
 
 >[!Tip]
->Se hai familiarità con Adobe Analytics, la variabile `commerce` è maggiormente correlata alla `events` variabile. La variabile `productListItems` è più strettamente correlata alla `products` variabile.
+>
+>
+>Se avete familiarità con Adobe  Analytics, la variabile `commerce` è maggiormente correlata alla `events` variabile. La variabile `productListItems` è più strettamente correlata alla `products` variabile.
 
 ## Azioni relative ai prodotti
 
 Di seguito è riportato un elenco di `measures` elementi disponibili nell&#39; `commerce` oggetto.
 
 >[!Tip]
+>
+>
 >Una misura ha due campi: `id` e `value`. Nella maggior parte dei casi, sarà utilizzato solo il `value` campo (ad esempio, `'value':1`). Il `id` campo consente di impostare un identificatore univoco che consente di tenere traccia di quando la misura è stata inviata. Consulta la documentazione XDM per [Measure](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/measure.schema.md).
 
 | **Misura** | **Consiglio** | **Descrizione** |
@@ -111,7 +115,7 @@ alloy("sendEvent",{
 
 L&#39;elenco dei prodotti indica quali prodotti sono correlati all&#39;azione corrispondente. È un elenco di [productListItems](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md). Ogni prodotto ha una serie di campi opzionali.
 
-| **Field** | **Consiglio** | **Descrizione** |
+| **Campo** | **Consiglio** | **Descrizione** |
 |---|---|---|
 | [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmcurrencycode) | Facoltativo | La valuta [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) per il prodotto. Questa funzione è utile solo quando è possibile avere prodotti con codici valuta diversi e quando viene applicata. Ad esempio, in caso di acquisto o aggiunta al carrello. |
 | [priceTotal](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmpricetotal) | Altamente consigliato | Deve essere impostato solo se applicabile. Ad esempio, potrebbe non essere possibile impostare `productView` perché diverse variazioni del prodotto possono avere prezzi diversi ma su un `productListAdds`. |
