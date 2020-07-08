@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Introduzione
 topic: API guide
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '714'
 ht-degree: 1%
@@ -42,7 +42,9 @@ Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali 
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+>[!NOTE]
+>
+>Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva:
 
@@ -61,7 +63,9 @@ La tabella seguente mostra alcuni percorsi di esempio che utilizzano le aree:
 | [!DNL Identity Service] API | https://</span>platform-va7.adobe.</span>io/data/core/identity/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/identity/{ENDPOINT} |
 | [!DNL Identity Namespace] API | https://</span>platform-va7.adobe.</span>io/data/core/idnamespace/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/idnamespace{ENDPOINT} |
 
->[!NOTE] Le richieste effettuate senza specificare una regione possono causare il routing delle chiamate all&#39;area errata o causare errori imprevisti nelle chiamate.
+>[!NOTE]
+>
+>Le richieste effettuate senza specificare una regione possono causare il routing delle chiamate all&#39;area errata o causare errori imprevisti nelle chiamate.
 
 Se non riuscite a individuare la regione all&#39;interno del profilo IMS, contattate l&#39;amministratore di sistema per ottenere assistenza.
 
@@ -77,7 +81,9 @@ Per limitare il payload nelle risposte, le API adattano le proprie risposte al t
 
 Gli esempi in questo documento non coprono la funzionalità completa dell&#39; [!DNL Identity Service] API. Per l&#39;API completa, consultate il riferimento API [Swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml).
 
->[!NOTE] Quando nella richiesta viene utilizzato XID nativo, tutte le identità restituite saranno in formato XID nativo. Si consiglia di utilizzare il modulo ID/namespace. Per ulteriori informazioni, consultate la sezione su come [ottenere l&#39;XID per un&#39;identità](./create-custom-namespace.md).
+>[!NOTE]
+>
+>Quando nella richiesta viene utilizzato XID nativo, tutte le identità restituite saranno in formato XID nativo. Si consiglia di utilizzare il modulo ID/namespace. Per ulteriori informazioni, consultate la sezione su come [ottenere l&#39;XID per un&#39;identità](./create-custom-namespace.md).
 
 ## Passaggi successivi
 
