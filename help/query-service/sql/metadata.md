@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Metadati, comandi
 topic: metadata
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '299'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +16,9 @@ source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
 
 Per i metadati del set di dati, i seguenti comandi PSQL sono attualmente supportati per le query:
 
->[!NOTE] I comandi elencati di seguito sono con distinzione tra maiuscole e minuscole.
+>[!NOTE]
+>
+>I comandi elencati di seguito sono con distinzione tra maiuscole e minuscole.
 
 | Comando | Descrizione |
 |------- | ------------|
@@ -33,10 +38,10 @@ Per i metadati del set di dati, i seguenti comandi PSQL sono attualmente support
 | `\errverbose` | Ripete il messaggio di errore server più recente alla massima verbosità. |
 | `\l or \list` | Visualizza un elenco di database nel server. |
 | `\set` | Visualizza i nomi e i valori di tutte le variabili psql correnti. |
-| `\showtables` | Mostra le informazioni seguenti: <br>nome: Nome a cui verrà fatto riferimento la tabella.<br>datasetId: ID del set di dati memorizzato.<br>dataset: Nome del set di dati memorizzato.<br>descrizione: Una descrizione del set di dati.<br>risolto: Un valore booleano che indica se il set di dati viene risolto o meno nella sessione corrente. |
+| `\showtables` | Mostra le informazioni seguenti: <br>name: Nome a cui verrà fatto riferimento la tabella.<br>datasetId: ID del set di dati memorizzato.<br>dataset: Nome del set di dati memorizzato.<br>descrizione: Una descrizione del set di dati.<br>risolto: Un valore booleano che indica se il set di dati viene risolto o meno nella sessione corrente. |
 | `\timing` | Attiva e disattiva la visualizzazione. La visualizzazione è espressa in millisecondi. Gli intervalli più lunghi di un secondo vengono visualizzati in formato minuti:secondi, con i campi ore e giorni aggiunti quando necessario. |
 
 Tutti i comandi che iniziano con `\d` possono essere combinati. Ad esempio, è possibile pubblicare un elenco `\dtsn` di tutte le tabelle, le sequenze e gli schemi. `\d` di per sé mostra tutte le tabelle, le viste, le viste materializzate e le sequenze visibili.
 
-Per ulteriori informazioni sui comandi elencati sopra, consulta la documentazione disponibile in [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Tuttavia, tenete presente che non tutte le opzioni visualizzate nella documentazione PostSQL sono supportate dalla piattaforma Experience.
+Per ulteriori informazioni sui comandi elencati sopra, consulta la documentazione disponibile in [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Tuttavia, non tutte le opzioni visualizzate nella documentazione PostSQL sono supportate da  Experience Platform.
 
