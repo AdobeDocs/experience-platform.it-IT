@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Aggiornare un oggetto
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 4361032b419622d7decc02194d38885b114749e4
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '316'
+ht-degree: 3%
 
 ---
 
@@ -16,7 +19,9 @@ Potete aggiornare parte di un oggetto Catalog inserendone l’ID nel percorso di
 * Uso dei campi
 * Utilizzo della notazione patch JSON
 
->[!NOTE] Le operazioni PATCH su un oggetto non possono modificare i relativi campi espandibili, che rappresentano oggetti correlati.  Le modifiche agli oggetti correlati devono essere apportate direttamente.
+>[!NOTE]
+>
+>Le operazioni PATCH su un oggetto non possono modificare i relativi campi espandibili, che rappresentano oggetti correlati.  Le modifiche agli oggetti correlati devono essere apportate direttamente.
 
 ## Aggiornamento utilizzando i campi
 
