@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Consenso
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a3178ab54a7ab5eacd6c5f605b8bd894779f9e85
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Consenso
 
-Alcune normative richiedevano il consenso esplicito dei clienti prima di poter raccogliere i loro dati personali. L&#39; `/consent` endpoint nell&#39;API del servizio Privacy consente di elaborare le richieste di consenso dei clienti e integrarle nel flusso di lavoro per la privacy.
+Alcune normative richiedevano il consenso esplicito dei clienti prima di poter raccogliere i loro dati personali. L&#39; `/consent` endpoint nell&#39;API di Privacy Service consente di elaborare le richieste di consenso dei clienti e integrarle nel flusso di lavoro per la privacy.
 
 Prima di utilizzare questa guida, fate riferimento alla sezione [introduttiva](./getting-started.md) per informazioni sulle intestazioni di autenticazione richieste, presentate nella chiamata API di esempio di seguito.
 
@@ -63,11 +63,13 @@ curl -X POST \
 | --- | --- |
 | `optOutOfSale` | Se impostato su true, indica che gli utenti forniti `entities` desiderano rinunciare alla vendita o alla condivisione dei loro dati personali. |
 | `entities` | Un array di oggetti che indica gli utenti a cui si applica la richiesta di consenso. Ciascun oggetto contiene un `namespace` e un array di oggetti `values` che corrispondono ai singoli utenti con tale spazio dei nomi. |
-| `nameSpace` | Ogni oggetto dell&#39; `entities` array deve contenere uno degli spazi dei nomi [standard riconosciuti dall&#39;API del servizio Privacy](./appendix.md#standard-namespaces) . |
+| `nameSpace` | Ogni oggetto dell&#39; `entities` array deve contenere uno degli spazi dei nomi [](./appendix.md#standard-namespaces) standard riconosciuti dall&#39;API di Privacy Service. |
 | `values` | Un array di valori per ciascun utente, corrispondente al valore fornito `nameSpace`. |
 
->[!NOTE] Per ulteriori informazioni su come determinare quali valori di identità del cliente inviare al Servizio per la privacy, consulta la guida sulla [fornitura dei dati](../identity-data.md)di identità.
+>[!NOTE]
+>
+>Per ulteriori informazioni su come determinare quali valori di identità del cliente inviare ad Privacy Service, consultare la guida sulla [fornitura dei dati](../identity-data.md)di identità.
 
 **Risposta**
 
-Una risposta di successo restituisce lo stato HTTP 202 (Accettato) senza payload, a indicare che la richiesta è stata accettata dal servizio Privacy ed è in corso di elaborazione.
+Una risposta corretta restituisce lo stato HTTP 202 (Accettato) senza payload, a indicare che la richiesta è stata accettata da Privacy Service ed è in corso di elaborazione.
