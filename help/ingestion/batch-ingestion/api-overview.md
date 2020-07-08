@@ -1,10 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guida per lo sviluppatore Adobe Experience Platform Batch Ingestion
+title: ' Guida per lo sviluppatore Batch Ingestion'
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '2577'
+ht-degree: 6%
 
 ---
 
@@ -21,29 +24,31 @@ L&#39;assimilazione dei dati fornisce un&#39;API RESTful tramite la quale è pos
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere o avere a disposizione per eseguire correttamente le chiamate all&#39;API di ingestione batch.
 
-Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
 
-- [Caricamento](./overview.md)batch: Consente di assimilare i dati in Adobe Experience Platform come file batch.
-- [Sistema](../../xdm/home.md)XDM (Experience Data Model): Il framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza dei clienti.
-- [Sandbox](../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+- [Caricamento](./overview.md)batch: Consente di assimilare i dati  Adobe Experience Platform come file batch.
+- [Sistema](../../xdm/home.md)XDM (Experience Data Model): Framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
+- [Sandbox](../../sandboxes/home.md):  Experience Platform fornisce sandbox virtuali che dividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 ### Lettura di chiamate API di esempio
 
-Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi della piattaforma Experience.
+Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi di  Experience Platform.
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle API della piattaforma, dovete prima completare l&#39;esercitazione [di](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come illustrato di seguito:
+Per effettuare chiamate alle API Platform, è prima necessario completare l&#39;esercitazione [di](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API Experience Platform, come illustrato di seguito:
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API della piattaforma richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in  Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API Platform richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Per ulteriori informazioni sulle sandbox in Piattaforma, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+>[!NOTE]
+>
+>Per ulteriori informazioni sulle sandbox in Platform, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
 Le richieste che contengono un payload (POST, PUT, PATCH) possono richiedere un&#39; `Content-Type` intestazione aggiuntiva. I valori accettati specifici per ogni chiamata vengono forniti nei parametri della chiamata. In questa guida vengono utilizzati i seguenti tipi di contenuto:
 
@@ -60,7 +65,7 @@ Ad esempio, né JSON né CSV hanno un tipo data o ora. Di conseguenza, questi va
 
 La tabella seguente mostra le conversioni supportate durante l’assimilazione dei dati.
 
-| In entrata (riga) e destinazione (col) | Stringa | Byte | Breve | Intero | Long | Doppio | Data | Data-Ora | Oggetto | Mappa |
+| In entrata (riga) e Target (col) | Stringa | Byte | Breve | Intero | Long | Doppio | Data | Data-Ora | Oggetto | Mappa |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Stringa | X | X | X | X | X | X | X | X |  |  |
 | Byte | X | X | X | X | X | X |  |  |  |  |
@@ -73,7 +78,9 @@ La tabella seguente mostra le conversioni supportate durante l’assimilazione d
 | Oggetto |  |  |  |  |  |  |  |  | X | X |
 | Mappa |  |  |  |  |  |  |  |  | X | X |
 
->[!NOTE] I booleani e gli array non possono essere convertiti in altri tipi.
+>[!NOTE]
+>
+>I booleani e gli array non possono essere convertiti in altri tipi.
 
 ## Limiti di inserimento
 
@@ -85,13 +92,17 @@ L&#39;assimilazione dei dati del batch presenta alcuni vincoli:
 
 ## Caricamento di file JSON
 
->[!NOTE] Per i file di piccole dimensioni (256 MB o inferiore) sono applicabili i seguenti passaggi. Se si verificano errori relativi al timeout del gateway o alla dimensione del corpo della richiesta, è necessario passare al caricamento di file di grandi dimensioni.
+>[!NOTE]
+>
+>Per i file di piccole dimensioni (256 MB o inferiore) sono applicabili i seguenti passaggi. Se si verificano errori relativi al timeout del gateway o alla dimensione del corpo della richiesta, è necessario passare al caricamento di file di grandi dimensioni.
 
 ### Crea batch
 
 In primo luogo, sarà necessario creare un batch, con JSON come formato di input. Durante la creazione del batch, dovrete fornire un ID di set di dati. Sarà inoltre necessario assicurarsi che tutti i file caricati come parte del batch siano conformi allo schema XDM collegato al set di dati fornito.
 
->[!NOTE] Gli esempi di seguito sono per JSON a riga singola. Per acquisire JSON con più righe, è necessario impostare il `isMultiLineJson` flag. Per ulteriori informazioni, consulta la guida [alla risoluzione dei problemi di caricamento](./troubleshooting.md)batch.
+>[!NOTE]
+>
+>Gli esempi di seguito sono per JSON a riga singola. Per acquisire JSON con più righe, è necessario impostare il `isMultiLineJson` flag. Per ulteriori informazioni, consulta la guida [alla risoluzione dei problemi di caricamento](./troubleshooting.md)batch.
 
 **Formato API**
 
@@ -151,7 +162,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 Dopo aver creato un batch, potete usare il file `batchId` da prima per caricare i file nel batch. Potete caricare più file nel batch.
 
->[!NOTE] Consulta la sezione appendice per un [esempio di file](#data-transformation-for-batch-ingestion)di dati JSON formattati correttamente.
+>[!NOTE]
+>
+>Consulta la sezione appendice per un [esempio di file](#data-transformation-for-batch-ingestion)di dati JSON formattati correttamente.
 
 **Formato API**
 
@@ -167,7 +180,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Richiesta**
 
->[!NOTE] L&#39;API supporta il caricamento di singole parti. Verificate che il tipo di contenuto sia application/ottet-stream.
+>[!NOTE]
+>
+>L&#39;API supporta il caricamento di singole parti. Verificate che il tipo di contenuto sia application/ottet-stream.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.json \
@@ -221,7 +236,9 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ## Assegna file di parquet
 
->[!NOTE] Per i file di piccole dimensioni (256 MB o inferiore) sono applicabili i seguenti passaggi. Se si verificano errori di timeout del gateway o di dimensioni del corpo della richiesta, sarà necessario passare al caricamento di file di grandi dimensioni.
+>[!NOTE]
+>
+>Per i file di piccole dimensioni (256 MB o inferiore) sono applicabili i seguenti passaggi. Se si verificano errori di timeout del gateway o di dimensioni del corpo della richiesta, sarà necessario passare al caricamento di file di grandi dimensioni.
 
 ### Crea batch
 
@@ -298,7 +315,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Richiesta**
 
->[!CAUTION] Questa API supporta il caricamento di singole parti. Verificate che il tipo di contenuto sia application/ottet-stream.
+>[!CAUTION]
+>
+>Questa API supporta il caricamento di singole parti. Verificate che il tipo di contenuto sia application/ottet-stream.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
@@ -352,7 +371,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Caricamento di file Parquet di grandi dimensioni
 
->[!NOTE] In questa sezione viene illustrato come caricare i file di dimensioni superiori a 256 MB. I file di grandi dimensioni vengono caricati in blocchi e quindi cuciti tramite un segnale API.
+>[!NOTE]
+>
+>In questa sezione viene illustrato come caricare i file di dimensioni superiori a 256 MB. I file di grandi dimensioni vengono caricati in blocchi e quindi cuciti tramite un segnale API.
 
 ### Crea batch
 
@@ -467,7 +488,9 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Richiesta**
 
->[!CAUTION] Questa API supporta il caricamento di singole parti. Verificate che il tipo di contenuto sia application/ottet-stream.
+>[!CAUTION]
+>
+>Questa API supporta il caricamento di singole parti. Verificate che il tipo di contenuto sia application/ottet-stream.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
@@ -559,7 +582,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 Per assimilare i file CSV, dovrete creare una classe, uno schema e un set di dati che supporti il CSV. Per informazioni dettagliate su come creare la classe e lo schema necessari, seguire le istruzioni fornite nell&#39;esercitazione [sulla creazione dello schema](../../xdm/api/ad-hoc.md)ad hoc.
 
->[!NOTE] Per i file di piccole dimensioni (256 MB o inferiore) sono applicabili i seguenti passaggi. Se si verificano errori di timeout del gateway o di dimensioni del corpo della richiesta, sarà necessario passare al caricamento di file di grandi dimensioni.
+>[!NOTE]
+>
+>Per i file di piccole dimensioni (256 MB o inferiore) sono applicabili i seguenti passaggi. Se si verificano errori di timeout del gateway o di dimensioni del corpo della richiesta, sarà necessario passare al caricamento di file di grandi dimensioni.
 
 ### Crea set di dati
 
@@ -695,7 +720,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 Dopo aver creato un batch, potete usare il file `batchId` da prima per caricare i file nel batch. Potete caricare più file nel batch.
 
->[!NOTE] Consultate la sezione appendice per un [esempio di file](#data-transformation-for-batch-ingestion)di dati CSV con formattazione corretta.
+>[!NOTE]
+>
+>Consultate la sezione appendice per un [esempio di file](#data-transformation-for-batch-ingestion)di dati CSV con formattazione corretta.
 
 **Formato API**
 
@@ -711,7 +738,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Richiesta**
 
->[!CAUTION] Questa API supporta il caricamento di singole parti. Verificate che il tipo di contenuto sia application/ottet-stream.
+>[!CAUTION]
+>
+>Questa API supporta il caricamento di singole parti. Verificate che il tipo di contenuto sia application/ottet-stream.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.csv \
@@ -916,7 +945,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Richiesta**
 
->[!CAUTION] Questa API supporta il caricamento di singole parti. Verificate che il tipo di contenuto sia application/ottet-stream. Non utilizzate l&#39;opzione curl -F, in quanto per impostazione predefinita la richiesta con più parti è incompatibile con l&#39;API.
+>[!CAUTION]
+>
+>Questa API supporta il caricamento di singole parti. Verificate che il tipo di contenuto sia application/ottet-stream. Non utilizzate l&#39;opzione curl -F, in quanto per impostazione predefinita la richiesta con più parti è incompatibile con l&#39;API.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.json \
@@ -972,7 +1003,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### Trasformazione dei dati per l’assimilazione batch
 
-Per assimilare un file di dati in Experience Platform, la struttura gerarchica del file deve essere conforme allo schema [Experience Data Model (XDM)](../../xdm/home.md) associato al set di dati in fase di caricamento.
+Per acquisire un file di dati in  Experience Platform, la struttura gerarchica del file deve essere conforme allo schema XDM ( [Experience Data Model)](../../xdm/home.md) associato al set di dati in fase di caricamento.
 
 Informazioni su come mappare un file CSV per conformarsi a uno schema XDM sono disponibili nel documento di trasformazione [di](../../etl/transformations.md) esempio, insieme a un esempio di file di dati JSON formattato correttamente. I file di esempio forniti nel documento sono disponibili qui:
 
