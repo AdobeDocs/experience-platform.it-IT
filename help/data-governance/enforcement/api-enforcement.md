@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Applicazione dei criteri di utilizzo dei dati tramite l'API di Servizio criteri
 topic: enforcement
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '875'
 ht-degree: 2%
@@ -16,7 +16,9 @@ ht-degree: 2%
 
 Dopo aver creato etichette di utilizzo dei dati per i dati e criteri di utilizzo per le azioni di marketing in base a tali etichette, potete utilizzare [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) per valutare se un&#39;azione di marketing eseguita su un set di dati o su un gruppo arbitrario di etichette costituisce una violazione dei criteri. Potete quindi configurare i vostri protocolli interni per gestire le violazioni dei criteri in base alla risposta API.
 
->[!NOTE] Per impostazione predefinita, solo le politiche il cui stato è impostato per `ENABLED` poter partecipare alla valutazione. Per consentire `DRAFT` ai criteri di partecipare alla valutazione, è necessario includere il parametro query `includeDraft=true` nel percorso della richiesta.
+>[!NOTE]
+>
+>Per impostazione predefinita, solo le politiche il cui stato è impostato per `ENABLED` poter partecipare alla valutazione. Per consentire `DRAFT` ai criteri di partecipare alla valutazione, è necessario includere il parametro query `includeDraft=true` nel percorso della richiesta.
 
 In questo documento sono descritti i passaggi necessari per utilizzare l&#39; [!DNL Policy Service] API per verificare la presenza di violazioni dei criteri in scenari diversi.
 
@@ -51,7 +53,9 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 La richiesta seguente verifica l’azione di `exportToThirdParty` marketing rispetto alle etichette `C1` e `C3`. Poiché il criterio di utilizzo dei dati creato in precedenza in questa esercitazione definisce l&#39; `C1` etichetta come una delle `deny` condizioni nella relativa espressione del criterio, l&#39;azione di marketing deve attivare una violazione del criterio.
 
->[!NOTE] Le etichette di utilizzo dei dati sono sensibili alle maiuscole/minuscole. Le violazioni dei criteri si verificano solo se le etichette definite nelle relative espressioni dei criteri corrispondono esattamente. In questo esempio, un&#39; `C1` etichetta attiverebbe una violazione, mentre un&#39; `c1` etichetta no.
+>[!NOTE]
+>
+>Le etichette di utilizzo dei dati sono sensibili alle maiuscole/minuscole. Le violazioni dei criteri si verificano solo se le etichette definite nelle relative espressioni dei criteri corrispondono esattamente. In questo esempio, un&#39; `C1` etichetta attiverebbe una violazione, mentre un&#39; `c1` etichetta no.
 
 ```shell
 curl -X GET \
