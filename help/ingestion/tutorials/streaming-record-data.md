@@ -4,20 +4,23 @@ solution: Experience Platform
 title: Streaming dei dati dei record
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1107'
+ht-degree: 2%
 
 ---
 
 
-# Trasmissione di dati di record ad Adobe Experience Platform
+# Trasferisci dati record a  Adobe Experience Platform
 
-Questa esercitazione ti aiuterà a iniziare a utilizzare le API di assimilazione in streaming, parte delle API Adobe Experience Platform Data Ingestion Service.
+Questa esercitazione ti aiuterà a iniziare a utilizzare le API di assimilazione in streaming, parte delle API del servizio di inserimento dati del Adobe Experience Platform .
 
 ## Introduzione
 
-Questa esercitazione richiede una buona conoscenza dei diversi servizi Adobe Experience Platform. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
+Questa esercitazione richiede una conoscenza approfondita dei vari servizi  Adobe Experience Platform. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
-- [Experience Data Model (XDM)](../../xdm/home.md): Il framework standardizzato tramite il quale la piattaforma organizza i dati relativi all&#39;esperienza.
+- [Experience Data Model (XDM)](../../xdm/home.md): Framework standard con cui Platform organizza i dati relativi all&#39;esperienza.
 - [Profilo](../../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato in tempo reale basato su dati aggregati provenienti da più origini.
 - [Schema Guida](../../xdm/api/getting-started.md)per lo sviluppatore del Registro di sistema: Una guida completa che illustra tutti gli endpoint disponibili dell&#39;API del Registro di sistema dello schema e come effettuare chiamate a tali endpoint. Ciò include la conoscenza `{TENANT_ID}`dell&#39;utente, che viene visualizzata nelle chiamate durante questa esercitazione, nonché la conoscenza di come creare gli schemi, che viene utilizzata per creare un set di dati per l&#39;assimilazione.
 
@@ -27,21 +30,23 @@ Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario cono
 
 ### Lettura di chiamate API di esempio
 
-Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi della piattaforma Experience.
+Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi di  Experience Platform.
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle API della piattaforma, dovete prima completare l&#39;esercitazione [di](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come illustrato di seguito:
+Per effettuare chiamate alle API Platform, è prima necessario completare l&#39;esercitazione [di](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API Experience Platform, come illustrato di seguito:
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API della piattaforma richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in  Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API Platform richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Per ulteriori informazioni sulle sandbox in Piattaforma, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+>[!NOTE]
+>
+>Per ulteriori informazioni sulle sandbox in Platform, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva:
 
@@ -182,7 +187,9 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 | -------- | ----------- |
 | `{SCHEMA_REF_ID}` | L&#39;oggetto `$id` ricevuto in precedenza al momento della composizione dello schema. Dovrebbe assomigliare a questo: `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
 
->[!NOTE] &#x200B; codici dei nomi di identità &#x200B;****
+>[!NOTE]
+>
+>&#x200B; codici dei nomi di identità &#x200B;****
 >
 > Assicurarsi che i codici siano validi. Nell&#39;esempio precedente viene utilizzato &quot;email&quot;, che è uno spazio dei nomi di identità standard. Altri spazi dei nomi di identità standard comunemente utilizzati si trovano nelle domande frequenti relative al servizio [identità](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform).
 >
@@ -212,7 +219,9 @@ Una risposta corretta restituisce lo stato HTTP 201 con informazioni sul descrit
 
 Una volta creato lo schema, sarà necessario creare un dataset per acquisire i dati del record.
 
->[!NOTE] Questo set di dati sarà abilitato per il profilo **cliente e il servizio** di **identità in tempo** reale.
+>[!NOTE]
+>
+>Questo set di dati sarà abilitato per il profilo **cliente e il servizio** di **identità in tempo** reale.
 
 **Formato API**
 
@@ -255,7 +264,7 @@ Una risposta corretta restituisce lo stato HTTP 201 e un array contenente l&#39;
 
 ## Invio di dati di record alla connessione di streaming
 
-Con il set di dati e la connessione in streaming in posizione, potete assimilare i record JSON in formato XDM per trasferire i dati dei record nella piattaforma.
+Con il set di dati e la connessione in streaming in posizione, è possibile assimilare record JSON in formato XDM per trasferire dati di record in Platform.
 
 **Formato API**
 
@@ -270,7 +279,9 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 **Richiesta**
 
->[!NOTE] La seguente chiamata API **non** richiede intestazioni di autenticazione.
+>[!NOTE]
+>
+>La seguente chiamata API **non** richiede intestazioni di autenticazione.
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
@@ -342,7 +353,9 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del nuovo pro
 
 Per convalidare i record precedentemente acquisiti, potete utilizzare l&#39;API [Accesso](../../profile/api/entities.md) profilo per recuperare i dati del record.
 
->[!NOTE] Se l&#39;ID del criterio di unione non è definito e lo schema.</span>name or relatedSchema</span>.name is `_xdm.context.profile`, Profile Access recupererà **tutte** le identità correlate.
+>[!NOTE]
+>
+>Se l&#39;ID del criterio di unione non è definito e lo schema.</span>name or relatedSchema</span>.name is `_xdm.context.profile`, Profile Access recupererà **tutte** le identità correlate.
 
 **Formato API**
 
@@ -421,7 +434,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli delle entità
 
 ## Passaggi successivi
 
-Leggendo questo documento, ora puoi capire come trasferire dati di record in Piattaforma utilizzando le connessioni di streaming. Puoi provare a effettuare più chiamate con valori diversi e a recuperare i valori aggiornati. Inoltre, puoi iniziare a monitorare i dati acquisiti tramite l’interfaccia utente della piattaforma. Per ulteriori informazioni, consulta la guida all’inserimento dei dati di [monitoraggio](../quality/monitor-data-flows.md) .
+Leggendo questo documento, ora puoi capire come trasferire dati di record in Platform utilizzando le connessioni di streaming. Puoi provare a effettuare più chiamate con valori diversi e a recuperare i valori aggiornati. È inoltre possibile iniziare a monitorare i dati acquisiti tramite l’interfaccia utente di Platform. Per ulteriori informazioni, consulta la guida all’inserimento dei dati di [monitoraggio](../quality/monitor-data-flows.md) .
 
 Per ulteriori informazioni sull’assimilazione in streaming in generale, consultate la panoramica sull’assimilazione in [streaming](../streaming-ingestion/overview.md).
 
