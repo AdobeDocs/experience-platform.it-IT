@@ -1,31 +1,36 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Caricamento di dati in Adobe Experience Platform
+title: Assimilazione di dati in  Adobe Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1291'
+ht-degree: 0%
 
 ---
 
 
-# Caricamento di dati in Adobe Experience Platform
+# Assimilazione di dati in  Adobe Experience Platform
 
-Adobe Experience Platform consente di importare facilmente i dati in piattaforma come file batch. Esempi di dati da assimilare possono includere dati di profilo da un file semplice in un sistema CRM (ad esempio un file parquet) o dati conformi a uno schema XDM (Experience Data Model) noto nel Registro di sistema dello schema.
+ Adobe Experience Platform consente di importare facilmente i dati in Platform come file batch. Esempi di dati da assimilare possono includere dati di profilo da un file semplice in un sistema CRM (ad esempio un file parquet) o dati conformi a uno schema XDM (Experience Data Model) noto nel Registro di sistema dello schema.
 
 ## Introduzione
 
-Per completare questa esercitazione, è necessario disporre dell&#39;accesso a Experience Platform. Se non disponete dell&#39;accesso a un&#39;organizzazione IMS in Experience Platform, rivolgetevi al vostro amministratore di sistema prima di continuare.
+Per completare questa esercitazione, è necessario avere accesso a  Experience Platform. Se non disponete dell&#39;accesso a un&#39;organizzazione IMS in  Experience Platform, rivolgetevi al vostro amministratore di sistema prima di procedere.
 
 Se preferite assimilare i dati utilizzando le API di inserimento dati, iniziate leggendo la guida [per gli sviluppatori di](../batch-ingestion/api-overview.md)inserimento batch.
 
 ## Area di lavoro DataSet
 
-L&#39;area di lavoro Set di dati in Experience Platform consente di visualizzare e gestire tutti i set di dati creati dall&#39;organizzazione IMS e di crearne di nuovi.
+L&#39;area di lavoro Set di dati in  Experience Platform consente di visualizzare e gestire tutti i set di dati creati dall&#39;organizzazione IMS e di crearne di nuovi.
 
 Visualizzare l&#39;area di lavoro Set di dati facendo clic su Set di **dati** nella barra di navigazione a sinistra. L&#39;area di lavoro Set di dati contiene un elenco di set di dati, tra cui colonne che mostrano _Nome_, _Creato_ (data e ora), _Origine_, _Schema_ e Stato ____ ultimo batch, nonché la data e l&#39;ora dell&#39;ultimo aggiornamento del set di dati.
 
->[!NOTE] Fate clic sull&#39;icona del filtro accanto alla barra di ricerca per utilizzare le funzionalità di filtro per visualizzare solo i set di dati abilitati per il profilo.
+>[!NOTE]
+>
+>Fate clic sull&#39;icona del filtro accanto alla barra di ricerca per utilizzare le funzionalità di filtro per visualizzare solo i set di dati abilitati per il profilo.
 
 ![Visualizza tutti i set di dati](../images/tutorials/ingest-batch-data/datasets_workspace.png)
 
@@ -73,7 +78,7 @@ Nella scheda Informazioni è inoltre disponibile un interruttore _Profilo_ che c
 
 ## Abilita dataset per profilo cliente in tempo reale
 
-I set di dati vengono utilizzati per l&#39;assimilazione di dati in Experience Platform e tali dati vengono utilizzati per identificare individui e unire insieme informazioni provenienti da più origini. Le informazioni unite sono denominate profilo cliente in tempo reale. Affinché la piattaforma sappia quali informazioni includere nel profilo in tempo reale, i set di dati possono essere contrassegnati per l’inclusione tramite l’attivazione/disattivazione **Profilo** .
+I set di dati vengono utilizzati per l&#39;assimilazione di dati in  Experience Platform e i dati vengono utilizzati per identificare individui e unire insieme informazioni provenienti da più origini. Le informazioni unite sono denominate profilo cliente in tempo reale. Affinché Platform sappia quali informazioni includere nel profilo in tempo reale, i set di dati possono essere contrassegnati per l’inclusione tramite l’attivazione/disattivazione **Profilo** .
 
 Per impostazione predefinita, questa opzione è disattivata. Se scegliete di attivare o disattivare il profilo, tutti i dati inseriti nel set di dati verranno utilizzati per identificare un singolo utente e unire il profilo in tempo reale.
 
@@ -97,13 +102,15 @@ I dati possono essere aggiunti in un set di dati in diversi modi. Puoi scegliere
 
 Per iniziare ad aggiungere dati al dataset, fare clic sulla scheda **Aggiungi dati** . È ora possibile trascinare e rilasciare i file o cercare nel computer i file da aggiungere.
 
->[!NOTE] La piattaforma supporta due tipi di file per l&#39;assimilazione dei dati, parquet o JSON. È possibile aggiungere fino a cinque file alla volta, con una dimensione massima di file pari a 10 GB.
+>[!NOTE]
+>
+>Platform supporta due tipi di file per l’assimilazione dei dati, parquet o JSON. È possibile aggiungere fino a cinque file alla volta, con una dimensione massima di file pari a 10 GB.
 
 ![Aggiungi dati, scheda](../images/tutorials/ingest-batch-data/add_data.png)
 
 ## Caricare un file
 
-Dopo aver trascinato e rilasciato (o sfogliato e selezionato) un file parquet o JSON da caricare, Platform inizierà immediatamente a elaborare il file e nella scheda **Aggiungi dati** verrà visualizzata una finestra di dialogo di **** caricamento che mostra l&#39;avanzamento del caricamento del file.
+Dopo aver trascinato e rilasciato (o sfogliato e selezionato) un file parquet o JSON da caricare, Platform inizierà immediatamente a elaborare il file e nella scheda **Aggiungi dati** verrà visualizzata una finestra di dialogo di **** caricamento che mostra l’avanzamento del caricamento del file.
 
 ![Finestra di dialogo di caricamento](../images/tutorials/ingest-batch-data/uploading.png)
 
@@ -135,6 +142,6 @@ Fare clic su **Anteprima set** di dati per aprire una finestra di dialogo che mo
 
 ## Passaggi successivi
 
-Dopo aver creato un set di dati e aver correttamente inserito i dati in Experience Platform, potete ripetere questi passaggi per creare un nuovo set di dati o per assimilare più dati nel set di dati esistente.
+Dopo aver creato un set di dati e aver correttamente inserito i dati in  Experience Platform, è possibile ripetere questa procedura per creare un nuovo set di dati o per assimilare più dati nel set di dati esistente.
 
 Per ulteriori informazioni sull&#39;inserimento batch, consulta la panoramica [sull&#39;inserimento](../batch-ingestion/overview.md)batch.
