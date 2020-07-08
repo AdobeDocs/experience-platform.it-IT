@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Operazioni con il runtime di Decisioning Service tramite API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1985'
 ht-degree: 0%
@@ -43,7 +43,9 @@ Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali 
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione [sulla panoramica della](../../tutorials/authentication.md)sandbox.
+>[!NOTE]
+>
+>Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione [sulla panoramica della](../../tutorials/authentication.md)sandbox.
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva:
 
@@ -53,9 +55,11 @@ Necessario anche per le richieste di runtime:
 
 - x-request-id: `{UUID}`
 
->[!NOTE] `UUID` è una stringa in formato UUID che è univoca a livello globale e non deve essere riutilizzata per chiamate API diverse
+>[!NOTE]
+>
+>`UUID` è una stringa in formato UUID che è univoca a livello globale e non deve essere riutilizzata per chiamate API diverse
 
-[!DNL Decisioning Service] è controllato da una serie di oggetti business correlati tra loro. Tutti gli oggetti aziendali sono memorizzati nell&#39;archivio oggetti [!DNL Platform’s] aziendali, XDM Core Object Repository. Una caratteristica chiave di questo repository è che le API sono ortogonali al tipo di oggetto business. Invece di utilizzare un&#39;API POST, GET, PUT, PATCH o DELETE che indica il tipo di risorsa nel suo endpoint API, ci sono solo 6 endpoint generici, ma accettano o restituiscono un parametro che indica il tipo di oggetto quando è necessario tale parametro. Lo schema deve essere registrato con l&#39;archivio, ma oltre a questo, l&#39;archivio è utilizzabile per un set di tipi di oggetto aperto.
+[!DNL Decisioning Service] è controllato da una serie di oggetti business correlati tra loro. Tutti gli oggetti aziendali sono memorizzati nell&#39;archivio oggetti [!DNL Platform’s] aziendali, nell&#39;archivio oggetti di base XDM. Una caratteristica chiave di questo repository è che le API sono ortogonali al tipo di oggetto business. Invece di utilizzare un&#39;API POST, GET, PUT, PATCH o DELETE che indica il tipo di risorsa nel suo endpoint API, ci sono solo 6 endpoint generici, ma accettano o restituiscono un parametro che indica il tipo di oggetto quando è necessario tale parametro. Lo schema deve essere registrato con l&#39;archivio, ma oltre a questo, l&#39;archivio è utilizzabile per un set di tipi di oggetto aperto.
 
 I percorsi endpoint per tutte le API dell&#39;archivio oggetti di base XDM iniziano con `https://platform.adobe.io/data/core/ode/`.
 
