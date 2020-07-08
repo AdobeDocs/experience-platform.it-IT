@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Ottenere la cronologia cluster di un'identità
 topic: API guide
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '303'
 ht-degree: 1%
@@ -68,7 +68,9 @@ curl -X GET \
 
 Utilizzate il `POST` metodo come equivalente batch del `GET` metodo descritto sopra per restituire le storie cluster di identità multiple.
 
->[!NOTE] La richiesta non deve contenere più di 1000 identità. Le richieste che superano 1000 identità genereranno un codice di stato di 400.
+>[!NOTE]
+>
+>La richiesta non deve contenere più di 1000 identità. Le richieste che superano 1000 identità genereranno un codice di stato di 400.
 
 **Formato API**
 
@@ -210,7 +212,9 @@ curl -X POST \
 }
 ```
 
->[!NOTE] La risposta avrà sempre una voce per ogni XID fornito nella richiesta, a prescindere dal fatto che gli XID di una richiesta appartengano allo stesso cluster o che uno o più di essi abbiano alcun cluster associato.
+>[!NOTE]
+>
+>La risposta avrà sempre una voce per ogni XID fornito nella richiesta, a prescindere dal fatto che gli XID di una richiesta appartengano allo stesso cluster o che uno o più di essi abbiano alcun cluster associato.
 
 ## Passaggi successivi
 
