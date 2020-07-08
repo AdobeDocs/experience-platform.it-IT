@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 'Servizio Segmentazione Adobe Experience Platform '
 topic: overview
 translation-type: tm+mt
-source-git-commit: b0ef50e25c27aba121bb01c602867953eb2a5f7e
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2386'
 ht-degree: 0%
@@ -40,7 +40,9 @@ Per informazioni su come creare e utilizzare i segmenti nel Generatore di segmen
 
 Per informazioni sulla creazione di definizioni di segmenti tramite l&#39;API, consulta l&#39;esercitazione sulla [creazione di segmenti di pubblico tramite l&#39;API](./tutorials/create-a-segment.md).
 
->[!NOTE] Nel caso in cui uno schema venga esteso, tutti i caricamenti futuri devono aggiornare di conseguenza i campi aggiunti di recente. Per ulteriori informazioni sulla personalizzazione di Experience Data Model (XDM), consulta l&#39;esercitazione [Editor di](../xdm/tutorials/create-schema-ui.md)schema.
+>[!NOTE]
+>
+>Nel caso in cui uno schema venga esteso, tutti i caricamenti futuri devono aggiornare di conseguenza i campi aggiunti di recente. Per ulteriori informazioni sulla personalizzazione di Experience Data Model (XDM), consulta l&#39;esercitazione [Editor di](../xdm/tutorials/create-schema-ui.md)schema.
 
 ## Valutazione dei segmenti
 
@@ -70,14 +72,18 @@ Per comporre i segmenti (tramite API o Generatore di segmenti) è necessario def
 
 Quando crei un nuovo segmento, devi fornire un nome di segmento. Il nome del segmento viene utilizzato per identificare un particolare segmento tra la raccolta creata da Segmentation Service. I nomi dei segmenti devono pertanto essere descrittivi, concisi e univoci.
 
->[!NOTE] Durante la pianificazione di un segmento, tieni presente che ai segmenti è possibile fare riferimento da qualsiasi altro segmento e che questi possono essere combinati con esso. Quando selezioni un nome, prendi in considerazione la possibilità che il segmento contenga porzioni riutilizzabili.
+>[!NOTE]
+>
+>Durante la pianificazione di un segmento, tieni presente che ai segmenti è possibile fare riferimento da qualsiasi altro segmento e che questi possono essere combinati con esso. Quando selezioni un nome, prendi in considerazione la possibilità che il segmento contenga porzioni riutilizzabili.
 
 ### Unisci criteri
 
 I criteri di unione sono regole utilizzate dal profilo per determinare in che modo i dati verranno classificati in ordine di priorità e combinati in una visualizzazione unificata a determinate condizioni.
 Se non è definito alcun criterio di unione, viene utilizzato il criterio di unione predefinito di Platform. Se preferite utilizzare un criterio di unione specifico per l&#39;organizzazione, potete crearne uno personalizzato e contrassegnarlo come predefinito dell&#39;organizzazione.
 
->[!NOTE] La stima delle dimensioni del pubblico si basa sui criteri di unione dei profili predefiniti dell&#39;organizzazione.
+>[!NOTE]
+>
+>La stima delle dimensioni del pubblico si basa sui criteri di unione dei profili predefiniti dell&#39;organizzazione.
 
 ### Altri metadati di segmento
 
@@ -138,7 +144,9 @@ Le risorse dell&#39;architetto dati includono l&#39;accesso ai dati Web dalla na
 
 **La soluzione**
 
->[!NOTE] In questo esempio si suppone che l&#39;architetto dei dati abbia già stabilito uno spazio dei nomi ID.
+>[!NOTE]
+>
+>In questo esempio si suppone che l&#39;architetto dei dati abbia già stabilito uno spazio dei nomi ID.
 
 Utilizzando l&#39;API, l&#39;architetto dei dati collega la chiave dello schema ExperienceEvent con la classe &quot;products&quot;. In questo modo l&#39;architetto dei dati può utilizzare i campi aggiuntivi della classe &quot;products&quot; come se fossero nativi dello schema ExperienceEvent. Come fase finale del lavoro di configurazione, l&#39;architetto dei dati deve inserire i dati appropriati nel profilo cliente in tempo reale. A questo scopo, abilita il dataset &quot;products&quot; per l&#39;utilizzo con Profile. Una volta completata la configurazione, l’architetto dei dati o l’esperto di marketing possono creare il segmento di destinazione in Segment Builder (Generatore di segmenti).
 
