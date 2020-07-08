@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Guida per lo sviluppatore di API profilo cliente in tempo reale
+title: Processi del sistema di profili - API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
 workflow-type: tm+mt
-source-wordcount: '1501'
+source-wordcount: '1503'
 ht-degree: 2%
 
 ---
 
 
-# Processi del sistema dei profili (richieste di eliminazione)
+# Endpoint processi del sistema di profilo (richieste di eliminazione)
 
  Adobe Experience Platform consente di acquisire dati da più origini e di creare profili affidabili per i singoli clienti. I dati acquisiti in Platform sono memorizzati nel Data Lake e nell&#39;archivio dati del profilo cliente in tempo reale. Talvolta potrebbe essere necessario eliminare un set di dati o un batch dall&#39;archivio profili per rimuovere i dati non più necessari o che sono stati aggiunti per errore. Ciò richiede l’utilizzo dell’API Profilo cliente in tempo reale per creare un processo del sistema di profili, noto anche come &quot;richiesta di eliminazione&quot;, che può anche essere modificato, monitorato o rimosso, se necessario.
 
