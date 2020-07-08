@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Creazione di segmenti di clienti con punteggi previsti
 topic: Create a segment
 translation-type: tm+mt
-source-git-commit: 66ccea896846c1da4310c1077e2dc7066a258063
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '262'
+ht-degree: 0%
 
 ---
 
@@ -13,9 +16,11 @@ source-git-commit: 66ccea896846c1da4310c1077e2dc7066a258063
 
 Al termine di un&#39;esecuzione della previsione, i punteggi di propensione previsti vengono automaticamente utilizzati da Profili. L&#39;arricchimento dei profili con i punteggi AI dei clienti consente di creare segmenti di clienti per trovare audience in base ai loro punteggi di propensione. Questa sezione descrive i passaggi per la creazione di segmenti con Segment Builder (Generatore di segmenti). Per un’esercitazione più affidabile sulla creazione di segmenti, consulta la guida [utente di](../../../segmentation/tutorials/create-a-segment.md)Segment Builder (Generatore di segmenti).
 
->[!IMPORTANT] Per utilizzare questo metodo, è necessario abilitare il profilo cliente in tempo reale per il set di dati.
+>[!IMPORTANT]
+>
+>Per utilizzare questo metodo, è necessario abilitare il profilo cliente in tempo reale per il set di dati.
 
-Nell’interfaccia utente della piattaforma, fate clic **[!UICONTROL Segments]** nel menu di navigazione a sinistra, quindi fate clic su **[!UICONTROL Create segment]**.
+Nell’interfaccia utente di Platform, fate clic **[!UICONTROL Segments]** nel menu di navigazione a sinistra, quindi fate clic su **[!UICONTROL Create segment]**.
 
 ![](../images/user-guide/segments.png)
 
