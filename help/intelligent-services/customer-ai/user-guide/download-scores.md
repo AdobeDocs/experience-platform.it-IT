@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Download dei punteggi nell'AI del cliente
 topic: Downloading scores
 translation-type: tm+mt
-source-git-commit: 7c892d92a50312fb4b733431737b796651689804
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '931'
+ht-degree: 2%
 
 ---
 
@@ -240,7 +243,9 @@ Copiare il `href` valore di qualsiasi oggetto file nell&#39; `data` array, quind
 
 Per scaricare i dati del file, effettuate una richiesta GET al `"href"` valore copiato nel passaggio precedente [per recuperare i file](#retrieving-your-files).
 
->[!NOTE] Se effettui questa richiesta direttamente nella riga di comando, potrebbe essere richiesto di aggiungere un output dopo le intestazioni della richiesta. Nell&#39;esempio di richiesta seguente viene utilizzato `--output {FILENAME.FILETYPE}`.
+>[!NOTE]
+>
+>Se effettui questa richiesta direttamente nella riga di comando, potrebbe essere richiesto di aggiungere un output dopo le intestazioni della richiesta. Nell&#39;esempio di richiesta seguente viene utilizzato `--output {FILENAME.FILETYPE}`.
 
 **Formato API**
 
@@ -264,7 +269,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
   -O 'filename.parquet'
 ```
 
->[!TIP] Prima di effettuare la richiesta GET, verificate di essere nella directory o nella cartella corretta in cui desiderate salvare il file.
+>[!TIP]
+>
+>Prima di effettuare la richiesta GET, verificate di essere nella directory o nella cartella corretta in cui desiderate salvare il file.
 
 **Risposta**
 
@@ -276,7 +283,9 @@ La risposta scarica il file richiesto nella directory corrente. In questo esempi
 
 Un metodo alternativo per scaricare i dati della valutazione consiste nell&#39;esportare il pubblico in un dataset. Dopo che un processo di segmentazione è stato completato correttamente (il valore dell&#39; `status` attributo è &quot;SUCCEEDED&quot;), potete esportare il pubblico in un set di dati in cui è possibile accedervi e agire. Per ulteriori informazioni sulla segmentazione, consulta la panoramica [sulla](../../../segmentation/home.md)segmentazione.
 
->[!IMPORTANT] Per utilizzare questo metodo di esportazione, è necessario abilitare il profilo cliente in tempo reale per il set di dati.
+>[!IMPORTANT]
+>
+>Per utilizzare questo metodo di esportazione, è necessario abilitare il profilo cliente in tempo reale per il set di dati.
 
 L’ [esportazione di una sezione di segmento](../../../segmentation/tutorials/evaluate-a-segment.md) nella guida alla valutazione dei segmenti copre i passaggi necessari per esportare un set di dati per l’audience. La guida fornisce alcuni esempi di quanto segue:
 
