@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Funzioni definite da Adobe
 topic: queries
 translation-type: tm+mt
-source-git-commit: 41fdee979db32b97a5935a02e9ffcde3308b6d54
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '248'
+ht-degree: 6%
 
 ---
 
@@ -13,14 +16,14 @@ source-git-commit: 41fdee979db32b97a5935a02e9ffcde3308b6d54
 
 Uno dei principali fattori di differenziazione di Adobe è che comprendono i dati relativi all&#39;esperienza e ciò che i clienti devono poter fare con tali dati. È possibile utilizzare questa comprensione per creare funzioni di supporto che semplificano il lavoro.
 
-Questo documento descrive le funzioni definite da Adobe (ADF) per supportare tre attività Analytics chiave:
+Questo documento descrive le funzioni definite da Adobe (ADF) per supportare tre attività chiave  Analytics:
 - [Sessionizzazione](#sessionization)
 - [Attribution](#attribution)
 - [Tracciatura percorso](#pathing)
 
 ## Sessionizzazione
 
-Riproduce `SESS_TIMEOUT()` i raggruppamenti di visite trovati con Adobe Analytics. Esegue un raggruppamento simile basato sul tempo, ma con parametri personalizzabili.
+Vengono `SESS_TIMEOUT()` riprodotti i raggruppamenti di visite trovati con Adobe  Analytics. Esegue un raggruppamento simile basato sul tempo, ma con parametri personalizzabili.
 
 **Sintassi:**
 
@@ -86,13 +89,15 @@ LIMIT 31;
 
 L&#39;attribuzione consente di allocare metriche o conversioni come ricavi, ordini o registrazioni alle attività di marketing.
 
-In Adobe Analytics, le impostazioni di attribuzione sono configurate utilizzando variabili come eVar e vengono generate durante l&#39;assimilazione dei dati.
+In Adobe  Analytics, le impostazioni di attribuzione sono configurate utilizzando variabili come eVar e vengono generate al momento dell’assimilazione dei dati.
 
 Gli ADF di attribuzione disponibili in Servizio query consentono di definire e generare tali allocazioni in fase di query.
 
 Questo esempio si concentra sull’attribuzione dell’ultimo tocco, ma Adobe offre anche l’attribuzione del primo tocco.
 
->[!NOTE] Altre opzioni con timeout e scadenza basata sugli eventi saranno disponibili nelle versioni future di Query Service.
+>[!NOTE]
+>
+>Altre opzioni con timeout e scadenza basata sugli eventi saranno disponibili nelle versioni future di Query Service.
 
 **Sintassi:**
 
