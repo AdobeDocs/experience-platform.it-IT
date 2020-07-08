@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guida utente del servizio sulla privacy
+title: Guida utente Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 9fc95dd9194dca0fada603643c3de949764b2f17
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1088'
 ht-degree: 0%
@@ -12,19 +12,19 @@ ht-degree: 0%
 ---
 
 
-# Guida utente del servizio sulla privacy
+# Guida utente Privacy Service
 
-Questo documento fornisce i passaggi necessari per creare e gestire le richieste di privacy utilizzando l&#39;interfaccia utente del servizio per la privacy.
+Questo documento fornisce i passaggi per creare e gestire le richieste di privacy utilizzando l&#39;interfaccia utente di Privacy Service.
 
-## Sfogliare il dashboard dell’interfaccia utente del servizio sulla privacy
+## Sfogliare il dashboard dell&#39;interfaccia utente di Privacy Service
 
-Il dashboard per l’interfaccia utente del servizio Privacy offre due widget che consentono di visualizzare lo stato dei processi relativi alla privacy: **Rapporto** di stato e richieste **di** processo. Il dashboard visualizza anche il regolamento selezionato corrente per i processi visualizzati.
+Il dashboard per l’interfaccia utente di Privacy Service offre due widget che consentono di visualizzare lo stato dei processi di privacy: **Rapporto** di stato e richieste **di** processo. Il dashboard visualizza anche il regolamento selezionato corrente per i processi visualizzati.
 
 ![Pannello interfaccia](../images/user-guide/dashboard.png)
 
 ### Tipo di regolamento
 
-Il servizio Privacy supporta le richieste di lavoro per tre tipi di regolamentazione:
+Privacy Service supporta le richieste di lavoro per tre tipi di regole:
 
 * Regolamento generale sulla protezione dei dati (GDPR) dell&#39;Unione europea
 * California Consumer Privacy Act (CCPA)
@@ -54,13 +54,17 @@ Per visualizzare ulteriori dettagli su un dato punto dati, fare clic sul punto d
 
 ![Filtro applicato dal widget](../images/user-guide/apply-filter.png)
 
->[!NOTE] Quando un filtro è stato applicato al widget Richieste di processo, potete rimuovere il filtro facendo clic sulla **X** nella pillola del filtro. Le richieste di processo tornano quindi all’elenco di tracciamento predefinito.
+>[!NOTE]
+>
+>Quando un filtro è stato applicato al widget Richieste di processo, potete rimuovere il filtro facendo clic sulla **X** nella pillola del filtro. Le richieste di processo tornano quindi all’elenco di tracciamento predefinito.
 
 ### Richieste di processo
 
 Il widget Richieste di lavoro elenca tutte le richieste di processo disponibili nell’organizzazione, inclusi dettagli quali il tipo di richiesta, lo stato corrente, la data di scadenza e l’e-mail del richiedente.
 
->[!NOTE] I dati per i processi creati in precedenza sono accessibili solo per 30 giorni dopo la data di completamento.
+>[!NOTE]
+>
+>I dati per i processi creati in precedenza sono accessibili solo per 30 giorni dopo la data di completamento.
 
 Potete filtrare l’elenco digitando le parole chiave nella barra di ricerca sotto il titolo Richieste di processo. L’elenco filtra automaticamente durante la digitazione, mostrando le richieste contenenti valori corrispondenti ai termini di ricerca. Potete inoltre utilizzare il menu a discesa **Richiesto** per selezionare un intervallo di tempo per i processi elencati.
 
@@ -70,7 +74,7 @@ Per visualizzare i dettagli di una particolare richiesta di processo, fate clic 
 
 ![Dettagli processo interfaccia utente GDPR](../images/user-guide/job-details.png)
 
-Questa finestra di dialogo contiene informazioni sullo stato di ciascuna soluzione Experience Cloud e sullo stato corrente in relazione al processo complessivo. Poiché ogni processo di privacy è asincrono, la pagina visualizza la data e l’ora di comunicazione più recenti (GMT) di ciascuna soluzione, in quanto alcuni richiedono più tempo di altri per elaborare la richiesta.
+Questa finestra di dialogo contiene informazioni sullo stato di ciascuna soluzione Experience Cloud  e sullo stato corrente in relazione al processo complessivo. Poiché ogni processo di privacy è asincrono, la pagina visualizza la data e l’ora di comunicazione più recenti (GMT) di ciascuna soluzione, in quanto alcuni richiedono più tempo di altri per elaborare la richiesta.
 
 Se una soluzione ha fornito dati aggiuntivi, questi possono essere visualizzati in questa finestra di dialogo. Per visualizzare questi dati, fai clic sulle singole righe di prodotto.
 
@@ -78,9 +82,11 @@ Per scaricare i dati del processo completo come file CSV, fate clic su **Esporta
 
 ## Creare una nuova richiesta di lavoro per la privacy
 
->[!NOTE] Per creare una richiesta di lavoro per la privacy, è necessario fornire informazioni sull&#39;identità per i clienti specifici i cui dati devono essere accessibili o eliminati. Prima di continuare con questa sezione, consulta il documento sui dati di [identità per le richieste](../identity-data.md) di privacy.
+>[!NOTE]
+>
+>Per creare una richiesta di lavoro per la privacy, è necessario fornire informazioni sull&#39;identità per i clienti specifici i cui dati devono essere accessibili o eliminati. Prima di continuare con questa sezione, consulta il documento sui dati di [identità per le richieste](../identity-data.md) di privacy.
 
-L’interfaccia utente del servizio Privacy offre due metodi per creare nuove richieste di lavoro:
+L’interfaccia utente di Privacy Service offre due metodi per creare nuove richieste di processo:
 
 * [Utilizzare il Generatore di richieste](#request-builder)
 * [Caricare un file JSON](#json)
@@ -103,7 +109,7 @@ Selezionare il Tipo **di** processo della richiesta (&quot;Elimina&quot; o &quot
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-In Tipo ** spazio nomi, selezionare il tipo di spazio nomi appropriato per gli ID cliente che vengono inviati al servizio Privacy.
+In Tipo ** spazio nomi, selezionare il tipo di spazio nomi appropriato per gli ID cliente che vengono inviati ad Privacy Service.
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
@@ -145,6 +151,6 @@ Al termine, fate clic su **Crea**. La finestra di dialogo scompare e il nuovo pr
 
 ### Passaggi successivi
 
-Leggendo questo documento, hai imparato a usare l’interfaccia utente del servizio per la privacy per creare un processo di privacy, visualizzare i dettagli di un processo e controllarne lo stato di elaborazione e scaricare i risultati al termine.
+Leggendo questo documento, hai imparato a utilizzare l’interfaccia utente di Privacy Service per creare un processo di privacy, visualizzare i dettagli di un processo e controllarne lo stato di elaborazione e scaricare i risultati al termine.
 
-Per i passaggi su come eseguire queste operazioni a livello di programmazione tramite l&#39;API del servizio sulla privacy, fare riferimento alla guida [](../api/getting-started.md)per gli sviluppatori.
+Per informazioni su come eseguire queste operazioni a livello di programmazione tramite l&#39;API di Privacy Service, consultate la guida [](../api/getting-started.md)per gli sviluppatori.
