@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Elenca gli oggetti
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 71c73a3899ccdd1c024a811b36c411915a3b14be
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '204'
+ht-degree: 1%
 
 ---
 
@@ -42,7 +45,9 @@ curl -X GET \
 
 Una risposta corretta restituisce un elenco di oggetti Catalog sotto forma di coppie chiave-valore, filtrati dai parametri di query forniti nella richiesta. Per ogni coppia chiave-valore, la chiave rappresenta un identificatore univoco per l&#39;oggetto Catalog in questione, che può essere utilizzato in un&#39;altra chiamata per [visualizzare l&#39;oggetto](look-up-object.md) specifico per ulteriori dettagli.
 
->[!NOTE] Se un oggetto restituito non contiene una o più delle proprietà richieste indicate dalla `properties` query, la risposta restituisce solo le proprietà richieste che non include, come mostrato in &quot;Sample Dataset 3&quot; e &quot;Sample Dataset 4&quot; di seguito.
+>[!NOTE]
+>
+>Se un oggetto restituito non contiene una o più delle proprietà richieste indicate dalla `properties` query, la risposta restituisce solo le proprietà richieste che non include, come mostrato in &quot;Sample Dataset 3&quot; e &quot;Sample Dataset 4&quot; di seguito.
 
 ```json
 {
