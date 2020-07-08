@@ -4,7 +4,7 @@ solution: Experience Platform
 title: MLInances
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 0197c2f5e304f2fc194289b064cc37c91bb658c8
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 4%
@@ -273,7 +273,9 @@ Una risposta corretta restituisce i dettagli dell&#39;istanza MLIninstance.
 
 Potete aggiornare un&#39;istanza MLI esistente sovrascrivendone le proprietà tramite una richiesta PUT che include l&#39;ID dell&#39;istanza MLI di destinazione nel percorso di richiesta e fornisce un payload JSON contenente le proprietà aggiornate.
 
->[!TIP] Per garantire il successo di questa richiesta PUT, si consiglia innanzitutto di eseguire una richiesta GET per [recuperare l&#39;istanza MLI per ID](#retrieve-specific). Quindi, modificate e aggiornate l&#39;oggetto JSON restituito e applicate l&#39;intero oggetto JSON modificato come payload per la richiesta PUT.
+>[!TIP]
+>
+>Per garantire il successo di questa richiesta PUT, si consiglia innanzitutto di eseguire una richiesta GET per [recuperare l&#39;istanza MLI per ID](#retrieve-specific). Quindi, modificate e aggiornate l&#39;oggetto JSON restituito e applicate l&#39;intero oggetto JSON modificato come payload per la richiesta PUT.
 
 La seguente chiamata API di esempio aggiornerà i parametri di formazione e punteggio di un&#39;istanza MLInpur disponendo inizialmente di queste proprietà:
 
