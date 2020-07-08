@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Modelli
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 33f8c424c208bb61319b49e7ecb30e3144ef108a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '821'
 ht-degree: 4%
@@ -220,7 +220,9 @@ Una risposta corretta restituisce un payload contenente i dettagli del modello, 
 
 È possibile aggiornare un modello esistente sovrascrivendone le proprietà tramite una richiesta PUT che include l&#39;ID del modello di destinazione nel percorso di richiesta e fornisce un payload JSON contenente le proprietà aggiornate.
 
->[!TIP] Per garantire il successo di questa richiesta PUT, si consiglia di eseguire prima una richiesta GET per recuperare il modello per ID. Quindi, modificate e aggiornate l&#39;oggetto JSON restituito e applicate l&#39;intero oggetto JSON modificato come payload per la richiesta PUT.
+>[!TIP]
+>
+>Per garantire il successo di questa richiesta PUT, si consiglia di eseguire prima una richiesta GET per recuperare il modello per ID. Quindi, modificate e aggiornate l&#39;oggetto JSON restituito e applicate l&#39;intero oggetto JSON modificato come payload per la richiesta PUT.
 
 **Formato API**
 
