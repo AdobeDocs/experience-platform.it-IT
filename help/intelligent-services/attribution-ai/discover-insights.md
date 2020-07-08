@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Scopri informazioni approfondite in Attribution AI
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 1%
@@ -30,7 +30,9 @@ Nell’ [!DNL Adobe Experience Platform] interfaccia utente, fai clic su **Servi
 
 Viene visualizzata la pagina del servizio AI di attribuzione. In questa pagina sono elencate le istanze del servizio di Attribution AI e vengono visualizzate informazioni su di esse, incluso il nome dell&#39;istanza, gli eventi di conversione, la frequenza di esecuzione dell&#39;istanza e lo stato dell&#39;ultimo aggiornamento. Fate clic sul nome di un&#39;istanza di servizio per iniziare.
 
->[!NOTE] È possibile selezionare solo le istanze del servizio che hanno completato con successo l&#39;esecuzione del punteggio.
+>[!NOTE]
+>
+>È possibile selezionare solo le istanze del servizio che hanno completato con successo l&#39;esecuzione del punteggio.
 
 ![Crea istanza](./images/insights/select-service-instance.png)
 
@@ -72,7 +74,9 @@ Il pulsante *Altre azioni* si trova nella barra di navigazione in alto a destra 
 
 Le informazioni approfondite sull&#39;interfaccia utente Attribution consentono di filtrare i dati e aggiornare automaticamente le visualizzazioni dell&#39;interfaccia utente in base ai filtri selezionati.
 
->[!NOTE] Per impostazione predefinita, ogni filtro è impostato su &quot;All&quot; (Tutti) tranne il filtro del modello ** Attribution, che è impostato su &quot;Incremental and Influenzted Assign Conversion&quot; (Conversioni attribuite incrementali e influenzate).
+>[!NOTE]
+>
+>Per impostazione predefinita, ogni filtro è impostato su &quot;All&quot; (Tutti) tranne il filtro del modello ** Attribution, che è impostato su &quot;Incremental and Influenzted Assign Conversion&quot; (Conversioni attribuite incrementali e influenzate).
 
 ### Evento di conversione
 
@@ -98,21 +102,25 @@ Il filtro *Prodotto* consente di selezionare tra tutti i prodotti che sono stati
 
 Il filtro *Geografia* popola i codici paese in base ai modelli basati su regioni. A seconda dei dati, questo filtro potrebbe essere presente o meno.
 
->[!NOTE] I codici paese sono lunghi due caratteri. Un elenco completo è disponibile qui [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
+>[!NOTE]
+>
+>I codici paese sono lunghi due caratteri. Un elenco completo è disponibile qui [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
 
 ### Regione
 
->[!NOTE] Questo filtro è presente solo se durante la creazione dell’istanza del servizio avete eseguito la modellazione [opzionale basata sull’](./user-guide.md#region-based-modeling-optional) area di passaggio nella guida dell’interfaccia utente AI di Attribution.
+>[!NOTE]
+>
+>Questo filtro è presente solo se durante la creazione dell’istanza del servizio avete eseguito la modellazione [opzionale basata sull’](./user-guide.md#region-based-modeling-optional) area di passaggio nella guida dell’interfaccia utente AI di Attribution.
 
 Questo filtro consente di selezionare tutte le aree configurate nel processo di creazione dell&#39;istanza.
 
-### Canale
+### Channel
 
 Facendo clic sul filtro *Canale* viene visualizzato un elenco a discesa contenente tutti i canali di marketing disponibili. Potete selezionare più canali per confrontarli.
 
-![Canale](./images/insights/channel.png)
+![Channel](./images/insights/channel.png)
 
-### Intervallo date
+### Date Range
 
 Fate clic sull&#39;icona del calendario per aprire il puntatore dell&#39;intervallo di date. Le date dell&#39;evento di conversione iniziale e finale determinano la quantità di dati compilati nell&#39;interfaccia utente. È possibile scegliere di restringere o ampliare l&#39;intervallo di date per rendere attivi o espandere la quantità di dati compilati.
 
