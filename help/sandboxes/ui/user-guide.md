@@ -4,18 +4,21 @@ solution: Experience Platform
 title: Guida utente sandbox
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 6438c1841889ff345e1ebaedabfed0531c1f97f9
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '514'
+ht-degree: 0%
 
 ---
 
 
 # Guida utente sandbox
 
-Questo documento descrive i passaggi necessari per eseguire varie operazioni relative alle sandbox nell’interfaccia utente di Adobe Experience Platform.
+In questo documento sono descritti i passaggi necessari per eseguire varie operazioni relative alle sandbox nell&#39;interfaccia utente del Adobe Experience Platform .
 
 ## Visualizzare le sandbox
 
-Nell’interfaccia utente di Experience Platform, fate clic su **Sandbox** nella barra di navigazione a sinistra per aprire il dashboard _Sandbox_ . Il dashboard elenca tutte le sandbox disponibili per l’organizzazione, incluso il tipo di sandbox (produzione o sviluppo) e lo stato (attivo, creazione, eliminazione o non riuscito).
+Nell’interfaccia  di Experience Platform, fate clic su **Sandbox** nella barra di navigazione a sinistra per aprire il dashboard _Sandbox_ . Il dashboard elenca tutte le sandbox disponibili per l’organizzazione, incluso il tipo di sandbox (produzione o sviluppo) e lo stato (attivo, creazione, eliminazione o non riuscito).
 
 ![](../images/ui/sandboxes-tab.png)
 
@@ -45,7 +48,9 @@ Al termine, fate clic su **Crea**.
 
 ![](../images/ui/create-sandbox-dialog.png)
 
->[!NOTE] Poiché vi limitate a creare solo tipi di sandbox non di produzione, l&#39;opzione **tipo** è bloccata in &quot;Non produzione&quot; e non può essere manipolata.
+>[!NOTE]
+>
+>Poiché vi limitate a creare solo tipi di sandbox non di produzione, l&#39;opzione **tipo** è bloccata in &quot;Non produzione&quot; e non può essere manipolata.
 
 Dopo aver creato la sandbox, aggiornate la pagina e la nuova sandbox appare nel dashboard _Sandbox_ con lo stato &quot;Creating&quot; (Creazione). Il provisioning delle nuove sandbox richiede circa 15 minuti, dopo di che il loro stato diventa &quot;Attivo&quot;.
 
@@ -53,7 +58,9 @@ Dopo aver creato la sandbox, aggiornate la pagina e la nuova sandbox appare nel 
 
 ## Reimpostare una sandbox
 
->[!NOTE] Questa funzionalità è disponibile solo per sandbox non di produzione. Impossibile ripristinare le sandbox di produzione.
+>[!NOTE]
+>
+>Questa funzionalità è disponibile solo per sandbox non di produzione. Impossibile ripristinare le sandbox di produzione.
 
 Reimpostando una sandbox non di produzione, vengono eliminate tutte le risorse associate a tale sandbox (schemi, set di dati e così via), mantenendo il nome della sandbox e le relative autorizzazioni. Questa sandbox &quot;pulita&quot; continua a essere disponibile con lo stesso nome per gli utenti che hanno accesso ad essa.
 
@@ -71,7 +78,9 @@ Viene visualizzato un messaggio di conferma e lo stato della sandbox diventa &qu
 
 ## Eliminare una sandbox
 
->[!NOTE] Questa funzionalità è disponibile solo per sandbox non di produzione. Impossibile eliminare le sandbox di produzione.
+>[!NOTE]
+>
+>Questa funzionalità è disponibile solo per sandbox non di produzione. Impossibile eliminare le sandbox di produzione.
 
 Se eliminate una sandbox non di produzione, vengono rimosse in modo permanente tutte le risorse associate a tale sandbox, comprese le autorizzazioni.
 
@@ -87,4 +96,4 @@ Viene visualizzato un messaggio di conferma e la sandbox viene rimossa dall’ar
 
 ## Passaggi successivi
 
-Questo documento illustra come gestire le sandbox nell’interfaccia utente della piattaforma Experience. Per informazioni su come gestire le sandbox tramite l&#39;API Sandbox, consultate la guida [per gli sviluppatori di](../api/getting-started.md)sandbox.
+Questo documento illustra come gestire le sandbox nell’interfaccia utente  di Experience Platform. Per informazioni su come gestire le sandbox tramite l&#39;API Sandbox, consultate la guida [per gli sviluppatori di](../api/getting-started.md)sandbox.
