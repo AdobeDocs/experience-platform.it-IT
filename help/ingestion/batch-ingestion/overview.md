@@ -1,17 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Panoramica sull’inserimento di batch in Adobe Experience Platform
+title: Panoramica sull'inserimento dei batch di  Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1170'
+ht-degree: 2%
 
 ---
 
 
 # Panoramica sull&#39;inserimento batch
 
-L’API Batch Ingestion consente di trasferire i dati in Adobe Experience Platform come file batch. I dati che si desidera acquisire possono essere i dati di profilo provenienti da un file semplice in un sistema CRM (ad esempio un file parquet), o i dati conformi a uno schema noto nel Registro di sistema di Experience Data Model (XDM).
+L&#39;API Batch Ingestion consente di trasferire i dati  Adobe Experience Platform come file batch. I dati che si desidera acquisire possono essere i dati di profilo provenienti da un file semplice in un sistema CRM (ad esempio un file parquet), o i dati conformi a uno schema noto nel Registro di sistema di Experience Data Model (XDM).
 
 Il riferimento [API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) Data Ingestion fornisce informazioni aggiuntive su queste chiamate API.
 
@@ -21,7 +24,7 @@ Il diagramma seguente illustra il processo di assimilazione dei batch:
 
 ## Utilizzo dell&#39;API
 
-L’API Data Ingestion consente di assimilare i dati come batch (un’unità di dati costituita da uno o più file da assimilare come una singola unità) in Experience Platform in tre passaggi fondamentali:
+L&#39;API Data Ingestion consente di assimilare i dati come batch (un&#39;unità di dati costituita da uno o più file da assimilare come singola unità)  Experience Platform in tre passaggi fondamentali:
 
 1. Creare un nuovo batch.
 2. Caricate i file in un set di dati specificato che corrisponde allo schema XDM dei dati.
@@ -44,21 +47,23 @@ Per caricare un file di dimensioni superiori a 512 MB, è necessario dividere il
 
 ### Lettura di chiamate API di esempio
 
-Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi della piattaforma Experience.
+Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi di  Experience Platform.
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle API della piattaforma, dovete prima completare l&#39;esercitazione [di](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come illustrato di seguito:
+Per effettuare chiamate alle API Platform, è prima necessario completare l&#39;esercitazione [di](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API Experience Platform, come illustrato di seguito:
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API della piattaforma richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in  Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API Platform richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Per ulteriori informazioni sulle sandbox in Piattaforma, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+>[!NOTE]
+>
+>Per ulteriori informazioni sulle sandbox in Platform, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva:
 
@@ -123,7 +128,9 @@ Dopo aver creato un nuovo batch per il caricamento, i file possono essere carica
 
 Potete caricare i file mediante l’API **di caricamento dei file** piccoli. Tuttavia, se i file sono troppo grandi e il limite del gateway viene superato (ad esempio timeout estesi, richieste di dimensioni del corpo superate e altre restrizioni), potete passare all&#39;API **di caricamento dei file di** grandi dimensioni. Questa API carica il file in blocchi e unisce i dati utilizzando la chiamata API **** Large File Upload Complete.
 
->[!NOTE] Gli esempi seguenti utilizzano il formato di file [parquet](https://parquet.apache.org/documentation/latest/) . Un esempio che utilizza il formato di file JSON è disponibile nella guida [per gli sviluppatori per l’assimilazione](./api-overview.md)batch.
+>[!NOTE]
+>
+>Gli esempi seguenti utilizzano il formato di file [parquet](https://parquet.apache.org/documentation/latest/) . Un esempio che utilizza il formato di file JSON è disponibile nella guida [per gli sviluppatori per l’assimilazione](./api-overview.md)batch.
 
 ### Caricamento di file di piccole dimensioni
 
@@ -384,7 +391,7 @@ Il `"status"` campo indica lo stato corrente del batch richiesto. I batch posson
 | Interrotto | Un&#39;operazione di interruzione è stata **esplicitamente** chiamata (tramite l&#39;API Batch Ingest) per il batch specificato. Una volta che il batch è in stato **caricato** , non può essere interrotto. |
 | Attivo | Il batch è stato promosso con successo ed è disponibile per il consumo a valle. Questo stato può essere utilizzato in modo intercambiabile con **Success**. |
 | Eliminato | I dati per il batch sono stati rimossi completamente. |
-| Operazione non riuscita | Uno stato terminale che risulta da una configurazione non corretta e/o da dati non corretti. I dati per un batch con errore **non** vengono visualizzati. Questo stato può essere utilizzato in modo intercambiabile con **Errore**. |
+| Non riuscito | Uno stato terminale che risulta da una configurazione non corretta e/o da dati non corretti. I dati per un batch con errore **non** vengono visualizzati. Questo stato può essere utilizzato in modo intercambiabile con **Errore**. |
 | Inattivo | Il batch è stato promosso con successo, ma è stato ripristinato o è scaduto. Il batch non è più disponibile per il consumo a valle. |
 | Caricato | I dati per il batch sono completi e il batch è pronto per la promozione. |
 | Caricamento | I dati per questo batch vengono caricati e il batch **non** è attualmente pronto per essere promosso. |
