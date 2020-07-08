@@ -4,38 +4,43 @@ solution: Experience Platform
 title: Elaborazione delle richieste di privacy in Real-time Customer Profile
 topic: overview
 translation-type: tm+mt
-source-git-commit: cc296670db91640e75fd7a47b874a46eaf57ecde
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '660'
+ht-degree: 0%
 
 ---
 
 
 # Elaborazione delle richieste di privacy in Real-time Customer Profile
 
-Il servizio Adobe Experience Platform Privacy Service elabora le richieste dei clienti di accedere, rifiutare la vendita o cancellare i loro dati personali, come delineato dalle normative sulla privacy come il General Data Protection Regulation (GDPR) e il California Consumer Privacy Act (CCPA).
+ Adobe Experience Platform Privacy Service elabora le richieste dei clienti di accedere, rifiutare la vendita o cancellare i loro dati personali, come delineato dalle normative sulla privacy, come il General Data Protection Regulation (GDPR) e il California Consumer Privacy Act (CCPA).
 
 Questo documento tratta i concetti essenziali relativi all&#39;elaborazione delle richieste di privacy per il profilo cliente in tempo reale.
 
 ## Introduzione
 
-Prima di leggere questa guida, è consigliabile avere una conoscenza approfondita dei seguenti servizi della piattaforma Experience:
+Prima di leggere questa guida, è consigliabile avere una conoscenza approfondita dei seguenti servizi  Experience Platform:
 
-* [Servizio](home.md)Privacy: Gestisce le richieste dei clienti relative all&#39;accesso, al rifiuto della vendita o all&#39;eliminazione dei loro dati personali tra le applicazioni Adobe Experience Cloud.
+* [Privacy Service](home.md): Gestisce le richieste dei clienti relative all&#39;accesso, al rifiuto della vendita o all&#39;eliminazione dei loro dati personali tra le applicazioni Adobe Experience Cloud.
 * [Servizio](../identity-service/home.md)identità: Risolve la sfida fondamentale rappresentata dalla frammentazione dei dati relativi all&#39;esperienza dei clienti attraverso il collegamento di identità tra dispositivi e sistemi.
 * [Profilo](../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
 ## Informazioni sugli spazi dei nomi delle identità {#namespaces}
 
-Adobe Experience Platform Identity Service collega i dati di identità dei clienti tra sistemi e dispositivi. Identity Service utilizza gli spazi dei nomi **di identità** per fornire contesto ai valori di identità collegandoli al proprio sistema di origine. Uno spazio dei nomi può rappresentare un concetto generico come un indirizzo e-mail (&quot;E-mail&quot;) o associare l&#39;identità a un&#39;applicazione specifica, ad esempio un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o un Adobe Target ID (&quot;TNTID&quot;).
+ Adobe Experience Platform Identity Service collega i dati di identità dei clienti tra sistemi e dispositivi. Identity Service utilizza gli spazi dei nomi **di identità** per fornire contesto ai valori di identità collegandoli al proprio sistema di origine. Uno spazio dei nomi può rappresentare un concetto generico come un indirizzo e-mail (&quot;E-mail&quot;) o associare l&#39;identità a un&#39;applicazione specifica, ad esempio un Adobe  Advertising Cloud ID (&quot;AdCloud&quot;) o un  Adobe Target ID (&quot;TNTID&quot;).
 
 Servizio identità mantiene un archivio di spazi dei nomi di identità globali (standard) e definiti dall’utente (personalizzati). Gli spazi dei nomi standard sono disponibili per tutte le organizzazioni (ad esempio, &quot;E-mail&quot; e &quot;ECID&quot;), mentre l&#39;organizzazione può anche creare spazi dei nomi personalizzati in base alle proprie esigenze.
 
-Per ulteriori informazioni sugli spazi dei nomi di identità in Experience Platform, consultate la panoramica [dello spazio dei nomi](../identity-service/namespaces.md)di identità.
+Per ulteriori informazioni sugli spazi dei nomi di identità in  Experience Platform, consultate la panoramica [dello spazio dei nomi](../identity-service/namespaces.md)identità.
 
 ## Invio di richieste {#submit}
 
->[!NOTE] Questa sezione descrive come creare richieste di privacy per l’archivio dati del profilo. È vivamente consigliato di consultare la documentazione API [del servizio](../privacy-service/api/getting-started.md) Privacy o dell&#39;interfaccia utente [del servizio](../privacy-service/ui/overview.md) Privacy per i passaggi completi su come inviare un processo di privacy, incluso come formattare correttamente i dati di identità dell&#39;utente inviati nei payload della richiesta.
+>[!NOTE]
+>
+>Questa sezione descrive come creare richieste di privacy per l’archivio dati del profilo. È vivamente consigliato di consultare la documentazione API [](../privacy-service/api/getting-started.md) Privacy Service o dell’interfaccia utente [](../privacy-service/ui/overview.md) Privacy Service per i passaggi completi relativi all’invio di un processo per la privacy, incluso il modo in cui formattare correttamente i dati di identità dell’utente inviati nei payload di richieste.
 
-Nella sezione seguente viene illustrato come effettuare richieste di privacy per Real-time Customer Profile (Profilo cliente in tempo reale) e per Data Lake mediante l&#39;API o l&#39;interfaccia utente del servizio per la privacy.
+Nella sezione seguente viene illustrato come effettuare richieste di privacy per Real-time Customer Profile (Profilo cliente in tempo reale) e Data Lake mediante l&#39;API o l&#39;interfaccia utente di Privacy Service.
 
 ### Utilizzo dell&#39;API
 
@@ -94,12 +99,12 @@ Durante la creazione di richieste di lavoro nell’interfaccia utente, accertate
 
 ## Elimina elaborazione richiesta
 
-Quando Experience Platform riceve una richiesta di eliminazione dal servizio per la privacy, la piattaforma invia al servizio per la privacy la conferma che la richiesta è stata ricevuta e che i dati interessati sono stati contrassegnati per l&#39;eliminazione. I record vengono quindi rimossi dal Data Lake o dall&#39;archivio dei profili entro sette giorni. Durante quella finestra di sette giorni, i dati vengono eliminati in modo morbido e pertanto non sono accessibili da alcun servizio Piattaforma.
+Quando  Experience Platform riceve una richiesta di eliminazione da Privacy Service, Platform invia ad Privacy Service la conferma che la richiesta è stata ricevuta e che i dati interessati sono stati contrassegnati per l’eliminazione. I record vengono quindi rimossi dal Data Lake o dall&#39;archivio dei profili entro sette giorni. Durante la finestra di sette giorni, i dati vengono eliminati in modo morbido e pertanto non sono accessibili da alcun servizio Platform.
 
-Nelle release future, Platform invierà una conferma al Servizio Privacy dopo che i dati saranno stati fisicamente eliminati.
+Nelle release future, Platform invierà una conferma ad Privacy Service dopo che i dati saranno stati fisicamente eliminati.
 
 ## Passaggi successivi
 
-Leggendo questo documento, hai introdotto alcuni importanti concetti relativi all’elaborazione delle richieste di privacy in Experience Platform. Si consiglia di continuare a leggere la documentazione fornita in questa guida per approfondire la conoscenza su come gestire i dati di identità e creare processi di privacy.
+Leggendo questo documento, è stato introdotto l&#39;importante concetto relativo all&#39;elaborazione delle richieste di privacy in  Experience Platform. Si consiglia di continuare a leggere la documentazione fornita in questa guida per approfondire la conoscenza su come gestire i dati di identità e creare processi di privacy.
 
-Per informazioni sull&#39;elaborazione delle richieste di privacy per le risorse della piattaforma non utilizzate da Profile, vedere il documento sull&#39;elaborazione delle richieste di [privacy nel Data Lake](../catalog/privacy.md).
+Per informazioni sull&#39;elaborazione delle richieste di privacy per le risorse Platform non utilizzate da Profile, consultare il documento relativo all&#39;elaborazione delle richieste di [privacy nel Data Lake](../catalog/privacy.md).
