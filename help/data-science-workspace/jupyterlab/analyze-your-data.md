@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Analizzare i dati utilizzando i notebook
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1702'
 ht-degree: 0%
@@ -50,7 +50,9 @@ La ricetta Vendite al dettaglio è un esempio standalone che utilizza lo stesso 
 
 ### Dati di accesso
 
->[!NOTE] L&#39; `data_access_sdk_python` oggetto è obsoleto e non è più consigliato. Per convertire il codice, fai riferimento all’esercitazione sulla [conversione dell’SDK per l’accesso ai dati in Platform SDK](../authoring/platform-sdk.md) . Per questa esercitazione si applicano gli stessi passaggi indicati di seguito.
+>[!NOTE]
+>
+>L&#39; `data_access_sdk_python` oggetto è obsoleto e non è più consigliato. Per convertire il codice, fai riferimento all’esercitazione sulla [conversione dell’SDK per l’accesso ai dati in Platform SDK](../authoring/platform-sdk.md) . Per questa esercitazione si applicano gli stessi passaggi indicati di seguito.
 
 Verranno analizzati l&#39;accesso ai dati internamente da [!DNL Adobe Experience Platform] e all&#39;esterno. Utilizzeremo la `data_access_sdk_python` libreria per accedere ai dati interni, ad esempio set di dati e schemi XDM. Per i dati esterni, utilizzeremo la [!DNL Python] libreria panda.
 
@@ -86,7 +88,9 @@ Poiché il set di dati è lo stesso, si desidera sostituire i dati di caricament
 
 Ora, possiamo fare clic con il pulsante destro del mouse sul `Retail-Training-<your-alias>` set di dati e selezionare l&#39;opzione &quot;Esplora dati nel blocco appunti&quot; nel menu a discesa. Nel blocco appunti verrà visualizzata una voce di codice eseguibile.
 
->[!TIP] fare riferimento alla [!DNL Platform SDK](../authoring/platform-sdk.md) guida per convertire il codice.
+>[!TIP]
+>
+>fare riferimento alla [!DNL Platform SDK](../authoring/platform-sdk.md) guida per convertire il codice.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
@@ -140,7 +144,7 @@ df.describe()
 
 ![](../images/jupyterlab/analyze-data/df_describe.png)
 
-Con questo, possiamo vedere che ci sono 6435 istanze per ogni caratteristica. Inoltre, vengono fornite informazioni statistiche quali media, deviazione standard (std), min, max e interquartili. Questo ci dà informazioni sulla deviazione per i dati. Nella sezione successiva, passeremo alla visualizzazione che funziona insieme a queste informazioni per darci una buona comprensione dei nostri dati.
+Con questo, possiamo vedere che ci sono 6435 istanze per ogni caratteristica. Inoltre, vengono fornite informazioni statistiche come media, deviazione standard (std), min, max e interquartili. Questo ci dà informazioni sulla deviazione per i dati. Nella sezione successiva, passeremo alla visualizzazione che funziona insieme a queste informazioni per darci una buona comprensione dei nostri dati.
 
 Osservando i valori minimo e massimo per `store`, possiamo vedere che ci sono 45 archivi univoci che i dati rappresentano. Ci sono anche `storeTypes` che differenziano quello che è un negozio. Possiamo vedere la distribuzione di `storeTypes` facendo quanto segue:
 
