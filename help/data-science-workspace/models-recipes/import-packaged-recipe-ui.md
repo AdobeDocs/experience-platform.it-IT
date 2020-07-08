@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Importare una ricetta in pacchetti (interfaccia utente)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1665'
 ht-degree: 0%
@@ -35,7 +35,9 @@ Il flusso di lavoro per l’importazione di una ricetta di pacchetto comprende i
 
 Ogni istanza di ricetta in [!DNL Data Science Workspace] è accompagnata da una serie di configurazioni che adattano l&#39;istanza di ricetta a un caso d&#39;uso particolare. I file di configurazione definiscono i comportamenti predefiniti di formazione e valutazione di un modello creato utilizzando questa istanza di ricetta.
 
->[!NOTE] I file di configurazione sono specifici per ricetta e caso.
+>[!NOTE]
+>
+>I file di configurazione sono specifici per ricetta e caso.
 
 Di seguito è riportato un esempio di file di configurazione che mostra i comportamenti di formazione e valutazione predefiniti per la ricetta Vendite al dettaglio.
 
