@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Sostituire una risorsa
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 67826f838951b3202a6a04321c28daa8ee883d20
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '207'
+ht-degree: 1%
 
 ---
 
@@ -15,7 +18,9 @@ Il Registro di sistema dello schema consente di sostituire un&#39;intera risorsa
 
 Questo metodo è particolarmente utile se desiderate aggiornare molte informazioni contemporaneamente nella risorsa.
 
->[!NOTE] Se si desidera aggiornare solo parte di una risorsa invece di sostituirla completamente, consultare il documento sull&#39; [aggiornamento di una risorsa con un&#39;operazione](update-resource.md)PATCH.
+>[!NOTE]
+>
+>Se si desidera aggiornare solo parte di una risorsa invece di sostituirla completamente, consultare il documento sull&#39; [aggiornamento di una risorsa con un&#39;operazione](update-resource.md)PATCH.
 
 **Formato API**
 
