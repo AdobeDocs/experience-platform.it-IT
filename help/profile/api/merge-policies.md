@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Guida per lo sviluppatore di API profilo cliente in tempo reale
+title: Unisci criteri - API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
 workflow-type: tm+mt
-source-wordcount: '2052'
+source-wordcount: '2053'
 ht-degree: 1%
 
 ---
 
 
-# Unisci criteri
+# Endpoint criteri di unione
 
  Adobe Experience Platform consente di unire dati provenienti da più origini e combinarli per visualizzare una visione completa di ogni singolo cliente. Quando si uniscono questi dati, i criteri di unione sono le regole utilizzate da Platform per determinare in che modo i dati verranno classificati come priorità e quali dati verranno combinati per creare tale visualizzazione unificata. Utilizzando le API RESTful o l&#39;interfaccia utente, puoi creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la tua organizzazione. Questa guida illustra i passaggi per l&#39;utilizzo dei criteri di unione tramite l&#39;API. Per utilizzare i criteri di unione utilizzando l&#39;interfaccia utente, fare riferimento alla guida [utente dei criteri di](../ui/merge-policies.md)unione.
 
