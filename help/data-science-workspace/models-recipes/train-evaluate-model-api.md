@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Formazione e valutazione di un modello (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1191'
+ht-degree: 1%
 
 ---
 
@@ -23,8 +26,8 @@ Segui questa [esercitazione](../../tutorials/authentication.md) per ottenere l&#
 Dall&#39;esercitazione dovrebbero ora essere disponibili i seguenti valori:
 
 - `{ACCESS_TOKEN}`: Il valore del token del portatore specificato dopo l&#39;autenticazione.
-- `{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione unica con Adobe Experience Platform.
-- `{API_KEY}`: Il valore chiave API specifico trovato nella vostra integrazione unica con Adobe Experience Platform.
+- `{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione  Adobe Experience Platform.
+- `{API_KEY}`: Il valore della chiave API specifico trovato nell&#39;integrazione del Adobe Experience Platform  univoco.
 
 - Collegamento a un&#39;immagine Docker di un servizio intelligente
 
@@ -34,7 +37,9 @@ Utilizzeremo le API per creare un Experience Run per la formazione. Per questa e
 
 ![](../images/models-recipes/train-evaluate-api/engine_hierarchy_api.png)
 
->[!NOTE] I termini &quot;Engine&quot;, &quot;MLIn&quot;, &quot;MLService&quot;, &quot;Experiment&quot; e &quot;Model&quot; sono denominati termini diversi nell’interfaccia utente. Se si proviene dall’interfaccia utente, nella tabella seguente vengono mappate le differenze.
+>[!NOTE]
+>
+>I termini &quot;Engine&quot;, &quot;MLIn&quot;, &quot;MLService&quot;, &quot;Experiment&quot; e &quot;Model&quot; sono denominati termini diversi nell’interfaccia utente. Se si proviene dall’interfaccia utente, nella tabella seguente vengono mappate le differenze.
 > 
 > | Termine interfaccia utente | Termine API |
 > --- | ---
@@ -62,8 +67,8 @@ curl -X POST \
 ```
 
 `{ACCESS_TOKEN}`: Il valore del token del portatore specificato dopo l&#39;autenticazione.\
-`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione unica con Adobe Experience Platform.\
-`{API_KEY}`: Il valore chiave API specifico trovato nella vostra integrazione unica con Adobe Experience Platform.\
+`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione  Adobe Experience Platform.\
+`{API_KEY}`: Il valore della chiave API specifico trovato nell&#39;integrazione del Adobe Experience Platform  univoco.\
 `{JSON_PAYLOAD}`: La configurazione del nostro MLIninstance. L’esempio che utilizziamo nell’esercitazione è riportato di seguito:
 
 ```JSON
@@ -117,7 +122,9 @@ curl -X POST \
 }
 ```
 
->[!NOTE] Nel `{JSON_PAYLOAD}`pannello vengono definiti i parametri utilizzati per la formazione e il punteggio nell’ `tasks` array. L’ID `{ENGINE_ID}` è il motore che si desidera utilizzare e il `tag` campo è un parametro facoltativo utilizzato per identificare l’istanza.
+>[!NOTE]
+>
+>Nel `{JSON_PAYLOAD}`pannello vengono definiti i parametri utilizzati per la formazione e il punteggio nell’ `tasks` array. L’ID `{ENGINE_ID}` è il motore che si desidera utilizzare e il `tag` campo è un parametro facoltativo utilizzato per identificare l’istanza.
 
 La risposta conterrà l’istanza `{INSTANCE_ID}` che rappresenta l’istanza MLI creata. È possibile creare più istanze MLI con diverse configurazioni.
 
@@ -171,9 +178,9 @@ curl -X POST \
   -d `{JSON PAYLOAD}`
 ```
 
-`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione unica con Adobe Experience Platform.\
+`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione  Adobe Experience Platform.\
 `{ACCESS_TOKEN}`: Il valore del token del portatore specificato dopo l&#39;autenticazione.\
-`{API_KEY}`: Il valore chiave API specifico trovato nella vostra integrazione unica con Adobe Experience Platform.\
+`{API_KEY}`: Il valore della chiave API specifico trovato nell&#39;integrazione del Adobe Experience Platform  univoco.\
 `{JSON_PAYLOAD}`: Oggetto Sperimentale creato. L’esempio che utilizziamo nell’esercitazione è riportato di seguito:
 
 ```JSON
@@ -227,9 +234,9 @@ curl -X POST \
   -d '{JSON_PAYLOAD}`
 ```
 
-`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione unica con Adobe Experience Platform.\
+`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione  Adobe Experience Platform.\
 `{ACCESS_TOKEN}`: Il valore del token del portatore specificato dopo l&#39;autenticazione.\
-`{API_KEY}`: Il valore chiave API specifico trovato nella vostra integrazione unica con Adobe Experience Platform.\
+`{API_KEY}`: Il valore della chiave API specifico trovato nell&#39;integrazione del Adobe Experience Platform  univoco.\
 `{JSON_PAYLOAD}`: Set di dati da inviare. L’esempio che utilizziamo nell’esercitazione è riportato di seguito:
 
 ```JSON
@@ -315,9 +322,9 @@ curl -X POST \
 ```
 
 `{EXPERIMENT_ID}`: L’ID corrispondente all’esperimento di cui eseguire il targeting. Questo si trova nella risposta quando create il vostro esperimento.\
-`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione unica con Adobe Experience Platform.\
+`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione  Adobe Experience Platform.\
 `{ACCESS_TOKEN}`: Il valore del token del portatore specificato dopo l&#39;autenticazione.\
-`{API_KEY}`: Il valore chiave API specifico trovato nella vostra integrazione unica con Adobe Experience Platform.\
+`{API_KEY}`: Il valore della chiave API specifico trovato nell&#39;integrazione del Adobe Experience Platform  univoco.\
 `{JSON_PAYLOAD}`: Per creare un&#39;esecuzione di formazione, è necessario includere nel corpo quanto segue:
 
 ```JSON
@@ -386,8 +393,8 @@ curl -X GET \
 `{EXPERIMENT_ID}`: L’ID che rappresenta l’esperimento.\
 `{EXPERIMENT_RUN_ID}`: ID che rappresenta l’esecuzione dell’esperimento.\
 `{ACCESS_TOKEN}`: Il valore del token del portatore specificato dopo l&#39;autenticazione.\
-`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione unica con Adobe Experience Platform.\
-`{API_KEY}`: Il valore chiave API specifico trovato nella vostra integrazione unica con Adobe Experience Platform.
+`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione  Adobe Experience Platform.\
+`{API_KEY}`: Il valore della chiave API specifico trovato nell&#39;integrazione del Adobe Experience Platform  univoco.
 
 **Risposta**
 
@@ -449,7 +456,7 @@ curl -X GET \
 
 `{EXPERIMENT_RUN_ID}`: L’ID corrispondente all’esecuzione dell’esperimento di cui desiderate eseguire il targeting. Questo si trova nella risposta durante la creazione dell&#39;esecuzione dell&#39;esperimento.\
 `{ACCESS_TOKEN}`: Il valore del token del portatore specificato dopo l&#39;autenticazione.\
-`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione unica con Adobe Experience Platform.
+`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione  Adobe Experience Platform.
 
 La risposta rappresenta il modello addestrato creato.
 
@@ -496,9 +503,11 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}`:  L’ID corrispondente all’esperimento.\
 `{ACCESS_TOKEN}`: Il valore del token del portatore specificato dopo l&#39;autenticazione.\
-`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione unica con Adobe Experience Platform.
+`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione  Adobe Experience Platform.
 
->[!NOTE] La chiamata API disattiverà la creazione di nuove esecuzioni di Esperimenti. Tuttavia, non interromperà l&#39;esecuzione di esecuzioni di esperti già in esecuzione.
+>[!NOTE]
+>
+>La chiamata API disattiverà la creazione di nuove esecuzioni di Esperimenti. Tuttavia, non interromperà l&#39;esecuzione di esecuzioni di esperti già in esecuzione.
 
 Di seguito viene riportata la risposta che informa che l’eliminazione dell’esperimento è avvenuta correttamente.
 
