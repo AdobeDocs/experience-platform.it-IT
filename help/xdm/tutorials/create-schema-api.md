@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare uno schema utilizzando l'API del Registro di sistema dello schema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2418'
 ht-degree: 1%
@@ -256,7 +256,9 @@ La risposta mostra il mixin appena aggiunto nell’ `meta:extends` array e conti
 
 È ora possibile aggiungere un altro mixin standard ripetendo i passaggi utilizzando un altro mixin.
 
->[!TIP] Vale la pena rivedere tutti i mixin disponibili per acquisire familiarità con i campi inclusi in ciascuno. Potete elencare (GET) tutti i mixin disponibili per l&#39;uso con una classe particolare eseguendo una richiesta per ciascuno dei contenitori &quot;global&quot; e &quot;tenant&quot;, restituendo solo i mixin in cui il campo &quot;meta:purposeToExtend&quot; corrisponde alla classe in uso. In questo caso, si tratta della classe Profilo singolo XDM, quindi viene utilizzato il profilo individuale XDM `$id` :
+>[!TIP]
+>
+>Vale la pena rivedere tutti i mixin disponibili per acquisire familiarità con i campi inclusi in ciascuno. Potete elencare (GET) tutti i mixin disponibili per l&#39;uso con una classe particolare eseguendo una richiesta per ciascuno dei contenitori &quot;global&quot; e &quot;tenant&quot;, restituendo solo i mixin in cui il campo &quot;meta:purposeToExtend&quot; corrisponde alla classe in uso. In questo caso, si tratta della classe Profilo singolo XDM, quindi viene utilizzato il profilo individuale XDM `$id` :
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -991,7 +993,9 @@ curl -X POST \
       }'
 ```
 
->[!NOTE] È possibile elencare i valori &quot;xdm:namespace&quot; disponibili, oppure crearne di nuovi, utilizzando l&#39;API [del servizio](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)identità. Il valore di &quot;xdm:property&quot; può essere &quot;xdm:code&quot; o &quot;xdm:id&quot;, a seconda di &quot;xdm:namespace&quot; utilizzato.
+>[!NOTE]
+>
+>È possibile elencare i valori &quot;xdm:namespace&quot; disponibili, oppure crearne di nuovi, utilizzando l&#39;API [del servizio](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)identità. Il valore di &quot;xdm:property&quot; può essere &quot;xdm:code&quot; o &quot;xdm:id&quot;, a seconda di &quot;xdm:namespace&quot; utilizzato.
 
 **Risposta**
 
