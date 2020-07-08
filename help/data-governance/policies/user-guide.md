@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida utente per i criteri di utilizzo dei dati
 topic: policies
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '686'
 ht-degree: 0%
@@ -16,7 +16,9 @@ ht-degree: 0%
 
  Adobe Experience Platform Data Governance fornisce un&#39;interfaccia utente che consente di creare e gestire i criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle azioni che è possibile eseguire nell&#39;area di lavoro _Criteri_ nell&#39;interfaccia [!DNL Experience Platform] utente.
 
->[!IMPORTANT] Tutti i criteri di utilizzo dei dati (inclusi i criteri di base forniti da Adobe) sono disattivati per impostazione predefinita. Affinché un singolo criterio possa essere preso in considerazione per l&#39;applicazione, è necessario abilitare manualmente tale criterio. Per informazioni su come [abilitare i criteri](#enable) , consulta la sezione relativa all’attivazione dei criteri nell’interfaccia utente.
+>[!IMPORTANT]
+>
+>Tutti i criteri di utilizzo dei dati (inclusi i criteri di base forniti da Adobe) sono disattivati per impostazione predefinita. Affinché un singolo criterio possa essere preso in considerazione per l&#39;applicazione, è necessario abilitare manualmente tale criterio. Per informazioni su come [abilitare i criteri](#enable) , consulta la sezione relativa all’attivazione dei criteri nell’interfaccia utente.
 
 ## Prerequisiti
 
@@ -51,7 +53,9 @@ Quindi, selezionate le etichette di utilizzo dei dati su cui verrà basato il cr
 
 Viene *[!UICONTROL Select marketing actions]* visualizzato il passaggio. Scegli le azioni di marketing appropriate dall&#39;elenco fornito, quindi fai clic **[!UICONTROL Next]** per continuare.
 
->[!NOTE] Quando si selezionano più azioni di marketing, il criterio le interpreta come una regola &quot;OR&quot;. In altre parole, il criterio si applica se viene eseguita _una_ delle azioni di marketing selezionate.
+>[!NOTE]
+>
+>Quando si selezionano più azioni di marketing, il criterio le interpreta come una regola &quot;OR&quot;. In altre parole, il criterio si applica se viene eseguita _una_ delle azioni di marketing selezionate.
 
 ![](../images/policies/add-marketing-actions.png)
 
@@ -93,7 +97,9 @@ L’azione appena creata viene visualizzata nella *[!UICONTROL Marketing actions
 
 ## Modifica o eliminazione di un&#39;azione di marketing {#edit-delete-marketing-action}
 
->[!NOTE] È possibile modificare solo le azioni di marketing personalizzate definite dalla tua organizzazione. Le azioni di marketing definite da Adobe non possono essere modificate o eliminate.
+>[!NOTE]
+>
+>È possibile modificare solo le azioni di marketing personalizzate definite dalla tua organizzazione. Le azioni di marketing definite da Adobe non possono essere modificate o eliminate.
 
 Nell&#39; **[!UICONTROL Policies]** area di lavoro, seleziona la **[!UICONTROL Marketing actions]** scheda per visualizzare un elenco delle azioni di marketing disponibili definite da Adobe e dalla tua organizzazione. Seleziona un&#39;azione di marketing personalizzata dall&#39;elenco, quindi utilizza i campi forniti nella sezione di destra per modificare i dettagli dell&#39;azione di marketing.
 
@@ -101,7 +107,9 @@ Nell&#39; **[!UICONTROL Policies]** area di lavoro, seleziona la **[!UICONTROL M
 
 Se l&#39;azione di marketing non è utilizzata da alcun criterio di utilizzo esistente, puoi eliminarla facendo clic su **[!UICONTROL Delete marketing action]**.
 
->[!NOTE] Se si tenta di eliminare un&#39;azione di marketing utilizzata da un criterio esistente, verrà visualizzato un messaggio di errore che indica che il tentativo di eliminazione non è riuscito.
+>[!NOTE]
+>
+>Se si tenta di eliminare un&#39;azione di marketing utilizzata da un criterio esistente, verrà visualizzato un messaggio di errore che indica che il tentativo di eliminazione non è riuscito.
 
 ![](../images/policies/delete-marketing-action.png)
 
