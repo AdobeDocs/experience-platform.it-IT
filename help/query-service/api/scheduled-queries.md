@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Guida per gli sviluppatori di Query Service
 topic: scheduled queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '947'
+ht-degree: 3%
 
 ---
 
@@ -214,7 +217,9 @@ Una risposta corretta restituisce lo stato HTTP 202 (Accettato) con i dettagli d
 }
 ```
 
->[!NOTE] È possibile utilizzare il valore di `_links.delete` per [eliminare la query](#delete-a-specified-scheduled-query)pianificata creata.
+>[!NOTE]
+>
+>È possibile utilizzare il valore di `_links.delete` per [eliminare la query](#delete-a-specified-scheduled-query)pianificata creata.
 
 ### Dettagli richiesta di una query pianificata specificata
 
@@ -295,7 +300,9 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli della query p
 }
 ```
 
->[!NOTE] È possibile utilizzare il valore di `_links.delete` per [eliminare la query](#delete-a-specified-scheduled-query)pianificata creata.
+>[!NOTE]
+>
+>È possibile utilizzare il valore di `_links.delete` per [eliminare la query](#delete-a-specified-scheduled-query)pianificata creata.
 
 ### Aggiorna i dettagli di una query pianificata specificata
 
@@ -408,9 +415,11 @@ Una risposta corretta restituisce lo stato HTTP 202 (Accettato) con il seguente 
 
 ### Elimina una query pianificata specificata
 
-È possibile eliminare una query pianificata specificata eseguendo una richiesta DELETE all&#39; `/schedules` endpoint e fornendo l&#39;ID della query pianificata che si desidera eliminare nel percorso della richiesta.
+È possibile eliminare una query pianificata specificata effettuando una richiesta di DELETE all&#39; `/schedules` endpoint e fornendo l&#39;ID della query pianificata che si desidera eliminare nel percorso della richiesta.
 
->[!NOTE] La pianificazione **deve** essere disattivata prima di essere eliminata.
+>[!NOTE]
+>
+>La pianificazione **deve** essere disattivata prima di essere eliminata.
 
 **Formato API**
 
