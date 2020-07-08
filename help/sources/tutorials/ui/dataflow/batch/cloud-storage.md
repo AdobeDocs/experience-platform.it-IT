@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Configurare un flusso di dati per un connettore batch di archiviazione cloud nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1141'
 ht-degree: 0%
@@ -48,7 +48,9 @@ Facendo clic su una cartella elencata potete scorrere la gerarchia delle cartell
 
 Una volta completata la finestra di anteprima, potete fare clic **[!UICONTROL Next]** per caricare tutti i file nella cartella selezionata. Se desiderate caricare il file in un file specifico, selezionatelo dall’elenco prima di fare clic **[!UICONTROL Next]**.
 
->[!NOTE] I formati di file supportati includono CSV, JSON e Parquet. I file JSON e Parquet devono essere conformi allo standard XDM.
+>[!NOTE]
+>
+>I formati di file supportati includono CSV, JSON e Parquet. I file JSON e Parquet devono essere conformi allo standard XDM.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-next.png)
 
