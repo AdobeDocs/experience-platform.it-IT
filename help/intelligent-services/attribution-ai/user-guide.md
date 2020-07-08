@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida utente AI per attribuzione
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1430'
 ht-degree: 0%
@@ -60,7 +60,9 @@ Per definire un evento di conversione, è necessario assegnare all&#39;evento un
 
 Una volta selezionato un evento, viene visualizzato un nuovo menu a discesa a destra. Il secondo menu a discesa viene utilizzato per fornire ulteriore contesto all&#39;evento attraverso l&#39;utilizzo di operazioni. Per questo evento di conversione, *esiste* l&#39;operazione predefinita.
 
->[!NOTE] Una stringa sotto il nome *di* conversione viene aggiornata mentre definite l&#39;evento.
+>[!NOTE]
+>
+>Una stringa sotto il nome *di* conversione viene aggiornata mentre definite l&#39;evento.
 
 ![nessun menu a discesa](./images/user-guide/conversion_event_1.png)
 
@@ -98,7 +100,9 @@ Per questo punto di contatto, seleziona **uguale a**.
 
 Dopo aver selezionato un operatore per un punto di contatto, *Inserisci valore* campo è disponibile. I valori a discesa per *Immettere il valore* del campo vengono compilati in base all&#39;operatore e al valore del punto di contatto precedentemente selezionati. Se un valore non viene compilato nel menu a discesa, è possibile digitarlo manualmente. Fate clic sul menu a discesa e selezionate **CLIC**.
 
->[!NOTE] Agli operatori &quot;esiste&quot; e &quot;non esiste&quot; non sono associati valori di campo.
+>[!NOTE]
+>
+>Agli operatori &quot;esiste&quot; e &quot;non esiste&quot; non sono associati valori di campo.
 
 ![touchpoint, elenco a discesa](./images/user-guide/touchpoint_dropdown.png)
 
@@ -112,7 +116,9 @@ Facendo clic su **Aggiungi gruppo** potete creare altri campi separati dall’or
 
 ![panoramica dei punti di contatto](./images/user-guide/add_group_touchpoint.png)
 
->[!NOTE] Usa la stringa sotto Nome *punto di* contatto per una panoramica rapida del punto di contatto. La stringa corrisponde al nome del punto di contatto.
+>[!NOTE]
+>
+>Usa la stringa sotto Nome *punto di* contatto per una panoramica rapida del punto di contatto. La stringa corrisponde al nome del punto di contatto.
 
 ![](./images/user-guide/touchpoint_string.png)
 
@@ -140,7 +146,9 @@ Fai clic sul menu a discesa sotto Frequenza ** punteggio per selezionare tra il 
 
 Per modificare l&#39;ora del giorno in cui si desidera che venga eseguito il punteggio, fare clic sull&#39;icona dell&#39;orologio. Nella nuova sovrapposizione che viene visualizzata, inserite l’ora del giorno in cui si desidera che venga eseguito il punteggio. Fate clic all’esterno della sovrapposizione per chiuderla.
 
->[!NOTE] Il completamento di ogni processo di punteggio può richiedere fino a 24 ore.
+>[!NOTE]
+>
+>Il completamento di ogni processo di punteggio può richiedere fino a 24 ore.
 
 ![icona orologio](./images/user-guide/time_of_day.png)
 
@@ -158,7 +166,9 @@ Quindi, selezionare un operatore.
 
 Infine, digitare il codice del paese nel menu a discesa *Inserisci valore* campo.
 
->[!NOTE] I codici paese sono lunghi due caratteri. Un elenco completo è disponibile qui [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
+>[!NOTE]
+>
+>I codici paese sono lunghi due caratteri. Un elenco completo è disponibile qui [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
 
 ![regione](./images/user-guide/region-based.png)
 
@@ -166,7 +176,9 @@ Infine, digitare il codice del paese nel menu a discesa *Inserisci valore* campo
 
 Per garantire che si ottenga il modello più accurato possibile, è importante formare il modello con dati storici che rappresentano il business. Per impostazione predefinita, il modello viene addestrato utilizzando 2 quarti (6 mesi) di dati. Selezionate il menu a discesa per modificare il valore predefinito. È possibile scegliere di allenarsi con uno o quattro quarti di dati (3-12 mesi).
 
->[!NOTE] Una finestra di formazione più breve è più sensibile alle tendenze recenti, mentre una finestra di formazione più lunga crea un modello più robusto ed è meno sensibile alle tendenze recenti.
+>[!NOTE]
+>
+>Una finestra di formazione più breve è più sensibile alle tendenze recenti, mentre una finestra di formazione più lunga crea un modello più robusto ed è meno sensibile alle tendenze recenti.
 
 ![finestra di formazione](./images/user-guide/training_window.png)
 
