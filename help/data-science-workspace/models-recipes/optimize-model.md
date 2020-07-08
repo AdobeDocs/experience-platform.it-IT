@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Ottimizzare un modello
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1219'
 ht-degree: 0%
@@ -62,7 +62,9 @@ Una volta attivata la classe di un valutatore, per impostazione predefinita dura
 evaluation.metrics.com=com.adobe.platform.ml.impl.Constants.DEFAULT
 ```
 
->[!NOTE] Se la metrica non è definita, le metriche predefinite saranno attive.
+>[!NOTE]
+>
+>Se la metrica non è definita, le metriche predefinite saranno attive.
 
 È possibile abilitare una metrica specifica modificando il valore per `evaluation.metrics.com`. Nell&#39;esempio seguente, la metrica F-Score è abilitata.
 
@@ -83,7 +85,9 @@ Nella tabella seguente sono riportate le metriche predefinite per ciascuna class
 
 Il valutatore personalizzato può essere fornito estendendo l&#39;interfaccia di `MLEvaluator.scala` nel `Evaluator.scala` file. Nel file [Evalutazione.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/Evaluator.scala) di esempio, definiamo funzioni `split()` e funzioni personalizzate `evaluate()` . La nostra `split()` funzione divide i nostri dati in modo casuale con un rapporto di 8:2 e la nostra `evaluate()` funzione definisce e restituisce 3 metriche: MAPE, MAE e RMSE.
 
->[!IMPORTANT] Per la `MLMetric` classe, non utilizzare `"measures"` per `valueType` la creazione di un&#39;altra metrica `MLMetric` la metrica non verrà compilata nella tabella delle metriche di valutazione personalizzate.
+>[!IMPORTANT]
+>
+>Per la `MLMetric` classe, non utilizzare `"measures"` per `valueType` la creazione di un&#39;altra metrica `MLMetric` la metrica non verrà compilata nella tabella delle metriche di valutazione personalizzate.
 >  
 > Effettuate le seguenti operazioni: `metrics.add(new MLMetric("MAPE", mape, "double"))`\
 > Non questo: `metrics.add(new MLMetric("MAPE", mape, "measures"))`
