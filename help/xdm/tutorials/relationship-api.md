@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Definire una relazione tra due schemi utilizzando l'API del Registro di sistema dello schema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 7e867ee12578f599c0c596decff126420a9aca01
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1504'
+ht-degree: 1%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 7e867ee12578f599c0c596decff126420a9aca01
 # Definire una relazione tra due schemi utilizzando l&#39;API del Registro di sistema dello schema
 
 
-La capacità di comprendere le relazioni tra i clienti e le loro interazioni con il tuo marchio attraverso vari canali è una parte importante di Adobe Experience Platform. La definizione di queste relazioni all&#39;interno della struttura degli schemi del modello dati esperienza (XDM) consente di acquisire informazioni complesse sui dati dei clienti.
+La capacità di comprendere le relazioni tra i clienti e le loro interazioni con il tuo marchio attraverso vari canali è una parte importante del  Adobe Experience Platform. La definizione di queste relazioni all&#39;interno della struttura degli schemi del modello dati esperienza (XDM) consente di acquisire informazioni complesse sui dati dei clienti.
 
 Questo documento fornisce un&#39;esercitazione per definire una relazione uno-a-uno tra due schemi definiti dall&#39;organizzazione mediante l&#39;API [del Registro di](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)schema.
 
@@ -20,10 +23,10 @@ Questo documento fornisce un&#39;esercitazione per definire una relazione uno-a-
 
 Questa esercitazione richiede una buona conoscenza di Experience Data Model (XDM) e XDM System. Prima di iniziare questa esercitazione, consulta la seguente documentazione:
 
-* [XDM System in Experience Platform](../home.md): Panoramica di XDM e della relativa implementazione in Experience Platform.
+* [Sistema XDM in  Experience Platform](../home.md): Panoramica di XDM e della relativa implementazione in  Experience Platform.
    * [Nozioni di base sulla composizione](../schema/composition.md)dello schema: Introduzione dei blocchi costitutivi degli schemi XDM.
 * [Profilo](../../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-* [Sandbox](../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [Sandbox](../../sandboxes/home.md):  Experience Platform fornisce sandbox virtuali che dividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 Prima di avviare questa esercitazione, consultare la guida [allo](../api/getting-started.md) sviluppatore per informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all&#39;API del Registro di sistema dello schema. Ciò include il vostro `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all’intestazione Accetta e ai suoi possibili valori).
 
@@ -53,7 +56,9 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json'
 ```
 
->[!NOTE] L’intestazione Accetta `application/vnd.adobe.xed-id+json` restituisce solo i titoli, gli ID e le versioni degli schemi risultanti.
+>[!NOTE]
+>
+>L’intestazione Accetta `application/vnd.adobe.xed-id+json` restituisce solo i titoli, gli ID e le versioni degli schemi risultanti.
 
 **Risposta**
 
@@ -101,7 +106,9 @@ Registrare i `$id` valori dei due schemi tra cui si desidera definire una relazi
 
 Nel Registro di sistema dello schema, i descrittori delle relazioni funzionano in modo simile alle chiavi esterne nelle tabelle SQL: un campo nello schema di origine funge da riferimento a un campo di uno schema di destinazione. Quando si definisce una relazione, ogni schema deve avere un campo dedicato da utilizzare come riferimento all&#39;altro schema.
 
->[!IMPORTANT] Se gli schemi devono essere attivati per l&#39;uso in [Real-time Customer Profile](../../profile/home.md)(Profilo **cliente in tempo reale), il campo di riferimento per lo schema di destinazione deve essere la sua identità** principale. Questo è spiegato più in dettaglio in questa esercitazione.
+>[!IMPORTANT]
+>
+>Se gli schemi devono essere attivati per l&#39;uso in [Real-time Customer Profile](../../profile/home.md)(Profilo **cliente in tempo reale), il campo di riferimento per lo schema di destinazione deve essere la sua identità** principale. Questo è spiegato più in dettaglio in questa esercitazione.
 
 Se uno schema non dispone di un campo a questo scopo, potrebbe essere necessario creare un mixin con il nuovo campo e aggiungerlo allo schema. Il nuovo campo deve avere un `type` valore &quot;string&quot;.
 
@@ -323,7 +330,9 @@ Una risposta corretta restituisce i dettagli dello schema aggiornato, che ora in
 
 ## Definire i campi identità primari per entrambi gli schemi
 
->[!NOTE] Questo passaggio è richiesto solo per gli schemi che saranno attivati per l&#39;uso nel profilo [cliente in tempo](../../profile/home.md)reale. Se non si desidera che uno schema partecipi a un&#39;unione o se gli schemi dispongono già di identità primarie definite, è possibile passare alla fase successiva della [creazione di un descrittore](#create-descriptor) di identità di riferimento per lo schema di destinazione.
+>[!NOTE]
+>
+>Questo passaggio è richiesto solo per gli schemi che saranno attivati per l&#39;uso nel profilo [cliente in tempo](../../profile/home.md)reale. Se non si desidera che uno schema partecipi a un&#39;unione o se gli schemi dispongono già di identità primarie definite, è possibile passare alla fase successiva della [creazione di un descrittore](#create-descriptor) di identità di riferimento per lo schema di destinazione.
 
 Affinché gli schemi possano essere attivati per l&#39;uso in Real-time Customer Profile, è necessario che abbiano definito un&#39;identità primaria. Inoltre, lo schema di destinazione di una relazione deve utilizzare la propria identità primaria come campo di riferimento.
 
