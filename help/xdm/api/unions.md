@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Unioni
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '806'
+ht-degree: 1%
 
 ---
 
@@ -17,7 +20,7 @@ Il presente documento illustra i concetti essenziali per l&#39;utilizzo dei sind
 
 ## Unione
 
-Il Registro di sistema dello schema include automaticamente tre mixin nello schema unione: `identityMap`, `timeSeriesEvents`, e `segmentMembership`.
+Il Registro di sistema dello schema include automaticamente tre mixin nello schema unione: `identityMap`, `timeSeriesEvents`e `segmentMembership`.
 
 ### Mappa identità
 
@@ -31,7 +34,7 @@ L&#39; `timeSeriesEvents` array è un elenco di eventi delle serie temporali rel
 
 ### Mappa appartenenza segmento
 
-La `segmentMembership` mappa memorizza i risultati delle valutazioni dei segmenti. Quando i processi del segmento vengono eseguiti correttamente tramite l&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)Segmentazione, la mappa viene aggiornata. `segmentMembership` memorizza inoltre tutti i segmenti di pubblico già valutati che vengono trasferiti in Piattaforma, consentendo l&#39;integrazione con altre soluzioni come Adobe Audience Manager.
+La `segmentMembership` mappa memorizza i risultati delle valutazioni dei segmenti. Quando i processi del segmento vengono eseguiti correttamente tramite l&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)Segmentazione, la mappa viene aggiornata. `segmentMembership` memorizza inoltre tutti i segmenti di pubblico già valutati che vengono trasferiti in Platform, consentendo l&#39;integrazione con altre soluzioni come  Adobe Audience Manager.
 
 Per ulteriori informazioni, consulta l’esercitazione sulla [creazione di segmenti tramite API](../../segmentation/tutorials/create-a-segment.md) .
 
@@ -39,7 +42,9 @@ Per ulteriori informazioni, consulta l’esercitazione sulla [creazione di segme
 
 Affinché uno schema possa essere incluso nella visualizzazione unione unita, è necessario aggiungere il tag &quot;unione&quot; all&#39; `meta:immutableTags` attributo dello schema. Questo viene fatto tramite una richiesta PATCH per aggiornare lo schema e aggiungere l&#39; `meta:immutableTags` array con il valore &quot;union&quot;.
 
->[!NOTE] I tag immutabili sono tag destinati a essere impostati ma non rimossi.
+>[!NOTE]
+>
+>I tag immutabili sono tag destinati a essere impostati ma non rimossi.
 
 **Formato API**
 
@@ -161,7 +166,9 @@ Una risposta corretta restituisce lo stato HTTP 200 (OK) e un `results` array ne
 
 Potete visualizzare un&#39;unione specifica eseguendo una richiesta GET che include i dettagli dell&#39;unione `$id` e, a seconda dell&#39;intestazione Accetto, alcuni o tutti i dettagli dell&#39;unione.
 
->[!NOTE] Le ricerche dell&#39;unione sono disponibili utilizzando l&#39; `/unions` `/schemas` endpoint e l&#39;endpoint per consentirne l&#39;utilizzo nelle esportazioni di profili in un dataset.
+>[!NOTE]
+>
+>Le ricerche dell&#39;unione sono disponibili utilizzando l&#39; `/unions` `/schemas` endpoint e l&#39;endpoint per consentirne l&#39;utilizzo nelle esportazioni di profili in un dataset.
 
 **Formato API**
 
