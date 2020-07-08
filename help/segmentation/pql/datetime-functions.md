@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Funzioni di data e ora
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '471'
+ht-degree: 4%
 
 ---
 
@@ -140,11 +143,13 @@ La `occurs` funzione può essere scritta utilizzando uno dei seguenti formati:
 | --------- | ----------- |
 | `{COMPARISON}` | Un operatore di confronto. Può essere uno dei seguenti operatori: `>`, `>=`, `<`, `<=`, `=`, `!=`. Ulteriori informazioni sulle funzioni di confronto sono disponibili nel documento [sulle funzioni di](./comparison-functions.md)confronto. |
 | `{INTEGER}` | Un numero intero non negativo. |
-| `{TIME_UNIT}` | Unità di tempo. Può essere una delle seguenti parole: `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`, `decade(s)`, `century``centuries``millennium``millennia`, , , , . |
+| `{TIME_UNIT}` | Unità di tempo. Può essere una delle seguenti parole: `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`, `decade(s)`, `century`, `centuries``millennium``millennia`, , . |
 | `{DIRECTION}` | Una preposizione che descrive quando confrontare la data con. Può essere una delle seguenti parole: `before`, `after`, `from`. |
 | `{TIME}` | Può essere un letterale di marca temporale (`today`, `now`, `yesterday`, `tomorrow`), un&#39;unità di tempo relativa (una di `this`, `last`o `next` seguita da un&#39;unità di tempo) o un attributo di marca temporale. |
 
->[!NOTE] L&#39;uso della parola `on` è facoltativo. È disponibile per migliorare la leggibilità di alcune combinazioni, ad esempio `timestamp occurs on date(2019,12,31)`.
+>[!NOTE]
+>
+>L&#39;uso della parola `on` è facoltativo. È disponibile per migliorare la leggibilità di alcune combinazioni, ad esempio `timestamp occurs on date(2019,12,31)`.
 
 **Esempio**
 
@@ -160,7 +165,7 @@ La seguente query PQL verifica se un articolo è stato venduto tra l’8 gennaio
 product.saleDate occurs between date(2015, 1, 8) and date(2017, 7, 1)
 ```
 
-## Ora
+## Adesso
 
 `now` è una parola riservata che rappresenta la marca temporale dell&#39;esecuzione PQL.
 
