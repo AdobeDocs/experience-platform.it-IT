@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Eliminare un oggetto
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 2%
@@ -16,7 +16,9 @@ ht-degree: 2%
 
 Potete eliminare un oggetto Catalog inserendo il relativo ID nel percorso di una richiesta di DELETE.
 
->[!WARNING] Prestate particolare attenzione quando eliminate degli oggetti, in quanto questo non può essere annullato e potrebbe causare modifiche di interruzione in altre aree di  Experience Platform.
+>[!WARNING]
+>
+>Prestate particolare attenzione quando eliminate degli oggetti, in quanto questo non può essere annullato e potrebbe causare modifiche di interruzione in altre aree di  Experience Platform.
 
 **Formato API**
 
@@ -56,4 +58,6 @@ Una risposta corretta restituisce lo stato HTTP 200 (OK) e una matrice contenent
 ]
 ```
 
->[!NOTE] Se nessun oggetto Catalog corrisponde all’ID fornito nella richiesta, potreste comunque ricevere un codice di stato HTTP 200, ma l’array di risposte sarà vuoto.
+>[!NOTE]
+>
+>Se nessun oggetto Catalog corrisponde all’ID fornito nella richiesta, potreste comunque ricevere un codice di stato HTTP 200, ma l’array di risposte sarà vuoto.
