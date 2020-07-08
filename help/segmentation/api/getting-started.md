@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida per gli sviluppatori di Segmentation Service
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bbca6d8f4ab7a684e8bfb1d39b538d937a99244f
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '494'
 ht-degree: 0%
@@ -14,36 +14,38 @@ ht-degree: 0%
 
 # Guida per gli sviluppatori di Segmentation Service
 
-La segmentazione consente di creare segmenti e generare audience in Adobe Experience Platform a partire dai dati del profilo cliente in tempo reale.
+La segmentazione consente di creare segmenti e generare audience  Adobe Experience Platform dai dati del profilo cliente in tempo reale.
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei vari servizi Adobe Experience Platform coinvolti nell&#39;utilizzo della segmentazione.
+Questa guida richiede una buona conoscenza dei vari servizi di Adobe Experience Platform  coinvolti nell&#39;utilizzo della segmentazione.
 
 - [Segmentazione](../home.md): Consente di creare segmenti di pubblico dai dati del profilo cliente in tempo reale.
-- [Sistema](../../xdm/home.md)XDM (Experience Data Model): Il framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza dei clienti.
+- [Sistema](../../xdm/home.md)XDM (Experience Data Model): Framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
 - [Profilo](../../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-- [Sandbox](../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+- [Sandbox](../../sandboxes/home.md):  Experience Platform fornisce sandbox virtuali che dividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per utilizzare correttamente la segmentazione tramite l&#39;API.
 
 ### Lettura di chiamate API di esempio
 
-La documentazione API del servizio di segmentazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi della piattaforma Experience.
+La documentazione API del servizio di segmentazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi di  Experience Platform.
 
 ### Intestazioni necessarie
 
-La documentazione API richiede inoltre di aver completato l&#39;esercitazione [di](../../tutorials/authentication.md) autenticazione per effettuare correttamente le chiamate agli endpoint piattaforma. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste nelle chiamate API di Experience Platform, come illustrato di seguito:
+La documentazione API richiede inoltre di aver completato l&#39;esercitazione [di](../../tutorials/authentication.md) autenticazione per effettuare correttamente le chiamate agli endpoint Platform. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste nelle chiamate API di  Experience Platform, come illustrato di seguito:
 
 - Autorizzazione: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API della piattaforma richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in  Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API Platform richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Per ulteriori informazioni sull’utilizzo delle sandbox in Experience Platform, consulta la documentazione [sulla panoramica delle](../../sandboxes/home.md)sandbox.
+>[!NOTE]
+>
+>Per ulteriori informazioni sull’utilizzo delle sandbox in  Experience Platform, consultate la documentazione [sulla panoramica delle](../../sandboxes/home.md)sandbox.
 
 <!-- ## Estimates
 
@@ -93,4 +95,4 @@ La ricerca dei segmenti viene utilizzata per cercare e indicizzare i campi confi
 
 ## Passaggi successivi
 
-Per iniziare a effettuare chiamate tramite l’API di segmentazione, seleziona una delle guide secondarie per apprendere come utilizzare endpoint specifici correlati alla segmentazione. Per ulteriori informazioni sull’utilizzo dei segmenti tramite l’interfaccia utente della piattaforma, consulta la guida [utente alla](../ui/overview.md)segmentazione.
+Per iniziare a effettuare chiamate tramite l’API di segmentazione, seleziona una delle guide secondarie per apprendere come utilizzare endpoint specifici correlati alla segmentazione. Per ulteriori informazioni sull’utilizzo dei segmenti nell’interfaccia utente di Platform, consulta la guida [utente alla](../ui/overview.md)segmentazione.
