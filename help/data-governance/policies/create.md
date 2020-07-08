@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creazione di un criterio di utilizzo dei dati
 topic: policies
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 2%
@@ -217,7 +217,9 @@ Questa espressione è denominata espressione **** policy ed è un oggetto conten
 }
 ```
 
->[!NOTE] Sono supportati solo gli operatori OR e AND.
+>[!NOTE]
+>
+>Sono supportati solo gli operatori OR e AND.
 
 Dopo aver configurato l&#39;espressione del criterio, potete creare un nuovo criterio DULE effettuando una richiesta POST all&#39; `/policies/custom` endpoint.
 
@@ -322,7 +324,9 @@ Registra l&#39;ID URI del criterio DULE appena creato, in quanto viene utilizzat
 
 ## Abilita criterio DULE
 
->[!NOTE] Anche se questo passaggio è facoltativo se desiderate lasciare il criterio DULE nello `DRAFT` stato, tenete presente che per impostazione predefinita un criterio deve avere lo stato impostato su `ENABLED` per poter partecipare alla valutazione. Per informazioni su come fare eccezioni per i criteri di [stato, vedere l&#39;esercitazione sull&#39;applicazione dei criteri](../enforcement/api-enforcement.md) `DRAFT` DULE.
+>[!NOTE]
+>
+>Anche se questo passaggio è facoltativo se desiderate lasciare il criterio DULE nello `DRAFT` stato, tenete presente che per impostazione predefinita un criterio deve avere lo stato impostato su `ENABLED` per poter partecipare alla valutazione. Per informazioni su come fare eccezioni per i criteri di [stato, vedere l&#39;esercitazione sull&#39;applicazione dei criteri](../enforcement/api-enforcement.md) `DRAFT` DULE.
 
 Per impostazione predefinita, i criteri DULE con `status` proprietà impostata per `DRAFT` non partecipano alla valutazione. Potete abilitare il criterio per la valutazione eseguendo una richiesta PATCH all&#39; `/policies/custom/` endpoint e fornendo l&#39;identificatore univoco per il criterio alla fine del percorso della richiesta.
 
