@@ -4,15 +4,20 @@ solution: Experience Platform
 title: Set di dati e tabelle e schemi
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '183'
+ht-degree: 1%
 
 ---
 
 
 # Set di dati e tabelle e schemi
 
-Esaminate l&#39;elenco dei set di dati disponibili nell&#39;interfaccia utente [di](https://platform.adobe.com/datasets)Adobe Experience Platform, accertandovi di osservare i nomi dei set di dati.
->[!NOTE] Alcuni nomi di set di dati hanno spazi e potrebbero non essere sicuri per SQL.
+Esaminate l&#39;elenco dei set di dati disponibili nell&#39;interfaccia utente [del Adobe Experience Platform](https://platform.adobe.com/datasets), avendo cura di osservare i nomi dei set di dati.
+>[!NOTE]
+>
+>Alcuni nomi di set di dati hanno spazi e potrebbero non essere sicuri per SQL.
 
 ![](../images/queries/datasets-and-tables/dataset-names.png)
 
@@ -25,7 +30,7 @@ Aprite la riga di comando PSQL e utilizzate i dettagli di connessione da qui: [h
 
 ![](../images/clients/psql/connect-bi.png)
 
-Per visualizzare le tabelle disponibili in Piattaforma con SQL, è possibile utilizzare `\d` o `SHOW TABLES;`.
+Per visualizzare le tabelle disponibili in Platform con SQL, è possibile utilizzare `\d` o `SHOW TABLES;`.
 
 
 `\d` visualizza la visualizzazione PostSQL standard
@@ -39,7 +44,7 @@ Per visualizzare le tabelle disponibili in Piattaforma con SQL, è possibile uti
 (2 rows)
 ```
 
-`SHOW TABLES;` è un comando personalizzato che offre una visualizzazione più dettagliata e presenta la tabella, oltre al nome del set di dati nell’interfaccia utente della piattaforma.
+`SHOW TABLES;` è un comando personalizzato che offre una visualizzazione più dettagliata e presenta la tabella, nonché il nome del set di dati nell’interfaccia utente di Platform.
 
 ```
        name      |        dataSetId         |     dataSet    | description | resolved 
@@ -51,7 +56,9 @@ Per visualizzare le tabelle disponibili in Piattaforma con SQL, è possibile uti
 
 Per visualizzare lo schema principale di una tabella, utilizzare il `\d table_name` comando.
 
->[!NOTE] Lo schema presentato mostra i campi principali, la maggior parte dei quali complessi, che si riferiscono a un tipo di oggetto nell&#39;interfaccia utente dello schema DataSet.
+>[!NOTE]
+>
+>Lo schema presentato mostra i campi principali, la maggior parte dei quali complessi, che si riferiscono a un tipo di oggetto nell&#39;interfaccia utente dello schema DataSet.
 
 `\d luma_midvalues`
 
