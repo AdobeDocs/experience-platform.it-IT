@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida alla risoluzione dei problemi per l'area di lavoro di analisi dati
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '665'
 ht-degree: 0%
@@ -18,7 +18,9 @@ Questo documento contiene le risposte alle domande frequenti sul  Adobe Experien
 
 ## [!DNL JupyterLab] l&#39;ambiente non si sta caricando [!DNL Google Chrome]
 
->[!IMPORTANT] Questo problema è stato risolto ma potrebbe essere ancora presente nel browser Google Chrome 80.x. Verificare che il browser Chrome sia aggiornato.
+>[!IMPORTANT]
+>
+>Questo problema è stato risolto ma potrebbe essere ancora presente nel browser Google Chrome 80.x. Verificare che il browser Chrome sia aggiornato.
 
 Con la versione del [!DNL Google Chrome] browser 80.x, tutti i cookie di terze parti sono bloccati per impostazione predefinita. Questo criterio può impedire [!DNL JupyterLab] il caricamento entro  Adobe Experience Platform.
 
@@ -38,7 +40,9 @@ Infine, scegliete &quot;Blocca cookie di terze parti&quot; su &quot;OFF&quot;.
 
 ![chrome avanzato](./images/faq/toggle-off.png)
 
->[!NOTE] In alternativa, puoi disattivare i cookie di terze parti e aggiungere [*.]ds.adobe.net nell&#39;elenco allow.
+>[!NOTE]
+>
+>In alternativa, puoi disattivare i cookie di terze parti e aggiungere [*.]ds.adobe.net all&#39;elenco consentiti .
 
 Andate a &quot;chrome://flags/&quot; nella barra degli indirizzi. Cercate e disattivate il flag *&quot;SameSite by default cookies&quot;* utilizzando il menu a discesa a destra.
 
