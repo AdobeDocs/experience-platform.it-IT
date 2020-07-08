@@ -4,16 +4,21 @@ solution: Experience Platform
 title: Eliminare una sandbox
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '84'
+ht-degree: 4%
 
 ---
 
 
 # Eliminare una sandbox
 
-Potete eliminare una sandbox effettuando una richiesta DELETE che include la sandbox `name` nel percorso della richiesta.
+Potete eliminare una sandbox effettuando una richiesta di DELETE che include la sandbox `name` nel percorso della richiesta.
 
->[!NOTE] Facendo questa chiamata API, la proprietà della `status` sandbox viene aggiornata in &quot;eliminata&quot; e disattivata. Le richieste GET possono ancora recuperare i dettagli della sandbox dopo che è stata eliminata.
+>[!NOTE]
+>
+>Facendo questa chiamata API, la proprietà della `status` sandbox viene aggiornata in &quot;eliminata&quot; e disattivata. Le richieste GET possono ancora recuperare i dettagli della sandbox dopo che è stata eliminata.
 
 **Formato API**
 
