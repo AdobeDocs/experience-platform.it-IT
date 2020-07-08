@@ -4,22 +4,25 @@ solution: Experience Platform
 title: Definire una relazione tra due schemi utilizzando l'Editor schema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: f8c34d84e30ae14c3936c2e32ee84a2fcd3abdc3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '836'
+ht-degree: 0%
 
 ---
 
 
 # Definire una relazione tra due schemi utilizzando l&#39;Editor di schema
 
-La capacità di comprendere le relazioni tra i clienti e le loro interazioni con il tuo marchio attraverso vari canali è una parte importante di Adobe Experience Platform. La definizione di queste relazioni all&#39;interno della struttura degli schemi del modello dati esperienza (XDM) consente di acquisire informazioni complesse sui dati dei clienti.
+La capacità di comprendere le relazioni tra i clienti e le loro interazioni con il tuo marchio attraverso vari canali è una parte importante del  Adobe Experience Platform. La definizione di queste relazioni all&#39;interno della struttura degli schemi del modello dati esperienza (XDM) consente di acquisire informazioni complesse sui dati dei clienti.
 
-Questo documento fornisce un&#39;esercitazione per definire una relazione uno-a-uno tra due schemi definiti dall&#39;organizzazione mediante l&#39;Editor schema nell&#39;interfaccia utente della piattaforma Experience. Per i passaggi sulla definizione delle relazioni di schema mediante l&#39;API, vedete l&#39;esercitazione sulla [definizione di una relazione mediante l&#39;API](relationship-api.md)del Registro di sistema dello schema.
+Questo documento fornisce un&#39;esercitazione per definire una relazione uno-a-uno tra due schemi definiti dall&#39;organizzazione mediante l&#39;Editor di schema nell&#39;interfaccia utente di Experience Platform . Per i passaggi sulla definizione delle relazioni di schema mediante l&#39;API, vedete l&#39;esercitazione sulla [definizione di una relazione mediante l&#39;API](relationship-api.md)del Registro di sistema dello schema.
 
 ## Introduzione
 
-Questa esercitazione richiede una buona conoscenza del sistema XDM e dell&#39;Editor di schema nell&#39;interfaccia utente della piattaforma esperienza. Prima di iniziare questa esercitazione, consulta la seguente documentazione:
+Questa esercitazione richiede una conoscenza approfondita del sistema XDM e dell&#39;Editor di schema nell&#39;interfaccia utente  di Experience Platform. Prima di iniziare questa esercitazione, consulta la seguente documentazione:
 
-* [XDM System in Experience Platform](../home.md): Panoramica di XDM e della relativa implementazione in Experience Platform.
+* [Sistema XDM in  Experience Platform](../home.md): Panoramica di XDM e della relativa implementazione in  Experience Platform.
 * [Nozioni di base sulla composizione](../schema/composition.md)dello schema: Introduzione dei blocchi costitutivi degli schemi XDM.
 * [Creare uno schema utilizzando l&#39;Editor](create-schema-ui.md)schema: Esercitazione sulle nozioni di base dell&#39;utilizzo dell&#39;Editor di schema.
 
@@ -45,7 +48,9 @@ Lo schema di destinazione &quot;Hotel&quot; contiene campi che descrivono un hot
 
 ## Creazione di un mixin di relazione
 
->[!NOTE] Questo passaggio è richiesto solo se lo schema di origine non dispone di un campo di tipo stringa dedicato da utilizzare come riferimento a un altro schema. Se questo campo è già definito nello schema di origine, passare alla fase successiva della [definizione di un campo](#relationship-field)di relazione.
+>[!NOTE]
+>
+>Questo passaggio è richiesto solo se lo schema di origine non dispone di un campo di tipo stringa dedicato da utilizzare come riferimento a un altro schema. Se questo campo è già definito nello schema di origine, passare alla fase successiva della [definizione di un campo](#relationship-field)di relazione.
 
 Per definire una relazione tra due schemi, lo schema di origine deve avere un campo dedicato da utilizzare come riferimento allo schema di destinazione. È possibile aggiungere questo campo allo schema di origine creando un nuovo mixin.
 
