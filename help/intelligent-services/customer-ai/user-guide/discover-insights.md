@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Scopri informazioni approfondite con l'AI del cliente
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1032'
 ht-degree: 0%
@@ -30,7 +30,9 @@ Nell’ [!DNL Adobe Experience Platform] interfaccia utente, fate clic **[!UICON
 
 Viene visualizzata la pagina del servizio AI del cliente. In questa pagina sono elencate le istanze di servizio dell&#39;API cliente e vengono visualizzate informazioni su di esse, incluso il nome dell&#39;istanza, il tipo di propensione, la frequenza di esecuzione dell&#39;istanza e lo stato dell&#39;ultimo aggiornamento.
 
->[!NOTE] Sono disponibili informazioni approfondite solo le istanze del servizio che hanno completato con successo l’esecuzione del punteggio.
+>[!NOTE]
+>
+>Sono disponibili informazioni approfondite solo le istanze del servizio che hanno completato con successo l’esecuzione del punteggio.
 
 ![Crea istanza](../images/insights/dashboard.png)
 
@@ -51,7 +53,9 @@ Per visualizzare i dettagli dall&#39;interno del dashboard, fate clic su un cont
 
 ![barra laterale destra](../images/insights/success-run.png)
 
->[!NOTE] Nel caso in cui un&#39;esecuzione del punteggio non riesca, viene visualizzato un messaggio di errore. Il messaggio di errore è elencato in Dettagli *dell&#39;* ultima esecuzione nella barra a destra, visibile solo per le esecuzioni non riuscite.
+>[!NOTE]
+>
+>Nel caso in cui un&#39;esecuzione del punteggio non riesca, viene visualizzato un messaggio di errore. Il messaggio di errore è elencato in Dettagli *dell&#39;* ultima esecuzione nella barra a destra, visibile solo per le esecuzioni non riuscite.
 
 ![messaggio di esecuzione non riuscito](../images/insights/failed-run.png)
 
@@ -85,7 +89,9 @@ Il **[!UICONTROL More actions]** pulsante si trova nella barra di navigazione in
 
 Riepilogo punteggio visualizza il numero totale di profili con punteggio e li classifica in bucket contenenti probabilità alta, media e bassa. I periodi fissi di propensione sono determinati in base all&#39;intervallo di punteggio, il valore basso è inferiore a 24, il valore medio è compreso tra 25 e 74 e il valore massimo è superiore a 74. Ogni intervallo ha un colore corrispondente alla legenda.
 
->[!NOTE] Se si tratta di un punteggio di propensione alla conversione, i punteggi alti sono indicati in verde e i punteggi bassi in rosso. Se si prevede la propensione del churn questo è capovolto, i punteggi alti sono in rosso e i punteggi bassi sono in verde. Il bucket medio rimane giallo indipendentemente dal tipo di propensione scelto.
+>[!NOTE]
+>
+>Se si tratta di un punteggio di propensione alla conversione, i punteggi alti sono indicati in verde e i punteggi bassi in rosso. Se si prevede la propensione del churn questo è capovolto, i punteggi alti sono in rosso e i punteggi bassi sono in verde. Il bucket medio rimane giallo indipendentemente dal tipo di propensione scelto.
 
 ![riepilogo punteggio](../images/insights/scoring-summary.png)
 
@@ -118,7 +124,7 @@ Il generatore di segmenti viene utilizzato per definire un segmento. Quando si s
 
 ![Riempimento segmento in](../images/insights/segment-saving.png)
 
-Per visualizzare il nuovo segmento nell’interfaccia utente della piattaforma, fai clic su **[!UICONTROL Segments]** nella barra di navigazione a sinistra. Viene visualizzata la pagina *Sfoglia* , con tutti i segmenti disponibili.
+Per visualizzare il nuovo segmento nell’interfaccia utente di Platform, fai clic su **[!UICONTROL Segments]** nella barra di navigazione a sinistra. Viene visualizzata la pagina *Sfoglia* , con tutti i segmenti disponibili.
 
 ![Tutti i segmenti](../images/insights/Segments-dashboard.png)
 
