@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare una connessione in streaming mediante l'API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 0eecd802fc8d0ace3a445f3f188a7f095b97d0c8
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '659'
 ht-degree: 2%
@@ -14,44 +14,46 @@ ht-degree: 2%
 
 # Creazione di una connessione in streaming mediante l&#39;API
 
-Questa esercitazione ti aiuterà a iniziare a utilizzare le API di assimilazione in streaming, parte delle API Adobe Experience Platform Data Ingestion Service.
+Questa esercitazione ti aiuterà a iniziare a utilizzare le API di assimilazione in streaming, parte delle API del servizio di inserimento dati del Adobe Experience Platform .
 
 ## Introduzione
 
-Per avviare lo streaming dei dati su Adobe Experience Platform, è necessaria la registrazione della connessione di streaming. Quando registrate una connessione in streaming, dovete fornire alcuni dettagli chiave come l&#39;origine dei dati in streaming.
+La registrazione della connessione di streaming è necessaria per avviare i dati di streaming  Adobe Experience Platform. Quando registrate una connessione in streaming, dovete fornire alcuni dettagli chiave come l&#39;origine dei dati in streaming.
 
-Dopo la registrazione di una connessione di streaming, l&#39;utente, in qualità di produttore di dati, avrà un URL univoco che può essere utilizzato per lo streaming dei dati su Platform.
+Dopo la registrazione di una connessione di streaming, l&#39;utente, in qualità di produttore di dati, avrà un URL univoco che può essere utilizzato per lo streaming dei dati ad Platform.
 
-Questa esercitazione richiede anche una buona conoscenza dei diversi servizi di Adobe Experience Platform. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
+Questa esercitazione richiede anche una conoscenza approfondita dei vari servizi  Adobe Experience Platform. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
-- [Experience Data Model (XDM)](../../xdm/home.md): Il framework standardizzato tramite il quale la piattaforma organizza i dati relativi all&#39;esperienza.
+- [Experience Data Model (XDM)](../../xdm/home.md): Framework standard con cui Platform organizza i dati relativi all&#39;esperienza.
 - [Profilo](../../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato in tempo reale basato su dati aggregati provenienti da più origini.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per effettuare correttamente chiamate alle API di assimilazione in streaming.
 
 ### Lettura di chiamate API di esempio
 
-Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi della piattaforma Experience.
+Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi di  Experience Platform.
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle API della piattaforma, dovete prima completare l&#39;esercitazione [di](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come illustrato di seguito:
+Per effettuare chiamate alle API Platform, è prima necessario completare l&#39;esercitazione [di](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API Experience Platform, come illustrato di seguito:
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API della piattaforma richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in  Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API Platform richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Per ulteriori informazioni sulle sandbox in Piattaforma, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+>[!NOTE]
+>
+>Per ulteriori informazioni sulle sandbox in Platform, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva:
 
 - Content-Type: application/json
 
-## Creazione di una connessione
+## Creare una connessione
 
 Una connessione specifica l&#39;origine e contiene le informazioni necessarie per rendere il flusso compatibile con le API di assimilazione in streaming.
 
@@ -63,7 +65,9 @@ POST /flowservice/connections
 
 **Richiesta**
 
->[!NOTE] I valori per l&#39;elenco `providerId` e per l&#39;evento `connectionSpec` devono **** essere utilizzati come mostrato nell&#39;esempio, in quanto sono ciò che specifica all&#39;API che si sta creando una connessione di streaming per l&#39;assimilazione in streaming.
+>[!NOTE]
+>
+>I valori per l&#39;elenco `providerId` e per l&#39;evento `connectionSpec` devono **** essere utilizzati come mostrato nell&#39;esempio, in quanto sono ciò che specifica all&#39;API che si sta creando una connessione di streaming per l&#39;assimilazione in streaming.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -172,7 +176,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 
 ## Passaggi successivi
 
-Dopo aver creato una connessione di streaming, potete trasmettere in streaming serie temporali o registrare dati, in modo da acquisire i dati all&#39;interno della piattaforma. Per informazioni su come eseguire lo streaming dei dati delle serie temporali su Piattaforma, consulta l’esercitazione [sui dati delle serie temporali in](./streaming-time-series-data.md)streaming. Per informazioni su come eseguire lo streaming dei dati dei record su Platform, vedere l&#39;esercitazione [sui dati dei record in](./streaming-record-data.md)streaming.
+Dopo aver creato una connessione di streaming, è possibile trasmettere in streaming le serie temporali o registrare i dati, in modo da acquisire i dati in Platform. Per informazioni su come trasmettere i dati delle serie temporali ad Platform, consulta l’esercitazione [sui dati delle serie temporali in](./streaming-time-series-data.md)streaming. Per informazioni su come trasmettere in streaming i dati dei record ad Platform, consulta l’esercitazione [sui dati dei record in](./streaming-record-data.md)streaming.
 
 ## Appendice
 
@@ -180,6 +184,6 @@ Questa sezione fornisce informazioni supplementari sulla creazione di connession
 
 ### Connessioni di streaming autenticate
 
-La raccolta di dati autenticata consente ai servizi Adobe Experience Platform, come Real-time Customer Profile and Identity, di distinguere tra record provenienti da fonti attendibili e fonti non attendibili. I client che desiderano inviare informazioni personali (PII) possono farlo inviando Token di accesso IMS come parte della richiesta POST. Se il Token IMS è valido, i record vengono contrassegnati come raccolti da fonti attendibili.
+La raccolta di dati autenticata consente  servizi di Adobe Experience Platform, come Profilo cliente e Identità in tempo reale, di distinguere tra record provenienti da fonti attendibili e fonti non attendibili. I client che desiderano inviare informazioni personali (PII) possono farlo inviando Token di accesso IMS come parte della richiesta POST. Se il Token IMS è valido, i record vengono contrassegnati come raccolti da fonti attendibili.
 
 Per ulteriori informazioni sulla creazione di una connessione in streaming autenticata, consulta l’esercitazione sulla [creazione di una connessione in streaming](create-authenticated-streaming-connection.md)autenticata.
