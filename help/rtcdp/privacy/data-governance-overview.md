@@ -4,7 +4,7 @@ seo-title: Governance dei dati in tempo reale Platform
 description: 'Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all''uso dei dati. '
 seo-description: 'Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all''uso dei dati. '
 translation-type: tm+mt
-source-git-commit: c4e5e8ccac1af976c890adb1c9f0ff7f7b5ed9b4
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1083'
 ht-degree: 1%
@@ -34,7 +34,9 @@ Per informazioni dettagliate sull&#39;utilizzo delle etichette di utilizzo dei d
 
 Puoi impostare le restrizioni di utilizzo dei dati su una destinazione definendo i casi di utilizzo del marketing (o azioni di marketing) per tale destinazione. Un caso di utilizzo marketing per una destinazione indica l&#39;intento dei dati che verranno esportati in quella destinazione.
 
->[!NOTE] Per ulteriori informazioni sulle azioni di marketing e il loro utilizzo nei criteri di utilizzo dei dati, consulta la panoramica [sui criteri di utilizzo](../../data-governance/policies/overview.md) dei dati nella documentazione Experience Platform .
+>[!NOTE]
+>
+>Per ulteriori informazioni sulle azioni di marketing e il loro utilizzo nei criteri di utilizzo dei dati, consulta la panoramica [sui criteri di utilizzo](../../data-governance/policies/overview.md) dei dati nella documentazione Experience Platform .
 
 La definizione dei casi di utilizzo del marketing sulle destinazioni consente di garantire che tutti i profili o i segmenti inviati a tali destinazioni siano conformi ai criteri di utilizzo dei dati. È quindi necessario aggiungere alle destinazioni i casi di utilizzo del marketing appropriati in base alle esigenze aziendali per applicare restrizioni all&#39;attivazione.
 
@@ -63,7 +65,9 @@ Quando un segmento viene attivato per la prima volta, il servizio Criteri DULE v
 * Le etichette di utilizzo dei dati applicate ai campi e ai set di dati all’interno del segmento da attivare.
 * Scopo di marketing della destinazione.
 
->[!NOTE] Se esistono etichette di utilizzo dei dati che sono state applicate solo a determinati campi all’interno di un set di dati (anziché all’intero set di dati), l’applicazione di tali etichette a livello di campo all’attivazione avviene solo alle seguenti condizioni:
+>[!NOTE]
+>
+>Se esistono etichette di utilizzo dei dati che sono state applicate solo a determinati campi all’interno di un set di dati (anziché all’intero set di dati), l’applicazione di tali etichette a livello di campo all’attivazione avviene solo alle seguenti condizioni:
 >* I campi vengono utilizzati nella definizione del segmento.
 >* I campi sono configurati come attributi proiettati per la destinazione di destinazione.
 
