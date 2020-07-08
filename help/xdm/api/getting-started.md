@@ -4,47 +4,52 @@ solution: Experience Platform
 title: Guida per lo sviluppo API del Registro di sistema dello schema
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 387cbdebccb9ae54a2907d1afe220e9711927ca6
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1246'
+ht-degree: 0%
 
 ---
 
 
 # Guida per lo sviluppo API del Registro di sistema dello schema
 
-Il Registro di sistema dello schema viene utilizzato per accedere alla Libreria schemi all&#39;interno di Adobe Experience Platform, fornendo un&#39;interfaccia utente e un&#39;API RESTful da cui sono accessibili tutte le risorse libreria disponibili.
+Il Registro di sistema dello schema viene utilizzato per accedere alla Libreria schema all&#39;interno  Adobe Experience Platform, fornendo un&#39;interfaccia utente e RESTful API da cui sono accessibili tutte le risorse libreria disponibili.
 
-Utilizzando l&#39;API del Registro di sistema dello schema, puoi eseguire operazioni CRUD di base per visualizzare e gestire tutti gli schemi e le risorse correlate disponibili in Adobe Experience Platform. Ciò include quelli definiti da Adobe, dai partner della piattaforma Experience e dai fornitori le cui applicazioni vengono utilizzate. Potete inoltre utilizzare le chiamate API per creare nuovi schemi e risorse per la vostra organizzazione, nonché visualizzare e modificare le risorse già definite.
+Utilizzando l&#39;API del Registro di sistema dello schema, è possibile eseguire operazioni CRUD di base per visualizzare e gestire tutti gli schemi e le risorse correlate disponibili all&#39;interno  Adobe Experience Platform. Sono inclusi quelli definiti da Adobe,  partner Experience Platform e fornitori le cui applicazioni vengono utilizzate. Potete inoltre utilizzare le chiamate API per creare nuovi schemi e risorse per la vostra organizzazione, nonché visualizzare e modificare le risorse già definite.
 
 Questa guida per gli sviluppatori fornisce i passaggi necessari per iniziare a utilizzare l&#39;API del Registro di sistema dello schema. La guida fornisce quindi chiamate API di esempio per eseguire operazioni chiave utilizzando il Registro di sistema dello schema.
 
 ## Prerequisiti
 
-Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
 
-* [Sistema](../home.md)XDM (Experience Data Model): Il framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza dei clienti.
+* [Sistema](../home.md)XDM (Experience Data Model): Framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
    * [Nozioni di base sulla composizione](../schema/composition.md)dello schema: Informazioni sui blocchi di base degli schemi XDM.
 * [Profilo](../../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-* [Sandbox](../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [Sandbox](../../sandboxes/home.md):  Experience Platform fornisce sandbox virtuali che dividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per eseguire correttamente chiamate all&#39;API del Registro di sistema dello schema.
 
 ## Lettura di chiamate API di esempio
 
-Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi della piattaforma Experience.
+Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi di  Experience Platform.
 
 ## Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle API della piattaforma, dovete prima completare l&#39;esercitazione [di](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come illustrato di seguito:
+Per effettuare chiamate alle API Platform, è prima necessario completare l&#39;esercitazione [di](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API Experience Platform, come illustrato di seguito:
 
 * Autorizzazione: Portatore `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in Experience Platform, comprese quelle appartenenti al Registro di sistema dello schema, sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API della piattaforma richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in  Experience Platform, comprese quelle appartenenti al Registro di sistema dello schema, sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API Platform richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Per ulteriori informazioni sulle sandbox in Piattaforma, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+>[!NOTE]
+>
+>Per ulteriori informazioni sulle sandbox in Platform, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
 Tutte le richieste di ricerca (GET) al Registro di sistema dello schema richiedono un&#39;intestazione Accetto aggiuntiva, il cui valore determina il formato delle informazioni restituite dall&#39;API. Per ulteriori informazioni, consulta la sezione [Accetta intestazione](#accept) .
 
@@ -154,13 +159,13 @@ Una risposta corretta restituisce informazioni relative all&#39;utilizzo del Reg
 
 * `tenantId`: Il `TENANT_ID` valore per l’organizzazione IMS.
 
-## Comprendere le `CONTAINER_ID`{#container}
+## Comprendere le `CONTAINER_ID` {#container}
 
 Le chiamate all&#39;API del Registro di sistema dello schema richiedono l&#39;utilizzo di un `CONTAINER_ID`. Esistono due contenitori in base ai quali è possibile effettuare chiamate API: il contenitore **** globale e il contenitore **** tenant.
 
 ### Contenitore globale
 
-Il contenitore globale include tutte le classi, i mixin, i tipi di dati e gli schemi standard di Adobe e della piattaforma Experience. È possibile eseguire solo richieste di elenco e ricerca (GET) per il contenitore globale.
+Il contenitore globale include tutte le classi, i mixin, i tipi di dati e gli schemi standard di Adobe e  partner Experience Platform. È possibile eseguire solo richieste di elenco e ricerca (GET) per il contenitore globale.
 
 ### Contenitore tenant
 
@@ -198,7 +203,9 @@ Nella tabella seguente sono elencati i valori di intestazione Accetta compatibil
 | `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` e `allOf` risolto. Nessun titolo o descrizione. |
 | `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` e `allOf` risolto. I descrittori sono inclusi. |
 
->[!NOTE] Se fornisci solo la `major` versione (ad esempio 1, 2, 3), il registro restituirà la versione più recente `minor` (ad esempio .1, .2, .3) automaticamente.
+>[!NOTE]
+>
+>Se fornisci solo la `major` versione (ad esempio 1, 2, 3), il registro restituirà la versione più recente `minor` (ad esempio .1, .2, .3) automaticamente.
 
 ## Vincoli del campo XDM e procedure ottimali
 
