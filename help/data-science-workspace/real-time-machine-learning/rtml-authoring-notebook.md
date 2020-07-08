@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida utente del notebook Real-time Machine Learning
 topic: Training and scoring a ML model
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1618'
 ht-degree: 0%
@@ -274,6 +274,8 @@ Quindi, modificare il valore della `model_path` stringa nel blocco appunti XML *
 In questa sezione viene illustrato come creare un DSL. Stai per creare i nodi che includono la preelaborazione dei dati insieme al nodo ONNX. Quindi, viene creato un grafico DSL utilizzando nodi e bordi. I bordi collegano i nodi utilizzando il formato basato su tuple (node_1, node_2). Il grafico non deve avere cicli.
 
 >[!IMPORTANT]
+>
+>
 >L&#39;utilizzo del nodo ONNX è obbligatorio. Senza il nodo ONNX, l&#39;applicazione non avrà esito positivo.
 
 ### Authoring dei nodi
