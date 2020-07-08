@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gestire le entità del servizio di disattivazione tramite API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '7207'
 ht-degree: 0%
@@ -48,7 +48,9 @@ Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali 
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+>[!NOTE]
+>
+>Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva:
 
@@ -102,7 +104,9 @@ Quando l’amministratore ha concesso l’accesso ai contenitori per utenti o in
 
 Il contesto dei [!DNL Platform][!DNL Decisioning Service] contenitori è attualmente `dma_offers`.
 
->[!NOTE] Il contesto per [!DNL Platform Decisioning Containers] sta per cambiare presto in `acp`. Il filtraggio è facoltativo, ma i filtri solo per `dma_offers` una versione futura richiedono modifiche. Per prepararsi a questa modifica, i client non devono utilizzare filtri o applicare entrambi i contesti di prodotto come filtro.
+>[!NOTE]
+>
+>Il contesto per [!DNL Platform Decisioning Containers] sta per cambiare presto in `acp`. Il filtraggio è facoltativo, ma i filtri solo per `dma_offers` una versione futura richiedono modifiche. Per prepararsi a questa modifica, i client non devono utilizzare filtri o applicare entrambi i contesti di prodotto come filtro.
 
 **Richiesta**
 
@@ -233,7 +237,9 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
   -H 'x-request-id: {NEW_UUID}'  
 ```
 
->[!NOTE] Sebbene `instanceId` venga fornito come parametro di percorso, le applicazioni non dovrebbero, se possibile, creare il percorso stesso e seguire i collegamenti alle istanze contenute nelle operazioni di elenco e di ricerca. Per ulteriori informazioni, vedere le sezioni ‎ 6.4.4 e ‎ 6.4.6.
+>[!NOTE]
+>
+>Sebbene `instanceId` venga fornito come parametro di percorso, le applicazioni non dovrebbero, se possibile, creare il percorso stesso e seguire i collegamenti alle istanze contenute nelle operazioni di elenco e di ricerca. Per ulteriori informazioni, vedere le sezioni ‎ 6.4.4 e ‎ 6.4.6.
 
 **Risposta**
 
@@ -326,7 +332,9 @@ La risposta dipende dalla risposta `{schemaId}` specificata. Ad esempio, per &qu
 }
 ```
 
->[!NOTE] Il risultato contiene le istanze per lo schema specificato o per la prima pagina dell&#39;elenco. Nota: le istanze possono essere conformi a più schemi e quindi visualizzate in più elenchi.
+>[!NOTE]
+>
+>Il risultato contiene le istanze per lo schema specificato o per la prima pagina dell&#39;elenco. Nota: le istanze possono essere conformi a più schemi e quindi visualizzate in più elenchi.
 
 Le risorse di pagina sono transitorie e di sola lettura; non possono essere aggiornate o eliminate. Il modello di paging consente l&#39;accesso casuale ai sottoinsiemi di elenchi di grandi dimensioni per un periodo di tempo prolungato senza mantenere alcuno stato per client.
 
@@ -570,7 +578,9 @@ Quando si utilizzano le API con il tipo di contenuto `application/vnd.adobe.plat
 }
 ```
 
->[!NOTE] Per motivi di brevità, in tutti gli snippet JSON solo le proprietà dell&#39;istanza sono illustrate e solo quando è richiesto vengono visualizzate le proprietà busta e la sezione _links.
+>[!NOTE]
+>
+>Per motivi di brevità, in tutti gli snippet JSON solo le proprietà dell&#39;istanza sono illustrate e solo quando è richiesto vengono visualizzate le proprietà busta e la sezione _links.
 
 ### Proprietà generali delle offerte
 
