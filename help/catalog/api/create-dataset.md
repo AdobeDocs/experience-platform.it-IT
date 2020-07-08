@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Creare un dataset
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '203'
+ht-degree: 1%
 
 ---
 
@@ -13,7 +16,9 @@ source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
 
 Per creare un dataset utilizzando l&#39;API Catalog, è necessario conoscere il `$id` valore dello schema Experience Data Model (XDM) su cui si baserà il dataset. Una volta ottenuto l’ID dello schema, potete creare un dataset effettuando una richiesta POST all’ `/datasets` endpoint nell’API Catalog.
 
->[!NOTE] Questo documento descrive solo come creare un oggetto dataset in Catalog. Per i passaggi completi su come creare, compilare e monitorare un dataset, fare riferimento alla seguente [esercitazione](../datasets/create.md).
+>[!NOTE]
+>
+>Questo documento descrive solo come creare un oggetto dataset in Catalog. Per i passaggi completi su come creare, compilare e monitorare un dataset, fare riferimento alla seguente [esercitazione](../datasets/create.md).
 
 **Formato API**
 
@@ -52,7 +57,9 @@ curl -X POST \
 | `name` | Nome del set di dati da creare. |
 | `schemaRef.id` | Il `$id` valore URI per lo schema XDM su cui verrà basato il dataset. |
 
->[!NOTE] In questo esempio viene utilizzato il formato di file [parquet](https://parquet.apache.org/documentation/latest/) per la relativa `containerFormat` proprietà. Un esempio che utilizza il formato di file JSON è disponibile nella guida [per gli sviluppatori per l’assimilazione](../../ingestion/batch-ingestion/api-overview.md)batch.
+>[!NOTE]
+>
+>In questo esempio viene utilizzato il formato di file [parquet](https://parquet.apache.org/documentation/latest/) per la relativa `containerFormat` proprietà. Un esempio che utilizza il formato di file JSON è disponibile nella guida [per gli sviluppatori per l’assimilazione](../../ingestion/batch-ingestion/api-overview.md)batch.
 
 **Risposta**
 
