@@ -4,7 +4,7 @@ seo-title: Configurazione Edge per l'SDK Web  Experience Platform
 description: 'Scopri come configurare la  Experience Platform Edge Network. '
 seo-description: 'Scopri come configurare la  Experience Platform Edge Network. '
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 2%
@@ -24,7 +24,9 @@ Gli ID di configurazione Edge possono essere creati in Adobe [!DNL Launch] utili
 
 >[!NOTE]
 >
->Lo strumento di configurazione edge è disponibile per i clienti inclusi nell&#39;elenco allow, indipendentemente dal fatto che utilizzino [!DNL Launch] come gestore di tag. Inoltre, gli utenti richiedono le autorizzazioni Sviluppo in [!DNL Launch]. Per ulteriori dettagli, consultate l&#39;articolo Autorizzazioni [](https://docs.adobe.com/content/help/it-IT/launch/using/reference/admin/user-permissions.html) utente nella [!DNL Launch] documentazione.
+>
+>
+>Lo strumento di configurazione edge è disponibile per i clienti del elenco consentiti , a prescindere dal fatto che vengano utilizzati [!DNL Launch] come gestore di tag. Inoltre, gli utenti richiedono le autorizzazioni Sviluppo in [!DNL Launch]. Per ulteriori dettagli, consultate l&#39;articolo Autorizzazioni [](https://docs.adobe.com/content/help/it-IT/launch/using/reference/admin/user-permissions.html) utente nella [!DNL Launch] documentazione.
 
 Per creare una configurazione di bordo, fai clic su **[UICONTROL New Edge Configuration]** (Configurazionedi bordo) nell’area in alto a destra della schermata. Dopo aver fornito un nome e una descrizione, viene richiesto di specificare le impostazioni predefinite per ogni ambiente.
 
@@ -77,6 +79,8 @@ Per configurare  Adobe Target, dovete fornire un codice client. Gli altri campi 
 ![blocco delle impostazioni del Adobe Target](../../assets/edge_configuration_target.png)
 
 >[!NOTE]
+>
+>
 >
 >L&#39;organizzazione associata al codice client deve corrispondere all&#39;organizzazione in cui viene creato l&#39;ID di configurazione.
 
