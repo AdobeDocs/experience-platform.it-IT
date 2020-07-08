@@ -4,20 +4,23 @@ solution: Experience Platform
 title: Scrittura di query
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '667'
+ht-degree: 1%
 
 ---
 
 
 # Guida generale per l&#39;esecuzione delle query in Query Service
 
-In questo documento sono riportati i dettagli importanti da conoscere durante la scrittura di query in Adobe Experience Platform Query Service.
+In questo documento vengono forniti dettagli importanti da conoscere durante la scrittura di query in  Adobe Experience Platform Query Service.
 
 Per informazioni dettagliate sulla sintassi SQL utilizzata in Query Service, consultate la documentazione [sulla sintassi](../sql/syntax.md)SQL.
 
 ## Modelli di esecuzione delle query
 
-Adobe Experience Platform Query Service offre due modelli di esecuzione delle query: interattivo e non interattivo. L&#39;esecuzione interattiva viene utilizzata per lo sviluppo di query e la generazione di report in strumenti di business intelligence, mentre quella non interattiva viene utilizzata per processi e query operative più grandi come parte di un flusso di lavoro di elaborazione dati.
+ Adobe Experience Platform Query Service ha due modelli di esecuzione della query: interattivo e non interattivo. L&#39;esecuzione interattiva viene utilizzata per lo sviluppo di query e la generazione di report in strumenti di business intelligence, mentre quella non interattiva viene utilizzata per processi e query operative più grandi come parte di un flusso di lavoro di elaborazione dati.
 
 ### Esecuzione di query interattive
 
@@ -31,13 +34,15 @@ L&#39;esecuzione della query interattiva presenta le seguenti limitazioni:
 | Numero massimo di righe restituite | 50.000 |
 | Numero massimo di query simultanee | 5 |
 
->[!NOTE] Per ignorare il limite massimo di righe, includi `LIMIT 0` nella query. È ancora valido il timeout della query di 10 minuti.
+>[!NOTE]
+>
+>Per ignorare il limite massimo di righe, includi `LIMIT 0` nella query. È ancora valido il timeout della query di 10 minuti.
 
-Per impostazione predefinita, i risultati delle query interattive vengono restituiti al client e **non** sono persistenti. Per mantenere i risultati come dataset in Experience Platform, la query deve utilizzare la `CREATE TABLE AS SELECT` sintassi.
+Per impostazione predefinita, i risultati delle query interattive vengono restituiti al client e **non** sono persistenti. Per mantenere i risultati come dataset in  Experience Platform, la query deve utilizzare la `CREATE TABLE AS SELECT` sintassi.
 
 ### Esecuzione query non interattiva
 
-Le query inviate tramite l&#39;API del servizio query vengono eseguite in modo non interattivo. L’esecuzione non interattiva indica che il servizio query riceve la chiamata API ed esegue la query nell’ordine in cui viene ricevuta. Le query non interattive generano sempre un nuovo dataset in Experience Platform per ricevere i risultati, oppure l&#39;inserimento di nuove righe in un dataset esistente.
+Le query inviate tramite l&#39;API del servizio query vengono eseguite in modo non interattivo. L’esecuzione non interattiva indica che il servizio query riceve la chiamata API ed esegue la query nell’ordine in cui viene ricevuta. Le query non interattive generano sempre un nuovo dataset in  Experience Platform per ricevere i risultati, oppure l&#39;inserimento di nuove righe in un dataset esistente.
 
 ## Accesso a un campo specifico all&#39;interno di un oggetto
 
@@ -67,7 +72,9 @@ LIMIT 1
 | -------- | ----------- |
 | `{ANALYTICS_TABLE_NAME}` | Nome della tabella di analisi. |
 
->[!NOTE] Poiché ogni tipo di notazione restituisce gli stessi risultati, quello che si sceglie di utilizzare dipende dalle preferenze.
+>[!NOTE]
+>
+>Poiché ogni tipo di notazione restituisce gli stessi risultati, quello che si sceglie di utilizzare dipende dalle preferenze.
 
 Entrambe le query di esempio sopra restituiscono un oggetto appiattito, anziché un singolo valore:
 
@@ -147,7 +154,9 @@ FROM
 )
 ```
 
->[!NOTE] Le virgolette doppie **non possono** essere utilizzate con l&#39;accesso al campo di notazione del punto.
+>[!NOTE]
+>
+>Le virgolette doppie **non possono** essere utilizzate con l&#39;accesso al campo di notazione del punto.
 
 ### virgolette posteriori
 
