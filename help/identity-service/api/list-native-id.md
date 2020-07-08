@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Ottenere l'ID nativo per un'identità
 topic: API guide
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 1%
@@ -16,7 +16,9 @@ ht-degree: 1%
 
 I dati di identità vengono generalmente forniti come valore stringa ID e spazio dei nomi di identità nei dati XDM acquisiti e quando viene fornita un&#39;identità da utilizzare in una chiamata API. Quando le identità sono persistenti in [!DNL Identity Service], viene generato un ID che viene assegnato a tale identità, detto XID nativo. [!DNL Platform] API che richiedono il supporto dei dati di identità utilizzando questo modulo più compatto per l&#39;ID aggregato e lo spazio dei nomi. XID è una stringa codificata base64.
 
->[!NOTE] Questo formato è destinato principalmente all&#39;uso interno di Adobe. L&#39;XID nativo come valore singolo è più efficiente in termini di spazio ed è ciò che viene utilizzato internamente nelle [!DNL Platform] soluzioni per l&#39;archiviazione e la serializzazione. Tuttavia non è leggibile dall&#39;uomo, è opaco e richiede una chiamata separata per ottenerlo da utilizzare.
+>[!NOTE]
+>
+>Questo formato è destinato principalmente all&#39;uso interno di Adobe. L&#39;XID nativo come valore singolo è più efficiente in termini di spazio ed è ciò che viene utilizzato internamente nelle [!DNL Platform] soluzioni per l&#39;archiviazione e la serializzazione. Tuttavia non è leggibile dall&#39;uomo, è opaco e richiede una chiamata separata per ottenerlo da utilizzare.
 
 Acquisisci l&#39;XID per un determinato valore ID e spazio dei nomi utilizzando il servizio descritto in questa sezione.
 
