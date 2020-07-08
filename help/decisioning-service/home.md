@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Servizio di disattivazione
 topic: overview
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 0%
@@ -68,7 +68,9 @@ Potete utilizzare [!DNL Decisioning Service] in una modalità di interazione ric
 
 L&#39;utilizzo di [!DNL Decisioning Service] è facoltativo e richiede solo alcuni passaggi oltre ai tipici passaggi necessari per creare [!DNL Profile] entità e gestirle.
 
->[!NOTE] Per sfruttare al meglio [!DNL Real-time Customer Profile], l&#39;integrazione [!DNL Decisioning Service] diretta con lo store del profilo. Le chiamate API devono solo indicare una delle identità per un determinato profilo.
+>[!NOTE]
+>
+>Per sfruttare al meglio [!DNL Real-time Customer Profile], l&#39;integrazione [!DNL Decisioning Service] diretta con lo store del profilo. Le chiamate API devono solo indicare una delle identità per un determinato profilo.
 
 La sequenza tipica di passaggi inizia con la creazione di profili:
 
