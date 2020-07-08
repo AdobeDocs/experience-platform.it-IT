@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Elenco delle risorse
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b4d8a6f8006d55c7aac19d705c6880fec915c147
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '519'
 ht-degree: 2%
@@ -16,7 +16,9 @@ ht-degree: 2%
 
 È possibile visualizzare un elenco di tutte le risorse del Registro di sistema dello schema di un determinato tipo (classi, mixin, schemi, tipi di dati o descrittori) all&#39;interno di un contenitore eseguendo una singola richiesta GET.
 
->[!NOTE] Quando si elencano le risorse, il Registro di sistema dello schema limita i set di risultati a 300 elementi. Per restituire risorse oltre questo limite, è necessario utilizzare i parametri [di](#paging)paging. È inoltre consigliabile utilizzare i parametri di query per [filtrare i risultati](#filtering) e ridurre il numero di risorse restituite.
+>[!NOTE]
+>
+>Quando si elencano le risorse, il Registro di sistema dello schema limita i set di risultati a 300 elementi. Per restituire risorse oltre questo limite, è necessario utilizzare i parametri [di](#paging)paging. È inoltre consigliabile utilizzare i parametri di query per [filtrare i risultati](#filtering) e ridurre il numero di risorse restituite.
 
 **Formato API**
 
@@ -78,7 +80,9 @@ La richiesta precedente utilizzava l’intestazione `application/vnd.adobe.xed-i
 
 Il Registro di sistema dello schema supporta l&#39;utilizzo di parametri di query per elencare le risorse e filtrare i risultati.
 
->[!NOTE] Quando si combinano più parametri di query, questi devono essere separati da e commerciale (`&`).
+>[!NOTE]
+>
+>Quando si combinano più parametri di query, questi devono essere separati da e commerciale (`&`).
 
 ### Pagine {#paging}
 
@@ -105,4 +109,6 @@ Potete filtrare i risultati utilizzando il `property` parametro, utilizzato per 
 | `~` | Filtra in base al fatto che la proprietà corrisponda o meno a un&#39;espressione regolare specificata. | `property=title~test$` |
 | (Nessuno) | Se si specifica solo il nome della proprietà, vengono restituite solo le voci in cui esiste la proprietà. | `property=title` |
 
->[!TIP] Potete usare il `property` parametro per filtrare i mixin in base alla classe compatibile. Ad esempio, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` restituisce solo i mixin compatibili con la classe Profilo singolo XDM.
+>[!TIP]
+>
+>Potete usare il `property` parametro per filtrare i mixin in base alla classe compatibile. Ad esempio, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` restituisce solo i mixin compatibili con la classe Profilo singolo XDM.
