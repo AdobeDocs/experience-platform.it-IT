@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica di Analysis Workspace
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2563'
 ht-degree: 0%
@@ -123,7 +123,9 @@ Gli esperti in materia di dati possono trarre vantaggio dalle nuove tecnologie e
 
 Il controllo degli accessi per [!DNL Experience Platform] è gestito tramite [Adobe  Admin Console](https://adminconsole.adobe.com). Questa funzionalità sfrutta i profili di prodotto in  Admin Console, che collegano gli utenti con autorizzazioni e sandbox. Per ulteriori informazioni, consulta la panoramica [sul controllo](../access-control/home.md) degli accessi.
 
->[!IMPORTANT] Per poter utilizzare [!DNL Data Science Workspace], l&#39; [!UICONTROL "Manage Data Science Workspace"] autorizzazione deve essere abilitata.
+>[!IMPORTANT]
+>
+>Per poter utilizzare [!DNL Data Science Workspace], l&#39; [!UICONTROL "Manage Data Science Workspace"] autorizzazione deve essere abilitata.
 
 Nella tabella seguente sono riportati gli effetti di tale autorizzazione attivata o disattivata:
 
@@ -144,7 +146,7 @@ Le sandbox sono partizioni virtuali all&#39;interno di una singola istanza di [!
 
 Al momento [!DNL Data Science Workspace] presenta due limitazioni sandbox:
 
-- Le risorse di calcolo sono condivise tra le sandbox di produzione e quelle non di produzione. L&#39;isolamento per le sandbox di produzione sarà disponibile in futuro.
+- Le risorse di calcolo sono condivise tra le sandbox di produzione e non di produzione. L&#39;isolamento per le sandbox di produzione sarà disponibile in futuro.
 - I carichi di lavoro Scala/[!DNL Spark] e PySpark per notebook e ricette sono attualmente supportati solo nella sandbox di produzione. Il supporto per sandbox non destinate alla produzione verrà impostato in futuro.
 
 ## [!DNL Data Science Workspace] in azione
