@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Servizio Adobe Experience Platform Identity
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '708'
 ht-degree: 1%
@@ -72,7 +72,9 @@ Gli spazi dei nomi definiti dall&#39;utente sono privati per la propria organizz
 
 Come per gli spazi dei nomi Standard, è possibile fare clic su uno spazio dei nomi personalizzato dalla *[!UICONTROL Browse]* scheda per visualizzarne i dettagli, ma con uno spazio dei nomi personalizzato è anche possibile modificare il nome visualizzato e la descrizione dall&#39;area dei dettagli.
 
->[!NOTE] Una volta creato, lo spazio dei nomi non può essere eliminato e i relativi &quot;Simbolo identità&quot; (o &quot;codice&quot; nell&#39;API) e &quot;Tipo&quot; non possono essere modificati.
+>[!NOTE]
+>
+>Una volta creato, lo spazio dei nomi non può essere eliminato e i relativi &quot;Simbolo identità&quot; (o &quot;codice&quot; nell&#39;API) e &quot;Tipo&quot; non possono essere modificati.
 
 ## Spazi dei nomi nei dati dell&#39;identità
 
