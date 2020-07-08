@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Aggiornare una risorsa
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 0d3bee939226d9ef4ac1672b71e0d240f32c5dcf
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '379'
+ht-degree: 2%
 
 ---
 
@@ -15,7 +18,9 @@ Puoi modificare o aggiornare le risorse nel contenitore tenant utilizzando una r
 
 Per ulteriori informazioni sulla patch JSON, comprese le operazioni disponibili, consultate la documentazione [ufficiale relativa alla patch](http://jsonpatch.com/)JSON.
 
->[!NOTE] Se si desidera sostituire un&#39;intera risorsa con nuovi valori invece di aggiornare i singoli campi, consultare il documento sulla [sostituzione di una risorsa con un&#39;operazione](replace-resource.md)PUT.
+>[!NOTE]
+>
+>Se si desidera sostituire un&#39;intera risorsa con nuovi valori invece di aggiornare i singoli campi, consultare il documento sulla [sostituzione di una risorsa con un&#39;operazione](replace-resource.md)PUT.
 
 ## Aggiunta di mixaggi a uno schema
 
