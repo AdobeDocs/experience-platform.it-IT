@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Esperimenti
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 76f68fea1bea970bab4c25061527b7ebae33faf3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '744'
 ht-degree: 4%
@@ -20,7 +20,9 @@ Lo sviluppo di modelli e la formazione si svolgono a livello di Esperimento, dov
 
 Potete creare un esperimento eseguendo una richiesta POST fornendo al contempo un nome e un ID MLInvalido nel payload della richiesta.
 
->[!NOTE] A differenza della formazione sui modelli nell’interfaccia utente, la creazione di un esperimento tramite una chiamata API esplicita non crea ed esegue automaticamente un’esecuzione di formazione.
+>[!NOTE]
+>
+>A differenza della formazione sui modelli nell’interfaccia utente, la creazione di un esperimento tramite una chiamata API esplicita non crea ed esegue automaticamente un’esecuzione di formazione.
 
 **Formato API**
 
@@ -242,7 +244,9 @@ Una risposta corretta restituisce un payload contenente i dettagli dell’esperi
 
 Potete recuperare un elenco di sessioni di formazione o di valutazione appartenenti a un particolare esperimento eseguendo una singola richiesta GET e fornendo un ID di esperimento valido. Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco completo dei parametri di query disponibili, consultate la sezione appendice sui parametri di [query per il recupero](./appendix.md#query)delle risorse.
 
->[!NOTE] Quando si combinano più parametri di query, questi devono essere separati da e commerciale (&amp;).
+>[!NOTE]
+>
+>Quando si combinano più parametri di query, questi devono essere separati da e commerciale (&amp;).
 
 **Formato API**
 
@@ -301,7 +305,9 @@ Una risposta corretta restituisce un payload contenente un elenco di esecuzioni 
 
 Potete aggiornare un esperimento esistente sovrascrivendone le proprietà tramite una richiesta PUT che include l&#39;ID dell&#39;esperimento di destinazione nel percorso della richiesta e fornendo un payload JSON contenente le proprietà aggiornate.
 
->[!TIP] Per garantire il successo di questa richiesta PUT, si consiglia di eseguire prima una richiesta GET per [recuperare l&#39;esperimento con ID](#retrieve-specific). Quindi, modificate e aggiornate l&#39;oggetto JSON restituito e applicate l&#39;intero oggetto JSON modificato come payload per la richiesta PUT.
+>[!TIP]
+>
+>Per garantire il successo di questa richiesta PUT, si consiglia di eseguire prima una richiesta GET per [recuperare l&#39;esperimento con ID](#retrieve-specific). Quindi, modificate e aggiornate l&#39;oggetto JSON restituito e applicate l&#39;intero oggetto JSON modificato come payload per la richiesta PUT.
 
 La seguente chiamata API di esempio aggiorna il nome di un Esperimento pur avendo inizialmente queste proprietà:
 
