@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Reimpostare una sandbox
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 4%
 
 ---
 
@@ -59,4 +62,6 @@ Una risposta corretta restituisce i dettagli della sandbox aggiornata, mostrando
 }
 ```
 
->[!NOTE] Una volta ripristinata la sandbox, il provisioning da parte del sistema richiede circa 15 minuti. Una volta eseguito il provisioning, il sandbox `state` diventa &quot;attivo&quot; o &quot;non riuscito&quot;.
+>[!NOTE]
+>
+>Una volta ripristinata la sandbox, il provisioning da parte del sistema richiede circa 15 minuti. Una volta eseguito il provisioning, il sandbox `state` diventa &quot;attivo&quot; o &quot;non riuscito&quot;.
