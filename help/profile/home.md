@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Panoramica del profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: 4d853dfee931789ca1badd410ce0b4b73c8c2803
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 1%
@@ -129,6 +129,8 @@ La governance dei dati è gestita in diversi punti. Tra queste, puoi decidere qu
 --->
 
 >[!NOTE]
+>
+>
 >Un&#39;entità non-persona fa riferimento a qualsiasi classe XDM che **non** fa parte di Profile.
 
 ## Passaggi successivi e risorse aggiuntive
