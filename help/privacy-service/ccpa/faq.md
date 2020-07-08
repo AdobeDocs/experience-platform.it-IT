@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Domande frequenti su CCPA
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '807'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,9 @@ Questo documento contiene le risposte alle domande frequenti sul California Cons
 
 La California Consumer Privacy Act (CCPA) è la nuova legge sulla privacy della California che conferisce ai propri residenti nuovi diritti in merito alle loro informazioni personali e impone responsabilità in materia di protezione dei dati a determinate entità che svolgono attività in California.
 
->[!NOTE] Anche se tecnicamente efficace nel gennaio 2020, l&#39;CCPA è ancora messa a punto dai legislatori. Inoltre, importanti dettagli di attuazione e altri orientamenti sono disponibili nelle norme che devono ancora essere scritte dall&#39;autorità di regolamentazione della California.
+>[!NOTE]
+>
+>Anche se tecnicamente efficace nel gennaio 2020, l&#39;CCPA è ancora messa a punto dai legislatori. Inoltre, importanti dettagli di attuazione e altri orientamenti sono disponibili nelle norme che devono ancora essere scritte dall&#39;autorità di regolamentazione della California.
 
 Sebbene l’APP condivida alcuni concetti forniti dal Regolamento generale sulla protezione dei dati (General Data Protection Regulation, GDPR) dell’Unione europea, come il diritto di accesso ed eliminazione dei dati personali, esistono diversi modi chiave in cui l’APP differisce dal GDPR. Ad esempio, l&#39;APP offre ai consumatori il diritto di non partecipare a determinate attività di condivisione dei dati che possono essere considerate come &quot;vendita&quot; di informazioni personali a terzi, piuttosto che richiedere il consenso preventivo.
 
@@ -27,7 +32,7 @@ Le informazioni personali sono informazioni &quot;che identificano, si riferisco
 
 ## Quali tipi di informazioni personali o identificatori utilizzati in Adobe Experience Cloud sono soggetti a questi nuovi requisiti?
 
-I seguenti identificatori sono comunemente utilizzati nelle applicazioni Experience Cloud e possono essere soggetti ai requisiti CCPA:
+I seguenti identificatori sono comunemente utilizzati  applicazioni Experience Cloud e possono essere soggetti ai requisiti CCPA:
 
 - Nome
 - Indirizzo postale
@@ -43,9 +48,9 @@ Le informazioni personali possono anche includere informazioni su Internet o alt
 - Cronologia ricerche
 - Informazioni relative all&#39;interazione di un consumatore con un sito Web, un&#39;applicazione o un annuncio pubblicitario
 
-Anche se CCPA copre un&#39;ampia gamma di informazioni personali, le condizioni contrattuali standard di Adobe stabiliscono che le informazioni personali riservate (come SSN, informazioni sulla licenza del conducente, informazioni finanziarie e dati biometrici) sono generalmente vietate dall&#39;importazione e dall&#39;uso nelle applicazioni Experience Cloud.
+Anche se l&#39;CCPA copre un&#39;ampia gamma di informazioni personali, i termini del contratto standard di Adobe stabiliscono che le informazioni personali riservate (come SSN, le informazioni sulla licenza del conducente, le informazioni finanziarie e i dati biometrici) sono generalmente vietate dall&#39;importazione e dall&#39;uso in  applicazioni Experience Cloud.
 
-## In che modo i diversi ruoli e responsabilità dell&#39;APP si applicano a Experience Cloud?
+## In che modo i diversi ruoli e responsabilità di CCPA si applicano a  Experience Cloud?
 
 Come definito da CCPA, i seguenti ruoli si applicano ad Adobe e ai suoi clienti:
 
@@ -70,9 +75,11 @@ I servizi Adobe possono essere utilizzati per consentire la condivisione e il tr
 
 ## Come posso supportare i requisiti sulla privacy dei consumatori in base all&#39;APP se mantengo certi tipi di dati coperti dai requisiti?
 
-Una volta che hai preso le misure necessarie per autenticare i consumatori CA, il servizio Adobe Experience Platform Privacy Service ti consente di inviare le richieste di privacy dei consumatori alle applicazioni Experience Cloud compatibili. Per ulteriori informazioni, consulta la panoramica [del servizio](../home.md) sulla privacy. Per informazioni su come le specifiche applicazioni Experience Cloud possono soddisfare le richieste di privacy, consulta la guida sulle applicazioni [Experience Cloud e](../experience-cloud-apps.md)Privacy Service.
+Una volta che avete adottato le misure necessarie per autenticare i consumatori CA,  Adobe Experience Platform Privacy Service consente di inviare le richieste di privacy dei consumatori alle applicazioni Experience Cloud compatibili . Per ulteriori informazioni, consultate la panoramica [di](../home.md) Privacy Service. Per informazioni su come le specifiche applicazioni  Experience Cloud possono soddisfare le richieste di privacy, consultare la guida in [Privacy Service e  applicazioni](../experience-cloud-apps.md)Experience Cloud.
 
->[!NOTE] Ulteriori indicazioni da parte dell&#39;autorità di regolamentazione californiana sono ancora disponibili in merito a quali tipi di dati sono ammissibili per le richieste di privacy dei consumatori.
+>[!NOTE]
+>
+>Ulteriori indicazioni da parte dell&#39;autorità di regolamentazione californiana sono ancora disponibili in merito a quali tipi di dati sono ammissibili per le richieste di privacy dei consumatori.
 
 ## Adobe offre altri strumenti utili per soddisfare i requisiti CCPA?
 
