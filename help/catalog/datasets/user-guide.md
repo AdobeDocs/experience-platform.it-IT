@@ -4,29 +4,32 @@ solution: Experience Platform
 title: Guida utente dei set di dati
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 7d3f64db787aebe46179c0e08ad01878b0ad2877
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '1181'
+ht-degree: 0%
 
 ---
 
 
 # Guida utente dei set di dati
 
-Questa guida utente fornisce istruzioni sulle operazioni comuni quando si utilizzano i set di dati nell’interfaccia utente di Adobe Experience Platform.
+Questa guida utente fornisce istruzioni sull&#39;esecuzione di azioni comuni quando si utilizzano i set di dati all&#39;interno &#39;interfaccia utente del Adobe Experience Platform.
 
 ## Introduzione
 
-Questa guida utente richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa guida utente richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
 
-* [Set](overview.md)di dati: Il concetto di storage e gestione per la persistenza dei dati in Experience Platform.
-* [Sistema](../../xdm/home.md)XDM (Experience Data Model): Il framework standardizzato tramite il quale Experience Platform organizza i dati sull&#39;esperienza dei clienti.
+* [Set](overview.md)di dati: Il concetto di storage e gestione per la persistenza dei dati in  Experience Platform.
+* [Sistema](../../xdm/home.md)XDM (Experience Data Model): Framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
    * [Nozioni di base sulla composizione](../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
-   * [Editor](../../xdm/tutorials/create-schema-ui.md)schema: Scoprite come creare schemi XDM personalizzati utilizzando l&#39;Editor di schema nell&#39;interfaccia utente della piattaforma.
+   * [Editor](../../xdm/tutorials/create-schema-ui.md)schema: Scoprite come creare schemi XDM personalizzati utilizzando l&#39;Editor di schema nell&#39;interfaccia utente di Platform.
 * [Profilo](../../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 * [Governance](../../data-governance/home.md)dei dati: Assicurati la conformità a normative, restrizioni e criteri relativi all&#39;utilizzo dei dati dei clienti.
 
 ## Visualizzare i set di dati
 
-Nell’interfaccia utente della piattaforma esperienza, fai clic su **Set** di dati nella barra di navigazione a sinistra per aprire il dashboard *Set* di dati. Il dashboard elenca tutti i set di dati disponibili per l&#39;organizzazione. I dettagli vengono visualizzati per ciascun dataset elencato, incluso il nome, lo schema a cui il dataset aderisce e lo stato dell&#39;assimilazione più recente.
+Nell&#39;interfaccia utente di  Experience Platform, fai clic su **Set** di dati nella barra di navigazione a sinistra per aprire il dashboard *Set* di dati. Il dashboard elenca tutti i set di dati disponibili per l&#39;organizzazione. I dettagli vengono visualizzati per ciascun dataset elencato, incluso il nome, lo schema a cui il dataset aderisce e lo stato dell&#39;assimilazione più recente.
 
 ![](../images/datasets/user-guide/browse_datasets.png)
 
@@ -45,7 +48,7 @@ Nella finestra di anteprima, la visualizzazione gerarchica dello schema per il d
 
 ![](../images/datasets/user-guide/preview_dataset.png)
 
-Per metodi più affidabili per accedere ai dati, Experience Platform fornisce servizi a valle come Query Service e JupyterLab per esplorare e analizzare i dati. Per ulteriori informazioni, consulta i documenti seguenti:
+Per metodi più affidabili per accedere ai dati,  Experience Platform fornisce servizi a valle come Query Service e JupyterLab per esplorare e analizzare i dati. Per ulteriori informazioni, consulta i documenti seguenti:
 
 * [Panoramica di Servizio query](../../query-service/home.md)
 * [Guida utente di JupyterLab](../../data-science-workspace/jupyterlab/overview.md)
@@ -87,7 +90,9 @@ Viene visualizzato il passaggio *Configura* . Immettete il set di dati con un no
 
 Viene visualizzato il passaggio *Aggiungi dati* . Caricate il file CSV trascinandolo e rilasciandolo al centro dello schermo, oppure fate clic su **Sfoglia** per esplorare la directory dei file. Il file può avere una dimensione massima di 10 gigabyte. Una volta caricato il file CSV, fate clic su **Salva** per creare il set di dati.
 
->[!NOTE] I nomi delle colonne CSV devono iniziare con caratteri alfanumerici e possono contenere solo lettere, numeri e caratteri di sottolineatura.
+>[!NOTE]
+>
+>I nomi delle colonne CSV devono iniziare con caratteri alfanumerici e possono contenere solo lettere, numeri e caratteri di sottolineatura.
 
 ![](../images/datasets/user-guide/add_csv_data.png)
 
@@ -108,13 +113,15 @@ Se un dataset contiene già dei dati e viene quindi abilitato per Profilo, i dat
 
 ## Gestione e applicazione della governance dei dati su un dataset
 
-L’etichettatura e l’applicazione dell’uso dei dati (DULE) è il meccanismo di governance dei dati di base per la piattaforma di esperienze. Le etichette DULE consentono di classificare set di dati e campi in base ai criteri di utilizzo applicabili ai dati. Per ulteriori informazioni sulle etichette, vedere la panoramica [sulla governance dei](../../data-governance/home.md) dati o consultare la guida [utente relativa alle etichette di utilizzo dei](../../data-governance/labels/overview.md) dati per istruzioni su come applicare le etichette ai set di dati.
+L&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati (DULE) è il meccanismo di gestione dei dati di base per  Experience Platform. Le etichette DULE consentono di classificare set di dati e campi in base ai criteri di utilizzo applicabili ai dati. Per ulteriori informazioni sulle etichette, vedere la panoramica [sulla governance dei](../../data-governance/home.md) dati o consultare la guida [utente relativa alle etichette di utilizzo dei](../../data-governance/labels/overview.md) dati per istruzioni su come applicare le etichette ai set di dati.
 
 ## Eliminare un dataset
 
 È possibile eliminare un dataset accedendo innanzitutto alla schermata delle attività ** DataSet. Quindi, fare clic su **Elimina set di dati** per eliminarlo.
 
->[!NOTE] Non è possibile eliminare i set di dati creati e utilizzati da applicazioni e servizi Adobe (ad esempio Adobe Analytics, Adobe Audience Manager o Decisioning Service).
+>[!NOTE]
+>
+>Non è possibile eliminare i set di dati creati e utilizzati da applicazioni e servizi Adobe (ad esempio Adobe  Analytics,  Adobe Audience Manager o Servizio di disattivazione).
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 
@@ -128,7 +135,7 @@ Se un set di dati è abilitato per il profilo, eliminandolo dall’interfaccia u
 
 ## Caricamento dei dati del monitor
 
-Nell’interfaccia utente di Experience Platform, fai clic su **Monitoraggio** nella barra di navigazione a sinistra. Il dashboard di *monitoraggio* consente di visualizzare gli stati dei dati in entrata da un&#39;acquisizione batch o in streaming. Per visualizzare lo stato dei singoli batch, fare clic su *Batch end-to-end* o su *Streaming end-to-end*. Le dashboard elencano tutte le esecuzioni batch o in streaming dell&#39;assimilazione, incluse quelle che hanno esito positivo, non sono riuscite o sono ancora in corso. Ogni elenco fornisce dettagli del batch, inclusi l’ID batch, il nome del set di dati di destinazione e il numero di record acquisiti. Se il set di dati di destinazione è abilitato per il profilo, viene visualizzato anche il numero di record di identità e profilo acquisiti.
+Nell’interfaccia  di Experience Platform, fate clic su **Monitoraggio** nella navigazione a sinistra. Il dashboard di *monitoraggio* consente di visualizzare gli stati dei dati in entrata da un&#39;acquisizione batch o in streaming. Per visualizzare lo stato dei singoli batch, fare clic su *Batch end-to-end* o su *Streaming end-to-end*. Le dashboard elencano tutte le esecuzioni batch o in streaming dell&#39;assimilazione, incluse quelle che hanno esito positivo, non sono riuscite o sono ancora in corso. Ogni elenco fornisce dettagli del batch, inclusi l’ID batch, il nome del set di dati di destinazione e il numero di record acquisiti. Se il set di dati di destinazione è abilitato per il profilo, viene visualizzato anche il numero di record di identità e profilo acquisiti.
 
 ![](../images/datasets/user-guide/batch_listing.png)
 
@@ -142,7 +149,7 @@ Per eliminare il batch, fate clic su **Elimina batch** nella parte superiore des
 
 ## Passaggi successivi
 
-Questa guida utente fornisce istruzioni per eseguire azioni comuni quando si utilizzano i set di dati nell’interfaccia utente della piattaforma Experience. Per i passaggi relativi all&#39;esecuzione di flussi di lavoro comuni relativi alla piattaforma, fare riferimento alle seguenti esercitazioni:
+Questa guida utente fornisce istruzioni per eseguire azioni comuni quando si utilizzano i set di dati nell&#39;interfaccia utente  Experience Platform. Per i passaggi relativi all&#39;esecuzione di flussi di lavoro Platform comuni con set di dati, fare riferimento alle seguenti esercitazioni:
 
 * [Creazione di un set di dati tramite le API](create.md)
 * [Query dei dati del set di dati tramite l&#39;API Data Access](../../data-access/home.md)
