@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Processi segmento
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b0554d931718bb6a8dd7d4f971daf3652a19a2a8
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '657'
 ht-degree: 3%
@@ -22,7 +22,7 @@ Questa guida fornisce informazioni utili per comprendere meglio i processi dei s
 
 Gli endpoint API utilizzati in questa guida fanno parte dell&#39;API di segmentazione. Prima di continuare, consulta la guida [per lo sviluppatore di](./getting-started.md)segmentazione.
 
-In particolare, la sezione [](./getting-started.md#getting-started) introduttiva della guida per gli sviluppatori di segmentazione include collegamenti a argomenti correlati, una guida alla lettura delle chiamate API di esempio nel documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente chiamate a qualsiasi API della piattaforma Experience.
+In particolare, la sezione [](./getting-started.md#getting-started) introduttiva della guida per gli sviluppatori di segmentazione include collegamenti a argomenti correlati, una guida alla lettura delle chiamate API di esempio nel documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente chiamate a qualsiasi  API Experience Platform.
 
 ## Recupero di un elenco di processi di segmento
 
@@ -63,7 +63,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 Una risposta corretta restituisce lo stato HTTP 200 con un elenco di processi di segmento per l’organizzazione IMS specificata come JSON. La risposta seguente restituisce un elenco di tutti i processi del segmento riusciti per l&#39;organizzazione IMS.
 
->[!NOTE] La risposta seguente è stata troncata per lo spazio e mostrerà solo il primo processo restituito.
+>[!NOTE]
+>
+>La risposta seguente è stata troncata per lo spazio e mostrerà solo il primo processo restituito.
 
 ```json
 {
@@ -361,7 +363,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 Una risposta corretta restituisce lo stato HTTP 207 con i processi di segmento richiesti.
 
->[!NOTE] La risposta seguente è stata troncata per lo spazio, mostrando solo dettagli parziali di ciascun processo del segmento. La risposta completa elenca tutti i dettagli per i processi del segmento richiesti.
+>[!NOTE]
+>
+>La risposta seguente è stata troncata per lo spazio, mostrando solo dettagli parziali di ciascun processo del segmento. La risposta completa elenca tutti i dettagli per i processi del segmento richiesti.
 
 ```json
 {
@@ -424,7 +428,7 @@ Una risposta corretta restituisce lo stato HTTP 207 con i processi di segmento r
 
 ## Annullamento o eliminazione di un processo di segmento specifico
 
-Puoi richiedere di eliminare un processo segmento specificato eseguendo una richiesta DELETE all’ `/segment/jobs` endpoint e fornendo il valore del processo del segmento `id` nel percorso della richiesta.
+Potete richiedere di eliminare un processo segmento specificato eseguendo una richiesta di DELETE all’ `/segment/jobs` endpoint e fornendo il valore del processo del segmento `id` nel percorso della richiesta.
 
 **Formato API**
 
