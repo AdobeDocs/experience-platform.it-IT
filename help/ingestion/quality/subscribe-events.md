@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Iscrizione agli eventi di assimilazione dei dati
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1498739d753bdb569e0d3e091e4160bdae40a32f
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '825'
 ht-degree: 1%
@@ -14,24 +14,26 @@ ht-degree: 1%
 
 # Notifiche di assimilazione dei dati
 
-Il processo di assimilazione dei dati in Adobe Experience Platform consiste di più passaggi. Una volta identificati i file di dati che devono essere trasferiti in Piattaforma, il processo di assimilazione inizia e ogni passaggio avviene consecutivamente fino a quando i dati non vengono correttamente assimilati o non hanno esito negativo. Il processo di assimilazione può essere avviato tramite l’API [di inserimento dati di](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) Adobe Experience Platform o tramite l’interfaccia utente di Experience Platform.
+Il processo di assimilazione dei dati in  Adobe Experience Platform consiste di più passaggi. Una volta identificati i file di dati che devono essere trasferiti in Platform, il processo di assimilazione inizia e ogni passaggio si verifica consecutivamente fino a quando i dati non vengono correttamente acquisiti o meno. Il processo di assimilazione può essere avviato utilizzando l&#39;API [di inserimento dati di](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) Adobe Experience Platform o utilizzando l&#39;interfaccia utente  Experience Platform.
 
-I dati caricati nella piattaforma devono passare attraverso più passaggi per raggiungere la destinazione, il Data Lake o l&#39;archivio dati del profilo cliente in tempo reale. Ogni passaggio prevede l&#39;elaborazione dei dati, la convalida dei dati e la memorizzazione dei dati prima di passare al passaggio successivo. A seconda della quantità di dati che vengono acquisiti, questo può diventare un processo che richiede molto tempo ed è sempre possibile che il processo non riesca a causa di errori di convalida, semantica o elaborazione. In caso di errore, i problemi relativi ai dati devono essere risolti e l&#39;intero processo di assimilazione deve essere riavviato utilizzando i file di dati corretti.
+I dati caricati in Platform devono passare attraverso più passaggi per raggiungere la destinazione, il Data Lake o l&#39;archivio dati del profilo cliente in tempo reale. Ogni passaggio prevede l&#39;elaborazione dei dati, la convalida dei dati e la memorizzazione dei dati prima di passare al passaggio successivo. A seconda della quantità di dati che vengono acquisiti, questo può diventare un processo che richiede molto tempo ed è sempre possibile che il processo non riesca a causa di errori di convalida, semantica o elaborazione. In caso di errore, i problemi relativi ai dati devono essere risolti e l&#39;intero processo di assimilazione deve essere riavviato utilizzando i file di dati corretti.
 
-Per facilitare il monitoraggio del processo di assimilazione, Experience Platform consente di iscriversi a una serie di eventi pubblicati in ogni fase del processo, notificandovi lo stato dei dati acquisiti e ogni possibile errore.
+Per assistere nel monitoraggio del processo di assimilazione,  Experience Platform consente di sottoscrivere un set di eventi pubblicati da ogni fase del processo, notificando all’utente lo stato dei dati acquisiti e ogni possibile errore.
 
 ## Eventi di notifica dello stato disponibili
 
 Di seguito è riportato un elenco delle notifiche di stato relative all’inserimento dei dati disponibili a cui puoi iscriverti.
 
->[!NOTE] È disponibile un solo argomento evento per tutte le notifiche di assimilazione dei dati. Per distinguere tra stati diversi, è possibile utilizzare il codice evento.
+>[!NOTE]
+>
+>È disponibile un solo argomento evento per tutte le notifiche di assimilazione dei dati. Per distinguere tra stati diversi, è possibile utilizzare il codice evento.
 
-| Servizio piattaforma | Stato | Descrizione evento | Codice evento |
+| Platform Service | Stato | Descrizione evento | Codice evento |
 | ---------------- | ------ | ----------------- | ---------- |
 | Destinazione dati | success | Ingestione - Batch completato | ing_load_success |
 | Destinazione dati | fallimento | Ingestione - Batch non riuscito | ing_load_failure |
-| Profilo cliente in tempo reale | success | Servizio profilo - Batch di caricamento dati completato | ps_load_success |
-| Profilo cliente in tempo reale | fallimento | Servizio profilo: batch di caricamento dati non riuscito | ps_load_failure |
+| Profilo del cliente in tempo reale | success | Servizio profilo - Batch di caricamento dati completato | ps_load_success |
+| Profilo del cliente in tempo reale | fallimento | Servizio profilo: batch di caricamento dati non riuscito | ps_load_failure |
 | Grafico identità | success | Grafico identità: batch di caricamento dati completato | ig_load_success |
 | Grafico identità | fallimento | Grafico identità: batch di caricamento dati non riuscito | ig_load_failure |
 
@@ -41,13 +43,13 @@ Lo schema dell&#39;evento di notifica dell&#39;assimilazione dei dati è uno sch
 
 ## Iscriviti alle notifiche sullo stato di inserimento dei dati
 
-Attraverso gli eventi di I/O [Adobe](https://www.adobe.io/apis/experienceplatform/events.html), potete abbonarvi a più tipi di notifiche mediante i webhooks. Le sezioni seguenti descrivono i passaggi per iscriversi alle notifiche della piattaforma per gli eventi di assimilazione dei dati tramite Adobe Developer Console.
+Attraverso gli eventi di I/O [Adobe](https://www.adobe.io/apis/experienceplatform/events.html), potete abbonarvi a più tipi di notifiche mediante i webhooks. Le sezioni seguenti descrivono i passaggi per iscriversi alle notifiche Platform relative agli eventi di assimilazione dei dati tramite Adobe Developer Console.
 
 ### Creare un nuovo progetto in Adobe Developer Console
 
-Andate ad [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) ed effettuate l&#39;accesso con il vostro Adobe ID. Attenetevi quindi ai passaggi descritti nell&#39;esercitazione sulla [creazione di un progetto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vuoto nella documentazione di Adobe Developer Console.
+Andate ad [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) ed effettuate l&#39;accesso con il vostro Adobe ID . Attenetevi quindi ai passaggi descritti nell&#39;esercitazione sulla [creazione di un progetto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vuoto nella documentazione di Adobe Developer Console.
 
-### Aggiunta di eventi della piattaforma esperienza al progetto
+### Aggiungere  eventi Experience Platform al progetto
 
 Dopo aver creato un nuovo progetto, andate alla schermata di panoramica del progetto. Da qui, clicca **[!UICONTROL Add event]**.
 
@@ -89,4 +91,4 @@ Viene visualizzata la pagina dei dettagli per la registrazione dell&#39;evento a
 
 ## Passaggi successivi
 
-Una volta registrate le notifiche della piattaforma per il progetto, potete visualizzare gli eventi ricevuti dal dashboard del progetto. Per istruzioni dettagliate su come tenere traccia degli eventi, consultate la guida [Tracing Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) .
+Una volta registrate le notifiche Platform al progetto, potete visualizzare gli eventi ricevuti dal dashboard del progetto. Per istruzioni dettagliate su come tenere traccia degli eventi, consultate la guida [Tracing Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) .
