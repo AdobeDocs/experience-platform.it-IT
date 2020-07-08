@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Creazione di integrazioni ETL
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '4227'
+ht-degree: 0%
 
 ---
 
 
-# Sviluppo di integrazioni ETL per Adobe Experience Platform
+# Sviluppo di integrazioni ETL per  Adobe Experience Platform
 
-La guida all&#39;integrazione ETL descrive i passaggi generali per la creazione di connettori sicuri e ad alte prestazioni per la piattaforma Experience e per l&#39;assimilazione dei dati nella piattaforma.
+La guida all&#39;integrazione ETL descrive i passaggi generali per la creazione di connettori sicuri e ad alte prestazioni per  Experience Platform e per l&#39;assimilazione dei dati in Platform.
 
 
 - [Catalogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
@@ -20,50 +23,52 @@ La guida all&#39;integrazione ETL descrive i passaggi generali per la creazione 
 - [API di autenticazione e autorizzazione](../tutorials/authentication.md)
 - [Registro di schema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
 
-Questa guida include anche chiamate API di esempio da utilizzare per la progettazione di un connettore ETL, con collegamenti alla documentazione che delinea ogni servizio Experience Platform e l&#39;utilizzo della relativa API, in modo più dettagliato.
+Questa guida include anche chiamate API di esempio da utilizzare per la progettazione di un connettore ETL, con collegamenti alla documentazione che delinea ogni  servizio Experience Platform e l&#39;utilizzo della relativa API, in modo più dettagliato.
 
 Un&#39;integrazione di esempio è disponibile su GitHub tramite il codice [di riferimento per l&#39;integrazione dell&#39;ecosistema](https://github.com/adobe/acp-data-services-etl-reference) ETL in base alla licenza Apache versione 2.0.
 
 ## Flusso di lavoro
 
-Il seguente diagramma del flusso di lavoro fornisce una panoramica di alto livello sull’integrazione dei componenti di Adobe Experience Platform con un’applicazione e un connettore ETL.
+Il seguente diagramma di flusso di lavoro fornisce una panoramica di alto livello sull’integrazione di componenti di  Adobe Experience Platform con un’applicazione e un connettore ETL.
 
 ![](images/etl.png)
 
-## Componenti di Adobe Experience Platform
+## Componenti per Adobi Experience Platform 
 
-Esistono diversi componenti della piattaforma Experience che partecipano alle integrazioni di connettori ETL. L&#39;elenco seguente illustra diversi componenti e funzionalità chiave:
+Nelle integrazioni di connettori ETL sono coinvolti più componenti Experience Platform . L&#39;elenco seguente illustra diversi componenti e funzionalità chiave:
 
-- **Adobe Identity Management System (IMS)** - Fornisce il framework per l&#39;autenticazione ai servizi Adobe.
+- **Adobe  Identity Management System (IMS)** - Fornisce il framework per l&#39;autenticazione ai servizi Adobe.
 - **Organizzazione** IMS - Un&#39;entità aziendale che può possedere o concedere in licenza prodotti e servizi e consentire l&#39;accesso ai propri membri.
 - **Utente** IMS - Membri di un&#39;organizzazione IMS. La relazione tra l’organizzazione e l’utente è molto complessa.
-- **Sandbox** - Una partizione virtuale una singola istanza della piattaforma, per sviluppare e sviluppare applicazioni per esperienze digitali.
-- **Individuazione** dei dati - Registra i metadati dei dati acquisiti e trasformati in Experience Platform.
-- **Accesso** ai dati - Fornisce agli utenti un&#39;interfaccia per accedere ai loro dati in Experience Platform.
-- **Ingestione** dati - Invia i dati a Experience Platform con le API di inserimento dati.
-- **Registro** di sistema dello schema - Definisce e memorizza lo schema che descrive la struttura dei dati da utilizzare in Experience Platform.
+- **Sandbox** - Una partizione virtuale una singola istanza di Platform, per sviluppare e sviluppare applicazioni per esperienze digitali.
+- **Rilevamento** dati - Registra i metadati dei dati acquisiti e trasformati in  Experience Platform.
+- **Accesso** ai dati - Fornisce agli utenti un&#39;interfaccia per accedere ai loro dati in  Experience Platform.
+- **Ingestione** dati - Invia i dati ad  Experience Platform con le API di inserimento dati.
+- **Registro** di sistema dello schema - Definisce e memorizza lo schema che descrive la struttura dei dati da utilizzare in  Experience Platform.
 
-## Guida introduttiva alle API di Experience Platform
+## Guida introduttiva  API Experience Platform
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere o avere a disposizione per effettuare correttamente chiamate alle API della piattaforma Experience.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere o avere a disposizione per eseguire correttamente chiamate alle API Experience Platform .
 
 ### Lettura di chiamate API di esempio
 
-Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione [come leggere le chiamate](../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi della piattaforma Experience.
+Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere le chiamate](../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi di  Experience Platform.
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle API della piattaforma, dovete prima completare l&#39;esercitazione [di](../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come illustrato di seguito:
+Per effettuare chiamate alle API Platform, è prima necessario completare l&#39;esercitazione [di](../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API Experience Platform, come illustrato di seguito:
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API della piattaforma richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in  Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API Platform richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Per ulteriori informazioni sulle sandbox in Piattaforma, consultate la documentazione [sulla panoramica della](../sandboxes/home.md)sandbox.
+>[!NOTE]
+>
+>Per ulteriori informazioni sulle sandbox in Platform, consultate la documentazione [sulla panoramica della](../sandboxes/home.md)sandbox.
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva:
 
@@ -71,21 +76,23 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 ## Flusso generale utente
 
-Per iniziare, un utente ETL accede all’interfaccia utente della piattaforma Experience e crea dei set di dati per l’inserimento utilizzando un connettore standard o un connettore di servizio push.
+Per iniziare, un utente ETL accede all&#39;interfaccia utente  Experience Platform (UI) e crea dei set di dati per l&#39;inserimento utilizzando un connettore standard o un connettore di servizio push.
 
-Nell&#39;interfaccia utente, l&#39;utente crea il set di dati di output selezionando uno schema di set di dati. La scelta dello schema dipende dal tipo di dati (record o serie temporali) che si sta ingerendo in Piattaforma. Facendo clic sulla scheda Schemi all&#39;interno dell&#39;interfaccia utente, l&#39;utente potrà visualizzare tutti gli schemi disponibili, incluso il tipo di comportamento supportato dallo schema.
+Nell&#39;interfaccia utente, l&#39;utente crea il set di dati di output selezionando uno schema di set di dati. La scelta dello schema dipende dal tipo di dati (record o serie temporali) che si sta ingerendo in Platform. Facendo clic sulla scheda Schemi all&#39;interno dell&#39;interfaccia utente, l&#39;utente potrà visualizzare tutti gli schemi disponibili, incluso il tipo di comportamento supportato dallo schema.
 
-Nello strumento ETL, l&#39;utente inizierà a progettare le trasformazioni di mappatura dopo aver configurato la connessione appropriata (utilizzando le proprie credenziali). Si presume che lo strumento ETL disponga già di connettori della piattaforma Experience (processo non definito in questa Guida all&#39;integrazione).
+Nello strumento ETL, l&#39;utente inizierà a progettare le trasformazioni di mappatura dopo aver configurato la connessione appropriata (utilizzando le proprie credenziali). Si presume che lo strumento ETL abbia già installato  connettori Experience Platform (processo non definito in questa Guida all&#39;integrazione).
 
 Nel flusso di lavoro [](./workflow.md)ETL sono stati forniti dei modelli per uno strumento e un flusso di lavoro ETL di esempio. Anche se gli strumenti ETL possono essere diversi in termini di formato, la maggior parte presenta funzionalità simili.
 
->[!NOTE] Il connettore ETL deve specificare un filtro di marca temporale che contrassegna la data in cui inserire i dati e l&#39;offset (cioè la finestra per la quale leggere i dati). Lo strumento ETL dovrebbe supportare l’utilizzo di questi due parametri in questa o in un’altra interfaccia utente pertinente. In Adobe Experience Platform, questi parametri saranno mappati sulle date disponibili (se presenti) o sulla data acquisita presente nell&#39;oggetto batch del dataset.
+>[!NOTE]
+>
+>Il connettore ETL deve specificare un filtro di marca temporale che contrassegna la data in cui inserire i dati e l&#39;offset (cioè la finestra per la quale leggere i dati). Lo strumento ETL dovrebbe supportare l’utilizzo di questi due parametri in questa o in un’altra interfaccia utente pertinente. In  Adobe Experience Platform, questi parametri saranno mappati sulle date disponibili (se presenti) o sulla data acquisita presente nell&#39;oggetto batch del dataset.
 
 ### Visualizza elenco di set di dati
 
 Utilizzando l&#39;origine dei dati per la mappatura, è possibile ottenere un elenco di tutti i set di dati disponibili tramite l&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)Catalog.
 
-Potete inviare una singola richiesta API per visualizzare tutti i set di dati disponibili (ad es. `GET /dataSets`), con la best practice per includere parametri di query che limitano la dimensione della risposta.
+Potete inviare una singola richiesta API per visualizzare tutti i set di dati disponibili (ad es. `GET /dataSets`), in cui si consiglia di includere parametri di query che limitano la dimensione della risposta.
 
 Nei casi in cui vengono richieste informazioni _complete_ sui dataset, il payload di risposta può raggiungere oltre 3 GB di dimensione, il che può rallentare le prestazioni complessive. Pertanto, l&#39;utilizzo di parametri di query per filtrare solo le informazioni necessarie renderà più efficienti le query di Catalog.
 
@@ -163,7 +170,9 @@ Lo schema XDM è lo schema utilizzato per presentare all&#39;utente un elenco di
 
 Il primo valore &quot;schemaRef.id&quot; nell&#39;oggetto risposta precedente (`https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18`) è un URI che punta a uno schema XDM specifico nel Registro di sistema dello schema. È possibile recuperare lo schema eseguendo una richiesta di ricerca (GET) all&#39;API del Registro di sistema dello schema.
 
->[!NOTE] La proprietà &quot;schemaRef&quot; sostituisce la proprietà obsoleta &quot;schema&quot;. Se &quot;schemaRef&quot; è assente dal dataset o non contiene un valore, sarà necessario verificare la presenza di una proprietà &quot;schema&quot;. Ciò può essere fatto sostituendo &quot;schemaRef&quot; con &quot;schema&quot; nel parametro di `properties` query della chiamata precedente. Ulteriori dettagli sulla proprietà &quot;schema&quot; sono disponibili nella sezione [DataSet &quot;schema&quot; Proprietà](#dataset-schema-property-deprecated---eol-2019-05-30) che segue.
+>[!NOTE]
+>
+>La proprietà &quot;schemaRef&quot; sostituisce la proprietà obsoleta &quot;schema&quot;. Se &quot;schemaRef&quot; è assente dal dataset o non contiene un valore, sarà necessario verificare la presenza di una proprietà &quot;schema&quot;. Ciò può essere fatto sostituendo &quot;schemaRef&quot; con &quot;schema&quot; nel parametro di `properties` query della chiamata precedente. Ulteriori dettagli sulla proprietà &quot;schema&quot; sono disponibili nella sezione [DataSet &quot;schema&quot; Proprietà](#dataset-schema-property-deprecated---eol-2019-05-30) che segue.
 
 **Formato API**
 
@@ -196,7 +205,9 @@ Il formato della risposta dipende dal tipo di intestazione Accetto inviato nella
 | `application/vnd.adobe.xed-full-notext+json; version={major version}` | $refs e allOf risolti, senza titoli o descrizioni |
 | `application/vnd.adobe.xed-full-desc+json; version={major version}` | $refs e allOf risolti, descrittori inclusi |
 
->[!NOTE] `application/vnd.adobe.xed-id+json` e `application/vnd.adobe.xed-full+json; version={major version}` sono le intestazioni Accetta più comunemente utilizzate. `application/vnd.adobe.xed-id+json` è preferibile elencare le risorse nel Registro di sistema dello schema in quanto restituisce solo &quot;title&quot;, &quot;id&quot; e &quot;version&quot;. `application/vnd.adobe.xed-full+json; version={major version}` è preferibile visualizzare una risorsa specifica (in base al relativo &quot;id&quot;), in quanto restituisce tutti i campi (nidificati sotto &quot;proprietà&quot;), nonché titoli e descrizioni.
+>[!NOTE]
+>
+>`application/vnd.adobe.xed-id+json` e `application/vnd.adobe.xed-full+json; version={major version}` sono le intestazioni Accetta più utilizzate. `application/vnd.adobe.xed-id+json` è preferibile elencare le risorse nel Registro di sistema dello schema in quanto restituisce solo &quot;title&quot;, &quot;id&quot; e &quot;version&quot;. `application/vnd.adobe.xed-full+json; version={major version}` è preferibile visualizzare una risorsa specifica (in base al relativo &quot;id&quot;), in quanto restituisce tutti i campi (nidificati sotto &quot;proprietà&quot;), nonché titoli e descrizioni.
 
 **Risposta**
 
@@ -236,17 +247,21 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/xdms/context/pers
   -H "x-api-key: {API_KEY}"
 ```
 
->[!NOTE] Un parametro di query facoltativo `expansion=xdm`indica all&#39;API di espandere completamente e in linea tutti gli schemi di riferimento. È possibile eseguire questa operazione quando si presenta all&#39;utente un elenco di tutti i campi potenziali.
+>[!NOTE]
+>
+>Un parametro di query facoltativo `expansion=xdm`indica all&#39;API di espandere completamente e in linea tutti gli schemi di riferimento. È possibile eseguire questa operazione quando si presenta all&#39;utente un elenco di tutti i campi potenziali.
 
 **Risposta**
 
 Analogamente ai passaggi per [visualizzare lo schema](#view-dataset-schema)del set di dati, la risposta contiene uno schema JSON che descrive la struttura e le informazioni a livello di campo dei dati, serializzati come JSON.
 
->[!NOTE] Quando il campo &quot;schema&quot; è completamente vuoto o assente, il connettore deve leggere il campo &quot;schemaRef&quot; e utilizzare l&#39;API [del Registro di](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) schema come mostrato nei passaggi precedenti per [visualizzare uno schema](#view-dataset-schema)di set di dati.
+>[!NOTE]
+>
+>Quando il campo &quot;schema&quot; è completamente vuoto o assente, il connettore deve leggere il campo &quot;schemaRef&quot; e utilizzare l&#39;API [del Registro di](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) schema come mostrato nei passaggi precedenti per [visualizzare uno schema](#view-dataset-schema)di set di dati.
 
 ### La proprietà &quot;osservableSchema&quot;
 
-La proprietà &quot;osservableSchema&quot; di un set di dati ha una struttura JSON corrispondente a quella del JSON dello schema XDM. &quot;osservableSchema&quot; contiene i campi presenti nei file di input in arrivo. Quando si scrivono dati in Experience Platform, non è necessario utilizzare tutti i campi dello schema di destinazione. Devono invece fornire solo i campi utilizzati.
+La proprietà &quot;osservableSchema&quot; di un set di dati ha una struttura JSON corrispondente a quella del JSON dello schema XDM. &quot;osservableSchema&quot; contiene i campi presenti nei file di input in arrivo. Durante la scrittura dei dati in  Experience Platform, non è necessario utilizzare tutti i campi dello schema di destinazione. Devono invece fornire solo i campi utilizzati.
 
 Lo schema osservabile è lo schema da utilizzare per la lettura dei dati o la presentazione di un elenco di campi disponibili per la lettura/mappatura.
 
@@ -476,19 +491,19 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/59c93f3d
 }
 ```
 
-I dati verranno scritti in Experience Platform utilizzando l&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)Data Ingestion.  La scrittura dei dati è un processo asincrono. Quando i dati vengono scritti in Adobe Experience Platform, un batch viene creato e contrassegnato come un successo solo dopo che i dati sono stati scritti completamente.
+I dati verranno scritti in  Experience Platform tramite [Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).  La scrittura dei dati è un processo asincrono. Quando i dati vengono scritti  Adobe Experience Platform, viene creato un batch contrassegnato come un successo solo dopo che i dati sono stati scritti completamente.
 
-I dati in Experience Platform devono essere scritti sotto forma di file parquet.
+I dati in  Experience Platform devono essere scritti sotto forma di file parquet.
 
 ## Fase di esecuzione
 
-All&#39;avvio dell&#39;esecuzione, il connettore (come definito nel componente di origine) leggerà i dati di Experience Platform utilizzando l&#39;API [di accesso ai](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)dati. Il processo di trasformazione leggerà i dati per un determinato intervallo di tempo. Internamente, esegue una query sui batch di set di dati di origine. Durante l&#39;esecuzione di query, utilizzerà un valore parametrizzato (per i dati delle serie temporali, o per i dati incrementali) per la data di inizio e i file di set di dati per tali batch, quindi inizierà a richiedere i dati per tali file di set di dati.
+All&#39;avvio dell&#39;esecuzione, il connettore (come definito nel componente di origine) leggerà i dati di  Experience Platform utilizzando l&#39;API [di accesso](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)ai dati. Il processo di trasformazione leggerà i dati per un determinato intervallo di tempo. Internamente, esegue una query sui batch di set di dati di origine. Durante l&#39;esecuzione di query, utilizzerà un valore parametrizzato (per i dati delle serie temporali, o per i dati incrementali) per la data di inizio e i file di set di dati per tali batch, quindi inizierà a richiedere i dati per tali file di set di dati.
 
 ### Trasformazioni di esempio
 
 Il documento di [esempio sulle trasformazioni](./transformations.md) ETL contiene una serie di trasformazioni di esempio, tra cui la gestione dell&#39;identità e le mappature dei tipi di dati. Utilizzate queste trasformazioni per riferimento.
 
-### Leggi i dati da Experience Platform
+### Leggere i dati da  Experience Platform
 
 Utilizzando l&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)Catalog, potete recuperare tutti i batch tra un&#39;ora di inizio e una di fine specificate e ordinarli in base all&#39;ordine in cui sono stati creati.
 
@@ -559,11 +574,13 @@ Se si utilizza l&#39;implementazione di riferimento trovata in [GitHub](https://
 
 La convalida può essere eseguita per i tipi XDM logici, utilizzando attributi quali `minLength` e `maxlength` per le stringhe, `minimum` e `maximum` per i numeri interi e altro ancora. La guida [per gli sviluppatori API del Registro di](../xdm/api/getting-started.md) schema contiene una tabella che delinea i tipi XDM e le proprietà che possono essere utilizzate per la convalida.
 
->[!NOTE] I valori minimo e massimo forniti per vari `integer` tipi sono i valori MIN e MAX che il tipo può supportare, ma questi valori possono essere ulteriormente limitati a valori minimi e massimi scelti.
+>[!NOTE]
+>
+>I valori minimo e massimo forniti per vari `integer` tipi sono i valori MIN e MAX che il tipo può supportare, ma questi valori possono essere ulteriormente limitati a valori minimi e massimi scelti.
 
 ### Creare un batch
 
-Una volta elaborati i dati, lo strumento ETL riscrive i dati in Experience Platform utilizzando l&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)Batch Ingestion. Prima di poter aggiungere dati a un set di dati, questi devono essere collegati a un batch che verrà successivamente caricato in un set di dati specifico.
+Una volta elaborati i dati, lo strumento ETL riscrive i dati ad  Experience Platform utilizzando l&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)di inserimento batch. Prima di poter aggiungere dati a un set di dati, questi devono essere collegati a un batch che verrà successivamente caricato in un set di dati specifico.
 
 **Richiesta**
 
@@ -587,7 +604,7 @@ Dopo aver creato un nuovo batch, i file possono essere caricati in un set di dat
 
 **Richiesta**
 
-I dati in Experience Platform devono essere scritti sotto forma di file parquet.
+I dati in  Experience Platform devono essere scritti sotto forma di file parquet.
 
 ```shell
 curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/dataSets/{DATASET_ID}/files/{FILE_NAME}.parquet" \
@@ -603,7 +620,7 @@ curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 Dopo aver caricato tutti i file nel batch, il batch può essere segnalato per il completamento. In questo modo, le voci &quot;DataSetFile&quot; del catalogo vengono create per i file completati e associate al batch di generazione. Il batch di cataloghi viene quindi contrassegnato come riuscito, che attiva i flussi a valle per l’acquisizione dei dati disponibili.
 
-I dati verranno prima inseriti nella posizione di verifica in Adobe Experience Platform e quindi spostati nella posizione finale dopo la catalogazione e la convalida. I batch verranno contrassegnati come validi quando tutti i dati vengono spostati in una posizione permanente.
+I dati verranno prima inseriti nella posizione di pre-produzione  Adobe Experience Platform e quindi spostati nella posizione finale dopo la catalogazione e la convalida. I batch verranno contrassegnati come validi quando tutti i dati vengono spostati in una posizione permanente.
 
 **Richiesta**
 
@@ -742,13 +759,13 @@ Quando si utilizzano i profili snapshot, lo strumento ETL dovrà selezionare l&#
 
 La riproduzione batch e il ritrattamento dei dati possono essere richiesti nei casi in cui un cliente scopre che negli ultimi &#39;n&#39; giorni, i dati elaborati da ETL non si sono verificati come previsto o che i dati di origine stessi non sono stati corretti.
 
-A tal fine, gli amministratori dei dati del client utilizzeranno l&#39;interfaccia utente della piattaforma per rimuovere i batch che contengono dati danneggiati. Quindi, è probabile che l&#39;ETL debba essere rieseguito, ripopolando con dati corretti. Se l’origine stessa conteneva dati danneggiati, l’amministratore/ingegnere dei dati dovrà correggere i batch di origine e riacquisire i dati (in Adobe Experience Platform o tramite connettori ETL).
+A tal fine, gli amministratori dei dati del client utilizzeranno l&#39;interfaccia utente di Platform per rimuovere i batch che contengono dati danneggiati. Quindi, è probabile che l&#39;ETL debba essere rieseguito, ripopolando con dati corretti. Se l&#39;origine stessa dispone di dati danneggiati, l&#39;ingegnere/amministratore dei dati dovrà correggere i batch di origine e riacquisire i dati (sia nel Adobe Experience Platform  che tramite connettori ETL).
 
-In base al tipo di dati generato, sarà l&#39;ingegnere dei dati a scegliere se rimuovere un singolo batch o tutti i batch da determinati dataset. I dati verranno rimossi/archiviati in base alle linee guida della piattaforma esperienza.
+In base al tipo di dati generato, sarà l&#39;ingegnere dei dati a scegliere se rimuovere un singolo batch o tutti i batch da determinati dataset. I dati verranno rimossi/archiviati secondo  linee guida Experience Platform.
 
 È probabile che la funzionalità ETL per eliminare i dati sia importante.
 
-Una volta completata l&#39;eliminazione, gli amministratori client dovranno riconfigurare Adobe Experience Platform per riavviare l&#39;elaborazione dei servizi di base dal momento in cui i batch vengono eliminati.
+Una volta completata l&#39;eliminazione, gli amministratori client dovranno riconfigurare  Adobe Experience Platform per riavviare l&#39;elaborazione per i servizi di base dal momento in cui i batch vengono eliminati.
 
 ## Elaborazione batch simultanea
 
@@ -764,7 +781,7 @@ Per i batch di origine, dipenderà di nuovo dalla preferenza del cliente e dal v
 
 Il differimento è un processo in cui i dati di input non sono ancora sufficientemente completi per essere inviati ai processi a valle, ma possono essere utilizzati in futuro. I client determineranno la propria tolleranza individuale per la finestra dei dati per future corrispondenze rispetto al costo dell&#39;elaborazione per informare la loro decisione di mettere da parte i dati e rielaborarli nella successiva esecuzione della trasformazione, sperando che possa essere arricchita e riconciliata/cucita in un momento futuro all&#39;interno della finestra di conservazione. Questo ciclo è in corso finché la riga non viene elaborata a sufficienza o si ritiene che sia troppo stantio per continuare a investire in. Ogni iterazione genererà dati differiti, ovvero un superset di tutti i dati differiti nelle iterazioni precedenti.
 
-Adobe Experience Platform non identifica i dati differiti al momento, pertanto le implementazioni dei client devono basarsi sulle configurazioni manuali ETL e Dataset per creare un altro dataset nel mirroring della piattaforma del dataset di origine che può essere utilizzato per mantenere i dati differiti. In questo caso, i dati differiti saranno simili ai dati snapshot. In ogni esecuzione della trasformazione ETL, i dati di origine saranno uniti ai dati differiti e inviati per l&#39;elaborazione.
+ Adobe Experience Platform non identifica i dati differiti al momento, pertanto le implementazioni dei client devono basarsi sulle configurazioni manuali ETL e Dataset per creare un altro dataset in Platform che rispecchi il dataset di origine e che può essere utilizzato per mantenere i dati differiti. In questo caso, i dati differiti saranno simili ai dati snapshot. In ogni esecuzione della trasformazione ETL, i dati di origine saranno uniti ai dati differiti e inviati per l&#39;elaborazione.
 
 ## Changelog
 
