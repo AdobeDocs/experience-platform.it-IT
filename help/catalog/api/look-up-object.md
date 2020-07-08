@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Cercare un oggetto
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 4dcd174eda98fee1e8cf668819809bd061c6e8bb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '134'
+ht-degree: 2%
 
 ---
 
@@ -13,7 +16,9 @@ source-git-commit: 4dcd174eda98fee1e8cf668819809bd061c6e8bb
 
 Se si conosce l&#39;identificatore univoco di un oggetto Catalog specifico, è possibile eseguire una richiesta GET per visualizzare i dettagli dell&#39;oggetto.
 
->[!NOTE] Durante la visualizzazione di oggetti specifici, è comunque consigliabile [filtrare in base alle proprietà](filter-data.md) e restituire solo le proprietà interessate.
+>[!NOTE]
+>
+>Durante la visualizzazione di oggetti specifici, è comunque consigliabile [filtrare in base alle proprietà](filter-data.md) e restituire solo le proprietà interessate.
 
 **Formato API**
 
@@ -60,4 +65,6 @@ Una risposta corretta restituisce il dataset specificato con solo il set di dati
 }
 ```
 
->[!NOTE] Le proprietà i cui valori hanno il prefisso `@` rappresentano oggetti correlati. Per informazioni dettagliate su come visualizzare i dettagli di questi oggetti, vedere la sezione appendice sulla [visualizzazione degli oggetti](appendix.md#view-interrelated-objects) correlati.
+>[!NOTE]
+>
+>Le proprietà i cui valori hanno il prefisso `@` rappresentano oggetti correlati. Per informazioni dettagliate su come visualizzare i dettagli di questi oggetti, vedere la sezione appendice sulla [visualizzazione degli oggetti](appendix.md#view-interrelated-objects) correlati.
