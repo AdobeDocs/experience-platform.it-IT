@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Elaborazione delle richieste di privacy nel Data Lake
 topic: overview
 translation-type: tm+mt
-source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1274'
 ht-degree: 0%
@@ -39,7 +39,9 @@ Per ulteriori informazioni sugli spazi dei nomi di identità in  Experience Plat
 
 Durante la creazione di richieste di privacy per il Data Lake, è necessario fornire valori di identità validi (e relativi spazi di nomi associati) a ciascun singolo cliente al fine di individuare i propri dati ed elaborarli di conseguenza. Pertanto, tutti i set di dati soggetti a richieste di privacy devono contenere un descrittore **di** identità nello schema XDM associato.
 
->[!NOTE] Eventuali set di dati basati su schemi che non supportano i metadati del descrittore di identità (ad esempio, set di dati ad hoc) non possono attualmente essere elaborati nelle richieste di privacy.
+>[!NOTE]
+>
+>Eventuali set di dati basati su schemi che non supportano i metadati del descrittore di identità (ad esempio, set di dati ad hoc) non possono attualmente essere elaborati nelle richieste di privacy.
 
 Questa sezione descrive i passaggi necessari per aggiungere un descrittore di identità allo schema XDM di un set di dati esistente. Se disponete già di un set di dati con un descrittore di identità, potete passare alla sezione [](#nested-maps)successiva.
 
@@ -60,7 +62,9 @@ Dopo aver impostato i campi appropriati nello schema come campi di identità, è
 
 ### Utilizzo dell&#39;API {#identity-api}
 
->[!NOTE] Questa sezione presuppone che si conosca il valore ID URI univoco dello schema XDM del set di dati. Se non conosci questo valore, puoi recuperarlo utilizzando l&#39;API Catalog Service. Dopo aver letto la sezione [introduttiva](./api/getting-started.md) della guida per gli sviluppatori, segui i passaggi descritti in per [elencare](./api/list-objects.md) o [cercare](./api/look-up-object.md) gli oggetti del catalogo per trovare il set di dati. L&#39;ID dello schema si trova in `schemaRef.id`
+>[!NOTE]
+>
+>Questa sezione presuppone che si conosca il valore ID URI univoco dello schema XDM del set di dati. Se non conosci questo valore, puoi recuperarlo utilizzando l&#39;API Catalog Service. Dopo aver letto la sezione [introduttiva](./api/getting-started.md) della guida per gli sviluppatori, segui i passaggi descritti in per [elencare](./api/list-objects.md) o [cercare](./api/look-up-object.md) gli oggetti del catalogo per trovare il set di dati. L&#39;ID dello schema si trova in `schemaRef.id`
 >
 > Questa sezione include le chiamate all&#39;API del Registro di sistema dello schema. Per informazioni importanti sull’utilizzo dell’API, inclusa la conoscenza `{TENANT_ID}` e il concetto di contenitori, consultate la sezione [introduttiva](../xdm/api/getting-started.md) della guida per gli sviluppatori.
 
@@ -126,7 +130,9 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e i dettagli del de
 
 ## Invio di richieste {#submit}
 
->[!NOTE] Questa sezione descrive come formattare le richieste di privacy per il Data Lake. È vivamente consigliato di consultare la documentazione [Privacy Service UI](../privacy-service/ui/overview.md) o API [](../privacy-service/api/getting-started.md) Privacy Service per i passaggi completi su come inviare un processo per la privacy, incluso come formattare correttamente i dati di identità dell&#39;utente inviati nei payload di richiesta.
+>[!NOTE]
+>
+>Questa sezione descrive come formattare le richieste di privacy per il Data Lake. È vivamente consigliato di consultare la documentazione [Privacy Service UI](../privacy-service/ui/overview.md) o API [](../privacy-service/api/getting-started.md) Privacy Service per i passaggi completi su come inviare un processo per la privacy, incluso come formattare correttamente i dati di identità dell&#39;utente inviati nei payload di richiesta.
 
 La sezione seguente illustra come effettuare richieste di privacy per il Data Lake utilizzando l&#39;interfaccia utente o l&#39;API di Privacy Service.
 
