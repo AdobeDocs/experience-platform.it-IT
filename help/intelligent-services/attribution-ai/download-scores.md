@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Accesso ai punteggi in Attribution AI
 topic: Accessing scores
 translation-type: tm+mt
-source-git-commit: 01a500959802aa8c02bdaa8f024a9849ec23be51
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '981'
+ht-degree: 2%
 
 ---
 
@@ -220,7 +223,9 @@ Copiare il `href` valore di qualsiasi oggetto file nell&#39; `data` array, quind
 
 Per scaricare i dati del file, effettuate una richiesta GET al `"href"` valore copiato nel passaggio precedente [per recuperare i file](#retrieving-your-files).
 
->[!NOTE] Se effettui questa richiesta direttamente nella riga di comando, potrebbe essere richiesto di aggiungere un output dopo le intestazioni della richiesta. Nell&#39;esempio di richiesta seguente viene utilizzato `--output {FILENAME.FILETYPE}`.
+>[!NOTE]
+>
+>Se effettui questa richiesta direttamente nella riga di comando, potrebbe essere richiesto di aggiungere un output dopo le intestazioni della richiesta. Nell&#39;esempio di richiesta seguente viene utilizzato `--output {FILENAME.FILETYPE}`.
 
 **Formato API**
 
@@ -244,7 +249,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
   -O 'file.parquet'
 ```
 
->[!TIP] Prima di effettuare la richiesta GET, verificate di essere nella directory o nella cartella corretta in cui desiderate salvare il file.
+>[!TIP]
+>
+>Prima di effettuare la richiesta GET, verificate di essere nella directory o nella cartella corretta in cui desiderate salvare il file.
 
 **Risposta**
 
@@ -258,7 +265,9 @@ Questo documento descrive i passaggi necessari per scaricare i punteggi di Attri
 
 ## Accesso ai punteggi con Snowflake
 
->[!IMPORTANT] Per ulteriori informazioni sull&#39;accesso ai punteggi tramite SnowFlake, contattate attributionai-support@adobe.com.
+>[!IMPORTANT]
+>
+>Per ulteriori informazioni sull&#39;accesso ai punteggi tramite SnowFlake, contattate attributionai-support@adobe.com.
 
 È possibile accedere ai punteggi AI aggregati di Attribuzione tramite Snowflake. Al momento, è necessario inviare tramite e-mail il supporto Adobe all&#39;indirizzo attributionai-support@adobe.com per configurare e ricevere le credenziali per Snowflake nell&#39;account del lettore.
 
@@ -268,7 +277,9 @@ Una volta che il supporto Adobe ha elaborato la richiesta, vi viene fornito un U
 - Nome utente
 - Password
 
->[!NOTE] L&#39;account del lettore consente di interrogare i dati utilizzando client SQL, fogli di lavoro e soluzioni BI che supportano il connettore JDBC.
+>[!NOTE]
+>
+>L&#39;account del lettore consente di interrogare i dati utilizzando client SQL, fogli di lavoro e soluzioni BI che supportano il connettore JDBC.
 
 Una volta ottenute le credenziali e l&#39;URL, è possibile eseguire query sulle tabelle dei modelli, aggregate per data punto di contatto o data di conversione.
 
