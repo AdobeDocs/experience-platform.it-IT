@@ -1,17 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Campo di mappatura di Audience Manager
+title: ' campo di mappatura Audience Manager'
 topic: overview
 translation-type: tm+mt
-source-git-commit: 53fb7ea201ed9361584d24c8bd2ad10edd9f3975
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '148'
+ht-degree: 0%
 
 ---
 
 
-# Campi di mappatura di Audience Manager
+#  campi di mappatura Audience Manager
 
-Le tabelle di seguito contengono le mappature tra i campi nei dati di Adobe Audience Manager (Tempo reale, Dati caricati e Dati profilo) e i campi XDM corrispondenti.
+Le tabelle riportate di seguito contengono le mappature tra i campi  dati del Adobe Audience Manager (in tempo reale, caricati e dati del profilo) e i campi XDM corrispondenti.
 
 Per ulteriori informazioni su ciascun campo XDM, vedere il dizionario [dei campi](../../../../xdm/schema/field-dictionary.md) XDM.
 
@@ -47,7 +50,9 @@ Tipo: ExperienceEvent
 | `b_time` | `ExperienceEvent.timeStamp` |
 | `overwrite` | `overwriteTraits` |
 
->[!NOTE] I campi in entrata verranno ritirati in una versione futura.
+>[!NOTE]
+>
+>I campi in entrata verranno ritirati in una versione futura.
 
 ## Dati profilo
 
