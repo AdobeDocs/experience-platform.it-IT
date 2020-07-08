@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Appendice della guida per gli sviluppatori di Catalog Service
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '908'
+ht-degree: 0%
 
 ---
 
@@ -105,7 +108,9 @@ La richiesta seguente crea un nuovo dataset, quindi crea le viste correlate per 
 
 Ad esempio, se desiderate fare riferimento a un valore restituito da una richiesta secondaria precedente, potete creare un riferimento nel formato seguente: `<<{REQUEST_ID}.{ATTRIBUTE_NAME}>>` (dove `{REQUEST_ID}` è l’ID fornito dall’utente per la richiesta secondaria, come illustrato di seguito). È possibile fare riferimento a qualsiasi attributo disponibile nel corpo di un oggetto di risposta di una richiesta secondaria precedente utilizzando questi modelli.
 
->[!NOTE] Quando una sub-richiesta eseguita restituisce solo il riferimento a un oggetto (come è il valore predefinito per la maggior parte delle richieste POST e PUT nell&#39;API Catalog), il riferimento viene alias al valore `id` e può essere utilizzato come `<<{OBJECT_ID}.id>>`.
+>[!NOTE]
+>
+>Quando una sub-richiesta eseguita restituisce solo il riferimento a un oggetto (come è il valore predefinito per la maggior parte delle richieste POST e PUT nell&#39;API Catalog), il riferimento viene alias al valore `id` e può essere utilizzato come `<<{OBJECT_ID}.id>>`.
 
 ```shell
 curl -X POST \
@@ -187,6 +192,6 @@ In alcuni casi, è possibile convalidare un oggetto senza salvare le informazion
 
 ## Compattazione dei dati
 
-Compaction è un servizio Experience Platform che unisce i dati da file di piccole dimensioni a file più grandi senza modificare alcun dato. Per motivi di prestazioni, a volte è utile combinare un set di file di piccole dimensioni in file più grandi, in modo da fornire un accesso più rapido ai dati durante la query.
+Compaction è un servizio Experience Platform  che unisce i dati da file di piccole dimensioni a file di dimensioni maggiori senza modificare alcun dato. Per motivi di prestazioni, a volte è utile combinare un set di file di piccole dimensioni in file più grandi, in modo da fornire un accesso più rapido ai dati durante la query.
 
 Quando i file di un batch assimilato sono stati compattati, l’oggetto Catalog associato viene aggiornato a scopo di monitoraggio.
