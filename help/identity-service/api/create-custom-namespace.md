@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare uno spazio dei nomi personalizzato
 topic: API guide
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 5%
@@ -18,7 +18,9 @@ Utilizzando l&#39; [!DNL Identity Namespace] API, potete creare uno spazio nomi 
 
 Per consigli sulla creazione di spazi dei nomi personalizzati, consultate [la documentazione](../troubleshooting-guide.md)Domande frequenti sul servizio identità.
 
->[!NOTE] Gli spazi dei nomi sono un qualificatore per le identità. Pertanto, una volta creato, lo spazio nomi non può essere eliminato.
+>[!NOTE]
+>
+>Gli spazi dei nomi sono un qualificatore per le identità. Pertanto, una volta creato, lo spazio nomi non può essere eliminato.
 
 **Formato API**
 
