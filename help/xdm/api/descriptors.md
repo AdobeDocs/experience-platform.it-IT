@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Descrittori
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: c3d23ce0081932e61f50d426ac6d98ab7f4dfa3b
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1499'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Descrittori
 
-Gli schemi definiscono una visualizzazione statica delle entità di dati, ma non forniscono dettagli specifici su come i dati basati su tali schemi (ad esempio, set di dati) possono essere correlati tra loro. Adobe Experience Platform consente di descrivere queste relazioni e altri metadati interpretativi su uno schema utilizzando i descrittori.
+Gli schemi definiscono una visualizzazione statica delle entità di dati, ma non forniscono dettagli specifici su come i dati basati su tali schemi (ad esempio, set di dati) possono essere correlati tra loro.  Adobe Experience Platform consente di descrivere queste relazioni e altri metadati interpretativi di uno schema utilizzando i descrittori.
 
 I descrittori dello schema sono metadati a livello di tenant, il che significa che sono univoci per l&#39;organizzazione IMS e che tutte le operazioni del descrittore hanno luogo nel contenitore tenant.
 
@@ -22,7 +22,9 @@ A ogni schema può essere applicata una o più entità descrittori dello schema.
 
 Questo documento fornisce esempi di chiamate API per descrittori, oltre a un elenco completo di descrittori disponibili e i campi richiesti per la definizione di ciascun tipo.
 
->[!NOTE] I descrittori richiedono intestazioni Accetto univoche che sostituiscono `xed` con `xdm`, ma che sono molto simili a Accetta intestazioni utilizzate altrove nel Registro di sistema dello schema. Le intestazioni Accetta corrette sono state incluse nelle chiamate di esempio riportate di seguito, ma prestate particolare attenzione a garantire l’utilizzo delle intestazioni corrette.
+>[!NOTE]
+>
+>I descrittori richiedono intestazioni Accetto univoche che sostituiscono `xed` con `xdm`, ma che sono molto simili a Accetta intestazioni utilizzate altrove nel Registro di sistema dello schema. Le intestazioni Accetta corrette sono state incluse nelle chiamate di esempio riportate di seguito, ma prestate particolare attenzione a garantire l’utilizzo delle intestazioni corrette.
 
 ## Descrittori elenco
 
@@ -141,7 +143,7 @@ POST /tenant/descriptors
 
 **Richiesta**
 
-La richiesta seguente definisce un descrittore di identità in un campo &quot;indirizzo e-mail&quot; in uno schema di esempio. Questo indica a Experience Platform di utilizzare l&#39;indirizzo e-mail come identificatore per unire insieme le informazioni sulla persona.
+La richiesta seguente definisce un descrittore di identità in un campo &quot;indirizzo e-mail&quot; in uno schema di esempio. Questo indica  Experience Platform di utilizzare l&#39;indirizzo e-mail come identificatore per unire insieme le informazioni sull&#39;utente.
 
 ```SHELL
 curl -X POST \
@@ -236,7 +238,7 @@ Se si esegue una richiesta di ricerca (GET) per visualizzare il descrittore, i c
 
 ## Elimina descrittore
 
-Talvolta potrebbe essere necessario rimuovere un descrittore definito dal Registro di sistema dello schema. Questa operazione viene eseguita eseguendo una richiesta DELETE che fa riferimento al descrittore `@id` da rimuovere.
+Talvolta potrebbe essere necessario rimuovere un descrittore definito dal Registro di sistema dello schema. Questa operazione viene eseguita effettuando una richiesta di DELETE che fa riferimento al descrittore `@id` da rimuovere.
 
 **Formato API**
 
@@ -334,7 +336,7 @@ I descrittori di nomi descrittivi descrittivi consentono all&#39;utente di modif
 | `xdm:sourceProperty` | Percorso della proprietà specifica che sarà l&#39;identità. Il percorso deve iniziare con &quot;/&quot; e non terminare con uno. Non includere &quot;proprietà&quot; nel percorso (ad esempio, utilizzare &quot;/personalEmail/address&quot; invece di &quot;/properties/personalEmail/properties/address&quot;) |
 | `xdm:title` | Il nuovo titolo che si desidera visualizzare per questo campo, scritto in Case titolo. |
 | `xdm:description` | È possibile aggiungere una descrizione facoltativa insieme al titolo. |
-| `meta:enum` | Se il campo indicato da `xdm:sourceProperty` è un campo stringa, `meta:enum` determina l’elenco dei valori consigliati per il campo nell’interfaccia utente della piattaforma esperienza. È importante notare che non `meta:enum` dichiara un&#39;enumerazione né fornisce alcuna convalida di dati per il campo XDM.<br><br>Deve essere utilizzato solo per i campi XDM di base definiti da Adobe. Se la proprietà source è un campo personalizzato definito dall&#39;organizzazione, è necessario modificare la `meta:enum` proprietà del campo direttamente tramite una richiesta [](./update-resource.md)PATCH. |
+| `meta:enum` | Se il campo indicato da `xdm:sourceProperty` è un campo stringa, `meta:enum` determina l&#39;elenco dei valori consigliati per il campo nell&#39;interfaccia utente di Experience Platform . È importante notare che non `meta:enum` dichiara un&#39;enumerazione né fornisce alcuna convalida di dati per il campo XDM.<br><br>Deve essere utilizzato solo per i campi XDM di base definiti da Adobe. Se la proprietà source è un campo personalizzato definito dall&#39;organizzazione, è necessario modificare la `meta:enum` proprietà del campo direttamente tramite una richiesta [](./update-resource.md)PATCH. |
 
 #### Descrittore della relazione
 
