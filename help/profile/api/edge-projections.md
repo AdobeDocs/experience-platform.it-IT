@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Guida per lo sviluppatore di API profilo cliente in tempo reale
+title: Proiezioni Edge - API Profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
 workflow-type: tm+mt
 source-wordcount: '1919'
 ht-degree: 2%
@@ -107,7 +107,7 @@ La risposta include un `projectionDestinations` &#39;array con i dettagli per og
 
 Per ulteriori informazioni sugli attributi di una singola destinazione, consulta la sezione sulla [creazione di una destinazione](#create-a-destination) che segue.
 
-### Creare una destinazione {#create-a-destination}
+### Create a destination {#create-a-destination}
 
 Se la destinazione desiderata non esiste già, potete creare una nuova destinazione di proiezione effettuando una richiesta POST all&#39; `/config/destinations` endpoint.
 
