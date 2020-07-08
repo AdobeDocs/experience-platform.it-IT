@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Gestione delle autorizzazioni per un profilo di prodotto
 topic: user guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '279'
+ht-degree: 2%
 
 ---
 
@@ -29,7 +32,9 @@ Per aggiungere un&#39;autorizzazione, fate clic sull&#39;icona **più (+)** acca
 
 ![add-permissions](../images/add-permissions.png)
 
->[!NOTE] Nell&#39;elenco *Elementi* autorizzazioni inclusi vengono visualizzate solo le autorizzazioni aggiunte dalla categoria attualmente selezionata.
+>[!NOTE]
+>
+>Nell&#39;elenco *Elementi* autorizzazioni inclusi vengono visualizzate solo le autorizzazioni aggiunte dalla categoria attualmente selezionata.
 
 Per rimuovere un&#39;autorizzazione, fate clic sull&#39;icona **X** accanto al nome dell&#39;autorizzazione oppure selezionate **Rimuovi tutto** per rimuovere tutte le autorizzazioni nella categoria corrente. Le autorizzazioni rimosse vengono visualizzate nuovamente in Elementi *autorizzazioni* disponibili.
 
