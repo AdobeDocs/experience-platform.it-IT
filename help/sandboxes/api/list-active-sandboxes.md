@@ -4,14 +4,19 @@ solution: Experience Platform
 title: Elenca le sandbox attive per l'utente corrente
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 982764ae7807e40cbca5ca60c70bf363a271e3c2
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+workflow-type: tm+mt
+source-wordcount: '220'
+ht-degree: 1%
 
 ---
 
 
 # Elenca le sandbox attive per l&#39;utente corrente
 
->[!NOTE] A differenza di altri endpoint forniti nell&#39;API Sandbox, questo endpoint è disponibile per tutti gli utenti, inclusi quelli che non dispongono delle autorizzazioni di accesso di amministrazione sandbox.
+>[!NOTE]
+>
+>A differenza di altri endpoint forniti nell&#39;API Sandbox, questo endpoint è disponibile per tutti gli utenti, inclusi quelli che non dispongono delle autorizzazioni di accesso di amministrazione sandbox.
 
 Potete elencare le sandbox attive per l&#39;utente corrente eseguendo una richiesta GET all&#39;endpoint principale (`/`).
 
