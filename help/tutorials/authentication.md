@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Autenticazione e accesso  API Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 280456e68f54f49ce4a0134e226af89ad1f849a4
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 1%
@@ -69,7 +69,9 @@ Come per la procedura di aggiunta di uno sviluppatore, l’amministratore deve a
 
 ## Generazione di credenziali di accesso in Adobe Developer Console
 
->[!NOTE] Se state seguendo questo documento dalla guida [per gli sviluppatori di](../privacy-service/api/getting-started.md)Privacy Service, ora potete tornare a tale guida per generare le credenziali di accesso univoche per Privacy Service.
+>[!NOTE]
+>
+>Se state seguendo questo documento dalla guida [per gli sviluppatori di](../privacy-service/api/getting-started.md)Privacy Service, ora potete tornare a tale guida per generare le credenziali di accesso univoche per Privacy Service.
 
 Con Adobe Developer Console, dovete generare le seguenti tre credenziali di accesso:
 
