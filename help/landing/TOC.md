@@ -1,21 +1,21 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Guida di Adobe Experience Platform
+user-guide-title: ' Adobe Experience Platform'
 translation-type: tm+mt
-source-git-commit: 2c95e34b56b322f7cfb098b27210dd5242128803
+source-git-commit: a2726bfc5ef7feac374e57af9c986a9c521efa48
 workflow-type: tm+mt
-source-wordcount: '296'
-ht-degree: 26%
+source-wordcount: '306'
+ht-degree: 34%
 
 ---
 
 
 # Adobe Experience Platform {#landing}
 
-* [Panoramica della piattaforma Experience](home.md)
+* [Panoramica di  Experience Platform](home.md)
 * [Introduzione](get-started.md)
-* Experience Platform documentation {#documentation}
+* Documentazione di Experience Platform {#documentation}
    * [Panoramica della documentazione](documentation/overview.md)
    * [Controllo di accesso](https://docs.adobe.com/content/help/en/experience-platform/access-control/home.html)
    * [Auditor](https://docs.adobe.com/content/help/it-IT/auditor/using/overview.html)
@@ -25,23 +25,24 @@ ht-degree: 26%
    * [Ingestione dati](https://docs.adobe.com/content/help/en/experience-platform/ingestion/home.html)
    * [Area di lavoro Data Science](https://docs.adobe.com/content/help/en/experience-platform/data-science-workspace/home.html)
    * [Strumento di debug](https://docs.adobe.com/content/help/it-IT/debugger/using/experience-cloud-debugger.html)
+   * [Debugger 2.0 (versione beta)](https://docs.adobe.com/content/help/en/debugger/using-v2/experience-cloud-debugger.html)
    * [Servizio di disattivazione](https://docs.adobe.com/content/help/en/experience-platform/decisioning/home.html)
    * [Destinazioni](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html)
    * [ETL (Extract, Transform, Load)](https://docs.adobe.com/content/help/en/experience-platform/etl/home.html)
-   * [Servizio identità](https://docs.adobe.com/content/help/en/experience-platform/identity/home.html)
+   * [Servizio identità](https://docs.adobe.com/content/help/it-IT/experience-platform/identity/home.html)
    * [Servizi intelligenti](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/home.html)
    * [Launch](https://docs.adobe.com/content/help/it-IT/launch/using/overview.html)
    * [Approfondimenti sull&#39;osservabilità](https://docs.adobe.com/content/help/en/experience-platform/observability/home.html)
-   * [Servizio Privacy](https://docs.adobe.com/content/help/en/experience-platform/privacy/home.html)
-   * [Profilo (profilo cliente in tempo reale)](https://docs.adobe.com/content/help/en/experience-platform/profile/home.html)
+   * [Privacy Service](https://docs.adobe.com/content/help/en/experience-platform/privacy/home.html)
+   * [Profilo (profilo cliente in tempo reale)](https://docs.adobe.com/content/help/it-IT/experience-platform/profile/home.html)
    * [Servizio query](https://docs.adobe.com/content/help/en/experience-platform/query/home.html)
-   * [Piattaforma dati cliente in tempo reale](https://docs.adobe.com/content/help/it-IT/experience-platform/rtcdp/overview.html)
+   * [Dati cliente in tempo reale Platform](https://docs.adobe.com/content/help/it-IT/experience-platform/rtcdp/overview.html)
    * [Sandbox](https://docs.adobe.com/content/help/en/experience-platform/sandbox/home.html)
    * [Segmentazione](https://docs.adobe.com/content/help/en/experience-platform/segmentation/home.html)
    * [Origini (connettori)](https://docs.adobe.com/content/help/en/experience-platform/sources/home.html)
    * [SDK Web](https://docs.adobe.com/content/help/it-IT/experience-platform/edge/home.html)
-   * [XDM (modello dati esperienza)](https://docs.adobe.com/content/help/en/experience-platform/xdm/home.html)
-* [Esercitazioni sulla piattaforma Experience](https://docs.adobe.com/content/help/it-IT/experience-platform/tutorials/home.html)
+   * [XDM (modello dati esperienza)](https://docs.adobe.com/content/help/it-IT/experience-platform/xdm/home.html)
+* [esercitazioni Experience Platform](https://docs.adobe.com/content/help/it-IT/experience-platform/tutorials/home.html)
 * [Note sulla versione](https://docs.adobe.com/content/help/it-IT/experience-platform/release-notes/latest.translate.html)
 * [Glossario](glossary.md)
 * [Guida alla risoluzione dei problemi](troubleshooting.md)
