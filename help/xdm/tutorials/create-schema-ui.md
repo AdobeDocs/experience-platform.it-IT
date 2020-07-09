@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare uno schema tramite l’Editor di schema.
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d55dc9776968099901325c58506c5e322449368e
 workflow-type: tm+mt
-source-wordcount: '3409'
+source-wordcount: '3462'
 ht-degree: 0%
 
 ---
@@ -289,13 +289,25 @@ Fate clic su **Profilo** e viene visualizzato un messaggio a comparsa in cui vie
 >
 >Una volta che uno schema è stato abilitato per il profilo cliente in tempo reale e salvato, non può essere disabilitato.
 
-## Passaggi successivi
+## Passaggi successivi e risorse aggiuntive
 
 Dopo aver completato la composizione di uno schema &quot;Membri fedeltà&quot;, è possibile visualizzare lo schema completo nella sezione *Struttura* dell&#39;editor. Fare clic su **Salva** e lo schema verrà salvato nella Libreria schema, rendendola accessibile dal Registro di sistema dello schema.
 
 Ora è possibile utilizzare il nuovo schema per acquisire dati in Platform. Tenere presente che una volta che lo schema è stato utilizzato per acquisire i dati, è possibile apportare solo modifiche aggiuntive. Per ulteriori informazioni sul controllo delle versioni dello schema, vedere le [nozioni di base della composizione](../schema/composition.md) dello schema.
 
 Lo schema &quot;Membri fedeltà&quot; è disponibile anche per essere visualizzato e gestito utilizzando l&#39;API del Registro di sistema dello schema. Per iniziare a lavorare con l&#39;API, leggete la guida [per gli sviluppatori API del Registro di](../api/getting-started.md)schema.
+
+>[!WARNING]
+>
+>L’ [!DNL Platform] interfaccia utente mostrata nei video seguenti è obsoleta. Per informazioni sulle ultime funzionalità e videate dell’interfaccia, consulta la documentazione precedente.
+
+Il video seguente mostra come creare uno schema semplice nell’ [!DNL Platform] interfaccia utente.
+
+>[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
+
+Il seguente video è pensato per comprendere meglio come utilizzare mixin e classi.
+
+>[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
 
 ## Appendice
 
