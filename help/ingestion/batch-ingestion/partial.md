@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sull’assimilazione parziale dei batch di  Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 83bb1ade8dbd9b1a166eb627d5d5d5eda987fa19
+source-git-commit: 0be45675e4a2e3308cb77a8bbe3189f09c2b6fd8
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1188'
 ht-degree: 1%
 
 ---
@@ -103,7 +103,7 @@ Per utilizzare un set di dati esistente, iniziare selezionando un set di dati. L
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-L&#39;interruttore [!UICONTROL *[!UICONTROL Partial ingestion]*] consente di abilitare o disabilitare l&#39;inserimento parziale dei batch.
+L’ *[!UICONTROL Partial ingestion]* interruttore consente di attivare o disattivare l’inserimento parziale dei batch.
 
 L&#39; *[!UICONTROL Error diagnostics]* interruttore viene visualizzato solo quando l&#39; *[!UICONTROL Partial ingestion]* interruttore è disattivato. Questa funzione consente [!DNL Platform] di generare messaggi di errore dettagliati sui batch acquisiti. Se l&#39; *[!UICONTROL Partial ingestion]* interruttore è attivato, la diagnostica degli errori avanzata viene applicata automaticamente.
 
