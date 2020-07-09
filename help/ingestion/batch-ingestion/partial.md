@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Panoramica sull’assimilazione parziale dei batch di  Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 83bb1ade8dbd9b1a166eb627d5d5d5eda987fa19
 workflow-type: tm+mt
-source-wordcount: '795'
-ht-degree: 2%
+source-wordcount: '1189'
+ht-degree: 1%
 
 ---
 
 
 
-# Iniezione batch parziale (versione beta)
+# Iniezione parziale del batch
 
 L&#39;assimilazione parziale dei batch è la capacità di assimilare i dati contenenti errori, fino a una determinata soglia. Grazie a questa funzionalità, gli utenti possono trasferire con successo tutti i dati corretti  Adobe Experience Platform mentre tutti i dati errati vengono inseriti in batch separatamente, insieme ai dettagli sul motivo per cui non sono validi.
 
@@ -21,102 +21,117 @@ Questo documento fornisce un’esercitazione per la gestione dell’assimilazion
 
 Inoltre, l&#39; [appendice](#appendix) di questa esercitazione fornisce un riferimento per i tipi di errori di caricamento batch parziale.
 
->[!IMPORTANT]
->
->Questa funzione esiste solo utilizzando l&#39;API. Per accedere a questa funzione, contattate il team.
-
 ## Introduzione
 
 Questa esercitazione richiede una conoscenza approfondita dei diversi servizi di Adobe Experience Platform  coinvolti nell&#39;assimilazione parziale dei batch. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
-- [Caricamento](./overview.md)batch: Il metodo che Platform acquisisce e memorizza i dati dai file di dati, come CSV e Parquet.
+- [Caricamento](./overview.md)batch: Metodo che [!DNL Platform] raccoglie e memorizza i dati dai file di dati, come CSV e Parquet.
 - [Experience Data Model (XDM)](../../xdm/home.md): Framework standard con cui Platform organizza i dati sull&#39;esperienza dei clienti.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per eseguire correttamente le chiamate alle API Platform.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per eseguire correttamente le chiamate alle [!DNL Platform] API.
 
 ### Lettura di chiamate API di esempio
 
-Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi di  Experience Platform.
+Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla [!DNL Experience Platform] risoluzione dei problemi.
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle API Platform, è prima necessario completare l&#39;esercitazione [di](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API Experience Platform, come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in  Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API Platform richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API Platform richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in Platform, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+>Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
-## Abilitare un set di dati per l&#39;assimilazione parziale dei batch nell&#39;API
+## Abilitare un batch per l&#39;assimilazione parziale dei batch nell&#39;API {#enable-api}
 
-<!-- >[!NOTE] This section describes enabling a dataset for partial batch ingestion using the API. For instructions on using the UI, please read the [enable a dataset for partial batch ingestion in the UI](#enable-a-dataset-for-partial-batch-ingestion-in-the-ui) step. -->
+>[!NOTE]
+>
+>Questa sezione descrive come abilitare un batch per l&#39;assimilazione parziale dei batch mediante l&#39;API. Per istruzioni sull’utilizzo dell’interfaccia utente, leggete il passaggio [Abilita batch per l’inserimento parziale dei batch nell’interfaccia utente](#enable-ui) .
 
-È possibile creare un nuovo set di dati o modificare un set di dati esistente con l&#39;inserimento parziale abilitato.
+Potete creare un nuovo batch con l’assimilazione parziale abilitata.
 
-Per creare un nuovo set di dati, seguite i passaggi descritti nell&#39;esercitazione [sulla](../../catalog/api/create-dataset.md)creazione di un set di dati. Una volta raggiunto il passaggio *Crea un dataset* , aggiungi il seguente campo all’interno del corpo della richiesta:
+Per creare un nuovo batch, segui i passaggi descritti nella guida [per gli sviluppatori per l’assimilazione](./api-overview.md)batch. Una volta raggiunto il passaggio *Crea batch* , aggiungi il seguente campo nel corpo della richiesta:
 
 ```json
 {
     ...
-    "tags" : {
-        "partialBatchIngestion":["errorThresholdPercentage:5"]
-    },
+    "enableErrorDiagnostics": true,
+    "partialIngestionPercentage": 5
     ...
 }
 ```
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `errorThresholdPercentage` | Percentuale di errori accettabili prima che l&#39;intero batch non riesca. |
+| `enableErrorDiagnostics` | Flag che consente [!DNL Platform] di generare messaggi di errore dettagliati sul batch. |
+| `partialIngestionPercentage` | Percentuale di errori accettabili prima che l&#39;intero batch non riesca. Quindi, in questo esempio, un massimo del 5% del batch può essere costituito da errori, prima che venga meno. |
 
-Analogamente, per modificare un dataset esistente, seguite i passaggi descritti nella guida [per gli sviluppatori del](../../catalog/api/update-object.md)catalogo.
 
-All&#39;interno del set di dati, dovrete aggiungere il tag descritto in precedenza.
-
-<!-- ## Enable a dataset for partial batch ingestion in the UI
+## Abilitare un batch per l’assimilazione parziale dei batch nell’interfaccia utente {#enable-ui}
 
 >[!NOTE]
 >
->This section describes enabling a dataset for partial batch ingestion using the UI. If you have already enabled a dataset for partial batch ingestion using the API, you can skip ahead to the next section.
+>Questa sezione descrive come abilitare un batch per l’assimilazione parziale dei batch utilizzando l’interfaccia utente. Se avete già attivato un batch per l&#39;assimilazione parziale dei batch utilizzando l&#39;API, potete passare alla sezione successiva.
 
-To enable a dataset for partial ingestion through the Platform UI, click **Datasets** in the left navigation. You can either [create a new dataset](#create-a-new-dataset-with-partial-batch-ingestion-enabled) or [modify an existing dataset](#modify-an-existing-dataset-to-enable-partial-batch-ingestion).
+Per abilitare un batch per l’assimilazione parziale nell’ [!DNL Platform] interfaccia utente, potete creare un nuovo batch tramite connessioni sorgente, creare un nuovo batch in un set di dati esistente o creare un nuovo batch tramite il[!UICONTROL Map CSV to XDM flow]&quot;.
 
-### Create a new dataset with partial batch ingestion enabled
+### Creare una nuova connessione di origine {#new-source}
 
-To create a new dataset, follow the steps in the [dataset user guide](../../catalog/datasets/user-guide.md). Once you reach the *Configure dataset* step, take note of the *Partial Ingestion* and *Error Diagnostics* fields.
+Per creare una nuova connessione di origine, segui i passaggi elencati nella panoramica [](../../sources/home.md)Origini. Una volta raggiunto il *[!UICONTROL Dataflow detail]* passaggio, prendete nota dei *[!UICONTROL Partial ingestion]* campi e *[!UICONTROL Error diagnostics]* .
 
-![](../images/batch-ingestion/partial-ingestion/configure-dataset-focus.png)
+![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
-The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
+L’ *[!UICONTROL Partial ingestion]* interruttore consente di attivare o disattivare l’inserimento parziale dei batch.
 
-The *Error Diagnostics* toggle only appears when the *Partial Ingestion* toggle is off. This feature allows Platform to generate detailed error messages about your ingested batches. If the *Partial Ingestion* toggle is turned on, enhanced error diagnostics are automatically enforced.
+L&#39; *[!UICONTROL Error diagnostics]* interruttore viene visualizzato solo quando l&#39; *[!UICONTROL Partial ingestion]* interruttore è disattivato. Questa funzione consente [!DNL Platform] di generare messaggi di errore dettagliati sui batch acquisiti. Se l&#39; *[!UICONTROL Partial ingestion]* interruttore è attivato, la diagnostica degli errori avanzata viene applicata automaticamente.
 
-![](../images/batch-ingestion/partial-ingestion/configure-dataset-partial-ingestion-focus.png)
+![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
-The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
+Consente di *[!UICONTROL Error threshold]* impostare la percentuale di errori accettabili prima che l&#39;intero batch non riesca. Per impostazione predefinita, questo valore è impostato su 5%.
 
-### Modify an existing dataset to enable partial batch ingestion
+### Utilizzare un dataset esistente {#existing-dataset}
 
-To modify an existing dataset, select the dataset you want to modify. The sidebar on the right populates with information about the dataset. 
+Per utilizzare un set di dati esistente, iniziare selezionando un set di dati. La barra laterale a destra include informazioni sul set di dati.
 
-![](../images/batch-ingestion/partial-ingestion/modify-dataset-focus.png)
+![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
+L&#39;interruttore [!UICONTROL *[!UICONTROL Partial ingestion]*] consente di abilitare o disabilitare l&#39;inserimento parziale dei batch.
 
-The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%. -->
+L&#39; *[!UICONTROL Error diagnostics]* interruttore viene visualizzato solo quando l&#39; *[!UICONTROL Partial ingestion]* interruttore è disattivato. Questa funzione consente [!DNL Platform] di generare messaggi di errore dettagliati sui batch acquisiti. Se l&#39; *[!UICONTROL Partial ingestion]* interruttore è attivato, la diagnostica degli errori avanzata viene applicata automaticamente.
 
-## Recupero degli errori di caricamento batch parziale
+![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
+
+Consente di *[!UICONTROL Error threshold]* impostare la percentuale di errori accettabili prima che l&#39;intero batch non riesca. Per impostazione predefinita, questo valore è impostato su 5%.
+
+Ora puoi caricare i dati tramite il pulsante **Aggiungi dati** e li assimilerai parzialmente.
+
+### Utilizzare il flusso &quot;[!UICONTROL Map CSV to XDM schema]&quot; {#map-flow}
+
+Per usare il flusso[!UICONTROL Map CSV to XDM schema]&quot;di prova&quot;, segui i passaggi elencati nell’esercitazione [Mappa un file CSV](../tutorials/map-a-csv-file.md). Una volta raggiunto il passaggio *Aggiungi dati* , prendi nota dei campi *[!UICONTROL Partial ingestion]* e *[!UICONTROL Error diagnostics]* .
+
+![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
+
+L’ *[!UICONTROL Partial ingestion]* interruttore consente di attivare o disattivare l’inserimento parziale dei batch.
+
+L&#39; *[!UICONTROL Error diagnostics]* interruttore viene visualizzato solo quando l&#39; *[!UICONTROL Partial ingestion]* interruttore è disattivato. Questa funzione consente [!DNL Platform] di generare messaggi di errore dettagliati sui batch acquisiti. Se l&#39; *[!UICONTROL Partial ingestion]* interruttore è attivato, la diagnostica degli errori avanzata viene applicata automaticamente.
+
+![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
+
+Consente di *[!UICONTROL Error threshold]* impostare la percentuale di errori accettabili prima che l&#39;intero batch non riesca. Per impostazione predefinita, questo valore è impostato su 5%.
+
+## Recupero degli errori di caricamento batch parziale {#retrieve-errors}
 
 Se i batch contengono errori, sarà necessario recuperare le informazioni di errore relative a tali errori in modo da poter nuovamente assimilare i dati.
 
-### Verifica stato
+### Verifica stato {#check-status}
 
 Per verificare lo stato del batch assimilato, dovete fornire l&#39;ID del batch nel percorso di una richiesta GET.
 
@@ -149,6 +164,9 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
     "af838510-2233-11ea-acf0-f3edfcded2d2": {
         "status": "success",
         "tags": {
+            ...
+            "acp_enableErrorDiagnostics": true,
+            "acp_partialIngestionPercent": 5
             ...
         },
         "relatedObjects": [
@@ -183,7 +201,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 
 Se il batch presenta un errore e la diagnostica degli errori è abilitata, lo stato sarà &quot;success&quot; con ulteriori informazioni sull&#39;errore fornito in un file di errore scaricabile.
 
-## Passaggi successivi
+## Passaggi successivi {#next-steps}
 
 In questa esercitazione è stato illustrato come creare o modificare un dataset per abilitare l’assimilazione parziale dei batch. Per ulteriori informazioni sull&#39;assimilazione batch, leggere la guida [per gli sviluppatori di](./api-overview.md)inserimento batch.
 
