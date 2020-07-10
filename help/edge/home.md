@@ -4,9 +4,9 @@ seo-title: Guida all'SDK Web per Adobi Experience Platform
 description: Scopri  Adobe Experience Platform SDK Web e come può essere utilizzato.
 seo-description: consentire ai clienti di Adobe Experience Cloud di interagire con i vari servizi nell'Experience Cloud .
 translation-type: tm+mt
-source-git-commit: 3f52def8318f57cfc6534e15415d172e768a8614
+source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 0%
 # Che cos&#39;è  Adobe Experience Platform Web SDK
 
  Adobe Experience Platform Web SDK è una libreria JavaScript lato client che consente ai clienti di Adobe Experience Cloud di interagire con i vari servizi dell&#39;Experience Cloud  tramite  Adobe Experience Platform rete Edge.
+
+Nel video seguente viene fornita una panoramica dell’SDK Web  Adobe Experience Platform e di Edge Network.
+
+>[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
 ## SDK sostituiti da SDK Web  Adobe Experience Platform
 
@@ -28,6 +32,11 @@ ht-degree: 0%
 Non si tratta solo di un wrapper intorno alle librerie esistenti. È una riscrittura completa. Il suo scopo è quello di porre fine alle sfide con i tag che devono essere attivati nell&#39;ordine giusto, incoerenze con le problematiche di controllo delle versioni della libreria e una migliore gestione delle dipendenze. È un nuovo modo per implementare l&#39;Experience Cloud  ed è [open source](https://github.com/adobe/alloy).
 
 Oltre a una nuova libreria, esiste un nuovo endpoint che semplifica le richieste HTTP alle soluzioni Adobe. In precedenza, Visitor.js aveva inviato una chiamata di blocco al servizio ID visitatore, quindi AT.js aveva inviato una chiamata al Adobe Target , DIL.js aveva inviato una chiamata a  Adobe Audience Manager e infine AppMeasurement.js aveva inviato una chiamata ad Adobe  Analytics. Questa nuova libreria e questo endpoint possono recuperare un ID, recuperare un&#39; [!DNL Target] esperienza, inviare dati a  Audience Manager e trasmettere i dati al Adobe Experience Platform  in una singola chiamata.
+
+Il video seguente illustra l’ Adobe Experience Platform Web SDK e Edge Network in azione. Nell’esempio video viene utilizzata una singola chiamata ad Adobe che invia dati ad  Experience Platform,  Analytics,  Audience Manager e Target.
+
+>[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
+
 
 ## Introduzione
 
