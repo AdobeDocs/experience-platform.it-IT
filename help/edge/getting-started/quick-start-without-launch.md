@@ -1,12 +1,12 @@
 ---
 title: Avvio rapido con javascript semplice
-seo-title: 'Avvio rapido di Adobe Experience Platform Web SDK '
-description: Guida di avvio rapido per l’utilizzo dell’SDK Web della piattaforma Experience per la raccolta di dati
-seo-description: Guida di avvio rapido per l’utilizzo dell’SDK Web della piattaforma Experience per la raccolta di dati
+seo-title: ' Adobe Experience Platform Avvio rapido SDK Web '
+description: Guida di avvio rapido per l'utilizzo  Experience Platform Web SDK per la raccolta dei dati
+seo-description: Guida di avvio rapido per l'utilizzo  Experience Platform Web SDK per la raccolta dei dati
 translation-type: tm+mt
-source-git-commit: f401780aa6b11f230506bfca1a747839fc6ae389
+source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '537'
 ht-degree: 3%
 
 ---
@@ -14,10 +14,10 @@ ht-degree: 3%
 
 # Benvenuti
 
-Questa guida descrive i diversi modi in cui configurare l’SDK Web per Adobe Experience Platform. Per poter utilizzare questa funzione, è necessario essere nell&#39;elenco di autorizzazioni. Se vuoi entrare nella lista d&#39;attesa, contatta il tuo CSM.
+Questa guida illustra i diversi modi in cui impostare l’SDK Web per Adobi Experience Platform . Per poter utilizzare questa funzione, è necessario essere sul elenco consentiti . Se vuoi entrare nella lista d&#39;attesa, contatta il tuo CSM.
 
-- Accertati che sia attivato un dominio di [prime parti (CNAME)](https://docs.adobe.com/content/help/it-IT/core-services/interface/ec-cookies/cookies-first-party.html) . Se hai già un CNAME per Analytics, devi usarlo. Il test in fase di sviluppo funziona senza un CNAME, ma ne hai bisogno prima di andare in produzione
-- Accedi ad Adobe Experience Platform Data Platform.  Se non hai acquistato la piattaforma, ti forniremo Experience Platform Data Services Foundation per l&#39;utilizzo limitato con l&#39;SDK senza costi aggiuntivi.
+- Accertati che sia attivato un dominio di [prime parti (CNAME)](https://docs.adobe.com/content/help/it-IT/core-services/interface/ec-cookies/cookies-first-party.html) . Se hai già un CNAME per  Analytics, devi usarlo. Il test in fase di sviluppo funziona senza un CNAME, ma ne hai bisogno prima di andare in produzione
+- Avere diritto a  Platform dei dati di Adobe Experience Platform.  Se non hai acquistato Platform, ti verrà fornito  Experience Platform Data Services Foundation per l&#39;utilizzo limitato con l&#39;SDK senza alcun costo aggiuntivo.
 - Usa la versione più recente del servizio ID visitatore
 
 ## Creare un ID di configurazione
@@ -26,14 +26,18 @@ Potete creare un ID di configurazione utilizzando lo strumento [di configurazion
 
 >[!NOTE]
 >
->L&#39;organizzazione deve essere inclusa nell&#39;elenco Consenti per la funzione. Contattate il CSM per inserire l&#39;elenco dei permessi.
+>L&#39;organizzazione deve trovarsi nel elenco consentiti  per la funzione. Contattate il CSM per avere il elenco consentiti .
 
 ## Preparare uno schema
 
-Experience Platform Edge Network accetta i dati come XDM. XDM è un formato di dati che consente di definire gli schemi. Lo schema definisce il modo in cui Edge Network prevede la formattazione dei dati. Per inviare i dati, è necessario definire lo schema.
+ Experience Platform Edge Network accetta i dati come XDM. XDM è un formato di dati che consente di definire gli schemi. Lo schema definisce il modo in cui Edge Network prevede la formattazione dei dati. Per inviare i dati, è necessario definire lo schema.
 
 - [Creare uno schema](../../xdm/tutorials/create-schema-ui.md)
-- Aggiungere il mixin SDK Web di Adobe Experience Platform allo schema creato
+- Aggiungere il mixin SDK Web  Adobe Experience Platform allo schema creato
+
+Il seguente video è stato creato per aiutarti a creare uno schema, un set di dati e un connettore di origine per lo streaming dei dati SDK per Web.
+
+>[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
 ## Installare l’SDK
 
