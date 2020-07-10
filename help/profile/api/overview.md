@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guida per lo sviluppatore di API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c0b059d6654a98b74be5bc6a55f360c4dc2f216b
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
@@ -33,13 +33,13 @@ Gli attributi calcolati consentono di calcolare automaticamente il valore dei ca
 
  Adobe Experience Platform consente la personalizzazione in tempo reale delle esperienze dei clienti, rendendo i dati facilmente accessibili su server situati strategicamente denominati &quot;edge&quot;. L&#39;API del profilo cliente in tempo reale fornisce gli endpoint per l&#39;utilizzo dei bordi tramite componenti denominati &quot;proiezioni&quot;. Ciò include configurazioni di proiezione per determinare quali dati proiettare su ciascun bordo, nonché destinazioni di proiezione per definire dove indirizzare una proiezione. Per informazioni dettagliate sull&#39;utilizzo delle proiezioni dei bordi, visitate la guida [alle configurazioni di](edge-projections.md)proiezione e agli endpoint delle destinazioni.
 
-## Entità
+## Entità (accesso profilo) {#entities}
 
 Attraverso  Adobe Experience Platform puoi accedere ai dati del profilo cliente in tempo reale utilizzando le API RESTful o l&#39;interfaccia utente. Per informazioni su come accedere alle entità, più comunemente note come &quot;profili&quot;, mediante l&#39;API, segui i passaggi descritti nella guida [all&#39;endpoint](entities.md)entità. Per accedere ai profili utilizzando l’interfaccia utente di Platform, consulta la guida [utente relativa al](../ui/user-guide.md)profilo.
 
 ## Unisci criteri
 
-Quando si uniscono dati da più origini in  Experience Platform, i criteri di unione sono le regole utilizzate da Platform per determinare in che modo i dati verranno definiti come priorità e quali dati verranno combinati per creare singoli profili cliente. Utilizzando l&#39;API Profilo cliente in tempo reale, puoi creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la tua organizzazione. Per ulteriori informazioni sull&#39;utilizzo dei criteri di unione tramite l&#39;API, consultare la guida [all&#39;endpoint dei criteri di](merge-policies.md)unione.
+Quando si uniscono dati da più origini in  Experience Platform, i criteri di unione sono le regole utilizzate da Platform per determinare in che modo i dati verranno classificati in ordine di priorità e quali dati verranno combinati per creare singoli profili cliente. Utilizzando l&#39;API Profilo cliente in tempo reale, puoi creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la tua organizzazione. Per ulteriori informazioni sull&#39;utilizzo dei criteri di unione tramite l&#39;API, consultare la guida [all&#39;endpoint dei criteri di](merge-policies.md)unione.
 
 Per una guida all&#39;utilizzo dei criteri di unione nell&#39;interfaccia utente di Platform, consultate la guida [utente](../ui/merge-policies.md)Unisci criteri.
 
