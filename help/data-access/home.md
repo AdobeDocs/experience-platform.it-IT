@@ -4,242 +4,36 @@ solution: Experience Platform
 title: Panoramica sull'accesso ai dati
 topic: overview
 translation-type: tm+mt
-source-git-commit: d9aa21a7439a6c40f6f51dfbdf5c7b3690c4593a
+source-git-commit: 49aa2e2664fe658d89b6279d1f869eb30c48ccad
 workflow-type: tm+mt
-source-wordcount: '488'
-ht-degree: 4%
+source-wordcount: '197'
+ht-degree: 0%
 
 ---
 
 
 # Panoramica sull&#39;accesso ai dati
 
-L&#39;API Data Access supporta Adobe Experience Platform fornendo agli utenti un&#39;interfaccia RESTful incentrata sulla scoperta e l&#39;accessibilità dei set di dati acquisiti all&#39;interno di Experience Platform.
+[!DNL Data Access] supporta  Adobe Experience Platform fornendo agli utenti strumenti incentrati sulla possibilità di individuare e accedere facilmente ai dataset acquisiti all&#39;interno  Experience Platform.
 
-![Accesso ai dati sulla piattaforma Experience](images/Data_Access_Experience_Platform.png)
+![Accesso ai dati su  Experience Platform](images/Data_Access_Experience_Platform.png)
 
-## Riferimento della specifica API
+## API di accesso ai dati
 
-La documentazione di riferimento per le API Swagger è disponibile [qui](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml).
+Informazioni dettagliate sull&#39;utilizzo dell&#39; [!DNL Data Access] API per la connessione [!DNL Platform] sono disponibili nella guida [per gli sviluppatori](api.md)Data Access.
 
-## Terminologia
+## SDK Python
 
-Una descrizione di alcuni termini comunemente utilizzati in tutto il documento.
+È possibile leggere e scrivere con i set di dati utilizzando l&#39; [!DNL Python] SDK. Per ulteriori informazioni sull’ [!DNL Python] SDK, consulta l’esercitazione [sull’SDK](./tutorials/python-sdk.md)Python.
 
-| Termine | Descrizione |
-| ----- | ------------ |
-| Set di dati | Raccolta di dati che include schema e campi. |
-| Batch | Un insieme di dati raccolti in un determinato periodo di tempo ed elaborati insieme come un&#39;unica unità. |
+[!DNL Data Science Workspace] utilizza l’SDK Python nei blocchi appunti e nelle ricevute. Per ulteriori informazioni su [!DNL Data Science Workspace], consultare la panoramica [di](../data-science-workspace/home.md)Data Science Workspace.
 
-## Recupera elenco di file all&#39;interno di un batch
+## Spark SDK
 
-Utilizzando un identificatore batch (batchID), l&#39;API di accesso ai dati può recuperare un elenco di file appartenenti a quel particolare batch.
+È possibile leggere e scrivere con i set di dati utilizzando l&#39; [!DNL Spark] SDK. Per ulteriori informazioni sull’ [!DNL Spark] SDK, consulta l’esercitazione [](./tutorials/spark-sdk.md)Spark SDK.
 
-**Formato API**
-
-```http
-GET /batches/{BATCH_ID}/files
-```
-
-| Proprietà | Descrizione |
-| -------- | ----------- |
-| `{BATCH_ID}` | ID del batch specificato. |
-
-**Richiesta**
-
-```shell
-curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/files \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Risposta**
-
-```json
-{
-  "data": [
-    {
-      "dataSetFileId": "{FILE_ID_1}",
-      "dataSetViewId": "string",
-      "version": "1.0.0",
-      "created": "string",
-      "updated": "string",
-      "isValid": true,
-      "_links": {
-        "self": {
-          "href": "https://platform.adobe.io/data/foundation/export/files/{FILE_ID_1}"
-        }
-      }
-    },
-    {
-      "dataSetFileId": "{FILE_ID_2}",
-      "dataSetViewId": "string",
-      "version": "1.0.0",
-      "created": "string",
-      "updated": "string",
-      "isValid": true,
-      "_links": {
-        "self": {
-          "href": "https://platform.adobe.io/data/foundation/export/files/{FILE_ID_2}"
-        }
-      }
-    },
-  ],
-  "_page": {
-    "limit": 100,
-    "count": 1
-  }
-}
-```
-
-L&#39; `"data"` array contiene un elenco di tutti i file all&#39;interno del batch specificato. Ogni file restituito ha un proprio ID univoco (`{FILE_ID}`) contenuto nel `"dataSetFileId"` campo. Questo ID univoco può quindi essere utilizzato per accedere o scaricare il file.
-
-| Proprietà | Descrizione |
-| -------- | ----------- |
-| `data.dataSetFileId` | ID file per ciascun file del batch specificato. |
-| `data._links.self.href` | URL per accedere al file. |
-
-## Accedere e scaricare i file in un batch
-
-Utilizzando un identificatore file (`{FILE_ID}`), l&#39;API di accesso ai dati può essere utilizzata per accedere ai dettagli specifici di un file, incluso il nome, la dimensione in byte e un collegamento da scaricare.
-
-La risposta conterrà un array di dati. A seconda che il file a cui fa riferimento l’ID sia un singolo file o una directory, l’array di dati restituito può contenere una singola voce o un elenco di file appartenenti a tale directory. Ogni elemento file includerà i dettagli del file.
-
-**Formato API**
-
-```http
-GET /files/{FILE_ID}
-```
-
-| Proprietà | Descrizione |
-| -------- | ----------- |
-| `{FILE_ID}` | Uguale all’ `"dataSetFileId"`, l’ID del file a cui accedere. |
-
-**Richiesta**
-
-```shell
-curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Risposta a un singolo file**
-
-```JSON
-{
-  "data": [
-    {
-      "name": "{FILE_NAME}",
-      "length": "{LENGTH}",
-      "_links": {
-        "self": {
-          "href": "https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?path={FILE_NAME}"
-        }
-      }
-    }
-  ],
-  "_page": {
-    "limit": 100,
-    "count": 1
-  }
-}
-```
-
-| Proprietà | Descrizione |
-| -------- | ----------- |
-| `data.name` | Nome del file (ad esempio, profile.csv). |
-| `data.length` | Dimensione del file (in byte). |
-| `data._links.self.href` | URL per scaricare il file. |
-
-**Risposta directory**
-
-```JSON
-{
-  "data": [
-    {
-      "dataSetFileId": "{FILE_ID_1}",
-      "dataSetViewId": "string",
-      "version": "1.0.0",
-      "created": "string",
-      "updated": "string",
-      "isValid": true,
-      "_links": {
-        "self": {
-          "href": "https://platform.adobe.io/data/foundation/export/files/{FILE_ID_1}"
-        }
-      }
-    },
-    {
-      "dataSetFileId": "{FILE_ID_2}",
-      "dataSetViewId": "string",
-      "version": "1.0.0",
-      "created": "string",
-      "updated": "string",
-      "isValid": true,
-      "_links": {
-        "self": {
-          "href": "https://platform.adobe.io/data/foundation/export/files/{FILE_ID_2}"
-        }
-      }
-    }
-  ],
-  "_page": {
-    "limit": 100,
-    "count": 2
-  }
-}
-```
-
-Quando viene restituita una directory, essa contiene un array di tutti i file all’interno della directory.
-
-| Proprietà | Descrizione |
-| -------- | ----------- |
-| `data.name` | Nome del file (ad esempio, profile.csv). |
-| `data._links.self.href` | URL per scaricare il file. |
-
-## Accesso al contenuto di un file
-
-L&#39;API Data Access può essere utilizzata anche per accedere al contenuto di un file. Questo può essere utilizzato per scaricare il contenuto in un&#39;origine esterna.
-
-**Formato API**
-
-```http
-GET /files/{dataSetFileId}?path={FILE_NAME}
-```
-
-| Proprietà | Descrizione |
-| -------- | ----------- |
-| `{FILE_NAME}` | Nome del file a cui si sta tentando di accedere. |
-
-**Richiesta**
-
-```shell
-curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?path={FILE_NAME} \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-| Proprietà | Descrizione |
-| -------- | ----------- |
-| `{FILE_ID}` | L&#39;ID del file all&#39;interno di un set di dati. |
-| `{FILE_NAME}` | Nome completo del file (ad esempio, profile.csv). |
-
-**Risposta**
-
-```
-Contents of the file
-```
-
-## Esempi di codice aggiuntivi
-
-Per ulteriori esempi, fare riferimento all&#39;esercitazione sull&#39;accesso ai [dati](tutorials/dataset-data.md).
+[!DNL Data Science Workspace] utilizza l’ [!DNL Spark] SDK all’interno di Notebook e Ricette. Per ulteriori informazioni su [!DNL Data Science Workspace], consultare la panoramica [di](../data-science-workspace/home.md)Data Science Workspace.
 
 ## Iscrizione agli eventi di assimilazione dei dati
 
-La piattaforma rende disponibili per l&#39;iscrizione specifici eventi di alto valore tramite [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Ad esempio, puoi abbonarti agli eventi di inserimento dei dati per ricevere una notifica di potenziali ritardi e guasti. Per ulteriori informazioni, consulta l’esercitazione sulla [sottoscrizione alle notifiche](../ingestion/quality/subscribe-events.md) di assimilazione dei dati.
+[!DNL Platform] rende disponibili per l&#39;iscrizione eventi specifici di alto valore tramite [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Ad esempio, puoi abbonarti agli eventi di inserimento dei dati per ricevere una notifica di potenziali ritardi e guasti. Per ulteriori informazioni, consulta l’esercitazione sulla [sottoscrizione alle notifiche](../ingestion/quality/subscribe-events.md) di assimilazione dei dati.
