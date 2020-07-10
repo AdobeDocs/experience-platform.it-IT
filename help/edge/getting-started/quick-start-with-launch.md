@@ -4,9 +4,9 @@ seo-title: ' Adobe Experience Platform Avvio rapido dell''SDK Web con Launch'
 description: Guida di avvio rapido per l'utilizzo dell'estensione Experience Platform Web SDK  per la raccolta dei dati
 seo-description: Guida di avvio rapido per l'utilizzo dell'estensione Experience Platform Web SDK  per la raccolta dei dati
 translation-type: tm+mt
-source-git-commit: 3f52def8318f57cfc6534e15415d172e768a8614
+source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '553'
 ht-degree: 3%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # Benvenuti
 
-Questa guida illustra i diversi passaggi per configurare l’SDK Web per Adobi Experience Platform  in Adobe Launch. Per utilizzare questa funzione è necessario disporre delle autorizzazioni e essere nell&#39;elenco di autorizzazioni. Se vuoi entrare nella lista d&#39;attesa, contatta il tuo CSM. Inoltre, per utilizzare questa funzione, è necessario:
+Questa guida illustra i diversi passaggi per configurare l’SDK Web per Adobi Experience Platform  in Adobe Launch. Per utilizzare questa funzione, è necessario disporre delle autorizzazioni e stare sul elenco consentiti . Se vuoi entrare nella lista d&#39;attesa, contatta il tuo CSM. Inoltre, per utilizzare questa funzione, è necessario:
 
 - Accertati che sia attivato un dominio di [prime parti (CNAME)](https://docs.adobe.com/content/help/it-IT/core-services/interface/ec-cookies/cookies-first-party.html) . Se hai già un CNAME per Adobe  Analytics, devi usarlo. La verifica in fase di sviluppo funzionerà senza un CNAME, ma ne avrai bisogno prima di andare in produzione
 - Usa la versione più recente del servizio ID visitatore
@@ -25,7 +25,7 @@ Puoi creare un ID di configurazione utilizzando lo strumento [di configurazione]
 
 >[!NOTE]
 >
->L&#39;organizzazione deve essere inclusa nell&#39;elenco Consenti per la funzione. Contatta il tuo CSM per essere aggiunto all&#39;elenco dei permessi.
+>L&#39;organizzazione deve trovarsi nel elenco consentiti  per la funzione. Contatta il tuo CSM per essere aggiunto al elenco consentiti .
 
 ## Preparare uno schema
 
@@ -33,6 +33,10 @@ Puoi creare un ID di configurazione utilizzando lo strumento [di configurazione]
 
 - [Creare uno schema](../../xdm/tutorials/create-schema-ui.md)
 - Aggiungere il mixin SDK Web  Adobe Experience Platform allo schema creato
+
+Il seguente video è stato creato per aiutarti a creare uno schema, un set di dati e un connettore di origine per lo streaming dei dati SDK per Web.
+
+>[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
 ## Installare l’SDK in Adobe Launch
 
