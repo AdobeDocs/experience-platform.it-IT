@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Processi del sistema di profili - API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: c0b059d6654a98b74be5bc6a55f360c4dc2f216b
 workflow-type: tm+mt
-source-wordcount: '1503'
+source-wordcount: '1466'
 ht-degree: 2%
 
 ---
@@ -38,10 +38,10 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 | Parametro | Descrizione |
 |---|---|
-| `start` | Consente di scostare la pagina dei risultati restituiti, in base al tempo di creazione della richiesta. Esempio: `start=4` |
-| `limit` | Limita il numero di risultati restituiti. Esempio: `limit=10` |
-| `page` | Restituisce una pagina specifica di risultati, in base all’ora di creazione della richiesta. Esempio: `page=2` |
-| `sort` | Ordinare i risultati in base a un campo specifico in ordine crescente (`asc`) o decrescente (`desc`). Il parametro sort non funziona quando si restituiscono più pagine di risultati. Esempio: `sort=batchId:asc` |
+| `start` | Consente di scostare la pagina dei risultati restituiti, in base al tempo di creazione della richiesta. Esempio: *`start=4`* |
+| `limit` | Limita il numero di risultati restituiti. Esempio: *`limit=10`* |
+| `page` | Restituisce una pagina specifica di risultati, in base all’ora di creazione della richiesta. Esempio: ***`page=2`*** |
+| `sort` | Ordinare i risultati in base a un campo specifico in ordine crescente (*`asc`*) o decrescente (**`desc`**). Il parametro sort non funziona quando si restituiscono più pagine di risultati. Esempio: `sort=batchId:asc` |
 
 **Richiesta**
 
@@ -91,11 +91,11 @@ La risposta include un array &quot;child&quot; con un oggetto per ogni richiesta
 
 | Proprietà | Descrizione |
 |---|---|
-| _page.count | Numero totale di richieste. Questa risposta è stata troncata per lo spazio. |
-| _page.next | Se esiste una pagina aggiuntiva di risultati, puoi visualizzare la pagina successiva dei risultati sostituendo il valore ID in una richiesta [di](#view-a-specific-delete-request) ricerca con il valore &quot;next&quot; fornito. |
-| jobType | Tipo di processo da creare. In questo caso, restituirà sempre &quot;DELETE&quot;. |
-| status | Stato della richiesta di eliminazione. I valori possibili sono &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;COMPLETED&quot;, &quot;ERROR&quot;. |
-| metriche | Un oggetto che include il numero di record elaborati (&quot;recordsProcessed&quot;) e il tempo in secondi durante il quale la richiesta è stata elaborata, oppure il tempo impiegato per completare la richiesta (&quot;timeTakenInSec&quot;). |
+| `_page.count` | Numero totale di richieste. Questa risposta è stata troncata per lo spazio. |
+| `_page.next` | Se esiste una pagina aggiuntiva di risultati, puoi visualizzare la pagina successiva dei risultati sostituendo il valore ID in una richiesta [di](#view-a-specific-delete-request) ricerca con il `"next"` valore fornito. |
+| `jobType` | Tipo di processo da creare. In questo caso, tornerà sempre `"DELETE"`. |
+| `status` | Stato della richiesta di eliminazione. I valori possibili sono `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
+| `metrics` | Un oggetto che include il numero di record elaborati (`"recordsProcessed"`) e il tempo in secondi durante il quale la richiesta è stata elaborata, oppure il tempo necessario per completare (`"timeTakenInSec"`) la richiesta. |
 
 ## Creare una richiesta di eliminazione {#create-a-delete-request}
 
@@ -131,11 +131,11 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 |---|---|
-| dataSetId | **(Obbligatorio)** L&#39;ID del set di dati da eliminare. |
+| `dataSetId` | **(Obbligatorio)** L&#39;ID del set di dati da eliminare. |
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della nuova richiesta di eliminazione, incluso un ID di sola lettura univoco generato dal sistema per la richiesta. Questo può essere utilizzato per cercare la richiesta e controllarne lo stato. La richiesta `status` al momento della creazione è `"NEW"` fino all’inizio dell’elaborazione. Il contenuto `dataSetId` della risposta deve corrispondere a quello `dataSetId` inviato nella richiesta.
+Una risposta corretta restituisce i dettagli della nuova richiesta di eliminazione, incluso un ID di sola lettura univoco generato dal sistema per la richiesta. Questo può essere utilizzato per cercare la richiesta e controllarne lo stato. La richiesta **`status`** al momento della creazione è *`"NEW"`* fino all’inizio dell’elaborazione. Il contenuto **`dataSetId`** della risposta deve corrispondere a quello ***`dataSetId`*** inviato nella richiesta.
 
 ```json
 {
@@ -151,15 +151,15 @@ Una risposta corretta restituisce i dettagli della nuova richiesta di eliminazio
 
 | Proprietà | Descrizione |
 |---|---|
-| id | ID univoco, generato dal sistema, di sola lettura della richiesta di eliminazione. |
-| dataSetId | ID del set di dati, come specificato nella richiesta POST. |
+| `id` | ID univoco, generato dal sistema, di sola lettura della richiesta di eliminazione. |
+| `dataSetId` | ID del set di dati, come specificato nella richiesta POST. |
 
 ### Eliminare un batch
 
 Per eliminare un batch, l’ID batch deve essere incluso nel corpo della richiesta POST. Non è possibile eliminare i batch per i set di dati basati sugli schemi di record. È possibile eliminare solo i batch per i set di dati basati sugli schemi delle serie temporali.
 
 >[!NOTE]
-> Il motivo per cui non è possibile eliminare i batch per i set di dati basati su schemi di record è che i batch di set di dati di tipo record sovrascrivono i record precedenti e pertanto non possono essere &quot;annullati&quot; o eliminati. L&#39;unico modo per rimuovere l&#39;impatto dei batch errati per i set di dati basati sugli schemi di record è quello di ripetere il batch con i dati corretti per sovrascrivere i record errati.
+> Il motivo per cui non è possibile eliminare i batch per i set di dati basati su schemi di record è che i batch di set di dati di tipo record sovrascrivono i record precedenti e pertanto non possono essere &quot;annullati&quot; o eliminati. L&#39;unico modo per rimuovere l&#39;impatto dei batch errati per i set di dati basati sugli schemi di record consiste nel ripetere l&#39;inserimento del batch con i dati corretti per sovrascrivere i record errati.
 
 Per ulteriori informazioni sul comportamento dei record e delle serie temporali, consulta la [sezione sui comportamenti](../../xdm/home.md#data-behaviors) dei dati XDM nella panoramica di XDM System.
 
@@ -186,11 +186,11 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 |---|---|
-| batchId | **(Obbligatorio)** L&#39;ID del batch da eliminare. |
+| `batchId` | **(Obbligatorio)** L&#39;ID del batch da eliminare. |
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della nuova richiesta di eliminazione, incluso un ID di sola lettura univoco generato dal sistema per la richiesta. Questo può essere utilizzato per cercare la richiesta e controllarne lo stato. Lo &quot;stato&quot; della richiesta al momento della creazione è &quot;NUOVO&quot; fino all’inizio dell’elaborazione. Il &quot;batchId&quot; nella risposta deve corrispondere al &quot;batchId&quot; inviato nella richiesta.
+Una risposta corretta restituisce i dettagli della nuova richiesta di eliminazione, incluso un ID di sola lettura univoco generato dal sistema per la richiesta. Questo può essere utilizzato per cercare la richiesta e controllarne lo stato. La richiesta `"status"` al momento della creazione è `"NEW"` fino all’inizio dell’elaborazione. Il contenuto `"batchId"` della risposta deve corrispondere a quello `"batchId"` inviato nella richiesta.
 
 ```json
 {
@@ -206,8 +206,8 @@ Una risposta corretta restituisce i dettagli della nuova richiesta di eliminazio
 
 | Proprietà | Descrizione |
 |---|---|
-| id | ID univoco, generato dal sistema, di sola lettura della richiesta di eliminazione. |
-| batchId | L’ID del batch, come specificato nella richiesta POST. |
+| `id` | ID univoco, generato dal sistema, di sola lettura della richiesta di eliminazione. |
+| `batchId` | L’ID del batch, come specificato nella richiesta POST. |
 
 Se si tenta di avviare una richiesta di eliminazione per un batch di set di dati di record, si verificherà un errore a 400 livelli, simile al seguente:
 
@@ -237,7 +237,7 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 
 | Parametro | Descrizione |
 |---|---|
-| {DELETE_REQUEST_ID} | **(Obbligatorio)** L&#39;ID della richiesta di eliminazione che si desidera visualizzare. |
+| `{DELETE_REQUEST_ID}` | **(Obbligatorio)** L&#39;ID della richiesta di eliminazione che si desidera visualizzare. |
 
 **Richiesta**
 
@@ -269,11 +269,11 @@ La risposta fornisce i dettagli della richiesta di eliminazione, incluso il suo 
 
 | Proprietà | Descrizione |
 |---|---|
-| jobType | Il tipo di processo creato, in questo caso restituirà sempre &quot;DELETE&quot;. |
-| status | Stato della richiesta di eliminazione. Valori possibili: &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;COMPLETED&quot;, &quot;ERROR&quot;. |
-| metriche | Un array che include il numero di record elaborati (&quot;recordsProcessed&quot;) e il tempo in secondi durante il quale la richiesta è stata elaborata, oppure il tempo impiegato per completare la richiesta (&quot;timeTakenInSec&quot;). |
+| `jobType` | Il tipo di processo creato, in questo caso tornerà sempre `"DELETE"`. |
+| `status` | Stato della richiesta di eliminazione. Valori possibili: `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
+| `metrics` | Un array che include il numero di record elaborati (`"recordsProcessed"`) e il tempo in secondi durante il quale la richiesta è stata elaborata, oppure il tempo necessario per completare (`"timeTakenInSec"`) la richiesta. |
 
-Una volta che lo stato della richiesta di eliminazione è &quot;COMPLETATO&quot;, puoi confermare che i dati sono stati eliminati cercando di accedere ai dati eliminati tramite l&#39;API di accesso ai dati. Per istruzioni su come utilizzare l&#39;API di accesso ai dati per accedere a set di dati e batch, consulta la documentazione [sull&#39;accesso ai](../../data-access/home.md)dati.
+Una volta che lo stato della richiesta di eliminazione è `"COMPLETED"` possibile confermare che i dati sono stati eliminati cercando di accedere ai dati eliminati tramite l&#39;API di accesso ai dati. Per istruzioni su come utilizzare l&#39;API di accesso ai dati per accedere a set di dati e batch, consulta la documentazione [sull&#39;accesso ai](../../data-access/home.md)dati.
 
 ## Rimozione di una richiesta di eliminazione
 
