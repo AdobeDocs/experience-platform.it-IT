@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funzioni definite da Adobe
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: cc101b1a439408861961c6fcd0899ca7c48bfa04
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '292'
 ht-degree: 6%
 
 ---
@@ -240,4 +240,10 @@ LIMIT 10;
 ```
 
 ![Immagine](../images/queries/adobe-functions/create-breakdown-report.png)
+
+## Risorse aggiuntive
+
+Il seguente video mostra come eseguire le query nell&#39;interfaccia del Adobe Experience Platform  e in un client PSQL. Inoltre, il video utilizza esempi che coinvolgono singole proprietà in un oggetto XDM, che utilizzano funzioni definite da Adobe e che utilizzano l&#39;opzione CREATE TABLE AS SELECT (CTAS).
+
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
