@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ' Guida all''Editor di query del servizio Query'
 topic: query editor
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: cc101b1a439408861961c6fcd0899ca7c48bfa04
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1106'
 ht-degree: 1%
 
 ---
@@ -115,6 +115,12 @@ La console fornisce informazioni sullo stato e il funzionamento di Query Service
 Al termine di una query, i risultati vengono visualizzati nella scheda *Risultati* , accanto alla scheda *Console* . Questa visualizzazione mostra l’output tabulare della query, visualizzando fino a 100 righe. Questa visualizzazione consente di verificare che la query produca l&#39;output previsto. Per generare un dataset con la query, rimuovere i limiti sulle righe restituite ed eseguire la query con `CREATE TABLE tablename AS SELECT` cui generare un dataset con l&#39;output. Per istruzioni su come generare un set di dati dai risultati della query nell&#39;Editor query, vedere l&#39;esercitazione sulla [generazione][query-service-create-datasets] dei set di dati.
 
 ![Immagine](../images/queries/query-editor-overview/query-results.png)
+
+## Eseguire query con il video di esercitazione del servizio query
+
+Il seguente video mostra come eseguire le query nell&#39;interfaccia del Adobe Experience Platform  e in un client PSQL. Inoltre, viene illustrato l&#39;utilizzo di singole proprietà in un oggetto XDM, utilizzando funzioni definite da Adobe e utilizzando CREATE TABLE AS SELECT (CTAS).
+
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
 ## Passaggi successivi
 
