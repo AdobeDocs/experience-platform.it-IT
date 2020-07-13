@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida all'interfaccia utente di Generatore di segmenti
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1c9b50f8f71e917b86c34b061df7e2da6fe475a2
 workflow-type: tm+mt
-source-wordcount: '2583'
+source-wordcount: '2666'
 ht-degree: 0%
 
 ---
@@ -105,7 +105,7 @@ Per aggiungere una nuova regola alla definizione del segmento, trascinate una se
 
 Puoi trascinare un&#39;audience dalla *[!UICONTROL Audience]* scheda nell&#39;area di lavoro del generatore di regole per fare riferimento all&#39;appartenenza all&#39;audience nella nuova definizione di segmento. Questo consente di includere o escludere l&#39;appartenenza all&#39;audience come attributo nella nuova regola del segmento.
 
-Per [!DNL Platform] i tipi di pubblico creati utilizzando [!UICONTROL Segment Builder], viene offerta l&#39;opzione per convertire l&#39;audience in un set di regole utilizzate nella definizione del segmento per quell&#39;audience. Questa conversione crea una copia della logica della regola, che può essere modificata senza influenzare la definizione del segmento originale. Prima di convertire le modifiche recenti nella definizione del segmento in logica regola, accertatevi di aver salvato le modifiche recenti.
+Per [!DNL Platform] i tipi di pubblico creati con [!UICONTROL Segment Builder], potete scegliere di convertire l&#39;audience in un set di regole utilizzate nella definizione del segmento per quell&#39;audience. Questa conversione crea una copia della logica della regola, che può essere modificata senza influenzare la definizione del segmento originale. Prima di convertire le modifiche recenti nella definizione del segmento in logica regola, accertatevi di aver salvato le modifiche recenti.
 
 >[!NOTE]
 >
@@ -233,6 +233,12 @@ Ulteriori informazioni sulla valutazione dell’ultimo segmento sono reperibili 
 
 ![](../images/segment-builder/info-bubble.png)
 
+### Video dimostrativo sulla segmentazione in streaming
+
+Il seguente video è pensato per comprendere meglio la segmentazione in streaming. Mostra un esempio di esperienza del cliente seguito da una breve presentazione delle funzioni chiave nell&#39; [!DNL Platform] interfaccia.
+
+>[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)
+
 ## DULE violazioni dei criteri
 
 >[!NOTE]
@@ -243,7 +249,7 @@ Dopo aver creato il segmento, questo verrà analizzato [!DNL Data Governance] pe
 
 ![](../images/segment-builder/segment-dule-policy-violations.png)
 
-## Passaggi successivi
+## Passaggi successivi e risorse aggiuntive {#next-steps}
 
 Segment Builder (Generatore di segmenti) offre un flusso di lavoro avanzato che consente di isolare i tipi di pubblico commerciabili dai [!DNL Real-time Customer Profile] dati. Dopo aver letto questa guida, è ora possibile:
 
@@ -253,4 +259,16 @@ Segment Builder (Generatore di segmenti) offre un flusso di lavoro avanzato che 
 - Abilita tutte le definizioni di segmento per la segmentazione pianificata.
 - Abilita le definizioni di segmento specificate per la segmentazione in streaming.
 
-Per istruzioni dettagliate sull&#39;utilizzo [!DNL Segmentation Service] dell&#39; [!DNL Segmentation Service] API, vedete l&#39;esercitazione sulla [creazione di segmenti di pubblico tramite API](../tutorials/create-a-segment.md) .
+Per saperne di più [!DNL Segmentation Service], continuate a leggere la documentazione e completate le vostre lezioni guardando i video qui sotto. Per istruzioni dettagliate sull&#39;utilizzo [!DNL Segmentation Service] dell&#39; [!DNL Segmentation Service] API, vedete l&#39;esercitazione sulla [creazione di segmenti di pubblico tramite API](../tutorials/create-a-segment.md) .
+
+>[!WARNING]
+>
+> L’ [!DNL Platform] interfaccia utente mostrata nei video seguenti è obsoleta. Per informazioni sulle ultime funzionalità e videate dell’interfaccia, consulta la documentazione precedente.
+
+**Crea un segmento:**
+
+>[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)
+
+**Crea un segmento dinamico:**
+
+>[!VIDEO](https://video.tv.adobe.com/v/27428?quality=12&learn=on)
