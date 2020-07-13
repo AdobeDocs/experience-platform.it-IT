@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Creare un connettore sorgente Adobe  Analytics nell’interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
 workflow-type: tm+mt
-source-wordcount: '719'
-ht-degree: 2%
+source-wordcount: '762'
+ht-degree: 1%
 
 ---
 
@@ -95,7 +95,7 @@ Per ulteriori informazioni su come etichettare i dati provenienti da  Analytics,
 
 ![](../../../../images/tutorials/create/analytics/labels.png)
 
-## Passaggi successivi
+## Passaggi successivi e risorse aggiuntive
 
 Una volta creata la connessione, viene automaticamente creato uno schema di destinazione e un flusso di dati per contenere i dati in arrivo. Inoltre, avviene il recupero dei dati e vengono acquisiti fino a 13 mesi di dati storici. Al termine dell&#39;assimilazione iniziale,  i dati Analytics e utilizzarli dai servizi Platform a valle, quali Real-time Customer Profile and Segmentation Service. Per ulteriori informazioni, consulta i documenti seguenti:
 
@@ -103,3 +103,12 @@ Una volta creata la connessione, viene automaticamente creato uno schema di dest
 * [Panoramica del servizio di segmentazione](../../../../../segmentation/home.md)
 * [Panoramica di Analysis Workspace](../../../../../data-science-workspace/home.md)
 * [Panoramica di Servizio query](../../../../../query-service/home.md)
+
+Il seguente video è stato realizzato per consentire agli utenti di acquisire i dati utilizzando il connettore Adobe  Analytics Source:
+
+>[!WARNING]
+>
+> L’ [!DNL Platform] interfaccia utente mostrata nel video seguente è obsoleta. Per informazioni sulle ultime funzionalità e videate dell’interfaccia, consulta la documentazione precedente.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
+
