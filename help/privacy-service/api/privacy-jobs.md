@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Processi
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: df36d88de8ac117206d8d744cfcdd7804fcec61e
 workflow-type: tm+mt
-source-wordcount: '1669'
+source-wordcount: '1807'
 ht-degree: 2%
 
 ---
@@ -14,15 +14,56 @@ ht-degree: 2%
 
 # Lavori di privacy
 
-Le sezioni seguenti descrivono le chiamate che potete effettuare utilizzando l&#39; `/jobs` endpoint nell&#39;API di Privacy Service. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
+Questo documento descrive come lavorare con i processi di privacy utilizzando le chiamate API. Nello specifico, copre l&#39;utilizzo dell&#39; `/job` endpoint nell&#39;API di Privacy Service. Prima di leggere questa guida, fate riferimento alla sezione [](./getting-started.md#getting-started) introduttiva per informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all&#39;API, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
+
+## Elenca tutti i processi {#list}
+
+Potete visualizzare un elenco di tutti i processi di privacy disponibili all&#39;interno dell&#39;organizzazione effettuando una richiesta GET all&#39; `/jobs` endpoint.
+
+**Formato API**
+
+Questo formato di richiesta utilizza un parametro di `regulation` query sull’ `/jobs` endpoint, pertanto inizia con un punto interrogativo (`?`) come mostrato di seguito. La risposta è impaginata e consente di utilizzare altri parametri di query (`page` e `size`) per filtrare la risposta. Potete separare più parametri utilizzando le e commerciale (`&`).
+
+```http
+GET /jobs?regulation={REGULATION}
+GET /jobs?regulation={REGULATION}&page={PAGE}
+GET /jobs?regulation={REGULATION}&size={SIZE}
+GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
+```
+
+| Parametro | Descrizione |
+| --- | --- |
+| `{REGULATION}` | Il tipo di regolamento per cui eseguire la query. I valori accettati sono `gdpr`, `ccpa`, e `pdpa_tha`. |
+| `{PAGE}` | Pagina di dati da visualizzare, con numerazione basata su 0. Il valore predefinito è `0`. |
+| `{SIZE}` | Il numero di risultati da visualizzare su ogni pagina. Il valore predefinito è `1` e il valore massimo è `100`. Se si supera il limite massimo, l&#39;API restituisce un errore di 400 codice. |
+
+**Richiesta**
+
+La richiesta seguente recupera un elenco impaginato di tutti i processi all’interno di un’organizzazione IMS, a partire dalla terza pagina con una dimensione di pagina pari a 50.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/privacy/jobs?regulation=gdpr&page=2&size=50 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}'
+```
+
+**Risposta**
+
+Una risposta corretta restituisce un elenco di processi, con ogni processo contenente dettagli come il relativo `jobId`. In questo esempio, la risposta conterrebbe un elenco di 50 processi, a partire dalla terza pagina dei risultati.
+
+### Accesso alle pagine successive
+
+Per recuperare il set di risultati successivo in una risposta impaginata, dovete effettuare un&#39;altra chiamata API allo stesso endpoint aumentando il parametro della `page` query di 1.
 
 ## Creazione di un processo di privacy {#create-job}
 
-Prima di creare una nuova richiesta di processo, è necessario innanzitutto raccogliere informazioni identificative sugli interessati di cui si desidera accedere, eliminare o rifiutare la vendita. Una volta ricevuti i dati richiesti, questi devono essere forniti nel payload di una richiesta POST all&#39;endpoint principale.
+Prima di creare una nuova richiesta di processo, è necessario innanzitutto raccogliere informazioni identificative sugli interessati di cui si desidera accedere, eliminare o rifiutare la vendita. Una volta ricevuti i dati richiesti, questi devono essere forniti nel payload di una richiesta POST all&#39; `/jobs` endpoint.
 
 >[!NOTE]
 >
->Le applicazioni Adobe Experience Cloud compatibili utilizzano valori diversi per identificare gli oggetti dei dati. Per ulteriori informazioni sugli identificatori richiesti per le applicazioni, consultate la guida [Privacy Service e  applicazioni](../experience-cloud-apps.md) Experience Cloud.
+>Le applicazioni Adobe Experience Cloud compatibili utilizzano valori diversi per identificare gli oggetti dei dati. Per ulteriori informazioni sugli identificatori richiesti per le applicazioni, consultate la guida [Privacy Service e  applicazioni](../experience-cloud-apps.md) Experience Cloud. Per indicazioni più generali sulla determinazione degli ID da inviare ad Privacy Service, consulta il documento sui dati di [identità nelle richieste](../identity-data.md)di privacy.
 
 L&#39;API Privacy Service supporta due tipi di richieste di lavoro per i dati personali:
 
@@ -290,7 +331,7 @@ Dopo aver inviato correttamente la richiesta di processo, potete procedere al pa
 
 ## Verificare lo stato di un processo {#check-status}
 
-Utilizzando uno dei `jobId` valori restituiti nel passaggio precedente, potete recuperare informazioni su quel processo, ad esempio il suo stato di elaborazione corrente.
+È possibile recuperare informazioni su un processo specifico, ad esempio lo stato di elaborazione corrente, includendo tale processo nel percorso di una richiesta GET `jobId` all&#39; `/jobs` endpoint.
 
 >[!IMPORTANT]
 >
@@ -304,7 +345,7 @@ GET /jobs/{JOB_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{JOB_ID}` | L’ID del processo da cercare, restituito `jobId` nella risposta del passaggio [](#create-job)precedente. |
+| `{JOB_ID}` | ID del processo da cercare. Questo ID viene restituito in `jobId` nelle risposte API corrette per la [creazione di un processo](#create-job) e l’ [elencazione di tutti i processi](#list). |
 
 **Richiesta**
 
@@ -324,12 +365,12 @@ Una risposta corretta restituisce i dettagli del processo specificato.
 
 ```json
 {
-    "jobId": "527ef92d-6cd9-45cc-9bf1-477cfa1e2ca2",
+    "jobId": "6fc09b53-c24f-4a6c-9ca2-c6076b0842b6",
     "requestId": "15700479082313109RX-899",
     "userKey": "David Smith",
     "action": "access",
-    "status": "error",
-    "submittedBy": "02b38adf-6573-401e-b4cc-6b08dbc0e61c@techacct.adobe.com",
+    "status": "complete",
+    "submittedBy": "{ACCOUNT_ID}",
     "createdDate": "10/02/2019 08:25 PM GMT",
     "lastModifiedDate": "10/02/2019 08:25 PM GMT",
     "userIds": [
@@ -354,8 +395,21 @@ Una risposta corretta restituisce i dettagli del processo specificato.
             "retryCount": 0,
             "processedDate": "10/02/2019 08:25 PM GMT",
             "productStatusResponse": {
-                "status": "submitted",
-                "message": "processing"
+                "status": "complete",
+                "message": "Success",
+                "responseMsgCode": "PRVCY-6000-200",
+                "responseMsgDetail": "Finished successfully."
+            }
+        },
+        {
+            "product": "Profile",
+            "retryCount": 0,
+            "processedDate": "10/02/2019 08:25 PM GMT",
+            "productStatusResponse": {
+                "status": "complete",
+                "message": "Success",
+                "responseMsgCode": "PRVCY-6000-200",
+                "responseMsgDetail": "Success dataSetIds = [5dbb87aad37beb18a96feb61], Failed dataSetIds = []"
             }
         },
         {
@@ -363,8 +417,14 @@ Una risposta corretta restituisce i dettagli del processo specificato.
             "retryCount": 0,
             "processedDate": "10/02/2019 08:25 PM GMT",
             "productStatusResponse": {
-                "status": "submitted",
-                "message": "processing"
+                "status": "complete",
+                "message": "Success",
+                "responseMsgCode": "PRVCY-6054-200",
+                "responseMsgDetail": "PARTIALLY COMPLETED- Data not found for some requests, check results for more info.",
+                "results": {
+                  "processed": ["1123A4D5690B32A"],
+                  "ignored": ["dsmith@acme.com"]
+                }
             }
         }
     ],
@@ -375,64 +435,28 @@ Una risposta corretta restituisce i dettagli del processo specificato.
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `productStatusResponse` | Stato corrente del processo. I dettagli relativi a ciascun possibile stato sono forniti nella tabella seguente. |
+| `productStatusResponse` | Ogni oggetto all&#39;interno dell&#39; `productResponses` array contiene informazioni sullo stato corrente del processo rispetto a una specifica [!DNL Experience Cloud] applicazione. |
+| `productStatusResponse.status` | La categoria di stato corrente del processo. Per un elenco delle categorie [di stato](#status-categories) disponibili e i significati corrispondenti, vedere la tabella seguente. |
+| `productStatusResponse.message` | Stato specifico del processo, corrispondente alla categoria di stato. |
+| `productStatusResponse.responseMsgCode` | Un codice standard per i messaggi di risposta ai prodotti ricevuti da Privacy Service. I dettagli del messaggio sono forniti in `responseMsgDetail`. |
+| `productStatusResponse.responseMsgDetail` | Una spiegazione più dettagliata dello stato del processo. I messaggi per stati simili possono variare tra i prodotti. |
+| `productStatusResponse.results` | Per alcuni stati, alcuni prodotti possono restituire un `results` oggetto che fornisce informazioni aggiuntive non coperte da `responseMsgDetail`. |
 | `downloadURL` | Se lo stato del processo è `complete`, questo attributo fornisce un URL per scaricare i risultati del processo come file ZIP. Questo file può essere scaricato per 60 giorni al termine del processo. |
 
-### Risposte allo stato del processo
+### Categorie stato processo {#status-categories}
 
-Nella tabella seguente sono elencati i diversi stati del processo possibili e il relativo significato:
+Nella tabella seguente sono elencate le diverse possibili categorie di stato del processo e il relativo significato:
 
-| Codice di stato | Messaggio di stato | Significato |
-| ----------- | -------------- | -------- |
-| 1 | Complete | Il processo è completo e (se necessario) i file vengono caricati da ogni applicazione. |
-| 2 | Elaborazione | Le applicazioni hanno riconosciuto il processo e stanno elaborando il processo. |
-| 3 | Inviato | Il processo viene inviato a tutte le applicazioni applicabili. |
-| 4 | Errore | Si è verificato un errore durante l’elaborazione del processo. È possibile ottenere informazioni più specifiche recuperando i dettagli dei singoli processi. |
+| Categoria stato | Significato |
+| -------------- | -------- |
+| Complete | Il processo è completo e (se necessario) i file vengono caricati da ogni applicazione. |
+| Elaborazione | Le applicazioni hanno riconosciuto il processo e stanno elaborando il processo. |
+| Inviato | Il processo viene inviato a tutte le applicazioni applicabili. |
+| Errore | Si è verificato un errore durante l’elaborazione del processo. È possibile ottenere informazioni più specifiche recuperando i dettagli dei singoli processi. |
 
 >[!NOTE]
 >
 >Un processo inviato potrebbe rimanere in stato di elaborazione se presenta un processo figlio dipendente in fase di elaborazione.
-
-## Elenca tutti i processi
-
-Potete visualizzare un elenco di tutte le richieste di processo disponibili all&#39;interno dell&#39;organizzazione effettuando una richiesta GET all&#39;endpoint principale (`/`).
-
-**Formato API**
-
-Questo formato di richiesta utilizza un parametro di `regulation` query sull&#39;endpoint principale (`/`), quindi inizia con un punto interrogativo (`?`) come mostrato di seguito. La risposta è impaginata e consente di utilizzare altri parametri di query (`page` e `size`) per filtrare la risposta. Potete separare più parametri utilizzando le e commerciale (`&`).
-
-```http
-GET /jobs?regulation={REGULATION}
-GET /jobs?regulation={REGULATION}&page={PAGE}
-GET /jobs?regulation={REGULATION}&size={SIZE}
-GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
-```
-
-| Parametro | Descrizione |
-| --- | --- |
-| `{REGULATION}` | Il tipo di regolamento per cui eseguire la query. I valori accettati sono `gdpr`, `ccpa`, e `pdpa_tha`. |
-| `{PAGE}` | Pagina di dati da visualizzare, con numerazione basata su 0. Il valore predefinito è `0`. |
-| `{SIZE}` | Il numero di risultati da visualizzare su ogni pagina. Il valore predefinito è `1` e il valore massimo è `100`. Se si supera il limite massimo, l&#39;API restituisce un errore di 400 codice. |
-
-**Richiesta**
-
-La richiesta seguente recupera un elenco impaginato di tutti i processi all’interno di un’organizzazione IMS, a partire dalla terza pagina con una dimensione di pagina pari a 50.
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/privacy/jobs?regulation=gdpr&page=2&size=50 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
-```
-
-**Risposta**
-
-Una risposta corretta restituisce un elenco di processi, con ogni processo contenente dettagli come il relativo `jobId`. In questo esempio, la risposta conterrebbe un elenco di 50 processi, a partire dalla terza pagina dei risultati.
-
-### Accesso alle pagine successive
-
-Per recuperare il set di risultati successivo in una risposta impaginata, dovete effettuare un&#39;altra chiamata API allo stesso endpoint aumentando il parametro della `page` query di 1.
 
 ## Passaggi successivi
 
