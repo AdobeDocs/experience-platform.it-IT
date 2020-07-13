@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Segmentazione multi-entità
 topic: overview
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 7110be2654e55ea411580f8c9e2e92bb52badab5
+workflow-type: tm+mt
+source-wordcount: '406'
+ht-degree: 0%
 
 ---
 
@@ -13,15 +16,17 @@ source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
 
 La segmentazione multi-entità è la capacità di estendere i dati del profilo con dati aggiuntivi basati su prodotti, store o altre classi non di profilo. Una volta connessi, i dati di altre classi diventano disponibili come se fossero nativi dello schema Profilo.
 
-Per ulteriori informazioni sulla segmentazione tra più entità, consultate la panoramica sulla [segmentazione](./home.md).
+Per saperne di più sulla segmentazione multi-entità, continuate a leggere la documentazione e completate le vostre conoscenze guardando il video sottostante o esplorando la panoramica [della](./home.md)segmentazione.]
+
+>[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
 
 ## Introduzione
 
-Questa esercitazione richiede una buona conoscenza dei vari servizi Adobe Experience Platform coinvolti nell&#39;utilizzo della segmentazione. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
+Questa esercitazione richiede una conoscenza approfondita dei diversi servizi di Adobe Experience Platform  coinvolti nell&#39;utilizzo della segmentazione. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
 - [Profilo](../profile/home.md)cliente in tempo reale: Fornisce un profilo del consumatore unificato in tempo reale, basato su dati aggregati provenienti da più origini.
-- [Servizio](./home.md)di segmentazione della piattaforma Adobe Experience: Consente di creare segmenti dal profilo cliente in tempo reale.
-- [Experience Data Model (XDM)](../xdm/home.md): Il framework standardizzato tramite il quale la piattaforma organizza i dati sull&#39;esperienza cliente.
+- [servizio](./home.md)di segmentazione Adobe Experience Platform: Consente di creare segmenti dal profilo cliente in tempo reale.
+- [Experience Data Model (XDM)](../xdm/home.md): Framework standard con cui Platform organizza i dati sull&#39;esperienza dei clienti.
 
 ## Come definire le relazioni XDM
 
