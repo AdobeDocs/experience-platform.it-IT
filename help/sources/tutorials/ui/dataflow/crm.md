@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurare un flusso di dati per un connettore CRM nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1074'
+source-wordcount: '993'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Configurare un flusso di dati per un connettore CRM nell&#39;interfaccia utente
 
-Un flusso di dati è un&#39;attività pianificata che recupera e trasferisce dati da un&#39;origine a un [!DNL Platform] set di dati. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando il connettore di base CRM.
+Un flusso di dati è un&#39;attività pianificata che recupera e trasferisce dati da un&#39;origine a un [!DNL Platform] set di dati. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando il connettore CRM.
 
 ## Introduzione
 
@@ -103,23 +103,9 @@ Dopo aver rivisto il flusso di dati, fai clic su **[!UICONTROL Finish]** e conse
 
 ![review](../../../images/tutorials/dataflow/crm/review.png)
 
-## Monitorare il flusso di dati
+## Monitorare ed eliminare il flusso di dati
 
-Una volta creato il flusso di dati, potete monitorare i dati che vengono acquisiti tramite di esso. Seguite i passaggi riportati di seguito per accedere al monitor dei dataset di un flusso di dati.
-
-Nell&#39;area di lavoro _Origini_ , seleziona l&#39;origine CRM che desideri visualizzare sotto la *[!UICONTROL CRM]* categoria. Selezionare *[!UICONTROL Connect Source]* per avviare l&#39;interfaccia di autenticazione. Per visualizzare un flusso di dati esistente, selezionare Account ** esistente e selezionare l&#39;account a cui si desidera accedere.
-
-![monitor](../../../images/tutorials/dataflow/crm/monitor.png)
-
-Viene *[!UICONTROL Source activity]* visualizzata la schermata. Da qui, fate clic sul nome di un set di dati di cui desiderate monitorare l&#39;attività.
-
-![select-dataflow-dataset](../../../images/tutorials/dataflow/crm/select-dataflow-dataset.png)
-
-Viene *[!UICONTROL Dataset activity]* visualizzata la schermata. In questa pagina viene visualizzata la frequenza dei messaggi utilizzati sotto forma di grafico.
-
-![dataset-activity](../../../images/tutorials/dataflow/crm/dataset-activity.png)
-
-Per ulteriori informazioni sul monitoraggio dei set di dati e sull’assimilazione, fare riferimento all’esercitazione sul [monitoraggio dei flussi di dati](../../../../ingestion/quality/monitor-data-flows.md).
+Una volta creato il flusso di dati, potete monitorare i dati che vengono acquisiti tramite di esso. Per ulteriori informazioni su come monitorare ed eliminare il flusso di dati, consulta l’esercitazione sul [monitoraggio e l’eliminazione dei flussi di dati](../monitor.md).
 
 ## Passaggi successivi
 
