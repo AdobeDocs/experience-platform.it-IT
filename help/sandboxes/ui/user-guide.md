@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida utente sandbox
 topic: user guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d02f12202e51b00453f719604052a54f6fcfe4ab
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '527'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,10 @@ Dopo aver selezionato una sandbox, la schermata si aggiorna con la sandbox selez
 ![](../images/ui/sandbox-switched.png)
 
 ## Creare una nuova sandbox
+
+Usate il seguente video per una panoramica rapida su come usare [!DNL Sandboxes] in [!DNL Experience Platform].
+
+>[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
 Per creare una nuova sandbox nell’interfaccia utente, fate clic su **Sandbox** nella barra di navigazione a sinistra, quindi fate clic su **Crea sandbox**.
 
