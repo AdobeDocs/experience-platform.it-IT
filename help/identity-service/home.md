@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Servizio Adobe Experience Platform Identity
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d02f12202e51b00453f719604052a54f6fcfe4ab
 workflow-type: tm+mt
-source-wordcount: '1530'
+source-wordcount: '1672'
 ht-degree: 0%
 
 ---
@@ -60,6 +60,14 @@ Se hai chiesto a una persona &quot;Qual è il tuo ID?&quot; senza un ulteriore c
 I clienti possono interagire con il tuo marchio attraverso una combinazione di canali online e offline, il che ti permette di trovare il modo di conciliare queste interazioni frammentate in un&#39;unica identità cliente.
 
 [!DNL Experience Platform] affronta questa sfida attraverso due concetti: [spazi dei nomi](#identity-namespaces) e grafici [di](#identity-graphs)identità.
+
+Il seguente video è pensato per consentire agli utenti di comprendere meglio identità e grafici di identità. Il video seguente illustra le tre funzionalità di raccolta identità, grafici identità e API. Descrive inoltre come gli algoritmi deterministici e probabilistici vengono utilizzati per creare grafici di identità privati, e discute il ruolo dei grafici di identità privata,  Adobe Experience Platform Identity Service Co-Op Graph e grafici di terze parti.
+
+>[!IMPORTANT]
+>
+> I grafici privati probabilistici sono ancora in fase di sviluppo e sono impostati per essere rilasciati in un secondo momento.
+
+>[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
 ### Spazi dei nomi delle identità
 
@@ -122,6 +130,14 @@ Durante il processo di assimilazione in streaming, estrae [!DNL Identity Service
 ### Assegna dati a [!DNL Identity Service]
 
 [!DNL Identity Service] consuma i dati conformi a XDM inviati [!DNL Experience Platform] tramite caricamento [batch](../ingestion/batch-ingestion/overview.md) o caricamento [in streaming](../ingestion/streaming-ingestion/overview.md).
+
+Il seguente video è pensato per consentire agli utenti di comprendere meglio i servizi di identità. In questo video viene illustrato come etichettare i campi di dati come identità, assimilare i dati di identità e quindi verificare che i dati siano stati immessi nel grafico privato  Adobe Experience Platform Identity Service.
+
+>[!WARNING]
+>
+> L’ [!DNL Platform] interfaccia utente mostrata nel video seguente è obsoleta. Consulta la documentazione relativa alle più recenti schermate e funzionalità dell’interfaccia utente.
+
+>[!VIDEO](https://video.tv.adobe.com/v/28167?quality=12&learn=on)
 
 ## Governance dei dati
 
