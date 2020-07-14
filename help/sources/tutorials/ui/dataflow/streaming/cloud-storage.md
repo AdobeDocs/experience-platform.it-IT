@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurare un flusso di dati per un connettore di streaming per l'archiviazione cloud nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '656'
 ht-degree: 0%
 
 ---
@@ -74,9 +74,9 @@ Dopo aver rivisto il flusso di dati, fai clic su **[!UICONTROL Finish]** e conse
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/review.png)
 
-## Monitorare il flusso di dati
+## Monitorare ed eliminare il flusso di dati
 
-Una volta creato il flusso di dati per l&#39;archiviazione cloud, potete monitorare i dati che vengono acquisiti tramite di esso. Per ulteriori informazioni sul monitoraggio dei set di dati, consulta l’esercitazione sul [monitoraggio dei flussi di dati](../../../../../ingestion/quality/monitor-data-flows.md).
+Una volta creato il flusso di dati per l&#39;archiviazione cloud, potete monitorare i dati che vengono acquisiti tramite di esso. Per ulteriori informazioni sul monitoraggio e l’eliminazione dei flussi di dati, consulta l’esercitazione sul [monitoraggio dei flussi](../../../../../ingestion/quality/monitor-data-flows.md)di dati.
 
 ## Passaggi successivi
 
