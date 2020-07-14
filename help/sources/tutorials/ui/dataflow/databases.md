@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurare un flusso di dati per un connettore di database nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1017'
 ht-degree: 0%
 
 ---
@@ -108,9 +108,9 @@ Dopo aver rivisto il flusso di dati, fai clic su **[!UICONTROL Finish]** e conse
 
 ![](../../../images/tutorials/dataflow/databases/review.png)
 
-## Monitorare il flusso di dati
+## Monitorare ed eliminare il flusso di dati
 
-Una volta creato il flusso di dati, potete monitorare i dati che vengono acquisiti tramite di esso. Per ulteriori informazioni su come monitorare i flussi di dati, consulta l’esercitazione sugli [account e i flussi di dati](../monitor.md).
+Una volta creato il flusso di dati, potete monitorare i dati che vengono acquisiti tramite di esso. Per ulteriori informazioni su come monitorare ed eliminare il flusso di dati, consulta l’esercitazione sul [monitoraggio e l’eliminazione dei flussi di dati](../monitor.md).
 
 ## Passaggi successivi
 
