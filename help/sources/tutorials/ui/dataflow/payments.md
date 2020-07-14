@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurare un flusso di dati per un connettore di pagamento nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1020'
+source-wordcount: '1019'
 ht-degree: 0%
 
 ---
@@ -93,13 +93,13 @@ Immettete i valori per la pianificazione e fate clic su **[!UICONTROL Next]**.
 
 ![programmazione](../../../images/tutorials/dataflow/payments/scheduling.png)
 
-## Denominate il flusso di dati
+## Denominazione del flusso di dati
 
 Viene visualizzato il *[!UICONTROL Dataset flow detail]* passaggio in cui è necessario specificare un nome e una descrizione facoltativa per il flusso di dati. Selezionate **[!UICONTROL Next]** al termine.
 
 ![dataset-flow-details](../../../images/tutorials/dataflow/payments/dataset-flow-details.png)
 
-## Controlla il flusso dei dataset
+## Controllare il flusso di dati
 
 Viene visualizzato il *[!UICONTROL Review]* passaggio che consente di rivedere il nuovo flusso di dati prima della creazione. I dettagli sono raggruppati nelle seguenti categorie:
 
@@ -111,9 +111,9 @@ Dopo aver rivisto il flusso di dati, fai clic su **[!UICONTROL Finish]** e conse
 
 ![review](../../../images/tutorials/dataflow/payments/review.png)
 
-## Monitorare il flusso dei dataset
+## Monitorare ed eliminare il flusso di dati
 
-Una volta creato il flusso di set di dati, è possibile monitorare i dati che vengono acquisiti attraverso di esso. Per ulteriori informazioni su come monitorare i flussi di dataset, vedere l&#39;esercitazione sugli [account e sui flussi](../monitor.md)di dataset.
+Una volta creato il flusso di dati, potete monitorare i dati che vengono acquisiti tramite di esso. Per ulteriori informazioni su come monitorare ed eliminare il flusso di dati, consulta l’esercitazione sul [monitoraggio e l’eliminazione dei flussi di dati](../monitor.md).
 
 ## Passaggi successivi
 
