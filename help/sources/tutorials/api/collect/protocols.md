@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Raccogliere i dati del protocollo tramite connettori di origine e API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 84ea3e45a3db749359f3ce4a0ea25429eee8bb66
+source-git-commit: d5a21462b9f0362414dfe4f73a6c4e4a2c92af61
 workflow-type: tm+mt
-source-wordcount: '1415'
+source-wordcount: '1605'
 ht-degree: 1%
 
 ---
@@ -63,6 +63,18 @@ Continuate a seguire i passaggi descritti nella guida per gli sviluppatori fino 
 
 Con la creazione di uno schema XDM ad hoc, ora è possibile creare una connessione di origine utilizzando una richiesta POST all&#39; [!DNL Flow Service] API. Una connessione di origine è costituita da un ID connessione, un file di dati di origine e un riferimento allo schema che descrive i dati di origine.
 
+Per creare una connessione di origine, è inoltre necessario definire un valore enum per l&#39;attributo del formato dati.
+
+Utilizzate i seguenti valori enum per i connettori **basati su** file:
+
+| Data.format | Valore Enum |
+| ----------- | ---------- |
+| File delimitati | `delimited` |
+| File JSON | `json` |
+| Parquet, file | `parquet` |
+
+Per tutti i connettori **basati su** tabelle, utilizzate il valore enum: `tabular`.
+
 **Formato API**
 
 ```http
@@ -84,7 +96,7 @@ curl -X POST \
         "baseConnectionId": "a5c6b647-e784-4b58-86b6-47e784ab580b",
         "description": "Protocols source connection to ingest Orders",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/9e800522521c1ed7d05d3782897f6bd78ee8c2302169bc19",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -275,17 +287,11 @@ Una risposta corretta restituisce un array contenente l&#39;ID del set di dati a
 ]
 ```
 
-## Creazione di una connessione di base di dataset
-
-Per inserire dati esterni in [!DNL Platform], è necessario innanzitutto acquisire una connessione [!DNL Experience Platform] dataset.
-
-Per creare una connessione alla base di dati, seguire i passaggi descritti nell&#39;esercitazione [sulla connessione alla base di](../create-dataset-base-connection.md)dati.
-
-Continuate a seguire i passaggi descritti nella guida per gli sviluppatori fino a quando non avete creato una connessione di base per i dataset. Ottenete e memorizzate l&#39;identificatore univoco (`$id`) e continuate a usarlo come ID di connessione nel passaggio successivo per creare una connessione di destinazione.
-
 ## Creare una connessione di destinazione
 
-Ora sono disponibili identificatori univoci per una connessione di base di set di dati, uno schema di destinazione e un set di dati di destinazione. È ora possibile creare una connessione di destinazione utilizzando l&#39; [!DNL Flow Service] API per specificare il dataset che conterrà i dati di origine in ingresso.
+Una connessione di destinazione rappresenta la connessione alla destinazione in cui i dati acquisiti entrano. Per creare una connessione di destinazione, è necessario fornire l&#39;ID di specifica di connessione fisso associato al data Lake. Questo ID della specifica di connessione è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+Ora sono disponibili gli identificatori univoci, uno schema di destinazione, un set di dati di destinazione e l&#39;ID delle specifiche di connessione al data Lake. Utilizzando questi identificatori, potete creare una connessione di destinazione utilizzando l&#39; [!DNL Flow Service] API per specificare il dataset che conterrà i dati di origine in ingresso.
 
 **Formato API**
 
@@ -304,7 +310,6 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "baseConnectionId": "a5c6b647-e784-4b58-86b6-47e784ab580b",
         "name": "Target Connection for protocols",
         "description": "Target Connection for protocols",
         "data": {
@@ -325,10 +330,9 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `baseConnectionId` | ID della connessione di base del set di dati. |
 | `data.schema.id` | Il valore `$id` dello schema XDM di destinazione. |
 | `params.dataSetId` | ID del set di dati di destinazione. |
-| `connectionSpec.id` | L&#39;ID della specifica di connessione per l&#39;applicazione protocolli. |
+| `connectionSpec.id` | L&#39;ID della specifica di connessione fissa al data Lake. Questo ID è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Risposta**
 
@@ -441,7 +445,6 @@ curl -X GET \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
-
 
 **Risposta**
 
@@ -578,6 +581,9 @@ L&#39;ultimo passo verso la raccolta dei dati è creare un flusso di dati. A que
 
 Un flusso di dati è responsabile della pianificazione e della raccolta dei dati da un&#39;origine. È possibile creare un flusso di dati eseguendo una richiesta POST fornendo al contempo i valori indicati in precedenza all&#39;interno del payload.
 
+Per pianificare un&#39;assimilazione, è innanzitutto necessario impostare il valore dell&#39;ora di inizio in modo che l&#39;ora dell&#39;epoch sia espressa in secondi. Quindi, è necessario impostare il valore della frequenza su una delle cinque opzioni: `once`, `minute`, `hour`, `day`o `week`. Il valore dell&#39;intervallo indica il periodo tra due assimilazioni consecutive e la creazione di un&#39;assimilazione una tantum non richiede l&#39;impostazione di un intervallo. Per tutte le altre frequenze, il valore dell&#39;intervallo deve essere impostato su uguale o maggiore di `15`.
+
+
 **Formato API**
 
 ```http
@@ -633,13 +639,25 @@ curl -X POST \
     }'
 ```
 
+| Proprietà | Descrizione |
+| -------- | ----------- |
+| `flowSpec.id` | L&#39;ID della specifica del flusso di dati associato all&#39;origine dei protocolli di terze parti. |
+| `sourceConnectionIds` | L&#39;ID di connessione di origine associato all&#39;origine dei protocolli di terze parti. |
+| `targetConnectionIds` | L&#39;ID connessione di destinazione associato all&#39;origine dei protocolli di terze parti. |
+| `transformations.params.deltaColum` | Colonna designata utilizzata per distinguere tra dati nuovi ed esistenti. I dati incrementali verranno acquisiti in base alla marca temporale della colonna selezionata. |
+| `transformations.params.mappingId` | L&#39;ID di mappatura associato all&#39;origine dei protocolli di terze parti. |
+| `scheduleParams.startTime` | Ora di inizio per il flusso di dati, espressa in secondi. |
+| `scheduleParams.frequency` | I valori di frequenza selezionabili includono: `once`, `minute`, `hour`, `day`o `week`. |
+| `scheduleParams.interval` | L&#39;intervallo indica il periodo tra due esecuzioni di flusso consecutive. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero. L&#39;intervallo non è richiesto quando la frequenza è impostata come `once` e deve essere maggiore o uguale a `15` per altri valori di frequenza. |
+
 **Risposta**
 
 Una risposta corretta restituisce l’ID `id` del flusso di dati appena creato.
 
 ```json
 {
-    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5",
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
 
