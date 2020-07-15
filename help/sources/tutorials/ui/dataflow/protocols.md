@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurare un flusso di dati per un connettore di protocollo nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
+source-git-commit: 2590c28df6d0fff3e207eb232a02abe16830ee17
 workflow-type: tm+mt
-source-wordcount: '1018'
+source-wordcount: '1155'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Configurare un flusso di dati per un connettore di protocollo nell&#39;interfaccia utente
 
-Un flusso di dataset è un&#39;attività pianificata che recupera e trasferisce dati da un&#39;origine a un set di dati di Adobe Experience Platform . Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di set di dati utilizzando l&#39;account dei protocolli.
+Un flusso di dati è un&#39;attività pianificata che recupera e assimila dati da un&#39;origine a un set di dati di Adobe Experience Platform . Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l&#39;account dei protocolli.
 
 ## Introduzione
 
@@ -70,30 +70,45 @@ Viene visualizzata *[!UICONTROL Select schema]* la finestra di dialogo. Selezion
 
 In base alle esigenze, è possibile scegliere di mappare direttamente i campi oppure utilizzare le funzioni di mappatura per trasformare i dati di origine in modo da derivare i valori calcolati o calcolati. Per ulteriori informazioni sulla mappatura dei dati e sulle funzioni di mappatura, consulta l’esercitazione sulla [mappatura dei dati CSV ai campi](../../../../ingestion/tutorials/map-a-csv-file.md)dello schema XDM.
 
-Lo *[!UICONTROL Mapping]* schermo consente anche di impostare *[!UICONTROL Delta column]*. Quando si crea il flusso di dati, è possibile impostare qualsiasi campo di marca temporale come base per decidere quali record acquisire nelle assimilazioni incrementali pianificate.
+Lo *[!UICONTROL Mapping]* schermo consente anche di impostare *[!UICONTROL Delta column]*. Quando viene creato il flusso di dati, puoi impostare qualsiasi campo di marca temporale come base per decidere quali record acquisire nelle assimilazioni incrementali pianificate.
 
 Una volta mappati i dati di origine, fai clic su **[!UICONTROL Next]**.
 
 ![](../../../images/tutorials/dataflow/protocols/mapping.png)
 
+## Pianificare le esecuzioni dell&#39;assimilazione
+
 Viene visualizzato il *[!UICONTROL Scheduling]* passaggio che consente di configurare una pianificazione di assimilazione per l&#39;acquisizione automatica dei dati di origine selezionati tramite le mappature configurate. Nella tabella seguente sono riportati i diversi campi configurabili per la pianificazione:
 
 | Campo | Descrizione |
 | --- | --- |
-| Frequenza | Le frequenze selezionabili sono: Minuto, Ora, Giorno e Settimana. |
+| Frequenza | Le frequenze selezionabili sono: Una volta, Minuto, Ora, Giorno e Settimana. |
 | Intervallo | Un numero intero che imposta l&#39;intervallo per la frequenza selezionata. |
-| Ora di inizio | Una marca temporale UTC per la quale si verificherà la prima assimilazione. |
-| Backfill | Un valore booleano che determina i dati inizialmente acquisiti. Se *[!UICONTROL Backfill]* è abilitata, tutti i file correnti nel percorso specificato verranno acquisiti durante la prima assimilazione pianificata. Se *[!UICONTROL Backfill]* è disattivato, verranno assimilati solo i file caricati tra la prima esecuzione dell&#39;assimilazione e l&#39; *[!UICONTROL Start time]* assimilazione. I file caricati prima di *[!UICONTROL Start time]* non verranno acquisiti. |
+| Ora di inizio | Una marca temporale UTC che indica quando è impostata la prima assimilazione |
+| Backfill | Un valore booleano che determina i dati inizialmente acquisiti. Se *Backfill* è abilitato, tutti i file correnti nel percorso specificato verranno acquisiti durante la prima assimilazione pianificata. Se *Backfill* è disattivato, verranno acquisiti solo i file caricati tra la prima esecuzione dell&#39;assimilazione e l&#39;ora *di* inizio. I file caricati prima dell&#39;ora *di* inizio non vengono acquisiti. |
+| Colonna Delta | Opzione con un set filtrato di campi dello schema di origine di tipo, data o ora. Questo campo è utilizzato per distinguere tra dati nuovi ed esistenti. I dati incrementali verranno acquisiti in base alla marca temporale della colonna selezionata. |
 
-I flussi di dati sono progettati per l&#39;acquisizione automatica dei dati su base programmata. Se desiderate effettuare il caricamento solo una volta in questo flusso di lavoro, potete farlo configurando il **[!UICONTROL Frequency]** pulsante &quot;Giorno&quot; e applicando un numero molto elevato per il **[!UICONTROL Interval]**, ad esempio 10000 o simile.
+I flussi di dati sono progettati per l&#39;acquisizione automatica dei dati su base programmata. Per iniziare, selezionate la frequenza di assimilazione. Quindi, impostare l&#39;intervallo per specificare il periodo tra due esecuzioni di flusso. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero e deve essere impostato su maggiore o uguale a 15.
 
-Immettete i valori per la pianificazione e fate clic su **[!UICONTROL Next]**.
+Per impostare l’ora di inizio dell’assimilazione, regolate la data e l’ora visualizzate nella casella Ora di inizio. In alternativa, potete selezionare l&#39;icona del calendario per modificare il valore dell&#39;ora di inizio. L&#39;ora di inizio deve essere maggiore o uguale all&#39;ora UTC corrente.
 
-![programmazione](../../../images/tutorials/dataflow/protocols/scheduling.png)
+Selezionare **[!UICONTROL Load incremental data by]** per assegnare la colonna delta. Questo campo consente di distinguere tra dati nuovi ed esistenti.
+
+![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
+
+### Impostazione di un flusso di dati per l’assimilazione una tantum
+
+Per impostare l’inserimento una tantum, selezionate la freccia a discesa di frequenza e selezionate **[!UICONTROL Once]**.
+
+>[!TIP] **[!UICONTROL Interval]** e non **[!UICONTROL Backfill]** sono visibili durante un&#39;assimilazione una tantum.
+
+![](../../../images/tutorials/dataflow/databases/schedule-once.png)
+
+Dopo aver fornito i valori appropriati alla pianificazione, selezionare **[!UICONTROL Next]**.
 
 ## Denominazione del flusso di dati
 
-Viene visualizzato il *[!UICONTROL Dataset flow detail]* passaggio in cui è necessario specificare un nome e una descrizione facoltativa per il flusso di dati. Al termine fai clic su **[!UICONTROL Next]** (Continua).
+Viene visualizzato il *[!UICONTROL Dataflow detail]* passaggio in cui è necessario specificare un nome e una descrizione facoltativa per il flusso di dati. Al termine fai clic su **[!UICONTROL Next]** (Continua).
 
 ![dataset-flow-details](../../../images/tutorials/dataflow/protocols/dataset-flow-details.png)
 
@@ -115,7 +130,7 @@ Una volta creato il flusso di dati, potete monitorare i dati che vengono acquisi
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato con successo un flusso di dataset per inserire i dati da un sistema di automazione marketing e hai acquisito informazioni sul monitoraggio dei set di dati. I dati in entrata possono ora essere utilizzati dai [!DNL Platform] servizi a valle come [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i documenti seguenti:
+Seguendo questa esercitazione, hai creato con successo un flusso di dati per l&#39;immissione di dati da un sistema di automazione del marketing e hai acquisito informazioni sul monitoraggio dei set di dati. I dati in entrata possono ora essere utilizzati dai [!DNL Platform] servizi a valle come [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i documenti seguenti:
 
 - [Panoramica del profilo cliente in tempo reale](../../../../profile/home.md)
 - [Panoramica di Analysis Workspace](../../../../data-science-workspace/home.md)
@@ -126,9 +141,9 @@ Le sezioni seguenti forniscono informazioni aggiuntive sull&#39;utilizzo dei con
 
 ### Disattivazione di un flusso di dati
 
-Quando viene creato un flusso di dati, esso diventa immediatamente attivo e acquisisce i dati in base alla pianificazione assegnata. È possibile disattivare un flusso di dataset attivo in qualsiasi momento seguendo le istruzioni riportate di seguito.
+Quando un flusso di dati viene creato, diventa immediatamente attivo e i dati vengono acquisiti in base alla pianificazione specificata. Puoi disattivare un flusso di dati attivo in qualsiasi momento seguendo le istruzioni riportate di seguito.
 
-Nella *[!UICONTROL Dataset Flows]* schermata, selezionare il nome del flusso di dati che si desidera disattivare.
+Nella *[!UICONTROL Dataflows]* schermata, selezionate il nome del flusso di dati da disattivare.
 
 ![browse-dataset-flow](../../../images/tutorials/dataflow/protocols/view-dataset-flows.png)
 
