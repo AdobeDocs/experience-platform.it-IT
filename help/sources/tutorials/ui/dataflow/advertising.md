@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurare un flusso di dati per un connettore pubblicitario nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
+source-git-commit: dcfbd42f3bba494b708dce2e7a6b4b12bf9035e1
 workflow-type: tm+mt
-source-wordcount: '1019'
+source-wordcount: '1155'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ Viene visualizzata *[!UICONTROL Select schema]* la finestra di dialogo. Selezion
 
 In base alle esigenze, è possibile scegliere di mappare direttamente i campi oppure utilizzare le funzioni di mappatura per trasformare i dati di origine in modo da derivare i valori calcolati o calcolati. Per ulteriori informazioni sulla mappatura dei dati e sulle funzioni di mappatura, consulta l’esercitazione sulla [mappatura dei dati CSV ai campi](../../../../ingestion/tutorials/map-a-csv-file.md)dello schema XDM.
 
-La *[!UICONTROL Mapping]* schermata consente anche di impostare *[!UICONTROL Delta column]*. Quando si crea il flusso di dati, è possibile impostare qualsiasi campo di marca temporale come base per decidere quali record acquisire nelle assimilazioni incrementali pianificate.
+La *[!UICONTROL Mapping]* schermata consente anche di impostare *[!UICONTROL Delta column]*. Quando viene creato il flusso di dati, puoi impostare qualsiasi campo di marca temporale come base per decidere quali record acquisire nelle assimilazioni incrementali pianificate.
 
 Una volta mappati i dati di origine, fai clic su **[!UICONTROL Next]**.
 
@@ -82,24 +82,37 @@ Viene visualizzato il *[!UICONTROL Scheduling]* passaggio che consente di config
 
 | Campo | Descrizione |
 | --- | --- |
-| Frequenza | Le frequenze selezionabili sono: Minuto, Ora, Giorno e Settimana. |
+| Frequenza | Le frequenze selezionabili sono: Una volta, Minuto, Ora, Giorno e Settimana. |
 | Intervallo | Un numero intero che imposta l&#39;intervallo per la frequenza selezionata. |
-| Ora di inizio | Una marca temporale UTC per la quale si verificherà la prima assimilazione. |
-| Backfill | Un valore booleano che determina i dati inizialmente acquisiti. Se *[!UICONTROL Backfill]* è abilitata, tutti i file correnti nel percorso specificato verranno acquisiti durante la prima assimilazione pianificata. Se *[!UICONTROL Backfill]* è disattivato, verranno trasferiti solo i file caricati tra la prima esecuzione dell&#39;assimilazione e il *[!UICONTROL Start time*] . I file caricati prima di *[!UICONTROL Start time]* non verranno acquisiti. |
+| Ora di inizio | Una marca temporale UTC che indica quando è impostata la prima assimilazione |
+| Backfill | Un valore booleano che determina i dati inizialmente acquisiti. Se *Backfill* è abilitato, tutti i file correnti nel percorso specificato verranno acquisiti durante la prima assimilazione pianificata. Se *Backfill* è disattivato, verranno acquisiti solo i file caricati tra la prima esecuzione dell&#39;assimilazione e l&#39;ora *di* inizio. I file caricati prima dell&#39;ora *di* inizio non vengono acquisiti. |
+| Colonna Delta | Opzione con un set filtrato di campi dello schema di origine di tipo, data o ora. Questo campo è utilizzato per distinguere tra dati nuovi ed esistenti. I dati incrementali verranno acquisiti in base alla marca temporale della colonna selezionata. |
 
-I flussi di dati sono progettati per l&#39;acquisizione automatica dei dati su base programmata. Se desiderate effettuare il caricamento solo una volta in questo flusso di lavoro, potete farlo configurando il **[!UICONTROL Frequency]** pulsante &quot;Giorno&quot; e applicando un numero molto elevato per il **[!UICONTROL Interval]**, ad esempio 10000 o simile.
+I flussi di dati sono progettati per l&#39;acquisizione automatica dei dati su base programmata. Per iniziare, selezionate la frequenza di assimilazione. Quindi, impostare l&#39;intervallo per specificare il periodo tra due esecuzioni di flusso. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero e deve essere impostato su maggiore o uguale a 15.
 
-Immettete i valori per la pianificazione e fate clic su **[!UICONTROL Next]**.
+Per impostare l’ora di inizio dell’assimilazione, regolate la data e l’ora visualizzate nella casella Ora di inizio. In alternativa, potete selezionare l&#39;icona del calendario per modificare il valore dell&#39;ora di inizio. L&#39;ora di inizio deve essere maggiore o uguale all&#39;ora UTC corrente.
 
-![programmazione](../../../images/tutorials/dataflow/advertising/schedule.png)
+Selezionare **[!UICONTROL Load incremental data by]** per assegnare la colonna delta. Questo campo consente di distinguere tra dati nuovi ed esistenti.
 
-## Denominate il flusso di dati
+![intervallo di programmazione](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
 
-Viene visualizzato il *[!UICONTROL Dataset flow detail]* passaggio in cui è necessario specificare un nome e una descrizione facoltativa per il flusso di dati. Selezionate **[!UICONTROL Next]** al termine.
+### Impostazione di un flusso di dati per l’assimilazione una tantum
+
+Per impostare l’inserimento una tantum, selezionate la freccia a discesa di frequenza e selezionate **[!UICONTROL Once]**.
+
+>[!TIP] **[!UICONTROL Interval]** e non **[!UICONTROL Backfill]** sono visibili durante un&#39;assimilazione una tantum.
+
+![pianificazione](../../../images/tutorials/dataflow/databases/schedule-once.png)
+
+Dopo aver fornito i valori appropriati alla pianificazione, selezionare **[!UICONTROL Next]**.
+
+## Denominazione del flusso di dati
+
+Viene visualizzato il *[!UICONTROL Dataflow detail]* passaggio in cui è necessario specificare un nome e una descrizione facoltativa per il flusso di dati. Selezionate **[!UICONTROL Next]** al termine.
 
 ![dataset-flow-details](../../../images/tutorials/dataflow/advertising/dataset-flow-detail.png)
 
-## Controlla il flusso dei dataset
+## Controllare il flusso di dati
 
 Viene visualizzato il *[!UICONTROL Review]* passaggio che consente di rivedere il nuovo flusso di dati prima della creazione. I dettagli sono raggruppati nelle seguenti categorie:
 
@@ -117,7 +130,7 @@ Una volta creato il flusso di dati, potete monitorare i dati che vengono acquisi
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato con successo un flusso di dataset per inserire i dati da un sistema di automazione marketing e hai acquisito informazioni sul monitoraggio dei set di dati. I dati in entrata possono ora essere utilizzati dai [!DNL Platform] servizi a valle come [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i documenti seguenti:
+Seguendo questa esercitazione, hai creato con successo un flusso di dati per l&#39;immissione di dati da un sistema di automazione del marketing e hai acquisito informazioni sul monitoraggio dei set di dati. I dati in entrata possono ora essere utilizzati dai [!DNL Platform] servizi a valle come [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i documenti seguenti:
 
 - [Panoramica del profilo cliente in tempo reale](../../../../profile/home.md)
 - [Panoramica di Analysis Workspace](../../../../data-science-workspace/home.md)
@@ -128,9 +141,9 @@ Le sezioni seguenti forniscono informazioni aggiuntive sull&#39;utilizzo dei con
 
 ### Disattivazione di un flusso di dati
 
-Quando viene creato un flusso di dati, esso diventa immediatamente attivo e acquisisce i dati in base alla pianificazione assegnata. È possibile disattivare un flusso di dataset attivo in qualsiasi momento seguendo le istruzioni riportate di seguito.
+Quando un flusso di dati viene creato, diventa immediatamente attivo e i dati vengono acquisiti in base alla pianificazione specificata. Puoi disattivare un flusso di dati attivo in qualsiasi momento seguendo le istruzioni riportate di seguito.
 
-Nella *[!UICONTROL Dataset Flows]* schermata, selezionare il nome del flusso di dati che si desidera disattivare.
+Nella *[!UICONTROL Dataflows]* schermata, selezionate il nome del flusso di dati da disattivare.
 
 ![browse-dataset-flow](../../../images/tutorials/dataflow/advertising/view-dataset-flows.png)
 
