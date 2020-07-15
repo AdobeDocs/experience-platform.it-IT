@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida utente etichette di utilizzo dati
 topic: labels
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: b36f67fd7d597d5d6a8cd514d95908ae26189c83
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '1048'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ La sezione successiva contiene i passaggi necessari per creare un nuovo dataset 
 
 >[!NOTE]
 >
->In questo esempio, viene creato un dataset utilizzando uno schema XDM (Experience Data Model) preconfigurato. Per ulteriori informazioni sugli schemi XDM, vedere la panoramica [del sistema](../../xdm/home.md) XDM e le [nozioni di base della composizione](../../xdm/schema/composition.md)dello schema.
+>In questo esempio, un dataset viene creato utilizzando uno schema XDM (Experience Data Model) preconfigurato. Per ulteriori informazioni sugli schemi XDM, vedere la panoramica [del sistema](../../xdm/home.md) XDM e le [nozioni di base della composizione](../../xdm/schema/composition.md)dello schema.
 
 Per creare un nuovo set di dati, fate clic **[!UICONTROL Create Dataset]** nell’angolo superiore destro dell’ _[!UICONTROL Datasets]_area di lavoro.
 
@@ -99,6 +99,30 @@ L&#39; _[!UICONTROL Data Governance]_area di lavoro viene visualizzata nuovament
 ![Selezionare più campi per applicare etichette a livello di campo contemporaneamente.](../images/labels/fields_select_multiple.png)
 
 È importante ricordare che l&#39;ereditarietà si sposta solo dal livello superiore verso il basso (dataset → campi), il che significa che le etichette applicate a livello di campo non vengono propagate ad altri campi o set di dati.
+
+## Gestione delle etichette personalizzate
+
+Potete creare etichette di utilizzo personalizzate all’interno dell’ *[!UICONTROL Policies]* area di lavoro nell’ [!DNL Experience Platform] interfaccia utente. Fare clic **[!UICONTROL Policies]** nel menu di navigazione a sinistra, quindi fare clic **[!UICONTROL Labels]** per visualizzare un elenco delle etichette esistenti. Da qui, clicca **[!UICONTROL Create label]**.
+
+![](../images/labels/create-label-btn.png)
+
+Viene visualizzata *[!UICONTROL Create label]* la finestra di dialogo. Da qui, fornire le seguenti informazioni per la nuova etichetta:
+
+* **[!UICONTROL Identifier]**: Un identificatore univoco per l&#39;etichetta. Questo valore viene utilizzato a scopo di ricerca e deve pertanto essere breve e conciso.
+* **[!UICONTROL Name]**: Un nome visualizzato intuitivo per l&#39;etichetta.
+* **[!UICONTROL Description]**: (Facoltativo) Descrizione dell&#39;etichetta per fornire ulteriore contesto.
+
+Al termine, fate clic **[!UICONTROL Create]**.
+
+![](../images/labels/create-label.png)
+
+La finestra di dialogo si chiude e l&#39;etichetta personalizzata appena creata viene visualizzata nell&#39;elenco sotto la *[!UICONTROL Labels]* scheda.
+
+![](../images/labels/label-created.png)
+
+È ora possibile selezionare l&#39;etichetta in *[!UICONTROL Custom Labels]* quando si modificano le etichette di utilizzo per set di dati e campi o quando si creano criteri di utilizzo dei dati.
+
+<img src="../images/labels/add-custom-label.png" width="600" /><br>
 
 ## Passaggi successivi
 
