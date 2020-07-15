@@ -4,9 +4,9 @@ seo-title: ' Adobe Experience Platform Avvio rapido dell''SDK Web con Launch'
 description: Guida di avvio rapido per l'utilizzo dell'estensione Experience Platform Web SDK  per la raccolta dei dati
 seo-description: Guida di avvio rapido per l'utilizzo dell'estensione Experience Platform Web SDK  per la raccolta dei dati
 translation-type: tm+mt
-source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
+source-git-commit: 9d58693646f472e84f04a64c4ad66f61dc5d3eba
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '560'
 ht-degree: 3%
 
 ---
@@ -31,8 +31,9 @@ Puoi creare un ID di configurazione utilizzando lo strumento [di configurazione]
 
  Experience Platform Edge Network accetta i dati come XDM. XDM è un formato di dati che consente di definire gli schemi. Lo schema definisce il modo in cui Edge Network prevede la formattazione dei dati. Per inviare i dati è necessario definire lo schema. Assicuratevi di completare quanto segue:
 
-- [Creare uno schema](../../xdm/tutorials/create-schema-ui.md)
-- Aggiungere il mixin SDK Web  Adobe Experience Platform allo schema creato
+1. [Creare uno schema](../../xdm/tutorials/create-schema-ui.md)
+2. Aggiungi il mixin AEP Web SDK ExperienceEvent allo schema creato.
+3. Creare un dataset dallo schema creato.
 
 Il seguente video è stato creato per aiutarti a creare uno schema, un set di dati e un connettore di origine per lo streaming dei dati SDK per Web.
 
