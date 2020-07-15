@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurare un flusso di dati per un connettore di successo cliente nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
+source-git-commit: 649ec680148417a718aa9be121de2336521a1791
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '1119'
 ht-degree: 0%
 
 ---
@@ -80,17 +80,29 @@ Viene visualizzato il *[!UICONTROL Scheduling]* passaggio che consente di config
 
 | Campo | Descrizione |
 | --- | --- |
-| Frequenza | Le frequenze selezionabili sono: Minuto, Ora, Giorno e Settimana. |
+| Frequenza | Le frequenze selezionabili sono: Una volta, Minuto, Ora, Giorno e Settimana. |
 | Intervallo | Un numero intero che imposta l&#39;intervallo per la frequenza selezionata. |
-| Ora di inizio | Una marca temporale UTC per la quale si verificherà la prima assimilazione. |
-| Backfill | Un valore booleano che determina i dati inizialmente acquisiti. Se *[!UICONTROL Backfill]* è abilitata, tutti i file correnti nel percorso specificato verranno acquisiti durante la prima assimilazione pianificata. Se *[!UICONTROL Backfill]* è disattivato, verranno assimilati solo i file caricati tra la prima esecuzione dell&#39;assimilazione e l&#39; *[!UICONTROL Start time]* assimilazione. I file caricati prima di *[!UICONTROL Start time]* non verranno acquisiti. |
+| Ora di inizio | Una marca temporale UTC che indica quando è impostata la prima assimilazione |
+| Backfill | Un valore booleano che determina i dati inizialmente acquisiti. Se *Backfill* è abilitato, tutti i file correnti nel percorso specificato verranno acquisiti durante la prima assimilazione pianificata. Se *Backfill* è disattivato, verranno acquisiti solo i file caricati tra la prima esecuzione dell&#39;assimilazione e l&#39;ora *di* inizio. I file caricati prima dell&#39;ora *di* inizio non vengono acquisiti. |
+| Colonna Delta | Opzione con un set filtrato di campi dello schema di origine di tipo, data o ora. Questo campo è utilizzato per distinguere tra dati nuovi ed esistenti. I dati incrementali verranno acquisiti in base alla marca temporale della colonna selezionata. |
 
-I flussi di dati sono progettati per l&#39;acquisizione automatica dei dati su base programmata. Se desiderate effettuare il caricamento solo una volta in questo flusso di lavoro, potete farlo configurando il **[!UICONTROL Frequency]** pulsante &quot;Giorno&quot; e applicando un numero molto elevato per il **[!UICONTROL Interval]**, ad esempio 10000 o simile.
+I flussi di dati sono progettati per l&#39;acquisizione automatica dei dati su base programmata. Per iniziare, selezionate la frequenza di assimilazione. Quindi, impostare l&#39;intervallo per specificare il periodo tra due esecuzioni di flusso. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero e deve essere impostato su maggiore o uguale a 15.
 
-Immettete i valori per la pianificazione e fate clic su **[!UICONTROL Next]**.
+Per impostare l’ora di inizio dell’assimilazione, regolate la data e l’ora visualizzate nella casella Ora di inizio. In alternativa, potete selezionare l&#39;icona del calendario per modificare il valore dell&#39;ora di inizio. L&#39;ora di inizio deve essere maggiore o uguale all&#39;ora UTC corrente.
 
-![programmazione](../../../images/tutorials/dataflow/customer-success/scheduling.png)
+Selezionare **[!UICONTROL Load incremental data by]** per assegnare la colonna delta. Questo campo consente di distinguere tra dati nuovi ed esistenti.
 
+![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
+
+### Impostazione di un flusso di dati per l’assimilazione una tantum
+
+Per impostare l’inserimento una tantum, selezionate la freccia a discesa di frequenza e selezionate **[!UICONTROL Once]**.
+
+>[!TIP] **[!UICONTROL Interval]** e non **[!UICONTROL Backfill]** sono visibili durante un&#39;assimilazione una tantum.
+
+![](../../../images/tutorials/dataflow/databases/schedule-once.png)
+
+Dopo aver fornito i valori appropriati alla pianificazione, selezionare **[!UICONTROL Next]**.
 
 ## Controllare il flusso di dati
 
