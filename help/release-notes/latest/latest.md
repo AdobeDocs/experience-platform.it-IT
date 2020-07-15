@@ -1,67 +1,82 @@
 ---
 title: 'Note sulla versione di Adobe Experience Platform '
-description: Note aggiornate sulla versione di Experience Platform
+description: Note aggiornate sulla versione di  Experience Platform
 doc-type: release notes
-last-update: June 10, 2020
-author: crhoades, ens28527
+last-update: July 15, 2020
+author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 1dad479708291e911719c3f3dd5edd2e9b497973
+source-git-commit: 1e420d26f89150999f356f9cf5af94d434076c2b
 workflow-type: tm+mt
-source-wordcount: '431'
-ht-degree: 5%
+source-wordcount: '331'
+ht-degree: 7%
 
 ---
 
 
 # Note sulla versione di Adobe Experience Platform
 
-**Data di rilascio: 10 giugno 2020**
+**Data di rilascio: 15 luglio 2020**
 
-Aggiornamenti alle funzionalità esistenti in Adobe Experience Platform:
+Aggiornamenti alle funzionalità esistenti in  Adobe Experience Platform:
 
-- [Area di lavoro Data Science](#dsw)
-- [Segmentazione](#segmentation)
+<!-- - [Data Governance](#governance) -->
+- [Profilo del cliente in tempo reale](#profile)
+- [Servizio di segmentazione](#segmentation)
 - [Origini](#sources)
 
-## Area di lavoro Data Science {#dsw}
+<!-- ## [!DNL Data Governance] {#governance}
 
-Data Science Workspace utilizza l&#39;apprendimento automatico e l&#39;intelligenza artificiale per liberare informazioni dai tuoi dati. Integrato in Adobe Experience Platform, Data Science Workspace ti aiuta a fare previsioni utilizzando i tuoi contenuti e le risorse di dati nelle soluzioni Adobe.
+Adobe Experience Platform Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
 
-Data Science Workspace ha lavorato su nuovi modi per consentire esperienze e previsioni migliori attraverso l&#39;uso dell&#39;apprendimento automatico in tempo reale. L&#39;apprendimento automatico in tempo reale consente di creare, testare e implementare modelli di machine learning personalizzati o importati in formati di modelli interoperabili standard di settore per l&#39;assegnazione di punteggi/attivazione in tempo reale tramite un endpoint API.
+**New features**
 
-Tenere presente che l&#39;apprendimento automatico in tempo reale è in alfa e in fase di sviluppo.
+| Feature    | Description  |
+| -----------| ---------- |
+| Automatic policy enforcement in [!DNL Real-time Customer Data Platform] | Data usage policies are now automatically enforced in [!DNL Real-time CDP] when violating actions occur, including activating segments to destinations. When a policy violation is triggered, users get real-time visibility into usage restrictions within the activation workflow, indicating what data they cannot use and why.<br><br>See the section on [enforcing data usage compliance](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance) within the overview on [!DNL Data Governance] in [!DNL Real-time CDP] for more information. |
+| Adobe Audience Manager integration | Any segments that are shared with [!DNL Audience Manager] from [!DNL Platform] inherit any applied data usage labels as [!DNL Data Export Controls], and vice versa. See the [!DNL Audience Manager] documentation for specific [mappings between usage labels and Data Export Controls](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep). |
+| Custom data usage labels | You can now create custom data usage labels using the Policy Service API or in the UI. See the [labels overview](../../data-governance/labels/overview.md) for more information. |
 
-| Funzione | Descrizione |
-|--- | ---|
-| JupyterLab Lancio del codice ML in tempo reale | JupyterLab Launcher ora include un notebook Python per l&#39;apprendimento automatico in tempo reale (Alpha). |
+See the [Data Governance overview](../../data-governance/home.md) for more information on the service.
 
-Per ulteriori informazioni sull&#39;alfa Real-time Machine Learning, vedere la panoramica [sull&#39;apprendimento automatico in tempo](../../data-science-workspace/real-time-machine-learning/home.md)reale.
+## [!DNL Real-time Customer Profile] {#profile}
 
-## Segmentazione {#segmentation}
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 
-Il servizio di segmentazione di Adobe Experience Platform fornisce un&#39;interfaccia utente e RESTful API che consente di creare segmenti e generare audience dai dati del profilo cliente in tempo reale. Questi segmenti sono configurati e mantenuti a livello centrale sulla piattaforma, rendendoli facilmente accessibili da qualsiasi applicazione Adobe.
+**New features**
 
-Il servizio di segmentazione definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo di persone commerciabili all&#39;interno della base cliente. I segmenti possono essere basati su dati di record (come informazioni demografiche) o eventi di serie temporali che rappresentano le interazioni dei clienti con il tuo marchio.
+| Feature | Description |
+| ------- | ----------- |
+| Data usage policy enforcement | In [!DNL Real-time Customer Data Platform], data usage policy violations are automatically surfaced when a violating action in the [!UICONTROL Profile] workspace is attempted. See the [release notes for Data Governance](#governance) for more information on automatic policy enforcement. | 
+
+-->
+
+## [!DNL Segmentation Service] {#segmentation}
+
+ Adobe Experience Platform Segmentation Service fornisce un&#39;interfaccia utente e RESTful API che consente di creare segmenti e generare audience dai [!DNL Real-time Customer Profile] dati. Questi segmenti sono configurati e mantenuti a livello centrale, [!DNL Platform]rendendoli facilmente accessibili da qualsiasi applicazione Adobe.
+
+[!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo di persone commerciabili all&#39;interno della base cliente. I segmenti possono essere basati su dati di record (come informazioni demografiche) o eventi di serie temporali che rappresentano le interazioni dei clienti con il tuo marchio.
 
 **Nuove funzionalità**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Campi data | È stata aggiunta una funzione &quot;anniversario&quot; per le funzioni data, che consente agli utenti di valutare le date senza l&#39;anno. |
+| Segmentazione in streaming | La segmentazione in streaming può ora essere qualificata come utente in un segmento quando i dati entrano in gioco [!DNL Platform], riducendo notevolmente il tempo di qualificazione del segmento. La segmentazione in streaming riduce inoltre la necessità di eseguire manualmente i processi di segmentazione. |
 
-Per ulteriori informazioni sulla segmentazione, consulta Panoramica sulla [segmentazione.](../../segmentation/home.md)
+<!-- | Data usage policy enforcement | In [!DNL Real-time Customer Data Platform], data usage policy violations are automatically surfaced when a violating action in the [!UICONTROL Segments] workspace is attempted. See the [release notes for Data Governance](#governance) for more information on automatic policy enforcement. | -->
+
+Per ulteriori informazioni su [!DNL Segmentation Service], consulta la panoramica sulla [segmentazione](../../segmentation/home.md)
 
 ## Origini {#sources}
 
-Adobe Experience Platform è in grado di acquisire dati da origini esterne e allo stesso tempo di strutturarli, etichettarli e ottimizzarli tramite i servizi della piattaforma. È possibile acquisire dati da origini diverse, come applicazioni Adobe, archiviazione basata su cloud, software di terze parti e il sistema CRM in uso.
+ Adobe Experience Platform può acquisire dati da origini esterne consentendo al contempo di strutturare, etichettare e migliorare i dati utilizzando [!DNL Platform] i servizi. È possibile acquisire dati da origini diverse, come applicazioni Adobe, archiviazione basata su cloud, software di terze parti e il sistema CRM in uso.
 
-Experience Platform fornisce un&#39;API RESTful e un&#39;interfaccia utente interattiva che consente di impostare connessioni sorgente per vari provider di dati con facilità. Queste connessioni di origine consentono di autenticare e connettersi a sistemi di storage e servizi CRM esterni, impostare i tempi per l&#39;esecuzione dell&#39;assimilazione e gestire il throughput di assimilazione dei dati.
+ Experience Platform fornisce un&#39;API RESTful e un&#39;interfaccia utente interattiva che consente di impostare connessioni sorgente per vari provider di dati con facilità. Queste connessioni di origine consentono di autenticare e connettersi a sistemi di storage e servizi CRM esterni, impostare i tempi per l&#39;esecuzione dell&#39;assimilazione e gestire il throughput di assimilazione dei dati.
 
 **Nuove funzionalità**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Supporto aggiuntivo per API e interfaccia utente per i sistemi di storage cloud | Nuovo connettore sorgente per Apache HDFS |
-| Supporto aggiuntivo per API e interfaccia utente per i database | Nuovo connettore sorgente per Couchbase. |
+| Supporto delle API e dell&#39;interfaccia utente per l&#39;eliminazione dei flussi di dati | I flussi di dati che venivano creati con errori o che non erano più necessari ora possono essere eliminati tramite le API o utilizzando l&#39;interfaccia utente. |
+| Supporto API e interfaccia utente per l’assimilazione una tantum | L&#39;assimilazione una tantum per i flussi di dati, in cui viene fornita solo la data di inizio e non è pianificata alcuna assimilazione futura, ora può essere eseguita tramite le API o utilizzando l&#39;interfaccia utente. |
 
 Per ulteriori informazioni sulle origini, consultate la panoramica sulle [origini](../../sources/home.md).
