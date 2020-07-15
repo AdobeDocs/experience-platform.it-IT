@@ -4,9 +4,9 @@ seo-title: Configurazione Edge per l'SDK Web  Experience Platform
 description: 'Scopri come configurare la  Experience Platform Edge Network. '
 seo-description: 'Scopri come configurare la  Experience Platform Edge Network. '
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 013e6abb0922e39bd6b9da6a66bba9a1bcefdd25
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '822'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ Gli ID di configurazione Edge possono essere creati in Adobe [!DNL Launch] utili
 >
 >Lo strumento di configurazione edge è disponibile per i clienti del elenco consentiti , a prescindere dal fatto che vengano utilizzati [!DNL Launch] come gestore di tag. Inoltre, gli utenti richiedono le autorizzazioni Sviluppo in [!DNL Launch]. Per ulteriori dettagli, consultate l&#39;articolo Autorizzazioni [](https://docs.adobe.com/content/help/it-IT/launch/using/reference/admin/user-permissions.html) utente nella [!DNL Launch] documentazione.
 
-Per creare una configurazione di bordo, fai clic su **[UICONTROL New Edge Configuration]** (Configurazionedi bordo) nell’area in alto a destra della schermata. Dopo aver fornito un nome e una descrizione, viene richiesto di specificare le impostazioni predefinite per ogni ambiente.
+Per creare una configurazione dei bordi, fate clic su **[!UICONTROL New Edge Configuration]** nell’area in alto a destra dello schermo. Dopo aver fornito un nome e una descrizione, viene richiesto di specificare le impostazioni predefinite per ogni ambiente.
 
 ### Impostazioni ambiente predefinite
 
