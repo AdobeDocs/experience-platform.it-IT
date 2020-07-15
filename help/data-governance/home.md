@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Governance dei dati  Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7f6612f7dd649d68aa7ebe5b971b72d7b433b1e3
 workflow-type: tm+mt
-source-wordcount: '1448'
+source-wordcount: '1434'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,6 @@ La governance dei dati supporta attualmente l&#39;etichettatura DULE a due livel
 
 Le versioni successive forniranno le seguenti funzionalità:
 
-* Etichette di utilizzo dati personalizzate: Crea nuove etichette e definizioni in base alle esigenze aziendali.
 * Applicazione delle regole: Utilizza il framework del criterio per consigliare e applicare criteri tra diversi pattern di accesso ai dati.
 * Verifica: Monitora le attività di accesso ai dati e individua e segnala i problemi di conformità.
 
@@ -120,7 +119,7 @@ La tabella seguente delinea i termini chiave relativi alla governance dei dati e
 | **Etichette dei campi** | Le etichette dei campi sono etichette di governance dei dati ereditate da un set di dati o applicate direttamente a un campo.  Le etichette di governance dei dati applicate a un campo non vengono ereditate fino a un dataset. |
 | **Geofence** | Una geofence è un limite geografico virtuale, definito dalla tecnologia GPS o RFID, che consente al software di attivare una risposta quando un dispositivo mobile entra o esce da un&#39;area particolare. |
 | **Etichette identità** | Le etichette di identità &quot;I&quot; vengono utilizzate per classificare i dati in grado di identificare o contattare una persona specifica. |
-| **Targeting basato su interessi** | Il targeting basato sugli interessi, noto anche come personalizzazione, si verifica se sono soddisfatte tre condizioni: i dati raccolti sul sito vengono utilizzati per ricavare deduzioni sull&#39;interesse degli utenti, in un altro contesto, ad esempio in un altro sito o in un&#39;altra app (fuori sito), e vengono utilizzati per selezionare il contenuto o gli annunci che vengono serviti in base a tali inferenze. |
+| **Targeting basato su interessi** | Il targeting basato sugli interessi, noto anche come personalizzazione, si verifica se sono soddisfatte tre condizioni: i dati raccolti sul sito vengono utilizzati per ricavare deduzioni sull’interesse degli utenti, in un altro contesto, ad esempio in un altro sito o in un’altra app (fuori sito), e vengono utilizzati per selezionare il contenuto o gli annunci che vengono serviti in base a tali inferenze. |
 | **Azione marketing** | Un&#39;azione di marketing, nel contesto del framework di governance dei dati, è un&#39;azione che un consumatore di [!DNL Experience Platform] dati intraprende, per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati |
 | **Criterio** | Nel framework di governance dei dati, un criterio è una regola che descrive il tipo di azioni di marketing consentite o non consentite per dati specifici. |
 | **Etichette sensibili** | Le etichette &quot;S&quot; sensibili vengono utilizzate per classificare i dati che voi e la vostra organizzazione considerate sensibili. |
