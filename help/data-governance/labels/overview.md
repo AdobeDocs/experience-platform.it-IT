@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica delle etichette di utilizzo dei dati
 topic: labels
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: f4b3148db3b4a17d071c1c8ad2aff8dd64ddd0b7
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,9 @@ Le etichette di utilizzo dei dati consentono di classificare set di dati e campi
 
 Le etichette di utilizzo dei dati applicate a livello di dataset vengono propagate a tutti i campi all&#39;interno del dataset. Le etichette possono anche essere applicate direttamente a singoli campi (intestazioni di colonna) di un dataset, senza propagazione.
 
-Per ulteriori informazioni sulle etichette di utilizzo dei dati disponibili in [!DNL Experience Platform] e sui criteri di utilizzo che rappresentano, consultare la guida sulle etichette [di utilizzo dei dati](reference.md)supportate.
+[!DNL Platform] fornisce diverse etichette di utilizzo dei dati di base pronte all&#39;uso, che coprono un&#39;ampia gamma di limitazioni comuni applicabili alla governance dei dati. Per ulteriori informazioni su queste etichette e sui criteri di utilizzo che rappresentano, consultare la guida sulle etichette [di utilizzo dei dati di](reference.md)base.
+
+Oltre alle etichette fornite da Adobe, potete anche definire le vostre etichette personalizzate. Per informazioni su come eseguire questa operazione nell&#39;interfaccia utente, consulta la guida [utente relativa alle etichette di utilizzo dei](./user-guide.md)dati. Per i passaggi su come eseguire questa operazione utilizzando le chiamate API, fare riferimento alla guida [API delle etichette di utilizzo](./api.md)dei dati.
 
 ## Ereditarietà delle etichette per i segmenti di pubblico
 
@@ -34,14 +36,13 @@ Oltre a ereditare le etichette a livello di set di dati, per impostazione predef
 
 Per ulteriori informazioni sul funzionamento dell’applicazione automatica in CDP in tempo reale, consultate la panoramica [sulla governance dei dati in tempo reale di](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)Adobe.
 
-<!-- (Add after DEC mapping reference is added to AAM docs to link out to)
-### Inheritance from Adobe Audience Manager Data Export Controls
+### Ereditarietà dai controlli di esportazione dei dati  Adobe Audience Manager
 
-Experience Platform has the ability to share segments with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager segments are translated to equivalent labels and marketing actions recognized by Experience Platform Data Governance.
+ Experience Platform è in grado di condividere segmenti con  Adobe Audience Manager. Eventuali controlli sull&#39;esportazione dei dati applicati  segmenti Audience Manager vengono convertiti in etichette e azioni di marketing equivalenti riconosciute  gestione dei dati Experience Platform.
 
-For a reference on how specific Data Export Controls map to data usage labels in Platform, please refer to the [Audience Manager documentation](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/data-export-controls.html).
--->
+Per un riferimento alla modalità in cui specifici controlli di esportazione dei dati vengono mappati sulle etichette di utilizzo dei dati in Platform, consultare la documentazione [di](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)Audience Manager.
+
 
 ## Passaggi successivi
 
-Ora che sono state introdotte etichette sull’uso dei dati, potete continuare a leggere la guida [](user-guide.md) utente per apprendere come gestire le etichette nell’ [!DNL Experience Platform] interfaccia utente. Per i passaggi relativi alla gestione delle etichette mediante le API, consultate la sezione appropriata nella guida [per gli sviluppatori di](../../catalog/api/labels.md)Catalog Service.
+Ora che sono state introdotte etichette sull’uso dei dati, potete continuare a leggere la guida [](user-guide.md) utente per apprendere come gestire le etichette nell’ [!DNL Experience Platform] interfaccia utente. Per informazioni sulla gestione delle etichette tramite API, consultate la guida [API delle etichette di](./api.md)utilizzo.
