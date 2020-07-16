@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida per gli sviluppatori API di DULE Policy Service
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '655'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Guida per gli sviluppatori DULE [!DNL Policy Service] API
 
-L&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati (DULE) è il meccanismo fondamentale  governance dei dati del Adobe Experience Platform. Il servizio DULE Policy Service fornisce un&#39;API RESTful che consente di creare e gestire i criteri di utilizzo dei dati per determinare quali azioni di marketing possono essere eseguite rispetto ai dati etichettati con determinate etichette di utilizzo dei dati.
+L&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati (DULE) è il meccanismo fondamentale del  Adobe Experience Platform [!DNL Data Governance]. DULE [!DNL Policy Service] fornisce un&#39;API RESTful che consente di creare e gestire i criteri di utilizzo dei dati per determinare quali azioni di marketing possono essere eseguite rispetto ai dati etichettati con determinate etichette di utilizzo dei dati.
 
-Questo documento fornisce istruzioni per l&#39;esecuzione delle operazioni chiave disponibili nell&#39;API del servizio criteri. Se non l&#39;avete ancora fatto, potete iniziare rivedendo la panoramica [sulla governance dei](../home.md) dati per acquisire dimestichezza con il framework DULE. Per istruzioni dettagliate sulla creazione e l&#39;applicazione di criteri DULE, vedete l&#39;esercitazione [sulla politica](../policies/create.md)DULE.
+Questo documento fornisce istruzioni per l&#39;esecuzione delle operazioni chiave disponibili nell&#39; [!DNL Policy Service] API. Se non l&#39;avete ancora fatto, potete iniziare rivedendo la panoramica [sulla governance dei](../home.md) dati per acquisire dimestichezza con il framework DULE. Per istruzioni dettagliate sulla creazione e l&#39;applicazione di criteri DULE, vedete l&#39;esercitazione [sulla politica](../policies/create.md)DULE.
 
-Questo documento fornisce un&#39;introduzione ai concetti di base che è necessario conoscere prima di tentare di effettuare chiamate all&#39;API del servizio criteri.
+Questo documento fornisce un&#39;introduzione ai concetti di base da conoscere prima di tentare di effettuare chiamate all&#39; [!DNL Policy Service] API.
 
 ## Guida introduttiva a DULE [!DNL Policy Service]
 
@@ -28,11 +28,11 @@ Prima di iniziare a lavorare con [!DNL Policy Service], i dati su [!DNL Experien
 
 Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
 
-* [Governance](../home.md)dei dati: Il framework in base al quale [!DNL Experience Platform] viene applicata la conformità all&#39;utilizzo dei dati.
-   * [Etichette](../labels/overview.md)DULE: Le etichette di utilizzo dei dati vengono applicate ai campi di dati XDM (Experience Data Model), specificando le restrizioni per l&#39;accesso ai dati.
-* [Sistema](../../xdm/home.md)XDM (Experience Data Model): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
-* [Profilo](../../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-* [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [!DNL Data Governance](../home.md): Il framework in base al quale [!DNL Experience Platform] viene applicata la conformità all&#39;utilizzo dei dati.
+   * [Etichette](../labels/overview.md)DULE: Le etichette di utilizzo dei dati vengono applicate ai campi di dati [!DNL Experience Data Model] (XDM), specificando le restrizioni relative alle modalità di accesso ai dati.
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
+* [!DNL Real-time Customer Profile](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 ## Lettura di chiamate API di esempio
 
