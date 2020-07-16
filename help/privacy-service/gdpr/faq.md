@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Domande frequenti sul GDPR
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: e176cc69613fad1d4a6b44138a6d88a688438578
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+workflow-type: tm+mt
+source-wordcount: '642'
+ht-degree: 0%
 
 ---
 
 
 # Domande frequenti sul GDPR
 
-Questo documento contiene le risposte alle domande frequenti sul Regolamento generale sulla protezione dei dati (General Data Protection Regulation, GDPR) e sulla sua implementazione in Adobe Experience Cloud.
+Questo documento contiene le risposte alle domande frequenti sul [!DNL General Data Protection Regulation] (GDPR) e sulla sua implementazione in Adobe Experience Cloud.
 
 Le definizioni per i vari termini relativi al GDPR utilizzati in questo documento sono reperibili nell&#39;articolo terminologico [del](terminology.md) GDPR.
 
