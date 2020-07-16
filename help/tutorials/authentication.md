@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Autenticazione e accesso  API Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '840'
 ht-degree: 1%
 
 ---
 
 
-# Autenticazione e accesso  API Experience Platform
+# Autenticazione e accesso [!DNL Experience Platform] alle API
 
-Questo documento fornisce un&#39;esercitazione passo-passo per ottenere l&#39;accesso a un account sviluppatore  Adobe Experience Platform per effettuare chiamate alle API Experience Platform .
+Questo documento fornisce un&#39;esercitazione passo-passo per ottenere l&#39;accesso a un account sviluppatore  Adobe Experience Platform per effettuare chiamate alle [!DNL Experience Platform] API.
 
 ## Autenticazione per effettuare chiamate API
 
@@ -25,7 +25,7 @@ Questa esercitazione descrive i passaggi dell&#39;autenticazione mediante la cre
 
 ## Prerequisiti
 
-Per effettuare correttamente chiamate a  API Experience Platform, è necessario quanto segue:
+Per effettuare correttamente le chiamate alle [!DNL Experience Platform] API, è necessario quanto segue:
 
 * Un&#39;organizzazione IMS con accesso al Adobe Experience Platform 
 * Un account  Adobe ID registrato
@@ -38,20 +38,20 @@ Le sezioni seguenti descrivono i passaggi necessari per creare un Adobe ID  e di
 Se non disponete di un Adobe ID , potete crearne uno seguendo la procedura seguente:
 
 1. Vai ad [Adobe Developer Console](https://console.adobe.io)
-2. Fate clic su **Crea un nuovo account**
+2. Fai clic su **[!UICONTROL create a new account]**.
 3. Completare il processo di registrazione
 
-## Diventare sviluppatore e utente per  Experience Platform per un&#39;organizzazione
+## Diventare sviluppatore e utente per [!DNL Experience Platform] un&#39;organizzazione
 
 Prima di creare integrazioni sull&#39;I/O Adobe, il vostro account deve disporre delle autorizzazioni per lo sviluppatore per un prodotto in un&#39;organizzazione IMS. Informazioni dettagliate sugli account sviluppatore nell&#39;Admin Console  sono disponibili nel documento [di](https://helpx.adobe.com/enterprise/using/manage-developers.html) supporto per la gestione degli sviluppatori.
 
 **Accesso sviluppatore**
 
-Contatta un amministratore Admin Console  nella tua organizzazione per aggiungere te come sviluppatore per uno dei prodotti della tua organizzazione utilizzando l&#39;Admin Console [](https://adminconsole.adobe.com/).
+Contatta un [!DNL Admin Console] amministratore dell’organizzazione per aggiungere l’utente come sviluppatore per uno dei prodotti dell’organizzazione che utilizza l’ [!DNL Admin Console](https://adminconsole.adobe.com/).
 
 ![](images/authentication/assign-developer.png)
 
-L&#39;amministratore deve assegnare l&#39;utente come sviluppatore ad almeno un profilo di prodotto per proseguire.
+L&#39;amministratore deve assegnare l&#39;utente come sviluppatore ad almeno un profilo di prodotto per continuare.
 
 ![](images/authentication/add-developer.png)
 
@@ -59,7 +59,7 @@ Una volta assegnati come sviluppatore, potrete disporre dei privilegi di accesso
 
 **Accesso utente**
 
-L’amministratore  Admin Console deve anche aggiungere l’utente al prodotto come utente.
+L’ [!DNL Admin Console] amministratore deve anche aggiungere l’utente al prodotto come utente.
 
 ![](images/authentication/assign-users.png)
 
@@ -71,7 +71,7 @@ Come per la procedura di aggiunta di uno sviluppatore, l’amministratore deve a
 
 >[!NOTE]
 >
->Se state seguendo questo documento dalla guida [per gli sviluppatori di](../privacy-service/api/getting-started.md)Privacy Service, ora potete tornare a tale guida per generare le credenziali di accesso univoche per Privacy Service.
+>Se state seguendo questo documento dalla guida [per gli sviluppatori di](../privacy-service/api/getting-started.md)Privacy Service, ora potete tornare a tale guida per generare le credenziali di accesso univoche per [!DNL Privacy Service].
 
 Con Adobe Developer Console, dovete generare le seguenti tre credenziali di accesso:
 
@@ -79,7 +79,7 @@ Con Adobe Developer Console, dovete generare le seguenti tre credenziali di acce
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-È necessario generare `{IMS_ORG}` e `{API_KEY}` solo una volta e riutilizzarli in future chiamate API di Platform. Tuttavia, `{ACCESS_TOKEN}` è temporaneo e deve essere rigenerato ogni 24 ore.
+È necessario generare `{IMS_ORG}` e `{API_KEY}` solo una volta e riutilizzarli in chiamate [!DNL Platform] API future. Tuttavia, `{ACCESS_TOKEN}` è temporaneo e deve essere rigenerato ogni 24 ore.
 
 I passaggi sono descritti in dettaglio di seguito.
 
@@ -95,9 +95,9 @@ Viene visualizzata la schermata _Aggiungi un&#39;API_ . Fate clic sull&#39;icona
 
 ![](images/authentication/add-platform-api.png)
 
-Dopo aver selezionato  Experience Platform come API da aggiungere al progetto, segui i passaggi descritti nell&#39;esercitazione sull&#39; [aggiunta di un&#39;API a un progetto utilizzando un account di servizio (JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) (a partire dal passaggio &quot;Configura API&quot;) per completare il processo.
+Dopo aver selezionato [!DNL Experience Platform] come API da aggiungere al progetto, segui i passaggi descritti nell&#39;esercitazione sull&#39; [aggiunta di un&#39;API a un progetto utilizzando un account di servizio (JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) (a partire dal passaggio &quot;Configura API&quot;) per completare il processo.
 
-Dopo che l&#39;API è stata aggiunta al progetto, nella pagina di panoramica _del_ progetto vengono visualizzate le seguenti credenziali, richieste in tutte le chiamate alle API di  Experience Platform:
+Una volta aggiunta l&#39;API al progetto, la pagina di panoramica _del_ progetto visualizza le seguenti credenziali che sono richieste in tutte le chiamate alle [!DNL Experience Platform] API:
 
 * `{API_KEY}` (ID client)
 * `{IMS_ORG}` (ID organizzazione)
@@ -106,13 +106,13 @@ Dopo che l&#39;API è stata aggiunta al progetto, nella pagina di panoramica _de
 
 ### Autenticazione per ogni sessione
 
-L&#39;ultima credenziale richiesta da raccogliere è la tua `{ACCESS_TOKEN}`. A differenza dei valori per `{API_KEY}` e `{IMS_ORG}`, è necessario generare un nuovo token ogni 24 ore per continuare a utilizzare le API Platform.
+L&#39;ultima credenziale richiesta da raccogliere è la tua `{ACCESS_TOKEN}`. A differenza dei valori per `{API_KEY}` e `{IMS_ORG}`, è necessario generare un nuovo token ogni 24 ore per continuare a utilizzare [!DNL Platform] le API.
 
 Per generare un nuovo `{ACCESS_TOKEN}`, seguite i passaggi per [generare un token](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/credentials.md) JWT nella guida alle credenziali della console per sviluppatori.
 
 ## Verifica credenziali di accesso
 
-Dopo aver raccolto tutte e tre le credenziali necessarie, puoi provare a effettuare la seguente chiamata API. Questa chiamata elenca tutte le classi Experience Data Model (XDM) all&#39;interno del `global` contenitore del Registro di sistema dello schema:
+Dopo aver raccolto tutte e tre le credenziali necessarie, puoi provare a effettuare la seguente chiamata API. Questa chiamata elenca tutte le classi [!DNL Experience Data Model] (XDM) all&#39;interno del `global` contenitore del Registro di sistema dello schema:
 
 **Formato API**
 
@@ -159,6 +159,6 @@ Se la risposta è simile a quella mostrata di seguito, le credenziali sono valid
 
 ## Passaggi successivi
 
-Leggendo questo documento, hai raccolto e verificato con successo le credenziali di accesso per le API Platform. Ora puoi seguire le chiamate API di esempio fornite nell&#39;intera [documentazione](../landing/documentation/overview.md).
+Leggendo questo documento, hai raccolto e verificato con successo le credenziali di accesso per [!DNL Platform] le API. Ora puoi seguire le chiamate API di esempio fornite nell&#39;intera [documentazione](../landing/documentation/overview.md).
 
-Oltre ai valori di autenticazione raccolti in questa esercitazione, molte API Platform richiedono `{SANDBOX_NAME}` di fornire un&#39;intestazione valida. Per ulteriori informazioni, consultate la panoramica [delle](../sandboxes/home.md) sandbox.
+Oltre ai valori di autenticazione raccolti in questa esercitazione, molte [!DNL Platform] API richiedono anche che come intestazione sia `{SANDBOX_NAME}` disponibile una valida. Per ulteriori informazioni, consultate la panoramica [delle](../sandboxes/home.md) sandbox.
