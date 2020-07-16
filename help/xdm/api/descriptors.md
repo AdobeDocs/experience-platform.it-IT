@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Descrittori
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '1499'
+source-wordcount: '1475'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ Questo documento fornisce esempi di chiamate API per descrittori, oltre a un ele
 
 >[!NOTE]
 >
->I descrittori richiedono intestazioni Accetto univoche che sostituiscono `xed` con `xdm`, ma che sono molto simili a Accetta intestazioni utilizzate altrove nel Registro di sistema dello schema. Le intestazioni Accetta corrette sono state incluse nelle chiamate di esempio riportate di seguito, ma prestate particolare attenzione a garantire l’utilizzo delle intestazioni corrette.
+>I descrittori richiedono intestazioni Accetto univoche che sostituiscono `xed` con `xdm`, ma che hanno un aspetto molto simile a Accetta intestazioni utilizzate altrove in [!DNL Schema Registry]. Le intestazioni Accetta corrette sono state incluse nelle chiamate di esempio riportate di seguito, ma prestate particolare attenzione a garantire l’utilizzo delle intestazioni corrette.
 
 ## Descrittori elenco
 
@@ -48,7 +48,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xdm-link+json'
 ```
 
-Il formato della risposta dipende dall’intestazione Accetta inviata nella richiesta. Tenere presente che l&#39; `/descriptors` endpoint utilizza intestazioni Accetta diverse da tutti gli altri endpoint nell&#39;API del Registro di sistema dello schema.
+Il formato della risposta dipende dall’intestazione Accetta inviata nella richiesta. L&#39; `/descriptors` endpoint utilizza intestazioni Accept diverse da tutti gli altri endpoint nell&#39; [!DNL Schema Registry] API.
 
 Il descrittore Accetta intestazioni sostituisce `xed` con `xdm`, e offre un&#39; `link` opzione univoca per i descrittori.
 
@@ -133,7 +133,7 @@ Una risposta corretta restituisce i dettagli del descrittore, inclusi i relativi
 
 ## Creare un descrittore
 
-Il Registro di sistema dello schema consente di definire diversi tipi di descrittori. Ogni tipo di descrittore richiede l&#39;invio di campi specifici nella richiesta POST. Un elenco completo dei descrittori e i campi necessari per definirli è disponibile nella sezione appendice sulla [definizione dei descrittori](#defining-descriptors).
+Consente di [!DNL Schema Registry] definire diversi tipi di descrittori. Ogni tipo di descrittore richiede l&#39;invio di campi specifici nella richiesta POST. Un elenco completo dei descrittori e i campi necessari per definirli è disponibile nella sezione appendice sulla [definizione dei descrittori](#defining-descriptors).
 
 **Formato API**
 
@@ -143,7 +143,7 @@ POST /tenant/descriptors
 
 **Richiesta**
 
-La richiesta seguente definisce un descrittore di identità in un campo &quot;indirizzo e-mail&quot; in uno schema di esempio. Questo indica  Experience Platform di utilizzare l&#39;indirizzo e-mail come identificatore per unire insieme le informazioni sull&#39;utente.
+La richiesta seguente definisce un descrittore di identità in un campo &quot;indirizzo e-mail&quot; in uno schema di esempio. Questo indica [!DNL Experience Platform] di utilizzare l&#39;indirizzo e-mail come identificatore per unire insieme le informazioni sull&#39;individuo.
 
 ```SHELL
 curl -X POST \
@@ -167,7 +167,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 201 (Creato) e i dettagli del descrittore appena creato, incluso `@id`il relativo. Il campo `@id` è di sola lettura assegnato dal Registro di sistema dello schema e utilizzato per fare riferimento al descrittore nell&#39;API.
+Una risposta corretta restituisce lo stato HTTP 201 (Creato) e i dettagli del descrittore appena creato, incluso `@id`il relativo. Il campo `@id` è di sola lettura assegnato dal [!DNL Schema Registry] e utilizzato per fare riferimento al descrittore nell&#39;API.
 
 ```JSON
 {
@@ -238,7 +238,7 @@ Se si esegue una richiesta di ricerca (GET) per visualizzare il descrittore, i c
 
 ## Elimina descrittore
 
-Talvolta potrebbe essere necessario rimuovere un descrittore definito dal Registro di sistema dello schema. Questa operazione viene eseguita effettuando una richiesta di DELETE che fa riferimento al descrittore `@id` da rimuovere.
+Talvolta potrebbe essere necessario rimuovere un descrittore definito dall&#39; [!DNL Schema Registry]. Questa operazione viene eseguita effettuando una richiesta di DELETE che fa riferimento al descrittore `@id` da rimuovere.
 
 **Formato API**
 
@@ -267,11 +267,11 @@ curl -X DELETE \
 
 Una risposta corretta restituisce lo stato HTTP 204 (Nessun contenuto) e un corpo vuoto.
 
-Per confermare che il descrittore è stato eliminato, potete eseguire una richiesta di ricerca rispetto al descrittore `@id`. La risposta restituisce lo stato HTTP 404 (non trovato) perché il descrittore è stato rimosso dal Registro di sistema dello schema.
+Per confermare che il descrittore è stato eliminato, potete eseguire una richiesta di ricerca rispetto al descrittore `@id`. La risposta restituisce lo stato HTTP 404 (non trovato) perché il descrittore è stato rimosso dall&#39; [!DNL Schema Registry].
 
 ## Appendice
 
-La sezione seguente fornisce informazioni aggiuntive sull&#39;utilizzo dei descrittori nell&#39;API del Registro di sistema dello schema.
+La sezione seguente fornisce informazioni aggiuntive sull&#39;utilizzo dei descrittori nell&#39; [!DNL Schema Registry] API.
 
 ### Definizione dei descrittori
 
@@ -279,7 +279,7 @@ Le sezioni seguenti forniscono una panoramica dei tipi di descrittori disponibil
 
 #### Descrittore identità
 
-Un descrittore di identità segnala che &quot;sourceProperty&quot; di &quot;sourceSchema&quot; è un campo Identity come descritto da [Adobe Experience Platform Identity Service](../../identity-service/home.md).
+Un descrittore di identità segnala che &quot;[!UICONTROL sourceProperty]&quot; del &quot;[!UICONTROL sourceSchema]&quot; è un [!DNL Identity] campo come descritto da [Servizio](../../identity-service/home.md)identità Adobe Experience Platform.
 
 ```json
 {
@@ -300,7 +300,7 @@ Un descrittore di identità segnala che &quot;sourceProperty&quot; di &quot;sour
 | `xdm:sourceSchema` | URI `$id` dello schema in cui viene definito il descrittore. |
 | `xdm:sourceVersion` | La versione principale dello schema di origine. |
 | `xdm:sourceProperty` | Percorso della proprietà specifica che sarà l&#39;identità. Il percorso deve iniziare con &quot;/&quot; e non terminare con uno. Non includere &quot;proprietà&quot; nel percorso (ad esempio, utilizzare &quot;/personalEmail/address&quot; invece di &quot;/properties/personalEmail/properties/address&quot;) |
-| `xdm:namespace` | Il valore `id` o `code` dello spazio dei nomi identità. È possibile trovare un elenco di spazi dei nomi utilizzando l&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)Servizio identità. |
+| `xdm:namespace` | Il valore `id` o `code` dello spazio dei nomi identità. È possibile trovare un elenco di spazi dei nomi utilizzando l&#39; [!DNL Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
 | `xdm:property` | O `xdm:id` o `xdm:code`, a seconda dell&#39; `xdm:namespace` utilizzo. |
 | `xdm:isPrimary` | Un valore booleano facoltativo. Se true, indica il campo come identità principale. Gli schemi possono contenere una sola identità primaria. |
 
@@ -336,7 +336,7 @@ I descrittori di nomi descrittivi descrittivi consentono all&#39;utente di modif
 | `xdm:sourceProperty` | Percorso della proprietà specifica che sarà l&#39;identità. Il percorso deve iniziare con &quot;/&quot; e non terminare con uno. Non includere &quot;proprietà&quot; nel percorso (ad esempio, utilizzare &quot;/personalEmail/address&quot; invece di &quot;/properties/personalEmail/properties/address&quot;) |
 | `xdm:title` | Il nuovo titolo che si desidera visualizzare per questo campo, scritto in Case titolo. |
 | `xdm:description` | È possibile aggiungere una descrizione facoltativa insieme al titolo. |
-| `meta:enum` | Se il campo indicato da `xdm:sourceProperty` è un campo stringa, `meta:enum` determina l&#39;elenco dei valori consigliati per il campo nell&#39;interfaccia utente di Experience Platform . È importante notare che non `meta:enum` dichiara un&#39;enumerazione né fornisce alcuna convalida di dati per il campo XDM.<br><br>Deve essere utilizzato solo per i campi XDM di base definiti da Adobe. Se la proprietà source è un campo personalizzato definito dall&#39;organizzazione, è necessario modificare la `meta:enum` proprietà del campo direttamente tramite una richiesta [](./update-resource.md)PATCH. |
+| `meta:enum` | Se il campo indicato da `xdm:sourceProperty` è un campo stringa, `meta:enum` determina l&#39;elenco dei valori consigliati per il campo nell&#39; [!DNL Experience Platform] interfaccia utente. È importante notare che non `meta:enum` dichiara un&#39;enumerazione né fornisce alcuna convalida di dati per il campo XDM.<br><br>Deve essere utilizzato solo per i campi XDM di base definiti da Adobe. Se la proprietà source è un campo personalizzato definito dall&#39;organizzazione, è necessario modificare la `meta:enum` proprietà del campo direttamente tramite una richiesta [](./update-resource.md)PATCH. |
 
 #### Descrittore della relazione
 
