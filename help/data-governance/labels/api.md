@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 'Gestione delle etichette di utilizzo dei dati tramite API '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b51a13e2eab967099c84d1cca2233e2ace554e01
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '995'
+source-wordcount: '967'
 ht-degree: 3%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 3%
 
 # Gestione delle etichette di utilizzo dei dati tramite API
 
-In questo documento vengono fornite istruzioni su come gestire le etichette di utilizzo dei dati utilizzando l&#39;API del servizio criteri e l&#39;API del servizio DataSet.
+In questo documento sono descritti i passaggi necessari per gestire le etichette di utilizzo dei dati utilizzando l&#39; [!DNL Policy Service] API e l&#39; [!DNL Dataset Service] API.
 
-L&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) Policy Service fornisce diversi endpoint che consentono di creare e gestire le etichette di utilizzo dei dati per la vostra organizzazione.
+Sono [!DNL Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) disponibili diversi endpoint che consentono di creare e gestire le etichette di utilizzo dei dati per la propria organizzazione.
 
-L&#39;API del servizio DataSet consente di applicare e modificare le etichette di utilizzo per i set di dati. Fa parte  funzionalità  catalogo dati, ma è separata dall’API del servizio catalogo che gestisce i metadati del set di dati.
+L&#39; [!DNL Dataset Service] API consente di applicare e modificare le etichette di utilizzo per i set di dati. Fa parte  funzionalità  catalogo dati, ma è separata dall&#39; [!DNL Catalog Service] API che gestisce i metadati del set di dati.
 
 ## Introduzione
 
 Prima di leggere questa guida, segui i passaggi descritti nella sezione [](../../catalog/api/getting-started.md) introduttiva della guida per gli sviluppatori del catalogo per raccogliere le credenziali necessarie per effettuare chiamate alle [!DNL Platform] API.
 
-Per effettuare chiamate agli endpoint del servizio DataSet descritti in questo documento, è necessario disporre del `id` valore univoco per un set di dati specifico. Se non hai questo valore, consulta la guida sull’ [elenco degli oggetti](../../catalog/api/list-objects.md) catalogo per trovare gli ID dei set di dati esistenti.
+Per effettuare chiamate agli [!DNL Dataset Service] endpoint descritti in questo documento, è necessario disporre del valore univoco `id` per un set di dati specifico. Se non hai questo valore, consulta la guida sull’ [elenco degli oggetti](../../catalog/api/list-objects.md) catalogo per trovare gli ID dei set di dati esistenti.
 
 ## Elenca tutte le etichette {#list-labels}
 
@@ -110,7 +110,7 @@ Una risposta corretta restituisce un elenco di etichette personalizzate recupera
 
 ## Cercare un&#39;etichetta {#look-up-label}
 
-Potete cercare un&#39;etichetta specifica includendo la `name` proprietà dell&#39;etichetta nel percorso di una richiesta GET all&#39;API del servizio criteri.
+Potete cercare un&#39;etichetta specifica includendo la `name` proprietà dell&#39;etichetta nel percorso di una richiesta GET all&#39; [!DNL Policy Service] API.
 
 **Formato API**
 
@@ -164,7 +164,7 @@ Una risposta corretta restituisce i dettagli dell&#39;etichetta personalizzata.
 
 ## Creare o aggiornare un&#39;etichetta personalizzata {#create-update-label}
 
-Per creare o aggiornare un&#39;etichetta personalizzata, è necessario effettuare una richiesta PUT all&#39;API del servizio criteri.
+Per creare o aggiornare un&#39;etichetta personalizzata, dovete effettuare una richiesta PUT all&#39; [!DNL Policy Service] API.
 
 **Formato API**
 
@@ -230,7 +230,7 @@ Una risposta corretta restituisce i dettagli dell&#39;etichetta personalizzata, 
 
 ## Cerca etichette per un set di dati {#look-up-dataset-labels}
 
-È possibile ricercare le etichette di utilizzo dei dati applicate a un dataset esistente effettuando una richiesta GET all&#39;API del servizio DataSet.
+Potete cercare le etichette di utilizzo dei dati applicate a un dataset esistente effettuando una richiesta GET all&#39; [!DNL Dataset Service] API.
 
 **Formato API**
 
@@ -283,7 +283,7 @@ Una risposta corretta restituisce le etichette di utilizzo dei dati applicate al
 
 ## Applicare etichette a un dataset {#apply-dataset-labels}
 
-Potete creare un set di etichette per un dataset inserendolo nel payload di una richiesta POST o PUT all&#39;API del servizio Dataset. L’utilizzo di uno di questi metodi sovrascrive tutte le etichette esistenti e le sostituisce con quelle fornite nel payload.
+Potete creare un set di etichette per un set di dati inserendole nel payload di una richiesta POST o PUT all&#39; [!DNL Dataset Service] API. L’utilizzo di uno di questi metodi sovrascrive tutte le etichette esistenti e le sostituisce con quelle fornite nel payload.
 
 **Formato API**
 
@@ -326,7 +326,7 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `labels` | Elenco di etichette di utilizzo dati da aggiungere al dataset. |
-| `optionalLabels` | Un elenco di tutti i singoli campi all&#39;interno del set di dati a cui si desidera aggiungere etichette. Ogni elemento di questa matrice deve avere le seguenti proprietà: <br/><br/>`option`: Un oggetto che contiene gli attributi Experience Data Model (XDM) del campo. Sono richieste le tre proprietà seguenti:<ul><li>id</code>: Il valore URI $id</code> dello schema associato al campo.</li><li>contentType</code>: Il tipo di contenuto e il numero di versione dello schema. Questo deve assumere la forma di una delle intestazioni <a href="../../xdm/api/look-up-resource.md"></a> Accetta valide per una richiesta di ricerca XDM.</li><li>schemaPath</code>: Percorso del campo all&#39;interno dello schema del set di dati.</li></ul>`labels`: Elenco di etichette di utilizzo dati da aggiungere al campo. |
+| `optionalLabels` | Un elenco di tutti i singoli campi all&#39;interno del set di dati a cui si desidera aggiungere etichette. Ogni elemento di questa matrice deve avere le seguenti proprietà: <br/><br/>`option`: Un oggetto che contiene gli attributi [!DNL Experience Data Model] (XDM) del campo. Sono richieste le tre proprietà seguenti:<ul><li>id</code>: Il valore URI $id</code> dello schema associato al campo.</li><li>contentType</code>: Il tipo di contenuto e il numero di versione dello schema. Questo deve assumere la forma di una delle intestazioni <a href="../../xdm/api/look-up-resource.md"></a> Accetta valide per una richiesta di ricerca XDM.</li><li>schemaPath</code>: Percorso del campo all&#39;interno dello schema del set di dati.</li></ul>`labels`: Elenco di etichette di utilizzo dati da aggiungere al campo. |
 
 **Risposta**
 
@@ -350,7 +350,7 @@ Una risposta corretta restituisce le etichette aggiunte al set di dati.
 
 ## Rimozione di etichette da un dataset {#remove-dataset-labels}
 
-È possibile rimuovere le etichette applicate a un dataset effettuando una richiesta di DELETE all&#39;API del servizio DataSet.
+Potete rimuovere le etichette applicate a un dataset effettuando una richiesta di DELETE all&#39; [!DNL Dataset Service] API.
 
 **Formato API**
 
@@ -381,7 +381,7 @@ Risposta corretta: stato HTTP 200 (OK), a indicare che le etichette sono state r
 
 Leggendo questo documento, hai imparato a gestire le etichette di utilizzo dei dati utilizzando le API.
 
-Dopo aver aggiunto le etichette di utilizzo dei dati a livello di set di dati e di campo, è possibile iniziare a trasferire i dati in  Experience Platform. Per saperne di più, leggi la documentazione [sull’inserimento dei](../../ingestion/home.md)dati.
+Dopo aver aggiunto le etichette di utilizzo dei dati a livello di set di dati e di campo, è possibile iniziare a assimilare i dati in [!DNL Experience Platform]. Per saperne di più, leggi la documentazione [sull’inserimento dei](../../ingestion/home.md)dati.
 
 È inoltre possibile definire criteri di utilizzo dei dati in base alle etichette applicate. Per ulteriori informazioni, vedere la panoramica [dei criteri di utilizzo dei](../policies/overview.md)dati.
 
