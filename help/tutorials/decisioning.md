@@ -4,19 +4,22 @@ solution: Experience Platform
 title: Esercitazioni per la scelta
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: ee08f43400fa72abce95ed52aff879f954f4b4d6
+source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+workflow-type: tm+mt
+source-wordcount: '118'
+ht-degree: 0%
 
 ---
 
 
-# Guida introduttiva al servizio di disattivazione
+# Get started with [!DNL Decisioning Service]
 
-Il servizio di gestione delle decisioni consente di creare esperienze personalizzate, ottimizzate e orchestrate nelle applicazioni in esecuzione su Adobe Experience Platform. Utilizzando il servizio di gestione delle decisioni, potete determinare l&#39;opzione migliore da una serie di opzioni disponibili. Queste opzioni, denominate anche alternative, potrebbero essere offerte, raccomandazioni di prodotto, componenti di contenuto per un&#39;esperienza Web, script di conversazione e azioni da intraprendere. Per saperne di più, visita la panoramica [del servizio](../decisioning-service/home.md)di gestione.
+[!DNL Decisioning Service] consente di creare esperienze personalizzate, ottimizzate e orchestrate in applicazioni eseguite  Adobe Experience Platform. Utilizzando [!DNL Decisioning Service], potete determinare l&#39;opzione migliore da un set di scelte disponibili. Queste opzioni, denominate anche alternative, potrebbero essere offerte, raccomandazioni di prodotto, componenti di contenuto per un&#39;esperienza Web, script di conversazione e azioni da intraprendere. Per saperne di più, visita la panoramica [del servizio](../decisioning-service/home.md)di gestione.
 
-## Operazioni con il runtime di Decisioning Service
+## Operazioni con [!DNL Decisioning Service] il runtime
 
-Scopri come utilizzare i servizi runtime di Decisioning Service mediante le API di Adobe Experience Platform seguendo l’esercitazione [](../decisioning-service/tutorials/runtime.md)runtime di Decisioning Service.
+Scoprite come utilizzare i servizi di runtime per [!DNL Decisioning Service] utilizzare  API di Adobe Experience Platform seguendo l&#39; [esercitazione](../decisioning-service/tutorials/runtime.md)di esecuzione Decisioning Service.
 
-## Gestisci entità servizio di disattivazione
+## Gestisci [!DNL Decisioning Service] entità
 
-Per un&#39;esercitazione che illustra come lavorare con le entità aziendali di Decisioning Service mediante le API Adobe Experience Platform, consulta l&#39;esercitazione [](../decisioning-service/tutorials/entities.md)Manage Decisioning objects and rules (Gestione degli oggetti e delle regole di disattivazione).
+Per un&#39;esercitazione che illustra come utilizzare le entità aziendali per [!DNL Decisioning Service] utilizzare  API di Adobe Experience Platform, visitare l&#39;esercitazione [sulla](../decisioning-service/tutorials/entities.md)gestione degli oggetti e delle regole di deselezione.
