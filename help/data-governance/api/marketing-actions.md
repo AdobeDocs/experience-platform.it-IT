@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Azioni di marketing
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '534'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Azioni di marketing
 
-Un&#39;azione di marketing, nel contesto del Adobe Experience Platform  Governance dei dati, è un&#39;azione che un consumatore di [!DNL Experience Platform] dati prende, per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati.
+Un&#39;azione di marketing, nel contesto del Adobe Experience Platform  [!DNL Data Governance], è un&#39;azione che un consumatore di [!DNL Experience Platform] dati esegue, per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati.
 
 Per utilizzare le azioni di marketing nell&#39;API è necessario utilizzare l&#39; `/marketingActions` endpoint.
 
