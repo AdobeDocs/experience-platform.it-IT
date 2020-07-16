@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Creare un mixin
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b2ceac3de73ac622dc885eb388e46e93551f43a8
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+workflow-type: tm+mt
+source-wordcount: '303'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: b2ceac3de73ac622dc885eb388e46e93551f43a8
 
 Le miscele sono un insieme di campi utilizzati per descrivere un concetto particolare, ad esempio &quot;indirizzo&quot; o &quot;preferenze di profilo&quot;. Sono disponibili numerosi mixin standard, oppure potete definirne uno personalizzato quando desiderate acquisire informazioni univoche per la vostra organizzazione. Ogni mixin contiene un `meta:intendedToExtend` campo in cui sono elencate le classi con cui è compatibile il mixin.
 
-Potrebbe essere utile rivedere tutti i mixin disponibili per acquisire familiarità con i campi inclusi in ciascuno. Potete elencare (GET) tutti i mixin compatibili con una particolare classe eseguendo una richiesta per ciascuno dei contenitori &quot;global&quot; e &quot;tenant&quot;, restituendo solo i mixin cui il campo &quot;meta:subjectToExtend&quot; corrisponde alla classe in uso. Gli esempi seguenti restituiranno tutti i mixin utilizzabili con la classe Profilo singolo XDM:
+Potrebbe essere utile rivedere tutti i mixin disponibili per acquisire familiarità con i campi inclusi in ciascuno. Potete elencare (GET) tutti i mixin compatibili con una particolare classe eseguendo una richiesta per ciascuno dei contenitori &quot;global&quot; e &quot;tenant&quot;, restituendo solo i mixin cui il campo &quot;meta:subjectToExtend&quot; corrisponde alla classe in uso. Gli esempi seguenti restituiranno tutti i mixin utilizzabili con la [!DNL XDM Individual Profile] classe:
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -99,7 +102,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload contenente i dettagli del mixin appena creato, inclusi `$id`, `meta:altId`e `version`. Questi valori sono di sola lettura e sono assegnati dal Registro di sistema dello schema.
+Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload contenente i dettagli del mixin appena creato, inclusi `$id`, `meta:altId`e `version`. Questi valori sono di sola lettura e vengono assegnati dal [!DNL Schema Registry].
 
 ```JSON
 {
