@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criteri
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Valutazione politica
 
-Una volta create le azioni di marketing e definite le policy, potete utilizzare l&#39;API del servizio criteri per valutare se eventuali criteri vengono violati da determinate azioni. I vincoli restituiti assumono la forma di un insieme di criteri che verrebbero violati tentando di eseguire un&#39;azione di marketing sui dati specificati contenenti etichette di utilizzo dei dati.
+Una volta create le azioni di marketing e definite le policy, potete utilizzare l&#39; [!DNL Policy Service] API per valutare se eventuali criteri vengono violati da determinate azioni. I vincoli restituiti assumono la forma di un insieme di criteri che verrebbero violati tentando di eseguire un&#39;azione di marketing sui dati specificati contenenti etichette di utilizzo dei dati.
 
 Per impostazione predefinita, **solo i criteri il cui stato è impostato su &quot;ENABLED&quot; partecipano alla valutazione**, tuttavia è possibile utilizzare il parametro query `?includeDraft=true` per includere i criteri &quot;DRAFT&quot; nella valutazione.
 
