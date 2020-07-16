@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creazione di una classe
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Il blocco predefinito principale di uno schema è una classe. La classe contiene il set minimo di campi che è necessario definire per acquisire i dati di base di uno schema. Ad esempio, se si stava progettando uno schema per auto e camion, molto probabilmente utilizzerebbero una classe chiamata Veicolo che descriveva le proprietà comuni di base di tutti i veicoli.
 
-Esistono diverse classi standard fornite da Adobe e altri partner  Experience Platform, ma è possibile definire classi personalizzate e salvarle nel Registro di sistema dello schema. È quindi possibile comporre uno schema che implementa la classe creata e definire mixin compatibili con la classe appena definita.
+Adobe e altri [!DNL Experience Platform] partner possono seguire diverse classi standard, ma è possibile anche definire le proprie classi e salvarle nel [!DNL Schema Registry]. È quindi possibile comporre uno schema che implementa la classe creata e definire mixin compatibili con la classe appena definita.
 
 >[!NOTE]
 >
@@ -83,12 +83,12 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `_{TENANT_ID}` | Lo `TENANT_ID` spazio dei nomi per l&#39;organizzazione. Tutte le risorse create dall&#39;organizzazione devono includere questa proprietà per evitare conflitti con altre risorse nel Registro di sistema dello schema. |
+| `_{TENANT_ID}` | Lo `TENANT_ID` spazio dei nomi per l&#39;organizzazione. Tutte le risorse create dall&#39;organizzazione devono includere questa proprietà per evitare conflitti con altre risorse nel [!DNL Schema Registry]. |
 | `allOf` | Elenco di risorse le cui proprietà devono essere ereditate dalla nuova classe. Uno degli `$ref` oggetti all&#39;interno della matrice definisce il comportamento della classe. In questo esempio, la classe eredita il comportamento &quot;record&quot;. |
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload contenente i dettagli della nuova classe creata, inclusi `$id`, `meta:altId`e `version`. Questi tre valori sono di sola lettura e sono assegnati dal Registro di sistema dello schema.
+Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload contenente i dettagli della nuova classe creata, inclusi `$id`, `meta:altId`e `version`. Questi tre valori sono di sola lettura e vengono assegnati dal [!DNL Schema Registry].
 
 ```JSON
 {
