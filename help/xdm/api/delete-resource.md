@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Elimina una risorsa
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d9ab2b1226b051be43f8fc0dd222bc075caed6f0
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+workflow-type: tm+mt
+source-wordcount: '133'
+ht-degree: 7%
 
 ---
 
 
 # Elimina una risorsa
 
-Può essere talvolta necessario rimuovere (ELIMINARE) una risorsa dal Registro di sistema dello schema. È possibile eliminare solo le risorse create nel contenitore tenant. A questo scopo, è necessario eseguire una richiesta DELETE utilizzando l&#39; `$id` elemento della risorsa che si desidera eliminare.
+Può essere talvolta necessario rimuovere (DELETE) una risorsa dal [!DNL Schema Registry]. È possibile eliminare solo le risorse create nel contenitore tenant. Questa operazione viene eseguita eseguendo una richiesta di DELETE utilizzando la risorsa `$id` da eliminare.
 
 **Formato API**
 
@@ -21,12 +24,12 @@ DELETE /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{RESOURCE_TYPE}` | Il tipo di risorsa da eliminare dalla libreria Schema. I tipi validi sono `datatypes`, `mixins`, `schemas`e `classes`. |
+| `{RESOURCE_TYPE}` | Il tipo di risorsa da eliminare dal [!DNL Schema Library]. I tipi validi sono `datatypes`, `mixins`, `schemas`e `classes`. |
 | `{RESOURCE_ID}` | URI con codifica URL `$id` o `meta:altId` della risorsa. |
 
 **Richiesta**
 
-Le richieste DELETE non richiedono l’opzione Accetta intestazioni.
+Le richieste di DELETE non richiedono l&#39;opzione Accetta intestazioni.
 
 ```SHELL
 curl -X DELETE \
@@ -41,4 +44,4 @@ curl -X DELETE \
 
 Una risposta corretta restituisce lo stato HTTP 204 (Nessun contenuto) e un corpo vuoto.
 
-È possibile confermare l&#39;eliminazione provando una richiesta di ricerca (GET) alla risorsa. Sarà necessario includere un&#39;intestazione Accetto nella richiesta, ma dovrebbe ricevere uno stato HTTP 404 (Non trovato) perché la risorsa è stata rimossa dal Registro di sistema dello schema.
+È possibile confermare l&#39;eliminazione provando una richiesta di ricerca (GET) alla risorsa. Dovrete includere un&#39;intestazione Accetto nella richiesta, ma dovreste ricevere uno stato HTTP 404 (Non trovato) perché la risorsa è stata rimossa dal [!DNL Schema Registry].
