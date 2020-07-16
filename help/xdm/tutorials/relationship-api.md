@@ -4,39 +4,39 @@ solution: Experience Platform
 title: Definire una relazione tra due schemi utilizzando l'API del Registro di sistema dello schema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '1504'
+source-wordcount: '1458'
 ht-degree: 1%
 
 ---
 
 
-# Definire una relazione tra due schemi utilizzando l&#39;API del Registro di sistema dello schema
+# Definire una relazione tra due schemi utilizzando l&#39; [!DNL Schema Registry] API
 
 
-La capacità di comprendere le relazioni tra i clienti e le loro interazioni con il tuo marchio attraverso vari canali è una parte importante del  Adobe Experience Platform. La definizione di queste relazioni all&#39;interno della struttura degli schemi del modello dati esperienza (XDM) consente di acquisire informazioni complesse sui dati dei clienti.
+La capacità di comprendere le relazioni tra i clienti e le loro interazioni con il tuo marchio attraverso vari canali è una parte importante del  Adobe Experience Platform. La definizione di queste relazioni all&#39;interno della struttura degli schemi [!DNL Experience Data Model] (XDM) consente di acquisire informazioni complesse sui dati dei clienti.
 
-Questo documento fornisce un&#39;esercitazione per definire una relazione uno-a-uno tra due schemi definiti dall&#39;organizzazione mediante l&#39;API [del Registro di](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)schema.
+Questo documento fornisce un&#39;esercitazione per definire una relazione uno-a-uno tra due schemi definiti dall&#39;organizzazione che utilizza l&#39; [!DNL Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
 ## Introduzione
 
-Questa esercitazione richiede una buona conoscenza di Experience Data Model (XDM) e XDM System. Prima di iniziare questa esercitazione, consulta la seguente documentazione:
+Questa esercitazione richiede una buona conoscenza di [!DNL Experience Data Model] (XDM) e [!DNL XDM System]. Prima di iniziare questa esercitazione, consulta la seguente documentazione:
 
 * [Sistema XDM in  Experience Platform](../home.md): Panoramica di XDM e della relativa implementazione in  Experience Platform.
    * [Nozioni di base sulla composizione](../schema/composition.md)dello schema: Introduzione dei blocchi costitutivi degli schemi XDM.
-* [Profilo](../../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-* [Sandbox](../../sandboxes/home.md):  Experience Platform fornisce sandbox virtuali che dividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [!DNL Real-time Customer Profile](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
-Prima di avviare questa esercitazione, consultare la guida [allo](../api/getting-started.md) sviluppatore per informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all&#39;API del Registro di sistema dello schema. Ciò include il vostro `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all’intestazione Accetta e ai suoi possibili valori).
+Prima di iniziare questa esercitazione, consulta la guida [allo](../api/getting-started.md) sviluppo per informazioni importanti da conoscere per effettuare correttamente le chiamate all&#39; [!DNL Schema Registry] API. Ciò include il vostro `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all’intestazione Accetta e ai suoi possibili valori).
 
 ## Definire uno schema di origine e di destinazione {#define-schemas}
 
 È previsto che siano già stati creati i due schemi che verranno definiti nella relazione. Questa esercitazione crea una relazione tra i membri del programma fedeltà corrente di un&#39;organizzazione (definito in uno schema &quot;Membri fedeltà&quot;) e i loro alberghi preferiti (definiti in uno schema &quot;Hotel&quot;).
 
-Le relazioni dello schema sono rappresentate da uno schema **di** origine con un campo che fa riferimento a un altro campo all&#39;interno di uno schema **di** destinazione. Nei passaggi successivi, &quot;Membri fedeltà&quot; sarà lo schema di origine, mentre &quot;Alberghi&quot; fungerà da schema di destinazione.
+Le relazioni dello schema sono rappresentate da un **[!UICONTROL source schema]** campo che fa riferimento a un altro campo all&#39;interno di un campo **[!UICONTROL destination schema]**. Nei passaggi successivi, &quot;[!UICONTROL Loyalty Members]&quot; sarà lo schema di origine, mentre &quot;[!UICONTROL Hotels]&quot; fungerà da schema di destinazione.
 
-Per definire una relazione tra due schemi, è innanzitutto necessario acquisire i `$id` valori per entrambi gli schemi. Se si conoscono i nomi visualizzati (`title`) degli schemi, è possibile trovare `$id` i relativi valori eseguendo una richiesta GET all&#39; `/tenant/schemas` endpoint nell&#39;API del Registro di sistema dello schema.
+Per definire una relazione tra due schemi, è innanzitutto necessario acquisire i `$id` valori per entrambi gli schemi. Se conoscete i nomi visualizzati (`title`) degli schemi, potete trovare `$id` i relativi valori effettuando una richiesta GET all&#39; `/tenant/schemas` endpoint nell&#39; [!DNL Schema Registry] API.
 
 **Formato API**
 
@@ -104,11 +104,11 @@ Registrare i `$id` valori dei due schemi tra cui si desidera definire una relazi
 
 ## Definire i campi di riferimento per entrambi gli schemi
 
-Nel Registro di sistema dello schema, i descrittori delle relazioni funzionano in modo simile alle chiavi esterne nelle tabelle SQL: un campo nello schema di origine funge da riferimento a un campo di uno schema di destinazione. Quando si definisce una relazione, ogni schema deve avere un campo dedicato da utilizzare come riferimento all&#39;altro schema.
+All&#39;interno [!DNL Schema Registry], i descrittori di relazione funzionano in modo simile alle chiavi esterne nelle tabelle SQL: un campo nello schema di origine funge da riferimento a un campo di uno schema di destinazione. Quando si definisce una relazione, ogni schema deve avere un campo dedicato da utilizzare come riferimento all&#39;altro schema.
 
 >[!IMPORTANT]
 >
->Se gli schemi devono essere attivati per l&#39;uso in [Real-time Customer Profile](../../profile/home.md)(Profilo **cliente in tempo reale), il campo di riferimento per lo schema di destinazione deve essere la sua identità** principale. Questo è spiegato più in dettaglio in questa esercitazione.
+>Se gli schemi devono essere abilitati per l&#39;uso in [!DNL Real-time Customer Profile](../../profile/home.md), il campo di riferimento per lo schema di destinazione deve essere il relativo **[!UICONTROL primary identity]**. Questo è spiegato più in dettaglio in questa esercitazione.
 
 Se uno schema non dispone di un campo a questo scopo, potrebbe essere necessario creare un mixin con il nuovo campo e aggiungerlo allo schema. Il nuovo campo deve avere un `type` valore &quot;string&quot;.
 
@@ -332,9 +332,9 @@ Una risposta corretta restituisce i dettagli dello schema aggiornato, che ora in
 
 >[!NOTE]
 >
->Questo passaggio è richiesto solo per gli schemi che saranno attivati per l&#39;uso nel profilo [cliente in tempo](../../profile/home.md)reale. Se non si desidera che uno schema partecipi a un&#39;unione o se gli schemi dispongono già di identità primarie definite, è possibile passare alla fase successiva della [creazione di un descrittore](#create-descriptor) di identità di riferimento per lo schema di destinazione.
+>Questo passaggio è richiesto solo per gli schemi che saranno attivati per l&#39;utilizzo in [!DNL Real-time Customer Profile](../../profile/home.md). Se non si desidera che uno schema partecipi a un&#39;unione o se gli schemi dispongono già di identità primarie definite, è possibile passare alla fase successiva della [creazione di un descrittore](#create-descriptor) di identità di riferimento per lo schema di destinazione.
 
-Affinché gli schemi possano essere attivati per l&#39;uso in Real-time Customer Profile, è necessario che abbiano definito un&#39;identità primaria. Inoltre, lo schema di destinazione di una relazione deve utilizzare la propria identità primaria come campo di riferimento.
+Affinché gli schemi possano essere attivati per l&#39;uso in [!DNL Real-time Customer Profile], è necessario che abbiano definito un&#39;identità primaria. Inoltre, lo schema di destinazione di una relazione deve utilizzare la propria identità primaria come campo di riferimento.
 
 Ai fini di questa esercitazione, lo schema di origine ha già un&#39;identità primaria definita, ma non lo schema di destinazione. È possibile contrassegnare un campo dello schema come campo di identità principale creando un descrittore di identità. Questa operazione viene eseguita eseguendo una richiesta POST all&#39; `/tenant/descriptors` endpoint.
 
@@ -513,4 +513,4 @@ Una risposta corretta restituisce i dettagli del descrittore della relazione app
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, è stata creata una relazione uno-a-uno tra due schemi. Per ulteriori informazioni sull&#39;utilizzo dei descrittori tramite l&#39;API del Registro di sistema dello schema, vedere la guida [per gli sviluppatori del Registro di](../api/getting-started.md)schema. Per informazioni sulla definizione delle relazioni tra schemi nell&#39;interfaccia utente, vedere l&#39;esercitazione sulla [definizione delle relazioni tra schemi utilizzando l&#39;Editor](relationship-ui.md)di schema.
+Seguendo questa esercitazione, è stata creata una relazione uno-a-uno tra due schemi. Per ulteriori informazioni sull&#39;utilizzo dei descrittori tramite l&#39; [!DNL Schema Registry] API, vedere la guida [per gli sviluppatori del Registro di](../api/getting-started.md)schema. Per informazioni sulla definizione delle relazioni tra schemi nell&#39;interfaccia utente, vedere l&#39;esercitazione sulla [definizione delle relazioni tra schemi utilizzando l&#39;Editor](relationship-ui.md)di schema.
