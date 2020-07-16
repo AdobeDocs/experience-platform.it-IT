@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creazione di un criterio di utilizzo dei dati
 topic: policies
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1186'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Creare un criterio di utilizzo dei dati nell&#39;API
 
-L&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati (DULE) è il meccanismo fondamentale  governance dei dati del Adobe Experience Platform. L&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE Policy Service consente di creare e gestire criteri DULE per determinare quali azioni di marketing possono essere eseguite rispetto ai dati che contengono determinate etichette DULE.
+L&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati (DULE) è il meccanismo fondamentale del  Adobe Experience Platform [!DNL Data Governance]. L&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE Policy Service consente di creare e gestire criteri DULE per determinare quali azioni di marketing possono essere eseguite rispetto ai dati che contengono determinate etichette DULE.
 
 Questo documento fornisce un&#39;esercitazione dettagliata per la creazione di un criterio DULE tramite l&#39; [!DNL Policy Service] API. Per una guida più completa alle diverse operazioni disponibili nell&#39;API, vedete la guida [per gli sviluppatori di](../api/getting-started.md)Policy Service.
 
@@ -22,9 +22,9 @@ Questo documento fornisce un&#39;esercitazione dettagliata per la creazione di u
 
 Questa esercitazione richiede una conoscenza approfondita dei seguenti concetti chiave relativi alla creazione e alla valutazione di criteri DULE:
 
-* [Governance](../home.md)dei dati: Il framework in base al quale [!DNL Platform] viene applicata la conformità all&#39;utilizzo dei dati.
+* [!DNL Data Governance](../home.md): Il framework in base al quale [!DNL Platform] viene applicata la conformità all&#39;utilizzo dei dati.
 * [Etichette](../labels/overview.md)di utilizzo dati: Le etichette di utilizzo dei dati vengono applicate ai campi di dati XDM, specificando le restrizioni relative alle modalità di accesso ai dati.
-* [Experience Data Model (XDM)](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
+* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
 * [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 Prima di avviare questa esercitazione, consulta la guida [](../api/getting-started.md) allo sviluppatore per informazioni importanti che devi conoscere per effettuare correttamente chiamate all’ [!DNL Policy Service] API DULE, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
