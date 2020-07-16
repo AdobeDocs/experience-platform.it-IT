@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida utente etichette di utilizzo dati
 topic: labels
 translation-type: tm+mt
-source-git-commit: b36f67fd7d597d5d6a8cd514d95908ae26189c83
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1045'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ La sezione successiva contiene i passaggi necessari per creare un nuovo dataset 
 
 >[!NOTE]
 >
->In questo esempio, un dataset viene creato utilizzando uno schema XDM (Experience Data Model) preconfigurato. Per ulteriori informazioni sugli schemi XDM, vedere la panoramica [del sistema](../../xdm/home.md) XDM e le [nozioni di base della composizione](../../xdm/schema/composition.md)dello schema.
+>In questo esempio, un dataset viene creato utilizzando uno schema [!DNL Experience Data Model] (XDM) preconfigurato. Per ulteriori informazioni sugli schemi XDM, vedere la panoramica [del sistema](../../xdm/home.md) XDM e le [nozioni di base della composizione](../../xdm/schema/composition.md)dello schema.
 
 Per creare un nuovo set di dati, fate clic **[!UICONTROL Create Dataset]** nell’angolo superiore destro dell’ _[!UICONTROL Datasets]_area di lavoro.
 
