@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aggiornare una risorsa
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '373'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Aggiornare una risorsa
 
-Puoi modificare o aggiornare le risorse nel contenitore tenant utilizzando una richiesta PATCH. Il Registro di sistema dello schema supporta tutte le operazioni standard di patch JSON, incluse le operazioni di aggiunta, rimozione e sostituzione.
+Puoi modificare o aggiornare le risorse nel contenitore tenant utilizzando una richiesta PATCH. Supporta [!DNL Schema Registry] tutte le operazioni standard di patch JSON, incluse aggiunta, rimozione e sostituzione.
 
 Per ulteriori informazioni sulla patch JSON, comprese le operazioni disponibili, consultate la documentazione [ufficiale relativa alla patch](http://jsonpatch.com/)JSON.
 
@@ -34,7 +34,7 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{RESOURCE_TYPE}` | Il tipo di risorsa da aggiornare dalla Libreria schema. I tipi validi sono `datatypes`, `mixins`, `schemas`e `classes`. |
+| `{RESOURCE_TYPE}` | Il tipo di risorsa da aggiornare dal [!DNL Schema Library]. I tipi validi sono `datatypes`, `mixins`, `schemas`e `classes`. |
 | `{RESOURCE_ID}` | URI con codifica URL `$id` o `meta:altId` della risorsa. |
 
 **Richiesta**
@@ -110,7 +110,7 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{RESOURCE_TYPE}` | Il tipo di risorsa da aggiornare dalla Libreria schema. I tipi validi sono `datatypes`, `mixins`, `schemas`e `classes`. |
+| `{RESOURCE_TYPE}` | Il tipo di risorsa da aggiornare dal [!DNL Schema Library]. I tipi validi sono `datatypes`, `mixins`, `schemas`e `classes`. |
 | `{RESOURCE_ID}` | URI con codifica URL `$id` o `meta:altId` della risorsa. |
 
 **Richiesta**
