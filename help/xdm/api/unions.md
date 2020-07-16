@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Unioni
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '788'
 ht-degree: 1%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 1%
 
 # Unioni
 
-Le unioni (o viste di unione) sono schemi generati dal sistema e di sola lettura che aggregano i campi di tutti gli schemi che condividono la stessa classe (XDM ExperienceEvent o XDM Singolo Profilo) e sono abilitati per il profilo [cliente in tempo](../../profile/home.md)reale.
+Le unioni (o viste di unione) sono schemi generati dal sistema e di sola lettura che aggregano i campi di tutti gli schemi che condividono la stessa classe ([!DNL XDM ExperienceEvent] o [!DNL XDM Individual Profile]) e sono abilitati per [!DNL Real-time Customer Profile](../../profile/home.md).
 
 Il presente documento illustra i concetti essenziali per l&#39;utilizzo dei sindacati nell&#39;API del Registro di sistema dello schema, incluse le chiamate di esempio per varie operazioni. Per informazioni più generali sulle unioni in XDM, consultate la sezione sui sindacati nelle [nozioni di base della composizione](../schema/composition.md#union)dello schema.
 
 ## Unione
 
-Il Registro di sistema dello schema include automaticamente tre mixin nello schema unione: `identityMap`, `timeSeriesEvents`e `segmentMembership`.
+Include [!DNL Schema Registry] automaticamente tre mixin nello schema unione: `identityMap`, `timeSeriesEvents`e `segmentMembership`.
 
 ### Mappa identità
 
@@ -30,7 +30,7 @@ See the [Identity Service documentation](../../identity-service/home.md) for mor
 
 ### Eventi serie temporali
 
-L&#39; `timeSeriesEvents` array è un elenco di eventi delle serie temporali relativi agli schemi di record associati all&#39;unione. Quando i dati del profilo vengono esportati in set di dati, questa matrice viene inclusa per ciascun record. Questa funzione è utile per diversi casi di utilizzo, ad esempio per l&#39;apprendimento automatico, in cui i modelli necessitano dell&#39;intera cronologia del comportamento di un profilo oltre agli attributi del record.
+L&#39; `timeSeriesEvents` array è un elenco di eventi delle serie temporali relativi agli schemi di record associati all&#39;unione. Quando [!DNL Profile] i dati vengono esportati in set di dati, questa matrice viene inclusa per ciascun record. Questa funzione è utile per diversi casi di utilizzo, ad esempio per l&#39;apprendimento automatico, in cui i modelli necessitano dell&#39;intera cronologia del comportamento di un profilo oltre agli attributi del record.
 
 ### Mappa appartenenza segmento
 
@@ -54,7 +54,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{SCHEMA_ID}` | L’ `$id` URI con codifica URL o `meta:altId` dello schema che si desidera abilitare per l’uso in Profile. |
+| `{SCHEMA_ID}` | L&#39; `$id` URI con codifica URL o `meta:altId` dello schema che si desidera abilitare per l&#39;uso in [!DNL Profile]. |
 
 **Richiesta**
 
@@ -117,7 +117,7 @@ Una risposta corretta restituisce i dettagli dello schema aggiornato, che ora in
 
 ## Elenca unioni
 
-Quando si imposta il tag &quot;union&quot; su uno schema, il Registro di sistema dello schema crea e mantiene automaticamente un&#39;unione per la classe su cui si basa lo schema. Il `$id` nome dell&#39;unione è simile allo standard `$id` di una classe, con l&#39;unica differenza che è aggiunta da due caratteri di sottolineatura e la parola &quot;unione&quot; (`"__union"`).
+Quando si imposta il tag &quot;union&quot; su uno schema, viene creata e mantenuta [!DNL Schema Registry] automaticamente un&#39;unione per la classe su cui si basa lo schema. Il `$id` nome dell&#39;unione è simile allo standard `$id` di una classe, con l&#39;unica differenza che è aggiunta da due caratteri di sottolineatura e la parola &quot;unione&quot; (`"__union"`).
 
 Per visualizzare un elenco delle unioni disponibili, potete eseguire una richiesta GET all&#39; `/unions` endpoint.
 
@@ -168,7 +168,7 @@ Potete visualizzare un&#39;unione specifica eseguendo una richiesta GET che incl
 
 >[!NOTE]
 >
->Le ricerche dell&#39;unione sono disponibili utilizzando l&#39; `/unions` `/schemas` endpoint e l&#39;endpoint per consentirne l&#39;utilizzo nelle esportazioni di profili in un dataset.
+>Le ricerche unionali sono disponibili utilizzando l&#39; `/unions` endpoint e `/schemas` per consentirne l&#39;utilizzo nelle [!DNL Profile] esportazioni in un dataset.
 
 **Formato API**
 
@@ -265,7 +265,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 **Richiesta**
 
-La richiesta seguente cerca tutti gli schemi che fanno parte dell&#39;unione di classe di profilo singolo XDM.
+La richiesta seguente cerca tutti gli schemi che fanno parte dell&#39;unione di [!DNL XDM Individual Profile] classi.
 
 ```SHELL
 curl -X GET \
