@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica delle etichette di utilizzo dei dati
 topic: labels
 translation-type: tm+mt
-source-git-commit: f4b3148db3b4a17d071c1c8ad2aff8dd64ddd0b7
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '485'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Panoramica delle etichette di utilizzo dei dati
 
-L&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati (DULE) è il meccanismo fondamentale  governance dei dati del Adobe Experience Platform. Le funzioni DULE consentono di applicare etichette di utilizzo dei dati a set di dati e campi, suddividendo ciascuna in categorie in base ai relativi criteri di utilizzo dei dati.
+L&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati (DULE) è il meccanismo fondamentale del  Adobe Experience Platform [!DNL Data Governance]. Le funzioni DULE consentono di applicare etichette di utilizzo dei dati a set di dati e campi, suddividendo ciascuna in categorie in base ai relativi criteri di utilizzo dei dati.
 
 Questo documento fornisce una panoramica delle etichette di utilizzo dei dati (dette anche etichette DULE) in [!DNL Experience Platform]. Prima di leggere questa guida, consulta la panoramica [sulla governance dei](../home.md) dati per un&#39;introduzione più efficace al quadro DULE.
 
@@ -38,9 +38,9 @@ Per ulteriori informazioni sul funzionamento dell’applicazione automatica in C
 
 ### Ereditarietà dai controlli di esportazione dei dati  Adobe Audience Manager
 
- Experience Platform è in grado di condividere segmenti con  Adobe Audience Manager. Eventuali controlli sull&#39;esportazione dei dati applicati  segmenti Audience Manager vengono convertiti in etichette e azioni di marketing equivalenti riconosciute  gestione dei dati Experience Platform.
+[!DNL Experience Platform] è in grado di condividere segmenti con  Adobe Audience Manager. Eventuali controlli di esportazione dei dati applicati  segmenti Audience Manager vengono convertiti in etichette equivalenti e azioni di marketing riconosciute da [!DNL Experience Platform][!DNL Data Governance].
 
-Per un riferimento alla modalità in cui specifici controlli di esportazione dei dati vengono mappati sulle etichette di utilizzo dei dati in Platform, consultare la documentazione [di](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)Audience Manager.
+Per un riferimento alla modalità in cui specifici controlli di esportazione dei dati vengono mappati sulle etichette di utilizzo dei dati in [!DNL Platform], consultare la [documentazione](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)Audience Manager.
 
 
 ## Passaggi successivi
