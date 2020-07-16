@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Processi
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: df36d88de8ac117206d8d744cfcdd7804fcec61e
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '1807'
+source-wordcount: '1795'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Lavori di privacy
 
-Questo documento descrive come lavorare con i processi di privacy utilizzando le chiamate API. Nello specifico, copre l&#39;utilizzo dell&#39; `/job` endpoint nell&#39;API di Privacy Service. Prima di leggere questa guida, fate riferimento alla sezione [](./getting-started.md#getting-started) introduttiva per informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all&#39;API, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
+Questo documento descrive come lavorare con i processi di privacy utilizzando le chiamate API. Nello specifico, copre l&#39;utilizzo dell&#39; `/job` endpoint nell&#39; [!DNL Privacy Service] API. Prima di leggere questa guida, fate riferimento alla sezione [](./getting-started.md#getting-started) introduttiva per informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all&#39;API, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
 
 ## Elenca tutti i processi {#list}
 
@@ -63,9 +63,9 @@ Prima di creare una nuova richiesta di processo, è necessario innanzitutto racc
 
 >[!NOTE]
 >
->Le applicazioni Adobe Experience Cloud compatibili utilizzano valori diversi per identificare gli oggetti dei dati. Per ulteriori informazioni sugli identificatori richiesti per le applicazioni, consultate la guida [Privacy Service e  applicazioni](../experience-cloud-apps.md) Experience Cloud. Per indicazioni più generali sulla determinazione degli ID da inviare ad Privacy Service, consulta il documento sui dati di [identità nelle richieste](../identity-data.md)di privacy.
+>Le applicazioni Adobe Experience Cloud compatibili utilizzano valori diversi per identificare gli oggetti dei dati. Per ulteriori informazioni sugli identificatori richiesti per le applicazioni, consultate la guida [Privacy Service e  applicazioni](../experience-cloud-apps.md) Experience Cloud. Per indicazioni più generali su come determinare a quali ID inviare [!DNL Privacy Service], consulta il documento sui dati di [identità nelle richieste](../identity-data.md)di privacy.
 
-L&#39;API Privacy Service supporta due tipi di richieste di lavoro per i dati personali:
+L&#39; [!DNL Privacy Service] API supporta due tipi di richieste di lavoro per i dati personali:
 
 * [Accesso e/o eliminazione](#access-delete): Accesso (lettura) o eliminazione di dati personali.
 * [Rifiuto della vendita](#opt-out): Contrassegnare i dati personali come non da vendere.
@@ -150,7 +150,7 @@ curl -X POST \
 | `companyContexts` **(Obbligatorio)** | Un array contenente informazioni di autenticazione per l&#39;organizzazione. Ogni identificatore elencato include i seguenti attributi: <ul><li>`namespace`: Spazio dei nomi di un identificatore.</li><li>`value`: Il valore dell’identificatore.</li></ul>È **necessario** che uno degli identificatori venga utilizzato `imsOrgId` come `namespace`, con `value` l’ID univoco per l’organizzazione IMS. <br/><br/>Gli identificatori aggiuntivi possono essere qualificatori aziendali specifici per prodotto (ad esempio, `Campaign`), che identificano un&#39;integrazione con un&#39;applicazione Adobe appartenente alla tua organizzazione. I potenziali valori includono nomi account, codici cliente, ID tenant o altri identificatori dell&#39;applicazione. |
 | `users` **(Obbligatorio)** | Array contenente una raccolta di almeno un utente le cui informazioni si desidera accedere o eliminare. In un&#39;unica richiesta è possibile fornire un massimo di 1000 ID utente. Ciascun oggetto utente contiene le informazioni seguenti: <ul><li>`key`: Identificatore per un utente utilizzato per qualificare gli ID processo separati nei dati della risposta. È consigliabile scegliere una stringa univoca e facilmente identificabile per questo valore in modo che possa essere facilmente reperibile o ricercato in un secondo momento.</li><li>`action`: Un array che elenca le azioni desiderate da eseguire sui dati dell&#39;utente. A seconda delle azioni che si desidera eseguire, l&#39;array deve includere `access`, `delete`o entrambi.</li><li>`userIDs`: Raccolta di identità per l&#39;utente. Il numero di identità che un singolo utente può avere è limitato a nove. Ogni identità è costituita da un `namespace`, un `value`e un qualificatore dello spazio dei nomi (`type`). Per ulteriori dettagli su queste proprietà richieste, vedere l&#39; [appendice](appendix.md) .</li></ul> Per una spiegazione più dettagliata di `users` e `userIDs`, consultate la guida alla [risoluzione dei problemi](../troubleshooting-guide.md#user-ids). |
 | `include` **(Obbligatorio)** | Un array di prodotti Adobe da includere nell&#39;elaborazione. Se questo valore risulta mancante o vuoto, la richiesta verrà rifiutata. Includete solo i prodotti con cui l&#39;organizzazione dispone di un&#39;integrazione. Per ulteriori informazioni, consulta la sezione sui valori [di prodotto](appendix.md) accettati nell’appendice. |
-| `expandIDs` | Una proprietà opzionale che, se impostata su `true`, rappresenta un&#39;ottimizzazione per l&#39;elaborazione degli ID nelle applicazioni (attualmente supportata solo da  Analytics). Se omesso, il valore predefinito sarà `false`. |
+| `expandIDs` | Una proprietà opzionale che, se impostata su `true`, rappresenta un&#39;ottimizzazione per l&#39;elaborazione degli ID nelle applicazioni (attualmente supportata solo da [!DNL Analytics]). Se omesso, il valore predefinito sarà `false`. |
 | `priority` | Proprietà facoltativa utilizzata da Adobe  Analytics che imposta la priorità per l&#39;elaborazione delle richieste. I valori accettati sono `normal` e `low`. Se `priority` viene omesso, il comportamento predefinito è `normal`. |
 | `analyticsDeleteMethod` | Proprietà opzionale che specifica in che modo Adobe  Analytics deve gestire i dati personali. Per questo attributo sono accettati due possibili valori: <ul><li>`anonymize`: Tutti i dati a cui fa riferimento la raccolta di ID utente specificata vengono resi anonimi. Se `analyticsDeleteMethod` viene omesso, questo è il comportamento predefinito.</li><li>`purge`: Tutti i dati vengono rimossi completamente.</li></ul> |
 | `regulation` **(Obbligatorio)** | Il regolamento per la richiesta. Deve essere uno dei tre valori seguenti: <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
@@ -283,7 +283,7 @@ curl -X POST \
 | `companyContexts` **(Obbligatorio)** | Un array contenente informazioni di autenticazione per l&#39;organizzazione. Ogni identificatore elencato include i seguenti attributi: <ul><li>`namespace`: Spazio dei nomi di un identificatore.</li><li>`value`: Il valore dell’identificatore.</li></ul>È **necessario** che uno degli identificatori venga utilizzato `imsOrgId` come `namespace`, con `value` l’ID univoco per l’organizzazione IMS. <br/><br/>Gli identificatori aggiuntivi possono essere qualificatori aziendali specifici per prodotto (ad esempio, `Campaign`), che identificano un&#39;integrazione con un&#39;applicazione Adobe appartenente alla tua organizzazione. I potenziali valori includono nomi account, codici cliente, ID tenant o altri identificatori dell&#39;applicazione. |
 | `users` **(Obbligatorio)** | Array contenente una raccolta di almeno un utente le cui informazioni si desidera accedere o eliminare. In un&#39;unica richiesta è possibile fornire un massimo di 1000 ID utente. Ciascun oggetto utente contiene le informazioni seguenti: <ul><li>`key`: Identificatore per un utente utilizzato per qualificare gli ID processo separati nei dati della risposta. È consigliabile scegliere una stringa univoca e facilmente identificabile per questo valore in modo che possa essere facilmente reperibile o ricercato in un secondo momento.</li><li>`action`: Un array che elenca le azioni da eseguire sui dati. Per le richieste di rinuncia alla vendita, l&#39;array deve contenere solo il valore `opt-out-of-sale`.</li><li>`userIDs`: Raccolta di identità per l&#39;utente. Il numero di identità che un singolo utente può avere è limitato a nove. Ogni identità è costituita da un `namespace`, un `value`e un qualificatore dello spazio dei nomi (`type`). Per ulteriori dettagli su queste proprietà richieste, vedere l&#39; [appendice](appendix.md) .</li></ul> Per una spiegazione più dettagliata di `users` e `userIDs`, consultate la guida alla [risoluzione dei problemi](../troubleshooting-guide.md#user-ids). |
 | `include` **(Obbligatorio)** | Un array di prodotti Adobe da includere nell&#39;elaborazione. Se questo valore risulta mancante o vuoto, la richiesta verrà rifiutata. Includete solo i prodotti con cui l&#39;organizzazione dispone di un&#39;integrazione. Per ulteriori informazioni, consulta la sezione sui valori [di prodotto](appendix.md) accettati nell’appendice. |
-| `expandIDs` | Una proprietà opzionale che, se impostata su `true`, rappresenta un&#39;ottimizzazione per l&#39;elaborazione degli ID nelle applicazioni (attualmente supportata solo da  Analytics). Se omesso, il valore predefinito sarà `false`. |
+| `expandIDs` | Una proprietà opzionale che, se impostata su `true`, rappresenta un&#39;ottimizzazione per l&#39;elaborazione degli ID nelle applicazioni (attualmente supportata solo da [!DNL Analytics]). Se omesso, il valore predefinito sarà `false`. |
 | `priority` | Proprietà facoltativa utilizzata da Adobe  Analytics che imposta la priorità per l&#39;elaborazione delle richieste. I valori accettati sono `normal` e `low`. Se `priority` viene omesso, il comportamento predefinito è `normal`. |
 | `analyticsDeleteMethod` | Proprietà opzionale che specifica in che modo Adobe  Analytics deve gestire i dati personali. Per questo attributo sono accettati due possibili valori: <ul><li>`anonymize`: Tutti i dati a cui fa riferimento la raccolta di ID utente specificata vengono resi anonimi. Se `analyticsDeleteMethod` viene omesso, questo è il comportamento predefinito.</li><li>`purge`: Tutti i dati vengono rimossi completamente.</li></ul> |
 | `regulation` **(Obbligatorio)** | Il regolamento per la richiesta. Deve essere uno dei tre valori seguenti: <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
@@ -438,7 +438,7 @@ Una risposta corretta restituisce i dettagli del processo specificato.
 | `productStatusResponse` | Ogni oggetto all&#39;interno dell&#39; `productResponses` array contiene informazioni sullo stato corrente del processo rispetto a una specifica [!DNL Experience Cloud] applicazione. |
 | `productStatusResponse.status` | La categoria di stato corrente del processo. Per un elenco delle categorie [di stato](#status-categories) disponibili e i significati corrispondenti, vedere la tabella seguente. |
 | `productStatusResponse.message` | Stato specifico del processo, corrispondente alla categoria di stato. |
-| `productStatusResponse.responseMsgCode` | Un codice standard per i messaggi di risposta ai prodotti ricevuti da Privacy Service. I dettagli del messaggio sono forniti in `responseMsgDetail`. |
+| `productStatusResponse.responseMsgCode` | Un codice standard per i messaggi di risposta ai prodotti ricevuti da [!DNL Privacy Service]. I dettagli del messaggio sono forniti in `responseMsgDetail`. |
 | `productStatusResponse.responseMsgDetail` | Una spiegazione più dettagliata dello stato del processo. I messaggi per stati simili possono variare tra i prodotti. |
 | `productStatusResponse.results` | Per alcuni stati, alcuni prodotti possono restituire un `results` oggetto che fornisce informazioni aggiuntive non coperte da `responseMsgDetail`. |
 | `downloadURL` | Se lo stato del processo è `complete`, questo attributo fornisce un URL per scaricare i risultati del processo come file ZIP. Questo file può essere scaricato per 60 giorni al termine del processo. |
@@ -460,4 +460,4 @@ Nella tabella seguente sono elencate le diverse possibili categorie di stato del
 
 ## Passaggi successivi
 
-Ora sai come creare e monitorare i processi relativi alla privacy utilizzando l&#39;API di Privacy Service. Per informazioni su come eseguire le stesse operazioni tramite l’interfaccia utente, consultate la panoramica [dell’interfaccia utente di](../ui/overview.md)Privacy Service.
+Ora sai come creare e monitorare i processi relativi alla privacy utilizzando l&#39; [!DNL Privacy Service] API. Per informazioni su come eseguire le stesse operazioni tramite l’interfaccia utente, consultate la panoramica [dell’interfaccia utente di](../ui/overview.md)Privacy Service.
