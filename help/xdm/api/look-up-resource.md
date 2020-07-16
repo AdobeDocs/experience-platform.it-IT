@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Cercare una risorsa
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '174'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}/{RESOURCE_ID}
 | Parametro | Descrizione |
 | --- | --- |
 | `{CONTAINER_ID}` | Il contenitore in cui si trovano le risorse (&quot;global&quot; o &quot;tenant&quot;). |
-| `{RESOURCE_TYPE}` | Il tipo di risorsa da recuperare dalla Libreria schema. I tipi validi sono `datatypes`, `mixins`, `schemas`e `classes`. |
+| `{RESOURCE_TYPE}` | Il tipo di risorsa da recuperare dal [!DNL Schema Library]. I tipi validi sono `datatypes`, `mixins`, `schemas`e `classes`. |
 | `{RESOURCE_ID}` | URI con codifica URL `$id` o `meta:altId` della risorsa. |
 
 **Richiesta**
