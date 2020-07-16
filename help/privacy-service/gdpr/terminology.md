@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Terminologia RGPD
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 39d5446c04fcceaf9d75db91ecb2c136986de098
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+workflow-type: tm+mt
+source-wordcount: '1066'
+ht-degree: 5%
 
 ---
 
@@ -39,7 +42,7 @@ __Processore dati:__ L&#39;entità che elabora i dati per conto del Titolare del
 
 __Autorità per la protezione dei dati:__ Le autorità nazionali incaricate della protezione dei dati e della vita privata, nonché del controllo e dell&#39;applicazione delle norme sulla protezione dei dati all&#39;interno dell&#39;Unione.
 
-__Responsabile della protezione dei dati:__ Un esperto di privacy dei dati che lavora in modo indipendente per garantire che un&#39;entità aderisca alle politiche e alle procedure stabilite nel GDPR.
+__Responsabile della protezione dei dati:__ Un esperto di privacy dei dati che lavora in modo indipendente per assicurare che un&#39;entità aderisca alle politiche e alle procedure stabilite nel GDPR.
 
 __Oggetto dati:__ Persona fisica i cui dati personali sono trattati da un titolare del trattamento o da un responsabile del trattamento.
 
@@ -61,7 +64,7 @@ __Sistema di archiviazione:__ Qualsiasi insieme specifico di dati personali che 
 
 ## G
 
-__GDPR:__ Il regolamento generale sulla protezione dei dati (GDPR) è un quadro giuridico che definisce le linee guida per la raccolta e il trattamento di informazioni personali di individui all&#39;interno dell&#39;Unione europea (UE). Il GDPR stabilisce i principi per la gestione dei dati e i diritti dei singoli, imponendo allo stesso tempo multe che possono essere basate sulle entrate. Il GDPR copre tutte le aziende che si occupano dei dati dei cittadini dell&#39;UE, pertanto si tratta di una regolamentazione critica per i funzionari responsabili della conformità aziendale presso banche, assicuratori e altre società finanziarie. Il GDPR entrerà in vigore in tutta l&#39;UE il 25 maggio 2018.
+__GDPR:__ Il [!DNL General Data Protection Regulation] (GDPR) è un quadro giuridico che definisce linee guida per la raccolta e il trattamento di informazioni personali di individui all&#39;interno dell&#39;Unione europea (UE). Il GDPR stabilisce i principi per la gestione dei dati e i diritti dei singoli, imponendo allo stesso tempo multe che possono essere basate sulle entrate. Il GDPR copre tutte le aziende che si occupano dei dati dei cittadini dell&#39;UE, pertanto si tratta di una regolamentazione critica per i funzionari responsabili della conformità aziendale presso banche, assicuratori e altre società finanziarie. Il GDPR entrerà in vigore in tutta l&#39;UE il 25 maggio 2018.
 
 __Dati genetici:__ Dati relativi alle caratteristiche di una persona ereditata o acquisita che forniscono informazioni univoche sulla salute o sulla fisiologia dell&#39;individuo.
 
@@ -71,7 +74,7 @@ __Gruppo di imprese:__ Un&#39;impresa controllante e le sue imprese controllate.
 
 ## I
 
-__Servizi di gestione identità (IMS):__ L’implementazione Adobe di Federated ID e OAuth 2.0 per l’autenticazione degli utenti Adobe ID e l’autorizzazione per le risorse Adobe. È necessario integrare IMS con l’applicazione o il servizio Adobe per consentire agli utenti di entrare e accedere ai servizi di Adobe. Gli utenti possono accedere direttamente con Renga (il provider di servizi di identità Adobe) oppure tramite un dominio di autenticazione di terze parti trusted (ad esempio Google, Facebook o un LDAP aziendale/organizzazione).
+__Identity Management Services (IMS):__ L’implementazione Adobe di Federated ID e OAuth 2.0 per l’autenticazione degli utenti  Adobe ID e l’autorizzazione per le risorse Adobe. È necessario integrare IMS con l’applicazione o il servizio Adobe per consentire agli utenti di entrare e accedere ai servizi di Adobe. Users can log in directly with Renga (the Adobe identity services provider), or log in through a trusted third party authentication domain (such as [!DNL Google], [!DNL Facebook], or a corporate/organization LDAP).
 
 __ID organizzazione IMS:__ Si riferisce a un token di autorizzazione Adobe per l&#39;autenticazione servizio-servizio, che non richiede l&#39;accesso utente. Viene emesso a un client IMS e non ha alcun utente associato. Un client IMS necessita di un token di servizio per autorizzare le richieste del canale indietro tra i servizi. (Il termine “token di sistema” viene usato saltuariamente per indicare il token di servizio).
 
