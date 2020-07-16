@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: July 15, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: e864073c27ba20ce32c962c469aed52608f199ac
+source-git-commit: 9fbd30adcb29c8925f02745be924477eb4e3fe2a
 workflow-type: tm+mt
-source-wordcount: '684'
-ht-degree: 4%
+source-wordcount: '679'
+ht-degree: 5%
 
 ---
 
@@ -73,7 +73,7 @@ Per ulteriori informazioni su [!DNL Segmentation Service], consulta la panoramic
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Supporto delle API e dell&#39;interfaccia utente per l&#39;eliminazione dei flussi di dati | I flussi di dati che venivano creati con errori o che non erano più necessari ora possono essere eliminati tramite le API o utilizzando l&#39;interfaccia utente. |
+| Supporto dell&#39;interfaccia utente per l&#39;eliminazione dei flussi di dati | I flussi di dati che venivano generati con errori o che non erano più necessari ora possono essere eliminati dall’interfaccia utente. |
 | Supporto API e interfaccia utente per l’assimilazione una tantum | L&#39;assimilazione una tantum per i flussi di dati, in cui viene fornita solo la data di inizio e non è pianificata alcuna assimilazione futura, ora può essere eseguita tramite le API o utilizzando l&#39;interfaccia utente. |
 
 Per ulteriori informazioni sulle origini, consultate la panoramica sulle [origini](../../sources/home.md).
