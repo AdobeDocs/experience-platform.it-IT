@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare uno schema ad hoc
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '724'
 ht-degree: 2%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 2%
 
 # Creare uno schema ad hoc
 
-In circostanze specifiche, potrebbe essere necessario creare uno schema Experience Data Model (XDM) con campi che vengono denominati separati per l&#39;uso solo da un singolo dataset. Tale schema è denominato &quot;ad hoc&quot;. Gli schemi ad hoc vengono utilizzati in vari flussi di lavoro di assimilazione dei dati per  Experience Platform, inclusi l’assimilazione di file CSV e la creazione di determinati tipi di connessioni sorgente.
+In circostanze specifiche, potrebbe essere necessario creare uno schema [!DNL Experience Data Model] (XDM) con campi che vengono denominati separati per l&#39;uso solo da un singolo dataset. Tale schema è denominato &quot;ad hoc&quot;. Gli schemi ad hoc vengono utilizzati in vari flussi di lavoro di assimilazione dei dati per [!DNL Experience Platform], ad esempio per acquisire file CSV e creare determinati tipi di connessioni sorgente.
 
-Questo documento contiene i passaggi generali per la creazione di uno schema ad hoc mediante l&#39;API [del Registro di](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)schema. È destinato ad essere utilizzato insieme ad altre esercitazioni  Experience Platform che richiedono la creazione di uno schema ad hoc come parte del flusso di lavoro. Ciascuno di questi documenti fornisce informazioni dettagliate su come configurare correttamente uno schema ad hoc per il relativo caso di utilizzo specifico.
+Questo documento contiene i passaggi generali per la creazione di uno schema ad hoc mediante l&#39;API [del Registro di](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)schema. È destinato ad essere utilizzato insieme ad altre [!DNL Experience Platform] esercitazioni che richiedono la creazione di uno schema ad hoc come parte del flusso di lavoro. Ciascuno di questi documenti fornisce informazioni dettagliate su come configurare correttamente uno schema ad hoc per il relativo caso di utilizzo specifico.
 
 ## Introduzione
 
-Questa esercitazione richiede una buona conoscenza del sistema Experience Data Model (XDM). Prima di iniziare questa esercitazione, consulta la seguente documentazione XDM:
+Questa esercitazione richiede una buona conoscenza del sistema [!DNL Experience Data Model] (XDM). Prima di iniziare questa esercitazione, consulta la seguente documentazione XDM:
 
-- [Panoramica](../home.md)del sistema XDM: Panoramica di alto livello di XDM e della relativa implementazione in  Experience Platform.
+- [Panoramica](../home.md)del sistema XDM: Panoramica di alto livello di XDM e della sua implementazione in [!DNL Experience Platform].
 - [Nozioni di base sulla composizione](../schema/composition.md)dello schema: Panoramica dei componenti di base degli schemi XDM.
 
-Prima di avviare questa esercitazione, consultare la guida [allo](../api/getting-started.md) sviluppatore per informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all&#39;API del Registro di sistema dello schema. Ciò include il vostro `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all’intestazione Accetta e ai suoi possibili valori).
+Prima di iniziare questa esercitazione, consulta la guida [allo](../api/getting-started.md) sviluppo per informazioni importanti da conoscere per effettuare correttamente le chiamate all&#39; [!DNL Schema Registry] API. Ciò include il vostro `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all’intestazione Accetta e ai suoi possibili valori).
 
 ## Creare una classe ad hoc
 
@@ -239,7 +239,7 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 **Richiesta**
 
-La richiesta seguente utilizza l&#39;intestazione Accetto `application/vnd.adobe.xed-full+json; version=1`, che restituisce il modulo espanso dello schema. Quando si recupera una risorsa specifica dal Registro di sistema dello schema, l&#39;intestazione Accetto della richiesta deve includere la versione principale della risorsa in questione.
+La richiesta seguente utilizza l&#39;intestazione Accetto `application/vnd.adobe.xed-full+json; version=1`, che restituisce il modulo espanso dello schema. Durante il recupero di una risorsa specifica dall&#39;intestazione [!DNL Schema Registry], l&#39;intestazione Accetto della richiesta deve includere la versione principale della risorsa in questione.
 
 ```shell
 curl -X GET \
@@ -305,4 +305,4 @@ Una risposta corretta restituisce i dettagli dello schema, inclusi tutti i campi
 
 Seguendo questa esercitazione, è stato creato con successo un nuovo schema ad hoc. Se siete stati portati in questo documento come parte di un&#39;altra esercitazione, ora potete utilizzare il `$id` dello schema ad hoc per completare il flusso di lavoro come indicato.
 
-Per ulteriori informazioni sull&#39;utilizzo dell&#39;API del Registro di sistema dello schema, fare riferimento alla guida [](../api/getting-started.md)per gli sviluppatori.
+Per ulteriori informazioni sull&#39;utilizzo dell&#39; [!DNL Schema Registry] API, consultate la guida [allo](../api/getting-started.md)sviluppo.
