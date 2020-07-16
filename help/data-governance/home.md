@@ -4,19 +4,19 @@ solution: Experience Platform
 title: Governance dei dati  Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7f6612f7dd649d68aa7ebe5b971b72d7b433b1e3
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '1434'
+source-wordcount: '1406'
 ht-degree: 0%
 
 ---
 
 
-# Panoramica sulla governance dei dati
+# [!DNL Data Governance]panoramica
 
 Una delle funzionalità principali di  Adobe Experience Platform consiste nel mettere insieme i dati provenienti da più sistemi aziendali per consentire ai professionisti del marketing di identificare, comprendere e coinvolgere meglio i clienti. Questi dati possono essere soggetti a restrizioni d&#39;uso definite dalla tua organizzazione o dalle normative legali. È pertanto importante garantire che le operazioni relative ai dati all&#39;interno dell&#39;area [!DNL Platform] siano conformi ai criteri di utilizzo dei dati.
 
- Adobe Experience Platform Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all&#39;uso dei dati. Esso svolge un ruolo chiave a vari livelli, [!DNL Experience Platform] tra cui catalogazione, linea di dati, etichettatura dell&#39;utilizzo dei dati, criteri di utilizzo dei dati e controllo dell&#39;utilizzo dei dati per le azioni di marketing.
+ Adobe Experience Platform [!DNL Data Governance] consente di gestire i dati dei clienti e garantire la conformità a normative, restrizioni e criteri applicabili all&#39;uso dei dati. Esso svolge un ruolo chiave a vari livelli, [!DNL Experience Platform] tra cui catalogazione, linea di dati, etichettatura dell&#39;utilizzo dei dati, criteri di utilizzo dei dati e controllo dell&#39;utilizzo dei dati per le azioni di marketing.
 
 ## Ruoli di governance dei dati
 
@@ -44,7 +44,7 @@ Gli esperti di marketing sono il punto finale della governance dei dati. Richied
 
 ## DULE Framework
 
-L&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati (DULE) è il quadro di base per la governance dei [!DNL Experience Platform] dati. DULE semplifica e semplifica il processo di classificazione dei dati e creazione di criteri di utilizzo dei dati. Una volta applicate le etichette dati e applicate le policy di utilizzo dei dati, è possibile valutare le azioni di marketing per garantire l&#39;uso corretto dei dati.
+Etichettatura e applicazione dell&#39;uso dei dati (DULE) è il framework di base per [!DNL Experience Platform][!DNL Data Governance]. DULE semplifica e semplifica il processo di classificazione dei dati e creazione di criteri di utilizzo dei dati. Una volta applicate le etichette dati e applicate le policy di utilizzo dei dati, è possibile valutare le azioni di marketing per garantire l&#39;uso corretto dei dati.
 
 Il quadro DULE contiene tre elementi chiave: Etichette, politiche e applicazione.
 
@@ -54,7 +54,7 @@ Il quadro DULE contiene tre elementi chiave: Etichette, politiche e applicazione
 
 ## Etichette di utilizzo dati
 
-La governance dei dati consente agli amministratori dei dati di applicare etichette di utilizzo a livello di set di dati e di campi per classificare i dati in base al tipo di criteri applicabili.
+[!DNL Data Governance] consente agli amministratori dei dati di applicare etichette di utilizzo a livello di set di dati e campo per classificare i dati in base al tipo di criteri applicabili.
 
 Il framework DULE include etichette di utilizzo dei dati predefinite che possono essere utilizzate per classificare i dati in tre modi:
 
@@ -76,9 +76,9 @@ Per ulteriori informazioni, vedere la panoramica sulle etichette [di utilizzo de
 
 Affinché le etichette di utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario implementare dei criteri di utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing consentite o con cui è consentito eseguire determinate attività sui dati all&#39;interno [!DNL Experience Platform].
 
-Un esempio di un&#39;azione di marketing potrebbe essere il desiderio di esportare un dataset in un servizio di terze parti. Se è presente un criterio che indica che tipi specifici di dati, come Informazioni personali (PII), non possono essere esportati e che al set di dati è stata applicata un&#39;etichetta &quot;I&quot; (Dati identità), riceverete una risposta dal Servizio criteri in cui viene indicato che è stata violata una policy di utilizzo dei dati.
+Un esempio di un&#39;azione di marketing potrebbe essere il desiderio di esportare un dataset in un servizio di terze parti. Se esiste un criterio che indica che tipi specifici di dati, come Informazioni personali (PII), non possono essere esportati e che al set di dati è stata applicata un&#39;etichetta &quot;I&quot; (Dati identità), riceverai una risposta da [!DNL Policy Service] cui si informa che è stata violata una policy di utilizzo dei dati.
 
-Una volta applicate le etichette di utilizzo dei dati, gli amministratori dei dati possono creare criteri utilizzando l&#39;API del servizio DULE Policy Service o l&#39;interfaccia [!DNL Experience Platform] utente.
+Una volta applicate le etichette di utilizzo dei dati, gli amministratori dei dati possono creare criteri utilizzando l&#39;API DULE [!DNL Policy Service] o l&#39;interfaccia [!DNL Experience Platform] utente.
 
 >[!IMPORTANT]
 >
@@ -88,7 +88,7 @@ Per ulteriori informazioni sui criteri di utilizzo dei dati e sulle azioni di ma
 
 ## Versioni future
 
-La governance dei dati supporta attualmente l&#39;etichettatura DULE a due livelli (dataset e campo). La governance dei dati supporta anche la creazione e la gestione di criteri di utilizzo dei dati e azioni di marketing tramite l&#39;API di DULE Policy Service.
+[!DNL Data Governance] supporta attualmente l&#39;etichettatura DULE a due livelli (dataset e campo). [!DNL Data Governance] supporta inoltre la creazione e la gestione di criteri di utilizzo dei dati e azioni di marketing tramite l&#39; [!DNL Policy Service] API DULE.
 
 Le versioni successive forniranno le seguenti funzionalità:
 
@@ -97,15 +97,15 @@ Le versioni successive forniranno le seguenti funzionalità:
 
 ## Passaggi successivi
 
-Questo documento ha fornito un&#39;introduzione di alto livello alla governance dei dati e al quadro DULE. Potete ora continuare a visualizzare la guida [utente delle etichette di utilizzo dei](labels/user-guide.md) dati e iniziare ad aggiungere etichette di utilizzo ai dati dell&#39;esperienza.
+Questo documento ha fornito un&#39;introduzione di alto livello al quadro DULE [!DNL Data Governance] e al suo interno. Potete ora continuare a visualizzare la guida [utente delle etichette di utilizzo dei](labels/user-guide.md) dati e iniziare ad aggiungere etichette di utilizzo ai dati dell&#39;esperienza.
 
 ## Appendice
 
-La sezione seguente fornisce ulteriori informazioni sulla governance dei dati.
+La sezione seguente contiene informazioni aggiuntive su [!DNL Data Governance].
 
-### Terminologia di governance dei dati
+### [!DNL Data Governance] terminologia
 
-La tabella seguente delinea i termini chiave relativi alla governance dei dati e al quadro DULE.
+Nella tabella seguente sono riportati i termini chiave relativi al framework DULE [!DNL Data Governance] e al relativo.
 
 | Termine | Definizione |
 |---|---|
@@ -119,13 +119,13 @@ La tabella seguente delinea i termini chiave relativi alla governance dei dati e
 | **Etichette dei campi** | Le etichette dei campi sono etichette di governance dei dati ereditate da un set di dati o applicate direttamente a un campo.  Le etichette di governance dei dati applicate a un campo non vengono ereditate fino a un dataset. |
 | **Geofence** | Una geofence è un limite geografico virtuale, definito dalla tecnologia GPS o RFID, che consente al software di attivare una risposta quando un dispositivo mobile entra o esce da un&#39;area particolare. |
 | **Etichette identità** | Le etichette di identità &quot;I&quot; vengono utilizzate per classificare i dati in grado di identificare o contattare una persona specifica. |
-| **Targeting basato su interessi** | Il targeting basato sugli interessi, noto anche come personalizzazione, si verifica se sono soddisfatte tre condizioni: i dati raccolti sul sito vengono utilizzati per ricavare deduzioni sull’interesse degli utenti, in un altro contesto, ad esempio in un altro sito o in un’altra app (fuori sito), e vengono utilizzati per selezionare il contenuto o gli annunci che vengono serviti in base a tali inferenze. |
+| **Targeting basato su interessi** | Il targeting basato sugli interessi, noto anche come personalizzazione, si verifica se sono soddisfatte tre condizioni: i dati raccolti sul sito vengono utilizzati per ricavare deduzioni sull&#39;interesse degli utenti, in un altro contesto, ad esempio in un altro sito o in un&#39;altra app (fuori sito), e vengono utilizzati per selezionare il contenuto o gli annunci che vengono serviti in base a tali inferenze. |
 | **Azione marketing** | Un&#39;azione di marketing, nel contesto del framework di governance dei dati, è un&#39;azione che un consumatore di [!DNL Experience Platform] dati intraprende, per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati |
 | **Criterio** | Nel framework di governance dei dati, un criterio è una regola che descrive il tipo di azioni di marketing consentite o non consentite per dati specifici. |
 | **Etichette sensibili** | Le etichette &quot;S&quot; sensibili vengono utilizzate per classificare i dati che voi e la vostra organizzazione considerate sensibili. |
 
 ## Risorse aggiuntive
 
-Il seguente video è stato realizzato per illustrare la governance dei dati e illustrare gli aspetti chiave del framework DUE (Data Usage Labelling and Enforcement, Etichettatura e applicazione dell’uso dei dati).
+Il seguente video è stato realizzato per consentire agli utenti di comprendere [!DNL Data Governance]e delineare gli aspetti chiave del framework DUE (Data Usage Labelling and Enforcement, ETICHETTATURA E APPLICAZIONE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
