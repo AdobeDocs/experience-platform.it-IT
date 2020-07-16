@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Creazione di un tipo di dati
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b0d8c8ee4df11d601d8feb122c70a9cd5d7d5b77
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+workflow-type: tm+mt
+source-wordcount: '200'
+ht-degree: 1%
 
 ---
 
@@ -64,7 +67,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload contenente i dettagli del tipo di dati appena creato, inclusi `$id`, `meta:altId`e `version`. Questi tre valori sono di sola lettura e sono assegnati dal Registro di sistema dello schema.
+Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload contenente i dettagli del tipo di dati appena creato, inclusi `$id`, `meta:altId`e `version`. Questi tre valori sono di sola lettura e vengono assegnati dal [!DNL Schema Registry].
 
 ```JSON
 {
