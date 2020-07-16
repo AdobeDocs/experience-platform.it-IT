@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Elenco delle risorse
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '508'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # Elenco delle risorse
 
-È possibile visualizzare un elenco di tutte le risorse del Registro di sistema dello schema di un determinato tipo (classi, mixin, schemi, tipi di dati o descrittori) all&#39;interno di un contenitore eseguendo una singola richiesta GET.
+È possibile visualizzare un elenco di tutte [!DNL Schema Registry] le risorse di un determinato tipo (classi, mixin, schemi, tipi di dati o descrittori) all&#39;interno di un contenitore eseguendo una singola richiesta GET.
 
 >[!NOTE]
 >
->Quando si elencano le risorse, il Registro di sistema dello schema limita i set di risultati a 300 elementi. Per restituire risorse oltre questo limite, è necessario utilizzare i parametri [di](#paging)paging. È inoltre consigliabile utilizzare i parametri di query per [filtrare i risultati](#filtering) e ridurre il numero di risorse restituite.
+>Quando si elencano le risorse, il risultato dei [!DNL Schema Registry] limiti è impostato su 300 elementi. Per restituire risorse oltre questo limite, è necessario utilizzare i parametri [di](#paging)paging. È inoltre consigliabile utilizzare i parametri di query per [filtrare i risultati](#filtering) e ridurre il numero di risorse restituite.
 
 **Formato API**
 
@@ -30,7 +30,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
 | Parametro | Descrizione |
 | --- | --- |
 | `{CONTAINER_ID}` | Il contenitore in cui si trovano le risorse (&quot;global&quot; o &quot;tenant&quot;). |
-| `{RESOURCE_TYPE}` | Il tipo di risorsa da recuperare dalla Libreria schema. I tipi validi sono `classes`, `mixins`, `schemas`, `datatypes`e `descriptors`. |
+| `{RESOURCE_TYPE}` | Il tipo di risorsa da recuperare dal [!DNL Schema Library]. I tipi validi sono `classes`, `mixins`, `schemas`, `datatypes`e `descriptors`. |
 | `{QUERY_PARAMS`} | Parametri di query facoltativi per filtrare i risultati per. Per ulteriori informazioni, consulta la sezione sui parametri [di](#query) query. |
 
 **Richiesta**
@@ -78,7 +78,7 @@ La richiesta precedente utilizzava l’intestazione `application/vnd.adobe.xed-i
 
 ## Utilizzo dei parametri di query {#query}
 
-Il Registro di sistema dello schema supporta l&#39;utilizzo di parametri di query per elencare le risorse e filtrare i risultati.
+Supporta [!DNL Schema Registry] l&#39;utilizzo di parametri di query per visualizzare la pagina e filtrare i risultati quando vengono elencate le risorse.
 
 >[!NOTE]
 >
@@ -111,4 +111,4 @@ Potete filtrare i risultati utilizzando il `property` parametro, utilizzato per 
 
 >[!TIP]
 >
->Potete usare il `property` parametro per filtrare i mixin in base alla classe compatibile. Ad esempio, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` restituisce solo i mixin compatibili con la classe Profilo singolo XDM.
+>Potete usare il `property` parametro per filtrare i mixin in base alla classe compatibile. Ad esempio, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` restituisce solo i mixin compatibili con la [!DNL XDM Individual Profile] classe.
