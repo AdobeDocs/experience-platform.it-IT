@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Consenso
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
 # Consenso
 
-Alcune normative richiedevano il consenso esplicito dei clienti prima di poter raccogliere i loro dati personali. L&#39; `/consent` endpoint nell&#39;API di Privacy Service consente di elaborare le richieste di consenso dei clienti e integrarle nel flusso di lavoro per la privacy.
+Alcune normative richiedevano il consenso esplicito dei clienti prima di poter raccogliere i loro dati personali. L&#39; `/consent` endpoint nell&#39; [!DNL Privacy Service] API consente di elaborare le richieste di consenso dei clienti e integrarle nel flusso di lavoro per la privacy.
 
 Prima di utilizzare questa guida, fate riferimento alla sezione [introduttiva](./getting-started.md) per informazioni sulle intestazioni di autenticazione richieste, presentate nella chiamata API di esempio di seguito.
 
@@ -68,8 +68,8 @@ curl -X POST \
 
 >[!NOTE]
 >
->Per ulteriori informazioni su come determinare quali valori di identità del cliente inviare ad Privacy Service, consultare la guida sulla [fornitura dei dati](../identity-data.md)di identità.
+>Per ulteriori informazioni su come determinare a quali valori di identità cliente inviare [!DNL Privacy Service], consultare la guida sulla [fornitura dei dati](../identity-data.md)di identità.
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 202 (Accettato) senza payload, a indicare che la richiesta è stata accettata da Privacy Service ed è in corso di elaborazione.
+Una risposta corretta restituisce lo stato HTTP 202 (Accettato) senza payload, a indicare che la richiesta è stata accettata da [!DNL Privacy Service] e sta attraversando un processo di elaborazione.
