@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida utente per i criteri di utilizzo dei dati
 topic: policies
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '684'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Guida utente per i criteri di utilizzo dei dati
 
- Adobe Experience Platform Data Governance fornisce un&#39;interfaccia utente che consente di creare e gestire i criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle azioni che è possibile eseguire nell&#39;area di lavoro _Criteri_ nell&#39;interfaccia [!DNL Experience Platform] utente.
+ Adobe Experience Platform [!DNL Data Governance] fornisce un&#39;interfaccia utente che consente di creare e gestire i criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle azioni che è possibile eseguire nell&#39;area di lavoro _Criteri_ nell&#39;interfaccia [!DNL Experience Platform] utente.
 
 >[!IMPORTANT]
 >
@@ -69,7 +69,7 @@ La *[!UICONTROL Browse]* scheda viene visualizzata di nuovo, in cui ora viene vi
 
 ## Attivare o disattivare un criterio di utilizzo dei dati {#enable}
 
-Tutti i criteri di utilizzo dei dati (inclusi i criteri di base forniti da Adobe) sono disattivati per impostazione predefinita. Affinché un singolo criterio possa essere preso in considerazione per l&#39;implementazione, è necessario attivarlo manualmente tramite l&#39;API o l&#39;interfaccia utente.
+Tutti i criteri di utilizzo dei dati (inclusi i criteri di base forniti da Adobe) sono disattivati per impostazione predefinita. Affinché un singolo criterio venga preso in considerazione per l&#39;implementazione, è necessario attivarlo manualmente tramite l&#39;API o l&#39;interfaccia utente.
 
 Potete attivare o disattivare i criteri dalla *[!UICONTROL Browse]* scheda nell&#39; *[!UICONTROL Policies]* area di lavoro. Selezionate un criterio personalizzato dall&#39;elenco per visualizzarne i dettagli a destra. In *[!UICONTROL Status]* questa sezione, fate clic sul pulsante di attivazione per attivare o disattivare il criterio.
 
