@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Creare uno schema
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 162316c3b908ffa87d8df4dff72e26ba237993db
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+workflow-type: tm+mt
+source-wordcount: '235'
+ht-degree: 1%
 
 ---
 
 
 # Creare uno schema
 
-Uno schema può essere considerato come il modello per i dati che desideri inserire in Experience Platform. Ogni schema è composto da una classe e da zero o più mixin. In altre parole, non è necessario aggiungere un mixin per definire uno schema, ma nella maggior parte dei casi verrà utilizzato almeno un mixin.
+Uno schema può essere considerato come il modello per i dati in cui si desidera eseguire il caricamento [!DNL Experience Platform]. Ogni schema è composto da una classe e da zero o più mixin. In altre parole, non è necessario aggiungere un mixin per definire uno schema, ma nella maggior parte dei casi verrà utilizzato almeno un mixin.
 
 Il processo di composizione dello schema inizia assegnando una classe. La classe definisce gli aspetti comportamentali chiave dei dati (record o serie temporali), nonché i campi minimi richiesti per descrivere i dati che saranno acquisiti.
 
@@ -51,7 +54,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload contenente i dettagli dello schema appena creato, inclusi `$id`, `meta:altId`e `version`. Questi valori sono di sola lettura e sono assegnati dal Registro di sistema dello schema.
+Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload contenente i dettagli dello schema appena creato, inclusi `$id`, `meta:altId`e `version`. Questi valori sono di sola lettura e vengono assegnati dal [!DNL Schema Registry].
 
 ```JSON
 {
