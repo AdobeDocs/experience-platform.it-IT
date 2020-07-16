@@ -4,9 +4,9 @@ seo-title: Configurazione Edge per l'SDK Web  Experience Platform
 description: 'Scopri come configurare la  Experience Platform Edge Network. '
 seo-description: 'Scopri come configurare la  Experience Platform Edge Network. '
 translation-type: tm+mt
-source-git-commit: 013e6abb0922e39bd6b9da6a66bba9a1bcefdd25
+source-git-commit: 2d47a00c91000c68c7331f88015264259a4e6323
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '820'
 ht-degree: 2%
 
 ---
@@ -92,7 +92,7 @@ L&#39;ID univoco per un account di destinazione. Per trovare questo percorso, è
 
 Target consente ai clienti di controllare le autorizzazioni tramite l&#39;uso delle proprietà. I dettagli sono disponibili nella sezione Autorizzazioni [](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) Enterprise della documentazione Target.
 
-Il token proprietà si trova in [!UICONTROL Adobe Target] > [!UICONTROL setup] > Proprietà [UICONTROL]
+Il token proprietà si trova in [!UICONTROL Adobe Target] > [!UICONTROL setup] > [!UICONTROL Properties]
 
 ##### [!UICONTROL Target Environment ID]
 
