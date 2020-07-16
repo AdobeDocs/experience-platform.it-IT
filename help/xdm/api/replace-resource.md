@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sostituire una risorsa
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '203'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Sostituire una risorsa
 
-Il Registro di sistema dello schema consente di sostituire un&#39;intera risorsa tramite un&#39;operazione PUT. Questa operazione riscrive sostanzialmente la risorsa, pertanto il corpo della richiesta deve includere tutti i campi che sarebbero necessari per creare una nuova risorsa utilizzando una richiesta POST.
+Consente [!DNL Schema Registry] di sostituire un&#39;intera risorsa con un&#39;operazione PUT. Questa operazione riscrive sostanzialmente la risorsa, pertanto il corpo della richiesta deve includere tutti i campi che sarebbero necessari per creare una nuova risorsa utilizzando una richiesta POST.
 
 Questo metodo è particolarmente utile se desiderate aggiornare molte informazioni contemporaneamente nella risorsa.
 
@@ -32,7 +32,7 @@ PUT /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{RESOURCE_TYPE}` | Il tipo di risorsa da aggiornare dalla Libreria schema. I tipi validi sono `datatypes`, `mixins`, `schemas`e `classes`. |
+| `{RESOURCE_TYPE}` | Il tipo di risorsa da aggiornare dal [!DNL Schema Library]. I tipi validi sono `datatypes`, `mixins`, `schemas`e `classes`. |
 | `{RESOURCE_ID}` | URI con codifica URL `$id` o `meta:altId` della risorsa. |
 
 **Richiesta**
