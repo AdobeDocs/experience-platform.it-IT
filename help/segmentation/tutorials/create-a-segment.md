@@ -4,29 +4,29 @@ solution: Experience Platform
 title: Creazione di un segmento
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c0eacfba2feea66803e63ed55ad9d0a97e9ae47c
 workflow-type: tm+mt
-source-wordcount: '1328'
-ht-degree: 2%
+source-wordcount: '884'
+ht-degree: 0%
 
 ---
 
 
 # Creazione di un segmento
 
-Questo documento fornisce un&#39;esercitazione per lo sviluppo, il test, la visualizzazione in anteprima e il salvataggio di una definizione di segmento mediante l&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)Segmentazione.
+Questo documento fornisce un’esercitazione per lo sviluppo, il test, l’anteprima e il salvataggio di una definizione di segmento mediante l’API [](../api/getting-started.md)DNL  Adobe Experience Platform Segmentation Service.
 
 Per informazioni su come creare segmenti utilizzando l’interfaccia utente, consulta la guida [di](../ui/overview.md)Segment Builder (Generatore di segmenti).
 
 ## Introduzione
 
-Questa esercitazione richiede una conoscenza approfondita dei vari servizi di Adobe Experience Platform  coinvolti nella creazione di segmenti di pubblico. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
+Questa esercitazione richiede una conoscenza approfondita dei vari [!DNL Adobe Experience Platform] servizi coinvolti nella creazione di segmenti di pubblico. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
-- [Profilo](../../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-- [servizio](../home.md)di segmentazione Adobe Experience Platform: Consente di creare segmenti di pubblico dai dati del profilo cliente in tempo reale.
-- [Experience Data Model (XDM)](../../xdm/home.md): Framework standard con cui Platform organizza i dati sull&#39;esperienza dei clienti.
+- [!DNL Real-time Customer Profile](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+- [!DNL Adobe Experience Platform Segmentation Service](../home.md): Consente di creare segmenti di pubblico dai dati del profilo cliente in tempo reale.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Framework standard con cui Platform organizza i dati sull&#39;esperienza dei clienti.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per effettuare correttamente chiamate alle API Platform.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per eseguire correttamente le chiamate alle [!DNL Platform] API.
 
 ### Lettura di chiamate API di esempio
 
@@ -34,19 +34,19 @@ Questa esercitazione fornisce esempi di chiamate API per dimostrare come formatt
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle API Platform, è prima necessario completare l&#39;esercitazione [di](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API Experience Platform, come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API Experience Platform, come illustrato di seguito:
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in  Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API Platform richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in Platform, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+>Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva:
 
@@ -54,79 +54,15 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 ## Sviluppo di una definizione di segmento
 
-Il primo passo nella segmentazione consiste nel definire un segmento, rappresentato in un costrutto chiamato definizione **di** segmento. Una definizione di segmento è un oggetto che racchiude una query scritta in Profile Query Language (PQL). Questo oggetto è anche denominato predicato **PQL**. I predicati PQL definiscono le regole per il segmento in base alle condizioni relative a qualsiasi record o dati delle serie temporali forniti al profilo cliente in tempo reale. Per ulteriori informazioni sulla scrittura di query PQL, consultate la guida [](../pql/overview.md) PQL.
+Il primo passo nella segmentazione consiste nel definire un segmento, rappresentato in un costrutto chiamato definizione **di** segmento. Una definizione di segmento è un oggetto che racchiude una query scritta in [!DNL Profile Query Language] (PQL). Questo oggetto è anche denominato predicato **PQL**. I predicati PQL definiscono le regole per il segmento in base alle condizioni relative a qualsiasi record o dati delle serie temporali forniti da [!DNL Real-time Customer Profile]. Per ulteriori informazioni sulla scrittura di query PQL, consultate la guida [](../pql/overview.md) PQL.
 
-Puoi creare una nuova definizione del segmento effettuando una richiesta POST all’ `/segment/definitions` endpoint nell’API Profilo cliente in tempo reale. L&#39;esempio seguente illustra come formattare una richiesta di definizione, incluse le informazioni necessarie per definire correttamente un segmento.
+Puoi creare una nuova definizione di segmento effettuando una richiesta POST all’ `/segment/definitions` endpoint nell’ [!DNL Segmentation] API. L&#39;esempio seguente illustra come formattare una richiesta di definizione, incluse le informazioni necessarie per definire correttamente un segmento.
 
-Le definizioni dei segmenti possono essere valutate in due modi: segmentazione batch e segmentazione in streaming. La segmentazione in batch valuta i segmenti in base a una pianificazione preimpostata o quando la valutazione viene attivata manualmente, mentre la segmentazione in streaming valuta i segmenti non appena i dati vengono acquisiti in Platform. Questa esercitazione utilizzerà la segmentazione **batch**. Per ulteriori informazioni sulla segmentazione in streaming, consultate la [panoramica sulla segmentazione](../api/streaming-segmentation.md)in streaming.
-
-**Formato API**
-
-```http
-POST /segment/definitions
-```
-
-**Richiesta**
-
-La richiesta seguente crea una nuova definizione di segmento per uno schema denominato &quot;MyProfile&quot;.
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/segment/definitions \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -d '{
-        "name": "My Sample Cart Abandons Segment Definition",
-        "schema": {
-            "name": "MyProfile",
-        },
-        "expression": {
-            "type": "PQL",
-            "format": "pql/text",
-            "value": "xEvent.metrics.commerce.abandons.value > 0",
-        },
-        "mergePolicyId": "mpid1",
-        "description": "This Segment represents those users who have abandoned a cart"
-    }'
-```
-
-| Proprietà | Descrizione |
-| --------- | ------------ | 
-| `name` | **Obbligatorio.** Un nome univoco con cui fare riferimento al segmento. |
-| `schema` | **Obbligatorio.** Schema associato alle entità nel segmento. È costituito da un campo `id` o `name` . |
-| `expression` | **Obbligatorio.** Entità che contiene informazioni sui campi relativi alla definizione del segmento. |
-| `expression.type` | Specifica il tipo di espressione. Attualmente, è supportato solo &quot;PQL&quot;. |
-| `expression.format` | Indica la struttura dell&#39;espressione in valore. Attualmente è supportato il seguente formato: <ul><li>`pql/text`: Una rappresentazione testuale di una definizione di segmento, in base alla grammatica PQL pubblicata.  Ad esempio, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
-| `expression.value` | Un&#39;espressione conforme al tipo indicato in `expression.format`. |
-| `mergePolicyId` | Identificatore del criterio di unione da utilizzare per i dati esportati. Per ulteriori informazioni, consultare il documento [di configurazione del criterio di](../../profile/api/merge-policies.md)unione. |
-| `description` | Una descrizione leggibile dell&#39;espressione. |
-
-**Risposta**
-
-Una risposta corretta restituisce i dettagli della definizione del segmento appena creata, inclusa la definizione di sola lettura generata dal sistema, `id` che verrà utilizzata più avanti in questa esercitazione.
-
-```json
-{
-    "id": "1234",
-    "name": "My Sample Cart Abandons Segment Definition",
-    "description": "This Segment represents those users who have abandoned a cart",
-    "type": "PQL",
-    "format": "pql/text",
-    "expression": "xEvent.metrics.commerce.abandons.value > 0",
-    "_links": {
-        "self": {
-            "href": "https://platform.adobe.io/data/core/ups/segment/definitions/1234"
-        }
-    }
-}
-```
+Per una spiegazione dettagliata su come definire un segmento, consulta la guida [per gli sviluppatori per la definizione del](../api/segment-definitions.md#create)segmento.
 
 ## Stima e anteprima di un&#39;audience {#estimate-and-preview-an-audience}
 
-Mentre sviluppate la definizione del segmento, potete utilizzare gli strumenti di stima e anteprima nel profilo cliente in tempo reale per visualizzare le informazioni a livello di riepilogo per garantire che stiate isolando il pubblico previsto. Le stime forniscono informazioni statistiche sulla definizione di un segmento, come la dimensione dell&#39;audience e l&#39;intervallo di confidenza proiettati. Le anteprime forniscono elenchi impaginati di profili di qualifica per una definizione di segmento, consentendo di confrontare i risultati con quanto previsto.
+Mentre sviluppate la definizione del segmento, potete utilizzare gli strumenti di stima e anteprima all’interno [!DNL Real-time Customer Profile] per visualizzare le informazioni a livello di riepilogo per garantire che l’audience attesa sia isolata. Le stime forniscono informazioni statistiche sulla definizione di un segmento, come la dimensione dell&#39;audience e l&#39;intervallo di confidenza proiettati. Le anteprime forniscono elenchi impaginati di profili di qualifica per una definizione di segmento, consentendo di confrontare i risultati con quanto previsto.
 
 Stimando e visualizzando in anteprima il pubblico, potete sottoporre a test e ottimizzare i predicati PQL fino a ottenere un risultato desiderato, da cui poi utilizzarli in una definizione aggiornata del segmento.
 
@@ -153,190 +89,15 @@ Le stime generalmente vengono eseguite su un periodo di 10-15 secondi, a partire
 
 Potete creare un nuovo processo di anteprima effettuando una richiesta POST all’ `/preview` endpoint.
 
-**Formato API**
-
-```http
-POST /preview
-```
-
-**Richiesta**
-
-La richiesta seguente crea un nuovo processo di anteprima. Il corpo della richiesta contiene le informazioni sulla query relative al segmento.
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/preview \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-  -d '{
-        "predicateExpression": "xEvent.metrics.commerce.abandons.value > 0",
-        "predicateType": "pql/text",
-        "predicateModel": "_xdm.context.profile",
-        "graphType": "simple",
-        "mergeStrategy": "simple"
-    }'
-```
-
-| Proprietà | Descrizione |
-| --------- | ----------- |
-| `predicateExpression` | Espressione PQL per eseguire una query sui dati. |
-| `predicateModel` | Nome dello schema XDM su cui si basano i dati del profilo. |
-
-**Risposta**
-
-Una risposta corretta restituisce i dettagli del processo di anteprima appena creato, incluso l’ID e lo stato di elaborazione corrente.
-
-```json
-{
-   "state": "RUNNING",
-   "previewQueryId": "4a45e853-ac91-4bb7-a426-150937b6af5c",
-   "previewQueryStatus": "RUNNING",
-   "previewId": "MDoyOjRhNDVlODUzLWFjOTEtNGJiNy1hNDI2LTE1MDkzN2I2YWY1Yzo0Mg",
-   "previewExecutionId": 42
-}
-```
-
-| Proprietà | Descrizione |
-| -------- | ----------- |
-| `state` | Stato corrente del processo di anteprima. Sarà in stato &quot;RUNNING&quot; fino al completamento dell&#39;elaborazione, al punto in cui diventa &quot;RESULT_READY&quot; o &quot;FAILED&quot;. |
-| `previewId` | L’ID del processo di anteprima, da utilizzare a scopo di ricerca quando si visualizza una stima o un’anteprima, come indicato nella sezione seguente. |
+Per istruzioni dettagliate sulla creazione di un processo di anteprima, consultate la guida [alle](../api/previews-and-estimates.md#create-preview)anteprime e agli endpoint delle stime.
 
 ### Visualizzare una stima o un&#39;anteprima
 
 I processi di stima e anteprima vengono eseguiti in modo asincrono, in quanto le diverse query possono richiedere diversi tempi di completamento. Una volta avviata la query, potete utilizzare le chiamate API per recuperare (GET) lo stato corrente della stima o dell&#39;anteprima mentre progredisce.
 
-Utilizzando l’API Profilo cliente in tempo reale, potete cercare lo stato corrente di un processo di anteprima in base al relativo ID. Se lo stato è &quot;RESULT_READY&quot;, è possibile visualizzare i risultati. A seconda se si desidera visualizzare una stima o un&#39;anteprima, ciascuna ha un proprio endpoint nell&#39;API. Di seguito sono riportati alcuni esempi per entrambi.
+Utilizzando l&#39; [!DNL Segmentation Service] API, potete cercare lo stato corrente di un processo di anteprima con il relativo ID. Se lo stato è &quot;RESULT_READY&quot;, è possibile visualizzare i risultati. Per visualizzare lo stato corrente di un processo di anteprima, consultate la sezione sul [recupero di una sezione](../api/previews-and-estimates.md#get-preview) del processo di anteprima nella guida alle anteprime e alle stime degli endpoint. Per verificare lo stato corrente di un processo di stima, consultare la sezione sul [recupero di un processo](../api/previews-and-estimates.md#get-estimate) di stima nella guida alle anteprime e agli endpoint delle stime.
 
-### Visualizzare una stima
-
-**Formato API**
-
-```http
-GET /estimate/{PREVIEW_ID}
-```
-
-| Proprietà | Descrizione |
-| -------- | ----------- |
-| `{PREVIEW_ID}` | ID del processo di anteprima che si desidera visualizzare. |
-
-**Richiesta**
-
-La richiesta seguente recupera una stima, utilizzando la stima `previewId` creata nel passaggio precedente.
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWFjOTEtNGJiNy1hNDI2LTE1MDkzN2I2YWY1Yzo0Mg \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Risposta**
-
-Una risposta corretta restituisce i dettagli della stima.
-
-```json
-{
-    "estimatedSize": 45,
-    "state": "RESULT_READY",
-    "profilesReadSoFar": 83834,
-    "standardError": 0,
-    "error": {
-        "description": "",
-        "traceback": ""
-    },
-    "profilesMatchedSoFar": 46,
-    "totalRows": 82473,
-    "confidenceInterval": "95%",
-    "_links": {
-        "preview": "https://platform.adobe.io/data/core/ups/preview?previewQueryId=f88bc056-ee48-40d5-9ddb-8865d7d6a0e0"
-    }
-}
-```
-
-| Proprietà | Descrizione |
-| -------- | ----------- |
-| `state` | Stato corrente del processo di anteprima. Sarà &quot;IN ESECUZIONE&quot; fino al completamento dell&#39;elaborazione, al punto in cui diventa &quot;RESULT_READY&quot; o &quot;FAILED&quot;. |
-| `_links.preview` | Quando lo stato corrente del processo di anteprima è &quot;RESULT_READY&quot;, questo attributo fornisce un URL per visualizzare la stima. |
-
-### Visualizzare un’anteprima
-
-**Formato API**
-
-```http
-GET /preview/{PREVIEW_ID}
-```
-
-| Proprietà | Descrizione |
-| -------- | ----------- |
-| `{PREVIEW_ID}` | ID del processo di anteprima che si desidera visualizzare. |
-
-**Richiesta**
-
-La richiesta seguente recupera un&#39;anteprima, utilizzando la procedura `previewId` creata nel passaggio precedente.
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/preview/MDoyOjRhNDVlODUzLWFjOTEtNGJiNy1hNDI2LTE1MDkzN2I2YWY1Yzo0Mg \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Risposta**
-
-Una risposta corretta restituisce i dettagli dell’anteprima.
-
-```json
-{
-   "results": [{
-         "XID_ADOBE-MARKETING-CLOUD-ID-1": {
-            "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_ADOBE-MARKETING-CLOUD-ID-1",
-            "endCustomerIds": {
-               "XID_COOKIE_ID_1": {
-                  "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_COOKIE_ID_1"
-               },
-               "XID_PROFILE_ID_1": {
-                  "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_PROFILE_ID_1"
-               }
-            }
-         }
-      },
-      {
-         "XID_COOKIE-ID-2": {
-            "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_COOKIE-ID-2",
-            "endCustomerIds": {
-               "XID_COOKIE_ID_2-1": {
-                  "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_COOKIE_ID_2-1"
-
-               },
-               "XID_PROFILE_ID_2": {
-                  "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_PROFILE_ID_2"
-               }
-            }
-         },
-         "XID_ADOBE-MARKETING-CLOUD-ID-3": {
-            "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_ADOBE-MARKETING-CLOUD-ID-1000"
-         },
-         "state": "RESULT_READY",
-         "links": {
-            "_self": "https://platform.adobe.io/data/core/ups/preview?expression=<expr-1>&limit=1000",
-            "next": "",
-            "prev": ""
-         }
-      }
-   ],
-   "page": {
-      "offset": 0,
-      "size": 3
-   }
-}
-```
 
 ## Passaggi successivi
 
-Dopo aver sviluppato, testato e salvato la definizione del segmento, puoi creare un processo di segmento per creare un pubblico utilizzando l’API Profilo cliente in tempo reale. Per informazioni dettagliate su come [valutare e accedere ai risultati](./evaluate-a-segment.md) del segmento, consulta l’esercitazione.
+Dopo aver sviluppato, testato e salvato la definizione del segmento, puoi creare un processo di segmento per creare un pubblico utilizzando l&#39; [!DNL Segmentation Service] API. Per informazioni dettagliate su come [valutare e accedere ai risultati](./evaluate-a-segment.md) del segmento, consulta l’esercitazione.
