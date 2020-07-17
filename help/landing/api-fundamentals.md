@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ' Principi di base delle API Adobi Experience Platform'
 topic: getting started
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '423'
 ht-degree: 2%
 
 ---
@@ -83,7 +83,7 @@ JSON Pointer è una sintassi di stringa standard ([RFC 6901](https://tools.ietf.
 >[!Nota]
 >
 >
->Quando si utilizzano gli `xdm:sourceProperty` attributi e `xdm:destinationProperty` gli attributi dei descrittori [!DNL Experience Data Model] (XDM), qualsiasi `properties` chiave deve essere **esclusa** dalla stringa Puntatore JSON. Per ulteriori informazioni, consulta la Guida secondaria per gli sviluppatori di API del Registro di sistema dello schema sui [descrittori](../xdm/api/descriptors.md) .
+>Quando si utilizzano gli `xdm:sourceProperty` attributi e `xdm:destinationProperty` gli attributi dei descrittori [!DNL Experience Data Model] (XDM), qualsiasi `properties` chiave deve essere **esclusa** dalla stringa Puntatore JSON. Per ulteriori informazioni, consulta la guida per gli sviluppatori di [!DNL Schema Registry] API in [descrittori](../xdm/api/descriptors.md) .
 
 ## Patch JSON
 
