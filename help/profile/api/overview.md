@@ -4,19 +4,19 @@ solution: Adobe Experience Platform
 title: Guida per lo sviluppatore di API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: c0b059d6654a98b74be5bc6a55f360c4dc2f216b
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '624'
 ht-degree: 0%
 
 ---
 
 
-# Guida per lo sviluppatore di API profilo cliente in tempo reale
+# [!DNL Real-time Customer Profile] Guida per gli sviluppatori di API
 
-Il profilo cliente in tempo reale consente di visualizzare una visione olistica di ogni singolo cliente all&#39;interno  Adobe Experience Platform. Il profilo consente di consolidare diversi dati dei clienti da più canali, come online, offline, CRM e dati di terze parti, in una visualizzazione unificata che offre un account con marca temporale utilizzabile per ogni interazione con il cliente.
+[!DNL Real-time Customer Profile] consente di visualizzare una visualizzazione olistica di ogni singolo cliente all&#39;interno  Adobe Experience Platform. [!DNL Profile] consente di consolidare dati cliente diversi da canali diversi, come online, offline, CRM e dati di terze parti, in una visualizzazione unificata che offre un account con marca temporale utilizzabile per ogni interazione con il cliente.
 
-L&#39;API del profilo cliente in tempo reale include più endpoint, descritti di seguito. Per informazioni dettagliate, consultate le singole guide degli endpoint e la guida [](getting-started.md) introduttiva per informazioni importanti sulle intestazioni richieste, sulla lettura di chiamate API di esempio e altro ancora.
+L&#39; [!DNL Real-time Customer Profile] API include più endpoint, descritti di seguito. Per informazioni dettagliate, consultate le singole guide degli endpoint e la guida [](getting-started.md) introduttiva per informazioni importanti sulle intestazioni richieste, sulla lettura di chiamate API di esempio e altro ancora.
 
 Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, fare riferimento al swagger [Riferimento API profilo cliente in tempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)reale.
 
@@ -31,22 +31,22 @@ Gli attributi calcolati consentono di calcolare automaticamente il valore dei ca
 
 ## Proiezioni Edge
 
- Adobe Experience Platform consente la personalizzazione in tempo reale delle esperienze dei clienti, rendendo i dati facilmente accessibili su server situati strategicamente denominati &quot;edge&quot;. L&#39;API del profilo cliente in tempo reale fornisce gli endpoint per l&#39;utilizzo dei bordi tramite componenti denominati &quot;proiezioni&quot;. Ciò include configurazioni di proiezione per determinare quali dati proiettare su ciascun bordo, nonché destinazioni di proiezione per definire dove indirizzare una proiezione. Per informazioni dettagliate sull&#39;utilizzo delle proiezioni dei bordi, visitate la guida [alle configurazioni di](edge-projections.md)proiezione e agli endpoint delle destinazioni.
+ Adobe Experience Platform consente la personalizzazione in tempo reale delle esperienze dei clienti, rendendo i dati facilmente accessibili su server situati strategicamente denominati &quot;edge&quot;. L&#39; [!DNL Real-time Customer Profile] API fornisce gli endpoint per lavorare con i bordi attraverso i componenti denominati &quot;proiezioni&quot;. Ciò include configurazioni di proiezione per determinare quali dati proiettare su ciascun bordo, nonché destinazioni di proiezione per definire dove indirizzare una proiezione. Per informazioni dettagliate sull&#39;utilizzo delle proiezioni dei bordi, visitate la guida [alle configurazioni di](edge-projections.md)proiezione e agli endpoint delle destinazioni.
 
 ## Entità (accesso profilo) {#entities}
 
-Attraverso  Adobe Experience Platform puoi accedere ai dati del profilo cliente in tempo reale utilizzando le API RESTful o l&#39;interfaccia utente. Per informazioni su come accedere alle entità, più comunemente note come &quot;profili&quot;, mediante l&#39;API, segui i passaggi descritti nella guida [all&#39;endpoint](entities.md)entità. Per accedere ai profili utilizzando l’interfaccia utente di Platform, consulta la guida [utente relativa al](../ui/user-guide.md)profilo.
+Attraverso  Adobe Experience Platform è possibile accedere [!DNL Real-time Customer Profile] ai dati utilizzando RESTful APIs o l&#39;interfaccia utente. Per informazioni su come accedere alle entità, più comunemente note come &quot;profili&quot;, mediante l&#39;API, segui i passaggi descritti nella guida [all&#39;endpoint](entities.md)entità. Per accedere ai profili utilizzando l&#39; [!DNL Platform] interfaccia utente, consulta la guida [utente relativa al](../ui/user-guide.md)profilo.
 
 ## Unisci criteri
 
-Quando si uniscono dati da più origini in  Experience Platform, i criteri di unione sono le regole utilizzate da Platform per determinare in che modo i dati verranno classificati in ordine di priorità e quali dati verranno combinati per creare singoli profili cliente. Utilizzando l&#39;API Profilo cliente in tempo reale, puoi creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la tua organizzazione. Per ulteriori informazioni sull&#39;utilizzo dei criteri di unione tramite l&#39;API, consultare la guida [all&#39;endpoint dei criteri di](merge-policies.md)unione.
+Quando si uniscono dati da più origini in [!DNL Experience Platform], i criteri di unione sono le regole che [!DNL Platform] utilizzano per determinare in che modo i dati verranno assegnati priorità e quali dati verranno combinati per creare singoli profili cliente. Utilizzando l&#39; [!DNL Real-time Customer Profile] API, è possibile creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per l&#39;organizzazione. Per ulteriori informazioni sull&#39;utilizzo dei criteri di unione tramite l&#39;API, consultare la guida [all&#39;endpoint dei criteri di](merge-policies.md)unione.
 
-Per una guida all&#39;utilizzo dei criteri di unione nell&#39;interfaccia utente di Platform, consultate la guida [utente](../ui/merge-policies.md)Unisci criteri.
+Per una guida all&#39;utilizzo dei criteri di unione nell&#39; [!DNL Platform] interfaccia utente, consultate la guida [utente](../ui/merge-policies.md)Unisci criteri.
 
 ## Processi del sistema di profili
 
-I dati acquisiti in Platform sono memorizzati nel Data Lake e nell&#39;archivio dati del profilo cliente in tempo reale. Talvolta potrebbe essere necessario eliminare un set di dati o un batch dall&#39;archivio dei profili per rimuovere i dati che non sono più necessari o che sono stati aggiunti per errore. Ciò richiede l’utilizzo dell’API per creare un processo di sistema dei profili, noto come &quot;richiesta di eliminazione&quot;, che può anche essere, modificato, monitorato o eliminato se necessario. Per informazioni su come gestire le richieste di eliminazione tramite l&#39; `/system/jobs` endpoint nell&#39;API Profilo cliente in tempo reale, segui i passaggi descritti nella guida [all&#39;endpoint dei processi del sistema di](profile-system-jobs.md)profilo.
+I dati acquisiti [!DNL Platform] vengono memorizzati sia nell&#39;archivio [!DNL Data Lake] che nell&#39;archivio [!DNL Real-time Customer Profile] dati. Talvolta potrebbe essere necessario eliminare un set di dati o un batch dallo [!DNL Profile] store per rimuovere i dati non più richiesti o aggiunti per errore. Ciò richiede l&#39;utilizzo dell&#39;API per creare un [!DNL Profile System Job], noto come &quot;[!DNL delete request]&quot;, che può anche essere, modificato, monitorato o eliminato, se necessario. Per informazioni su come gestire le richieste di eliminazione tramite l&#39; `/system/jobs` endpoint nell&#39; [!DNL Real-time Customer Profile] API, segui i passaggi descritti nella guida [all&#39;endpoint dei processi del sistema di](profile-system-jobs.md)profilo.
 
 ## Passaggi successivi
 
-Per iniziare a effettuare chiamate utilizzando l&#39;API Profilo cliente in tempo reale, leggi la guida [](getting-started.md) introduttiva e seleziona una delle guide dell&#39;endpoint per scoprire come utilizzare endpoint specifici correlati al profilo. Per ulteriori informazioni sull’utilizzo dei dati di profilo nell’interfaccia utente di Platform, consulta la guida [utente Profilo cliente](../ui/user-guide.md)in tempo reale.
+Per iniziare a effettuare chiamate utilizzando l&#39; [!DNL Real-time Customer Profile] API, leggi la guida [introduttiva e seleziona una delle guide degli endpoint per apprendere come utilizzare endpoint specifici](getting-started.md) [!DNL Profile]correlati. Per ulteriori informazioni sull’utilizzo [!DNL Profile] dei dati nell’ [!DNL Platform] interfaccia utente, consulta la guida [utente Profilo cliente](../ui/user-guide.md)in tempo reale.
