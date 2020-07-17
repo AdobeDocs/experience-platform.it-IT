@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 'Panoramica del Adobe Experience Platform '
 topic: getting started
 translation-type: tm+mt
-source-git-commit: b73bd7e163c2861c751b1b505894923f70c99755
+source-git-commit: 6c90e68bde1fb8474ba23127ecf7b6fd617c7765
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '745'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 Basato su API aperte, [!DNL Experience Platform] espone agli sviluppatori la funzionalità completa del sistema, sostenendo la facile integrazione delle soluzioni aziendali utilizzando strumenti familiari. [!DNL Experience Platform] supporta inoltre i partner per creare e integrare i propri prodotti e tecnologie in base alle esigenze. Questa potenza e flessibilità rendono [!DNL Experience Platform] unici nel mercato. Offre ai partner, ai clienti e a una comunità di sviluppatori una base su cui costruire innovazioni che guidino The Experience Business: superare le aspettative dei clienti, offrendo un&#39;esperienza sempre migliore e completamente personalizzata grazie a una visione a 360 gradi del cliente e delle sue preferenze individuali.
 
-I video seguenti descrivono un&#39;esperienza ipotetica creata con  Adobe Experience Platform, come visto dal punto di vista di un cliente. Scopri come [!DNL Experience Platform] creare un&#39;esperienza ricca, rilevante e in tempo reale.
+I video seguenti illustrano come [!DNL Experience Platform] creare esperienze in tempo reale ricche, rilevanti e pertinenti, innanzitutto dal punto di vista del cliente e quindi da una prospettiva tecnica dietro le quinte.
 
 **Prospettiva del cliente:**
 
@@ -73,6 +73,7 @@ La documentazione  Adobe Experience Platform è disponibile in diverse lingue. P
 >* Consigli della documentazione pertinenti al contesto
 >* La possibilità di fornire feedback sui problemi [!DNL Experience Platform] e di generare report
 >* Risultati di ricerca migliorati che includono anche risultati dai forum della community e contenuti video.
+
 >
 > 
 Di tanto in tanto, potreste ricevere un sondaggio per ricevere un feedback aggiuntivo.
@@ -125,7 +126,7 @@ I video seguenti descrivono le funzionalità chiave e i casi di utilizzo per [!D
 
 >[!VIDEO](https://video.tv.adobe.com/v/32502?quality=12&learn=on)
 
-**Casi di utilizzo:**
+**Casi d’uso:**
 
 >[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
 
