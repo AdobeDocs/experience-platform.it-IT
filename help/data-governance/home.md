@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Governance dei dati  Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 53225525feb1878aae58939338c1a94f98ec1607
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1342'
 ht-degree: 0%
 
 ---
@@ -85,15 +85,6 @@ Una volta applicate le etichette di utilizzo dei dati, gli amministratori dei da
 >Tutti i criteri di utilizzo dei dati (inclusi i criteri di base forniti da Adobe) sono disattivati per impostazione predefinita. Affinché un singolo criterio possa essere preso in considerazione per l&#39;applicazione, è necessario abilitare manualmente tale criterio.
 
 Per ulteriori informazioni sui criteri di utilizzo dei dati e sulle azioni di marketing, consulta la panoramica [dei](./policies/overview.md)criteri.
-
-## Versioni future
-
-[!DNL Data Governance] supporta attualmente l&#39;etichettatura DULE a due livelli (dataset e campo). [!DNL Data Governance] supporta inoltre la creazione e la gestione di criteri di utilizzo dei dati e azioni di marketing tramite l&#39; [!DNL Policy Service] API DULE.
-
-Le versioni successive forniranno le seguenti funzionalità:
-
-* Applicazione delle regole: Utilizza il framework del criterio per consigliare e applicare criteri tra diversi pattern di accesso ai dati.
-* Verifica: Monitora le attività di accesso ai dati e individua e segnala i problemi di conformità.
 
 ## Passaggi successivi
 
