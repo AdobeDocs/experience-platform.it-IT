@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Proiezioni Edge - API Profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1919'
+source-wordcount: '1900'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # Configurazioni di proiezione Edge e endpoint di destinazioni
 
-Al fine di promuovere esperienze coordinate, coerenti e personalizzate per i clienti attraverso più canali in tempo reale, i dati giusti devono essere prontamente disponibili e costantemente aggiornati man mano che si verificano le modifiche.  Adobe Experience Platform consente l&#39;accesso in tempo reale ai dati attraverso l&#39;uso di ciò che sono noti come edge. Un server periferico è un server collocato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni. Ad esempio, applicazioni Adobe come  Adobe Target e  Adobe Campaign utilizzano i bordi per fornire esperienze personalizzate ai clienti in tempo reale. I dati vengono indirizzati a un bordo da una proiezione, con una destinazione di proiezione che definisce il bordo a cui verranno inviati i dati, e una configurazione di proiezione che definisce le informazioni specifiche che verranno rese disponibili sul bordo. Questa guida fornisce istruzioni dettagliate per l’utilizzo dell’API Profilo cliente in tempo reale per lavorare con proiezioni Edge, incluse destinazioni e configurazioni.
+Al fine di promuovere esperienze coordinate, coerenti e personalizzate per i clienti attraverso più canali in tempo reale, i dati giusti devono essere prontamente disponibili e costantemente aggiornati man mano che si verificano le modifiche.  Adobe Experience Platform consente l&#39;accesso in tempo reale ai dati attraverso l&#39;uso di ciò che sono noti come edge. Un server periferico è un server collocato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni. Ad esempio, applicazioni Adobe come  Adobe Target e  Adobe Campaign utilizzano i bordi per fornire esperienze personalizzate ai clienti in tempo reale. I dati vengono indirizzati a un bordo da una proiezione, con una destinazione di proiezione che definisce il bordo a cui verranno inviati i dati, e una configurazione di proiezione che definisce le informazioni specifiche che verranno rese disponibili sul bordo. Questa guida fornisce istruzioni dettagliate per l’utilizzo dell’ [!DNL Real-time Customer Profile] API per lavorare con proiezioni di edge, incluse destinazioni e configurazioni.
 
 ## Introduzione
 
-L&#39;endpoint API utilizzato in questa guida fa parte dell&#39;API [Profilo cliente in tempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)reale. Prima di continuare, consultate la guida [](getting-started.md) introduttiva per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente chiamate a qualsiasi API Experience Platform .
+L&#39;endpoint API utilizzato in questa guida fa parte dell&#39; [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Prima di continuare, consultate la guida [introduttiva per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente chiamate a qualsiasi](getting-started.md) [!DNL Experience Platform] API.
 
 >[!NOTE]
 >Le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39; `Content-Type` intestazione. Nel documento `Content-Type` vengono utilizzati più di uno. Prestate particolare attenzione alle intestazioni delle chiamate di esempio per verificare di utilizzare la versione corretta `Content-Type` per ogni richiesta.
@@ -325,7 +325,7 @@ La richiesta di eliminazione restituisce lo stato HTTP 204 (Nessun contenuto) e 
 
 ## Configurazioni di proiezione
 
-Le configurazioni di proiezione forniscono informazioni su quali dati devono essere disponibili su ciascun bordo. Anziché proiettare uno schema XDM (Experience Data Model) completo sul margine, una proiezione fornisce solo dati o campi specifici dallo schema. L&#39;organizzazione può definire più di una configurazione di proiezione per ogni schema XDM.
+Le configurazioni di proiezione forniscono informazioni su quali dati devono essere disponibili su ciascun bordo. Anziché proiettare uno schema [!DNL Experience Data Model] (XDM) completo sul bordo, una proiezione fornisce solo dati specifici, o campi, dallo schema. L&#39;organizzazione può definire più di una configurazione di proiezione per ogni schema XDM.
 
 ### Elenca tutte le configurazioni di proiezione
 
@@ -349,7 +349,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 
 **Richiesta**
 
-Nella richiesta seguente sono elencate tutte le configurazioni di proiezione associate alla classe dello schema Experience Data Model, XDM Individuale Profile. Per ulteriori informazioni su XDM e sul suo ruolo all&#39;interno di Platform, consultare la panoramica [del sistema](../../xdm/home.md)XDM.
+La richiesta seguente elenca tutte le configurazioni di proiezione associate alla classe [!DNL Experience Data Model] schema, [!DNL XDM Individual Profile]. Per ulteriori informazioni su XDM e sul suo ruolo all&#39;interno di [!DNL Platform], consultare la panoramica [del sistema](../../xdm/home.md)XDM.
 
 ```shell
 curl -X GET \
