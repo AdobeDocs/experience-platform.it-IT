@@ -1,19 +1,20 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Guida di Adobe Experience Platform Segmentation Service
+user-guide-title: ' Assistenza Servizio Segmentazione Adobe Experience Platform'
 translation-type: tm+mt
-source-git-commit: 58781fb5622564b29cf250459a9149cf25672bfa
+source-git-commit: a1f80b86a1e761c15d567821b13c7533b7fcf622
 workflow-type: tm+mt
-source-wordcount: '102'
+source-wordcount: '103'
 ht-degree: 5%
 
 ---
 
 
-# Guida di Adobe Experience Platform Segmentation Service {#segmentation}
+#  Assistenza Servizio Segmentazione Adobe Experience Platform {#segmentation}
 
 - [Panoramica](home.md)
+- [Tipi di dati di segmentazione](data-types.md)
 - API di segmentazione {#api}
    - [Introduzione](api/getting-started.md)
    - [Definizioni dei segmenti](api/segment-definitions.md)
@@ -40,8 +41,7 @@ ht-degree: 5%
 - Esercitazioni {#tutorials}
    - [Creazione di un segmento](tutorials/create-a-segment.md)
    - [Valutazione di un segmento](tutorials/evaluate-a-segment.md)
-   - [Esporta dati](tutorials/export-data.md)
    - [Creazione di un dataset per esportare i dati](tutorials/create-dataset-export-segment.md)
    - [Applica la conformità all&#39;uso dei dati per i segmenti](tutorials/governance.md)
 - [Riferimento API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
-- [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-en)
+- [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
