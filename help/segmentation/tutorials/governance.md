@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Applica la conformità all'utilizzo dei dati per i segmenti di pubblico
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: cb6a2f91eb6c18835bd9542e5b66af4682227491
 workflow-type: tm+mt
-source-wordcount: '1372'
+source-wordcount: '1325'
 ht-degree: 1%
 
 ---
@@ -14,42 +14,42 @@ ht-degree: 1%
 
 # Applicazione della conformità dell&#39;utilizzo dei dati per un segmento di pubblico tramite API
 
-Questa esercitazione descrive i passaggi per imporre la conformità dell&#39;utilizzo dei dati per i segmenti di pubblico Profilo cliente in tempo reale che utilizzano le API.
+Questa esercitazione descrive i passaggi per imporre la conformità dell&#39;utilizzo dei dati per i segmenti di [!DNL Real-time Customer Profile] pubblico che utilizzano le API.
 
 ## Introduzione
 
-Questa esercitazione richiede una conoscenza approfondita dei seguenti componenti del  Adobe Experience Platform:
+Questa esercitazione richiede una buona conoscenza dei seguenti componenti di [!DNL Adobe Experience Platform]:
 
-- [Profilo](../../profile/home.md)cliente in tempo reale: Il profilo cliente in tempo reale è un archivio di entità di ricerca generico e viene utilizzato per gestire i dati del modello dati esperienza (XDM) in Platform. Il profilo unisce i dati tra diverse risorse di dati aziendali e fornisce l&#39;accesso a tali dati in una presentazione unificata.
-   - [Unisci criteri](../../profile/api/merge-policies.md): Regole utilizzate dal profilo cliente in tempo reale per determinare quali dati possono essere uniti in una visualizzazione unificata a determinate condizioni. I criteri di unione possono essere configurati a scopo di governance dei dati.
-- [Segmentazione](../home.md): In che modo il profilo cliente in tempo reale divide un ampio gruppo di individui contenuti nello store del profilo in gruppi più piccoli che condividono caratteristiche simili e risponderanno in modo simile alle strategie di marketing.
-- [Governance](../../data-governance/home.md)dei dati: La governance dei dati fornisce l&#39;infrastruttura per l&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati (DULE), utilizzando i seguenti componenti:
+- [!DNL Real-time Customer Profile](../../profile/home.md): [!DNL Real-time Customer Profile] è un archivio di entità di ricerca generico e viene utilizzato per gestire i dati [!DNL Experience Data Model] (XDM) all&#39;interno [!DNL Platform]. Il profilo unisce i dati tra diverse risorse di dati aziendali e fornisce l&#39;accesso a tali dati in una presentazione unificata.
+   - [Unisci criteri](../../profile/api/merge-policies.md): Regole utilizzate [!DNL Real-time Customer Profile] per determinare quali dati possono essere uniti in una visualizzazione unificata in determinate condizioni. I criteri di unione possono essere configurati a scopo di governance dei dati.
+- [!DNL Segmentation](../home.md): Come [!DNL Real-time Customer Profile] divide un ampio gruppo di individui contenuti nello store di profili in gruppi più piccoli che condividono caratteristiche simili e risponderanno in modo simile alle strategie di marketing.
+- [!DNL Data Governance](../../data-governance/home.md): [!DNL Data Governance] fornisce l&#39;infrastruttura per l&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati (DULE), utilizzando i seguenti componenti:
    - [Etichette](../../data-governance/labels/user-guide.md)di utilizzo dati: Etichette utilizzate per descrivere insiemi di dati e campi in termini di livello di sensibilità con cui gestire i rispettivi dati.
    - [Criteri](../../data-governance/policies/overview.md)di utilizzo dei dati: Configurazioni che indicano quali azioni di marketing sono consentite sui dati classificati da particolari etichette di utilizzo dei dati.
    - [Applicazione](../../data-governance/enforcement/overview.md)delle regole: Consente di applicare criteri di utilizzo dei dati e di impedire le operazioni di dati che costituiscono violazioni dei criteri.
-- [Sandbox](../../sandboxes/home.md):  Experience Platform fornisce sandbox virtuali che dividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+- [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per effettuare correttamente chiamate alle API Platform.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per eseguire correttamente le chiamate alle [!DNL Platform] API.
 
 ### Lettura di chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi di  Experience Platform.
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla [!DNL Experience Platform] risoluzione dei problemi.
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle API Platform, è prima necessario completare l&#39;esercitazione [di](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API Experience Platform, come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in  Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API Platform richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in Platform, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+>Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva:
 
@@ -57,9 +57,9 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 ## Cercare un criterio di unione per la definizione di un segmento {#merge-policy}
 
-Questo flusso di lavoro inizia con l&#39;accesso a un segmento di pubblico noto. I segmenti abilitati per l’uso in Profilo cliente in tempo reale contengono un ID criterio di unione all’interno della definizione del segmento. Questo criterio di unione contiene informazioni sui set di dati da includere nel segmento, che a loro volta contengono eventuali etichette di utilizzo dei dati applicabili.
+Questo flusso di lavoro inizia con l&#39;accesso a un segmento di pubblico noto. I segmenti abilitati per l’uso in [!DNL Real-time Customer Profile] contengono un ID criterio di unione all’interno della definizione del segmento. Questo criterio di unione contiene informazioni sui set di dati da includere nel segmento, che a loro volta contengono eventuali etichette di utilizzo dei dati applicabili.
 
-Utilizzando l&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)Segmentazione, puoi cercare una definizione di segmento in base al relativo ID per trovare il criterio di unione associato.
+Utilizzando l&#39; [!DNL Segmentation] API, puoi cercare una definizione di segmento in base al relativo ID per trovare il criterio di unione associato.
 
 **Formato API**
 
@@ -126,7 +126,7 @@ Una risposta corretta restituisce i dettagli della definizione del segmento.
 
 ## Trovare i set di dati di origine dal criterio di unione {#datasets}
 
-I criteri di unione contengono informazioni sui set di dati di origine, che a loro volta contengono etichette di utilizzo dei dati. Potete consultare i dettagli di un criterio di unione fornendo l&#39;ID del criterio di unione in una richiesta GET all&#39;API del profilo.
+I criteri di unione contengono informazioni sui set di dati di origine, che a loro volta contengono etichette di utilizzo dei dati. Potete cercare i dettagli di un criterio di unione fornendo l&#39;ID del criterio di unione in una richiesta GET all&#39; [!DNL Profile] API. Ulteriori informazioni sui criteri di unione sono disponibili nella guida [all&#39;endpoint dei criteri di](../../profile/api/merge-policies.md)unione.
 
 **Formato API**
 
@@ -375,7 +375,7 @@ Quando si aggiorna il criterio di unione di una definizione di segmento, vengono
 
 ### Limita campi dati specifici durante l&#39;esportazione del segmento
 
-Quando si esporta un segmento in un dataset utilizzando l&#39;API Profilo cliente in tempo reale, è possibile filtrare i dati inclusi nell&#39;esportazione utilizzando il `fields` parametro. Tutti i campi di dati aggiunti a questo parametro verranno inclusi nell&#39;esportazione, mentre tutti gli altri campi di dati saranno esclusi.
+Quando si esporta un segmento in un dataset tramite l&#39; [!DNL Segmentation] API, è possibile filtrare i dati inclusi nell&#39;esportazione utilizzando il `fields` parametro. Tutti i campi di dati aggiunti a questo parametro verranno inclusi nell&#39;esportazione, mentre tutti gli altri campi di dati saranno esclusi.
 
 Considerate un segmento con campi di dati denominati &quot;A&quot;, &quot;B&quot; e &quot;C&quot;. Se si desidera esportare solo il campo &quot;C&quot;, il `fields` parametro conterrà solo il campo &quot;C&quot;. In questo modo, i campi &quot;A&quot; e &quot;B&quot; sarebbero esclusi durante l’esportazione del segmento.
 
@@ -383,4 +383,4 @@ Per ulteriori informazioni, consulta la sezione sull’ [esportazione di un segm
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai cercato le etichette di utilizzo dei dati associate a un segmento di pubblico e li hai testati per verificare la presenza di violazioni dei criteri rispetto a determinate azioni di marketing. Per ulteriori informazioni sulla governance dei dati in  Experience Platform, consulta la panoramica sulla governance dei [dati](../../data-governance/home.md).
+Seguendo questa esercitazione, hai cercato le etichette di utilizzo dei dati associate a un segmento di pubblico e li hai testati per verificare la presenza di violazioni dei criteri rispetto a determinate azioni di marketing. Per ulteriori informazioni [!DNL Data Governance] in [!DNL Experience Platform], leggete la panoramica per [!DNL Data Governance](../../data-governance/home.md).
