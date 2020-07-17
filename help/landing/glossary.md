@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ' documentazione del prodotto Adobe Experience Platform'
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 2e5668a8b1d5fb831188fbd4e453b9f4aa7474df
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '6594'
+source-wordcount: '6593'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 **Controllo accesso:** {#access-control} Controllo degli [!DNL Experience Platform] accessi per collegare gli utenti con autorizzazioni di accesso e ambienti sandbox tramite i profili di prodotto in Adobe  Admin Console.
 
-**ID chiave di accesso:** ID chiave di accesso è un identificatore univoco associato a una chiave di accesso segreta Amazon S3. L&#39;ID chiave di accesso e la chiave di accesso segreta sono utilizzati insieme per firmare le richieste AWS.
+**ID chiave di accesso:** ID chiave di accesso è un identificatore univoco associato a una chiave di accesso segreta [!DNL Amazon] S3. L&#39;ID chiave di accesso e la chiave di accesso segreta sono utilizzati insieme per firmare le richieste AWS.
 
 **Azione:** In [!DNL Experience Platform Launch]un&#39;azione è un tipo specifico di componente regola che definisce cosa deve accadere dopo che si verifica un evento e le condizioni vengono valutate e passate.
 
