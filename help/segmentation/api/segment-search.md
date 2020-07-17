@@ -1,30 +1,28 @@
 ---
 keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;
 solution: Adobe Experience Platform
-title: Guida per gli sviluppatori API di segmentazione
+title: Guida all’endpoint di ricerca del segmento
 topic: guide
 translation-type: tm+mt
-source-git-commit: f489e9f9dfc9c7e94f76a6825e7ca24c41ee8a66
+source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1141'
 ht-degree: 2%
 
 ---
 
 
-# Ricerca segmento
+# Guida agli endpoint di ricerca segmenti
 
-Segment Search (Ricerca segmenti) viene utilizzato per cercare e indicizzare i campi configurabili contenuti tra varie origini dati e per restituirli in tempo quasi reale.
+La ricerca dei segmenti viene utilizzata per cercare i campi contenuti in varie origini dati e restituirli in tempo quasi reale.
 
 Questa guida fornisce informazioni utili per comprendere meglio la ricerca dei segmenti e include chiamate API di esempio per l&#39;esecuzione di azioni di base tramite l&#39;API.
 
 ## Introduzione
 
-Gli endpoint API utilizzati in questa guida fanno parte dell&#39;API di segmentazione. Prima di continuare, consulta la guida [per lo sviluppatore di](getting-started.md)segmentazione.
+Gli endpoint utilizzati in questa guida fanno parte dell&#39; [!DNL Adobe Experience Platform Segmentation Service] API. Prima di continuare, controllate la guida [](./getting-started.md) introduttiva per informazioni importanti che dovete conoscere per effettuare correttamente le chiamate all&#39;API, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
 
-In particolare, la sezione [](getting-started.md) introduttiva della guida per gli sviluppatori di segmentazione include collegamenti a argomenti correlati, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente chiamate all&#39;API della piattaforma Experience.
-
-Oltre alle intestazioni richieste indicate nella sezione introduttiva, tutte le richieste all’API di ricerca dei segmenti richiedono l’intestazione aggiuntiva seguente:
+Oltre alle intestazioni richieste indicate nella sezione introduttiva, tutte le richieste all’endpoint di ricerca dei segmenti richiedono l’intestazione aggiuntiva seguente:
 
 - x-ups-search-version: &quot;1.0&quot;
 
@@ -223,7 +221,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni strutturali
 
 ## Passaggi successivi
 
-Dopo aver letto questa guida è ora possibile comprendere meglio il funzionamento della ricerca segmenti. Per ulteriori informazioni sulla segmentazione, consulta la panoramica sulla [segmentazione](../home.md).
+Dopo aver letto questa guida è ora possibile comprendere meglio il funzionamento della ricerca segmenti.
 
 ## Appendice {#appendix}
 
