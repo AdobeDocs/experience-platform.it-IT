@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segmentazione multi-entità
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7110be2654e55ea411580f8c9e2e92bb52badab5
+source-git-commit: f44e42a4faa3b10f147dbaf929048054ce0bec42
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
@@ -34,14 +34,14 @@ La definizione di relazioni con la struttura degli schemi Experience Data Model 
 
 Questo processo può essere eseguito utilizzando l&#39;API del Registro di sistema dello schema o l&#39;Editor schema. Per una guida dettagliata sull&#39;utilizzo dell&#39;API per definire una relazione tra due schemi, leggete [l&#39;esercitazione sulla definizione di una relazione tra due schemi mediante l&#39;API](../xdm/tutorials/relationship-api.md). Per una guida dettagliata sull&#39;utilizzo dell&#39;Editor di schema per definire una relazione tra due schemi, vedere [l&#39;esercitazione sulla definizione di una relazione tra due schemi che utilizza l&#39;Editor](../xdm/tutorials/relationship-ui.md)di schema.
 
-## Come utilizzare la creazione di segmenti che utilizzano relazioni XDM
+## Come creare segmenti che utilizzano relazioni XDM
 
-Una volta definite le relazioni XDM, potete utilizzare le API Profilo cliente in tempo reale per creare un segmento.
+Una volta definite le relazioni XDM, potete utilizzare l&#39;API del servizio di segmentazione per creare un segmento.
 
-Questo processo può essere eseguito utilizzando l&#39;API Profilo cliente in tempo reale o il Generatore di segmenti. Per una guida dettagliata sull&#39;utilizzo dell&#39;API per creare un segmento, leggete [l&#39;esercitazione sulla creazione di un segmento tramite l&#39;API](./tutorials/create-a-segment.md)Profilo cliente in tempo reale. Per una guida dettagliata sull’utilizzo del Generatore di segmenti per creare un segmento, consulta [la guida](./ui/overview.md)utente di Segment Builder (Generatore di segmenti).
+Questo processo può essere eseguito utilizzando l&#39;API di segmentazione o l&#39;interfaccia utente di Generatore di segmenti. Per una guida dettagliata sull&#39;utilizzo dell&#39;API per creare un segmento, leggete [l&#39;esercitazione sulla creazione di un segmento tramite l&#39;API](./tutorials/create-a-segment.md)di segmentazione. Per una guida dettagliata sull’utilizzo del Generatore di segmenti per creare un segmento, consulta [la guida](./ui/overview.md)utente di Segment Builder (Generatore di segmenti).
 
 ## Come valutare e accedere ai segmenti per segmenti con più entità
 
-Dopo aver creato un segmento, puoi valutare e accedere ai risultati del segmento utilizzando le API Profilo cliente in tempo reale. La valutazione di un segmento con più entità è molto simile alla valutazione di un segmento regolare.
+Dopo aver creato un segmento, puoi valutare e accedere ai risultati del segmento utilizzando l&#39; [!DNL Segmentation Service] API. La valutazione di un segmento con più entità è molto simile alla valutazione di un segmento regolare.
 
-Questo processo può essere eseguito solo tramite l&#39;API Profilo cliente in tempo reale. Per una guida dettagliata sull&#39;utilizzo dell&#39;API per valutare e accedere ai segmenti, consulta [l&#39;esercitazione sulla valutazione e l&#39;accesso ai segmenti](./tutorials/evaluate-a-segment.md).
+Questo processo può essere eseguito solo tramite l&#39; [!DNL Segmentation Service] API. Per una guida dettagliata sull&#39;utilizzo dell&#39;API per valutare e accedere ai segmenti, consulta l&#39;esercitazione sulla [valutazione e l&#39;accesso ai segmenti](./tutorials/evaluate-a-segment.md).
