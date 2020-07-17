@@ -4,50 +4,46 @@ solution: Experience Platform
 title: Processi segmento
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 2327ce9a87647fb2416093d4a27eb7d4dc4aa4d7
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '994'
 ht-degree: 3%
 
 ---
 
 
-# Guida per lo sviluppo di processi di segmento
+# Guida agli endpoint dei processi di segmento
 
-Un processo di segmento è un processo asincrono che crea un nuovo segmento di pubblico. Fa riferimento a una definizione di segmento, nonché a qualsiasi criterio di unione che controlla in che modo il profilo cliente in tempo reale unisce gli attributi sovrapposti nei frammenti di profilo. Quando un processo del segmento viene completato correttamente, potete raccogliere varie informazioni sul segmento, ad esempio eventuali errori che si sono verificati durante l&#39;elaborazione e le dimensioni finali del pubblico.
+Un processo di segmento è un processo asincrono che crea un nuovo segmento di pubblico. Fa riferimento a una definizione [di](./segment-definitions.md)segmento, nonché a eventuali criteri [di](../../profile/api/merge-policies.md) unione che controllano il modo in cui [!DNL Real-time Customer Profile] unisce gli attributi sovrapposti nei frammenti di profilo. Quando un processo del segmento viene completato correttamente, potete raccogliere varie informazioni sul segmento, ad esempio eventuali errori che si sono verificati durante l&#39;elaborazione e le dimensioni finali del pubblico.
 
 Questa guida fornisce informazioni utili per comprendere meglio i processi dei segmenti e include chiamate API di esempio per eseguire azioni di base tramite l&#39;API.
 
 ## Introduzione
 
-Gli endpoint API utilizzati in questa guida fanno parte dell&#39;API di segmentazione. Prima di continuare, consulta la guida [per lo sviluppatore di](./getting-started.md)segmentazione.
+Gli endpoint utilizzati in questa guida fanno parte dell&#39; [!DNL Adobe Experience Platform Segmentation Service] API. Prima di continuare, controllate la guida [](./getting-started.md) introduttiva per informazioni importanti che dovete conoscere per effettuare correttamente le chiamate all&#39;API, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
 
-In particolare, la sezione [](./getting-started.md#getting-started) introduttiva della guida per gli sviluppatori di segmentazione include collegamenti a argomenti correlati, una guida alla lettura delle chiamate API di esempio nel documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente chiamate a qualsiasi  API Experience Platform.
-
-## Recupero di un elenco di processi di segmento
+## Recupero di un elenco di processi di segmento {#retrieve-list}
 
 È possibile recuperare un elenco di tutti i processi del segmento per l&#39;organizzazione IMS effettuando una richiesta GET all&#39; `/segment/jobs` endpoint.
 
 **Formato API**
+
+L&#39; `/segment/jobs` endpoint supporta diversi parametri di query per facilitare il filtraggio dei risultati. Anche se questi parametri sono opzionali, il loro utilizzo è fortemente consigliato per ridurre i costi di sovraccarico. Effettuando una chiamata a questo endpoint senza parametri, tutti i processi di esportazione disponibili per la vostra organizzazione verranno recuperati. È possibile includere più parametri, separati da e-mail (`&`).
 
 ```http
 GET /segment/jobs
 GET /segment/jobs?{QUERY_PARAMETERS}
 ```
 
-- `{QUERY_PARAMETERS}`: (*Facoltativo*) Parametri aggiunti al percorso di richiesta che configurano i risultati restituiti nella risposta. È possibile includere più parametri, separati da e-mail (`&`). I parametri disponibili sono elencati di seguito.
-
 **Parametri query**
 
-Di seguito è riportato un elenco di parametri di query disponibili per elencare i processi del segmento. Tutti questi parametri sono facoltativi. Effettuando una chiamata a questo endpoint senza parametri, tutti i processi del segmento disponibili per l&#39;organizzazione verranno recuperati.
-
-| Parametro | Descrizione |
-| --------- | ----------- |
-| `start` | Specifica l&#39;offset iniziale per i processi del segmento restituiti. |
-| `limit` | Specifica il numero di processi di segmento restituiti per pagina. |
-| `status` | Filtra i risultati in base allo stato. I valori supportati sono NUOVO, IN CODA, ELABORAZIONE, SUCCESSO, NON RIUSCITO, ANNULLAMENTO, ANNULLATO |
-| `sort` | Ordina i processi del segmento restituiti. È scritto nel formato `[attributeName]:[desc|asc]`. |
-| `property` | Filtra i processi del segmento e ottiene corrispondenze esatte per il filtro specificato. Può essere scritto in uno dei seguenti formati: <ul><li>`[jsonObjectPath]==[value]` - filtraggio sulla chiave dell&#39;oggetto</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtraggio all&#39;interno dell&#39;array</li></ul> |
+| Parametro | Descrizione | Esempio |
+| --------- | ----------- | ------- |
+| `start` | Specifica l&#39;offset iniziale per i processi del segmento restituiti. | `start=1` |
+| `limit` | Specifica il numero di processi di segmento restituiti per pagina. | `limit=20` |
+| `status` | Filtra i risultati in base allo stato. I valori supportati sono NUOVO, IN CODA, ELABORAZIONE, SUCCESSO, NON RIUSCITO, ANNULLAMENTO, ANNULLATO | `status=NEW` |
+| `sort` | Ordina i processi del segmento restituiti. È scritto nel formato `[attributeName]:[desc|asc]`. | `sort=creationTime:desc` |
+| `property` | Filtra i processi del segmento e ottiene corrispondenze esatte per il filtro specificato. Può essere scritto in uno dei seguenti formati: <ul><li>`[jsonObjectPath]==[value]` - filtraggio sulla chiave dell&#39;oggetto</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtraggio all&#39;interno dell&#39;array</li></ul> | `property=segments~segmentId==workInUS` |
 
 **Richiesta**
 
@@ -157,9 +153,18 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di processi di
 }
 ```
 
-## Creare un nuovo processo segmento
+| Proprietà | Descrizione |
+| -------- | ----------- |
+| `id` | Identificatore di sola lettura generato dal sistema per il processo del segmento. |
+| `status` | Lo stato corrente per il processo del segmento. I valori potenziali per lo stato includono &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;ANNULLAMENTO&quot;, &quot;ANNULLATO&quot;, &quot;FAILED&quot; e &quot;SUCCESSO&quot;. |
+| `segments` | Un oggetto che contiene informazioni sulle definizioni del segmento restituite all&#39;interno del processo del segmento. |
+| `segments.segment.id` | ID della definizione del segmento. |
+| `segments.segment.expression` | Un oggetto che contiene informazioni sull&#39;espressione della definizione del segmento, scritta in PQL. |
+| `metrics` | Un oggetto che contiene informazioni diagnostiche sul processo del segmento. |
 
-Potete creare un nuovo processo segmento effettuando una richiesta POST all’ `/segment/jobs` endpoint.
+## Creare un nuovo processo segmento {#create}
+
+Puoi creare un nuovo processo per segmenti effettuando una richiesta POST all’ `/segment/jobs` endpoint e includendo nel corpo l’ID della definizione del segmento da cui desideri creare una nuova audience.
 
 **Formato API**
 
@@ -181,9 +186,12 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
   {
     "segmentId": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
   }
-]
- '
+]'
 ```
+
+| Proprietà | Descrizione |
+| -------- | ----------- |
+| `segmentId` | L’ID della definizione del segmento per cui desiderate creare un processo di segmento. Ulteriori informazioni sulle definizioni dei segmenti sono disponibili nella guida [all&#39;endpoint per la definizione dei](./segment-definitions.md)segmenti. |
 
 **Risposta**
 
@@ -240,9 +248,17 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del processo 
 }
 ```
 
-## Recuperare un processo segmento specifico
+| Proprietà | Descrizione |
+| -------- | ----------- |
+| `id` | Identificatore di sola lettura generato dal sistema per il processo di segmento appena creato. |
+| `status` | Lo stato corrente per il processo del segmento. Poiché il processo del segmento viene creato di recente, lo stato sarà sempre &quot;NEW&quot;. |
+| `segments` | Un oggetto che contiene informazioni sulle definizioni di segmento per le quali il processo di segmento è in esecuzione. |
+| `segments.segment.id` | ID della definizione del segmento fornita. |
+| `segments.segment.expression` | Un oggetto che contiene informazioni sull&#39;espressione della definizione del segmento, scritta in PQL. |
 
-Potete recuperare informazioni dettagliate su un processo segmento specifico eseguendo una richiesta GET all&#39; `/segment/jobs` endpoint e fornendo il valore del processo del segmento `id` nel percorso della richiesta.
+## Recuperare un processo segmento specifico {#get}
+
+Potete recuperare informazioni dettagliate su un processo segmento specifico eseguendo una richiesta GET all&#39; `/segment/jobs` endpoint e fornendo l&#39;ID del processo del segmento che desiderate recuperare nel percorso della richiesta.
 
 **Formato API**
 
@@ -328,9 +344,18 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 }
 ```
 
-## Recupero in blocco dei processi dei segmenti
+| Proprietà | Descrizione |
+| -------- | ----------- |
+| `id` | Identificatore di sola lettura generato dal sistema per il processo del segmento. |
+| `status` | Lo stato corrente per il processo del segmento. I valori potenziali per lo stato includono &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;ANNULLAMENTO&quot;, &quot;ANNULLATO&quot;, &quot;FAILED&quot; e &quot;SUCCESSO&quot;. |
+| `segments` | Un oggetto che contiene informazioni sulle definizioni del segmento restituite all&#39;interno del processo del segmento. |
+| `segments.segment.id` | ID della definizione del segmento. |
+| `segments.segment.expression` | Un oggetto che contiene informazioni sull&#39;espressione della definizione del segmento, scritta in PQL. |
+| `metrics` | Un oggetto che contiene informazioni diagnostiche sul processo del segmento. |
 
-Potete recuperare informazioni dettagliate su più processi di segmento specificati eseguendo una richiesta POST all’ `/segment/jobs/bulk-get` endpoint e fornendo i `id` valori dei processi di segmento nel corpo della richiesta.
+## Recupero in blocco dei processi dei segmenti {#bulk-get}
+
+Potete recuperare informazioni dettagliate su più processi del segmento eseguendo una richiesta POST all’ `/segment/jobs/bulk-get` endpoint e fornendo i `id` valori dei processi del segmento nel corpo della richiesta.
 
 **Formato API**
 
@@ -426,9 +451,21 @@ Una risposta corretta restituisce lo stato HTTP 207 con i processi di segmento r
 }
 ```
 
-## Annullamento o eliminazione di un processo di segmento specifico
+| Proprietà | Descrizione |
+| -------- | ----------- |
+| `id` | Identificatore di sola lettura generato dal sistema per il processo del segmento. |
+| `status` | Lo stato corrente per il processo del segmento. I valori potenziali per lo stato includono &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;ANNULLAMENTO&quot;, &quot;ANNULLATO&quot;, &quot;FAILED&quot; e &quot;SUCCESSO&quot;. |
+| `segments` | Un oggetto che contiene informazioni sulle definizioni del segmento restituite all&#39;interno del processo del segmento. |
+| `segments.segment.id` | ID della definizione del segmento. |
+| `segments.segment.expression` | Un oggetto che contiene informazioni sull&#39;espressione della definizione del segmento, scritta in PQL. |
 
-Potete richiedere di eliminare un processo segmento specificato eseguendo una richiesta di DELETE all’ `/segment/jobs` endpoint e fornendo il valore del processo del segmento `id` nel percorso della richiesta.
+## Annullamento o eliminazione di un processo di segmento specifico {#delete}
+
+Potete eliminare un processo segmento specifico effettuando una richiesta di DELETE all’ `/segment/jobs` endpoint e fornendo l’ID del processo del segmento da eliminare nel percorso della richiesta.
+
+>[!NOTE]
+>
+>La risposta API alla richiesta di eliminazione è immediata. Tuttavia, l&#39;eliminazione effettiva del processo del segmento è asincrona. In altre parole, esiste una differenza di tempo tra quando viene effettuata la richiesta di eliminazione al processo del segmento e quando viene applicata.
 
 **Formato API**
 
@@ -463,4 +500,4 @@ Una risposta corretta restituisce lo stato HTTP 204 con le seguenti informazioni
 
 ## Passaggi successivi
 
-Dopo aver letto questa guida è ora possibile comprendere meglio come funzionano i processi di segmento. Per ulteriori informazioni sulla segmentazione, consulta la panoramica sulla [segmentazione](../home.md).
+Dopo aver letto questa guida è ora possibile comprendere meglio come funzionano i processi di segmento.
