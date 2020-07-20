@@ -4,9 +4,9 @@ seo-title: Guida all'SDK Web per Adobi Experience Platform
 description: Scopri  Adobe Experience Platform SDK Web e come può essere utilizzato.
 seo-description: consentire ai clienti di Adobe Experience Cloud di interagire con i vari servizi nell'Experience Cloud .
 translation-type: tm+mt
-source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '429'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Che cos&#39;è  Adobe Experience Platform Web SDK
 
- Adobe Experience Platform Web SDK è una libreria JavaScript lato client che consente ai clienti di Adobe Experience Cloud di interagire con i vari servizi dell&#39;Experience Cloud  tramite  Adobe Experience Platform rete Edge.
+ Adobe Experience Platform Web SDK è una libreria JavaScript lato client che consente ai clienti di Adobe Experience Cloud di interagire con i vari servizi nel [!DNL Experience Cloud] tramite Adobe [!DNL Experience Platform Edge Network].
 
-Nel video seguente viene fornita una panoramica dell’SDK Web  Adobe Experience Platform e di Edge Network.
+Il seguente video offre una panoramica dell’Adobe Experience Platform  [!DNL Web SDK] e [!DNL Edge Network].
 
 >[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
@@ -29,11 +29,11 @@ Nel video seguente viene fornita una panoramica dell’SDK Web  Adobe Experience
 * AT.js
 * DIL.js
 
-Non si tratta solo di un wrapper intorno alle librerie esistenti. È una riscrittura completa. Il suo scopo è quello di porre fine alle sfide con i tag che devono essere attivati nell&#39;ordine giusto, incoerenze con le problematiche di controllo delle versioni della libreria e una migliore gestione delle dipendenze. È un nuovo modo per implementare l&#39;Experience Cloud  ed è [open source](https://github.com/adobe/alloy).
+Non si tratta solo di un wrapper intorno alle librerie esistenti. È una riscrittura completa. Il suo scopo è quello di porre fine alle sfide con i tag che devono essere attivati nell&#39;ordine giusto, incoerenze con le problematiche di controllo delle versioni della libreria e una migliore gestione delle dipendenze. Si tratta di un nuovo modo di implementare il sistema [!DNL Experience Cloud] ed è [open source](https://github.com/adobe/alloy).
 
-Oltre a una nuova libreria, esiste un nuovo endpoint che semplifica le richieste HTTP alle soluzioni Adobe. In precedenza, Visitor.js aveva inviato una chiamata di blocco al servizio ID visitatore, quindi AT.js aveva inviato una chiamata al Adobe Target , DIL.js aveva inviato una chiamata a  Adobe Audience Manager e infine AppMeasurement.js aveva inviato una chiamata ad Adobe  Analytics. Questa nuova libreria e questo endpoint possono recuperare un ID, recuperare un&#39; [!DNL Target] esperienza, inviare dati a  Audience Manager e trasmettere i dati al Adobe Experience Platform  in una singola chiamata.
+Oltre a una nuova libreria, esiste un nuovo endpoint che semplifica le richieste HTTP alle soluzioni Adobe. In precedenza, Visitor.js aveva inviato una chiamata di blocco al servizio ID visitatore, quindi AT.js aveva inviato una chiamata al Adobe Target , DIL.js aveva inviato una chiamata a  Adobe Audience Manager e infine AppMeasurement.js aveva inviato una chiamata ad Adobe  Analytics. Questa nuova libreria e questo endpoint possono recuperare un ID, recuperare un&#39; [!DNL Target] esperienza, inviare dati a [!DNL Audience Manager]e passare i dati al Adobe Experience Platform  in una singola chiamata.
 
-Il video seguente illustra l’ Adobe Experience Platform Web SDK e Edge Network in azione. Nell’esempio video viene utilizzata una singola chiamata ad Adobe che invia dati ad  Experience Platform,  Analytics,  Audience Manager e Target.
+Il seguente video illustra l’Adobe Experience Platform  [!DNL Web SDK] e [!DNL Edge Network] in azione. Nell’esempio video viene utilizzata una singola chiamata ad Adobe che invia dati a [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager]e [!DNL Target].
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
