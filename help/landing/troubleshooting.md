@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida alla risoluzione dei problemi e domande frequenti  Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 635f8cf8173cc7db2032f2181848b0ce1e9095cc
+source-git-commit: 9eeddfaf3e704d66b81f983afcdf5ef3c45c6075
 workflow-type: tm+mt
 source-wordcount: '1962'
 ht-degree: 2%
@@ -88,7 +88,7 @@ Per ulteriori informazioni su endpoint specifici nelle API di Platform, comprese
 
 ## Qual è la mia organizzazione IMS? {#what-is-my-ims-organization}
 
-Un&#39;organizzazione IMS è una rappresentazione Adobe di un cliente. Tutte le soluzioni Adobe su licenza sono integrate con questa organizzazione cliente. Quando un&#39;organizzazione IMS ha diritto a [!DNL Experience Platform], può assegnare l&#39;accesso agli sviluppatori. L&#39;ID organizzazione IMS (`x-gw-ims-org-id`) rappresenta l&#39;organizzazione per la quale deve essere eseguita una chiamata API ed è pertanto richiesto come intestazione in tutte le richieste API. Questo ID si trova tramite [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): nella scheda **Integrazioni** , andate alla sezione **Panoramica** di una particolare integrazione per trovare l’ID in Credenziali **client**. Per una descrizione dettagliata di come autenticarsi, [!DNL Platform]consulta l’esercitazione [sull’](../tutorials/authentication.md)autenticazione.
+Un&#39;organizzazione IMS è una rappresentazione Adobe di un cliente. Tutte le soluzioni Adobe su licenza sono integrate con questa organizzazione cliente. Quando un&#39;organizzazione IMS ha diritto a [!DNL Experience Platform], può assegnare l&#39;accesso agli sviluppatori. L&#39;ID organizzazione IMS (`x-gw-ims-org-id`) rappresenta l&#39;organizzazione per la quale deve essere eseguita una chiamata API ed è pertanto richiesto come intestazione in tutte le richieste API. Questo ID si trova tramite [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): nella scheda **Integrazioni** , andate alla sezione **Panoramica** di una particolare integrazione per trovare l&#39;ID in Credenziali **client**. Per una descrizione dettagliata di come autenticarsi, [!DNL Platform]consulta l’esercitazione [sull’](../tutorials/authentication.md)autenticazione.
 
 ## Dove posso trovare la mia chiave API? {#where-can-i-find-my-api-key}
 
@@ -118,7 +118,7 @@ Molte operazioni PATCH nelle [!DNL Platform] API utilizzano le stringhe [JSON Po
 
 ## Posso usare Postman per effettuare chiamate alle [!DNL Platform] API? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[Postman](https://www.getpostman.com/) è uno strumento utile per visualizzare le chiamate alle API RESTful. Questo post [](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) Medium descrive come impostare Postman per eseguire automaticamente l&#39;autenticazione e utilizzarlo per utilizzare [!DNL Experience Platform] le API.
+[Postman](https://www.postman.com/) è uno strumento utile per visualizzare le chiamate alle API RESTful. Questo post [](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) Medium descrive come impostare Postman per eseguire automaticamente l&#39;autenticazione e utilizzarlo per utilizzare [!DNL Experience Platform] le API.
 
 ## Quali sono i requisiti di sistema per [!DNL Platform]? {#what-are-the-system-requirements-for-platform}
 
