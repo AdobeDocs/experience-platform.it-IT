@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guida agli endpoint delle anteprime e delle stime
+title: Anteprime e endpoint stime
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '750'
 ht-degree: 2%
 
 ---
 
 
-# Guida agli endpoint delle anteprime e delle stime
+# Anteprime e endpoint stime
 
 Mentre sviluppate la definizione del segmento, potete utilizzare gli strumenti di stima e anteprima all’interno [!DNL Adobe Experience Platform] per visualizzare le informazioni a livello di riepilogo per garantire che l’audience attesa sia isolata. **Le anteprime** forniscono elenchi impaginati di profili idonei per una definizione di segmento, consentendo di confrontare i risultati con quanto previsto. **Le stime** forniscono informazioni statistiche sulla definizione di un segmento, come la dimensione dell&#39;audience prevista, l&#39;intervallo di confidenza e la deviazione standard dell&#39;errore.
 
