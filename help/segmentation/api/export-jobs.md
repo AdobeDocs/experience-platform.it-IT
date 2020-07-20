@@ -1,20 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guida all’endpoint dei processi di esportazione
+title: Endpoint processi di esportazione
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 3e39333207ef6c94b6d792be33a4605f185ff5ab
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '1469'
+source-wordcount: '1497'
 ht-degree: 2%
 
 ---
 
 
-# Guida all’endpoint dei processi di esportazione
+# Endpoint processi di esportazione
 
 I processi di esportazione sono processi asincroni utilizzati per mantenere i membri del segmento di pubblico nei set di dati. Potete utilizzare l&#39; `/export/jobs` endpoint nell&#39;API di segmentazione  Adobe Experience Platform, che consente di recuperare, creare e annullare i processi di esportazione a livello di programmazione.
+
+>[!NOTE]
+>
+>Questa guida descrive l’utilizzo dei processi di esportazione nel [!DNL Segmentation API]. Per informazioni su come gestire i processi di esportazione per [!DNL Real-time Customer Profile] i dati, consultate la guida sui processi di [esportazione nell&#39;API di profilo](../../profile/api/export-jobs.md)
 
 ## Introduzione
 
