@@ -4,21 +4,24 @@ solution: Experience Platform
 title: Query di esempio
 topic: queries
 translation-type: tm+mt
-source-git-commit: 33282b1c8ab1129344bd4d7054e86fed75e7b899
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+workflow-type: tm+mt
+source-wordcount: '227'
+ht-degree: 2%
 
 ---
 
 
-# Query di esempio per i dati di Adobe Target
+# Query di esempio per i dati  Adobe Target
 
-I dati di Adobe Target vengono trasformati in schema XDM di Experience Event e trasferiti in Experience Platform come set di dati. Esistono molti casi d’uso per il servizio Query con questi dati e le seguenti query di esempio devono funzionare con i set di dati di Adobe Target.
+I dati provenienti da  Adobe Target vengono trasformati in schema XDM di Experience Event e trasferiti [!DNL Experience Platform] come set di dati. Esistono molti casi di utilizzo [!DNL Query Service] con questi dati e le seguenti query di esempio devono essere compatibili con i set di dati  Adobe Target.
 
 >[!NOTE]
 >Negli esempi seguenti, sarà necessario modificare l&#39;SQL per compilare i parametri previsti per le query in base al set di dati, alle variabili o all&#39;intervallo di tempo che si desidera valutare. Fornite i parametri ovunque vi troviate `{ }` nell&#39;SQL.
 
-## Nome set di dati standard per l&#39;origine dati Target sulla piattaforma:
+## Nome set di dati standard per l&#39;origine dati Target in [!DNL Platform]:
 
-Eventi esperienza Adobe Target (nome descrittivo) <br>`adobe_target_experience_events` (nome da utilizzare nella query)
+ eventi esperienza Adobe Target (nome descrittivo) <br>`adobe_target_experience_events` (nome da utilizzare nella query)
 
 ## Mappatura del campo XDM parziale di alto livello
 
@@ -28,7 +31,7 @@ L&#39;uso di `[ ]` denotes un array
 | ---- | --------- | ----- |
 | mboxName | `_experience.target.mboxname` |  |
 | Attività ID | `_experience.target.activities.activityID` |  |
-| Experience ID | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID` |  |
+| ID esperienza | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID` |  |
 | ID segmento | `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id` |  |
 | Ambito evento | `_experience.target.activities[].activityEvents[].eventScope` | Tiene traccia di nuove visite e visite |
 | ID passo | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID` | ID passaggio personalizzato per la campagna |
