@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: ' Assistenza Servizio Segmentazione Adobe Experience Platform'
 translation-type: tm+mt
-source-git-commit: 82067c3bfa6d80cd5f5dcc6644cdbcacbae85053
+source-git-commit: c5880153f4ba9a6518423985e42fb1b3b71cd862
 workflow-type: tm+mt
-source-wordcount: '111'
+source-wordcount: '112'
 ht-degree: 6%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 6%
    - [Introduzione](api/getting-started.md)
    - [Esportare i processi](api/export-jobs.md)
    - [Anteprime e stime](api/previews-and-estimates.md)
+   - [Pianificazioni](api/schedules.md)
    - [Definizioni dei segmenti](api/segment-definitions.md)
    - [Processi segmento](api/segment-jobs.md)
    - [Ricerca di segmenti](api/segment-search.md)
