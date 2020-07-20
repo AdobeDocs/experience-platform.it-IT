@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida per gli sviluppatori di Segmentation Service
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: c0eacfba2feea66803e63ed55ad9d0a97e9ae47c
+source-git-commit: aff81a4f3243ef77cbdfc776220a5de46e360084
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '305'
 ht-degree: 0%
 
 ---
@@ -44,52 +44,6 @@ Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali 
 >[!NOTE]
 >
 >Per ulteriori informazioni sull’utilizzo delle sandbox in [!DNL Experience Platform], consultate la documentazione [sulla panoramica delle](../../sandboxes/home.md)sandbox.
-
-<!-- ## Estimates
-
-Estimates provides statistical information for a segment definition, such as projected audience size and confidence interval. You can use the `/estimate` endpoint to view an estimate of a segment definition. 
-
-For more information on using this endpoint, please read the [estimates developer guide](./estimates.md). 
-
-## Export jobs
-
-Export jobs are asynchronous processes that are used to persist audience segment members to datasets. You can use the `/export/jobs` endpoint to retrieve all export jobs, create a new export job, retrieve details of a specific export job, or cancel a specific export job.
-
-For more information on using this endpoint, please read the [export jobs developer guide](./export-jobs.md).
-
-## Previews
-
-Previews provide a paginated list of qualifying profiles for a segment definition, allowing you to compare the results against what you expect. You can use the `/preview` endpoint to create a new preview job, look up results of a specific preview job, or delete a specific preview job.
-
-For more information on using this endpoint, please read the [previews developer guide](./previews.md).
-
-## PQL conversions
-
-Profile Query Language (PQL) conversions allows you to convert your formatting between `pql/text` and `pql/json`. You can do this by using the `/segment/conversion` endpoint.
-
-For more information on using this endpoint, please read the [PQL conversions developer guide](./pql-conversions.md).
-
-## Schedules
-
-Schedules are a tool that can be used to automatically run export jobs once a day. You can use the `/config/schedules` endpoint to retrieve a list of schedules, create a new schedule, retrieve details of a specific schedule, update a specific schedule, or delete a specific schedule. 
-
-For more information on using this endpoint, please read the [schedules developer guide](./schedules.md). -->
-
-## Definizioni dei segmenti
-
-Le definizioni dei segmenti definiscono quali profili faranno parte dei segmenti di pubblico. Puoi utilizzare l’ `/segment/definitions` endpoint per recuperare un elenco di definizioni di segmenti, creare una nuova definizione di segmento, recuperare dettagli di una definizione di segmento specifica, eliminare una definizione di segmento specifica o sovrascrivere i dettagli di una definizione di segmento specifica.
-
-Per ulteriori informazioni sull&#39;utilizzo di questo endpoint, consulta la guida [per gli sviluppatori delle definizioni dei](./segment-definitions.md)segmenti.
-
-## Processi segmento
-
-I processi di segmento hanno definito precedentemente le definizioni dei segmenti per generare un segmento di pubblico. Potete utilizzare l&#39; `/segment/jobs` endpoint per recuperare un elenco di processi di segmento, creare un nuovo processo di segmento, recuperare i dettagli di un processo di segmento specifico o eliminare un processo di segmento specifico.
-
-Per ulteriori informazioni sull&#39;utilizzo di questo endpoint, consultate la guida [per gli sviluppatori di processi di](./segment-jobs.md)segmento.
-
-## Ricerca di segmenti
-
-La ricerca dei segmenti viene utilizzata per cercare e indicizzare i campi configurabili contenuti in varie origini dati e restituirli in tempo quasi reale. Per iniziare a lavorare con la ricerca Segmento, consulta la guida per gli sviluppatori [di ricerche](segment-search.md)
 
 ## Passaggi successivi
 
