@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Pianificazioni
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 842f31aac2bdbf7e9f79e4ae7d4c36be1dc92392
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1171'
 ht-degree: 3%
 
 ---
 
 
-# Guida agli endpoint di pianificazione
+# Endpoint di pianificazione
 
 Le pianificazioni sono uno strumento che può essere utilizzato per eseguire automaticamente i processi di segmentazione batch una volta al giorno. Potete utilizzare l&#39; `/config/schedules` endpoint per recuperare un elenco di pianificazioni, creare una nuova pianificazione, recuperare i dettagli di una pianificazione specifica, aggiornare una pianificazione specifica o eliminare una pianificazione specifica.
 
