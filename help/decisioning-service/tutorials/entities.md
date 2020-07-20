@@ -355,7 +355,8 @@ La paging è controllata dai seguenti parametri:
 Il filtraggio dei risultati dell&#39;elenco è possibile e avviene indipendentemente dal meccanismo di paging. I filtri ignorano semplicemente le istanze nell&#39;ordine degli elenchi o chiedono esplicitamente di includere solo le istanze che soddisfano una determinata condizione. Un client può richiedere che l&#39;espressione della proprietà venga utilizzata come filtro oppure può specificare un elenco di URI da utilizzare come valori della chiave primaria delle istanze.
 
 - **`property`**: Contiene un percorso nome proprietà seguito da un operatore di confronto seguito da un valore. <br/>
-L&#39;elenco delle istanze restituite contiene quelle per le quali l&#39;espressione restituisce true. Ad esempio, se l&#39;istanza ha una proprietà payload `status` e i valori possibili sono `draft`, `approved`, `archived` , `deleted` il parametro query `property=_instance.status==approved` restituisce solo le istanze per le quali lo stato è approvato. <br/>
+L&#39;elenco delle istanze restituite contiene quelle per le quali l&#39;espressione restituisce true. Ad esempio, se l&#39;istanza ha una proprietà payload 
+`status` e i valori possibili sono `draft`, `approved`, `archived` , e `deleted` il parametro query `property=_instance.status==approved` restituisce solo le istanze per le quali lo stato è approvato. <br/>
 <br/>
 La proprietà da confrontare con il valore specificato è identificata come percorso. I singoli componenti del tracciato sono separati da `.`, come: `_instance.xdm:prop1.xdm:prop1_1.xdm:prop1_1_1`<br/>
 
