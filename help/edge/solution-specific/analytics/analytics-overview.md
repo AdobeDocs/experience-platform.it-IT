@@ -1,28 +1,28 @@
 ---
-title: Invio di dati ad Adobe Analytics
-seo-title: Invio di dati ad Adobe Analytics con Adobe Experience Platform Web SDK
-description: Scopri come inviare dati ad Adobe Analytics con l’SDK Web della piattaforma Experience
-seo-description: Scopri come inviare dati ad Adobe Analytics con l’SDK Web della piattaforma Experience
+title: Invio di dati ad Adobe  Analytics
+seo-title: Invio di dati ad Adobe  Analytics con  Adobe Experience Platform Web SDK
+description: Scopri come inviare dati ad Adobe  Analytics con  Experience Platform Web SDK
+seo-description: Scopri come inviare dati ad Adobe  Analytics con  Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 890004b54cb4daf08f188147ed5c97d56e4055fb
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
 
 
-# Invio di dati ad Adobe Analytics
+# Invio di dati ad Adobe  Analytics
 
-L’SDK Web di Adobe Experience Platform può inviare dati ad Adobe Analytics. Questo funziona traducendo `xdm` in un formato utilizzabile da Adobe Analytics.
+Il Adobe Experience Platform  [!DNL Web SDK] può inviare dati ad Adobe  Analytics. Questo funziona traducendo `xdm` in un formato utilizzabile da Adobe  Analytics.
 
 ## Configurazione
 
-Adobe Analytics raccoglie automaticamente i dati che stai inviando se hai una suite di rapporti mappata nell&#39;interfaccia utente di configurazione del cliente. Qui puoi mappare uno o più rapporti su una determinata configurazione. Una volta mappata una suite di rapporti, i dati inizieranno automaticamente a scorrere.
+Adobe  Analytics recupera automaticamente i dati che stai inviando se hai una suite di rapporti mappata nell&#39;interfaccia utente di configurazione del cliente. Qui puoi mappare uno o più rapporti su una determinata configurazione. Una volta mappata una suite di rapporti, i dati inizieranno automaticamente a scorrere.
 
 ## Dati mappati automaticamente
 
-Adobe Experience Platform Edge Network mappa automaticamente molte variabili XDM. L&#39;elenco completo delle variabili mappate automaticamente è elencato [qui](../analytics/automatically-mapped-vars.md).
+Il Adobe Experience Platform  mappa [!DNL Edge Network] automaticamente molte variabili XDM. L&#39;elenco completo delle variabili mappate automaticamente è elencato [qui](../analytics/automatically-mapped-vars.md).
 
 ## Dati mappati manualmente
 
