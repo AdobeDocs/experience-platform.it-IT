@@ -4,9 +4,9 @@ seo-title: Tracciamento  eventi SDK Web Adobe Experience Platform
 description: Scopri come tenere traccia  eventi SDK Web per Experience Platform
 seo-description: Scopri come tenere traccia  eventi SDK Web per Experience Platform
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Tracciamento degli eventi
 
-Per inviare i dati dell&#39;evento ad Adobe Experience Cloud, usa il `sendEvent` comando. Il `sendEvent` comando è il modo principale per inviare i dati all&#39;Experience Cloud  e per recuperare contenuti, identità e destinazioni personalizzate.
+Per inviare i dati dell&#39;evento ad Adobe Experience Cloud, usa il `sendEvent` comando. Il `sendEvent` comando è il modo principale per inviare i dati al [!DNL Experience Cloud]destinatario e per recuperare contenuti, identità e destinazioni personalizzate.
 
 I dati inviati ad Adobe Experience Cloud sono suddivisi in due categorie:
 
@@ -82,7 +82,7 @@ alloy("sendEvent", {
 
 ## Utilizzo dell&#39;API sendBeacon
 
-Può essere difficile inviare i dati dell&#39;evento subito prima che l&#39;utente della pagina Web se ne vada. Se la richiesta richiede troppo tempo, il browser potrebbe annullare la richiesta. Alcuni browser hanno implementato un&#39;API standard Web chiamata `sendBeacon` per consentire una raccolta più semplice dei dati durante questo periodo. Quando si utilizza `sendBeacon`, il browser effettua la richiesta Web nel contesto di navigazione globale. Questo significa che il browser esegue la richiesta del beacon in background e non blocca la navigazione della pagina. Per comunicare  Adobe Experience Platform SDK Web da utilizzare `sendBeacon`, aggiungere l&#39;opzione `"documentUnloading": true` al comando dell&#39;evento.  Ecco un esempio:
+Può essere difficile inviare i dati dell&#39;evento subito prima che l&#39;utente della pagina Web se ne vada. Se la richiesta richiede troppo tempo, il browser potrebbe annullare la richiesta. Alcuni browser hanno implementato un&#39;API standard Web chiamata `sendBeacon` per consentire una raccolta più semplice dei dati durante questo periodo. Quando si utilizza `sendBeacon`, il browser effettua la richiesta Web nel contesto di navigazione globale. Questo significa che il browser esegue la richiesta del beacon in background e non blocca la navigazione della pagina. Per indicare  Adobe Experience Platform [!DNL Web SDK] da utilizzare `sendBeacon`, aggiungere l&#39;opzione `"documentUnloading": true` al comando dell&#39;evento.  Ecco un esempio:
 
 ```javascript
 alloy("sendEvent", {
@@ -100,7 +100,7 @@ alloy("sendEvent", {
 });
 ```
 
-I browser hanno imposto limiti alla quantità di dati che possono essere inviati `sendBeacon` contemporaneamente. In molti browser, il limite è 64 K. Se il browser rifiuta l&#39;evento perché il payload è troppo grande,  Adobe Experience Platform Web SDK torna a utilizzare il suo metodo di trasporto normale (ad esempio, fetch).
+I browser hanno imposto limiti alla quantità di dati che possono essere inviati `sendBeacon` contemporaneamente. In molti browser, il limite è 64 K. Se il browser rifiuta l&#39;evento perché il payload è troppo grande,  Adobe Experience Platform [!DNL Web SDK] torna a utilizzare il normale metodo di trasporto (ad esempio, fetch).
 
 ## Gestione delle risposte dagli eventi
 
