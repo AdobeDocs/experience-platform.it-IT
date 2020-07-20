@@ -4,9 +4,9 @@ seo-title: Unione dei dati evento Web SDK  Adobe Experience Platform
 description: Scoprite come unire  dati evento Experience Platform Web SDK
 seo-description: Scoprite come unire  dati evento Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '408'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ alloy("sendEvent", {
 });
 ```
 
-Trasmettendo lo stesso `eventMergeID` valore a entrambi i comandi dell&#39;evento in questo esempio, i dati nel secondo comando dell&#39;evento vengono incrementati ai dati precedentemente inviati sul primo comando dell&#39;evento. Un record per ciascun comando di evento viene creato nell’Platform dei dati esperienza, ma durante il reporting i record vengono uniti utilizzando il comando `eventMergeID` e visualizzati come un singolo evento.
+Trasmettendo lo stesso `eventMergeID` valore a entrambi i comandi dell&#39;evento in questo esempio, i dati nel secondo comando dell&#39;evento vengono incrementati ai dati precedentemente inviati sul primo comando dell&#39;evento. Un record per ciascun comando evento viene creato nel [!DNL Experience Data Platform], ma durante il reporting i record vengono uniti utilizzando il comando `eventMergeID` e visualizzati come un singolo evento.
 
 Se inviate dati su un particolare evento a fornitori terzi, potete includere anche gli stessi dati `eventMergeID` con tali dati. Successivamente, se si sceglie di importare dati di terze parti nel Adobe Experience Platform , `eventMergeID` verrà utilizzato per unire tutti i dati raccolti a seguito dell&#39;evento discreto che si è verificato sulla pagina Web.
 
