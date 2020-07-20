@@ -4,9 +4,9 @@ seo-title: ' Adobe Experience Platform Web SDK Rendering del contenuto personali
 description: Scopri come eseguire il rendering del contenuto personalizzato con  Experience Platform Web SDK
 seo-description: Scopri come eseguire il rendering del contenuto personalizzato con  Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Panoramica delle opzioni di personalizzazione
 
-L&#39;SDK Web per  Adobe Experience Platform supporta la query delle soluzioni di personalizzazione in Adobe, incluso  Adobe Target. Esistono due modalità di personalizzazione: recupero del contenuto che può essere rappresentato automaticamente e del contenuto di cui lo sviluppatore deve eseguire il rendering. L’SDK fornisce inoltre le strutture per [gestire lo sfarfallio](../../edge/solution-specific/target/flicker-management.md).
+Il Adobe Experience Platform  [!DNL Web SDK] supporta la query delle soluzioni di personalizzazione in Adobe, incluso  Adobe Target. Esistono due modalità di personalizzazione: recupero del contenuto che può essere rappresentato automaticamente e del contenuto di cui lo sviluppatore deve eseguire il rendering. L’SDK fornisce inoltre le strutture per [gestire lo sfarfallio](../../edge/solution-specific/target/flicker-management.md).
 
 ## Rendering automatico del contenuto
 
@@ -92,7 +92,7 @@ Questo restituirà un elenco di decisioni come oggetto JSON per ogni decisione.
 
 >[!TIP]
 >
-> Se usi gli ambiti Target diventano mBox sul server, solo queste sono tutte richieste contemporaneamente anziché singolarmente. La mbox globale viene sempre inviata.
+> Se utilizzi [!DNL Target] scope per diventare mBox sul server, solo queste sono tutte richieste contemporaneamente anziché singolarmente. La mbox globale viene sempre inviata.
 
 ### Recupera contenuto automatico
 
