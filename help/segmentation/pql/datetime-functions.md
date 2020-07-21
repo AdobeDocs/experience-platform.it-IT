@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funzioni di data e ora
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '468'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # Funzioni di data e ora
 
-Le funzioni di data e ora sono utilizzate per eseguire operazioni di data e ora sui valori all&#39;interno del linguaggio PQL (Profile Query Language). Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella panoramica [Lingua query](./overview.md)profilo.
+Le funzioni di data e ora sono utilizzate per eseguire operazioni di data e ora sui valori all&#39;interno di [!DNL Profile Query Language] (PQL). Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella panoramica [Lingua query](./overview.md)profilo.
 
 ## Mese corrente
 
