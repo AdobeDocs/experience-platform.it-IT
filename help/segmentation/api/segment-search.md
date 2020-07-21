@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Endpoint di ricerca del segmento
 topic: guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1138'
 ht-degree: 2%
 
 ---
@@ -225,7 +225,7 @@ Dopo aver letto questa guida è ora possibile comprendere meglio il funzionament
 
 ## Appendice {#appendix}
 
-Le sezioni seguenti forniscono informazioni aggiuntive sul funzionamento dei termini di ricerca. Le query di ricerca vengono scritte nel modo seguente: `s={FieldName}:{SearchExpression}`. Per cercare, ad esempio, un segmento denominato AAM o Platform, si utilizza la seguente query di ricerca: `s=segmentName:AAM%20OR%20Platform`.
+Le sezioni seguenti forniscono informazioni aggiuntive sul funzionamento dei termini di ricerca. Le query di ricerca vengono scritte nel modo seguente: `s={FieldName}:{SearchExpression}`. Per cercare, ad esempio, un segmento denominato AAM o [!DNL Platform], si utilizza la seguente query di ricerca: `s=segmentName:AAM%20OR%20Platform`.
 
 > !![NOTE] Per le procedure ottimali, l&#39;espressione di ricerca deve essere codificata in HTML, come nell&#39;esempio riportato sopra.
 
