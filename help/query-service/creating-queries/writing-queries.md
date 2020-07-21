@@ -4,27 +4,27 @@ solution: Experience Platform
 title: Scrittura di query
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '643'
 ht-degree: 1%
 
 ---
 
 
-# Guida generale per l&#39;esecuzione delle query in Query Service
+# Guida generale per l&#39;esecuzione delle query in [!DNL Query Service]
 
-In questo documento vengono forniti dettagli importanti da conoscere durante la scrittura di query in  Adobe Experience Platform Query Service.
+In questo documento sono riportati dettagli importanti da conoscere durante la scrittura di query in  Adobe Experience Platform [!DNL Query Service].
 
-Per informazioni dettagliate sulla sintassi SQL utilizzata in Query Service, consultate la documentazione [sulla sintassi](../sql/syntax.md)SQL.
+Per informazioni dettagliate sulla sintassi SQL utilizzata in [!DNL Query Service], consultate la documentazione [sulla sintassi](../sql/syntax.md)SQL.
 
 ## Modelli di esecuzione delle query
 
- Adobe Experience Platform Query Service ha due modelli di esecuzione della query: interattivo e non interattivo. L&#39;esecuzione interattiva viene utilizzata per lo sviluppo di query e la generazione di report in strumenti di business intelligence, mentre quella non interattiva viene utilizzata per processi e query operative più grandi come parte di un flusso di lavoro di elaborazione dati.
+ Adobe Experience Platform [!DNL Query Service] dispone di due modelli di esecuzione delle query: interattivo e non interattivo. L&#39;esecuzione interattiva viene utilizzata per lo sviluppo di query e la generazione di report in strumenti di business intelligence, mentre quella non interattiva viene utilizzata per processi e query operative più grandi come parte di un flusso di lavoro di elaborazione dati.
 
 ### Esecuzione di query interattive
 
-Le query possono essere eseguite in modo interattivo inviandole tramite l&#39;interfaccia utente del servizio query o [tramite un client](../clients/overview.md)connesso. Quando si esegue Query Service tramite un client connesso, una sessione attiva viene eseguita tra il client e il servizio Query fino a quando la query inviata non viene restituita o non si verifica un timeout.
+Le query possono essere eseguite in modo interattivo inviandole tramite l&#39; [!DNL Query Service] interfaccia utente o [tramite un client](../clients/overview.md)connesso. Quando si esegue [!DNL Query Service] attraverso un client connesso, una sessione attiva viene eseguita tra il client e [!DNL Query Service] fino a quando la query inviata non viene restituita o non scade.
 
 L&#39;esecuzione della query interattiva presenta le seguenti limitazioni:
 
@@ -38,11 +38,11 @@ L&#39;esecuzione della query interattiva presenta le seguenti limitazioni:
 >
 >Per ignorare il limite massimo di righe, includi `LIMIT 0` nella query. È ancora valido il timeout della query di 10 minuti.
 
-Per impostazione predefinita, i risultati delle query interattive vengono restituiti al client e **non** sono persistenti. Per mantenere i risultati come dataset in  Experience Platform, la query deve utilizzare la `CREATE TABLE AS SELECT` sintassi.
+Per impostazione predefinita, i risultati delle query interattive vengono restituiti al client e **non** sono persistenti. Per mantenere i risultati come dataset in [!DNL Experience Platform], la query deve utilizzare la `CREATE TABLE AS SELECT` sintassi.
 
 ### Esecuzione query non interattiva
 
-Le query inviate tramite l&#39;API del servizio query vengono eseguite in modo non interattivo. L’esecuzione non interattiva indica che il servizio query riceve la chiamata API ed esegue la query nell’ordine in cui viene ricevuta. Le query non interattive generano sempre un nuovo dataset in  Experience Platform per ricevere i risultati, oppure l&#39;inserimento di nuove righe in un dataset esistente.
+Le query inviate tramite l&#39; [!DNL Query Service] API vengono eseguite in modo non interattivo. L’esecuzione non interattiva indica che [!DNL Query Service] riceve la chiamata API ed esegue la query nell’ordine in cui viene ricevuta. Le query non interattive generano sempre un nuovo dataset [!DNL Experience Platform] per ricevere i risultati, oppure l&#39;inserimento di nuove righe in un dataset esistente.
 
 ## Accesso a un campo specifico all&#39;interno di un oggetto
 
@@ -189,4 +189,4 @@ Le virgolette posteriori **non** sono necessarie se si utilizza la notazione tra
 
 ## Passaggi successivi
 
-Leggendo questo documento, sono state introdotte alcune considerazioni importanti durante la scrittura di query con Query Service. Per ulteriori informazioni sull&#39;utilizzo della sintassi SQL per scrivere le proprie query, consultare la documentazione [sulla sintassi](../sql/syntax.md)SQL.
+Leggendo questo documento, sono state introdotte alcune considerazioni importanti durante la scrittura di query tramite [!DNL Query Service]. Per ulteriori informazioni sull&#39;utilizzo della sintassi SQL per scrivere le proprie query, consultare la documentazione [sulla sintassi](../sql/syntax.md)SQL.
