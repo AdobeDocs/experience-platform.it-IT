@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Creare un dataset
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a25ca22fb8ec9eb95f74e4fd76a7f18e87343085
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '86'
+ht-degree: 4%
 
 ---
 
 
 # Creare un batch
 
-Affinché un dataset possa acquisire i dati, deve essere associato a un batch. Utilizzando il `id` valore di un set di dati esistente, potete creare un batch effettuando una richiesta POST all’ `/batches` endpoint nell’API Catalog.
+Affinché un dataset possa acquisire i dati, deve essere associato a un batch. Utilizzando il `id` valore di un set di dati esistente, potete creare un batch effettuando una richiesta POST all&#39; `/batches` endpoint nell&#39; [!DNL Catalog] API.
 
 **Formato API**
 
