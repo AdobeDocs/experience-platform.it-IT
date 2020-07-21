@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Panoramica sull'accesso ai dati
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '1367'
-ht-degree: 2%
+source-wordcount: '1332'
+ht-degree: 3%
 
 ---
 
 
-# Dati del set di query tramite API Data Access
+# Dati del set di query tramite [!DNL Data Access] API
 
-Questo documento fornisce un&#39;esercitazione passo-passo che illustra come individuare, accedere e scaricare i dati memorizzati in un dataset utilizzando l&#39;API di accesso ai dati in  Adobe Experience Platform. Verranno inoltre introdotte alcune delle caratteristiche uniche dell&#39;API di accesso ai dati, come il paging e i download parziali.
+Questo documento fornisce un&#39;esercitazione passo-passo che illustra come individuare, accedere e scaricare i dati memorizzati all&#39;interno di un dataset utilizzando l&#39; [!DNL Data Access] API in  Adobe Experience Platform. Verranno inoltre introdotte alcune delle caratteristiche uniche dell&#39; [!DNL Data Access] API, come il paging e i download parziali.
 
 ## Introduzione
 
@@ -24,23 +24,23 @@ Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario cono
 
 ### Lettura di chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi di  Experience Platform.
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla [!DNL Experience Platform] risoluzione dei problemi.
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle API Platform, è prima necessario completare l&#39;esercitazione [di](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API Experience Platform, come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in  Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API Platform richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in Platform, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+>Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva:
 
@@ -48,23 +48,23 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 ## Diagramma della sequenza
 
-Questa esercitazione segue i passaggi descritti nel diagramma di sequenza seguente, evidenziando le funzionalità di base dell&#39;API di accesso ai dati.</br>
+Questa esercitazione segue i passaggi descritti nel diagramma di sequenza seguente, evidenziando le funzionalità di base dell&#39; [!DNL Data Access] API.</br>
 ![](../images/sequence_diagram.png)
 
-L&#39;API Catalog consente di recuperare informazioni relative a batch e file. L&#39;API di accesso ai dati consente di accedere e scaricare questi file via HTTP come download completi o parziali, a seconda delle dimensioni del file.
+L&#39; [!DNL Catalog] API consente di recuperare informazioni relative a batch e file. L&#39; [!DNL Data Access] API consente di accedere e scaricare questi file via HTTP come download completi o parziali, a seconda delle dimensioni del file.
 
 ## Individuare i dati
 
-Prima di poter iniziare a utilizzare l&#39;API di accesso ai dati, è necessario identificare la posizione dei dati a cui si desidera accedere. Nell&#39;API Catalog sono disponibili due endpoint che potete utilizzare per sfogliare i metadati di un&#39;organizzazione e recuperare l&#39;ID di un batch o di un file a cui desiderate accedere:
+Prima di iniziare a utilizzare l&#39; [!DNL Data Access] API, è necessario identificare la posizione dei dati a cui si desidera accedere. Nell&#39; [!DNL Catalog] API, sono disponibili due endpoint da utilizzare per esplorare i metadati di un&#39;organizzazione e recuperare l&#39;ID di un batch o di un file a cui si desidera accedere:
 
 - `GET /batches`: Restituisce un elenco di batch all&#39;interno dell&#39;organizzazione
 - `GET /dataSetFiles`: Restituisce un elenco di file nell&#39;organizzazione
 
-Per un elenco completo degli endpoint nell&#39;API Catalog, fate riferimento a Riferimento [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)API.
+Per un elenco completo degli endpoint nell&#39; [!DNL Catalog] API, fate riferimento a [API Reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
 
 ## Recupera un elenco di batch nell&#39;organizzazione IMS
 
-Utilizzando l’API Catalog, potete restituire un elenco di batch nell’organizzazione:
+Utilizzando l&#39; [!DNL Catalog] API, potete restituire un elenco di batch all&#39;interno dell&#39;organizzazione:
 
 **Formato API**
 
@@ -195,7 +195,7 @@ Un elenco completo di parametri e filtri si trova nel riferimento [API](https://
 
 ## Recuperare un elenco di tutti i file appartenenti a un particolare batch
 
-Ora che disponete dell&#39;ID del batch a cui desiderate accedere, potete utilizzare l&#39;API di accesso ai dati per ottenere un elenco di file appartenenti a tale batch.
+Ora che disponete dell&#39;ID del batch a cui desiderate accedere, potete utilizzare l&#39; [!DNL Data Access] API per ottenere un elenco di file appartenenti a tale batch.
 
 **Formato API**
 
@@ -252,7 +252,7 @@ La risposta contiene un array di dati che elenca tutti i file all&#39;interno de
 
 ## Accesso a un file con un ID file
 
-Una volta ottenuto un ID file univoco, è possibile utilizzare l&#39;API di accesso ai dati per accedere ai dettagli specifici sul file, incluso il nome, la dimensione in byte e un collegamento per scaricarlo.
+Una volta ottenuto un ID file univoco, potete utilizzare l&#39; [!DNL Data Access] API per accedere ai dettagli specifici sul file, incluso il nome, la dimensione in byte e un collegamento per scaricarlo.
 
 **Formato API**
 
@@ -385,7 +385,7 @@ Le intestazioni di risposta contengono i metadati del file interrogato, compresi
 
 ## Accesso al contenuto di un file
 
-È inoltre possibile accedere al contenuto di un file utilizzando l&#39;API di accesso ai dati.
+Potete inoltre accedere al contenuto di un file utilizzando l&#39; [!DNL Data Access] API.
 
 **Formato API**
 
@@ -414,7 +414,7 @@ Una risposta corretta restituisce il contenuto del file.
 
 ## Scaricare contenuti parziali di un file
 
-L&#39;API di accesso ai dati consente di scaricare i file in blocchi. È possibile specificare un&#39;intestazione di intervallo durante una `GET /files/{FILE_ID}` richiesta per scaricare un intervallo specifico di byte da un file. Se l&#39;intervallo non è specificato, l&#39;API scaricherà l&#39;intero file per impostazione predefinita.
+L&#39; [!DNL Data Access] API consente di scaricare i file in blocchi. È possibile specificare un&#39;intestazione di intervallo durante una `GET /files/{FILE_ID}` richiesta per scaricare un intervallo specifico di byte da un file. Se l&#39;intervallo non è specificato, l&#39;API scaricherà l&#39;intero file per impostazione predefinita.
 
 L&#39;esempio HEAD nella sezione [](#retrieve-the-metadata-of-a-file) precedente indica la dimensione di un file specifico in byte.
 
@@ -454,7 +454,7 @@ Il corpo della risposta include i primi 100 byte del file (come specificato dall
 
 ## Configurare l&#39;impaginazione delle risposte API
 
-Le risposte all&#39;interno dell&#39;API di accesso ai dati sono impaginate. Per impostazione predefinita, il numero massimo di voci per pagina è 100. I parametri di paging possono essere utilizzati per modificare il comportamento predefinito.
+Le risposte all&#39;interno dell&#39; [!DNL Data Access] API sono impaginate. Per impostazione predefinita, il numero massimo di voci per pagina è 100. I parametri di paging possono essere utilizzati per modificare il comportamento predefinito.
 
 - `limit`: Potete specificare il numero di voci per pagina in base alle vostre esigenze utilizzando il parametro &quot;limit&quot;.
 - `start`: L&#39;offset può essere impostato dal parametro di query &quot;start&quot;.
