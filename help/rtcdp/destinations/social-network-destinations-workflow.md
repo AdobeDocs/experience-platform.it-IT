@@ -4,9 +4,9 @@ seo-title: Flusso di lavoro destinazioni social network
 description: Istruzioni per la connessione agli account degli annunci social network
 seo-description: Istruzioni per la connessione agli account degli annunci social network
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '435'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## Flusso di lavoro per creare destinazioni social network
 
-Questa esercitazione utilizza Facebook come esempio, ma il flusso di lavoro in Adobe Real-time Customer Data Platform sarà lo stesso per tutte le destinazioni dei social network, una volta aggiunto di nuovo al prodotto.
+Questa esercitazione viene utilizzata [!DNL Facebook] come esempio, ma il flusso di lavoro in Adobe Real-time Customer Data Platform sarà lo stesso per tutte le destinazioni dei social network, una volta aggiunto di nuovo al prodotto.
 
 1. In **[!UICONTROL Destinations > Catalog]**, scorrete fino alla **[!UICONTROL Social]** categoria. Seleziona la destinazione preferita del social network, quindi seleziona **[!UICONTROL Connect destination]**.
 
@@ -39,7 +39,7 @@ Questa esercitazione utilizza Facebook come esempio, ma il flusso di lavoro in A
    >[!IMPORTANT]
    >
    > * Il caso d’uso marketing *Single Identity Personalization (Personalizzazione identità* singola) è selezionato per impostazione predefinita per le destinazioni dei social network e non può essere rimosso.
-   > * Destinazioni Facebook. **[!UICONTROL Account ID]** è l&#39;ID del tuo account pubblicitario Facebook. Puoi trovare questo ID in Facebook Ads Manager. Aggiungi l’ID con il prefisso `act_` indicato di seguito:
+   > * Per [!DNL Facebook] le destinazioni. **[!UICONTROL Account ID]** è tuo [!DNL Facebook Ad Account ID]. Puoi trovare questo ID nel [!DNL Facebook Ads Manager]. Aggiungi l’ID con il prefisso `act_` indicato di seguito:
 
 
    ![Connessione alla destinazione social network - passaggio di configurazione](/help/rtcdp/destinations/assets/social-networks-setup-step.png)
