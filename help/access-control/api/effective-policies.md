@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visualizza criteri efficaci
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '262'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Visualizza criteri efficaci
 
-Per visualizzare i criteri effettivi per l&#39;utente corrente, effettuate una richiesta POST all&#39; `/acl/effective-policies` endpoint nell&#39;API di controllo di accesso. Le autorizzazioni e i tipi di risorse che si desidera recuperare devono essere forniti nel payload della richiesta sotto forma di array. Questo è dimostrato nella chiamata API di esempio riportata di seguito.
+Per visualizzare i criteri effettivi per l&#39;utente corrente, effettuate una richiesta POST all&#39; `/acl/effective-policies` endpoint nell&#39; [!DNL Access Control] API. Le autorizzazioni e i tipi di risorse che si desidera recuperare devono essere forniti nel payload della richiesta sotto forma di array. Questo è dimostrato nella chiamata API di esempio riportata di seguito.
 
 **Formato API**
 
@@ -24,7 +24,7 @@ POST /acl/effective-policies
 
 **Richiesta**
 
-Le seguenti richieste recuperano informazioni sull&#39;autorizzazione &quot;Gestisci set di dati&quot; e sull&#39;accesso al tipo di risorsa &quot;schemi&quot; per l&#39;utente corrente.
+Le seguenti richieste recuperano informazioni sull&#39;autorizzazione &quot;[!UICONTROL Manage Datasets]&quot; e l&#39;accesso al tipo di risorsa &quot;[!UICONTROL schemas]&quot; per l&#39;utente corrente.
 
 ```shell
 curl -X POST \
@@ -65,11 +65,11 @@ Una risposta corretta restituisce informazioni sulle autorizzazioni e i tipi di 
 
 ## Passaggi successivi
 
-In questo documento è stato illustrato come effettuare chiamate all&#39;API di controllo degli accessi per restituire informazioni sulle autorizzazioni attive e sui criteri correlati per i tipi di risorse. Per ulteriori informazioni sul controllo degli accessi per  Experience Platform, consultate la panoramica [sul controllo](../home.md)degli accessi.
+In questo documento è stato illustrato come effettuare chiamate all&#39; [!DNL Access Control] API per restituire informazioni sulle autorizzazioni attive e sui criteri correlati per i tipi di risorse. Per ulteriori informazioni sul controllo degli accessi per [!DNL Experience Platform], consultate la panoramica [sul controllo](../home.md)degli accessi.
 
 ## Appendice
 
-Questa sezione fornisce informazioni supplementari per l&#39;utilizzo dell&#39;API di controllo di accesso.
+Questa sezione fornisce informazioni supplementari per l&#39;utilizzo dell&#39; [!DNL Access Control] API.
 
 ### Autorizzazioni accettate e tipi di risorse
 
