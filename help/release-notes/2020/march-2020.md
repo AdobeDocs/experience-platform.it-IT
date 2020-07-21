@@ -6,9 +6,9 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '848'
 ht-degree: 5%
 
 ---
@@ -20,17 +20,17 @@ ht-degree: 5%
 
 Aggiornamenti alle funzionalità esistenti in  Adobe Experience Platform:
 
-* [Governance dei dati](#governance)
-* [Ingestione dati](#ingestion)
-* [Destinazioni](#destinations)
-* [Servizio identità](#identity)
-* [Origini](#sources)
+* [!DNL Data Governance](#governance)
+* [!DNL Data Ingestion](#ingestion)
+* [!DNL Destinations](#destinations)
+* [!DNL Identity Service](#identity)
+* [!DNL Sources](#sources)
 
-## Governance dei dati {#governance}
+## [!DNL Data Governance] {#governance}
 
- Experience Platform consente alle aziende di unire i dati provenienti da più sistemi aziendali per consentire ai professionisti del marketing di identificare, comprendere e coinvolgere meglio i clienti.  Experience Platform include un&#39;infrastruttura completa per la gestione dei dati, inclusa l&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati (DULE), per garantire l&#39;uso corretto dei dati all&#39;interno di Platform e quando vengono condivisi tra i sistemi.
+[!DNL Experience Platform] consente alle aziende di unire i dati provenienti da più sistemi aziendali per consentire agli addetti al marketing di identificare, comprendere e coinvolgere meglio i clienti. [!DNL Experience Platform] include un&#39;infrastruttura completa per la gestione dei dati, inclusa l&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati (DULE), per garantire l&#39;uso corretto dei dati all&#39;interno [!DNL Platform] e quando vengono condivisi tra sistemi.
 
- Adobe Experience Platform Data Governance è una serie di strategie e tecnologie utilizzate per gestire i dati dei clienti e garantire la conformità a normative, restrizioni e criteri applicabili all&#39;utilizzo dei dati. Esso svolge un ruolo chiave all&#39;interno  Experience Platform a vari livelli, tra cui catalogazione, line-up di dati, etichettatura dell&#39;uso dei dati, criteri di accesso ai dati e controllo dell&#39;accesso ai dati per le azioni di marketing.
+ Adobe Experience Platform [!DNL Data Governance] è una serie di strategie e tecnologie utilizzate per gestire i dati dei clienti e garantire la conformità a normative, restrizioni e criteri applicabili all&#39;utilizzo dei dati. Esso svolge un ruolo chiave a vari livelli, [!DNL Experience Platform] tra cui catalogazione, linea di dati, etichettatura dell&#39;utilizzo dei dati, criteri di accesso ai dati e controllo dell&#39;accesso ai dati per le azioni di marketing.
 
 **Nuove funzionalità**
 
@@ -40,19 +40,19 @@ Aggiornamenti alle funzionalità esistenti in  Adobe Experience Platform:
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Applicazione automatizzata dei criteri di utilizzo dei dati per l&#39;Platform dati cliente in tempo reale | I criteri di utilizzo dei dati vengono ora applicati nel flusso di lavoro per l&#39;attivazione dei dati alle destinazioni. La governance dei dati è inoltre incorporata e applicata quando si apportano modifiche che interessano le attivazioni esistenti (come modifiche alle etichette dei set di dati, criteri di unione, definizioni dei segmenti e altri). |
+| Applicazione automatizzata dei criteri di utilizzo dei dati per [!DNL Real-time Customer Data Platform] | I criteri di utilizzo dei dati vengono ora applicati nel flusso di lavoro per l&#39;attivazione dei dati alle destinazioni. [!DNL Data Governance] viene inoltre incorporato e applicato quando si apportano modifiche che interessano le attivazioni esistenti (come modifiche alle etichette dei set di dati, criteri di unione, definizioni dei segmenti e altri). |
 | Linea di dati per l&#39;applicazione | Quando un criterio di utilizzo dei dati viene violato in CDP in tempo reale, l&#39;interfaccia utente visualizza una notifica che contiene informazioni sulla linea di dati per aiutare l&#39;utente a capire perché i criteri sono stati violati e cosa possono fare per risolvere la violazione. |
 
 
 **Problemi noti**
 
-* None
+* Nessuna
 
-Per ulteriori informazioni sulla governance dei dati, consulta la panoramica [sulla governance dei](../../data-governance/home.md)dati.
+Per ulteriori informazioni su [!DNL Data Governance]di esso, consulta la panoramica sulla governance dei [dati](../../data-governance/home.md).
 
 ## Ingestione dati {#ingestion}
 
- Adobe Experience Platform offre un set completo di funzioni per acquisire qualsiasi tipo e latenza di dati. &#39;inserimento dei dati di Adobe Experience Platform offre diverse alternative per l&#39;assimilazione dei dati, tra cui API Batch, API Streaming, connettori Adobe nativi, partner per l&#39;integrazione dei dati o l&#39;interfaccia utente del Adobe Experience Platform .
+ Adobe Experience Platform offre un set completo di funzioni per acquisire qualsiasi tipo e latenza di dati.  Adobe Experience Platform [!DNL Data Ingestion] offre diverse alternative per l’assimilazione dei dati, tra cui API Batch, API Streaming, connettori Adobe nativi, partner per l’integrazione dei dati o l’interfaccia utente del Adobe Experience Platform .
 
 **Nuove funzionalità**
 
@@ -62,7 +62,7 @@ Per ulteriori informazioni sulla governance dei dati, consulta la panoramica [su
 
 **Problemi noti**
 
-* None
+* Nessuna
 
 Per ulteriori informazioni sull’assimilazione dei dati in Platform, consulta la documentazione [sull’inserimento dei](../../ingestion/home.md)dati.
 
@@ -77,34 +77,34 @@ Sono disponibili nuove destinazioni in cui è possibile attivare i dati  Adobe E
 
 | Destinazione | Descrizione |
 |--- | ---|
-| Destinazioni di archiviazione cloud | Adobe Real-time CDP è ora in grado di inviare i segmenti come file di dati alle posizioni di archiviazione cloud Amazon S3 o SFTP. Questo consente di inviare audience e i relativi attributi di profilo ai sistemi interni, tramite file CSV o delimitati da tabulazioni. |
-| Destinazioni pubblicitarie | La scheda di destinazione Google ora è divisa in tre schede di destinazione, per le tre diverse piattaforme Google attualmente supportate in Adobe Real-time CDP: Google Ads, Google Ad Manager, Google Display &amp; Video 360. |
+| Destinazioni di archiviazione cloud | Adobe Real-time CDP ora può distribuire i segmenti come file di dati alle posizioni di archiviazione cloud SFTP [!DNL Amazon S3] o di archiviazione. Questo consente di inviare audience e i relativi attributi di profilo ai sistemi interni, tramite file CSV o delimitati da tabulazioni. |
+| Destinazioni pubblicitarie | La scheda di [!DNL Google] destinazione è ora divisa in tre schede di destinazione, per le tre diverse [!DNL Google] piattaforme attualmente supportate in Adobe Real-time CDP: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display &amp; Video 360. |
 
 Per saperne di più, visita la panoramica [delle destinazioni](../../rtcdp/destinations/destinations-overview.md)
 
-## Servizio identità {#identity}
+## [!DNL Identity Service] {#identity}
 
 Fornire esperienze digitali rilevanti richiede una comprensione completa del cliente. Ciò è reso più difficile quando i dati del cliente sono frammentati in sistemi diversi, causando l&#39;apparenza di più &quot;identità&quot; per ogni singolo cliente.
 
- Adobe Experience Platform Identity Service ti aiuta a ottenere una visione migliore del tuo cliente e del suo comportamento attraverso il collegamento di identità tra dispositivi e sistemi, per offrire esperienze digitali personali e di forte impatto in tempo reale.
+ Adobe Experience Platform [!DNL Identity Service] consente di acquisire una visione migliore del cliente e del suo comportamento, collegando le identità tra dispositivi e sistemi, per offrire esperienze digitali personali e di forte impatto in tempo reale.
 
 **Nuove funzionalità**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Grafico privato avanzato | La funzionalità di Grafico privato è stata migliorata per ridurre la latenza di generazione del grafico da un processo batch settimanale a un grafico aggiornato ogni giorno, consentendo ai clienti del Servizio identità di accedere a grafici e collegamenti di identità più aggiornati. |
+| Grafico privato avanzato | La funzionalità Private Graph è stata migliorata per ridurre la latenza di generazione del grafico da un processo batch settimanale a un grafico aggiornato ogni giorno, consentendo [!DNL Identity Service] ai clienti di accedere a grafici e collegamenti di identità più aggiornati. |
 
 **Problemi noti**
 
-* None
+* Nessuna
 
-Per ulteriori informazioni sul servizio identità, consulta la panoramica [del servizio](../../identity-service/home.md)identità.
+Per ulteriori informazioni su [!DNL Identity Service]di esso, consulta la panoramica [del servizio](../../identity-service/home.md)identità.
 
 ## Origini {#sources}
 
- Adobe Experience Platform può acquisire dati da origini esterne e allo stesso tempo strutturarli, etichettarli e ottimizzarli utilizzando i servizi Platform. È possibile acquisire dati da origini diverse, come applicazioni Adobe, archiviazione basata su cloud, software di terze parti e il sistema CRM in uso.
+ Adobe Experience Platform può acquisire dati da origini esterne consentendo al contempo di strutturare, etichettare e migliorare i dati utilizzando [!DNL Platform] i servizi. È possibile acquisire dati da origini diverse, come applicazioni Adobe, archiviazione basata su cloud, software di terze parti e il sistema CRM in uso.
 
- Experience Platform fornisce un&#39;API RESTful e un&#39;interfaccia utente interattiva che consente di impostare connessioni sorgente per vari provider di dati con facilità. Queste connessioni di origine consentono di autenticare e connettersi a sistemi di storage e servizi CRM esterni, impostare i tempi per l&#39;esecuzione dell&#39;assimilazione e gestire il throughput di assimilazione dei dati.
+[!DNL Experience Platform] fornisce un&#39;API RESTful e un&#39;interfaccia utente interattiva che consente di impostare connessioni sorgente per vari provider di dati con facilità. Queste connessioni di origine consentono di autenticare e connettersi a sistemi di storage e servizi CRM esterni, impostare i tempi per l&#39;esecuzione dell&#39;assimilazione e gestire il throughput di assimilazione dei dati.
 
 **Nuove funzionalità**
 
@@ -112,13 +112,13 @@ Per ulteriori informazioni sul servizio identità, consulta la panoramica [del s
 | ------- | ----------- |
 | Segnali obsoleti per  connettore Adobe Audience Manager | I dati a livello di segnale di Audience Manager non verranno più inviati. Si noti che l&#39;appartenenza al segmento per le caratteristiche e i segmenti sarà ancora inclusa. In seguito a questa modifica, i set di dati in entrata non saranno più generati. |
 | Set di dati rinominati | I set di dati generati dal connettore Audience Manager avranno nomi e descrizioni aggiornati. |
-| Attiva/disattiva profilo in Audience Manager | L&#39;attivazione o la disattivazione del profilo per promuovere il dataset nel profilo cliente in tempo reale. Per impostazione predefinita, Attiva/Disattiva è attivato. |
-| Supporto dell&#39;interfaccia utente per i sistemi di storage cloud | Nuovo connettore di origine per Azure Data Lake Storage Gen2 nell&#39;interfaccia utente. |
-| Supporto dell&#39;interfaccia utente per i sistemi CRM | Nuovo connettore sorgente per HubSpot, Salesforce Service Cloud e ServiceNow nell’interfaccia utente. |
-| Supporto dell&#39;interfaccia utente per i sistemi di database | Nuovo connettore di origine per AWS Redshift, Google BigQuery, MariaDB, Microsoft SQL Server e MySQL nell&#39;interfaccia utente. |
+| Attiva/ [!DNL Profile] Disattiva in Audience Manager | [!DNL Profile] è possibile abilitare o disabilitare l&#39;attivazione o la disattivazione del set di dati per promuoverlo in [!DNL Real-time Customer Profile]. Per impostazione predefinita, Attiva/Disattiva è attivato. |
+| Supporto dell&#39;interfaccia utente per i sistemi di storage cloud | Nuovo connettore sorgente per [!DNL Azure Data Lake Storage Gen2] l’interfaccia utente. |
+| Supporto dell&#39;interfaccia utente per i sistemi CRM | Nuovo connettore sorgente per [!DNL HubSpot], [!DNL Salesforce Service Cloud]e [!DNL ServiceNow] nell’interfaccia utente. |
+| Supporto dell&#39;interfaccia utente per i sistemi di database | Nuovo connettore sorgente per [!DNL AWS Redshift], [!DNL Google BigQuery], [!DNL MariaDB], [!DNL Microsoft SQL Server]e [!DNL MySQL] nell’interfaccia utente. |
 
 **Problemi noti**
 
-* None
+* Nessuna
 
 Per ulteriori informazioni sulle origini, consultate la panoramica sulle [origini](../../sources/home.md).
