@@ -1,35 +1,38 @@
 ---
-title: Estensione Parse.ly Analytics
-seo-title: Estensione Parse.ly Analytics
-description: L'estensione Parse.ly Analytics è una destinazione di analisi nella piattaforma dati cliente Adobe in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell'estensione in Adobe Exchange.
-seo-description: L'estensione Parse.ly Analytics è una destinazione di analisi nella piattaforma dati cliente Adobe in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell'estensione in Adobe Exchange.
+title: Estensione Parse.ly  Analytics
+seo-title: Estensione Parse.ly  Analytics
+description: L'estensione Parse.ly  Analytics è una destinazione di analisi nell'Platform dati cliente in tempo reale di Adobe. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell'estensione in Adobe Exchange.
+seo-description: L'estensione Parse.ly  Analytics è una destinazione di analisi nell'Platform dati cliente in tempo reale di Adobe. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell'estensione in Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+workflow-type: tm+mt
+source-wordcount: '515'
+ht-degree: 5%
 
 ---
 
 
-# Estensione Parse.ly Analytics {#parsely-analytics-extension}
+# [!DNL Parse.ly Analytics] Estensione {#parsely-analytics-extension}
 
 ## Panoramica {#overview}
 
-Parse.ly Analytics aiuta più di 2.500 aziende a utilizzare i dati per comprendere il pubblico online. Questa estensione installa uno snippet JavaScript che tiene traccia del modo in cui i visitatori interagiscono con il contenuto del sito.
+[!DNL Parse.ly Analytics] aiuta più di 2.500 aziende a utilizzare i dati per comprendere il pubblico online. Questa estensione installa uno snippet JavaScript che tiene traccia del modo in cui i visitatori interagiscono con il contenuto del sito.
 
-Parse.ly è un&#39;estensione di analisi in Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedi [Parse.ly Analytics](https://www.parse.ly/).
+Parse.ly è un&#39;estensione di analisi in Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere [Parse.ly  Analytics](https://www.parse.ly/).
 
-Questa destinazione è un’estensione Experience Platform Launch. Per ulteriori informazioni sul funzionamento delle estensioni Launch in Adobe Real-time CDP, consulta Panoramica [delle estensioni](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
+Questa destinazione è un&#39;estensione di Experience Platform Launch. Per ulteriori informazioni sul funzionamento delle estensioni Launch in Adobe Real-time CDP, consultate Panoramica [delle estensioni](/help/rtcdp/destinations/experience-platform-launch-extensions.md)di Experience Platform Launch.
 
-![Estensione Parse.ly Analytics](assets/parsely-extension.png)
+![Parse.ly  Analytics Extension](assets/parsely-extension.png)
 
 ## Prerequisiti  {#prerequisites}
 
-Questa estensione è disponibile nel catalogo Destinazioni per tutti i clienti che hanno acquistato Adobe Real-time CDP.
+Questa estensione è disponibile nel [!DNL Destinations] catalogo per tutti i clienti che hanno acquistato Adobe Real-time CDP.
 
-Per utilizzare questa estensione, devi accedere a Experience Platform Launch. Experience Platform Launch viene offerto ai clienti Adobe Experience Cloud come funzione inclusa a valore aggiunto. Contatta l’amministratore dell’organizzazione per ottenere l’accesso a Launch e chiedi loro di concederti l’ **[!UICONTROL manage_properties]** autorizzazione necessaria per installare le estensioni.
+Per utilizzare questa estensione, è necessario accedere al Experience Platform Launch. L’Experience Platform Launch viene offerto ai clienti Adobe Experience Cloud come funzione inclusa a valore aggiunto. Contatta l’amministratore dell’organizzazione per ottenere l’accesso a Launch e chiedi loro di concederti l’ **[!UICONTROL manage_properties]** autorizzazione necessaria per installare le estensioni.
 
 ## Installa estensione {#install-extension}
 
-Per installare l’estensione Parse.ly:
+Per installare l’ [!DNL Parse.ly] estensione:
 
 1. Nell’interfaccia CDP [Adobe Real-time, passate a](http://platform.adobe.com/)**[!UICONTROL Destinations > Catalog]**.
 2. Selezionate l’estensione dal catalogo o usate la barra di ricerca.
@@ -37,7 +40,7 @@ Per installare l’estensione Parse.ly:
 4. Nella **[!UICONTROL Select available Launch property]** finestra, selezionate la proprietà Launch in cui desiderate installare l&#39;estensione. È inoltre possibile creare una nuova proprietà in Launch. Una proprietà è una raccolta di regole, elementi di dati, estensioni configurate, ambienti e librerie. Ulteriori informazioni sulle proprietà sono disponibili nella sezione [della pagina](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) Proprietà della documentazione di Launch.
 5. Per completare l’installazione, passa a Launch.
 
-Puoi anche installare l’estensione direttamente nell’interfaccia [di avvio della piattaforma](https://launch.adobe.com/)Experience. Consultate [Aggiungere una nuova estensione](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) nella documentazione di Launch.
+Potete anche installare l’estensione direttamente nell’interfaccia [del](https://launch.adobe.com/)Experience Platform Launch. Consultate [Aggiungere una nuova estensione](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) nella documentazione di Launch.
 
 ## Come utilizzare l&#39;estensione {#how-to-use}
 
