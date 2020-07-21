@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Appendice della guida per gli sviluppatori di Catalog Service
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '893'
 ht-degree: 0%
 
 ---
 
 
-# Appendice della guida per gli sviluppatori di Catalog Service
+# [!DNL Catalog Service] appendice della guida per sviluppatori
 
-Questo documento contiene informazioni aggiuntive utili per l&#39;utilizzo dell&#39;API Catalog.
+Questo documento contiene informazioni aggiuntive utili per l&#39;utilizzo dell&#39; [!DNL Catalog] API.
 
 ## Visualizzare gli oggetti correlati {#view-interrelated-objects}
 
-Alcuni oggetti Catalog possono essere correlati ad altri oggetti Catalog. Tutti i campi con il prefisso `@` nei payload di risposta indicano gli oggetti correlati. I valori di questi campi sono costituiti da un URI, che può essere utilizzato in una richiesta GET separata per recuperare gli oggetti correlati che rappresentano.
+Alcuni [!DNL Catalog] oggetti possono essere correlati ad altri [!DNL Catalog] oggetti. Tutti i campi con il prefisso `@` nei payload di risposta indicano gli oggetti correlati. I valori di questi campi sono costituiti da un URI, che può essere utilizzato in una richiesta GET separata per recuperare gli oggetti correlati che rappresentano.
 
 Il set di dati di esempio restituito nel documento per la [ricerca di un set di dati](look-up-object.md) `files` specifico contiene un campo con il seguente valore URI: `"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"`. Il contenuto del `files` campo può essere visualizzato utilizzando questo URI come percorso per una nuova richiesta GET.
 
@@ -92,9 +92,9 @@ Una risposta corretta restituisce un elenco degli oggetti correlati. In questo e
 
 ## Eseguire più richieste in una singola chiamata
 
-L’endpoint principale dell’API Catalog consente di effettuare più richieste all’interno di una singola chiamata. Il payload della richiesta contiene un array di oggetti che rappresentano normalmente le singole richieste, che vengono quindi eseguite in ordine.
+L&#39;endpoint principale dell&#39; [!DNL Catalog] API consente di effettuare più richieste all&#39;interno di una singola chiamata. Il payload della richiesta contiene un array di oggetti che rappresentano normalmente le singole richieste, che vengono quindi eseguite in ordine.
 
-Se queste richieste sono modifiche o aggiunte a Catalog e una delle modifiche non riesce, tutte le modifiche verranno ripristinate.
+Se queste richieste sono modifiche o aggiunte [!DNL Catalog] e una delle modifiche non riesce, tutte le modifiche verranno ripristinate.
 
 **Formato API**
 
@@ -144,14 +144,14 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `id` | ID fornito dall&#39;utente che è allegato all&#39;oggetto response in modo da poter far corrispondere le richieste alle risposte. Catalog non memorizza questo valore e lo restituisce semplicemente nella risposta a scopo di riferimento. |
-| `resource` | Percorso della risorsa relativo alla directory principale dell&#39;API Catalog. Il protocollo e il dominio non devono far parte di questo valore e devono avere il prefisso &quot;/&quot;. <br/><br/> Quando si utilizza PATCH o DELETE come richiesta secondaria `method`, includere l&#39;ID oggetto nel percorso della risorsa. Da non confondere con l&#39;oggetto fornito dall&#39;utente `id`, il percorso della risorsa utilizza l&#39;ID dell&#39;oggetto Catalog stesso (ad esempio, `resource: "/dataSets/1234567890"`). |
+| `id` | ID fornito dall&#39;utente che è allegato all&#39;oggetto response in modo da poter far corrispondere le richieste alle risposte. [!DNL Catalog] non memorizza questo valore e lo restituisce semplicemente nella risposta a scopo di riferimento. |
+| `resource` | Percorso della risorsa relativo alla directory principale dell&#39; [!DNL Catalog] API. Il protocollo e il dominio non devono far parte di questo valore e devono avere il prefisso &quot;/&quot;. <br/><br/> Quando si utilizza PATCH o DELETE come richiesta secondaria `method`, includere l&#39;ID oggetto nel percorso della risorsa. Da non confondere con l&#39;oggetto fornito dall&#39;utente `id`, il percorso della risorsa utilizza l&#39;ID dell&#39; [!DNL Catalog] oggetto stesso (ad esempio, `resource: "/dataSets/1234567890"`). |
 | `method` | Nome del metodo (GET, PUT, POST, PATCH o DELETE) relativo all’azione in corso nella richiesta. |
 | `body` | Il documento JSON che normalmente viene passato come payload in una richiesta POST, PUT o PATCH. Questa proprietà non è necessaria per le richieste GET o DELETE. |
 
 **Risposta**
 
-Una risposta corretta restituisce un array di oggetti contenente gli oggetti `id` assegnati a ciascuna richiesta, il codice di stato HTTP per la singola richiesta e la risposta `body`. Poiché le tre richieste di esempio erano tutte volte a creare nuovi oggetti, `body` di ogni oggetto è un array contenente solo l’ID del nuovo oggetto creato, come è lo standard con le risposte POST più efficaci in Catalog.
+Una risposta corretta restituisce un array di oggetti contenente gli oggetti `id` assegnati a ciascuna richiesta, il codice di stato HTTP per la singola richiesta e la risposta `body`. Poiché le tre richieste di esempio erano tutte volte a creare nuovi oggetti, `body` di ogni oggetto è un array contenente solo l’ID del nuovo oggetto creato, come lo standard con le risposte POST più efficaci in [!DNL Catalog].
 
 ```json
 [
@@ -176,7 +176,7 @@ Prestate attenzione durante l’analisi della risposta a una richiesta multipla,
 
 ## Intestazioni di richiesta aggiuntive
 
-Catalogo offre diverse convenzioni di intestazione per mantenere l’integrità dei dati durante gli aggiornamenti.
+[!DNL Catalog] fornisce diverse convenzioni di intestazione per mantenere l’integrità dei dati durante gli aggiornamenti.
 
 ### If-Match
 
@@ -192,6 +192,6 @@ In alcuni casi, è possibile convalidare un oggetto senza salvare le informazion
 
 ## Compattazione dei dati
 
-Compaction è un servizio Experience Platform  che unisce i dati da file di piccole dimensioni a file di dimensioni maggiori senza modificare alcun dato. Per motivi di prestazioni, a volte è utile combinare un set di file di piccole dimensioni in file più grandi, in modo da fornire un accesso più rapido ai dati durante la query.
+Compaction è un [!DNL Experience Platform] servizio che unisce i dati da file di piccole dimensioni a file più grandi senza modificare alcun dato. Per motivi di prestazioni, a volte è utile combinare un set di file di piccole dimensioni in file più grandi, in modo da fornire un accesso più rapido ai dati durante la query.
 
-Quando i file di un batch assimilato sono stati compattati, l’oggetto Catalog associato viene aggiornato a scopo di monitoraggio.
+Quando i file di un batch assimilato sono stati compattati, l’ [!DNL Catalog] oggetto associato viene aggiornato a scopo di monitoraggio.
