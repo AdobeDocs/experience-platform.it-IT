@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Quantificatori logici
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '188'
+ht-degree: 5%
 
 ---
 
 
 # Funzioni quantificatore logiche
 
-I quantificatori logici possono essere utilizzati per asserire condizioni con gli array in Profile Query Language (PQL). Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella panoramica [Lingua query](./overview.md)profilo.
+I quantificatori logici possono essere utilizzati per affermare condizioni con array in [!DNL Profile Query Language] (PQL). Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella panoramica [Lingua query](./overview.md)profilo.
 
 ## Exists
 
