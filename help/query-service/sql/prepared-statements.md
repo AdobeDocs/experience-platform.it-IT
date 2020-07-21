@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Dichiarazioni preparate
 topic: prepared statements
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+workflow-type: tm+mt
+source-wordcount: '340'
+ht-degree: 7%
 
 ---
 
 
 # Dichiarazioni preparate
 
-In SQL, le istruzioni preparate vengono utilizzate per modellare query o aggiornamenti simili. Adobe Experience Platform Query Service supporta le istruzioni preparate utilizzando una query con parametri. Questo può essere utilizzato per ottimizzare le prestazioni, in quanto non sarà più necessario ripetere continuamente l&#39;analisi di una query.
+In SQL, le istruzioni preparate vengono utilizzate per modellare query o aggiornamenti simili.  Adobe Experience Platform [!DNL Query Service] supporta le istruzioni preparate utilizzando una query con parametri. Questo può essere utilizzato per ottimizzare le prestazioni, in quanto non sarà più necessario ripetere continuamente l&#39;analisi di una query.
 
 ## Uso di istruzioni preparate
 
