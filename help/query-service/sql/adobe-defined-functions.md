@@ -4,22 +4,25 @@ solution: Experience Platform
 title: Funzioni definite da Adobe
 topic: functions
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+workflow-type: tm+mt
+source-wordcount: '2156'
+ht-degree: 3%
 
 ---
 
 
 # Funzioni definite da Adobe
 
-Le funzioni definite da Adobe (ADF) sono funzioni preconfigurate in Servizio query che consentono di eseguire le comuni attività aziendali relative ai dati di ExperienceEvent. tra cui funzioni per Sessionizzazione e Attribuzione, come quelle di Adobe Analytics. Per ulteriori informazioni su Adobe Analytics e sui concetti alla base degli ADF definiti in questa pagina, consulta la documentazione [di](https://docs.adobe.com/content/help/en/analytics/landing/home.html) Adobe Analytics. Questo documento fornisce informazioni sulle funzioni definite da Adobe disponibili in Servizio query.
+Le funzioni definite da Adobe (ADF) sono funzioni preconfigurate [!DNL Query Service] che consentono di eseguire le comuni attività aziendali relative ai [!DNL ExperienceEvent] dati. tra cui funzioni di Sessionizzazione e Attribuzione, come quelle di Adobe  Analytics. Per ulteriori informazioni su Adobe  Analytics e sui concetti alla base degli ADF definiti in questa pagina, consulta la documentazione [di](https://docs.adobe.com/content/help/it-IT/analytics/landing/home.html) Adobe  Analytics. Questo documento fornisce informazioni sulle funzioni definite da Adobe disponibili in [!DNL Query Service].
 
 ## Funzioni della finestra
 
-La maggior parte della logica di business richiede la raccolta dei punti di contatto per un cliente e l&#39;ordine per tempo. Questo supporto è fornito da Spark SQL sotto forma di funzioni finestra. Le funzioni finestra fanno parte di SQL standard e sono supportate da molti altri motori SQL.
+La maggior parte della logica di business richiede la raccolta dei punti di contatto per un cliente e l&#39;ordine per tempo. Questo supporto viene fornito da [!DNL Spark] SQL sotto forma di funzioni finestra. Le funzioni finestra fanno parte di SQL standard e sono supportate da molti altri motori SQL.
 
 Una funzione finestra aggiorna un&#39;aggregazione e restituisce un singolo elemento per ogni riga del sottoinsieme ordinato. La funzione di aggregazione di base è `SUM()`. `SUM()` prende le righe e le dà un totale. Se invece si applica `SUM()` a una finestra, trasformandola in una funzione finestra, si riceve una somma cumulativa con ogni riga.
 
-La maggior parte degli assistenti SQL Spark sono funzioni finestra che aggiornano ogni riga nella finestra, con l&#39;aggiunta dello stato di tale riga.
+La maggior parte degli assistenti [!DNL Spark] SQL sono funzioni finestra che aggiornano ogni riga nella finestra, con l&#39;aggiunta dello stato della riga.
 
 ### Specifiche
 
@@ -33,9 +36,9 @@ Sintassi: `OVER ([partition] [order] [frame])`
 
 ## Sessionizzazione
 
-Quando si lavora con dati ExperienceEvent provenienti da un sito Web, un&#39;applicazione mobile, un sistema di risposta vocale interattivo o qualsiasi altro canale di interazione con i clienti, è possibile raggruppare gli eventi intorno a un periodo di attività correlato. In genere, l&#39;attività è guidata da un intento specifico, come la ricerca di un prodotto, il pagamento di una fattura, il controllo del saldo del conto, la compilazione di un&#39;applicazione e così via. Questo raggruppamento consente di associare gli eventi per scoprire un contesto più ampio sull&#39;esperienza del cliente.
+Quando si lavora con [!DNL ExperienceEvent] dati provenienti da un sito Web, un&#39;applicazione mobile, un sistema di risposta vocale interattivo o qualsiasi altro canale di interazione con i clienti, è possibile raggruppare gli eventi intorno a un periodo di attività correlato. In genere, l&#39;attività è guidata da un intento specifico, come la ricerca di un prodotto, il pagamento di una fattura, il controllo del saldo del conto, la compilazione di un&#39;applicazione e così via. Questo raggruppamento consente di associare gli eventi per scoprire un contesto più ampio sull&#39;esperienza del cliente.
 
-Per ulteriori informazioni sulla Sessionizzazione in Adobe Analytics, consulta la documentazione sulle sessioni basate sul [contesto](https://docs.adobe.com/content/help/en/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
+Per ulteriori informazioni sulla Sessionizzazione in Adobe  Analytics, consulta la documentazione sulle sessioni [in base al](https://docs.adobe.com/content/help/en/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)contesto.
 
 ### Specifiche
 
@@ -91,13 +94,13 @@ LIMIT 10
 
 Associare le azioni dei clienti al successo è una parte importante della comprensione dei fattori che influenzano l&#39;esperienza dei clienti. I seguenti ADF supportano l’attribuzione Primo e Ultimo con diverse impostazioni di scadenza.
 
-Per ulteriori informazioni sull&#39;attribuzione in Adobe Analytics, consulta la panoramica [di](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/panels/attribution.html) attribuzione IQ nella Guida all&#39;analisi di Analytics.
+Per ulteriori informazioni sull’attribuzione in Adobe  Analytics, consulta la panoramica [di](https://docs.adobe.com/content/help/it-IT/analytics/analyze/analysis-workspace/panels/attribution.html) attribuzione IQ nella Guida all’ [!DNL Analytics] analisi.
 
 ### Attribuzione primo tocco
 
-Restituisce il primo valore di attribuzione touch e i dettagli per un singolo canale nel set di dati ExperienceEvent di destinazione. La query restituisce un `struct` oggetto con il primo valore di tocco, marca temporale e attribuzione per ogni riga restituita per il canale selezionato.
+Restituisce il primo valore di attribuzione touch e i dettagli per un singolo canale nel [!DNL ExperienceEvent] dataset di destinazione. La query restituisce un `struct` oggetto con il primo valore di tocco, marca temporale e attribuzione per ogni riga restituita per il canale selezionato.
 
-Questa query è utile per visualizzare quale interazione ha portato a una serie di azioni da parte del cliente. Nell’esempio riportato di seguito, al codice di tracciamento iniziale (`em:946426`) nei dati ExperienceEvent viene attribuita una responsabilità del 100% (`1.0`) per le azioni dei clienti, in quanto si trattava della prima interazione.
+Questa query è utile per visualizzare quale interazione ha portato a una serie di azioni da parte del cliente. Nell’esempio riportato di seguito, al codice di tracciamento iniziale (`em:946426`) nei [!DNL ExperienceEvent] dati viene attribuita la responsabilità del 100% (`1.0`) per le azioni del cliente, in quanto si trattava della prima interazione.
 
 ### Specifiche
 
@@ -113,8 +116,8 @@ Sintassi: `ATTRIBUTION_FIRST_TOUCH(timestamp, channelName, channelValue) OVER ([
 | Parametri oggetto restituiti | Descrizione |
 | ---------------------- | ------------- |
 | `name` | L’etichetta `channelName` immessa nell’ADF |
-| `value` | Il valore `channelValue` che rappresenta il primo tocco in ExperienceEvent |
-| `timestamp` | Timestamp dell’evento ExperienceEvent in cui si è verificato il primo tocco |
+| `value` | Il valore di `channelValue` questo è il primo tocco nel pannello [!DNL ExperienceEvent] |
+| `timestamp` | Timestamp del [!DNL ExperienceEvent] punto in cui si è verificato il primo tocco |
 | `fraction` | Attribuzione del primo tocco espresso come credito frazionario |
 
 #### Query di esempio
@@ -151,9 +154,9 @@ LIMIT 10
 
 ### Ultima attribuzione tocco
 
-Restituisce l’ultimo valore di attribuzione touch e i dettagli per un singolo canale nel set di dati ExperienceEvent di destinazione. La query restituisce un `struct` oggetto con l&#39;ultimo valore di tocco, marca temporale e attribuzione per ogni riga restituita per il canale selezionato.
+Restituisce l’ultimo valore di attribuzione touch e i dettagli per un singolo canale nel [!DNL ExperienceEvent] dataset di destinazione. La query restituisce un `struct` oggetto con l&#39;ultimo valore di tocco, marca temporale e attribuzione per ogni riga restituita per il canale selezionato.
 
-Questa query è utile per visualizzare l&#39;interazione finale in una serie di azioni cliente. Nell’esempio riportato di seguito, il codice di tracciamento nell’oggetto restituito è l’ultima interazione in ciascun record ExperienceEvent. A ciascun codice viene attribuita la responsabilità al 100% (`1.0`) per le azioni dei clienti, così come è stata l&#39;ultima interazione.
+Questa query è utile per visualizzare l&#39;interazione finale in una serie di azioni cliente. Nell&#39;esempio riportato di seguito, il codice di tracciamento nell&#39;oggetto restituito è l&#39;ultima interazione in ciascun [!DNL ExperienceEvent] record. A ciascun codice viene attribuita la responsabilità al 100% (`1.0`) per le azioni dei clienti, così come è stata l&#39;ultima interazione.
 
 ### Specifiche
 
@@ -169,8 +172,8 @@ Sintassi: `ATTRIBUTION_LAST_TOUCH(timestamp, channelName, channelValue) OVER ([p
 | Parametri oggetto restituiti | Descrizione |
 | ---------------------- | ------------- |
 | `name` | L’etichetta `channelName` immessa nell’ADF |
-| `value` | Il valore `channelValue` che rappresenta l’ultimo tocco in ExperienceEvent |
-| `timestamp` | Timestamp dell’evento ExperienceEvent in cui `channelValue` è stato utilizzato |
+| `value` | Il valore di `channelValue` questo è l’ultimo tocco nel pannello [!DNL ExperienceEvent] |
+| `timestamp` | La marca temporale della [!DNL ExperienceEvent] posizione in cui `channelValue` è stato utilizzato |
 | `fraction` | Attribuzione dell&#39;ultimo tocco espresso come credito frazionario |
 
 #### Query di esempio
@@ -206,9 +209,9 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ### Attribuzione del primo tocco con condizione di scadenza
 
-Restituisce il primo valore di attribuzione touch e i dettagli per un singolo canale nel set di dati ExperienceEvent di destinazione, che scade dopo o prima di una condizione. La query restituisce un `struct` oggetto con il primo valore di tocco, marca temporale e attribuzione per ogni riga restituita per il canale selezionato.
+Restituisce il primo valore di attribuzione touch e i dettagli per un singolo canale nel [!DNL ExperienceEvent] dataset di destinazione, che scade dopo o prima di una condizione. La query restituisce un `struct` oggetto con il primo valore di tocco, marca temporale e attribuzione per ogni riga restituita per il canale selezionato.
 
-Questa query è utile se desiderate vedere quale interazione ha portato a una serie di azioni dei clienti all’interno di una parte del set di dati ExperienceEvent determinata da una condizione di scelta. Nell&#39;esempio riportato di seguito, un acquisto viene registrato (`commerce.purchases.value IS NOT NULL`) in ciascuno dei quattro giorni mostrati nei risultati (15 luglio, 21, 23 e 29) e al codice di tracciamento iniziale di ogni giorno viene attribuita la responsabilità del 100% (`1.0`) per le azioni dei clienti.
+Questa query è utile se si desidera vedere quale interazione ha portato a una serie di azioni da parte del cliente all&#39;interno di una parte del [!DNL ExperienceEvent] dataset determinata da una condizione scelta. Nell&#39;esempio riportato di seguito, un acquisto viene registrato (`commerce.purchases.value IS NOT NULL`) in ciascuno dei quattro giorni mostrati nei risultati (15 luglio, 21, 23 e 29) e al codice di tracciamento iniziale di ogni giorno viene attribuita la responsabilità del 100% (`1.0`) per le azioni dei clienti.
 
 #### Specifiche
 
@@ -220,13 +223,13 @@ Sintassi: `ATTRIBUTION_FIRST_TOUCH_EXP_IF(timestamp, channelName, channelValue, 
 | `channelName` | Un nome descrittivo da utilizzare come etichetta nell&#39;oggetto restituito |
 | `channelValue` | Colonna o campo che rappresenta il canale di destinazione per la query |
 | `expCondition` | La condizione che determina il punto di scadenza del canale |
-| `expBefore` | Il valore predefinito è `false`. Valore booleano per indicare se il canale scade prima o dopo il soddisfacimento della condizione specificata. Attivato principalmente per le condizioni di scadenza di una sessione (ad esempio, `sess.depth = 1, true`), per fare in modo che il primo tocco non sia selezionato da una sessione precedente. |
+| `expBefore` | Defaults to `false`. Valore booleano per indicare se il canale scade prima o dopo il soddisfacimento della condizione specificata. Attivato principalmente per le condizioni di scadenza di una sessione (ad esempio, `sess.depth = 1, true`), per fare in modo che il primo tocco non sia selezionato da una sessione precedente. |
 
 | Parametri oggetto restituiti | Descrizione |
 | ---------------------- | ------------- |
 | `name` | L’etichetta `channelName` immessa nell’ADF |
-| `value` | Il valore di `channelValue` questo è il primo tocco in ExperienceEvent prima del `expCondition` |
-| `timestamp` | Timestamp dell’evento ExperienceEvent in cui si è verificato il primo tocco |
+| `value` | Il valore di `channelValue` questo è il primo tocco nella finestra [!DNL ExperienceEvent] precedente `expCondition` |
+| `timestamp` | Timestamp del [!DNL ExperienceEvent] punto in cui si è verificato il primo tocco |
 | `fraction` | Attribuzione del primo tocco espresso come credito frazionario |
 
 #### Query di esempio
@@ -262,7 +265,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ### Prima attribuzione touch con timeout di scadenza
 
-Restituisce il primo valore di attribuzione touch e i dettagli per un singolo canale nel set di dati ExperienceEvent di destinazione per un periodo di tempo specificato. La query restituisce un `struct` oggetto con il primo valore di tocco, marca temporale e attribuzione per ogni riga restituita per il canale selezionato. Questa query è utile se si desidera vedere quale interazione, entro un intervallo di tempo selezionato, ha portato a un&#39;azione del cliente. Nell’esempio riportato di seguito, il primo tocco restituito per ogni azione del cliente è la prima interazione nei sette giorni precedenti (`expTimeout = 86400 * 7`).
+Restituisce il primo valore di attribuzione touch e i dettagli per un singolo canale nel [!DNL ExperienceEvent] dataset di destinazione per un periodo di tempo specificato. La query restituisce un `struct` oggetto con il primo valore di tocco, marca temporale e attribuzione per ogni riga restituita per il canale selezionato. Questa query è utile se si desidera vedere quale interazione, entro un intervallo di tempo selezionato, ha portato a un&#39;azione del cliente. Nell’esempio riportato di seguito, il primo tocco restituito per ogni azione del cliente è la prima interazione nei sette giorni precedenti (`expTimeout = 86400 * 7`).
 
 #### Specifiche
 
@@ -279,7 +282,7 @@ Sintassi: `ATTRIBUTION_FIRST_TOUCH_EXP_TIMEOUT(timestamp, channelName, channelVa
 | ---------------------- | ------------- |
 | `name` | L’etichetta `channelName` immessa nell’ADF |
 | `value` | Il valore da `channelValue` cui proviene il primo tocco entro l&#39;intervallo specificato `expTimeout` |
-| `timestamp` | Timestamp dell’evento ExperienceEvent in cui si è verificato il primo tocco |
+| `timestamp` | Timestamp del [!DNL ExperienceEvent] punto in cui si è verificato il primo tocco |
 | `fraction` | Attribuzione del primo tocco espresso come credito frazionario |
 
 #### Query di esempio
@@ -315,7 +318,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ### Attribuzione dell&#39;ultimo tocco con condizione di scadenza
 
-Restituisce l’ultimo valore di attribuzione touch e i dettagli per un singolo canale nel set di dati ExperienceEvent di destinazione, che scade dopo o prima di una condizione. La query restituisce un `struct` oggetto con l&#39;ultimo valore di tocco, marca temporale e attribuzione per ogni riga restituita per il canale selezionato. Questa query è utile se desiderate visualizzare l’ultima interazione in una serie di azioni del cliente all’interno di una porzione del set di dati ExperienceEvent determinata da una condizione di scelta. Nell&#39;esempio riportato di seguito, un acquisto viene registrato (`commerce.purchases.value IS NOT NULL`) in ciascuno dei quattro giorni mostrati nei risultati (15 luglio, 21, 23 e 29) e all&#39;ultimo codice di tracciamento in ogni giorno viene attribuito il 100% (`1.0`) di responsabilità per le azioni dei clienti.
+Restituisce l’ultimo valore di attribuzione touch e i dettagli per un singolo canale nel [!DNL ExperienceEvent] set di dati di destinazione, che scade dopo o prima di una condizione. La query restituisce un `struct` oggetto con l&#39;ultimo valore di tocco, marca temporale e attribuzione per ogni riga restituita per il canale selezionato. Questa query è utile se si desidera visualizzare l&#39;ultima interazione in una serie di azioni cliente all&#39;interno di una parte del [!DNL ExperienceEvent] dataset determinata da una condizione di scelta. Nell&#39;esempio riportato di seguito, un acquisto viene registrato (`commerce.purchases.value IS NOT NULL`) in ciascuno dei quattro giorni mostrati nei risultati (15 luglio, 21, 23 e 29) e all&#39;ultimo codice di tracciamento in ogni giorno viene attribuito il 100% (`1.0`) di responsabilità per le azioni dei clienti.
 
 #### Specifiche
 
@@ -327,13 +330,13 @@ Sintassi: `ATTRIBUTION_LAST_TOUCH_EXP_IF(timestamp, channelName, channelValue, e
 | `channelName` | Un nome descrittivo da utilizzare come etichetta nell&#39;oggetto restituito |
 | `channelValue` | Colonna o campo che rappresenta il canale di destinazione per la query |
 | `expCondition` | La condizione che determina il punto di scadenza del canale |
-| `expBefore` | Il valore predefinito è `false`. Valore booleano per indicare se il canale scade prima o dopo il soddisfacimento della condizione specificata. Attivato principalmente per le condizioni di scadenza della sessione (ad esempio, `sess.depth = 1, true`), per fare in modo che l’ultimo tocco non sia selezionato da una sessione precedente. |
+| `expBefore` | Defaults to `false`. Valore booleano per indicare se il canale scade prima o dopo il soddisfacimento della condizione specificata. Attivato principalmente per le condizioni di scadenza della sessione (ad esempio, `sess.depth = 1, true`), per fare in modo che l’ultimo tocco non sia selezionato da una sessione precedente. |
 
 | Parametri oggetto restituiti | Descrizione |
 | ---------------------- | ------------- |
 | `name` | L’etichetta `channelName` immessa nell’ADF |
-| `value` | Il valore di `channelValue` questo è l’ultimo tocco in ExperienceEvent prima del `expCondition` |
-| `timestamp` | Timestamp dell’evento ExperienceEvent in cui si è verificato l’ultimo tocco |
+| `value` | Il valore di `channelValue` questo è l’ultimo tocco nella finestra [!DNL ExperienceEvent] precedente `expCondition` |
+| `timestamp` | Il timestamp dell’ [!DNL ExperienceEvent] ultimo tocco |
 | `percentage` | Attribuzione dell&#39;ultimo tocco espresso come credito frazionario |
 
 #### Query di esempio
@@ -369,7 +372,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ### Ultima attribuzione touch con timeout di scadenza
 
-Restituisce l’ultimo valore di attribuzione touch e i dettagli per un singolo canale nel set di dati ExperienceEvent di destinazione per un periodo di tempo specificato. La query restituisce un `struct` oggetto con l&#39;ultimo valore di tocco, marca temporale e attribuzione per ogni riga restituita per il canale selezionato. Questa query è utile se si desidera visualizzare l&#39;ultima interazione entro un intervallo di tempo selezionato. Nell’esempio riportato di seguito, l’ultimo tocco restituito per ogni azione del cliente è l’interazione finale entro i sette giorni successivi (`expTimeout = 86400 * 7`).
+Restituisce l’ultimo valore di attribuzione touch e i dettagli per un singolo canale nel [!DNL ExperienceEvent] dataset di destinazione per un periodo di tempo specificato. La query restituisce un `struct` oggetto con l&#39;ultimo valore di tocco, marca temporale e attribuzione per ogni riga restituita per il canale selezionato. Questa query è utile se si desidera visualizzare l&#39;ultima interazione entro un intervallo di tempo selezionato. Nell’esempio riportato di seguito, l’ultimo tocco restituito per ogni azione del cliente è l’interazione finale entro i sette giorni successivi (`expTimeout = 86400 * 7`).
 
 #### Specifiche
 
@@ -386,7 +389,7 @@ Sintassi: `ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(timestamp, channelName, channelVal
 | ---------------------- | ------------- |
 | `name` | L’etichetta `channelName` immessa nell’ADF |
 | `value` | Il valore da `channelValue` cui proviene l&#39;ultimo tocco entro l&#39;intervallo specificato `expTimeout` |
-| `timestamp` | Timestamp dell’evento ExperienceEvent in cui si è verificato l’ultimo tocco |
+| `timestamp` | Il timestamp dell’ [!DNL ExperienceEvent] ultimo tocco |
 | `percentage` | Attribuzione dell&#39;ultimo tocco espresso come credito frazionario |
 
 #### Query di esempio
@@ -647,4 +650,4 @@ LIMIT 10
 
 ## Passaggi successivi
 
-Utilizzando le funzioni qui descritte, potete scrivere query per accedere ai set di dati ExperienceEvent personalizzati utilizzando il servizio Query. Per ulteriori informazioni sull&#39;authoring delle query in Servizio query, consulta la documentazione sulla [creazione delle query](../creating-queries/creating-queries.md).
+Utilizzando le funzioni qui descritte, è possibile scrivere query per accedere ai propri [!DNL ExperienceEvent] dataset utilizzando [!DNL Query Service]. Per ulteriori informazioni sull’authoring delle query in [!DNL Query Service], consulta la documentazione sulla [creazione delle query](../creating-queries/creating-queries.md).
