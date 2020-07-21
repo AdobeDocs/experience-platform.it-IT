@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Funzioni filtro
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '191'
+ht-degree: 4%
 
 ---
 
 
 # Funzioni filtro
 
-Le funzioni filtro vengono utilizzate per filtrare i dati all&#39;interno degli array in PQL (Profile Query Language). Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella panoramica [Lingua query](./overview.md)profilo.
+Le funzioni filtro vengono utilizzate per filtrare i dati all&#39;interno di array in [!DNL Profile Query Language] (PQL). Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella panoramica [Lingua query](./overview.md)profilo.
 
 ## Filtro
 
