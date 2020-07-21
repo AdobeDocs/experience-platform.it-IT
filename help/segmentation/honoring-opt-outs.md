@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Rispetto delle eccezioni
 topic: overview
 translation-type: tm+mt
-source-git-commit: f156679601c2ed0bb933a66a56661c29c1b9c778
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '935'
+source-wordcount: '926'
 ht-degree: 0%
 
 ---
@@ -68,13 +68,13 @@ Il [!DNL Profile Privacy] mixin contiene i campi seguenti:
 
 Per visualizzare l&#39;intera struttura del [!DNL Profile Privacy] mixin, fare riferimento all&#39;archivio [GitHub pubblico](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) XDM oppure visualizzare l&#39;anteprima del mixin utilizzando l&#39;interfaccia utente di Platform.
 
-### Dettagli preferenze profilo
+### [!DNL Profile Preferences Details]
 
-Il mixin Dettagli preferenze profilo offre diversi campi che rappresentano le preferenze per i profili cliente (ad esempio il formato e-mail, la lingua preferita e il fuso orario). Uno dei campi inclusi in questo mixin, OptInOut (`optInOut`), consente di impostare i valori di rifiuto per i singoli canali.
+Il [!DNL Profile Preferences Details] mixin fornisce diversi campi che rappresentano le preferenze per i profili dei clienti (ad esempio il formato e-mail, la lingua preferita e il fuso orario). Uno dei campi inclusi in questo mixin, OptInOut (`optInOut`), consente di impostare i valori di rifiuto per i singoli canali.
 
 ![](images/opt-outs/profile-preferences-details.png)
 
-Il mixin Dettagli preferenze profilo contiene i seguenti campi relativi alle rinunce:
+Il [!DNL Profile Preferences Details] mixin contiene i seguenti campi relativi alle opzioni di rifiuto:
 
 - OptInOut (`optInOut`): Un oggetto in cui ogni chiave rappresenta un URI valido e noto per un canale di comunicazione e lo stato attivo della rinuncia per ciascun canale. Ogni canale può avere uno dei quattro valori possibili:
    - Non fornito (`not_provided`): Per questo canale non è stata fornita una richiesta di rifiuto.
