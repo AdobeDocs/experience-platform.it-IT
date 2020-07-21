@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sull’assimilazione parziale dei batch di  Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0be45675e4a2e3308cb77a8bbe3189f09c2b6fd8
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1180'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ Inoltre, l&#39; [appendice](#appendix) di questa esercitazione fornisce un rifer
 Questa esercitazione richiede una conoscenza approfondita dei diversi servizi di Adobe Experience Platform  coinvolti nell&#39;assimilazione parziale dei batch. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
 - [Caricamento](./overview.md)batch: Metodo che [!DNL Platform] raccoglie e memorizza i dati dai file di dati, come CSV e Parquet.
-- [Experience Data Model (XDM)](../../xdm/home.md): Framework standard con cui Platform organizza i dati sull&#39;esperienza dei clienti.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per eseguire correttamente le chiamate alle [!DNL Platform] API.
 
@@ -42,7 +42,7 @@ Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API Platform richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -115,7 +115,7 @@ Ora puoi caricare i dati tramite il pulsante **Aggiungi dati** e li assimilerai 
 
 ### Utilizzare il flusso &quot;[!UICONTROL Map CSV to XDM schema]&quot; {#map-flow}
 
-Per usare il flusso[!UICONTROL Map CSV to XDM schema]&quot;di prova&quot;, segui i passaggi elencati nell’esercitazione [Mappa un file CSV](../tutorials/map-a-csv-file.md). Una volta raggiunto il passaggio *Aggiungi dati* , prendi nota dei campi *[!UICONTROL Partial ingestion]* e *[!UICONTROL Error diagnostics]* .
+Per usare il flusso[!UICONTROL Map CSV to XDM schema]&quot;di prova&quot;, segui i passaggi elencati nell’esercitazione [Mappa un file CSV](../tutorials/map-a-csv-file.md). Una volta raggiunto il *[!UICONTROL Add data]* passaggio, prendete nota dei *[!UICONTROL Partial ingestion]* campi e *[!UICONTROL Error diagnostics]* .
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
