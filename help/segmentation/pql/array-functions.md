@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funzioni di array, elenco e set
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '737'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # Funzioni di array, elenco e set
 
-Il linguaggio PQL (Profile Query Language) offre funzioni che semplificano l&#39;interazione con array, elenchi e stringhe. Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella panoramica [Lingua query](./overview.md)profilo.
+[!DNL Profile Query Language] (PQL) offre funzioni che semplificano l&#39;interazione con array, elenchi e stringhe. Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella panoramica [Lingua query](./overview.md)profilo.
 
 ## In
 
