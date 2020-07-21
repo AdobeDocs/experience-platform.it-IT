@@ -4,9 +4,9 @@ seo-title: Flusso di lavoro per destinazioni di archiviazione cloud
 description: Istruzioni per la connessione alle posizioni di archiviazione cloud
 seo-description: Istruzioni per la connessione alle posizioni di archiviazione cloud
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '458'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Questa pagina spiega come collegarsi alle posizioni di archiviazione cloud in Ad
 
    ![Connessione alla destinazione di archiviazione cloud](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
-2. Nel **[!UICONTROL Authentication]** passaggio, se in precedenza era stata impostata una connessione alla destinazione di archiviazione cloud, selezionare **[!UICONTROL Existing Account]** e selezionare la connessione esistente. In alternativa, potete scegliere **[!UICONTROL New Account]** di impostare una nuova connessione alla destinazione di archiviazione cloud. Compilate le credenziali di autenticazione dell&#39;account e selezionate **[!UICONTROL Connect to destination]**. <br> Per informazioni specifiche sulle credenziali immesse nel passaggio [Autenticazione](/help/rtcdp/destinations/amazon-s3-destination.md) , vedere destinazione [Amazon S3](/help/rtcdp/destinations/amazon-kinesis-destination.md) , destinazione [Amazon Kinesis](/help/rtcdp/destinations/azure-event-hubs-destination.md) , destinazione [Azure Event Hubs](/help/rtcdp/destinations/sftp-destination.md) e destinazione **SFTP** .
+2. Nel **[!UICONTROL Authentication]** passaggio, se in precedenza avete impostato una connessione alla destinazione di archiviazione cloud, selezionate **[!UICONTROL Existing Account]** e selezionate la connessione esistente. In alternativa, potete scegliere **[!UICONTROL New Account]** di impostare una nuova connessione alla destinazione di archiviazione cloud. Compilate le credenziali di autenticazione dell&#39;account e selezionate **[!UICONTROL Connect to destination]**. <br> Per informazioni specifiche sulle credenziali immesse nel passaggio [Autenticazione](/help/rtcdp/destinations/amazon-s3-destination.md) , vedere destinazione, destinazione, [!DNL Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) destinazione e destinazione [!DNL Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md) SFTP [Amazon S3](/help/rtcdp/destinations/sftp-destination.md) , nel passaggio **Autenticazione** .
 
    >[!NOTE]
    >
@@ -40,11 +40,11 @@ Per le destinazioni Amazon S3, inserite i file **[!UICONTROL Bucket name]** e **
 
    ![Connessione alla destinazione di archiviazione cloud SFTP - passaggio di autenticazione](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
 
-   Per le destinazioni Amazon Kinesis, specifica il nome del flusso di dati esistente nel tuo [!DNL Amazon Kinesis] account. Adobe Real-time CDP esporta i dati in questo flusso. Selezionate **[!UICONTROL Create Destination]** dopo aver compilato i campi riportati sopra.
+   Per [!DNL Amazon Kinesis] le destinazioni, specifica il nome del flusso di dati esistente nel tuo [!DNL Amazon Kinesis] account. Adobe Real-time CDP esporta i dati in questo flusso. Selezionate **[!UICONTROL Create Destination]** dopo aver compilato i campi riportati sopra.
 
    ![Connessione alla destinazione di archiviazione cloud Kinesis - passaggio di autenticazione](/help/rtcdp/destinations/assets/kinesis-destinations-setup-step.png)
 
-   Per le destinazioni degli hub eventi di Azure, specificare il nome del flusso di dati esistente nell&#39; [!DNL Amazon Kinesis] account. Adobe Real-time CDP esporta i dati in questo flusso. Selezionate **[!UICONTROL Create Destination]** dopo aver compilato i campi riportati sopra.
+   Per [!DNL Azure Event Hubs] le destinazioni, specifica il nome del flusso di dati esistente nel tuo [!DNL Amazon Kinesis] account. Adobe Real-time CDP esporta i dati in questo flusso. Selezionate **[!UICONTROL Create Destination]** dopo aver compilato i campi riportati sopra.
 
    ![Connessione alla destinazione di archiviazione cloud Kinesis - passaggio di autenticazione](/help/rtcdp/destinations/assets/eventhubs-destinations-setup-step.png)
 
