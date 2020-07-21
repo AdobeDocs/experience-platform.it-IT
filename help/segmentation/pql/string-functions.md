@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Funzioni stringa
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '757'
+ht-degree: 6%
 
 ---
 
 
 # Funzioni stringa
 
-Il linguaggio PQL (Profile Query Language) offre funzioni che semplificano l&#39;interazione con le stringhe. Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella panoramica [Lingua query](./overview.md)profilo.
+[!DNL Profile Query Language] (PQL) offre funzioni che semplificano l&#39;interazione con le stringhe. Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella panoramica [Lingua query](./overview.md)profilo.
 
 ## Simile
 
