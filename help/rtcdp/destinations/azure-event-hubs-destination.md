@@ -4,15 +4,15 @@ seo-title: (Beta) Destinazione degli hub eventi di Azure
 description: Crea una connessione in uscita in tempo reale all'archivio degli hub eventi di Azure per lo streaming dei dati da  Experience Platform.
 seo-description: Crea una connessione in uscita in tempo reale all'archivio degli hub eventi di Azure per lo streaming dei dati da  Experience Platform.
 translation-type: tm+mt
-source-git-commit: e93bfc028d5e23c3add55677c4003ca549a902c6
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '458'
 ht-degree: 2%
 
 ---
 
 
-# (Beta) Destinazione degli hub eventi di Azure
+# (Beta) [!DNL Azure Event Hubs] destinazione
 
 >[!IMPORTANT]
 >
@@ -32,9 +32,9 @@ ht-degree: 2%
 
 ## Casi d’uso {#use-cases}
 
-Utilizzando le destinazioni di streaming come gli hub eventi di Azure, potete facilmente inserire nei sistemi di scelta eventi di segmentazione di alto valore e attributi di profilo associati.
+Utilizzando destinazioni di streaming come [!DNL Azure Event Hubs], potete facilmente inserire nei sistemi di vostra scelta eventi di segmentazione di alto valore e attributi di profilo associati.
 
-Ad esempio, un potenziale ha scaricato un white paper che li qualifica come segmento &quot;alta propensione alla conversione&quot;. Mappando il segmento in cui il potenziale rientra nella destinazione degli hub eventi di Azure, si riceverebbe questo evento negli hub eventi di Azure. È possibile utilizzare un approccio &quot;fai da te&quot; e descrivere la logica di business in cima all&#39;evento, come si pensa che funzionerebbe meglio con i sistemi IT aziendali.
+Ad esempio, un potenziale ha scaricato un white paper che li qualifica come segmento &quot;alta propensione alla conversione&quot;. Mappando il segmento in cui il potenziale rientra nella [!DNL Azure Event Hubs] destinazione, si riceverebbe questo evento in [!DNL Azure Event Hubs]. È possibile utilizzare un approccio &quot;fai da te&quot; e descrivere la logica di business in cima all&#39;evento, come si pensa che funzionerebbe meglio con i sistemi IT aziendali.
 
 ## Destinazione Connect {#connect-destination}
 
@@ -64,7 +64,7 @@ Consulta [Attivare profili e segmenti su una destinazione](/help/rtcdp/destinati
 
 ## Dati esportati {#exported-data}
 
-I dati  Experience Platform esportati vengono inviati in formato [!DNL Azure Event Hubs] JSON. Ad esempio, l&#39;evento seguente contiene l&#39;attributo di profilo dell&#39;indirizzo e-mail di un&#39;audience qualificata per un determinato segmento ed uscita da un altro segmento. Le identità di questo potenziale sono ECID ed e-mail.
+I [!DNL Experience Platform] dati esportati vengono inviati in formato [!DNL Azure Event Hubs] JSON. Ad esempio, l&#39;evento seguente contiene l&#39;attributo di profilo dell&#39;indirizzo e-mail di un&#39;audience qualificata per un determinato segmento ed uscita da un altro segmento. Le identità di questo potenziale sono ECID ed e-mail.
 
 ```
 {
