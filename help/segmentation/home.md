@@ -4,17 +4,17 @@ solution: Experience Platform
 title: 'Servizio Segmentazione Adobe Experience Platform '
 topic: overview
 translation-type: tm+mt
-source-git-commit: f44e42a4faa3b10f147dbaf929048054ce0bec42
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '1986'
+source-wordcount: '1971'
 ht-degree: 0%
 
 ---
 
 
-# Panoramica di  Adobe Experience Platform Segmentation Service
+# Adobe Experience Platform [!DNL Segmentation Service] overview
 
- Adobe Experience Platform Segmentation Service fornisce un&#39;interfaccia utente e RESTful API che consente di creare segmenti e generare audience dai [!DNL Real-time Customer Profile] dati. Questi segmenti sono configurati e mantenuti a livello centrale su Platform e sono facilmente accessibili da qualsiasi soluzione Adobe.
+ Adobe Experience Platform [!DNL Segmentation Service] fornisce un&#39;interfaccia utente e RESTful API che consente di creare segmenti e generare audience dai [!DNL Real-time Customer Profile] dati. Questi segmenti sono configurati e mantenuti a livello centrale [!DNL Platform]e sono facilmente accessibili da qualsiasi soluzione Adobe.
 
 Questo documento fornisce una panoramica [!DNL Segmentation Service] e il ruolo che svolge  Adobe Experience Platform.
 
@@ -128,7 +128,7 @@ Assegnando una variabile all&#39;attributo stato acquisto, il segmento dinamico 
 
 ## Segmentazione multi-entità {#multi-entity}
 
-Con la funzione avanzata di segmentazione multi-entità, potete creare segmenti utilizzando più classi XDM, aggiungendo così estensioni agli schemi di persona. Di conseguenza, il servizio di segmentazione può accedere a campi aggiuntivi durante la definizione del segmento, come se fossero nativi dell&#39;archivio dati del profilo.
+Con la funzione avanzata di segmentazione multi-entità, potete creare segmenti utilizzando più classi XDM, aggiungendo così estensioni agli schemi di persona. Di conseguenza, [!DNL Segmentation Service] è possibile accedere a campi aggiuntivi durante la definizione del segmento, come se fossero nativi dell&#39;archivio dati del profilo.
 
 La segmentazione multi-entità offre la flessibilità necessaria per identificare i tipi di pubblico in base ai dati pertinenti alle esigenze aziendali. Questo processo può essere fatto in modo rapido e semplice senza richiedere la competenza nella query dei database. Questo consente di aggiungere dati chiave ai segmenti senza dover apportare costose modifiche ai flussi di dati o aspettare un&#39;unione di dati back-end.
 
@@ -140,7 +140,7 @@ Il seguente video è stato realizzato per consentire di comprendere meglio la se
 
 Per illustrare il valore di questa funzione di segmentazione avanzata, è consigliabile che un architetto dati collabori con un esperto di marketing.
 
-In questo esempio, l&#39;architetto dei dati sta unendo i dati di una singola classe (costituita da schemi con XDM Singolo profilo e XDM ExperienceEvent come classi base) a un&#39;altra classe utilizzando una chiave. Una volta uniti, l&#39;architetto dei dati o l&#39;esperto di marketing possono utilizzare questi nuovi campi durante la definizione del segmento come se fossero nativi dello schema della classe base.
+In questo esempio, l&#39;architetto dei dati unisce i dati per una singola classe (costituita da schemi con [!DNL XDM Individual Profile] e [!DNL XDM ExperienceEvent] come classi di base) utilizzando una chiave a un&#39;altra classe. Una volta uniti, l&#39;architetto dei dati o l&#39;esperto di marketing possono utilizzare questi nuovi campi durante la definizione del segmento come se fossero nativi dello schema della classe base.
 
 **Il problema**
 
@@ -154,7 +154,7 @@ Le risorse dell&#39;architetto dati includono l&#39;accesso ai dati Web dalla na
 >
 >In questo esempio si suppone che l&#39;architetto dei dati abbia già stabilito uno spazio dei nomi ID.
 
-Utilizzando l&#39;API, l&#39;architetto dei dati collega la chiave dello schema ExperienceEvent con la classe &quot;products&quot;. In questo modo l&#39;architetto dei dati può utilizzare i campi aggiuntivi della classe &quot;products&quot; come se fossero nativi dello schema ExperienceEvent. Come fase finale del lavoro di configurazione, l&#39;architetto dei dati deve inserire i dati appropriati in [!DNL Real-time Customer Profile]. A questo scopo, abilita il dataset &quot;products&quot; da utilizzare con [!DNL Profile]. Una volta completata la configurazione, l&#39;architetto dei dati o l&#39;esperto di marketing possono creare il segmento di destinazione in [!DNL Segment Builder].
+Utilizzando l&#39;API, l&#39;architetto dati collega la chiave dello [!DNL ExperienceEvent] schema alla classe &quot;products&quot;. In questo modo l&#39;architetto dei dati può utilizzare i campi aggiuntivi della classe &quot;products&quot; come se fossero nativi dello [!DNL ExperienceEvent] schema. Come fase finale del lavoro di configurazione, l&#39;architetto dei dati deve inserire i dati appropriati in [!DNL Real-time Customer Profile]. A questo scopo, abilita il dataset &quot;products&quot; da utilizzare con [!DNL Profile]. Una volta completata la configurazione, l&#39;architetto dei dati o l&#39;esperto di marketing possono creare il segmento di destinazione in [!DNL Segment Builder].
 
 Vedere la panoramica [sulla composizione dello](../xdm/schema/composition.md#union) schema per apprendere come definire le relazioni tra le classi XDM.
 
@@ -225,6 +225,6 @@ Informazioni più dettagliate su questi tipi di dati supportati sono disponibili
 - [!DNL Segmentation] è il processo di definizione di un sottoinsieme di profili dall&#39;archivio profili, che consente di caratterizzare il comportamento o gli attributi di un gruppo commerciabile desiderato. [!DNL Segmentation Service] rende possibile questo processo.
 - Durante la pianificazione di un segmento, tenere presente che a un segmento può essere fatto riferimento e combinato con qualsiasi altro segmento.
 - Un segmento può essere generato da regole basate sui dati del profilo, sui dati delle serie temporali correlati o su entrambi.
-- I segmenti possono essere valutati su richiesta o in modo continuo. Quando viene valutato su richiesta, tutti i dati del profilo vengono passati attraverso le definizioni del segmento alla volta. Quando viene valutato in modo continuo, i dati scorrono le definizioni dei segmenti mentre questi vengono immessi in Platform.
+- I segmenti possono essere valutati su richiesta o in modo continuo. Quando viene valutato su richiesta, tutti i dati del profilo vengono passati attraverso le definizioni del segmento alla volta. Quando viene valutato in modo continuo, i dati scorrono le definizioni dei segmenti man mano che entrano [!DNL Platform].
 
 Per informazioni su come definire i segmenti nell’interfaccia utente, consulta la guida [di Generatore di](./ui/overview.md)segmenti. Per informazioni sulla creazione di definizioni di segmenti tramite l&#39;API, consulta l&#39;esercitazione sulla [creazione di segmenti tramite l&#39;API](./tutorials/create-a-segment.md).
