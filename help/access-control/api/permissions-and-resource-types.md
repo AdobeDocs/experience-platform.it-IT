@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Nomi elenco di autorizzazioni e tipi di risorse
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 7b354a96d70332cf7a7e9eff322cd3d6ee0fc96a
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '123'
+ht-degree: 1%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: 7b354a96d70332cf7a7e9eff322cd3d6ee0fc96a
 
 Potete elencare i nomi di tutte le autorizzazioni e i tipi di risorse eseguendo una richiesta GET all&#39; `/acl/reference` endpoint. Questi nomi possono quindi essere utilizzati nelle chiamate API per [visualizzare i criteri](./effective-policies.md) effettivi per l&#39;utente corrente.
 
-Un&#39; **autorizzazione** è un criterio gestito tramite Adobe Admin Console e mappato a zero o più criteri di tipo risorsa. Un tipo **di** risorsa è un criterio che abilita funzionalità di lettura, scrittura e/o eliminazione per un tipo specifico di risorsa Piattaforma (ad esempio set di dati o schemi).
+Un&#39; **autorizzazione** è un criterio gestito tramite Adobe  Admin Console e mappato a zero o più criteri di tipo risorsa. Un tipo **di** risorsa è un criterio che abilita funzionalità di lettura, scrittura e/o eliminazione per un tipo specifico di [!DNL Platform] risorsa (ad esempio set di dati o schemi).
 
 **Formato API**
 
