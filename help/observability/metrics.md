@@ -4,20 +4,23 @@ solution: Experience Platform
 title: Metriche disponibili
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: ff299a69a81f00cad3e90a83f7411e4b15d4f850
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '878'
+ht-degree: 2%
 
 ---
 
 
 # Elenco delle metriche disponibili
 
-Le tabelle seguenti elencano tutte le metriche esposte da Observability Insights (Approfondimenti di osservazione), suddivise per servizio Piattaforma. Ogni metrica include una descrizione e il parametro di query ID accettato.
+Le tabelle seguenti elencano tutte le metriche esposte da Approfondimenti di osservazione, suddivise per [!DNL Platform] servizio. Ogni metrica include una descrizione e il parametro di query ID accettato.
 
-## Ingestione dati
+## [!DNL Data Ingestion]
 
-La tabella seguente delinea le metriche per l&#39;inserimento dei dati in Adobe Experience Platform. Le metriche in **grassetto** sono metriche di assimilazione in streaming.
+La tabella seguente delinea le metriche per  Adobe Experience Platform [!DNL Data Ingestion]. Le metriche in **grassetto** sono metriche di assimilazione in streaming.
 
-| Metrica Insights | Descrizione | Parametro query ID |
+| Metrica Insights  | Descrizione | Parametro query ID |
 | ---- | ---- | ---- |
 | timeseries.ingestion.dataset.new.count | Numero totale di set di dati creati. | N/D |
 | timeseries.ingestion.dataset.size | Dimensione cumulativa di tutti i dati acquisiti per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
@@ -41,14 +44,14 @@ La tabella seguente delinea le metriche per l&#39;inserimento dei dati in Adobe 
 | **timeseries.data.collection.inlet.success** | Numero totale di chiamate HTTP riuscite a un&#39;entrata dati o a tutte le insenature dati. | ID ingresso (facoltativo) |
 | **timeseries.data.collection.inlet.failure** | Numero totale di chiamate HTTP non riuscite a una entrata dati o a tutte le insenature dati. | ID ingresso (facoltativo) |
 
-## Servizio identità
+## [!DNL Identity Service]
 
-La tabella seguente delinea le metriche per Adobe Experience Platform Identity Service.
+La tabella seguente delinea le metriche per  Adobe Experience Platform [!DNL Identity Service].
 
-| Metrica Insights | Descrizione | Parametro query ID |
+| Metrica Insights  | Descrizione | Parametro query ID |
 | ---- | ---- | ---- |
-| timeseries.identity.dataset.recordsuccess.count | Numero di record scritti nell&#39;origine dati da Servizio identità per un set di dati o tutti i set di dati. | ID set di dati (facoltativo) |
-| timeseries.identity.dataset.recordfailed.count | Numero di record non riusciti dal servizio identità, per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
+| timeseries.identity.dataset.recordsuccess.count | Numero di record scritti nella propria origine dati da [!DNL Identity Service], per un set di dati o tutti i set di dati. | ID set di dati (facoltativo) |
+| timeseries.identity.dataset.recordfailed.count | Numero di record non riusciti da [!DNL Identity Service], per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
 | timeseries.identity.dataset.namespacecode.recordsuccess.count | Numero di record di identità acquisiti correttamente per uno spazio dei nomi. | ID spazio nomi (**obbligatorio**) |
 | timeseries.identity.dataset.namespacecode.recordfailed.count | Numero di record di identità non riuscito da uno spazio dei nomi. | ID spazio nomi (**obbligatorio**) |
 | timeseries.identity.dataset.namespacecode.recordskipped.count | Numero di record di identità ignorati da uno spazio dei nomi. | ID spazio nomi (**obbligatorio**) |
@@ -57,21 +60,21 @@ La tabella seguente delinea le metriche per Adobe Experience Platform Identity S
 | timeseries.identity.graph.imsorg.numidgraphs.count | Numero di identità univoche del grafico memorizzate nel grafico di identità per l&#39;organizzazione IMS. | N/D |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Numero di identità univoche memorizzate nel grafico dell&#39;identità per l&#39;organizzazione IMS per una particolare intensità del grafico (&quot;sconosciuto&quot;, &quot;debole&quot; o &quot;forte&quot;). | Forza del grafico (**richiesta**) |
 
-## Servizio Privacy
+## [!DNL Privacy Service]
 
-Nella tabella seguente sono illustrate le metriche relative al servizio per la privacy di Adobe Experience Platform.
+La tabella seguente delinea le metriche per  Adobe Experience Platform [!DNL Privacy Service].
 
-| Metrica Insights | Descrizione | Parametro query ID |
+| Metrica Insights  | Descrizione | Parametro query ID |
 | ---- | ---- | ---- |
 | timeseries.gdpr.jobs.totaljobs.count | Numero totale di posti di lavoro creati dal GDPR. | ENV (**obbligatorio**) |
 | timeseries.gdpr.jobs.completedjobs.count | Numero totale di processi completati dal GDPR. | ENV (**obbligatorio**) |
 | timeseries.gdpr.jobs.errorjobs.count | Numero totale di processi di errore da GDPR. | ENV (**obbligatorio**) |
 
-## Servizio query
+## [!DNL Query Service]
 
-Nella tabella seguente sono illustrate le metriche per Adobe Experience Platform Query Service.
+La tabella seguente delinea le metriche per  Adobe Experience Platform [!DNL Query Service].
 
-| Metrica Insights | Descrizione | Parametro query ID |
+| Metrica Insights  | Descrizione | Parametro query ID |
 | ---- | ---- | ---- |
 | timeseries.queryservice.query.scheduleonce.count | Numero totale di query pianificate non ricorrenti. | N/D |
 | timeseries.queryservice.query.scheduledrecurring.count | Numero totale di query programmate ricorrenti. | N/D |
@@ -80,17 +83,17 @@ Nella tabella seguente sono illustrate le metriche per Adobe Experience Platform
 | timeseries.queryservice.query.interactivequery.count | Numero totale di query interattive eseguite. | N/D |
 | timeseries.queryservice.query.batchfrompsqlquery.count | Numero totale di query batch eseguite da PSQL. | N/D |
 
-## Profilo cliente in tempo reale
+## [!DNL Real-time Customer Profile]
 
-La tabella seguente delinea le metriche per il profilo cliente in tempo reale.
+La tabella seguente delinea le metriche per [!DNL Real-time Customer Profile].
 
-| Metrica Insights | Descrizione | Parametro query ID |
+| Metrica Insights  | Descrizione | Parametro query ID |
 | ---- | ---- | ---- |
-| timeseries.profiles.dataset.recordread.count | Numero di record letti dal lago di dati per profilo, per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
-| timeseries.profiles.dataset.recordsuccess.count | Numero di record scritti nella propria origine dati da Profilo, per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
-| timeseries.profiles.dataset.recordfailed.count | Numero di record non riusciti da Profilo, per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
-| timeseries.profiles.dataset.batchsuccess.count | Numero di batch di profili acquisiti per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
-| timeseries.profiles.dataset.batchfailed.count | Numero di batch di profili non riusciti per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
+| timeseries.profiles.dataset.recordread.count | Numero di record letti dal [!DNL Data Lake] modulo [!DNL Profile], per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
+| timeseries.profiles.dataset.recordsuccess.count | Numero di record scritti nella propria origine dati da [!DNL Profile], per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
+| timeseries.profiles.dataset.recordfailed.count | Numero di record non riusciti da [!DNL Profile], per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
+| timeseries.profiles.dataset.batchsuccess.count | Numero di [!DNL Profile] batch acquisiti per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
+| timeseries.profiles.dataset.batchfailed.count | Numero di [!DNL Profile] batch non riusciti per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
 | platform.ups.ingest.streaming.request.m1_rate | Tasso richieste in arrivo. | Organizzazione IMS |
 | platform.ups.ingest.streaming.access.put.success.m1_rate | Tasso di successo dell&#39;ingestione. | Organizzazione IMS |
 | platform.ups.ingest.streaming.records.created.m15_rate | Frequenza dei nuovi record acquisiti per un set di dati. | ID set di dati |
