@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Iscrizione agli eventi di assimilazione dei dati
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '806'
 ht-degree: 1%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # Notifiche di assimilazione dei dati
 
-Il processo di assimilazione dei dati in  Adobe Experience Platform consiste di più passaggi. Una volta identificati i file di dati che devono essere trasferiti in Platform, il processo di assimilazione inizia e ogni passaggio si verifica consecutivamente fino a quando i dati non vengono correttamente acquisiti o meno. Il processo di assimilazione può essere avviato utilizzando l&#39;API [di inserimento dati di](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) Adobe Experience Platform o utilizzando l&#39;interfaccia utente  Experience Platform.
+Il processo di assimilazione dei dati in  Adobe Experience Platform consiste di più passaggi. Una volta identificati i file di dati in cui è necessario eseguire l&#39;assimilazione, [!DNL Platform]il processo di assimilazione inizia e ogni passaggio si verifica consecutivamente fino a quando i dati non vengono correttamente acquisiti o non hanno esito negativo. Il processo di assimilazione può essere avviato utilizzando l&#39;API [di inserimento dati](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) Adobe Experience Platform o utilizzando l&#39;interfaccia [!DNL Experience Platform] utente.
 
-I dati caricati in Platform devono passare attraverso più passaggi per raggiungere la destinazione, il Data Lake o l&#39;archivio dati del profilo cliente in tempo reale. Ogni passaggio prevede l&#39;elaborazione dei dati, la convalida dei dati e la memorizzazione dei dati prima di passare al passaggio successivo. A seconda della quantità di dati che vengono acquisiti, questo può diventare un processo che richiede molto tempo ed è sempre possibile che il processo non riesca a causa di errori di convalida, semantica o elaborazione. In caso di errore, i problemi relativi ai dati devono essere risolti e l&#39;intero processo di assimilazione deve essere riavviato utilizzando i file di dati corretti.
+I dati caricati in [!DNL Platform] devono passare attraverso più passaggi per raggiungere la destinazione, l&#39;archivio [!DNL Data Lake] o l&#39;archivio [!DNL Real-time Customer Profile] dati. Ogni passaggio prevede l&#39;elaborazione dei dati, la convalida dei dati e la memorizzazione dei dati prima di passare al passaggio successivo. A seconda della quantità di dati che vengono acquisiti, questo può diventare un processo che richiede molto tempo ed è sempre possibile che il processo non riesca a causa di errori di convalida, semantica o elaborazione. In caso di errore, i problemi relativi ai dati devono essere risolti e l&#39;intero processo di assimilazione deve essere riavviato utilizzando i file di dati corretti.
 
-Per assistere nel monitoraggio del processo di assimilazione,  Experience Platform consente di sottoscrivere un set di eventi pubblicati da ogni fase del processo, notificando all’utente lo stato dei dati acquisiti e ogni possibile errore.
+Per assistere nel monitoraggio del processo di assimilazione, [!DNL Experience Platform] consente di sottoscrivere un set di eventi pubblicati in ogni fase del processo, notificando all’utente lo stato dei dati acquisiti e ogni possibile errore.
 
 ## Eventi di notifica dello stato disponibili
 
@@ -39,17 +39,17 @@ Di seguito è riportato un elenco delle notifiche di stato relative all’inseri
 
 ## Schema payload di notifica
 
-Lo schema dell&#39;evento di notifica dell&#39;assimilazione dei dati è uno schema del modello dati esperienza (XDM) che contiene campi e valori che forniscono dettagli sullo stato dei dati che si stanno ingerendo. Visitate il repo pubblico XDM GitHub per visualizzare lo schema [di payload di](https://github.com/adobe/xdm/blob/master/schemas/common/notifications/ingestion.schema.json)notifica più recente.
+Lo schema dell&#39;evento di notifica dell&#39;assimilazione dei dati è uno schema [!DNL Experience Data Model] (XDM) contenente campi e valori che forniscono dettagli sullo stato dei dati da assimilare. Per visualizzare lo schema [!DNL GitHub] di payload di [notifica più recente, visitare il](https://github.com/adobe/xdm/blob/master/schemas/common/notifications/ingestion.schema.json)repo pubblico XDM.
 
 ## Iscriviti alle notifiche sullo stato di inserimento dei dati
 
-Attraverso gli eventi di I/O [Adobe](https://www.adobe.io/apis/experienceplatform/events.html), potete abbonarvi a più tipi di notifiche mediante i webhooks. Le sezioni seguenti descrivono i passaggi per iscriversi alle notifiche Platform relative agli eventi di assimilazione dei dati tramite Adobe Developer Console.
+Attraverso gli eventi di I/O [Adobe](https://www.adobe.io/apis/experienceplatform/events.html), potete abbonarvi a più tipi di notifiche mediante i webhooks. Le sezioni seguenti descrivono i passaggi per iscriversi alle [!DNL Platform] notifiche per gli eventi di inserimento dei dati tramite Adobe Developer Console.
 
 ### Creare un nuovo progetto in Adobe Developer Console
 
 Andate ad [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) ed effettuate l&#39;accesso con il vostro Adobe ID . Attenetevi quindi ai passaggi descritti nell&#39;esercitazione sulla [creazione di un progetto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vuoto nella documentazione di Adobe Developer Console.
 
-### Aggiungere  eventi Experience Platform al progetto
+### Aggiunta di [!DNL Experience Platform] eventi al progetto
 
 Dopo aver creato un nuovo progetto, andate alla schermata di panoramica del progetto. Da qui, clicca **[!UICONTROL Add event]**.
 
@@ -91,4 +91,4 @@ Viene visualizzata la pagina dei dettagli per la registrazione dell&#39;evento a
 
 ## Passaggi successivi
 
-Una volta registrate le notifiche Platform al progetto, potete visualizzare gli eventi ricevuti dal dashboard del progetto. Per istruzioni dettagliate su come tenere traccia degli eventi, consultate la guida [Tracing Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) .
+Una volta registrate [!DNL Platform] le notifiche al progetto, potete visualizzare gli eventi ricevuti dal dashboard del progetto. Per istruzioni dettagliate su come tenere traccia degli eventi, consultate la guida [Tracing Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) .
