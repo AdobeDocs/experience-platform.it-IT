@@ -1,36 +1,39 @@
 ---
-title: Estensione Google Universal Analytics
-seo-title: Estensione Google Universal Analytics
-description: L'estensione Google Universal Analytics è una destinazione di analisi nella piattaforma dati cliente Adobe in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell'estensione in Adobe Exchange.
-seo-description: L'estensione Google Universal Analytics è una destinazione di analisi nella piattaforma dati cliente Adobe in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell'estensione in Adobe Exchange.
+title: Google Universal  estensione Analytics
+seo-title: Google Universal  estensione Analytics
+description: L'estensione Google Universal  Analytics è una destinazione di analisi in Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell'estensione in Adobe Exchange.
+seo-description: L'estensione Google Universal  Analytics è una destinazione di analisi in Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell'estensione in Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+workflow-type: tm+mt
+source-wordcount: '540'
+ht-degree: 5%
 
 ---
 
 
-# Google Universal Analytics extension {#google-universal-analytics-extension}
+# [!DNL Google Universal Analytics] estensione {#google-universal-analytics-extension}
 
 ## Panoramica {#overview}
 
-Google Universal Analytics consente di misurare il ROI pubblicitario, nonché di monitorare i siti e le applicazioni Flash, video e di social networking.
+[!DNL Google Universal Analytics] consente di misurare il ROI pubblicitario, nonché di monitorare i siti e le applicazioni di social networking Flash, video e social network.
 
-Google Universal Analytics è un&#39;estensione di analisi in Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102829.google-universal-analytics.html).
+[!DNL Google Universal Analytics] è un&#39;estensione di analisi in Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102829.google-universal-analytics.html).
 
-Questa destinazione è un’estensione Experience Platform Launch. Per ulteriori informazioni sul funzionamento delle estensioni Launch in Adobe Real-time CDP, consulta Panoramica [delle estensioni](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
+Questa destinazione è un&#39;estensione di Experience Platform Launch. Per ulteriori informazioni sul funzionamento delle estensioni Launch in Adobe Real-time CDP, consultate Panoramica [delle estensioni](/help/rtcdp/destinations/experience-platform-launch-extensions.md)di Experience Platform Launch.
 
-![Estensione Google Universal Analytics](/help/rtcdp/destinations/assets/google-universal-analytics-extension.png)
+![Google Universal  estensione Analytics](/help/rtcdp/destinations/assets/google-universal-analytics-extension.png)
 
 
 ## Prerequisiti  {#prerequisites}
 
-Questa estensione è disponibile nel catalogo Destinazioni per tutti i clienti che hanno acquistato Adobe Real-time CDP.
+Questa estensione è disponibile nel [!DNL Destinations] catalogo per tutti i clienti che hanno acquistato Adobe Real-time CDP.
 
-Per utilizzare questa estensione, devi accedere a Experience Platform Launch. Experience Platform Launch viene offerto ai clienti Adobe Experience Cloud come funzione inclusa a valore aggiunto. Contatta l’amministratore dell’organizzazione per ottenere l’accesso a Launch e chiedi loro di concederti l’ **[!UICONTROL manage_properties]** autorizzazione necessaria per installare le estensioni.
+Per utilizzare questa estensione, è necessario accedere al Experience Platform Launch. L’Experience Platform Launch viene offerto ai clienti Adobe Experience Cloud come funzione inclusa a valore aggiunto. Contatta l’amministratore dell’organizzazione per ottenere l’accesso a Launch e chiedi loro di concederti l’ **[!UICONTROL manage_properties]** autorizzazione necessaria per installare le estensioni.
 
 ## Installa estensione {#install-extension}
 
-Per installare l’estensione Google Universal Analytics:
+Per installare l’ [!DNL Google Universal Analytics] estensione:
 
 1. Nell’interfaccia CDP [Adobe Real-time, passate a](http://platform.adobe.com/)**[!UICONTROL Destinations > Catalog]**.
 2. Selezionate l’estensione dal catalogo o usate la barra di ricerca.
@@ -38,9 +41,9 @@ Per installare l’estensione Google Universal Analytics:
 4. Nella **[!UICONTROL Select available Launch property]** finestra, selezionate la proprietà Launch in cui desiderate installare l&#39;estensione. È inoltre possibile creare una nuova proprietà in Launch. Una proprietà è una raccolta di regole, elementi di dati, estensioni configurate, ambienti e librerie. Ulteriori informazioni sulle proprietà sono disponibili nella sezione [della pagina](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) Proprietà della documentazione di Launch.
 5. Per completare l’installazione, passa a Launch.
 
-Per informazioni sulle opzioni di configurazione dell&#39;estensione, consultate la pagina [dell&#39;estensione](https://exchange.adobe.com/experiencecloud.details.102829.google-universal-analytics.html) Google Universal Analytics in Adobe Exchange.
+Per informazioni sulle opzioni di configurazione dell&#39;estensione, consultate la pagina [dell&#39;estensione](https://exchange.adobe.com/experiencecloud.details.102829.google-universal-analytics.html) Google Universal  Analytics in Adobe Exchange.
 
-Puoi anche installare l’estensione direttamente nell’interfaccia [di avvio della piattaforma](https://launch.adobe.com/)Experience. Consultate [Aggiungere una nuova estensione](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) nella documentazione di Launch.
+Potete anche installare l’estensione direttamente nell’interfaccia [del](https://launch.adobe.com/)Experience Platform Launch. Consultate [Aggiungere una nuova estensione](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) nella documentazione di Launch.
 
 
 ## Come utilizzare l&#39;estensione {#how-to-use}
