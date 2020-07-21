@@ -4,21 +4,21 @@ seo-title: Governance dei dati in tempo reale Platform
 description: 'Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all''uso dei dati. '
 seo-description: 'Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all''uso dei dati. '
 translation-type: tm+mt
-source-git-commit: 7f6612f7dd649d68aa7ebe5b971b72d7b433b1e3
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1016'
 ht-degree: 0%
 
 ---
 
 
-# Governance dei dati in CDP in tempo reale
+# [!DNL Data Governance] in CDP in tempo reale
 
-Real-time Customer Data Platform (Real-time CDP) riunisce i dati di più sistemi aziendali, consentendo agli esperti di marketing di identificare, comprendere e coinvolgere meglio i clienti. Questi dati possono essere soggetti a restrizioni d&#39;uso definite dalla tua organizzazione o dalle normative legali. Pertanto, è importante assicurarsi che la CDP in tempo reale sia conforme ai criteri di utilizzo quando si gestiscono i dati.
+[!DNL Real-time Customer Data Platform] (Real-time CDP) unisce i dati provenienti da più sistemi aziendali, consentendo agli esperti di marketing di identificare, comprendere e coinvolgere meglio i clienti. Questi dati possono essere soggetti a restrizioni d&#39;uso definite dalla tua organizzazione o dalle normative legali. Pertanto, è importante assicurarsi che la CDP in tempo reale sia conforme ai criteri di utilizzo quando si gestiscono i dati.
 
- Adobe Experience Platform Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all&#39;uso dei dati. Questo svolge un ruolo chiave all’interno di CDP in tempo reale, consentendo di definire criteri di utilizzo, classificare i dati in base a tali criteri e verificare la presenza di violazioni dei criteri durante l’esecuzione di determinate azioni di marketing.
+ Adobe Experience Platform [!DNL Data Governance] consente di gestire i dati dei clienti e garantire la conformità a normative, restrizioni e criteri applicabili all&#39;uso dei dati. Questo svolge un ruolo chiave all’interno di CDP in tempo reale, consentendo di definire criteri di utilizzo, classificare i dati in base a tali criteri e verificare la presenza di violazioni dei criteri durante l’esecuzione di determinate azioni di marketing.
 
-La CDP in tempo reale è basata su  Adobe Experience Platform, e pertanto la maggior parte delle funzionalità di governance dei dati è trattata nella documentazione  Experience Platform. Questo documento è destinato a completare la panoramica [sulla governance dei](../../data-governance/home.md) dati per  Experience Platform e illustra le funzioni di governance disponibili in CDP in tempo reale. Vengono trattati i seguenti argomenti:
+La tecnologia CDP in tempo reale si basa su  Adobe Experience Platform, pertanto la maggior parte delle [!DNL Data Governance] funzionalità sono descritte nella [!DNL Experience Platform] documentazione. Questo documento è destinato a completare la panoramica [sulla governance dei](../../data-governance/home.md) dati per [!DNL Experience Platform]e illustra le funzioni di governance disponibili in CDP in tempo reale. Vengono trattati i seguenti argomenti:
 
 * [Applicazione di etichette di utilizzo ai dati](#labels)
 * [Gestire i criteri di utilizzo dei dati](#policies)
@@ -26,7 +26,7 @@ La CDP in tempo reale è basata su  Adobe Experience Platform, e pertanto la mag
 
 ## Applicazione di etichette di utilizzo ai dati {#labels}
 
-Governance dei dati consente di applicare etichette di utilizzo ai dati, a livello di dataset o di dataset. Le etichette di utilizzo dei dati consentono di classificare i dati in base ai criteri di utilizzo applicati a tali dati.
+[!DNL Data Governance] consente di applicare etichette di utilizzo ai dati, a livello di dataset o di campo dataset. Le etichette di utilizzo dei dati consentono di classificare i dati in base ai criteri di utilizzo applicati a tali dati.
 
 Per informazioni dettagliate sull&#39;utilizzo delle etichette di utilizzo dei dati, vedere la guida [utente delle etichette di uso](../../data-governance/labels/overview.md) dei dati per  Adobe Experience Platform.
 
@@ -36,7 +36,7 @@ Puoi impostare le restrizioni di utilizzo dei dati su una destinazione definendo
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle azioni di marketing e il loro utilizzo nei criteri di utilizzo dei dati, consulta la panoramica [sui criteri di utilizzo](../../data-governance/policies/overview.md) dei dati nella documentazione Experience Platform .
+>Per ulteriori informazioni sulle azioni di marketing e il loro utilizzo nei criteri di utilizzo dei dati, consulta la panoramica [dei criteri di utilizzo](../../data-governance/policies/overview.md) dei dati nella [!DNL Experience Platform] documentazione.
 
 La definizione dei casi di utilizzo del marketing sulle destinazioni consente di garantire che tutti i profili o i segmenti inviati a tali destinazioni siano conformi ai criteri di utilizzo dei dati. È quindi necessario aggiungere alle destinazioni i casi di utilizzo del marketing appropriati in base alle esigenze aziendali per applicare restrizioni all&#39;attivazione.
 
@@ -45,19 +45,19 @@ I casi di utilizzo del marketing possono essere selezionati solo quando si confi
 
 ## Gestire i criteri di utilizzo dei dati {#policies}
 
-Affinché le etichette di utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario definire e abilitare i criteri di utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing consentite o con cui è consentito eseguire attività sui dati all’interno di un CDP in tempo reale. Per ulteriori informazioni, consulta la sezione &quot;Criteri di utilizzo dei dati&quot; nella  panoramica [sulla governance](../../data-governance/home.md) dei dati di Experience Platform.
+Affinché le etichette di utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario definire e abilitare i criteri di utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing consentite o con cui è consentito eseguire attività sui dati all’interno di un CDP in tempo reale. Per ulteriori informazioni, consulta la sezione &quot;Criteri di utilizzo dei dati&quot; nella panoramica [!DNL Experience Platform] sulla governance dei [](../../data-governance/home.md) dati.
 
- Adobe Experience Platform fornisce diversi criteri **** fondamentali per i casi di utilizzo comuni dell&#39;esperienza cliente. Questi criteri possono essere visualizzati nell&#39;interfaccia utente accedendo all&#39;area di lavoro e selezionando la **[!UICONTROL Policies]** **[!UICONTROL Browse]** scheda. Per informazioni dettagliate sull&#39;utilizzo dei criteri nell&#39;interfaccia utente, consultate la guida [utente ai](../../data-governance/policies/user-guide.md) criteri nella documentazione Experience Platform , inclusa la procedura per l&#39;elaborazione di criteri personalizzati.
+ Adobe Experience Platform fornisce diversi criteri **** fondamentali per i casi di utilizzo comuni dell&#39;esperienza cliente. Questi criteri possono essere visualizzati nell&#39;interfaccia utente accedendo all&#39;area di lavoro e selezionando la **[!UICONTROL Policies]** **[!UICONTROL Browse]** scheda. Per informazioni dettagliate sull&#39;utilizzo dei criteri nell&#39;interfaccia utente, consultate la guida [utente relativa ai](../../data-governance/policies/user-guide.md) criteri nella [!DNL Experience Platform] documentazione, inclusa la procedura per l&#39;elaborazione di criteri personalizzati.
 
 ## Applica conformità all&#39;utilizzo dei dati {#enforce-data-usage-compliance}
 
-Una volta etichettati i dati e definiti i criteri di utilizzo, potete applicare la conformità dell&#39;utilizzo dei dati ai criteri. Quando si attivano i segmenti di pubblico verso destinazioni in CDP in tempo reale, la governance dei dati applica automaticamente i criteri di utilizzo in caso di violazioni.
+Una volta etichettati i dati e definiti i criteri di utilizzo, potete applicare la conformità dell&#39;utilizzo dei dati ai criteri. Quando si attivano segmenti di pubblico verso destinazioni in CDP in tempo reale, applica [!DNL Data Governance] automaticamente i criteri di utilizzo in caso di violazioni.
 
 Il diagramma seguente illustra come l&#39;implementazione dei criteri è integrata nel flusso di dati dell&#39;attivazione dei segmenti:
 
 ![](assets/enforcement-flow.png)
 
-Quando un segmento viene attivato per la prima volta, il servizio Criteri DULE verifica la presenza di violazioni dei criteri in base ai seguenti fattori:
+Quando un segmento viene attivato per la prima volta, DULE [!DNL Policy Service] verifica la presenza di violazioni dei criteri in base ai seguenti fattori:
 
 * Le etichette di utilizzo dei dati applicate ai campi e ai set di dati all’interno del segmento da attivare.
 * Scopo di marketing della destinazione.
@@ -75,13 +75,13 @@ Se si verifica una violazione del criterio durante il tentativo di attivare un s
 
 ![](assets/violation-popover.png)
 
-La scheda *Dettagli* del puntatore indica l&#39;azione che ha attivato la violazione il motivo della violazione e fornisce suggerimenti per la possibile risoluzione del problema.
+La *[!UICONTROL Details]* scheda del puntatore indica l&#39;azione che ha attivato la violazione il motivo della violazione e fornisce suggerimenti per la possibile risoluzione del problema.
 
-Fare clic su **Data Lineage** per tenere traccia delle destinazioni, dei segmenti, dei criteri di unione o dei set di dati le cui etichette dati hanno attivato la violazione.
+Fare clic **[!UICONTROL Data Lineage]** per tenere traccia delle destinazioni, dei segmenti, dei criteri di unione o dei set di dati le cui etichette dati hanno attivato la violazione.
 
 ![](assets/data-lineage.png)
 
-Dopo l&#39;attivazione di una violazione, il pulsante **Salva** viene disattivato per l&#39;attivazione fino a quando i componenti appropriati non vengono aggiornati in conformità ai criteri di utilizzo dei dati.
+Una volta attivata la violazione, il **[!UICONTROL Save]** pulsante viene disattivato per l&#39;attivazione fino a quando i componenti appropriati non vengono aggiornati in conformità ai criteri di utilizzo dei dati.
 
 ### Applicazione dei criteri per i segmenti attivati {#policy-enforcement-for-activated-segments}
 
@@ -96,8 +96,8 @@ Se una delle azioni di cui sopra genera una violazione, tale azione non viene sa
 
 ## Passaggi successivi
 
-Ora che hai introdotto le funzioni chiave di governance dei dati su CDP in tempo reale e come  Experience Platform le consente, continua a consultare la [documentazione per la governance dei dati  Adobe Experience Platform](../../data-governance/home.md). La documentazione fornisce panoramiche dei concetti fondamentali di governance dei dati, nonché flussi di lavoro dettagliati per la gestione delle etichette e dei criteri di utilizzo dei dati.
+Ora che hai introdotto le [!DNL Data Governance] funzionalità chiave su CDP in tempo reale e come le [!DNL Experience Platform] consente, continua a consultare la [documentazione per la governance dei dati  Adobe Experience Platform](../../data-governance/home.md). La documentazione fornisce panoramiche di [!DNL Data Governance] concetti essenziali, nonché flussi di lavoro dettagliati per la gestione di etichette e criteri di utilizzo dei dati.
 
-Il seguente video fornisce una panoramica sulla governance dei dati in tempo reale nel CDP, compreso l’utilizzo di casi di utilizzo del marketing su destinazioni e di flussi di lavoro di esempio per diversi scenari:
+Il seguente video fornisce una panoramica di CDP [!DNL Data Governance] in tempo reale, con l’utilizzo di casi di utilizzo del marketing su destinazioni e di flussi di lavoro di esempio per diversi scenari:
 
 >[!VIDEO](https://video.tv.adobe.com/v/33631?quality=12&learn=on)
