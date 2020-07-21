@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida all'interfaccia utente di Generatore di segmenti
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: f44e42a4faa3b10f147dbaf929048054ce0bec42
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '2665'
+source-wordcount: '2660'
 ht-degree: 0%
 
 ---
@@ -18,11 +18,11 @@ ht-degree: 0%
 
 ## Introduzione
 
-Per utilizzare le definizioni dei segmenti è necessario conoscere i vari [!DNL Experience Platform] servizi coinvolti nella segmentazione. Prima di leggere questa guida utente, consulta la documentazione relativa ai seguenti servizi:
+Per utilizzare le definizioni dei segmenti è necessario conoscere i diversi [!DNL Experience Platform] servizi coinvolti nella segmentazione. Prima di leggere questa guida utente, consulta la documentazione relativa ai seguenti servizi:
 
-- [!DNL Segmentation Service](../home.md): Il servizio di segmentazione consente di dividere i dati memorizzati in [!DNL Experience Platform] relazione a individui (come clienti, potenziali, utenti o organizzazioni) in gruppi più piccoli che condividono caratteristiche simili e risponderanno in modo simile alle strategie di marketing.
+- [!DNL Segmentation Service](../home.md): [!DNL Segmentation Service] consente di dividere i dati memorizzati in [!DNL Experience Platform] relazione a individui (come clienti, potenziali, utenti o organizzazioni) in gruppi più piccoli che condividono caratteristiche simili e risponderanno in modo simile alle strategie di marketing.
 - [!DNL Real-time Customer Profile](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-- [!DNL Identity Service](../../identity-service/home.md): Consente [!DNL Real-time Customer Profile] di collegare identità da origini dati diverse che vengono caricate in Platform.
+- [!DNL Identity Service](../../identity-service/home.md): Consente [!DNL Real-time Customer Profile] di colmare le identità provenienti da origini dati diverse in cui viene eseguito il caricamento [!DNL Platform].
 - [!DNL Experience Data Model (XDM)](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
 
 È inoltre importante conoscere due termini chiave utilizzati in questo documento e comprendere la differenza tra questi:
@@ -63,7 +63,7 @@ La **[!UICONTROL Attributes]** scheda consente di esplorare [!DNL Profile] gli a
 
 ### Eventi
 
-La **[!UICONTROL Events]** scheda consente di creare un&#39;audience basata su eventi o azioni che si sono verificati utilizzando gli elementi di dati XDM ExperienceEvent. Potete anche trovare i tipi di evento nella **[!UICONTROL Events]** scheda, una raccolta di eventi di uso comune che consente di creare i segmenti più rapidamente.
+La **[!UICONTROL Events]** scheda consente di creare un&#39;audience basata su eventi o azioni che si sono verificati utilizzando elementi [!DNL XDM ExperienceEvent] dati. Potete anche trovare i tipi di evento nella **[!UICONTROL Events]** scheda, una raccolta di eventi di uso comune che consente di creare i segmenti più rapidamente.
 
 Oltre a poter individuare [!DNL ExperienceEvent] gli elementi, potete anche cercare i tipi di evento. I tipi di evento utilizzano la stessa logica di codifica utilizzata [!DNL ExperienceEvents], senza che sia necessario eseguire ricerche nella [!DNL XDM ExperienceEvent] classe alla ricerca dell&#39;evento corretto. Ad esempio, utilizzando la barra di ricerca per cercare &quot;carrello&quot; vengono restituiti i tipi di evento &quot;[!UICONTROL AddCart]&quot; e &quot;[!UICONTROL RemoveCart]&quot;, due azioni carrello utilizzate di frequente per la creazione delle definizioni dei segmenti.
 
@@ -105,7 +105,7 @@ Per aggiungere una nuova regola alla definizione del segmento, trascinate una se
 
 Puoi trascinare un&#39;audience dalla *[!UICONTROL Audience]* scheda nell&#39;area di lavoro del generatore di regole per fare riferimento all&#39;appartenenza all&#39;audience nella nuova definizione di segmento. Questo consente di includere o escludere l&#39;appartenenza all&#39;audience come attributo nella nuova regola del segmento.
 
-Per [!DNL Platform] i tipi di pubblico creati utilizzando [!DNL Segment Builder], viene offerta l&#39;opzione per convertire l&#39;audience in un set di regole utilizzate nella definizione del segmento per quell&#39;audience. Questa conversione crea una copia della logica della regola, che può essere modificata senza influenzare la definizione del segmento originale. Prima di convertire le modifiche recenti nella definizione del segmento in logica regola, accertatevi di aver salvato le modifiche recenti.
+Per [!DNL Platform] i tipi di pubblico creati con [!DNL Segment Builder], potete scegliere di convertire l&#39;audience in un set di regole utilizzate nella definizione del segmento per quell&#39;audience. Questa conversione crea una copia della logica della regola, che può essere modificata senza influenzare la definizione del segmento originale. Prima di convertire le modifiche recenti nella definizione del segmento in logica regola, accertatevi di aver salvato le modifiche recenti.
 
 >[!NOTE]
 >
