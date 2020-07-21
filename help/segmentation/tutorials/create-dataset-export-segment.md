@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare un dataset per l'esportazione di un segmento di pubblico
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: cb6a2f91eb6c18835bd9542e5b66af4682227491
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '674'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Questa esercitazione è direttamente correlata ai passaggi descritti nell&#39;es
 
 ## Introduzione
 
-Per esportare un segmento, il set di dati deve essere basato sullo schema unionale profilo singolo XDM. Uno schema unione è uno schema di sola lettura generato dal sistema che aggrega i campi di tutti gli schemi che condividono la stessa classe, in questo caso si tratta della classe Profilo singolo XDM. Per ulteriori informazioni sugli schemi di visualizzazione dell&#39;unione, vedere la sezione Profilo cliente in tempo [reale della guida](../../xdm/schema/composition.md#union)per gli sviluppatori del Registro di sistema dello schema.
+Per esportare un segmento, il set di dati deve essere basato sul [!DNL XDM Individual Profile Union Schema]. Uno schema unione è uno schema di sola lettura generato dal sistema che aggrega i campi di tutti gli schemi che condividono la stessa classe, in questo caso si tratta della [!DNL XDM Individual Profile] classe. Per ulteriori informazioni sugli schemi di visualizzazione dell&#39;unione, vedere la sezione Profilo cliente in tempo [reale della guida](../../xdm/schema/composition.md#union)per gli sviluppatori del Registro di sistema dello schema.
 
 Per visualizzare gli schemi di unione nell&#39;interfaccia utente, fate clic **[!UICONTROL Profiles]** nel menu di navigazione a sinistra, quindi fate clic sulla **[!UICONTROL Union schema]** scheda come mostrato di seguito.
 
@@ -53,7 +53,7 @@ Sullo *[!UICONTROL Create Dataset]* schermo, fare clic **[!UICONTROL Create Data
 
 ## Seleziona schema unione profilo singolo XDM
 
-Per selezionare lo schema dell&#39;unione del profilo singolo XDM da utilizzare nel dataset, individuare lo schema &quot;[!UICONTROL XDM Individual Profile]&quot; con un tipo di &quot;[!UICONTROL Union]&quot; sullo *[!UICONTROL Select Schema]* schermo.
+Per selezionare l&#39; [!DNL XDM Individual Profile Union Schema] utilizzo nel dataset, individuare lo schema &quot;[!UICONTROL XDM Individual Profile]&quot; con un tipo di &quot;[!UICONTROL Union]&quot; sullo *[!UICONTROL Select Schema]* schermo.
 
 Selezionato il pulsante di scelta accanto a **[!UICONTROL XDM Individual Profile]**, quindi fate clic **[!UICONTROL Next]** nell&#39;angolo superiore destro.
 
@@ -84,6 +84,6 @@ Tenete presente **[!UICONTROL Dataset ID]**, in quanto questo valore è richiest
 
 ## Passaggi successivi
 
-Dopo aver creato un set di dati basato sullo schema unionale profilo singolo XDM, è possibile utilizzare l&#39; **[!UICONTROL Dataset ID]** per continuare l&#39;esercitazione sui risultati [di](./evaluate-a-segment.md) valutazione e accesso al segmento.
+Dopo aver creato un set di dati basato su [!DNL XDM Individual Profile Union Schema], puoi utilizzare il set **[!UICONTROL Dataset ID]** per continuare l’esercitazione sui risultati [di](./evaluate-a-segment.md) valutazione e accesso ai segmenti.
 
 Al momento, tornate all’esercitazione sui risultati del segmento di valutazione e fate clic sul passaggio dei profili di [generazione per i membri](./evaluate-a-segment.md#generate-profiles) dell’audience nel passaggio del flusso di lavoro di esportazione di un segmento.
