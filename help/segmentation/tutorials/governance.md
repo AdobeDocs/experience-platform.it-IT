@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Applica la conformità all'utilizzo dei dati per i segmenti di pubblico
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: cb6a2f91eb6c18835bd9542e5b66af4682227491
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '1325'
+source-wordcount: '1323'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Questa esercitazione descrive i passaggi per imporre la conformità dell&#39;uti
 Questa esercitazione richiede una buona conoscenza dei seguenti componenti di [!DNL Adobe Experience Platform]:
 
 - [!DNL Real-time Customer Profile](../../profile/home.md): [!DNL Real-time Customer Profile] è un archivio di entità di ricerca generico e viene utilizzato per gestire i dati [!DNL Experience Data Model] (XDM) all&#39;interno [!DNL Platform]. Il profilo unisce i dati tra diverse risorse di dati aziendali e fornisce l&#39;accesso a tali dati in una presentazione unificata.
-   - [Unisci criteri](../../profile/api/merge-policies.md): Regole utilizzate [!DNL Real-time Customer Profile] per determinare quali dati possono essere uniti in una visualizzazione unificata in determinate condizioni. I criteri di unione possono essere configurati a scopo di governance dei dati.
+   - [Unisci criteri](../../profile/api/merge-policies.md): Regole utilizzate [!DNL Real-time Customer Profile] per determinare quali dati possono essere uniti in una visualizzazione unificata in determinate condizioni. I criteri di unione possono essere configurati a [!DNL Data Governance] scopo.
 - [!DNL Segmentation](../home.md): Come [!DNL Real-time Customer Profile] divide un ampio gruppo di individui contenuti nello store di profili in gruppi più piccoli che condividono caratteristiche simili e risponderanno in modo simile alle strategie di marketing.
 - [!DNL Data Governance](../../data-governance/home.md): [!DNL Data Governance] fornisce l&#39;infrastruttura per l&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati (DULE), utilizzando i seguenti componenti:
    - [Etichette](../../data-governance/labels/user-guide.md)di utilizzo dati: Etichette utilizzate per descrivere insiemi di dati e campi in termini di livello di sensibilità con cui gestire i rispettivi dati.
