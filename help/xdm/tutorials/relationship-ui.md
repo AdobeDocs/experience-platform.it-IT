@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Definire una relazione tra due schemi utilizzando l'Editor schema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 1445646be8fa3416a34408205eadca0a792290c6
 workflow-type: tm+mt
 source-wordcount: '763'
 ht-degree: 1%
@@ -62,7 +62,7 @@ Viene visualizzata la finestra di dialogo [!UICONTROL _Aggiungi mixin _]. Da qui
 
 <img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
 
-Il quadro viene nuovamente visualizzato con &quot;[!UICONTROL Loyalty Relationship]&quot; nella sezione _Mixins_ . Fate clic sul nome del mixin, quindi fate clic **[!UICONTROL Add Field]** accanto al campo &quot;[!UICONTROL Loyalty Members]&quot; di livello principale.
+Il quadro viene nuovamente visualizzato con &quot;[!UICONTROL Favorite Hotel]&quot; nella sezione _Mixins_ . Fate clic sul nome del mixin, quindi fate clic **[!UICONTROL Add Field]** accanto al campo &quot;[!UICONTROL Loyalty Members]&quot; di livello principale.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
@@ -74,7 +74,7 @@ Al termine, fate clic **[!UICONTROL Apply]**.
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
-Il campo &quot;[!UICONTROL loyaltyRelationship]&quot; aggiornato viene visualizzato nel quadro. Fare clic **[!UICONTROL Save]** per finalizzare le modifiche allo schema.
+Il campo &quot;[!UICONTROL favoriteHotel]&quot; aggiornato viene visualizzato nel quadro. Fare clic **[!UICONTROL Save]** per finalizzare le modifiche allo schema.
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
