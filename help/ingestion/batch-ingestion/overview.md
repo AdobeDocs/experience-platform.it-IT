@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Panoramica sull'inserimento dei batch di  Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1144'
 ht-degree: 2%
 
 ---
 
 
-# Panoramica sull&#39;inserimento batch
+# [!DNL Batch Ingestion]panoramica
 
-L&#39;API Batch Ingestion consente di trasferire i dati  Adobe Experience Platform come file batch. I dati che si desidera acquisire possono essere i dati di profilo provenienti da un file semplice in un sistema CRM (ad esempio un file parquet), o i dati conformi a uno schema noto nel Registro di sistema di Experience Data Model (XDM).
+L&#39; [!DNL Batch Ingestion] API consente di trasferire i dati  Adobe Experience Platform come file batch. I dati che si desidera acquisire possono essere i dati di profilo provenienti da un file semplice in un sistema CRM (ad esempio un file parquet), o i dati conformi a uno schema noto nel Registro di sistema [!DNL Experience Data Model] (XDM).
 
 Il riferimento [API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) Data Ingestion fornisce informazioni aggiuntive su queste chiamate API.
 
@@ -24,17 +24,17 @@ Il diagramma seguente illustra il processo di assimilazione dei batch:
 
 ## Utilizzo dell&#39;API
 
-L&#39;API Data Ingestion consente di assimilare i dati come batch (un&#39;unità di dati costituita da uno o più file da assimilare come singola unità)  Experience Platform in tre passaggi fondamentali:
+L&#39; [!DNL Data Ingestion] API consente di assimilare i dati come batch (un&#39;unità di dati costituita da uno o più file da assimilare come singola unità) in [!DNL Experience Platform] tre passaggi fondamentali:
 
 1. Creare un nuovo batch.
 2. Caricate i file in un set di dati specificato che corrisponde allo schema XDM dei dati.
 3. Segnala la fine del batch.
 
 
-### Prerequisiti per l’inserimento dei dati
+### [!DNL Data Ingestion] prerequisiti
 
 - I dati da caricare devono essere in formato Parquet o JSON.
-- Un set di dati creato nei servizi [](../../catalog/home.md)Catalogo.
+- Un set di dati creato in [!DNL Catalog services](../../catalog/home.md).
 - Il contenuto del file parquet deve corrispondere a un sottoinsieme dello schema del set di dati in fase di caricamento.
 - Dopo l&#39;autenticazione, avrai il tuo token di accesso univoco.
 
@@ -47,23 +47,23 @@ Per caricare un file di dimensioni superiori a 512 MB, è necessario dividere il
 
 ### Lettura di chiamate API di esempio
 
-Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi di  Experience Platform.
+Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla [!DNL Experience Platform] risoluzione dei problemi.
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle API Platform, è prima necessario completare l&#39;esercitazione [di](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API Experience Platform, come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in  Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API Platform richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in Platform, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+>Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva:
 
@@ -237,7 +237,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## Completamento batch segnale
 
-Dopo aver caricato tutti i file nel batch, il batch può essere segnalato per il completamento. In questo modo, le voci Catalog **DataSetFile** vengono create per i file completati e associate al batch generato in precedenza. Il batch di cataloghi viene quindi contrassegnato come riuscito, che attiva i flussi a valle per l’acquisizione dei dati disponibili.
+Dopo aver caricato tutti i file nel batch, il batch può essere segnalato per il completamento. In questo modo, le voci [!DNL Catalog] DataSetFile **** vengono create per i file completati e associate al batch generato in precedenza. Il [!DNL Catalog] batch viene quindi contrassegnato come riuscito, che attiva i flussi a valle per l&#39;acquisizione dei dati disponibili.
 
 **Richiesta**
 
