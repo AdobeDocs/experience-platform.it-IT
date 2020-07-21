@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Funzioni di aggregazione
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '208'
+ht-degree: 6%
 
 ---
 
 
 # Funzioni di aggregazione
 
-Le funzioni di aggregazione vengono utilizzate per raggruppare più valori all&#39;interno degli array PQL (Profile Query Language) per creare un singolo valore di riepilogo. Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella panoramica [Lingua query](./overview.md)profilo.
+Le funzioni di aggregazione sono utilizzate per raggruppare più valori all&#39;interno di array [!DNL Profile Query Language] (PQL) per formare un singolo valore di riepilogo. Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella panoramica [Lingua query](./overview.md)profilo.
 
 ## Count
 
