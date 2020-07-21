@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Anteprime e endpoint stime
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '742'
 ht-degree: 2%
 
 ---
@@ -71,7 +71,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | -------- | ----------- |
 | `predicateExpression` | Espressione PQL per eseguire una query sui dati. |
 | `predicateType` | Il tipo di predicato per l&#39;espressione della query in `predicateExpression`. Attualmente, l&#39;unico valore accettato per questa proprietà è `pql/text`. |
-| `predicateModel` | Nome dello schema Experience Data Model (XDM) su cui si basano i dati del profilo. |
+| `predicateModel` | Nome dello schema [!DNL Experience Data Model] (XDM) su cui si basano i dati del profilo. |
 
 **Risposta**
 
@@ -167,7 +167,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `results` | Un elenco di ID entità, con le relative identità. I collegamenti forniti possono essere utilizzati per cercare le entità specificate, utilizzando l&#39;API [di accesso](../../profile/api/entities.md)profilo. |
+| `results` | Un elenco di ID entità, con le relative identità. I collegamenti forniti possono essere utilizzati per cercare le entità specificate, utilizzando l&#39; [!DNL Profile Access API](../../profile/api/entities.md). |
 
 ## Recuperare i risultati di un processo di stima specifico {#get-estimate}
 
@@ -226,4 +226,4 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del processo 
 
 ## Passaggi successivi
 
-Dopo aver letto questa guida è ora possibile comprendere meglio come utilizzare le anteprime e le stime. Per ulteriori informazioni sugli altri endpoint API di Segmentation Service, consulta la panoramica [della guida per gli sviluppatori di](./overview.md)Segmentation Service.
+Dopo aver letto questa guida è ora possibile comprendere meglio come utilizzare le anteprime e le stime. Per ulteriori informazioni sugli altri endpoint [!DNL Segmentation Service] API, consulta la panoramica [della guida per gli sviluppatori del servizio](./overview.md)di segmentazione.
