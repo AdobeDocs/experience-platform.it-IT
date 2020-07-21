@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ' Guida per lo sviluppatore Batch Ingestion'
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '2577'
+source-wordcount: '2552'
 ht-degree: 6%
 
 ---
@@ -27,28 +27,28 @@ Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario cono
 Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
 
 - [Caricamento](./overview.md)batch: Consente di assimilare i dati  Adobe Experience Platform come file batch.
-- [Sistema](../../xdm/home.md)XDM (Experience Data Model): Framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
-- [Sandbox](../../sandboxes/home.md):  Experience Platform fornisce sandbox virtuali che dividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
+- [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 ### Lettura di chiamate API di esempio
 
-Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi di  Experience Platform.
+Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla [!DNL Experience Platform] risoluzione dei problemi.
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle API Platform, è prima necessario completare l&#39;esercitazione [di](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API Experience Platform, come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in  Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API Platform richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in Platform, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+>Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
 Le richieste che contengono un payload (POST, PUT, PATCH) possono richiedere un&#39; `Content-Type` intestazione aggiuntiva. I valori accettati specifici per ogni chiamata vengono forniti nei parametri della chiamata. In questa guida vengono utilizzati i seguenti tipi di contenuto:
 
@@ -57,7 +57,7 @@ Le richieste che contengono un payload (POST, PUT, PATCH) possono richiedere un&
 
 ## Tipi
 
-Durante l’assimilazione dei dati, è importante comprendere il funzionamento degli schemi Experience Data Model (XDM). Per ulteriori informazioni sulla mappatura dei tipi di campo XDM in formati diversi, consultare la guida [per gli sviluppatori del Registro di](../../xdm/api/getting-started.md)schema.
+Durante l&#39;assimilazione dei dati, è importante comprendere il funzionamento degli schemi [!DNL Experience Data Model] (XDM). Per ulteriori informazioni sulla mappatura dei tipi di campo XDM in formati diversi, consultare la guida [per gli sviluppatori del Registro di](../../xdm/api/getting-started.md)schema.
 
 Durante l&#39;assimilazione dei dati vi è una certa flessibilità: se un tipo non corrisponde a quello presente nello schema di destinazione, i dati verranno convertiti nel tipo di destinazione espresso. In caso contrario, il batch non riuscirà con un `TypeCompatibilityException`.
 
@@ -1003,7 +1003,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### Trasformazione dei dati per l’assimilazione batch
 
-Per acquisire un file di dati in  Experience Platform, la struttura gerarchica del file deve essere conforme allo schema XDM ( [Experience Data Model)](../../xdm/home.md) associato al set di dati in fase di caricamento.
+Per assimilare un file di dati in [!DNL Experience Platform], la struttura gerarchica del file deve essere conforme allo schema [Experience Data Model (XDM)](../../xdm/home.md) associato al set di dati in fase di caricamento.
 
 Informazioni su come mappare un file CSV per conformarsi a uno schema XDM sono disponibili nel documento di trasformazione [di](../../etl/transformations.md) esempio, insieme a un esempio di file di dati JSON formattato correttamente. I file di esempio forniti nel documento sono disponibili qui:
 
