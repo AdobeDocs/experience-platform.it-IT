@@ -4,9 +4,9 @@ seo-title: Attivare profili e segmenti su una destinazione
 description: Attiva i dati in Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 seo-description: Attiva i dati in Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 translation-type: tm+mt
-source-git-commit: b1f8cbe245f73e31a8941fc45cefcee595968a70
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '983'
 ht-degree: 0%
 
 ---
@@ -36,6 +36,7 @@ Per attivare i dati sulle destinazioni, è necessario aver [collegato correttame
    >Se sono state applicate etichette di utilizzo dei dati a determinati campi all’interno di un set di dati (anziché all’intero set di dati), l’applicazione di tali etichette a livello di campo all’attivazione avviene alle seguenti condizioni:
    >* I campi vengono utilizzati nella definizione del segmento.
    >* I campi sono configurati come attributi proiettati per la destinazione di destinazione.
+
    >
    > Considerate lo screenshot riportato di seguito. Se, ad esempio, nel campo `person.name.first.Name` erano presenti alcune etichette di utilizzo dei dati in conflitto con il caso di utilizzo marketing della destinazione, nel passaggio 7 viene mostrata una violazione del criterio di utilizzo dei dati. Per ulteriori informazioni, consulta Governance dei [dati in CDP in tempo reale](/help/rtcdp/privacy/data-governance-overview.md#destinations)
 
@@ -56,7 +57,7 @@ Per attivare i dati sulle destinazioni, è necessario aver [collegato correttame
    ![ID fedeltà come identità](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
 
 
-   Selezionate `Email_LC_SHA256` come identità di destinazione se avete hashing gli indirizzi e-mail del cliente sull&#39;inserimento dei dati in  Adobe Experience Platform, in base ai requisiti [di hashing](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)e-mail di Facebook. <br> Selezionate `Email` come identità di destinazione se gli indirizzi e-mail utilizzati non sono crittografati. Adobe Real-time CDP invierà gli indirizzi e-mail in conformità ai requisiti di Facebook.
+   Selezionate `Email_LC_SHA256` come identità di destinazione se avete hashing gli indirizzi e-mail dei clienti durante l&#39;inserimento di dati in  Adobe Experience Platform, in base ai requisiti [!DNL Facebook] di hashing [](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)e-mail. <br> Selezionate `Email` come identità di destinazione se gli indirizzi e-mail utilizzati non sono crittografati. Adobe Real-time CDP eseguirà l&#39;hash degli indirizzi e-mail per soddisfare [!DNL Facebook] i requisiti.
 
    ![mappatura identità dopo la compilazione dei campi](/help/rtcdp/destinations/assets/identity-mapping.png)
 
@@ -112,11 +113,11 @@ Controllate la rispettiva destinazione pubblicitaria a cui state attivando i dat
 
 ### Destinazioni social network
 
-Per Facebook, un&#39;attivazione di successo significa che un&#39;audience personalizzata di Facebook verrà creata in modo programmatico in [Facebook Ads Manager](https://www.facebook.com/adsmanager/manage/). L&#39;appartenenza al segmento nel pubblico viene aggiunta e rimossa man mano che gli utenti sono qualificati o non qualificati per i segmenti attivati.
+Ad [!DNL Facebook]esempio, un&#39;attivazione corretta implica la creazione di un&#39;audience [!DNL Facebook] personalizzata a livello di programmazione in [Facebook Ads Manager](https://www.facebook.com/adsmanager/manage/). L&#39;appartenenza al segmento nel pubblico viene aggiunta e rimossa man mano che gli utenti sono qualificati o non qualificati per i segmenti attivati.
 
 >[!TIP]
 >
->L’integrazione tra Adobe Real-time CDP e Facebook supporta i backfill storici del pubblico. Tutte le qualifiche dei segmenti storici vengono inviate a Facebook quando si attivano i segmenti sulla destinazione.
+>L&#39;integrazione tra Adobe Real-time CDP e [!DNL Facebook] supporta i backfill storici del pubblico. Tutte le qualifiche del segmento storico vengono inviate a [!DNL Facebook] quando si attivano i segmenti alla destinazione.
 
 ## Disattiva attivazione {#disable-activation}
 
