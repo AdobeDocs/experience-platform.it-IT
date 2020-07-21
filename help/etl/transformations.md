@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Trasformazioni ETL di esempio
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '466'
+ht-degree: 1%
 
 ---
 
@@ -17,12 +20,12 @@ Questo articolo illustra le seguenti trasformazioni che uno sviluppatore di estr
 
 ### File di esempio
 
-I file CSV di esempio e JSON sono disponibili dall’opuscolo GitHub di riferimento ETL gestito da Adobe:
+I file CSV e JSON di esempio sono disponibili dal [!DNL GitHub] repo pubblico di riferimento ETL gestito da Adobe:
 
 - [CRM_profile.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profile.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
 
-### Esempio CSV
+### Esempio di CSV
 
 I seguenti dati CRM sono stati esportati come `CRM_profiles.csv`:
 
@@ -46,10 +49,10 @@ I requisiti di mappatura per i dati CRM sono descritti nella tabella seguente e 
 
 | Colonna CSV | Percorso XDM | Formattazione dati |
 | ---------- | -------- | --------------- |
-| TITLE | Persona.name.courtesyTitle | Copia come stringa |
-| F_NAME | Persona.name.firstName | Copia come stringa |
-| L_NAME | Persona.name.lastName | Copia come stringa |
-| GENERE | Persona.gender | Trasforma il genere come valore enum persona.genere corrispondente |
+| TITLE | person.name.courtesyTitle | Copia come stringa |
+| F_NAME | person.name.firstName | Copia come stringa |
+| L_NAME | person.name.lastName | Copia come stringa |
+| GENERE | person.gender | Trasforma il genere come valore enum persona.genere corrispondente |
 | DOB | Persona.bornDayAndMonth: &quot;MM-GG&quot;<br/>Persona.nascitaData: &quot;AAAA-MM-GG&quot;<br/>persona.nascitaAnno: YYYY | Trasforma nascitaGiornoAndMonth come<br/>stringaTransform dataNascita come<br/>stringaTransform natalizioAnno come numero breve |
 | E-MAIL | personalEmail.address | Copia come stringa |
 | CRMID | identityMap.CRMID[{&quot;id&quot;:x, primario:false}] | Copia come stringa nell&#39;array CRMID in identityMap e imposta Primary come false |
@@ -174,7 +177,7 @@ La gerarchia di un dataframe (ad esempio un file Parquet) deve corrispondere a q
 
 ### Esempio di dataframe
 
-La struttura del dataframe di esempio seguente è stata mappata su uno schema che implementa la classe di profilo individuale XDM e contiene i campi più comuni associati agli schemi di quel tipo.
+La struttura del dataframe di esempio seguente è stata mappata a uno schema che implementa la [!DNL XDM Individual Profile] classe e contiene i campi più comuni associati agli schemi di tale tipo.
 
 ```python
 [
@@ -247,7 +250,7 @@ La struttura del dataframe di esempio seguente è stata mappata su uno schema ch
 ]
 ```
 
-Durante la creazione di un dataframe da utilizzare in Adobe Experience Platform, è importante assicurarsi che la struttura gerarchica corrisponda esattamente a quella di uno schema XDM esistente, in modo che i campi vengano mappati correttamente.
+Quando si crea un fotogramma dati da utilizzare in  Adobe Experience Platform, è importante assicurarsi che la struttura gerarchica sia esattamente uguale a quella di uno schema XDM esistente, in modo che i campi vengano mappati correttamente.
 
 ## Identità della mappa di identità
 
