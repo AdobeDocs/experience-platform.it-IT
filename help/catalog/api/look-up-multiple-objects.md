@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Cercare più oggetti
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '176'
 ht-degree: 1%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # Cercare più oggetti
 
-Se si desidera visualizzare diversi oggetti specifici, anziché effettuare una richiesta per oggetto, Catalog fornisce una semplice scelta rapida per richiedere più oggetti dello stesso tipo. Potete utilizzare una singola richiesta GET per restituire più oggetti specifici includendo un elenco di ID separati da virgola.
+Se si desidera visualizzare diversi oggetti specifici, anziché effettuare una richiesta per oggetto, [!DNL Catalog] fornisce una semplice scelta rapida per richiedere più oggetti dello stesso tipo. Potete utilizzare una singola richiesta GET per restituire più oggetti specifici includendo un elenco di ID separati da virgola.
 
 >[!NOTE]
 >
->Anche quando si richiedono specifici oggetti Catalog, è comunque consigliabile eseguire una `properties` query sui parametri per restituire solo le proprietà necessarie.
+>Anche quando si richiedono [!DNL Catalog] oggetti specifici, è comunque consigliabile eseguire una `properties` query sui parametri per restituire solo le proprietà necessarie.
 
 **Formato API**
 
@@ -27,7 +27,7 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}
 GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 ```
 
-| `{OBJECT_TYPE}` | Il tipo di oggetto Catalog da recuperare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Il tipo di [!DNL Catalog] oggetto da recuperare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{ID}` | Identificatore di uno degli oggetti specifici che si desidera recuperare. |
 
 **Richiesta**
@@ -49,7 +49,7 @@ Una risposta corretta restituisce un elenco dei set di dati specificati, contene
 
 >[!NOTE]
 >
->Se un oggetto restituito non contiene una o più delle proprietà richieste indicate dalla `properties` query, la risposta restituisce solo le proprietà richieste che non include, come mostrato in &quot;Sample Dataset 3&quot; e &quot;Sample Dataset 4&quot; di seguito.
+>Se un oggetto restituito non contiene una o più delle proprietà richieste indicate dalla `properties` query, la risposta restituisce solo le proprietà richieste che non include, come mostrato in ***`Sample Dataset 3`*** e ***`Sample Dataset 4`*** di seguito.
 
 ```json
 {
