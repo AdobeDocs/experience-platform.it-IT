@@ -4,27 +4,27 @@ solution: Experience Platform
 title: Secure Spark Data Access SDK
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: f7714b8bebe37b29290794a48314962e42b24058
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '516'
 ht-degree: 1%
 
 ---
 
 
-# Secure Spark Data Access SDK
+# Secure [!DNL Spark Data Access] SDK
 
-Secure Spark [!DNL Data Access] SDK è un kit di sviluppo software che consente di leggere e scrivere set di dati da  Adobe Experience Platform.
+Secure [!DNL Spark][!DNL Data Access] SDK è un kit di sviluppo software che consente di leggere e scrivere set di dati da  Adobe Experience Platform.
 
 ## Introduzione
 
-Per poter accedere ai valori per effettuare chiamate all’SDK di Secure Spark, devi completare l’esercitazione [di autenticazione](../../tutorials/authentication.md) [!DNL Data Access] :
+Per poter accedere ai valori per effettuare chiamate all’SDK di protezione, devi completare l’esercitazione [di autenticazione](../../tutorials/authentication.md) [!DNL Spark][!DNL Data Access] :
 
 - `{ACCESS_TOKEN}`
 - `{API_KEY}`
 - `{IMS_ORG}`
 
-Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. L’utilizzo di Spark SDK richiede il nome e l’ID della sandbox in cui l’operazione avrà luogo:
+Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. L’utilizzo dell’ [!DNL Spark] SDK richiede il nome e l’ID della sandbox in cui avrà luogo l’operazione:
 
 - `{SANDBOX_NAME}`
 - `{SANDBOX_ID}`
@@ -83,7 +83,7 @@ spark.sql.extensions = com.adobe.platform.query.QSSparkSessionExtensions
 
 L’ [!DNL Spark] SDK supporta due modalità di lettura: interattivo e batch.
 
-La modalità interattiva crea una connessione Java Database Connectivity (JDBC) a [!DNL Query Service] e ottiene risultati tramite un JDBC regolare `ResultSet` che viene automaticamente convertito in un `DataFrame`. Questa modalità funziona in modo simile al metodo Spark integrato `spark.read.jdbc()`. Questa modalità è destinata solo ai set di dati di piccole dimensioni e richiede solo un token utente per l&#39;autenticazione.
+La modalità interattiva crea una connessione Java Database Connectivity (JDBC) a [!DNL Query Service] e ottiene risultati tramite un JDBC regolare `ResultSet` che viene automaticamente convertito in un `DataFrame`. Questa modalità funziona in modo simile al [!DNL Spark] metodo incorporato `spark.read.jdbc()`. Questa modalità è destinata solo ai set di dati di piccole dimensioni e richiede solo un token utente per l&#39;autenticazione.
 
 La modalità batch utilizza [!DNL Query Service]il comando COPY per generare set di risultati Parquet in una posizione condivisa. Questi file Parquet possono essere elaborati ulteriormente. Questa modalità richiede sia un token utente che un token di servizio con l&#39; `acp.foundation.catalog.credentials` ambito.
 
