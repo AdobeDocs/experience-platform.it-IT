@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sull'inserimento dei dati  Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '417'
 ht-degree: 10%
 
 ---
@@ -22,7 +22,7 @@ Questo documento presenta i tre modi principali in cui i dati vengono trasferiti
 
 L’assimilazione batch consente di assimilare i dati in [!DNL Experience Platform] file batch. I batch sono unità di dati costituite da uno o più file da acquisire come una singola unità. Una volta acquisiti, i batch forniscono i metadati che descrivono il numero di record correttamente acquisiti, nonché tutti i record con errore e i messaggi di errore associati.
 
-I file di dati caricati manualmente, come file CSV semplici (mappati a schemi XDM) e i fotogrammi di dati Parquet, devono essere acquisiti con questo metodo.
+I file di dati caricati manualmente, come i file CSV semplici (mappati a schemi XDM) e i fotogrammi di dati Parquet, devono essere acquisiti con questo metodo.
 
 Per ulteriori informazioni, consulta la panoramica [sull’assimilazione dei](./batch-ingestion/overview.md) batch.
 
@@ -36,7 +36,7 @@ Per ulteriori informazioni, consulta la panoramica [sull’assimilazione](./stre
 
 [!DNL Experience Platform] consente di impostare connessioni di origine a vari provider di dati. Queste connessioni consentono di eseguire l&#39;autenticazione alle origini dati esterne, impostare i tempi di esecuzione dell&#39;assimilazione e gestire il throughput di assimilazione.
 
-Le connessioni di origine possono essere configurate per raccogliere dati da altre applicazioni Adobe (come Adobe  Analytics e  Adobe Audience Manager), origini di archiviazione cloud di terze parti (come [!DNL Azure Blob], [!DNL Amazon] S3, server FTP e server SFTP) e sistemi CRM di terze parti (come Microsoft Dynamics e Salesforce).
+Le connessioni di origine possono essere configurate per raccogliere dati da altre applicazioni Adobe (come Adobe  Analytics e  Adobe Audience Manager), origini di archiviazione cloud di terze parti (come [!DNL Azure Blob], [!DNL Amazon] S3, server FTP e server SFTP) e sistemi CRM di terze parti (come [!DNL Microsoft Dynamics] e [!DNL Salesforce]).
 
 Per ulteriori informazioni, consulta la panoramica [](../sources/home.md) Origini.
 
