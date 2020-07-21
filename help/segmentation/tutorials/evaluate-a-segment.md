@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Valutazione di un segmento
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: c0eacfba2feea66803e63ed55ad9d0a97e9ae47c
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '1543'
+source-wordcount: '1519'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ Mediante la valutazione pianificata, l’organizzazione IMS può creare una pian
 
 >[!NOTE]
 >
->La valutazione pianificata può essere abilitata per le sandbox con un massimo di cinque (5) criteri di unione per il profilo individuale XDM. Se l&#39;organizzazione dispone di più di cinque criteri di unione per il profilo individuale XDM all&#39;interno di un unico ambiente sandbox, non sarà possibile utilizzare la valutazione pianificata.
+>La valutazione pianificata può essere abilitata per le sandbox con un massimo di cinque (5) criteri di unione per [!DNL XDM Individual Profile]. Se l&#39;organizzazione dispone di più di cinque criteri di unione per [!DNL XDM Individual Profile] un unico ambiente sandbox, non sarà possibile utilizzare la valutazione pianificata.
 
 ### Creare una pianificazione
 
@@ -157,11 +157,11 @@ Per esportare il pubblico sono necessari i seguenti passaggi:
 
 Quando si esporta un&#39;audience, è necessario creare prima un set di dati di destinazione. È importante che il set di dati sia configurato correttamente per garantire il successo dell&#39;esportazione.
 
-Una delle considerazioni chiave è lo schema su cui si basa il dataset (`schemaRef.id` nella richiesta di esempio API di seguito). Per esportare un segmento, il set di dati deve essere basato sullo schema unionale profilo singolo XDM (`https://ns.adobe.com/xdm/context/profile__union`). Uno schema unione è uno schema di sola lettura generato dal sistema che aggrega i campi degli schemi che condividono la stessa classe, in questo caso si tratta della classe XDM Singolo profilo. Per ulteriori informazioni sugli schemi di visualizzazione dell&#39;unione, vedere la sezione Profilo cliente in tempo [reale della guida](../../xdm/api/getting-started.md)per gli sviluppatori del Registro di sistema dello schema.
+Una delle considerazioni chiave è lo schema su cui si basa il dataset (`schemaRef.id` nella richiesta di esempio API di seguito). Per esportare un segmento, il dataset deve essere basato sul [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). Uno schema unione è uno schema di sola lettura generato dal sistema che aggrega i campi degli schemi che condividono la stessa classe, in questo caso si tratta della classe XDM Singolo profilo. Per ulteriori informazioni sugli schemi di visualizzazione dell&#39;unione, vedere la sezione Profilo cliente in tempo [reale della guida](../../xdm/api/getting-started.md)per gli sviluppatori del Registro di sistema dello schema.
 
 Esistono due modi per creare il set di dati necessario:
 
-- **Utilizzo delle API:** I passaggi che seguono in questa esercitazione descrivono come creare un dataset che faccia riferimento allo schema dell&#39;unione dei profili XDM utilizzando l&#39;API Catalog.
+- **Utilizzo delle API:** I passaggi che seguono in questa esercitazione descrivono come creare un set di dati che faccia riferimento a tale oggetto [!DNL XDM Individual Profile Union Schema] utilizzando l&#39; [!DNL Catalog] API.
 - **Utilizzo dell’interfaccia utente:** Per utilizzare l&#39;interfaccia [!DNL Adobe Experience Platform] utente per creare un dataset che faccia riferimento allo schema dell&#39;unione, seguire i passaggi dell&#39;esercitazione [dell&#39;](../ui/overview.md) interfaccia utente, quindi tornare a questa esercitazione per procedere con i passaggi necessari per la [generazione dei profili](#generate-xdm-profiles-for-audience-members)dell&#39;audience.
 
 Se disponete già di un set di dati compatibile e ne conoscete l’ID, potete procedere direttamente alla fase di [generazione dei profili](#generate-xdm-profiles-for-audience-members)di audience.
@@ -228,10 +228,10 @@ Ulteriori informazioni sull&#39;utilizzo di questo endpoint sono disponibili nel
 
 ## Passaggi successivi
 
-Una volta completata l&#39;esportazione, i dati sono disponibili all&#39;interno del Data Lake in [!DNL Experience Platform]. Potete quindi utilizzare l&#39;API [di accesso ai](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) dati per accedere ai dati utilizzando l&#39; `batchId` API associata all&#39;esportazione. A seconda della dimensione del segmento, i dati possono essere in blocchi e il batch può essere composto da diversi file.
+Una volta completata l&#39;esportazione, i dati sono disponibili all&#39;interno del [!DNL Data Lake] modulo [!DNL Experience Platform]. È quindi possibile utilizzare l’icona [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) per accedere ai dati utilizzando l’icona `batchId` associata all’esportazione. A seconda della dimensione del segmento, i dati possono essere in blocchi e il batch può essere composto da diversi file.
 
 Per istruzioni dettagliate su come utilizzare l&#39; [!DNL Data Access] API per accedere e scaricare file batch, segui l&#39;esercitazione [sull&#39;accesso ai](../../data-access/tutorials/dataset-data.md)dati.
 
-Puoi anche accedere ai dati del segmento esportati correttamente utilizzando [!DNL Adobe Experience Platform Query Service]. L&#39;utilizzo dell&#39;interfaccia utente o dell&#39;API RESTful [!DNL Query Service] consente di scrivere, convalidare ed eseguire query sui dati all&#39;interno del Data Lake.
+Puoi anche accedere ai dati del segmento esportati correttamente utilizzando [!DNL Adobe Experience Platform Query Service]. L’utilizzo dell’interfaccia utente o dell’API RESTful [!DNL Query Service] consente di scrivere, convalidare ed eseguire query sui dati all’interno dell’ [!DNL Data Lake].
 
 Per ulteriori informazioni su come eseguire query sui dati del pubblico, consulta la documentazione in [!DNL Query Service](../../query-service/home.md).
