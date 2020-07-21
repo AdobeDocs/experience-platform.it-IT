@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Panoramica della lingua query profilo (PQL)
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '670'
+ht-degree: 2%
 
 ---
 
 
-# Panoramica della lingua query profilo (PQL)
+# [!DNL Profile Query Language] Panoramica (PQL)
 
-PQL (Profile Query Language) è un linguaggio di query compatibile con Experience Data Model (XDM) progettato per supportare la definizione e l&#39;esecuzione di query di segmentazione per i dati del profilo cliente in tempo reale.
+[!DNL Profile Query Language] (PQL) è un linguaggio di query conforme a [!DNL Experience Data Model] (XDM) progettato per supportare la definizione e l&#39;esecuzione di query di segmentazione per [!DNL Real-time Customer Profile] i dati.
 
 Questa guida fornisce una panoramica generale del linguaggio PQL, con linee guida per la formattazione e con espressioni PQL di esempio.
 
@@ -86,4 +89,4 @@ Nella tabella seguente sono illustrate le diverse categorie di funzioni PQL supp
 
 ## Passaggi successivi
 
-Ora che hai imparato a usare la lingua query profilo, puoi usare PQL per creare e modificare i segmenti. Per ulteriori informazioni sulla segmentazione, consulta la panoramica sulla [segmentazione](../home.md).
+Ora che hai imparato a usare [!DNL Profile Query Language], puoi usare PQL per creare e modificare i segmenti. Per ulteriori informazioni sulla segmentazione, consulta la panoramica sulla [segmentazione](../home.md).
