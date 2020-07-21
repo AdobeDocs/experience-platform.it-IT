@@ -1,17 +1,20 @@
 ---
-title: Pagina principale e dashboard della piattaforma dati cliente in tempo reale
-seo-title: Pagina principale e dashboard della piattaforma dati cliente in tempo reale
-description: Dashboard, home page ed esperienza utente iniziale di Adobe Experience Platform
-seo-description: Dashboard, home page ed esperienza utente iniziale di Adobe Experience Platform
+title: Dati cliente in tempo reale Platform Home Page e dashboard
+seo-title: Dati cliente in tempo reale Platform Home Page e dashboard
+description: Dashboard, Home Page e la prima esperienza utente  Adobe Experience Platform
+seo-description: Dashboard, Home Page e la prima esperienza utente  Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 69692f100389abb3fdb251b9b9258421254a2494
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+workflow-type: tm+mt
+source-wordcount: '614'
+ht-degree: 0%
 
 ---
 
 
-# Panoramica delle metriche della piattaforma dati cliente in tempo reale
+# [!DNL Real-time Customer Data Platform] panoramica delle metriche
 
-La pagina principale Adobe Real-time Customer Data Platform (CDP in tempo reale), che include un dashboard delle metriche, viene visualizzata quando accedete a CDP in tempo reale.
+La home page di Adobe Real-time Customer Data Platform (Real-time CDP), che include un dashboard delle metriche, viene visualizzata quando accedete a CDP in tempo reale.
 
 La pagina principale è solo uno dei punti in cui vengono visualizzate le schede metriche. Il CDP in tempo reale fornisce schede metriche per tutta l&#39;esperienza. Queste metriche ti informano sui dati, il profilo e il pubblico del segmento nel sistema.
 
@@ -36,17 +39,17 @@ Some information is shown in different ways on both the leaderboard and metric c
 
    ![immagine](assets/home-recent.jpg)
 
-Metriche aggiuntive, ad esempio per profili e segmenti, sono disponibili in altre parti della Piattaforma dati cliente in tempo reale.
+Metriche aggiuntive, ad esempio per profili e segmenti, sono disponibili in altre parti dell&#39;Platform Real-time Customer Data.
 
 ### Set di dati
 
-Il **[!UICONTROL Datasets]** contatore mostra il numero di set di dati nel sistema e la quantità di dati in Piattaforma. Questo contatore viene aggiornato quando viene creato un set di dati.
+Il **[!UICONTROL Datasets]** contatore mostra il numero di set di dati nel sistema e la quantità di dati in [!DNL Platform]. Questo contatore viene aggiornato quando viene creato un set di dati.
 
 Per ulteriori informazioni sui set di dati, vedere la panoramica [dei](../catalog/datasets/overview.md)set di dati.
 
 ### Profili
 
-Il **[!UICONTROL Profiles]** conteggio mostra il numero totale di persone con profili nel profilo cliente in tempo reale. Non include frammenti di profilo. Questa è la tua audience completa indirizzabile.
+Il **[!UICONTROL Profiles]** conteggio mostra il numero totale di persone con i profili nel [!DNL Real-time Customer Profile]. Non include frammenti di profilo. Questa è la tua audience completa indirizzabile.
 
 Questo conteggio utilizza il criterio [di](profile/merge-policies.md) unione predefinito impostato nella configurazione del criterio di unione nel profilo unificato.
 
