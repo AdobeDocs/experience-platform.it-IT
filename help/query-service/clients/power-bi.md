@@ -4,51 +4,51 @@ solution: Experience Platform
 title: Connessione con Power BI
 topic: connect
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '304'
 ht-degree: 0%
 
 ---
 
 
-# Connessione con Power BI (PC)
+# Connessione con [!DNL Power BI] (PC)
 
-Gli utenti del PC possono installare Power BI da [https://powerbi.microsoft.com/en-us/desktop/](https://powerbi.microsoft.com/en-us/desktop/).
+Gli utenti del PC possono effettuare l&#39;installazione [!DNL Power BI] da [https://powerbi.microsoft.com/en-us/desktop/](https://powerbi.microsoft.com/en-us/desktop/).
 
-## Configurazione di Power Bi
+## Set up [!DNL Power BI]
 
-Dopo aver installato Power BI, è necessario impostare i componenti necessari per supportare il connettore PostgreSQL. Effettuate le seguenti operazioni:
+Dopo aver [!DNL Power BI] installato, è necessario impostare i componenti necessari per supportare il connettore PostgreSQL. Effettuate le seguenti operazioni:
 
 - Trovare e installare `npgsql`, un pacchetto di driver .NET per PostgreSQL che è il modo ufficiale per la connessione di PowerBI.
 
 - Selezionate v4.0.10 (le versioni più recenti generano attualmente un errore).
 
-- In &quot;Installazione GAC Npgsql&quot; nella schermata Configurazione personalizzata, selezionare **Verrà installato sul disco** rigido locale. Se non si installa il GAC, Power BI non riuscirà più in seguito.
+- In &quot;Installazione GAC Npgsql&quot; nella schermata Configurazione personalizzata, selezionare **[!UICONTROL Will be installed on local hard drive]**. Se non si installa il GAC, Power BI non riuscirà più in seguito.
 
 - Riavviate Windows.
 
-- Individuare la versione di valutazione di PowerBI Desktop.
+- Individuate la versione di valutazione [!DNL PowerBI] Desktop.
 
-## Connect Power BI to Query Service
+## Connetti [!DNL Power BI] a [!DNL Query Service]
 
-Dopo aver eseguito i passaggi preliminari, è possibile collegare Power BI al servizio query:
+Dopo aver eseguito questi passaggi preparatori, è possibile connettersi [!DNL Power BI] a [!DNL Query Service]:
 
-- Aprire Power BI.
+- Open [!DNL Power BI].
 
-- Fare clic su **Ottieni dati** nella barra multifunzione del menu principale.
+- Fare clic **[!UICONTROL Get Data]** sulla barra multifunzione del menu principale.
 
-- Scegliete il database **** PostgreSQL, quindi fate clic su **Connect**.
+- Scegli **[!UICONTROL PostgreSQL database]**, quindi fai clic su **[!UICONTROL Connect]**.
 
-- Immettete i valori per Server e Database. **Server** è l&#39;host che si trova nei dettagli della connessione. Per la produzione, aggiungete la porta `:80` alla fine della stringa Host. **Il database** può essere &quot;all&quot; o un nome di tabella di set di dati. (Provare uno dei set di dati derivati dal CTAS.)
+- Immettete i valori per Server e Database. **[!UICONTROL Server]** è l&#39;host che si trova nei dettagli della connessione. Per la produzione, aggiungete la porta `:80` alla fine della stringa Host. **[!UICONTROL Database]** può essere &quot;all&quot; o un nome di tabella di set di dati. (Provare uno dei set di dati derivati dal CTAS.)
 
-- Fate clic su Opzioni **** avanzate, quindi deselezionate **Includi colonne** di relazione. Non selezionate **Naviga utilizzando la gerarchia** completa.
+- Fate clic **[!UICONTROL Advanced options]** e deselezionate **[!UICONTROL include relationship columns]**. Non controllare **[!UICONTROL Navigate using full hierarchy]**.
 
 - *(Facoltativo ma consigliato quando per il database viene dichiarato &quot;all&quot;)* Immettere un&#39;istruzione SQL.
 
 >[!NOTE]
 >
->Se non viene fornita un&#39;istruzione SQL, Power BI visualizzerà l&#39;anteprima di tutte le tabelle nel database. Per i dati gerarchici, deve essere utilizzata un&#39;istruzione SQL personalizzata. Se lo schema della tabella è piano, funzionerà con o senza un&#39;istruzione SQL personalizzata. I tipi composti non sono ancora supportati da Power BI. Per ottenere tipi primitivi dai tipi composti, sarà necessario scrivere istruzioni SQL per derivarli.
+>Se non viene fornita un&#39;istruzione SQL, [!DNL Power BI] verrà visualizzata l&#39;anteprima di tutte le tabelle nel database. Per i dati gerarchici, deve essere utilizzata un&#39;istruzione SQL personalizzata. Se lo schema della tabella è piano, funzionerà con o senza un&#39;istruzione SQL personalizzata. I tipi composti non sono ancora supportati da [!DNL Power BI] - per ottenere tipi primitivi dai tipi composti, sarà necessario scrivere istruzioni SQL per derivarli.
 
 ```sql
 SELECT web.webPageDetails.name AS Page_Name, 
@@ -60,8 +60,8 @@ ORDER BY SUM(web.webPageDetails.pageviews.value) DESC
 LIMIT 10
 ```
 
-- Selezionate la modalità **DirectQuery** o **Importa** . In modalità **Importa** , i dati verranno importati in Power BI. In modalità **DirectQuery** , tutte le query verranno inviate a Query Service per l&#39;esecuzione.
+- Selezionate una **[!UICONTROL DirectQuery]** o **[!UICONTROL Import]** una modalità. In **[!UICONTROL Import]** modalità, i dati verranno importati in [!DNL Power BI]. In **[!UICONTROL DirectQuery]** modalità, tutte le query verranno inviate [!DNL Query Service] per l&#39;esecuzione.
 
-- Fai clic su **OK**. Ora Power BI si connette al servizio di query e produce un&#39;anteprima in assenza di errori. Esiste un problema noto con le colonne numeriche di rendering Anteprima. Procedete quindi con il passaggio successivo.
+- Fai clic su **[!UICONTROL OK]**. A questo punto, [!DNL Power BI] si connette al pannello [!DNL Query Service] e produce un&#39;anteprima in assenza di errori. Esiste un problema noto con le colonne numeriche di rendering Anteprima. Procedete quindi con il passaggio successivo.
 
-- Fare clic su **Carica** per inserire il set di dati in Power BI.
+- Fare clic **[!UICONTROL Load]** per inserire il dataset in [!DNL Power BI].
