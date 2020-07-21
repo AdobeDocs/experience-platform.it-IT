@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Metadati, comandi
 topic: metadata
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---
@@ -43,5 +43,5 @@ Per i metadati del set di dati, i seguenti comandi PSQL sono attualmente support
 
 Tutti i comandi che iniziano con `\d` possono essere combinati. Ad esempio, è possibile pubblicare un elenco `\dtsn` di tutte le tabelle, le sequenze e gli schemi. `\d` di per sé mostra tutte le tabelle, le viste, le viste materializzate e le sequenze visibili.
 
-Per ulteriori informazioni sui comandi elencati sopra, consulta la documentazione disponibile in [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Tuttavia, non tutte le opzioni visualizzate nella documentazione PostSQL sono supportate da  Experience Platform.
+Per ulteriori informazioni sui comandi elencati sopra, consulta la documentazione disponibile in [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Tuttavia, tenete presente che non tutte le opzioni visualizzate nella documentazione PostSQL sono supportate da [!DNL Experience Platform].
 
