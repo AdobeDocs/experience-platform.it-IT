@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Assimilazione di dati in  Adobe Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1184'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Se preferite assimilare i dati utilizzando le API di inserimento dati, iniziate 
 
 L&#39;area di lavoro Set di dati all&#39;interno [!DNL Experience Platform] consente di visualizzare e gestire tutti i set di dati creati dall&#39;organizzazione IMS e di crearne di nuovi.
 
-Visualizzare l&#39;area di lavoro Set di dati facendo clic **[!UICONTROL Datasets]** nella barra di navigazione a sinistra. L&#39;area di lavoro Set di dati contiene un elenco di set di dati, tra cui colonne che mostrano _Nome_, _Creato_ (data e ora), _Origine_, _Schema_ e Stato ____ ultimo batch, nonché la data e l&#39;ora dell&#39;ultimo aggiornamento del set di dati.
+Visualizzare l&#39;area di lavoro Set di dati facendo clic **[!UICONTROL Datasets]** nella barra di navigazione a sinistra. L&#39;area di lavoro Set di dati contiene un elenco di set di dati, tra cui colonne che mostrano _[!UICONTROL Name]_,_[!UICONTROL Created]_ (data e ora), _[!UICONTROL Source]_,_[!UICONTROL Schema]_ e _[!UICONTROL Last Batch Status]_la data e l&#39;ora in cui si trovava il set di dati_[!UICONTROL Last Updated]_.
 
 >[!NOTE]
 >
@@ -70,9 +70,9 @@ Una volta che il dataset ha un nome e una descrizione, fare clic su **[!UICONTRO
 
 È stato creato un set di dati vuoto e l&#39;utente è stato riportato nella **[!UICONTROL Dataset Activity]** scheda nell&#39;area di lavoro Set di dati. Il nome del set di dati deve essere visualizzato nell’angolo in alto a sinistra dell’area di lavoro, insieme alla notifica che &quot;Non sono stati aggiunti batch&quot;. Questo è previsto perché non avete ancora aggiunto alcun batch a questo set di dati.
 
-Sul lato destro dell&#39;area di lavoro Set di dati viene visualizzata la **[!UICONTROL Info]** scheda contenente le informazioni relative al nuovo set di dati, quali ID __ set di dati, _Nome_, _Descrizione_, Nome __ tabella, ______ Schema, Streaminge Sorgente. La scheda Informazioni include anche informazioni su quando il set di dati è stato _creato_ e sulla data dell&#39; _ultima modifica_ .
+Sul lato destro dell&#39;area di lavoro Set di dati è visibile la **[!UICONTROL Info]** scheda contenente informazioni relative al nuovo set di dati, ad esempio _[!UICONTROL Dataset ID]_,_[!UICONTROL Name]_, _[!UICONTROL Description]_,_[!UICONTROL Table Name]_, _[!UICONTROL Schema]_,_[!UICONTROL Streaming]_ e _[!UICONTROL Source]_. La scheda Informazioni include anche informazioni su quando il set di dati era_[!UICONTROL Created]_ e la relativa _[!UICONTROL Last Modified]_data.
 
-Nella scheda Informazioni è inoltre disponibile un interruttore _Profilo_ che consente di abilitare il set di dati per l’uso con [!DNL Real-time Customer Profile]. L&#39;utilizzo di questa opzione e [!DNL Real-time Customer Profile], verranno spiegati più dettagliatamente nella sezione che segue.
+Nella scheda Informazioni è inoltre disponibile un _[!UICONTROL Profile]_interruttore che consente di abilitare il set di dati per l’uso con[!DNL Real-time Customer Profile]. L&#39;utilizzo di questa opzione e[!DNL Real-time Customer Profile], verranno spiegati più dettagliatamente nella sezione che segue.
 
 ![Attività DataSet](../images/tutorials/ingest-batch-data/dataset_activity.png)
 
@@ -88,7 +88,7 @@ Per abilitare il set di dati per [!DNL Real-time Customer Profile], fare clic su
 
 ![Attiva/disattiva profilo](../images/tutorials/ingest-batch-data/enable_dataset_unified_profile.png)
 
-Viene visualizzata una finestra di dialogo in cui viene richiesto di confermare che si desidera abilitare il dataset per il profilo cliente in tempo reale.
+Viene visualizzata una finestra di dialogo in cui viene richiesto di confermare che si desidera abilitare il dataset per [!DNL Real-time Customer Profile].
 
 ![Abilita profilo, finestra di dialogo](../images/tutorials/ingest-batch-data/confirm_dataset_enable.png)
 
@@ -98,7 +98,7 @@ Fate clic **[!UICONTROL Enable]** e l&#39;interruttore diventa blu, a indicare c
 
 ## Aggiungere dati al dataset
 
-I dati possono essere aggiunti in un set di dati in diversi modi. Puoi scegliere di utilizzare le API di inserimento dati o un partner ETL come Unifi o Informatica. Per questa esercitazione, i dati verranno aggiunti al dataset utilizzando la **[!UICONTROL Add Data]** scheda all&#39;interno dell&#39;interfaccia utente.
+I dati possono essere aggiunti in un set di dati in diversi modi. Potete scegliere di utilizzare [!DNL Data Ingestion] le API o un partner ETL, ad esempio [!DNL Unifi] o [!DNL Informatica]. Per questa esercitazione, i dati verranno aggiunti al dataset utilizzando la **[!UICONTROL Add Data]** scheda all&#39;interno dell&#39;interfaccia utente.
 
 Per iniziare ad aggiungere dati al dataset, fare clic sulla **[!UICONTROL Add Data]** scheda. È ora possibile trascinare e rilasciare i file o cercare nel computer i file da aggiungere.
 
@@ -116,19 +116,19 @@ Dopo aver trascinato e rilasciato (o sfogliare e selezionare) un file parquet o 
 
 ## Metriche DataSet
 
-Al termine del caricamento del file, nella **[!UICONTROL Dataset Activity]** scheda non viene più visualizzato &quot;Nessun batch aggiunto&quot;. Al contrario, la scheda Attività DataSet ora mostra le metriche DataSet. Tutte le metriche mostreranno &quot;0&quot; in questa fase perché il batch non è ancora caricato.
+Al termine del caricamento del file, nella **[!UICONTROL Dataset Activity]** scheda non viene più visualizzato &quot;Nessun batch aggiunto&quot;. Al contrario, la *[!UICONTROL Dataset Activity]* scheda ora mostra le metriche del set di dati. Tutte le metriche mostreranno &quot;0&quot; in questa fase perché il batch non è ancora caricato.
 
-Nella parte inferiore della scheda è presente un elenco che mostra l&#39;ID __ batch dei dati appena acquisiti tramite il processo [&quot;Aggiungi dati a dataset&quot;](#add-data-to-dataset) . Sono incluse anche le informazioni relative al batch, inclusa la data _di inserimento_ , il numero di _record inseriti_ e lo _stato_ del batch corrente.
+Nella parte inferiore della scheda è presente un elenco che mostra i dati _[!UICONTROL Batch ID]_appena acquisiti tramite il processo[&quot;Aggiungi dati a dataset&quot;](#add-data-to-dataset). Sono incluse anche le informazioni relative al batch, inclusa_[!UICONTROL Ingested]_ la data, il numero di _[!UICONTROL Records Ingested]_e il batch corrente_[!UICONTROL Status]_.
 
 ![Metriche DataSet](../images/tutorials/ingest-batch-data/batch_loading.png)
 
 ## Dettagli batch
 
-Fare clic sull&#39;ID __ batch per visualizzare un **[!UICONTROL Batch Overview]**, con dettagli aggiuntivi relativi al batch. Al termine del caricamento del batch, le informazioni relative al batch verranno aggiornate per mostrare il numero di _record inseriti_ e le dimensioni _del_ file. Lo _Stato_ viene modificato in &quot;Success&quot; o &quot;Failed&quot; (Operazione completata). Se il batch non riesce, la sezione Codice _di_ errore conterrà i dettagli relativi a eventuali errori durante l&#39;assimilazione.
+Fare clic sul _[!UICONTROL Batch ID]_pulsante per visualizzare un **[!UICONTROL Batch Overview]**, con dettagli aggiuntivi relativi al batch. Al termine del caricamento del batch, le informazioni relative al batch vengono aggiornate per mostrare il numero di_[!UICONTROL Records Ingested]_ e di _[!UICONTROL File Size]_. Inoltre,_[!UICONTROL Status]_ verrà sostituita da &quot;Success&quot; o &quot;Failed&quot; (Non riuscito). Se il batch non riesce, la _[!UICONTROL Error Code]_sezione conterrà dettagli relativi a eventuali errori durante l&#39;assimilazione.
 
 Per ulteriori informazioni e domande frequenti sull’inserimento di batch, consulta la guida [alla risoluzione dei problemi di inserimento](../batch-ingestion/troubleshooting.md)batch.
 
-Per tornare alla schermata Attività **** DataSet, fare clic sul nome del set di dati (_Dettagli_ fedeltà) nella breadcrumb.
+Per tornare alla **[!UICONTROL Dataset Activity]** schermata, fate clic sul nome del set di dati (_[!UICONTROL Loyalty Details]_) nella breadcrumb.
 
 ![Panoramica batch](../images/tutorials/ingest-batch-data/batch_overview.png)
 
