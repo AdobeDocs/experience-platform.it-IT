@@ -4,19 +4,19 @@ seo-title: Panoramica delle destinazioni
 description: Le destinazioni sono integrazioni predefinite con piattaforme di destinazione che consentono l'attivazione senza soluzione di continuità dei dati dall'Platform di dati del cliente in tempo reale. Puoi utilizzare Destinazioni nell'Platform dati cliente in tempo reale di Adobe per attivare i dati noti e sconosciuti per campagne di marketing multicanale, campagne e-mail, campagne pubblicitarie mirate e molti altri casi di utilizzo.
 seo-description: Le destinazioni sono integrazioni predefinite con piattaforme di destinazione che consentono l'attivazione senza soluzione di continuità dei dati dall'Platform di dati del cliente in tempo reale. Puoi utilizzare Destinazioni nell'Platform dati cliente in tempo reale di Adobe per attivare i dati noti e sconosciuti per campagne di marketing multicanale, campagne e-mail, campagne pubblicitarie mirate e molti altri casi di utilizzo.
 translation-type: tm+mt
-source-git-commit: a61a2a4d9d51c402bb50153c06a93d255a3613cb
+source-git-commit: 7aa15772003cce1dfc7c3636048bce9a35bf8197
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '525'
 ht-degree: 0%
 
 ---
 
 
-# Destinations Overview {#overview}
+# [!DNL Destinations]panoramica{#overview}
 
 ![Banner della panoramica delle destinazioni](/help/rtcdp/destinations/assets/destinations-overview-banner.png)
 
-**Le destinazioni** sono integrazioni preconfigurate con piattaforme di destinazione che consentono l&#39;attivazione senza soluzione di continuità dei dati dall&#39;Platform di dati del cliente in tempo reale. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing multicanale, campagne e-mail, pubblicità mirata e molti altri casi di utilizzo.
+**[!DNL Destinations]** sono integrazioni pre-costruite con piattaforme di destinazione che consentono l&#39;attivazione senza soluzione di continuità dei dati dall&#39;Platform di dati del cliente in tempo reale. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing multicanale, campagne e-mail, pubblicità mirata e molti altri casi di utilizzo.
 
 ## Destinazioni e origini {#destinations-and-sources}
 
@@ -48,14 +48,14 @@ La funzionalità delle destinazioni in CDP in tempo reale funziona con  autorizz
 
 Per ulteriori informazioni sui controlli di accesso, vedere la guida [utente relativa al controllo di](../../access-control/ui/overview.md)accesso.
 
-## Limitazioni per la governance dei dati sull&#39;attivazione dei dati sulle destinazioni {#data-governance}
+## [!DNL Data Governance] limitazioni all&#39;attivazione dei dati alle destinazioni {#data-governance}
 
 La governance dei dati è applicata alle destinazioni CDP in tempo reale tramite:
 
 * *Casi* di utilizzo marketing selezionabili nel flusso di lavoro delle destinazioni di creazione;
 * *Criteri* di utilizzo dei dati che limitano l&#39;attivazione dei dati contenenti determinate etichette di utilizzo a destinazioni con determinati casi di utilizzo di marketing.
 
-Per ulteriori informazioni sui casi [di utilizzo del](/help/rtcdp/privacy/data-governance-overview.md#destinations) marketing e sulla [risoluzione delle violazioni](/help/rtcdp/privacy/data-governance-overview.md#enforcement)dei criteri per i dati, consulta la sezione Gestione dei dati in tempo reale.
+Per ulteriori informazioni sui casi [!DNL Data Governance] di utilizzo del [marketing e sulla](/help/rtcdp/privacy/data-governance-overview.md#destinations) risoluzione delle violazioni [dei criteri di protezione dei dati, consulta](/help/rtcdp/privacy/data-governance-overview.md#enforcement)la documentazione CDP in tempo reale.
 
 Per ulteriori informazioni sulla selezione dei casi di utilizzo del marketing nel flusso di lavoro di creazione della destinazione, consulta le pagine seguenti per i diversi tipi di destinazione in CDP in tempo reale:
 
