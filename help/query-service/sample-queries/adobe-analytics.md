@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Query di esempio
 topic: queries
 translation-type: tm+mt
-source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+workflow-type: tm+mt
+source-wordcount: '862'
+ht-degree: 1%
 
 ---
 
 
-# Query di esempio per i dati di Adobe Analytics
+# Query di esempio per i dati di Adobe  Analytics
 
-I dati provenienti da suite di rapporti Adobe Analytics selezionate vengono trasformati in XDM ExperienceEvents e trasferiti in Adobe Experience Platform come set di dati per voi. In questo documento vengono illustrati alcuni casi d’uso in cui Adobe Experience Platform Query Service utilizza questi dati e le query di esempio incluse devono funzionare con i set di dati di Adobe Analytics. Per ulteriori informazioni sulla mappatura a XDM ExperienceEvents, consulta la documentazione [sulla mappatura dei campi di](../../sources/connectors/adobe-applications/mapping/analytics.md) Analytics.
+I dati provenienti da suite di rapporti Adobe  Analytics selezionate vengono trasformati in XDM [!DNL ExperienceEvents] e trasferiti  Adobe Experience Platform come set di dati. In questo documento vengono illustrati alcuni casi di utilizzo in cui  Adobe Experience Platform [!DNL Query Service] utilizza questi dati e le query di esempio incluse devono essere compatibili con i set di dati Adobe  Analytics. Per ulteriori informazioni sulla mappatura a XDM, consulta la documentazione [sulla mappatura dei campi Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) [!DNL ExperienceEvents].
 
 ## Introduzione
 
@@ -126,9 +129,9 @@ ORDER BY Hour;
 
 ## Variabili di merchandising (sintassi del prodotto)
 
-In Adobe Analytics, i dati personalizzati a livello di prodotto possono essere raccolti tramite variabili configurate appositamente denominate &quot;Variabili merchandising&quot;. Questi si basano su un eVar o su un evento personalizzato. La differenza tra queste variabili e il loro uso standard è che rappresentano un valore separato per ogni prodotto trovato nell’hit, anziché un solo valore per l’hit. Tali variabili sono denominate variabili di merchandising della sintassi di prodotto. Questo consente di raccogliere informazioni come un &quot;importo sconto&quot; per prodotto o informazioni sulla &quot;posizione sulla pagina&quot; del prodotto nei risultati di ricerca del cliente.
+In Adobe  Analytics, i dati personalizzati a livello di prodotto possono essere raccolti tramite variabili configurate appositamente denominate &quot;Variabili merchandising&quot;. Questi si basano su un eVar o su un evento personalizzato. La differenza tra queste variabili e il loro uso standard è che rappresentano un valore separato per ogni prodotto trovato nell’hit, anziché un solo valore per l’hit. Tali variabili sono denominate variabili di merchandising della sintassi di prodotto. Questo consente di raccogliere informazioni come un &quot;importo sconto&quot; per prodotto o informazioni sulla &quot;posizione sulla pagina&quot; del prodotto nei risultati di ricerca del cliente.
 
-Di seguito sono riportati i campi XDM per accedere alle variabili merchandising nel set di dati di Analytics:
+Di seguito sono riportati i campi XDM per accedere alle variabili merchandising nel [!DNL Analytics] set di dati:
 
 ### eVar
 
@@ -162,7 +165,7 @@ WHERE _ACP_YEAR=2019 AND _ACP_MONTH=7 AND _ACP_DAY=23
 LIMIT 10
 ```
 
-Questa successiva query &quot;esplode&quot; `productListItems` e restituisce ogni eVar di merchandising e evento per prodotto. Il `_id` campo è incluso per mostrare la relazione con l’hit originale. Il `_id` valore è una chiave primaria univoca nel set di dati ExperienceEvent.
+Questa successiva query &quot;esplode&quot; `productListItems` e restituisce ogni eVar di merchandising e evento per prodotto. Il `_id` campo è incluso per mostrare la relazione con l’hit originale. Il `_id` valore è una chiave primaria univoca nel [!DNL ExperienceEvent] dataset.
 
 ```sql
 SELECT
@@ -192,7 +195,7 @@ ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered.
 
 ## Variabili di merchandising (sintassi di conversione)
 
-Un altro tipo di variabile di merchandising presente in Adobe Analytics è la sintassi di conversione. Con Sintassi prodotto il valore viene raccolto contemporaneamente al prodotto, ma ciò richiede che i dati siano presenti sulla stessa pagina. Esistono scenari in cui i dati si verificano su una pagina prima della conversione o dell’evento di interesse relativo al prodotto. Ad esempio, prendere in considerazione il caso d’uso relativo al metodo di ricerca dei prodotti.
+Un altro tipo di variabile di merchandising presente in Adobe  Analytics è la sintassi di conversione. Con Sintassi prodotto il valore viene raccolto contemporaneamente al prodotto, ma ciò richiede che i dati siano presenti sulla stessa pagina. Esistono scenari in cui i dati si verificano su una pagina prima della conversione o dell’evento di interesse relativo al prodotto. Ad esempio, prendere in considerazione il caso d’uso relativo al metodo di ricerca dei prodotti.
 
 1. Un utente esegue una ricerca interna per &quot;cappello invernale&quot; che imposta l’eVar Merchandising abilitato per la sintassi di conversione su &quot;ricerca interna:cappello invernale&quot;
 2. L&#39;utente fa clic su &quot;waffle beanie&quot; e arriva sulla pagina dei dettagli del prodotto.\
@@ -213,7 +216,7 @@ Nel reporting, gli ordini, le entrate, le visualizzazioni dei prodotti e gli imp
 | ricerca interna:camicia estiva | 19.99 | 1 | 1 | 1 |
 | ricerca interna:cappello invernale | 12.99 | 1 | 1 | 1 |
 
-Di seguito sono riportati i campi XDM per generare la sintassi di conversione nel set di dati di Analytics:
+Di seguito sono riportati i campi XDM per generare la sintassi di conversione nel [!DNL Analytics] set di dati:
 
 ### eVar
 
@@ -252,7 +255,7 @@ WHERE commerce.productViews.value = 1 OR commerce.purchases.value = 1 OR _experi
 LIMIT 100
 ```
 
-Di seguito è riportata una query di esempio che persiste il valore associato alle occorrenze successive del prodotto corrispondente. La sottoquery più bassa stabilisce la relazione tra i valori e il prodotto nell&#39;evento di binding dichiarato. La sottoquery successiva esegue l&#39;attribuzione di tale valore associato tra le interazioni successive con il rispettivo prodotto. E la selezione di livello principale aggrega i risultati per generare il reporting.
+Di seguito è riportata una query di esempio che persiste il valore associato alle occorrenze successive del prodotto corrispondente. La sottoquery più bassa stabilisce la relazione tra i valori e il prodotto nell&#39;evento di binding dichiarato. La sottoquery successiva esegue l&#39;attribuzione di tale valore associato nelle successive interazioni con il rispettivo prodotto. E la selezione di livello principale aggrega i risultati per generare il reporting.
 
 ```sql
 SELECT
