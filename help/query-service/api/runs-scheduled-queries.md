@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida per gli sviluppatori di Query Service
 topic: runs for scheduled queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '655'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 ## Chiamate API di esempio
 
-Ora che hai compreso le intestazioni da utilizzare, sei pronto a iniziare a effettuare chiamate all&#39;API di Servizio query. Le sezioni seguenti descrivono le varie chiamate API che potete effettuare tramite l&#39;API di Query Service. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
+Ora che hai compreso quali intestazioni utilizzare, sei pronto a iniziare a effettuare chiamate all&#39; [!DNL Query Service] API. Le sezioni seguenti descrivono le varie chiamate API che potete effettuare tramite l&#39; [!DNL Query Service] API. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
 
 ### Recupera un elenco di tutte le esecuzioni per una query pianificata specificata
 
