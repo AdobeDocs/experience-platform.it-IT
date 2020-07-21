@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ' documentazione del prodotto Adobe Experience Platform'
 topic: getting started
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 1ecff21343c8b39070afdb4f486d0961c024235a
 workflow-type: tm+mt
-source-wordcount: '6593'
+source-wordcount: '6656'
 ht-degree: 0%
 
 ---
@@ -191,6 +191,8 @@ ht-degree: 0%
 **Categoria di destinazione:** Una categoria di destinazione è un raggruppamento di [!DNL Real-time Customer Data Platform] destinazioni con caratteristiche simili.
 
 **Catalogo di destinazione:** Un catalogo di destinazione è un elenco di destinazioni disponibili nel [!DNL Real-time Customer Data Platform].
+
+**Regole di chiamata diretta:** in [!DNL Experience Platform Launch], è possibile impostare un [!UICONTROL direct call] [!UICONTROL rule] che viene eseguito quando viene chiamato direttamente dalla pagina. Se il caricamento della pagina o l&#39;azione sul sito è molto semplice, o se è univoco e può eseguire un set di istruzioni specifico ogni volta (impostato [!DNL eVar4] su X e attivato [!DNL event2] ogni volta), è possibile utilizzare un [!UICONTROL direct call][!UICONTROL rule]. Consultate [!DNL Launch] la documentazione relativa alla creazione [!UICONTROL direct call] . [!UICONTROL rules]
 
 **Nome visualizzato:** Il nome visualizzato è un nome di facile utilizzo per un campo che viene visualizzato nell’interfaccia utente.
 
