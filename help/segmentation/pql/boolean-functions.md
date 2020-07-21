@@ -4,14 +4,17 @@ solution: Experience Platform
 title: Funzioni booleane
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '223'
+ht-degree: 5%
 
 ---
 
 
 # Funzioni booleane
 
-Le funzioni booleane vengono utilizzate per eseguire logica booleana su elementi diversi in PQL (Profile Query Language).  Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella panoramica [Lingua query](./overview.md)profilo.
+Le funzioni booleane vengono utilizzate per eseguire logica booleana su elementi diversi in [!DNL Profile Query Language] (PQL).  Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella panoramica [Lingua query](./overview.md)profilo.
 
 ## And
 
