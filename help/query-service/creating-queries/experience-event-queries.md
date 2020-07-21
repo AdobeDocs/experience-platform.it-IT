@@ -4,20 +4,23 @@ solution: Experience Platform
 title: Query ExperienceEvent
 topic: queries
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+workflow-type: tm+mt
+source-wordcount: '275'
+ht-degree: 0%
 
 ---
 
 
-# Query ExperienceEvent
+# [!DNL ExperienceEvent] query
 
-Oltre alle query SQL standard, Adobe Experience Platform Query Service supporta la scrittura di query tramite ExperienceEvents. Un ExperienceEvent è una classe Experience Data Model (XDM) che rappresenta uno snapshot non aggregato immutabile del sistema quando un utente interagisce con un sito Web o un servizio e può quindi essere utilizzata per l&#39;analisi del dominio temporale. Ulteriori informazioni su XDM ed Eventi esperienza sono disponibili nella panoramica del sistema XDM. Combinando Query Service con ExperienceEvents, puoi tenere traccia delle tendenze comportamentali tra i tuoi utenti. Nel seguente documento sono riportati alcuni esempi di query relative a ExperienceEvents.
+Oltre alle query SQL standard,  Adobe Experience Platform [!DNL Query Service] supporta la scrittura di query mediante [!DNL ExperienceEvents]. Una classe [!DNL ExperienceEvent] è una classe [!DNL Experience Data Model] (XDM) che rappresenta uno snapshot non aggregato immutabile del sistema quando un utente interagisce con un sito Web o un servizio e può quindi essere utilizzata per l&#39;analisi del dominio temporale. Ulteriori informazioni su XDM e [!DNL Experience Events] sono disponibili nella [!DNL XDM System] panoramica. Combinando [!DNL Query Service] con [!DNL ExperienceEvents], puoi monitorare efficacemente le tendenze comportamentali tra i tuoi utenti. Nel seguente documento sono riportati alcuni esempi di query che coinvolgono [!DNL ExperienceEvents].
 
 ## Creazione di un rapporto con tendenze per giorno su un intervallo di date specifico
 
 L&#39;esempio seguente crea un rapporto con tendenze di eventi su un intervallo di date specificato, raggruppati per data. Nello specifico, riassume vari valori di analisi come A, B e C, quindi riassume il numero di volte in cui i parchi sono stati visualizzati.
 
-La colonna timestamp trovata nei set di dati dell&#39;evento esperienza è in UTC. Nell&#39;esempio seguente viene utilizzata la `from_utc_timestamp()` funzione per trasformare l&#39;indicatore temporale da UTC a EDT. Quindi utilizza la `date_format()` funzione per isolare la data dal resto della marca temporale.
+La colonna timestamp trovata nei [!DNL Experience Event] set di dati è in UTC. Nell&#39;esempio seguente viene utilizzata la `from_utc_timestamp()` funzione per trasformare l&#39;indicatore temporale da UTC a EDT. Quindi utilizza la `date_format()` funzione per isolare la data dal resto della marca temporale.
 
 ```sql
 SELECT 
