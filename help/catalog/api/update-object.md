@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aggiornare un oggetto
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '313'
 ht-degree: 3%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # Aggiornare un oggetto
 
-Potete aggiornare parte di un oggetto Catalog inserendone l’ID nel percorso di una richiesta PATCH. Questo documento descrive i due metodi per eseguire le operazioni PATCH sugli oggetti Catalog:
+È possibile aggiornare parte di un [!DNL Catalog] oggetto inserendone l’ID nel percorso di una richiesta PATCH. Questo documento descrive i due metodi per eseguire le operazioni PATCH sugli oggetti Catalog:
 
 * Uso dei campi
 * Utilizzo della notazione patch JSON
@@ -35,7 +35,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{OBJECT_TYPE}` | Il tipo di oggetto Catalog da aggiornare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Il tipo di [!DNL Catalog] oggetto da aggiornare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Identificatore dell&#39;oggetto specifico da aggiornare. |
 
 **Richiesta**
@@ -84,7 +84,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{OBJECT_TYPE}` | Il tipo di oggetto Catalog da aggiornare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Il tipo di [!DNL Catalog] oggetto da aggiornare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Identificatore dell&#39;oggetto specifico da aggiornare. |
 
 **Richiesta**
