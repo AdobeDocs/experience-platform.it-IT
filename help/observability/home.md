@@ -1,29 +1,32 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Approfondimenti sull'osservabilità della piattaforma Adobe Experience
+title: ' informazioni sull''osservabilità del Adobe Experience Platform'
 topic: overview
 translation-type: tm+mt
-source-git-commit: d349ffab7c0de72d38b5195585c14a4a8f80e37c
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '396'
+ht-degree: 2%
 
 ---
 
 
-# Panoramica di Adobe Experience Platform Observability Insights
+# Panoramica sull&#39;osservabilità  Adobe Experience Platform
 
-Observability Insights è un&#39;API RESTful che consente di esporre le metriche di osservabilità chiave in Adobe Experience Platform. Queste metriche forniscono informazioni approfondite sulle statistiche di utilizzo della piattaforma, sui controlli dello stato per i servizi della piattaforma, sulle tendenze storiche e sugli indicatori di prestazioni per diverse funzionalità della piattaforma.
+Observability Insights è una RESTful API che consente di esporre le metriche di osservabilità chiave nel  Adobe Experience Platform. Queste metriche forniscono informazioni approfondite sulle statistiche di [!DNL Platform] utilizzo, sui controlli dello stato dei [!DNL Platform] servizi, sulle tendenze storiche e sugli indicatori di prestazioni per diverse [!DNL Platform] funzionalità.
 
 Questo documento illustra una chiamata di esempio all&#39;API Observability Insights. Per un elenco completo degli endpoint di osservabilità, fare riferimento al riferimento [API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)Observability Insights.
 
 ## Introduzione
 
-Per effettuare chiamate alle API della piattaforma, dovete prima completare l&#39;esercitazione [di](../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
 
 * Autorizzazione: Portatore `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API della piattaforma richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione. Per ulteriori informazioni sulle sandbox in Piattaforma, consultate la documentazione [sulla panoramica della](../sandboxes/home.md)sandbox.
+Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione. Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione [sulla panoramica della](../sandboxes/home.md)sandbox.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -46,7 +49,7 @@ GET /metrics?metric={METRIC}&metric={METRIC_2}&id={ID}&dateRange={DATE_RANGE}
 | Parametro | Descrizione |
 | --- | --- |
 | `{METRIC}` | La metrica da esporre. Quando combini più metriche in una singola chiamata, devi usare una e commerciale (`&`) per separare le singole metriche. Ad esempio, `metric={METRIC_1}&metric={METRIC_2}`. |
-| `{ID}` | Identificatore per una particolare risorsa della piattaforma le cui metriche si desidera esporre. Questo ID può essere facoltativo, obbligatorio o non applicabile a seconda delle metriche utilizzate. Per un elenco delle metriche disponibili, nonché degli ID supportati (obbligatori e facoltativi) per ciascuna metrica, consultate il documento di riferimento sulle metriche [](metrics.md)disponibili. |
+| `{ID}` | Identificatore per una particolare [!DNL Platform] risorsa di cui si desidera esporre le metriche. Questo ID può essere facoltativo, obbligatorio o non applicabile a seconda delle metriche utilizzate. Per un elenco delle metriche disponibili, nonché degli ID supportati (obbligatori e facoltativi) per ciascuna metrica, consultate il documento di riferimento sulle metriche [](metrics.md)disponibili. |
 | `{DATE_RANGE}` | L&#39;intervallo di date per le metriche da esporre, in formato ISO 8601 (ad esempio, `2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`). |
 
 **Richiesta**
@@ -62,7 +65,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di oggetti, ciascuno contenente una marca temporale all&#39;interno dei valori forniti `dateRange` e corrispondenti per le metriche specificate nel percorso della richiesta. Se nel percorso `id` di richiesta è inclusa una risorsa della piattaforma, i risultati verranno applicati solo a tale risorsa. Se `id` viene omesso, i risultati verranno applicati a tutte le risorse applicabili all&#39;interno dell&#39;organizzazione IMS.
+Una risposta corretta restituisce un elenco di oggetti, ciascuno contenente una marca temporale all&#39;interno dei valori forniti `dateRange` e corrispondenti per le metriche specificate nel percorso della richiesta. Se il percorso `id` di richiesta include una [!DNL Platform] risorsa, i risultati verranno applicati solo a tale risorsa. Se `id` viene omesso, i risultati verranno applicati a tutte le risorse applicabili all&#39;interno dell&#39;organizzazione IMS.
 
 ```json
 {
