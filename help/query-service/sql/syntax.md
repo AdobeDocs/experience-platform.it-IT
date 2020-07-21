@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintassi SQL
 topic: syntax
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '1957'
+source-wordcount: '1940'
 ht-degree: 1%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # Sintassi SQL
 
-Servizio query consente di utilizzare SQL ANSI standard per `SELECT` istruzioni e altri comandi limitati. Questo documento mostra la sintassi SQL supportata da Query Service.
+[!DNL Query Service] consente di utilizzare SQL ANSI standard per `SELECT` istruzioni e altri comandi limitati. Questo documento mostra la sintassi SQL supportata da [!DNL Query Service].
 
 ## Definire una query SELECT
 
-La sintassi seguente definisce una `SELECT` query supportata da Query Service:
+La sintassi seguente definisce una `SELECT` query supportata da [!DNL Query Service]:
 
 ```
 [ WITH with_query [, ...] ]
@@ -111,7 +111,7 @@ SELECT statement 2
 
 ## CREA TABELLA COME SELEZIONATA
 
-La sintassi seguente definisce una query `CREATE TABLE AS SELECT` (CTAS) supportata da Query Service:
+La sintassi seguente definisce una query `CREATE TABLE AS SELECT` (CTAS) supportata da [!DNL Query Service]:
 
 ```
 CREATE TABLE table_name [ WITH (schema='target_schema_title') ] AS (select_query)
@@ -136,7 +136,7 @@ Si prega di notare che per una data query CTAS:
 
 ## INSERISCI IN
 
-La sintassi seguente definisce una `INSERT INTO` query supportata da Query Service:
+La sintassi seguente definisce una `INSERT INTO` query supportata da [!DNL Query Service]:
 
 ```
 INSERT INTO table_name select_query
@@ -170,7 +170,7 @@ DROP [TEMP] TABLE [IF EXISTS] [db_name.]table_name
 
 ## CREA VISUALIZZAZIONE
 
-La sintassi seguente definisce una `CREATE VIEW` query supportata da Query Service:
+La sintassi seguente definisce una `CREATE VIEW` query supportata da [!DNL Query Service]:
 
 ```
 CREATE [ OR REPLACE ] VIEW view_name AS select_query
@@ -187,7 +187,7 @@ CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 
 ### VISUALIZZAZIONE A DISCESA
 
-La sintassi seguente definisce una `DROP VIEW` query supportata da Query Service:
+La sintassi seguente definisce una `DROP VIEW` query supportata da [!DNL Query Service]:
 
 ```
 DROP VIEW [IF EXISTS] view_name
@@ -202,7 +202,7 @@ DROP VIEW v1
 DROP VIEW IF EXISTS v1
 ```
 
-## Spark SQL, comandi
+## [!DNL Spark] Comandi SQL
 
 ### SET
 
@@ -242,7 +242,7 @@ CLOSE { name }
 
 ### COMMIT
 
-In Servizio query non viene eseguita alcuna azione come risposta all&#39;istruzione della transazione di commit.
+Non viene eseguita alcuna azione [!DNL Query Service] come risposta all&#39;istruzione della transazione di commit.
 
 ```
 COMMIT [ WORK | TRANSACTION ]
