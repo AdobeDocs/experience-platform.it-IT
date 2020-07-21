@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida per gli sviluppatori Data Access
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: f7714b8bebe37b29290794a48314962e42b24058
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '485'
 ht-degree: 4%
 
 ---
@@ -242,4 +242,4 @@ Per ulteriori esempi, fare riferimento all&#39;esercitazione sull&#39;accesso ai
 
 ## Iscrizione agli eventi di assimilazione dei dati
 
-Platform rende disponibili per l&#39;iscrizione eventi di alto valore specifici tramite [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Ad esempio, puoi abbonarti agli eventi di inserimento dei dati per ricevere una notifica di potenziali ritardi e guasti. Per ulteriori informazioni, consulta l’esercitazione sulla [sottoscrizione alle notifiche](../ingestion/quality/subscribe-events.md) di assimilazione dei dati.
+[!DNL Platform] rende disponibili per l&#39;iscrizione eventi specifici di alto valore tramite [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Ad esempio, puoi abbonarti agli eventi di inserimento dei dati per ricevere una notifica di potenziali ritardi e guasti. Per ulteriori informazioni, consulta l’esercitazione sulla [sottoscrizione alle notifiche](../ingestion/quality/subscribe-events.md) di assimilazione dei dati.
