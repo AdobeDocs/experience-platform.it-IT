@@ -4,9 +4,9 @@ seo-title: ' Adobe Experience Platform Avvio rapido dell''SDK Web con Launch'
 description: Guida di avvio rapido per l'utilizzo dell'estensione Experience Platform Web SDK  per la raccolta dei dati
 seo-description: Guida di avvio rapido per l'utilizzo dell'estensione Experience Platform Web SDK  per la raccolta dei dati
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8574a2d54c00f1bd3c41780fb12ff739a7d98fc3
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '538'
 ht-degree: 3%
 
 ---
@@ -14,22 +14,23 @@ ht-degree: 3%
 
 # Benvenuti
 
-Questa guida illustra i diversi passaggi per configurare il Adobe Experience Platform  [!DNL Web SDK] in Adobe Launch. Per utilizzare questa funzione, è necessario disporre delle autorizzazioni e stare sul elenco consentiti . Se vuoi entrare nella lista d&#39;attesa, contatta il tuo CSM. Inoltre, per utilizzare questa funzione, è necessario:
+Questa guida illustra i diversi modi in cui impostare l’SDK Web  Adobe Experience Platform in Launch. Per utilizzare questa funzione è necessario essere inseriti nella white list. Se vuoi entrare nella lista d&#39;attesa, contatta il tuo CSM.
 
-- Accertati che sia attivato un dominio di [prime parti (CNAME)](https://docs.adobe.com/content/help/it-IT/core-services/interface/ec-cookies/cookies-first-party.html) . Se hai già un CNAME per Adobe  Analytics, devi usarlo. La verifica in fase di sviluppo funzionerà senza un CNAME, ma ne avrai bisogno prima di andare in produzione
-- Usa la versione più recente del servizio ID visitatore
+- Accertati che sia attivato un dominio di [prime parti (CNAME)](https://docs.adobe.com/content/help/it-IT/core-services/interface/ec-cookies/cookies-first-party.html) . Se hai già un CNAME per  Analytics, devi usarlo. Il test in fase di sviluppo funziona senza un CNAME, ma ne hai bisogno prima di andare in produzione.
+- Avere diritto a  Adobe Experience Platform. Se non hai acquistato Platform, Adobe ti fornirà  Experience Platform Data Services Foundation da utilizzare in modo limitato con l&#39;SDK senza costi aggiuntivi.
+- Utilizzate la versione più recente del servizio ID visitatori.
 
 ## Creare un ID di configurazione
 
-Puoi creare un ID di configurazione utilizzando lo strumento [di configurazione](../fundamentals/edge-configuration.md) edge in Adobe Launch. In questo modo sarà possibile abilitare Edge Network per inviare dati alle varie soluzioni. Consultate la pagina [Edge Configuration Tool](../fundamentals/edge-configuration.md) (Strumentodi configurazione Edge) per informazioni dettagliate su come trovare ogni opzione.
+Puoi creare un ID di configurazione utilizzando lo strumento [di configurazione](../fundamentals/edge-configuration.md) edge in Launch. Questo consente di abilitare Edge Network per l&#39;invio di dati alle varie soluzioni. Per informazioni su come trovare ciascuna opzione, consultate la pagina [Edge Configuration Tool](../fundamentals/edge-configuration.md) (Strumentodi configurazione Edge).
 
 >[!NOTE]
 >
->L&#39;organizzazione deve trovarsi nel elenco consentiti  per la funzione. Contatta il tuo CSM per essere aggiunto al elenco consentiti .
+>Per questa funzione è necessario autorizzare l&#39;organizzazione. Contatta il tuo CSM per essere inserito nella lista per eventuali whitelist.
 
 ## Preparare uno schema
 
-I dati [!DNL Experience Platform Edge Network] vengono utilizzati come XDM. XDM è un formato di dati che consente di definire gli schemi. Lo schema definisce il modo in cui [!DNL Edge Network] si prevede la formattazione dei dati. Per inviare i dati è necessario definire lo schema. Assicuratevi di completare quanto segue:
+ Experience Platform Edge Network accetta i dati come XDM. XDM è un formato di dati che consente di definire gli schemi. Lo schema definisce il modo in cui Edge Network prevede la formattazione dei dati. Per inviare i dati, è necessario definire lo schema.
 
 1. [Creare uno schema](../../xdm/tutorials/create-schema-ui.md)
 2. Aggiungete il [!DNL Web SDK ExperienceEvent] Mixin AEP allo schema creato.
@@ -37,29 +38,26 @@ I dati [!DNL Experience Platform Edge Network] vengono utilizzati come XDM. XDM 
 
 Il seguente video è pensato per aiutarti a creare uno schema, un set di dati e un connettore di origine per lo streaming dei [!DNL Web SDK] dati.
 
->[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
+Accedete a Launch e installate l&#39; `AEP Web SDK` estensione. Quando installi l’SDK, ti viene richiesto di configurare l’estensione. Immettete l’ID di configurazione richiesto in precedenza. L’estensione completa automaticamente l’ID organizzazione.
 
-## Installare l’SDK in Adobe Launch
-
-Accedete ad Adobe Launch e installate l&#39; `AEP Web SDK` estensione. Durante l’installazione dell’SDK, ti verrà richiesto di configurare l’estensione. Immettete l’ID di configurazione richiesto in precedenza. L’estensione completa automaticamente l’ID organizzazione.
 
 Per ulteriori dettagli sulle diverse opzioni di configurazione, consulta [Configurazione dell’SDK](../fundamentals/configuring-the-sdk.md).
 
-## Creazione di una base di dati sullo schema
+## Creazione di un elemento dati basato sullo schema
 
-In Adobe Launch, creare un elemento dati che fa riferimento allo schema modificando l&#39;estensione in AEP [!DNL Web SDK] e impostando il tipo su Oggetto XDM. Questo caricherà lo schema e ti consentirà di mappare gli elementi dati in parti diverse dello schema.
+In Launch, creare un elemento dati che fa riferimento allo schema modificando l&#39;estensione in AEP Web SDK e impostando il tipo su `XDM Object`. Questo carica lo schema e consente di mappare gli elementi dati in parti diverse dello schema.
 
 ![Elemento data in avvio](../../assets/edge_data_element.png)
 
 ## Invio di un evento
 
-Una volta installata l’estensione, avviate l’invio di eventi aggiungendo un’azione &quot;sendEvent&quot; dall’ [!DNL Web SDK] estensione AEP a una regola. Accertatevi di aggiungere all&#39;evento l&#39;elemento dati appena creato come dati XDM. È consigliabile inviare almeno un evento ogni volta che una pagina viene caricata.
+Dopo l&#39;installazione dell&#39;estensione, iniziate a inviare gli eventi aggiungendo un&#39; `sendEvent` azione dall&#39;estensione AEP Web SDK a una regola. Aggiungete all&#39;evento l&#39;elemento dati appena creato come dati XDM. Adobe consiglia di inviare almeno un evento ogni volta che viene caricata una pagina.
 
 Per ulteriori dettagli su come tenere traccia degli eventi, vedere [Tracciamento degli eventi](../fundamentals/tracking-events.md).
 
 ## Passaggi successivi
 
-Una volta che i dati scorrono, potete effettuare le seguenti operazioni:
+Dopo avere eseguito lo scorrimento dei dati, è possibile effettuare le seguenti operazioni.
 
 - [Creare lo schema](https://docs.adobe.com/content/help/en/experience-platform/xdm/schema/composition.html)
 - [Informazioni sul debug](../fundamentals/debugging.md)
