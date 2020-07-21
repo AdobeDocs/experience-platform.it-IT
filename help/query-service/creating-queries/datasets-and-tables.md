@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Set di dati e tabelle e schemi
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '181'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Aprite la riga di comando PSQL e utilizzate i dettagli di connessione da qui: [h
 
 ![](../images/clients/psql/connect-bi.png)
 
-Per visualizzare le tabelle disponibili in Platform con SQL, è possibile utilizzare `\d` o `SHOW TABLES;`.
+Per visualizzare le tabelle disponibili [!DNL Platform] con SQL, è possibile utilizzare `\d` o `SHOW TABLES;`.
 
 
 `\d` visualizza la visualizzazione PostSQL standard
@@ -44,7 +44,7 @@ Per visualizzare le tabelle disponibili in Platform con SQL, è possibile utiliz
 (2 rows)
 ```
 
-`SHOW TABLES;` è un comando personalizzato che offre una visualizzazione più dettagliata e presenta la tabella, nonché il nome del set di dati nell’interfaccia utente di Platform.
+`SHOW TABLES;` è un comando personalizzato che offre una visualizzazione più dettagliata e presenta la tabella, così come il nome del set di dati nell’ [!DNL Platform] interfaccia utente.
 
 ```
        name      |        dataSetId         |     dataSet    | description | resolved 
