@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guida per lo sviluppatore di API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: 57ef7df4b9323b58a90660d515ade61a3974779f
+source-git-commit: d80d49df9c5ac197bdc7f851bbfff18d9b3019d4
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '704'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,9 @@ ht-degree: 0%
 
 L&#39; [!DNL Real-time Customer Profile] API include più endpoint, descritti di seguito. Per informazioni dettagliate, consultate le singole guide degli endpoint e la guida [](getting-started.md) introduttiva per informazioni importanti sulle intestazioni richieste, sulla lettura di chiamate API di esempio e altro ancora.
 
-Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, fare riferimento al swagger [Riferimento API profilo cliente in tempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)reale.
+Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, visita lo swagger [Riferimento API profilo cliente in tempo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)reale.
+
+Per una guida all’utilizzo [!DNL Real-time Customer Profile] dei dati nell’ [!DNL Experience Platform] interfaccia utente, consulta la guida [utente](../ui/user-guide.md)Profilo.
 
 ## (Alfa) Attributi calcolati {#computed-attributes}
 
@@ -52,4 +54,4 @@ I dati acquisiti [!DNL Platform] vengono memorizzati sia nell&#39;archivio [!DNL
 
 ## Passaggi successivi {#next-steps}
 
-Per iniziare a effettuare chiamate utilizzando l&#39; [!DNL Real-time Customer Profile] API, leggi la guida [introduttiva e seleziona una delle guide degli endpoint per apprendere come utilizzare endpoint specifici](getting-started.md) [!DNL Profile]correlati. Per ulteriori informazioni sull’utilizzo [!DNL Profile] dei dati nell’ [!DNL Platform] interfaccia utente, consulta la guida [utente Profilo cliente](../ui/user-guide.md)in tempo reale.
+Per iniziare a effettuare chiamate utilizzando l&#39; [!DNL Real-time Customer Profile] API, leggi la guida [introduttiva e seleziona una delle guide degli endpoint per apprendere come utilizzare endpoint specifici](getting-started.md) [!DNL Profile]correlati. Per utilizzare [!DNL Profile] i dati nell&#39; [!DNL Experience Platform] interfaccia utente, fare riferimento alla guida [utente Profilo cliente](../ui/user-guide.md)in tempo reale.
