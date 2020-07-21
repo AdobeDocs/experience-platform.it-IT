@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sostituire un oggetto
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '138'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # Sostituire un oggetto
 
-Potete sovrascrivere il contenuto di un oggetto Catalog utilizzando una richiesta PUT, in cui l&#39;intera risorsa viene sostituita con il payload della richiesta.
+Potete sovrascrivere il contenuto di un [!DNL Catalog] oggetto utilizzando una richiesta PUT, in cui l&#39;intera risorsa viene sostituita con il payload della richiesta.
 
 >[!NOTE]
 >
->Se è necessario aggiornare solo alcuni campi specifici all&#39;interno di un oggetto Catalog, l&#39;utilizzo di una richiesta PATCH potrebbe risultare più efficiente.
+>Se è necessario aggiornare solo alcuni campi specifici all&#39;interno di un [!DNL Catalog] oggetto, l&#39;utilizzo di una richiesta PATCH potrebbe risultare più efficiente.
 
 **Formato API**
 
@@ -28,7 +28,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{OBJECT_TYPE}` | Il tipo di oggetto Catalog da sostituire. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Tipo di [!DNL Catalog] oggetto da sostituire. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Identificatore dell&#39;oggetto specifico da aggiornare. |
 
 **Richiesta**
