@@ -1,31 +1,34 @@
 ---
 title: Estensione DoubleClick Floodlight (Beta)
 seo-title: Estensione DoubleClick Floodlight (Beta)
-description: L'estensione DoubleClick Floodlight (Beta) è una destinazione pubblicitaria nella piattaforma dati cliente Adobe in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell'estensione in Adobe Exchange.
-seo-description: L'estensione DoubleClick Floodlight (Beta) è una destinazione pubblicitaria nella piattaforma dati cliente Adobe in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell'estensione in Adobe Exchange.
+description: L’estensione DoubleClick Floodlight (Beta) è una destinazione pubblicitaria nell’Platform Adobe Real-time Customer Data. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell'estensione in Adobe Exchange.
+seo-description: L’estensione DoubleClick Floodlight (Beta) è una destinazione pubblicitaria nell’Platform Adobe Real-time Customer Data. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell'estensione in Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+workflow-type: tm+mt
+source-wordcount: '531'
+ht-degree: 5%
 
 ---
 
 
-# Estensione DoubleClick Floodlight (Beta)
+# [!DNL DoubleClick Floodlight] Estensione (Beta)
 
 ## Panoramica {#overview}
 
-Questa estensione consente di distribuire in modo semplice e rapido i tag DoubleClick Floodlight utilizzando il formato di luce mobile tradizionale (non Global Site Tag). Nota: Questa estensione è in versione beta.
+Questa estensione consente di distribuire in modo rapido e semplice [!DNL DoubleClick Floodlight] i tag utilizzando il formato di luce mobile tradizionale (non Global Site Tag). Nota: Questa estensione è in versione beta.
 
-DoubleClick Floodlight (Beta) è un&#39;estensione pubblicitaria nella piattaforma dati cliente Adobe in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, consultate la documentazione di supporto di Google per [DoubleClick Floodlight](https://support.google.com/dcm/answer/2823388?hl=en).
+[!DNL DoubleClick Floodlight] (Beta) è un&#39;estensione pubblicitaria in Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la documentazione di [!DNL Google] supporto per [DoubleClick Floodlight](https://support.google.com/dcm/answer/2823388?hl=en).
 
-Questa destinazione è un’estensione Experience Platform Launch. Per ulteriori informazioni sul funzionamento delle estensioni Launch in Adobe Real-time CDP, consulta Panoramica [delle estensioni](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
+Questa destinazione è un&#39;estensione di Experience Platform Launch. Per ulteriori informazioni sul funzionamento delle estensioni Launch in Adobe Real-time CDP, consultate Panoramica [delle estensioni](/help/rtcdp/destinations/experience-platform-launch-extensions.md)di Experience Platform Launch.
 
 ![Estensione Doubleclick Floodlight](assets/doubleclick-floodlight-extension.png)
 
 ## Prerequisiti  {#prerequisites}
 
-Questa estensione è disponibile nel catalogo Destinazioni per tutti i clienti che hanno acquistato Adobe Real-time CDP.
+Questa estensione è disponibile nel [!DNL Destinations] catalogo per tutti i clienti che hanno acquistato Adobe Real-time CDP.
 
-Per utilizzare questa estensione, devi accedere a Experience Platform Launch. Experience Platform Launch viene offerto ai clienti Adobe Experience Cloud come funzione inclusa a valore aggiunto. Contatta l’amministratore dell’organizzazione per ottenere l’accesso a Launch e chiedi loro di concederti l’ **[!UICONTROL manage_properties]** autorizzazione necessaria per installare le estensioni.
+Per utilizzare questa estensione, è necessario accedere al Experience Platform Launch. L’Experience Platform Launch viene offerto ai clienti Adobe Experience Cloud come funzione inclusa a valore aggiunto. Contatta l’amministratore dell’organizzazione per ottenere l’accesso a Launch e chiedi loro di concederti l’ **[!UICONTROL manage_properties]** autorizzazione necessaria per installare le estensioni.
 
 ## Installa estensione {#install-extension}
 
@@ -37,7 +40,7 @@ Per installare l’estensione DoubleClick Floodlight (Beta):
 4. Nella **[!UICONTROL Select available Launch property]** finestra, selezionate la proprietà Launch in cui desiderate installare l&#39;estensione. È inoltre possibile creare una nuova proprietà in Launch. Una proprietà è una raccolta di regole, elementi di dati, estensioni configurate, ambienti e librerie. Ulteriori informazioni sulle proprietà sono disponibili nella sezione [della pagina](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) Proprietà della documentazione di Launch.
 5. Per completare l’installazione, passa a Launch.
 
-Puoi anche installare l’estensione direttamente nell’interfaccia [di avvio della piattaforma](https://launch.adobe.com/)Experience. Consultate [Aggiungere una nuova estensione](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) nella documentazione di Launch.
+Potete anche installare l’estensione direttamente nell’interfaccia [del](https://launch.adobe.com/)Experience Platform Launch. Consultate [Aggiungere una nuova estensione](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) nella documentazione di Launch.
 
 
 ## Come utilizzare l&#39;estensione {#how-to-use}
