@@ -4,7 +4,10 @@ solution: Experience Platform
 title: Flusso di lavoro ETL
 topic: overview
 translation-type: tm+mt
-source-git-commit: 943b45d1c6de5f0e2be761d8246b9de4c4c0b4e7
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '177'
+ht-degree: 0%
 
 ---
 
@@ -19,11 +22,11 @@ I diagrammi seguenti forniscono modelli di azioni ETL comuni e un&#39;esperienza
 
 Le azioni illustrate di seguito sono descritte nei passaggi descritti nella Guida all&#39;integrazione [ETL](home.md). Alcuni passaggi fanno riferimento a &quot;Figure&quot; specifiche, altri descrivono azioni simili al flusso di lavoro illustrato di seguito.
 
-### Figura 1 - Configura il nuovo connettore Adobe Experience Platform:
+### Figura 1 - Configura nuovo connettore Adobe Experience Platform :
 
 ![](images/image2.png)
 
-### Figura 2 - Connettore della piattaforma esperienza attivato:
+### Figura 2 - [!DNL Experience Platform] Connettore attivato:
 
 ![](images/image3.png)
 
@@ -31,11 +34,11 @@ Le azioni illustrate di seguito sono descritte nei passaggi descritti nella Guid
 
 ![](images/image4.png)
 
-### Figura 4 - Nuova interfaccia utente di trasformazione, selezionando Connessione con la piattaforma di esperienza:
+### Figura 4 - Nuova interfaccia utente di trasformazione, selezione della [!DNL Experience Platform] connessione:
 
 ![](images/image5.png)
 
-### Figura 5 - Esplorazione dei set di dati della piattaforma di esperienze di origine:
+### Figura 5 - Esplorazione per [!DNL Experience Platform] i set di dati di origine:
 
 ![](images/image6.png)
 
@@ -55,7 +58,7 @@ Le azioni illustrate di seguito sono descritte nei passaggi descritti nella Guid
 
 ![](images/image10.png)
 
-### Figura 10 - Definizione del set di dati di destinazione per il modello dati esperienza (XDM):
+### Figura 10 - Definizione del set di dati di destinazione [!DNL Experience Data Model] (XDM):
 
 ![](images/image11.png)
 
