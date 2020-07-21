@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creazione di un set di dati tramite le API
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1234'
 ht-degree: 1%
 
 ---
@@ -20,31 +20,31 @@ Questo documento fornisce passaggi generali per la creazione di un dataset utili
 
 Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
 
-* [Caricamento](../../ingestion/batch-ingestion/overview.md)batch:  Experience Platform consente di assimilare i dati come file batch.
-* [Sistema](../../xdm/home.md)XDM (Experience Data Model): Framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
-* [Sandbox](../../sandboxes/home.md):  Experience Platform fornisce sandbox virtuali che dividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [Caricamento](../../ingestion/batch-ingestion/overview.md)batch: [!DNL Experience Platform] consente di assimilare i dati come file batch.
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per effettuare correttamente chiamate alle API Platform.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per eseguire correttamente le chiamate alle [!DNL Platform] API.
 
 ### Lettura di chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi di  Experience Platform.
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla [!DNL Experience Platform] risoluzione dei problemi.
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle API Platform, è prima necessario completare l&#39;esercitazione [di](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API Experience Platform, come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
 
 * Autorizzazione: Portatore `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in  Experience Platform sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API Platform richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in Platform, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+>Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva:
 
@@ -60,9 +60,9 @@ Queste definizioni standard consentono l&#39;interpretazione coerente dei dati, 
 
 Questa esercitazione inizia nel punto in cui termina l&#39;esercitazione [API](../../xdm/tutorials/create-schema-api.md) Schema del Registro di sistema, utilizzando lo schema Membri fedeltà creato durante tale esercitazione.
 
-Se non è stata completata l&#39;esercitazione del Registro di sistema dello schema, iniziare da tale esercitazione e continuare con l&#39;esercitazione del dataset solo dopo aver composto lo schema necessario.
+Se non avete completato l&#39; [!DNL Schema Registry] esercitazione, iniziate da qui e continuate con questa esercitazione sui dataset solo dopo aver composto lo schema necessario.
 
-La seguente chiamata può essere utilizzata per visualizzare lo schema Membri fedeltà creato durante l&#39;esercitazione API del Registro di sistema dello schema:
+La seguente chiamata può essere utilizzata per visualizzare lo schema Membri fedeltà creato durante l&#39;esercitazione [!DNL Schema Registry] API:
 
 **Formato API**
 
@@ -329,7 +329,7 @@ Un file caricato correttamente restituisce un corpo di risposta vuoto e lo stato
 
 ## Completamento batch segnale
 
-Dopo aver caricato tutti i file di dati nel batch, potete segnalare il batch per il completamento. Il completamento della segnalazione determina la creazione da parte del servizio di `DataSetFile` voci di catalogo per i file caricati e la loro associazione con il batch generato in precedenza. Il batch di cataloghi viene contrassegnato con esito positivo, che attiva tutti i flussi a valle che possono quindi funzionare sui dati ora disponibili.
+Dopo aver caricato tutti i file di dati nel batch, potete segnalare il batch per il completamento. Il completamento della segnalazione determina la creazione [!DNL Catalog] di `DataSetFile` voci per i file caricati e la loro associazione con il batch generato in precedenza. Il [!DNL Catalog] batch viene contrassegnato con esito positivo, che attiva tutti i flussi a valle che possono quindi lavorare sui dati ora disponibili.
 
 **Formato API**
 
