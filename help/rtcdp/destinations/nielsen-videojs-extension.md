@@ -1,39 +1,42 @@
 ---
 title: Estensione del gestore del lettore Nielsen VideoJS
 seo-title: Estensione del gestore del lettore Nielsen VideoJS
-description: L’estensione del gestore Nielsen VideoJS Player è una destinazione di analisi nella piattaforma dati cliente Adobe in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell'estensione in Adobe Exchange.
-seo-description: L’estensione del gestore Nielsen VideoJS Player è una destinazione di analisi nella piattaforma dati cliente Adobe in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell'estensione in Adobe Exchange.
+description: L’estensione del gestore Nielsen VideoJS Player è una destinazione di analisi in Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell'estensione in Adobe Exchange.
+seo-description: L’estensione del gestore Nielsen VideoJS Player è una destinazione di analisi nell’Platform dati cliente in tempo reale Adobe. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell'estensione in Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+workflow-type: tm+mt
+source-wordcount: '615'
+ht-degree: 4%
 
 ---
 
 
-# Estensione handler Nielsen VideoJS Player {#nielsen-vjs-extension}
+# [!DNL Nielsen VideoJS Player Handler] Estensione {#nielsen-vjs-extension}
 
 ## Panoramica {#overview}
 
-L’estensione del lancio dell’SDK digitale Nielsen offre la misurazione del pubblico tramite i seguenti prodotti di misurazione digitale:
+[!DNL Nielsen Digital SDK] L&#39;estensione launch offre la misurazione del pubblico tramite i seguenti prodotti di misurazione digitale:
 
 DCR: Una soluzione di misurazione che fornisce misurazioni giornaliere dei contenuti digitali non lineari, compresi i contenuti con annunci pubblicitari, consentirà di visualizzare in modo completo il consumo di contenuti digitali tra Desktop, Mobile, Tablet e Dispositivi collegati.
 
 DTVR: Questo account consente la visualizzazione lineare della TV su computer desktop e dispositivi mobili per le origini di programmazione partecipanti. Questa è la prima soluzione a ricevere l&#39;accreditamento dal MRC per il suo contributo alla misurazione del pubblico TV per la programmazione visualizzata su computer e dispositivi mobili.
 
-Il gestore Nielsen VideoJS Player è un&#39;estensione di analisi nella piattaforma dati cliente Adobe in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101361.nielsen-digital-sdk-extension.html).
+[!DNL Nielsen VideoJS Player Handler] è un&#39;estensione di analisi in Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101361.nielsen-digital-sdk-extension.html).
 
-Questa destinazione è un’estensione Experience Platform Launch. Per ulteriori informazioni sul funzionamento delle estensioni Launch in Adobe Real-time CDP, consulta Panoramica [delle estensioni](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
+Questa destinazione è un&#39;estensione di Experience Platform Launch. Per ulteriori informazioni sul funzionamento delle estensioni Launch in Adobe Real-time CDP, consultate Panoramica [delle estensioni](/help/rtcdp/destinations/experience-platform-launch-extensions.md)di Experience Platform Launch.
 
 ![Estensione handler Nielsen VideoJS Player](assets/nielsen-videojs-extension.png)
 
 ## Prerequisiti  {#prerequisites}
 
-Questa estensione è disponibile nel catalogo Destinazioni per tutti i clienti che hanno acquistato Adobe Real-time CDP.
+Questa estensione è disponibile nel [!DNL Destinations] catalogo per tutti i clienti che hanno acquistato Adobe Real-time CDP.
 
-Per utilizzare questa estensione, devi accedere a Experience Platform Launch. Experience Platform Launch viene offerto ai clienti Adobe Experience Cloud come funzione inclusa a valore aggiunto. Contatta l’amministratore dell’organizzazione per ottenere l’accesso a Launch e chiedi loro di concederti l’ **[!UICONTROL manage_properties]** autorizzazione necessaria per installare le estensioni.
+Per utilizzare questa estensione, è necessario accedere al Experience Platform Launch. L’Experience Platform Launch viene offerto ai clienti Adobe Experience Cloud come funzione inclusa a valore aggiunto. Contatta l’amministratore dell’organizzazione per ottenere l’accesso a Launch e chiedi loro di concederti l’ **[!UICONTROL manage_properties]** autorizzazione necessaria per installare le estensioni.
 
 ## Installa estensione {#install-extension}
 
-Per installare l’estensione del gestore Nielsen VideoJS Player:
+Per installare l’ [!DNL Nielsen VideoJS Player Handler] estensione:
 
 1. Nell’interfaccia CDP [Adobe Real-time, passate a](http://platform.adobe.com/)**[!UICONTROL Destinations > Catalog]**.
 2. Selezionate l’estensione dal catalogo o usate la barra di ricerca.
@@ -43,7 +46,7 @@ Per installare l’estensione del gestore Nielsen VideoJS Player:
 
 Per informazioni sulle opzioni di configurazione dell&#39;estensione e sul supporto per l&#39;installazione, consulta la pagina [Nielsen Digital SDK in Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101361.nielsen-digital-sdk-extension.html).
 
-Puoi anche installare l’estensione direttamente nell’interfaccia [di avvio della piattaforma](https://launch.adobe.com/)Experience. Consultate [Aggiungere una nuova estensione](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) nella documentazione di Launch.
+Potete anche installare l’estensione direttamente nell’interfaccia [del](https://launch.adobe.com/)Experience Platform Launch. Consultate [Aggiungere una nuova estensione](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) nella documentazione di Launch.
 
 ## Come utilizzare l&#39;estensione {#how-to-use}
 
