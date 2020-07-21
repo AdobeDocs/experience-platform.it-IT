@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida per gli sviluppatori di Query Service
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '645'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 ## Chiamate API di esempio
 
-Le sezioni seguenti descrivono le chiamate che potete effettuare utilizzando l&#39; `/queries` endpoint nell&#39;API del servizio query. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
+Le sezioni seguenti descrivono le chiamate che potete effettuare utilizzando l&#39; `/queries` endpoint nell&#39; [!DNL Query Service] API. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
 
 ### Recupero di un elenco di query
 
