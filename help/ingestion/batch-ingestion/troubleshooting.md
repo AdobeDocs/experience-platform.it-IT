@@ -1,17 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guida alla risoluzione dei problemi di inserimento batch Adobe Experience Platform
+title: Guida alla risoluzione dei problemi di inserimento batch  Adobe Experience Platform
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+workflow-type: tm+mt
+source-wordcount: '1335'
+ht-degree: 1%
 
 ---
 
 
 # Guida alla risoluzione dei problemi di inserimento batch
 
-Questa documentazione aiuterà a rispondere alle domande frequenti sulle API di inserimento dati in batch di Adobe Experience Platform.
+Questa documentazione aiuterà a rispondere alle domande frequenti sulle [!DNL Batch Data Ingestion] API  Adobe Experience Platform.
 
 ## Chiamate API batch
 
@@ -106,7 +109,7 @@ Per il JSON su più righe, un oggetto può occupare più righe, mentre tutti gli
 ]
 ```
 
-Per impostazione predefinita, l&#39;inserimento di dati in batch utilizza JSON a riga singola.
+Per impostazione predefinita, [!DNL Batch Data Ingestion] utilizza JSON a riga singola.
 
 ### L’assimilazione CSV è supportata?
 
@@ -168,7 +171,7 @@ Un batch può, nel suo ciclo di vita, attraversare i seguenti stati:
 | Stato | Dati scritti in Master | Descrizione |
 | ------ | ---------------------- | ----------- |
 | Abbandonato |  | Il client non è riuscito a completare il batch nell&#39;intervallo di tempo previsto. |
-| Interrotto |  | Il client ha esplicitamente chiamato, tramite le API di inserimento dati batch, un&#39;operazione di interruzione per il batch specificato. Una volta che un batch è nello stato Caricato, il batch non può essere interrotto. |
+| Interrotto |  | Il client ha esplicitamente chiamato, tramite le [!DNL Batch Data Ingestion] API, un&#39;operazione di interruzione per il batch specificato. Una volta che un batch è nello stato Caricato, il batch non può essere interrotto. |
 | Attivo/Successo | x | Il batch è stato promosso con successo da fase a master ed è ora disponibile per il consumo a valle. **Nota:** Active e Success sono utilizzati in modo intercambiabile. |
 | Archiviato |  | La partita è stata archiviata in deposito frigorifero. |
 | Errore/Errore |  | Uno stato terminale che risulta da una configurazione non corretta e/o da dati non corretti. Viene registrato un errore fruibile, insieme al batch, per consentire ai client di correggere e reinviare i dati. **Nota:** I guasti e i guasti vengono utilizzati in modo intercambiabile. |
@@ -190,7 +193,7 @@ Quando un batch si trova in &quot;Riprova&quot;, significa che l&#39;inserimento
 
 ### Cosa significa quando un batch è &quot;Bloccato&quot;?
 
-Quando un batch è in &quot;Bloccato&quot;, significa che Data Ingestion Services sta riscontrando difficoltà nel caricamento del batch e che tutti i tentativi sono stati esauriti.
+Quando un batch è in &quot;Bloccato&quot;, significa che [!DNL Data Ingestion Services] sta riscontrando difficoltà nel caricamento del batch e che tutti i tentativi sono stati esauriti.
 
 ### Cosa significa se un batch è ancora &quot;Caricamento&quot;?
 
@@ -225,7 +228,7 @@ Una volta corretti gli errori, il batch può essere ricaricato.
 
 ### Come eliminare i batch?
 
-Invece di eliminare direttamente dal Catalogo, i batch devono essere rimossi utilizzando uno dei metodi indicati di seguito:
+Anziché eliminare direttamente i batch, [!DNL Catalog]è necessario rimuovere i batch utilizzando uno dei metodi indicati di seguito:
 
 1. Se il batch è in corso, il batch deve essere interrotto.
 2. Se la masterizzazione del batch ha avuto esito positivo, il batch deve essere ripristinato.
@@ -236,11 +239,11 @@ Le metriche a livello di batch seguenti sono disponibili per i batch nello stato
 
 | Metrica | Descrizione |
 | ------ | ----------- |
-| inputByteSize | Il numero totale di byte in fase per l&#39;elaborazione dei servizi di inserimento dati. |
-| inputRecordSize | Il numero totale di righe allestite per l&#39;elaborazione dei servizi di inserimento dati. |
-| outputByteSize | Il numero totale di byte inviati da Data Ingestion Services al Data Lake. |
-| outputRecordSize | Il numero totale di righe emesse da Data Ingestion Services al Data Lake. |
-| partizioniCount | Il numero totale di partizioni scritte in Data Lake. |
+| inputByteSize | Il numero totale di byte in fase [!DNL Data Ingestion Services] da elaborare. |
+| inputRecordSize | Il numero totale di righe in cui è stato eseguito lo stage [!DNL Data Ingestion Services] per l&#39;elaborazione. |
+| outputByteSize | Il numero totale di byte emessi da [!DNL Data Ingestion Services] a [!DNL Data Lake]. |
+| outputRecordSize | Il numero totale di righe emesse da [!DNL Data Ingestion Services] a [!DNL Data Lake]. |
+| partizioniCount | Numero totale di partizioni scritte in [!DNL Data Lake]. |
 
 ### Perché le metriche non sono disponibili in alcuni batch?
 
