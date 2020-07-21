@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Eliminare un oggetto
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '178'
+source-wordcount: '173'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # Eliminare un oggetto
 
-Potete eliminare un oggetto Catalog inserendo il relativo ID nel percorso di una richiesta di DELETE.
+È possibile eliminare un [!DNL Catalog] oggetto inserendo il relativo ID nel percorso di una richiesta di DELETE.
 
 >[!WARNING]
 >
->Prestate particolare attenzione quando eliminate degli oggetti, in quanto questo non può essere annullato e potrebbe causare modifiche di interruzione in altre aree di  Experience Platform.
+>Prestate particolare attenzione quando eliminate gli oggetti, poiché non è possibile annullarli e potrebbe causare modifiche di interruzione altrove in [!DNL Experience Platform].
 
 **Formato API**
 
@@ -32,7 +32,7 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{OBJECT_TYPE}` | Il tipo di oggetto Catalog da eliminare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Il tipo di [!DNL Catalog] oggetto da eliminare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Identificatore dell&#39;oggetto specifico da aggiornare. |
 
 **Richiesta**
@@ -60,4 +60,4 @@ Una risposta corretta restituisce lo stato HTTP 200 (OK) e una matrice contenent
 
 >[!NOTE]
 >
->Se nessun oggetto Catalog corrisponde all’ID fornito nella richiesta, potreste comunque ricevere un codice di stato HTTP 200, ma l’array di risposte sarà vuoto.
+>Se nessun [!DNL Catalog] oggetto corrisponde all&#39;ID fornito nella richiesta, è comunque possibile che si riceva un codice di stato HTTP 200, ma l&#39;array di risposte sarà vuoto.
