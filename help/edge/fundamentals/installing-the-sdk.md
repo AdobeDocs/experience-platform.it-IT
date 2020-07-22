@@ -4,9 +4,9 @@ seo-title: ' Adobe Experience Platform SDK Web per l''installazione dell''SDK'
 description: Scoprite come installare  Experience Platform Web SDK
 seo-description: Scoprite come installare  Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: c5afced244c661b0ec0bcf0109191a2dacf886aa
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '583'
 ht-degree: 1%
 
 ---
@@ -71,6 +71,10 @@ Se avete stabilito che è necessario eseguire il polifugo `window.Promise`, incl
 ```
 
 Questo carica uno script che verifica che `window.Promise` sia un&#39;implementazione Promise valida.
+
+>[!NOTE]
+>
+>Se scegli di caricare un&#39;implementazione Promise diversa, assicurati che sia supportata `Promise.prototype.finally`.
 
 ## Caricamento sincrono del file JavaScript {#loading-javascript-synchronously}
 
