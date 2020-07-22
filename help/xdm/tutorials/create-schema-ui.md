@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare uno schema tramite l’Editor di schema.
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 661789fa15ea11b0e42060b1b90d74785c04fa1f
 workflow-type: tm+mt
 source-wordcount: '3167'
 ht-degree: 0%
@@ -229,7 +229,7 @@ I tipi di dati consentono l&#39;uso coerente di strutture con più campi e offro
 
 Per convertire l&#39;oggetto &quot;[!UICONTROL loyalty]&quot; in un tipo di dati, fare clic sul campo &quot;fedeltà&quot; in *[!UICONTROL Structure]* e selezionare **[!UICONTROL Convert to New Data Type]** sulla destra dell&#39;editor in *[!UICONTROL Field Properties]*. Viene visualizzato un piccolo pop-up verde che conferma &quot;[!UICONTROL Object Converted to Data Type]&quot;.
 
-Ora, quando si guarda sotto *[!UICONTROL Structure]*, si può vedere che il campo &quot;[!UICONTROL loyalty]&quot; ha un tipo di dati &quot;[!UICONTROL Loyalty]&quot; e i campi hanno icone di blocco piccole accanto a essi, a indicare che non sono più campi singoli, ma fanno parte di una struttura di campi multipli.
+Ora, quando si guarda sotto *[!UICONTROL Structure]*, si può vedere che il campo &quot;[!UICONTROL loyalty]&quot; ha un tipo di dati &quot;[!UICONTROL Loyalty]&quot; e i campi hanno icone di blocco piccole accanto a essi, a indicare che non sono più campi singoli, ma fanno parte di una struttura multi-campo.
 
 In uno schema futuro, ora puoi assegnare a un campo il **[!UICONTROL Type]** nome &quot;[!UICONTROL Loyalty]&quot; e includere automaticamente i campi Livello fedeltà, Punti, Membro da e ID fedeltà.
 
@@ -273,7 +273,7 @@ L&#39;Editor schema consente di abilitare uno schema da utilizzare con [!DNL Rea
 
 Affinché uno schema possa essere abilitato per l&#39;uso con [!DNL Real-time Customer Profile], è necessario che sia definita un&#39;identità primaria. Se si tenta di abilitare uno schema senza prima definire un&#39;identità primaria, verrà visualizzato un messaggio di errore &quot;Identità principale mancante&quot;.
 
-![](../images/tutorials/create-schema/missing_primary_identity.png)
+<img src="../images/tutorials/create-schema/missing_primary_identity.png" width="600" /><br>
 
 Per attivare lo schema &quot;Membri fedeltà&quot; da utilizzare in [!DNL Profile], iniziare facendo clic su &quot;Membri fedeltà&quot; nella sezione *Struttura* dell&#39;editor.
 
