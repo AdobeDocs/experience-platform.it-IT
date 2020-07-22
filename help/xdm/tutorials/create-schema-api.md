@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare uno schema utilizzando l'API del Registro di sistema dello schema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
 workflow-type: tm+mt
 source-wordcount: '2322'
 ht-degree: 1%
@@ -1015,7 +1015,7 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) con un corpo di ris
 }
 ```
 
-## Abilita schema da utilizzare in [!DNL Real-time Customer Profile]
+## Abilita schema da utilizzare in [!DNL Real-time Customer Profile] {#profile}
 
 Aggiungendo il tag &quot;unione&quot; all&#39; `meta:immutableTags` attributo, potete abilitare lo schema Membri fedeltà da utilizzare per [!DNL Real-time Customer Profile].
 
