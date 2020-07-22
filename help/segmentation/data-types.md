@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Tipi di dati  Adobe Experience Platform Segmentazione del servizio
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 2%
+source-wordcount: '456'
+ht-degree: 3%
 
 ---
 
@@ -50,15 +50,15 @@ Come illustrato nella tabella seguente, i dati dell&#39;evento vengono rappresen
 | Pulsante &quot;Applica regola di ora&quot; | Incorpora i dati data. |
 | Uguale, non uguale, inizia con, non inizia con, termina con, non termina con, contiene, non contiene, non contiene, esiste, non esiste | Incorpora i dati stringa. |
 
-## Segmenti
-
-Le definizioni di segmento esistenti possono essere utilizzate anche come componenti di una nuova definizione di segmento, aggiungendo al nuovo segmento i relativi attributi e regole basate sugli eventi.
-
-## Tipi di pubblico
+### Condivisione dell&#39;audience
 
 Le audience esterne possono essere utilizzate anche come componenti di una nuova definizione di segmento, aggiungendo le relative regole di attributi al nuovo segmento.
 
-Al momento, è supportato solo  Adobe Audience Manager come pubblico. In futuro verranno attivate ulteriori fonti.
+Al momento, è supportato solo  Adobe Audience Manager come pubblico esterno, con ulteriori origini abilitate in futuro. Ulteriori informazioni sull&#39;utilizzo  pubblico di Adobi Audience Manager con Platform sono disponibili nella guida alla condivisione di [audience all&#39;interno della documentazione](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html) Adobe Audience Manager.
+
+### Condivisione di segmenti
+
+I segmenti creati in Platform possono essere utilizzati in altri servizi [di base di](https://docs.adobe.com/content/help/it-IT/core-services/interface/experience-cloud.html)Adobe Experience Cloud. Per abilitare questa funzione, è necessario contattare l&#39;architetto della soluzione o il consulente.
 
 ## Altri tipi di dati
 
