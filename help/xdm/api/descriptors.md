@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Descrittori
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
 workflow-type: tm+mt
 source-wordcount: '1475'
 ht-degree: 1%
@@ -369,7 +369,7 @@ I descrittori delle relazioni descrivono una relazione tra due schemi diversi, b
 
 #### Descrittore identità di riferimento
 
-I descrittori di identità di riferimento forniscono un contesto di riferimento a un campo dello schema, consentendo il collegamento con il campo dell&#39;identità principale di uno schema di destinazione. I campi devono essere già etichettati con un descrittore di identità prima di potervi applicare un descrittore di riferimento.
+I descrittori di identità di riferimento forniscono un contesto di riferimento all&#39;identità primaria di un campo dello schema, consentendo di farvi riferimento dai campi di altri schemi. I campi devono essere già etichettati con un descrittore di identità prima di potervi applicare un descrittore di riferimento.
 
 ```json
 {
