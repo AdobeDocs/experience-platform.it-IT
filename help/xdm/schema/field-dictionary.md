@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Dizionario del campo Modello dati esperienza (XDM)
 topic: overview
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 661789fa15ea11b0e42060b1b90d74785c04fa1f
 workflow-type: tm+mt
 source-wordcount: '25163'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Per ulteriori informazioni sui blocchi costitutivi degli schemi, compresi i prin
 
 La tabella seguente include il nome del campo (non tutti i campi XDM sono denominati con &quot;xdm&quot;) insieme al titolo e alla descrizione, al tipo e al formato, se necessario, nonché il tipo XDM corrispondente e le risorse (mixins, tipi di dati e schemi) in cui è possibile trovare il campo.
 
-È possibile utilizzare la funzionalità di ricerca [!DNL Schema Editor] per visualizzare i dettagli di tali risorse, come illustrato nell&#39;esercitazione [Editor](../tutorials/create-schema-ui.md)schema.
+È possibile utilizzare la funzionalità di ricerca [!DNL Schema Editor] per visualizzare i dettagli di tali risorse, come illustrato nell&#39;esercitazione [Editor](../tutorials/create-schema-ui.md#browse)schema.
 
 >[!NOTE]
 >
@@ -386,7 +386,7 @@ La tabella seguente include il nome del campo (non tutti i campi XDM sono denomi
 | xdm:progress75 | Marcatore progresso 75% | Indica che l&#39;indicatore di riproduzione ha superato il marcatore del 75% del contenuto multimediale in base alla lunghezza del flusso. Il marcatore contò solo una volta, anche se cercava all&#39;indietro. Se cercate in avanti, i marcatori saltati non vengono conteggiati. | object |  | object | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-media, https://ns.adobe.com/xdm/context/media-timed |
 | xdm:progress95 | Marcatore progresso 95% | Indica che l&#39;indicatore di riproduzione ha superato il marcatore del 95% del contenuto multimediale in base alla lunghezza del flusso. Il marcatore contò solo una volta, anche se cercava all&#39;indietro. Se cercate in avanti, i marcatori saltati non vengono conteggiati. | object |  | object | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-media, https://ns.adobe.com/xdm/context/media-timed |
 | xdm:promoAssetId | ID risorsa promossa | Identificatore univoco per la risorsa sottostante promossa nell&#39;annuncio a cui è associato questo evento. | string |  | string | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/adcloud/advertisement, https://ns.adobe.com/experience/adcloud/experienceevent-all |
-| xdm:proofMember | Membro Prove | Il destinatario di questo messaggio è un membro del gruppo di prove per l&#39;attività della campagna. La prova è un messaggio speciale che consente di verificare la consegna prima di inviarla alla destinazione principale. I destinatari della prova sono responsabili dell&#39;approvazione sia del modulo che del contenuto del messaggio. Si tratta di un obiettivo prestabilito. | booleano |  | booleano | https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all |
+| xdm:proofMember | Membro Prove | Il destinatario di questo messaggio è un membro del gruppo di prove per questa attività della campagna. La prova è un messaggio speciale che consente di verificare la consegna prima di inviarla alla destinazione principale. I destinatari della prova sono responsabili dell&#39;approvazione sia del modulo che del contenuto del messaggio. Si tratta di un obiettivo prestabilito. | booleano |  | booleano | https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all |
 | xdm:prop1 - xdm:prop75 | prop1 | Variabile di proprietà personalizzata 1 - 75 | object |  | object | https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/analytics/experienceevent-all |
 | xdm:prop | Proprietà |  | object |  | object | https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/analytics/experienceevent-all |
 | xdm:proximity | Prossimità del beacon | Distanza stimata dal beacon. | string |  | string | https://ns.adobe.com/experience/aam-experienceevent, https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/beacon-interaction-details, https://ns.adobe.com/xdm/context/experienceevent-environment-details |
