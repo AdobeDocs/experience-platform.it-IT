@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Guida ai servizi intelligenti
 translation-type: tm+mt
-source-git-commit: 9bdd2b17953c1c72243ae07be3e40d53ced9360b
+source-git-commit: a0b85809d0703c0366c73ed6d66319af0f62cb27
+workflow-type: tm+mt
+source-wordcount: '64'
+ht-degree: 3%
 
 ---
 
@@ -22,9 +25,9 @@ source-git-commit: 9bdd2b17953c1c72243ae07be3e40d53ced9360b
    * [Panoramica](customer-ai/overview.md)
    * [Guida introduttiva all&#39;AI del cliente](customer-ai/getting-started.md)
    * [Ingresso e uscita](customer-ai/input-output.md)
-   * Guida all&#39;interfaccia utente {#user-guide}
+   * Guide dell&#39;interfaccia{#user-guide}
       * [Configurare un&#39;istanza](customer-ai/user-guide/configure.md)
       * [Scopri informazioni approfondite](customer-ai/user-guide/discover-insights.md)
       * [Creazione di segmenti utilizzando i punteggi AI dei clienti](customer-ai/user-guide/create-segment.md)
       * [Download dei punteggi](customer-ai/user-guide/download-scores.md)
-* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-en)
+* [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
