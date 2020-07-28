@@ -40,7 +40,7 @@ Le relazioni dello schema sono rappresentate da uno schema **di** origine con un
 
 >[!IMPORTANT] Per stabilire una relazione, entrambi gli schemi devono avere identità principali definite ed essere attivati per [!DNL Real-time Customer Profile]. Per informazioni su come configurare gli schemi di conseguenza, vedere la sezione relativa all&#39; [abilitazione di uno schema da utilizzare nel profilo](./create-schema-api.md#profile) nell&#39;esercitazione sulla creazione dello schema.
 
-Per definire una relazione tra due schemi, è innanzitutto necessario acquisire i `$id` valori per entrambi gli schemi. Se conoscete i nomi visualizzati (`title`) degli schemi, potete trovare `$id` i relativi valori effettuando una richiesta GET all&#39; `/tenant/schemas` endpoint nell&#39; [!DNL Schema Registry] API.
+Per definire una relazione tra due schemi, è innanzitutto necessario acquisire i `$id` valori per entrambi gli schemi. Se conoscete i nomi visualizzati (`title`) degli schemi, potete trovare `$id` i relativi valori effettuando una richiesta di GET all&#39; `/tenant/schemas` endpoint nell&#39; [!DNL Schema Registry] API.
 
 **Formato API**
 
@@ -120,7 +120,7 @@ In questa esercitazione, lo schema di destinazione &quot;[!DNL Hotels]&quot; con
 
 ### Creare un nuovo mixin
 
-Per aggiungere un nuovo campo a uno schema, è innanzitutto necessario definirlo in un mixin. Per creare un nuovo mixin, effettuate una richiesta POST all’ `/tenant/mixins` endpoint.
+Per aggiungere un nuovo campo a uno schema, è innanzitutto necessario definirlo in un mixin. Potete creare un nuovo mixin effettuando una richiesta POST all&#39; `/tenant/mixins` endpoint.
 
 **Formato API**
 
@@ -230,7 +230,7 @@ Registra l’ `$id` URI del mixin, da utilizzare nel passaggio successivo per ag
 
 ### Aggiungere il mixin allo schema di origine
 
-Dopo aver creato un mixin, potete aggiungerlo allo schema di origine effettuando una richiesta PATCH all&#39; `/tenant/schemas/{SCHEMA_ID}` endpoint.
+Dopo aver creato un mixin, potete aggiungerlo allo schema di origine effettuando una richiesta di PATCH all&#39; `/tenant/schemas/{SCHEMA_ID}` endpoint.
 
 **Formato API**
 
@@ -267,7 +267,7 @@ curl -X PATCH \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `op` | L’operazione PATCH da eseguire. Questa richiesta utilizza l&#39; `add` operazione. |
+| `op` | Operazione PATCH da eseguire. Questa richiesta utilizza l&#39; `add` operazione. |
 | `path` | Percorso del campo dello schema in cui verrà aggiunta la nuova risorsa. Quando si aggiungono mixin agli schemi, il valore deve essere &quot;/allOf/-&quot;. |
 | `value.$ref` | Il `$id` valore del mixin da aggiungere. |
 
@@ -336,7 +336,7 @@ Una risposta corretta restituisce i dettagli dello schema aggiornato, che ora in
 
 Ai campi dello schema deve essere applicato un descrittore di identità di riferimento se questi vengono utilizzati come riferimento da altri schemi in una relazione. Poiché il `favoriteHotel` campo in &quot;[!DNL Loyalty Members]&quot; farà riferimento al `email` campo in &quot;[!DNL Hotels]&quot;, `email` deve essere fornito un descrittore di identità di riferimento.
 
-Create un descrittore di riferimento per lo schema di destinazione effettuando una richiesta POST all&#39; `/tenant/descriptors` endpoint.
+Create un descrittore di riferimento per lo schema di destinazione effettuando una richiesta di POST all&#39; `/tenant/descriptors` endpoint.
 
 **Formato API**
 
@@ -391,7 +391,7 @@ Una risposta corretta restituisce i dettagli del descrittore di riferimento appe
 
 ## Creare un descrittore di relazione {#create-descriptor}
 
-I descrittori delle relazioni stabiliscono una relazione uno-a-uno tra uno schema di origine e uno schema di destinazione. Una volta definito un descrittore di riferimento per lo schema di destinazione, potete creare un nuovo descrittore di relazione effettuando una richiesta POST all&#39; `/tenant/descriptors` endpoint.
+I descrittori delle relazioni stabiliscono una relazione uno-a-uno tra uno schema di origine e uno schema di destinazione. Una volta definito un descrittore di riferimento per lo schema di destinazione, è possibile creare un nuovo descrittore di relazione effettuando una richiesta di POST all&#39; `/tenant/descriptors` endpoint.
 
 **Formato API**
 
