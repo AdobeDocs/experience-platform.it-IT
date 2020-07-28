@@ -59,7 +59,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 ## Esplora l&#39;archiviazione cloud
 
-Utilizzando la connessione di base per l&#39;archiviazione cloud, potete esplorare file e directory eseguendo richieste GET. Quando si eseguono richieste GET per esplorare l&#39;archiviazione cloud, è necessario includere i parametri di query elencati nella tabella seguente:
+Utilizzando la connessione di base per l&#39;archiviazione cloud, potete esplorare file e directory eseguendo richieste di GET. Quando si eseguono richieste di GET per esplorare l&#39;archiviazione cloud, è necessario includere i parametri di query elencati nella tabella seguente:
 
 | Parametro | Descrizione |
 | --------- | ----------- |
@@ -110,9 +110,9 @@ Una risposta corretta restituisce un array di file e cartelle presenti nella dir
 ]
 ```
 
-## Esaminare la struttura di un file
+##  Inspect la struttura di un file
 
-Per esaminare la struttura del file di dati dall&#39;archivio cloud, eseguite una richiesta GET fornendo il percorso del file come parametro di query.
+Per esaminare la struttura del file di dati dall&#39;archivio cloud, esegui una richiesta di GET fornendo il percorso del file come parametro di query.
 
 **Formato API**
 
