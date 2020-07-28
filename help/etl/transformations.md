@@ -20,7 +20,7 @@ Questo articolo illustra le seguenti trasformazioni che uno sviluppatore di estr
 
 ### File di esempio
 
-I file CSV e JSON di esempio sono disponibili dal [!DNL GitHub] repo pubblico di riferimento ETL gestito da Adobe:
+I file CSV e JSON di esempio sono disponibili dal [!DNL GitHub] repo pubblico di riferimento ETL gestito dal Adobe :
 
 - [CRM_profile.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profile.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
