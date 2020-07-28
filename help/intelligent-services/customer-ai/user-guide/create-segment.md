@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;insights; customer ai;popular topics
 solution: Experience Platform
-title: Create customer segments with predicted scores
+title: Creazione di segmenti di clienti con punteggi previsti
 topic: Create a segment
 translation-type: tm+mt
 source-git-commit: fba6ae701a38737812dccbf4f63e5a07f935ad8b
