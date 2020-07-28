@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: ' campo di mappatura Audience Manager'
+title: 'Campo di mappatura Audience Manager '
 topic: overview
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
