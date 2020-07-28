@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Servizio query nel blocco appunti Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
 workflow-type: tm+mt
 source-wordcount: '750'
 ht-degree: 1%
@@ -38,13 +38,13 @@ Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prer
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-   > [!NOTE] Se non viene visualizzata automaticamente una nuova scheda Avvio, apri una nuova scheda Avvio facendo clic su **[!UICONTROL File]** e seleziona **[!UICONTROL New Launcher]**.
+   >[!NOTE] Se non viene visualizzata automaticamente una nuova scheda Avvio, apri una nuova scheda Avvio facendo clic su **[!UICONTROL File]** e seleziona **[!UICONTROL New Launcher]**.
 
 2. Nella scheda Launcher, fare clic sull&#39; **[!UICONTROL Blank]** icona in un ambiente Python 3 per aprire un blocco appunti vuoto.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
-   > [!NOTE] Python 3 è attualmente l&#39;unico ambiente supportato per il servizio query nei notebook.
+   >[!NOTE] Python 3 è attualmente l&#39;unico ambiente supportato per il servizio query nei notebook.
 
 3. Nella barra di selezione a sinistra, fate clic sull&#39; **[!UICONTROL Data]** icona e fate doppio clic sulla **[!UICONTROL Datasets]** directory per elencare tutti i set di dati.
 
@@ -85,6 +85,7 @@ Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prer
    - `target_year` : Anno specifico da cui provengono i dati obiettivo.
    - `target_month` : Mese specifico da cui proviene il target.
    - `target_day` : Giorno specifico da cui provengono i dati di destinazione.
+
    >[!NOTE] Potete modificare questi valori in qualsiasi momento. In questo modo, accertatevi di eseguire la cella delle variabili per le modifiche da applicare.
 
 ## Query dei dati {#query-your-data}
