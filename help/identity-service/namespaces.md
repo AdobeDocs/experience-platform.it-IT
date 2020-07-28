@@ -52,7 +52,7 @@ I seguenti tipi di identità sono disponibili all&#39;interno [!DNL Platform]:
 
  Adobe Experience Platform fornisce diversi spazi dei nomi di identità disponibili per tutte le organizzazioni. Questi sono noti come spazi dei nomi standard e sono visibili tramite l&#39; [!DNL Identity Service] API o l&#39; [!DNL Platform] interfaccia utente.
 
-Per visualizzare gli spazi dei nomi standard nell&#39;interfaccia utente, fate clic **[!UICONTROL Identities]** nella barra a sinistra, quindi fate clic sulla *[!UICONTROL Browse]* scheda. Verranno visualizzati tutti gli spazi dei nomi di identità accessibili alla vostra organizzazione, ma quelli con &quot;[!UICONTROL Standard]&quot; come &quot;[!UICONTROL Owner]&quot; sono gli spazi dei nomi standard forniti da Adobe.
+Per visualizzare gli spazi dei nomi standard nell&#39;interfaccia utente, fate clic **[!UICONTROL Identities]** nella barra a sinistra, quindi fate clic sulla *[!UICONTROL Browse]* scheda. Vengono visualizzati tutti gli spazi dei nomi di identità accessibili alla vostra organizzazione, ma quelli con &quot;[!UICONTROL Standard]&quot; come &quot;[!UICONTROL Owner]&quot; sono gli spazi dei nomi standard forniti dal Adobe .
 
 Potete quindi fare clic su uno dei namespace elencati per visualizzare i dettagli.
 
