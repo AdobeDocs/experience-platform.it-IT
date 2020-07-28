@@ -1,8 +1,8 @@
 ---
 title: Prodotti
 seo-title: Supporto di prodotti con  Adobe Experience Platform Web SDK
-description: Scoprite come aggiungere dati in caso di prodotti o di un carrello con  Experience Platform Web SDK
-seo-description: Scoprite come aggiungere dati in caso di prodotti o di un carrello con  Experience Platform Web SDK
+description: Scoprite come aggiungere dati se avete prodotti o un carrello con  Experience Platform Web SDK
+seo-description: Scoprite come aggiungere dati se avete prodotti o un carrello con  Experience Platform Web SDK
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
@@ -14,14 +14,14 @@ ht-degree: 4%
 
 # Prodotti
 
-Se sul sito sono presenti prodotti, si tratta di un insieme predefinito di elementi che potreste desiderare inviare per abilitare il maggior numero di funzionalità da Adobe. Anche se questo è un suggerimento, fornisce una serie molto forte di dati fin dall&#39;inizio.
+Se sul sito sono presenti prodotti, si tratta di un insieme predefinito di elementi che potreste desiderare inviare per abilitare il maggior numero di funzionalità da  Adobe. Anche se questo è un suggerimento, fornisce una serie molto forte di dati fin dall&#39;inizio.
 
 In questo documento viene utilizzato il mixin [ExperienceEvent Commerce Details](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) . La `commerce` miscelazione è suddivisa in due parti: l&#39; `commerce` oggetto e l&#39; `productListItems` array. L&#39; `commerce` oggetto consente di indicare quali azioni vengono eseguite sull&#39; `productListItems` array.
 
 >[!Tip]
 >
 >
->Se avete familiarità con Adobe  Analytics, la variabile `commerce` è maggiormente correlata alla `events` variabile. La variabile `productListItems` è più strettamente correlata alla `products` variabile.
+>Se avete familiarità con  Adobe Analytics, The `commerce` è più correlato alla `events` variabile. La variabile `productListItems` è più strettamente correlata alla `products` variabile.
 
 ## Azioni relative ai prodotti
 
