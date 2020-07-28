@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Assegna dati a [!DNL Experience Platform]
 
- Adobe Experience Platform riunisce i dati provenienti da più origini per aiutare gli addetti al marketing a comprendere meglio il comportamento dei loro clienti. Adobe [!DNL Experience Platform Data Ingestion] rappresenta i diversi metodi mediante i quali [!DNL Platform] vengono acquisiti i dati da tali origini, nonché il modo in cui tali dati vengono memorizzati all&#39;interno del Data Lake per l&#39;utilizzo da parte di Data Lake [!DNL Platform services]. [!DNL Data Ingestion] include l’assimilazione batch, l’assimilazione in streaming e l’assimilazione mediante connettori sorgente. Per saperne di più, leggi la panoramica [sull&#39;inserimento dei](../ingestion/home.md) dati o procedi direttamente alla documentazione [](../sources/home.md)Origini.
+ Adobe Experience Platform riunisce i dati provenienti da più origini per aiutare gli addetti al marketing a comprendere meglio il comportamento dei loro clienti.  Adobe [!DNL Experience Platform Data Ingestion] rappresenta i diversi metodi mediante i quali [!DNL Platform] vengono acquisiti i dati da tali origini, nonché il modo in cui tali dati vengono memorizzati all&#39;interno del Data Lake per essere utilizzati da Data Lake [!DNL Platform services]. [!DNL Data Ingestion] include l’assimilazione batch, l’assimilazione in streaming e l’assimilazione mediante connettori sorgente. Per saperne di più, leggi la panoramica [sull&#39;inserimento dei](../ingestion/home.md) dati o procedi direttamente alla documentazione [](../sources/home.md)Origini.
 
 ## Creare un connettore sorgente nell’interfaccia utente e nell’API
 
@@ -22,7 +22,7 @@ I connettori di origine consentono di acquisire dati da più sorgenti, dove poss
 
 ## Assegna dati batch
 
- Adobe Experience Platform consente di importare facilmente i dati in [!DNL Platform] file batch. Esempi di dati da assimilare possono includere dati di profilo da un file semplice in un sistema CRM (ad esempio un file parquet) o dati conformi a uno schema [!DNL Experience Data Model] (XDM) noto nel Registro di sistema dello schema. Per iniziare, visita l’esercitazione [Platform dedicata ai dati](../ingestion/tutorials/ingest-batch-data.md)di assimilazione.
+ Adobe Experience Platform consente di importare facilmente i dati in [!DNL Platform] file batch. Esempi di dati da assimilare possono includere dati di profilo da un file semplice in un sistema CRM (ad esempio un file parquet) o dati conformi a uno schema [!DNL Experience Data Model] (XDM) noto nel Registro di sistema dello schema. Per iniziare, visita l’esercitazione [](../ingestion/tutorials/ingest-batch-data.md)di assimilazione dei dati in Platform.
 
 ## Mappare un file CSV su uno schema XDM
 
