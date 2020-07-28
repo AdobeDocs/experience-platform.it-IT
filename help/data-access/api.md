@@ -16,7 +16,7 @@ ht-degree: 4%
 
 L&#39;API Data Access supporta  Adobe Experience Platform fornendo agli utenti un&#39;interfaccia RESTful incentrata sulla scoperta e l&#39;accessibilità dei set di dati acquisiti all&#39;interno [!DNL Experience Platform].
 
-![Accesso ai dati su  Experience Platform](images/Data_Access_Experience_Platform.png)
+![Accesso ai dati  Experience Platform](images/Data_Access_Experience_Platform.png)
 
 ## Riferimento della specifica API
 
@@ -242,4 +242,4 @@ Per ulteriori esempi, fare riferimento all&#39;esercitazione sull&#39;accesso ai
 
 ## Iscrizione agli eventi di assimilazione dei dati
 
-[!DNL Platform] rende disponibili per l&#39;iscrizione eventi specifici di alto valore tramite [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Ad esempio, puoi abbonarti agli eventi di inserimento dei dati per ricevere una notifica di potenziali ritardi e guasti. Per ulteriori informazioni, consulta l’esercitazione sulla [sottoscrizione alle notifiche](../ingestion/quality/subscribe-events.md) di assimilazione dei dati.
+[!DNL Platform] rende disponibili per l&#39;iscrizione specifici eventi di alto valore tramite la [Developer Console](https://www.adobe.com/go/devs_console_ui). Ad esempio, puoi abbonarti agli eventi di inserimento dei dati per ricevere una notifica di potenziali ritardi e guasti. Per ulteriori informazioni, consulta l’esercitazione sulla [sottoscrizione alle notifiche](../ingestion/quality/subscribe-events.md) di assimilazione dei dati.
