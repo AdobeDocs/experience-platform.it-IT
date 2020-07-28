@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Creare una sandbox
 
-Potete creare una nuova sandbox effettuando una richiesta POST all’ `/sandboxes` endpoint.
+Potete creare una nuova sandbox effettuando una richiesta di POST all’ `/sandboxes` endpoint.
 
 **Formato API**
 
