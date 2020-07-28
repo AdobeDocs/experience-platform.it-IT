@@ -20,7 +20,7 @@ Ora che hai compreso quali intestazioni utilizzare, sei pronto a iniziare a effe
 
 ### Richiedi parametri di connessione per il servizio interattivo
 
-Potete recuperare i parametri di connessione per l&#39;utilizzo del servizio [](../creating-queries/writing-queries.md) interattivo effettuando una richiesta GET all&#39; `/connection_parameters` endpoint. Per ulteriori informazioni sui client che utilizzano i parametri di connessione per connettersi tramite il servizio interattivo, consultare la documentazione sui client [](../clients/overview.md)Query Service.
+È possibile recuperare i parametri di connessione per l&#39;utilizzo del servizio [](../creating-queries/writing-queries.md) interattivo effettuando una richiesta di GET all&#39; `/connection_parameters` endpoint. Per ulteriori informazioni sui client che utilizzano i parametri di connessione per connettersi tramite il servizio interattivo, consultare la documentazione sui client [](../clients/overview.md)Query Service.
 
 **Formato API**
 
