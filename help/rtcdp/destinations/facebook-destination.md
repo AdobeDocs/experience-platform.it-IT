@@ -22,13 +22,13 @@ Attiva profili per le tue [!DNL Facebook] campagne di targeting dell&#39;audienc
 
 ## Casi d’uso
 
-Per comprendere meglio come e quando utilizzare la [!DNL Facebook] destinazione, ecco due esempi di casi di utilizzo che i clienti Platform Adobe Real-time Customer Data possono risolvere utilizzando questa funzione.
+Per aiutarti a capire meglio come e quando devi utilizzare la [!DNL Facebook] destinazione, ecco due esempi di casi d&#39;uso che  clienti Platform di dati cliente in tempo reale Adobe possono risolvere utilizzando questa funzione.
 
 
 ### Caso di utilizzo n. 1
 
 
-Un rivenditore online vuole raggiungere i clienti esistenti tramite piattaforme social e mostrare loro offerte personalizzate in base ai loro ordini precedenti. Il rivenditore online può inserire indirizzi e-mail da CRM ad Adobe Real-time CDP, creare segmenti dai propri dati offline e inviare questi segmenti alla piattaforma [!DNL Facebook] social, ottimizzando le spese pubblicitarie.
+Un rivenditore online vuole raggiungere i clienti esistenti tramite piattaforme social e mostrare loro offerte personalizzate in base ai loro ordini precedenti. Il rivenditore online può acquisire indirizzi e-mail da CRM a  CDP in tempo reale, creare segmenti dai propri dati offline e inviare questi segmenti alla piattaforma [!DNL Facebook] social, ottimizzando le spese pubblicitarie.
 
 
 ### Caso di utilizzo n. 2
@@ -36,7 +36,7 @@ Un rivenditore online vuole raggiungere i clienti esistenti tramite piattaforme 
 
 Una compagnia aerea ha diversi livelli di clienti (Bronzo, Argento e Oro) e vuole fornire a ciascuno dei livelli offerte personalizzate tramite piattaforme social. Tuttavia, non tutti i clienti utilizzano l&#39;app mobile della compagnia aerea e alcuni di essi non hanno effettuato l&#39;accesso al sito Web della società. Gli unici identificatori della società per questi clienti sono gli ID iscrizione e gli indirizzi e-mail.
 
-Per utilizzarli tra i social media, possono tenere a bordo i dati del cliente dal CRM in Adobe Real-time CDP, utilizzando gli indirizzi e-mail come identificatori.
+Per utilizzarli nei social media, possono tenere a bordo i dati del cliente dal CRM al CDP in tempo reale  Adobe, utilizzando gli indirizzi e-mail come identificatori.
 
 In seguito, possono utilizzare i dati offline, inclusi gli ID di appartenenza associati e i livelli cliente, per creare nuovi segmenti di pubblico ai quali indirizzare attraverso la [!DNL Facebook] destinazione.
 
@@ -64,7 +64,7 @@ Prima di inviare i segmenti di pubblico a [!DNL Facebook], accertati di soddisfa
 
 ### Requisiti di hashing e-mail {#email-hashing-requirements}
 
-[!DNL Facebook] richiede che non siano inviate informazioni personali (PII) in modo chiaro. Di conseguenza, i tipi di pubblico a cui si [!DNL Facebook] è attivato devono essere cancellati dagli indirizzi e-mail *con hash* . Potete scegliere di hash gli indirizzi e-mail prima di inserirli in  Adobe Experience Platform, oppure potete scegliere di lavorare con gli indirizzi e-mail in modo chiaro in  Experience Platform e ottenere il nostro algoritmo hash al momento dell&#39;attivazione.
+[!DNL Facebook] richiede che non siano inviate informazioni personali (PII) in modo chiaro. Di conseguenza, i tipi di pubblico a cui si [!DNL Facebook] è attivato devono essere cancellati dagli indirizzi e-mail *con hash* . Potete scegliere di hash gli indirizzi e-mail prima di inserirli in  Adobe Experience Platform, oppure potete scegliere di lavorare con gli indirizzi e-mail in modo chiaro in  Experience Platform e avere il nostro algoritmo hash al momento dell&#39;attivazione.
 
 Per informazioni sull’assimilazione degli indirizzi e-mail in  Experience Platform, consultate la panoramica [sull’assimilazione](/help/ingestion/batch-ingestion/overview.md) batch e la panoramica [sull’assimilazione](/help/ingestion/streaming-ingestion/overview.md)accattivante.
 
@@ -80,7 +80,7 @@ Se selezionate l’hash degli indirizzi e-mail, accertatevi di soddisfare i segu
 
 >[!IMPORTANT]
 >
->Se si sceglie di non utilizzare l’hash degli indirizzi e-mail, Adobe Real-time CDP lo farà automaticamente quando si attivano i segmenti in [!DNL Facebook]. Nel flusso di lavoro [di](/help/rtcdp/destinations/activate-destinations.md#activate-data) attivazione (vedere il punto 5), selezionate l’ `Email` opzione come mostrato di seguito per gli indirizzi *e-mail* non elaborati e `Email_LC_SHA256` per gli indirizzi e-mail *con* hash.
+>Se si sceglie di non utilizzare l&#39;hash degli indirizzi e-mail,  CDP in tempo reale Adobe lo farà automaticamente quando si attivano i segmenti in [!DNL Facebook]. Nel flusso di lavoro [di](/help/rtcdp/destinations/activate-destinations.md#activate-data) attivazione (vedere il punto 5), selezionate l’ `Email` opzione come mostrato di seguito per gli indirizzi *e-mail* non elaborati e `Email_LC_SHA256` per gli indirizzi e-mail *con* hash.
 
 
 ![Hashing all&#39;attivazione](/help/rtcdp/destinations/assets/identity-mapping.png)
