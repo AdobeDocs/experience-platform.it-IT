@@ -54,7 +54,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 ## Procedure ottimali per le chiamate [!DNL Catalog] API
 
-Quando si eseguono richieste GET all&#39; [!DNL Catalog] API, è consigliabile includere parametri di query nelle richieste, in modo da restituire solo gli oggetti e le proprietà necessari. Le richieste non filtrate possono portare i payload di risposta a oltre 3 GB di dimensione, il che può rallentare le prestazioni complessive.
+Quando si eseguono richieste di GET all&#39; [!DNL Catalog] API, è consigliabile includere nelle richieste i parametri di query per restituire solo gli oggetti e le proprietà necessari. Le richieste non filtrate possono portare i payload di risposta a oltre 3 GB di dimensione, il che può rallentare le prestazioni complessive.
 
 È possibile visualizzare oggetti specifici includendo il relativo ID nel percorso della richiesta o utilizzare parametri di query quali `properties` e `limit` per filtrare le risposte. I filtri possono essere passati come intestazioni e come parametri di query, con quelli passati come parametri di query che hanno la precedenza. Per ulteriori informazioni, consulta il documento sul [filtro dei dati](filter-data.md) del catalogo.
 
