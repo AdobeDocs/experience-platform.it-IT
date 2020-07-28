@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Adobe Experience Platform [!DNL Segmentation Service] overview
 
- Adobe Experience Platform [!DNL Segmentation Service] fornisce un&#39;interfaccia utente e RESTful API che consente di creare segmenti e generare audience dai [!DNL Real-time Customer Profile] dati. Questi segmenti sono configurati e mantenuti a livello centrale [!DNL Platform]e sono facilmente accessibili da qualsiasi soluzione Adobe.
+ Adobe Experience Platform [!DNL Segmentation Service] fornisce un&#39;interfaccia utente e RESTful API che consente di creare segmenti e generare audience dai [!DNL Real-time Customer Profile] dati. Questi segmenti sono configurati e mantenuti a livello centrale [!DNL Platform]e sono facilmente accessibili da qualsiasi soluzione  Adobe.
 
 Questo documento fornisce una panoramica [!DNL Segmentation Service] e il ruolo che svolge  Adobe Experience Platform.
 
@@ -36,7 +36,7 @@ Una volta che un segmento è stato concettualmente definito, è integrato [!DNL 
 
 Sia che vengano creati mediante l&#39;API o mediante l&#39; [!DNL Segment Builder], i segmenti vengono definiti in ultima analisi utilizzando [!DNL Profile Query Language] (PQL). Qui la definizione del segmento concettuale viene descritta nel linguaggio creato per recuperare i profili che soddisfano i criteri. Per ulteriori informazioni, consultate la panoramica [PQL](./pql/overview.md).
 
-Per informazioni su come creare e utilizzare i segmenti in [!DNL Segment Builder] (l’implementazione dell’interfaccia utente di [!DNL Segmentation Service]), consulta la guida [di](./ui/overview.md)Generatore di segmenti.
+Per informazioni su come creare e utilizzare i segmenti in [!DNL Segment Builder] (l’implementazione dell’interfaccia utente di [!DNL Segmentation Service]), consulta la guida [di](./ui/overview.md)Segment Builder (Generatore di segmenti).
 
 Per informazioni sulla creazione di definizioni di segmenti tramite l&#39;API, consulta l&#39;esercitazione sulla [creazione di segmenti di pubblico tramite l&#39;API](./tutorials/create-a-segment.md).
 
