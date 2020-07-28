@@ -20,11 +20,11 @@ Tutte le identità inviate [!DNL Privacy Service] devono essere fornite in uno s
 
 Nella tabella seguente sono riportati diversi tipi di identità predefiniti di uso comune resi disponibili da [!DNL Experience Platform], con i relativi `namespace` valori associati:
 
-| Tipo di identità | `namespace` | `namespaceId` |
+| Identity type | `namespace` | `namespaceId` |
 | --- | --- | --- |
 | E-mail | E-mail | 6 |
 | Telefono | Telefono | 7 |
-| Adobe  Advertising Cloud ID | AdCloud | 411 |
+| ID Adobe Advertising Cloud | AdCloud | 411 |
 |  UUID Adobe Audience Manager | CORE | 0 |
 | Adobe Experience Cloud ID | ECID | 4 |
 | ID Adobe Target  | TNTID | 9 |
@@ -36,7 +36,7 @@ Nella tabella seguente sono riportati diversi tipi di identità predefiniti di u
 >
 >Ogni tipo di identità ha anche un valore `namespaceId` intero, che può essere utilizzato al posto della `namespace` stringa quando si imposta la `type` proprietà dell&#39;identità su &quot;namespaceId&quot;. Per ulteriori informazioni, vedere la sezione sui qualificatori [dello](#namespace-qualifiers) spazio nomi.
 
-Potete recuperare un elenco di spazi dei nomi di identità utilizzati dalla vostra organizzazione effettuando una richiesta GET all&#39; `idnamespace/identities` endpoint nell&#39; [!DNL Identity Service] API. Per ulteriori informazioni, consulta la guida [per gli sviluppatori del servizio](../../identity-service/api/getting-started.md) identità.
+Potete recuperare un elenco dei namespace di identità utilizzati dalla vostra organizzazione effettuando una richiesta di GET all&#39; `idnamespace/identities` endpoint nell&#39; [!DNL Identity Service] API. Per ulteriori informazioni, consulta la guida [per gli sviluppatori del servizio](../../identity-service/api/getting-started.md) identità.
 
 ## Qualificatori dello spazio dei nomi
 
@@ -54,16 +54,16 @@ Quando si specifica un `namespace` valore nell&#39; [!DNL Privacy Service] API, 
 
 ## Valori di prodotto accettati
 
-Nella tabella seguente sono riportati i valori accettati per specificare un prodotto Adobe nell’ `include` attributo di una richiesta di creazione di processi.
+Nella tabella seguente sono riportati i valori accettati per specificare un prodotto  Adobe nell’ `include` attributo di una richiesta di creazione di un processo.
 
 | Prodotto | Valore da utilizzare nell&#39; `include` attributo |
 --- | ---
-| Adobe  Advertising Cloud | &quot;AdCloud&quot; |
+| Adobe Advertising Cloud | &quot;AdCloud&quot; |
 | Adobe Analytics | &quot;Analytics&quot; |
 | Adobe Audience Manager | &quot;AudienceManager&quot; |
 | Adobe Campaign | &quot;Campaign&quot; |
 | Adobe Experience Platform | &quot;aepDataLake&quot; |
-| Autenticazione Adobe Primetime | &quot;primetimeAuthentication&quot; |
+| Autenticazione  Adobe Primetime | &quot;primetimeAuthentication&quot; |
 | Adobe Target | &quot;Target&quot; |
 | Servizio Record cliente | &quot;CRS&quot; |
 | Profilo del cliente in tempo reale | &quot;ProfileService&quot; |
