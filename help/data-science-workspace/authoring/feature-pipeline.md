@@ -39,7 +39,7 @@ Per eseguire una ricetta in qualsiasi organizzazione, è necessario quanto segue
 - Uno schema trasformato e un set di dati vuoto basato su tale schema.
 - Uno schema di output e un dataset vuoto basato su tale schema.
 
-Tutti i set di dati di cui sopra devono essere caricati nell&#39; [!DNL Platform] interfaccia utente. Per configurare questa impostazione, utilizzate lo script [](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap)di avvio fornito da Adobe.
+Tutti i set di dati di cui sopra devono essere caricati nell&#39; [!DNL Platform] interfaccia utente. Per configurare questa impostazione, utilizzate lo script [](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap)di avvio fornito dal Adobe .
 
 ## Classi di pipeline delle funzioni
 
@@ -61,7 +61,7 @@ Il seguente diagramma di flusso mostra l&#39;ordine di esecuzione del runtime:
 
 ## Implementare le classi di Feature Pipeline {#implement-your-feature-pipeline-classes}
 
-Le sezioni seguenti forniscono dettagli ed esempi sull&#39;implementazione delle classi necessarie per una tubazione di feature.
+Le sezioni seguenti forniscono dettagli ed esempi sull&#39;implementazione delle classi richieste per una tubazione di feature.
 
 ### Definire le variabili nel file JSON di configurazione {#define-variables-in-the-configuration-json-file}
 
@@ -402,7 +402,7 @@ Una volta ottenuta la posizione dell&#39;immagine Docker, potete [creare un moto
 
 ### Creare un&#39;istanza MLI {#create-mlinstance}
 
-Utilizzando la nuova versione `engineID`creata, è necessario [creare un MLIposition](../api/mlinstances.md#create-an-mlinstance) effettuando una richiesta POST all’ `/mlInstance` endpoint. Una risposta corretta restituisce un payload contenente i dettagli dell’istanza MLI appena creata, incluso il relativo identificatore univoco (`id`) utilizzato nella chiamata API successiva.
+Con la nuova creazione `engineID`, è necessario [creare un MLIposition](../api/mlinstances.md#create-an-mlinstance) effettuando una richiesta di POST all’ `/mlInstance` endpoint. Una risposta corretta restituisce un payload contenente i dettagli dell’istanza MLI appena creata, incluso il relativo identificatore univoco (`id`) utilizzato nella chiamata API successiva.
 
 ### Creare un esperimento {#create-experiment}
 
@@ -410,15 +410,15 @@ Quindi, dovete [creare un esperimento](../api/experiments.md#create-an-experimen
 
 ### Specificare l&#39;attività di pipeline della funzione di esecuzione degli esperimenti {#specify-feature-pipeline-task}
 
-Dopo aver creato un esperimento, dovete modificare la modalità dell&#39;esperimento in `featurePipeline`. Per modificare la modalità, create un POST aggiuntivo [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) con il vostro `EXPERIMENT_ID` e nel corpo inviare `{ "mode":"featurePipeline"}` per specificare una tubazione di feature Esperimento in esecuzione.
+Dopo aver creato un esperimento, dovete modificare la modalità dell&#39;esperimento in `featurePipeline`. Per modificare la modalità, impostare un POST aggiuntivo [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) con il vostro `EXPERIMENT_ID` e nel corpo inviarlo `{ "mode":"featurePipeline"}` per specificare una tubazione di feature Esperimento in esecuzione.
 
-Al termine, fate una richiesta GET per `/experiments/{EXPERIMENT_ID}` recuperare lo stato [](../api/experiments.md#retrieve-specific) dell&#39;esperimento e attendere che lo stato dell&#39;esperimento venga aggiornato per essere completato.
+Al termine, fate una richiesta di GET per `/experiments/{EXPERIMENT_ID}` recuperare lo stato [](../api/experiments.md#retrieve-specific) dell&#39;esperimento e attendere che lo stato dell&#39;esperimento venga aggiornato per essere completato.
 
 ### Specificare l&#39;attività di formazione di esecuzione degli esperimenti {#training}
 
-Successivamente, è necessario [specificare l’attività](../api/experiments.md#experiment-training-scoring)di esecuzione della formazione. Impostate una modalità POST su `experiments/{EXPERIMENT_ID}/runs` e nel corpo impostando `train` e inviando una serie di attività che contengono i parametri di formazione. Una risposta corretta restituisce un payload contenente i dettagli dell’esperimento richiesto.
+Successivamente, è necessario [specificare l’attività](../api/experiments.md#experiment-training-scoring)di esecuzione della formazione. Impostate un POST su `experiments/{EXPERIMENT_ID}/runs` e nel corpo impostando la modalità su `train` e inviando una serie di attività che contengono i parametri di formazione. Una risposta corretta restituisce un payload contenente i dettagli dell’esperimento richiesto.
 
-Al termine, fate una richiesta GET per `/experiments/{EXPERIMENT_ID}` recuperare lo stato [](../api/experiments.md#retrieve-specific) dell&#39;esperimento e attendere che lo stato dell&#39;esperimento venga aggiornato per essere completato.
+Al termine, fate una richiesta di GET per `/experiments/{EXPERIMENT_ID}` recuperare lo stato [](../api/experiments.md#retrieve-specific) dell&#39;esperimento e attendere che lo stato dell&#39;esperimento venga aggiornato per essere completato.
 
 ### Specificare l&#39;attività di punteggio dell&#39;esecuzione degli esperimenti {#scoring}
 
@@ -427,7 +427,7 @@ Al termine, fate una richiesta GET per `/experiments/{EXPERIMENT_ID}` recuperare
 
 Dopo un&#39;esecuzione di formazione riuscita, è necessario [specificare l&#39;attività](../api/experiments.md#experiment-training-scoring)di esecuzione del punteggio. Impostate un POST su `experiments/{EXPERIMENT_ID}/runs` e nel corpo impostate l’ `mode` attributo su &quot;score&quot;. Viene avviata l&#39;esecuzione del punteggio dell&#39;esperimento.
 
-Al termine, fate una richiesta GET per `/experiments/{EXPERIMENT_ID}` recuperare lo stato [](../api/experiments.md#retrieve-specific) dell&#39;esperimento e attendere che lo stato dell&#39;esperimento venga aggiornato per essere completato.
+Al termine, fate una richiesta di GET per `/experiments/{EXPERIMENT_ID}` recuperare lo stato [](../api/experiments.md#retrieve-specific) dell&#39;esperimento e attendere che lo stato dell&#39;esperimento venga aggiornato per essere completato.
 
 Una volta completato il punteggio, la pipeline delle caratteristiche deve essere operativa.
 
