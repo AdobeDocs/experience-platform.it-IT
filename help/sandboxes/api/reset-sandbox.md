@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # Reimpostare una sandbox
 
-Le sandbox di sviluppo dispongono di una funzione di &quot;reimpostazione della fabbrica&quot; che elimina tutte le risorse non predefinite da una sandbox. Potete ripristinare una sandbox effettuando una richiesta PUT che include la sandbox `name` nel percorso della richiesta.
+Le sandbox di sviluppo dispongono di una funzione di &quot;reimpostazione della fabbrica&quot; che elimina tutte le risorse non predefinite da una sandbox. Potete ripristinare una sandbox effettuando una richiesta di PUT che include la sandbox `name` nel percorso della richiesta.
 
 **Formato API**
 
