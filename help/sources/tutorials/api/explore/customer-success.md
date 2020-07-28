@@ -56,7 +56,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 ## Esplora le tabelle di dati
 
-Utilizzando la connessione di base per il sistema CS, potete esplorare le tabelle di dati eseguendo richieste GET. Utilizzate la seguente chiamata per trovare il percorso della tabella in cui desiderate ispezionare o assimilare [!DNL Platform].
+Utilizzando la connessione di base per il sistema CS, potete esplorare le tabelle di dati eseguendo le richieste di GET. Utilizzate la seguente chiamata per trovare il percorso della tabella in cui desiderate ispezionare o assimilare [!DNL Platform].
 
 **Formato API**
 
@@ -116,9 +116,9 @@ Una risposta corretta restituisce un array di tabelle dal sistema CS. Trovare la
 ]
 ```
 
-## Analisi della struttura di una tabella
+##  Inspect la struttura di una tabella
 
-Per esaminare la struttura di una tabella dal sistema CS, eseguite una richiesta GET specificando il percorso di una tabella come parametro di query.
+Per esaminare la struttura di una tabella dal sistema CS, eseguire una richiesta di GET specificando il percorso di una tabella come parametro di query.
 
 **Formato API**
 
