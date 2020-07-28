@@ -53,7 +53,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 ## Esplora le tabelle di dati
 
-Utilizzando l&#39;ID connessione per il sistema di pagamento, è possibile esplorare le tabelle di dati eseguendo richieste GET. Utilizzate la seguente chiamata per trovare il percorso della tabella in cui desiderate ispezionare o assimilare [!DNL Platform].
+Utilizzando l&#39;ID connessione per il sistema di pagamento, è possibile esplorare le tabelle di dati eseguendo le richieste di GET. Utilizzate la seguente chiamata per trovare il percorso della tabella in cui desiderate ispezionare o assimilare [!DNL Platform].
 
 **Formato API**
 
@@ -113,9 +113,9 @@ Una risposta corretta restituisce un array di tabelle dal sistema di pagamento. 
 ]
 ```
 
-## Analisi della struttura di una tabella
+##  Inspect la struttura di una tabella
 
-Per esaminare la struttura di una tabella dal sistema dei pagamenti, eseguire una richiesta GET specificando il percorso di una tabella come parametro di query.
+Per esaminare la struttura di una tabella dal sistema dei pagamenti, eseguire una richiesta di GET specificando il percorso di una tabella come parametro di query.
 
 **Formato API**
 
