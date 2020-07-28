@@ -20,7 +20,7 @@ Ora che hai compreso quali intestazioni utilizzare, sei pronto a iniziare a effe
 
 ### Recupera un elenco di tutte le esecuzioni per una query pianificata specificata
 
-È possibile recuperare un elenco di tutte le esecuzioni per una specifica query pianificata, indipendentemente dal fatto che siano in esecuzione o già completate. Questa operazione viene eseguita eseguendo una richiesta GET all&#39; `/schedules/{SCHEDULE_ID}/runs` endpoint, dove `{SCHEDULE_ID}` è il `id` valore della query pianificata di cui si desidera recuperare le esecuzioni.
+È possibile recuperare un elenco di tutte le esecuzioni per una specifica query pianificata, indipendentemente dal fatto che siano in esecuzione o già completate. Questa operazione viene eseguita eseguendo una richiesta di GET all&#39; `/schedules/{SCHEDULE_ID}/runs` endpoint, dove `{SCHEDULE_ID}` è il `id` valore della query pianificata di cui si desidera recuperare le esecuzioni.
 
 **Formato API**
 
@@ -153,7 +153,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di esecuzioni 
 
 ### Attivazione immediata di un&#39;esecuzione per una query pianificata specifica
 
-È possibile attivare immediatamente un&#39;esecuzione per una query pianificata specificata eseguendo una richiesta POST all&#39; `/schedules/{SCHEDULE_ID}/runs` endpoint, dove `{SCHEDULE_ID}` è il `id` valore della query pianificata di cui si desidera attivare l&#39;esecuzione.
+È possibile attivare immediatamente un&#39;esecuzione per una query pianificata specificata eseguendo una richiesta di POST all&#39; `/schedules/{SCHEDULE_ID}/runs` endpoint, dove `{SCHEDULE_ID}` è il `id` valore della query pianificata di cui si desidera attivare l&#39;esecuzione.
 
 **Formato API**
 
@@ -184,7 +184,7 @@ Una risposta corretta restituisce lo stato HTTP 202 (Accettato) con il seguente 
 
 ### Recupero dei dettagli di un&#39;esecuzione per una query pianificata specifica
 
-È possibile recuperare i dettagli di un&#39;esecuzione per una query pianificata specifica, eseguendo una richiesta GET all&#39; `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` endpoint e fornendo sia l&#39;ID della query pianificata che l&#39;esecuzione nel percorso della richiesta.
+È possibile recuperare i dettagli di un&#39;esecuzione per una query pianificata specifica, eseguendo una richiesta di GET all&#39; `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` endpoint e fornendo sia l&#39;ID della query pianificata che l&#39;esecuzione nel percorso della richiesta.
 
 **Formato API**
 
@@ -245,7 +245,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli dell&#39;esec
 
 ### Interrompere immediatamente un&#39;esecuzione per una specifica query pianificata
 
-È possibile interrompere immediatamente un&#39;esecuzione per una specifica query pianificata effettuando una richiesta PATCH all&#39; `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` endpoint e fornendo sia l&#39;ID della query pianificata che l&#39;esecuzione nel percorso della richiesta.
+È possibile interrompere immediatamente un&#39;esecuzione per una specifica query pianificata effettuando una richiesta di PATCH all&#39; `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` endpoint e fornendo sia l&#39;ID della query pianificata che l&#39;esecuzione nel percorso della richiesta.
 
 **Formato API**
 
