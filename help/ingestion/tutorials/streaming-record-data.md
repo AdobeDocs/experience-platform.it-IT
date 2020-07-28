@@ -342,7 +342,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del nuovo str
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `{CONNECTION_ID}` | ID della connessione di streaming creata in precedenza. |
-| `xactionId` | Identificatore univoco generato sul lato server per il record appena inviato. Questo ID aiuta Adobe a tenere traccia del ciclo di vita di questo record attraverso diversi sistemi e con il debug. |
+| `xactionId` | Identificatore univoco generato sul lato server per il record appena inviato. Questo ID aiuta  Adobe a tracciare il ciclo di vita del record attraverso diversi sistemi e con il debug. |
 | `receivedTimeMs` | Una marca temporale (epoch in millisecondi) che mostra l’ora in cui è stata ricevuta la richiesta. |
 | `synchronousValidation.status` | Poiché il parametro query `synchronousValidation=true` è stato aggiunto, questo valore verrà visualizzato. Se la convalida ha esito positivo, lo stato sarà `pass`. |
 
@@ -370,7 +370,7 @@ GET /access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.c
 
 **Richiesta**
 
-Puoi esaminare i dati del record precedentemente acquisiti con la seguente richiesta GET.
+Puoi esaminare i dati del record precedentemente acquisiti con la seguente richiesta di GET.
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email'\
