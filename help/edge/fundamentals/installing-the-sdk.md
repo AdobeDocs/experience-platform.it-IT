@@ -1,8 +1,8 @@
 ---
 title: 'Installazione dell’SDK Web per il Adobe Experience Platform '
 seo-title: ' Adobe Experience Platform SDK Web per l''installazione dell''SDK'
-description: Scoprite come installare  Experience Platform Web SDK
-seo-description: Scoprite come installare  Experience Platform Web SDK
+description: 'Scopri come installare l’SDK Web per Experienci Platform '
+seo-description: 'Scopri come installare l’SDK Web per Experienci Platform '
 translation-type: tm+mt
 source-git-commit: c5afced244c661b0ec0bcf0109191a2dacf886aa
 workflow-type: tm+mt
