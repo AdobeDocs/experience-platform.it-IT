@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Creare una connessione di base di dati Experience Platform  utilizzando l'API del servizio di flusso
+title: Creazione di una connessione di base di Experienci Platform  tramite l'API del servizio di flusso
 topic: overview
 translation-type: tm+mt
 source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
@@ -28,7 +28,7 @@ Questa esercitazione richiede una conoscenza approfondita dei seguenti component
    * [Nozioni di base sulla composizione](../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
    * [Schema Guida](../../../xdm/api/getting-started.md)per lo sviluppatore del Registro di sistema: Include informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all&#39;API del Registro di sistema dello schema. Ciò include il vostro `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all’intestazione Accetta e ai suoi possibili valori).
 * [Servizio](../../../catalog/home.md)catalogo: Catalogo è il sistema di registrazione per la posizione dei dati e la linea all&#39;interno [!DNL Experience Platform].
-* [Caricamento](../../../ingestion/batch-ingestion/overview.md)batch: L’API di assimilazione batch consente di trasferire i dati in  Experience Platform come file batch.
+* [Caricamento](../../../ingestion/batch-ingestion/overview.md)batch: L&#39;API di assimilazione batch consente di assimilare i dati  Experience Platform come file batch.
 * [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegarsi correttamente a Data Lake tramite l&#39; [!DNL Flow Service] API.
@@ -59,9 +59,9 @@ Il primo passaggio per la creazione di una connessione di base di dataset consis
 
 **Formato API**
 
-Ogni origine disponibile dispone di un proprio set di specifiche di connessione per descrivere le proprietà del connettore, ad esempio i requisiti di autenticazione. È possibile ricercare le specifiche di connessione per una connessione di base di dataset eseguendo una richiesta GET e utilizzando i parametri di query.
+Ogni origine disponibile dispone di un proprio set di specifiche di connessione per descrivere le proprietà del connettore, ad esempio i requisiti di autenticazione. È possibile ricercare le specifiche di connessione per una connessione di base di dataset eseguendo una richiesta di GET e utilizzando i parametri di query.
 
-L&#39;invio di una richiesta GET senza parametri di query restituirà le specifiche di connessione per tutte le origini disponibili. È possibile includere la query `property=id=="c604ff05-7f1a-43c0-8e18-33bf874cb11c"` per ottenere informazioni per la connessione di base del dataset.
+L&#39;invio di una richiesta di GET senza parametri di query restituirà le specifiche di connessione per tutte le origini disponibili. È possibile includere la query `property=id=="c604ff05-7f1a-43c0-8e18-33bf874cb11c"` per ottenere informazioni per la connessione di base del dataset.
 
 ```http
 GET /connectionSpecs
