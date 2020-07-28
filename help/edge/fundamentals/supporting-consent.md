@@ -1,8 +1,8 @@
 ---
 title: Consenso di sostegno
 seo-title: Supporto  preferenza di consenso SDK Web per Adobe Experience Platform
-description: Scopri come supportare le preferenze di consenso con  Experience Platform Web SDK
-seo-description: Scopri come supportare le preferenze di consenso con  Experience Platform Web SDK
+description: Scoprite come supportare le preferenze di consenso con  Experience Platform Web SDK
+seo-description: Scoprite come supportare le preferenze di consenso con  Experience Platform Web SDK
 translation-type: tm+mt
 source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Consenso di supporto
 
-Per rispettare la privacy dell&#39;utente, potrebbe essere necessario richiedere il consenso dell&#39;utente prima di consentire all&#39;SDK di utilizzare dati specifici dell&#39;utente per determinati scopi. Al momento, l’SDK consente solo agli utenti di optare per tutti gli scopi, ma in futuro Adobe spera di fornire un controllo più dettagliato su scopi specifici.
+Per rispettare la privacy dell&#39;utente, potrebbe essere necessario richiedere il consenso dell&#39;utente prima di consentire all&#39;SDK di utilizzare dati specifici dell&#39;utente per determinati scopi. Al momento, l’SDK consente solo agli utenti di optare per tutti gli scopi, ma in futuro  Adobe spera di fornire un controllo più dettagliato su scopi specifici.
 
 Se l’utente sceglie tutti gli scopi, l’SDK può eseguire le seguenti attività:
 
-* Inviare dati ai server Adobe e da questi ultimi.
+* Inviare dati a e da  server  Adobi.
 * Cookie di lettura e scrittura o elementi di memorizzazione Web (fatta eccezione per la persistenza delle preferenze di consenso dell&#39;utente).
 
 Se l’utente rinuncia a tutti gli scopi, l’SDK non esegue nessuna di queste attività.
@@ -79,7 +79,7 @@ Poiché l&#39;utente ha scelto di non partecipare, le promesse restituite dai co
 
 >[!NOTE]
 >
->Al momento, l’SDK supporta solo lo `general` scopo. Anche se abbiamo intenzione di costruire un insieme più solido di scopi o categorie che corrisponderà alle diverse funzionalità Adobe e offerte di prodotti, l&#39;implementazione corrente è un approccio tutto o niente per l&#39;opt-in.  Questo vale solo per il Adobe Experience Platform  [!DNL Web SDK] e NON per le altre librerie JavaScript Adobe.
+>Al momento, l’SDK supporta solo lo `general` scopo. Anche se abbiamo intenzione di costruire una serie più solida di scopi o categorie che corrisponderanno alle diverse funzionalità del Adobe  e alle offerte di prodotti, l&#39;implementazione corrente è un approccio tutto o niente per l&#39;opt-in.  Questo vale solo per il Adobe Experience Platform  [!DNL Web SDK] e NON per le altre librerie JavaScript  Adobe.
 
 ## Persistenza delle preferenze di consenso
 
