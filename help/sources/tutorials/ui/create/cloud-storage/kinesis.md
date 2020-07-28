@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Creare un connettore sorgente Amazon Kinesis nell’interfaccia utente
+title: Creare un connettore sorgente Amazon  Kinesis nell’interfaccia utente
 topic: overview
 translation-type: tm+mt
 source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
@@ -40,7 +40,7 @@ Per autenticare il connettore [!DNL Kinesis] di origine, è necessario specifica
 | `Secret access key` | La chiave di accesso segreta per il tuo [!DNL Kinesis] account. |
 | `region` | La regione del server AWS. |
 
-Per ulteriori informazioni su questi valori, consultate [questo documento](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html)Kinesis.
+Per ulteriori informazioni su questi valori, consultare [questo documento](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html)Kinesis.
 
 ## Collegamento dell&#39; [!DNL Kinesis] account
 
