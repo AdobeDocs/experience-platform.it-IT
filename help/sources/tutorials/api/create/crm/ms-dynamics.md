@@ -65,11 +65,11 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 Prima [!DNL Platform] di connettersi a un [!DNL Dynamics] account, è necessario verificare l&#39;esistenza delle specifiche di connessione per [!DNL Dynamics]. Se le specifiche di connessione non esistono, non è possibile stabilire una connessione.
 
-Ogni origine disponibile dispone di un proprio set di specifiche di connessione per descrivere le proprietà del connettore, ad esempio i requisiti di autenticazione. Potete cercare le specifiche di connessione [!DNL Dynamics] eseguendo una richiesta GET e utilizzando i parametri di query.
+Ogni origine disponibile dispone di un proprio set di specifiche di connessione per descrivere le proprietà del connettore, ad esempio i requisiti di autenticazione. È possibile ricercare le specifiche di connessione [!DNL Dynamics] eseguendo una richiesta di GET e utilizzando i parametri della query.
 
 **Formato API**
 
-L&#39;invio di una richiesta GET senza parametri di query restituirà le specifiche di connessione per tutte le origini disponibili. È possibile includere la query `property=name=="dynamics-online"` per ottenere informazioni specifiche per [!DNL Dynamics].
+L&#39;invio di una richiesta di GET senza parametri di query restituirà le specifiche di connessione per tutte le origini disponibili. È possibile includere la query `property=name=="dynamics-online"` per ottenere informazioni specifiche per [!DNL Dynamics].
 
 ```http
 GET /connectionSpecs
@@ -144,7 +144,7 @@ Una risposta corretta restituisce le specifiche di connessione per [!DNL Dynamic
 
 Una connessione di base specifica un&#39;origine e contiene le credenziali per tale origine. È necessaria una sola connessione di base per [!DNL Dynamics] account, in quanto può essere utilizzata per creare più connettori sorgente per inserire dati diversi.
 
-Eseguite la seguente richiesta POST per creare una connessione di base.
+Eseguite la seguente richiesta di POST per creare una connessione di base.
 
 **Formato API**
 
