@@ -28,7 +28,7 @@ Prima di leggere la presente guida è consigliabile conoscere i seguenti [!DNL E
 
 ## Informazioni sugli spazi dei nomi delle identità {#namespaces}
 
- Adobe Experience Platform [!DNL Identity Service] collega i dati di identità dei clienti tra sistemi e dispositivi. [!DNL Identity Service] utilizza gli spazi dei nomi di **identità** per fornire contesto ai valori di identità collegandoli al loro sistema di origine. Uno spazio dei nomi può rappresentare un concetto generico come un indirizzo e-mail (&quot;E-mail&quot;) o associare l&#39;identità a un&#39;applicazione specifica, ad esempio un Adobe  Advertising Cloud ID (&quot;AdCloud&quot;) o un  Adobe Target ID (&quot;TNTID&quot;).
+ Adobe Experience Platform [!DNL Identity Service] collega i dati di identità dei clienti tra sistemi e dispositivi. [!DNL Identity Service] utilizza gli spazi dei nomi di **identità** per fornire contesto ai valori di identità collegandoli al loro sistema di origine. Uno spazio dei nomi può rappresentare un concetto generico come un indirizzo e-mail (&quot;E-mail&quot;) o associare l&#39;identità a un&#39;applicazione specifica, ad esempio un ID Adobe Advertising Cloud (&quot;AdCloud&quot;) o un ID Adobe Target  (&quot;TNTID&quot;).
 
 Servizio identità mantiene un archivio di spazi dei nomi di identità globali (standard) e definiti dall’utente (personalizzati). Gli spazi dei nomi standard sono disponibili per tutte le organizzazioni (ad esempio, &quot;E-mail&quot; e &quot;ECID&quot;), mentre l&#39;organizzazione può anche creare spazi dei nomi personalizzati in base alle proprie esigenze.
 
@@ -38,7 +38,7 @@ Per ulteriori informazioni sugli spazi dei nomi delle identità in [!DNL Experie
 
 >[!NOTE]
 >
->In questa sezione viene illustrato come creare richieste di privacy per l&#39;archivio [!DNL Profile] dati. È vivamente consigliato di consultare la documentazione API [](../privacy-service/api/getting-started.md) Privacy Service o dell’interfaccia utente [](../privacy-service/ui/overview.md) Privacy Service per i passaggi completi relativi all’invio di un processo per la privacy, incluso il modo in cui formattare correttamente i dati di identità dell’utente inviati nei payload di richieste.
+>In questa sezione viene illustrato come creare richieste di privacy per l&#39;archivio [!DNL Profile] dati. È vivamente consigliato di consultare la documentazione API [](../privacy-service/api/getting-started.md) Privacy Service o interfaccia utente [](../privacy-service/ui/overview.md) Privacy Service per i passaggi completi relativi all&#39;invio di un processo per la privacy, incluso il modo in cui formattare correttamente i dati di identità utente inviati nei payload della richiesta.
 
 Nella sezione seguente viene illustrato come effettuare richieste di privacy per [!DNL Real-time Customer Profile] e [!DNL Data Lake] tramite l&#39; [!DNL Privacy Service] API o l&#39;interfaccia utente.
 
