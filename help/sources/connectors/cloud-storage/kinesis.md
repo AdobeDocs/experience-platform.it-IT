@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Connettore Amazon Kinesis
+title: ' connettore Kinesis Amazon'
 topic: overview
 translation-type: tm+mt
 source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
@@ -57,11 +57,11 @@ La documentazione seguente fornisce informazioni su come connettersi [!DNL Amazo
 
 ## Connessione [!DNL Amazon Kinesis] all&#39; [!DNL Platform] utilizzo delle API
 
-- [Creare un connettore Amazon Kinesis utilizzando l&#39;API del servizio di flusso](../../tutorials/api/create/cloud-storage/kinesis.md)
+- [Creare un connettore Kinesis Amazon  utilizzando l&#39;API di servizio di flusso](../../tutorials/api/create/cloud-storage/kinesis.md)
 - [Esplora un sistema di archiviazione cloud utilizzando l&#39;API del servizio di flusso](../../tutorials/api/explore/cloud-storage.md)
 - [Raccolta di dati di archiviazione cloud tramite l&#39;API del servizio di flusso](../../tutorials/api/collect/cloud-storage.md)
 
 ## Connessione [!DNL Amazon Kinesis] all’ [!DNL Platform] interfaccia utente
 
-- [Creare un connettore sorgente Amazon Kinesis nell’interfaccia utente](../../tutorials/ui/create/cloud-storage/kinesis.md)
+- [Creare un connettore sorgente Amazon  Kinesis nell’interfaccia utente](../../tutorials/ui/create/cloud-storage/kinesis.md)
 - [Configurare un flusso di dati per un connettore di archiviazione cloud nell&#39;interfaccia utente](../../tutorials/ui/dataflow/streaming/cloud-storage.md)
