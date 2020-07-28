@@ -1,6 +1,6 @@
 ---
 title: 'Note sulla versione di Adobe Experience Platform '
-description: Note aggiornate sulla versione di  Experience Platform
+description: Note aggiornate sulla versione per  Experience Platform
 doc-type: release notes
 last-update: July 15, 2020
 author: crhoades, ens25212
@@ -50,7 +50,7 @@ Per ulteriori informazioni sul servizio, consulta la panoramica [sulla governanc
 
 ## [!DNL Segmentation Service] {#segmentation}
 
- Adobe Experience Platform Segmentation Service fornisce un&#39;interfaccia utente e RESTful API che consente di creare segmenti e generare audience dai [!DNL Real-time Customer Profile] dati. Questi segmenti sono configurati e mantenuti a livello centrale, [!DNL Platform]rendendoli facilmente accessibili da qualsiasi applicazione Adobe.
+ Adobe Experience Platform Segmentation Service fornisce un&#39;interfaccia utente e RESTful API che consente di creare segmenti e generare audience dai [!DNL Real-time Customer Profile] dati. Questi segmenti sono configurati e mantenuti a livello centrale [!DNL Platform], rendendoli facilmente accessibili da qualsiasi applicazione  Adobe.
 
 [!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo di persone commerciabili all&#39;interno della base cliente. I segmenti possono essere basati su dati di record (come informazioni demografiche) o eventi di serie temporali che rappresentano le interazioni dei clienti con il tuo marchio.
 
@@ -65,7 +65,7 @@ Per ulteriori informazioni su [!DNL Segmentation Service], consulta la panoramic
 
 ## Origini {#sources}
 
- Adobe Experience Platform può acquisire dati da origini esterne consentendo al contempo di strutturare, etichettare e migliorare i dati utilizzando [!DNL Platform] i servizi. È possibile acquisire dati da origini diverse, come applicazioni Adobe, archiviazione basata su cloud, software di terze parti e il sistema CRM in uso.
+ Adobe Experience Platform può acquisire dati da origini esterne consentendo al contempo di strutturare, etichettare e migliorare i dati utilizzando [!DNL Platform] i servizi. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, software di terze parti e il sistema CRM in uso.
 
 [!DNL Experience Platform] fornisce un&#39;API RESTful e un&#39;interfaccia utente interattiva che consente di impostare connessioni sorgente per vari provider di dati con facilità. Queste connessioni di origine consentono di autenticare e connettersi a sistemi di storage e servizi CRM esterni, impostare i tempi per l&#39;esecuzione dell&#39;assimilazione e gestire il throughput di assimilazione dei dati.
 
