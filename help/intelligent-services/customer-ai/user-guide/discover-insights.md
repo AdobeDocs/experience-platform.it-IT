@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Scopri informazioni approfondite con l&#39;AI del cliente
 
-L&#39;AI del cliente, come parte di Intelligent Services, fornisce agli esperti di marketing il potere di sfruttare Adobe Sensei per anticipare quali saranno le azioni future dei clienti. L&#39;AI del cliente viene utilizzata per generare punteggi di propensione personalizzati, come il churn e la conversione per i singoli profili su scala. Ciò è possibile senza dover trasformare le esigenze aziendali in un problema di machine learning, scegliendo un algoritmo, una formazione o un&#39;implementazione.
+L&#39;AI del cliente, come parte di Intelligent Services, fornisce agli esperti di marketing la possibilità di sfruttare  Adobe Sensei per anticipare quali saranno le prossime azioni da intraprendere per i clienti. L&#39;AI del cliente viene utilizzata per generare punteggi di propensione personalizzati, come il churn e la conversione per i singoli profili su scala. Ciò è possibile senza dover trasformare le esigenze aziendali in un problema di machine learning, scegliendo un algoritmo, una formazione o un&#39;implementazione.
 
 Questo documento funge da guida per l&#39;interazione con le informazioni sulle istanze del servizio nell&#39;interfaccia utente AI del cliente di Servizi intelligenti.
 
@@ -130,7 +130,7 @@ Per visualizzare il nuovo segmento nell’interfaccia utente di Platform, fai cl
 
 ## Passaggi successivi
 
-Questo documento descrive le informazioni fornite da un&#39;istanza del servizio Customer AI. Ora puoi continuare a seguire l&#39;esercitazione sul [download dei punteggi in Customer AI](./download-scores.md) o consultare le altre guide dei servizi [intelligenti di](../../home.md) Adobe disponibili.
+Questo documento descrive le informazioni fornite da un&#39;istanza del servizio Customer AI. Ora puoi continuare a seguire l&#39;esercitazione sul [download dei punteggi in Customer AI](./download-scores.md) o consultare le altre guide dei servizi [intelligenti](../../home.md) Adobe disponibili.
 
 ## Risorse aggiuntive
 
