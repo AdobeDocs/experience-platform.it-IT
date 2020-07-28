@@ -40,7 +40,7 @@ Il primo passo per creare un criterio DULE consiste nel determinare quale azione
 
 ### Cerca un&#39;azione di marketing esistente {#look-up}
 
-Puoi cercare le azioni di marketing esistenti da valutare in base ai criteri DULE effettuando una richiesta GET a uno degli `/marketingActions` endpoint.
+Puoi cercare le azioni di marketing esistenti da valutare in base al criterio DULE effettuando una richiesta di GET a uno degli `/marketingActions` endpoint.
 
 **Formato API**
 
@@ -125,7 +125,7 @@ Quando trovi l&#39;azione di marketing da utilizzare, registra il valore della r
 
 ### Creare una nuova azione di marketing {#create-new}
 
-Puoi creare una nuova azione di marketing eseguendo una richiesta PUT all’ `/marketingActions/custom/` endpoint e fornendo un nome per l’azione di marketing alla fine del percorso della richiesta.
+Puoi creare una nuova azione di marketing eseguendo una richiesta di PUT all’ `/marketingActions/custom/` endpoint e fornendo un nome per l’azione di marketing alla fine del percorso della richiesta.
 
 **Formato API**
 
@@ -328,7 +328,7 @@ Registra l&#39;ID URI del criterio DULE appena creato, in quanto viene utilizzat
 >
 >Anche se questo passaggio è facoltativo se desiderate lasciare il criterio DULE nello `DRAFT` stato, tenete presente che per impostazione predefinita un criterio deve avere lo stato impostato su `ENABLED` per poter partecipare alla valutazione. Per informazioni su come fare eccezioni per i criteri di [stato, vedere l&#39;esercitazione sull&#39;applicazione dei criteri](../enforcement/api-enforcement.md) `DRAFT` DULE.
 
-Per impostazione predefinita, i criteri DULE con `status` proprietà impostata per `DRAFT` non partecipano alla valutazione. Potete abilitare il criterio per la valutazione eseguendo una richiesta PATCH all&#39; `/policies/custom/` endpoint e fornendo l&#39;identificatore univoco per il criterio alla fine del percorso della richiesta.
+Per impostazione predefinita, i criteri DULE con `status` proprietà impostata per `DRAFT` non partecipano alla valutazione. Potete abilitare il criterio per la valutazione eseguendo una richiesta di PATCH all&#39; `/policies/custom/` endpoint e fornendo l&#39;identificatore univoco per il criterio alla fine del percorso della richiesta.
 
 **Formato API**
 
