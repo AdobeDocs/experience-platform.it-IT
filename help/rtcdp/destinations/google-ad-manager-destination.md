@@ -22,13 +22,13 @@ ht-degree: 0%
 
 Tenete presenti i seguenti dettagli specifici per [!DNL Google Ad Manager] le destinazioni:
 
-* Puoi inviare le seguenti [identità](../../identity-service/namespaces.md) alle [!DNL Google Ad Manager] destinazioni: **ID cookie Google, IDFA, GAID, ID Roku, ID Microsoft, ID Amazon Fire TV**.
+* Puoi inviare le seguenti [identità](../../identity-service/namespaces.md) alle [!DNL Google Ad Manager] destinazioni: **ID di cookie Google, IDFA, GAID, Roku ID, Microsoft ID,  Amazon Fire TV ID**.
 * I tipi di pubblico attivati vengono creati a livello di programmazione nella [!DNL Google] piattaforma.
-* Adobe Real-time CDP al momento non include una metrica di misurazione per convalidare l’attivazione. Per convalidare l&#39;integrazione e comprendere le dimensioni del targeting dell&#39;audience, fare riferimento ai conteggi dell&#39;audience in Google.
+*  CDP in tempo reale del Adobe attualmente non include una metrica di misurazione per convalidare l’attivazione. Per convalidare l&#39;integrazione e comprendere le dimensioni del targeting dell&#39;audience, fare riferimento ai conteggi dell&#39;audience in Google.
 
 >[!IMPORTANT]
 >
->Se stai cercando di creare la tua prima destinazione con [!DNL Google Ad Manager] e non hai attivato la funzionalità [di sincronizzazione](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) ID in  servizio ID Experience Cloud in passato (con  Audience Manager o altre applicazioni), contatta il servizio Consulenza Adobe o l&#39;Assistenza clienti per abilitare la sincronizzazione degli ID. Se in precedenza avevate impostato [!DNL Google] integrazioni in  Audience Manager, le sincronizzazioni ID configurate effettuavano il trasferimento ad Adobe Real-time CDP.
+>Se stai cercando di creare la tua prima destinazione con [!DNL Google Ad Manager] e non hai attivato la funzionalità [di sincronizzazione](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) ID in  Experience Cloud ID Service in passato (con  Audience Manager o altre applicazioni), contatta  Consulenza Adobe o l’Assistenza clienti per abilitare le sincronizzazioni ID. Se in precedenza avevate impostato [!DNL Google] integrazioni in  Audience Manager, le sincronizzazioni ID che avevate impostato per il riporto  CDP in tempo reale del Adobe.
 
 ## Prerequisiti
 
@@ -36,12 +36,12 @@ Tenete presenti i seguenti dettagli specifici per [!DNL Google Ad Manager] le de
 
 >[!NOTE]
 >
->Il elenco consentiti  è obbligatorio prima di configurare la prima [!DNL Google Ad Manager] destinazione in Adobe Real-time CDP. Assicurarsi che il processo di elenco consentiti  descritto di seguito sia stato completato [!DNL Google] prima di creare una destinazione.
+>Il elenco consentiti  è obbligatorio prima di impostare la prima [!DNL Google Ad Manager] destinazione  CDP in tempo reale Adobe. Assicurarsi che il processo di elenco consentiti  descritto di seguito sia stato completato [!DNL Google] prima di creare una destinazione.
 
-Prima di creare la [!DNL Google Ad Manager] destinazione in Adobe Real-time CDP, è necessario contattare Adobe [!DNL Google] per essere incluso nell&#39;elenco dei provider di dati consentiti e per aggiungere l&#39;account al elenco consentiti . Contattate [!DNL Google] e fornite le seguenti informazioni:
+Prima di creare la [!DNL Google Ad Manager] destinazione in CDP in tempo reale  Adobe, è necessario contattare [!DNL Google] affinché  Adobe venga inserito nell&#39;elenco dei provider di dati consentiti e che il vostro account venga aggiunto al elenco consentiti di . Contattate [!DNL Google] e fornite le seguenti informazioni:
 
-* **ID** account: questo è l&#39;ID account di Adobe con [!DNL Google]. Per ottenere questo ID, contatta l’Assistenza clienti Adobe o il tuo rappresentante Adobe.
-* **ID** cliente: questo è l&#39;ID account cliente di Adobe con [!DNL Google]. Per ottenere questo ID, contatta l’Assistenza clienti Adobe o il tuo rappresentante Adobe.
+* **ID** account:  ID account  Adobe con [!DNL Google]. Per ottenere questo ID, contatta &#39;Assistenza clienti di Adobe o il rappresentante del Adobe .
+* **ID** cliente: si tratta  ID account  cliente con [!DNL Google]. Per ottenere questo ID, contatta &#39;Assistenza clienti di Adobe o il rappresentante del Adobe .
 * **ID** rete: questo è il tuo account con [!DNL Google Ad Manager]
 * **ID** collegamento pubblico: questo è il tuo account con [!DNL Google Ad Manager]
 * Il tipo di account. **DFP per Google** o **AdX buyer**.
@@ -60,11 +60,11 @@ Prima di creare la [!DNL Google Ad Manager] destinazione in Adobe Real-time CDP,
    * Usa `DFP by Google` per [!DNL DoubleClick] editori
    * Usa `AdX buyer` per [!DNL Google AdX]
 * **[!UICONTROL Account ID]**: Compila il tuo ID account con [!DNL Google]. Può trattarsi dell’ID di rete o dell’ID collegamento pubblico. In genere si tratta di un ID di otto cifre.
-* **[!UICONTROL Marketing use case]**: I casi di utilizzo del marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra i casi di utilizzo di marketing definiti da Adobe o creare un tuo caso di utilizzo di marketing. Per ulteriori informazioni sui casi di utilizzo del marketing, consulta la pagina [Governance dei dati in CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) in tempo reale. Per informazioni sui singoli casi di utilizzo marketing definiti da Adobe, consulta la panoramica [dei criteri di utilizzo dei](/help/data-governance/policies/overview.md#core-actions)dati.
+* **[!UICONTROL Marketing use case]**: I casi di utilizzo del marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra  casi di utilizzo di marketing definiti dal Adobe o creare un caso di utilizzo di marketing personale. Per ulteriori informazioni sui casi di utilizzo del marketing, consulta la pagina [Governance dei dati in CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) in tempo reale. Per informazioni sui singoli casi di utilizzo marketing definiti dal Adobe , consulta la panoramica [sui criteri di utilizzo dei](/help/data-governance/policies/overview.md#core-actions)dati.
 
 >[!NOTE]
 >
-> Per configurare una [!DNL Google Ad Manager] destinazione, contattate il vostro rappresentante [!DNL Google Account Manager] o Adobe per sapere quale tipo di account avete.
+> Per configurare una [!DNL Google Ad Manager] destinazione, rivolgetevi al rappresentante del Adobe [!DNL Google Account Manager] o  per capire quale tipo di account avete.
 
 ## Attiva i segmenti in [!DNL Google Ad Manager]
 
