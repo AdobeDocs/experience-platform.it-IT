@@ -56,7 +56,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 ## Esplora le tabelle di dati
 
-Utilizzando la connessione di base per il sistema CRM in uso, puoi esplorare le tabelle di dati eseguendo richieste GET. Utilizzate la seguente chiamata per trovare il percorso della tabella in cui desiderate ispezionare o assimilare [!DNL Platform].
+Utilizzando la connessione di base per il sistema CRM in uso, puoi esplorare le tabelle di dati eseguendo richieste di GET. Utilizzate la seguente chiamata per trovare il percorso della tabella in cui desiderate ispezionare o assimilare [!DNL Platform].
 
 **Formato API**
 
@@ -66,7 +66,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | L&#39;ID della connessione di base per il sistema CRM in uso. |
+| `{BASE_CONNECTION_ID}` | ID della connessione di base per il sistema CRM in uso. |
 
 **Richiesta**
 
@@ -109,9 +109,9 @@ Una risposta di successo è un array di tabelle dal sistema CRM. Trovare la tabe
 ]
 ```
 
-## Analisi della struttura di una tabella
+##  Inspect la struttura di una tabella
 
-Per esaminare la struttura di una tabella dal sistema CRM, esegui una richiesta GET specificando il percorso di una tabella come parametro di query.
+Per esaminare la struttura di una tabella dal sistema CRM, esegui una richiesta di GET specificando il percorso di una tabella come parametro di query.
 
 **Formato API**
 
