@@ -29,7 +29,7 @@ Prima di leggere la presente guida è consigliabile conoscere i seguenti [!DNL E
 
 ## Informazioni sugli spazi dei nomi delle identità {#namespaces}
 
- Adobe Experience Platform [!DNL Identity Service] collega i dati di identità dei clienti tra sistemi e dispositivi. [!DNL Identity Service] utilizza **[!UICONTROL identity namespaces]** per fornire contesto ai valori di identità collegandoli al loro sistema di origine. Uno spazio dei nomi può rappresentare un concetto generico come un indirizzo e-mail (&quot;E-mail&quot;) o associare l&#39;identità a un&#39;applicazione specifica, ad esempio un Adobe  Advertising Cloud ID (&quot;AdCloud&quot;) o un  Adobe Target ID (&quot;TNTID&quot;).
+ Adobe Experience Platform [!DNL Identity Service] collega i dati di identità dei clienti tra sistemi e dispositivi. [!DNL Identity Service] utilizza **[!UICONTROL identity namespaces]** per fornire contesto ai valori di identità collegandoli al loro sistema di origine. Uno spazio dei nomi può rappresentare un concetto generico come un indirizzo e-mail (&quot;E-mail&quot;) o associare l&#39;identità a un&#39;applicazione specifica, ad esempio un ID Adobe Advertising Cloud (&quot;AdCloud&quot;) o un ID Adobe Target  (&quot;TNTID&quot;).
 
 [!DNL Identity Service] gestisce un archivio di spazi dei nomi di identità definiti a livello globale (standard) e definiti dall’utente (personalizzati). Gli spazi dei nomi standard sono disponibili per tutte le organizzazioni (ad esempio, &quot;E-mail&quot; e &quot;ECID&quot;), mentre l&#39;organizzazione può anche creare spazi dei nomi personalizzati in base alle proprie esigenze.
 
@@ -68,7 +68,7 @@ Dopo aver impostato i campi appropriati nello schema come campi di identità, è
 >
 > Questa sezione include le chiamate all&#39;API del Registro di sistema dello schema. Per informazioni importanti sull’utilizzo dell’API, inclusa la conoscenza `{TENANT_ID}` e il concetto di contenitori, consultate la sezione [introduttiva](../xdm/api/getting-started.md) della guida per gli sviluppatori.
 
-È possibile aggiungere un descrittore di identità allo schema XDM di un dataset effettuando una richiesta POST all&#39; `/descriptors` endpoint nell&#39; [!DNL Schema Registry] API.
+È possibile aggiungere un descrittore di identità allo schema XDM di un dataset effettuando una richiesta di POST all&#39; `/descriptors` endpoint nell&#39; [!DNL Schema Registry] API.
 
 **Formato API**
 
