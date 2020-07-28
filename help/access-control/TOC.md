@@ -1,14 +1,17 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Controllo degli accessi nell'Aiuto di Adobe Experience Platform
+user-guide-title: Controllo dell'accesso nella guida  Adobe Experience Platform
 translation-type: tm+mt
 source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+workflow-type: tm+mt
+source-wordcount: '82'
+ht-degree: 3%
 
 ---
 
 
-# Controllo di accesso {#access-control}
+# Access control {#access-control}
 
 * [Panoramica sul controllo degli accessi](home.md)
 * Interfaccia del controllo degli accessi {#ui}
@@ -24,4 +27,4 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
    * [Visualizza criteri efficaci](api/effective-policies.md)
 * [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
 * [Riferimento API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml)
-* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-en)
+* [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
