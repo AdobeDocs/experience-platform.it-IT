@@ -18,7 +18,7 @@ Questa esercitazione fornisce istruzioni su come creare pacchetti di file sorgen
 
 Concetti da comprendere:
 
-- **Ricette**: Una ricetta è il termine utilizzato da Adobe per specificare un modello ed è un contenitore di primo livello che rappresenta uno specifico sistema di machine learning, un algoritmo di intelligenza artificiale o un insieme di algoritmi, una logica di elaborazione e una configurazione necessarie per creare ed eseguire un modello qualificato e quindi per risolvere problemi aziendali specifici.
+- **Ricette**: Una ricetta è  termine  Adobe per una specifica del modello ed è un contenitore di primo livello che rappresenta uno specifico machine learning, un algoritmo di intelligenza artificiale o un insieme di algoritmi, una logica di elaborazione e una configurazione necessarie per creare ed eseguire un modello preparato e quindi aiutare a risolvere problemi aziendali specifici.
 - **File** sorgente: Singoli file nel progetto che contengono la logica per una ricetta.
 
 ## Prerequisiti
@@ -67,7 +67,7 @@ Prendete nota dei valori per *Docker Host*, *Nome utente* e *Password*. Vengono 
 
 ### Creare pacchetti di file sorgente
 
-Per iniziare, ottenere il codice di esempio trovato nell&#39;archivio di riferimento <a href="https://github.com/adobe/experience-platform-dsw-reference" target="_blank">di Experience Platform</a> Data Science Workspace.
+Per iniziare, ottenere il codice di esempio trovato nell&#39;archivio di riferimento <a href="https://github.com/adobe/experience-platform-dsw-reference" target="_blank">di</a> Area di lavoro dati di Experience Platform.
 
 - [Creare un&#39;immagine Python Docker](#python-docker)
 - [Genera immagine Docker R](#r-docker)
