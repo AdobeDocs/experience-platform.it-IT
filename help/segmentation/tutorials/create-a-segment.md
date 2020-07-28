@@ -56,7 +56,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 Il primo passo nella segmentazione consiste nel definire un segmento, rappresentato in un costrutto chiamato definizione **di** segmento. Una definizione di segmento è un oggetto che racchiude una query scritta in [!DNL Profile Query Language] (PQL). Questo oggetto è anche denominato predicato **PQL**. I predicati PQL definiscono le regole per il segmento in base alle condizioni relative a qualsiasi record o dati delle serie temporali forniti da [!DNL Real-time Customer Profile]. Per ulteriori informazioni sulla scrittura di query PQL, consultate la guida [](../pql/overview.md) PQL.
 
-Puoi creare una nuova definizione di segmento effettuando una richiesta POST all’ `/segment/definitions` endpoint nell’ [!DNL Segmentation] API. L&#39;esempio seguente illustra come formattare una richiesta di definizione, incluse le informazioni necessarie per definire correttamente un segmento.
+Puoi creare una nuova definizione di segmento effettuando una richiesta di POST all’ `/segment/definitions` endpoint nell’ [!DNL Segmentation] API. L&#39;esempio seguente illustra come formattare una richiesta di definizione, incluse le informazioni necessarie per definire correttamente un segmento.
 
 Per una spiegazione dettagliata su come definire un segmento, consulta la guida [per gli sviluppatori per la definizione del](../api/segment-definitions.md#create)segmento.
 
@@ -83,11 +83,11 @@ La dimensione del campione dipende dal numero complessivo di entità nell&#39;ar
 | Da 1 a 20 milioni | 1 milione |
 | Oltre 20 milioni | 5% del totale |
 
-Le stime generalmente vengono eseguite su un periodo di 10-15 secondi, a partire da una stima approssimativa e con un perfezionamento man mano che vengono letti più record.
+Le stime generalmente vengono eseguite su un intervallo di 10-15 secondi, a partire da una stima approssimativa e affinamento man mano che vengono letti più record.
 
 ### Creare un processo di anteprima
 
-Potete creare un nuovo processo di anteprima effettuando una richiesta POST all’ `/preview` endpoint.
+Per creare un nuovo processo di anteprima, effettuate una richiesta di POST all’ `/preview` endpoint.
 
 Per istruzioni dettagliate sulla creazione di un processo di anteprima, consultate la guida [alle](../api/previews-and-estimates.md#create-preview)anteprime e agli endpoint delle stime.
 
