@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Note sulla versione di Privacy Service
+title: Note sulla versione Privacy Service
 topic: release notes
 translation-type: tm+mt
 source-git-commit: 4cfa64e3371496e2408fe8fee64d49883334917c
@@ -39,7 +39,7 @@ Questo documento contiene informazioni sulle nuove funzioni per  Adobe Experienc
 | [!DNL Privacy Service] rebranding | L&#39;ex &quot;GDPR Service&quot; è stato rinominato [!DNL Privacy Service] in quanto il servizio è cresciuto per supportare altre normative oltre al GDPR. |
 | Nuovi endpoint API | Il percorso di base per l&#39; [!DNL Privacy Service] API è stato aggiornato da `/data/privacy/gdpr` a `/data/core/privacy/jobs` |
 | Nuova `regulation` proprietà obbligatoria | Durante la creazione di nuovi processi nell&#39; [!DNL Privacy Service] API, nel payload della richiesta deve essere specificata una `regulation` proprietà per indicare quale regola tenere traccia del processo. I valori accettati sono `gdpr` e `ccpa`. Per ulteriori informazioni, consulta il documento sui processi di [privacy](api/privacy-jobs.md) nella guida per [!DNL Privacy Service] gli sviluppatori. |
-| Supporto per l&#39;autenticazione Adobe Primetime | [!DNL Privacy Service] accetta ora le richieste di accesso/eliminazione dall&#39;autenticazione Adobe Primetime, utilizzando `primetimeAuthentication` come valore di prodotto. See the [Primetime Authentication documentation](http://tve.helpdocsonline.com/how-to-make-a-privacy-request) for more information. |
+| Supporto per  autenticazione Adobe Primetime | [!DNL Privacy Service] accetta ora le richieste di accesso/eliminazione  autenticazione Adobe Primetime, utilizzando `primetimeAuthentication` come valore di prodotto. See the [Primetime Authentication documentation](http://tve.helpdocsonline.com/how-to-make-a-privacy-request) for more information. |
 
 ### Miglioramenti
 
@@ -55,7 +55,7 @@ Questo documento contiene informazioni sulle nuove funzioni per  Adobe Experienc
 | --- | --- |
 | Pannello Metriche richieste | Il nuovo dashboard delle metriche nell’ [!DNL Privacy Service] interfaccia utente fornisce visibilità sulle richieste GDPR inviate, errate e completate. |
 | Request Builder | Per le organizzazioni di assistenza con utenti tecnici e non tecnici che inviano richieste GDPR, all’interfaccia utente è stata aggiunta la funzionalità &quot;Crea richiesta&quot;. La funzionalità di invio dei file JSON è ancora disponibile nell’ [!DNL Privacy Service] interfaccia utente per le organizzazioni che preferiscono continuare a utilizzarla. |
-| Notifiche evento processo GDPR | Le notifiche degli eventi relative agli stati dei processi GDPR sono un elemento critico per molti flussi di lavoro. Sebbene in precedenza le notifiche venivano servite tramite notifiche e-mail singole, le notifiche evento GDPR sono messaggi che sfruttano gli eventi di I/O di Adobe, che vengono inviati a un webhook configurato per facilitare l’automazione della richiesta di un processo. [!DNL Privacy Service] Gli utenti dell&#39;interfaccia utente possono iscriversi agli eventi Adobe I/O GDPR per ricevere aggiornamenti al termine di un processo relativo a un prodotto o al GDPR. |
+| Notifiche evento processo GDPR | Le notifiche degli eventi relative agli stati dei processi GDPR sono un elemento critico per molti flussi di lavoro. Sebbene in precedenza le notifiche venivano servite tramite avvisi e-mail individuali, le notifiche evento GDPR sono messaggi che sfruttano  eventi I/O Adobe, che vengono inviati a un webhook configurato per facilitare l&#39;automazione della richiesta di un processo. [!DNL Privacy Service] Gli utenti dell&#39;interfaccia utente possono iscriversi  eventi GDPR di I/O di Adobe per ricevere aggiornamenti al termine di un processo di prodotto o GDPR. |
 
 ## 18 aprile 2019
 
