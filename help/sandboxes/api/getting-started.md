@@ -5,27 +5,30 @@ title: Guida per gli sviluppatori API Sandbox
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: b4741cdfd065bbaed7f2feeafe8619191e4b8f6c
+workflow-type: tm+mt
+source-wordcount: '337'
+ht-degree: 0%
 
 ---
 
 
 # Guida per gli sviluppatori API Sandbox
 
-Le sandbox in Adobe Experience Platform forniscono ambienti di sviluppo isolati che consentono di testare le funzioni, eseguire esperimenti e creare configurazioni personalizzate senza influire sull&#39;ambiente di produzione.
+Le sandbox in  Adobe Experience Platform forniscono ambienti di sviluppo isolati che consentono di testare le funzionalità, eseguire esperimenti e creare configurazioni personalizzate senza influire sull&#39;ambiente di produzione.
 
-Questa guida per gli sviluppatori fornisce i passaggi necessari per utilizzare l&#39;API Sandbox per gestire le sandbox in Experience Platform e include chiamate API di esempio per eseguire varie operazioni.
+Questa guida per gli sviluppatori fornisce passaggi utili per utilizzare l&#39;API Sandbox per gestire le sandbox in  Experience Platform e include chiamate API di esempio per eseguire varie operazioni.
 
 ## Guida introduttiva all&#39;API Sandbox
 
-Per gestire le sandbox per l’organizzazione IMS, è necessario disporre delle autorizzazioni Amministrazione sandbox. Gli utenti senza autorizzazioni di accesso possono utilizzare l&#39;endpoint solo per [elencare le sandbox attive per l&#39;utente](./list-active-sandboxes.md)corrente. Per ulteriori informazioni su come assegnare le autorizzazioni sandbox per Experience Platform, consultate la panoramica [sul controllo](../../access-control/home.md) degli accessi.
+Per gestire le sandbox per l’organizzazione IMS, è necessario disporre delle autorizzazioni Amministrazione sandbox. Gli utenti senza autorizzazioni di accesso possono utilizzare l&#39;endpoint solo per [elencare le sandbox attive per l&#39;utente](./list-active-sandboxes.md)corrente. Consultate la panoramica [del controllo di](../../access-control/home.md) accesso per ulteriori informazioni su come assegnare le autorizzazioni sandbox per  Experience Platform.
 
 ### Lettura di chiamate API di esempio
 
-Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione relativa alla [lettura delle chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi della piattaforma Experience.
+Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi del Experience Platform .
 
 ### Raccogli valori per le intestazioni richieste
 
-Questa guida richiede che sia stata completata l&#39;esercitazione [di](../../tutorials/authentication.md) autenticazione per effettuare correttamente le chiamate alle API della piattaforma. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come illustrato di seguito:
+Questa guida richiede che sia stata completata l&#39;esercitazione [di](../../tutorials/authentication.md) autenticazione per effettuare correttamente le chiamate alle API Platform. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API di Experience Platform, come illustrato di seguito:
 
 * Autorizzazione: Portatore `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
