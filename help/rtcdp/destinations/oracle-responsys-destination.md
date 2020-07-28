@@ -18,7 +18,7 @@ ht-degree: 0%
 
 [Responsys](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) è uno strumento di marketing e-mail aziendale per campagne di marketing multicanale offerte [!DNL Oracle] per personalizzare le interazioni tra e-mail, dispositivi mobili, visualizzazione e social network.
 
-Per inviare i dati del segmento a [!DNL Oracle Responsys], è innanzitutto necessario [connettersi alla destinazione](#connect-destination) in Adobe Real-time Customer Data Platform, quindi [impostare un&#39;importazione](#import-data-into-responsys) di dati dalla posizione di archiviazione in [!DNL Oracle Responsys].
+Per inviare i dati del segmento a [!DNL Oracle Responsys], è innanzitutto necessario [collegarsi alla destinazione](#connect-destination) in  Adobe Real-time Customer Data Platform, quindi [impostare un&#39;importazione](#import-data-into-responsys) di dati dalla posizione di archiviazione in [!DNL Oracle Responsys].
 
 ## Destinazione Connect {#connect-destination}
 
@@ -49,4 +49,4 @@ Quando si [attivano i segmenti](/help/rtcdp/destinations/activate-destinations.m
 
 ## Imposta importazione dati in [!DNL Oracle Responsys] {#import-data-into-responsys}
 
-Dopo aver collegato CDP in tempo reale allo storage Amazon S3 o SFTP, è necessario configurare l&#39;importazione dei dati dalla posizione di archiviazione in [!DNL Oracle Responsys]. Per informazioni su come eseguire questa operazione, consulta [Importazione di contatti o account](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm) nella [!DNL Oracle Responsys Help Center].
+Dopo aver collegato CDP in tempo reale allo storage Amazon S3 o SFTP , è necessario configurare l&#39;importazione dei dati dalla posizione di archiviazione in [!DNL Oracle Responsys]. Per informazioni su come eseguire questa operazione, consulta [Importazione di contatti o account](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm) nella [!DNL Oracle Responsys Help Center].
