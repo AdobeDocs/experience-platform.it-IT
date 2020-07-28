@@ -472,7 +472,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### Caricare blocchi di file di grandi dimensioni
 
-Ora che il file è stato creato, tutti i blocchi successivi possono essere caricati effettuando ripetute richieste PATCH, una per ogni sezione del file.
+Ora che il file è stato creato, tutti i blocchi successivi possono essere caricati effettuando ripetute richieste di PATCH, una per ogni sezione del file.
 
 **Formato API**
 
@@ -821,7 +821,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Eliminare un batch {#delete-a-batch}
 
-Un batch può essere eliminato eseguendo la seguente richiesta POST con il parametro `action=REVERT` query all’ID del batch che si desidera eliminare. Il batch è contrassegnato come &quot;inattivo&quot; e può quindi essere utilizzato per la raccolta dei rifiuti. Il batch verrà raccolto in modo asincrono, al momento in cui verrà contrassegnato come &quot;eliminato&quot;.
+È possibile eliminare un batch eseguendo la seguente richiesta di POST con il parametro `action=REVERT` query all&#39;ID del batch che si desidera eliminare. Il batch è contrassegnato come &quot;inattivo&quot; e può quindi essere utilizzato per la raccolta dei rifiuti. Il batch verrà raccolto in modo asincrono, al momento in cui verrà contrassegnato come &quot;eliminato&quot;.
 
 **Formato API**
 
