@@ -1,6 +1,6 @@
 ---
 title: 'Note sulla versione di Adobe Experience Platform '
-description: ' note sulla versione di Experience Platform dell''11 marzo 2020'
+description: ' Experience Platform note sulla versione 11 marzo 2020'
 doc-type: release notes
 last-update: March 10, 2020
 author: ens71067
@@ -52,7 +52,7 @@ Per ulteriori informazioni su [!DNL Data Governance]di esso, consulta la panoram
 
 ## Ingestione dati {#ingestion}
 
- Adobe Experience Platform offre un set completo di funzioni per acquisire qualsiasi tipo e latenza di dati.  Adobe Experience Platform [!DNL Data Ingestion] offre diverse alternative per l’assimilazione dei dati, tra cui API Batch, API Streaming, connettori Adobe nativi, partner per l’integrazione dei dati o l’interfaccia utente del Adobe Experience Platform .
+ Adobe Experience Platform offre un set completo di funzioni per acquisire qualsiasi tipo e latenza di dati.  Adobe Experience Platform [!DNL Data Ingestion] offre diverse alternative per l’assimilazione dei dati, tra cui API Batch, API Streaming, connettori  Adobe nativi, partner per l’integrazione dei dati o l’interfaccia  Adobe Experience Platform.
 
 **Nuove funzionalità**
 
@@ -69,7 +69,7 @@ Per ulteriori informazioni sull’assimilazione dei dati in Platform, consulta l
 
 ## Destinazioni {#destinations}
 
-In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che attivano i dati per tali partner in modo semplice.
+In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni sono integrazioni precostruite con piattaforme di destinazione che attivano i dati a tali partner in modo semplice.
 
 **Nuove destinazioni**
 
@@ -77,8 +77,8 @@ Sono disponibili nuove destinazioni in cui è possibile attivare i dati  Adobe E
 
 | Destinazione | Descrizione |
 |--- | ---|
-| Destinazioni di archiviazione cloud | Adobe Real-time CDP ora può distribuire i segmenti come file di dati alle posizioni di archiviazione cloud SFTP [!DNL Amazon S3] o di archiviazione. Questo consente di inviare audience e i relativi attributi di profilo ai sistemi interni, tramite file CSV o delimitati da tabulazioni. |
-| Destinazioni pubblicitarie | La scheda di [!DNL Google] destinazione è ora divisa in tre schede di destinazione, per le tre diverse [!DNL Google] piattaforme attualmente supportate in Adobe Real-time CDP: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display &amp; Video 360. |
+| Destinazioni di archiviazione cloud |  CDP in tempo reale può ora distribuire i segmenti come file di dati alle posizioni di archiviazione cloud SFTP [!DNL Amazon S3] o del Adobe. Questo consente di inviare audience e i relativi attributi di profilo ai sistemi interni, tramite file CSV o delimitati da tabulazioni. |
+| Destinazioni pubblicitarie | La scheda di [!DNL Google] destinazione è ora divisa in tre schede di destinazione, per le tre diverse [!DNL Google] piattaforme attualmente supportate in  CDP in tempo reale del Adobe: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display &amp; Video 360. |
 
 Per saperne di più, visita la panoramica [delle destinazioni](../../rtcdp/destinations/destinations-overview.md)
 
@@ -102,7 +102,7 @@ Per ulteriori informazioni su [!DNL Identity Service]di esso, consulta la panora
 
 ## Origini {#sources}
 
- Adobe Experience Platform può acquisire dati da origini esterne consentendo al contempo di strutturare, etichettare e migliorare i dati utilizzando [!DNL Platform] i servizi. È possibile acquisire dati da origini diverse, come applicazioni Adobe, archiviazione basata su cloud, software di terze parti e il sistema CRM in uso.
+ Adobe Experience Platform può acquisire dati da origini esterne consentendo al contempo di strutturare, etichettare e migliorare i dati utilizzando [!DNL Platform] i servizi. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, software di terze parti e il sistema CRM in uso.
 
 [!DNL Experience Platform] fornisce un&#39;API RESTful e un&#39;interfaccia utente interattiva che consente di impostare connessioni sorgente per vari provider di dati con facilità. Queste connessioni di origine consentono di autenticare e connettersi a sistemi di storage e servizi CRM esterni, impostare i tempi per l&#39;esecuzione dell&#39;assimilazione e gestire il throughput di assimilazione dei dati.
 
