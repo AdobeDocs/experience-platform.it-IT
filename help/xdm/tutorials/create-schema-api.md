@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Creare uno schema utilizzando l&#39; [!DNL Schema Registry] API
 
-L&#39; [!DNL Schema Registry] oggetto viene utilizzato per accedere al [!DNL Schema Library] Adobe Experience Platform interno . Il [!DNL Schema Library] documento contiene le risorse messe a disposizione da Adobe, [!DNL Experience Platform] dai partner e dai fornitori di cui si utilizzano le applicazioni. Il Registro di sistema fornisce un&#39;interfaccia utente e RESTful API da cui sono accessibili tutte le risorse libreria disponibili.
+L&#39; [!DNL Schema Registry] oggetto viene utilizzato per accedere al [!DNL Schema Library] Adobe Experience Platform interno . Il [!DNL Schema Library] documento contiene le risorse messe a disposizione da  Adobe, partner [!DNL Experience Platform] e fornitori di cui si utilizzano le applicazioni. Il Registro di sistema fornisce un&#39;interfaccia utente e RESTful API da cui sono accessibili tutte le risorse libreria disponibili.
 
 Questa esercitazione utilizza l&#39; [!DNL Schema Registry] API per illustrare i passaggi necessari per comporre uno schema utilizzando una classe standard. Se si preferisce utilizzare l&#39;interfaccia utente in [!DNL Experience Platform], l&#39;esercitazione [Editor](create-schema-ui.md) schema fornisce istruzioni dettagliate per eseguire azioni simili nell&#39;editor dello schema.
 
@@ -39,7 +39,7 @@ Uno schema può essere considerato come il modello per i dati in cui si desidera
 
 Il processo di composizione dello schema inizia con la selezione di una classe. La classe definisce gli aspetti comportamentali chiave dei dati (record rispetto alle serie temporali), nonché i campi minimi richiesti per descrivere i dati che saranno acquisiti.
 
-Lo schema creato in questa esercitazione utilizza la [!DNL XDM Individual Profile] classe. [!DNL XDM Individual Profile] è una classe standard fornita da Adobe per definire il comportamento dei record. Ulteriori informazioni sul comportamento sono reperibili nelle [nozioni di base della composizione](../schema/composition.md)dello schema.
+Lo schema creato in questa esercitazione utilizza la [!DNL XDM Individual Profile] classe. [!DNL XDM Individual Profile] è una classe standard fornita da  Adobe per la definizione del comportamento dei record. Ulteriori informazioni sul comportamento sono reperibili nelle [nozioni di base della composizione](../schema/composition.md)dello schema.
 
 Per assegnare una classe, viene effettuata una chiamata API per creare (POST) un nuovo schema nel contenitore tenant. Questa chiamata include la classe che lo schema implementerà. Ogni schema può implementare una sola classe.
 
@@ -115,7 +115,7 @@ Una richiesta eseguita correttamente restituisce lo stato di risposta HTTP 201 (
 
 ### Cercare uno schema
 
-Per visualizzare lo schema appena creato, eseguite una richiesta di ricerca (GET) utilizzando l&#39;URI codificato `meta:altId` o l&#39; `$id` URI URL per lo schema.
+Per visualizzare lo schema appena creato, eseguire una richiesta di ricerca (GET) utilizzando l&#39;URI codificato `meta:altId` o l&#39; `$id` URI URL per lo schema.
 
 **Formato API**
 
@@ -191,7 +191,7 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **Richiesta**
 
-Questa richiesta aggiorna (PATCH) lo schema Membri fedeltà in modo da includere i campi nel mixin &quot;profilo-persona-dettagli&quot;.
+Questa richiesta aggiorna (PATCH) lo schema Membri fedeltà in modo da includere i campi nel mixin &quot;persona profilo-dettagli&quot;.
 
 Aggiungendo il mixin &quot;profilo-persona-dettagli&quot;, lo schema Membri fedeltà ora acquisisce informazioni sui membri del programma fedeltà, come il nome, il cognome e il compleanno.
 
@@ -273,7 +273,7 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **Richiesta**
 
-Questa richiesta aggiorna (PATCH) lo schema Membri fedeltà per includere i campi nel mixin &quot;profilo-dettagli personali&quot;, aggiungendo allo schema i campi &quot;indirizzo principale&quot;, &quot;indirizzo e-mail&quot; e &quot;telefono domestico&quot;.
+Questa richiesta aggiorna (PATCH) lo schema Membri fedeltà per includere i campi nel mixin &quot;profilo-dettagli-personali&quot;, aggiungendo allo schema i campi &quot;indirizzo principale&quot;, &quot;indirizzo e-mail&quot; e &quot;telefono domestico&quot;.
 
 ```SHELL
 curl -X PATCH \
@@ -575,7 +575,7 @@ Potete vedere che il mixin è stato aggiunto correttamente perché la risposta o
 
 ### Visualizza lo schema corrente
 
-È ora possibile eseguire una richiesta GET per visualizzare lo schema corrente e vedere in che modo i mixin aggiunti hanno contribuito alla struttura generale dello schema.
+È ora possibile eseguire una richiesta di GET per visualizzare lo schema corrente e vedere in che modo i mixin aggiunti hanno contribuito alla struttura generale dello schema.
 
 **Formato API**
 
@@ -908,7 +908,7 @@ La risposta ora include un riferimento (`$ref`) al tipo di dati nell&#39;oggetto
 }
 ```
 
-L&#39;esecuzione di una richiesta GET per la ricerca dello schema ora mostra il riferimento al tipo di dati in &quot;properties/_{TENANT_ID}&quot;, come illustrato di seguito:
+L&#39;esecuzione di una richiesta di GET per la ricerca dello schema ora mostra il riferimento al tipo di dati in &quot;properties/_{TENANT_ID}&quot;, come illustrato di seguito:
 
 ```JSON
 "_{TENANT_ID}": {
@@ -1023,7 +1023,7 @@ Per ulteriori informazioni sull&#39;utilizzo delle viste di unione, vedete la se
 
 ### Aggiungi tag &quot;union&quot;
 
-Affinché uno schema possa essere incluso nella visualizzazione unione unita, è necessario aggiungere il tag &quot;unione&quot; all&#39; `meta:immutableTags` attributo dello schema. Questo viene fatto tramite una richiesta PATCH per aggiornare lo schema e aggiungere l&#39; `meta:immutableTags` array con il valore &quot;union&quot;.
+Affinché uno schema possa essere incluso nella visualizzazione unione unita, è necessario aggiungere il tag &quot;unione&quot; all&#39; `meta:immutableTags` attributo dello schema. Questa operazione viene eseguita tramite una richiesta di PATCH per aggiornare lo schema e aggiungere l&#39; `meta:immutableTags` array con il valore &quot;union&quot;.
 
 **Formato API**
 
@@ -1103,7 +1103,7 @@ La risposta mostra che l&#39;operazione è stata eseguita correttamente e lo sch
 
 ### Elenca gli schemi in un&#39;unione
 
-Lo schema è stato aggiunto correttamente all&#39; [!DNL XDM Individual Profile] unione. Per visualizzare un elenco di tutti gli schemi che fanno parte della stessa unione, potete eseguire una richiesta GET utilizzando i parametri di query per filtrare la risposta.
+Lo schema è stato aggiunto correttamente all&#39; [!DNL XDM Individual Profile] unione. Per visualizzare un elenco di tutti gli schemi che fanno parte della stessa unione, potete eseguire una richiesta di GET utilizzando parametri di query per filtrare la risposta.
 
 Utilizzando il parametro `property` query, è possibile specificare che vengono restituiti solo gli schemi contenenti un `meta:immutableTags` campo con un valore `meta:class` uguale a quello `$id` della [!DNL XDM Individual Profile] classe.
 
