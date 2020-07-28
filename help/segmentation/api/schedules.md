@@ -22,7 +22,7 @@ Gli endpoint utilizzati in questa guida fanno parte dell&#39; [!DNL Adobe Experi
 
 ## Recupero di un elenco di pianificazioni {#retrieve-list}
 
-Puoi recuperare un elenco di tutte le pianificazioni per la tua organizzazione IMS effettuando una richiesta GET all&#39; `/config/schedules` endpoint.
+È possibile recuperare un elenco di tutte le pianificazioni per la propria organizzazione IMS effettuando una richiesta di GET all&#39; `/config/schedules` endpoint.
 
 **Formato API**
 
@@ -103,7 +103,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di pianificazi
 
 ## Create a new schedule {#create}
 
-Potete creare una nuova pianificazione effettuando una richiesta POST all’ `/config/schedules` endpoint.
+Potete creare una nuova pianificazione effettuando una richiesta POST all&#39; `/config/schedules` endpoint.
 
 **Formato API**
 
@@ -173,7 +173,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli della nuova p
 
 ## Recuperare una pianificazione specifica {#get}
 
-Potete recuperare informazioni dettagliate su una pianificazione specifica effettuando una richiesta GET all&#39; `/config/schedules` endpoint e fornendo l&#39;ID della pianificazione che desiderate recuperare nel percorso della richiesta.
+Potete recuperare informazioni dettagliate su una pianificazione specifica effettuando una richiesta di GET all&#39; `/config/schedules` endpoint e fornendo l&#39;ID della pianificazione che desiderate recuperare nel percorso della richiesta.
 
 **Formato API**
 
@@ -234,9 +234,9 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 
 ## Dettagli di aggiornamento per una pianificazione specifica {#update}
 
-Puoi aggiornare una pianificazione specifica effettuando una richiesta PATCH all’ `/config/schedules` endpoint e fornendo l’ID della pianificazione che stai tentando di aggiornare nel percorso della richiesta.
+Potete aggiornare una pianificazione specifica effettuando una richiesta di PATCH all&#39; `/config/schedules` endpoint e fornendo l&#39;ID della pianificazione che state tentando di aggiornare nel percorso della richiesta.
 
-La richiesta PATCH consente di aggiornare lo [stato](#update-state) o la programmazione [cron per una singola pianificazione](#update-schedule) .
+La richiesta PATCH consente di aggiornare lo [stato](#update-state) o la pianificazione [cron per una singola pianificazione](#update-schedule) .
 
 ### Aggiorna stato pianificazione {#update-state}
 
