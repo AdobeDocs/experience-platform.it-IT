@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Configurazioni di proiezione Edge e endpoint di destinazioni
 
-Al fine di promuovere esperienze coordinate, coerenti e personalizzate per i clienti attraverso più canali in tempo reale, i dati giusti devono essere prontamente disponibili e costantemente aggiornati man mano che si verificano le modifiche.  Adobe Experience Platform consente l&#39;accesso in tempo reale ai dati attraverso l&#39;uso di ciò che sono noti come edge. Un server periferico è un server collocato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni. Ad esempio, applicazioni Adobe come  Adobe Target e  Adobe Campaign utilizzano i bordi per fornire esperienze personalizzate ai clienti in tempo reale. I dati vengono indirizzati a un bordo da una proiezione, con una destinazione di proiezione che definisce il bordo a cui verranno inviati i dati, e una configurazione di proiezione che definisce le informazioni specifiche che verranno rese disponibili sul bordo. Questa guida fornisce istruzioni dettagliate per l’utilizzo dell’ [!DNL Real-time Customer Profile] API per lavorare con proiezioni di edge, incluse destinazioni e configurazioni.
+Al fine di promuovere esperienze coordinate, coerenti e personalizzate per i clienti attraverso più canali in tempo reale, i dati giusti devono essere prontamente disponibili e costantemente aggiornati man mano che si verificano le modifiche.  Adobe Experience Platform consente l&#39;accesso in tempo reale ai dati attraverso l&#39;uso di ciò che sono noti come edge. Un server periferico è un server collocato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni. Ad esempio,  applicazioni di Adobe come  Adobe Target e  Adobe Campaign utilizzano i bordi per fornire esperienze personalizzate ai clienti in tempo reale. I dati vengono indirizzati a un bordo da una proiezione, con una destinazione di proiezione che definisce il bordo a cui verranno inviati i dati, e una configurazione di proiezione che definisce le informazioni specifiche che verranno rese disponibili sul bordo. Questa guida fornisce istruzioni dettagliate per l’utilizzo dell’ [!DNL Real-time Customer Profile] API per lavorare con proiezioni di edge, incluse destinazioni e configurazioni.
 
 ## Introduzione
 
@@ -29,7 +29,7 @@ Una proiezione può essere instradata a uno o più bordi specificando le posizio
 
 ### Elenca tutte le destinazioni
 
-Potete elencare le destinazioni periferiche già create per la vostra organizzazione eseguendo una richiesta GET all&#39; `/config/destinations` endpoint.
+Potete elencare le destinazioni periferiche già create per la vostra organizzazione effettuando una richiesta di GET all’ `/config/destinations` endpoint.
 
 **Formato API**
 
@@ -102,14 +102,14 @@ La risposta include un `projectionDestinations` &#39;array con i dettagli per og
 
 | Proprietà | Descrizione |
 |---|---|
-| `_links.self.href` | Al livello principale corrisponde al percorso utilizzato per effettuare la richiesta GET. All&#39;interno di ciascun oggetto di destinazione, questo percorso può essere utilizzato in una richiesta GET per cercare direttamente i dettagli di una destinazione specifica. |
+| `_links.self.href` | Al livello principale corrisponde al percorso utilizzato per effettuare la richiesta di GET. All&#39;interno di ciascun oggetto di destinazione, questo percorso può essere utilizzato in una richiesta di GET per cercare direttamente i dettagli di una destinazione specifica. |
 | `id` | All&#39;interno di ciascun oggetto di destinazione, `"id"` viene visualizzato l&#39;ID univoco generato dal sistema di sola lettura per la destinazione. Questo ID viene utilizzato quando si fa riferimento a una destinazione specifica e quando si creano configurazioni di proiezione. |
 
 Per ulteriori informazioni sugli attributi di una singola destinazione, consulta la sezione sulla [creazione di una destinazione](#create-a-destination) che segue.
 
 ### Create a destination {#create-a-destination}
 
-Se la destinazione desiderata non esiste già, potete creare una nuova destinazione di proiezione effettuando una richiesta POST all&#39; `/config/destinations` endpoint.
+Se la destinazione desiderata non esiste già, potete creare una nuova destinazione di proiezione eseguendo una richiesta POST all&#39; `/config/destinations` endpoint.
 
 **Formato API**
 
@@ -122,7 +122,7 @@ POST /config/destinations
 La richiesta seguente crea una nuova destinazione edge.
 
 >[!NOTE]
->La richiesta POST per creare una destinazione richiede un&#39; `Content-Type` intestazione specifica, come illustrato di seguito. Se si utilizza un&#39; `Content-Type` intestazione non corretta, si verifica un errore HTTP Status 415 (Tipo di supporto non supportato).
+>La richiesta di POST per creare una destinazione richiede un&#39; `Content-Type` intestazione specifica, come illustrato di seguito. Se si utilizza un&#39; `Content-Type` intestazione non corretta, si verifica un errore HTTP Status 415 (Tipo di supporto non supportato).
 
 ```shell
 curl -X POST \
@@ -177,7 +177,7 @@ Una risposta corretta restituisce i dettagli della nuova destinazione Edge creat
 
 ### Visualizzare una destinazione
 
-Se conoscete l&#39;ID univoco di una destinazione di proiezione, potete eseguire una richiesta di ricerca per visualizzarne i dettagli. A tal fine, viene effettuata una richiesta GET all&#39; `/config/destinations` endpoint e viene incluso l&#39;ID della destinazione nel percorso della richiesta.
+Se conoscete l&#39;ID univoco di una destinazione di proiezione, potete eseguire una richiesta di ricerca per visualizzarne i dettagli. Questa operazione viene eseguita eseguendo una richiesta di GET all&#39; `/config/destinations` endpoint e includendo l&#39;ID della destinazione nel percorso della richiesta.
 
 **Formato API**
 
@@ -191,7 +191,7 @@ GET /config/destinations/{DESTINATION_ID}
 
 **Richiesta**
 
-La seguente richiesta esegue una ricerca (GET) per visualizzare la destinazione dell&#39;ID fornito nel percorso della richiesta.
+La richiesta seguente esegue una ricerca (GET) per visualizzare la destinazione dell’ID fornito nel percorso della richiesta.
 
 ```shell
 curl -X GET \
@@ -224,7 +224,7 @@ L&#39;oggetto response mostra i dettagli della destinazione di proiezione. L&#39
 
 ### Aggiornare una destinazione
 
-Una destinazione esistente può essere aggiornata effettuando una richiesta PUT all&#39; `/config/destinations` endpoint e includendo l&#39;ID della destinazione da aggiornare nel percorso della richiesta. Questa operazione _riscrive_ la destinazione, pertanto nel corpo della richiesta devono essere forniti gli stessi attributi forniti al momento della creazione di una nuova destinazione.
+Una destinazione esistente può essere aggiornata effettuando una richiesta di PUT all&#39; `/config/destinations` endpoint e includendo l&#39;ID della destinazione da aggiornare nel percorso della richiesta. Questa operazione _riscrive_ la destinazione, pertanto nel corpo della richiesta devono essere forniti gli stessi attributi forniti al momento della creazione di una nuova destinazione.
 
 >[!CAUTION]
 >La risposta API alla richiesta di aggiornamento è immediata, ma le modifiche alle proiezioni vengono applicate in modo asincrono. In altre parole, esiste una differenza di tempo tra quando viene effettuato l&#39;aggiornamento alla definizione della destinazione e quando viene applicato.
@@ -329,7 +329,7 @@ Le configurazioni di proiezione forniscono informazioni su quali dati devono ess
 
 ### Elenca tutte le configurazioni di proiezione
 
-Potete elencare tutte le configurazioni di proiezione che sono state create per la vostra organizzazione effettuando una richiesta GET all&#39; `/config/projections` endpoint. È inoltre possibile aggiungere parametri facoltativi al percorso della richiesta per accedere alle configurazioni di proiezione per uno schema specifico o per cercare una proiezione singola in base al nome.
+Potete elencare tutte le configurazioni di proiezione che sono state create per la vostra organizzazione effettuando una richiesta di GET all&#39; `/config/projections` endpoint. È inoltre possibile aggiungere parametri facoltativi al percorso della richiesta per accedere alle configurazioni di proiezione per uno schema specifico o per cercare una proiezione singola in base al nome.
 
 **Formato API**
 
@@ -429,7 +429,7 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 **Richiesta**
 
 >[!NOTE]
->La richiesta POST per creare una configurazione richiede un&#39; `Content-Type` intestazione specifica, come illustrato di seguito. Se si utilizza un&#39; `Content-Type` intestazione non corretta, si verifica un errore HTTP Status 415 (Tipo di supporto non supportato).
+>La richiesta di POST per creare una configurazione richiede una specifica `Content-Type` intestazione, come illustrato di seguito. Se si utilizza un&#39; `Content-Type` intestazione non corretta, si verifica un errore HTTP Status 415 (Tipo di supporto non supportato).
 
 ```shell
 curl -X POST \
