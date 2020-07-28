@@ -48,7 +48,7 @@ I casi di utilizzo per gli attributi calcolati possono variare da calcoli sempli
 Per configurare un attributo calcolato, è innanzitutto necessario identificare il campo che includerà il valore dell&#39;attributo calcolato. Questo campo può essere creato utilizzando un mixin per aggiungere il campo a uno schema esistente, oppure selezionando un campo già definito all&#39;interno di uno schema.
 
 >[!NOTE]
->Gli attributi calcolati non possono essere aggiunti ai campi all&#39;interno di mixin definiti da Adobe. Il campo deve essere all&#39;interno dello `tenant` spazio dei nomi, ovvero deve essere un campo definito e aggiunto a uno schema.
+>Gli attributi calcolati non possono essere aggiunti ai campi all&#39;interno  mixin definiti dal Adobe. Il campo deve essere all&#39;interno dello `tenant` spazio dei nomi, ovvero deve essere un campo definito e aggiunto a uno schema.
 
 Per definire con successo un campo attributo calcolato, lo schema deve essere abilitato per [!DNL Profile] e deve essere visualizzato come parte dello schema unione per la classe su cui si basa lo schema. Per ulteriori informazioni sugli schemi e sulle unioni [!DNL Profile]abilitati, consulta la sezione della guida [!DNL Schema Registry] per gli sviluppatori sull&#39; [abilitazione di uno schema per il profilo e la visualizzazione degli schemi](../../xdm/api/getting-started.md)di unione. È inoltre consigliabile rivedere la [sezione sui sindacati](../../xdm/schema/composition.md) nella documentazione di base sulla composizione dello schema.
 
@@ -110,7 +110,7 @@ Ora è possibile fare clic **[!UICONTROL Save]** per salvare lo schema aggiornat
 
 Con il campo attributo calcolato identificato e la conferma che lo schema è abilitato per [!DNL Profile], ora è possibile configurare un attributo calcolato.
 
-Iniziate a effettuare una richiesta POST all’ `/config/computedAttributes` endpoint con un corpo di richiesta contenente i dettagli dell’attributo calcolato che desiderate creare.
+Iniziate a effettuare una richiesta POST all&#39;endpoint con un corpo di richiesta contenente i dettagli dell&#39;attributo calcolato che desiderate creare. `/config/computedAttributes`
 
 **Formato API**
 
@@ -223,7 +223,7 @@ I passaggi per elencare tutti gli attributi calcolati e visualizzare uno specifi
 
 ### Elenca gli attributi calcolati {#list-computed-attributes}
 
-L&#39;organizzazione IMS può creare più attributi calcolati e l&#39;esecuzione di una richiesta GET all&#39; `/config/computedAttributes` endpoint consente di elencare tutti gli attributi calcolati esistenti per l&#39;organizzazione.
+L&#39;organizzazione IMS può creare più attributi calcolati e l&#39;esecuzione di una richiesta di GET all&#39; `/config/computedAttributes` endpoint consente di elencare tutti gli attributi calcolati esistenti per l&#39;organizzazione.
 
 **Formato API**
 
@@ -357,11 +357,11 @@ La risposta include anche un `children` array composto da uno o più oggetti, ci
 | `_page.pageSize` | Il numero di attributi calcolati restituiti in questa pagina di risultati. Se `pageSize` è uguale a `totalCount`, significa che esiste solo una pagina di risultati e che tutti gli attributi calcolati sono stati restituiti. Se non sono uguali, è possibile accedere ad altre pagine di risultati. See `_links.next` for details. |
 | `children` | Un array composto da uno o più oggetti, ciascuno contenente i dettagli di un singolo attributo calcolato. Se non sono stati definiti attributi calcolati, la `children` matrice è vuota. |
 | `id` | Un valore univoco, di sola lettura, generato dal sistema assegnato automaticamente a un attributo calcolato al momento della creazione. Per ulteriori informazioni sui componenti di un oggetto attributo calcolato, vedere la sezione sulla [creazione di un attributo](#create-a-computed-attribute) calcolato in precedenza in questa esercitazione. |
-| `_links.next` | Se viene restituita una singola pagina di attributi calcolati, `_links.next` è un oggetto vuoto, come illustrato nella risposta dell&#39;esempio precedente. Se la vostra organizzazione dispone di molti attributi calcolati, questi verranno restituiti su più pagine a cui potete accedere effettuando una richiesta GET al `_links.next` valore. |
+| `_links.next` | Se viene restituita una singola pagina di attributi calcolati, `_links.next` è un oggetto vuoto, come illustrato nella risposta dell&#39;esempio precedente. Se la vostra organizzazione dispone di molti attributi calcolati, questi verranno restituiti su più pagine a cui potete accedere effettuando una richiesta di GET al `_links.next` valore. |
 
 ### Visualizzare un attributo calcolato {#view-a-computed-attribute}
 
-Potete inoltre visualizzare uno specifico attributo calcolato effettuando una richiesta GET all&#39; `/config/computedAttributes` endpoint e includendo l&#39;ID attributo calcolato nel percorso della richiesta.
+Potete inoltre visualizzare uno specifico attributo calcolato effettuando una richiesta di GET all&#39; `/config/computedAttributes` endpoint e includendo l&#39;ID attributo calcolato nel percorso della richiesta.
 
 **Formato API**
 
@@ -432,7 +432,7 @@ curl -X GET \
 
 ## Aggiornare un attributo calcolato
 
-Se è necessario aggiornare un attributo calcolato esistente, ciò può essere fatto eseguendo una richiesta PATCH all&#39; `/config/computedAttributes` endpoint e includendo l&#39;ID dell&#39;attributo calcolato che si desidera aggiornare nel percorso della richiesta.
+Se è necessario aggiornare un attributo calcolato esistente, è possibile eseguire questa operazione eseguendo una richiesta PATCH all&#39; `/config/computedAttributes` endpoint e includendo l&#39;ID dell&#39;attributo calcolato che si desidera aggiornare nel percorso della richiesta.
 
 **Formato API**
 
@@ -476,7 +476,7 @@ curl -X PATCH \
 
 **Risposta**
 
-Un aggiornamento riuscito restituisce lo stato HTTP 204 (nessun contenuto) e un corpo di risposta vuoto. Se desiderate confermare che l&#39;aggiornamento è stato eseguito correttamente, potete eseguire una richiesta GET per visualizzare l&#39;attributo calcolato in base al relativo ID.
+Un aggiornamento riuscito restituisce lo stato HTTP 204 (nessun contenuto) e un corpo di risposta vuoto. Se desiderate confermare che l&#39;aggiornamento sia stato eseguito correttamente, potete eseguire una richiesta di GET per visualizzare l&#39;attributo calcolato in base al relativo ID.
 
 ## Eliminare un attributo calcolato
 
@@ -510,7 +510,7 @@ curl -X DELETE \
 
 **Risposta**
 
-Una richiesta di eliminazione riuscita restituisce lo stato HTTP 200 (OK) e un corpo di risposta vuoto. Per confermare che l&#39;eliminazione è avvenuta correttamente, potete eseguire una richiesta GET per cercare l&#39;attributo calcolato dal relativo ID. Se l&#39;attributo è stato eliminato, si riceverà un errore HTTP Status 404 (Non trovato).
+Una richiesta di eliminazione riuscita restituisce lo stato HTTP 200 (OK) e un corpo di risposta vuoto. Per confermare che l&#39;eliminazione è avvenuta correttamente, potete eseguire una richiesta di GET per cercare l&#39;attributo calcolato dal relativo ID. Se l&#39;attributo è stato eliminato, si riceverà un errore HTTP Status 404 (Non trovato).
 
 ## Passaggi successivi
 
