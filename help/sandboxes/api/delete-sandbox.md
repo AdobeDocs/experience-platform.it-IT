@@ -18,7 +18,7 @@ Potete eliminare una sandbox effettuando una richiesta di DELETE che include la 
 
 >[!NOTE]
 >
->Facendo questa chiamata API, la proprietà della `status` sandbox viene aggiornata in &quot;eliminata&quot; e disattivata. Le richieste GET possono ancora recuperare i dettagli della sandbox dopo che è stata eliminata.
+>Facendo questa chiamata API, la proprietà della `status` sandbox viene aggiornata in &quot;eliminata&quot; e disattivata. Le richieste di GET possono ancora recuperare i dettagli della sandbox dopo che è stata eliminata.
 
 **Formato API**
 
