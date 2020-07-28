@@ -18,7 +18,7 @@ In questo documento sono descritti i passaggi necessari per eseguire varie opera
 
 ## Visualizzare le sandbox
 
-Nell’interfaccia  di Experience Platform, fate clic **[!UICONTROL Sandboxes]** nella barra di navigazione a sinistra per aprire il _[!UICONTROL Sandboxes]_dashboard. Il dashboard elenca tutte le sandbox disponibili per l’organizzazione, incluso il tipo di sandbox (produzione o sviluppo) e lo stato (attivo, creazione, eliminazione o non riuscito).
+Nell’interfaccia utente del Experience Platform , fate clic **[!UICONTROL Sandboxes]** nella barra di navigazione a sinistra per aprire il _[!UICONTROL Sandboxes]_dashboard. Il dashboard elenca tutte le sandbox disponibili per l’organizzazione, incluso il tipo di sandbox (produzione o sviluppo) e lo stato (attivo, creazione, eliminazione o non riuscito).
 
 ![](../images/ui/sandboxes-tab.png)
 
@@ -46,15 +46,15 @@ Per creare una nuova sandbox nell’interfaccia utente, fate clic **[!UICONTROL 
 
 ![](../images/ui/create-sandbox-button.png)
 
-Viene _[!UICONTROL Create Sandbox]_visualizzata una finestra di dialogo che richiede di specificare un titolo e un nome da visualizzare per la sandbox. The **display title**is meant to be human-readable and should be descriptive enough to be easily identifiable. The sandbox **[!UICONTROL Name]**is an all-lowercase identifier for use in API calls, and should therefore be unique and concise.
+Viene _[!UICONTROL Create Sandbox]_visualizzata una finestra di dialogo che richiede di specificare un titolo e un nome da visualizzare per la sandbox. Il titolo **del**display deve essere leggibile dall&#39;uomo e deve essere sufficientemente descrittivo per essere facilmente identificabile. La sandbox **[!UICONTROL Name]**è un identificatore in lettere minuscole da usare nelle chiamate API e deve pertanto essere univoca e concisa.
 
-When finished, click **[!UICONTROL Create]**.
+Al termine, fate clic **[!UICONTROL Create]**.
 
 ![](../images/ui/create-sandbox-dialog.png)
 
 >[!NOTE]
 >
->Since you are restricted to creating non-production sandbox types only, the **[!UICONTROL type]** option is locked at &quot;Non-Production&quot; and cannot be manipulated.
+>Poiché vi limitate a creare solo tipi di sandbox non di produzione, l&#39; **[!UICONTROL type]** opzione è bloccata in &quot;Non produzione&quot; e non può essere manipolata.
 
 Dopo aver creato la sandbox, aggiornate la pagina e la nuova sandbox appare nel _[!UICONTROL Sandboxes]_dashboard con lo stato &quot;[!UICONTROL Creating]&quot;. Il provisioning delle nuove sandbox richiede circa 15 minuti, dopo di che il loro stato cambia in &quot;[!UICONTROL Active]&quot;.
 
@@ -100,4 +100,4 @@ Viene visualizzato un messaggio di conferma e la sandbox viene rimossa dall’ _
 
 ## Passaggi successivi
 
-Questo documento illustra come gestire le sandbox nell’interfaccia utente  di Experience Platform. Per informazioni su come gestire le sandbox tramite l&#39;API Sandbox, consultate la guida [per gli sviluppatori di](../api/getting-started.md)sandbox.
+Questo documento illustra come gestire le sandbox nell&#39;interfaccia utente del Experience Platform . Per informazioni su come gestire le sandbox tramite l&#39;API Sandbox, consultate la guida [per gli sviluppatori di](../api/getting-started.md)sandbox.
