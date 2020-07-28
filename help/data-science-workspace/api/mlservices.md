@@ -20,7 +20,7 @@ I programmi di formazione e valutazione automatizzati sono definiti con una marc
 
 ## Creare un servizio MLS {#create-an-mlservice}
 
-Potete creare un servizio MLS eseguendo una richiesta POST e un payload che fornisce un nome per il servizio e un ID MLInvalido. L’istanza MLI utilizzata per creare un servizio MLS non è necessaria per disporre di sperimentazioni di formazione esistenti, ma potete scegliere di creare il servizio MLS con un modello già esistente fornendo l’ID di esperienza e l’ID di esecuzione della formazione corrispondenti.
+Potete creare un servizio MLS eseguendo una richiesta di POST e un payload che fornisce un nome per il servizio e un ID MLInvalido. L’istanza MLI utilizzata per creare un servizio MLS non è necessaria per disporre di sperimentazioni di formazione esistenti, ma potete scegliere di creare il servizio MLS con un modello già esistente fornendo l’ID di esperienza e l’ID di esecuzione della formazione corrispondenti.
 
 **Formato API**
 
@@ -108,7 +108,7 @@ Una risposta di successo restituisce un payload contenente i dettagli del serviz
 
 ## Recuperare un elenco di MLServices {#retrieve-a-list-of-mlservices}
 
-È possibile recuperare un elenco di MLServices eseguendo una singola richiesta GET. Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri delle [query per il recupero](./appendix.md#query)delle risorse.
+È possibile recuperare un elenco di MLServices eseguendo una singola richiesta di GET. Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri delle [query per il recupero](./appendix.md#query)delle risorse.
 
 **Formato API**
 
@@ -167,7 +167,7 @@ Una risposta di successo restituisce un elenco di MLServices con i relativi dett
 
 ## Recuperare un servizio MLService specifico {#retrieve-a-specific-mlservice}
 
-Potete recuperare i dettagli di un esperimento specifico eseguendo una richiesta GET che include l&#39;ID del servizio MLS desiderato nel percorso della richiesta.
+Potete recuperare i dettagli di un esperimento specifico eseguendo una richiesta di GET che include l&#39;ID del servizio MLS desiderato nel percorso della richiesta.
 
 **Formato API**
 
@@ -211,11 +211,11 @@ Una risposta corretta restituisce un payload contenente i dettagli del servizio 
 
 ## Aggiornare un servizio MLService {#update-an-mlservice}
 
-Potete aggiornare un servizio MLS esistente sovrascrivendone le proprietà tramite una richiesta PUT che include l&#39;ID del servizio MLService di destinazione nel percorso della richiesta e fornisce un payload JSON contenente le proprietà aggiornate.
+Potete aggiornare un servizio MLS esistente sovrascrivendone le proprietà tramite una richiesta di PUT che include l&#39;ID di MLService di destinazione nel percorso di richiesta e fornisce un payload JSON contenente le proprietà aggiornate.
 
 >[!TIP]
 >
->Per garantire il successo di questa richiesta PUT, si consiglia innanzitutto di eseguire una richiesta GET per [recuperare il servizio MLService per ID](#retrieve-a-specific-mlservice). Quindi, modificate e aggiornate l&#39;oggetto JSON restituito e applicate l&#39;intero oggetto JSON modificato come payload per la richiesta PUT.
+>Per garantire il successo di questa richiesta di PUT, si consiglia innanzitutto di eseguire una richiesta di GET per [recuperare il servizio MLService tramite ID](#retrieve-a-specific-mlservice). Quindi, modificate e aggiornate l&#39;oggetto JSON restituito e applicate l&#39;intero oggetto JSON modificato come payload per la richiesta di PUT.
 
 **Formato API**
 
