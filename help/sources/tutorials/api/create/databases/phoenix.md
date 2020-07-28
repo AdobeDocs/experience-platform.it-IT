@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Creare un connettore Phoenix utilizzando l'API di servizio di flusso
+title: Creare un connettore Phoenix tramite l'API di servizio di flusso
 topic: overview
 translation-type: tm+mt
 source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
