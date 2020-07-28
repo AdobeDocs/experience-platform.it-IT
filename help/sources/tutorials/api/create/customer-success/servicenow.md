@@ -68,7 +68,7 @@ Per creare una [!DNL ServiceNow] connessione, è necessario che all&#39;interno 
 
 **Formato API**
 
-Ogni origine disponibile dispone di un proprio set di specifiche di connessione per descrivere le proprietà del connettore, ad esempio i requisiti di autenticazione. L&#39;invio di una richiesta GET all&#39; `/connectionSpecs` endpoint restituirà le specifiche di connessione per tutte le origini disponibili. È inoltre possibile includere la query `property=name=="service-now"` per ottenere informazioni specifiche per [!DNL ServiceNow].
+Ogni origine disponibile dispone di un proprio set di specifiche di connessione per descrivere le proprietà del connettore, ad esempio i requisiti di autenticazione. L&#39;invio di una richiesta di GET all&#39; `/connectionSpecs` endpoint restituirà le specifiche di connessione per tutte le origini disponibili. È inoltre possibile includere la query `property=name=="service-now"` per ottenere informazioni specifiche per [!DNL ServiceNow].
 
 ```http
 GET /connectionSpecs
