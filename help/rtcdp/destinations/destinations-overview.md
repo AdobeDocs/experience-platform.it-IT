@@ -1,8 +1,8 @@
 ---
 title: Panoramica delle destinazioni
 seo-title: Panoramica delle destinazioni
-description: Le destinazioni sono integrazioni predefinite con piattaforme di destinazione che consentono l'attivazione senza soluzione di continuità dei dati dall'Platform di dati del cliente in tempo reale. Puoi utilizzare Destinazioni nell'Platform dati cliente in tempo reale di Adobe per attivare i dati noti e sconosciuti per campagne di marketing multicanale, campagne e-mail, campagne pubblicitarie mirate e molti altri casi di utilizzo.
-seo-description: Le destinazioni sono integrazioni predefinite con piattaforme di destinazione che consentono l'attivazione senza soluzione di continuità dei dati dall'Platform di dati del cliente in tempo reale. Puoi utilizzare Destinazioni nell'Platform dati cliente in tempo reale di Adobe per attivare i dati noti e sconosciuti per campagne di marketing multicanale, campagne e-mail, campagne pubblicitarie mirate e molti altri casi di utilizzo.
+description: Le destinazioni sono integrazioni predefinite con piattaforme di destinazione che consentono l'attivazione senza soluzione di continuità dei dati dall'Platform di dati del cliente in tempo reale. Puoi utilizzare Destinazioni nel  Adobe Real-time Customer Data Platform per attivare i tuoi dati noti e sconosciuti per campagne di marketing su più canali, campagne e-mail, pubblicità mirata e molti altri casi di utilizzo.
+seo-description: Le destinazioni sono integrazioni predefinite con piattaforme di destinazione che consentono l'attivazione senza soluzione di continuità dei dati dall'Platform di dati del cliente in tempo reale. Puoi utilizzare Destinazioni nel  Adobe Real-time Customer Data Platform per attivare i tuoi dati noti e sconosciuti per campagne di marketing su più canali, campagne e-mail, pubblicità mirata e molti altri casi di utilizzo.
 translation-type: tm+mt
 source-git-commit: 7aa15772003cce1dfc7c3636048bce9a35bf8197
 workflow-type: tm+mt
@@ -36,7 +36,7 @@ I controlli nell&#39;area di lavoro [](/help/rtcdp/destinations/destinations-wor
 * Creare, modificare, attivare e disattivare i flussi di dati verso le destinazioni nel catalogo;
 * creare un account in una posizione di archiviazione o collegare CDP in tempo reale all&#39;account nella piattaforma di destinazione;
 * Selezionare i segmenti da attivare nelle destinazioni;
-* Seleziona i campi [](../../xdm/home.md) Experience Data Model (XDM) da esportare quando attivi i segmenti nelle destinazioni di marketing tramite e-mail.
+* Seleziona i campi [di](../../xdm/home.md) Experience Data Model (XDM) da esportare quando attivi i segmenti in destinazioni di marketing tramite e-mail.
 
 ## Destination types and categories {#types-and-categories}
 
