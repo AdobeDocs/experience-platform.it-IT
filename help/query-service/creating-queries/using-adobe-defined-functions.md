@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Funzioni definite da Adobe
+title: ' funzioni definite dal Adobe'
 topic: queries
 translation-type: tm+mt
 source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
@@ -12,18 +12,18 @@ ht-degree: 6%
 ---
 
 
-# Utilizzo di funzioni definite da Adobe
+# Utilizzo  funzioni definite dal Adobe
 
-Uno dei principali fattori di differenziazione di Adobe è che comprendono i dati relativi all&#39;esperienza e ciò che i clienti devono poter fare con tali dati. È possibile utilizzare questa comprensione per creare funzioni di supporto che semplificano il lavoro.
+Uno  Adobe  grande differenziatore è che comprendono i dati relativi all&#39;esperienza e ciò che i clienti devono fare con quei dati. È possibile utilizzare questa comprensione per creare funzioni di supporto che semplificano il lavoro.
 
-Questo documento descrive le funzioni definite da Adobe (ADF) per supportare tre [!DNL Analytics] attività chiave:
+Il presente documento descrive  funzioni definite dal Adobe (ADF) per supportare tre [!DNL Analytics] attività chiave:
 - [Sessionizzazione](#sessionization)
 - [Attribution](#attribution)
 - [Tracciatura percorso](#pathing)
 
 ## Sessionizzazione
 
-Vengono `SESS_TIMEOUT()` riprodotti i raggruppamenti di visite trovati con Adobe  Analytics. Esegue un raggruppamento simile basato sul tempo, ma con parametri personalizzabili.
+Vengono `SESS_TIMEOUT()` riprodotti i raggruppamenti di visite trovati con  Adobe Analytics. Esegue un raggruppamento simile basato sul tempo, ma con parametri personalizzabili.
 
 **Sintassi:**
 
@@ -89,11 +89,11 @@ LIMIT 31;
 
 L&#39;attribuzione consente di allocare metriche o conversioni come ricavi, ordini o registrazioni alle attività di marketing.
 
-In Adobe  Analytics, le impostazioni di attribuzione sono configurate utilizzando variabili come eVar e vengono generate al momento dell’assimilazione dei dati.
+In  Adobe Analytics, le impostazioni di attribuzione sono configurate utilizzando variabili come eVar e vengono generate al momento dell’assimilazione dei dati.
 
 Le ADF di attribuzione riportate in [!DNL Query Service] consentono di definire e generare tali allocazioni al momento della query.
 
-Questo esempio si concentra sull’attribuzione dell’ultimo tocco, ma Adobe offre anche l’attribuzione del primo tocco.
+Questo esempio si concentra sull’attribuzione dell’ultimo tocco, ma  Adobe offre anche l’attribuzione del primo tocco.
 
 >[!NOTE]
 >
@@ -126,7 +126,7 @@ LIMIT 50;
 
 ![Immagine](../images/queries/adobe-functions/row-level-attribution.png)
 
-### Crea una suddivisione degli ordini per Ultimo livello membro (eVar10)
+### Crea una suddivisione degli ordini per Ultimo livello membro ( eVar10)
 
 ```sql
 SELECT
@@ -243,7 +243,7 @@ LIMIT 10;
 
 ## Risorse aggiuntive
 
-Il seguente video mostra come eseguire le query nell&#39;interfaccia del Adobe Experience Platform  e in un client PSQL. Inoltre, il video utilizza esempi che coinvolgono singole proprietà in un oggetto XDM, che utilizzano funzioni definite da Adobe e che utilizzano l&#39;opzione CREATE TABLE AS SELECT (CTAS).
+Il seguente video mostra come eseguire le query nell&#39;interfaccia del Adobe Experience Platform  e in un client PSQL. Inoltre, il video utilizza anche esempi che coinvolgono singole proprietà in un oggetto XDM, utilizzando  funzioni definite dal Adobe e utilizzando CREATE TABLE AS SELECT (CTAS).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
