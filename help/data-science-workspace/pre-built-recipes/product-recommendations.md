@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # Ricetta raccomandazione prodotto
 
-La ricetta Product Recommendations (Raccomandazioni per i prodotti) consente di fornire raccomandazioni sui prodotti personalizzate in base alle esigenze e agli interessi dei clienti. Con un modello di previsione accurato, la cronologia degli acquisti di un cliente può fornire informazioni su quali prodotti potrebbero essere interessati.
+La ricetta Recommendations per i prodotti consente di fornire raccomandazioni sui prodotti personalizzate in base alle esigenze e agli interessi dei clienti. Con un modello di previsione accurato, la cronologia degli acquisti di un cliente può fornire informazioni su quali prodotti potrebbero essere interessati.
 
 ## Per chi è costruita questa ricetta?
 
@@ -22,11 +22,11 @@ Al giorno d&#39;oggi, un rivenditore può offrire una moltitudine di prodotti, o
 
 ## Cosa fa questa ricetta?
 
-La ricetta Product Recommendations utilizza l&#39;apprendimento automatico per analizzare le interazioni di un cliente con i prodotti del passato e generare un elenco personalizzato di raccomandazioni sui prodotti in modo rapido e semplice. Questo ottimizza il processo di scoperta del prodotto ed elimina le lunghe, improduttive ricerche irrilevanti per i clienti. Di conseguenza, la ricetta Product Recommendations può migliorare l&#39;esperienza di acquisto complessiva di un cliente, aumentando il coinvolgimento e rafforzando la fedeltà al marchio.
+La ricetta Recommendations per i prodotti utilizza l&#39;apprendimento automatico per analizzare le interazioni tra un cliente e i prodotti del passato e generare un elenco personalizzato di raccomandazioni sui prodotti in modo rapido e semplice. Questo ottimizza il processo di scoperta del prodotto ed elimina le lunghe, improduttive ricerche irrilevanti per i clienti. Di conseguenza, la ricetta Recommendations prodotto può migliorare l&#39;esperienza di acquisto complessiva di un cliente, aumentando il coinvolgimento e rafforzando la fedeltà al marchio.
 
 ## Come si inizia?
 
-Per iniziare, seguire l&#39;esercitazione  Adobe Experience Platform Lab (vedere il collegamento Lab qui sotto). Questa esercitazione mostra come creare la ricetta Product Recommendations in un blocco appunti Jupyter seguendo il flusso di lavoro di ricetta [del](../jupyterlab/create-a-recipe.md) notebook e implementando la ricetta in [!DNL Experience Platform][!DNL Data Science Workspace].
+Per iniziare, seguire l&#39;esercitazione  Adobe Experience Platform Lab (vedere il collegamento Lab qui sotto). Questa esercitazione mostra come creare la ricetta Recommendations prodotto in un blocco appunti Jupyter seguendo il [notebook per la ricetta](../jupyterlab/create-a-recipe.md) e implementando la ricetta in [!DNL Experience Platform][!DNL Data Science Workspace].
 
 * [Lab: Predicare il futuro con Data Science Workspace](https://expleague.azureedge.net/labs/L777/index.html)
 * [Risorse Lab](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
