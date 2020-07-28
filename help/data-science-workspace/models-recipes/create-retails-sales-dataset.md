@@ -26,7 +26,7 @@ Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prer
    - x-gw-ims-org-id: `{IMS_ORG}`
    - Segreto cliente: `{CLIENT_SECRET}`
    - Certificato client: `{PRIVATE_KEY}`
-- Dati di esempio e file sorgente per la Ricetta vendite [al dettaglio](../pre-built-recipes/retail-sales.md). Scaricate le risorse necessarie per questa ed altre [!DNL Data Science Workspace] esercitazioni dall’archivio [Git pubblico di](https://github.com/adobe/experience-platform-dsw-reference/)Adobe.
+- Dati di esempio e file sorgente per la Ricetta vendite [al dettaglio](../pre-built-recipes/retail-sales.md). Scaricate le risorse necessarie per questa e altre [!DNL Data Science Workspace] esercitazioni dall’archivio [Git pubblico del Adobe](https://github.com/adobe/experience-platform-dsw-reference/).
 - [Python >= 2.7](https://www.python.org/downloads/) e i seguenti [!DNL Python] pacchetti:
    - [pip](https://pypi.org/project/pip/)
    - [PyYAML](https://pyyaml.org/)
