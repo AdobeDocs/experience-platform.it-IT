@@ -50,7 +50,7 @@ curl -X DELETE \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 (OK) e una matrice contenente l&#39;ID del set di dati eliminato. Questo ID deve corrispondere a quello inviato nella richiesta DELETE. L&#39;esecuzione di una richiesta GET sull&#39;oggetto eliminato restituisce lo stato HTTP 404 (non trovato), confermando che il set di dati è stato eliminato correttamente.
+Una risposta corretta restituisce lo stato HTTP 200 (OK) e una matrice contenente l&#39;ID del set di dati eliminato. Questo ID deve corrispondere a quello inviato nella richiesta DELETE. L&#39;esecuzione di una richiesta di GET sull&#39;oggetto eliminato restituisce lo stato HTTP 404 (non trovato), a conferma del corretto eliminazione del set di dati.
 
 ```json
 [
