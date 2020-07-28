@@ -132,7 +132,7 @@ Una risposta di successo restituisce l&#39;URL dell&#39;azione di marketing, le 
 
 ## Valutare utilizzando i dataset
 
-È possibile valutare un criterio DULE eseguendo il test di un&#39;azione di marketing in base a uno o più set di dati da cui è possibile raccogliere le etichette DULE. A questo scopo, è necessario effettuare una richiesta POST a `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` e fornire gli ID del set di dati all’interno del corpo della richiesta, come illustrato nell’esempio di seguito.
+È possibile valutare un criterio DULE eseguendo il test di un&#39;azione di marketing in base a uno o più set di dati da cui è possibile raccogliere le etichette DULE. A questo scopo, è necessario effettuare una richiesta di POST e fornire ID di set di dati all’interno del corpo della richiesta, come illustrato nell’esempio di seguito. `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints`
 
 **Formato API**
 
