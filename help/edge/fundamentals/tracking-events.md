@@ -1,8 +1,8 @@
 ---
 title: Tracciamento degli eventi
 seo-title: Tracciamento  eventi SDK Web Adobe Experience Platform
-description: Scopri come tenere traccia  eventi SDK Web per Experience Platform
-seo-description: Scopri come tenere traccia  eventi SDK Web per Experience Platform
+description: Scopri come tenere traccia  eventi SDK Web per Experienci Platform
+seo-description: Scopri come tenere traccia  eventi SDK Web per Experienci Platform
 translation-type: tm+mt
 source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Tracciamento degli eventi
 
-Per inviare i dati dell&#39;evento ad Adobe Experience Cloud, usa il `sendEvent` comando. Il `sendEvent` comando è il modo principale per inviare i dati al [!DNL Experience Cloud]destinatario e per recuperare contenuti, identità e destinazioni personalizzate.
+Per inviare i dati dell&#39;evento all&#39;Adobe Experience Cloud, utilizzate il `sendEvent` comando. Il `sendEvent` comando è il modo principale per inviare i dati al [!DNL Experience Cloud]destinatario e per recuperare contenuti, identità e destinazioni personalizzate.
 
-I dati inviati ad Adobe Experience Cloud sono suddivisi in due categorie:
+I dati inviati ad Adobe Experience Cloud rientrano in due categorie:
 
 * Dati XDM
 * Dati non XDM (attualmente non supportati)
