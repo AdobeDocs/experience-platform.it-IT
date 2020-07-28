@@ -4,6 +4,9 @@ audience: user
 user-guide-title: Guida relativa ai cataloghi e ai set di dati
 translation-type: tm+mt
 source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
+workflow-type: tm+mt
+source-wordcount: '93'
+ht-degree: 2%
 
 ---
 
@@ -29,6 +32,6 @@ source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
    * [Guida utente dei set di dati](datasets/user-guide.md)
    * [Creazione e compilazione di un set di dati tramite API](datasets/create.md)
 * [Elaborazione delle richieste di privacy nel Data Lake](privacy.md)
-* [Protezione dei dati in Experience Platform](data-protection.md)
+* [Protezione dei dati in  Experience Platform](data-protection.md)
 * [Riferimento API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
-* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-en)
+* [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
