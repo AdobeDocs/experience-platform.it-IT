@@ -18,7 +18,7 @@ ht-degree: 2%
 
 Questa esercitazione utilizza l&#39; [!DNL Flow Service] API per guidarvi attraverso i passaggi necessari per collegarvi [!DNL Experience Platform] a un archivio [!DNL Azure Blob] (in seguito denominato &quot;Blob&quot;).
 
-Se si preferisce utilizzare l&#39;interfaccia utente in [!DNL Experience Platform], l&#39;esercitazione [dell&#39;interfaccia utente del connettore di origine](../../../ui/create/cloud-storage/blob-s3.md) Azure Blob o Amazon S3 fornisce istruzioni dettagliate per eseguire azioni simili.
+Se si preferisce utilizzare l&#39;interfaccia utente in [!DNL Experience Platform], l&#39;esercitazione [dell&#39;interfaccia utente del connettore di origine](../../../ui/create/cloud-storage/blob-s3.md) Azure Blob o  Amazon S3 fornisce istruzioni dettagliate per eseguire azioni simili.
 
 ## Introduzione
 
@@ -72,7 +72,7 @@ POST /connections
 
 **Richiesta**
 
-Per creare una connessione Blob, è necessario fornire l’ID univoco della specifica di connessione come parte della richiesta POST. L&#39;ID della specifica di connessione per Blob è `4c10e202-c428-4796-9208-5f1f5732b1cf`.
+Per creare una connessione Blob, è necessario fornire l&#39;ID univoco della specifica di connessione come parte della richiesta POST. L&#39;ID della specifica di connessione per Blob è `4c10e202-c428-4796-9208-5f1f5732b1cf`.
 
 ```shell
 curl -X POST \
