@@ -28,7 +28,7 @@ Per effettuare chiamate agli [!DNL Dataset Service] endpoint descritti in questo
 
 ## Elenca tutte le etichette {#list-labels}
 
-Utilizzando l&#39; [!DNL Policy Service] API, potete elencare tutte `core` o `custom` le etichette effettuando rispettivamente una richiesta GET a `/labels/core` o `/labels/custom`.
+Utilizzando l&#39; [!DNL Policy Service] API, potete elencare tutte `core` o `custom` le etichette effettuando una richiesta di GET a `/labels/core` o, rispettivamente, `/labels/custom`.
 
 **Formato API**
 
@@ -110,7 +110,7 @@ Una risposta corretta restituisce un elenco di etichette personalizzate recupera
 
 ## Cercare un&#39;etichetta {#look-up-label}
 
-Potete cercare un&#39;etichetta specifica includendo la `name` proprietà dell&#39;etichetta nel percorso di una richiesta GET all&#39; [!DNL Policy Service] API.
+Potete cercare un&#39;etichetta specifica includendo la `name` proprietà dell&#39;etichetta nel percorso di una richiesta di GET all&#39; [!DNL Policy Service] API.
 
 **Formato API**
 
@@ -164,7 +164,7 @@ Una risposta corretta restituisce i dettagli dell&#39;etichetta personalizzata.
 
 ## Creare o aggiornare un&#39;etichetta personalizzata {#create-update-label}
 
-Per creare o aggiornare un&#39;etichetta personalizzata, dovete effettuare una richiesta PUT all&#39; [!DNL Policy Service] API.
+Per creare o aggiornare un&#39;etichetta personalizzata, dovete effettuare una richiesta di PUT all&#39; [!DNL Policy Service] API.
 
 **Formato API**
 
@@ -230,7 +230,7 @@ Una risposta corretta restituisce i dettagli dell&#39;etichetta personalizzata, 
 
 ## Cerca etichette per un set di dati {#look-up-dataset-labels}
 
-Potete cercare le etichette di utilizzo dei dati applicate a un dataset esistente effettuando una richiesta GET all&#39; [!DNL Dataset Service] API.
+Potete cercare le etichette di utilizzo dei dati applicate a un dataset esistente effettuando una richiesta di GET all&#39; [!DNL Dataset Service] API.
 
 **Formato API**
 
@@ -283,7 +283,7 @@ Una risposta corretta restituisce le etichette di utilizzo dei dati applicate al
 
 ## Applicare etichette a un dataset {#apply-dataset-labels}
 
-Potete creare un set di etichette per un set di dati inserendole nel payload di una richiesta POST o PUT all&#39; [!DNL Dataset Service] API. L’utilizzo di uno di questi metodi sovrascrive tutte le etichette esistenti e le sostituisce con quelle fornite nel payload.
+Potete creare un set di etichette per un set di dati inserendole nel payload di una richiesta di POST o PUT all&#39; [!DNL Dataset Service] API. L’utilizzo di uno di questi metodi sovrascrive tutte le etichette esistenti e le sostituisce con quelle fornite nel payload.
 
 **Formato API**
 
@@ -298,7 +298,7 @@ PUT /datasets/{DATASET_ID}/labels
 
 **Richiesta**
 
-La seguente richiesta POST aggiunge una serie di etichette al set di dati, oltre a un campo specifico all’interno del set di dati. I campi forniti nel payload sono gli stessi richiesti per una richiesta PUT.
+La seguente richiesta di POST aggiunge una serie di etichette al set di dati, oltre a un campo specifico all&#39;interno del set di dati. I campi forniti nel payload sono gli stessi richiesti per una richiesta di PUT.
 
 ```shell
 curl -X POST \
