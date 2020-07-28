@@ -18,7 +18,7 @@ Lo sviluppo di modelli e la formazione si svolgono a livello di Esperimento, dov
 
 ## Creare un esperimento {#create-an-experiment}
 
-Potete creare un esperimento eseguendo una richiesta POST fornendo al contempo un nome e un ID MLInvalido nel payload della richiesta.
+Potete creare un esperimento eseguendo una richiesta di POST fornendo al contempo un nome e un ID MLInvalido nel payload della richiesta.
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ Una risposta corretta restituisce un payload contenente i dettagli dell’esperi
 
 ## Creazione ed esecuzione di un&#39;esecuzione di formazione o punteggio {#experiment-training-scoring}
 
-Potete creare le esecuzioni di formazione o punteggio eseguendo una richiesta POST e fornendo un ID di esperimento valido e specificando l&#39;attività di esecuzione. Le esecuzioni di punteggio possono essere create solo se l’esperimento dispone di un’esecuzione di formazione esistente e di successo. La creazione di un&#39;esecuzione di formazione corretta inizializzerà la procedura di formazione del modello e il suo completamento genererà un modello qualificato. La generazione di modelli formati sostituirà quelli esistenti in precedenza, in modo che un esperimento possa utilizzare un solo modello addestrato in qualsiasi momento.
+Potete creare le esecuzioni di formazione o punteggio eseguendo una richiesta di POST e fornendo un ID esperimento valido e specificando l&#39;attività di esecuzione. Le esecuzioni di punteggio possono essere create solo se l’esperimento dispone di un’esecuzione di formazione esistente e di successo. La creazione di un&#39;esecuzione di formazione corretta inizializzerà la procedura di formazione del modello e il suo completamento genererà un modello qualificato. La generazione di modelli formati sostituirà quelli esistenti in precedenza, in modo che un esperimento possa utilizzare un solo modello addestrato in qualsiasi momento.
 
 **Formato API**
 
@@ -133,7 +133,7 @@ Una risposta corretta restituisce un payload contenente i dettagli della nuova e
 
 ## Recuperare un elenco di esperimenti
 
-Potete recuperare un elenco di Esperimenti appartenenti a una particolare istanza MLIneseguendo una singola richiesta GET e fornendo un ID MLInvalido come parametro di query. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri delle [query per il recupero](./appendix.md#query)delle risorse.
+Potete recuperare un elenco di Esperimenti appartenenti a una particolare istanza MLIneseguendo una singola richiesta e fornendo un ID MLInvalido come parametro di query. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri delle [query per il recupero](./appendix.md#query)delle risorse.
 
 
 **Formato API**
@@ -199,7 +199,7 @@ Una risposta corretta restituisce un elenco di Esperimenti che condividono lo st
 
 ## Recuperare un esperimento specifico {#retrieve-specific}
 
-Potete recuperare i dettagli di un esperimento specifico eseguendo una richiesta GET che include l&#39;ID dell&#39;esperimento desiderato nel percorso della richiesta.
+Potete recuperare i dettagli di un esperimento specifico eseguendo una richiesta di GET che include l&#39;ID dell&#39;esperimento desiderato nel percorso della richiesta.
 
 **Formato API**
 
@@ -242,7 +242,7 @@ Una risposta corretta restituisce un payload contenente i dettagli dell’esperi
 
 ## Recuperare un elenco di esecuzioni sperimentali
 
-Potete recuperare un elenco di sessioni di formazione o di valutazione appartenenti a un particolare esperimento eseguendo una singola richiesta GET e fornendo un ID di esperimento valido. Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco completo dei parametri di query disponibili, consultate la sezione appendice sui parametri di [query per il recupero](./appendix.md#query)delle risorse.
+Potete recuperare un elenco di sessioni di formazione o di valutazione appartenenti a un particolare esperimento eseguendo una singola richiesta di GET e fornendo un ID di esperimento valido. Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco completo dei parametri di query disponibili, consultate la sezione appendice sui parametri di [query per il recupero](./appendix.md#query)delle risorse.
 
 >[!NOTE]
 >
@@ -307,7 +307,7 @@ Potete aggiornare un esperimento esistente sovrascrivendone le proprietà tramit
 
 >[!TIP]
 >
->Per garantire il successo di questa richiesta PUT, si consiglia di eseguire prima una richiesta GET per [recuperare l&#39;esperimento con ID](#retrieve-specific). Quindi, modificate e aggiornate l&#39;oggetto JSON restituito e applicate l&#39;intero oggetto JSON modificato come payload per la richiesta PUT.
+>Per garantire il successo di questa richiesta di PUT, si consiglia di eseguire prima una richiesta di GET per [recuperare l&#39;esperimento con l&#39;ID](#retrieve-specific). Quindi, modificate e aggiornate l&#39;oggetto JSON restituito e applicate l&#39;intero oggetto JSON modificato come payload per la richiesta di PUT.
 
 La seguente chiamata API di esempio aggiorna il nome di un Esperimento pur avendo inizialmente queste proprietà:
 
