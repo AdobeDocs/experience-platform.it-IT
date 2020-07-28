@@ -16,7 +16,7 @@ ht-degree: 0%
 
 L&#39; [!DNL Schema Registry] oggetto viene utilizzato per accedere alla Libreria schema all&#39;interno  Adobe Experience Platform, fornendo un&#39;interfaccia utente e RESTful API da cui sono accessibili tutte le risorse libreria disponibili.
 
-Utilizzando l&#39;API del Registro di sistema dello schema, è possibile eseguire operazioni CRUD di base per visualizzare e gestire tutti gli schemi e le risorse correlate disponibili all&#39;interno  Adobe Experience Platform. Sono inclusi quelli definiti da Adobe, [!DNL Experience Platform] partner e fornitori le cui applicazioni vengono utilizzate. Potete inoltre utilizzare le chiamate API per creare nuovi schemi e risorse per la vostra organizzazione, nonché visualizzare e modificare le risorse già definite.
+Utilizzando l&#39;API del Registro di sistema dello schema, è possibile eseguire operazioni CRUD di base per visualizzare e gestire tutti gli schemi e le risorse correlate disponibili all&#39;interno  Adobe Experience Platform. Ciò include quelli definiti da  Adobe, [!DNL Experience Platform] partner e fornitori le cui applicazioni vengono utilizzate. Potete inoltre utilizzare le chiamate API per creare nuovi schemi e risorse per la vostra organizzazione, nonché visualizzare e modificare le risorse già definite.
 
 Questa guida per gli sviluppatori fornisce i passaggi necessari per iniziare a utilizzare l&#39; [!DNL Schema Registry] API. La guida fornisce quindi chiamate API di esempio per eseguire operazioni chiave utilizzando l&#39;API [!DNL Schema Registry].
 
@@ -51,7 +51,7 @@ Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti al 
 >
 >Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
-Tutte le richieste di ricerca (GET) al [!DNL Schema Registry] richiedono un&#39;intestazione Accetto aggiuntiva, il cui valore determina il formato delle informazioni restituite dall&#39;API. Per ulteriori informazioni, consulta la sezione [Accetta intestazione](#accept) .
+Tutte le richieste di ricerca (GET) [!DNL Schema Registry] richiedono un&#39;intestazione Accetto aggiuntiva, il cui valore determina il formato delle informazioni restituite dall&#39;API. Per ulteriori informazioni, consulta la sezione [Accetta intestazione](#accept) .
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva:
 
@@ -59,7 +59,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 ## Conosci il tuo TENANT_ID {#know-your-tenant_id}
 
-In questa guida verranno visualizzati i riferimenti a un `TENANT_ID`. Questo ID viene utilizzato per garantire che le risorse create siano correttamente denominate e contenute all’interno dell’organizzazione IMS. Se non conosci il tuo ID, puoi accedervi eseguendo la seguente richiesta GET:
+In questa guida verranno visualizzati i riferimenti a un `TENANT_ID`. Questo ID viene utilizzato per garantire che le risorse create siano correttamente denominate e contenute all’interno dell’organizzazione IMS. Se non conosci il tuo ID, puoi accedervi eseguendo la seguente richiesta di GET:
 
 **Formato API**
 
@@ -165,7 +165,7 @@ Le chiamate all&#39; [!DNL Schema Registry] API richiedono l&#39;utilizzo di un 
 
 ### Contenitore globale
 
-Il contenitore globale contiene tutte le classi, i mixin, i tipi di dati e gli schemi standard di Adobe e [!DNL Experience Platform] partner. È possibile eseguire solo richieste di elenco e ricerca (GET) per il contenitore globale.
+Il contenitore globale contiene tutte le classi, i mixin, i tipi di dati e gli schemi standard  Adobe e forniti dal [!DNL Experience Platform] partner. È possibile eseguire solo richieste di elenco e di ricerca (GET) per il contenitore globale.
 
 ### Contenitore tenant
 
