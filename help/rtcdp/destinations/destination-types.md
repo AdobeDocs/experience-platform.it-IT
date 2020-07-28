@@ -1,8 +1,8 @@
 ---
 title: Tipi e categorie di destinazioni
 seo-title: Tipi e categorie di destinazioni
-description: 'In Adobe Real-time Customer Data Platform, le destinazioni di esportazione dei profili/segmenti acquisiscono i dati degli eventi, li combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Avviate le estensioni per inoltrare i dati degli eventi non elaborati a diversi tipi di destinazioni. '
-seo-description: In Adobe Real-time Customer Data Platform, le destinazioni di esportazione dei profili/segmenti acquisiscono i dati degli eventi, li combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Avviate le estensioni per inoltrare i dati degli eventi non elaborati a diversi tipi di destinazioni.
+description: ' Adobe Dati cliente in tempo reale Platform, le destinazioni di esportazione profilo/segmento acquisiscono i dati dell''evento, li combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Avviate le estensioni per inoltrare i dati degli eventi non elaborati a diversi tipi di destinazioni. '
+seo-description: ' Adobe Dati cliente in tempo reale Platform, le destinazioni di esportazione profilo/segmento acquisiscono i dati dell''evento, li combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Avviate le estensioni per inoltrare i dati degli eventi non elaborati a diversi tipi di destinazioni.'
 translation-type: tm+mt
 source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Tipi di destinazione e categorie
 
-Leggi questa pagina per comprendere i diversi tipi e categorie di destinazioni Adobe Real-time Customer Data Platform.
+Leggi questa pagina per comprendere i diversi tipi e categorie di destinazioni Platform di dati cliente in tempo reale  Adobe.
 
 ## Tipi di destinazione
 
-In Adobe Real-time Customer Data Platform, distinguiamo tra due tipi di destinazione: connessioni ed estensioni. Esistono due tipi di destinazioni di connessione, le destinazioni di esportazione dei profili e le destinazioni di esportazione dei segmenti.
+In  Adobe Real-time Customer Data Platform, distinguiamo tra due tipi di destinazione - connessioni ed estensioni. Esistono due tipi di destinazioni di connessione, le destinazioni di esportazione dei profili e le destinazioni di esportazione dei segmenti.
 
 ![Tipi di destinazioni](/help/rtcdp/destinations/assets/types-of-destinations.png)
 
@@ -26,13 +26,13 @@ In Adobe Real-time Customer Data Platform, distinguiamo tra due tipi di destinaz
 
 ### Connessioni
 
-**[!UICONTROL Profile Export]** e **[!UICONTROL Segment Export]** le destinazioni in Adobe Real-time Customer Data Platform acquisiscono i dati dell&#39;evento, li combinano con altre origini dati per formare il profilo [cliente in tempo](/help/profile/home.md)reale, applicare segmentazione ed esportare segmenti e profili qualificati per destinazioni.
+**[!UICONTROL Profile Export]** e **[!UICONTROL Segment Export]** le destinazioni in  Adobe Dati cliente Real-time Dati Platform acquisiscono i dati dell&#39;evento, li combinano con altre origini dati per formare il profilo [cliente in tempo](/help/profile/home.md)reale, applicare segmentazione ed esportare segmenti e profili qualificati per destinazioni.
 
 <br> 
 
 #### Destinazioni di esportazione profilo
 
-Le destinazioni di esportazione dei profili generano un file contenente profili e/o attributi. Queste destinazioni utilizzano dati non elaborati, spesso con l&#39;indirizzo e-mail come chiave primaria. La destinazione [di archiviazione cloud](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 è un esempio di destinazione in cui è possibile depositare i file contenenti esportazioni di profilo.
+Le destinazioni di esportazione dei profili generano un file contenente profili e/o attributi. Queste destinazioni utilizzano dati non elaborati, spesso con l&#39;indirizzo e-mail come chiave primaria. La [destinazione](/help/rtcdp/destinations/amazon-s3-destination.md) di archiviazione cloud Amazon S3 è un esempio di destinazione in cui è possibile depositare i file contenenti esportazioni di profilo.
 
 #### Destinazioni di esportazione dei segmenti
 
@@ -48,7 +48,7 @@ Il video seguente illustra le particolarità dei due tipi di destinazioni:
 
 ### Estensioni
 
-Adobe Real-time CDP sfrutta la potenza e la flessibilità del Experience Platform Launch per includere le estensioni Launch nell&#39;interfaccia Adobe Real-time CDP.
+ Adobe Real-time CDP sfrutta la potenza e la flessibilità del Experience Platform Launch per includere le estensioni Launch nell&#39;interfaccia  Adobe CDP in tempo reale.
 
 >[!TIP]
 >
