@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;user guide;attribution ai;popular topics
 solution: Experience Platform
-title: Guida utente AI per attribuzione
+title: Guida utente  Attribution AI
 topic: User guide
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
@@ -12,23 +12,23 @@ ht-degree: 0%
 ---
 
 
-# Guida utente AI per attribuzione
+# Guida utente  Attribution AI
 
-Attribution AI, come parte di Intelligent Services è un servizio di attribuzione algoritmica multicanale che calcola l&#39;influenza e l&#39;impatto incrementale delle interazioni dei clienti rispetto a determinati risultati. Con Attribution AI, gli addetti al marketing possono misurare e ottimizzare le spese di marketing e pubblicitarie comprendendo l&#39;impatto di ogni singola interazione con i clienti in ogni fase dei viaggi dei clienti.
+ Attribution AI, come parte di Intelligent Services è un servizio di attribuzione algoritmica multicanale che calcola l&#39;influenza e l&#39;impatto incrementale delle interazioni dei clienti rispetto a determinati risultati. Con  Attribution AI, gli esperti di marketing possono misurare e ottimizzare le spese di marketing e pubblicitarie comprendendo l&#39;impatto di ogni singola interazione con i clienti in ogni fase dei viaggi dei clienti.
 
-Questo documento funge da guida per l&#39;interazione con Attribution AI nell&#39;interfaccia utente di Intelligent Services.
+Questo documento funge da guida per l&#39;interazione con  Attribution AI nell&#39;interfaccia utente di Intelligent Services.
 
 ## Creare un&#39;istanza
 
-Nell’ [!DNL Adobe Experience Platform] interfaccia utente, fai clic su **Servizi** nella barra di navigazione a sinistra. Viene visualizzato il browser *Servizi* , con i servizi intelligenti Adobe disponibili. Nel contenitore per l&#39;AI di attribuzione, fate clic su **Apri**.
+Nell’ [!DNL Adobe Experience Platform] interfaccia utente, fai clic su **Servizi** nella barra di navigazione a sinistra. Viene visualizzato il browser *Servizi* , che presenta i servizi intelligenti  Adobe disponibili. Nel contenitore per  Attribution AI, fate clic su **Apri**.
 
 ![Accesso all’istanza](./images/user-guide/open_Attribution_ai.png)
 
-Viene visualizzata la pagina del servizio AI di attribuzione. In questa pagina sono elencate le istanze del servizio di Attribution AI e vengono visualizzate informazioni su di esse, incluso il nome dell&#39;istanza, gli eventi di conversione, la frequenza di esecuzione dell&#39;istanza e lo stato dell&#39;ultimo aggiornamento. Fate clic su **Crea istanza** per iniziare.
+Viene visualizzata la pagina del servizio  Attribution AI. In questa pagina sono elencate le istanze di servizio delle  Attribution AI e vengono visualizzate informazioni su di esse, incluso il nome dell&#39;istanza, gli eventi di conversione, la frequenza di esecuzione dell&#39;istanza e lo stato dell&#39;ultimo aggiornamento. Fate clic su **Crea istanza** per iniziare.
 
 ![Crea istanza](./images/user-guide/landing_page.png)
 
-Viene quindi visualizzata la pagina di configurazione per l&#39;AI di attribuzione, in cui è possibile fornire informazioni di base e specificare un set di dati per l&#39;istanza.
+Viene quindi visualizzata la pagina di configurazione per  Attribution AI, in cui è possibile fornire informazioni di base e specificare un dataset per l&#39;istanza.
 
 ![pagina di configurazione](./images/user-guide/setup_attribution.png)
 
@@ -40,7 +40,7 @@ In *Informazioni* di base, fornite un nome e una descrizione facoltativa per l�
 
 ### Selezionare un dataset
 
-Dopo aver compilato le informazioni di base, fai clic sul menu a discesa **Seleziona set** di dati per selezionare il set di dati. Il dataset viene utilizzato per formare il modello e segnare i dati successivi che produce. Quando si seleziona un set di dati dal selettore a discesa, vengono elencati solo quelli compatibili con l&#39;API di attribuzione e conformi allo schema Experience Data Model (XDM). Una volta scelto un set di dati, fate clic su **Avanti** nell&#39;angolo in alto a destra per passare alla pagina degli eventi di definizione.
+Dopo aver compilato le informazioni di base, fai clic sul menu a discesa **Seleziona set** di dati per selezionare il set di dati. Il dataset viene utilizzato per formare il modello e segnare i dati successivi che produce. Quando si seleziona un dataset dal selettore a discesa, vengono elencati solo quelli compatibili con  Attribution AI e conformi allo schema Experience Data Model (XDM). Una volta scelto un set di dati, fate clic su **Avanti** nell&#39;angolo in alto a destra per passare alla pagina degli eventi di definizione.
 
 ![pagina di configurazione](./images/user-guide/initial_creation_attribution.png)
 
@@ -132,7 +132,7 @@ Dopo aver definito tutti i punti di contatto necessari, scorri verso l’alto e 
 
 ## Configurazione avanzata della formazione e del punteggio
 
-La pagina finale in Attribution AI (Attribuzione AI) è la pagina *Advanced* utilizzata per impostare formazione e punteggio.
+La pagina finale in  Attribution AI è la pagina *Avanzate* utilizzata per impostare formazione e punteggio.
 
 ![nuova pagina avanzata](./images/user-guide/advanced_settings.png)
 
@@ -188,10 +188,10 @@ Dopo aver selezionato la finestra di formazione, fate clic su **Fine** nell’an
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, è stata creata correttamente un&#39;istanza di servizio in Attribution AI. Una volta che l&#39;istanza ha terminato il punteggio (fino a 24 ore), è possibile [scoprire informazioni](./discover-insights.md)sull&#39;analisi dell&#39;attribuzione. Inoltre, se desideri scaricare i risultati del punteggio, consulta la documentazione [sul download dei punteggi](./download-scores.md) non elaborati.
+Seguendo questa esercitazione, è stata creata correttamente un&#39;istanza di servizio in  Attribution AI. Una volta che l&#39;istanza ha terminato il punteggio (consentire fino a 24 ore), è possibile [scoprire  approfondimenti](./discover-insights.md)delle Attribution AI. Inoltre, se desideri scaricare i risultati del punteggio, consulta la documentazione [sul download dei punteggi](./download-scores.md) non elaborati.
 
 ## Risorse aggiuntive
 
-Il seguente video illustra un flusso di lavoro end-to-end per la creazione di una nuova istanza in Attribution AI.
+Il seguente video illustra un flusso di lavoro end-to-end per la creazione di una nuova istanza nelle Attribution AI .
 
 >[!VIDEO](https://video.tv.adobe.com/v/32668?learn=on&quality=12)
