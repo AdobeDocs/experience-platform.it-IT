@@ -43,7 +43,7 @@ Dopo la registrazione di una connessione di streaming, l&#39;utente, in qualità
 
 L&#39;esempio seguente mostra come inviare più messaggi a uno specifico dataset all&#39;interno di una singola richiesta HTTP. Inserire l&#39;ID del set di dati nell&#39;intestazione del messaggio per consentirne l&#39;inserimento diretto.
 
-Potete ottenere l&#39;ID per un set di dati esistente utilizzando l&#39; [!DNL Platform] interfaccia utente o un&#39;operazione di elenco nell&#39;API. L&#39;ID del set di dati si trova su [Experience Platform](https://platform.adobe.com) andando alla **[!UICONTROL Datasets]** scheda, facendo clic sul set di dati per il quale si desidera utilizzare l&#39;ID e copiando la stringa dal **[!UICONTROL Dataset ID]** campo della **[!UICONTROL Info]** scheda. Consultate la panoramica [del servizio](../../catalog/home.md) catalogo per informazioni su come recuperare i set di dati tramite l’API.
+Potete ottenere l&#39;ID per un set di dati esistente utilizzando l&#39; [!DNL Platform] interfaccia utente o un&#39;operazione di elenco nell&#39;API. L&#39;ID del set di dati si trova [Experience Platform](https://platform.adobe.com) andando alla **[!UICONTROL Datasets]** scheda, facendo clic sul set di dati per il quale si desidera utilizzare l&#39;ID e copiando la stringa dal **[!UICONTROL Dataset ID]** campo della **[!UICONTROL Info]** scheda. Consultate la panoramica [del servizio](../../catalog/home.md) catalogo per informazioni su come recuperare i set di dati tramite l’API.
 
 Invece di utilizzare un dataset esistente, potete creare un nuovo dataset. Per ulteriori informazioni sulla creazione di un set di dati tramite API [, consultate l&#39;esercitazione](../../catalog/api/create-dataset.md) Create a dataset using API (Creazione di un set di dati tramite API).
 
@@ -523,7 +523,7 @@ Leggere la guida [al recupero dei batch](../quality/retrieve-failed-batches.md) 
 
 I messaggi che superano la convalida DCCS vengono inviati in streaming a [!DNL Platform]. Su [!DNL Platform]questa opzione, i messaggi batch vengono sottoposti a test mediante convalida in streaming prima di essere trasferiti nell&#39; [!DNL Data Lake]. Lo stato dei batch, con esito positivo o meno, viene visualizzato all&#39;interno del set di dati specificato da `{DATASET_ID}`.
 
-Per visualizzare lo stato dei messaggi batch che sono stati inviati correttamente [!DNL Platform] tramite l&#39;interfaccia utente [](https://platform.adobe.com) Experience Platform, passare alla **[!UICONTROL Datasets]** scheda, fare clic sul set di dati a cui si sta eseguendo lo streaming e selezionare la **[!UICONTROL Dataset Activity]** scheda.
+Per visualizzare lo stato dei messaggi batch che sono stati inviati correttamente [!DNL Platform] tramite l&#39;interfaccia utente [del Experience Platform](https://platform.adobe.com) , passare alla **[!UICONTROL Datasets]** scheda, fare clic sul set di dati a cui si sta eseguendo lo streaming e selezionare la **[!UICONTROL Dataset Activity]** scheda.
 
 I messaggi batch per i quali [!DNL Platform] viene passata la convalida dello streaming vengono trasferiti nell&#39; [!DNL Data Lake]. I messaggi sono quindi disponibili per l’analisi o l’esportazione.
 
