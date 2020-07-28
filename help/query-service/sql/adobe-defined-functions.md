@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Funzioni definite da Adobe
+title: ' funzioni definite dal Adobe'
 topic: functions
 translation-type: tm+mt
 source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
@@ -12,9 +12,9 @@ ht-degree: 3%
 ---
 
 
-# Funzioni definite da Adobe
+#  funzioni definite dal Adobe
 
-Le funzioni definite da Adobe (ADF) sono funzioni preconfigurate [!DNL Query Service] che consentono di eseguire le comuni attività aziendali relative ai [!DNL ExperienceEvent] dati. tra cui funzioni di Sessionizzazione e Attribuzione, come quelle di Adobe  Analytics. Per ulteriori informazioni su Adobe  Analytics e sui concetti alla base degli ADF definiti in questa pagina, consulta la documentazione [di](https://docs.adobe.com/content/help/it-IT/analytics/landing/home.html) Adobe  Analytics. Questo documento fornisce informazioni sulle funzioni definite da Adobe disponibili in [!DNL Query Service].
+ funzioni definite dal Adobe (ADF) sono funzioni preconfigurate [!DNL Query Service] che consentono di eseguire le comuni attività aziendali relative ai [!DNL ExperienceEvent] dati. tra cui funzioni di Sessionizzazione e Attribuzione, come quelle presenti in  Adobe Analytics. Per ulteriori informazioni su  Adobe Analytics e sui concetti alla base delle ADF definiti in questa pagina, consulta la [documentazione](https://docs.adobe.com/content/help/it-IT/analytics/landing/home.html) Adobe Analytics. Questo documento fornisce informazioni  funzioni definite dal Adobe disponibili in [!DNL Query Service].
 
 ## Funzioni della finestra
 
@@ -38,7 +38,7 @@ Sintassi: `OVER ([partition] [order] [frame])`
 
 Quando si lavora con [!DNL ExperienceEvent] dati provenienti da un sito Web, un&#39;applicazione mobile, un sistema di risposta vocale interattivo o qualsiasi altro canale di interazione con i clienti, è possibile raggruppare gli eventi intorno a un periodo di attività correlato. In genere, l&#39;attività è guidata da un intento specifico, come la ricerca di un prodotto, il pagamento di una fattura, il controllo del saldo del conto, la compilazione di un&#39;applicazione e così via. Questo raggruppamento consente di associare gli eventi per scoprire un contesto più ampio sull&#39;esperienza del cliente.
 
-Per ulteriori informazioni sulla Sessionizzazione in Adobe  Analytics, consulta la documentazione sulle sessioni [in base al](https://docs.adobe.com/content/help/en/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)contesto.
+Per ulteriori informazioni sulle sessioni in  Adobe Analytics, consulta la documentazione sulle sessioni in base al [contesto](https://docs.adobe.com/content/help/en/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
 
 ### Specifiche
 
@@ -94,7 +94,7 @@ LIMIT 10
 
 Associare le azioni dei clienti al successo è una parte importante della comprensione dei fattori che influenzano l&#39;esperienza dei clienti. I seguenti ADF supportano l’attribuzione Primo e Ultimo con diverse impostazioni di scadenza.
 
-Per ulteriori informazioni sull’attribuzione in Adobe  Analytics, consulta la panoramica [di](https://docs.adobe.com/content/help/it-IT/analytics/analyze/analysis-workspace/panels/attribution.html) attribuzione IQ nella Guida all’ [!DNL Analytics] analisi.
+Per ulteriori informazioni sull’attribuzione in  Adobe Analytics, consulta la [panoramica](https://docs.adobe.com/content/help/it-IT/analytics/analyze/analysis-workspace/panels/attribution.html) delle Attribution IQ nella Guida all’ [!DNL Analytics] analisi.
 
 ### Attribuzione primo tocco
 
