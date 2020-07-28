@@ -36,7 +36,7 @@ Questa esercitazione richiede una composizione esistente. Se non disponete di un
    ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
 4. Specificare un nome per il modello e rivedere le configurazioni del modello predefinito. Le configurazioni predefinite sono state applicate durante la creazione di ricette, la revisione e la modifica dei valori di configurazione facendo doppio clic sui valori. Per fornire un nuovo set di configurazioni, fai clic **[!UICONTROL Upload New Config]** e trascina nella finestra del browser un file JSON contenente le configurazioni del modello. Fare clic **[!UICONTROL Finish]** per creare il modello.
-   >[!NOTE]Le configurazioni sono univoche e specifiche per la Ricetta prevista, il che significa che le configurazioni per la Ricetta vendite al dettaglio non funzioneranno per la Ricetta raccomandazioni prodotto. Consulta la sezione di [riferimento](#reference) per un elenco delle configurazioni di Ricetta vendite al dettaglio.
+   >[!NOTE]Le configurazioni sono univoche e specifiche per la Ricetta prevista, il che significa che le configurazioni per la Ricetta vendite al dettaglio non funzioneranno per la Ricetta Recommendations prodotto. Consulta la sezione di [riferimento](#reference) per un elenco delle configurazioni di Ricetta vendite al dettaglio.
 
    ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
@@ -55,7 +55,7 @@ Questa esercitazione richiede una composizione esistente. Se non disponete di un
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 5. Le configurazioni predefinite fornite durante la creazione del modello vengono visualizzate, modificate e modificate di conseguenza facendo doppio clic sui valori. Fate clic **[!UICONTROL Finish]** per creare ed eseguire l&#39;esecuzione della formazione.
-   >[!NOTE]Le configurazioni sono univoche e specifiche per la Ricetta prevista, il che significa che le configurazioni per la Ricetta vendite al dettaglio non funzioneranno per la Ricetta raccomandazioni prodotto. Consulta la sezione di [riferimento](#reference) per un elenco delle configurazioni di Ricetta vendite al dettaglio.
+   >[!NOTE]Le configurazioni sono univoche e specifiche per la Ricetta prevista, il che significa che le configurazioni per la Ricetta vendite al dettaglio non funzioneranno per la Ricetta Recommendations prodotto. Consulta la sezione di [riferimento](#reference) per un elenco delle configurazioni di Ricetta vendite al dettaglio.
 
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
