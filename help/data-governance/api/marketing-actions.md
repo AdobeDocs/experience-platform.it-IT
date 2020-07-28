@@ -20,7 +20,7 @@ Per utilizzare le azioni di marketing nell&#39;API è necessario utilizzare l&#3
 
 ## Elenca tutte le azioni di marketing
 
-Per visualizzare un elenco di tutte le azioni di marketing, è possibile effettuare una richiesta GET `/marketingActions/core` o `/marketingActions/custom` che restituisca tutti i criteri per il contenitore specificato.
+Per visualizzare un elenco di tutte le azioni di marketing, è possibile effettuare una richiesta di GET `/marketingActions/core` o `/marketingActions/custom` che restituisca tutti i criteri per il contenitore specificato.
 
 **Formato API**
 
@@ -142,7 +142,7 @@ L&#39;oggetto response contiene i dettagli dell&#39;azione di marketing, incluso
 
 ## Creazione o aggiornamento di un&#39;azione di marketing
 
-L&#39; [!DNL Policy Service] API consente di definire azioni di marketing personalizzate e di aggiornare quelle esistenti. La creazione e l&#39;aggiornamento vengono entrambi eseguiti utilizzando un&#39;operazione PUT con il nome dell&#39;azione di marketing.
+L&#39; [!DNL Policy Service] API consente di definire azioni di marketing personalizzate e di aggiornare quelle esistenti. La creazione e l’aggiornamento vengono entrambi eseguiti utilizzando un’operazione PUT con il nome dell’azione di marketing.
 
 **Formato API**
 
@@ -156,7 +156,7 @@ Nella richiesta seguente, tenete presente che il payload della richiesta `name` 
 
 >[!NOTE]
 >
->Se non viene fornito il contenuto `{marketingActionName}` della chiamata, si verificherà un errore 405 (Metodo non consentito) in quanto non è consentito eseguire direttamente un PUT all’ `/marketingActions/custom` endpoint. Inoltre, se il payload `name` nel payload non corrisponde a quello `{marketingActionName}` nel percorso, riceverete un errore 400 (Richiesta non valida).
+>Se non viene fornito il `{marketingActionName}` contenuto della chiamata, si verificherà un errore 405 (Metodo non consentito) in quanto non è consentito eseguire direttamente un PUT all’ `/marketingActions/custom` endpoint. Inoltre, se il payload `name` nel payload non corrisponde a quello `{marketingActionName}` nel percorso, riceverete un errore 400 (Richiesta non valida).
 
 ```SHELL
 curl -X PUT \
@@ -224,4 +224,4 @@ curl -X DELETE \
 
 Se l’azione di marketing è stata eliminata correttamente, il corpo della risposta sarà vuoto con lo stato HTTP 200 (OK).
 
-Puoi confermare l&#39;eliminazione cercando di cercare (GET) l&#39;azione di marketing. Dovresti ricevere uno stato HTTP 404 (non trovato) insieme a un messaggio di errore &quot;Non trovato&quot; perché l’azione di marketing è stata rimossa.
+Puoi confermare l’eliminazione cercando di ricercare (GET) l’azione di marketing. Dovresti ricevere uno stato HTTP 404 (non trovato) insieme a un messaggio di errore &quot;Non trovato&quot; perché l’azione di marketing è stata rimossa.
