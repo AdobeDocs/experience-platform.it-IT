@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Esercitazioni sulla segmentazione
 
- Adobe Experience Platform [!DNL Segmentation Service] fornisce un&#39;interfaccia utente e RESTful API che consente di creare segmenti e generare audience dai [!DNL Real-time Customer Profile] dati. Questi segmenti sono configurati e mantenuti a livello centrale [!DNL Platform]e sono facilmente accessibili da qualsiasi soluzione Adobe. Per ulteriori informazioni sulla segmentazione, leggi la panoramica [del servizio di](../segmentation/home.md)segmentazione.
+ Adobe Experience Platform [!DNL Segmentation Service] fornisce un&#39;interfaccia utente e RESTful API che consente di creare segmenti e generare audience dai [!DNL Real-time Customer Profile] dati. Questi segmenti sono configurati e mantenuti a livello centrale [!DNL Platform]e sono facilmente accessibili da qualsiasi soluzione  Adobe. Per ulteriori informazioni sulla segmentazione, leggi la panoramica [del servizio di](../segmentation/home.md)segmentazione.
 
 ## Creare una definizione di segmento
 
