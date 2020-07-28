@@ -20,7 +20,7 @@ Ora che hai compreso quali intestazioni utilizzare, sei pronto a iniziare a effe
 
 ### Recupero di un elenco di modelli di query
 
-È possibile recuperare un elenco di tutti i modelli di query per l&#39;organizzazione IMS effettuando una richiesta GET all&#39; `/query-templates` endpoint.
+È possibile recuperare un elenco di tutti i modelli di query per l&#39;organizzazione IMS effettuando una richiesta di GET all&#39; `/query-templates` endpoint.
 
 **Formato API**
 
@@ -111,7 +111,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di modelli di 
 
 ### Creare un modello di query
 
-Potete creare un modello di query effettuando una richiesta POST all&#39; `/query-templates` endpoint.
+Potete creare un modello di query effettuando una richiesta di POST all’ `/query-templates` endpoint.
 
 **Formato API**
 
@@ -174,7 +174,7 @@ Una risposta corretta restituisce lo stato HTTP 202 (Accettato) con i dettagli d
 
 ### Recuperare un modello di query specificato
 
-Potete recuperare un modello di query specifico eseguendo una richiesta GET all&#39; `/query-templates/{TEMPLATE_ID}` endpoint e fornendo l&#39;ID del modello di query nel percorso della richiesta.
+È possibile recuperare un modello di query specifico effettuando una richiesta di GET all&#39; `/query-templates/{TEMPLATE_ID}` endpoint e fornendo l&#39;ID del modello di query nel percorso della richiesta.
 
 **Formato API**
 
@@ -232,7 +232,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del modello d
 
 ### Aggiornare un modello di query specificato
 
-Potete aggiornare un modello di query specifico effettuando una richiesta PUT all&#39; `/query-templates/{TEMPLATE_ID}` endpoint e fornendo l&#39;ID del modello di query nel percorso della richiesta.
+Potete aggiornare un modello di query specifico effettuando una richiesta di PUT all&#39; `/query-templates/{TEMPLATE_ID}` endpoint e fornendo l&#39;ID del modello di query nel percorso della richiesta.
 
 **Formato API**
 
@@ -248,7 +248,7 @@ PUT /query-templates/{TEMPLATE_ID}
 
 >[!NOTE]
 >
->La richiesta PUT richiede la compilazione del campo sql e del campo name e **sovrascrive** il contenuto corrente del modello di query.
+>La richiesta di PUT richiede la compilazione del campo sql e del campo name e **sovrascrive** il contenuto corrente del modello di query.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
