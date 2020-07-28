@@ -185,5 +185,5 @@ ORDER BY pageViews DESC;
 
 ## Passaggi successivi
 
-Per ulteriori informazioni sulle query di esempio che utilizzano le funzioni definite da Adobe (ADF), consultare la guida alle funzioni definite da Adobe. Per informazioni generali sull&#39;esecuzione della query, leggere la [guida sull&#39;esecuzione della query in Query Service](./writing-queries.md).
+Per ulteriori informazioni sulle query di esempio che utilizzano  funzioni definite dal Adobe (ADF), consultare la guida  Funzioni definite dal Adobe. Per informazioni generali sull&#39;esecuzione della query, leggere la [guida sull&#39;esecuzione della query in Query Service](./writing-queries.md).
 
