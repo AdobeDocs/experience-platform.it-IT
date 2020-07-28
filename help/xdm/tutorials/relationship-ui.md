@@ -22,7 +22,7 @@ Questo documento fornisce un&#39;esercitazione per la definizione di una relazio
 
 Questa esercitazione richiede una conoscenza approfondita di [!DNL XDM System] e [!DNL Schema Editor] dell’interfaccia [!DNL Experience Platform] utente. Prima di iniziare questa esercitazione, consulta la seguente documentazione:
 
-* [Sistema XDM in  Experience Platform](../home.md): Panoramica di XDM e della relativa implementazione in  Experience Platform.
+* [Sistema XDM in  Experience Platform](../home.md): Panoramica di XDM e relativa implementazione in  Experience Platform.
 * [Nozioni di base sulla composizione](../schema/composition.md)dello schema: Introduzione dei blocchi costitutivi degli schemi XDM.
 * [Creare uno schema utilizzando l&#39;Editor](create-schema-ui.md)schema: Un&#39;esercitazione che illustra le nozioni di base dell&#39;utilizzo dell&#39; [!DNL Schema Editor].
 
