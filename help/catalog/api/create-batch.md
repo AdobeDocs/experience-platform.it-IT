@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # Creare un batch
 
-Affinché un dataset possa acquisire i dati, deve essere associato a un batch. Utilizzando il `id` valore di un set di dati esistente, potete creare un batch effettuando una richiesta POST all&#39; `/batches` endpoint nell&#39; [!DNL Catalog] API.
+Affinché un dataset possa acquisire i dati, deve essere associato a un batch. Utilizzando il `id` valore di un set di dati esistente, potete creare un batch effettuando una richiesta di POST all&#39; `/batches` endpoint nell&#39; [!DNL Catalog] API.
 
 **Formato API**
 
