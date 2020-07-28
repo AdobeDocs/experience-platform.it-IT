@@ -121,7 +121,7 @@ L&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati (DULE) è il mecc
 
 >[!NOTE]
 >
->I set di dati creati e utilizzati da applicazioni e servizi Adobe (ad esempio Adobe  Analytics,  Adobe Audience Manager o [!DNL Decisioning Service]) non possono essere eliminati.
+>Non è possibile eliminare i set di dati creati e utilizzati da applicazioni e servizi  Adobe (ad esempio  Adobe Analytics,  Adobe Audience Manager o [!DNL Decisioning Service]).
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 
