@@ -19,7 +19,7 @@ ht-degree: 2%
 
 [!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti diverse all&#39;interno  Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
-Questa esercitazione utilizza l&#39; [!DNL Flow Service] API per illustrare i passaggi necessari per connettersi [!DNL PayPal] a  Experience Platform.
+Questa esercitazione utilizza l&#39; [!DNL Flow Service] API per guidarvi nei passaggi necessari per collegarvi [!DNL PayPal] a  Experience Platform.
 
 ## Introduzione
 
