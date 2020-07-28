@@ -18,7 +18,7 @@ Un&#39;istanza MLI è un accoppiamento di un [motore](./engines.md) esistente co
 
 ## Creare un&#39;istanza MLI {#create-an-mlinstance}
 
-Potete creare un&#39;istanza MLI eseguendo una richiesta POST fornendo al contempo un payload di richiesta costituito da un ID motore (`{ENGINE_ID}`) valido e da un set appropriato di configurazioni predefinite.
+È possibile creare un&#39;istanza MLI eseguendo una richiesta di POST mentre fornisce un payload di richiesta composto da un ID motore (`{ENGINE_ID}`) valido e da un set appropriato di configurazioni predefinite.
 
 Se l’ID del motore fa riferimento a un motore PySpark o Spark Engine, potete configurare la quantità di risorse di calcolo, ad esempio il numero di core o la quantità di memoria. Se viene fatto riferimento a un Motore Python, potete scegliere se utilizzare una CPU o una GPU a scopo di formazione e valutazione. Per ulteriori informazioni, consulta le sezioni di appendice sulle configurazioni [delle risorse](./appendix.md#resource-config) PySpark e Spark e sulle configurazioni [della CPU e della GPU](./appendix.md#cpu-gpu-config) Python.
 
@@ -130,7 +130,7 @@ Una risposta corretta restituisce un payload contenente i dettagli dell’istanz
 
 ## Recuperare un elenco di istanze MLI
 
-Potete recuperare un elenco di istanze MLI eseguendo una singola richiesta GET. Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri delle [query per il recupero](./appendix.md#query)delle risorse.
+Potete recuperare un elenco di istanze MLI eseguendo una singola richiesta di GET. Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri delle [query per il recupero](./appendix.md#query)delle risorse.
 
 **Formato API**
 
@@ -198,7 +198,7 @@ Una risposta corretta restituisce un elenco di istanze MLI e i relativi dettagli
 
 ## Recuperare un&#39;istanza MLI specifica {#retrieve-specific}
 
-Potete recuperare i dettagli di una specifica istanza MLIneseguendo una richiesta GET che include l&#39;ID dell&#39;istanza MLI desiderata nel percorso della richiesta.
+Potete recuperare i dettagli di una specifica istanza MLIneseguendo una richiesta che include l&#39;ID dell&#39;istanza MLI desiderata nel percorso della richiesta.
 
 **Formato API**
 
@@ -275,9 +275,9 @@ Potete aggiornare un&#39;istanza MLI esistente sovrascrivendone le proprietà tr
 
 >[!TIP]
 >
->Per garantire il successo di questa richiesta PUT, si consiglia innanzitutto di eseguire una richiesta GET per [recuperare l&#39;istanza MLI per ID](#retrieve-specific). Quindi, modificate e aggiornate l&#39;oggetto JSON restituito e applicate l&#39;intero oggetto JSON modificato come payload per la richiesta PUT.
+>Per garantire il successo di questa richiesta di PUT, si consiglia innanzitutto di eseguire una richiesta di GET per [recuperare l’istanza MLI per ID](#retrieve-specific). Quindi, modificate e aggiornate l&#39;oggetto JSON restituito e applicate l&#39;intero oggetto JSON modificato come payload per la richiesta di PUT.
 
-La seguente chiamata API di esempio aggiornerà i parametri di formazione e punteggio di un&#39;istanza MLInpur disponendo inizialmente di queste proprietà:
+La seguente chiamata API di esempio aggiornerà i parametri di formazione e punteggio di un&#39;istanza MLIn, pur disponendo inizialmente di queste proprietà:
 
 ```json
 {
