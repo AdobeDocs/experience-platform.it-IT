@@ -88,7 +88,7 @@ Per un elenco completo delle [!DNL Python] librerie preinstallate, consultate la
 
 ## È possibile installare librerie PySpark personalizzate?
 
-Purtroppo non è possibile installare librerie aggiuntive per il kernel PySpark. Tuttavia, potete contattare il rappresentante del servizio clienti Adobe per richiedere l&#39;installazione di librerie PySpark personalizzate.
+Purtroppo non è possibile installare librerie aggiuntive per il kernel PySpark. Tuttavia, potete contattare il rappresentante del servizio clienti  Adobe per ottenere librerie PySpark personalizzate installate.
 
 Per un elenco delle librerie PySpark preinstallate, consultate la sezione [appendice della Guida](./jupyterlab/overview.md#supported-libraries)utente di JupyterLab.
 
