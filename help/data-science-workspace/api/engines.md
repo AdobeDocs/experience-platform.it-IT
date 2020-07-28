@@ -21,7 +21,7 @@ I motori sono le basi per i modelli di apprendimento automatico in Data Science 
 >[!TIP]
 >Se non disponete di un URL Docker, visitate i file sorgente del [pacchetto in un&#39;esercitazione di ricetta](../models-recipes/package-source-files-recipe.md) per una dettagliata procedura per la creazione di un URL host Docker.
 
-Le credenziali del Registro di sistema del Docker sono necessarie per caricare un file Recipe incluso l&#39;URL host Docker, il nome utente e la password. Potete cercare queste informazioni eseguendo la seguente richiesta GET:
+Le credenziali del Registro di sistema del Docker sono necessarie per caricare un file Recipe incluso l&#39;URL host Docker, il nome utente e la password. Potete cercare queste informazioni eseguendo la seguente richiesta di GET:
 
 **Formato API**
 
@@ -58,7 +58,7 @@ Una risposta corretta restituisce un payload contenente i dettagli del Registro 
 
 ## Creare un motore utilizzando gli URL Docker {#docker-image}
 
-È possibile creare un motore eseguendo una richiesta POST fornendo i relativi metadati e un URL Docker che fa riferimento a un&#39;immagine Docker in più moduli.
+È possibile creare un Motore eseguendo una richiesta di POST fornendo i relativi metadati e un URL Docker che fa riferimento a un&#39;immagine Docker in più moduli.
 
 **Formato API**
 
@@ -172,7 +172,7 @@ Una risposta corretta restituisce un payload contenente i dettagli del motore ap
 
 ## Creare un motore di pipeline delle funzioni utilizzando gli URL Docker {#feature-pipeline-docker}
 
-Potete creare un motore di pipeline delle funzioni eseguendo una richiesta POST fornendo i relativi metadati e un URL Docker che fa riferimento a un&#39;immagine Docker.
+Potete creare un motore di pipeline delle funzioni eseguendo una richiesta di POST fornendo i relativi metadati e un URL Docker che fa riferimento a un&#39;immagine Docker.
 
 **Formato API**
 
@@ -254,7 +254,7 @@ Una risposta corretta restituisce un payload contenente i dettagli del motore di
 
 ## Recupero di un elenco di motori
 
-È possibile recuperare un elenco di motori eseguendo una singola richiesta GET. Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri delle [query per il recupero](./appendix.md#query)delle risorse.
+È possibile recuperare un elenco di motori eseguendo una singola richiesta di GET. Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri delle [query per il recupero](./appendix.md#query)delle risorse.
 
 **Formato API**
 
@@ -329,7 +329,7 @@ Una risposta corretta restituisce un elenco di motori e relativi dettagli.
 
 ### Recuperare un motore specifico {#retrieve-specific}
 
-Potete recuperare i dettagli di un Motore specifico eseguendo una richiesta GET che include l&#39;ID del Motore desiderato nel percorso della richiesta.
+È possibile recuperare i dettagli di un Motore specifico eseguendo una richiesta di GET che include l&#39;ID del Motore desiderato nel percorso della richiesta.
 
 **Formato API**
 
@@ -383,11 +383,11 @@ Una risposta corretta restituisce un payload contenente i dettagli del motore de
 
 ## Aggiornamento di un motore
 
-Potete modificare e aggiornare un motore esistente sovrascrivendone le proprietà tramite una richiesta PUT che include l&#39;ID del motore di destinazione nel percorso della richiesta e fornendo un payload JSON contenente le proprietà aggiornate.
+Potete modificare e aggiornare un motore esistente sovrascrivendone le proprietà tramite una richiesta di PUT che include l&#39;ID del motore di destinazione nel percorso della richiesta e fornendo un payload JSON contenente le proprietà aggiornate.
 
 >[!NOTE]
 >
->Per garantire il successo di questa richiesta PUT, si consiglia prima di eseguire una richiesta GET per [recuperare il Motore per ID](#retrieve-specific). Quindi, modificate e aggiornate l&#39;oggetto JSON restituito e applicate l&#39;intero oggetto JSON modificato come payload per la richiesta PUT.
+>Per garantire il successo di questa richiesta di PUT, si consiglia innanzitutto di eseguire una richiesta di GET per [recuperare il motore per ID](#retrieve-specific). Quindi, modificate e aggiornate l&#39;oggetto JSON restituito e applicate l&#39;intero oggetto JSON modificato come payload per la richiesta di PUT.
 
 La seguente chiamata API di esempio aggiornerà il nome e la descrizione di un motore, pur avendo inizialmente queste proprietà:
 
