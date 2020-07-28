@@ -1,8 +1,8 @@
 ---
-title: Esercitazione Implementare i tag del sito Web con Adobe Launch
-seo-title: Implementare i tag dei siti Web con Adobe Launch
-description: Utilizzo di Adobe Launch per implementare i tag del sito Web in  Adobe Experience Platform
-seo-description: Utilizzo di Adobe Launch per implementare i tag del sito Web in  Adobe Experience Platform
+title: Esercitazione Implementare i tag del sito Web con  lancio Adobe
+seo-title: Implementare i tag dei siti Web con  lancio Adobe
+description: Utilizzo  lancio Adobe per implementare i tag del sito Web in  Adobe Experience Platform
+seo-description: Utilizzo  lancio Adobe per implementare i tag del sito Web in  Adobe Experience Platform
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
@@ -12,9 +12,9 @@ ht-degree: 7%
 ---
 
 
-# Esercitazione: Implementare i tag dei siti Web con Adobe Launch
+# Esercitazione: Implementare i tag dei siti Web con  lancio Adobe
 
-Questa esercitazione spiega come implementare i tag del sito Web per inviare dati al Adobe Experience Platform  tramite Adobe Launch.
+Questa esercitazione spiega come implementare i tag del sito Web per inviare i dati al Adobe Experience Platform  utilizzando  Adobe Launch.
 
 ## Prerequisiti
 
@@ -48,8 +48,8 @@ Innanzitutto, installate l&#39; [!DNL Web SDK] estensione  Adobe Experience Plat
 
    Le uniche impostazioni necessarie al momento sono:
 
-   * **ID configurazione:** Specificate l&#39;ID di configurazione ricevuto dal rappresentante Adobe.
-   * **Dominio Edge:** Specificate il dominio periferico ricevuto dal rappresentante Adobe.
+   * **ID configurazione:** Specificate l&#39;ID di configurazione ricevuto dal rappresentante del Adobe .
+   * **Dominio Edge:** Specificate il dominio periferico ottenuto dal rappresentante del Adobe .
 
 1. Fate clic **[!UICONTROL Save]** e continuate con il passaggio successivo.
 
