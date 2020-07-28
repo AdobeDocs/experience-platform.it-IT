@@ -20,7 +20,7 @@ Questa guida utente descrive come monitorare i dati all&#39;interno &#39;interfa
 
 ## Monitorare l’inserimento di dati end-to-end
 
-Nell’interfaccia [Experience Platform](https://platform.adobe.com), fate clic **[!UICONTROL Monitoring]** sul menu di navigazione a sinistra, quindi fate clic su **[!UICONTROL Streaming end-to-end]**.
+Nell’interfaccia utente [del Experience Platform](https://platform.adobe.com), fate clic **[!UICONTROL Monitoring]** sul menu di navigazione a sinistra, quindi fate clic su **[!UICONTROL Streaming end-to-end]**.
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
