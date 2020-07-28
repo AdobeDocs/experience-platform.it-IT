@@ -12,24 +12,24 @@ ht-degree: 0%
 ---
 
 
-# Panoramica di Adobe Real-time Customer Data Platform
+#  Adobe Panoramica dell&#39;Platform sui dati dei clienti in tempo reale
 
-Basato sul  Adobe Experience Platform, Adobe Real-time Customer Data Platform (Real-time CDP) consente alle aziende di mettere insieme dati noti e anonimi provenienti da più origini aziendali, al fine di creare profili cliente utilizzabili per fornire esperienze cliente personalizzate in tempo reale su tutti i canali e i dispositivi.
+Basato sul  Adobe Experience Platform,  Adobe Real-time Customer Data Platform (Real-time CDP) consente alle aziende di mettere insieme dati noti e anonimi provenienti da più origini aziendali, al fine di creare profili cliente che possano essere utilizzati per fornire esperienze personalizzate in tempo reale a tutti i canali e dispositivi.
 
 CDP in tempo reale include strumenti per la governance dei dati, la gestione delle identità, la segmentazione avanzata e la scienza dei dati, che consentono di creare profili e definire i tipi di pubblico, oltre a ricavare informazioni approfondite e al tempo stesso di implementare politiche di governance dei dati rigorose.
 
-Adobe Real-time Customer Data Platform si connette a un ampio ecosistema di partner, per non parlare delle integrazioni native con Adobe Experience Cloud, per cui puoi attivare facilmente questi tipi di pubblico e fornire esperienze cliente straordinarie su tutti i canali, dalla personalizzazione in-sito o in-app alle e-mail, ai supporti a pagamento, ai call center, ai dispositivi connessi e altro ancora.
+ Adobe Real-time Customer Data Platform si collega a un ampio ecosistema di partner, per non parlare delle integrazioni native con Adobe Experience Cloud, in modo da poter attivare facilmente questi tipi di pubblico e fornire esperienze cliente straordinarie su tutti i canali, dalla personalizzazione in-site o in-app alle e-mail, ai supporti a pagamento, ai call center, ai dispositivi connessi e altro ancora.
 
 Con Real-time Customer Data Platform, puoi:
 
 * Raggiungete un&#39;unica vista del cliente combinando i dati provenienti dall&#39;intera azienda.
 * Gestire in modo responsabile i profili con governance affidabile e controlli sulla privacy per identificatori noti e anonimi.
-* Puoi generare informazioni fruibili e scalare i tipi di pubblico con AI e machine learning basati su Adobe Sensei, progettati per i professionisti del marketing.
+* Generazione di informazioni fruibili e scalabilità del pubblico con AI e machine learning basati su  Adobe Sensei e progettati per gli esperti di marketing.
 * Distribuisci esperienze personalizzate in tempo reale su tutti i canali e le destinazioni.
 
 ## Informazioni aggiuntive
 
-Per saperne di più  Adobe Experience Platform, iniziare leggendo la [panoramica](../landing/home.md)Experience Platform.
+Per saperne di più  Adobe Experience Platform, iniziare leggendo la panoramica [del Experience Platform](../landing/home.md).
 
 Per iniziare a usare i dati dei clienti in tempo reale, si consiglia di consultare la seguente documentazione:
 
