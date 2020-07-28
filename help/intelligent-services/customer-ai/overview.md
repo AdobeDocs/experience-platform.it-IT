@@ -45,7 +45,7 @@ Il seguente video è stato progettato per supportare la comprensione dell&#39;AP
 
 ## Come funziona?
 
-L&#39;AI del cliente funziona analizzando i dati esistenti relativi all&#39;evento dell&#39;esperienza del consumatore per prevedere i punteggi di propensione al cambiamento o alla conversione. Adobe è consapevole del fatto che la definizione di churn und conversion non è uniforme in tutti i casi di utilizzo e che, per tale ragione, è possibile definire obiettivi target personalizzati come un insieme di condizioni. Puoi configurare l&#39;obiettivo previsto purché l&#39;evento di interesse sia presente nei dati dell&#39;evento Consumer Experience Event in input.
+L&#39;AI del cliente funziona analizzando i dati esistenti relativi all&#39;evento dell&#39;esperienza del consumatore per prevedere i punteggi di propensione al cambiamento o alla conversione.  Adobe si rende conto che la definizione di churn e conversione non è uniforme in tutti i casi di utilizzo e per questo motivo, è possibile definire obiettivi target personalizzati come un insieme di condizioni. Puoi configurare l&#39;obiettivo previsto purché l&#39;evento di interesse sia presente nei dati dell&#39;evento Consumer Experience Event in input.
 
 ## Passaggi successivi
 
