@@ -26,7 +26,7 @@ Gli endpoint utilizzati in questa guida fanno parte dell&#39; [!DNL Adobe Experi
 
 ## Recuperare un elenco di processi di esportazione {#retrieve-list}
 
-È possibile recuperare un elenco di tutti i processi di esportazione per l&#39;organizzazione IMS effettuando una richiesta GET all&#39; `/export/jobs` endpoint.
+È possibile recuperare un elenco di tutti i processi di esportazione per l&#39;organizzazione IMS effettuando una richiesta di GET all&#39; `/export/jobs` endpoint.
 
 **Formato API**
 
@@ -210,7 +210,7 @@ La risposta seguente restituisce lo stato HTTP 200 con un elenco di processi di 
 
 ## Creare un nuovo processo di esportazione {#create}
 
-Per creare un nuovo processo di esportazione, effettuate una richiesta POST all’ `/export/jobs` endpoint.
+Potete creare un nuovo processo di esportazione effettuando una richiesta di POST all’ `/export/jobs` endpoint.
 
 **Formato API**
 
@@ -379,7 +379,7 @@ In alternativa, se `destination.segmentPerBatch` fosse stato impostato su `true`
 
 ## Recuperare un processo di esportazione specifico {#get}
 
-Potete recuperare informazioni dettagliate su un processo di esportazione specifico eseguendo una richiesta GET all&#39; `/export/jobs` endpoint e fornendo l&#39;ID del processo di esportazione che desiderate recuperare nel percorso della richiesta.
+Potete recuperare informazioni dettagliate su un processo di esportazione specifico eseguendo una richiesta di GET all’ `/export/jobs` endpoint e fornendo l’ID del processo di esportazione che desiderate recuperare nel percorso della richiesta.
 
 **Formato API**
 
