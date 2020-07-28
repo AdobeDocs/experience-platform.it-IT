@@ -18,7 +18,7 @@ Gli approfondimenti contengono metriche utilizzate per consentire a uno scienzia
 
 ## Recupera un elenco di approfondimenti
 
-Puoi recuperare un elenco di approfondimenti eseguendo una singola richiesta GET all&#39;endpoint di approfondimenti.  Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri delle [query per il recupero](./appendix.md#query)delle risorse.
+Puoi recuperare un elenco di approfondimenti eseguendo una singola richiesta di GET all’endpoint di approfondimenti.  Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri delle [query per il recupero](./appendix.md#query)delle risorse.
 
 **Formato API**
 
@@ -108,7 +108,7 @@ Una risposta corretta restituisce un payload che include un elenco di approfondi
 
 ## Recuperare un&#39;interfaccia specifica
 
-Per cercare una particolare conoscenza, effettuare una richiesta GET e fornire una valida `{INSIGHT_ID}` nel percorso della richiesta. Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri delle [query per il recupero](./appendix.md#query)delle risorse.
+Per cercare una particolare conoscenza, effettua una richiesta di GET e fornisci una valida `{INSIGHT_ID}` nel percorso della richiesta. Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri delle [query per il recupero](./appendix.md#query)delle risorse.
 
 **Formato API**
 
@@ -171,7 +171,7 @@ Una risposta corretta restituisce un payload che include l’identificatore univ
 
 ## Aggiungere una nuova conoscenza del modello
 
-È possibile creare una nuova conoscenza del modello eseguendo una richiesta POST e un payload che fornisca contesto, eventi e metriche per la nuova visione del modello. Il campo contestuale utilizzato per creare una nuova conoscenza del modello non è necessario che vi siano servizi esistenti associati, ma potete scegliere di creare la nuova visione del modello con i servizi esistenti fornendo uno o più ID corrispondenti:
+È possibile creare una nuova conoscenza del modello eseguendo una richiesta di POST e un payload che fornisce contesto, eventi e metriche per la nuova visione del modello. Il campo contestuale utilizzato per creare una nuova conoscenza del modello non è necessario che vi siano servizi esistenti associati, ma potete scegliere di creare la nuova visione del modello con i servizi esistenti fornendo uno o più ID corrispondenti:
 
 ```json
 "context": {
@@ -260,11 +260,11 @@ Una risposta corretta restituirà un payload con un `{INSIGHT_ID}` ed eventuali 
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `insightId` | L’ID univoco creato per questa particolare approfondimento quando viene effettuata una richiesta POST di successo. |
+| `insightId` | L’ID univoco creato per questa particolare approfondimento quando viene effettuata una richiesta di POST con esito positivo. |
 
 ## Recupera un elenco di metriche predefinite per gli algoritmi
 
-Puoi recuperare un elenco di tutte le metriche dell&#39;algoritmo e predefinite eseguendo una singola richiesta GET all&#39;endpoint delle metriche. Per eseguire una query su una particolare metrica, effettuare una richiesta GET e fornire una valida `{ALGORITHM}` nel percorso della richiesta.
+Puoi recuperare un elenco di tutte le metriche dell&#39;algoritmo e predefinite eseguendo una singola richiesta all&#39;endpoint delle metriche. Per eseguire una query su una particolare metrica, effettuare una richiesta di GET e fornire una valida `{ALGORITHM}` nel percorso della richiesta.
 
 **Formato API**
 
