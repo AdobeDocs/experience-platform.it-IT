@@ -14,17 +14,17 @@ ht-degree: 1%
 
 # Sostituire una risorsa
 
-Consente [!DNL Schema Registry] di sostituire un&#39;intera risorsa con un&#39;operazione PUT. Questa operazione riscrive sostanzialmente la risorsa, pertanto il corpo della richiesta deve includere tutti i campi che sarebbero necessari per creare una nuova risorsa utilizzando una richiesta POST.
+Consente di [!DNL Schema Registry] sostituire un&#39;intera risorsa con un&#39;operazione PUT. L&#39;operazione riscrive sostanzialmente la risorsa, pertanto il corpo della richiesta deve includere tutti i campi necessari per la creazione di una nuova risorsa utilizzando una richiesta di POST.
 
 Questo metodo è particolarmente utile se desiderate aggiornare molte informazioni contemporaneamente nella risorsa.
 
 >[!NOTE]
 >
->Se si desidera aggiornare solo parte di una risorsa invece di sostituirla completamente, consultare il documento sull&#39; [aggiornamento di una risorsa con un&#39;operazione](update-resource.md)PATCH.
+>Se desiderate aggiornare solo parte di una risorsa invece di sostituirla completamente, consultate il documento sull&#39; [aggiornamento di una risorsa mediante un&#39;operazione](update-resource.md)PATCH.
 
 **Formato API**
 
-Una richiesta PUT può essere eseguita solo con risorse definite nel contenitore tenant.
+Una richiesta di PUT può essere eseguita solo con risorse definite nel contenitore tenant.
 
 ```http
 PUT /tenant/{RESOURCE_TYPE}/{RESOURCE_ID} 
