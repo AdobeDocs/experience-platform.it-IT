@@ -1,20 +1,20 @@
 ---
 title: Informazioni raccolte automaticamente
-seo-title: Informazioni raccolte automaticamente da Adobe Experience Platform Web SDK
-description: Descrizione di ciascuna informazione che l’SDK di Adobe Experience Cloud raccoglie automaticamente
-seo-description: Descrizione di ciascuna informazione che l’SDK di Adobe Experience Cloud raccoglie automaticamente
+seo-title: Informazioni raccolte automaticamente da  Adobe Experience Platform Web SDK
+description: Descrizione di ciascuna informazione raccolta automaticamente dall’SDK Adobe Experience Cloud
+seo-description: Descrizione di ciascuna informazione raccolta automaticamente dall’SDK Adobe Experience Cloud
 translation-type: tm+mt
 source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
 source-wordcount: '382'
-ht-degree: 4%
+ht-degree: 7%
 
 ---
 
 
 # Informazioni raccolte automaticamente
 
-L’SDK di Adobe Experience Cloud raccoglie automaticamente una serie di informazioni senza bisogno di particolari configurazioni. Tuttavia, queste informazioni possono essere disattivate se necessario utilizzando l&#39; `context` opzione nel `configure` comando. [Consultate Configurazione dell’SDK](../fundamentals/configuring-the-sdk.md). Di seguito è riportato un elenco di queste informazioni. Il nome tra parentesi indica la stringa da utilizzare per la configurazione del contesto.
+Adobe Experience Cloud SDK raccoglie automaticamente una serie di informazioni senza alcuna configurazione speciale. Tuttavia, queste informazioni possono essere disattivate se necessario utilizzando l&#39; `context` opzione nel `configure` comando. [Consultate Configurazione dell’SDK](../fundamentals/configuring-the-sdk.md). Di seguito è riportato un elenco di queste informazioni. Il nome tra parentesi indica la stringa da utilizzare per la configurazione del contesto.
 
 ## Dispositivo (`device`)
 
@@ -56,7 +56,7 @@ Browser
 | ------------------------------- | ------------ |
 | `events[].xdm.environment.type` | `browser` |
 
-Il tipo di ambiente attraverso cui è stata realizzata l&#39;esperienza. L’SDK Adobe Experience Platform per JavaScript viene sempre impostato `browser`.
+Il tipo di ambiente attraverso cui è stata realizzata l&#39;esperienza. L’SDK del Adobe Experience Platform  per JavaScript viene sempre impostato `browser`.
 
 ### Altezza visualizzazione
 
