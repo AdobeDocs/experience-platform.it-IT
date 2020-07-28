@@ -2,7 +2,7 @@
 title: Guida all'SDK Web per Adobi Experience Platform
 seo-title: Guida all'SDK Web per Adobi Experience Platform
 description: Scopri  Adobe Experience Platform SDK Web e come può essere utilizzato.
-seo-description: consentire ai clienti di Adobe Experience Cloud di interagire con i vari servizi nell'Experience Cloud .
+seo-description: consentire ai clienti dell'Adobe Experience Cloud di interagire con i vari servizi del Experience Cloud .
 translation-type: tm+mt
 source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Che cos&#39;è  Adobe Experience Platform Web SDK
 
- Adobe Experience Platform Web SDK è una libreria JavaScript lato client che consente ai clienti di Adobe Experience Cloud di interagire con i vari servizi nel [!DNL Experience Cloud] tramite Adobe [!DNL Experience Platform Edge Network].
+ Adobe Experience Platform Web SDK è una libreria JavaScript lato client che consente ai clienti dell&#39;Adobe Experience Cloud di interagire con i vari servizi nel [!DNL Experience Cloud] tramite l&#39;Adobe di  [!DNL Experience Platform Edge Network].
 
 Il seguente video offre una panoramica dell’Adobe Experience Platform  [!DNL Web SDK] e [!DNL Edge Network].
 
@@ -31,16 +31,16 @@ Il seguente video offre una panoramica dell’Adobe Experience Platform  [!DNL W
 
 Non si tratta solo di un wrapper intorno alle librerie esistenti. È una riscrittura completa. Il suo scopo è quello di porre fine alle sfide con i tag che devono essere attivati nell&#39;ordine giusto, incoerenze con le problematiche di controllo delle versioni della libreria e una migliore gestione delle dipendenze. Si tratta di un nuovo modo di implementare il sistema [!DNL Experience Cloud] ed è [open source](https://github.com/adobe/alloy).
 
-Oltre a una nuova libreria, esiste un nuovo endpoint che semplifica le richieste HTTP alle soluzioni Adobe. In precedenza, Visitor.js aveva inviato una chiamata di blocco al servizio ID visitatore, quindi AT.js aveva inviato una chiamata al Adobe Target , DIL.js aveva inviato una chiamata a  Adobe Audience Manager e infine AppMeasurement.js aveva inviato una chiamata ad Adobe  Analytics. Questa nuova libreria e questo endpoint possono recuperare un ID, recuperare un&#39; [!DNL Target] esperienza, inviare dati a [!DNL Audience Manager]e passare i dati al Adobe Experience Platform  in una singola chiamata.
+Oltre a una nuova libreria, esiste un nuovo endpoint che semplifica le richieste HTTP alle soluzioni di  Adobe. Prima, Visitor.js aveva inviato una chiamata di blocco al servizio ID visitatore, quindi AT.js aveva inviato una chiamata al Adobe Target , DIL.js aveva inviato una chiamata a  Adobe Audience Manager e infine AppMeasurement.js aveva inviato una chiamata a  Adobe Analytics. Questa nuova libreria e questo endpoint possono recuperare un ID, recuperare un&#39; [!DNL Target] esperienza, inviare dati a [!DNL Audience Manager]e passare i dati al Adobe Experience Platform  in una singola chiamata.
 
-Il seguente video illustra l’Adobe Experience Platform  [!DNL Web SDK] e [!DNL Edge Network] in azione. Nell’esempio video viene utilizzata una singola chiamata ad Adobe che invia dati a [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager]e [!DNL Target].
+Il seguente video illustra l’Adobe Experience Platform  [!DNL Web SDK] e [!DNL Edge Network] in azione. Nell&#39;esempio video viene utilizzata una singola chiamata a  Adobe che invia dati a [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager]e [!DNL Target].
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
 
 ## Introduzione
 
-È consigliabile [consultare la guida](getting-started/quick-start-with-launch.md) introduttiva per un&#39;esercitazione rapida su come iniziare a utilizzare Adobe Launch.
+È consigliabile [consultare la guida](getting-started/quick-start-with-launch.md) introduttiva per un&#39;esercitazione rapida su come iniziare a utilizzare  Adobe Launch.
 
 Questo prodotto è in continua evoluzione e continua crescita per supportare sempre più casi di utilizzo. Per essere al passo con le ultime novità, consulta la scheda [dei casi d’uso](https://github.com/adobe/alloy/projects/5)supportata. Teniamo aggiornati i casi di utilizzo attualmente supportati e quelli su cui stiamo lavorando per consentirvi di prendere le migliori decisioni possibili.
 
