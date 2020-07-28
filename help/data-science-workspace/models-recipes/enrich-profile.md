@@ -50,6 +50,7 @@ La composizione di uno schema inizia con l&#39;assegnazione di una classe. Le cl
 
    * Per creare una classe personalizzata, fate clic **[!UICONTROL Create New Class]** sul pulsante situato nella parte centrale della finestra del browser. Immettete un nome di classe, una descrizione e scegliete il comportamento della classe. Fate clic **[!UICONTROL Assign Class]** una volta terminato.
       ![](../images/models-recipes/enrich-rtcdp/create_new_class.png)
+
    A questo punto, la struttura dello schema deve contenere alcuni campi di classe ed è possibile assegnare i mixin. Un mixin è un gruppo di uno o più campi che descrivono un concetto particolare.
 
 3. Nella finestra *Composizione* , fate clic **[!UICONTROL Add]** nella sottosezione *Mixins* .
