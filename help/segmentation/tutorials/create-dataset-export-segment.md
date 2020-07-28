@@ -26,7 +26,7 @@ Per esportare un segmento, il set di dati deve essere basato sul [!DNL XDM Indiv
 
 Per visualizzare gli schemi di unione nell&#39;interfaccia utente, fate clic **[!UICONTROL Profiles]** nel menu di navigazione a sinistra, quindi fate clic sulla **[!UICONTROL Union schema]** scheda come mostrato di seguito.
 
-![Scheda Schema unione nell&#39;interfaccia  Experience Platform](../images/tutorials/segment-export-dataset/union-schema-ui.png)
+![Scheda Schema unione nell&#39;interfaccia utente  Experience Platform](../images/tutorials/segment-export-dataset/union-schema-ui.png)
 
 
 ## Area di lavoro DataSet
