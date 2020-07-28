@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Iscriviti a [!DNL Privacy Events]
 
-[!DNL Privacy Events] sono messaggi forniti da  Adobe Experience Platform [!DNL Privacy Service], che sfruttano gli eventi di I/O Adobe inviati a un webhook configurato per facilitare l’automazione efficiente delle richieste di lavoro. Essi riducono o eliminano la necessità di eseguire il polling dell&#39; [!DNL Privacy Service] API per verificare se un processo è completo o se è stata raggiunta una determinata fase cardine all&#39;interno di un flusso di lavoro.
+[!DNL Privacy Events] sono messaggi forniti da  Adobe Experience Platform [!DNL Privacy Service], che sfruttano  eventi I/O di Adobe inviati a un webhook configurato per facilitare l’automazione efficiente della richiesta di processo. Essi riducono o eliminano la necessità di eseguire il polling dell&#39; [!DNL Privacy Service] API per verificare se un processo è completo o se è stata raggiunta una determinata fase cardine all&#39;interno di un flusso di lavoro.
 
 Al momento sono disponibili quattro tipi di notifiche relative al ciclo di vita della richiesta di lavoro per la privacy:
 
@@ -25,7 +25,7 @@ Al momento sono disponibili quattro tipi di notifiche relative al ciclo di vita 
 | Prodotto completo | Una delle soluzioni associate a questo processo ha completato il lavoro. |
 | Errore del prodotto | Una delle soluzioni ha segnalato un errore durante l&#39;elaborazione della richiesta. |
 
-Questo documento fornisce i passaggi per configurare un&#39;integrazione per [!DNL Privacy Service] le notifiche all&#39;interno di Adobe I/O. Per una panoramica di alto livello di [!DNL Privacy Service] e delle sue funzioni, consultate la panoramica [di](home.md)Privacy Service.
+Questo documento fornisce i passaggi per impostare un&#39;integrazione per [!DNL Privacy Service] le notifiche all&#39;interno  I/O Adobe. Per una panoramica di alto livello di [!DNL Privacy Service] e delle sue funzioni, consultate la panoramica [dei](home.md)Privacy Service.
 
 ## Introduzione
 
@@ -72,9 +72,9 @@ Un output di successo è simile al seguente:
 
 Prendete nota dell’ `Forwarding` URL (`https://212d6cd2.ngrok.io`), che verrà utilizzato per identificare il webhook nel passaggio successivo.
 
-## Creare un nuovo progetto in Adobe Developer Console
+## Creare un nuovo progetto in  Adobe Developer Console
 
-Andate ad [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) ed effettuate l&#39;accesso con il vostro Adobe ID . Attenetevi quindi ai passaggi descritti nell&#39;esercitazione sulla [creazione di un progetto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vuoto nella documentazione di Adobe Developer Console.
+Andate a [console](https://www.adobe.com/go/devs_console_ui) Sviluppatore di Adobe ed effettuate l&#39;accesso con il vostro Adobe ID . Attenetevi quindi ai passaggi descritti nell&#39;esercitazione sulla [creazione di un progetto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vuoto nella documentazione di  Adobe Developer Console.
 
 ## Aggiunta di eventi sulla privacy al progetto
 
