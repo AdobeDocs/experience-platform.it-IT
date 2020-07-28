@@ -68,7 +68,7 @@ Per creare una connessione SSC deve esistere una serie di specifiche di connessi
 
 **Formato API**
 
-Ogni origine disponibile dispone di un proprio set di specifiche di connessione per descrivere le proprietà del connettore, ad esempio i requisiti di autenticazione. L&#39;invio di una richiesta GET all&#39; `/connectionSpecs` endpoint restituirà le specifiche di connessione per tutte le origini disponibili. È inoltre possibile includere la query `property=name=="salesforce-service-cloud"` per ottenere informazioni specifiche per SSC.
+Ogni origine disponibile dispone di un proprio set di specifiche di connessione per descrivere le proprietà del connettore, ad esempio i requisiti di autenticazione. L&#39;invio di una richiesta di GET all&#39; `/connectionSpecs` endpoint restituirà le specifiche di connessione per tutte le origini disponibili. È inoltre possibile includere la query `property=name=="salesforce-service-cloud"` per ottenere informazioni specifiche per SSC.
 
 ```http
 GET /connectionSpecs
