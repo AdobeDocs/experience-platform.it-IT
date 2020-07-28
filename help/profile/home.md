@@ -28,7 +28,7 @@ Anche se [!DNL Real-time Customer Profile] elabora i dati acquisiti e utilizza  
 
 La relazione tra [!DNL Real-time Customer Profile] e altri servizi all&#39;interno [!DNL Experience Platform] è evidenziata nel diagramma seguente:
 
-![Relazione tra Profilo e altri servizi Experience Platform .](images/profile-overview/profile-in-platform.png)
+![Relazione tra Profilo e altri servizi  Experience Platform.](images/profile-overview/profile-in-platform.png)
 
 ### Profili e dati record
 
@@ -71,14 +71,14 @@ L&#39;ingresso in tempo reale è possibile attraverso un processo chiamato caric
 
 ### Configurazioni e destinazioni di proiezione Edge
 
-Al fine di promuovere esperienze coordinate, coerenti e personalizzate per i clienti attraverso più canali in tempo reale, i dati giusti devono essere prontamente disponibili e costantemente aggiornati man mano che si verificano le modifiche.  Adobe Experience Platform consente l&#39;accesso in tempo reale ai dati attraverso l&#39;uso di ciò che sono noti come edge. Un server periferico è un server collocato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni. Ad esempio, applicazioni Adobe come  Adobe Target e  Adobe Campaign utilizzano i bordi per fornire esperienze personalizzate ai clienti in tempo reale. I dati vengono indirizzati a un bordo da una proiezione, con una destinazione di proiezione che definisce il bordo a cui verranno inviati i dati, e una configurazione di proiezione che definisce le informazioni specifiche che verranno rese disponibili sul bordo. Per saperne di più e iniziare a lavorare con le proiezioni utilizzando l&#39; [!DNL Real-time Customer Profile] API, fare riferimento alla guida [endpoint di proiezione](api/edge-projections.md)edge.
+Al fine di promuovere esperienze coordinate, coerenti e personalizzate per i clienti attraverso più canali in tempo reale, i dati giusti devono essere prontamente disponibili e costantemente aggiornati man mano che si verificano le modifiche.  Adobe Experience Platform consente l&#39;accesso in tempo reale ai dati attraverso l&#39;uso di ciò che sono noti come edge. Un server periferico è un server collocato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni. Ad esempio,  applicazioni di Adobe come  Adobe Target e  Adobe Campaign utilizzano i bordi per fornire esperienze personalizzate ai clienti in tempo reale. I dati vengono indirizzati a un bordo da una proiezione, con una destinazione di proiezione che definisce il bordo a cui verranno inviati i dati, e una configurazione di proiezione che definisce le informazioni specifiche che verranno rese disponibili sul bordo. Per saperne di più e iniziare a lavorare con le proiezioni utilizzando l&#39; [!DNL Real-time Customer Profile] API, fare riferimento alla guida [endpoint di proiezione](api/edge-projections.md)edge.
 
 ## Aggiungi dati a [!DNL Real-time Customer Profile]
 
 [!DNL Platform] può essere configurato per inviare i dati del record e della serie temporale a [!DNL Profile], per supportare l’assimilazione in tempo reale dei flussi e l’assimilazione batch. Per ulteriori informazioni, consulta l’esercitazione che illustra come [aggiungere dati al profilo](tutorials/add-profile-data.md)cliente in tempo reale.
 
 >[!Nota]
->I dati raccolti attraverso le soluzioni Adobe, inclusi [!DNL Analytics Cloud], [!DNL Marketing Cloud]e [!DNL Advertising Cloud], fluiscono [!DNL Experience Platform] e vengono trasferiti [!DNL Profile].
+>I dati raccolti attraverso  soluzioni di Adobe, inclusi [!DNL Analytics Cloud][!DNL Marketing Cloud], e [!DNL Advertising Cloud], fluiscono [!DNL Experience Platform] e vengono ingeriti [!DNL Profile].
 
 ### [!DNL Profile] metriche di assimilazione
 
@@ -93,7 +93,7 @@ Per quanto riguarda l&#39;accesso ai dati, la governance dei dati svolge un ruol
 * Criteri di accesso ai dati
 * Controllo dell&#39;accesso ai dati per le azioni di marketing
 
-[!DNL Data governance] è gestito in diversi punti. Tra queste, puoi decidere in quali dati vengono acquisiti [!DNL Platform] e quali dati sono accessibili dopo l’assimilazione per una determinata azione di marketing. Per ulteriori informazioni, iniziare leggendo la panoramica sulla governance dei [dati](../data-governance/home.md).
+[!DNL Data governance] è gestito in diversi punti. tra cui la scelta di quali dati vengono acquisiti [!DNL Platform] e quali dati sono accessibili dopo l’assimilazione per una determinata azione di marketing. Per ulteriori informazioni, iniziare leggendo la panoramica sulla governance dei [dati](../data-governance/home.md).
 
 ### Gestione delle richieste di privacy e rinuncia ai dati
 
@@ -135,7 +135,7 @@ Per quanto riguarda l&#39;accesso ai dati, la governance dei dati svolge un ruol
 
 ## Passaggi successivi e risorse aggiuntive
 
-Per saperne di più [!DNL Real-time Customer Profile], continua a leggere la documentazione e completa le tue conoscenze guardando il video sottostante o esplorando altre [video tutorial](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html)Experience Platform.
+Per saperne di più [!DNL Real-time Customer Profile], continuate a leggere la documentazione e completate le vostre lezioni guardando il video sottostante o esplorando altre esercitazioni video [Experience Platform](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html).
 
 >[!WARNING]
 >L’ [!DNL Platform] interfaccia utente mostrata nel video seguente non è aggiornata. Consulta la guida [utente Profilo cliente](ui/user-guide.md) in tempo reale per informazioni sulle ultime funzionalità e videate dell&#39;interfaccia utente.
