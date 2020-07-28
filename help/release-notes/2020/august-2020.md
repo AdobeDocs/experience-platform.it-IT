@@ -1,6 +1,6 @@
 ---
 title: 'Note sulla versione di Adobe Experience Platform '
-description: ' note sulla versione di Experience Platform del 10 agosto 2020'
+description: ' note sulla versione del Experience Platform 10 agosto 2020'
 doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
@@ -24,7 +24,7 @@ Nuove funzioni in  Adobe Experience Platform:
 
 ## [!DNL Access control] {#access-control}
 
-[!DNL Experience Platform] sfrutta i profili di prodotto [Adobe  Admin Console](https://adminconsole.adobe.com) per collegare gli utenti con autorizzazioni e sandbox. Le autorizzazioni controllano l&#39;accesso a diverse funzionalità di Platform, tra cui la modellazione dei dati, la gestione dei profili e l&#39;amministrazione sandbox.
+[!DNL Experience Platform] sfrutta i profili di prodotto [Adobe Admin Console](https://adminconsole.adobe.com) per collegare gli utenti con autorizzazioni e sandbox. Le autorizzazioni controllano l&#39;accesso a diverse funzionalità di Platform, tra cui la modellazione dei dati, la gestione dei profili e l&#39;amministrazione sandbox.
 
 **Funzionalità chiave**
 
