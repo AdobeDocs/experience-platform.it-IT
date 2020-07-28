@@ -1,8 +1,8 @@
 ---
 title: (Beta) Destinazione degli hub eventi di Azure
 seo-title: (Beta) Destinazione degli hub eventi di Azure
-description: Crea una connessione in uscita in tempo reale all'archivio degli hub eventi di Azure per lo streaming dei dati da  Experience Platform.
-seo-description: Crea una connessione in uscita in tempo reale all'archivio degli hub eventi di Azure per lo streaming dei dati da  Experience Platform.
+description: Crea una connessione in uscita in tempo reale all'archivio degli hub eventi di Azure per lo streaming dei dati dal Experience Platform .
+seo-description: Crea una connessione in uscita in tempo reale all'archivio degli hub eventi di Azure per lo streaming dei dati dal Experience Platform .
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->La [!DNL Azure Event Hubs] destinazione in Adobe Real-time CDP è attualmente in versione beta. La documentazione e la funzionalità sono soggette a modifiche.
+>La [!DNL Azure Event Hubs] destinazione in  Adobe CDP in tempo reale è attualmente in versione beta. La documentazione e la funzionalità sono soggette a modifiche.
 
 ## Panoramica {#overview}
 
@@ -26,9 +26,9 @@ ht-degree: 2%
 
 * Per ulteriori informazioni [!DNL Azure Event Hubs], consulta la documentazione [](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about)Microsoft.
 * Per connettersi a [!DNL Azure Event Hubs] utilizzando le chiamate API, consulta l’esercitazione [API](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)Streaming destinations.
-* Per collegarsi [!DNL Azure Event Hubs] utilizzando l&#39;interfaccia utente Adobe Real-time CDP, consulta le sezioni riportate di seguito.
+* Per connettersi a [!DNL Azure Event Hubs] utilizzando l&#39;interfaccia utente CDP in tempo reale del Adobe , vedere le sezioni seguenti.
 
-![AWS Kinesis nell’interfaccia utente](/help/rtcdp/destinations/assets/azure-event-hubs-destination.png)
+![Kinesis AWS nell&#39;interfaccia utente](/help/rtcdp/destinations/assets/azure-event-hubs-destination.png)
 
 ## Casi d’uso {#use-cases}
 
@@ -108,5 +108,5 @@ I [!DNL Experience Platform] dati esportati vengono inviati in formato [!DNL Azu
 >[!MORELIKETHIS]
 >
 >* [Connessione ad Azure Event Hubs e attivazione dei dati tramite chiamate API](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
->* [Destinazione AWS Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md)
+>* [Destinazione Kinesis AWS](/help/rtcdp/destinations/amazon-kinesis-destination.md)
 >* [Tipi e categorie di destinazione](/help/rtcdp/destinations/destination-types.md)
