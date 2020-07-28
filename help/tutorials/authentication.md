@@ -18,7 +18,7 @@ Questo documento fornisce un&#39;esercitazione passo-passo per ottenere l&#39;ac
 
 ## Autenticazione per effettuare chiamate API
 
-Per mantenere la sicurezza delle applicazioni e degli utenti, tutte le richieste alle API di I/O Adobe devono essere autenticate e autorizzate utilizzando standard quali OAuth e JSON Web Token (JWT). Il JWT viene quindi utilizzato insieme alle informazioni specifiche per il cliente per generare il token di accesso personale.
+Per mantenere la sicurezza delle applicazioni e degli utenti, tutte le richieste alle API I/O  Adobe devono essere autenticate e autorizzate utilizzando standard quali OAuth e JSON Web Tokens (JWT). Il JWT viene quindi utilizzato insieme alle informazioni specifiche per il cliente per generare il token di accesso personale.
 
 Questa esercitazione descrive i passaggi dell&#39;autenticazione mediante la creazione di un token di accesso delineato nel seguente diagramma di flusso:
 ![](images/authentication/authentication-flowchart.png)
@@ -29,7 +29,7 @@ Per effettuare correttamente le chiamate alle [!DNL Experience Platform] API, è
 
 * Un&#39;organizzazione IMS con accesso al Adobe Experience Platform 
 * Un account  Adobe ID registrato
-* Un amministratore  Admin Console per aggiungere voi come **sviluppatore** e un **utente** a un prodotto.
+* Un amministratore  Admin Console per aggiungere voi come **sviluppatore** e come **utente** per un prodotto.
 
 Le sezioni seguenti descrivono i passaggi necessari per creare un Adobe ID  e diventare sviluppatore e utente per un&#39;organizzazione.
 
@@ -37,13 +37,13 @@ Le sezioni seguenti descrivono i passaggi necessari per creare un Adobe ID  e di
 
 Se non disponete di un Adobe ID , potete crearne uno seguendo la procedura seguente:
 
-1. Vai ad [Adobe Developer Console](https://console.adobe.io)
+1. Vai a [Adobe Developer Console](https://console.adobe.io)
 2. Fai clic su **[!UICONTROL create a new account]**.
 3. Completare il processo di registrazione
 
 ## Diventare sviluppatore e utente per [!DNL Experience Platform] un&#39;organizzazione
 
-Prima di creare integrazioni sull&#39;I/O Adobe, il vostro account deve disporre delle autorizzazioni per lo sviluppatore per un prodotto in un&#39;organizzazione IMS. Informazioni dettagliate sugli account sviluppatore nell&#39;Admin Console  sono disponibili nel documento [di](https://helpx.adobe.com/enterprise/using/manage-developers.html) supporto per la gestione degli sviluppatori.
+Prima di creare integrazioni sull&#39;I/O  Adobe, è necessario che l&#39;account disponga delle autorizzazioni per lo sviluppatore per un prodotto in un&#39;organizzazione IMS. Informazioni dettagliate sugli account sviluppatore nel Admin Console  sono disponibili nel documento [di](https://helpx.adobe.com/enterprise/using/manage-developers.html) supporto per la gestione degli sviluppatori.
 
 **Accesso sviluppatore**
 
@@ -51,11 +51,11 @@ Contatta un [!DNL Admin Console] amministratore dell’organizzazione per aggiun
 
 ![](images/authentication/assign-developer.png)
 
-L&#39;amministratore deve assegnare l&#39;utente come sviluppatore ad almeno un profilo di prodotto per continuare.
+L&#39;amministratore deve assegnare l&#39;utente come sviluppatore ad almeno un profilo di prodotto per proseguire.
 
 ![](images/authentication/add-developer.png)
 
-Una volta assegnati come sviluppatore, potrete disporre dei privilegi di accesso per creare integrazioni su [Adobe I/O](https://www.adobe.com/go/devs_console_ui). Queste integrazioni sono una pipeline dalle app e dai servizi esterni all&#39;API Adobe.
+Una volta assegnati come sviluppatore, avrete i privilegi di accesso per creare integrazioni su [Adobe I/O](https://www.adobe.com/go/devs_console_ui). Queste integrazioni sono una pipeline dalle app e dai servizi esterni all&#39;API del Adobe .
 
 **Accesso utente**
 
@@ -67,13 +67,13 @@ Come per la procedura di aggiunta di uno sviluppatore, l’amministratore deve a
 
 ![](images/authentication/assign-user-details.png)
 
-## Generazione di credenziali di accesso in Adobe Developer Console
+## Generazione di credenziali di accesso in  Adobe Developer Console
 
 >[!NOTE]
 >
 >Se state seguendo questo documento dalla guida [per gli sviluppatori di](../privacy-service/api/getting-started.md)Privacy Service, ora potete tornare a tale guida per generare le credenziali di accesso univoche per [!DNL Privacy Service].
 
-Con Adobe Developer Console, dovete generare le seguenti tre credenziali di accesso:
+Utilizzando  Adobe Developer Console, è necessario generare le seguenti tre credenziali di accesso:
 
 * `{IMS_ORG}`
 * `{API_KEY}`
@@ -85,7 +85,7 @@ I passaggi sono descritti in dettaglio di seguito.
 
 ### Configurazione una tantum
 
-Andate ad [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) ed effettuate l&#39;accesso con il vostro Adobe ID . Attenetevi quindi ai passaggi descritti nell&#39;esercitazione sulla [creazione di un progetto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vuoto nella documentazione di Adobe Developer Console.
+Andate a [console](https://www.adobe.com/go/devs_console_ui) Sviluppatore di Adobe ed effettuate l&#39;accesso con il vostro Adobe ID . Attenetevi quindi ai passaggi descritti nell&#39;esercitazione sulla [creazione di un progetto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vuoto nella documentazione di  Adobe Developer Console.
 
 Dopo aver creato un nuovo progetto, fate clic **[!UICONTROL Add API]** sulla schermata Panoramica __ progetto.
 
