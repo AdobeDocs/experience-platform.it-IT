@@ -18,7 +18,7 @@ I dati di identità vengono generalmente forniti come valore stringa ID e spazio
 
 >[!NOTE]
 >
->Questo formato è destinato principalmente all&#39;uso interno di Adobe. L&#39;XID nativo come valore singolo è più efficiente in termini di spazio ed è ciò che viene utilizzato internamente nelle [!DNL Platform] soluzioni per l&#39;archiviazione e la serializzazione. Tuttavia non è leggibile dall&#39;uomo, è opaco e richiede una chiamata separata per ottenerlo da utilizzare.
+>Questo formato è destinato principalmente all&#39;uso interno  Adobe. L&#39;XID nativo come valore singolo è più efficiente in termini di spazio ed è ciò che viene utilizzato internamente nelle [!DNL Platform] soluzioni per l&#39;archiviazione e la serializzazione. Tuttavia non è leggibile dall&#39;uomo, è opaco e richiede una chiamata separata per ottenerlo da utilizzare.
 
 Acquisisci l&#39;XID per un determinato valore ID e spazio dei nomi utilizzando il servizio descritto in questa sezione.
 
