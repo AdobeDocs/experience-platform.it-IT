@@ -20,7 +20,7 @@ Le sezioni seguenti descrivono le chiamate che potete effettuare utilizzando l&#
 
 ### Recupero di un elenco di query
 
-È possibile recuperare un elenco di tutte le query per l&#39;organizzazione IMS effettuando una richiesta GET all&#39; `/queries` endpoint.
+È possibile recuperare un elenco di tutte le query per l&#39;organizzazione IMS effettuando una richiesta di GET all&#39; `/queries` endpoint.
 
 **Formato API**
 
@@ -119,7 +119,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di query per l
 
 ### Creazione di una query
 
-Potete creare una nuova query effettuando una richiesta POST all&#39; `/queries` endpoint.
+Potete creare una nuova query eseguendo una richiesta di POST all&#39; `/queries` endpoint.
 
 **Formato API**
 
@@ -202,7 +202,7 @@ Una risposta corretta restituisce lo stato HTTP 202 (Accettato) con i dettagli d
 
 ### Recuperare una query per ID
 
-È possibile recuperare informazioni dettagliate su una query specifica effettuando una richiesta GET all&#39; `/queries` endpoint e fornendo il valore della query `id` nel percorso della richiesta.
+È possibile recuperare informazioni dettagliate su una query specifica effettuando una richiesta di GET all&#39; `/queries` endpoint e fornendo il valore della query `id` nel percorso della richiesta.
 
 **Formato API**
 
@@ -273,7 +273,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 
 ### Annullamento di una query
 
-È possibile richiedere di eliminare una query specificata eseguendo una richiesta PATCH all&#39; `/queries` endpoint e fornendo il valore della query `id` nel percorso della richiesta.
+È possibile richiedere di eliminare una query specificata effettuando una richiesta di PATCH all&#39; `/queries` endpoint e fornendo il valore della query `id` nel percorso della richiesta.
 
 **Formato API**
 
