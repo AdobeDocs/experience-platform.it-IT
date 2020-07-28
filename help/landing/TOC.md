@@ -6,14 +6,14 @@ translation-type: tm+mt
 source-git-commit: a2726bfc5ef7feac374e57af9c986a9c521efa48
 workflow-type: tm+mt
 source-wordcount: '306'
-ht-degree: 34%
+ht-degree: 37%
 
 ---
 
 
 # Adobe Experience Platform {#landing}
 
-* [Panoramica di  Experience Platform](home.md)
+* [Panoramica del Experience Platform](home.md)
 * [Introduzione](get-started.md)
 * Documentazione di Experience Platform {#documentation}
    * [Panoramica della documentazione](documentation/overview.md)
@@ -25,7 +25,7 @@ ht-degree: 34%
    * [Ingestione dati](https://docs.adobe.com/content/help/en/experience-platform/ingestion/home.html)
    * [Area di lavoro Data Science](https://docs.adobe.com/content/help/en/experience-platform/data-science-workspace/home.html)
    * [Strumento di debug](https://docs.adobe.com/content/help/it-IT/debugger/using/experience-cloud-debugger.html)
-   * [Debugger 2.0 (versione beta)](https://docs.adobe.com/content/help/en/debugger/using-v2/experience-cloud-debugger.html)
+   * [Debugger 2.0 (versione beta)](https://docs.adobe.com/content/help/it-IT/debugger/using-v2/experience-cloud-debugger.html)
    * [Servizio di disattivazione](https://docs.adobe.com/content/help/en/experience-platform/decisioning/home.html)
    * [Destinazioni](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html)
    * [ETL (Extract, Transform, Load)](https://docs.adobe.com/content/help/en/experience-platform/etl/home.html)
@@ -42,7 +42,7 @@ ht-degree: 34%
    * [Origini (connettori)](https://docs.adobe.com/content/help/en/experience-platform/sources/home.html)
    * [SDK Web](https://docs.adobe.com/content/help/it-IT/experience-platform/edge/home.html)
    * [XDM (modello dati esperienza)](https://docs.adobe.com/content/help/it-IT/experience-platform/xdm/home.html)
-* [esercitazioni Experience Platform](https://docs.adobe.com/content/help/it-IT/experience-platform/tutorials/home.html)
+* [Esercitazioni  Experience Platform](https://docs.adobe.com/content/help/it-IT/experience-platform/tutorials/home.html)
 * [Note sulla versione](https://docs.adobe.com/content/help/it-IT/experience-platform/release-notes/latest.translate.html)
 * [Glossario](glossary.md)
 * [Guida alla risoluzione dei problemi](troubleshooting.md)
