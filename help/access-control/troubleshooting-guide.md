@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # Guida alla risoluzione dei problemi di controllo degli accessi
 
-Questo documento contiene le risposte alle domande frequenti sul controllo degli accessi in  Adobe Experience Platform. Per domande e risoluzione dei problemi relativi ad altri [!DNL Platform] servizi, consultare la guida alla risoluzione dei problemi di [Experience Platform](../landing/troubleshooting.md).
+Questo documento contiene le risposte alle domande frequenti sul controllo degli accessi in  Adobe Experience Platform. Per le domande e la risoluzione dei problemi relativi ad altri [!DNL Platform] servizi, consulta la guida alla risoluzione dei problemi del [Experience Platform](../landing/troubleshooting.md).
 
-[!DNL Experience Platform] sfrutta i profili di prodotto in [Adobe  Admin Console](http://adminconsole.adobe.com) per fornire un controllo **dell&#39;** accesso basato sui ruoli, collegando gli utenti con autorizzazioni e sandbox.  Per ulteriori informazioni, consulta la panoramica [sul controllo](home.md) degli accessi.
+[!DNL Experience Platform] sfrutta i profili di prodotto in [Adobe Admin Console](http://adminconsole.adobe.com) per fornire un controllo **dell&#39;** accesso basato sui ruoli, collegando gli utenti con autorizzazioni e sandbox.  Per ulteriori informazioni, consulta la panoramica [sul controllo](home.md) degli accessi.
 
 ## Dove posso trovare le mie autorizzazioni di accesso correnti?
 
-Se sei un amministratore di sistema, un amministratore di prodotto o un amministratore di profilo di prodotto per l’organizzazione IMS, puoi visualizzare il profilo di prodotto assegnato e le autorizzazioni che fornisce all’interno di Adobe  Admin Console. Consulta la guida [utente per il controllo](./ui/overview.md) degli accessi per istruzioni su come navigare all&#39;interno del [!DNL Admin Console] profilo di prodotto per visualizzare le autorizzazioni di un profilo di prodotto.
+Se sei un amministratore di sistema, un amministratore di prodotto o un amministratore di profilo di prodotto per l’organizzazione IMS, puoi visualizzare il profilo di prodotto assegnato e le autorizzazioni che fornisce all’interno dell’Adobe Admin Console. Consulta la guida [utente per il controllo](./ui/overview.md) degli accessi per istruzioni su come navigare all&#39;interno del [!DNL Admin Console] profilo di prodotto per visualizzare le autorizzazioni di un profilo di prodotto.
 
 Se non sei un amministratore, puoi comunque visualizzare le autorizzazioni di accesso correnti inviando una richiesta all’ `/acl/effective-policies` endpoint nell’API di controllo degli accessi. Per ulteriori informazioni, consulta la sezione &quot;Visualizza criteri effettivi&quot; nella guida [per gli sviluppatori del controllo](./api/effective-policies.md) degli accessi.
 
