@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Connettore Azure Blob e Amazon S3
+title: Connettore Azure Blob e  Amazon S3
 topic: overview
 translation-type: tm+mt
 source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
@@ -12,7 +12,7 @@ ht-degree: 0%
 ---
 
 
-# Connettore Azure Blob e Amazon S3
+# Connettore Azure Blob e  Amazon S3
 
  Adobe Experience Platform offre connettività nativa per fornitori di cloud come AWS [!DNL Google Cloud Platform]e [!DNL Azure]. È possibile inserire i dati da questi sistemi in [!DNL Platform].
 
@@ -61,5 +61,5 @@ La documentazione seguente fornisce informazioni su come collegare Azure Blob e 
 
 ## Collegare [!DNL Blob] e utilizzare S3 all&#39; [!DNL Platform] interfaccia utente
 
-- [Creare un connettore di origine Azure Blob o Amazon S3 nell&#39;interfaccia utente](../../tutorials/ui/create/cloud-storage/blob-s3.md)
+- [Creare un connettore di origine Azure Blob o  Amazon S3 nell&#39;interfaccia utente](../../tutorials/ui/create/cloud-storage/blob-s3.md)
 - [Configurare un flusso di dati per un connettore di archiviazione cloud nell&#39;interfaccia utente](../../tutorials/ui/dataflow/batch/cloud-storage.md)
