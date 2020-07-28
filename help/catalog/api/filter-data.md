@@ -204,7 +204,7 @@ L&#39;uso dei tag presenta alcune limitazioni:
 
 * Gli unici oggetti Catalog che al momento supportano i tag sono insiemi di dati, batch e connessioni.
 * I nomi dei tag sono univoci per l’organizzazione IMS.
-* I processi Adobe possono utilizzare i tag per determinati comportamenti. I nomi di questi tag hanno il prefisso &quot;adobe&quot; come standard. Pertanto, è consigliabile evitare questa convenzione quando si dichiarano i nomi dei tag.
+*  processi di Adobe possono utilizzare i tag per determinati comportamenti. I nomi di questi tag hanno il prefisso &quot;adobe&quot; come standard. Pertanto, è consigliabile evitare questa convenzione quando si dichiarano i nomi dei tag.
 * I seguenti nomi di tag sono riservati all’uso in tutta [!DNL Experience Platform]l’organizzazione e pertanto non possono essere dichiarati come nome di tag:
    * `unifiedProfile`: Questo nome di tag è riservato ai set di dati da cui eseguire l&#39;assimilazione [!DNL Real-time Customer Profile](../../profile/home.md).
    * `unifiedIdentity`: Questo nome di tag è riservato ai set di dati da cui eseguire l&#39;assimilazione [!DNL Identity Service](../../identity-service/home.md).
@@ -595,7 +595,7 @@ Il valore del `property` parametro supporta diversi tipi di espressioni condizio
 
 **Richiesta**
 
-La richiesta seguente restituirà tutti i set di dati con un numero di versione maggiore di 1.0.3.
+Nella richiesta seguente verranno restituiti tutti i set di dati con un numero di versione maggiore di 1.0.3.
 
 ```shell
 curl -X GET \
