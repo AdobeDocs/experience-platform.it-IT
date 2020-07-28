@@ -469,7 +469,7 @@ I passaggi dettagliati per l&#39;utilizzo dell&#39;API Data Access sono disponib
 
 ## Aggiornare lo schema del set di dati
 
-È possibile aggiungere campi e inserire dati aggiuntivi nei set di dati creati. A questo scopo, è innanzitutto necessario aggiornare lo schema aggiungendo proprietà aggiuntive che definiscono i nuovi dati. Questo può essere fatto utilizzando le operazioni PATCH e/o PUT per aggiornare lo schema esistente.
+È possibile aggiungere campi e inserire dati aggiuntivi nei set di dati creati. A questo scopo, è innanzitutto necessario aggiornare lo schema aggiungendo proprietà aggiuntive che definiscono i nuovi dati. Questa operazione può essere eseguita utilizzando le operazioni PATCH e/o PUT per aggiornare lo schema esistente.
 
 Per ulteriori informazioni sull&#39;aggiornamento degli schemi, vedere la [Schema Registry API Developer Guide](../../xdm/api/getting-started.md).
 
