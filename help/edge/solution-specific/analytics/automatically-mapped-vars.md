@@ -60,7 +60,7 @@ Di seguito è riportato un elenco di variabili in cui il Adobe Experience Platfo
 | `environment.browserDetails.javaEnabled` | `v` | Mappatura del parametro di query AppMeasurement JAVA_ENABLED con conversione BOOLEAN_TO_YN. |
 | `environment.browserDetails.viewportHeight` | `bh` | Mappatura del parametro query AppMeasurement BROWSER_HEIGHT. |
 | `environment.browserDetails.viewportWidth` | `bw` | Mappatura del parametro query AppMeasurement BROWSER_WIDTH. |
-| `environment.connectionType` | `ct` | Mappatura del parametro query AppMeasurement CT_CONNECT_TYPE. |
+| `environment.connectionType` | `ct` | Mapping CT_CONNECT_TYPE del parametro query AppMeasurement. |
 | `device.colorDepth` | `c` | Mappatura del parametro di query AppMeasurement C_COLOR. |
 | `placeContext.geo.stateProvince` | `state` | Mappatura STATE del parametro della query AppMeasurement. |
 | `placeContext.geo.postalCode` | `zip` | Mappatura ZIP del parametro query AppMeasurement. |
