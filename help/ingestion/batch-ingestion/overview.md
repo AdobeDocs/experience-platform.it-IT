@@ -200,7 +200,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### Caricamento di file di grandi dimensioni - caricamento di parti successive
 
-Dopo la creazione del file, tutti i blocchi successivi possono essere caricati effettuando ripetute richieste PATCH, una per ogni sezione del file.
+Dopo la creazione del file, tutti i blocchi successivi possono essere caricati effettuando ripetute richieste di PATCH, una per ogni sezione del file.
 
 ```http
 PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
