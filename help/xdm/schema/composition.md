@@ -38,7 +38,7 @@ Gli schemi risolvono questo problema consentendo l&#39;integrazione dei dati da 
 
 ### Flussi di lavoro basati su schema in [!DNL Experience Platform]
 
-La standardizzazione è un concetto chiave dietro [!DNL Experience Platform]. XDM, guidato da Adobe, è uno sforzo per standardizzare i dati sull&#39;esperienza cliente e definire schemi standard per la gestione dell&#39;esperienza cliente.
+La standardizzazione è un concetto chiave dietro [!DNL Experience Platform]. XDM, guidato da  Adobe, è uno sforzo per standardizzare i dati sull&#39;esperienza cliente e definire schemi standard per la gestione dell&#39;esperienza cliente.
 
 L&#39;infrastruttura su cui [!DNL Experience Platform] viene creata, nota come [!DNL XDM System], facilita i flussi di lavoro basati su schemi e include i pattern di utilizzo dei servizi, [!DNL Schema Registry], [!DNL Schema Editor]i metadati dello schema e i relativi pattern. See the [XDM System overview](../home.md) for more information.
 
@@ -101,13 +101,13 @@ La composizione di uno schema inizia con l&#39;assegnazione di una classe. Le cl
 
 Una classe determina inoltre quali mixin saranno utilizzabili nello schema. Questo viene descritto più dettagliatamente nella sezione [mixin](#mixin) che segue.
 
-Esistono classi standard fornite con ogni integrazione di classi [!DNL Experience Platform], note come &quot;Industria&quot;. Le classi di settore sono standard di settore generalmente accettati che si applicano a un&#39;ampia serie di casi d&#39;uso. Esempi di classi Industry includono le [!DNL XDM Individual Profile] classi e [!DNL XDM ExperienceEvent] le classi fornite da Adobe.
+Esistono classi standard fornite con ogni integrazione di classi [!DNL Experience Platform], note come &quot;Industria&quot;. Le classi di settore sono standard di settore generalmente accettati che si applicano a un&#39;ampia serie di casi d&#39;uso. Esempi di classi Industry includono le [!DNL XDM Individual Profile] classi e [!DNL XDM ExperienceEvent] le classi fornite dal Adobe .
 
 [!DNL Experience Platform] consente anche classi &quot;Fornitore&quot;, che sono classi definite dai [!DNL Experience Platform] partner e rese disponibili a tutti i clienti che utilizzano il servizio o l&#39;applicazione del fornitore all&#39;interno [!DNL Platform].
 
 Esistono anche classi utilizzate per descrivere casi di utilizzo più specifici per singole organizzazioni all&#39;interno delle classi [!DNL Platform], denominate &quot;Customer&quot;. Le classi cliente sono definite da un&#39;organizzazione quando non sono disponibili classi Settore o Fornitore per descrivere un caso di utilizzo univoco.
 
-Ad esempio, uno schema che rappresenta i membri di un programma Fedeltà descrive i dati dei record relativi a un singolo utente e può quindi essere basato sulla [!DNL XDM Individual Profile] classe, una classe Industry standard definita da Adobe.
+Ad esempio, uno schema che rappresenta i membri di un programma Fedeltà descrive i dati dei record relativi a un singolo e può quindi essere basato sulla [!DNL XDM Individual Profile] classe, una classe Industry standard definita da  Adobe.
 
 ### Mixin {#mixin}
 
@@ -200,7 +200,7 @@ Tutti i file di dati acquisiti [!DNL Experience Platform] devono essere conformi
 
 Ora che si conoscono le nozioni di base della composizione dello schema, è possibile iniziare a creare schemi utilizzando l&#39; [!DNL Schema Registry].
 
-L&#39; [!DNL Schema Registry] applicazione viene utilizzata per accedere al [!DNL Schema Library] Adobe Experience Platform all&#39;interno di  e fornisce un&#39;interfaccia utente e un&#39;API RESTful da cui sono accessibili tutte le risorse libreria disponibili. Il [!DNL Schema Library] contiene risorse del settore definite da Adobe, risorse del fornitore definite da [!DNL Experience Platform] partner e classi, mixin, tipi di dati e schemi che sono stati composti da membri dell&#39;organizzazione.
+L&#39; [!DNL Schema Registry] applicazione viene utilizzata per accedere al [!DNL Schema Library] Adobe Experience Platform all&#39;interno di  e fornisce un&#39;interfaccia utente e un&#39;API RESTful da cui sono accessibili tutte le risorse libreria disponibili. Il [!DNL Schema Library] contiene risorse del settore definite da  Adobe, risorse del fornitore definite dai [!DNL Experience Platform] partner e classi, mixin, tipi di dati e schemi che sono stati composti da membri dell&#39;organizzazione.
 
 Per iniziare a comporre lo schema utilizzando l&#39;interfaccia utente, seguire l&#39;esercitazione [Editor](../tutorials/create-schema-ui.md) schema per creare lo schema &quot;Membri fedeltà&quot; menzionato in questo documento.
 
