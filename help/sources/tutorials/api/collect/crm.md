@@ -16,7 +16,7 @@ ht-degree: 1%
 
 [!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti diverse all&#39;interno  Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
-Questa esercitazione descrive i passaggi per recuperare i dati da un sistema CRM di terze parti e portarli [!DNL Platform] attraverso connettori e API di origine.
+Questa esercitazione descrive i passaggi necessari per recuperare i dati da un sistema CRM di terze parti e inserirli [!DNL Platform] attraverso connettori e API di origine.
 
 ## Introduzione
 
@@ -63,7 +63,7 @@ Continuate a seguire i passaggi descritti nella guida per gli sviluppatori fino 
 
 ## Creazione di una connessione di origine {#source}
 
-Con la creazione di uno schema XDM ad hoc, ora è possibile creare una connessione di origine utilizzando una richiesta POST all&#39; [!DNL Flow Service] API. Una connessione di origine è costituita da un ID connessione, un file di dati di origine e un riferimento allo schema che descrive i dati di origine.
+Con la creazione di uno schema XDM ad hoc, ora è possibile creare una connessione di origine utilizzando una richiesta di POST all&#39; [!DNL Flow Service] API. Una connessione di origine è costituita da un ID connessione, un file di dati di origine e un riferimento allo schema che descrive i dati di origine.
 
 Per creare una connessione di origine, è inoltre necessario definire un valore enum per l&#39;attributo del formato dati.
 
@@ -239,7 +239,7 @@ Una risposta corretta restituisce i dettagli dello schema appena creato, incluso
 
 ## Creare un dataset di destinazione
 
-Un set di dati di destinazione può essere creato eseguendo una richiesta POST all&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)Catalog Service, fornendo l&#39;ID dello schema di destinazione all&#39;interno del payload.
+Un set di dati di destinazione può essere creato eseguendo una richiesta di POST all’API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)Catalog Service, fornendo l’ID dello schema di destinazione all’interno del payload.
 
 **Formato API**
 
@@ -336,7 +336,7 @@ curl -X POST \
 
 ## Creare una mappatura {#mapping}
 
-Affinché i dati di origine siano assimilati in un set di dati di destinazione, devono essere mappati sullo schema di destinazione a cui aderisce il set di dati di destinazione. Questo si ottiene eseguendo una richiesta POST all&#39;API del servizio di conversione con mappature dati definite all&#39;interno del payload della richiesta.
+Affinché i dati di origine siano assimilati in un set di dati di destinazione, devono essere mappati sullo schema di destinazione a cui aderisce il set di dati di destinazione. Questo si ottiene eseguendo una richiesta POST all&#39;API Conversion Service con mappature dati definite all&#39;interno del payload della richiesta.
 
 **Formato API**
 
@@ -617,7 +617,7 @@ L&#39;ultimo passaggio per la raccolta dei dati CRM è creare un flusso di dati.
 * [ID mappatura](#mapping)
 * [ID specifica Dataflow](#specs)
 
-Un flusso di dati è responsabile della pianificazione e della raccolta dei dati da un&#39;origine. È possibile creare un flusso di dati eseguendo una richiesta POST fornendo al contempo i valori indicati in precedenza all&#39;interno del payload.
+Un flusso di dati è responsabile della pianificazione e della raccolta dei dati da un&#39;origine. È possibile creare un flusso di dati eseguendo una richiesta di POST fornendo al contempo i valori indicati in precedenza all&#39;interno del payload.
 
 Per pianificare un&#39;assimilazione, è innanzitutto necessario impostare il valore dell&#39;ora di inizio in modo che l&#39;ora dell&#39;epoch sia espressa in secondi. Quindi, è necessario impostare il valore della frequenza su una delle cinque opzioni: `once`, `minute`, `hour`, `day`o `week`. Il valore dell&#39;intervallo indica il periodo tra due assimilazioni consecutive e la creazione di un&#39;assimilazione una tantum non richiede l&#39;impostazione di un intervallo. Per tutte le altre frequenze, il valore dell&#39;intervallo deve essere impostato su uguale o maggiore di `15`.
 
