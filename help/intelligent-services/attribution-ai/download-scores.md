@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;attribution ai;access scores;popular topics
 solution: Experience Platform
-title: Accesso ai punteggi in Attribution AI
+title: 'Accesso ai punteggi nelle Attribution AI '
 topic: Accessing scores
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
@@ -12,19 +12,19 @@ ht-degree: 2%
 ---
 
 
-# Download dei punteggi in Attribution AI
+# Download dei punteggi in  Attribution AI
 
-Questo documento funge da guida per il download dei punteggi per l&#39;AI di attribuzione.
+Questo documento funge da guida per il download dei punteggi per  Attribution AI.
 
 ## Introduzione
 
-Attribution AI consente di scaricare i punteggi nel formato file parquet. Questa esercitazione richiede che sia stata letta e completata la sezione Download dei punteggi di attribuzione AI nella guida [introduttiva](./getting-started.md) .
+ Attribution AI consente di scaricare i punteggi nel formato file parquet. Questa esercitazione richiede che sia stata letta e completata la sezione relativa al download  punteggi delle Attribution AI nella guida [introduttiva](./getting-started.md) .
 
-Inoltre, per accedere ai punteggi per l&#39;AI di Attribuzione, è necessario che sia disponibile un&#39;istanza di servizio con stato di esecuzione riuscito. Per creare una nuova istanza del servizio, visitate la guida [utente di](./user-guide.md)Attribution AI. Se avete creato di recente un&#39;istanza di servizio che continua a essere formativa e valutazione, lasciate 24 ore per completare l&#39;esecuzione.
+Inoltre, per accedere ai punteggi per  Attribution AI, è necessario disporre di un&#39;istanza di servizio con uno stato di esecuzione riuscito. Per creare una nuova istanza del servizio, visitate la guida [utente](./user-guide.md)Attribution AI. Se avete creato di recente un&#39;istanza di servizio che continua a essere formativa e valutazione, lasciate 24 ore per completare l&#39;esecuzione.
 
 ## Find your dataset ID {#dataset-id}
 
-Nella tua istanza di servizio per informazioni approfondite sull&#39;AI di attribuzione, fai clic sul menu a discesa *Altre azioni* nella barra di navigazione in alto a destra, quindi seleziona **[!UICONTROL Access scores]**.
+Nell’istanza del servizio per  approfondimenti sulle Attribution AI, fai clic sul menu a discesa *Altre azioni* nella barra di navigazione in alto a destra, quindi seleziona **[!UICONTROL Access scores]**.
 
 ![altre azioni](./images/download-scores/more-actions.png)
 
@@ -112,7 +112,7 @@ Una risposta corretta restituisce un payload contenente un oggetto ID batch. In 
 
 ## Recuperate la prossima chiamata API con il vostro ID batch {#retrieve-the-next-api-call-with-your-batch-id}
 
-Una volta ottenuto l&#39;ID batch, potete effettuare una nuova richiesta GET a `/batches`. La richiesta restituisce un collegamento utilizzato come richiesta API successiva.
+Una volta ottenuto l’ID batch, potete effettuare una nuova richiesta di GET a `/batches`. La richiesta restituisce un collegamento utilizzato come richiesta API successiva.
 
 **Formato API**
 
@@ -166,7 +166,7 @@ Una risposta corretta restituisce un payload contenente un `_links` oggetto. All
 
 ## Recuperare i file {#retrieving-your-files}
 
-Utilizzando il `href` valore ottenuto nel passaggio precedente come chiamata API, esegui una nuova richiesta GET per recuperare la directory dei file.
+Utilizzando il `href` valore ottenuto nel passaggio precedente come chiamata API, effettua una nuova richiesta di GET per recuperare la directory del file.
 
 **Formato API**
 
@@ -214,14 +214,14 @@ La risposta contiene un array di dati che può contenere una singola voce o un e
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `_links.self.href` | L&#39;URL della richiesta GET utilizzato per scaricare un file nella directory. |
+| `_links.self.href` | L’URL della richiesta di GET utilizzato per scaricare un file nella directory. |
 
 
 Copiare il `href` valore di qualsiasi oggetto file nell&#39; `data` array, quindi procedere al passaggio successivo.
 
 ## Scaricare i dati del file
 
-Per scaricare i dati del file, effettuate una richiesta GET al `"href"` valore copiato nel passaggio precedente [per recuperare i file](#retrieving-your-files).
+Per scaricare i dati del file, effettuate una richiesta di GET al `"href"` valore copiato nel passaggio precedente [per recuperare i file](#retrieving-your-files).
 
 >[!NOTE]
 >
@@ -251,7 +251,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
 
 >[!TIP]
 >
->Prima di effettuare la richiesta GET, verificate di essere nella directory o nella cartella corretta in cui desiderate salvare il file.
+>Prima di effettuare la richiesta, verificate di essere nella directory o nella cartella corretta in cui desiderate salvare il file.
 
 **Risposta**
 
@@ -261,19 +261,19 @@ La risposta scarica il file richiesto nella directory corrente. In questo esempi
 
 ## Passaggi successivi
 
-Questo documento descrive i passaggi necessari per scaricare i punteggi di Attribution AI. È ora possibile continuare a consultare gli altri servizi [e guide](../home.md) intelligenti disponibili.
+In questo documento sono descritti i passaggi necessari per scaricare  valutazioni delle Attribution AI. È ora possibile continuare a consultare gli altri servizi [e guide](../home.md) intelligenti disponibili.
 
-## Accesso ai punteggi con Snowflake
+## Accesso ai punteggi tramite  Snowflake
 
 >[!IMPORTANT]
 >
->Per ulteriori informazioni sull&#39;accesso ai punteggi tramite SnowFlake, contattate attributionai-support@adobe.com.
+>Per ulteriori informazioni sull&#39;accesso ai punteggi utilizzando  Snowflake, contattate attributionai-support@adobe.com.
 
-È possibile accedere ai punteggi AI aggregati di Attribuzione tramite Snowflake. Al momento, è necessario inviare tramite e-mail il supporto Adobe all&#39;indirizzo attributionai-support@adobe.com per configurare e ricevere le credenziali per Snowflake nell&#39;account del lettore.
+È possibile accedere ai punteggi aggregati  Attribution AI tramite  Snowflake. Al momento, è necessario inviare tramite e-mail  supporto del Adobe all&#39;indirizzo attributionai-support@adobe.com per configurare e ricevere le credenziali per  Snowflake nel proprio account lettore.
 
-Una volta che il supporto Adobe ha elaborato la richiesta, vi viene fornito un URL per l’account del lettore a Snowflake e le credenziali corrispondenti riportate di seguito:
+Una volta che  supporto Adobe ha elaborato la richiesta, vi viene fornito un URL per l&#39;account lettore  Snowflake e le credenziali corrispondenti riportate di seguito:
 
-- URL fiocco di neve
+- URL Snowflake 
 - Nome utente
 - Password
 
@@ -283,9 +283,9 @@ Una volta che il supporto Adobe ha elaborato la richiesta, vi viene fornito un U
 
 Una volta ottenute le credenziali e l&#39;URL, è possibile eseguire query sulle tabelle dei modelli, aggregate per data punto di contatto o data di conversione.
 
-### Ricerca dello schema in Snowflake
+### Ricerca dello schema in  Snowflake
 
-Utilizzando le credenziali fornite, accedete a Snowflake. Fare clic sulla scheda **Fogli** di lavoro nella navigazione principale in alto a sinistra, quindi passare alla directory del database nel pannello a sinistra.
+Utilizzando le credenziali fornite, accedete al  Snowflake. Fare clic sulla scheda **Fogli** di lavoro nella navigazione principale in alto a sinistra, quindi passare alla directory del database nel pannello a sinistra.
 
 ![Fogli di lavoro e navigazione](./images/download-scores/edited_snowflake_1.png)
 
@@ -293,12 +293,12 @@ Fare clic su **Seleziona schema** nell&#39;angolo superiore destro dello schermo
 
 ![trovare uno schema](./images/download-scores/edited_snowflake_2.png)
 
-## Collegamento di PowerBI a Snowflake (facoltativo)
+## Collegamento di PowerBI al Snowflake  (facoltativo)
 
-Le credenziali Snowflake possono essere utilizzate per impostare una connessione tra i database PowerBI Desktop e Snowflake.
+Le credenziali  Snowflake possono essere utilizzate per impostare una connessione tra PowerBI Desktop e  database di Snowflake.
 
-Innanzitutto, nella casella *Server* , digitate l’URL del fiocco di neve. Quindi, in *Warehouse*, digitare &quot;XSMALL&quot;. Digitare quindi il nome utente e la password.
+Innanzitutto, nella casella *Server* , digitate l’URL  Snowflake. Quindi, in *Warehouse*, digitare &quot;XSMALL&quot;. Digitare quindi il nome utente e la password.
 
 ![esempio di POWERBI](./images/download-scores/powerbi-snowflake.png)
 
-Una volta stabilita la connessione, selezionate il database Snowflake, quindi selezionate lo schema appropriato. Ora è possibile caricare tutte le tabelle.
+Una volta stabilita la connessione, selezionate il database del Snowflake , quindi selezionate lo schema appropriato. Ora è possibile caricare tutte le tabelle.
