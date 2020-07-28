@@ -72,30 +72,30 @@ I campi identità devono essere associati a uno spazio nomi identità esistente 
 
 Per istruzioni dettagliate sulla definizione di uno spazio nomi durante la creazione di un descrittore di identità tramite l&#39;API, vedere la sezione sulla [creazione di un descrittore](../xdm/tutorials/create-schema-ui.md) nella guida per gli sviluppatori del Registro di sistema dello schema. Per contrassegnare un campo di schema come identità nell&#39;interfaccia utente, seguire i passaggi dell&#39;esercitazione [Editor di](../xdm/tutorials/create-schema-api.md)schema.
 
-## Quali sono gli spazi dei nomi di identità standard forniti da  Experience Platform?
+## Quali sono gli spazi dei nomi di identità standard forniti dal Experience Platform ?
 
 I seguenti spazi dei nomi standard sono forniti per l&#39;uso da parte di tutte le organizzazioni all&#39;interno  Experience Platform:
 
 | Nome visualizzato | ID | Codice | Descrizione |
 | ------------ | --- | --- | ----------- |
-| CORE | 0 | CORE | nome legacy: &quot;Adobe AudienceManager&quot; |
+| CORE | 0 | CORE | nome legacy: &quot; Adobe AudienceManager&quot; |
 | ECID | 4 | ECID | alias: &quot; ID Adobe Marketing Cloud&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot; ID Adobe Experience Platform&quot; |
 | E-mail | 6 | E-mail |  |
 | E-mail (SHA256, minuscola) | 11 | E-mail | Spazio dei nomi standard per le e-mail con hash precedente. I valori forniti in questo spazio nomi vengono convertiti in lettere minuscole prima di eseguire l&#39;hash con SHA-256. |
 | Telefono | 7 | Telefono |  |
 | Windows AID | 8 | WAID |  |
-| AdCloud | 411 | AdCloud | alias: Ad Cloud |
+| AdCloud | 411 | AdCloud | alias:  Ad Cloud |
 | Adobe Target | 9 | TNTID | ID Target |
 | Google Ad ID | 20914 | GAID | GAID |
 | Apple IDFA | 20915 | IDFA | ID per inserzionisti |
 
 ## Dove è possibile trovare l&#39;elenco di spazi dei nomi identità disponibili per la mia organizzazione?
 
-Utilizzando l&#39;API [Servizio](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)identità potete elencare tutti gli spazi dei nomi identità disponibili per la vostra organizzazione effettuando una richiesta GET all&#39; `/idnamespace/identities` endpoint. Per ulteriori informazioni, consulta la sezione sull’ [elenco degli spazi dei nomi](./api/list-namespaces.md) disponibili nella panoramica API del servizio identità.
+Utilizzando l&#39;API [Servizio](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)identità potete elencare tutti gli spazi dei nomi identità disponibili per la vostra organizzazione effettuando una richiesta di GET all&#39; `/idnamespace/identities` endpoint. Per ulteriori informazioni, consulta la sezione sull’ [elenco degli spazi dei nomi](./api/list-namespaces.md) disponibili nella panoramica API del servizio identità.
 
 ## Come si crea uno spazio nomi personalizzato per la propria organizzazione?
 
-Utilizzando l&#39;API [Servizio](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)identità potete creare uno spazio nomi identità personalizzato per la vostra organizzazione effettuando una richiesta POST all&#39; `/idnamespace/identities` endpoint. Per ulteriori informazioni, consulta la sezione sulla [creazione di uno spazio dei nomi](./api/create-custom-namespace.md) personalizzato nella panoramica API del servizio identità.
+Utilizzando l&#39;API [Servizio](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)identità potete creare uno spazio nomi identità personalizzato per la vostra organizzazione effettuando una richiesta di POST all&#39; `/idnamespace/identities` endpoint. Per ulteriori informazioni, consulta la sezione sulla [creazione di uno spazio dei nomi](./api/create-custom-namespace.md) personalizzato nella panoramica API del servizio identità.
 
 ## Cosa sono le identità composite e gli XID?
 
