@@ -24,11 +24,11 @@ Questo documento fornisce esempi di chiamate API per descrittori, oltre a un ele
 
 >[!NOTE]
 >
->I descrittori richiedono intestazioni Accetto univoche che sostituiscono `xed` con `xdm`, ma che hanno un aspetto molto simile a Accetta intestazioni utilizzate altrove in [!DNL Schema Registry]. Le intestazioni Accetta corrette sono state incluse nelle chiamate di esempio riportate di seguito, ma prestate particolare attenzione a garantire l’utilizzo delle intestazioni corrette.
+>I descrittori richiedono intestazioni Accetto univoche che sostituiscono `xed` con `xdm`, ma che hanno un aspetto molto simile a Accetta intestazioni utilizzate altrove in [!DNL Schema Registry]. Le intestazioni Accetta corrette sono state incluse nelle chiamate di esempio riportate di seguito, ma prestate particolare attenzione a verificare che vengano utilizzate le intestazioni corrette.
 
 ## Descrittori elenco
 
-Una singola richiesta GET può essere utilizzata per restituire un elenco di tutti i descrittori definiti dall&#39;organizzazione.
+Una singola richiesta di GET può essere utilizzata per restituire un elenco di tutti i descrittori definiti dall&#39;organizzazione.
 
 **Formato API**
 
@@ -185,7 +185,7 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e i dettagli del de
 
 ## Descrittore di aggiornamento
 
-Potete aggiornare un descrittore effettuando una richiesta PUT che fa riferimento alla `@id` descrizione del descrittore che desiderate aggiornare nel percorso della richiesta.
+Potete aggiornare un descrittore effettuando una richiesta di PUT che fa riferimento al descrittore `@id` da aggiornare nel percorso della richiesta.
 
 **Formato API**
 
@@ -234,7 +234,7 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e il `@id` valore d
 }
 ```
 
-Se si esegue una richiesta di ricerca (GET) per visualizzare il descrittore, i campi ora vengono aggiornati per riflettere le modifiche inviate nella richiesta PUT.
+Se si esegue una richiesta di ricerca (GET) per visualizzare il descrittore, i campi vengono ora aggiornati per riflettere le modifiche inviate nella richiesta di PUT.
 
 ## Elimina descrittore
 
@@ -336,7 +336,7 @@ I descrittori di nomi descrittivi descrittivi consentono all&#39;utente di modif
 | `xdm:sourceProperty` | Percorso della proprietà specifica che sarà l&#39;identità. Il percorso deve iniziare con &quot;/&quot; e non terminare con uno. Non includere &quot;proprietà&quot; nel percorso (ad esempio, utilizzare &quot;/personalEmail/address&quot; invece di &quot;/properties/personalEmail/properties/address&quot;) |
 | `xdm:title` | Il nuovo titolo che si desidera visualizzare per questo campo, scritto in Case titolo. |
 | `xdm:description` | È possibile aggiungere una descrizione facoltativa insieme al titolo. |
-| `meta:enum` | Se il campo indicato da `xdm:sourceProperty` è un campo stringa, `meta:enum` determina l&#39;elenco dei valori consigliati per il campo nell&#39; [!DNL Experience Platform] interfaccia utente. È importante notare che non `meta:enum` dichiara un&#39;enumerazione né fornisce alcuna convalida di dati per il campo XDM.<br><br>Deve essere utilizzato solo per i campi XDM di base definiti da Adobe. Se la proprietà source è un campo personalizzato definito dall&#39;organizzazione, è necessario modificare la `meta:enum` proprietà del campo direttamente tramite una richiesta [](./update-resource.md)PATCH. |
+| `meta:enum` | Se il campo indicato da `xdm:sourceProperty` è un campo stringa, `meta:enum` determina l&#39;elenco dei valori consigliati per il campo nell&#39; [!DNL Experience Platform] interfaccia utente. È importante notare che non `meta:enum` dichiara un&#39;enumerazione né fornisce alcuna convalida di dati per il campo XDM.<br><br>Deve essere utilizzato solo per i campi XDM di base definiti dal Adobe . Se la proprietà source è un campo personalizzato definito dall&#39;organizzazione, è necessario modificare la `meta:enum` proprietà del campo direttamente tramite una richiesta [di](./update-resource.md)PATCH. |
 
 #### Descrittore della relazione
 
