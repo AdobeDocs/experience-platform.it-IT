@@ -57,7 +57,7 @@ I nodi standard si basano su librerie open source di scienza dei dati come Panda
 
 ### ModelUpload
 
-Il nodo ModelUpload è un nodo Adobe interno che prende un percorso_modello e carica il modello dal percorso del modello locale all&#39;archivio BLOB di Machine Learning in tempo reale.
+Il nodo ModelUpload è un nodo di Adobe  interno che prende un percorso_modello e carica il modello dal percorso del modello locale all&#39;archivio BLOB di apprendimento automatico in tempo reale.
 
 ```python
 model = ModelUpload(params={'model_path': model_path})
@@ -69,7 +69,7 @@ model_id = msg_model.model['model_id']
 
 ### ONNXNode
 
-ONNXNode è un nodo Adobe interno che prende un ID modello per il pulling del modello ONNX pre-formato e lo utilizza per il punteggio sui dati in arrivo.
+ONNXNode è un nodo di Adobe  interno che richiede un ID modello per il pulling del modello ONNX preformato e lo utilizza per il punteggio sui dati in arrivo.
 
 >[!TIP]
 >Specificare le colonne nello stesso ordine in cui si desidera inviare i dati al modello ONNX per la valutazione.
@@ -128,7 +128,7 @@ msg6 = model_train.process(msg5)
 | params.model_params | Per ulteriori informazioni, vedete la documentazione API [sklearn (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) . |
 | node_instance.process(data_message_from_previous_node) | Il metodo `process()` prende DataMsg dal nodo precedente e applica la trasformazione. Dipende dal nodo corrente in uso. |
 
-### Dividi
+### Dividere
 
 Utilizzate il seguente nodo per suddividere il dataframe in treno e verificare passando `train_size` o `test_size`. Questo restituisce un fotogramma dati con un indice multiplo. Potete accedere ai frame di dati del treno e del test utilizzando l&#39;esempio seguente `msg5.data.xs(“train”)`.
 
