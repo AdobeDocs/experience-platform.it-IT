@@ -25,7 +25,7 @@ L&#39;endpoint API utilizzato in questa guida fa parte dell&#39; [!DNL Real-time
 
 ## Visualizza richieste di eliminazione
 
-Una richiesta di eliminazione è un processo asincrono a lungo termine, il che significa che l&#39;organizzazione potrebbe eseguire più richieste di eliminazione contemporaneamente. Per visualizzare tutte le richieste di eliminazione attualmente in esecuzione nell&#39;organizzazione, potete eseguire una richiesta GET all&#39; `/system/jobs` endpoint.
+Una richiesta di eliminazione è un processo asincrono a lungo termine, il che significa che l&#39;organizzazione potrebbe eseguire più richieste di eliminazione contemporaneamente. Per visualizzare tutte le richieste di eliminazione attualmente in esecuzione nell’organizzazione, potete eseguire una richiesta di GET all’ `/system/jobs` endpoint.
 
 È inoltre possibile utilizzare parametri di query facoltativi per filtrare l&#39;elenco delle richieste di eliminazione restituite nella risposta. Per utilizzare più parametri, separateli utilizzando una e commerciale (&amp;).
 
@@ -99,11 +99,11 @@ La risposta include un array &quot;child&quot; con un oggetto per ogni richiesta
 
 ## Creare una richiesta di eliminazione {#create-a-delete-request}
 
-L&#39;avvio di una nuova richiesta di eliminazione viene eseguito tramite una richiesta POST all&#39; `/systems/jobs` endpoint, dove l&#39;ID del set di dati o del batch da eliminare viene fornito nel corpo della richiesta.
+L&#39;avvio di una nuova richiesta di eliminazione viene eseguito tramite una richiesta di POST all&#39; `/systems/jobs` endpoint, dove l&#39;ID del set di dati o del batch da eliminare viene fornito nel corpo della richiesta.
 
 ### Eliminare un dataset
 
-Per eliminare un set di dati, l’ID del set di dati deve essere incluso nel corpo della richiesta POST. Questa azione eliminerà TUTTI i dati per un dato dataset. [!DNL Experience Platform] consente di eliminare i set di dati basati su schemi di record e serie temporali.
+Per eliminare un set di dati, l&#39;ID del set di dati deve essere incluso nel corpo della richiesta del POST. Questa azione eliminerà TUTTI i dati per un dato dataset. [!DNL Experience Platform] consente di eliminare i set di dati basati su schemi di record e serie temporali.
 
 >[!CAUTION]
 > Quando si tenta di eliminare un set di dati [!DNL Profile]abilitato tramite l&#39; [!DNL Experience Platform] interfaccia utente, il set di dati viene disabilitato per l&#39;inserimento ma non viene eliminato finché non viene creata una richiesta di eliminazione tramite l&#39;API. Per ulteriori informazioni, vedere l&#39; [appendice](#appendix) di questo documento.
@@ -152,11 +152,11 @@ Una risposta corretta restituisce i dettagli della nuova richiesta di eliminazio
 | Proprietà | Descrizione |
 |---|---|
 | `id` | ID univoco, generato dal sistema, di sola lettura della richiesta di eliminazione. |
-| `dataSetId` | ID del set di dati, come specificato nella richiesta POST. |
+| `dataSetId` | L&#39;ID del dataset, come specificato nella richiesta POST. |
 
 ### Eliminare un batch
 
-Per eliminare un batch, l’ID batch deve essere incluso nel corpo della richiesta POST. Non è possibile eliminare i batch per i set di dati basati sugli schemi di record. È possibile eliminare solo i batch per i set di dati basati sugli schemi delle serie temporali.
+Per eliminare un batch, l&#39;ID batch deve essere incluso nel corpo della richiesta POST. Non è possibile eliminare i batch per i set di dati basati sugli schemi di record. È possibile eliminare solo i batch per i set di dati basati sugli schemi delle serie temporali.
 
 >[!NOTE]
 > Il motivo per cui non è possibile eliminare i batch per i set di dati basati su schemi di record è che i batch di set di dati di tipo record sovrascrivono i record precedenti e pertanto non possono essere &quot;annullati&quot; o eliminati. L&#39;unico modo per rimuovere l&#39;impatto dei batch errati per i set di dati basati sugli schemi di record consiste nel ripetere l&#39;inserimento del batch con i dati corretti per sovrascrivere i record errati.
@@ -207,7 +207,7 @@ Una risposta corretta restituisce i dettagli della nuova richiesta di eliminazio
 | Proprietà | Descrizione |
 |---|---|
 | `id` | ID univoco, generato dal sistema, di sola lettura della richiesta di eliminazione. |
-| `batchId` | L’ID del batch, come specificato nella richiesta POST. |
+| `batchId` | L&#39;ID del batch, come specificato nella richiesta POST. |
 
 Se si tenta di avviare una richiesta di eliminazione per un batch di set di dati di record, si verificherà un errore a 400 livelli, simile al seguente:
 
@@ -227,7 +227,7 @@ Se si tenta di avviare una richiesta di eliminazione per un batch di set di dati
 
 ## Visualizzare una richiesta di eliminazione specifica {#view-a-specific-delete-request}
 
-Per visualizzare una richiesta di eliminazione specifica, inclusi dettagli come il suo stato, potete eseguire una richiesta di ricerca (GET) all&#39; `/system/jobs` endpoint e includere l&#39;ID della richiesta di eliminazione nel percorso.
+Per visualizzare una richiesta di eliminazione specifica, con dettagli quali il relativo stato, potete eseguire una richiesta di ricerca (GET) all&#39; `/system/jobs` endpoint e includere nel percorso l&#39;ID della richiesta di eliminazione.
 
 **Formato API**
 
@@ -302,7 +302,7 @@ curl -X POST \
 
 **Risposta**
 
-Una richiesta di eliminazione riuscita restituisce lo stato HTTP 200 (OK) e un corpo di risposta vuoto. Potete confermare che la richiesta è stata eliminata eseguendo una richiesta GET per visualizzare la richiesta di eliminazione con il relativo ID. Deve restituire uno stato HTTP 404 (non trovato), a indicare che la richiesta di eliminazione è stata rimossa.
+Una richiesta di eliminazione riuscita restituisce lo stato HTTP 200 (OK) e un corpo di risposta vuoto. Per confermare che la richiesta è stata eliminata, eseguite una richiesta di GET per visualizzare la richiesta di eliminazione con il relativo ID. Deve restituire uno stato HTTP 404 (non trovato), a indicare che la richiesta di eliminazione è stata rimossa.
 
 ## Passaggi successivi
 
