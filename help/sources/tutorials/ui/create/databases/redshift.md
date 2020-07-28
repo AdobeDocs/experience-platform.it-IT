@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Creare un connettore sorgente Amazon Redshift nell’interfaccia utente
+title: Creare un connettore sorgente Amazon Redshift  nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
 source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
