@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare lo schema di vendita al dettaglio e il dataset
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 0%
@@ -98,7 +98,7 @@ Lo schema Vendite al dettaglio e i set di dati vengono creati automaticamente ut
    python bootstrap.py
    ```
 
-   > [!NOTE] Il completamento dello script potrebbe richiedere alcuni minuti.
+   >[!NOTE] Il completamento dello script potrebbe richiedere alcuni minuti.
 
 ## Passaggi successivi
 
