@@ -198,7 +198,7 @@ Una risposta corretta restituisce i dettagli dello schema appena creato, incluso
 
 ## Creazione di una connessione di origine {#source}
 
-Con la creazione di uno schema XDM di destinazione, è ora possibile creare una connessione di origine utilizzando una richiesta POST all&#39; [!DNL Flow Service] API. Una connessione di origine è costituita da una connessione per l&#39;API, un formato dati di origine e un riferimento allo schema XDM di destinazione recuperato nel passaggio precedente.
+Con la creazione di uno schema XDM di destinazione, è ora possibile creare una connessione di origine utilizzando una richiesta di POST all&#39; [!DNL Flow Service] API. Una connessione di origine è costituita da una connessione per l&#39;API, un formato dati di origine e un riferimento allo schema XDM di destinazione recuperato nel passaggio precedente.
 
 **Formato API**
 
@@ -265,7 +265,7 @@ Continuate a seguire i passaggi descritti nella guida per gli sviluppatori fino 
 
 ## Creare un dataset di destinazione
 
-Un set di dati di destinazione può essere creato eseguendo una richiesta POST all&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)Catalog Service, fornendo l&#39;ID dello schema di destinazione all&#39;interno del payload.
+Un set di dati di destinazione può essere creato eseguendo una richiesta di POST all’API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)Catalog Service, fornendo l’ID dello schema di destinazione all’interno del payload.
 
 **Formato API**
 
@@ -374,7 +374,7 @@ L’ultimo passo verso l’assimilazione dei dati del parquet da un archivio clo
 - [ID connessione di origine](#source)
 - [ID connessione Target](#target)
 
-Un flusso di dati è responsabile della pianificazione e della raccolta dei dati da un&#39;origine. È possibile creare un flusso di dati eseguendo una richiesta POST fornendo al contempo i valori indicati in precedenza all&#39;interno del payload.
+Un flusso di dati è responsabile della pianificazione e della raccolta dei dati da un&#39;origine. È possibile creare un flusso di dati eseguendo una richiesta di POST fornendo al contempo i valori indicati in precedenza all&#39;interno del payload.
 
 **Formato API**
 
