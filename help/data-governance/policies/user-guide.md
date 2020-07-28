@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Tutti i criteri di utilizzo dei dati (inclusi i criteri di base forniti da Adobe) sono disattivati per impostazione predefinita. Affinché un singolo criterio possa essere preso in considerazione per l&#39;applicazione, è necessario abilitare manualmente tale criterio. Per informazioni su come [abilitare i criteri](#enable) , consulta la sezione relativa all’attivazione dei criteri nell’interfaccia utente.
+>Tutti i criteri di utilizzo dei dati (inclusi i criteri di base forniti dal Adobe ) sono disattivati per impostazione predefinita. Affinché un singolo criterio possa essere preso in considerazione per l&#39;applicazione, è necessario abilitare manualmente tale criterio. Per informazioni su come [abilitare i criteri](#enable) , consulta la sezione relativa all’attivazione dei criteri nell’interfaccia utente.
 
 ## Prerequisiti
 
@@ -69,7 +69,7 @@ La *[!UICONTROL Browse]* scheda viene visualizzata di nuovo, in cui ora viene vi
 
 ## Attivare o disattivare un criterio di utilizzo dei dati {#enable}
 
-Tutti i criteri di utilizzo dei dati (inclusi i criteri di base forniti da Adobe) sono disattivati per impostazione predefinita. Affinché un singolo criterio venga preso in considerazione per l&#39;implementazione, è necessario attivarlo manualmente tramite l&#39;API o l&#39;interfaccia utente.
+Tutti i criteri di utilizzo dei dati (inclusi i criteri di base forniti dal Adobe ) sono disattivati per impostazione predefinita. Affinché un singolo criterio venga preso in considerazione per l&#39;implementazione, è necessario attivarlo manualmente tramite l&#39;API o l&#39;interfaccia utente.
 
 Potete attivare o disattivare i criteri dalla *[!UICONTROL Browse]* scheda nell&#39; *[!UICONTROL Policies]* area di lavoro. Selezionate un criterio personalizzato dall&#39;elenco per visualizzarne i dettagli a destra. In *[!UICONTROL Status]* questa sezione, fate clic sul pulsante di attivazione per attivare o disattivare il criterio.
 
@@ -77,7 +77,7 @@ Potete attivare o disattivare i criteri dalla *[!UICONTROL Browse]* scheda nell&
 
 ## Visualizzazione delle azioni di marketing {#view-marketing-actions}
 
-Nell&#39; **[!UICONTROL Policies]** area di lavoro, seleziona la **[!UICONTROL Marketing actions]** scheda per visualizzare un elenco delle azioni di marketing disponibili definite da Adobe e dalla tua organizzazione.
+Nell&#39; **[!UICONTROL Policies]** area di lavoro, seleziona la **[!UICONTROL Marketing actions]** scheda per visualizzare un elenco delle azioni di marketing disponibili definite dal Adobe  e dalla tua organizzazione.
 
 ![](../images/policies/marketing-actions.png)
 
@@ -99,9 +99,9 @@ L’azione appena creata viene visualizzata nella *[!UICONTROL Marketing actions
 
 >[!NOTE]
 >
->È possibile modificare solo le azioni di marketing personalizzate definite dalla tua organizzazione. Le azioni di marketing definite da Adobe non possono essere modificate o eliminate.
+>È possibile modificare solo le azioni di marketing personalizzate definite dalla tua organizzazione. Le azioni di marketing definite da  Adobe non possono essere modificate o eliminate.
 
-Nell&#39; **[!UICONTROL Policies]** area di lavoro, seleziona la **[!UICONTROL Marketing actions]** scheda per visualizzare un elenco delle azioni di marketing disponibili definite da Adobe e dalla tua organizzazione. Seleziona un&#39;azione di marketing personalizzata dall&#39;elenco, quindi utilizza i campi forniti nella sezione di destra per modificare i dettagli dell&#39;azione di marketing.
+Nell&#39; **[!UICONTROL Policies]** area di lavoro, seleziona la **[!UICONTROL Marketing actions]** scheda per visualizzare un elenco delle azioni di marketing disponibili definite dal Adobe  e dalla tua organizzazione. Seleziona un&#39;azione di marketing personalizzata dall&#39;elenco, quindi utilizza i campi forniti nella sezione di destra per modificare i dettagli dell&#39;azione di marketing.
 
 ![](../images/policies/edit-marketing-action.png)
 
