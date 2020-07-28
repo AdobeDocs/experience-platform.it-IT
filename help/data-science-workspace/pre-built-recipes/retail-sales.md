@@ -5,6 +5,9 @@ title: Ricetta di vendita al dettaglio
 topic: overview
 translation-type: tm+mt
 source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+workflow-type: tm+mt
+source-wordcount: '523'
+ht-degree: 2%
 
 ---
 
@@ -30,7 +33,7 @@ La ricetta Retail Sales Forecasting utilizza l&#39;apprendimento automatico per 
 
 Per iniziare, segui questa [esercitazione](../jupyterlab/create-a-recipe.md).
 
-Questa esercitazione passerà alla creazione della ricetta Vendite al dettaglio in un notebook Jupyter e all&#39;utilizzo del notebook per creare le ricette in Adobe Experience Platform.
+Questa esercitazione passerà alla creazione della ricetta Vendite al dettaglio in un blocco appunti Jupyter e all&#39;utilizzo del blocco appunti per creare la ricetta in  Adobe Experience Platform.
 
 ## Schema dati
 
