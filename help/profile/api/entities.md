@@ -22,7 +22,7 @@ L&#39;endpoint API utilizzato in questa guida fa parte dell&#39; [!DNL Real-time
 
 ## Accesso ai dati del profilo in base all&#39;identità
 
-Potete accedere a un&#39; [!DNL Profile] entità effettuando una richiesta GET all&#39; `/access/entities` endpoint e fornendo l&#39;identità dell&#39;entità come una serie di parametri di query. Questa identità è costituita da un valore ID (`entityId`) e dallo spazio dei nomi dell&#39;identità (`entityIdNS`).
+Potete accedere a un&#39; [!DNL Profile] `/access/entities` entità effettuando una richiesta di GET all&#39;endpoint e fornendo l&#39;identità dell&#39;entità come una serie di parametri di query. Questa identità è costituita da un valore ID (`entityId`) e dallo spazio dei nomi dell&#39;identità (`entityIdNS`).
 
 I parametri di query forniti nel percorso di richiesta specificano i dati a cui accedere. Potete includere più parametri, separati da e commerciale (&amp;). Un elenco completo di parametri validi è fornito nella sezione dei parametri [di](#query-parameters) query dell&#39;appendice.
 
@@ -332,7 +332,7 @@ curl -X POST \
 
 ## Accesso agli eventi delle serie temporali per un profilo in base all&#39;identità
 
-È possibile accedere agli eventi delle serie temporali in base all&#39;identità dell&#39;entità di profilo associata effettuando una richiesta GET all&#39; `/access/entities` endpoint. Questa identità è costituita da un valore ID (`entityId`) e uno spazio dei nomi identità (`entityIdNS`).
+È possibile accedere agli eventi delle serie temporali in base all&#39;identità dell&#39;entità di profilo associata effettuando una richiesta di GET all&#39; `/access/entities` endpoint. Questa identità è costituita da un valore ID (`entityId`) e uno spazio dei nomi identità (`entityIdNS`).
 
 I parametri di query forniti nel percorso di richiesta specificano i dati a cui accedere. Potete includere più parametri, separati da e commerciale (&amp;). Un elenco completo di parametri validi è fornito nella sezione dei parametri [di](#query-parameters) query dell&#39;appendice.
 
@@ -411,7 +411,7 @@ Una risposta corretta restituisce un elenco impaginato di eventi di serie tempor
 
 ### Accesso a una pagina successiva di risultati
 
-I risultati vengono impaginati al momento del recupero degli eventi delle serie temporali. In presenza di pagine successive di risultati, la `_page.next` proprietà conterrà un ID. Inoltre, la `_links.next.href` proprietà fornisce un URI di richiesta per il recupero della pagina successiva. Per recuperare i risultati, effettuate un&#39;altra richiesta GET all&#39; `/access/entities` endpoint, tuttavia dovete essere certi di sostituire `/entities` con il valore dell&#39;URI fornito.
+I risultati vengono impaginati al momento del recupero degli eventi delle serie temporali. In presenza di pagine successive di risultati, la `_page.next` proprietà conterrà un ID. Inoltre, la `_links.next.href` proprietà fornisce un URI di richiesta per il recupero della pagina successiva. Per recuperare i risultati, effettuate un&#39;altra richiesta di GET all&#39; `/access/entities` endpoint, tuttavia dovete essere sicuri di sostituire `/entities` con il valore dell&#39;URI fornito.
 
 >[!NOTE]
 >Accertatevi di non ripetere accidentalmente `/entities/` nel percorso della richiesta. Dovrebbe apparire solo una volta come, `/access/entities?start=...`
@@ -770,7 +770,7 @@ In questo esempio di risposta, il primo profilo elencato (&quot;GkouAW-yD9aoRCPh
 
 Quando si recuperano gli eventi delle serie temporali, potrebbero essere restituiti molti risultati, quindi i risultati sono spesso impaginati. In presenza di pagine successive di risultati per un particolare profilo, il `_links.next.payload` valore di tale profilo conterrà un oggetto payload.
 
-Utilizzando questo payload nel corpo della richiesta, potete eseguire un&#39;ulteriore richiesta POST all&#39; `access/entities` endpoint per recuperare la pagina successiva di dati delle serie temporali per quel profilo.
+Utilizzando questo payload nel corpo della richiesta, potete eseguire un&#39;ulteriore richiesta di POST all&#39; `access/entities` endpoint per recuperare la pagina successiva di dati delle serie temporali per quel profilo.
 
 ## Accesso agli eventi delle serie temporali in più entità dello schema
 
@@ -880,7 +880,7 @@ Una risposta corretta restituisce un elenco impaginato di eventi di serie tempor
 
 ### Accesso a una pagina successiva di risultati
 
-I risultati vengono impaginati al momento del recupero degli eventi delle serie temporali. In presenza di pagine successive di risultati, la `_page.next` proprietà conterrà un ID. Inoltre, la `_links.next.href` proprietà fornisce un URI di richiesta per il recupero della pagina successiva, eseguendo ulteriori richieste GET all&#39; `access/entities` endpoint.
+I risultati vengono impaginati al momento del recupero degli eventi delle serie temporali. In presenza di pagine successive di risultati, la `_page.next` proprietà conterrà un ID. Inoltre, la `_links.next.href` proprietà fornisce un URI di richiesta per il recupero della pagina successiva, eseguendo ulteriori richieste di GET all&#39; `access/entities` endpoint.
 
 ## Passaggi successivi
 
@@ -892,7 +892,7 @@ La sezione seguente fornisce informazioni supplementari sull&#39;accesso [!DNL P
 
 ### Parametri query {#query-parameters}
 
-I seguenti parametri vengono utilizzati nel percorso per le richieste GET all&#39; `/access/entities` endpoint. Servono a identificare l&#39;entità profilo a cui si desidera accedere e a filtrare i dati restituiti nella risposta. I parametri richiesti sono etichettati, mentre gli altri sono facoltativi.
+I seguenti parametri vengono utilizzati nel percorso per le richieste di GET all&#39; `/access/entities` endpoint. Servono a identificare l&#39;entità profilo a cui si desidera accedere e a filtrare i dati restituiti nella risposta. I parametri richiesti sono etichettati, mentre gli altri sono facoltativi.
 
 | Parametro | Descrizione | Esempio |
 |---|---|---|
