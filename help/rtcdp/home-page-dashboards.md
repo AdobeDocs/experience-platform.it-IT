@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # [!DNL Real-time Customer Data Platform] panoramica delle metriche
 
-La home page di Adobe Real-time Customer Data Platform (Real-time CDP), che include un dashboard delle metriche, viene visualizzata quando accedete a CDP in tempo reale.
+La pagina principale Platform (Real-time CDP, Real-time CDP) del Adobe , che include un dashboard delle metriche, viene visualizzata quando si accede a CDP in tempo reale.
 
 La pagina principale è solo uno dei punti in cui vengono visualizzate le schede metriche. Il CDP in tempo reale fornisce schede metriche per tutta l&#39;esperienza. Queste metriche ti informano sui dati, il profilo e il pubblico del segmento nel sistema.
 
