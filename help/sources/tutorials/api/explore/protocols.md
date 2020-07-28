@@ -55,7 +55,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 ## Esplora le tabelle di dati
 
-Utilizzando l&#39;ID connessione per l&#39;applicazione protocolli, è possibile esplorare le tabelle di dati eseguendo richieste GET. Utilizzate la seguente chiamata per trovare il percorso della tabella in cui desiderate ispezionare o assimilare [!DNL Platform].
+Utilizzando l&#39;ID connessione per l&#39;applicazione protocolli, è possibile esplorare le tabelle di dati eseguendo le richieste di GET. Utilizzate la seguente chiamata per trovare il percorso della tabella in cui desiderate ispezionare o assimilare [!DNL Platform].
 
 **Formato API**
 
@@ -115,9 +115,9 @@ Una risposta corretta restituisce un array di tabelle dall&#39;applicazione prot
 ]
 ```
 
-## Analisi della struttura di una tabella
+##  Inspect la struttura di una tabella
 
-Per esaminare la struttura di una tabella dall&#39;applicazione dei protocolli, eseguire una richiesta GET specificando il percorso di una tabella come parametro di query.
+Per esaminare la struttura di una tabella dall&#39;applicazione dei protocolli, eseguire una richiesta di GET specificando il percorso di una tabella come parametro di query.
 
 **Formato API**
 
