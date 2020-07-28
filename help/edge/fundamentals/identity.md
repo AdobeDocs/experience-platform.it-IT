@@ -1,8 +1,8 @@
 ---
 title: Recupero  ID Experience Cloud
 seo-title: ' Adobe Experience Platform SDK Web Recupero  ID Experience Cloud'
-description: Scopri come ottenere Adobe Experience Cloud Id.
-seo-description: Scopri come ottenere Adobe Experience Cloud Id.
+description: Scoprite come ottenere l'ID Adobe Experience Cloud.
+seo-description: Scoprite come ottenere l'ID Adobe Experience Cloud.
 translation-type: tm+mt
 source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
@@ -14,11 +14,11 @@ ht-degree: 6%
 
 # Identità - Recupero dell&#39;ID Experience Cloud 
 
-Il Adobe Experience Platform  [!DNL Web SDK] sfrutta [Adobe Identity Service](../../identity-service/ecid.md). In questo modo, ogni dispositivo ha un identificatore univoco persistente sul dispositivo, in modo che l&#39;attività tra le pagine possa essere legata insieme.
+Il Adobe Experience Platform  [!DNL Web SDK] sfrutta il [Servizio](../../identity-service/ecid.md)identità Adobe. In questo modo, ogni dispositivo ha un identificatore univoco persistente sul dispositivo, in modo che l&#39;attività tra le pagine possa essere legata insieme.
 
 ## Identità della prima parte
 
-L&#39; [!DNL Identity Service] identità viene memorizzata in un cookie in un dominio di prime parti. Il cookie [!DNL Identity Service] tenta di impostarlo utilizzando un&#39;intestazione HTTP sul dominio. In caso contrario, [!DNL Identity Service] torneranno a impostare i cookie tramite Javascript. Adobe consiglia di impostare un CNAME in modo che i cookie non vengano limitati dalle restrizioni ITP lato client.
+L&#39; [!DNL Identity Service] identità viene memorizzata in un cookie in un dominio di prime parti. Il cookie [!DNL Identity Service] tenta di impostarlo utilizzando un&#39;intestazione HTTP sul dominio. In caso contrario, [!DNL Identity Service] torneranno a impostare i cookie tramite Javascript.  Adobe consiglia di impostare un CNAME in modo che i cookie non siano limitati dalle restrizioni ITP lato client.
 
 ## Identità di terze parti
 
