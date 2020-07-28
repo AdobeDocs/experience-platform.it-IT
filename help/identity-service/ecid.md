@@ -26,7 +26,7 @@ Se state lavorando con l’implementazione di un sito Web, esplorate le risorse 
 
 Se state lavorando con un&#39;app mobile, controllate in che modo ECID viene utilizzato per [monitorare i visitatori tra un&#39;app e il Web](https://docs.adobe.com/content/help/en/mobile-services/ios/sdk-reference-ios/hybrid-app.html)mobile.
 
-La distribuzione di questi strumenti può essere semplice e facile da gestire se si utilizza [Adobe Launch](https://docs.adobe.com/content/help/it-IT/launch/using/overview.html).
+La distribuzione di questi strumenti può essere semplice e facile da gestire se si utilizza [lancio](https://docs.adobe.com/content/help/it-IT/launch/using/overview.html)Adobe.
 
 Inoltre, consultate la documentazione [](../privacy-service/identity-data.md) Privacy Service per informazioni sull&#39;utilizzo di ECID per la conformità ai requisiti GDPR.
 
