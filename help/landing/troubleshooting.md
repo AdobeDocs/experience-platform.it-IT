@@ -22,7 +22,7 @@ Di seguito è riportato un elenco di risposte alle domande frequenti sul  Adobe 
 
 ## Cosa sono [!DNL Experience Platform] le API? {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] offre più API RESTful che utilizzano richieste HTTP per accedere alle [!DNL Platform] risorse. Ciascuna di queste API di servizio espone più endpoint e consente di eseguire operazioni per elencare (GET), cercare (GET), modificare (PUT e/o PATCH) e eliminare risorse (DELETE). Per ulteriori informazioni su endpoint e operazioni specifici disponibili per ogni servizio, consulta la documentazione [di riferimento](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) API in Adobe I/O.
+[!DNL Experience Platform] offre più API RESTful che utilizzano richieste HTTP per accedere alle [!DNL Platform] risorse. Ciascuna di queste API di servizio espone più endpoint e consente di eseguire operazioni per elencare (GET), cercare (GET), modificare (PUT e/o PATCH) e eliminare (DELETE) risorse. Per ulteriori informazioni su endpoint e operazioni specifici disponibili per ogni servizio, consulta la documentazione [di riferimento](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) API  Adobe I/O.
 
 ## Come si formatta una richiesta API? {#how-do-i-format-an-api-request}
 
@@ -30,7 +30,7 @@ I formati delle richieste variano a seconda dell&#39; [!DNL Platform] API utiliz
 
 ### Lettura di chiamate API di esempio
 
-La documentazione relativa [!DNL Experience Platform] agli esempi di chiamate API avviene in due modi diversi. Innanzitutto, la chiamata viene presentata nel formato **** API, una rappresentazione modello che mostra solo l&#39;operazione (GET, POST, PUT, PATCH, DELETE) e l&#39;endpoint utilizzato (ad esempio, `/global/classes`). Alcuni modelli mostrano anche la posizione delle variabili per illustrare in che modo una chiamata deve essere formulata, ad esempio `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`.
+La documentazione relativa [!DNL Experience Platform] agli esempi di chiamate API avviene in due modi diversi. Innanzitutto, la chiamata viene presentata nel suo formato **** API, una rappresentazione di modello che mostra solo l’operazione (GET, POST, PUT, PATCH, DELETE) e l’endpoint utilizzato (ad esempio, `/global/classes`). Alcuni modelli mostrano anche la posizione delle variabili per illustrare in che modo una chiamata deve essere formulata, ad esempio `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`.
 
 Le chiamate vengono quindi visualizzate come comandi cURL in una **richiesta**, che include le intestazioni necessarie e il &quot;percorso di base&quot; completo necessario per interagire con l&#39;API. Il percorso di base deve essere preceduto da tutti gli endpoint. Ad esempio, l&#39; `/global/classes` endpoint di cui sopra diventa `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`. Vedrete il formato API/il pattern di richiesta in tutta la documentazione e dovrete utilizzare il percorso completo mostrato nella richiesta di esempio per effettuare chiamate alle API Platform.
 
@@ -88,11 +88,11 @@ Per ulteriori informazioni su endpoint specifici nelle API di Platform, comprese
 
 ## Qual è la mia organizzazione IMS? {#what-is-my-ims-organization}
 
-Un&#39;organizzazione IMS è una rappresentazione Adobe di un cliente. Tutte le soluzioni Adobe su licenza sono integrate con questa organizzazione cliente. Quando un&#39;organizzazione IMS ha diritto a [!DNL Experience Platform], può assegnare l&#39;accesso agli sviluppatori. L&#39;ID organizzazione IMS (`x-gw-ims-org-id`) rappresenta l&#39;organizzazione per la quale deve essere eseguita una chiamata API ed è pertanto richiesto come intestazione in tutte le richieste API. Questo ID si trova tramite [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): nella scheda **Integrazioni** , andate alla sezione **Panoramica** di una particolare integrazione per trovare l&#39;ID in Credenziali **client**. Per una descrizione dettagliata di come autenticarsi, [!DNL Platform]consulta l’esercitazione [sull’](../tutorials/authentication.md)autenticazione.
+Un&#39;organizzazione IMS è una rappresentazione  Adobe di un cliente. Tutte le soluzioni  Adobe con licenza sono integrate con questa organizzazione cliente. Quando un&#39;organizzazione IMS ha diritto a [!DNL Experience Platform], può assegnare l&#39;accesso agli sviluppatori. L&#39;ID organizzazione IMS (`x-gw-ims-org-id`) rappresenta l&#39;organizzazione per la quale deve essere eseguita una chiamata API ed è pertanto richiesto come intestazione in tutte le richieste API. Questo ID si trova tramite la [console](https://www.adobe.com/go/devs_console_ui)Sviluppatore di Adobe: nella scheda **Integrazioni** , andate alla sezione **Panoramica** di una particolare integrazione per trovare l&#39;ID in Credenziali **client**. Per una descrizione dettagliata di come autenticarsi, [!DNL Platform]consulta l’esercitazione [sull’](../tutorials/authentication.md)autenticazione.
 
 ## Dove posso trovare la mia chiave API? {#where-can-i-find-my-api-key}
 
-Una chiave API è obbligatoria come intestazione in tutte le richieste API. Può essere trovato tramite [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Nella console, nella scheda **Integrazioni** , passare alla sezione **Panoramica** per un&#39;integrazione specifica e la chiave si trova in Credenziali **client**. Per una descrizione dettagliata di come autenticarsi, [!DNL Platform]consulta l’esercitazione [sull’](../tutorials/authentication.md)autenticazione.
+Una chiave API è obbligatoria come intestazione in tutte le richieste API. È possibile accedervi tramite la [Developer Console](https://www.adobe.com/go/devs_console_ui). Nella console, nella scheda **Integrazioni** , passare alla sezione **Panoramica** per un&#39;integrazione specifica e la chiave si trova in Credenziali **client**. Per una descrizione dettagliata di come autenticarsi, [!DNL Platform]consulta l’esercitazione [sull’](../tutorials/authentication.md)autenticazione.
 
 ## Come posso ottenere un token di accesso? {#how-do-i-get-an-access-token}
 
@@ -112,7 +112,7 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 
 Per informazioni dettagliate sui parametri di query disponibili per un servizio o un endpoint specifico, consulta la documentazione specifica del servizio.
 
-## Come posso indicare un campo JSON da aggiornare in una richiesta PATCH? {#how-do-i-indicate-a-json-field-to-update-in-a-patch-request}
+## Come posso indicare un campo JSON da aggiornare in una richiesta di PATCH? {#how-do-i-indicate-a-json-field-to-update-in-a-patch-request}
 
 Molte operazioni PATCH nelle [!DNL Platform] API utilizzano le stringhe [JSON Pointer](https://tools.ietf.org/html/rfc6901) per indicare le proprietà JSON da aggiornare. Questi sono in genere inclusi nei payload di richiesta utilizzando il formato Patch [](https://tools.ietf.org/html/rfc6902) JSON. Per informazioni dettagliate sulla sintassi richiesta per queste tecnologie, consultate la guida [](api-fundamentals.md) API di base.
 
@@ -172,7 +172,7 @@ Questo messaggio di errore viene visualizzato quando manca un&#39; `Authorizatio
 }
 ```
 
-Questo messaggio di errore viene visualizzato quando il token di accesso fornito nell&#39; `Authorization` intestazione non è valido. Verifica che il token sia stato immesso correttamente o [genera un nuovo token](../tutorials/authentication.md) nella console Adobe I/O.
+Questo messaggio di errore viene visualizzato quando il token di accesso fornito nell&#39; `Authorization` intestazione non è valido. Verificate che il token sia stato immesso correttamente o [generate un nuovo token](../tutorials/authentication.md) nella console I/O  Adobe.
 
 ### Chiave API obbligatoria
 
@@ -194,7 +194,7 @@ Questo messaggio di errore viene visualizzato quando manca un&#39;intestazione d
 }
 ```
 
-Questo messaggio di errore viene visualizzato quando il valore dell&#39;intestazione della chiave API (`x-api-key`) specificata non è valido. Prima di riprovare, verificate di aver immesso correttamente la chiave. Se non conosci la tua chiave API, puoi trovarlo nella console [I/O di](https://console.adobe.io)Adobe: nella scheda **Integrazioni** , andate alla sezione **Panoramica** di un&#39;integrazione specifica per trovare la chiave API in Credenziali **client**.
+Questo messaggio di errore viene visualizzato quando il valore dell&#39;intestazione della chiave API (`x-api-key`) specificata non è valido. Prima di riprovare, verificate di aver immesso correttamente la chiave. Se non conosci la tua chiave API, puoi trovarlo nella console [I/O](https://console.adobe.io)Adobe: nella scheda **Integrazioni** , andate alla sezione **Panoramica** di un&#39;integrazione specifica per trovare la chiave API in Credenziali **client**.
 
 
 ### Intestazione mancante
@@ -217,7 +217,7 @@ Questo messaggio di errore viene visualizzato quando un&#39;intestazione organiz
 }
 ```
 
-Questo messaggio di errore viene visualizzato quando l&#39;utente o l&#39;integrazione di I/O Adobe (identificata dal token [di](#how-do-i-get-an-access-token) accesso nell&#39; `Authorization` intestazione) non è autorizzato a effettuare chiamate alle [!DNL Experience Platform] API per l&#39;organizzazione IMS fornita nell&#39; `x-gw-ims-org-id` intestazione. Prima di riprovare, verificate di aver fornito l’ID corretto per l’organizzazione IMS nell’intestazione. Se non conosci il tuo ID organizzazione, puoi trovarlo nella console [I/O di](https://console.adobe.io)Adobe: nella scheda **Integrazioni** , andate alla sezione **Panoramica** di un&#39;integrazione specifica per trovare l&#39;ID in Credenziali **client**.
+Questo messaggio di errore viene visualizzato quando l&#39;integrazione I/O utente o  Adobe (identificata dal token [di](#how-do-i-get-an-access-token) accesso nell&#39; `Authorization` intestazione) non ha diritto di effettuare chiamate alle [!DNL Experience Platform] API per l&#39;organizzazione IMS fornita nell&#39; `x-gw-ims-org-id` intestazione. Prima di riprovare, verificate di aver fornito l’ID corretto per l’organizzazione IMS nell’intestazione. Se non conosci il tuo ID organizzazione, puoi trovarlo nella console [I/O](https://console.adobe.io)Adobe: nella scheda **Integrazioni** , andate alla sezione **Panoramica** di un&#39;integrazione specifica per trovare l&#39;ID in Credenziali **client**.
 
 ### Tipo di contenuto valido non specificato
 
@@ -230,7 +230,7 @@ Questo messaggio di errore viene visualizzato quando l&#39;utente o l&#39;integr
 }
 ```
 
-Questo messaggio di errore viene visualizzato quando una richiesta POST, PUT o PATCH ha un&#39;intestazione non valida o mancante `Content-Type` . Accertatevi che l’intestazione sia inclusa nella richiesta e che il relativo valore sia `application/json`.
+Questo messaggio di errore viene visualizzato quando una richiesta di POST, PUT o PATCH ha un&#39;intestazione non valida o mancante `Content-Type` . Accertatevi che l’intestazione sia inclusa nella richiesta e che il relativo valore sia `application/json`.
 
 
 ## Directory di risoluzione dei problemi del servizio {#service-troubleshooting-directory}
@@ -239,7 +239,7 @@ Di seguito è riportato un elenco di guide per la risoluzione dei problemi e di 
 
 | Servizio | Riferimento API | Risoluzione dei problemi |
 --- | --- | ---
-| Controllo degli accessi | [API di controllo degli accessi](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml) | [Guida alla risoluzione dei problemi di controllo degli accessi](../access-control/troubleshooting-guide.md) |
+| Controllo di accesso | [API di controllo degli accessi](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml) | [Guida alla risoluzione dei problemi di controllo degli accessi](../access-control/troubleshooting-guide.md) |
 | Catalogo | [API Servizio catalogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) |  |
 | Ingestione dati (batch) | [API di inserimento dati](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [Guida alla risoluzione dei problemi di inserimento batch](../ingestion/batch-ingestion/troubleshooting.md) |
 | Ingestione dei dati (streaming) | [API di inserimento dati](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [Guida alla risoluzione dei problemi di caricamento in streaming](../ingestion/streaming-ingestion/troubleshooting.md) |
