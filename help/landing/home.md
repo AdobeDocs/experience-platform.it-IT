@@ -65,7 +65,7 @@ La lingua predefinita dell’interfaccia utente è determinata dalla regione spe
 
 >[!NOTE]
 >
-> La selezione di un&#39;area geografica determina la lingua e il contenuto su Adobe.com.
+> La selezione di un&#39;area geografica determina la lingua e il contenuto  Adobe.com.
 
 1. Fare clic sulla lingua corrente nel piè di pagina dell&#39; [!DNL Experience Platform] interfaccia.
 2. Nelle impostazioni del profilo, fai clic su **[!UICONTROL Change Region]**.
@@ -79,11 +79,11 @@ La documentazione  Adobe Experience Platform è disponibile in diverse lingue. P
 
 ## [!DNL Experience Platform] documentazione
 
-[!DNL Experience Platform] la documentazione è fornita in più formati per una varietà di funzioni e servizi. Per ulteriori informazioni sui tipi di documentazione disponibili, nonché per leggere brevi descrizioni di ciascuno dei [!DNL Platform] servizi, visitare la [documentazione](documentation/overview.md)Experience Platform. Oppure, per iniziare subito a conoscere un [!DNL Platform] servizio specifico, selezionate una guida dall&#39;elenco alfabetico nel menu di navigazione a sinistra.
+[!DNL Experience Platform] la documentazione è fornita in più formati per una varietà di funzioni e servizi. Per ulteriori informazioni sui tipi di documentazione disponibili, nonché per leggere brevi descrizioni di ciascuno dei [!DNL Platform] servizi, consultare la documentazione di [Experience Platform](documentation/overview.md). Oppure, per iniziare subito a conoscere un [!DNL Platform] servizio specifico, selezionate una guida dall&#39;elenco alfabetico nel menu di navigazione a sinistra.
 
 >[!NOTE]
 >
->A partire da maggio 2020, Adobe sta distribuendo aggiornamenti al dominio e alla barra di intestazione per unificare e migliorare la vostra esperienza in tutte  applicazioni Experience Cloud. Include un nuovo menu Aiuto. Il nuovo menu Aiuto include le seguenti opzioni:
+>A partire da maggio 2020,  Adobe sta distribuendo aggiornamenti al dominio e alla barra di intestazione per unificare e migliorare l&#39;esperienza in tutte le applicazioni  Experience Cloud. Include un nuovo menu Aiuto. Il nuovo menu Aiuto include le seguenti opzioni:
 >
 >* Collegamenti agli articoli contenuti
 >* Consigli della documentazione pertinenti al contesto
@@ -98,7 +98,7 @@ Di tanto in tanto, potreste ricevere un sondaggio per ricevere un feedback aggiu
 
 ## [!DNL Experience Platform] esercitazioni
 
-Per iniziare, seguite [!DNL Platform] rapidamente e facilmente le esercitazioni dettagliate per ogni tipo di attività, dalla preparazione dei dati per l&#39;assimilazione agli algoritmi di machine learning avanzati. Queste esercitazioni sono state progettate per arricchire le informazioni presenti nella [!DNL Experience Platform] documentazione, per garantire risultati ottimali, è necessario tenere a portata di mano i documenti durante il completamento delle esercitazioni. Per iniziare, visita le [esercitazioni](../tutorials/home.md) Experience Platform.
+Per iniziare, seguite [!DNL Platform] rapidamente e facilmente le esercitazioni dettagliate per ogni tipo di attività, dalla preparazione dei dati per l&#39;assimilazione agli algoritmi di machine learning avanzati. Queste esercitazioni sono state progettate per arricchire le informazioni presenti nella [!DNL Experience Platform] documentazione, per garantire risultati ottimali, è necessario tenere a portata di mano i documenti durante il completamento delle esercitazioni. Per iniziare, visita le esercitazioni sul [Experience Platform](../tutorials/home.md) .
 
 ## Esercitazioni video
 
@@ -118,7 +118,7 @@ Per una breve panoramica dell&#39;interfaccia [!DNL Experience Platform's] utent
 
 * [**Nozioni di base sulle **](api-fundamentals.md)<br/>API Scopri le nozioni di base sull&#39;utilizzo delle[!DNL Platform]API.
 
-* [**API di riferimento **](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>Discover[!DNL Experience Platform]API, incluse intestazioni, parametri, richieste di esempio e risposte.*Questi documenti sono in hosting su Adobe I/O.*
+* [**API di riferimento **](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>Discover[!DNL Experience Platform]API, incluse intestazioni, parametri, richieste di esempio e risposte.*Questi documenti sono ospitati  I/O Adobe.*
 
 ##  risorse video per l&#39;integrazione con i Adobi Experience Platform
 
@@ -126,7 +126,7 @@ Per una breve panoramica dell&#39;interfaccia [!DNL Experience Platform's] utent
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554?quality=12&learn=on)
 
-Uno dei vantaggi principali offerti da  Adobe Experience Platform è la capacità di integrarsi con altri servizi Adobe esistenti. Il seguente video fornisce una panoramica di come [!DNL Experience Platform] i servizi si integrano con [!DNL Experience Cloud] applicazioni e funzionalità quali Adobe  Analytics,  Adobe Target,  Adobe Campaign,  Adobe Experience Manager, [!DNL Customer Attributes][!DNL Audience Library]e [!DNL Experience Platform Launch].
+Uno dei vantaggi principali offerti dal Adobe Experience Platform  è la sua capacità di integrarsi con altri servizi  Adobi esistenti. Il seguente video fornisce una panoramica di come [!DNL Experience Platform] i servizi si integrano con [!DNL Experience Cloud] applicazioni e funzionalità come  Adobe Analytics,  Adobe Target,  Adobe Campaign,  Adobe Experience Manager, [!DNL Customer Attributes][!DNL Audience Library]e [!DNL Experience Platform Launch].
 
 >[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
 
