@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Visualizza criteri efficaci
 
-Per visualizzare i criteri effettivi per l&#39;utente corrente, effettuate una richiesta POST all&#39; `/acl/effective-policies` endpoint nell&#39; [!DNL Access Control] API. Le autorizzazioni e i tipi di risorse che si desidera recuperare devono essere forniti nel payload della richiesta sotto forma di array. Questo è dimostrato nella chiamata API di esempio riportata di seguito.
+Per visualizzare i criteri effettivi per l&#39;utente corrente, effettuate una richiesta di POST all&#39; `/acl/effective-policies` endpoint nell&#39; [!DNL Access Control] API. Le autorizzazioni e i tipi di risorse che si desidera recuperare devono essere forniti nel payload della richiesta sotto forma di array. Questo è dimostrato nella chiamata API di esempio riportata di seguito.
 
 **Formato API**
 
@@ -73,7 +73,7 @@ Questa sezione fornisce informazioni supplementari per l&#39;utilizzo dell&#39; 
 
 ### Autorizzazioni accettate e tipi di risorse
 
-Di seguito è riportato un elenco di autorizzazioni e tipi di risorse che potete includere nel payload di una richiesta POST all&#39; `/acl/active-permissions` endpoint.
+Di seguito è riportato un elenco di autorizzazioni e tipi di risorse che potete includere nel payload di una richiesta di POST all&#39; `/acl/active-permissions` endpoint.
 
 **Autorizzazioni**
 
