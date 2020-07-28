@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Panoramica sul controllo degli accessi
 
-Il controllo degli accessi per [!DNL Experience Platform] è fornito tramite [Adobe  Admin Console](https://adminconsole.adobe.com). Questa funzionalità sfrutta i profili di prodotto in [!DNL Admin Console], che collegano gli utenti con autorizzazioni e sandbox.
+Il controllo di accesso per [!DNL Experience Platform] è fornito tramite [Adobe Admin Console](https://adminconsole.adobe.com). Questa funzionalità sfrutta i profili di prodotto in [!DNL Admin Console], che collegano gli utenti con autorizzazioni e sandbox.
 
 ## Gerarchia e flusso di lavoro del controllo degli accessi
 
@@ -27,7 +27,7 @@ Per configurare il controllo di accesso per [!DNL Experience Platform], è neces
 Un flusso di lavoro di alto livello per ottenere e assegnare le autorizzazioni di accesso può essere riassunto come segue:
 
 - Dopo aver effettuato la sottoscrizione a  Adobe Experience Platform, viene inviato un messaggio e-mail all&#39;amministratore specificato nel modulo di registrazione.
-- L’amministratore accede ad [Adobe  Admin Console](#adobe-admin-console) e seleziona **Adobe Experience Platform** dall’elenco dei prodotti nella pagina della panoramica.
+- L’amministratore accede ad [Adobe Admin Console](#adobe-admin-console) e seleziona **Adobe Experience Platform** dall’elenco dei prodotti nella pagina della panoramica.
 - L&#39;amministratore può visualizzare i profili [di](#product-profiles) prodotto predefiniti o creare nuovi profili di prodotto cliente, a seconda delle necessità.
 - L&#39;amministratore può modificare le autorizzazioni e gli utenti per qualsiasi profilo di prodotto esistente.
 - Durante la creazione o la modifica di un profilo di prodotto, l&#39;amministratore aggiunge gli utenti al profilo utilizzando la **[!UICONTROL users]** scheda e concede le autorizzazioni a tali utenti (come &quot;[!UICONTROL Read Datasets]&quot; o &quot;[!UICONTROL Manage Schemas]&quot;) accedendo alla **[!UICONTROL permissions]** scheda. Analogamente, l&#39;amministratore può assegnare l&#39;accesso alle sandbox utilizzando la stessa scheda delle autorizzazioni.
@@ -37,9 +37,9 @@ Per ulteriori dettagli su come gestire il controllo degli accessi in [!DNL Exper
 
 Tutte le chiamate alle [!DNL Experience Platform] API vengono convalidate per le autorizzazioni e restituiranno errori se le autorizzazioni appropriate non vengono trovate nel contesto utente corrente. Nell’interfaccia utente, gli elementi verranno nascosti o modificati in base alle autorizzazioni concesse all’utente corrente.
 
-## Adobe  Admin Console
+## Adobe Admin Console
 
-Adobe  Admin Console fornisce una posizione centrale per la gestione delle adesioni ai prodotti Adobe e l&#39;accesso per l&#39;organizzazione. Tramite la console potete concedere a gruppi di utenti autorizzazioni di accesso per varie [!DNL Platform] funzionalità, ad esempio &quot;[!UICONTROL Manage Datasets]&quot;, &quot;[!UICONTROL View Datasets]&quot; o &quot;[!UICONTROL Manage Profiles]&quot;.
+Adobe Admin Console fornisce una posizione centrale per la gestione delle adesioni  prodotto Adobe e l&#39;accesso per la vostra organizzazione. Tramite la console potete concedere a gruppi di utenti autorizzazioni di accesso per varie [!DNL Platform] funzionalità, ad esempio &quot;[!UICONTROL Manage Datasets]&quot;, &quot;[!UICONTROL View Datasets]&quot; o &quot;[!UICONTROL Manage Profiles]&quot;.
 
 ### Profili di prodotto
 
