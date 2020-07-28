@@ -108,7 +108,7 @@ Di seguito è riportata la risposta dopo la creazione dell&#39;esperimento piani
 
 ### Creazione di un&#39;esecuzione di un esperimento per il punteggio
 
-Ora, con il modello addestrato, possiamo creare una Prova Sperimentale per il punteggio. Il valore del `modelId` parametro è il `id` parametro restituito nella richiesta GET Model precedente.
+Ora, con il modello addestrato, possiamo creare una Prova Sperimentale per il punteggio. Il valore del `modelId` parametro è il `id` parametro restituito nella richiesta del modello di GET precedente.
 
 **Richiesta**
 
