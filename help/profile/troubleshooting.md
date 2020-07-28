@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Guida alla risoluzione dei problemi in tempo reale sul profilo cliente
 
-Questo documento contiene le risposte alle domande frequenti sul profilo cliente in tempo reale e una guida alla risoluzione dei problemi per individuare gli errori più comuni. Per domande e risoluzione dei problemi relativi ad altri servizi nel  Adobe Experience Platform, consultare la guida alla risoluzione dei problemi di [Experience Platform](../landing/troubleshooting.md).
+Questo documento contiene le risposte alle domande frequenti sul profilo cliente in tempo reale e una guida alla risoluzione dei problemi per individuare gli errori più comuni. Per domande e risoluzione dei problemi relativi ad altri servizi nel  Adobe Experience Platform, consultare la guida [alla risoluzione dei problemi del](../landing/troubleshooting.md)Experience Platform.
 
 Profilo cliente in tempo reale è un archivio di entità di ricerca generico che unisce i dati da varie risorse di dati aziendali e fornisce l&#39;accesso a tali dati sotto forma di profili cliente individuali ed eventi serie temporali correlati. Questa funzione consente agli esperti di marketing di promuovere esperienze coordinate, coerenti e pertinenti con il pubblico attraverso più canali.
 
@@ -52,7 +52,7 @@ Puoi anche utilizzare l&#39;API  Adobe Experience Platform Segmentation Service 
 
 #### Utilizzo dell’interfaccia
 
-Nell’interfaccia  di Experience Platform, la **[!UICONTROL Browse]** scheda nell’ **[!UICONTROL Profiles]** area di lavoro consente di visualizzare il conteggio totale dei profili e di cercare i singoli profili in base al relativo valore di identità. Per ulteriori informazioni, consulta la guida [utente](./ui/user-guide.md) Profilo.
+Nell’interfaccia utente del Experience Platform , la **[!UICONTROL Browse]** scheda nell’area di lavoro **[!UICONTROL Profiles]** consente di visualizzare il conteggio totale dei profili e di cercare i singoli profili in base al relativo valore di identità. Per ulteriori informazioni, consulta la guida [utente](./ui/user-guide.md) Profilo.
 
 Puoi anche visualizzare un elenco dei segmenti nella **[!UICONTROL Browse]** scheda dell’ **[!UICONTROL Segments]** area di lavoro. Dopo aver selezionato un segmento, viene visualizzato un esempio di profili idonei per tale segmento. Potete quindi selezionare uno di questi profili elencati per visualizzarne i dettagli. Per ulteriori informazioni, consulta la panoramica [dell’interfaccia utente di](../segmentation/ui/overview.md) segmentazione.
 
@@ -146,7 +146,7 @@ Questo errore si verifica quando il contenuto `destinationId` fornito in una `PO
 }
 ```
 
-Questo errore si verifica quando si invia una richiesta POST o PUT con un&#39;intestazione Content-Type non valida. Verificate di fornire un valore Content-Type valido per l&#39;endpoint in uso.
+Questo errore si verifica quando si invia una richiesta di POST o PUT con un&#39;intestazione Content-Type non valida. Verificate di fornire un valore Content-Type valido per l&#39;endpoint in uso.
 
 La maggior parte degli endpoint profilo accetta &quot;application/json&quot; per la propria intestazione Content-Type, con le seguenti eccezioni:
 
