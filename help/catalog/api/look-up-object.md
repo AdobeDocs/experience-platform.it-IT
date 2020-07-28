@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # Cercare un oggetto
 
-Se si conosce l&#39;identificatore univoco di un [!DNL Catalog] oggetto specifico, è possibile eseguire una richiesta GET per visualizzare i dettagli dell&#39;oggetto.
+Se si conosce l&#39;identificatore univoco di un [!DNL Catalog] oggetto specifico, è possibile eseguire una richiesta di GET per visualizzare i dettagli dell&#39;oggetto.
 
 >[!NOTE]
 >
