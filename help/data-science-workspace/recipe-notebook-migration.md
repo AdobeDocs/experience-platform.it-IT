@@ -54,7 +54,7 @@ Prima di creare l&#39;immagine Docker, controlla gli esempi per la lettura e la 
 
 #### Lettura di un dataset
 
-Questa sezione illustra le modifiche necessarie per la lettura di un dataset e utilizza l’esempio [helper.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/helper/Helper.scala) fornito da Adobe.
+Questa sezione illustra le modifiche necessarie per la lettura di un set di dati e utilizza l’esempio [helper.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/helper/Helper.scala) fornito da  Adobe.
 
 **Vecchio modo di leggere un dataset**
 
@@ -88,7 +88,7 @@ var df = sparkSession.read.format("com.adobe.platform.query")
 
 #### Scrivere in un dataset
 
-Questa sezione illustra le modifiche necessarie per scrivere un dataset utilizzando l’esempio [ScoringDataSaver.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/ScoringDataSaver.scala) fornito da Adobe.
+Questa sezione illustra le modifiche necessarie per scrivere un dataset utilizzando l’esempio [ScoringDataSaver.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/ScoringDataSaver.scala) fornito da  Adobe.
 
 **Vecchio modo di scrivere un dataset**
 
@@ -190,7 +190,7 @@ Prima di creare l&#39;immagine Docker, controlla gli esempi per la lettura e la 
 
 #### Lettura di un dataset
 
-Questa sezione illustra le modifiche necessarie per leggere un dataset utilizzando l&#39;esempio [helper.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/helper.py) fornito da Adobe.
+In questa sezione sono illustrate le modifiche necessarie per la lettura di un dataset utilizzando l&#39;esempio [helper.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/helper.py) , fornito da  Adobe.
 
 **Vecchio modo di leggere un dataset**
 
@@ -225,7 +225,7 @@ pd = sparkSession.read.format("com.adobe.platform.query")
 
 #### Scrivere in un dataset
 
-In questa sezione sono illustrate le modifiche necessarie per scrivere un dataset utilizzando l&#39;esempio [data_saver.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/data_saver.py) fornito da Adobe.
+In questa sezione sono illustrate le modifiche necessarie per la scrittura di un dataset utilizzando l&#39;esempio [data_saver.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/data_saver.py) , fornito da  Adobe.
 
 **Vecchio modo di scrivere un dataset**
 
