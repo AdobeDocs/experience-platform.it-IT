@@ -58,7 +58,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 ## Convenzioni API repository
 
-[!DNL Decisioning Service] è controllato da una serie di oggetti business correlati tra loro. Tutti gli oggetti aziendali sono memorizzati nel repository degli oggetti [!DNL Platform’s] aziendali. Una caratteristica chiave di questo repository è che le API sono ortogonali al tipo di oggetto business. Invece di utilizzare un&#39;API POST, GET, PUT, PATCH o DELETE che indica il tipo di risorsa nel suo endpoint API, ci sono solo 6 endpoint generici, ma accettano o restituiscono un parametro che indica il tipo di oggetto quando è necessario tale parametro. Lo schema deve essere registrato con l&#39;archivio, ma oltre a questo, l&#39;archivio è utilizzabile per un set di tipi di oggetto aperto.
+[!DNL Decisioning Service] è controllato da una serie di oggetti business correlati tra loro. Tutti gli oggetti aziendali sono memorizzati nel repository degli oggetti [!DNL Platform’s] aziendali. Una caratteristica chiave di questo repository è che le API sono ortogonali al tipo di oggetto business. Invece di utilizzare un&#39;API POST, GET, PUT, PATCH o DELETE che indica il tipo di risorsa nel relativo endpoint API, esistono solo 6 endpoint generici, ma accettano o restituiscono un parametro che indica il tipo di oggetto quando è necessario tale parametro. Lo schema deve essere registrato con l&#39;archivio, ma oltre a questo, l&#39;archivio è utilizzabile per un set di tipi di oggetto aperto.
 
 Oltre alle intestazioni elencate sopra, le API per creare, leggere, aggiornare, eliminare e interrogare gli oggetti del repository hanno le seguenti convenzioni:
 
@@ -69,7 +69,7 @@ I formati di payload API sono negoziati con un&#39; `Accept` intestazione o `Con
 | FORMATO variante | Descrizione dell’entità richiesta o risposta |
 | --- | --- |
 | seguita<br>da un parametro `schema={schemaId}` | Il messaggio contiene un&#39;istanza descritta da uno schema JSON indicato dallo schema del parametro format. L’istanza viene racchiusa in una proprietà JSON `_instance`. Le altre proprietà di livello principale nel payload di risposta specificano le informazioni del repository disponibili per tutte le risorse.  I messaggi conformi al formato HAL hanno una `_links` proprietà che contiene riferimenti in formato HAL. |
-| `patch.hal` | Il messaggio contiene un payload JSON PATCH con il presupposto che l’istanza da patch sia conforme a HAL. Ciò significa che non solo le proprietà dell&#39;istanza, ma anche i collegamenti HAL dell&#39;istanza possono essere patch. Si noti che esistono restrizioni sulle proprietà che possono essere aggiornate dal client. |
+| `patch.hal` | Il messaggio contiene un payload di PATCH JSON con il presupposto che l’istanza a cui applicare la patch sia conforme a HAL. Ciò significa che non solo le proprietà dell&#39;istanza, ma anche i collegamenti HAL dell&#39;istanza possono essere patch. Si noti che esistono restrizioni sulle proprietà che possono essere aggiornate dal client. |
 | `home.hal` | Il messaggio contiene una rappresentazione in formato JSON di una risorsa del documento principale per l&#39;archivio. |
 | xdm.receipt | Il messaggio contiene una risposta in formato JSON per un&#39;operazione di creazione, aggiornamento (completo e patch) o eliminazione. Le ricevute contengono dati di controllo che indicano la revisione dell&#39;istanza sotto forma di ETag. |
 
@@ -90,11 +90,11 @@ Per le API create, aggiornate e lette del contenitore, lo schema del parametro d
 
 `ContainerId` è il primo parametro di percorso per le API di istanza. Tutte le entità aziendali risiedono in ciò che viene chiamato contenitore. Un contenitore è un meccanismo di isolamento per tenere distanti le diverse preoccupazioni. Il primo elemento percorso per le API dell&#39;istanza del repository che segue l&#39;endpoint generale è l&#39; `containerId`. L’identificatore è ottenuto dall’elenco di contenitori accessibili al chiamante. Ad esempio, l&#39;API per creare un&#39;istanza in un contenitore è `POST https://platform.adobe.io/data/core/xcore/{containerId}/instances`.
 
-L&#39;elenco dei contenitori accessibili viene ottenuto chiamando l&#39;endpoint radice del repository &quot;/&quot; con una richiesta HTTP GET utilizzando le intestazioni standard.
+L&#39;elenco dei contenitori accessibili viene ottenuto chiamando l&#39;endpoint radice dell&#39;archivio &quot;/&quot; con una richiesta di GET HTTP utilizzando le intestazioni standard.
 
 ## Gestione dell&#39;accesso ai contenitori
 
-Un amministratore può raggruppare entità, risorse e autorizzazioni di accesso simili in profili. Questo riduce il carico di gestione ed è supportato dall’interfaccia utente [Admin Console  di](https://adminconsole.adobe.com)Adobe. È necessario essere un amministratore di prodotto per  Adobe Experience Platform nell&#39;organizzazione per creare profili e assegnare utenti a tali profili.
+Un amministratore può raggruppare entità, risorse e autorizzazioni di accesso simili in profili. Questo riduce il carico di gestione ed è supportato dall’interfaccia utente [del Admin Console  del Adobe](https://adminconsole.adobe.com). È necessario essere un amministratore di prodotto per  Adobe Experience Platform nell&#39;organizzazione per creare profili e assegnare utenti a tali profili.
 
 È sufficiente creare profili di prodotto che corrispondano a determinate autorizzazioni in un unico passaggio e quindi aggiungere semplicemente gli utenti a tali profili. I profili fungono da gruppi ai quali sono state concesse autorizzazioni e ogni utente reale o tecnico del gruppo eredita tali autorizzazioni.
 
@@ -218,7 +218,7 @@ Tenete presente che questi URI non sono URL e non forniscono un modo per recuper
 
 La risposta REST avrà un&#39;intestazione Posizione che contiene un componente URL che può essere utilizzato per recuperare l&#39;istanza appena creata. Questo componente è un riferimento URI relativo e deve essere applicato all’URI di base del repository. L&#39;URI di base viene restituito nell&#39; `Content-Base` intestazione.
 
-La `repo:etag` proprietà specifica la revisione dell&#39;istanza. Questo valore può essere utilizzato nelle operazioni di aggiornamento per garantire coerenza. L’intestazione HTTP `If-Match` può essere utilizzata per aggiungere una condizione a una chiamata API PUT o PATCH che garantisca che non vi siano altre modifiche all’istanza che potrebbero accidentalmente essere sovrascritte. Il `repo:etag` valore viene restituito con ogni chiamata di creazione, lettura, aggiornamento, eliminazione e query. Il valore viene utilizzato come valore nell&#39; ` If-Match` intestazione, in base alla [RFC7232 Section 3.1](https://tools.ietf.org/html/rfc7232#section-3.1).
+La `repo:etag` proprietà specifica la revisione dell&#39;istanza. Questo valore può essere utilizzato nelle operazioni di aggiornamento per garantire coerenza. L&#39;intestazione HTTP `If-Match` può essere utilizzata per aggiungere una condizione a una chiamata API PUT o PATCH che assicuri che non vi siano altre modifiche all&#39;istanza che potrebbero accidentalmente essere sovrascritte. Il `repo:etag` valore viene restituito con ogni chiamata di creazione, lettura, aggiornamento, eliminazione e query. Il valore viene utilizzato come valore nell&#39; ` If-Match` intestazione, in base alla [RFC7232 Section 3.1](https://tools.ietf.org/html/rfc7232#section-3.1).
 
 Le proprietà rimanenti indicano quale account e quale chiave API è stata utilizzata per creare e per modificare l&#39;istanza. Poiché l’istanza è stata creata da questa chiamata, i rispettivi valori sono quelli della richiesta.
 
@@ -472,11 +472,11 @@ La ricerca full text è controllata dai seguenti parametri:
 
 ### Aggiornamento e patch delle istanze
 
-Per aggiornare un&#39;istanza, un client può sovrascrivere l&#39;elenco completo delle proprietà contemporaneamente oppure utilizzare una richiesta JSON PATCH per manipolare singoli valori di proprietà, inclusi gli elenchi.
+Per aggiornare un&#39;istanza, un client può sovrascrivere l&#39;elenco completo delle proprietà contemporaneamente oppure utilizzare una richiesta di PATCH JSON per manipolare singoli valori di proprietà, inclusi gli elenchi.
 
 In entrambi i casi l&#39;URL della richiesta specifica il percorso dell&#39;istanza fisica e in entrambi i casi la risposta sarà un payload di ricevuta JSON come quello restituito dall&#39;operazione [di](#create-instances)creazione. Un client deve preferibilmente utilizzare l&#39; `Location` intestazione o un collegamento HAL ricevuto da una chiamata API precedente per questo oggetto come percorso URL completo per questa API. Se questo non è possibile, il client può creare l’URL dal `containerId` e dal `instanceId`.
 
-**Richiesta** (PUT)
+**Request** (PUT)
 
 ```shell
 curl -X PUT {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \ 
@@ -513,7 +513,7 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 ]'
 ```
 
-La richiesta PATCH applica le istruzioni e quindi convalida l&#39;entità risultante rispetto allo schema e alle stesse regole di integrità entità e referenziale della richiesta PUT.
+La richiesta di PATCH applica le istruzioni e quindi convalida l&#39;entità risultante rispetto allo schema e alle stesse regole di integrità dell&#39;entità e del referenziale della richiesta di PUT.
 
 **Controllo delle modifiche dei valori delle proprietà**
 
@@ -612,7 +612,7 @@ Esiste un flusso di transizione dello stato semplice che tutte le Opzioni seguir
 
 - **`xdm:status`** - Questa proprietà viene utilizzata per la gestione del ciclo di vita dell&#39;istanza. Il valore rappresenta uno stato del flusso di lavoro utilizzato per indicare se l&#39;offerta è ancora in costruzione (valore = bozza), può essere generalmente considerata dal runtime (valore = approvato) o se non deve più essere utilizzata (valore = archiviato).
 
-Una semplice operazione PATCH sull’istanza viene in genere utilizzata per manipolare una `xdm:status` proprietà:
+Una semplice operazione PATCH sull&#39;istanza viene in genere utilizzata per manipolare una `xdm:status` proprietà:
 
 ```json
 [
@@ -773,7 +773,7 @@ Il riferimento alla regola è incorporato nella proprietà `xdm:selectionConstra
 
 - **`xdm:eligibilityRule`** - Questa proprietà contiene un riferimento a una regola di idoneità. Il valore è l&#39;istanza `@id` di uno schemahttps://ns.adobe.com/experience/offer-management/eligibility-rule.
 
-L’aggiunta e l’eliminazione di una regola possono essere eseguite anche con un’operazione PATCH:
+L&#39;aggiunta e l&#39;eliminazione di una regola possono essere eseguite anche con un&#39;operazione PATCH:
 
 ```
 [
@@ -787,7 +787,7 @@ L’aggiunta e l’eliminazione di una regola possono essere eseguite anche con 
 
 Consultate [Aggiornamento e patch delle istanze](#updating-and-patching-instances) per l’intera sintassi cURL. Il `schemaId` parametro deve essere `https://ns.adobe.com/experience/offer-management/personalized-offer`. Le offerte di fallback non presentano vincoli.
 
-La regola di idoneità è incorporata nella `xdm:selectionConstraint` proprietà insieme ai vincoli del calendario. Le operazioni PATCH non devono tentare di rimuovere l’intera `SelectionConstraint` proprietà.
+La regola di idoneità è incorporata nella `xdm:selectionConstraint` proprietà insieme ai vincoli del calendario. Le operazioni PATCH non devono tentare di rimuovere l&#39;intera `SelectionConstraint` proprietà.
 
 ## Impostazione della priorità di un&#39;offerta
 
