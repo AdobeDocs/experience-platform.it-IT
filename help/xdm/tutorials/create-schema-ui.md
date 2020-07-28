@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Creazione di uno schema con l&#39;operatore [!DNL Schema Editor]
 
-L&#39; [!DNL Schema Registry] applicazione fornisce un&#39;interfaccia utente e RESTful API da cui è possibile visualizzare e gestire tutte le risorse nel Adobe Experience Platform  [!DNL Schema Library]. Il [!DNL Schema Library] documento contiene le risorse messe a disposizione da Adobe,  partner Experience Platform e fornitori di cui si utilizzano le applicazioni, nonché le risorse che vengono definite e salvate in [!DNL Schema Registry].
+L&#39; [!DNL Schema Registry] applicazione fornisce un&#39;interfaccia utente e RESTful API da cui è possibile visualizzare e gestire tutte le risorse nel Adobe Experience Platform  [!DNL Schema Library]. Il [!DNL Schema Library] contiene le risorse messe a disposizione da  Adobe,  partner di Experience Platform e fornitori di cui si utilizzano le applicazioni, nonché le risorse che vengono definite e salvate nel [!DNL Schema Registry].
 
 Questa esercitazione descrive i passaggi necessari per creare uno schema utilizzando l&#39;Editor di schema all&#39;interno [!DNL Experience Platform]. Se si preferisce comporre uno schema utilizzando l&#39;API del Registro di sistema dello schema, iniziare leggendo la guida [per lo sviluppatore del Registro di](../api/getting-started.md) schema prima di provare a [creare uno schema utilizzando l&#39;API](create-schema-api.md).
 
@@ -70,7 +70,7 @@ Ora che lo schema ha un nome, è ora di assegnare la classe che lo schema implem
 
 ![](../images/tutorials/create-schema/assign_class_button.png)
 
-Viene visualizzata *[!UICONTROL Assign Class]* la finestra di dialogo. In questa finestra viene visualizzato un elenco di tutte le classi disponibili, incluse quelle definite dall&#39;organizzazione (il proprietario è &quot;Cliente&quot;), nonché le classi standard definite da Adobe.
+Viene visualizzata *[!UICONTROL Assign Class]* la finestra di dialogo. In questa finestra viene visualizzato un elenco di tutte le classi disponibili, incluse quelle definite dall&#39;organizzazione (il proprietario è &quot;Cliente&quot;), nonché le classi standard definite dal Adobe .
 
 Fate clic sul nome della classe per visualizzare la descrizione della classe. Potete anche scegliere di **[!UICONTROL Preview Class Structure]** visualizzare i campi e i metadati associati alla classe.
 
@@ -229,7 +229,7 @@ I tipi di dati consentono l&#39;uso coerente di strutture con più campi e offro
 
 Per convertire l&#39;oggetto &quot;[!UICONTROL loyalty]&quot; in un tipo di dati, fare clic sul campo &quot;fedeltà&quot; in *[!UICONTROL Structure]* e selezionare **[!UICONTROL Convert to New Data Type]** sulla destra dell&#39;editor in *[!UICONTROL Field Properties]*. Viene visualizzato un piccolo pop-up verde che conferma &quot;[!UICONTROL Object Converted to Data Type]&quot;.
 
-Ora, quando si guarda sotto *[!UICONTROL Structure]*, si può vedere che il campo &quot;[!UICONTROL loyalty]&quot; ha un tipo di dati &quot;[!UICONTROL Loyalty]&quot; e i campi hanno icone di blocco piccole accanto a essi, a indicare che non sono più campi singoli, ma fanno parte di una struttura multi-campo.
+Ora, quando si guarda sotto *[!UICONTROL Structure]*, si può vedere che il campo &quot;[!UICONTROL loyalty]&quot; ha un tipo di dati &quot;[!UICONTROL Loyalty]&quot; e i campi hanno icone di blocco piccole accanto a essi, a indicare che non sono più campi singoli, ma fanno parte di una struttura di campi multipli.
 
 In uno schema futuro, ora puoi assegnare a un campo il **[!UICONTROL Type]** nome &quot;[!UICONTROL Loyalty]&quot; e includere automaticamente i campi Livello fedeltà, Punti, Membro da e ID fedeltà.
 
