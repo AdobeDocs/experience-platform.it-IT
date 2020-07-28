@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Panoramica dell’interfaccia utente Privacy Service
+title: Panoramica dell’interfaccia Privacy Service
 topic: UI guide
 translation-type: tm+mt
 source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
