@@ -5,13 +5,16 @@ title: Elenca tutte le sandbox
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: b4741cdfd065bbaed7f2feeafe8619191e4b8f6c
+workflow-type: tm+mt
+source-wordcount: '185'
+ht-degree: 2%
 
 ---
 
 
 # Elenca tutte le sandbox
 
-Per elencare tutte le sandbox appartenenti all&#39;organizzazione IMS (attiva o meno), effettuate una richiesta GET all&#39; `/sandboxes` endpoint.
+Per elencare tutte le sandbox appartenenti all’organizzazione IMS (attive o meno), effettuate una richiesta di GET all’ `/sandboxes` endpoint.
 
 **Formato API**
 
