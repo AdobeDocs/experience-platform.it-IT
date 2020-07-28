@@ -69,9 +69,9 @@ Per creare una [!DNL BigQuery] connessione, è necessario che all&#39;interno di
 
 **Formato API**
 
-Ogni origine disponibile dispone di un proprio set di specifiche di connessione per descrivere le proprietà del connettore, ad esempio i requisiti di autenticazione. Potete cercare le specifiche di connessione [!DNL BigQuery] eseguendo una richiesta GET e utilizzando i parametri di query.
+Ogni origine disponibile dispone di un proprio set di specifiche di connessione per descrivere le proprietà del connettore, ad esempio i requisiti di autenticazione. È possibile ricercare le specifiche di connessione [!DNL BigQuery] eseguendo una richiesta di GET e utilizzando i parametri della query.
 
-L&#39;invio di una richiesta GET senza parametri di query restituirà le specifiche di connessione per tutte le origini disponibili. È possibile includere la query `property=name=="google-big-query"` per ottenere informazioni specifiche per [!DNL BigQuery].
+L&#39;invio di una richiesta di GET senza parametri di query restituirà le specifiche di connessione per tutte le origini disponibili. È possibile includere la query `property=name=="google-big-query"` per ottenere informazioni specifiche per [!DNL BigQuery].
 
 ```http
 GET /connectionSpecs
