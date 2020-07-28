@@ -20,7 +20,7 @@ Questo documento fornisce una panoramica delle funzioni [!DNL JupyterLab] e dell
 
 ## [!DNL JupyterLab] su [!DNL Experience Platform]
 
-&#39;integrazione di Experience Platform JupyterLab è accompagnata da modifiche architettoniche, considerazioni di progettazione, estensioni personalizzate dei notebook, librerie preinstallate e un&#39;interfaccia a tema Adobe.
+&#39;integrazione  JupyterLab è accompagnata da modifiche architettoniche, considerazioni di progettazione, estensioni personalizzate dei notebook, librerie preinstallate e un&#39;interfaccia  a tema Adobe.
 
 L&#39;elenco seguente illustra alcune delle funzioni esclusive di JupyterLab su Platform:
 
@@ -29,7 +29,7 @@ L&#39;elenco seguente illustra alcune delle funzioni esclusive di JupyterLab su 
 | **Kernel** | I kernel forniscono ai notebook e agli altri [!DNL JupyterLab] front-end la possibilità di eseguire e analizzare il codice in diversi linguaggi di programmazione. [!DNL Experience Platform] fornisce ulteriori kernel per supportare lo sviluppo in [!DNL Python], R, PySpark e [!DNL Spark]. Per ulteriori dettagli, consulta la sezione [kernel](#kernels) . |
 | **Accesso ai dati** | Accedete ai set di dati esistenti direttamente dall&#39;interno [!DNL JupyterLab] con il supporto completo delle funzionalità di lettura e scrittura. |
 | **[!DNL Platform]integrazione dei servizi ** | Le integrazioni integrate consentono di utilizzare altri [!DNL Platform] servizi direttamente dall&#39;interno [!DNL JupyterLab]. Un elenco completo delle integrazioni supportate è disponibile nella sezione [Integrazione con altri servizi](#service-integration)Platform. |
-| **Autenticazione** | Oltre al modello <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">di sicurezza integrato di</a>JupyterLab, ogni interazione tra l&#39;applicazione e  Experience Platform, inclusa la comunicazione tra servizi Platform, è criptata e autenticata tramite <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
+| **Autenticazione** | Oltre al modello <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">di sicurezza integrato di</a>JupyterLab, ogni interazione tra l&#39;applicazione e  Experience Platform, inclusa la comunicazione tra i servizi Platform, è criptata e autenticata tramite <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
 | **Librerie di Sviluppo** | In [!DNL Experience Platform], [!DNL JupyterLab] fornisce librerie preinstallate per [!DNL Python], R e PySpark. Consultate l&#39; [appendice](#supported-libraries) per un elenco completo delle librerie supportate. |
 | **Controller libreria** | Se le librerie preinstallate non sono adatte alle vostre esigenze, è possibile installare librerie aggiuntive per Python e R e memorizzare temporaneamente in contenitori isolati per mantenere l&#39;integrità dei dati [!DNL Platform] e mantenerli al sicuro. Per ulteriori dettagli, consulta la sezione [kernel](#kernels) . |
 
@@ -44,7 +44,7 @@ Standardizzazione e interoperabilità sono concetti chiave alla base di [!DNL Ex
 * **[!DNL Catalog Service]:**Accesso ed esplorazione di set di dati con funzionalità di lettura e scrittura.
 * **[!DNL Query Service]:**Accesso ed esplorazione di dataset utilizzando SQL, fornendo costi generali di accesso ai dati inferiori quando si tratta di grandi quantità di dati.
 * **[!DNL Sensei ML Framework]:**Sviluppo di modelli con la capacità di formare e valutare i dati, nonché creazione di ricette con un solo clic.
-* **[!DNL Experience Data Model (XDM)]:**Standardizzazione e interoperabilità sono concetti chiave  Adobe Experience Platform.[Experience Data Model (XDM)](https://www.adobe.com/go/xdm-home-en), guidato da Adobe, è uno sforzo per standardizzare i dati sull&#39;esperienza cliente e definire schemi per la gestione dell&#39;esperienza cliente.
+* **[!DNL Experience Data Model (XDM)]:**Standardizzazione e interoperabilità sono concetti chiave  Adobe Experience Platform.[Experience Data Model (XDM)](https://www.adobe.com/go/xdm-home-en), guidato da  Adobe, è uno sforzo per standardizzare i dati sull&#39;esperienza cliente e definire schemi per la gestione dell&#39;esperienza cliente.
 
 >[!NOTE]
 >
@@ -388,7 +388,7 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 
 ### Leggi da un set di dati in PySpark/[!DNL Spark]/Scala
 
-Con un blocco appunti PySpark o Scala attivo aperto, espandere la scheda **Esplora** dati dalla barra laterale sinistra e fare doppio clic su **Set** dati per visualizzare un elenco dei set di dati disponibili. Fare clic con il pulsante destro del mouse sull&#39;elenco di set di dati a cui si desidera accedere e scegliere **Esplora dati nel blocco appunti**. Vengono generate le seguenti celle di codice:
+Con un blocco appunti PySpark o Scala attivo aperto, espandere la scheda **Data Explorer** dalla barra laterale sinistra e fare doppio clic su **Set** dati per visualizzare un elenco dei set di dati disponibili. Fare clic con il pulsante destro del mouse sull&#39;elenco di set di dati a cui si desidera accedere e scegliere **Esplora dati nel blocco appunti**. Vengono generate le seguenti celle di codice:
 
 #### PySpark ([!DNL Spark] 2.4) {#pyspark2.4}
 
