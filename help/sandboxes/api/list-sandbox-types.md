@@ -5,13 +5,16 @@ title: Elenca i tipi di sandbox supportati
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: b4741cdfd065bbaed7f2feeafe8619191e4b8f6c
+workflow-type: tm+mt
+source-wordcount: '47'
+ht-degree: 4%
 
 ---
 
 
 # Elenca i tipi di sandbox supportati
 
-Potete recuperare un elenco dei tipi di sandbox supportati per la vostra organizzazione effettuando una richiesta GET all&#39; `/sandboxTypes` endpoint.
+Potete recuperare un elenco dei tipi di sandbox supportati per la vostra organizzazione effettuando una richiesta di GET all&#39; `/sandboxTypes` endpoint.
 
 **Formato API**
 
