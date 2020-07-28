@@ -51,7 +51,7 @@ Per essere utilizzati da [!DNL Analytics], i dati XDM vengono appiattiti mediant
 
 Tutti i dati raccolti dalla rete edge sono accessibili tramite regole [di](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html)elaborazione. In [!DNL Analytics], puoi utilizzare le regole di elaborazione per incorporare dati contestuali in [!DNL Analytics] variabili.
 
-Ad esempio, nella regola seguente,  Analytics è impostato per compilare i termini di ricerca **interna (eVar2)** con i dati associati a **a.x_atag.search.term(Context Data)**.
+Ad esempio, nella regola seguente,  Analytics è impostato per compilare i termini di ricerca **interna ( eVar2)** con i dati associati a **a.x_atag.search.term(Context Data)**.
 
 ![](assets/examplerule.png)
 
