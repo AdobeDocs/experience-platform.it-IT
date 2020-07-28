@@ -16,7 +16,7 @@ ht-degree: 0%
 
  Adobe Experience Platform è stato creato per arricchire le applicazioni per esperienze digitali su scala globale. Le aziende spesso eseguono più applicazioni di esperienza digitale in parallelo e devono provvedere allo sviluppo, al test e all&#39;implementazione di tali applicazioni, garantendo al contempo la conformità operativa.
 
-Per rispondere a questa esigenza,  Experience Platform fornisce **sandbox** che dividono una singola istanza di Platform in ambienti virtuali separati per contribuire allo sviluppo e all&#39;evoluzione di applicazioni per esperienze digitali.
+Per rispondere a questa esigenza,  Experience Platform fornisce **sandbox** che dividono una singola istanza di Platform in ambienti virtuali separati per contribuire allo sviluppo e all&#39;evoluzione delle applicazioni di esperienza digitale.
 
 Questo documento fornisce una panoramica di alto livello delle sandbox in  Experience Platform.
 
@@ -44,13 +44,13 @@ Per visualizzare, creare, aggiornare o eliminare sandbox non di produzione, agli
 
 Per ulteriori informazioni sulla gestione di ruoli e autorizzazioni per le sandbox, consultate la panoramica [del controllo di](../access-control/home.md)accesso.
 
-## Sandbox nell’interfaccia  di Experience Platform
+## Sandbox nell’interfaccia utente del Experience Platform 
 
-Nell&#39;interfaccia [utente](https://platform.adobe.com)Experience Platform, gli utenti possono passare dalle sandbox a cui hanno accesso utilizzando il controllo **sandbox switcher** in alto a sinistra dello schermo.  Gli utenti con privilegi di amministrazione sandbox possono accedere anche alla **[!UICONTROL Sandboxes]** scheda nella navigazione a sinistra, dove possono visualizzare e gestire le sandbox per la propria organizzazione. Per ulteriori informazioni sull’utilizzo delle sandbox nell’interfaccia utente, consultate la guida [utente alla](ui/overview.md)sandbox.
+Nell&#39;interfaccia [utente del Experience Platform](https://platform.adobe.com), gli utenti possono passare dalle sandbox a cui hanno accesso utilizzando il controllo **sandbox switcher** in alto a sinistra dello schermo.  Gli utenti con privilegi di amministrazione sandbox possono accedere anche alla **[!UICONTROL Sandboxes]** scheda nella navigazione a sinistra, dove possono visualizzare e gestire le sandbox per la propria organizzazione. Per ulteriori informazioni sull’utilizzo delle sandbox nell’interfaccia utente, consultate la guida [utente alla](ui/overview.md)sandbox.
 
-## Sandbox in  API Experience Platform
+## Sandbox nelle API  Experience Platform
 
-Quando si effettuano chiamate a  API Experience Platform, è necessario fornire un nome sandbox sotto l&#39;intestazione `x-sandbox-name`. Ad esempio, quando si effettua una chiamata [!DNL Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) per visualizzare tutti i set di dati nella sandbox Produzione, il nome della sandbox (&quot;prod&quot;) viene fornito come intestazione nella richiesta API:
+Quando si effettuano chiamate alle API  Experience Platform, è necessario fornire un nome sandbox sotto l&#39;intestazione `x-sandbox-name`. Ad esempio, quando si effettua una chiamata [!DNL Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) per visualizzare tutti i set di dati nella sandbox Produzione, il nome della sandbox (&quot;prod&quot;) viene fornito come intestazione nella richiesta API:
 
 ```shell
 curl -X GET \
@@ -69,6 +69,6 @@ L&#39;API Sandbox consente di gestire le sandbox utilizzando le operazioni RESTf
 
 ## Passaggi successivi
 
-Leggendo questo documento, avete introdotto i concetti fondamentali sulle sandbox in  Experience Platform. Per i passaggi dettagliati su come gestire le sandbox, consultate la guida [](ui/overview.md) utente per l&#39;interfaccia utente o la guida [](./api/getting-started.md) per gli sviluppatori per l&#39;API.
+Leggendo questo documento, avete introdotto i concetti essenziali sulle sandbox in  Experience Platform. Per i passaggi dettagliati su come gestire le sandbox, consultate la guida [](ui/overview.md) utente per l&#39;interfaccia utente o la guida [](./api/getting-started.md) per gli sviluppatori per l&#39;API.
 
-Le sandbox fungono da strumento prezioso per isolare gli ambienti Platform per il team di sviluppo, ma è anche possibile gestire un controllo degli accessi più dettagliato utilizzando Adobe Admin Console. Per ulteriori informazioni, consulta la panoramica [sul controllo](../access-control/home.md) degli accessi.
+Le sandbox fungono da strumento prezioso per isolare gli ambienti Platform per il team di sviluppo, ma è anche possibile gestire un controllo degli accessi più dettagliato utilizzando l&#39;Adobe Admin Console. Per ulteriori informazioni, consulta la panoramica [sul controllo](../access-control/home.md) degli accessi.
