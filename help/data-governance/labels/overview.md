@@ -26,7 +26,7 @@ Le etichette di utilizzo dei dati applicate a livello di dataset vengono propaga
 
 [!DNL Platform] fornisce diverse etichette di utilizzo dei dati di base pronte all&#39;uso, che coprono un&#39;ampia gamma di limitazioni comuni applicabili alla governance dei dati. Per ulteriori informazioni su queste etichette e sui criteri di utilizzo che rappresentano, consultare la guida sulle etichette [di utilizzo dei dati di](reference.md)base.
 
-Oltre alle etichette fornite da Adobe, potete anche definire le vostre etichette personalizzate. Per informazioni su come eseguire questa operazione nell&#39;interfaccia utente, consulta la guida [utente relativa alle etichette di utilizzo dei](./user-guide.md)dati. Per i passaggi su come eseguire questa operazione utilizzando le chiamate API, fare riferimento alla guida [API delle etichette di utilizzo](./api.md)dei dati.
+Oltre alle etichette fornite  Adobe, è possibile definire anche etichette personalizzate. Per informazioni su come eseguire questa operazione nell&#39;interfaccia utente, consulta la guida [utente relativa alle etichette di utilizzo dei](./user-guide.md)dati. Per i passaggi su come eseguire questa operazione utilizzando le chiamate API, fare riferimento alla guida [API delle etichette di utilizzo](./api.md)dei dati.
 
 ## Ereditarietà delle etichette per i segmenti di pubblico
 
@@ -34,13 +34,13 @@ Tutti i segmenti di pubblico creati da [servizio](../../segmentation/home.md) di
 
 Oltre a ereditare le etichette a livello di set di dati, per impostazione predefinita i segmenti ereditano tutte le etichette a livello di campo dai set di dati associati. A seconda del modo in cui l’applicazione [!DNL Platform]basata sui segmenti utilizza i segmenti, è possibile specificare quali campi vengono utilizzati, impedendo al segmento di ereditare le etichette dai campi esclusi.
 
-Per ulteriori informazioni sul funzionamento dell’applicazione automatica in CDP in tempo reale, consultate la panoramica [sulla governance dei dati in tempo reale di](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)Adobe.
+Per ulteriori informazioni sul funzionamento dell’applicazione automatica in CDP in tempo reale, consulta la panoramica [sulla governance dei dati CDP in tempo reale nel](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)Adobe.
 
 ### Ereditarietà dai controlli di esportazione dei dati  Adobe Audience Manager
 
-[!DNL Experience Platform] è in grado di condividere segmenti con  Adobe Audience Manager. Eventuali controlli di esportazione dei dati applicati  segmenti Audience Manager vengono convertiti in etichette equivalenti e azioni di marketing riconosciute da [!DNL Experience Platform][!DNL Data Governance].
+[!DNL Experience Platform] è in grado di condividere segmenti con  Adobe Audience Manager. Eventuali controlli di esportazione dei dati applicati  segmenti di Audience Manager vengono convertiti in etichette equivalenti e azioni di marketing riconosciute da [!DNL Experience Platform][!DNL Data Governance].
 
-Per un riferimento alla modalità in cui specifici controlli di esportazione dei dati vengono mappati sulle etichette di utilizzo dei dati in [!DNL Platform], consultare la [documentazione](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)Audience Manager.
+Per un riferimento alla modalità in cui specifici controlli di esportazione dei dati vengono mappati sulle etichette di utilizzo dei dati in [!DNL Platform], consultare la documentazione [](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)Audience Manager.
 
 
 ## Passaggi successivi
