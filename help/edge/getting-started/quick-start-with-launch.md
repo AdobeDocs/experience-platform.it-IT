@@ -1,8 +1,8 @@
 ---
-title: Avvio rapido con Launch
+title: Quick start with Launch
 seo-title: ' Adobe Experience Platform Avvio rapido dell''SDK Web con Launch'
-description: Guida di avvio rapido per l'utilizzo dell'estensione Experience Platform Web SDK  per la raccolta dei dati
-seo-description: Guida di avvio rapido per l'utilizzo dell'estensione Experience Platform Web SDK  per la raccolta dei dati
+description: Quick start guide for using the Experience Platform Web SDK extension to collect data
+seo-description: Guida di avvio rapido per l'utilizzo dell'estensione SDK Web  Experience Platform per la raccolta dei dati
 translation-type: tm+mt
 source-git-commit: 8574a2d54c00f1bd3c41780fb12ff739a7d98fc3
 workflow-type: tm+mt
@@ -12,12 +12,12 @@ ht-degree: 3%
 ---
 
 
-# Benvenuti
+# Welcome
 
-Questa guida illustra i diversi modi in cui impostare l’SDK Web  Adobe Experience Platform in Launch. Per utilizzare questa funzione è necessario essere inseriti nella white list. Se vuoi entrare nella lista d&#39;attesa, contatta il tuo CSM.
+Questa guida illustra i diversi modi in cui impostare l’SDK Web  Adobe Experience Platform in Launch. To use this feature you need to be whitelisted. Se vuoi entrare nella lista d&#39;attesa, contatta il tuo CSM.
 
 - Accertati che sia attivato un dominio di [prime parti (CNAME)](https://docs.adobe.com/content/help/it-IT/core-services/interface/ec-cookies/cookies-first-party.html) . Se hai già un CNAME per  Analytics, devi usarlo. Il test in fase di sviluppo funziona senza un CNAME, ma ne hai bisogno prima di andare in produzione.
-- Avere diritto a  Adobe Experience Platform. Se non hai acquistato Platform, Adobe ti fornirà  Experience Platform Data Services Foundation da utilizzare in modo limitato con l&#39;SDK senza costi aggiuntivi.
+- Avere diritto a  Adobe Experience Platform. Se non hai acquistato Platform,  Adobe ti fornirà  Data Services Foundation da utilizzare in modo limitato con l&#39;SDK senza costi aggiuntivi.
 - Utilizzate la versione più recente del servizio ID visitatori.
 
 ## Creare un ID di configurazione
@@ -30,7 +30,7 @@ Puoi creare un ID di configurazione utilizzando lo strumento [di configurazione]
 
 ## Preparare uno schema
 
- Experience Platform Edge Network accetta i dati come XDM. XDM è un formato di dati che consente di definire gli schemi. Lo schema definisce il modo in cui Edge Network prevede la formattazione dei dati. Per inviare i dati, è necessario definire lo schema.
+Il  Experience Platform Edge Network accetta i dati come XDM. XDM è un formato di dati che consente di definire gli schemi. Lo schema definisce il modo in cui Edge Network prevede la formattazione dei dati. Per inviare i dati, è necessario definire lo schema.
 
 1. [Creare uno schema](../../xdm/tutorials/create-schema-ui.md)
 2. Aggiungete il [!DNL Web SDK ExperienceEvent] Mixin AEP allo schema creato.
@@ -51,7 +51,7 @@ In Launch, creare un elemento dati che fa riferimento allo schema modificando l&
 
 ## Invio di un evento
 
-Dopo l&#39;installazione dell&#39;estensione, iniziate a inviare gli eventi aggiungendo un&#39; `sendEvent` azione dall&#39;estensione AEP Web SDK a una regola. Aggiungete all&#39;evento l&#39;elemento dati appena creato come dati XDM. Adobe consiglia di inviare almeno un evento ogni volta che viene caricata una pagina.
+Dopo l&#39;installazione dell&#39;estensione, iniziate a inviare gli eventi aggiungendo un&#39; `sendEvent` azione dall&#39;estensione AEP Web SDK a una regola. Aggiungete all&#39;evento l&#39;elemento dati appena creato come dati XDM.  Adobe consiglia di inviare almeno un evento ogni volta che una pagina viene caricata.
 
 Per ulteriori dettagli su come tenere traccia degli eventi, vedere [Tracciamento degli eventi](../fundamentals/tracking-events.md).
 
