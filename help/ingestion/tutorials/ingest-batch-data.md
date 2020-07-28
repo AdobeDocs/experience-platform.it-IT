@@ -26,7 +26,7 @@ Se preferite assimilare i dati utilizzando le API di inserimento dati, iniziate 
 
 L&#39;area di lavoro Set di dati all&#39;interno [!DNL Experience Platform] consente di visualizzare e gestire tutti i set di dati creati dall&#39;organizzazione IMS e di crearne di nuovi.
 
-Visualizzare l&#39;area di lavoro Set di dati facendo clic **[!UICONTROL Datasets]** nella barra di navigazione a sinistra. L&#39;area di lavoro Set di dati contiene un elenco di set di dati, tra cui colonne che mostrano _[!UICONTROL Name]_,_[!UICONTROL Created]_ (data e ora), _[!UICONTROL Source]_,_[!UICONTROL Schema]_ e _[!UICONTROL Last Batch Status]_la data e l&#39;ora in cui si trovava il set di dati_[!UICONTROL Last Updated]_.
+Visualizzare l&#39;area di lavoro Set di dati facendo clic **[!UICONTROL Datasets]** nella barra di navigazione a sinistra. L&#39;area di lavoro Set di dati contiene un elenco di set di dati, incluse colonne che mostrano _[!UICONTROL Name]_,_[!UICONTROL Created]_ (data e ora), _[!UICONTROL Source]_,_[!UICONTROL Schema]_ e _[!UICONTROL Last Batch Status]_la data e l&#39;ora in cui si trovava il dataset_[!UICONTROL Last Updated]_.
 
 >[!NOTE]
 >
