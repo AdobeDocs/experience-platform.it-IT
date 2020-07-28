@@ -40,7 +40,7 @@ La dimensione del campione della scansione dipende dal numero complessivo di ent
 
 ## Create a new preview {#create-preview}
 
-Potete creare una nuova anteprima effettuando una richiesta POST all’ `/preview` endpoint.
+Potete creare una nuova anteprima effettuando una richiesta di POST all’ `/preview` endpoint.
 
 >[!NOTE] Quando viene creato un processo di anteprima, viene creato automaticamente un processo di stima. Questi due processi condividono lo stesso ID.
 
@@ -94,7 +94,7 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) con i dettagli dell
 
 ## Recuperare i risultati di un&#39;anteprima specifica {#get-preview}
 
-Potete recuperare informazioni dettagliate su una specifica anteprima effettuando una richiesta GET all&#39; `/preview` endpoint e fornendo l&#39;ID anteprima nel percorso della richiesta.
+Potete recuperare informazioni dettagliate su una specifica anteprima effettuando una richiesta di GET all’ `/preview` endpoint e fornendo l’ID anteprima nel percorso della richiesta.
 
 **Formato API**
 
@@ -171,7 +171,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 
 ## Recuperare i risultati di un processo di stima specifico {#get-estimate}
 
-Dopo aver creato un processo di anteprima, potete usarlo `previewId` nel percorso di una richiesta GET all&#39; `/estimate` endpoint per visualizzare informazioni statistiche sulla definizione del segmento, tra cui la dimensione prevista del pubblico, l&#39;intervallo di confidenza e la deviazione standard dell&#39;errore.
+Dopo aver creato un processo di anteprima, potete usarlo `previewId` `/estimate` nel percorso di una richiesta di GET all’endpoint per visualizzare informazioni statistiche sulla definizione del segmento, incluse le dimensioni del pubblico proiettate, l’intervallo di confidenza e la deviazione standard dell’errore.
 
 **Formato API**
 
