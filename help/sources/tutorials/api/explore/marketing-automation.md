@@ -53,7 +53,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 ## Esplora le tabelle di dati
 
-Utilizzando la connessione di base per il sistema di automazione di marketing, puoi esplorare le tabelle di dati eseguendo richieste GET. Utilizzate la seguente chiamata per trovare il percorso della tabella in cui desiderate ispezionare o assimilare [!DNL Platform].
+Utilizzando la connessione di base per il sistema di automazione marketing, puoi esplorare le tabelle di dati eseguendo le richieste di GET. Utilizzate la seguente chiamata per trovare il percorso della tabella in cui desiderate ispezionare o assimilare [!DNL Platform].
 
 **Formato API**
 
@@ -113,9 +113,9 @@ Una risposta di successo è un array di tabelle da al sistema di automazione di 
 ]
 ```
 
-## Analisi della struttura di una tabella
+##  Inspect la struttura di una tabella
 
-Per esaminare la struttura di una tabella dal sistema di automazione di marketing, eseguite una richiesta GET specificando il percorso di una tabella come parametro di query.
+Per esaminare la struttura di una tabella dal sistema di automazione di marketing, eseguire una richiesta di GET specificando il percorso di una tabella come parametro di query.
 
 **Formato API**
 
@@ -126,7 +126,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 | Parametro | Descrizione |
 | --- | --- |
 | `{BASE_CONNECTION_ID}` | ID connessione per il sistema di automazione di marketing. |
-| `{TABLE_PATH}` | Percorso di una tabella all&#39;interno del sistema di automazione del marketing. |
+| `{TABLE_PATH}` | Percorso di una tabella all&#39;interno del sistema di automazione di marketing. |
 
 **Richiesta**
 
