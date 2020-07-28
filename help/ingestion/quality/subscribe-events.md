@@ -43,11 +43,11 @@ Lo schema dell&#39;evento di notifica dell&#39;assimilazione dei dati è uno sch
 
 ## Iscriviti alle notifiche sullo stato di inserimento dei dati
 
-Attraverso gli eventi di I/O [Adobe](https://www.adobe.io/apis/experienceplatform/events.html), potete abbonarvi a più tipi di notifiche mediante i webhooks. Le sezioni seguenti descrivono i passaggi per iscriversi alle [!DNL Platform] notifiche per gli eventi di inserimento dei dati tramite Adobe Developer Console.
+Attraverso [eventi](https://www.adobe.io/apis/experienceplatform/events.html)I/O di Adobe, potete iscrivervi a più tipi di notifiche mediante i webhooks. Le sezioni seguenti descrivono i passaggi per iscriversi alle [!DNL Platform] notifiche per gli eventi di assimilazione dei dati tramite  Adobe Developer Console.
 
-### Creare un nuovo progetto in Adobe Developer Console
+### Creare un nuovo progetto in  Adobe Developer Console
 
-Andate ad [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) ed effettuate l&#39;accesso con il vostro Adobe ID . Attenetevi quindi ai passaggi descritti nell&#39;esercitazione sulla [creazione di un progetto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vuoto nella documentazione di Adobe Developer Console.
+Andate a [console](https://www.adobe.com/go/devs_console_ui) Sviluppatore di Adobe ed effettuate l&#39;accesso con il vostro Adobe ID . Attenetevi quindi ai passaggi descritti nell&#39;esercitazione sulla [creazione di un progetto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vuoto nella documentazione di  Adobe Developer Console.
 
 ### Aggiunta di [!DNL Experience Platform] eventi al progetto
 
@@ -91,4 +91,4 @@ Viene visualizzata la pagina dei dettagli per la registrazione dell&#39;evento a
 
 ## Passaggi successivi
 
-Una volta registrate [!DNL Platform] le notifiche al progetto, potete visualizzare gli eventi ricevuti dal dashboard del progetto. Per istruzioni dettagliate su come tenere traccia degli eventi, consultate la guida [Tracing Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) .
+Una volta registrate [!DNL Platform] le notifiche al progetto, potete visualizzare gli eventi ricevuti dal dashboard del progetto. Per istruzioni dettagliate su come tracciare gli eventi, consultate la guida [Traccia  eventi](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) I/O del Adobe.
