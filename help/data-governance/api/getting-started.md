@@ -62,7 +62,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 All&#39;interno dell&#39; [!DNL Policy Service] API, tutti i criteri e le azioni di marketing sono denominati o `core` `custom` risorse.
 
-Le `core` risorse sono quelle definite e gestite da Adobe, mentre `custom` le risorse vengono create e gestite da singoli clienti e sono pertanto univoche e visibili esclusivamente all&#39;organizzazione IMS che le ha create. Di conseguenza, le operazioni di elenco e ricerca (`GET`) sono le uniche operazioni consentite sulle `core` risorse, mentre le operazioni di elenco, ricerca e aggiornamento (`POST`, `PUT`, `PATCH`e `DELETE`) sono disponibili per `custom` le risorse.
+Le `core` risorse sono quelle definite e gestite dal Adobe , mentre `custom` le risorse sono create e conservate dai singoli clienti e sono pertanto uniche e visibili esclusivamente all&#39;organizzazione IMS che le ha create. Di conseguenza, le operazioni di elenco e ricerca (`GET`) sono le uniche operazioni consentite sulle `core` risorse, mentre le operazioni di elenco, ricerca e aggiornamento (`POST`, `PUT`, `PATCH`e `DELETE`) sono disponibili per `custom` le risorse.
 
 ## Stato dei criteri
 
@@ -74,7 +74,7 @@ I criteri &quot;DRAFT&quot; possono essere considerati anche nella valutazione d
 
 ## Nomi delle azioni di marketing {#marketing-actions}
 
-I nomi delle azioni di marketing sono identificatori univoci per le azioni di marketing. Ogni azione `core` di marketing ha un nome univoco che si applica a tutte le organizzazioni IMS. Questi nomi sono definiti e gestiti da Adobe. Nel frattempo, tutte le azioni di marketing (`custom` risorse) definite dal cliente sono univoche all&#39;interno della vostra organizzazione e non sono visibili o condivise con altre organizzazioni IMS.
+I nomi delle azioni di marketing sono identificatori univoci per le azioni di marketing. Ogni azione `core` di marketing ha un nome univoco che si applica a tutte le organizzazioni IMS. Questi nomi sono definiti e mantenuti dal Adobe . Nel frattempo, tutte le azioni di marketing (`custom` risorse) definite dal cliente sono univoche all&#39;interno della vostra organizzazione e non sono visibili o condivise con altre organizzazioni IMS.
 
 I passaggi per lavorare con le azioni di marketing nell&#39; [!DNL Policy Service] API sono descritti nella sezione Azioni [di](#marketing-actions) marketing più avanti in questo documento.
 
