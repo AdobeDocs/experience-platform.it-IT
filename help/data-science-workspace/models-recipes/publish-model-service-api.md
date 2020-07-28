@@ -28,7 +28,7 @@ Infine, prima di iniziare questa esercitazione, consulta la sezione [introduttiv
 - `{IMS_ORG}`
 - `{API_KEY}`
 
-Tutte le richieste POST, PUT e PATCH richiedono un&#39;intestazione aggiuntiva:
+Tutte le richieste di POST, PUT e PATCH richiedono un&#39;intestazione aggiuntiva:
 
 - Content-Type: application/json
 
@@ -48,7 +48,7 @@ La tabella seguente riassume alcuni termini comuni utilizzati in questa esercita
 
 ## Creazione di un servizio ML con un&#39;esperienza di formazione esistente e assegnazione di un punteggio pianificato
 
-Quando pubblicate un esperimento di formazione eseguito come servizio ML, potete pianificare il punteggio fornendo i dettagli per l&#39;esperimento di punteggio Eseguire il payload di una richiesta POST. Questo determina la creazione di un&#39;entità Sperimentale pianificata per il punteggio.
+Quando pubblicate un esperimento di formazione eseguito come servizio ML, potete pianificare il punteggio fornendo i dettagli per l&#39;esperimento di punteggio Eseguire il payload di una richiesta di POST. Questo determina la creazione di un&#39;entità Sperimentale pianificata per il punteggio.
 
 **Formato API**
 
