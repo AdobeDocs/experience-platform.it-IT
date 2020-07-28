@@ -184,6 +184,6 @@ Questa sezione fornisce informazioni supplementari sulla creazione di connession
 
 ### Connessioni di streaming autenticate
 
-La raccolta di dati autenticata consente  servizi di Adobe Experience Platform, come [!DNL Real-time Customer Profile] e [!DNL Identity], di distinguere tra record provenienti da fonti attendibili e fonti non attendibili. I client che desiderano inviare informazioni personali (PII) possono farlo inviando Token di accesso IMS come parte della richiesta POST. Se il Token IMS è valido, i record vengono contrassegnati come raccolti da fonti attendibili.
+La raccolta di dati autenticata consente  servizi di Adobe Experience Platform, come [!DNL Real-time Customer Profile] e [!DNL Identity], di distinguere tra record provenienti da fonti attendibili e fonti non attendibili. I client che desiderano inviare informazioni personali (PII) possono farlo inviando Token di accesso IMS come parte della richiesta di POST. Se il token IMS è valido, i record vengono contrassegnati come raccolti da fonti attendibili.
 
 Per ulteriori informazioni sulla creazione di una connessione in streaming autenticata, consulta l’esercitazione sulla [creazione di una connessione in streaming](create-authenticated-streaming-connection.md)autenticata.
