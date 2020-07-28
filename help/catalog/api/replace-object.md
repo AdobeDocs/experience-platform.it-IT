@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # Sostituire un oggetto
 
-Potete sovrascrivere il contenuto di un [!DNL Catalog] oggetto utilizzando una richiesta PUT, in cui l&#39;intera risorsa viene sostituita con il payload della richiesta.
+Potete sovrascrivere il contenuto di un [!DNL Catalog] oggetto utilizzando una richiesta di PUT in cui l&#39;intera risorsa viene sostituita con il payload della richiesta.
 
 >[!NOTE]
 >
->Se è necessario aggiornare solo alcuni campi specifici all&#39;interno di un [!DNL Catalog] oggetto, l&#39;utilizzo di una richiesta PATCH potrebbe risultare più efficiente.
+>Se è necessario aggiornare solo alcuni campi specifici all&#39;interno di un [!DNL Catalog] oggetto, l&#39;utilizzo di una richiesta PATCH potrebbe essere più efficiente.
 
 **Formato API**
 
@@ -58,7 +58,7 @@ curl -X PUT \
 
 **Risposta**
 
-Una risposta corretta restituisce un array contenente l&#39;ID dell&#39;oggetto sovrascritto. Questo ID deve corrispondere a quello inviato nella richiesta PUT. L&#39;esecuzione di una richiesta GET per questo oggetto ora mostra che i relativi dettagli sono stati sostituiti con quelli forniti nel payload della richiesta PUT precedente.
+Una risposta corretta restituisce un array contenente l&#39;ID dell&#39;oggetto sovrascritto. Questo ID deve corrispondere a quello inviato nella richiesta PUT. L&#39;esecuzione di una richiesta di GET per questo oggetto ora mostra che i relativi dettagli sono stati sostituiti con quelli forniti nel payload della richiesta di PUT precedente.
 
 ```json
 [
