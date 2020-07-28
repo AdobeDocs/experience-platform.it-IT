@@ -18,7 +18,7 @@ ht-degree: 1%
 >
 >A differenza di altri endpoint forniti nell&#39;API Sandbox, questo endpoint è disponibile per tutti gli utenti, inclusi quelli che non dispongono delle autorizzazioni di accesso di amministrazione sandbox.
 
-Potete elencare le sandbox attive per l&#39;utente corrente eseguendo una richiesta GET all&#39;endpoint principale (`/`).
+Potete elencare le sandbox attive per l&#39;utente corrente eseguendo una richiesta di GET all&#39;endpoint principale (`/`).
 
 **Formato API**
 
