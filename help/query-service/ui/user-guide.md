@@ -118,13 +118,13 @@ Al termine di una query, i risultati vengono visualizzati nella *[!UICONTROL Res
 
 ## Esecuzione di query con video [!DNL Query Service] di esercitazione
 
-Il seguente video mostra come eseguire le query nell&#39;interfaccia del Adobe Experience Platform  e in un client PSQL. Inoltre, viene illustrato l&#39;utilizzo di singole proprietà in un oggetto XDM, utilizzando funzioni definite da Adobe e utilizzando CREATE TABLE AS SELECT (CTAS).
+Il seguente video mostra come eseguire le query nell&#39;interfaccia del Adobe Experience Platform  e in un client PSQL. Inoltre, viene illustrato l&#39;utilizzo di singole proprietà in un oggetto XDM, utilizzando  funzioni definite dal Adobe e utilizzando CREATE TABLE AS SELECT (CTAS).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
 ## Passaggi successivi
 
-Ora che sai quali funzioni sono disponibili [!DNL Query Editor] e come navigare nell’applicazione, puoi iniziare a creare query personalizzate direttamente in [!DNL Platform]. Per ulteriori informazioni sull&#39;esecuzione di query SQL rispetto ai dataset in [!DNL Data Lake], vedere la guida sull&#39; [esecuzione di query][query-service-running-queries]. Per query SQL di esempio per lavorare con Adobe  Analytics e dati  Adobe Target, consultate il riferimento [alle query di][query-service-sample-queries]esempio.
+Ora che sai quali funzioni sono disponibili [!DNL Query Editor] e come navigare nell’applicazione, puoi iniziare a creare query personalizzate direttamente in [!DNL Platform]. Per ulteriori informazioni sull&#39;esecuzione di query SQL rispetto ai dataset in [!DNL Data Lake], vedere la guida sull&#39; [esecuzione di query][query-service-running-queries]. Per query SQL di esempio per l&#39;utilizzo  dati Adobe Analytics e  Adobe Target, vedere il riferimento [alle query di][query-service-sample-queries]esempio.
 
 [query-service-overview]: ../home.md
 [query-service-ui]: overview.md
