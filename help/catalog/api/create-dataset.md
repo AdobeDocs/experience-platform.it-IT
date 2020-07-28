@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Creare un dataset
 
-Per creare un dataset utilizzando l&#39; [!DNL Catalog] API, è necessario conoscere il `$id` valore dello schema [!DNL Experience Data Model] (XDM) su cui si baserà il dataset. Una volta ottenuto l&#39;ID dello schema, potete creare un dataset effettuando una richiesta POST all&#39; `/datasets` endpoint nell&#39; [!DNL Catalog] API.
+Per creare un dataset utilizzando l&#39; [!DNL Catalog] API, è necessario conoscere il `$id` valore dello schema [!DNL Experience Data Model] (XDM) su cui si baserà il dataset. Una volta ottenuto l&#39;ID dello schema, potete creare un dataset effettuando una richiesta di POST all&#39; `/datasets` endpoint nell&#39; [!DNL Catalog] API.
 
 >[!NOTE]
 >
