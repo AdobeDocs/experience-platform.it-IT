@@ -12,11 +12,11 @@ ht-degree: 0%
 ---
 
 
-# [!DNL Data Governance] e [!DNL Privacy] esercitazioni
+# [!DNL Data Governance] e [!DNL Privacy] Tutorials
 
 [!DNL Data Usage Labeling and Enforcement] (DULE) è il meccanismo principale del Adobe Experience Platform  [!DNL Data Governanc]e. Le funzioni DULE consentono di applicare etichette di utilizzo dei dati a set di dati e campi, suddividendo ciascuna in categorie in base ai relativi criteri di utilizzo dei dati. Prima di iniziare con le etichette, consulta la panoramica [sulla governance dei](../data-governance/home.md) dati per un&#39;introduzione più efficace al framework DULE all&#39;interno [!DNL Platform].
 
- Adobe Experience Platform [!DNL Privacy Service] fornisce un&#39;API RESTful e un&#39;interfaccia utente che consentono di coordinare le richieste di privacy e conformità tra le varie soluzioni. Per saperne di più, si prega di iniziare leggendo la panoramica [di](../privacy-service/home.md)Privacy Service.
+ Adobe Experience Platform [!DNL Privacy Service] fornisce un&#39;API RESTful e un&#39;interfaccia utente che consentono di coordinare le richieste di privacy e conformità tra le varie soluzioni. Per saperne di più, si prega di iniziare leggendo la panoramica [](../privacy-service/home.md)Privacy Service.
 
 ## Aggiungi etichette di utilizzo dati
 
