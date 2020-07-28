@@ -58,7 +58,7 @@ Al momento, è supportato solo  Adobe Audience Manager come pubblico esterno, co
 
 ### Condivisione di segmenti
 
-I segmenti creati in Platform possono essere utilizzati in altri servizi [di base di](https://docs.adobe.com/content/help/it-IT/core-services/interface/experience-cloud.html)Adobe Experience Cloud. Per abilitare questa funzione, è necessario contattare l&#39;architetto della soluzione o il consulente.
+I segmenti creati in Platform possono essere utilizzati all&#39;interno di altri servizi [core di](https://docs.adobe.com/content/help/it-IT/core-services/interface/experience-cloud.html)Adobe Experience Cloud. Per abilitare questa funzione, è necessario contattare l&#39;architetto della soluzione o il consulente.
 
 ## Altri tipi di dati
 
