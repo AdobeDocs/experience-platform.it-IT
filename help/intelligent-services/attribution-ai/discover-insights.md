@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;insights;attribution ai;popular topics
 solution: Experience Platform
-title: Scopri informazioni approfondite in Attribution AI
+title: Scoprire informazioni nelle  Attribution AI
 topic: Attribution AI insights
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
@@ -12,23 +12,23 @@ ht-degree: 1%
 ---
 
 
-# Scopri informazioni approfondite in Attribution AI
+# Scoprire informazioni nelle  Attribution AI
 
-Le istanze del servizio AI di attribuzione forniscono informazioni utili per prendere e misurare le decisioni di marketing relative alle prestazioni di marketing e al ritorno sull&#39;investimento. La selezione di un&#39;istanza di servizio fornisce visualizzazioni e filtri per aiutarvi a comprendere l&#39;impatto di ogni interazione con il cliente in ogni fase del percorso del cliente.
+ istanze di servizi di Attribution AI forniscono informazioni utili per prendere e misurare le decisioni di marketing relative alle prestazioni di marketing e al ritorno sull&#39;investimento. La selezione di un&#39;istanza di servizio fornisce visualizzazioni e filtri per aiutarvi a comprendere l&#39;impatto di ogni interazione con il cliente in ogni fase del percorso del cliente.
 
-Questo documento funge da guida per l’interazione con le informazioni sulle istanze del servizio nell’interfaccia utente di Adobe Intelligent Services.
+Questo documento funge da guida per l&#39;interazione con le informazioni sulle istanze del servizio nell&#39;interfaccia utente del Adobe  Intelligent Services.
 
 ## Introduzione
 
-Per utilizzare le informazioni per l&#39;analisi dell&#39;attribuzione AI, è necessario disporre di un&#39;istanza di servizio con uno stato di esecuzione riuscito. Per creare una nuova istanza del servizio, visita la guida [all’interfaccia utente](./user-guide.md)AI di attribuzione. Se avete creato di recente un&#39;istanza di servizio che continua a essere formativa e valutazione, lasciate 24 ore per completare l&#39;esecuzione.
+Per utilizzare le informazioni per  Attribution AI, è necessario disporre di un&#39;istanza di servizio con uno stato di esecuzione riuscito. Per creare una nuova istanza del servizio, visita la guida [all’interfaccia utente della Attribution AI](./user-guide.md). Se avete creato di recente un&#39;istanza di servizio che continua a essere formativa e valutazione, lasciate 24 ore per completare l&#39;esecuzione.
 
 ## Panoramica delle informazioni sulle istanze del servizio
 
-Nell’ [!DNL Adobe Experience Platform] interfaccia utente, fai clic su **Servizi** nella barra di navigazione a sinistra. Viene visualizzato il browser *Servizi* , che presenta i servizi intelligenti Adobe. Nel contenitore per l&#39;AI di attribuzione, fate clic su **Apri**.
+Nell’ [!DNL Adobe Experience Platform] interfaccia utente, fai clic su **Servizi** nella barra di navigazione a sinistra. Viene visualizzato il browser *Servizi* ,  Adobe Intelligent Services. Nel contenitore per  Attribution AI, fate clic su **Apri**.
 
 ![Accesso all’istanza](./images/insights/open_Attribution_ai.png)
 
-Viene visualizzata la pagina del servizio AI di attribuzione. In questa pagina sono elencate le istanze del servizio di Attribution AI e vengono visualizzate informazioni su di esse, incluso il nome dell&#39;istanza, gli eventi di conversione, la frequenza di esecuzione dell&#39;istanza e lo stato dell&#39;ultimo aggiornamento. Fate clic sul nome di un&#39;istanza di servizio per iniziare.
+Viene visualizzata la pagina del servizio  Attribution AI. In questa pagina sono elencate le istanze di servizio delle  Attribution AI e vengono visualizzate informazioni su di esse, incluso il nome dell&#39;istanza, gli eventi di conversione, la frequenza di esecuzione dell&#39;istanza e lo stato dell&#39;ultimo aggiornamento. Fate clic sul nome di un&#39;istanza di servizio per iniziare.
 
 >[!NOTE]
 >
@@ -65,14 +65,14 @@ Il pulsante *Altre azioni* si trova nella barra di navigazione in alto a destra 
 
 - **Elimina**: Elimina l&#39;istanza.
 - **Scarica dati** di riepilogo: Scarica un file CSV contenente i dati di riepilogo.
-- **Punti** di accesso: Facendo clic sui punteggi *di* Access si ottengono i punteggi di [accesso per l&#39;esercitazione](./download-scores.md)AI di Attribution.
+- **Punti** di accesso: Facendo clic sui punteggi *di* Access si ottengono i punteggi di [accesso per  Attribution AI](./download-scores.md).
 - **Visualizza cronologia** di esecuzione: Viene visualizzato un contenitore contenente un elenco di tutte le esecuzioni del punteggio associate all&#39;istanza del servizio.
 
 ![altre azioni](./images/insights/more-actions.png)
 
 ## Applicazione di filtri ai dati
 
-Le informazioni approfondite sull&#39;interfaccia utente Attribution consentono di filtrare i dati e aggiornare automaticamente le visualizzazioni dell&#39;interfaccia utente in base ai filtri selezionati.
+ informazioni approfondite sulle Attribution AI consentono di filtrare i dati e aggiornare automaticamente le visualizzazioni dell&#39;interfaccia utente in base ai filtri selezionati.
 
 >[!NOTE]
 >
@@ -80,7 +80,7 @@ Le informazioni approfondite sull&#39;interfaccia utente Attribution consentono 
 
 ### Evento di conversione
 
-Quando create una nuova istanza in Attribution AI, uno dei campi obbligatori è &quot;Conversion events&quot; (Eventi di conversione). Gli eventi di conversione sono obiettivi aziendali che identificano l&#39;impatto delle attività di marketing, come gli ordini di e-commerce, gli acquisti in-store e le visite ai siti Web.
+Quando create una nuova istanza in  Attribution AI, uno dei campi obbligatori è &quot;Eventi di conversione&quot;. Gli eventi di conversione sono obiettivi aziendali che identificano l&#39;impatto delle attività di marketing, come gli ordini di e-commerce, gli acquisti in-store e le visite ai siti Web.
 
 Dall&#39;interno dell&#39;istanza, il menu a discesa Eventi *di* conversione consente di selezionare uno degli eventi definiti per l&#39;istanza al fine di filtrare i dati. Selezionando eventi specifici, le visualizzazioni dell&#39;interfaccia utente vengono modificate per compilare solo le conversioni appartenenti a tali eventi.
 
@@ -88,7 +88,7 @@ Dall&#39;interno dell&#39;istanza, il menu a discesa Eventi *di* conversione con
 
 ### Modello di attribuzione
 
-Facendo clic su *Attribuzione modello* si apre un menu a discesa con tutti i diversi modelli di attribuzione disponibili. Potete selezionare più modelli per confrontare i risultati. Per ulteriori informazioni sui diversi modelli di attribuzione e sul loro funzionamento, visita la panoramica AI [di](./overview.md) attribuzione, che contiene una tabella con informazioni su ciascun modello.
+Facendo clic su *Attribuzione modello* si apre un menu a discesa con tutti i diversi modelli di attribuzione disponibili. Potete selezionare più modelli per confrontare i risultati. Per ulteriori informazioni sui diversi modelli di attribuzione e sul loro funzionamento, visita la [panoramica delle Attribution AI](./overview.md) che contiene una tabella con informazioni su ciascun modello.
 
 ![modello di attribuzione](./images/insights/attribution-model.png)
 
@@ -98,7 +98,7 @@ Il filtro *Prodotto* consente di selezionare tra tutti i prodotti che sono stati
 
 ![products filter](./images/insights/product-filter.png)
 
-### Geografia
+### Informazioni geografiche
 
 Il filtro *Geografia* popola i codici paese in base ai modelli basati su regioni. A seconda dei dati, questo filtro potrebbe essere presente o meno.
 
@@ -110,7 +110,7 @@ Il filtro *Geografia* popola i codici paese in base ai modelli basati su regioni
 
 >[!NOTE]
 >
->Questo filtro è presente solo se durante la creazione dell’istanza del servizio avete eseguito la modellazione [opzionale basata sull’](./user-guide.md#region-based-modeling-optional) area di passaggio nella guida dell’interfaccia utente AI di Attribution.
+>Questo filtro è presente solo se durante la creazione dell’istanza del servizio è stata eseguita la modellazione [opzionale basata sull’](./user-guide.md#region-based-modeling-optional) area di passaggio nella guida dell’interfaccia utente della Attribution AI .
 
 Questo filtro consente di selezionare tutte le aree configurate nel processo di creazione dell&#39;istanza.
 
@@ -162,10 +162,10 @@ La scheda *Campagne* principali visualizza una panoramica delle campagne e delle
 
 ## Passaggi successivi
 
-Dopo aver filtrato i dati e aver visualizzato le informazioni appropriate, potete accedere ai punteggi. Per una guida dettagliata su come accedere ai punteggi, consulta i punteggi di [accesso nell’esercitazione AI](./download-scores.md) di attribuzione. Inoltre, puoi scaricare i dati di riepilogo come indicato in [più azioni](#more-actions). Se selezionate &quot;Scarica dati di riepilogo&quot;, vengono scaricati i dati di riepilogo aggregati per data.
+Dopo aver filtrato i dati e aver visualizzato le informazioni appropriate, potete accedere ai punteggi. Per una guida dettagliata su come accedere ai punteggi, visita i punteggi di [accesso in  Attribution AI](./download-scores.md) tutorial. Inoltre, puoi scaricare i dati di riepilogo come indicato in [più azioni](#more-actions). Se selezionate &quot;Scarica dati di riepilogo&quot;, vengono scaricati i dati di riepilogo aggregati per data.
 
 ## Risorse aggiuntive
 
-Il seguente video è stato progettato per aiutare a imparare a utilizzare la pagina di approfondimenti di Attribution AI per comprendere il ROI dei canali e delle campagne di marketing.
+Il seguente video è stato progettato per aiutare a imparare a utilizzare la pagina di approfondimenti sulle Attribution AI  per comprendere il ROI dei canali e delle campagne di marketing.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32669?learn=on&quality=12)
