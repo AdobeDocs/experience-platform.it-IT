@@ -169,7 +169,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituisce un payload contenente i dettagli del motore appena creato, incluso il relativo identificatore univoco (`id`). La risposta di esempio seguente è per un [!DNL Python] motore. Le chiavi `executionType` e `type` le chiavi cambiano in base al POST fornito.
+Una risposta corretta restituisce un payload contenente i dettagli del motore appena creato, incluso il relativo identificatore univoco (`id`). La risposta di esempio seguente è per un [!DNL Python] motore. I tasti `executionType` e `type` le chiavi cambiano in base al POST fornito.
 
 ```json
 {
