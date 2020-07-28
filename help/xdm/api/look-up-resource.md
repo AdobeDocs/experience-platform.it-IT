@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Cercare una risorsa
 
-Potete cercare risorse specifiche eseguendo una richiesta GET che include l&#39;URI `$id` (URL-encoded) della risorsa nel percorso della richiesta.
+Potete cercare risorse specifiche effettuando una richiesta di GET che include l’URI `$id` (URL-encoded) della risorsa nel percorso della richiesta.
 
 **Formato API**
 
