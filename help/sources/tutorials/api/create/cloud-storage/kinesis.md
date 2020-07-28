@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Creare un connettore Amazon Kinesis utilizzando l'API del servizio di flusso
+title: Creare un connettore Kinesis Amazon  utilizzando l'API di servizio di flusso
 topic: overview
 translation-type: tm+mt
 source-git-commit: 11431ffcfc2204931fe3e863bfadc7878a40b49c
@@ -41,7 +41,7 @@ Per [!DNL Flow Service] connettersi all&#39; [!DNL Amazon Kinesis] account, è n
 | `region` |  | Regione per il tuo [!DNL Kinesis] account. |
 | `connectionSpec.id` | ID specifica [!DNL Kinesis] connessione: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
-Per ulteriori informazioni su questi valori, consultate [questo documento](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html)Kinesis.
+Per ulteriori informazioni su questi valori, consultare [questo documento](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html)Kinesis.
 
 ### Lettura di chiamate API di esempio
 
