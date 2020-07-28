@@ -89,4 +89,4 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload conten
 }
 ```
 
-L&#39;esecuzione di una richiesta GET per elencare tutti gli schemi nel contenitore tenant ora includerebbe lo schema Informazioni proprietà, oppure potreste eseguire una richiesta di ricerca (GET) utilizzando l&#39; `$id` URI con codifica URL per visualizzare direttamente il nuovo schema. Ricordare di includere l&#39;oggetto `version` nell&#39;intestazione Accetto per tutte le richieste di ricerca.
+L&#39;esecuzione di una richiesta di GET per elencare tutti gli schemi nel contenitore tenant ora include lo schema Informazioni proprietà, oppure è possibile eseguire una richiesta di ricerca (GET) utilizzando l&#39;URI con codifica URL per visualizzare direttamente il nuovo schema. `$id` Ricordare di includere l&#39;oggetto `version` nell&#39;intestazione Accetto per tutte le richieste di ricerca.
