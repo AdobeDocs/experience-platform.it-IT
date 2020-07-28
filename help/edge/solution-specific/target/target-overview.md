@@ -1,8 +1,8 @@
 ---
 title: ' Adobe Target e L’SDK Web per il Adobe Experience Platform . '
 seo-title: ' Adobe Experience Platform Web SDK e utilizzo  Adobe Target'
-description: Scoprite come eseguire il rendering del contenuto personalizzato con  Experience Platform Web SDK utilizzando  Adobe Target
-seo-description: Scoprite come eseguire il rendering del contenuto personalizzato con  Experience Platform Web SDK utilizzando  Adobe Target
+description: Scoprite come eseguire il rendering del contenuto personalizzato con  Experience Platform Web SDK tramite  Adobe Target
+seo-description: Scoprite come eseguire il rendering del contenuto personalizzato con  Experience Platform Web SDK tramite  Adobe Target
 translation-type: tm+mt
 source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
@@ -61,7 +61,7 @@ alloy
 
 ## Utilizzo di Composer basato su modulo
 
-Experience Composer basato su modulo è un&#39;interfaccia non visiva utile per configurare test A/B, [!DNL Experience Targeting], Automated Personalization (Personalizzazione automatizzata) e attività di Recommendations con diversi tipi di risposta, come JSON, HTML, Image, ecc. A seconda del tipo di risposta o della decisione restituita dal Adobe Target , è possibile eseguire la logica aziendale principale. Per recuperare le decisioni per le attività di Composer basate su modulo, inviate un evento con tutti gli ‘ambiti decisionali’ per i quali desiderate ottenere una decisione.
+Experience Composer basato su modulo è un&#39;interfaccia non visiva utile per configurare test A/B, [!DNL Experience Targeting],  attività Automated Personalization e Recommendations con diversi tipi di risposta, come JSON, HTML, Image, ecc. A seconda del tipo di risposta o della decisione restituita dal Adobe Target , è possibile eseguire la logica aziendale principale. Per recuperare le decisioni per le attività di Composer basate su modulo, inviate un evento con tutti gli ‘ambiti decisionali’ per i quali desiderate ottenere una decisione.
 
 ```javascript
 alloy
