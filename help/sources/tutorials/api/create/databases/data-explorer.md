@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Creazione di un connettore Azure Data Explorer tramite l'API del servizio di flusso
+title: Creazione di un connettore di Data Explorer di Azure tramite l'API del servizio di flusso
 topic: overview
 translation-type: tm+mt
 source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 [!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti diverse all&#39;interno  Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
-Questa esercitazione utilizza l&#39; [!DNL Flow Service] API per guidarvi nei passaggi necessari per la connessione [!DNL Azure Data Explorer] (in seguito denominato &quot;Esplora dati&quot;) a [!DNL Experience Platform].
+Questa esercitazione utilizza l&#39; [!DNL Flow Service] API per guidarvi nei passaggi necessari per la connessione [!DNL Azure Data Explorer] (in seguito denominata &quot;Data Explorer&quot;) a [!DNL Experience Platform].
 
 ## Introduzione
 
@@ -43,7 +43,7 @@ Per [!DNL Flow Service] connettersi con [!DNL Data Explorer], è necessario forn
 | `servicePrincipalKey` | Chiave entità servizio univoca utilizzata per connettersi al [!DNL Data Explorer] database. |
 | `connectionSpec.id` | Identificatore univoco necessario per creare una connessione. L&#39;ID della specifica di connessione per [!DNL Data Explorer] è `0479cc14-7651-4354-b233-7480606c2ac3`. |
 
-Per ulteriori informazioni su come iniziare, consulta [questo documento](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad)di Esplora dati.
+Per ulteriori informazioni su come iniziare, consulta [questo documento](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad)di Data Explorer.
 
 ### Lettura di chiamate API di esempio
 
