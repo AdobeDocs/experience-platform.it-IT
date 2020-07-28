@@ -1,8 +1,8 @@
 ---
 title: Esecuzione di comandi
 seo-title: Esecuzione  comandi SDK Web per Adobi Experience Platform
-description: Scoprite come eseguire  comandi Experience Platform Web SDK
-seo-description: Scoprite come eseguire  comandi Experience Platform Web SDK
+description: Scopri come eseguire  comandi SDK Web per Experienci Platform
+seo-description: Scopri come eseguire  comandi SDK Web per Experienci Platform
 translation-type: tm+mt
 source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
