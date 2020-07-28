@@ -92,7 +92,7 @@ Inoltre, durante la segmentazione in streaming si applicano alcune linee guida:
 
 ## Recupera tutti i segmenti abilitati per la segmentazione in streaming
 
-Puoi ottenere un elenco di tutti i segmenti abilitati per la segmentazione in streaming all’interno dell’organizzazione IMS effettuando una richiesta GET all’ `/segment/definitions` endpoint.
+Puoi ottenere un elenco di tutti i segmenti abilitati per la segmentazione in streaming all’interno dell’organizzazione IMS effettuando una richiesta di GET all’ `/segment/definitions` endpoint.
 
 **Formato API**
 
@@ -294,7 +294,7 @@ Una volta abilitata la valutazione dello streaming, è necessario creare una bas
 
 ### Creare una pianificazione
 
-Effettuando una richiesta POST all&#39; `/config/schedules` endpoint, potete creare una pianificazione e includere l&#39;ora specifica in cui deve essere attivata la pianificazione.
+Eseguendo una richiesta POST all&#39; `/config/schedules` endpoint, potete creare una pianificazione e includere l&#39;ora specifica in cui attivare la pianificazione.
 
 **Formato API**
 
@@ -364,7 +364,7 @@ Una risposta corretta restituisce i dettagli della nuova pianificazione creata.
 
 ### Attivare una pianificazione
 
-Per impostazione predefinita, una pianificazione è inattiva quando viene creata, a meno che la `state` proprietà non sia impostata `active` nel corpo della richiesta di creazione (POST). Potete abilitare una pianificazione (impostate `state` su `active`) eseguendo una richiesta PATCH all&#39; `/config/schedules` endpoint e includendo l&#39;ID della pianificazione nel percorso.
+Per impostazione predefinita, una pianificazione è inattiva quando viene creata, a meno che la `state` proprietà non sia impostata `active` nel corpo della richiesta di creazione (POST). Potete abilitare una pianificazione (impostate `state` su `active`) effettuando una richiesta di PATCH all&#39; `/config/schedules` endpoint e includendo l&#39;ID della pianificazione nel percorso.
 
 **Formato API**
 
