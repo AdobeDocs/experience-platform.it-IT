@@ -126,7 +126,7 @@ Una risposta corretta restituisce i dettagli della definizione del segmento.
 
 ## Trovare i set di dati di origine dal criterio di unione {#datasets}
 
-I criteri di unione contengono informazioni sui set di dati di origine, che a loro volta contengono etichette di utilizzo dei dati. Potete cercare i dettagli di un criterio di unione fornendo l&#39;ID del criterio di unione in una richiesta GET all&#39; [!DNL Profile] API. Ulteriori informazioni sui criteri di unione sono disponibili nella guida [all&#39;endpoint dei criteri di](../../profile/api/merge-policies.md)unione.
+I criteri di unione contengono informazioni sui set di dati di origine, che a loro volta contengono etichette di utilizzo dei dati. Potete cercare i dettagli di un criterio di unione fornendo l&#39;ID del criterio di unione in una richiesta di GET all&#39; [!DNL Profile] API. Ulteriori informazioni sui criteri di unione sono disponibili nella guida [all&#39;endpoint dei criteri di](../../profile/api/merge-policies.md)unione.
 
 **Formato API**
 
@@ -189,7 +189,7 @@ Una risposta corretta restituisce i dettagli del criterio di unione.
 
 Dopo aver ottenuto gli ID dei set di dati di origine del criterio di unione, puoi utilizzare l&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE Policy Service per valutare tali set di dati in base ad azioni di marketing specifiche, al fine di verificare la presenza di violazioni dei criteri di utilizzo dei dati.
 
-Per valutare i set di dati, è necessario fornire il nome dell&#39;azione di marketing nel percorso di una richiesta POST, fornendo al contempo gli ID dei set di dati all&#39;interno del corpo della richiesta, come illustrato nell&#39;esempio seguente.
+Per valutare i set di dati, è necessario fornire il nome dell&#39;azione di marketing nel percorso di una richiesta di POST, fornendo al contempo gli ID dei set di dati all&#39;interno del corpo della richiesta, come illustrato nell&#39;esempio seguente.
 
 **Formato API**
 
@@ -200,7 +200,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Nome dell&#39;azione di marketing associata al criterio di utilizzo dei dati per il quale si stanno valutando i set di dati. A seconda che il criterio sia stato definito da Adobe o dalla vostra organizzazione, dovete utilizzare `/marketingActions/core` o `/marketingActions/custom`, rispettivamente. |
+| `{MARKETING_ACTION_NAME}` | Nome dell&#39;azione di marketing associata al criterio di utilizzo dei dati per il quale si stanno valutando i set di dati. A seconda che il criterio sia stato definito dal Adobe  o dall&#39;organizzazione, è necessario utilizzare `/marketingActions/core` o `/marketingActions/custom`, rispettivamente. |
 
 **Richiesta**
 
