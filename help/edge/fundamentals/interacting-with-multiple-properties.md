@@ -18,7 +18,7 @@ In alcuni casi può essere utile interagire con due proprietà diverse sulla ste
 
 * Aziende acquisite e che stanno lavorando per integrare i propri siti Web
 * Relazioni di condivisione dei dati tra più società
-* Clienti che stanno testando nuove soluzioni Adobe e non desiderano interrompere la loro implementazione esistente
+* Clienti che stanno testando nuove soluzioni  Adobe e non desiderano interrompere la loro implementazione esistente
 
 L’SDK consente di creare un’istanza separata per ciascuna proprietà aggiungendo un altro nome all’array nel codice di base. Nell&#39;esempio seguente sono stati forniti due nomi `mycustomname1` e `mycustomname2`.
 
