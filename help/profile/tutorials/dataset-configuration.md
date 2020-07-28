@@ -199,7 +199,7 @@ Sotto la `tags` proprietà, è possibile vedere che `unifiedProfile` e `unifiedI
 
 ### Abilitare il set di dati {#enable-the-dataset}
 
-Se il set di dati esistente non è stato abilitato per [!DNL Profile] o [!DNL Identity Service], potete attivarlo effettuando una richiesta PATCH utilizzando l&#39;ID del set di dati.
+Se il set di dati esistente non è stato abilitato per [!DNL Profile] o [!DNL Identity Service], potete attivarlo effettuando una richiesta di PATCH utilizzando l&#39;ID del set di dati.
 
 **Formato API**
 
