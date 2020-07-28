@@ -12,7 +12,7 @@ ht-degree: 1%
 ---
 
 
-# Creare destinazioni di marketing e attivare i dati in Adobe [!DNL Real-time Customer Data Platform]
+# Creare destinazioni di e-mail marketing e attivare i dati in  Adobe  [!DNL Real-time Customer Data Platform]
 
 Questa esercitazione illustra come utilizzare le chiamate API per collegarsi ai dati del Adobe Experience Platform , creare una destinazione [di marketing](../../rtcdp/destinations/email-marketing-destinations.md)e-mail, creare un flusso di dati per la nuova destinazione creata e attivare i dati per la nuova destinazione creata.
 
@@ -20,7 +20,7 @@ Questa esercitazione utilizza la destinazione del Adobe Campaign  in tutti gli e
 
 ![Panoramica: i passaggi per creare una destinazione e attivare i segmenti](../images/destinations/flow-api-destinations-steps-overview.png)
 
-Se preferisci utilizzare l’interfaccia utente nel CDP in tempo reale di Adobe per collegare una destinazione e attivare i dati, consulta le esercitazioni [Connetti una destinazione](../../rtcdp/destinations/connect-destination.md) e [Attiva profili e segmenti a una destinazione](../../rtcdp/destinations/activate-destinations.md) .
+Se preferite utilizzare l&#39;interfaccia utente in  Adobe  CDP in tempo reale per collegare una destinazione e attivare i dati, consultate le esercitazioni [Connetti una destinazione](../../rtcdp/destinations/connect-destination.md) e [Attiva profili e segmenti a una destinazione](../../rtcdp/destinations/activate-destinations.md) .
 
 ## introduzione
 
@@ -30,7 +30,7 @@ Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Ex
 * [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] è il sistema di record per la posizione dei dati e la linea all&#39;interno [!DNL Experience Platform].
 * [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per attivare i dati nelle destinazioni di marketing tramite e-mail in Adobe Real-time CDP.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per attivare i dati per le destinazioni di marketing tramite e-mail in CDP  Adobe in tempo reale.
 
 ### Raccogli credenziali richieste
 
@@ -80,13 +80,13 @@ Before starting this tutorial, familiarize yourself with the following terms whi
 
 ### Swagger, documentazione
 
-In questa esercitazione potete trovare la documentazione di riferimento associata a tutte le chiamate API in Swagger. Consulta la documentazione API del servizio [di flusso su Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). È consigliabile utilizzare questa esercitazione e la pagina della documentazione Swagger in parallelo.
+In questa esercitazione potete trovare la documentazione di riferimento associata a tutte le chiamate API in Swagger. Consulta la documentazione API del servizio [di flusso  Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). È consigliabile utilizzare questa esercitazione e la pagina della documentazione Swagger in parallelo.
 
 ## Ottenere l&#39;elenco delle destinazioni disponibili {#get-the-list-of-available-destinations}
 
 ![Passaggi di destinazione - Panoramica passo 1](../images/destinations/flow-api-destinations-step1.png)
 
-Come primo passo, devi decidere a quale destinazione di e-mail marketing inviare i dati. Per iniziare, esegui una chiamata per richiedere un elenco di destinazioni disponibili a cui puoi collegare e attivare i segmenti. Eseguite la seguente richiesta GET all&#39; `connectionSpecs` endpoint per restituire un elenco di destinazioni disponibili:
+Come primo passo, devi decidere a quale destinazione di e-mail marketing inviare i dati. Per iniziare, esegui una chiamata per richiedere un elenco di destinazioni disponibili a cui puoi collegare e attivare i segmenti. Eseguite la seguente richiesta di GET all&#39; `connectionSpecs` endpoint per restituire un elenco di destinazioni disponibili:
 
 **Formato API**
 
@@ -467,9 +467,9 @@ Una risposta corretta restituisce l’identificatore univoco (`id`) per la nuova
 
 Utilizzando gli ID ottenuti nei passaggi precedenti, ora puoi creare un flusso di dati tra [!DNL Experience Platform] i dati e la destinazione in cui attiverai i dati. Considerate questo passaggio come la costruzione della pipeline, attraverso la quale i dati scorreranno successivamente, tra la destinazione [!DNL Experience Platform] e quella desiderata.
 
-Per creare un flusso di dati, eseguite una richiesta POST, come mostrato di seguito, fornendo al contempo i valori indicati di seguito all&#39;interno del payload.
+Per creare un flusso di dati, eseguite una richiesta di POST, come mostrato di seguito, fornendo al contempo i valori indicati di seguito all&#39;interno del payload.
 
-Eseguite la seguente richiesta POST per creare un flusso di dati.
+Eseguite la seguente richiesta di POST per creare un flusso di dati.
 
 **Formato API**
 
@@ -517,8 +517,8 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`: Utilizzate il flusso per la destinazione di e-mail marketing a cui desiderate connettervi. Per ottenere la specifica di flusso, eseguite un&#39;operazione GET sull&#39; `flowspecs` endpoint. Consulta la documentazione Swagger qui: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. Nella risposta, cercate `upsTo` e copiate l&#39;ID corrispondente della destinazione di e-mail marketing a cui desiderate connettervi. Ad esempio,  Adobe Campaign, cercate `upsToCampaign` e copiate il `id` parametro.
-* `{SOURCE_CONNECTION_ID}`: Utilizzate l&#39;ID di connessione di origine ottenuto nel passaggio [Connetti all&#39;Experience Platform](#connect-to-your-experience-platform-data).
+* `{FLOW_SPEC_ID}`: Utilizzate il flusso per la destinazione di e-mail marketing a cui desiderate connettervi. Per ottenere la specifica di flusso, eseguire un&#39;operazione di GET sull&#39; `flowspecs` endpoint. Consulta la documentazione Swagger qui: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. Nella risposta, cercate `upsTo` e copiate l&#39;ID corrispondente della destinazione di e-mail marketing a cui desiderate connettervi. Ad esempio,  Adobe Campaign, cercate `upsToCampaign` e copiate il `id` parametro.
+* `{SOURCE_CONNECTION_ID}`: Utilizzate l&#39;ID di connessione di origine ottenuto nel passaggio [Connetti al Experience Platform](#connect-to-your-experience-platform-data).
 * `{TARGET_CONNECTION_ID}`: Utilizzate l&#39;ID di connessione di destinazione ottenuto nel passaggio [Connetti alla destinazione](#connect-to-email-marketing-destination)di e-mail marketing.
 
 **Risposta**
@@ -539,7 +539,7 @@ Una risposta corretta restituisce l’ID (`id`) del flusso di dati appena creato
 
 Dopo aver creato tutte le connessioni e il flusso di dati, ora puoi attivare i dati del profilo nella piattaforma di e-mail marketing. In questo passaggio, puoi selezionare i segmenti e gli attributi di profilo che stai inviando alla destinazione e pianificare e inviare i dati alla destinazione.
 
-Per attivare i segmenti nella nuova destinazione, è necessario eseguire un&#39;operazione JSON PATCH, simile all&#39;esempio seguente. Puoi attivare più segmenti e attributi di profilo in una sola chiamata. Per ulteriori informazioni su JSON PATCH, consulta la specifica [](https://tools.ietf.org/html/rfc6902)RFC.
+Per attivare i segmenti nella nuova destinazione, è necessario eseguire un&#39;operazione PATCH JSON, simile all&#39;esempio seguente. Puoi attivare più segmenti e attributi di profilo in una sola chiamata. Per ulteriori informazioni sul PATCH JSON, consultate la specifica [](https://tools.ietf.org/html/rfc6902)RFC.
 
 **Formato API**
 
@@ -611,7 +611,7 @@ Cercate una risposta OK 202. Non viene restituito alcun corpo di risposta. Per v
 
 Come ultimo passaggio nell&#39;esercitazione, devi verificare che i segmenti e gli attributi di profilo siano stati mappati correttamente al flusso di dati.
 
-Per convalidarlo, eseguite la seguente richiesta GET:
+Per convalidarlo, eseguire la seguente richiesta di GET:
 
 **Formato API**
 
