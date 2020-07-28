@@ -35,9 +35,9 @@ Il seguente diagramma di flusso di lavoro fornisce una panoramica di alto livell
 
 ## Componenti per Adobi Experience Platform 
 
-Nelle integrazioni di connettori ETL sono coinvolti più componenti Experience Platform . L&#39;elenco seguente illustra diversi componenti e funzionalità chiave:
+Nelle integrazioni di connettori ETL sono coinvolti più componenti  Experience Platform. L&#39;elenco seguente illustra diversi componenti e funzionalità chiave:
 
-- **Adobe  Identity Management System (IMS)** - Fornisce il framework per l&#39;autenticazione ai servizi Adobe.
+- **Adobe  Identity Management System (IMS)** - Fornisce il framework per l&#39;autenticazione  servizi Adobe.
 - **Organizzazione** IMS - Un&#39;entità aziendale che può possedere o concedere in licenza prodotti e servizi e consentire l&#39;accesso ai propri membri.
 - **Utente** IMS - Membri di un&#39;organizzazione IMS. La relazione tra l’organizzazione e l’utente è molto complessa.
 - **[!DNL Sandbox]** - Una partizione virtuale una singola [!DNL Platform] istanza, per aiutare a sviluppare e sviluppare applicazioni di esperienza digitale.
@@ -326,7 +326,7 @@ La risposta includerà un dataset (`limit=1`) che mostra la proprietà &quot;fil
 
 ### Elenca i file di set di dati utilizzando l&#39;attributo &quot;files&quot;
 
-Potete anche utilizzare una richiesta GET per recuperare i dettagli del file utilizzando l&#39;attributo &quot;files&quot;.
+Potete anche utilizzare una richiesta di GET per recuperare i dettagli del file utilizzando l&#39;attributo &quot;files&quot;.
 
 **Formato API**
 
@@ -392,7 +392,7 @@ La risposta include l&#39;ID del file del set di dati come proprietà di primo l
 
 ### Recupero dettagli file
 
-Gli ID del file di set di dati restituiti nella risposta precedente possono essere utilizzati in una richiesta GET per recuperare ulteriori dettagli del file tramite l&#39; [!DNL Data Access] API.
+Gli ID del file di set di dati restituiti nella risposta precedente possono essere utilizzati in una richiesta di GET per recuperare ulteriori dettagli del file tramite l&#39; [!DNL Data Access] API.
 
 La panoramica [sull&#39;accesso ai](../data-access/home.md) dati contiene dettagli sull&#39;utilizzo dell&#39; [!DNL Data Access] API.
 
@@ -552,7 +552,7 @@ La risposta può puntare a un singolo file o a una directory. Per informazioni d
 
 ### Accedere al contenuto del file
 
-L&#39; [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) opzione può essere utilizzata per accedere al contenuto di un file specifico. Per recuperare il contenuto, viene effettuata una richiesta GET utilizzando il valore restituito per `_links.self.href` accedere a un file utilizzando l&#39;ID file.
+L&#39; [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) opzione può essere utilizzata per accedere al contenuto di un file specifico. Per recuperare il contenuto, viene effettuata una richiesta di GET utilizzando il valore restituito per `_links.self.href` accedere a un file utilizzando l&#39;ID file.
 
 **Richiesta**
 
@@ -674,7 +674,7 @@ Le nuove attività possono essere pianificate se il precedente valore &quot;stat
 
 ### Ottieni stato ultimo batch per ID
 
-È possibile recuperare un singolo stato batch tramite [!DNL Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) il modulo di richiesta GET utilizzando il `{BATCH_ID}`. L&#39;ID `{BATCH_ID}` utilizzato corrisponde all&#39;ID restituito al momento della creazione del batch.
+È possibile recuperare un singolo stato batch tramite [!DNL Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) una richiesta di GET utilizzando l&#39; `{BATCH_ID}`. L&#39;ID `{BATCH_ID}` utilizzato corrisponde all&#39;ID restituito al momento della creazione del batch.
 
 **Richiesta**
 
