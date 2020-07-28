@@ -1,7 +1,7 @@
 ---
-title: Estensione Adobe Livefyre
-seo-title: Estensione Adobe Livefyre
-description: L'estensione Adobe Livefyre è una destinazione social in Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell'estensione in Adobe Exchange.
+title: Estensione  Adobe Livefyre
+seo-title: Estensione  Adobe Livefyre
+description: L'estensione Livefyre  Adobe è una destinazione social in  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
@@ -12,36 +12,36 @@ ht-degree: 5%
 ---
 
 
-# Estensione Adobe Livefyre {#adobe-livefyre-extension}
+# Estensione  Adobe Livefyre {#adobe-livefyre-extension}
 
 ## Panoramica {#overview}
 
-Adobe Livefyre consente di scoprire, organizzare e pubblicare sul sito Web un flusso costante di contenuti generati dagli utenti per creare esperienze autentiche e altamente personalizzate.
+ Adobe Livefyre consente di scoprire, organizzare e pubblicare sul sito Web un flusso costante di contenuti generati dagli utenti per creare esperienze autentiche e altamente personalizzate.
 
-Adobe Livefyre è un’estensione social in Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100464.html).
+ Adobe Livefyre è un&#39;estensione social in  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100464.html).
 
-Questa destinazione è un&#39; [!DNL Experience Platform Launch] estensione. Per ulteriori informazioni sul funzionamento [!DNL Launch] delle estensioni in Adobe Real-time CDP, consultate Panoramica [sulle estensioni di](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
+Questa destinazione è un&#39; [!DNL Experience Platform Launch] estensione. Per ulteriori informazioni sul funzionamento [!DNL Launch] delle estensioni  Adobe CDP in tempo reale, consultate Panoramica sulle estensioni [di Experience Platform Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
-![Estensione Adobe Livefyre](/help/rtcdp/destinations/assets/adobe-livefyre-extension.png)
+![Estensione  Adobe Livefyre](/help/rtcdp/destinations/assets/adobe-livefyre-extension.png)
 
 
 ## Prerequisiti  {#prerequisites}
 
-Questa estensione è disponibile nel [!DNL Destinations] catalogo per tutti i clienti che hanno acquistato Adobe Real-time CDP.
+Questa estensione è disponibile nel [!DNL Destinations] catalogo per tutti i clienti che hanno acquistato  Adobe CDP in tempo reale.
 
 Per utilizzare questa estensione, è necessario accedere a [!DNL Experience Platform Launch]. [!DNL Experience Platform Launch] viene offerta ai clienti Adobe Experience Cloud come funzione inclusa a valore aggiunto. Contattate l’amministratore dell’organizzazione per ottenere l’accesso [!DNL Launch] e chiedete loro di concedervi l’ **[!UICONTROL manage_properties]** autorizzazione necessaria per installare le estensioni.
 
 ## Installa estensione {#install-extension}
 
-Per installare l’estensione Adobe Livefyre:
+Per installare l&#39;estensione  Adobe Livefyre:
 
-1. Nell’interfaccia CDP [Adobe Real-time, passate a](http://platform.adobe.com/)**[!UICONTROL Destinations > Catalog]**.
+1. Nell&#39;interfaccia CDP in tempo reale del [Adobe](http://platform.adobe.com/), passare a **[!UICONTROL Destinations > Catalog]**.
 2. Selezionate l’estensione dal catalogo o usate la barra di ricerca.
 3. Fai clic sulla destinazione per evidenziarla, quindi selezionala **[!UICONTROL Install Extension]** nella barra a destra. Se il **[!UICONTROL Install Extension]** controllo è disattivato, manca l&#39; **[!UICONTROL manage_properties]** autorizzazione. Consultate [Prerequisiti](#prerequisites).
 4. Nella **[!UICONTROL Select available Launch property]** finestra, selezionate la [!DNL Launch] proprietà in cui desiderate installare l’estensione. È inoltre possibile creare una nuova proprietà in [!DNL Launch]. Una proprietà è una raccolta di regole, elementi di dati, estensioni configurate, ambienti e librerie. Ulteriori informazioni sulle proprietà sono disponibili nella sezione [della pagina](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) Proprietà della [!DNL Launch] documentazione.
 5. Il flusso di lavoro consente di completare [!DNL Launch] l’installazione.
 
-Per informazioni sulle opzioni di configurazione dell&#39;estensione e sul supporto per l&#39;installazione, consultate la pagina di [Adobe Livefyre in Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100464.html).
+Per informazioni sulle opzioni di configurazione dell&#39;estensione e sul supporto dell&#39;installazione, consultate la pagina Livefyre dell&#39;Adobe [in  Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100464.html).
 
 Potete anche installare l’estensione direttamente nell’interfaccia [del](https://launch.adobe.com/)Experience Platform Launch. Consultate [Aggiungere una nuova estensione](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) nella [!DNL Launch] documentazione.
 
@@ -58,6 +58,6 @@ In [!DNL Launch], potete impostare le regole per le estensioni installate per in
 
 >[!TIP]
 >
->Se l’estensione è già installata su una delle proprietà, l’interfaccia utente Adobe Real-time CDP viene visualizzata **[!UICONTROL Install]** per l’estensione. Per accedere al flusso di lavoro di installazione e configurarlo o eliminarlo, fate clic su [Installa estensione](#install-extension) [!DNL Launch] .
+>Se l’estensione è già installata su una delle proprietà, l’interfaccia utente CDP in tempo reale del Adobe  continua a essere visualizzata **[!UICONTROL Install]** per l’estensione. Per accedere al flusso di lavoro di installazione e configurarlo o eliminarlo, fate clic su [Installa estensione](#install-extension) [!DNL Launch] .
 
 Per aggiornare l’estensione, consultate Aggiornamento [dell’](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/extension-upgrade.html) estensione nella [!DNL Launch] documentazione.
