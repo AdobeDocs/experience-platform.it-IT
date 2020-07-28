@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Fingi di possedere un sito web di vendita online. Quando i clienti effettuano acquisti sul sito Web del cliente, è necessario presentare loro raccomandazioni personalizzate per presentare una serie di altri prodotti offerti dal cliente. Nel corso dell&#39;esistenza del sito Web, hai raccolto continuamente i dati dei clienti e vuoi in qualche modo utilizzare questi dati per generare raccomandazioni di prodotto personalizzate.
 
-[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] fornisce i mezzi per raggiungere l&#39;obiettivo utilizzando la funzionalità di ricetta [delle raccomandazioni](../pre-built-recipes/product-recommendations.md)sui prodotti precostruita. Segui questa esercitazione per scoprire come accedere e comprendere i dati di vendita al dettaglio, creare e ottimizzare un modello di apprendimento automatico e generare informazioni approfondite in [!DNL Data Science Workspace].
+[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] fornisce i mezzi per raggiungere il vostro obiettivo utilizzando la [Product Recommendations Recipe](../pre-built-recipes/product-recommendations.md)precostruita. Segui questa esercitazione per scoprire come accedere e comprendere i dati di vendita al dettaglio, creare e ottimizzare un modello di apprendimento automatico e generare informazioni approfondite in [!DNL Data Science Workspace].
 
 Questa esercitazione riflette il flusso di lavoro di [!DNL Data Science Workspace]e illustra i seguenti passaggi per la creazione di un modello di apprendimento automatico:
 
@@ -35,17 +35,17 @@ Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prer
 
 * Risorse di abilitazione. Rivolgetevi al rappresentante commerciale di riferimento per richiedere il provisioning dei seguenti elementi.
    * Recommendations Recipe
-   * Set di dati di input di Recommendations
-   * Schema di input di Recommendations
-   * Set di dati di output delle raccomandazioni
-   * Schema di output di Recommendations
+   * Set di dati di input Recommendations
+   * Schema di input Recommendations
+   * Set di dati di output Recommendations
+   * Schema di output Recommendations
    * Golden Data Set postValues
    * Schema set di dati dorati
 
-* Scaricate i tre [!DNL Jupyter Notebook] file richiesti dall&#39;archivio <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">pubblico di [!DNL Git] Adobe, che verranno utilizzati per illustrare il</a>flusso di lavoro in [!DNL JupyterLab] [!DNL Data Science Workspace].
+* Scaricate i tre [!DNL Jupyter Notebook] file richiesti dall&#39; <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">[!DNL Git] archivio</a>pubblico del Adobe, che verranno utilizzati per illustrare il [!DNL JupyterLab] flusso di lavoro in [!DNL Data Science Workspace].
 
 * Una conoscenza approfondita dei seguenti concetti chiave utilizzati in questa esercitazione:
-   * [!DNL Experience Data Model](../../xdm/home.md): Lo sforzo di standardizzazione condotto da Adobe per definire schemi standard come [!DNL Profile] e ExperienceEvent per la gestione dell&#39;esperienza cliente.
+   * [!DNL Experience Data Model](../../xdm/home.md): Lo sforzo di standardizzazione condotto da  Adobe per definire schemi standard come [!DNL Profile] e ExperienceEvent per la gestione dell&#39;esperienza cliente.
    * Set di dati: Un costrutto di storage e gestione per i dati effettivi. Un&#39;istanza fisica istanziata di uno schema [](../../xdm/schema/field-dictionary.md)XDM.
    * Batch: I set di dati sono costituiti da batch. Un batch è un insieme di dati raccolti in un periodo di tempo ed elaborati insieme come un&#39;unica unità.
    * [!DNL JupyterLab]: [!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) è un&#39;interfaccia Web open-source per Project [!DNL Jupyter] ed è strettamente integrata in [!DNL Experience Platform].
@@ -68,16 +68,16 @@ Gli altri set di dati sono stati precompilati con batch per la visualizzazione d
 | Nome set di dati | Schema | Descrizione |
 | ----- | ----- | ----- |
 | Golden Data Set postValues | Golden Data Set, schema | [!DNL Analytics] i dati di origine del sito Web |
-| Set di dati di input di Recommendations | Schema di input di Recommendations | I [!DNL Analytics] dati vengono trasformati in un set di dati per la formazione utilizzando una pipeline delle funzioni. Questi dati vengono utilizzati per formare il modello di apprendimento automatico di Product Recommendations. `itemid` e `userid` corrispondono a un prodotto acquistato da tale cliente. |
-| Set di dati di output delle raccomandazioni | Schema di output di Recommendations | Il dataset per il quale sono memorizzati i risultati del punteggio, conterrà l&#39;elenco dei prodotti consigliati per ogni cliente. |
+| Set di dati di input Recommendations | Schema di input Recommendations | I [!DNL Analytics] dati vengono trasformati in un set di dati per la formazione utilizzando una pipeline delle funzioni. Questi dati vengono utilizzati per formare il Modello di apprendimento automatico Recommendations prodotto. `itemid` e `userid` corrispondono a un prodotto acquistato da tale cliente. |
+| Set di dati di output Recommendations | Schema di output Recommendations | Il dataset per il quale sono memorizzati i risultati del punteggio, conterrà l&#39;elenco dei prodotti consigliati per ogni cliente. |
 
 ## Creazione del modello {#author-your-model}
 
-Il secondo componente del [!DNL Data Science Workspace] ciclo di vita prevede l’authoring di remix e modelli. La ricetta di Recommendations prodotto è progettata per generare raccomandazioni sui prodotti su larga scala utilizzando i dati di acquisto passati e l&#39;apprendimento automatico.
+Il secondo componente del [!DNL Data Science Workspace] ciclo di vita prevede l’authoring di remix e modelli. Il prodotto Recommendations Recipe è progettato per generare raccomandazioni sui prodotti su larga scala utilizzando i dati di acquisto passati e l&#39;apprendimento automatico.
 
 Le entrate sono la base per un modello in quanto contengono algoritmi di machine learning e logica progettati per risolvere problemi specifici. Ancora più importante, le entrate consentono di democratizzare l&#39;apprendimento automatico all&#39;interno dell&#39;organizzazione, consentendo ad altri utenti di accedere a un Modello per diversi casi di utilizzo senza scrivere alcun codice.
 
-### Esplora la ricetta delle raccomandazioni sui prodotti
+### Esplora il prodotto Recommendations Recipe
 
 1. In [!DNL Adobe Experience Platform], andate **[!UICONTROL Models]** dalla colonna di navigazione a sinistra, quindi fate clic **[!UICONTROL Recipes]** in alto per visualizzare un elenco delle entrate disponibili per la vostra organizzazione.
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
@@ -86,7 +86,7 @@ Le entrate sono la base per un modello in quanto contengono algoritmi di machine
 3. Nella barra a destra, fate clic **[!UICONTROL Recommendations Input Schema]** per visualizzare lo schema che dà origine alla ricetta. I campi dello schema **[!UICONTROL itemId]** e **[!UICONTROL userId]** corrispondono a un prodotto acquistato (**[!UICONTROL interactionType]**) dal cliente in un momento (**[!UICONTROL timestamp]**) specifico. Seguire gli stessi passaggi per esaminare i campi per l&#39; **[!UICONTROL Recommendations Output Schema]**.
    ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
 
-Ora sono stati revisionati gli schemi di input e output richiesti da Product Recommendations Recipe. È ora possibile continuare con la sezione successiva per scoprire come creare, formare e valutare un modello di raccomandazioni sui prodotti.
+Sono stati revisionati gli schemi di input e output richiesti da Product Recommendations Recipe. È ora possibile continuare la sezione successiva per scoprire come creare, formare e valutare un modello Recommendations di prodotto.
 
 ## Formazione e valutazione del modello {#train-and-evaluate-your-model}
 
@@ -102,7 +102,7 @@ Un modello è un&#39;istanza di una ricetta, che consente di addestrare e segnar
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
 3. Viene visualizzato un elenco dei set di dati di input disponibili per la formazione, selezionarli **[!UICONTROL Recommendations Input Dataset]** e fare clic su **[!UICONTROL Next]**.
    ![](../images/models-recipes/model-walkthrough/select_dataset.png)
-4. Specificare un nome per il modello, ad esempio &quot;Modello di raccomandazione prodotto&quot;. Sono elencate le configurazioni disponibili per il modello, che contengono le impostazioni per i comportamenti di formazione e valutazione predefiniti del modello. Non sono necessarie modifiche in quanto queste configurazioni sono specifiche per la vostra organizzazione. Esaminate le configurazioni e fate clic su **[!UICONTROL Finish]**.
+4. Specificare un nome per il modello, ad esempio &quot;Modello Recommendations prodotto&quot;. Sono elencate le configurazioni disponibili per il modello, che contengono le impostazioni per i comportamenti di formazione e valutazione predefiniti del modello. Non sono necessarie modifiche in quanto queste configurazioni sono specifiche per la vostra organizzazione. Esaminate le configurazioni e fate clic su **[!UICONTROL Finish]**.
    ![](../images/models-recipes/model-walkthrough/configure_model.png)
 5. Il modello è stato creato e la pagina *Panoramica* del modello viene visualizzata all&#39;interno di un&#39;esecuzione di formazione appena generata. Per impostazione predefinita, durante la creazione di un modello viene generata un&#39;esecuzione di formazione.
    ![](../images/models-recipes/model-walkthrough/model_post_creation.png)
