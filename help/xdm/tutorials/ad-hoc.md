@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Creare uno schema ad hoc
 
-In circostanze specifiche, potrebbe essere necessario creare uno schema [!DNL Experience Data Model] (XDM) con campi che vengono denominati separati per l&#39;uso solo da un singolo dataset. Tale schema è denominato &quot;ad hoc&quot;. Gli schemi ad hoc vengono utilizzati in vari flussi di lavoro di assimilazione dei dati per [!DNL Experience Platform], ad esempio per acquisire file CSV e creare determinati tipi di connessioni sorgente.
+In circostanze specifiche, potrebbe essere necessario creare uno schema [!DNL Experience Data Model] (XDM) con campi che vengono denominati separati per l&#39;uso solo da un singolo dataset. Tale schema è denominato &quot;ad hoc&quot;. Gli schemi ad hoc sono utilizzati in vari flussi di lavoro di assimilazione dei dati per [!DNL Experience Platform], ad esempio per acquisire file CSV e creare determinati tipi di connessioni sorgente.
 
 Questo documento contiene i passaggi generali per la creazione di uno schema ad hoc mediante l&#39;API [del Registro di](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)schema. È destinato ad essere utilizzato insieme ad altre [!DNL Experience Platform] esercitazioni che richiedono la creazione di uno schema ad hoc come parte del flusso di lavoro. Ciascuno di questi documenti fornisce informazioni dettagliate su come configurare correttamente uno schema ad hoc per il relativo caso di utilizzo specifico.
 
@@ -148,7 +148,7 @@ Una risposta corretta restituisce i dettagli della nuova classe, sostituendo il 
 
 ## Creare uno schema ad hoc
 
-Dopo aver creato una classe ad hoc, è possibile creare un nuovo schema che implementa tale classe effettuando una richiesta POST all&#39; `/tenant/schemas` endpoint.
+Dopo aver creato una classe ad hoc, è possibile creare un nuovo schema che implementa tale classe effettuando una richiesta di POST all&#39; `/tenant/schemas` endpoint.
 
 **Formato API**
 
@@ -225,7 +225,7 @@ Una risposta corretta restituisce i dettagli del nuovo schema creato, incluso il
 >
 >Questo passaggio è facoltativo. Se non si desidera esaminare la struttura del campo dello schema ad hoc, è possibile passare alla sezione dei passaggi [](#next-steps) successivi alla fine dell&#39;esercitazione.
 
-Una volta creato lo schema ad hoc, è possibile effettuare una richiesta di ricerca (GET) per visualizzare lo schema nel modulo espanso. A questo scopo, utilizzate l&#39;intestazione Accetto appropriata nella richiesta GET, come illustrato di seguito.
+Una volta creato lo schema ad hoc, è possibile effettuare una richiesta di ricerca per visualizzare lo schema nel modulo espanso. A questo scopo, utilizzate l’intestazione Accetto appropriata nella richiesta di GET, come illustrato di seguito.
 
 **Formato API**
 
