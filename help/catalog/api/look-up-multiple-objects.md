@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Cercare più oggetti
 
-Se si desidera visualizzare diversi oggetti specifici, anziché effettuare una richiesta per oggetto, [!DNL Catalog] fornisce una semplice scelta rapida per richiedere più oggetti dello stesso tipo. Potete utilizzare una singola richiesta GET per restituire più oggetti specifici includendo un elenco di ID separati da virgola.
+Se si desidera visualizzare diversi oggetti specifici, anziché effettuare una richiesta per oggetto, [!DNL Catalog] fornisce una semplice scelta rapida per richiedere più oggetti dello stesso tipo. Potete utilizzare una singola richiesta di GET per restituire più oggetti specifici includendo un elenco di ID separati da virgola.
 
 >[!NOTE]
 >
