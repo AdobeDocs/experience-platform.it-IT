@@ -1,8 +1,8 @@
 ---
 title: Configurazione dell’SDK
 seo-title: 'Configurazione dell’SDK Web per il Adobe Experience Platform '
-description: Scoprite come configurare  Experience Platform Web SDK
-seo-description: Scoprite come configurare  Experience Platform Web SDK
+description: 'Scopri come configurare l’SDK Web per Experienci Platform '
+seo-description: 'Scopri come configurare l’SDK Web per Experienci Platform '
 translation-type: tm+mt
 source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
@@ -66,7 +66,7 @@ Indica se il debug deve essere abilitato. Impostando questa configurazione si `t
 | -------- | ------------ | ------------------ |
 | Stringa | No | `beta.adobedc.net` |
 
-Dominio utilizzato per interagire con i servizi Adobe. Questo viene utilizzato solo se disponete di un dominio di prime parti (CNAME) che esegue il proxy delle richieste all&#39;infrastruttura periferica di Adobe.
+Il dominio utilizzato per interagire con  servizi di Adobe. Questo viene utilizzato solo se si dispone di un dominio di prime parti (CNAME) che esegue il proxy delle richieste all&#39;infrastruttura periferica del Adobe .
 
 ### `orgId`
 
@@ -160,7 +160,7 @@ L&#39;ID contenitore che specifica quali sincronizzazioni ID vengono attivate. S
 | -------- | ------------ | ----------------- |
 | Booleano | No | `true` |
 
-Abilita la funzione di sincronizzazione ID, che consente di attivare gli URL per sincronizzare l’ID utente univoco Adobe con l’ID utente univoco di un’origine dati di terze parti.
+Abilita la funzione di sincronizzazione ID, che consente di attivare gli URL per sincronizzare l’ID utente univoco  Adobe con l’ID utente univoco di un’origine dati di terze parti.
 
 ### `thirdPartyCookiesEnabled`
 
@@ -168,4 +168,4 @@ Abilita la funzione di sincronizzazione ID, che consente di attivare gli URL per
 | -------- | ------------ | ----------------- |
 | Booleano | No | true |
 
-Abilita l&#39;impostazione dei cookie di terze parti di Adobe. L’SDK può mantenere l’ID visitatore in un contesto di terze parti per consentire l’utilizzo dello stesso ID visitatore nei diversi siti. Questa funzione è utile se si dispone di più siti o si desidera condividere i dati con i partner; tuttavia, a volte questo non è desiderato per motivi di privacy.
+Abilita l&#39;impostazione di  cookie di terze parti di Adobe. L’SDK può mantenere l’ID visitatore in un contesto di terze parti per consentire l’utilizzo dello stesso ID visitatore nei diversi siti. Questa funzione è utile se si dispone di più siti o si desidera condividere i dati con i partner; tuttavia, a volte questo non è desiderato per motivi di privacy.
