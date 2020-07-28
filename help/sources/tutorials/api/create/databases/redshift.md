@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Creare un connettore Amazon Redshift utilizzando l'API del servizio di flusso
+title: Creare un connettore Amazon Redshift  utilizzando l'API del servizio di flusso
 topic: overview
 translation-type: tm+mt
 source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
@@ -69,9 +69,9 @@ Per creare una [!DNL Redshift] connessione, è necessario che all&#39;interno di
 
 **Formato API**
 
-Ogni origine disponibile dispone di un proprio set di specifiche di connessione per descrivere le proprietà del connettore, ad esempio i requisiti di autenticazione. Potete cercare le specifiche di connessione [!DNL Redshift] eseguendo una richiesta GET e utilizzando i parametri di query.
+Ogni origine disponibile dispone di un proprio set di specifiche di connessione per descrivere le proprietà del connettore, ad esempio i requisiti di autenticazione. È possibile ricercare le specifiche di connessione [!DNL Redshift] eseguendo una richiesta di GET e utilizzando i parametri della query.
 
-L&#39;invio di una richiesta GET senza parametri di query restituirà le specifiche di connessione per tutte le origini disponibili. È possibile includere la query `property=name=="amazon-redshift"` per ottenere informazioni specifiche per [!DNL Redshift].
+L&#39;invio di una richiesta di GET senza parametri di query restituirà le specifiche di connessione per tutte le origini disponibili. È possibile includere la query `property=name=="amazon-redshift"` per ottenere informazioni specifiche per [!DNL Redshift].
 
 ```http
 GET /connectionSpecs
