@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guida per gli sviluppatori Privacy Service
-description: Utilizza l’API RESTful per gestire i dati personali dei tuoi soggetti di dati nelle applicazioni Adobe Experience Cloud
+title: Guida per gli sviluppatori di Privacy Service
+description: Utilizzare l'API RESTful per gestire i dati personali dei tuoi soggetti di dati nelle applicazioni Adobe Experience Cloud
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
@@ -15,15 +15,15 @@ ht-degree: 0%
 
 # [!DNL Privacy Service] guida per sviluppatori
 
- Adobe Experience Platform [!DNL Privacy Service] fornisce un&#39;API RESTful e un&#39;interfaccia utente che consentono di gestire (accedere ed eliminare) i dati personali dei tuoi soggetti dati (clienti) nelle applicazioni Adobe Experience Cloud. [!DNL Privacy Service] fornisce inoltre un meccanismo centrale di controllo e registrazione che consente di accedere allo stato e ai risultati dei processi che coinvolgono [!DNL Experience Cloud] le applicazioni.
+ Adobe Experience Platform [!DNL Privacy Service] fornisce un&#39;API RESTful e un&#39;interfaccia utente che consentono di gestire (accedere ed eliminare) i dati personali dei soggetti dati (clienti) nelle applicazioni Adobe Experience Cloud. [!DNL Privacy Service] fornisce inoltre un meccanismo centrale di controllo e registrazione che consente di accedere allo stato e ai risultati dei processi che coinvolgono [!DNL Experience Cloud] le applicazioni.
 
-Questa guida illustra come utilizzare l&#39; [!DNL Privacy Service] API. Per informazioni dettagliate sull’utilizzo dell’interfaccia utente, consultate la panoramica [dell’interfaccia utente di](../ui/overview.md)Privacy Service. Per un elenco completo di tutti gli endpoint disponibili nell&#39; [!DNL Privacy Service] API, consultate il riferimento [](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html)API.
+Questa guida illustra come utilizzare l&#39; [!DNL Privacy Service] API. Per informazioni dettagliate sull’utilizzo dell’interfaccia utente, consultate la panoramica [dell’interfaccia utente](../ui/overview.md)Privacy Service. Per un elenco completo di tutti gli endpoint disponibili nell&#39; [!DNL Privacy Service] API, consultate il riferimento [](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html)API.
 
 ## Introduzione {#getting-started}
 
 Questa guida richiede una buona conoscenza delle [!DNL Experience Platform] funzioni seguenti:
 
-* [!DNL Privacy Service](../home.md): Fornisce un&#39;API RESTful e un&#39;interfaccia utente che consentono di gestire l&#39;accesso e l&#39;eliminazione delle richieste dai soggetti dati (clienti) nelle applicazioni Adobe Experience Cloud.
+* [!DNL Privacy Service](../home.md): Fornisce un&#39;API RESTful e un&#39;interfaccia utente che consentono di gestire l&#39;accesso e l&#39;eliminazione delle richieste dagli oggetti dati (clienti) tra le applicazioni Adobe Experience Cloud.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per eseguire correttamente le chiamate all&#39;API Privacy Service.
 
@@ -39,15 +39,15 @@ Per effettuare chiamate all&#39; [!DNL Privacy Service] API, dovete prima raccog
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Ciò comporta il recupero delle autorizzazioni per lo sviluppatore [!DNL Experience Platform] in Adobe  Admin Console e la generazione delle credenziali in Adobe Developer Console.
+Ciò comporta il conseguimento delle autorizzazioni per lo sviluppatore [!DNL Experience Platform] in Adobe Admin Console, quindi la generazione delle credenziali in  Adobe Developer Console.
 
 ### Accesso degli sviluppatori a [!DNL Experience Platform]
 
-Per ottenere l&#39;accesso degli sviluppatori a [!DNL Platform], segui i passaggi iniziali nell&#39; [esercitazione](../../tutorials/authentication.md)sull&#39;autenticazione Experience Platform. Una volta raggiunto il passaggio &quot;Generate access Credits in Adobe Developer Console&quot;, tornate a questa esercitazione per generare le credenziali specifiche per [!DNL Privacy Service].
+Per ottenere l&#39;accesso degli sviluppatori a [!DNL Platform], segui i passaggi iniziali nell&#39; [Experience Platform di esercitazione](../../tutorials/authentication.md)sull&#39;autenticazione. Una volta raggiunto il passaggio &quot;Generate access Credits in  Adobe Developer Console&quot;, tornate a questa esercitazione per generare le credenziali specifiche per [!DNL Privacy Service].
 
 ### Genera credenziali di accesso
 
-Con Adobe Developer Console, dovete generare le seguenti tre credenziali di accesso:
+Utilizzando  Adobe Developer Console, è necessario generare le seguenti tre credenziali di accesso:
 
 * `{IMS_ORG}`
 * `{API_KEY}`
@@ -59,7 +59,7 @@ Le fasi di generazione di questi valori sono descritte in dettaglio di seguito.
 
 #### Configurazione una tantum
 
-Andate ad [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) ed effettuate l&#39;accesso con il vostro Adobe ID . Attenetevi quindi ai passaggi descritti nell&#39;esercitazione sulla [creazione di un progetto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vuoto nella documentazione di Adobe Developer Console.
+Andate a [console](https://www.adobe.com/go/devs_console_ui) Sviluppatore di Adobe ed effettuate l&#39;accesso con il vostro Adobe ID . Attenetevi quindi ai passaggi descritti nell&#39;esercitazione sulla [creazione di un progetto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vuoto nella documentazione di  Adobe Developer Console.
 
 Dopo aver creato un nuovo progetto, fate clic **[!UICONTROL Add API]** sulla _[!UICONTROL Project Overview]_schermata.
 
@@ -77,7 +77,7 @@ La coppia di chiavi viene generata automaticamente e un file ZIP contenente una 
 
 ![](../images/api/getting-started/key-pair-generated.png)
 
-Una volta aggiunta l&#39;API al progetto, la pagina del progetto viene nuovamente visualizzata nella pagina di panoramica _dell&#39;API di_ Privacy Service. Da qui, scorrete verso il basso fino alla _[!UICONTROL Service Account (JWT)]_sezione, che fornisce le seguenti credenziali di accesso richieste in tutte le chiamate all&#39;[!DNL Privacy Service]API:
+Una volta aggiunta l&#39;API al progetto, la pagina del progetto viene nuovamente visualizzata nella pagina di panoramica _dell&#39;API_ Privacy Service. Da qui, scorrete verso il basso fino alla _[!UICONTROL Service Account (JWT)]_sezione, che fornisce le seguenti credenziali di accesso richieste in tutte le chiamate all&#39;[!DNL Privacy Service]API:
 
 * **[!UICONTROL CLIENT ID]**: L&#39;ID client è il valore richiesto `{API_KEY}` per il quale deve essere specificato nell&#39;intestazione x-api-key.
 * **[!UICONTROL ORGANIZATION ID]**: L’ID organizzazione è il `{IMS_ORG}` valore che deve essere utilizzato nell’intestazione x-gw-ims-org-id.
