@@ -69,7 +69,7 @@ POST /connections
 
 **Richiesta**
 
-Per creare una [!DNL GreenPlum] connessione, è necessario fornire il relativo ID della specifica di connessione univoco come parte della richiesta POST. L&#39;ID della specifica di connessione per [!DNL GreenPlum] è `37b6bf40-d318-4655-90be-5cd6f65d334b`.
+Per creare una [!DNL GreenPlum] connessione, è necessario fornire l&#39;ID univoco della specifica di connessione come parte della richiesta di POST. L&#39;ID della specifica di connessione per [!DNL GreenPlum] è `37b6bf40-d318-4655-90be-5cd6f65d334b`.
 
 ```shell
 curl -X POST \
