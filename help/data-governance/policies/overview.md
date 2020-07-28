@@ -37,7 +37,7 @@ Quando si verifica l&#39;utilizzo dei dati nel servizio dell&#39;azienda, è nec
 >
 >Se utilizzi [!DNL Real-time Customer Data Platform], puoi impostare casi di utilizzo del marketing sulle destinazioni per automatizzare l&#39;applicazione dei criteri. Per ulteriori informazioni, consulta il documento sulla governance dei [dati in CDP](../../rtcdp/privacy/data-governance-overview.md) in tempo reale.
 
-Vedi l&#39;appendice di questo documento per un elenco delle azioni [di marketing definite da Adobe](#core-actions)disponibili. Puoi anche definire azioni di marketing personalizzate utilizzando l&#39; [!DNL Policy Service] API DULE o l&#39;interfaccia [!DNL Experience Platform ]utente. Ulteriori informazioni sull&#39;utilizzo delle azioni e dei criteri di marketing sono disponibili nella sezione successiva.
+Consulta l&#39;appendice di questo documento per un elenco delle azioni [di marketing](#core-actions)disponibili  Adobe. Puoi anche definire azioni di marketing personalizzate utilizzando l&#39; [!DNL Policy Service] API DULE o l&#39;interfaccia [!DNL Experience Platform ]utente. Ulteriori informazioni sull&#39;utilizzo delle azioni e dei criteri di marketing sono disponibili nella sezione successiva.
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
@@ -53,7 +53,7 @@ Una volta applicate le etichette di utilizzo dei dati, gli amministratori dei da
 
 >[!IMPORTANT]
 >
->Tutti i criteri di utilizzo dei dati (inclusi i criteri di base forniti da Adobe) sono disattivati per impostazione predefinita. Affinché un singolo criterio venga preso in considerazione per l&#39;implementazione, è necessario attivarlo manualmente tramite l&#39;API o l&#39;interfaccia utente.
+>Tutti i criteri di utilizzo dei dati (inclusi i criteri di base forniti dal Adobe ) sono disattivati per impostazione predefinita. Affinché un singolo criterio venga preso in considerazione per l&#39;implementazione, è necessario attivarlo manualmente tramite l&#39;API o l&#39;interfaccia utente.
 
 Per istruzioni dettagliate sull&#39;utilizzo delle azioni di marketing e dei criteri di utilizzo dei dati nell&#39;API, consulta l&#39;esercitazione sulla [creazione e la valutazione dei criteri](create.md)di utilizzo dei dati. Per ulteriori informazioni sulle operazioni chiave fornite dall&#39; [!DNL Policy Service] API, consultate la guida [per gli sviluppatori di](../api/getting-started.md)Policy Service.
 
@@ -67,9 +67,9 @@ Questo documento ha fornito un&#39;introduzione ai criteri di utilizzo dei dati 
 
 La sezione seguente fornisce informazioni aggiuntive sui criteri di utilizzo dei dati.
 
-### Azioni di marketing definite da Adobe {#core-actions}
+###  azioni di marketing definite dal Adobe {#core-actions}
 
-La tabella seguente descrive le azioni di marketing di base fornite out-of-the-box da Adobe.
+La tabella seguente descrive le azioni di marketing di base fornite out-of-the-box da  Adobe.
 
 >[!NOTE]
 >
