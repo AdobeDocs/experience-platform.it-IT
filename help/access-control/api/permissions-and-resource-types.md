@@ -14,9 +14,9 @@ ht-degree: 1%
 
 # Nomi elenco di autorizzazioni e tipi di risorse
 
-Potete elencare i nomi di tutte le autorizzazioni e i tipi di risorse eseguendo una richiesta GET all&#39; `/acl/reference` endpoint. Questi nomi possono quindi essere utilizzati nelle chiamate API per [visualizzare i criteri](./effective-policies.md) effettivi per l&#39;utente corrente.
+Potete elencare i nomi di tutte le autorizzazioni e i tipi di risorse effettuando una richiesta di GET all&#39; `/acl/reference` endpoint. Questi nomi possono quindi essere utilizzati nelle chiamate API per [visualizzare i criteri](./effective-policies.md) effettivi per l&#39;utente corrente.
 
-Un&#39; **autorizzazione** è un criterio gestito tramite Adobe  Admin Console e mappato a zero o più criteri di tipo risorsa. Un tipo **di** risorsa è un criterio che abilita funzionalità di lettura, scrittura e/o eliminazione per un tipo specifico di [!DNL Platform] risorsa (ad esempio set di dati o schemi).
+Un&#39; **autorizzazione** è un criterio gestito tramite Adobe Admin Console e mappato a zero o più criteri di tipo risorsa. Un tipo **di** risorsa è un criterio che abilita funzionalità di lettura, scrittura e/o eliminazione per un tipo specifico di [!DNL Platform] risorsa (ad esempio set di dati o schemi).
 
 **Formato API**
 
