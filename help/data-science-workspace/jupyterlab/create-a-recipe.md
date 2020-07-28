@@ -18,7 +18,7 @@ Questa esercitazione si sovrappone a due sezioni principali. Innanzitutto, creer
 
 ## Concetti introdotti:
 
-- **Ricette:** Una ricetta è il termine di Adobe per una specifica di modello ed è un contenitore di primo livello che rappresenta uno specifico machine learning, un algoritmo AI o un insieme di algoritmi, una logica di elaborazione e una configurazione necessari per creare ed eseguire un modello qualificato e quindi per risolvere problemi aziendali specifici.
+- **Ricette:** Una ricetta è  termine  Adobe per una specifica di modello ed è un contenitore di primo livello che rappresenta uno specifico machine learning, un algoritmo AI o un insieme di algoritmi, una logica di elaborazione e una configurazione necessarie per creare ed eseguire un modello qualificato e quindi aiutare a risolvere problemi aziendali specifici.
 - **Modello:** Un modello è un&#39;istanza di una ricetta di machine learning che viene formata utilizzando dati storici e configurazioni per risolvere un caso d&#39;uso aziendale.
 - **Formazione:** La formazione è il processo di apprendimento di schemi e approfondimenti da dati etichettati.
 - **Punteggio:** Il punteggio è il processo di generazione di informazioni dai dati utilizzando un modello qualificato.
