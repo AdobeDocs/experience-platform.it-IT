@@ -1,8 +1,8 @@
 ---
 title: Unione dei dati evento
 seo-title: Unione dei dati evento Web SDK  Adobe Experience Platform
-description: Scoprite come unire  dati evento Experience Platform Web SDK
-seo-description: Scoprite come unire  dati evento Experience Platform Web SDK
+description: Scoprite come unire i dati dell'evento SDK Web  Experience Platform
+seo-description: Scoprite come unire i dati dell'evento SDK Web  Experience Platform
 translation-type: tm+mt
 source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
