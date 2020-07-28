@@ -24,7 +24,7 @@ Gli endpoint utilizzati in questa guida fanno parte dell&#39; [!DNL Adobe Experi
 
 ## Recupera un elenco di definizioni di segmento {#list}
 
-È possibile recuperare un elenco di tutte le definizioni di segmento per l&#39;organizzazione IMS effettuando una richiesta GET all&#39; `/segment/definitions` endpoint.
+È possibile recuperare un elenco di tutte le definizioni di segmento per l&#39;organizzazione IMS effettuando una richiesta di GET all&#39; `/segment/definitions` endpoint.
 
 **Formato API**
 
@@ -153,7 +153,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di definizioni
 
 ## Creare una nuova definizione di segmento {#create}
 
-Puoi creare una nuova definizione di segmento effettuando una richiesta POST all’ `/segment/definitions` endpoint.
+Puoi creare una nuova definizione di segmento effettuando una richiesta di POST all’ `/segment/definitions` endpoint.
 
 **Formato API**
 
@@ -250,7 +250,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli della nuova d
 
 ## Recupera una definizione di segmento specifica {#get}
 
-Puoi recuperare informazioni dettagliate su una definizione di segmento specifica effettuando una richiesta GET all&#39; `/segment/definitions` endpoint e fornendo l&#39;ID della definizione di segmento che desideri recuperare nel percorso della richiesta.
+Puoi recuperare informazioni dettagliate su una definizione di segmento specifica effettuando una richiesta di GET all’ `/segment/definitions` endpoint e fornendo l’ID della definizione di segmento che desideri recuperare nel percorso della richiesta.
 
 **Formato API**
 
@@ -332,7 +332,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 
 ## Recupero in blocco delle definizioni dei segmenti {#bulk-get}
 
-Potete recuperare informazioni dettagliate su più definizioni di segmento specificate effettuando una richiesta POST all&#39; `/segment/definitions/bulk-get` endpoint e fornendo i `id` valori delle definizioni di segmento nel corpo della richiesta.
+Puoi recuperare informazioni dettagliate su più definizioni di segmento specificate effettuando una richiesta di POST all’ `/segment/definitions/bulk-get` endpoint e fornendo i `id` valori delle definizioni di segmento nel corpo della richiesta.
 
 **Formato API**
 
@@ -493,7 +493,7 @@ Una risposta corretta restituisce lo stato HTTP 200 senza messaggio.
 
 ## Aggiornare una definizione di segmento specifica
 
-Puoi aggiornare una definizione di segmento specifica effettuando una richiesta PATCH all’ `/segment/definitions` endpoint e fornendo l’ID della definizione di segmento che desideri aggiornare nel percorso della richiesta.
+Puoi aggiornare una definizione di segmento specifica effettuando una richiesta di PATCH all’ `/segment/definitions` endpoint e fornendo l’ID della definizione di segmento che desideri aggiornare nel percorso della richiesta.
 
 **Formato API**
 
