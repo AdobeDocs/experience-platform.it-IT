@@ -17,7 +17,7 @@ ht-degree: 0%
 >[!IMPORTANT]
 >L&#39;apprendimento automatico in tempo reale non è ancora disponibile per tutti gli utenti. Questa funzione è in alfa e viene ancora testata. Questo documento è soggetto a modifiche.
 
-La seguente guida illustra i passaggi necessari per creare un&#39;applicazione Real-time Machine Learning. Utilizzando il modello per notebook **[!UICONTROL Real-time ML]** Python fornito da Adobe, questa guida illustra la formazione di un modello, la creazione di un DSL, la pubblicazione di DSL su Edge e il punteggio della richiesta. Durante l&#39;implementazione del modello di apprendimento automatico in tempo reale, si prevede di modificare il modello per adattarlo alle esigenze del set di dati.
+La seguente guida illustra i passaggi necessari per creare un&#39;applicazione Real-time Machine Learning. Utilizzando il modello per notebook **[!UICONTROL Real-time ML]** Python fornito dall&#39;Adobe , questa guida illustra la formazione di un modello, la creazione di un DSL, la pubblicazione di DSL su Edge e il punteggio della richiesta. Durante l&#39;implementazione del modello di apprendimento automatico in tempo reale, si prevede di modificare il modello per adattarlo alle esigenze del set di dati.
 
 ## Creazione di un notebook Real-time Machine Learning
 
@@ -346,7 +346,7 @@ Una volta completato, viene restituito un `edge` oggetto contenente ciascuno dei
 ## Pubblica su Edge (Hub)
 
 >[!NOTE]
->L&#39;apprendimento automatico in tempo reale viene temporaneamente distribuito e gestito da Adobe Experience Platform Hub. Per ulteriori dettagli, visitare la sezione panoramica sull&#39;architettura [di apprendimento automatico in tempo](./home.md#architecture)reale.
+>L&#39;apprendimento automatico in tempo reale viene temporaneamente distribuito e gestito dall&#39;hub Platform Experience del Adobe . Per ulteriori dettagli, visitare la sezione panoramica sull&#39;architettura [di apprendimento automatico in tempo](./home.md#architecture)reale.
 
 Dopo aver creato un grafico DSL, potete distribuire il grafico al [!DNL Edge].
 
@@ -399,7 +399,7 @@ Viene restituito il DSL aggiornato.
 
 ## Punteggio {#scoring}
 
-Dopo la pubblicazione in [!DNL Edge], il punteggio viene eseguito da una richiesta POST di un client. In genere, questo può essere fatto da un&#39;applicazione client che ha bisogno di punteggi ML. Puoi farlo anche da Postman. Il *[!UICONTROL Real-time ML]* modello utilizza EdgeUtils per illustrare questo processo.
+Dopo la pubblicazione in [!DNL Edge], il punteggio viene eseguito da una richiesta di POST da parte di un client. In genere, questo può essere fatto da un&#39;applicazione client che ha bisogno di punteggi ML. Puoi farlo anche da Postman. Il *[!UICONTROL Real-time ML]* modello utilizza EdgeUtils per illustrare questo processo.
 
 >[!NOTE]
 >Prima dell&#39;inizio del punteggio è necessario un tempo di elaborazione ridotto.
