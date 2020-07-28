@@ -1,9 +1,12 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Guida di Adobe Experience Platform Query Service
+user-guide-title: ' Guida del servizio Query Adobe Experience Platform'
 translation-type: tm+mt
 source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+workflow-type: tm+mt
+source-wordcount: '134'
+ht-degree: 4%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
    - [Panoramica dell’interfaccia utente](ui/overview.md)
    - [Guida utente per l’editor di query](ui/user-guide.md)
 - Creazione di query {#creating-queries}
-   - [Funzioni definite da Adobe](creating-queries/using-adobe-defined-functions.md)
+   - [funzioni definite dal Adobe](creating-queries/using-adobe-defined-functions.md)
    - [Panoramica sulla creazione di query](creating-queries/creating-queries.md)
    - [Set di dati e tabelle e schemi](creating-queries/datasets-and-tables.md)
    - [Guida generale per l&#39;esecuzione delle query](creating-queries/writing-queries.md)
@@ -34,13 +37,13 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 - Riferimento SQL {#sql}
    - [Panoramica di SQL](sql/overview.md)
    - [Sintassi SQL](sql/syntax.md)
-   - [Funzioni definite da Adobe](sql/adobe-defined-functions.md)
+   - [funzioni definite dal Adobe](sql/adobe-defined-functions.md)
    - [Funzioni SQL Spark](sql/spark-sql-functions.md)
    - [Metadati, comandi](sql/metadata.md)
    - [Dichiarazioni preparate](sql/prepared-statements.md)
 - Query di esempio {#samples}
    - [Panoramica sulle query di esempio](sample-queries/overview.md)
-   - [Adobe Analytics](sample-queries/adobe-analytics.md) 
+   - [Adobe Analytics](sample-queries/adobe-analytics.md)
    - [Adobe Target](sample-queries/adobe-target.md)
 - Connessione dei client a Query Service {#clients}
    - [Panoramica delle connessioni client](clients/overview.md)
@@ -53,4 +56,4 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
    - [Tableau](clients/tableau.md)
 - [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
 - [Riferimento API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml)
-- [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-en)
+- [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
