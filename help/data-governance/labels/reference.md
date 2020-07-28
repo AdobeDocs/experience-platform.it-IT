@@ -24,7 +24,7 @@ Le etichette &quot;C&quot; del contratto sono utilizzate per classificare i dati
 
 | Etichetta | Definizione |
 |---|---|
-| **C1** | I dati possono essere esportati solo da Adobe Experience Cloud in un modulo aggregato, senza includere identificatori singoli o dispositivo. [Ulteriori informazioni...](#c1) |
+| **C1** | I dati possono essere esportati solo da Adobe Experience Cloud in un modulo aggregato senza includere identificatori singoli o dispositivo. [Ulteriori informazioni...](#c1) |
 | **C2** | I dati non possono essere esportati a terzi. [Ulteriori informazioni...](#c2) |
 | **C3** | I dati non possono essere combinati o altrimenti utilizzati con informazioni direttamente identificabili. [Ulteriori informazioni...](#c3) |
 | **C4** | I dati non possono essere utilizzati per il targeting di annunci o contenuti, né sul sito né tra siti. [Ulteriori informazioni...](#c4) |
@@ -65,7 +65,7 @@ Le sezioni seguenti forniscono informazioni dettagliate relative all&#39;attuazi
 
 #### C1 {#c1}
 
-Alcuni dati possono essere esportati solo da Adobe Experience Cloud in un modulo aggregato, senza includere identificatori singoli o dispositivo. Ad esempio, i dati originati dai social network.
+Alcuni dati possono essere esportati solo da Adobe Experience Cloud in un modulo aggregato senza includere identificatori singoli o dispositivo. Ad esempio, i dati originati dai social network.
 
 #### C2 {#c2}
 
