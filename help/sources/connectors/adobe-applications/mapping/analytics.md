@@ -14,13 +14,13 @@ ht-degree: 3%
 
 #  campi di mappatura Analytics
 
- Adobe Experience Platform consente di assimilare i dati di Adobe  Analytics tramite  Analytics Data Connector (ADC). Alcuni dei dati acquisiti tramite ADC possono essere mappati direttamente  campi Analytics ai campi Experience Data Model (XDM), mentre altri dati richiedono trasformazioni e funzioni specifiche per essere mappati correttamente.
+ Adobe Experience Platform consente di acquisire  dati Adobe Analytics tramite il connettore dati  Analytics (ADC). Alcuni dei dati acquisiti tramite ADC possono essere mappati direttamente  campi Analytics ai campi Experience Data Model (XDM), mentre altri dati richiedono trasformazioni e funzioni specifiche per essere mappati correttamente.
 
 ![](../images/analytics-data-experience-platform.png)
 
 ## Campi di mappatura diretta
 
-Alcuni campi sono mappati direttamente da Adobe  Analytics a Experience Data Model (XDM).
+Alcuni campi sono mappati direttamente da  Adobe Analytics a Experience Data Model (XDM).
 
 La tabella seguente include colonne che mostrano il nome del campo  Analytics (*campo* Analytics), il campo XDM corrispondente (campo ** XDM) e il relativo tipo (tipo ** XDM), nonché una descrizione del campo (*Descrizione*).
 
@@ -30,7 +30,7 @@ La tabella seguente include colonne che mostrano il nome del campo  Analytics (*
 
 |  campo Analytics | Campo XDM | XDM, tipo | Descrizione |
 | --------------- | --------- | -------- | ---------- |
-| m_evar1 - m_evar250 | _experience.analytics.customDimensions.eVars.eVar1 - _experience.analytics.customDimensions.eVar250 | string | Variabile personalizzata che può essere compresa tra 1 e 250. Ciascuna organizzazione utilizzerà queste eVar personalizzate in modo diverso. |
+| m_evar1 - m_evar250 | _experience.analytics.customDimensions.eVars. eVar1 - _experience.analytics.customDimensions.eVars. eVar250 | string | Variabile personalizzata che può essere compresa tra 1 e 250. Ciascuna organizzazione utilizzerà queste eVar personalizzate in modo diverso. |
 | m_prop1 - m_prop75 | _experience.analytics.customDimensions.prop.prop1 - _experience.analytics.customDimensions.prop.prop75 | string | Variabili di traffico personalizzate, che possono essere comprese tra 1 e 75. |
 | m_browser | _experience.analytics.environment.browserID | integer | Numero ID del browser. |
 | m_browser_height | environment.browserDetails.viewportHeight | integer | L’altezza del browser, in pixel. |
@@ -135,7 +135,7 @@ Questi campi hanno una singola origine, ma vengono mappati su **più** posizioni
 
 ## Campi di mappatura generati
 
-Per generare in XDM, è necessario trasformare alcuni campi che provengono da ADC e richiede logica oltre una copia diretta da Adobe  Analytics.
+Per generare in XDM, è necessario trasformare i campi selezionati provenienti da ADC, che richiedono logica oltre una copia diretta da  Adobe Analytics.
 
 La tabella seguente include colonne che mostrano il nome del campo  Analytics (*campo* Analytics), il campo XDM corrispondente (campo ** XDM) e il relativo tipo (tipo ** XDM), nonché una descrizione del campo (*Descrizione*).
 
@@ -181,11 +181,11 @@ La tabella seguente include colonne che mostrano il nome del campo  Analytics (*
 | hitid_low | _id | string | Utilizzata insieme a hitid_high per identificare in modo univoco un hit. |
 | ip | environment.ipV4 | string | Indirizzo IP, basato sull’intestazione HTTP della richiesta di immagine. |
 | j_jscript | environment.browserDetails.javaScriptEnabled | booleano | Versione di JavaScript utilizzata. |
-| mcvisid_high + mcvisid_low | identityMap | object | L’ID  visitatore Experience Cloud. |
-| mcvisid_high + mcvisid_low | endUserIDs._experience.mcid.id | string | L’ID  visitatore Experience Cloud. |
-| mcvisid_high | endUserIDs._experience.mcid.Primary | booleano | L’ID  visitatore Experience Cloud. |
-| mcvisid_high | endUserIDs._experience.mcid.namespace.code | string | L’ID  visitatore Experience Cloud. |
-| mcvisid_low | identityMap | object | L’ID  visitatore Experience Cloud. |
+| mcvisid_high + mcvisid_low | identityMap | object | L’ID visitatore  Experience Cloud. |
+| mcvisid_high + mcvisid_low | endUserIDs._experience.mcid.id | string | L’ID visitatore  Experience Cloud. |
+| mcvisid_high | endUserIDs._experience.mcid.Primary | booleano | L’ID visitatore  Experience Cloud. |
+| mcvisid_high | endUserIDs._experience.mcid.namespace.code | string | L’ID visitatore  Experience Cloud. |
+| mcvisid_low | identityMap | object | L’ID visitatore  Experience Cloud. |
 | sdid_high + sdid_low | _experience.target.supplementareDataID | string | Hit Stitching ID. Il campo di analisi sdid_high e sdid_low è l’ID di dati supplementare utilizzato per unire due (o più) hit in entrata. |
 | mobilebeaconprossimità | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximity | string | Prossimità del beacon Mobile Services. |
 | videocapitolo | media.mediaTimed.mediaChapter.chapterAssetReference._xmpDM.durata | integer | Nome del capitolo video. |
@@ -193,9 +193,9 @@ La tabella seguente include colonne che mostrano il nome del campo  Analytics (*
 
 ## Campi di mappatura avanzati
 
-Per poter mappare correttamente i campi Adobe  Analytics a Experience Data Model (XDM), è necessario che alcuni campi selezionati (denominati &quot;postvalues&quot;) richiedano trasformazioni più avanzate. L&#39;esecuzione di queste trasformazioni avanzate implica l&#39;utilizzo di Adobe Experience Platfrom Query Service e di funzioni preconfigurate (denominate funzioni definite da Adobe) per la sessionizzazione, l&#39;attribuzione e la deduplicazione.
+Per poter mappare correttamente i campi di Adobe Analytics  a Experience Data Model (XDM) è necessario disporre di trasformazioni più avanzate. L&#39;esecuzione di queste trasformazioni avanzate implica l&#39;uso di Adobe Experience Platfrom Query Service e di funzioni preconfigurate (denominate funzioni  definite dal Adobe) per la sessionizzazione, l&#39;attribuzione e la deduplicazione.
 
-Per ulteriori informazioni sull&#39;esecuzione di queste trasformazioni tramite Query Service, consulta la documentazione sulle funzioni [definite da](../../../../query-service/sql/adobe-defined-functions.md) Adobe.
+Per ulteriori informazioni sull&#39;esecuzione di queste trasformazioni tramite il servizio Query Service, consultare la documentazione relativa alle funzioni [definite dal Adobe](../../../../query-service/sql/adobe-defined-functions.md) .
 
 La tabella seguente include colonne che mostrano il nome del campo  Analytics (*campo* Analytics), il campo XDM corrispondente (campo ** XDM) e il relativo tipo (tipo ** XDM), nonché una descrizione del campo (*Descrizione*).
 
@@ -205,7 +205,7 @@ La tabella seguente include colonne che mostrano il nome del campo  Analytics (*
 
 |  campo Analytics | Campo XDM | XDM, tipo | Descrizione |
 | --------------- | --------- | -------- | ---------- |
-| post_evar1 - post_evar250 | _experience.analytics.customDimensions.eVars.eVar1 - _experience.analytics.customDimensions.eVar250 | string | Variabile personalizzata che può essere compresa tra 1 e 250. Ciascuna organizzazione utilizzerà queste eVar personalizzate in modo diverso. |
+| post_evar1 - post_evar250 | _experience.analytics.customDimensions.eVars. eVar1 - _experience.analytics.customDimensions.eVars. eVar250 | string | Variabile personalizzata che può essere compresa tra 1 e 250. Ciascuna organizzazione utilizzerà queste eVar personalizzate in modo diverso. |
 | post_prop1 - post_prop75 | _experience.analytics.customDimensions.prop.prop1 - _experience.analytics.customDimensions.prop.prop75 | string | Variabili di traffico personalizzate, che possono essere comprese tra 1 e 75. |
 | post_browser_height | environment.browserDetails.viewportHeight | integer | L’altezza del browser, in pixel. |
 | post_browser_width | environment.browserDetails.viewportWidth | integer | Larghezza del browser, in pixel. |
