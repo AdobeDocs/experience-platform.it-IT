@@ -1,8 +1,8 @@
 ---
-title: Invio di dati ad Adobe  Analytics
-seo-title: Invio di dati ad Adobe  Analytics con  Adobe Experience Platform Web SDK
-description: Scopri come inviare dati ad Adobe  Analytics con  Experience Platform Web SDK
-seo-description: Scopri come inviare dati ad Adobe  Analytics con  Experience Platform Web SDK
+title: Invio di dati a  Adobe Analytics
+seo-title: Invio di dati a  Adobe Analytics con  Adobe Experience Platform Web SDK
+description: Scopri come inviare dati a  Adobe Analytics con  Experience Platform Web SDK
+seo-description: Scopri come inviare dati a  Adobe Analytics con  Experience Platform Web SDK
 translation-type: tm+mt
 source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
@@ -12,13 +12,13 @@ ht-degree: 0%
 ---
 
 
-# Invio di dati ad Adobe  Analytics
+# Invio di dati a  Adobe Analytics
 
-Il Adobe Experience Platform  [!DNL Web SDK] può inviare dati ad Adobe  Analytics. Questo funziona traducendo `xdm` in un formato utilizzabile da Adobe  Analytics.
+Il Adobe Experience Platform  [!DNL Web SDK] può inviare dati a  Adobe Analytics. Questo funziona traducendo `xdm` in un formato che l&#39;Adobe Analytics  può usare.
 
 ## Configurazione
 
-Adobe  Analytics recupera automaticamente i dati che stai inviando se hai una suite di rapporti mappata nell&#39;interfaccia utente di configurazione del cliente. Qui puoi mappare uno o più rapporti su una determinata configurazione. Una volta mappata una suite di rapporti, i dati inizieranno automaticamente a scorrere.
+ Adobe Analytics recupera automaticamente i dati che stai inviando se hai una suite di rapporti mappata nell&#39;interfaccia utente di configurazione del cliente. Qui puoi mappare uno o più rapporti su una determinata configurazione. Una volta mappata una suite di rapporti, i dati inizieranno automaticamente a scorrere.
 
 ## Dati mappati automaticamente
 
