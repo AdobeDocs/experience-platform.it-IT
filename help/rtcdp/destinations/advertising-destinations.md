@@ -1,8 +1,8 @@
 ---
 title: Destinazioni pubblicitarie
 seo-title: Destinazioni pubblicitarie
-description: Collega il tuo Platform dati cliente in tempo reale a una piattaforma pubblicitaria 3rd-party (ad esempio, DSP, rete pubblicitaria, SSP) e condividi tipi di pubblico pseudonimi con queste piattaforme.
-seo-description: Collega il tuo Platform dati cliente in tempo reale a una piattaforma pubblicitaria 3rd-party (ad esempio, DSP, rete pubblicitaria, SSP) e condividi tipi di pubblico pseudonimi con queste piattaforme.
+description: Collega il tuo Platform di dati cliente in tempo reale a una piattaforma pubblicitaria 3rd-party (ad es. DSP, rete pubblicitaria, SSP) e condividi tipi di pubblico pseudonimi con queste piattaforme.
+seo-description: Collega il tuo Platform di dati cliente in tempo reale a una piattaforma pubblicitaria 3rd-party (ad es. DSP, rete pubblicitaria, SSP) e condividi tipi di pubblico pseudonimi con queste piattaforme.
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # Destinazioni pubblicitarie {#advertising-destinations}
 
-Collegate il vostro account [!DNL Real-time Customer Data Platform] a una piattaforma pubblicitaria 3rd party (ad esempio, DSP, rete pubblicitaria, SSP) e condividete tipi di pubblico pseudonimi con queste piattaforme.
+Collegate il vostro account [!DNL Real-time Customer Data Platform] a una piattaforma pubblicitaria 3rd party (ad es. DSP, rete pubblicitaria, SSP) e condividete tipi di pubblico pseudonimi con queste piattaforme.
 
 Quando ci si connette a una destinazione pubblicitaria, le audience vengono inviate come ID alla piattaforma di destinazione, dove sono mappate a un ID noto dalla piattaforma di destinazione.
 
 Attualmente, Real-time CDP supporta le destinazioni pubblicitarie elencate di seguito. Per informazioni su come connettersi a queste destinazioni, consulta i singoli collegamenti:
 
-* [Estensione Adobe  Advertising Cloud](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
+* [Adobe Advertising Cloud Extension](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
 * [Estensione Awin Advertising Conversion Tag](/help/rtcdp/destinations/awin-conversiontag-extension.md)
 * [Awin Advertising Mastertag extension](/help/rtcdp/destinations/awin-mastertag-extension.md)
 * [Estensione Beemray](beemray-extension.md)
