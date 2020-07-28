@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare un Apache Spark sul connettore di origine Azure HDInsights nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Creare un connettore [!DNL Apache Spark] on- [!DNL Azure HDInsights] source nell&#39;interfaccia utente
 
-> [!NOTE]
+>[!NOTE]
 > Il [!DNL Apache Spark] connettore on [!DNL Azure HDInsights] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la panoramica [](../../../../home.md#terms-and-conditions) Origini.
 
 I connettori di origine in  Adobe Experience Platform consentono di trasferire i dati esternamente originati su base programmata. Questa esercitazione fornisce i passaggi necessari per creare un connettore [!DNL Apache Spark] on [!DNL Azure HDInsights] source utilizzando l&#39;interfaccia [!DNL Platform] utente.
