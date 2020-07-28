@@ -24,7 +24,7 @@ Gli endpoint utilizzati in questa guida fanno parte dell&#39; [!DNL Adobe Experi
 
 ## Recupero di un elenco di processi di segmento {#retrieve-list}
 
-È possibile recuperare un elenco di tutti i processi del segmento per l&#39;organizzazione IMS effettuando una richiesta GET all&#39; `/segment/jobs` endpoint.
+È possibile recuperare un elenco di tutti i processi del segmento per l&#39;organizzazione IMS effettuando una richiesta di GET all&#39; `/segment/jobs` endpoint.
 
 **Formato API**
 
@@ -164,7 +164,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di processi di
 
 ## Creare un nuovo processo segmento {#create}
 
-Puoi creare un nuovo processo per segmenti effettuando una richiesta POST all’ `/segment/jobs` endpoint e includendo nel corpo l’ID della definizione del segmento da cui desideri creare una nuova audience.
+Puoi creare un nuovo processo per segmenti effettuando una richiesta di POST all’ `/segment/jobs` endpoint e includendo nel corpo l’ID della definizione del segmento da cui desideri creare una nuova audience.
 
 **Formato API**
 
@@ -258,7 +258,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del processo 
 
 ## Recuperare un processo segmento specifico {#get}
 
-Potete recuperare informazioni dettagliate su un processo segmento specifico eseguendo una richiesta GET all&#39; `/segment/jobs` endpoint e fornendo l&#39;ID del processo del segmento che desiderate recuperare nel percorso della richiesta.
+Potete recuperare informazioni dettagliate su un processo segmento specifico effettuando una richiesta di GET all’ `/segment/jobs` endpoint e fornendo l’ID del processo del segmento che desiderate recuperare nel percorso della richiesta.
 
 **Formato API**
 
@@ -355,7 +355,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 
 ## Recupero in blocco dei processi dei segmenti {#bulk-get}
 
-Potete recuperare informazioni dettagliate su più processi del segmento eseguendo una richiesta POST all’ `/segment/jobs/bulk-get` endpoint e fornendo i `id` valori dei processi del segmento nel corpo della richiesta.
+Potete recuperare informazioni dettagliate su più processi di segmento eseguendo una richiesta POST all’ `/segment/jobs/bulk-get` endpoint e fornendo i `id` valori dei processi di segmento nel corpo della richiesta.
 
 **Formato API**
 
