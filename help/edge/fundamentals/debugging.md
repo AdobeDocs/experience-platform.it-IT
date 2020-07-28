@@ -1,8 +1,8 @@
 ---
 title: Eseguire il debug
 seo-title: Debug  Adobe Experience Platform SDK Web
-description: Scoprite come attivare/disattivare  debug dell'SDK Web per Experience Platform
-seo-description: Scoprite come attivare/disattivare  debug dell'SDK Web per Experience Platform
+description: Scopri come attivare o disattivare  debug SDK Web per Experienci Platform
+seo-description: Scopri come attivare o disattivare  debug SDK Web per Experienci Platform
 translation-type: tm+mt
 source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
