@@ -48,41 +48,41 @@ Le informazioni personali possono anche includere informazioni su Internet o alt
 - Cronologia ricerche
 - Informazioni relative all&#39;interazione di un consumatore con un sito Web, un&#39;applicazione o un annuncio pubblicitario
 
-Anche se l&#39;APP copre un&#39;ampia gamma di informazioni personali, le condizioni contrattuali standard di Adobe stabiliscono che le informazioni personali riservate (come SSN, informazioni sulla licenza del conducente, informazioni finanziarie e dati biometrici) sono generalmente vietate dall&#39;importazione e dall&#39;uso nelle [!DNL Experience Cloud] applicazioni.
+Anche se l’CCPA copre un ampio insieme di informazioni personali,  condizioni contrattuali standard del Adobe stabiliscono che le informazioni personali sensibili (come SSN, informazioni sulla patente di guida, informazioni finanziarie e dati biometrici) sono generalmente vietate dall’importazione e dall’uso nelle [!DNL Experience Cloud] applicazioni.
 
 ## In che modo si applicano i diversi ruoli e responsabilità dell&#39;APP [!DNL Experience Cloud]?
 
-Come definito da CCPA, i seguenti ruoli si applicano ad Adobe e ai suoi clienti:
+Come definito da CCPA, i seguenti ruoli si applicano al Adobe  e ai suoi clienti:
 
-- I clienti Adobe (la parte che richiede la raccolta e l&#39;uso di informazioni personali da parte di residenti della California) sarebbero considerati **Business**.
-- Adobe, nel suo ruolo di fornitore del servizio, sarebbe considerato un **fornitore** di servizi.
+-  clienti Adobi (la parte che richiede la raccolta e l&#39;uso di informazioni personali da parte di residenti della California) sarebbe considerata un **Business**.
+-  Adobe, nel suo ruolo di fornitore del servizio, sarebbe considerato un **fornitore** di servizi.
 
-Considerata questa relazione e la lingua del contratto di Adobe, le comunicazioni ad Adobe probabilmente non sarebbero considerate una &quot;vendita&quot; per la quale le aziende dovrebbero fornire un avviso e offrire una rinuncia.
+Considerata tale relazione e  Adobe  linguaggio contrattuale, le informazioni al Adobe  probabilmente non sarebbero considerate una &quot;vendita&quot; per la quale le imprese dovrebbero fornire un avviso e offrire un&#39;offerta di rinuncia.
 
-Tuttavia, i servizi Adobe possono essere utilizzati per consentire la condivisione e il trasferimento di alcuni dati a terzi. Questi trasferimenti di terzi potrebbero essere considerati una &quot;vendita&quot; e legalmente richiedono la divulgazione e l&#39;opt-out.  I clienti devono collaborare con il proprio consulente legale per valutare casi di utilizzo specifici al fine di valutare i requisiti applicabili.
+Tuttavia,  servizi Adobi possono essere utilizzati per consentire la condivisione e il trasferimento di dati a terzi. Questi trasferimenti di terzi potrebbero essere considerati una &quot;vendita&quot; e legalmente richiedono la divulgazione e l&#39;opt-out.  I clienti devono collaborare con il proprio consulente legale per valutare casi di utilizzo specifici al fine di valutare i requisiti applicabili.
 
 ## Quanti giorni ha un&#39;azienda per rispondere a una richiesta del consumatore di accedere o cancellare informazioni personali?
 
 Presupponendo che l&#39;azienda abbia raccolto informazioni personali e che possa autenticare o verificare l&#39;identità di un particolare consumatore californiano, l&#39;APP consente di soddisfare le richieste dei consumatori entro 45 giorni (con alcune eccezioni).
 
-## Qual è il ruolo di Adobe nell&#39;ambito dell&#39;APP?
+## Qual è  ruolo  Adobe nell&#39;ambito dell&#39;APP?
 
-In qualità di fornitore di servizi, Adobe raccoglie ed elabora informazioni personali per conto dell&#39;Azienda ed è contrattualmente tenuta a utilizzarle solo per gli scopi specifici stabiliti nel contratto.
+In qualità di fornitore di servizi,  Adobe raccoglie ed elabora informazioni personali per conto dell&#39;Azienda ed è contrattualmente vincolato a utilizzare tali informazioni solo per gli scopi specifici stabiliti nel contratto.
 
-Considerata questa relazione e la lingua del contratto di Adobe, le comunicazioni ad Adobe rientrano nelle disposizioni della legge per i provider di servizi e probabilmente non saranno considerate una &quot;vendita&quot; per la quale le aziende dovrebbero fornire un avviso e offrire un&#39;opzione di rifiuto.
+Considerata tale relazione e  Adobe  lingua contrattuale, le informazioni al Adobe  rientrano nelle disposizioni della legge per i prestatori di servizi e probabilmente non sarebbero considerate una &quot;vendita&quot; per la quale le imprese dovrebbero fornire un avviso e offrire un&#39;offerta di rinuncia.
 
-I servizi Adobe possono essere utilizzati per consentire la condivisione e il trasferimento di alcuni dati a terzi. Questi trasferimenti di terzi potrebbero essere considerati una &quot;vendita&quot; e legalmente richiedono la divulgazione e l&#39;opt-out.  I clienti devono collaborare con il proprio consulente legale per valutare casi di utilizzo specifici al fine di valutare i requisiti applicabili.
+ servizi Adobi possono essere utilizzati per consentire la condivisione e il trasferimento di dati a terzi. Questi trasferimenti di terzi potrebbero essere considerati una &quot;vendita&quot; e legalmente richiedono la divulgazione e l&#39;opt-out.  I clienti devono collaborare con il proprio consulente legale per valutare casi di utilizzo specifici al fine di valutare i requisiti applicabili.
 
 ## Come posso supportare i requisiti sulla privacy dei consumatori in base all&#39;APP se mantengo certi tipi di dati coperti dai requisiti?
 
-Una volta che avete adottato le misure necessarie per autenticare i consumatori CA,  Adobe Experience Platform [!DNL Privacy Service] consente di inviare le richieste di privacy dei consumatori alle [!DNL Experience Cloud] applicazioni compatibili. Per ulteriori informazioni, consultate la panoramica [di](../home.md) Privacy Service. Per informazioni su come [!DNL Experience Cloud] le applicazioni specifiche possono soddisfare le richieste di privacy, consultare la guida sulle applicazioni [](../experience-cloud-apps.md)Privacy Service e  Experience Cloud.
+Una volta che avete adottato le misure necessarie per autenticare i consumatori CA,  Adobe Experience Platform [!DNL Privacy Service] consente di inviare le richieste di privacy dei consumatori alle [!DNL Experience Cloud] applicazioni compatibili. Per ulteriori informazioni, consultate la panoramica [dei](../home.md) Privacy Service. Per informazioni su come [!DNL Experience Cloud] le applicazioni specifiche possono soddisfare le richieste di privacy, fare riferimento alla guida sulle applicazioni [](../experience-cloud-apps.md)Privacy Service e  Experience Cloud.
 
 >[!NOTE]
 >
 >Ulteriori indicazioni da parte dell&#39;autorità di regolamentazione californiana sono ancora disponibili in merito a quali tipi di dati sono ammissibili per le richieste di privacy dei consumatori.
 
-## Adobe offre altri strumenti utili per soddisfare i requisiti CCPA?
+##  Adobe offre altri strumenti utili per soddisfare i requisiti CCPA?
 
 Le applicazioni Adobe Experience Cloud forniscono funzioni di gestione e governance dei dati utili per le esigenze di privacy delle aziende. Tra questi strumenti figurano l’etichettatura dell’utilizzo dei dati, i controlli di accesso basati su ruoli, l’offuscamento IP e le funzionalità di hashing.
 
-Adobe ha ricevuto diverse certificazioni sulle pratiche relative alla privacy e alla sicurezza, come ad esempio una certificazione ISO 27001 e una convalida GDPR TrustArc.
+ Adobe ha ricevuto diverse certificazioni sulle proprie pratiche di privacy e sicurezza, come una certificazione ISO 27001 e una convalida del TrustArc GDPR.
