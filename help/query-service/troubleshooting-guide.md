@@ -1,10 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guida alla risoluzione dei problemi per Adobe Experience Platform Query Service
+title: ' Guida alla risoluzione dei problemi del servizio Query'
 topic: troubleshooting
 translation-type: tm+mt
 source-git-commit: c5bb112220b40fa6c2adfa89c80ddb87d382fbda
+workflow-type: tm+mt
+source-wordcount: '154'
+ht-degree: 3%
 
 ---
 
