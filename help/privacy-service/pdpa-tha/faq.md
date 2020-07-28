@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Domande frequenti su PDPA (Thailandia)
 
-Questo documento contiene le risposte alle domande frequenti sul [!DNL Personal Data Protection Act] modello della Tailandia (PDPA) e sulla sua implementazione in Adobe Experience Cloud.
+Questo documento contiene le risposte alle domande frequenti sulla [!DNL Personal Data Protection Act] Tailandia (PDPA) e sulla sua implementazione in Adobe Experience Cloud.
 
 Le definizioni per i vari termini relativi al PDPA utilizzati in questo documento sono reperibili nell&#39;articolo terminologico [](./terminology.md) PDPA (Thailandia).
 
