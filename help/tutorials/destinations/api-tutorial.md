@@ -5,13 +5,16 @@ title: Creare una destinazione e attivare i dati tramite le API
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: 4b232ac12db32ff1102f634af2bbde706edfa05a
+workflow-type: tm+mt
+source-wordcount: '57'
+ht-degree: 14%
 
 ---
 
 
 # Creare una destinazione e attivare i dati tramite le API
 
-Scopri come creare diversi tipi di destinazioni e attivare i dati. Questa funzionalità è disponibile per gli utenti della piattaforma [dati cliente in tempo reale di](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)Adobe.
+Scopri come creare diversi tipi di destinazioni e attivare i dati. Questa funzionalità è disponibile per gli utenti di [Adobe  Real-time Customer Data Platform](https://docs.adobe.com/content/help/it-IT/experience-platform/rtcdp/overview.html).
 
 ## Destinazioni di marketing e-mail
 
