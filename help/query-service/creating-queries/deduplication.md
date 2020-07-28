@@ -31,7 +31,7 @@ Nel caso di ExperienceEvents duplicati, probabilmente si desidera ignorare l’i
 
 >[!CAUTION]
 >
->Molti DataSet in [!DNL Experience Platform], inclusi quelli prodotti da Adobe  Analytics Data Connector, dispongono già della deduplicazione a livello di ExperienceEvent. Pertanto, la riapplicazione di questo livello di deduplicazione non è necessaria e rallenta la query. È importante comprendere l’origine dei DataSet e sapere se è già stata applicata la deduplicazione a livello di ExperienceEvent. Per qualsiasi DataSet trasmesso in streaming (ad esempio, quelli provenienti da  Adobe Target), dovrete applicare la deduplicazione a livello ExperienceEvent perché tali origini dati hanno una semantica &quot;almeno una volta&quot;.
+>Molti DataSet in [!DNL Experience Platform], inclusi quelli prodotti dal Connettore dati Adobe Analytics , dispongono già della deduplicazione a livello di ExperienceEvent. Pertanto, la riapplicazione di questo livello di deduplicazione non è necessaria e rallenta la query. È importante comprendere l’origine dei DataSet e sapere se è già stata applicata la deduplicazione a livello di ExperienceEvent. Per qualsiasi DataSet trasmesso in streaming (ad esempio, quelli provenienti da  Adobe Target), dovrete applicare la deduplicazione a livello ExperienceEvent perché tali origini dati hanno una semantica &quot;almeno una volta&quot;.
 
 **Ambito:** Globale
 
