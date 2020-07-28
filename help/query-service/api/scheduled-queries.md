@@ -20,7 +20,7 @@ Ora che hai compreso quali intestazioni utilizzare, sei pronto a iniziare a effe
 
 ### Recupero di un elenco di query pianificate
 
-È possibile recuperare un elenco di tutte le query pianificate per l&#39;organizzazione IMS effettuando una richiesta GET all&#39; `/schedules` endpoint.
+È possibile recuperare un elenco di tutte le query pianificate per l&#39;organizzazione IMS effettuando una richiesta di GET all&#39; `/schedules` endpoint.
 
 **Formato API**
 
@@ -124,7 +124,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di query piani
 
 ### Creazione di una nuova query pianificata
 
-Potete creare una nuova query pianificata effettuando una richiesta POST all&#39; `/schedules` endpoint.
+Potete creare una nuova query pianificata effettuando una richiesta di POST all&#39; `/schedules` endpoint.
 
 **Formato API**
 
@@ -223,7 +223,7 @@ Una risposta corretta restituisce lo stato HTTP 202 (Accettato) con i dettagli d
 
 ### Dettagli richiesta di una query pianificata specificata
 
-Potete recuperare informazioni per una specifica query pianificata effettuando una richiesta GET all&#39; `/schedules` endpoint e fornendo il relativo ID nel percorso della richiesta.
+Potete recuperare informazioni per una specifica query pianificata effettuando una richiesta di GET all&#39; `/schedules` endpoint e fornendo il relativo ID nel percorso della richiesta.
 
 **Formato API**
 
@@ -306,7 +306,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli della query p
 
 ### Aggiorna i dettagli di una query pianificata specificata
 
-È possibile aggiornare i dettagli di una query pianificata specificata effettuando una richiesta PATCH all&#39; `/schedules` endpoint fornendo il relativo ID nel percorso della richiesta.
+Potete aggiornare i dettagli di una query pianificata specificata effettuando una richiesta di PATCH all&#39; `/schedules` endpoint e fornendo il relativo ID nel percorso della richiesta.
 
 La richiesta PATCH supporta due percorsi diversi: `/state` e `/schedule/schedule`.
 
