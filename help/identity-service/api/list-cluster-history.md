@@ -218,4 +218,4 @@ curl -X POST \
 
 ## Passaggi successivi
 
-Passare all&#39;esercitazione successiva per [elencare le mappature delle identità](./list-identity-mappings.md)
+Passare all&#39;esercitazione successiva per [elencare i mapping di identità](./list-identity-mappings.md)
