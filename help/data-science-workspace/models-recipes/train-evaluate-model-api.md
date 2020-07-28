@@ -398,7 +398,7 @@ curl -X GET \
 
 **Risposta**
 
-La chiamata GET fornirà lo stato nel `state` parametro come mostrato di seguito:
+La chiamata di GET fornirà lo stato nel `state` parametro come mostrato di seguito:
 
 ```JSON
 {
