@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # Aggiornare una sandbox
 
-Potete aggiornare uno o più campi in una sandbox effettuando una richiesta PATCH che include la sandbox `name` nel percorso della richiesta e la proprietà da aggiornare nel payload della richiesta.
+Potete aggiornare uno o più campi in una sandbox effettuando una richiesta di PATCH che includa la sandbox `name` nel percorso della richiesta e la proprietà da aggiornare nel payload della richiesta.
 
 >[!NOTE]
 >
