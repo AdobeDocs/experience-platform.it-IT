@@ -112,7 +112,7 @@ L&#39;oggetto response include un `duleLabels` array che deve corrispondere alle
 
 ## Valutazione dei criteri tramite set di dati e un&#39;azione di marketing
 
-È inoltre possibile valutare le violazioni dei criteri specificando l&#39;ID di uno o più set di dati da cui è possibile raccogliere le etichette di utilizzo dei dati. Questa operazione viene eseguita eseguendo una richiesta POST all&#39;endpoint principale o personalizzato per un&#39;azione di marketing e specificando gli ID di set di dati all&#39;interno del corpo della richiesta, come mostrato di seguito. `/constraints`
+È inoltre possibile valutare le violazioni dei criteri specificando l&#39;ID di uno o più set di dati da cui è possibile raccogliere le etichette di utilizzo dei dati. Questa operazione viene eseguita eseguendo una richiesta di POST all&#39; `/constraints` endpoint principale o personalizzato per un&#39;azione di marketing e specificando gli ID di set di dati all&#39;interno del corpo della richiesta, come mostrato di seguito.
 
 **Formato API**
 
@@ -328,7 +328,7 @@ Se l&#39;azione di marketing specificata viola un criterio che include `duleLabe
 
 ## Valutare i criteri utilizzando set di dati, campi e un&#39;azione di marketing
 
-Oltre a fornire uno o più ID di set di dati, è possibile specificare anche un sottoinsieme di campi all’interno di ciascun set di dati, a indicare che devono essere valutate solo le etichette di utilizzo dei dati in tali campi. Simile alla richiesta POST che interessa solo i set di dati, questa richiesta aggiunge al corpo della richiesta campi specifici per ogni set di dati.
+Oltre a fornire uno o più ID di set di dati, è possibile specificare anche un sottoinsieme di campi all’interno di ciascun set di dati, a indicare che devono essere valutate solo le etichette di utilizzo dei dati in tali campi. Simile alla richiesta POST che interessa solo i dataset, questa richiesta aggiunge al corpo della richiesta campi specifici per ogni dataset.
 
 Quando si valutano i criteri utilizzando i campi dataset, tenere presente quanto segue:
 
