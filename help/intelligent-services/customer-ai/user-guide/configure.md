@@ -16,7 +16,7 @@ ht-degree: 0%
 
 L&#39;AI del cliente, come parte di Intelligent Services consente di generare punteggi personalizzati di propensione senza doversi preoccupare dell&#39;apprendimento automatico.
 
-I servizi intelligenti forniscono ai clienti un servizio Adobe Sensei semplice da usare che può essere configurato per diversi casi di utilizzo. Le sezioni seguenti forniscono i passaggi per configurare un&#39;istanza dell&#39;API cliente.
+I servizi intelligenti forniscono ai clienti un servizio semplice da usare  Adobe Sensei che può essere configurato per diversi casi di utilizzo. Le sezioni seguenti forniscono i passaggi per configurare un&#39;istanza dell&#39;API cliente.
 
 ## Configurare l’istanza {#set-up-your-instance}
 
