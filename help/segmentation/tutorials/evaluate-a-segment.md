@@ -41,7 +41,7 @@ Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali 
 >
 >Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
-Tutte le richieste POST, PUT e PATCH richiedono un&#39;intestazione aggiuntiva:
+Tutte le richieste di POST, PUT e PATCH richiedono un&#39;intestazione aggiuntiva:
 
 - Content-Type: application/json
 
@@ -63,19 +63,19 @@ Mediante la valutazione pianificata, l’organizzazione IMS può creare una pian
 
 ### Creare una pianificazione
 
-Effettuando una richiesta POST all&#39; `/config/schedules` endpoint, potete creare una pianificazione e includere l&#39;ora specifica in cui deve essere attivata la pianificazione.
+Eseguendo una richiesta POST all&#39; `/config/schedules` endpoint, potete creare una pianificazione e includere l&#39;ora specifica in cui attivare la pianificazione.
 
 Per informazioni più dettagliate sull&#39;utilizzo di questo endpoint, consultate la guida all&#39;endpoint delle [pianificazioni.](../api/schedules.md#create)
 
 ### Attivare una pianificazione
 
-Per impostazione predefinita, una pianificazione è inattiva quando viene creata, a meno che la `state` proprietà non sia impostata `active` nel corpo della richiesta di creazione (POST). Potete abilitare una pianificazione (impostate `state` su `active`) eseguendo una richiesta PATCH all&#39; `/config/schedules` endpoint e includendo l&#39;ID della pianificazione nel percorso.
+Per impostazione predefinita, una pianificazione è inattiva quando viene creata, a meno che la `state` proprietà non sia impostata `active` nel corpo della richiesta di creazione (POST). Potete abilitare una pianificazione (impostate `state` su `active`) effettuando una richiesta di PATCH all&#39; `/config/schedules` endpoint e includendo l&#39;ID della pianificazione nel percorso.
 
 Per informazioni più dettagliate sull&#39;utilizzo di questo endpoint, consultate la guida all&#39;endpoint delle [pianificazioni.](../api/schedules.md#update-state)
 
 ### Aggiornamento dell&#39;ora di pianificazione
 
-È possibile aggiornare i tempi di programmazione eseguendo una richiesta PATCH all&#39; `/config/schedules` endpoint e includendo l&#39;ID della pianificazione nel percorso.
+È possibile aggiornare i tempi di programmazione eseguendo una richiesta di PATCH all&#39; `/config/schedules` endpoint e includendo l&#39;ID della pianificazione nel percorso.
 
 Per informazioni più dettagliate sull&#39;utilizzo di questo endpoint, consultate la guida all&#39;endpoint delle [pianificazioni.](../api/schedules.md#update-schedule)
 
@@ -87,7 +87,7 @@ La valutazione su richiesta consente di creare un processo di segmento per gener
 
 Un processo di segmento è un processo asincrono che crea un nuovo segmento di pubblico. Fa riferimento a una definizione di segmento, nonché a qualsiasi criterio di unione che controlli il modo in cui [!DNL Real-time Customer Profile] unisce gli attributi sovrapposti nei frammenti di profilo. Quando un processo del segmento viene completato correttamente, potete raccogliere varie informazioni sul segmento, ad esempio eventuali errori che si sono verificati durante l&#39;elaborazione e le dimensioni finali del pubblico.
 
-Potete creare un nuovo processo segmento effettuando una richiesta POST all&#39; `/segment/jobs` endpoint nell&#39; [!DNL Real-time Customer Profile] API.
+Puoi creare un nuovo processo per segmenti effettuando una richiesta di POST all’ `/segment/jobs` endpoint nell’ [!DNL Real-time Customer Profile] API.
 
 Informazioni più dettagliate sull’utilizzo di questo endpoint sono disponibili nella guida all’endpoint dei processi [del segmento](../api/segment-jobs.md#create)
 
@@ -216,13 +216,13 @@ Una risposta corretta restituisce un array contenente l&#39;ID univoco generato 
 
 ### Generazione di profili per i membri dell&#39;audience {#generate-profiles}
 
-Una volta ottenuto un dataset persistente nell&#39;unione, potete creare un processo di esportazione per mantenere i membri dell&#39;audience nel dataset effettuando una richiesta POST all&#39; `/export/jobs` endpoint nell&#39; [!DNL Real-time Customer Profile] API e fornendo l&#39;ID del set di dati e le informazioni sul segmento per i segmenti che desiderate esportare.
+Una volta ottenuto un dataset persistente nell&#39;unione, potete creare un processo di esportazione per mantenere i membri dell&#39;audience nel dataset effettuando una richiesta di POST all&#39; `/export/jobs` endpoint nell&#39; [!DNL Real-time Customer Profile] API e fornendo l&#39;ID del set di dati e le informazioni sul segmento per i segmenti che desiderate esportare.
 
 Ulteriori informazioni sull&#39;utilizzo di questo endpoint sono disponibili nella guida all&#39;endpoint dei processi di [esportazione](../api/export-jobs.md#create)
 
 ### Monitorare l&#39;avanzamento dell&#39;esportazione
 
-Come processo di esportazione, potete controllarne lo stato eseguendo una richiesta GET all&#39; `/export/jobs` endpoint e includendo nel percorso `id` il processo di esportazione. Il processo di esportazione viene completato una volta che il `status` campo restituisce il valore &quot;SUCCEEDED&quot;.
+Come processo di esportazione, potete controllarne lo stato effettuando una richiesta di GET all’ `/export/jobs` endpoint e includendo nel percorso `id` il processo di esportazione. Il processo di esportazione viene completato una volta che il `status` campo restituisce il valore &quot;SUCCEEDED&quot;.
 
 Ulteriori informazioni sull&#39;utilizzo di questo endpoint sono disponibili nella guida all&#39;endpoint dei processi di [esportazione](../api/export-jobs.md#get)
 
