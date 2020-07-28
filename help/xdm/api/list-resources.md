@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Elenco delle risorse
 
-È possibile visualizzare un elenco di tutte [!DNL Schema Registry] le risorse di un determinato tipo (classi, mixin, schemi, tipi di dati o descrittori) all&#39;interno di un contenitore eseguendo una singola richiesta GET.
+È possibile visualizzare un elenco di tutte [!DNL Schema Registry] le risorse di un determinato tipo (classi, mixin, schemi, tipi di dati o descrittori) all&#39;interno di un contenitore eseguendo una singola richiesta di GET.
 
 >[!NOTE]
 >
@@ -107,7 +107,7 @@ Potete filtrare i risultati utilizzando il `property` parametro, utilizzato per 
 | `<=` | Filtra se la proprietà è minore o uguale al valore specificato. | `property=version<=5` |
 | `>=` | Filtra in base al fatto che la proprietà sia maggiore o uguale al valore fornito. | `property=version>=5` |
 | `~` | Filtra in base al fatto che la proprietà corrisponda o meno a un&#39;espressione regolare specificata. | `property=title~test$` |
-| (Nessuno) | Se si specifica solo il nome della proprietà, vengono restituite solo le voci in cui esiste la proprietà. | `property=title` |
+| (Nessuna) | Se si specifica solo il nome della proprietà, vengono restituite solo le voci in cui esiste la proprietà. | `property=title` |
 
 >[!TIP]
 >
