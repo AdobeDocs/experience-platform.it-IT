@@ -1,8 +1,8 @@
 ---
 title: Configurazione Edge
-seo-title: Configurazione Edge per l'SDK Web  Experience Platform
-description: 'Scopri come configurare la  Experience Platform Edge Network. '
-seo-description: 'Scopri come configurare la  Experience Platform Edge Network. '
+seo-title: 'Configurazione Edge per l''SDK Web del Experience Platform '
+description: 'Scoprite come configurare  Experience Platform Edge Network. '
+seo-description: 'Scoprite come configurare  Experience Platform Edge Network. '
 translation-type: tm+mt
 source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
@@ -18,7 +18,7 @@ La configurazione per il Adobe Experience Platform  [!DNL Web SDK] è suddivisa 
 
 ## Creazione di un ID di configurazione Edge
 
-Gli ID di configurazione Edge possono essere creati in Adobe [!DNL Launch] utilizzando lo strumento di configurazione edge. Questo strumento consente di creare sia la configurazione dei bordi che gli ambienti all&#39;interno di tali configurazioni.
+Gli ID di configurazione Edge possono essere creati in  Adobe [!DNL Launch] utilizzando lo strumento di configurazione edge. Questo strumento consente di creare sia la configurazione dei bordi che gli ambienti all&#39;interno di tali configurazioni.
 
 ![navigazione tramite strumento di configurazione del bordo](../../assets/edge_configuration_nav.png)
 
@@ -98,13 +98,13 @@ Il token proprietà si trova in [!UICONTROL Adobe Target] > [!UICONTROL setup] >
 
 [Gli ambienti](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) di  Adobe Target consentono di gestire la propria implementazione in tutte le fasi di sviluppo. Questa impostazione specifica quale ambiente utilizzare con ciascun ambiente.
 
-Adobe consiglia di impostare questa impostazione in modo diverso per ciascuno degli ambienti di configurazione `dev`, `stage`e `prod` edge, in modo da semplificare le cose. Tuttavia, se avete già [!UICONTROL Adobe Target environments] definito, potete usarli.
+ Adobe consiglia di impostare questa impostazione in modo diverso per ciascuno degli ambienti di configurazione `dev`, `stage`e `prod` edge, in modo da semplificare le cose. Tuttavia, se avete già [!UICONTROL Adobe Target environments] definito, potete usarli.
 
 #### Adobe Audience Manager
 
 Tutto ciò che è necessario per inviare i dati a  Adobe Audience Manager è attivare questa sezione. Le altre impostazioni sono facoltative ma incoraggiate.
 
-![Blocco delle impostazioni di Adobe Audience Manage](../../assets/edge_configuration_aam.png)
+![Adobe Audience Manage settings block](../../assets/edge_configuration_aam.png)
 
 ##### [!UICONTROL Cookie Destinations Enabled]
 
@@ -116,10 +116,10 @@ Consente all’SDK di condividere le informazioni sui segmenti tramite le destin
 
 #### Adobe Analytics
 
-Controlla se i dati vengono inviati ad Adobe  Analytics. Ulteriori dettagli sono disponibili nella [Panoramica](../solution-specific/analytics/analytics-overview.md)di Analytics.
+Controlla se i dati vengono inviati a  Adobe Analytics. Ulteriori dettagli sono disponibili nella [Panoramica](../solution-specific/analytics/analytics-overview.md)di Analytics.
 
-![Adobe  Analytics Settings Block](../../assets/edge_configuration_aa.png)
+![Adobe Analytics Settings Block](../../assets/edge_configuration_aa.png)
 
 ##### [!UICONTROL Report Suite ID]
 
-La suite di rapporti si trova nella sezione Adobe  Analytics Admin in [!UICONTROL Admin > ReportSuites]. Se vengono specificate più suite di rapporti, i dati vengono copiati in ciascuna suite di rapporti.
+La suite di rapporti si trova nella sezione  Adobe Analytics Admin in [!UICONTROL Admin > ReportSuites]. Se vengono specificate più suite di rapporti, i dati vengono copiati in ciascuna suite di rapporti.
