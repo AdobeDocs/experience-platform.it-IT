@@ -177,7 +177,7 @@ Utilizzando l&#39; [!DNL Real-time Customer Profile] API, l&#39; `/config/mergeP
 
 ### Accesso a un singolo criterio di unione tramite ID
 
-Potete accedere a un singolo criterio di unione utilizzando il relativo ID effettuando una richiesta GET all&#39; `/config/mergePolicies` endpoint e includendo l&#39; `mergePolicyId` elemento nel percorso della richiesta.
+Puoi accedere a un singolo criterio di unione con il relativo ID effettuando una richiesta di GET all&#39; `/config/mergePolicies` endpoint e includendo l&#39; `mergePolicyId` elemento nel percorso della richiesta.
 
 **Formato API**
 
@@ -261,7 +261,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 207 (Stato multiplo) e i dettagli dei criteri di unione i cui ID sono stati forniti nella richiesta POST.
+Una risposta corretta restituisce lo stato HTTP 207 (Stato multiplo) e i dettagli dei criteri di unione i cui ID sono stati forniti nella richiesta di POST.
 
 ```json
 { 
@@ -324,7 +324,7 @@ Per informazioni dettagliate su ciascuno dei singoli elementi che compongono un 
 
 ### Elenca più criteri di unione
 
-È possibile elencare più criteri di unione all&#39;interno dell&#39;organizzazione IMS inviando una richiesta GET all&#39; `/config/mergePolicies` endpoint e utilizzando parametri di query facoltativi per filtrare, ordinare e impaginare la risposta. È possibile includere più parametri, separati da e commerciale (&amp;). Effettuando una chiamata a questo endpoint senza parametri, tutti i criteri di unione disponibili per l&#39;organizzazione verranno recuperati.
+È possibile elencare più criteri di unione all&#39;interno dell&#39;organizzazione IMS inviando una richiesta di GET all&#39; `/config/mergePolicies` endpoint e utilizzando parametri di query facoltativi per filtrare, ordinare e impaginare la risposta. È possibile includere più parametri, separati da e commerciale (&amp;). Effettuando una chiamata a questo endpoint senza parametri, tutti i criteri di unione disponibili per l&#39;organizzazione verranno recuperati.
 
 **Formato API**
 
@@ -435,7 +435,7 @@ Una risposta corretta restituisce un elenco impaginato di criteri di unione che 
 
 ## Creare un criterio di unione
 
-Potete creare un nuovo criterio di unione per la vostra organizzazione effettuando una richiesta POST all&#39; `/config/mergePolicies` endpoint.
+È possibile creare un nuovo criterio di unione per la propria organizzazione effettuando una richiesta di POST all&#39; `/config/mergePolicies` endpoint.
 
 **Formato API**
 
@@ -557,7 +557,7 @@ curl -X PATCH \
 
 | Proprietà | Descrizione |
 |---|---|
-| `op` | Specifica l&#39;operazione da eseguire. Esempi di altre operazioni PATCH sono disponibili nella documentazione relativa alla patch [JSON](http://jsonpatch.com) |
+| `op` | Specifica l&#39;operazione da eseguire. Esempi di altre operazioni PATCH sono disponibili nella documentazione [JSON Patch](http://jsonpatch.com) |
 | `path` | Percorso del campo da aggiornare. I valori accettati sono: &quot;/name&quot;, &quot;/identityGraph.type&quot;, &quot;/attributeMerge.type&quot;, &quot;/schema.name&quot;, &quot;/version&quot;, &quot;/default&quot; |
 | `value` | Il valore su cui impostare il campo specificato. |
 
@@ -600,7 +600,7 @@ Una risposta corretta restituisce i dettagli del criterio di unione aggiornato d
 
 ### Sovrascrivi criterio di unione
 
-Un altro modo per modificare un criterio di unione consiste nell&#39;utilizzare una richiesta PUT, che sovrascrive l&#39;intero criterio di unione.
+Un altro modo per modificare un criterio di unione consiste nell&#39;utilizzare una richiesta di PUT, che sovrascrive l&#39;intero criterio di unione.
 
 **Formato API**
 
@@ -720,11 +720,11 @@ curl -X DELETE \
 
 **Risposta**
 
-Una richiesta di eliminazione riuscita restituisce lo stato HTTP 200 (OK) e un corpo di risposta vuoto. Per confermare che l&#39;eliminazione è avvenuta correttamente, potete eseguire una richiesta GET per visualizzare il criterio di unione in base al relativo ID. Se il criterio di unione è stato eliminato, si riceverà un errore HTTP Status 404 (Non trovato).
+Una richiesta di eliminazione riuscita restituisce lo stato HTTP 200 (OK) e un corpo di risposta vuoto. Per confermare che l&#39;eliminazione è avvenuta correttamente, potete eseguire una richiesta di GET per visualizzare il criterio di unione con il relativo ID. Se il criterio di unione è stato eliminato, si riceverà un errore HTTP Status 404 (Non trovato).
 
 ## Passaggi successivi
 
-Ora che sai come creare e configurare criteri di unione per la tua organizzazione IMS, puoi utilizzarli per creare segmenti di pubblico dai [!DNL Real-time Customer Profile] dati. Per iniziare a definire e utilizzare i segmenti, consulta la documentazione [del servizio di segmentazione del Adobe Experience Platform](../../segmentation/home.md) .
+Ora che sai come creare e configurare criteri di unione per la tua organizzazione IMS, puoi utilizzarli per creare segmenti di pubblico dai tuoi [!DNL Real-time Customer Profile] dati. Per iniziare a definire e utilizzare i segmenti, consulta la documentazione [del servizio di segmentazione del Adobe Experience Platform](../../segmentation/home.md) .
 
 
 
