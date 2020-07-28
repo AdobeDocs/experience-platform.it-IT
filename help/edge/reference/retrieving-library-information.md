@@ -1,8 +1,8 @@
 ---
 title: Recupero delle informazioni sulla libreria
-seo-title: Recupero delle informazioni sulla libreria con Adobe Experience Platform Web SDK
+seo-title: Recupero delle informazioni sulla libreria con  Adobe Experience Platform Web SDK
 description: Scoprite come recuperare informazioni sulla libreria caricata nel sito Web
-seo-description: Scopri come recuperare informazioni sulla libreria caricata nel sito Web dall’SDK di Adobe Experience Cloud, che viene raccolta automaticamente
+seo-description: Scopri come recuperare informazioni sulla libreria caricata nel sito Web da Adobe Experience Cloud SDK raccoglie automaticamente
 translation-type: tm+mt
 source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
