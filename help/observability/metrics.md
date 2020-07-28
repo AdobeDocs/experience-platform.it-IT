@@ -24,9 +24,9 @@ La tabella seguente delinea le metriche per  Adobe Experience Platform [!DNL Dat
 | ---- | ---- | ---- |
 | timeseries.ingestion.dataset.new.count | Numero totale di set di dati creati. | N/D |
 | timeseries.ingestion.dataset.size | Dimensione cumulativa di tutti i dati acquisiti per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
-| timeseries.ingestion.dataset.dailysize | Dimensione dei dati acquisiti su base giornaliera per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
+| timeseries.ingestion.dataset.dailysize | Size of data ingested on a daily usage basis for one dataset or for all datasets. | ID set di dati (facoltativo) |
 | timeseries.ingestion.dataset.batchfailed.count | Numero di batch non riusciti per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
-| timeseries.ingestion.dataset.batchsuccess.count | Numero di batch acquisiti per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
+| timeseries.ingestion.dataset.batchsuccess.count | Number of batches ingested for one dataset or for all datasets. | ID set di dati (facoltativo) |
 | timeseries.ingestion.dataset.recordsuccess.count | Numero di record acquisiti per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
 | **timeseries.data.collection.validation.total.messages.rate** | Numero totale di messaggi per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
 | **timeseries.data.collection.validation.valid.messages.rate** | Numero totale di messaggi validi per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
@@ -34,13 +34,13 @@ La tabella seguente delinea le metriche per  Adobe Experience Platform [!DNL Dat
 | **timeseries.data.collection.validation.category.type.count** | Numero totale di messaggi &quot;tipo&quot; non validi per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
 | **timeseries.data.collection.validation.category.range.count** | Numero totale di messaggi &quot;intervallo&quot; non validi per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
 | **timeseries.data.collection.validation.category.format.count** | Numero totale di messaggi &quot;formato&quot; non validi per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
-| **timeseries.data.collection.validation.category.pattern.count** | Numero totale di messaggi &quot;pattern&quot; non validi per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
+| **timeseries.data.collection.validation.category.pattern.count** | Total number of invalid &quot;pattern&quot; messages for one dataset or for all datasets. | ID set di dati (facoltativo) |
 | **timeseries.data.collection.validation.category.presence.count** | Numero totale di messaggi di &quot;presenza&quot; non validi per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
 | **timeseries.data.collection.validation.category.enum.count** | Numero totale di messaggi &quot;enum&quot; non validi per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
-| **timeseries.data.collection.validation.category.unlassificati.count** | Numero totale di messaggi &quot;non classificati&quot; non validi per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
+| **timeseries.data.collection.validation.category.unclassified.count** | Numero totale di messaggi &quot;non classificati&quot; non validi per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
 | **timeseries.data.collection.validation.category.unknown.count** | Numero totale di messaggi &quot;sconosciuti&quot; non validi per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
-| **timeseries.data.collection.inlet.total.messages.Received** | Numero totale di messaggi ricevuti per una entrata dati o per tutte le ingressi di dati. | ID ingresso (facoltativo) |
-| **timeseries.data.collection.inlet.total.messages.size.Received** | Dimensione totale dei dati ricevuti per una entrata dati o per tutte le ingressi di dati. | ID ingresso (facoltativo) |
+| **timeseries.data.collection.inlet.total.messages.received** | Total number of messages received for one data inlet or for all data inlets. | ID ingresso (facoltativo) |
+| **timeseries.data.collection.inlet.total.messages.size.received** | Dimensione totale dei dati ricevuti per una entrata dati o per tutte le ingressi di dati. | ID ingresso (facoltativo) |
 | **timeseries.data.collection.inlet.success** | Numero totale di chiamate HTTP riuscite a un&#39;entrata dati o a tutte le insenature dati. | ID ingresso (facoltativo) |
 | **timeseries.data.collection.inlet.failure** | Numero totale di chiamate HTTP non riuscite a una entrata dati o a tutte le insenature dati. | ID ingresso (facoltativo) |
 
@@ -53,10 +53,10 @@ La tabella seguente delinea le metriche per  Adobe Experience Platform [!DNL Ide
 | timeseries.identity.dataset.recordsuccess.count | Numero di record scritti nella propria origine dati da [!DNL Identity Service], per un set di dati o tutti i set di dati. | ID set di dati (facoltativo) |
 | timeseries.identity.dataset.recordfailed.count | Numero di record non riusciti da [!DNL Identity Service], per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
 | timeseries.identity.dataset.namespacecode.recordsuccess.count | Numero di record di identità acquisiti correttamente per uno spazio dei nomi. | ID spazio nomi (**obbligatorio**) |
-| timeseries.identity.dataset.namespacecode.recordfailed.count | Numero di record di identità non riuscito da uno spazio dei nomi. | ID spazio nomi (**obbligatorio**) |
+| timeseries.identity.dataset.namespacecode.recordfailed.count | Numero di record di identità non riuscito da uno spazio dei nomi. | Namespace ID (**Required**) |
 | timeseries.identity.dataset.namespacecode.recordskipped.count | Numero di record di identità ignorati da uno spazio dei nomi. | ID spazio nomi (**obbligatorio**) |
 | timeseries.identity.graph.imsorg.uniqueidentities.count | Numero di identità univoche memorizzate nel grafico dell&#39;identità per l&#39;organizzazione IMS. | N/D |
-| timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | Numero di identità univoche memorizzate nel grafico dell&#39;identità per uno spazio dei nomi. | ID spazio nomi (**obbligatorio**) |
+| timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | Numero di identità univoche memorizzate nel grafico dell&#39;identità per uno spazio dei nomi. | Namespace ID (**Required**) |
 | timeseries.identity.graph.imsorg.numidgraphs.count | Numero di identità univoche del grafico memorizzate nel grafico di identità per l&#39;organizzazione IMS. | N/D |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Numero di identità univoche memorizzate nel grafico dell&#39;identità per l&#39;organizzazione IMS per una particolare intensità del grafico (&quot;sconosciuto&quot;, &quot;debole&quot; o &quot;forte&quot;). | Forza del grafico (**richiesta**) |
 
@@ -85,19 +85,19 @@ La tabella seguente delinea le metriche per  Adobe Experience Platform [!DNL Que
 
 ## [!DNL Real-time Customer Profile]
 
-La tabella seguente delinea le metriche per [!DNL Real-time Customer Profile].
+The following table outlines metrics for [!DNL Real-time Customer Profile].
 
 | Metrica Insights  | Descrizione | Parametro query ID |
 | ---- | ---- | ---- |
-| timeseries.profiles.dataset.recordread.count | Numero di record letti dal [!DNL Data Lake] modulo [!DNL Profile], per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
+| timeseries.profiles.dataset.recordread.count | Number of records read from the [!DNL Data Lake] by [!DNL Profile], for one dataset or for all datasets. | ID set di dati (facoltativo) |
 | timeseries.profiles.dataset.recordsuccess.count | Numero di record scritti nella propria origine dati da [!DNL Profile], per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
 | timeseries.profiles.dataset.recordfailed.count | Numero di record non riusciti da [!DNL Profile], per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
-| timeseries.profiles.dataset.batchsuccess.count | Numero di [!DNL Profile] batch acquisiti per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
+| timeseries.profiles.dataset.batchsuccess.count | Number of [!DNL Profile] batches ingested for a dataset or for all datasets. | ID set di dati (facoltativo) |
 | timeseries.profiles.dataset.batchfailed.count | Numero di [!DNL Profile] batch non riusciti per un set di dati o per tutti i set di dati. | ID set di dati (facoltativo) |
-| platform.ups.ingest.streaming.request.m1_rate | Tasso richieste in arrivo. | Organizzazione IMS |
+| platform.ups.ingest.streaming.request.m1_rate | Incoming Request rate. | Organizzazione IMS |
 | platform.ups.ingest.streaming.access.put.success.m1_rate | Tasso di successo dell&#39;ingestione. | Organizzazione IMS |
 | platform.ups.ingest.streaming.records.created.m15_rate | Frequenza dei nuovi record acquisiti per un set di dati. | ID set di dati |
-| platform.ups.ingest.streaming.request.error.created.outOfOrder.m1_rate | Frequenza dei record con marca temporale fuori ordine per la creazione di richieste per un dataset. | ID set di dati |
+| platform.ups.ingest.streaming.request.error.created.outOfOrder.m1_rate | Numero di record con marca temporale fuori ordine per la creazione di richieste per un dataset. | ID set di dati |
 | platform.ups.profile-commons.ingest.streaming.dataSet.record.created.timestamp | Timestamp dell&#39;ultima richiesta di creazione record per un dataset. | ID set di dati |
 | platform.ups.ingest.streaming.request.error.updated.outOfOrder.m1_rate | Frequenza dei record con marca temporale fuori ordine per la richiesta di aggiornamento per un dataset. | ID set di dati |
 | platform.ups.profile-commons.ingest.streaming.dataSet.record.updated.timestamp | Timestamp per l&#39;ultima richiesta di aggiornamento record per un dataset. | ID set di dati |
