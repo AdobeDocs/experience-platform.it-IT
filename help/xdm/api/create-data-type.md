@@ -116,4 +116,4 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload conten
 }
 ```
 
-L&#39;esecuzione di una richiesta GET per elencare tutti i tipi di dati nel contenitore tenant ora include il tipo di dati Costruzione proprietà. È inoltre possibile eseguire una richiesta di ricerca (GET) utilizzando l&#39; `$id` URI con codifica URL per visualizzare direttamente il nuovo tipo di dati. Accertatevi di includere nell’ `version` intestazione Accetto la richiesta di ricerca.
+L&#39;esecuzione di una richiesta di GET per elencare tutti i tipi di dati nel contenitore tenant ora include il tipo di dati Costruzione proprietà. È inoltre possibile eseguire una richiesta di ricerca (GET) utilizzando l’ `$id` URI con codifica URL per visualizzare direttamente il nuovo tipo di dati. Accertatevi di includere nell’ `version` intestazione Accetto la richiesta di ricerca.
