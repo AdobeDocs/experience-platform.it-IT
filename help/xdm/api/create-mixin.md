@@ -186,4 +186,4 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload conten
 }
 ```
 
-L&#39;esecuzione di una richiesta GET per elencare tutti i mixin nel contenitore tenant ora include il mixin Dettagli veicolo, oppure potete eseguire una richiesta di ricerca (GET) utilizzando l&#39;URI con codifica URL per visualizzare direttamente il nuovo mixin. `$id` Ricordare di includere l&#39;oggetto `version` nell&#39;intestazione Accetto per tutte le richieste di ricerca.
+L&#39;esecuzione di una richiesta di GET per elencare tutti i mixin nel contenitore tenant ora include il mixin Dettagli veicolo, oppure potete eseguire una richiesta di ricerca (GET) utilizzando l&#39;URI con codifica URL per visualizzare direttamente il nuovo mixin. `$id` Ricordare di includere l&#39;oggetto `version` nell&#39;intestazione Accetto per tutte le richieste di ricerca.
