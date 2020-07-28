@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Creare un connettore sorgente Adobe  Analytics nell’interfaccia utente
+title: Creare un connettore sorgente Adobe Analytics  nell’interfaccia utente
 topic: overview
 translation-type: tm+mt
 source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
@@ -12,31 +12,31 @@ ht-degree: 1%
 ---
 
 
-# Creare un connettore sorgente Adobe  Analytics nell’interfaccia utente
+# Creare un connettore sorgente Adobe Analytics  nell’interfaccia utente
 
-Questa esercitazione fornisce i passaggi necessari per creare un connettore sorgente Adobe  Analytics nell&#39;interfaccia utente per inserire i dati di consumo  Adobe Experience Platform.
+Questa esercitazione fornisce i passaggi per creare un connettore sorgente Adobe Analytics  nell&#39;interfaccia utente per inserire i dati di consumo  Adobe Experience Platform.
 
 ## Introduzione
 
 Questa esercitazione richiede una conoscenza approfondita dei seguenti componenti del  Adobe Experience Platform:
 
-* [Sistema](../../../../../xdm/home.md)XDM (Experience Data Model): Framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
+* [Sistema](../../../../../xdm/home.md)XDM (Experience Data Model): Il framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
 * [Profilo](../../../../../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-* [Sandbox](../../../../../sandboxes/home.md):  Experience Platform fornisce sandbox virtuali che dividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [Sandbox](../../../../../sandboxes/home.md):  Experience Platform fornisce sandbox virtuali che dividono una singola istanza di Platform in ambienti virtuali separati per contribuire allo sviluppo e all&#39;evoluzione di applicazioni per esperienze digitali.
 
-## Creare una connessione di origine con Adobe  Analytics
+## Creare una connessione di origine con  Adobe Analytics
 
 Accedete a <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> , quindi selezionate **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro origini. Nella schermata *Catalogo* sono visualizzate le origini disponibili con cui creare connessioni in ingresso e ogni origine mostra il numero di account e flussi di dati esistenti associati a tali account.
 
 Potete selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l&#39;origine specifica con cui si desidera lavorare utilizzando l&#39;opzione di ricerca.
 
-Nella categoria Applicazioni ** Adobe, selezionate **[!UICONTROL Adobe Analytics]** per esporre una barra delle informazioni sul lato destro dello schermo. La barra delle informazioni fornisce una breve descrizione della sorgente selezionata e le opzioni per collegarsi alla sorgente o visualizzare la documentazione. Per visualizzare gli account esistenti, selezionare **[!UICONTROL Accounts]**.
+Nella categoria *applicazioni* Adobe, selezionate **[!UICONTROL Adobe Analytics]** per esporre una barra delle informazioni sul lato destro dello schermo. La barra delle informazioni fornisce una breve descrizione della sorgente selezionata e le opzioni per collegarsi alla sorgente o visualizzare la documentazione. Per visualizzare gli account esistenti, selezionare **[!UICONTROL Accounts]**.
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### Seleziona dati
 
-Viene visualizzato il passaggio *Adobe  Analytics* . I flussi di dati precedentemente stabiliti per  Analytics sono elencati in questa schermata. Puoi creare un nuovo flusso di dati facendo clic su **[!UICONTROL Select data]**.
+Viene visualizzato *passaggio Adobe Analytics* . I flussi di dati precedentemente stabiliti per  Analytics sono elencati in questa schermata. Puoi creare un nuovo flusso di dati facendo clic su **[!UICONTROL Select data]**.
 
 >[!NOTE]
 >
@@ -104,7 +104,7 @@ Una volta creata la connessione, viene automaticamente creato uno schema di dest
 * [Panoramica di Analysis Workspace](../../../../../data-science-workspace/home.md)
 * [Panoramica di Servizio query](../../../../../query-service/home.md)
 
-Il seguente video è stato realizzato per consentire agli utenti di acquisire i dati utilizzando il connettore Adobe  Analytics Source:
+Il seguente video è stato realizzato per consentire agli utenti di acquisire i dati utilizzando il connettore sorgente Adobe Analytics :
 
 >[!WARNING]
 >
