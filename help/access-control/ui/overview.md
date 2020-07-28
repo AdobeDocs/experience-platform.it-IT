@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # Guida utente per il controllo degli accessi
 
-Il controllo degli accessi in  Adobe Experience Platform consente di gestire ruoli e autorizzazioni per varie [!DNL Platform] funzionalità utilizzando [Adobe  Admin Console](https://adminconsole.adobe.com). Questo documento funge da guida per la navigazione [!DNL Admin Console] per gestire il controllo degli accessi per [!DNL Platform]. Per una panoramica di alto livello del controllo di accesso in [!DNL Experience Platform], consultate la panoramica [sul controllo di](./../home.md)accesso.
+Il controllo degli accessi in  Adobe Experience Platform consente di gestire ruoli e autorizzazioni per varie [!DNL Platform] funzionalità utilizzando l&#39; [Adobe Admin Console](https://adminconsole.adobe.com). Questo documento funge da guida per la navigazione [!DNL Admin Console] per gestire il controllo degli accessi per [!DNL Platform]. Per una panoramica di alto livello del controllo di accesso in [!DNL Experience Platform], consultate la panoramica [sul controllo di](./../home.md)accesso.
 
 Sono previsti i seguenti compiti:
 
-- [Accedere al  Admin Console](./browse.md)
+- [Accesso al Admin Console](./browse.md)
 - [Creare un nuovo profilo di prodotto](./create-profile.md)
 - [Gestione delle autorizzazioni per un profilo di prodotto](./permissions.md)
 - [Gestione di dettagli e servizi aggiuntivi per un profilo di prodotto](./details-and-services.md)
