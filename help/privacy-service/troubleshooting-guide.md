@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Domande frequenti su Privacy Service
+title: Domande frequenti sui Privacy Service
 topic: troubleshooting
 translation-type: tm+mt
 source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
@@ -66,7 +66,7 @@ Per ulteriori informazioni sulla fornitura di informazioni sull&#39;identità de
 
 ## Posso usare [!DNL Privacy Service] per pulire i dati a cui sono stati accidentalmente inviati [!DNL Platform]?
 
-Adobe non supporta l&#39;utilizzo [!DNL Privacy Service] per cancellare i dati inviati accidentalmente a un prodotto. [!DNL Privacy Service] è progettato per aiutarti a soddisfare i tuoi obblighi per le richieste di accesso o di eliminazione dell&#39;oggetto dati (o del consumatore). Queste richieste sono sensibili al tempo e sono completate in relazione alla normativa sulla privacy applicabile. L&#39;invio di richieste che non sono oggetto/consumatore di accesso o di eliminazione di richieste ha un impatto su tutti [!DNL Privacy Service] i clienti e sulla capacità di [!DNL Privacy Service] supportare le scadenze legali appropriate.
+ Adobe non supporta l&#39;utilizzo [!DNL Privacy Service] per cancellare i dati inviati accidentalmente a un prodotto. [!DNL Privacy Service] è progettato per aiutarti a soddisfare i tuoi obblighi per le richieste di accesso o di eliminazione dell&#39;oggetto dati (o del consumatore). Queste richieste sono sensibili al tempo e sono completate in relazione alla normativa sulla privacy applicabile. L&#39;invio di richieste che non sono oggetto/consumatore di accesso o di eliminazione di richieste ha un impatto su tutti [!DNL Privacy Service] i clienti e sulla capacità di [!DNL Privacy Service] supportare le scadenze legali appropriate.
 
 Contatta il tuo account manager (CDM) per coordinare e fornire un livello di impegno per rimuovere eventuali problemi PII o di dati.
 
@@ -80,7 +80,7 @@ Per recuperare lo stato di un particolare processo utilizzando l&#39; [!DNL Priv
 
 ### Utilizzo dell’interfaccia
 
-Tutte le richieste di processo attive sono elencate nel **[!UICONTROL Job Requests]** widget nel dashboard dell’ [!DNL Privacy Service] interfaccia utente. Lo stato di ciascuna richiesta di processo viene visualizzato sotto la **[!UICONTROL Status]** colonna. Per ulteriori informazioni sulla visualizzazione delle richieste di lavoro nell’interfaccia utente, consultate la guida [utente di](ui/user-guide.md)Privacy Service.
+Tutte le richieste di processo attive sono elencate nel **[!UICONTROL Job Requests]** widget nel dashboard dell’ [!DNL Privacy Service] interfaccia utente. Lo stato di ciascuna richiesta di processo viene visualizzato sotto la **[!UICONTROL Status]** colonna. Per ulteriori informazioni sulla visualizzazione delle richieste di lavoro nell’interfaccia utente, consultate la guida [utente](ui/user-guide.md)Privacy Service.
 
 ## Come si scaricano i risultati dei processi di privacy completati?
 
@@ -94,7 +94,7 @@ Per ulteriori dettagli, consultate la sezione sulla [ricerca di un processo in b
 
 ### Utilizzo dell’interfaccia
 
-Nel dashboard [!DNL Privacy Service] dell’interfaccia utente, individuate il processo da scaricare dal widget Richieste **di** processo. Fate clic sull’ID del processo per aprire la pagina Dettagli __ processo. Da qui, fate clic su **Scarica** nell&#39;angolo in alto a destra per scaricare il file ZIP. Per ulteriori informazioni, consultate la guida [utente di](ui/user-guide.md) Privacy Service.
+Nel dashboard [!DNL Privacy Service] dell’interfaccia utente, individuate il processo da scaricare dal widget Richieste **di** processo. Fate clic sull’ID del processo per aprire la pagina Dettagli __ processo. Da qui, fate clic su **Scarica** nell&#39;angolo in alto a destra per scaricare il file ZIP. Per informazioni dettagliate, consultate la guida [utente ai](ui/user-guide.md) Privacy Service.
 
 ## Messaggi di errore comuni
 
