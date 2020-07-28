@@ -14,13 +14,13 @@ ht-degree: 1%
 
 # Destinazioni di marketing e-mail {#email-marketing-destinations}
 
-I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio l&#39;invio di campagne e-mail promozionali. Adobe Real-time Customer Data Platform si integra con ESP consentendo di attivare i segmenti nelle destinazioni di e-mail marketing.
+I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio l&#39;invio di campagne e-mail promozionali.  Adobe Dati cliente in tempo reale Platform si integra con ESP consentendo di attivare i segmenti nelle destinazioni di marketing via e-mail.
 
-Per inviare segmenti alle destinazioni di marketing tramite e-mail per le campagne, Adobe Real-time CDP deve prima connettersi alla destinazione.
+Per inviare segmenti alle destinazioni di marketing via e-mail per le campagne,  CDP in tempo reale del Adobe deve prima connettersi alla destinazione.
 
 La connessione alle destinazioni di marketing tramite e-mail è un processo in tre fasi. Ciascuno dei passaggi è descritto più avanti in questa pagina.
 
-Nel flusso di destinazione di connessione, descritto nella sezione seguente, collegatevi ad Amazon S3 o SFTP. CDP in tempo reale esporta i segmenti come `.csv` o `.txt` file e li distribuisce nella posizione desiderata. Pianificare l&#39;importazione dei dati nella piattaforma di e-mail marketing dalla posizione di archiviazione abilitata in CDP in tempo reale. Il processo di importazione dei dati varia a seconda del partner. Per ulteriori informazioni, consulta gli articoli delle singole destinazioni.
+Nel flusso di destinazione di connessione, descritto nella sezione seguente, collegatevi a  Amazon S3 o SFTP. CDP in tempo reale esporta i segmenti come `.csv` o `.txt` file e li distribuisce nella posizione desiderata. Pianificare l&#39;importazione dei dati nella piattaforma di e-mail marketing dalla posizione di archiviazione abilitata in CDP in tempo reale. Il processo di importazione dei dati varia a seconda del partner. Per ulteriori informazioni, consulta gli articoli delle singole destinazioni.
 
 ## Passaggio 1 - Connetti destinazione {#connect-destination}
 
@@ -30,15 +30,15 @@ Nel flusso di destinazione di connessione, descritto nella sezione seguente, col
 
 2. Nel **[!UICONTROL Authentication]** passaggio, se in precedenza hai impostato una connessione alla destinazione di marketing per le e-mail, seleziona **[!UICONTROL Existing Account]** e seleziona la connessione esistente. In alternativa, potete scegliere **[!UICONTROL New Account]** di impostare una nuova connessione alla destinazione di e-mail marketing. Nel **[!UICONTROL Connection type]** selettore, potete scegliere tra **Amazon S3**, **SFTP con password**, **SFTP con chiave** SSH. Compila le informazioni riportate di seguito, a seconda del tipo di connessione, quindi seleziona **[!UICONTROL Connect]**.
 
-   Per le connessioni **** S3, dovete fornire il vostro ID chiave di accesso Amazon e la chiave di accesso segreta.
+   Per le connessioni **** S3, dovete fornire il vostro ID chiave di accesso Amazon  e la chiave di accesso segreta.
 
    Per **SFTP con connessioni con password** , dovete fornire Domain, Port, Username e Password per il vostro server SFTP.
 
    Per **SFTP con connessioni chiavi** SSH, dovete fornire Domain, Port, Username e Chiave SSH per il vostro server SFTP.
 
 3. Nel **[!UICONTROL Setup]** passaggio, immettete un **[!UICONTROL Name]** e un **[!UICONTROL Description]** per la nuova destinazione, nonché l’ **[!UICONTROL File format]** per i file esportati. <br>
-Se avete selezionato l&#39;opzione di archiviazione Amazon S3 nel passaggio precedente, inserite i file **[!UICONTROL Bucket name]** e **[!UICONTROL Folder path]** nella destinazione di archiviazione cloud in cui verranno consegnati. Per l&#39;opzione di archiviazione SFTP, inserite la **[!UICONTROL Folder path]** posizione in cui verranno inviati i file. <br>
-Inoltre, in questo passaggio potete selezionare tutte le opzioni **[!UICONTROL Marketing use case]** che devono essere applicate a questa destinazione. I casi di utilizzo del marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra i casi di utilizzo di marketing definiti da Adobe oppure creare un tuo caso di utilizzo di marketing. Per ulteriori informazioni sui casi di utilizzo del marketing, consulta la pagina [Governance dei dati in CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) in tempo reale. Per informazioni sui singoli casi di utilizzo marketing definiti da Adobe, consulta la panoramica [dei criteri di utilizzo dei](/help/data-governance/policies/overview.md#core-actions)dati. <br>
+Se nel passaggio precedente avete selezionato &#39;opzione di archiviazione Amazon S3, inserite i file **[!UICONTROL Bucket name]** e **[!UICONTROL Folder path]** nella destinazione di archiviazione cloud in cui verranno consegnati. Per l&#39;opzione di archiviazione SFTP, inserite la **[!UICONTROL Folder path]** posizione in cui verranno inviati i file. <br>
+Inoltre, in questo passaggio potete selezionare tutte le opzioni **[!UICONTROL Marketing use case]** che devono essere applicate a questa destinazione. I casi di utilizzo del marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra  casi di utilizzo di marketing definiti dal Adobe o creare un caso di utilizzo di marketing personale. Per ulteriori informazioni sui casi di utilizzo del marketing, consulta la pagina [Governance dei dati in CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) in tempo reale. Per informazioni sui singoli casi di utilizzo marketing definiti dal Adobe , consulta la panoramica [sui criteri di utilizzo dei](/help/data-governance/policies/overview.md#core-actions)dati. <br>
    ![Passaggio di impostazione e-mail](/help/rtcdp/destinations/assets/email-setup-step.png)
 
 ## Passaggio 2 - Selezionare i membri del segmento da includere nelle esportazioni di destinazione {#select-segments}
@@ -82,7 +82,7 @@ Nel selettore del campo Schema, scegliete gli altri campi da esportare nella des
 Consulta i singoli articoli di destinazione marketing e-mail per informazioni su come importare dati dalla posizione di archiviazione nelle destinazioni:
 
 * [Adobe Campaign](/help/rtcdp/destinations/adobe-campaign-destination.md#import-data-into-campaign)
-* [Salesforce Marketing Cloud](/help/rtcdp/destinations/salesforce-marketing-cloud-destination.md#import-data-into-salesforce)
+* [Marketing Cloud Salesforce](/help/rtcdp/destinations/salesforce-marketing-cloud-destination.md#import-data-into-salesforce)
 * [Oracle Eloqua](/help/rtcdp/destinations/oracle-eloqua-destination.md#import-data-into-eloqua)
 * [Oracle Responsys](/help/rtcdp/destinations/oracle-responsys-destination.md#import-data-into-responsys)
 
