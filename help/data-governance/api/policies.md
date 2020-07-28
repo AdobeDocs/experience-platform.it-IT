@@ -20,7 +20,7 @@ L&#39; `/policies` endpoint viene utilizzato per tutte le chiamate API relative 
 
 ## Elenca tutti i criteri
 
-Per visualizzare un elenco di criteri, è possibile effettuare una richiesta GET `/policies/core` o `/policies/custom` che restituisca tutti i criteri per il contenitore specificato.
+Per visualizzare un elenco di criteri, è possibile effettuare una richiesta di GET `/policies/core` o `/policies/custom` che restituisca tutti i criteri per il contenitore specificato.
 
 **Formato API**
 
@@ -312,7 +312,7 @@ Se creata correttamente, riceverete uno stato HTTP 201 (Creato) e il corpo della
 
 ## Aggiornare un criterio
 
-Una volta creato, potrebbe essere necessario aggiornare un criterio di utilizzo dei dati. Questo viene fatto attraverso una richiesta PUT al criterio `id` con un payload che include la forma aggiornata del criterio, nella sua interezza. In altre parole, la richiesta PUT consiste essenzialmente nella _riscrittura_ della politica, pertanto l&#39;organismo deve includere tutte le informazioni richieste, come illustrato nell&#39;esempio seguente.
+Una volta creato, potrebbe essere necessario aggiornare un criterio di utilizzo dei dati. Questo viene fatto tramite una richiesta PUT al criterio `id` con un payload che include la forma aggiornata del criterio, nella sua interezza. In altre parole, la richiesta PUT _riscrive_ la politica, pertanto l&#39;organismo deve includere tutte le informazioni richieste, come illustrato nell&#39;esempio seguente.
 
 **Formato API**
 
@@ -404,9 +404,9 @@ Una richiesta di aggiornamento riuscita restituisce uno stato HTTP 200 (OK) e il
 
 ## Aggiornare una parte di un criterio
 
-Una parte specifica di un criterio può essere aggiornata utilizzando una richiesta PATCH. A differenza delle richieste PUT che _riscritgono_ il criterio, PATCH richiede di aggiornare solo il percorso specificato nel corpo della richiesta. Questo è particolarmente utile quando desiderate abilitare o disabilitare un criterio, in quanto dovete inviare solo il percorso specifico che desiderate aggiornare (`/status`) e il relativo valore (`ENABLE` o `DISABLE`).
+Una parte specifica di un criterio può essere aggiornata utilizzando una richiesta PATCH. A differenza delle richieste PUT che _riscrivono_ il criterio, le richieste PATCH aggiornano solo il percorso specificato nel corpo della richiesta. Questo è particolarmente utile quando desiderate abilitare o disabilitare un criterio, in quanto dovete inviare solo il percorso specifico che desiderate aggiornare (`/status`) e il relativo valore (`ENABLE` o `DISABLE`).
 
-L&#39; [!DNL Policy Service] API supporta attualmente le operazioni PATCH &quot;add&quot;, &quot;replace&quot; e &quot;remove&quot; e consente di combinare diversi aggiornamenti in una singola chiamata aggiungendo ogni oggetto come oggetto all&#39;interno dell&#39;array, come illustrato negli esempi seguenti.
+L&#39; [!DNL Policy Service] API supporta attualmente le operazioni &quot;add&quot;, &quot;replace&quot; e &quot;remove&quot; PATCH e consente di combinare diversi aggiornamenti in una singola chiamata aggiungendo ogni oggetto come oggetto all&#39;interno dell&#39;array, come illustrato negli esempi seguenti.
 
 **Formato API**
 
@@ -432,7 +432,7 @@ In questo esempio, stiamo utilizzando l&#39;operazione &quot;replace&quot; per c
 ]
 ```
 
-Quando si inviano più operazioni PATCH in un&#39;unica richiesta, ricordare che verranno elaborate nell&#39;ordine in cui appaiono nell&#39;array, in modo da garantire che le richieste vengano inviate nell&#39;ordine corretto, se necessario.
+Quando si inviano più operazioni PATCH in un&#39;unica richiesta, ricordate che verranno elaborate nell&#39;ordine in cui appaiono nell&#39;array, in modo da assicurarvi di inviare le richieste nell&#39;ordine corretto, se necessario.
 
 ```SHELL
 curl -X PATCH \
@@ -506,7 +506,7 @@ Una richiesta di aggiornamento corretta restituirà uno stato HTTP 200 (OK) e il
 
 ## Eliminare un criterio
 
-Se è necessario rimuovere un criterio creato, è possibile farlo emettendo una richiesta DELETE all&#39;interno `id` del criterio che si desidera eliminare. È consigliabile eseguire prima una richiesta di ricerca (GET) per visualizzare il criterio e confermare che si tratta del criterio corretto da rimuovere. **Una volta eliminati, i criteri non possono essere recuperati.**
+Se è necessario rimuovere un criterio creato, è possibile farlo emettendo una richiesta DELETE all&#39;interno `id` del criterio che si desidera eliminare. È consigliabile eseguire prima una richiesta di ricerca (GET) per visualizzare il criterio e confermare che si tratti del criterio corretto da rimuovere. **Una volta eliminati, i criteri non possono essere recuperati.**
 
 **Formato API**
 
@@ -529,4 +529,4 @@ curl -X DELETE \
 
 Se il criterio è stato eliminato correttamente, il corpo della risposta sarà vuoto con lo stato HTTP 200 (OK).
 
-È possibile confermare l&#39;eliminazione tentando di cercare nuovamente il criterio (GET). Dovreste ricevere uno stato HTTP 404 (non trovato) insieme a un messaggio di errore &quot;Non trovato&quot; perché il criterio è stato rimosso.
+È possibile confermare l&#39;eliminazione tentando di ricercare nuovamente (GET) il criterio. Dovreste ricevere uno stato HTTP 404 (non trovato) insieme a un messaggio di errore &quot;Non trovato&quot; perché il criterio è stato rimosso.
