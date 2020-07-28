@@ -1,6 +1,6 @@
 ---
-title: Salesforce Marketing Cloud
-seo-title: Salesforce Marketing Cloud
+title: Marketing Cloud Salesforce
+seo-title: Marketing Cloud Salesforce
 description: Salesforce Marketing Cloud è una suite di marketing digitale precedentemente nota come ExactTarget che consente di creare e personalizzare i viaggi per visitatori e clienti al fine di personalizzare la loro esperienza.
 seo-description: Salesforce Marketing Cloud è una suite di marketing digitale precedentemente nota come ExactTarget che consente di creare e personalizzare i viaggi per visitatori e clienti al fine di personalizzare la loro esperienza.
 translation-type: tm+mt
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 [!DNL Salesforce Marketing Cloud](https://www.salesforce.com/products/marketing-cloud/email-marketing/) è una suite di marketing digitale precedentemente nota come ExactTarget che consente di creare e personalizzare viaggi per visitatori e clienti per personalizzare la loro esperienza.
 
-Per inviare i dati del segmento a [!DNL Salesforce Marketing Cloud], è innanzitutto necessario [collegare la destinazione](#connect-destination) in Adobe Real-time CDP, quindi [impostare un&#39;importazione](#import-data-into-salesforce) di dati dalla posizione di archiviazione in [!DNL Salesforce Marketing Cloud].
+Per inviare i dati del segmento a [!DNL Salesforce Marketing Cloud], è innanzitutto necessario [collegare la destinazione](#connect-destination) in CDP in tempo reale  Adobe, quindi [impostare un&#39;importazione](#import-data-into-salesforce) di dati dalla posizione di archiviazione in [!DNL Salesforce Marketing Cloud].
 
 ## Destinazione Connect {#connect-destination}
 
@@ -49,4 +49,4 @@ Quando si [attivano i segmenti](/help/rtcdp/destinations/activate-destinations.m
 
 ## Imposta importazione dati in [!DNL Salesforce Marketing Cloud] {#import-data-into-salesforce}
 
-Dopo aver collegato CDP in tempo reale allo storage Amazon S3 o SFTP, è necessario configurare l&#39;importazione dei dati dalla posizione di archiviazione in [!DNL Salesforce Marketing Cloud]. Per informazioni su come eseguire questa operazione, consulta [Importazione di utenti iscritti a Marketing Cloud da un file](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) in [!DNL Salesforce Help Center].
+Dopo aver collegato CDP in tempo reale allo storage Amazon S3 o SFTP , è necessario configurare l&#39;importazione dei dati dalla posizione di archiviazione in [!DNL Salesforce Marketing Cloud]. Per informazioni su come eseguire questa operazione, consultate [Importazione di utenti iscritti in Marketing Cloud da un file](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) nella [!DNL Salesforce Help Center].
