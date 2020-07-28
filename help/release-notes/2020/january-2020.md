@@ -1,6 +1,6 @@
 ---
 title: 'Note sulla versione di Adobe Experience Platform '
-description: ' note sulla versione di Experience Platform del 15 gennaio 2020'
+description: ' note sulla versione del Experience Platform 15 gennaio 2020'
 doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
@@ -26,7 +26,7 @@ Aggiornamenti alle funzionalità esistenti in  Adobe Experience Platform:
 
 ## [!DNL Experience Data Model] Sistema (XDM) {#xdm}
 
-Standardizzazione e interoperabilità sono concetti chiave alla base di [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), guidato da Adobe, è uno sforzo per standardizzare i dati sull&#39;esperienza cliente e definire schemi per la gestione dell&#39;esperienza cliente.
+Standardizzazione e interoperabilità sono concetti chiave alla base di [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), guidato da  Adobe, è uno sforzo per standardizzare i dati sull&#39;esperienza cliente e definire schemi per la gestione dell&#39;esperienza cliente.
 
 XDM è una specifica documentata pubblicamente progettata per migliorare la potenza delle esperienze digitali. Fornisce strutture e definizioni comuni per qualsiasi applicazione che comunica con i servizi  Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati relativi all&#39;esperienza dei clienti possono essere incorporati in una rappresentazione comune, fornendo informazioni approfondite in modo più rapido e integrato. Puoi ricavare informazioni utili dalle azioni dei clienti, definire il pubblico dei clienti attraverso i segmenti e utilizzare gli attributi del cliente a scopo di personalizzazione.
 
@@ -45,7 +45,7 @@ Per ulteriori informazioni sull&#39;utilizzo di XDM tramite l&#39; [!DNL Schema 
 
 ## [!DNL Privacy Service] {#privacy}
 
-Le nuove normative legali e organizzative danno agli utenti il diritto di accedere o cancellare i propri dati personali dall&#39;archivio dei dati su richiesta.  Adobe Experience Platform [!DNL Privacy Service] fornisce un&#39;API RESTful e un&#39;interfaccia utente per aiutarti a gestire queste richieste di dati dai clienti. Con [!DNL Privacy Service], puoi inviare richieste di accesso ed eliminazione di dati di clienti privati o personali dalle applicazioni Adobe Experience Cloud, per facilitare la conformità automatica alle normative sulla privacy legali e organizzative.
+Le nuove normative legali e organizzative danno agli utenti il diritto di accedere o cancellare i propri dati personali dall&#39;archivio dei dati su richiesta.  Adobe Experience Platform [!DNL Privacy Service] fornisce un&#39;API RESTful e un&#39;interfaccia utente per aiutarti a gestire queste richieste di dati dai clienti. Con [!DNL Privacy Service]questa opzione puoi inviare richieste di accesso ed eliminazione di dati di clienti privati o personali dalle applicazioni Adobe Experience Cloud, facilitando la conformità automatica alle normative sulla privacy legali e organizzative.
 
 **Nuove funzionalità**
 
@@ -54,18 +54,18 @@ Le nuove normative legali e organizzative danno agli utenti il diritto di accede
 | [!DNL Privacy Service] rebranding | L&#39;ex &quot;GDPR Service&quot; è stato rinominato [!DNL Privacy Service] in quanto il servizio è cresciuto per supportare altre normative oltre al GDPR. |
 | Nuovi endpoint API | Il percorso di base per l&#39; [!DNL Privacy Service] API è stato aggiornato da `/data/privacy/gdpr` a `/data/core/privacy/jobs`. |
 | Nuova `regulation` proprietà obbligatoria | Durante la creazione di nuovi processi nell&#39; [!DNL Privacy Service] API, nel payload della richiesta deve essere specificata una `regulation` proprietà per indicare quale regola tenere traccia del processo. I valori accettati sono `gdpr` e `ccpa`. |
-| Supporto per [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] accetta ora le richieste di accesso/eliminazione da Adobe [!DNL Primetime Authentication], utilizzando `primetimeAuthentication` come valore di prodotto. |
-| Miglioramenti all&#39;interfaccia utente di Privacy Service | Pagine separate per il monitoraggio dei processi per le normative GDPR e CCPA. Nuovo menu a discesa Tipo __ regolamento per passare dai dati di monitoraggio per GDPR e CCPA. |
+| Supporto per [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] accetta ora le richieste di accesso/eliminazione da  Adobe [!DNL Primetime Authentication], utilizzando `primetimeAuthentication` come valore di prodotto. |
+| Miglioramenti dell&#39;interfaccia Privacy Service | Pagine separate per il monitoraggio dei processi per le normative GDPR e CCPA. Nuovo menu a discesa Tipo __ regolamento per passare dai dati di monitoraggio per GDPR e CCPA. |
 
 **Problemi noti**
 
 * Nessuna
 
-Per ulteriori informazioni su [!DNL Privacy Service]questo argomento, leggete la panoramica [di](../../privacy-service/home.md)Privacy Service.
+Per ulteriori informazioni su [!DNL Privacy Service]questo argomento, leggete la panoramica [Privacy Service](../../privacy-service/home.md).
 
 ## Origini {#sources}
 
- Adobe Experience Platform può acquisire dati da origini esterne consentendo al contempo di strutturare, etichettare e migliorare i dati utilizzando [!DNL Platform] i servizi. È possibile acquisire dati da origini diverse, come applicazioni Adobe, archiviazione basata su cloud, software di terze parti e il sistema CRM in uso.
+ Adobe Experience Platform può acquisire dati da origini esterne consentendo al contempo di strutturare, etichettare e migliorare i dati utilizzando [!DNL Platform] i servizi. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, software di terze parti e il sistema CRM in uso.
 
 [!DNL Experience Platform] fornisce un&#39;API RESTful e un&#39;interfaccia utente interattiva che consente di impostare connessioni sorgente per vari provider di dati con facilità. Queste connessioni di origine consentono di autenticare e connettersi a sistemi di storage e servizi CRM esterni, impostare i tempi per l&#39;esecuzione dell&#39;assimilazione e gestire il throughput di assimilazione dei dati.
 
@@ -92,7 +92,7 @@ Per ulteriori informazioni sulle origini, consultate la panoramica [delle origin
 
 ## Destinazioni {#destinations}
 
-In [Adobe Real-time CDP](../../rtcdp/overview.md), le destinazioni sono integrazioni pre-costruite con piattaforme di destinazione che attivano i dati per tali partner in modo semplice.
+In [CDP](../../rtcdp/overview.md)in tempo reale, le destinazioni sono integrazioni pre-costruite con piattaforme di destinazione che attivano i dati a tali partner in modo semplice.
 
 **Nuove funzionalità**
 
