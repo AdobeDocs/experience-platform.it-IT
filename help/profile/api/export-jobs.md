@@ -30,7 +30,7 @@ Gli endpoint API utilizzati in questa guida fanno parte dell&#39; [!DNL Real-tim
 
 ## Creare un processo di esportazione
 
-Per esportare [!DNL Profile] i dati è innanzitutto necessario creare un set di dati in cui esportare i dati, quindi avviare un nuovo processo di esportazione. Entrambi questi passaggi possono essere eseguiti utilizzando  API Experience Platform, con le prime mediante l&#39;API Catalog Service e le seconde mediante l&#39;API Real-time Customer Profile. Le istruzioni dettagliate per completare ciascun passaggio sono descritte nelle sezioni che seguono.
+Per esportare [!DNL Profile] i dati è innanzitutto necessario creare un set di dati in cui esportare i dati, quindi avviare un nuovo processo di esportazione. Entrambi questi passaggi possono essere eseguiti utilizzando  API di Experience Platform, con le prime mediante l&#39;API Catalog Service e le seconde mediante l&#39;API Real-time Customer Profile. Le istruzioni dettagliate per completare ciascun passaggio sono descritte nelle sezioni che seguono.
 
 ### Creare un dataset di destinazione
 
@@ -92,7 +92,7 @@ Una risposta corretta restituisce un array contenente l&#39;ID univoco, generato
 
 ### Avvia processo di esportazione {#initiate}
 
-Una volta ottenuto un set di dati persistente nell’unione, potete creare un processo di esportazione per mantenere i dati del profilo nel dataset effettuando una richiesta POST all’ `/export/jobs` endpoint nell’API del profilo cliente in tempo reale e fornendo i dettagli dei dati che desiderate esportare nel corpo della richiesta.
+Una volta ottenuto un set di dati persistente nell’unione, potete creare un processo di esportazione per mantenere i dati del profilo nel dataset effettuando una richiesta di POST all’ `/export/jobs` endpoint nell’API del profilo cliente in tempo reale e fornendo i dettagli dei dati che desiderate esportare nel corpo della richiesta.
 
 **Formato API**
 
@@ -185,7 +185,7 @@ Una risposta corretta restituisce un dataset popolato con dati di profilo come s
 
 ## Elenca tutti i processi di esportazione
 
-Potete restituire un elenco di tutti i processi di esportazione per una particolare organizzazione IMS eseguendo una richiesta GET all&#39; `export/jobs` endpoint. La richiesta supporta anche i parametri di query `limit` e `offset`, come mostrato di seguito.
+Potete restituire un elenco di tutti i processi di esportazione per una particolare organizzazione IMS eseguendo una richiesta di GET all’ `export/jobs` endpoint. La richiesta supporta anche i parametri di query `limit` e `offset`, come mostrato di seguito.
 
 **Formato API**
 
@@ -331,7 +331,7 @@ La risposta include un `records` oggetto contenente i processi di esportazione c
 
 ## Monitorare l&#39;avanzamento dell&#39;esportazione
 
-Per visualizzare i dettagli di un processo di esportazione specifico o controllarne lo stato durante l&#39;elaborazione, potete effettuare una richiesta GET all&#39; `/export/jobs` endpoint e includere nel percorso `id` il processo di esportazione. Il processo di esportazione viene completato una volta che il `status` campo restituisce il valore &quot;SUCCEEDED&quot;.
+Per visualizzare i dettagli di un processo di esportazione specifico o controllarne lo stato durante l’elaborazione, potete effettuare una richiesta di GET all’ `/export/jobs` endpoint e includere nel percorso `id` il processo di esportazione. Il processo di esportazione viene completato una volta che il `status` campo restituisce il valore &quot;SUCCEEDED&quot;.
 
 **Formato API**
 
@@ -437,7 +437,7 @@ Una richiesta di eliminazione riuscita restituisce lo stato HTTP 204 (nessun con
 
 ## Passaggi successivi
 
-Una volta completata l&#39;esportazione, i dati sono disponibili all&#39;interno del Data Lake in  Experience Platform. Potete quindi utilizzare l&#39;API [di accesso ai](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) dati per accedere ai dati utilizzando l&#39; `batchId` API associata all&#39;esportazione. A seconda delle dimensioni dell’esportazione, i dati possono essere in blocchi e il batch può essere costituito da più file.
+Una volta completata l&#39;esportazione, i dati sono disponibili all&#39;interno del Data Lake  Experience Platform. Potete quindi utilizzare l&#39;API [di accesso ai](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) dati per accedere ai dati utilizzando l&#39; `batchId` API associata all&#39;esportazione. A seconda delle dimensioni dell’esportazione, i dati possono essere in blocchi e il batch può essere costituito da più file.
 
 Per istruzioni dettagliate su come utilizzare l&#39;API di accesso ai dati per accedere e scaricare file batch, segui l&#39;esercitazione [sull&#39;accesso ai](../../data-access/tutorials/dataset-data.md)dati.
 
