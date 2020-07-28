@@ -395,13 +395,13 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del nuovo str
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `{CONNECTION_ID}` | ID della connessione di streaming creata in precedenza. |
-| `xactionId` | Identificatore univoco generato sul lato server per il record appena inviato. Questo ID aiuta Adobe a tenere traccia del ciclo di vita di questo record attraverso diversi sistemi e con il debug. |
+| `xactionId` | Identificatore univoco generato sul lato server per il record appena inviato. Questo ID aiuta  Adobe a tracciare il ciclo di vita del record attraverso diversi sistemi e con il debug. |
 | `receivedTimeMs`: Una marca temporale (epoch in millisecondi) che mostra l’ora in cui è stata ricevuta la richiesta. |
 | `synchronousValidation.status` | Poiché il parametro query `synchronousValidation=true` è stato aggiunto, questo valore verrà visualizzato. Se la convalida ha esito positivo, lo stato sarà `pass`. |
 
 ## Recuperare i nuovi dati delle serie temporali acquisiti
 
-Per convalidare i record acquisiti in precedenza, è possibile utilizzare [!DNL Profile Access API](../../profile/api/entities.md) per recuperare i dati delle serie temporali. Questo può essere fatto utilizzando una richiesta GET all&#39; `/access/entities` endpoint e utilizzando parametri di query facoltativi. Possono essere utilizzati più parametri, separati da e commerciale (&amp;).&quot;
+Per convalidare i record acquisiti in precedenza, è possibile utilizzare [!DNL Profile Access API](../../profile/api/entities.md) per recuperare i dati delle serie temporali. Questa operazione può essere eseguita utilizzando una richiesta di GET all&#39; `/access/entities` endpoint e parametri di query facoltativi. Possono essere utilizzati più parametri, separati da e commerciale (&amp;).&quot;
 
 >[!NOTE]
 >
