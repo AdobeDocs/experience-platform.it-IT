@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Con le destinazioni dei social network, puoi attivare profili per le tue campagne di targeting dell&#39;audience, personalizzazione e soppressione basate su e-mail con hash.
 
-Adobe Real-time Customer Data Platform supporta attualmente le seguenti destinazioni di social network:
+ Adobe Real-time Customer Data Platform supporta attualmente le seguenti destinazioni di social network:
 
-* [Estensione Adobe Livefyre](/help/rtcdp/destinations/adobe-livefyre-extension.md)
+* [Estensione  Adobe Livefyre](/help/rtcdp/destinations/adobe-livefyre-extension.md)
 * [!DNL Facebook](/help/rtcdp/destinations/facebook-destination.md)
