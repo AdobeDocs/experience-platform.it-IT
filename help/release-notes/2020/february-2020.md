@@ -1,6 +1,6 @@
 ---
 title: 'Note sulla versione di Adobe Experience Platform '
-description: ' note sulla versione di Experience Platform del 12 febbraio 2020'
+description: ' note sulla versione del Experience Platform 12 febbraio 2020'
 doc-type: release notes
 last-update: February 14, 2019
 author: ens71067
@@ -23,7 +23,7 @@ Aggiornamenti alle funzionalità esistenti in  Adobe Experience Platform:
 
 ## Origini {#sources}
 
- Adobe Experience Platform può acquisire dati da origini esterne consentendo al contempo di strutturare, etichettare e migliorare i dati utilizzando [!DNL Platform] i servizi. È possibile acquisire dati da origini diverse, come applicazioni Adobe, archiviazione basata su cloud, software di terze parti e il sistema CRM in uso.
+ Adobe Experience Platform può acquisire dati da origini esterne consentendo al contempo di strutturare, etichettare e migliorare i dati utilizzando [!DNL Platform] i servizi. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, software di terze parti e il sistema CRM in uso.
 
 [!DNL Experience Platform] fornisce un&#39;API RESTful e un&#39;interfaccia utente interattiva che consente di impostare connessioni sorgente per vari provider di dati con facilità. Queste connessioni di origine consentono di autenticare e connettersi a sistemi di storage e servizi CRM esterni, impostare i tempi per l&#39;esecuzione dell&#39;assimilazione e gestire il throughput di assimilazione dei dati.
 
