@@ -22,7 +22,7 @@ Questo documento presenta i tre modi principali in cui i dati vengono trasferiti
 
 L’assimilazione batch consente di assimilare i dati in [!DNL Experience Platform] file batch. I batch sono unità di dati costituite da uno o più file da acquisire come una singola unità. Una volta acquisiti, i batch forniscono i metadati che descrivono il numero di record correttamente acquisiti, nonché tutti i record con errore e i messaggi di errore associati.
 
-I file di dati caricati manualmente, come i file CSV semplici (mappati a schemi XDM) e i fotogrammi di dati Parquet, devono essere acquisiti con questo metodo.
+I file di dati caricati manualmente, come file CSV semplici (mappati a schemi XDM) e i fotogrammi di dati Parquet, devono essere acquisiti con questo metodo.
 
 Per ulteriori informazioni, consulta la panoramica [sull’assimilazione dei](./batch-ingestion/overview.md) batch.
 
@@ -36,7 +36,7 @@ Per ulteriori informazioni, consulta la panoramica [sull’assimilazione](./stre
 
 [!DNL Experience Platform] consente di impostare connessioni di origine a vari provider di dati. Queste connessioni consentono di eseguire l&#39;autenticazione alle origini dati esterne, impostare i tempi di esecuzione dell&#39;assimilazione e gestire il throughput di assimilazione.
 
-Le connessioni di origine possono essere configurate per raccogliere dati da altre applicazioni Adobe (come Adobe  Analytics e  Adobe Audience Manager), origini di archiviazione cloud di terze parti (come [!DNL Azure Blob], [!DNL Amazon] S3, server FTP e server SFTP) e sistemi CRM di terze parti (come [!DNL Microsoft Dynamics] e [!DNL Salesforce]).
+Le connessioni di origine possono essere configurate per raccogliere dati da altre applicazioni  Adobe (come  Adobe Analytics e  Adobe Audience Manager), origini di archiviazione cloud di terze parti (come [!DNL Azure Blob], [!DNL Amazon] S3, server FTP e server SFTP) e sistemi CRM di terze parti (come [!DNL Microsoft Dynamics] e [!DNL Salesforce]).
 
 Per ulteriori informazioni, consulta la panoramica [](../sources/home.md) Origini.
 
