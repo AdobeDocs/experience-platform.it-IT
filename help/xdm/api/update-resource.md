@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Aggiornare una risorsa
 
-Puoi modificare o aggiornare le risorse nel contenitore tenant utilizzando una richiesta PATCH. Supporta [!DNL Schema Registry] tutte le operazioni standard di patch JSON, incluse aggiunta, rimozione e sostituzione.
+Puoi modificare o aggiornare le risorse nel contenitore tenant utilizzando una richiesta di PATCH. Supporta [!DNL Schema Registry] tutte le operazioni standard di patch JSON, incluse aggiunta, rimozione e sostituzione.
 
 Per ulteriori informazioni sulla patch JSON, comprese le operazioni disponibili, consultate la documentazione [ufficiale relativa alla patch](http://jsonpatch.com/)JSON.
 
@@ -24,7 +24,7 @@ Per ulteriori informazioni sulla patch JSON, comprese le operazioni disponibili,
 
 ## Aggiunta di mixaggi a uno schema
 
-Una delle operazioni PATCH più comuni prevede l&#39;aggiunta di mixin definiti in precedenza a uno schema XDM, come illustrato nell&#39;esempio seguente.
+Una delle operazioni PATCH più comuni consiste nell&#39;aggiungere mixin definiti in precedenza a uno schema XDM, come illustrato nell&#39;esempio seguente.
 
 **Formato API**
 
@@ -39,7 +39,7 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 **Richiesta**
 
-Utilizzando un&#39;operazione PATCH, è possibile aggiornare uno schema per includere campi definiti in un mixin creato in precedenza. A tal fine, è necessario eseguire una richiesta PATCH allo schema utilizzando il relativo `meta:altId` o l&#39; `$id` URI con codifica URL.
+Utilizzando un&#39;operazione PATCH, è possibile aggiornare uno schema per includere campi definiti in un mixin creato in precedenza. A tal fine, è necessario eseguire una richiesta di PATCH allo schema utilizzando l&#39;URI `meta:altId` o l&#39; `$id` URI con codifica URL.
 
 Il corpo della richiesta include l&#39;operazione (`op`) che si desidera eseguire, dove (`path`) si desidera eseguire l&#39;operazione e quali informazioni (`value`) si desidera includere nell&#39;operazione. In questo esempio, il `$id` valore del mixin viene aggiunto sia ai campi `meta:extends` che `allOf` ai campi dello schema di destinazione.
 
