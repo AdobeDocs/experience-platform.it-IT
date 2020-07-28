@@ -26,16 +26,16 @@ Il processo di preparazione varia a seconda che i dati siano memorizzati in  Ado
 
 Se i dati sono memorizzati al di fuori di [!DNL Experience Platform], attenetevi alla procedura seguente:
 
-1. Contattare Adobe Consulting Services per richiedere le credenziali di accesso per un contenitore di archiviazione BLOB di Azure dedicato.
+1. Contattare  Adobe Consulting Services per richiedere le credenziali di accesso per un contenitore di archiviazione BLOB di Azure dedicato.
 1. Utilizzando le credenziali di accesso, caricate i dati nel contenitore BLOB.
-1. Con Adobe Consulting Services puoi mappare i tuoi dati sullo schema [](#cee-schema) Consumer ExperienceEvent e trasferirli in Intelligent Services.
+1. Con  Adobe Consulting Services puoi mappare i tuoi dati sullo schema [](#cee-schema) Consumer ExperienceEvent e trasferirli in Intelligent Services.
 
 ### [!DNL Experience Platform] preparazione dei dati
 
 Se i dati sono già memorizzati in [!DNL Platform], segui i passaggi indicati di seguito:
 
 1. Esaminare la struttura dello schema [](#cee-schema) Consumer ExperienceEvent e determinare se i dati possono essere mappati ai relativi campi.
-1. Contatta i servizi di consulenza Adobe per facilitare la mappatura dei dati sullo schema e l&#39;assimilazione nei servizi intelligenti, oppure [segui i passaggi descritti in questa guida](#mapping) se vuoi mappare i dati da solo.
+1. Contatta  Adobe Consulting Services per facilitare la mappatura dei dati sullo schema e l&#39;assimilazione nei servizi intelligenti, oppure [segui i passaggi descritti in questa guida](#mapping) se vuoi mappare i dati da solo.
 
 ## Informazioni sullo schema CEE {#cee-schema}
 
@@ -61,7 +61,7 @@ Sebbene sia fortemente consigliato l&#39;uso di tutti i campi chiave, per garant
 
 * [Campo identità principale](#identity)
 * [xdm:timestamp](#timestamp)
-* [xdm:channel](#channel) (obbligatorio solo per Attribution AI)
+* [xdm:channel](#channel) (obbligatorio solo per  Attribution AI)
 
 #### Identità principale {#identity}
 
@@ -72,9 +72,9 @@ Uno dei campi dello schema deve essere impostato come campo di identità princip
 * &quot;email&quot;
 * &quot;phone&quot;
 * &quot;mcid&quot; (per  ID Adobe Audience Manager)
-* &quot;aaid&quot; (per Adobe  Analytics ID)
+* &quot;aaid&quot; (per  Adobe Analytics ID)
 
-Se non sei sicuro di quale campo debba essere utilizzato come identità principale, contatta i servizi di consulenza Adobe per determinare la soluzione migliore.
+Se non sei sicuro di quale campo debba essere utilizzato come identità principale, contatta  Adobe Consulenza per determinare la soluzione migliore.
 
 #### xdm:timestamp {#timestamp}
 
@@ -84,7 +84,7 @@ Questo campo rappresenta il datetime in cui si è verificato l’evento. Questo 
 
 >[!NOTE]
 >
->Questo campo è obbligatorio solo se si utilizza l&#39;attributo AI.
+>Questo campo è obbligatorio solo quando si utilizzano  Attribution AI.
 
 Questo campo rappresenta il canale di marketing correlato a ExperienceEvent. Il campo include informazioni sul tipo di canale, il tipo di supporto e il tipo di posizione.
 
@@ -241,7 +241,7 @@ Per informazioni complete su ciascuno dei campi secondari richiesti per `xdm:pro
 
 Una volta determinato se i dati degli eventi di marketing possono essere mappati sullo schema CEE, il passaggio successivo consiste nel determinare quali dati includere nei servizi intelligenti. Tutti i dati storici utilizzati in Intelligent Services devono rientrare nel periodo minimo di quattro mesi di dati, più il numero di giorni previsti come periodo di lookback.
 
-Dopo aver deciso l&#39;intervallo di dati da inviare, contatta i servizi di consulenza Adobe per facilitare la mappatura dei dati sullo schema e l&#39;assimilazione nel servizio.
+Dopo aver deciso l&#39;intervallo di dati da inviare, contattare  Adobe Consulting Services per facilitare la mappatura dei dati sullo schema e l&#39;assimilazione nel servizio.
 
 Se disponete di un’ [!DNL Adobe Experience Platform] iscrizione e desiderate mappare e assimilare i dati voi stessi, seguite i passaggi descritti nella sezione seguente.
 
@@ -249,7 +249,7 @@ Se disponete di un’ [!DNL Adobe Experience Platform] iscrizione e desiderate m
 
 >[!NOTE]
 >
->I passaggi seguenti richiedono un&#39;iscrizione a  Experience Platform. Se non disponete dell&#39;accesso ad Platform, passate alla sezione dei passaggi [](#next-steps) successivi.
+>Per i passaggi seguenti è necessaria una sottoscrizione a  Experience Platform. Se non disponete dell&#39;accesso ad Platform, passate alla sezione dei passaggi [](#next-steps) successivi.
 
 In questa sezione viene illustrato il flusso di lavoro per la mappatura e l’assimilazione dei dati in  Experience Platform da utilizzare in Servizi intelligenti, compresi i collegamenti alle esercitazioni per i passaggi dettagliati.
 
@@ -281,7 +281,7 @@ Dopo la creazione del set di dati, è possibile trovarlo nell’interfaccia uten
 >
 >I rilasci futuri di Servizi intelligenti integreranno [Servizio](../identity-service/home.md) identità Adobe Experience Platform nelle loro capacità di identificazione dei clienti. Di conseguenza, i passaggi descritti di seguito sono soggetti a modifiche.
 
-Se trasferisci dati da [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]o da un&#39;altra origine esterna, devi aggiungere un `primaryIdentityNameSpace` tag al dataset. Questo può essere fatto eseguendo una richiesta PATCH all’API del servizio catalogo.
+Se trasferisci dati da [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]o da un&#39;altra origine esterna, devi aggiungere un `primaryIdentityNameSpace` tag al dataset. Questa operazione può essere eseguita eseguendo una richiesta PATCH all&#39;API Catalog Service.
 
 Se state acquisendo dati da un file CSV locale, potete passare alla sezione successiva sulla [mappatura e l’assimilazione dei dati](#ingest).
 
@@ -301,7 +301,7 @@ PATCH /dataSets/{DATASET_ID}
 
 A seconda dell’origine da cui vengono acquisiti i dati, nel payload della richiesta dovete fornire valori `primaryIdentityNamespace` e `sourceConnectorId` tag appropriati.
 
-La seguente richiesta aggiunge i valori tag appropriati per  Audience Manager:
+La richiesta seguente aggiunge i valori tag appropriati per  Audience Manager:
 
 ```shell
 curl -X PATCH \
@@ -359,9 +359,9 @@ Se i dati sono memorizzati in un&#39;applicazione di terze parti supportata, puo
 
 ## Passaggi successivi {#next-steps}
 
-Questo documento fornisce indicazioni generali sulla preparazione dei dati per l&#39;utilizzo in Intelligent Services. Se avete bisogno di consulenza aggiuntiva in base al caso d&#39;uso, contattate l&#39;Assistenza Consultiva Adobe.
+Questo documento fornisce indicazioni generali sulla preparazione dei dati per l&#39;utilizzo in Intelligent Services. Se hai bisogno di consulenze aggiuntive in base al tuo caso d&#39;uso, contatta  Adobe Consulenza Assistenza.
 
 Dopo aver compilato con successo un dataset con i dati sull&#39;esperienza cliente, puoi utilizzare i servizi intelligenti per generare informazioni approfondite. Per iniziare, consulta i seguenti documenti:
 
-* [Panoramica di AI per attribuzione](./attribution-ai/overview.md)
+* [Panoramica sulle Attribution AI](./attribution-ai/overview.md)
 * [Panoramica dell&#39;AI del cliente](./customer-ai/overview.md)
