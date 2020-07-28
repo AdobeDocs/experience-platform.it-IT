@@ -354,7 +354,7 @@ Questa risposta restituisce una directory contenente due file separati, con ID `
 
 ## Recuperare i metadati di un file
 
-Potete recuperare i metadati di un file effettuando una richiesta HEAD. Questo restituisce le intestazioni dei metadati del file, incluse le dimensioni in byte e il formato del file.
+Potete recuperare i metadati di un file effettuando una richiesta di HEAD. Questo restituisce le intestazioni dei metadati del file, incluse le dimensioni in byte e il formato del file.
 
 **Formato API**
 
