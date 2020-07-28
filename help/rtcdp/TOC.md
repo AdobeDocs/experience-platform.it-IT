@@ -31,11 +31,11 @@ ht-degree: 10%
    * Catalogo delle destinazioni {#destinations-cat}
       * [Panoramica del catalogo delle destinazioni](destinations/destinations-catalog.md)
       * Adobe destinations{#adobe-destinations}
-         * [Panoramica delle destinazioni Adobe](destinations/adobe-destinations.md)
+         * [Panoramica sulle destinazioni dei Adobi](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
       * Destinazioni pubblicitarie{#advertising-destinations}
          * [Panoramica sulle destinazioni pubblicitarie](destinations/advertising-destinations.md)
-         * [Estensione Adobe  Advertising Cloud](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
+         * [Estensione Adobe Advertising Cloud](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
          * [Estensione Awin Advertising Conversion Tag](/help/rtcdp/destinations/awin-conversiontag-extension.md)
          * [Awin Advertising Mastertag extension](/help/rtcdp/destinations/awin-mastertag-extension.md)
          * [Estensione Beemray](/help/rtcdp/destinations/beemray-extension.md)
@@ -77,12 +77,12 @@ ht-degree: 10%
          * [Panoramica delle destinazioni di archiviazione cloud](destinations/cloud-storage-destinations.md)
          * [Flusso di lavoro per creare destinazioni di archiviazione cloud](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
          * [destinazione Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md)
-         * [Destinazione Amazon S3](destinations/amazon-s3-destination.md)
+         * [destinazione Amazon S3](destinations/amazon-s3-destination.md)
          * [Destinazione Hubs evento Azure](/help/rtcdp/destinations/azure-event-hubs-destination.md)
          * [Destinazione SFTP](destinations/sftp-destination.md)
       * Destinazioni Platform di gestione dati {#dmp-destinations}
          * [Panoramica delle destinazioni Platform di Gestione dati](destinations/dmp-destinations.md)
-         * [estensione DIL Audience Manager](/help/rtcdp/destinations/aam-dil-extension.md)
+         * [Estensione DIL Audience Manager](/help/rtcdp/destinations/aam-dil-extension.md)
       * Destinazioni di marketing e-mail{#email-destinations}
          * [Panoramica delle destinazioni di marketing e-mail](destinations/email-marketing-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
@@ -92,7 +92,7 @@ ht-degree: 10%
          * [Oracle Eloqua](destinations/oracle-eloqua-destination.md)
          * [Oracle Responsys](destinations/oracle-responsys-destination.md)
          * [Estensione PebblePost](destinations/pebblepost-extension.md)
-         * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
+         * [Marketing Cloud Salesforce](destinations/salesforce-marketing-cloud-destination.md)
       * Experience Platform Launch extensions{#launch-extensions}
          * [Panoramica sulle estensioni di Experience Platform Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
       * Destinazioni di personalizzazione {#personalization-destinations}
@@ -108,7 +108,7 @@ ht-degree: 10%
       * Destinazioni social network{#social-destinations}
          * [Panoramica delle destinazioni social network](/help/rtcdp/destinations/social-network-destinations.md)
          * [Flusso di autenticazione delle destinazioni social network](/help/rtcdp/destinations/social-network-destinations-workflow.md)
-         * [Estensione Adobe Livefyre](/help/rtcdp/destinations/adobe-livefyre-extension.md)
+         * [Estensione  Adobe Livefyre](/help/rtcdp/destinations/adobe-livefyre-extension.md)
          * [Destinazione Facebook](/help/rtcdp/destinations/facebook-destination.md)
       * Destinazioni sondaggio {#survey-destinations}
          * [Panoramica delle destinazioni di sondaggio](/help/rtcdp/destinations/survey-destinations.md)
@@ -126,7 +126,7 @@ ht-degree: 10%
       * [Connessione a una destinazione](/help/rtcdp/destinations/connect-destination.md)
       * [Attivare profili e segmenti su una destinazione](destinations/activate-destinations.md)
    * Esercitazioni API di destinazione {#api-tutorials}
-      * [Connettersi alle destinazioni di streaming (AWS Kinesis e Azure Event Hubs) e attivare i dati](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
+      * [Connettersi alle destinazioni di streaming (hub eventi AWS Kinesis e Azure) e attivare i dati](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
       * [Connessione alle destinazioni di e-mail marketing e attivazione dei dati](/help/tutorials/destinations/email-marketing-api.md)
 * Privacy e governance dei dati {#privacy}
    * [Panoramica sulla privacy](privacy/privacy-overview.md)
@@ -141,6 +141,6 @@ ht-degree: 10%
    * [Guida al generatore di segmenti](segmentation/segment-builder-guide.md)
 * Origini {#sources}
    * [Panoramica delle origini](sources/sources-overview.md)
-   * [Implementare i tag dei siti Web con Adobe Launch](sources/launch.md)
-* [note sulla versione di Experience Platform](https://www.adobe.com/go/platform-release-notes-en)
-* [Glossario Experience Platform](https://www.adobe.com/go/platform-glossary-en)
+   * [Implementare i tag dei siti Web con  lancio Adobe](sources/launch.md)
+* [Note sulla versione  Experience Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Glossario  Experience Platform](https://www.adobe.com/go/platform-glossary-en)
