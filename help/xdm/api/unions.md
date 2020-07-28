@@ -40,7 +40,7 @@ Per ulteriori informazioni, consulta l’esercitazione sulla [creazione di segme
 
 ## Abilita uno schema per l&#39;appartenenza a un&#39;unione
 
-Affinché uno schema possa essere incluso nella visualizzazione unione unita, è necessario aggiungere il tag &quot;unione&quot; all&#39; `meta:immutableTags` attributo dello schema. Questo viene fatto tramite una richiesta PATCH per aggiornare lo schema e aggiungere l&#39; `meta:immutableTags` array con il valore &quot;union&quot;.
+Affinché uno schema possa essere incluso nella visualizzazione unione unita, è necessario aggiungere il tag &quot;unione&quot; all&#39; `meta:immutableTags` attributo dello schema. Questa operazione viene eseguita tramite una richiesta di PATCH per aggiornare lo schema e aggiungere l&#39; `meta:immutableTags` array con il valore &quot;union&quot;.
 
 >[!NOTE]
 >
@@ -119,7 +119,7 @@ Una risposta corretta restituisce i dettagli dello schema aggiornato, che ora in
 
 Quando si imposta il tag &quot;union&quot; su uno schema, viene creata e mantenuta [!DNL Schema Registry] automaticamente un&#39;unione per la classe su cui si basa lo schema. Il `$id` nome dell&#39;unione è simile allo standard `$id` di una classe, con l&#39;unica differenza che è aggiunta da due caratteri di sottolineatura e la parola &quot;unione&quot; (`"__union"`).
 
-Per visualizzare un elenco delle unioni disponibili, potete eseguire una richiesta GET all&#39; `/unions` endpoint.
+Per visualizzare un elenco delle unioni disponibili, potete eseguire una richiesta di GET all&#39; `/unions` endpoint.
 
 **Formato API**
 
@@ -164,7 +164,7 @@ Una risposta corretta restituisce lo stato HTTP 200 (OK) e un `results` array ne
 
 ## Cercare una specifica unione
 
-Potete visualizzare un&#39;unione specifica eseguendo una richiesta GET che include i dettagli dell&#39;unione `$id` e, a seconda dell&#39;intestazione Accetto, alcuni o tutti i dettagli dell&#39;unione.
+Potete visualizzare un&#39;unione specifica eseguendo una richiesta di GET che include alcuni o tutti i dettagli dell&#39;unione, a seconda dell&#39;intestazione Accetto `$id` .
 
 >[!NOTE]
 >
@@ -249,7 +249,7 @@ Il formato della risposta dipende dall’intestazione Accetta inviata nella rich
 
 ## Elenca gli schemi in un&#39;unione
 
-Per vedere quali schemi fanno parte di un&#39;unione specifica, potete eseguire una richiesta GET utilizzando i parametri di query per filtrare gli schemi all&#39;interno del contenitore tenant.
+Per vedere quali schemi fanno parte di un&#39;unione specifica, potete eseguire una richiesta di GET utilizzando i parametri di query per filtrare gli schemi all&#39;interno del contenitore tenant.
 
 Utilizzando il parametro `property` query, potete configurare la risposta solo per gli schemi di restituzione contenenti un `meta:immutableTags` campo e un `meta:class` uguale alla classe a cui si accede tramite unione.
 
