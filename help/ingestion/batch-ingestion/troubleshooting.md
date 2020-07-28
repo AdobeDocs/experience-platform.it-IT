@@ -178,7 +178,7 @@ Un batch può, nel suo ciclo di vita, attraversare i seguenti stati:
 | Inattivo | x | Il batch è stato promosso con successo, ma è stato ripristinato o è scaduto. Il batch non sarà più disponibile per il consumo a valle, ma i dati sottostanti rimarranno in Master finché non saranno stati conservati, archiviati o eliminati in altro modo. |
 | Caricamento |  | Il client sta attualmente scrivendo i dati per il batch. Al momento, il batch **non** è pronto per la promozione. |
 | Caricato |  | Il client ha completato la scrittura dei dati per il batch. Il batch è pronto per la promozione. |
-| Mantenuto |  | I dati sono stati estratti da Master e archiviati in un archivio designato in Adobe Data Lake. |
+| Mantenuto |  | I dati sono stati estratti da Master, e in un archivio designato in  Adobe Data Lake. |
 | Gestione temporanea |  | Il client ha segnalato il batch per la promozione e i dati sono stati messi in fase di consumo a valle. |
 | Nuovo |  | Il client ha segnalato il batch per la promozione, ma a causa di un errore, il batch viene riprovato da un servizio di monitoraggio batch. Questo stato può essere utilizzato per indicare ai client che potrebbe verificarsi un ritardo nell’assimilazione dei dati. |
 | Bloccato |  | Il client ha segnalato il batch per la promozione, ma dopo `n` i tentativi di un servizio di monitoraggio batch, la promozione batch è stata bloccata. |
