@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # [!DNL Experience Data Model] (XDM) Guida alla risoluzione dei problemi di sistema
 
-Questo documento contiene le risposte alle domande frequenti sul sistema [!DNL Experience Data Model] (XDM) e una guida alla risoluzione dei problemi per individuare gli errori più comuni. Per domande e risoluzione dei problemi relativi ad altri servizi nel  Adobe Experience Platform, consultare la guida alla risoluzione dei problemi di [Experience Platform](../landing/troubleshooting.md).
+Questo documento contiene le risposte alle domande frequenti sul sistema [!DNL Experience Data Model] (XDM) e una guida alla risoluzione dei problemi per individuare gli errori più comuni. Per domande e risoluzione dei problemi relativi ad altri servizi nel  Adobe Experience Platform, consultare la guida [alla risoluzione dei problemi del](../landing/troubleshooting.md)Experience Platform.
 
 **[!DNL Experience Data Model](XDM)**è una specifica open-source che definisce schemi standardizzati per la gestione dell&#39;esperienza cliente. La metodologia su cui[!DNL Experience Platform]è costruito,**XDM System **, rende operativi[!DNL Experience Data Model]gli schemi per l&#39;uso da parte dei[!DNL Platform]servizi. L&#39;**[!DNL Schema Registry]**applicazione fornisce un&#39;interfaccia utente e un&#39;API RESTful per accedere all&#39;**[!DNL Schema Library]**interno[!DNL Experience Platform]. See the[XDM documentation](home.md)for more information.
 
@@ -38,7 +38,7 @@ Per informazioni dettagliate sulla creazione di nuovi mixin nell&#39;API, consul
 
 Tutte [!DNL Schema Registry] le risorse (schemi, mixin, tipi di dati, classi) dispongono di un URI che funge da ID univoco a scopo di riferimento e di ricerca. Quando si visualizza uno schema nell&#39;API, questo si trova negli attributi `$id` e `meta:altId` di livello principale.
 
-Per ulteriori informazioni, consultate la sezione Identificazione [dello](api/getting-started.md#schema-identification) schema nella guida per gli sviluppatori di [!DNL Schema Registry] API.
+Per ulteriori informazioni, vedete la sezione Identificazione [dello](api/getting-started.md#schema-identification) schema nella guida per gli sviluppatori di [!DNL Schema Registry] API.
 
 ### Quando inizia uno schema per impedire l&#39;interruzione delle modifiche?
 
@@ -60,7 +60,7 @@ I campi possono essere contrassegnati come identità tramite l&#39;API o l&#39;i
 
 Nell&#39;API, le identità vengono stabilite creando descrittori di identità. I descrittori di identità indicano che una particolare proprietà per uno schema è un identificatore univoco.
 
-I descrittori di identità vengono creati da una richiesta POST all&#39;endpoint /descriptors. In caso di esito positivo, riceverete uno stato HTTP 201 (Creato) e un oggetto di risposta contenente i dettagli del nuovo descrittore.
+I descrittori di identità vengono creati da una richiesta di POST all&#39;endpoint /descriptors. In caso di esito positivo, riceverete uno stato HTTP 201 (Creato) e un oggetto di risposta contenente i dettagli del nuovo descrittore.
 
 Per ulteriori dettagli sulla creazione di descrittori di identità nell&#39;API, consultate il documento nella sezione [descrittori](api/descriptors.md) nella guida per [!DNL Schema Registry] gli sviluppatori.
 
@@ -80,7 +80,7 @@ Gli schemi sono attivati per essere utilizzati [!DNL Real-time Customer Profile]
 
 #### Abilitazione di uno schema esistente per [!DNL Profile] l&#39;utilizzo dell&#39;API
 
-Eseguite una richiesta PATCH per aggiornare lo schema e aggiungere l&#39; `meta:immutableTags` attributo come array contenente il valore &quot;union&quot;. Se l&#39;aggiornamento ha esito positivo, la risposta mostrerà lo schema aggiornato che ora contiene il tag unione.
+Eseguite una richiesta di PATCH per aggiornare lo schema e aggiungere l&#39; `meta:immutableTags` attributo come array contenente il valore &quot;union&quot;. Se l&#39;aggiornamento ha esito positivo, la risposta mostrerà lo schema aggiornato che ora contiene il tag unione.
 
 Per ulteriori informazioni sull&#39;utilizzo dell&#39;API per abilitare uno schema da utilizzare in [!DNL Real-time Customer Profile], vedere il documento [sindacati](./api/unions.md) della guida per [!DNL Schema Registry] gli sviluppatori.
 
@@ -205,7 +205,7 @@ Per un elenco dei codici dei namespace di identità supportati, consultate la se
 
 ### Accetta errori di intestazione
 
-La maggior parte delle richieste GET nell&#39; [!DNL Schema Registry] API richiede un&#39;intestazione Accetto per consentire al sistema di determinare come formattare la risposta. Di seguito è riportato un elenco di errori comuni associati all&#39;intestazione Accetto. Per gli elenchi delle intestazioni Accetta compatibili per diverse richieste API, fare riferimento alle sezioni corrispondenti nella guida [per gli sviluppatori del Registro di](api/getting-started.md)schema.
+La maggior parte delle richieste di GET nell&#39; [!DNL Schema Registry] API richiede un&#39;intestazione Accetto per consentire al sistema di determinare come formattare la risposta. Di seguito è riportato un elenco di errori comuni associati all&#39;intestazione Accetto. Per gli elenchi delle intestazioni Accetta compatibili per diverse richieste API, fare riferimento alle sezioni corrispondenti nella guida [per gli sviluppatori del Registro di](api/getting-started.md)schema.
 
 #### Il parametro di intestazione Accetta è obbligatorio
 
@@ -278,4 +278,4 @@ Per un elenco delle intestazioni Accetto supportate, consultate la sezione [Acce
 }
 ```
 
-Se tenti di includere una versione nell’intestazione Accetto durante l’elencazione delle risorse (GET), riceverai questo errore. Le versioni sono necessarie solo quando si tenta di eseguire una richiesta di ricerca su una singola risorsa. Rimuovere la versione dall&#39;intestazione Accetto per risolvere l&#39;errore.
+Se tenti di includere una versione nell’intestazione Accetto durante l’elencazione delle risorse (GET), riceverai l’errore. Le versioni sono necessarie solo quando si tenta di eseguire una richiesta di ricerca su una singola risorsa. Rimuovere la versione dall&#39;intestazione Accetto per risolvere l&#39;errore.
