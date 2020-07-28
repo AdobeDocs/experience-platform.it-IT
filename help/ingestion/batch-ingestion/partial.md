@@ -133,7 +133,7 @@ Se i batch contengono errori, sarà necessario recuperare le informazioni di err
 
 ### Verifica stato {#check-status}
 
-Per verificare lo stato del batch assimilato, dovete fornire l&#39;ID del batch nel percorso di una richiesta GET.
+Per verificare lo stato del batch assimilato, dovete fornire l&#39;ID del batch nel percorso di una richiesta di GET.
 
 **Formato API**
 
