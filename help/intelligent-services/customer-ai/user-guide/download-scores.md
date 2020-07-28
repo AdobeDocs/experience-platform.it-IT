@@ -114,7 +114,7 @@ Una risposta corretta restituisce un payload contenente un oggetto ID batch. In 
 
 ## Recuperate la prossima chiamata API con il vostro ID batch {#retrieve-the-next-api-call-with-your-batch-id}
 
-Una volta ottenuto l&#39;ID batch, potete effettuare una nuova richiesta GET a `/batches`. La richiesta restituisce un collegamento utilizzato come richiesta API successiva.
+Una volta ottenuto l’ID batch, potete effettuare una nuova richiesta di GET a `/batches`. La richiesta restituisce un collegamento utilizzato come richiesta API successiva.
 
 **Formato API**
 
@@ -168,7 +168,7 @@ Una risposta corretta restituisce un payload contenente un `_links` oggetto. All
 
 ## Recuperare i file {#retrieving-your-files}
 
-Utilizzando il `href` valore ottenuto nel passaggio precedente come chiamata API, esegui una nuova richiesta GET per recuperare la directory dei file.
+Utilizzando il `href` valore ottenuto nel passaggio precedente come chiamata API, effettua una nuova richiesta di GET per recuperare la directory del file.
 
 **Formato API**
 
@@ -234,14 +234,14 @@ La risposta contiene un array di dati che può contenere una singola voce o un e
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `_links.self.href` | L&#39;URL della richiesta GET utilizzato per scaricare un file nella directory. |
+| `_links.self.href` | L’URL della richiesta di GET utilizzato per scaricare un file nella directory. |
 
 
 Copiare il `href` valore di qualsiasi oggetto file nell&#39; `data` array, quindi procedere al passaggio successivo.
 
 ## Scaricare i dati del file
 
-Per scaricare i dati del file, effettuate una richiesta GET al `"href"` valore copiato nel passaggio precedente [per recuperare i file](#retrieving-your-files).
+Per scaricare i dati del file, effettuate una richiesta di GET al `"href"` valore copiato nel passaggio precedente [per recuperare i file](#retrieving-your-files).
 
 >[!NOTE]
 >
@@ -271,7 +271,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 >[!TIP]
 >
->Prima di effettuare la richiesta GET, verificate di essere nella directory o nella cartella corretta in cui desiderate salvare il file.
+>Prima di effettuare la richiesta, verificate di essere nella directory o nella cartella corretta in cui desiderate salvare il file.
 
 **Risposta**
 
