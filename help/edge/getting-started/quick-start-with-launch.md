@@ -4,7 +4,7 @@ seo-title: ' Adobe Experience Platform Avvio rapido dell''SDK Web con Launch'
 description: Guida di avvio rapido per l'utilizzo dell'estensione SDK Web  Experience Platform per la raccolta dei dati
 seo-description: Guida di avvio rapido per l'utilizzo dell'estensione SDK Web  Experience Platform per la raccolta dei dati
 translation-type: tm+mt
-source-git-commit: d958e323df2535c168edd3a35b878fcc4bb73370
+source-git-commit: bc18ca26da37ecfca2ade9403be22d7de222facb
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 3%
@@ -29,6 +29,9 @@ Il  Experience Platform Edge Network accetta i dati come XDM. XDM è un formato 
 3. Creare un dataset dallo schema creato.
 
 Il seguente video è pensato per aiutarti a creare uno schema, un set di dati e un connettore di origine per lo streaming dei [!DNL Web SDK] dati.
+
+
+>[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
 Accedete a Launch e installate l&#39; `AEP Web SDK` estensione. Quando installi l’SDK, ti viene richiesto di configurare l’estensione. Immettete l’ID di configurazione richiesto in precedenza. L’estensione completa automaticamente l’ID organizzazione.
 
