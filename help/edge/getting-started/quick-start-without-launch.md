@@ -4,7 +4,7 @@ seo-title: ' Adobe Experience Platform Avvio rapido SDK Web '
 description: Guida di avvio rapido per l'utilizzo dell'SDK Web  Experience Platform per la raccolta dei dati
 seo-description: Guida di avvio rapido per l'utilizzo dell'SDK Web  Experience Platform per la raccolta dei dati
 translation-type: tm+mt
-source-git-commit: 8574a2d54c00f1bd3c41780fb12ff739a7d98fc3
+source-git-commit: d958e323df2535c168edd3a35b878fcc4bb73370
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 3%
@@ -20,14 +20,6 @@ Questa guida illustra i diversi modi in cui impostare l’SDK Web per Adobi Expe
 - Avere diritto a  Adobe Experience Platform.  Se non hai acquistato Platform,  Adobe ti fornirà  Data Services Foundation da utilizzare in modo limitato con l&#39;SDK senza costi aggiuntivi.
 - Utilizzate la versione più recente del servizio ID visitatori.
 
-## Creare un ID di configurazione
-
-Potete creare un ID di configurazione utilizzando lo strumento [di configurazione](../fundamentals/edge-configuration.md) edge in  Adobe Launch, anche se non utilizzate le funzioni di gestione tag. Questo consente di abilitare l&#39; [!DNL Edge Network] invio di dati alle varie soluzioni. Per informazioni su come trovare ciascuna opzione, consultate la pagina [Edge Configuration Tool](../fundamentals/edge-configuration.md) (Strumentodi configurazione Edge).
-
->[!NOTE]
->
->L&#39;organizzazione deve trovarsi nel elenco consentiti  per la funzione. Contattate il CSM per avere il elenco consentiti .
-
 ## Preparare uno schema
 
 I dati [!DNL Experience Platform Edge Network] vengono utilizzati come XDM. XDM è un formato di dati che consente di definire gli schemi. Lo schema definisce il modo in cui [!DNL Edge Network] si prevede la formattazione dei dati. Per inviare i dati, è necessario definire lo schema.
@@ -38,6 +30,14 @@ I dati [!DNL Experience Platform Edge Network] vengono utilizzati come XDM. XDM 
 Il seguente video è pensato per aiutarti a creare uno schema, un set di dati e un connettore di origine per lo streaming dei [!DNL Web SDK] dati.
 
 >[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
+
+## Creare un ID di configurazione
+
+Potete creare un ID di configurazione utilizzando lo strumento [di configurazione](../fundamentals/edge-configuration.md) edge in  Adobe Launch, anche se non utilizzate le funzioni di gestione tag. Questo consente di abilitare l&#39; [!DNL Edge Network] invio di dati alle varie soluzioni. Per informazioni su come trovare ciascuna opzione, consultate la pagina [Edge Configuration Tool](../fundamentals/edge-configuration.md) (Strumentodi configurazione Edge).
+
+>[!NOTE]
+>
+>L&#39;organizzazione deve trovarsi nel elenco consentiti  per la funzione. Contattate il CSM per avere il elenco consentiti .
 
 ## Installare l’SDK
 
