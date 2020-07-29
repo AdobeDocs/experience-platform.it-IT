@@ -1,10 +1,10 @@
 ---
-title: Quick start with Launch
+title: Avvio rapido con Launch
 seo-title: ' Adobe Experience Platform Avvio rapido dell''SDK Web con Launch'
-description: Quick start guide for using the Experience Platform Web SDK extension to collect data
+description: Guida di avvio rapido per l'utilizzo dell'estensione SDK Web  Experience Platform per la raccolta dei dati
 seo-description: Guida di avvio rapido per l'utilizzo dell'estensione SDK Web  Experience Platform per la raccolta dei dati
 translation-type: tm+mt
-source-git-commit: 8574a2d54c00f1bd3c41780fb12ff739a7d98fc3
+source-git-commit: d958e323df2535c168edd3a35b878fcc4bb73370
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 3%
@@ -12,21 +12,13 @@ ht-degree: 3%
 ---
 
 
-# Welcome
+# Benvenuti
 
-Questa guida illustra i diversi modi in cui impostare l’SDK Web  Adobe Experience Platform in Launch. To use this feature you need to be whitelisted. Se vuoi entrare nella lista d&#39;attesa, contatta il tuo CSM.
+Questa guida illustra i diversi modi in cui impostare l’SDK Web  Adobe Experience Platform in Launch. Per utilizzare questa funzione è necessario essere inseriti nella white list. Se vuoi entrare nella lista d&#39;attesa, contatta il tuo CSM.
 
 - Accertati che sia attivato un dominio di [prime parti (CNAME)](https://docs.adobe.com/content/help/it-IT/core-services/interface/ec-cookies/cookies-first-party.html) . Se hai già un CNAME per  Analytics, devi usarlo. Il test in fase di sviluppo funziona senza un CNAME, ma ne hai bisogno prima di andare in produzione.
 - Avere diritto a  Adobe Experience Platform. Se non hai acquistato Platform,  Adobe ti fornirà  Data Services Foundation da utilizzare in modo limitato con l&#39;SDK senza costi aggiuntivi.
 - Utilizzate la versione più recente del servizio ID visitatori.
-
-## Creare un ID di configurazione
-
-Puoi creare un ID di configurazione utilizzando lo strumento [di configurazione](../fundamentals/edge-configuration.md) edge in Launch. Questo consente di abilitare Edge Network per l&#39;invio di dati alle varie soluzioni. Per informazioni su come trovare ciascuna opzione, consultate la pagina [Edge Configuration Tool](../fundamentals/edge-configuration.md) (Strumentodi configurazione Edge).
-
->[!NOTE]
->
->Per questa funzione è necessario autorizzare l&#39;organizzazione. Contatta il tuo CSM per essere inserito nella lista per eventuali whitelist.
 
 ## Preparare uno schema
 
@@ -42,6 +34,14 @@ Accedete a Launch e installate l&#39; `AEP Web SDK` estensione. Quando installi 
 
 
 Per ulteriori dettagli sulle diverse opzioni di configurazione, consulta [Configurazione dell’SDK](../fundamentals/configuring-the-sdk.md).
+
+## Creare un ID di configurazione
+
+Puoi creare un ID di configurazione utilizzando lo strumento [di configurazione](../fundamentals/edge-configuration.md) edge in Launch. Questo consente di abilitare Edge Network per l&#39;invio di dati alle varie soluzioni. Per informazioni su come trovare ciascuna opzione, consultate la pagina [Edge Configuration Tool](../fundamentals/edge-configuration.md) (Strumentodi configurazione Edge).
+
+>[!NOTE]
+>
+>Per questa funzione è necessario autorizzare l&#39;organizzazione. Contatta il tuo CSM per essere inserito nella lista per eventuali whitelist.
 
 ## Creazione di un elemento dati basato sullo schema
 
