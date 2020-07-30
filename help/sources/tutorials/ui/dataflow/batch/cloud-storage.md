@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurare un flusso di dati per un connettore batch di archiviazione cloud nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
+source-git-commit: f532bd6393bfad84fa09c2fc753d1d5c5b39d013
 workflow-type: tm+mt
-source-wordcount: '1183'
+source-wordcount: '1421'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Configurare un flusso di dati per un connettore batch di archiviazione cloud nell&#39;interfaccia utente
 
-Un flusso di dati è un&#39;attività pianificata che recupera e trasferisce dati da un&#39;origine a un [!DNL Platform] set di dati. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando il connettore di base per l&#39;archiviazione cloud.
+Un flusso di dati è un&#39;attività pianificata che recupera e trasferisce dati da un&#39;origine a un [!DNL Platform] set di dati. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l&#39;account di archiviazione cloud.
 
 ## Introduzione
 
@@ -25,7 +25,7 @@ Questa esercitazione richiede una conoscenza approfondita dei seguenti component
    * [Esercitazione](../../../../../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
 * [Profilo](../../../../../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
-Inoltre, questa esercitazione richiede che sia già stato creato un connettore di archiviazione cloud. Un elenco di esercitazioni per la creazione di diversi connettori di archiviazione cloud nell&#39;interfaccia utente è disponibile nella panoramica [dei connettori](../../../../home.md)sorgente.
+Inoltre, questa esercitazione richiede l&#39;utilizzo di un account di archiviazione cloud prestabilito. Un elenco di esercitazioni per la creazione di diversi account di archiviazione cloud nell&#39;interfaccia utente è disponibile nella panoramica [dei connettori](../../../../home.md)sorgente.
 
 ### Formati di file supportati
 
@@ -37,22 +37,28 @@ Inoltre, questa esercitazione richiede che sia già stato creato un connettore d
 
 ## Seleziona dati
 
-Dopo aver creato il connettore per l&#39;archiviazione cloud, viene visualizzato il *[!UICONTROL Select data]* passaggio che fornisce un&#39;interfaccia interattiva per esplorare la gerarchia di archiviazione cloud.
+Dopo aver creato l&#39;account di archiviazione cloud, viene visualizzato il *[!UICONTROL Select data]* passaggio che fornisce un&#39;interfaccia interattiva per esplorare la gerarchia di archiviazione cloud.
 
 * La metà sinistra dell&#39;interfaccia è un browser di directory che visualizza i file e le directory del server.
 * La metà destra dell&#39;interfaccia consente di visualizzare in anteprima fino a 100 righe di dati da un file compatibile.
 
-Facendo clic su una cartella elencata potete scorrere la gerarchia delle cartelle in cartelle più profonde. Dopo aver selezionato un file o una cartella compatibile, viene visualizzato il **[!UICONTROL Select data format]** menu a discesa, in cui è possibile scegliere un formato per visualizzare i dati nella finestra di anteprima.
+Selezionando una cartella elencata potete scorrere la gerarchia delle cartelle in cartelle più profonde. Dopo aver selezionato un file o una cartella compatibile, viene visualizzato il **[!UICONTROL Select data format]** menu a discesa, in cui è possibile scegliere un formato per visualizzare i dati nella finestra di anteprima.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
 
-Una volta completata la finestra di anteprima, potete fare clic **[!UICONTROL Next]** per caricare tutti i file nella cartella selezionata. Se desiderate caricare il file in un file specifico, selezionatelo dall’elenco prima di fare clic **[!UICONTROL Next]**.
+Una volta completata la finestra di anteprima, potete selezionare **[!UICONTROL Next]** di caricare tutti i file nella cartella selezionata. Per caricare un file specifico, selezionatelo dall’elenco prima di selezionarlo **[!UICONTROL Next]**.
 
->[!NOTE]
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-preview.png)
+
+### Inviare file Parquet o JSON
+
+I formati di file supportati per un account di archiviazione cloud includono anche JSON e Parquet. I file JSON e Parquet devono essere conformi allo standard XDM. Per caricare i file JSON o Parquet, selezionate il formato di file appropriato dal browser directory e applicate il formato di dati compatibile dall&#39;interfaccia giusta. Selezionare **[!UICONTROL Next]** per continuare.
+
+>[!IMPORTANT]
 >
->I formati di file supportati includono CSV, JSON e Parquet. I file JSON e Parquet devono essere conformi allo standard XDM.
+>A differenza dei tipi di file delimitati, i file in formato JSON e Parquet non sono disponibili per l’anteprima.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-next.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-parquet.png)
 
 ## Mappatura dei campi dati su uno schema XDM
 
@@ -62,27 +68,27 @@ Scegliere un set di dati in entrata in cui assimilare i dati. È possibile utili
 
 **Utilizzare un dataset esistente**
 
-Per assimilare i dati in un dataset esistente, selezionare **[!UICONTROL Use existing dataset]**, quindi fare clic sull&#39;icona del dataset.
+Per assimilare i dati in un dataset esistente, selezionare **[!UICONTROL Existing dataset]**, quindi l&#39;icona del dataset.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-existing-data.png)
 
-Viene visualizzata la finestra di dialogo _Seleziona set di dati_ . Trovare il set di dati che si desidera utilizzare, selezionarlo, quindi fare clic **[!UICONTROL Continue]**.
+Viene visualizzata *[!UICONTROL Select dataset]* la finestra di dialogo. Trovare il set di dati che si desidera utilizzare, selezionarlo, quindi fare clic **[!UICONTROL Continue]**.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-existing-data.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-existing-dataset.png)
 
 **Utilizza un nuovo set di dati**
 
-Per assimilare i dati in un nuovo dataset, selezionare **[!UICONTROL Create new dataset]** e immettere un nome e una descrizione per il dataset nei campi forniti. Quindi, fare clic sull&#39;icona dello schema.
+Per assimilare i dati in un nuovo dataset, selezionare **[!UICONTROL New dataset]** e immettere un nome e una descrizione per il dataset nei campi forniti. Per aggiungere uno schema, è possibile immettere un nome di schema esistente nella *[!UICONTROL Select schema]* finestra di dialogo. In alternativa, è possibile selezionare l&#39;opzione **[!UICONTROL Schema advanced search]** per cercare uno schema appropriato.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-new-schema.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-new-dataset.png)
 
-Viene visualizzata la finestra di dialogo _Seleziona schema_ . Selezionare lo schema che si desidera applicare al nuovo dataset, quindi fare clic su **[!UICONTROL Done]**.
+Viene visualizzata *[!UICONTROL Select schema]* la finestra di dialogo. Selezionare lo schema da applicare al nuovo dataset, quindi selezionare **[!UICONTROL Done]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
 In base alle esigenze, è possibile scegliere di mappare direttamente i campi oppure utilizzare le funzioni di mappatura per trasformare i dati di origine in modo da derivare i valori calcolati o calcolati. Per ulteriori informazioni sulla mappatura dei dati e sulle funzioni di mappatura, consulta l’esercitazione sulla [mappatura dei dati CSV ai campi](../../../../../ingestion/tutorials/map-a-csv-file.md)dello schema XDM.
 
-Una volta mappati i dati di origine, fai clic su **[!UICONTROL Next]**.
+Una volta mappati i dati di origine, selezionare **[!UICONTROL Next]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
@@ -92,32 +98,46 @@ Viene visualizzato il *[!UICONTROL Scheduling]* passaggio che consente di config
 
 | Campo | Descrizione |
 | --- | --- |
-| Frequenza | Le frequenze selezionabili sono: Minuto, Ora, Giorno e Settimana. |
+| Frequenza | Le frequenze selezionabili includono `Once`, `Minute`, `Hour`, `Day`e `Week`. |
 | Intervallo | Un numero intero che imposta l&#39;intervallo per la frequenza selezionata. |
-| Ora di inizio | Una marca temporale UTC per la quale si verificherà la prima assimilazione. |
-| Backfill | Un valore booleano che determina i dati inizialmente acquisiti. Se *[!UICONTROL Backfill]* è abilitata, tutti i file correnti nel percorso specificato verranno acquisiti durante la prima assimilazione pianificata. Se *[!UICONTROL Backfill]* è disattivato, verranno assimilati solo i file caricati tra la prima esecuzione dell&#39;assimilazione e l&#39; *[!UICONTROL Start time]* assimilazione. I file caricati prima di *[!UICONTROL Start time]* non verranno acquisiti. |
+| Ora di inizio | Una marca temporale UTC che indica quando è impostata la prima assimilazione. |
+| Backfill | Un valore booleano che determina i dati inizialmente acquisiti. Se *[!UICONTROL Backfill]* è abilitata, tutti i file correnti nel percorso specificato verranno acquisiti durante la prima assimilazione pianificata. Se *Backfill* è disattivato, verranno acquisiti solo i file caricati tra la prima esecuzione dell&#39;assimilazione e il *[!UICONTROL Start time]* file. I file caricati prima di *[!UICONTROL Start time]* non verranno acquisiti. |
 
-I flussi di dati sono progettati per l&#39;acquisizione automatica dei dati su base programmata. Se desiderate effettuare il caricamento solo una volta in questo flusso di lavoro, potete farlo configurando il **[!UICONTROL Frequency]** pulsante &quot;Giorno&quot; e applicando un numero molto elevato per il **[!UICONTROL Interval]**, ad esempio 10000 o simile.
+I flussi di dati sono progettati per l&#39;acquisizione automatica dei dati su base programmata. Per iniziare, selezionate la frequenza di assimilazione. Quindi, impostare l&#39;intervallo per specificare il periodo tra due esecuzioni di flusso. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero e deve essere impostato su maggiore o uguale a 15.
 
-Immettete i valori per la pianificazione e fate clic su **Avanti**.
+Per impostare l’ora di inizio dell’assimilazione, regolate la data e l’ora visualizzate nella casella Ora di inizio. In alternativa, potete selezionare l&#39;icona del calendario per modificare il valore dell&#39;ora di inizio. L&#39;ora di inizio deve essere maggiore o uguale all&#39;ora corrente in UTC.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling.png)
+Specificare i valori per la pianificazione e selezionare **[!UICONTROL Next]**.
 
-## Denominazione del flusso di dati
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-interval-on.png)
 
-Viene visualizzato il *[!UICONTROL Name flow]* passaggio che consente di assegnare un nome e una breve descrizione al nuovo flusso di dati.
+### Impostazione di un flusso di dati per l’assimilazione una tantum
 
-Immettete i valori per il flusso di dati e fate clic su **[!UICONTROL Next]**.
+Per impostare l’inserimento una tantum, selezionate la freccia a discesa di frequenza e selezionate **[!UICONTROL Once]**. È possibile continuare a apportare modifiche a un set di flussi di dati per l’inserimento di una frequenza una tantum, purché l’ora di inizio rimanga in futuro. Una volta trascorso l’ora di inizio, il valore di frequenza una tantum non può più essere modificato.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/name-your-dataflow.png)
+>[!TIP] **[!UICONTROL Interval]** e non **[!UICONTROL Backfill]** sono visibili durante un&#39;assimilazione una tantum.
 
-### Controllare il flusso di dati
+Dopo aver fornito i valori appropriati alla pianificazione, selezionare **[!UICONTROL Next]**.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-once.png)
+
+## Fornire i dettagli del flusso di dati
+
+Viene visualizzato il *[!UICONTROL Dataflow detail]* passaggio che consente di assegnare un nome e una breve descrizione al nuovo flusso di dati.
+
+Durante questo processo, potete anche abilitare *[!UICONTROL Partial ingestion]* e *[!UICONTROL Error diagnostics]*. L&#39;abilitazione *[!UICONTROL Partial ingestion]* consente di acquisire i dati contenenti errori, fino a una certa soglia che è possibile impostare. L&#39;attivazione *[!UICONTROL Error diagnostics]* fornirà dettagli su eventuali dati errati che vengono inseriti separatamente in batch. Per ulteriori informazioni, consultate la panoramica sull’assimilazione [parziale dei](../../../../../ingestion/batch-ingestion/partial.md)batch.
+
+Immettete i valori per il flusso di dati e selezionate **[!UICONTROL Next]**.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/dataflow-detail.png)
+
+## Controllare il flusso di dati
 
 Viene visualizzato il *[!UICONTROL Review]* passaggio che consente di rivedere il nuovo flusso di dati prima della creazione. I dettagli sono raggruppati nelle seguenti categorie:
 
-* *[!UICONTROL Source details]*: Mostra il tipo di origine, il percorso pertinente del file di origine scelto e la quantità di colonne all&#39;interno del file di origine.
-* *[!UICONTROL Target details]*: Mostra il set di dati in cui vengono acquisiti i dati di origine, incluso lo schema a cui il set di dati aderisce.
-* *[!UICONTROL Schedule details]*: Mostra il periodo, la frequenza e l’intervallo attivi della pianificazione di assimilazione.
+* *[!UICONTROL Connection]*: Mostra il tipo di origine, il percorso pertinente del file di origine scelto e la quantità di colonne all&#39;interno del file di origine.
+* *[!UICONTROL Assign dataset & map fields]*: Mostra il set di dati in cui vengono acquisiti i dati di origine, incluso lo schema a cui il set di dati aderisce.
+* *[!UICONTROL Scheduling]*: Mostra il periodo, la frequenza e l’intervallo attivi della pianificazione di assimilazione.
 
 Dopo aver rivisto il flusso di dati, fai clic su **[!UICONTROL Finish]** e consenti la creazione del flusso di dati.
 
