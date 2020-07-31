@@ -4,9 +4,9 @@ seo-title: Destinazione Google Ad Manager
 description: 'Google Ad Manager, precedentemente noto come DoubleClick for Publishers o DoubleClick AdX, è una piattaforma di annunci pubblicitari di Google che offre agli editori i mezzi per gestire la visualizzazione degli annunci sui loro siti Web, attraverso video e nelle app mobili. '
 seo-description: 'Google Ad Manager, precedentemente noto come DoubleClick for Publishers o DoubleClick AdX, è una piattaforma di annunci pubblicitari di Google che offre agli editori i mezzi per gestire la visualizzazione degli annunci sui loro siti Web, attraverso video e nelle app mobili. '
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: f23d7dae7883cc14dc8b54d8b1ba2d94f0786cbc
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '621'
 ht-degree: 0%
 
 ---
@@ -69,3 +69,7 @@ Prima di creare la [!DNL Google Ad Manager] destinazione in CDP in tempo reale  
 ## Attiva i segmenti in [!DNL Google Ad Manager]
 
 Per istruzioni su come attivare i segmenti in [!DNL Google Ad Manager], consulta [Attivare i dati sulle destinazioni](/help/rtcdp/destinations/activate-destinations.md).
+
+## Dati esportati
+
+Per verificare se i dati sono stati esportati correttamente nella [!DNL Google Ad Manager] destinazione, controlla il tuo [!DNL Google Ad Manager] account. Se l&#39;attivazione ha avuto esito positivo, l&#39;audience viene popolata nel vostro account.
