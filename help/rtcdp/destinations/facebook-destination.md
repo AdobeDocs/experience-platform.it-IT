@@ -4,9 +4,9 @@ seo-title: Destinazione Facebook
 description: Attiva profili per le tue campagne Facebook per il targeting dell'audience, la personalizzazione e la soppressione basate su e-mail con hash.
 seo-description: Attiva profili per le tue campagne Facebook per il targeting dell'audience, la personalizzazione e la soppressione basate su e-mail con hash.
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '722'
 ht-degree: 2%
 
 ---
@@ -93,3 +93,11 @@ Per connettersi alla [!DNL Facebook] destinazione, vedi Flusso di lavoro [di aut
 ## Attiva i segmenti in [!DNL Facebook] {#activate-segments}
 
 Per istruzioni su come attivare i segmenti in [!DNL Facebook], consulta [Attivare i dati sulle destinazioni](/help/rtcdp/destinations/activate-destinations.md).
+
+## Dati esportati {#exported-data}
+
+Ad [!DNL Facebook]esempio, un&#39;attivazione riuscita significa che un&#39;audience [!DNL Facebook] personalizzata verrà creata a livello di programmazione in [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). L&#39;appartenenza al segmento nel pubblico viene aggiunta e rimossa man mano che gli utenti sono qualificati o non qualificati per i segmenti attivati.
+
+>[!TIP]
+>
+>L&#39;integrazione tra  CDP in tempo reale del Adobe e [!DNL Facebook] supporta le ricadute storiche del pubblico. Tutte le qualifiche del segmento storico vengono inviate a [!DNL Facebook] quando si attivano i segmenti alla destinazione.
