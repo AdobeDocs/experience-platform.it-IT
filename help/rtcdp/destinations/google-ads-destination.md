@@ -4,9 +4,9 @@ seo-title: Destinazione annunci Google
 description: Google Ads, precedentemente noto come Google AdWords, è un servizio pubblicitario online che consente alle aziende di pagare per clic pubblicità tra ricerche basate su testo, display grafici, video YouTube e display mobili in-app.
 seo-description: Google Ads, precedentemente noto come Google AdWords, è un servizio pubblicitario online che consente alle aziende di pagare per clic pubblicità tra ricerche basate su testo, display grafici, video YouTube e display mobili in-app.
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '583'
 ht-degree: 0%
 
 ---
@@ -67,3 +67,6 @@ Prima di creare la [!DNL Google Ads] destinazione in CDP in tempo reale  Adobe, 
 
 Per istruzioni su come attivare i segmenti in [!DNL Google Ads], consulta [Attivare i dati sulle destinazioni](/help/rtcdp/destinations/activate-destinations.md).
 
+## Dati esportati
+
+Per verificare se i dati sono stati esportati correttamente nella [!DNL Google Ads] destinazione, controlla il tuo [!DNL Google Ads] account. Se l&#39;attivazione ha avuto esito positivo, l&#39;audience viene popolata nel vostro account.
