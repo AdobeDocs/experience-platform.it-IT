@@ -4,7 +4,7 @@ seo-title: Attivare profili e segmenti su una destinazione
 description: Attiva i dati di cui disponi  Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 seo-description: Attiva i dati di cui disponi  Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 08b6fd2d43e8ca9d0208ac1bfadc2db15e3f2e90
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 0%
@@ -94,8 +94,8 @@ Per modificare i flussi di attivazione esistenti nel CDP in tempo reale, effettu
 
 ### Destinazioni di marketing e-mail e destinazioni di archiviazione cloud {#esp-and-cloud-storage}
 
-Per le destinazioni di e-mail marketing e per l’archiviazione cloud,  CDP in tempo reale crea un file `.txt` `.csv` o delimitato da tabulazioni nel percorso di archiviazione specificato. È previsto che ogni giorno venga creato un nuovo file nel percorso di archiviazione. The file format is:
-`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
+Per le destinazioni di e-mail marketing e per l’archiviazione cloud,  CDP in tempo reale crea un file `.csv` `.txt` o delimitato da tabulazioni nel percorso di archiviazione specificato. È previsto che ogni giorno venga creato un nuovo file nel percorso di archiviazione. The file format is:
+`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv|txt`
 
 I file che si riceverebbero per tre giorni consecutivi potrebbero essere come segue:
 
@@ -109,11 +109,11 @@ La presenza di questi file nel percorso di memorizzazione conferma l’avvenuta 
 
 ### Destinazioni pubblicitarie
 
-Controllate la rispettiva destinazione pubblicitaria a cui state attivando i dati. Se l&#39;attivazione ha avuto esito positivo, i tipi di pubblico vengono popolati nella piattaforma pubblicitaria.
+Controlla il tuo account nella rispettiva destinazione pubblicitaria a cui stai attivando i tuoi dati. Se l&#39;attivazione ha avuto esito positivo, i tipi di pubblico vengono popolati nella piattaforma pubblicitaria.
 
 ### Destinazioni social network
 
-Ad [!DNL Facebook]esempio, un&#39;attivazione corretta implica la creazione di un&#39;audience [!DNL Facebook] personalizzata a livello di programmazione in [Facebook Ads Manager](https://www.facebook.com/adsmanager/manage/). L&#39;appartenenza al segmento nel pubblico viene aggiunta e rimossa man mano che gli utenti sono qualificati o non qualificati per i segmenti attivati.
+Ad [!DNL Facebook]esempio, un&#39;attivazione riuscita implica la creazione di un&#39;audience personalizzata a livello di programmazione in [!DNL Facebook] [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). L&#39;appartenenza al segmento nel pubblico viene aggiunta e rimossa man mano che gli utenti sono qualificati o non qualificati per i segmenti attivati.
 
 >[!TIP]
 >
