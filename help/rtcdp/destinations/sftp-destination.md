@@ -4,9 +4,9 @@ seo-title: Destinazione SFTP
 description: Crea una connessione in uscita dal vivo al server SFTP per esportare periodicamente file di dati delimitati da  Experience Platform.
 seo-description: Crea una connessione in uscita dal vivo al server SFTP per esportare periodicamente file di dati delimitati da  Experience Platform.
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 08b6fd2d43e8ca9d0208ac1bfadc2db15e3f2e90
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '171'
 ht-degree: 0%
 
 ---
@@ -32,4 +32,4 @@ Per le destinazioni SFTP, immetti le seguenti informazioni nel flusso di lavoro 
 
 ## Dati esportati {#exported-data}
 
-Per [!SFTP] le destinazioni,  Adobe CDP in tempo reale crea un file delimitato da tabulazioni `.txt` o `.csv` nel percorso di memorizzazione specificato. Per ulteriori informazioni sui file, vedi Destinazioni di marketing [e-mail e destinazioni](/help/rtcdp/destinations/activate-destinations.md#esp-and-cloud-storage) di archiviazione cloud nell&#39;esercitazione sull&#39;attivazione del segmento.
+Per le destinazioni SFTP,  CDP in tempo reale Adobe crea un file delimitato da tabulazioni `.txt` o `.csv` file nel percorso di memorizzazione fornito. Per ulteriori informazioni sui file, vedi Destinazioni di marketing [e-mail e destinazioni](/help/rtcdp/destinations/activate-destinations.md#esp-and-cloud-storage) di archiviazione cloud nell&#39;esercitazione sull&#39;attivazione del segmento.
