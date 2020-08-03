@@ -4,7 +4,7 @@ seo-title: Destinazione Google Ad Manager
 description: 'Google Ad Manager, precedentemente noto come DoubleClick for Publishers o DoubleClick AdX, è una piattaforma di annunci pubblicitari di Google che offre agli editori i mezzi per gestire la visualizzazione degli annunci sui loro siti Web, attraverso video e nelle app mobili. '
 seo-description: 'Google Ad Manager, precedentemente noto come DoubleClick for Publishers o DoubleClick AdX, è una piattaforma di annunci pubblicitari di Google che offre agli editori i mezzi per gestire la visualizzazione degli annunci sui loro siti Web, attraverso video e nelle app mobili. '
 translation-type: tm+mt
-source-git-commit: f23d7dae7883cc14dc8b54d8b1ba2d94f0786cbc
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '621'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Prima di creare la [!DNL Google Ad Manager] destinazione in CDP in tempo reale  
 
 ## Crea destinazione
 
-1. In **[!UICONTROL Connections > Destinations]**, selezionate [!DNL Google Ad Manager], quindi **[!UICONTROL Create destination]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, selezionare [!DNL Google Ad Manager], quindi **[!UICONTROL Create destination]**.
    ![Connect, destinazione Google Ad Manager](/help/rtcdp/destinations/assets/google-1-destination.png)
 
 2. Nel passaggio **Configurazione** del flusso di lavoro di creazione della destinazione, compila il modulo [!UICONTROL Basic Information] per la destinazione. <br>
