@@ -4,7 +4,7 @@ seo-title: Destinazione Google Display e Video 360
 description: Display & Video 360, precedentemente noto come DoubleClick Bid Manager è uno strumento che consente di eseguire campagne di retargeting e di targeting delle audience su diverse fonti di inventario di Display, Video e Mobile.
 seo-description: 'Display & Video 360, precedentemente noto come DoubleClick Bid Manager è uno strumento che consente di eseguire campagne di retargeting e di targeting delle audience su diverse fonti di inventario di Display, Video e Mobile. '
 translation-type: tm+mt
-source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '644'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Prima di creare la [!DNL Google Display & Video 360] destinazione in  Adobe CDP 
 
 ## Crea destinazione
 
-1. In **[!UICONTROL Connections > Destinations]**, selezionate [!DNL Google Display & Video 360], quindi **[!UICONTROL Create destination]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, selezionare [!DNL Google Display & Video 360], quindi **[!UICONTROL Create destination]**.
    ![Destinazione Google Display e Video 360 di Connect](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
 2. Nel passaggio **Configurazione** del flusso di lavoro di creazione della destinazione, compila i casi di utilizzo [!UICONTROL Basic Information] per la destinazione e marketing da applicare a tale destinazione. <br>
