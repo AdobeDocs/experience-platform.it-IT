@@ -4,7 +4,7 @@ seo-title: Attivare profili e segmenti su una destinazione
 description: Attiva i dati di cui disponi  Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 seo-description: Attiva i dati di cui disponi  Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 translation-type: tm+mt
-source-git-commit: 08b6fd2d43e8ca9d0208ac1bfadc2db15e3f2e90
+source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Per attivare i dati sulle destinazioni, è necessario aver [collegato correttame
 
 ## Attivare i dati {#activate-data}
 
-1. In **[!UICONTROL Destinations > Browse]**, seleziona la destinazione in cui vuoi attivare i segmenti.
+1. In **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**, seleziona la destinazione in cui vuoi attivare i segmenti.
 2. Fare clic sul nome della destinazione. Viene quindi visualizzato il flusso Activate (Attiva).
    ![activate-flow](/help/rtcdp/destinations/assets/activate-flow.png)Si noti che se esiste già un flusso di attivazione per una destinazione, è possibile visualizzare i segmenti attualmente inviati alla destinazione. Selezionate **[!UICONTROL Edit activation]** nella barra a destra e seguite i passaggi descritti di seguito per modificare i dettagli di attivazione.
 3. Seleziona **[!UICONTROL Activate]**;
