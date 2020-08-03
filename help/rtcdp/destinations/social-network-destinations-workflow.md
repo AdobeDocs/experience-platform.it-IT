@@ -4,7 +4,7 @@ seo-title: Flusso di lavoro destinazioni social network
 description: Istruzioni per la connessione agli account degli annunci social network
 seo-description: Istruzioni per la connessione agli account degli annunci social network
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
 workflow-type: tm+mt
 source-wordcount: '435'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Questa esercitazione viene utilizzata [!DNL Facebook] come esempio, ma il flusso di lavoro in  Adobe Dati cliente in tempo reale sarà lo stesso per tutte le destinazioni dei social network, una volta aggiunto di nuovo al prodotto.
 
-1. In **[!UICONTROL Destinations > Catalog]**, scorrete fino alla **[!UICONTROL Social]** categoria. Seleziona la destinazione preferita del social network, quindi seleziona **[!UICONTROL Connect destination]**.
+1. In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scorrete fino alla **[!UICONTROL Social]** categoria. Seleziona la destinazione preferita del social network, quindi seleziona **[!UICONTROL Connect destination]**.
 
    ![Connessione alla destinazione social network](/help/rtcdp/destinations/assets/facebook-catalog-view.png)
 
