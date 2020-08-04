@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 'Accesso ai punteggi nelle Attribution AI '
 topic: Accessing scores
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 24449d0138ab449dbc01aecbbe9f70e05c781c89
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '1026'
 ht-degree: 2%
 
 ---
@@ -259,9 +259,11 @@ La risposta scarica il file richiesto nella directory corrente. In questo esempi
 
 ![Terminale](./images/download-scores/terminal-output.png)
 
+I punteggi scaricati saranno in formato parquet e avrà bisogno di un lettore [!DNL Spark]-shell o parquet per visualizzare i punteggi. Per la visualizzazione della valutazione non elaborata, potete utilizzare gli strumenti [](https://github.com/apache/parquet-mr/tree/master/parquet-tools)parquet. Gli strumenti Parquet consentono di analizzare i dati con [!DNL Spark].
+
 ## Passaggi successivi
 
-In questo documento sono descritti i passaggi necessari per scaricare  valutazioni delle Attribution AI. È ora possibile continuare a consultare gli altri servizi [e guide](../home.md) intelligenti disponibili.
+In questo documento sono descritti i passaggi necessari per scaricare  valutazioni delle Attribution AI. Per maggiori informazioni sulle uscite dei punteggi, consulta la documentazione di input e output [di](./input-output.md) Attribuzione AI.
 
 ## Accesso ai punteggi tramite  Snowflake
 
