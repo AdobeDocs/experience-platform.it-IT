@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurare un flusso di dati per un connettore di database nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: dd0ce5b5c45133b570970b1d1d7e2f484b89c2e9
+source-git-commit: 91714bea4e165d64bcc33e32e73d1d32a505ba00
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Configurare un flusso di dati per un connettore di database nell&#39;interfaccia utente
 
-Un flusso di dati è un&#39;attività pianificata che recupera e trasferisce dati da un&#39;origine a un set di dati Platform. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando il connettore di base del database.
+Un flusso di dati è un&#39;attività pianificata che recupera e trasferisce dati da un&#39;origine a un set di dati Platform. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l&#39;account del database.
 
 ## Introduzione
 
@@ -25,11 +25,11 @@ Questa esercitazione richiede una conoscenza approfondita dei seguenti component
    - [Esercitazione](../../../../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
 - [Profilo](../../../../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
-Inoltre, questa esercitazione richiede che sia già stato creato un connettore per il database. Un elenco di esercitazioni per la creazione di diversi connettori di database nell&#39;interfaccia utente è disponibile nella panoramica [dei connettori](../../../home.md)sorgente.
+Inoltre, questa esercitazione richiede che sia già stato creato un account di database. Un elenco di esercitazioni per la creazione di diversi connettori di database nell&#39;interfaccia utente è disponibile nella panoramica [dei connettori](../../../home.md)sorgente.
 
 ## Seleziona dati
 
-Dopo aver creato il connettore del database, viene visualizzato il *[!UICONTROL Select data]* passaggio che fornisce un&#39;interfaccia interattiva per esplorare la gerarchia del database.
+Dopo aver creato l&#39;account del database, viene visualizzato il *[!UICONTROL Select data]* passaggio che fornisce un&#39;interfaccia interattiva per esplorare la gerarchia del database.
 
 - La metà sinistra dell&#39;interfaccia è un browser, che visualizza l&#39;elenco dei database dell&#39;account.
 - La metà destra dell&#39;interfaccia consente di visualizzare un&#39;anteprima di fino a 100 righe di dati.
@@ -58,11 +58,11 @@ Viene visualizzata *[!UICONTROL Select dataset]* la finestra di dialogo. Trovare
 
 Per assimilare i dati in un nuovo dataset, selezionare **[!UICONTROL New dataset]** e immettere un nome e una descrizione per il dataset nei campi forniti.
 
-È possibile allegare un campo dello schema digitando un nome dello schema nella barra di **[!UICONTROL Select schema]** ricerca. Potete anche selezionare l&#39;icona a discesa per visualizzare un elenco degli schemi esistenti. In alternativa, potete selezionare **[!UICONTROL Advanced search]** a una schermata gli schemi esistenti, con i rispettivi dettagli.
+È possibile allegare un campo dello schema immettendo un nome dello schema nella barra di **[!UICONTROL Select schema]** ricerca. Potete anche selezionare l&#39;icona a discesa per visualizzare un elenco degli schemi esistenti. In alternativa, potete scegliere **[!UICONTROL Advanced search]** di accedere alla schermata degli schemi esistenti, inclusi i rispettivi dettagli.
 
-![](../../../images/tutorials/dataflow/databases/new-dataset.png)
+![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
 
-Viene visualizzata la finestra di dialogo *[!UICONTROL Select schema] . Selezionare lo schema che si desidera applicare al nuovo dataset, quindi fare clic su **[!UICONTROL Done]**.
+Viene visualizzata *[!UICONTROL Select schema]* la finestra di dialogo. Selezionare lo schema che si desidera applicare al nuovo dataset, quindi fare clic su **[!UICONTROL Done]**.
 
 ![](../../../images/tutorials/dataflow/databases/select-existing-schema.png)
 
@@ -70,7 +70,7 @@ In base alle esigenze, è possibile scegliere di mappare direttamente i campi op
 
 Una volta mappati i dati di origine, fai clic su **[!UICONTROL Next]**.
 
-![](../../../images/tutorials/dataflow/databases/mapping.png)
+![](../../../images/tutorials/dataflow/all-tabular/mapping-updated.png)
 
 ## Pianificare le esecuzioni dell&#39;assimilazione
 
@@ -78,10 +78,10 @@ Viene visualizzato il *[!UICONTROL Scheduling]* passaggio che consente di config
 
 | Campo | Descrizione |
 | --- | --- |
-| Frequenza | Le frequenze selezionabili sono: Una volta, Minuto, Ora, Giorno e Settimana. |
+| Frequenza | Le frequenze selezionabili includono `Once`, `Minute`, `Hour`, `Day`e `Week`. |
 | Intervallo | Un numero intero che imposta l&#39;intervallo per la frequenza selezionata. |
-| Ora di inizio | Una marca temporale UTC che indica quando è impostata la prima assimilazione |
-| Backfill | Un valore booleano che determina i dati inizialmente acquisiti. Se *Backfill* è abilitato, tutti i file correnti nel percorso specificato verranno acquisiti durante la prima assimilazione pianificata. Se *Backfill* è disattivato, verranno acquisiti solo i file caricati tra la prima esecuzione dell&#39;assimilazione e l&#39;ora *di* inizio. I file caricati prima dell&#39;ora *di* inizio non vengono acquisiti. |
+| Ora di inizio | Una marca temporale UTC che indica quando è impostata la prima assimilazione. |
+| Backfill | Un valore booleano che determina i dati inizialmente acquisiti. Se *[!UICONTROL Backfill]* è abilitata, tutti i file correnti nel percorso specificato verranno acquisiti durante la prima assimilazione pianificata. Se *Backfill* è disattivato, verranno acquisiti solo i file caricati tra la prima esecuzione dell&#39;assimilazione e il *[!UICONTROL Start time]* file. I file caricati prima di *[!UICONTROL Start time]* non verranno acquisiti. |
 | Colonna Delta | Opzione con un set filtrato di campi dello schema di origine di tipo, data o ora. Questo campo è utilizzato per distinguere tra dati nuovi ed esistenti. I dati incrementali verranno acquisiti in base alla marca temporale della colonna selezionata. |
 
 I flussi di dati sono progettati per l&#39;acquisizione automatica dei dati su base programmata. Per iniziare, selezionate la frequenza di assimilazione. Quindi, impostare l&#39;intervallo per specificare il periodo tra due esecuzioni di flusso. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero e deve essere impostato su maggiore o uguale a 15.
@@ -98,13 +98,18 @@ Per impostare l’inserimento una tantum, selezionate la freccia a discesa di fr
 
 >[!TIP] **[!UICONTROL Interval]** e non **[!UICONTROL Backfill]** sono visibili durante un&#39;assimilazione una tantum.
 
-![](../../../images/tutorials/dataflow/databases/schedule-once.png)
-
 Dopo aver fornito i valori appropriati alla pianificazione, selezionare **[!UICONTROL Next]**.
 
-## Denominazione del flusso di dati
+![](../../../images/tutorials/dataflow/databases/schedule-once.png)
 
-Viene visualizzato il *[!UICONTROL dataflow detail]* passaggio in cui è necessario specificare un nome e una descrizione facoltativa per il flusso di dati. Selezionate **[!UICONTROL Next]** al termine.
+## Fornire i dettagli del flusso di dati
+
+Viene visualizzato il *[!UICONTROL Dataflow detail]* passaggio che consente di assegnare un nome e una breve descrizione al nuovo flusso di dati.
+
+Durante questo processo, potete anche abilitare *[!UICONTROL Partial ingestion]* e *[!UICONTROL Error diagnostics]*. L&#39;attivazione *[!UICONTROL Partial ingestion]* consente di assimilare i dati contenenti errori fino a una determinata soglia. Una volta *[!UICONTROL Partial ingestion]* attivato, trascinare il *[!UICONTROL Error threshold %]* quadrante per regolare la soglia di errore del batch. In alternativa, è possibile regolare manualmente la soglia selezionando la casella di input. Per ulteriori informazioni, consultate la panoramica sull’assimilazione [parziale dei](../../../../ingestion/batch-ingestion/partial.md)batch.
+Immettete i valori per il flusso di dati e selezionate **[!UICONTROL Next]**.
+
+Immettete i valori per il flusso di dati e selezionate **[!UICONTROL Next]**.
 
 ![](../../../images/tutorials/dataflow/databases/dataflow-detail.png)
 
@@ -112,9 +117,9 @@ Viene visualizzato il *[!UICONTROL dataflow detail]* passaggio in cui è necessa
 
 Viene visualizzato il *[!UICONTROL Review]* passaggio che consente di rivedere il nuovo flusso di dati prima della creazione. I dettagli sono raggruppati nelle seguenti categorie:
 
-- *Connessione*: Mostra il tipo di origine, il percorso pertinente del file di origine scelto e la quantità di colonne all&#39;interno del file di origine.
-- *Assegna campi* dataset e mappa: Mostra il set di dati in cui vengono acquisiti i dati di origine, incluso lo schema a cui il set di dati aderisce.
-- *Pianificazione*: Mostra il periodo, la frequenza e l’intervallo attivi della pianificazione di assimilazione.
+- *[!UICONTROL Connection]*: Mostra il tipo di origine, il percorso pertinente del file di origine scelto e la quantità di colonne all&#39;interno del file di origine.
+- *[!UICONTROL Assign dataset & map fields]*: Mostra il set di dati in cui vengono acquisiti i dati di origine, incluso lo schema a cui il set di dati aderisce.
+- *[!UICONTROL Scheduling]*: Mostra il periodo, la frequenza e l’intervallo attivi della pianificazione di assimilazione.
 
 Dopo aver rivisto il flusso di dati, fai clic su **[!UICONTROL Finish]** e consenti la creazione del flusso di dati.
 
