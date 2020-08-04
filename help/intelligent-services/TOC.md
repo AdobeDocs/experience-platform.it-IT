@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Guida ai servizi intelligenti
 translation-type: tm+mt
-source-git-commit: a0b85809d0703c0366c73ed6d66319af0f62cb27
+source-git-commit: 24449d0138ab449dbc01aecbbe9f70e05c781c89
 workflow-type: tm+mt
-source-wordcount: '64'
-ht-degree: 3%
+source-wordcount: '67'
+ht-degree: 2%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 3%
 * Attribution AI  {#attribution-ai}
    * [Panoramica](attribution-ai/overview.md)
    * [Guida introduttiva alle Attribution AI](attribution-ai/getting-started.md)
+   * [Ingresso e uscita](attribution-ai/input-output.md)
    * [Guida all&#39;interfaccia utente](attribution-ai/user-guide.md)
    * [Scopri informazioni approfondite](attribution-ai/discover-insights.md)
    * [Accesso ai punteggi](attribution-ai/download-scores.md)
