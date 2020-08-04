@@ -4,17 +4,17 @@ solution: Experience Platform
 title: 'Gestione delle etichette di utilizzo dei dati per i set di dati tramite API '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2f35765c0dfadbfb4782b6c3904e33ae7a330b2f
+source-git-commit: 3b6f46c5a81e1b6e8148bf4b78ae2560723f9d20
 workflow-type: tm+mt
-source-wordcount: '653'
-ht-degree: 3%
+source-wordcount: '912'
+ht-degree: 2%
 
 ---
 
 
 # Gestione delle etichette di utilizzo dei dati per i set di dati tramite API
 
-Consente di [!DNL Dataset Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) applicare e modificare le etichette di utilizzo per i set di dati. Fa parte  funzionalità  catalogo dati, ma è separata dall&#39; [!DNL Catalog Service] API che gestisce i metadati del set di dati.
+Consente di [!DNL Dataset Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) applicare e modificare le etichette di utilizzo per i set di dati. Fa parte delle funzionalità dei cataloghi di dati di Adobe Experience Platform, ma è separata dall&#39; [!DNL Catalog Service] API che gestisce i metadati dei set di dati.
 
 Questo documento descrive come gestire le etichette per set di dati e campi utilizzando l&#39; [!DNL Dataset Service API]. Per i passaggi su come gestire direttamente le etichette di utilizzo dei dati utilizzando le chiamate API, consultate la guida [dell&#39;endpoint delle](../api/labels.md) etichette per l&#39; [!DNL Policy Service API].
 
@@ -94,16 +94,21 @@ PUT /datasets/{DATASET_ID}/labels
 
 **Richiesta**
 
-La seguente richiesta di POST aggiunge una serie di etichette al set di dati, oltre a un campo specifico all&#39;interno del set di dati. I campi forniti nel payload sono gli stessi richiesti per una richiesta di PUT.
+La seguente richiesta di PUT aggiorna le etichette esistenti per un set di dati, nonché un campo specifico all&#39;interno di tale set di dati. I campi forniti nel payload sono gli stessi richiesti per una richiesta di POST.
+
+>[!IMPORTANT]
+>
+>È necessario fornire un&#39; `If-Match` intestazione valida quando si effettuano richieste di PUT all&#39; `/datasets/{DATASET_ID}/labels` endpoint. Per ulteriori informazioni sull’utilizzo dell’intestazione richiesta, consultate la sezione [](#if-match) appendice.
 
 ```shell
-curl -X POST \
+curl -X PUT \
   'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
+  -H 'If-Match: 8f00d38e-0000-0200-0000-5ef4fc6d0000' \
   -d '{
         "labels": [ "C1", "C2", "C3", "I1", "I2" ],
         "optionalLabels": [
@@ -160,13 +165,20 @@ DELETE /datasets/{DATASET_ID}/labels
 
 **Richiesta**
 
+La seguente richiesta rimuove le etichette per il set di dati specificato nel percorso.
+
+>[!IMPORTANT]
+>
+>È necessario fornire un&#39; `If-Match` intestazione valida quando si effettuano richieste di DELETE all&#39; `/datasets/{DATASET_ID}/labels` endpoint. Per ulteriori informazioni sull’utilizzo dell’intestazione richiesta, consultate la sezione [](#if-match) appendice.
+
 ```shell
 curl -X DELETE \
   'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'If-Match: 8f00d38e-0000-0200-0000-5ef4fc6d0000'
 ```
 
 **Risposta**
@@ -182,3 +194,17 @@ Dopo aver aggiunto le etichette di utilizzo dei dati a livello di set di dati e 
 È inoltre possibile definire criteri di utilizzo dei dati in base alle etichette applicate. Per ulteriori informazioni, vedere la panoramica [dei criteri di utilizzo dei](../policies/overview.md)dati.
 
 Per ulteriori informazioni sulla gestione dei set di dati in [!DNL Experience Platform], vedere la panoramica [dei](../../catalog/datasets/overview.md)set di dati.
+
+## Appendice {#appendix}
+
+La sezione seguente contiene informazioni aggiuntive sull&#39;utilizzo delle etichette tramite l&#39;API del servizio DataSet.
+
+### [!DNL If-Match] header {#if-match}
+
+Quando si effettuano chiamate API che aggiornano le etichette esistenti di un dataset (PUT e DELETE), è necessario includere un&#39; `If-Match` intestazione che indichi la versione corrente dell&#39;entità dell&#39;etichetta del set di dati in Servizio DataSet. Per evitare conflitti di dati, il servizio aggiornerà l&#39;entità dataset solo se la `If-Match` stringa inclusa corrisponde al tag versione più recente generato dal sistema per quel dataset.
+
+>[!NOTE]
+>
+>Se al momento non esistono etichette per il set di dati in questione, è possibile aggiungere nuove etichette solo tramite una richiesta di POST, che non richiede un&#39; `If-Match` intestazione. Una volta aggiunte le etichette a un set di dati, viene assegnato un `etag` valore che può essere utilizzato per aggiornare o rimuovere le etichette in un secondo momento.
+
+Per recuperare la versione più recente dell&#39;entità dataset-label, effettuate una richiesta [di](#look-up) GET all&#39; `/datasets/{DATASET_ID}/labels` endpoint. Il valore corrente viene restituito nella risposta sotto un&#39; `etag` intestazione. Quando si aggiornano le etichette del set di dati esistenti, si consiglia di eseguire prima una richiesta di ricerca per il set di dati, in modo da recuperare il `etag` valore più recente prima di utilizzare tale valore nell&#39; `If-Match` intestazione della richiesta PUT o DELETE successiva.
