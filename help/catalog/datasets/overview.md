@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sui set di dati
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 1bf6b0948c47c7941fb8f9cf2edfac4d665b8189
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '712'
 ht-degree: 2%
 
 ---
@@ -47,7 +47,7 @@ Le etichette di utilizzo dei dati possono essere applicate a set di dati interi 
 Per ulteriori informazioni sul servizio, consulta la panoramica [sulla governance dei](../../data-governance/home.md) dati. Per i passaggi su come utilizzare le etichette di utilizzo in [!DNL Platform], consulta le guide seguenti:
 
 * [Gestire le etichette nell’interfaccia](../../data-governance/labels/user-guide.md)
-* [Gestire le etichette nell&#39;API](../../data-governance/labels/api.md)
+* [Gestire le etichette dei set di dati nell&#39;API](../../data-governance/labels/dataset-api.md)
 
 ## Set di dati nei [!DNL Platform] servizi a valle
 
