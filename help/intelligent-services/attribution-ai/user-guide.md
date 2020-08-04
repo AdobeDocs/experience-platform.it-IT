@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida utente  Attribution AI
 topic: User guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 15f9f90e5a1439e071eeb46ad655eee10954c2ac
 workflow-type: tm+mt
-source-wordcount: '1430'
+source-wordcount: '1432'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ Se è necessaria più di una conversione, fare clic su **Aggiungi conversione** 
 
 ![add conversion](./images/user-guide/add_conversion.png)
 
-### Definisci finestra di lookback
+### Definisci finestra di lookback {#lookback-window}
 
 Dopo aver definito la conversione, è necessario confermare la finestra di lookback. Utilizzando i tasti freccia o facendo clic sul valore predefinito (56), specificate quanti giorni prima dell’evento di conversione da cui desiderate includere i punti di contatto. I punti di contatto sono definiti nel passaggio successivo.
 
@@ -172,9 +172,9 @@ Infine, digitare il codice del paese nel menu a discesa *Inserisci valore* campo
 
 ![regione](./images/user-guide/region-based.png)
 
-### Finestra Formazione
+### Finestra Formazione {#training-window}
 
-Per garantire che si ottenga il modello più accurato possibile, è importante formare il modello con dati storici che rappresentano il business. Per impostazione predefinita, il modello viene addestrato utilizzando 2 quarti (6 mesi) di dati. Selezionate il menu a discesa per modificare il valore predefinito. È possibile scegliere di allenarsi con uno o quattro quarti di dati (3-12 mesi).
+Per garantire che si ottenga il modello più accurato possibile, è importante formare il modello con dati storici che rappresentano il business. Per impostazione predefinita, il modello viene addestrato utilizzando 2 trimestri (6 mesi) di dati degli eventi di conversione. Selezionate il menu a discesa per modificare il valore predefinito. È possibile scegliere di allenarsi con uno o quattro quarti di dati (3-12 mesi).
 
 >[!NOTE]
 >
