@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Etichette di utilizzo dati supportate
+title: Etichette di utilizzo dati di base
 topic: labels
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: 876ac35f6366411adda821805bf628470839f80e
 workflow-type: tm+mt
-source-wordcount: '1878'
-ht-degree: 1%
+source-wordcount: '1869'
+ht-degree: 2%
 
 ---
 
 
-# Etichette di utilizzo dati supportate
+# Etichette di utilizzo dati di base
 
- Adobe Experience Platform include l&#39;infrastruttura per la gestione dei dati con l&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati (DULE, Data Usage Labeling and Enforcement) al suo centro.  Le funzioni DULE consentono l&#39;applicazione di etichette di utilizzo dei dati a set di dati e campi, al fine di classificare i dati in base al tipo di criteri di utilizzo applicabili a tali dati.
+Le etichette di utilizzo dei dati consentono di classificare set di dati e campi in base ai criteri di utilizzo applicabili ai dati.  Adobe Experience Platform Data Governance fornisce diverse etichette di utilizzo dei dati di base pronte all&#39;uso che è possibile utilizzare per iniziare a classificare i dati.
 
-In questo documento vengono delineate tutte le etichette di utilizzo dei dati attualmente supportate da [!DNL Experience Platform]. Ulteriori informazioni relative [!DNL Data Governance] e DULE sono disponibili nella panoramica [sulla governance dei](../home.md)dati.
+In questo documento sono delineate le etichette di utilizzo dei dati di base attualmente fornite da [!DNL Experience Platform]. Ulteriori informazioni relative [!DNL Data Governance] sono disponibili nella panoramica [sulla governance dei](../home.md)dati.
 
 ## Etichette contratto
 
