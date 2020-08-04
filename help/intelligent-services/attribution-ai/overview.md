@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 'Panoramica sulle Attribution AI '
 topic: Attribution AI
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 7fc121d310509739c7ee81f7d6657ea8f3963b69
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 1%
+source-wordcount: '407'
+ht-degree: 0%
 
 ---
 
@@ -24,29 +24,11 @@ ht-degree: 1%
 
  i dati delle Attribution AI possono provenire da  Adobe (ad es. [!DNL Analytics]) o origini dati non  Adobe.
 
- Attribution AI supporta due categorie di punteggi, algoritmici e basati su regole. Algorithmic scores include incremental and influenced scores. Rule-based scores include First touch, Last touch, Linear, U-shaped, and Time-Decay.
+ Attribution AI supporta due categorie di punteggi, algoritmici e basati su regole. I punteggi algoritmici includono punteggi incrementali e influenzati. I punteggi basati su regole includono Primo tocco, Ultimo tocco, Lineare, A forma di U e Time-Decay.
 
-The following video is designed to support your understanding of Attribution AI.
+Il seguente video è stato progettato per consentire agli utenti di comprendere meglio  Attribution AI.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32667?learn=on&quality=12)
-
-## Attribution AI algorithmic scores
-
-Attribution AI supports two categories of attribution scores, algorithmic and rule-based scores.
-
-Attribution AI produces two different types of algorithmic scores, incremental and influenced. An influenced score is the fraction of the conversion that each marketing touchpoint is responsible for. An incremental score is the amount of marginal impact directly caused by the marketing touchpoint. The main difference between the incremental score and the influenced score is that the incremental score takes the baseline effect into account. Non presuppone che una conversione sia causata esclusivamente dai punti di contatto di marketing precedenti.
-
-See the table below for more details about each of these attribution scores:
-
-| Attribution scores | Descrizione |
-| ----- | ----------- |
-| Primo contatto | Rule-based attribution score that assigns all credits to the initial touchpoint on a conversion path. |
-| Ultimo contatto | Punteggio di attribuzione basato su regole che assegna tutti i crediti al punto di contatto più vicino alla conversione. |
-| Lineare | Punteggio di attribuzione basato su regole che assegna lo stesso credito a ogni punto di contatto di un percorso di conversione. |
-| A forma di U | Punteggio di attribuzione basato su regole che assegna il 40% del credito al primo punto di contatto e il 40% del credito all&#39;ultimo punto di contatto, con gli altri punti di contatto che dividono il restante 20% in modo uniforme. |
-| Decadimento nel tempo | Punteggio di attribuzione basato su regole in cui i punti di contatto più vicini alla conversione ricevono più credito rispetto ai punti di contatto più distanti nel tempo dalla conversione. |
-| Influenzato (algoritmico) | Il punteggio influenzato è la frazione della conversione di cui è responsabile ogni punto di contatto marketing. |
-| Incremental (algoritmico) | Il punteggio incrementale è la quantità di impatto marginale direttamente causato da un punto di contatto di marketing. |
 
 ## Esempi di casi di utilizzo aziendale
 
