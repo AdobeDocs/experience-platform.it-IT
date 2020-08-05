@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guida utente del profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 5c2429f10dfed8cc927914572c690a0536ddae99
 workflow-type: tm+mt
 source-wordcount: '1107'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!DNL Real-time Customer Profile] crea una visualizzazione olistica di ciascuno dei tuoi clienti, combinando dati provenienti da più canali tra cui dati online, offline, CRM e di terze parti.
 
-Questo documento funge da guida per l’interazione con [!DNL Real-time Customer Profile] l’interfaccia utente del Adobe Experience Platform .
+Questo documento funge da guida per l’interazione con [!DNL Real-time Customer Profile] l’interfaccia utente di Adobe Experience Platform.
 
 ## Introduzione
 
@@ -52,7 +52,7 @@ Oltre a queste metriche, la sezione delle metriche del profilo fornisce anche un
 
 Il conteggio dei profili visualizza il numero totale di profili di cui dispone l&#39;organizzazione [!DNL Experience Platform]dopo che il criterio di unione predefinito dell&#39;organizzazione ha unito i frammenti di profilo per formare un unico profilo per ciascun cliente. In altre parole, l&#39;organizzazione potrebbe avere più frammenti di profilo correlati a un singolo cliente che interagisce con il proprio marchio tra canali diversi, ma tali frammenti sarebbero uniti (in base al criterio di unione predefinito) e restituirebbero un conteggio di profilo pari a &quot;1&quot; perché tutti correlati allo stesso individuo.
 
-Il conteggio dei profili include anche profili con attributi (dati di record) e profili contenenti solo dati di serie temporali (eventi), come  profili Adobe Analytics. Il conteggio dei profili viene aggiornato regolarmente per fornire un numero totale aggiornato di profili in Platform.
+Il conteggio dei profili include anche profili con attributi (dati di record) e profili contenenti solo dati di serie temporali (eventi), come  profili Adobe Analytics. Il conteggio dei profili viene aggiornato regolarmente per fornire un numero totale aggiornato di profili all&#39;interno della piattaforma.
 
 Quando l&#39;inserimento di record nel [!DNL Profile Store] aumenta o diminuisce il conteggio di oltre il 5%, viene attivato un processo per aggiornare il conteggio. Per i flussi di lavoro dei dati in streaming, viene effettuato un controllo ogni ora per determinare se è stata raggiunta la soglia di incremento o riduzione del 5%. In caso affermativo, viene attivato automaticamente un processo per aggiornare il conteggio dei profili. Per l’assimilazione batch, entro 15 minuti dal corretto inserimento di un batch nell’archivio profili, se viene raggiunta la soglia di incremento o riduzione del 5%, viene eseguito un processo per aggiornare il conteggio dei profili.
 
@@ -88,7 +88,7 @@ Una volta immesso il valore, selezionare **[!UICONTROL Show profile]** e viene r
 
 ![](../images/user-guide/profiles-display-profile.png)
 
-### Dettagli profilo
+### Dettagli profilo {#profile-detail}
 
 Dopo aver selezionato **[!UICONTROL Profile ID]**, si apre la _[!UICONTROL Detail]_scheda. In questa pagina vengono visualizzate informazioni sul profilo selezionato, inclusi gli attributi di base, le identità collegate e i canali di contatto disponibili. Le informazioni di profilo visualizzate sono state unite da più frammenti di profilo per formare una singola vista del singolo cliente.
 
