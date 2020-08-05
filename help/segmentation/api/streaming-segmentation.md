@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segmentazione in streaming
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
 workflow-type: tm+mt
-source-wordcount: '1364'
+source-wordcount: '1365'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Il seguente documento spiega come utilizzare la segmentazione in streaming mediante l&#39;API. Per informazioni sull’utilizzo della segmentazione in streaming tramite l’interfaccia utente, consulta la guida [di](../ui/overview.md#streaming-segmentation)Segment Builder (Generatore di segmenti).
+>Il seguente documento spiega come utilizzare la segmentazione in streaming mediante l&#39;API. Per informazioni sull’utilizzo della segmentazione in streaming tramite l’interfaccia utente, consultate la guida [all’interfaccia utente per la segmentazione](../ui/streaming-segmentation.md)in streaming.
 
 Lo streaming della segmentazione su [!DNL Adobe Experience Platform] consente ai clienti di effettuare la segmentazione in tempo quasi reale, concentrandosi sulla ricchezza dei dati. Con la segmentazione in streaming, la qualificazione del segmento ora avviene con l&#39;arrivo dei dati, [!DNL Platform]riducendo la necessità di pianificare ed eseguire processi di segmentazione. Grazie a questa funzionalità, ora è possibile valutare la maggior parte delle regole del segmento nel momento in cui i dati vengono passati, [!DNL Platform]il che significa che l&#39;appartenenza al segmento verrà mantenuta aggiornata senza eseguire processi di segmentazione pianificati.
 
@@ -79,8 +79,8 @@ Nella sezione seguente sono elencati alcuni esempi di definizione del segmento c
 | Tipo di query | Dettagli |
 | ---------- | ------- | 
 | Hit in arrivo all’interno di una finestra temporale relativa | Se la definizione del segmento si riferisce a un evento in arrivo **non** entro l’ **ultimo periodo** di sette giorni. Ad esempio, entro le **ultime due settimane**. |
-| Hit in arrivo che fa riferimento a un profilo all’interno di una finestra relativa | Le seguenti opzioni **non** supportano la segmentazione in streaming:<ul><li>Un evento in arrivo **non** entro l&#39; **ultimo periodo** di sette giorni.</li><li>Definizione del segmento che include segmenti o caratteristiche  Adobe Audience Manager (AAM).</li></ul> |
-| Più eventi che fanno riferimento a un profilo | Le seguenti opzioni **non** supportano la segmentazione in streaming:<ul><li>Un evento che **non** si verifica entro **le ultime 24 ore**.</li><li>Definizione del segmento che include segmenti o caratteristiche  Adobe Audience Manager (AAM).</li></ul> |
+| Hit in arrivo che fa riferimento a un profilo all’interno di una finestra relativa | Le seguenti opzioni **non** supportano la segmentazione in streaming:<ul><li>Un evento in arrivo **non** entro l&#39; **ultimo periodo** di sette giorni.</li><li>Definizione di segmento che include segmenti o caratteristiche Adobe Audience Manager (AAM).</li></ul> |
+| Più eventi che fanno riferimento a un profilo | Le seguenti opzioni **non** supportano la segmentazione in streaming:<ul><li>Un evento che **non** si verifica entro **le ultime 24 ore**.</li><li>Definizione di segmento che include segmenti o caratteristiche Adobe Audience Manager (AAM).</li></ul> |
 | Query con più entità | Nel complesso, le query con più entità **non** sono supportate dalla segmentazione in streaming. |
 
 Inoltre, durante la segmentazione in streaming si applicano alcune linee guida:
@@ -330,7 +330,7 @@ curl -X POST \
 | `name` | **(Obbligatorio)** Nome della pianificazione. Deve essere una stringa. |
 | `type` | **(Obbligatorio)** Il tipo di processo in formato stringa. I tipi supportati sono `batch_segmentation` e `export`. |
 | `properties` | **(Obbligatorio)** Un oggetto contenente proprietà aggiuntive correlate alla pianificazione. |
-| `properties.segments` | **(Obbligatorio quando`type`è uguale`batch_segmentation`)** L&#39;utilizzo di `["*"]` assicura che tutti i segmenti siano inclusi. |
+| `properties.segments` | **(Obbligatorio se`type`è uguale a`batch_segmentation`)** L&#39;utilizzo di `["*"]` assicura che tutti i segmenti siano inclusi. |
 | `schedule` | **(Obbligatorio)** Una stringa contenente la pianificazione del processo. È possibile pianificare l’esecuzione dei processi solo una volta al giorno, pertanto non è possibile pianificare l’esecuzione di un processo più volte durante un periodo di 24 ore. L’esempio mostrato (`0 0 1 * * ?`) indica che il processo viene attivato ogni giorno alle 1:00:00 UTC. Per ulteriori informazioni, consulta la documentazione relativa al formato [delle espressioni](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) cron. |
 | `state` | *(Facoltativo)* Stringa contenente lo stato di pianificazione. Valori disponibili: `active` e `inactive`. Il valore predefinito è `inactive`. Un&#39;organizzazione IMS può creare una sola pianificazione. I passaggi per aggiornare la pianificazione sono disponibili più avanti in questa esercitazione. |
 
@@ -403,4 +403,4 @@ La stessa operazione può essere utilizzata per disattivare una pianificazione s
 
 Ora che hai attivato sia i segmenti nuovi che quelli esistenti per la segmentazione in streaming e hai abilitato la segmentazione pianificata per sviluppare una linea di base ed eseguire valutazioni ricorrenti, puoi iniziare a creare segmenti per la tua organizzazione.
 
-Per informazioni su come eseguire azioni simili e lavorare con i segmenti utilizzando l’interfaccia utente del Adobe Experience Platform , visita la guida [utente di](../ui/overview.md)Segment Builder.
+Per informazioni su come eseguire azioni simili e lavorare con i segmenti utilizzando l’interfaccia utente di Adobe Experience Platform, visita la guida [utente di](../ui/segment-builder.md)Segment Builder.
