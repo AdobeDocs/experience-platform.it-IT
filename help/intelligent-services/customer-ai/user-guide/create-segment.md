@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creazione di segmenti di clienti con punteggi previsti
 topic: Create a segment
 translation-type: tm+mt
-source-git-commit: fba6ae701a38737812dccbf4f63e5a07f935ad8b
+source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 0%
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # Creazione di segmenti di clienti con punteggi previsti
 
-Al termine di un&#39;esecuzione della previsione, i punteggi di propensione previsti vengono automaticamente utilizzati da Profili. L&#39;arricchimento dei profili con i punteggi AI dei clienti consente di creare segmenti di clienti per trovare audience in base ai loro punteggi di propensione. Questa sezione descrive i passaggi per la creazione di segmenti con Segment Builder (Generatore di segmenti). Per un’esercitazione più affidabile sulla creazione di segmenti, consulta la guida [utente di](../../../segmentation/ui/overview.md)Segment Builder (Generatore di segmenti).
+Al termine di un&#39;esecuzione della previsione, i punteggi di propensione previsti vengono automaticamente utilizzati da Profili. L&#39;arricchimento dei profili con i punteggi AI dei clienti consente di creare segmenti di clienti per trovare audience in base ai loro punteggi di propensione. Questa sezione descrive i passaggi per la creazione di segmenti con Segment Builder (Generatore di segmenti). Per un’esercitazione più affidabile sulla creazione di segmenti, consulta la guida [utente di](../../../segmentation/ui/segment-builder.md)Segment Builder (Generatore di segmenti).
 
 >[!IMPORTANT]
 >
 >Per utilizzare questo metodo, è necessario abilitare il profilo cliente in tempo reale per il set di dati.
 
-Nell’interfaccia utente di Platform, fate clic **[!UICONTROL Segments]** nel menu di navigazione a sinistra, quindi fate clic su **[!UICONTROL Create segment]**.
+Nell’interfaccia utente della piattaforma, fate clic **[!UICONTROL Segments]** nel menu di navigazione a sinistra, quindi fate clic su **[!UICONTROL Create segment]**.
 
 ![](../images/user-guide/segments.png)
 
