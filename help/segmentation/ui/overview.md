@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida utente del servizio di segmentazione
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: ab43c677ab45c7aa047a50049c0dd8613b003403
+source-git-commit: e7266fba14b2dffe46ce77428ad6fe0dd92abdf5
 workflow-type: tm+mt
-source-wordcount: '1322'
+source-wordcount: '1333'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Il metodo di valutazione può essere in streaming o batch. I segmenti di streami
 
 ![](../images/ui/overview/segment-browse-segments.png)
 
-Nella parte superiore della pagina sono presenti le opzioni per **[!UICONTROL Add all segments to schedule]** e **[!UICONTROL Create segment]**.
+Nella parte superiore della pagina sono disponibili opzioni per aggiungere tutti i segmenti a una pianificazione e per creare un nuovo segmento.
 
 Attiva/disattiva **[!UICONTROL Add all segments to schedule]** la segmentazione pianificata. Ulteriori informazioni sulla segmentazione pianificata sono disponibili nella sezione della segmentazione [pianificata di questa guida](#scheduled-segmentation)utente.
 
@@ -73,7 +73,7 @@ Viene visualizzata la pagina dei dettagli del segmento. In alto, è disponibile 
 
 ### Riepilogo segmento
 
-La *[!UICONTROL Segment summary]* sezione contiene informazioni quali l’ID, il nome, la descrizione e i dettagli degli attributi.
+La **[!UICONTROL Segment summary]** sezione contiene informazioni quali l’ID, il nome, la descrizione e i dettagli degli attributi.
 
 Inoltre, potete modificare il segmento. Selezionando **[!UICONTROL Edit segment]** potrai accedere al [!DNL Segment Builder]sito. Per informazioni più dettagliate sull’utilizzo dell’ [!DNL Segment Builder] area di lavoro, consultate la guida [[!DNL Segment Builder] ](./segment-builder.md)utente.
 
