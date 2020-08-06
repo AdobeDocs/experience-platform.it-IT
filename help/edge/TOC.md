@@ -1,17 +1,17 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: ' Adobe Experience Platform - SDK'
+user-guide-title: Guida di Adobe Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 71193ad346c3976f80b14ee0d6e5b12055a17473
+source-git-commit: c12d854f272c6775ae940b7a4056d0f527c5dd01
 workflow-type: tm+mt
-source-wordcount: '94'
-ht-degree: 14%
+source-wordcount: '96'
+ht-degree: 16%
 
 ---
 
 
-#  Adobe Experience Platform SDK Web {#edge}
+# Adobe Experience Platform Web SDK {#edge}
 
 * [Panoramica SDK per Web](home.md)
 * Introduzione {#get-started}
@@ -34,7 +34,7 @@ ht-degree: 14%
 * Considerazioni specifiche sulla soluzione {#solutions}
    * Analytics {#analytics}
       * [Panoramica di Analytics](solution-specific/analytics/analytics-overview.md)
-      * [Mappatura manuale delle variabili in  Analytics](solution-specific/analytics/manually-mapping-variables.md)
+      * [Mappatura manuale delle variabili in Analytics](solution-specific/analytics/manually-mapping-variables.md)
       * [Variabili mappate automaticamente](solution-specific/analytics/automatically-mapped-vars.md)
    * Audience Manager {#aam}
       * [Panoramica di Audience Manager](solution-specific/audience-manager/audience-manager-overview.md)
@@ -44,4 +44,5 @@ ht-degree: 14%
 * Riferimenti {#ref}
    * [Informazioni raccolte automaticamente](reference/automatic-information.md)
    * [Recupero delle informazioni sulla libreria](reference/retrieving-library-information.md)
-* [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Note sulla versione](release-notes.md)
+* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-en)
