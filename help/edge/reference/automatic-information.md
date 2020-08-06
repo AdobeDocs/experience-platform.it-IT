@@ -1,13 +1,13 @@
 ---
 title: Informazioni raccolte automaticamente
-seo-title: Informazioni raccolte automaticamente da  Adobe Experience Platform Web SDK
+seo-title: Informazioni raccolte automaticamente da Adobe Experience Platform Web SDK
 description: Descrizione di ciascuna informazione raccolta automaticamente dall’SDK Adobe Experience Cloud
 seo-description: Descrizione di ciascuna informazione raccolta automaticamente dall’SDK Adobe Experience Cloud
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: ccd47e024f3ea53507454b7785528c031746d681
 workflow-type: tm+mt
-source-wordcount: '382'
-ht-degree: 7%
+source-wordcount: '387'
+ht-degree: 8%
 
 ---
 
@@ -56,7 +56,7 @@ Browser
 | ------------------------------- | ------------ |
 | `events[].xdm.environment.type` | `browser` |
 
-Il tipo di ambiente attraverso cui è stata realizzata l&#39;esperienza. L’SDK del Adobe Experience Platform  per JavaScript viene sempre impostato `browser`.
+Il tipo di ambiente attraverso cui è stata realizzata l&#39;esperienza. L’SDK Adobe Experience Platform per JavaScript viene sempre impostato `browser`.
 
 ### Altezza visualizzazione
 
@@ -91,6 +91,13 @@ Identificatore del kit di sviluppo software (SDK).  Questo campo utilizza un URI
 | **Percorso in Payload:** | **Esempio:** |
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0` |
+
+### Ambiente
+
+| **Percorso in Payload:** | **Esempio:** |
+| ------------------------------------------------ | ------------ |
+| `events[].xdm.implementationDetails.environment` | `browser` |
+
 
 ## Inserisci contesto (`placeContext`)
 
