@@ -1,12 +1,12 @@
 ---
 title: Tracciamento degli eventi
-seo-title: Tracciamento  eventi SDK Web Adobe Experience Platform
+seo-title: Tracciamento degli eventi SDK Web per Adobe Experience Platform
 description: Scopri come tenere traccia  eventi SDK Web per Experienci Platform
 seo-description: Scopri come tenere traccia  eventi SDK Web per Experienci Platform
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8ac603f749928440438f2e0d1f3f1f1cc95b2916
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ I dati inviati ad Adobe Experience Cloud rientrano in due categorie:
 
 ## Invio di dati XDM
 
-I dati XDM sono un oggetto il cui contenuto e la cui struttura corrispondono a uno schema creato all&#39;interno  Adobe Experience Platform. [Ulteriori informazioni sulla creazione di uno schema.](../../xdm/tutorials/create-schema-ui.md)
+I dati XDM sono un oggetto il cui contenuto e la cui struttura corrispondono a uno schema creato in Adobe Experience Platform. [Ulteriori informazioni sulla creazione di uno schema.](../../xdm/tutorials/create-schema-ui.md)
 
 Qualsiasi dato XDM che desideri far parte dell&#39;analisi, della personalizzazione, dei tipi di pubblico o delle destinazioni deve essere inviato utilizzando l&#39; `xdm` opzione.
 
@@ -80,9 +80,27 @@ alloy("sendEvent", {
 });
 ```
 
+### Sostituzione dell’ID del set di dati
+
+In alcuni casi d’uso, potrebbe essere utile inviare un evento a un set di dati diverso da quello configurato nell’interfaccia utente di configurazione. Per questo è necessario impostare l&#39; `datasetId` opzione sul `sendEvent` comando:
+
+```javascript
+var myXDMData = { ... };
+
+alloy("sendEvent", {
+  "xdm": myXDMData,
+  "type": "commerce.checkout",
+  "datasetId": "YOUR_DATASET_ID"
+});
+```
+
+### Aggiunta di informazioni sull&#39;identità
+
+È inoltre possibile aggiungere informazioni sull&#39;identità personalizzata all&#39;evento. Consultate [Recupero dell’ID Experience Cloud](./identity.md)
+
 ## Utilizzo dell&#39;API sendBeacon
 
-Può essere difficile inviare i dati dell&#39;evento subito prima che l&#39;utente della pagina Web se ne vada. Se la richiesta richiede troppo tempo, il browser potrebbe annullare la richiesta. Alcuni browser hanno implementato un&#39;API standard Web chiamata `sendBeacon` per consentire una raccolta più semplice dei dati durante questo periodo. Quando si utilizza `sendBeacon`, il browser effettua la richiesta Web nel contesto di navigazione globale. Questo significa che il browser esegue la richiesta del beacon in background e non blocca la navigazione della pagina. Per indicare  Adobe Experience Platform [!DNL Web SDK] da utilizzare `sendBeacon`, aggiungere l&#39;opzione `"documentUnloading": true` al comando dell&#39;evento.  Ecco un esempio:
+Può essere difficile inviare i dati dell&#39;evento subito prima che l&#39;utente della pagina Web se ne vada. Se la richiesta richiede troppo tempo, il browser potrebbe annullare la richiesta. Alcuni browser hanno implementato un&#39;API standard Web chiamata `sendBeacon` per consentire una raccolta più semplice dei dati durante questo periodo. Quando si utilizza `sendBeacon`, il browser effettua la richiesta Web nel contesto di navigazione globale. Questo significa che il browser esegue la richiesta del beacon in background e non blocca la navigazione della pagina. Per indicare [!DNL Web SDK] ad Adobe Experience Platform di utilizzare `sendBeacon`, aggiungete l&#39;opzione `"documentUnloading": true` al comando dell&#39;evento.  Ecco un esempio:
 
 ```javascript
 alloy("sendEvent", {
@@ -100,7 +118,7 @@ alloy("sendEvent", {
 });
 ```
 
-I browser hanno imposto limiti alla quantità di dati che possono essere inviati `sendBeacon` contemporaneamente. In molti browser, il limite è 64 K. Se il browser rifiuta l&#39;evento perché il payload è troppo grande,  Adobe Experience Platform [!DNL Web SDK] torna a utilizzare il normale metodo di trasporto (ad esempio, fetch).
+I browser hanno imposto limiti alla quantità di dati che possono essere inviati `sendBeacon` contemporaneamente. In molti browser, il limite è 64 K. Se il browser rifiuta l’evento perché il payload è troppo grande, Adobe Experience Platform [!DNL Web SDK] torna a utilizzare il suo metodo di trasporto normale (ad esempio, fetch).
 
 ## Gestione delle risposte dagli eventi
 
