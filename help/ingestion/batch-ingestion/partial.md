@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Panoramica sull’assimilazione parziale dei batch di  Adobe Experience Platform
+title: Panoramica sull’assimilazione parziale di Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: df6a6e20733953a0983bbfdf66ca2abc6f03e977
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1361'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 # Iniezione parziale del batch
 
-L&#39;assimilazione parziale dei batch è la capacità di assimilare i dati contenenti errori, fino a una determinata soglia. Grazie a questa funzionalità, gli utenti possono trasferire con successo tutti i dati corretti  Adobe Experience Platform mentre tutti i dati errati vengono inseriti in batch separatamente, insieme ai dettagli sul motivo per cui non sono validi.
+L&#39;assimilazione parziale dei batch è la capacità di assimilare i dati contenenti errori, fino a una determinata soglia. Grazie a questa funzionalità, gli utenti possono trasferire correttamente tutti i dati corretti in Adobe Experience Platform mentre tutti i dati errati vengono raggruppati separatamente, insieme ai dettagli sul motivo per cui non sono validi.
 
 Questo documento fornisce un’esercitazione per la gestione dell’assimilazione parziale dei batch.
 
@@ -23,10 +23,10 @@ Inoltre, l&#39; [appendice](#appendix) di questa esercitazione fornisce un rifer
 
 ## Introduzione
 
-Questa esercitazione richiede una conoscenza approfondita dei diversi servizi di Adobe Experience Platform  coinvolti nell&#39;assimilazione parziale dei batch. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
+Questa esercitazione richiede una buona conoscenza dei diversi servizi Adobe Experience Platform coinvolti nell&#39;assimilazione parziale dei batch. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
 - [Caricamento](./overview.md)batch: Metodo che [!DNL Platform] raccoglie e memorizza i dati dai file di dati, come CSV e Parquet.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
+- [[!DNL Experience Data Model] (XDM)](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per eseguire correttamente le chiamate alle [!DNL Platform] API.
 
@@ -58,14 +58,12 @@ Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali 
 
 Potete creare un nuovo batch con l’assimilazione parziale abilitata.
 
-Per creare un nuovo batch, segui i passaggi descritti nella guida [per gli sviluppatori per l’assimilazione](./api-overview.md)batch. Una volta raggiunto il passaggio *Crea batch* , aggiungi il seguente campo nel corpo della richiesta:
+Per creare un nuovo batch, segui i passaggi descritti nella guida [per gli sviluppatori per l’assimilazione](./api-overview.md)batch. Una volta raggiunto il **[!UICONTROL Create batch]** passaggio, aggiungete il seguente campo all’interno del corpo della richiesta:
 
 ```json
 {
-    ...
     "enableErrorDiagnostics": true,
     "partialIngestionPercentage": 5
-    ...
 }
 ```
 
@@ -85,17 +83,17 @@ Per abilitare un batch per l’assimilazione parziale nell’ [!DNL Platform] in
 
 ### Creare una nuova connessione di origine {#new-source}
 
-Per creare una nuova connessione di origine, segui i passaggi elencati nella panoramica [](../../sources/home.md)Origini. Una volta raggiunto il *[!UICONTROL Dataflow detail]* passaggio, prendete nota dei *[!UICONTROL Partial ingestion]* campi e *[!UICONTROL Error diagnostics]* .
+Per creare una nuova connessione di origine, segui i passaggi elencati nella panoramica [](../../sources/home.md)Origini. Una volta raggiunto il **[!UICONTROL Dataflow detail]** passaggio, prendete nota dei **[!UICONTROL Partial ingestion]** campi e **[!UICONTROL Error diagnostics]** .
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
-L’ *[!UICONTROL Partial ingestion]* interruttore consente di attivare o disattivare l’inserimento parziale dei batch.
+L’ **[!UICONTROL Partial ingestion]** interruttore consente di attivare o disattivare l’inserimento parziale dei batch.
 
-L&#39; *[!UICONTROL Error diagnostics]* interruttore viene visualizzato solo quando l&#39; *[!UICONTROL Partial ingestion]* interruttore è disattivato. Questa funzione consente [!DNL Platform] di generare messaggi di errore dettagliati sui batch acquisiti. Se l&#39; *[!UICONTROL Partial ingestion]* interruttore è attivato, la diagnostica degli errori avanzata viene applicata automaticamente.
+L&#39; **[!UICONTROL Error diagnostics]** interruttore viene visualizzato solo quando l&#39; **[!UICONTROL Partial ingestion]** interruttore è disattivato. Questa funzione consente [!DNL Platform] di generare messaggi di errore dettagliati sui batch acquisiti. Se l&#39; *[!UICONTROL Partial ingestion]* interruttore è attivato, la diagnostica degli errori avanzata viene applicata automaticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
-Consente di *[!UICONTROL Error threshold]* impostare la percentuale di errori accettabili prima che l&#39;intero batch non riesca. Per impostazione predefinita, questo valore è impostato su 5%.
+Consente di **[!UICONTROL Error threshold]** impostare la percentuale di errori accettabili prima che l&#39;intero batch non riesca. Per impostazione predefinita, questo valore è impostato su 5%.
 
 ### Utilizzare un dataset esistente {#existing-dataset}
 
@@ -103,29 +101,103 @@ Per utilizzare un set di dati esistente, iniziare selezionando un set di dati. L
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-L’ *[!UICONTROL Partial ingestion]* interruttore consente di attivare o disattivare l’inserimento parziale dei batch.
+L’ **[!UICONTROL Partial ingestion]** interruttore consente di attivare o disattivare l’inserimento parziale dei batch.
 
-L&#39; *[!UICONTROL Error diagnostics]* interruttore viene visualizzato solo quando l&#39; *[!UICONTROL Partial ingestion]* interruttore è disattivato. Questa funzione consente [!DNL Platform] di generare messaggi di errore dettagliati sui batch acquisiti. Se l&#39; *[!UICONTROL Partial ingestion]* interruttore è attivato, la diagnostica degli errori avanzata viene applicata automaticamente.
+L&#39; **[!UICONTROL Error diagnostics]** interruttore viene visualizzato solo quando l&#39; **[!UICONTROL Partial ingestion]** interruttore è disattivato. Questa funzione consente [!DNL Platform] di generare messaggi di errore dettagliati sui batch acquisiti. Se l&#39; **[!UICONTROL Partial ingestion]** interruttore è attivato, la diagnostica degli errori avanzata viene applicata automaticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
 
-Consente di *[!UICONTROL Error threshold]* impostare la percentuale di errori accettabili prima che l&#39;intero batch non riesca. Per impostazione predefinita, questo valore è impostato su 5%.
+Consente di **[!UICONTROL Error threshold]** impostare la percentuale di errori accettabili prima che l&#39;intero batch non riesca. Per impostazione predefinita, questo valore è impostato su 5%.
 
 Ora puoi caricare i dati tramite il pulsante **Aggiungi dati** e li assimilerai parzialmente.
 
 ### Utilizzare il flusso &quot;[!UICONTROL Map CSV to XDM schema]&quot; {#map-flow}
 
-Per usare il flusso[!UICONTROL Map CSV to XDM schema]&quot;di prova&quot;, segui i passaggi elencati nell’esercitazione [Mappa un file CSV](../tutorials/map-a-csv-file.md). Una volta raggiunto il *[!UICONTROL Add data]* passaggio, prendete nota dei *[!UICONTROL Partial ingestion]* campi e *[!UICONTROL Error diagnostics]* .
+Per usare il flusso[!UICONTROL Map CSV to XDM schema]&quot;di prova&quot;, segui i passaggi elencati nell’esercitazione [Mappa un file CSV](../tutorials/map-a-csv-file.md). Una volta raggiunto il **[!UICONTROL Add data]** passaggio, prendete nota dei **[!UICONTROL Partial ingestion]** campi e **[!UICONTROL Error diagnostics]** .
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
-L’ *[!UICONTROL Partial ingestion]* interruttore consente di attivare o disattivare l’inserimento parziale dei batch.
+L’ **[!UICONTROL Partial ingestion]** interruttore consente di attivare o disattivare l’inserimento parziale dei batch.
 
-L&#39; *[!UICONTROL Error diagnostics]* interruttore viene visualizzato solo quando l&#39; *[!UICONTROL Partial ingestion]* interruttore è disattivato. Questa funzione consente [!DNL Platform] di generare messaggi di errore dettagliati sui batch acquisiti. Se l&#39; *[!UICONTROL Partial ingestion]* interruttore è attivato, la diagnostica degli errori avanzata viene applicata automaticamente.
+L&#39; **[!UICONTROL Error diagnostics]** interruttore viene visualizzato solo quando l&#39; **[!UICONTROL Partial ingestion]** interruttore è disattivato. Questa funzione consente [!DNL Platform] di generare messaggi di errore dettagliati sui batch acquisiti. Se l&#39; **[!UICONTROL Partial ingestion]** interruttore è attivato, la diagnostica degli errori avanzata viene applicata automaticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-Consente di *[!UICONTROL Error threshold]* impostare la percentuale di errori accettabili prima che l&#39;intero batch non riesca. Per impostazione predefinita, questo valore è impostato su 5%.
+Consente di **[!UICONTROL Error threshold]** impostare la percentuale di errori accettabili prima che l&#39;intero batch non riesca. Per impostazione predefinita, questo valore è impostato su 5%.
+
+## Download dei metadati a livello di file {#download-metadata}
+
+Adobe Experience Platform consente agli utenti di scaricare i metadati dei file di input. I metadati verranno conservati entro [!DNL Platform] un massimo di 30 giorni.
+
+### Elenca i file di input {#list-files}
+
+La seguente richiesta consente di visualizzare un elenco di tutti i file forniti in un batch finalizzato.
+
+**Richiesta**
+
+```shell
+curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=input_files \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Risposta**
+
+Una risposta corretta restituirà lo stato HTTP 200 con oggetti JSON contenenti oggetti percorso con dettagli sulla posizione in cui sono stati salvati i metadati.
+
+```json
+{
+    "_page": {
+        "count": 1,
+        "limit": 100
+    },
+    "data": [
+        {
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=input_files/fileMetaData1.json"
+                }
+            },
+            "length": "1337",
+            "name": "fileMetaData1.json"
+        },
+                {
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=input_files/fileMetaData2.json"
+                }
+            },
+            "length": "1042",
+            "name": "fileMetaData2.json"
+        }
+    ]
+}
+```
+
+### Recupero dei metadati del file di input {#retrieve-metadata}
+
+Dopo aver recuperato un elenco di tutti i diversi file di input, potete recuperare i metadati del singolo file utilizzando il seguente endpoint.
+
+**Richiesta**
+
+```shell
+curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=input_files/fileMetaData1.json \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Risposta**
+
+Una risposta corretta restituirà lo stato HTTP 200 con oggetti JSON contenenti oggetti percorso con dettagli sulla posizione in cui sono stati salvati i metadati.
+
+```json
+{"path": "F1.json"}
+{"path": "etc/F2.json"}
+```
 
 ## Recupero degli errori di caricamento batch parziale {#retrieve-errors}
 
@@ -155,7 +227,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Risposta**
+**Risposta senza errori**
 
 Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate sullo stato del batch.
 
@@ -164,10 +236,8 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
     "af838510-2233-11ea-acf0-f3edfcded2d2": {
         "status": "success",
         "tags": {
-            ...
             "acp_enableErrorDiagnostics": true,
             "acp_partialIngestionPercent": 5
-            ...
         },
         "relatedObjects": [
             {
@@ -186,7 +256,8 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
             "inputByteSize": 568,
             "inputFileCount": 4,
             "inputRecordCount": 519,
-            "outputRecordCount": 497
+            "outputRecordCount": 497,
+            "failedRecordCount": 0
         },
         "completed": 1576741722026,
         "created": 1576741597205,
@@ -199,7 +270,86 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 }
 ```
 
-Se il batch presenta un errore e la diagnostica degli errori è abilitata, lo stato sarà &quot;success&quot; con ulteriori informazioni sull&#39;errore fornito in un file di errore scaricabile.
+| Proprietà | Descrizione |
+| -------- | ----------- |
+| `metrics.failedRecordCount` | Numero di righe che non è stato possibile elaborare a causa di analisi, conversione o convalida. Questo valore può essere derivato sottraendo il `inputRecordCount` dal `outputRecordCount`. Questo valore verrà generato su tutti i batch, indipendentemente dal fatto che `errorDiagnostics` sia attivato. |
+
+**Risposta con errori**
+
+Se il batch presenta uno o più errori e la diagnostica degli errori è abilitata, lo stato sarà `success` con ulteriori informazioni sugli errori forniti sia all&#39;interno della risposta che in un file di errore scaricabile.
+
+```json
+{
+    "01E8043CY305K2MTV5ANH9G1GC": {
+        "status": "success",
+        "tags": {
+            "acp_enableErrorDiagnostics": true,
+            "acp_partialIngestionPercent": 5
+        },
+        "relatedObjects": [
+            {
+                "type": "dataSet",
+                "id": "5deac2648a19d218a888d2b1"
+            }
+        ],
+        "id": "01E8043CY305K2MTV5ANH9G1GC",
+        "externalId": "01E8043CY305K2MTV5ANH9G1GC",
+        "inputFormat": {
+            "format": "parquet"
+        },
+        "imsOrg": "{IMS_ORG}",
+        "started": 1576741718543,
+        "metrics": {
+            "inputByteSize": 568,
+            "inputFileCount": 4,
+            "inputRecordCount": 519,
+            "outputRecordCount": 514,
+            "failedRecordCount": 5
+        },
+        "completed": 1576741722026,
+        "created": 1576741597205,
+        "createdClient": "{API_KEY}",
+        "createdUser": "{USER_ID}",
+        "updatedUser": "{USER_ID}",
+        "updated": 1576741722644,
+        "version": "1.0.5",
+        "errors": [
+           {
+             "code": "INGEST-1212-400",
+             "description": "Encountered 5 errors in the data. Successfully ingested 514 rows. Please review the associated diagnostic files for more details."
+           },
+           {
+             "code": "INGEST-1401-400",
+             "description": "The row has corrupted data and cannot be read or parsed. Fix the corrupted data and try again.",
+             "recordCount": 2
+           },
+           {
+             "code": "INGEST-1555-400",
+             "description": "A required field is either missing or has a value of null. Add the required field to the input row and try again.",
+             "recordCount": 3
+           }
+        ]
+    }
+}
+```
+
+| Proprietà | Descrizione |
+| -------- | ----------- |
+| `metrics.failedRecordCount` | Numero di righe che non è stato possibile elaborare a causa di analisi, conversione o convalida. Questo valore può essere derivato sottraendo il `inputRecordCount` dal `outputRecordCount`. Questo valore verrà generato su tutti i batch, indipendentemente dal fatto che `errorDiagnostics` sia attivato. |
+| `errors.recordCount` | Il numero di righe che non sono riuscite per il codice di errore specificato. Questo valore viene generato **solo** se `errorDiagnostics` è attivato. |
+
+>[!NOTE]
+>
+>Se la diagnostica degli errori non è disponibile, verrà visualizzato il seguente messaggio di errore:
+> 
+```json
+> {
+>         "errors": [{
+>                 "code": "INGEST-1211-400",
+>                 "description": "Encountered errors while parsing, converting or otherwise validating the data. Please resend the data with error diagnostics enabled to collect additional information on failure types"
+>         }]
+> }
+> ```
 
 ## Passaggi successivi {#next-steps}
 
@@ -207,12 +357,11 @@ In questa esercitazione è stato illustrato come creare o modificare un dataset 
 
 ## Tipi di errori di assimilazione parziale dei batch {#appendix}
 
-L’assimilazione parziale dei batch presenta quattro tipi di errore diversi durante l’assimilazione dei dati.
+L’assimilazione parziale dei batch presenta tre tipi di errore diversi durante l’assimilazione dei dati.
 
 - [File illeggibili](#unreadable)
 - [Schemi o intestazioni non validi](#schemas-headers)
 - [Righe non analizzabili](#unparsable)
-- [Conversione XDM non valida](#conversion)
 
 ### File illeggibili {#unreadable}
 
@@ -229,7 +378,7 @@ Se il batch ingerito contiene righe non analizzabili, gli errori del batch verra
 **Formato API**
 
 ```http
-GET /export/batches/{BATCH_ID}/failed?path=parse_errors
+GET /export/batches/{BATCH_ID}/meta?path=row_errors
 ```
 
 | Parametro | Descrizione |
@@ -239,7 +388,7 @@ GET /export/batches/{BATCH_ID}/failed?path=parse_errors
 **Richiesta**
 
 ```shell
-curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed?path=parse_errors \
+curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=row_errors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -252,68 +401,11 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli delle righe n
 
 ```json
 {
-    "_corrupt_record":"{missingQuotes:"v1"}",
+    "_corrupt_record": "{missingQuotes:"v1"}",
     "_errors": [{
-         "code":"1401",
-         "message":"Row is corrupted and cannot be read, please fix and resend."
+         "code": "1401",
+         "message": "Row is corrupted and cannot be read, please fix and resend."
     }],
     "_filename": "a1.json"
-}
-```
-
-### Conversione XDM non valida {#conversion}
-
-Se il batch ingerito contiene conversioni XDM non valide, gli errori del batch verranno memorizzati in un file a cui è possibile accedere utilizzando il seguente endpoint.
-
-**Formato API**
-
-```http
-GET /export/batches/{BATCH_ID}/failed?path=conversion_errors
-```
-
-| Parametro | Descrizione |
-| --------- | ----------- |
-| `{BATCH_ID}` | Il `id` valore del batch da cui si recuperano le informazioni sull&#39;errore. |
-
-**Richiesta**
-
-```shell
-curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed?path=conversion_errors \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Risposta**
-
-Una risposta corretta restituisce lo stato HTTP 200 con dettagli sugli errori di conversione XDM.
-
-```json
-{
-    "col1":"v1",
-    "col2":"v2",
-    "col3":[{
-        "g1":"h1"
-    }],
-    "_errors":[{
-        "column":"col3",
-        "code":"123",
-        "message":"Cannot convert array element from Object to String"
-    }],
-    "_filename":"a1.json"
-},
-{
-    "col1":"v1",
-    "col2":"v2",
-    "col3":[{
-        "g1":"h1"
-    }],
-    "_errors":[{
-        "column":"col1",
-        "code":"100",
-        "message":"Cannot convert string to float"
-    }],
-    "_filename":"a2.json"
 }
 ```
