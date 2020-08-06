@@ -1,12 +1,12 @@
 ---
 title: Configurazione dell’SDK
-seo-title: 'Configurazione dell’SDK Web per il Adobe Experience Platform '
+seo-title: Configurazione di Adobe Experience Platform Web SDK
 description: 'Scopri come configurare l’SDK Web per Experienci Platform '
 seo-description: 'Scopri come configurare l’SDK Web per Experienci Platform '
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: abd72993577f298141ed0d25b6c4abc42050b68e
 workflow-type: tm+mt
-source-wordcount: '733'
+source-wordcount: '745'
 ht-degree: 7%
 
 ---
@@ -146,21 +146,13 @@ Abilita [!DNL Audience Manager] , [!UICONTROL URL destinations]che consente di a
 
 ## Opzioni identità
 
-### `idSyncContainerId`
+### `idMigrationEnabled`
 
 | **Tipo** | **Obbligatorio** | **Valore predefinito** |
 | -------- | ------------ | ----------------- |
-| Numero | No | none |
+| Booleano | No | true |
 
-L&#39;ID contenitore che specifica quali sincronizzazioni ID vengono attivate. Si tratta di un numero intero non negativo che può essere ottenuto dal consulente.
-
-### `idSyncEnabled`
-
-| **Tipo** | **Obbligatorio** | **Valore predefinito** |
-| -------- | ------------ | ----------------- |
-| Booleano | No | `true` |
-
-Abilita la funzione di sincronizzazione ID, che consente di attivare gli URL per sincronizzare l’ID utente univoco  Adobe con l’ID utente univoco di un’origine dati di terze parti.
+Se true, l’SDK leggerà e imposterà i cookie AMCV precedenti. Questo consente di passare all’SDK Web AEP mentre alcune parti del sito potrebbero ancora utilizzare Visitor.js. Inoltre, se nella pagina è definita l’API del visitatore, l’SDK eseguirà una query sull’API del visitatore per l’ECID. Questo consente di aggiungere due tag alle pagine con l’SDK Web AEP e di avere lo stesso ECID.
 
 ### `thirdPartyCookiesEnabled`
 
