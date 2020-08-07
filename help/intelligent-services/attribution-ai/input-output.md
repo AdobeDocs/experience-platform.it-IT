@@ -5,7 +5,7 @@ title: ' ingresso e uscita Attribution AI'
 topic: Input and Output data for Attribution AI
 description: Il seguente documento illustra i diversi input e output utilizzati nelle Attribution AI .
 translation-type: tm+mt
-source-git-commit: 5126ef74330d9cee7234ccd1ee7260b09db9e78c
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '2166'
 ht-degree: 3%
@@ -147,7 +147,7 @@ Nella tabella seguente sono delineati i campi dello schema nell’esempio di out
 
 ### Visualizzazione di percorsi di valutazione non elaborati (interfaccia utente) {#raw-score-path}
 
-Puoi visualizzare il percorso dei punteggi non elaborati nell’interfaccia utente. Per iniziare, seleziona **[!UICONTROL Schemas]** nell’interfaccia utente di Platform, quindi cerca e seleziona il tuo schema di attribuzione voti AI dall’interno della *[!UICONTROL Browse]* scheda.
+Puoi visualizzare il percorso dei punteggi non elaborati nell’interfaccia utente. Per iniziare, seleziona **[!UICONTROL Schemas]** nell’interfaccia utente della piattaforma, quindi cerca e seleziona il tuo schema di valutazione AI dell’attribuzione dall’interno della *[!UICONTROL Browse]* scheda.
 
 ![Scegli lo schema](./images/input-output/schemas_browse.png)
 
@@ -158,13 +158,13 @@ Quindi, selezionate un campo all’interno della *[!UICONTROL Structure]* finest
 
 ### Punteggi di attribuzione aggregati {#aggregated-attribution-scores}
 
-I punteggi aggregati possono essere scaricati in formato CSV dall’interfaccia utente di Platform se l’intervallo di date è inferiore a 30 giorni.
+I punteggi aggregati possono essere scaricati in formato CSV dall’interfaccia utente della piattaforma se l’intervallo di date è inferiore a 30 giorni.
 
  Attribution AI supporta due categorie di punteggi di attribuzione, algoritmi e basati su regole.
 
  Attribution AI produce due diversi tipi di punteggi algoritmici, incrementali e influenzati. Un punteggio influenzato è la frazione della conversione di cui è responsabile ogni punto di contatto marketing. Un punteggio incrementale è l&#39;importo dell&#39;impatto marginale direttamente causato dal punto di contatto di marketing. La differenza principale tra il punteggio incrementale e il punteggio influenzato è che il punteggio incrementale prende in considerazione l&#39;effetto previsto. Non presuppone che una conversione sia causata esclusivamente dai punti di contatto di marketing precedenti.
 
-Di seguito è riportato un breve esempio di output dello schema di Attribution AI  dall&#39;interfaccia utente del Adobe Experience Platform :
+Di seguito è riportato un breve esempio di output dello schema di Attribution AI  dall&#39;interfaccia utente di Adobe Experience Platform:
 
 ![](./images/input-output/schema_screenshot.png)
 
@@ -196,7 +196,7 @@ La tabella seguente mappa i punteggi di attribuzione ai punteggi non elaborati. 
 
 ### Punteggi aggregati {#aggregated-scores}
 
-I punteggi aggregati possono essere scaricati in formato CSV dall’interfaccia utente di Platform se l’intervallo di date è inferiore a 30 giorni. Per ulteriori informazioni su ciascuna di queste colonne di aggregazione, vedere la tabella seguente.
+I punteggi aggregati possono essere scaricati in formato CSV dall’interfaccia utente della piattaforma se l’intervallo di date è inferiore a 30 giorni. Per ulteriori informazioni su ciascuna di queste colonne di aggregazione, vedere la tabella seguente.
 
 | Nome colonna | Vincolo | Nullable | Descrizione |
 | --- | --- | --- | --- |
@@ -231,7 +231,7 @@ La tabella seguente mappa i punteggi aggregati sulle valutazioni non elaborate. 
 | geo | _tenantID.your_schema_name.conversion.geo |
 | event_type | eventType |
 | media_type | _tenantID.your_schema_name.touchpointsDetail.element.touchPoint.mediaType |
-| channel | _tenantID.your_schema_name.touchDetail.element.touchPoint.mediaChannel |
+| channel | _tenantID.your_schema_name.touchpointsDetail.element.touchPoint.mediaChannel |
 | action | _tenantID.your_schema_name.touchpointsDetail.element.touchPoint.mediaAction |
 | campaign_group | _tenantID.your_schema_name.touchDetail.element.touchPoint.campaignGroup |
 | campaign_name | _tenantID.your_schema_name.touchDetail.element.touchPoint.campaignName |
