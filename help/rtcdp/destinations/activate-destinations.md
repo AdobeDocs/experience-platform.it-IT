@@ -1,10 +1,10 @@
 ---
 title: Attivare profili e segmenti su una destinazione
 seo-title: Attivare profili e segmenti su una destinazione
-description: Attiva i dati di cui disponi  Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
-seo-description: Attiva i dati di cui disponi  Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
+description: Attiva i dati di cui disponi in  Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
+seo-description: Attiva i dati di cui disponi in  Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Attivare profili e segmenti su una destinazione
 
-Attiva i dati di cui disponi  Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
+Attiva i dati di cui disponi in  Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 
 ## Prerequisiti  {#prerequisites}
 
@@ -57,7 +57,7 @@ Per attivare i dati sulle destinazioni, è necessario aver [collegato correttame
    ![ID fedeltà come identità](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
 
 
-   Selezionate `Email_LC_SHA256` come identità di destinazione se avete hashing gli indirizzi e-mail dei clienti durante l&#39;inserimento di dati in  Adobe Experience Platform, in base ai requisiti [!DNL Facebook] di hashing [](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)e-mail. <br> Selezionate `Email` come identità di destinazione se gli indirizzi e-mail utilizzati non sono crittografati.  CDP in tempo reale Adobe eseguirà l&#39;hash degli indirizzi e-mail per soddisfare [!DNL Facebook] i requisiti.
+   Selezionate `Email_LC_SHA256` come identità di destinazione se avete hashing gli indirizzi e-mail dei clienti durante l&#39;inserimento di dati in Adobe Experience Platform, in base ai requisiti [!DNL Facebook] di hashing delle [](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)e-mail. <br> Selezionate `Email` come identità di destinazione se gli indirizzi e-mail utilizzati non sono crittografati.  CDP in tempo reale Adobe eseguirà l&#39;hash degli indirizzi e-mail per soddisfare [!DNL Facebook] i requisiti.
 
    ![mappatura identità dopo la compilazione dei campi](/help/rtcdp/destinations/assets/identity-mapping.png)
 
