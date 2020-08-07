@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Definire una relazione tra due schemi utilizzando l'API del Registro di sistema dello schema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 849142e44c56f2958e794ca6aefaccd5670c28ba
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1274'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 # Definire una relazione tra due schemi utilizzando l&#39; [!DNL Schema Registry] API
 
 
-La capacità di comprendere le relazioni tra i clienti e le loro interazioni con il tuo marchio attraverso vari canali è una parte importante del  Adobe Experience Platform. La definizione di queste relazioni all&#39;interno della struttura degli schemi [!DNL Experience Data Model] (XDM) consente di acquisire informazioni complesse sui dati dei clienti.
+La capacità di comprendere le relazioni tra i clienti e le loro interazioni con il tuo marchio attraverso vari canali è una parte importante di Adobe Experience Platform. La definizione di queste relazioni all&#39;interno della struttura degli schemi [!DNL Experience Data Model] (XDM) consente di acquisire informazioni complesse sui dati dei clienti.
 
 Sebbene sia possibile dedurre le relazioni dello schema utilizzando lo schema unione e [!DNL Real-time Customer Profile], ciò vale solo per gli schemi che condividono la stessa classe. Per stabilire una relazione tra due schemi appartenenti a classi diverse, è necessario aggiungere un campo **di** relazione dedicato a uno schema di origine che faccia riferimento all&#39;identità di uno schema di destinazione.
 
@@ -38,7 +38,9 @@ Prima di iniziare questa esercitazione, consulta la guida [allo](../api/getting-
 
 Le relazioni dello schema sono rappresentate da uno schema **di** origine con un campo che fa riferimento a un altro campo all&#39;interno di uno schema **di** destinazione. Nei passaggi successivi, &quot;[!DNL Loyalty Members]&quot; sarà lo schema di origine, mentre &quot;[!DNL Hotels]&quot; fungerà da schema di destinazione.
 
->[!IMPORTANT] Per stabilire una relazione, entrambi gli schemi devono avere identità principali definite ed essere attivati per [!DNL Real-time Customer Profile]. Per informazioni su come configurare gli schemi di conseguenza, vedere la sezione relativa all&#39; [abilitazione di uno schema da utilizzare nel profilo](./create-schema-api.md#profile) nell&#39;esercitazione sulla creazione dello schema.
+>[!IMPORTANT]
+>
+>Per stabilire una relazione, entrambi gli schemi devono avere identità principali definite ed essere attivati per [!DNL Real-time Customer Profile]. Per informazioni su come configurare gli schemi di conseguenza, vedere la sezione relativa all&#39; [abilitazione di uno schema da utilizzare nel profilo](./create-schema-api.md#profile) nell&#39;esercitazione sulla creazione dello schema.
 
 Per definire una relazione tra due schemi, è innanzitutto necessario acquisire i `$id` valori per entrambi gli schemi. Se conoscete i nomi visualizzati (`title`) degli schemi, potete trovare `$id` i relativi valori effettuando una richiesta di GET all&#39; `/tenant/schemas` endpoint nell&#39; [!DNL Schema Registry] API.
 
@@ -116,7 +118,9 @@ All&#39;interno [!DNL Schema Registry], i descrittori di relazione funzionano in
 
 In questa esercitazione, lo schema di destinazione &quot;[!DNL Hotels]&quot; contiene un `email` campo che funge da identità primaria dello schema e che pertanto funge anche da campo di riferimento. Tuttavia, lo schema di origine &quot;[!DNL Loyalty Members]&quot; non dispone di un campo dedicato da utilizzare come riferimento e deve essere dotato di un nuovo mixin che aggiunge un nuovo campo allo schema: `favoriteHotel`.
 
->[!NOTE] Se lo schema di origine dispone già di un campo dedicato che si prevede di utilizzare come campo di riferimento, è possibile passare al passaggio relativo alla [creazione di un descrittore](#reference-identity)di riferimento.
+>[!NOTE]
+>
+>Se lo schema di origine dispone già di un campo dedicato che si prevede di utilizzare come campo di riferimento, è possibile passare al passaggio relativo alla [creazione di un descrittore](#reference-identity)di riferimento.
 
 ### Creare un nuovo mixin
 
