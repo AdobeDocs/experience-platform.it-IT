@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare lo schema di vendita al dettaglio e il dataset
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Questa esercitazione fornisce i prerequisiti e le risorse richiesti per tutte le
 
 Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prerequisiti:
 - Accesso a [!DNL Adobe Experience Platform]. Se non disponete dell&#39;accesso a un&#39;organizzazione IMS in [!DNL Experience Platform], rivolgetevi all&#39;amministratore di sistema prima di procedere.
-- Autorizzazione per effettuare chiamate [!DNL Experience Platform] API. Completate l&#39;esercitazione [Authenticate e accedete  API](../../tutorials/authentication.md) Adobe Experience Platform per ottenere i seguenti valori al fine di completare con successo l&#39;esercitazione:
+- Autorizzazione per effettuare chiamate [!DNL Experience Platform] API. Completate l&#39;esercitazione [Authenticate e accedete all&#39;esercitazione API](../../tutorials/authentication.md) Adobe Experience Platform per ottenere i seguenti valori al fine di completare con successo l&#39;esercitazione:
    - Autorizzazione: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
    - x-gw-ims-org-id: `{IMS_ORG}`
@@ -98,7 +98,9 @@ Lo schema Vendite al dettaglio e i set di dati vengono creati automaticamente ut
    python bootstrap.py
    ```
 
-   >[!NOTE] Il completamento dello script potrebbe richiedere alcuni minuti.
+   >[!NOTE]
+   >
+   >Il completamento dello script potrebbe richiedere alcuni minuti.
 
 ## Passaggi successivi
 
