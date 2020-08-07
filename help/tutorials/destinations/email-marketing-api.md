@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare destinazioni di e-mail marketing
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: accc94ae8f19ca3a1575b4408f85155a17741335
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1610'
 ht-degree: 1%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 1%
 
 # Creare destinazioni di e-mail marketing e attivare i dati in  Adobe  [!DNL Real-time Customer Data Platform]
 
-Questa esercitazione illustra come utilizzare le chiamate API per collegarsi ai dati del Adobe Experience Platform , creare una destinazione [di marketing](../../rtcdp/destinations/email-marketing-destinations.md)e-mail, creare un flusso di dati per la nuova destinazione creata e attivare i dati per la nuova destinazione creata.
+Questa esercitazione illustra come utilizzare le chiamate API per connettersi ai dati Adobe Experience Platform, creare una destinazione [di marketing per](../../rtcdp/destinations/email-marketing-destinations.md)e-mail, creare un flusso di dati per la nuova destinazione creata e attivare i dati per la nuova destinazione creata.
 
-Questa esercitazione utilizza la destinazione del Adobe Campaign  in tutti gli esempi, ma i passaggi sono identici per tutte le destinazioni di e-mail marketing.
+Questa esercitazione utilizza la  destinazione Adobe Campaign in tutti gli esempi, ma i passaggi sono identici per tutte le destinazioni di e-mail marketing.
 
 ![Panoramica: i passaggi per creare una destinazione e attivare i segmenti](../images/destinations/flow-api-destinations-steps-overview.png)
 
@@ -24,7 +24,7 @@ Se preferite utilizzare l&#39;interfaccia utente in  Adobe  CDP in tempo reale p
 
 ## introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
 * [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] è il sistema di record per la posizione dei dati e la linea all&#39;interno [!DNL Experience Platform].
@@ -55,7 +55,8 @@ Le risorse in [!DNL Experience Platform] possono essere isolate in sandbox virtu
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!Nota]
+>[!NOTE]
+>
 >Per ulteriori informazioni sulle sandbox in [!DNL Experience Platform], consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva per il tipo di supporto:
@@ -123,7 +124,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Risposta**
 
-Una risposta corretta contiene un elenco delle destinazioni disponibili e dei relativi identificatori univoci (`id`). Memorizzate il valore della destinazione che intendete utilizzare, come sarà necessario in ulteriori passaggi. Ad esempio, se desiderate collegare e distribuire i segmenti a  Adobe Campaign, nella risposta cercate il frammento seguente:
+Una risposta corretta contiene un elenco delle destinazioni disponibili e dei relativi identificatori univoci (`id`). Memorizzate il valore della destinazione che intendete utilizzare, come sarà necessario in ulteriori passaggi. Ad esempio, se vuoi connettere e distribuire segmenti a  Adobe Campaign, cerca il frammento seguente nella risposta:
 
 ```json
 {
@@ -517,7 +518,7 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`: Utilizzate il flusso per la destinazione di e-mail marketing a cui desiderate connettervi. Per ottenere la specifica di flusso, eseguire un&#39;operazione di GET sull&#39; `flowspecs` endpoint. Consulta la documentazione Swagger qui: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. Nella risposta, cercate `upsTo` e copiate l&#39;ID corrispondente della destinazione di e-mail marketing a cui desiderate connettervi. Ad esempio,  Adobe Campaign, cercate `upsToCampaign` e copiate il `id` parametro.
+* `{FLOW_SPEC_ID}`: Utilizzate il flusso per la destinazione di e-mail marketing a cui desiderate connettervi. Per ottenere la specifica di flusso, eseguire un&#39;operazione di GET sull&#39; `flowspecs` endpoint. Consulta la documentazione Swagger qui: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. Nella risposta, cercate `upsTo` e copiate l&#39;ID corrispondente della destinazione di e-mail marketing a cui desiderate connettervi. Ad esempio, per  Adobe Campaign, cercate `upsToCampaign` e copiate il `id` parametro.
 * `{SOURCE_CONNECTION_ID}`: Utilizzate l&#39;ID di connessione di origine ottenuto nel passaggio [Connetti al Experience Platform](#connect-to-your-experience-platform-data).
 * `{TARGET_CONNECTION_ID}`: Utilizzate l&#39;ID di connessione di destinazione ottenuto nel passaggio [Connetti alla destinazione](#connect-to-email-marketing-destination)di e-mail marketing.
 
