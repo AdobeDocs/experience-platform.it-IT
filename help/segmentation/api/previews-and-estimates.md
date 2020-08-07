@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Anteprime e endpoint stime
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 2%
@@ -36,13 +36,17 @@ La dimensione del campione della scansione dipende dal numero complessivo di ent
 | Da 1 a 20 milioni | 1 milione |
 | Oltre 20 milioni | 5% del totale |
 
->[!NOTE] Le stime impiegano generalmente dai 10 ai 15 secondi per essere eseguite, a partire da una stima approssimativa e affinando man mano che vengono letti più record.
+>[!NOTE]
+>
+>Le stime impiegano generalmente dai 10 ai 15 secondi per essere eseguite, a partire da una stima approssimativa e affinando man mano che vengono letti più record.
 
 ## Create a new preview {#create-preview}
 
 Potete creare una nuova anteprima effettuando una richiesta di POST all’ `/preview` endpoint.
 
->[!NOTE] Quando viene creato un processo di anteprima, viene creato automaticamente un processo di stima. Questi due processi condividono lo stesso ID.
+>[!NOTE]
+>
+>Quando viene creato un processo di anteprima, viene creato automaticamente un processo di stima. Questi due processi condividono lo stesso ID.
 
 **Formato API**
 
