@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Configurare un flusso di dati per un connettore batch di archiviazione cloud nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: f532bd6393bfad84fa09c2fc753d1d5c5b39d013
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1421'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Un flusso di dati è un&#39;attività pianificata che recupera e trasferisce dat
 
 ## Introduzione
 
-Questa esercitazione richiede una conoscenza approfondita dei seguenti componenti del  Adobe Experience Platform:
+Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [Sistema](../../../../../xdm/home.md)XDM (Experience Data Model): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
    * [Nozioni di base sulla composizione](../../../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
@@ -62,7 +62,7 @@ I formati di file supportati per un account di archiviazione cloud includono anc
 
 ## Mappatura dei campi dati su uno schema XDM
 
-Viene visualizzato il *[!UICONTROL Mapping]* passaggio che fornisce un&#39;interfaccia interattiva per mappare i dati di origine a un [!DNL Platform] dataset. I file sorgente formattati in JSON o Parquet devono essere conformi a XDM e non devono essere configurati manualmente. I file CSV, al contrario, richiedono la configurazione esplicita della mappatura, ma consentono di scegliere quali campi di dati di origine mappare.
+Viene visualizzato il *[!UICONTROL Mapping]* passaggio che fornisce un&#39;interfaccia interattiva per mappare i dati di origine a un [!DNL Platform] dataset. I file di origine formattati in JSON o Parquet devono essere conformi a XDM e non devono essere configurati manualmente. I file CSV, al contrario, richiedono la configurazione esplicita della mappatura, ma consentono di scegliere quali campi di dati di origine mappare.
 
 Scegliere un set di dati in entrata in cui assimilare i dati. È possibile utilizzare un set di dati esistente o crearne uno nuovo.
 
@@ -115,7 +115,9 @@ Specificare i valori per la pianificazione e selezionare **[!UICONTROL Next]**.
 
 Per impostare l’inserimento una tantum, selezionate la freccia a discesa di frequenza e selezionate **[!UICONTROL Once]**. È possibile continuare a apportare modifiche a un set di flussi di dati per l’inserimento di una frequenza una tantum, purché l’ora di inizio rimanga in futuro. Una volta trascorso l’ora di inizio, il valore di frequenza una tantum non può più essere modificato.
 
->[!TIP] **[!UICONTROL Interval]** e non **[!UICONTROL Backfill]** sono visibili durante un&#39;assimilazione una tantum.
+>[!TIP]
+>
+>**[!UICONTROL Interval]** e non **[!UICONTROL Backfill]** sono visibili durante un&#39;assimilazione una tantum.
 
 Dopo aver fornito i valori appropriati alla pianificazione, selezionare **[!UICONTROL Next]**.
 
