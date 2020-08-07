@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creazione e pubblicazione di un modello di machine learning
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 0%
@@ -56,7 +56,7 @@ Per creare un modello di machine learning che fornisca ai clienti raccomandazion
 
 ### Esplorare i dati e comprendere gli schemi
 
-1. Accedete a [Adobe Experience Platform](https://platform.adobe.com/) e fate clic **[!UICONTROL Datasets]** per elencare tutti i set di dati esistenti e selezionate il set di dati da esplorare. In questo caso, il [!DNL Analytics] set di dati **Golden Data Set postValues**.
+1. Accedete ad [Adobe Experience Platform](https://platform.adobe.com/) e fate clic **[!UICONTROL Datasets]** per elencare tutti i set di dati esistenti e selezionate il set di dati da esplorare. In questo caso, il [!DNL Analytics] set di dati **Golden Data Set postValues**.
    ![](../images/models-recipes/model-walkthrough/datasets_110.png)
 2. Seleziona **[!UICONTROL Preview Dataset]** vicino alla parte superiore destra per esaminare i record di esempio, quindi fai clic su **[!UICONTROL Close]**.
    ![](../images/models-recipes/model-walkthrough/golden_data_set_110.png)
@@ -117,7 +117,9 @@ Potete scegliere di attendere il completamento dell’esecuzione della formazion
 
    I parametri ipertestuali non possono essere appresi, pertanto devono essere assegnati prima dell&#39;esecuzione della formazione. La regolazione dei parametri Hyperparameters può modificare la precisione del modello Tradotto. Poiché l&#39;ottimizzazione di un modello è un processo iterativo, prima di ottenere una valutazione soddisfacente possono essere necessarie più esecuzioni di formazione.
 
-   >[!TIP] Impostare **[!UICONTROL num_recommendations]** su 10.
+   >[!TIP]
+   >
+   >Set **[!UICONTROL num_recommendations]** to 10.
 
    ![](../images/models-recipes/model-walkthrough/configure_hyperparameter.png)
 3. Una volta completata la nuova esecuzione della formazione, nel grafico di valutazione dei modelli verrà visualizzato un punto dati aggiuntivo. L&#39;operazione potrebbe richiedere fino a diversi minuti.
@@ -143,7 +145,7 @@ Il passaggio finale del flusso di lavoro di Data Science consiste nell&#39;opera
 2. In alto a destra della pagina dei dettagli dell’esecuzione della formazione, fate clic su **[!UICONTROL Score]**.
 3. Selezionare **[!UICONTROL Recommendations Input Dataset]** come set di dati di input per il punteggio, che è lo stesso set di dati utilizzato al momento della creazione del modello ed esecuzione delle relative esecuzioni di formazione. Then, click **[!UICONTROL Next]**.
    ![](../images/models-recipes/model-walkthrough/scoring_input.png)
-4. Selezionare il set **[!UICONTROL Recommendations Output Dataset]** di dati di output del punteggio. I risultati del punteggio verranno memorizzati in questo dataset come batch.
+4. Selezionare il set **[!UICONTROL Recommendations Output Dataset]** di dati di output per il punteggio. I risultati del punteggio verranno memorizzati in questo dataset come batch.
    ![](../images/models-recipes/model-walkthrough/scoring_output.png)
 5. Esaminare le configurazioni di punteggio. Questi parametri contengono i set di dati di input e output selezionati in precedenza insieme agli schemi appropriati. Fare clic **[!UICONTROL Finish]** per iniziare l&#39;esecuzione del punteggio. L&#39;esecuzione potrebbe richiedere alcuni minuti.
    ![](../images/models-recipes/model-walkthrough/scoring_configure.png)
