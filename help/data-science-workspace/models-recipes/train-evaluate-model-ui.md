@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Formazione e valutazione di un modello (interfaccia utente)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 1214728063c5835510fda1a16bf1fdcca4abee48
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Formazione e valutazione di un modello (interfaccia utente)
 
-In  Adobe Experience Platform Data Science Workspace, un modello di apprendimento automatico viene creato incorporando una Ricetta esistente adatta all&#39;intento del modello. Il modello viene quindi addestrato e valutato per ottimizzare l&#39;efficienza operativa e l&#39;efficacia, affinando i relativi Hyperparameters associati. Le ricette sono riutilizzabili, il che significa che più modelli possono essere creati e personalizzati a scopi specifici con un&#39;unica ricetta.
+In Adobe Experience Platform Data Science Workspace, un modello di apprendimento automatico viene creato incorporando una Ricetta esistente adatta all&#39;intento del modello. Il modello viene quindi addestrato e valutato per ottimizzare l&#39;efficienza operativa e l&#39;efficacia, affinando i relativi Hyperparameters associati. Le ricette sono riutilizzabili, il che significa che più modelli possono essere creati e personalizzati a scopi specifici con un&#39;unica ricetta.
 
 Questa esercitazione descrive i passaggi necessari per creare, formare e valutare un modello.
 
@@ -26,7 +26,7 @@ Questa esercitazione richiede una composizione esistente. Se non disponete di un
 
 ## Creare un modello
 
-1. In  Adobe Experience Platform, fare clic sul **[!UICONTROL Models]** collegamento situato nella colonna di navigazione a sinistra per elencare tutti i modelli esistenti. Fare clic **[!UICONTROL Create Model]** vicino all&#39;angolo superiore destro della pagina per avviare il processo di creazione di un modello.
+1. In Adobe Experience Platform, fare clic sul **[!UICONTROL Models]** collegamento situato nella colonna di navigazione a sinistra per elencare tutti i modelli esistenti. Fare clic **[!UICONTROL Create Model]** vicino all&#39;angolo superiore destro della pagina per avviare il processo di creazione di un modello.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
 2. Sfogliate l&#39;elenco delle ricette esistenti, individuate e selezionate la Ricetta da utilizzare per creare il modello e fate clic **[!UICONTROL Next]**.
@@ -36,13 +36,16 @@ Questa esercitazione richiede una composizione esistente. Se non disponete di un
    ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
 4. Specificare un nome per il modello e rivedere le configurazioni del modello predefinito. Le configurazioni predefinite sono state applicate durante la creazione di ricette, la revisione e la modifica dei valori di configurazione facendo doppio clic sui valori. Per fornire un nuovo set di configurazioni, fai clic **[!UICONTROL Upload New Config]** e trascina nella finestra del browser un file JSON contenente le configurazioni del modello. Fare clic **[!UICONTROL Finish]** per creare il modello.
-   >[!NOTE]Le configurazioni sono univoche e specifiche per la Ricetta prevista, il che significa che le configurazioni per la Ricetta vendite al dettaglio non funzioneranno per la Ricetta Recommendations prodotto. Consulta la sezione di [riferimento](#reference) per un elenco delle configurazioni di Ricetta vendite al dettaglio.
+
+   >[!NOTE]
+   >
+   >Le configurazioni sono univoche e specifiche per la Ricetta prevista, il che significa che le configurazioni per la Ricetta vendite al dettaglio non funzioneranno per la Ricetta Recommendations prodotto. Consulta la sezione di [riferimento](#reference) per un elenco delle configurazioni di Ricetta vendite al dettaglio.
 
    ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
 ## Creazione di un&#39;esecuzione di formazione
 
-1. In  Adobe Experience Platform, fare clic sul **[!UICONTROL Models]** collegamento situato nella colonna di navigazione a sinistra per elencare tutti i modelli esistenti. Trovare e fare clic sul nome del modello da addestrare.
+1. In Adobe Experience Platform, fare clic sul **[!UICONTROL Models]** collegamento situato nella colonna di navigazione a sinistra per elencare tutti i modelli esistenti. Trovare e fare clic sul nome del modello da addestrare.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
 2. Vengono elencate tutte le esecuzioni di formazione esistenti con i rispettivi stati di formazione correnti. Per i modelli creati utilizzando l&#39;interfaccia [!DNL Data Science Workspace] utente, un&#39;esecuzione di formazione viene generata automaticamente e eseguita utilizzando le configurazioni predefinite e il dataset di formazione di input.
@@ -55,13 +58,16 @@ Questa esercitazione richiede una composizione esistente. Se non disponete di un
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 5. Le configurazioni predefinite fornite durante la creazione del modello vengono visualizzate, modificate e modificate di conseguenza facendo doppio clic sui valori. Fate clic **[!UICONTROL Finish]** per creare ed eseguire l&#39;esecuzione della formazione.
-   >[!NOTE]Le configurazioni sono univoche e specifiche per la Ricetta prevista, il che significa che le configurazioni per la Ricetta vendite al dettaglio non funzioneranno per la Ricetta Recommendations prodotto. Consulta la sezione di [riferimento](#reference) per un elenco delle configurazioni di Ricetta vendite al dettaglio.
+
+   >[!NOTE]
+   >
+   >Le configurazioni sono univoche e specifiche per la Ricetta prevista, il che significa che le configurazioni per la Ricetta vendite al dettaglio non funzioneranno per la Ricetta Recommendations prodotto. Consulta la sezione di [riferimento](#reference) per un elenco delle configurazioni di Ricetta vendite al dettaglio.
 
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 ## Valutazione del modello
 
-1. In  Adobe Experience Platform, fare clic sul **[!UICONTROL Models]** collegamento situato nella colonna di navigazione a sinistra per elencare tutti i modelli esistenti. Individuare e fare clic sul nome del modello da valutare.
+1. In Adobe Experience Platform, fare clic sul **[!UICONTROL Models]** collegamento situato nella colonna di navigazione a sinistra per elencare tutti i modelli esistenti. Individuare e fare clic sul nome del modello da valutare.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
 2. Vengono elencate tutte le esecuzioni di formazione esistenti con i rispettivi stati di formazione correnti. Con più esecuzioni di formazione completate, le metriche di valutazione possono essere confrontate tra diverse esecuzioni di formazione nel grafico di valutazione del modello, selezionate una metrica di valutazione utilizzando l&#39;elenco a discesa sopra il grafico.
