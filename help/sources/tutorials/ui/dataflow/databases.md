@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Configurare un flusso di dati per un connettore di database nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 91714bea4e165d64bcc33e32e73d1d32a505ba00
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1167'
 ht-degree: 0%
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Configurare un flusso di dati per un connettore di database nell&#39;interfaccia utente
 
-Un flusso di dati è un&#39;attività pianificata che recupera e trasferisce dati da un&#39;origine a un set di dati Platform. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l&#39;account del database.
+Un flusso di dati è un&#39;attività pianificata che recupera e trasferisce dati da un&#39;origine a un set di dati della piattaforma. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l&#39;account del database.
 
 ## Introduzione
 
-Questa esercitazione richiede una conoscenza approfondita dei seguenti componenti del  Adobe Experience Platform:
+Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 - [Sistema](../../../../xdm/home.md)XDM (Experience Data Model): Il framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
    - [Nozioni di base sulla composizione](../../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
@@ -40,7 +40,7 @@ Selezionate il database da utilizzare, quindi fate clic su **[!UICONTROL Next]**
 
 ## Mappatura dei campi dati su uno schema XDM
 
-Viene visualizzato il passaggio *Mapping* , che fornisce un&#39;interfaccia interattiva per mappare i dati di origine a un set di dati Platform.
+Viene visualizzato il passaggio *Mapping* , che fornisce un&#39;interfaccia interattiva per mappare i dati di origine a un set di dati della piattaforma.
 
 Scegliere un set di dati in entrata in cui assimilare i dati. È possibile utilizzare un set di dati esistente o crearne uno nuovo.
 
@@ -96,7 +96,9 @@ Selezionare **[!UICONTROL Load incremental data by]** per assegnare la colonna d
 
 Per impostare l’inserimento una tantum, selezionate la freccia a discesa di frequenza e selezionate **[!UICONTROL Once]**.
 
->[!TIP] **[!UICONTROL Interval]** e non **[!UICONTROL Backfill]** sono visibili durante un&#39;assimilazione una tantum.
+>[!TIP]
+>
+>**[!UICONTROL Interval]** e non **[!UICONTROL Backfill]** sono visibili durante un&#39;assimilazione una tantum.
 
 Dopo aver fornito i valori appropriati alla pianificazione, selezionare **[!UICONTROL Next]**.
 
@@ -131,7 +133,7 @@ Una volta creato il flusso di dati, potete monitorare i dati che vengono acquisi
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, è stato creato un flusso di dati per inserire i dati da un database esterno e ottenere informazioni dettagliate sul monitoraggio dei set di dati. I dati in entrata possono ora essere utilizzati dai servizi Platform a valle, come Profilo cliente in tempo reale e Data Science Workspace. Per ulteriori informazioni, consulta i documenti seguenti:
+Seguendo questa esercitazione, è stato creato un flusso di dati per inserire i dati da un database esterno e ottenere informazioni dettagliate sul monitoraggio dei set di dati. I dati in entrata possono ora essere utilizzati dai servizi della piattaforma a valle, come Profilo cliente in tempo reale e Data Science Workspace. Per ulteriori informazioni, consulta i documenti seguenti:
 
 - [Panoramica del profilo cliente in tempo reale](../../../../profile/home.md)
 - [Panoramica di Analysis Workspace](../../../../data-science-workspace/home.md)
