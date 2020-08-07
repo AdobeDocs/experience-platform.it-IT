@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Processi di esportazione - API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: 2c0466bf0534d09e3cad54caef213def122d948b
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1494'
 ht-degree: 2%
@@ -20,7 +20,7 @@ Questo documento fornisce istruzioni dettagliate per la creazione e la gestione 
 
 >[!NOTE]
 >
->Questa guida descrive l’utilizzo dei processi di esportazione nel [!DNL Profile API]. Per informazioni su come gestire i processi di esportazione per  Adobe Experience Platform Segmentation Service, consulta la guida sui processi di [esportazione nell’API](../../profile/api/export-jobs.md)Segmentazione.
+>Questa guida descrive l’utilizzo dei processi di esportazione nel [!DNL Profile API]. Per informazioni su come gestire i processi di esportazione per Adobe Experience Platform Segmentation Service, consulta la guida sui processi di [esportazione nell’API](../../profile/api/export-jobs.md)di segmentazione.
 
 Oltre a creare un processo di esportazione, potete accedere ai [!DNL Profile] dati anche utilizzando l’ `/entities` endpoint, detto anche &quot;[!DNL Profile Access]&quot;. Per ulteriori informazioni, consultate la guida [all&#39;endpoint](./entities.md) entità. Per i passaggi su come accedere ai [!DNL Profile] dati utilizzando l&#39;interfaccia utente, fare riferimento alla guida [](../ui/user-guide.md)utente.
 
@@ -146,7 +146,9 @@ curl -X POST \
 | `destination` | **(Obbligatorio)** Informazioni sulla destinazione per i dati esportati:<ul><li>`destination.datasetId`: **(Obbligatorio)** L&#39;ID del set di dati in cui devono essere esportati i dati.</li><li>`destination.segmentPerBatch`: *(Facoltativo)* Un valore booleano che, se non viene fornito, utilizza per impostazione predefinita `false`. Un valore di `false` esporta tutti gli ID segmento in un unico ID batch. Un valore di `true` esportazione consente di esportare un ID segmento in un ID batch. Tenete presente che l’impostazione del valore da assegnare `true` può influire sulle prestazioni di esportazione batch.</li></ul> |
 | `schema.name` | **(Obbligatorio)** Il nome dello schema associato al dataset in cui devono essere esportati i dati. |
 
->[!NOTE] Per esportare solo i dati del profilo e non includere i dati relativi alle serie temporali, rimuovere l&#39;oggetto &quot;AdditionalFields&quot; dalla richiesta.
+>[!NOTE]
+>
+>Per esportare solo i dati del profilo e non includere i dati relativi alle serie temporali, rimuovere l&#39;oggetto &quot;AdditionalFields&quot; dalla richiesta.
 
 **Risposta**
 
@@ -441,7 +443,7 @@ Una volta completata l&#39;esportazione, i dati sono disponibili all&#39;interno
 
 Per istruzioni dettagliate su come utilizzare l&#39;API di accesso ai dati per accedere e scaricare file batch, segui l&#39;esercitazione [sull&#39;accesso ai](../../data-access/tutorials/dataset-data.md)dati.
 
-Potete inoltre accedere ai dati del profilo cliente in tempo reale esportati correttamente utilizzando  Adobe Experience Platform Query Service. Utilizzando l&#39;interfaccia utente o l&#39;API RESTful, Query Service consente di scrivere, convalidare ed eseguire query sui dati all&#39;interno del Data Lake.
+È inoltre possibile accedere ai dati del profilo cliente in tempo reale esportati correttamente tramite Adobe Experience Platform Query Service. Utilizzando l&#39;interfaccia utente o l&#39;API RESTful, Query Service consente di scrivere, convalidare ed eseguire query sui dati all&#39;interno del Data Lake.
 
 Per ulteriori informazioni su come eseguire query sui dati del pubblico, consulta la documentazione [del servizio](../../query-service/home.md)Query.
 
