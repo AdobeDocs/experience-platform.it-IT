@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Configurare un flusso di dati per un connettore di pagamento nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 91714bea4e165d64bcc33e32e73d1d32a505ba00
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1165'
 ht-degree: 0%
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Configurare un flusso di dati per un connettore di pagamento nell&#39;interfaccia utente
 
-Un flusso di dati è un&#39;attività pianificata che recupera e assimila dati da un&#39;origine a un set di dati di Adobe Experience Platform . Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando il tuo account di pagamento.
+Un flusso di dati è un&#39;attività pianificata che recupera e trasferisce dati da un&#39;origine a un set di dati Adobe Experience Platform. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando il tuo account di pagamento.
 
 ## Introduzione
 
-Questa esercitazione richiede una conoscenza approfondita dei seguenti componenti del  Adobe Experience Platform:
+Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 - [Sistema](../../../../xdm/home.md)XDM (Experience Data Model): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
    - [Nozioni di base sulla composizione](../../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
@@ -96,7 +96,9 @@ Selezionare **[!UICONTROL Load incremental data by]** per assegnare la colonna d
 
 Per impostare l’inserimento una tantum, selezionate la freccia a discesa di frequenza e selezionate **[!UICONTROL Once]**.
 
->[!TIP] **[!UICONTROL Interval]** e non **[!UICONTROL Backfill]** sono visibili durante un&#39;assimilazione una tantum.
+>[!TIP]
+>
+>**[!UICONTROL Interval]** e non **[!UICONTROL Backfill]** sono visibili durante un&#39;assimilazione una tantum.
 
 Dopo aver fornito i valori appropriati alla pianificazione, selezionare **[!UICONTROL Next]**.
 
