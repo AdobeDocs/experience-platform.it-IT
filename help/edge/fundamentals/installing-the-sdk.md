@@ -1,12 +1,12 @@
 ---
-title: 'Installazione dell’SDK Web per il Adobe Experience Platform '
-seo-title: ' Adobe Experience Platform SDK Web per l''installazione dell''SDK'
+title: Installazione di Adobe Experience Platform Web SDK
+seo-title: Adobe Experience Platform Web SDK installazione dell'SDK
 description: 'Scopri come installare l’SDK Web per Experienci Platform '
 seo-description: 'Scopri come installare l’SDK Web per Experienci Platform '
 translation-type: tm+mt
-source-git-commit: c5afced244c661b0ec0bcf0109191a2dacf886aa
+source-git-commit: 12cbcc26956cba2e14d64734c9210fa79bcc70b9
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '623'
 ht-degree: 1%
 
 ---
@@ -14,14 +14,20 @@ ht-degree: 1%
 
 # Installazione dell’SDK {#installing-the-sdk}
 
-Il Adobe Experience Platform  [!DNL Web SDK] è disponibile su una rete CDN (content delivery network, rete di distribuzione dei contenuti) da usare. È possibile fare riferimento a questo file o scaricarlo e ospitarlo nella propria infrastruttura. È disponibile in una versione ridotta e non minificata. La versione non limitata è utile per il debug.
+Il modo migliore per utilizzare Adobe Experience Platform Web SDK è tramite [Launch](http://launch.adobe.com/). Cercate l&#39;estensione `AEP Web SDK` nel catalogo delle estensioni, installatela e configuratela.
 
-* Versione ridotta: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
-* Versione non limitata: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
+L’SDK Web AEP è disponibile anche su una rete CDN da usare. È possibile fare riferimento a questo file o scaricarlo e ospitarlo nella propria infrastruttura. È disponibile in una versione ridotta e non minificata. La versione non limitata è utile per il debug.
+
+Struttura URL: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OR alloy.js per la versione non minificata.
+
+Ad esempio:
+
+* Ridotto: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
+* Non ridotto: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
 
 ## Aggiunta del codice {#adding-the-code}
 
-Il primo passaggio nell’implementazione del Adobe Experience Platform  [!DNL Web SDK] consiste nel copiare e incollare il seguente &quot;codice di base&quot; il più in alto possibile nel `<head>` tag del codice HTML:
+Il primo passaggio nell’implementazione di Adobe Experience Platform [!DNL Web SDK] consiste nel copiare e incollare il seguente &quot;codice di base&quot; il più in alto possibile nel `<head>` tag del codice HTML:
 
 ```markup
 <script>
