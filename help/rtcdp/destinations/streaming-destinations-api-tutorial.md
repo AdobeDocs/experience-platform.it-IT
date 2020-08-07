@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Connessione alle destinazioni di streaming e attivazione dei dati
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: dce9a7040ad25d5bb08de95fce7655f1fec7c226
 workflow-type: tm+mt
-source-wordcount: '1807'
+source-wordcount: '1806'
 ht-degree: 2%
 
 ---
 
 
-# Connessione alle destinazioni di streaming e attivazione dei dati in  Adobe  Platform Dati cliente in tempo reale tramite API
+# Connessione alle destinazioni di streaming e attivazione dei dati in  Adobe  Piattaforma dati cliente in tempo reale mediante API
 
 >[!NOTE]
 >
 >Le [!DNL Amazon Kinesis] destinazioni e [!DNL Azure Event Hubs] le destinazioni in CDP in tempo reale  Adobe sono attualmente in versione beta. La documentazione e la funzionalità sono soggette a modifiche.
 
-Questa esercitazione illustra come utilizzare le chiamate API per connettersi ai dati del Adobe Experience Platform , creare una connessione a una destinazione di archiviazione cloud in streaming ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) o [Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), creare un flusso di dati per la nuova destinazione creata e attivare i dati per la nuova destinazione creata.
+Questa esercitazione illustra come utilizzare le chiamate API per connettersi ai dati Adobe Experience Platform, creare una connessione a una destinazione di archiviazione cloud in streaming ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) o [Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), creare un flusso di dati per la nuova destinazione creata e attivare i dati per la nuova destinazione creata.
 
 Questa esercitazione utilizza la [!DNL Amazon Kinesis] destinazione in tutti gli esempi, ma i passaggi sono identici per [!DNL Azure Event Hubs].
 
@@ -28,11 +28,11 @@ Se preferite utilizzare l&#39;interfaccia utente in  Adobe  CDP in tempo reale p
 
 ## introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Il framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
 * [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] è il sistema di record per la posizione dei dati e la linea all&#39;interno  Experience Platform.
-* [Sandbox](../../sandboxes/home.md):  Experience Platform fornisce sandbox virtuali che dividono una singola istanza di Platform in ambienti virtuali separati per contribuire allo sviluppo e all&#39;evoluzione di applicazioni per esperienze digitali.
+* [Sandbox](../../sandboxes/home.md):  Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per attivare i dati sulle destinazioni di streaming nel CDP in tempo reale  Adobe.
 
@@ -49,17 +49,18 @@ Questa esercitazione fornisce esempi di chiamate API per dimostrare come formatt
 
 ### Raccogli i valori delle intestazioni obbligatorie e facoltative {#gather-values}
 
-Per effettuare chiamate alle API Platform, è prima necessario completare l&#39;esercitazione [di](/help/tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API di Experience Platform, come illustrato di seguito:
+Per effettuare chiamate alle API della piattaforma, dovete prima completare l&#39;esercitazione [di](/help/tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API di Experience Platform, come illustrato di seguito:
 
 * Autorizzazione: Portatore `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Le risorse in  Experience Platform possono essere isolate in sandbox virtuali specifiche. Nelle richieste alle API Platform, potete specificare il nome e l&#39;ID della sandbox in cui avrà luogo l&#39;operazione. Questi sono parametri facoltativi.
+Le risorse in  Experience Platform possono essere isolate in sandbox virtuali specifiche. Nelle richieste alle API della piattaforma, potete specificare il nome e l&#39;ID della sandbox in cui avrà luogo l&#39;operazione. Questi sono parametri facoltativi.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!Nota]
+>[!NOTE]
+>
 >Per ulteriori informazioni sulle sandbox in  Experience Platform, consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva per il tipo di supporto:
