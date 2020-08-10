@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segmentazione in streaming
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: ab43c677ab45c7aa047a50049c0dd8613b003403
+source-git-commit: 2adadad855edd01436a6961cc9be3e58e6483732
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '656'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,7 @@ Una query verrà valutata automaticamente con segmentazione in streaming se sodd
 | ---------- | ------- | ------- |
 | hit in ingresso | Definizione di segmento che fa riferimento a un singolo evento in arrivo senza limitazioni temporali. | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
 | Hit in arrivo all’interno di una finestra temporale relativa | Definizione di segmento che fa riferimento a un singolo evento in arrivo **negli ultimi sette giorni**. | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| Solo profilo | Definizione di segmento che fa riferimento solo a un attributo di profilo. |  |
 | Hit in arrivo che fa riferimento a un profilo | Definizione di segmento che fa riferimento a un singolo evento in arrivo, senza limitazioni temporali, e uno o più attributi di profilo. | ![](../images/ui/streaming-segmentation/profile-hit.png) |
 | Hit in arrivo che fa riferimento a un profilo all’interno di una finestra temporale relativa | Definizione di segmento che fa riferimento a un singolo evento in arrivo e a uno o più attributi di profilo, **negli ultimi sette giorni**. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
 | Più eventi che fanno riferimento a un profilo | Qualsiasi definizione di segmento che fa riferimento a più eventi **nelle ultime 24 ore** e (facoltativamente) ha uno o più attributi di profilo. | ![](../images/ui/streaming-segmentation/event-history-success.png) |
