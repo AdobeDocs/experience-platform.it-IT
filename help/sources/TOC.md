@@ -1,11 +1,11 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: ' Guida dei connettori di origine Adobe Experience Platform'
+user-guide-title: Guida di Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: 03fd716d6f743d839bc24ff99660efdf47b187a0
+source-git-commit: 23653949cd16e9d4ee8c3f345cbee74f147263cd
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 0%
 - [Panoramica sui connettori sorgente](home.md)
 - Connettori sorgente disponibili {#connectors}
    -  applicazioni Adobe {#adobe-applications}
-      - [Connettore dati  Analytics](connectors/adobe-applications/analytics.md)
+      - [Connettore dati di Analytics](connectors/adobe-applications/analytics.md)
       - [Connettore Audience Manager](connectors/adobe-applications/audience-manager.md)
       - [Connettore attributi cliente](connectors/adobe-applications/customer-attributes.md)
       - Mappatura  campi applicazione Adobe {#mapping}
-         - [campi di mappatura Analytics](connectors/adobe-applications/mapping/analytics.md)
+         - [Campi di mappatura di Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [campi di mappatura Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Campi di mappatura di destinazione](connectors/adobe-applications/mapping/target.md)
    - Pubblicità {#advertising}
@@ -45,7 +45,7 @@ ht-degree: 0%
       - [Apache Hive sul connettore Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark sul connettore Azure HDInsights](connectors/databases/spark.md)
       - [Connettore di Data Explorer Azure](connectors/databases/data-explorer.md)
-      - [Connettore  Analytics Azure Synapse](connectors/databases/synapse-analytics.md)
+      - [Connettore Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
       - [Connettore archiviazione tabella Azure](connectors/databases/ats.md)
       - [Connettore Couchbase](connectors/databases/couchbase.md)
       - [Connettore Google BigQuery](connectors/databases/bigquery.md)
@@ -90,7 +90,7 @@ ht-degree: 0%
          - [Apache Hive sul connettore Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark sul connettore Azure HDInsights](tutorials/api/create/databases/spark.md)
          - [Connettore di Data Explorer Azure](tutorials/api/create/databases/data-explorer.md)
-         - [Connettore  Analytics Azure Synapse](tutorials/api/create/databases/synapse-analytics.md)
+         - [Connettore Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Connettore archiviazione tabella Azure](tutorials/api/create/databases/ats.md)
          - [Connettore Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Connettore Google BigQuery](tutorials/api/create/databases/bigquery.md)
@@ -157,7 +157,7 @@ ht-degree: 0%
          - [Apache Hive sul connettore Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark sul connettore Azure HDInsights](tutorials/ui/create/databases/spark.md)
          - [Connettore di Data Explorer Azure](tutorials/ui/create/databases/data-explorer.md)
-         - [Connettore  Analytics Azure Synapse](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Connettore Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Connettore archiviazione tabella Azure](tutorials/ui/create/databases/ats.md)
          - [Connettore Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Connettore Google Big Query](tutorials/ui/create/databases/bigquery.md)
@@ -187,5 +187,6 @@ ht-degree: 0%
       - [Configurare un flusso di dati per un connettore pagamenti](tutorials/ui/dataflow/payments.md)
       - [Configurare un flusso di dati per un connettore di protocollo](tutorials/ui/dataflow/protocols.md)
    - [Attivare i dati in entrata per compilare i profili cliente](tutorials/ui/profile.md)
-   - [Monitorare gli account e i flussi di dati](tutorials/ui/monitor.md)
-- [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
+   - [Monitorare account e flussi di dati](tutorials/ui/monitor.md)
+   - [Eliminare i flussi di dati](tutorials/ui/delete.md)
+- [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-en)
