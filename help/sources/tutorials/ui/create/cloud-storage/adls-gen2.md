@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare un connettore di origine Azure Data Lake Storage Gen2 nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '472'
 ht-degree: 1%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # Creare un connettore [!DNL Azure Data Lake Storage Gen2] sorgente nell’interfaccia utente
 
-I connettori di origine in  Adobe Experience Platform consentono di trasferire i dati esternamente originati su base programmata. Questa esercitazione fornisce i passaggi per l&#39;autenticazione di un connettore sorgente [!DNL Azure Data Lake Storage Gen2] (in seguito denominato &quot;ADLS Gen2&quot;) tramite l&#39;interfaccia [!DNL Platform] utente.
+I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente originati su base programmata. Questa esercitazione fornisce i passaggi per l&#39;autenticazione di un connettore sorgente [!DNL Azure Data Lake Storage Gen2] (in seguito denominato &quot;ADLS Gen2&quot;) tramite l&#39;interfaccia [!DNL Platform] utente.
 
 ## Introduzione
 
-Questa esercitazione richiede una conoscenza approfondita dei seguenti componenti del  Adobe Experience Platform:
+Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 - [Sistema](../../../../../xdm/home.md)XDM (Experience Data Model): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
    - [Nozioni di base sulla composizione](../../../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
@@ -44,9 +44,9 @@ Per ulteriori informazioni su questi valori, consultare [questo documento](https
 
 Dopo aver raccolto le credenziali richieste, è possibile seguire i passaggi descritti di seguito per creare una nuova connessione di base in ingresso per collegare il proprio account ADLS Gen2 a [!DNL Platform].
 
-Accedete a <a href="https://platform.adobe.com" target="_blank">Adobe [!DNL Experience Platform]</a> e selezionate **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39; *[!UICONTROL Sources]* area di lavoro. Nella *[!UICONTROL Catalog]* scheda sono visualizzate diverse origini per le quali è possibile creare connessioni di base in ingresso. Ogni origine mostra il numero di connessioni di base esistenti ad esse associate.
+Accedete ad [Adobe Experience Platform](https://platform.adobe.com) , quindi selezionate **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39; *[!UICONTROL Sources]* area di lavoro. Nella *[!UICONTROL Catalog]* scheda sono visualizzate diverse origini per le quali è possibile creare connessioni di base in ingresso. Ogni origine mostra il numero di connessioni di base esistenti ad esse associate.
 
-Sotto la *[!UICONTROL Cloud Storage]* categoria, selezionate **[!UICONTROL Azure Data Lake Gen2]** per esporre una barra delle informazioni sul lato destro dello schermo. La barra delle informazioni fornisce una breve descrizione della sorgente selezionata e le opzioni per collegarsi con la vista sorgente della relativa documentazione. Per creare una nuova connessione di base in entrata, fare clic su **[!UICONTROL Connect source]**.
+Sotto la *[!UICONTROL Cloud Storage]* categoria, selezionate **[!UICONTROL Azure Data Lake Gen2]** per esporre una barra delle informazioni sul lato destro dello schermo. La barra delle informazioni fornisce una breve descrizione della sorgente selezionata e le opzioni per collegarsi con la vista sorgente della relativa documentazione. Per creare una nuova connessione di base in entrata, fare clic su **[!UICONTROL Add data]**.
 
 ![](../../../../images/tutorials/create/adls-gen2/catalog.png)
 
@@ -66,4 +66,4 @@ Per collegare un account esistente, selezionare l&#39;account ADLS Gen2 con cui 
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, è stata stabilita una connessione di base all&#39;account ADLS Gen2. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per trasferire i dati dall’archiviazione cloud ad Platform](../../dataflow/batch/cloud-storage.md).
+Seguendo questa esercitazione, è stata stabilita una connessione di base all&#39;account ADLS Gen2. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per trasferire i dati dall’archiviazione cloud alla piattaforma](../../dataflow/batch/cloud-storage.md).
