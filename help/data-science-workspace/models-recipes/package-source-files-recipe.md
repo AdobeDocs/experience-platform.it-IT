@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare pacchetti di file sorgente in una ricetta
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 45461e3420f3b7e227f80fe775d80b8442a1069c
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
 source-wordcount: '1087'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Creare pacchetti di file sorgente in una ricetta
 
-Questa esercitazione fornisce istruzioni su come creare pacchetti di file sorgente di esempio Vendite al dettaglio forniti in un file di archivio, che può essere utilizzato per creare una ricetta in  Adobe Experience Platform [!DNL Data Science Workspace] seguendo il flusso di lavoro di importazione delle ricette nell&#39;interfaccia utente o utilizzando l&#39;API.
+Questa esercitazione fornisce istruzioni su come creare pacchetti di file sorgente di esempio per le vendite al dettaglio in un file di archivio, che può essere utilizzato per creare una ricetta in Adobe Experience Platform [!DNL Data Science Workspace] seguendo il flusso di lavoro di importazione delle ricette nell&#39;interfaccia utente o utilizzando l&#39;API.
 
 Concetti da comprendere:
 
@@ -38,7 +38,7 @@ Un&#39;immagine Docker consente a uno sviluppatore di creare un pacchetto con tu
 
 L&#39;immagine Docker predefinita viene inviata al Registro di sistema del contenitore di Azure utilizzando le credenziali fornite durante il flusso di lavoro di creazione della ricetta.
 
-Per ottenere le credenziali del Registro di sistema del contenitore di Azure, accedere al <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>. Nella colonna di navigazione a sinistra, andate a **[!UICONTROL Workflows]**. Selezionate **[!UICONTROL Import Recipe]** seguito da **[!UICONTROL Launch]**. Per riferimento, vedere la schermata sottostante.
+Per ottenere le credenziali del Registro di sistema del contenitore di Azure, accedere ad [Adobe Experience Platform](https://platform.adobe.com). Nella colonna di navigazione a sinistra, andate a **[!UICONTROL Workflows]**. Selezionate **[!UICONTROL Import Recipe]** seguito da **[!UICONTROL Launch]**. Per riferimento, vedere la schermata sottostante.
 
 ![](../images/models-recipes/package-source-files/import.png)
 
