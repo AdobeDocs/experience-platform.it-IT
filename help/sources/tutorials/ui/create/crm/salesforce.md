@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare un connettore sorgente Salesforce nell’interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '436'
 ht-degree: 1%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # Creare un connettore [!DNL Salesforce] sorgente nell’interfaccia utente
 
-I connettori di origine in  Adobe Experience Platform consentono di acquisire dati CRM esternamente originati su base programmata. Questa esercitazione fornisce i passaggi necessari per creare un connettore [!DNL Salesforce] sorgente utilizzando l&#39;interfaccia [!DNL Platform] utente.
+I connettori di origine in Adobe Experience Platform consentono di trasferire i dati CRM di origine esterna su base programmata. Questa esercitazione fornisce i passaggi necessari per creare un connettore [!DNL Salesforce] sorgente utilizzando l&#39;interfaccia [!DNL Platform] utente.
 
 ## Introduzione
 
-Questa esercitazione richiede una conoscenza approfondita dei seguenti componenti del  Adobe Experience Platform:
+Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [Sistema](../../../../../xdm/home.md)XDM (Experience Data Model): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
    * [Nozioni di base sulla composizione](../../../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
@@ -42,11 +42,11 @@ Per ulteriori informazioni su come iniziare, consulta [questo documento](https:/
 
 Dopo aver raccolto le credenziali necessarie, potete seguire i passaggi descritti di seguito per creare un nuovo [!DNL Salesforce] account a cui collegarvi [!DNL Platform].
 
-Accedete a [Adobe Experience Platform](https://platform.adobe.com) , quindi selezionate **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39; *[!UICONTROL Sources]* area di lavoro. Nella *[!UICONTROL Catalog]* schermata sono visualizzate diverse origini con le quali è possibile creare un account in entrata e ogni origine mostra il numero di account e flussi di dati esistenti associati a tali account.
+Accedete ad [Adobe Experience Platform](https://platform.adobe.com) , quindi selezionate **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39; *[!UICONTROL Sources]* area di lavoro. Nella *[!UICONTROL Catalog]* schermata sono visualizzate diverse origini con le quali è possibile creare un account in entrata e ogni origine mostra il numero di account e flussi di dati esistenti associati a tali account.
 
 Potete selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l&#39;origine specifica con cui si desidera lavorare utilizzando l&#39;opzione di ricerca.
 
-Sotto la *[!UICONTROL Databases]* categoria, seleziona **[!UICONTROL Salesforce]** fai clic **sull&#39;icona + (+)** per creare un nuovo connettore Salesforce.
+Sotto la *[!UICONTROL Databases]* categoria, selezionare **[!UICONTROL Salesforce]** seguito da **[!UICONTROL Add data]** per creare un nuovo connettore Salesforce.
 
 ![catalogo](../../../../images/tutorials/create/salesforce/catalog.png)
 
@@ -66,4 +66,4 @@ Per collegare un account esistente, selezionate l&#39; [!DNL Salesforce] account
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, è stata stabilita una connessione all&#39; [!DNL Salesforce] account. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per l’inserimento di dati in Platform](../../dataflow/crm.md).
+Seguendo questa esercitazione, è stata stabilita una connessione all&#39; [!DNL Salesforce] account. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per l’inserimento di dati nella piattaforma](../../dataflow/crm.md).
