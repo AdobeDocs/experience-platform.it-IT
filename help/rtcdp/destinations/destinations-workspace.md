@@ -1,12 +1,12 @@
 ---
 title: Area di lavoro Destinazioni
 seo-title: Area di lavoro Destinazioni
-description: In  Adobe Platform Dati cliente in tempo reale, seleziona Destinazioni dalla barra di navigazione a sinistra per accedere all'area di lavoro delle destinazioni.
-seo-description: In  Adobe Platform Dati cliente in tempo reale, seleziona Destinazioni dalla barra di navigazione a sinistra per accedere all'area di lavoro delle destinazioni.
+description: In  Adobe Piattaforma dati cliente in tempo reale, seleziona Destinazioni dalla barra di navigazione a sinistra per accedere all'area di lavoro delle destinazioni.
+seo-description: In  Adobe Piattaforma dati cliente in tempo reale, seleziona Destinazioni dalla barra di navigazione a sinistra per accedere all'area di lavoro delle destinazioni.
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: f3e489416a9bc80cfb0502d3973a86748123a687
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '746'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Area di lavoro Destinazioni {#destinations-workspace}
 
-In  Adobe Platform Dati cliente in tempo reale, selezionate **[!UICONTROL Destinations]** dalla barra di navigazione a sinistra per accedere all&#39; [!UICONTROL Destinations] area di lavoro.
+In  Adobe Piattaforma dati cliente in tempo reale, selezionate **[!UICONTROL Destinations]** dalla barra di navigazione a sinistra per accedere all&#39; [!UICONTROL Destinations] area di lavoro.
 
 L’ [!UICONTROL Destinations] area di lavoro è composta da quattro sezioni, **[!UICONTROL Catalog]**, **[!UICONTROL Browse]**, **[!UICONTROL Accounts]** e **[!UICONTROL System View]**, descritte nelle sezioni seguenti.
 
@@ -22,15 +22,34 @@ L’ [!UICONTROL Destinations] area di lavoro è composta da quattro sezioni, **
 
 ## [!UICONTROL Catalog] {#catalog}
 
-Nella **[!UICONTROL Catalog]** scheda viene visualizzato un elenco di tutte le destinazioni offerte  Adobe, a cui è possibile inviare i dati.
+Nella **[!UICONTROL Catalog]** scheda viene visualizzato un elenco di tutte le destinazioni disponibili in CDP in tempo reale  Adobe a cui è possibile inviare i dati.
 
-Utilizzate la funzionalità di ricerca nella pagina per individuare una destinazione o destinazioni di filtro specifiche utilizzando il **[!UICONTROL Categories]** controllo.
+L’interfaccia utente CDP in tempo reale del Adobe  fornisce una serie di opzioni di ricerca e filtro nella pagina del catalogo delle destinazioni:
 
-Selezionate una destinazione nel catalogo per aprire la barra laterale destra. In questa scheda è possibile impostare una connessione alla destinazione (**[!UICONTROL Connect destination]**), visualizzare le connessioni di destinazione esistenti (**[!UICONTROL Browse destinations]**) o ottenere informazioni più dettagliate su ciascuna destinazione visualizzando la documentazione (**[!UICONTROL View documentation]**).
+* Utilizzate la funzionalità di ricerca sulla pagina per individuare una destinazione specifica.
+* Filtrare le destinazioni utilizzando il **[!UICONTROL Categories]** controllo.
+* Passa da **[!UICONTROL All destinations]** a **[!UICONTROL My destinations]**. Quando **[!UICONTROL All destinations]** è selezionato, vengono visualizzate tutte le destinazioni CDP in tempo reale  Adobe disponibili. Quando **[!UICONTROL My destinations]** è selezionata, è possibile visualizzare solo le destinazioni con le quali è stata stabilita una connessione.
+* Selezionare per visualizzare **[!UICONTROL Connections]** e/o **[!UICONTROL Extensions]**. Per comprendere la differenza tra le due categorie, vedere Tipi di [destinazione e categorie](/help/rtcdp/destinations/destination-types.md).
 
-![Opzioni del catalogo di destinazione](/help/rtcdp/destinations/assets/destination-ui-catalog-options.png)
+![demo di filtraggio delle destinazioni e ricerca](/help/rtcdp/destinations/assets/destinations-search-and-filter.gif)
 
-Per ulteriori informazioni sulle categorie di destinazione e informazioni su ciascuna destinazione, consulta Catalogo [](/help/rtcdp/destinations/destinations-catalog.md)di destinazione.
+Le schede di destinazione contengono un controllo **[!UICONTROL Configure]** o un **[!UICONTROL Activate]** controllo secondario che consente di visualizzare più opzioni. Sono descritti di seguito:
+
+| Control | Descrizione |
+---------|----------
+| [!UICONTROL Configure] | Consente di creare una connessione alla destinazione. |
+| [!UICONTROL Activate] | Una volta stabilita una connessione alla destinazione, puoi attivare i segmenti. |
+| [!UICONTROL View account] | Visualizza gli account che hai connesso per una destinazione. |
+| [!UICONTROL View dataflows] | Visualizzare i flussi di attivazione dei dati esistenti per una destinazione |
+| [!UICONTROL View documentation] | Consente di aprire un collegamento alla pagina della documentazione relativa alla destinazione specifica, per ulteriori informazioni e per facilitare la configurazione. |
+
+![Controlli sulla scheda delle destinazioni](/help/rtcdp/destinations/assets/destination-card-options.png)
+
+Selezionate una scheda di destinazione nel catalogo per aprire la barra laterale destra.  Qui potete vedere una descrizione della destinazione. La barra a destra fornisce gli stessi controlli descritti nella tabella precedente, nonché una descrizione della destinazione e un&#39;indicazione della categoria e del tipo di destinazione.
+
+![Opzioni del catalogo di destinazione](/help/rtcdp/destinations/assets/destination-right-rail.png)
+
+Per ulteriori informazioni sulle categorie di destinazione e informazioni su ciascuna destinazione, consulta Catalogo [di](/help/rtcdp/destinations/destinations-catalog.md) destinazione e Tipi e categorie [di](/help/rtcdp/destinations/destination-types.md)destinazione.
 
 ## [!UICONTROL Browse] {#browse}
 
@@ -71,7 +90,7 @@ Nella **[!UICONTROL Accounts]** scheda è possibile ottenere ulteriori informazi
 
 ## [!UICONTROL System View] {#system-view}
 
-Nella **[!UICONTROL System View]** scheda viene visualizzata una rappresentazione grafica dei flussi di attivazione impostati nell&#39;Platform dati cliente in tempo reale.
+Nella **[!UICONTROL System View]** scheda viene visualizzata una rappresentazione grafica dei flussi di attivazione impostati nella piattaforma dati cliente in tempo reale.
 
 ![Data-flows1](/help/rtcdp/destinations/assets/data-flows1.png)
 
