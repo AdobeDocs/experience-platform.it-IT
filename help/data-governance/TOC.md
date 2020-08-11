@@ -1,12 +1,12 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: ' Adobe Experience Platform Guida sulla governance dei dati'
+user-guide-title: Guida di Adobe Experience Platform Data Governance
 translation-type: tm+mt
-source-git-commit: 876ac35f6366411adda821805bf628470839f80e
+source-git-commit: de79706be6303f82c6d0e68cdf2c9d389f23d9a8
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 4%
+source-wordcount: '107'
+ht-degree: 5%
 
 ---
 
@@ -27,10 +27,11 @@ ht-degree: 4%
    * [Panoramica dell&#39;applicazione dei criteri](enforcement/overview.md)
    * [Applicazione dei criteri di utilizzo dei dati tramite l&#39;API di Servizio criteri](enforcement/api-enforcement.md)
 * Guida per gli sviluppatori API di Policy Service {#api}
+   * [Panoramica](api/overview.md)
    * [Introduzione](api/getting-started.md)
    * [Etichette](api/labels.md)
    * [Criteri](api/policies.md)
    * [Azioni di marketing](api/marketing-actions.md)
    * [Valutazione](api/evaluation.md)
 * [Riferimento API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)
-* [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-en)
