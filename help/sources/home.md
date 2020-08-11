@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Panoramica sui connettori di origine  Adobe Experience Platform
+title: Panoramica dei connettori sorgente Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: 8e39cc206efa3fc314ae689845c88f0923ac1743
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Panoramica sui connettori sorgente
 
- Adobe Experience Platform consente l&#39;acquisizione di dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, database e molti altri.
+Adobe Experience Platform consente l&#39;acquisizione di dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, database e molti altri.
 
 [!DNL Experience Platform] fornisce un&#39;API RESTful e un&#39;interfaccia utente interattiva che consente di configurare con facilità le connessioni di origine a vari provider di dati. Queste connessioni di origine consentono di autenticare i sistemi di terze parti, impostare i tempi di caricamento e gestire il throughput di assimilazione dei dati.
 
@@ -26,10 +26,10 @@ Le origini in [!DNL Experience Platform] sono raggruppate nelle seguenti categor
 
 ###  applicazioni Adobe
 
-[!DNL Experience Platform] consente il trasferimento di dati da altre applicazioni  Adobe, inclusi  Adobe Analytics,  Adobe Audience Manager e [!DNL Experience Platform Launch]. Per ulteriori informazioni, consulta i seguenti documenti correlati:
+[!DNL Experience Platform] consente il trasferimento di dati da altre applicazioni  Adobe, inclusi  Adobe Analytics, Adobe Audience Manager e [!DNL Experience Platform Launch]. Per ulteriori informazioni, consulta i seguenti documenti correlati:
 
-- [Panoramica  connettore Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
-- [Creare un connettore sorgente  Adobe Audience Manager nell’interfaccia utente](./tutorials/ui/create/adobe-applications/audience-manager.md)
+- [Panoramica del connettore Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
+- [Creare un connettore sorgente Adobe Audience Manager nell’interfaccia utente](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Panoramica del connettore dati Adobe Analytics](connectors/adobe-applications/analytics.md)
 - [Creare un connettore sorgente Adobe Analytics  nell’interfaccia utente](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Creare un connettore di origine Attributi del cliente nell&#39;interfaccia utente](./tutorials/ui/create/adobe-applications/customer-attributes.md)
@@ -45,8 +45,9 @@ Le origini in [!DNL Experience Platform] sono raggruppate nelle seguenti categor
 Le origini di archiviazione cloud possono importare i tuoi dati [!DNL Platform] senza bisogno di scaricare, formattare o caricare. I dati ingeriti possono essere formattati come JSON XDM, parquet XDM o delimitati. Ogni fase del processo è integrata nel flusso di lavoro Origini tramite l&#39;interfaccia utente. Per ulteriori informazioni, consulta i seguenti documenti correlati:
 
 - [!DNL Azure Data Lake Storage Gen2](connectors/cloud-storage/adls-gen2.md) connettore
-- [!DNL Azure Blob and Amazon S3](connectors/cloud-storage/blob-s3.md) connettore
+- [!DNL Azure Blob](connectors/cloud-storage/blob.md) connettore
 - [!DNL Amazon Kinesis](connectors/cloud-storage/kinesis.md) connettore
+- [!DNL Amazon S3](connectors/cloud-storage/s3.md) connettore
 - [!DNL Apache HDFS](connectors/cloud-storage/hdfs.md) connettore
 - [!DNL Azure Event Hubs](connectors/cloud-storage/eventhub.md) connettore
 - [!DNL Azure File Storage](connectors/cloud-storage/azure-file-storage.md) connettore
