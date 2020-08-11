@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurare un flusso di dati per un connettore pubblicitario nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: d80622aaa8408d640a1a80b6a37f4083344e7fa1
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1214'
 ht-degree: 0%
 
 ---
@@ -125,9 +125,13 @@ Dopo aver rivisto il flusso di dati, fai clic su **[!UICONTROL Finish]** e conse
 
 ![review](../../../images/tutorials/dataflow/advertising/review.png)
 
-## Monitorare ed eliminare il flusso di dati
+## Monitorare il flusso di dati
 
-Una volta creato il flusso di dati, potete monitorare i dati che vengono acquisiti tramite di esso. Per ulteriori informazioni su come monitorare ed eliminare il flusso di dati, consulta l’esercitazione sul [monitoraggio e l’eliminazione dei flussi di dati](../monitor.md).
+Una volta creato il flusso di dati, è possibile monitorare i dati che vengono acquisiti attraverso di esso per visualizzare informazioni su velocità di assimilazione, successo ed errori. Per ulteriori informazioni su come monitorare il flusso di dati, consulta l’esercitazione sul [monitoraggio di account e flussi di dati nell’interfaccia utente](../monitor.md).
+
+## Eliminare il flusso di dati
+
+È possibile eliminare i flussi di dati che non sono più necessari o che sono stati creati in modo non corretto utilizzando la *[!UICONTROL Delete]* funzione disponibile nell&#39; *[!UICONTROL Dataflows]* area di lavoro. Per ulteriori informazioni sull’eliminazione dei flussi di dati, consultate l’esercitazione sull’ [eliminazione dei flussi di dati nell’interfaccia](../delete.md)utente.
 
 ## Passaggi successivi
 
