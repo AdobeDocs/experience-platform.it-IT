@@ -4,9 +4,9 @@ seo-title: Destinazione di corrispondenza cliente Google
 description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti nelle proprietà di Google possedute e gestite, come ad esempio Cerca, Shopping, Gmail e YouTube.
 seo-description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti nelle proprietà di Google possedute e gestite, come ad esempio Cerca, Shopping, Gmail e YouTube.
 translation-type: tm+mt
-source-git-commit: 31eb03c6625f820c9729caf5181c56e748e853a5
+source-git-commit: 6a57c0da3425b7b83050f1b734d4abe8a290c8bc
 workflow-type: tm+mt
-source-wordcount: '1423'
+source-wordcount: '1455'
 ht-degree: 0%
 
 ---
@@ -118,7 +118,9 @@ Se selezionate di hash gli indirizzi e-mail, accertatevi di soddisfare i requisi
 
    >[!IMPORTANT]
    >
-   > Per [!DNL Google Customer Match] le destinazioni. **[!UICONTROL Account ID]** è l&#39;ID cliente con Google. Il formato dell&#39;ID è xxx-xxx-xxxx.
+   > * Il caso di utilizzo **[!UICONTROL Combine with PII]** marketing è selezionato per impostazione predefinita per la [!DNL Google Customer Match] destinazione e non può essere rimosso.
+   > * Per [!DNL Google Customer Match] le destinazioni. **[!UICONTROL Account ID]** è l&#39;ID cliente con Google. Il formato dell&#39;ID è xxx-xxx-xxxx.
+
 
    ![Corrispondenza cliente Google Connect - passaggio di autenticazione](/help/rtcdp/destinations/assets/google-customer-match-authentication-step.png)
 
@@ -170,3 +172,7 @@ Insert in Step 6 when mobile device ID activation is available
 ## Verificare che l&#39;attivazione del segmento sia stata eseguita correttamente {#verify-activation}
 
 Dopo aver completato il flusso di attivazione, passate al vostro **[!UICONTROL Google Ads]** account. I segmenti attivati verranno ora visualizzati nel tuo account Google come elenchi di clienti. A seconda delle dimensioni del segmento, alcuni tipi di pubblico non verranno popolati a meno che non ci siano più di 100 utenti attivi da distribuire.
+
+## Risorse aggiuntive {#additional-resources}
+
+* [Integrare Google Customer Match - Esercitazione video](https://docs.adobe.com/content/help/en/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
