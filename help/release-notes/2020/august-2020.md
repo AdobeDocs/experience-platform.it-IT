@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: dba7ae62b51b5cc4556f7f12d43b84e90f6c29dc
+source-git-commit: 1d9c8cbf273e9aef13e34df91a98b6c08180c8ff
 workflow-type: tm+mt
 source-wordcount: '480'
 ht-degree: 5%
@@ -45,7 +45,7 @@ Sono disponibili nuove destinazioni in cui è possibile attivare i dati Adobe Ex
 
 | Destinazione | Descrizione |
 |--- | ---|
-| [!DNL Google Customer Match] | Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti nelle proprietà di Google possedute e gestite, ad esempio: [!DNL Search], [!DNL Shopping], Gmail e YouTube. Visitate la [!DNL Google Customer Match] pagina [](/help/rtcdp/destinations/google-customer-match-destination.md) nel catalogo delle destinazioni per ulteriori informazioni sulla destinazione e su come configurarla in CDP in tempo reale  Adobe. |
+| [!DNL Google Customer Match] | Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti nelle proprietà di Google possedute e gestite, ad esempio: [!DNL Search], [!DNL Shopping], Gmail e YouTube. <br><br> Visitate la [!DNL Google Customer Match] pagina [](/help/rtcdp/destinations/google-customer-match-destination.md) nel catalogo delle destinazioni per ulteriori informazioni sulla destinazione e su come configurarla in CDP in tempo reale  Adobe. |
 
 **Nuove funzionalità**
 
