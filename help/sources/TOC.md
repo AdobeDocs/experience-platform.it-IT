@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Guida di Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: b019b6b8b69e0bfac6fc8840da350d92733dc97c
+source-git-commit: 2ee74c9ea0e4838eacfaba1b1e6b8aac7012f427
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '613'
 ht-degree: 0%
 
 ---
@@ -131,6 +131,7 @@ ht-degree: 0%
       - [Raccolta dei dati del protocollo](tutorials/api/collect/protocols.md)
    - [Acquisire dati di parquet da un sistema di storage cloud di terze parti](tutorials/api/cloud-storage-parquet.md)
    - [Creazione di una connessione di base di dataset tramite l&#39;API del servizio di flusso](tutorials/api/create-dataset-base-connection.md)
+   - [Monitorare i flussi di dati mediante l&#39;API di Flusso Service](tutorials/api/monitor.md)
 - Esercitazioni sull’interfaccia utente {#ui-tutorials}
    - Creare un connettore di origine {#create}
       -  applicazioni Adobe {#adobe-applications}
