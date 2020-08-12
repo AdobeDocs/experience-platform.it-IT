@@ -1,12 +1,12 @@
 ---
 title: Destinazioni pubblicitarie
 seo-title: Destinazioni pubblicitarie
-description: Collega il tuo Platform di dati cliente in tempo reale a una piattaforma pubblicitaria 3rd-party (ad es. DSP, rete pubblicitaria, SSP) e condividi tipi di pubblico pseudonimi con queste piattaforme.
-seo-description: Collega il tuo Platform di dati cliente in tempo reale a una piattaforma pubblicitaria 3rd-party (ad es. DSP, rete pubblicitaria, SSP) e condividi tipi di pubblico pseudonimi con queste piattaforme.
+description: Connetti la tua Piattaforma dati cliente in tempo reale a una piattaforma pubblicitaria 3rd-party (ad es. DSP, rete pubblicitaria, SSP) e condividi tipi di pubblico pseudonimi con queste piattaforme.
+seo-description: Connetti la tua Piattaforma dati cliente in tempo reale a una piattaforma pubblicitaria 3rd-party (ad es. DSP, rete pubblicitaria, SSP) e condividi tipi di pubblico pseudonimi con queste piattaforme.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 875430cdbd80025fc3f0de2664f9b55db0debe53
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '183'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Quando ci si connette a una destinazione pubblicitaria, le audience vengono invi
 
 Attualmente, Real-time CDP supporta le destinazioni pubblicitarie elencate di seguito. Per informazioni su come connettersi a queste destinazioni, consulta i singoli collegamenti:
 
-* [Adobe Advertising Cloud Extension](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
+* [Estensione Adobe Advertising Cloud](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
 * [Estensione Awin Advertising Conversion Tag](/help/rtcdp/destinations/awin-conversiontag-extension.md)
 * [Awin Advertising Mastertag extension](/help/rtcdp/destinations/awin-mastertag-extension.md)
 * [Estensione Beemray](beemray-extension.md)
@@ -33,6 +33,7 @@ Attualmente, Real-time CDP supporta le destinazioni pubblicitarie elencate di se
 * [Annunci Google](/help/rtcdp/destinations/google-ads-destination.md)
 * [Estensione Google Ads](/help/rtcdp/destinations/google-ads-extension.md)
 * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
+* [Google Customer Match](/help/rtcdp/destinations/google-customer-match-destination.md)
 * [Estensione Google Gtag](/help/rtcdp/destinations/gtag-advertising-extension.md)
 * [Estensione del tag LinkedIn Insight](linkedin-extension.md)
 * [Estensione Pinterest Conversion Tracking](pinterest-extension.md)
