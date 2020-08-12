@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: ' documentazione del prodotto Adobe Experience Platform'
+title: Documentazione del prodotto Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 1ecff21343c8b39070afdb4f486d0961c024235a
+source-git-commit: b67513a83a46861872e92d9db57232554e7d831b
 workflow-type: tm+mt
-source-wordcount: '6656'
+source-wordcount: '7228'
 ht-degree: 0%
 
 ---
@@ -26,21 +26,35 @@ ht-degree: 0%
 
 **Attività:** In [!DNL Decisioning Service], un&#39;attività è un insieme di offerte che l&#39;esperto di marketing desidera che il motore decisionale selezioni l&#39;offerta migliore da.
 
-**Adobe Admin Console:** Adobe Admin Console fornisce una posizione centrale per la gestione dell&#39;accesso e delle autorizzazioni delle funzioni per la vostra organizzazione.
+**Amministratore:** Uno o più utenti nell’organizzazione che possono configurare e personalizzare le autorizzazioni per  Experience Platform.
 
-**Adobe Experience Platform :**  Adobe Experience Platform consente di standardizzare dati e contenuti a livello aziendale, fornendo profili in tempo reale ai consumatori, consentendo la scienza dei dati e accelerando la velocità dei contenuti per indirizzare la personalizzazione dell&#39;esperienza attraverso il percorso del cliente.
+**Adobe Admin Console:** Adobe Admin Console fornisce una posizione centrale per la gestione delle adesioni  prodotto Adobe e l&#39;accesso per la vostra organizzazione. Tramite la console, gli amministratori possono concedere a gruppi di utenti autorizzazioni di accesso per diverse funzionalità della piattaforma, come &quot;Gestisci set di dati&quot;, &quot;Visualizza set di dati&quot; o &quot;Gestisci profili&quot;.
 
 **Connettori  Adobe:**  Connettori Adobe sono connessioni preconfigurate create dal Adobe  per consentire lo scorrimento dei dati in entrata e in uscita [!DNL Experience Platform]. I connettori includono [!DNL Microsoft Dynamics], [!DNL Salesforce], [!DNL Amazon S3]e [!DNL Azure Blob].
 
+**Adobe Experience Platform:** Adobe Experience Platform standardizza dati e contenuti a livello aziendale, fornendo profili in tempo reale ai consumatori, consentendo la scienza dei dati e accelerando la velocità dei contenuti per indirizzare la personalizzazione dell&#39;esperienza attraverso il percorso del cliente.
+
+**Adobe Experience Platform Decisioning Service** sfrutta il profilo cliente in tempo reale per determinare la scelta più probabile che un cliente effettuerà da una serie di opzioni, in base ai dati comportamentali che Profile estrae dai set di dati abilitati.
+
+**Adobe Experience Platform Launch:** [!DNL Launch] è un ecosistema di gestione tag e SDK, integrato con [!DNL Experience Platform] e [!DNL Experience Cloud] applicazioni. [!DNL Launch] fornisce strumenti per distribuire, unificare e gestire le integrazioni di analisi, marketing e pubblicità necessarie per fornire esperienze cliente rilevanti su tutti i dispositivi client.
+
+**Estensioni Adobe Experience Platform Launch :** [!DNL Experience Platform Launch] le estensioni consentono la consegna diretta dei dati dell&#39;evento non elaborati alle [!DNL Real-time Customer Data Platform] destinazioni. L&#39;installazione [!DNL Launch] delle estensioni richiede l&#39;accesso alle [!DNL Launch] proprietà.
+
+**Adobe Experience Platform Query Service** Consente di utilizzare SQL standard per eseguire query sui dati in  Experience Platform, unire qualsiasi set di dati all&#39;interno del Data Lake e acquisire i risultati delle query come nuovo set di dati da utilizzare nei report, in Data Science Workspace o nel profilo cliente in tempo reale.
+
+**Servizio** di segmentazione Adobe Experience Platform Consente di creare segmenti e generare audience dai dati del profilo cliente in tempo reale. Tali tipi di pubblico possono quindi essere esportati nei propri dataset all&#39;interno del Data Lake.
+
 **Servizi intelligenti  Adobe:**  Adobe Sensei è la struttura di intelligence che dà potere [!DNL Experience Platform]. Offre inoltre una serie di servizi AI che consentono ai marchi di migliorare la loro capacità di offrire esperienze cliente personalizzate in tempo reale.
 
-**I/O Adobe :**  I/O Adobe fa parte di [!DNL Experience Platform] e fornisce l&#39;accesso a tutto ciò che gli sviluppatori devono integrare, estendere e personalizzare  Adobe Experience Platform, incluse API, eventi, console per sviluppatori e utili strumenti.
+**I/O Adobe :**  I/O Adobe fa parte di [!DNL Experience Platform] e fornisce l&#39;accesso a tutto ciò che gli sviluppatori devono integrare, estendere e personalizzare Adobe Experience Platform, incluse API, eventi, console per sviluppatori e utili strumenti.
 
 **Adobe Sensei:**  Adobe Sensei è la struttura di intelligence che dà potere [!DNL Experience Platform]. Offre inoltre una serie di servizi AI che consentono ai marchi di migliorare la loro capacità di offrire esperienze cliente personalizzate in tempo reale.
 
 **bucket Amazon S3:** [!DNL Amazon S3] i bucket sono i contenitori di base per i dati memorizzati nell&#39; [!DNL Amazon] ecosistema. I bucket contengono oggetti, ogni oggetto viene memorizzato e recuperato utilizzando una chiave univoca assegnata dallo sviluppatore.
 
 **connettore Amazon S3:** [!DNL Amazon] Il connettore S3 permette [!DNL Experience Platform] ai clienti di collegarsi e accedere in modo sicuro ai propri dati [!DNL Amazon] S3.
+
+**Azione di marketing di Analytics:** Un&#39;azione di marketing che utilizza i dati a scopo di analisi, come la misurazione, l&#39;analisi e il reporting sull&#39;utilizzo da parte dei clienti dei siti o delle app dell&#39;organizzazione.
 
 **Aggiungi strategia di salvataggio:** La strategia di `Append` salvataggio è un&#39;opzione utilizzata quando si specificano dati di terze parti da assimilare tramite una connessione e si aggiungono nuovi dati o righe alla fine del dataset. Le righe precedentemente inserite non vengono toccate e vengono inserite solo le righe create dopo l’ultima esecuzione pianificata [!DNL Experience Platform]. Tutte le righe modificate nel sistema di origine rimangono invariate su [!DNL Experience Platform].
 
@@ -56,7 +70,7 @@ ht-degree: 0%
 
 **Attribution AI :** [!DNL Attribution AI] è un servizio Adobe Sensei  che offre funzionalità algoritmiche di attribuzione multicanale per l&#39;intero ciclo di vita del cliente.
 
-**Pubblico**: Un&#39;audience è l&#39;insieme risultante di profili che soddisfano i criteri di una definizione di segmento.
+**Pubblico**: Una dimensione di pubblico o di pubblico è il set risultante di profili che soddisfano i criteri di una definizione di segmento.
 
 **Snapshot** pubblico: Uno snapshot dell&#39;audience acquisisce tutti i profili idonei per i criteri del segmento al momento della segmentazione.
 
@@ -94,13 +108,15 @@ ht-degree: 0%
 
 **Raccolta:** In [!DNL Decisioning Service], le raccolte sono sottoinsiemi di offerte basate su condizioni predefinite definite da un esperto di marketing, ad esempio la categoria dell&#39;offerta.
 
+**Combinazione con PII Marketing Action** Un&#39;azione di marketing che combina qualsiasi informazione identificabile personalmente (PII) con dati anonimi. I contratti per i dati originati da reti pubblicitarie, server di annunci e provider di dati di terze parti spesso includono specifici divieti contrattuali sull&#39;uso di tali dati con dati direttamente identificabili.
+
 **Interfaccia della riga di comando:** Interfaccia riga di comando è uno strumento della riga di comando utilizzato per connettersi [!DNL Query Service] per l&#39;esecuzione di query non elaborate.
 
 **Composizione**: Una composizione è un raggruppamento di componenti che formano lo schema.
 
 **Connessione:** Una connessione è una pipeline virtuale che consente lo scorrimento dei dati in entrata e in uscita [!DNL Experience Platform]. Le connessioni ora vengono sostituite da Origini.
 
-**Connettore:**  connettori Sorgente Adobe Experience Platform consentono agli utenti di acquisire facilmente dati da più sorgenti, consentendo la strutturazione, l&#39;etichettatura e il miglioramento dei dati utilizzando [!DNL Experience Platform Services]. I dati possono essere acquisiti da una varietà di fonti, come l&#39;archiviazione basata su cloud, il software di terze parti e i sistemi CRM.
+**Connettore:** I connettori sorgente Adobe Experience Platform consentono agli utenti di acquisire facilmente i dati da più origini, consentendo la strutturazione, l&#39;etichettatura e il miglioramento dei dati mediante [!DNL Experience Platform Services]. I dati possono essere acquisiti da una varietà di fonti, come l&#39;archiviazione basata su cloud, il software di terze parti e i sistemi CRM.
 
 **Condizione:** Ad Experience Platform Launch, una condizione è un componente regola che valuta un&#39;istruzione logica che deve restituire `true` o `false`. Tutte le condizioni devono essere valutate a `true` e tutte le condizioni di eccezione devono essere valutate a `false` prima dell&#39;esecuzione di qualsiasi azione sulla regola.
 
@@ -126,13 +142,19 @@ ht-degree: 0%
 
 **Etichetta contratto C9:** `C9` l&#39;etichetta di governance dei dati del contratto specifica che i dati non possono essere utilizzati nei flussi di lavoro Data Science. Alcuni contratti includono divieti espliciti sui dati utilizzati per la scienza dei dati.  Talvolta tali termini sono formulati in termini che vietano l&#39;uso di dati per l&#39;intelligenza artificiale (AI), l&#39;apprendimento automatico (ML) o la modellazione.
 
+**C10 Etichetta contratto:** `C10` l&#39;etichetta di governance dei dati del contratto specifica che non è possibile utilizzare i dati per l&#39;attivazione dell&#39;identità unita. Alcuni criteri di utilizzo dei dati limitano l&#39;utilizzo di dati di identità uniti per la personalizzazione. L&#39;etichetta C10 viene applicata automaticamente ai segmenti se i relativi criteri di unione utilizzano l&#39;opzione &quot;grafico privato&quot;.
+
 **Colonna data di creazione:** La selezione di una `Created Date` colonna è un&#39;opzione quando si specificano dati di terze parti tramite una connessione. Quando si seleziona l&#39;opzione Aggiungi strategia di salvataggio e il dataset contiene uno schema correlato a più date, l&#39;utente deve scegliere dallo schema data/ora disponibile per specificare una colonna `Created Date` chiave. `Created Date` non è disponibile quando è selezionata la strategia di salvataggio per la sovrascrittura.
 
 **Crea tabella come Seleziona:** Crea tabella come Seleziona è un comando SQL che, se eseguito come parte di una query SQL completa e valida, indicherà [!DNL Query Service] di mantenere i risultati della query in un dataset sul Data Lake. Le opzioni includono: Crea nuovo, Sovrascrivi tutto precedente e Aggiungi a precedente.
 
 **Dati intersito:** I dati intersito sono la combinazione di dati provenienti da diversi siti, tra cui una combinazione di dati on-site e dati off-site o una combinazione di dati provenienti da diverse fonti off-site.
 
+**Azione** di marketing di targeting tra siti: utilizza dati per il targeting tra siti e siti. La combinazione di dati provenienti da diversi siti, inclusa una combinazione di dati sul sito e dati fuori sede o una combinazione di dati provenienti da più fonti esterne al sito, è definita dati intersito. I dati intersito vengono in genere raccolti ed elaborati per trarre conclusioni sugli interessi degli utenti.
+
 **Spazio dei nomi identità personalizzato:** Gli spazi dei nomi delle identità personalizzate sono identificatori creati dal cliente utilizzati per rappresentare le identità per un&#39;organizzazione o un caso aziendale specifico.
+
+**Etichette personalizzate:** Le etichette di governance dei dati personalizzate consentono agli utenti di creare e applicare etichette specifiche ai campi di dati che soddisfano esigenze aziendali specifiche.
 
 **AI cliente:** Customer AI è un servizio Adobe Sensei  che arricchisce i profili dei clienti con le proprietà basate sull&#39;intelligenza artificiale e potenzia la segmentazione dei clienti e le attività di targeting.
 
@@ -148,8 +170,6 @@ ht-degree: 0%
 
 **Mapping dati:** La mappatura dei dati è il processo di mappatura dei campi di dati di origine ai campi di destinazione relativi alla destinazione.
 
-**Flusso di dati:** Un flusso di dati è un insieme o una raccolta di messaggi che condividono lo stesso schema e vengono inviati dalla stessa origine.
-
 **Governance dei dati:** [!DNL Data governance] include le strategie e le tecnologie utilizzate per garantire che i dati siano conformi alle normative e alle politiche aziendali in materia di utilizzo dei dati.
 
 **Etichette sulla governance dei dati:** [!DNL Data governance] le etichette forniscono agli utenti la possibilità di classificare i dati che riflettono considerazioni relative alla privacy e condizioni contrattuali in modo da essere conformi alle normative e alle politiche aziendali. [!DNL Data governance] le etichette aggiunte a un dataset vengono ereditate o applicate a tutti i campi all&#39;interno di tale dataset. [!DNL Data governance] le etichette possono essere applicate direttamente ai campi.
@@ -164,11 +184,15 @@ ht-degree: 0%
 
 **Data Steward:** Un amministratore dei dati è la persona responsabile della gestione, della sorveglianza e dell&#39;esecuzione delle risorse di dati di un&#39;organizzazione. Un amministratore dei dati garantisce inoltre che le politiche di governance dei dati siano salvaguardate e mantenute in conformità con le normative e le politiche di organizzazione governative.
 
+**Flusso di dati:** Un flusso di dati è un insieme o una raccolta di messaggi che condividono lo stesso schema e vengono inviati dalla stessa origine.
+
 **Tipo di dati:** Il tipo di dati è un oggetto riutilizzabile con proprietà in una rappresentazione gerarchica.
 
 **Etichette di utilizzo dei dati:** Le etichette di utilizzo dei dati consentono agli utenti di classificare i dati che riflettono considerazioni relative alla privacy e condizioni contrattuali in modo da essere conformi alle normative e alle politiche aziendali.
 
 **Flusso di dati:** In [!DNL Real-time Customer Data Platform]un flusso di dati è una pipeline virtuale di dati che fluisce [!DNL Platform] da un&#39;origine a una destinazione.
+
+**Esecuzione flusso di dati:** L&#39;esecuzione di un flusso di dati è un flusso di dati che arriva in  Experience Platform in base a una pianificazione specificata dall&#39;utente.
 
 **Set di dati:** Un dataset è un costrutto di archiviazione e gestione per una raccolta di dati, in genere una tabella, che contiene schema (colonne) e campi (righe).
 
@@ -202,11 +226,11 @@ ht-degree: 0%
 
 ## E
 
-**Diagnostica errori:** La diagnostica degli errori consente di generare messaggi di errore dettagliati per i batch assimilati. La soglia di errore consente di configurare la percentuale di errori accettabili prima che l&#39;intero batch non riesca.
-
 **Offerta valida:** In [!DNL Decisioning Service], un&#39;offerta idonea soddisfa i vincoli definiti a monte che possono essere offerti in modo coerente a un profilo.
 
 **Regole idonee:** In [!DNL Decisioning Service], le regole di idoneità vengono applicate a un profilo correlato ai vincoli di calendario, pianificazione e limitazione.
+
+**Azione** di marketing di targeting e-mail Un&#39;azione di marketing che utilizza i dati nelle campagne di targeting e-mail.
 
 **Codice da incorporare:** In [!DNL Experience Platform Launch], il codice da incorporare è un tag script posizionato all&#39;interno dell&#39;HTML in un sito o in un ambiente. Il codice da incorporare indica al browser dove recuperare la build.
 
@@ -214,15 +238,13 @@ ht-degree: 0%
 
 **Ambiente:** In [!DNL Experience Platform Launch]un ambiente è un insieme di istruzioni di distribuzione che specifica la consegna host e il formato file di una build. Prima di poter creare una libreria, è necessario essere associati a un ambiente.
 
+**Diagnostica errori:** La diagnostica degli errori consente di generare messaggi di errore dettagliati per i batch assimilati. La soglia di errore consente di configurare la percentuale di errori accettabili prima che l&#39;intero batch non riesca.
+
 **Evento** In [!DNL Experience Platform Launch], un evento è un tipo specifico di componente regola, un trigger che si verifica su un dispositivo client per avviare l&#39;esecuzione di una regola.
 
 **Eventi:** Gli eventi sono i dati di comportamento associati a un profilo.
 
 **Modello dati esperienza (XDM):** [!DNL Experience Data Model] (XDM) è il concetto di utilizzo di schemi standard per unificare i dati da utilizzare con le applicazioni [!DNL Experience Platform] e Adobe Experience Cloud. XDM standardizza la struttura dei dati e accelera e semplifica il processo di acquisizione di informazioni da enormi quantità di dati.
-
-**Experience Platform Launch:** [!DNL Launch] è un ecosistema di gestione tag e SDK, integrato con [!DNL Experience Platform] e [!DNL Experience Cloud] applicazioni. [!DNL Launch] fornisce strumenti per distribuire, unificare e gestire le integrazioni di analisi, marketing e pubblicità necessarie per fornire esperienze cliente rilevanti su tutti i dispositivi client.
-
-**Estensioni Experience Platform Launch:** [!DNL Experience Platform Launch] le estensioni consentono la consegna diretta dei dati dell&#39;evento non elaborati alle [!DNL Real-time Customer Data Platform] destinazioni. L&#39;installazione [!DNL Launch] delle estensioni richiede l&#39;accesso alle [!DNL Launch] proprietà.
 
 **Esperimento:** Un esperimento è un processo di creazione di un modello qualificato formando l&#39;istanza con una porzione campione dei dati di produzione live.
 
@@ -326,7 +348,7 @@ ht-degree: 0%
 
 **Mapping:** In [!DNL Real-time Customer Data Platform], la mappatura dei dati è il processo di mappatura dei campi di dati di origine ai campi di destinazione relativi alla destinazione.
 
-**Azione di marketing:** Un&#39;azione di marketing, nel contesto del framework di governance dei dati, è un&#39;azione che un consumatore di [!DNL Experience Platform] dati intraprende, per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati.
+**Azione di marketing:** Un&#39;azione di marketing, nota anche come casi di utilizzo del marketing, nel contesto del framework di governance dei dati, è un&#39;azione che un consumatore di [!DNL Experience Platform] dati deve intraprendere, per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati.
 
 **Metodo Merge:** Un&#39;opzione `merge method` è un criterio di unione che consente di assegnare priorità all&#39;unione dei frammenti di dati. Le opzioni del metodo merge sono unite per precedenza del set di dati o per marca temporale del set di dati.
 
@@ -356,6 +378,10 @@ ht-degree: 0%
 
 **Libreria offerte:** Nella [!DNL Decisioning Service]libreria dell&#39;offerta è una libreria centrale utilizzata per gestire offerte personalizzate e di fallback, regole decisionali e attività.
 
+**Azione** di marketing per la personalizzazione di siti Un&#39;azione di marketing che utilizza i dati per la personalizzazione di contenuti on-site. Per personalizzazione in sito si intende qualsiasi dato utilizzato per fare deduzioni sugli interessi degli utenti e utilizzato per selezionare quali contenuti o annunci vengono serviti in base a tali inferenze.
+
+**Azione** di marketing di targeting on-site Targeting Un&#39;azione di marketing che utilizza i dati per gli annunci onsite, compresa la selezione e la consegna di annunci pubblicitari sui siti Web o sulle app dell&#39;organizzazione, o per misurare la consegna e l&#39;efficacia di tali pubblicità.
+
 **Organizzazione:** Per organizzazione si intende il nome utilizzato per identificare una società o un gruppo specifico all’interno di una società all’interno  prodotti di Adobe. L&#39;amministratore può configurare e gestire l&#39;accesso e le autorizzazioni delle funzionalità per gli utenti di un&#39;organizzazione.
 
 **Sovrascrivi strategia di salvataggio:** `Overwrite` strategia di salvataggio è un&#39;opzione per l&#39;acquisizione di dati di terze parti tramite una connessione, in cui l&#39;utente specifica se i dati acquisiti verranno sovrascritti in base a una pianificazione specificata. [!DNL Experience Platform] acquisisce il set di dati specificato dall&#39;origine di terze parti e sovrascrive il set di dati in [!DNL Experience Platform].
@@ -364,7 +390,7 @@ ht-degree: 0%
 
 ## P
 
-**Iniezione parziale:** L&#39;assimilazione parziale consente l&#39;inserimento di record validi di dati batch entro una soglia di errore specificata. È possibile scaricare la diagnostica degli errori per i record con errore o accedere a Monitoring.
+**Iniezione parziale:** L&#39;assimilazione parziale consente l&#39;inserimento di record validi di dati batch entro una soglia di errore specificata. È possibile scaricare la diagnostica degli errori per i record non riusciti o accedere alla panoramica di monitoraggio o flusso di dati Origini.
 
 **File Parquet:** Un file parquet è un formato di file di memorizzazione columnar con complesse strutture di dati nidificate. I file di parquet sono necessari per aggiungere dati per compilare un set di dati dello schema.
 
@@ -372,7 +398,11 @@ ht-degree: 0%
 
 **Posizionamenti:** In [!DNL Decisioning Service], per posizione si intende la posizione e il contesto in cui un&#39;offerta viene visualizzata per l&#39;utente finale.
 
+**Area di lavoro** Criteri Consente agli amministratori dei dati di visualizzare e gestire le etichette di base e personalizzate per l&#39;organizzazione.
+
 **Criteri:** Un criterio di utilizzo dei dati è una regola che specifica le azioni di marketing limitate in base all&#39;applicazione di etichette di utilizzo dei dati sui dati in [!DNL Experience Platform].
+
+**Applicazione** dei criteri Consente l&#39;applicazione dei criteri di utilizzo dei dati con azioni di marketing applicate per impedire le operazioni di dati che costituiscono violazioni dei criteri all&#39;interno di un&#39;organizzazione.
 
 **Chiave principale:** La chiave primaria è una designazione in uno schema per identificare in modo univoco tutti i record.
 
@@ -382,7 +412,7 @@ ht-degree: 0%
 
 **Profilo prodotto:** I profili di prodotto consentono agli amministratori di concedere agli utenti l&#39;accesso a tutti i servizi associati o a un sottoinsieme di essi. [!DNL Experience Platform]
 
-**Sandbox produzione:** Sandbox di produzione per l&#39;isolamento di dati virtuali su Platform che non possono essere reimpostati o eliminati.
+**Sandbox produzione:** Sandbox di produzione per l&#39;isolamento di dati virtuali sulla piattaforma che non è possibile ripristinare o eliminare.
 
 **Profilo:** [!DNL Profile] è un modello dati [!DNL Experience Platform] standard utilizzato per definire gli attributi dei consumatori. Un profilo può anche essere un insieme di dati e attributi dell&#39;evento relativi a una persona e/o a un dispositivo.
 
@@ -402,15 +432,15 @@ ht-degree: 0%
 
 **Editor query:** Editor query è uno strumento per scrivere, convalidare e inviare istruzioni SQL in [!DNL Query Service].
 
-**Servizio query per  Adobe Experience Platform:** *[!DNL Experience Platform Query Service]* consente agli analisti di dati di eseguire query [!DNL ExperienceEvents] e XDM da utilizzare in analisi e machine learning. Grazie a [!DNL Query Service]questa funzionalità, gli esperti di analisi e data mining saranno in grado di estrarre tutti i set di dati memorizzati in [!DNL Experience Platform] - inclusi i dati comportamentali, oltre che i punti vendita (POS), la gestione delle relazioni con i clienti (CRM) e altro ancora - ed eseguire query su tali set di dati per rispondere a domande specifiche sui dati.
+**Servizio query per Adobe Experience Platform:** *[!DNL Experience Platform Query Service]* consente agli analisti di dati di eseguire query [!DNL ExperienceEvents] e XDM da utilizzare in analisi e machine learning. Grazie a [!DNL Query Service]questa funzionalità, gli esperti di analisi e data mining saranno in grado di estrarre tutti i set di dati memorizzati in [!DNL Experience Platform] - inclusi i dati comportamentali, oltre che i punti vendita (POS), la gestione delle relazioni con i clienti (CRM) e altro ancora - ed eseguire query su tali set di dati per rispondere a domande specifiche sui dati.
 
 [Torna all&#39;inizio](#adobe-experience-platform-glossary)
 
 ## R
 
-**Dati cliente in tempo reale Platform:**  Adobe  [!DNL Real-time Customer Data Platform] riunisce dati noti e sconosciuti dei clienti per creare profili cliente affidabili con integrazione semplificata, segmentazione intelligente e attivazione in tempo reale per l&#39;intero percorso del cliente digitale.
+**Piattaforma dati cliente in tempo reale:**  Adobe  [!DNL Real-time Customer Data Platform] riunisce dati noti e sconosciuti dei clienti per creare profili cliente affidabili con integrazione semplificata, segmentazione intelligente e attivazione in tempo reale per l&#39;intero percorso del cliente digitale.
 
-**Profilo cliente in tempo reale:** [!DNL Real-time Customer Profile] è un profilo centralizzato per la gestione mirata e personalizzata delle esperienze.
+**Profilo cliente in tempo reale:** [!DNL Real-time Customer Profile] è un profilo centralizzato per la gestione mirata e personalizzata dell&#39;esperienza e fornisce un profilo cliente unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
 **Ricetta:** Una ricetta è  termine  Adobe per una specifica di modello ed è un contenitore di primo livello che rappresenta uno specifico machine learning, un algoritmo AI o un insieme di algoritmi, una logica di elaborazione e una configurazione necessarie per creare ed eseguire un modello qualificato e quindi aiutare a risolvere problemi aziendali specifici.
 
@@ -478,6 +508,8 @@ ht-degree: 0%
 
 **Servizi:** Un framework potente per l&#39;operazionalizzazione dei servizi AI e ML sfruttando  Adobe Intelligent Services. I servizi offrono esperienze cliente personalizzate in tempo reale o offrono servizi intelligenti personalizzati.
 
+**Azione** di marketing Single Identity Personalization Un&#39;azione di marketing che utilizza i dati per la personalizzazione dei contenuti onsite. Per personalizzazione in sito si intende qualsiasi dato utilizzato per fare deduzioni sugli interessi degli utenti e utilizzato per selezionare quali contenuti o annunci vengono serviti in base a tali inferenze.
+
 **Etichetta dati S1:** `S1` l&#39;etichetta dati viene utilizzata per classificare i dati che specificano latitudine e longitudine, utilizzabili per determinare la posizione esatta di un dispositivo.
 
 **Etichetta dati S2:** `S2` l&#39;etichetta di dati viene utilizzata per classificare i dati che possono essere utilizzati per determinare un&#39;area di delimitazione geografica ampiamente definita.
@@ -486,19 +518,19 @@ ht-degree: 0%
 
 **Attributo origine:** Un attributo di origine è un campo nel set di dati di origine.  Gli attributi di origine sono mappati ai campi dello schema di destinazione.
 
-**Connettore origine:**  connettori Sorgente Adobe Experience Platform consentono agli utenti di acquisire facilmente dati da più sorgenti, consentendo la strutturazione, l&#39;etichettatura e il miglioramento dei dati utilizzando [!DNL Experience Platform Services]. I dati possono essere acquisiti da una varietà di fonti, come l&#39;archiviazione basata su cloud, il software di terze parti e i sistemi CRM.
+**Catalogo origine:** Un catalogo di origine è un elenco di origini disponibili nel [!DNL Real-time Customer Data Platform].
 
 **Categoria origine:** Una categoria di origine è un raggruppamento di [!DNL Real-time Customer Data Platform] origini con caratteristiche simili.
 
-**Catalogo origine:** Un catalogo di origine è un elenco di origini disponibili nel [!DNL Real-time Customer Data Platform].
+**Connettore origine:** I connettori sorgente Adobe Experience Platform consentono agli utenti di acquisire facilmente i dati da più origini, consentendo la strutturazione, l&#39;etichettatura e il miglioramento dei dati mediante [!DNL Experience Platform Services]. I dati possono essere acquisiti da una varietà di fonti, come l&#39;archiviazione basata su cloud, il software di terze parti e i sistemi CRM.
 
 **Spazio dei nomi identità standard:** Gli spazi dei nomi di identità standard sono identificatori predefiniti  Adobe, incluse le soluzioni standard di Adobe  e settore utilizzate per identificare gli utenti.
 
 **Schema standard:** Gli schemi standard sono composti di classi e miscele e sono destinati al riutilizzo.
 
-**Ingestione streaming:** L&#39;assimilazione dello streaming fornisce agli utenti un metodo per inviare dati da dispositivi lato client e lato server [!DNL Experience Platform] in tempo reale.
-
 **URL endpoint di streaming:** L&#39;URL di un endpoint di streaming è un endpoint univoco fornito da  Adobe e associato all&#39;organizzazione IMS di un cliente per lo streaming dei dati in [!DNL Experience Platform].
+
+**Ingestione streaming:** L&#39;assimilazione dello streaming fornisce agli utenti un metodo per inviare dati da dispositivi lato client e lato server [!DNL Experience Platform] in tempo reale.
 
 **Segmentazione streaming:** La segmentazione in streaming è un processo continuo di selezione dei dati che aggiorna i segmenti in risposta all&#39;attività degli utenti. Una volta creato e salvato un segmento, la definizione del segmento viene applicata ai dati in arrivo a [!DNL Real-time Customer Profile]. L&#39;aggiunta e l&#39;eliminazione di segmenti vengono elaborati regolarmente, garantendo che il pubblico di destinazione rimanga rilevante.
 
@@ -510,7 +542,7 @@ ht-degree: 0%
 
 ## T
 
-**Funzioni Target:** La funzione Target specificata nella mappatura delle feature è la funzione prevista da un modello.
+**Funzioni di destinazione:** La funzione di destinazione è specificata nella mappatura delle funzioni è la funzione prevista da un modello.
 
 **Modello di formazione:** Un modello preparato rappresenta l&#39;output eseguibile di un processo di formazione modello, in cui un insieme di dati di formazione è stato applicato all&#39;istanza del modello. Un modello qualificato manterrà un riferimento a qualsiasi servizio Web intelligente creato da esso. Il modello addestrato è adatto per il punteggio e la creazione di un servizio Web intelligente. Le modifiche a un modello qualificato possono essere tracciate come nuova versione.
 
