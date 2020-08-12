@@ -5,47 +5,48 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: 89531ad458bd41720090ef2c429376af4460d7c0
 workflow-type: tm+mt
-source-wordcount: '289'
-ht-degree: 8%
+source-wordcount: '297'
+ht-degree: 7%
 
 ---
 
 
 # Note sulla versione di Adobe Experience Platform
 
-**Data di rilascio: 10 giugno 2020**
+**Data di rilascio: 12 agosto 2020**
 
-Nuove funzioni in  Adobe Experience Platform:
+Aggiornamenti alle funzionalità esistenti in Adobe Experience Platform:
 
-- [!DNL Access control](#access-control)
-- [!DNL Sandboxes](#sandboxes)
+- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Sources]](#sources)
 
-## [!DNL Access control] {#access-control}
+## [!DNL Data Science Workspace] {#dsw}
 
-[!DNL Experience Platform] sfrutta i profili di prodotto [Adobe Admin Console](https://adminconsole.adobe.com) per collegare gli utenti con autorizzazioni e sandbox. Le autorizzazioni controllano l&#39;accesso a diverse funzionalità di Platform, tra cui la modellazione dei dati, la gestione dei profili e l&#39;amministrazione sandbox.
+[!DNL Data Science Workspace] utilizza l&#39;apprendimento automatico e l&#39;intelligenza artificiale per liberare informazioni dai dati. Integrato in Adobe Experience Platform, [!DNL Data Science Workspace] consente di fare previsioni utilizzando i contenuti e le risorse dati nelle soluzioni  Adobe.
 
-**Funzionalità chiave**
-
-| Funzione | Descrizione |
-|--- | ---|
-| Autorizzazioni | In [!DNL Admin Console], la scheda all&#39;interno di un profilo di [!DNL Platform] prodotto consente di personalizzare [!DNL Platform] le funzionalità disponibili per gli utenti collegati a tale profilo. Le categorie di autorizzazioni disponibili includono: [!UICONTROL Data Modeling], [!UICONTROL Data Management], [!UICONTROL Profile Management], [!UICONTROL Identities], [!UICONTROL Data Monitoring], [!UICONTROL Sandbox Administration], [!UICONTROL Destinations], [!UICONTROL Sources]. |
-| Accesso alle sandbox | La scheda [!UICONTROL _Autorizzazioni _]all&#39;interno di un profilo di[!DNL Platform]prodotto può consentire agli utenti l&#39;accesso a sandbox specifiche. Per ulteriori informazioni, consultate la sezione sulle[sandbox](#sandboxes)di seguito. |
-
-Per ulteriori informazioni, consulta la panoramica [sul controllo](../../access-control/home.md)degli accessi.
-
-## [!DNL Sandboxes] {#sandboxes}
-
-[!DNL Experience Platform] è progettato per arricchire le applicazioni di esperienza digitale su scala globale. Le aziende spesso eseguono più applicazioni di esperienza digitale in parallelo e devono provvedere allo sviluppo, al test e all&#39;implementazione di tali applicazioni, garantendo al contempo la conformità operativa. Per rispondere a questa esigenza, [!DNL Experience Platform] fornisce sandbox che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per aiutare a sviluppare e sviluppare applicazioni di esperienza digitale.
-
-**Funzionalità chiave**
+**Nuove funzionalità**
 
 | Funzione | Descrizione |
-|--- | ---|
-| Sandbox produzione | [!DNL Experience Platform] fornisce una singola sandbox di produzione, che non può essere eliminata o reimpostata. |
-| Sandbox non di produzione | È possibile creare più sandbox non di produzione per una singola [!DNL Platform] istanza, per testare le funzioni, eseguire esperimenti e creare configurazioni personalizzate senza influire sul sandbox di produzione. |
-| Switcher sandbox | Nell&#39;interfaccia [!DNL Experience Platform] utente, lo switcher sandbox nell&#39;angolo superiore sinistro dello schermo consente di passare dalle sandbox disponibili a un menu a discesa. |
-| `x-sandbox-name` header | Tutte le chiamate alle [!DNL Experience Platform] API ora devono includere la nuova `x-sandbox-name` intestazione, il cui valore fa riferimento all&#39; `name` attributo della sandbox in cui avrà luogo l&#39;operazione. |
+| ------- | ----------- |
+| Miglioramenti delle VM [!DNL JupyterLab] | È stata migliorata la stabilità delle [!DNL JupyterLab notebook] macchine virtuali con esecuzione prolungata. |
 
-Per ulteriori informazioni, consultate la panoramica sulle [sandbox](../../sandboxes/home.md).
+Per ulteriori informazioni su [!DNL JupyterLab]questo argomento, consultate la guida [[!DNL JupyterLab] utente](../../data-science-workspace/jupyterlab/overview.md).
+
+## Origini {#sources}
+
+Adobe Experience Platform è in grado di acquisire dati da origini esterne e di strutturarli, etichettarli e ottimizzarli utilizzando [!DNL Platform] i servizi. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, software di terze parti e il sistema CRM in uso.
+
+[!DNL Experience Platform] fornisce un&#39;API RESTful e un&#39;interfaccia utente interattiva che consente di impostare connessioni sorgente per vari provider di dati con facilità. Queste connessioni di origine consentono di autenticare e connettersi a sistemi di storage e servizi CRM esterni, impostare i tempi per l&#39;esecuzione dell&#39;assimilazione e gestire il throughput di assimilazione dei dati.
+
+**Nuove funzionalità**
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Monitoraggio dell&#39;esecuzione dei flussi | Gli utenti possono monitorare tutte le esecuzioni del flusso e visualizzare una visualizzazione dettagliata di ciascuna esecuzione, incluso lo stato di completamento, la durata dell&#39;esecuzione, l&#39;elenco dei file elaborati, gli errori e le metriche. Per ulteriori informazioni, consulta il documento [sui flussi di dati](../../sources/tutorials/ui/monitor.md) di monitoraggio. |
+| Aggiornamento account | Gli utenti possono aggiornare le credenziali, il nome e la descrizione di qualsiasi account esistente per fornire informazioni più significative e correggere eventuali errori che potrebbero essere stati creati. |
+| Notifiche di esecuzione del flusso | Gli utenti possono iscriversi agli eventi e registrare i webhooks per ricevere notifiche in tempo reale sullo stato, le metriche e gli errori relativi alle esecuzioni di flusso. |
+| Miglioramenti al catalogo dell&#39;interfaccia utente | Aggiornamenti alla schermata del catalogo origini per consentire un accesso più semplice alle azioni principali degli oggetti selezionati. |
+
+Per ulteriori informazioni sulle origini, consultate la panoramica sulle [origini](../../sources/home.md).
