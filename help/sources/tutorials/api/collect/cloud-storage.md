@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Raccolta di dati di archiviazione cloud tramite connettori di origine e API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6c6bbfc39b5b17c45d5db53bbec5342430a0941a
+source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
 workflow-type: tm+mt
-source-wordcount: '1628'
+source-wordcount: '1680'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Raccolta di dati di archiviazione cloud tramite connettori di origine e API
 
-[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti diverse all&#39;interno  Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
+[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
 Questa esercitazione descrive i passaggi per recuperare i dati da un archivio cloud di terze parti e portarli [!DNL Platform] attraverso connettori sorgente e API.
 
@@ -22,7 +22,7 @@ Questa esercitazione descrive i passaggi per recuperare i dati da un archivio cl
 
 Questa esercitazione richiede l&#39;accesso a un archivio cloud di terze parti tramite una connessione valida e le informazioni sul file in cui si desidera eseguire l&#39;operazione, [!DNL Platform]incluso il percorso e la struttura del file. Se non disponete di queste informazioni, prima di provare questa esercitazione, vedete l&#39;esercitazione sull&#39; [esplorazione di un&#39;archiviazione cloud di terze parti tramite l&#39;API](../explore/cloud-storage.md) del servizio di flusso.
 
-Questa esercitazione richiede inoltre di conoscere in modo approfondito i seguenti componenti del  Adobe Experience Platform:
+Questa esercitazione richiede inoltre di conoscere i seguenti componenti di Adobe Experience Platform:
 
 - [Sistema](../../../../xdm/home.md)XDM (Experience Data Model): Il framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
    - [Nozioni di base sulla composizione](../../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
@@ -133,7 +133,7 @@ Una risposta corretta restituisce l’identificatore univoco (`id`) della connes
 }
 ```
 
-## Creare uno schema XDM di destinazione {#target}
+## Creare uno schema XDM di destinazione {#target-schema}
 
 Nei passaggi precedenti, era stato creato uno schema XDM ad hoc per strutturare i dati di origine. Affinché i dati di origine siano utilizzati in [!DNL Platform], è necessario creare anche uno schema di destinazione per strutturare i dati di origine in base alle esigenze. Lo schema di destinazione viene quindi utilizzato per creare un [!DNL Platform] dataset in cui sono contenuti i dati di origine.
 
@@ -294,7 +294,7 @@ Una risposta corretta restituisce un array contenente l&#39;ID del set di dati a
 ]
 ```
 
-## Creare una connessione di destinazione
+## Creare una connessione di destinazione {#target-connection}
 
 Una connessione di destinazione rappresenta la connessione alla destinazione in cui i dati acquisiti entrano. Per creare una connessione di destinazione, è necessario fornire l&#39;ID di specifica di connessione fisso associato al data Lake. Questo ID della specifica di connessione è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
@@ -587,7 +587,7 @@ Una risposta corretta restituisce i dettagli della specifica del flusso di dati 
 L&#39;ultimo passo verso la raccolta dei dati di archiviazione cloud è creare un flusso di dati. A questo punto sono stati preparati i seguenti valori obbligatori:
 
 - [ID connessione di origine](#source)
-- [ID connessione Target](#target)
+- [ID connessione di destinazione](#target)
 - [ID mappatura](#mapping)
 - [ID specifica Dataflow](#specs)
 
@@ -642,12 +642,12 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `flowSpec.id` | L’ID della specifica di flusso recuperato nel passaggio precedente. |
-| `sourceConnectionIds` | L&#39;ID connessione di origine recuperato in un passaggio precedente. |
-| `targetConnectionIds` | L&#39;ID connessione di destinazione recuperato in un passaggio precedente. |
-| `transformations.params.mappingId` | L’ID di mappatura recuperato in un passaggio precedente. |
-| `scheduleParams.startTime` | Ora di inizio per il flusso di dati, espressa in secondi. |
-| `scheduleParams.frequency` | I valori di frequenza selezionabili includono: `once`, `minute`, `hour`, `day`o `week`. |
+| `flowSpec.id` | L’ID [della specifica di](#specs) flusso recuperato nel passaggio precedente. |
+| `sourceConnectionIds` | L&#39;ID [connessione](#source) di origine recuperato in un passaggio precedente. |
+| `targetConnectionIds` | L&#39;ID [connessione di](#target-connection) destinazione recuperato in un passaggio precedente. |
+| `transformations.params.mappingId` | L’ID [](#mapping) mappatura recuperato in un passaggio precedente. |
+| `scheduleParams.startTime` | Ora di inizio per il flusso di dati in epoch time. |
+| `scheduleParams.frequency` | Frequenza con cui il flusso di dati raccoglie i dati. I valori accettabili sono: `once`, `minute`, `hour`, `day`o `week`. |
 | `scheduleParams.interval` | L&#39;intervallo indica il periodo tra due esecuzioni di flusso consecutive. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero. L&#39;intervallo non è richiesto quando la frequenza è impostata come `once` e deve essere maggiore o uguale a `15` per altri valori di frequenza. |
 
 **Risposta**
@@ -660,6 +660,10 @@ Una risposta corretta restituisce l’ID (`id`) del flusso di dati appena creato
     "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
+
+## Monitorare il flusso di dati
+
+Una volta creato il flusso di dati, è possibile monitorare i dati che vengono acquisiti attraverso di esso per visualizzare informazioni sulle esecuzioni del flusso, lo stato di completamento e gli errori. Per ulteriori informazioni su come monitorare i flussi di dati, consulta l’esercitazione sul [monitoraggio dei flussi di dati nell’API ](../monitor.md)
 
 ## Passaggi successivi
 
