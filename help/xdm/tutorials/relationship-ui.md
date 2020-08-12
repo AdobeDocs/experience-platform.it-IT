@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definire una relazione tra due schemi utilizzando l'Editor schema
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 6d291ac9a8c194dd63e411e4d064492c38412749
+source-git-commit: d847329f675c7ac34a4feabb9e57a9e97f7e3ed1
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '862'
 ht-degree: 1%
 
 ---
@@ -48,7 +48,7 @@ Lo schema di origine &quot;[!UICONTROL Loyalty Members]&quot; è basato sulla [!
 
 ### Hotels, schema
 
-Lo schema di destinazione &quot;[!UICONTROL Hotels]&quot; è basato su una classe &quot;[!UICONTROL Hotels]&quot; personalizzata e contiene campi che descrivono un hotel. Il campo &quot;[!UICONTROL email]&quot; funge da identità principale per lo schema nello spazio dei nomi &quot;[!UICONTROL Email]&quot;. Come &quot;[!UICONTROL Loyalty Members]&quot;, anche questo schema è stato abilitato per [!DNL Real-time Customer Profile].
+Lo schema di destinazione &quot;[!UICONTROL Hotels]&quot; è basato su una classe &quot;[!UICONTROL Hotels]&quot; personalizzata e contiene campi che descrivono un hotel. Il campo &quot;[!DNL hotelId]&quot; funge da identità principale per lo schema in uno spazio dei nomi personalizzato &quot;[!DNL hotelId]&quot;. Come &quot;[!UICONTROL Loyalty Members]&quot;, anche questo schema è stato abilitato per [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/relationship/hotels.png)
 
