@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: c64d4cc01b5125fad5f7c75914dfc1e4b20bc069
+source-git-commit: dba7ae62b51b5cc4556f7f12d43b84e90f6c29dc
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 7%
+source-wordcount: '480'
+ht-degree: 5%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 7%
 Aggiornamenti alle funzionalità esistenti in Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
+- [!DNL Destinations](#destinations)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -33,6 +34,25 @@ Aggiornamenti alle funzionalità esistenti in Adobe Experience Platform:
 | Miglioramenti delle VM [!DNL JupyterLab] | È stata migliorata la stabilità delle [!DNL JupyterLab notebook] macchine virtuali con esecuzione prolungata. |
 
 Per ulteriori informazioni su [!DNL JupyterLab]questo argomento, consultate la guida [[!DNL JupyterLab] utente](../../data-science-workspace/jupyterlab/overview.md).
+
+## Destinazioni {#destinations}
+
+In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni sono integrazioni pre-costruite con piattaforme di destinazione che attivano i dati a tali partner in modo semplice.
+
+**Nuove destinazioni**
+
+Sono disponibili nuove destinazioni in cui è possibile attivare i dati Adobe Experience Platform. Per ulteriori informazioni, vedere di seguito:
+
+| Destinazione | Descrizione |
+|--- | ---|
+| [!DNL Google Customer Match] | Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti nelle proprietà di Google possedute e gestite, ad esempio: [!DNL Search], [!DNL Shopping], Gmail e YouTube. Visitate la [!DNL Google Customer Match] pagina [](/help/rtcdp/destinations/google-customer-match-destination.md) nel catalogo delle destinazioni per ulteriori informazioni sulla destinazione e su come configurarla in CDP in tempo reale  Adobe. |
+
+**Nuove funzionalità**
+
+| Funzione | Descrizione |
+|------- | -----------|
+| Editor nome file personalizzato | Aggiornamento al flusso di lavoro di attivazione dei dati per le destinazioni di marketing e-mail e di archiviazione cloud che consente di modificare il nome dei file esportati. Per ulteriori informazioni, consulta il passaggio [](/help/rtcdp/destinations/activate-destinations.md#configure) Configura nel flusso di lavoro di attivazione. |
+| Attributi consigliati | Aggiornamento al flusso di lavoro di attivazione dei dati per le destinazioni di marketing e-mail e di archiviazione cloud per le quali vengono visualizzati gli attributi consigliati da aggiungere ai file esportati. Per ulteriori informazioni, consulta il passaggio [](/help/rtcdp/destinations/activate-destinations.md#select-attributes) Seleziona attributi nel flusso di lavoro di attivazione. |
 
 ## Origini {#sources}
 
