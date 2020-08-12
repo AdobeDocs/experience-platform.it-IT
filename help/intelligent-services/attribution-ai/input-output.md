@@ -5,9 +5,9 @@ title: ' ingresso e uscita Attribution AI'
 topic: Input and Output data for Attribution AI
 description: Il seguente documento illustra i diversi input e output utilizzati nelle Attribution AI .
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 2b51569a4c3dd9863edb6831bd182a7fa9d1d891
 workflow-type: tm+mt
-source-wordcount: '2166'
+source-wordcount: '2067'
 ht-degree: 3%
 
 ---
@@ -81,18 +81,6 @@ Esempio :
 
 - [Punteggi granulari grezzi](#raw-granular-scores)
 - [Punteggi aggregati](#aggregated-attribution-scores)
-
-Negli esempi seguenti, è stato utilizzato un output CSV di esempio a scopo illustrativo. Di seguito sono riportate alcune delle caratteristiche del file di esempio.
-
-- Nel file non sono presenti eventi token.
-- Il file non conteneva eventi di sola conversione (non conteneva righe di punteggio con 0 come punteggio marginale).
-- Caratteristiche dei dati:
-   - 368 righe campione totali.
-   - Almeno 8 conversioni con 3 canali distinti ciascuno.
-   - 151 conversioni di tipo conversione `“Digital_Product_Purchase”`.
-   - 10 punti di contatto distinti, EMAIL, SOCIAL_LINKEDIN, ADS_GOOGLE, SOCIAL_OTHER, ADS_OTHER, SOCIAL_TWITTER, LANDINGPAGE, SOCIAL_FB, ADS_BING, PRINT.
-   - Le conversioni e i punti di contatto sono rispettivamente superiori a 8 e 9 mesi.
-   - Le righe sono ordinate da `id`, `conversion_timestamp` e `touchpoint_timestamp`.
 
 **Esempio di schema di output:**
 
