@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Nozioni di base sulla composizione dello schema
 topic: overview
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: dae86df3ca4fcc9c5951068e905081df29e3b5f2
 workflow-type: tm+mt
-source-wordcount: '2602'
+source-wordcount: '2758'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Nozioni di base sulla composizione dello schema
 
-Questo documento fornisce un&#39;introduzione agli schemi [!DNL Experience Data Model] (XDM) e ai blocchi costitutivi, ai principi e alle procedure ottimali per la composizione degli schemi da utilizzare in  Adobe Experience Platform. Per informazioni generali su XDM e come viene utilizzato all&#39;interno [!DNL Platform], consultate la panoramica [di sistema](../home.md)XDM.
+Questo documento fornisce un&#39;introduzione agli schemi [!DNL Experience Data Model] (XDM) e ai blocchi costitutivi, ai principi e alle procedure ottimali per la composizione degli schemi da utilizzare in Adobe Experience Platform. Per informazioni generali su XDM e come viene utilizzato all&#39;interno [!DNL Platform], consultate la panoramica [di sistema](../home.md)XDM.
 
 ## Informazioni sugli schemi
 
@@ -59,13 +59,52 @@ Gli schemi di record e di serie temporali contengono una mappa di identità (`xd
 
 ### [!UICONTROL Identity]
 
-Gli schemi vengono utilizzati per assimilare i dati in [!DNL Experience Platform]. Questi dati possono essere utilizzati tra più servizi per creare una singola vista unificata di una singola entità. Pertanto, è importante, quando si pensa agli schemi, pensare a &quot;[!UICONTROL Identity]&quot; e quali campi possono essere utilizzati per identificare un soggetto, indipendentemente da dove i dati provengano.
+Gli schemi vengono utilizzati per assimilare i dati in [!DNL Experience Platform]. Questi dati possono essere utilizzati tra più servizi per creare una singola vista unificata di una singola entità. Pertanto, è importante, quando si pensa agli schemi, pensare alle identità dei clienti e ai campi che possono essere utilizzati per identificare un oggetto, a prescindere da dove i dati provengano.
 
-Per facilitare questo processo, i campi chiave possono essere contrassegnati come &quot;[!UICONTROL Identity]&quot;. Al momento dell&#39;inserimento dei dati, i dati contenuti in tali campi saranno inseriti nel campo &quot;[!UICONTROL Identity Graph]&quot; per l&#39;individuo in questione. I dati del grafico sono quindi accessibili da [!DNL Real-time Customer Profile](../../profile/home.md) e da altri [!DNL Experience Platform] servizi per fornire una visualizzazione unita di ogni singolo cliente.
+Per facilitare questo processo, i campi chiave negli schemi possono essere contrassegnati come identità. Al momento dell&#39;inserimento dei dati, i dati contenuti in tali campi vengono inseriti nel campo &quot;[!UICONTROL Identity Graph]&quot; di tale individuo. I dati del grafico sono quindi accessibili da [!DNL Real-time Customer Profile](../../profile/home.md) e da altri [!DNL Experience Platform] servizi per fornire una visualizzazione unita di ogni singolo cliente.
 
 I campi generalmente contrassegnati come &quot;[!UICONTROL Identity]&quot; includono: indirizzo e-mail, numero di telefono, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/it-IT/id-service/using/home.html), ID CRM o altri campi ID univoci. È inoltre necessario considerare eventuali identificatori univoci specifici della propria organizzazione, in quanto possono essere buoni anche &quot;[!UICONTROL Identity]&quot; campi.
 
-È importante considerare le identità dei clienti durante la fase di pianificazione dello schema, in modo da garantire che i dati vengano uniti per creare il profilo più affidabile possibile. Consulta la panoramica [del servizio](../../identity-service/home.md) identità per scoprire come le informazioni sull&#39;identità possono aiutarti a fornire esperienze digitali ai tuoi clienti.
+È importante considerare le identità dei clienti durante la fase di pianificazione dello schema, in modo da garantire che i dati vengano uniti per creare il profilo più affidabile possibile. Consulta la panoramica su [Adobe Experience Platform Identity Service](../../identity-service/home.md) per ulteriori informazioni su come le informazioni sull&#39;identità possono aiutarti a fornire esperienze digitali ai tuoi clienti.
+
+#### xdm:identityMap
+
+`xdm:identityMap` è un campo del tipo di mappa che descrive i vari valori di identità di un individuo, insieme ai relativi spazi dei nomi associati. Questo campo può essere utilizzato per fornire informazioni di identità per gli schemi, invece di definire valori di identità all&#39;interno della struttura dello schema stesso.
+
+Esempio di mappa identità semplice:
+
+```json
+"identityMap": {
+  "email": [
+    {
+      "id": "jsmith@example.com",
+      "primary": false
+    }
+  ],
+  "ECID": [
+    {
+      "id": "87098882279810196101440938110216748923",
+      "primary": false
+    },
+    {
+      "id": "55019962992006103186215643814973128178",
+      "primary": false
+    }
+  ],
+  "loyaltyId": [
+    {
+      "id": "2e33192000007456-0365c00000000000",
+      "primary": true
+    }
+  ]
+}
+```
+
+Come illustrato nell&#39;esempio precedente, ogni chiave dell&#39; `identityMap` oggetto rappresenta uno spazio dei nomi di identità. Il valore di ciascuna chiave è un array di oggetti che rappresenta i valori di identità (`id`) per il rispettivo namespace. Fare riferimento alla [!DNL Identity Service] documentazione per un [elenco di spazi dei nomi](../../identity-service/troubleshooting-guide.md#standard-namespaces) di identità standard riconosciuti dalle applicazioni  Adobe.
+
+>[!NOTE]
+>
+>È possibile specificare un valore booleano per specificare se il valore è un&#39;identità primaria (`primary`) anche per ciascun valore di identità. Le identità primarie devono essere impostate solo per gli schemi destinati a essere utilizzati in [!DNL Real-time Customer Profile]. Per ulteriori informazioni, vedere la sezione sugli schemi [](#union) di unione.
 
 ### Principi di evoluzione dello schema {#evolution}
 
@@ -83,7 +122,7 @@ Poiché il mantenimento della compatibilità con le versioni precedenti è fonda
 
 ### Schemi e acquisizione dei dati
 
-Per acquisire i dati in [!DNL Experience Platform], è necessario creare prima un set di dati. I set di dati sono gli elementi costitutivi della trasformazione e del tracciamento dei dati per [!DNL Catalog Service](../../catalog/home.md)e generalmente rappresentano tabelle o file contenenti dati acquisiti. Tutti i set di dati si basano sugli schemi XDM esistenti, che forniscono vincoli per ciò che i dati acquisiti devono contenere e per come dovrebbero essere strutturati. Per ulteriori informazioni, consulta la panoramica sull’inserimento dei dati [Adobe Experience Platform](../../ingestion/home.md) .
+Per acquisire i dati in [!DNL Experience Platform], è necessario creare prima un set di dati. I set di dati sono gli elementi costitutivi della trasformazione e del tracciamento dei dati per [!DNL Catalog Service](../../catalog/home.md)e generalmente rappresentano tabelle o file contenenti dati acquisiti. Tutti i set di dati si basano sugli schemi XDM esistenti, che forniscono vincoli per ciò che i dati acquisiti devono contenere e per come dovrebbero essere strutturati. Per ulteriori informazioni, consulta la panoramica su [Adobe Experience Platform Data Ingestion](../../ingestion/home.md) .
 
 ## Creazione di blocchi di uno schema
 
@@ -113,7 +152,7 @@ Ad esempio, uno schema che rappresenta i membri di un programma Fedeltà descriv
 
 Un mixin è un componente riutilizzabile che definisce uno o più campi che implementano determinate funzioni come i dati personali, le preferenze alberghiere o l&#39;indirizzo. Le mixine sono destinate ad essere incluse come parte di uno schema che implementa una classe compatibile.
 
-Le combinazioni definiscono le classi con cui sono compatibili in base al comportamento dei dati che rappresentano (record o serie temporali). Ciò significa che non tutti i mixin sono disponibili per l&#39;uso con tutte le classi.
+Le combinazioni definiscono le classi con cui sono compatibili in base al comportamento dei dati che rappresentano (serie di record o temporali). Ciò significa che non tutti i mixin sono disponibili per l&#39;uso con tutte le classi.
 
 I mixin hanno lo stesso ambito e la stessa definizione delle classi: esistono mixin di settore, mixin di fornitori e mixin di clienti definiti dalle singole organizzazioni che utilizzano [!DNL Platform]. [!DNL Experience Platform] include molti mixer standard di settore, consentendo al contempo ai fornitori di definire mixin per i propri utenti e ai singoli utenti di definire mixin base ai propri concetti specifici.
 
@@ -200,7 +239,7 @@ Tutti i file di dati acquisiti [!DNL Experience Platform] devono essere conformi
 
 Ora che si conoscono le nozioni di base della composizione dello schema, è possibile iniziare a creare schemi utilizzando l&#39; [!DNL Schema Registry].
 
-L&#39; [!DNL Schema Registry] applicazione viene utilizzata per accedere al [!DNL Schema Library] Adobe Experience Platform all&#39;interno di  e fornisce un&#39;interfaccia utente e un&#39;API RESTful da cui sono accessibili tutte le risorse libreria disponibili. Il [!DNL Schema Library] contiene risorse del settore definite da  Adobe, risorse del fornitore definite dai [!DNL Experience Platform] partner e classi, mixin, tipi di dati e schemi che sono stati composti da membri dell&#39;organizzazione.
+L&#39; [!DNL Schema Registry] interfaccia viene utilizzata per accedere all&#39; [!DNL Schema Library] interno di Adobe Experience Platform e fornisce un&#39;interfaccia utente e un&#39;API RESTful da cui sono accessibili tutte le risorse libreria disponibili. Il [!DNL Schema Library] contiene risorse del settore definite da  Adobe, risorse del fornitore definite dai [!DNL Experience Platform] partner e classi, mixin, tipi di dati e schemi che sono stati composti da membri dell&#39;organizzazione.
 
 Per iniziare a comporre lo schema utilizzando l&#39;interfaccia utente, seguire l&#39;esercitazione [Editor](../tutorials/create-schema-ui.md) schema per creare lo schema &quot;Membri fedeltà&quot; menzionato in questo documento.
 
