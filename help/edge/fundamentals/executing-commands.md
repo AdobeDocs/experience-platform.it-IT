@@ -1,10 +1,10 @@
 ---
 title: Esecuzione di comandi
-seo-title: Esecuzione  comandi SDK Web per Adobi Experience Platform
+seo-title: Esecuzione di comandi Adobe Experience Platform Web SDK
 description: Scopri come eseguire  comandi SDK Web per Experienci Platform
 seo-description: Scopri come eseguire  comandi SDK Web per Experienci Platform
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: bf4194e1449bddd662f2152f84dbbe90060b5d30
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 2%
@@ -28,7 +28,7 @@ L’ `commandName` SDK spiega all’SDK cosa fare, mentre `options` sono i param
 
 [Le promesse](https://developer.mozilla.org/it-IT/docs/Web/JavaScript/Reference/Global_Objects/Promise) sono fondamentali per il modo in cui l’SDK comunica con il codice sulla tua pagina Web. Una promessa è una struttura di programmazione comune e non è specifica per questo SDK o JavaScript. Una promessa funge da proxy per un valore non noto al momento della creazione della promessa. Una volta noto il valore, la promessa viene &quot;risolta&quot; con il valore. Le funzioni del gestore possono essere associate a una promessa, in modo che sia possibile ricevere una notifica quando la promessa è stata risolta o quando si è verificato un errore nel processo di risoluzione della promessa. Per saperne di più sulle promesse, leggete [questa esercitazione](https://javascript.info/promise-basics) o una delle altre risorse disponibili sul Web.
 
-## Gestione del successo o del fallimento
+## Gestione del successo o del fallimento {#handling-success-or-failure}
 
 Ogni volta che viene eseguito un comando, viene restituita una promessa. La promessa rappresenta il completamento finale del comando. Nell&#39;esempio seguente, è possibile utilizzare `then` e `catch` metodi per determinare se il comando ha avuto esito positivo o negativo.
 
