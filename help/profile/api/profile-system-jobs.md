@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Processi del sistema di profili - API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 73f2c05a0e63f376f7a2f5644133e773980d0b26
 workflow-type: tm+mt
 source-wordcount: '1419'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Endpoint processi del sistema di profilo (richieste di eliminazione)
 
- Adobe Experience Platform consente di acquisire dati da più origini e di creare profili affidabili per i singoli clienti. I dati acquisiti [!DNL Platform] vengono memorizzati sia nell&#39;archivio [!DNL Data Lake] che nell&#39;archivio [!DNL Real-time Customer Profile] dati. Talvolta potrebbe essere necessario eliminare un set di dati o un batch dall&#39;archivio profili per rimuovere i dati non più necessari o che sono stati aggiunti per errore. Ciò richiede l&#39;utilizzo dell&#39; [!DNL Real-time Customer Profile] API per creare un processo di [!DNL Profile] sistema, noto anche come &quot;[!DNL delete request]&quot;, che può essere modificato, monitorato o rimosso se necessario.
+Adobe Experience Platform consente di acquisire dati da più origini e di creare profili affidabili per i singoli clienti. I dati acquisiti [!DNL Platform] vengono memorizzati sia nell&#39;archivio [!DNL Data Lake] che nell&#39;archivio [!DNL Real-time Customer Profile] dati. Talvolta potrebbe essere necessario eliminare un set di dati o un batch dall&#39;archivio profili per rimuovere i dati non più necessari o che sono stati aggiunti per errore. Ciò richiede l&#39;utilizzo dell&#39; [!DNL Real-time Customer Profile] API per creare un processo di [!DNL Profile] sistema, noto anche come &quot;[!DNL delete request]&quot;, che può essere modificato, monitorato o rimosso se necessario.
 
 >[!NOTE]
 >Se state tentando di eliminare i set di dati o i batch dal [!DNL Data Lake], consultate la panoramica [del servizio](../../catalog/home.md) catalogo per le istruzioni.
@@ -46,7 +46,7 @@ GET /system/jobs?{QUERY_PARAMETERS}
 **Richiesta**
 
 ```shell
-curl -X POST \
+curl -X GET \
   https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
