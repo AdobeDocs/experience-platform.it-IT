@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guida introduttiva all'API del profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 6df3e6579139f01d9877c1f033ea7721ca78118c
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
@@ -16,12 +16,12 @@ ht-degree: 0%
 
 Utilizzando l&#39; [!DNL Real-time Customer Profile] API, potete eseguire operazioni CRUD di base rispetto alle risorse Profilo, come la configurazione degli attributi calcolati, l&#39;accesso alle entità, l&#39;esportazione dei dati del profilo ed eliminazione di set di dati o batch non necessari.
 
-L&#39;utilizzo della guida per gli sviluppatori richiede una conoscenza approfondita dei diversi servizi  Adobi Experience Platform coinvolti nell&#39;utilizzo dei [!DNL Profile] dati. Prima di iniziare a lavorare con l&#39; [!DNL Real-time Customer Profile] API, consulta la documentazione relativa ai seguenti servizi:
+L&#39;utilizzo della guida per gli sviluppatori richiede una buona conoscenza dei diversi servizi Adobe Experience Platform coinvolti nell&#39;utilizzo dei [!DNL Profile] dati. Prima di iniziare a lavorare con l&#39; [!DNL Real-time Customer Profile] API, consulta la documentazione relativa ai seguenti servizi:
 
 * [!DNL Real-time Customer Profile](../home.md): Fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
 * [!DNL Adobe Experience Platform Identity Service](../../identity-service/home.md): Ottieni una visione migliore del tuo cliente e del suo comportamento attraverso il collegamento di identità tra dispositivi e sistemi.
 * [!DNL Adobe Experience Platform Segmentation Service](../../segmentation/home.md): Consente di creare segmenti di pubblico dai dati del profilo cliente in tempo reale.
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Framework standard con cui Platform organizza i dati sull&#39;esperienza dei clienti.
+* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Il framework standardizzato tramite il quale la piattaforma organizza i dati sull&#39;esperienza cliente.
 * [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per eseguire correttamente chiamate agli endpoint [!DNL Profile] API.
@@ -34,13 +34,13 @@ La documentazione [!DNL Real-time Customer Profile] API fornisce esempi di chiam
 
 La documentazione API richiede inoltre di aver completato l&#39;esercitazione [di](../../tutorials/authentication.md) autenticazione per effettuare correttamente le chiamate agli [!DNL Platform] endpoint. Completando l&#39;esercitazione sull&#39;autenticazione vengono forniti i valori per ciascuna delle intestazioni richieste nelle chiamate [!DNL Experience Platform] API, come illustrato di seguito:
 
-* Autorizzazione: Portatore `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui si svolgerà l&#39;operazione:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
