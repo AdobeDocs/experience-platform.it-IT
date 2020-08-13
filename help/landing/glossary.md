@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Documentazione del prodotto Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: b67513a83a46861872e92d9db57232554e7d831b
+source-git-commit: c91bcdff5b57ef69f79e211fbeb912e3d7fcdb39
 workflow-type: tm+mt
-source-wordcount: '7228'
+source-wordcount: '7236'
 ht-degree: 0%
 
 ---
@@ -100,7 +100,7 @@ ht-degree: 0%
 
 **Capping:** Nelle [!DNL Decisioning Service]regole di decisione, il limite massimo viene utilizzato per definire quante volte viene presentata un&#39;offerta. Ci sono due tipi di tappi, quante volte un&#39;offerta può essere proposta tra il pubblico target combinato, noto anche come &quot;Global Cap&quot; e quante volte un&#39;offerta può essere proposta allo stesso utente finale, noto anche come &quot;Profile Cap&quot;.
 
-**Catalogo:** In [!DNL Real-time Customer Data Platform]origini e destinazioni, un catalogo è una galleria con i collegamenti disponibili alle applicazioni di Adobe  e tecnologie di terze parti.
+**Catalogo:** In [!DNL Real-time Customer Data Platform]origini e destinazioni, un catalogo è una galleria con i collegamenti disponibili alle applicazioni  Adobe e alle tecnologie di terze parti.
 
 **Classe:** Una classe definisce il set di campi più piccolo utilizzato per creare uno schema ed è il comportamento di base che descrive l&#39;oggetto business.
 
@@ -210,7 +210,7 @@ ht-degree: 0%
 
 **Strategia di salvataggio Delta:** `Delta save strategy` è un&#39;opzione per l&#39;acquisizione di dati di terze parti tramite una connessione. L&#39;opzione consente all&#39;utente di specificare l&#39;inserimento di righe di dati di origine nuove o modificate [!DNL Experience Platform]. Le nuove righe vengono aggiunte alla fine del dataset e le righe modificate vengono aggiornate nel dataset in [!DNL Experience Platform].
 
-**Destinazione:** In [!DNL Real-time Customer Data Platform] una destinazione è un termine generico per qualsiasi sistema, ad esempio un&#39;applicazione di Adobe , un server di annunci o una rete di annunci in cui un&#39;audience viene attivata e distribuita.
+**Destinazione:** In [!DNL Real-time Customer Data Platform] una destinazione è un termine generico per qualsiasi endpoint, ad esempio un&#39;applicazione di Adobe , una piattaforma pubblicitaria, un servizio di archiviazione cloud o un servizio di marketing, in cui un&#39;audience viene attivata e consegnata.
 
 **Categoria di destinazione:** Una categoria di destinazione è un raggruppamento di [!DNL Real-time Customer Data Platform] destinazioni con caratteristiche simili.
 
@@ -326,9 +326,9 @@ ht-degree: 0%
 
 ## J
 
-**[!DNL JupyterLab]:**Interfaccia Web open-source per Project[!DNL Jupyter]e strettamente integrata in[!DNL Experience Platform].
+**[!DNL JupyterLab]:** Interfaccia Web open-source per Project [!DNL Jupyter] e strettamente integrata in [!DNL Experience Platform].
 
-**[!DNL Jupyter Notebook]:**Applicazione Web open-source che consente agli utenti di creare e condividere documenti che contengono codice dal vivo, equazioni, visualizzazioni e testo narrativo.
+**[!DNL Jupyter Notebook]:** Applicazione Web open-source che consente agli utenti di creare e condividere documenti che contengono codice dal vivo, equazioni, visualizzazioni e testo narrativo.
 
 ## K
 
@@ -366,7 +366,7 @@ ht-degree: 0%
 
 **Sandbox non di produzione:** Le sandbox non di produzione sono una forma di virtualizzazione dei dati che consente di isolare i dati da altre sandbox e sono generalmente utilizzate per esperimenti di sviluppo, test o test. Le sandbox non di produzione possono essere reimpostate ed eliminate.
 
-**[!DNL Notebooks]:**[!DNL Notebooks]sono creati utilizzando *[!DNL Jupyter Notebook]*e contengono descrizioni di analisi, risultati e possono essere eseguiti per eseguire l&#39;analisi dei dati.
+**[!DNL Notebooks]:** [!DNL Notebooks] sono creati utilizzando *[!DNL Jupyter Notebook]* e contengono descrizioni di analisi, risultati e possono essere eseguiti per eseguire l&#39;analisi dei dati.
 
 [Torna all&#39;inizio](#adobe-experience-platform-glossary)
 
@@ -418,7 +418,7 @@ ht-degree: 0%
 
 **Esportazione profilo:** [!DNL Profile] export è uno dei due tipi di destinazioni in [!DNL Real-time Customer Data Platform]. [!DNL Profile] export genera un file contenente profili e attributi e utilizza dati PII non elaborati con le e-mail e viene utilizzato per l&#39;integrazione con le piattaforme di automazione marketing ed e-mail.
 
-**Frammento FProfile profilo:** Un frammento di profilo è l&#39;informazione di profilo per una sola identità inclusa nell&#39;elenco di identità esistenti per un particolare utente.
+**Frammento profilo:** Un frammento di profilo è l&#39;informazione di profilo per una sola identità inclusa nell&#39;elenco di identità esistenti per un particolare utente.
 
 **ID profilo:** Un ID profilo è un identificatore generato automaticamente associato a un tipo di identità e rappresenta un profilo.
 
@@ -490,7 +490,7 @@ ht-degree: 0%
 
 **Metodo di valutazione del segmento:** La valutazione pianificata del segmento consente di eseguire una pianificazione periodica per eseguire un processo di esportazione in un momento specifico, mentre la valutazione su richiesta comporta la creazione di un processo del segmento per creare immediatamente l&#39;audience.
 
-**Esportazione segmento:** L&#39;esportazione dei segmenti è uno dei due tipi di destinazioni e invia i profili idonei e mappati alla destinazione. Utilizza gli ID di segmento e utente e i dati pseudonimi e si integra solitamente con i social network e altre piattaforme di destinazione per i media digitali.
+**Esportazione segmento:** L&#39;esportazione dei segmenti è uno dei due tipi di destinazioni in [!DNL Real-time Customer Data Platform]. Con l’esportazione dei segmenti, potete inviare i profili idonei e mappati sulla destinazione. Utilizza gli ID di segmento e utente e i dati pseudonimi e si integra solitamente con i social network e altre piattaforme di destinazione per i media digitali.
 
 **ID segmento:** L’ID segmento è un identificatore generato automaticamente associato a un segmento.
 
