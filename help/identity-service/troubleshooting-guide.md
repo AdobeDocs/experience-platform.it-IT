@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guida alla risoluzione dei problemi per  Adobe Experience Platform Identity Service
+title: Guida alla risoluzione dei problemi di Adobe Experience Platform Identity Service
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5d7e6387382e20b3e7f07070006b6d9d59ac47eb
 workflow-type: tm+mt
 source-wordcount: '2225'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Guida alla risoluzione dei problemi del servizio identità
 
-Questo documento contiene le risposte alle domande frequenti sul  Adobe Experience Platform [!DNL Identity Service], nonché una guida per la risoluzione dei problemi relativi agli errori più comuni. Per domande e risoluzione dei problemi relativi alle [!DNL Platform] API in generale, consultate la guida alla risoluzione dei problemi delle API di [Adobe Experience Platform](../landing/troubleshooting.md).
+Questo documento contiene le risposte alle domande frequenti su Adobe Experience Platform [!DNL Identity Service]e una guida alla risoluzione dei problemi per individuare gli errori più comuni. Per domande e risoluzione dei problemi relativi alle [!DNL Platform] API in generale, consultate la guida alla risoluzione dei problemi delle API di [Adobe Experience Platform](../landing/troubleshooting.md).
 
 I dati che identificano un singolo cliente sono spesso frammentati tra i vari dispositivi e sistemi utilizzati per interagire con il tuo marchio. [!DNL Identity Service] riunisce queste identità frammentate, facilitando la comprensione completa del comportamento dei clienti e offrendo esperienze digitali di grande impatto in tempo reale. Per ulteriori informazioni, consultate la panoramica [del servizio](./home.md)identità.
 
@@ -72,20 +72,20 @@ I campi identità devono essere associati a uno spazio nomi identità esistente 
 
 Per istruzioni dettagliate sulla definizione di uno spazio nomi durante la creazione di un descrittore di identità tramite l&#39;API, vedere la sezione sulla [creazione di un descrittore](../xdm/tutorials/create-schema-ui.md) nella guida per gli sviluppatori del Registro di sistema dello schema. Per contrassegnare un campo di schema come identità nell&#39;interfaccia utente, seguire i passaggi dell&#39;esercitazione [Editor di](../xdm/tutorials/create-schema-api.md)schema.
 
-## Quali sono gli spazi dei nomi di identità standard forniti dal Experience Platform ?
+## Quali sono gli spazi dei nomi di identità standard forniti dal Experience Platform ? {#standard-namespaces}
 
 I seguenti spazi dei nomi standard sono forniti per l&#39;uso da parte di tutte le organizzazioni all&#39;interno  Experience Platform:
 
 | Nome visualizzato | ID | Codice | Descrizione |
 | ------------ | --- | --- | ----------- |
 | CORE | 0 | CORE | nome legacy: &quot; Adobe AudienceManager&quot; |
-| ECID | 4 | ECID | alias: &quot; ID Adobe Marketing Cloud&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot; ID Adobe Experience Platform&quot; |
+| ECID | 4 | ECID | alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; |
 | E-mail | 6 | E-mail |  |
 | E-mail (SHA256, minuscola) | 11 | E-mail | Spazio dei nomi standard per le e-mail con hash precedente. I valori forniti in questo spazio nomi vengono convertiti in lettere minuscole prima di eseguire l&#39;hash con SHA-256. |
 | Telefono | 7 | Telefono |  |
 | Windows AID | 8 | WAID |  |
 | AdCloud | 411 | AdCloud | alias:  Ad Cloud |
-| Adobe Target | 9 | TNTID | ID Target |
+| Adobe Target | 9 | TNTID | ID destinazione |
 | Google Ad ID | 20914 | GAID | GAID |
 | Apple IDFA | 20915 | IDFA | ID per inserzionisti |
 
@@ -105,9 +105,9 @@ Alle identità viene fatto riferimento nelle chiamate API tramite la loro identi
 
 Il servizio identità crea un hash di crittografia univoca dei dati PII prima dei valori persistenti. I dati di identità negli spazi dei nomi &quot;Phone&quot; e &quot;Email&quot; vengono automaticamente crittografati con SHA-256, con i valori &quot;Email&quot; automaticamente convertiti in lettere minuscole prima dell&#39;hashing.
 
-## Devo crittografare tutti i dati PII prima di inviarli ad Platform?
+## Devo crittografare tutti i dati PII prima di inviarli alla piattaforma?
 
-Non è necessario crittografare manualmente i dati PII prima di assimilarli in Platform. Applicando l&#39;etichetta di utilizzo dei `I1` dati a tutti i campi di dati applicabili, Platform converte automaticamente questi campi in valori ID con hash al momento dell&#39;assimilazione.
+Non è necessario crittografare manualmente i dati PII prima di assimilarli nella piattaforma. Applicando l&#39;etichetta di utilizzo dei `I1` dati a tutti i campi di dati applicabili, Platform converte automaticamente questi campi in valori ID con hash al momento dell&#39;assimilazione.
 
 Per i passaggi relativi all&#39;applicazione e alla gestione delle etichette di utilizzo dei dati, vedere l&#39;esercitazione [sulle etichette di uso](../data-governance/labels/user-guide.md)dei dati.
 
