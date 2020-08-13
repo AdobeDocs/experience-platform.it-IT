@@ -4,9 +4,9 @@ seo-title: Destinazioni marketing e-mail
 description: I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio per l’invio di campagne e-mail promozionali.
 seo-description: I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio per l’invio di campagne e-mail promozionali.
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: 6850a1ee5a578a3dccce9f9decd8f6a368705f4a
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '772'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Destinazioni di marketing e-mail {#email-marketing-destinations}
 
-I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio l&#39;invio di campagne e-mail promozionali.  Adobe Dati cliente in tempo reale Platform si integra con ESP consentendo di attivare i segmenti nelle destinazioni di marketing via e-mail.
+I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio l&#39;invio di campagne e-mail promozionali.  Piattaforma dati cliente in tempo reale si integra con ESP consentendo di attivare i segmenti nelle destinazioni di marketing via e-mail.
 
 Per inviare segmenti alle destinazioni di marketing via e-mail per le campagne,  CDP in tempo reale del Adobe deve prima connettersi alla destinazione.
 
@@ -47,15 +47,21 @@ Nella **[!UICONTROL Select Segments]** pagina, seleziona i segmenti da inviare a
 
 ![Seleziona segmenti](/help/rtcdp/destinations/assets/email-select-segments.png)
 
-## Passaggio 3: selezionare i campi dello schema da utilizzare come attributi di destinazione nei file esportati {#destination-attributes}
+## Passaggio 3 - Configurare i nomi dei file
+
+Per informazioni sulle opzioni di modifica del nome del file, fare riferimento al passaggio [Configura](/help/rtcdp/destinations/activate-destinations.md#configure) nell&#39;esercitazione sulle destinazioni di attivazione.
+
+## Passaggio 4 - Selezionare gli attributi - Selezionare i campi dello schema da utilizzare come attributi di destinazione nei file esportati {#destination-attributes}
 
 In questo passaggio, stai selezionando quali campi esportare per le destinazioni di marketing tramite e-mail.
 
-![Attributi di destinazione](/help/rtcdp/destinations/assets/destination-attributes.png)
+![Attributi di destinazione](/help/rtcdp/destinations/assets/recommended-attributes.png)
+
+Per ulteriori informazioni su questo passaggio, consulta il passaggio [Seleziona attributi](/help/rtcdp/destinations/activate-destinations.md#select-attributes) nell’esercitazione di attivazione delle destinazioni.
 
 ### Identità {#identity}
 
-È consigliabile selezionare un identificatore univoco dallo schema [](../../profile/home.md#profile-fragments-and-union-schemas)unione. Questo è il campo di cui vengono cancellate le identità degli utenti. Nella maggior parte dei casi, questo campo è l&#39;indirizzo e-mail, ma può anche essere un ID programma fedeltà o un numero di telefono. Vedere la tabella seguente per gli identificatori univoci più comuni e il relativo campo XDM nello schema unione.
+È consigliabile selezionare un identificatore univoco dallo schema [](../../profile/home.md#profile-fragments-and-union-schemas)unione. Questo è il campo di cui vengono cancellate le identità degli utenti. Nella maggior parte dei casi, questo campo è l&#39;indirizzo e-mail, ma può anche essere un ID programma fedeltà o un numero di telefono. Vedere la tabella seguente per gli identificatori univoci più comuni e il relativo campo XDM nello schema.
 
 | Identificatore univoco | Campo XDM nello schema unificato |
 ---------|----------
@@ -76,8 +82,9 @@ Nel selettore del campo Schema, scegliete gli altri campi da esportare nella des
 | Stato indirizzo | `homeAddress.stateProvince` |
 | Indirizzo Codice postale | `homeAddress.postalCode` |
 | Compleanno | `person.birthDayAndMonth` |
+| Appartenenza al segmento | `segmentMembership.status` |
 
-## Passaggio 3 - Importa i dati dalla posizione di archiviazione nella destinazione
+## Passaggio 5 - Importa i dati dalla posizione di archiviazione nella destinazione
 
 Consulta i singoli articoli di destinazione marketing e-mail per informazioni su come importare dati dalla posizione di archiviazione nelle destinazioni:
 
@@ -89,3 +96,8 @@ Consulta i singoli articoli di destinazione marketing e-mail per informazioni su
 ## Attivare i segmenti nelle destinazioni di e-mail marketing
 
 Per istruzioni su come attivare i segmenti nelle destinazioni di marketing tramite e-mail, vedi [Attivare i dati sulle destinazioni](/help/rtcdp/destinations/activate-destinations.md).
+
+## Risorse aggiuntive
+
+* [Attivare i dati per le destinazioni](/help/rtcdp/destinations/activate-destinations.md)
+* [Creare le destinazioni di marketing e attivare i dati tramite l&#39;API del servizio di flusso](https://docs.adobe.com/content/help/en/experience-platform/tutorials/destinations/email-marketing-api.html)
