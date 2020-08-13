@@ -4,7 +4,7 @@ seo-title: Configurazione di Adobe Experience Platform Web SDK
 description: 'Scopri come configurare l’SDK Web per Experienci Platform '
 seo-description: 'Scopri come configurare l’SDK Web per Experienci Platform '
 translation-type: tm+mt
-source-git-commit: abd72993577f298141ed0d25b6c4abc42050b68e
+source-git-commit: b7b206573a130af70a82c73a3f9b0a0eb28a513a
 workflow-type: tm+mt
 source-wordcount: '745'
 ht-degree: 7%
@@ -78,7 +78,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  Quando si configurano pi
 
 ## Raccolta dati
 
-### `clickCollectionEnabled`
+### `clickCollectionEnabled` {#clickCollectionEnabled}
 
 | **Tipo** | **Obbligatorio** | **Valore predefinito** |
 | -------- | ------------ | ----------------- |
