@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guida per lo sviluppatore di API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: d80d49df9c5ac197bdc7f851bbfff18d9b3019d4
+source-git-commit: 84789a8e6e8c1f0fc91d0b54ba29d449963c3117
 workflow-type: tm+mt
-source-wordcount: '704'
+source-wordcount: '796'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # [!DNL Real-time Customer Profile] Guida per gli sviluppatori di API
 
-[!DNL Real-time Customer Profile] consente di visualizzare una visualizzazione olistica di ogni singolo cliente all&#39;interno  Adobe Experience Platform. [!DNL Profile] consente di consolidare dati cliente diversi da canali diversi, come online, offline, CRM e dati di terze parti, in una visualizzazione unificata che offre un account con marca temporale utilizzabile per ogni interazione con il cliente.
+[!DNL Real-time Customer Profile] consente di visualizzare una visualizzazione olistica di ogni singolo cliente all&#39;interno di Adobe Experience Platform. [!DNL Profile] consente di consolidare dati cliente diversi da canali diversi, come online, offline, CRM e dati di terze parti, in una visualizzazione unificata che offre un account con marca temporale utilizzabile per ogni interazione con il cliente.
 
 L&#39; [!DNL Real-time Customer Profile] API include più endpoint, descritti di seguito. Per informazioni dettagliate, consultate le singole guide degli endpoint e la guida [](getting-started.md) introduttiva per informazioni importanti sulle intestazioni richieste, sulla lettura di chiamate API di esempio e altro ancora.
 
@@ -32,11 +32,11 @@ Gli attributi calcolati consentono di calcolare automaticamente il valore dei ca
 
 ## Proiezioni Edge {#edge-projections}
 
- Adobe Experience Platform consente la personalizzazione in tempo reale delle esperienze dei clienti, rendendo i dati facilmente accessibili su server situati strategicamente denominati &quot;edge&quot;. L&#39; [!DNL Real-time Customer Profile] API fornisce gli endpoint per lavorare con i bordi attraverso i componenti denominati &quot;proiezioni&quot;. Ciò include configurazioni di proiezione per determinare quali dati proiettare su ciascun bordo, nonché destinazioni di proiezione per definire dove indirizzare una proiezione. Per informazioni dettagliate sull&#39;utilizzo delle proiezioni dei bordi, visitate la guida [alle configurazioni di](edge-projections.md)proiezione e agli endpoint delle destinazioni.
+Adobe Experience Platform consente di personalizzare in tempo reale le esperienze dei clienti rendendo i dati facilmente accessibili su server situati in una posizione strategica denominati &quot;edge&quot;. L&#39; [!DNL Real-time Customer Profile] API fornisce gli endpoint per lavorare con i bordi attraverso i componenti denominati &quot;proiezioni&quot;. Ciò include configurazioni di proiezione per determinare quali dati proiettare su ciascun bordo, nonché destinazioni di proiezione per definire dove indirizzare una proiezione. Per informazioni dettagliate sull&#39;utilizzo delle proiezioni dei bordi, visitate la guida [alle configurazioni di](edge-projections.md)proiezione e agli endpoint delle destinazioni.
 
 ## Entità ([!DNL Profile] accesso) {#entities}
 
-Attraverso  Adobe Experience Platform è possibile accedere [!DNL Real-time Customer Profile] ai dati utilizzando RESTful APIs o l&#39;interfaccia utente. Per informazioni su come accedere alle entità, più comunemente note come &quot;profili&quot;, mediante l&#39;API, segui i passaggi descritti nella guida [all&#39;endpoint](entities.md)entità. Per accedere ai profili utilizzando l&#39; [!DNL Platform] interfaccia utente, consulta la guida [utente relativa al](../ui/user-guide.md)profilo.
+Tramite Adobe Experience Platform è possibile accedere [!DNL Real-time Customer Profile] ai dati utilizzando le RESTful API o l&#39;interfaccia utente. Per informazioni su come accedere alle entità, più comunemente note come &quot;profili&quot;, mediante l&#39;API, segui i passaggi descritti nella guida [all&#39;endpoint](entities.md)entità. Per accedere ai profili utilizzando l&#39; [!DNL Platform] interfaccia utente, consulta la guida [utente relativa al](../ui/user-guide.md)profilo.
 
 ## Processi di esportazione ([!DNL Profile] esportazione) {#profile-export}
 
@@ -46,7 +46,11 @@ Attraverso  Adobe Experience Platform è possibile accedere [!DNL Real-time Cust
 
 Quando si uniscono dati da più origini in [!DNL Experience Platform], i criteri di unione sono le regole che [!DNL Platform] utilizzano per determinare in che modo i dati verranno assegnati priorità e quali dati verranno combinati per creare singoli profili cliente. Utilizzando l&#39; [!DNL Real-time Customer Profile] API, è possibile creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per l&#39;organizzazione. Per ulteriori informazioni sull&#39;utilizzo dei criteri di unione tramite l&#39;API, consultare la guida [all&#39;endpoint dei criteri di](merge-policies.md)unione.
 
-Per una guida all&#39;utilizzo dei criteri di unione nell&#39; [!DNL Platform] interfaccia utente, consultate la guida [utente](../ui/merge-policies.md)Unisci criteri.
+Per una guida all&#39;utilizzo dei criteri di unione tramite l&#39; [!DNL Platform] interfaccia utente, vedere la guida [utente dei criteri di](../ui/merge-policies.md)unione.
+
+## Stato dell’anteprima del campione ([!DNL Profile] anteprima) {#profile-preview}
+
+Poiché i dati attivati per il profilo vengono trasferiti  Experience Platform, vengono memorizzati nell&#39;archivio dati del profilo. Con l’aumento o la diminuzione del numero di record nell’archivio profili, viene eseguito un processo di esempio che include informazioni sul numero di frammenti di profilo e di profili uniti presenti nell’archivio dati. Utilizzando l&#39;API Profile è possibile visualizzare in anteprima l&#39;esempio di successo più recente, nonché distribuire il profilo di elenco per set di dati e per namespace di identità. Per iniziare a utilizzare l’ `/profilepreviewstatus` endpoint, consultate la guida [all’endpoint di stato dell’esempio di](preview-sample-status.md)anteprima.
 
 ## Processi del sistema di profili {#profile-system-jobs}
 
