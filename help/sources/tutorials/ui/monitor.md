@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Monitorare account e flussi di dati
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8bdd0493444c2c3b0f56db1166a6fa5d616e41be
+source-git-commit: dcdb1eb1f89b7393b83941a18abb2be2afa3576f
 workflow-type: tm+mt
 source-wordcount: '827'
 ht-degree: 0%
@@ -100,7 +100,9 @@ Viene visualizzato il *[!UICONTROL Error diagnostics preview]* pannello. In ques
 
 Questa sezione include anche un&#39;anteprima della colonna che contiene l&#39;errore.
 
-> [!IMPORTANT] Per abilitare *[!UICONTROL Error diagnostics preview]* è necessario attivare *[!UICONTROL Partial ingestion]* e *[!UICONTROL Error diagnostics]* durante la configurazione di un flusso di dati. In questo modo il sistema potrà eseguire la scansione di tutti i record acquisiti durante l&#39;esecuzione del flusso.
+>[!IMPORTANT]
+>
+>Per abilitare *[!UICONTROL Error diagnostics preview]* è necessario attivare *[!UICONTROL Partial ingestion]* e *[!UICONTROL Error diagnostics]* durante la configurazione di un flusso di dati. In questo modo il sistema potrà eseguire la scansione di tutti i record acquisiti durante l&#39;esecuzione del flusso.
 
 ![Anteprima-errore-diagnostica](../../images/tutorials/monitor/preview-error-diagnostics.png)
 
