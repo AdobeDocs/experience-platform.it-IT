@@ -3,9 +3,9 @@ product: adobe experience platform
 audience: user
 user-guide-title: Guida della piattaforma dati cliente in tempo reale
 translation-type: tm+mt
-source-git-commit: 5802c05ce166f0b355b17a28655ff2f18f7cd0c4
+source-git-commit: d833257b4dffbf2a02ab4a3fc7a6a9e7347e7df5
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '460'
 ht-degree: 10%
 
 ---
@@ -128,7 +128,7 @@ ht-degree: 10%
       * [Attivare profili e segmenti su una destinazione](destinations/activate-destinations.md)
    * Esercitazioni API di destinazione {#api-tutorials}
       * [Connettersi alle destinazioni di streaming (hub eventi AWS Kinesis e Azure) e attivare i dati](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
-      * [Connessione alle destinazioni di e-mail marketing e attivazione dei dati](https://docs.adobe.com/content/help/en/experience-platform/tutorials/destinations/email-marketing-api.html)
+      * [Connessione alle destinazioni di e-mail marketing e attivazione dei dati](/help/rtcdp/destinations/email-marketing-api.md)
 * Privacy e governance dei dati {#privacy}
    * [Panoramica sulla privacy](privacy/privacy-overview.md)
    * [Panoramica sulla governance dei dati](privacy/data-governance-overview.md)
