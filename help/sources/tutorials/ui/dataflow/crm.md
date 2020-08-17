@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;crm schema;crm;CRM;dataflow;Dataflow
 solution: Experience Platform
 title: Configurare un flusso di dati per un connettore CRM nell'interfaccia utente
 topic: overview
+description: Un flusso di dati è un'attività pianificata che recupera e trasferisce dati da un'origine a un set di dati della piattaforma. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account CRM.
 translation-type: tm+mt
-source-git-commit: d80622aaa8408d640a1a80b6a37f4083344e7fa1
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: '1298'
 ht-degree: 0%
 
 ---
@@ -132,7 +133,7 @@ Una volta creato il flusso di dati, è possibile monitorare i dati che vengono a
 
 ## Eliminare il flusso di dati
 
-È possibile eliminare i flussi di dati che non sono più necessari o che sono stati creati in modo non corretto utilizzando la *[!UICONTROL Delete]* funzione disponibile nell&#39; *[!UICONTROL Dataflows]* area di lavoro. Per ulteriori informazioni sull’eliminazione dei flussi di dati, consultate l’esercitazione sull’ [eliminazione dei flussi di dati nell’interfaccia](../delete.md)utente.
+È possibile eliminare i flussi di dati che non sono più necessari o che sono stati creati in modo non corretto utilizzando la *[!UICONTROL Delete]* funzione disponibile nell&#39; *[!UICONTROL Dataflows]* area di lavoro. Per ulteriori informazioni su come eliminare i flussi di dati, consulta l’esercitazione sull’ [eliminazione dei flussi di dati nell’interfaccia](../delete.md)utente.
 
 ## Passaggi successivi
 
