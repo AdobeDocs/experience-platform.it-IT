@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;decision events;decision event;Decision events
 solution: Experience Platform
 title: Modello di dominio per la decodifica delle esperienze
 topic: overview
+description: In questa sezione vengono illustrati i componenti di Disioning Service e le modalità di interazione di tali componenti. I concetti e le loro relazioni formano il *Dominio* del problema decisionale. Questi componenti fondamentali vengono attivati indipendentemente da come si utilizza il servizio di gestione delle decisioni].
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1412'
 ht-degree: 0%
 
 ---
@@ -18,9 +19,9 @@ In questa sezione vengono illustrati i componenti di [!DNL Decisioning Service] 
 
 ## Opzioni decisione
 
-Un&#39;opzione ** decisionale relativa all&#39;esperienza è un&#39;esperienza potenziale che può essere presentata a un cliente specifico. Un&#39;opzione è anche detta scelta o alternativa. Quando si decide l&#39;opzione migliore successiva per un cliente, [!DNL Decisioning Service] considera le opzioni da ***d<sub>1</sub>***a***<sub>dN</sub>*** tra un insieme limitato di opzioni **`D`**.
+Un&#39;opzione ** decisionale relativa all&#39;esperienza è un&#39;esperienza potenziale che può essere presentata a un cliente specifico. Un&#39;opzione è anche detta scelta o alternativa. Quando si decide l&#39;opzione migliore successiva per un cliente, [!DNL Decisioning Service] considera le opzioni da ***d<sub>1</sub>*** a ***<sub>dN</sub>*** tra un insieme limitato di opzioni **`D`**.
 
-Le decisioni vengono prese individuando la migliore opzione tra una serie di opzioni disponibili. Un approccio consiste nell&#39;eliminare in successione le opzioni *di* decisione ***<sub>di</sub>***ID*** dal set ***Dfino a quando non ne viene lasciata una sola e quindi scegliere un &quot;vincitore&quot; in modo casuale dal set rimanente. Un&#39;altra forma di processo decisionale consiste nel classificare le opzioni di decisione rimanenti (ammissibili) in base ai risultati attesi.
+Le decisioni vengono prese individuando la migliore opzione tra una serie di opzioni disponibili. Un approccio consiste nell&#39;eliminare in successione le opzioni *di* decisione ***<sub>di</sub>*** ID ***dal set*** Dfino a quando non ne viene lasciata una sola e quindi scegliere un &quot;vincitore&quot; in modo casuale dal set rimanente. Un&#39;altra forma di processo decisionale consiste nel classificare le opzioni di decisione rimanenti (ammissibili) in base ai risultati attesi.
 
 ### Set finito di opzioni di decisione
 
