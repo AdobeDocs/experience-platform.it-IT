@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data source connection
 solution: Experience Platform
 title: Acquisire dati di parquet da un sistema di archiviazione cloud di terze parti tramite l'API del servizio di flusso
 topic: overview
+description: Questa esercitazione utilizza l’API del servizio di flusso per illustrare i passaggi necessari per acquisire i dati del parquet da un sistema di archiviazione cloud di terze parti.
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1092'
 ht-degree: 2%
 
 ---
@@ -14,13 +15,13 @@ ht-degree: 2%
 
 # Acquisire dati di parquet da un sistema di archiviazione cloud di terze parti tramite l&#39; [!DNL Flow Service] API
 
-[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti diverse all&#39;interno  Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
+[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
 Questa esercitazione utilizza l&#39; [!DNL Flow Service] API per illustrare i passaggi necessari per acquisire i dati del parquet da un sistema di archiviazione cloud di terze parti.
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 - [Origini](../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi.
 - [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
@@ -372,7 +373,7 @@ Una risposta corretta restituisce l&#39;identificatore univoco (`id`) della nuov
 L’ultimo passo verso l’assimilazione dei dati del parquet da un archivio cloud di terze parti è la creazione di un flusso di dati. A questo punto sono stati preparati i seguenti valori obbligatori:
 
 - [ID connessione di origine](#source)
-- [ID connessione Target](#target)
+- [ID connessione di destinazione](#target)
 
 Un flusso di dati è responsabile della pianificazione e della raccolta dei dati da un&#39;origine. È possibile creare un flusso di dati eseguendo una richiesta di POST fornendo al contempo i valori indicati in precedenza all&#39;interno del payload.
 
