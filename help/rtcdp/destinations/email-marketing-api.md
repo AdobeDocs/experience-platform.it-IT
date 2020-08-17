@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare destinazioni di e-mail marketing
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d833257b4dffbf2a02ab4a3fc7a6a9e7347e7df5
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1610'
 ht-degree: 1%
 
 ---
@@ -55,7 +55,8 @@ Le risorse in [!DNL Experience Platform] possono essere isolate in sandbox virtu
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!Nota]
+>[!NOTE]
+>
 >Per ulteriori informazioni sulle sandbox in [!DNL Experience Platform], consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva per il tipo di supporto:
