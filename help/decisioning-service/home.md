@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;offer management;Offer Management;Journey;customer journey;journey;decision events;decision event;Decision events
 solution: Experience Platform
 title: Servizio di disattivazione
 topic: overview
+description: Il servizio di gestione delle decisioni consente di creare esperienze personalizzate, ottimizzate e orchestrate nelle applicazioni in esecuzione su Adobe Experience Platform. Utilizzando il servizio di gestione delle decisioni, potete determinare l'opzione migliore da una serie di opzioni disponibili. Queste opzioni, denominate anche alternative, potrebbero essere offerte, raccomandazioni di prodotto, componenti di contenuto per un'esperienza Web, script di conversazione e azioni da intraprendere.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1592'
+source-wordcount: '1648'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Panoramica sul servizio di disattivazione
 
-[!DNL Decisioning Service] consente di creare esperienze personalizzate, ottimizzate e orchestrate in applicazioni eseguite  Adobe Experience Platform. Utilizzando [!DNL Decisioning Service]potete determinare l&#39; *opzione* migliore da un set di scelte disponibili. Queste opzioni, denominate anche alternative, potrebbero essere offerte, raccomandazioni di prodotto, componenti di contenuto per un&#39;esperienza Web, script di conversazione e azioni da intraprendere. Attualmente il caso d&#39;uso e il dominio di *Offer Decisioning* sono supportati, dove le opzioni di decisione sono modellate specificatamente come offerte, con il supporto per ulteriori casi d&#39;uso a venire.
+[!DNL Decisioning Service] consente di creare esperienze personalizzate, ottimizzate e orchestrate nelle applicazioni in esecuzione su Adobe Experience Platform. Utilizzando [!DNL Decisioning Service]potete determinare l&#39; *opzione* migliore da un set di scelte disponibili. Queste opzioni, denominate anche alternative, potrebbero essere offerte, raccomandazioni di prodotto, componenti di contenuto per un&#39;esperienza Web, script di conversazione e azioni da intraprendere. Attualmente il caso d&#39;uso e il dominio di *Offer Decisioning* sono supportati, dove le opzioni di decisione sono modellate specificatamente come offerte, con il supporto per ulteriori casi d&#39;uso a venire.
 
 I clienti [!DNL Decisioning Service]possono riutilizzare la logica aziendale e condividere un catalogo di opzioni tra canali e applicazioni. Invece di gestire le opzioni decisionali e le strategie per selezionarle direttamente all&#39;interno di un&#39;applicazione, ora possono essere sfruttate indipendentemente da quando, come e su quale canale l&#39;utente finale di un cliente interagisce con un&#39;azienda o un&#39;organizzazione.
 
@@ -26,7 +27,7 @@ Le strategie di decisione possono essere fattori nelle molteplici interazioni ch
 | --- | --- |
 | Personalizza e ottimizza le esperienze dell’utente all’interno di un singolo canale o in un piccolo set di punti di contatto esperienza. | Le esperienze sono risposte orchestrate tra le varie interazioni. |
 | Le ottimizzazioni si concentrano su una fase singola e tipicamente breve del percorso dell&#39;utente finale | Le decisioni si basano sull&#39;intera storia dell&#39;interazione, passando dai comportamenti rilevati in passato all&#39;ultimo contesto situazionale. |
-| Le opzioni e le strategie per la scelta delle opzioni da presentare durante l&#39;esperienza del cliente sono in genere codificate profondamente all&#39;interno di un&#39;applicazione. | Le strategie per selezionare l&#39;opzione migliore sono definite al di fuori delle applicazioni specifiche del canale e diventano riutilizzabili. |
+| Le opzioni e le strategie per la scelta delle opzioni da presentare durante l&#39;esperienza del cliente sono in genere codificate profondamente all&#39;interno di un&#39;applicazione. | Le strategie per la selezione dell&#39;opzione migliore sono definite al di fuori delle applicazioni specifiche del canale e diventano riutilizzabili. |
 | Le esperienze dei clienti sono personalizzate e ottimizzate in base a un obiettivo semplicistico, ad esempio per aumentare il numero di pagamenti di successo in una pagina Web o per accettare un&#39;offerta presentata in un&#39;interazione con un rappresentante. | Le esperienze cliente sono ottimizzate in base a una comprensione olistica delle attuali esigenze del cliente e si adattano a tutte le esperienze dell&#39;utente, buone o cattive. Ad esempio, una campagna di marketing potrebbe non essere appropriata per un cliente che ha recentemente presentato un reclamo su un prodotto o un servizio. |
 
 [!DNL Decisioning Service] sposta le funzionalità di personalizzazione dell&#39;esperienza da un targeting in un singolo canale a una determinazione dello stadio generale del ciclo di vita del coinvolgimento dei clienti con il tuo marchio, indipendentemente dai canali. Una fase del ciclo di vita è molto più complessa di un&#39;appartenenza a un segmento ed è quasi sempre basata su flussi di eventi complessi, regole aziendali e attributi previsti.
