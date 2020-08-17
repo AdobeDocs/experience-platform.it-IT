@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;filter;Filter;filter data;Filter data;date range
 solution: Experience Platform
 title: Filtra i dati del catalogo utilizzando i parametri di query
 topic: developer guide
+description: L'API Catalog Service consente di filtrare i dati delle risposte utilizzando i parametri di query della richiesta. Parte delle best practice per Catalog consiste nell’utilizzare i filtri in tutte le chiamate API, in quanto riducono il carico sull’API e contribuiscono a migliorare le prestazioni complessive.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '2033'
+source-wordcount: '2078'
 ht-degree: 1%
 
 ---
@@ -595,7 +596,7 @@ Il valore del `property` parametro supporta diversi tipi di espressioni condizio
 
 **Richiesta**
 
-Nella richiesta seguente verranno restituiti tutti i set di dati con un numero di versione maggiore di 1.0.3.
+La richiesta seguente restituirà tutti i set di dati con un numero di versione maggiore di 1.0.3.
 
 ```shell
 curl -X GET \
