@@ -1,10 +1,11 @@
 ---
-title: Guida all'SDK Web per Adobi Experience Platform
-seo-title: Guida all'SDK Web per Adobi Experience Platform
-description: Scopri  Adobe Experience Platform SDK Web e come può essere utilizzato.
+keywords: web sdk;SDK;web SDK;Launch;launch
+title: Guida di Adobe Experience Platform Web SDK
+seo-title: Guida di Adobe Experience Platform Web SDK
+description: Scopri cos’è Adobe Experience Platform Web SDK e come può essere utilizzato.
 seo-description: consentire ai clienti dell'Adobe Experience Cloud di interagire con i vari servizi del Experience Cloud .
 translation-type: tm+mt
-source-git-commit: fc8b26e237821d5fa2d72fb38189894ed0b05271
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
 source-wordcount: '702'
 ht-degree: 2%
@@ -12,17 +13,17 @@ ht-degree: 2%
 ---
 
 
-# Che cos&#39;è  Adobe Experience Platform Web SDK
+# Cos&#39;è Adobe Experience Platform Web SDK
 
- Adobe Experience Platform Web SDK è una libreria JavaScript lato client che consente ai clienti dell&#39;Adobe Experience Cloud di interagire con i vari servizi nel [!DNL Experience Cloud] tramite l&#39;Adobe di  [!DNL Experience Platform Edge Network]. Oltre alla libreria JavaScript, è disponibile un&#39;estensione [](https://docs.adobe.com/content/help/it-IT/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) Launch per facilitare le configurazioni SDK Web.
+Adobe Experience Platform Web SDK è una libreria JavaScript lato client che consente ai clienti di Adobe Experience Cloud di interagire con i vari servizi presenti nel [!DNL Experience Cloud] attraverso l&#39;Adobe [!DNL Experience Platform Edge Network]. Oltre alla libreria JavaScript, è disponibile un&#39;estensione [](https://docs.adobe.com/content/help/it-IT/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) Launch per facilitare le configurazioni SDK Web.
 
 ## Experience Edge
 
 [!DNL Adobe Experience Platform Web SDK] fa parte della raccolta che costituisce Experience Edge. Experience Edge è costituito da tre tecnologie:
 
-* **[!DNL Adobe Experience Platform Web SDK]:**SDK JavaScript e[!DNL Launch]estensione per semplificare notevolmente[!DNL Adobe]le tecnologie di implementazione
-* **SDK di Mobile Adobe Experience Platform:** Estensione all’SDK v5 per dispositivi mobili per consentire ai clienti di utilizzare la nuova metodologia di distribuzione
-* **[!DNL Adobe Experience Platform Edge Network]:**Una rete distribuita globale di server che consente una nuova metodologia di implementazione[!DNL Adobe]dei prodotti
+* **[!DNL Adobe Experience Platform Web SDK]:** SDK JavaScript e [!DNL Launch] estensione per semplificare notevolmente [!DNL Adobe] le tecnologie di implementazione
+* **SDK Adobe Experience Platform Mobile:** Estensione all’SDK v5 per dispositivi mobili per consentire ai clienti di utilizzare la nuova metodologia di distribuzione
+* **[!DNL Adobe Experience Platform Edge Network]:** Una rete distribuita globale di server che consente una nuova metodologia di implementazione [!DNL Adobe] dei prodotti
 
 Il [!DNL Adobe Experience Edge] nuovo framework è per la raccolta di dati a bassa latenza, il computing collegabile e l&#39;attivazione rapida dei dati su tutti i canali indirizzabili.
 
@@ -41,13 +42,13 @@ Un unico sistema Edge consolidato consente ai clienti di gestire le campagne pub
 
 ## Video introduttivo
 
-Il seguente video offre una panoramica dell’Adobe Experience Platform  [!DNL Web SDK] e [!DNL Edge Network].
+Il seguente video offre una panoramica dell’Adobe Experience Platform [!DNL Web SDK] e [!DNL Edge Network].
 
 >[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
-## SDK sostituiti da SDK Web  Adobe Experience Platform
+## SDK sostituiti da Adobe Experience Platform Web SDK
 
- Adobe Experience Platform SDK Web sostituisce i seguenti SDK:
+Adobe Experience Platform Web SDK sostituisce i seguenti SDK:
 
 * Visitor.js
 * AppMeasurement.js
@@ -56,9 +57,9 @@ Il seguente video offre una panoramica dell’Adobe Experience Platform  [!DNL W
 
 Non si tratta solo di un wrapper intorno alle librerie esistenti. È una riscrittura completa. Il suo scopo è quello di porre fine alle sfide con i tag che devono essere attivati nell&#39;ordine giusto, incoerenze con le problematiche di controllo delle versioni della libreria e una migliore gestione delle dipendenze. Si tratta di un nuovo modo di implementare il sistema [!DNL Experience Cloud] ed è [open source](https://github.com/adobe/alloy).
 
-Oltre a una nuova libreria, esiste un nuovo endpoint che semplifica le richieste HTTP alle soluzioni di  Adobe. Prima, Visitor.js aveva inviato una chiamata di blocco al servizio ID visitatore, quindi AT.js aveva inviato una chiamata al Adobe Target , DIL.js aveva inviato una chiamata a  Adobe Audience Manager e infine AppMeasurement.js aveva inviato una chiamata a  Adobe Analytics. Questa nuova libreria e questo endpoint possono recuperare un ID, recuperare un&#39; [!DNL Target] esperienza, inviare dati a [!DNL Audience Manager]e passare i dati al Adobe Experience Platform  in una singola chiamata.
+Oltre a una nuova libreria, esiste un nuovo endpoint che semplifica le richieste HTTP alle soluzioni di  Adobe. Prima, Visitor.js aveva inviato una chiamata di blocco al servizio ID visitatore, quindi AT.js aveva inviato una chiamata a  Adobe Target, DIL.js aveva inviato una chiamata ad Adobe Audience Manager e infine AppMeasurement.js aveva inviato una chiamata a  Adobe Analytics. Questa nuova libreria e questo endpoint possono recuperare un ID, recuperare un&#39; [!DNL Target] esperienza, inviare dati a [!DNL Audience Manager]e passare i dati all&#39;Adobe Experience Platform in una singola chiamata.
 
-Il seguente video illustra l’Adobe Experience Platform  [!DNL Web SDK] e [!DNL Edge Network] in azione. Nell&#39;esempio video viene utilizzata una singola chiamata a  Adobe che invia dati a [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager]e [!DNL Target].
+Il seguente video illustra l’Adobe Experience Platform [!DNL Web SDK] e [!DNL Edge Network] in azione. Nell&#39;esempio video viene utilizzata una singola chiamata a  Adobe che invia dati a [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager]e [!DNL Target].
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
