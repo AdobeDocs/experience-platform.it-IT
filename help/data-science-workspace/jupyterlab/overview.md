@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;jupyterlab
 solution: Experience Platform
 title: Guida utente di JupyterLab
 topic: Overview
+description: JupyterLab è un'interfaccia utente basata sul Web per Project Jupyter ed è strettamente integrata in Adobe Experience Platform. Fornisce un ambiente di sviluppo interattivo che consente agli scienziati dei dati di lavorare con notebook, codice e dati Jupyter.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '3645'
+source-wordcount: '3682'
 ht-degree: 11%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 11%
 
 # [!DNL JupyterLab] guida utente
 
-[!DNL JupyterLab] è un&#39;interfaccia utente basata sul Web per <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> ed è strettamente integrata in [!DNL Adobe Experience Platform]. Fornisce un ambiente di sviluppo interattivo che consente agli scienziati dei dati di lavorare con notebook, codice e dati Jupyter.
+[!DNL JupyterLab] è un&#39;interfaccia utente basata sul Web per [Project Jupyter](https://jupyter.org/) ed è strettamente integrata in Adobe Experience Platform. Fornisce un ambiente di sviluppo interattivo che consente agli scienziati dei dati di lavorare con notebook, codice e dati Jupyter.
 
 Questo documento fornisce una panoramica delle funzioni [!DNL JupyterLab] e delle istruzioni per eseguire azioni comuni.
 
@@ -22,14 +23,14 @@ Questo documento fornisce una panoramica delle funzioni [!DNL JupyterLab] e dell
 
 &#39;integrazione  JupyterLab è accompagnata da modifiche architettoniche, considerazioni di progettazione, estensioni personalizzate dei notebook, librerie preinstallate e un&#39;interfaccia  a tema Adobe.
 
-L&#39;elenco seguente illustra alcune delle funzioni esclusive di JupyterLab su Platform:
+L&#39;elenco seguente illustra alcune delle funzioni esclusive di JupyterLab sulla piattaforma:
 
 | Funzione | Descrizione |
 | --- | --- |
 | **Kernel** | I kernel forniscono ai notebook e agli altri [!DNL JupyterLab] front-end la possibilità di eseguire e analizzare il codice in diversi linguaggi di programmazione. [!DNL Experience Platform] fornisce ulteriori kernel per supportare lo sviluppo in [!DNL Python], R, PySpark e [!DNL Spark]. Per ulteriori dettagli, consulta la sezione [kernel](#kernels) . |
 | **Accesso ai dati** | Accedete ai set di dati esistenti direttamente dall&#39;interno [!DNL JupyterLab] con il supporto completo delle funzionalità di lettura e scrittura. |
-| **[!DNL Platform]integrazione dei servizi ** | Le integrazioni integrate consentono di utilizzare altri [!DNL Platform] servizi direttamente dall&#39;interno [!DNL JupyterLab]. Un elenco completo delle integrazioni supportate è disponibile nella sezione [Integrazione con altri servizi](#service-integration)Platform. |
-| **Autenticazione** | Oltre al modello <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">di sicurezza integrato di</a>JupyterLab, ogni interazione tra l&#39;applicazione e  Experience Platform, inclusa la comunicazione tra i servizi Platform, è criptata e autenticata tramite <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
+| **[!DNL Platform]integrazione dei servizi** | Le integrazioni integrate consentono di utilizzare altri [!DNL Platform] servizi direttamente dall&#39;interno [!DNL JupyterLab]. Un elenco completo delle integrazioni supportate è disponibile nella sezione [Integrazione con altri servizi](#service-integration)della piattaforma. |
+| **Autenticazione** | Oltre al modello <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">di sicurezza integrato di</a>JupyterLab, ogni interazione tra l&#39;applicazione e  Experience Platform, inclusa la comunicazione tra servizi della piattaforma, viene crittografata e autenticata tramite <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
 | **Librerie di Sviluppo** | In [!DNL Experience Platform], [!DNL JupyterLab] fornisce librerie preinstallate per [!DNL Python], R e PySpark. Consultate l&#39; [appendice](#supported-libraries) per un elenco completo delle librerie supportate. |
 | **Controller libreria** | Se le librerie preinstallate non sono adatte alle vostre esigenze, è possibile installare librerie aggiuntive per Python e R e memorizzare temporaneamente in contenitori isolati per mantenere l&#39;integrità dei dati [!DNL Platform] e mantenerli al sicuro. Per ulteriori dettagli, consulta la sezione [kernel](#kernels) . |
 
@@ -41,10 +42,10 @@ L&#39;elenco seguente illustra alcune delle funzioni esclusive di JupyterLab su 
 
 Standardizzazione e interoperabilità sono concetti chiave alla base di [!DNL Experience Platform]. L&#39;integrazione di [!DNL JupyterLab] on [!DNL Platform] come IDE integrato consente di interagire con altri [!DNL Platform] servizi, consentendo di sfruttare [!DNL Platform] al massimo il suo potenziale. I seguenti [!DNL Platform] servizi sono disponibili in [!DNL JupyterLab]:
 
-* **[!DNL Catalog Service]:**Accesso ed esplorazione di set di dati con funzionalità di lettura e scrittura.
-* **[!DNL Query Service]:**Accesso ed esplorazione di dataset utilizzando SQL, fornendo costi generali di accesso ai dati inferiori quando si tratta di grandi quantità di dati.
-* **[!DNL Sensei ML Framework]:**Sviluppo di modelli con la capacità di formare e valutare i dati, nonché creazione di ricette con un solo clic.
-* **[!DNL Experience Data Model (XDM)]:**Standardizzazione e interoperabilità sono concetti chiave  Adobe Experience Platform.[Experience Data Model (XDM)](https://www.adobe.com/go/xdm-home-en), guidato da  Adobe, è uno sforzo per standardizzare i dati sull&#39;esperienza cliente e definire schemi per la gestione dell&#39;esperienza cliente.
+* **[!DNL Catalog Service]:** Accesso ed esplorazione di set di dati con funzionalità di lettura e scrittura.
+* **[!DNL Query Service]:** Accesso ed esplorazione di dataset utilizzando SQL, fornendo costi generali di accesso ai dati inferiori quando si tratta di grandi quantità di dati.
+* **[!DNL Sensei ML Framework]:** Sviluppo di modelli con la capacità di formare e valutare i dati, nonché creazione di ricette con un solo clic.
+* **[!DNL Experience Data Model (XDM)]:** Standardizzazione e interoperabilità sono concetti chiave di Adobe Experience Platform. [Experience Data Model (XDM)](https://www.adobe.com/go/xdm-home-en), guidato da  Adobe, è uno sforzo per standardizzare i dati sull&#39;esperienza cliente e definire schemi per la gestione dell&#39;esperienza cliente.
 
 >[!NOTE]
 >
@@ -136,7 +137,7 @@ Alcune caratteristiche e funzionalità sono limitate a specifici kernel come des
 
 ### Sessioni kernel {#kernel-sessions}
 
-Ogni blocco appunti o attività attiva [!DNL JupyterLab] utilizza una sessione del kernel. Tutte le sessioni attive si trovano espandendo la scheda Terminali **in esecuzione e kernel** dalla barra laterale sinistra. Il tipo e lo stato del kernel di un notebook possono essere identificati osservando l&#39;interfaccia superiore destra del notebook. Nel diagramma seguente, il kernel associato al notebook è **[!DNL Python]3 **e lo stato corrente è rappresentato da un cerchio grigio a destra. Un cerchio vuoto implica un kernel inattivo e un cerchio pieno implica un kernel occupato.
+Ogni blocco appunti o attività attiva [!DNL JupyterLab] utilizza una sessione del kernel. Tutte le sessioni attive si trovano espandendo la scheda Terminali **in esecuzione e kernel** dalla barra laterale sinistra. Il tipo e lo stato del kernel di un notebook possono essere identificati osservando l&#39;interfaccia superiore destra del notebook. Nel diagramma seguente, il kernel associato al notebook è **[!DNL Python]3** e lo stato corrente è rappresentato da un cerchio grigio a destra. Un cerchio vuoto implica un kernel inattivo e un cerchio pieno implica un kernel occupato.
 
 ![](../images/jupyterlab/user-guide/kernel_and_state_1.png)
 
