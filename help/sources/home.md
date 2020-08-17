@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;source connectors;source connector;sources;data sources;data source;data source connection
 solution: Experience Platform
 title: Panoramica dei connettori sorgente Adobe Experience Platform
 topic: overview
+description: Adobe Experience Platform consente l'acquisizione di dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Piattaforma. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, database e molti altri.
 translation-type: tm+mt
-source-git-commit: 8e39cc206efa3fc314ae689845c88f0923ac1743
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '817'
 ht-degree: 0%
 
 ---
