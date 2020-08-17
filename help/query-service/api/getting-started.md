@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;query
 solution: Experience Platform
 title: Guida per gli sviluppatori di Query Service
 topic: query templates
+description: Questa guida per gli sviluppatori fornisce i passaggi necessari per eseguire varie operazioni nell'API di Adobe Experience Platform Query Service.
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '369'
 ht-degree: 1%
 
 ---
@@ -14,11 +15,11 @@ ht-degree: 1%
 
 # [!DNL Query Service] guida per sviluppatori
 
-Questa guida per gli sviluppatori fornisce i passaggi necessari per eseguire varie operazioni nell&#39; [!DNL Query Service] API  Adobe Experience Platform.
+Questa guida per gli sviluppatori fornisce i passaggi necessari per eseguire varie operazioni nell&#39; [!DNL Query Service] API di Adobe Experience Platform.
 
 ## Introduzione
 
-Questa guida richiede una conoscenza approfondita dei vari servizi  Adobe Experience Platform coinvolti nell&#39;utilizzo [!DNL Query Service].
+Questa guida richiede una buona conoscenza dei diversi servizi Adobe Experience Platform coinvolti nell&#39;utilizzo [!DNL Query Service].
 
 - [!DNL Query Service](../home.md): Consente di eseguire query sui set di dati e acquisire le query risultanti come nuovi set di dati in [!DNL Experience Platform].
 - [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
