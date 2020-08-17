@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;sandbox;Sandbox
 solution: Experience Platform
 title: Panoramica sulle sandbox
 topic: overview
+description: Le sandbox sono partizioni virtuali all'interno di un'unica istanza di  Experience Platform, che consentono un'integrazione perfetta con il processo di sviluppo delle applicazioni di esperienza digitale.
 translation-type: tm+mt
-source-git-commit: c52d8cdbc5a4ee6fab8c2b1b284efea5f735d424
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '701'
 ht-degree: 0%
 
 ---
@@ -14,15 +15,15 @@ ht-degree: 0%
 
 # Panoramica sulle sandbox
 
- Adobe Experience Platform è stato creato per arricchire le applicazioni per esperienze digitali su scala globale. Le aziende spesso eseguono più applicazioni di esperienza digitale in parallelo e devono provvedere allo sviluppo, al test e all&#39;implementazione di tali applicazioni, garantendo al contempo la conformità operativa.
+Adobe Experience Platform è progettato per arricchire le applicazioni di esperienza digitale su scala globale. Le aziende spesso eseguono più applicazioni di esperienza digitale in parallelo e devono provvedere allo sviluppo, al test e all&#39;implementazione di tali applicazioni, garantendo al contempo la conformità operativa.
 
-Per rispondere a questa esigenza,  Experience Platform fornisce **sandbox** che dividono una singola istanza di Platform in ambienti virtuali separati per contribuire allo sviluppo e all&#39;evoluzione delle applicazioni di esperienza digitale.
+Per rispondere a questa esigenza,  Experience Platform fornisce **sandbox** che dividono una singola istanza della piattaforma in ambienti virtuali separati per contribuire allo sviluppo e all&#39;evoluzione di applicazioni per esperienze digitali.
 
 Questo documento fornisce una panoramica di alto livello delle sandbox in  Experience Platform.
 
 ## Informazioni sulle sandbox
 
-Le sandbox sono partizioni virtuali all&#39;interno di un&#39;unica istanza di  Experience Platform, che consentono un&#39;integrazione perfetta con il processo di sviluppo delle applicazioni di esperienza digitale. Un&#39;istanza di Experience Platform  supporta una sandbox di produzione e più sandbox non di produzione, con ciascuna sandbox che mantiene una propria libreria indipendente di risorse Platform (inclusi schemi, set di dati, profili e così via).  Tutti i contenuti e le azioni effettuate all’interno di una sandbox sono limitati a tale sandbox e non hanno effetto su altre sandbox.
+Le sandbox sono partizioni virtuali all&#39;interno di un&#39;unica istanza di  Experience Platform, che consentono un&#39;integrazione perfetta con il processo di sviluppo delle applicazioni di esperienza digitale. Un&#39;istanza di Experience Platform  supporta una sandbox di produzione e più sandbox non di produzione, con ciascuna sandbox che mantiene una propria libreria indipendente di risorse Piattaforma (inclusi schemi, set di dati, profili e così via).  Tutti i contenuti e le azioni effettuate all’interno di una sandbox sono limitati a tale sandbox e non hanno effetto su altre sandbox.
 
 Le sandbox non di produzione consentono di testare le funzioni, eseguire esperimenti e creare configurazioni personalizzate senza influire sulla sandbox di produzione. Inoltre, le sandbox non di produzione dispongono di una funzione di ripristino che rimuove tutte le risorse create dal cliente dalla sandbox. I sandbox non di produzione non possono essere convertiti in sandbox di produzione.
 
@@ -71,4 +72,4 @@ L&#39;API Sandbox consente di gestire le sandbox utilizzando le operazioni RESTf
 
 Leggendo questo documento, avete introdotto i concetti essenziali sulle sandbox in  Experience Platform. Per i passaggi dettagliati su come gestire le sandbox, consultate la guida [](ui/overview.md) utente per l&#39;interfaccia utente o la guida [](./api/getting-started.md) per gli sviluppatori per l&#39;API.
 
-Le sandbox fungono da strumento prezioso per isolare gli ambienti Platform per il team di sviluppo, ma è anche possibile gestire un controllo degli accessi più dettagliato utilizzando l&#39;Adobe Admin Console. Per ulteriori informazioni, consulta la panoramica [sul controllo](../access-control/home.md) degli accessi.
+Le sandbox fungono da strumento prezioso per l&#39;isolamento degli ambienti della piattaforma per il team di sviluppo, ma è anche possibile gestire un controllo degli accessi più dettagliato utilizzando l&#39;Adobe Admin Console. Per ulteriori informazioni, consulta la panoramica [sul controllo](../access-control/home.md) degli accessi.
