@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;identity;Identity;XDM graphs;identity service;Identity service
 solution: Experience Platform
 title: Servizio Adobe Experience Platform Identity
 topic: overview
+description: Adobe Experience Platform Identity Service ti aiuta a ottenere una visione migliore del tuo cliente e del suo comportamento attraverso il collegamento di identità tra dispositivi e sistemi, per offrire esperienze digitali personali e di forte impatto in tempo reale.
 translation-type: tm+mt
-source-git-commit: d02f12202e51b00453f719604052a54f6fcfe4ab
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1672'
+source-wordcount: '1707'
 ht-degree: 0%
 
 ---
@@ -14,11 +15,11 @@ ht-degree: 0%
 
 # [!DNL Identity Service]panoramica
 
-Fornire esperienze digitali rilevanti richiede una comprensione completa del cliente. Ciò è reso più difficile quando i dati del cliente sono frammentati in sistemi diversi, causando l&#39;apparenza di più &quot;identità&quot; per ogni singolo cliente.  Adobe Experience Platform [!DNL Identity Service] consente di acquisire una visione migliore del cliente e del suo comportamento, collegando le identità tra dispositivi e sistemi, per offrire esperienze digitali personali e di forte impatto in tempo reale.
+Fornire esperienze digitali rilevanti richiede una comprensione completa del cliente. Ciò è reso più difficile quando i dati del cliente sono frammentati in sistemi diversi, causando l&#39;apparenza di più &quot;identità&quot; per ogni singolo cliente. Adobe Experience Platform [!DNL Identity Service] consente di acquisire una visione migliore del cliente e del suo comportamento collegando le identità tra dispositivi e sistemi, per offrire esperienze digitali personali e di forte impatto in tempo reale.
 
 ## Informazioni [!DNL Identity Service]
 
-Ogni giorno, i clienti interagiscono con il tuo business e creano una relazione in continua crescita con il tuo marchio. Un cliente tipico può essere attivo in un numero qualsiasi di sistemi all&#39;interno dell&#39;infrastruttura dati dell&#39;azienda, come i sistemi di eCommerce, fedeltà e help desk. Lo stesso cliente può anche impegnarsi anonimamente su qualsiasi numero di dispositivi. [!DNL Identity Service] consente di mettere insieme un quadro completo del cliente, aggregando dati correlati che altrimenti potrebbero essere silenziati tra sistemi diversi.
+Ogni giorno, i clienti interagiscono con il tuo business e creano una relazione in continua crescita con il tuo marchio. Un cliente tipico può essere attivo in un numero qualsiasi di sistemi all&#39;interno dell&#39;infrastruttura dati della tua organizzazione, come i sistemi di eCommerce, fedeltà e help desk. Lo stesso cliente può anche impegnarsi anonimamente su qualsiasi numero di dispositivi. [!DNL Identity Service] consente di mettere insieme un quadro completo del cliente, aggregando dati correlati che altrimenti potrebbero essere silenziati tra sistemi diversi.
 
 Considera un esempio quotidiano della relazione tra un consumatore e il tuo marchio:
 
@@ -42,7 +43,7 @@ Informazioni quali indirizzo e-mail e numero di telefono, utili per identificare
 
 Come mostrato nell&#39;immagine seguente, le identità conosciute e anonime sono entrambe componenti importanti dei grafici [di](#identity-graphs)identità, che vengono discussi più avanti in questo documento.
 
-![Cuciture di identità su Platform](./images/identity-service-stitching.png)
+![Cucitura identità sulla piattaforma](./images/identity-service-stitching.png)
 
 Esempi di [!DNL Identity Service] implementazioni:
 
@@ -61,7 +62,7 @@ I clienti possono interagire con il tuo marchio attraverso una combinazione di c
 
 [!DNL Experience Platform] affronta questa sfida attraverso due concetti: [spazi dei nomi](#identity-namespaces) e grafici [di](#identity-graphs)identità.
 
-Il seguente video è pensato per consentire agli utenti di comprendere meglio identità e grafici di identità. Il video seguente illustra le tre funzionalità di raccolta identità, grafici identità e API. Descrive inoltre come gli algoritmi deterministici e probabilistici vengono utilizzati per creare grafici di identità privati, e discute il ruolo dei grafici di identità privata,  Adobe Experience Platform Identity Service Co-Op Graph e grafici di terze parti.
+Il seguente video è pensato per consentire agli utenti di comprendere meglio identità e grafici di identità. Il video seguente illustra le tre funzionalità di raccolta identità, grafici identità e API. Inoltre, descrive come gli algoritmi deterministici e probabilistici vengono utilizzati per creare grafici di identità privati e discute il ruolo dei grafici di identità privati, di Adobe Experience Platform Identity Service Co-Op Graph e di grafici di terze parti.
 
 >[!IMPORTANT]
 >
@@ -73,7 +74,7 @@ Il seguente video è pensato per consentire agli utenti di comprendere meglio id
 
 Quando il cliente interagisce con il tuo marchio su più canali, tra cui web, applicazioni mobili, call center o un negozio, può essere difficile comprenderlo e servirlo se non riesci a osservare e monitorare la loro attività su più canali.
 
-Comprendere il cliente su più dispositivi e canali inizia riconoscendolo in ciascun canale.  Adobe Experience Platform ottiene questo risultato utilizzando spazi dei nomi di identità.
+Comprendere il cliente su più dispositivi e canali inizia riconoscendolo in ciascun canale. Adobe Experience Platform ottiene questo risultato utilizzando spazi dei nomi di identità.
 Uno spazio nomi identità è un identificatore, ad esempio l&#39;ID dispositivo o l&#39;ID e-mail, utilizzato per fornire il contesto da cui provengono i dati. Gli spazi dei nomi delle identità vengono utilizzati per cercare o collegare identità singole e forniscono contesto per i valori delle identità per evitare conflitti tra i dati. Ad esempio, l’ID &quot;123456&quot; può fare riferimento a una persona nel sistema eCommerce e a una persona diversa nel sistema di help desk. Per ulteriori informazioni, consultate la panoramica [dello spazio nomi](./namespaces.md)identità.
 
 ### Grafici di identità
@@ -88,11 +89,11 @@ Come esempio dei potenziali tipi di fattori da considerare quando si forniscono 
 
 ## Invio dei dati di identità a [!DNL Identity Service]
 
-In questa sezione viene illustrato come i dati forniti al Adobe Experience Platform  vengono elaborati prima di essere utilizzati per [!DNL Identity Service] creare un grafico dell&#39;identità per ciascun cliente.
+Questa sezione illustra come vengono elaborati i dati forniti ad Adobe Experience Platform prima di essere utilizzati per creare un grafico [!DNL Identity Service] di identità per ciascun cliente.
 
 ### Decidere sui campi di identità
 
-A seconda della strategia aziendale di raccolta dei dati, i campi dati etichettati come identità determinano quali dati vengono inclusi nella mappa di identità. Per ottenere il massimo vantaggio  Adobe Experience Platform e le identità cliente più complete possibili, è necessario caricare sia i dati online che offline.
+A seconda della strategia aziendale di raccolta dei dati, i campi dati etichettati come identità determinano quali dati vengono inclusi nella mappa di identità. Per trarre il massimo beneficio da Adobe Experience Platform e dalle identità cliente più complete possibile, è necessario caricare sia i dati online che offline.
 
 - I dati online sono dati che descrivono la presenza e il comportamento online, ad esempio nomi utente e indirizzi e-mail.
 
@@ -131,7 +132,7 @@ Durante il processo di assimilazione in streaming, estrae [!DNL Identity Service
 
 [!DNL Identity Service] consuma i dati conformi a XDM inviati [!DNL Experience Platform] tramite caricamento [batch](../ingestion/batch-ingestion/overview.md) o caricamento [in streaming](../ingestion/streaming-ingestion/overview.md).
 
-Il seguente video è pensato per consentire agli utenti di comprendere meglio i servizi di identità. In questo video viene illustrato come etichettare i campi di dati come identità, assimilare i dati di identità e quindi verificare che i dati siano stati immessi nel grafico privato  Adobe Experience Platform Identity Service.
+Il seguente video è pensato per consentire agli utenti di comprendere meglio i servizi di identità. In questo video viene illustrato come etichettare i campi di dati come identità, assimilare i dati di identità e quindi verificare che i dati siano stati immessi in Adobe Experience Platform Identity Service Private Graph.
 
 >[!WARNING]
 >
@@ -141,7 +142,7 @@ Il seguente video è pensato per consentire agli utenti di comprendere meglio i 
 
 ## Governance dei dati
 
- Adobe Experience Platform è stato creato tenendo presente la privacy e include un framework di governance dei dati per proteggere i dati PII del cliente. I dati di identità nello spazio dei nomi &quot;email&quot; o &quot;phone&quot; sono crittografati per impostazione predefinita, ma per garantire che i dati riservati siano crittografati prima che vengano memorizzati, le etichette di utilizzo dei dati possono essere applicate ai dati durante l&#39;assimilazione o al loro arrivo [!DNL Platform]. Per ulteriori informazioni, consulta la panoramica [sulla governance dei](../data-governance/home.md)dati.
+Adobe Experience Platform è stata creata tenendo presente la privacy e include un framework di governance dei dati per proteggere i dati PII dei clienti. I dati di identità nello spazio dei nomi &quot;email&quot; o &quot;phone&quot; sono crittografati per impostazione predefinita, ma per garantire che i dati riservati siano crittografati prima che vengano memorizzati, le etichette di utilizzo dei dati possono essere applicate ai dati durante l&#39;assimilazione o al loro arrivo [!DNL Platform]. Per ulteriori informazioni, consulta la panoramica [sulla governance dei](../data-governance/home.md)dati.
 
 ## Passaggi successivi
 
