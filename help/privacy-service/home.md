@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;GDPR;gdpr;ccpa:CCPA
 solution: Experience Platform
-title: 'Adobe Experience Platform Privacy Service '
+title: ' Adobe Experience Platform Privacy Service'
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: cc81d590f308c7e2677cec000c27e8aca42437f5
 workflow-type: tm+mt
 source-wordcount: '1494'
 ht-degree: 2%
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Per offrire esperienze cliente migliori, devi raccogliere e archiviare i dati personali dei clienti. Quando si utilizzano questi dati, è importante comprendere e rispettare la privacy dei clienti. Le nuove normative legali e organizzative danno agli utenti il diritto di accedere o cancellare i propri dati personali dall&#39;archivio dei dati su richiesta.
 
- Adobe Experience Platform [!DNL Privacy Service] è stato sviluppato in risposta a un cambiamento fondamentale nel modo in cui le aziende sono tenute a gestire i dati personali dei loro clienti. Lo scopo principale di [!DNL Privacy Service] è automatizzare la conformità con le normative sulla privacy dei dati che, in caso di violazione, possono comportare gravi multe e interrompere le operazioni relative ai dati per la tua attività.
+Adobe Experience Platform [!DNL Privacy Service] è stata sviluppata in risposta a un cambiamento fondamentale nel modo in cui le aziende sono tenute a gestire i dati personali dei loro clienti. Lo scopo principale di [!DNL Privacy Service] è automatizzare la conformità con le normative sulla privacy dei dati che, in caso di violazione, possono comportare gravi multe e interrompere le operazioni relative ai dati per la tua attività.
 
 [!DNL Privacy Service] fornisce un&#39;API RESTful e un&#39;interfaccia utente per aiutarti a gestire le richieste di dati dei clienti. Con [!DNL Privacy Service]questa opzione puoi inviare richieste di accesso ed eliminazione di dati personali dei clienti dalle applicazioni Adobe Experience Cloud, facilitando la conformità automatica alle normative legali e organizzative sulla privacy.
 
