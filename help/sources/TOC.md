@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Guida di Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: 2ee74c9ea0e4838eacfaba1b1e6b8aac7012f427
+source-git-commit: 18af4226c07cd7bc8a093aa4b1ce2b5f8f018cb6
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -194,4 +194,5 @@ ht-degree: 0%
    - [Attivare i dati in entrata per compilare i profili cliente](tutorials/ui/profile.md)
    - [Monitorare account e flussi di dati](tutorials/ui/monitor.md)
    - [Eliminare i flussi di dati](tutorials/ui/delete.md)
+- [Notifiche di esecuzione del flusso](notifications.md)
 - [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-en)
