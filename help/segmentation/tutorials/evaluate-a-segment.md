@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segment evaluation
 solution: Experience Platform
 title: Valutazione di un segmento
 topic: tutorial
+description: Questo documento fornisce un'esercitazione per valutare i segmenti e accedere ai risultati dei segmenti utilizzando l'API Segmentazione.
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '1519'
+source-wordcount: '1535'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,7 @@ Questa esercitazione richiede una conoscenza approfondita dei vari [!DNL Adobe E
 
 - [!DNL Real-time Customer Profile](../../profile/home.md): Fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
 - [!DNL Adobe Experience Platform Segmentation Service](../home.md): Consente di creare segmenti di pubblico dai [!DNL Real-time Customer Profile] dati.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Framework standard con cui Platform organizza i dati sull&#39;esperienza dei clienti.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Il framework standardizzato tramite il quale la piattaforma organizza i dati sull&#39;esperienza cliente.
 - [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 ### Intestazioni necessarie
