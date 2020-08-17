@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;date range
 solution: Experience Platform
-title: ' informazioni sull''osservabilità del Adobe Experience Platform'
+title: Approfondimenti sull'osservabilità di Adobe Experience Platform
 topic: overview
+description: Observability Insights è una RESTful API che consente di esporre le metriche di osservabilità chiave in Adobe Experience Platform. Queste metriche forniscono informazioni approfondite sulle statistiche di utilizzo della piattaforma, sui controlli dello stato per i servizi della piattaforma, sulle tendenze storiche e sugli indicatori di prestazioni per diverse funzionalità della piattaforma.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: cc81d590f308c7e2677cec000c27e8aca42437f5
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '435'
 ht-degree: 2%
 
 ---
 
 
-# Panoramica sull&#39;osservabilità  Adobe Experience Platform
+# Panoramica di Adobe Experience Platform Observability Insights
 
-Observability Insights è una RESTful API che consente di esporre le metriche di osservabilità chiave in  Adobe Experience Platform. Queste metriche forniscono informazioni approfondite sulle statistiche di [!DNL Platform] utilizzo, sui controlli dello stato dei [!DNL Platform] servizi, sulle tendenze storiche e sugli indicatori di prestazioni per diverse [!DNL Platform] funzionalità.
+Observability Insights è una RESTful API che consente di esporre le metriche di osservabilità chiave in Adobe Experience Platform. Queste metriche forniscono informazioni approfondite sulle statistiche di [!DNL Platform] utilizzo, sui controlli dello stato dei [!DNL Platform] servizi, sulle tendenze storiche e sugli indicatori di prestazioni per diverse [!DNL Platform] funzionalità.
 
 Questo documento illustra una chiamata di esempio all&#39;API Observability Insights. Per un elenco completo degli endpoint di osservabilità, fare riferimento al riferimento [API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)Observability Insights.
 
