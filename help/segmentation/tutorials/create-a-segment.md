@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segment;Segment;create segment
 solution: Experience Platform
 title: Creazione di un segmento
 topic: tutorial
+description: Questo documento fornisce un'esercitazione per lo sviluppo, il test, la visualizzazione in anteprima e il salvataggio di una definizione di segmento mediante l'API di Adobe Experience Platform Segmentation Service.
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '901'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Creazione di un segmento
 
-Questo documento fornisce un’esercitazione per lo sviluppo, il test, l’anteprima e il salvataggio di una definizione di segmento mediante l’API [](../api/getting-started.md)DNL  Adobe Experience Platform Segmentation Service.
+Questo documento fornisce un&#39;esercitazione per lo sviluppo, il test, l&#39;anteprima e il salvataggio di una definizione di segmento mediante l&#39;API [](../api/getting-started.md)DNL Adobe Experience Platform Segmentation Service.
 
 Per informazioni su come creare segmenti utilizzando l’interfaccia utente, consulta la guida [di](../ui/overview.md)Segment Builder (Generatore di segmenti).
 
