@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;GDPR;gdpr
 solution: Experience Platform
 title: Domande frequenti sul GDPR
 topic: troubleshooting
+description: Questo documento contiene le risposte alle domande frequenti sul Regolamento generale sulla protezione dei dati (General Data Protection Regulation, GDPR) e sulla sua implementazione in Adobe Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '664'
 ht-degree: 0%
 
 ---
