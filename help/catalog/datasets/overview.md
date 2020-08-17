@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data location;Data Location;Data management;data management;Lineage;lineage;data type;data types;Data types;Data type
 solution: Experience Platform
 title: Panoramica sui set di dati
 topic: datasets
+description: Questo documento fornisce una panoramica di alto livello dei set di dati in  Experience Platform.
 translation-type: tm+mt
-source-git-commit: 1bf6b0948c47c7941fb8f9cf2edfac4d665b8189
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '723'
 ht-degree: 2%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 2%
 
 # Panoramica sui set di dati
 
-Tutti i dati immessi con successo nel Adobe Experience Platform  vengono memorizzati [!DNL Data Lake] come set di dati. Un dataset è un costrutto di archiviazione e gestione per una raccolta di dati, in genere una tabella, che contiene uno schema (colonne) e campi (righe). I set di dati contengono anche metadati che descrivono vari aspetti dei dati archiviati.
+Tutti i dati immessi con successo in Adobe Experience Platform vengono memorizzati [!DNL Data Lake] come set di dati. Un dataset è un costrutto di archiviazione e gestione per una raccolta di dati, in genere una tabella, che contiene uno schema (colonne) e campi (righe). I set di dati contengono anche metadati che descrivono vari aspetti dei dati archiviati.
 
 Questo documento fornisce una panoramica di alto livello dei set di dati in [!DNL Experience Platform].
 
@@ -34,13 +35,13 @@ Per ulteriori informazioni su XDM, consultate la panoramica [di sistema](../../x
 
 ## Inserimento di dati nei set di dati
 
-&#39;inserimento dei dati di Adobe Experience Platform rappresenta i diversi metodi mediante i quali [!DNL Platform] vengono acquisiti i dati da varie origini. Indipendentemente dal metodo di assimilazione, tutti i dati acquisiti con successo vengono convertiti in file batch. I batch sono unità di dati costituite da uno o più file da acquisire come una singola unità. Questi file batch vengono quindi aggiunti ai set di dati dedicati e memorizzati all&#39;interno dell&#39; [!DNL Data Lake].
+Adobe Experience Platform Data Ingestion rappresenta i diversi metodi mediante i quali [!DNL Platform] vengono acquisiti i dati da varie origini. Indipendentemente dal metodo di assimilazione, tutti i dati acquisiti con successo vengono convertiti in file batch. I batch sono unità di dati costituite da uno o più file da acquisire come una singola unità. Questi file batch vengono quindi aggiunti ai set di dati dedicati e memorizzati all&#39;interno dell&#39; [!DNL Data Lake].
 
 Per ulteriori informazioni, consulta la panoramica [sull’inserimento dei](../../ingestion/home.md) dati.
 
 ## Applicazione di etichette di utilizzo ai set di dati
 
- Adobe Experience Platform [!DNL Data Governance] consente di gestire i dati dei clienti al fine di garantire la conformità a normative, restrizioni e criteri applicabili all&#39;uso dei dati. L’utilizzo dell’etichetta e dell’applicazione dell’uso dei dati (DULE) come framework di base [!DNL Data Governance] consente di applicare etichette di utilizzo per classificare i dati in base ai criteri di utilizzo applicati a tali dati.
+Adobe Experience Platform [!DNL Data Governance] consente di gestire i dati dei clienti al fine di garantire la conformità a normative, restrizioni e criteri applicabili all&#39;uso dei dati. L’utilizzo dell’etichetta e dell’applicazione dell’uso dei dati (DULE) come framework di base [!DNL Data Governance] consente di applicare etichette di utilizzo per classificare i dati in base ai criteri di utilizzo applicati a tali dati.
 
 Le etichette di utilizzo dei dati possono essere applicate a set di dati interi o a singoli campi di set di dati. Le etichette aggiunte a livello di dataset sono ereditate da tutti i campi all&#39;interno di tale dataset.
 
@@ -58,10 +59,10 @@ Di seguito è riportato un elenco di servizi a valle che utilizzano set di dati 
 * [!DNL Data Access API](../../data-access/home.md): Consente di accedere e scaricare il contenuto dei file memorizzati nei set di dati.
 * [Servizio](../../identity-service/home.md)identità Adobe Experience Platform: Collega le identità tra dispositivi e sistemi, collegando i dataset in base ai campi di identità definiti dagli schemi XDM a cui sono conformi.
 * [!DNL Real-time Customer Profile](../../profile/home.md): Consente [!DNL Identity Service] di creare profili cliente dettagliati dai set di dati in tempo reale. [!DNL Real-time Customer Profile] estrae i dati dai profili cliente [!DNL Data Lake] e persiste nel proprio archivio dati separato.
-* [servizio](../../segmentation/home.md)di segmentazione Adobe Experience Platform: Consente di creare segmenti e generare audience dai [!DNL Real-time Customer Profile] dati. Tali tipi di pubblico possono quindi essere esportati nei rispettivi set di dati all’interno dell’ [!DNL Data Lake].
-* [Area di lavoro](../../data-science-workspace/home.md)dati Adobe Experience Platform : Utilizza l&#39;apprendimento automatico e l&#39;intelligenza artificiale per scoprire informazioni approfondite in insiemi di dati di grandi dimensioni.
+* [Servizio](../../segmentation/home.md)di segmentazione Adobe Experience Platform: Consente di creare segmenti e generare audience dai [!DNL Real-time Customer Profile] dati. Tali tipi di pubblico possono quindi essere esportati nei rispettivi set di dati all’interno dell’ [!DNL Data Lake].
+* [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md): Utilizza l&#39;apprendimento automatico e l&#39;intelligenza artificiale per scoprire informazioni approfondite in insiemi di dati di grandi dimensioni.
 * [Adobe Experience Platform Query Service](../../query-service/home.md): Consente di utilizzare l&#39;SQL standard per eseguire query sui dati [!DNL Experience Platform], unire eventuali set di dati all&#39;interno dei risultati delle query [!DNL Data Lake] e acquisire i risultati come nuovo set di dati da utilizzare nei rapporti [!DNL Data Science Workspace], o [!DNL Real-time Customer Profile].
-* [servizio](../../decisioning-service/home.md)di gestione Adobe Experience Platform: Sfrutta [!DNL Real-time Customer Profile] per determinare la scelta più probabile che un cliente effettuerà da un insieme di opzioni, in base ai dati comportamentali che [!DNL Profile] richiamano dai set di dati abilitati.
+* [Servizio](../../decisioning-service/home.md)di gestione Adobe Experience Platform: Sfrutta [!DNL Real-time Customer Profile] per determinare la scelta più probabile che un cliente effettuerà da un insieme di opzioni, in base ai dati comportamentali che [!DNL Profile] richiamano dai set di dati abilitati.
 
 ## Passaggi successivi
 
