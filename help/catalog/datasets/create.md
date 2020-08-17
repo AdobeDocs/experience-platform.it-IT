@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;dataset;Dataset;create a dataset;create dataset
 solution: Experience Platform
 title: Creazione di un set di dati tramite le API
 topic: datasets
+description: Questo documento fornisce i passaggi generali per la creazione di un dataset utilizzando le API Adobe Experience Platform e la compilazione del dataset tramite un file.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1251'
 ht-degree: 1%
 
 ---
@@ -14,11 +15,11 @@ ht-degree: 1%
 
 # Creazione di un set di dati tramite le API
 
-Questo documento fornisce passaggi generali per la creazione di un dataset utilizzando  API di Adobe Experience Platform e la compilazione del dataset tramite un file.
+Questo documento fornisce i passaggi generali per la creazione di un dataset utilizzando le API Adobe Experience Platform e la compilazione del dataset tramite un file.
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [Caricamento](../../ingestion/batch-ingestion/overview.md)batch: [!DNL Experience Platform] consente di assimilare i dati come file batch.
 * [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
@@ -34,9 +35,9 @@ Questa esercitazione fornisce esempi di chiamate API per dimostrare come formatt
 
 Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
 
-* Autorizzazione: Portatore `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
@@ -475,4 +476,4 @@ Per ulteriori informazioni sull&#39;aggiornamento degli schemi, vedere la [Schem
 
 Una volta aggiornato lo schema, è possibile seguire nuovamente i passaggi di questa esercitazione per acquisire nuovi dati conformi allo schema modificato.
 
-È importante ricordare che l&#39;evoluzione dello schema è puramente additiva, il che significa che non è possibile introdurre una modifica di interruzione a uno schema una volta che è stato salvato nel Registro di sistema e utilizzato per l&#39;inserimento dei dati. Per ulteriori informazioni sulle procedure ottimali per la composizione dello schema da utilizzare con  Adobe Experience Platform, vedere la guida sulle [nozioni di base della composizione](../../xdm/schema/composition.md)dello schema.
+È importante ricordare che l&#39;evoluzione dello schema è puramente additiva, il che significa che non è possibile introdurre una modifica di interruzione a uno schema una volta che è stato salvato nel Registro di sistema e utilizzato per l&#39;inserimento dei dati. Per ulteriori informazioni sulle procedure ottimali per la composizione dello schema da utilizzare con Adobe Experience Platform, consultare la guida sulle [nozioni di base della composizione](../../xdm/schema/composition.md)dello schema.
