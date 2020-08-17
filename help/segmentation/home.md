@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment service;segment;Segment;Segments;segments
 solution: Experience Platform
-title: 'Servizio Segmentazione Adobe Experience Platform '
+title: Servizio di segmentazione Adobe Experience Platform
 topic: overview
+description: Questo documento fornisce una panoramica del servizio di segmentazione e del ruolo che esso svolge in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '1974'
+source-wordcount: '1991'
 ht-degree: 0%
 
 ---
@@ -14,9 +15,9 @@ ht-degree: 0%
 
 # Adobe Experience Platform [!DNL Segmentation Service] overview
 
- Adobe Experience Platform [!DNL Segmentation Service] fornisce un&#39;interfaccia utente e RESTful API che consente di creare segmenti e generare audience dai [!DNL Real-time Customer Profile] dati. Questi segmenti sono configurati e mantenuti a livello centrale [!DNL Platform]e sono facilmente accessibili da qualsiasi soluzione  Adobe.
+Adobe Experience Platform [!DNL Segmentation Service] fornisce un&#39;interfaccia utente e RESTful API che consente di creare segmenti e generare audience dai [!DNL Real-time Customer Profile] dati. Questi segmenti sono configurati e mantenuti a livello centrale [!DNL Platform]e sono facilmente accessibili da qualsiasi soluzione  Adobe.
 
-Questo documento fornisce una panoramica [!DNL Segmentation Service] e il ruolo che svolge  Adobe Experience Platform.
+Questo documento fornisce una panoramica [!DNL Segmentation Service] e il ruolo che esso svolge in Adobe Experience Platform.
 
 ## Getting started with [!DNL Segmentation Service]
 
@@ -36,7 +37,7 @@ Una volta che un segmento è stato concettualmente definito, è integrato [!DNL 
 
 Sia che vengano creati mediante l&#39;API o mediante l&#39; [!DNL Segment Builder], i segmenti vengono definiti in ultima analisi utilizzando [!DNL Profile Query Language] (PQL). Qui la definizione del segmento concettuale viene descritta nel linguaggio creato per recuperare i profili che soddisfano i criteri. Per ulteriori informazioni, consultate la panoramica [PQL](./pql/overview.md).
 
-Per informazioni su come creare e utilizzare i segmenti in [!DNL Segment Builder] (l’implementazione dell’interfaccia utente di [!DNL Segmentation Service]), consulta la guida [di](./ui/overview.md)Segment Builder (Generatore di segmenti).
+Per informazioni su come creare e utilizzare i segmenti in [!DNL Segment Builder] (l’implementazione dell’interfaccia utente di [!DNL Segmentation Service]), consulta la guida [di](./ui/overview.md)Generatore di segmenti.
 
 Per informazioni sulla creazione di definizioni di segmenti tramite l&#39;API, consulta l&#39;esercitazione sulla [creazione di segmenti di pubblico tramite l&#39;API](./tutorials/create-a-segment.md).
 
@@ -102,7 +103,7 @@ Queste funzioni avanzate sono descritte più dettagliatamente nelle sezioni segu
 
 ## Segmentazione sequenziale {#sequential}
 
-Un percorso standard dell&#39;utente è sequenziale.  Adobe Experience Platform consente di definire una serie ordinata di segmenti per riflettere questo percorso, acquisendo così le sequenze di eventi man mano che si verificano. Potete organizzare gli eventi nell&#39;ordine desiderato utilizzando la timeline dell&#39;evento visivo nella [!DNL Segment Builder].
+Un percorso standard dell&#39;utente è sequenziale. Adobe Experience Platform consente di definire una serie ordinata di segmenti per riflettere questo percorso, acquisendo così le sequenze di eventi man mano che si verificano. Potete organizzare gli eventi nell&#39;ordine desiderato utilizzando la timeline dell&#39;evento visivo nella [!DNL Segment Builder].
 
 Un esempio di percorso cliente che richiederebbe segmentazione sequenziale sarebbe la visualizzazione prodotto > aggiunta prodotto > checkout > Nessun acquisto.
 
