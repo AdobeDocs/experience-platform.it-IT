@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data ingestion;ingested data;streaming
 solution: Experience Platform
-title: Panoramica sull'inserimento dello streaming  Adobe Experience Platform
+title: Panoramica di Adobe Experience Platform Streaming Ingestion
 topic: overview
+description: L'assimilazione dello streaming per Adobe Experience Platform fornisce agli utenti un metodo per inviare in tempo reale i dati dai dispositivi client e server al Experience Platform .
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '272'
 ht-degree: 3%
 
 ---
@@ -14,11 +15,11 @@ ht-degree: 3%
 
 # Panoramica sull’assimilazione dello streaming
 
-L&#39;assimilazione dello streaming per  Adobe Experience Platform fornisce agli utenti un metodo per inviare i dati dai dispositivi client e server [!DNL Experience Platform] in tempo reale.
+L&#39;assimilazione dello streaming per Adobe Experience Platform fornisce agli utenti un metodo per inviare dati dai dispositivi client e server [!DNL Experience Platform] in tempo reale.
 
 ## Cosa puoi fare con l&#39;assimilazione in streaming?
 
- Adobe Experience Platform consente di creare esperienze coordinate, coerenti e pertinenti generando un [!DNL Real-time Customer Profile] rapporto per ogni singolo cliente. L’assimilazione dello streaming svolge un ruolo chiave nella creazione di questi profili consentendo di inviare [!DNL Profile] i dati al [!DNL Data Lake] pubblico con una latenza il più possibile ridotta.
+Adobe Experience Platform consente di creare esperienze coordinate, coerenti e pertinenti generando un [!DNL Real-time Customer Profile] evento per ogni singolo cliente. L’assimilazione dello streaming svolge un ruolo chiave nella creazione di questi profili consentendo di inviare [!DNL Profile] i dati al [!DNL Data Lake] pubblico con una latenza il più possibile ridotta.
 
 Il seguente video è stato progettato per aiutarti a comprendere meglio l’assimilazione dello streaming e illustra i concetti riportati sopra.
 
@@ -45,4 +46,4 @@ Per ulteriori informazioni sull&#39;abilitazione di un dataset per [!DNL Profile
 
 ## Estensione Adobe Experience Platform
 
-Potete utilizzare l&#39;estensione dell&#39;Adobe Experience Platform  per creare una nuova connessione di streaming. L&#39; [!DNL Experience Platform] estensione fornisce azioni per inviare beacon formattati in [!DNL Experience Data Model] (XDM) per l&#39;assimilazione in tempo reale a [!DNL Experience Platform]. Per ulteriori informazioni, consulta la [documentazione relativa all’estensione](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/adobe-experience-platform-extension.html) dell’Experience Platform.
+Potete utilizzare l&#39;estensione Adobe Experience Platform per creare una nuova connessione di streaming. L&#39; [!DNL Experience Platform] estensione fornisce azioni per inviare beacon formattati in [!DNL Experience Data Model] (XDM) per l&#39;assimilazione in tempo reale a [!DNL Experience Platform]. Per ulteriori informazioni, consulta la [documentazione relativa all’estensione](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/adobe-experience-platform-extension.html) dell’Experience Platform.
