@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;namespace;Namespace;Namespaces;namespaces;identity namespace;Identity namespace;identity;Identity;Identity service;identity service
 solution: Experience Platform
 title: Servizio Adobe Experience Platform Identity
 topic: overview
+description: 'Gli spazi dei nomi delle identità sono un componente di Servizio identità che funge da indicatori del contesto a cui si riferisce un''identità. Ad esempio, distinguono un valore di "name<span>@email.com" come indirizzo e-mail o "443522" come ID CRM numerico. '
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '748'
 ht-degree: 1%
 
 ---
@@ -18,7 +19,7 @@ Gli spazi dei nomi delle identità sono un componente di [!DNL Identity Service]
 
 ## Introduzione
 
-Per utilizzare gli spazi dei nomi di identità è necessario conoscere i diversi servizi di Adobe Experience Platform  interessati. Prima di iniziare a lavorare con gli spazi dei nomi, consulta la documentazione relativa ai seguenti servizi:
+Per utilizzare gli spazi dei nomi delle identità è necessario conoscere i diversi servizi Adobe Experience Platform interessati. Prima di iniziare a lavorare con gli spazi dei nomi, consulta la documentazione relativa ai seguenti servizi:
 
 - [!DNL Real-time Customer Profile](../profile/home.md): Fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
 - [!DNL Identity Service](./home.md): Ottenete una visione migliore dei singoli clienti e del loro comportamento, collegando le identità tra dispositivi e sistemi.
@@ -28,7 +29,7 @@ Per utilizzare gli spazi dei nomi di identità è necessario conoscere i diversi
 
 Un&#39;identità completa include un valore ID e uno spazio dei nomi. Quando i dati del record corrispondono a diversi frammenti di profilo, ad esempio quando [!DNL Real-time Customer Profile] uniscono i dati del profilo, il valore dell&#39;identità e lo spazio dei nomi devono corrispondere.
 
-Ad esempio, due frammenti di profilo possono contenere ID primari diversi ma condividono lo stesso valore per lo spazio dei nomi &quot;E-mail&quot;. Platform è quindi in grado di vedere che questi frammenti sono in realtà gli stessi singoli e di unire i dati nel grafico dell&#39;identità per l&#39;individuo.
+Ad esempio, due frammenti di profilo possono contenere ID primari diversi, ma condividono lo stesso valore per lo spazio dei nomi &quot;E-mail&quot;. La piattaforma è quindi in grado di vedere che questi frammenti sono in realtà gli stessi singoli e di unire i dati nel grafico dell&#39;identità per l&#39;individuo.
 
 ![](images/identity-service-stitching.png)
 
@@ -50,7 +51,7 @@ I seguenti tipi di identità sono disponibili all&#39;interno [!DNL Platform]:
 
 ### Spazi dei nomi standard
 
- Adobe Experience Platform fornisce diversi spazi dei nomi di identità disponibili per tutte le organizzazioni. Questi sono noti come spazi dei nomi standard e sono visibili tramite l&#39; [!DNL Identity Service] API o l&#39; [!DNL Platform] interfaccia utente.
+Adobe Experience Platform fornisce diversi spazi dei nomi di identità disponibili per tutte le organizzazioni. Questi sono noti come spazi dei nomi standard e sono visibili tramite l&#39; [!DNL Identity Service] API o l&#39; [!DNL Platform] interfaccia utente.
 
 Per visualizzare gli spazi dei nomi standard nell&#39;interfaccia utente, fate clic **[!UICONTROL Identities]** nella barra a sinistra, quindi fate clic sulla *[!UICONTROL Browse]* scheda. Vengono visualizzati tutti gli spazi dei nomi di identità accessibili alla vostra organizzazione, ma quelli con &quot;[!UICONTROL Standard]&quot; come &quot;[!UICONTROL Owner]&quot; sono gli spazi dei nomi standard forniti dal Adobe .
 
