@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;monitoring;monitor;data flows
 solution: Experience Platform
 title: Monitoraggio dell’assimilazione dei dati
 topic: overview
+description: Questa guida utente descrive come monitorare i dati nell’interfaccia utente di Adobe Experience Platform. Questa guida richiede un Adobe ID  e l'accesso ad Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '544'
 ht-degree: 0%
 
 ---
@@ -14,9 +15,9 @@ ht-degree: 0%
 
 # Monitoraggio dell’assimilazione dei dati
 
-L&#39;assimilazione dei dati consente di assimilare i dati  Adobe Experience Platform. Potete utilizzare l’assimilazione batch, che consente di inserire i dati utilizzando vari tipi di file (come i CSV), oppure l’assimilazione in streaming, per acquisire i dati [!DNL Platform] utilizzando gli endpoint in streaming in tempo reale.
+L’assimilazione dei dati consente di trasferire i dati ad Adobe Experience Platform. Potete utilizzare l’assimilazione batch, che consente di inserire i dati utilizzando vari tipi di file (come i CSV), oppure l’assimilazione in streaming, per acquisire i dati [!DNL Platform] utilizzando gli endpoint in streaming in tempo reale.
 
-Questa guida utente descrive come monitorare i dati all&#39;interno &#39;interfaccia utente del Adobe Experience Platform. Questa guida richiede un Adobe ID  e l&#39;accesso al Adobe Experience Platform .
+Questa guida utente descrive come monitorare i dati nell’interfaccia utente di Adobe Experience Platform. Questa guida richiede un Adobe ID  e l&#39;accesso ad Adobe Experience Platform.
 
 ## Monitorare l’inserimento di dati end-to-end
 
