@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;schema;Schema;create schema;schema api;enum;primary identity;primary idenity;enum datatype;schema design
 solution: Experience Platform
 title: Creare uno schema utilizzando l'API del Registro di sistema dello schema
 topic: tutorials
+description: Questa esercitazione utilizza l'API del Registro di sistema dello schema per illustrare i passaggi necessari per comporre uno schema utilizzando una classe standard.
 translation-type: tm+mt
-source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '2322'
+source-wordcount: '2343'
 ht-degree: 1%
 
 ---
@@ -14,13 +15,13 @@ ht-degree: 1%
 
 # Creare uno schema utilizzando l&#39; [!DNL Schema Registry] API
 
-L&#39; [!DNL Schema Registry] oggetto viene utilizzato per accedere al [!DNL Schema Library] Adobe Experience Platform interno . Il [!DNL Schema Library] documento contiene le risorse messe a disposizione da  Adobe, partner [!DNL Experience Platform] e fornitori di cui si utilizzano le applicazioni. Il Registro di sistema fornisce un&#39;interfaccia utente e RESTful API da cui sono accessibili tutte le risorse libreria disponibili.
+Viene [!DNL Schema Registry] utilizzato per accedere all’ [!DNL Schema Library] interno di Adobe Experience Platform. Il [!DNL Schema Library] documento contiene le risorse messe a disposizione da  Adobe, partner [!DNL Experience Platform] e fornitori di cui si utilizzano le applicazioni. Il Registro di sistema fornisce un&#39;interfaccia utente e RESTful API da cui sono accessibili tutte le risorse libreria disponibili.
 
 Questa esercitazione utilizza l&#39; [!DNL Schema Registry] API per illustrare i passaggi necessari per comporre uno schema utilizzando una classe standard. Se si preferisce utilizzare l&#39;interfaccia utente in [!DNL Experience Platform], l&#39;esercitazione [Editor](create-schema-ui.md) schema fornisce istruzioni dettagliate per eseguire azioni simili nell&#39;editor dello schema.
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [!DNL Experience Data Model (XDM) System](../home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
    * [Nozioni di base sulla composizione](../schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
@@ -1169,7 +1170,7 @@ La risposta è un elenco filtrato di schemi, contenente solo quelli che soddisfa
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, è stato composto correttamente uno schema utilizzando sia i mixin standard che un mixin definito dall&#39;utente. Ora è possibile utilizzare questo schema per creare un dataset e per assimilare i dati del record  Adobe Experience Platform.
+Seguendo questa esercitazione, è stato composto correttamente uno schema utilizzando sia i mixin standard che un mixin definito dall&#39;utente. Ora è possibile utilizzare questo schema per creare un set di dati e acquisire i dati dei record in Adobe Experience Platform.
 
 Lo schema Membri fedeltà completo, come creato durante questa esercitazione, è disponibile nell&#39;appendice che segue. Osservando lo schema, puoi vedere in che modo i mixin contribuiscono alla struttura generale e quali campi sono disponibili per l&#39;inserimento dei dati.
 
