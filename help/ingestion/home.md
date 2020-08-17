@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data ingestion;data location;Data Location;Data management;data management;Lineage;lineage;batch;Batch;ingested data
 solution: Experience Platform
-title: Panoramica sull'inserimento dei dati  Adobe Experience Platform
+title: Panoramica sull’inserimento dei dati Adobe Experience Platform
 topic: overview
+description: Questo documento presenta i tre modi principali in cui i dati vengono trasferiti in Piattaforma, con collegamenti alla rispettiva documentazione di panoramica per ottenere informazioni più dettagliate.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '417'
-ht-degree: 10%
+source-wordcount: '442'
+ht-degree: 9%
 
 ---
 
 
 # Panoramica sull&#39;inserimento dei dati
 
- Adobe Experience Platform riunisce i dati provenienti da più origini per aiutare gli addetti al marketing a comprendere meglio il comportamento dei loro clienti.  Adobe Experience Platform Data Ingestion rappresenta i diversi metodi mediante i quali [!DNL Platform] vengono acquisiti i dati da tali origini, nonché il modo in cui tali dati vengono memorizzati all&#39;interno del Data Lake per essere utilizzati dai [!DNL Platform] servizi a valle.
+Adobe Experience Platform riunisce i dati provenienti da più origini per aiutare gli addetti al marketing a comprendere meglio il comportamento dei loro clienti. Adobe Experience Platform Data Ingestion rappresenta i diversi metodi mediante i quali [!DNL Platform] vengono acquisiti i dati da tali origini, nonché il modo in cui tali dati vengono memorizzati all&#39;interno del Data Lake per essere utilizzati dai [!DNL Platform] servizi a valle.
 
 Questo documento presenta i tre modi principali in cui i dati vengono trasferiti [!DNL Platform], con collegamenti alla rispettiva documentazione di panoramica per informazioni più dettagliate.
 
@@ -36,13 +37,13 @@ Per ulteriori informazioni, consulta la panoramica [sull’assimilazione](./stre
 
 [!DNL Experience Platform] consente di impostare connessioni di origine a vari provider di dati. Queste connessioni consentono di eseguire l&#39;autenticazione alle origini dati esterne, impostare i tempi di esecuzione dell&#39;assimilazione e gestire il throughput di assimilazione.
 
-Le connessioni di origine possono essere configurate per raccogliere dati da altre applicazioni  Adobe (come  Adobe Analytics e  Adobe Audience Manager), origini di archiviazione cloud di terze parti (come [!DNL Azure Blob], [!DNL Amazon] S3, server FTP e server SFTP) e sistemi CRM di terze parti (come [!DNL Microsoft Dynamics] e [!DNL Salesforce]).
+Le connessioni di origine possono essere configurate per raccogliere dati da altre applicazioni  Adobe (come  Adobe Analytics e Adobe Audience Manager), origini di archiviazione cloud di terze parti (come [!DNL Azure Blob], [!DNL Amazon] S3, server FTP e server SFTP) e sistemi CRM di terze parti (come [!DNL Microsoft Dynamics] e [!DNL Salesforce]).
 
 Per ulteriori informazioni, consulta la panoramica [](../sources/home.md) Origini.
 
 ## Passaggi successivi e risorse aggiuntive
 
-Questo documento ha fornito una breve introduzione ai diversi aspetti di [!DNL Data Ingestion] in [!DNL Experience Platform]. Continua a leggere la documentazione di panoramica di ogni metodo di assimilazione per acquisire dimestichezza con le diverse funzionalità, casi di utilizzo e procedure ottimali. Potete anche completare l’apprendimento guardando il video della panoramica sull’assimilazione riportato di seguito. Per informazioni su come [!DNL Experience Platform] tenere traccia dei metadati per i record acquisiti, consultate la panoramica [del servizio](../catalog/home.md)catalogo.
+Questo documento ha fornito una breve introduzione ai diversi aspetti di [!DNL Data Ingestion] in [!DNL Experience Platform]. Continua a leggere la documentazione di panoramica di ogni metodo di assimilazione per acquisire dimestichezza con le diverse funzionalità, casi di utilizzo e procedure ottimali. Potete anche completare l’apprendimento guardando il video introduttivo che segue. Per informazioni su come [!DNL Experience Platform] tenere traccia dei metadati per i record acquisiti, consultate la panoramica [del servizio](../catalog/home.md)catalogo.
 
 >[!WARNING]
 >
