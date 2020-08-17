@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guida utente per i criteri di unione
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '1039'
+source-wordcount: '1038'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Guida utente per i criteri di unione
 
- Adobe Experience Platform consente di unire dati provenienti da più origini e combinarli per visualizzare una visione completa di ogni singolo cliente. Quando si uniscono questi dati, i criteri di unione sono le regole che [!DNL Platform] utilizzano per determinare in che modo i dati verranno classificati come priorità e quali dati verranno combinati per creare tale visualizzazione unificata.
+Adobe Experience Platform consente di unire dati provenienti da più origini e combinarli per visualizzare una visione completa di ogni singolo cliente. Quando si uniscono questi dati, i criteri di unione sono le regole che [!DNL Platform] utilizzano per determinare in che modo i dati verranno classificati come priorità e quali dati verranno combinati per creare tale visualizzazione unificata.
 
-Utilizzando le API RESTful o l&#39;interfaccia utente, puoi creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la tua organizzazione. Questa guida fornisce istruzioni dettagliate per l&#39;utilizzo dei criteri di unione tramite l&#39;interfaccia utente del Adobe Experience Platform .
+Utilizzando le API RESTful o l&#39;interfaccia utente, puoi creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la tua organizzazione. Questa guida fornisce istruzioni dettagliate per l&#39;utilizzo dei criteri di unione tramite l&#39;interfaccia utente di Adobe Experience Platform.
 
 Se si preferisce lavorare con i criteri di unione utilizzando l&#39; [!DNL Real-time Customer Profile] API, seguire le istruzioni indicate nell&#39;esercitazione [API](../api/merge-policies.md)Unisci criteri.
 
@@ -80,7 +80,8 @@ Dopo aver creato il criterio di unione, fare clic **[!UICONTROL Save]** per torn
 
 Quando viene *[!UICONTROL Edit merge policy]* visualizzata la schermata, potete apportare modifiche al *[!UICONTROL Name]*, *[!UICONTROL Schema]*, *[!UICONTROL ID stitching]* tipo e *[!UICONTROL Attribute merge]* tipo, nonché selezionare se questo criterio sarà o meno il criterio *[!UICONTROL Default merge policy]* per l&#39;organizzazione.
 
->[!Nota]
+>[!NOTE]
+>
 >Non potete modificare l&#39;ID del criterio di unione, visualizzato nella parte superiore della schermata di modifica. Si tratta di un ID di sola lettura generato dal sistema che non può essere modificato.
 
 ![](../images/merge-policies/edit-screen.png)
@@ -91,11 +92,11 @@ Dopo aver apportato le modifiche necessarie, fare clic **[!UICONTROL Save]** per
 
 ## Violazioni dei criteri di governance dei dati
 
-Durante la creazione o l&#39;aggiornamento di un criterio di unione, viene eseguito un controllo per determinare se il criterio di unione viola uno qualsiasi dei criteri di utilizzo dei dati definiti dall&#39;organizzazione. I criteri di utilizzo dei dati fanno parte di  Adobe Experience Platform [!DNL Data Governance] e sono regole che descrivono i tipi di azioni di marketing consentite o da cui è consentita l&#39;esecuzione su [!DNL Platform] dati specifici. Ad esempio, se un criterio di unione è stato utilizzato per creare un segmento che si è attivato a una destinazione terza e l&#39;organizzazione dispone di un criterio di utilizzo dei dati che impedisce l&#39;esportazione di dati specifici a terzi, durante il tentativo di salvare il criterio di unione riceverai una notifica di &quot;violazione dei criteri di governance dei dati rilevata&quot;.
+Durante la creazione o l&#39;aggiornamento di un criterio di unione, viene eseguito un controllo per determinare se il criterio di unione viola uno qualsiasi dei criteri di utilizzo dei dati definiti dall&#39;organizzazione. I criteri di utilizzo dei dati fanno parte di Adobe Experience Platform [!DNL Data Governance] e sono regole che descrivono i tipi di azioni di marketing consentite o da cui è consentita l&#39;esecuzione su [!DNL Platform] dati specifici. Ad esempio, se un criterio di unione è stato utilizzato per creare un segmento che si è attivato a una destinazione terza e l&#39;organizzazione dispone di un criterio di utilizzo dei dati che impedisce l&#39;esportazione di dati specifici a terzi, durante il tentativo di salvare il criterio di unione riceverai una notifica di &quot;violazione dei criteri di governance dei dati rilevata&quot;.
 
 Questa notifica include un elenco di criteri di utilizzo dei dati che sono stati violati e consente di visualizzare i dettagli della violazione selezionando un criterio dall&#39;elenco. Quando si seleziona un criterio violato, la scheda *Dati* fornisce il *Motivo della violazione* e le attivazioni ** interessate, ciascuno fornendo maggiori dettagli sulle modalità di violazione dei criteri di utilizzo dei dati.
 
-Per saperne di più sulle modalità di gestione dei dati all&#39;interno  Adobe Experience Platform, si prega di iniziare leggendo la panoramica [sulla governance dei](../../data-governance/home.md)dati.
+Per ulteriori informazioni sulle modalità di gestione dei dati in Adobe Experience Platform, consultare la panoramica [sulla governance dei](../../data-governance/home.md)dati.
 
 ![](../images/merge-policies/policy-violation.png)
 
