@@ -4,7 +4,7 @@ seo-title: Tracciamento dei collegamenti per  Adobe Analytics con Adobe Experien
 description: Scopri come inviare dati collegamento a  Adobe Analytics con  Experience Platform Web SDK
 seo-description: Scopri come inviare dati collegamento a  Adobe Analytics con  Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: ab73e4d793cf39c29ddca385487bf027002db883
+source-git-commit: b50082405cd0392ff827a83ad82091fbcd370b21
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
