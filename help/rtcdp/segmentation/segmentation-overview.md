@@ -1,10 +1,11 @@
 ---
+keywords: segmentation; segmentation rtcdp;real time customer data platform segmentation
 title: Panoramica del servizio di segmentazione
 seo-title: Servizio di segmentazione in  Adobe Real-time Customer Data Platform
 description: Panoramica che descrive il servizio di segmentazione.
-seo-description: Panoramica che descrive il servizio di segmentazione e i segmenti  Platform Dati cliente in tempo reale.
+seo-description: Panoramica che descrive i servizi di segmentazione e i segmenti  Adobe Real-time Customer Data Platform.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 1%
@@ -14,9 +15,9 @@ ht-degree: 1%
 
 # [!DNL Segmentation Service] in [!DNL Real-time Customer Data Platform]
 
-[!DNL Real-time Customer Data Platform] (Real-time CDP) consente di portare dati da più origini per creare un&#39;esperienza coordinata e coerente per i clienti. È possibile realizzare campagne di marketing personalizzate pertinenti utilizzando il [!DNL Segmentation Service], parte del Adobe Experience Platform .
+[!DNL Real-time Customer Data Platform] (Real-time CDP) consente di portare dati da più origini per creare un&#39;esperienza coordinata e coerente per i clienti. La distribuzione di campagne di marketing personalizzate pertinenti può essere realizzata utilizzando la [!DNL Segmentation Service], parte di Adobe Experience Platform.
 
-Il CDP in tempo reale è basato su  Adobe Experience Platform e utilizza molti dei [!DNL Experience Platform] servizi e delle funzionalità. Grazie a [!DNL Segmentation Service], puoi fornire marketing personalizzato dividendo i tuoi clienti in gruppi più piccoli con caratteristiche simili.
+CDP in tempo reale è basato su Adobe Experience Platform e utilizza molti dei [!DNL Experience Platform] servizi e delle funzionalità. Grazie a [!DNL Segmentation Service], puoi fornire marketing personalizzato dividendo i tuoi clienti in gruppi più piccoli con caratteristiche simili.
 
 ## Segmentazione
 
