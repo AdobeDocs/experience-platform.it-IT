@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;opt-out
 solution: Experience Platform
 title: Rispetto delle eccezioni
 topic: overview
+description: ' Experience Platform consente ai clienti di inviare richieste di rifiuto relative all''utilizzo e all''archiviazione dei loro dati all''interno del profilo cliente in tempo reale]. Queste richieste di rinuncia fanno parte dell''accordo sulla tutela della privacy dei consumatori (CCPA) della California, che conferisce ai residenti della California il diritto di accedere ai propri dati personali ed eliminarli e di sapere se i loro dati personali sono venduti o divulgati (e a chi). '
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '987'
 ht-degree: 0%
 
 ---
@@ -24,7 +25,7 @@ Il rispetto delle richieste di non partecipazione richiede la comprensione dei v
 
 - [!DNL Real-time Customer Profile](../profile/home.md): Fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
 - [!DNL Adobe Experience Platform Segmentation Service](./home.md): Consente di creare segmenti di pubblico dai [!DNL Real-time Customer Profile] dati.
-- [!DNL Experience Data Model (XDM)](../xdm/home.md): Framework standard con cui Platform organizza i dati sull&#39;esperienza dei clienti.
+- [!DNL Experience Data Model (XDM)](../xdm/home.md): Il framework standardizzato tramite il quale la piattaforma organizza i dati sull&#39;esperienza cliente.
 - [!DNL Adobe Experience Platform Privacy Service](../privacy-service/home.md): Consente alle organizzazioni di automatizzare la conformità alle normative sulla privacy dei dati che riguardano i dati dei clienti all&#39;interno [!DNL Platform].
 
 ## Mixine di rinunce
@@ -36,7 +37,7 @@ Per soddisfare le richieste di rifiuto CCPA, uno degli schemi che fa parte dello
 
 Per istruzioni dettagliate su come aggiungere un mixin a uno schema, fare riferimento alla sezione &quot;Add a mixin&quot; nella seguente documentazione XDM:
 - [Esercitazione](../xdm/api/getting-started.md)sulle API del Registro di sistema dello schema.: Creazione di uno schema tramite l&#39;API del Registro di sistema dello schema.
-- [Esercitazione](../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Creazione di uno schema tramite l&#39;interfaccia utente di Platform.
+- [Esercitazione](../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Creazione di uno schema tramite l&#39;interfaccia utente della piattaforma.
 
 Di seguito è riportata un&#39;immagine di esempio con i mixin di rinuncia aggiunti a uno schema nell&#39;interfaccia utente:
 
@@ -66,7 +67,7 @@ Il [!DNL Profile Privacy] mixin contiene i campi seguenti:
    - Consenso (`in`): Il cliente ha acconsentito.
 - Timestamp rifiuto (`timestamp`): Timestamp del segnale di rifiuto ricevuto.
 
-Per visualizzare l&#39;intera struttura del [!DNL Profile Privacy] mixin, fare riferimento all&#39;archivio [GitHub pubblico](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) XDM oppure visualizzare l&#39;anteprima del mixin utilizzando l&#39;interfaccia utente di Platform.
+Per visualizzare l&#39;intera struttura del [!DNL Profile Privacy] mixin, fare riferimento all&#39;archivio [GitHub pubblico](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) XDM oppure visualizzare l&#39;anteprima del mixin utilizzando l&#39;interfaccia utente della piattaforma.
 
 ### [!DNL Profile Preferences Details]
 
