@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;offer management;Offer Management
 solution: Experience Platform
 title: Offer Decisition Domain Model
 topic: overview
+description: La decisione dell'offerta è un caso d'uso del servizio di gestione del servizio all'interno del quale si formalizzano e si gestiscono centralmente le regole e le previsioni utilizzate per coinvolgere i clienti nelle offerte.
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '2614'
+source-wordcount: '2640'
 ht-degree: 0%
 
 ---
@@ -149,5 +150,5 @@ Quando i client creano e collegano il grafico degli oggetti per le decisioni, in
 
       - La creazione di offerte di fallback adeguate è l&#39;ultimo passaggio di questo flusso di lavoro. Un&#39;offerta di fallback è molto simile a un&#39;offerta generale senza vincoli.
 
-- L&#39;ultimo flusso di lavoro riguarda la creazione di attività. Tuttavia, questo passaggio non si verifica necessariamente in sequenza dopo il flusso di lavoro per la creazione delle offerte. Entrambi i processi sono in corso e simultanei. Le attività sono utilizzate per limitare l&#39;ambito delle opzioni per argomento e per luogo in cui vengono presentate le decisioni. Un&#39;attività fa riferimento a una [raccolta](#offer-collections) e a una posizione. Deve inoltre specificare un&#39;offerta [di](#fallback-offers) fallback utilizzata nei casi in cui non è possibile determinare un&#39;offerta di qualificazione.
+- L&#39;ultimo flusso di lavoro riguarda la creazione di attività. Tuttavia, questo passaggio non si verifica necessariamente in sequenza dopo il flusso di lavoro per la creazione delle offerte. Entrambi i processi sono in corso e simultanei. Le attività sono utilizzate per limitare l&#39;ambito delle opzioni per argomento e per luogo in cui vengono presentate le decisioni. Un&#39;attività fa riferimento a una [raccolta](#offer-collections) e a una posizione. Deve inoltre specificare un&#39;offerta [di](#fallback-offers) fallback utilizzata nei casi in cui non è possibile determinare un&#39;offerta valida.
 
