@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;schema;Schema;create schema;enum;XDM individual profile;primary identity;primary idenity;enum datatype;schema design
 solution: Experience Platform
 title: Creare uno schema tramite l’Editor di schema.
 topic: tutorials
+description: Questa esercitazione descrive i passaggi necessari per creare uno schema utilizzando l'Editor di schema all'interno  Experience Platform.
 translation-type: tm+mt
-source-git-commit: 661789fa15ea11b0e42060b1b90d74785c04fa1f
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '3167'
+source-wordcount: '3183'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Creazione di uno schema con l&#39;operatore [!DNL Schema Editor]
 
-L&#39; [!DNL Schema Registry] applicazione fornisce un&#39;interfaccia utente e RESTful API da cui è possibile visualizzare e gestire tutte le risorse nel Adobe Experience Platform  [!DNL Schema Library]. Il [!DNL Schema Library] contiene le risorse messe a disposizione da  Adobe,  partner di Experience Platform e fornitori di cui si utilizzano le applicazioni, nonché le risorse che vengono definite e salvate nel [!DNL Schema Registry].
+L&#39; [!DNL Schema Registry] applicazione fornisce un&#39;interfaccia utente e RESTful API da cui è possibile visualizzare e gestire tutte le risorse nell&#39;Adobe Experience Platform [!DNL Schema Library]. Il [!DNL Schema Library] contiene le risorse messe a disposizione da  Adobe,  partner di Experience Platform e fornitori di cui si utilizzano le applicazioni, nonché le risorse che vengono definite e salvate nel [!DNL Schema Registry].
 
 Questa esercitazione descrive i passaggi necessari per creare uno schema utilizzando l&#39;Editor di schema all&#39;interno [!DNL Experience Platform]. Se si preferisce comporre uno schema utilizzando l&#39;API del Registro di sistema dello schema, iniziare leggendo la guida [per lo sviluppatore del Registro di](../api/getting-started.md) schema prima di provare a [creare uno schema utilizzando l&#39;API](create-schema-api.md).
 
@@ -22,9 +23,9 @@ Questa esercitazione include anche i passaggi per [definire una nuova classe](#c
 
 ## Introduzione
 
-Questa esercitazione richiede una conoscenza approfondita dei vari aspetti del Adobe Experience Platform  coinvolto nell&#39;utilizzo dell&#39;Editor di schema. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti concetti:
+Questa esercitazione richiede una conoscenza approfondita dei vari aspetti di Adobe Experience Platform coinvolti nell&#39;utilizzo dell&#39;Editor di schema. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti concetti:
 
-* [!DNL Experience Data Model (XDM)](../home.md): Framework standard con cui Platform organizza i dati sull&#39;esperienza dei clienti.
+* [!DNL Experience Data Model (XDM)](../home.md): Il framework standardizzato tramite il quale la piattaforma organizza i dati sull&#39;esperienza cliente.
 * [Nozioni di base sulla composizione](../schema/composition.md)dello schema: Panoramica degli schemi XDM e dei relativi blocchi costitutivi, incluse classi, mixin, tipi di dati e campi.
 * [!DNL Real-time Customer Profile](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
@@ -162,7 +163,7 @@ All&#39;interno di quel nodo con nome è presente un &quot;[!UICONTROL New Field
 
 ![](../images/tutorials/create-schema/new_field_loyalty.png)
 
-Usando *[!UICONTROL Field Properties]* a destra dell’editor, iniziate con la creazione di un campo &quot;[!UICONTROL loyalty]&quot; di tipo &quot;[!UICONTROL Object]&quot; che verrà utilizzato per contenere i campi relativi alla fidelizzazione. Al termine, fate clic **[!UICONTROL Apply]**.
+Usando *[!UICONTROL Field Properties]* a destra dell’editor, iniziate con la creazione di un campo &quot;[!UICONTROL loyalty]&quot; di tipo &quot;[!UICONTROL Object]&quot; che verrà utilizzato per contenere i campi relativi alla fidelizzazione. Al termine, fai clic su **[!UICONTROL Apply]**.
 
 ![](../images/tutorials/create-schema/loyalty_object.png)
 
@@ -172,10 +173,10 @@ Le modifiche vengono applicate e viene visualizzato l&#39;oggetto &quot;[!UICONT
 
 Ogni campo richiede le seguenti informazioni:
 
-* **[!UICONTROL Field Name]:**Nome del campo, scritto in cammello. Esempio: loyaltyLevel
-* **[!UICONTROL Display Name]:**Il nome del campo, scritto nel caso del titolo. Esempio: Livello fedeltà
-* **[!UICONTROL Type]:**Il tipo di dati del campo. Ciò include i tipi scalari di base e qualsiasi tipo di dati definito nel[!DNL Schema Registry]. Esempi: stringa, numero intero, booleano, Persona, Indirizzo, Numero di telefono, ecc.
-* **[!UICONTROL Description]:**Deve essere inclusa una descrizione facoltativa del campo, scritta in caso di frase. (massimo 200 caratteri)
+* **[!UICONTROL Field Name]:** Nome del campo, scritto in cammello. Esempio: loyaltyLevel
+* **[!UICONTROL Display Name]:** Il nome del campo, scritto nel caso del titolo. Esempio: Livello fedeltà
+* **[!UICONTROL Type]:** Il tipo di dati del campo. Ciò include i tipi scalari di base e qualsiasi tipo di dati definito nel [!DNL Schema Registry]. Esempi: stringa, numero intero, booleano, Persona, Indirizzo, Numero di telefono, ecc.
+* **[!UICONTROL Description]:** Deve essere inclusa una descrizione facoltativa del campo, scritta in caso di frase. (massimo 200 caratteri)
 
 Il primo campo per l&#39;oggetto Fedeltà sarà una stringa denominata &quot;[!UICONTROL loyaltyId]&quot;. Quando si imposta il tipo di nuovo campo su &quot;[!UICONTROL String]&quot;, la *[!UICONTROL Field Properties]* finestra viene compilata con diverse opzioni per l&#39;applicazione di vincoli, inclusi **[!UICONTROL Default Value]**, **[!UICONTROL Format]** e **[!UICONTROL Maximum Length]**.
 
@@ -214,10 +215,10 @@ Dopo aver completato tutte le proprietà del campo, fare clic **[!UICONTROL Appl
 
 Ulteriori informazioni sui vincoli aggiuntivi disponibili:
 
-* **[!UICONTROL Required]:**Indica che il campo è obbligatorio per l&#39;inserimento dei dati. Eventuali dati caricati in un dataset basato su questo schema che non contiene questo campo avranno esito negativo al momento dell&#39;inserimento.
-* **[!UICONTROL Array]:**Indica che il campo contiene un array di valori, ciascuno con il tipo di dati specificato. Ad esempio, se si seleziona un tipo di dati &quot;String&quot; e si seleziona la casella di controllo &quot;Array&quot;, il campo conterrà un array di stringhe.
-* **[!UICONTROL Enum]:**Indica che questo campo deve contenere uno dei valori di un elenco enumerato di possibili valori.
-* **[!UICONTROL Identity]:**Indica che questo campo è un campo identità. Ulteriori informazioni sui campi di identità sono disponibili[più avanti in questa esercitazione](#identity-field).
+* **[!UICONTROL Required]:** Indica che il campo è obbligatorio per l&#39;inserimento dei dati. Eventuali dati caricati in un dataset basato su questo schema che non contiene questo campo avranno esito negativo al momento dell&#39;inserimento.
+* **[!UICONTROL Array]:** Indica che il campo contiene un array di valori, ciascuno con il tipo di dati specificato. Ad esempio, se si seleziona un tipo di dati &quot;String&quot; e si seleziona la casella di controllo &quot;Array&quot;, il campo conterrà un array di stringhe.
+* **[!UICONTROL Enum]:** Indica che questo campo deve contenere uno dei valori di un elenco enumerato di possibili valori.
+* **[!UICONTROL Identity]:** Indica che questo campo è un campo identità. Ulteriori informazioni sui campi di identità sono disponibili [più avanti in questa esercitazione](#identity-field).
 
 ## Conversione di un oggetto multicampo in un tipo di dati {#datatype}
 
