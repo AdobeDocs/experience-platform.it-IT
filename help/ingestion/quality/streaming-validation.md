@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;streaming
 solution: Experience Platform
 title: Convalida dell'assimilazione in streaming
 topic: overview
+description: 'L’assimilazione dello streaming consente di caricare i dati su Adobe Experience Platform utilizzando gli endpoint di streaming in tempo reale. Le API di assimilazione in streaming supportano due modalità di convalida: sincrona e asincrona.'
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '843'
 ht-degree: 3%
 
 ---
@@ -14,11 +15,11 @@ ht-degree: 3%
 
 # Convalida dell&#39;assimilazione in streaming
 
-L’assimilazione dello streaming consente di caricare i dati  Adobe Experience Platform utilizzando gli endpoint di streaming in tempo reale. Le API di assimilazione in streaming supportano due modalità di convalida: sincrona e asincrona.
+L’assimilazione dello streaming consente di caricare i dati su Adobe Experience Platform utilizzando gli endpoint di streaming in tempo reale. Le API di assimilazione in streaming supportano due modalità di convalida: sincrona e asincrona.
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 - [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
 - [!DNL Streaming Ingestion](../streaming-ingestion/overview.md): Uno dei metodi tramite i quali è possibile inviare i dati [!DNL Experience Platform].
