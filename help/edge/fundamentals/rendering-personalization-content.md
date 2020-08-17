@@ -1,12 +1,12 @@
 ---
 title: Rendering di contenuti personalizzati
-seo-title: ' Adobe Experience Platform Web SDK Rendering del contenuto personalizzato'
+seo-title: Adobe Experience Platform Web SDK Rendering del contenuto personalizzato
 description: Scopri come eseguire il rendering del contenuto personalizzato con  Experience Platform Web SDK
 seo-description: Scopri come eseguire il rendering del contenuto personalizzato con  Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: c342e8d7698c1d213658f3f1dae751edbde04b83
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Panoramica delle opzioni di personalizzazione
 
-Il Adobe Experience Platform  [!DNL Web SDK] supporta la query delle soluzioni di personalizzazione  Adobe,  Adobe Target. Esistono due modalità di personalizzazione: recupero del contenuto che può essere rappresentato automaticamente e del contenuto di cui lo sviluppatore deve eseguire il rendering. L’SDK fornisce inoltre le strutture per [gestire lo sfarfallio](../../edge/solution-specific/target/flicker-management.md).
+Adobe Experience Platform [!DNL Web SDK] supporta la query sulle soluzioni di personalizzazione  Adobe, incluso  Adobe Target. Esistono due modalità di personalizzazione: recupero del contenuto che può essere rappresentato automaticamente e del contenuto di cui lo sviluppatore deve eseguire il rendering. L’SDK fornisce inoltre le strutture per [gestire lo sfarfallio](../../edge/solution-specific/target/flicker-management.md).
 
 ## Rendering automatico del contenuto
 
@@ -40,15 +40,15 @@ Il rendering del contenuto personalizzato è asincrono, pertanto non dovrebbe es
 
 ## Rendering manuale del contenuto
 
-È possibile richiedere la restituzione dell&#39;elenco di decisioni come promessa sul `event` comando utilizzando `scopes`. Un ambito è una stringa che consente alla soluzione di personalizzazione di sapere quale decisione si desidera prendere.
+È possibile richiedere la restituzione dell&#39;elenco di decisioni come promessa nel `sendEvent` comando specificando l&#39; `decisionScopes` opzione. Un ambito è una stringa che consente alla soluzione di personalizzazione di sapere quale decisione si desidera prendere.
 
 ```javascript
 alloy("sendEvent",{
     xdm:{...},
-    scopes:['demo-1', 'demo-2']
+    decisionScopes:['demo-1', 'demo-2']
   }).then(function(result){
     if (result.decisions){
-      //do something with the decisions
+      // Do something with the decisions.
     }
   })
 ```
@@ -92,8 +92,8 @@ Questo restituirà un elenco di decisioni come oggetto JSON per ogni decisione.
 
 >[!TIP]
 >
-> Se utilizzi [!DNL Target] scope per diventare mBox sul server, solo queste sono tutte richieste contemporaneamente anziché singolarmente. La mbox globale viene sempre inviata.
+> Se si utilizza [!DNL Target], gli ambiti diventano mBox sul server, solo che sono tutti richiesti contemporaneamente invece che individualmente. La mbox globale viene sempre inviata.
 
 ### Recupera contenuto automatico
 
-Se desiderate che il modulo `result.decisions` includa le decisioni di rendering automatico, potete impostare `renderDecisions` su false e includere l&#39;ambito speciale `__view__`.
+Se desiderate che il modulo `result.decisions` includa le decisioni di rendering automatico e NON disponga del rendering automatico di ALLEY, potete impostare `renderDecisions` su `false`e includere l&#39;ambito speciale `__view__`.
