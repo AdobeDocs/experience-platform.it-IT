@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;catalog service;catalog;Catalog service;data location;Data Location;Data management;data management;Lineage;lineage;Catalog;enable dataset
 solution: Experience Platform
 title: Panoramica di Servizio catalogo
 topic: overview
+description: Catalog Service è il sistema di registrazione per la posizione dei dati e la linea di origine dei dati in Adobe Experience Platform. Mentre tutti i dati acquisiti  Experience Platform vengono memorizzati nel Data Lake come file e directory, Catalog contiene i metadati e la descrizione di tali file e directory a scopo di ricerca e monitoraggio.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '731'
-ht-degree: 6%
+source-wordcount: '782'
+ht-degree: 5%
 
 ---
 
 
 # [!DNL Catalog Service]panoramica
 
-[!DNL Catalog Service] è il sistema di record per la posizione dei dati e la linea all&#39;interno  Adobe Experience Platform. Anche se tutti i dati in cui [!DNL Experience Platform] viene effettuato il caricamento vengono memorizzati [!DNL Data Lake] come file e directory, [!DNL Catalog] contiene i metadati e la descrizione di tali file e directory a scopo di ricerca e monitoraggio.
+[!DNL Catalog Service] è il sistema di record per la posizione dei dati e la linea di dati in Adobe Experience Platform. Anche se tutti i dati in cui [!DNL Experience Platform] viene effettuato il caricamento vengono memorizzati [!DNL Data Lake] come file e directory, [!DNL Catalog] contiene i metadati e la descrizione di tali file e directory a scopo di ricerca e monitoraggio.
 
 In poche parole, [!DNL Catalog] funge da archivio di metadati o &quot;[!UICONTROL catalog]&quot; per trovare informazioni sui dati all&#39;interno [!DNL Experience Platform]. Potete usare [!DNL Catalog] per rispondere alle seguenti domande:
 
@@ -57,7 +58,7 @@ La tabella seguente delinea i diversi tipi di oggetti supportati da [!DNL Catalo
 | Account | `/accounts` | Durante la creazione di connessioni di origine, è necessario fornire le credenziali di autenticazione. Un account rappresenta una raccolta di credenziali di autenticazione utilizzate per creare una connessione di un tipo specifico. Ogni connessione ha un insieme di parametri univoci che sono persistenti da [!DNL Catalog] e protetti in un [!DNL Azure Key Vault]. |
 | Batch | `/batches` | I batch sono unità di dati costituite da uno o più file da acquisire come una singola unità. Un oggetto batch in [!DNL Catalog] descrive le metriche di assimilazione del batch (come il numero di record elaborati o le dimensioni su disco) e può includere anche collegamenti a set di dati, viste e altre risorse interessate dall&#39;operazione batch. |
 | Connessione | `/connections` | Una connessione è una singola istanza di un connettore di origine, univoca per la propria organizzazione e configurata utilizzando le credenziali di autenticazione appropriate per il tipo di connettore. |
-| Connettore | `/connectors` | I connettori definiscono il modo in cui le connessioni di origine devono raccogliere i dati da altre applicazioni  Adobe (come  Adobe Analytics e  Adobe Audience Manager), origini di archiviazione cloud di terze parti (come [!DNL Azure Blob], [!DNL Amazon S3], server FTP e server SFTP) e sistemi CRM di terze parti (come [!DNL Microsoft Dynamics] e [!DNL Salesforce]). |
+| Connettore | `/connectors` | I connettori definiscono il modo in cui le connessioni di origine devono raccogliere dati da altre applicazioni  Adobe (come  Adobe Analytics e Adobe Audience Manager), origini di archiviazione cloud di terze parti (come [!DNL Azure Blob], server [!DNL Amazon S3], server FTP e server SFTP) e sistemi CRM di terze parti (come [!DNL Microsoft Dynamics] e [!DNL Salesforce]). |
 | Set di dati | `/dataSets` | Un dataset è un costrutto di storage e gestione utilizzato per la raccolta di dati (in genere una tabella) che contiene uno schema (colonne) e campi (righe). Per ulteriori informazioni, vedere la panoramica [dei](./datasets/overview.md) set di dati. |
 | File di set di dati | `/datasetFiles` | I file di set di dati rappresentano blocchi di dati salvati in [!DNL Platform]. Come record di file letterali, questi sono i punti in cui è possibile trovare la dimensione del file, il numero di record in cui contiene e un riferimento al batch in cui è stato assimilato il file. |
 
