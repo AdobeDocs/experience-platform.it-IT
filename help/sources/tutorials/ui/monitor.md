@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics; monitor accounts; monitor dataflows
+keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;data flows
 description: I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente originati su base programmata. Questa esercitazione fornisce i passaggi per visualizzare gli account e i flussi di dati esistenti dall'area di lavoro Origini.
 solution: Experience Platform
 title: Monitorare account e flussi di dati
 topic: overview
 translation-type: tm+mt
-source-git-commit: dcdb1eb1f89b7393b83941a18abb2be2afa3576f
+source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
 workflow-type: tm+mt
 source-wordcount: '827'
 ht-degree: 0%
