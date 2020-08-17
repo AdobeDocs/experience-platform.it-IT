@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Panoramica del profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1665'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # [!DNL Real-time Customer Profile]panoramica
 
- Adobe Experience Platform consente di creare esperienze coordinate, coerenti e pertinenti per i clienti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con [!DNL Real-time Customer Profile], puoi vedere una visualizzazione olistica di ogni singolo cliente che combina dati provenienti da più canali, inclusi online, offline, CRM e dati di terze parti. [!DNL Profile] consente di consolidare i diversi dati dei clienti in una visualizzazione unificata che offre un account utilizzabile e con marca temporale per ogni interazione con il cliente. Questa panoramica vi aiuterà a capire il ruolo e l’utilizzo di [!DNL Real-time Customer Profile] in [!DNL Experience Platform].
+Adobe Experience Platform consente di creare esperienze coordinate, coerenti e pertinenti per i clienti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con [!DNL Real-time Customer Profile], puoi vedere una visualizzazione olistica di ogni singolo cliente che combina dati provenienti da più canali, inclusi online, offline, CRM e dati di terze parti. [!DNL Profile] consente di consolidare i diversi dati dei clienti in una visualizzazione unificata che offre un account utilizzabile e con marca temporale per ogni interazione con il cliente. Questa panoramica vi aiuterà a capire il ruolo e l’utilizzo di [!DNL Real-time Customer Profile] in [!DNL Experience Platform].
 
 ## Informazioni [!DNL Real-time Customer Profile]
 
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 ### [!DNL Profile] data store
 
-Anche se [!DNL Real-time Customer Profile] elabora i dati acquisiti e utilizza  Adobe Experience Platform [!DNL Identity Service] per unire i dati correlati attraverso la mappatura dell&#39;identità, mantiene i propri dati nello [!DNL Profile] store. In altre parole, lo [!DNL Profile] store è separato dai [!DNL Catalog] dati ([!DNL Data Lake]) e [!DNL Identity Service] dai dati (grafico dell&#39;identità).
+Anche se [!DNL Real-time Customer Profile] elabora i dati acquisiti e utilizza Adobe Experience Platform [!DNL Identity Service] per unire i dati correlati attraverso la mappatura dell&#39;identità, mantiene i propri dati nello [!DNL Profile] store. In altre parole, lo [!DNL Profile] store è separato dai [!DNL Catalog] dati ([!DNL Data Lake]) e [!DNL Identity Service] dai dati (grafico dell&#39;identità).
 
 ### [!DNL Profile] e [!DNL Platform] servizi
 
@@ -32,7 +32,7 @@ La relazione tra [!DNL Real-time Customer Profile] e altri servizi all&#39;inter
 
 ### Profili e dati record
 
-Un profilo è una rappresentazione di un soggetto, un&#39;organizzazione o un individuo, detti anche dati di record. Ad esempio, il profilo di un prodotto può includere uno SKU e una descrizione, mentre il profilo di una persona contiene informazioni come nome, cognome e indirizzo e-mail. Utilizzando [!DNL Experience Platform]questa opzione, puoi personalizzare i profili in modo da utilizzare tipi di dati rilevanti per la tua attività. La classe standard [!DNL Experience Data Model] (XDM) [!DNL Individual Profile] è la classe preferita sulla quale creare uno schema per la descrizione dei dati del record cliente e fornisce i dati integrali a molte interazioni tra i servizi Platform. Per ulteriori informazioni sull&#39;utilizzo degli schemi in [!DNL Experience Platform], iniziare leggendo la panoramica [del sistema](../xdm/home.md)XDM.
+Un profilo è una rappresentazione di un soggetto, un&#39;organizzazione o un individuo, detti anche dati di record. Ad esempio, il profilo di un prodotto può includere uno SKU e una descrizione, mentre il profilo di una persona contiene informazioni come nome, cognome e indirizzo e-mail. Utilizzando [!DNL Experience Platform]questa opzione, puoi personalizzare i profili in modo da utilizzare tipi di dati rilevanti per la tua attività. La classe standard [!DNL Experience Data Model] (XDM) [!DNL Individual Profile] è la classe preferita sulla quale creare uno schema per la descrizione dei dati del record cliente e fornisce i dati integrali a molte interazioni tra i servizi della piattaforma. Per ulteriori informazioni sull&#39;utilizzo degli schemi in [!DNL Experience Platform], iniziare leggendo la panoramica [del sistema](../xdm/home.md)XDM.
 
 ### Eventi delle serie temporali
 
@@ -44,11 +44,11 @@ Ogni azienda vuole comunicare con i propri clienti in un modo che si senta perso
 
 ### Segmentazione
 
- Adobe Experience Platform [!DNL Segmentation Service] produce i tipi di pubblico necessari per fornire esperienze ai singoli clienti. Quando viene creato un segmento di pubblico, l&#39;ID di tale segmento viene aggiunto all&#39;elenco delle appartenenze del segmento per tutti i profili idonei. Le regole dei segmenti sono create e applicate ai [!DNL Real-time Customer Profile] dati utilizzando le API RESTful e l&#39;interfaccia utente di Generatore di segmenti. Per ulteriori informazioni sulla segmentazione, consultare la panoramica [del servizio di](../segmentation/home.md)segmentazione.
+Adobe Experience Platform [!DNL Segmentation Service] produce i tipi di pubblico necessari per fornire esperienze ai singoli clienti. Quando viene creato un segmento di pubblico, l&#39;ID di tale segmento viene aggiunto all&#39;elenco delle appartenenze del segmento per tutti i profili idonei. Le regole dei segmenti sono create e applicate ai [!DNL Real-time Customer Profile] dati utilizzando le API RESTful e l&#39;interfaccia utente di Generatore di segmenti. Per ulteriori informazioni sulla segmentazione, consultare la panoramica [del servizio di](../segmentation/home.md)segmentazione.
 
 ### Frammenti di profilo e schemi di unione {#profile-fragments-and-union-schemas}
 
-Una delle caratteristiche chiave di [!DNL Real-time Customer Profile] è la capacità di unificare i dati multicanale. Quando [!DNL Real-time Customer Profile] viene utilizzato per accedere a un&#39;entità, può fornire all&#39;utente una visualizzazione unita di tutti i frammenti di profilo per l&#39;entità in tutti i set di dati, detta visualizzazione unione e resa possibile tramite ciò che è noto come schema unione. [!DNL Real-time Customer Profile] i dati vengono uniti tra le origini quando l&#39;ID di un&#39;entità o di un profilo vi consente di accedervi o di esportarli come segmento. Per ulteriori informazioni sull&#39;accesso ai profili e alle visualizzazioni di unione tramite l&#39; [!DNL Real-time Customer Profile] API, visita la guida [all&#39;endpoint](api/entities.md)entità.
+Una delle caratteristiche chiave di [!DNL Real-time Customer Profile] è la capacità di unificare i dati multicanale. Quando [!DNL Real-time Customer Profile] viene utilizzato per accedere a un&#39;entità, può fornire una visualizzazione unita di tutti i frammenti di profilo per tale entità tra i set di dati, detta visualizzazione unione e resa possibile attraverso ciò che è noto come schema unione. [!DNL Real-time Customer Profile] i dati vengono uniti tra le origini quando l&#39;ID di un&#39;entità o di un profilo vi consente di accedervi o di esportarli come segmento. Per ulteriori informazioni sull&#39;accesso ai profili e alle visualizzazioni di unione tramite l&#39; [!DNL Real-time Customer Profile] API, visita la guida [all&#39;endpoint](api/entities.md)entità.
 
 ### Unisci criteri
 
@@ -59,7 +59,7 @@ Quando si uniscono i dati da più origini e si combinano per visualizzare una vi
 >[!IMPORTANT]
 >La funzionalità degli attributi calcolati descritta in questo documento è in alfa. La documentazione e la funzionalità sono soggette a modifiche.
 
-Gli attributi calcolati consentono di calcolare automaticamente il valore dei campi in base ad altri valori, calcoli ed espressioni. Gli attributi calcolati operano a livello di profilo, il che significa che puoi aggregare i valori per tutti i record ed eventi. Ogni attributo calcolato contiene un&#39;espressione, o &quot;regola&quot;, che valuta i dati in arrivo e memorizza il valore risultante in un attributo di profilo o in un evento. Questi calcoli consentono di rispondere facilmente a domande relative a cose come il valore di acquisto del ciclo di vita, il tempo tra acquisti o il numero di aperture di applicazioni, senza che sia necessario eseguire manualmente calcoli complessi ogni volta che le informazioni sono necessarie. Per ulteriori informazioni sugli attributi calcolati e istruzioni dettagliate per utilizzarli tramite l&#39; [!DNL Real-time Customer Profile] API, consultate la guida [all&#39;endpoint degli attributi](api/computed-attributes.md)calcolati. Questa guida aiuterà a comprendere meglio il ruolo che gli attributi calcolati vengono riprodotti all&#39;interno  Adobe Experience Platform e include chiamate API di esempio per l&#39;esecuzione di operazioni CRUD di base.
+Gli attributi calcolati consentono di calcolare automaticamente il valore dei campi in base ad altri valori, calcoli ed espressioni. Gli attributi calcolati operano a livello di profilo, il che significa che puoi aggregare i valori per tutti i record ed eventi. Ogni attributo calcolato contiene un&#39;espressione, o &quot;regola&quot;, che valuta i dati in arrivo e memorizza il valore risultante in un attributo di profilo o in un evento. Questi calcoli consentono di rispondere facilmente a domande relative a cose come il valore di acquisto del ciclo di vita, il tempo tra acquisti o il numero di aperture di applicazioni, senza che sia necessario eseguire manualmente calcoli complessi ogni volta che le informazioni sono necessarie. Per ulteriori informazioni sugli attributi calcolati e istruzioni dettagliate per utilizzarli tramite l&#39; [!DNL Real-time Customer Profile] API, consultate la guida [all&#39;endpoint degli attributi](api/computed-attributes.md)calcolati. Questa guida ti aiuterà a comprendere meglio il ruolo che gli attributi calcolati giocano in Adobe Experience Platform e include chiamate API di esempio per eseguire operazioni CRUD di base.
 
 ## Componenti in tempo reale
 
@@ -71,18 +71,19 @@ L&#39;ingresso in tempo reale è possibile attraverso un processo chiamato caric
 
 ### Configurazioni e destinazioni di proiezione Edge
 
-Al fine di promuovere esperienze coordinate, coerenti e personalizzate per i clienti attraverso più canali in tempo reale, i dati giusti devono essere prontamente disponibili e costantemente aggiornati man mano che si verificano le modifiche.  Adobe Experience Platform consente l&#39;accesso in tempo reale ai dati attraverso l&#39;uso di ciò che sono noti come edge. Un server periferico è un server collocato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni. Ad esempio,  applicazioni di Adobe come  Adobe Target e  Adobe Campaign utilizzano i bordi per fornire esperienze personalizzate ai clienti in tempo reale. I dati vengono indirizzati a un bordo da una proiezione, con una destinazione di proiezione che definisce il bordo a cui verranno inviati i dati, e una configurazione di proiezione che definisce le informazioni specifiche che verranno rese disponibili sul bordo. Per saperne di più e iniziare a lavorare con le proiezioni utilizzando l&#39; [!DNL Real-time Customer Profile] API, fare riferimento alla guida [endpoint di proiezione](api/edge-projections.md)edge.
+Al fine di promuovere esperienze coordinate, coerenti e personalizzate per i clienti attraverso più canali in tempo reale, i dati giusti devono essere prontamente disponibili e costantemente aggiornati man mano che si verificano le modifiche. Adobe Experience Platform consente l&#39;accesso in tempo reale ai dati tramite l&#39;utilizzo di ciò che è noto come edge. Un server periferico è un server collocato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni. Ad esempio,  applicazioni di Adobe come  Adobe Target e  Adobe Campaign utilizzano i bordi per fornire esperienze personalizzate ai clienti in tempo reale. I dati vengono indirizzati a un bordo da una proiezione, con una destinazione di proiezione che definisce il bordo a cui verranno inviati i dati, e una configurazione di proiezione che definisce le informazioni specifiche che verranno rese disponibili sul bordo. Per saperne di più e iniziare a lavorare con le proiezioni utilizzando l&#39; [!DNL Real-time Customer Profile] API, fare riferimento alla guida [endpoint di proiezione](api/edge-projections.md)edge.
 
 ## Aggiungi dati a [!DNL Real-time Customer Profile]
 
 [!DNL Platform] può essere configurato per inviare i dati del record e della serie temporale a [!DNL Profile], per supportare l’assimilazione in tempo reale dei flussi e l’assimilazione batch. Per ulteriori informazioni, consulta l’esercitazione che illustra come [aggiungere dati al profilo](tutorials/add-profile-data.md)cliente in tempo reale.
 
->[!Nota]
+>[!NOTE]
+>
 >I dati raccolti attraverso  soluzioni di Adobe, inclusi [!DNL Analytics Cloud][!DNL Marketing Cloud], e [!DNL Advertising Cloud], fluiscono [!DNL Experience Platform] e vengono ingeriti [!DNL Profile].
 
 ### [!DNL Profile] metriche di assimilazione
 
-Observability Insights consente di esporre le metriche chiave nel  Adobe Experience Platform. Oltre alle statistiche di [!DNL Platform] utilizzo e agli indicatori di prestazioni per diverse [!DNL Platform] funzionalità, sono disponibili metriche [!DNL Profile]correlate specifiche che consentono di conoscere i tassi di richieste in entrata, i tassi di acquisizione di successo, le dimensioni dei record acquisiti e altro ancora. Per saperne di più, leggi innanzitutto la panoramica [](../observability/home.md)Approfondimenti sull&#39;osservazione e per un elenco completo delle [!DNL Profile] metriche, consulta la documentazione sulle metriche [](../observability/metrics.md)disponibili.
+Observability Insights consente di esporre le metriche chiave in Adobe Experience Platform. Oltre alle statistiche di [!DNL Platform] utilizzo e agli indicatori di prestazioni per diverse [!DNL Platform] funzionalità, sono disponibili metriche [!DNL Profile]correlate specifiche che consentono di conoscere i tassi di richieste in entrata, i tassi di acquisizione di successo, le dimensioni dei record acquisiti e altro ancora. Per saperne di più, leggi innanzitutto la panoramica [](../observability/home.md)Approfondimenti sull&#39;osservazione e per un elenco completo delle [!DNL Profile] metriche, consulta la documentazione sulle metriche [](../observability/metrics.md)disponibili.
 
 ## [!DNL Data governance] ed [!DNL Privacy]
 
@@ -93,7 +94,7 @@ Per quanto riguarda l&#39;accesso ai dati, la governance dei dati svolge un ruol
 * Criteri di accesso ai dati
 * Controllo dell&#39;accesso ai dati per le azioni di marketing
 
-[!DNL Data governance] è gestito in diversi punti. tra cui la scelta di quali dati vengono acquisiti [!DNL Platform] e quali dati sono accessibili dopo l’assimilazione per una determinata azione di marketing. Per ulteriori informazioni, iniziare leggendo la panoramica sulla governance dei [dati](../data-governance/home.md).
+[!DNL Data governance] è gestito in diversi punti. Tra queste, puoi decidere in quali dati vengono acquisiti [!DNL Platform] e quali dati sono accessibili dopo l’assimilazione per una determinata azione di marketing. Per ulteriori informazioni, iniziare leggendo la panoramica sulla governance dei [dati](../data-governance/home.md).
 
 ### Gestione delle richieste di privacy e rinuncia ai dati
 
