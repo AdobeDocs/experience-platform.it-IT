@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Attributi calcolati - API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '2366'
+source-wordcount: '2365'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Gli attributi calcolati consentono di calcolare automaticamente il valore dei ca
 
 Ogni attributo calcolato contiene un&#39;espressione, o &quot;regola&quot;, che valuta i dati in arrivo e memorizza il valore risultante in un attributo di profilo o in un evento. Questi calcoli consentono di rispondere facilmente a domande relative a cose come il valore di acquisto del ciclo di vita, il tempo tra acquisti o il numero di aperture di applicazioni, senza che sia necessario eseguire manualmente calcoli complessi ogni volta che le informazioni sono necessarie.
 
-Questa guida aiuterà a comprendere meglio gli attributi calcolati all&#39;interno  Adobe Experience Platform e include chiamate API di esempio per eseguire operazioni CRUD di base utilizzando l&#39; `/config/computedAttributes` endpoint.
+Questa guida aiuterà a comprendere meglio gli attributi calcolati in Adobe Experience Platform e include chiamate API di esempio per eseguire operazioni CRUD di base utilizzando l&#39; `/config/computedAttributes` endpoint.
 
 ## Introduzione
 
@@ -29,7 +29,7 @@ L&#39;endpoint API utilizzato in questa guida fa parte dell&#39;API [Profilo cli
 
 ## Informazioni sugli attributi calcolati
 
- Adobe Experience Platform consente di importare e unire facilmente dati da più origini per generare [!DNL Real-time Customer Profiles]. Ogni profilo contiene informazioni importanti relative a un individuo, come le informazioni di contatto, le preferenze e la cronologia degli acquisti, fornendo una visualizzazione a 360 gradi del cliente.
+Adobe Experience Platform consente di importare e unire facilmente dati da più origini per generare [!DNL Real-time Customer Profiles]. Ogni profilo contiene informazioni importanti relative a un individuo, come le informazioni di contatto, le preferenze e la cronologia degli acquisti, fornendo una visualizzazione a 360 gradi del cliente.
 
 Alcune delle informazioni raccolte nel profilo sono facilmente comprensibili quando si leggono direttamente i campi di dati (ad esempio, &quot;nome&quot;), mentre altri dati richiedono l&#39;esecuzione di più calcoli o l&#39;utilizzo di altri campi e valori per generare le informazioni (ad esempio, &quot;totale dell&#39;acquisto nel corso del ciclo di vita&quot;). Per semplificare la comprensione dei dati, [!DNL Platform] è possibile creare **[!UICONTROL computed attributes]** che esegua automaticamente i riferimenti e i calcoli, restituendo il valore nel campo appropriato.
 
@@ -39,9 +39,9 @@ Gli attributi calcolati includono la creazione di un&#39;espressione, o &quot;re
 
 I casi di utilizzo per gli attributi calcolati possono variare da calcoli semplici a riferimenti molto complessi. Di seguito sono riportati alcuni esempi di casi di utilizzo per gli attributi calcolati:
 
-1. **[!UICONTROL Percentages]:**Un semplice attributo calcolato potrebbe includere l&#39;acquisizione di due campi numerici in un record e la loro divisione per creare una percentuale. Ad esempio, potete prendere il numero totale di e-mail inviate a un singolo e dividerlo per il numero di e-mail che l&#39;utente apre. Osservare il campo attributo calcolato risultante mostrerebbe rapidamente la percentuale di e-mail totali aperte dal singolo utente.
-1. **[!UICONTROL Application use]:**Un altro esempio include la possibilità di aggregare il numero di volte che un utente apre l&#39;applicazione. Tracciando il numero totale di aperture di applicazioni, in base a singoli eventi aperti, puoi offrire offerte o messaggi speciali agli utenti sul loro 100° evento aperto, incoraggiando un coinvolgimento più profondo con il tuo marchio.
-1. **[!UICONTROL Lifetime values]:**La raccolta dei totali in esecuzione, come il valore di acquisto per un cliente nel corso del ciclo di vita, può essere molto difficile. Ciò richiede l&#39;aggiornamento del totale storico ogni volta che si verifica un nuovo evento di acquisto. Un attributo calcolato consente di ottenere questo risultato molto più facilmente mantenendo il valore del ciclo di vita in un singolo campo che viene aggiornato automaticamente dopo ogni evento di acquisto relativo al cliente.
+1. **[!UICONTROL Percentages]:** Un semplice attributo calcolato potrebbe includere l&#39;acquisizione di due campi numerici in un record e la loro divisione per creare una percentuale. Ad esempio, potete prendere il numero totale di e-mail inviate a un singolo e dividerlo per il numero di e-mail che l&#39;utente apre. Osservare il campo attributo calcolato risultante mostrerebbe rapidamente la percentuale di e-mail totali aperte dal singolo utente.
+1. **[!UICONTROL Application use]:** Un altro esempio include la possibilità di aggregare il numero di volte che un utente apre l&#39;applicazione. Tracciando il numero totale di aperture di applicazioni, in base a singoli eventi aperti, puoi offrire offerte o messaggi speciali agli utenti sul loro 100° evento aperto, incoraggiando un coinvolgimento più profondo con il tuo marchio.
+1. **[!UICONTROL Lifetime values]:** La raccolta dei totali in esecuzione, come il valore di acquisto per un cliente nel corso del ciclo di vita, può essere molto difficile. Ciò richiede l&#39;aggiornamento del totale storico ogni volta che si verifica un nuovo evento di acquisto. Un attributo calcolato consente di ottenere questo risultato molto più facilmente mantenendo il valore del ciclo di vita in un singolo campo che viene aggiornato automaticamente dopo ogni evento di acquisto relativo al cliente.
 
 ## Configurare un attributo calcolato
 
@@ -56,7 +56,7 @@ Il flusso di lavoro di questa esercitazione utilizza uno schema [!DNL Profile]ab
 
 ### Visualizzare uno schema
 
-I passaggi successivi utilizzano l&#39;interfaccia utente del Adobe Experience Platform  per individuare uno schema, aggiungere un mixin e definire un campo. Se si preferisce utilizzare l&#39; [!DNL Schema Registry] API, fare riferimento alla guida [per gli sviluppatori del Registro di](../../xdm/api/getting-started.md) schema per i passaggi su come creare un mixin, aggiungere un mixin a uno schema e abilitare uno schema da utilizzare con [!DNL Real-time Customer Profile].
+I passaggi successivi utilizzano l&#39;interfaccia utente di Adobe Experience Platform per individuare uno schema, aggiungere un mixin e definire un campo. Se si preferisce utilizzare l&#39; [!DNL Schema Registry] API, fare riferimento alla guida [per gli sviluppatori del Registro di](../../xdm/api/getting-started.md) schema per i passaggi su come creare un mixin, aggiungere un mixin a uno schema e abilitare uno schema da utilizzare con [!DNL Real-time Customer Profile].
 
 Nell&#39;interfaccia utente, fare clic **[!UICONTROL Schemas]** nella barra a sinistra e utilizzare la barra di ricerca nella *[!UICONTROL Browse]* scheda per trovare rapidamente lo schema da aggiornare.
 
@@ -482,8 +482,7 @@ Un aggiornamento riuscito restituisce lo stato HTTP 204 (nessun contenuto) e un 
 
 È inoltre possibile eliminare un attributo calcolato utilizzando l&#39;API. Questa operazione viene eseguita eseguendo una richiesta di DELETE all&#39; `/config/computedAttributes` endpoint e includendo l&#39;ID dell&#39;attributo calcolato che si desidera eliminare nel percorso della richiesta.
 
->[!Nota]
->
+>[!NOTE]
 >
 >Prestare attenzione quando si elimina un attributo calcolato perché potrebbe essere in uso in più schemi e l&#39;operazione DELETE non può essere annullata.
 
