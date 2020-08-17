@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;streaming
 solution: Experience Platform
 title: Risoluzione dei problemi di caricamento in streaming
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '987'
 ht-degree: 0%
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Guida alla risoluzione dei problemi di caricamento in streaming
 
-Questo documento contiene le risposte alle domande frequenti sull’assimilazione in streaming  Adobe Experience Platform. Per domande e risoluzione dei problemi relativi ad altri [!DNL Platform] servizi, inclusi quelli che si verificano tra tutte le [!DNL Platform] API, consultare la guida [alla risoluzione dei problemi del](../../landing/troubleshooting.md)Experience Platform.
+Questo documento contiene le risposte alle domande frequenti sull’assimilazione in streaming su Adobe Experience Platform. Per domande e risoluzione dei problemi relativi ad altri [!DNL Platform] servizi, inclusi quelli che si verificano tra tutte le [!DNL Platform] API, consultare la guida [alla risoluzione dei problemi del](../../landing/troubleshooting.md)Experience Platform.
 
- Adobe Experience Platform [!DNL Data Ingestion] fornisce API RESTful che potete utilizzare per assimilare i dati in [!DNL Experience Platform]. I dati acquisiti vengono utilizzati per aggiornare i profili dei singoli clienti in tempo quasi reale, consentendoti di fornire esperienze personalizzate e pertinenti su più canali. Per ulteriori informazioni sul servizio e sui diversi metodi di assimilazione, consulta la panoramica [sull’inserimento dei](../home.md) dati. Per informazioni sull’utilizzo delle API di assimilazione in streaming, consultate la panoramica [sull’assimilazione in](../streaming-ingestion/overview.md)streaming.
+Adobe Experience Platform [!DNL Data Ingestion] fornisce API RESTful che potete utilizzare per assimilare i dati in [!DNL Experience Platform]. I dati acquisiti vengono utilizzati per aggiornare i profili dei singoli clienti in tempo quasi reale, consentendoti di fornire esperienze personalizzate e pertinenti su più canali. Per ulteriori informazioni sul servizio e sui diversi metodi di assimilazione, consulta la panoramica [sull’inserimento dei](../home.md) dati. Per informazioni sull’utilizzo delle API di assimilazione in streaming, consultate la panoramica [sull’assimilazione in](../streaming-ingestion/overview.md)streaming.
 
 ## Domande frequenti
 
