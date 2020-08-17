@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Query editor;query editor
 solution: Experience Platform
-title: ' Guida all''Editor di query del servizio Query'
+title: Guida utente per l’editor di query
 topic: query editor
+description: Query Editor è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati relativi all'esperienza cliente all'interno dell'interfaccia utente del Experience Platform . Query Editor supporta lo sviluppo di query per analisi e esplorazione dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per compilare set di dati in  Experience Platform.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
 workflow-type: tm+mt
-source-wordcount: '1001'
+source-wordcount: '1060'
 ht-degree: 1%
 
 ---
@@ -14,13 +15,13 @@ ht-degree: 1%
 
 # [!DNL Query Editor] guida utente
 
-[!DNL Query Editor] è uno strumento interattivo fornito da  Adobe Experience Platform [!DNL Query Service], che consente di scrivere, convalidare ed eseguire query per i dati relativi all&#39;esperienza cliente all&#39;interno dell&#39;interfaccia [!DNL Experience Platform] utente. [!DNL Query Editor] supporta lo sviluppo di query per l&#39;analisi e l&#39;esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per la compilazione dei set di dati in [!DNL Experience Platform].
+[!DNL Query Editor] è uno strumento interattivo fornito da Adobe Experience Platform [!DNL Query Service], che consente di scrivere, convalidare ed eseguire query per i dati relativi all&#39;esperienza cliente all&#39;interno dell&#39;interfaccia [!DNL Experience Platform] utente. [!DNL Query Editor] supporta lo sviluppo di query per l&#39;analisi e l&#39;esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per la compilazione dei set di dati in [!DNL Experience Platform].
 
 Per ulteriori informazioni sui concetti e sulle funzionalità di [!DNL Query Service]Query Service, consultate la panoramica [di][query-service-overview]Query Service. Per ulteriori informazioni su come navigare nell&#39;interfaccia utente di Servizio query, [!DNL Platform]vedere la panoramica [dell&#39;interfaccia utente di Servizio][query-service-ui]query.
 
 ## Introduzione
 
-[!DNL Query Editor] consente l&#39;esecuzione flessibile delle query connettendosi a [!DNL Query Service], e le query verranno eseguite solo quando la connessione è attiva.
+[!DNL Query Editor] consente l&#39;esecuzione flessibile delle query connettendosi a [!DNL Query Service], e le query verranno eseguite solo mentre la connessione è attiva.
 
 ### Collegamento a [!DNL Query Service]
 
@@ -36,7 +37,7 @@ Query eseguite dall&#39; [!DNL Query Editor] esecuzione in modo interattivo. Que
 
 Utilizzando [!DNL Query Editor]questa funzione, potete scrivere, eseguire e salvare le query per i dati relativi all&#39;esperienza cliente. Tutte le query eseguite [!DNL Query Editor]o salvate sono disponibili per tutti gli utenti dell&#39;organizzazione con accesso a [!DNL Query Service].
 
-### Accesso [!DNL Query Editor]
+### Accesso a [!DNL Query Editor]
 
 Nell’ [!DNL Experience Platform] interfaccia utente, fate clic **[!UICONTROL Queries]** nel menu di navigazione a sinistra per aprire l’ [!DNL Query Service] area di lavoro. Fare clic **[!UICONTROL Create Query]** nella parte superiore destra della schermata per iniziare a scrivere le query. Questo collegamento è disponibile da una qualsiasi delle pagine nell’ [!DNL Query Service] area di lavoro.
 
@@ -118,7 +119,7 @@ Al termine di una query, i risultati vengono visualizzati nella *[!UICONTROL Res
 
 ## Esecuzione di query con video [!DNL Query Service] di esercitazione
 
-Il seguente video mostra come eseguire le query nell&#39;interfaccia del Adobe Experience Platform  e in un client PSQL. Inoltre, viene illustrato l&#39;utilizzo di singole proprietà in un oggetto XDM, utilizzando  funzioni definite dal Adobe e utilizzando CREATE TABLE AS SELECT (CTAS).
+Il seguente video mostra come eseguire le query nell&#39;interfaccia Adobe Experience Platform e in un client PSQL. Inoltre, viene illustrato l&#39;utilizzo di singole proprietà in un oggetto XDM, utilizzando  funzioni definite dal Adobe e utilizzando CREATE TABLE AS SELECT (CTAS).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
