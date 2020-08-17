@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ECID;ecid
 solution: Experience Platform
 title: Dati identità per richieste di privacy
 topic: overview
+description: Questo documento fornisce linee guida generali su come configurare le operazioni sui dati e sfruttare  tecnologie di Adobe per recuperare in modo efficace le informazioni di identità appropriate per le richieste di privacy dei clienti.
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '643'
 ht-degree: 3%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 3%
 
 # Dati identità per richieste di privacy
 
-Affinché  Adobe Experience Platform [!DNL Privacy Service] possa elaborare le richieste dei clienti per i loro dati privati (comprese le richieste di accesso, eliminazione o rinuncia alla vendita), è necessario fornire identificatori univoci che colleghino un cliente specifico ai suoi dati privati memorizzati nelle applicazioni abilitate per Adobe Experience Cloud. [!DNL Privacy Service] quindi utilizza questi identificatori per raccogliere tutti i dati memorizzati sotto l&#39;identità del cliente all&#39;interno [!DNL Experience Cloud]ed elaborarli in base alla richiesta del cliente.
+Affinché Adobe Experience Platform possa [!DNL Privacy Service] elaborare le richieste dei clienti per i propri dati privati (comprese le richieste di accesso, eliminazione o rinuncia alla vendita), deve essere fornito con identificatori univoci che collegano un cliente specifico ai suoi dati privati memorizzati nelle applicazioni abilitate per Adobe Experience Cloud. [!DNL Privacy Service] quindi utilizza questi identificatori per raccogliere tutti i dati memorizzati sotto l&#39;identità del cliente all&#39;interno [!DNL Experience Cloud]ed elaborarli in base alla richiesta del cliente.
 
 Questo documento fornisce linee guida generali su come configurare le operazioni sui dati e sfruttare  tecnologie di Adobe per recuperare in modo efficace le informazioni di identità appropriate per le richieste di privacy dei clienti.
 
@@ -24,9 +25,9 @@ Quando un cliente può interagire con il tuo marchio attraverso diversi canali, 
 
 Ad esempio, durante la gestione delle richieste di dati dei clienti in [!DNL Privacy Service], un&#39;identità può rappresentare un valore di cookie impostato in un dominio controllato dal Adobe , un valore di cookie in un dominio di terze parti condiviso con  Adobe o un identificatore personalizzato definito esplicitamente all&#39;interno dell&#39;organizzazione IMS.
 
-È pertanto necessario che ogni identità inviata a [!DNL Privacy Service] sia accompagnata da uno **spazio dei nomi** che fornisca contesto collegando il valore dell&#39;identità al proprio sistema di origine. Uno spazio dei nomi può rappresentare un concetto generico come un indirizzo e-mail (&quot;E-mail&quot;) o associare l&#39;identità a un&#39;applicazione specifica, ad esempio un ID Adobe Advertising Cloud (&quot;AdCloud&quot;) o un ID Adobe Target  (&quot;TNTID&quot;).
+È pertanto necessario che ogni identità inviata a [!DNL Privacy Service] sia accompagnata da uno **spazio dei nomi** che fornisca contesto collegando il valore dell&#39;identità al proprio sistema di origine. Uno spazio dei nomi può rappresentare un concetto generico come un indirizzo e-mail (&quot;E-mail&quot;) o associare l&#39;identità a un&#39;applicazione specifica, ad esempio un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o  Adobe Target ID (&quot;TNTID&quot;).
 
- Adobe Experience Platform Identity Service conserva un archivio di spazi dei nomi di identità definiti a livello globale e definiti dall&#39;utente. Per informazioni più dettagliate sugli spazi dei nomi, consultate la panoramica [dello spazio dei nomi](../identity-service/namespaces.md)identità. Per un elenco degli spazi dei nomi e dei qualificatori standard comunemente utilizzati in [!DNL Privacy Service], vedere la sezione [](api/appendix.md) appendice nella guida per gli sviluppatori.
+Adobe Experience Platform Identity Service gestisce un archivio di spazi dei nomi di identità definiti a livello globale e definiti dall&#39;utente. Per informazioni più dettagliate sugli spazi dei nomi, consultate la panoramica [dello spazio dei nomi](../identity-service/namespaces.md)identità. Per un elenco degli spazi dei nomi e dei qualificatori standard comunemente utilizzati in [!DNL Privacy Service], vedere la sezione [](api/appendix.md) appendice nella guida per gli sviluppatori.
 
 ## ECID e servizio di consenso
 
