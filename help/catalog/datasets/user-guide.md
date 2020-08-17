@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;enable dataset;Dataset;dataset
 solution: Experience Platform
 title: Guida utente dei set di dati
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '1075'
 ht-degree: 0%
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Guida utente dei set di dati
 
-Questa guida utente fornisce istruzioni sull&#39;esecuzione di azioni comuni quando si utilizzano i set di dati all&#39;interno &#39;interfaccia utente del Adobe Experience Platform.
+Questa guida utente fornisce istruzioni sull&#39;esecuzione delle azioni comuni quando si utilizzano i set di dati nell&#39;interfaccia utente di Adobe Experience Platform.
 
 ## Introduzione
 
-Questa guida utente richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
+Questa guida utente richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [Set](overview.md)di dati: Il concetto di storage e gestione per la persistenza dei dati in [!DNL Experience Platform].
 * [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
@@ -121,7 +121,7 @@ L&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati (DULE) è il mecc
 
 >[!NOTE]
 >
->Non è possibile eliminare i set di dati creati e utilizzati da applicazioni e servizi  Adobe (ad esempio  Adobe Analytics,  Adobe Audience Manager o [!DNL Decisioning Service]).
+>Non è possibile eliminare i set di dati creati e utilizzati da applicazioni e servizi  Adobe (come  Adobe Analytics, Adobe Audience Manager o [!DNL Decisioning Service]).
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 
