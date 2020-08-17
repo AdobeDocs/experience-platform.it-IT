@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;GDPR;gdpr
 solution: Experience Platform
 title: Terminologia RGPD
 topic: troubleshooting
+description: Di seguito è riportato un elenco di definizioni per termini chiave relativi al Regolamento generale sulla protezione dei dati (General Data Protection Regulation, GDPR).
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1084'
 ht-degree: 5%
 
 ---
@@ -42,7 +43,7 @@ __Processore dati:__ L&#39;entità che elabora i dati per conto del Titolare del
 
 __Autorità per la protezione dei dati:__ Le autorità nazionali incaricate della protezione dei dati e della vita privata, nonché del controllo e dell&#39;applicazione delle norme sulla protezione dei dati all&#39;interno dell&#39;Unione.
 
-__Responsabile della protezione dei dati:__ Un esperto di privacy dei dati che lavora in modo indipendente per assicurare che un&#39;entità aderisca alle politiche e alle procedure stabilite nel GDPR.
+__Responsabile della protezione dei dati:__ Un esperto di privacy dei dati che lavora in modo indipendente per garantire che un&#39;entità aderisca alle politiche e alle procedure stabilite nel GDPR.
 
 __Oggetto dati:__ Persona fisica i cui dati personali sono trattati da un titolare del trattamento o da un responsabile del trattamento.
 
@@ -74,7 +75,7 @@ __Gruppo di imprese:__ Un&#39;impresa controllante e le sue imprese controllate.
 
 ## I
 
-__Identity Management Services (IMS):__ L&#39;implementazione  Adobe di Federated ID e OAuth 2.0 per l&#39;autenticazione degli utenti  Adobe ID e l&#39;autorizzazione per  risorse Adobi. È necessario integrare IMS con l’applicazione o il servizio Adobe per consentire agli utenti di entrare e accedere ai servizi di Adobe. Users can log in directly with Renga (the Adobe identity services provider), or log in through a trusted third party authentication domain (such as [!DNL Google], [!DNL Facebook], or a corporate/organization LDAP).
+__Identity Management Services (IMS):__ L&#39;implementazione  Adobe di Federated ID e OAuth 2.0 per l&#39;autenticazione degli utenti  Adobe ID e l&#39;autorizzazione per  risorse di Adobe. È necessario integrare IMS con l’applicazione o il servizio Adobe per consentire agli utenti di entrare e accedere ai servizi di Adobe. Users can log in directly with Renga (the Adobe identity services provider), or log in through a trusted third party authentication domain (such as [!DNL Google], [!DNL Facebook], or a corporate/organization LDAP).
 
 __ID organizzazione IMS:__ Si riferisce a un token di autorizzazione  Adobe per l&#39;autenticazione servizio-servizio, che non richiede l&#39;accesso utente. Viene emesso a un client IMS e non ha alcun utente associato. Un client IMS necessita di un token di servizio per autorizzare le richieste del canale indietro tra i servizi. (Il termine “token di sistema” viene usato saltuariamente per indicare il token di servizio).
 
