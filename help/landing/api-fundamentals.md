@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: ' Principi di base delle API Adobi Experience Platform'
+title: Nozioni di base sulle API Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '422'
 ht-degree: 2%
 
 ---
 
 
-#  Principi di base delle API Adobi Experience Platform
+# Nozioni di base sulle API Adobe Experience Platform
 
- API di Adobe Experience Platform utilizzano diverse tecnologie e sintassi di base importanti per gestire efficacemente le risorse basate su JSON [!DNL Platform] . Il presente documento fornisce una breve panoramica di queste tecnologie e collegamenti alla documentazione esterna per ulteriori informazioni.
+Le API di Adobe Experience Platform utilizzano diverse tecnologie e sintassi di base importanti per gestire efficacemente le risorse basate su JSON [!DNL Platform] . Il presente documento fornisce una breve panoramica di queste tecnologie e collegamenti alla documentazione esterna per ulteriori informazioni.
 
 ## Puntatore JSON {#json-pointer}
 
@@ -80,8 +80,7 @@ JSON Pointer è una sintassi di stringa standard ([RFC 6901](https://tools.ietf.
 | `"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
 | `"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
->[!Nota]
->
+>[!NOTE]
 >
 >Quando si utilizzano gli `xdm:sourceProperty` attributi e `xdm:destinationProperty` gli attributi dei descrittori [!DNL Experience Data Model] (XDM), qualsiasi `properties` chiave deve essere **esclusa** dalla stringa Puntatore JSON. Per ulteriori informazioni, consulta la guida per gli sviluppatori di [!DNL Schema Registry] API in [descrittori](../xdm/api/descriptors.md) .
 
@@ -115,4 +114,4 @@ Lo schema JSON è un formato utilizzato per descrivere e convalidare la struttur
 
 ## Passaggi successivi
 
-In questo documento sono state introdotte alcune tecnologie e sintassi relative alla gestione delle risorse basate su JSON per [!DNL Experience Platform]. Per ulteriori informazioni sull&#39;utilizzo delle [!DNL Platform] API, comprese le procedure ottimali e le risposte alle domande frequenti, consultare la guida [alla risoluzione dei problemi di](troubleshooting.md)Platform.
+In questo documento sono state introdotte alcune tecnologie e sintassi relative alla gestione delle risorse basate su JSON per [!DNL Experience Platform]. Per ulteriori informazioni sull&#39;utilizzo delle [!DNL Platform] API, comprese le procedure ottimali e le risposte alle domande frequenti, consultate la guida alla risoluzione dei problemi della [piattaforma](troubleshooting.md).
