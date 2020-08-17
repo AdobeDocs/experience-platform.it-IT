@@ -1,10 +1,11 @@
 ---
+keywords: Catalog;catalog
 title: Catalogo destinazioni
 seo-title: Catalogo destinazioni
 description: Il Catalogo destinazioni fornisce un elenco delle destinazioni disponibili pronte per ricevere i dati. Tali destinazioni includono soluzioni  Adobe, piattaforme pubblicitarie, piattaforme di sondaggi, piattaforme di marketing e-mail e altro ancora.
 seo-description: Il Catalogo destinazioni fornisce un elenco delle destinazioni disponibili pronte per ricevere i dati. Tali destinazioni includono soluzioni  Adobe, piattaforme pubblicitarie, piattaforme di sondaggi, piattaforme di marketing e-mail e altro ancora.
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 0%
@@ -20,13 +21,13 @@ Sfogliate il catalogo per determinare quali piattaforme di destinazione sono mig
 
 ## Categorie di destinazione
 
-Puoi attivare i tuoi dati in diverse categorie di destinazione nel Real-time Customer Data Platform. I collegamenti seguenti forniscono ulteriori informazioni su ciascuna categoria di destinazione:
+Puoi attivare i tuoi dati in diverse categorie di destinazione nella piattaforma dati cliente in tempo reale. I collegamenti seguenti forniscono ulteriori informazioni su ciascuna categoria di destinazione:
 
 * [Soluzioni  Adobe](/help/rtcdp/destinations/adobe-destinations.md)
 * [Destinazioni pubblicitarie](/help/rtcdp/destinations/advertising-destinations.md)
-* [destinazioni Analytics](/help/rtcdp/destinations/analytics-destinations.md)
+* [Destinazioni di Analytics](/help/rtcdp/destinations/analytics-destinations.md)
 * [Destinazioni di archiviazione cloud](/help/rtcdp/destinations/cloud-storage-destinations.md)
-* [Gestione dati Platform](/help/rtcdp/destinations/dmp-destinations.md)
+* [Piattaforma di gestione dati](/help/rtcdp/destinations/dmp-destinations.md)
 * [Marketing e-mail](/help/rtcdp/destinations/email-marketing-destinations.md)
 * [Personalizzazione](/help/rtcdp/destinations/personalization-destinations.md)
 * [Destinazioni social](/help/rtcdp/destinations/social-network-destinations.md)
