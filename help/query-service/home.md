@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;query
 solution: Experience Platform
-title: ' Adobe Experience Platform Query Service'
+title: Adobe Experience Platform Query Service
 topic: overview
+description: Questo documento fornisce una panoramica del ruolo di Query Service all'interno  Experience Platform.
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '627'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Query Service]panoramica
 
- Adobe Experience Platform acquisisce i dati da un&#39;ampia varietà di fonti. Una sfida importante per gli esperti di marketing è dare un senso a questi dati per acquisire informazioni sui loro clienti.  Adobe Experience Platform [!DNL Query Service] facilita tale operazione consentendo di utilizzare SQL standard per eseguire query sui dati in [!DNL Platform]. Utilizzando [!DNL Query Service], è possibile unire qualsiasi set di dati nel modulo [!DNL Data Lake] e acquisire i risultati della query come nuovo set di dati da utilizzare nei report, nell&#39;apprendimento automatico o per l&#39;inserimento in [!DNL Real-time Customer Profile]. Questo documento fornisce una panoramica del ruolo dell&#39; [!DNL Query Service] interno [!DNL Experience Platform].
+Adobe Experience Platform acquisisce i dati da un&#39;ampia varietà di fonti. Una sfida importante per gli esperti di marketing è dare un senso a questi dati per acquisire informazioni sui loro clienti. Adobe Experience Platform [!DNL Query Service] facilita questa operazione consentendo di utilizzare SQL standard per eseguire query sui dati in [!DNL Platform]. Utilizzando [!DNL Query Service], è possibile unire qualsiasi set di dati nel modulo [!DNL Data Lake] e acquisire i risultati della query come nuovo set di dati da utilizzare nei report, nell&#39;apprendimento automatico o per l&#39;inserimento in [!DNL Real-time Customer Profile]. Questo documento fornisce una panoramica del ruolo dell&#39; [!DNL Query Service] interno [!DNL Experience Platform].
 
 [!DNL Query Service] consente ai marchi di collegare il percorso online-offline del cliente e comprendere l&#39;attribuzione omnicanale. Il seguente video mostra come un&#39;azienda di esperienze può sfruttare [!DNL Query Service] per risolvere i casi di utilizzo chiave e come [!DNL Query Service] funziona.
 
@@ -30,15 +31,15 @@ ht-degree: 0%
 
 ### [!DNL Data Science Workspace]
 
- Adobe Experience Platform [!DNL Data Science Workspace] utilizza l&#39;apprendimento automatico e l&#39;intelligenza artificiale per acquisire informazioni dai dati memorizzati all&#39;interno [!DNL Experience Platform]. [!DNL Data Science Workspace] consente agli esperti informatici di creare ricette basate su dati di record e serie temporali relativi ai clienti e alle loro attività, facilitando previsioni quali l&#39;acquisto di propensione e le offerte consigliate che l&#39;individuo probabilmente apprezzerà e utilizzerà. È possibile utilizzare SQL all&#39;interno [!DNL Data Science Workspace] integrando [!DNL Query Service] in [!DNL JupyterLab], consentendo di esplorare, trasformare e analizzare  dati Adobe Analytics. Per ulteriori informazioni su [!DNL Data Science Workspace] e sulla guida all’ [!DNL Data Science Workspace]integrazione, consulta la [!DNL Query Service] panoramica per ulteriori informazioni sulle [!DNL Data Science Workspace] interazioni con [!DNL Query Service].
+Adobe Experience Platform [!DNL Data Science Workspace] utilizza l&#39;apprendimento automatico e l&#39;intelligenza artificiale per acquisire informazioni dai dati memorizzati all&#39;interno [!DNL Experience Platform]. [!DNL Data Science Workspace] consente agli esperti informatici di creare ricette basate su dati di record e serie temporali relativi ai clienti e alle loro attività, facilitando previsioni quali l&#39;acquisto di propensione e le offerte consigliate che l&#39;individuo probabilmente apprezzerà e utilizzerà. È possibile utilizzare SQL all&#39;interno [!DNL Data Science Workspace] integrando [!DNL Query Service] in [!DNL JupyterLab], consentendo di esplorare, trasformare e analizzare  dati Adobe Analytics. Per ulteriori informazioni su [!DNL Data Science Workspace] e sulla guida all’ [!DNL Data Science Workspace]integrazione, consulta la [!DNL Query Service] panoramica per ulteriori informazioni sulle [!DNL Data Science Workspace] interazioni con [!DNL Query Service].
 
 ### [!DNL Segmentation Service]
 
- Adobe Experience Platform [!DNL Segmentation Service] consente agli utenti di dividere i propri clienti in gruppi più piccoli che condividono caratteristiche simili. Questi segmenti possono quindi essere valutati per fornire una migliore analisi dei [!DNL Real-time Customer Profile] dati. [!DNL Query Service] può essere utilizzata per fornire questa analisi eseguendo query su questi dati del segmento all&#39;interno del [!DNL Data Lake]. Per ulteriori informazioni sulla segmentazione, consulta la [!DNL Segmentation Service] panoramica e la guida [!DNL Profile Query Language] (PQL) per ulteriori informazioni su come analizzare i segmenti.
+Adobe Experience Platform [!DNL Segmentation Service] consente agli utenti di dividere i propri clienti in gruppi più piccoli che condividono caratteristiche simili. Questi segmenti possono quindi essere valutati per fornire una migliore analisi dei [!DNL Real-time Customer Profile] dati. [!DNL Query Service] può essere utilizzata per fornire questa analisi eseguendo query su questi dati del segmento all&#39;interno del [!DNL Data Lake]. Per ulteriori informazioni sulla segmentazione, consulta la [!DNL Segmentation Service] panoramica e la guida [!DNL Profile Query Language] (PQL) per ulteriori informazioni su come analizzare i segmenti.
 
 ### Caso di utilizzo di Looker BI
 
-Con  Adobe Experience Platform, è possibile acquisire, memorizzare, strutturare e estrarre tutti i dataset memorizzati — inclusi i dati comportamentali, CRM e del punto vendita. Utilizzando [!DNL Experience Platform's Query Service]questo strumento, puoi eseguire query su questi set di dati e rispondere a domande specifiche sull&#39;azienda e iniziare a generare approfondimenti di impatto. Il seguente video illustra il valore della creazione di dashboard negli strumenti di business intelligence (BI) mediante [!DNL Query Service].
+Con Adobe Experience Platform, puoi acquisire, memorizzare, strutturare e estrarre tutti i dataset memorizzati — inclusi i dati comportamentali, CRM e del punto vendita. Utilizzando [!DNL Experience Platform's Query Service]questo strumento, puoi eseguire query su questi set di dati e rispondere a domande specifiche sull&#39;azienda e iniziare a generare approfondimenti di impatto. Il seguente video illustra il valore della creazione di dashboard negli strumenti di business intelligence (BI) mediante [!DNL Query Service].
 
 >[!VIDEO](https://video.tv.adobe.com/v/28981?quality=12&learn=on)
 
