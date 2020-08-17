@@ -1,18 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type
 solution: Experience Platform
-title: Tipi di dati  Adobe Experience Platform Segmentazione del servizio
+title: Tipi di dati del servizio di segmentazione Adobe Experience Platform
 topic: overview
+description: Tutti i tipi di dati XDM sono supportati in Segmentation Service. Le regole che costituiscono una definizione di segmento sono contestualizzate dai seguenti tipi di dati.
 translation-type: tm+mt
-source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '479'
 ht-degree: 3%
 
 ---
 
 
-#  tipi di dati supportati dal Adobe Experience Platform [!DNL Segmentation Service]
+# Tipi di dati supportati da Adobe Experience Platform [!DNL Segmentation Service]
 
 Tutti i tipi di dati XDM sono supportati all&#39;interno [!DNL Segmentation Service]. Le regole che costituiscono una definizione di segmento sono contestualizzate dai seguenti tipi di dati.
 
@@ -39,7 +40,7 @@ I dati data consentono di assegnare contesto basato sull&#39;ora alle definizion
 
 ## Eventi esperienza
 
-Come schema di Adobe Experience Platform , [!DNL XDM ExperienceEvents] registra le interazioni esplicite e implicite dei clienti con le applicazioni [!DNL Platform]integrate, inclusa un&#39;istantanea del sistema al momento dell&#39;interazione. [!DNL ExperienceEvents] sono record di fatti. Sono pertanto un&#39;origine dati disponibile durante la definizione del segmento.
+Come schema Adobe Experience Platform, [!DNL XDM ExperienceEvents] registra le interazioni esplicite e implicite dei clienti con le applicazioni [!DNL Platform]integrate, inclusa un&#39;istantanea del sistema al momento dell&#39;interazione. [!DNL ExperienceEvents] sono record di fatti. Sono pertanto un&#39;origine dati disponibile durante la definizione del segmento.
 
 Come illustrato nella tabella seguente, i dati dell&#39;evento vengono rappresentati utilizzando le parole chiave che consentono di definire il comportamento dell&#39;evento e specificare gli attributi dell&#39;evento.
 
@@ -50,15 +51,15 @@ Come illustrato nella tabella seguente, i dati dell&#39;evento vengono rappresen
 | Pulsante &quot;Applica regola di ora&quot; | Incorpora i dati data. |
 | Uguale, non uguale, inizia con, non inizia con, termina con, non termina con, contiene, non contiene, non contiene, esiste, non esiste | Incorpora i dati stringa. |
 
-### Condivisione dell&#39;audience
+### Condivisione del pubblico
 
 Le audience esterne possono essere utilizzate anche come componenti di una nuova definizione di segmento, aggiungendo le relative regole di attributi al nuovo segmento.
 
-Al momento, è supportato solo  Adobe Audience Manager come pubblico esterno, con ulteriori origini abilitate in futuro. Ulteriori informazioni sull&#39;utilizzo  pubblico di Adobi Audience Manager con Platform sono disponibili nella guida alla condivisione di [audience all&#39;interno della documentazione](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html) Adobe Audience Manager.
+Attualmente, solo Adobe Audience Manager è supportato come pubblico esterno, con ulteriori origini abilitate in futuro. Per ulteriori informazioni sull&#39;utilizzo dei tipi di pubblico Adobe Audience Manager con Piattaforma, consulta la guida alla condivisione di [audience all&#39;interno della documentazione](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)Adobe Audience Manager.
 
 ### Condivisione di segmenti
 
-I segmenti creati in Platform possono essere utilizzati all&#39;interno di altri servizi [core di](https://docs.adobe.com/content/help/it-IT/core-services/interface/experience-cloud.html)Adobe Experience Cloud. Per abilitare questa funzione, è necessario contattare l&#39;architetto della soluzione o il consulente.
+I segmenti creati in Piattaforma possono essere utilizzati in altri servizi [di base di](https://docs.adobe.com/content/help/it-IT/core-services/interface/experience-cloud.html)Adobe Experience Cloud. Per abilitare questa funzione, è necessario contattare l&#39;architetto della soluzione o il consulente.
 
 ## Altri tipi di dati
 
