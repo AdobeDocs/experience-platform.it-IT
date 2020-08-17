@@ -1,10 +1,11 @@
 ---
+Keywords: ECID;ecid
 title: Estensione del servizio Experience Cloud ID
 seo-title: Estensione del servizio Experience Cloud ID
-description: L’estensione  Experience Cloud ID Service è una destinazione di personalizzazione nell’Platform Adobe Real-time Customer Data. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L’estensione  Experience Cloud ID Service è una destinazione di personalizzazione nell’Platform Adobe Real-time Customer Data. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+description: L’estensione del servizio ID Experience Cloud  è una destinazione di personalizzazione nella piattaforma dati cliente in tempo reale  Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+seo-description: L’estensione del servizio ID Experience Cloud  è una destinazione di personalizzazione nella piattaforma dati cliente in tempo reale  Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
 workflow-type: tm+mt
 source-wordcount: '542'
 ht-degree: 10%
@@ -18,7 +19,7 @@ ht-degree: 10%
 
 Questa estensione implementa il servizio [!DNL Experience Cloud] ID, che identifica i visitatori in tutte le [!DNL Experience Cloud] soluzioni.
 
-[!DNL Experience Cloud] Il servizio ID è un’estensione di personalizzazione nel  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consulta la pagina [dell’estensione del servizio ID](https://docs.adobe.com/content/help/it-IT/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html) Experience Cloud nella [!DNL Experience Platform Launch] documentazione.
+[!DNL Experience Cloud] Il servizio ID è un’estensione di personalizzazione nel  Adobe Real-time Customer Data Platform (Piattaforma dati cliente in tempo reale). Per ulteriori informazioni sulla funzionalità di estensione, consulta la pagina [dell’estensione del servizio ID](https://docs.adobe.com/content/help/it-IT/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html) Experience Cloud nella [!DNL Experience Platform Launch] documentazione.
 
 Questa destinazione è un&#39; [!DNL Experience Platform Launch] estensione. Per ulteriori informazioni sul funzionamento [!DNL Launch] delle estensioni  Adobe CDP in tempo reale, consultate Panoramica sulle estensioni [di Experience Platform Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
