@@ -1,10 +1,10 @@
 ---
 title: Estensione Adobe Target
 seo-title: Estensione Adobe Target
-description: L'estensione del Adobe Target  è una destinazione di personalizzazione nell'Platform dati cliente in tempo reale  Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+description: L’estensione Adobe Target  è una destinazione di personalizzazione nella piattaforma dati cliente in tempo reale  Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 16%
@@ -32,15 +32,15 @@ Per utilizzare questa estensione, è necessario accedere a [!DNL Experience Plat
 
 ## Installa estensione {#install-extension}
 
-Per installare l&#39;estensione  Adobe Target:
+Per installare l&#39;estensione Adobe Target :
 
 1. Nell&#39;interfaccia CDP in tempo reale del [Adobe](http://platform.adobe.com/), passare a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 2. Selezionate l’estensione dal catalogo o usate la barra di ricerca.
-3. Fai clic sulla destinazione per evidenziarla, quindi selezionala **[!UICONTROL Install Extension]** nella barra a destra. Se il **[!UICONTROL Install Extension]** controllo è disattivato, manca l&#39; **[!UICONTROL manage_properties]** autorizzazione. Consultate [Prerequisiti](#prerequisites).
+3. Fai clic sulla destinazione per evidenziarla, quindi selezionala **[!UICONTROL Configure]** nella barra a destra. Se il **[!UICONTROL Configure]** controllo è disattivato, manca l&#39; **[!UICONTROL manage_properties]** autorizzazione. Consultate [Prerequisiti](#prerequisites).
 4. Nella **[!UICONTROL Select available Launch property]** finestra, selezionate la [!DNL Launch] proprietà in cui desiderate installare l’estensione. È inoltre possibile creare una nuova proprietà in [!DNL Launch]. Una proprietà è una raccolta di regole, elementi di dati, estensioni configurate, ambienti e librerie. Ulteriori informazioni sulle proprietà sono disponibili nella sezione [della pagina](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) Proprietà della [!DNL Launch] documentazione.
 5. Il flusso di lavoro consente di completare [!DNL Launch] l’installazione.
 
-Per informazioni sulle opzioni di configurazione dell&#39;estensione, consulta la pagina [dell&#39;estensione dell&#39;Adobe Target](https://docs.adobe.com/content/help/it-IT/launch/using/extensions-ref/adobe-extension/target-extension/overview.html) nella documentazione relativa all&#39;esperienza [!DNL Launch] .
+Per informazioni sulle opzioni di configurazione dell&#39;estensione, consulta la [pagina](https://docs.adobe.com/content/help/it-IT/launch/using/extensions-ref/adobe-extension/target-extension/overview.html) dell&#39;estensione Adobe Target nella documentazione relativa all&#39;esperienza [!DNL Launch] .
 
 Potete anche installare l’estensione direttamente nell’interfaccia [del](https://launch.adobe.com/)Experience Platform Launch. Consultate [Aggiungere una nuova estensione](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) nella [!DNL Launch] documentazione.
 
