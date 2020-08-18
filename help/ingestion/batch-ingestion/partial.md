@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sull’assimilazione parziale di Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: df6a6e20733953a0983bbfdf66ca2abc6f03e977
+source-git-commit: ac75b1858b6a731915bbc698107f0be6043267d8
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1387'
 ht-degree: 1%
 
 ---
@@ -373,7 +373,7 @@ Se lo schema del batch ingerito non è valido o le intestazioni non sono valide,
 
 ### Righe non analizzabili {#unparsable}
 
-Se il batch ingerito contiene righe non analizzabili, gli errori del batch verranno memorizzati in un file a cui è possibile accedere utilizzando l&#39;endpoint indicato di seguito.
+Se il batch che hai acquisito contiene righe non analizzabili, puoi utilizzare il seguente endpoint per visualizzare un elenco di file che contengono errori.
 
 **Formato API**
 
@@ -397,15 +397,48 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con i dettagli delle righe non analizzabili.
+Una risposta corretta restituisce lo stato HTTP 200 con un elenco dei file con errori.
 
 ```json
 {
-    "_corrupt_record": "{missingQuotes:"v1"}",
+    "data": [
+        {
+            "name": "conversion_errors_0.json",
+            "length": "1162",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/export/batches/01EFZ7W203PEKSAMVJC3X99VHQ/meta?path=row_errors%2Fconversion_errors_0.json"
+                }
+            }
+        },
+        {
+            "name": "parsing_errors_0.json",
+            "length": "153",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/export/batches/01EFZ7W203PEKSAMVJC3X99VHQ/meta?path=row_errors%2Fparsing_errors_0.json"
+                }
+            }
+        }
+    ],
+    "_page": {
+        "limit": 100,
+        "count": 2
+    }
+}
+```
+
+Potete quindi recuperare informazioni dettagliate sugli errori utilizzando l’endpoint [di recupero](#retrieve-metadata)dei metadati.
+
+Di seguito è riportato un esempio di risposta al recupero del file di errore:
+
+```json
+{
+    "_corrupt_record": "{missingQuotes: "v1"}",
     "_errors": [{
-         "code": "1401",
-         "message": "Row is corrupted and cannot be read, please fix and resend."
+        "code": "1401",
+        "message": "Row is corrupted and cannot be read, please fix and resend."
     }],
-    "_filename": "a1.json"
+    "_filename": "parsing_errors_0.json"
 }
 ```
