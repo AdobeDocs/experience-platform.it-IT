@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurare un flusso di dati per un connettore di streaming per l'archiviazione cloud nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
+source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '642'
 ht-degree: 0%
 
 ---
@@ -18,12 +18,12 @@ Un flusso di dati è un&#39;attività pianificata che recupera e trasferisce dat
 
 ## Introduzione
 
-Questa esercitazione richiede una conoscenza approfondita dei seguenti componenti del  Adobe Experience Platform:
+Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-- [Sistema](../../../../../xdm/home.md)XDM (Experience Data Model): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
+- [[!DNL Experience Data Model] (XDM) Sistema](../../../../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
    - [Nozioni di base sulla composizione](../../../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
    - [Esercitazione](../../../../../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
-- [Profilo](../../../../../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+- [[!DNL Profilo cliente in tempo reale]](../../../../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
 Inoltre, questa esercitazione richiede che sia già stato creato un connettore di archiviazione cloud. Un elenco di esercitazioni per la creazione di diversi connettori di archiviazione cloud nell&#39;interfaccia utente è disponibile nella panoramica [dei connettori](../../../../home.md)sorgente.
 
@@ -35,7 +35,7 @@ Dopo aver creato il connettore di archiviazione cloud, viene visualizzato il pas
 
 ## Mappatura dei campi dati su uno schema XDM
 
-Viene visualizzato il passaggio *Mapping* , che fornisce un&#39;interfaccia interattiva per mappare i dati di origine a un [!DNL Platform] dataset.
+Viene visualizzato il **[!UICONTROL Mapping]** passaggio che fornisce un&#39;interfaccia interattiva per mappare i dati di origine a un [!DNL Platform] dataset.
 
 Scegliere un set di dati in entrata in cui assimilare i dati. È possibile utilizzare un set di dati esistente o crearne uno nuovo.
 
@@ -45,7 +45,7 @@ Per assimilare i dati in un dataset esistente, selezionare **[!UICONTROL Use exi
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/use-existing-data.png)
 
-Viene visualizzata la finestra di dialogo _Seleziona set di dati_ . Trovare il set di dati che si desidera utilizzare, selezionarlo, quindi fare clic **[!UICONTROL Continue]**.
+Viene visualizzata **[!UICONTROL Select dataset]** la finestra di dialogo. Trovare il set di dati che si desidera utilizzare, selezionarlo, quindi fare clic **[!UICONTROL Continue]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-existing-data.png)
 
@@ -57,7 +57,7 @@ Per assimilare i dati in un nuovo dataset, selezionare **[!UICONTROL Create new 
 
 ## Denominazione del flusso di dati
 
-Viene visualizzato il *[!UICONTROL Dataflow detail]* passaggio che consente di assegnare un nome e una breve descrizione al nuovo flusso di dati.
+Viene visualizzato il **[!UICONTROL Dataflow detail]** passaggio che consente di assegnare un nome e una breve descrizione al nuovo flusso di dati.
 
 Immettete i valori per il flusso di dati e fate clic su **[!UICONTROL Next]**.
 
@@ -65,10 +65,10 @@ Immettete i valori per il flusso di dati e fate clic su **[!UICONTROL Next]**.
 
 ### Controllare il flusso di dati
 
-Viene visualizzato il passaggio *Revisione* , che consente di rivedere il nuovo flusso di dati prima della creazione. I dettagli sono raggruppati nelle seguenti categorie:
+Viene visualizzato il **[!UICONTROL Review]** passaggio che consente di rivedere il nuovo flusso di dati prima della creazione. I dettagli sono raggruppati nelle seguenti categorie:
 
-- *[!UICONTROL Source details]*: Mostra il tipo di origine e altri dettagli relativi all&#39;origine.
-- *[!UICONTROL Target details]*: Mostra il set di dati in cui vengono acquisiti i dati di origine, incluso lo schema a cui il set di dati aderisce.
+- **[!UICONTROL Source details]**: Mostra il tipo di origine e altri dettagli relativi all&#39;origine.
+- **[!UICONTROL Target details]**: Mostra il set di dati in cui vengono acquisiti i dati di origine, incluso lo schema a cui il set di dati aderisce.
 
 Dopo aver rivisto il flusso di dati, fai clic su **[!UICONTROL Finish]** e consenti la creazione del flusso di dati.
 
@@ -82,8 +82,8 @@ Una volta creato il flusso di dati per l&#39;archiviazione cloud, potete monitor
 
 Seguendo questa esercitazione, hai creato con successo un flusso di dati per l&#39;inserimento di dati da un archivio cloud esterno e hai acquisito informazioni sul monitoraggio dei set di dati. I dati in entrata possono ora essere utilizzati dai [!DNL Platform] servizi a valle come [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i documenti seguenti:
 
-- [Panoramica del profilo cliente in tempo reale](../../../../../profile/home.md)
-- [Panoramica di Analysis Workspace](../../../../../data-science-workspace/home.md)
+- [[!DNL Real-time Customer Profile] panoramica](../../../../../profile/home.md)
+- [[!DNL Data Science Workspace] panoramica](../../../../../data-science-workspace/home.md)
 
 ## Appendice
 
@@ -93,11 +93,11 @@ Le sezioni seguenti forniscono informazioni aggiuntive sull&#39;utilizzo dei con
 
 Quando un flusso di dati viene creato, diventa immediatamente attivo e i dati vengono acquisiti in base alla pianificazione specificata. Puoi disattivare un flusso di dati attivo in qualsiasi momento seguendo le istruzioni riportate di seguito.
 
-Nell’area di *[!UICONTROL Sources]* lavoro, fate clic sulla **[!UICONTROL Browse]** scheda. Quindi, fare clic sul nome della connessione di base associata al flusso di dati attivo che si desidera disattivare.
+Nell’area di **[!UICONTROL Sources]** lavoro, fate clic sulla **[!UICONTROL Browse]** scheda. Quindi, fare clic sul nome della connessione associata al flusso di dati attivo che si desidera disattivare.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/browse.png)
 
-Viene *[!UICONTROL Source activity]* visualizzata la pagina. Selezionate il flusso di dati attivo dall’elenco per aprire la colonna *Proprietà* sul lato destro dello schermo, che contiene un pulsante di **[!UICONTROL Enabled]** attivazione/disattivazione. Fate clic sull’interruttore per disattivare il flusso di dati. La stessa opzione può essere utilizzata per riattivare un flusso di dati dopo che è stato disabilitato.
+Viene **[!UICONTROL Source activity]** visualizzata la pagina. Selezionate il flusso di dati attivo dall’elenco per aprire la relativa **[!UICONTROL Properties]** colonna sul lato destro dello schermo, che contiene un pulsante di **[!UICONTROL Enabled]** attivazione/disattivazione. Fate clic sull’interruttore per disattivare il flusso di dati. La stessa opzione può essere utilizzata per riattivare un flusso di dati dopo che è stato disabilitato.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/disable-source.png)
 
