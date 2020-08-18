@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare un connettore sorgente FTP o SFTP nell’interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 9995a1d7daae3860783d2b4e4e0d2f1314eaa643
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '530'
 ht-degree: 1%
 
 ---
@@ -23,10 +23,10 @@ I connettori di origine in Adobe Experience Platform consentono di trasferire i 
 
 Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Sistema](../../../../../xdm/home.md)XDM (Experience Data Model): Il framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
+* [[!DNL Experience Data Model] (XDM) Sistema](../../../../../xdm/home.md): Il framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
    * [Nozioni di base sulla composizione](../../../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
    * [Esercitazione](../../../../../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
-* [Profilo](../../../../../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Profilo cliente in tempo reale]](../../../../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
 Se disponete già di una connessione FTP o SFTP valida, potete ignorare il resto del documento e procedere all&#39;esercitazione sulla [configurazione di un flusso di dati](../../dataflow/batch/cloud-storage.md).
 
@@ -46,19 +46,19 @@ Per accedere al server FTP o SFTP su [!DNL Platform], dovete fornire il nome ***
 
 Dopo aver raccolto le credenziali necessarie, puoi seguire i passaggi descritti di seguito per creare un nuovo account FTP o SFTP a cui connetterti [!DNL Platform].
 
-Accedete ad [Adobe Experience Platform](https://platform.adobe.com) , quindi selezionate **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39; *[!UICONTROL Sources]* area di lavoro. Nella *[!UICONTROL Catalog]* schermata sono visualizzate diverse origini con le quali è possibile creare un account in entrata e ogni origine mostra il numero di account e flussi di dati esistenti associati a tali account.
+Accedete ad [Adobe Experience Platform](https://platform.adobe.com) , quindi selezionate **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39; **[!UICONTROL Sources]** area di lavoro. Nella **[!UICONTROL Catalog]** schermata sono visualizzate diverse sorgenti con cui è possibile creare un account in ingresso.
 
 Potete selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l&#39;origine specifica con cui si desidera lavorare utilizzando l&#39;opzione di ricerca.
 
-In questa *[!UICONTROL Databases]* categoria, selezionare **[!UICONTROL SFTP]** seguito da **[!UICONTROL Add data]** per creare un nuovo connettore FTP o SFTP.
+Sotto la **[!UICONTROL Databases]** categoria, selezionare **[!UICONTROL SFTP]**. Se si tratta della prima volta che si utilizza questo connettore, selezionare **[!UICONTROL Configure]**. In caso contrario, selezionare **[!UICONTROL Add data]** per creare un nuovo connettore FTP o SFTP.
 
 ![catalogo](../../../../images/tutorials/create/sftp/catalog.png)
 
-Viene *[!UICONTROL Connect to SFTP]* visualizzata la pagina. In questa pagina è possibile utilizzare credenziali nuove o già esistenti.
+Viene **[!UICONTROL Connect to SFTP]** visualizzata la pagina. In questa pagina è possibile utilizzare credenziali nuove o già esistenti.
 
 ### Nuovo account
 
-Se si utilizzano nuove credenziali, selezionare **[!UICONTROL New account]**. Nel modulo di input visualizzato, fornite alla connessione un nome, una descrizione facoltativa e le credenziali FTP o SFTP. Al termine, selezionate **[!UICONTROL Connect]** e concedete un po&#39; di tempo per l&#39;impostazione del nuovo account.
+Se si utilizzano nuove credenziali, selezionare **[!UICONTROL New account]**. Nel modulo di input visualizzato, fornite un nome, una descrizione facoltativa e le credenziali FTP o SFTP. Al termine, selezionare **[!UICONTROL Connect]** e quindi concedere un po&#39; di tempo per stabilire la nuova connessione.
 
 ![connect](../../../../images/tutorials/create/sftp/new.png)
 
@@ -70,4 +70,4 @@ Per collegare un account esistente, seleziona l&#39;account FTP o SFTP con cui v
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione hai stabilito una connessione al tuo account FTP o SFTP. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per trasferire i dati dall’archiviazione cloud alla piattaforma](../../dataflow/batch/cloud-storage.md).
+Seguendo questa esercitazione hai stabilito una connessione al tuo account FTP o SFTP. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per trasferire i dati dall’archiviazione cloud [!DNL Platform]](../../dataflow/batch/cloud-storage.md).
