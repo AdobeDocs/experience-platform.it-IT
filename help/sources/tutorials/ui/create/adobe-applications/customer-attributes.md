@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare un connettore di origine attributi cliente nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 999ff0e9525d7d9f67298862c68bb59ddc35e558
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '346'
 ht-degree: 8%
 
 ---
@@ -34,7 +34,7 @@ Nella schermata Attività *di* origine sono elencate tutte le connessioni preced
 
 ![](../../../../images/tutorials/create/customer-attributes/source_activity.png)
 
-Dall&#39;elenco dei set di dati di profilo di attributi cliente disponibili, selezionate quello da importare in Piattaforma e fate clic su **Avanti**.
+Dall&#39;elenco dei set di dati di profilo di attributi cliente disponibili, selezionate quello in cui desiderate inserire [!DNL Platform] e fate clic su **Avanti**.
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ Viene visualizzato il passaggio *Revisione* , che consente di controllare la nuo
 
 ## Passaggi successivi
 
-Una volta creata la connessione, vengono automaticamente creati uno schema di destinazione e un set di dati per contenere i dati in arrivo. Al termine dell&#39;assimilazione iniziale, i dati del profilo degli attributi del cliente possono essere utilizzati dai servizi della piattaforma a valle, come Profilo cliente in tempo reale e Servizio di segmentazione. Per ulteriori informazioni, consulta i documenti seguenti:
+Una volta creata la connessione, vengono automaticamente creati uno schema di destinazione e un set di dati per contenere i dati in arrivo. Al termine dell&#39;assimilazione iniziale, i dati del profilo degli attributi del cliente possono essere utilizzati dai [!DNL Platform] servizi a valle quali [!DNL Real-time Customer Profile] e [!DNL Segmentation Service]. Per ulteriori informazioni, consulta i documenti seguenti:
 
-* [Panoramica del profilo cliente in tempo reale](../../../../../profile/home.md)
-* [Panoramica del servizio di segmentazione](../../../../../segmentation/home.md)
+* [[!DNL Real-time Customer Profile] panoramica](../../../../../profile/home.md)
+* [[!DNL Segmentation Service] panoramica](../../../../../segmentation/home.md)
