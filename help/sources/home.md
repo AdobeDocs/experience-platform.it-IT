@@ -5,9 +5,9 @@ title: Panoramica dei connettori sorgente Adobe Experience Platform
 topic: overview
 description: Adobe Experience Platform consente l'acquisizione di dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Piattaforma. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, database e molti altri.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
 workflow-type: tm+mt
-source-wordcount: '817'
+source-wordcount: '816'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,6 @@ I sistemi CRM forniscono dati che possono aiutare a creare relazioni con i clien
 - [!DNL GreenPlum](connectors/databases/greenplum.md) connettore
 - [!DNL HP Vertica](connectors/databases/hp-vertica.md) connettore
 - [!DNL IBM DB2](connectors/databases/ibm-db2.md) connettore
-- [!DNL MariaDB](connectors/databases/mariadb.md) connettore
 - [!DNL Microsoft SQL Server](connectors/databases/sql-server.md) connettore
 - [!DNL MySQL](connectors/databases/mysql.md) connettore
 - [!DNL Oracle](connectors/databases/oracle.md) connettore
