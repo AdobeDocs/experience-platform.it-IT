@@ -1,10 +1,10 @@
 ---
 title: 'Estensione DIL Audience Manager '
 seo-title: 'Estensione DIL Audience Manager '
-description: L'estensione DIL Audience Manager  è una destinazione Platform di gestione dati (DMP)  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L'estensione DIL Audience Manager  è una destinazione Platform di gestione dati (DMP)  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+description: L'estensione DIL Audience Manager  è una destinazione DMP (Data Management Platform)  piattaforma dati cliente in tempo reale Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+seo-description: L'estensione DIL Audience Manager  è una destinazione DMP (Data Management Platform)  piattaforma dati cliente in tempo reale Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
 source-wordcount: '594'
 ht-degree: 7%
@@ -16,9 +16,9 @@ ht-degree: 7%
 
 ## Panoramica {#overview}
 
-Questa è l&#39;estensione di Data Integration Library del Adobe Audience Manager  (implementazione lato client). Nota: Questa estensione non è destinata all&#39;inoltro lato server (SSF) di  dati Adobe Analytics. Per SSF, utilizzate l&#39;estensione Adobe Analytics . Importante: A partire dalla versione 8.0, il DIL ha una dipendenza rigida dal servizio [!DNL Experience Cloud] ID, versione 3.3 o successiva. Implementa sia il servizio [!DNL Experience Cloud] ID che il DIL per funzionalità complete di integrazione dei [!DNL Audience Manager] dati.
+Questa è l&#39;estensione Adobe Audience Manager Data Integration Library (implementazione lato client). Nota: Questa estensione non è destinata all&#39;inoltro lato server (SSF) di  dati Adobe Analytics. Per SSF, utilizzate l&#39;estensione Adobe Analytics . Importante: A partire dalla versione 8.0, il DIL ha una dipendenza rigida dal servizio [!DNL Experience Cloud] ID, versione 3.3 o successiva. Implementa sia il servizio [!DNL Experience Cloud] ID che il DIL per funzionalità complete di integrazione dei [!DNL Audience Manager] dati.
 
-[!DNL Audience Manager] DIL è un&#39;estensione DMP (Data Management Platform) in  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina [dell&#39;estensione dell&#39;Audience Manager](https://docs.adobe.com/content/help/it-IT/launch/using/extensions-ref/adobe-extension/adobe-audience-manager-extension.html) nella documentazione dell&#39;Experience Platform Launch.
+[!DNL Audience Manager] DIL è un&#39;estensione DMP (Data Management Platform)  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina [dell&#39;estensione dell&#39;Audience Manager](https://docs.adobe.com/content/help/it-IT/launch/using/extensions-ref/adobe-extension/adobe-audience-manager-extension.html) nella documentazione dell&#39;Experience Platform Launch.
 
 Questa destinazione è un&#39; [!DNL Experience Platform Launch] estensione. Per ulteriori informazioni sul funzionamento delle estensioni Launch  Adobe CDP in tempo reale, vedere Panoramica [sulle estensioni](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
 
@@ -36,7 +36,7 @@ Per installare l’estensione [!DNL Audience Manager] DIL:
 
 1. Nell&#39;interfaccia CDP in tempo reale del [Adobe](http://platform.adobe.com/), passare a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 2. Selezionate l’estensione dal catalogo o usate la barra di ricerca.
-3. Fai clic sulla destinazione per evidenziarla, quindi selezionala **[!UICONTROL Install Extension]** nella barra a destra. Se il **[!UICONTROL Install Extension]** controllo è disattivato, manca l&#39; **[!UICONTROL manage_properties]** autorizzazione. Consultate [Prerequisiti](#prerequisites).
+3. Fai clic sulla destinazione per evidenziarla, quindi selezionala **[!UICONTROL Configure]** nella barra a destra. Se il **[!UICONTROL Configure]** controllo è disattivato, manca l&#39; **[!UICONTROL manage_properties]** autorizzazione. Consultate [Prerequisiti](#prerequisites).
 4. Nella **[!UICONTROL Select available Launch property]** finestra, selezionate la [!DNL Launch] proprietà in cui desiderate installare l’estensione. È inoltre possibile creare una nuova proprietà in Launch. Una proprietà è una raccolta di regole, elementi di dati, estensioni configurate, ambienti e librerie. Ulteriori informazioni sulle proprietà sono disponibili nella sezione [della pagina](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) Proprietà della [!DNL Launch] documentazione.
 5. Il flusso di lavoro consente di completare [!DNL Launch] l’installazione.
 
