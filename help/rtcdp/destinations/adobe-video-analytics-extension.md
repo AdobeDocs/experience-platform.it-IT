@@ -1,10 +1,10 @@
 ---
 title: Estensione Adobe Media Analytics for Audio and Video
 seo-title: Estensione Adobe Media Analytics for Audio and Video
-description: Il  Adobe Media  Analytics per l'estensione Audio e Video è una destinazione di analisi  Platform di dati cliente in tempo reale Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: Il  Adobe Media  Analytics per l'estensione Video è una destinazione di analisi  Platform dati cliente in tempo reale Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+description: Il  Adobe Media Analytics per l'estensione audio e video è una destinazione di analisi  Adobe Real-time Customer Data Platform (Piattaforma dati cliente in tempo reale). Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+seo-description: Il  Adobe Media Analytics per l'estensione Video è una destinazione di analisi  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: 33eba9e3f2e993c6958480b091ff004dc057f438
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 10%
@@ -16,13 +16,13 @@ ht-degree: 10%
 
 ## Panoramica {#overview}
 
- Adobe Media  Analytics per Audio e Video è un componente aggiuntivo alla base  Analytics che offre ai clienti una misurazione affidabile per video, audio e annunci pubblicitari.
+ Adobe Media Analytics for Audio and Video è un componente aggiuntivo all&#39;offerta Analytics di base che fornisce ai client misurazioni affidabili per video, audio e annunci pubblicitari.
 
- Adobe Media  Analytics per Audio e Video è un&#39;estensione di analisi  Platform dati cliente in tempo reale Adobe. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100157.html).
+ Adobe Media Analytics per Audio e Video è un&#39;estensione di analisi in  Adobe Real-time Customer Data Platform (Piattaforma dati cliente in tempo reale). Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100157.html).
 
 Questa destinazione è un&#39; [!DNL Experience Platform Launch] estensione. Per ulteriori informazioni sul funzionamento [!DNL Launch] delle estensioni  Adobe CDP in tempo reale, consultate Panoramica sulle estensioni [di Experience Platform Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
-![Estensione Adobe Media Analytics for Audio and Video](/help/rtcdp/destinations/assets/adobe-analytics-extension.png)
+![Estensione Adobe Media Analytics for Audio and Video](/help/rtcdp/destinations/assets/adobe-video-analytics-extension.png)
 
 ## Prerequisiti  {#prerequisites}
 
@@ -36,11 +36,11 @@ Per installare l&#39; Adobe Analytics per l&#39;estensione Video:
 
 1. Nell&#39;interfaccia CDP in tempo reale del [Adobe](http://platform.adobe.com/), passare a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 2. Selezionate l’estensione dal catalogo o usate la barra di ricerca.
-3. Fai clic sulla destinazione per evidenziarla, quindi selezionala **[!UICONTROL Install Extension]** nella barra a destra. Se il **[!UICONTROL Install Extension]** controllo è disattivato, manca l&#39; **[!UICONTROL manage_properties]** autorizzazione. Consultate [Prerequisiti](#prerequisites).
+3. Fai clic sulla destinazione per evidenziarla, quindi selezionala **[!UICONTROL Configure]** nella barra a destra. Se il **[!UICONTROL Configure]** controllo è disattivato, manca l&#39; **[!UICONTROL manage_properties]** autorizzazione. Consultate [Prerequisiti](#prerequisites).
 4. Nella **[!UICONTROL Select available Launch property]** finestra, selezionate la [!DNL Launch] proprietà in cui desiderate installare l’estensione. È inoltre possibile creare una nuova proprietà in [!DNL Launch]. Una proprietà è una raccolta di regole, elementi di dati, estensioni configurate, ambienti e librerie. Ulteriori informazioni sulle proprietà sono disponibili nella sezione [della pagina](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) Proprietà della [!DNL Launch] documentazione.
 5. Il flusso di lavoro consente di completare [!DNL Launch] l’installazione.
 
-Per informazioni sulle opzioni di configurazione dell&#39;estensione, consultate l&#39; [Adobe Media  pagina](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html) dell&#39;estensione [!DNL Experience Launch] Analytics per audio e video nella documentazione.
+Per informazioni sulle opzioni di configurazione dell&#39;estensione, consultate la pagina [dell&#39;estensione](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html) Adobe Media Analytics for Audio and Video nella [!DNL Experience Launch] documentazione.
 
 Potete anche installare l’estensione direttamente nell’interfaccia [del](https://launch.adobe.com/)Experience Platform Launch. Consultate [Aggiungere una nuova estensione](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) nella [!DNL Launch] documentazione.
 
