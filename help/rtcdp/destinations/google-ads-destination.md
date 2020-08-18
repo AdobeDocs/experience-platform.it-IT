@@ -4,9 +4,9 @@ seo-title: Destinazione annunci Google
 description: Google Ads, precedentemente noto come Google AdWords, è un servizio pubblicitario online che consente alle aziende di pagare per clic pubblicità tra ricerche basate su testo, display grafici, video YouTube e display mobili in-app.
 seo-description: Google Ads, precedentemente noto come Google AdWords, è un servizio pubblicitario online che consente alle aziende di pagare per clic pubblicità tra ricerche basate su testo, display grafici, video YouTube e display mobili in-app.
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '618'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Tenete presenti i seguenti dettagli specifici per [!DNL Google Ads] le destinazi
 
 [!DNL Google] ha messo in pausa qualsiasi nuova [!DNL Google Ads] integrazione con fornitori di terze parti. Per poter eseguire i passaggi del elenco consentiti  nella sezione successiva e creare una [!DNL Google Ads] destinazione in  CDP in tempo reale Adobe, è necessario disporre di un&#39;integrazione esistente con [!DNL Google Ads] il sistema.
 
-### Elenco consentiti 
+### elenco consentiti 
 
 >[!NOTE]
 >
@@ -49,10 +49,14 @@ Prima di creare la [!DNL Google Ads] destinazione in CDP in tempo reale  Adobe, 
 * Tipo di account: **AdWords**
 * **ID** Google AdWords: Questo è il tuo ID con [!DNL Google]. Il formato ID è in genere 123-456-7890.
 
-## Crea destinazione
+## Configura destinazione
 
-1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, selezionare [!DNL Google Ads], quindi **[!UICONTROL Create destination]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, selezionare [!DNL Google Ads], quindi **[!UICONTROL Configure]**.
    ![Destinazione di Connect Google Ads](/help/rtcdp/destinations/assets/google-2-destination.png)
+
+   >[!NOTE]
+   >
+   >Se esiste già una connessione con questa destinazione, è possibile visualizzare un **[!UICONTROL Activate]** pulsante sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra **[!UICONTROL Activate]** e **[!UICONTROL Configure]**, consultate la sezione [Catalogo](/help/rtcdp/destinations/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
 
 2. Nel passaggio **Configurazione** del flusso di lavoro di creazione della destinazione, compila il modulo [!UICONTROL Basic Information] per la destinazione. <br>
 
