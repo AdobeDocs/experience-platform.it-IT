@@ -4,9 +4,9 @@ seo-title: Destinazione Google Display e Video 360
 description: Display & Video 360, precedentemente noto come DoubleClick Bid Manager è uno strumento che consente di eseguire campagne di retargeting e di targeting delle audience su diverse fonti di inventario di Display, Video e Mobile.
 seo-description: 'Display & Video 360, precedentemente noto come DoubleClick Bid Manager è uno strumento che consente di eseguire campagne di retargeting e di targeting delle audience su diverse fonti di inventario di Display, Video e Mobile. '
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '679'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,11 @@ Tenete presenti i seguenti dettagli specifici per [!DNL Google Display & Video 3
 
 >[!IMPORTANT]
 >
->Se stai cercando di creare la tua prima destinazione con Google Display &amp; Video 360 e non hai attivato la funzionalità [di sincronizzazione](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) ID in  Experience Cloud ID Service in passato (con  Adobe Audience Manager o altre applicazioni), contatta  Consulente Adobe o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID. Se in precedenza avevate impostato integrazioni Google in  Audience Manager, le sincronizzazioni ID che avevate impostato per il riporto  CDP in tempo reale del Adobe.
+>Se stai cercando di creare la tua prima destinazione con Google Display &amp; Video 360 e non hai attivato la funzionalità [di sincronizzazione](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) ID in  Experience Cloud ID Service in passato (con Adobe Audience Manager o altre applicazioni), contatta l&#39;Assistenza Adobe o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID. Se in precedenza avevate impostato integrazioni Google in  Audience Manager, le sincronizzazioni ID che avevate impostato per il riporto  CDP in tempo reale del Adobe.
 
 ## Prerequisiti
 
-### Elenco consentiti 
+### elenco consentiti 
 
 >[!NOTE]
 >
@@ -44,10 +44,14 @@ Prima di creare la [!DNL Google Display & Video 360] destinazione in  Adobe CDP 
 * **ID** cliente: si tratta  ID account  cliente con Google. Per ottenere questo ID, contatta &#39;Assistenza clienti di Adobe o il rappresentante del Adobe .
 * **Tipo** account: utilizzate **[!DNL Invite advertiser]** per consentire ai tipi di pubblico di essere condivisi solo con un marchio specifico nel vostro account Display &amp; Video 360 o **[!DNL Invite partner]** per consentire ai tipi di pubblico di essere condivisi con tutti i marchi del vostro account Display &amp; Video 360.
 
-## Crea destinazione
+## Configura destinazione
 
-1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, selezionare [!DNL Google Display & Video 360], quindi **[!UICONTROL Create destination]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, selezionare [!DNL Google Display & Video 360], quindi **[!UICONTROL Configure]**.
    ![Destinazione Google Display e Video 360 di Connect](/help/rtcdp/destinations/assets/google-dv360-destination.png)
+
+   >[!NOTE]
+   >
+   >Se esiste già una connessione con questa destinazione, è possibile visualizzare un **[!UICONTROL Activate]** pulsante sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra **[!UICONTROL Activate]** e **[!UICONTROL Configure]**, consultate la sezione [Catalogo](/help/rtcdp/destinations/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
 
 2. Nel passaggio **Configurazione** del flusso di lavoro di creazione della destinazione, compila i casi di utilizzo [!UICONTROL Basic Information] per la destinazione e marketing da applicare a tale destinazione. <br>
 
