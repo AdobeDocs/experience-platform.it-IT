@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Guida di Adobe Experience Platform Source Connectors
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: 88f999691cde2fbebdf23f940f6d48acdfb188e3
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '619'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,7 @@ ht-degree: 0%
 - [Panoramica sui connettori sorgente](home.md)
 - Connettori sorgente disponibili {#connectors}
    -  applicazioni Adobe {#adobe-applications}
+      - [Connettore dati classificazione analisi](connectors/adobe-applications/classifications.md)
       - [Connettore dati di Analytics](connectors/adobe-applications/analytics.md)
       - [Connettore Audience Manager](connectors/adobe-applications/audience-manager.md)
       - [Connettore attributi cliente](connectors/adobe-applications/customer-attributes.md)
@@ -133,6 +134,7 @@ ht-degree: 0%
 - Esercitazioni sull’interfaccia utente {#ui-tutorials}
    - Creare un connettore di origine {#create}
       -  applicazioni Adobe {#adobe-applications}
+         - [Connettore dati di classificazione Adobe Analytics](tutorials/ui/create/adobe-applications/classifications.md)
          - [Connettore  Adobe Analytics](tutorials/ui/create/adobe-applications/analytics.md)
          - [Connettore Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Connettore attributi cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
