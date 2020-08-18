@@ -4,9 +4,9 @@ seo-title: Flusso di lavoro destinazioni social network
 description: Istruzioni per la connessione agli account degli annunci social network
 seo-description: Istruzioni per la connessione agli account degli annunci social network
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: 9306266edc0a4afdcf378e94b46b239187b18644
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '470'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,15 @@ ht-degree: 0%
 
 ## Flusso di lavoro per creare destinazioni social network
 
-Questa esercitazione viene utilizzata [!DNL Facebook] come esempio, ma il flusso di lavoro in  Adobe Dati cliente in tempo reale sarà lo stesso per tutte le destinazioni dei social network, una volta aggiunto di nuovo al prodotto.
+Questa esercitazione viene utilizzata [!DNL Facebook] come esempio, ma il flusso di lavoro in  Adobe Real-time Customer Data Platform sarà lo stesso per tutte le destinazioni dei social network, una volta di più verrà aggiunto al prodotto.
 
-1. In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scorrete fino alla **[!UICONTROL Social]** categoria. Seleziona la destinazione preferita del social network, quindi seleziona **[!UICONTROL Connect destination]**.
+1. In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scorrete fino alla **[!UICONTROL Social]** categoria. Seleziona la destinazione preferita del social network, quindi seleziona **[!UICONTROL Configure]**.
 
    ![Connessione alla destinazione social network](/help/rtcdp/destinations/assets/facebook-catalog-view.png)
+
+   >[!NOTE]
+   >
+   >Se esiste già una connessione con questa destinazione, è possibile visualizzare un **[!UICONTROL Activate]** pulsante sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra **[!UICONTROL Activate]** e **[!UICONTROL Configure]**, consultate la sezione [Catalogo](/help/rtcdp/destinations/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
 
 2. Nel passaggio **Autenticazione** , se in precedenza avete impostato una connessione alla destinazione di social network, selezionate **[!UICONTROL Existing Account]** e selezionate la connessione esistente. In alternativa, potete scegliere **[!UICONTROL New Account]** di impostare una nuova connessione alla destinazione del social network. Seleziona **[!UICONTROL Connect to destination]** e passerai alla destinazione social network selezionata per accedere e collegare Adobe Experience Cloud al tuo account Social Network Ad.
 
