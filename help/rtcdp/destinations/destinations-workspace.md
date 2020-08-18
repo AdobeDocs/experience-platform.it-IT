@@ -5,7 +5,7 @@ seo-title: Area di lavoro Destinazioni
 description: In  Adobe Piattaforma dati cliente in tempo reale, seleziona Destinazioni dalla barra di navigazione a sinistra per accedere all'area di lavoro delle destinazioni.
 seo-description: In  Adobe Piattaforma dati cliente in tempo reale, seleziona Destinazioni dalla barra di navigazione a sinistra per accedere all'area di lavoro delle destinazioni.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: ac9c629e8c83d3e056ba94b30d978edbda274923
 workflow-type: tm+mt
 source-wordcount: '746'
 ht-degree: 1%
@@ -41,7 +41,7 @@ Le schede di destinazione contengono un controllo **[!UICONTROL Configure]** o u
 | [!UICONTROL Configure] | Consente di creare una connessione alla destinazione. |
 | [!UICONTROL Activate] | Una volta stabilita una connessione alla destinazione, puoi attivare i segmenti. |
 | [!UICONTROL View account] | Visualizza gli account che hai connesso per una destinazione. |
-| [!UICONTROL View dataflows] | Visualizzare i flussi di attivazione dei dati esistenti per una destinazione |
+| [!UICONTROL View dataflows] | Visualizzare i flussi di attivazione dei dati esistenti per una destinazione. |
 | [!UICONTROL View documentation] | Consente di aprire un collegamento alla pagina della documentazione relativa alla destinazione specifica, per ulteriori informazioni e per facilitare la configurazione. |
 
 ![Controlli sulla scheda delle destinazioni](/help/rtcdp/destinations/assets/destination-card-options.png)
