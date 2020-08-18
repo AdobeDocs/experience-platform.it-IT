@@ -4,66 +4,64 @@ solution: Experience Platform
 title: Creare un connettore sorgente MySQL nell’interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 598b29f681ac930a4e1781f7f298608c8344d807
+source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '401'
 ht-degree: 1%
 
 ---
 
 
-# Creare un connettore sorgente MySQL nell’interfaccia utente
+# Creare un connettore [!DNL MySQL] sorgente nell’interfaccia utente
 
 >[!NOTE]
-> Il connettore MySQL è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la panoramica [](../../../../home.md#terms-and-conditions) Origini.
+> Il [!DNL MySQL] connettore è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la panoramica [](../../../../home.md#terms-and-conditions) Origini.
 
-I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente originati su base programmata. Questa esercitazione fornisce i passaggi per la creazione di un connettore di origine MySQL tramite l&#39;interfaccia utente della piattaforma.
+I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente originati su base programmata. Questa esercitazione fornisce i passaggi per creare un connettore [!DNL MySQL] sorgente utilizzando l&#39;interfaccia utente della piattaforma.
 
 ## Introduzione
 
 Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Sistema](../../../../../xdm/home.md)XDM (Experience Data Model): Il framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
+* [[!DNL Experience Data Model] (XDM) Sistema](../../../../../xdm/home.md): Il framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
    * [Nozioni di base sulla composizione](../../../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
    * [Esercitazione](../../../../../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
-* [Profilo](../../../../../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Profilo cliente in tempo reale]](../../../../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
-Se si dispone già di una connessione di base MySQL, è possibile ignorare il resto del documento e procedere all&#39;esercitazione sulla [configurazione di un flusso di dati](../../dataflow/databases.md).
+Se si dispone già di una [!DNL MySQL] connessione, è possibile ignorare il resto del documento e procedere all&#39;esercitazione sulla [configurazione di un flusso di dati](../../dataflow/databases.md).
 
 ### Raccogli credenziali richieste
 
-Per accedere all&#39;account MySQL su [!DNL Platform], è necessario fornire il seguente valore:
+Per accedere al tuo [!DNL MySQL] account su [!DNL Platform], devi fornire il seguente valore:
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `connectionString` | Stringa di connessione MySQL associata all&#39;account. Il pattern della stringa di connessione MySQL è: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionString` | Stringa di [!DNL MySQL] connessione associata all&#39;account. Il pattern della stringa di [!DNL MySQL] connessione è: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. Per ulteriori informazioni sulle stringhe di connessione e su come ottenerle, leggere il [[!DNL MySQL] documento](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html). |
 
-Per ulteriori informazioni sulle stringhe di connessione e su come ottenerle, leggere il documento [](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html)MySQL.
+## Collegamento dell&#39; [!DNL MySQL] account
 
-## Collegare l&#39;account MySQL
+Dopo aver raccolto le credenziali necessarie, potete seguire i passaggi descritti di seguito per collegare il vostro [!DNL MySQL] account a [!DNL Platform].
 
-Dopo aver raccolto le credenziali richieste, è possibile seguire i passaggi descritti di seguito per creare una nuova connessione di base in entrata a cui collegare l&#39;account MySQL [!DNL Platform].
+Accedete ad [Adobe Experience Platform](https://platform.adobe.com) , quindi selezionate **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39; **[!UICONTROL Sources]** area di lavoro. Nella **[!UICONTROL Catalog]** schermata sono visualizzate diverse sorgenti con cui è possibile creare un account.
 
-Accedete ad [Adobe Experience Platform](https://platform.adobe.com) , quindi selezionate **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39; *[!UICONTROL Sources]* area di lavoro. Nella schermata *Catalogo* sono visualizzate diverse sorgenti con cui è possibile creare connessioni di base in entrata e ogni origine mostra il numero di connessioni di base esistenti ad esse associate.
-
-Sotto la *[!UICONTROL Databases]* categoria, selezionate **[!UICONTROL MySQL]** per esporre una barra delle informazioni sul lato destro dello schermo. La barra delle informazioni fornisce una breve descrizione della sorgente selezionata e le opzioni per collegarsi alla sorgente o visualizzare la documentazione. Per creare una nuova connessione di base in entrata, selezionare **[!UICONTROL Add data]**.
+Sotto la **[!UICONTROL Databases]** categoria, selezionare **[!UICONTROL MySQL]**. Se si tratta della prima volta che si utilizza questo connettore, selezionare **[!UICONTROL Configure]**. In caso contrario, selezionare **[!UICONTROL Add data]** per creare un nuovo [!DNL MySQL] connettore.
 
 ![](../../../../images/tutorials/create/my-sql/catalog.png)
 
-Viene *[!UICONTROL Connect to MySQL]* visualizzata la pagina. In questa pagina è possibile utilizzare credenziali nuove o già esistenti.
+Viene **[!UICONTROL Connect to MySQL]** visualizzata la pagina. In questa pagina è possibile utilizzare credenziali nuove o già esistenti.
 
 ### Nuovo account
 
-Se si utilizzano nuove credenziali, selezionare **[!UICONTROL New account]**. Nel modulo di input che viene visualizzato, fornire alla connessione di base un nome, una descrizione facoltativa e le credenziali MySQL. Al termine, selezionare **[!UICONTROL Connect]** e quindi concedere un po&#39; di tempo per stabilire la nuova connessione di base.
+Se si utilizzano nuove credenziali, selezionare **[!UICONTROL New account]**. Nel modulo di input visualizzato, specificare un nome, una descrizione facoltativa e [!DNL MySQL] le credenziali. Al termine, selezionare **[!UICONTROL Connect]** e quindi concedere un po&#39; di tempo per stabilire la nuova connessione.
 
 ![](../../../../images/tutorials/create/my-sql/new.png)
 
 ### Account esistente
 
-Per collegare un account esistente, selezionate l&#39;account MySQL con cui desiderate connettervi, quindi selezionate **[!UICONTROL Next]** per continuare.
+Per collegare un account esistente, selezionate l&#39; [!DNL MySQL] account con cui desiderate connettervi, quindi selezionate **[!UICONTROL Next]** per continuare.
 
 ![](../../../../images/tutorials/create/my-sql/existing.png)
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, è stata stabilita una connessione di base all&#39;account MySQL. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per l’inserimento di dati nella piattaforma](../../dataflow/databases.md).
+Seguendo questa esercitazione, è stata stabilita una connessione all&#39;account MySQL. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati in cui inserire i dati [!DNL Platform]](../../dataflow/databases.md).
