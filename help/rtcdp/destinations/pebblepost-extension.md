@@ -2,9 +2,9 @@
 title: Estensione PebblePost
 seo-title: Estensione PebblePost
 description: L'estensione PebblePost è una destinazione e-mail in  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L'estensione PebblePost è una destinazione e-mail in  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+seo-description: L'estensione PebblePost è una destinazione di posta elettronica  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
 source-wordcount: '561'
 ht-degree: 4%
@@ -18,7 +18,7 @@ ht-degree: 4%
 
 [!DNL PebblePost's Programmatic Direct Mail®] Questa soluzione consente agli esperti di marketing digitale di collegare l&#39;interesse online e l&#39;intento a supporti offline tangibili per la conversione. Gli addetti al marketing possono sfruttare i segmenti di dati personalizzati creati in  Adobe per offrire ai consumatori un&#39;impressione media interna rilevante e di lunga durata. Analizzare le prestazioni in tempo reale in base all&#39;attività del percorso di risposta e alle conversioni sul sito.
 
-[!DNL PebblePost] è un&#39;estensione email in  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html).
+[!DNL PebblePost] è un&#39;estensione dell&#39;e-mail in  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html).
 
 Questa destinazione è un&#39;estensione di Experience Platform Launch. Per ulteriori informazioni sul funzionamento delle estensioni Launch  Adobe CDP in tempo reale, vedere Panoramica [sulle estensioni](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
 
@@ -36,7 +36,7 @@ Per installare l’ [!DNL PebblePost] estensione:
 
 1. Nell&#39;interfaccia CDP in tempo reale del [Adobe](http://platform.adobe.com/), passare a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 2. Selezionate l’estensione dal catalogo o usate la barra di ricerca.
-3. Fai clic sulla destinazione per evidenziarla, quindi selezionala **[!UICONTROL Install Extension]** nella barra a destra. Se il **[!UICONTROL Install Extension]** controllo è disattivato, manca l&#39; **[!UICONTROL manage_properties]** autorizzazione. Consultate [Prerequisiti](#prerequisites).
+3. Fai clic sulla destinazione per evidenziarla, quindi selezionala **[!UICONTROL Configure]** nella barra a destra. Se il **[!UICONTROL Configure]** controllo è disattivato, manca l&#39; **[!UICONTROL manage_properties]** autorizzazione. Consultate [Prerequisiti](#prerequisites).
 4. Nella **[!UICONTROL Select available Launch property]** finestra, selezionate la proprietà Launch in cui desiderate installare l&#39;estensione. È inoltre possibile creare una nuova proprietà in Launch. Una proprietà è una raccolta di regole, elementi di dati, estensioni configurate, ambienti e librerie. Ulteriori informazioni sulle proprietà sono disponibili nella sezione [della pagina](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) Proprietà della documentazione di Launch.
 5. Per completare l’installazione, passa a Launch.
 
