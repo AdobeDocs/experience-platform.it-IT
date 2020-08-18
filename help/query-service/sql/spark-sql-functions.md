@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funzioni SQL Spark
 topic: spark sql functions
 translation-type: tm+mt
-source-git-commit: a98e31f57c6ff4fc49d8d8f64441a6e1e18d89da
+source-git-commit: a10508770a862621403bad94c14db4529051020c
 workflow-type: tm+mt
-source-wordcount: '4900'
+source-wordcount: '4996'
 ht-degree: 5%
 
 ---
@@ -24,17 +24,18 @@ Riferimento: [Documentazione della funzione SQL Spark](https://spark.apache.org/
 
 ## Categorie
 
-- [Matematica e operatori statistici e funzioni](#math-and-statistical-operators-and-functions)
+- [Matematica e operatori statistici e funzioni](#math)
 - [Operatori logici](#logical-operators)
-- [Funzioni data/ora](#date/time-functions)
+- [Funzioni data/ora](#datetime-functions)
 - [Funzioni di aggregazione](#aggregate-functions)
 - [Array](#arrays)
-- [Funzioni di inserimento dati](#datatype-casting-functions)
-- [Funzioni di conversione e formattazione](#conversion-and-formatting-functions)
+- [Funzioni di inserimento dati](#datatype-casting)
+- [Funzioni di conversione e formattazione](#conversion)
 - [Valutazione dei dati](#data-evaluation)
 - [Informazioni correnti](#current-information)
+- [Funzioni di ordine superiore](#higher-order)
 
-### Matematica e operatori statistici e funzioni
+### Matematica e operatori statistici e funzioni {#math}
 
 #### Modulo
 
@@ -744,7 +745,7 @@ Esempio:
 
 `variance(expr)`: Restituisce la varianza del campione calcolata dai valori di un gruppo.
 
-### Operatori logici
+### Operatori logici {#logical-operators}
 
 #### Not logico
 
@@ -1007,7 +1008,7 @@ Esempio:
  true
 ```
 
-### Funzioni data/ora
+### Funzioni data/ora {#datetime-functions}
 
 #### add_month
 
@@ -1425,13 +1426,13 @@ Esempio:
 
 Dal: 1,5,0
 
-### Funzioni di aggregazione
+### Funzioni di aggregazione {#aggregate-functions}
 
 #### approssimx_count_distinta
 
 `approx_count_distinct(expr[, relativeSD])`: Restituisce la cardinalità stimata da HyperLogLog++. `relativeSD` definisce l&#39;errore massimo di stima consentito.
 
-### Array
+### Array {#arrays}
 
 #### array
 
@@ -1809,7 +1810,7 @@ Esempi:
 
 Dal: 2.4.0
 
-### Funzioni di inserimento dati
+### Funzioni di inserimento dati {#datatype-casting}
 
 #### bigotto
 
@@ -1894,7 +1895,7 @@ Esempi:
 
 `tinyint(expr)`: Crea il valore `expr` in base al tipo di dati di destinazione `tinyint`.
 
-### Funzioni di conversione e formattazione
+### Funzioni di conversione e formattazione {#conversion}
 
 #### ascii
 
@@ -2403,7 +2404,7 @@ Esempio:
 >
 >La funzione non è deterministica.
 
-### Valutazione dei dati
+### Valutazione dei dati {#data-evaluation}
 
 #### fondersi
 
@@ -2996,7 +2997,7 @@ Esempio:
  cc
 ```
 
-### Informazioni correnti
+### Informazioni correnti {#current-information}
 
 #### current_database
 
@@ -3026,3 +3027,65 @@ Dal: 1,5,0
 `now()`: Restituisce la marca temporale corrente all&#39;inizio della valutazione della query.
 
 Dal: 1,5,0
+
+### Funzioni di ordine superiore {#higher-order}
+
+#### transform
+
+`transform(array, lambdaExpression): array`
+
+Trasformare gli elementi in un array utilizzando la funzione.
+
+Se sono presenti due argomenti per la funzione lambda, il secondo argomento indica l&#39;indice dell&#39;elemento.
+
+Esempio:
+
+```
+> SELECT transform(array(1, 2, 3), x -> x + 1);
+  [2,3,4]
+> SELECT transform(array(1, 2, 3), (x, i) -> x + i);
+  [1,3,5]
+```
+
+
+#### exists
+
+`exists(array, lambdaExpression returning Boolean): Boolean`
+
+Verificare se un predicato contiene uno o più elementi nell&#39;array.
+
+Esempio:
+
+```
+> SELECT exists(array(1, 2, 3), x -> x % 2 == 0);
+  true
+```
+
+#### filter
+
+`filter(array, lambdaExpression returning Boolean): array`
+
+Filtrare l&#39;array di input utilizzando il predicato specificato.
+
+Esempio:
+
+```
+> SELECT filter(array(1, 2, 3), x -> x % 2 == 1);
+ [1,3]
+```
+
+
+#### aggregato
+
+`aggregate(array, <initial accumulator value>, lambdaExpression to accumulate the value): array`
+
+Applicate un operatore binario a uno stato iniziale e a tutti gli elementi dell&#39;array, e riducetelo a un singolo stato. Lo stato finale viene convertito nel risultato finale applicando una funzione di fine.
+
+Esempio:
+
+```
+> SELECT aggregate(array(1, 2, 3), 0, (acc, x) -> acc + x);
+  6
+> SELECT aggregate(array(1, 2, 3), 0, (acc, x) -> acc + x, acc -> acc * 10);
+  60
+```
