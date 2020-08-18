@@ -4,9 +4,9 @@ seo-title: Destinazione di corrispondenza cliente Google
 description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti nelle proprietà di Google possedute e gestite, come ad esempio Cerca, Shopping, Gmail e YouTube.
 seo-description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti nelle proprietà di Google possedute e gestite, come ad esempio Cerca, Shopping, Gmail e YouTube.
 translation-type: tm+mt
-source-git-commit: 6a57c0da3425b7b83050f1b734d4abe8a290c8bc
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '1455'
+source-wordcount: '1490'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ Prima di impostare una [!DNL Google Customer Match] destinazione in  CDP in temp
 
 >[!NOTE]
 >
->È obbligatorio essere aggiunti al elenco consentiti di Google  prima di configurare la prima [!DNL Google Customer Match] destinazione  Adobe CDP in tempo reale. Prima di creare una destinazione, verificare che il processo di elenco consentiti  descritto di seguito sia stato completato da Google.
+>È obbligatorio essere aggiunti al elenco consentiti  Google prima di configurare la prima [!DNL Google Customer Match] destinazione  Adobe CDP in tempo reale. Prima di creare una destinazione, verificare che il processo di elenco consentiti  descritto di seguito sia stato completato da Google.
 
 Prima di creare la [!DNL Google Customer Match] destinazione in CDP in tempo reale  Adobe, è necessario contattare Google e seguire le istruzioni  elenco consentiti in [Usa partner di corrispondenza cliente per caricare i dati](https://support.google.com/google-ads/answer/7361372?hl=en&amp;ref_topic=6296507) nella documentazione di Google.
 
@@ -101,6 +101,10 @@ Se selezionate di hash gli indirizzi e-mail, accertatevi di soddisfare i requisi
 1. In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scorrete fino alla **[!UICONTROL Advertising]** categoria. Selezionate [!DNL Google Customer Match], quindi **[!UICONTROL Configure]**.
 
    ![Connessione alla destinazione di corrispondenza cliente Google](/help/rtcdp/destinations/assets/connect-google-customer-match.png)
+
+   >[!NOTE]
+   >
+   >Se esiste già una connessione con questa destinazione, è possibile visualizzare un **[!UICONTROL Activate]** pulsante sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra **[!UICONTROL Activate]** e **[!UICONTROL Configure]**, consultate la sezione [Catalogo](/help/rtcdp/destinations/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
 
 2. Nel passaggio **Account** , se in precedenza avete impostato una connessione alla [!DNL Google Customer Match] destinazione, selezionate **[!UICONTROL Existing Account]** e selezionate la connessione esistente. In alternativa, potete selezionare **[!UICONTROL New Account]** di impostare una nuova connessione a [!DNL Google Customer Match]. Selezionate **[!UICONTROL Connect to destination]** per accedere e collegare Adobe Experience Cloud al vostro [!DNL Google Ad] account.
 
