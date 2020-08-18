@@ -5,9 +5,9 @@ title: Configurare un flusso di dati per un connettore CRM nell'interfaccia uten
 topic: overview
 description: Un flusso di dati è un'attività pianificata che recupera e trasferisce dati da un'origine a un set di dati della piattaforma. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account CRM.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
 workflow-type: tm+mt
-source-wordcount: '1298'
+source-wordcount: '1295'
 ht-degree: 0%
 
 ---
@@ -21,10 +21,10 @@ Un flusso di dati è un&#39;attività pianificata che recupera e trasferisce dat
 
 Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Sistema](../../../../xdm/home.md)XDM (Experience Data Model): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
+* [[!DNL Experience Data Model] (XDM) Sistema](../../../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
    * [Nozioni di base sulla composizione](../../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
    * [Esercitazione](../../../../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
-* [Profilo](../../../../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Profilo cliente in tempo reale]](../../../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
 Inoltre, questa esercitazione richiede che sia già stato creato un account CRM. Un elenco di esercitazioni per la creazione di diversi connettori CRM nell&#39;interfaccia utente è disponibile nella panoramica [dei connettori](../../../home.md)sorgente.
 
@@ -156,7 +156,7 @@ Le sezioni seguenti forniscono informazioni aggiuntive sull&#39;utilizzo dei con
 
 Quando un flusso di dati viene creato, diventa immediatamente attivo e i dati vengono acquisiti in base alla pianificazione specificata. Puoi disattivare un flusso di dati attivo in qualsiasi momento seguendo le istruzioni riportate di seguito.
 
-Nella *[!UICONTROL authenticaton]* schermata, selezionare il nome della connessione di base associata al flusso di dati che si desidera disattivare.
+Nella *[!UICONTROL authenticaton]* schermata, selezionate il nome della connessione associata al flusso di dati da disattivare.
 
 ![](../../../images/tutorials/dataflow/crm/monitor.png)
 
