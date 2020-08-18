@@ -1,12 +1,12 @@
 ---
-title: Lettore JW  estensione Analytics (BETA)
-seo-title: Lettore JW  estensione Analytics (BETA)
-description: L'estensione JW Player  Analytics (BETA) è una destinazione di analisi  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L'estensione JW Player  Analytics (BETA) è una destinazione di analisi  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+title: Estensione JW Player Analytics (BETA)
+seo-title: Estensione JW Player Analytics (BETA)
+description: L'estensione JW Player Analytics (BETA) è una destinazione di analisi nella  Real-time Customer Data Platform del Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+seo-description: L'estensione JW Player Analytics (BETA) è una destinazione di analisi nella  Real-time Customer Data Platform del Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: 33eba9e3f2e993c6958480b091ff004dc057f438
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '558'
 ht-degree: 4%
 
 ---
@@ -16,12 +16,13 @@ ht-degree: 4%
 
 ## Panoramica {#overview}
 
-Questa estensione installa la [!DNL JW Player] scheda di rete per collegare [!DNL JW Player] gli eventi a  Adobe Video  Analytics. Sfruttate la potenza  video Adobe  Analytics per acquisire informazioni dettagliate sulle abitudini di visualizzazione dei video dei clienti.
+Questa estensione installa la [!DNL JW Player] scheda di rete per collegare [!DNL JW Player] gli eventi  Video Analytics Adobe. Sfruttate la potenza  analisi video dei Adobi per acquisire informazioni dettagliate sulle abitudini di visualizzazione dei video dei clienti.
 
-[!DNL JW Player Analytics] (BETA) è un&#39;estensione di analisi  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html).
+[!DNL JW Player Analytics] (BETA) è un&#39;estensione di analisi nel  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html).
 
 Questa destinazione è un&#39;estensione di Experience Platform Launch. Per ulteriori informazioni sul funzionamento delle estensioni Launch  Adobe CDP in tempo reale, vedere Panoramica [sulle estensioni](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
 
+![Estensione dell&#39;analisi JW](assets/jw-analytics-extension.png)
 
 ## Prerequisiti  {#prerequisites}
 
@@ -35,11 +36,11 @@ Per installare l’estensione [!DNL JW Player Analytics] (BETA):
 
 1. Nell&#39;interfaccia CDP in tempo reale del [Adobe](http://platform.adobe.com/), passare a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 2. Selezionate l’estensione dal catalogo o usate la barra di ricerca.
-3. Fai clic sulla destinazione per evidenziarla, quindi selezionala **[!UICONTROL Install Extension]** nella barra a destra. Se il **[!UICONTROL Install Extension]** controllo è disattivato, manca l&#39; **[!UICONTROL manage_properties]** autorizzazione. Consultate [Prerequisiti](#prerequisites).
+3. Fai clic sulla destinazione per evidenziarla, quindi selezionala **[!UICONTROL Configure]** nella barra a destra. Se il **[!UICONTROL Configure]** controllo è disattivato, manca l&#39; **[!UICONTROL manage_properties]** autorizzazione. Consultate [Prerequisiti](#prerequisites).
 4. Nella **[!UICONTROL Select available Launch property]** finestra, selezionate la proprietà Launch in cui desiderate installare l&#39;estensione. È inoltre possibile creare una nuova proprietà in Launch. Una proprietà è una raccolta di regole, elementi di dati, estensioni configurate, ambienti e librerie. Ulteriori informazioni sulle proprietà sono disponibili nella sezione [della pagina](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) Proprietà della documentazione di Launch.
 5. Per completare l’installazione, passa a Launch.
 
-Per informazioni sulle opzioni di configurazione dell&#39;estensione, consultate la pagina [dell&#39;estensione](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html) JW Player  Analytics (BETA) in  Adobe Exchange.
+Per informazioni sulle opzioni di configurazione dell&#39;estensione, consultate la pagina [dell&#39;estensione](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html) JW Player Analytics (BETA) in  Adobe Exchange.
 
 Potete anche installare l’estensione direttamente nell’interfaccia [del](https://launch.adobe.com/)Experience Platform Launch. Consultate [Aggiungere una nuova estensione](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) nella documentazione di Launch.
 
