@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare un connettore sorgente Adobe Analytics  nell’interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 0479f5097b530dd97e28474d8e5eb832e5e44e5a
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '744'
 ht-degree: 1%
 
 ---
@@ -30,13 +30,13 @@ Accedete ad [Adobe Experience Platform](https://platform.adobe.com) , quindi sel
 
 Potete selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l&#39;origine specifica con cui si desidera lavorare utilizzando l&#39;opzione di ricerca.
 
-Nella categoria *applicazioni* Adobe, selezionate **[!UICONTROL Adobe Analytics]** per esporre una barra delle informazioni sul lato destro dello schermo. La barra delle informazioni fornisce una breve descrizione della sorgente selezionata e le opzioni per collegarsi alla sorgente o visualizzare la documentazione. Per visualizzare gli account esistenti, selezionare **[!UICONTROL Accounts]**.
+Sotto la **[!UICONTROL Adobe applications]** categoria, selezionate **[!UICONTROL Adobe Analytics]** per esporre una barra delle informazioni sul lato destro dello schermo. La barra delle informazioni fornisce una breve descrizione della sorgente selezionata e le opzioni per collegarsi alla sorgente o visualizzare la documentazione. Per visualizzare gli account esistenti, selezionare **[!UICONTROL Accounts]**.
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### Seleziona dati
 
-Viene visualizzato *passaggio Adobe Analytics* . I flussi di dati precedentemente stabiliti per Analytics sono elencati in questa schermata. Puoi creare un nuovo flusso di dati facendo clic su **[!UICONTROL Select data]**.
+Viene **[!UICONTROL Adobe Analytics]** visualizzato il passaggio. I flussi di dati precedentemente stabiliti per Analytics sono elencati in questa schermata. Puoi creare un nuovo flusso di dati facendo clic su **[!UICONTROL Select data]**.
 
 >[!NOTE]
 >
@@ -52,22 +52,22 @@ Nell&#39;elenco delle suite di rapporti disponibili, seleziona quella che deside
 
 ### Denominate il flusso di dati
 
-Viene visualizzato il passaggio Dettaglio *flusso* DataSet, in cui è necessario specificare un nome e una descrizione facoltativa per il flusso di dataset. Selezionate **[UICONTROL! Avanti]** una volta finito.
+Viene visualizzato il **[!UICONTROL Dataset flow detail]** passaggio in cui è necessario specificare un nome e una descrizione facoltativa per il flusso di dati. Selezionate **[!UICONTROL Next]** al termine.
 
 ![](../../../../images/tutorials/create/analytics/dataset-flow-detail.png)
 
 ### Controlla il flusso dei dataset
 
-Viene visualizzato il passaggio *Revisione* , che consente di rivedere il flusso di dati in associazione con Analytics prima della creazione. I dettagli della connessione sono raggruppati per categorie, tra cui:
+Viene visualizzato il **[!UICONTROL Review]** passaggio che consente di rivedere il flusso di dati in-bound di Analytics prima della creazione. I dettagli della connessione sono raggruppati per categorie, tra cui:
 
-* *Connessione*: Mostra il tipo di connessione di origine e la suite di rapporti selezionata.
-* *Assegna campi* dataset e mappa: Quando si creano altri connettori di origine, questo contenitore mostra in quale set di dati di origine vengono acquisiti i dati, incluso lo schema a cui il dataset aderisce. Lo schema di output e il dataset vengono configurati automaticamente per i flussi di dati di Analytics.
+* **[!UICONTROL Connection]**: Mostra il tipo di connessione di origine e la suite di rapporti selezionata.
+* **[!UICONTROL Assign dataset & map fields]**: Quando si creano altri connettori di origine, questo contenitore mostra in quale set di dati di origine vengono acquisiti i dati, incluso lo schema a cui il dataset aderisce. Lo schema di output e il dataset vengono configurati automaticamente per i flussi di dati di Analytics.
 
 ![](../../../../images/tutorials/create/analytics/review.png)
 
 ### Monitorare il flusso dei dataset
 
-Una volta creato il flusso di set di dati, è possibile monitorare i dati che vengono acquisiti attraverso di esso. Dalla schermata *Catalogo* , selezionate Flussi ** di set di dati per visualizzare un elenco dei flussi definiti associati all’account Analytics.
+Una volta creato il flusso di set di dati, è possibile monitorare i dati che vengono acquisiti attraverso di esso. Dalla **[!UICONTROL Catalog]** schermata, seleziona **[!UICONTROL Dataset flows]** per visualizzare un elenco dei flussi stabiliti associati al tuo account Analytics.
 
 ![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
 
