@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sul controllo degli accessi
 topic: overview
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: e66fd20eb7a153e556a3716bb255af084e52292e
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1028'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ Per configurare il controllo di accesso per [!DNL Experience Platform], è neces
 
 Un flusso di lavoro di alto livello per ottenere e assegnare le autorizzazioni di accesso può essere riassunto come segue:
 
-- Dopo aver effettuato la sottoscrizione a  Adobe Experience Platform, viene inviato un messaggio e-mail all&#39;amministratore specificato nel modulo di registrazione.
+- Dopo aver concesso la licenza ad Adobe Experience Platform o a un servizio applicazione/app che utilizza  Experience Platform, viene inviato un messaggio e-mail all&#39;amministratore specificato durante la licenza.
 - L’amministratore accede ad [Adobe Admin Console](#adobe-admin-console) e seleziona **Adobe Experience Platform** dall’elenco dei prodotti nella pagina della panoramica.
 - L&#39;amministratore può visualizzare i profili [di](#product-profiles) prodotto predefiniti o creare nuovi profili di prodotto cliente, a seconda delle necessità.
 - L&#39;amministratore può modificare le autorizzazioni e gli utenti per qualsiasi profilo di prodotto esistente.
