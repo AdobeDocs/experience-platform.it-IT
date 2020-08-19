@@ -1,10 +1,11 @@
 ---
+keywords: data governance rtcdp;rtcdp data governance;real time customer data profile data governance;privacy rtcdp;rtcdp privacy
 title: Privacy nel profilo dei dati del cliente in tempo reale
 seo-title: Privacy nel profilo dei dati del cliente in tempo reale
 description: Il profilo dati cliente in tempo reale consente di semplificare il processo di mantenimento delle operazioni sui dati conformi alle normative sulla privacy.
 seo-description: Il profilo dati cliente in tempo reale consente di semplificare il processo di mantenimento delle operazioni sui dati conformi alle normative sulla privacy.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 0%
@@ -16,11 +17,11 @@ ht-degree: 0%
 
 [!DNL Real-time Customer Data Platform] (CDP in tempo reale) aiuta gli esperti di marketing a unire i dati provenienti da più sistemi aziendali, consentendo loro di identificare, comprendere e coinvolgere meglio i clienti.  Adobe considera la privacy dei dati dei consumatori come un principio fondamentale di progettazione e fornisce vari controlli per aiutare gli addetti al marketing a gestire la privacy dei dati dei loro clienti.
 
-La maggior parte delle funzionalità CDP in tempo reale è fornita da  Adobe Experience Platform. Questo documento fornisce informazioni sulle diverse tecnologie per il miglioramento della privacy supportate da CDP in tempo reale, con collegamenti alla [!DNL Experience Platform] documentazione per ulteriori informazioni.
+La maggior parte delle funzionalità CDP in tempo reale è fornita da Adobe Experience Platform. Questo documento fornisce informazioni sulle diverse tecnologie per il miglioramento della privacy supportate da CDP in tempo reale, con collegamenti alla [!DNL Experience Platform] documentazione per ulteriori informazioni.
 
 ## [!DNL Privacy Service]
 
- Adobe Experience Platform [!DNL Privacy Service] consente di semplificare il processo di mantenimento delle operazioni relative ai dati conformi alle normative sulla privacy, quali [!DNL General Data Protection Regulation] (GDPR) e [!DNL California Consumer Privacy Act] (CCPA). Poiché il CDP in tempo reale sfrutta [!DNL Experience Platform] le capacità di raccolta e archiviazione dei dati, le richieste di accesso ed eliminazione per il GDPR e il CCPA devono essere gestite all&#39;interno [!DNL Platform]. Per un&#39;introduzione più dettagliata del servizio, consultate il documento di panoramica [](../../privacy-service/home.md) Privacy Service.
+Adobe Experience Platform [!DNL Privacy Service] consente di semplificare il processo di conformità delle operazioni sui dati alle normative sulla privacy, quali [!DNL General Data Protection Regulation] (GDPR) e [!DNL California Consumer Privacy Act] (CCPA). Poiché il CDP in tempo reale sfrutta [!DNL Experience Platform] le capacità di raccolta e archiviazione dei dati, le richieste di accesso ed eliminazione per il GDPR e il CCPA devono essere gestite all&#39;interno [!DNL Platform]. Per un&#39;introduzione più dettagliata del servizio, consultate il documento di panoramica [](../../privacy-service/home.md) Privacy Service.
 
 Esistono due metodi per inviare le singole richieste di dati GDPR e CCPA per accedere ed eliminare i dati dei clienti:
 
