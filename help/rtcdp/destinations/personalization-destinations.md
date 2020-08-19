@@ -1,10 +1,11 @@
 ---
+keywords: personalization;Personalization
 title: Destinazioni di personalizzazione
 seo-title: Destinazioni di personalizzazione
 description: Le piattaforme di personalizzazione raccolgono dati e informazioni dai singoli comportamenti. Queste piattaforme possono aiutare gli esperti di marketing a navigare nei dati anonimi, a distribuire offerte o annunci a potenziali clienti in base alle attività precedenti o come parte di segmenti di pubblico con abitudini simili.
 seo-description: Le piattaforme di personalizzazione raccolgono dati e informazioni dai singoli comportamenti. Queste piattaforme possono aiutare gli esperti di marketing a navigare nei dati anonimi, a distribuire offerte o annunci a potenziali clienti in base alle attività precedenti o come parte di segmenti di pubblico con abitudini simili.
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: cbd748c1881c61f5e636567d94b68f2cf7302fa5
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 7%
