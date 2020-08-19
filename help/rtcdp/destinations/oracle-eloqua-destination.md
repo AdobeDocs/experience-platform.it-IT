@@ -1,10 +1,11 @@
 ---
+keywords: email;Email;e-mail;email destinations;oracle eloqua;oracle
 title: Destinazione Oracle Eloqua
 seo-title: Destinazione Oracle Eloqua
 description: Oracle Eloqua è un software come piattaforma di servizio (SaaS) per l'automazione del marketing offerto da Oracle che mira ad aiutare gli esperti di marketing e le organizzazioni B2B a gestire le campagne di marketing e la generazione di lead di vendita.
 seo-description: Oracle Eloqua è un software come piattaforma di servizio (SaaS) per l'automazione del marketing offerto da Oracle che mira ad aiutare gli esperti di marketing e le organizzazioni B2B a gestire le campagne di marketing e la generazione di lead di vendita.
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 0%
@@ -18,7 +19,7 @@ ht-degree: 0%
 
 [Eloqua](https://www.oracle.com/marketingcloud/products/marketing-automation/) è un software come piattaforma di servizio (SaaS) per l&#39;automazione del marketing offerto da [!DNL Oracle] che mira ad aiutare gli esperti di marketing e le organizzazioni B2B a gestire campagne di marketing e la generazione di lead di vendita.
 
-Per inviare i dati del segmento a [!DNL Oracle Eloqua], è innanzitutto necessario [collegare la destinazione](#connect-destination) in  Platform dati cliente in tempo reale del Adobe, quindi [impostare un&#39;importazione](#import-data-into-eloqua) di dati dalla posizione di archiviazione in [!DNL Oracle Eloqua].
+Per inviare i dati del segmento a [!DNL Oracle Eloqua], è innanzitutto necessario [collegare la destinazione](#connect-destination) in  Adobe Real-time Customer Data Platform, quindi [impostare un&#39;importazione](#import-data-into-eloqua) di dati dalla posizione di archiviazione in [!DNL Oracle Eloqua].
 
 ## Connetti alla destinazione {#connect-destination}
 
