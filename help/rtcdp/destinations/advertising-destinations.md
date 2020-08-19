@@ -1,10 +1,11 @@
 ---
+keywords: advertising destinations;destinations;rtcdp destinations
 title: Destinazioni pubblicitarie
 seo-title: Destinazioni pubblicitarie
 description: Connetti la tua Piattaforma dati cliente in tempo reale a una piattaforma pubblicitaria 3rd-party (ad es. DSP, rete pubblicitaria, SSP) e condividi tipi di pubblico pseudonimi con queste piattaforme.
 seo-description: Connetti la tua Piattaforma dati cliente in tempo reale a una piattaforma pubblicitaria 3rd-party (ad es. DSP, rete pubblicitaria, SSP) e condividi tipi di pubblico pseudonimi con queste piattaforme.
 translation-type: tm+mt
-source-git-commit: 875430cdbd80025fc3f0de2664f9b55db0debe53
+source-git-commit: 54df4778a025811504801306120bda78e04281c1
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 0%
