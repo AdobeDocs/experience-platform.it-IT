@@ -1,10 +1,11 @@
 ---
+keywords: activate destination;activate destinations;activate data
 title: Attivare profili e segmenti su una destinazione
 seo-title: Attivare profili e segmenti su una destinazione
 description: Attiva i dati di cui disponi in  Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 seo-description: Attiva i dati di cui disponi in  Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 translation-type: tm+mt
-source-git-commit: 5387959496da3b1a6323f173154d769090a1fd40
+source-git-commit: 54df4778a025811504801306120bda78e04281c1
 workflow-type: tm+mt
 source-wordcount: '1492'
 ht-degree: 0%
