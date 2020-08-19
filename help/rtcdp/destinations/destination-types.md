@@ -1,10 +1,11 @@
 ---
+keywords: destinations;destination;destination types
 title: Tipi e categorie di destinazioni
 seo-title: Tipi e categorie di destinazioni
-description: ' Adobe Dati cliente in tempo reale Platform, le destinazioni di esportazione profilo/segmento acquisiscono i dati dell''evento, li combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Avviate le estensioni per inoltrare i dati degli eventi non elaborati a diversi tipi di destinazioni. '
-seo-description: ' Adobe Dati cliente in tempo reale Platform, le destinazioni di esportazione profilo/segmento acquisiscono i dati dell''evento, li combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Avviate le estensioni per inoltrare i dati degli eventi non elaborati a diversi tipi di destinazioni.'
+description: ' Adobe Piattaforma dati cliente in tempo reale, le destinazioni di esportazione profilo/segmento acquisiscono i dati dell''evento, li combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Avviate le estensioni per inoltrare i dati degli eventi non elaborati a diversi tipi di destinazioni. '
+seo-description: ' Adobe Piattaforma dati cliente in tempo reale, le destinazioni di esportazione profilo/segmento acquisiscono i dati dell''evento, li combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Avviate le estensioni per inoltrare i dati degli eventi non elaborati a diversi tipi di destinazioni.'
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '576'
 ht-degree: 0%
@@ -14,11 +15,11 @@ ht-degree: 0%
 
 # Tipi di destinazione e categorie
 
-Leggi questa pagina per comprendere i diversi tipi e categorie di destinazioni Platform di dati cliente in tempo reale  Adobe.
+Leggi questa pagina per comprendere i diversi tipi e categorie di destinazioni  Adobe della piattaforma dati cliente in tempo reale.
 
 ## Tipi di destinazione
 
-In  Adobe Real-time Customer Data Platform, distinguiamo tra due tipi di destinazione - connessioni ed estensioni. Esistono due tipi di destinazioni di connessione, le destinazioni di esportazione dei profili e le destinazioni di esportazione dei segmenti.
+In  Adobe Real-time Customer Data Platform, distinguiamo tra due tipi di destinazione: connessioni ed estensioni. Esistono due tipi di destinazioni di connessione, le destinazioni di esportazione dei profili e le destinazioni di esportazione dei segmenti.
 
 ![Tipi di destinazioni](/help/rtcdp/destinations/assets/types-of-destinations.png)
 
@@ -26,7 +27,7 @@ In  Adobe Real-time Customer Data Platform, distinguiamo tra due tipi di destina
 
 ### Connessioni
 
-**[!UICONTROL Profile Export]** e **[!UICONTROL Segment Export]** le destinazioni in  Adobe Dati cliente Real-time Dati Platform acquisiscono i dati dell&#39;evento, li combinano con altre origini dati per formare il profilo [cliente in tempo](/help/profile/home.md)reale, applicare segmentazione ed esportare segmenti e profili qualificati per destinazioni.
+**[!UICONTROL Profile Export]** e **[!UICONTROL Segment Export]** le destinazioni in  Adobe Acquisizione dati evento in tempo reale dalla piattaforma dati cliente, combinate con altre origini dati per formare il profilo [cliente in tempo](/help/profile/home.md)reale, applicare segmentazione ed esportare segmenti e profili qualificati per destinazioni.
 
 <br> 
 
