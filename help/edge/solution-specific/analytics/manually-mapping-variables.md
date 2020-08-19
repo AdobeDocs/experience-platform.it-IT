@@ -1,10 +1,10 @@
 ---
-title: Mappatura manuale delle variabili in  Analytics
-seo-title: Mappatura manuale delle variabili in  Analytics con SDK Web
-description: Come mappare manualmente le variabili in  Analytics utilizzando le regole di elaborazione
-seo-description: mappare manualmente le variabili in  Analytics utilizzando le regole di elaborazione con SDK Web
+title: Mappatura manuale delle variabili in Analytics
+seo-title: Mappatura manuale delle variabili in Analytics con SDK Web
+description: Come mappare manualmente le variabili in Analytics utilizzando le regole di elaborazione
+seo-description: mappare manualmente le variabili in Analytics utilizzando le regole di elaborazione con SDK Web
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '371'
 ht-degree: 0%
@@ -12,9 +12,9 @@ ht-degree: 0%
 ---
 
 
-# Mappatura manuale delle variabili in  Analytics
+# Mappatura manuale delle variabili in Analytics
 
-Il Adobe Experience Platform  (AEP) [!DNL Web SDK] può mappare automaticamente determinate variabili, ma queste devono essere mappate manualmente.
+Adobe Experience Platform (AEP) [!DNL Web SDK] può mappare automaticamente determinate variabili, ma queste devono essere mappate manualmente.
 
 Per i dati XDM a cui non viene mappato automaticamente [!DNL Analytics], è possibile utilizzare dati [](https://docs.adobe.com/content/help/en/analytics/implementation/vars/page-vars/contextdata.html) contestuali per corrispondere allo [schema](https://docs.adobe.com/content/help/en/experience-platform/xdm/schema/composition.html). Quindi può essere mappato in [!DNL Analytics] utilizzando le regole [di](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html) elaborazione per compilare [!DNL Analytics] le variabili.
 
@@ -51,7 +51,7 @@ Per essere utilizzati da [!DNL Analytics], i dati XDM vengono appiattiti mediant
 
 Tutti i dati raccolti dalla rete edge sono accessibili tramite regole [di](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html)elaborazione. In [!DNL Analytics], puoi utilizzare le regole di elaborazione per incorporare dati contestuali in [!DNL Analytics] variabili.
 
-Ad esempio, nella regola seguente,  Analytics è impostato per compilare i termini di ricerca **interna ( eVar2)** con i dati associati a **a.x_atag.search.term(Context Data)**.
+Ad esempio, nella regola seguente, Analytics è impostato per compilare i termini di ricerca **interna ( eVar2)** con i dati associati a **a.x_atag.search.term(Context Data)**.
 
 ![](assets/examplerule.png)
 
@@ -63,7 +63,7 @@ Ad esempio, nella regola seguente,  Analytics è impostato per compilare i termi
 L&#39;esempio seguente mostra come il [`event` comando](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/tracking-events.html) può essere utilizzato con l&#39; `xdm` opzione per inviare e recuperare dati con l&#39;AEP [!DNL Web SDK]. In questo esempio, il `event` comando corrisponde allo schema [Dettagli](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) ExperienceEvent Commerce in modo che i valori e gli elementi productListItems `name` `SKU` siano tracciati:
 
 
-```
+```javascript
 alloy("event",{
   "xdm":{
     "commerce":{
