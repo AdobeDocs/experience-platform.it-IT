@@ -1,10 +1,11 @@
 ---
+keywords: Amazon Kinesis;kinesis destination;kinesis
 title: ' destinazione Amazon Kinesis'
 seo-title: ' destinazione Amazon Kinesis'
-description: Crea una connessione in uscita in tempo reale con l'archivio Amazon  Kinesis per lo streaming dei dati da  Adobe Experience Platform.
-seo-description: Crea una connessione in uscita in tempo reale con l'archivio Amazon  Kinesis per lo streaming dei dati da  Adobe Experience Platform.
+description: Crea una connessione in uscita in tempo reale allo storage Amazon  Kinesis per lo streaming dei dati da Adobe Experience Platform.
+seo-description: Crea una connessione in uscita in tempo reale allo storage Amazon  Kinesis per lo streaming dei dati da Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 2%
@@ -23,7 +24,7 @@ ht-degree: 2%
 
 Il [!DNL Kinesis Data Streams] servizio [!DNL Amazon Web Services] consente di raccogliere ed elaborare grandi flussi di record di dati in tempo reale.
 
-È possibile creare una connessione in uscita in tempo reale allo [!DNL Amazon Kinesis] storage per lo streaming dei dati da  Adobe Experience Platform.
+È possibile creare una connessione in uscita in tempo reale allo [!DNL Amazon Kinesis] storage per lo streaming dei dati da Adobe Experience Platform.
 
 * Per ulteriori informazioni su [!DNL Amazon Kinesis], consulta la [documentazione](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)Amazon.
 * Per connettersi a [!DNL Amazon Kinesis] utilizzando le chiamate API, consulta l’esercitazione [API](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)Streaming destinations.
@@ -46,7 +47,7 @@ Per [!DNL Amazon Kinesis] le destinazioni, immetti le seguenti informazioni nel 
 
 ### Nel passaggio Autenticazione {#authentication-step}
 
-* **[!DNL Amazon Web Services]chiave di accesso e chiave **segreta: In[!DNL Amazon Web Services], generate una coppia di chiavi di accesso - chiave di accesso segreta per concedere al Adobe l&#39;accesso CDP in tempo reale al vostro[!DNL Amazon Kinesis]account. Ulteriori informazioni sono disponibili nella[documentazione](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)di Amazon Web Services.
+* **[!DNL Amazon Web Services]chiave di accesso e chiave** segreta: In [!DNL Amazon Web Services], generate una coppia di chiavi di accesso - chiave di accesso segreta per concedere al Adobe l&#39;accesso CDP in tempo reale al vostro [!DNL Amazon Kinesis] account. Ulteriori informazioni sono disponibili nella [documentazione](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)di Amazon Web Services.
 * **regione**: Indicare la [!DNL Amazon Web Services] regione in cui trasmettere i dati in streaming.
 
 ![Campi di input nel passaggio dell’account](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
