@@ -1,10 +1,11 @@
 ---
+keywords: cloud storage destination;cloud storage
 title: Flusso di lavoro per destinazioni di archiviazione cloud
 seo-title: Flusso di lavoro per destinazioni di archiviazione cloud
 description: Istruzioni per la connessione alle posizioni di archiviazione cloud
 seo-description: Istruzioni per la connessione alle posizioni di archiviazione cloud
 translation-type: tm+mt
-source-git-commit: 9306266edc0a4afdcf378e94b46b239187b18644
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 0%
