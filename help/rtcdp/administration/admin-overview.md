@@ -1,12 +1,13 @@
 ---
+keywords: rtcdp administration overview;administration overview
 title: Panoramica sull’amministrazione
 seo-title: Panoramica dell’amministrazione CDP in tempo reale
-description: description
+description: 'Questo documento fornisce una panoramica delle capacità amministrative della piattaforma dati cliente in tempo reale, basata su Adobe Experience Platform. '
 seo-description: descrizione SEO
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '277'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Panoramica dell’amministrazione CDP in tempo reale
 
-Questo documento fornisce una panoramica delle capacità di amministrazione di [!DNL Real-time Customer Data Platform], alimentate da  Adobe Experience Platform.
+Questo documento fornisce una panoramica delle capacità di amministrazione di [!DNL Real-time Customer Data Platform], fornite da Adobe Experience Platform.
 
 [!DNL Experience Platform] consente agli amministratori di gestire il controllo dell&#39;accesso basato sui ruoli per gli utenti, nonché di gestire le sandbox virtuali per lo sviluppo dell&#39;applicazione.
 
@@ -31,8 +32,8 @@ Per ulteriori informazioni sul controllo degli accessi, consulta la panoramica [
 
 ## Sandbox
 
- Adobe Experience Platform (e CDP in tempo reale per estensione) è progettato per arricchire le applicazioni di esperienza digitale su scala globale. Le aziende spesso eseguono più applicazioni di esperienza digitale in parallelo e devono essere in grado di rispondere allo sviluppo, al test e all&#39;implementazione di tali applicazioni, garantendo al contempo la conformità operativa.
+Adobe Experience Platform (e Real-time CDP by extension) è progettato per arricchire le applicazioni di esperienza digitale su scala globale. Le aziende spesso eseguono più applicazioni di esperienza digitale in parallelo e devono essere in grado di rispondere allo sviluppo, al test e all&#39;implementazione di tali applicazioni, garantendo al contempo la conformità operativa.
 
-Per rispondere a questa esigenza,  Adobe Experience Platform fornisce &quot;sandbox&quot;, che consentono di suddividere una singola [!DNL Platform] istanza in ambienti virtuali separati che possono essere utilizzati per sviluppare e sviluppare applicazioni di esperienza digitale.
+Per rispondere a questa esigenza, Adobe Experience Platform fornisce &quot;sandbox&quot;, che consentono di suddividere una singola [!DNL Platform] istanza in ambienti virtuali separati che possono essere utilizzati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 Per ulteriori informazioni sulle sandbox, consultate la panoramica sulle [sandbox](../../sandboxes/home.md) nella [!DNL Experience Platform] documentazione.
