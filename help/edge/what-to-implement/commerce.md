@@ -1,10 +1,10 @@
 ---
 title: Prodotti
-seo-title: Supporto di prodotti con  Adobe Experience Platform Web SDK
+seo-title: Prodotti di supporto con Adobe Experience Platform Web SDK
 description: Scoprite come aggiungere dati se avete prodotti o un carrello con  Experience Platform Web SDK
 seo-description: Scoprite come aggiungere dati se avete prodotti o un carrello con  Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '1314'
 ht-degree: 4%
@@ -28,7 +28,6 @@ In questo documento viene utilizzato il mixin [ExperienceEvent Commerce Details]
 Di seguito è riportato un elenco di `measures` elementi disponibili nell&#39; `commerce` oggetto.
 
 >[!Tip]
->
 >
 >Una misura ha due campi: `id` e `value`. Nella maggior parte dei casi, sarà utilizzato solo il `value` campo (ad esempio, `'value':1`). Il `id` campo consente di impostare un identificatore univoco che consente di tenere traccia di quando la misura è stata inviata. Consulta la documentazione XDM per [Measure](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/measure.schema.md).
 
