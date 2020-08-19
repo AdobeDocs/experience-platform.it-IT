@@ -1,10 +1,11 @@
 ---
+keywords: email;Email;e-mail;email destinations;adobe campaign;campaign
 title: Adobe Campaign
 seo-title: Adobe Campaign
 description: ' Adobe Campaign è un insieme di soluzioni che consentono di personalizzare e distribuire campagne su tutti i canali online e offline.'
 seo-description: ' Adobe Campaign è un insieme di soluzioni che consentono di personalizzare e distribuire campagne su tutti i canali online e offline.'
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 1%
@@ -18,7 +19,7 @@ ht-degree: 1%
 
  Adobe Campaign è un insieme di soluzioni che consentono di personalizzare e distribuire campagne su tutti i canali online e offline. Per ulteriori informazioni, consultate [Informazioni su Adobe Campaign Classic](https://docs.adobe.com/content/help/en/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) .
 
-Per inviare i dati del segmento a  Adobe Campaign, è innanzitutto necessario [collegare la destinazione](#connect-destination)  Adobe Real-time Customer Data Platform, quindi [impostare un&#39;importazione](#import-data-into-campaign) di dati dalla posizione di memorizzazione in  Adobe Campaign.
+Per inviare i dati del segmento a  Adobe Campaign, è innanzitutto necessario [collegare la destinazione](#connect-destination)  piattaforma dati cliente in tempo reale del Adobe, quindi [impostare un&#39;importazione](#import-data-into-campaign) di dati dalla posizione di archiviazione  Adobe Campaign.
 
 ## Destinazione Connect {#connect-destination}
 
@@ -26,7 +27,7 @@ Per inviare i dati del segmento a  Adobe Campaign, è innanzitutto necessario [c
 
    ![Connetti ad adobe campaign](/help/rtcdp/destinations/assets/connect-adobe-campaign.png)
 
-1. Nel flusso di lavoro di destinazione di Connect, selezionate il percorso **[!UICONTROL Connection type]** di memorizzazione. Ad  Adobe Campaign, potete selezionare tra **[!UICONTROL Amazon S3]**, **[!UICONTROL SFTP with Password]** e **[!UICONTROL SFTP with SSH Key]**. Compila le informazioni riportate di seguito, a seconda del tipo di connessione, quindi seleziona **[!UICONTROL Connect]**.
+1. Nel flusso di lavoro di destinazione di Connect, selezionate il percorso **[!UICONTROL Connection type]** di memorizzazione. Per  Adobe Campaign, potete scegliere tra **[!UICONTROL Amazon S3]**, **[!UICONTROL SFTP with Password]** e **[!UICONTROL SFTP with SSH Key]**. Compila le informazioni riportate di seguito, a seconda del tipo di connessione, quindi seleziona **[!UICONTROL Connect]**.
 
    ![Configurazione guidata campagna](/help/rtcdp/destinations/assets/adobe-campaign-wizard.png)
 
@@ -53,7 +54,7 @@ Consulta [Attivare profili e segmenti su una destinazione](/help/rtcdp/destinati
 
 ## Attributi di destinazione {#destination-attributes}
 
-Quando si [attivano i segmenti](/help/rtcdp/destinations/activate-destinations.md) alla destinazione del Adobe Campaign , si consiglia di selezionare un identificatore univoco dallo schema [](../../profile/home.md#profile-fragments-and-union-schemas)unione. Selezionate l’identificatore univoco ed eventuali altri campi XDM da esportare nella destinazione. Per ulteriori informazioni, vedere [Selezionare i campi dello schema da utilizzare come attributi di destinazione nei file](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) esportati in Destinazioni di marketing e-mail.
+Quando si [attivano i segmenti](/help/rtcdp/destinations/activate-destinations.md) nella destinazione Adobe Campaign , si consiglia di selezionare un identificatore univoco dallo schema [](../../profile/home.md#profile-fragments-and-union-schemas)unione. Selezionate l’identificatore univoco ed eventuali altri campi XDM da esportare nella destinazione. Per ulteriori informazioni, vedere [Selezionare i campi dello schema da utilizzare come attributi di destinazione nei file](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) esportati in Destinazioni di marketing e-mail.
 
 ## Dati esportati {#exported-data}
 
@@ -75,6 +76,6 @@ The presence of these files in your storage location is confirmation of successf
 
 -->
 
-## Impostazione dell&#39;importazione dei dati in  Adobe Campaign {#import-data-into-campaign}
+## Configurare l&#39;importazione di dati in  Adobe Campaign {#import-data-into-campaign}
 
-Dopo aver collegato CDP in tempo reale allo storage [!DNL Amazon S3] o SFTP, è necessario impostare l&#39;importazione dei dati dalla posizione di archiviazione nel Adobe Campaign . Per informazioni su come eseguire questa operazione, consulta [Importazione di dati](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html) nella documentazione  Adobe Campaign.
+Dopo aver collegato CDP in tempo reale allo storage [!DNL Amazon S3] o SFTP, è necessario impostare l&#39;importazione dei dati dalla posizione di archiviazione in  Adobe Campaign. Per informazioni su come eseguire questa operazione, consulta [Importazione di dati](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html) nella documentazione  Adobe Campaign Help.
