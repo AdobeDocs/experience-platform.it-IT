@@ -1,13 +1,14 @@
 ---
+keywords: bing;bing ads event tracking;event tracking bing;UET;UET extension
 title: Estensione Bing Ads Universal Event Tracking (UET)
 seo-title: Estensione Bing Ads Universal Event Tracking (UET)
 description: L'estensione Bing Ads Universal Event Tracking (UET) è una destinazione pubblicitaria  piattaforma dati cliente in tempo reale del Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: null
+seo-description: L'estensione Bing Ads Universal Event Tracking (UET) è una destinazione pubblicitaria  piattaforma dati cliente in tempo reale del Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 33eba9e3f2e993c6958480b091ff004dc057f438
+source-git-commit: 0f6939e131a67568e9002fc37e7b15859c6412b4
 workflow-type: tm+mt
-source-wordcount: '535'
-ht-degree: 5%
+source-wordcount: '567'
+ht-degree: 4%
 
 ---
 
