@@ -1,10 +1,11 @@
 ---
+keywords: Amazon S3;S3 destination;s3;amazon s3
 title: ' destinazione Amazon S3'
 seo-title: ' destinazione Amazon S3'
-description: Crea una connessione live in uscita con l'archivio  Amazon Web Services (AWS) S3 per esportare periodicamente file di dati CSV o delimitati da tabulazioni da  Adobe Experience Platform nei tuoi bucket S3.
-seo-description: Crea una connessione live in uscita con l'archivio  Amazon Web Services (AWS) S3 per esportare periodicamente file di dati CSV o delimitati da tabulazioni da  Adobe Experience Platform nei tuoi bucket S3.
+description: Crea una connessione in uscita diretta con l'archivio  Amazon Web Services (AWS) S3 per esportare periodicamente file di dati CSV o delimitati da tabulazioni da Adobe Experience Platform nei tuoi bucket S3.
+seo-description: Crea una connessione in uscita diretta con l'archivio  Amazon Web Services (AWS) S3 per esportare periodicamente file di dati CSV o delimitati da tabulazioni da Adobe Experience Platform nei tuoi bucket S3.
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 0%
@@ -16,7 +17,7 @@ ht-degree: 0%
 
 ## Panoramica
 
-Crea una connessione in uscita dal vivo con l&#39;archivio S3 [!DNL Amazon Web Services] (AWS) per esportare periodicamente file di dati CSV o delimitati da tabulazioni da  Adobe Experience Platform nei tuoi bucket S3.
+Crea una connessione in uscita dal vivo con il tuo storage [!DNL Amazon Web Services] (AWS) S3 per esportare periodicamente file di dati CSV o delimitati da tabulazioni da Adobe Experience Platform nei tuoi socket S3.
 
 ## Destinazione Connect {#connect-destination}
 
@@ -24,7 +25,7 @@ Consulta Flusso di lavoro delle destinazioni di archiviazione [Cloud ](/help/rtc
 
 Per [!DNL Amazon S3] le destinazioni, immetti le seguenti informazioni nel flusso di lavoro di creazione della destinazione:
 
-* **[!DNL Amazon S3]chiave di accesso e chiave[!DNL Amazon S3]**segreta: In[!DNL Amazon S3], generate una coppia di chiavi di accesso - chiave di accesso segreta per concedere al Adobe l&#39;accesso CDP in tempo reale al vostro[!DNL Amazon S3]account.
+* **[!DNL Amazon S3]chiave di accesso e chiave[!DNL Amazon S3]** segreta: In [!DNL Amazon S3], generate una coppia di chiavi di accesso - chiave di accesso segreta per concedere al Adobe l&#39;accesso CDP in tempo reale al vostro [!DNL Amazon S3] account.
 
 >[!IMPORTANT]
 >
