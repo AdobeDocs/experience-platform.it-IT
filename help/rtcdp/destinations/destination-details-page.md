@@ -1,13 +1,14 @@
 ---
+keywords: destinations;destination;destinations detail page;destinations details page
 title: Pagina Dettagli destinazioni
 seo-title: Pagina Dettagli destinazioni
 description: 'La pagina dei dettagli per una singola destinazione fornisce una panoramica dei dettagli di destinazione, come il nome di destinazione, l''ID, i segmenti mappati alla destinazione, e i controlli per modificare l''attivazione e per attivare e disattivare il flusso di dati. '
 seo-description: 'La pagina dei dettagli per una singola destinazione fornisce una panoramica dei dettagli di destinazione, come il nome di destinazione, l''ID, i segmenti mappati alla destinazione, e i controlli per modificare l''attivazione e per attivare e disattivare il flusso di dati. '
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '499'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
