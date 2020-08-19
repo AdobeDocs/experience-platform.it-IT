@@ -1,10 +1,11 @@
 ---
+keywords: cloud storage destination;cloud storage
 title: Destinazioni di archiviazione cloud
 seo-title: Destinazioni di archiviazione cloud
 description: ' Adobe CDP in tempo reale può inviare i segmenti come file di dati alle  posizioni di archiviazione cloud Amazon S3, AWS Kinesis, Azure Event Hubs o SFTP.'
 seo-description: ' Adobe CDP in tempo reale può inviare i segmenti come file di dati alle  posizioni di archiviazione cloud Amazon S3, AWS Kinesis, Azure Event Hubs o SFTP.'
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 0%
