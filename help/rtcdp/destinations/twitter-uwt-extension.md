@@ -1,10 +1,11 @@
 ---
+keywords: twitter;Twitter;twitter universal website tag;Twitter universal website tag;Twitter UWT Tag;Twitter uwt;twitter uwt
 title: Estensione dei tag Twitter Universal Website
 seo-title: Estensione dei tag Twitter Universal Website
 description: L'estensione Twitter Universal Website Tag è una destinazione pubblicitaria  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 seo-description: L'estensione Tag Web site universale di Twitter è una destinazione pubblicitaria  piattaforma dati cliente in tempo reale del Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 5%
