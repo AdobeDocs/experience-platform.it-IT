@@ -1,10 +1,11 @@
 ---
+keywords: livefyre;livefyre extension
 title: Estensione  Adobe Livefyre
 seo-title: Estensione  Adobe Livefyre
 description: L'estensione  Adobe Livefyre è una destinazione social in  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 5%
