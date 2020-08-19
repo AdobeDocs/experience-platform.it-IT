@@ -1,11 +1,11 @@
 ---
-keywords: Launch;launch
+keywords: launch web tags;web tags launch;website tags;web tags;launch;Launch
 title: Esercitazione Implementare i tag del sito Web con  lancio Adobe
 seo-title: Implementare i tag dei siti Web con  lancio Adobe
 description: Utilizzo  lancio Adobe per implementare i tag dei siti Web in Adobe Experience Platform
 seo-description: Utilizzo  lancio Adobe per implementare i tag dei siti Web in Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 54df4778a025811504801306120bda78e04281c1
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 7%
