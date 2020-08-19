@@ -1,20 +1,19 @@
 ---
-title: Identità e spazi dei nomi di identità
-seo-title: Servizio Adobe Experience Platform Identity
-description: description
-seo-description: descrizione SEO
+keywords: identities rtcdp;rtcdp identities;real-time cdp identities
+title: Identità in CDP in tempo reale
+description: Adobe Experience Platform Identity Service consente di ottenere una visione migliore dei clienti e del loro comportamento collegando identità tra dispositivi e sistemi.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 1%
+source-wordcount: '424'
+ht-degree: 0%
 
 ---
 
 
 # Identità in CDP in tempo reale
 
- Adobe Experience Platform [!DNL Identity Service] consente di ottenere una visione migliore dei clienti e del loro comportamento collegando identità tra dispositivi e sistemi. In genere, i clienti interagiscono con il tuo marchio su più canali, tra cui visitare il sito Web online, effettuare un acquisto in-store, partecipare al programma fedeltà o chiamare un help desk per il supporto, per citarne alcuni. Tra questi diversi sistemi, esiste un&#39;identità creata per quel cliente, e [!DNL Identity Service] permette di mettere insieme queste identità per vedere il quadro completo.
+Adobe Experience Platform [!DNL Identity Service] consente di acquisire una visione migliore dei clienti e del loro comportamento collegando identità tra dispositivi e sistemi. In genere, i clienti interagiscono con il tuo marchio su più canali, tra cui visitare il sito Web online, effettuare un acquisto in-store, partecipare al programma fedeltà o chiamare un help desk per il supporto, per citarne alcuni. Tra questi diversi sistemi, esiste un&#39;identità creata per quel cliente, e [!DNL Identity Service] permette di mettere insieme queste identità per vedere il quadro completo.
 
 Ora, invece di cinque clienti separati che interagiscono con il tuo marchio su cinque canali diversi, puoi vedere che si tratta dello stesso cliente e accertarti che riceva un&#39;esperienza coerente, personalizzata e rilevante attraverso ogni interazione. Man mano che si rendono note ulteriori informazioni sul cliente (ad esempio, un browser anonimo del sito Web decide di registrarsi per un account e di effettuare l’accesso), le informazioni vengono unite insieme e l’immagine del cliente diventa sempre più chiara.
 
