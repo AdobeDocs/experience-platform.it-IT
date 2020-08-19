@@ -1,10 +1,11 @@
 ---
-title: Dati cliente in tempo reale Platform Home Page e dashboard
-seo-title: Dati cliente in tempo reale Platform Home Page e dashboard
-description: Dashboard, Home Page e la prima esperienza utente  Adobe Experience Platform
-seo-description: Dashboard, Home Page e la prima esperienza utente  Adobe Experience Platform
+keywords: metrics overview; rtcdp metrics overview
+title: Pagina principale e dashboard della piattaforma dati cliente in tempo reale
+seo-title: Pagina principale e dashboard della piattaforma dati cliente in tempo reale
+description: Dashboard, Home Page e la prima esperienza utente di Adobe Experience Platform
+seo-description: Dashboard, Home Page e la prima esperienza utente di Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '614'
 ht-degree: 0%
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Real-time Customer Data Platform] panoramica delle metriche
 
-La pagina principale Platform (Real-time CDP, Real-time CDP) del Adobe , che include un dashboard delle metriche, viene visualizzata quando si accede a CDP in tempo reale.
+La pagina principale della piattaforma CDP (Real-time CDP, Real-time Data Platform) del Adobe , che include un dashboard delle metriche, viene visualizzata quando accedete a CDP in tempo reale.
 
 La pagina principale è solo uno dei punti in cui vengono visualizzate le schede metriche. Il CDP in tempo reale fornisce schede metriche per tutta l&#39;esperienza. Queste metriche ti informano sui dati, il profilo e il pubblico del segmento nel sistema.
 
@@ -39,7 +40,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
    ![immagine](assets/home-recent.jpg)
 
-Metriche aggiuntive, ad esempio per profili e segmenti, sono disponibili in altre parti dell&#39;Platform Real-time Customer Data.
+Metriche aggiuntive, ad esempio per profili e segmenti, sono disponibili in altre parti della Piattaforma dati cliente in tempo reale.
 
 ### Set di dati
 
