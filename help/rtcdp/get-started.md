@@ -1,11 +1,11 @@
 ---
-keywords: RTCDP;rtcdp
+keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
 title: Guida introduttiva alla piattaforma dati cliente  Adobe in tempo reale
 seo-title: Guida introduttiva alla piattaforma dati cliente  Adobe in tempo reale
 description: Scenario di esempio per  Adobe Real-time Customer Data Platform
 seo-description: Scenario di esempio per  Adobe Real-time Customer Data Platform
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 54df4778a025811504801306120bda78e04281c1
 workflow-type: tm+mt
 source-wordcount: '2321'
 ht-degree: 0%
@@ -62,7 +62,7 @@ Questa esercitazione include i passaggi seguenti:
 1. [Stitch il profilo su più dispositivi](#cross-device-identity-stitching).
 1. [Analizzare il profilo](#analyzing-the-profile).
 
-## Profilo del cliente
+## Customer profile
 
 La prima volta che i clienti visitano il tuo sito, non sai nulla di loro.
 
