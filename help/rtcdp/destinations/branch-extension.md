@@ -1,10 +1,11 @@
 ---
+keywords: branch;branch extension;branch destination
 title: Estensione ramo
 seo-title: Estensione ramo
 description: L'estensione Branch è una destinazione pubblicitaria  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 seo-description: L'estensione Branch è una destinazione pubblicitaria  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 5%
