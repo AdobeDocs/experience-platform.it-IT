@@ -1,10 +1,11 @@
 ---
+keywords: facebook extensions;facebook extension;facebook destinations;facebook
 title: Destinazione Facebook
 seo-title: Destinazione Facebook
 description: Attiva profili per le tue campagne Facebook per il targeting dell'audience, la personalizzazione e la soppressione basate su e-mail con hash.
 seo-description: Attiva profili per le tue campagne Facebook per il targeting dell'audience, la personalizzazione e la soppressione basate su e-mail con hash.
 translation-type: tm+mt
-source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 2%
@@ -22,7 +23,7 @@ Attiva profili per le tue [!DNL Facebook] campagne di targeting dell&#39;audienc
 
 ## Casi d’uso
 
-Per aiutarti a capire meglio come e quando devi utilizzare la [!DNL Facebook] destinazione, ecco due esempi di casi d&#39;uso che  clienti Platform di dati cliente in tempo reale Adobe possono risolvere utilizzando questa funzione.
+Per comprendere meglio come e quando utilizzare la [!DNL Facebook] destinazione, ecco due esempi di casi di utilizzo che  clienti della piattaforma dati cliente in tempo reale del Adobe possono risolvere utilizzando questa funzione.
 
 
 ### Caso di utilizzo n. 1
@@ -64,7 +65,7 @@ Prima di inviare i segmenti di pubblico a [!DNL Facebook], accertati di soddisfa
 
 ### Requisiti di hashing e-mail {#email-hashing-requirements}
 
-[!DNL Facebook] richiede che non siano inviate informazioni personali (PII) in modo chiaro. Di conseguenza, i tipi di pubblico a cui si [!DNL Facebook] è attivato devono essere cancellati dagli indirizzi e-mail *con hash* . Potete scegliere di hash gli indirizzi e-mail prima di inserirli in  Adobe Experience Platform, oppure potete scegliere di lavorare con gli indirizzi e-mail in modo chiaro in  Experience Platform e avere il nostro algoritmo hash al momento dell&#39;attivazione.
+[!DNL Facebook] richiede che non siano inviate informazioni personali (PII) in modo chiaro. Di conseguenza, i tipi di pubblico a cui si [!DNL Facebook] è attivato devono essere cancellati dagli indirizzi e-mail *con hash* . Potete scegliere di hash gli indirizzi e-mail prima di inviarli in Adobe Experience Platform, oppure potete scegliere di lavorare con gli indirizzi e-mail in  Experience Platform e ottenere l&#39;hash del nostro algoritmo al momento dell&#39;attivazione.
 
 Per informazioni sull’assimilazione degli indirizzi e-mail in  Experience Platform, consultate la panoramica [sull’assimilazione](/help/ingestion/batch-ingestion/overview.md) batch e la panoramica [sull’assimilazione](/help/ingestion/streaming-ingestion/overview.md)accattivante.
 
