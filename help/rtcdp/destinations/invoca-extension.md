@@ -1,10 +1,11 @@
 ---
+keywords: Invoca;invoca
 title: Estensione Invoca Tags
 seo-title: Estensione Invoca Tags
 description: L'estensione Invoca Tags è una voce della destinazione del cliente  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: 33eba9e3f2e993c6958480b091ff004dc057f438
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 5%
