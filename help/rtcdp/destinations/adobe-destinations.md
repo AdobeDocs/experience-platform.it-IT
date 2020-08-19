@@ -1,10 +1,11 @@
 ---
+keywords: destinations;experience cloud solutions
 title: 'Destinazioni Adobe '
 seo-title: 'Destinazioni Adobe '
 description: Gestisci la tua esperienza cliente collegando i dati in CDP in tempo reale  Adobe ad altre soluzioni Adobe Experience Cloud per il targeting degli annunci, la personalizzazione, l'automazione del marketing e altro ancora
 seo-description: Gestisci la tua esperienza cliente collegando i dati in CDP in tempo reale  Adobe ad altre soluzioni Adobe Experience Cloud per il targeting degli annunci, la personalizzazione, l'automazione del marketing e altro ancora
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 21%
