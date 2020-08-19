@@ -1,10 +1,11 @@
 ---
+keywords: Quantum Metric Extension;Quantum Metric;quantum metric;Quantum metric
 title: Estensione quantistica
 seo-title: Estensione quantistica
 description: L'estensione Quantum Metric (Metrica quantistica) è una destinazione di analisi  piattaforma dati cliente in tempo reale del Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 seo-description: L'estensione Quantum Metric (Metrica quantistica) è una destinazione di analisi nella piattaforma dati cliente in tempo reale  Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 5%
