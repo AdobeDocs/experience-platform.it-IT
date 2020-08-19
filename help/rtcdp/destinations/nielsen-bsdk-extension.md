@@ -1,10 +1,11 @@
 ---
+keywords: Nielsen BSDK;nielsen bsdk;nielsen BSDK
 title: Estensione Nielsen BSDK
 seo-title: Estensione Nielsen BSDK
 description: L’estensione Nielsen BSDK è una destinazione di analisi nella  Real-time Customer Data Platform del Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 seo-description: L’estensione Nielsen BSDK è una destinazione di analisi  piattaforma dati cliente in tempo reale del Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '604'
 ht-degree: 4%
