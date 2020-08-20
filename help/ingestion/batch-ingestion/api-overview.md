@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: ' Guida per lo sviluppatore Batch Ingestion'
+title: Guida per lo sviluppatore Adobe Experience Platform Batch Ingestion
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 3eaef72de2999fc088b92562c08a896d1cb08e55
 workflow-type: tm+mt
-source-wordcount: '2552'
-ht-degree: 6%
+source-wordcount: '2670'
+ht-degree: 5%
 
 ---
 
@@ -24,11 +24,11 @@ L&#39;assimilazione dei dati fornisce un&#39;API RESTful tramite la quale è pos
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere o avere a disposizione per eseguire correttamente le chiamate all&#39;API di ingestione batch.
 
-Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-- [Caricamento](./overview.md)batch: Consente di assimilare i dati  Adobe Experience Platform come file batch.
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
-- [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+- [Caricamento](./overview.md)batch: Consente di assimilare i dati in Adobe Experience Platform come file batch.
+- [[!DNL Experience Data Model] (XDM) Sistema](../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
+- [[!DNL Sandbox]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 ### Lettura di chiamate API di esempio
 
@@ -38,22 +38,19 @@ Questa guida fornisce esempi di chiamate API per dimostrare come formattare le r
 
 Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
 
-- Autorizzazione: Portatore `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
 Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
 >Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
 
-Le richieste che contengono un payload (POST, PUT, PATCH) possono richiedere un&#39; `Content-Type` intestazione aggiuntiva. I valori accettati specifici per ogni chiamata vengono forniti nei parametri della chiamata. In questa guida vengono utilizzati i seguenti tipi di contenuto:
-
-- Content-Type: application/json
-- Content-Type: application/ottet-stream
+Le richieste che contengono un payload (POST, PUT, PATCH) possono richiedere un&#39; `Content-Type` intestazione aggiuntiva. I valori accettati specifici per ogni chiamata vengono forniti nei parametri della chiamata.
 
 ## Tipi
 
@@ -65,7 +62,7 @@ Ad esempio, né JSON né CSV hanno un tipo data o ora. Di conseguenza, questi va
 
 La tabella seguente mostra le conversioni supportate durante l’assimilazione dei dati.
 
-| In entrata (riga) e Target (col) | Stringa | Byte | Breve | Intero | Long | Doppio | Data | Data-Ora | Oggetto | Mappa |
+| In entrata (riga) e destinazione (col) | Stringa | Byte | Breve | Intero | Long | Doppio | Data | Data-Ora | Oggetto | Mappa |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Stringa | X | X | X | X | X | X | X | X |  |  |
 | Byte | X | X | X | X | X | X |  |  |  |  |
@@ -176,7 +173,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’ID del batch in cui desiderate eseguire il caricamento. |
 | `{DATASET_ID}` | ID del set di dati di riferimento del batch. |
-| `{FILE_NAME}` | Nome del file da caricare. |
+| `{FILE_NAME}` | Nome del file da caricare. Questo percorso è il percorso in cui il file verrà salvato sul lato del Adobe . |
 
 **Richiesta**
 
@@ -196,7 +193,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. |
+| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. Questo percorso è il percorso locale del file, ad esempio `Users/sample-user/Downloads/sample.json`. |
 
 **Risposta**
 
@@ -311,7 +308,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’ID del batch in cui desiderate eseguire il caricamento. |
 | `{DATASET_ID}` | ID del set di dati di riferimento del batch. |
-| `{FILE_NAME}` | Nome del file da caricare. |
+| `{FILE_NAME}` | Nome del file da caricare. Questo percorso è il percorso in cui il file verrà salvato sul lato del Adobe . |
 
 **Richiesta**
 
@@ -331,7 +328,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. |
+| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. Questo percorso è il percorso locale del file, ad esempio `Users/sample-user/Downloads/sample.json`. |
 
 **Risposta**
 
@@ -484,7 +481,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’ID del batch in cui desiderate eseguire il caricamento. |
 | `{DATASET_ID}` | ID del set di dati di riferimento del batch. |
-| `{FILE_NAME}` | Nome del file da caricare. |
+| `{FILE_NAME}` | Nome del file da caricare. Questo percorso è il percorso in cui il file verrà salvato sul lato del Adobe . |
 
 **Richiesta**
 
@@ -506,7 +503,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | In numeri interi, l&#39;inizio e la fine dell&#39;intervallo richiesto. |
-| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. |
+| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. Questo percorso è il percorso locale del file, ad esempio `Users/sample-user/Downloads/sample.json`. |
 
 
 **Risposta**
@@ -734,7 +731,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’ID del batch in cui desiderate eseguire il caricamento. |
 | `{DATASET_ID}` | ID del set di dati di riferimento del batch. |
-| `{FILE_NAME}` | Nome del file da caricare. |
+| `{FILE_NAME}` | Nome del file da caricare. Questo percorso è il percorso in cui il file verrà salvato sul lato del Adobe . |
 
 **Richiesta**
 
@@ -754,7 +751,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. |
+| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. Questo percorso è il percorso locale del file, ad esempio `Users/sample-user/Downloads/sample.json`. |
 
 
 **Risposta**
@@ -941,7 +938,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’ID del batch in cui desiderate eseguire il caricamento. |
 | `{DATASET_ID}` | ID del set di dati di riferimento del batch. |
-| `{FILE_NAME}` | Nome del file da caricare. |
+| `{FILE_NAME}` | Nome del file da caricare. Questo percorso è il percorso in cui il file verrà salvato sul lato del Adobe . |
 
 **Richiesta**
 
@@ -961,7 +958,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. |
+| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. Questo percorso è il percorso locale del file, ad esempio `Users/sample-user/Downloads/sample.json`. |
 
 **Risposta**
 
