@@ -1,10 +1,11 @@
 ---
 title: Avvio rapido con Launch
-seo-title: ' Adobe Experience Platform Avvio rapido dell''SDK Web con Launch'
+seo-title: Avvio rapido di Adobe Experience Platform Web SDK con Launch
 description: Guida di avvio rapido per l'utilizzo dell'estensione SDK Web  Experience Platform per la raccolta dei dati
 seo-description: Guida di avvio rapido per l'utilizzo dell'estensione SDK Web  Experience Platform per la raccolta dei dati
+keywords: 1st-party domain;CNAME;schema;create schema;launch;aep web sdk extension;extension;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;
 translation-type: tm+mt
-source-git-commit: bc18ca26da37ecfca2ade9403be22d7de222facb
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 3%
@@ -14,10 +15,10 @@ ht-degree: 3%
 
 # Benvenuti
 
-Questa guida illustra i diversi modi in cui impostare l’SDK Web  Adobe Experience Platform in Launch. Per utilizzare questa funzione è necessario essere inseriti nella white list. Se vuoi entrare nella lista d&#39;attesa, contatta il tuo CSM.
+Questa guida illustra i diversi modi in cui impostare Adobe Experience Platform Web SDK in Launch. Per utilizzare questa funzione è necessario essere inseriti nella white list. Se vuoi entrare nella lista d&#39;attesa, contatta il tuo CSM.
 
-- Accertati che sia attivato un dominio di [prime parti (CNAME)](https://docs.adobe.com/content/help/it-IT/core-services/interface/ec-cookies/cookies-first-party.html) . Se hai già un CNAME per  Analytics, devi usarlo. Il test in fase di sviluppo funziona senza un CNAME, ma ne hai bisogno prima di andare in produzione.
-- Avere diritto a  Adobe Experience Platform. Se non hai acquistato Platform,  Adobe ti fornirà  Data Services Foundation da utilizzare in modo limitato con l&#39;SDK senza costi aggiuntivi.
+- Accertati che sia attivato un dominio di [prime parti (CNAME)](https://docs.adobe.com/content/help/it-IT/core-services/interface/ec-cookies/cookies-first-party.html) . Se hai già un CNAME per Analytics, devi usarlo. Il test in fase di sviluppo funziona senza un CNAME, ma ne hai bisogno prima di andare in produzione.
+- Avere diritto ad Adobe Experience Platform. Se non hai acquistato la piattaforma,  Adobe ti fornirà  Experience Platform Data Services Foundation da utilizzare in modo limitato con l&#39;SDK senza alcun costo aggiuntivo.
 - Utilizzate la versione più recente del servizio ID visitatori.
 
 ## Preparare uno schema
