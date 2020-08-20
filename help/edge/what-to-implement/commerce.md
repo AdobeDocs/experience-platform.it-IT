@@ -3,10 +3,11 @@ title: Prodotti
 seo-title: Prodotti di supporto con Adobe Experience Platform Web SDK
 description: Scoprite come aggiungere dati se avete prodotti o un carrello con  Experience Platform Web SDK
 seo-description: Scoprite come aggiungere dati se avete prodotti o un carrello con  Experience Platform Web SDK
+keywords: products;commerce;measures;measure;order;cartAbandons;checkouts;productListAdds;productListOpens;productListRemovals;productListReopens;productListViews;productViews;purchases;saveForLaters;currencyCode;payments;paymentAmount;paymentType;transactionID;priceTotal;purchaseID;purchaseOrderNumber;
 translation-type: tm+mt
-source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1312'
 ht-degree: 4%
 
 ---
@@ -18,8 +19,7 @@ Se sul sito sono presenti prodotti, si tratta di un insieme predefinito di eleme
 
 In questo documento viene utilizzato il mixin [ExperienceEvent Commerce Details](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) . La `commerce` miscelazione è suddivisa in due parti: l&#39; `commerce` oggetto e l&#39; `productListItems` array. L&#39; `commerce` oggetto consente di indicare quali azioni vengono eseguite sull&#39; `productListItems` array.
 
->[!Tip]
->
+>[!TIP]
 >
 >Se avete familiarità con  Adobe Analytics, The `commerce` è più correlato alla `events` variabile. La variabile `productListItems` è più strettamente correlata alla `products` variabile.
 
@@ -27,7 +27,7 @@ In questo documento viene utilizzato il mixin [ExperienceEvent Commerce Details]
 
 Di seguito è riportato un elenco di `measures` elementi disponibili nell&#39; `commerce` oggetto.
 
->[!Tip]
+>[!TIP]
 >
 >Una misura ha due campi: `id` e `value`. Nella maggior parte dei casi, sarà utilizzato solo il `value` campo (ad esempio, `'value':1`). Il `id` campo consente di impostare un identificatore univoco che consente di tenere traccia di quando la misura è stata inviata. Consulta la documentazione XDM per [Measure](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/measure.schema.md).
 
