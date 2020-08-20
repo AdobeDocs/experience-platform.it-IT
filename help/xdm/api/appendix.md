@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Appendice sviluppatore del Registro di sistema dello schema
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 3%
@@ -20,7 +20,7 @@ Questo documento fornisce informazioni supplementari relative all&#39;utilizzo d
 
 [!DNL Experience Data Model] (XDM) è una specifica documentata pubblicamente, spinta da  Adobe per migliorare l&#39;interoperabilità, l&#39;espressività e il potere delle esperienze digitali.  Adobe mantiene il codice sorgente e le definizioni XDM formali in un progetto [open source su GitHub](https://github.com/adobe/xdm/). Queste definizioni sono scritte in Notazione standard XDM, utilizzando la Notazione oggetto JSON-LD (JavaScript Object Notation for Linked Data) e lo schema JSON come grammatica per la definizione degli schemi XDM.
 
-Quando si esaminano le definizioni XDM formali nell&#39;archivio pubblico, è possibile notare che lo standard XDM è diverso da quello visualizzato nell&#39;Adobe Experience Platform . Ciò che vedete in [!DNL Experience Platform] è chiamato Modalità compatibilità e fornisce una semplice mappatura tra XDM standard e il modo in cui viene utilizzato all&#39;interno [!DNL Platform].
+Quando si esaminano le definizioni XDM formali nell&#39;archivio pubblico, è possibile notare che lo standard XDM è diverso da quello visualizzato in Adobe Experience Platform. Ciò che vedete in [!DNL Experience Platform] è chiamato Modalità compatibilità e fornisce una semplice mappatura tra XDM standard e il modo in cui viene utilizzato all&#39;interno [!DNL Platform].
 
 ### Funzionamento della modalità di compatibilità
 
@@ -37,7 +37,7 @@ Di seguito è riportato un confronto affiancato che mostra i campi relativi al c
   <td>
   <pre class="JSON language-JSON hljs">
         { "xdm:bornDate": { "title": "Data di nascita", "tipo": "string", "format": "date", }, "xdm:bornDayAndMonth": { "title": "Data di nascita", "tipo": "string", "pattern": "[0-1][0-9]-[0-9][0-9]", }, "xdm:bornYear": { "title": "Anno di nascita", "tipo": "integer", "Minimum": 1, "massimo": 32767 }
-      </pre>
+  </pre>
   </td>
   <td>
   <pre class="JSON language-JSON hljs">
@@ -49,7 +49,7 @@ Di seguito è riportato un confronto affiancato che mostra i campi relativi al c
 
 ### Perché è necessaria la modalità di compatibilità?
 
- Adobe Experience Platform è progettato per lavorare con più soluzioni e servizi, ciascuno con le proprie sfide e limitazioni tecniche (ad esempio, come alcune tecnologie gestiscono caratteri speciali). Per superare questi limiti, è stata sviluppata la Modalità di compatibilità.
+Adobe Experience Platform è progettato per lavorare con più soluzioni e servizi, ciascuno con le proprie problematiche e limitazioni tecniche (ad esempio, come alcune tecnologie gestiscono caratteri speciali). Per superare questi limiti, è stata sviluppata la Modalità di compatibilità.
 
 La maggior parte [!DNL Experience Platform] dei servizi, inclusi [!DNL Catalog], [!DNL Data Lake]e [!DNL Real-time Customer Profile] utilizzati [!DNL Compatibility Mode] al posto di XDM standard. L&#39; [!DNL Schema Registry] API utilizza anche [!DNL Compatibility Mode]e gli esempi in questo documento vengono visualizzati utilizzando [!DNL Compatibility Mode].
 
