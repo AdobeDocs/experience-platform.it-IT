@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Guida ai servizi intelligenti
 translation-type: tm+mt
-source-git-commit: 24449d0138ab449dbc01aecbbe9f70e05c781c89
+source-git-commit: e69f4e8ddc0fe5f7be2b2b2bd89c09efdfca8e75
 workflow-type: tm+mt
-source-wordcount: '67'
-ht-degree: 2%
+source-wordcount: '88'
+ht-degree: 5%
 
 ---
 
@@ -22,6 +22,14 @@ ht-degree: 2%
    * [Guida all&#39;interfaccia utente](attribution-ai/user-guide.md)
    * [Scopri informazioni approfondite](attribution-ai/discover-insights.md)
    * [Accesso ai punteggi](attribution-ai/download-scores.md)
+* Content and Commerce AI (versione beta) {#content-commerce-ai}
+   * [Panoramica](content-commerce-ai/overview.md)
+   * [Introduzione](content-commerce-ai/getting-started.md)
+   * Content and Commerce API AI{#api}
+      * [Estrazione colore](content-commerce-ai/api/color-extraction.md)
+      * [Estrazione di parole chiave](content-commerce-ai/api/keyword-extraction.md)
+      * [Classificazione del testo](content-commerce-ai/api/text-classification.md)
+      * [Similarità visiva](content-commerce-ai/api/visual-similarity.md)
 * AI cliente {#customer-ai}
    * [Panoramica](customer-ai/overview.md)
    * [Guida introduttiva all&#39;AI del cliente](customer-ai/getting-started.md)
@@ -31,4 +39,4 @@ ht-degree: 2%
       * [Scopri informazioni approfondite](customer-ai/user-guide/discover-insights.md)
       * [Creazione di segmenti utilizzando i punteggi AI dei clienti](customer-ai/user-guide/create-segment.md)
       * [Download dei punteggi](customer-ai/user-guide/download-scores.md)
-* [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
+* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-en)
