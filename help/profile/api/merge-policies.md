@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Unisci criteri - API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 0309a2d6da888a2a88af161977310f213c36a85d
 workflow-type: tm+mt
-source-wordcount: '2035'
+source-wordcount: '2381'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Endpoint criteri di unione
 
- Adobe Experience Platform consente di unire dati provenienti da più origini e combinarli per visualizzare una visione completa di ogni singolo cliente. Quando si uniscono questi dati, i criteri di unione sono le regole che [!DNL Platform] utilizzano per determinare in che modo i dati verranno classificati come priorità e quali dati verranno combinati per creare tale visualizzazione unificata. Utilizzando le API RESTful o l&#39;interfaccia utente, puoi creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la tua organizzazione. Questa guida illustra i passaggi per l&#39;utilizzo dei criteri di unione tramite l&#39;API. Per utilizzare i criteri di unione utilizzando l&#39;interfaccia utente, fare riferimento alla guida [utente dei criteri di](../ui/merge-policies.md)unione.
+Adobe Experience Platform consente di unire dati provenienti da più origini e combinarli per visualizzare una visione completa di ogni singolo cliente. Quando si uniscono questi dati, i criteri di unione sono le regole che [!DNL Platform] utilizzano per determinare in che modo i dati verranno classificati come priorità e quali dati verranno combinati per creare tale visualizzazione unificata. Utilizzando le API RESTful o l&#39;interfaccia utente, puoi creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la tua organizzazione. Questa guida illustra i passaggi per l&#39;utilizzo dei criteri di unione tramite l&#39;API. Per utilizzare i criteri di unione utilizzando l&#39;interfaccia utente, fare riferimento alla guida [utente dei criteri di](../ui/merge-policies.md)unione.
 
 ## Introduzione
 
@@ -56,7 +56,7 @@ L&#39;oggetto criteri di unione completo rappresenta un insieme di preferenze ch
 | `name` | Nome descrittivo per l&#39;identificazione del criterio di unione nelle viste elenco. |
 | `imsOrgId` | ID organizzazione a cui appartiene il criterio di unione |
 | `identityGraph` | [Oggetto grafico](#identity-graph) dell&#39;identità che indica il grafico dell&#39;identità da cui verranno ottenute le identità correlate. I frammenti di profilo trovati per tutte le identità correlate verranno uniti. |
-| `attributeMerge` | [Oggetto unione](#attribute-merge) attributi che indica il modo in cui il criterio di unione darà priorità ai valori degli attributi di profilo in caso di conflitti di dati. |
+| `attributeMerge` | [Oggetto unione](#attribute-merge) attributi che indica il modo in cui il criterio di unione darà priorità agli attributi del profilo in caso di conflitti di dati. |
 | `schema` | L&#39;oggetto [schema](#schema) su cui è possibile utilizzare il criterio di unione. |
 | `default` | Valore booleano che indica se il criterio di unione è il valore predefinito per lo schema specificato. |
 | `version` | [!DNL Platform] versione aggiornata del criterio di unione. Questo valore di sola lettura viene incrementato ogni volta che viene aggiornato un criterio di unione. |
@@ -111,7 +111,7 @@ Se `{IDENTITY_GRAPH_TYPE}` è uno dei seguenti casi:
 
 ### Unione attributi {#attribute-merge}
 
-Un frammento di profilo è l&#39;informazione di profilo per una sola identità inclusa nell&#39;elenco di identità esistenti per un particolare utente. Quando il tipo di grafico dell&#39;identità utilizzato genera più identità, è possibile che vi siano valori in conflitto per le proprietà del profilo e occorre specificare la priorità. Utilizzando `attributeMerge`, è possibile specificare quali valori del profilo di set di dati dare la priorità in caso di conflitto di unione.
+Un frammento di profilo è l&#39;informazione di profilo per una sola identità inclusa nell&#39;elenco di identità esistenti per un particolare utente. Quando il tipo di grafico dell&#39;identità utilizzato genera più identità, è possibile che vi siano attributi di profilo in conflitto e specificare la priorità. Utilizzando `attributeMerge`, è possibile specificare quali attributi di profilo assegnare la priorità in caso di conflitto di unione tra i set di dati di tipo Valore chiave (dati di record).
 
 **oggetto attributeMerge**
 
@@ -123,11 +123,11 @@ Un frammento di profilo è l&#39;informazione di profilo per una sola identità 
 
 Se `{ATTRIBUTE_MERGE_TYPE}` è uno dei seguenti casi:
 
-* **&quot;timestampOrdered&quot;**: (impostazione predefinita) Assegna priorità al profilo aggiornato per ultimo in caso di conflitto. Utilizzando questo tipo di unione, l&#39; `data` attributo non è obbligatorio.
-* **&quot;dataSetPrecedence&quot;** : Attribuire priorità ai frammenti di profilo in base al set di dati da cui provengono. Questo può essere utilizzato quando le informazioni presenti in un set di dati sono preferite o attendibili rispetto ai dati contenuti in un altro set di dati. Quando si utilizza questo tipo di unione, l&#39; `order` attributo è obbligatorio, in quanto elenca i set di dati in ordine di priorità.
-   * **&quot;order&quot;**: Quando si utilizza &quot;dataSetPrecedence&quot;, è necessario fornire un `order` array con un elenco di set di dati. Eventuali set di dati non inclusi nell&#39;elenco non verranno uniti. In altre parole, i set di dati devono essere esplicitamente elencati per essere uniti in un profilo. L&#39; `order` array elenca gli ID dei set di dati in ordine di priorità.
+* **`timestampOrdered`**: (impostazione predefinita) Assegna priorità al profilo aggiornato per ultimo in caso di conflitto. Utilizzando questo tipo di unione, l&#39; `data` attributo non è obbligatorio. `timestampOrdered` supporta inoltre marche temporali personalizzate che avranno precedenza durante l&#39;unione di frammenti di profilo all&#39;interno o tra set di dati. Per ulteriori informazioni, consulta la sezione Appendice sull’ [utilizzo di marche temporali](#custom-timestamps)personalizzate.
+* **`dataSetPrecedence`** : Attribuire priorità ai frammenti di profilo in base al set di dati da cui provengono. Questo può essere utilizzato quando le informazioni presenti in un set di dati sono preferite o attendibili rispetto ai dati contenuti in un altro set di dati. Quando si utilizza questo tipo di unione, l&#39; `order` attributo è obbligatorio, in quanto elenca i set di dati in ordine di priorità.
+   * **`order`**: Quando si utilizza &quot;dataSetPrecedence&quot;, è necessario fornire un `order` array con un elenco di set di dati. Eventuali set di dati non inclusi nell&#39;elenco non verranno uniti. In altre parole, i set di dati devono essere esplicitamente elencati per essere uniti in un profilo. L&#39; `order` array elenca gli ID dei set di dati in ordine di priorità.
 
-**Esempio di oggetto attributeMerge che utilizza il tipo dataSetPrecedence**
+**Esempio di oggetto attributeMerge con`dataSetPrecedence`tipo**
 
 ```json
     "attributeMerge": {
@@ -141,7 +141,7 @@ Se `{ATTRIBUTE_MERGE_TYPE}` è uno dei seguenti casi:
     }
 ```
 
-**Esempio di oggetto attributeMerge con tipo timestampOrdered**
+**Esempio di oggetto attributeMerge con`timestampOrdered`tipo**
 
 ```json
     "attributeMerge": {
@@ -151,9 +151,9 @@ Se `{ATTRIBUTE_MERGE_TYPE}` è uno dei seguenti casi:
 
 ### Schema {#schema}
 
-L&#39;oggetto schema specifica lo schema XDM per il quale viene creato il criterio di unione.
+L&#39;oggetto schema specifica lo schema Experience Data Model (XDM) per il quale viene creato il criterio di unione.
 
-**`schema`object **
+**`schema`object**
 
 ```json
     "schema": {
@@ -170,6 +170,8 @@ Se il valore di `name` è il nome della classe XDM su cui si basa lo schema asso
         "name": "_xdm.context.profile"
     }
 ```
+
+Per ulteriori informazioni su XDM e sull&#39;utilizzo degli schemi in  Experience Platform, consultare la panoramica [di sistema](../../xdm/home.md)XDM.
 
 ## Accedere ai criteri di unione {#access-merge-policies}
 
@@ -724,7 +726,42 @@ Una richiesta di eliminazione riuscita restituisce lo stato HTTP 200 (OK) e un c
 
 ## Passaggi successivi
 
-Ora che sai come creare e configurare criteri di unione per la tua organizzazione IMS, puoi utilizzarli per creare segmenti di pubblico dai tuoi [!DNL Real-time Customer Profile] dati. Per iniziare a definire e utilizzare i segmenti, consulta la documentazione [del servizio di segmentazione del Adobe Experience Platform](../../segmentation/home.md) .
+Ora che sai come creare e configurare criteri di unione per la tua organizzazione IMS, puoi utilizzarli per creare segmenti di pubblico dai [!DNL Real-time Customer Profile] dati. Per iniziare a definire e utilizzare i segmenti, consulta la documentazione [di](../../segmentation/home.md) Adobe Experience Platform Segmentation Service.
+
+## Appendice
+
+### Utilizzo di marche temporali personalizzate {#custom-timestamps}
+
+Poiché i record Profilo vengono assimilati  Experience Platform, al momento dell&#39;assimilazione viene ottenuta una marca temporale di sistema che viene aggiunta al record. Se `timestampOrdered` è selezionato come `attributeMerge` tipo per un criterio di unione, i profili vengono uniti in base alla marca temporale del sistema. In altre parole, l&#39;unione viene eseguita in base alla marca temporale per l&#39;inserimento del record nella piattaforma.
+
+Talvolta possono verificarsi casi di utilizzo, ad esempio il backfill dei dati o la verifica dell&#39;ordine corretto degli eventi se i record vengono ordinati in modo non corretto, se è necessario fornire una marca temporale personalizzata e fare in modo che il criterio di unione rispetti la marca temporale personalizzata invece che la marca temporale del sistema.
+
+Per utilizzare una marca temporale personalizzata, è necessario aggiungere allo schema del profilo il mixin [Dettagli controllo del sistema di origine](#mixin-details) esterna. Una volta aggiunta, la marca temporale personalizzata può essere compilata utilizzando il `xdm:lastUpdatedDate` campo. Quando un record viene assimilato con il `xdm:lastUpdatedDate` campo popolato,  Experience Platform utilizzerà tale campo per unire record o frammenti di profilo all&#39;interno e tra set di dati. Se non `xdm:lastUpdatedDate` è presente o non è popolato, la piattaforma continuerà a utilizzare la marca temporale del sistema.
+
+>[!NOTE]
+>
+>È necessario assicurarsi che la `xdm:lastUpdatedDate` marca temporale sia compilata quando si invia un PATCH sullo stesso record.
+
+Per istruzioni dettagliate sull&#39;utilizzo degli schemi tramite l&#39;API del Registro di sistema dello schema, inclusa l&#39;aggiunta di mixin agli schemi, vedere l&#39; [esercitazione per la creazione di uno schema tramite l&#39;API](../../xdm/tutorials/create-schema-api.md).
+
+Per utilizzare le marche temporali personalizzate utilizzando l&#39;interfaccia utente, consultare la sezione sull&#39; [uso delle marche temporali](../ui/merge-policies.md#custom-timestamps) personalizzate nella guida [utente dei criteri di](../ui/merge-policies.md)unione.
+
+#### Dettagli controllo sistema sorgente esterna Dettagli mix {#mixin-details}
+
+L&#39;esempio seguente mostra i campi compilati correttamente nel Mixin dei dettagli di controllo del sistema di origine esterna. Il JSON mixin completo può essere visualizzato anche nel repo [XDM (](https://github.com/adobe/xdm/blob/master/schemas/common/external-source-system-audit-details.schema.json) Public Experience Data Model) su GitHub.
+
+```json
+{
+  "xdm:createdBy": "{CREATED_BY}",
+  "xdm:createdDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastUpdatedBy": "{LAST_UPDATED_BY}",
+  "xdm:lastUpdatedDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastActivityDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastReferencedDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastViewedDate": "2018-01-02T15:52:25+00:00"
+ }
+```
+
 
 
 
