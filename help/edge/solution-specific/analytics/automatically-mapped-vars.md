@@ -1,10 +1,11 @@
 ---
-title: Variabili mappate automaticamente in  Analytics
-seo-title: Variabili mappate automaticamente in  Analytics con  Adobe Experience Platform Web SDK
-description: Scopri quali variabili vengono mappate automaticamente in  Analytics con  Experience Platform Web SDK
-seo-description: Scopri quali variabili vengono mappate automaticamente in  Analytics con  Experience Platform Web SDK
+title: Variabili mappate automaticamente in Analytics
+seo-title: Variabili mappate automaticamente in Analytics con Adobe Experience Platform Web SDK
+description: Scopri quali variabili vengono mappate automaticamente in Analytics con  Experience Platform Web SDK
+seo-description: Scopri quali variabili vengono mappate automaticamente in Analytics con  Experience Platform Web SDK
+keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '543'
 ht-degree: 2%
@@ -14,7 +15,7 @@ ht-degree: 2%
 
 # Variabili mappate automaticamente in [!DNL Analytics]
 
-Di seguito è riportato un elenco di variabili in cui il Adobe Experience Platform  [!DNL Edge Network] viene mappato automaticamente [!DNL Analytics].
+Di seguito è riportato un elenco di variabili in cui Adobe Experience Platform [!DNL Edge Network] esegue automaticamente la mappatura [!DNL Analytics].
 
 | Percorso campo XDM | [!DNL Analytics Query String] / Intestazione HTTP | Descrizione |
 | ---------- | ------------------------- | -------- |
