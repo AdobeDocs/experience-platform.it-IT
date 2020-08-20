@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica sull'accesso ai dati
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '1332'
 ht-degree: 3%
@@ -14,13 +14,13 @@ ht-degree: 3%
 
 # Dati del set di query tramite [!DNL Data Access] API
 
-Questo documento fornisce un&#39;esercitazione passo-passo che illustra come individuare, accedere e scaricare i dati memorizzati all&#39;interno di un dataset utilizzando l&#39; [!DNL Data Access] API in  Adobe Experience Platform. Verranno inoltre introdotte alcune delle caratteristiche uniche dell&#39; [!DNL Data Access] API, come il paging e i download parziali.
+Questo documento fornisce un&#39;esercitazione passo-passo che illustra come individuare, accedere e scaricare i dati memorizzati all&#39;interno di un dataset utilizzando l&#39; [!DNL Data Access] API in Adobe Experience Platform. Verranno inoltre introdotte alcune delle caratteristiche uniche dell&#39; [!DNL Data Access] API, come il paging e i download parziali.
 
 ## Introduzione
 
 Questa esercitazione spiega come creare e compilare un dataset. Per ulteriori informazioni, consulta l’esercitazione [sulla creazione dei](../../catalog/datasets/create.md) set di dati.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per effettuare correttamente chiamate alle API Platform.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per effettuare correttamente chiamate alle API della piattaforma.
 
 ### Lettura di chiamate API di esempio
 
@@ -365,7 +365,7 @@ HEAD /files/{FILE_ID}?path={FILE_NAME}
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `{FILE_ID}` | Identificatore del file. |
-| `{FILE_NAME`} | Nome del file (ad esempio, profile.parquet) |
+| `{FILE_NAME}` | Nome del file (ad esempio, profile.parquet) |
 
 **Richiesta**
 
@@ -396,7 +396,7 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `{FILE_ID}` | Identificatore del file. |
-| `{FILE_NAME`} | Il nome del file (ad esempio, profile.parquet). |
+| `{FILE_NAME}` | Il nome del file (ad esempio, profile.parquet). |
 
 **Richiesta**
 
