@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Creare un connettore dati di classificazione Adobe Analytics  nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: abb15e3daac4aebd46012822c790b056d0b3d2c1
+source-git-commit: e0d842b3c5d3b628e117c14d47d6c114b36484dd
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '587'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Questa esercitazione fornisce i passaggi per creare un connettore dati di classi
 
 Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM) System]](../../../../../xdm/home.md): Il framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
+* [[!DNL Experience Data Model] (XDM) Sistema](../../../../../xdm/home.md): Il framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
 * [[!DNL Profilo cliente in tempo reale]](../../../../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 * [[!DNL Sandbox]](../../../../../sandboxes/home.md):  Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
@@ -57,7 +57,7 @@ Dopo aver rivisto il flusso di dati, fai clic su **[!UICONTROL Finish]** e conse
 
 ![](../../../../images/tutorials/create/classifications/review.png)
 
-## Monitorare ed eliminare il flusso di dati delle classificazioni
+## Monitorare il flusso di dati delle classificazioni
 
 Una volta creato il flusso di dati, potete monitorare i dati che vengono acquisiti tramite di esso. Dalla **[!UICONTROL Catalog]** schermata, selezionate **[!UICONTROL Dataflows]** per visualizzare un elenco dei flussi definiti associati al vostro [!DNL Classifications] account.
 
@@ -69,13 +69,13 @@ Selezionare l&#39; **[!UICONTROL Target dataset]** utente a cui accedere.
 
 ![](../../../../images/tutorials/create/classifications/list-of-dataflows.png)
 
-Nella **[!UICONTROL Dataset activity]** pagina sono visualizzate informazioni sul set di dati di destinazione selezionato, con dettagli sullo stato del batch, l’ID del set di dati e lo schema. Selezionare **[!UICONTROL Delete dataset]** per eliminare.
+Nella **[!UICONTROL Dataset activity]** pagina sono visualizzate informazioni sul set di dati di destinazione selezionato, con dettagli sullo stato del batch, l’ID del set di dati e lo schema.
 
-![](../../../../images/tutorials/create/classifications/batch-screen.png)
+>[!IMPORTANT]
+>Anche se è possibile eliminare i set di dati per altri connettori di origine, al momento non è supportato per il connettore dati di classificazione di Analytics. Se elimini un dataset per errore, contatta  Assistenza clienti di Adobe.
 
-Viene visualizzata una finestra di dialogo per confermare l’eliminazione. Selezionare **[!UICONTROL Delete]** per completare.
+![](../../../../images/tutorials/create/classifications/dataset.png)
 
-![](../../../../images/tutorials/create/classifications/delete-confirm.png)
 
 ## Passaggi successivi
 
