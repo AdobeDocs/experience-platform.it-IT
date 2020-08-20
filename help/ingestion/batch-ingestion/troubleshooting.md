@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida alla risoluzione dei problemi di inserimento batch Adobe Experience Platform
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 9766cadee83e81bacc2abe6b13342ac95aae19a9
 workflow-type: tm+mt
-source-wordcount: '1335'
+source-wordcount: '1389'
 ht-degree: 1%
 
 ---
@@ -56,6 +56,18 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
                 "format": "json"
            }
     }'
+```
+
+### Perché i dati caricati non vengono visualizzati nel set di dati?
+
+Per visualizzare i dati nel set di dati, il batch deve essere contrassegnato come completo. Tutti i file da caricare devono essere caricati prima di contrassegnare il batch come completo. Di seguito è riportato un esempio di contrassegnazione di un batch come completato:
+
+```shell
+curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-api-key : {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 ### Come viene assimilato JSON multi-riga?
