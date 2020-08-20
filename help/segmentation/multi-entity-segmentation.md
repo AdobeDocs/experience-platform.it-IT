@@ -5,7 +5,7 @@ title: Segmentazione multi-entità
 topic: overview
 description: La segmentazione multi-entità è la capacità di estendere i dati del profilo con dati aggiuntivi basati su prodotti, store o altre classi non di profilo. Una volta connessi, i dati di altre classi diventano disponibili come se fossero nativi dello schema Profilo.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 La segmentazione multi-entità è la capacità di estendere [!DNL Profile] i dati con dati aggiuntivi basati su prodotti, store o altre classi non di profilo. Una volta connessi, i dati provenienti da classi aggiuntive diventano disponibili come se fossero nativi dello [!DNL Profile] schema.
 
-Per saperne di più sulla segmentazione multi-entità, continuate a leggere la documentazione e completate le vostre conoscenze guardando il video sottostante o esplorando la panoramica [della](./home.md)segmentazione.]
+Per saperne di più sulla segmentazione multi-entità, continuate a leggere la documentazione e completate le vostre conoscenze guardando il video sottostante o esplorando la panoramica [della](./home.md)segmentazione.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
 
