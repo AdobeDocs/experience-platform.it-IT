@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Raccogliere i dati del protocollo tramite connettori di origine e API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
+source-git-commit: c26b2b4256d8d1d23a285efbacd8b6c9e255cd18
 workflow-type: tm+mt
-source-wordcount: '1660'
+source-wordcount: '1669'
 ht-degree: 1%
 
 ---
@@ -645,7 +645,7 @@ curl -X POST \
 | `sourceConnectionIds` | L&#39;ID [connessione](#source) di origine recuperato in un passaggio precedente. |
 | `targetConnectionIds` | L&#39;ID [connessione di](#target-connection) destinazione recuperato in un passaggio precedente. |
 | `transformations.params.mappingId` | L’ID [](#mapping) mappatura recuperato in un passaggio precedente. |
-| `transformations.params.deltaColum` | Colonna designata utilizzata per distinguere tra dati nuovi ed esistenti. I dati incrementali verranno acquisiti in base alla marca temporale della colonna selezionata. |
+| `transformations.params.deltaColum` | Colonna designata utilizzata per distinguere tra dati nuovi ed esistenti. I dati incrementali verranno acquisiti in base alla marca temporale della colonna selezionata. Il formato supportato per `deltaColumn` l&#39;utilizzo di OData generico è `yyyy-MM-ddTHH:mm:ssZ`. |
 | `transformations.params.mappingId` | L&#39;ID di mappatura associato al database. |
 | `scheduleParams.startTime` | Ora di inizio per il flusso di dati in epoch time. |
 | `scheduleParams.frequency` | Frequenza con cui il flusso di dati raccoglie i dati. I valori accettabili sono: `once`, `minute`, `hour`, `day`o `week`. |
