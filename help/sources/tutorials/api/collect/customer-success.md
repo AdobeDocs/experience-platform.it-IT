@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Raccolta di dati da un sistema di successo cliente tramite connettori di origine e API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
+source-git-commit: 744f7f1c5203f3537e979c50d7f8e20c1e8c50a5
 workflow-type: tm+mt
-source-wordcount: '1697'
+source-wordcount: '1703'
 ht-degree: 1%
 
 ---
@@ -604,7 +604,9 @@ curl -X POST \
                 "name": "Copy",
                 "params": {
                     "deltaColumn": {
-                        "name": "date-time"
+                        "name": "updatedAt",
+                        "dateFormat": "YYYY-MM-DD",
+                        "timezone": "UTC"
                     }
                 }
             },
@@ -631,7 +633,7 @@ curl -X POST \
 | `sourceConnectionIds` | L&#39;ID [connessione](#source) di origine recuperato in un passaggio precedente. |
 | `targetConnectionIds` | L&#39;ID [connessione di](#target-connection) destinazione recuperato in un passaggio precedente. |
 | `transformations.params.mappingId` | L’ID [](#mapping) mappatura recuperato in un passaggio precedente. |
-| `transformations.params.deltaColum` | Colonna designata utilizzata per distinguere tra dati nuovi ed esistenti. I dati incrementali verranno acquisiti in base alla marca temporale della colonna selezionata. |
+| `transformations.params.deltaColum` | Colonna designata utilizzata per distinguere tra dati nuovi ed esistenti. I dati incrementali verranno acquisiti in base alla marca temporale della colonna selezionata. Il formato di data supportato per `deltaColumn` è `yyyy-MM-dd HH:mm:ss`. |
 | `transformations.params.mappingId` | L&#39;ID di mappatura associato al database. |
 | `scheduleParams.startTime` | Ora di inizio per il flusso di dati in epoch time. |
 | `scheduleParams.frequency` | Frequenza con cui il flusso di dati raccoglie i dati. I valori accettabili sono: `once`, `minute`, `hour`, `day`o `week`. |
