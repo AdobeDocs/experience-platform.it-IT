@@ -3,12 +3,12 @@ keywords: Awin Advertiser Conversion Tag extension;conversion tag;Awin;awin;AWIN
 title: Estensione Tag di conversione dell'inserzionista Awin
 seo-title: Estensione Tag di conversione dell'inserzionista Awin
 description: L'estensione Awin Advertiser Conversion Tag è una destinazione pubblicitaria  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: null
+seo-description: L'estensione Awin Advertiser Conversion Tag è una destinazione pubblicitaria  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 164c51e543d5eba11e4756723f3fecd84ec48f59
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 5%
+source-wordcount: '556'
+ht-degree: 4%
 
 ---
 
