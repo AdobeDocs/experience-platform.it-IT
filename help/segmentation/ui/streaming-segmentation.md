@@ -5,9 +5,9 @@ title: Segmentazione in streaming
 topic: ui guide
 description: La segmentazione in streaming su Adobe Experience Platform consente di eseguire la segmentazione in tempo quasi reale, concentrandosi sulla ricchezza dei dati. Con la segmentazione in streaming, la qualifica del segmento ora avviene quando i dati entrano in piattaforma, eliminando la necessità di pianificare ed eseguire processi di segmentazione. Grazie a questa funzionalità, ora è possibile valutare la maggior parte delle regole del segmento quando i dati vengono passati in Piattaforma, il che significa che l'appartenenza al segmento verrà mantenuta aggiornata senza eseguire processi di segmentazione pianificati.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: d0323fd2e769f97fa738ea55e7aba1d7ae821051
 workflow-type: tm+mt
-source-wordcount: '725'
+source-wordcount: '759'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,9 @@ Dopo aver creato un segmento abilitato per lo streaming, potete visualizzare i d
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-Nello specifico, **[!UICONTROL total qualified audience size]** vengono visualizzati i dettagli relativi all&#39;evento. Se un processo è stato eseguito nelle ultime 24 ore, viene visualizzato il **[!UICONTROL Total qualified audience size]** modulo dal processo, oltre a un grafico a linee per l’audience aggiunta. In caso contrario, **[!UICONTROL Total estimated audience size]** viene visualizzato, oltre a una linea di tendenza della visualizzazione.
+Nello specifico, **[!UICONTROL total qualified audience size]** vengono visualizzati i dettagli relativi all&#39;evento. Mostra **[!UICONTROL Total qualified audience size]** il numero totale di audience qualificate dall&#39;ultima esecuzione del processo del segmento completata. Se un processo del segmento non è stato completato entro le ultime 24 ore, il numero di audience verrà preso da una stima.
+
+Sotto c&#39;è un grafico a linee che mostra il numero di segmenti qualificati e non qualificati nelle ultime 24 ore. Il menu a discesa può essere modificato per visualizzare le ultime 24 ore, la settimana scorsa o gli ultimi 30 giorni.
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
