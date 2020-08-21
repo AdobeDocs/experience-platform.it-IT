@@ -5,9 +5,9 @@ title: Estrazione colore
 topic: Developer guide
 description: Il servizio di estrazione del colore, se viene data un'immagine, può calcolare l'istogramma dei colori in pixel e ordinarli in base ai colori dominanti in bucket.
 translation-type: tm+mt
-source-git-commit: e69f4e8ddc0fe5f7be2b2b2bd89c09efdfca8e75
+source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '689'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Questo metodo utilizza un estrattore in primo piano basato su un apprendimento a
 
 L&#39;immagine seguente è stata utilizzata nell&#39;esempio illustrato in questo documento:
 
-![immagine di prova](../images/test_image.jpeg)
+![immagine di prova](../images/QQAsset1.jpg)
 
 **Formato API**
 
@@ -47,7 +47,7 @@ La richiesta seguente estrae i colori da un’immagine in base ai parametri di i
 
 >[!CAUTION]
 >
->`analyzer_id` determina quale [!DNL Sensei Content Framework] viene utilizzato. Prima di effettuare la richiesta, verificare di disporre dei dati necessari `analyzer_id` .
+>`analyzer_id` determina quale [!DNL Sensei Content Framework] viene utilizzato. Prima di effettuare la richiesta, verificare di disporre dei dati necessari `analyzer_id` . Per il servizio di estrazione del colore, l’ `analyzer_id` ID è: `Feature:image-color-histogram:Service-6fe52999293e483b8e4ae9a95f1b81a7`
 
 ```SHELL
 curl -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -86,7 +86,7 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Proprietà | Descrizione | Obbligatorio |
 | --- | --- | --- |
-| `analyzer_id` | L’ID [!DNL Sensei] del servizio in cui viene distribuita la richiesta. Questo ID determina quale dei due [!DNL Sensei Content Frameworks] vengono utilizzati. | Sì |
+| `analyzer_id` | L’ID [!DNL Sensei] del servizio in cui viene distribuita la richiesta. Questo ID determina quale dei due [!DNL Sensei Content Frameworks] vengono utilizzati. Per i servizi personalizzati, contattate il team di Content and Commerce AI per configurare un ID personalizzato. | Sì |
 | `application-id` | ID dell’applicazione creata. | Sì |
 | `data` | Un array che contiene oggetti JSON. Ciascun oggetto nell&#39;array rappresenta un&#39;immagine. Eventuali parametri passati come parte di questa matrice sovrascrivono i parametri globali specificati al di fuori della `data` matrice. Qualsiasi proprietà rimanente descritta in questa tabella può essere ignorata dall&#39;interno `data`. | Sì |
 | `content-id` | L&#39;ID univoco per l&#39;elemento dati restituito nella risposta. Se non viene passato, viene assegnato un ID generato automaticamente. | No |
@@ -106,7 +106,7 @@ Una risposta corretta restituisce i dettagli dei colori estratti. Ogni colore è
 - Percentuale di questo colore rispetto all’immagine
 - Il valore RGB del colore
 
-Nel primo oggetto di esempio riportato di seguito, il valore `feature_value` di `White,0.82,239,239,239` indica che il colore rilevato è bianco, il bianco si trova nell&#39;82% dell&#39;immagine e ha un valore RGB di 239.239.239.
+Nel primo oggetto di esempio riportato di seguito, il valore `feature_value` di `White,0.59,251,251,243` indica che il colore rilevato è bianco, il bianco si trova nel 59% dell&#39;immagine e ha un valore RGB di 251.251.243.
 
 ```json
 {
@@ -124,15 +124,19 @@ Nel primo oggetto di esempio riportato di seguito, il valore `feature_value` di 
             "feature_value": [
               {
                 "feature_name": "color_name_and_rgb",
-                "feature_value": "White,0.82,239,239,239"
+                "feature_value": "White,0.59,251,251,243"
               },
               {
-                "feature_value": "Dark_Blue,0.11,41,60,86",
+                "feature_value": "Orange,0.30,248,169,48",
                 "feature_name": "color_name_and_rgb"
               },
               {
                 "feature_name": "color_name_and_rgb",
-                "feature_value": "Royal_Blue,0.08,63,91,123"
+                "feature_value": "Mustard,0.08,251,199,77"
+              },
+              {
+                "feature_name": "color_name_and_rgb",
+                "feature_value": "Gold,0.02,250,191,55"
               }
             ],
             "feature_name": "color"
