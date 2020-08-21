@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Raccolta di dati di automazione marketing tramite connettori di origine e API
 topic: overview
 translation-type: tm+mt
-source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
+source-git-commit: 744f7f1c5203f3537e979c50d7f8e20c1e8c50a5
 workflow-type: tm+mt
-source-wordcount: '1658'
+source-wordcount: '1664'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ Questa esercitazione richiede inoltre di conoscere i seguenti componenti di Adob
 * [Caricamento](../../../../ingestion/batch-ingestion/overview.md)batch: L&#39;API Batch Ingestion consente di assimilare i dati in [!DNL Experience Platform] file batch.
 * [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegarsi correttamente a un sistema di automazione di marketing utilizzando l&#39; [!DNL Flow Service] API.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegarsi correttamente a un sistema di automazione del marketing utilizzando l&#39; [!DNL Flow Service] API.
 
 ### Lettura di chiamate API di esempio
 
@@ -600,7 +600,11 @@ curl -X POST \
             {
                 "name": "Copy",
                 "params": {
-                    "deltaColumn": "date-time"
+                    "deltaColumn": {
+                        "name": "updatedAt",
+                        "dateFormat": "YYYY-MM-DD",
+                        "timezone": "UTC"
+                    }
                 }
             },
             {
@@ -625,7 +629,7 @@ curl -X POST \
 | `sourceConnectionIds` | L&#39;ID [connessione](#source) di origine recuperato in un passaggio precedente. |
 | `targetConnectionIds` | L&#39;ID [connessione di](#target-connection) destinazione recuperato in un passaggio precedente. |
 | `transformations.params.mappingId` | L’ID [](#mapping) mappatura recuperato in un passaggio precedente. |
-| `transformations.params.deltaColum` | Colonna designata utilizzata per distinguere tra dati nuovi ed esistenti. I dati incrementali verranno acquisiti in base alla marca temporale della colonna selezionata. |
+| `transformations.params.deltaColum` | Colonna designata utilizzata per distinguere tra dati nuovi ed esistenti. I dati incrementali verranno acquisiti in base alla marca temporale della colonna selezionata. Il formato di data supportato per `deltaColumn` è `yyyy-MM-dd HH:mm:ss`. |
 | `transformations.params.mappingId` | L&#39;ID di mappatura associato al database. |
 | `scheduleParams.startTime` | Ora di inizio per il flusso di dati in epoch time. |
 | `scheduleParams.frequency` | Frequenza con cui il flusso di dati raccoglie i dati. I valori accettabili sono: `once`, `minute`, `hour`, `day`o `week`. |
