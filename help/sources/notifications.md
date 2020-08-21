@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Notifiche di esecuzione del flusso
 topic: overview
 translation-type: tm+mt
-source-git-commit: a014a5efeebfcce5c36a9ea87f690bdcd605ef61
+source-git-commit: b5b785d8415c15e3acb9e1155811a66c51477717
 workflow-type: tm+mt
 source-wordcount: '859'
 ht-degree: 1%
@@ -35,7 +35,7 @@ Questo documento richiede anche una buona conoscenza dei webhooks e di come coll
 
 ## Registrazione del webhook
 
-Per ricevere le notifiche sullo stato dell&#39;esecuzione di flusso, dovete registrare un webhook specificando un URL webhook univoco come parte dei dettagli di registrazione dell&#39;evento. Per collegare un webhook all&#39; [!DNL I/O Events] iscrizione, visita il servizio [](https://webhook.site/) webhook e copia l&#39;URL univoco fornito.
+Per ricevere le notifiche sullo stato dell&#39;esecuzione del flusso, è necessario registrare un webhook specificando un URL webhook univoco come parte dei dettagli di registrazione dell&#39;evento. Per collegare un webhook all&#39; [!DNL I/O Events] iscrizione, visita il servizio [](https://webhook.site/) webhook e copia l&#39;URL univoco fornito.
 
 ![gancio](./images/notifications/webhook-url.png)
 
