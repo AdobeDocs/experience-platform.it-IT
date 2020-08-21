@@ -3,12 +3,12 @@ keywords: gtag;google gtag;google extension;google gtag extension;GTAG
 title: Estensione Google Gtag
 seo-title: Estensione Google Gtag
 description: L'estensione Gtag di Google è una destinazione pubblicitaria nel  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: null
+seo-description: L'estensione Gtag di Google è una destinazione pubblicitaria nel  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 164c51e543d5eba11e4756723f3fecd84ec48f59
 workflow-type: tm+mt
-source-wordcount: '535'
-ht-degree: 5%
+source-wordcount: '563'
+ht-degree: 4%
 
 ---
 
