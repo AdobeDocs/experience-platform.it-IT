@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Iscrizione agli eventi di assimilazione dei dati
 topic: overview
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '805'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Notifiche di assimilazione dei dati
 
-Il processo di assimilazione dei dati in  Adobe Experience Platform consiste di più passaggi. Una volta identificati i file di dati in cui è necessario eseguire l&#39;assimilazione, [!DNL Platform]il processo di assimilazione inizia e ogni passaggio si verifica consecutivamente fino a quando i dati non vengono correttamente acquisiti o non hanno esito negativo. Il processo di assimilazione può essere avviato utilizzando l&#39;API [di inserimento dati](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) Adobe Experience Platform o utilizzando l&#39;interfaccia [!DNL Experience Platform] utente.
+Il processo di assimilazione dei dati in Adobe Experience Platform consiste di più passaggi. Una volta identificati i file di dati in cui è necessario eseguire l&#39;assimilazione, [!DNL Platform]il processo di assimilazione inizia e ogni passaggio si verifica consecutivamente fino a quando i dati non vengono correttamente acquisiti o non hanno esito negativo. Il processo di inserimento può essere avviato utilizzando l&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) Adobe Experience Platform Data Ingestion o l&#39;interfaccia [!DNL Experience Platform] utente.
 
 I dati caricati in [!DNL Platform] devono passare attraverso più passaggi per raggiungere la destinazione, l&#39;archivio [!DNL Data Lake] o l&#39;archivio [!DNL Real-time Customer Profile] dati. Ogni passaggio prevede l&#39;elaborazione dei dati, la convalida dei dati e la memorizzazione dei dati prima di passare al passaggio successivo. A seconda della quantità di dati che vengono acquisiti, questo può diventare un processo che richiede molto tempo ed è sempre possibile che il processo non riesca a causa di errori di convalida, semantica o elaborazione. In caso di errore, i problemi relativi ai dati devono essere risolti e l&#39;intero processo di assimilazione deve essere riavviato utilizzando i file di dati corretti.
 
@@ -28,7 +28,7 @@ Di seguito è riportato un elenco delle notifiche di stato relative all’inseri
 >
 >È disponibile un solo argomento evento per tutte le notifiche di assimilazione dei dati. Per distinguere tra stati diversi, è possibile utilizzare il codice evento.
 
-| Platform Service | Stato | Descrizione evento | Codice evento |
+| Servizio piattaforma | Stato | Descrizione di un evento | Codice evento |
 | ---------------- | ------ | ----------------- | ---------- |
 | Destinazione dati | success | Ingestione - Batch completato | ing_load_success |
 | Destinazione dati | fallimento | Ingestione - Batch non riuscito | ing_load_failure |
@@ -39,7 +39,7 @@ Di seguito è riportato un elenco delle notifiche di stato relative all’inseri
 
 ## Schema payload di notifica
 
-Lo schema dell&#39;evento di notifica dell&#39;assimilazione dei dati è uno schema [!DNL Experience Data Model] (XDM) contenente campi e valori che forniscono dettagli sullo stato dei dati da assimilare. Per visualizzare lo schema [!DNL GitHub] di payload di [notifica più recente, visitare il](https://github.com/adobe/xdm/blob/master/schemas/common/notifications/ingestion.schema.json)repo pubblico XDM.
+Lo schema dell&#39;evento di notifica dell&#39;assimilazione dei dati è uno schema [!DNL Experience Data Model] (XDM) contenente campi e valori che forniscono dettagli sullo stato dei dati da assimilare. Per visualizzare lo schema [!DNL GitHub] di payload di [notifica più recente, visitare il](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json)repo pubblico XDM.
 
 ## Iscriviti alle notifiche sullo stato di inserimento dei dati
 
@@ -47,7 +47,7 @@ Attraverso [eventi](https://www.adobe.io/apis/experienceplatform/events.html)I/O
 
 ### Creare un nuovo progetto in  Adobe Developer Console
 
-Andate a [console](https://www.adobe.com/go/devs_console_ui) Sviluppatore di Adobe ed effettuate l&#39;accesso con il vostro Adobe ID . Attenetevi quindi ai passaggi descritti nell&#39;esercitazione sulla [creazione di un progetto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vuoto nella documentazione di  Adobe Developer Console.
+Andate a [console](https://www.adobe.com/go/devs_console_ui) per sviluppatori di Adobi ed effettuate l&#39;accesso con il vostro Adobe ID . Attenetevi quindi ai passaggi descritti nell&#39;esercitazione sulla [creazione di un progetto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vuoto nella documentazione di  Adobe Developer Console.
 
 ### Aggiunta di [!DNL Experience Platform] eventi al progetto
 
