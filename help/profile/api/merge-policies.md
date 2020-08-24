@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Unisci criteri - API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: 0309a2d6da888a2a88af161977310f213c36a85d
+source-git-commit: 2c83e282a7674ed6f36c8608035ddf19d88f0433
 workflow-type: tm+mt
-source-wordcount: '2381'
+source-wordcount: '2392'
 ht-degree: 1%
 
 ---
@@ -726,9 +726,11 @@ Una richiesta di eliminazione riuscita restituisce lo stato HTTP 200 (OK) e un c
 
 ## Passaggi successivi
 
-Ora che sai come creare e configurare criteri di unione per la tua organizzazione IMS, puoi utilizzarli per creare segmenti di pubblico dai [!DNL Real-time Customer Profile] dati. Per iniziare a definire e utilizzare i segmenti, consulta la documentazione [di](../../segmentation/home.md) Adobe Experience Platform Segmentation Service.
+Ora che sai come creare e configurare criteri di unione per la tua organizzazione IMS, puoi utilizzarli per creare segmenti di pubblico dai tuoi [!DNL Real-time Customer Profile] dati. Per iniziare a definire e utilizzare i segmenti, consulta la documentazione [di](../../segmentation/home.md) Adobe Experience Platform Segmentation Service.
 
 ## Appendice
+
+Questa sezione fornisce informazioni supplementari relative all&#39;utilizzo dei criteri di unione.
 
 ### Utilizzo di marche temporali personalizzate {#custom-timestamps}
 
