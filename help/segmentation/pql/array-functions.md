@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funzioni di array, elenco e set
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 0fc356b67af4d34e35cd9329385ec284d9336953
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '734'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # Funzioni di array, elenco e set
 
-[!DNL Profile Query Language] (PQL) offre funzioni che semplificano l&#39;interazione con array, elenchi e stringhe. Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella panoramica [Lingua query](./overview.md)profilo.
+[!DNL Profile Query Language] (PQL) offre funzioni che semplificano l&#39;interazione con array, elenchi e stringhe. Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
 
 ## In
 
@@ -74,7 +74,7 @@ La seguente query PQL definisce le persone i cui colori preferiti includono alme
 person.favoriteColors.intersects(["red", "blue", "green"])
 ```
 
-## Intersezione
+## Intersection
 
 La `intersection` funzione viene utilizzata per determinare i membri comuni di due array o elenchi.
 
@@ -228,7 +228,7 @@ La seguente query PQL crea una nuova matrice di numeri e quadrati il valore dei 
 numbers.map(square)
 ```
 
-## Primo `n` array
+## Primo `n` array {#first-n}
 
 La `topN` funzione viene utilizzata per restituire i primi `N` elementi di un array, se ordinati in ordine crescente in base alla specifica espressione numerica.
 
@@ -288,7 +288,7 @@ La `head` funzione viene utilizzata per restituire il primo elemento nell&#39;ar
 
 **Esempio**
 
-La seguente query PQL restituisce il primo dei primi cinque ordini con il prezzo più alto. Ulteriori informazioni sulla `topN` funzione sono reperibili nella [prima `n` sezione della matrice](#first-n-in-array) .
+La seguente query PQL restituisce il primo dei primi cinque ordini con il prezzo più alto. Ulteriori informazioni sulla `topN` funzione sono reperibili nella [prima `n` sezione della matrice](#first-n) .
 
 ```sql
 orders.topN(price, 5).head()
