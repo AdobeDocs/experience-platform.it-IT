@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint processi di esportazione
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 6ddb420ad3c4df3096dac456c58afc7a4916ce51
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1521'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Endpoint processi di esportazione
 
-I processi di esportazione sono processi asincroni utilizzati per mantenere i membri del segmento di pubblico nei set di dati. Potete utilizzare l&#39; `/export/jobs` endpoint nell&#39;API di segmentazione  Adobe Experience Platform, che consente di recuperare, creare e annullare i processi di esportazione a livello di programmazione.
+I processi di esportazione sono processi asincroni utilizzati per mantenere i membri del segmento di pubblico nei set di dati. Potete utilizzare l&#39; `/export/jobs` endpoint nell&#39;API di segmentazione di Adobe Experience Platform, che consente di recuperare, creare e annullare i processi di esportazione a livello di programmazione.
 
 >[!NOTE]
 >
@@ -268,6 +268,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
     },
     "schema":{
         "name": "_xdm.context.profile"
+    },
+    "evaluationInfo": {
+        "segmentation": true
     }
 }'
 ```
@@ -286,6 +289,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `additionalFields.eventList` | Controlla i campi evento delle serie temporali esportati per oggetti secondari o associati fornendo una o più delle seguenti impostazioni:<ul><li>`fields`: Controllare i campi da esportare.</li><li>`filter`: Specifica i criteri che limitano i risultati inclusi dagli oggetti associati. Si attende un valore minimo richiesto per l&#39;esportazione, in genere una data.</li><li>`filter.fromIngestTimestamp`: Filtra gli eventi della serie temporale a quelli che sono stati acquisiti dopo la marca temporale fornita. Questo non è il momento dell’evento stesso ma il momento dell’inserimento degli eventi.</li><li>`filter.toIngestTimestamp`: Filtra la marca temporale a quelle che sono state caricate prima della marca temporale specificata. Questo non è il momento dell’evento stesso ma il momento dell’inserimento degli eventi.</li></ul> |
 | `destination` | **(Obbligatorio)** Informazioni sui dati esportati:<ul><li>`datasetId`: **(Obbligatorio)** L&#39;ID del set di dati in cui devono essere esportati i dati.</li><li>`segmentPerBatch`: *(Facoltativo)* Un valore booleano che, se non viene fornito, per impostazione predefinita è &quot;false&quot;. Il valore &quot;false&quot; esporta tutti gli ID segmento in un unico ID batch. Il valore &quot;true&quot; esporta un ID segmento in un ID batch. Tenete presente che l’impostazione del valore su &quot;true&quot; può influire sulle prestazioni di esportazione batch.</li></ul> |
 | `schema.name` | **(Obbligatorio)** Il nome dello schema associato al dataset in cui devono essere esportati i dati. |
+| `evaluationInfo.segmentation` | *(Facoltativo)* Un valore booleano che, se non viene fornito, utilizza per impostazione predefinita `false`. Un valore di `true` indica che la segmentazione deve essere eseguita nel processo di esportazione. |
 
 **Risposta**
 
