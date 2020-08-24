@@ -5,7 +5,7 @@ title: Rispetto delle eccezioni
 topic: overview
 description: ' Experience Platform consente ai clienti di inviare richieste di rifiuto relative all''utilizzo e all''archiviazione dei loro dati all''interno del profilo cliente in tempo reale]. Queste richieste di rinuncia fanno parte dell''accordo sulla tutela della privacy dei consumatori (CCPA) della California, che conferisce ai residenti della California il diritto di accedere ai propri dati personali ed eliminarli e di sapere se i loro dati personali sono venduti o divulgati (e a chi). '
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 0fc356b67af4d34e35cd9329385ec284d9336953
 workflow-type: tm+mt
 source-wordcount: '987'
 ht-degree: 0%
@@ -45,7 +45,7 @@ Di seguito è riportata un&#39;immagine di esempio con i mixin di rinuncia aggiu
 
 La struttura di ciascun mixin, nonché una descrizione dei campi che contribuiscono allo schema, sono descritti più dettagliatamente nelle sezioni seguenti.
 
-### [!DNL Profile Privacy]
+### [!DNL Profile Privacy] {#profile-privacy}
 
 Il [!DNL Profile Privacy] mixin consente di acquisire due tipi di richieste di disattivazione CCPA da parte dei clienti:
 
@@ -69,7 +69,7 @@ Il [!DNL Profile Privacy] mixin contiene i campi seguenti:
 
 Per visualizzare l&#39;intera struttura del [!DNL Profile Privacy] mixin, fare riferimento all&#39;archivio [GitHub pubblico](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) XDM oppure visualizzare l&#39;anteprima del mixin utilizzando l&#39;interfaccia utente della piattaforma.
 
-### [!DNL Profile Preferences Details]
+### [!DNL Profile Preferences Details] {#profile-preferences-details}
 
 Il [!DNL Profile Preferences Details] mixin fornisce diversi campi che rappresentano le preferenze per i profili dei clienti (ad esempio il formato e-mail, la lingua preferita e il fuso orario). Uno dei campi inclusi in questo mixin, OptInOut (`optInOut`), consente di impostare i valori di rifiuto per i singoli canali.
 
@@ -130,6 +130,6 @@ In some instances, such as building a segment of people who have opted out, it m
 
 ## Passaggi successivi
 
-Per ulteriori informazioni sulla segmentazione, comprese quelle relative alle definizioni dei segmenti e alle audience mediante l&#39;API e l&#39;interfaccia utente, si prega di iniziare leggendo la panoramica [della](./home.md)segmentazione.
+Per ulteriori informazioni sulla segmentazione, comprese quelle relative alle definizioni dei segmenti e alle audience tramite l&#39;API e l&#39;interfaccia utente, si prega di iniziare leggendo la panoramica [della](./home.md)segmentazione.
 
 Per ulteriori informazioni sulla privacy dei dati all&#39;interno [!DNL Platform], compreso come [!DNL Privacy Service] facilitare la conformità automatizzata alle normative sulla privacy legali e organizzative, fare riferimento alla documentazione [!DNL Privacy Service](../privacy-service/home.md).
