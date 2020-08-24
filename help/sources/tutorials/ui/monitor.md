@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Monitorare account e flussi di dati
 topic: overview
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '821'
 ht-degree: 0%
 
 ---
@@ -106,7 +106,7 @@ Questa sezione include anche un&#39;anteprima della colonna che contiene l&#39;e
 
 ![Anteprima-errore-diagnostica](../../images/tutorials/monitor/preview-error-diagnostics.png)
 
-Dopo aver visualizzato l&#39;anteprima degli errori, potete selezionare **[!UICONTROL Download]** dall&#39;interno del pannello di panoramica delle esecuzioni dei dati **[]** UICONTROL per accedere alla diagnostica completa degli errori e scaricare il file manifesto. Per ulteriori informazioni, consultate i documenti sulla diagnostica [degli](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) errori e [il download dei metadati](../../../ingestion/batch-ingestion/partial.md#download-metadata) .
+Dopo aver visualizzato l’anteprima degli errori, potete selezionare **[!UICONTROL Download]** dal **[!UICONTROL dataflow runs overview]** pannello per accedere alla diagnostica completa degli errori e scaricare il file manifesto. Per ulteriori informazioni, consultate i documenti sulla diagnostica [degli](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) errori e [il download dei metadati](../../../ingestion/batch-ingestion/partial.md#download-metadata) .
 
 ![Anteprima-errore-diagnostica](../../images/tutorials/monitor/download.png)
 
