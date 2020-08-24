@@ -5,9 +5,9 @@ title: Creazione di un segmento
 topic: tutorial
 description: Questo documento fornisce un'esercitazione per lo sviluppo, il test, la visualizzazione in anteprima e il salvataggio di una definizione di segmento mediante l'API di Adobe Experience Platform Segmentation Service.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '894'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Creazione di un segmento
 
-Questo documento fornisce un&#39;esercitazione per lo sviluppo, il test, l&#39;anteprima e il salvataggio di una definizione di segmento mediante l&#39;API [](../api/getting-started.md)DNL Adobe Experience Platform Segmentation Service.
+Questo documento fornisce un’esercitazione per lo sviluppo, il test, l’anteprima e il salvataggio di una definizione di segmento tramite [!DNL Adobe Experience Platform Segmentation Service API](../api/getting-started.md).
 
 Per informazioni su come creare segmenti utilizzando l’interfaccia utente, consulta la guida [di](../ui/overview.md)Segment Builder (Generatore di segmenti).
 
@@ -84,7 +84,7 @@ La dimensione del campione dipende dal numero complessivo di entità nell&#39;ar
 | Da 1 a 20 milioni | 1 milione |
 | Oltre 20 milioni | 5% del totale |
 
-Le stime generalmente vengono eseguite su un intervallo di 10-15 secondi, a partire da una stima approssimativa e affinamento man mano che vengono letti più record.
+Le stime generalmente vengono eseguite su un periodo di 10-15 secondi, a partire da una stima approssimativa e con un perfezionamento man mano che vengono letti più record.
 
 ### Creare un processo di anteprima
 
