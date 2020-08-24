@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Funzioni stringa
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '757'
+source-wordcount: '754'
 ht-degree: 6%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 # Funzioni stringa
 
-[!DNL Profile Query Language] (PQL) offre funzioni che semplificano l&#39;interazione con le stringhe. Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella panoramica [Lingua query](./overview.md)profilo.
+[!DNL Profile Query Language] (PQL) offre funzioni che semplificano l&#39;interazione con le stringhe. Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
 
 ## Simile
 
@@ -135,7 +135,7 @@ La seguente query PQL determina, con distinzione tra maiuscole e minuscole, se l
 person.emailAddress.doesNotEndWith(".com")
 ```
 
-## Contiene
+## Contains
 
 La `contains` funzione viene utilizzata per determinare se una stringa contiene una sottostringa specificata.
 
