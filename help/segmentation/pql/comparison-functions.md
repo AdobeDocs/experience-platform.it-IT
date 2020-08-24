@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Funzioni di confronto
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 5%
+source-wordcount: '292'
+ht-degree: 10%
 
 ---
 
 
 # Funzioni di confronto
 
-Le funzioni di confronto sono utilizzate per confrontare espressioni e valori diversi, restituendo `true` o `false` di conseguenza. Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella panoramica [Lingua query](./overview.md)profilo.
+Le funzioni di confronto sono utilizzate per confrontare espressioni e valori diversi, restituendo `true` o `false` di conseguenza. Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
 
 ## È uguale a
 
