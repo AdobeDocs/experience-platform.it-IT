@@ -5,9 +5,9 @@ title: Panoramica della lingua query profilo (PQL)
 topic: developer guide
 description: Questa guida fornisce una panoramica generale del linguaggio PQL, con linee guida per la formattazione e con espressioni PQL di esempio.
 translation-type: tm+mt
-source-git-commit: 691af873e0753217b9e7566042c508d9d9b8d8d5
+source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '705'
 ht-degree: 2%
 
 ---
@@ -66,7 +66,7 @@ PQL supporta i seguenti tipi letterali:
 | Intero | Tipo di dati che rappresenta un numero intero. Può essere positivo, negativo o zero. | `-201`, `0`, `412` |
 | Doppio | Un tipo di dati che rappresenta qualsiasi numero reale. Può essere positivo, negativo o zero. | `-51.24`, `3.14`, `0.6942058` |
 | Data | Tipo di dati che può essere utilizzato per creare date basate su anno, mese e giorno come parametri interi. È formattato come `date(year, month, day)` | `date(2020, 3, 14)` |
-| Matrice | Tipo di dati composto da un gruppo di altri valori letterali. Utilizza parentesi quadre per raggruppare e virgole per delimitare valori diversi. <br> **Nota:** Non è possibile accedere direttamente alle proprietà degli elementi all&#39;interno di una matrice. Pertanto, se è necessario accedere a una proprietà all&#39;interno di un array, il metodo supportato è `select X from array where X.item = ...`. <br> PQL si riserva la parola `xEvent` per fare riferimento a una serie di eventi esperienza collegati a un profilo. | `[1, 4, 7]`, `["US", "CA"]` |
+| Matrice | Tipo di dati composto da un gruppo di altri valori letterali. Utilizza parentesi quadre per raggruppare e virgole per delimitare valori diversi. <br> **Nota:** Non è possibile accedere direttamente alle proprietà degli elementi all&#39;interno di una matrice. Pertanto, se è necessario accedere a una proprietà all&#39;interno di un array, il metodo supportato è `select X from array where X.item = ...`. <br> PQL si riserva la parola `xEvent` per fare riferimento a una serie di eventi di esperienza collegati a un profilo. | `[1, 4, 7]`, `["US", "CA"]` |
 | Riferimenti temporali relativi | Parole riservate che possono essere utilizzate per creare riferimenti di marca temporale e di intervallo di tempo. <ul><li>oggi, oggi, ieri, domani</li><li>questo, ultimo, successivo</li><li>prima, dopo</li><li>millisecondi, secondi, minuti, ore, giorni, settimane, mesi, anni, decennio/i, secoli/i</li></ul> | `X.timestamp occurs before today`, `X.timestamp occurs last month`, `X.timestamp occurs <= 3 days before now` |
 
 
@@ -81,6 +81,7 @@ Nella tabella seguente sono illustrate le diverse categorie di funzioni PQL supp
 | Array, list e set | Utilizzato per interagire con array, elenchi e set. Ulteriori informazioni su queste funzioni si trovano nel documento [](./array-functions.md)matrice, elenco e funzioni impostate. |
 | Mappa | Utilizzato per interagire con le mappe. Ulteriori informazioni su queste funzioni sono reperibili nel documento [sulle funzioni](./map-functions.md)mappa. |
 | Stringa | Utilizzato per interagire con le stringhe. Ulteriori informazioni su queste funzioni sono reperibili nel documento [sulle funzioni](./string-functions.md)stringa. |
+| Oggetto | Utilizzato per interagire con gli oggetti. Ulteriori informazioni su queste funzioni sono disponibili nel documento [sulle funzioni](./object-functions.md)oggetto. |
 | Aritmetica | Utilizzato per eseguire l&#39;aritmetica di base sugli elementi PQL. Ulteriori informazioni su queste funzioni sono reperibili nel documento sulle funzioni [aritmetiche](./arithmetic-functions.md) |
 | Aggregazione | Utilizzato per combinare i risultati di un array in un singolo risultato. Ulteriori informazioni sulle funzioni di aggregazione sono disponibili nel documento [sulle funzioni di](./aggregation-functions.md)aggregazione. |
 | Data e ora | Utilizzato insieme agli oggetti data, ora e data/ora. Ulteriori informazioni su queste funzioni sono reperibili nel documento [sulle funzioni](./datetime-functions.md)data/ora. |
