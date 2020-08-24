@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connettore dati di Analytics
 topic: overview
 translation-type: tm+mt
-source-git-commit: 662ca170b7416dfb55cfb6b8cbaef640c1f83d31
+source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 2%
@@ -51,7 +51,9 @@ Per informazioni dettagliate sulla mappatura dei campi che si verifica tra [!DNL
 | Nuovi dati su Data Lake | &lt; 45 minuti |
 | Dati di backfill (13 mesi di dati o 10 miliardi di eventi, a seconda di quale sia il valore inferiore) | &lt; 4 settimane |
 
->[!NOTE] La latenza varia a seconda della configurazione del cliente, dei volumi di dati e delle applicazioni consumer. Ad esempio, se l&#39;implementazione di Analytics è configurata con `A4T` la latenza a Pipeline, aumenterà a 5-10 minuti.
+>[!NOTE]
+>
+>La latenza varia a seconda della configurazione del cliente, dei volumi di dati e delle applicazioni consumer. Ad esempio, se l&#39;implementazione di Analytics è configurata con `A4T` la latenza a Pipeline, aumenterà a 5-10 minuti.
 
 ## Identificatori principali nei dati di Analytics
 
