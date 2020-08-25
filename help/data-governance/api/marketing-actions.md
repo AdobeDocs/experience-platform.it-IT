@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Azioni di marketing
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
+source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
 workflow-type: tm+mt
 source-wordcount: '681'
 ht-degree: 2%
@@ -37,7 +37,7 @@ GET /marketingActions/custom
 
 La richiesta seguente recupera un elenco di azioni di marketing personalizzate gestite dalla tua organizzazione.
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -124,7 +124,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 La richiesta seguente recupera un&#39;azione di marketing personalizzata denominata `combineData`.
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/combineData \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -174,7 +174,7 @@ PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 La richiesta seguente crea una nuova azione di marketing denominata `crossSiteTargeting`, a condizione che nel sistema non esista ancora un&#39;azione di marketing con lo stesso nome. Se esiste un&#39;azione `crossSiteTargeting` di marketing, questa chiamata aggiorna invece l&#39;azione di marketing in base alle proprietà fornite nel payload.
 
-```sh
+```shell
 curl -X PUT \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -190,7 +190,7 @@ curl -X PUT \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `name` | Nome dell&#39;azione di marketing da creare o aggiornare. <br><br>**IMPORTANTE **: Questa proprietà deve corrispondere al percorso`{MARKETING_ACTION_NAME}`in caso contrario si verificherà un errore HTTP 400 (Richiesta non valida). In altre parole, una volta creata un&#39;azione di marketing, non sarà più possibile modificarne`name`la proprietà. |
+| `name` | Nome dell&#39;azione di marketing da creare o aggiornare. <br><br>**IMPORTANTE**: Questa proprietà deve corrispondere al percorso `{MARKETING_ACTION_NAME}` in caso contrario si verificherà un errore HTTP 400 (Richiesta non valida). In altre parole, una volta creata un&#39;azione di marketing, non sarà più possibile modificarne `name` la proprietà. |
 | `description` | Una descrizione facoltativa per fornire ulteriore contesto all&#39;azione di marketing. |
 
 **Risposta**
@@ -222,7 +222,7 @@ Puoi eliminare un&#39;azione di marketing personalizzata inserendone il nome nel
 
 >[!NOTE]
 >
->Non è possibile eliminare le azioni di marketing a cui fanno riferimento i criteri esistenti. Se si tenta di eliminare una di queste azioni di marketing, si verificherà un errore HTTP 400 (Richiesta non valida) con un messaggio che include gli ID di tutti i criteri che fanno riferimento all&#39;azione di marketing.
+>Le azioni di marketing cui fanno riferimento i criteri esistenti non possono essere eliminate. Se si tenta di eliminare una di queste azioni di marketing, si verificherà un errore HTTP 400 (Richiesta non valida) con un messaggio che include gli ID di tutti i criteri che fanno riferimento all&#39;azione di marketing.
 
 **Formato API**
 
@@ -236,7 +236,7 @@ DELETE /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 **Richiesta**
 
-```sh
+```shell
 curl -X DELETE \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
