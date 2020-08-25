@@ -5,7 +5,7 @@ title: Guida utente di JupyterLab
 topic: Overview
 description: JupyterLab è un'interfaccia utente basata sul Web per Project Jupyter ed è strettamente integrata in Adobe Experience Platform. Fornisce un ambiente di sviluppo interattivo che consente agli scienziati dei dati di lavorare con notebook, codice e dati Jupyter.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '3682'
 ht-degree: 11%
@@ -606,6 +606,7 @@ timedf.show()
 >
 >
 >In Scala è possibile utilizzare `sys.env()` per dichiarare e restituire un valore dall&#39;interno `option`. Questo elimina la necessità di definire le variabili se sai che verranno utilizzate solo una volta. L&#39;esempio seguente prende `val userToken` spunto dall&#39;esempio precedente e lo dichiara in linea `option` come alternativa:
+>
 > 
 ```scala
 > .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
@@ -625,26 +626,26 @@ timedf.show()
 | bokeh | 1.3.1 |
 | gensim | 3.7.3 |
 | ipyparallelo | 0.5.2 |
-| jq | 1.6 |
+| cuscinetto | 1.6 |
 | cheras | 2.2.4 |
 | nltk | 3.2.5 |
 | panda | 0.22.0 |
 | pandasql | 0.7.3 |
-| cuscino | 6.0.0 |
+| folletto | 6.0.0 |
 | scikit-image | 0.15.0 |
 | scikit-learn | 0.21.3 |
-| sciolto | 1.3.0 |
-| grassa | 1.3.0 |
+| kit | 1.3.0 |
+| -grassa | 1.3.0 |
 | marinaio | 0.9.0 |
-| statsmodels | 0.10.1 |
-| elastico | 5.1.0.17 |
-| ggplot | 0.11.5 |
+| optslm | 0.10.1 |
+| Il elastico | 5.1.0.17 |
+| pirata | 0.11.5 |
 | py xgipplo | 0.90 |
-| opencv | 3.4.1 |
-| pyspark | 2.4.3 |
+| colorante opencv | 3.4.1 |
+| statuetta | 2.4.3 |
 | torcia | 1.0.1 |
 | wxpitone | 4.0.6 |
-| colorante | 0.3.0 |
+| naso | 0.3.0 |
 | geopandas | 0.5.1 |
 | pirata | 2.1.0 |
 | sagomato | 1.6.4 |
@@ -667,11 +668,11 @@ timedf.show()
 | r-rstan | 2.19.2 |
 | r-sqldf | 0.4_11 |
 | r-sopravvivenza | 2.44_1.1 |
-| r-zoo | 1.8_6 |
+| gabinetto | 1.8_6 |
 | r-stringdist | 0.9.5.2 |
 | quadrante r | 1.5_7 |
 | r-rjson | 0.2.20 |
-| r-previsione | 8.7 |
+| piramide | 8.7 |
 | r-rsolnp | 1.16 |
 | reticolare | 1.12 |
 | r-mlr | 2.14.0 |
@@ -683,7 +684,7 @@ timedf.show()
 | r-tidyverse | 1.2.1 |
 | r-tree | 1.0_39 |
 | pymongo | 3.8.0 |
-| freccia | 0.14.1 |
+| La freccia | 0.14.1 |
 | boto3 | 1.9.199 |
 | ipyvolume | 0.5.2 |
 | parquet | 0.3.2 |
@@ -702,7 +703,7 @@ timedf.show()
 | ipympl | 0.3.3 |
 | fonts-anacond | 1,0 |
 | psycopg2 | 2.8.3 |
-| naso | 1.3.7 |
+| stringere | 1.3.7 |
 | autovwidget | 0.12.9 |
 | altair | 3.1.0 |
 | vega_datasets | 0.7.0 |
