@@ -5,7 +5,7 @@ seo-title: Guida introduttiva alla piattaforma dati cliente  Adobe in tempo real
 description: Scenario di esempio per  Adobe Real-time Customer Data Platform
 seo-description: Scenario di esempio per  Adobe Real-time Customer Data Platform
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '2321'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Di conseguenza, Luma ha i seguenti obiettivi aziendali:
 
 Per raggiungere questi obiettivi, il team marketing deve essere in grado di gestire i dati dei clienti su larga scala.
 
-Con CDP in tempo reale, basato su Adobe Experience Platform, l&#39;organizzazione di marketing di Luma può:
+Con CDP in tempo reale, basato su Adobe Experience Platform, l’organizzazione di marketing di Luma può:
 
 1. Raccogliere i dati da piattaforme diverse e assicurarsi che siano disponibili a valle per altre attività di marketing.
 1. Crea una visione unica e in tempo reale dei loro consumatori, indipendentemente da dove i dati sono originati.
@@ -62,7 +62,7 @@ Questa esercitazione include i passaggi seguenti:
 1. [Stitch il profilo su più dispositivi](#cross-device-identity-stitching).
 1. [Analizzare il profilo](#analyzing-the-profile).
 
-## Customer profile
+## Profilo del cliente
 
 La prima volta che i clienti visitano il tuo sito, non sai nulla di loro.
 
@@ -136,7 +136,7 @@ Il team di Luma dispone di tutti i dati comportamentali e dei clienti in un&#39;
 Possono acquisire dati da tutte le origini seguenti:
 
 * Dati delle soluzioni Adobe Experience Cloud esistenti
-* Origini non  Adobe, come il programma fedeltà di Luma, i dati del call center e del sistema di punti vendita
+* Fonti non  Adobe, come il programma fedeltà di Luma, i dati del call center e del sistema di punti vendita
 * Dati in streaming in tempo reale da origini dati Luma
 * Dati in tempo reale dalle soluzioni  Adobe (non sono necessari nuovi tag)
 
@@ -216,7 +216,7 @@ Il team scientifico dei dati Luma ha creato dei modelli sulla propensione all&#3
 
 Modifica o crea un segmento che rappresenta gli abbandonatori del carrello che sembrano essere nel processo di acquisto di un regalo:
 
-```
+```sql
 Profile: Category != Preferred Category 
 AND 
 Product Size != Preferred Size 
