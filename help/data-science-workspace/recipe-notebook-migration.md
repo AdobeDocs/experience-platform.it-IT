@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide per la migrazione a componenti e notebook
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '3311'
 ht-degree: 0%
@@ -769,6 +769,7 @@ Il notebook Scala ([!DNL Spark] 2.4) utilizza il kernel Scala, che richiede più
 >[!TIP]
 >
 >In Scala è possibile utilizzare `sys.env()` per dichiarare e restituire un valore dall&#39;interno `option`. Questo elimina la necessità di definire le variabili se sai che verranno utilizzate solo una volta. L&#39;esempio seguente prende `val userToken` in considerazione l&#39;esempio precedente e lo dichiara in linea all&#39;interno `option`:
+>
 > 
 ```scala
 > .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
