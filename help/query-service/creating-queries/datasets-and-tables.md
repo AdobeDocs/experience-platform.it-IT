@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Set di dati e tabelle e schemi
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Set di dati e tabelle e schemi
 
-Esaminate l&#39;elenco dei set di dati disponibili nell&#39;interfaccia utente [del Adobe Experience Platform](https://platform.adobe.com/datasets), avendo cura di osservare i nomi dei set di dati.
+Esaminate l&#39;elenco dei set di dati disponibili nell&#39;interfaccia utente [di](https://platform.adobe.com/datasets)Adobe Experience Platform, avendo cura di osservare i nomi dei set di dati.
 >[!NOTE]
 >
 >Alcuni nomi di set di dati hanno spazi e potrebbero non essere sicuri per SQL.
@@ -35,7 +35,7 @@ Per visualizzare le tabelle disponibili [!DNL Platform] con SQL, è possibile ut
 
 `\d` visualizza la visualizzazione PostSQL standard
 
-```
+```sql
              List of relations
  Schema |       Name      | Type  |  Owner   
 --------+-----------------+-------+----------
@@ -46,7 +46,7 @@ Per visualizzare le tabelle disponibili [!DNL Platform] con SQL, è possibile ut
 
 `SHOW TABLES;` è un comando personalizzato che offre una visualizzazione più dettagliata e presenta la tabella, così come il nome del set di dati nell’ [!DNL Platform] interfaccia utente.
 
-```
+```sql
        name      |        dataSetId         |     dataSet    | description | resolved 
 -----------------+--------------------------+----------------+-------------+----------
  luma_midvalues  | 5bac030c29bb8d12fa992e58 | Luma midValues |             | false
@@ -62,7 +62,7 @@ Per visualizzare lo schema principale di una tabella, utilizzare il `\d table_na
 
 `\d luma_midvalues`
 
-```
+```sql
                          Table "public.luma_midvalues"
       Column       |             Type            | Collation | Nullable | Default 
 -------------------+-----------------------------+-----------+----------+---------
@@ -87,7 +87,7 @@ Per approfondire lo schema, utilizzare caratteri di sottolineatura (`_`) per dic
 
 `\d luma_midvalues_web`
 
-```
+```sql
                  Composite type "public.luma_midvalues_web"
      Column     |               Type                | Collation | Nullable | Default 
 ----------------+-----------------------------------+-----------+----------+---------
