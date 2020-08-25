@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Proiezioni Edge - API Profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Configurazioni di proiezione Edge e endpoint di destinazioni
 
-Al fine di promuovere esperienze coordinate, coerenti e personalizzate per i clienti attraverso più canali in tempo reale, i dati giusti devono essere prontamente disponibili e costantemente aggiornati man mano che si verificano le modifiche.  Adobe Experience Platform consente l&#39;accesso in tempo reale ai dati attraverso l&#39;uso di ciò che sono noti come edge. Un server periferico è un server collocato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni. Ad esempio,  applicazioni di Adobe come  Adobe Target e  Adobe Campaign utilizzano i bordi per fornire esperienze personalizzate ai clienti in tempo reale. I dati vengono indirizzati a un bordo da una proiezione, con una destinazione di proiezione che definisce il bordo a cui verranno inviati i dati, e una configurazione di proiezione che definisce le informazioni specifiche che verranno rese disponibili sul bordo. Questa guida fornisce istruzioni dettagliate per l’utilizzo dell’ [!DNL Real-time Customer Profile] API per lavorare con proiezioni di edge, incluse destinazioni e configurazioni.
+Al fine di promuovere esperienze coordinate, coerenti e personalizzate per i clienti attraverso più canali in tempo reale, i dati giusti devono essere prontamente disponibili e costantemente aggiornati man mano che si verificano le modifiche. Adobe Experience Platform consente l&#39;accesso in tempo reale ai dati tramite l&#39;utilizzo di ciò che è noto come edge. Un server periferico è un server collocato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni. Ad esempio,  applicazioni di Adobe come  Adobe Target e  Adobe Campaign utilizzano i bordi per fornire esperienze personalizzate ai clienti in tempo reale. I dati vengono indirizzati a un bordo da una proiezione, con una destinazione di proiezione che definisce il bordo a cui verranno inviati i dati, e una configurazione di proiezione che definisce le informazioni specifiche che verranno rese disponibili sul bordo. Questa guida fornisce istruzioni dettagliate per l’utilizzo dell’ [!DNL Real-time Customer Profile] API per lavorare con proiezioni di edge, incluse destinazioni e configurazioni.
 
 ## Introduzione
 
@@ -25,7 +25,7 @@ L&#39;endpoint API utilizzato in questa guida fa parte dell&#39; [!DNL Real-time
 
 ## Destinazioni di proiezione
 
-Una proiezione può essere instradata a uno o più bordi specificando le posizioni in cui inviare i dati. Ogni destinazione di proiezione creata ha un ID univoco che viene quindi utilizzato per creare la configurazione di proiezione.
+Una proiezione può essere instradata a uno o più bordi specificando le posizioni in cui i dati devono essere inviati. Ogni destinazione di proiezione creata ha un ID univoco che viene quindi utilizzato per creare la configurazione di proiezione.
 
 ### Elenca tutte le destinazioni
 
@@ -187,7 +187,7 @@ GET /config/destinations/{DESTINATION_ID}
 
 | Parametro | Descrizione |
 |---|---|
-| `{DESTINATION_ID}` | L&#39;ID univoco della destinazione di proiezione che si desidera visualizzare. |
+| `{DESTINATION_ID}` | ID univoco della destinazione di proiezione che si desidera visualizzare. |
 
 **Richiesta**
 
@@ -231,7 +231,7 @@ Una destinazione esistente può essere aggiornata effettuando una richiesta di P
 
 **Formato API**
 
-```
+```http
 PUT /config/destinations/{DESTINATION_ID}
 ```
 
@@ -244,7 +244,7 @@ PUT /config/destinations/{DESTINATION_ID}
 La seguente richiesta aggiorna la destinazione esistente per includere una seconda posizione (`dataCenters`).
 
 >[!IMPORTANT]
->La richiesta PUT richiede un&#39; `Content-Type` intestazione specifica, come illustrato di seguito. Se si utilizza un&#39; `Content-Type` intestazione non corretta, si verifica un errore HTTP Status 415 (Tipo di supporto non supportato).
+>La richiesta di PUT richiede un&#39; `Content-Type` intestazione specifica, come illustrato di seguito. Se si utilizza un&#39; `Content-Type` intestazione non corretta, si verifica un errore HTTP Status 415 (Tipo di supporto non supportato).
 
 ```shell
 curl -X PUT \
@@ -299,7 +299,7 @@ Se l&#39;organizzazione non richiede più una destinazione di proiezione, può e
 
 **Formato API**
 
-```
+```http
 DELETE /config/destinations/{DESTINATION_ID}
 ```
 
@@ -498,7 +498,7 @@ Un selettore è un elenco separato da virgole di nomi di campi XDM. In una confi
 
 ### Sintassi supportata
 
-* Utilizzate le virgole per selezionare più campi. Non utilizzate gli spazi.
+* Utilizzare le virgole per selezionare più campi. Non utilizzate gli spazi.
 * Utilizzare la notazione dei punti per selezionare i campi nidificati.
    * Ad esempio, per selezionare un campo denominato `field` nidificato all&#39;interno di un campo denominato `foo`, utilizzare il selettore `foo.field`.
 * Se si inserisce un campo contenente campi secondari, anche tutti i campi secondari vengono proiettati per impostazione predefinita. Tuttavia, è possibile filtrare i campi secondari restituiti utilizzando le parentesi `"( )"`.
