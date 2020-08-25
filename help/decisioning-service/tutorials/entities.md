@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gestire le entità del servizio di disattivazione tramite API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '7207'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Gestione di oggetti e regole di disattivazione tramite API
 
-Questo documento fornisce un&#39;esercitazione per lavorare con le entità aziendali utilizzando  API di Adobe Experience Platform. [!DNL Decisioning Service]
+Questo documento fornisce un&#39;esercitazione per lavorare con le entità aziendali dell&#39; [!DNL Decisioning Service] utilizzo delle API Adobe Experience Platform.
 
 L&#39;esercitazione è suddivisa in due parti:
 
@@ -26,7 +26,7 @@ L&#39;esercitazione è suddivisa in due parti:
 
 Questa esercitazione richiede una conoscenza approfondita dei [!DNL Experience Platform] servizi e delle convenzioni API. Il [!DNL Platform] repository è un servizio utilizzato da molti altri [!DNL Platform] servizi per memorizzare oggetti aziendali e vari tipi di metadati. Offre un modo sicuro e flessibile per gestire e interrogare gli oggetti da utilizzare in diversi servizi di runtime. La [!DNL Decisioning Service] è una di quelle. Prima di iniziare questa esercitazione, consulta la documentazione per i seguenti elementi:
 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Framework standard con cui Platform organizza i dati sull&#39;esperienza dei clienti.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Il framework standardizzato tramite il quale la piattaforma organizza i dati sull&#39;esperienza cliente.
 - [!DNL Decisioning Service](./../home.md): Illustra i concetti e i componenti utilizzati per la decodifica delle esperienze in generale e per le decisioni sulle offerte in particolare. Illustra le strategie utilizzate per scegliere l&#39;opzione migliore da presentare durante l&#39;esperienza di un cliente.
 - [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md): PQL è un linguaggio potente per scrivere espressioni sulle istanze XDM. PQL viene utilizzato per definire le regole decisionali.
 
@@ -94,7 +94,7 @@ L&#39;elenco dei contenitori accessibili viene ottenuto chiamando l&#39;endpoint
 
 ## Gestione dell&#39;accesso ai contenitori
 
-Un amministratore può raggruppare entità, risorse e autorizzazioni di accesso simili in profili. Questo riduce il carico di gestione ed è supportato dall’interfaccia utente [del Admin Console  del Adobe](https://adminconsole.adobe.com). È necessario essere un amministratore di prodotto per  Adobe Experience Platform nell&#39;organizzazione per creare profili e assegnare utenti a tali profili.
+Un amministratore può raggruppare entità, risorse e autorizzazioni di accesso simili in profili. Questo riduce il carico di gestione ed è supportato dall’interfaccia utente [del Admin Console  del Adobe](https://adminconsole.adobe.com). Per creare profili e assegnare utenti a tali profili, devi essere un amministratore di prodotto per Adobe Experience Platform nella tua organizzazione.
 
 È sufficiente creare profili di prodotto che corrispondano a determinate autorizzazioni in un unico passaggio e quindi aggiungere semplicemente gli utenti a tali profili. I profili fungono da gruppi ai quali sono state concesse autorizzazioni e ogni utente reale o tecnico del gruppo eredita tali autorizzazioni.
 
@@ -348,7 +348,7 @@ La paging è controllata dai seguenti parametri:
 
 - **`orderBy`**: Contiene un elenco ordinato e separato da virgole di proprietà in base al quale viene ordinato l&#39;elenco delle istanze. La prima proprietà viene utilizzata per l&#39;ordinamento principale, la seconda proprietà per risolvere i legami nell&#39;ordinamento principale e così via. Quando viene specificata una proprietà con un valore univoco per istanza, i legami non sono possibili e dopo ogni elemento può verificarsi un&#39;interruzione di pagina. Il nome di una proprietà può avere il prefisso `+` per indicare l&#39;ordine crescente o `-` per indicare l&#39;ordine decrescente di tale proprietà. Se il nome della proprietà non ha un prefisso, il risultato viene ordinato in ordine crescente. Se non `orderBy` è specificato nella richiesta, l&#39;archivio utilizzerà invece la proprietà instanceId fisica.
 - **`start`**: I client utilizzano il parametro start per definire la pagina da recuperare. Il parametro start determina l’inizio della pagina desiderata. La risposta conterrà istanze che iniziano con quelle con un valore di `orderBy` proprietà rigorosamente maggiore di (per crescente) o rigorosamente minore (per decrescente) del valore specificato. Quando il parametro query non viene specificato, per impostazione predefinita viene utilizzato un valore instanceId che esegue l&#39;ordinamento prima dell&#39;identificatore della prima istanza possibile, pertanto questo valore viene omesso dalla prima pagina.
-- **`limit`**: specifica un numero intero positivo come suggerimento sul numero massimo di elementi da restituire per una determinata richiesta. Le dimensioni effettive della risposta possono essere inferiori o maggiori, in quanto limitate dalla necessità di fornire un funzionamento affidabile del parametro start
+- **`limit`**: specifica un numero intero positivo come suggerimento sul numero massimo di elementi che devono essere restituiti per una determinata richiesta. Le dimensioni effettive della risposta possono essere inferiori o maggiori, in quanto limitate dalla necessità di fornire un funzionamento affidabile del parametro start
 
 ### Elenchi di filtri
 
@@ -360,7 +360,7 @@ L&#39;elenco delle istanze restituite contiene quelle per le quali l&#39;espress
 <br/>
 La proprietà da confrontare con il valore specificato è identificata come percorso. I singoli componenti del tracciato sono separati da `.`, come: `_instance.xdm:prop1.xdm:prop1_1.xdm:prop1_1_1`<br/>
 
-Per le proprietà con valori stringa, numerici o data/ora, gli operatori consentiti sono: `==`, `!=`, `<`, `<=`, `>` e `>=`. Inoltre, per le proprietà con un valore stringa, `~` è possibile utilizzare un operatore. L&#39; `~` operatore corrisponde alla proprietà specificata in base a un&#39;espressione regolare. Il valore stringa della proprietà deve corrispondere all&#39; **intera** espressione affinché le entità vengano incluse nei risultati filtrati. Ad esempio, la ricerca della stringa `cars` in un punto qualsiasi all&#39;interno del valore della proprietà richiede l&#39;espressione regolare `.*cars.*`. Senza l&#39;interlinea o `.*`la fine, solo le entità corrispondono a un valore di proprietà che inizia o termina rispettivamente con `cars`. Per l&#39; `~` operatore, il confronto tra i caratteri lettera non fa distinzione tra maiuscole e minuscole. Per tutti gli altri operatori, il confronto fa distinzione tra maiuscole e minuscole.<br/><br/>
+Per le proprietà con valori stringa, numerici o data/ora, gli operatori consentiti sono: `==`, `!=`, `<`, `<=`, `>` e `>=`. Inoltre, per le proprietà con un valore stringa, `~` è possibile utilizzare un operatore. L&#39; `~` operatore corrisponde alla proprietà specificata in base a un&#39;espressione regolare. Il valore stringa della proprietà deve corrispondere all&#39; **intera** espressione affinché le entità vengano incluse nei risultati filtrati. Ad esempio, la ricerca della stringa `cars` all&#39;interno del valore della proprietà richiede l&#39;espressione regolare `.*cars.*`. Senza l&#39;interlinea o `.*`la fine, solo le entità corrispondono a un valore di proprietà che inizia o termina rispettivamente con `cars`. Per l&#39; `~` operatore, il confronto tra i caratteri lettera non fa distinzione tra maiuscole e minuscole. Per tutti gli altri operatori, il confronto fa distinzione tra maiuscole e minuscole.<br/><br/>
 Non solo le proprietà payload dell&#39;istanza possono essere utilizzate nelle espressioni filtro. Le proprietà dell&#39;involucro vengono confrontate allo stesso modo, ad esempio `property=repo:lastModifiedDate>=2019-02-23T16:30:00.000Z`. <br/>
 <br/>
 Il parametro di `property` query può essere ripetuto in modo da applicare più condizioni di filtro, ad esempio per restituire tutte le istanze che sono state modificate dopo una determinata data e prima di una determinata data. I valori in tali espressioni devono essere codificati nell’URL. Se non viene specificata alcuna espressione e il nome della proprietà viene semplicemente elencato, gli elementi idonei sono quelli con una proprietà con il nome specificato.<br/>
@@ -775,7 +775,7 @@ Il riferimento alla regola è incorporato nella proprietà `xdm:selectionConstra
 
 L&#39;aggiunta e l&#39;eliminazione di una regola possono essere eseguite anche con un&#39;operazione PATCH:
 
-```
+```json
 [
   {
     "op":   "replace",
