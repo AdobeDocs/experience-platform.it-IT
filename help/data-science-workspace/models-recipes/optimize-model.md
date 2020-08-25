@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Ottimizzare un modello
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1219'
 ht-degree: 0%
@@ -87,7 +87,7 @@ Il valutatore personalizzato può essere fornito estendendo l&#39;interfaccia di
 
 >[!IMPORTANT]
 >
->Per la `MLMetric` classe, non utilizzare `"measures"` per `valueType` la creazione di un&#39;altra metrica `MLMetric` la metrica non verrà compilata nella tabella delle metriche di valutazione personalizzate.
+>Per la `MLMetric` classe, non utilizzare `"measures"` per `valueType` quando si crea un nuovo `MLMetric` altro, la metrica non verrà compilata nella tabella delle metriche di valutazione personalizzate.
 >  
 > Effettuate le seguenti operazioni: `metrics.add(new MLMetric("MAPE", mape, "double"))`\
 > Non questo: `metrics.add(new MLMetric("MAPE", mape, "measures"))`
@@ -95,7 +95,7 @@ Il valutatore personalizzato può essere fornito estendendo l&#39;interfaccia di
 
 Una volta definito nella ricetta, il passo successivo consiste nell&#39;attivarlo nelle ricette. Ciò viene fatto nel file [application.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) nella `resources` cartella del progetto. Qui `evaluation.class` è impostata sulla `Evaluator` classe definita in `Evaluator.scala`
 
-```properties
+```scala
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
