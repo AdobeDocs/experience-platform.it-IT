@@ -5,7 +5,7 @@ seo-title: (Beta) Destinazione degli hub eventi di Azure
 description: Crea una connessione in uscita in tempo reale all'archivio degli hub eventi di Azure per lo streaming dei dati dal Experience Platform .
 seo-description: Crea una connessione in uscita in tempo reale all'archivio degli hub eventi di Azure per lo streaming dei dati dal Experience Platform .
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 2%
@@ -67,7 +67,7 @@ Consulta [Attivare profili e segmenti su una destinazione](/help/rtcdp/destinati
 
 I [!DNL Experience Platform] dati esportati vengono inviati in formato [!DNL Azure Event Hubs] JSON. Ad esempio, l&#39;evento seguente contiene l&#39;attributo di profilo dell&#39;indirizzo e-mail di un&#39;audience qualificata per un determinato segmento ed uscita da un altro segmento. Le identità di questo potenziale sono ECID ed e-mail.
 
-```
+```json
 {
   "person": {
     "email": "yourstruly@adobe.con"
