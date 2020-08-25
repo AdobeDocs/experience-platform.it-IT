@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Query di esempio
 topic: queries
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '862'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Query di esempio per  dati Adobe Analytics
 
-I dati di  suite di rapporti Adobe Analytics selezionate vengono trasformati in XDM [!DNL ExperienceEvents] e trasferiti  Adobe Experience Platform come set di dati. In questo documento vengono illustrati alcuni casi di utilizzo in cui  Adobe Experience Platform [!DNL Query Service] utilizza questi dati e le query di esempio incluse devono essere compatibili con i set di dati Adobe Analytics . Per ulteriori informazioni sulla mappatura a XDM, consulta la documentazione [sulla mappatura dei campi Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) [!DNL ExperienceEvents].
+I dati di  suite di rapporti Adobe Analytics selezionate vengono trasformati in XDM [!DNL ExperienceEvents] e quindi trasferiti in Adobe Experience Platform come set di dati. In questo documento vengono illustrati alcuni casi di utilizzo in cui Adobe Experience Platform [!DNL Query Service] utilizza questi dati e le query di esempio incluse devono essere compatibili con i set di dati Adobe Analytics . Per ulteriori informazioni sulla mappatura a XDM, consulta la documentazione [sulla mappatura dei campi di](../../sources/connectors/adobe-applications/mapping/analytics.md) Analytics [!DNL ExperienceEvents].
 
 ## Introduzione
 
@@ -135,7 +135,7 @@ Di seguito sono riportati i campi XDM per accedere alle variabili merchandising 
 
 ### eVar
 
-```
+```console
 productListItems[#]._experience.analytics.customDimensions.evars.evar#
 ```
 
@@ -143,7 +143,7 @@ Dove `[#]` è un indice di matrice ed `evar#` è la specifica variabile  eVar.
 
 ### Eventi personalizzati
 
-```
+```console
 productListItems[#]._experience.analytics.event1to100.event#.value
 ```
 
@@ -189,7 +189,7 @@ LIMIT 20
 
 L&#39;errore &quot;Nessun campo struttura&quot; viene rilevato quando si tenta di recuperare un campo che non esiste nel dataset corrente. Valutare il motivo restituito nel messaggio di errore per identificare un campo disponibile, quindi aggiornare la query ed eseguire nuovamente.
 
-```
+```console
 ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered. Reason: [No such struct field evar1 in eVar10, eVar13, eVar62, eVar88, eVar2;]
 ```
 
@@ -220,7 +220,7 @@ Di seguito sono riportati i campi XDM per generare la sintassi di conversione ne
 
 ### eVar
 
-```
+```console
 _experience.analytics.customDimensions.evars.evar#
 ```
 
@@ -228,7 +228,7 @@ Dove `evar#` è la specifica variabile  eVar.
 
 ### Prodotto
 
-```
+```console
 productListItems[#].sku
 ```
 
@@ -255,7 +255,7 @@ WHERE commerce.productViews.value = 1 OR commerce.purchases.value = 1 OR _experi
 LIMIT 100
 ```
 
-Di seguito è riportata una query di esempio che persiste il valore associato alle occorrenze successive del prodotto corrispondente. La sottoquery più bassa stabilisce la relazione tra i valori e il prodotto nell&#39;evento di binding dichiarato. La sottoquery successiva esegue l&#39;attribuzione di tale valore associato tra le interazioni successive con il rispettivo prodotto. E la selezione di livello principale aggrega i risultati per generare il reporting.
+Di seguito è riportata una query di esempio che persiste il valore associato alle occorrenze successive del prodotto corrispondente. La sottoquery più bassa stabilisce la relazione tra i valori e il prodotto nell&#39;evento di binding dichiarato. La sottoquery successiva esegue l&#39;attribuzione di tale valore associato nelle successive interazioni con il rispettivo prodotto. E la selezione di livello principale aggrega i risultati per generare il reporting.
 
 ```sql
 SELECT
