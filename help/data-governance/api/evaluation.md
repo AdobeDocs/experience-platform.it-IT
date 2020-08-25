@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criteri
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
+source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 1%
@@ -52,7 +52,7 @@ La richiesta di esempio riportata di seguito valuta un&#39;azione di marketing r
 >
 >Prestate attenzione agli `AND` `OR` operatori e agli operatori nelle espressioni dei criteri. Nell&#39;esempio seguente, se nella richiesta fosse stata visualizzata un&#39;etichetta (`C1` o `C3`) da sola, l&#39;azione di marketing non avrebbe violato tale criterio. Sono necessarie sia etichette (`C1` che `C3`) per restituire la politica violata. Assicurati di valutare attentamente i criteri e di definirne le espressioni con la stessa attenzione.
 
-```sh
+```shell
 curl -X GET \
   'https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/sampleMarketingAction/constraints?duleLabels=C1,C3' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -140,7 +140,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 La richiesta seguente esegue l&#39;azione di `crossSiteTargeting` marketing in base a un insieme di tre set di dati per valutare eventuali violazioni dei criteri.
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -371,7 +371,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 La richiesta seguente esegue il test dell&#39;azione di marketing `crossSiteTargeting` su un set specifico di campi appartenenti a tre set di dati. Il payload è simile a una richiesta di [valutazione che interessa solo i set di dati](#datasets), aggiungendo campi specifici per ogni set di dati da cui raccogliere le etichette.
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -540,7 +540,7 @@ Il payload di una richiesta di valutazione di massa deve essere un array di ogge
 >
 >Se un qualsiasi processo di valutazione elencato contiene sia un `entityList` array che un `labels` array, si verificherà un errore. Se desideri valutare la stessa azione di marketing in base a set di dati ed etichette, devi includere processi di valutazione separati per tale azione di marketing.
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/bulk-eval \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -580,8 +580,8 @@ curl -X POST \
 | --- | --- |
 | `evalRef` | URI dell&#39;azione di marketing da sottoporre a test per etichette o set di dati per violazioni dei criteri. |
 | `includeDraft` | Per impostazione predefinita, solo i criteri abilitati partecipano alla valutazione. Se `includeDraft` è impostato su `true`, parteciperanno anche le politiche in `DRAFT` stato. |
-| `labels` | Un array di etichette di utilizzo dei dati con cui sottoporre a test l&#39;azione di marketing.<br><br>**IMPORTANTE **: Quando si utilizza questa proprietà, NON è necessario includere una`entityList`proprietà nello stesso oggetto. Per valutare la stessa azione di marketing utilizzando insiemi di dati e/o campi, è necessario includere nel payload della richiesta un oggetto separato che contenga un`entityList`array. |
-| `entityList` | Un array di set di dati e (facoltativamente) campi specifici all&#39;interno di tali set di dati per sottoporre a test l&#39;azione di marketing.<br><br>**IMPORTANTE **: Quando si utilizza questa proprietà, NON è necessario includere una`labels`proprietà nello stesso oggetto. Per valutare la stessa azione di marketing utilizzando etichette di utilizzo dati specifiche, è necessario includere un oggetto separato nel payload della richiesta che contenga un`labels`array. |
+| `labels` | Un array di etichette di utilizzo dei dati con cui sottoporre a test l&#39;azione di marketing.<br><br>**IMPORTANTE**: Quando si utilizza questa proprietà, NON è necessario includere una `entityList` proprietà nello stesso oggetto. Per valutare la stessa azione di marketing utilizzando insiemi di dati e/o campi, è necessario includere nel payload della richiesta un oggetto separato che contenga un `entityList` array. |
+| `entityList` | Un array di set di dati e (facoltativamente) campi specifici all&#39;interno di tali set di dati per sottoporre a test l&#39;azione di marketing.<br><br>**IMPORTANTE**: Quando si utilizza questa proprietà, NON è necessario includere una `labels` proprietà nello stesso oggetto. Per valutare la stessa azione di marketing utilizzando etichette di utilizzo dati specifiche, è necessario includere un oggetto separato nel payload della richiesta che contenga un `labels` array. |
 | `entityType` | Il tipo di entità con cui sottoporre a test l&#39;azione di marketing. Al momento, `dataSet` è supportato solo. |
 | `entityId` | ID di un set di dati con cui sottoporre a test l&#39;azione di marketing. |
 | `entityMeta.fields` | (Facoltativo) Un elenco di campi specifici all&#39;interno del dataset per verificare l&#39;azione di marketing rispetto a. |
