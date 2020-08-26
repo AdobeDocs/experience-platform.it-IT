@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Assimilazione di dati in  Adobe Experience Platform
+title: Caricamento di dati in Adobe Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '1184'
+source-wordcount: '1185'
 ht-degree: 0%
 
 ---
 
 
-# Assimilazione di dati in  Adobe Experience Platform
+# Caricamento di dati in Adobe Experience Platform
 
- Adobe Experience Platform consente di importare facilmente i dati in [!DNL Platform] file batch. Esempi di dati da assimilare possono includere dati di profilo da un file semplice in un sistema CRM (ad esempio un file parquet) o dati conformi a uno schema [!DNL Experience Data Model] (XDM) noto nel Registro di sistema dello schema.
+Adobe Experience Platform consente di importare facilmente i dati in [!DNL Platform] file batch. Esempi di dati da assimilare possono includere dati di profilo da un file semplice in un sistema CRM (ad esempio un file parquet) o dati conformi a uno schema [!DNL Experience Data Model] (XDM) noto nel Registro di sistema dello schema.
 
 ## Introduzione
 
@@ -90,7 +90,7 @@ Per abilitare il set di dati per [!DNL Real-time Customer Profile], fare clic su
 
 Viene visualizzata una finestra di dialogo in cui viene richiesto di confermare che si desidera abilitare il dataset per [!DNL Real-time Customer Profile].
 
-![Abilita profilo, finestra di dialogo](../images/tutorials/ingest-batch-data/confirm_dataset_enable.png)
+![Abilita finestra di dialogo Profilo](../images/tutorials/ingest-batch-data/confirm_dataset_enable.png)
 
 Fate clic **[!UICONTROL Enable]** e l&#39;interruttore diventa blu, a indicare che è attivato.
 
@@ -104,7 +104,7 @@ Per iniziare ad aggiungere dati al dataset, fare clic sulla **[!UICONTROL Add Da
 
 >[!NOTE]
 >
->[!DNL Platform] supporta due tipi di file per l&#39;assimilazione dei dati, parquet o JSON. È possibile aggiungere fino a cinque file alla volta, con una dimensione massima di file pari a 10 GB.
+>La piattaforma supporta due tipi di file per l&#39;assimilazione dei dati, parquet o JSON. È possibile aggiungere fino a cinque file alla volta, con una dimensione massima di file pari a 10 GB.
 
 ![Aggiungi dati, scheda](../images/tutorials/ingest-batch-data/add_data.png)
 
