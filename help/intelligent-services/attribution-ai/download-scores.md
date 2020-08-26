@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 'Accesso ai punteggi nelle Attribution AI '
 topic: Accessing scores
 translation-type: tm+mt
-source-git-commit: 24449d0138ab449dbc01aecbbe9f70e05c781c89
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1026'
 ht-degree: 2%
@@ -61,6 +61,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?&dataSet=
 Una risposta corretta restituisce un payload contenente un oggetto ID batch. In questo esempio, il valore Key per l&#39;oggetto restituito è l&#39;ID batch `01E5QSWCAASFQ054FNBKYV6TIQ`. Copia l’ID batch da utilizzare nella prossima chiamata API.
 
 >[!NOTE]
+>
 > Nella risposta riportata di seguito l&#39; `tags` oggetto è stato riformattato per la leggibilità.
 
 ```json
