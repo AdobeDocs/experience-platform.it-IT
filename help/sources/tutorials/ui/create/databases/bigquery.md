@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare un connettore di origine Google Big Query nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: a4ba11b8e05e5e054133c954b749381e39a7f721
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # Creare un connettore [!DNL Google Big Query] sorgente nell’interfaccia utente
 
 >[!NOTE]
+>
 > Il [!DNL Google BigQuery] connettore è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la panoramica [](../../../../home.md#terms-and-conditions) Origini.
 
 I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente originati su base programmata. Questa esercitazione fornisce i passaggi necessari per creare un connettore sorgente [!DNL Google Big Query] (in seguito denominato &quot;GBQ&quot;) utilizzando l&#39;interfaccia [!DNL Platform] utente.
