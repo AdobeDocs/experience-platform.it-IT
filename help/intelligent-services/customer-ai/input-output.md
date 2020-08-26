@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Ingresso e uscita AI del cliente
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 5cab341138e809bae79623bb65e499ac6b955f27
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 0%
@@ -33,6 +33,7 @@ Gli esempi seguenti hanno fornito una semplice formula per determinare la quanti
 Lunghezza minima dei dati richiesti = popolazione ammissibile + finestra dei risultati
 
 >[!NOTE]
+>
 > 30 è il numero minimo di giorni richiesti per la popolazione ammissibile. Se non viene fornito, il valore predefinito è 120 giorni.
 
 Esempi :
@@ -50,6 +51,7 @@ Oltre ai dati minimi richiesti, anche l&#39;API del cliente funziona meglio con 
 L&#39;AI del cliente genera diversi attributi per i singoli profili ritenuti idonei. Esistono due modi per consumare il punteggio in base al provisioning eseguito. Se il profilo cliente in tempo reale è abilitato per il set di dati, puoi utilizzarlo tramite il profilo cliente in tempo reale. Se non hai il profilo cliente in tempo reale puoi scaricare il set di dati di output AI del cliente disponibile sul lago dati.
 
 >[!NOTE]
+>
 >I valori di output sono utilizzati dal profilo cliente in tempo reale, che può essere utilizzato per creare e definire segmenti.
 
 La tabella seguente descrive i vari attributi rilevati nell&#39;output dell&#39;AI cliente:
