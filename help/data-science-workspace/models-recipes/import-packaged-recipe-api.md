@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Importare una ricetta in pacchetti (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 2%
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Questa esercitazione utilizza [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) per creare un [motore](../api/engines.md), detto anche Ricetta nell&#39;interfaccia utente.
 
-Prima di iniziare, è importante notare che  Adobe Experience Platform [!DNL Data Science Workspace] utilizza termini diversi per fare riferimento a elementi simili all&#39;interno dell&#39;API e dell&#39;interfaccia utente. I termini API vengono utilizzati in questa esercitazione e nella tabella seguente sono riportati i termini correlati:
+Prima di iniziare, è importante notare che Adobe Experience Platform [!DNL Data Science Workspace] utilizza termini diversi per fare riferimento a elementi simili all&#39;interno dell&#39;API e dell&#39;interfaccia utente. I termini API vengono utilizzati in questa esercitazione e nella tabella seguente sono riportati i termini correlati:
 
 | Termine interfaccia utente | Termine API |
 | ---- | ---- |
@@ -35,11 +35,11 @@ Questa esercitazione richiede un file Recipe compresso sotto forma di URL Docker
 
 - `{DOCKER_URL}`: Un indirizzo URL a un&#39;immagine Docker di un servizio intelligente.
 
-Questa esercitazione richiede che sia stata completata l&#39; [autenticazione per &#39;esercitazione](../../tutorials/authentication.md) Adobe Experience Platform al fine di effettuare correttamente le chiamate alle [!DNL Platform] API. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
+Questa esercitazione richiede che sia stata completata l&#39;esercitazione [](../../tutorials/authentication.md) Autenticazione su Adobe Experience Platform per effettuare correttamente le chiamate alle [!DNL Platform] API. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
 
 - `{ACCESS_TOKEN}`: Il valore del token del portatore specificato dopo l&#39;autenticazione.
-- `{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione  Adobe Experience Platform.
-- `{API_KEY}`: Il valore della chiave API specifico trovato nell&#39;integrazione del Adobe Experience Platform  univoco.
+- `{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra unica integrazione con Adobe Experience Platform.
+- `{API_KEY}`: Il valore chiave API specifico trovato nella vostra integrazione Adobe Experience Platform univoca.
 
 ## Creare un motore
 
@@ -50,6 +50,7 @@ I motori possono essere creati eseguendo una richiesta POST all&#39;endpoint /En
 Per creare un Motore con un file Recipe in pacchetto memorizzato in un contenitore Docker, dovete fornire l&#39;URL Docker al file Recipe in pacchetto.
 
 >[!CAUTION]
+>
 > Se utilizzi [!DNL Python] o R utilizza la richiesta di seguito. Se utilizzate PySpark o Scala, usate l’esempio di richiesta PySpark/Scala, situato sotto l’esempio Python/R.
 
 **Formato API**
@@ -196,7 +197,7 @@ Una risposta corretta restituisce un payload contenente i dettagli del motore ap
 }
 ```
 
-Una risposta corretta mostra un payload JSON con informazioni relative al motore appena creato. La `id` chiave rappresenta l’identificatore univoco del motore ed è necessaria nell’esercitazione successiva per creare un’istanza MLI. Prima di continuare con i passaggi successivi, assicurarsi che l’identificatore del motore sia salvato.
+Una risposta corretta mostra un payload JSON con informazioni relative al motore appena creato. La `id` chiave rappresenta l’identificatore univoco del motore ed è necessaria nell’esercitazione successiva per creare un’istanza MLI. Prima di continuare con i passaggi successivi, accertati che l’identificatore del motore sia salvato.
 
 ## Passaggi successivi {#next-steps}
 
