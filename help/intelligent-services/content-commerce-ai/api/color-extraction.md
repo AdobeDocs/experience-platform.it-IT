@@ -5,7 +5,7 @@ title: Estrazione colore
 topic: Developer guide
 description: Il servizio di estrazione del colore, se viene data un'immagine, può calcolare l'istogramma dei colori in pixel e ordinarli in base ai colori dominanti in bucket.
 translation-type: tm+mt
-source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 2%
@@ -47,7 +47,8 @@ La richiesta seguente estrae i colori da un’immagine in base ai parametri di i
 
 >[!CAUTION]
 >
->`analyzer_id` determina quale [!DNL Sensei Content Framework] viene utilizzato. Prima di effettuare la richiesta, verificare di disporre dei dati necessari `analyzer_id` . Per il servizio di estrazione del colore, l’ `analyzer_id` ID è: `Feature:image-color-histogram:Service-6fe52999293e483b8e4ae9a95f1b81a7`
+>`analyzer_id` determina quale [!DNL Sensei Content Framework] viene utilizzato. Prima di effettuare la richiesta, verificare di disporre dei dati necessari `analyzer_id` . Per il servizio di estrazione del colore, l’ `analyzer_id` ID è:
+>`Feature:image-color-histogram:Service-6fe52999293e483b8e4ae9a95f1b81a7`
 
 ```SHELL
 curl -i -X POST https://sensei.adobe.io/services/v1/predict \
