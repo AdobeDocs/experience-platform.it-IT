@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida introduttiva all'apprendimento automatico in tempo reale
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%
@@ -15,9 +15,10 @@ ht-degree: 0%
 # Guida introduttiva all&#39;apprendimento automatico in tempo reale (Alpha)
 
 >[!IMPORTANT]
+>
 >L&#39;apprendimento automatico in tempo reale non è ancora disponibile per tutti gli utenti. Questa funzione è in alfa e viene ancora testata. Questo documento è soggetto a modifiche.
 
-Per utilizzare l&#39;apprendimento automatico in tempo reale, è necessario avere accesso a un&#39;organizzazione con  Adobe Experience Platform e [!DNL Data Science Workspace]. Inoltre, è necessario disporre di un set di dati completo da utilizzare per la formazione e il punteggio.
+Per utilizzare l&#39;apprendimento automatico in tempo reale, è necessario avere accesso a un&#39;organizzazione con provisioning Adobe Experience Platform e [!DNL Data Science Workspace]. Inoltre, è necessario disporre di un set di dati completo da utilizzare per la formazione e il punteggio.
 
 Le guide per l&#39;apprendimento automatico in tempo reale richiedono una conoscenza operativa di Python 3, [Jupyter notebook](../jupyterlab/overview.md), data science e machine learning.
 
@@ -25,14 +26,15 @@ Le guide per l&#39;apprendimento automatico in tempo reale richiedono una conosc
 
 - **DSL:** Lingua specifica del dominio.
 - **Bordo:** Il servizio di valutazione del Machine Learning in tempo reale può essere eseguito su cluster Edge più vicini alle attivazioni e alle applicazioni.
-- **Hub:** L&#39;alfa corrente esegue il servizio Real-time Machine Learning Scoring Service nell&#39;hub di Adobe Experience Platform  mentre Experience Edge Network è in fase di sviluppo.
+- **Hub:** L&#39;alfa corrente esegue il servizio di punteggio Real-time Machine Learning su Adobe Experience Platform Hub mentre Experience Edge Network è in fase di sviluppo.
 - **Nodo:** Un nodo è l&#39;unità fondamentale di cui si formano i grafici. Ogni nodo esegue un&#39;attività specifica e può essere concatenato utilizzando i collegamenti per creare un grafico che rappresenta una pipeline ML. L&#39;attività eseguita da un nodo rappresenta un&#39;operazione sui dati di input, ad esempio una trasformazione di dati o schema, o un&#39;inferenza di apprendimento di una macchina. Il nodo genera il valore trasformato o dedotto nei nodi successivi.
 
-## Set di dati in  Adobe Experience Platform
+## Set di dati in Adobe Experience Platform
 
-Per iniziare a utilizzare l&#39;apprendimento automatico in tempo reale, è necessario avere accesso a un dataset. È possibile utilizzare un set di dati esterno e caricarlo nell&#39; [!DNL JupyterLab] ambiente in uso o creare un nuovo set di dati in Platform, se non lo avete già fatto.
+Per iniziare a utilizzare l&#39;apprendimento automatico in tempo reale, è necessario avere accesso a un dataset. Potete utilizzare un set di dati esterno e caricarlo nel vostro [!DNL JupyterLab] ambiente oppure creare un nuovo set di dati all&#39;interno della piattaforma, se non lo avete già fatto.
 
 >[!NOTE]
+>
 >Se si dispone già di un set di dati da utilizzare, è possibile passare ai passaggi [](#next-steps)Successivi.
 
 ### Utilizzare un dataset esterno
