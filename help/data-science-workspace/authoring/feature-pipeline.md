@@ -4,7 +4,7 @@ solution: Adobe Experience Platform Data Science Workspace
 title: Creazione di una pipeline di feature
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1367'
 ht-degree: 0%
@@ -15,16 +15,17 @@ ht-degree: 0%
 # Creazione di una pipeline di feature
 
 >[!IMPORTANT]
+>
 > Le pipeline delle funzioni sono attualmente disponibili solo tramite API.
 
- Adobe Experience Platform consente di creare e creare tubazioni di feature personalizzate per eseguire la progettazione di feature in scala tramite il runtime Sensei Machine Learning Framework (di seguito &quot;Runtime&quot;).
+Adobe Experience Platform consente di creare e creare tubazioni di feature personalizzate per eseguire la progettazione di feature in scala tramite il runtime Sensei Machine Learning Framework (di seguito &quot;Runtime&quot;).
 
 Questo documento descrive le varie classi rilevate in una pipeline delle funzioni e fornisce un&#39;esercitazione dettagliata per la creazione di una pipeline delle funzioni personalizzata tramite l&#39;SDK [per l&#39;authoring dei](./sdk.md) modelli in PySpark.
 
-Il flusso di lavoro seguente ha luogo quando viene eseguita una pipeline delle funzioni:
+Il flusso di lavoro seguente viene eseguito quando viene eseguita una pipeline delle funzioni:
 
 1. La ricetta carica il dataset in una pipeline.
-2. La trasformazione della funzione viene eseguita sul set di dati e riscritta al Adobe Experience Platform .
+2. La trasformazione della funzione viene eseguita sul set di dati e riscritta in Adobe Experience Platform.
 3. I dati trasformati vengono caricati per la formazione.
 4. La tubazione di feature definisce le fasi con il Regressore di incremento della sfumatura come modello scelto.
 5. La pipeline viene utilizzata per adattare i dati di formazione e viene creato il modello addestrato.
@@ -61,7 +62,7 @@ Il seguente diagramma di flusso mostra l&#39;ordine di esecuzione del runtime:
 
 ## Implementare le classi di Feature Pipeline {#implement-your-feature-pipeline-classes}
 
-Le sezioni seguenti forniscono dettagli ed esempi sull&#39;implementazione delle classi richieste per una tubazione di feature.
+Le sezioni seguenti forniscono dettagli ed esempi sull&#39;implementazione delle classi necessarie per una tubazione di feature.
 
 ### Definire le variabili nel file JSON di configurazione {#define-variables-in-the-configuration-json-file}
 
@@ -390,6 +391,7 @@ scoring.dataSaver: MyDatasetSaver
 Dopo aver creato la pipeline delle funzioni, è necessario creare un&#39;immagine Docker per effettuare una chiamata agli endpoint della pipeline delle funzioni nell&#39; [!DNL Sensei Machine Learning] API. È necessario un URL immagine Docker per effettuare una chiamata agli endpoint della pipeline delle funzioni.
 
 >[!TIP]
+>
 >Se non disponete di un URL Docker, visitate i file sorgente del [pacchetto in un&#39;esercitazione di ricetta](../models-recipes/package-source-files-recipe.md) per una dettagliata procedura per la creazione di un URL host Docker.
 
 Facoltativamente, potete anche utilizzare la seguente raccolta Postman per facilitare il completamento del flusso di lavoro API della pipeline delle funzioni:
@@ -423,6 +425,7 @@ Al termine, fate una richiesta di GET per `/experiments/{EXPERIMENT_ID}` recuper
 ### Specificare l&#39;attività di punteggio dell&#39;esecuzione degli esperimenti {#scoring}
 
 >[!NOTE]
+>
 > Per completare questo passaggio è necessario che almeno un&#39;esecuzione di formazione di successo sia associata all&#39;esperimento.
 
 Dopo un&#39;esecuzione di formazione riuscita, è necessario [specificare l&#39;attività](../api/experiments.md#experiment-training-scoring)di esecuzione del punteggio. Impostate un POST su `experiments/{EXPERIMENT_ID}/runs` e nel corpo impostate l’ `mode` attributo su &quot;score&quot;. Viene avviata l&#39;esecuzione del punteggio dell&#39;esperimento.
