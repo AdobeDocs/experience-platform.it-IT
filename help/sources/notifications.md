@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Notifiche di esecuzione del flusso
 topic: overview
 translation-type: tm+mt
-source-git-commit: b5b785d8415c15e3acb9e1155811a66c51477717
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '859'
 ht-degree: 1%
@@ -44,6 +44,7 @@ Per ricevere le notifiche sullo stato dell&#39;esecuzione del flusso, è necessa
 Dopo aver acquisito un URL webhook univoco, andate a [eventi](https://www.adobe.io/apis/experienceplatform/events.html) I/O di Adobe e seguite i passaggi descritti nel documento delle notifiche [di assimilazione dei](../ingestion/quality/subscribe-events.md) dati per iniziare a sottoscrivere gli eventi.
 
 >[!IMPORTANT]
+>
 >Durante il processo di iscrizione, accertatevi di selezionare [!DNL Platform] le notifiche come fornitore dell&#39;evento e di selezionare le seguenti iscrizioni all&#39;evento:
 >
 >* **[!UICONTROL Experience Platform Source's Flow Run Succeeded]**
@@ -60,6 +61,7 @@ Con il webhook collegato e l&#39;iscrizione all&#39;evento completata, puoi iniz
 Una notifica restituisce informazioni quali il numero di processi di assimilazione eseguiti, la dimensione del file ed errori. Una notifica restituisce anche un payload associato alla tua esecuzione di flusso in formato JSON. Il payload di risposta può essere classificato come `sources_flow_run_success` o `sources_flow_run_failure`.
 
 >[!IMPORTANT]
+>
 >Se durante il processo di creazione del flusso è abilitata l’assimilazione parziale, un flusso che contiene sia l’assimilazione riuscita che quella non riuscita sarà contrassegnato come `sources_flow_run_success` solo se il numero di errori è inferiore alla percentuale di soglia di errore impostata durante il processo di creazione del flusso. Se un&#39;esecuzione di flusso corretta contiene errori, questi errori verranno comunque inclusi nel payload restituito.
 
 ### Operazione riuscita
@@ -322,6 +324,7 @@ La risposta seguente è un esempio di esecuzione di flusso non riuscita, con un 
 | `fileInfo` | Un URL che porta a una panoramica dei file che sono stati acquisiti con successo e non con successo. |
 
 >[!NOTE]
+>
 >Per ulteriori informazioni sui messaggi di errore, vedere l&#39; [appendice](#errors) .
 
 ## Passaggi successivi
