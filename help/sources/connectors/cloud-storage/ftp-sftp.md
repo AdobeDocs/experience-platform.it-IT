@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connettore FTP e SFTP
 topic: overview
 translation-type: tm+mt
-source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '241'
 ht-degree: 0%
@@ -15,9 +15,10 @@ ht-degree: 0%
 # Connettore FTP e SFTP (Beta)
 
 >[!NOTE]
+>
 >I connettori FTP e SFTP sono in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la panoramica [](../../home.md#terms-and-conditions) Origini.
 
- Adobe Experience Platform offre connettività nativa per fornitori di cloud come AWS [!DNL Google Cloud Platform], e [!DNL Azure], consentendo di portare i dati da questi sistemi.
+Adobe Experience Platform offre connettività nativa per fornitori di cloud come AWS [!DNL Google Cloud Platform]e [!DNL Azure], consentendo di portare i dati da questi sistemi.
 
 Le origini di archiviazione cloud possono importare i tuoi dati [!DNL Platform] senza bisogno di scaricare, formattare o caricare. I dati ingeriti possono essere formattati come JSON XDM, parquet XDM o delimitati. Ogni fase del processo è integrata nel flusso di lavoro Origini. [!DNL Platform] consente di inserire i dati da un FTP o un server SFTP tramite batch.
 
