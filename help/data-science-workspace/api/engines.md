@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Motori
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 3%
@@ -44,7 +44,6 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 Una risposta corretta restituisce un payload contenente i dettagli del Registro di sistema del Docker, inclusi l’URL (`host`), il nome utente (`username`) e la password (`password`) del Docker.
 
 >[!NOTE]
->
 >
 >La password del Docker cambia ogni volta che `{ACCESS_TOKEN}` viene aggiornato.
 
