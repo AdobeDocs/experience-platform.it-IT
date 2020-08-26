@@ -4,7 +4,7 @@ seo-title: Domande frequenti su Adobe Experience Platform Web SDK
 description: Domande frequenti sull’SDK Adobe Experience Platform Web
 seo-description: Domande frequenti sull’SDK Adobe Experience Platform Web
 translation-type: tm+mt
-source-git-commit: 87669db063781750097057463536723274eb0b4f
+source-git-commit: 8cd9c52acd981c92d3959e12d91ebb65b2c3cec8
 workflow-type: tm+mt
 source-wordcount: '1684'
 ht-degree: 2%
