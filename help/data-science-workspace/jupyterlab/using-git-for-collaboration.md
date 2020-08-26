@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Collaborazione in JupyterLab tramite Git
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 1%
@@ -19,6 +19,7 @@ ht-degree: 1%
 ## Prerequisiti
 
 >[!NOTE]
+>
 > Il server Git che si intende utilizzare deve essere accessibile tramite Internet.
 
 L&#39; [!DNL Data Science Workspace JupyterLab] ambiente è un ambiente ospitato e non è implementato all&#39;interno del firewall aziendale, pertanto il server Git a cui ci si collega deve essere accessibile da Internet pubblico. Può trattarsi di un repository pubblico o privato su [GitHub](https://github.com/) o di un&#39;altra istanza di un [!DNL Git] server che hai deciso di ospitare.
@@ -36,6 +37,7 @@ Quindi, all&#39;interno del *terminale* , andate all&#39;area di lavoro utilizza
 ![spazio su cd](../images/jupyterlab/tutorials/find-workspace.png)
 
 >[!TIP]
+>
 > Per visualizzare un elenco dei comandi git disponibili, esegui il comando: `git -help` all&#39;interno del terminale.
 
 Quindi, clonate il repository che desiderate utilizzare con il `git clone` comando. Duplica il progetto utilizzando un `https://` URL anziché `ssh://`.
@@ -47,6 +49,7 @@ Quindi, clonate il repository che desiderate utilizzare con il `git clone` coman
 ![clone](../images/jupyterlab/tutorials/git-collaboration.png)
 
 >[!NOTE]
+>
 > Per eseguire qualsiasi operazione di scrittura (`git push` ad esempio), è necessario eseguire i seguenti comandi di configurazione per ogni nuova sessione. Inoltre, qualsiasi comando push richiede un nome utente e una password.
 >
 >`git config --global user.email "you@example.com"`
