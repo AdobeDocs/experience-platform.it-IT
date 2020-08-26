@@ -5,7 +5,7 @@ title: ' ingresso e uscita Attribution AI'
 topic: Input and Output data for Attribution AI
 description: Il seguente documento illustra i diversi input e output utilizzati nelle Attribution AI .
 translation-type: tm+mt
-source-git-commit: 2b51569a4c3dd9863edb6831bd182a7fa9d1d891
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2067'
 ht-degree: 3%
@@ -69,6 +69,7 @@ Per impostazione predefinita,  Attribution AI definisce la finestra di formazion
 Lunghezza minima dei dati richiesti = finestra di formazione + finestra di lookback
 
 >[!TIP]
+>
 > La lunghezza minima dei dati richiesti per un&#39;applicazione con configurazioni predefinite è: 2 trimestri (180 giorni) + 56 giorni = 236 giorni.
 
 Esempio :
@@ -128,7 +129,7 @@ Nella tabella seguente sono delineati i campi dello schema nell’esempio di out
 | identity (Object) | False | Contiene i dettagli dell&#39;utente utilizzato per creare il modello, ad esempio `id` e `namespace`. |
 | id (String) | True | ID identità dell’utente, ad esempio ID cookie o AAID o MCID ecc. <br> **Esempio:** 1734876272540865634468320891369597404 |
 | namespace (String) | True | Spazio dei nomi identità utilizzato per creare i percorsi e quindi il modello. <br> **Esempio:** aid |
-| touchpointsDetail (array di oggetti) | True | L&#39;elenco dei dettagli dei punti di contatto che determinano la conversione ordinata dall&#39;occorrenza del punto di contatto o dalla marca temporale. |
+| touchpointsDetail (array di oggetti) | True | Elenco dei dettagli dei punti di contatto che determinano la conversione ordinata dall&#39;occorrenza del punto di contatto o dalla marca temporale. |
 | touchPointName (String) | True | Nome del punto di contatto configurato durante l’installazione. <br> **Esempio:** PAID_SEARCH_CLICK |
 | scores (oggetto) | True | Contributo punto di contatto a questa conversione come punteggio. Per ulteriori informazioni sui punteggi prodotti all&#39;interno di questo oggetto, vedere la sezione [punteggi](#aggregated-attribution-scores) di attribuzione aggregati. |
 | touchPoint (oggetto) | True | Metadati punto di contatto. Per ulteriori informazioni sui punteggi prodotti all&#39;interno di questo oggetto, vedere la sezione [punteggi](#aggregated-scores) aggregati. |
