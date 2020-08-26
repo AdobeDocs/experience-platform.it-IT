@@ -5,7 +5,7 @@ description: Scoprite come supportare le preferenze di consenso con  Experience 
 seo-description: Scoprite come supportare le preferenze di consenso con  Experience Platform Web SDK
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: fe53ecbf6adff4f1e09979cd170a88ac0bd3cb75
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 0%
@@ -26,13 +26,13 @@ Se l’utente rinuncia a tutti gli scopi, l’SDK non esegue nessuna di queste a
 
 ## Configurazione del consenso
 
-Per impostazione predefinita, l’utente può accedere a tutti gli scopi. Per evitare che l’SDK esegua le attività elencate sopra fino a quando l’utente non effettua il consenso, passa `"defaultConsent": { "general": "pending" }` durante la configurazione dell’SDK come segue:
+Per impostazione predefinita, l’utente può accedere a tutti gli scopi. Per evitare che l’SDK esegua le attività elencate sopra fino a quando l’utente non effettua il consenso, passa `"defaultConsent": "pending"` durante la configurazione dell’SDK come segue:
 
 ```javascript
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "imsOrgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "defaultConsent": { "general": "pending" }
+  "defaultConsent": "pending"
 });
 ```
 
