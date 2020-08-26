@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare un connettore ServiceNow utilizzando l'API del servizio di flusso
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '646'
 ht-degree: 1%
@@ -15,15 +15,16 @@ ht-degree: 1%
 # Creare un [!DNL ServiceNow] connettore utilizzando l&#39; [!DNL Flow Service] API
 
 >[!NOTE]
+>
 >Il [!DNL ServiceNow] connettore è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la panoramica [](../../../../home.md#terms-and-conditions) Origini.
 
-[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti diverse all&#39;interno  Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
+[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
 Questa esercitazione utilizza l&#39; [!DNL Flow Service] API per illustrare i passaggi necessari per connettersi [!DNL Experience Platform] a un [!DNL ServiceNow] server.
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [Origini](../../../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi.
 * [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
@@ -40,7 +41,7 @@ Per [!DNL Flow Service] collegarsi a [!DNL ServiceNow], è necessario fornire va
 | `username` | Il nome utente utilizzato per connettersi al [!DNL ServiceNow] server per l&#39;autenticazione. |
 | `password` | La password per connettersi al [!DNL ServiceNow] server per l&#39;autenticazione. |
 
-Per ulteriori informazioni su come iniziare, consulta [questo documento](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET)ServiceNow.
+Per ulteriori informazioni su come iniziare, consulta [questo documento](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET)di ServiceNow.
 
 ### Lettura di chiamate API di esempio
 
