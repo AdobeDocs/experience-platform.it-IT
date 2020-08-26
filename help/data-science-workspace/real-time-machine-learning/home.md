@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica sull'apprendimento automatico in tempo reale
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # Panoramica sull&#39;apprendimento automatico in tempo reale (Alpha)
 
 >[!IMPORTANT]
+>
 >L&#39;apprendimento automatico in tempo reale non è ancora disponibile per tutti gli utenti. Questa funzione è in alfa e viene ancora testata. Questo documento è soggetto a modifiche.
 
 L&#39;apprendimento automatico in tempo reale può migliorare notevolmente la pertinenza dei contenuti dell&#39;esperienza digitale per gli utenti finali. Questo è possibile sfruttando la deduzione in tempo reale e l&#39;apprendimento continuo sul [!DNL Experience Edge].
@@ -35,11 +36,11 @@ Il flusso di lavoro seguente illustra i passaggi e i risultati tipici relativi a
 
 ### Iniezione e preparati di dati
 
-I dati vengono assimilati e trasformati con il [!DNL Experience Data Model] (XDM)  Adobe Experience Platform. Questi dati vengono utilizzati per la formazione dei modelli. Per ulteriori informazioni su XDM, visitare la panoramica [](../../xdm/home.md)XDM.
+I dati vengono assimilati e trasformati con [!DNL Experience Data Model] (XDM) in Adobe Experience Platform. Questi dati vengono utilizzati per la formazione dei modelli. Per ulteriori informazioni su XDM, visitare la panoramica [](../../xdm/home.md)XDM.
 
 ### Authoring  
 
-Create un modello Real-time Machine Learning creando un nuovo modello da zero o inserendolo come modello ONNX serializzato in  Adobe Experience Platform Jupyter Notebooks.
+Create un modello Real-time Machine Learning creando un nuovo modello da zero o inserendolo come modello ONNX serializzato prepreparato in Adobe Experience Platform Jupyter Notebooks.
 
 ### Implementazione
 
@@ -58,6 +59,7 @@ Gli addetti al marketing possono quindi definire segmenti e regole che mappano i
 L&#39;apprendimento automatico in tempo reale è attualmente in alfa. La funzionalità descritta di seguito è soggetta a modifiche man mano che vengono rese disponibili ulteriori funzionalità e nodi.
 
 >[!NOTE]
+>
 > Limiti alfa:
 > - Attualmente, sono supportati solo i modelli basati su ONNX.
 > - Le funzioni utilizzate nei nodi non possono essere serializzate. Ad esempio, una funzione lambda utilizzata in un nodo Pandas.
@@ -70,7 +72,7 @@ L&#39;apprendimento automatico in tempo reale è attualmente in alfa. La funzion
 
 |  | Alfa (maggio) |
 | --- | --- |
-| **Funzioni** | - Utilizzo del modello di blocco appunti RTML, creazione, test e implementazione di un modello di machine learning personalizzato. <br> - Supporto per l&#39;importazione di modelli di machine learning preformati. <br> - Real-time Machine Learning SDK. <br> - Set iniziale di nodi di authoring. <br> - Distribuito  hub Adobe Experience Platform. |
+| **Funzioni** | - Utilizzo del modello di blocco appunti RTML, creazione, test e implementazione di un modello di machine learning personalizzato. <br> - Supporto per l&#39;importazione di modelli di machine learning preformati. <br> - Real-time Machine Learning SDK. <br> - Set iniziale di nodi di authoring. <br> - Distribuito su Adobe Experience Platform Hub. |
 | **Disponibilità** | America del Nord |
 | **Creazione di nodi** | - Pandas <br> - ScikitLearn <br> - ONNXNode <br> - Split <br> - ModelUpload <br> - OneHotEncoder |
 | **Tempi di esecuzione dei punteggi** | ONNX |
