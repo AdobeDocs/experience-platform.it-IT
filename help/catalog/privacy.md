@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Elaborazione delle richieste di privacy nel Data Lake
 topic: overview
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1179'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Elaborazione delle richieste di privacy in [!DNL Data Lake]
 
- Adobe Experience Platform [!DNL Privacy Service] elabora le richieste dei clienti di accedere, rifiutare la vendita o cancellare i loro dati personali come delineato dalle normative sulla privacy legali e organizzative.
+Adobe Experience Platform [!DNL Privacy Service] elabora le richieste dei clienti di accedere, rifiutare la vendita o cancellare i propri dati personali come indicato dalle normative sulla privacy legali e organizzative.
 
 Questo documento tratta i concetti essenziali relativi all&#39;elaborazione delle richieste di privacy per i dati dei clienti memorizzati in [!DNL Data Lake].
 
@@ -29,7 +29,7 @@ Prima di leggere la presente guida è consigliabile conoscere i seguenti [!DNL E
 
 ## Informazioni sugli spazi dei nomi delle identità {#namespaces}
 
- Adobe Experience Platform [!DNL Identity Service] collega i dati di identità dei clienti tra sistemi e dispositivi. [!DNL Identity Service] utilizza **[!UICONTROL identity namespaces]** per fornire contesto ai valori di identità collegandoli al loro sistema di origine. Uno spazio dei nomi può rappresentare un concetto generico come un indirizzo e-mail (&quot;E-mail&quot;) o associare l&#39;identità a un&#39;applicazione specifica, ad esempio un ID Adobe Advertising Cloud (&quot;AdCloud&quot;) o un ID Adobe Target  (&quot;TNTID&quot;).
+Adobe Experience Platform [!DNL Identity Service] collega i dati di identità dei clienti tra sistemi e dispositivi. [!DNL Identity Service] utilizza **[!UICONTROL identity namespaces]** per fornire contesto ai valori di identità collegandoli al loro sistema di origine. Uno spazio dei nomi può rappresentare un concetto generico come un indirizzo e-mail (&quot;E-mail&quot;) o associare l&#39;identità a un&#39;applicazione specifica, ad esempio un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o  Adobe Target ID (&quot;TNTID&quot;).
 
 [!DNL Identity Service] gestisce un archivio di spazi dei nomi di identità definiti a livello globale (standard) e definiti dall’utente (personalizzati). Gli spazi dei nomi standard sono disponibili per tutte le organizzazioni (ad esempio, &quot;E-mail&quot; e &quot;ECID&quot;), mentre l&#39;organizzazione può anche creare spazi dei nomi personalizzati in base alle proprie esigenze.
 
@@ -132,7 +132,7 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e i dettagli del de
 
 >[!NOTE]
 >
->In questa sezione viene illustrato come formattare le richieste di privacy per l’ [!DNL Data Lake]. È vivamente consigliato di consultare la [!DNL Privacy Service UI](../privacy-service/ui/overview.md) o la [!DNL Privacy Service API](../privacy-service/api/getting-started.md) documentazione per i passaggi completi su come inviare un processo per la privacy, incluso come formattare correttamente i dati di identità dell&#39;utente inviati nei payload della richiesta.
+>In questa sezione viene illustrato come formattare le richieste di privacy per l’ [!DNL Data Lake]. È vivamente consigliato di consultare la documentazione relativa all&#39; [[!DNL Privacy Service] interfaccia utente](../privacy-service/ui/overview.md) o all&#39; [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) per i passaggi completi relativi all&#39;invio di un processo per la privacy, incluso il modo in cui formattare correttamente i dati di identità dell&#39;utente inviati nei payload di richiesta.
 
 Nella sezione seguente viene illustrato come effettuare richieste di privacy per [!DNL Data Lake] l’utente tramite l’ [!DNL Privacy Service] interfaccia utente o l’API.
 
