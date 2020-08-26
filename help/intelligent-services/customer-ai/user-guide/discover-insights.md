@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Scopri informazioni approfondite con l'AI del cliente
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1032'
 ht-degree: 0%
@@ -91,7 +91,7 @@ Riepilogo punteggio visualizza il numero totale di profili con punteggio e li cl
 
 >[!NOTE]
 >
->Se si tratta di un punteggio di propensione alla conversione, i punteggi alti sono indicati in verde e i punteggi bassi in rosso. Se si prevede la propensione del churn questo è capovolto, i punteggi alti sono in rosso e i punteggi bassi sono in verde. Il bucket medio rimane giallo indipendentemente dal tipo di propensione scelto.
+>Se si tratta di un punteggio di propensione alla conversione, i punteggi alti sono visualizzati in verde e i punteggi bassi in rosso. Se si prevede la propensione del churn questo è capovolto, i punteggi alti sono in rosso e i punteggi bassi sono in verde. Il bucket medio rimane giallo indipendentemente dal tipo di propensione scelto.
 
 ![riepilogo punteggio](../images/insights/scoring-summary.png)
 
@@ -112,6 +112,7 @@ Per ogni intervallo di punteggio, viene generata una scheda che mostra i primi 1
 Facendo clic sul **[!UICONTROL Create Segment]** pulsante in uno qualsiasi dei periodi fissi per Propensione bassa, Media e Alta si reindirizza al generatore di segmenti.
 
 >[!NOTE]
+>
 >Il **[!UICONTROL Create Segment]** pulsante è disponibile solo se per il set di dati è abilitato il profilo cliente in tempo reale. Per ulteriori informazioni su come abilitare il profilo cliente in tempo reale, consulta la panoramica [sul profilo cliente in tempo](../../../rtcdp/overview.md)reale.
 
 ![Fai clic su Crea segmento](../images/insights/influential-factors-create-segment.png)
@@ -124,7 +125,7 @@ Il generatore di segmenti viene utilizzato per definire un segmento. Quando si s
 
 ![Riempimento segmento in](../images/insights/segment-saving.png)
 
-Per visualizzare il nuovo segmento nell’interfaccia utente di Platform, fai clic su **[!UICONTROL Segments]** nella barra di navigazione a sinistra. Viene visualizzata la pagina *Sfoglia* , con tutti i segmenti disponibili.
+Per visualizzare il nuovo segmento nell’interfaccia utente della piattaforma, fai clic su **[!UICONTROL Segments]** nella barra di navigazione a sinistra. Viene visualizzata la pagina *Sfoglia* , con tutti i segmenti disponibili.
 
 ![Tutti i segmenti](../images/insights/Segments-dashboard.png)
 
