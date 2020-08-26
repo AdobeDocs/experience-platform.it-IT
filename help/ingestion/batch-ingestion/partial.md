@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica sull’assimilazione parziale di Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1387'
 ht-degree: 1%
@@ -341,7 +341,6 @@ Se il batch presenta uno o più errori e la diagnostica degli errori è abilitat
 >[!NOTE]
 >
 >Se la diagnostica degli errori non è disponibile, verrà visualizzato il seguente messaggio di errore:
->
 > 
 ```json
 > {
