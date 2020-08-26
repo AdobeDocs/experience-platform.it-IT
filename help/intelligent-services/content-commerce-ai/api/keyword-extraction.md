@@ -5,7 +5,7 @@ title: Estrazione colore
 topic: Developer guide
 description: Quando viene fornito un documento di testo, il servizio di estrazione delle parole chiave estrae automaticamente le parole chiave o le frasi chiave che meglio descrivono l’oggetto del documento. Per estrarre le parole chiave, viene utilizzata una combinazione di algoritmi di riconoscimento delle entità con nome (NER) e di estrazione delle parole chiave senza supervisione.
 translation-type: tm+mt
-source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 3%
@@ -84,7 +84,8 @@ Per ulteriori informazioni sui parametri di input, vedere la tabella sotto il pa
 
 >[!CAUTION]
 >
->`analyzer_id` determina quale [!DNL Sensei Content Framework] viene utilizzato. Prima di effettuare la richiesta, verificare di disporre dei dati necessari `analyzer_id` . Per il servizio di estrazione delle parole chiave, l&#39; `analyzer_id` ID è: `Feature:cintel-ner:Service-1a35aefb0f0f4dc0a3b5262370ebc709`
+>`analyzer_id` determina quale [!DNL Sensei Content Framework] viene utilizzato. Prima di effettuare la richiesta, verificare di disporre dei dati necessari `analyzer_id` . Per il servizio di estrazione delle parole chiave, l&#39; `analyzer_id` ID è:
+>`Feature:cintel-ner:Service-1a35aefb0f0f4dc0a3b5262370ebc709`
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
