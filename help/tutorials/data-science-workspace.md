@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Esercitazioni su Data Science Workspace
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1169'
 ht-degree: 0%
@@ -12,9 +12,9 @@ ht-degree: 0%
 ---
 
 
-# [!DNL Data Science Workspace] esercitazioni
+# Esercitazioni del [!DNL Data Science Workspace]
 
- Adobe Experience Platform [!DNL Data Science Workspace] utilizza l&#39;apprendimento automatico e l&#39;intelligenza artificiale per creare approfondimenti dai dati. Integrato in  Adobe Experience Platform, [!DNL Data Science Workspace] consente di fare previsioni utilizzando i contenuti e le risorse di dati nelle soluzioni  Adobe. I Data Scienziati di tutti i livelli di abilità hanno sofisticati strumenti facili da usare che supportano lo sviluppo rapido, la formazione e l&#39;ottimizzazione delle ricette di machine learning - tutti i vantaggi della tecnologia AI, senza la complessità.
+Adobe Experience Platform [!DNL Data Science Workspace] utilizza l&#39;apprendimento automatico e l&#39;intelligenza artificiale per creare approfondimenti dai dati. Integrato in Adobe Experience Platform, [!DNL Data Science Workspace] consente di fare previsioni utilizzando i contenuti e le risorse dati nelle soluzioni  Adobe. I Data Scienziati di tutti i livelli di abilità hanno sofisticati strumenti facili da usare che supportano lo sviluppo rapido, la formazione e l&#39;ottimizzazione delle ricette di machine learning - tutti i vantaggi della tecnologia AI, senza la complessità.
 
 Per saperne di più, iniziare leggendo la panoramica [di](../data-science-workspace/home.md)Data Science Workspace.
 
@@ -34,7 +34,7 @@ Per saperne di più e ottenere i valori richiesti per eseguire le operazioni CRU
 
 ## How to use [!DNL JupyterLab] Notebooks
 
-[!DNL JupyterLab] è un&#39;interfaccia utente basata sul Web per [!DNL Project Jupyter] ed è strettamente integrata nel Adobe Experience Platform . Fornisce un ambiente di sviluppo interattivo che consente agli esperti di dati di lavorare con [!DNL Jupyter notebooks], codice e dati. Questo documento fornisce una panoramica delle funzioni [!DNL JupyterLab] e delle istruzioni per eseguire azioni comuni.
+[!DNL JupyterLab] è un&#39;interfaccia utente basata sul Web per [!DNL Project Jupyter] ed è strettamente integrata in Adobe Experience Platform. Fornisce un ambiente di sviluppo interattivo che consente agli esperti di dati di lavorare con [!DNL Jupyter notebooks], codice e dati. Questo documento fornisce una panoramica delle funzioni [!DNL JupyterLab] e delle istruzioni per eseguire azioni comuni.
 
 **Questa guida è utile per:**
 - Accesso e comprensione dell&#39; [!DNL JupyterLab] interfaccia.
@@ -61,10 +61,9 @@ Per saperne di più, seguite i file sorgente del [pacchetto in un&#39;esercitazi
 
 >[!NOTE]
 >
->
 >Questa esercitazione richiede l&#39;URL di un file [!DNL Docker] sorgente. Se non disponete di un URL del file [sorgente, visitate i file sorgente del](../data-science-workspace/models-recipes/package-source-files-recipe.md) pacchetto in un&#39;esercitazione [!DNL Docker] sulla ricetta.
 
-Le esercitazioni sulle ricette di importazione forniscono informazioni approfondite su come configurare e importare una ricetta in un pacchetto. Al termine di questa esercitazione, è possibile creare, formare e valutare un modello in  Adobe Experience Platform [!DNL Data Science Workspace].
+Le esercitazioni sulle ricette di importazione forniscono informazioni approfondite su come configurare e importare una ricetta in un pacchetto. Al termine di questa esercitazione, puoi creare, formare e valutare un modello in Adobe Experience Platform [!DNL Data Science Workspace].
 
 **Questa esercitazione aiuterà:**
 - Create un set di configurazioni per una ricetta.
@@ -74,7 +73,7 @@ Per saperne di più, seguite l&#39;esercitazione [per l&#39;importazione di un&#
 
 ## Treno e valutazione di un modello
 
-In  Adobe Experience Platform [!DNL Data Science Workspace], un modello di apprendimento automatico viene creato incorporando una Ricetta esistente adatta all&#39;intento del modello. Il modello viene quindi addestrato e valutato per ottimizzare l&#39;efficienza operativa e l&#39;efficacia, affinando i relativi Hyperparameters associati. Le ricette sono riutilizzabili, il che significa che più modelli possono essere creati e personalizzati a scopi specifici con un&#39;unica ricetta.
+In Adobe Experience Platform [!DNL Data Science Workspace], un modello di machine learning viene creato incorporando una Ricetta esistente appropriata all&#39;intento del modello. Il modello viene quindi addestrato e valutato per ottimizzare l&#39;efficienza operativa e l&#39;efficacia, affinando i relativi Hyperparameters associati. Le ricette sono riutilizzabili, il che significa che più modelli possono essere creati e personalizzati a scopi specifici con un&#39;unica ricetta.
 
 **Questa esercitazione aiuterà:**
 - Creare un nuovo modello.
@@ -85,7 +84,7 @@ Per iniziare, segui la formazione e valuta un&#39;esercitazione [sulle](../data-
 
 ## Ottimizzare un modello utilizzando il framework Model Insights
 
-Model Insights Framework fornisce allo scienziato dei dati strumenti in  Adobe Experience Platform [!DNL Data Science Workspace] per effettuare scelte rapide e informate per modelli ottimali di machine learning basati su esperimenti. Il quadro migliorerà la velocità e l&#39;efficacia del flusso di lavoro di apprendimento automatico e migliorerà la facilità d&#39;uso per gli esperti in materia di dati. A tal fine, viene fornito un modello predefinito per ciascun tipo di algoritmo di machine learning per facilitare l&#39;ottimizzazione del modello. Il risultato finale consente agli esperti di data mining e ai cittadini di prendere decisioni migliori in merito all&#39;ottimizzazione dei modelli per i clienti finali.
+Model Insights Framework fornisce agli esperti di dati strumenti in Adobe Experience Platform [!DNL Data Science Workspace] per effettuare scelte rapide e informate per modelli ottimali di machine learning basati su esperimenti. Il quadro migliorerà la velocità e l&#39;efficacia del flusso di lavoro di apprendimento automatico e migliorerà la facilità d&#39;uso per gli esperti in materia di dati. A tal fine, viene fornito un modello predefinito per ciascun tipo di algoritmo di machine learning per facilitare l&#39;ottimizzazione del modello. Il risultato finale consente agli esperti di data mining e ai cittadini di prendere decisioni migliori in merito all&#39;ottimizzazione dei modelli per i clienti finali.
 
 **Questa esercitazione aiuterà:**
 - Configurare il codice di ricetta.
@@ -96,7 +95,7 @@ Per iniziare, seguite l&#39;esercitazione sull&#39; [ottimizzazione di un modell
 
 ## Punteggio di un modello
 
-Il punteggio nel Adobe Experience Platform  [!DNL Data Science Workspace] può essere ottenuto inserendo i dati in un modello già preparato. I risultati del punteggio vengono quindi memorizzati e visualizzati in un set di dati di output specificato come nuovo batch.
+Il punteggio in Adobe Experience Platform [!DNL Data Science Workspace] può essere ottenuto inserendo i dati in un modello già preparato. I risultati del punteggio vengono quindi memorizzati e visualizzati in un set di dati di output specificato come nuovo batch.
 
 **Questa esercitazione aiuterà:**
 - Crea una nuova esecuzione del punteggio.
@@ -106,7 +105,7 @@ Per iniziare, segui la valutazione di un&#39;esercitazione [sulle](../data-scien
 
 ## Pubblicare un modello come servizio
 
- Adobe Experience Platform [!DNL Data Science Workspace] consente di pubblicare il modello come servizio, consentendo agli utenti all&#39;interno dell&#39;organizzazione IMS di valutare i dati senza creare i propri modelli. Questo può essere fatto utilizzando l&#39;interfaccia [!DNL Platform] utente o l&#39; [!DNL Sensei Machine Learning] API.
+Adobe Experience Platform [!DNL Data Science Workspace] consente di pubblicare il modello come servizio, consentendo agli utenti all&#39;interno dell&#39;organizzazione IMS di valutare i dati senza la necessità di creare modelli personalizzati. Questo può essere fatto utilizzando l&#39;interfaccia [!DNL Platform] utente o l&#39; [!DNL Sensei Machine Learning] API.
 
 **Questa esercitazione aiuterà:**
 - Pubblicate un modello come servizio.
@@ -116,7 +115,7 @@ Per iniziare, segui l’esercitazione [di pubblicazione di un modello come servi
 
 ## Pianificazione formazione e punteggio per un modello
 
- Adobe Experience Platform [!DNL Data Science Workspace] consente di impostare l’esecuzione programmata di punteggi e corsi di formazione su un servizio di machine learning. Automatizzare il processo di formazione e valutazione può contribuire a mantenere e migliorare l&#39;efficienza del servizio nel tempo, tenendo al passo con i pattern all&#39;interno dei dati.
+Adobe Experience Platform [!DNL Data Science Workspace] consente di impostare l’esecuzione programmata di punteggi e formazioni su un servizio di machine learning. Automatizzare il processo di formazione e valutazione può contribuire a mantenere e migliorare l&#39;efficienza del servizio nel tempo, tenendo al passo con i pattern all&#39;interno dei dati.
 
 **Questa esercitazione aiuterà:**
 - Configurare il punteggio pianificato
@@ -127,9 +126,10 @@ Per iniziare, segui l’ [esercitazione](../data-science-workspace/models-recipe
 ## Creazione di una pipeline di feature
 
 >[!NOTE]
+>
 >Attualmente, le pipeline delle funzioni sono disponibili solo tramite API.
 
- Adobe Experience Platform consente di creare e creare tubazioni di feature personalizzate per eseguire la progettazione di feature su scala attraverso [!DNL Sensei Machine Learning Framework Runtime].
+Adobe Experience Platform consente di creare e creare tubazioni di feature personalizzate per eseguire la progettazione di feature su scala attraverso [!DNL Sensei Machine Learning Framework Runtime].
 
 **Questa guida è utile per:**
 - Implementare le classi di pipeline delle funzioni.
@@ -144,7 +144,7 @@ Una combinazione di un calcolo senza soluzione di continuità sia sull&#39;Hub c
 **Questa guida è utile per:**
 - Comprendere l&#39; [!DNL Real-time Machine Learning] architettura.
 - Comprendere il [!DNL Real-time Machine Learning] flusso di lavoro.
-- Comprendere la funzionalità corrente per [!DNL Real-time Machine Learning].
+- Comprendere le funzionalità correnti per [!DNL Real-time Machine Learning].
 - Fornire i passaggi successivi per la creazione di nuovi modelli personalizzati [!DNL Real-time Machine Learning model].
 
 Per ulteriori informazioni, consultare la panoramica [sull&#39;apprendimento automatico in tempo](../data-science-workspace/real-time-machine-learning/home.md)reale.
