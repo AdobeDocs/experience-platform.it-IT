@@ -5,7 +5,7 @@ description: 'Scopri come configurare l’SDK Web per Experienci Platform '
 seo-description: 'Scopri come configurare l’SDK Web per Experienci Platform '
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: fe53ecbf6adff4f1e09979cd170a88ac0bd3cb75
 workflow-type: tm+mt
 source-wordcount: '745'
 ht-degree: 7%
@@ -107,9 +107,9 @@ Impostate questa opzione per configurare un callback che viene chiamato per ogni
 
 | **Tipo** | **Obbligatorio** | **Valore predefinito** |
 | -------- | ------------ | ----------------- |
-| Oggetto | No | `{"general": "in"}` |
+| Oggetto | No | `"in"` |
 
-Imposta il consenso predefinito dell&#39;utente. Questo viene utilizzato quando non è già stata salvata alcuna preferenza di consenso per l&#39;utente. L&#39;altro valore valido è `{"general": "pending"}`. Una volta impostato, il lavoro verrà messo in coda fino a quando l&#39;utente non fornirà le preferenze di consenso. Dopo aver fornito le preferenze dell&#39;utente, lavorare procede o viene interrotto in base alle preferenze dell&#39;utente. Per ulteriori informazioni, consultate [Supporto](supporting-consent.md) .
+Imposta il consenso predefinito dell&#39;utente. Questo viene utilizzato quando non è già stata salvata alcuna preferenza di consenso per l&#39;utente. L&#39;altro valore valido è `"pending"`. Una volta impostato, il lavoro verrà messo in coda fino a quando l&#39;utente non fornirà le preferenze di consenso. Dopo aver fornito le preferenze dell&#39;utente, lavorare procede o viene interrotto in base alle preferenze dell&#39;utente. Per ulteriori informazioni, consultate [Supporto](supporting-consent.md) .
 
 ## Opzioni di personalizzazione
 
