@@ -5,7 +5,7 @@ seo-title: Guida introduttiva alla piattaforma dati cliente  Adobe in tempo real
 description: Scenario di esempio per  Adobe Real-time Customer Data Platform
 seo-description: Scenario di esempio per  Adobe Real-time Customer Data Platform
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2321'
 ht-degree: 0%
@@ -258,6 +258,7 @@ In questo scenario, Luma desidera riassegnare l&#39;audience con la personalizza
 Puoi anche pianificare l’inizio o la fine del segmento in un dato momento. Il segmento verrà pubblicato e aggiornato automaticamente nelle piattaforme configurate alle date pianificate.
 
 >[!NOTE]
+>
 >Se si fa clic nel campo data, il programma viene pianificato automaticamente per 90 giorni.
 
 Fare clic **[!UICONTROL Save]** per passare alla pagina successiva.
