@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connettore HDFS
 topic: overview
 translation-type: tm+mt
-source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
@@ -15,9 +15,10 @@ ht-degree: 0%
 # (Beta) Connettore [!DNL Apache] HDFS
 
 >[!NOTE]
+>
 >Il connettore Apache HDFS è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la panoramica [](../../home.md#terms-and-conditions) Origini.
 
- Adobe Experience Platform offre connettività nativa per fornitori di cloud come AWS [!DNL Google Cloud Platform], e [!DNL Azure], consentendo di portare i dati da questi sistemi. I dati contenuti possono essere formattati come JSON, parquet o delimitati. Il supporto per i fornitori di archiviazione cloud include [!DNL Apache] HDFS.
+Adobe Experience Platform offre connettività nativa per fornitori di cloud come AWS [!DNL Google Cloud Platform]e [!DNL Azure], consentendo di portare i dati da questi sistemi. I dati contenuti possono essere formattati come JSON, parquet o delimitati. Il supporto per i fornitori di archiviazione cloud include [!DNL Apache] HDFS.
 
 ## Indirizzo IP  elenco consentiti
 
