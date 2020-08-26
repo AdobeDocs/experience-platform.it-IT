@@ -5,9 +5,9 @@ seo-title: ' destinazione Amazon S3'
 description: Crea una connessione in uscita diretta con l'archivio  Amazon Web Services (AWS) S3 per esportare periodicamente file di dati CSV o delimitati da tabulazioni da Adobe Experience Platform nei tuoi bucket S3.
 seo-description: Crea una connessione in uscita diretta con l'archivio  Amazon Web Services (AWS) S3 per esportare periodicamente file di dati CSV o delimitati da tabulazioni da Adobe Experience Platform nei tuoi bucket S3.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 4c45da353b1deeb66b0dedb37450158f4bdc2a7c
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Consulta Flusso di lavoro delle destinazioni di archiviazione [Cloud ](/help/rtc
 
 Per [!DNL Amazon S3] le destinazioni, immetti le seguenti informazioni nel flusso di lavoro di creazione della destinazione:
 
-* **[!DNL Amazon S3]chiave di accesso e chiave[!DNL Amazon S3]** segreta: In [!DNL Amazon S3], generate una coppia di chiavi di accesso - chiave di accesso segreta per concedere al Adobe l&#39;accesso CDP in tempo reale al vostro [!DNL Amazon S3] account.
+* **[!DNL Amazon S3]chiave di accesso e chiave[!DNL Amazon S3]** segreta: In [!DNL Amazon S3], generate una `access key - secret access key` coppia per concedere a  Adobe l&#39;accesso CDP in tempo reale al vostro [!DNL Amazon S3] account. Ulteriori informazioni sono disponibili nella [documentazione](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)di Amazon Web Services.
 
 >[!IMPORTANT]
 >
