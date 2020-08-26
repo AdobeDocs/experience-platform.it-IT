@@ -5,7 +5,7 @@ title: Guida utente di JupyterLab
 topic: Overview
 description: JupyterLab è un'interfaccia utente basata sul Web per Project Jupyter ed è strettamente integrata in Adobe Experience Platform. Fornisce un ambiente di sviluppo interattivo che consente agli scienziati dei dati di lavorare con notebook, codice e dati Jupyter.
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '3682'
 ht-degree: 11%
@@ -237,6 +237,7 @@ Per aprire un nuovo *avvio*, fai clic su **File > Nuovo avvio**. In alternativa,
 Nell&#39; [!DNL JupyterLab] angolo superiore destro selezionate l&#39;icona a forma di ingranaggio per aprire la configurazione *del server* Notebook. È possibile attivare la GPU e allocare la quantità di memoria necessaria utilizzando il cursore. La quantità di memoria che è possibile allocare dipende dalla quantità di provisioning dell&#39;organizzazione. Selezionare **[!UICONTROL Update configs]** per salvare.
 
 >[!NOTE]
+>
 >Per i notebook viene fornita una sola GPU per organizzazione. Se la GPU è in uso, è necessario attendere che l&#39;utente che ha attualmente riservato la GPU la rilasci. A questo scopo, disconnettetevi o uscite dalla GPU in uno stato di inattività per quattro o più ore.
 
 ![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
@@ -425,6 +426,7 @@ dataFrame.show()
 ```
 
 >[!TIP]
+>
 >In Scala è possibile utilizzare `sys.env()` per dichiarare e restituire un valore dall&#39;interno `option`.
 
 ### Utilizzo di %dataset Magic nei notebook PySpark 3 ([!DNL Spark] 2.4) {#magic}
@@ -604,9 +606,7 @@ timedf.show()
 
 >[!TIP]
 >
->
 >In Scala è possibile utilizzare `sys.env()` per dichiarare e restituire un valore dall&#39;interno `option`. Questo elimina la necessità di definire le variabili se sai che verranno utilizzate solo una volta. L&#39;esempio seguente prende `val userToken` spunto dall&#39;esempio precedente e lo dichiara in linea `option` come alternativa:
->
 > 
 ```scala
 > .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
@@ -627,27 +627,27 @@ timedf.show()
 | gensim | 3.7.3 |
 | ipyparallelo | 0.5.2 |
 | cuscinetto | 1.6 |
-| cheras | 2.2.4 |
+| grano | 2.2.4 |
 | nltk | 3.2.5 |
 | panda | 0.22.0 |
 | pandasql | 0.7.3 |
 | folletto | 6.0.0 |
 | scikit-image | 0.15.0 |
 | scikit-learn | 0.21.3 |
-| kit | 1.3.0 |
+| sciolto | 1.3.0 |
 | -grassa | 1.3.0 |
 | marinaio | 0.9.0 |
-| optslm | 0.10.1 |
-| Il elastico | 5.1.0.17 |
-| pirata | 0.11.5 |
+| statsmodels | 0.10.1 |
+| sciolto | 5.1.0.17 |
+| ggplot | 0.11.5 |
 | py xgipplo | 0.90 |
-| colorante opencv | 3.4.1 |
-| statuetta | 2.4.3 |
+| opencv | 3.4.1 |
+| bozzolo | 2.4.3 |
 | torcia | 1.0.1 |
 | wxpitone | 4.0.6 |
 | naso | 0.3.0 |
 | geopandas | 0.5.1 |
-| pirata | 2.1.0 |
+| jp | 2.1.0 |
 | sagomato | 1.6.4 |
 | rpy2 | 2.9.4 |
 | r-Essentials | 3.6 |
@@ -668,11 +668,11 @@ timedf.show()
 | r-rstan | 2.19.2 |
 | r-sqldf | 0.4_11 |
 | r-sopravvivenza | 2.44_1.1 |
-| gabinetto | 1.8_6 |
+| r-zoo | 1.8_6 |
 | r-stringdist | 0.9.5.2 |
 | quadrante r | 1.5_7 |
 | r-rjson | 0.2.20 |
-| piramide | 8.7 |
+| r-previsione | 8.7 |
 | r-rsolnp | 1.16 |
 | reticolare | 1.12 |
 | r-mlr | 2.14.0 |
@@ -718,7 +718,7 @@ timedf.show()
 | :------ | :------ |
 | requests | 2.18.4 |
 | gensim | 2.3.0 |
-| cheras | 2.0.6 |
+| grano | 2.0.6 |
 | nltk | 3.2.4 |
 | panda | 0.20.1 |
 | pandasql | 0.7.3 |
@@ -728,10 +728,10 @@ timedf.show()
 | sciolto | 0.19.1 |
 | grassa | 1.3.3 |
 | statsmodels | 0.8.0 |
-| elastico | 4.0.30.44 |
+| Il elastico | 4.0.30.44 |
 | py xgipplo | 0.60 |
-| opencv | 3.1.0 |
-| freccia | 0.8.0 |
+| colorante opencv | 3.1.0 |
+| La freccia | 0.8.0 |
 | boto3 | 1.5.18 |
 | azure-storage-blob | 1.4.0 |
 | [!DNL python] | 3.6.7 |
