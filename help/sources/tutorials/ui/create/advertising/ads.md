@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare un connettore sorgente Google AdWords nell’interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # Creare un connettore [!DNL Google AdWords] sorgente nell’interfaccia utente
 
 >[!NOTE]
+>
 >Il [!DNL Google AdWords] connettore è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la panoramica [](../../../../home.md#terms-and-conditions) Origini.
 
 I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente originati su base programmata. Questa esercitazione fornisce i passaggi necessari per creare un connettore [!DNL Google AdWords] sorgente utilizzando l&#39;interfaccia [!DNL Platform] utente.
@@ -28,7 +29,7 @@ Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Ad
    * [Esercitazione](../../../../../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
 * [[!DNL Profilo cliente in tempo reale]](../../../../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
-Se si dispone già di una [!DNL Google AdWords] connessione valida, è possibile ignorare il resto del documento e procedere all&#39;esercitazione sulla [configurazione di un flusso di dati](../../dataflow/payments.md)
+Se disponete già di una [!DNL Google AdWords] connessione valida, potete ignorare il resto del documento e procedere all&#39;esercitazione sulla [configurazione di un flusso di dati](../../dataflow/payments.md)
 
 ### Raccogli credenziali richieste
 
