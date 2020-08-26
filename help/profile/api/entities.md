@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Entità - API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1671'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Endpoint entità (accesso profilo)
 
- Adobe Experience Platform consente di accedere ai [!DNL Real-time Customer Profile] dati utilizzando RESTful APIs o l&#39;interfaccia utente. Questa guida descrive come accedere alle entità, più comunemente denominate &quot;profili&quot;, utilizzando l&#39;API. Per ulteriori informazioni sull’accesso ai profili tramite l’ [!DNL Platform] interfaccia utente, consulta la guida [utente](../ui/user-guide.md)Profilo.
+Adobe Experience Platform consente di accedere ai [!DNL Real-time Customer Profile] dati utilizzando le RESTful API o l&#39;interfaccia utente. Questa guida descrive come accedere alle entità, più comunemente denominate &quot;profili&quot;, utilizzando l&#39;API. Per ulteriori informazioni sull’accesso ai profili tramite l’ [!DNL Platform] interfaccia utente, consulta la guida [utente](../ui/user-guide.md)Profilo.
 
 ## Introduzione
 
@@ -115,6 +115,7 @@ curl -X GET \
 ```
 
 >[!NOTE]
+>
 >Se un grafico correlato collega più di 50 identità, questo servizio restituirà lo stato HTTP 422 e il messaggio &quot;Troppe identità correlate&quot;. Se ricevete questo errore, provate ad aggiungere altri parametri di query per limitare la ricerca.
 
 ## Accesso ai dati del profilo in base all&#39;elenco di identità
@@ -360,6 +361,7 @@ curl -X GET \
 Una risposta corretta restituisce un elenco impaginato di eventi di serie temporali e campi associati specificati nei parametri della query di richiesta.
 
 >[!NOTE]
+>
 >La richiesta ha specificato un limite di uno (`limit=1`), pertanto il valore `count` nella risposta seguente è 1 e viene restituita una sola entità.
 
 ```json
@@ -414,6 +416,7 @@ Una risposta corretta restituisce un elenco impaginato di eventi di serie tempor
 I risultati vengono impaginati al momento del recupero degli eventi delle serie temporali. In presenza di pagine successive di risultati, la `_page.next` proprietà conterrà un ID. Inoltre, la `_links.next.href` proprietà fornisce un URI di richiesta per il recupero della pagina successiva. Per recuperare i risultati, effettuate un&#39;altra richiesta di GET all&#39; `/access/entities` endpoint, tuttavia dovete essere sicuri di sostituire `/entities` con il valore dell&#39;URI fornito.
 
 >[!NOTE]
+>
 >Accertatevi di non ripetere accidentalmente `/entities/` nel percorso della richiesta. Dovrebbe apparire solo una volta come, `/access/entities?start=...`
 
 **Formato API**
