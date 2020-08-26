@@ -5,7 +5,7 @@ title: Panoramica del profilo cliente in tempo reale
 topic: guide
 description: Profilo cliente in tempo reale è un archivio di entità di ricerca generico che unisce i dati da varie risorse di dati aziendali e fornisce l'accesso a tali dati sotto forma di profili cliente individuali ed eventi serie temporali correlati. Questa funzione consente agli esperti di marketing di promuovere esperienze coordinate, coerenti e pertinenti con il pubblico attraverso più canali.
 translation-type: tm+mt
-source-git-commit: 05032ba72afd5224e33cb4fdc93c97ba6ec6f8e8
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1718'
 ht-degree: 1%
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 Adobe Experience Platform consente di creare esperienze coordinate, coerenti e pertinenti per i clienti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con [!DNL Real-time Customer Profile], puoi vedere una visualizzazione olistica di ogni singolo cliente che combina dati provenienti da più canali, inclusi online, offline, CRM e dati di terze parti. [!DNL Profile] consente di consolidare i diversi dati dei clienti in una visualizzazione unificata che offre un account utilizzabile e con marca temporale per ogni interazione con il cliente. Questa panoramica vi aiuterà a capire il ruolo e l’utilizzo di [!DNL Real-time Customer Profile] in [!DNL Experience Platform].
 
-## Informazioni [!DNL Real-time Customer Profile]
+## Comprensione di [!DNL Real-time Customer Profile]
 
 [!DNL Real-time Customer Profile] è un archivio di entità di ricerca generico che unisce i dati da varie risorse di dati aziendali e fornisce l&#39;accesso a tali dati sotto forma di profili cliente individuali e relativi eventi delle serie temporali. Questa funzione consente agli esperti di marketing di promuovere esperienze coordinate, coerenti e pertinenti con il pubblico attraverso più canali.
 
@@ -49,7 +49,7 @@ Adobe Experience Platform [!DNL Segmentation Service] produce i tipi di pubblico
 
 ### Frammenti di profilo e schemi di unione {#profile-fragments-and-union-schemas}
 
-Una delle caratteristiche chiave di [!DNL Real-time Customer Profile] è la capacità di unificare i dati multicanale. Quando [!DNL Real-time Customer Profile] viene utilizzato per accedere a un&#39;entità, può fornire una visualizzazione unita di tutti i frammenti di profilo per tale entità tra i set di dati, detta visualizzazione unione e resa possibile attraverso ciò che è noto come schema unione. [!DNL Real-time Customer Profile] i dati vengono uniti tra le origini quando l&#39;ID di un&#39;entità o di un profilo vi consente di accedervi o di esportarli come segmento. Per ulteriori informazioni sull&#39;accesso ai profili e alle visualizzazioni di unione tramite l&#39; [!DNL Real-time Customer Profile] API, visita la guida [all&#39;endpoint](api/entities.md)entità.
+Una delle caratteristiche chiave di [!DNL Real-time Customer Profile] è la capacità di unificare i dati multicanale. Quando [!DNL Real-time Customer Profile] viene utilizzato per accedere a un&#39;entità, può fornire all&#39;utente una visualizzazione unita di tutti i frammenti di profilo per l&#39;entità in tutti i set di dati, detta visualizzazione unione e resa possibile tramite ciò che è noto come schema unione. [!DNL Real-time Customer Profile] i dati vengono uniti tra le origini quando l&#39;ID di un&#39;entità o di un profilo vi consente di accedervi o di esportarli come segmento. Per ulteriori informazioni sull&#39;accesso ai profili e alle visualizzazioni di unione tramite l&#39; [!DNL Real-time Customer Profile] API, visita la guida [all&#39;endpoint](api/entities.md)entità.
 
 ### Unisci criteri
 
@@ -58,6 +58,7 @@ Quando si uniscono i dati da più origini e si combinano per visualizzare una vi
 ### (Alfa) Configurare gli attributi calcolati
 
 >[!IMPORTANT]
+>
 >La funzionalità degli attributi calcolati descritta in questo documento è in alfa. La documentazione e la funzionalità sono soggette a modifiche.
 
 Gli attributi calcolati consentono di calcolare automaticamente il valore dei campi in base ad altri valori, calcoli ed espressioni. Gli attributi calcolati operano a livello di profilo, il che significa che puoi aggregare i valori per tutti i record ed eventi. Ogni attributo calcolato contiene un&#39;espressione, o &quot;regola&quot;, che valuta i dati in arrivo e memorizza il valore risultante in un attributo di profilo o in un evento. Questi calcoli consentono di rispondere facilmente a domande relative a cose come il valore di acquisto del ciclo di vita, il tempo tra acquisti o il numero di aperture di applicazioni, senza che sia necessario eseguire manualmente calcoli complessi ogni volta che le informazioni sono necessarie. Per ulteriori informazioni sugli attributi calcolati e istruzioni dettagliate per utilizzarli tramite l&#39; [!DNL Real-time Customer Profile] API, consultate la guida [all&#39;endpoint degli attributi](api/computed-attributes.md)calcolati. Questa guida ti aiuterà a comprendere meglio il ruolo che gli attributi calcolati giocano in Adobe Experience Platform e include chiamate API di esempio per eseguire operazioni CRUD di base.
@@ -95,7 +96,7 @@ Per quanto riguarda l&#39;accesso ai dati, la governance dei dati svolge un ruol
 * Criteri di accesso ai dati
 * Controllo dell&#39;accesso ai dati per le azioni di marketing
 
-[!DNL Data governance] è gestito in diversi punti. Tra queste, puoi decidere in quali dati vengono acquisiti [!DNL Platform] e quali dati sono accessibili dopo l’assimilazione per una determinata azione di marketing. Per ulteriori informazioni, iniziare leggendo la panoramica sulla governance dei [dati](../data-governance/home.md).
+[!DNL Data governance] è gestito in diversi punti. tra cui la scelta di quali dati vengono acquisiti [!DNL Platform] e quali dati sono accessibili dopo l’assimilazione per una determinata azione di marketing. Per ulteriori informazioni, iniziare leggendo la panoramica sulla governance dei [dati](../data-governance/home.md).
 
 ### Gestione delle richieste di privacy e rinuncia ai dati
 
@@ -132,7 +133,6 @@ Per quanto riguarda l&#39;accesso ai dati, la governance dei dati svolge un ruol
 
 >[!NOTE]
 >
->
 >Un&#39;entità non-persona fa riferimento a qualsiasi classe XDM che **non** fa parte di [!DNL Profile].
 
 ## Passaggi successivi e risorse aggiuntive
@@ -140,6 +140,7 @@ Per quanto riguarda l&#39;accesso ai dati, la governance dei dati svolge un ruol
 Per saperne di più [!DNL Real-time Customer Profile], continuate a leggere la documentazione e completate le vostre lezioni guardando il video sottostante o esplorando altre esercitazioni video [Experience Platform](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html).
 
 >[!WARNING]
+>
 >L’ [!DNL Platform] interfaccia utente mostrata nel video seguente non è aggiornata. Consulta la guida [utente Profilo cliente](ui/user-guide.md) in tempo reale per informazioni sulle ultime funzionalità e videate dell&#39;interfaccia utente.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12)
