@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida di riferimento ai nodi di apprendimento automatico in tempo reale
 topic: Nodes reference
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '594'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # Guida di riferimento ai nodi di apprendimento automatico in tempo reale (Alpha)
 
 >[!IMPORTANT]
+>
 >L&#39;apprendimento automatico in tempo reale non è ancora disponibile per tutti gli utenti. Questa funzione è in alfa e viene ancora testata. Questo documento è soggetto a modifiche.
 
 Un nodo è l&#39;unità fondamentale di cui si formano i grafici. Ogni nodo esegue un&#39;attività specifica e può essere concatenato utilizzando i collegamenti per creare un grafico che rappresenta una pipeline ML. L&#39;attività eseguita da un nodo rappresenta un&#39;operazione sui dati di input, ad esempio una trasformazione di dati o schema, o un&#39;inferenza di apprendimento di una macchina. Il nodo genera il valore trasformato o dedotto nei nodi successivi.
@@ -72,6 +73,7 @@ model_id = msg_model.model['model_id']
 ONNXNode è un nodo di Adobe  interno che richiede un ID modello per il pulling del modello ONNX preformato e lo utilizza per il punteggio sui dati in arrivo.
 
 >[!TIP]
+>
 >Specificare le colonne nello stesso ordine in cui si desidera inviare i dati al modello ONNX per la valutazione.
 
 ```python
@@ -121,7 +123,7 @@ msg6 = model_train.process(msg5)
 | Valore | Descrizione |
 | --- | --- |
 | funzionalità | Inserire le feature nel modello (elenco di stringhe). <br> Ad esempio: `browser`, `device`, `login_page`, `product_page`, `search_page` |
-| label | Nome colonna Target (stringa). |
+| label | Nome colonna di destinazione (stringa). |
 | mode | Treno/prova (stringa). |
 | model_path | Percorso del modello di salvataggio locale in formato onnx. |
 | params.model | Percorso di importazione assoluto del modello (stringa), ad esempio: `sklearn.linear_model.LogisticRegression`. |
