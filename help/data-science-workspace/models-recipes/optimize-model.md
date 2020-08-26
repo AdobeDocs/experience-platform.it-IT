@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Ottimizzare un modello
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1221'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Dopo aver implementato e addestrato un modello, il passo successivo che uno scie
 
 Al momento, Model Insights Framework supporta i seguenti runtime:
 - [Scala](#scala)
-- [!DNL Python/Tensorflow](#pythontensorflow)
+- [Python/Tensorflow](#pythontensorflow)
 - [R](#r)
 
 Il codice di esempio per le ricette è disponibile nell’archivio di riferimento [](https://github.com/adobe/experience-platform-dsw-reference) experience-platform-dsw in `recipes`. Per questa esercitazione verranno utilizzati riferimenti a file specifici provenienti da questo archivio.
