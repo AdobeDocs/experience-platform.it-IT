@@ -5,9 +5,9 @@ seo-title: Adobe Campaign
 description: ' Adobe Campaign è un insieme di soluzioni che consentono di personalizzare e distribuire campagne su tutti i canali online e offline.'
 seo-description: ' Adobe Campaign è un insieme di soluzioni che consentono di personalizzare e distribuire campagne su tutti i canali online e offline.'
 translation-type: tm+mt
-source-git-commit: e5a3539c8be8b7424f4965c7ab43d4260e39b380
+source-git-commit: 4c45da353b1deeb66b0dedb37450158f4bdc2a7c
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '545'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ Consulta [Attivare profili e segmenti su una destinazione](/help/rtcdp/destinati
 
 ## Attributi di destinazione {#destination-attributes}
 
-Quando si [attivano i segmenti](/help/rtcdp/destinations/activate-destinations.md) nella destinazione Adobe Campaign , si consiglia di selezionare un identificatore univoco dallo schema [](../../profile/home.md#profile-fragments-and-union-schemas)unione. Selezionate l’identificatore univoco ed eventuali altri campi XDM da esportare nella destinazione. Per ulteriori informazioni, vedere [Selezionare i campi dello schema da utilizzare come attributi di destinazione nei file](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) esportati in Destinazioni di marketing e-mail.
+Quando si [attivano i segmenti](/help/rtcdp/destinations/activate-destinations.md) nella destinazione Adobe Campaign , si consiglia di selezionare un identificatore univoco dallo schema [](../../profile/home.md#profile-fragments-and-union-schemas)unione. Selezionate l’identificatore univoco ed eventuali altri campi XDM da esportare nella destinazione. Per ulteriori informazioni, consulta [Selezionare i campi dello schema da utilizzare come attributi di destinazione nei file](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) esportati nella documentazione delle destinazioni di e-mail marketing.
 
 ## Dati esportati {#exported-data}
 
