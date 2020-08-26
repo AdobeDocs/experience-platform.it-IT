@@ -5,7 +5,7 @@ seo-title: Destinazione Facebook
 description: Attiva profili per le tue campagne Facebook per il targeting dell'audience, la personalizzazione e la soppressione basate su e-mail con hash.
 seo-description: Attiva profili per le tue campagne Facebook per il targeting dell'audience, la personalizzazione e la soppressione basate su e-mail con hash.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 2%
@@ -60,6 +60,7 @@ Prima di inviare i segmenti di pubblico a [!DNL Facebook], accertati di soddisfa
 1. L&#39;account [!DNL Facebook] utente deve avere l&#39; **[!DNL Manage campaigns]** autorizzazione abilitata per l&#39;account annuncio che intendi utilizzare.
 2. Add the **Adobe Experience Cloud** business account as an advertising partner in your [!DNL Facebook Ad Account]. Seleziona `business ID=206617933627973`. Per informazioni, consulta [Aggiungere partner al tuo Business Manager](https://www.facebook.com/business/help/1717412048538897) nella documentazione di Facebook.
    >[!IMPORTANT]
+   >
    > When configuring the permissions for Adobe Experience Cloud, you must enable the **Manage campaigns** permission. Questa è richiesta per l’integrazione di [!DNL Adobe Real-time CDP].
 3. Leggi e firma le [!DNL Facebook Custom Audiences] Condizioni del servizio. Per fare questo, vai su `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, dove `accountID` è il tuo [!DNL Facebook Ad Account ID].
 
@@ -101,4 +102,4 @@ Ad [!DNL Facebook]esempio, un&#39;attivazione riuscita significa che un&#39;audi
 
 >[!TIP]
 >
->L&#39;integrazione tra  CDP in tempo reale del Adobe e [!DNL Facebook] supporta le ricadute storiche del pubblico. Tutte le qualifiche del segmento storico vengono inviate a [!DNL Facebook] quando si attivano i segmenti alla destinazione.
+>L&#39;integrazione tra CDP in tempo reale  Adobe e [!DNL Facebook] supporta le ricadute storiche del pubblico. Tutte le qualifiche del segmento storico vengono inviate a [!DNL Facebook] quando si attivano i segmenti alla destinazione.
