@@ -1,9 +1,10 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Aiuto sull'inserimento dei dati  Adobe Experience Platform
+user-guide-title: Guida all'inserimento dei dati Adobe Experience Platform
+user-guide-description: Adobe Experience Platform brings data from multiple sources together in order to help marketers better understand the behavior of their customers. Adobe Experience Platform Data Ingestion represents the multiple methods by which Platform ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream Platform services.
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 5%
@@ -40,4 +41,4 @@ ht-degree: 5%
    - [Iscrizione agli eventi di assimilazione dei dati](quality/subscribe-events.md)
 - [Connettori sorgente](source-connectors.md)
 - [Riferimento API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
-- [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
+- [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-en)
