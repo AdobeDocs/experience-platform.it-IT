@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Processi del sistema di profili - API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: 73f2c05a0e63f376f7a2f5644133e773980d0b26
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1419'
 ht-degree: 2%
@@ -17,6 +17,7 @@ ht-degree: 2%
 Adobe Experience Platform consente di acquisire dati da più origini e di creare profili affidabili per i singoli clienti. I dati acquisiti [!DNL Platform] vengono memorizzati sia nell&#39;archivio [!DNL Data Lake] che nell&#39;archivio [!DNL Real-time Customer Profile] dati. Talvolta potrebbe essere necessario eliminare un set di dati o un batch dall&#39;archivio profili per rimuovere i dati non più necessari o che sono stati aggiunti per errore. Ciò richiede l&#39;utilizzo dell&#39; [!DNL Real-time Customer Profile] API per creare un processo di [!DNL Profile] sistema, noto anche come &quot;[!DNL delete request]&quot;, che può essere modificato, monitorato o rimosso se necessario.
 
 >[!NOTE]
+>
 >Se state tentando di eliminare i set di dati o i batch dal [!DNL Data Lake], consultate la panoramica [del servizio](../../catalog/home.md) catalogo per le istruzioni.
 
 ## Introduzione
@@ -106,6 +107,7 @@ L&#39;avvio di una nuova richiesta di eliminazione viene eseguito tramite una ri
 Per eliminare un set di dati, l&#39;ID del set di dati deve essere incluso nel corpo della richiesta del POST. Questa azione eliminerà TUTTI i dati per un dato dataset. [!DNL Experience Platform] consente di eliminare i set di dati basati su schemi di record e serie temporali.
 
 >[!CAUTION]
+>
 > Quando si tenta di eliminare un set di dati [!DNL Profile]abilitato tramite l&#39; [!DNL Experience Platform] interfaccia utente, il set di dati viene disabilitato per l&#39;inserimento ma non viene eliminato finché non viene creata una richiesta di eliminazione tramite l&#39;API. Per ulteriori informazioni, vedere l&#39; [appendice](#appendix) di questo documento.
 
 **Formato API**
@@ -159,6 +161,7 @@ Una risposta corretta restituisce i dettagli della nuova richiesta di eliminazio
 Per eliminare un batch, l&#39;ID batch deve essere incluso nel corpo della richiesta POST. Non è possibile eliminare i batch per i set di dati basati sugli schemi di record. È possibile eliminare solo i batch per i set di dati basati sugli schemi delle serie temporali.
 
 >[!NOTE]
+>
 > Il motivo per cui non è possibile eliminare i batch per i set di dati basati su schemi di record è che i batch di set di dati di tipo record sovrascrivono i record precedenti e pertanto non possono essere &quot;annullati&quot; o eliminati. L&#39;unico modo per rimuovere l&#39;impatto dei batch errati per i set di dati basati sugli schemi di record consiste nel ripetere l&#39;inserimento del batch con i dati corretti per sovrascrivere i record errati.
 
 Per ulteriori informazioni sul comportamento dei record e delle serie temporali, consulta la [sezione sui comportamenti](../../xdm/home.md#data-behaviors) dei dati XDM nella [!DNL XDM System] panoramica.
@@ -316,7 +319,7 @@ Le seguenti informazioni sono supplementari rispetto all’eliminazione di un se
 
 Quando si utilizza l&#39;interfaccia [!DNL Experience Platform] utente per eliminare un set di dati abilitato per [!DNL Profile], si apre una finestra di dialogo in cui viene chiesto: &quot;Eliminare il set di dati dal [!DNL Experience Data Lake]? Utilizzate l&#39;API &#39;p[!DNL rofile systems jobs]&#39; per eliminare questo set di dati dal [!DNL Profile Service].&quot;
 
-Facendo clic **[!UICONTROL Delete]** nell&#39;interfaccia utente, il dataset viene disattivato per l&#39;inserimento, ma NON viene eliminato automaticamente il dataset nel backend. Per eliminare definitivamente il set di dati, è necessario creare manualmente una richiesta di eliminazione tramite i passaggi descritti in questa guida per [creare una richiesta](#create-a-delete-request)di eliminazione.
+Facendo clic **[!UICONTROL Delete]** nell&#39;interfaccia utente, il dataset viene disattivato per l&#39;inserimento, ma NON viene eliminato automaticamente il dataset nel backend. Per eliminare definitivamente il dataset, è necessario creare manualmente una richiesta di eliminazione tramite i passaggi descritti in questa guida per [creare una richiesta](#create-a-delete-request)di eliminazione.
 
 L&#39;immagine seguente mostra l&#39;avviso quando si tenta di eliminare un set di dati [!DNL Profile]abilitato tramite l&#39;interfaccia utente.
 
