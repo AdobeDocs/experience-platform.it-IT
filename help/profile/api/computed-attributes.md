@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Attributi calcolati - API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2365'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # (Alfa) Endpoint attributi calcolati
 
 >[!IMPORTANT]
+>
 >La funzionalità degli attributi calcolati descritta in questo documento è attualmente in alfa e non è disponibile per tutti gli utenti. La documentazione e la funzionalità sono soggette a modifiche.
 
 Gli attributi calcolati consentono di calcolare automaticamente il valore dei campi in base ad altri valori, calcoli ed espressioni. Gli attributi calcolati operano a livello di profilo, il che significa che puoi aggregare i valori per tutti i record ed eventi.
@@ -48,6 +49,7 @@ I casi di utilizzo per gli attributi calcolati possono variare da calcoli sempli
 Per configurare un attributo calcolato, è innanzitutto necessario identificare il campo che includerà il valore dell&#39;attributo calcolato. Questo campo può essere creato utilizzando un mixin per aggiungere il campo a uno schema esistente, oppure selezionando un campo già definito all&#39;interno di uno schema.
 
 >[!NOTE]
+>
 >Gli attributi calcolati non possono essere aggiunti ai campi all&#39;interno  mixin definiti dal Adobe. Il campo deve essere all&#39;interno dello `tenant` spazio dei nomi, ovvero deve essere un campo definito e aggiunto a uno schema.
 
 Per definire con successo un campo attributo calcolato, lo schema deve essere abilitato per [!DNL Profile] e deve essere visualizzato come parte dello schema unione per la classe su cui si basa lo schema. Per ulteriori informazioni sugli schemi e sulle unioni [!DNL Profile]abilitati, consulta la sezione della guida [!DNL Schema Registry] per gli sviluppatori sull&#39; [abilitazione di uno schema per il profilo e la visualizzazione degli schemi](../../xdm/api/getting-started.md)di unione. È inoltre consigliabile rivedere la [sezione sui sindacati](../../xdm/schema/composition.md) nella documentazione di base sulla composizione dello schema.
@@ -89,6 +91,7 @@ Dopo aver fatto clic su **[!UICONTROL Add field]** un nuovo oggetto, denominato 
 Utilizzando la *[!UICONTROL Field properties]* sezione a destra dell&#39;editor, fornite le informazioni necessarie per il nuovo campo, incluso nome, nome visualizzato e tipo.
 
 >[!NOTE]
+>
 >Il tipo del campo deve essere lo stesso tipo del valore dell&#39;attributo calcolato. Ad esempio, se il valore dell&#39;attributo calcolato è una stringa, il campo definito nello schema deve essere una stringa.
 
 Al termine, fate clic **[!UICONTROL Apply]** e il nome del campo, nonché il relativo tipo, verranno visualizzati nella *[!UICONTROL Structure]* sezione dell’editor.
@@ -100,6 +103,7 @@ Al termine, fate clic **[!UICONTROL Apply]** e il nome del campo, nonché il rel
 Prima di continuare, verificare che lo schema sia stato abilitato per [!DNL Profile]. Fare clic sul nome dello schema nella *[!UICONTROL Structure]* sezione dell&#39;editor in modo che venga visualizzata la *[!UICONTROL Schema Properties]* scheda. Se il **[!UICONTROL Profile]** cursore è blu, lo schema è stato attivato per [!DNL Profile].
 
 >[!NOTE]
+>
 >L&#39;abilitazione di uno schema per [!DNL Profile] non può essere annullata, quindi se si fa clic sul dispositivo di scorrimento una volta che è stato abilitato, non è necessario rischiare di disattivarlo.
 
 ![](../images/computed-attributes/Profile.png)
