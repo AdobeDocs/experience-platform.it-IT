@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Creare una sinapsi di Azure  connettore Analytics utilizzando l'API del servizio di flusso
+title: Creare un connettore Azure Synapse Analytics utilizzando l'API del servizio di flusso
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '559'
 ht-degree: 2%
@@ -15,15 +15,16 @@ ht-degree: 2%
 # Creare un [!DNL Azure Synapse Analytics] connettore utilizzando l&#39; [!DNL Flow Service] API
 
 >[!NOTE]
->Il connettore Azure Synapse  Analytics è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la panoramica [](../../../../home.md#terms-and-conditions) Origini.
+>
+>Il connettore Azure Synapse Analytics è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la panoramica [](../../../../home.md#terms-and-conditions) Origini.
 
-[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti diverse all&#39;interno  Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
+[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
-Questa esercitazione utilizza l’API del servizio di flusso per guidarvi attraverso i passaggi necessari per la connessione [!DNL Azure Synapse Analytics] (in seguito denominati &quot;[!DNL Synapse]&quot;) a [!DNL Experience Platform].
+Questa esercitazione utilizza l’API del servizio di flusso per guidarvi nei passaggi da effettuare per la connessione [!DNL Azure Synapse Analytics] (in seguito denominata &quot;[!DNL Synapse]&quot;) a [!DNL Experience Platform].
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [Origini](../../../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi.
 * [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
