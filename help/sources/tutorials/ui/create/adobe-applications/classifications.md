@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Creare un connettore dati di classificazione Adobe Analytics  nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: e0d842b3c5d3b628e117c14d47d6c114b36484dd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '587'
 ht-degree: 1%
@@ -72,6 +72,7 @@ Selezionare l&#39; **[!UICONTROL Target dataset]** utente a cui accedere.
 Nella **[!UICONTROL Dataset activity]** pagina sono visualizzate informazioni sul set di dati di destinazione selezionato, con dettagli sullo stato del batch, l’ID del set di dati e lo schema.
 
 >[!IMPORTANT]
+>
 >Anche se è possibile eliminare i set di dati per altri connettori di origine, al momento non è supportato per il connettore dati di classificazione di Analytics. Se elimini un dataset per errore, contatta  Assistenza clienti di Adobe.
 
 ![](../../../../images/tutorials/create/classifications/dataset.png)
