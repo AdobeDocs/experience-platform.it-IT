@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Proiezioni Edge - API Profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 2%
@@ -21,6 +21,7 @@ Al fine di promuovere esperienze coordinate, coerenti e personalizzate per i cli
 L&#39;endpoint API utilizzato in questa guida fa parte dell&#39; [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Prima di continuare, consultate la guida [introduttiva per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente chiamate a qualsiasi](getting-started.md) [!DNL Experience Platform] API.
 
 >[!NOTE]
+>
 >Le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39; `Content-Type` intestazione. Nel documento `Content-Type` vengono utilizzati più di uno. Prestate particolare attenzione alle intestazioni delle chiamate di esempio per verificare di utilizzare la versione corretta `Content-Type` per ogni richiesta.
 
 ## Destinazioni di proiezione
@@ -53,6 +54,7 @@ curl -X GET \
 La risposta include un `projectionDestinations` &#39;array con i dettagli per ogni destinazione visualizzati come singolo oggetto all&#39;interno dell&#39;array. Se non è stata configurata alcuna proiezione, l&#39; `projectionDestinations` array restituisce empty.
 
 >[!NOTE]
+>
 >Questa risposta è stata ridotta per lo spazio e mostra solo due destinazioni.
 
 ```json
@@ -122,6 +124,7 @@ POST /config/destinations
 La richiesta seguente crea una nuova destinazione edge.
 
 >[!NOTE]
+>
 >La richiesta di POST per creare una destinazione richiede un&#39; `Content-Type` intestazione specifica, come illustrato di seguito. Se si utilizza un&#39; `Content-Type` intestazione non corretta, si verifica un errore HTTP Status 415 (Tipo di supporto non supportato).
 
 ```shell
@@ -227,6 +230,7 @@ L&#39;oggetto response mostra i dettagli della destinazione di proiezione. L&#39
 Una destinazione esistente può essere aggiornata effettuando una richiesta di PUT all&#39; `/config/destinations` endpoint e includendo l&#39;ID della destinazione da aggiornare nel percorso della richiesta. Questa operazione _riscrive_ la destinazione, pertanto nel corpo della richiesta devono essere forniti gli stessi attributi forniti al momento della creazione di una nuova destinazione.
 
 >[!CAUTION]
+>
 >La risposta API alla richiesta di aggiornamento è immediata, ma le modifiche alle proiezioni vengono applicate in modo asincrono. In altre parole, esiste una differenza di tempo tra quando viene effettuato l&#39;aggiornamento alla definizione della destinazione e quando viene applicato.
 
 **Formato API**
@@ -244,6 +248,7 @@ PUT /config/destinations/{DESTINATION_ID}
 La seguente richiesta aggiorna la destinazione esistente per includere una seconda posizione (`dataCenters`).
 
 >[!IMPORTANT]
+>
 >La richiesta di PUT richiede un&#39; `Content-Type` intestazione specifica, come illustrato di seguito. Se si utilizza un&#39; `Content-Type` intestazione non corretta, si verifica un errore HTTP Status 415 (Tipo di supporto non supportato).
 
 ```shell
@@ -295,6 +300,7 @@ La risposta include i dettagli aggiornati per la destinazione, incluso il relati
 Se l&#39;organizzazione non richiede più una destinazione di proiezione, può essere eliminata effettuando una richiesta di DELETE all&#39; `/config/destinations` endpoint e includendo l&#39;ID della destinazione che si desidera eliminare nel percorso della richiesta.
 
 >[!CAUTION]
+>
 >La risposta API alla richiesta di eliminazione è immediata, ma le modifiche effettive ai dati sui bordi avvengono in modo asincrono. In altre parole, i dati del profilo verranno rimossi da tutti i bordi ( `dataCenters` specificati nella destinazione di proiezione), ma il processo richiederà del tempo per essere completato.
 
 **Formato API**
@@ -345,6 +351,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 | `{PROJECTION_NAME}` | Nome della configurazione di proiezione a cui si desidera accedere. |
 
 >[!NOTE]
+>
 >`schemaName` è richiesto quando si utilizza il `name` parametro, come nome di configurazione di proiezione è univoco solo nel contesto di una classe di schema.
 
 **Richiesta**
@@ -429,6 +436,7 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 **Richiesta**
 
 >[!NOTE]
+>
 >La richiesta di POST per creare una configurazione richiede una specifica `Content-Type` intestazione, come illustrato di seguito. Se si utilizza un&#39; `Content-Type` intestazione non corretta, si verifica un errore HTTP Status 415 (Tipo di supporto non supportato).
 
 ```shell
@@ -506,6 +514,7 @@ Un selettore è un elenco separato da virgole di nomi di campi XDM. In una confi
    * L&#39;esempio precedente è equivalente a `addresses.type,addresses.city.country`.
 
 >[!NOTE]
+>
 >La notazione dei punti e la notazione parentetica sono supportate per fare riferimento ai campi secondari. Tuttavia, è consigliabile utilizzare la notazione dei punti in quanto è più concisa e fornisce una migliore illustrazione della gerarchia dei campi.
 
 * Ciascun campo di un selettore viene specificato rispetto al livello principale della risposta.
@@ -610,6 +619,7 @@ Restituisce solo il campo city per tutti gli elementi dell&#39;array address.
 ```
 
 >[!NOTE]
+>
 >Ogni volta che viene restituito un campo nidificato, la proiezione include gli oggetti principali che lo contengono. I campi principali non includono altri campi secondari, a meno che non siano selezionati in modo esplicito.
 
 **address(type,city)**
