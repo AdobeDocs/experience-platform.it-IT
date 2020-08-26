@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Streaming dei dati delle serie temporali
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 80392190c7fcae9b6e73cc1e507559f834853390
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '1130'
+source-wordcount: '1126'
 ht-degree: 2%
 
 ---
 
 
-# Trasmissione dei dati delle serie temporali a  Adobe Experience Platform
+# Trasmissione dei dati delle serie temporali ad Adobe Experience Platform
 
-Questa esercitazione aiuterà a iniziare a utilizzare le API di assimilazione in streaming, parte delle [!DNL Data Ingestion Service] API del Adobe Experience Platform .
+Questa esercitazione aiuterà a iniziare a utilizzare le API di assimilazione in streaming, parte delle [!DNL Data Ingestion Service] API di Adobe Experience Platform.
 
 ## Introduzione
 
-Questa esercitazione richiede una conoscenza approfondita dei vari servizi  Adobe Experience Platform. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
+Questa esercitazione richiede una buona conoscenza dei diversi servizi Adobe Experience Platform. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
 - [!DNL Experience Data Model (XDM)](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza.
 - [!DNL Real-time Customer Profile](../../profile/home.md): Fornisce un profilo di consumo unificato in tempo reale basato su dati aggregati provenienti da più origini.
@@ -405,7 +405,7 @@ Per convalidare i record acquisiti in precedenza, è possibile utilizzare [!DNL 
 
 >[!NOTE]
 >
->Se l&#39;ID del criterio di unione non è definito e lo schema.</span>name o relatedSchema</span>.name è `_xdm.context.profile`, [!DNL Profile Access] recupererà **tutte** le identità correlate.
+>Se l&#39;ID del criterio di unione non è definito e l&#39;ID `schema.name` o `relatedSchema.name` è `_xdm.context.profile`, [!DNL Profile Access] recupererà **tutte** le identità correlate.
 
 **Formato API**
 
