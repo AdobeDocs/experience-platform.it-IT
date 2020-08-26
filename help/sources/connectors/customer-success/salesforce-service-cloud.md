@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connettore Salesforce Service Cloud
 topic: overview
 translation-type: tm+mt
-source-git-commit: 25f4589ff1f4fa11f3cd5b96c11731577949b5b0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '211'
 ht-degree: 0%
@@ -15,9 +15,10 @@ ht-degree: 0%
 # Connettore (Beta) [!DNL Salesforce Service Cloud]
 
 >[!NOTE]
+>
 >Il [!DNL Salesforce Service Cloud] connettore è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la panoramica [](../../home.md#terms-and-conditions) Origini.
 
- Adobe Experience Platform consente l&#39;acquisizione di dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, database e molti altri.
+Adobe Experience Platform consente l&#39;acquisizione di dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, database e molti altri.
 
 [!DNL Experience Platform] fornisce supporto per l’acquisizione di dati da un sistema di successo cliente di terze parti. Il supporto per i fornitori di successo dei clienti include [!DNL Salesforce Service Cloud].
 
