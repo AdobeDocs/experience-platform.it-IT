@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Query di esempio
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 2%
@@ -12,16 +12,17 @@ ht-degree: 2%
 ---
 
 
-# Query di esempio per i dati  Adobe Target
+# Query di esempio per  dati Adobe Target
 
-I dati provenienti da  Adobe Target vengono trasformati in schema XDM di Experience Event e trasferiti [!DNL Experience Platform] come set di dati. Esistono molti casi di utilizzo [!DNL Query Service] con questi dati e le seguenti query di esempio devono essere compatibili con i set di dati  Adobe Target.
+I dati di  Adobe Target vengono trasformati in schema XDM di Experience Event e trasferiti [!DNL Experience Platform] come set di dati. Esistono molti casi d’uso [!DNL Query Service] con questi dati e le seguenti query di esempio devono essere compatibili con i set di dati Adobe Target .
 
 >[!NOTE]
+>
 >Negli esempi seguenti, sarà necessario modificare l&#39;SQL per compilare i parametri previsti per le query in base al set di dati, alle variabili o all&#39;intervallo di tempo che si desidera valutare. Fornite i parametri ovunque vi troviate `{ }` nell&#39;SQL.
 
 ## Nome set di dati standard per l&#39;origine dati Target in [!DNL Platform]:
 
- eventi esperienza Adobe Target (nome descrittivo) <br>`adobe_target_experience_events` (nome da utilizzare nella query)
+ Adobe Target Experience Events (nome descrittivo) <br>`adobe_target_experience_events` (nome da utilizzare nella query)
 
 ## Mappatura del campo XDM parziale di alto livello
 
