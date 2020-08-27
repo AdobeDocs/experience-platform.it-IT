@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;analyze data notebooks
 solution: Experience Platform
 title: Analizzare i dati utilizzando i notebook
 topic: Tutorial
+description: Questa esercitazione si concentra sull'utilizzo dei notebook Jupyter, creati all'interno di Data Science Workspace, per accedere, esplorare e visualizzare i dati.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '1710'
+source-wordcount: '1731'
 ht-degree: 0%
 
 ---
@@ -158,7 +159,7 @@ Ora che conosciamo i nostri valori di frame dei dati, vogliamo completarli con v
 - [Matplotlib](https://matplotlib.org/)
 - [panda](https://pandas.pydata.org/)
 - [marinaio](https://seaborn.pydata.org/)
-- [pirata](https://ggplot2.tidyverse.org/)
+- [ggplot](https://ggplot2.tidyverse.org/)
 
 In questa sezione presenteremo rapidamente alcuni vantaggi per l&#39;utilizzo di ciascuna libreria.
 
