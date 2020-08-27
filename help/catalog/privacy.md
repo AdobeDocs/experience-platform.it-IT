@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Elaborazione delle richieste di privacy nel Data Lake
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1179'
+source-wordcount: '1194'
 ht-degree: 0%
 
 ---
@@ -22,10 +22,10 @@ Questo documento tratta i concetti essenziali relativi all&#39;elaborazione dell
 
 Prima di leggere la presente guida è consigliabile conoscere i seguenti [!DNL Experience Platform] servizi:
 
-* [!DNL Privacy Service](../privacy-service/home.md): Gestisce le richieste dei clienti relative all&#39;accesso, al rifiuto della vendita o all&#39;eliminazione dei loro dati personali tra le applicazioni Adobe Experience Cloud.
-* [!DNL Catalog Service](home.md): Il sistema di record per la posizione dei dati e la linea [!DNL Experience Platform]. Fornisce un&#39;API che può essere utilizzata per aggiornare i metadati del set di dati.
-* [!DNL Experience Data Model (XDM) System](../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
-* [!DNL Identity Service](../identity-service/home.md): Risolve la sfida fondamentale rappresentata dalla frammentazione dei dati relativi all&#39;esperienza dei clienti attraverso il collegamento di identità tra dispositivi e sistemi.
+* [[!Privacy Service DNL]](../privacy-service/home.md): Gestisce le richieste dei clienti relative all&#39;accesso, al rifiuto della vendita o all&#39;eliminazione dei loro dati personali tra le applicazioni Adobe Experience Cloud.
+* [[!Servizio catalogo DNL]](home.md): Il sistema di record per la posizione dei dati e la linea [!DNL Experience Platform]. Fornisce un&#39;API che può essere utilizzata per aggiornare i metadati del set di dati.
+* [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
+* [[!DNL Identity Service]](../identity-service/home.md): Risolve la sfida fondamentale rappresentata dalla frammentazione dei dati relativi all&#39;esperienza dei clienti attraverso il collegamento di identità tra dispositivi e sistemi.
 
 ## Informazioni sugli spazi dei nomi delle identità {#namespaces}
 
