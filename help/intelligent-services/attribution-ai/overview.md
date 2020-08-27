@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;attribution ai;overview;popular topics
+keywords: Experience Platform;attribution ai overview;popular topics;attribution ai;Attribution ai
 solution: Experience Platform
 title: 'Panoramica sulle Attribution AI '
 topic: Attribution AI
+description: ' Attribution AI viene utilizzata per attribuire i crediti ai punti di contatto che determinano gli eventi di conversione. Questo può essere utilizzato dagli addetti al marketing per quantificare l''impatto di marketing di ogni singolo punto di contatto marketing sui percorsi dei clienti. Alcuni esempi di punti di contatto includono visualizzazioni ad impression, invii di e-mail, aperture di e-mail e clic di ricerca a pagamento.'
 translation-type: tm+mt
-source-git-commit: 7fc121d310509739c7ee81f7d6657ea8f3963b69
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '455'
 ht-degree: 0%
 
 ---
