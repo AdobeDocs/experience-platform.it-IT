@@ -5,9 +5,9 @@ title: Filtra i dati del catalogo utilizzando i parametri di query
 topic: developer guide
 description: L'API Catalog Service consente di filtrare i dati delle risposte utilizzando i parametri di query della richiesta. Parte delle best practice per Catalog consiste nell’utilizzare i filtri in tutte le chiamate API, in quanto riducono il carico sull’API e contribuiscono a migliorare le prestazioni complessive.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2078'
+source-wordcount: '2085'
 ht-degree: 1%
 
 ---
@@ -207,8 +207,8 @@ L&#39;uso dei tag presenta alcune limitazioni:
 * I nomi dei tag sono univoci per l’organizzazione IMS.
 *  processi di Adobe possono utilizzare i tag per determinati comportamenti. I nomi di questi tag hanno il prefisso &quot;adobe&quot; come standard. Pertanto, è consigliabile evitare questa convenzione quando si dichiarano i nomi dei tag.
 * I seguenti nomi di tag sono riservati all’uso in tutta [!DNL Experience Platform]l’organizzazione e pertanto non possono essere dichiarati come nome di tag:
-   * `unifiedProfile`: Questo nome di tag è riservato ai set di dati da cui eseguire l&#39;assimilazione [!DNL Real-time Customer Profile](../../profile/home.md).
-   * `unifiedIdentity`: Questo nome di tag è riservato ai set di dati da cui eseguire l&#39;assimilazione [!DNL Identity Service](../../identity-service/home.md).
+   * `unifiedProfile`: Questo nome di tag è riservato per i set di dati da acquisire da [[!DNL Profilo cliente in tempo reale]](../../profile/home.md).
+   * `unifiedIdentity`: Il nome del tag è riservato per i set di dati che devono essere acquisiti da [[!DNL Identity Service]](../../identity-service/home.md).
 
 Di seguito è riportato un esempio di un set di dati contenente una `tags` proprietà. I tag all&#39;interno di tale proprietà si presentano sotto forma di coppie chiave-valore, con ciascun valore di tag che viene visualizzato come una matrice contenente una singola stringa:
 
@@ -476,7 +476,7 @@ Una risposta corretta contiene un elenco di [!DNL Catalog] oggetti ordinati in b
 [!DNL Catalog] sono disponibili due metodi di filtraggio per proprietà, descritti in dettaglio nelle sezioni seguenti:
 
 * [Utilizzo di filtri](#using-simple-filters)semplici: Filtrare per stabilire se una specifica proprietà corrisponde a un valore specifico.
-* [Utilizzo del parametro](#using-the-property-parameter)della proprietà: Utilizzare espressioni condizionali per filtrare in base all&#39;esistenza di una proprietà o se il valore di una proprietà corrisponde, si avvicina o si confronta con un altro valore o un&#39;espressione regolare specificata.
+* [Utilizzo del parametro](#using-the-property-parameter)property: Utilizzare espressioni condizionali per filtrare in base all&#39;esistenza di una proprietà o se il valore di una proprietà corrisponde, si avvicina o si confronta con un altro valore o un&#39;espressione regolare specificata.
 
 ### Utilizzo di filtri semplici {#using-simple-filters}
 
@@ -596,7 +596,7 @@ Il valore del `property` parametro supporta diversi tipi di espressioni condizio
 
 **Richiesta**
 
-La richiesta seguente restituirà tutti i set di dati con un numero di versione maggiore di 1.0.3.
+Nella richiesta seguente verranno restituiti tutti i set di dati con un numero di versione maggiore di 1.0.3.
 
 ```shell
 curl -X GET \
