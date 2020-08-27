@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Autenticazione e accesso  API Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '843'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Autenticazione e accesso [!DNL Experience Platform] alle API
 
-Questo documento fornisce un&#39;esercitazione passo-passo per ottenere l&#39;accesso a un account sviluppatore  Adobe Experience Platform per effettuare chiamate alle [!DNL Experience Platform] API.
+Questo documento fornisce un&#39;esercitazione passo-passo per ottenere l&#39;accesso a un account sviluppatore Adobe Experience Platform per effettuare chiamate alle [!DNL Experience Platform] API.
 
 ## Autenticazione per effettuare chiamate API
 
@@ -27,8 +27,8 @@ Questa esercitazione descrive i passaggi dell&#39;autenticazione mediante la cre
 
 Per effettuare correttamente le chiamate alle [!DNL Experience Platform] API, è necessario quanto segue:
 
-* Un&#39;organizzazione IMS con accesso al Adobe Experience Platform 
-* Un account  Adobe ID registrato
+* Un&#39;organizzazione IMS con accesso ad Adobe Experience Platform
+* Un account Adobe ID  registrato
 * Un amministratore  Admin Console per aggiungere voi come **sviluppatore** e come **utente** per un prodotto.
 
 Le sezioni seguenti descrivono i passaggi necessari per creare un Adobe ID  e diventare sviluppatore e utente per un&#39;organizzazione.
@@ -47,11 +47,11 @@ Prima di creare integrazioni sull&#39;I/O  Adobe, è necessario che l&#39;accoun
 
 **Accesso sviluppatore**
 
-Contatta un [!DNL Admin Console] amministratore dell’organizzazione per aggiungere l’utente come sviluppatore per uno dei prodotti dell’organizzazione che utilizza l’ [!DNL Admin Console](https://adminconsole.adobe.com/).
+Contatta un [!DNL Admin Console] amministratore della tua organizzazione per aggiungere te come sviluppatore per uno dei prodotti della tua organizzazione utilizzando il [[!DNL  Admin Console]](https://adminconsole.adobe.com/).
 
 ![](images/authentication/assign-developer.png)
 
-L&#39;amministratore deve assegnare l&#39;utente come sviluppatore ad almeno un profilo di prodotto per proseguire.
+L&#39;amministratore deve assegnare l&#39;utente come sviluppatore ad almeno un profilo di prodotto per continuare.
 
 ![](images/authentication/add-developer.png)
 
@@ -85,13 +85,13 @@ I passaggi sono descritti in dettaglio di seguito.
 
 ### Configurazione una tantum
 
-Andate a [console](https://www.adobe.com/go/devs_console_ui) Sviluppatore di Adobe ed effettuate l&#39;accesso con il vostro Adobe ID . Attenetevi quindi ai passaggi descritti nell&#39;esercitazione sulla [creazione di un progetto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vuoto nella documentazione di  Adobe Developer Console.
+Andate a [console](https://www.adobe.com/go/devs_console_ui) per sviluppatori di Adobi ed effettuate l&#39;accesso con il vostro Adobe ID . Attenetevi quindi ai passaggi descritti nell&#39;esercitazione sulla [creazione di un progetto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vuoto nella documentazione di  Adobe Developer Console.
 
 Dopo aver creato un nuovo progetto, fate clic **[!UICONTROL Add API]** sulla schermata Panoramica __ progetto.
 
 ![](images/authentication/add-api-button.png)
 
-Viene visualizzata la schermata _Aggiungi un&#39;API_ . Fate clic sull&#39;icona del prodotto per  Adobe Experience Platform, quindi selezionate **[!UICONTROL Experience Platform API]** prima di fare clic su **[!UICONTROL Next]**.
+Viene visualizzata la schermata _Aggiungi un&#39;API_ . Fate clic sull&#39;icona del prodotto per Adobe Experience Platform, quindi selezionate **[!UICONTROL Experience Platform API]** prima di fare clic su **[!UICONTROL Next]**.
 
 ![](images/authentication/add-platform-api.png)
 
@@ -155,7 +155,7 @@ Se la risposta è simile a quella mostrata di seguito, le credenziali sono valid
 
 ## Utilizzare Postman per l&#39;autenticazione JWT e le chiamate API
 
-[Postman](https://www.getpostman.com/) è uno strumento popolare per lavorare con le API RESTful. Questo post [](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) Medium descrive come impostare postman per eseguire automaticamente l&#39;autenticazione JWT e usarlo per utilizzare  API Adobe Experience Platform.
+[Postman](https://www.getpostman.com/) è uno strumento popolare per lavorare con le API RESTful. Questo post [](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) Medium descrive come impostare postman per eseguire automaticamente l&#39;autenticazione JWT e usarlo per utilizzare le API Adobe Experience Platform.
 
 ## Passaggi successivi
 
