@@ -5,9 +5,9 @@ seo-title: Tipi e categorie di destinazioni
 description: ' Adobe Piattaforma dati cliente in tempo reale, le destinazioni di esportazione profilo/segmento acquisiscono i dati dell''evento, li combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Avviate le estensioni per inoltrare i dati degli eventi non elaborati a diversi tipi di destinazioni. '
 seo-description: ' Adobe Piattaforma dati cliente in tempo reale, le destinazioni di esportazione profilo/segmento acquisiscono i dati dell''evento, li combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Avviate le estensioni per inoltrare i dati degli eventi non elaborati a diversi tipi di destinazioni.'
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '583'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Le destinazioni di esportazione dei profili generano un file contenente profili 
 
 #### Destinazioni di esportazione dei segmenti
 
-Le destinazioni di esportazione dei segmenti inviano i profili e i segmenti per i quali si sono qualificati alle piattaforme di destinazione. Queste destinazioni utilizzano ID segmento o ID utente. Destinazioni pubblicitarie come [!DNL Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md) o [!DNL Google Ads](/help/rtcdp/destinations/google-ads-destination.md) sono esempi di questi tipi di destinazioni.
+Le destinazioni di esportazione dei segmenti inviano i profili e i segmenti per i quali si sono qualificati alle piattaforme di destinazione. Queste destinazioni utilizzano ID segmento o ID utente. Le destinazioni pubblicitarie come [[!DNL Google Display &amp; Video 360]](/help/rtcdp/destinations/google-dv360-destination.md) o [[!DNL Google Ads]](/help/rtcdp/destinations/google-ads-destination.md) sono esempi di questi tipi di destinazioni.
 
 #### Destinazioni di esportazione dei profili e dei segmenti - Panoramica video
 
