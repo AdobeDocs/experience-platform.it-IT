@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;effective policies;access control api
 solution: Experience Platform
 title: Visualizza criteri efficaci
 topic: developer guide
+description: Il controllo degli accessi in Adobe Experience Platform consente di gestire ruoli e autorizzazioni per diverse funzionalità della piattaforma utilizzando l'Adobe Admin Console. Questo documento funge da guida per la visualizzazione dei criteri effettivi tramite l'API di controllo degli accessi per Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '306'
 ht-degree: 1%
 
 ---
