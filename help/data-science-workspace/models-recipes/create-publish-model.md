@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creazione e pubblicazione di un modello di machine learning
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1489'
+source-wordcount: '1495'
 ht-degree: 0%
 
 ---
@@ -45,10 +45,10 @@ Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prer
 * Scaricate i tre [!DNL Jupyter Notebook] file richiesti dall&#39; <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">[!DNL Git] archivio</a>pubblico del Adobe, che verranno utilizzati per illustrare il [!DNL JupyterLab] flusso di lavoro in [!DNL Data Science Workspace].
 
 * Una conoscenza approfondita dei seguenti concetti chiave utilizzati in questa esercitazione:
-   * [!DNL Experience Data Model](../../xdm/home.md): Lo sforzo di standardizzazione condotto da  Adobe per definire schemi standard come [!DNL Profile] e ExperienceEvent per la gestione dell&#39;esperienza cliente.
+   * [[!DNL Experience Data Model]](../../xdm/home.md): Lo sforzo di standardizzazione condotto da  Adobe per definire schemi standard come [!DNL Profile] e ExperienceEvent per la gestione dell&#39;esperienza cliente.
    * Set di dati: Un costrutto di storage e gestione per i dati effettivi. Un&#39;istanza fisica istanziata di uno schema [](../../xdm/schema/field-dictionary.md)XDM.
    * Batch: I set di dati sono costituiti da batch. Un batch è un insieme di dati raccolti in un periodo di tempo ed elaborati insieme come un&#39;unica unità.
-   * [!DNL JupyterLab]: [!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) è un&#39;interfaccia Web open-source per Project [!DNL Jupyter] ed è strettamente integrata in [!DNL Experience Platform].
+   * [!DNL JupyterLab]: [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) è un&#39;interfaccia web open-source per Project [!DNL Jupyter] ed è strettamente integrata in [!DNL Experience Platform].
 
 ## Prepare your data {#prepare-your-data}
 
@@ -107,7 +107,7 @@ Un modello è un&#39;istanza di una ricetta, che consente di addestrare e segnar
 5. Il modello è stato creato e la pagina *Panoramica* del modello viene visualizzata all&#39;interno di un&#39;esecuzione di formazione appena generata. Per impostazione predefinita, durante la creazione di un modello viene generata un&#39;esecuzione di formazione.
    ![](../images/models-recipes/model-walkthrough/model_post_creation.png)
 
-Potete scegliere di attendere il completamento dell’esecuzione della formazione oppure continuare a creare una nuova esecuzione della formazione nella sezione seguente.
+Potete scegliere di attendere il termine dell’esecuzione della formazione oppure continuare a creare una nuova esecuzione della formazione nella sezione seguente.
 
 ### Formazione del modello utilizzando i parametri ipertestuali personalizzati
 
