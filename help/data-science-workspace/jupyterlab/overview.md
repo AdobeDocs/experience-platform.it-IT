@@ -5,7 +5,7 @@ title: Guida utente di JupyterLab
 topic: Overview
 description: JupyterLab è un'interfaccia utente basata sul Web per Project Jupyter ed è strettamente integrata in Adobe Experience Platform. Fornisce un ambiente di sviluppo interattivo che consente agli scienziati dei dati di lavorare con notebook, codice e dati Jupyter. Questo documento fornisce una panoramica di JupyterLab e delle sue funzioni, oltre alle istruzioni per eseguire azioni comuni.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 78f080fd7598799825c59a4fdfdcaf7d294560a3
 workflow-type: tm+mt
 source-wordcount: '3700'
 ht-degree: 11%
@@ -155,8 +155,8 @@ Il modulo *Launcher* personalizzato offre utili modelli per notebook per i kerne
 | --- | --- |
 | Vuoto | Un file di blocco appunti vuoto. |
 | Starter | Un blocco appunti precompilato che illustra l&#39;esplorazione dei dati utilizzando dati di esempio. |
-| Vendite al dettaglio | Un blocco appunti precompilato con ricetta <a href="https://adobe.ly/2wOgO3L" target="_blank">vendite</a> al dettaglio utilizzando dati di esempio. |
-| Generatore di ricette | Un modello per notebook per la creazione di una ricetta in [!DNL JupyterLab]. È precompilato con codice e commenti che mostrano e descrivono il processo di creazione delle ricette. Per informazioni dettagliate, fare riferimento al <a href="https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en" target="_blank">notebook per l&#39;esercitazione</a> sulle ricette. |
+| Vendite al dettaglio | Un blocco appunti precompilato con la ricetta [di vendita al](https://adobe.ly/2wOgO3L) dettaglio utilizzando dati di esempio. |
+| Generatore di ricette | Un modello per notebook per la creazione di una ricetta in [!DNL JupyterLab]. È precompilato con codice e commenti che mostrano e descrivono il processo di creazione delle ricette. Per informazioni dettagliate, fare riferimento al [notebook per l&#39;esercitazione](https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en) sulle ricette. |
 | [!DNL Query Service] | Un notebook precompilato che illustra l’utilizzo [!DNL Query Service] diretto di [!DNL JupyterLab] con flussi di lavoro di esempio forniti che analizza i dati in scala. |
 | Eventi XDM | Un blocco appunti precompilato che illustra l&#39;esplorazione dei dati relativi ai dati degli eventi di post-valore, con particolare attenzione alle funzioni comuni all&#39;intera struttura di dati. |
 | Query XDM | Un blocco appunti precompilato che illustra le query aziendali di esempio sui dati dell&#39;evento esperienza. |
@@ -455,9 +455,9 @@ Comando [!DNL Data Science Workspace] magico personalizzato per la lettura o la 
 
 ### Dati query con [!DNL Query Service] in [!DNL Python]
 
-[!DNL JupyterLab] on [!DNL Platform] consente di utilizzare SQL in un [!DNL Python] blocco appunti per accedere ai dati tramite <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">Adobe Experience Platform Query Service</a>. L&#39;accesso ai dati [!DNL Query Service] può essere utile per gestire i set di dati di grandi dimensioni a causa dei suoi tempi di esecuzione superiori. Tenere presente che l’esecuzione di query sui dati che utilizzano [!DNL Query Service] ha un limite di tempo di elaborazione di dieci minuti.
+[!DNL JupyterLab] on [!DNL Platform] consente di utilizzare SQL in un [!DNL Python] blocco appunti per accedere ai dati tramite [Adobe Experience Platform Query Service](https://www.adobe.com/go/query-service-home-en). L&#39;accesso ai dati [!DNL Query Service] può essere utile per gestire i set di dati di grandi dimensioni a causa dei suoi tempi di esecuzione superiori. Tenere presente che l’esecuzione di query sui dati che utilizzano [!DNL Query Service] ha un limite di tempo di elaborazione di dieci minuti.
 
-Prima di utilizzare [!DNL Query Service] in [!DNL JupyterLab], è necessario avere una conoscenza approfondita della sintassi <a href="https://www.adobe.com/go/query-service-sql-syntax-en" target="_blank">[!DNL Query Service]</a>SQL.
+Prima di utilizzare [!DNL Query Service] in [!DNL JupyterLab], è necessario avere una conoscenza approfondita della sintassi [[!DNL Query Service] ](https://www.adobe.com/go/query-service-sql-syntax-en)SQL.
 
 La query dei dati mediante [!DNL Query Service] richiede di fornire il nome del set di dati di destinazione. È possibile generare le celle di codice necessarie individuando il set di dati desiderato utilizzando **Data Explorer**. Fare clic con il pulsante destro del mouse sull&#39;elenco dei set di dati e scegliere Dati **query nel blocco appunti** per generare le due celle di codice seguenti nel blocco appunti:
 
@@ -631,21 +631,21 @@ timedf.show()
 | nltk | 3.2.5 |
 | panda | 0.22.0 |
 | pandasql | 0.7.3 |
-| cuscino | 6.0.0 |
+| folletto | 6.0.0 |
 | scikit-image | 0.15.0 |
 | scikit-learn | 0.21.3 |
-| kit | 1.3.0 |
-| grassa | 1.3.0 |
+| sciolto | 1.3.0 |
+| -grassa | 1.3.0 |
 | marinaio | 0.9.0 |
 | statsmodels | 0.10.1 |
-| sciolto | 5.1.0.17 |
-| pirata | 0.11.5 |
+| elastico | 5.1.0.17 |
+| ggplot | 0.11.5 |
 | py xgipplo | 0.90 |
 | colorante opencv | 3.4.1 |
-| bozzolo | 2.4.3 |
+| statuetta | 2.4.3 |
 | torcia | 1.0.1 |
 | wxpitone | 4.0.6 |
-| colorante | 0.3.0 |
+| elastico | 0.3.0 |
 | geopandas | 0.5.1 |
 | pirata | 2.1.0 |
 | sagomato | 1.6.4 |
@@ -672,7 +672,7 @@ timedf.show()
 | r-stringdist | 0.9.5.2 |
 | quadrante r | 1.5_7 |
 | r-rjson | 0.2.20 |
-| piramide | 8.7 |
+| r-previsione | 8.7 |
 | r-rsolnp | 1.16 |
 | reticolare | 1.12 |
 | r-mlr | 2.14.0 |
@@ -684,7 +684,7 @@ timedf.show()
 | r-tidyverse | 1.2.1 |
 | r-tree | 1.0_39 |
 | pymongo | 3.8.0 |
-| freccia | 0.14.1 |
+| La freccia | 0.14.1 |
 | boto3 | 1.9.199 |
 | ipyvolume | 0.5.2 |
 | parquet | 0.3.2 |
@@ -703,7 +703,7 @@ timedf.show()
 | ipympl | 0.3.3 |
 | fonts-anacond | 1,0 |
 | psycopg2 | 2.8.3 |
-| stringere | 1.3.7 |
+| naso | 1.3.7 |
 | autovwidget | 0.12.9 |
 | altair | 3.1.0 |
 | vega_datasets | 0.7.0 |
@@ -718,19 +718,19 @@ timedf.show()
 | :------ | :------ |
 | requests | 2.18.4 |
 | gensim | 2.3.0 |
-| cheras | 2.0.6 |
+| grano | 2.0.6 |
 | nltk | 3.2.4 |
 | panda | 0.20.1 |
 | pandasql | 0.7.3 |
 | cuscino | 5.3.0 |
 | scikit-image | 0.13.0 |
 | scikit-learn | 0.19.0 |
-| kit | 0.19.1 |
-| andatura | 1.3.3 |
+| sciolto | 0.19.1 |
+| grassa | 1.3.3 |
 | optslm | 0.8.0 |
-| elastico | 4.0.30.44 |
+| Il elastico | 4.0.30.44 |
 | py xgipplo | 0.60 |
-| colorante opencv | 3.1.0 |
+| opencv | 3.1.0 |
 | freccia | 0.8.0 |
 | boto3 | 1.5.18 |
 | azure-storage-blob | 1.4.0 |
