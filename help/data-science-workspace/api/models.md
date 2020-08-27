@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;models;sensei machine learning api
 solution: Experience Platform
 title: Modelli
 topic: Developer guide
+description: Un modello è un'istanza di una ricetta di machine learning che viene formata utilizzando dati storici e configurazioni per risolvere un caso d'uso aziendale.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '846'
 ht-degree: 4%
 
 ---
