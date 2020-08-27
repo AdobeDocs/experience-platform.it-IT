@@ -5,9 +5,9 @@ title: Creare uno schema tramite l’Editor di schema.
 topic: tutorials
 description: Questa esercitazione descrive i passaggi necessari per creare uno schema utilizzando l'Editor di schema all'interno  Experience Platform.
 translation-type: tm+mt
-source-git-commit: ed100e2acfcfc3dfabef6ccfbe88e98489193567
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '3313'
+source-wordcount: '3329'
 ht-degree: 0%
 
 ---
@@ -27,9 +27,9 @@ Se invece si preferisce comporre uno schema utilizzando l&#39; [!DNL Schema Regi
 
 Questa esercitazione richiede una conoscenza approfondita dei vari aspetti di Adobe Experience Platform coinvolti nella creazione dello schema. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti concetti:
 
-* [!DNL Experience Data Model (XDM)](../home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
+* [[!DNL Experience Data Model (XDM)]](../home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
    * [Nozioni di base sulla composizione](../schema/composition.md)dello schema: Panoramica degli schemi XDM e dei relativi blocchi costitutivi, incluse classi, mixin, tipi di dati e campi.
-* [!DNL Real-time Customer Profile](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Profilo cliente in tempo reale]](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
 ## Sfogliare gli schemi esistenti nell’ [!UICONTROL Schemas] area di lavoro {#browse}
 
@@ -62,7 +62,7 @@ Utilizzare i campi a destra dell&#39;editor per fornire un nome visualizzato e u
 Quando si decide un nome per lo schema, è necessario tenere presenti diverse considerazioni importanti:
 
 * I nomi dello schema devono essere brevi e descrittivi in modo che lo schema possa essere facilmente trovato in un secondo momento.
-* I nomi degli schemi devono essere univoci, il che significa che devono essere sufficientemente specifici da non essere riutilizzati in futuro. Ad esempio, se l&#39;organizzazione dispone di programmi di fedeltà separati per marchi diversi, sarebbe opportuno assegnare al proprio schema il nome &quot;Marca A Fedeltà Membri&quot; in modo da distinguere facilmente gli altri schemi di fedeltà che si potrebbero definire in seguito.
+* I nomi degli schemi devono essere univoci, il che significa che devono essere sufficientemente specifici da non essere riutilizzati in futuro. Se, ad esempio, l&#39;organizzazione dispone di programmi di fedeltà separati per marchi diversi, sarebbe opportuno assegnare al proprio schema il nome &quot;Marca A Fedeltà Members&quot;, in modo da distinguere facilmente gli altri schemi di fedeltà definiti in seguito.
 * È inoltre possibile utilizzare la descrizione dello schema per fornire eventuali informazioni contestuali aggiuntive relative allo schema.
 
 Questa esercitazione costituisce uno schema per l&#39;acquisizione di dati relativi ai membri di un programma fedeltà, pertanto lo schema è denominato &quot;Membri fedeltà&quot;.
@@ -245,11 +245,11 @@ Ora tutti i dati inseriti nel campo &quot;[!DNL loyaltyId]&quot; saranno utilizz
 >
 >Una volta impostato un campo dello schema come identità principale, si riceverà un messaggio di errore se si tenta in seguito di impostare come principale un altro campo dello schema. Ogni schema può contenere un solo campo identità principale.
 
-Per ulteriori informazioni sull&#39;utilizzo delle identità in [!DNL Experience Platform], consulta la [!DNL Identity Service](../../identity-service/home.md) documentazione.
+Per ulteriori informazioni sull&#39;utilizzo delle identità in [!DNL Experience Platform], consulta la documentazione di [[!DNL Identity Service]](../../identity-service/home.md) .
 
 ## Abilita lo schema da utilizzare in [!DNL Real-time Customer Profile] {#profile}
 
-[!DNL Real-time Customer Profile](../../profile/home.md) sfrutta i dati di identità [!DNL Experience Platform] per fornire una visione olistica di ciascun cliente. Il servizio crea solidi profili a 360° degli attributi del cliente e account con marca temporale di ogni interazione che i clienti hanno avuto in tutti i sistemi integrati con [!DNL Experience Platform].
+[[!DNL Real-time Customer Profile]](../../profile/home.md) sfrutta i dati di identità per fornire una visione olistica [!DNL Experience Platform] di ogni singolo cliente. Il servizio crea solidi profili a 360° degli attributi del cliente e account con marca temporale di ogni interazione che i clienti hanno avuto in tutti i sistemi integrati con [!DNL Experience Platform].
 
 Affinché uno schema possa essere abilitato per l&#39;uso con [!DNL Real-time Customer Profile], è necessario che sia definita un&#39;identità primaria. Se si tenta di abilitare uno schema senza prima definire un&#39;identità primaria, verrà visualizzato un messaggio di errore.
 
