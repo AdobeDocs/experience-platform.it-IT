@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 8b540a108336ae4475f072b71a34e37cac064826
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '454'
 ht-degree: 6%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 6%
 Aggiornamenti alle funzionalità esistenti in Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
-- [!DNL Destinations](#destinations)
+- [[!DNL Destinazioni]](#destinations)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -33,11 +33,11 @@ Aggiornamenti alle funzionalità esistenti in Adobe Experience Platform:
 | ------- | ----------- |
 | Miglioramenti delle VM [!DNL JupyterLab] | È stata migliorata la stabilità delle [!DNL JupyterLab notebook] macchine virtuali con esecuzione prolungata. |
 
-Per ulteriori informazioni su [!DNL JupyterLab]questo argomento, consultate la guida [[!DNL JupyterLab] utente](../../data-science-workspace/jupyterlab/overview.md).
+Per ulteriori informazioni su [!DNL JupyterLab], consulta la guida [[!DNL JupyterLab] ](../../data-science-workspace/jupyterlab/overview.md)utente.
 
 ## Destinazioni {#destinations}
 
-In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni sono integrazioni pre-costruite con piattaforme di destinazione che attivano i dati a tali partner in modo semplice.
+In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni sono integrazioni precostruite con piattaforme di destinazione che attivano i dati a tali partner in modo semplice.
 
 **Nuove destinazioni**
 
