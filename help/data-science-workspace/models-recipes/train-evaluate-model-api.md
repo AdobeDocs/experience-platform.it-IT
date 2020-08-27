@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics
+keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;Sensei Machine Learning API
 solution: Experience Platform
 title: Formazione e valutazione di un modello (API)
 topic: Tutorial
+description: Questa esercitazione mostrerà come creare, formare e valutare un modello utilizzando le chiamate API Sensei Machine Learning.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '1191'
+source-wordcount: '1210'
 ht-degree: 1%
 
 ---
@@ -26,8 +27,8 @@ Segui questa [esercitazione](../../tutorials/authentication.md) per ottenere l&#
 Dall&#39;esercitazione dovrebbero ora essere disponibili i seguenti valori:
 
 - `{ACCESS_TOKEN}`: Il valore del token del portatore specificato dopo l&#39;autenticazione.
-- `{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione  Adobe Experience Platform.
-- `{API_KEY}`: Il valore della chiave API specifico trovato nell&#39;integrazione del Adobe Experience Platform  univoco.
+- `{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra unica integrazione con Adobe Experience Platform.
+- `{API_KEY}`: Il valore chiave API specifico trovato nella vostra integrazione Adobe Experience Platform univoca.
 
 - Collegamento a un&#39;immagine Docker di un servizio intelligente
 
@@ -67,8 +68,8 @@ curl -X POST \
 ```
 
 `{ACCESS_TOKEN}`: Il valore del token del portatore specificato dopo l&#39;autenticazione.\
-`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione  Adobe Experience Platform.\
-`{API_KEY}`: Il valore della chiave API specifico trovato nell&#39;integrazione del Adobe Experience Platform  univoco.\
+`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra unica integrazione con Adobe Experience Platform.\
+`{API_KEY}`: Il valore chiave API specifico trovato nella vostra integrazione Adobe Experience Platform univoca.\
 `{JSON_PAYLOAD}`: La configurazione del nostro MLIninstance. L’esempio che utilizziamo nell’esercitazione è riportato di seguito:
 
 ```JSON
@@ -178,9 +179,9 @@ curl -X POST \
   -d `{JSON PAYLOAD}`
 ```
 
-`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione  Adobe Experience Platform.\
+`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra unica integrazione con Adobe Experience Platform.\
 `{ACCESS_TOKEN}`: Il valore del token del portatore specificato dopo l&#39;autenticazione.\
-`{API_KEY}`: Il valore della chiave API specifico trovato nell&#39;integrazione del Adobe Experience Platform  univoco.\
+`{API_KEY}`: Il valore chiave API specifico trovato nella vostra integrazione Adobe Experience Platform univoca.\
 `{JSON_PAYLOAD}`: Oggetto Sperimentale creato. L’esempio che utilizziamo nell’esercitazione è riportato di seguito:
 
 ```JSON
@@ -234,9 +235,9 @@ curl -X POST \
   -d '{JSON_PAYLOAD}`
 ```
 
-`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione  Adobe Experience Platform.\
+`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra unica integrazione con Adobe Experience Platform.\
 `{ACCESS_TOKEN}`: Il valore del token del portatore specificato dopo l&#39;autenticazione.\
-`{API_KEY}`: Il valore della chiave API specifico trovato nell&#39;integrazione del Adobe Experience Platform  univoco.\
+`{API_KEY}`: Il valore chiave API specifico trovato nella vostra integrazione Adobe Experience Platform univoca.\
 `{JSON_PAYLOAD}`: Set di dati da inviare. L’esempio che utilizziamo nell’esercitazione è riportato di seguito:
 
 ```JSON
@@ -322,9 +323,9 @@ curl -X POST \
 ```
 
 `{EXPERIMENT_ID}`: L’ID corrispondente all’esperimento di cui eseguire il targeting. Questo si trova nella risposta quando create il vostro esperimento.\
-`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione  Adobe Experience Platform.\
+`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra unica integrazione con Adobe Experience Platform.\
 `{ACCESS_TOKEN}`: Il valore del token del portatore specificato dopo l&#39;autenticazione.\
-`{API_KEY}`: Il valore della chiave API specifico trovato nell&#39;integrazione del Adobe Experience Platform  univoco.\
+`{API_KEY}`: Il valore chiave API specifico trovato nella vostra integrazione Adobe Experience Platform univoca.\
 `{JSON_PAYLOAD}`: Per creare un&#39;esecuzione di formazione, è necessario includere nel corpo quanto segue:
 
 ```JSON
@@ -393,8 +394,8 @@ curl -X GET \
 `{EXPERIMENT_ID}`: L’ID che rappresenta l’esperimento.\
 `{EXPERIMENT_RUN_ID}`: ID che rappresenta l’esecuzione dell’esperimento.\
 `{ACCESS_TOKEN}`: Il valore del token del portatore specificato dopo l&#39;autenticazione.\
-`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione  Adobe Experience Platform.\
-`{API_KEY}`: Il valore della chiave API specifico trovato nell&#39;integrazione del Adobe Experience Platform  univoco.
+`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra unica integrazione con Adobe Experience Platform.\
+`{API_KEY}`: Il valore chiave API specifico trovato nella vostra integrazione Adobe Experience Platform univoca.
 
 **Risposta**
 
@@ -456,7 +457,7 @@ curl -X GET \
 
 `{EXPERIMENT_RUN_ID}`: L’ID corrispondente all’esecuzione dell’esperimento di cui desiderate eseguire il targeting. Questo si trova nella risposta durante la creazione dell&#39;esecuzione dell&#39;esperimento.\
 `{ACCESS_TOKEN}`: Il valore del token del portatore specificato dopo l&#39;autenticazione.\
-`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione  Adobe Experience Platform.
+`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra unica integrazione con Adobe Experience Platform.
 
 La risposta rappresenta il modello addestrato creato.
 
@@ -503,7 +504,7 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}`:  L’ID corrispondente all’esperimento.\
 `{ACCESS_TOKEN}`: Il valore del token del portatore specificato dopo l&#39;autenticazione.\
-`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione  Adobe Experience Platform.
+`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra unica integrazione con Adobe Experience Platform.
 
 >[!NOTE]
 >
