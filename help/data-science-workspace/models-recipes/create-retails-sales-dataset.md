@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare lo schema di vendita al dettaglio e il dataset
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '502'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prer
    - [dictor](https://pypi.org/project/dictor/)
    - [JWT](https://pypi.org/project/jwt/)
 - Conoscenza approfondita dei seguenti concetti utilizzati in questa esercitazione:
-   - [!DNL Experience Data Model (XDM)](../../xdm/home.md)
+   - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)
    - [Nozioni di base sulla composizione dello schema](../../xdm/schema/field-dictionary.md)
 
 ## Crea schema vendite al dettaglio e dataset
@@ -111,5 +111,5 @@ Sono stati inoltre acquisiti con successo i dati di esempio Vendite al dettaglio
 Per continuare a utilizzare i dati acquisiti:
 - [Analizzare i dati utilizzando i notebook Jupyter](../jupyterlab/analyze-your-data.md)
    - Utilizza i notebook Jupyter in Data Science Workspace per accedere, esplorare, visualizzare e comprendere i tuoi dati.
-- [Creare pacchetti di file sorgente in una composizione](./package-source-files-recipe.md)
+- [Creare pacchetti di file sorgente in una casella](./package-source-files-recipe.md)
    - Segui questa esercitazione per scoprire come inserire un modello personalizzato [!DNL Data Science Workspace] creando pacchetti di file sorgente in un file Recipe importabile.
