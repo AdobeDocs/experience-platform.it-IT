@@ -3,10 +3,11 @@ keywords: Experience Platform;preview schema data;Data Science Workspace;popular
 solution: Experience Platform
 title: Anteprima di schemi e set di dati
 topic: Tutorial
+description: Nel seguente documento sono illustrati gli schemi di anteprima e i set di dati in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
@@ -35,5 +36,5 @@ I dati di esempio Vendite al dettaglio sono stati inviati correttamente [!DNL Ex
 Per continuare a utilizzare i dati acquisiti:
 - [Analizzare i dati utilizzando i notebook Jupyter](../jupyterlab/analyze-your-data.md)
    - Utilizza i notebook Jupyter [!DNL Data Science Workspace] per accedere, esplorare, visualizzare e comprendere i tuoi dati.
-- [Creare pacchetti di file sorgente in una composizione](./package-source-files-recipe.md)
+- [Creare pacchetti di file sorgente in una casella](./package-source-files-recipe.md)
    - Segui questa esercitazione per scoprire come inserire un modello personalizzato [!DNL Data Science Workspace] creando pacchetti di file sorgente in un file Recipe importabile.
