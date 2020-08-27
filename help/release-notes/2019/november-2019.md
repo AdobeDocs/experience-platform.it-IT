@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1908'
 ht-degree: 2%
 
 ---
@@ -18,15 +18,15 @@ ht-degree: 2%
 **Data di rilascio: 18 novembre 2019**
 
 Nuove funzioni in Adobe Experience Platform:
-* [!DNL Real-time Customer Data Platform](#rtcdp)
-* [!DNL Destinations](#destinations)
-* [!DNL Sources](#sources)
+* [[!DNL Piattaforma dati cliente in tempo reale]](#rtcdp)
+* [[!DNL Destinazioni]](#destinations)
+* [[!DNL Sources]](#sources)
 
 Aggiornamenti alle funzioni esistenti:
-* [!DNL Data Science Workspace](#dsw)
-* [!DNL Experience Data Model (XDM) System](#xdm)
-* [!DNL Real-time Customer Profile](#profile)
-* [!DNL Segmentation Service](#segmentation)
+* [[!DNL Data Science Workspace]](#dsw)
+* [[!DNL Experience Data Model (XDM) System]](#xdm)
+* [[!DNL Profilo cliente in tempo reale]](#profile)
+* [[!DNL Segmentation Service]](#segmentation)
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
@@ -34,7 +34,7 @@ Basato su Adobe Experience Platform, il  Adobe Real-time Customer Data Platform 
 
 [!DNL Real-time Customer Data Platform] include strumenti per la governance dei dati, la gestione delle identità, la segmentazione avanzata e la scienza dei dati, che consentono di creare profili e definire i tipi di pubblico, oltre a ricavare informazioni approfondite e al tempo stesso essere in grado di applicare politiche rigorose di governance dei dati.
 
- Adobe si collega a un ampio ecosistema di partner, per non parlare delle integrazioni native con Adobe Experience Cloud, in modo da poter attivare facilmente questi tipi di pubblico e fornire esperienze cliente straordinarie su tutti i canali, dalla personalizzazione in-sito o in-app alla posta elettronica, ai supporti a pagamento, ai call center, ai dispositivi connessi e molto altro ancora.
+ Adobe si collega a un ampio ecosistema di partner, per non parlare delle integrazioni native con Adobe Experience Cloud, in modo da poter attivare facilmente questi tipi di pubblico e offrire esperienze cliente straordinarie su tutti i canali, dalla personalizzazione in-sito o in-app alla posta elettronica, ai supporti a pagamento, ai call center, ai dispositivi connessi e molto altro ancora.
 
 Con CDP in tempo reale, potete:
 
