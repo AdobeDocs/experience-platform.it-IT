@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;catalog;object lookup;api
 solution: Experience Platform
 title: Cercare un oggetto
 topic: developer guide
+description: 'Se si conosce l''identificatore univoco di un oggetto Catalog specifico, è possibile eseguire una richiesta di GET per visualizzare i dettagli dell''oggetto. '
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 3%
+source-wordcount: '154'
+ht-degree: 2%
 
 ---
 
