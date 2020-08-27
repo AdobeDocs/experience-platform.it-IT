@@ -5,7 +5,7 @@ title: Creazione e pubblicazione di un modello di machine learning
 topic: Tutorial
 description: Adobe Experience Platform Data Science Workspace offre i mezzi per raggiungere il tuo obiettivo utilizzando la Recommendations Recipe del prodotto precostruita. Segui questa esercitazione per scoprire come accedere e comprendere i dati di vendita al dettaglio, creare e ottimizzare un modello di machine learning e generare informazioni in Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 78f080fd7598799825c59a4fdfdcaf7d294560a3
 workflow-type: tm+mt
 source-wordcount: '1542'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prer
    * Golden Data Set postValues
    * Schema set di dati dorati
 
-* Scaricate i tre [!DNL Jupyter Notebook] file richiesti dall&#39; <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">[!DNL Git] archivio</a>pubblico del Adobe, che verranno utilizzati per illustrare il [!DNL JupyterLab] flusso di lavoro in [!DNL Data Science Workspace].
+* Scaricate i tre [!DNL Jupyter Notebook] file richiesti dall&#39;archivio [ [!DNL Git] pubblico](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs)del Adobe, che verranno utilizzati per illustrare il [!DNL JupyterLab] flusso di lavoro in [!DNL Data Science Workspace].
 
 * Una conoscenza approfondita dei seguenti concetti chiave utilizzati in questa esercitazione:
    * [[!DNL Experience Data Model]](../../xdm/home.md): Lo sforzo di standardizzazione condotto da  Adobe per definire schemi standard come [!DNL Profile] e ExperienceEvent per la gestione dell&#39;esperienza cliente.
