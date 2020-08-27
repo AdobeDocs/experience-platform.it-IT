@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida per gli sviluppatori di Segmentation Service
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '300'
 ht-degree: 0%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # Getting started with [!DNL Segmentation Service] {#getting-started}
 
- Adobe Experience Platform [!DNL Segmentation Service] consente di creare segmenti e generare audience  Adobe Experience Platform dai [!DNL Real-time Customer Profile] dati.
+Adobe Experience Platform [!DNL Segmentation Service] consente di creare segmenti e generare audience in Adobe Experience Platform dai [!DNL Real-time Customer Profile] dati.
 
 La guida per gli sviluppatori richiede una conoscenza approfondita dei vari [!DNL Experience Platform] servizi che intervengono nell&#39;utilizzo [!DNL Segmentation Service].
 
-- [!DNL Segmentation](../home.md): Consente di creare segmenti di pubblico dai [!DNL Real-time Customer Profile] dati.
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
-- [!DNL Real-time Customer Profile](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+- [[!Segmentazione DNL]](../home.md): Consente di creare segmenti di pubblico dai [!DNL Real-time Customer Profile] dati.
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
+- [[!DNL Profilo cliente in tempo reale]](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 - [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che dovrete conoscere per poter utilizzare con successo l&#39; [!DNL Segmentation] API.
