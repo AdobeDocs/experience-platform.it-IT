@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
 title: Ricetta di vendita al dettaglio
 topic: overview
+description: La ricetta Vendite al dettaglio consente di prevedere le previsioni di vendita per tutti i negozi preimpostati per un determinato periodo di tempo. Grazie a un modello di previsione accurato, il rivenditore sarà in grado di individuare la relazione tra le politiche di domanda e di prezzo e di prendere decisioni di prezzo ottimizzate per massimizzare le vendite e i ricavi.
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '571'
 ht-degree: 2%
 
 ---
@@ -33,7 +34,7 @@ La ricetta Retail Sales Forecasting utilizza l&#39;apprendimento automatico per 
 
 Per iniziare, segui questa [esercitazione](../jupyterlab/create-a-recipe.md).
 
-Questa esercitazione passerà alla creazione della ricetta Vendite al dettaglio in un blocco appunti Jupyter e all&#39;utilizzo del blocco appunti per creare la ricetta in  Adobe Experience Platform.
+Questa esercitazione passerà alla creazione della ricetta Vendite al dettaglio in un blocco appunti Jupyter e all&#39;utilizzo del blocco appunti per creare il flusso di lavoro della ricetta in Adobe Experience Platform.
 
 ## Schema dati
 
