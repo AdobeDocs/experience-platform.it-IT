@@ -5,9 +5,9 @@ title: Nozioni di base sulla composizione dello schema
 topic: overview
 description: Questo documento fornisce un'introduzione agli schemi di Experience Data Model (XDM) e ai blocchi costitutivi, ai principi e alle procedure ottimali per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 23a69653ee773562cb0261b8e0bb67411eb4856e
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2787'
+source-wordcount: '2815'
 ht-degree: 0%
 
 ---
@@ -62,9 +62,9 @@ Gli schemi di record e di serie temporali contengono una mappa di identità (`xd
 
 Gli schemi vengono utilizzati per assimilare i dati in [!DNL Experience Platform]. Questi dati possono essere utilizzati tra più servizi per creare una singola vista unificata di una singola entità. Pertanto, è importante, quando si pensa agli schemi, pensare alle identità dei clienti e ai campi che possono essere utilizzati per identificare un oggetto, a prescindere da dove i dati provengano.
 
-Per facilitare questo processo, i campi chiave negli schemi possono essere contrassegnati come identità. Al momento dell&#39;inserimento dei dati, i dati contenuti in tali campi vengono inseriti nel campo &quot;[!UICONTROL Identity Graph]&quot; di tale individuo. I dati del grafico sono quindi accessibili da [!DNL Real-time Customer Profile](../../profile/home.md) e da altri [!DNL Experience Platform] servizi per fornire una visualizzazione unita di ogni singolo cliente.
+Per facilitare questo processo, i campi chiave negli schemi possono essere contrassegnati come identità. Al momento dell&#39;inserimento dei dati, i dati contenuti in tali campi vengono inseriti nel campo &quot;[!UICONTROL Identity Graph]&quot; di tale individuo. I dati del grafico sono quindi accessibili da [[!DNL Real-time Customer Profile]](../../profile/home.md) e da altri [!DNL Experience Platform] servizi, per fornire una visione unica di ciascun cliente.
 
-I campi generalmente contrassegnati come &quot;[!UICONTROL Identity]&quot; includono: indirizzo e-mail, numero di telefono, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/it-IT/id-service/using/home.html), ID CRM o altri campi ID univoci. È inoltre necessario considerare eventuali identificatori univoci specifici della propria organizzazione, in quanto possono essere buoni anche &quot;[!UICONTROL Identity]&quot; campi.
+I campi generalmente contrassegnati come &quot;[!UICONTROL Identity]&quot; includono: indirizzo e-mail, numero di telefono, [[!DNL  ID Experience Cloud (ECID)]](https://docs.adobe.com/content/help/it-IT/id-service/using/home.html), ID CRM o altri campi ID univoci. È inoltre necessario considerare eventuali identificatori univoci specifici della propria organizzazione, in quanto possono essere buoni anche &quot;[!UICONTROL Identity]&quot; campi.
 
 È importante considerare le identità dei clienti durante la fase di pianificazione dello schema, in modo da garantire che i dati vengano uniti per creare il profilo più affidabile possibile. Consulta la panoramica su [Adobe Experience Platform Identity Service](../../identity-service/home.md) per ulteriori informazioni su come le informazioni sull&#39;identità possono aiutarti a fornire esperienze digitali ai tuoi clienti.
 
@@ -123,7 +123,7 @@ Poiché il mantenimento della compatibilità con le versioni precedenti è fonda
 
 ### Schemi e acquisizione dei dati
 
-Per acquisire i dati in [!DNL Experience Platform], è necessario creare prima un set di dati. I set di dati sono gli elementi costitutivi della trasformazione e del tracciamento dei dati per [!DNL Catalog Service](../../catalog/home.md)e generalmente rappresentano tabelle o file contenenti dati acquisiti. Tutti i set di dati si basano sugli schemi XDM esistenti, che forniscono vincoli per ciò che i dati acquisiti devono contenere e per come dovrebbero essere strutturati. Per ulteriori informazioni, consulta la panoramica su [Adobe Experience Platform Data Ingestion](../../ingestion/home.md) .
+Per acquisire i dati in [!DNL Experience Platform], è necessario creare prima un set di dati. I set di dati sono i blocchi costitutivi per la trasformazione e il tracciamento dei dati per [[!DNL Catalog Service]](../../catalog/home.md)e generalmente rappresentano tabelle o file contenenti dati acquisiti. Tutti i set di dati si basano sugli schemi XDM esistenti, che forniscono vincoli per ciò che i dati acquisiti devono contenere e per come dovrebbero essere strutturati. Per ulteriori informazioni, consulta la panoramica su [Adobe Experience Platform Data Ingestion](../../ingestion/home.md) .
 
 ## Creazione di blocchi di uno schema
 
@@ -153,7 +153,7 @@ Ad esempio, uno schema che rappresenta i membri di un programma Fedeltà descriv
 
 Un mixin è un componente riutilizzabile che definisce uno o più campi che implementano determinate funzioni come i dati personali, le preferenze alberghiere o l&#39;indirizzo. Le mixine sono destinate ad essere incluse come parte di uno schema che implementa una classe compatibile.
 
-Le combinazioni definiscono le classi con cui sono compatibili in base al comportamento dei dati che rappresentano (serie di record o temporali). Ciò significa che non tutti i mixin sono disponibili per l&#39;uso con tutte le classi.
+Le combinazioni definiscono le classi con cui sono compatibili in base al comportamento dei dati che rappresentano (record o serie temporali). Ciò significa che non tutti i mixin sono disponibili per l&#39;uso con tutte le classi.
 
 I mixin hanno lo stesso ambito e la stessa definizione delle classi: esistono mixin di settore, mixin di fornitori e mixin di clienti definiti dalle singole organizzazioni che utilizzano [!DNL Platform]. [!DNL Experience Platform] include molti mixer standard di settore, consentendo al contempo ai fornitori di definire mixin per i propri utenti e ai singoli utenti di definire mixin base ai propri concetti specifici.
 
@@ -194,11 +194,11 @@ Gli intervalli validi di questi tipi scalari possono essere ulteriormente vincol
 
 Alcune operazioni di dati utilizzate dai servizi e dalle applicazioni a valle impongono vincoli su tipi di campo specifici. I servizi interessati includono, tra l&#39;altro:
 
-* [!DNL Real-time Customer Profile](../../profile/home.md)
-* [!DNL Identity Service](../../identity-service/home.md)
-* [!DNL Segmentation](../../segmentation/home.md)
-* [!DNL Query Service](../../query-service/home.md)
-* [!DNL Data Science Workspace](../../data-science-workspace/home.md)
+* [[!DNL Profilo cliente in tempo reale]](../../profile/home.md)
+* [[!DNL Identity Service]](../../identity-service/home.md)
+* [[!Segmentazione DNL]](../../segmentation/home.md)
+* [[!DNL Query Service]](../../query-service/home.md)
+* [[!DNL Data Science Workspace]](../../data-science-workspace/home.md)
 
 Prima di creare uno schema da utilizzare nei servizi a valle, consultare la documentazione appropriata per tali servizi al fine di comprendere meglio i requisiti di campo e i vincoli per le operazioni di dati a cui lo schema è destinato.
 
