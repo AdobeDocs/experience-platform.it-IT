@@ -5,9 +5,9 @@ title: Panoramica dei connettori sorgente Adobe Experience Platform
 topic: overview
 description: Adobe Experience Platform consente l'acquisizione di dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Piattaforma. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, database e molti altri.
 translation-type: tm+mt
-source-git-commit: 88f999691cde2fbebdf23f940f6d48acdfb188e3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Con [!DNL Experience Platform], è possibile centralizzare i dati raccolti da fo
 
 ## Tipi di fonti
 
-Le origini in [!DNL Experience Platform] sono raggruppate nelle seguenti categorie:
+Le origini [!DNL Experience Platform] sono raggruppate nelle seguenti categorie:
 
 ###  applicazioni Adobe
 
@@ -41,74 +41,74 @@ Le origini in [!DNL Experience Platform] sono raggruppate nelle seguenti categor
 
 [!DNL Experience Platform] fornisce il supporto per l&#39;acquisizione di dati da un sistema pubblicitario di terze parti. Per ulteriori informazioni su connettori sorgente specifici, consultate i seguenti documenti correlati:
 
-- [!DNL Google AdWords](connectors/advertising/ads.md) connettore
+- [Connettore [!DNL Google AdWords]](connectors/advertising/ads.md)
 
 ### Archiviazione cloud
 
 Le origini di archiviazione cloud possono importare i tuoi dati [!DNL Platform] senza bisogno di scaricare, formattare o caricare. I dati ingeriti possono essere formattati come JSON XDM, parquet XDM o delimitati. Ogni fase del processo è integrata nel flusso di lavoro Origini tramite l&#39;interfaccia utente. Per ulteriori informazioni, consulta i seguenti documenti correlati:
 
-- [!DNL Azure Data Lake Storage Gen2](connectors/cloud-storage/adls-gen2.md) connettore
-- [!DNL Azure Blob](connectors/cloud-storage/blob.md) connettore
-- [!DNL Amazon Kinesis](connectors/cloud-storage/kinesis.md) connettore
-- [!DNL Amazon S3](connectors/cloud-storage/s3.md) connettore
-- [!DNL Apache HDFS](connectors/cloud-storage/hdfs.md) connettore
-- [!DNL Azure Event Hubs](connectors/cloud-storage/eventhub.md) connettore
-- [!DNL Azure File Storage](connectors/cloud-storage/azure-file-storage.md) connettore
-- [!DNL FTP and SFTP](connectors/cloud-storage/ftp-sftp.md) connettore
-- [!DNL Google Cloud Storage](connectors/cloud-storage/google-cloud-storage.md) connettore
+- [Connettore [!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md)
+- [Connettore [!DNL Azure Blob]](connectors/cloud-storage/blob.md)
+- [Connettore [!DNL  Amazon Kinesis]](connectors/cloud-storage/kinesis.md)
+- [Connettore [!DNL  Amazon S3]](connectors/cloud-storage/s3.md)
+- [Connettore [!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md)
+- [Connettore [!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md)
+- [Connettore [!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md)
+- [Connettore [!DNL FTP e SFTP]](connectors/cloud-storage/ftp-sftp.md)
+- [Connettore [!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md)
 
 ### Gestione delle relazioni con i clienti (CRM)
 
 I sistemi CRM forniscono dati che possono aiutare a creare relazioni con i clienti, creando a loro volta fidelizzazione e promuovendo la fidelizzazione dei clienti. [!DNL Experience Platform] fornisce supporto per l&#39;acquisizione di dati CRM da [!DNL Microsoft Dynamics 365] e [!DNL Salesforce]. Per ulteriori informazioni, consulta i seguenti documenti correlati:
 
-- [!DNL Microsoft Dynamics](connectors/crm/ms-dynamics.md) connettore
-- [!DNL Salesforce](connectors/crm/salesforce.md) connettore
+- [Connettore [!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md)
+- [Connettore [!DNL Salesforce]](connectors/crm/salesforce.md)
 
 ### Successo cliente
 
 [!DNL Experience Platform] fornisce supporto per l’acquisizione di dati da un’applicazione di successo cliente di terze parti. Per ulteriori informazioni, consulta i seguenti documenti correlati:
 
-- [!DNL Salesforce Service Cloud](connectors/customer-success/salesforce-service-cloud.md) connettore
-- [!DNL ServiceNow](connectors/customer-success/servicenow.md) connettore
+- [Connettore [!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md)
+- [Connettore [!DNL ServiceNow]](connectors/customer-success/servicenow.md)
 
 ### Database
 
 [!DNL Experience Platform] fornisce il supporto per l&#39;acquisizione di dati da un database di terze parti. Per ulteriori informazioni su connettori sorgente specifici, consultate i seguenti documenti correlati:
 
-- [!DNL Amazon Redshift](connectors/databases/redshift.md) connettore
-- [!DNL Apache Hive on Azure HDInsights](connectors/databases/hive.md) connettore
-- [!DNL Apache Spark on Azure HDInsights](connectors/databases/spark.md) connettore
-- [!DNL Azure Data Explorer](connectors/databases/data-explorer.md) connettore
-- [!DNL Azure Synapse Analytics](connectors/databases/synapse-analytics.md) connettore
-- [!DNL Azure Table Storage](connectors/databases/ats.md) connettore
-- [!DNL Couchbase](connectors/databases/couchbase.md) connettore
-- [!DNL Google BigQuery](connectors/databases/bigquery.md) connettore
-- [!DNL GreenPlum](connectors/databases/greenplum.md) connettore
-- [!DNL HP Vertica](connectors/databases/hp-vertica.md) connettore
-- [!DNL IBM DB2](connectors/databases/ibm-db2.md) connettore
-- [!DNL Microsoft SQL Server](connectors/databases/sql-server.md) connettore
-- [!DNL MySQL](connectors/databases/mysql.md) connettore
-- [!DNL Oracle](connectors/databases/oracle.md) connettore
-- [!DNL Phoenix](connectors/databases/phoenix.md) connettore
-- [!DNL PostgreSQL](connectors/databases/postgres.md) connettore
+- [Connettore [!DNL  Amazon Redshift]](connectors/databases/redshift.md)
+- [Connettore [!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md)
+- [[!DNL Apache Spark sul connettore Azure HDInsights]](connectors/databases/spark.md)
+- [Connettore di Data Explorer di [!DNL Azure]](connectors/databases/data-explorer.md)
+- [Connettore [!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md)
+- [Connettore [!DNL Azure Table Storage]](connectors/databases/ats.md)
+- [Connettore [!DNL Couchbase]](connectors/databases/couchbase.md)
+- [Connettore [!DNL Google BigQuery]](connectors/databases/bigquery.md)
+- [Connettore [!DNL GreenPlum]](connectors/databases/greenplum.md)
+- [Connettore [!DNL HP Vertica]](connectors/databases/hp-vertica.md)
+- [Connettore [!DNL IBM DB2]](connectors/databases/ibm-db2.md)
+- [Connettore [!DNL Microsoft SQL Server]](connectors/databases/sql-server.md)
+- [Connettore [!DNL MySQL]](connectors/databases/mysql.md)
+- [Connettore [!DNL Oracle]](connectors/databases/oracle.md)
+- [Connettore [!DNL Phoenix]](connectors/databases/phoenix.md)
+- [Connettore [!DNL PostgreSQL]](connectors/databases/postgres.md)
 
 ### Marketing Automation
 
 [!DNL Experience Platform] fornisce il supporto per l&#39;acquisizione di dati da un sistema di automazione marketing di terze parti. Per ulteriori informazioni su connettori sorgente specifici, consultate i seguenti documenti correlati:
 
-- [!DNL HubSpot](connectors/marketing-automation/hubspot.md) connettore
+- [Connettore [!DNL HubSpot]](connectors/marketing-automation/hubspot.md)
 
 ### Pagamenti
 
 [!DNL Experience Platform] fornisce supporto per l&#39;acquisizione di dati da un sistema di pagamenti di terze parti. Per ulteriori informazioni su connettori sorgente specifici, consultate i seguenti documenti correlati:
 
-- [!DNL PayPal](connectors/payments/paypal.md) connettore
+- [Connettore [!DNL PayPal]](connectors/payments/paypal.md)
 
 ### Protocolli
 
 [!DNL Experience Platform] fornisce il supporto per l&#39;acquisizione di dati da un sistema di protocolli di terze parti. Per ulteriori informazioni su connettori sorgente specifici, consultate i seguenti documenti correlati:
 
-- [!DNL Generic OData](connectors/protocols/odata.md) connettore
+- [Connettore [!DNL Generic OData]](connectors/protocols/odata.md)
 
 ## Controllo degli accessi per le origini nell&#39;assimilazione dei dati
 
