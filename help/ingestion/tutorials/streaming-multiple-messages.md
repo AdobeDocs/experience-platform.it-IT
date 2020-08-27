@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Streaming di più messaggi in una singola richiesta HTTP
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 80392190c7fcae9b6e73cc1e507559f834853390
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1452'
+source-wordcount: '1459'
 ht-degree: 1%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 1%
 
 # Invio di più messaggi in una singola richiesta HTTP
 
-Durante lo streaming dei dati  Adobe Experience Platform, effettuare numerose chiamate HTTP può essere costoso. Ad esempio, invece di creare 200 richieste HTTP con payload da 1 KB, è molto più efficiente creare 1 richiesta HTTP con 200 messaggi da 1 KB ciascuno, con un singolo payload di 200 KB. Se utilizzati correttamente, il raggruppamento di più messaggi all’interno di una singola richiesta è un metodo eccellente per ottimizzare i dati a cui si sta inviando [!DNL Experience Platform].
+Quando si inviano dati in streaming ad Adobe Experience Platform, effettuare numerose chiamate HTTP può essere costoso. Ad esempio, invece di creare 200 richieste HTTP con payload da 1 KB, è molto più efficiente creare 1 richiesta HTTP con 200 messaggi da 1 KB ciascuno, con un singolo payload di 200 KB. Se utilizzati correttamente, il raggruppamento di più messaggi all’interno di una singola richiesta è un metodo eccellente per ottimizzare i dati a cui si sta inviando [!DNL Experience Platform].
 
 Questo documento fornisce un&#39;esercitazione per l&#39;invio di più messaggi all&#39; [!DNL Experience Platform] interno di una singola richiesta HTTP tramite l&#39;assimilazione in streaming.
 
 ## Introduzione
 
-Questa esercitazione richiede una conoscenza approfondita  Adobe Experience Platform [!DNL Data Ingestion]. Prima di iniziare questa esercitazione, consulta la seguente documentazione:
+Questa esercitazione richiede una buona conoscenza di Adobe Experience Platform [!DNL Data Ingestion]. Prima di iniziare questa esercitazione, consulta la seguente documentazione:
 
 - [Panoramica sull](../home.md)’inserimento dei dati: Copre i concetti fondamentali di [!DNL Experience Platform Data Ingestion], compresi i metodi di caricamento e i connettori dati.
 - [Panoramica sull](../streaming-ingestion/overview.md)’assimilazione dello streaming: Il flusso di lavoro e gli elementi costitutivi dell&#39;assimilazione dei flussi di lavoro, ad esempio connessioni di streaming, set di dati [!DNL XDM Individual Profile]e [!DNL XDM ExperienceEvent].
 
-Questa esercitazione richiede anche di completare l&#39; [autenticazione per &#39;esercitazione sul Adobe Experience Platform](../../tutorials/authentication.md) al fine di effettuare correttamente le chiamate alle [!DNL Platform] API. Completando l&#39;esercitazione sull&#39;autenticazione viene fornito il valore per l&#39;intestazione Autorizzazione richiesto da tutte le chiamate API in questa esercitazione. L’intestazione è mostrata nelle chiamate di esempio come segue:
+Questa esercitazione richiede anche di completare l&#39;esercitazione [Autenticazione su Adobe Experience Platform](../../tutorials/authentication.md) per effettuare correttamente le chiamate alle [!DNL Platform] API. Completando l&#39;esercitazione sull&#39;autenticazione viene fornito il valore per l&#39;intestazione Autorizzazione richiesto da tutte le chiamate API in questa esercitazione. L’intestazione è mostrata nelle chiamate di esempio come segue:
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 
@@ -37,13 +37,13 @@ Tutte le richieste POST richiedono un&#39;intestazione aggiuntiva:
 
 Prima di avviare lo streaming dei dati su [!DNL Experience Platform], è necessario creare una connessione in streaming. Leggi la guida [per la creazione di una connessione](./create-streaming-connection.md) in streaming.
 
-Dopo la registrazione di una connessione di streaming, l&#39;utente, in qualità di produttore di dati, avrà un URL univoco che può essere utilizzato per lo streaming dei dati ad Platform.
+Dopo la registrazione di una connessione di streaming, l&#39;utente, in qualità di produttore di dati, avrà un URL univoco che può essere utilizzato per lo streaming dei dati su Platform.
 
 ## Trasmissione a un dataset
 
 L&#39;esempio seguente mostra come inviare più messaggi a uno specifico dataset all&#39;interno di una singola richiesta HTTP. Inserire l&#39;ID del set di dati nell&#39;intestazione del messaggio per consentirne l&#39;inserimento diretto.
 
-Potete ottenere l&#39;ID per un set di dati esistente utilizzando l&#39; [!DNL Platform] interfaccia utente o un&#39;operazione di elenco nell&#39;API. L&#39;ID del set di dati si trova [Experience Platform](https://platform.adobe.com) andando alla **[!UICONTROL Datasets]** scheda, facendo clic sul set di dati per il quale si desidera utilizzare l&#39;ID e copiando la stringa dal **[!UICONTROL Dataset ID]** campo della **[!UICONTROL Info]** scheda. Consultate la panoramica [del servizio](../../catalog/home.md) catalogo per informazioni su come recuperare i set di dati tramite l’API.
+Potete ottenere l&#39;ID per un set di dati esistente utilizzando l&#39; [!DNL Platform] interfaccia utente o un&#39;operazione di elenco nell&#39;API. L&#39;ID del set di dati si trova [Experience Platform](https://platform.adobe.com) andando alla **[!UICONTROL Datasets]** scheda, facendo clic sul set di dati per il quale si desidera utilizzare l&#39;ID e copiando la stringa dal **[!UICONTROL Dataset ID]** campo della **[!UICONTROL Info]** scheda. Per informazioni su come recuperare i set di dati tramite l’API, consultate la panoramica [del servizio](../../catalog/home.md) catalogo.
 
 Invece di utilizzare un dataset esistente, potete creare un nuovo dataset. Per ulteriori informazioni sulla creazione di un set di dati tramite API [, consultate l&#39;esercitazione](../../catalog/api/create-dataset.md) Create a dataset using API (Creazione di un set di dati tramite API).
 
@@ -508,9 +508,9 @@ Il secondo messaggio non è riuscito perché mancava un corpo del messaggio. La 
     },
 ```
 
-Il terzo messaggio non è riuscito a causa di un ID organizzazione IMS non valido utilizzato nell&#39;intestazione. L&#39;organizzazione IMS deve corrispondere al {CONNECTION_ID} a cui si sta tentando di inviare. Per determinare l&#39;ID organizzazione IMS corrispondente alla connessione di streaming in uso, potete eseguire una `GET inlet` richiesta utilizzando il [!DNL Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Consultate [il recupero di una connessione](./create-streaming-connection.md#get-data-collection-url) in streaming per un esempio di come recuperare le connessioni in streaming create in precedenza.
+Il terzo messaggio non è riuscito a causa di un ID organizzazione IMS non valido utilizzato nell&#39;intestazione. L&#39;organizzazione IMS deve corrispondere al {CONNECTION_ID} a cui si sta tentando di inviare. Per determinare quale ID organizzazione IMS corrisponde alla connessione di streaming in uso, potete eseguire una `GET inlet` richiesta utilizzando l&#39;API di inserimento dati [[!DNL]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Consultate [il recupero di una connessione](./create-streaming-connection.md#get-data-collection-url) in streaming per un esempio di come recuperare le connessioni in streaming create in precedenza.
 
-Il quarto messaggio non è riuscito perché non seguiva lo schema XDM previsto. L&#39;elemento `xdmSchema` incluso nell&#39;intestazione e nel corpo della richiesta non corrisponde allo schema XDM del `{DATASET_ID}`. La correzione dello schema nell&#39;intestazione e nel corpo del messaggio consente di superare la convalida DCCS e di inviarlo correttamente [!DNL Platform]. È inoltre necessario aggiornare il corpo del messaggio in modo che corrisponda allo schema XDM dell&#39; `{DATASET_ID}` istanza affinché possa trasmettere la convalida del flusso in [!DNL Platform]. Per ulteriori informazioni sugli eventi dei messaggi che sono stati inviati correttamente ad Platform, consulta la sezione [Conferma messaggi acquisiti](#confirm-messages-ingested) in questa esercitazione.
+Il quarto messaggio non è riuscito perché non seguiva lo schema XDM previsto. L&#39;elemento `xdmSchema` incluso nell&#39;intestazione e nel corpo della richiesta non corrisponde allo schema XDM del `{DATASET_ID}`. La correzione dello schema nell&#39;intestazione e nel corpo del messaggio consente di superare la convalida DCCS e di inviarlo correttamente [!DNL Platform]. È inoltre necessario aggiornare il corpo del messaggio in modo che corrisponda allo schema XDM dell&#39; `{DATASET_ID}` istanza affinché possa trasmettere la convalida del flusso in [!DNL Platform]. Per ulteriori informazioni su cosa accade ai messaggi che sono stati inviati correttamente alla piattaforma, consulta la sezione [Conferma messaggi acquisiti](#confirm-messages-ingested) in questa esercitazione.
 
 ### Recupero di messaggi non riusciti da [!DNL Platform]
 
@@ -529,7 +529,7 @@ I messaggi batch per i quali [!DNL Platform] viene passata la convalida dello st
 
 ## Passaggi successivi
 
-Ora che sai come inviare più messaggi in una singola richiesta e quando i messaggi vengono correttamente inseriti nel set di dati di destinazione, puoi iniziare a inviare in streaming i tuoi dati a [!DNL Platform]. Per una panoramica su come eseguire query e recuperare dati acquisiti da [!DNL Platform], consultate la [!DNL Data Access](../../data-access/tutorials/dataset-data.md) guida.
+Ora che sai come inviare più messaggi in una singola richiesta e quando i messaggi vengono correttamente inseriti nel set di dati di destinazione, puoi iniziare a inviare in streaming i tuoi dati a [!DNL Platform]. Per una panoramica su come eseguire query e recuperare dati acquisiti da [!DNL Platform], vedere la guida [[!DNL Data Access]](../../data-access/tutorials/dataset-data.md) .
 
 ## Appendice
 
