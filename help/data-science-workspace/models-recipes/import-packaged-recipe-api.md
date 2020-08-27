@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Importare una ricetta in pacchetti (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '960'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Importare una ricetta in pacchetti (API)
 
-Questa esercitazione utilizza [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) per creare un [motore](../api/engines.md), detto anche Ricetta nell&#39;interfaccia utente.
+Questa esercitazione utilizza l&#39;API [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) per creare un [motore](../api/engines.md), noto anche come Ricetta nell&#39;interfaccia utente.
 
 Prima di iniziare, è importante notare che Adobe Experience Platform [!DNL Data Science Workspace] utilizza termini diversi per fare riferimento a elementi simili all&#39;interno dell&#39;API e dell&#39;interfaccia utente. I termini API vengono utilizzati in questa esercitazione e nella tabella seguente sono riportati i termini correlati:
 
@@ -197,7 +197,7 @@ Una risposta corretta restituisce un payload contenente i dettagli del motore ap
 }
 ```
 
-Una risposta corretta mostra un payload JSON con informazioni relative al motore appena creato. La `id` chiave rappresenta l’identificatore univoco del motore ed è necessaria nell’esercitazione successiva per creare un’istanza MLI. Prima di continuare con i passaggi successivi, accertati che l’identificatore del motore sia salvato.
+Una risposta corretta mostra un payload JSON con informazioni relative al motore appena creato. La `id` chiave rappresenta l’identificatore univoco del motore ed è necessaria nell’esercitazione successiva per creare un’istanza MLI. Prima di continuare con i passaggi successivi, assicurarsi che l’identificatore del motore sia salvato.
 
 ## Passaggi successivi {#next-steps}
 
