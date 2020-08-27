@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Catalog service;catalog api;appendix
 solution: Experience Platform
 title: Appendice della guida per gli sviluppatori di Catalog Service
 topic: developer guide
+description: Questo documento contiene informazioni aggiuntive utili per l’utilizzo dell’API Catalog in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '910'
 ht-degree: 0%
 
 ---
@@ -182,7 +183,7 @@ Prestate attenzione durante l&#39;analisi della risposta a una richiesta multipl
 
 È buona norma utilizzare il controllo delle versioni degli oggetti per evitare il tipo di danneggiamento dei dati che si verifica quando un oggetto viene salvato da più utenti quasi contemporaneamente.
 
-Come procedura ottimale, quando si aggiorna un oggetto occorre prima effettuare una chiamata API per visualizzare (GET) l&#39;oggetto da aggiornare. Contenuto nella risposta (e in qualsiasi chiamata in cui la risposta contiene un singolo oggetto) è un&#39; `E-Tag` intestazione contenente la versione dell&#39;oggetto. Se si aggiunge la versione dell&#39;oggetto come intestazione di richiesta denominata `If-Match` nelle chiamate di aggiornamento (PUT o PATCH), l&#39;aggiornamento avrà esito positivo solo se la versione è ancora la stessa, evitando così possibili collisioni di dati.
+Come procedura ottimale, quando si aggiorna un oggetto occorre prima effettuare una chiamata API per visualizzare (GET) l&#39;oggetto da aggiornare. Contenuto nella risposta (e in qualsiasi chiamata in cui la risposta contiene un singolo oggetto) è un&#39; `E-Tag` intestazione contenente la versione dell&#39;oggetto. Se si aggiunge la versione dell&#39;oggetto come intestazione di richiesta denominata `If-Match` nelle chiamate di aggiornamento (PUT o PATCH), l&#39;aggiornamento avrà esito positivo solo se la versione è ancora la stessa, in modo da evitare possibili collisioni di dati.
 
 Se le versioni non corrispondono (l&#39;oggetto è stato modificato da un altro processo dopo il recupero), riceverete lo stato HTTP 412 (Precondizione non riuscita) per indicare che l&#39;accesso alla risorsa di destinazione è stato negato.
 
