@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creazione di integrazioni ETL
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 8b1b61b6446b28f92d6cf221003674fa09716c53
 workflow-type: tm+mt
-source-wordcount: '4158'
+source-wordcount: '4153'
 ht-degree: 0%
 
 ---
@@ -522,7 +522,7 @@ Per informazioni sul filtro dei batch, consulta l’esercitazione [sull’access
 
 ### Estrarre i file da un batch
 
-Una volta ottenuto l&#39;ID per il batch che si sta cercando (`{BATCH_ID}`), è possibile recuperare un elenco di file appartenenti a un batch specifico tramite l&#39;API [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml).  I dettagli per farlo sono disponibili nell&#39;esercitazione [sull&#39;accesso ai](../data-access/tutorials/dataset-data.md)dati.
+Una volta ottenuto l&#39;ID per il batch che si sta cercando (`{BATCH_ID}`), è possibile recuperare un elenco di file appartenenti a un batch specifico tramite l&#39;API [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml).  I dettagli relativi a tale operazione sono disponibili nell’ [[!DNL Data Access] esercitazione](../data-access/tutorials/dataset-data.md).
 
 **Richiesta**
 
@@ -548,7 +548,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{FILE_ID}" \
   -H "x-api-key : {API_KEY}"
 ```
 
-La risposta può puntare a un singolo file o a una directory. Per informazioni dettagliate, consulta l’esercitazione [sull’accesso ai](../data-access/tutorials/dataset-data.md)dati.
+La risposta può puntare a un singolo file o a una directory. Per informazioni dettagliate, consulta l’ [[!DNL Data Access] esercitazione](../data-access/tutorials/dataset-data.md).
 
 ### Accedere al contenuto del file
 
@@ -568,7 +568,7 @@ La risposta a questa richiesta contiene il contenuto del file. Per ulteriori inf
 
 ### Convalida dei record per la conformità allo schema
 
-Durante la scrittura dei dati, gli utenti possono scegliere di convalidare i dati in base alle regole di convalida definite nello schema XDM. Ulteriori informazioni sulla convalida dello schema sono disponibili nel codice di riferimento per l&#39;integrazione dell&#39;ecosistema [ETL su GitHub](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md#validation).
+Durante la scrittura dei dati, gli utenti possono scegliere di convalidare i dati in base alle regole di convalida definite nello schema XDM. Ulteriori informazioni sulla convalida dello schema sono disponibili nel codice di riferimento [ETL Ecosystem Integration in [!DNL GitHub]](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md#validation).
 
 Se si utilizza l&#39;implementazione di riferimento trovata in [[!DNL GitHub]](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md), è possibile attivare la convalida dello schema in questa implementazione utilizzando la proprietà di sistema `-DenableSchemaValidation=true`.
 
