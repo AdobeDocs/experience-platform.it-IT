@@ -5,9 +5,9 @@ title: 'Gestione delle etichette di utilizzo dei dati tramite API '
 topic: developer guide
 description: L'API del servizio DataSet consente di applicare e modificare le etichette di utilizzo per i set di dati. Fa parte delle funzionalità dei cataloghi di dati di Adobe Experience Platform, ma è separata dall'API Catalog Service che gestisce i metadati dei set di dati.
 translation-type: tm+mt
-source-git-commit: 2fdab7d984a7368df77110f8ba0e0ba687e96d7e
+source-git-commit: 4096a7c1ec2b3640886d3a8c69b578987fe96dd4
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1007'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 In questo documento sono descritti i passaggi necessari per gestire le etichette di utilizzo dei dati utilizzando l&#39; [!DNL Policy Service] API e l&#39; [!DNL Dataset Service] API.
 
-Sono [!DNL Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) disponibili diversi endpoint che consentono di creare e gestire le etichette di utilizzo dei dati per la propria organizzazione.
+L&#39;API [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) fornisce diversi endpoint che consentono di creare e gestire le etichette di utilizzo dei dati per la propria organizzazione.
 
 L&#39; [!DNL Dataset Service] API consente di applicare e modificare le etichette di utilizzo per i set di dati. Fa parte delle funzionalità dei cataloghi di dati di Adobe Experience Platform, ma è separata dall&#39; [!DNL Catalog Service] API che gestisce i metadati dei set di dati.
 
