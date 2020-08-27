@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;access control permissions;access control resource types;access control api
 solution: Experience Platform
 title: Nomi elenco di autorizzazioni e tipi di risorse
 topic: developer guide
+description: Il controllo degli accessi in Adobe Experience Platform consente di gestire ruoli e autorizzazioni per diverse funzionalità della piattaforma utilizzando l'Adobe Admin Console. Potete elencare i nomi di tutte le autorizzazioni e i tipi di risorse eseguendo una richiesta di GET all'endpoint /acl/reference. Questi nomi possono quindi essere utilizzati nelle chiamate API per visualizzare i criteri effettivi per l'utente corrente.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '123'
+source-wordcount: '184'
 ht-degree: 1%
 
 ---
