@@ -5,9 +5,9 @@ title: Servizio Adobe Experience Platform Identity
 topic: overview
 description: 'Gli spazi dei nomi delle identità sono un componente di Servizio identità che funge da indicatori del contesto a cui si riferisce un''identità. Ad esempio, distinguono un valore di "name<span>@email.com" come indirizzo e-mail o "443522" come ID CRM numerico. '
 translation-type: tm+mt
-source-git-commit: 235f611115b89a87c924a00409a6acae4f5ac97d
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '761'
 ht-degree: 1%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 1%
 
 # Panoramica dello spazio nomi identità
 
-Gli spazi dei nomi delle identità sono un componente di [!DNL Identity Service](./home.md) cui fungono da indicatori del contesto a cui si riferisce un&#39;identità. Ad esempio, distinguono il valore &quot;name<span>@email.com&quot; come indirizzo e-mail o &quot;443522&quot; come ID CRM numerico.
+Gli spazi dei nomi delle identità sono un componente di [[!DNL Identity Service]](./home.md) che funge da indicatori del contesto a cui si riferisce un&#39;identità. Ad esempio, distinguono il valore &quot;name<span>@email.com&quot; come indirizzo e-mail o &quot;443522&quot; come ID CRM numerico.
 
 ## Introduzione
 
 Per utilizzare gli spazi dei nomi delle identità è necessario conoscere i diversi servizi Adobe Experience Platform interessati. Prima di iniziare a lavorare con gli spazi dei nomi, consulta la documentazione relativa ai seguenti servizi:
 
-- [!DNL Real-time Customer Profile](../profile/home.md): Fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
-- [!DNL Identity Service](./home.md): Ottenete una visione migliore dei singoli clienti e del loro comportamento, collegando le identità tra dispositivi e sistemi.
-- [!DNL Privacy Service](../privacy-service/home.md): Gli spazi dei nomi delle identità vengono utilizzati per conformarsi al Regolamento generale sulla protezione dei dati (General Data Protection Regulation, GDPR), in cui è possibile effettuare richieste GDPR in relazione a uno spazio dei nomi.
+- [[!DNL Profilo cliente in tempo reale]](../profile/home.md): Fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
+- [[!DNL Identity Service]](./home.md): Ottenete una visione migliore dei singoli clienti e del loro comportamento, collegando le identità tra dispositivi e sistemi.
+- [[!Privacy Service DNL]](../privacy-service/home.md): Gli spazi dei nomi delle identità vengono utilizzati per conformarsi al Regolamento generale sulla protezione dei dati (General Data Protection Regulation, GDPR), in cui è possibile effettuare richieste GDPR in relazione a uno spazio dei nomi.
 
 ## Informazioni sugli spazi dei nomi delle identità
 
