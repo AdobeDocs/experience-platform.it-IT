@@ -5,9 +5,9 @@ title: Valutazione di un segmento
 topic: tutorial
 description: Questo documento fornisce un'esercitazione per valutare i segmenti e accedere ai risultati dei segmenti utilizzando l'API Segmentazione.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1535'
+source-wordcount: '1560'
 ht-degree: 0%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 0%
 
 # Valutazione e accesso ai risultati dei segmenti
 
-Questo documento fornisce un&#39;esercitazione per la valutazione dei segmenti e l&#39;accesso ai risultati dei segmenti mediante l&#39; [!DNL Segmentation API](../api/getting-started.md).
+Questo documento fornisce un&#39;esercitazione per valutare i segmenti e accedere ai risultati dei segmenti utilizzando l&#39;API di segmentazione [[!DNL]](../api/getting-started.md).
 
 ## Introduzione
 
 Questa esercitazione richiede una conoscenza approfondita dei vari [!DNL Adobe Experience Platform] servizi coinvolti nella creazione di segmenti di pubblico. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
-- [!DNL Real-time Customer Profile](../../profile/home.md): Fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
-- [!DNL Adobe Experience Platform Segmentation Service](../home.md): Consente di creare segmenti di pubblico dai [!DNL Real-time Customer Profile] dati.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Il framework standardizzato tramite il quale la piattaforma organizza i dati sull&#39;esperienza cliente.
+- [[!DNL Profilo cliente in tempo reale]](../../profile/home.md): Fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Consente di creare segmenti di pubblico dai [!DNL Real-time Customer Profile] dati.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standardizzato tramite il quale la piattaforma organizza i dati sull&#39;esperienza cliente.
 - [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 ### Intestazioni necessarie
@@ -64,7 +64,7 @@ Mediante la valutazione pianificata, l’organizzazione IMS può creare una pian
 
 ### Creare una pianificazione
 
-Eseguendo una richiesta POST all&#39; `/config/schedules` endpoint, potete creare una pianificazione e includere l&#39;ora specifica in cui attivare la pianificazione.
+Eseguendo una richiesta POST all&#39; `/config/schedules` endpoint, potete creare una pianificazione e includere l&#39;ora specifica in cui deve essere attivata la pianificazione.
 
 Per informazioni più dettagliate sull&#39;utilizzo di questo endpoint, consultate la guida all&#39;endpoint delle [pianificazioni.](../api/schedules.md#create)
 
@@ -229,10 +229,10 @@ Ulteriori informazioni sull&#39;utilizzo di questo endpoint sono disponibili nel
 
 ## Passaggi successivi
 
-Una volta completata l&#39;esportazione, i dati sono disponibili all&#39;interno del [!DNL Data Lake] modulo [!DNL Experience Platform]. È quindi possibile utilizzare l’icona [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) per accedere ai dati utilizzando l’icona `batchId` associata all’esportazione. A seconda della dimensione del segmento, i dati possono essere in blocchi e il batch può essere composto da diversi file.
+Una volta completata l&#39;esportazione, i dati sono disponibili all&#39;interno del [!DNL Data Lake] modulo [!DNL Experience Platform]. Potete quindi utilizzare l&#39;API [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) per accedere ai dati utilizzando l&#39; `batchId` API associata all&#39;esportazione. A seconda della dimensione del segmento, i dati possono essere in blocchi e il batch può essere composto da diversi file.
 
 Per istruzioni dettagliate su come utilizzare l&#39; [!DNL Data Access] API per accedere e scaricare file batch, segui l&#39;esercitazione [sull&#39;accesso ai](../../data-access/tutorials/dataset-data.md)dati.
 
 Puoi anche accedere ai dati del segmento esportati correttamente utilizzando [!DNL Adobe Experience Platform Query Service]. L’utilizzo dell’interfaccia utente o dell’API RESTful [!DNL Query Service] consente di scrivere, convalidare ed eseguire query sui dati all’interno dell’ [!DNL Data Lake].
 
-Per ulteriori informazioni su come eseguire query sui dati del pubblico, consulta la documentazione in [!DNL Query Service](../../query-service/home.md).
+Per ulteriori informazioni su come eseguire query sui dati relativi all&#39;audience, consultare la documentazione in [[!DNL Query Service]](../../query-service/home.md).
