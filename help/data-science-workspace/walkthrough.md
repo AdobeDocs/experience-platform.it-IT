@@ -3,10 +3,11 @@ keywords: Experience Platform;walkthrough;Data Science Workspace;popular topics
 solution: Experience Platform
 title: Procedura dettagliata di Data Science Workspace
 topic: Walkthrough
+description: Questo documento fornisce una panoramica per Adobe Experience Platform Data Science Workspace. In particolare, il flusso di lavoro generale che un esperto di dati dovrebbe affrontare per risolvere un problema utilizzando l'apprendimento automatico.
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1667'
 ht-degree: 0%
 
 ---
@@ -14,12 +15,12 @@ ht-degree: 0%
 
 # [!DNL Data Science Workspace] guida
 
-Questo documento fornisce una procedura dettagliata per  Adobe Experience Platform [!DNL Data Science Workspace]. Nello specifico, analizzeremo il flusso di lavoro generale che un esperto di dati dovrebbe seguire per risolvere un problema utilizzando l&#39;apprendimento automatico.
+Questo documento fornisce una guida dettagliata per Adobe Experience Platform [!DNL Data Science Workspace]. Nello specifico, analizzeremo il flusso di lavoro generale che un esperto di dati dovrebbe seguire per risolvere un problema utilizzando l&#39;apprendimento automatico.
 
 ## Prerequisiti
 
-- Un account  Adobe ID registrato
-   - L&#39;account del Adobe ID  deve essere stato aggiunto a un&#39;organizzazione con accesso al Adobe Experience Platform  e [!DNL Data Science Workspace]
+- Un account Adobe ID  registrato
+   - L&#39;account Adobe ID  deve essere stato aggiunto a un&#39;organizzazione con accesso ad Adobe Experience Platform e [!DNL Data Science Workspace]
 
 ## Motivazione dello scienziato informatico
 
@@ -29,7 +30,7 @@ Un rivenditore deve affrontare molte sfide per rimanere competitivo nel mercato 
 
 La soluzione di uno scienziato informatico è quella di sfruttare la ricchezza di dati storici a cui un rivenditore ha accesso, di prevedere le tendenze future e di ottimizzare le decisioni di determinazione dei prezzi. Useremo i dati di vendita passati per formare il nostro modello di apprendimento automatico e utilizzeremo il modello per prevedere le tendenze di vendita future. In questo modo, il rivenditore potrà avere informazioni utili per apportare modifiche ai prezzi.
 
-In questa panoramica, seguiremo i passi che uno scienziato di dati dovrebbe compiere per prendere un set di dati e creare un modello per prevedere le vendite settimanali. Verranno analizzate le seguenti sezioni nel Sample Retail Sales Notebook  Adobe Experience Platform [!DNL Data Science Workspace]:
+In questa panoramica, seguiremo i passi che uno scienziato di dati dovrebbe compiere per prendere un set di dati e creare un modello per prevedere le vendite settimanali. Verranno analizzate le seguenti sezioni nel Sample Retail Sales Notebook di Adobe Experience Platform [!DNL Data Science Workspace]:
 
 - [Configurazione](#setup)
 - [Esplorazione dei dati](#exploring-data)
@@ -40,7 +41,7 @@ In questa panoramica, seguiremo i passi che uno scienziato di dati dovrebbe comp
 
 In primo luogo, vogliamo creare un [!DNL JupyterLab] blocco appunti per aprire il blocco appunti di esempio &quot;Vendite al dettaglio&quot;. Seguendo i passi fatti dallo scienziato informatico nel notebook, potremo comprendere meglio il flusso di lavoro tipico.
 
-Nell&#39;interfaccia utente del Adobe Experience Platform , fai clic sulla scheda Scienze dati nel menu principale per passare all&#39; [!DNL Data Science Workspace]. Da questa pagina, fare clic sulla [!DNL JupyterLab] scheda che aprirà il [!DNL JupyterLab] modulo di avvio. Dovrebbe essere visualizzata una pagina simile a questa.
+Nell’interfaccia utente di Adobe Experience Platform, fai clic sulla scheda Scienze dati nel menu principale per passare all’ [!DNL Data Science Workspace]. Da questa pagina, fare clic sulla [!DNL JupyterLab] scheda che aprirà il [!DNL JupyterLab] modulo di avvio. Dovrebbe essere visualizzata una pagina simile a questa.
 
 ![](./images/walkthrough/jupyterlab_launcher.png)
 
@@ -86,7 +87,7 @@ df.info()
 
 Questa informazione è utile perché conoscere il tipo di dati per ogni colonna ci permetterà di sapere come trattare i dati.
 
-Guardiamo ora il riepilogo statistico. Vengono visualizzati solo i tipi di dati numerici, `date`così `storeType`, e non `isHoliday` vengono generati:
+Guardiamo ora il riepilogo statistico. Vengono visualizzati solo i tipi di dati numerici `date`e non `storeType`vengono `isHoliday` generati:
 
 ```PYTHON
 df.describe()
