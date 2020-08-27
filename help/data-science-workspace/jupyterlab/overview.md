@@ -3,11 +3,11 @@ keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popula
 solution: Experience Platform
 title: Guida utente di JupyterLab
 topic: Overview
-description: JupyterLab è un'interfaccia utente basata sul Web per Project Jupyter ed è strettamente integrata in Adobe Experience Platform. Fornisce un ambiente di sviluppo interattivo che consente agli scienziati dei dati di lavorare con notebook, codice e dati Jupyter.
+description: JupyterLab è un'interfaccia utente basata sul Web per Project Jupyter ed è strettamente integrata in Adobe Experience Platform. Fornisce un ambiente di sviluppo interattivo che consente agli scienziati dei dati di lavorare con notebook, codice e dati Jupyter. Questo documento fornisce una panoramica di JupyterLab e delle sue funzioni, oltre alle istruzioni per eseguire azioni comuni.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '3682'
+source-wordcount: '3700'
 ht-degree: 11%
 
 ---
@@ -626,28 +626,28 @@ timedf.show()
 | bokeh | 1.3.1 |
 | gensim | 3.7.3 |
 | ipyparallelo | 0.5.2 |
-| cuscinetto | 1.6 |
-| grano | 2.2.4 |
+| jq | 1.6 |
+| cheras | 2.2.4 |
 | nltk | 3.2.5 |
 | panda | 0.22.0 |
 | pandasql | 0.7.3 |
-| folletto | 6.0.0 |
+| cuscino | 6.0.0 |
 | scikit-image | 0.15.0 |
 | scikit-learn | 0.21.3 |
-| sciolto | 1.3.0 |
-| -grassa | 1.3.0 |
+| kit | 1.3.0 |
+| grassa | 1.3.0 |
 | marinaio | 0.9.0 |
 | statsmodels | 0.10.1 |
 | sciolto | 5.1.0.17 |
-| ggplot | 0.11.5 |
+| pirata | 0.11.5 |
 | py xgipplo | 0.90 |
-| opencv | 3.4.1 |
+| colorante opencv | 3.4.1 |
 | bozzolo | 2.4.3 |
 | torcia | 1.0.1 |
 | wxpitone | 4.0.6 |
-| naso | 0.3.0 |
+| colorante | 0.3.0 |
 | geopandas | 0.5.1 |
-| jp | 2.1.0 |
+| pirata | 2.1.0 |
 | sagomato | 1.6.4 |
 | rpy2 | 2.9.4 |
 | r-Essentials | 3.6 |
@@ -672,7 +672,7 @@ timedf.show()
 | r-stringdist | 0.9.5.2 |
 | quadrante r | 1.5_7 |
 | r-rjson | 0.2.20 |
-| r-previsione | 8.7 |
+| piramide | 8.7 |
 | r-rsolnp | 1.16 |
 | reticolare | 1.12 |
 | r-mlr | 2.14.0 |
@@ -684,7 +684,7 @@ timedf.show()
 | r-tidyverse | 1.2.1 |
 | r-tree | 1.0_39 |
 | pymongo | 3.8.0 |
-| La freccia | 0.14.1 |
+| freccia | 0.14.1 |
 | boto3 | 1.9.199 |
 | ipyvolume | 0.5.2 |
 | parquet | 0.3.2 |
@@ -718,20 +718,20 @@ timedf.show()
 | :------ | :------ |
 | requests | 2.18.4 |
 | gensim | 2.3.0 |
-| grano | 2.0.6 |
+| cheras | 2.0.6 |
 | nltk | 3.2.4 |
 | panda | 0.20.1 |
 | pandasql | 0.7.3 |
 | cuscino | 5.3.0 |
 | scikit-image | 0.13.0 |
 | scikit-learn | 0.19.0 |
-| sciolto | 0.19.1 |
-| grassa | 1.3.3 |
-| statsmodels | 0.8.0 |
-| Il elastico | 4.0.30.44 |
+| kit | 0.19.1 |
+| andatura | 1.3.3 |
+| optslm | 0.8.0 |
+| elastico | 4.0.30.44 |
 | py xgipplo | 0.60 |
 | colorante opencv | 3.1.0 |
-| La freccia | 0.8.0 |
+| freccia | 0.8.0 |
 | boto3 | 1.5.18 |
 | azure-storage-blob | 1.4.0 |
 | [!DNL python] | 3.6.7 |
