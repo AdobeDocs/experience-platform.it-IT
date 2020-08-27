@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;troubleshooting;access control
 solution: Experience Platform
 title: Guida alla risoluzione dei problemi di controllo degli accessi
 topic: troubleshooting guide
+description: Questo documento contiene le risposte alle domande frequenti sul controllo degli accessi in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '293'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Guida alla risoluzione dei problemi di controllo degli accessi
 
-Questo documento contiene le risposte alle domande frequenti sul controllo degli accessi in  Adobe Experience Platform. Per le domande e la risoluzione dei problemi relativi ad altri [!DNL Platform] servizi, consulta la guida alla risoluzione dei problemi del [Experience Platform](../landing/troubleshooting.md).
+Questo documento contiene le risposte alle domande frequenti sul controllo degli accessi in Adobe Experience Platform. Per le domande e la risoluzione dei problemi relativi ad altri [!DNL Platform] servizi, consulta la guida alla risoluzione dei problemi del [Experience Platform](../landing/troubleshooting.md).
 
 [!DNL Experience Platform] sfrutta i profili di prodotto in [Adobe Admin Console](http://adminconsole.adobe.com) per fornire un controllo **dell&#39;** accesso basato sui ruoli, collegando gli utenti con autorizzazioni e sandbox.  Per ulteriori informazioni, consulta la panoramica [sul controllo](home.md) degli accessi.
 
