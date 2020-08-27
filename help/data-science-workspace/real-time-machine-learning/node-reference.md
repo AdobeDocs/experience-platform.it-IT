@@ -3,10 +3,11 @@ keywords: Experience Platform;developer guide;Data Science Workspace;popular top
 solution: Experience Platform
 title: Guida di riferimento ai nodi di apprendimento automatico in tempo reale
 topic: Nodes reference
+description: Un nodo è l'unità fondamentale di cui si formano i grafici. Ogni nodo esegue un'attività specifica e può essere concatenato utilizzando i collegamenti per creare un grafico che rappresenta una pipeline ML. L'attività eseguita da un nodo rappresenta un'operazione sui dati di input, ad esempio una trasformazione di dati o schema, o un'inferenza di apprendimento di una macchina. Il nodo genera il valore trasformato o dedotto nei nodi successivi.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '666'
 ht-degree: 1%
 
 ---
