@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Anteprime e endpoint stime
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '746'
 ht-degree: 2%
 
 ---
@@ -171,7 +171,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `results` | Un elenco di ID entità, con le relative identità. I collegamenti forniti possono essere utilizzati per cercare le entità specificate, utilizzando l&#39; [!DNL Profile Access API](../../profile/api/entities.md). |
+| `results` | Un elenco di ID entità, con le relative identità. I collegamenti forniti possono essere utilizzati per cercare le entità specificate, utilizzando l&#39;API [[!DNL Profile Access API]](../../profile/api/entities.md). |
 
 ## Recuperare i risultati di un processo di stima specifico {#get-estimate}
 
