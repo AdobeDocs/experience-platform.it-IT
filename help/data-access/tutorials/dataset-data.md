@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data access;data access api;query data access
 solution: Experience Platform
 title: Panoramica sull'accesso ai dati
 topic: tutorial
+description: Questo documento fornisce un'esercitazione passo-passo che illustra come individuare, accedere e scaricare i dati memorizzati in un dataset utilizzando l'API di accesso ai dati in Adobe Experience Platform. Verranno inoltre introdotte alcune delle caratteristiche uniche dell'API di accesso ai dati, come il paging e i download parziali.
 translation-type: tm+mt
-source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1332'
-ht-degree: 3%
+source-wordcount: '1384'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +19,7 @@ Questo documento fornisce un&#39;esercitazione passo-passo che illustra come ind
 
 ## Introduzione
 
-Questa esercitazione spiega come creare e compilare un dataset. Per ulteriori informazioni, consulta l’esercitazione [sulla creazione dei](../../catalog/datasets/create.md) set di dati.
+Questa esercitazione richiede una buona conoscenza di come creare e compilare un dataset. Per ulteriori informazioni, consulta l’esercitazione [sulla creazione dei](../../catalog/datasets/create.md) set di dati.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per effettuare correttamente chiamate alle API della piattaforma.
 
