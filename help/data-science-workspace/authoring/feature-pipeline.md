@@ -4,9 +4,9 @@ solution: Adobe Experience Platform Data Science Workspace
 title: Creazione di una pipeline di feature
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1372'
 ht-degree: 0%
 
 ---
@@ -438,4 +438,4 @@ Una volta completato il punteggio, la pipeline delle caratteristiche deve essere
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-Leggendo questo documento, hai creato una pipeline di feature utilizzando l’SDK per l’authoring dei modelli, creato un’immagine Docker e utilizzato l’URL dell’immagine Docker per creare un modello di pipeline delle feature utilizzando l’ [!DNL Sensei Machine Learning] API. È ora possibile continuare a trasformare i set di dati ed estrarre le funzioni di dati in scala utilizzando l&#39; [!DNL Sensei Machine Learning API](../api/getting-started.md).
+Leggendo questo documento, hai creato una pipeline di feature utilizzando l’SDK per l’authoring dei modelli, creato un’immagine Docker e utilizzato l’URL dell’immagine Docker per creare un modello di pipeline delle feature utilizzando l’ [!DNL Sensei Machine Learning] API. È ora possibile continuare a trasformare i set di dati ed estrarre le funzionalità di dati in scala utilizzando l&#39;API [[!DNL Sensei Machine Learning API]](../api/getting-started.md).
