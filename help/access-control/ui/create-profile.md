@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;product profile
 solution: Experience Platform
 title: Creare un nuovo profilo di prodotto
 topic: user guide
+description: Questo documento descrive i passaggi necessari per creare un nuovo profilo di prodotto nell'Adobe Admin Console. Per iniziare a creare un nuovo profilo, andate alla scheda Profili di prodotto e fate clic su Nuovo profilo.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '194'
-ht-degree: 1%
+source-wordcount: '228'
+ht-degree: 3%
 
 ---
 
@@ -20,11 +21,11 @@ Per iniziare a creare un nuovo profilo, andate alla *[!UICONTROL Product Profile
 
 Viene visualizzata la _[!UICONTROL Create New Profile]_finestra di dialogo che richiede di immettere un **[!UICONTROL Profile Name]**e **[!UICONTROL Description]**per il nuovo profilo. Se desiderate che il nome visualizzato del profilo sia diverso, deselezionate **[!UICONTROL Same as Profile Name]**e immettete il nome visualizzato nella casella di testo visualizzata. In *[!UICONTROL User Notifications]*, potete specificare se gli utenti ricevono una notifica via e-mail quando vengono aggiunti o rimossi dal profilo.
 
-Al termine, fate clic **[!UICONTROL Next]**.
+Al termine, fai clic su **[!UICONTROL Next]**.
 
 ![new-profile-details](../images/new-profile-details.png)
 
-Nella schermata successiva viene richiesto di scegliere quali [!DNL Platform] servizi includere nel profilo. Fate clic sul pulsante di attivazione accanto a un servizio per disattivarlo. Se un servizio è disattivato, tutte le funzioni associate a tale servizio non saranno disponibili per gli utenti assegnati a questo profilo di prodotto. Al termine, fate clic **[!UICONTROL Done]**.
+Nella schermata successiva viene richiesto di scegliere quali [!DNL Platform] servizi includere nel profilo. Fate clic sul pulsante di attivazione accanto a un servizio per disattivarlo. Se un servizio è disattivato, tutte le funzioni associate a tale servizio non saranno disponibili per gli utenti assegnati a questo profilo di prodotto. Al termine, fai clic su **[!UICONTROL Done]**.
 
 ![new-profile-services](../images/new-profile-services.png)
 
