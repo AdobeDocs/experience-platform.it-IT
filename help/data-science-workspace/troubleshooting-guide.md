@@ -3,10 +3,11 @@ keywords: Experience Platform;troubleshooting;Data Science Workspace;popular top
 solution: Experience Platform
 title: Guida alla risoluzione dei problemi per l'area di lavoro di analisi dati
 topic: Troubleshooting
+description: Questo documento contiene le risposte alle domande frequenti su Adobe Experience Platform Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Data Science Workspace] guida alla risoluzione dei problemi
 
-Questo documento contiene le risposte alle domande frequenti sul  Adobe Experience Platform [!DNL Data Science Workspace]. Per domande e risoluzione dei problemi relativi alle [!DNL Platform] API in generale, consultate la guida alla risoluzione dei problemi delle API di [Adobe Experience Platform](../landing/troubleshooting.md).
+Questo documento contiene le risposte alle domande frequenti su Adobe Experience Platform [!DNL Data Science Workspace]. Per domande e risoluzione dei problemi relativi alle [!DNL Platform] API in generale, consultate la guida alla risoluzione dei problemi delle API di [Adobe Experience Platform](../landing/troubleshooting.md).
 
 ## [!DNL JupyterLab] l&#39;ambiente non si sta caricando [!DNL Google Chrome]
 
@@ -22,7 +23,7 @@ Questo documento contiene le risposte alle domande frequenti sul  Adobe Experien
 >
 >Questo problema è stato risolto ma potrebbe essere ancora presente nel browser Google Chrome 80.x. Verificare che il browser Chrome sia aggiornato.
 
-Con la versione del [!DNL Google Chrome] browser 80.x, tutti i cookie di terze parti sono bloccati per impostazione predefinita. Questo criterio può impedire [!DNL JupyterLab] il caricamento entro  Adobe Experience Platform.
+Con la versione del [!DNL Google Chrome] browser 80.x, tutti i cookie di terze parti sono bloccati per impostazione predefinita. Questo criterio può impedire [!DNL JupyterLab] il caricamento in Adobe Experience Platform.
 
 Per risolvere questo problema, attenersi alla procedura seguente:
 
@@ -52,7 +53,7 @@ Dopo il passaggio 2, viene richiesto di riavviare il browser. Dopo il riavvio, [
 
 ## Perché non è possibile accedere a [!DNL JupyterLab] Safari?
 
-Per impostazione predefinita, Safari disattiva i cookie di terze parti in Safari &lt; 12. Poiché l&#39;istanza della macchina [!DNL Jupyter] virtuale risiede in un dominio diverso da quello del relativo frame padre,  Adobe Experience Platform richiede attualmente l&#39;abilitazione dei cookie di terze parti. Abilita i cookie di terze parti o passa a un altro browser, ad esempio [!DNL Google Chrome].
+Per impostazione predefinita, Safari disattiva i cookie di terze parti in Safari &lt; 12. Poiché l’istanza della macchina [!DNL Jupyter] virtuale risiede in un dominio diverso da quello del relativo frame principale, Adobe Experience Platform richiede attualmente l’abilitazione dei cookie di terze parti. Abilita i cookie di terze parti o passa a un altro browser, ad esempio [!DNL Google Chrome].
 
 Per Safari 12, è necessario sostituire l&#39;agente utente con &#39;[!DNL Chrome]&#39; o &#39;[!DNL Firefox]&#39;. Per cambiare agente utente, aprite il menu *Safari* e selezionate **Preferenze**. Viene visualizzata la finestra delle preferenze.
 
