@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Policy enforcement;API-based enforcement;data governance
 solution: Experience Platform
 title: Criteri
 topic: developer guide
+description: I criteri di utilizzo dei dati sono regole adottate dalla tua organizzazione che descrivono i tipi di azioni di marketing consentite, o da cui sono previste restrizioni, per i dati all'interno  Experience Platform. L'endpoint /policy viene utilizzato per tutte le chiamate API relative alla visualizzazione, alla creazione, all'aggiornamento o all'eliminazione dei criteri di utilizzo dei dati.
 translation-type: tm+mt
-source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1756'
+source-wordcount: '1804'
 ht-degree: 2%
 
 ---
