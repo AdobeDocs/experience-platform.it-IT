@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segmentazione in streaming
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2adadad855edd01436a6961cc9be3e58e6483732
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1377'
+source-wordcount: '1388'
 ht-degree: 1%
 
 ---
@@ -26,9 +26,9 @@ Lo streaming della segmentazione su [!DNL Adobe Experience Platform] consente ai
 
 Questa guida per gli sviluppatori richiede una buona conoscenza dei vari [!DNL Adobe Experience Platform] servizi coinvolti nella segmentazione dello streaming. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
-- [!DNL Real-time Customer Profile](../../profile/home.md): Fornisce un profilo del consumatore unificato in tempo reale, basato su dati aggregati provenienti da più origini.
-- [!DNL Segmentation](../home.md): Consente di creare segmenti e audience dai [!DNL Real-time Customer Profile] dati.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
+- [[!DNL Profilo cliente in tempo reale]](../../profile/home.md): Fornisce un profilo del consumatore unificato in tempo reale, basato su dati aggregati provenienti da più origini.
+- [[!Segmentazione DNL]](../home.md): Consente di creare segmenti e audience dai [!DNL Real-time Customer Profile] dati.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per eseguire correttamente le chiamate alle [!DNL Platform] API.
 
@@ -295,7 +295,7 @@ Una volta abilitata la valutazione dello streaming, è necessario creare una bas
 
 ### Creare una pianificazione
 
-Eseguendo una richiesta POST all&#39; `/config/schedules` endpoint, potete creare una pianificazione e includere l&#39;ora specifica in cui attivare la pianificazione.
+Eseguendo una richiesta POST all&#39; `/config/schedules` endpoint, potete creare una pianificazione e includere l&#39;ora specifica in cui deve essere attivata la pianificazione.
 
 **Formato API**
 
