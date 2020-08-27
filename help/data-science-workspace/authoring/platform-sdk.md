@@ -1,13 +1,14 @@
 ---
 keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Guida all'SDK per Platform
+title: Guida all'SDK per la piattaforma
 topic: SDK authoring
+description: Questa esercitazione fornisce informazioni sulla conversione di data_access_sdk_python nel nuovo Python platform_sdk sia in Python che in R.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 2%
+source-wordcount: '470'
+ht-degree: 5%
 
 ---
 
@@ -151,10 +152,10 @@ Il nuovo [!DNL Platform] SDK supporta le seguenti operazioni:
 | Funzionamento | Funzione |
 | --------- | -------- |
 | È uguale a (`=`) | `eq()` |
-| Greater than (`>`) | `gt()` |
-| Greater than or equal to (`>=`) | `ge()` |
-| Less than (`<`) | `lt()` |
-| Less than or equal to (`<=`) | `le()` |
+| Maggiore di (`>`) | `gt()` |
+| Maggiore o uguale a (`>=`) | `ge()` |
+| Minore di (`<`) | `lt()` |
+| Minore o uguale a (`<=`) | `le()` |
 | And (`&`) | `And()` |
 | Oppure (`|`) | `Or()` |
 
