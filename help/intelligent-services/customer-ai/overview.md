@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;overview;customer ai;popular topics
+keywords: Experience Platform;overview;customer ai;popular topics;customer ai overview
 solution: Experience Platform
 title: Panoramica dell'AI del cliente
 topic: Customer AI overview
+description: L'AI del cliente viene utilizzata per generare punteggi di propensione personalizzati, come il churn e la conversione per i singoli profili su scala. Ciò è possibile senza dover trasformare le esigenze aziendali in un problema di machine learning, scegliere un algoritmo, un treno o un'implementazione.
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '526'
 ht-degree: 0%
 
 ---
