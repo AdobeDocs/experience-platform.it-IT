@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data access;spark sdk;data access api
 solution: Experience Platform
 title: Secure Spark Data Access SDK
 topic: tutorial
+description: L'SDK Secure Spark Data Access è un kit di sviluppo software che consente di leggere e scrivere set di dati da Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 2fdab7d984a7368df77110f8ba0e0ba687e96d7e
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '538'
 ht-degree: 1%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 1%
 
 # Secure [!DNL Spark Data Access] SDK
 
-Secure [!DNL Spark][!DNL Data Access] SDK è un kit di sviluppo software che consente di leggere e scrivere set di dati da  Adobe Experience Platform.
+Secure [!DNL Spark][!DNL Data Access] SDK è un kit di sviluppo software che consente la lettura e la scrittura di set di dati da Adobe Experience Platform.
 
 ## Introduzione
 
