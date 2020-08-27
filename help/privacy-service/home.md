@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ' Adobe Experience Platform Privacy Service'
 topic: overview
 translation-type: tm+mt
-source-git-commit: cc81d590f308c7e2677cec000c27e8aca42437f5
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1494'
+source-wordcount: '1498'
 ht-degree: 2%
 
 ---
@@ -77,7 +77,7 @@ Una volta determinate le esigenze di privacy della tua azienda e deciso a quali 
 
 #### Utilizzo dell&#39;API
 
-Il modulo [!DNL Privacy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) fornisce diversi endpoint per la creazione e la gestione dei processi di privacy mediante chiamate RESTful API, che consentono di impostare in modo programmatico la conformità alla normativa sulla privacy per [!DNL Experience Cloud] le applicazioni. Per informazioni dettagliate sull&#39;utilizzo dell&#39;API, consultate la guida per gli sviluppatori API [Privacy Service](api/getting-started.md).
+L&#39;API Privacy Service [[!DNL]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) fornisce diversi endpoint per la creazione e la gestione di processi per la privacy mediante chiamate API RESTful, consentendo di impostare a livello di programmazione la conformità alla normativa sulla privacy per le [!DNL Experience Cloud] applicazioni. Per informazioni dettagliate sull&#39;utilizzo dell&#39;API, consultate la guida per gli sviluppatori API [Privacy Service](api/getting-started.md).
 
 #### Utilizzo dell’interfaccia
 
