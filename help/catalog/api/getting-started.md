@@ -5,9 +5,9 @@ title: Guida per gli sviluppatori di Catalog Service
 topic: developer guide
 description: Questa guida per gli sviluppatori fornisce i passaggi necessari per iniziare a utilizzare l'API Catalog. La guida fornisce quindi chiamate API di esempio per eseguire operazioni chiave utilizzando Catalog.
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '589'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Questa guida per gli sviluppatori fornisce i passaggi necessari per iniziare a u
 
 [!DNL Catalog] tiene traccia dei metadati per diversi tipi di risorse e operazioni all’interno [!DNL Experience Platform]. Questa guida per gli sviluppatori richiede una buona conoscenza dei vari [!DNL Experience Platform] servizi coinvolti nella creazione e gestione di tali risorse:
 
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
 * [Caricamento](../../ingestion/batch-ingestion/overview.md)batch: Modalità di [!DNL Experience Platform] acquisizione e memorizzazione dei dati dai file di dati, come CSV e Parquet.
 * [Caricamento](../../ingestion/streaming-ingestion/overview.md)streaming: Modalità di [!DNL Experience Platform] acquisizione e memorizzazione in tempo reale dei dati da dispositivi lato client e lato server.
 
