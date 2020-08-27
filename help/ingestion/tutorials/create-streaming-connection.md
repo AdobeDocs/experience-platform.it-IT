@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creare una connessione in streaming mediante l'API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '642'
 ht-degree: 2%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 2%
 
 # Creazione di una connessione in streaming mediante l&#39;API
 
-Questa esercitazione ti aiuterà a iniziare a utilizzare le API di assimilazione in streaming, parte delle [!DNL Ingestion Service] API dei dati del Adobe Experience Platform .
+Questa esercitazione ti aiuterà a iniziare a utilizzare le API di assimilazione in streaming, parte delle [!DNL Ingestion Service] API Adobe Experience Platform Data.
 
 ## Introduzione
 
-La registrazione della connessione di streaming è necessaria per avviare i dati di streaming  Adobe Experience Platform. Quando registrate una connessione in streaming, dovete fornire alcuni dettagli chiave come l&#39;origine dei dati in streaming.
+Per avviare lo streaming dei dati su Adobe Experience Platform è necessaria la registrazione della connessione. Quando registrate una connessione in streaming, dovete fornire alcuni dettagli chiave come l&#39;origine dei dati in streaming.
 
-Dopo la registrazione di una connessione di streaming, l&#39;utente, in qualità di produttore di dati, avrà un URL univoco che può essere utilizzato per lo streaming dei dati ad Platform.
+Dopo la registrazione di una connessione di streaming, l&#39;utente, in qualità di produttore di dati, avrà un URL univoco che può essere utilizzato per lo streaming dei dati su Platform.
 
-Questa esercitazione richiede anche una conoscenza approfondita dei vari servizi  Adobe Experience Platform. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
+Questa esercitazione richiede anche una buona conoscenza dei diversi servizi Adobe Experience Platform. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza.
-- [!DNL Real-time Customer Profile](../../profile/home.md): Fornisce un profilo di consumo unificato in tempo reale basato su dati aggregati provenienti da più origini.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza.
+- [[!DNL Profilo cliente in tempo reale]](../../profile/home.md): Fornisce un profilo di consumo unificato in tempo reale basato su dati aggregati provenienti da più origini.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per effettuare correttamente chiamate alle API di assimilazione in streaming.
 
@@ -184,6 +184,6 @@ Questa sezione fornisce informazioni supplementari sulla creazione di connession
 
 ### Connessioni di streaming autenticate
 
-La raccolta di dati autenticata consente  servizi di Adobe Experience Platform, come [!DNL Real-time Customer Profile] e [!DNL Identity], di distinguere tra record provenienti da fonti attendibili e fonti non attendibili. I client che desiderano inviare informazioni personali (PII) possono farlo inviando Token di accesso IMS come parte della richiesta di POST. Se il token IMS è valido, i record vengono contrassegnati come raccolti da fonti attendibili.
+La raccolta dati autenticata consente ai servizi Adobe Experience Platform, ad esempio [!DNL Real-time Customer Profile] e [!DNL Identity], di distinguere tra record provenienti da fonti attendibili e fonti non attendibili. I client che desiderano inviare informazioni personali (PII) possono farlo inviando Token di accesso IMS come parte della richiesta di POST. Se il token IMS è valido, i record vengono contrassegnati come raccolti da fonti attendibili.
 
 Per ulteriori informazioni sulla creazione di una connessione in streaming autenticata, consulta l’esercitazione sulla [creazione di una connessione in streaming](create-authenticated-streaming-connection.md)autenticata.
