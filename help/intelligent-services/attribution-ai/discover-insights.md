@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;insights;attribution ai;popular topics
+keywords: Experience Platform;insights;attribution ai;popular topics;attribution ai insights
 solution: Experience Platform
 title: Scoprire informazioni nelle  Attribution AI
 topic: Attribution AI insights
+description: Questo documento funge da guida per l'interazione con le informazioni sulle istanze del servizio nell'interfaccia utente del Adobe  Intelligent Services.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1183'
 ht-degree: 1%
 
 ---
@@ -88,7 +89,7 @@ Dall&#39;interno dell&#39;istanza, il menu a discesa Eventi *di* conversione con
 
 ### Modello di attribuzione
 
-Facendo clic su *Attribuzione modello* si apre un menu a discesa con tutti i diversi modelli di attribuzione disponibili. Potete selezionare più modelli per confrontare i risultati. Per ulteriori informazioni sui diversi modelli di attribuzione e sul loro funzionamento, visita la [panoramica delle Attribution AI](./overview.md) che contiene una tabella con informazioni su ciascun modello.
+Facendo clic su *Attribuzione modello* si apre un menu a discesa con tutti i diversi modelli di attribuzione disponibili. Potete selezionare più modelli per confrontare i risultati. Per ulteriori informazioni sui diversi modelli di attribuzione e sul loro funzionamento, visita la panoramica delle Attribution AI [](./overview.md) che contiene una tabella con informazioni su ciascun modello.
 
 ![modello di attribuzione](./images/insights/attribution-model.png)
 
