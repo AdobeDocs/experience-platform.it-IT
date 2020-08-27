@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida per lo sviluppo API del Registro di sistema dello schema
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: f7fe8f9ac8d6f0e2eaec53d96f2ced0904061c89
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1237'
 ht-degree: 0%
 
 ---
@@ -167,9 +167,21 @@ Le chiamate all&#39; [!DNL Schema Registry] API richiedono l&#39;utilizzo di un 
 
 Il contenitore globale contiene tutte le classi, i mixin, i tipi di dati e gli schemi standard  Adobe e forniti dal [!DNL Experience Platform] partner. È possibile eseguire solo richieste di elenco e di ricerca (GET) per il contenitore globale.
 
+Esempio di chiamata che utilizza il contenitore globale:
+
+```http
+GET /global/classes
+```
+
 ### Contenitore tenant
 
 Da non confondere con l&#39;univoco `TENANT_ID`, il contenitore tenant contiene tutte le classi, i mixin, i tipi di dati, gli schemi e i descrittori definiti da un&#39;organizzazione IMS. Queste sono esclusive per ogni organizzazione, il che significa che non sono visibili o gestibili da altre organizzazioni IMS. È possibile eseguire tutte le operazioni CRUD (GET, POST, PUT, PATCH, DELETE) rispetto alle risorse create nel contenitore tenant.
+
+Esempio di chiamata che utilizza il contenitore tenant:
+
+```http
+POST /tenant/mixins
+```
 
 Quando si crea una classe, un mixin, uno schema o un tipo di dati nel contenitore tenant, questo viene salvato nel contenitore [!DNL Schema Registry] e gli viene assegnato un `$id` URI che include il `TENANT_ID`. Questo `$id` viene utilizzato in tutta l&#39;API per fare riferimento a risorse specifiche. Esempi di `$id` valori sono forniti nella sezione successiva.
 
