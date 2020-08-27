@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;
 solution: Experience Platform
 title: Appendice
 topic: Developer guide
+description: Le sezioni seguenti forniscono informazioni di riferimento per le varie funzionalità di Sensei Machine Learning API.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '313'
 ht-degree: 1%
 
 ---
@@ -74,7 +75,7 @@ Esempio di configurazione che specifica l’utilizzo di una CPU per la formazion
 
 ## Configurazioni delle risorse PySpark e Spark {#resource-config}
 
-I motori Spark sono in grado di modificare le risorse computazionali per scopi di formazione e punteggio. Queste risorse sono descritte nella tabella seguente:
+I motori Spark sono in grado di modificare le risorse computazionali a scopo di formazione e punteggio. Queste risorse sono descritte nella tabella seguente:
 
 | Risorsa | Descrizione | Tipo |
 | -------- | ----------- | ---- |
