@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;supported data usage labels;contract labels;identity labels;sensitive labels
 solution: Experience Platform
 title: Etichette di utilizzo dati di base
 topic: labels
+description: In questo documento vengono delineate tutte le etichette di utilizzo dei dati attualmente supportate da Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 876ac35f6366411adda821805bf628470839f80e
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1869'
+source-wordcount: '1882'
 ht-degree: 2%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 2%
 
 # Etichette di utilizzo dati di base
 
-Le etichette di utilizzo dei dati consentono di classificare set di dati e campi in base ai criteri di utilizzo applicabili ai dati.  Adobe Experience Platform Data Governance fornisce diverse etichette di utilizzo dei dati di base pronte all&#39;uso che è possibile utilizzare per iniziare a classificare i dati.
+Le etichette di utilizzo dei dati consentono di classificare set di dati e campi in base ai criteri di utilizzo applicabili ai dati. Adobe Experience Platform Data Governance fornisce diverse etichette di utilizzo dei dati di base che puoi utilizzare per iniziare a classificare i tuoi dati.
 
 In questo documento sono delineate le etichette di utilizzo dei dati di base attualmente fornite da [!DNL Experience Platform]. Ulteriori informazioni relative [!DNL Data Governance] sono disponibili nella panoramica [sulla governance dei](../home.md)dati.
 
