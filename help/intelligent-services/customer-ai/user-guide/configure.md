@@ -3,10 +3,11 @@ keywords: Experience Platform;user guide;customer ai;popular topics;configure in
 solution: Experience Platform
 title: Configurazione di un'istanza dell'AI cliente
 topic: Instance creation
+description: I servizi intelligenti forniscono ai clienti un servizio semplice da usare  Adobe Sensei che può essere configurato per diversi casi di utilizzo. Le sezioni seguenti forniscono i passaggi per configurare un'istanza dell'API cliente.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '726'
 ht-degree: 0%
 
 ---
@@ -20,7 +21,7 @@ I servizi intelligenti forniscono ai clienti un servizio semplice da usare  Adob
 
 ## Configurare l’istanza {#set-up-your-instance}
 
-Nell’interfaccia utente di Platform, fate clic **[!UICONTROL Services]** nella barra di navigazione a sinistra. Viene visualizzato il **[!UICONTROL Services]** browser e vengono visualizzati tutti i servizi disponibili. Nel contenitore per l&#39;API cliente, fate clic su **[!UICONTROL Open]**.
+Nell’interfaccia utente della piattaforma, fate clic su **[!UICONTROL Services]** nella barra di navigazione a sinistra. Viene visualizzato il **[!UICONTROL Services]** browser e vengono visualizzati tutti i servizi disponibili. Nel contenitore per l&#39;API cliente, fate clic su **[!UICONTROL Open]**.
 
 ![](../images/user-guide/navigate-to-service.png)
 
@@ -80,7 +81,7 @@ Seguendo questa sezione, hai configurato un&#39;istanza dell&#39;AI cliente ed �
 
 ## Passaggi successivi {#next-steps}
 
-Seguendo questa esercitazione, hai configurato con successo un&#39;istanza di AI del cliente e generato valutazioni di propensione. Ora puoi scegliere di utilizzare il generatore di segmenti per [creare segmenti di clienti con punteggi](./create-segment.md) previsti o per [scoprire informazioni approfondite con l&#39;API](./discover-insights.md)cliente.
+Seguendo questa esercitazione, hai configurato con successo un&#39;istanza di AI cliente e generato valutazioni di propensione. Ora puoi scegliere di utilizzare il generatore di segmenti per [creare segmenti di clienti con punteggi](./create-segment.md) previsti o per [scoprire informazioni approfondite con l&#39;API](./discover-insights.md)cliente.
 
 ## Risorse aggiuntive
 
