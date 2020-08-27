@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;etl;ETL;etl transformations;ETL transformations
 solution: Experience Platform
 title: Trasformazioni ETL di esempio
 topic: overview
+description: Questo articolo illustra le seguenti trasformazioni che uno sviluppatore di estrazione, trasformazione, caricamento (ETL) può incontrare.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '482'
 ht-degree: 1%
 
 ---
@@ -250,7 +251,7 @@ La struttura del dataframe di esempio seguente è stata mappata a uno schema che
 ]
 ```
 
-Quando si crea un fotogramma dati da utilizzare in  Adobe Experience Platform, è importante assicurarsi che la struttura gerarchica sia esattamente uguale a quella di uno schema XDM esistente, in modo che i campi vengano mappati correttamente.
+Durante la creazione di un dataframe da utilizzare in Adobe Experience Platform, è importante assicurarsi che la struttura gerarchica corrisponda esattamente a quella di uno schema XDM esistente, in modo che i campi vengano mappati correttamente.
 
 ## Identità della mappa di identità
 
