@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Mappare un file CSV su uno schema XDM
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7876e6d52815968802bd73bb5e340c99ea3387a8
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1292'
+source-wordcount: '1309'
 ht-degree: 2%
 
 ---
@@ -22,14 +22,14 @@ Inoltre, l&#39;appendice di questa esercitazione fornisce ulteriori informazioni
 
 Questa esercitazione richiede una buona conoscenza dei seguenti componenti di [!DNL Platform]:
 
-- [!DNL Experience Data Model (XDM System)](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
-- [!DNL Batch ingestion](../batch-ingestion/overview.md): Metodo con cui [!DNL Platform] vengono acquisiti i dati dai file di dati forniti dall&#39;utente.
+- [[!DNL Experience Data Model (XDM System)]](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
+- [[!DNL Caricamento batch]](../batch-ingestion/overview.md): Metodo con cui [!DNL Platform] vengono acquisiti i dati dai file di dati forniti dall&#39;utente.
 
 Questa esercitazione richiede anche che sia già stato creato un set di dati in cui assimilare i dati CSV. Per i passaggi sulla creazione di un dataset nell&#39;interfaccia utente, consulta l&#39;esercitazione [sull&#39;acquisizione dei](./ingest-batch-data.md)dati.
 
 ## Scegliere una destinazione
 
-Accedete a [!DNL Adobe Experience Platform](https://platform.adobe.com) e selezionate **[!UICONTROL Workflows]** dalla barra di navigazione a sinistra per accedere all’ *[!UICONTROL Workflows]* area di lavoro.
+Accedete a [[!DNL Adobe Experience Platform]](https://platform.adobe.com) , quindi selezionate **[!UICONTROL Workflows]** dalla barra di navigazione a sinistra per accedere all&#39; *[!UICONTROL Workflows]* area di lavoro.
 
 Dalla **[!UICONTROL Workflows]** schermata, selezionate **[!UICONTROL Map CSV to XDM schema]** sotto la **[!UICONTROL Data ingestion]** sezione, quindi selezionate **[!UICONTROL Launch]**.
 
@@ -95,7 +95,7 @@ Viene visualizzato il **[!UICONTROL Create calculated field]** pannello. La fine
 
 ![](../images/tutorials/map-a-csv-file/create-calculated-fields.png)
 
-| Tab | Descrizione |
+| Scheda | Descrizione |
 | --------- | ----------- |
 | Campi | La scheda Campi elenca i campi e gli attributi disponibili nello schema di origine. |
 | Funzioni | La scheda Funzioni elenca le funzioni disponibili per trasformare i dati. |
@@ -117,7 +117,7 @@ Una volta mappato e creato il file CSV, potete monitorare i dati che vengono acq
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, avete mappato correttamente un file CSV semplice su uno schema XDM e lo avete assimilato in [!DNL Platform]. Questi dati possono ora essere utilizzati da [!DNL Platform] servizi a valle come [!DNL Real-time Customer Profile]. Per [!DNL Real-time Customer Profile](../../profile/home.md) ulteriori informazioni, consulta la panoramica.
+Seguendo questa esercitazione, avete mappato correttamente un file CSV semplice su uno schema XDM e lo avete assimilato in [!DNL Platform]. Questi dati possono ora essere utilizzati da [!DNL Platform] servizi a valle come [!DNL Real-time Customer Profile]. Per ulteriori informazioni, consulta la panoramica del profilo cliente [[!DNL in tempo reale]](../../profile/home.md) .
 
 ## Appendice
 
@@ -151,7 +151,7 @@ Nella tabella seguente sono elencate tutte le funzioni di mappatura supportate, 
 | max | Restituisce il massimo degli argomenti specificati. Utilizza l&#39;ordine naturale. | max(3, 1, 4) | 4 |
 | first | Recupera il primo argomento specificato. | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
 | last | Recupera l&#39;ultimo argomento specificato. | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;3&quot; |
-| uuid /<br>guid | Genera un ID pseudo-casuale. | uid()<br>guid() | {UNIQUE_ID} |
+| uuid /<br>guid | Genera un ID pseudo-casuale. | uuid()<br>guid() | {UNIQUE_ID} |
 | now | Recupera l&#39;ora corrente. | now() | `2019-10-23T10:10:24.556-07:00[America/Los_Angeles]` |
 | timestamp | Recupera l&#39;ora Unix corrente. | timestamp() | 1571850624571 |
 | format | Formatta la data di input in base a un formato specificato. | format({DATE}, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
