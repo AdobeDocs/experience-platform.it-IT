@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida per gli sviluppatori API di Policy Service
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
+source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '472'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform [!DNL Data Governance] consente di gestire i dati dei 
 
 L&#39; [!DNL Policy Service] API fornisce diversi endpoint che consentono di gestire le etichette e i criteri di utilizzo dei dati a livello di programmazione, nonché di valutare le azioni di marketing per le violazioni dei criteri. Tali punti finali sono descritti di seguito. Per informazioni dettagliate, consultate le singole guide degli endpoint e la guida [](./getting-started.md) introduttiva per informazioni importanti sulle intestazioni richieste, sulla lettura di chiamate API di esempio e altro ancora.
 
-Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, visitate lo swagger API [Policy Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml).
+Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, visitate il [[!DNL Policy Service] swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)API.
 
 ## Etichette
 
@@ -26,7 +26,7 @@ Le etichette di utilizzo dei dati consentono di classificare set di dati e campi
 
 ## Azioni di marketing
 
-Le azioni di marketing (denominate anche casi di utilizzo del marketing), nel contesto del [!DNL Data Governance] [!DNL Experience Platform] framework, sono azioni che un consumatore di dati può intraprendere, per le quali l&#39;organizzazione intende limitare l&#39;uso dei dati. Per informazioni dettagliate sull&#39;utilizzo delle azioni di marketing, consulta la guida [all&#39;endpoint delle azioni di](./marketing-actions.md)marketing.
+Le azioni di marketing (o casi di utilizzo del marketing), nel contesto del [!DNL Data Governance] [!DNL Experience Platform] framework, sono azioni che un consumatore di dati può intraprendere, per le quali la tua organizzazione intende limitare l&#39;uso dei dati. Per informazioni dettagliate sull&#39;utilizzo delle azioni di marketing, consulta la guida [all&#39;endpoint delle azioni di](./marketing-actions.md)marketing.
 
 ## Criteri
 
