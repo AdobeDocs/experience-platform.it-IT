@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;product profile
 solution: Experience Platform
 title: Gestione di dettagli e servizi aggiuntivi per un profilo di prodotto
 topic: user guide
+description: Questo documento descrive i passaggi necessari per gestire i dettagli e i servizi aggiuntivi per un profilo di prodotto in Adobe Admin Console. Puoi configurare i dettagli di un profilo e accedere ad altri servizi dal menu Impostazioni profilo.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '148'
-ht-degree: 0%
+source-wordcount: '187'
+ht-degree: 1%
 
 ---
 
@@ -34,6 +35,6 @@ Il *[!UICONTROL Services]* menu consente di modificare l&#39;accesso di un profi
 
 Fate clic sull&#39;interruttore a destra di un particolare servizio per attivarlo o disattivarlo. Potete anche fare clic sulla **[!UICONTROL All on]** casella di controllo per attivare o disattivare tutti i servizi elencati.
 
-Al termine, fate clic **[!UICONTROL Save]**.
+Al termine, fai clic su **[!UICONTROL Save]**.
 
 ![edit-Additional-services](../images/edit-additional-services.png)
