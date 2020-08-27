@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Configurare un set di dati per il servizio Profilo e identità utilizzando le API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1020'
+source-wordcount: '1035'
 ht-degree: 1%
 
 ---
@@ -27,10 +27,10 @@ Questa esercitazione descrive il processo di attivazione di un dataset da utiliz
 
 Questa esercitazione richiede una conoscenza approfondita dei diversi servizi Adobe Experience Platform coinvolti nella gestione dei set di dati [!DNL Profile]abilitati. Prima di iniziare questa esercitazione, consulta la documentazione relativa a questi [!DNL Platform] servizi correlati:
 
-- [!DNL Real-time Customer Profile](../home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-- [!DNL Identity Service](../../identity-service/home.md): Consente [!DNL Real-time Customer Profile] di colmare le identità provenienti da origini dati diverse in cui viene eseguito il caricamento [!DNL Platform].
-- [!DNL Catalog Service](../../catalog/home.md): Un&#39;API RESTful che consente di creare set di dati e configurarli per [!DNL Real-time Customer Profile] e [!DNL Identity Service].
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
+- [[!DNL Profilo cliente in tempo reale]](../home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+- [[!DNL Identity Service]](../../identity-service/home.md): Consente [!DNL Real-time Customer Profile] di colmare le identità provenienti da origini dati diverse in cui viene eseguito il caricamento [!DNL Platform].
+- [[!Servizio catalogo DNL]](../../catalog/home.md): Un&#39;API RESTful che consente di creare set di dati e configurarli per [!DNL Real-time Customer Profile] e [!DNL Identity Service].
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per effettuare correttamente chiamate alle API della piattaforma.
 
