@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;data usage labels overview
 solution: Experience Platform
 title: Panoramica delle etichette di utilizzo dei dati
 topic: labels
+description: L'etichettatura e l'applicazione dell'uso dei dati (DULE) è il meccanismo principale di Adobe Experience Platform Data Governance. Le funzioni DULE consentono di applicare etichette di utilizzo dei dati a set di dati e campi, suddividendo ciascuna in categorie in base ai relativi criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle etichette di utilizzo dei dati (dette anche etichette DULE) in  Experience Platform.
 translation-type: tm+mt
-source-git-commit: 5e65c843c3c612b657ebe915c53f14f0b8d7f541
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '631'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Panoramica delle etichette di utilizzo dei dati
 
- Adobe Experience Platform [!DNL Data Governance] consente di applicare etichette di utilizzo dei dati a set di dati e campi, suddividendo ciascuna in categorie in base ai relativi criteri di utilizzo dei dati.
+Adobe Experience Platform [!DNL Data Governance] consente di applicare etichette di utilizzo dei dati a set di dati e campi, suddividendo ciascuna in categorie in base ai relativi criteri di utilizzo dei dati.
 
 Questo documento fornisce una panoramica delle etichette di utilizzo dei dati in [!DNL Experience Platform]. Prima di leggere questa guida, consulta la panoramica [sulla governance dei](../home.md) dati per un&#39;introduzione più robusta al framework sulla governance dei dati.
 
@@ -30,15 +31,15 @@ Oltre alle etichette fornite da  Adobe, potete anche definire etichette personal
 
 ## Ereditarietà delle etichette per i segmenti di pubblico
 
-Tutti i segmenti di pubblico creati da [servizio](../../segmentation/home.md) di segmentazione Adobe Experience Platform ereditano le etichette di utilizzo dei set di dati corrispondenti. Questo consente alle applicazioni integrate [!DNL Experience Platform] (come [!DNL Real-time Customer Data Platform]) di fornire l&#39;applicazione automatica dei criteri di utilizzo dei dati durante l&#39;attivazione dei segmenti nelle destinazioni.
+Tutti i segmenti di pubblico creati da [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) ereditano le etichette di utilizzo dei set di dati corrispondenti. Questo consente alle applicazioni integrate [!DNL Experience Platform] (come [!DNL Real-time Customer Data Platform]) di fornire l&#39;applicazione automatica dei criteri di utilizzo dei dati durante l&#39;attivazione dei segmenti nelle destinazioni.
 
 Oltre a ereditare le etichette a livello di set di dati, per impostazione predefinita i segmenti ereditano tutte le etichette a livello di campo dai set di dati associati. A seconda del modo in cui l’applicazione [!DNL Platform]basata sui segmenti utilizza i segmenti, è possibile specificare quali campi vengono utilizzati, impedendo al segmento di ereditare le etichette dai campi esclusi.
 
 Per ulteriori informazioni sul funzionamento dell’applicazione automatica in CDP in tempo reale, consulta la panoramica sulla governance dei [dati in CDP](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)in tempo reale.
 
-### Ereditarietà dai controlli di esportazione dei dati  Adobe Audience Manager
+### Ereditarietà dai controlli di esportazione dei dati di Adobe Audience Manager
 
-[!DNL Experience Platform] è in grado di condividere segmenti con  Adobe Audience Manager. Eventuali controlli di esportazione dei dati applicati  segmenti di Audience Manager vengono convertiti in etichette equivalenti e azioni di marketing riconosciute da [!DNL Experience Platform][!DNL Data Governance].
+[!DNL Experience Platform] è in grado di condividere segmenti con Adobe Audience Manager. Eventuali controlli di esportazione dei dati applicati  segmenti di Audience Manager vengono convertiti in etichette equivalenti e azioni di marketing riconosciute da [!DNL Experience Platform][!DNL Data Governance].
 
 Per un riferimento alla modalità in cui specifici controlli di esportazione dei dati vengono mappati sulle etichette di utilizzo dei dati in [!DNL Platform], consultare la documentazione [](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)Audience Manager.
 
