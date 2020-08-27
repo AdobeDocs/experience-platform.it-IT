@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida per lo sviluppo API del Registro di sistema dello schema
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1195'
+source-wordcount: '1207'
 ht-degree: 0%
 
 ---
@@ -14,20 +14,20 @@ ht-degree: 0%
 
 # [!DNL Schema Registry] Guida per gli sviluppatori di API
 
-L&#39; [!DNL Schema Registry] oggetto viene utilizzato per accedere alla Libreria schema all&#39;interno  Adobe Experience Platform, fornendo un&#39;interfaccia utente e RESTful API da cui sono accessibili tutte le risorse libreria disponibili.
+Viene [!DNL Schema Registry] utilizzato per accedere alla libreria Schema all&#39;interno di Adobe Experience Platform, fornendo un&#39;interfaccia utente e un&#39;API RESTful da cui sono accessibili tutte le risorse libreria disponibili.
 
-Utilizzando l&#39;API del Registro di sistema dello schema, è possibile eseguire operazioni CRUD di base per visualizzare e gestire tutti gli schemi e le risorse correlate disponibili all&#39;interno  Adobe Experience Platform. Ciò include quelli definiti da  Adobe, [!DNL Experience Platform] partner e fornitori le cui applicazioni vengono utilizzate. Potete inoltre utilizzare le chiamate API per creare nuovi schemi e risorse per la vostra organizzazione, nonché visualizzare e modificare le risorse già definite.
+Utilizzando l&#39;API del Registro di sistema dello schema, è possibile eseguire operazioni CRUD di base per visualizzare e gestire tutti gli schemi e le risorse correlate disponibili in Adobe Experience Platform. Ciò include quelli definiti da  Adobe, [!DNL Experience Platform] partner e fornitori le cui applicazioni vengono utilizzate. Potete inoltre utilizzare le chiamate API per creare nuovi schemi e risorse per la vostra organizzazione, nonché visualizzare e modificare le risorse già definite.
 
 Questa guida per gli sviluppatori fornisce i passaggi necessari per iniziare a utilizzare l&#39; [!DNL Schema Registry] API. La guida fornisce quindi chiamate API di esempio per eseguire operazioni chiave utilizzando l&#39;API [!DNL Schema Registry].
 
 ## Prerequisiti
 
-Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [!DNL Experience Data Model (XDM) System](../home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
+* [[!DNL Experience Data Model (XDM) System]](../home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
    * [Nozioni di base sulla composizione](../schema/composition.md)dello schema: Informazioni sui blocchi di base degli schemi XDM.
-* [!DNL Real-time Customer Profile](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [[!DNL Profilo cliente in tempo reale]](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Sandbox]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per eseguire correttamente le chiamate all&#39; [!DNL Schema Registry] API.
 
