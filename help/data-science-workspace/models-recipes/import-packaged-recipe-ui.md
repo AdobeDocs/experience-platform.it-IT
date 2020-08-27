@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;import packaged recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;import packaged recipe;Data Science Workspace;popular topics;recipes;ui;create engine
 solution: Experience Platform
 title: Importare una ricetta in pacchetti (interfaccia utente)
 topic: Tutorial
+description: Questa esercitazione fornisce informazioni su come configurare e importare una ricetta in pacchetti utilizzando l'esempio di vendita al dettaglio fornito. Al termine di questa esercitazione, sarà possibile creare, formare e valutare un modello in Adobe Experience Platform Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1708'
 ht-degree: 0%
 
 ---
