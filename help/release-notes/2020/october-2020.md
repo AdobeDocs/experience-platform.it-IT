@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: e9d7a045a88e0126549adcfa6136684e7b933b71
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '294'
 ht-degree: 7%
 
 ---
@@ -19,8 +19,8 @@ ht-degree: 7%
 
 Nuove funzioni in Adobe Experience Platform:
 
-- [!DNL Access control](#access-control)
-- [!DNL Sandboxes](#sandboxes)
+- [[!Controllo accesso DNL]](#access-control)
+- [[!DNL Sandbox]](#sandboxes)
 
 ## [!DNL Access control] {#access-control}
 
@@ -31,7 +31,7 @@ Nuove funzioni in Adobe Experience Platform:
 | Funzione | Descrizione |
 |--- | ---|
 | Autorizzazioni | In [!DNL Admin Console], la scheda all&#39;interno di un profilo di [!DNL Platform] prodotto consente di personalizzare [!DNL Platform] le funzionalità disponibili per gli utenti collegati a tale profilo. Le categorie di autorizzazioni disponibili includono: [!UICONTROL Data Modeling], [!UICONTROL Data Management], [!UICONTROL Profile Management], [!UICONTROL Identities], [!UICONTROL Data Monitoring], [!UICONTROL Sandbox Administration], [!UICONTROL Destinations], [!UICONTROL Sources]. |
-| Accesso alle sandbox | La scheda [!UICONTROL _Autorizzazioni _]all&#39;interno di un profilo di[!DNL Platform]prodotto può consentire agli utenti l&#39;accesso a sandbox specifiche. Per ulteriori informazioni, consultate la sezione sulle[sandbox](#sandboxes)di seguito. |
+| Accesso alle sandbox | La scheda [!UICONTROL _Autorizzazioni_] all&#39;interno di un profilo di [!DNL Platform] prodotto può consentire agli utenti l&#39;accesso a sandbox specifiche. Per ulteriori informazioni, consultate la sezione sulle [sandbox](#sandboxes) di seguito. |
 
 Per ulteriori informazioni, consulta la panoramica [sul controllo](../../access-control/home.md)degli accessi.
 
