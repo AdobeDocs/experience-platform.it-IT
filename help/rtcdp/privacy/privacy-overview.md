@@ -5,9 +5,9 @@ seo-title: Privacy nel profilo dei dati del cliente in tempo reale
 description: Il profilo dati cliente in tempo reale consente di semplificare il processo di mantenimento delle operazioni sui dati conformi alle normative sulla privacy.
 seo-description: Il profilo dati cliente in tempo reale consente di semplificare il processo di mantenimento delle operazioni sui dati conformi alle normative sulla privacy.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '312'
 ht-degree: 0%
 
 ---
@@ -25,8 +25,8 @@ Adobe Experience Platform [!DNL Privacy Service] consente di semplificare il pro
 
 Esistono due metodi per inviare le singole richieste di dati GDPR e CCPA per accedere ed eliminare i dati dei clienti:
 
-* Utilizzate l&#39;icona [!DNL Privacy Service UI](https://gdprui.cloud.adobe.io/) per creare e monitorare le richieste di accesso ed eliminazione all&#39;interno di un&#39;area di lavoro visiva. Per istruzioni dettagliate, consulta l’esercitazione [sull’interfaccia utente](../../privacy-service/ui/overview.md) Privacy Service.
-* Utilizzate l&#39;API [!DNL Privacy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) per gestire le richieste di accesso ed eliminazione con le chiamate RESTful API. Per istruzioni dettagliate, vedete l&#39;esercitazione [API](../../privacy-service/api/getting-started.md) Privacy Service.
+* Utilizzate l&#39; [[!DNL Privacy Service UI]](https://gdprui.cloud.adobe.io/) per creare e monitorare le richieste di accesso ed eliminazione all&#39;interno di un&#39;area di lavoro visiva. Per istruzioni dettagliate, consulta l’esercitazione [sull’interfaccia utente](../../privacy-service/ui/overview.md) Privacy Service.
+* Utilizzate l&#39;API Privacy Service [[!DNL]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) per gestire le richieste di accesso ed eliminazione con le chiamate API RESTful. Per istruzioni dettagliate, vedete l&#39;esercitazione [API](../../privacy-service/api/getting-started.md) Privacy Service.
 
 <!-- (Capability will not be available for November GA) 
 ## Opt-out capabilities
