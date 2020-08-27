@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Unioni
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '792'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Unioni
 
-Le unioni (o viste di unione) sono schemi generati dal sistema e di sola lettura che aggregano i campi di tutti gli schemi che condividono la stessa classe ([!DNL XDM ExperienceEvent] o [!DNL XDM Individual Profile]) e sono abilitati per [!DNL Real-time Customer Profile](../../profile/home.md).
+Le unioni (o viste di unione) sono schemi generati dal sistema e di sola lettura che aggregano i campi di tutti gli schemi che condividono la stessa classe ([!DNL XDM ExperienceEvent] o [!DNL XDM Individual Profile]) e sono abilitati per [[!DNL Profilo cliente in tempo reale]](../../profile/home.md).
 
 Il presente documento illustra i concetti essenziali per l&#39;utilizzo dei sindacati nell&#39;API del Registro di sistema dello schema, incluse le chiamate di esempio per varie operazioni. Per informazioni più generali sulle unioni in XDM, consultate la sezione sui sindacati nelle [nozioni di base della composizione](../schema/composition.md#union)dello schema.
 
@@ -34,7 +34,7 @@ L&#39; `timeSeriesEvents` array è un elenco di eventi delle serie temporali rel
 
 ### Mappa appartenenza segmento
 
-La `segmentMembership` mappa memorizza i risultati delle valutazioni dei segmenti. Quando i processi del segmento vengono eseguiti correttamente tramite l&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)Segmentazione, la mappa viene aggiornata. `segmentMembership` memorizza inoltre tutti i segmenti di pubblico già valutati che vengono trasferiti in Platform, consentendo l&#39;integrazione con altre soluzioni come  Adobe Audience Manager.
+La `segmentMembership` mappa memorizza i risultati delle valutazioni dei segmenti. Quando i processi del segmento vengono eseguiti correttamente tramite l&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)Segmentazione, la mappa viene aggiornata. `segmentMembership` memorizza inoltre tutti i segmenti di pubblico già valutati che vengono trasferiti in Piattaforma, consentendo l&#39;integrazione con altre soluzioni come Adobe Audience Manager.
 
 Per ulteriori informazioni, consulta l’esercitazione sulla [creazione di segmenti tramite API](../../segmentation/tutorials/create-a-segment.md) .
 
