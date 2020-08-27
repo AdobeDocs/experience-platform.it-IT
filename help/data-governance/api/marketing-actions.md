@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Policy enforcement;marketing actions api;API-based enforcement;data governance
 solution: Experience Platform
 title: Azioni di marketing
 topic: developer guide
+description: Un'azione di marketing, nel contesto di Adobe Experience Platform Data Governance, è un'azione che un consumatore di dati di Experience Platform  intraprende, per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati.
 translation-type: tm+mt
-source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '718'
 ht-degree: 2%
 
 ---
