@@ -5,7 +5,7 @@ title: Servizio Adobe Experience Platform Identity
 topic: overview
 description: Adobe Experience Platform Identity Service ti aiuta a ottenere una visione migliore del tuo cliente e del suo comportamento attraverso il collegamento di identità tra dispositivi e sistemi, per offrire esperienze digitali personali e di forte impatto in tempo reale.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 8b1b61b6446b28f92d6cf221003674fa09716c53
 workflow-type: tm+mt
 source-wordcount: '1711'
 ht-degree: 0%
