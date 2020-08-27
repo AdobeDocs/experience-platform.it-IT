@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;mlservices;sensei machine learning api
 solution: Experience Platform
 title: Servizi
 topic: Developer guide
+description: Un servizio MLService è un modello di formazione pubblicato che consente alla vostra azienda di accedere e riutilizzare modelli sviluppati in precedenza. Una caratteristica chiave di MLServices è la capacità di automatizzare la formazione e il punteggio su base programmata. Le sessioni di formazione pianificate possono contribuire a mantenere l'efficienza e la precisione di un modello, mentre le esecuzioni di punteggio pianificate possono garantire la generazione coerente di nuove informazioni.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '872'
 ht-degree: 2%
 
 ---
@@ -14,13 +15,13 @@ ht-degree: 2%
 
 # MLServices
 
-Un servizio MLService è un modello di formazione pubblicato che consente alla vostra azienda di accedere e riutilizzare modelli sviluppati in precedenza. Una caratteristica chiave di MLServices è la capacità di automatizzare la formazione e il punteggio su base programmata. Le sessioni di formazione pianificate possono contribuire a mantenere l&#39;efficienza e l&#39;accuratezza di un modello, mentre le esecuzioni di punteggio pianificate possono garantire la generazione coerente di nuove informazioni.
+Un servizio MLService è un modello di formazione pubblicato che consente alla vostra azienda di accedere e riutilizzare modelli sviluppati in precedenza. Una caratteristica chiave di MLServices è la capacità di automatizzare la formazione e il punteggio su base programmata. Le sessioni di formazione pianificate possono contribuire a mantenere l&#39;efficienza e la precisione di un modello, mentre le esecuzioni di punteggio pianificate possono garantire la generazione coerente di nuove informazioni.
 
 I programmi di formazione e valutazione automatizzati sono definiti con una marca temporale iniziale, una marca temporale finale e una frequenza rappresentata come espressione [](https://en.wikipedia.org/wiki/Cron)cron. Le pianificazioni possono essere definite durante la [creazione di un servizio MLService](#create-an-mlservice) o applicate [aggiornando un servizio MLService](#update-an-mlservice)esistente.
 
 ## Creare un servizio MLS {#create-an-mlservice}
 
-Potete creare un servizio MLS eseguendo una richiesta di POST e un payload che fornisce un nome per il servizio e un ID MLInvalido. L’istanza MLI utilizzata per creare un servizio MLS non è necessaria per disporre di sperimentazioni di formazione esistenti, ma potete scegliere di creare il servizio MLS con un modello già esistente fornendo l’ID di esperienza e l’ID di esecuzione della formazione corrispondenti.
+Potete creare un servizio MLS eseguendo una richiesta di POST e un payload che fornisce un nome per il servizio e un ID MLInvalido. L’istanza MLI utilizzata per creare un servizio MLS non è necessaria per disporre di sperimentazioni di formazione esistenti, ma potete scegliere di creare il servizio MLService con un modello già esistente fornendo l’ID di esperienza e l’ID di esecuzione della formazione corrispondenti.
 
 **Formato API**
 
