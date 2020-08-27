@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
 solution: Experience Platform
 title: Panoramica dell'applicazione dei criteri
 topic: enforcement
+description: Una volta applicate le etichette di utilizzo dei dati ai set di dati Adobe Experience Platform e definite le policy di utilizzo dei dati per le azioni di marketing relative a tali etichette, le funzionalità di governance dei dati consentono di applicare tali criteri e di impedire le operazioni sui dati che costituiscono violazioni dei criteri. Esistono due metodi per l'applicazione dei criteri forniti dalle funzionalità di governance dei dati sulla piattaforma, l'applicazione basata sulle API e l'applicazione automatica.
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: 2fdab7d984a7368df77110f8ba0e0ba687e96d7e
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '262'
 ht-degree: 0%
 
 ---
