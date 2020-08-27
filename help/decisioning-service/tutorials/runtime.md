@@ -5,9 +5,9 @@ title: Operazioni con il runtime di Decisioning Service tramite API
 topic: tutorial
 description: 'Questo documento fornisce un''esercitazione per lavorare con i servizi runtime di Decisioning Service utilizzando le API Adobe Experience Platform. '
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '2017'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ Questo documento fornisce un&#39;esercitazione per lavorare con i servizi runtim
 
 Questa esercitazione richiede una buona conoscenza dei [!DNL Experience Platform] servizi coinvolti nelle decisioni e nella determinazione della migliore offerta da presentare durante le esperienze dei clienti. Prima di iniziare questa esercitazione, consulta la documentazione per i seguenti elementi:
 
-- [!DNL Decisioning Service](./../home.md): Fornisce il framework per l&#39;aggiunta e la rimozione di offerte e la creazione di algoritmi per la scelta dei migliori da presentare durante l&#39;esperienza del cliente.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Il framework standardizzato tramite il quale la piattaforma organizza i dati sull&#39;esperienza cliente.
-- [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md): PQL viene utilizzato per definire regole e filtri.
+- [[!DNL Decisioning Service]](./../home.md): Fornisce il framework per l&#39;aggiunta e la rimozione di offerte e la creazione di algoritmi per la scelta dei migliori da presentare durante l&#39;esperienza del cliente.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standardizzato tramite il quale la piattaforma organizza i dati sull&#39;esperienza cliente.
+- [[!DNL Profile Query Language (PQL)]](../../segmentation/pql/overview.md): PQL viene utilizzato per definire regole e filtri.
 - [Gestione di oggetti e regole di disattivazione tramite API](./entities.md): Prima di utilizzare il runtime di Decisioning Services, sarà necessario configurare le entità correlate.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per eseguire correttamente le chiamate alle [!DNL Platform] API.
