@@ -6,9 +6,9 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '861'
 ht-degree: 5%
 
 ---
@@ -18,19 +18,19 @@ ht-degree: 5%
 
 **Data di rilascio: 11 marzo 2020**
 
-Aggiornamenti alle funzionalità esistenti in  Adobe Experience Platform:
+Aggiornamenti alle funzionalità esistenti in Adobe Experience Platform:
 
-* [!DNL Data Governance](#governance)
-* [!DNL Data Ingestion](#ingestion)
-* [!DNL Destinations](#destinations)
-* [!DNL Identity Service](#identity)
-* [!DNL Sources](#sources)
+* [[!DNL Data Governance]](#governance)
+* [[!DNL Data Ingestion]](#ingestion)
+* [[!DNL Destinazioni]](#destinations)
+* [[!DNL Identity Service]](#identity)
+* [[!DNL Sources]](#sources)
 
 ## [!DNL Data Governance] {#governance}
 
 [!DNL Experience Platform] consente alle aziende di unire i dati provenienti da più sistemi aziendali per consentire agli addetti al marketing di identificare, comprendere e coinvolgere meglio i clienti. [!DNL Experience Platform] include un&#39;infrastruttura completa per la gestione dei dati, inclusa l&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati (DULE), per garantire l&#39;uso corretto dei dati all&#39;interno [!DNL Platform] e quando vengono condivisi tra sistemi.
 
- Adobe Experience Platform [!DNL Data Governance] è una serie di strategie e tecnologie utilizzate per gestire i dati dei clienti e garantire la conformità a normative, restrizioni e criteri applicabili all&#39;utilizzo dei dati. Esso svolge un ruolo chiave a vari livelli, [!DNL Experience Platform] tra cui catalogazione, linea di dati, etichettatura dell&#39;utilizzo dei dati, criteri di accesso ai dati e controllo dell&#39;accesso ai dati per le azioni di marketing.
+Adobe Experience Platform [!DNL Data Governance] è una serie di strategie e tecnologie utilizzate per gestire i dati dei clienti e garantire la conformità a normative, restrizioni e criteri applicabili all&#39;utilizzo dei dati. Esso svolge un ruolo chiave a vari livelli, [!DNL Experience Platform] tra cui catalogazione, linea di dati, etichettatura dell&#39;utilizzo dei dati, criteri di accesso ai dati e controllo dell&#39;accesso ai dati per le azioni di marketing.
 
 **Nuove funzionalità**
 
@@ -52,19 +52,19 @@ Per ulteriori informazioni su [!DNL Data Governance]di esso, consulta la panoram
 
 ## Ingestione dati {#ingestion}
 
- Adobe Experience Platform offre un set completo di funzioni per acquisire qualsiasi tipo e latenza di dati.  Adobe Experience Platform [!DNL Data Ingestion] offre diverse alternative per l’assimilazione dei dati, tra cui API Batch, API Streaming, connettori  Adobe nativi, partner per l’integrazione dei dati o l’interfaccia  Adobe Experience Platform.
+Adobe Experience Platform offre un set completo di funzioni per acquisire qualsiasi tipo e latenza di dati. Adobe Experience Platform [!DNL Data Ingestion] offre diverse alternative per l’assimilazione dei dati, tra cui API Batch, API Streaming, connettori  Adobe nativi, partner per l’integrazione dei dati o l’interfaccia utente di Adobe Experience Platform.
 
 **Nuove funzionalità**
 
 | Funzione | Descrizione |
 |------- | -----------|
-| Iniezione parziale del batch | L&#39;assimilazione parziale dei batch è la capacità di assimilare i dati contenenti errori, fino a una determinata soglia. Grazie a questa funzionalità, gli utenti possono trasferire con successo tutti i dati corretti nel Adobe Experience Platform  mentre tutti i dati errati vengono raggruppati separatamente. I dettagli vengono aggiunti ai batch non riusciti per spiegare il motivo per cui non hanno superato la convalida. Ulteriori informazioni sull’assimilazione parziale dei batch sono disponibili nella documentazione [di inserimento](../../ingestion/batch-ingestion/partial.md)parziale dei batch. |
+| Iniezione parziale del batch | L&#39;assimilazione parziale dei batch è la capacità di assimilare i dati contenenti errori, fino a una determinata soglia. Grazie a questa funzionalità, gli utenti possono trasferire correttamente tutti i dati corretti in Adobe Experience Platform mentre tutti i dati errati vengono raggruppati separatamente. I dettagli vengono aggiunti ai batch non riusciti per spiegare il motivo per cui non hanno superato la convalida. Ulteriori informazioni sull’assimilazione parziale dei batch sono disponibili nella documentazione [di inserimento](../../ingestion/batch-ingestion/partial.md)parziale dei batch. |
 
 **Problemi noti**
 
 * Nessuna
 
-Per ulteriori informazioni sull’assimilazione dei dati in Platform, consulta la documentazione [sull’inserimento dei](../../ingestion/home.md)dati.
+Per ulteriori informazioni sull’assimilazione dei dati in Piattaforma, consulta la documentazione [sull’inserimento](../../ingestion/home.md)dei dati.
 
 
 ## Destinazioni {#destinations}
@@ -73,7 +73,7 @@ In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), le destina
 
 **Nuove destinazioni**
 
-Sono disponibili nuove destinazioni in cui è possibile attivare i dati  Adobe Experience Platform. Per ulteriori informazioni, vedere di seguito:
+Sono disponibili nuove destinazioni in cui è possibile attivare i dati Adobe Experience Platform. Per ulteriori informazioni, vedere di seguito:
 
 | Destinazione | Descrizione |
 |--- | ---|
@@ -86,7 +86,7 @@ Per saperne di più, visita la panoramica [delle destinazioni](../../rtcdp/desti
 
 Fornire esperienze digitali rilevanti richiede una comprensione completa del cliente. Ciò è reso più difficile quando i dati del cliente sono frammentati in sistemi diversi, causando l&#39;apparenza di più &quot;identità&quot; per ogni singolo cliente.
 
- Adobe Experience Platform [!DNL Identity Service] consente di acquisire una visione migliore del cliente e del suo comportamento, collegando le identità tra dispositivi e sistemi, per offrire esperienze digitali personali e di forte impatto in tempo reale.
+Adobe Experience Platform [!DNL Identity Service] consente di acquisire una visione migliore del cliente e del suo comportamento collegando le identità tra dispositivi e sistemi, per offrire esperienze digitali personali e di forte impatto in tempo reale.
 
 **Nuove funzionalità**
 
@@ -102,7 +102,7 @@ Per ulteriori informazioni su [!DNL Identity Service]di esso, consulta la panora
 
 ## Origini {#sources}
 
- Adobe Experience Platform può acquisire dati da origini esterne consentendo al contempo di strutturare, etichettare e migliorare i dati utilizzando [!DNL Platform] i servizi. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, software di terze parti e il sistema CRM in uso.
+Adobe Experience Platform è in grado di acquisire dati da origini esterne e di strutturarli, etichettarli e ottimizzarli utilizzando [!DNL Platform] i servizi. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, software di terze parti e il sistema CRM in uso.
 
 [!DNL Experience Platform] fornisce un&#39;API RESTful e un&#39;interfaccia utente interattiva che consente di impostare connessioni sorgente per vari provider di dati con facilità. Queste connessioni di origine consentono di autenticare e connettersi a sistemi di storage e servizi CRM esterni, impostare i tempi per l&#39;esecuzione dell&#39;assimilazione e gestire il throughput di assimilazione dei dati.
 
@@ -110,7 +110,7 @@ Per ulteriori informazioni su [!DNL Identity Service]di esso, consulta la panora
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Segnali obsoleti per  connettore Adobe Audience Manager | I dati a livello di segnale di Audience Manager non verranno più inviati. Si noti che l&#39;appartenenza al segmento per le caratteristiche e i segmenti sarà ancora inclusa. In seguito a questa modifica, i set di dati in entrata non saranno più generati. |
+| Segnali obsoleti per connettore Adobe Audience Manager | I dati a livello di segnale di Audience Manager non verranno più inviati. Si noti che l&#39;appartenenza al segmento per le caratteristiche e i segmenti sarà ancora inclusa. In seguito a questa modifica, i set di dati in entrata non saranno più generati. |
 | Set di dati rinominati | I set di dati generati dal connettore Audience Manager avranno nomi e descrizioni aggiornati. |
 | Attiva/ [!DNL Profile] Disattiva in Audience Manager | [!DNL Profile] è possibile abilitare o disabilitare l&#39;attivazione o la disattivazione del set di dati per promuoverlo in [!DNL Real-time Customer Profile]. Per impostazione predefinita, Attiva/Disattiva è attivato. |
 | Supporto dell&#39;interfaccia utente per i sistemi di storage cloud | Nuovo connettore sorgente per [!DNL Azure Data Lake Storage Gen2] l’interfaccia utente. |
