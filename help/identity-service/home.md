@@ -5,9 +5,9 @@ title: Servizio Adobe Experience Platform Identity
 topic: overview
 description: Adobe Experience Platform Identity Service ti aiuta a ottenere una visione migliore del tuo cliente e del suo comportamento attraverso il collegamento di identità tra dispositivi e sistemi, per offrire esperienze digitali personali e di forte impatto in tempo reale.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1711'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Fornire esperienze digitali rilevanti richiede una comprensione completa del cliente. Ciò è reso più difficile quando i dati del cliente sono frammentati in sistemi diversi, causando l&#39;apparenza di più &quot;identità&quot; per ogni singolo cliente. Adobe Experience Platform [!DNL Identity Service] consente di acquisire una visione migliore del cliente e del suo comportamento collegando le identità tra dispositivi e sistemi, per offrire esperienze digitali personali e di forte impatto in tempo reale.
 
-## Informazioni [!DNL Identity Service]
+## Comprensione di [!DNL Identity Service]
 
 Ogni giorno, i clienti interagiscono con il tuo business e creano una relazione in continua crescita con il tuo marchio. Un cliente tipico può essere attivo in un numero qualsiasi di sistemi all&#39;interno dell&#39;infrastruttura dati della tua organizzazione, come i sistemi di eCommerce, fedeltà e help desk. Lo stesso cliente può anche impegnarsi anonimamente su qualsiasi numero di dispositivi. [!DNL Identity Service] consente di mettere insieme un quadro completo del cliente, aggregando dati correlati che altrimenti potrebbero essere silenziati tra sistemi diversi.
 
@@ -83,13 +83,13 @@ Un grafico di identità è una mappa di relazioni tra diversi spazi dei nomi di 
 
 Tutti i grafici dell&#39;identità del cliente sono gestiti collettivamente e aggiornati [!DNL Identity Service] in tempo quasi reale, in risposta all&#39;attività del cliente.
 
-[!DNL Identity Service] gestisce un grafico di identità visibile solo dalla tua organizzazione e basato sui dati, detto grafico privato. [!DNL Identity Service] amplia il grafico privato quando un record di dati assimilato contiene più identità, aggiungendo una relazione tra le identità trovate.
+[!DNL Identity Service] gestisce un grafico di identità visibile solo dalla tua organizzazione e basato sui dati, detto grafico privato. [!DNL Identity Service] amplia il grafico privato quando un record di dati acquisito contiene più identità, aggiungendo una relazione tra le identità trovate.
 
 Come esempio dei potenziali tipi di fattori da considerare quando si forniscono ed etichettano i dati di identità, l&#39;uso di numeri di telefono come &quot;telefono di lavoro&quot; potrebbe portare a più relazioni di quanto si intende nel grafico di identità. Molti dipendenti fanno riferimento allo stesso numero di posti di lavoro, e che &quot;casa&quot; e &quot;mobile&quot; servono meglio a mantenere le relazioni il più possibile precise.
 
 ## Invio dei dati di identità a [!DNL Identity Service]
 
-Questa sezione illustra come vengono elaborati i dati forniti ad Adobe Experience Platform prima di essere utilizzati per creare un grafico [!DNL Identity Service] di identità per ciascun cliente.
+In questa sezione viene illustrato come i dati forniti ad Adobe Experience Platform vengono elaborati prima di essere utilizzati per [!DNL Identity Service] creare un grafico dell&#39;identità per ciascun cliente.
 
 ### Decidere sui campi di identità
 
@@ -146,4 +146,4 @@ Adobe Experience Platform è stata creata tenendo presente la privacy e include 
 
 ## Passaggi successivi
 
-Ora che hai compreso i concetti chiave di [!DNL Identity Service] e il suo ruolo all&#39;interno [!DNL Experience Platform], puoi iniziare a imparare come lavorare con il grafico di identità utilizzando il [!DNL Identity Service API](./api/getting-started.md).
+Ora che hai compreso i concetti chiave di [!DNL Identity Service] e il suo ruolo all&#39;interno [!DNL Experience Platform], puoi iniziare a imparare a lavorare con il grafico di identità utilizzando l&#39;API [[!DNL Identity Service API]](./api/getting-started.md).
