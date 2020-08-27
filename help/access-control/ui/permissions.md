@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;product profile;manage permissions
 solution: Experience Platform
 title: Gestione delle autorizzazioni per un profilo di prodotto
 topic: user guide
+description: Il controllo degli accessi in Adobe Experience Platform consente di gestire ruoli e autorizzazioni per diverse funzionalità della piattaforma utilizzando l'Adobe Admin Console. Questo documento funge da guida per la gestione delle autorizzazioni per un profilo di prodotto per la piattaforma.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 0%
+source-wordcount: '296'
+ht-degree: 1%
 
 ---
 
@@ -34,11 +35,11 @@ Per aggiungere un&#39;autorizzazione, fate clic sull&#39;icona **più (+)** acca
 
 >[!NOTE]
 >
->Nell&#39; *[!UICONTROL Included Permissions Items]* elenco vengono visualizzate solo le autorizzazioni aggiunte dalla categoria attualmente selezionata.
+>Nell&#39; *[!UICONTROL Included Permissions Items]* elenco sono visualizzate solo le autorizzazioni aggiunte dalla categoria attualmente selezionata.
 
 Per rimuovere un&#39;autorizzazione, fate clic sull&#39;icona **X** accanto al nome dell&#39;autorizzazione oppure selezionate **[!UICONTROL Remove all]** per rimuovere tutte le autorizzazioni nella categoria corrente. Le autorizzazioni rimosse vengono nuovamente visualizzate in *[!UICONTROL Available Permission Items]*.
 
-Continuate a scorrere le categorie disponibili e ad aggiungere le autorizzazioni desiderate. Al termine, fate clic **[!UICONTROL Save]**.
+Continuate a scorrere le categorie disponibili e ad aggiungere le autorizzazioni desiderate. Al termine, fai clic su **[!UICONTROL Save]**.
 
 ![permissions-Finish](../images/permissions-finish.png)
 
