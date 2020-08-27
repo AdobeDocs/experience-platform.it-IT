@@ -3,10 +3,11 @@ keywords: Experience Platform;developer guide;SDK;Model authoring;Data Science W
 solution: Experience Platform
 title: Guida per gli sviluppatori di SDK
 topic: Overview
+description: L’SDK per l’authoring dei modelli consente di sviluppare ricette di apprendimento automatico personalizzate e pipeline di funzionalità utilizzabili in Adobe Experience Platform Data Science Workspace, fornendo modelli implementabili in PySpark e Spark (Scala).
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '964'
 ht-degree: 1%
 
 ---
@@ -37,7 +38,7 @@ Nella tabella seguente sono descritti i metodi astratti di una classe PySpark Da
         <tr>
             <td>
                 <p><code class=" language-undefined">load(self, configProperties, spark)</code></p>
-                <p>Carica e restituisce i dati Platform come dati Pandas DataFrame</p>
+                <p>Carica e restituisce i dati della piattaforma come dati Pandas DataFrame</p>
             </td>
             <td>
                 <ul>
@@ -65,7 +66,7 @@ Nella tabella seguente sono descritti i metodi astratti di una classe [!DNL Spar
         <tr>
             <td>
                 <p><code class=" language-undefined">load(configProperties, sparkSession)</code></p>
-                <p>Caricamento e restituzione di dati Platform come DataFrame</p>
+                <p>Carica e restituisce i dati della piattaforma come DataFrame</p>
             </td>
             <td>
                 <ul>
@@ -211,7 +212,7 @@ Nella tabella seguente sono descritti i metodi astratti di una classe [!DNL PySp
         <tr>
             <td>
                 <p><code class=" language-undefined">save(self, configProperties, dataframe)</code></p>
-                <p>Ricevere i dati di output come DataFrame e memorizzarli in un dataset Platform</p>
+                <p>Ricevi i dati di output come DataFrame e li memorizza in un dataset della piattaforma</p>
             </td>
             <td>
                 <ul>
@@ -239,7 +240,7 @@ Nella tabella seguente sono descritti i metodi astratti di una classe [!DNL Spar
         <tr>
             <td>
                 <p><code class=" language-undefined">save(configProperties, dataFrame)</code></p>
-                <p>Ricevere i dati di output come DataFrame e memorizzarli in un dataset Platform</p>
+                <p>Ricevi i dati di output come DataFrame e li memorizza in un dataset della piattaforma</p>
             </td>
             <td>
                 <ul>
