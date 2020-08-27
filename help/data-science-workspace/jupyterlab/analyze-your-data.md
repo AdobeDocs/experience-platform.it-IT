@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Analizzare i dati utilizzando i notebook
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1702'
+source-wordcount: '1710'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 0%
 
 Questa esercitazione si concentra sull&#39;utilizzo dei notebook Jupyter, creati all&#39;interno di Data Science Workspace, per accedere, esplorare e visualizzare i dati. Al termine di questa esercitazione, è necessario conoscere alcune delle funzioni offerte dai notebook Jupyter per comprendere meglio i dati.
 
-Vengono introdotti i seguenti concetti:
+Sono introdotti i seguenti concetti:
 
-- **[!DNL JupyterLab]:**[!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906)è l&#39;interfaccia Web di nuova generazione per Project Jupyter ed è strettamente integrata in[!DNL Adobe Experience Platform].
+- **[!DNL JupyterLab]:** [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) è l&#39;interfaccia Web di nuova generazione per Project Jupyter ed è strettamente integrata in [!DNL Adobe Experience Platform].
 - **Batch:** I set di dati sono costituiti da batch. Un batch è un insieme di dati raccolti in un periodo di tempo ed elaborati insieme come un&#39;unica unità. Vengono creati nuovi batch quando i dati vengono aggiunti a un dataset.
-- **SDK accesso ai dati (obsoleto):** L&#39;SDK per l&#39;accesso ai dati ora è obsoleto. Per favore, usi la [!DNL Platform SDK](../authoring/platform-sdk.md) guida.
+- **SDK accesso ai dati (obsoleto):** L&#39;SDK per l&#39;accesso ai dati ora è obsoleto. Utilizzate la guida [[!DNL Platform SDK]](../authoring/platform-sdk.md) .
 
 ## Esplora i notebook in Data Science Workspace
 
@@ -52,7 +52,7 @@ La ricetta Vendite al dettaglio è un esempio standalone che utilizza lo stesso 
 
 >[!NOTE]
 >
->L&#39; `data_access_sdk_python` oggetto è obsoleto e non è più consigliato. Per convertire il codice, fai riferimento all’esercitazione sulla [conversione dell’SDK per l’accesso ai dati in Platform SDK](../authoring/platform-sdk.md) . Per questa esercitazione si applicano gli stessi passaggi indicati di seguito.
+>L&#39; `data_access_sdk_python` oggetto è obsoleto e non è più consigliato. Per convertire il codice, fai riferimento all’esercitazione sulla [conversione dell’SDK per l’accesso ai dati in SDK](../authoring/platform-sdk.md) per la piattaforma. Per questa esercitazione si applicano gli stessi passaggi indicati di seguito.
 
 Verranno analizzati l&#39;accesso ai dati internamente da [!DNL Adobe Experience Platform] e all&#39;esterno. Utilizzeremo la `data_access_sdk_python` libreria per accedere ai dati interni, ad esempio set di dati e schemi XDM. Per i dati esterni, utilizzeremo la [!DNL Python] libreria panda.
 
@@ -90,7 +90,7 @@ Ora, possiamo fare clic con il pulsante destro del mouse sul `Retail-Training-<y
 
 >[!TIP]
 >
->fare riferimento alla [!DNL Platform SDK](../authoring/platform-sdk.md) guida per convertire il codice.
+>fare riferimento alla guida [[!DNL Platform SDK]](../authoring/platform-sdk.md) per convertire il codice.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
@@ -158,7 +158,7 @@ Ora che conosciamo i nostri valori di frame dei dati, vogliamo completarli con v
 - [Matplotlib](https://matplotlib.org/)
 - [panda](https://pandas.pydata.org/)
 - [marinaio](https://seaborn.pydata.org/)
-- [ggplot](https://ggplot2.tidyverse.org/)
+- [pirata](https://ggplot2.tidyverse.org/)
 
 In questa sezione presenteremo rapidamente alcuni vantaggi per l&#39;utilizzo di ciascuna libreria.
 
