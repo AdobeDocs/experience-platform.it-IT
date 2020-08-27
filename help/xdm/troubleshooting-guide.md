@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida alla risoluzione dei problemi del sistema XDM (Experience Data Model)
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1816'
+source-wordcount: '1829'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # [!DNL Experience Data Model] (XDM) Guida alla risoluzione dei problemi di sistema
 
-Questo documento contiene le risposte alle domande frequenti sul sistema [!DNL Experience Data Model] (XDM) e una guida alla risoluzione dei problemi per individuare gli errori più comuni. Per domande e risoluzione dei problemi relativi ad altri servizi nel  Adobe Experience Platform, consultare la guida [alla risoluzione dei problemi del](../landing/troubleshooting.md)Experience Platform.
+Questo documento contiene le risposte alle domande frequenti sul sistema [!DNL Experience Data Model] (XDM) e una guida alla risoluzione dei problemi per individuare gli errori più comuni. Per domande e risoluzione dei problemi relativi ad altri servizi Adobe Experience Platform, consulta la guida [alla risoluzione dei problemi del Experience Platform](../landing/troubleshooting.md).
 
-**[!DNL Experience Data Model](XDM)**è una specifica open-source che definisce schemi standardizzati per la gestione dell&#39;esperienza cliente. La metodologia su cui[!DNL Experience Platform]è costruito,**XDM System **, rende operativi[!DNL Experience Data Model]gli schemi per l&#39;uso da parte dei[!DNL Platform]servizi. L&#39;**[!DNL Schema Registry]**applicazione fornisce un&#39;interfaccia utente e un&#39;API RESTful per accedere all&#39;**[!DNL Schema Library]**interno[!DNL Experience Platform]. See the[XDM documentation](home.md)for more information.
+**[!DNL Experience Data Model](XDM)** è una specifica open-source che definisce schemi standardizzati per la gestione dell&#39;esperienza cliente. La metodologia su cui [!DNL Experience Platform] è costruito, **XDM System**, rende operativi [!DNL Experience Data Model] gli schemi per l&#39;uso da parte dei [!DNL Platform] servizi. L&#39; **[!DNL Schema Registry]** applicazione fornisce un&#39;interfaccia utente e un&#39;API RESTful per accedere all&#39; **[!DNL Schema Library]** interno [!DNL Experience Platform]. See the [XDM documentation](home.md) for more information.
 
 ## Domande frequenti
 
@@ -24,7 +24,7 @@ Di seguito è riportato un elenco di risposte alle domande frequenti sul sistema
 
 ### Come si aggiungono i campi a uno schema?
 
-È possibile aggiungere campi a uno schema utilizzando un mixin. Ciascun mixin è compatibile con una o più classi, consentendo l&#39;utilizzo del mixin in qualsiasi schema che implementa una di queste classi compatibili. Mentre  Adobe Experience Platform fornisce diversi mixin di settore con i propri campi predefiniti, potete aggiungere i vostri campi a uno schema creando nuovi mixin utilizzando l&#39;API o l&#39;interfaccia utente.
+È possibile aggiungere campi a uno schema utilizzando un mixin. Ciascun mixin è compatibile con una o più classi, consentendo l&#39;utilizzo del mixin in qualsiasi schema che implementa una di queste classi compatibili. Adobe Experience Platform fornisce diversi mixin di settore con campi predefiniti, ma è possibile aggiungere campi personalizzati a uno schema creando nuovi mixin utilizzando l&#39;API o l&#39;interfaccia utente.
 
 Per informazioni dettagliate sulla creazione di nuovi mixin nell&#39;API, consultate [Creare un documento mixin](api/create-mixin.md) nella guida per gli sviluppatori di [!DNL Schema Registry] API. Se si utilizza l&#39;interfaccia utente, vedere l&#39;esercitazione [Editor](./tutorials/create-schema-ui.md)schema.
 
@@ -38,11 +38,11 @@ Per informazioni dettagliate sulla creazione di nuovi mixin nell&#39;API, consul
 
 Tutte [!DNL Schema Registry] le risorse (schemi, mixin, tipi di dati, classi) dispongono di un URI che funge da ID univoco a scopo di riferimento e di ricerca. Quando si visualizza uno schema nell&#39;API, questo si trova negli attributi `$id` e `meta:altId` di livello principale.
 
-Per ulteriori informazioni, vedete la sezione Identificazione [dello](api/getting-started.md#schema-identification) schema nella guida per gli sviluppatori di [!DNL Schema Registry] API.
+Per ulteriori informazioni, consultate la sezione Identificazione [dello](api/getting-started.md#schema-identification) schema nella guida per gli sviluppatori di [!DNL Schema Registry] API.
 
 ### Quando inizia uno schema per impedire l&#39;interruzione delle modifiche?
 
-È possibile apportare modifiche allo schema a condizione che non sia mai stato utilizzato nella creazione di un dataset o sia abilitato per l&#39;uso in [!DNL Real-time Customer Profile](../profile/home.md). Una volta che uno schema è stato utilizzato nella creazione del set di dati o è abilitato per l&#39;uso con [!DNL Real-time Customer Profile], le regole di Evoluzione [](schema/composition.md#evolution) schema vengono applicate in modo rigoroso dal sistema.
+È possibile apportare modifiche allo schema purché non siano mai state utilizzate per la creazione di un dataset o siano abilitate per l&#39;uso in [[!DNL Profilo cliente in tempo reale]](../profile/home.md). Una volta che uno schema è stato utilizzato nella creazione del set di dati o è abilitato per l&#39;uso con [!DNL Real-time Customer Profile], le regole di Evoluzione [](schema/composition.md#evolution) schema vengono applicate in modo rigoroso dal sistema.
 
 ### Qual è la dimensione massima di un tipo di campo lungo?
 
@@ -52,7 +52,7 @@ Per ulteriori informazioni sui tipi di campo, consultate la sezione [Definizione
 
 ### Come si definiscono le identità per lo schema?
 
-In [!DNL Experience Platform], le identità vengono utilizzate per identificare un oggetto (in genere una singola persona) indipendentemente dalle origini dei dati che vengono interpretate. Sono definiti negli schemi contrassegnando i campi chiave come &quot;Identità&quot;. I campi comunemente utilizzati per l&#39;identità includono indirizzo e-mail, numero di telefono, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/it-IT/id-service/using/home.html)ID CRM e altri campi ID univoci.
+In [!DNL Experience Platform], le identità vengono utilizzate per identificare un oggetto (in genere una singola persona) indipendentemente dalle origini dei dati che vengono interpretate. Sono definiti negli schemi contrassegnando i campi chiave come &quot;Identità&quot;. I campi utilizzati comunemente per l&#39;identità includono indirizzo e-mail, numero di telefono, [[!DNL  ID Experience Cloud (ECID)]](https://docs.adobe.com/content/help/it-IT/id-service/using/home.html), ID CRM e altri campi ID univoci.
 
 I campi possono essere contrassegnati come identità tramite l&#39;API o l&#39;interfaccia utente.
 
@@ -76,7 +76,7 @@ Le identità principali sono facoltative, poiché gli schemi possono avere 0 o 1
 
 ### Come si abilita uno schema da utilizzare in [!DNL Real-time Customer Profile]?
 
-Gli schemi sono attivati per essere utilizzati [!DNL Real-time Customer Profile](../profile/home.md) tramite l&#39;aggiunta di un tag &quot;unione&quot;, situato nell&#39; `meta:immutableTags` attributo dello schema. Per attivare uno schema da utilizzare con [!DNL Profile] è possibile utilizzare l&#39;API o l&#39;interfaccia utente.
+Gli schemi sono abilitati per l&#39;utilizzo in [[!DNL Profilo cliente in tempo reale]](../profile/home.md) tramite l&#39;aggiunta di un tag &quot;unione&quot;, situato nell&#39; `meta:immutableTags` attributo dello schema. Per attivare uno schema da utilizzare con [!DNL Profile] è possibile utilizzare l&#39;API o l&#39;interfaccia utente.
 
 #### Abilitazione di uno schema esistente per [!DNL Profile] l&#39;utilizzo dell&#39;API
 
