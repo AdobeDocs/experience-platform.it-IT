@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;access control;adobe admin console
 solution: Experience Platform
-title: Panoramica sul controllo degli accessi
 topic: overview
+title: Panoramica sul controllo degli accessi
+description: Il controllo degli accessi per Adobe Experience Platform è fornito tramite Adobe Admin Console. Questa funzionalità sfrutta i profili di prodotto in  Admin Console, che collegano gli utenti con autorizzazioni e sandbox.
 translation-type: tm+mt
-source-git-commit: e66fd20eb7a153e556a3716bb255af084e52292e
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1028'
+source-wordcount: '1056'
 ht-degree: 2%
 
 ---
@@ -62,7 +63,7 @@ Per ulteriori informazioni sulle sandbox in [!DNL Experience Platform], consulta
 
 ### Accesso alle sandbox
 
-L&#39;accesso alle sandbox è gestito tramite i profili di prodotto. Per istruzioni dettagliate su come abilitare l&#39;accesso a una sandbox per un profilo di prodotto, consultate la guida [utente per il controllo](./ui/overview.md)degli accessi.
+L&#39;accesso alle sandbox viene gestito tramite i profili di prodotto. Per istruzioni dettagliate su come abilitare l&#39;accesso a una sandbox per un profilo di prodotto, consultate la guida [utente per il controllo](./ui/overview.md)degli accessi.
 
 Agli utenti può essere concesso l&#39;accesso a una o più sandbox all&#39;interno di un profilo di prodotto. Se un utente è incluso in due o più profili di prodotto, avrà accesso a tutte le sandbox incluse in tali profili.
 
