@@ -5,9 +5,9 @@ title: Guida utente del profilo cliente in tempo reale
 topic: guide
 description: Profilo cliente in tempo reale crea una visualizzazione olistica di ciascuno dei tuoi clienti, combinando dati da più canali tra cui dati online, offline, CRM e di terze parti. Questo documento funge da guida per l'interazione con il profilo cliente in tempo reale nell'interfaccia utente di Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1151'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -23,13 +23,13 @@ Questo documento funge da guida per l’interazione con [!DNL Real-time Customer
 
 Questa guida utente richiede una comprensione dei vari [!DNL Experience Platform] servizi di gestione [!DNL Real-time Customer Profiles]. Prima di leggere questa guida utente, consulta la documentazione relativa ai seguenti servizi:
 
-* [!DNL Real-time Customer Profile](../home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-* [!DNL Identity Service](../../identity-service/home.md): Consente [!DNL Real-time Customer Profile] di collegare identità da origini dati diverse durante l&#39;assimilazione [!DNL Platform].
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
+* [[!DNL Profilo cliente in tempo reale]](../home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Identity Service]](../../identity-service/home.md): Consente [!DNL Real-time Customer Profile] di collegare identità da origini dati diverse durante l&#39;assimilazione [!DNL Platform].
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
 
 ## Panoramica
 
-Nella [!DNL Experience Platform UI](http://platform.adobe.com), fare clic **[!UICONTROL Profiles]** nella barra di navigazione a sinistra per aprire la _[!UICONTROL Overview]_scheda. Questa scheda fornisce collegamenti alla documentazione e ai video per agevolare la comprensione e l&#39;utilizzo dei profili.
+Nell&#39;interfaccia [[!DNL  Experience Platform]](http://platform.adobe.com), fare clic **[!UICONTROL Profiles]** nella barra di navigazione a sinistra per aprire la _[!UICONTROL Overview]_scheda. Questa scheda fornisce collegamenti alla documentazione e ai video per agevolare la comprensione e l&#39;utilizzo dei profili.
 
 ![](../images/user-guide/profiles-overview.png)
 
