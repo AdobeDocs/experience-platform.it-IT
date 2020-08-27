@@ -5,9 +5,9 @@ title: Creazione di un segmento
 topic: tutorial
 description: Questo documento fornisce un'esercitazione per lo sviluppo, il test, la visualizzazione in anteprima e il salvataggio di una definizione di segmento mediante l'API di Adobe Experience Platform Segmentation Service.
 translation-type: tm+mt
-source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '916'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Creazione di un segmento
 
-Questo documento fornisce un’esercitazione per lo sviluppo, il test, l’anteprima e il salvataggio di una definizione di segmento tramite [!DNL Adobe Experience Platform Segmentation Service API](../api/getting-started.md).
+Questo documento fornisce un&#39;esercitazione per lo sviluppo, il test, l&#39;anteprima e il salvataggio di una definizione di segmento mediante l&#39;API [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
 
 Per informazioni su come creare segmenti utilizzando l’interfaccia utente, consulta la guida [di](../ui/overview.md)Segment Builder (Generatore di segmenti).
 
@@ -23,9 +23,9 @@ Per informazioni su come creare segmenti utilizzando l’interfaccia utente, con
 
 Questa esercitazione richiede una conoscenza approfondita dei vari [!DNL Adobe Experience Platform] servizi coinvolti nella creazione di segmenti di pubblico. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
-- [!DNL Real-time Customer Profile](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-- [!DNL Adobe Experience Platform Segmentation Service](../home.md): Consente di creare segmenti di pubblico dai dati del profilo cliente in tempo reale.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
+- [[!DNL Profilo cliente in tempo reale]](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Consente di creare segmenti di pubblico dai dati del profilo cliente in tempo reale.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per eseguire correttamente le chiamate alle [!DNL Platform] API.
 
