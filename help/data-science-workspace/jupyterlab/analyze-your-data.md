@@ -5,7 +5,7 @@ title: Analizzare i dati utilizzando i notebook
 topic: Tutorial
 description: Questa esercitazione si concentra sull'utilizzo dei notebook Jupyter, creati all'interno di Data Science Workspace, per accedere, esplorare e visualizzare i dati.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 33b14fed0d52792de0486897c11dd86c1ea2dd45
 workflow-type: tm+mt
 source-wordcount: '1731'
 ht-degree: 0%
@@ -91,7 +91,7 @@ Ora, possiamo fare clic con il pulsante destro del mouse sul `Retail-Training-<y
 
 >[!TIP]
 >
->fare riferimento alla guida [[!DNL Platform SDK]](../authoring/platform-sdk.md) per convertire il codice.
+>Fate riferimento alla guida [[!DNL Platform SDK]](../authoring/platform-sdk.md) per convertire il codice.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
