@@ -5,9 +5,9 @@ title: Filtra i dati del catalogo utilizzando i parametri di query
 topic: developer guide
 description: L'API Catalog Service consente di filtrare i dati delle risposte utilizzando i parametri di query della richiesta. Parte delle best practice per Catalog consiste nell’utilizzare i filtri in tutte le chiamate API, in quanto riducono il carico sull’API e contribuiscono a migliorare le prestazioni complessive.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '2085'
+source-wordcount: '2084'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 L&#39; [!DNL Catalog Service] API consente di filtrare i dati di risposta mediante l&#39;uso di parametri di query di richiesta. Parte delle best practice per [!DNL Catalog] è utilizzare i filtri in tutte le chiamate API, in quanto riducono il carico sull&#39;API e contribuiscono a migliorare le prestazioni complessive.
 
-Questo documento illustra i metodi più comuni per filtrare [!DNL Catalog] gli oggetti nell&#39;API. È consigliabile fare riferimento a questo documento durante la lettura della guida [per gli sviluppatori di](getting-started.md) Catalog per ulteriori informazioni su come interagire con l&#39; [!DNL Catalog] API. Per informazioni generali su [!DNL Catalog Service]questo argomento, consultate la panoramica [](../home.md)Catalogo.
+Questo documento illustra i metodi più comuni per filtrare [!DNL Catalog] gli oggetti nell&#39;API. È consigliabile fare riferimento a questo documento durante la lettura della guida [per gli sviluppatori di](getting-started.md) Catalog per ulteriori informazioni su come interagire con l&#39; [!DNL Catalog] API. Per ulteriori informazioni generali su [!DNL Catalog Service], consultate la [[!DNL Catalog] panoramica](../home.md).
 
 ## Limite oggetti restituiti
 
