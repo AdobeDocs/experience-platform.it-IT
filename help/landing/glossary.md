@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Documentazione del prodotto Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: c91bcdff5b57ef69f79e211fbeb912e3d7fcdb39
+source-git-commit: 18ea9482b9c6691c6326d91b2d0d3da9a8dc7195
 workflow-type: tm+mt
-source-wordcount: '7236'
+source-wordcount: '7178'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 **Attiva:** In [!DNL Real-time Customer Data Platform], activate è l&#39;azione eseguita da un utente per mappare uno o più segmenti su una destinazione come [!DNL Oracle Eloqua], [!DNL Google]o [!DNL Salesforce Marketing Cloud].
 
-**Attività:** In [!DNL Decisioning Service], un&#39;attività è un insieme di offerte che l&#39;esperto di marketing desidera che il motore decisionale selezioni l&#39;offerta migliore da.
+**Attività:** In [!DNL Offer Decisioning]un&#39;attività è un insieme di offerte che l&#39;esperto di marketing desidera che il motore decisionale selezioni l&#39;offerta migliore da.
 
 **Amministratore:** Uno o più utenti nell’organizzazione che possono configurare e personalizzare le autorizzazioni per  Experience Platform.
 
@@ -33,8 +33,6 @@ ht-degree: 0%
 **Connettori  Adobe:**  Connettori Adobe sono connessioni preconfigurate create dal Adobe  per consentire lo scorrimento dei dati in entrata e in uscita [!DNL Experience Platform]. I connettori includono [!DNL Microsoft Dynamics], [!DNL Salesforce], [!DNL Amazon S3]e [!DNL Azure Blob].
 
 **Adobe Experience Platform:** Adobe Experience Platform standardizza dati e contenuti a livello aziendale, fornendo profili in tempo reale ai consumatori, consentendo la scienza dei dati e accelerando la velocità dei contenuti per indirizzare la personalizzazione dell&#39;esperienza attraverso il percorso del cliente.
-
-**Adobe Experience Platform Decisioning Service** sfrutta il profilo cliente in tempo reale per determinare la scelta più probabile che un cliente effettuerà da una serie di opzioni, in base ai dati comportamentali che Profile estrae dai set di dati abilitati.
 
 **Adobe Experience Platform Launch:** [!DNL Launch] è un ecosistema di gestione tag e SDK, integrato con [!DNL Experience Platform] e [!DNL Experience Cloud] applicazioni. [!DNL Launch] fornisce strumenti per distribuire, unificare e gestire le integrazioni di analisi, marketing e pubblicità necessarie per fornire esperienze cliente rilevanti su tutti i dispositivi client.
 
@@ -98,7 +96,7 @@ ht-degree: 0%
 
 ## C
 
-**Capping:** Nelle [!DNL Decisioning Service]regole di decisione, il limite massimo viene utilizzato per definire quante volte viene presentata un&#39;offerta. Ci sono due tipi di tappi, quante volte un&#39;offerta può essere proposta tra il pubblico target combinato, noto anche come &quot;Global Cap&quot; e quante volte un&#39;offerta può essere proposta allo stesso utente finale, noto anche come &quot;Profile Cap&quot;.
+**Capping:** In [!DNL Offer Decisioning], il limite massimo viene utilizzato nelle regole di decisione per definire quante volte viene presentata un&#39;offerta. Esistono due tipi di estremità: quante volte un&#39;offerta può essere proposta tra il pubblico target combinato, noto anche come &quot;Global Cap&quot;, e quante volte un&#39;offerta può essere proposta allo stesso utente finale, noto anche come &quot;Profile Cap&quot;.
 
 **Catalogo:** In [!DNL Real-time Customer Data Platform]origini e destinazioni, un catalogo è una galleria con i collegamenti disponibili alle applicazioni  Adobe e alle tecnologie di terze parti.
 
@@ -106,7 +104,7 @@ ht-degree: 0%
 
 **Client:** Un client è uno strumento o un&#39;applicazione esterna che si connette [!DNL Query Service] tramite il protocollo postgres o l&#39;API HTTP.
 
-**Raccolta:** In [!DNL Decisioning Service], le raccolte sono sottoinsiemi di offerte basate su condizioni predefinite definite da un esperto di marketing, ad esempio la categoria dell&#39;offerta.
+**Raccolta:** In [!DNL Offer Decisioning], le raccolte sono sottoinsiemi di offerte basate su condizioni predefinite definite da un esperto di marketing, ad esempio la categoria dell&#39;offerta.
 
 **Combinazione con PII Marketing Action** Un&#39;azione di marketing che combina qualsiasi informazione identificabile personalmente (PII) con dati anonimi. I contratti per i dati originati da reti pubblicitarie, server di annunci e provider di dati di terze parti spesso includono specifici divieti contrattuali sull&#39;uso di tali dati con dati direttamente identificabili.
 
@@ -202,7 +200,7 @@ ht-degree: 0%
 
 **Evento decisionale:** Un evento decisionale è utilizzato per acquisire le osservazioni sul risultato e il contesto di un&#39;attività decisionale. L&#39;evento di decisione raccoglie informazioni su come la decisione presa, quando si è verificata, quali opzioni sono state proposte (scelte) e quale stato contestuale esisteva che ha influenzato la decisione o che poteva essere osservato durante il processo decisionale. L&#39;evento di decisione acquisisce anche l&#39;ID della proposta, un identificatore univoco globale che può essere utilizzato per correlare la decisione ad altri eventi.
 
-**Regola decisionale:** In [!DNL Decisioning Service], una regola di decisione è la logica che definisce e controlla cosa, quando, dove e come un&#39;offerta viene presentata agli utenti finali.
+**Regola decisionale:** Una regola di decisione è la logica che definisce e controlla cosa, quando, dove e come un&#39;offerta viene presentata agli utenti finali.
 
 **Servizio di disattivazione:** È [!DNL Decisioning Service] una raccolta di servizi e di interfaccia utente che consente agli esperti di marketing di creare e fornire esperienze di offerta personalizzate dall&#39;utente finale tra canali e applicazioni utilizzando regole di business logic e decisionali.
 
@@ -226,9 +224,9 @@ ht-degree: 0%
 
 ## E
 
-**Offerta valida:** In [!DNL Decisioning Service], un&#39;offerta idonea soddisfa i vincoli definiti a monte che possono essere offerti in modo coerente a un profilo.
+**Offerta valida:** Un&#39;offerta idonea soddisfa i vincoli definiti a monte che possono essere offerti in modo coerente a un profilo.
 
-**Regole idonee:** In [!DNL Decisioning Service], le regole di idoneità vengono applicate a un profilo correlato ai vincoli di calendario, pianificazione e limitazione.
+**Regole idonee:** In [!DNL Offer Decisioning], le regole di idoneità vengono applicate a un profilo correlato ai vincoli di calendario, pianificazione e limitazione.
 
 **Azione** di marketing di targeting e-mail Un&#39;azione di marketing che utilizza i dati nelle campagne di targeting e-mail.
 
@@ -260,7 +258,7 @@ ht-degree: 0%
 
 ## F
 
-**Offerte di fallback:** In [!DNL Decisioning Service], Un&#39;offerta di fallback è l&#39;offerta predefinita visualizzata quando un utente finale non è idoneo per nessuna delle offerte della raccolta utilizzata.
+**Offerte di fallback:** Un&#39;offerta di fallback è l&#39;offerta predefinita visualizzata quando un utente finale non è idoneo per nessuna delle offerte della raccolta utilizzata.
 
 **Mappatura delle funzioni:** La mappatura delle funzioni si riferisce al processo di mappatura delle funzioni dai dati alle funzioni di input e destinazione richieste da un modello di apprendimento automatico.
 
@@ -372,11 +370,11 @@ ht-degree: 0%
 
 ## O
 
-**Offerta:** In [!DNL Decisioning Service], un&#39;offerta è un messaggio di marketing a cui possono essere associate delle regole che specificano gli utenti idonei per visualizzare l&#39;offerta.
+**Offerta:** Un&#39;offerta è un messaggio di marketing a cui possono essere associate delle regole, che specifica chi è idoneo a visualizzare l&#39;offerta.
 
-**Decisioni offerte:** Nel [!DNL Decisioning Service]modulo di decisione delle offerte, un esperto di marketing può gestire le regole e i modelli di proposte di offerta preparati quando interagisce con un utente finale sulla base dei dati raccolti tra canali e applicazioni.
+**Decisioni offerte:** La decisione delle offerte consente agli esperti di marketing di gestire le regole e i modelli formati di proposte quando interagiscono con un utente finale in base ai dati raccolti tra canali e applicazioni.
 
-**Libreria offerte:** Nella [!DNL Decisioning Service]libreria dell&#39;offerta è una libreria centrale utilizzata per gestire offerte personalizzate e di fallback, regole decisionali e attività.
+**Libreria offerte:** La libreria delle offerte è una libreria centrale utilizzata per gestire offerte personalizzate e di fallback, regole decisionali e attività.
 
 **Azione** di marketing per la personalizzazione di siti Un&#39;azione di marketing che utilizza i dati per la personalizzazione di contenuti on-site. Per personalizzazione in sito si intende qualsiasi dato utilizzato per fare deduzioni sugli interessi degli utenti e utilizzato per selezionare quali contenuti o annunci vengono serviti in base a tali inferenze.
 
@@ -394,9 +392,9 @@ ht-degree: 0%
 
 **File Parquet:** Un file parquet è un formato di file di memorizzazione columnar con complesse strutture di dati nidificate. I file di parquet sono necessari per aggiungere dati per compilare un set di dati dello schema.
 
-**Offerte personalizzate:** In [!DNL Decisioning Service], un&#39;offerta personalizzata è un messaggio di marketing personalizzabile basato su regole e vincoli di idoneità.
+**Offerte personalizzate:** Un&#39;offerta personalizzata è un messaggio di marketing personalizzabile basato su regole e vincoli di idoneità.
 
-**Posizionamenti:** In [!DNL Decisioning Service], per posizione si intende la posizione e il contesto in cui un&#39;offerta viene visualizzata per l&#39;utente finale.
+**Posizionamenti:** Un posizionamento è la posizione e il contesto in cui un&#39;offerta viene visualizzata per un utente finale.
 
 **Area di lavoro** Criteri Consente agli amministratori dei dati di visualizzare e gestire le etichette di base e personalizzate per l&#39;organizzazione.
 
@@ -406,7 +404,7 @@ ht-degree: 0%
 
 **Chiave principale:** La chiave primaria è una designazione in uno schema per identificare in modo univoco tutti i record.
 
-**Priorità:** In [!DNL Decisioning Service], la priorità viene utilizzata per classificare le offerte che soddisfano tutti i vincoli, ad esempio i requisiti di idoneità, il calendario e i limiti.
+**Priorità:** In [!DNL Offer Decisioning], la priorità viene utilizzata per classificare le offerte che soddisfano tutti i vincoli, ad esempio i requisiti di idoneità, il calendario e i limiti.
 
 **Grafico identità privata:** Private Identity Graph è una mappa privata di relazioni tra identità collegate e unite che sono visibili solo dalla tua organizzazione e sono basate sui dati di prime parti.
 
@@ -448,7 +446,7 @@ ht-degree: 0%
 
 **Ricorrenza:** Una ricorrenza definisce se una [!DNL Query Service] query deve essere eseguita una sola volta o su base ricorrente.
 
-**Rappresentazione:** Per [!DNL Decisioning Service]rappresentazione si intendono le informazioni utilizzate da un canale, ad esempio posizione o lingua per visualizzare un&#39;offerta.
+**Rappresentazione:** In [!DNL Offer Decisioning]una rappresentazione sono informazioni utilizzate da un canale, ad esempio posizione o lingua per visualizzare un&#39;offerta.
 
 **Risorsa:** In [!DNL Experience Platform Launch], resource è un termine generico che fa riferimento alle opzioni che l&#39; [!DNL Launch] utente può configurare all&#39;interno dell&#39;ambiente client, incluse estensioni, elementi di dati e regole.
 
