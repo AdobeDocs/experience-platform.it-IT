@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data governance;data usage label;policy service;data usage labels user guide
 solution: Experience Platform
 title: Guida utente etichette di utilizzo dati
 topic: labels
+description: Questa guida utente descrive i passaggi necessari per utilizzare le etichette di utilizzo dei dati (dette anche etichette DULE) nell'interfaccia utente di Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 2fdab7d984a7368df77110f8ba0e0ba687e96d7e
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: '1068'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,7 @@ Questa guida utente descrive i passaggi necessari per utilizzare le etichette di
 
 ## Gestione delle etichette di utilizzo dei dati a livello di dataset
 
-Per gestire le etichette di utilizzo dei dati a livello di dataset, è necessario selezionare un dataset esistente o crearne uno nuovo. Dopo aver effettuato l&#39;accesso  Adobe Experience Platform, selezionate **[!UICONTROL Datasets]** nella navigazione a sinistra per aprire l&#39;area di lavoro _Set_ dati. In questa pagina sono elencati tutti i set di dati creati appartenenti alla propria organizzazione, insieme a utili dettagli relativi a ciascun set di dati.
+Per gestire le etichette di utilizzo dei dati a livello di dataset, è necessario selezionare un dataset esistente o crearne uno nuovo. Dopo aver effettuato l&#39;accesso ad Adobe Experience Platform, selezionare **[!UICONTROL Datasets]** nella barra di navigazione a sinistra per aprire l&#39;area di lavoro _Set_ dati. In questa pagina sono elencati tutti i set di dati creati appartenenti alla propria organizzazione, insieme a utili dettagli relativi a ciascun set di dati.
 
 ![Scheda Set di dati in Area di lavoro dati](../images/labels/datasets.png)
 
@@ -60,7 +61,7 @@ Per modificare le etichette di utilizzo dei dati a livello di dataset, fare clic
 
 ![Modificare le etichette a livello di set di dati](../images/labels/dataset_labels_edit_button.png)
 
-Viene visualizzata _[!UICONTROL Edit Governance Labels]_la finestra di dialogo. Nella finestra di dialogo, selezionare le caselle accanto alle etichette che si desidera applicare al set di dati. Ricordate che queste etichette saranno ereditate da tutti i campi all&#39;interno del dataset. L’_[!UICONTROL Applied Labels]_ intestazione viene aggiornata mentre selezionate ogni casella, mostrando le etichette selezionate. Dopo aver selezionato le etichette desiderate, fate clic su **[!UICONTROL Save Changes]**.
+Viene visualizzata _[!UICONTROL Edit Governance Labels]_la finestra di dialogo. Nella finestra di dialogo, selezionare le caselle accanto alle etichette che si desidera applicare al set di dati. Ricordate che queste etichette saranno ereditate da tutti i campi all&#39;interno del dataset. L&#39;_[!UICONTROL Applied Labels]_ intestazione viene aggiornata mentre selezionate ogni casella, mostrando le etichette selezionate. Dopo aver selezionato le etichette desiderate, fate clic su **[!UICONTROL Save Changes]**.
 
 <img alt="Applica etichette di governance a livello di set di dati" src="../images/labels/apply-labels-dataset.png" width="700"><br>
 
@@ -112,7 +113,7 @@ Viene visualizzata *[!UICONTROL Create label]* la finestra di dialogo. Da qui, f
 * **[!UICONTROL Name]**: Un nome visualizzato intuitivo per l&#39;etichetta.
 * **[!UICONTROL Description]**: (Facoltativo) Descrizione dell&#39;etichetta per fornire ulteriore contesto.
 
-Al termine, fate clic **[!UICONTROL Create]**.
+Al termine, fai clic su **[!UICONTROL Create]**.
 
 ![](../images/labels/create-label.png)
 
