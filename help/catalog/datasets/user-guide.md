@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida utente dei set di dati
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1088'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ Questa guida utente fornisce istruzioni sull&#39;esecuzione delle azioni comuni 
 Questa guida utente richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [Set](overview.md)di dati: Il concetto di storage e gestione per la persistenza dei dati in [!DNL Experience Platform].
-* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
    * [Nozioni di base sulla composizione](../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
    * [Editor](../../xdm/tutorials/create-schema-ui.md)schema: Scoprite come creare schemi XDM personalizzati utilizzando l&#39; [!DNL Schema Editor] interfaccia [!DNL Platform] utente.
-* [!DNL Real-time Customer Profile](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-* [!DNL Data Governance](../../data-governance/home.md): Assicurati la conformità a normative, restrizioni e criteri relativi all&#39;utilizzo dei dati dei clienti.
+* [[!DNL Profilo cliente in tempo reale]](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Data Governance]](../../data-governance/home.md): Assicurati la conformità a normative, restrizioni e criteri relativi all&#39;utilizzo dei dati dei clienti.
 
 ## Visualizzare i set di dati
 
