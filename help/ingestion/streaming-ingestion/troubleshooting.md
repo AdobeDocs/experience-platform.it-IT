@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Risoluzione dei problemi di caricamento in streaming
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '991'
 ht-degree: 0%
 
 ---
@@ -100,4 +100,4 @@ Se [!DNL Real-time Customer Profile] rifiuta un messaggio, è probabile che sia 
 
 Esistono due tipi di spazi dei nomi di identità: predefinito e personalizzato. Quando si utilizzano spazi dei nomi personalizzati, assicurarsi che lo spazio dei nomi sia stato registrato all&#39;interno di [!DNL Identity Service]. Per ulteriori informazioni sull&#39;utilizzo degli spazi dei nomi predefiniti e personalizzati, consultate la panoramica [dello spazio dei nomi](../../identity-service/namespaces.md) identità.
 
-Puoi utilizzare il [!DNL Experience Platform UI](https://platform.adobe.com) per visualizzare ulteriori informazioni sul motivo per cui un messaggio non è stato inviato correttamente. Fai clic **[!UICONTROL Monitoring]** nella barra di navigazione a sinistra, quindi visualizza la _[!UICONTROL Streaming end-to-end]_scheda per visualizzare i batch di messaggi in streaming durante un periodo di tempo selezionato.
+Puoi utilizzare l&#39; [[!DNL  interfaccia utente del Experience Platform]](https://platform.adobe.com) per visualizzare ulteriori informazioni sul motivo per cui un&#39;assimilazione non riuscita di un messaggio. Fai clic **[!UICONTROL Monitoring]** nella barra di navigazione a sinistra, quindi visualizza la _[!UICONTROL Streaming end-to-end]_scheda per visualizzare i batch di messaggi in streaming durante un periodo di tempo selezionato.
