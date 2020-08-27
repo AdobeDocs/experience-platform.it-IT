@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Elaborazione delle richieste di privacy in Real-time Customer Profile
 topic: overview
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '598'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Elaborazione delle richieste di privacy in [!DNL Real-time Customer Profile]
 
- Adobe Experience Platform [!DNL Privacy Service] elabora le richieste dei clienti di accedere, rifiutare la vendita o cancellare i propri dati personali, come delineato dalle normative sulla privacy, quali il Regolamento generale sulla protezione dei dati (General Data Protection Regulation, GDPR) e [!DNL California Consumer Privacy Act] (CCPA).
+Adobe Experience Platform [!DNL Privacy Service] elabora le richieste dei clienti di accedere, rifiutare la vendita o cancellare i propri dati personali, così come delineati dalle normative sulla privacy, quali il Regolamento generale sulla protezione dei dati (General Data Protection Regulation, GDPR) e [!DNL California Consumer Privacy Act] (CCPA).
 
 Il presente documento illustra i concetti essenziali relativi all’elaborazione delle richieste di privacy per [!DNL Real-time Customer Profile].
 
@@ -22,13 +22,13 @@ Il presente documento illustra i concetti essenziali relativi all’elaborazione
 
 Prima di leggere la presente guida è consigliabile conoscere i seguenti [!DNL Experience Platform] servizi:
 
-* [!DNL Privacy Service](home.md): Gestisce le richieste dei clienti relative all&#39;accesso, al rifiuto della vendita o all&#39;eliminazione dei loro dati personali tra le applicazioni Adobe Experience Cloud.
-* [!DNL Identity Service](../identity-service/home.md): Risolve la sfida fondamentale rappresentata dalla frammentazione dei dati relativi all&#39;esperienza dei clienti attraverso il collegamento di identità tra dispositivi e sistemi.
-* [!DNL Real-time Customer Profile](../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!Privacy Service DNL]](home.md): Gestisce le richieste dei clienti relative all&#39;accesso, al rifiuto della vendita o all&#39;eliminazione dei loro dati personali tra le applicazioni Adobe Experience Cloud.
+* [[!DNL Identity Service]](../identity-service/home.md): Risolve la sfida fondamentale rappresentata dalla frammentazione dei dati relativi all&#39;esperienza dei clienti attraverso il collegamento di identità tra dispositivi e sistemi.
+* [[!DNL Profilo cliente in tempo reale]](../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
 ## Informazioni sugli spazi dei nomi delle identità {#namespaces}
 
- Adobe Experience Platform [!DNL Identity Service] collega i dati di identità dei clienti tra sistemi e dispositivi. [!DNL Identity Service] utilizza gli spazi dei nomi di **identità** per fornire contesto ai valori di identità collegandoli al loro sistema di origine. Uno spazio dei nomi può rappresentare un concetto generico come un indirizzo e-mail (&quot;E-mail&quot;) o associare l&#39;identità a un&#39;applicazione specifica, ad esempio un ID Adobe Advertising Cloud (&quot;AdCloud&quot;) o un ID Adobe Target  (&quot;TNTID&quot;).
+Adobe Experience Platform [!DNL Identity Service] collega i dati di identità dei clienti tra sistemi e dispositivi. [!DNL Identity Service] utilizza gli spazi dei nomi di **identità** per fornire contesto ai valori di identità collegandoli al loro sistema di origine. Uno spazio dei nomi può rappresentare un concetto generico come un indirizzo e-mail (&quot;E-mail&quot;) o associare l&#39;identità a un&#39;applicazione specifica, ad esempio un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o  Adobe Target ID (&quot;TNTID&quot;).
 
 Servizio identità mantiene un archivio di spazi dei nomi di identità globali (standard) e definiti dall’utente (personalizzati). Gli spazi dei nomi standard sono disponibili per tutte le organizzazioni (ad esempio, &quot;E-mail&quot; e &quot;ECID&quot;), mentre l&#39;organizzazione può anche creare spazi dei nomi personalizzati in base alle proprie esigenze.
 
