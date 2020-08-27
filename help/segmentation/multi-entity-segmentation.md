@@ -5,9 +5,9 @@ title: Segmentazione multi-entità
 topic: overview
 description: La segmentazione multi-entità è la capacità di estendere i dati del profilo con dati aggiuntivi basati su prodotti, store o altre classi non di profilo. Una volta connessi, i dati di altre classi diventano disponibili come se fossero nativi dello schema Profilo.
 translation-type: tm+mt
-source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
@@ -25,9 +25,9 @@ Per saperne di più sulla segmentazione multi-entità, continuate a leggere la d
 
 Questa esercitazione richiede una buona conoscenza dei diversi servizi Adobe Experience Platform coinvolti nell&#39;utilizzo della segmentazione. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
-- [!DNL Real-time Customer Profile](../profile/home.md): Fornisce un profilo del consumatore unificato in tempo reale, basato su dati aggregati provenienti da più origini.
+- [[!DNL Profilo cliente in tempo reale]](../profile/home.md): Fornisce un profilo del consumatore unificato in tempo reale, basato su dati aggregati provenienti da più origini.
 - [Servizio](./home.md)di segmentazione Adobe Experience Platform: Consente di creare segmenti dal profilo cliente in tempo reale.
-- [!DNL Experience Data Model (XDM)](../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
+- [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
 
 ## Come definire le relazioni XDM
 
