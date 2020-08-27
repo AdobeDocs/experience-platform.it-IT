@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Servizio query nel blocco appunti Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '769'
 ht-degree: 1%
 
 ---
@@ -27,14 +27,14 @@ Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prer
 - Un [!DNL Adobe Analytics] dataset
 
 - Una conoscenza approfondita dei seguenti concetti chiave utilizzati in questa esercitazione:
-   - [!DNL Experience Data Model (XDM) and XDM System](../../xdm/home.md)
-   - [!DNL Query Service](../../query-service/home.md)
-   - [!DNL Query Service SQL Syntax](../../query-service/sql/overview.md)
+   - [[!DNL Experience Data Model (XDM) e XDM System]](../../xdm/home.md)
+   - [[!DNL Query Service]](../../query-service/home.md)
+   - [[!Sintassi SQL servizio query DNL]](../../query-service/sql/overview.md)
    - [Adobe Analytics]
 
 ## Accesso [!DNL JupyterLab] e [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. In [!DNL Experience Platform](https://platform.adobe.com), andate **[!UICONTROL Notebooks]** dalla colonna di navigazione a sinistra. Lasciate che venga caricato JupyterLab al momento.
+1. In [[!DNL  Experience Platform]](https://platform.adobe.com), andate **[!UICONTROL Notebooks]** dalla colonna di navigazione a sinistra. Lasciate che venga caricato JupyterLab al momento.
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
