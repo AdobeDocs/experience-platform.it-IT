@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;Score a model;Data Science Workspace;popular topics
+keywords: Experience Platform;Score a model;Data Science Workspace;popular topics;sensei machine learning api
 solution: Experience Platform
 title: Punteggio di un modello (API)
 topic: Tutorial
+description: Questa esercitazione vi mostrerà come sfruttare le API di apprendimento di Sensei Machine per creare un esperimento e un'esecuzione di un esperimento.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '529'
 ht-degree: 1%
 
 ---
@@ -34,9 +35,9 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione  Adobe Experience Platform.\
+`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra unica integrazione con Adobe Experience Platform.\
 `{ACCESS_TOKEN}`: Il valore del token del portatore specificato dopo l&#39;autenticazione.\
-`{API_KEY}`: Il valore della chiave API specifico trovato nell&#39;integrazione del Adobe Experience Platform  univoco.\
+`{API_KEY}`: Il valore chiave API specifico trovato nella vostra integrazione Adobe Experience Platform univoca.\
 `{JSON_PAYLOAD}`: Oggetto Experience Run da inviare. L’esempio che utilizziamo nell’esercitazione è riportato di seguito:
 
 ```JSON
@@ -122,9 +123,9 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione  Adobe Experience Platform.\
+`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra unica integrazione con Adobe Experience Platform.\
 `{ACCESS_TOKEN}`: Il valore del token del portatore specificato dopo l&#39;autenticazione.\
-`{API_KEY}`: Il valore della chiave API specifico trovato nell&#39;integrazione del Adobe Experience Platform  univoco.\
+`{API_KEY}`: Il valore chiave API specifico trovato nella vostra integrazione Adobe Experience Platform univoca.\
 `{EXPERIMENT_ID}`: L’ID corrispondente all’esperimento di cui eseguire il targeting. Questo si trova nella risposta quando create il vostro esperimento.\
 `{JSON_PAYLOAD}`: Dati da registrare. L&#39;esempio che utilizziamo per questa esercitazione è il seguente:
 
@@ -187,7 +188,7 @@ curl -X GET \
 
 `{EXPERIMENT_ID}`:  L&#39;ID corrispondente all&#39;esperimento su cui si trova l&#39;esecuzione.\
 `{ACCESS_TOKEN}`: Il valore del token del portatore specificato dopo l&#39;autenticazione.\
-`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione  Adobe Experience Platform.
+`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra unica integrazione con Adobe Experience Platform.
 
 Poiché per un esperimento specifico sono presenti più esecuzioni sperimentali, la risposta restituita avrà un array di ID di esecuzione.
 
@@ -230,7 +231,7 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}`:  L’ID corrispondente all’esperimento.\
 `{ACCESS_TOKEN}`: Il valore del token del portatore specificato dopo l&#39;autenticazione.\
-`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra integrazione  Adobe Experience Platform.
+`{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra unica integrazione con Adobe Experience Platform.
 
 >[!NOTE]
 >
