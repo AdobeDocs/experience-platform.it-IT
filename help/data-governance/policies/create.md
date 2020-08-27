@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Creazione di un criterio di utilizzo dei dati
 topic: policies
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1186'
+source-wordcount: '1194'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Creare un criterio di utilizzo dei dati nell&#39;API
 
-L&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati (DULE) è il meccanismo fondamentale del  Adobe Experience Platform [!DNL Data Governance]. L&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE Policy Service consente di creare e gestire criteri DULE per determinare quali azioni di marketing possono essere eseguite rispetto ai dati che contengono determinate etichette DULE.
+L&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati (DULE) è il meccanismo principale di Adobe Experience Platform [!DNL Data Governance]. L&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE Policy Service consente di creare e gestire criteri DULE per determinare quali azioni di marketing possono essere eseguite rispetto ai dati che contengono determinate etichette DULE.
 
 Questo documento fornisce un&#39;esercitazione dettagliata per la creazione di un criterio DULE tramite l&#39; [!DNL Policy Service] API. Per una guida più completa alle diverse operazioni disponibili nell&#39;API, vedete la guida [per gli sviluppatori di](../api/getting-started.md)Policy Service.
 
@@ -22,9 +22,9 @@ Questo documento fornisce un&#39;esercitazione dettagliata per la creazione di u
 
 Questa esercitazione richiede una conoscenza approfondita dei seguenti concetti chiave relativi alla creazione e alla valutazione di criteri DULE:
 
-* [!DNL Data Governance](../home.md): Il framework in base al quale [!DNL Platform] viene applicata la conformità all&#39;utilizzo dei dati.
+* [[!DNL Data Governance]](../home.md): Il framework in base al quale [!DNL Platform] viene applicata la conformità all&#39;utilizzo dei dati.
 * [Etichette](../labels/overview.md)di utilizzo dati: Le etichette di utilizzo dei dati vengono applicate ai campi di dati XDM, specificando le restrizioni relative alle modalità di accesso ai dati.
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
 * [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 Prima di avviare questa esercitazione, consulta la guida [](../api/getting-started.md) allo sviluppatore per informazioni importanti che devi conoscere per effettuare correttamente chiamate all’ [!DNL Policy Service] API DULE, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
@@ -123,7 +123,7 @@ Una risposta di successo restituisce il numero totale di azioni di marketing tro
 
 Quando trovi l&#39;azione di marketing da utilizzare, registra il valore della relativa `href` proprietà. Questo valore viene utilizzato durante il passaggio successivo della [creazione di un criterio](#create-policy)DULE.
 
-### Creare una nuova azione di marketing {#create-new}
+### Create a new marketing action {#create-new}
 
 Puoi creare una nuova azione di marketing eseguendo una richiesta di PUT all’ `/marketingActions/custom/` endpoint e fornendo un nome per l’azione di marketing alla fine del percorso della richiesta.
 
@@ -187,7 +187,7 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e i dettagli dell�
 | --- | --- |
 | `_links.self.href` | ID URI dell’azione di marketing. |
 
-Registra l&#39;ID URI dell&#39;azione di marketing appena creata, che verrà utilizzata nel passaggio successivo per la creazione di un criterio DULE.
+Registra l&#39;ID URI dell&#39;azione di marketing appena creata, che verrà utilizzata nella fase successiva della creazione di un criterio DULE.
 
 ## Creare un criterio DULE {#create-policy}
 
