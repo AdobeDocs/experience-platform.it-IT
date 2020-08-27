@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Arricchisci il profilo cliente in tempo reale con informazioni approfondite sull'apprendimento automatico
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1145'
 ht-degree: 0%
 
 ---
@@ -26,9 +26,9 @@ Questo documento fornisce un&#39;esercitazione passo-passo per arricchire [!DNL 
 
 Questa esercitazione richiede una conoscenza approfondita dei vari aspetti relativi al [!DNL Adobe Experience Platform] processo di assimilazione dei [!DNL Profile] dati e alla creazione di segmenti. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
-* [!DNL Real-time Customer Profile](../../rtcdp/overview.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-* [!DNL Identity Service](../../identity-service/home.md): Consente [!DNL Real-time Customer Profile] di collegare identità da origini dati diverse che vengono caricate in Platform.
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Framework standard con cui Platform organizza i dati sull&#39;esperienza dei clienti.
+* [[!DNL Profilo cliente in tempo reale]](../../rtcdp/overview.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Identity Service]](../../identity-service/home.md): Consente [!DNL Real-time Customer Profile] di collegare identità da origini dati diverse che vengono caricate in Piattaforma.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standardizzato tramite il quale la piattaforma organizza i dati sull&#39;esperienza cliente.
 
 Oltre ai documenti di cui sopra, si consiglia di consultare anche le seguenti guide sugli schemi e sull&#39;Editor di schema:
 
@@ -41,7 +41,7 @@ Il primo passo verso l&#39;arricchimento [!DNL Real-time Customer Profile] con l
 
 La composizione di uno schema inizia con l&#39;assegnazione di una classe. Le classi definiscono gli aspetti comportamentali dei dati che lo schema conterrà (record o serie temporali). Questa sezione fornisce istruzioni di base per creare uno schema utilizzando il generatore di schemi. Per un&#39;esercitazione più dettagliata, fare riferimento all&#39;esercitazione sulla [creazione di uno schema con l&#39;Editor](../../xdm/tutorials/create-schema-ui.md)di schema.
 
-1.  Adobe Experience Platform, fare clic sulla **[!UICONTROL Schema]** scheda per accedere al browser dello schema. Fare clic **[!UICONTROL Create Schema]** per accedere all&#39;Editor **schema, in cui è possibile creare e creare schemi in modo interattivo.
+1. In Adobe Experience Platform, fare clic sulla **[!UICONTROL Schema]** scheda per accedere al browser dello schema. Fare clic **[!UICONTROL Create Schema]** per accedere all&#39;Editor **schema, in cui è possibile creare e creare schemi in modo interattivo.
    ![](../images/models-recipes/enrich-rtcdp/schema_browser.png)
 
 2. Nella finestra *Composizione* , fate clic **[!UICONTROL Assign]** per esplorare le classi disponibili.
@@ -63,7 +63,7 @@ La composizione di uno schema inizia con l&#39;assegnazione di una classe. Le cl
    * Per aggiungere campi mixin, fate clic sul nome del mixin nella finestra *Composizione* . Viene quindi fornita l’opzione per aggiungere campi mixin facendo clic **[!UICONTROL Add Field]** nella finestra *Struttura* . Assicurarsi di fornire le proprietà di mixin di conseguenza.
       ![](../images/models-recipes/enrich-rtcdp/mixin_properties.png)
 
-4. Dopo aver creato lo schema, fare clic sul campo di livello superiore dello schema all&#39;interno della finestra *Struttura* per visualizzare le proprietà dello schema nella finestra delle proprietà a destra. Specificare un nome e una descrizione, quindi fare clic **[!UICONTROL Save]** per creare lo schema.
+4. Dopo aver creato lo schema, fare clic sul campo di livello superiore dello schema all&#39;interno della finestra *Struttura* per visualizzare le proprietà dello schema nella finestra delle proprietà destra. Specificare un nome e una descrizione, quindi fare clic **[!UICONTROL Save]** per creare lo schema.
    ![](../images/models-recipes/enrich-rtcdp/save_schema.png)
 
 5. Crea un set di dati di output utilizzando lo schema appena creato facendo clic **[!UICONTROL Datasets]** dalla colonna di navigazione a sinistra, quindi fai clic su **[!UICONTROL Create dataset]**. Nella schermata successiva, scegliete **[!UICONTROL Create dataset from schema]**.
@@ -81,7 +81,7 @@ Ora che è stato creato un set di dati dello schema di output, è possibile cont
 
 Prima di abilitare un dataset per [!DNL Profile], è necessario configurare lo schema del dataset in modo che abbia un campo identità principale e quindi attivare lo schema per [!DNL Profile]. Se si desidera creare e abilitare un nuovo schema, è possibile fare riferimento all&#39;esercitazione sulla [creazione di uno schema utilizzando l&#39;Editor](../../xdm/tutorials/create-schema-ui.md)di schema. In caso contrario, seguire le istruzioni riportate di seguito per abilitare uno schema e un dataset esistenti.
 
-1.  Adobe Experience Platform, utilizzare il browser dello schema per individuare lo schema di output [!DNL Profile] sul quale si desidera attivarlo e fare clic sul nome per visualizzarne la composizione.
+1. In Adobe Experience Platform, utilizzate il browser dello schema per individuare lo schema di output [!DNL Profile] sul quale desiderate attivarlo e fate clic sul suo nome per visualizzarne la composizione.
    ![](../images/models-recipes/enrich-rtcdp/schemas.png)
 
 2. Espandere la struttura dello schema e trovare un campo appropriato da impostare come identificatore principale. Fate clic sul campo desiderato per visualizzarne le proprietà.
@@ -105,7 +105,7 @@ Quando i dati vengono trasferiti in un set di dati [!DNL Profile]abilitato, gli 
 
 Ora che hai generato e acquisito informazioni approfondite nel set di dati [!DNL Profile]abilitato, puoi gestire tali dati identificando sottoinsiemi di elementi correlati tramite Segment Builder (Generatore di segmenti). Segui i passaggi indicati di seguito per creare i tuoi segmenti.
 
-1.  Adobe Experience Platform, fai clic sulla **[!UICONTROL Segments]** scheda seguita da **[!UICONTROL Create Segment]** per accedere al Generatore di segmenti.
+1. In Adobe Experience Platform, fai clic sulla **[!UICONTROL Segments]** scheda seguita da **[!UICONTROL Create Segment]** per accedere al Generatore di segmenti.
    ![](../images/models-recipes/enrich-rtcdp/segments_overview.png)
 
 2. In Segment Builder (Generatore di segmenti), la barra a sinistra consente di accedere ai blocchi di generazione principali dei segmenti: attributi, eventi e segmenti esistenti. Ciascun blocco predefinito viene visualizzato nella relativa scheda. Selezionare la classe alla quale si estende lo schema [!DNL Profile]abilitato, quindi individuare e individuare i blocchi di generazione per il segmento.
