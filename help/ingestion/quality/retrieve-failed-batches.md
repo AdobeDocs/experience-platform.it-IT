@@ -4,26 +4,26 @@ solution: Experience Platform
 title: Recupero batch non riusciti
 topic: overview
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '598'
-ht-degree: 2%
+source-wordcount: '607'
+ht-degree: 1%
 
 ---
 
 
 # Recupero di batch con errore tramite l&#39;API
 
- Adobe Experience Platform offre due metodi per caricare e acquisire i dati. Potete utilizzare l’assimilazione batch, che consente di inserire i dati utilizzando vari tipi di file (come i CSV), oppure l’assimilazione in streaming, per inserire i dati [!DNL Platform] utilizzando gli endpoint in streaming in tempo reale.
+Adobe Experience Platform offre due metodi per caricare e acquisire i dati. Potete utilizzare l’assimilazione batch, che consente di inserire i dati utilizzando vari tipi di file (come i CSV), oppure l’assimilazione in streaming, per inserire i dati [!DNL Platform] utilizzando gli endpoint in streaming in tempo reale.
 
 Questa esercitazione descrive i passaggi per recuperare informazioni su un batch con errore utilizzando [!DNL Data Ingestion] le API.
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
-- [!DNL Data Ingestion](../home.md): I metodi con cui i dati possono essere inviati [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
+- [[!DNL Data Ingestion]](../home.md): I metodi con cui i dati possono essere inviati [!DNL Experience Platform].
 
 ### Lettura di chiamate API di esempio
 
