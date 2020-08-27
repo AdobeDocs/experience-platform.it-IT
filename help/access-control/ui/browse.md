@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Sfogliare l’area di lavoro del controllo di accesso
 topic: user guide
+description: Questo documento descrive i passaggi necessari per esplorare l'area di lavoro del controllo degli accessi. Per configurare il controllo di accesso per  Experience Platform tramite l'Adobe Admin Console, è necessario essere un amministratore per un'organizzazione IMS che dispone di un'iscrizione a  Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6f599c0c6d8b349ebfb8cc0523543904fd628f8d
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '245'
-ht-degree: 5%
+source-wordcount: '288'
+ht-degree: 4%
 
 ---
 
@@ -22,7 +23,7 @@ Una volta che disponete dei privilegi di amministratore, andate ad [Adobe Admin 
 
 ![overview-page](../images/overview-page.png)
 
-Viene visualizzata l&#39;area di lavoro del controllo degli accessi per  Adobe Experience Platform, che si apre sulla *[!UICONTROL Product Profiles]* scheda. Questa scheda consente di visualizzare tutti i profili di prodotto e gestire le varie impostazioni come indicato in questo documento.
+Viene visualizzata l’area di lavoro del controllo degli accessi per Adobe Experience Platform, che si apre sulla *[!UICONTROL Product Profiles]* scheda. Questa scheda consente di visualizzare tutti i profili di prodotto e gestire le varie impostazioni come indicato in questo documento.
 
 ![platform-access-control](../images/platform-access-control.png)
 
