@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Descrittori
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1479'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Descrittori
 
-Gli schemi definiscono una visualizzazione statica delle entità di dati, ma non forniscono dettagli specifici su come i dati basati su tali schemi (ad esempio, set di dati) possono essere correlati tra loro.  Adobe Experience Platform consente di descrivere queste relazioni e altri metadati interpretativi di uno schema utilizzando i descrittori.
+Gli schemi definiscono una visualizzazione statica delle entità di dati, ma non forniscono dettagli specifici su come i dati basati su tali schemi (ad esempio, set di dati) possono essere correlati tra loro. Adobe Experience Platform consente di descrivere queste relazioni e altri metadati interpretativi relativi a uno schema utilizzando i descrittori.
 
 I descrittori dello schema sono metadati a livello di tenant, il che significa che sono univoci per l&#39;organizzazione IMS e che tutte le operazioni del descrittore hanno luogo nel contenitore tenant.
 
@@ -24,7 +24,7 @@ Questo documento fornisce esempi di chiamate API per descrittori, oltre a un ele
 
 >[!NOTE]
 >
->I descrittori richiedono intestazioni Accetto univoche che sostituiscono `xed` con `xdm`, ma che hanno un aspetto molto simile a Accetta intestazioni utilizzate altrove in [!DNL Schema Registry]. Le intestazioni Accetta corrette sono state incluse nelle chiamate di esempio riportate di seguito, ma prestate particolare attenzione a verificare che vengano utilizzate le intestazioni corrette.
+>I descrittori richiedono intestazioni Accetto univoche che sostituiscono `xed` con `xdm`, ma che hanno un aspetto molto simile a Accetta intestazioni utilizzate altrove in [!DNL Schema Registry]. Le intestazioni Accetta corrette sono state incluse nelle chiamate di esempio riportate di seguito, ma prestate particolare attenzione a garantire l’utilizzo delle intestazioni corrette.
 
 ## Descrittori elenco
 
@@ -279,7 +279,7 @@ Le sezioni seguenti forniscono una panoramica dei tipi di descrittori disponibil
 
 #### Descrittore identità
 
-Un descrittore di identità segnala che &quot;[!UICONTROL sourceProperty]&quot; del &quot;[!UICONTROL sourceSchema]&quot; è un [!DNL Identity] campo come descritto da [Servizio](../../identity-service/home.md)identità Adobe Experience Platform.
+Un descrittore di identità segnala che &quot;[!UICONTROL sourceProperty]&quot; del &quot;[!UICONTROL sourceSchema]&quot; è un [!DNL Identity] campo come descritto da [Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
 ```json
 {
@@ -300,7 +300,7 @@ Un descrittore di identità segnala che &quot;[!UICONTROL sourceProperty]&quot; 
 | `xdm:sourceSchema` | URI `$id` dello schema in cui viene definito il descrittore. |
 | `xdm:sourceVersion` | La versione principale dello schema di origine. |
 | `xdm:sourceProperty` | Percorso della proprietà specifica che sarà l&#39;identità. Il percorso deve iniziare con &quot;/&quot; e non terminare con uno. Non includere &quot;proprietà&quot; nel percorso (ad esempio, utilizzare &quot;/personalEmail/address&quot; invece di &quot;/properties/personalEmail/properties/address&quot;) |
-| `xdm:namespace` | Il valore `id` o `code` dello spazio dei nomi identità. È possibile trovare un elenco di spazi dei nomi utilizzando l&#39; [!DNL Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
+| `xdm:namespace` | Il valore `id` o `code` dello spazio dei nomi identità. È possibile trovare un elenco di spazi dei nomi utilizzando l&#39;API [[!DNL Identity Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
 | `xdm:property` | O `xdm:id` o `xdm:code`, a seconda dell&#39; `xdm:namespace` utilizzo. |
 | `xdm:isPrimary` | Un valore booleano facoltativo. Se true, indica il campo come identità principale. Gli schemi possono contenere una sola identità primaria. |
 
@@ -369,7 +369,7 @@ I descrittori delle relazioni descrivono una relazione tra due schemi diversi, b
 
 #### Descrittore identità di riferimento
 
-I descrittori di identità di riferimento forniscono un contesto di riferimento all&#39;identità primaria di un campo dello schema, consentendo di farvi riferimento dai campi di altri schemi. I campi devono essere già etichettati con un descrittore di identità prima di potervi applicare un descrittore di riferimento.
+I descrittori di identità di riferimento forniscono un contesto di riferimento all&#39;identità primaria di un campo dello schema, consentendo di farvi riferimento dai campi di altri schemi. Per poter applicare un descrittore di riferimento, i campi devono già essere etichettati con un descrittore di identità.
 
 ```json
 {
