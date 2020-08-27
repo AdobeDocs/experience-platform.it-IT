@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Pubblicare un modello come servizio (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1483'
 ht-degree: 1%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # Pubblicare un modello come servizio (API)
 
-Questa esercitazione descrive il processo di pubblicazione di un modello come servizio mediante l&#39; [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
+Questa esercitazione illustra il processo di pubblicazione di un modello come servizio mediante l&#39;API [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
 
 ## Introduzione
 
-Questa esercitazione richiede una conoscenza approfondita di  Adobe Experience Platform Data Science Workspace. Prima di iniziare questa esercitazione, consulta la panoramica [di](../home.md) Data Science Workspace per un&#39;introduzione di alto livello al servizio.
+Questa esercitazione richiede una buona conoscenza di Adobe Experience Platform Data Science Workspace. Prima di iniziare questa esercitazione, consulta la panoramica [di](../home.md) Data Science Workspace per un&#39;introduzione di alto livello al servizio.
 
 Per seguire questa esercitazione, è necessario disporre di un motore ML, di un’istanza ML e di un’esperienza già esistenti. Per i passaggi su come crearli nell&#39;API, consultate l&#39;esercitazione sull&#39; [importazione di una ricetta](./import-packaged-recipe-api.md)inclusa nel pacchetto.
 
@@ -42,7 +42,7 @@ La tabella seguente riassume alcuni termini comuni utilizzati in questa esercita
 | **Sperimentazione** | Un&#39;entità ombrello per tenere in esecuzione gli esperti di formazione, eseguire gli esperimenti di valutazione o entrambi. |
 | **Sperimentazione pianificata** | Termine per descrivere l’automazione della formazione o l’assegnazione di un punteggio alle esecuzioni di esperti, regolato da una pianificazione definita dall’utente. |
 | **Esecuzione Di Un Esperimento** | Un particolare esempio di formazione o di valutazione di Esperimenti. Le esecuzioni di più esperimenti da un particolare esperimento possono variare nei valori del set di dati utilizzati per la formazione o il punteggio. |
-| **Modello** | Un modello di apprendimento automatico creato dal processo di sperimentazione e di progettazione di feature prima di arrivare a un modello convalidato, valutato e finalizzato. |
+| **Modello** | Un modello di machine learning creato dal processo di sperimentazione e di feature engineering prima di arrivare a un modello convalidato, valutato e finalizzato. |
 | **Modello pubblicato** | Un modello finale e con versione raggiunto dopo formazione, convalida e valutazione. |
 | **Servizio di apprendimento automatico (servizio ML)** | Un&#39;istanza ML distribuita come servizio per supportare le richieste on-demand di formazione e punteggio tramite un endpoint API. È inoltre possibile creare un servizio ML utilizzando le esecuzioni sperimentali già formate. |
 
