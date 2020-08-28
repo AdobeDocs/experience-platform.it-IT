@@ -5,9 +5,9 @@ seo-title: Panoramica delle destinazioni
 description: Le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che consentono l'attivazione senza soluzione di continuità dei dati dalla piattaforma dati cliente in tempo reale. Puoi utilizzare Destinazioni nel  Adobe Real-time Customer Data Platform (Piattaforma dati cliente in tempo reale) per attivare i dati noti e sconosciuti per campagne di marketing su più canali, campagne e-mail, campagne pubblicitarie mirate e molti altri casi di utilizzo.
 seo-description: Le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che consentono l'attivazione senza soluzione di continuità dei dati dalla piattaforma dati cliente in tempo reale. Puoi utilizzare Destinazioni nel  Adobe Real-time Customer Data Platform (Piattaforma dati cliente in tempo reale) per attivare i dati noti e sconosciuti per campagne di marketing su più canali, campagne e-mail, campagne pubblicitarie mirate e molti altri casi di utilizzo.
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 22bca041673cec5eee54ed4234aba19eca470441
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '527'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ I controlli nell&#39;area di lavoro [](/help/rtcdp/destinations/destinations-wor
 * Creare, modificare, attivare e disattivare i flussi di dati verso le destinazioni nel catalogo;
 * creare un account in una posizione di archiviazione o collegare CDP in tempo reale all&#39;account nella piattaforma di destinazione;
 * Selezionare i segmenti da attivare nelle destinazioni;
-* Seleziona i campi [di](../../xdm/home.md) Experience Data Model (XDM) da esportare quando attivi i segmenti in destinazioni di marketing tramite e-mail.
+* Seleziona i campi [](../../xdm/home.md) Experience Data Model (XDM) da esportare quando attivi i segmenti nelle destinazioni di marketing tramite e-mail.
 
 ## Destination types and categories {#types-and-categories}
 
@@ -67,4 +67,4 @@ Per ulteriori informazioni sulla selezione dei casi di utilizzo del marketing ne
 * [Destinazioni di marketing e-mail](/help/rtcdp/destinations/email-marketing-destinations.md)
 * [Destinazioni social network](/help/rtcdp/destinations/social-network-destinations-workflow.md)
 
-Per ulteriori informazioni sulle violazioni dei criteri dei dati nel flusso di lavoro di attivazione del segmento, vedi il passaggio 7 in [Attivare profili e segmenti su una destinazione](/help/rtcdp/destinations/activate-destinations.md).
+Per ulteriori informazioni sulle violazioni dei criteri dei dati nel flusso di lavoro di attivazione del segmento, consulta il passaggio Revisione in [Attivare profili e segmenti a una destinazione](/help/rtcdp/destinations/activate-destinations.md#review).
