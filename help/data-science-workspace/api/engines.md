@@ -5,7 +5,7 @@ title: Motori
 topic: Developer guide
 description: I motori sono le basi per i modelli di apprendimento automatico in Data Science Workspace. Contengono algoritmi di machine learning che risolvono problemi specifici, oleodotti per eseguire la progettazione di funzionalità o entrambi.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 3%
@@ -20,6 +20,7 @@ I motori sono le basi per i modelli di apprendimento automatico in Data Science 
 ## Cerca il tuo registro di Docker
 
 >[!TIP]
+>
 >Se non disponete di un URL Docker, visitate i file sorgente del [pacchetto in un&#39;esercitazione di ricetta](../models-recipes/package-source-files-recipe.md) per una dettagliata procedura per la creazione di un URL host Docker.
 
 Le credenziali del Registro di sistema del Docker sono necessarie per caricare un file Recipe incluso l&#39;URL host Docker, il nome utente e la password. Potete cercare queste informazioni eseguendo la seguente richiesta di GET:
