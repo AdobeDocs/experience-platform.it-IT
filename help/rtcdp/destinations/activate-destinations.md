@@ -5,7 +5,7 @@ seo-title: Attivare profili e segmenti su una destinazione
 description: Attiva i dati di cui disponi in  Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 seo-description: Attiva i dati di cui disponi in  Adobe Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 22bca041673cec5eee54ed4234aba19eca470441
 workflow-type: tm+mt
 source-wordcount: '1492'
 ht-degree: 0%
@@ -51,9 +51,9 @@ Nel **[!UICONTROL Activate destination]** flusso di lavoro, nella **[!UICONTROL 
 
 ### **[!UICONTROL Identity mapping]** step {#identity-mapping}
 
-![Passaggio mappatura identità](/help/rtcdp/destinations/assets/identity-mapping-icon.png)
-
 Si applica a: destinazioni social e destinazione pubblicitaria di Google Customer Match
+
+![Passaggio mappatura identità](/help/rtcdp/destinations/assets/identity-mapping-icon.png)
 
 Per le destinazioni ** social, nel **[!UICONTROL Identity mapping]** passaggio potete selezionare gli attributi di origine da mappare come identità di destinazione nella destinazione. Questo passaggio è facoltativo o obbligatorio, a seconda dell&#39;identità primaria utilizzata nello schema. <br> 
 
