@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare un connettore sorgente Amazon  Kinesis nell’interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: a664a0420189d6a2dda9f33b3aa58cb4883e252f
 workflow-type: tm+mt
 source-wordcount: '443'
 ht-degree: 1%
@@ -29,7 +29,7 @@ Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Ad
    - [Esercitazione](../../../../../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
 - [[!DNL Profilo cliente in tempo reale]](../../../../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
-Se si dispone già di una [!DNL Kinesis] connessione valida, è possibile ignorare il resto del documento e procedere all&#39;esercitazione sulla [configurazione di un flusso di dati](../../dataflow/streaming/cloud-storage.md).
+Se si dispone già di una [!DNL Kinesis] connessione valida, è possibile ignorare il resto del documento e procedere all&#39;esercitazione sulla [configurazione di un flusso di dati](../../dataflow/streaming/cloud-storage-streaming.md).
 
 ### Raccogli credenziali richieste
 
@@ -71,4 +71,4 @@ Per collegare un account esistente, selezionate l&#39; [!DNL Kinesis] account co
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, ti sei collegato al tuo [!DNL Kinesis] account a [!DNL Platform]. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per trasferire i dati dall’archiviazione cloud [!DNL Platform]](../../dataflow/streaming/cloud-storage.md).
+Seguendo questa esercitazione, ti sei collegato al tuo [!DNL Kinesis] account a [!DNL Platform]. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per trasferire i dati dall’archiviazione cloud [!DNL Platform]](../../dataflow/streaming/cloud-storage-streaming.md).
