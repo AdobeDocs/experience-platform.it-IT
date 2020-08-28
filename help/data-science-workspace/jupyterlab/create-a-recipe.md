@@ -5,7 +5,7 @@ title: Creare una ricetta utilizzando i notebook Jupyter
 topic: Tutorial
 description: Questa esercitazione si sovrappone a due sezioni principali. Innanzitutto, si crea un modello di machine learning utilizzando un modello all'interno di JupyterLab Notebook. Successivamente, si eserciterà il notebook per il flusso di lavoro delle ricette in JupyterLab per creare una ricetta all'interno di Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '2317'
 ht-degree: 0%
@@ -475,6 +475,7 @@ Una volta completato il processo, la ricetta avrà un aspetto simile al seguente
 ![](../images/jupyterlab/create-recipe/recipe_details.png)
 
 >[!CAUTION]
+>
 > - Non eliminare alcuna cella del file
 > - Non modificare la `%%writefile` riga nella parte superiore delle celle del file
 > - Non creare allo stesso tempo ricette in diversi notebook
