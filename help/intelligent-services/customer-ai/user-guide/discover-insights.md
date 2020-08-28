@@ -5,7 +5,7 @@ title: Scopri informazioni approfondite con l'AI del cliente
 topic: Discovering insights
 description: L'AI del cliente, come parte di Intelligent Services, fornisce agli esperti di marketing la possibilità di sfruttare  Adobe Sensei per anticipare quali saranno le prossime azioni da intraprendere per i clienti. L'AI del cliente viene utilizzata per generare punteggi di propensione personalizzati, come il churn e la conversione per i singoli profili su scala. Ciò è possibile senza dover trasformare le esigenze aziendali in un problema di machine learning, scegliendo un algoritmo, una formazione o un'implementazione.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '1098'
 ht-degree: 0%
@@ -122,7 +122,9 @@ Facendo clic sul **[!UICONTROL Create Segment]** pulsante in uno qualsiasi dei p
 
 Il generatore di segmenti viene utilizzato per definire un segmento. Quando si seleziona **[!UICONTROL Create Segment]** dalla pagina Insights (Approfondimenti), l&#39;AI cliente aggiunge automaticamente al segmento le informazioni del bucket selezionato. Per completare la creazione del segmento, è sufficiente compilare i contenitori *Nome* e *Descrizione* nella parte destra dell’interfaccia utente del generatore di segmenti. Dopo aver assegnato al segmento un nome e una descrizione, fai clic **[!UICONTROL Save]** in alto a destra.
 
->!![NOTE] Poiché i punteggi di propensione sono scritti nel singolo profilo, sono disponibili nel generatore di segmenti come qualsiasi altro attributo di profilo. Quando vai al generatore di segmenti per creare nuovi segmenti, puoi vedere tutti i vari punteggi di propensione nello spazio dei nomi Customer AI (AI cliente).
+>[!NOTE]
+>
+>Poiché i punteggi di propensione sono scritti nel singolo profilo, sono disponibili nel generatore di segmenti come qualsiasi altro attributo di profilo. Quando vai al generatore di segmenti per creare nuovi segmenti, puoi vedere tutti i vari punteggi di propensione nello spazio dei nomi Customer AI (AI cliente).
 
 ![Riempimento segmento in](../images/insights/segment-saving.png)
 
