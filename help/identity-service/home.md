@@ -5,7 +5,7 @@ title: Servizio Adobe Experience Platform Identity
 topic: overview
 description: Adobe Experience Platform Identity Service ti aiuta a ottenere una visione migliore del tuo cliente e del suo comportamento attraverso il collegamento di identità tra dispositivi e sistemi, per offrire esperienze digitali personali e di forte impatto in tempo reale.
 translation-type: tm+mt
-source-git-commit: 8b1b61b6446b28f92d6cf221003674fa09716c53
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '1711'
 ht-degree: 0%
@@ -136,7 +136,7 @@ Il seguente video è pensato per consentire agli utenti di comprendere meglio i 
 
 >[!WARNING]
 >
-> L’ [!DNL Platform] interfaccia utente mostrata nel video seguente è obsoleta. Consulta la documentazione relativa alle più recenti schermate e funzionalità dell’interfaccia utente.
+>L’ [!DNL Platform] interfaccia utente mostrata nel video seguente è obsoleta. Consulta la documentazione relativa alle più recenti schermate e funzionalità dell’interfaccia utente.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28167?quality=12&learn=on)
 
