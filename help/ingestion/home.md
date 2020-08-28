@@ -5,7 +5,7 @@ title: Panoramica sull’inserimento dei dati Adobe Experience Platform
 topic: overview
 description: Questo documento presenta i tre modi principali in cui i dati vengono trasferiti in Piattaforma, con collegamenti alla rispettiva documentazione di panoramica per ottenere informazioni più dettagliate.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 9%
@@ -23,7 +23,7 @@ Questo documento presenta i tre modi principali in cui i dati vengono trasferiti
 
 L’assimilazione batch consente di assimilare i dati in [!DNL Experience Platform] file batch. I batch sono unità di dati costituite da uno o più file da acquisire come una singola unità. Una volta acquisiti, i batch forniscono i metadati che descrivono il numero di record correttamente acquisiti, nonché tutti i record con errore e i messaggi di errore associati.
 
-I file di dati caricati manualmente, come file CSV semplici (mappati a schemi XDM) e i fotogrammi di dati Parquet, devono essere acquisiti con questo metodo.
+I file di dati caricati manualmente, come i file CSV semplici (mappati a schemi XDM) e i fotogrammi di dati Parquet, devono essere acquisiti con questo metodo.
 
 Per ulteriori informazioni, consulta la panoramica [sull’assimilazione dei](./batch-ingestion/overview.md) batch.
 
@@ -47,6 +47,6 @@ Questo documento ha fornito una breve introduzione ai diversi aspetti di [!DNL D
 
 >[!WARNING]
 >
-> Il termine &quot;Profilo unificato&quot; utilizzato nel video seguente è obsoleto. I termini [!DNL "Profile"] o [!DNL "Real-time Customer Profile"] i termini corretti utilizzati nella [!DNL Experience Platform] documentazione. Per informazioni sulle funzionalità più recenti, consulta la documentazione.
+>Il termine &quot;Profilo unificato&quot; utilizzato nel video seguente è obsoleto. I termini [!DNL "Profile"] o [!DNL "Real-time Customer Profile"] i termini corretti utilizzati nella [!DNL Experience Platform] documentazione. Per informazioni sulle funzionalità più recenti, consulta la documentazione.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27106?quality=12&learn=on)
