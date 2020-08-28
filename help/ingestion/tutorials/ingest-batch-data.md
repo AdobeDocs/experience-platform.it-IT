@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Caricamento di dati in Adobe Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '1185'
 ht-degree: 0%
@@ -148,6 +148,6 @@ Per saperne di più sull&#39;assimilazione batch, si prega di leggere la panoram
 
 >[!WARNING]
 >
-> L’ [!DNL Platform] interfaccia utente mostrata nel video seguente è obsoleta. Per informazioni sulle ultime funzionalità e videate dell’interfaccia, consulta la documentazione precedente.
+>L’ [!DNL Platform] interfaccia utente mostrata nel video seguente è obsoleta. Per informazioni sulle ultime funzionalità e videate dell’interfaccia, consulta la documentazione precedente.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)
