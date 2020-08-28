@@ -5,7 +5,7 @@ seo-title: Pagina principale e dashboard della piattaforma dati cliente in tempo
 description: Dashboard, Home Page e la prima esperienza utente di Adobe Experience Platform
 seo-description: Dashboard, Home Page e la prima esperienza utente di Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 98d3792f50f2ab95b86d162c51af9445f06343b5
 workflow-type: tm+mt
 source-wordcount: '614'
 ht-degree: 0%
@@ -19,7 +19,7 @@ La pagina principale della piattaforma CDP (Real-time CDP, Real-time Data Platfo
 
 La pagina principale è solo uno dei punti in cui vengono visualizzate le schede metriche. Il CDP in tempo reale fornisce schede metriche per tutta l&#39;esperienza. Queste metriche ti informano sui dati, il profilo e il pubblico del segmento nel sistema.
 
-![immagine](assets/home2.jpg)
+![immagine](assets/home.png)
 
 Se non sono presenti dati nel sistema al momento dell&#39;accesso a CDP in tempo reale, il dashboard nella pagina principale non viene visualizzato. In questo caso, la pagina principale fornisce materiale didattico per la prima esperienza utente. Quando i dati vengono raccolti, ovvero quando vengono creati <!--sources-->insiemi di dati, profili, segmenti e destinazioni e i dati fluiscono nel sistema, il dashboard si aggiorna automaticamente per visualizzare le informazioni su tali dati<!-- in metric cards-->.
 
@@ -31,14 +31,14 @@ Il dashboard è diviso in<!-- two areas.-->:
 
 * **La classifica** si trova nella parte superiore del dashboard. La classifica mostra il numero di set di dati, profili, segmenti e destinazioni nel sistema.
 
-   ![immagine](assets/home-leaderboard2.jpg)
+   ![immagine](assets/leaderboard.png)
 
 <!-- * **Metric cards** display beneath the leaderboard. Metric cards show additional information, such as percentages or trends. Metric cards appear as data is collected.
     ![image](assets/home-metrics.jpg)
 Some information is shown in different ways on both the leaderboard and metric cards. -->
 * **Gli elementi** recenti elencano i cinque set di dati, le origini, i segmenti e le destinazioni più recenti aggiunti al sistema.
 
-   ![immagine](assets/home-recent.jpg)
+   ![immagine](assets/recent.png)
 
 Metriche aggiuntive, ad esempio per profili e segmenti, sono disponibili in altre parti della Piattaforma dati cliente in tempo reale.
 
