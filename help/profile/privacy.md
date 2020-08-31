@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Elaborazione delle richieste di privacy in Real-time Customer Profile
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
 workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 0%
