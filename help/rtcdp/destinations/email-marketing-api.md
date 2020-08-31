@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Creare destinazioni di e-mail marketing
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1624'
 ht-degree: 1%
 
 ---
 
 
-# Creare destinazioni di e-mail marketing e attivare i dati in  Adobe  [!DNL Real-time Customer Data Platform]
+# Creare destinazioni di e-mail marketing e attivare i dati utilizzando le chiamate API  Adobi  [!DNL Real-time Customer Data Platform]
 
 Questa esercitazione illustra come utilizzare le chiamate API per connettersi ai dati Adobe Experience Platform, creare una destinazione [di marketing per](../../rtcdp/destinations/email-marketing-destinations.md)e-mail, creare un flusso di dati per la nuova destinazione creata e attivare i dati per la nuova destinazione creata.
 
