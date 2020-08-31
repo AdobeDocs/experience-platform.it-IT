@@ -5,9 +5,9 @@ topic: overview
 title: Panoramica sul controllo degli accessi
 description: Il controllo degli accessi per Adobe Experience Platform è fornito tramite Adobe Admin Console. Questa funzionalità sfrutta i profili di prodotto in  Admin Console, che collegano gli utenti con autorizzazioni e sandbox.
 translation-type: tm+mt
-source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
+source-git-commit: e22b0f64fd6153f76cff862a6e973a235257430e
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1087'
 ht-degree: 2%
 
 ---
@@ -57,7 +57,7 @@ Nel pannello [!DNL Admin Console], le autorizzazioni vengono assegnate agli uten
 
 ## Sandbox e autorizzazioni
 
-[!DNL Experience Platform] consente di accedere a una sandbox di produzione e di creare **sandbox** non di produzione. Le sandbox non di produzione sono una forma di virtualizzazione dei dati che consente di isolare i dati da altre sandbox e sono generalmente utilizzate per esperimenti di sviluppo, test o test. I profili di prodotto **[!UICONTROL permissions]** consentono agli utenti del profilo di accedere alle [!DNL Platform] funzionalità all&#39;interno degli ambienti sandbox a cui gli è stato concesso l&#39;accesso.
+Le sandbox non di produzione sono una forma di virtualizzazione dei dati che consente di isolare i dati da altre sandbox e sono generalmente utilizzate per esperimenti di sviluppo, test o test. I profili di prodotto **[!UICONTROL permissions]** consentono agli utenti del profilo di accedere alle [!DNL Platform] funzionalità all&#39;interno degli ambienti sandbox a cui gli è stato concesso l&#39;accesso. Una licenza di Experience Platform  predefinita concede cinque sandbox (una produzione e quattro non di produzione). Potete aggiungere pacchetti di dieci sandbox non di produzione fino a un massimo di 75 sandbox in totale. Per maggiori informazioni, contattate l&#39;amministratore dell&#39;organizzazione IMS o il rappresentante commerciale  Adobe.
 
 Per ulteriori informazioni sulle sandbox in [!DNL Experience Platform], consultate la panoramica sulle [sandbox](../sandboxes/home.md).
 
