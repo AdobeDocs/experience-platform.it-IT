@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Connessione alle destinazioni di streaming e attivazione dei dati
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
 workflow-type: tm+mt
-source-wordcount: '1815'
+source-wordcount: '1816'
 ht-degree: 2%
 
 ---
 
 
-# Connessione alle destinazioni di streaming e attivazione dei dati in  Adobe  Piattaforma dati cliente in tempo reale mediante API
+# Connettiti alle destinazioni di streaming e attiva i dati utilizzando le chiamate API in  Adobe  Piattaforma dati cliente in tempo reale
 
 >[!NOTE]
 >
