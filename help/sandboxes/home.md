@@ -5,9 +5,9 @@ title: Panoramica sulle sandbox
 topic: overview
 description: Le sandbox sono partizioni virtuali all'interno di un'unica istanza di  Experience Platform, che consentono un'integrazione perfetta con il processo di sviluppo delle applicazioni di esperienza digitale.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: e22b0f64fd6153f76cff862a6e973a235257430e
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '749'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Questo documento fornisce una panoramica di alto livello delle sandbox in  Exper
 
 Le sandbox sono partizioni virtuali all&#39;interno di un&#39;unica istanza di  Experience Platform, che consentono un&#39;integrazione perfetta con il processo di sviluppo delle applicazioni di esperienza digitale. Un&#39;istanza di Experience Platform  supporta una sandbox di produzione e più sandbox non di produzione, con ciascuna sandbox che mantiene una propria libreria indipendente di risorse Piattaforma (inclusi schemi, set di dati, profili e così via).  Tutti i contenuti e le azioni effettuate all’interno di una sandbox sono limitati a tale sandbox e non hanno effetto su altre sandbox.
 
-Le sandbox non di produzione consentono di testare le funzioni, eseguire esperimenti e creare configurazioni personalizzate senza influire sulla sandbox di produzione. Inoltre, le sandbox non di produzione dispongono di una funzione di ripristino che rimuove tutte le risorse create dal cliente dalla sandbox. I sandbox non di produzione non possono essere convertiti in sandbox di produzione.
+Le sandbox non di produzione consentono di testare le funzioni, eseguire esperimenti e creare configurazioni personalizzate senza influire sulla sandbox di produzione. Inoltre, le sandbox non di produzione dispongono di una funzione di ripristino che rimuove tutte le risorse create dal cliente dalla sandbox. I sandbox non di produzione non possono essere convertiti in sandbox di produzione. Una licenza di Experience Platform  predefinita concede cinque sandbox (una produzione e quattro non di produzione). Potete aggiungere pacchetti di dieci sandbox non di produzione fino a un massimo di 75 sandbox in totale. Per maggiori informazioni, contattate l&#39;amministratore dell&#39;organizzazione IMS o il rappresentante commerciale  Adobe.
 
 >[!NOTE]
 >
