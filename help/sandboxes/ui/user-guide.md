@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida utente sandbox
 topic: user guide
 translation-type: tm+mt
-source-git-commit: c52d8cdbc5a4ee6fab8c2b1b284efea5f735d424
+source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Guida utente sandbox
 
-In questo documento sono descritti i passaggi necessari per eseguire varie operazioni relative alle sandbox nell&#39;interfaccia utente del Adobe Experience Platform .
+In questo documento sono descritti i passaggi necessari per eseguire varie operazioni relative alle sandbox nell&#39;interfaccia utente di Adobe Experience Platform.
 
 ## Visualizzare le sandbox
 
@@ -48,7 +48,7 @@ Per creare una nuova sandbox nell’interfaccia utente, fate clic **[!UICONTROL 
 
 Viene _[!UICONTROL Create Sandbox]_visualizzata una finestra di dialogo che richiede di specificare un titolo e un nome da visualizzare per la sandbox. Il titolo **del**display deve essere leggibile dall&#39;uomo e deve essere sufficientemente descrittivo per essere facilmente identificabile. La sandbox **[!UICONTROL Name]**è un identificatore in lettere minuscole da usare nelle chiamate API e deve pertanto essere univoca e concisa.
 
-Al termine, fate clic **[!UICONTROL Create]**.
+Al termine, fai clic su **[!UICONTROL Create]**.
 
 ![](../images/ui/create-sandbox-dialog.png)
 
