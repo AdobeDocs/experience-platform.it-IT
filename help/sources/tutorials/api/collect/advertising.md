@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; flow service; advertising; google adwords
 solution: Experience Platform
 title: Raccolta di dati pubblicitari tramite connettori di origine e API
 topic: overview
+description: Questa esercitazione descrive i passaggi necessari per recuperare i dati da un’applicazione pubblicitaria di terze parti e trasferirli in Piattaforma tramite connettori di origine e API del servizio di flusso.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
 workflow-type: tm+mt
-source-wordcount: '1644'
+source-wordcount: '1561'
 ht-degree: 1%
 
 ---
@@ -16,7 +17,7 @@ ht-degree: 1%
 
 [!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
-Questa esercitazione descrive i passaggi necessari per recuperare i dati da un&#39;applicazione pubblicitaria di terze parti e inserirli [!DNL Platform] attraverso connettori e API di origine.
+Questa esercitazione descrive i passaggi necessari per recuperare i dati da un&#39;applicazione pubblicitaria di terze parti e trasferirli [!DNL Platform] attraverso connettori di origine e l&#39;API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) .
 
 ## Introduzione
 
@@ -41,29 +42,21 @@ Questa esercitazione fornisce esempi di chiamate API per dimostrare come formatt
 
 Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
 
-* Autorizzazione: Portatore `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva per il tipo di supporto:
 
-* Content-Type: `application/json`
-
-## Creare una classe e uno schema XDM ad hoc
-
-Per inserire dati esterni nei connettori di origine, è necessario creare una classe e uno schema XDM ad hoc per i dati di origine non elaborati. [!DNL Platform]
-
-Per creare una classe e uno schema ad hoc, segui i passaggi descritti nell&#39;esercitazione [sullo schema](../../../../xdm/tutorials/ad-hoc.md)ad hoc. Quando create una classe ad hoc, tutti i campi trovati nei dati di origine devono essere descritti all&#39;interno del corpo della richiesta.
-
-Continuate a seguire i passaggi descritti nella guida per gli sviluppatori fino a quando non avete creato uno schema ad hoc. L&#39;identificatore univoco (`$id`) dello schema ad hoc è richiesto per passare al passaggio successivo di questa esercitazione.
+* `Content-Type: application/json`
 
 ## Creazione di una connessione di origine {#source}
 
-Con la creazione di uno schema XDM ad hoc, ora è possibile creare una connessione di origine utilizzando una richiesta di POST all&#39; [!DNL Flow Service] API. Una connessione di origine è costituita da una connessione di base, un file di dati di origine e un riferimento allo schema che descrive i dati di origine.
+Potete creare una connessione di origine effettuando una richiesta di POST all&#39; [!DNL Flow Service] API. Una connessione di origine è costituita da un ID connessione, un percorso al file di dati di origine e un ID di specifica di connessione.
 
 Per creare una connessione di origine, è inoltre necessario definire un valore enum per l&#39;attributo del formato dati.
 
@@ -99,10 +92,6 @@ curl -X POST \
         "description": "Advertising source connection",
         "data": {
             "format": "tabular",
-            "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/9056f97e74edfa68ccd811380ed6c108028dcb344168746d",
-                "version": "application/vnd.adobe.xed-full-notext+json; version=1"
-            }
         },
         "params": {
             "path": "v201809.AD_PERFORMANCE_REPORT"
@@ -117,7 +106,6 @@ curl -X POST \
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `baseConnectionId` | L&#39;ID di connessione univoco dell&#39;applicazione pubblicitaria di terze parti a cui si accede. |
-| `data.schema.id` | Indica `$id` lo schema XDM ad hoc. |
 | `params.path` | Percorso del file di origine. |
 | `connectionSpec.id` | L&#39;ID della specifica di connessione associato alla specifica applicazione pubblicitaria di terze parti. |
 
