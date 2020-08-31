@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; flow service; database; sql; no sql; data warehouse
 solution: Experience Platform
 title: Raccolta di dati da un database di terze parti tramite connettori di origine e API
 topic: overview
+description: Questa esercitazione descrive i passaggi necessari per recuperare i dati da un database di terze parti e trasferirli in Piattaforma tramite connettori di origine e API del servizio di flusso.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
 workflow-type: tm+mt
-source-wordcount: '1745'
+source-wordcount: '1653'
 ht-degree: 1%
 
 ---
@@ -14,9 +15,9 @@ ht-degree: 1%
 
 # Raccolta di dati da un database di terze parti tramite connettori di origine e API
 
-[[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) è utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini diverse all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
+[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
-Questa esercitazione descrive i passaggi necessari per recuperare i dati da un database di terze parti e trasferirli [!DNL Platform] attraverso connettori di origine e API.
+Questa esercitazione descrive i passaggi necessari per recuperare i dati da un database di terze parti e trasferirli [!DNL Platform] attraverso connettori di origine e l&#39;API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) .
 
 ## Introduzione
 
@@ -24,11 +25,11 @@ Questa esercitazione richiede una connessione valida a un database di terze part
 
 Questa esercitazione richiede inoltre di conoscere i seguenti componenti di Adobe Experience Platform:
 
-* [Sistema](../../../../xdm/home.md)XDM (Experience Data Model): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
+* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Il framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
    * [Nozioni di base sulla composizione](../../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
    * [Schema Guida](../../../../xdm/api/getting-started.md)per lo sviluppatore del Registro di sistema: Include informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all&#39;API del Registro di sistema dello schema. Ciò include il vostro `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all’intestazione Accetta e ai suoi possibili valori).
-* [Servizio](../../../../catalog/home.md)catalogo: Catalogo è il sistema di registrazione per la posizione dei dati e la linea all&#39;interno [!DNL Experience Platform].
-* [Caricamento](../../../../ingestion/batch-ingestion/overview.md)batch: L&#39;API Batch Ingestion consente di assimilare i dati in [!DNL Experience Platform] file batch.
+* [[!Servizio catalogo DNL]](../../../../catalog/home.md): Catalogo è il sistema di registrazione per la posizione dei dati e la linea all&#39;interno [!DNL Experience Platform].
+* [[!DNL Caricamento batch]](../../../../ingestion/batch-ingestion/overview.md): L&#39;API Batch Ingestion consente di assimilare i dati in [!DNL Experience Platform] file batch.
 * [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegarsi correttamente a un database di terze parti utilizzando l&#39;API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) .
@@ -41,29 +42,21 @@ Questa esercitazione fornisce esempi di chiamate API per dimostrare come formatt
 
 Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
 
-* Autorizzazione: Portatore `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva per il tipo di supporto:
 
-* Content-Type: `application/json`
-
-## Creare una classe e uno schema XDM ad hoc
-
-Per inserire dati esterni nei connettori di origine, è necessario creare una classe e uno schema XDM ad hoc per i dati di origine non elaborati. [!DNL Platform]
-
-Per creare una classe e uno schema ad hoc, segui i passaggi descritti nell&#39;esercitazione [sullo schema](../../../../xdm/tutorials/ad-hoc.md)ad hoc. Quando create una classe ad hoc, tutti i campi trovati nei dati di origine devono essere descritti all&#39;interno del corpo della richiesta.
-
-Continuate a seguire i passaggi descritti nella guida per gli sviluppatori fino a quando non avete creato uno schema ad hoc. Ottenete e archiviate l&#39;identificatore univoco (`$id`) dello schema ad hoc, quindi passate alla fase successiva dell&#39;esercitazione.
+* `Content-Type: application/json`
 
 ## Creazione di una connessione di origine {#source}
 
-Con la creazione di uno schema XDM ad hoc, ora è possibile creare una connessione di origine utilizzando una richiesta di POST all&#39; [!DNL Flow Service] API. Una connessione di origine è costituita da un ID connessione, un file di dati di origine e un riferimento allo schema che descrive i dati di origine.
+Potete creare una connessione di origine effettuando una richiesta di POST all&#39; [!DNL Flow Service] API. Una connessione di origine è costituita da un ID connessione, un percorso al file di dati di origine e un ID di specifica di connessione.
 
 Per creare una connessione di origine, è inoltre necessario definire un valore enum per l&#39;attributo del formato dati.
 
@@ -99,10 +92,6 @@ curl -X POST \
         "description": "A test source connector for a third-party database",
         "data": {
             "format": "tabular",
-            "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/21b30fa2c00a2a8d7c3010272dffa16d3cc9eec504aa6c7",
-                "version": "application/vnd.adobe.xed-full-notext+json; version=1"
-            }
         },
         "params": {
             "path": "ADMIN.E2E"
@@ -117,7 +106,6 @@ curl -X POST \
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `baseConnectionId` | ID connessione dell&#39;origine del database di terze parti. |
-| `data.schema.id` | Indica `$id` lo schema XDM ad hoc. |
 | `params.path` | Percorso del file di origine. |
 | `connectionSpec.id` | L&#39;ID della specifica di connessione dell&#39;origine del database di terze parti. Consulta l&#39; [appendice](#appendix) per un elenco degli ID delle specifiche del database. |
 
