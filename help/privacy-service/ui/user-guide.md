@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida utente Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
 workflow-type: tm+mt
 source-wordcount: '1023'
 ht-degree: 0%
@@ -121,7 +121,7 @@ Quando si utilizza il tipo di spazio dei nomi _personalizzato_ , è necessario d
 
 <img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
 
-Al termine, fate clic **[!UICONTROL Create]**.
+Al termine, fai clic su **[!UICONTROL Create]**.
 
 <img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
 
@@ -139,7 +139,7 @@ Viene visualizzata una *[!UICONTROL Upload JSON]* finestra di dialogo che consen
 
 <img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
-Se non disponi di un file JSON da caricare, fai clic **[!UICONTROL Download Adobe-GDPR-Request.json]** per scaricare un modello che puoi compilare in base ai valori raccolti dagli interessati.
+Se non hai un file JSON da caricare, fai clic **[!UICONTROL Download Adobe-GDPR-Request.json]** per scaricare un modello che puoi compilare in base ai valori raccolti dai tuoi soggetti dati.
 
 
 <img src="../images/user-guide/privacy-template.png" width="500" /><br/>
@@ -147,7 +147,7 @@ Se non disponi di un file JSON da caricare, fai clic **[!UICONTROL Download Adob
 
 Individuate il file JSON sul computer e trascinatelo nella finestra di dialogo. Se il caricamento ha esito positivo, il nome del file viene visualizzato nella finestra di dialogo. Per continuare ad aggiungere altri file JSON, trascinateli e rilasciateli nella finestra di dialogo.
 
-Al termine, fate clic **[!UICONTROL Create]**. La finestra di dialogo scompare e il nuovo processo o i nuovi processi sono elencati nel widget Richieste _di_ processo insieme al relativo stato di elaborazione corrente.
+Al termine, fai clic su **[!UICONTROL Create]**. La finestra di dialogo scompare e il nuovo processo o i nuovi processi sono elencati nel widget Richieste _di_ processo insieme al relativo stato di elaborazione corrente.
 
 ### Passaggi successivi
 
