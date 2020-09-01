@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Amazon Kinesis;amazon kinesis;Kinesis;kinesis
 solution: Experience Platform
 title: Creare un connettore sorgente Amazon  Kinesis nell’interfaccia utente
 topic: overview
+description: Questa esercitazione fornisce i passaggi per l'autenticazione di un connettore sorgente Amazon  (in seguito denominato "Kinesis") tramite l'interfaccia utente della piattaforma.
 translation-type: tm+mt
-source-git-commit: a664a0420189d6a2dda9f33b3aa58cb4883e252f
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '464'
 ht-degree: 1%
 
 ---
