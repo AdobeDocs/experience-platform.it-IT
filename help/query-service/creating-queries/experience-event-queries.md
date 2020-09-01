@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;experienceevent queries;experienceevent query;ExperienceEvent query;
 solution: Experience Platform
 title: Query ExperienceEvent
 topic: queries
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '275'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # [!DNL ExperienceEvent] query
 
-Oltre alle query SQL standard,  Adobe Experience Platform [!DNL Query Service] supporta la scrittura di query mediante [!DNL ExperienceEvents]. Una classe [!DNL ExperienceEvent] è una classe [!DNL Experience Data Model] (XDM) che rappresenta uno snapshot non aggregato immutabile del sistema quando un utente interagisce con un sito Web o un servizio e può quindi essere utilizzata per l&#39;analisi del dominio temporale. Ulteriori informazioni su XDM e [!DNL Experience Events] sono disponibili nella [!DNL XDM System] panoramica. Combinando [!DNL Query Service] con [!DNL ExperienceEvents], puoi monitorare efficacemente le tendenze comportamentali tra i tuoi utenti. Nel seguente documento sono riportati alcuni esempi di query che coinvolgono [!DNL ExperienceEvents].
+Oltre alle query SQL standard, Adobe Experience Platform [!DNL Query Service] supporta la scrittura di query mediante [!DNL ExperienceEvents]. Una classe [!DNL ExperienceEvent] è una classe [!DNL Experience Data Model] (XDM) che rappresenta uno snapshot non aggregato immutabile del sistema quando un utente interagisce con un sito Web o un servizio e può quindi essere utilizzata per l&#39;analisi del dominio temporale. Ulteriori informazioni su XDM e [!DNL Experience Events] sono disponibili nella [!DNL XDM System] panoramica. Combinando [!DNL Query Service] con [!DNL ExperienceEvents], puoi monitorare efficacemente le tendenze comportamentali tra i tuoi utenti. Nel seguente documento sono riportati alcuni esempi di query che coinvolgono [!DNL ExperienceEvents].
 
 ## Creazione di un rapporto con tendenze per giorno su un intervallo di date specifico
 
