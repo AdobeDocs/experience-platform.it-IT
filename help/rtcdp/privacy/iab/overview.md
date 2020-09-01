@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Supporto IAB TCF 2.0 nella piattaforma dati cliente in tempo reale
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 06eda1502d34da1caeebbe9b753dd437bbd9d6ab
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '2377'
 ht-degree: 1%
@@ -26,7 +26,7 @@ Il [!DNL Transparency & Consent Framework] (TCF), come delineato dall&#39; [!DNL
 >
 >[!DNL Real-time CDP] è in grado di soddisfare solo la versione 2.0 del TCF (o superiore). Le versioni precedenti di TCF non sono supportate.
 
-Questo documento fornisce una panoramica su come configurare le operazioni sui dati e gli schemi di profilo per accettare i dati di consenso dei clienti generati dal CMP e come [!DNL Real-time CDP] veicolare le scelte di consenso degli utenti al momento dell’esportazione dei segmenti.
+Questo documento fornisce una panoramica su come configurare le operazioni sui dati e gli schemi di profilo per accettare i dati di consenso dei clienti generati dal CMP e come [!DNL Real-time CDP] veicolare le scelte di consenso degli utenti durante l’esportazione di segmenti.
 
 ## Prerequisiti
 
@@ -121,7 +121,7 @@ Una volta configurato il CMP per generare le stringhe di consenso, è necessario
 
 Affinché l’SDK invii dati a [!DNL Experience Platform], devi prima creare una nuova configurazione edge per [!DNL Platform] in [!DNL Adobe Experience Platform Launch]. I passaggi specifici per la creazione di una nuova configurazione sono descritti nella documentazione [](../../../edge/fundamentals/edge-configuration.md)SDK.
 
-Dopo aver fornito un nome univoco per la configurazione, fate clic sul pulsante di attivazione accanto a *[!UICONTROL Adobe Experience Platform]*. Quindi, utilizzare i seguenti valori per completare il resto del modulo:
+Dopo aver fornito un nome univoco per la configurazione, fate clic sul pulsante accanto a **[!UICONTROL Adobe Experience Platform]**. Quindi, utilizzare i seguenti valori per completare il resto del modulo:
 
 | Campo di configurazione Edge | Valore |
 | --- | --- |
@@ -239,7 +239,7 @@ I clienti devono acconsentire ai seguenti scopi (come indicato nelle politiche [
 * **Finalità 1**: Archiviare e/o accedere alle informazioni su un dispositivo
 * **Finalità 10**: Sviluppare e migliorare i prodotti
 
-TCF 2.0 richiede inoltre che l&#39;origine dei dati verifichi l&#39;autorizzazione del fornitore della destinazione prima di inviare i dati a tale destinazione. In questo modo, [!DNL Real-time CDP] verifica se l&#39;autorizzazione fornitore della destinazione viene scelta per tutti gli ID nel cluster prima di includere i dati associati a tale destinazione.
+TCF 2.0 richiede inoltre che l&#39;origine dei dati verifichi l&#39;autorizzazione del fornitore della destinazione prima di inviare i dati a tale destinazione. Di conseguenza, [!DNL Real-time CDP] verifica se l&#39;autorizzazione fornitore della destinazione viene scelta per tutti gli ID nel cluster prima di includere i dati associati a tale destinazione.
 
 >[!NOTE]
 >
