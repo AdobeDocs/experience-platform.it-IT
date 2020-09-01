@@ -5,7 +5,7 @@ seo-title: Governance dei dati in tempo reale della piattaforma dati del cliente
 description: 'Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all''uso dei dati. '
 seo-description: 'Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all''uso dei dati. '
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Puoi impostare le restrizioni di utilizzo dei dati su una destinazione definendo
 >
 >Per ulteriori informazioni sulle azioni di marketing e il loro utilizzo nei criteri di utilizzo dei dati, consulta la panoramica [dei criteri di utilizzo](../../data-governance/policies/overview.md) dei dati nella [!DNL Experience Platform] documentazione.
 
-La definizione dei casi di utilizzo del marketing sulle destinazioni consente di garantire che tutti i profili o i segmenti inviati a tali destinazioni siano conformi ai criteri di utilizzo dei dati. È quindi necessario aggiungere alle destinazioni i casi di utilizzo del marketing appropriati in base alle esigenze aziendali per applicare restrizioni all&#39;attivazione.
+La definizione dei casi di utilizzo del marketing sulle destinazioni consente di garantire che tutti i profili o i segmenti inviati a tali destinazioni siano conformi ai criteri di utilizzo dei dati. È pertanto necessario aggiungere alle destinazioni i casi di utilizzo del marketing appropriati in base alle esigenze aziendali per applicare restrizioni all&#39;attivazione.
 
 I casi di utilizzo del marketing possono essere selezionati solo quando si configura una destinazione per la prima volta. A seconda del tipo di destinazione con cui state lavorando, l’opportunità di configurare i casi di utilizzo del marketing verrà visualizzata in punti diversi del flusso di lavoro di configurazione. Consulta la documentazione [di](../destinations/destinations-overview.md) destinazione per i passaggi su come configurare una particolare destinazione.
 
@@ -76,7 +76,7 @@ Se si verifica una violazione del criterio durante il tentativo di attivare un s
 
 ![](assets/violation-popover.png)
 
-La *[!UICONTROL Details]* scheda del puntatore indica l&#39;azione che ha attivato la violazione il motivo della violazione e fornisce suggerimenti per la possibile risoluzione del problema.
+La **[!UICONTROL Details]** scheda del puntatore indica l&#39;azione che ha attivato la violazione il motivo della violazione e fornisce suggerimenti per la possibile risoluzione del problema.
 
 Fare clic **[!UICONTROL Data Lineage]** per tenere traccia delle destinazioni, dei segmenti, dei criteri di unione o dei set di dati le cui etichette dati hanno attivato la violazione.
 
