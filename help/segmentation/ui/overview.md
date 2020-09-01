@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida utente del servizio di segmentazione
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1333'
+source-wordcount: '1327'
 ht-degree: 0%
 
 ---
@@ -155,13 +155,13 @@ Ulteriori informazioni sulla segmentazione in streaming sono disponibili nella g
 >
 >Per consentire il funzionamento della segmentazione in streaming, è necessario abilitare la segmentazione pianificata per l&#39;organizzazione. Per informazioni dettagliate sull&#39;abilitazione della segmentazione pianificata, consultate [la sezione relativa alla segmentazione in streaming in questa guida](#scheduled-segmentation)utente.
 
-## DULE violazioni dei criteri
+## Violazioni dei criteri
 
 >[!NOTE]
 >
->Le violazioni dei criteri DULE si applicano solo se si crea un segmento assegnato a una destinazione.
+>Le violazioni dei criteri si applicano solo se stai creando un segmento che è stato assegnato a una destinazione.
 
-Dopo aver creato il segmento, questo verrà analizzato [!DNL Data Governance] per assicurarsi che non vi siano violazioni dei criteri all&#39;interno del segmento. Per informazioni dettagliate sulle violazioni DULE e dei criteri, fare riferimento alla panoramica [delle etichette di utilizzo dei](../../data-governance/labels/overview.md)dati.
+Dopo aver creato il segmento, il segmento verrà analizzato da Adobe Experience Platform Data Governance per assicurarsi che non ci siano violazioni dei criteri all&#39;interno del segmento. Per ulteriori informazioni, consulta la [[!DNL Data Governance] panoramica](../../data-governance/home.md) .
 
 ![](../images/ui/overview/segment-dule-policy-violations.png)
 
