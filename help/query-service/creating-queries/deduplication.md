@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;data deduplication;deduplication;
 solution: Experience Platform
 title: Deduplicazione dei dati
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Deduplicazione dei dati in [!DNL Query Service]
 
- Adobe Experience Platform [!DNL Query Service] supporta la deduplicazione dei dati quando potrebbe essere necessario rimuovere un&#39;intera riga da un calcolo o ignorare un set specifico di campi, perché solo parte dei dati nella riga è un duplicato. Il pattern comune per la deduplicazione prevede l&#39;uso della `ROW_NUMBER()` funzione in una finestra per un ID, o una coppia di ID, nel tempo ordinato (utilizzando il campo [!DNL Experience Data Model] (XDM) `timestamp` ) per restituire un nuovo campo che rappresenta il numero di volte in cui è stato rilevato un duplicato. Quando questo valore è `1`, si riferisce all&#39;istanza originale e, nella maggior parte dei casi, all&#39;istanza che si desidera utilizzare, ignorando ogni altra istanza. Nella maggior parte dei casi, questa operazione viene eseguita all&#39;interno di una sottoselezione, in cui la deduplicazione viene eseguita in un livello superiore, `SELECT` come per esempio l&#39;esecuzione di un conteggio aggregato.
+Adobe Experience Platform [!DNL Query Service] supporta la deduplicazione dei dati quando potrebbe essere necessario rimuovere un&#39;intera riga da un calcolo o ignorare un set specifico di campi, perché solo parte dei dati nella riga è un duplicato. Il pattern comune per la deduplicazione prevede l&#39;uso della `ROW_NUMBER()` funzione in una finestra per un ID, o una coppia di ID, nel tempo ordinato (utilizzando il campo [!DNL Experience Data Model] (XDM) `timestamp` ) per restituire un nuovo campo che rappresenta il numero di volte in cui è stato rilevato un duplicato. Quando questo valore è `1`, si riferisce all&#39;istanza originale e, nella maggior parte dei casi, all&#39;istanza che si desidera utilizzare, ignorando ogni altra istanza. Nella maggior parte dei casi, questa operazione viene eseguita all&#39;interno di una sottoselezione, in cui la deduplicazione viene eseguita in un livello superiore, `SELECT` come per esempio l&#39;esecuzione di un conteggio aggregato.
 
 ## Casi di utilizzo
 
