@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;configure dataflow;advertising connector
 solution: Experience Platform
 title: Configurare un flusso di dati per un connettore pubblicitario nell'interfaccia utente
 topic: overview
+description: Un flusso di dati è un'attività pianificata che recupera e trasferisce dati da un'origine a un set di dati Adobe Experience Platform. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account pubblicitario.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
 workflow-type: tm+mt
-source-wordcount: '1211'
+source-wordcount: '1244'
 ht-degree: 0%
 
 ---
