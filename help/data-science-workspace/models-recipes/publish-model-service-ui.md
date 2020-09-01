@@ -5,7 +5,7 @@ title: Pubblicare un modello come servizio (interfaccia utente)
 topic: Tutorial
 description: Adobe Experience Platform Data Science Workspace consente di pubblicare i modelli formati e valutati come un servizio, consentendo agli utenti all'interno dell'organizzazione IMS di valutare i dati senza la necessità di creare i propri modelli.
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Se si preferisce pubblicare un modello utilizzando le API Sensei Machine Learnin
 
 ## Punteggio con un servizio {#access-a-service}
 
-1. In Adobe Experience Platform, fare clic sulla **[!UICONTROL Services]** scheda situata nella colonna di navigazione a sinistra per accedere al *[!UICONTROL Service Gallery]*. Trova il Servizio che desideri utilizzare e fai clic su **[!UICONTROL Score]**.
+1. In Adobe Experience Platform, fare clic sulla **[!UICONTROL Services]** scheda situata nella colonna di navigazione a sinistra per accedere al **[!UICONTROL Service Gallery]**. Trova il Servizio che desideri utilizzare e fai clic su **[!UICONTROL Score]**.
    ![](../images/models-recipes/publish-model/click_to_score.png)
 2. Selezionare un set di dati di input appropriato per l&#39;esecuzione del punteggio, quindi fare clic su **[!UICONTROL Next]**.
    ![](../images/models-recipes/publish-model/6_scoring_input.png)
@@ -53,4 +53,4 @@ Se si preferisce pubblicare un modello utilizzando le API Sensei Machine Learnin
 
 ## Passaggi successivi {#next-steps}
 
-Seguendo questa esercitazione, hai pubblicato correttamente un modello come servizio accessibile e i dati con punteggio utilizzando il nuovo servizio tramite *[!UICONTROL Service Gallery]*. Seguite l&#39;esercitazione successiva per apprendere come [pianificare l&#39;esecuzione automatica della formazione e del punteggio su un servizio](./schedule-models-ui.md).
+Seguendo questa esercitazione, hai pubblicato correttamente un modello come servizio accessibile e i dati con punteggio utilizzando il nuovo servizio tramite **[!UICONTROL Service Gallery]**. Seguite l&#39;esercitazione successiva per apprendere come [pianificare l&#39;esecuzione automatica della formazione e del punteggio su un servizio](./schedule-models-ui.md).
