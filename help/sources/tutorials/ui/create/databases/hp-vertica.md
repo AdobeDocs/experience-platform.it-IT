@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;HP Vertica
 solution: Experience Platform
 title: Creare un connettore sorgente HP Vertica nell'interfaccia utente
 topic: overview
+description: Questa esercitazione fornisce i passaggi per creare un connettore sorgente HP Vertica utilizzando l'interfaccia utente della piattaforma.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '477'
 ht-degree: 1%
 
 ---
