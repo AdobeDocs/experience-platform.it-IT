@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;list sandboxes
 solution: Experience Platform
 title: Elenca i tipi di sandbox supportati
 topic: developer guide
+description: Potete recuperare un elenco dei tipi di sandbox supportati per la vostra organizzazione effettuando una richiesta di GET all'endpoint /sandboxTypes.
 translation-type: tm+mt
-source-git-commit: b4741cdfd065bbaed7f2feeafe8619191e4b8f6c
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '47'
-ht-degree: 4%
+source-wordcount: '68'
+ht-degree: 2%
 
 ---
 
