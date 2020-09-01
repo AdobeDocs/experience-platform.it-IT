@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;sandbox user guide;sandbox guide
 solution: Experience Platform
 title: Guida utente sandbox
 topic: user guide
+description: In questo documento sono descritti i passaggi necessari per eseguire varie operazioni relative alle sandbox nell'interfaccia utente di Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
+source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '525'
 ht-degree: 0%
 
 ---
