@@ -5,9 +5,9 @@ seo-title: Governance dei dati in tempo reale della piattaforma dati del cliente
 description: 'Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all''uso dei dati. '
 seo-description: 'Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all''uso dei dati. '
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: '1015'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ Il diagramma seguente illustra come l&#39;implementazione dei criteri è integra
 
 ![](assets/enforcement-flow.png)
 
-Quando un segmento viene attivato per la prima volta, DULE [!DNL Policy Service] verifica la presenza di violazioni dei criteri in base ai seguenti fattori:
+Quando un segmento viene attivato per la prima volta, [!DNL Policy Service] verifica la presenza di violazioni dei criteri in base ai seguenti fattori:
 
 * Le etichette di utilizzo dei dati applicate ai campi e ai set di dati all’interno del segmento da attivare.
 * Scopo di marketing della destinazione.
