@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;access data sources
 solution: Experience Platform
 title: Esercitazioni sull'accesso ai dati
 topic: tutorial
+description: Adobe Experience Platform consente agli utenti di scoprire e accedere ai dataset acquisiti all'interno  Experience Platform tramite l'API di accesso ai dati.
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '102'
+source-wordcount: '121'
 ht-degree: 0%
 
 ---
@@ -14,11 +15,11 @@ ht-degree: 0%
 
 # Accesso  dati Experience Platform
 
- Adobe Experience Platform consente agli utenti di scoprire e accedere ai set di dati acquisiti all&#39;interno [!DNL Experience Platform] dell&#39;API di accesso ai dati.
+Adobe Experience Platform consente agli utenti di scoprire e accedere ai dataset acquisiti all&#39;interno [!DNL Experience Platform] dell&#39;API di accesso ai dati.
 
 ## Accesso ai dati tramite API
 
-Scoprite come individuare, accedere e scaricare i dati memorizzati in un dataset utilizzando l&#39;API di accesso ai dati in  Adobe Experience Platform, nonché alcune delle funzioni univoche dell&#39;API di accesso ai dati, come il paging e i download parziali. Per iniziare, segui l&#39;esercitazione [API di accesso ai](../data-access/tutorials/dataset-data.md)dati.
+Scoprite come individuare, accedere e scaricare i dati memorizzati in un dataset utilizzando l&#39;API di accesso ai dati in Adobe Experience Platform, nonché alcune delle funzioni univoche dell&#39;API di accesso ai dati, come il paging e i download parziali. Per iniziare, segui l&#39;esercitazione [API di accesso ai](../data-access/tutorials/dataset-data.md)dati.
 
 ## Creare un dataset
 
