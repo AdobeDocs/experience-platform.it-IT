@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;google adwords;Google AdWords;adwords
 solution: Experience Platform
 title: Creare un connettore Google AdWords utilizzando l'API del servizio di flusso
 topic: overview
+description: Questa esercitazione utilizza l'API del servizio di flusso per guidarvi attraverso i passaggi necessari per collegare  Experience Platform a Google AdWords.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '598'
-ht-degree: 2%
+source-wordcount: '618'
+ht-degree: 1%
 
 ---
 
