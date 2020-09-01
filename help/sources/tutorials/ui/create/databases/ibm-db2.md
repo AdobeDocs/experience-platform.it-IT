@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;DB2;db2;IBM DB2;ibm db2
 solution: Experience Platform
 title: Creare un connettore sorgente IBM DB2 nell'interfaccia utente
 topic: overview
+description: Questa esercitazione fornisce i passaggi per la creazione di un connettore sorgente IBM DB2 (in seguito denominato "DB2") tramite l'interfaccia utente della piattaforma.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 1%
+source-wordcount: '519'
+ht-degree: 0%
 
 ---
 
