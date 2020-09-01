@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;CRM;crm;crm flow service
 solution: Experience Platform
 title: Esplora un sistema CRM utilizzando l'API del servizio di flusso
 topic: overview
+description: Questa esercitazione utilizza l'API del servizio di flusso per esplorare i sistemi CRM.
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '583'
 ht-degree: 2%
 
 ---
@@ -14,13 +15,13 @@ ht-degree: 2%
 
 # Esplora un sistema CRM utilizzando l&#39; [!DNL Flow Service] API
 
-[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti diverse all&#39;interno  Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
+[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
 Questa esercitazione utilizza l&#39; [!DNL Flow Service] API per esplorare i sistemi CRM.
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [Origini](../../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi.
 * [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
@@ -81,7 +82,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta di successo è un array di tabelle dal sistema CRM. Trovare la tabella che si desidera inserire [!DNL Platform] e prendere nota della relativa `path` proprietà, in quanto è necessario fornire nel passaggio successivo per ispezionare la struttura.
+Una risposta di successo è un array di tabelle dal sistema CRM. Trovare la tabella che si desidera inserire [!DNL Platform] e prendere nota della relativa `path` proprietà, in quanto è necessario fornire nel passaggio successivo per ispezionare la sua struttura.
 
 ```json
 [
@@ -121,7 +122,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | L&#39;ID della connessione di base per il sistema CRM in uso. |
+| `{BASE_CONNECTION_ID}` | ID della connessione di base per il sistema CRM in uso. |
 | `{TABLE_PATH}` | Percorso di una tabella. |
 
 **Richiesta**
@@ -172,4 +173,4 @@ Una risposta corretta restituisce la struttura di una tabella. I dettagli relati
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai esplorato il tuo sistema CRM, trovato il percorso della tabella a cui desideri portare [!DNL Platform]e ottenuto informazioni sulla sua struttura. Puoi utilizzare queste informazioni nell&#39;esercitazione successiva per [raccogliere dati dal sistema CRM e portarli in Platform](../collect/crm.md).
+Seguendo questa esercitazione, hai esplorato il tuo sistema CRM, trovato il percorso della tabella a cui desideri portare [!DNL Platform]e ottenuto informazioni sulla sua struttura. Puoi utilizzare queste informazioni nell&#39;esercitazione successiva per [raccogliere dati dal sistema CRM e portarli nella piattaforma](../collect/crm.md).
