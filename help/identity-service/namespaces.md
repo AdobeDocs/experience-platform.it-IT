@@ -5,7 +5,7 @@ title: Servizio Adobe Experience Platform Identity
 topic: overview
 description: 'Gli spazi dei nomi delle identità sono un componente di Servizio identità che funge da indicatori del contesto a cui si riferisce un''identità. Ad esempio, distinguono un valore di "name<span>@email.com" come indirizzo e-mail o "443522" come ID CRM numerico. '
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 1%
@@ -53,7 +53,7 @@ I seguenti tipi di identità sono disponibili all&#39;interno [!DNL Platform]:
 
 Adobe Experience Platform fornisce diversi spazi dei nomi di identità disponibili per tutte le organizzazioni. Questi sono noti come spazi dei nomi standard e sono visibili tramite l&#39; [!DNL Identity Service] API o l&#39; [!DNL Platform] interfaccia utente.
 
-Per visualizzare gli spazi dei nomi standard nell&#39;interfaccia utente, fate clic **[!UICONTROL Identities]** nella barra a sinistra, quindi fate clic sulla *[!UICONTROL Browse]* scheda. Vengono visualizzati tutti gli spazi dei nomi di identità accessibili alla vostra organizzazione, ma quelli con &quot;[!UICONTROL Standard]&quot; come &quot;[!UICONTROL Owner]&quot; sono gli spazi dei nomi standard forniti dal Adobe .
+Per visualizzare gli spazi dei nomi standard nell&#39;interfaccia utente, fate clic **[!UICONTROL Identities]** nella barra a sinistra, quindi fate clic sulla **[!UICONTROL Browse]** scheda. Vengono visualizzati tutti gli spazi dei nomi di identità accessibili alla vostra organizzazione, ma quelli con &quot;[!UICONTROL Standard]&quot; come &quot;[!UICONTROL Owner]&quot; sono gli spazi dei nomi standard forniti dal Adobe .
 
 Potete quindi fare clic su uno dei namespace elencati per visualizzare i dettagli.
 
@@ -71,7 +71,7 @@ Gli spazi dei nomi definiti dall&#39;utente sono privati per la propria organizz
 
 ![](./images/create-identity-namespace.png)
 
-Come per gli spazi dei nomi Standard, è possibile fare clic su uno spazio dei nomi personalizzato dalla *[!UICONTROL Browse]* scheda per visualizzarne i dettagli, ma con uno spazio dei nomi personalizzato è anche possibile modificare il nome visualizzato e la descrizione dall&#39;area dei dettagli.
+Come per gli spazi dei nomi Standard, è possibile fare clic su uno spazio dei nomi personalizzato dalla **[!UICONTROL Browse]** scheda per visualizzarne i dettagli, ma con uno spazio dei nomi personalizzato è anche possibile modificare il nome visualizzato e la descrizione dall&#39;area dei dettagli.
 
 >[!NOTE]
 >
