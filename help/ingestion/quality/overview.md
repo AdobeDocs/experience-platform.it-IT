@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Data quality;quality;Quality;Supported validation;Validation;supported validation;
 solution: Experience Platform
 title: Qualità dell'assimilazione dei dati
 topic: overview
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 6%
@@ -12,9 +12,9 @@ ht-degree: 6%
 ---
 
 
-# Qualità dei dati in  Adobe Experience Platform
+# Qualità dei dati in Adobe Experience Platform
 
- Adobe Experience Platform offre garanzie ben definite per completezza, precisione e coerenza dei dati caricati tramite l’assimilazione in batch o in streaming. Il seguente documento fornisce un riepilogo dei controlli e dei comportamenti di convalida supportati per l’inserimento di batch e streaming in [!DNL Experience Platform].
+Adobe Experience Platform offre garanzie ben definite per completezza, precisione e coerenza dei dati caricati tramite l’assimilazione in batch o in streaming. Il seguente documento fornisce un riepilogo dei controlli e dei comportamenti di convalida supportati per l’inserimento di batch e streaming in [!DNL Experience Platform].
 
 ## Controlli supportati
 
@@ -53,6 +53,6 @@ Le seguenti convalide vengono eseguite per l&#39;assimilazione in streaming:
 | Organizzazione IMS | Assicurarsi che l&#39;organizzazione IMS elencata sia un&#39;organizzazione valida. |
 | Nome origine | Assicurarsi che il nome dell&#39;origine dati sia specificato. |
 | Set di dati | Assicurarsi che il dataset sia specificato, attivato e non sia stato rimosso. |
-| Intestazione | Assicurarsi che l&#39;intestazione sia specificata ed è valida. |
+| Header | Assicurarsi che l&#39;intestazione sia specificata ed è valida. |
 
 Ulteriori informazioni sulle modalità di [!DNL Platform] monitoraggio e convalida dei dati sono disponibili nella documentazione [sui flussi di dati di](./monitor-data-flows.md)monitoraggio.
