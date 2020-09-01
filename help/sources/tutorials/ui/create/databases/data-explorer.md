@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Data Explorer;azure data explorer;data explorer;Data Explorer
 solution: Experience Platform
 title: Creare un connettore di origine di Data Explorer di Azure nell'interfaccia utente
 topic: overview
+description: Questa esercitazione fornisce passaggi per la creazione di un connettore di origine di Data Explorer di Azure (in seguito denominato "Data Explorer") tramite l'interfaccia utente della piattaforma.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '490'
 ht-degree: 1%
 
 ---
