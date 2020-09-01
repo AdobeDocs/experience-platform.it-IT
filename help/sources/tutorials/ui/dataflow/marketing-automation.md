@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;marketing automation connector
 solution: Experience Platform
 title: Configurare un flusso di dati per un connettore di automazione marketing nell'interfaccia utente
 topic: overview
+description: Un flusso di dati è un'attività pianificata che recupera e assimila dati da un'origine a un [!DNL Platform] set di dati. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account di automazione marketing.
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1253'
 ht-degree: 0%
 
 ---
