@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;generate datasets;generate dataset;create dataset;
 solution: Experience Platform
 title: Generazione di set di dati dai risultati della query
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '266'
 ht-degree: 1%
@@ -38,4 +38,4 @@ Per generare un set di dati con uno schema [!DNL Experience Data Model] (XDM) pr
 
 ## Set di dati di output
 
-I set di dati creati tramite questa funzionalità vengono generati con uno schema ad hoc che corrisponde alla struttura dei dati di output come definito nell&#39;istruzione SQL. Alcuni servizi a valle richiedono insiemi di dati con schemi [!DNL Experience Data Model] (XDM) particolari. Prima di scrivere le query, verificare i requisiti di formattazione dei dati per i servizi a valle.
+I set di dati creati con questa funzionalità vengono generati con uno schema ad hoc che corrisponde alla struttura dei dati di output come definito nell&#39;istruzione SQL. Alcuni servizi a valle richiedono insiemi di dati con schemi [!DNL Experience Data Model] (XDM) particolari. Prima di scrivere le query, verificare i requisiti di formattazione dei dati per i servizi a valle.
