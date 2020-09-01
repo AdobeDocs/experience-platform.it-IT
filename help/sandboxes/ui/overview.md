@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;sandbox overview
 solution: Experience Platform
 title: Panoramica dell’interfaccia utente sandbox
 topic: user guide
+description: Adobe Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati e isolati. L’interfaccia utente della sandbox si trova nell’interfaccia  Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6438c1841889ff345e1ebaedabfed0531c1f97f9
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '96'
+source-wordcount: '125'
 ht-degree: 0%
 
 ---
@@ -15,7 +16,7 @@ ht-degree: 0%
 # Panoramica dell’interfaccia utente sandbox
 
 
- Adobe Experience Platform fornisce sandbox virtuali che dividono una singola istanza di Platform in ambienti virtuali separati e isolati. L’interfaccia utente sandbox si trova nell’interfaccia utente del Experience Platform [](https://platform.adobe.com).
+Adobe Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati e isolati. L’interfaccia utente sandbox si trova nell’interfaccia utente del Experience Platform [](https://platform.adobe.com).
 
 Dopo aver effettuato l’accesso all’interfaccia utente del Experience Platform , passate alla guida [utente della](user-guide.md) sandbox per informazioni su come eseguire varie attività nell’area di lavoro della sandbox.
 
