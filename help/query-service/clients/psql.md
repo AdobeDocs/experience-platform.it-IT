@@ -5,7 +5,7 @@ title: Connetti con PSQL
 topic: connect
 description: 'PSQL è un''interfaccia della riga di comando che viene visualizzata quando installate Postgres sul computer. Potete installarlo seguendo queste istruzioni. '
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 1%
@@ -63,9 +63,9 @@ psql (PostgreSQL) 9.5.14
 
 ## Connect PSQL e [!DNL Query Service]
 
-Tornate all’ [!DNL Platform] interfaccia sulla *[!UICONTROL Connect BI Tools]* pagina.
+Tornate all’ [!DNL Platform] interfaccia sulla **[!UICONTROL Connect BI Tools]** pagina.
 
-Fate clic **[!UICONTROL copy]** per *[!UICONTROL PSQL Command]*.
+Fate clic **[!UICONTROL copy]** per **[!UICONTROL PSQL Command]**.
 
 ![Immagine](../images/clients/psql/connect-bi.png)
 
@@ -75,7 +75,7 @@ Fate clic **[!UICONTROL copy]** per *[!UICONTROL PSQL Command]*.
 
 Incollare la stringa del comando in una finestra di terminale o di comando e premere Invio.
 
-Dovresti vedere un risultato come questo:
+Dovreste visualizzare un risultato simile al seguente:
 
 ```shell
 psql (10.5, server 0.1.0)
@@ -84,4 +84,4 @@ Type "help" for help.
 all=>
 ```
 
-Se non viene visualizzata almeno la versione 10.5, è necessario scaricare tale versione o la versione successiva.
+Se non visualizzi almeno la versione 10.5, devi scaricare la versione o la versione successiva.
