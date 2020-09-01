@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;update sandbox
 solution: Experience Platform
 title: Aggiornare una sandbox
 topic: developer guide
+description: Potete aggiornare uno o più campi in una sandbox effettuando una richiesta di PATCH che includa il nome della sandbox nel percorso della richiesta e la proprietà da aggiornare nel payload della richiesta.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '87'
-ht-degree: 4%
+source-wordcount: '120'
+ht-degree: 3%
 
 ---
 
