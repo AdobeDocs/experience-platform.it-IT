@@ -5,7 +5,7 @@ title: Gestione degli utenti per un profilo di prodotto
 topic: user guide
 description: Questo documento illustra come gestire gli utenti per un profilo di prodotto nell’interfaccia utente di Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 1%
@@ -15,11 +15,11 @@ ht-degree: 1%
 
 # Gestione degli utenti per un profilo di prodotto
 
-Per assegnare o rimuovere utenti da un profilo di prodotto, aprite la pagina dei dettagli del profilo e andate alla *[!UICONTROL Users]* scheda. Da qui, clicca **[!UICONTROL Add User]**.
+Per assegnare o rimuovere utenti da un profilo di prodotto, aprite la pagina dei dettagli del profilo e andate alla **[!UICONTROL Users]** scheda. Da qui, clicca **[!UICONTROL Add User]**.
 
 ![add-users-button](../images/add-users-button.png)
 
-Viene visualizzata *[!UICONTROL Add User]* la finestra di dialogo. Utilizzando il campo di ricerca, potete cercare gli utenti da aggiungere sia per nome che per e-mail. Mentre digitate, gli utenti corrispondenti verranno visualizzati in una finestra autocompleta sotto la casella di testo.
+Viene visualizzata **[!UICONTROL Add User]** la finestra di dialogo. Utilizzando il campo di ricerca, potete cercare gli utenti da aggiungere sia per nome che per e-mail. Mentre digitate, gli utenti corrispondenti verranno visualizzati in una finestra autocompleta sotto la casella di testo.
 
 ![add-user-autocomplete](../images/add-user-autocomplete.png)
 
@@ -31,7 +31,7 @@ Dopo aver selezionato un utente, fai clic **[!UICONTROL Save]** per aggiungerlo 
 
 ![add-user-save](../images/add-user-save.png)
 
-Viene nuovamente visualizzata la *[!UICONTROL Users]* scheda del profilo di prodotto, in cui è ora elencato l&#39;utente aggiunto.
+Viene nuovamente visualizzata la **[!UICONTROL Users]** scheda del profilo di prodotto, in cui è ora elencato l&#39;utente aggiunto.
 
 ![aggiunto dall’utente](../images/user-added.png)
 
