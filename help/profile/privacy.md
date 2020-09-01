@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Elaborazione delle richieste di privacy in Real-time Customer Profile
 topic: overview
 translation-type: tm+mt
-source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 0%
@@ -93,7 +93,7 @@ curl -X POST \
 
 ### Utilizzo dell’interfaccia
 
-Quando create richieste di processo nell’interfaccia utente, accertatevi di selezionare **[!UICONTROL AEP Data Lake]** e/o **[!UICONTROL Profile]** in _[!UICONTROL Products]_per elaborare i processi per i dati memorizzati, rispettivamente, nel[!DNL Data Lake]o[!DNL Real-time Customer Profile].
+Quando create richieste di processo nell’interfaccia utente, accertatevi di selezionare **[!UICONTROL AEP Data Lake]** e/o **[!UICONTROL Profile]** in **[!UICONTROL Products]** per elaborare i processi per i dati memorizzati, rispettivamente, nel [!DNL Data Lake] o [!DNL Real-time Customer Profile].
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
