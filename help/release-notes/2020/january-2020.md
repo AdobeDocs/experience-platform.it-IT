@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '892'
 ht-degree: 5%
@@ -82,7 +82,7 @@ Adobe Experience Platform è in grado di acquisire dati da origini esterne e di 
 | Categoria | Autorizzazione | Descrizione |
 |--- | --- | ---|
 | Ingestione dati | Gestisci origini | Accesso alle origini di lettura, creazione, modifica e disattivazione. |
-| Ingestione dati | Visualizza origini | Accesso in sola lettura alle origini disponibili nella *[!UICONTROL Catalog]* scheda e alle origini autenticate nella *[!UICONTROL Browse]* scheda. |
+| Ingestione dati | Visualizza origini | Accesso in sola lettura alle origini disponibili nella **[!UICONTROL Catalog]** scheda e alle origini autenticate nella **[!UICONTROL Browse]** scheda. |
 
 **Problemi noti**
 
