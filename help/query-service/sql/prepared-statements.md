@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;prepared statements;prepared;sql;
 solution: Experience Platform
 title: Dichiarazioni preparate
 topic: prepared statements
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 7%
@@ -14,7 +14,7 @@ ht-degree: 7%
 
 # Dichiarazioni preparate
 
-In SQL, le istruzioni preparate vengono utilizzate per modellare query o aggiornamenti simili.  Adobe Experience Platform [!DNL Query Service] supporta le istruzioni preparate utilizzando una query con parametri. Questo può essere utilizzato per ottimizzare le prestazioni, in quanto non sarà più necessario ripetere continuamente l&#39;analisi di una query.
+In SQL, le istruzioni preparate vengono utilizzate per modellare query o aggiornamenti simili. Adobe Experience Platform [!DNL Query Service] supporta le istruzioni preparate utilizzando una query con parametri. Questo può essere utilizzato per ottimizzare le prestazioni, in quanto non sarà più necessario ripetere continuamente l&#39;analisi di una query.
 
 ## Uso di istruzioni preparate
 
@@ -87,7 +87,7 @@ La query SQL precedente restituirà la risposta seguente:
 | 10000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | Canada |
 | 10001 | antoina | dubois | 1967-03-14 | example2@example.com | Paris | Francia |
 | 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tokyo | Giappone |
-| 10003 | linus | pettersson | 1982-06-03 | example4@example.com | Stoccolma | Svezia |
+| 10003 | linus | pettersson | 1982-06-03 | example4@example.com | Stoccolma | Kenya |
 | 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | Nairobi | Kenya |
 | 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Cile |
 
