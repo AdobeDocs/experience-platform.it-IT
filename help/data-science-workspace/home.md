@@ -5,7 +5,7 @@ title: Panoramica di Analysis Workspace
 topic: overview
 description: Questa guida fornisce una panoramica dei concetti chiave relativi a Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '2578'
 ht-degree: 0%
@@ -62,7 +62,7 @@ Il grafico seguente delinea la relazione gerarchica tra Ricette, Modelli, Esecuz
 
 ![](./images/home/recipe_hiearchy_ui.png)
 
-## Informazioni [!DNL Data Science Workspace]
+## Comprensione di [!DNL Data Science Workspace]
 
 Grazie a [!DNL Data Science Workspace]questa funzionalità, i data-scienziati possono semplificare il processo complicato di scoperta di informazioni in insiemi di dati di grandi dimensioni. Basato su un framework e un runtime di machine learning comune, [!DNL Data Science Workspace] offre gestione avanzata del flusso di lavoro, gestione dei modelli e scalabilità. I servizi intelligenti supportano il riutilizzo di ricette di machine learning per alimentare una serie di applicazioni create con prodotti e soluzioni  Adobe.
 
@@ -132,7 +132,7 @@ Nella tabella seguente sono riportati gli effetti di tale autorizzazione attivat
 
 | Autorizzazione | Abilitata | Disabilitata |
 |---|---|---|
-| [!DNL Manage Data Science Workspace] | Fornisce l&#39;accesso a tutti i servizi in [!DNL Data Science Workspace]. | L&#39;accesso alle API e all&#39;interfaccia utente a tutti i servizi all&#39;interno [!DNL Data Science Workspace] sono disattivati. Anche se disattivato, il routing alle pagine [!DNL Data Science Workspace] e *[!UICONTROL Models]* alle pagine *[!UICONTROL Services]* non è consentito. |
+| [!DNL Manage Data Science Workspace] | Fornisce l&#39;accesso a tutti i servizi in [!DNL Data Science Workspace]. | L&#39;accesso alle API e all&#39;interfaccia utente a tutti i servizi all&#39;interno [!DNL Data Science Workspace] sono disattivati. Anche se disattivato, il routing alle pagine [!DNL Data Science Workspace] e **[!UICONTROL Models]** alle pagine **[!UICONTROL Services]** non è consentito. |
 
 ### Sicurezza e tranquillità
 
@@ -147,7 +147,7 @@ Le sandbox sono partizioni virtuali all&#39;interno di una singola istanza di [!
 
 Al momento [!DNL Data Science Workspace] presenta due limitazioni sandbox:
 
-- Le risorse di calcolo sono condivise tra le sandbox di produzione e non di produzione. L&#39;isolamento per le sandbox di produzione sarà disponibile in futuro.
+- Le risorse di calcolo sono condivise tra le sandbox di produzione e quelle non di produzione. L&#39;isolamento per le sandbox di produzione sarà disponibile in futuro.
 - I carichi di lavoro Scala/[!DNL Spark] e PySpark per notebook e ricette sono attualmente supportati solo nella sandbox di produzione. Il supporto per sandbox non destinate alla produzione verrà impostato in futuro.
 
 ## [!DNL Data Science Workspace] in azione
