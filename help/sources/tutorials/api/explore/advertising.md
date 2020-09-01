@@ -1,26 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;advertising system;Advertising system
 solution: Experience Platform
 title: Esplora un sistema pubblicitario utilizzando l'API di Flusso Service
 topic: overview
+description: Flow Service è utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini diverse all'interno di Adobe Experience Platform. Il servizio fornisce un'interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate. Questa esercitazione utilizza l'API del servizio di flusso per esplorare i sistemi pubblicitari.
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '581'
-ht-degree: 2%
+source-wordcount: '626'
+ht-degree: 1%
 
 ---
 
 
 # Esplora un sistema pubblicitario utilizzando l&#39; [!DNL Flow Service] API
 
-[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti diverse all&#39;interno  Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
+[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
 Questa esercitazione utilizza l&#39; [!DNL Flow Service] API per esplorare i sistemi pubblicitari.
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [Origini](../../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi.
 * [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
@@ -29,7 +30,7 @@ Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario cono
 
 ### Raccogli credenziali richieste
 
-Questa esercitazione richiede una connessione valida con l&#39;applicazione pubblicitaria di terze parti da cui si desidera acquisire i dati. Una connessione valida include l&#39;ID della specifica di connessione dell&#39;applicazione e l&#39;ID di connessione. Per ulteriori informazioni sulla creazione di una connessione pubblicitaria e sul recupero di tali valori, consulta l’esercitazione Platform [sulla](../../api/create/advertising/ads.md) connessione di un’origine pubblicitaria.
+Questa esercitazione richiede una connessione valida con l&#39;applicazione pubblicitaria di terze parti da cui si desidera acquisire i dati. Una connessione valida include l&#39;ID della specifica di connessione dell&#39;applicazione e l&#39;ID di connessione. Per ulteriori informazioni sulla creazione di una connessione pubblicitaria e sul recupero di tali valori, consulta l’esercitazione sulla [connessione di un’origine pubblicitaria all’esercitazione sulla piattaforma](../../api/create/advertising/ads.md) .
 
 ### Lettura di chiamate API di esempio
 
@@ -78,7 +79,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta di successo è un array di tabelle da al sistema pubblicitario. Trovare la tabella che si desidera inserire [!DNL Platform] e prendere nota della relativa `path` proprietà, in quanto è necessario fornire nel passaggio successivo per ispezionare la struttura.
+Una risposta di successo è un array di tabelle da al sistema pubblicitario. Trovare la tabella che si desidera inserire [!DNL Platform] e prendere nota della relativa `path` proprietà, in quanto è necessario fornire nel passaggio successivo per ispezionare la sua struttura.
 
 ```json
 [
@@ -187,4 +188,4 @@ Una risposta corretta restituisce la struttura di una tabella. I dettagli relati
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai esplorato il tuo sistema pubblicitario, trovato il percorso della tabella a cui desideri accedere [!DNL Platform]e ottenuto informazioni sulla sua struttura. Potete utilizzare queste informazioni nell&#39;esercitazione successiva per [raccogliere i dati dal sistema pubblicitario e inserirli in Platform](../collect/advertising.md).
+Seguendo questa esercitazione, hai esplorato il tuo sistema pubblicitario, trovato il percorso della tabella a cui desideri accedere [!DNL Platform]e ottenuto informazioni sulla sua struttura. Potete utilizzare queste informazioni nell&#39;esercitazione successiva per [raccogliere i dati dal sistema pubblicitario e inserirli nella piattaforma](../collect/advertising.md).
