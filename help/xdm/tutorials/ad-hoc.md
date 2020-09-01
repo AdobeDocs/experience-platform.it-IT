@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;ad-hoc;ad hoc;adhoc;Ad-hoc;Ad hoc;Adhoc;tutorial;Tutorial;create;Create;schema;Schema
 solution: Experience Platform
 title: Creare uno schema ad hoc
+description: In circostanze specifiche, potrebbe essere necessario creare uno schema Experience Data Model (XDM) con campi che vengono denominati separati per l'uso solo da un singolo dataset. Tale schema è denominato "ad hoc". Gli schemi ad hoc vengono utilizzati in vari flussi di lavoro di assimilazione dei dati per  Experience Platform, inclusi l’assimilazione di file CSV e la creazione di determinati tipi di connessioni sorgente.
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '782'
 ht-degree: 2%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 2%
 
 # Creare uno schema ad hoc
 
-In circostanze specifiche, potrebbe essere necessario creare uno schema [!DNL Experience Data Model] (XDM) con campi che vengono denominati separati per l&#39;uso solo da un singolo dataset. Tale schema è denominato &quot;ad hoc&quot;. Gli schemi ad hoc sono utilizzati in vari flussi di lavoro di assimilazione dei dati per [!DNL Experience Platform], ad esempio per acquisire file CSV e creare determinati tipi di connessioni sorgente.
+In circostanze specifiche, potrebbe essere necessario creare uno schema [!DNL Experience Data Model] (XDM) con campi che vengono denominati separati per l&#39;uso solo da un singolo dataset. Tale schema è denominato &quot;ad hoc&quot;. Gli schemi ad hoc vengono utilizzati in vari flussi di lavoro di assimilazione dei dati per [!DNL Experience Platform], ad esempio per acquisire file CSV e creare determinati tipi di connessioni sorgente.
 
 Questo documento contiene i passaggi generali per la creazione di uno schema ad hoc mediante l&#39;API [del Registro di](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)schema. È destinato ad essere utilizzato insieme ad altre [!DNL Experience Platform] esercitazioni che richiedono la creazione di uno schema ad hoc come parte del flusso di lavoro. Ciascuno di questi documenti fornisce informazioni dettagliate su come configurare correttamente uno schema ad hoc per il relativo caso di utilizzo specifico.
 
@@ -158,7 +159,7 @@ POST /tenant/schemas
 
 **Richiesta**
 
-La richiesta seguente crea un nuovo schema, fornendo un riferimento (`$ref`) alla classe ad hoc creata in precedenza `$id` nel payload.
+La richiesta seguente crea un nuovo schema, fornendo un riferimento (`$ref`) alla classe ad hoc creata in precedenza `$id` nel suo payload.
 
 ```shell
 curl -X POST \
