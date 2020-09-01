@@ -5,7 +5,7 @@ title: Guida utente del profilo cliente in tempo reale
 topic: guide
 description: Profilo cliente in tempo reale crea una visualizzazione olistica di ciascuno dei tuoi clienti, combinando dati da più canali tra cui dati online, offline, CRM e di terze parti. Questo documento funge da guida per l'interazione con il profilo cliente in tempo reale nell'interfaccia utente di Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1167'
 ht-degree: 0%
@@ -29,19 +29,19 @@ Questa guida utente richiede una comprensione dei vari [!DNL Experience Platform
 
 ## Panoramica
 
-Nell&#39;interfaccia [[!DNL  Experience Platform]](http://platform.adobe.com), fare clic **[!UICONTROL Profiles]** nella barra di navigazione a sinistra per aprire la _[!UICONTROL Overview]_scheda. Questa scheda fornisce collegamenti alla documentazione e ai video per agevolare la comprensione e l&#39;utilizzo dei profili.
+Nell&#39;interfaccia [[!DNL  Experience Platform]](http://platform.adobe.com), fare clic **[!UICONTROL Profiles]** nella barra di navigazione a sinistra per aprire la **[!UICONTROL Overview]** scheda. Questa scheda fornisce collegamenti alla documentazione e ai video per agevolare la comprensione e l&#39;utilizzo dei profili.
 
 ![](../images/user-guide/profiles-overview.png)
 
 ## Sfoglia
 
-Selezionate la *[!UICONTROL Browse]* scheda per cercare i profili in base all&#39;identità.
+Selezionate la **[!UICONTROL Browse]** scheda per cercare i profili in base all&#39;identità.
 
 ![](../images/user-guide/profiles-browse.png)
 
 ### Metriche profilo {#profile-metrics}
 
-Sul lato destro della *[!UICONTROL Browse]* scheda sono presenti diverse metriche importanti correlate ai dati del profilo, tra cui il conteggio [totale del](#profile-count) profilo e un elenco di [profili in base allo spazio dei nomi](#profiles-by-namespace).
+Sul lato destro della **[!UICONTROL Browse]** scheda sono presenti diverse metriche importanti correlate ai dati del profilo, tra cui il conteggio [totale del](#profile-count) profilo e un elenco di [profili in base allo spazio dei nomi](#profiles-by-namespace).
 
 Queste metriche del profilo vengono valutate utilizzando il criterio di unione predefinito dell&#39;organizzazione. Per ulteriori informazioni sull&#39;utilizzo dei criteri di unione, inclusa la modalità di definizione di un criterio di unione predefinito, vedere la guida [utente](merge-policies.md)Unisci criteri.
 
@@ -59,13 +59,13 @@ Quando l&#39;inserimento di record nel [!DNL Profile Store] aumenta o diminuisce
 
 ### Profili per namespace {#profiles-by-namespace}
 
-La *[!UICONTROL Profiles by namespace]* metrica visualizza il conteggio totale e la suddivisione degli spazi dei nomi in tutti i profili uniti nel tuo archivio profili. Il numero totale di profili per namespace (in altre parole, aggiungendo insieme i valori mostrati per ogni namespace) sarà sempre superiore alla metrica del conteggio dei profili, perché a un profilo potrebbero essere associati più spazi dei nomi. Ad esempio, se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente saranno associati più spazi dei nomi.
+La **[!UICONTROL Profiles by namespace]** metrica visualizza il conteggio totale e la suddivisione degli spazi dei nomi in tutti i profili uniti nel tuo archivio profili. Il numero totale di profili per namespace (in altre parole, aggiungendo insieme i valori mostrati per ogni namespace) sarà sempre superiore alla metrica del conteggio dei profili, perché a un profilo potrebbero essere associati più spazi dei nomi. Ad esempio, se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente saranno associati più spazi dei nomi.
 
 Simile alla metrica del conteggio [del](#profile-count) profilo, quando l&#39;inserimento di record nel [!DNL Profile Store] aumenta o diminuisce il conteggio di oltre il 5%, viene attivato un processo per aggiornare le metriche dello spazio nomi. Per i flussi di lavoro dei dati in streaming, viene effettuato un controllo ogni ora per determinare se è stata raggiunta la soglia di incremento o riduzione del 5%. In caso affermativo, viene attivato automaticamente un processo per aggiornare il conteggio dei profili. Per l&#39;inserimento batch, entro 15 minuti dal corretto inserimento di un batch nel [!DNL Profile Store], se viene raggiunta la soglia di incremento o riduzione del 5%, viene eseguito un processo per aggiornare le metriche.
 
 ### Unisci criterio
 
-Il **[!UICONTROL Merge policy]** selettore seleziona automaticamente il criterio di unione predefinito per l&#39;organizzazione. Se non si desidera utilizzare tale criterio di unione, è possibile selezionare il criterio `X` accanto al criterio di unione predefinito per aprire una finestra di dialogo in cui *[!UICONTROL Select merge policy]* scegliere un altro criterio di unione. Per ulteriori informazioni sui criteri di unione, consultare la guida [utente](merge-policies.md)Unisci criteri.
+Il **[!UICONTROL Merge policy]** selettore seleziona automaticamente il criterio di unione predefinito per l&#39;organizzazione. Se non si desidera utilizzare tale criterio di unione, è possibile selezionare il criterio `X` accanto al criterio di unione predefinito per aprire una finestra di dialogo in cui **[!UICONTROL Select merge policy]** scegliere un altro criterio di unione. Per ulteriori informazioni sui criteri di unione, consultare la guida [utente](merge-policies.md)Unisci criteri.
 
 ![](../images/user-guide/profiles-search-merge-policy.png)
 
@@ -75,13 +75,13 @@ Il **[!UICONTROL Identity namespace]** selettore apre una finestra di dialogo in
 
 ![](../images/user-guide/profiles-search-filter.png)
 
-Dalla *[!UICONTROL Select identity namespace]* finestra di dialogo, scegliete lo spazio dei nomi in base al quale eseguire la ricerca oppure utilizzate la **[!UICONTROL Search]** barra nella finestra di dialogo per iniziare a digitare il nome di uno spazio dei nomi. È possibile selezionare uno spazio dei nomi per visualizzare ulteriori dettagli e, una volta trovato lo spazio dei nomi da cercare, selezionare il pulsante di scelta e premere **[!UICONTROL Select]** per continuare.
+Dalla **[!UICONTROL Select identity namespace]** finestra di dialogo, scegliete lo spazio dei nomi in base al quale eseguire la ricerca oppure utilizzate la **[!UICONTROL Search]** barra nella finestra di dialogo per iniziare a digitare il nome di uno spazio dei nomi. È possibile selezionare uno spazio dei nomi per visualizzare ulteriori dettagli e, una volta trovato lo spazio dei nomi da cercare, selezionare il pulsante di scelta e premere **[!UICONTROL Select]** per continuare.
 
 ![](../images/user-guide/profiles-select-identity-namespace.png)
 
 ### Valore identità
 
-Dopo aver selezionato un **[!UICONTROL Identity namespace]**, tornate alla *[!UICONTROL Browse]* scheda in cui potete inserire un **[!UICONTROL Identity value]**. Questo valore è specifico di un profilo cliente singolo e deve essere una voce valida per lo spazio dei nomi fornito. Ad esempio, la selezione di **[!UICONTROL Identity namespace]** &quot;E-mail&quot; richiede un indirizzo e-mail **[!UICONTROL Identity value]** valido.
+Dopo aver selezionato un **[!UICONTROL Identity namespace]**, tornate alla **[!UICONTROL Browse]** scheda in cui potete inserire un **[!UICONTROL Identity value]**. Questo valore è specifico di un profilo cliente singolo e deve essere una voce valida per lo spazio dei nomi fornito. Ad esempio, la selezione di **[!UICONTROL Identity namespace]** &quot;E-mail&quot; richiede un indirizzo e-mail **[!UICONTROL Identity value]** valido.
 
 ![](../images/user-guide/profiles-show-profile.png)
 
@@ -91,17 +91,17 @@ Una volta immesso il valore, selezionare **[!UICONTROL Show profile]** e viene r
 
 ### Dettagli profilo {#profile-detail}
 
-Dopo aver selezionato **[!UICONTROL Profile ID]**, si apre la _[!UICONTROL Detail]_scheda. In questa pagina vengono visualizzate informazioni sul profilo selezionato, inclusi gli attributi di base, le identità collegate e i canali di contatto disponibili. Le informazioni di profilo visualizzate sono state unite da più frammenti di profilo per formare una singola vista del singolo cliente.
+Dopo aver selezionato **[!UICONTROL Profile ID]**, si apre la **[!UICONTROL Detail]** scheda. In questa pagina vengono visualizzate informazioni sul profilo selezionato, inclusi gli attributi di base, le identità collegate e i canali di contatto disponibili. Le informazioni di profilo visualizzate sono state unite da più frammenti di profilo per formare una singola vista del singolo cliente.
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-Potete visualizzare informazioni aggiuntive relative al profilo, inclusi *[!UICONTROL Attributes]*, *[!UICONTROL Events]* e *[!UICONTROL Segments]* a cui il profilo è membro.
+Potete visualizzare informazioni aggiuntive relative al profilo, inclusi **[!UICONTROL Attributes]**, **[!UICONTROL Events]** e **[!UICONTROL Segments]** a cui il profilo è membro.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Unisci criteri
 
-Selezionare la *[!UICONTROL Merge Policies]* scheda per visualizzare un elenco di criteri di unione appartenenti alla propria organizzazione. Ogni criterio elencato visualizza il nome, indipendentemente dal fatto che si tratti del criterio di unione predefinito, e lo schema a cui si applica.
+Selezionare la **[!UICONTROL Merge Policies]** scheda per visualizzare un elenco di criteri di unione appartenenti alla propria organizzazione. Ogni criterio elencato visualizza il nome, indipendentemente dal fatto che si tratti del criterio di unione predefinito, e lo schema a cui si applica.
 
 Per ulteriori informazioni sui criteri di unione, consultare la guida [utente](merge-policies.md)Unisci criteri.
 
