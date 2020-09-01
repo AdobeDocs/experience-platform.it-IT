@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;target mapping;Target mapping
 solution: Experience Platform
 title: Campo mappatura destinazione
 topic: overview
+description: La tabella seguente illustra i campi di uno schema Evento esperienza (*Campo ExperienceEvent XDM*) e i campi Target corrispondenti a cui devono essere mappati (campo Richiesta Target). Sono inoltre disponibili note aggiuntive per alcune mappature.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '427'
+source-wordcount: '462'
 ht-degree: 0%
 
 ---
@@ -14,21 +15,21 @@ ht-degree: 0%
 
 # Campi di mappatura di destinazione
 
- Adobe Experience Platform consente di acquisire  dati di Adobe Target attraverso il connettore di origine Target. Quando si utilizza il connettore, tutti i dati provenienti dai campi Target devono essere mappati ai campi [Experience Data Model (XDM)](../../../../xdm/home.md) associati alla classe XDM ExperienceEvent.
+Adobe Experience Platform consente di acquisire  dati Adobe Target tramite il connettore di origine di Target. Quando si utilizza il connettore, tutti i dati provenienti dai campi di Target devono essere mappati ai campi [Experience Data Model (XDM)](../../../../xdm/home.md) associati alla classe XDM ExperienceEvent.
 
-La tabella seguente illustra i campi di uno schema Evento esperienza (campo *ExperienceEvent* XDM) e i campi Target a cui devono essere mappati (campo *Richiesta* Target). Sono inoltre disponibili note aggiuntive per alcune mappature.
+La tabella seguente illustra i campi di uno schema Evento esperienza (campo *ExperienceEvent* XDM) e i campi Target corrispondenti a cui devono essere mappati (campo *Richiesta* Target). Sono inoltre disponibili note aggiuntive per alcune mappature.
 
 >[!NOTE]
 >
 >Scorrere a sinistra/destra per visualizzare il contenuto completo della tabella.
 
-| Campo ExperienceEvent XDM | Campo richiesta Target | Note |
+| Campo ExperienceEvent XDM | Campo Richiesta di Target | Note |
 | ------------------------- | -------------------- | ----- |
 | **`id`** | Un unico identificatore di richiesta |
 | **`dataSource`** |  | Configurato su &quot;1&quot; per tutti i client. |
 | `dataSource._id` | Valore generato dal sistema che non può essere trasmesso con la richiesta. | L&#39;ID univoco di questa origine dati. Questo viene fornito dal singolo o dal sistema che ha creato l&#39;origine dati. |
 | `dataSource.code` | Valore generato dal sistema che non può essere trasmesso con la richiesta. | Scelta rapida per l&#39;intero @id. È possibile utilizzare almeno uno del codice o @id. A volte, questo codice viene definito codice di integrazione dell&#39;origine dati. |
-| `dataSource.tags` | Valore generato dal sistema che non può essere trasmesso con la richiesta. | I tag sono utilizzati per indicare come gli alias rappresentati da una data origine dati devono essere interpretati dalle applicazioni che utilizzano tali alias.<br><br>Esempi:<br><ul><li>`isAVID`: Origini dati che rappresentano  ID visitatore Analytics.</li><li>`isCRSKey`: Origini dati che rappresentano alias da utilizzare come chiavi in CRS.</li></ul>I tag vengono impostati al momento della creazione dell&#39;origine dati, ma vengono anche inclusi nei messaggi della pipeline quando si fa riferimento a una determinata origine dati. |
+| `dataSource.tags` | Valore generato dal sistema che non può essere trasmesso con la richiesta. | I tag sono utilizzati per indicare come gli alias rappresentati da una data origine dati devono essere interpretati dalle applicazioni che utilizzano tali alias.<br><br>Esempi:<br><ul><li>`isAVID`: Origini dati che rappresentano gli ID visitatore di Analytics.</li><li>`isCRSKey`: Origini dati che rappresentano alias da utilizzare come chiavi in CRS.</li></ul>I tag vengono impostati al momento della creazione dell&#39;origine dati, ma vengono anche inclusi nei messaggi della pipeline quando si fa riferimento a una determinata origine dati. |
 | **`timestamp`** | Timestamp evento |
 | **`channel`** | `context.channel` | Funziona solo con la distribuzione della vista. Le opzioni sono &quot;web&quot; e &quot;mobile&quot;, con &quot;web&quot; come impostazione predefinita. |
 | **`endUserIds`** |
@@ -51,8 +52,8 @@ La tabella seguente illustra i campi di uno schema Evento esperienza (campo *Exp
 | `experience.target.mboxName` | `mboxRequest.mboxName` |
 | `experience.target.mboxVersion` | `mboxRequest.mboxVersion` |
 | `experience.target.sessionId` | `mboxRequest.sessionId` |
-| `experience.target.environmentID` | Mappatura interna Target per ambienti definiti dal cliente (ad esempio dev, qa o prod). |
-| `experience.target.supplementalDataID` | Identificatore utilizzato per unire eventi Target con  eventi Analytics |
+| `experience.target.environmentID` | Mappatura interna di Target per gli ambienti definiti dal cliente (ad esempio dev, qa o prod). |
+| `experience.target.supplementalDataID` | Identificatore utilizzato per unire gli eventi Target con gli eventi di Analytics |
 | `experience.target.pageDetails.pageId` | `mboxRequest.pageId` |
 | `experience.target.pageDetails.pageScore` | `mboxRequest.mboxPageValue` |
 | `experience.target.activities` | Elenco (array) di attività per le quali il visitatore si è qualificato |
