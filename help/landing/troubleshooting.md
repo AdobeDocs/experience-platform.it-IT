@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guida alla risoluzione dei problemi e domande frequenti  Adobe Experience Platform
+title: Guida per la risoluzione dei problemi e domande frequenti su Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 9eeddfaf3e704d66b81f983afcdf5ef3c45c6075
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1962'
+source-wordcount: '1951'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # [!DNL Platform] Domande frequenti e guida alla risoluzione dei problemi
 
-Questo documento contiene le risposte alle domande frequenti sul Adobe Experience Platform , nonché una guida per la risoluzione dei problemi di alto livello per individuare eventuali errori comuni riscontrati in qualsiasi [!DNL Experience Platform] API. Per le guide alla risoluzione dei problemi sui singoli [!DNL Platform] servizi, consulta la directory [per la risoluzione dei problemi del](#service-troubleshooting-directory) servizio di seguito.
+Questo documento contiene le risposte alle domande frequenti su Adobe Experience Platform e una guida per la risoluzione dei problemi di alto livello per individuare eventuali errori comuni riscontrati in qualsiasi [!DNL Experience Platform] API. Per le guide alla risoluzione dei problemi sui singoli [!DNL Platform] servizi, consulta la directory [per la risoluzione dei problemi del](#service-troubleshooting-directory) servizio di seguito.
 
 ## Domande frequenti {#faq}
 
-Di seguito è riportato un elenco di risposte alle domande frequenti sul  Adobe Experience Platform.
+Segue un elenco di risposte alle domande frequenti su Adobe Experience Platform.
 
 ## Cosa sono [!DNL Experience Platform] le API? {#what-are-experience-platform-apis}
 
@@ -32,7 +32,7 @@ I formati delle richieste variano a seconda dell&#39; [!DNL Platform] API utiliz
 
 La documentazione relativa [!DNL Experience Platform] agli esempi di chiamate API avviene in due modi diversi. Innanzitutto, la chiamata viene presentata nel suo formato **** API, una rappresentazione di modello che mostra solo l’operazione (GET, POST, PUT, PATCH, DELETE) e l’endpoint utilizzato (ad esempio, `/global/classes`). Alcuni modelli mostrano anche la posizione delle variabili per illustrare in che modo una chiamata deve essere formulata, ad esempio `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`.
 
-Le chiamate vengono quindi visualizzate come comandi cURL in una **richiesta**, che include le intestazioni necessarie e il &quot;percorso di base&quot; completo necessario per interagire con l&#39;API. Il percorso di base deve essere preceduto da tutti gli endpoint. Ad esempio, l&#39; `/global/classes` endpoint di cui sopra diventa `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`. Vedrete il formato API/il pattern di richiesta in tutta la documentazione e dovrete utilizzare il percorso completo mostrato nella richiesta di esempio per effettuare chiamate alle API Platform.
+Le chiamate vengono quindi visualizzate come comandi cURL in una **richiesta**, che include le intestazioni necessarie e il &quot;percorso di base&quot; completo necessario per interagire con l&#39;API. Il percorso di base deve essere preceduto da tutti gli endpoint. Ad esempio, l&#39; `/global/classes` endpoint di cui sopra diventa `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`. Vedrete il formato API/il pattern di richiesta in tutta la documentazione e dovrete utilizzare il percorso completo mostrato nella richiesta di esempio quando effettuerete chiamate alle API della piattaforma.
 
 ### Esempio di richiesta API
 
@@ -84,11 +84,11 @@ La risposta illustra cosa ci si aspetta di ricevere in seguito a una chiamata al
 }
 ```
 
-Per ulteriori informazioni su endpoint specifici nelle API di Platform, comprese le intestazioni richieste e i corpi di richiesta, consultate la documentazione [di riferimento](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)API.
+Per ulteriori informazioni su endpoint specifici nelle API della piattaforma, comprese le intestazioni richieste e i corpi di richiesta, consultate la documentazione [di riferimento](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)API.
 
 ## Qual è la mia organizzazione IMS? {#what-is-my-ims-organization}
 
-Un&#39;organizzazione IMS è una rappresentazione  Adobe di un cliente. Tutte le soluzioni  Adobe con licenza sono integrate con questa organizzazione cliente. Quando un&#39;organizzazione IMS ha diritto a [!DNL Experience Platform], può assegnare l&#39;accesso agli sviluppatori. L&#39;ID organizzazione IMS (`x-gw-ims-org-id`) rappresenta l&#39;organizzazione per la quale deve essere eseguita una chiamata API ed è pertanto richiesto come intestazione in tutte le richieste API. Questo ID si trova tramite la [console](https://www.adobe.com/go/devs_console_ui)Sviluppatore di Adobe: nella scheda **Integrazioni** , andate alla sezione **Panoramica** di una particolare integrazione per trovare l&#39;ID in Credenziali **client**. Per una descrizione dettagliata di come autenticarsi, [!DNL Platform]consulta l’esercitazione [sull’](../tutorials/authentication.md)autenticazione.
+Un&#39;organizzazione IMS è una rappresentazione  Adobe di un cliente. Tutte le soluzioni  Adobe con licenza sono integrate con questa organizzazione cliente. Quando un&#39;organizzazione IMS ha diritto a [!DNL Experience Platform], può assegnare l&#39;accesso agli sviluppatori. L&#39;ID organizzazione IMS (`x-gw-ims-org-id`) rappresenta l&#39;organizzazione per la quale deve essere eseguita una chiamata API ed è pertanto richiesto come intestazione in tutte le richieste API. Questo ID si trova tramite la [console](https://www.adobe.com/go/devs_console_ui)Sviluppatore di Adobe: nella scheda **Integrazioni** , andate alla sezione **Panoramica** di una particolare integrazione per trovare l’ID in Credenziali **client**. Per una descrizione dettagliata di come autenticarsi, [!DNL Platform]consulta l’esercitazione [sull’](../tutorials/authentication.md)autenticazione.
 
 ## Dove posso trovare la mia chiave API? {#where-can-i-find-my-api-key}
 
@@ -238,16 +238,15 @@ Questo messaggio di errore viene visualizzato quando una richiesta di POST, PUT 
 Di seguito è riportato un elenco di guide per la risoluzione dei problemi e di documentazione di riferimento API per [!DNL Experience Platform] le API. Ogni guida alla risoluzione dei problemi fornisce risposte alle domande frequenti e soluzioni ai problemi specifici dei singoli [!DNL Platform] servizi. I documenti di riferimento API forniscono una guida completa a tutti gli endpoint disponibili per ciascun servizio, e mostrano i corpi delle richieste di esempio, le risposte e i codici di errore che possono essere ricevuti.
 
 | Servizio | Riferimento API | Risoluzione dei problemi |
---- | --- | ---
+| --- | --- | --- |
 | Controllo di accesso | [API di controllo degli accessi](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml) | [Guida alla risoluzione dei problemi di controllo degli accessi](../access-control/troubleshooting-guide.md) |
-| Catalogo | [API Servizio catalogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) |  |
-| Ingestione dati (batch) | [API di inserimento dati](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [Guida alla risoluzione dei problemi di inserimento batch](../ingestion/batch-ingestion/troubleshooting.md) |
-| Ingestione dei dati (streaming) | [API di inserimento dati](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [Guida alla risoluzione dei problemi di caricamento in streaming](../ingestion/streaming-ingestion/troubleshooting.md) |
-| Area di lavoro Data Science | [Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [Guida alla risoluzione dei problemi per l&#39;area di lavoro di analisi dati](../data-science-workspace/troubleshooting-guide.md) |
-| Etichettatura ed applicazione dell&#39;uso dei dati (DULE) | [API servizio criteri DULE](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) |  |
-| Modello dati esperienza (XDM) | [API del Registro di sistema dello schema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [Domande frequenti sul sistema XDM e guida alla risoluzione dei problemi](../xdm/troubleshooting-guide.md) |
-| Servizio identità | [API Servizio identità](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [Guida alla risoluzione dei problemi del servizio identità](../identity-service/troubleshooting-guide.md) |
-| Servizio query | [API Servizio query](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [Guida alla risoluzione dei problemi del servizio Query](../query-service/troubleshooting-guide.md) |
-| Profilo del cliente in tempo reale | [API profilo cliente in tempo reale](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [Guida alla risoluzione dei problemi dei profili](../profile/troubleshooting.md) |
+| Ingestione dati Adobe Experience Platform | [[!DNL Data Ingestion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [Guida](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[alla risoluzione dei problemi di acquisizione batchGuida alla risoluzione dei problemi di assimilazione dello streaming](../ingestion/streaming-ingestion/troubleshooting.md) |
+| Adobe Experience Platform Data Science Workspace | [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [[!DNL Data Science Workspace] guida alla risoluzione dei problemi](../data-science-workspace/troubleshooting-guide.md) |
+| Adobe Experience Platform Data Governance | [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) |  |
+| Servizio Adobe Experience Platform Identity | [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [[!DNL Identity Service] guida alla risoluzione dei problemi](../identity-service/troubleshooting-guide.md) |
+| Adobe Experience Platform Query Service | [[!DNL Query Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [[!DNL Query Service] guida alla risoluzione dei problemi](../query-service/troubleshooting-guide.md) |
+| Segmentazione Adobe Experience Platform | [[!DNL API segmentazione]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
+| [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) |  |
+| [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [[!DNL XDM System] Domande frequenti e guida alla risoluzione dei problemi](../xdm/troubleshooting-guide.md) |
+| [!DNL Real-time Customer Profile] | [[!DNL API profilo cliente in tempo reale]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [[!DNL Profile] guida alla risoluzione dei problemi](../profile/troubleshooting.md) |
 | Sandbox | [API sandbox](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [Guida alla risoluzione dei problemi sandbox](../sandboxes/troubleshooting-guide.md) |
-| Segmentazione | [API di segmentazione](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
