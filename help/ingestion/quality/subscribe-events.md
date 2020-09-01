@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Iscrizione agli eventi di assimilazione dei dati
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 1%
@@ -55,7 +55,7 @@ Dopo aver creato un nuovo progetto, andate alla schermata di panoramica del prog
 
 ![](../images/quality/subscribe-events/add-event-button.png)
 
-Viene visualizzata _[!UICONTROL Add events]_la finestra di dialogo. Fare clic **[!UICONTROL Experience Platform]**per filtrare l&#39;elenco delle opzioni disponibili, quindi fare clic **[!UICONTROL Platform notifications]**prima di fare clic su **[!UICONTROL Next]**.
+Viene visualizzata **[!UICONTROL Add events]** la finestra di dialogo. Fare clic **[!UICONTROL Experience Platform]** per filtrare l&#39;elenco delle opzioni disponibili, quindi fare clic **[!UICONTROL Platform notifications]** prima di fare clic su **[!UICONTROL Next]**.
 
 ![](../images/quality/subscribe-events/select-platform-events.png)
 
