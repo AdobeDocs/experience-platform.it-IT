@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Query service;query service;Looker;looker;connect to query service;
 solution: Experience Platform
 title: Connetti con Looker
 topic: connect
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '193'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Connetti con [!DNL Looker]
 
-Per collegarsi [!DNL Looker] con [!DNL Query Service] il Adobe Experience Platform , attenetevi alla procedura seguente:
+Per connettersi [!DNL Looker] con [!DNL Query Service] Adobe Experience Platform, attenetevi alla procedura seguente:
 
 Dopo aver effettuato l’accesso [!DNL Looker], fate clic su **[!UICONTROL Admin]**, quindi su **[!UICONTROL Connections]**.
 
@@ -36,7 +36,7 @@ Da qui, potete compilare i dettagli per le Impostazioni di connessione.
 
 >[!NOTE]
 >
->Per ulteriori informazioni su come trovare l&#39;host e la porta, il nome del database e le credenziali di accesso, visitare la pagina delle [credenziali su Platform](https://platform.adobe.com/query/configuration). Per trovare le credenziali, accedi a [!DNL Platform], fai clic su **[!UICONTROL Queries]**, quindi fai clic su **[!UICONTROL Credentials]**.
+>Per ulteriori informazioni su come trovare l&#39;host e la porta, il nome del database e le credenziali di accesso, visitare la pagina delle [credenziali sulla piattaforma](https://platform.adobe.com/query/configuration). Per trovare le credenziali, accedi a [!DNL Platform], fai clic su **[!UICONTROL Queries]**, quindi fai clic su **[!UICONTROL Credentials]**.
 
 Dopo aver inserito i dettagli di connessione, fate clic su **[!UICONTROL Test These Settings]** per verificare che le credenziali funzionino correttamente. In caso affermativo, di seguito verrà visualizzato un messaggio in cui si informa che è possibile connettersi. Se la connessione ha esito positivo, fare clic su **[!UICONTROL Add Connection]** per creare la connessione.
 
