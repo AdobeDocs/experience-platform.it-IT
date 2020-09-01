@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;XDM;XDM system;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience event;Mixins;mixins;mixin;Mixin;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet
+keywords: Experience Platform;home;popular topics;XDM;XDM system;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience event;Mixins;mixins;mixin;Mixin;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema library;Schema Library;schema;record data;time series;time-series
 solution: Experience Platform
 title: Sistema XDM (Experience Data Model)
 topic: overview
 description: 'Standardizzazione e interoperabilità sono concetti chiave di Adobe Experience Platform. Experience Data Model (XDM), guidato da  Adobe, è uno sforzo per standardizzare i dati sull''esperienza cliente e definire schemi per la gestione dell''esperienza cliente. '
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: ed1f2fdac0f9c977d11c867327c084353c1bcd0f
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 0%
@@ -68,7 +68,7 @@ Anche se non tutti gli eventi sono facilmente organizzati per tutte le origini d
 
 ## schemi e [!DNL Experience Platform] servizi XDM
 
-[!DNL Experience Platform] è agnostico dello schema, il che significa che qualsiasi schema conforme allo standard XDM è disponibile per l&#39;uso da parte dei [!DNL Platform] servizi. I modi in cui i diversi [!DNL Platform] servizi utilizzano gli schemi sono descritti più dettagliatamente di seguito.
+[!DNL Experience Platform] è agnostico dello schema, il che significa che qualsiasi schema conforme allo standard XDM è disponibile per l&#39;uso da parte [!DNL Platform] dei servizi. I modi in cui i diversi [!DNL Platform] servizi utilizzano gli schemi sono descritti più dettagliatamente di seguito.
 
 ### [!DNL Catalog Service], [!DNL Data Ingestion] &amp; [!DNL Data Lake]
 
