@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
 title: Creare un connettore Microsoft Dynamics utilizzando l'API del servizio di flusso
 topic: overview
+description: Questa esercitazione utilizza l'API del servizio di flusso per guidarti attraverso i passaggi necessari per connettere la piattaforma a un account Microsoft Dynamics (in seguito denominato "Dynamics") per la raccolta dei dati CRM.
 translation-type: tm+mt
-source-git-commit: 5839e4695589455bd32b6e3e33a7c377343f920d
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '709'
 ht-degree: 1%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 1%
 
 # Creare un [!DNL Microsoft Dynamics] connettore utilizzando l&#39; [!DNL Flow Service] API
 
-[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti diverse all&#39;interno  Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
+[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
 Questa esercitazione utilizza l&#39; [!DNL Flow Service] API per guidarti attraverso i passaggi necessari per connettersi [!DNL Platform] a un account [!DNL Microsoft Dynamics] (in seguito denominato &quot;Dynamics&quot;) per la raccolta dei dati CRM.
 
@@ -22,7 +23,7 @@ Se si preferisce utilizzare l&#39;interfaccia utente in [!DNL Experience Platfor
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [Origini](../../../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi.
 * [Sandbox](../../../../../sandboxes/home.md): E[!DNL xperience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
