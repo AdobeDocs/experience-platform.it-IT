@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;payment connector
 solution: Experience Platform
 title: Configurare un flusso di dati per un connettore di pagamento nell'interfaccia utente
 topic: overview
+description: Un flusso di dati è un'attività pianificata che recupera e trasferisce dati da un'origine a un set di dati Adobe Experience Platform. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando il tuo account di pagamento.
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: 14044f9af50cd4c922294cd60f7b6549828e8aca
 workflow-type: tm+mt
-source-wordcount: '1203'
+source-wordcount: '1236'
 ht-degree: 0%
 
 ---
@@ -128,15 +129,15 @@ Dopo aver rivisto il flusso di dati, fai clic su **[!UICONTROL Finish]** e conse
 
 ## Monitorare il flusso di dati
 
-Una volta creato il flusso di dati, è possibile monitorare i dati che vengono acquisiti attraverso di esso per visualizzare informazioni su velocità di assimilazione, successo ed errori. Per ulteriori informazioni su come monitorare il flusso di dati, consulta l’esercitazione sul [monitoraggio di account e flussi di dati nell’interfaccia utente](../monitor.md).
+Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti attraverso di esso per visualizzare informazioni su velocità di assimilazione, successo ed errori. Per ulteriori informazioni su come monitorare il flusso di dati, consulta l’esercitazione sul [monitoraggio di account e flussi di dati nell’interfaccia utente](../monitor.md).
 
 ## Eliminare il flusso di dati
 
-È possibile eliminare i flussi di dati che non sono più necessari o che sono stati creati in modo non corretto utilizzando la **[!UICONTROL Delete]** funzione disponibile nell&#39; **[!UICONTROL Dataflows]** area di lavoro. Per ulteriori informazioni sull’eliminazione dei flussi di dati, consultate l’esercitazione sull’ [eliminazione dei flussi di dati nell’interfaccia](../delete.md)utente.
+È possibile eliminare i flussi di dati che non sono più necessari o che sono stati creati in modo non corretto utilizzando la **[!UICONTROL Delete]** funzione disponibile nell&#39; **[!UICONTROL Dataflows]** area di lavoro. Per ulteriori informazioni su come eliminare i flussi di dati, consulta l’esercitazione sull’ [eliminazione dei flussi di dati nell’interfaccia](../delete.md)utente.
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato con successo un flusso di dati per l&#39;immissione di dati da un sistema di automazione del marketing e hai acquisito informazioni sul monitoraggio dei set di dati. I dati in entrata possono ora essere utilizzati dai [!DNL Platform] servizi a valle come [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i documenti seguenti:
+Seguendo questa esercitazione, hai creato con successo un flusso di dati per inserire i dati da un sistema di automazione del marketing e hai acquisito informazioni approfondite sul monitoraggio dei set di dati. I dati in entrata possono ora essere utilizzati dai [!DNL Platform] servizi a valle come [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i documenti seguenti:
 
 - [[!DNL Real-time Customer Profile] panoramica](../../../../profile/home.md)
 - [[!DNL Data Science Workspace] panoramica](../../../../data-science-workspace/home.md)
