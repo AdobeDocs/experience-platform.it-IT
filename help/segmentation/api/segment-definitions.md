@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;segment definition;segment definitions;api;API;
 solution: Experience Platform
 title: Definizioni dei segmenti
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '1041'
 ht-degree: 4%
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # Endpoint definizioni segmento
 
- Adobe Experience Platform consente di creare segmenti che definiscono un gruppo di attributi o comportamenti specifici da un gruppo di profili. Una definizione di segmento è un oggetto che racchiude una query scritta in [!DNL Profile Query Language] (PQL). Questo oggetto è anche denominato predicato PQL. I predicati PQL definiscono le regole per il segmento in base alle condizioni relative a qualsiasi record o dati delle serie temporali forniti da [!DNL Real-time Customer Profile]. Per ulteriori informazioni sulla scrittura di query PQL, consultate la guida [](../pql/overview.md) PQL.
+Adobe Experience Platform consente di creare segmenti che definiscono un gruppo di attributi o comportamenti specifici da un gruppo di profili. Una definizione di segmento è un oggetto che racchiude una query scritta in [!DNL Profile Query Language] (PQL). Questo oggetto è anche denominato predicato PQL. I predicati PQL definiscono le regole per il segmento in base alle condizioni relative a qualsiasi record o dati delle serie temporali forniti da [!DNL Real-time Customer Profile]. Per ulteriori informazioni sulla scrittura di query PQL, consultate la guida [](../pql/overview.md) PQL.
 
 Questa guida fornisce informazioni utili per comprendere meglio le definizioni dei segmenti e include chiamate API di esempio per eseguire azioni di base tramite l&#39;API.
 
