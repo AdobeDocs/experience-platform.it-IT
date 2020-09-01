@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;
 solution: Experience Platform
 title: Guida utente del servizio di segmentazione
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: e7266fba14b2dffe46ce77428ad6fe0dd92abdf5
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '1333'
 ht-degree: 0%
@@ -65,7 +65,7 @@ La selezione della riga della definizione del segmento fornisce un riepilogo del
 
 ## Dettagli definizione segmento {#segment-details}
 
-Per visualizzare ulteriori dettagli su una definizione di segmento specifica, seleziona il nome di un segmento nella **[!UICONTROL Browse]** scheda.
+Per visualizzare ulteriori dettagli su una definizione di segmento specifica, seleziona il nome di un segmento all&#39;interno della **[!UICONTROL Browse]** scheda.
 
 Viene visualizzata la pagina dei dettagli del segmento. In alto, è disponibile un riepilogo della definizione del segmento, delle informazioni sulla dimensione del pubblico qualificata e delle destinazioni per le quali il segmento è attivato.
 
@@ -121,7 +121,7 @@ Selezionando **[!UICONTROL Create segment]** [!DNL Segment Builder] nell’angol
 
 ### [!DNL Segment Builder] workspace
 
-[!DNL Segment Builder] offre un’area di lavoro completa che consente di interagire con gli elementi [!DNL Profile] dati. L’area di lavoro offre controlli intuitivi per la creazione e la modifica di regole, come le sezioni di trascinamento utilizzate per rappresentare le proprietà dei dati.
+[!DNL Segment Builder] offre un’area di lavoro ricca di contenuti che consente di interagire con gli elementi [!DNL Profile] dati. L’area di lavoro offre controlli intuitivi per la creazione e la modifica di regole, come le sezioni di trascinamento utilizzate per rappresentare le proprietà dei dati.
 
 Per informazioni più dettagliate sull’utilizzo dell’ [!DNL Segment Builder] area di lavoro, consultate la guida [[!DNL Segment Builder] ](./segment-builder.md)utente.
 
