@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Attivare i dati di origine in entrata per compilare i profili cliente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '451'
 ht-degree: 0%
@@ -47,7 +47,7 @@ Viene **[!UICONTROL Dataset activity]** visualizzata la schermata. La **[!UICONT
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/select-dataset-schema.png)
 
-Viene **[!UICONTROL Schema Editor]** visualizzata la struttura dello schema nel quadro centrale. All&#39;interno del quadro, selezionare il campo da impostare come identità principale. Sotto la *[!UICONTROL Field properties]* scheda visualizzata, selezionare la **[!UICONTROL Identity]** casella di controllo, quindi **[!UICONTROL Primary identity]**. Infine, selezionate un elemento appropriato **[!UICONTROL Identity namespace]**, quindi fate clic su **[!UICONTROL Apply]**.
+Viene **[!UICONTROL Schema Editor]** visualizzata la struttura dello schema nel quadro centrale. All&#39;interno del quadro, selezionare il campo da impostare come identità principale. Sotto la **[!UICONTROL Field properties]** scheda visualizzata, selezionare la **[!UICONTROL Identity]** casella di controllo, quindi **[!UICONTROL Primary identity]**. Infine, selezionate un elemento appropriato **[!UICONTROL Identity namespace]**, quindi fate clic su **[!UICONTROL Apply]**.
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/set-schema-identity.png)
 
