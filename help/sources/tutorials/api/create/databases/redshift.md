@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;redshift;Redshift;Amazon Redshift;amazon redshift
 solution: Experience Platform
 title: Creare un connettore Amazon Redshift  utilizzando l'API del servizio di flusso
 topic: overview
+description: Questa esercitazione utilizza l'API del servizio di flusso per guidarvi attraverso i passaggi necessari per connettere  Experience Platform a  Amazon Redshift (in seguito denominato "Redshift").
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '682'
 ht-degree: 1%
 
 ---
