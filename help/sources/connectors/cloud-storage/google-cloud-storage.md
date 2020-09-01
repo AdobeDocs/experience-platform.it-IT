@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cloud storage
 solution: Experience Platform
 title: Connettore di archiviazione Google Cloud
 topic: overview
+description: La documentazione seguente fornisce informazioni su come collegare Google Cloud Storage alla piattaforma utilizzando le API o l'interfaccia utente.
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '377'
 ht-degree: 0%
 
 ---
