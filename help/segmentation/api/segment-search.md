@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;segment;Segment
+keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;segment;Segment;search;segment search;
 solution: Adobe Experience Platform
 title: Endpoint di ricerca del segmento
 topic: guide
 description: La ricerca dei segmenti viene utilizzata per cercare i campi contenuti in varie origini dati e restituirli in tempo quasi reale. Questa guida fornisce informazioni utili per comprendere meglio la ricerca dei segmenti e include chiamate API di esempio per l'esecuzione di azioni di base tramite l'API.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '1179'
 ht-degree: 2%
@@ -88,7 +88,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con le seguenti informazioni
 
 ### Ricerca di singole entità
 
-Questo endpoint di ricerca può essere utilizzato per recuperare un elenco di tutti gli oggetti con indicizzazione full text all&#39;interno dello spazio nomi specificato. È possibile utilizzare più parametri, separati da e commerciale (&amp;).
+Questo endpoint di ricerca può essere utilizzato per recuperare un elenco di tutti gli oggetti full text indicizzati all&#39;interno dello spazio nomi specificato. È possibile utilizzare più parametri, separati da e commerciale (&amp;).
 
 **Formato API**
 
@@ -253,7 +253,7 @@ Nella tabella seguente sono elencate le specifiche del funzionamento delle query
 | ------------------------- | ----------- |
 | foo | Cerca qualsiasi parola. Questo restituisce dei risultati se la parola &quot;foo&quot; è presente in uno qualsiasi dei campi ricercabili. |
 | foo AND bar | Una ricerca booleana. Questo restituisce dei risultati se **entrambe** le parole &quot;foo&quot; e &quot;bar&quot; sono presenti in uno dei campi ricercabili. |
-| barra per utenti o | Una ricerca booleana. Questo restituisce dei risultati se **la parola &quot;foo&quot; o la parola &quot;bar&quot; si trovano** in uno qualsiasi dei campi ricercabili. |
+| barra dei menu o dei menu | Una ricerca booleana. Questo restituisce dei risultati se **la parola &quot;foo&quot; o la parola &quot;bar&quot; si trovano** in uno qualsiasi dei campi ricercabili. |
 | barra NON | Una ricerca booleana. Questo restituisce dei risultati se la parola &quot;foo&quot; è trovata ma la parola &quot;bar&quot; non è trovata in nessuno dei campi ricercabili. |
 | name: foo AND bar | Una ricerca booleana. Questo restituisce risultati se **entrambe** le parole &quot;foo&quot; e &quot;bar&quot; sono presenti nel campo &quot;name&quot;. |
 | run* | Ricerca con caratteri jolly. L&#39;utilizzo di un asterisco (*) corrisponde a 0 o più caratteri, il che significa che restituirà risultati se il contenuto di uno qualsiasi dei campi ricercabili contiene una parola che inizia con &quot;run&quot;. Ad esempio, questo restituisce i risultati se vengono visualizzate le parole &quot;run&quot;, &quot;run&quot;, &quot;runner&quot; o &quot;runt&quot;. |
