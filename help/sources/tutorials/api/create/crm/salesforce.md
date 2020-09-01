@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Salesforce;salesforce
 solution: Experience Platform
 title: Creare un connettore Salesforce utilizzando l'API del servizio di flusso
 topic: overview
+description: Questa esercitazione utilizza l'API del servizio di flusso per guidarti nei passaggi necessari per connettere la piattaforma a un account Salesforce per la raccolta dei dati CRM.
 translation-type: tm+mt
-source-git-commit: 5839e4695589455bd32b6e3e33a7c377343f920d
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '707'
 ht-degree: 1%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 1%
 
 # Creare un [!DNL Salesforce] connettore utilizzando l&#39; [!DNL Flow Service] API
 
-Flow Service è utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti diverse all&#39;interno  Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
+Flow Service è utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini diverse all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
 Questa esercitazione utilizza l&#39; [!DNL Flow Service] API per guidarti nei passaggi necessari per connettersi [!DNL Platform] a un [!DNL Salesforce] account per la raccolta dei dati CRM.
 
@@ -22,7 +23,7 @@ Se si preferisce utilizzare l&#39;interfaccia utente in [!DNL Experience Platfor
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [Origini](../../../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi.
 * [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
