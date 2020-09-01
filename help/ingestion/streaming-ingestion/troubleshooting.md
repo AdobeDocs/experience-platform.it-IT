@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Risoluzione dei problemi di caricamento in streaming
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: c8e53a25c5b22e8d840658fe26ff47875947a6d0
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '991'
 ht-degree: 0%
@@ -58,7 +58,7 @@ Puoi raggruppare più messaggi all’interno di un singolo payload di richiesta 
 
 Tutti i dati inviati a [!DNL Platform] (correttamente o in altro modo) vengono memorizzati come file batch prima di essere memorizzati nei set di dati. Lo stato di elaborazione dei batch viene visualizzato all’interno del set di dati a cui sono stati inviati.
 
-È possibile verificare se i dati sono stati acquisiti correttamente controllando l&#39;attività del dataset utilizzando l&#39;interfaccia [utente del Experience Platform](https://platform.adobe.com). Fare clic **[!UICONTROL Datasets]** nella barra di navigazione a sinistra per visualizzare un elenco di set di dati. Selezionate dall’elenco visualizzato il set di dati a cui si sta eseguendo lo streaming per aprire la *[!UICONTROL Dataset activity]* pagina, mostrando tutti i batch inviati durante un periodo di tempo selezionato. Per ulteriori informazioni sull&#39;utilizzo [!DNL Experience Platform] per monitorare i flussi di dati, consulta la guida sul [monitoraggio dei flussi](../quality/monitor-data-flows.md)di dati in streaming.
+È possibile verificare se i dati sono stati acquisiti correttamente controllando l&#39;attività del dataset utilizzando l&#39;interfaccia [utente del Experience Platform](https://platform.adobe.com). Fare clic **[!UICONTROL Datasets]** nella barra di navigazione a sinistra per visualizzare un elenco di set di dati. Selezionate dall’elenco visualizzato il set di dati a cui si sta eseguendo lo streaming per aprire la **[!UICONTROL Dataset activity]** pagina, mostrando tutti i batch inviati durante un periodo di tempo selezionato. Per ulteriori informazioni sull&#39;utilizzo [!DNL Experience Platform] per monitorare i flussi di dati, consulta la guida sul [monitoraggio dei flussi](../quality/monitor-data-flows.md)di dati in streaming.
 
 Se il caricamento dei dati non è riuscito e si desidera ripristinarlo da [!DNL Platform], è possibile recuperare i batch non riusciti inviando i relativi ID al [!DNL Data Access API]. Per ulteriori informazioni, consulta la guida sul [recupero dei batch](../quality/retrieve-failed-batches.md) con errore.
 
@@ -100,4 +100,4 @@ Se [!DNL Real-time Customer Profile] rifiuta un messaggio, è probabile che sia 
 
 Esistono due tipi di spazi dei nomi di identità: predefinito e personalizzato. Quando si utilizzano spazi dei nomi personalizzati, assicurarsi che lo spazio dei nomi sia stato registrato all&#39;interno di [!DNL Identity Service]. Per ulteriori informazioni sull&#39;utilizzo degli spazi dei nomi predefiniti e personalizzati, consultate la panoramica [dello spazio dei nomi](../../identity-service/namespaces.md) identità.
 
-Puoi utilizzare l&#39; [[!DNL  interfaccia utente del Experience Platform]](https://platform.adobe.com) per visualizzare ulteriori informazioni sul motivo per cui un&#39;assimilazione non riuscita di un messaggio. Fai clic **[!UICONTROL Monitoring]** nella barra di navigazione a sinistra, quindi visualizza la _[!UICONTROL Streaming end-to-end]_scheda per visualizzare i batch di messaggi in streaming durante un periodo di tempo selezionato.
+Puoi utilizzare l&#39; [[!DNL  interfaccia utente del Experience Platform]](https://platform.adobe.com) per visualizzare ulteriori informazioni sul motivo per cui un&#39;assimilazione non riuscita di un messaggio. Fai clic **[!UICONTROL Monitoring]** nella barra di navigazione a sinistra, quindi visualizza la **[!UICONTROL Streaming end-to-end]** scheda per visualizzare i batch di messaggi in streaming durante un periodo di tempo selezionato.
