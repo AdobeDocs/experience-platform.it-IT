@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure HDInsights;Apache Spark
 solution: Experience Platform
-title: Creare un Apache Spark sul connettore di origine Azure HDInsights nell'interfaccia utente
+title: Creare un Apache Spark sul connettore sorgente Azure HDInsights nell'interfaccia utente
 topic: overview
+description: Questa esercitazione fornisce i passaggi necessari per creare un Apache Spark sul connettore di origine Azure HDInsights utilizzando l'interfaccia utente della piattaforma.
 translation-type: tm+mt
-source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '473'
 ht-degree: 1%
 
 ---
@@ -29,7 +30,7 @@ Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Ad
    * [Esercitazione](../../../../../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
 * [Profilo](../../../../../profile/home.md)cliente in tempo reale: Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
-Se si dispone già di una [!DNL Spark] connessione valida, è possibile ignorare il resto del documento e procedere all&#39;esercitazione sulla [configurazione di un flusso di dati](../../dataflow/databases.md)
+Se disponete già di una [!DNL Spark] connessione valida, potete ignorare il resto del documento e procedere all&#39;esercitazione sulla [configurazione di un flusso di dati](../../dataflow/databases.md)
 
 ### Raccogli credenziali richieste
 
