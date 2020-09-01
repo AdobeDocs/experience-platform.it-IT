@@ -5,7 +5,7 @@ title: Creare un nuovo profilo di prodotto
 topic: user guide
 description: Questo documento descrive i passaggi necessari per creare un nuovo profilo di prodotto nell'Adobe Admin Console. Per iniziare a creare un nuovo profilo, andate alla scheda Profili di prodotto e fate clic su Nuovo profilo.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 3%
@@ -15,11 +15,11 @@ ht-degree: 3%
 
 # Creare un nuovo profilo di prodotto
 
-Per iniziare a creare un nuovo profilo, andate alla *[!UICONTROL Product Profiles]* scheda e fate clic su **[!UICONTROL New Profile]**.
+Per iniziare a creare un nuovo profilo, andate alla **[!UICONTROL Product Profiles]** scheda e fate clic su **[!UICONTROL New Profile]**.
 
 ![nuovo profilo-pulsante](../images/new-profile-button.png)
 
-Viene visualizzata la _[!UICONTROL Create New Profile]_finestra di dialogo che richiede di immettere un **[!UICONTROL Profile Name]**e **[!UICONTROL Description]**per il nuovo profilo. Se desiderate che il nome visualizzato del profilo sia diverso, deselezionate **[!UICONTROL Same as Profile Name]**e immettete il nome visualizzato nella casella di testo visualizzata. In *[!UICONTROL User Notifications]*, potete specificare se gli utenti ricevono una notifica via e-mail quando vengono aggiunti o rimossi dal profilo.
+Viene visualizzata la **[!UICONTROL Create New Profile]** finestra di dialogo che richiede di immettere un **[!UICONTROL Profile Name]** e **[!UICONTROL Description]** per il nuovo profilo. Se desiderate che il nome visualizzato del profilo sia diverso, deselezionate **[!UICONTROL Same as Profile Name]** e immettete il nome visualizzato nella casella di testo visualizzata. In **[!UICONTROL User Notifications]**, potete specificare se gli utenti ricevono una notifica via e-mail quando vengono aggiunti o rimossi dal profilo.
 
 Al termine, fai clic su **[!UICONTROL Next]**.
 
