@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;activate inbound data;populate profile;populate rtcp;populated unified profile
 solution: Experience Platform
 title: Attivare i dati di origine in entrata per compilare i profili cliente
 topic: overview
+description: I dati in entrata provenienti dal connettore di origine possono essere utilizzati per arricchire e compilare i dati del profilo cliente in tempo reale.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '469'
 ht-degree: 0%
 
 ---
