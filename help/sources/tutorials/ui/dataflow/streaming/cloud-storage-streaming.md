@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;cloud storage connector;cloud storage
 solution: Experience Platform
 title: Configurare un flusso di dati per un connettore di streaming per l'archiviazione cloud nell'interfaccia utente
 topic: overview
+description: Un flusso di dati è un'attività pianificata che recupera e trasferisce dati da un'origine a un set di dati della piattaforma. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando il connettore di base per l'archiviazione cloud.
 translation-type: tm+mt
-source-git-commit: e628621903dbc0ec7381dfeae99902f503b34869
+source-git-commit: c1b493de7374cbd1c916d90f9382574f831e11e3
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
