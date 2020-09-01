@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cloud storage;GCS;gcs
 solution: Experience Platform
-title: Creare un connettore di origine di archiviazione Google Cloud nell'interfaccia utente
+title: Connettore origine di archiviazione Google Cloud (interfaccia utente)
 topic: overview
+description: Questa esercitazione fornisce i passaggi per la creazione di un connettore sorgente Google Cloud Storage (in seguito denominato "GCS") tramite l'interfaccia utente della piattaforma.
 translation-type: tm+mt
-source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '536'
 ht-degree: 1%
 
 ---
