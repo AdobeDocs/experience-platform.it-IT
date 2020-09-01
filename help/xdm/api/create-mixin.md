@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;mixin;Mixin;mixins;Mixins;create
 solution: Experience Platform
 title: Creare un mixin
 topic: developer guide
+description: Le miscele sono un insieme di campi utilizzati per descrivere un concetto particolare, ad esempio "indirizzo" o "preferenze di profilo". Sono disponibili numerosi mixin standard, oppure potete definirne uno personalizzato quando desiderate acquisire informazioni univoche per la vostra organizzazione.
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '303'
+source-wordcount: '345'
 ht-degree: 0%
 
 ---
@@ -33,7 +34,7 @@ POST /tenant/mixins
 
 **Richiesta**
 
-Durante la definizione di un nuovo mixin, deve includere un `meta:intendedToExtend` `$id` attributo, in cui sono elencate le classi con cui il mixin è compatibile. In questo esempio, il mixin è compatibile con la classe Property precedentemente definita. I campi personalizzati devono essere nidificati sotto `_{TENANT_ID}` (come mostrato nell&#39;esempio) per evitare eventuali conflitti con altri mixin o campi dagli schemi di classe. Il `propertyConstruction` campo è un riferimento al tipo di dati creato nella chiamata precedente.
+Durante la definizione di un nuovo mixin, deve includere un `meta:intendedToExtend` attributo, che elenca le classi con cui il mixin è compatibile `$id` del mixin. In questo esempio, il mixin è compatibile con la classe Property precedentemente definita. I campi personalizzati devono essere nidificati sotto `_{TENANT_ID}` (come mostrato nell&#39;esempio) per evitare eventuali conflitti con altri mixin o campi dagli schemi di classe. Il `propertyConstruction` campo è un riferimento al tipo di dati creato nella chiamata precedente.
 
 ```SHELL
 curl -X POST \
