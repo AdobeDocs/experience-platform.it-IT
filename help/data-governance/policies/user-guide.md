@@ -5,9 +5,9 @@ title: Guida utente per i criteri di utilizzo dei dati
 topic: policies
 description: Adobe Experience Platform Data Governance fornisce un'interfaccia utente che consente di creare e gestire i criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle azioni che potete eseguire nell'area di lavoro Criteri dell'interfaccia utente del Experience Platform .
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '724'
 ht-degree: 0%
 
 ---
@@ -116,7 +116,7 @@ Se l&#39;azione di marketing non è utilizzata da alcun criterio di utilizzo esi
 
 ## Passaggi successivi
 
-Questo documento fornisce una panoramica su come gestire i criteri di utilizzo dei dati nell&#39; [!DNL Experience Platform] interfaccia utente. Per i passaggi su come gestire i criteri tramite l&#39;API DULE Policy, vedete la guida [](../api/getting-started.md)per gli sviluppatori. Per informazioni su come applicare i criteri di utilizzo dei dati, consultate la panoramica [sull&#39;applicazione dei](../enforcement/overview.md)criteri.
+Questo documento fornisce una panoramica su come gestire i criteri di utilizzo dei dati nell&#39; [!DNL Experience Platform] interfaccia utente. Per i passaggi su come gestire i criteri tramite [!DNL Policy Service API], vedete la guida [allo](../api/getting-started.md)sviluppo. Per informazioni su come applicare i criteri di utilizzo dei dati, consultate la panoramica [sull&#39;applicazione dei](../enforcement/overview.md)criteri.
 
 Il video seguente illustra come utilizzare i criteri di utilizzo nell’ [!DNL Experience Platform] interfaccia utente:
 
