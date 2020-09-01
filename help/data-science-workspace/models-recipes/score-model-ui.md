@@ -5,9 +5,9 @@ title: Punteggio di un modello (interfaccia utente)
 topic: Tutorial
 description: 'Il punteggio in Adobe Experience Platform Data Science Workspace può essere ottenuto inserendo i dati in un modello già preparato. I risultati del punteggio vengono quindi memorizzati e visualizzati in un set di dati di output specificato come nuovo batch. '
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '589'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Un’esecuzione del punteggio viene creata utilizzando configurazioni ottimizzat
 5. Il passaggio finale del flusso di lavoro richiede di configurare l’esecuzione del punteggio. Queste configurazioni vengono utilizzate dal modello per l&#39;esecuzione del punteggio.
 Non sarà possibile rimuovere i parametri ereditati impostati durante la creazione del modello. Per modificare o ripristinare i parametri non ereditati, fai doppio clic sul valore o fai clic sull’icona di ripristino mentre passi il cursore sulla voce.
    ![](../images/models-recipes/score/configuration.png)
-Rivedete e confermate le configurazioni di punteggio e fate clic **[!UICONTROL Finish]** per creare ed eseguire l&#39;esecuzione del punteggio. Vengono indirizzati alla scheda Esecuzione *punteggio* e viene visualizzato uno stato nella nuova esecuzione del punteggio.
+Rivedete e confermate le configurazioni di punteggio e fate clic **[!UICONTROL Finish]** per creare ed eseguire l&#39;esecuzione del punteggio. Verrà visualizzata la **[!UICONTROL Scoring Runs]** scheda e la nuova esecuzione del punteggio mostrerà uno stato.
    ![](../images/models-recipes/score/scoring_runs_tab.png)
 Un&#39;esecuzione del punteggio visualizzerà uno dei quattro stati seguenti: In sospeso, Completato, Non riuscito o In esecuzione e vengono aggiornati automaticamente. Procedete con il passaggio successivo se lo stato è &quot;Completato&quot; o &quot;Non riuscito&quot;.
 
