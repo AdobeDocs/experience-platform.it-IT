@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;opt-out
+keywords: Experience Platform;home;popular topics;opt-out;Segmentation;Segmentation service;segmentation service;honor opt-outs;opt-outs;opt out;opt outs;
 solution: Experience Platform
 title: Rispetto delle eccezioni
 topic: overview
 description: ' Experience Platform consente ai clienti di inviare richieste di rifiuto relative all''utilizzo e all''archiviazione dei loro dati all''interno del profilo cliente in tempo reale]. Queste richieste di rinuncia fanno parte dell''accordo sulla tutela della privacy dei consumatori (CCPA) della California, che conferisce ai residenti della California il diritto di accedere ai propri dati personali ed eliminarli e di sapere se i loro dati personali sono venduti o divulgati (e a chi). '
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '1011'
 ht-degree: 0%
