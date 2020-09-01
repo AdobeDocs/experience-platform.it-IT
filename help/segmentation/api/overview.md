@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;API;api;
 solution: Adobe Experience Platform
-title: ' Guida per lo sviluppatore del servizio Segmentazione di Adobe Experience Platform'
+title: Guida per gli sviluppatori di Adobe Experience Platform Segmentation Service
 topic: guide
 translation-type: tm+mt
-source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: 467
 ht-degree: 0%
 
 ---
 
 
-#  Guida per gli sviluppatori [!DNL Segmentation Service] API di Adobe Experience Platform
+# Guida per gli sviluppatori Adobe Experience Platform [!DNL Segmentation Service] API
 
 [!DNL Adobe Experience Platform Segmentation Service] consente di creare segmenti e generare audience [!DNL Adobe Experience Platform] dai [!DNL Real-time Customer Profile] dati.
 
