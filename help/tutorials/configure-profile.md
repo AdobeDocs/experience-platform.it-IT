@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Real-time Customer Profile;Identity Service;
 solution: Experience Platform
 title: Esercitazioni sul profilo cliente in tempo reale
 topic: tutorial
+description: Questo documento illustra i passaggi da seguire e fornisce collegamenti alle esercitazioni per completare ogni singolo flusso di lavoro.
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '466'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,7 @@ Per configurare [!DNL Real-time Customer Profile] la tua organizzazione, devi co
 
 ## Abilita schema per [!DNL Profile] e [!DNL Identity]
 
-Prima di poter inserire i dati  Adobe Experience Platform e utilizzarli per la creazione di [!DNL Real-time Customer Profiles], è necessario creare uno schema che fornisca la struttura dei dati che verranno acquisiti e che tale schema debba essere abilitato per l&#39;uso in [!DNL Profile] e  Adobe Experience Platform [!DNL Identity Service]. Per istruzioni dettagliate sulla creazione di uno schema abilitato per entrambi [!DNL Profile] e [!DNL Identity Service], fare riferimento alle esercitazioni per la [creazione di uno schema mediante l&#39;API](../xdm/tutorials/create-schema-api.md) del Registro di sistema dello schema o [la creazione di uno schema mediante l&#39;interfaccia](../xdm/tutorials/create-schema-ui.md)del Generatore di schemi.
+Per poter acquisire i dati in Adobe Experience Platform e utilizzarli per la creazione di [!DNL Real-time Customer Profiles], è necessario creare uno schema che fornisca la struttura dei dati che verranno acquisiti e che tale schema debba essere abilitato per l&#39;uso in [!DNL Profile] e Adobe Experience Platform [!DNL Identity Service]. Per istruzioni dettagliate sulla creazione di uno schema abilitato per entrambi [!DNL Profile] e [!DNL Identity Service], fare riferimento alle esercitazioni per la [creazione di uno schema mediante l&#39;API](../xdm/tutorials/create-schema-api.md) del Registro di sistema dello schema o [la creazione di uno schema mediante l&#39;interfaccia](../xdm/tutorials/create-schema-ui.md)del Generatore di schemi.
 
 ## Configurare un dataset per [!DNL Profile] e [!DNL Identity]
 
@@ -26,7 +27,7 @@ Per iniziare l&#39;assimilazione dei dati in [!DNL Profile], è necessario dispo
 
 ## Configurare i criteri di unione
 
- Adobe Experience Platform consente di unire dati provenienti da più origini e combinarli per visualizzare una visione completa di ogni singolo cliente. Quando si uniscono questi dati, i criteri di unione sono le regole che [!DNL Platform] utilizzano per determinare in che modo i dati verranno classificati come priorità e quali dati verranno combinati per creare tale visualizzazione unificata. Utilizzando le API RESTful o l&#39;interfaccia utente, puoi creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la tua organizzazione. Per utilizzare i criteri di unione nell&#39; [!DNL Platform] interfaccia utente, consultare la guida [utente dei criteri di](../profile/ui/merge-policies.md)unione. Per lavorare con i criteri di unione utilizzando l&#39;API Profilo cliente in tempo reale, consulta la guida [per gli sviluppatori dei criteri di](../profile/api/merge-policies.md)unione.
+Adobe Experience Platform consente di unire dati provenienti da più origini e combinarli per visualizzare una visione completa di ogni singolo cliente. Quando si uniscono questi dati, i criteri di unione sono le regole che [!DNL Platform] utilizzano per determinare in che modo i dati verranno classificati come priorità e quali dati verranno combinati per creare tale visualizzazione unificata. Utilizzando le API RESTful o l&#39;interfaccia utente, puoi creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la tua organizzazione. Per utilizzare i criteri di unione nell&#39; [!DNL Platform] interfaccia utente, consultare la guida [utente dei criteri di](../profile/ui/merge-policies.md)unione. Per lavorare con i criteri di unione utilizzando l&#39;API Profilo cliente in tempo reale, consulta la guida [per gli sviluppatori dei criteri di](../profile/api/merge-policies.md)unione.
 
 ## Configurare le proiezioni dei bordi
 
