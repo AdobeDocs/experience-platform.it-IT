@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;class;Class;classes;Classes;create
 solution: Experience Platform
 title: Creazione di una classe
+description: Il blocco predefinito principale di uno schema è una classe. La classe contiene il set minimo di campi che è necessario definire per acquisire i dati di base di uno schema. Ad esempio, se si stava progettando uno schema per auto e camion, molto probabilmente utilizzerebbero una classe chiamata Veicolo che descriveva le proprietà comuni di base di tutti i veicoli.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -152,4 +153,4 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload conten
 }
 ```
 
-L&#39;esecuzione di una richiesta di GET per elencare tutte le classi nel contenitore tenant ora include la classe Property. Potete anche eseguire una richiesta di ricerca (GET) utilizzando l&#39; `$id` URI con codifica URL per visualizzare direttamente la nuova classe. Accertatevi di includere l&#39;oggetto `version` nell&#39;intestazione Accetto durante l&#39;esecuzione di una richiesta di ricerca.
+L&#39;esecuzione di una richiesta di GET per elencare tutte le classi nel contenitore tenant ora include la classe Property. Potete inoltre eseguire una richiesta di ricerca (GET) utilizzando l&#39; `$id` URI con codifica URL per visualizzare direttamente la nuova classe. Accertatevi di includere l&#39;oggetto `version` nell&#39;intestazione Accetto durante l&#39;esecuzione di una richiesta di ricerca.
