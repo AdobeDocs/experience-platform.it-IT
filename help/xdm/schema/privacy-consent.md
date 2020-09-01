@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;consent;Consent;preferences;Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;
 solution: Adobe Experience Platform
 title: Panoramica sul mixaggio della privacy
+description: Il mixin Privacy/Marketing Preferences (Consent) è un mixin Experience Data Model (XDM) che supporta la raccolta di autorizzazioni e preferenze utente generate dai CMP e da altre fonti dei clienti. Il presente documento illustra la struttura e l'uso previsto dei vari campi forniti dal mixin.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 02014c503dc9d4597e1129cafe3ba86f4abe37e9
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '1778'
+source-wordcount: '1827'
 ht-degree: 1%
 
 ---
@@ -257,7 +258,7 @@ Nella tabella seguente sono riportati i valori accettati per `xdm:optOutType`:
 | `general_opt_out` | I dati non possono essere utilizzati per alcun scopo. In genere questo blocca la raccolta dei dati, tranne quando la base di elaborazione non è &quot;consenso&quot;.<br><br>Quando si utilizza questo tipo di rifiuto, i valori accettati `in` e `out` ottenere il seguente significato contestuale:<ul><li>`in`: L&#39;utente **ha acconsentito** all&#39;utilizzo dei propri dati per l&#39;elaborazione generale.</li><li>`out`: L&#39;utente **non accetta** che i propri dati vengano utilizzati per l&#39;elaborazione generale.</li></ul>Per ulteriori informazioni, vedere la tabella sui valori [accettati per xdm:optOutValue](#choice-optOutValue-values) . |
 | `anonymous_analysis` | I dati non possono essere utilizzati per metriche Web generiche che non richiedono alcun tipo di ID utente, ad esempio il numero di volte in cui una particolare pagina è stata visualizzata. |
 | `device_linking` | I dati di un dispositivo utilizzato da un visitatore non possono essere combinati con i dati di un altro dispositivo utilizzato dallo stesso visitatore. I dispositivi sono collegati utilizzando tecniche quali un nome utente o un indirizzo e-mail comuni, spesso tramite la cooperativa di dispositivi  Adobe o un grafico di dispositivi privati. |
-| `pseudonymous_analysis` | I dati non possono essere utilizzati per le metriche Web fornite da  Adobe Analytics, che richiedono ID pseudonimi per identificare i percorsi seguiti dagli utenti attraverso un sito Web (ad esempio un rapporto di abbandono), per stabilire le sessioni e a scopo di attribuzione. |
+| `pseudonymous_analysis` | I dati non possono essere utilizzati per le metriche Web fornite da  Adobe Analytics, che richiedono ID pseudonimi per identificare i percorsi seguiti dagli utenti attraverso un sito Web (ad esempio un rapporto di abbandono), per stabilire le sessioni e per scopi di attribuzione. |
 | `sales_sharing_opt_out` | I dati non possono essere utilizzati a fini di vendita o per la condivisione con terzi.<br><br>Quando si utilizza questo tipo di rifiuto, i valori accettati `in` e `out` ottenere il seguente significato contestuale:<ul><li>`in`: L&#39;utente **ha fornito il consenso** affinché i propri dati vengano utilizzati a fini di vendita e condivisione.</li><li>`out`: L&#39;utente **non accetta** che i propri dati vengano utilizzati a fini di vendita e condivisione.</li></ul>Per ulteriori informazioni, vedere la tabella sui valori [accettati per xdm:optOutValue](#choice-optOutValue-values) . |
 
 ### Valori accettati per xdm:baseOfProcessing {#basisOfProcessing-values}
@@ -266,7 +267,7 @@ Nella tabella seguente sono riportati i valori accettati per `xdm:basisOfProcess
 
 | Valore | Descrizione |
 | --- | --- |
-| `consent` **(Predefinito)** | La raccolta di dati per lo scopo specificato è consentita, dato che l&#39;individuo ha fornito l&#39;autorizzazione esplicita. Questo è il valore predefinito di `xdm:basisOfProcessing` se non viene fornito nessun altro valore. <br><br>**IMPORTANTE **: I valori per`xdm:choice`e`xdm:optOutValue`vengono rispettati solo se`xdm:basisOfProcessing`è impostato su`consent`. Se vengono utilizzati per`xdm:basisOfProcessing`sostituire gli altri valori indicati in questa tabella, le scelte di consenso dell&#39;utente vengono ignorate. |
+| `consent` **(Predefinito)** | La raccolta di dati per lo scopo specificato è consentita, dato che l&#39;individuo ha fornito l&#39;autorizzazione esplicita. Questo è il valore predefinito di `xdm:basisOfProcessing` se non viene fornito nessun altro valore. <br><br>**IMPORTANTE**: I valori per `xdm:choice` e `xdm:optOutValue` vengono rispettati solo se `xdm:basisOfProcessing` è impostato su `consent`. Se vengono utilizzati per `xdm:basisOfProcessing` sostituire gli altri valori indicati in questa tabella, le scelte di consenso dell&#39;utente vengono ignorate. |
 | `compliance` | La raccolta di dati per lo scopo specificato è necessaria per soddisfare gli obblighi legali dell&#39;impresa. |
 | `contract` | La raccolta di dati per lo scopo specificato è necessaria per adempiere agli obblighi contrattuali con l&#39;individuo. |
 | `legitimate_interest` | Il legittimo interesse commerciale a raccogliere ed elaborare tali dati per lo scopo specificato supera il potenziale danno che comporta per l&#39;individuo. |
