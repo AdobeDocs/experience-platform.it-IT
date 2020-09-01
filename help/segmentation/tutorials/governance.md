@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Applica la conformità all'utilizzo dei dati per i segmenti di pubblico
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1335'
+source-wordcount: '1333'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Questa esercitazione richiede una buona conoscenza dei seguenti componenti di [!
 - [[!DNL Profilo cliente in tempo reale]](../../profile/home.md): [!DNL Real-time Customer Profile] è un archivio di entità di ricerca generico e viene utilizzato per gestire i dati [!DNL Experience Data Model] (XDM) all&#39;interno [!DNL Platform]. Il profilo unisce i dati tra diverse risorse di dati aziendali e fornisce l&#39;accesso a tali dati in una presentazione unificata.
    - [Unisci criteri](../../profile/api/merge-policies.md): Regole utilizzate [!DNL Real-time Customer Profile] per determinare quali dati possono essere uniti in una visualizzazione unificata in determinate condizioni. I criteri di unione possono essere configurati a [!DNL Data Governance] scopo.
 - [[!Segmentazione DNL]](../home.md): Come [!DNL Real-time Customer Profile] divide un ampio gruppo di individui contenuti nello store di profili in gruppi più piccoli che condividono caratteristiche simili e risponderanno in modo simile alle strategie di marketing.
-- [[!DNL Data Governance]](../../data-governance/home.md): [!DNL Data Governance] fornisce l&#39;infrastruttura per l&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati (DULE), utilizzando i seguenti componenti:
+- [[!DNL Data Governance]](../../data-governance/home.md): [!DNL Data Governance] fornisce l&#39;infrastruttura per l&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati, utilizzando i seguenti componenti:
    - [Etichette](../../data-governance/labels/user-guide.md)di utilizzo dati: Etichette utilizzate per descrivere insiemi di dati e campi in termini di livello di sensibilità con cui gestire i rispettivi dati.
    - [Criteri](../../data-governance/policies/overview.md)di utilizzo dei dati: Configurazioni che indicano quali azioni di marketing sono consentite sui dati classificati da particolari etichette di utilizzo dei dati.
    - [Applicazione](../../data-governance/enforcement/overview.md)delle regole: Consente di applicare criteri di utilizzo dei dati e di impedire le operazioni di dati che costituiscono violazioni dei criteri.
@@ -187,7 +187,7 @@ Una risposta corretta restituisce i dettagli del criterio di unione.
 >
 > Questo passaggio presuppone che sia presente almeno un criterio di utilizzo dei dati attivo che impedisca l&#39;esecuzione di azioni di marketing specifiche su dati contenenti determinate etichette. Se non si dispone di criteri di utilizzo applicabili per i set di dati in fase di valutazione, seguire l&#39;esercitazione [sulla creazione dei](../../data-governance/policies/create.md) criteri per crearne uno prima di continuare con questo passaggio.
 
-Dopo aver ottenuto gli ID dei set di dati di origine del criterio di unione, puoi utilizzare l&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE Policy Service per valutare tali set di dati in base ad azioni di marketing specifiche, al fine di verificare la presenza di violazioni dei criteri di utilizzo dei dati.
+Dopo aver ottenuto gli ID dei set di dati di origine del criterio di unione, puoi utilizzare [Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) per valutare tali set di dati in base ad azioni di marketing specifiche, al fine di verificare la presenza di violazioni dei criteri di utilizzo dei dati.
 
 Per valutare i set di dati, è necessario fornire il nome dell&#39;azione di marketing nel percorso di una richiesta di POST, fornendo al contempo gli ID dei set di dati all&#39;interno del corpo della richiesta, come illustrato nell&#39;esempio seguente.
 
