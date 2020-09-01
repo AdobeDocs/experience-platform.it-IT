@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Analytics mapping fields;analytics mapping
 solution: Experience Platform
-title: ' campi di mappatura Analytics'
+title: Campi di mappatura di Analytics
 topic: overview
+description: Adobe Experience Platform consente di acquisire  dati Adobe Analytics tramite il connettore dati di Analytics (ADC). Alcuni dei dati acquisiti tramite ADC possono essere mappati direttamente dai campi di Analytics ai campi Experience Data Model (XDM), mentre altri dati richiedono trasformazioni e funzioni specifiche per essere mappati correttamente.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '3328'
+source-wordcount: '3378'
 ht-degree: 3%
 
 ---
 
 
-#  campi di mappatura Analytics
+# Campi di mappatura di Analytics
 
- Adobe Experience Platform consente di acquisire  dati Adobe Analytics tramite il connettore dati  Analytics (ADC). Alcuni dei dati acquisiti tramite ADC possono essere mappati direttamente  campi Analytics ai campi Experience Data Model (XDM), mentre altri dati richiedono trasformazioni e funzioni specifiche per essere mappati correttamente.
+Adobe Experience Platform consente di acquisire  dati Adobe Analytics tramite il connettore dati di Analytics (ADC). Alcuni dei dati acquisiti tramite ADC possono essere mappati direttamente dai campi di Analytics ai campi Experience Data Model (XDM), mentre altri dati richiedono trasformazioni e funzioni specifiche per essere mappati correttamente.
 
 ![](../images/analytics-data-experience-platform.png)
 
@@ -22,13 +23,13 @@ ht-degree: 3%
 
 Alcuni campi sono mappati direttamente da  Adobe Analytics a Experience Data Model (XDM).
 
-La tabella seguente include colonne che mostrano il nome del campo  Analytics (*campo* Analytics), il campo XDM corrispondente (campo ** XDM) e il relativo tipo (tipo ** XDM), nonché una descrizione del campo (*Descrizione*).
+La tabella seguente include colonne che mostrano il nome del campo Analytics (campo ** Analytics), il campo XDM corrispondente (campo ** XDM) e il relativo tipo (tipo ** XDM), nonché una descrizione del campo (*Descrizione*).
 
 >[!NOTE]
 >
 >Scorrere a sinistra/destra per visualizzare il contenuto completo della tabella.
 
-|  campo Analytics | Campo XDM | XDM, tipo | Descrizione |
+| Campo Analytics | Campo XDM | XDM, tipo | Descrizione |
 | --------------- | --------- | -------- | ---------- |
 | m_evar1 - m_evar250 | _experience.analytics.customDimensions.eVars. eVar1 - _experience.analytics.customDimensions.eVars. eVar250 | string | Variabile personalizzata che può essere compresa tra 1 e 250. Ciascuna organizzazione utilizzerà queste eVar personalizzate in modo diverso. |
 | m_prop1 - m_prop75 | _experience.analytics.customDimensions.prop.prop1 - _experience.analytics.customDimensions.prop.prop75 | string | Variabili di traffico personalizzate, che possono essere comprese tra 1 e 75. |
@@ -127,7 +128,7 @@ La tabella seguente include colonne che mostrano il nome del campo  Analytics (*
 
 Questi campi hanno una singola origine, ma vengono mappati su **più** posizioni XDM.
 
-|  campo Analytics | Campo XDM | XDM, tipo | Descrizione |
+| Campo Analytics | Campo XDM | XDM, tipo | Descrizione |
 | --------------- | --------- | -------- | ---------- |
 | s_resolution | device.screenWidth, device.screenHeight | integer | ID numerico che rappresenta la risoluzione del monitor. |
 | mobileosversion | environment.operationSystem, environment.operationSystemVersion | string | Versione del sistema operativo mobile. |
@@ -137,15 +138,15 @@ Questi campi hanno una singola origine, ma vengono mappati su **più** posizioni
 
 Per generare in XDM, è necessario trasformare i campi selezionati provenienti da ADC, che richiedono logica oltre una copia diretta da  Adobe Analytics.
 
-La tabella seguente include colonne che mostrano il nome del campo  Analytics (*campo* Analytics), il campo XDM corrispondente (campo ** XDM) e il relativo tipo (tipo ** XDM), nonché una descrizione del campo (*Descrizione*).
+La tabella seguente include colonne che mostrano il nome del campo Analytics (campo ** Analytics), il campo XDM corrispondente (campo ** XDM) e il relativo tipo (tipo ** XDM), nonché una descrizione del campo (*Descrizione*).
 
 >[!NOTE]
 >
 >Scorrere a sinistra/destra per visualizzare il contenuto completo della tabella.
 
-|  campo Analytics | Campo XDM | XDM, tipo | Descrizione |
+| Campo Analytics | Campo XDM | XDM, tipo | Descrizione |
 | --------------- | --------- | -------- | ----------- |
-| m_prop1 - m_prop75 | _experience.analytics.customDimensions.listprop.prop1 - _experience.analytics.customDimensions.listprop.prop75 | Oggetto | Variabili di traffico personalizzate, comprese tra 1 e 75 | {} |
+| m_prop1 - m_prop75 | _experience.analytics.customDimensions.listprop.prop1 - _experience.analytics.customDimensions.listprops.prop75 | Oggetto | Variabili di traffico personalizzate, comprese tra 1 e 75 | {} |
 | m_hier1 - m_hier5 | _experience.analytics.customDimensions.hierarchy.hier1 - _experience.analytics.customDimensions.hierarchy.hier5 | Oggetto | Utilizzata dalle variabili della gerarchia. Contiene un | elenco delimitato di valori. | {values (array), delimiter (stringa)} |
 | m_mvvar1 - m_mvvar3 | _experience.analytics.customDimensions.lists.list1.list[] - _experience.analytics.customDimensions.lists.list3.list[] | array | Elenco di valori variabili. Contiene un elenco delimitato di valori personalizzati, a seconda dell&#39;implementazione | {value (stringa), key (stringa)} |
 | m_color | device.colorDepth | integer | L’ID della profondità colore, che si basa sul valore della colonna c_color. |
@@ -197,13 +198,13 @@ Per poter mappare correttamente i campi di Adobe Analytics  a Experience Data Mo
 
 Per ulteriori informazioni sull&#39;esecuzione di queste trasformazioni tramite il servizio Query Service, consultare la documentazione relativa alle funzioni [definite dal Adobe](../../../../query-service/sql/adobe-defined-functions.md) .
 
-La tabella seguente include colonne che mostrano il nome del campo  Analytics (*campo* Analytics), il campo XDM corrispondente (campo ** XDM) e il relativo tipo (tipo ** XDM), nonché una descrizione del campo (*Descrizione*).
+La tabella seguente include colonne che mostrano il nome del campo Analytics (campo ** Analytics), il campo XDM corrispondente (campo ** XDM) e il relativo tipo (tipo ** XDM), nonché una descrizione del campo (*Descrizione*).
 
 >[!NOTE]
 >
 >Scorrere a sinistra/destra per visualizzare il contenuto completo della tabella.
 
-|  campo Analytics | Campo XDM | XDM, tipo | Descrizione |
+| Campo Analytics | Campo XDM | XDM, tipo | Descrizione |
 | --------------- | --------- | -------- | ---------- |
 | post_evar1 - post_evar250 | _experience.analytics.customDimensions.eVars. eVar1 - _experience.analytics.customDimensions.eVars. eVar250 | string | Variabile personalizzata che può essere compresa tra 1 e 250. Ciascuna organizzazione utilizzerà queste eVar personalizzate in modo diverso. |
 | post_prop1 - post_prop75 | _experience.analytics.customDimensions.prop.prop1 - _experience.analytics.customDimensions.prop.prop75 | string | Variabili di traffico personalizzate, che possono essere comprese tra 1 e 75. |
