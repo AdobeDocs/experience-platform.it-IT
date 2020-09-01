@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Phoenix;phoenix
 solution: Experience Platform
 title: Creare un connettore Phoenix tramite l'API di servizio di flusso
 topic: overview
+description: Questa esercitazione utilizza l'API del servizio di flusso per illustrare i passaggi necessari per collegare un database Phoenix a  Experience Platform.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '646'
 ht-degree: 1%
 
 ---
