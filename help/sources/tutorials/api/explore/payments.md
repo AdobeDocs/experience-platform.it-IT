@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;payment
 solution: Experience Platform
 title: Esplora un sistema di pagamento tramite l’API di servizio di flusso
 topic: overview
+description: Questa esercitazione utilizza l'API del servizio di flusso per esplorare le applicazioni di pagamento.
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '587'
 ht-degree: 1%
 
 ---
@@ -14,13 +15,13 @@ ht-degree: 1%
 
 # Esplora un sistema di pagamento tramite l&#39; [!DNL Flow Service] API
 
-[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti diverse all&#39;interno  Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
+[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
 Questa esercitazione utilizza l&#39; [!DNL Flow Service] API per esplorare le applicazioni di pagamento.
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [Origini](../../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi.
 * [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
@@ -29,7 +30,7 @@ Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario cono
 
 ### Raccogli credenziali richieste
 
-Questa esercitazione richiede una connessione valida con l&#39;applicazione di pagamento di terze parti da cui si desidera acquisire i dati. Una connessione valida include l&#39;ID della specifica di connessione dell&#39;applicazione e l&#39;ID di connessione. Per ulteriori informazioni sulla creazione di una connessione di pagamento e sul recupero di tali valori, consulta l’esercitazione [per la connessione di un’origine di pagamento all’esercitazione Platform](../../api/create/payments/paypal.md) .
+Questa esercitazione richiede una connessione valida con l&#39;applicazione di pagamento di terze parti da cui si desidera acquisire i dati. Una connessione valida include l&#39;ID della specifica di connessione dell&#39;applicazione e l&#39;ID di connessione. Per ulteriori informazioni sulla creazione di una connessione di pagamento e sul recupero di tali valori, consulta l’ [esercitazione sulla connessione di un’origine di pagamento a Platform](../../api/create/payments/paypal.md) .
 
 ### Lettura di chiamate API di esempio
 
@@ -78,7 +79,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un array di tabelle dal sistema di pagamento. Trovare la tabella che si desidera inserire [!DNL Platform] e prendere nota della relativa `path` proprietà, in quanto è necessario fornire nel passaggio successivo per ispezionare la struttura.
+Una risposta corretta restituisce un array di tabelle dal sistema di pagamento. Trovare la tabella che si desidera inserire [!DNL Platform] e prendere nota della relativa `path` proprietà, in quanto è necessario fornire nel passaggio successivo per ispezionare la sua struttura.
 
 ```json
 [
@@ -181,4 +182,4 @@ Una risposta corretta restituisce la struttura della tabella specificata. I dett
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai esplorato il tuo sistema di pagamenti, trovato il percorso della tabella in cui desideri immergerti [!DNL Platform]e ottenuto informazioni sulla sua struttura. Puoi utilizzare queste informazioni nell&#39;esercitazione successiva per [raccogliere dati dal tuo sistema di pagamento e portarli in Platform](../collect/payments.md).
+Seguendo questa esercitazione, hai esplorato il tuo sistema di pagamenti, trovato il percorso della tabella in cui desideri immergerti [!DNL Platform]e ottenuto informazioni sulla sua struttura. Puoi utilizzare queste informazioni nell&#39;esercitazione successiva per [raccogliere i dati dal tuo sistema di pagamento e portarli in Piattaforma](../collect/payments.md).
