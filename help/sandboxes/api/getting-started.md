@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;sandbox developer guide
 solution: Experience Platform
 title: Guida per gli sviluppatori API Sandbox
 topic: developer guide
+description: Questa guida per gli sviluppatori fornisce passaggi utili per utilizzare l'API Sandbox per gestire le sandbox in  Experience Platform e include chiamate API di esempio per eseguire varie operazioni.
 translation-type: tm+mt
-source-git-commit: b4741cdfd065bbaed7f2feeafe8619191e4b8f6c
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Guida per gli sviluppatori API Sandbox
 
-Le sandbox in  Adobe Experience Platform forniscono ambienti di sviluppo isolati che consentono di testare le funzionalità, eseguire esperimenti e creare configurazioni personalizzate senza influire sull&#39;ambiente di produzione.
+Le sandbox in Adobe Experience Platform forniscono ambienti di sviluppo isolati che consentono di testare le funzionalità, eseguire esperimenti e creare configurazioni personalizzate senza influire sull&#39;ambiente di produzione.
 
 Questa guida per gli sviluppatori fornisce passaggi utili per utilizzare l&#39;API Sandbox per gestire le sandbox in  Experience Platform e include chiamate API di esempio per eseguire varie operazioni.
 
@@ -28,7 +29,7 @@ Questa guida fornisce esempi di chiamate API per dimostrare come formattare le r
 
 ### Raccogli valori per le intestazioni richieste
 
-Questa guida richiede che sia stata completata l&#39;esercitazione [di](../../tutorials/authentication.md) autenticazione per effettuare correttamente le chiamate alle API Platform. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API di Experience Platform, come illustrato di seguito:
+Questa guida richiede che sia stata completata l&#39;esercitazione [di](../../tutorials/authentication.md) autenticazione per effettuare correttamente le chiamate alle API della piattaforma. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API di Experience Platform, come illustrato di seguito:
 
 * Autorizzazione: Portatore `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
