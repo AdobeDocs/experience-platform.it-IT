@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida utente Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '1023'
 ht-degree: 0%
@@ -70,7 +70,7 @@ Potete filtrare l’elenco digitando le parole chiave nella barra di ricerca sot
 
 ![Opzioni di ricerca richieste di lavoro](../images/user-guide/job-search.png)
 
-Per visualizzare i dettagli di una particolare richiesta di processo, fate clic sull’ID processo della richiesta dall’elenco per aprire la *[!UICONTROL Job Details]* pagina.
+Per visualizzare i dettagli di una particolare richiesta di processo, fate clic sull’ID processo della richiesta dall’elenco per aprire la **[!UICONTROL Job Details]** pagina.
 
 ![Dettagli processo interfaccia utente GDPR](../images/user-guide/job-details.png)
 
@@ -95,13 +95,13 @@ I passaggi per utilizzare ciascuno di questi metodi sono descritti nelle sezioni
 
 ### Utilizzare il Generatore di richieste {#request-builder}
 
-Utilizzando Request Builder, potete creare manualmente una nuova richiesta di processo per la privacy nell’interfaccia utente. Il Generatore di richieste è indicato per set di richieste sempre più semplici, perché il Generatore di richieste limita le richieste a disporre solo di ID per utente. Per richieste più complesse, potrebbe essere meglio [caricare un file](#json) JSON.
+Utilizzando Request Builder, potete creare manualmente una nuova richiesta di processo per la privacy nell’interfaccia utente. Il Generatore di richieste è indicato per set di richieste sempre più semplici, perché il Generatore di richieste limita le richieste ad avere solo un ID per utente. Per richieste più complesse, potrebbe essere meglio [caricare un file](#json) JSON.
 
 Per iniziare a utilizzare il generatore di richieste, fate clic **[!UICONTROL Create Request]** sotto il widget Rapporto di stato sul lato destro dello schermo.
 
 ![Fate clic su Crea richiesta](../images/user-guide/create-request.png)
 
-Viene visualizzata la *[!UICONTROL Create Request]* finestra di dialogo con le opzioni disponibili per l’invio di una richiesta di lavoro per la privacy per il tipo di regola attualmente selezionato.
+Viene visualizzata la **[!UICONTROL Create Request]** finestra di dialogo con le opzioni disponibili per l’invio di una richiesta di lavoro per la privacy per il tipo di regola attualmente selezionato.
 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
@@ -109,7 +109,7 @@ Selezionate la **[!UICONTROL Job Type]** richiesta (&quot;Elimina&quot; o &quot;
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-In *[!UICONTROL Namespace type]*, selezionate il tipo di spazio nomi appropriato per gli ID cliente a cui viene inviato [!DNL Privacy Service].
+In **[!UICONTROL Namespace type]**, selezionate il tipo di spazio nomi appropriato per gli ID cliente a cui viene inviato [!DNL Privacy Service].
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
@@ -135,7 +135,7 @@ Fate clic sulla freccia accanto a **[!UICONTROL Create Request]**, sotto il widg
 
 ![Opzioni di creazione richieste](../images/user-guide/create-options.png)
 
-Viene visualizzata una *[!UICONTROL Upload JSON]* finestra di dialogo che consente di trascinare e rilasciare il file JSON.
+Viene visualizzata una **[!UICONTROL Upload JSON]** finestra di dialogo che consente di trascinare e rilasciare il file JSON.
 
 <img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
