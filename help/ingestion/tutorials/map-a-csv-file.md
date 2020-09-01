@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Mappare un file CSV su uno schema XDM
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1309'
 ht-degree: 2%
@@ -29,13 +29,13 @@ Questa esercitazione richiede anche che sia già stato creato un set di dati in 
 
 ## Scegliere una destinazione
 
-Accedete a [[!DNL Adobe Experience Platform]](https://platform.adobe.com) , quindi selezionate **[!UICONTROL Workflows]** dalla barra di navigazione a sinistra per accedere all&#39; *[!UICONTROL Workflows]* area di lavoro.
+Accedete a [[!DNL Adobe Experience Platform]](https://platform.adobe.com) , quindi selezionate **[!UICONTROL Workflows]** dalla barra di navigazione a sinistra per accedere all&#39; **[!UICONTROL Workflows]** area di lavoro.
 
 Dalla **[!UICONTROL Workflows]** schermata, selezionate **[!UICONTROL Map CSV to XDM schema]** sotto la **[!UICONTROL Data ingestion]** sezione, quindi selezionate **[!UICONTROL Launch]**.
 
 ![](../images/tutorials/map-a-csv-file/workflows.png)
 
-Viene *[!UICONTROL Map CSV to XDM schema]* visualizzato il flusso di lavoro, a partire dal *[!UICONTROL Destination]* passaggio. Scegliere un set di dati in entrata in cui assimilare i dati. È possibile utilizzare un set di dati esistente o crearne uno nuovo.
+Viene **[!UICONTROL Map CSV to XDM schema]** visualizzato il flusso di lavoro, a partire dal **[!UICONTROL Destination]** passaggio. Scegliere un set di dati in entrata in cui assimilare i dati. È possibile utilizzare un set di dati esistente o crearne uno nuovo.
 
 **Utilizzare un dataset esistente**
 
@@ -49,27 +49,27 @@ Per assimilare i dati CSV in un nuovo set di dati, selezionate **[!UICONTROL Cre
 
 ## Aggiungi dati
 
-Viene *[!UICONTROL Add data]* visualizzato il passaggio. Trascinate e rilasciate il file CSV nello spazio disponibile oppure selezionate **[!UICONTROL Choose files]** per inserire manualmente il file CSV.
+Viene **[!UICONTROL Add data]** visualizzato il passaggio. Trascinate e rilasciate il file CSV nello spazio disponibile oppure selezionate **[!UICONTROL Choose files]** per inserire manualmente il file CSV.
 
 ![](../images/tutorials/map-a-csv-file/add-data.png)
 
-La *[!UICONTROL Sample data]* sezione viene visualizzata una volta che il file è stato caricato, mostrando le prime dieci righe di dati. Dopo aver confermato che i dati sono stati caricati come previsto, selezionate **[!UICONTROL Next]**.
+La **[!UICONTROL Sample data]** sezione viene visualizzata una volta che il file è stato caricato, mostrando le prime dieci righe di dati. Dopo aver confermato che i dati sono stati caricati come previsto, selezionate **[!UICONTROL Next]**.
 
 ![](../images/tutorials/map-a-csv-file/sample-data.png)
 
 ## Mappatura di campi CSV nei campi dello schema XDM
 
-Viene *[!UICONTROL Mapping]* visualizzato il passaggio. Le colonne del file CSV sono elencate in *[!UICONTROL Source Field]*, con i campi dello schema XDM corrispondenti elencati in *[!UICONTROL Target Field]*. I campi di destinazione non selezionati sono evidenziati in rosso. È possibile utilizzare l&#39;opzione dei campi filtro per restringere l&#39;elenco dei campi di origine disponibili.
+Viene **[!UICONTROL Mapping]** visualizzato il passaggio. Le colonne del file CSV sono elencate in **[!UICONTROL Source Field]**, con i campi dello schema XDM corrispondenti elencati in **[!UICONTROL Target Field]**. I campi di destinazione non selezionati sono evidenziati in rosso. È possibile utilizzare l&#39;opzione dei campi filtro per restringere l&#39;elenco dei campi di origine disponibili.
 
 Per mappare una colonna CSV su un campo XDM, selezionate l&#39;icona dello schema accanto al campo di destinazione corrispondente della colonna.
 
 ![](../images/tutorials/map-a-csv-file/mapping.png)
 
-Viene *[!UICONTROL Select schema field]* visualizzata la finestra. Qui puoi spostarti nella struttura dello schema XDM e individuare il campo a cui mappare la colonna CSV. Fate clic su un campo XDM per selezionarlo, quindi fate clic su **[!UICONTROL Select]**.
+Viene **[!UICONTROL Select schema field]** visualizzata la finestra. Qui puoi spostarti nella struttura dello schema XDM e individuare il campo a cui mappare la colonna CSV. Fate clic su un campo XDM per selezionarlo, quindi fate clic su **[!UICONTROL Select]**.
 
 ![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
-La *[!UICONTROL Mapping]* schermata viene visualizzata nuovamente, con il campo XDM selezionato ora sotto *[!UICONTROL Target Field]*.
+La **[!UICONTROL Mapping]** schermata viene visualizzata nuovamente, con il campo XDM selezionato ora sotto **[!UICONTROL Target Field]**.
 
 ![](../images/tutorials/map-a-csv-file/field-mapped.png)
 
@@ -77,7 +77,7 @@ Se non desiderate mappare una particolare colonna CSV, potete rimuovere la mappa
 
 ![](../images/tutorials/map-a-csv-file/remove-mapping.png)
 
-Per aggiungere una nuova mappatura, selezionate **[!UICONTROL Add new mapping]** nella parte superiore dell&#39; *[!UICONTROL Source Field]* elenco.
+Per aggiungere una nuova mappatura, selezionate **[!UICONTROL Add new mapping]** nella parte superiore dell&#39; **[!UICONTROL Source Field]** elenco.
 
 ![](../images/tutorials/map-a-csv-file/add-mapping.png)
 
@@ -125,7 +125,7 @@ La sezione seguente fornisce informazioni aggiuntive per la mappatura delle colo
 
 ### Funzioni di mappatura
 
-Alcune funzioni di mappatura possono essere utilizzate per calcolare e calcolare i valori in base a quanto immesso nei campi di origine. Per utilizzare una funzione, digitarla in *[!UICONTROL Source Field]* base alla sintassi e agli input appropriati.
+Alcune funzioni di mappatura possono essere utilizzate per calcolare e calcolare i valori in base a quanto immesso nei campi di origine. Per utilizzare una funzione, digitarla in **[!UICONTROL Source Field]** base alla sintassi e agli input appropriati.
 
 Ad esempio, per concatenare i campi CSV **città** e **paese** e assegnarli al campo XDM **città** , impostate il campo di origine come `concat(city, ", ", county)`.
 
