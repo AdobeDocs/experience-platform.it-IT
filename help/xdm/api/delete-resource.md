@@ -1,10 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;delete
 solution: Experience Platform
 title: Elimina una risorsa
+describe: It may occasionally be necessary to remove resource from the Schema Registry. Only resources that you create in the tenant container may be deleted. This is done by performing a DELETE request using the $id of the resource you wish to delete.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 7%
@@ -14,7 +15,7 @@ ht-degree: 7%
 
 # Elimina una risorsa
 
-Può essere talvolta necessario rimuovere (DELETE) una risorsa dal [!DNL Schema Registry]. È possibile eliminare solo le risorse create nel contenitore tenant. Questa operazione viene eseguita eseguendo una richiesta di DELETE utilizzando la risorsa `$id` da eliminare.
+Può essere talvolta necessario rimuovere (DELETE) una risorsa dal [!DNL Schema Registry]. È possibile eliminare solo le risorse create nel contenitore tenant. Questa operazione viene eseguita eseguendo una richiesta DELETE utilizzando l&#39; `$id` elemento della risorsa che si desidera eliminare.
 
 **Formato API**
 
