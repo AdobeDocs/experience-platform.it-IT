@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure File Storage;Azure File Storage connector
 solution: Experience Platform
 title: Creare un connettore di origine Azure File Storage nell'interfaccia utente
 topic: overview
+description: Questa esercitazione fornisce i passaggi per l'autenticazione di un connettore origine di archiviazione file di Azure tramite l'interfaccia utente della piattaforma.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '461'
 ht-degree: 1%
 
 ---
