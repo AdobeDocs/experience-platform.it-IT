@@ -5,7 +5,7 @@ title: Guida utente per l’editor di query
 topic: query editor
 description: Query Editor è uno strumento interattivo fornito da Adobe Experience Platform Query Service che consente di scrivere, convalidare ed eseguire query per i dati relativi all'esperienza cliente all'interno dell'interfaccia utente del Experience Platform . Query Editor supporta lo sviluppo di query per analisi e esplorazione dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per compilare set di dati in  Experience Platform.
 translation-type: tm+mt
-source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 1%
@@ -21,7 +21,7 @@ Per ulteriori informazioni sui concetti e sulle funzionalità di [!DNL Query Ser
 
 ## Introduzione
 
-[!DNL Query Editor] consente l&#39;esecuzione flessibile delle query connettendosi a [!DNL Query Service], e le query verranno eseguite solo mentre la connessione è attiva.
+[!DNL Query Editor] consente l&#39;esecuzione flessibile delle query connettendosi a [!DNL Query Service], e le query verranno eseguite solo quando la connessione è attiva.
 
 ### Collegamento a [!DNL Query Service]
 
@@ -37,7 +37,7 @@ Query eseguite dall&#39; [!DNL Query Editor] esecuzione in modo interattivo. Que
 
 Utilizzando [!DNL Query Editor]questa funzione, potete scrivere, eseguire e salvare le query per i dati relativi all&#39;esperienza cliente. Tutte le query eseguite [!DNL Query Editor]o salvate sono disponibili per tutti gli utenti dell&#39;organizzazione con accesso a [!DNL Query Service].
 
-### Accesso a [!DNL Query Editor]
+### Accesso al [!DNL Query Editor]
 
 Nell’ [!DNL Experience Platform] interfaccia utente, fate clic **[!UICONTROL Queries]** nel menu di navigazione a sinistra per aprire l’ [!DNL Query Service] area di lavoro. Fare clic **[!UICONTROL Create Query]** nella parte superiore destra della schermata per iniziare a scrivere le query. Questo collegamento è disponibile da una qualsiasi delle pagine nell’ [!DNL Query Service] area di lavoro.
 
@@ -77,19 +77,19 @@ Quando vengono rilevati degli errori, è possibile visualizzare i messaggi di er
 
 ### Dettagli query
 
-Durante la visualizzazione di una query in [!DNL Query Editor], il *[!UICONTROL Query Details]* pannello fornisce gli strumenti per gestire la query selezionata.
+Durante la visualizzazione di una query in [!DNL Query Editor], il **[!UICONTROL Query Details]** pannello fornisce gli strumenti per gestire la query selezionata.
 
 ![Immagine](../images/queries/query-editor-overview/query-details.png)
 
-Questo pannello consente di generare un set di dati di output direttamente dall’interfaccia utente, eliminare o assegnare un nome alla query visualizzata e visualizzare il codice SQL in un formato di facile copia nella *[!UICONTROL SQL Query]* scheda. Questo pannello mostra anche utili metadati, ad esempio l’ultima volta che la query è stata modificata e l’utente che l’ha modificata, se applicabile. Per generare un set di dati, fare clic su **[!UICONTROL Output Dataset]**. Viene visualizzata *[!UICONTROL Output Dataset]* la finestra di dialogo. Immettete un nome e una descrizione, quindi fate clic **[!UICONTROL Run Query]**. Il nuovo set di dati viene visualizzato nella *[!UICONTROL Datasets]* scheda dell&#39;interfaccia [!DNL Query Service] utente in [!DNL Platform].
+Questo pannello consente di generare un set di dati di output direttamente dall’interfaccia utente, eliminare o assegnare un nome alla query visualizzata e visualizzare il codice SQL in un formato di facile copia nella **[!UICONTROL SQL Query]** scheda. Questo pannello mostra anche utili metadati, ad esempio l’ultima volta che la query è stata modificata e l’utente che l’ha modificata, se applicabile. Per generare un set di dati, fare clic su **[!UICONTROL Output Dataset]**. Viene visualizzata **[!UICONTROL Output Dataset]** la finestra di dialogo. Immettete un nome e una descrizione, quindi fate clic **[!UICONTROL Run Query]**. Il nuovo set di dati viene visualizzato nella **[!UICONTROL Datasets]** scheda dell&#39;interfaccia [!DNL Query Service] utente in [!DNL Platform].
 
 ### Salvataggio delle query
 
-[!DNL Query Editor] fornisce una funzione save che consente di salvare una query e di lavorarci in un secondo momento. Per salvare una query, fate clic **[!UICONTROL Save]** nell’angolo in alto a destra di [!DNL Query Editor]. Prima di salvare una query, è necessario specificare un nome per la query utilizzando il *[!UICONTROL Query Details]* pannello.
+[!DNL Query Editor] fornisce una funzione save che consente di salvare una query e di lavorarci in un secondo momento. Per salvare una query, fate clic **[!UICONTROL Save]** nell’angolo in alto a destra di [!DNL Query Editor]. Prima di salvare una query, è necessario specificare un nome per la query utilizzando il **[!UICONTROL Query Details]** pannello.
 
 ### Come trovare le query precedenti
 
-Tutte le query eseguite da [!DNL Query Editor] vengono acquisite nella tabella Log. È possibile utilizzare la funzionalità di ricerca nella *[!UICONTROL Log]* scheda per individuare le esecuzioni delle query. Le query salvate sono elencate nella *[!UICONTROL Browse]* scheda.
+Tutte le query eseguite da [!DNL Query Editor] vengono acquisite nella tabella Log. È possibile utilizzare la funzionalità di ricerca nella **[!UICONTROL Log]** scheda per individuare le esecuzioni delle query. Le query salvate sono elencate nella **[!UICONTROL Browse]** scheda.
 
 Per ulteriori informazioni, consulta la panoramica [dell’interfaccia utente del servizio][query-service-ui] query.
 
@@ -99,7 +99,7 @@ Per ulteriori informazioni, consulta la panoramica [dell’interfaccia utente de
 
 ## Esecuzione di query con l&#39;Editor query
 
-Per eseguire una query in [!DNL Query Editor], è possibile immettere SQL nell&#39;editor o caricare una query precedente dalla *scheda Registro* o *[!UICONTROL Browse]* scheda, quindi fare clic su **Riproduci**. Lo stato dell&#39;esecuzione della query viene visualizzato nella *[!UICONTROL Console]* scheda sottostante e i dati di output sono visualizzati nella *[!UICONTROL Results]* scheda.
+Per eseguire una query in [!DNL Query Editor], è possibile immettere SQL nell&#39;editor o caricare una query precedente dalla *scheda Registro* o **[!UICONTROL Browse]** scheda, quindi fare clic su **Riproduci**. Lo stato dell&#39;esecuzione della query viene visualizzato nella **[!UICONTROL Console]** scheda sottostante e i dati di output sono visualizzati nella **[!UICONTROL Results]** scheda.
 
 ### Console
 
@@ -113,7 +113,7 @@ La console fornisce informazioni sullo stato e il funzionamento di [!DNL Query S
 
 ### Risultati query
 
-Al termine di una query, i risultati vengono visualizzati nella *[!UICONTROL Results]* scheda accanto alla *[!UICONTROL Console]* scheda. Questa visualizzazione mostra l’output tabulare della query, visualizzando fino a 100 righe. Questa visualizzazione consente di verificare che la query produca l&#39;output previsto. Per generare un dataset con la query, rimuovere i limiti sulle righe restituite ed eseguire la query con `CREATE TABLE tablename AS SELECT` cui generare un dataset con l&#39;output. Per istruzioni su come generare un set di dati dai risultati della query, vedere l&#39;esercitazione [sulla][query-service-create-datasets] generazione di set di dati in [!DNL Query Editor].
+Al termine di una query, i risultati vengono visualizzati nella **[!UICONTROL Results]** scheda accanto alla **[!UICONTROL Console]** scheda. Questa visualizzazione mostra l’output tabulare della query, visualizzando fino a 100 righe. Questa visualizzazione consente di verificare che la query produca l&#39;output previsto. Per generare un dataset con la query, rimuovere i limiti sulle righe restituite ed eseguire la query con `CREATE TABLE tablename AS SELECT` cui generare un dataset con l&#39;output. Per istruzioni su come generare un set di dati dai risultati della query, vedere l&#39;esercitazione [sulla][query-service-create-datasets] generazione di set di dati in [!DNL Query Editor].
 
 ![Immagine](../images/queries/query-editor-overview/query-results.png)
 
