@@ -5,7 +5,7 @@ title: ' ingresso e uscita Attribution AI'
 topic: Input and Output data for Attribution AI
 description: Il seguente documento illustra i diversi input e output utilizzati nelle Attribution AI .
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '2067'
 ht-degree: 3%
@@ -136,11 +136,11 @@ Nella tabella seguente sono delineati i campi dello schema nell’esempio di out
 
 ### Visualizzazione di percorsi di valutazione non elaborati (interfaccia utente) {#raw-score-path}
 
-Puoi visualizzare il percorso dei punteggi non elaborati nell’interfaccia utente. Per iniziare, seleziona **[!UICONTROL Schemas]** nell’interfaccia utente della piattaforma, quindi cerca e seleziona il tuo schema di valutazione AI dell’attribuzione dall’interno della *[!UICONTROL Browse]* scheda.
+Puoi visualizzare il percorso dei punteggi non elaborati nell’interfaccia utente. Per iniziare, seleziona **[!UICONTROL Schemas]** nell’interfaccia utente della piattaforma, quindi cerca e seleziona il tuo schema di valutazione AI dell’attribuzione dall’interno della **[!UICONTROL Browse]** scheda.
 
 ![Scegli lo schema](./images/input-output/schemas_browse.png)
 
-Quindi, selezionate un campo all’interno della *[!UICONTROL Structure]* finestra dell’interfaccia utente, si apre la *[!UICONTROL Field properties]* scheda. All&#39;interno *[!UICONTROL Field properties]* è il *[!UICONTROL Path]* campo associato ai punteggi non elaborati.
+Quindi, selezionate un campo all’interno della **[!UICONTROL Structure]** finestra dell’interfaccia utente, si apre la **[!UICONTROL Field properties]** scheda. All&#39;interno **[!UICONTROL Field properties]** è il **[!UICONTROL Path]** campo associato ai punteggi non elaborati.
 
 ![Selezione di uno schema](./images/input-output/field_properties.png)
 
