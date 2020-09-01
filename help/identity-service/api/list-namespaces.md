@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;namespace list;list namespace
 solution: Experience Platform
 title: Elenca spazi dei nomi disponibili
 topic: API guide
+description: Elenca tutti gli spazi dei nomi disponibili.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '64'
-ht-degree: 6%
+source-wordcount: '68'
+ht-degree: 5%
 
 ---
 
