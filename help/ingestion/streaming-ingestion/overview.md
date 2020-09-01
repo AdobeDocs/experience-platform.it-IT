@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;data ingestion;ingested data;streaming
+keywords: Experience Platform;home;popular topics;data ingestion;ingested data;streaming;overview;streaming ingestion;latency;streaming latency;
 solution: Experience Platform
 title: Panoramica di Adobe Experience Platform Streaming Ingestion
 topic: overview
 description: L'assimilazione dello streaming per Adobe Experience Platform fornisce agli utenti un metodo per inviare in tempo reale i dati dai dispositivi client e server al Experience Platform .
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 3%
