@@ -5,7 +5,7 @@ title: Panoramica dei connettori sorgente Adobe Experience Platform
 topic: overview
 description: Adobe Experience Platform consente l'acquisizione di dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Piattaforma. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, database e molti altri.
 translation-type: tm+mt
-source-git-commit: c8e53a25c5b22e8d840658fe26ff47875947a6d0
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 0%
@@ -112,14 +112,14 @@ I sistemi CRM forniscono dati che possono aiutare a creare relazioni con i clien
 
 ## Controllo degli accessi per le origini nell&#39;assimilazione dei dati
 
-Le autorizzazioni per le origini nell&#39;assimilazione dei dati possono essere gestite all&#39;interno dell&#39;Adobe Admin Console. Puoi accedere alle autorizzazioni tramite la *[!UICONTROL Permissions]* scheda in un particolare profilo di prodotto. Dal **[!UICONTROL Edit Permissions]** pannello potete accedere alle autorizzazioni relative alle origini tramite la voce di *[!UICONTROL data ingestion]* menu. L&#39; **[!UICONTROL View Sources]** autorizzazione consente l&#39;accesso in sola lettura alle origini disponibili nella *[!UICONTROL Catalog]* scheda e alle origini autenticate nella *[!UICONTROL Browse]* scheda, mentre l&#39; **[!UICONTROL Manage Sources]** autorizzazione consente l&#39;accesso completo alle origini di lettura, creazione, modifica e disattivazione.
+Le autorizzazioni per le origini nell&#39;assimilazione dei dati possono essere gestite all&#39;interno dell&#39;Adobe Admin Console. Puoi accedere alle autorizzazioni tramite la **[!UICONTROL Permissions]** scheda in un particolare profilo di prodotto. Dal **[!UICONTROL Edit Permissions]** pannello potete accedere alle autorizzazioni relative alle origini tramite la voce di **[!UICONTROL data ingestion]** menu. L&#39; **[!UICONTROL View Sources]** autorizzazione consente l&#39;accesso in sola lettura alle origini disponibili nella **[!UICONTROL Catalog]** scheda e alle origini autenticate nella **[!UICONTROL Browse]** scheda, mentre l&#39; **[!UICONTROL Manage Sources]** autorizzazione consente l&#39;accesso completo alle origini di lettura, creazione, modifica e disattivazione.
 
 La tabella seguente illustra il comportamento dell’interfaccia utente in base alle diverse combinazioni di queste autorizzazioni:
 
 | Livello di autorizzazione | Descrizione |
 | ---- | ----|
 | **[!UICONTROL View Sources]** Attivato | Concedere l&#39;accesso in sola lettura alle origini in ciascun tipo di origine nella scheda *Catalogo* , nonché alle schede *Sfoglia*, *Account* e *DataFlow* . |
-| **[!UICONTROL Manage Sources]** Attivato | Oltre alle funzioni incluse in **[!UICONTROL View Sources]**, concede l&#39;accesso all&#39; *[!UICONTROL Connect Source]* opzione in *[!UICONTROL Catalog]* e all&#39; *[!UICONTROL Select Data]* opzione in *[!UICONTROL Browse]*. **[!UICONTROL Manage Sources]** consente inoltre di abilitare o disabilitare *[!UICONTROL DataFlows]* e modificare le relative pianificazioni. |
+| **[!UICONTROL Manage Sources]** Attivato | Oltre alle funzioni incluse in **[!UICONTROL View Sources]**, concede l&#39;accesso all&#39; **[!UICONTROL Connect Source]** opzione in **[!UICONTROL Catalog]** e all&#39; **[!UICONTROL Select Data]** opzione in **[!UICONTROL Browse]**. **[!UICONTROL Manage Sources]** consente inoltre di abilitare o disabilitare **[!UICONTROL DataFlows]** e modificare le relative pianificazioni. |
 | **[!UICONTROL View Sources]** Disattivato e **[!UICONTROL Manage Sources]** disattivato | Revoca tutti gli accessi alle origini. |
 
 Per ulteriori informazioni sulle autorizzazioni disponibili concesse tramite il Admin Console di , comprese quelle quattro origini, consultate la panoramica [del controllo di](../access-control/home.md)accesso.
