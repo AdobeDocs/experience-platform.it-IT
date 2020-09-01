@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;writing queries;writing query;
 solution: Experience Platform
 title: Scrittura di query
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 1%
@@ -14,13 +14,13 @@ ht-degree: 1%
 
 # Guida generale per l&#39;esecuzione delle query in [!DNL Query Service]
 
-In questo documento sono riportati dettagli importanti da conoscere durante la scrittura di query in  Adobe Experience Platform [!DNL Query Service].
+In questo documento sono riportati dettagli importanti da conoscere durante la scrittura di query in Adobe Experience Platform [!DNL Query Service].
 
 Per informazioni dettagliate sulla sintassi SQL utilizzata in [!DNL Query Service], consultate la documentazione [sulla sintassi](../sql/syntax.md)SQL.
 
 ## Modelli di esecuzione delle query
 
- Adobe Experience Platform [!DNL Query Service] dispone di due modelli di esecuzione delle query: interattivo e non interattivo. L&#39;esecuzione interattiva viene utilizzata per lo sviluppo di query e la generazione di report in strumenti di business intelligence, mentre quella non interattiva viene utilizzata per processi e query operative più grandi come parte di un flusso di lavoro di elaborazione dati.
+Adobe Experience Platform [!DNL Query Service] dispone di due modelli di esecuzione delle query: interattivo e non interattivo. L&#39;esecuzione interattiva viene utilizzata per lo sviluppo di query e la generazione di report in strumenti di business intelligence, mentre quella non interattiva viene utilizzata per processi e query operative più grandi come parte di un flusso di lavoro di elaborazione dati.
 
 ### Esecuzione di query interattive
 
