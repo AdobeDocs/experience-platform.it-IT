@@ -5,9 +5,9 @@ title: Panoramica sui set di dati
 topic: datasets
 description: Questo documento fornisce una panoramica di alto livello dei set di dati in  Experience Platform.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '722'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ Per ulteriori informazioni, consulta la panoramica [sull’inserimento dei](../.
 
 ## Applicazione di etichette di utilizzo ai set di dati
 
-Adobe Experience Platform [!DNL Data Governance] consente di gestire i dati dei clienti al fine di garantire la conformità a normative, restrizioni e criteri applicabili all&#39;uso dei dati. L’utilizzo dell’etichetta e dell’applicazione dell’uso dei dati (DULE) come framework di base [!DNL Data Governance] consente di applicare etichette di utilizzo per classificare i dati in base ai criteri di utilizzo applicati a tali dati.
+Adobe Experience Platform [!DNL Data Governance] consente di gestire i dati dei clienti al fine di garantire la conformità a normative, restrizioni e criteri applicabili all&#39;uso dei dati. Il [!DNL Data Governance] framework consente di applicare etichette di utilizzo per classificare i dati in base ai criteri di utilizzo applicati a tali dati.
 
 Le etichette di utilizzo dei dati possono essere applicate a set di dati interi o a singoli campi di set di dati. Le etichette aggiunte a livello di dataset sono ereditate da tutti i campi all&#39;interno di tale dataset.
 
