@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;reset sandbox
 solution: Experience Platform
 title: Reimpostare una sandbox
 topic: developer guide
+description: Le sandbox di sviluppo dispongono di una funzione di "reimpostazione della fabbrica" che elimina tutte le risorse non predefinite da una sandbox. Potete ripristinare una sandbox effettuando una richiesta di PUT che include il nome della sandbox nel percorso della richiesta.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 4%
+source-wordcount: '156'
+ht-degree: 3%
 
 ---
 
