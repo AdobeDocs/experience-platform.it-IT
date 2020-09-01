@@ -4,23 +4,23 @@ solution: Experience Platform
 title: Iscriviti agli eventi sulla privacy
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '812'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 
 # Iscriviti a [!DNL Privacy Events]
 
-[!DNL Privacy Events] sono messaggi forniti da  Adobe Experience Platform [!DNL Privacy Service], che sfruttano  eventi I/O di Adobe inviati a un webhook configurato per facilitare l’automazione efficiente della richiesta di processo. Essi riducono o eliminano la necessità di eseguire il polling dell&#39; [!DNL Privacy Service] API per verificare se un processo è completo o se è stata raggiunta una determinata fase cardine all&#39;interno di un flusso di lavoro.
+[!DNL Privacy Events] sono messaggi forniti da Adobe Experience Platform [!DNL Privacy Service], che sfruttano  eventi I/O di Adobe inviati a un webhook configurato per facilitare l’automazione efficiente della richiesta di processo. Essi riducono o eliminano la necessità di eseguire il polling dell&#39; [!DNL Privacy Service] API per verificare se un processo è completo o se è stata raggiunta una determinata fase cardine all&#39;interno di un flusso di lavoro.
 
 Al momento sono disponibili quattro tipi di notifiche relative al ciclo di vita della richiesta di lavoro per la privacy:
 
 | Tipo | Descrizione |
 --- | ---
-| Processo completato | Tutte [!DNL Experience Cloud] le soluzioni hanno riportato indietro i dati e lo stato globale o globale del processo è stato contrassegnato come completo. |
+| Processo completato | Tutte [!DNL Experience Cloud] le soluzioni hanno riportato i risultati e lo stato globale o globale del processo è stato contrassegnato come completo. |
 | Errore processo | Una o più soluzioni hanno segnalato un errore durante l&#39;elaborazione della richiesta. |
 | Prodotto completo | Una delle soluzioni associate a questo processo ha completato il lavoro. |
 | Errore del prodotto | Una delle soluzioni ha segnalato un errore durante l&#39;elaborazione della richiesta. |
@@ -74,7 +74,7 @@ Prendete nota dell’ `Forwarding` URL (`https://212d6cd2.ngrok.io`), che verrà
 
 ## Creare un nuovo progetto in  Adobe Developer Console
 
-Andate a [console](https://www.adobe.com/go/devs_console_ui) Sviluppatore di Adobe ed effettuate l&#39;accesso con il vostro Adobe ID . Attenetevi quindi ai passaggi descritti nell&#39;esercitazione sulla [creazione di un progetto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vuoto nella documentazione di  Adobe Developer Console.
+Andate a [console](https://www.adobe.com/go/devs_console_ui) per sviluppatori di Adobi ed effettuate l&#39;accesso con il vostro Adobe ID . Attenetevi quindi ai passaggi descritti nell&#39;esercitazione sulla [creazione di un progetto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vuoto nella documentazione di  Adobe Developer Console.
 
 ## Aggiunta di eventi sulla privacy al progetto
 
@@ -86,7 +86,7 @@ Viene visualizzata la finestra di dialogo _Aggiungi eventi_ . Selezionate **[!UI
 
 ![](./images/privacy-events/add-privacy-events.png)
 
-Viene visualizzata la finestra di dialogo _Configura registrazione_ evento. Selezionare gli eventi che si desidera ricevere selezionando le relative caselle di controllo. Gli eventi selezionati vengono visualizzati sotto _[!UICONTROL Subscribed Events]_la colonna di sinistra. Al termine, fate clic **[!UICONTROL Next]**.
+Viene visualizzata la finestra di dialogo _Configura registrazione_ evento. Selezionare gli eventi che si desidera ricevere selezionando le relative caselle di controllo. Gli eventi selezionati vengono visualizzati sotto **[!UICONTROL Subscribed Events]** la colonna di sinistra. Al termine, fai clic su **[!UICONTROL Next]**.
 
 ![](./images/privacy-events/choose-subscriptions.png)
 
@@ -106,11 +106,11 @@ Nella schermata successiva, fornite un nome e una descrizione per la registrazio
 
 ![](./images/privacy-events/event-details.png)
 
-Più in basso sullo stesso schermo, vengono fornite due opzioni per configurare la modalità di ricezione degli eventi. Selezionate **[!UICONTROL Webhook]** e fornite l&#39; `Forwarding` URL per il webhook di ngrok creato in precedenza in _[!UICONTROL Webhook URL]_. Quindi, selezionate lo stile di consegna preferito (singolo o batch) prima di fare clic **[!UICONTROL Save configured events]**per completare la registrazione dell&#39;evento.
+Più in basso sullo stesso schermo, vengono fornite due opzioni per configurare la modalità di ricezione degli eventi. Selezionate **[!UICONTROL Webhook]** e fornite l&#39; `Forwarding` URL per il webhook di ngrok creato in precedenza in **[!UICONTROL Webhook URL]**. Quindi, selezionate lo stile di consegna preferito (singolo o batch) prima di fare clic **[!UICONTROL Save configured events]** per completare la registrazione dell&#39;evento.
 
 ![](./images/privacy-events/webhook-details.png)
 
-Viene nuovamente visualizzata la pagina dei dettagli del progetto, con [!DNL Privacy Events] la visualizzazione _[!UICONTROL Events]_nella parte sinistra.
+Viene nuovamente visualizzata la pagina dei dettagli del progetto, con [!DNL Privacy Events] la visualizzazione **[!UICONTROL Events]** nella parte sinistra.
 
 ## Visualizzare i dati dell’evento
 
@@ -126,7 +126,7 @@ Fate clic sulla **[!UICONTROL Debug Tracing]** scheda per visualizzare un elenco
 
 ![](images/privacy-events/debug-tracing.png)
 
-La _[!UICONTROL Payload]_sezione fornisce dettagli sull&#39;evento selezionato, incluso il relativo tipo di evento (`com.adobe.platform.gdpr.productcomplete`), come evidenziato nell&#39;esempio precedente.
+La **[!UICONTROL Payload]** sezione fornisce dettagli sull&#39;evento selezionato, incluso il relativo tipo di evento (`com.adobe.platform.gdpr.productcomplete`), come evidenziato nell&#39;esempio precedente.
 
 ## Passaggi successivi
 
