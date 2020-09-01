@@ -5,7 +5,7 @@ title: Guida utente del Generatore di segmenti del servizio di segmentazione
 topic: ui guide
 description: 'Segment Builder (Generatore di segmenti) fornisce un’area di lavoro completa che consente di interagire con gli elementi dati del profilo. L’area di lavoro offre controlli intuitivi per la creazione e la modifica di regole, come le sezioni di trascinamento utilizzate per rappresentare le proprietà dei dati. '
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1660'
 ht-degree: 0%
@@ -37,7 +37,7 @@ La **[!UICONTROL Attributes]** scheda consente di esplorare [!DNL Profile] gli a
 
 La **[!UICONTROL Events]** scheda consente di creare un&#39;audience basata su eventi o azioni che si sono verificati utilizzando elementi [!DNL XDM ExperienceEvent] dati. Potete anche trovare i tipi di evento nella **[!UICONTROL Events]** scheda, una raccolta di eventi di uso comune che consente di creare i segmenti più rapidamente.
 
-Oltre a poter individuare [!DNL ExperienceEvent] gli elementi, potete anche cercare i tipi di evento. I tipi di evento utilizzano la stessa logica di codifica utilizzata [!DNL ExperienceEvents], senza che sia necessario eseguire ricerche nella [!DNL XDM ExperienceEvent] classe alla ricerca dell&#39;evento corretto. Ad esempio, utilizzando la barra di ricerca per cercare &quot;carrello&quot; vengono restituiti i tipi di evento &quot;[!UICONTROL AddCart]&quot; e &quot;[!UICONTROL RemoveCart]&quot;, due azioni carrello utilizzate di frequente per la creazione delle definizioni dei segmenti.
+Oltre a poter individuare [!DNL ExperienceEvent] gli elementi, potete anche cercare i tipi di evento. I tipi di evento utilizzano la stessa logica di codifica utilizzata [!DNL ExperienceEvents], senza che sia necessario eseguire ricerche nella [!DNL XDM ExperienceEvent] classe alla ricerca dell&#39;evento corretto. Ad esempio, utilizzando la barra di ricerca per cercare &quot;carrello&quot;, vengono restituiti i tipi di evento &quot;[!UICONTROL AddCart]&quot; e &quot;[!UICONTROL RemoveCart]&quot;, due azioni carrello utilizzate di frequente durante la creazione delle definizioni dei segmenti.
 
 Per cercare qualsiasi tipo di componente, digitatene il nome nella barra di ricerca, che utilizza la sintassi [di ricerca di](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. I risultati della ricerca iniziano a essere compilati man mano che vengono inserite parole intere. Ad esempio, per creare una regola basata sul campo XDM `ExperienceEvent.commerce.productViews`, iniziate a digitare &quot;product views&quot; nel campo di ricerca. Una volta digitata la parola &quot;prodotto&quot;, i risultati della ricerca iniziano a comparire. Ogni risultato include la gerarchia di oggetti alla quale appartiene.
 
@@ -77,7 +77,7 @@ Per aggiungere una nuova regola alla definizione del segmento, trascinate una se
 
 Puoi trascinare un&#39;audience dalla **[!UICONTROL Audience]** scheda nell&#39;area di lavoro del generatore di regole per fare riferimento all&#39;appartenenza all&#39;audience nella nuova definizione di segmento. Questo consente di includere o escludere l&#39;appartenenza all&#39;audience come attributo nella nuova regola del segmento.
 
-Per [!DNL Platform] i tipi di pubblico creati con [!DNL Segment Builder], potete scegliere di convertire l&#39;audience in un set di regole utilizzate nella definizione del segmento per quell&#39;audience. Questa conversione crea una copia della logica della regola, che può essere modificata senza influenzare la definizione del segmento originale. Prima di convertire le modifiche recenti nella definizione del segmento in logica regola, accertatevi di aver salvato le modifiche recenti.
+Per [!DNL Platform] i tipi di pubblico creati utilizzando [!DNL Segment Builder], viene offerta l&#39;opzione per convertire l&#39;audience in un set di regole utilizzate nella definizione del segmento per quell&#39;audience. Questa conversione crea una copia della logica della regola, che può essere modificata senza influenzare la definizione del segmento originale. Prima di convertire le modifiche recenti nella definizione del segmento in logica regola, accertatevi di aver salvato le modifiche recenti.
 
 >[!NOTE]
 >
@@ -131,7 +131,7 @@ Per selezionare un criterio di unione per la definizione del segmento, seleziona
 
 ## Proprietà dei segmenti
 
-Quando si crea una definizione di segmento, la *[!UICONTROL Segment Properties]* sezione sul lato destro dell&#39;area di lavoro visualizza una stima della dimensione del segmento risultante, consentendo di regolare la definizione del segmento come necessario prima di creare il pubblico stesso.
+Quando si crea una definizione di segmento, la **[!UICONTROL Segment Properties]** sezione sul lato destro dell&#39;area di lavoro visualizza una stima della dimensione del segmento risultante, consentendo di regolare la definizione del segmento come necessario prima di creare il pubblico stesso.
 
 La **[!UICONTROL Segment Properties]** sezione è anche il punto in cui potete specificare informazioni importanti sulla definizione del segmento, inclusi i relativi **[!UICONTROL Name]** e **[!UICONTROL Description]**. I nomi delle definizioni dei segmenti vengono utilizzati per identificare il segmento tra quelli definiti dall’organizzazione e devono pertanto essere descrittivi, concisi e univoci.
 
