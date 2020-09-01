@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configurare un flusso di dati per un connettore pubblicitario nell'interfaccia utente
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
-source-wordcount: '1212'
+source-wordcount: '1211'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Inoltre, questa esercitazione richiede che sia già stato creato un account pubb
 
 ## Seleziona dati
 
-Dopo aver creato l&#39;account pubblicitario, viene visualizzato il *[!UICONTROL Select data]* passaggio che fornisce un&#39;interfaccia interattiva per esplorare la gerarchia dei file.
+Dopo aver creato l&#39;account pubblicitario, viene visualizzato il **[!UICONTROL Select data]** passaggio che fornisce un&#39;interfaccia interattiva per esplorare la gerarchia dei file.
 
 - La metà sinistra dell&#39;interfaccia è un browser di directory che visualizza i file e le directory del server.
 - La metà destra dell&#39;interfaccia consente di visualizzare in anteprima fino a 100 righe di dati da un file compatibile.
@@ -40,7 +40,7 @@ Selezionate la directory da utilizzare, quindi selezionate **[!UICONTROL Next]**
 
 ## Mappatura dei campi dati su uno schema XDM
 
-Viene visualizzato il *[!UICONTROL Mapping]* passaggio che fornisce un&#39;interfaccia interattiva per mappare i dati di origine a un [!DNL Platform] dataset.
+Viene visualizzato il **[!UICONTROL Mapping]** passaggio che fornisce un&#39;interfaccia interattiva per mappare i dati di origine a un [!DNL Platform] dataset.
 
 Scegliere un set di dati in entrata in cui assimilare i dati. È possibile utilizzare un set di dati esistente o crearne uno nuovo.
 
@@ -50,7 +50,7 @@ Per assimilare i dati in un dataset esistente, selezionare **[!UICONTROL Use exi
 
 ![use-existing-dataset](../../../images/tutorials/dataflow/advertising/use-existing-target-dataset.png)
 
-Viene visualizzata *[!UICONTROL Select dataset]* la finestra di dialogo. Trovare il set di dati che si desidera utilizzare, selezionarlo, quindi fare clic **[!UICONTROL Continue]**.
+Viene visualizzata **[!UICONTROL Select dataset]** la finestra di dialogo. Trovare il set di dati che si desidera utilizzare, selezionarlo, quindi fare clic **[!UICONTROL Continue]**.
 
 ![select-existing-dataset](../../../images/tutorials/dataflow/advertising/select-existing-dataset.png)
 
@@ -62,7 +62,7 @@ Per assimilare i dati in un nuovo dataset, selezionare **[!UICONTROL Create new 
 
 ![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
 
-Viene visualizzata *[!UICONTROL Select schema]* la finestra di dialogo. Selezionare lo schema che si desidera applicare al nuovo dataset, quindi fare clic su **[!DNL Done]**.
+Viene visualizzata **[!UICONTROL Select schema]** la finestra di dialogo. Selezionare lo schema che si desidera applicare al nuovo dataset, quindi fare clic su **[!DNL Done]**.
 
 ![select-schema](../../../images/tutorials/dataflow/advertising/select-existing-schema.png)
 
@@ -74,14 +74,14 @@ Una volta mappati i dati di origine, fai clic su **[!UICONTROL Next]**.
 
 ## Pianificare le esecuzioni dell&#39;assimilazione
 
-Viene visualizzato il *[!UICONTROL Scheduling]* passaggio che consente di configurare una pianificazione di assimilazione per l&#39;acquisizione automatica dei dati di origine selezionati tramite le mappature configurate. Nella tabella seguente sono riportati i diversi campi configurabili per la pianificazione:
+Viene visualizzato il **[!UICONTROL Scheduling]** passaggio che consente di configurare una pianificazione di assimilazione per l&#39;acquisizione automatica dei dati di origine selezionati tramite le mappature configurate. Nella tabella seguente sono riportati i diversi campi configurabili per la pianificazione:
 
 | Campo | Descrizione |
 | --- | --- |
 | Frequenza | Le frequenze selezionabili includono `Once`, `Minute`, `Hour`, `Day`e `Week`. |
 | Intervallo | Un numero intero che imposta l&#39;intervallo per la frequenza selezionata. |
 | Ora di inizio | Una marca temporale UTC che indica quando è impostata la prima assimilazione. |
-| Backfill | Un valore booleano che determina i dati inizialmente acquisiti. Se *[!UICONTROL Backfill]* è abilitata, tutti i file correnti nel percorso specificato verranno acquisiti durante la prima assimilazione pianificata. Se *Backfill* è disattivato, verranno acquisiti solo i file caricati tra la prima esecuzione dell&#39;assimilazione e il *[!UICONTROL Start time]* file. I file caricati prima di *[!UICONTROL Start time]* non verranno acquisiti. |
+| Backfill | Un valore booleano che determina i dati inizialmente acquisiti. Se **[!UICONTROL Backfill]** è abilitata, tutti i file correnti nel percorso specificato verranno acquisiti durante la prima assimilazione pianificata. Se **[!UICONTROL Backfill]** è disattivato, verranno assimilati solo i file caricati tra la prima esecuzione dell&#39;assimilazione e l&#39; **[!UICONTROL Start time]** assimilazione. I file caricati prima di **[!UICONTROL Start time]** non verranno acquisiti. |
 | Colonna Delta | Opzione con un set filtrato di campi dello schema di origine di tipo, data o ora. Questo campo è utilizzato per distinguere tra dati nuovi ed esistenti. I dati incrementali verranno acquisiti in base alla marca temporale della colonna selezionata. |
 
 I flussi di dati sono progettati per l&#39;acquisizione automatica dei dati su base programmata. Per iniziare, selezionate la frequenza di assimilazione. Quindi, impostare l&#39;intervallo per specificare il periodo tra due esecuzioni di flusso. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero e deve essere impostato su maggiore o uguale a 15.
@@ -127,7 +127,7 @@ Dopo aver rivisto il flusso di dati, fai clic su **[!UICONTROL Finish]** e conse
 
 ## Monitorare il flusso di dati
 
-Una volta creato il flusso di dati, è possibile monitorare i dati che vengono acquisiti attraverso di esso per visualizzare informazioni su velocità di assimilazione, successo ed errori. Per ulteriori informazioni su come monitorare il flusso di dati, consulta l’esercitazione sul [monitoraggio di account e flussi di dati nell’interfaccia utente](../monitor.md).
+Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti attraverso di esso per visualizzare informazioni su velocità di assimilazione, successo ed errori. Per ulteriori informazioni su come monitorare il flusso di dati, consulta l’esercitazione sul [monitoraggio di account e flussi di dati nell’interfaccia utente](../monitor.md).
 
 ## Eliminare il flusso di dati
 
@@ -135,7 +135,7 @@ Una volta creato il flusso di dati, è possibile monitorare i dati che vengono a
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato con successo un flusso di dati per l&#39;immissione di dati da un sistema di automazione del marketing e hai acquisito informazioni sul monitoraggio dei set di dati. I dati in entrata possono ora essere utilizzati dai [!DNL Platform] servizi a valle come [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i documenti seguenti:
+Seguendo questa esercitazione, hai creato con successo un flusso di dati per inserire i dati da un sistema di automazione del marketing e hai acquisito informazioni approfondite sul monitoraggio dei set di dati. I dati in entrata possono ora essere utilizzati dai [!DNL Platform] servizi a valle come [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i documenti seguenti:
 
 - [Panoramica del profilo cliente in tempo reale](../../../../profile/home.md)
 - [Panoramica di Analysis Workspace](../../../../data-science-workspace/home.md)
