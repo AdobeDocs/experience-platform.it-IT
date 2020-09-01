@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;list identities;list cluster
 solution: Experience Platform
 title: Elenca identità cluster
 topic: API guide
+description: Le identità correlate a un grafico di identità, a prescindere dallo spazio dei nomi, sono considerate parte dello stesso "cluster" in tale grafico di identità. Le opzioni riportate di seguito forniscono i mezzi per accedere a tutti i membri del cluster.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '347'
 ht-degree: 1%
 
 ---
