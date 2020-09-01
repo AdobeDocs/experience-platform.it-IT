@@ -5,7 +5,7 @@ title: Guida utente dei set di dati
 topic: datasets
 description: Questa guida utente per i set di dati fornisce istruzioni sulle operazioni più comuni quando si utilizzano i set di dati nell'interfaccia utente di Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1108'
 ht-degree: 0%
@@ -30,18 +30,18 @@ Questa guida utente richiede una buona conoscenza dei seguenti componenti di Ado
 
 ## Visualizzare i set di dati
 
-Nell’ [!DNL Experience Platform] interfaccia utente, fate clic **[!UICONTROL Datasets]** nella barra di navigazione a sinistra per aprire il *[!UICONTROL Datasets]* dashboard. Il dashboard elenca tutti i set di dati disponibili per l&#39;organizzazione. I dettagli vengono visualizzati per ciascun dataset elencato, incluso il nome, lo schema a cui il dataset aderisce e lo stato dell&#39;assimilazione più recente.
+Nell’ [!DNL Experience Platform] interfaccia utente, fate clic **[!UICONTROL Datasets]** nella barra di navigazione a sinistra per aprire il **[!UICONTROL Datasets]** dashboard. Il dashboard elenca tutti i set di dati disponibili per l&#39;organizzazione. I dettagli vengono visualizzati per ciascun dataset elencato, incluso il nome, lo schema a cui il dataset aderisce e lo stato dell&#39;assimilazione più recente.
 
 ![](../images/datasets/user-guide/browse_datasets.png)
 
-Fare clic sul nome di un dataset per accedere alla *[!UICONTROL Dataset activity]* schermata e visualizzare i dettagli del set di dati selezionato. La scheda dell&#39;attività include un grafico che visualizza il tasso di utilizzo dei messaggi e un elenco di batch con esito positivo o negativo.
+Fare clic sul nome di un dataset per accedere alla **[!UICONTROL Dataset activity]** schermata e visualizzare i dettagli del set di dati selezionato. La scheda dell&#39;attività include un grafico che visualizza il tasso di utilizzo dei messaggi e un elenco di batch con esito positivo o negativo.
 
 ![](../images/datasets/user-guide/dataset_activity_1.png)
 ![](../images/datasets/user-guide/dataset_activity_2.png)
 
 ## Anteprima di un dataset
 
-Dalla *[!UICONTROL Dataset activity]* schermata, fai clic **[!UICONTROL Preview dataset]** vicino all&#39;angolo superiore destro dello schermo per visualizzare in anteprima fino a 100 righe di dati. Se il set di dati è vuoto, il collegamento di anteprima verrà disattivato e verrà detto **[!UICONTROL Preview not available]**.
+Dalla **[!UICONTROL Dataset activity]** schermata, fai clic **[!UICONTROL Preview dataset]** vicino all&#39;angolo superiore destro dello schermo per visualizzare in anteprima fino a 100 righe di dati. Se il set di dati è vuoto, il collegamento di anteprima verrà disattivato e verrà detto **[!UICONTROL Preview not available]**.
 
 ![](../images/datasets/user-guide/click_to_preview.png)
 
@@ -56,7 +56,7 @@ Per metodi più affidabili per accedere ai dati, [!DNL Experience Platform] forn
 
 ## Creare un dataset {#create}
 
-Per creare un nuovo set di dati, fai clic su **[!UICONTROL Create dataset]** nel *[!UICONTROL Datasets]* dashboard.
+Per creare un nuovo set di dati, fai clic su **[!UICONTROL Create dataset]** nel **[!UICONTROL Datasets]** dashboard.
 
 ![](../images/datasets/user-guide/click_to_create.png)
 
@@ -67,29 +67,29 @@ Nella schermata successiva vengono visualizzate le due opzioni seguenti per crea
 
 ### Creare un dataset con uno schema esistente
 
-Nella *[!UICONTROL Create dataset]* schermata fare clic **[!UICONTROL Create dataset from schema]** per creare un nuovo set di dati vuoto.
+Nella **[!UICONTROL Create dataset]** schermata fare clic **[!UICONTROL Create dataset from schema]** per creare un nuovo set di dati vuoto.
 
 ![](../images/datasets/user-guide/create_dataset_schema.png)
 
-Viene *[!UICONTROL Select schema]* visualizzato il passaggio. Sfogliare l&#39;elenco dello schema e selezionare lo schema a cui il set di dati aderirà prima di fare clic **[!UICONTROL Next]**.
+Viene **[!UICONTROL Select schema]** visualizzato il passaggio. Sfogliare l&#39;elenco dello schema e selezionare lo schema a cui il set di dati aderirà prima di fare clic **[!UICONTROL Next]**.
 
 ![](../images/datasets/user-guide/select_schema.png)
 
-Viene *[!UICONTROL Configure dataset]* visualizzato il passaggio. Immettete un nome e una descrizione facoltative per il dataset, quindi fate clic **[!UICONTROL Finish]** per crearlo.
+Viene **[!UICONTROL Configure dataset]** visualizzato il passaggio. Immettete un nome e una descrizione facoltative per il dataset, quindi fate clic **[!UICONTROL Finish]** per crearlo.
 
 ![](../images/datasets/user-guide/configure_dataset_schema.png)
 
 ### Creare un set di dati con un file CSV
 
-Quando un set di dati viene creato utilizzando un file CSV, viene creato uno schema ad hoc per fornire al set di dati una struttura che corrisponde al file CSV fornito. Nella *[!UICONTROL Create dataset]* schermata fare clic sulla casella di testo **[!UICONTROL Create dataset from CSV file]**.
+Quando un set di dati viene creato utilizzando un file CSV, viene creato uno schema ad hoc per fornire al set di dati una struttura che corrisponde al file CSV fornito. Nella **[!UICONTROL Create dataset]** schermata fare clic sulla casella di testo **[!UICONTROL Create dataset from CSV file]**.
 
 ![](../images/datasets/user-guide/create_dataset_csv.png)
 
-Viene *[!UICONTROL Configure]* visualizzato il passaggio. Immettete il set di dati con un nome e una descrizione facoltativa, quindi fate clic **[!UICONTROL Next]**.
+Viene **[!UICONTROL Configure]** visualizzato il passaggio. Immettete il set di dati con un nome e una descrizione facoltativa, quindi fate clic **[!UICONTROL Next]**.
 
 ![](../images/datasets/user-guide/configure_dataset_csv.png)
 
-Viene *[!UICONTROL Add data]* visualizzato il passaggio. Caricate il file CSV trascinandolo e rilasciandolo al centro dello schermo, oppure fate clic **[!UICONTROL Browse]** per esplorare la directory dei file. Il file può avere una dimensione massima di 10 gigabyte. Una volta caricato il file CSV, fate clic **[!UICONTROL Save]** per creare il set di dati.
+Viene **[!UICONTROL Add data]** visualizzato il passaggio. Caricate il file CSV trascinandolo e rilasciandolo al centro dello schermo, oppure fate clic **[!UICONTROL Browse]** per esplorare la directory dei file. Il file può avere una dimensione massima di 10 gigabyte. Una volta caricato il file CSV, fate clic **[!UICONTROL Save]** per creare il set di dati.
 
 >[!NOTE]
 >
@@ -106,7 +106,7 @@ Ogni dataset ha la capacità di arricchire i profili dei clienti con i dati acqu
 
 Per ulteriori informazioni sull&#39;abilitazione di uno schema per [!DNL Profile], vedere la guida [utente dell&#39;Editor](../../xdm/tutorials/create-schema-ui.md)schema.
 
-Per abilitare un set di dati per il profilo, accedi alla *[!UICONTROL Dataset activity]* schermata corrispondente e fai clic sull’ **[!UICONTROL Profile]** interruttore all’interno della *[!UICONTROL Properties]* colonna. Una volta attivato, i dati acquisiti nel dataset verranno utilizzati anche per compilare i profili dei clienti.
+Per abilitare un set di dati per il profilo, accedi alla **[!UICONTROL Dataset activity]** schermata corrispondente e fai clic sull’ **[!UICONTROL Profile]** interruttore all’interno della **[!UICONTROL Properties]** colonna. Una volta attivato, i dati acquisiti nel dataset verranno utilizzati anche per compilare i profili dei clienti.
 
 ![](../images/datasets/user-guide/enable_dataset_profiles.png)
 
@@ -118,7 +118,7 @@ L&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati (DULE) è il mecc
 
 ## Eliminare un dataset
 
-È possibile eliminare un set di dati accedendo innanzitutto alla *[!UICONTROL Dataset activity]* schermata. Quindi, fate clic **[!UICONTROL Delete dataset]** per eliminarlo.
+È possibile eliminare un set di dati accedendo innanzitutto alla **[!UICONTROL Dataset activity]** schermata. Quindi, fate clic **[!UICONTROL Delete dataset]** per eliminarlo.
 
 >[!NOTE]
 >
@@ -136,11 +136,11 @@ Se un set di dati è abilitato per [!DNL Profile], eliminandolo nell’interfacc
 
 ## Caricamento dei dati del monitor
 
-Nell’ [!DNL Experience Platform] interfaccia utente, fate clic **[!UICONTROL Monitoring]** nel menu di navigazione a sinistra. Il *[!UICONTROL Monitoring]* dashboard consente di visualizzare gli stati dei dati in entrata provenienti dall’assimilazione batch o in streaming. Per visualizzare lo stato dei singoli batch, fare clic su *[!UICONTROL Batch end-to-end]* o *[!UICONTROL Streaming end-to-end]*. Le dashboard elencano tutte le esecuzioni batch o in streaming dell&#39;assimilazione, incluse quelle che hanno esito positivo, non sono riuscite o sono ancora in corso. Ogni elenco fornisce dettagli del batch, inclusi l’ID batch, il nome del set di dati di destinazione e il numero di record acquisiti. Se il set di dati di destinazione è abilitato per [!DNL Profile], viene visualizzato anche il numero di record di identità e profilo acquisiti.
+Nell’ [!DNL Experience Platform] interfaccia utente, fate clic **[!UICONTROL Monitoring]** nel menu di navigazione a sinistra. Il **[!UICONTROL Monitoring]** dashboard consente di visualizzare gli stati dei dati in entrata provenienti dall’assimilazione batch o in streaming. Per visualizzare lo stato dei singoli batch, fare clic su **[!UICONTROL Batch end-to-end]** o **[!UICONTROL Streaming end-to-end]**. Le dashboard elencano tutte le esecuzioni batch o in streaming dell&#39;assimilazione, incluse quelle che hanno esito positivo, non sono riuscite o sono ancora in corso. Ogni elenco fornisce dettagli del batch, inclusi l’ID batch, il nome del set di dati di destinazione e il numero di record acquisiti. Se il set di dati di destinazione è abilitato per [!DNL Profile], viene visualizzato anche il numero di record di identità e profilo acquisiti.
 
 ![](../images/datasets/user-guide/batch_listing.png)
 
-È possibile fare clic su un singolo utente **[!UICONTROL Batch ID]** per accedere al *[!UICONTROL Batch overview]* dashboard e visualizzare i dettagli del batch, compresi i log di errore in caso di errore durante il caricamento del batch.
+È possibile fare clic su un singolo utente **[!UICONTROL Batch ID]** per accedere al **[!UICONTROL Batch overview]** dashboard e visualizzare i dettagli del batch, compresi i log di errore in caso di errore durante il caricamento del batch.
 
 ![](../images/datasets/user-guide/batch_overview.png)
 
