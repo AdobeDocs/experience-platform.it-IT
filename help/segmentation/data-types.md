@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type
+keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type;Segmentation data types;Segmentation;segmentation;Segmentation Service;Segmentation service data types;
 solution: Experience Platform
 title: Tipi di dati del servizio di segmentazione Adobe Experience Platform
 topic: overview
 description: Tutti i tipi di dati XDM sono supportati in Segmentation Service. Le regole che costituiscono una definizione di segmento sono contestualizzate dai seguenti tipi di dati.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 3%
@@ -35,7 +35,7 @@ I dati data consentono di assegnare contesto basato sull&#39;ora alle definizion
 
 | Esempio di campo | Indicazioni relative alla data | Timeline  |
 | ------------- | ------------------------ | --------- |
-| person.firstPurchase | `today`, `yesterday`, `this month`, `this year` | Rilevante per il giorno in cui il segmento è stato creato. |
+| person.firstPurchase | `today`, `yesterday`, `this month`, `this year` | Pertinente al giorno in cui il segmento è stato creato. |
 | person.lastPurchase | `in last`, `during`, `before`, `after`, `within` | Pertinente entro una data settimana/mese. |
 
 ## Eventi esperienza
@@ -55,7 +55,7 @@ Come illustrato nella tabella seguente, i dati dell&#39;evento vengono rappresen
 
 Le audience esterne possono essere utilizzate anche come componenti di una nuova definizione di segmento, aggiungendo le relative regole di attributi al nuovo segmento.
 
-Attualmente, solo Adobe Audience Manager è supportato come pubblico esterno, con ulteriori origini abilitate in futuro. Per ulteriori informazioni sull&#39;utilizzo dei tipi di pubblico Adobe Audience Manager con Piattaforma, consulta la guida alla condivisione di [audience all&#39;interno della documentazione](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)Adobe Audience Manager.
+Al momento, solo Adobe Audience Manager è supportato come pubblico esterno, mentre in futuro saranno abilitate ulteriori origini. Per ulteriori informazioni sull&#39;utilizzo dei tipi di pubblico Adobe Audience Manager con Piattaforma, consulta la guida alla condivisione di [audience all&#39;interno della documentazione](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)Adobe Audience Manager.
 
 ### Condivisione di segmenti
 
