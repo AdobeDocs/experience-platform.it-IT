@@ -5,7 +5,7 @@ title: Monitoraggio dell’assimilazione dei dati
 topic: overview
 description: Questa guida utente descrive come monitorare i dati nell’interfaccia utente di Adobe Experience Platform. Questa guida richiede un Adobe ID  e l'accesso ad Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '552'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Nell’interfaccia utente [del Experience Platform](https://platform.adobe.com),
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-Viene visualizzata la pagina *[!UICONTROL Streaming end-to-end]* di monitoraggio. Questa area di lavoro fornisce un grafico che mostra la frequenza degli eventi in streaming ricevuti da [!DNL Platform], un grafico che mostra la frequenza degli eventi in streaming elaborati con successo da [[!DNL Profilo cliente in tempo reale]](../../profile/home.md), nonché un elenco dettagliato dei dati in arrivo.
+Viene visualizzata la pagina **[!UICONTROL Streaming end-to-end]** di monitoraggio. Questa area di lavoro fornisce un grafico che mostra la frequenza degli eventi in streaming ricevuti da [!DNL Platform], un grafico che mostra la frequenza degli eventi in streaming elaborati con successo da [[!DNL Profilo cliente in tempo reale]](../../profile/home.md), nonché un elenco dettagliato dei dati in arrivo.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
