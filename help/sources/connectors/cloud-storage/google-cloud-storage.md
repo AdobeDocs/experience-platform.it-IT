@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connettore di archiviazione Google Cloud
 topic: overview
 translation-type: tm+mt
-source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Connettore di archiviazione Google Cloud
 
- Adobe Experience Platform offre connettività nativa per fornitori di cloud come AWS [!DNL Google Cloud Platform], e [!DNL Azure], consentendo di portare i dati da questi sistemi.
+Adobe Experience Platform offre connettività nativa per fornitori di cloud come AWS [!DNL Google Cloud Platform]e [!DNL Azure], consentendo di portare i dati da questi sistemi.
 
 Le origini di archiviazione cloud possono importare i tuoi dati [!DNL Platform] senza bisogno di scaricare, formattare o caricare. I dati ingeriti possono essere formattati come JSON XDM, parquet XDM o delimitati. Ogni fase del processo è integrata nel flusso di lavoro Origini. [!DNL Platform] consente di inserire dati da [!DNL Google Cloud Storage] batch.
 
@@ -56,11 +56,11 @@ Per connettersi a [!DNL Platform], è innanzitutto necessario abilitare l&#39;in
 
 ![](../../images/tutorials/create/google-cloud-storage/nav.png)
 
-Viene **[!UICONTROL Settings]** visualizzata la pagina. Da qui potete visualizzare informazioni sull&#39;ID [!DNL Google] progetto e dettagli sull&#39; [!DNL Google Cloud Storage] account. Per accedere alle impostazioni di interoperabilità, selezionare **[!UICONTROL Interoperability]** dall&#39;intestazione superiore.
+Viene **[!UICONTROL Settings]** visualizzata la pagina. Da qui potete vedere informazioni sull&#39;ID [!DNL Google] progetto e dettagli sull&#39; [!DNL Google Cloud Storage] account. Per accedere alle impostazioni di interoperabilità, selezionare **[!UICONTROL Interoperability]** dall&#39;intestazione superiore.
 
 ![](../../images/tutorials/create/google-cloud-storage/project-access.png)
 
-La **[!UICONTROL Interoperability]** pagina contiene informazioni sull&#39;autenticazione, le chiavi di accesso e il progetto predefinito associato al tuo account utente. Se non avete già stabilito un progetto predefinito per l&#39;accesso interoperabile, potete impostarne uno dall&#39;interno della *[!UICONTROL Default project for interoperable access]* sezione. Se è già stato stabilito un progetto predefinito, nella sezione viene visualizzato un messaggio di conferma dell’impostazione predefinita di un progetto.
+La **[!UICONTROL Interoperability]** pagina contiene informazioni sull&#39;autenticazione, le chiavi di accesso e il progetto predefinito associato al tuo account utente. Se non avete già stabilito un progetto predefinito per l&#39;accesso interoperabile, potete impostarne uno dall&#39;interno della **[!UICONTROL Default project for interoperable access]** sezione. Se è già stato stabilito un progetto predefinito, nella sezione viene visualizzato un messaggio di conferma dell’impostazione predefinita di un progetto.
 
 Per generare un nuovo ID chiave di accesso e una chiave di accesso segreta per il vostro account utente, selezionate **[!UICONTROL Create a Key]**.
 
