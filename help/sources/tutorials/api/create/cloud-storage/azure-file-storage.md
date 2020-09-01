@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure;Azure File Storage;Azure file storage
 solution: Experience Platform
 title: Creare un connettore Azure File Storage utilizzando l'API del servizio di flusso
 topic: overview
+description: Questa esercitazione utilizza l'API del servizio di flusso per seguire i passaggi necessari per collegare l'archiviazione dei file di Azure a  Experience Platform.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '573'
 ht-degree: 2%
 
 ---
