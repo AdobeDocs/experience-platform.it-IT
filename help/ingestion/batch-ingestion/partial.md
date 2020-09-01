@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Panoramica sull’assimilazione parziale di Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1387'
 ht-degree: 1%
@@ -89,7 +89,7 @@ Per creare una nuova connessione di origine, segui i passaggi elencati nella pan
 
 L’ **[!UICONTROL Partial ingestion]** interruttore consente di attivare o disattivare l’inserimento parziale dei batch.
 
-L&#39; **[!UICONTROL Error diagnostics]** interruttore viene visualizzato solo quando l&#39; **[!UICONTROL Partial ingestion]** interruttore è disattivato. Questa funzione consente [!DNL Platform] di generare messaggi di errore dettagliati sui batch acquisiti. Se l&#39; *[!UICONTROL Partial ingestion]* interruttore è attivato, la diagnostica degli errori avanzata viene applicata automaticamente.
+L&#39; **[!UICONTROL Error diagnostics]** interruttore viene visualizzato solo quando l&#39; **[!UICONTROL Partial ingestion]** interruttore è disattivato. Questa funzione consente [!DNL Platform] di generare messaggi di errore dettagliati sui batch acquisiti. Se l&#39; **[!UICONTROL Partial ingestion]** interruttore è attivato, la diagnostica degli errori avanzata viene applicata automaticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
