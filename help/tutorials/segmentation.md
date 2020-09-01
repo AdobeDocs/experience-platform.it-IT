@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Esercitazioni sulla segmentazione
 topic: tutorial
+description: Adobe Experience Platform Segmentation Service fornisce un'interfaccia utente e RESTful API che consente di creare segmenti e generare audience dai dati del profilo cliente in tempo reale. Questi segmenti sono configurati e mantenuti a livello centrale sulla piattaforma e sono facilmente accessibili da qualsiasi soluzione  Adobe.
 translation-type: tm+mt
-source-git-commit: ae244711ed89f4c7d6f87fd38bf7f8324e9b64be
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '584'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Esercitazioni sulla segmentazione
 
- Adobe Experience Platform [!DNL Segmentation Service] fornisce un&#39;interfaccia utente e RESTful API che consente di creare segmenti e generare audience dai [!DNL Real-time Customer Profile] dati. Questi segmenti sono configurati e mantenuti a livello centrale [!DNL Platform]e sono facilmente accessibili da qualsiasi soluzione  Adobe. Per ulteriori informazioni sulla segmentazione, leggi la panoramica [del servizio di](../segmentation/home.md)segmentazione.
+Adobe Experience Platform [!DNL Segmentation Service] fornisce un&#39;interfaccia utente e RESTful API che consente di creare segmenti e generare audience dai [!DNL Real-time Customer Profile] dati. Questi segmenti sono configurati e mantenuti a livello centrale [!DNL Platform]e sono facilmente accessibili da qualsiasi soluzione  Adobe. Per ulteriori informazioni sulla segmentazione, leggi la panoramica [del servizio di](../segmentation/home.md)segmentazione.
 
 ## Creare una definizione di segmento
 
@@ -26,11 +27,11 @@ Dopo aver sviluppato, testato e salvato la definizione del segmento, puoi valuta
 
 ## Esportare i dati dei segmenti
 
-Per esportare i segmenti contenenti [!DNL Profile] dati è innanzitutto necessario [creare un dataset in cui esportare](../segmentation/tutorials/create-dataset-export-segment.md)i dati, quindi avviare un nuovo processo di esportazione. I passaggi per generare un processo di esportazione si trovano nell’esercitazione sulla [valutazione di un segmento](../segmentation/tutorials/evaluate-a-segment.md).
+Per esportare i segmenti contenenti [!DNL Profile] dati è innanzitutto necessario [creare un dataset in cui esportare](../segmentation/tutorials/create-dataset-export-segment.md)i dati e quindi avviare un nuovo processo di esportazione. I passaggi per generare un processo di esportazione si trovano nell’esercitazione sulla [valutazione di un segmento](../segmentation/tutorials/evaluate-a-segment.md).
 
 ## Configurare i criteri di unione
 
- Adobe Experience Platform consente di unire dati provenienti da più origini e combinarli per visualizzare una visione completa di ogni singolo cliente. Quando si uniscono questi dati, i criteri di unione sono le regole che [!DNL Platform] utilizzano per determinare in che modo i dati verranno classificati come priorità e quali dati verranno combinati per creare tale visualizzazione unificata. Utilizzando le API RESTful o l&#39;interfaccia utente, puoi creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la tua organizzazione. Per utilizzare i criteri di unione nell&#39; [!DNL Platform] interfaccia utente, consultare la guida [utente dei criteri di](../profile/ui/merge-policies.md)unione. Per utilizzare i criteri di unione utilizzando l&#39; [!DNL Real-time Customer Profile] API, consultare la guida [per gli sviluppatori dei criteri di](../profile/api/merge-policies.md)unione.
+Adobe Experience Platform consente di unire dati provenienti da più origini e combinarli per visualizzare una visione completa di ogni singolo cliente. Quando si uniscono questi dati, i criteri di unione sono le regole che [!DNL Platform] utilizzano per determinare in che modo i dati verranno classificati come priorità e quali dati verranno combinati per creare tale visualizzazione unificata. Utilizzando le API RESTful o l&#39;interfaccia utente, puoi creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la tua organizzazione. Per utilizzare i criteri di unione nell&#39; [!DNL Platform] interfaccia utente, consultare la guida [utente dei criteri di](../profile/ui/merge-policies.md)unione. Per utilizzare i criteri di unione utilizzando l&#39; [!DNL Real-time Customer Profile] API, consultare la guida [per gli sviluppatori dei criteri di](../profile/api/merge-policies.md)unione.
 
 ## Applica la conformità all&#39;uso dei dati per i segmenti
 
@@ -38,7 +39,7 @@ I segmenti abilitati per l’uso in [!DNL Real-time Customer Profile] contengono
 
 ## Segmentazione in streaming
 
-La segmentazione in streaming consente di valutare istantaneamente un cliente non appena un evento entra in un particolare gruppo di segmenti. Grazie a questa funzionalità, ora è possibile valutare la maggior parte delle regole del segmento in quanto i dati vengono passati  Adobe Experience Platform, il che significa che l&#39;appartenenza al segmento verrà mantenuta aggiornata senza eseguire processi di segmentazione pianificati. Per saperne di più, visita la panoramica sulla segmentazione [in streaming](../segmentation/api/streaming-segmentation.md).
+La segmentazione in streaming consente di valutare istantaneamente un cliente non appena un evento entra in un particolare gruppo di segmenti. Grazie a questa funzionalità, ora è possibile valutare la maggior parte delle regole del segmento quando i dati vengono passati in Adobe Experience Platform, il che significa che l&#39;appartenenza al segmento verrà mantenuta aggiornata senza eseguire processi di segmentazione pianificati. Per saperne di più, visita la panoramica sulla segmentazione [in streaming](../segmentation/api/streaming-segmentation.md).
 
 ## Segmentazione multi-entità
 
