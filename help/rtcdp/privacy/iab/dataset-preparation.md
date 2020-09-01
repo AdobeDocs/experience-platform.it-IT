@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Supporto IAB TCF 2.0 nella piattaforma dati cliente in tempo reale
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: e7cbbd2e376ab109367d1d16cb9e033202866a6f
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '1282'
 ht-degree: 0%
@@ -71,7 +71,7 @@ Anche se ogni mixin della privacy varia a seconda della struttura e dei tipi di 
 
 ## Creare schemi di consenso dei clienti {#create-schemas}
 
-Nell’interfaccia utente della piattaforma, fate clic **[!UICONTROL Schemas]** nella barra di navigazione a sinistra per aprire l’ *[!UICONTROL Schemas]area di lavoro *. Da qui, seguite i passaggi descritti nelle sezioni seguenti per creare ogni schema richiesto.
+Nell’interfaccia utente della piattaforma, fate clic **[!UICONTROL Schemas]** nella barra di navigazione a sinistra per aprire l’ *[!UICONTROL Schemas]area di lavoro*. Da qui, seguite i passaggi descritti nelle sezioni seguenti per creare ogni schema richiesto.
 
 >[!NOTE]
 >
@@ -79,11 +79,11 @@ Nell’interfaccia utente della piattaforma, fate clic **[!UICONTROL Schemas]** 
 
 ### Creare uno schema di consenso basato su record {#profile-schema}
 
-Dalla **[!UICONTROL Browse]** scheda dell&#39; *[!UICONTROL Schemas]area di lavoro *, creare un nuovo schema basato sulla**[!DNL XDM Individual Profile]classe **. Una volta aperto lo schema nell&#39;Editor schema, fare clic **[!UICONTROL Add]**sotto la *[!UICONTROL Mixins]*sezione sul lato sinistro del quadro.
+Dalla **[!UICONTROL Browse]** scheda dell&#39; **[!UICONTROL Schemas]area di lavoro**, creare un nuovo schema basato sulla **[!DNL XDM Individual Profile]classe**. Una volta aperto lo schema nell&#39;Editor schema, fare clic **[!UICONTROL Add]** sotto la **[!UICONTROL Mixins]** sezione sul lato sinistro del quadro.
 
 ![](../assets/iab/add-mixin-profile.png)
 
-Viene visualizzata *[!UICONTROL Add mixin]* la finestra di dialogo. Da qui, selezionare **[!UICONTROL Profile privacy]** dall&#39;elenco. Facoltativamente, potete utilizzare la barra di ricerca per limitare i risultati e individuare più facilmente il mixin. Dopo aver selezionato il mixin, fate clic su **[!UICONTROL Add mixin]**.
+Viene visualizzata **[!UICONTROL Add mixin]** la finestra di dialogo. Da qui, selezionare **[!UICONTROL Profile privacy]** dall&#39;elenco. Facoltativamente, potete utilizzare la barra di ricerca per limitare i risultati e individuare più facilmente il mixin. Dopo aver selezionato il mixin, fate clic su **[!UICONTROL Add mixin]**.
 
 ![](../assets/iab/add-profile-privacy.png)
 
@@ -112,7 +112,7 @@ Per [!DNL Real-time CDP] associare i dati di consenso ricevuti a specifici profi
 >
 >Per informazioni su come impostare un campo di identità principale per uno schema, vedere l&#39;esercitazione [sulla creazione dello](../../../xdm/tutorials/create-schema-ui.md#identity-field)schema.
 
-Per attivare lo schema per [!DNL Profile], fare clic sul nome dello schema nella barra a sinistra per aprire la finestra di *[!UICONTROL Schema properties]* dialogo nella barra a destra. Da qui, fate clic sul pulsante **[!UICONTROL Profile]** di attivazione/disattivazione.
+Per attivare lo schema per [!DNL Profile], fare clic sul nome dello schema nella barra a sinistra per aprire la finestra di **[!UICONTROL Schema properties]** dialogo nella barra a destra. Da qui, fate clic sul pulsante **[!UICONTROL Profile]** di attivazione/disattivazione.
 
 ![](../assets/iab/profile-enable-profile.png)
 
@@ -126,11 +126,11 @@ Infine, fate clic **[!UICONTROL Save]** per confermare le modifiche.
 
 ### Creare uno schema di consenso basato su serie temporali {#event-schema}
 
-Dalla **[!UICONTROL Browse]** scheda dell&#39; *[!UICONTROL Schemas]area di lavoro *, creare un nuovo schema basato sulla**[!DNL XDM ExperienceEvent]classe **. Una volta aperto lo schema nell&#39;Editor schema, fare clic **[!UICONTROL Add]**sotto la *[!UICONTROL Mixins]*sezione sul lato sinistro del quadro.
+Dalla **[!UICONTROL Browse]** scheda dell&#39; **[!UICONTROL Schemas]area di lavoro**, creare un nuovo schema basato sulla **[!DNL XDM ExperienceEvent]classe**. Una volta aperto lo schema nell&#39;Editor schema, fare clic **[!UICONTROL Add]** sotto la **[!UICONTROL Mixins]** sezione sul lato sinistro del quadro.
 
 ![](../assets/iab/add-mixin-event.png)
 
-Viene visualizzata *[!UICONTROL Add mixin]* la finestra di dialogo. Da qui, selezionare **[!UICONTROL Experience event privacy mixin]** dall&#39;elenco. Facoltativamente, potete utilizzare la barra di ricerca per limitare i risultati e individuare più facilmente il mixin. Dopo aver selezionato il mixin, fate clic su **[!UICONTROL Add mixin]**.
+Viene visualizzata **[!UICONTROL Add mixin]** la finestra di dialogo. Da qui, selezionare **[!UICONTROL Experience event privacy mixin]** dall&#39;elenco. Facoltativamente, potete utilizzare la barra di ricerca per limitare i risultati e individuare più facilmente il mixin. Dopo aver selezionato il mixin, fate clic su **[!UICONTROL Add mixin]**.
 
 ![](../assets/iab/add-event-privacy.png)
 
@@ -161,11 +161,11 @@ Nella pagina successiva, selezionate **[!UICONTROL Create dataset from schema]**
 
 ![](../assets/iab/dataset-create-from-schema.png)
 
-Viene _[!UICONTROL Create dataset from schema]_visualizzato il flusso di lavoro, a partire dal_[!UICONTROL Select schema]_ passaggio. Nell&#39;elenco fornito, individuare uno degli schemi di consenso creati in precedenza. Facoltativamente, è possibile utilizzare la ricerca per limitare i risultati e individuare più facilmente lo schema. Fare clic sul pulsante di scelta accanto allo schema per selezionarlo, quindi fare clic **[!UICONTROL Next]** per continuare.
+Viene **[!UICONTROL Create dataset from schema]** visualizzato il flusso di lavoro, a partire dal **[!UICONTROL Select schema]** passaggio. Nell&#39;elenco fornito, individuare uno degli schemi di consenso creati in precedenza. Facoltativamente, è possibile utilizzare la ricerca per limitare i risultati e individuare più facilmente lo schema. Fare clic sul pulsante di scelta accanto allo schema per selezionarlo, quindi fare clic **[!UICONTROL Next]** per continuare.
 
 ![](../assets/iab/dataset-select-schema.png)
 
-Viene _[!UICONTROL Configure dataset]_visualizzato il passaggio. Specifica un nome e una descrizione univoci e facilmente identificabili per il dataset prima di fare clic su **[!UICONTROL Finish]**.
+Viene **[!UICONTROL Configure dataset]** visualizzato il passaggio. Specifica un nome e una descrizione univoci e facilmente identificabili per il dataset prima di fare clic su **[!UICONTROL Finish]**.
 
 ![](../assets/iab/dataset-configure.png)
 
