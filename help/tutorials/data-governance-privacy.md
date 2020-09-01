@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Governance dei dati ed esercitazioni sulla privacy
 topic: tutorial
-description: L'etichettatura e l'applicazione dell'uso dei dati (DULE) è il meccanismo principale di Adobe Experience Platform Data Governance. Le funzioni DULE consentono di applicare etichette di utilizzo dei dati a set di dati e campi, suddividendo ciascuna in categorie in base ai relativi criteri di utilizzo dei dati.
+description: Questo documento fornisce una panoramica delle diverse esercitazioni disponibili relative a Adobe Experience Platform Data Governance e  Adobe Experience Platform Privacy Service.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Data Governance] e [!DNL Privacy] Tutorials
 
-[!DNL Data Usage Labeling and Enforcement] (DULE) è il meccanismo principale di Adobe Experience Platform [!DNL Data Governance]. Le funzioni DULE consentono di applicare etichette di utilizzo dei dati a set di dati e campi, suddividendo ciascuna in categorie in base ai relativi criteri di utilizzo dei dati. Prima di iniziare con le etichette, consulta la panoramica [sulla governance dei](../data-governance/home.md) dati per un&#39;introduzione più efficace al framework DULE all&#39;interno [!DNL Platform].
+Adobe Experience Platform Data Governance consente di applicare etichette di utilizzo dei dati a set di dati e campi, suddividere in categorie ciascuna in base ai relativi criteri di utilizzo dei dati e valutare la presenza di violazioni dei criteri quando vengono eseguite determinate azioni su tali set di dati e/o campi. Prima di iniziare con le esercitazioni elencate in questo documento, consultate la [[!DNL Data Governance] panoramica](../data-governance/home.md) per un&#39;introduzione più affidabile al framework.
 
 Adobe Experience Platform [!DNL Privacy Service] fornisce un&#39;API RESTful e un&#39;interfaccia utente che consentono di coordinare le richieste di privacy e conformità tra le varie soluzioni. Per saperne di più, si prega di iniziare leggendo la panoramica [](../privacy-service/home.md)Privacy Service.
 
@@ -25,11 +25,11 @@ Le etichette di utilizzo dei dati consentono di classificare set di dati e campi
 
 ## Creazione di criteri di utilizzo dei dati
 
-L&#39; [!DNL Policy Service] API DULE consente di creare e gestire criteri DULE per determinare quali azioni di marketing possono essere eseguite rispetto ai dati che contengono determinate etichette DULE. Per iniziare, leggi la panoramica [dei criteri di utilizzo dei](../data-governance/policies/overview.md)dati.
+L&#39; [!DNL Policy Service] API consente di creare e gestire i criteri di utilizzo dei dati per determinare quali azioni di marketing possono essere eseguite rispetto ai dati che contengono determinate etichette di utilizzo. Per iniziare, leggi la panoramica [dei criteri di utilizzo dei](../data-governance/policies/overview.md)dati.
 
 ## Applica criteri di utilizzo dei dati
 
-Dopo aver creato etichette DUE (Data Usage Labeling and Enforcement) per i dati, e aver creato criteri DULE per le azioni di marketing rispetto a tali etichette, potete utilizzare l&#39; [!DNL Policy Service] API DULE per valutare se un&#39;azione di marketing eseguita su un set di dati o un gruppo arbitrario di etichette DULE costituisce una violazione dei criteri. Potete quindi configurare i vostri protocolli interni per gestire le violazioni dei criteri in base alla risposta API. Per iniziare, consulta la panoramica [delle](../data-governance/enforcement/overview.md)attività di applicazione dei criteri.
+Dopo aver aggiunto le etichette di utilizzo per i dati e aver creato criteri per le azioni di marketing in base a tali etichette, puoi utilizzare il metodo [!DNL Policy Service API] per valutare se un&#39;azione di marketing costituisca una violazione dei criteri quando viene eseguita su un set di dati o su un gruppo arbitrario di etichette di utilizzo. Potete quindi configurare i vostri protocolli interni per gestire le violazioni dei criteri in base alla risposta API. Per iniziare, consulta la panoramica [delle](../data-governance/enforcement/overview.md)attività di applicazione dei criteri.
 
 ## Applica la conformità all&#39;utilizzo dei dati per un segmento di pubblico
 
