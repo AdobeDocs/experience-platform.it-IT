@@ -5,7 +5,7 @@ title: Definire una relazione tra due schemi utilizzando l'Editor schema
 description: Questo documento fornisce un'esercitazione per definire una relazione tra due schemi utilizzando l'Editor di schema nell'interfaccia utente del Experience Platform .
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
+source-git-commit: d946f5014707bf73f373d712b287de259c3df5cd
 workflow-type: tm+mt
 source-wordcount: '884'
 ht-degree: 1%
@@ -43,7 +43,7 @@ A scopo di riferimento, le sezioni seguenti descrivono la struttura di ogni sche
 
 ### [!UICONTROL Loyalty Members] schema
 
-Lo schema di origine &quot;[!UICONTROL Loyalty Members]&quot; è basato sulla [!DNL Individual Profile] classe XDM ed è lo schema creato nell&#39;esercitazione per [creare uno schema nell&#39;interfaccia utente](create-schema-ui.md). Include un oggetto &quot;[!UICONTROL loyalty]&quot; nello spazio dei nomi &quot;\_tenantId&quot;, che include diversi campi specifici per la fedeltà. Uno di questi campi, &quot;loyaltyId&quot;, funge da identità principale per lo schema nello spazio dei nomi &quot;[!UICONTROL Email]&quot;. Come mostrato in _[!UICONTROL Schema Properties]_, questo schema è stato abilitato per l&#39;uso in[!DNL Real-time Customer Profile].
+Lo schema di origine &quot;[!UICONTROL Loyalty Members]&quot; è basato sulla [!DNL Individual Profile] classe XDM ed è lo schema creato nell&#39;esercitazione per [creare uno schema nell&#39;interfaccia utente](create-schema-ui.md). Include un oggetto &quot;[!UICONTROL loyalty]&quot; nello spazio dei nomi &quot;\_tenantId&quot;, che include diversi campi specifici per la fedeltà. Uno di questi campi, &quot;loyaltyId&quot;, funge da identità principale per lo schema nello spazio dei nomi &quot;[!UICONTROL Email]&quot;. Come mostrato in **[!UICONTROL Schema Properties]**, questo schema è stato abilitato per l&#39;uso in [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
@@ -61,19 +61,19 @@ Lo schema di destinazione &quot;[!UICONTROL Hotels]&quot; è basato su una class
 
 Per definire una relazione tra due schemi, lo schema di origine deve avere un campo dedicato da utilizzare come riferimento allo schema di destinazione. È possibile aggiungere questo campo allo schema di origine creando un nuovo mixin.
 
-Per iniziare, fai clic **[!UICONTROL Add]** nella _[!UICONTROL Mixins]_sezione.
+Per iniziare, fai clic **[!UICONTROL Add]** nella **[!UICONTROL Mixins]** sezione.
 
 ![](../images/tutorials/relationship/loyalty-add-mixin.png)
 
-Viene visualizzata _[!UICONTROL Add Mixin]_la finestra di dialogo. Da qui, clicca **[!UICONTROL Create New Mixin]**. Nei campi di testo visualizzati, immettete un nome visualizzato e una descrizione per il nuovo mixin. Al termine fai clic su **[!UICONTROL Add Mixin]**(Continua).
+Viene visualizzata **[!UICONTROL Add Mixin]** la finestra di dialogo. Da qui, clicca **[!UICONTROL Create New Mixin]**. Nei campi di testo visualizzati, immettete un nome visualizzato e una descrizione per il nuovo mixin. Al termine fai clic su **[!UICONTROL Add Mixin]** (Continua).
 
 <img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
 
-Il quadro viene nuovamente visualizzato con &quot;[!UICONTROL Loyalty Relationship]&quot; nella _[!UICONTROL Mixins]_sezione. Fate clic sul nome del mixin, quindi fate clic **[!UICONTROL Add Field]**accanto al campo &quot;[!UICONTROL Loyalty Members]&quot; di livello principale.
+Il quadro viene nuovamente visualizzato con &quot;[!UICONTROL Loyalty Relationship]&quot; nella **[!UICONTROL Mixins]** sezione. Fate clic sul nome del mixin, quindi fate clic **[!UICONTROL Add Field]** accanto al campo &quot;[!UICONTROL Loyalty Members]&quot; di livello principale.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
-Un nuovo campo viene visualizzato nell&#39;area di lavoro sotto lo spazio dei nomi &quot;\_tenantId&quot;. In _[!UICONTROL Field Properties]_, specificare un nome di campo e un nome visualizzato per il campo, quindi impostare il tipo su &quot;[!UICONTROL String]&quot;.
+Un nuovo campo viene visualizzato nell&#39;area di lavoro sotto lo spazio dei nomi &quot;\_tenantId&quot;. In **[!UICONTROL Field Properties]**, specificare un nome di campo e un nome visualizzato per il campo, quindi impostare il tipo su &quot;[!UICONTROL String]&quot;.
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
@@ -89,7 +89,7 @@ Il campo &quot;[!UICONTROL favoriteHotel]&quot; aggiornato viene visualizzato ne
 
 Una volta definito un campo di riferimento dedicato nello schema di origine, è possibile specificarlo come campo di relazione.
 
-Selezionate il campo di riferimento nel quadro, quindi scorrete verso il basso sotto _[!UICONTROL Field Properties]_fino a visualizzare la **[!UICONTROL Relationship]**casella di controllo. Selezionate la casella di controllo per visualizzare i parametri richiesti per la configurazione di un campo di relazione.
+Selezionate il campo di riferimento nel quadro, quindi scorrete verso il basso sotto **[!UICONTROL Field Properties]** fino a visualizzare la **[!UICONTROL Relationship]** casella di controllo. Selezionate la casella di controllo per visualizzare i parametri richiesti per la configurazione di un campo di relazione.
 
 ![](../images/tutorials/relationship/relationship-checkbox.png)
 
