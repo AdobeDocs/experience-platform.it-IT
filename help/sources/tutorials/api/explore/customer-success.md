@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;cs;CS;customer success system
 solution: Experience Platform
 title: Esplora un sistema di successo cliente tramite l’API del servizio di flusso
 topic: overview
+description: Questa esercitazione utilizza l’API del servizio di flusso per esplorare i sistemi Customer Success (CS).
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '582'
 ht-degree: 1%
 
 ---
@@ -14,13 +15,13 @@ ht-degree: 1%
 
 # Esplora un sistema di successo cliente tramite l&#39; [!DNL Flow Service] API
 
-[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti diverse all&#39;interno  Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
+[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
 Questa esercitazione utilizza l&#39; [!DNL Flow Service] API per esplorare i sistemi Customer Success (CS).
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti del  Adobe Experience Platform:
+Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [Origini](../../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi.
 * [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
@@ -81,7 +82,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un array di tabelle dal sistema CS. Trovare la tabella che si desidera inserire [!DNL Platform] e prendere nota della relativa `path` proprietà, in quanto è necessario fornire nel passaggio successivo per ispezionare la struttura.
+Una risposta corretta restituisce un array di tabelle dal sistema CS. Trovare la tabella che si desidera inserire [!DNL Platform] e prendere nota della relativa `path` proprietà, in quanto è necessario fornire nel passaggio successivo per ispezionare la sua struttura.
 
 ```json
 [
@@ -177,4 +178,4 @@ Una risposta corretta restituisce la struttura della tabella specificata. I dett
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, avete esplorato il sistema CS, trovato il percorso della tabella in cui desiderate inserire [!DNL Platform]e ottenuto informazioni sulla sua struttura. Potete utilizzare queste informazioni nell&#39;esercitazione successiva per [raccogliere i dati dal sistema CS e importarli in Platform](../collect/customer-success.md).
+Seguendo questa esercitazione, avete esplorato il sistema CS, trovato il percorso della tabella in cui desiderate inserire [!DNL Platform]e ottenuto informazioni sulla sua struttura. Potete utilizzare queste informazioni nell&#39;esercitazione successiva per [raccogliere i dati dal sistema CS e inserirli nella piattaforma](../collect/customer-success.md).
