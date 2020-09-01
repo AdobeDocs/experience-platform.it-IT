@@ -5,7 +5,7 @@ title: Guida utente per i criteri di utilizzo dei dati
 topic: policies
 description: Adobe Experience Platform Data Governance fornisce un'interfaccia utente che consente di creare e gestire i criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle azioni che potete eseguire nell'area di lavoro Criteri dell'interfaccia utente del Experience Platform .
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Questa guida richiede una buona comprensione dei seguenti [!DNL Experience Platf
 
 ## Visualizzare i criteri di utilizzo dei dati {#view-policies}
 
-Nell’ [!DNL Experience Platform] interfaccia utente, fate clic **[!UICONTROL Policies]** per aprire l’ *[!UICONTROL Policies]* area di lavoro. Nella **[!UICONTROL Browse]** scheda è possibile visualizzare un elenco dei criteri disponibili, incluse le etichette associate, le azioni di marketing e lo stato.
+Nell’ [!DNL Experience Platform] interfaccia utente, fate clic **[!UICONTROL Policies]** per aprire l’ **[!UICONTROL Policies]** area di lavoro. Nella **[!UICONTROL Browse]** scheda è possibile visualizzare un elenco dei criteri disponibili, incluse le etichette associate, le azioni di marketing e lo stato.
 
 ![](../images/policies/browse-policies.png)
 
@@ -40,11 +40,11 @@ Fate clic su un criterio elencato per visualizzarne la descrizione e il tipo. Se
 
 ## Creazione di un criterio di utilizzo dati personalizzato {#create-policy}
 
-Per creare un nuovo criterio di utilizzo dei dati personalizzato, fare clic **[!UICONTROL Create policy]** nell&#39;angolo superiore destro della **[!UICONTROL Browse]** scheda nell&#39;area di *[!UICONTROL Policies]* lavoro.
+Per creare un nuovo criterio di utilizzo dei dati personalizzato, fare clic **[!UICONTROL Create policy]** nell&#39;angolo superiore destro della **[!UICONTROL Browse]** scheda nell&#39;area di **[!UICONTROL Policies]** lavoro.
 
 ![](../images/policies/create-policy-button.png)
 
-Viene *[!UICONTROL Create policy]* visualizzato il flusso di lavoro. Iniziate fornendo un nome e una descrizione per il nuovo criterio.
+Viene **[!UICONTROL Create policy]** visualizzato il flusso di lavoro. Iniziate fornendo un nome e una descrizione per il nuovo criterio.
 
 ![](../images/policies/create-policy-description.png)
 
@@ -52,7 +52,7 @@ Quindi, selezionate le etichette di utilizzo dei dati su cui verrà basato il cr
 
 ![](../images/policies/add-labels.png)
 
-Viene *[!UICONTROL Select marketing actions]* visualizzato il passaggio. Scegli le azioni di marketing appropriate dall&#39;elenco fornito, quindi fai clic **[!UICONTROL Next]** per continuare.
+Viene **[!UICONTROL Select marketing actions]** visualizzato il passaggio. Scegli le azioni di marketing appropriate dall&#39;elenco fornito, quindi fai clic **[!UICONTROL Next]** per continuare.
 
 >[!NOTE]
 >
@@ -60,11 +60,11 @@ Viene *[!UICONTROL Select marketing actions]* visualizzato il passaggio. Scegli 
 
 ![](../images/policies/add-marketing-actions.png)
 
-Viene visualizzato il *[!UICONTROL Review]* passaggio che consente di esaminare i dettagli del nuovo criterio prima di crearlo. Una volta soddisfatti, fate clic **[!UICONTROL Finish]** per creare il criterio.
+Viene visualizzato il **[!UICONTROL Review]** passaggio che consente di esaminare i dettagli del nuovo criterio prima di crearlo. Una volta soddisfatti, fate clic **[!UICONTROL Finish]** per creare il criterio.
 
 ![](../images/policies/policy-review.png)
 
-La *[!UICONTROL Browse]* scheda viene visualizzata di nuovo, in cui ora viene visualizzato il criterio appena creato con lo stato &quot;Bozza&quot;. Per abilitare il criterio, vedere la sezione successiva.
+La **[!UICONTROL Browse]** scheda viene visualizzata di nuovo, in cui ora viene visualizzato il criterio appena creato con lo stato &quot;Bozza&quot;. Per abilitare il criterio, vedere la sezione successiva.
 
 ![](../images/policies/created-policy.png)
 
@@ -72,7 +72,7 @@ La *[!UICONTROL Browse]* scheda viene visualizzata di nuovo, in cui ora viene vi
 
 Tutti i criteri di utilizzo dei dati (inclusi i criteri di base forniti dal Adobe ) sono disattivati per impostazione predefinita. Affinché un singolo criterio venga preso in considerazione per l&#39;implementazione, è necessario attivarlo manualmente tramite l&#39;API o l&#39;interfaccia utente.
 
-Potete attivare o disattivare i criteri dalla *[!UICONTROL Browse]* scheda nell&#39; *[!UICONTROL Policies]* area di lavoro. Selezionate un criterio personalizzato dall&#39;elenco per visualizzarne i dettagli a destra. In *[!UICONTROL Status]* questa sezione, fate clic sul pulsante di attivazione per attivare o disattivare il criterio.
+Potete attivare o disattivare i criteri dalla **[!UICONTROL Browse]** scheda nell&#39; **[!UICONTROL Policies]** area di lavoro. Selezionate un criterio personalizzato dall&#39;elenco per visualizzarne i dettagli a destra. In **[!UICONTROL Status]** questa sezione, fate clic sul pulsante di attivazione per attivare o disattivare il criterio.
 
 ![](../images/policies/enable-policy.png)
 
@@ -84,15 +84,15 @@ Nell&#39; **[!UICONTROL Policies]** area di lavoro, seleziona la **[!UICONTROL M
 
 ## Creazione di un&#39;azione di marketing {#create-marketing-action}
 
-Per creare una nuova azione di marketing personalizzata, fai clic **[!UICONTROL Create marketing action]** nell&#39;angolo superiore destro della **[!UICONTROL Marketing actions]** scheda nell&#39;area di *[!UICONTROL Policies]* lavoro.
+Per creare una nuova azione di marketing personalizzata, fai clic **[!UICONTROL Create marketing action]** nell&#39;angolo superiore destro della **[!UICONTROL Marketing actions]** scheda nell&#39;area di **[!UICONTROL Policies]** lavoro.
 
 ![](../images/policies/create-marketing-action.png)
 
-Viene visualizzata *[!UICONTROL Create marketing action]* la finestra di dialogo. Immetti un nome e una descrizione per l&#39;azione di marketing, quindi fai clic su **[!UICONTROL Create]**.
+Viene visualizzata **[!UICONTROL Create marketing action]** la finestra di dialogo. Immetti un nome e una descrizione per l&#39;azione di marketing, quindi fai clic su **[!UICONTROL Create]**.
 
 ![](../images/policies/create-marketing-action-details.png)
 
-L’azione appena creata viene visualizzata nella *[!UICONTROL Marketing actions]* scheda. Ora puoi utilizzare l&#39;azione di marketing per [creare nuovi criteri](#create-policy)di utilizzo dei dati.
+L’azione appena creata viene visualizzata nella **[!UICONTROL Marketing actions]** scheda. Ora puoi utilizzare l&#39;azione di marketing per [creare nuovi criteri](#create-policy)di utilizzo dei dati.
 
 ![](../images/policies/created-marketing-action.png)
 
