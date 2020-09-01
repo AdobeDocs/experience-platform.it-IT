@@ -5,7 +5,7 @@ title: Elaborazione delle richieste di privacy nel Data Lake
 topic: overview
 description: ' Adobe Experience Platform Privacy Service elabora le richieste dei clienti di accedere, rifiutare la vendita o cancellare i propri dati personali, come indicato dalle normative sulla privacy legali e organizzative. Questo documento tratta i concetti essenziali relativi all''elaborazione delle richieste di privacy per i dati dei clienti memorizzati nel Data Lake.'
 translation-type: tm+mt
-source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '1239'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Esistono due metodi per aggiungere un descrittore di identità a uno schema di s
 
 ### Utilizzo dell’interfaccia {#identity-ui}
 
-Nell&#39;interfaccia [!DNL Experience Platform ]utente, l&#39; _[!UICONTROL Schemas]_area di lavoro consente di modificare gli schemi XDM esistenti. Per aggiungere un descrittore di identità a uno schema, selezionare lo schema dall&#39;elenco e seguire i passaggi per[impostare un campo di schema come campo](../xdm/tutorials/create-schema-ui.md#identity-field)di identità nell&#39;[!DNL Schema Editor]esercitazione.
+Nell&#39;interfaccia [!DNL Experience Platform ]utente, l&#39; **[!UICONTROL Schemas]** area di lavoro consente di modificare gli schemi XDM esistenti. Per aggiungere un descrittore di identità a uno schema, selezionare lo schema dall&#39;elenco e seguire i passaggi per [impostare un campo di schema come campo](../xdm/tutorials/create-schema-ui.md#identity-field) di identità nell&#39; [!DNL Schema Editor] esercitazione.
 
 Dopo aver impostato i campi appropriati nello schema come campi di identità, è possibile passare alla sezione successiva per l&#39; [invio delle richieste](#submit)di privacy.
 
@@ -139,7 +139,7 @@ Nella sezione seguente viene illustrato come effettuare richieste di privacy per
 
 ### Utilizzo dell’interfaccia
 
-Quando create richieste di processo nell’interfaccia utente, accertatevi di selezionare **[!UICONTROL AEP Data Lake]** e/o **[!UICONTROL Profile]** in _[!UICONTROL Products]_per elaborare i processi per i dati memorizzati, rispettivamente, nel[!DNL Data Lake]o[!DNL Real-time Customer Profile].
+Quando create richieste di processo nell’interfaccia utente, accertatevi di selezionare **[!UICONTROL AEP Data Lake]** e/o **[!UICONTROL Profile]** in **[!UICONTROL Products]** per elaborare i processi per i dati memorizzati, rispettivamente, nel [!DNL Data Lake] o [!DNL Real-time Customer Profile].
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
