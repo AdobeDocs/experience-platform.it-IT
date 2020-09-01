@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;monitoring;monitor;data flows
+keywords: Experience Platform;home;popular topics;monitoring;monitor;data flows;monitor ingestion;data ingestion;Data ingestion;view records;view batches;
 solution: Experience Platform
 title: Monitoraggio dell’assimilazione dei dati
 topic: overview
 description: Questa guida utente descrive come monitorare i dati nell’interfaccia utente di Adobe Experience Platform. Questa guida richiede un Adobe ID  e l'accesso ad Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
 workflow-type: tm+mt
 source-wordcount: '552'
 ht-degree: 0%
