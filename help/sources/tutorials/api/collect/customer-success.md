@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; customer success; service now; salesforce service cloud
+keywords: Experience Platform;home;popular topics;collect customer success;customer success
 solution: Experience Platform
 title: Raccolta di dati da un sistema di successo cliente tramite connettori di origine e API
 topic: overview
-description: Questa esercitazione descrive i passaggi necessari per recuperare i dati da un sistema di successo cliente di terze parti e trasferirli in Piattaforma tramite connettori di origine e API del servizio di flusso.
+description: Questa esercitazione descrive i passaggi necessari per recuperare i dati da un sistema di successo cliente e trasferirli in Piattaforma tramite connettori di origine e API.
 translation-type: tm+mt
-source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
+source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
 workflow-type: tm+mt
-source-wordcount: '1628'
+source-wordcount: '1624'
 ht-degree: 1%
 
 ---
