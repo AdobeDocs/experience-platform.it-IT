@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guida utente sandbox
 topic: user guide
 translation-type: tm+mt
-source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 0%
@@ -18,7 +18,7 @@ In questo documento sono descritti i passaggi necessari per eseguire varie opera
 
 ## Visualizzare le sandbox
 
-Nell’interfaccia utente del Experience Platform , fate clic **[!UICONTROL Sandboxes]** nella barra di navigazione a sinistra per aprire il _[!UICONTROL Sandboxes]_dashboard. Il dashboard elenca tutte le sandbox disponibili per l’organizzazione, incluso il tipo di sandbox (produzione o sviluppo) e lo stato (attivo, creazione, eliminazione o non riuscito).
+Nell’interfaccia utente del Experience Platform , fate clic **[!UICONTROL Sandboxes]** nella barra di navigazione a sinistra per aprire il **[!UICONTROL Sandboxes]** dashboard. Il dashboard elenca tutte le sandbox disponibili per l’organizzazione, incluso il tipo di sandbox (produzione o sviluppo) e lo stato (attivo, creazione, eliminazione o non riuscito).
 
 ![](../images/ui/sandboxes-tab.png)
 
@@ -46,7 +46,7 @@ Per creare una nuova sandbox nell’interfaccia utente, fate clic **[!UICONTROL 
 
 ![](../images/ui/create-sandbox-button.png)
 
-Viene _[!UICONTROL Create Sandbox]_visualizzata una finestra di dialogo che richiede di specificare un titolo e un nome da visualizzare per la sandbox. Il titolo **del**display deve essere leggibile dall&#39;uomo e deve essere sufficientemente descrittivo per essere facilmente identificabile. La sandbox **[!UICONTROL Name]**è un identificatore in lettere minuscole da usare nelle chiamate API e deve pertanto essere univoca e concisa.
+Viene **[!UICONTROL Create Sandbox]** visualizzata una finestra di dialogo che richiede di specificare un titolo e un nome da visualizzare per la sandbox. Il titolo **del** display deve essere leggibile dall&#39;uomo e deve essere sufficientemente descrittivo per essere facilmente identificabile. La sandbox **[!UICONTROL Name]** è un identificatore in lettere minuscole da usare nelle chiamate API e deve pertanto essere univoca e concisa.
 
 Al termine, fai clic su **[!UICONTROL Create]**.
 
@@ -56,7 +56,7 @@ Al termine, fai clic su **[!UICONTROL Create]**.
 >
 >Poiché vi limitate a creare solo tipi di sandbox non di produzione, l&#39; **[!UICONTROL type]** opzione è bloccata in &quot;Non produzione&quot; e non può essere manipolata.
 
-Dopo aver creato la sandbox, aggiornate la pagina e la nuova sandbox appare nel _[!UICONTROL Sandboxes]_dashboard con lo stato &quot;[!UICONTROL Creating]&quot;. Il provisioning delle nuove sandbox richiede circa 15 minuti, dopo di che il loro stato cambia in &quot;[!UICONTROL Active]&quot;.
+Dopo aver creato la sandbox, aggiornate la pagina e la nuova sandbox appare nel **[!UICONTROL Sandboxes]** dashboard con lo stato &quot;[!UICONTROL Creating]&quot;. Il provisioning delle nuove sandbox richiede circa 15 minuti, dopo di che il loro stato cambia in &quot;[!UICONTROL Active]&quot;.
 
 ![](../images/ui/sandbox-created.png)
 
@@ -96,7 +96,7 @@ Viene visualizzata una finestra di dialogo che richiede di confermare la scelta.
 
 <img src="../images/ui/delete-are-you-sure.png" width="350"><br>
 
-Viene visualizzato un messaggio di conferma e la sandbox viene rimossa dall’ _[!UICONTROL Sandboxes]_area di lavoro.
+Viene visualizzato un messaggio di conferma e la sandbox viene rimossa dall’ **[!UICONTROL Sandboxes]** area di lavoro.
 
 ## Passaggi successivi
 
