@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Microsoft Dynamics;microsoft dynamics;Dynamics;dynamics
 solution: Experience Platform
 title: Creare un connettore di origine Microsoft Dynamics nell'interfaccia utente
 topic: overview
+description: Questa esercitazione fornisce i passaggi per la creazione di un connettore di origine Microsoft Dynamics (in seguito denominato "Dynamics") tramite l'interfaccia utente della piattaforma.
 translation-type: tm+mt
-source-git-commit: 7cc76eab53adf6a40d16b368854a2e7f178e7244
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '436'
 ht-degree: 1%
 
 ---
