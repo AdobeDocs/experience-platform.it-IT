@@ -5,7 +5,7 @@ title: Creare uno schema tramite l’Editor di schema.
 topic: tutorials
 description: Questa esercitazione descrive i passaggi necessari per creare uno schema utilizzando l'Editor di schema all'interno  Experience Platform.
 translation-type: tm+mt
-source-git-commit: ed1f2fdac0f9c977d11c867327c084353c1bcd0f
+source-git-commit: d946f5014707bf73f373d712b287de259c3df5cd
 workflow-type: tm+mt
 source-wordcount: '3329'
 ht-degree: 0%
@@ -113,7 +113,7 @@ Simili al campo &quot;[!UICONTROL name]&quot;, i campi appena aggiunti rappresen
 
 Lo schema &quot;[!UICONTROL Loyalty Members]&quot; è concepito per acquisire dati relativi ai membri di un programma fedeltà, pertanto richiederà alcuni campi specifici relativi alla fedeltà. Non sono disponibili mixin standard che contengono i campi necessari, pertanto sarà necessario definire un nuovo mixin.
 
-Questa volta, quando aprite la *[!UICONTROL Add Mixin]* finestra di dialogo, selezionate **[!UICONTROL Create New Mixin]**. Vi verrà quindi chiesto di fornire un **[!UICONTROL Display Name]** e **[!UICONTROL Description]** per il vostro mixin.
+Questa volta, quando aprite la **[!UICONTROL Add Mixin]** finestra di dialogo, selezionate **[!UICONTROL Create New Mixin]**. Vi verrà quindi chiesto di fornire un **[!UICONTROL Display Name]** e **[!UICONTROL Description]** per il vostro mixin.
 
 ![](../images/tutorials/create-schema/mixin_create_new.png)
 
