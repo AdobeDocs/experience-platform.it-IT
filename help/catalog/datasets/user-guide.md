@@ -5,9 +5,9 @@ title: Guida utente dei set di dati
 topic: datasets
 description: Questa guida utente per i set di dati fornisce istruzioni sulle operazioni più comuni quando si utilizzano i set di dati nell'interfaccia utente di Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1108'
+source-wordcount: '1099'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Questa guida utente richiede una buona conoscenza dei seguenti componenti di Ado
    * [Nozioni di base sulla composizione](../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
    * [Editor](../../xdm/tutorials/create-schema-ui.md)schema: Scoprite come creare schemi XDM personalizzati utilizzando l&#39; [!DNL Schema Editor] interfaccia [!DNL Platform] utente.
 * [[!DNL Profilo cliente in tempo reale]](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-* [[!DNL Data Governance]](../../data-governance/home.md): Assicurati la conformità a normative, restrizioni e criteri relativi all&#39;utilizzo dei dati dei clienti.
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Assicurati la conformità a normative, restrizioni e criteri relativi all&#39;utilizzo dei dati dei clienti.
 
 ## Visualizzare i set di dati
 
@@ -114,7 +114,7 @@ Se un dataset contiene già dei dati e viene quindi abilitato per [!DNL Profile]
 
 ## Gestione e applicazione della governance dei dati su un dataset
 
-L&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati (DULE) è il meccanismo di gestione dei dati di base per [!DNL Experience Platform]. Le etichette DULE consentono di classificare set di dati e campi in base ai criteri di utilizzo applicabili ai dati. Per ulteriori informazioni sulle etichette, vedere la panoramica [sulla governance dei](../../data-governance/home.md) dati o consultare la guida [utente relativa alle etichette di utilizzo dei](../../data-governance/labels/overview.md) dati per istruzioni su come applicare le etichette ai set di dati.
+Le etichette di utilizzo dei dati consentono di classificare set di dati e campi in base ai criteri di utilizzo applicabili ai dati. Per ulteriori informazioni sulle etichette, vedere la panoramica [sulla governance dei](../../data-governance/home.md) dati o consultare la guida [utente relativa alle etichette di utilizzo dei](../../data-governance/labels/overview.md) dati per istruzioni su come applicare le etichette ai set di dati.
 
 ## Eliminare un dataset
 
