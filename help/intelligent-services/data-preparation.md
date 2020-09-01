@@ -5,7 +5,7 @@ title: Preparare i dati per l'utilizzo in Intelligent Services
 topic: Intelligent Services
 description: 'Per consentire ai servizi intelligenti di scoprire informazioni ricavate dai dati degli eventi di marketing, i dati devono essere arricchiti e mantenuti in modo semantico in una struttura standard. I servizi intelligenti sfruttano gli schemi XDM (Experience Data Model) per ottenere questo risultato. Nello specifico, tutti i set di dati utilizzati in Intelligent Services] devono essere conformi allo schema XDM Consumer ExperienceEvent (CEE). '
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1979'
 ht-degree: 0%
@@ -50,7 +50,7 @@ Lo schema CEE, come tutti gli schemi XDM ExperienceEvent, acquisisce lo stato de
 
 Come tutti gli schemi XDM, il mixin CEE è estensibile. In altre parole, è possibile aggiungere altri campi al mixin CEE, e se necessario è possibile includere diverse varianti in più schemi.
 
-Un esempio completo del mixin è disponibile nell&#39;archivio [XDM](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)pubblico. Inoltre, potete visualizzare e copiare il seguente file [](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) JSON per un esempio di come i dati possono essere strutturati in modo da rispettare lo schema CEE. Fare riferimento a entrambi gli esempi per apprendere i campi chiave descritti nella sezione seguente, al fine di determinare la modalità di mappatura dei propri dati allo schema.
+Un esempio completo del mixin è disponibile nell&#39;archivio [XDM](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)pubblico. Inoltre, potete visualizzare e copiare il seguente file [](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) JSON per un esempio di come i dati possono essere strutturati in modo da rispettare lo schema CEE. Fare riferimento a entrambi gli esempi per apprendere i campi chiave descritti nella sezione seguente, al fine di determinare come mappare i propri dati sullo schema.
 
 ## Campi chiave
 
@@ -240,7 +240,7 @@ Per informazioni complete su ciascuno dei campi secondari richiesti per `xdm:pro
 
 ## Mappatura e assimilazione dei dati (#mapping)
 
-Una volta determinato se i dati degli eventi di marketing possono essere mappati sullo schema CEE, il passo successivo consiste nel determinare in quali dati si desidera importare [!DNL Intelligent Services]. Tutti i dati storici utilizzati in [!DNL Intelligent Services] devono rientrare nel periodo minimo di quattro mesi di dati, più il numero di giorni previsti come periodo di lookback.
+Una volta determinato se i dati degli eventi di marketing possono essere mappati sullo schema CEE, il passaggio successivo consiste nel determinare in quali dati si desidera importare [!DNL Intelligent Services]. Tutti i dati storici utilizzati in [!DNL Intelligent Services] devono rientrare nel periodo minimo di quattro mesi di dati, più il numero di giorni previsti come periodo di lookback.
 
 Dopo aver deciso l&#39;intervallo di dati da inviare, contattare  Adobe Consulting Services per facilitare la mappatura dei dati sullo schema e l&#39;assimilazione nel servizio.
 
@@ -272,7 +272,7 @@ Dopo aver creato e salvato lo schema, è possibile creare un nuovo dataset basat
 * [Creare un set di dati nell’interfaccia](../catalog/datasets/user-guide.md#create) (seguire il flusso di lavoro per utilizzare uno schema esistente)
 * [Creare un set di dati nell&#39;API](../catalog/datasets/create.md)
 
-Dopo la creazione del set di dati, è possibile trovarlo nell&#39;interfaccia utente della piattaforma all&#39;interno dell&#39; *[!UICONTROL Datasets]* area di lavoro.
+Dopo la creazione del set di dati, è possibile trovarlo nell&#39;interfaccia utente della piattaforma all&#39;interno dell&#39; **[!UICONTROL Datasets]** area di lavoro.
 
 ![](images/data-preparation/dataset-location.png)
 
