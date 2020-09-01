@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;streaming
+keywords: Experience Platform;home;popular topics;streaming;streaming ingestion;streaming ingestion validation;validation;Streaming ingestion validation;validate;Synchronous validation;synchronous validation;Asynchronous validation;asynchronous validation;
 solution: Experience Platform
 title: Convalida dell'assimilazione in streaming
 topic: overview
 description: 'L’assimilazione dello streaming consente di caricare i dati su Adobe Experience Platform utilizzando gli endpoint di streaming in tempo reale. Le API di assimilazione dello streaming supportano due modalità di convalida: sincrona e asincrona.'
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
 workflow-type: tm+mt
 source-wordcount: '852'
 ht-degree: 3%
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 # Convalida dell&#39;assimilazione in streaming
 
-L’assimilazione dello streaming consente di caricare i dati su Adobe Experience Platform utilizzando gli endpoint di streaming in tempo reale. Le API di assimilazione dello streaming supportano due modalità di convalida: sincrona e asincrona.
+L’assimilazione dello streaming consente di caricare i dati su Adobe Experience Platform utilizzando gli endpoint di streaming in tempo reale. Le API di assimilazione in streaming supportano due modalità di convalida: sincrona e asincrona.
 
 ## Introduzione
 
