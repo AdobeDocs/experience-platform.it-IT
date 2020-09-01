@@ -1,22 +1,23 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Apache Cassandra;apache cassandra;cassandra;Cassandra
 solution: Experience Platform
 title: Connettore Apache Cassandra
 topic: overview
+description: La documentazione seguente fornisce informazioni su come collegare Apache Cassandra alla piattaforma utilizzando le API.
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '137'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Apache Cassandra ]connettore
+# [!DNL Apache Cassandra] connettore
 
- Adobe Experience Platform consente l&#39;acquisizione di dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, database e molti altri.
+Adobe Experience Platform consente l&#39;acquisizione di dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, database e molti altri.
 
-[!DNL Experience Platform] fornisce il supporto per l&#39;acquisizione di dati da un database di terze parti. [!DNL Platform] può connettersi a diversi tipi di database come relazionale, NoSQL o date warehouse. Il supporto per i provider di database include [!DNL Apache Cassandra].
+[!DNL Experience Platform] fornisce il supporto per l&#39;acquisizione di dati da un database di terze parti. [!DNL Platform] può connettersi a diversi tipi di database, ad esempio relazionali, NoSQL o data warehouse. Il supporto per i provider di database include [!DNL Apache Cassandra].
 
 La documentazione seguente fornisce informazioni su come connettersi [!DNL Apache Cassandra] all&#39; [!DNL Platform] utilizzo delle API:
 
