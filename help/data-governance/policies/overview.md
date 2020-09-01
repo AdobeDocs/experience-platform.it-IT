@@ -5,9 +5,9 @@ title: Panoramica sui criteri di utilizzo dei dati
 topic: policies
 description: Affinché le etichette di utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario implementare dei criteri di utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing consentite o da cui è consentito eseguire attività sui dati all'interno  Experience Platform.
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1003'
 ht-degree: 0%
 
 ---
@@ -32,13 +32,13 @@ Un esempio di un&#39;azione di marketing potrebbe essere il desiderio di esporta
 >
 >Le azioni di marketing di per sé non limitano l&#39;utilizzo dei dati. Devono essere inclusi nei criteri di utilizzo dei dati abilitati per poter valutare tali azioni in caso di violazioni dei criteri.
 
-Quando si verifica l&#39;utilizzo dei dati nel servizio dell&#39;azienda, è necessario indicare le azioni di marketing rilevanti in modo da identificare eventuali violazioni dei criteri. Potete quindi utilizzare [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) per verificare la presenza di violazioni dei criteri nell&#39;integrazione.
+Quando si verifica l&#39;utilizzo dei dati nel servizio dell&#39;azienda, è necessario indicare le azioni di marketing rilevanti in modo da identificare eventuali violazioni dei criteri. Potete quindi utilizzare [Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) per verificare la presenza di violazioni dei criteri nell&#39;integrazione.
 
 >[!NOTE]
 >
 >Se utilizzi [!DNL Real-time Customer Data Platform], puoi impostare casi di utilizzo del marketing sulle destinazioni per automatizzare l&#39;applicazione dei criteri. Per ulteriori informazioni, consulta il documento sulla governance dei [dati in CDP](../../rtcdp/privacy/data-governance-overview.md) in tempo reale.
 
-Consulta l&#39;appendice di questo documento per un elenco delle azioni [di marketing](#core-actions)disponibili  Adobe. Puoi anche definire azioni di marketing personalizzate utilizzando l&#39; [!DNL Policy Service] API DULE o l&#39;interfaccia [!DNL Experience Platform ]utente. Ulteriori informazioni sull&#39;utilizzo delle azioni e dei criteri di marketing sono disponibili nella sezione successiva.
+Per un elenco delle azioni [di marketing](#core-actions)disponibili  Adobe, consulta l’appendice di questo documento. Puoi anche definire azioni di marketing personalizzate utilizzando l&#39; [!DNL Policy Service] API o l&#39;interfaccia [!DNL Experience Platform ]utente. Ulteriori informazioni sull&#39;utilizzo delle azioni e dei criteri di marketing sono disponibili nella sezione successiva.
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
@@ -50,11 +50,11 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 ## Gestione dei criteri di utilizzo dei dati {#manage}
 
-Una volta applicate le etichette di utilizzo dei dati, gli amministratori dei dati possono utilizzare l&#39; [!DNL Policy Service] API DULE o l&#39; [!DNL Experience Platform] interfaccia utente per gestire e valutare i criteri relativi alle azioni di marketing eseguite sui dati contenenti etichette di utilizzo dei dati. Puoi creare e aggiornare i criteri, determinare lo stato di un criterio e utilizzare azioni di marketing per valutare se un&#39;azione specifica viola un criterio di utilizzo dei dati.
+Una volta applicate le etichette di utilizzo dei dati, gli amministratori dei dati possono utilizzare l&#39; [!DNL Policy Service] API o l&#39; [!DNL Experience Platform] interfaccia utente per gestire e valutare i criteri relativi alle azioni di marketing eseguite sui dati contenenti etichette di utilizzo dei dati. Puoi creare e aggiornare i criteri, determinare lo stato di un criterio e utilizzare azioni di marketing per valutare se un&#39;azione specifica viola un criterio di utilizzo dei dati.
 
 >[!IMPORTANT]
 >
->Tutti i criteri di utilizzo dei dati (inclusi i criteri di base forniti dal Adobe ) sono disattivati per impostazione predefinita. Affinché un singolo criterio possa essere preso in considerazione per l&#39;implementazione, è necessario attivarlo manualmente tramite l&#39;API o l&#39;interfaccia utente.
+>Tutti i criteri di utilizzo dei dati (inclusi i criteri di base forniti dal Adobe ) sono disattivati per impostazione predefinita. Affinché un singolo criterio venga preso in considerazione per l&#39;implementazione, è necessario attivarlo manualmente tramite l&#39;API o l&#39;interfaccia utente.
 
 Per istruzioni dettagliate sull&#39;utilizzo delle azioni di marketing e dei criteri di utilizzo dei dati nell&#39;API, consulta l&#39;esercitazione sulla [creazione e la valutazione dei criteri](create.md)di utilizzo dei dati. Per ulteriori informazioni sulle operazioni chiave fornite dall&#39; [!DNL Policy Service] API, consultate la guida [per gli sviluppatori di](../api/getting-started.md)Policy Service.
 
@@ -62,7 +62,7 @@ Per informazioni su come utilizzare le azioni e i criteri di marketing nell&#39;
 
 ## Passaggi successivi
 
-Questo documento ha fornito un&#39;introduzione ai criteri di utilizzo dei dati all&#39;interno del framework DULE. È ora possibile continuare a leggere la documentazione del processo collegata a questa guida per ulteriori informazioni sull&#39;utilizzo dei criteri nell&#39;API e nell&#39;interfaccia utente.
+Questo documento ha fornito un&#39;introduzione ai criteri di utilizzo dei dati all&#39;interno del [!DNL Data Governance] framework. È ora possibile continuare a leggere la documentazione del processo collegata a questa guida per ulteriori informazioni sull&#39;utilizzo dei criteri nell&#39;API e nell&#39;interfaccia utente.
 
 ## Appendice
 
