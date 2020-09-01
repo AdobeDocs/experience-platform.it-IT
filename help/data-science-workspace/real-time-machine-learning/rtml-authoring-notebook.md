@@ -5,7 +5,7 @@ title: Guida utente del notebook Real-time Machine Learning
 topic: Training and scoring a ML model
 description: La seguente guida illustra i passaggi necessari per creare un'applicazione Real-time Machine Learning in Adobe Experience Platform JupyterLab.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1637'
 ht-degree: 0%
@@ -86,13 +86,13 @@ Iniziate caricando i dati di formazione.
 >
 >Nel modello ML **in** tempo reale, il set di dati [CSV di assicurazione](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) auto viene preso dal [!DNL Github].
 
-![Dati di formazione del carico](../images/rtml/load_training.png)
+![Carica dati di formazione](../images/rtml/load_training.png)
 
 Se desiderate utilizzare un dataset da Adobe Experience Platform, rimuovete il commento dalla cella sottostante. Successivamente, è necessario sostituire `DATASET_ID` con il valore appropriato.
 
 ![set di dati rtml](../images/rtml/rtml-dataset.png)
 
-Per accedere a un set di dati nel [!DNL JupyterLab] blocco appunti, seleziona la scheda **Dati** nella barra di navigazione a sinistra di [!DNL JupyterLab]. Vengono visualizzate le *[!UICONTROL Datasets]* e *[!UICONTROL Schemas]* le directory. Selezionare **[!UICONTROL Datasets]** e fare clic con il pulsante destro del mouse, quindi selezionare l&#39; **[!UICONTROL Explore Data in Notebook]** opzione dal menu a discesa del set di dati che si desidera utilizzare. Nella parte inferiore del blocco appunti viene visualizzata una voce di codice eseguibile. Questa cellula ha la sua `dataset_id`.
+Per accedere a un set di dati nel [!DNL JupyterLab] blocco appunti, seleziona la scheda **Dati** nella barra di navigazione a sinistra di [!DNL JupyterLab]. Vengono visualizzate le **[!UICONTROL Datasets]** e **[!UICONTROL Schemas]** le directory. Selezionare **[!UICONTROL Datasets]** e fare clic con il pulsante destro del mouse, quindi selezionare l&#39; **[!UICONTROL Explore Data in Notebook]** opzione dal menu a discesa del set di dati che si desidera utilizzare. Nella parte inferiore del blocco appunti viene visualizzata una voce di codice eseguibile. Questa cellula ha la sua `dataset_id`.
 
 ![accesso dataset](../images/rtml/access-dataset.png)
 
@@ -113,11 +113,11 @@ config_properties = {
 
 ### Preparare il modello
 
-Utilizzando il *[!UICONTROL Real-time ML]* modello, è necessario analizzare, pre-elaborare, formare e valutare il modello ML. A tal fine, si applicano le trasformazioni dei dati e si crea una pipeline di formazione.
+Utilizzando il **[!UICONTROL Real-time ML]** modello, è necessario analizzare, pre-elaborare, formare e valutare il modello ML. A tal fine, si applicano le trasformazioni dei dati e si crea una pipeline di formazione.
 
 **Trasformazioni dei dati**
 
-La cella *[!UICONTROL Real-time ML]* template *Data Transformations (Trasformazioni* dati) deve essere modificata per lavorare con il set di dati personale. In genere si tratta di rinominare le colonne, il rollup dei dati e la preparazione/progettazione di funzioni.
+La cella **[!UICONTROL Real-time ML]** template *Data Transformations (Trasformazioni* dati) deve essere modificata per lavorare con il set di dati personale. In genere si tratta di rinominare le colonne, il rollup dei dati e la preparazione/progettazione di funzioni.
 
 >[!NOTE]
 >
@@ -410,7 +410,7 @@ Viene restituito il DSL aggiornato.
 
 ## Punteggio {#scoring}
 
-Dopo la pubblicazione in [!DNL Edge], il punteggio viene eseguito da una richiesta di POST da parte di un client. In genere, questo può essere fatto da un&#39;applicazione client che ha bisogno di punteggi ML. Puoi farlo anche da Postman. Il *[!UICONTROL Real-time ML]* modello utilizza EdgeUtils per illustrare questo processo.
+Dopo la pubblicazione in [!DNL Edge], il punteggio viene eseguito da una richiesta di POST da parte di un client. In genere, questo può essere fatto da un&#39;applicazione client che ha bisogno di punteggi ML. Puoi farlo anche da Postman. Il **[!UICONTROL Real-time ML]** modello utilizza EdgeUtils per illustrare questo processo.
 
 >[!NOTE]
 >
