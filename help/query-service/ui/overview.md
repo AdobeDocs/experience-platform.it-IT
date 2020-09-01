@@ -5,7 +5,7 @@ title: Guida all'interfaccia utente di Adobe Experience Platform Query Service
 topic: guide
 description: Adobe Experience Platform Query Service fornisce un'interfaccia utente che può essere utilizzata per scrivere ed eseguire query, visualizzare query eseguite in precedenza e query di accesso salvate dagli utenti all'interno dell'organizzazione IMS.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '594'
 ht-degree: 2%
@@ -19,17 +19,17 @@ Adobe Experience Platform [!DNL Query Service] fornisce un&#39;interfaccia utent
 
 ## [!DNL Query Editor]
 
-Consente di [!DNL Query Editor] scrivere ed eseguire query senza utilizzare un client esterno. Fate clic **[!UICONTROL Create Query]** per aprire la query [!DNL Query Editor] e creare una nuova query. È inoltre possibile accedere al modulo [!DNL Query Editor] selezionando una query dalle *[!UICONTROL Log]* o *[!UICONTROL Browse]* schede. Se si seleziona una query eseguita in precedenza o salvata, verrà aperto [!DNL Query Editor] e visualizzato l&#39;SQL per la query selezionata.
+Consente di [!DNL Query Editor] scrivere ed eseguire query senza utilizzare un client esterno. Fate clic **[!UICONTROL Create Query]** per aprire la query [!DNL Query Editor] e creare una nuova query. È inoltre possibile accedere al modulo [!DNL Query Editor] selezionando una query dalle **[!UICONTROL Log]** o **[!UICONTROL Browse]** schede. Se si seleziona una query eseguita in precedenza o salvata, verrà aperto [!DNL Query Editor] e visualizzato l&#39;SQL per la query selezionata.
 
 ![Immagine](../images/queries/ui-overview/overview.png)
 
-[!DNL Query Editor] fornisce uno spazio di modifica in cui è possibile iniziare a digitare una query. Durante la digitazione, l&#39;editor completa automaticamente le parole riservate, le tabelle e i nomi di campo SQL all&#39;interno delle tabelle. Al termine, fate clic sul pulsante **Riproduci** per eseguire la query. La *[!UICONTROL Console]* scheda sotto l&#39;editor mostra le operazioni [!DNL Query Service] in corso, indicando quando è stata restituita una query. Nella *[!UICONTROL Result]* scheda accanto alla console sono visualizzati i risultati della query. Per ulteriori informazioni sull&#39;utilizzo di [Query Editor, consultate la guida][query-editor] all&#39;editor di query [!DNL Query Editor].
+[!DNL Query Editor] fornisce uno spazio di modifica in cui è possibile iniziare a digitare una query. Durante la digitazione, l&#39;editor completa automaticamente le parole riservate, le tabelle e i nomi di campo SQL all&#39;interno delle tabelle. Al termine, fate clic sul pulsante **Riproduci** per eseguire la query. La **[!UICONTROL Console]** scheda sotto l&#39;editor mostra le operazioni [!DNL Query Service] in corso, indicando quando è stata restituita una query. Nella **[!UICONTROL Result]** scheda accanto alla console sono visualizzati i risultati della query. Per ulteriori informazioni sull&#39;utilizzo di [Query Editor, consultate la guida][query-editor] all&#39;editor di query [!DNL Query Editor].
 
 ![Immagine](../images/queries/ui-overview/query-editor.png)
 
 ## Sfoglia
 
-La *[!UICONTROL Browse]* scheda mostra le query salvate dagli utenti nell&#39;organizzazione. È utile considerarli come progetti di query, in quanto le query salvate qui potrebbero essere ancora in costruzione. Le query visualizzate nella *[!UICONTROL Browse]* scheda vengono visualizzate anche come query di esecuzione nella *[!UICONTROL Log]* scheda se sono state eseguite in precedenza da [!DNL Query Service].
+La **[!UICONTROL Browse]** scheda mostra le query salvate dagli utenti nell&#39;organizzazione. È utile considerarli come progetti di query, in quanto le query salvate qui potrebbero essere ancora in costruzione. Le query visualizzate nella **[!UICONTROL Browse]** scheda vengono visualizzate anche come query di esecuzione nella **[!UICONTROL Log]** scheda se sono state eseguite in precedenza da [!DNL Query Service].
 
 ![Immagine](../images/queries/ui-overview/browse.png)
 
@@ -42,7 +42,7 @@ La *[!UICONTROL Browse]* scheda mostra le query salvate dagli utenti nell&#39;or
 
 ## Registro
 
-La *[!UICONTROL Log]* scheda fornisce un elenco delle query che sono state eseguite in precedenza. Per impostazione predefinita, il registro elenca le query nella cronologia inversa.
+La **[!UICONTROL Log]** scheda fornisce un elenco delle query che sono state eseguite in precedenza. Per impostazione predefinita, il registro elenca le query nella cronologia inversa.
 
 ![Immagine](../images/queries/ui-overview/log.png)
 
@@ -58,7 +58,7 @@ La *[!UICONTROL Log]* scheda fornisce un elenco delle query che sono state esegu
 
 ## Credenziali
 
-Nella *[!UICONTROL Credentials]* scheda vengono visualizzate [!DNL Postgres] le credenziali. Fare clic sull&#39; **[!UICONTROL Copy]** icona accanto a un campo per memorizzarne il contenuto nel buffer della tastiera. Per ulteriori informazioni sull&#39;utilizzo di queste credenziali per la connessione con client esterni, consultare la guida [alla][connect-clients]connessione con i client.
+Nella **[!UICONTROL Credentials]** scheda vengono visualizzate [!DNL Postgres] le credenziali. Fare clic sull&#39; **[!UICONTROL Copy]** icona accanto a un campo per memorizzarne il contenuto nel buffer della tastiera. Per ulteriori informazioni sull&#39;utilizzo di queste credenziali per la connessione con client esterni, consultare la guida [alla][connect-clients]connessione con i client.
 
 ![Immagine](../images/queries/ui-overview/credentials.png)
 
