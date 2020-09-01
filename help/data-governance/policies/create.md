@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;data governance;data usage pol
 solution: Experience Platform
 title: Creazione di un criterio di utilizzo dei dati
 topic: policies
-description: L'etichettatura e l'applicazione dell'uso dei dati (DULE) è il meccanismo principale di Adobe Experience Platform Data Governance. DULE Policy Service API consente di creare e gestire criteri DULE per determinare quali azioni di marketing possono essere eseguite rispetto ai dati che contengono determinate etichette DULE. Questo documento fornisce un'esercitazione dettagliata per la creazione di un criterio DULE tramite l'API del servizio criteri.
+description: L'API Policy Service consente di creare e gestire i criteri di utilizzo dei dati per determinare quali azioni di marketing possono essere eseguite rispetto ai dati che contengono determinate etichette di utilizzo dei dati. Questo documento fornisce un'esercitazione passo-passo per la creazione di un criterio tramite l'API del servizio criteri.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1254'
+source-wordcount: '1209'
 ht-degree: 2%
 
 ---
@@ -15,33 +15,33 @@ ht-degree: 2%
 
 # Creare un criterio di utilizzo dei dati nell&#39;API
 
-L&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati (DULE) è il meccanismo principale di Adobe Experience Platform [!DNL Data Governance]. L&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE Policy Service consente di creare e gestire criteri DULE per determinare quali azioni di marketing possono essere eseguite rispetto ai dati che contengono determinate etichette DULE.
+L&#39;API [Servizio](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) criteri consente di creare e gestire i criteri di utilizzo dei dati per determinare quali azioni di marketing possono essere eseguite rispetto ai dati che contengono determinate etichette di utilizzo dei dati.
 
-Questo documento fornisce un&#39;esercitazione dettagliata per la creazione di un criterio DULE tramite l&#39; [!DNL Policy Service] API. Per una guida più completa alle diverse operazioni disponibili nell&#39;API, vedete la guida [per gli sviluppatori di](../api/getting-started.md)Policy Service.
+Questo documento fornisce un&#39;esercitazione passo-passo per la creazione di un criterio tramite l&#39; [!DNL Policy Service] API. Per una guida più completa alle diverse operazioni disponibili nell&#39;API, vedete la guida [per gli sviluppatori di](../api/getting-started.md)Policy Service.
 
 ## Introduzione
 
-Questa esercitazione richiede una conoscenza approfondita dei seguenti concetti chiave relativi alla creazione e alla valutazione di criteri DULE:
+Questa esercitazione richiede una conoscenza approfondita dei seguenti concetti chiave relativi alla creazione e alla valutazione dei criteri:
 
 * [[!DNL Data Governance]](../home.md): Il framework in base al quale [!DNL Platform] viene applicata la conformità all&#39;utilizzo dei dati.
 * [Etichette](../labels/overview.md)di utilizzo dati: Le etichette di utilizzo dei dati vengono applicate ai campi di dati XDM, specificando le restrizioni relative alle modalità di accesso ai dati.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
 * [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
-Prima di avviare questa esercitazione, consulta la guida [](../api/getting-started.md) allo sviluppatore per informazioni importanti che devi conoscere per effettuare correttamente chiamate all’ [!DNL Policy Service] API DULE, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
+Prima di avviare questa esercitazione, consulta la guida [](../api/getting-started.md) allo sviluppatore per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all&#39; [!DNL Policy Service] API, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
 
 ## Definire un&#39;azione di marketing {#define-action}
 
 Nel [!DNL Data Governance] quadro, un&#39;azione di marketing è un&#39;azione che un consumatore di [!DNL Experience Platform] dati esegue, per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati.
 
-Il primo passo per creare un criterio DULE consiste nel determinare quale azione marketing verrà valutata dal criterio. Questa operazione può essere eseguita utilizzando una delle seguenti opzioni:
+Il primo passaggio nella creazione di un criterio di utilizzo dei dati consiste nel determinare quale azione di marketing verrà valutata dal criterio. Questa operazione può essere eseguita utilizzando una delle seguenti opzioni:
 
 * [Cerca un&#39;azione di marketing esistente](#look-up)
 * [Creare una nuova azione di marketing](#create-new)
 
 ### Cerca un&#39;azione di marketing esistente {#look-up}
 
-Puoi cercare le azioni di marketing esistenti da valutare in base al criterio DULE effettuando una richiesta di GET a uno degli `/marketingActions` endpoint.
+Puoi cercare le azioni di marketing esistenti da valutare in base al criterio effettuando una richiesta di GET a uno degli `/marketingActions` endpoint.
 
 **Formato API**
 
@@ -122,7 +122,7 @@ Una risposta di successo restituisce il numero totale di azioni di marketing tro
 | --- | --- |
 | `_links.self.href` | Ogni elemento all&#39;interno dell&#39; `children` array contiene un ID URI per l&#39;azione di marketing elencata. |
 
-Quando trovi l&#39;azione di marketing da utilizzare, registra il valore della relativa `href` proprietà. Questo valore viene utilizzato durante il passaggio successivo della [creazione di un criterio](#create-policy)DULE.
+Quando trovi l&#39;azione di marketing da utilizzare, registra il valore della relativa `href` proprietà. Questo valore viene utilizzato durante il passaggio successivo della [creazione di un criterio](#create-policy).
 
 ### Create a new marketing action {#create-new}
 
@@ -188,13 +188,13 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e i dettagli dell�
 | --- | --- |
 | `_links.self.href` | ID URI dell’azione di marketing. |
 
-Registra l&#39;ID URI dell&#39;azione di marketing appena creata, che verrà utilizzata nella fase successiva della creazione di un criterio DULE.
+Registra l&#39;ID URI dell&#39;azione di marketing appena creata, che verrà utilizzata nella fase successiva della creazione di un criterio.
 
-## Creare un criterio DULE {#create-policy}
+## Creare un criterio {#create-policy}
 
-Per creare un nuovo criterio è necessario fornire l&#39;ID URI di un&#39;azione di marketing con un&#39;espressione delle etichette DULE che vietano tale azione di marketing.
+Per creare un nuovo criterio è necessario fornire l&#39;ID URI di un&#39;azione di marketing con un&#39;espressione delle etichette di utilizzo che ne impediscono l&#39;esecuzione.
 
-Questa espressione è denominata espressione **** policy ed è un oggetto contenente (A) un&#39;etichetta DULE, oppure (B) un operatore e gli operandi, ma non entrambi. A sua volta, ogni operando è anche un oggetto con espressione di criterio. Ad esempio, un criterio relativo all&#39;esportazione di dati a terzi potrebbe essere vietato se sono presenti `C1 OR (C3 AND C7)` etichette. Questa espressione viene specificata come:
+Questa espressione è denominata espressione **** policy ed è un oggetto contenente (A) un&#39;etichetta, (B) un operatore e gli operandi, ma non entrambi. A sua volta, ogni operando è anche un oggetto con espressione di criterio. Ad esempio, un criterio relativo all&#39;esportazione di dati a terzi potrebbe essere vietato se sono presenti `C1 OR (C3 AND C7)` etichette. Questa espressione viene specificata come:
 
 ```json
 "deny": {
@@ -222,7 +222,7 @@ Questa espressione è denominata espressione **** policy ed è un oggetto conten
 >
 >Sono supportati solo gli operatori OR e AND.
 
-Dopo aver configurato l&#39;espressione del criterio, potete creare un nuovo criterio DULE effettuando una richiesta POST all&#39; `/policies/custom` endpoint.
+Dopo aver configurato l&#39;espressione del criterio, potete creare un nuovo criterio effettuando una richiesta POST all&#39; `/policies/custom` endpoint.
 
 **Formato API**
 
@@ -232,7 +232,7 @@ POST /policies/custom
 
 **Richiesta**
 
-La richiesta seguente crea un criterio DULE denominato &quot;Export Data to Third Party&quot; fornendo un&#39;azione di marketing e un&#39;espressione del criterio nel payload della richiesta.
+La richiesta seguente crea un criterio denominato &quot;Esporta dati a terze parti&quot; fornendo un&#39;azione di marketing e un&#39;espressione di criterio nel payload della richiesta.
 
 ```shell
 curl -X POST \
@@ -268,7 +268,7 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `marketingActionRefs` | Un array contenente il `href` valore di un&#39;azione di marketing, ottenuto nel passaggio [](#define-action)precedente. Anche se l&#39;esempio precedente elenca una sola azione di marketing, è possibile fornire più azioni. |
-| `deny` | L&#39;oggetto policy espressione. Definisce le etichette e le condizioni DULE che causerebbero il rifiuto dell&#39;azione di marketing a cui si fa riferimento in `marketingActionRefs`. |
+| `deny` | L&#39;oggetto policy espressione. Definisce le etichette e le condizioni di utilizzo che potrebbero causare il rifiuto dell&#39;azione di marketing a cui si fa riferimento in `marketingActionRefs`. |
 
 **Risposta**
 
@@ -319,17 +319,17 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e i dettagli del cr
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `id` | Valore generato dal sistema di sola lettura che identifica in modo univoco il criterio DULE. |
+| `id` | Valore generato dal sistema di sola lettura che identifica il criterio in modo univoco. |
 
-Registra l&#39;ID URI del criterio DULE appena creato, in quanto viene utilizzato nel passaggio successivo per abilitare il criterio.
+Registra l&#39;ID URI del criterio appena creato, in quanto viene utilizzato nel passaggio successivo per abilitare il criterio.
 
-## Abilita criterio DULE
+## Abilitare il criterio
 
 >[!NOTE]
 >
->Anche se questo passaggio è facoltativo se desiderate lasciare il criterio DULE nello `DRAFT` stato, tenete presente che per impostazione predefinita un criterio deve avere lo stato impostato su `ENABLED` per poter partecipare alla valutazione. Per informazioni su come fare eccezioni per i criteri di [stato, vedere l&#39;esercitazione sull&#39;applicazione dei criteri](../enforcement/api-enforcement.md) `DRAFT` DULE.
+>Anche se questo passaggio è facoltativo se desiderate lasciare il criterio nello `DRAFT` stato, tenete presente che, per impostazione predefinita, lo stato di un criterio deve essere impostato su `ENABLED` per poter partecipare alla valutazione. Consulta la guida sull&#39;applicazione dei [](../enforcement/api-enforcement.md) criteri per informazioni su come fare eccezioni per i criteri nello `DRAFT` stato.
 
-Per impostazione predefinita, i criteri DULE con `status` proprietà impostata per `DRAFT` non partecipano alla valutazione. Potete abilitare il criterio per la valutazione eseguendo una richiesta di PATCH all&#39; `/policies/custom/` endpoint e fornendo l&#39;identificatore univoco per il criterio alla fine del percorso della richiesta.
+Per impostazione predefinita, i criteri con `status` proprietà impostata su `DRAFT` non partecipano alla valutazione. Potete abilitare il criterio per la valutazione eseguendo una richiesta di PATCH all&#39; `/policies/custom/` endpoint e fornendo l&#39;identificatore univoco per il criterio alla fine del percorso della richiesta.
 
 **Formato API**
 
@@ -343,7 +343,7 @@ PATCH /policies/custom/{POLICY_ID}
 
 **Richiesta**
 
-La richiesta seguente esegue un&#39;operazione PATCH sulla `status` proprietà del criterio DULE, modificando il valore da `DRAFT` a `ENABLED`.
+La richiesta seguente esegue un&#39;operazione PATCH sulla `status` proprietà del criterio, modificando il valore da `DRAFT` a `ENABLED`.
 
 ```shell
 curl -X PATCH \
