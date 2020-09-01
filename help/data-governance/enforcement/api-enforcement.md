@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic e
 solution: Experience Platform
 title: Applicazione dei criteri di utilizzo dei dati tramite l'API di Servizio criteri
 topic: enforcement
-description: Dopo aver creato etichette di utilizzo dei dati per i dati e criteri di utilizzo per le azioni di marketing in base a tali etichette, potete utilizzare l'API DULE Policy Service per valutare se un'azione di marketing eseguita su un set di dati o su un gruppo arbitrario di etichette costituisce una violazione dei criteri. Potete quindi configurare i vostri protocolli interni per gestire le violazioni dei criteri in base alla risposta API.
+description: Dopo aver creato etichette di utilizzo dei dati per i dati e criteri di utilizzo per le azioni di marketing in base a tali etichette, potete utilizzare l'API Servizio criteri per valutare se un'azione di marketing eseguita su un set di dati o su un gruppo arbitrario di etichette costituisce una violazione dei criteri. Potete quindi configurare i vostri protocolli interni per gestire le violazioni dei criteri in base alla risposta API.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '936'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 # Applicazione dei criteri di utilizzo dei dati tramite l&#39; [!DNL Policy Service] API
 
-Dopo aver creato etichette di utilizzo dei dati per i dati e criteri di utilizzo per le azioni di marketing relative a tali etichette, è possibile utilizzare [[!DNL DULE Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) per valutare se un&#39;azione di marketing eseguita su un set di dati o su un gruppo arbitrario di etichette costituisce una violazione dei criteri. Potete quindi configurare i vostri protocolli interni per gestire le violazioni dei criteri in base alla risposta API.
+Dopo aver creato etichette di utilizzo dei dati per i dati e criteri di utilizzo per le azioni di marketing relative a tali etichette, è possibile utilizzare [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) per valutare se un&#39;azione di marketing eseguita su un set di dati o su un gruppo arbitrario di etichette costituisce una violazione dei criteri. Potete quindi configurare i vostri protocolli interni per gestire le violazioni dei criteri in base alla risposta API.
 
 >[!NOTE]
 >
@@ -25,18 +25,18 @@ In questo documento sono descritti i passaggi necessari per utilizzare l&#39; [!
 
 ## Introduzione
 
-Questa esercitazione richiede una conoscenza approfondita dei seguenti concetti chiave relativi all&#39;applicazione dei criteri DULE:
+Questa esercitazione richiede una conoscenza approfondita dei seguenti concetti chiave relativi all&#39;applicazione dei criteri di utilizzo dei dati:
 
 * [Governance](../home.md)dei dati: Il framework in base al quale [!DNL Platform] viene applicata la conformità all&#39;utilizzo dei dati.
    * [Etichette](../labels/overview.md)di utilizzo dati: Le etichette di utilizzo dei dati vengono applicate ai set di dati (e/o ai singoli campi all&#39;interno di tali set di dati), specificando le restrizioni relative alla modalità di utilizzo dei dati.
-   * [Criteri](../policies/overview.md)di utilizzo dei dati: I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing consentite o limitate per determinati set di etichette DULE.
+   * [Criteri](../policies/overview.md)di utilizzo dei dati: I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing consentite o limitate per certi set di etichette di utilizzo dei dati.
 * [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
-Prima di avviare questa esercitazione, consulta la guida [](../api/getting-started.md) allo sviluppatore per informazioni importanti che devi conoscere per effettuare correttamente chiamate all’ [!DNL Policy Service] API DULE, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
+Prima di avviare questa esercitazione, consulta la guida [](../api/getting-started.md) allo sviluppatore per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all&#39; [!DNL Policy Service] API, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
 
-## Valutazione tramite etichette DULE e un&#39;azione di marketing
+## Valutare utilizzando etichette e un&#39;azione di marketing
 
-È possibile valutare un criterio eseguendo il test di un&#39;azione di marketing rispetto a un set di etichette DULE che sarebbe ipoteticamente presente all&#39;interno di un dataset. Questo avviene tramite l&#39;uso del parametro `duleLabels` query, dove le etichette DULE vengono fornite come un elenco di valori separati da virgola, come illustrato nell&#39;esempio seguente.
+È possibile valutare un criterio eseguendo il test di un&#39;azione di marketing rispetto a un insieme di etichette di utilizzo dei dati che potrebbero essere presenti all&#39;interno di un dataset. Questo avviene tramite l&#39;uso del parametro `duleLabels` query, dove le etichette vengono fornite come un elenco di valori separati da virgola, come illustrato nell&#39;esempio seguente.
 
 **Formato API**
 
@@ -47,7 +47,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Nome dell&#39;azione di marketing associata al criterio DULE che si sta valutando. |
+| `{MARKETING_ACTION_NAME}` | Nome dell&#39;azione di marketing associata al criterio di utilizzo dei dati che si sta valutando. |
 | `{LABEL_1}` | Etichetta di utilizzo dei dati per sottoporre a test l&#39;azione di marketing. Deve essere fornita almeno un&#39;etichetta. Quando si forniscono più etichette, queste devono essere separate da virgole. |
 
 **Richiesta**
@@ -69,7 +69,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta di successo restituisce l&#39;URL dell&#39;azione di marketing, le etichette DULE su cui è stata eseguita la verifica e un elenco di eventuali criteri DULE violati a seguito del test dell&#39;azione rispetto a tali etichette. In questo esempio, il criterio &quot;Esporta dati in terze parti&quot; è visualizzato nell&#39; `violatedPolicies` array, a indicare che l&#39;azione di marketing ha attivato la violazione prevista del criterio.
+Una risposta corretta restituisce l&#39;URL dell&#39;azione di marketing, le etichette di utilizzo su cui è stata eseguita la verifica e un elenco di eventuali criteri violati a seguito del test dell&#39;azione rispetto a tali etichette. In questo esempio, il criterio &quot;Esporta dati in terze parti&quot; è visualizzato nell&#39; `violatedPolicies` array, a indicare che l&#39;azione di marketing ha attivato la violazione prevista del criterio.
 
 ```json
 {
@@ -129,11 +129,11 @@ Una risposta di successo restituisce l&#39;URL dell&#39;azione di marketing, le 
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `violatedPolicies` | Un array che elenca eventuali criteri DULE violati eseguendo il test dell&#39;azione di marketing (specificata in `marketingActionRef`) rispetto a quella fornita `duleLabels`. |
+| `violatedPolicies` | Un array che elenca tutti i criteri violati eseguendo il test dell&#39;azione di marketing (specificata in `marketingActionRef`) rispetto a quelli forniti `duleLabels`. |
 
 ## Valutare utilizzando i dataset
 
-È possibile valutare un criterio DULE eseguendo il test di un&#39;azione di marketing in base a uno o più set di dati da cui è possibile raccogliere le etichette DULE. A questo scopo, è necessario effettuare una richiesta di POST e fornire ID di set di dati all’interno del corpo della richiesta, come illustrato nell’esempio di seguito. `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints`
+È possibile valutare un criterio di utilizzo dei dati eseguendo il test di un&#39;azione di marketing in base a uno o più set di dati da cui è possibile raccogliere le etichette. A questo scopo, è necessario effettuare una richiesta di POST e fornire ID di set di dati all’interno del corpo della richiesta, come illustrato nell’esempio di seguito. `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints`
 
 **Formato API**
 
@@ -144,7 +144,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Nome dell&#39;azione di marketing associata al criterio DULE che si sta valutando. |
+| `{MARKETING_ACTION_NAME}` | Nome dell&#39;azione di marketing associata al criterio che si sta valutando. |
 
 **Richiesta**
 
@@ -181,7 +181,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituisce l&#39;URL dell&#39;azione di marketing, le etichette DULE raccolte dai set di dati forniti e un elenco di eventuali criteri DULE violati a seguito del test dell&#39;azione rispetto a tali etichette. In questo esempio, il criterio &quot;Esporta dati in terze parti&quot; è visualizzato nell&#39; `violatedPolicies` array, a indicare che l&#39;azione di marketing ha attivato la violazione prevista del criterio.
+Una risposta corretta restituisce l&#39;URL dell&#39;azione di marketing, le etichette di utilizzo raccolte dai set di dati forniti e un elenco di eventuali criteri violati a seguito del test dell&#39;azione rispetto a tali etichette. In questo esempio, il criterio &quot;Esporta dati in terze parti&quot; è visualizzato nell&#39; `violatedPolicies` array, a indicare che l&#39;azione di marketing ha attivato la violazione prevista del criterio.
 
 ```json
 {
@@ -362,12 +362,12 @@ Una risposta corretta restituisce l&#39;URL dell&#39;azione di marketing, le eti
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `duleLabels` | Elenco di etichette DULE estratte dai set di dati forniti nel payload della richiesta. |
-| `discoveredLabels` | Un elenco dei set di dati forniti nel payload della richiesta, in cui sono visualizzate le etichette DULE a livello di set di dati e di campo che sono state trovate in ciascuno di essi. |
-| `violatedPolicies` | Un array che elenca eventuali criteri DULE violati eseguendo il test dell&#39;azione di marketing (specificata in `marketingActionRef`) rispetto a quella fornita `duleLabels`. |
+| `duleLabels` | Elenco di etichette di utilizzo dei dati estratte dai set di dati forniti nel payload della richiesta. |
+| `discoveredLabels` | Un elenco dei set di dati forniti nel payload della richiesta, in cui sono visualizzate le etichette a livello di set di dati e di campi presenti in ciascuno di essi. |
+| `violatedPolicies` | Un array che elenca tutti i criteri violati eseguendo il test dell&#39;azione di marketing (specificata in `marketingActionRef`) rispetto a quelli forniti `duleLabels`. |
 
 ## Passaggi successivi
 
-Leggendo questo documento, è stata verificata correttamente la presenza di violazioni dei criteri durante l&#39;esecuzione di un&#39;azione di marketing su un set di dati o un set di etichette DULE. Utilizzando i dati restituiti nelle risposte API, potete impostare protocolli all&#39;interno dell&#39;applicazione dell&#39;esperienza per applicare correttamente le violazioni dei criteri quando si verificano.
+Leggendo questo documento, hai verificato con successo la presenza di violazioni dei criteri durante l&#39;esecuzione di un&#39;azione di marketing su un dataset o un set di etichette di utilizzo dei dati. Utilizzando i dati restituiti nelle risposte API, potete impostare protocolli all&#39;interno dell&#39;applicazione dell&#39;esperienza per applicare correttamente le violazioni dei criteri quando si verificano.
 
 Per i passaggi su come applicare criteri di utilizzo dei dati per i segmenti di pubblico in [!DNL Real-time Customer Profile], consulta la seguente [esercitazione](../../segmentation/tutorials/governance.md).
