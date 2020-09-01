@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;database connector
 solution: Experience Platform
 title: Configurare un flusso di dati per un connettore di database nell'interfaccia utente
 topic: overview
+description: Un flusso di dati è un'attività pianificata che recupera e trasferisce dati da un'origine a un set di dati della piattaforma. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account del database.
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: 14044f9af50cd4c922294cd60f7b6549828e8aca
 workflow-type: tm+mt
-source-wordcount: '1191'
+source-wordcount: '1222'
 ht-degree: 0%
 
 ---
@@ -127,7 +128,7 @@ Dopo aver rivisto il flusso di dati, fai clic su **[!UICONTROL Finish]** e conse
 
 ## Monitorare il flusso di dati
 
-Una volta creato il flusso di dati, è possibile monitorare i dati che vengono acquisiti attraverso di esso per visualizzare informazioni su velocità di assimilazione, successo ed errori. Per ulteriori informazioni su come monitorare il flusso di dati, consulta l’esercitazione sul [monitoraggio di account e flussi di dati nell’interfaccia utente](../monitor.md).
+Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti attraverso di esso per visualizzare informazioni su velocità di assimilazione, successo ed errori. Per ulteriori informazioni su come monitorare il flusso di dati, consulta l’esercitazione sul [monitoraggio di account e flussi di dati nell’interfaccia utente](../monitor.md).
 
 ## Eliminare il flusso di dati
 
