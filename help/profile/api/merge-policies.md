@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Unisci criteri - API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 95b4964f4d506a7f5618590fe43116e2297be22e
 workflow-type: tm+mt
-source-wordcount: '2397'
+source-wordcount: '2382'
 ht-degree: 1%
 
 ---
@@ -123,7 +123,7 @@ Un frammento di profilo è l&#39;informazione di profilo per una sola identità 
 
 Se `{ATTRIBUTE_MERGE_TYPE}` è uno dei seguenti casi:
 
-* **`timestampOrdered`**: (impostazione predefinita) Assegna priorità al profilo aggiornato per ultimo in caso di conflitto. Utilizzando questo tipo di unione, l&#39; `data` attributo non è obbligatorio. `timestampOrdered` supporta inoltre marche temporali personalizzate che avranno precedenza durante l&#39;unione di frammenti di profilo all&#39;interno o tra set di dati. Per ulteriori informazioni, consulta la sezione Appendice sull’ [utilizzo di marche temporali](#custom-timestamps)personalizzate.
+* **`timestampOrdered`**: (impostazione predefinita) Assegna priorità al profilo aggiornato per ultimo. Utilizzando questo tipo di unione, l&#39; `data` attributo non è obbligatorio. `timestampOrdered` supporta inoltre marche temporali personalizzate che avranno precedenza durante l&#39;unione di frammenti di profilo all&#39;interno o tra set di dati. Per ulteriori informazioni, consulta la sezione Appendice sull’ [utilizzo di marche temporali](#custom-timestamps)personalizzate.
 * **`dataSetPrecedence`** : Attribuire priorità ai frammenti di profilo in base al set di dati da cui provengono. Questo può essere utilizzato quando le informazioni presenti in un set di dati sono preferite o attendibili rispetto ai dati contenuti in un altro set di dati. Quando si utilizza questo tipo di unione, l&#39; `order` attributo è obbligatorio, in quanto elenca i set di dati in ordine di priorità.
    * **`order`**: Quando si utilizza &quot;dataSetPrecedence&quot;, è necessario fornire un `order` array con un elenco di set di dati. Eventuali set di dati non inclusi nell&#39;elenco non verranno uniti. In altre parole, i set di dati devono essere esplicitamente elencati per essere uniti in un profilo. L&#39; `order` array elenca gli ID dei set di dati in ordine di priorità.
 
@@ -734,11 +734,11 @@ Questa sezione fornisce informazioni supplementari relative all&#39;utilizzo dei
 
 ### Utilizzo di marche temporali personalizzate {#custom-timestamps}
 
-Poiché i record Profilo vengono assimilati  Experience Platform, al momento dell&#39;assimilazione viene ottenuta una marca temporale di sistema che viene aggiunta al record. Se `timestampOrdered` è selezionato come `attributeMerge` tipo per un criterio di unione, i profili vengono uniti in base alla marca temporale del sistema. In altre parole, l&#39;unione viene eseguita in base alla marca temporale per l&#39;inserimento del record nella piattaforma.
+Poiché i record vengono trasferiti  Experience Platform, al momento dell&#39;assimilazione viene ottenuta una marca temporale di sistema che viene aggiunta al record. Se `timestampOrdered` è selezionato come `attributeMerge` tipo per un criterio di unione, i profili vengono uniti in base alla marca temporale del sistema. In altre parole, l&#39;unione viene eseguita in base alla marca temporale per l&#39;inserimento del record nella piattaforma.
 
 Talvolta possono verificarsi casi di utilizzo, ad esempio il backfill dei dati o la verifica dell&#39;ordine corretto degli eventi se i record vengono ordinati in modo non corretto, se è necessario fornire una marca temporale personalizzata e fare in modo che il criterio di unione rispetti la marca temporale personalizzata invece che la marca temporale del sistema.
 
-Per utilizzare una marca temporale personalizzata, è necessario aggiungere allo schema del profilo il mixin [Dettagli controllo del sistema di origine](#mixin-details) esterna. Una volta aggiunta, la marca temporale personalizzata può essere compilata utilizzando il `xdm:lastUpdatedDate` campo. Quando un record viene assimilato con il `xdm:lastUpdatedDate` campo popolato,  Experience Platform utilizzerà tale campo per unire record o frammenti di profilo all&#39;interno e tra set di dati. Se non `xdm:lastUpdatedDate` è presente o non è popolato, la piattaforma continuerà a utilizzare la marca temporale del sistema.
+Per utilizzare una marca temporale personalizzata, è necessario aggiungere allo schema del profilo [[!DNL External Source Audit Details Mixin]](#mixin-details) . Una volta aggiunta, la marca temporale personalizzata può essere compilata utilizzando il `xdm:lastUpdatedDate` campo. Quando un record viene assimilato con il `xdm:lastUpdatedDate` campo popolato,  Experience Platform utilizzerà tale campo per unire record o frammenti di profilo all&#39;interno e tra set di dati. Se non `xdm:lastUpdatedDate` è presente o non è popolato, la piattaforma continuerà a utilizzare la marca temporale del sistema.
 
 >[!NOTE]
 >
@@ -748,9 +748,9 @@ Per istruzioni dettagliate sull&#39;utilizzo degli schemi tramite l&#39;API del 
 
 Per utilizzare le marche temporali personalizzate utilizzando l&#39;interfaccia utente, consultare la sezione sull&#39; [uso delle marche temporali](../ui/merge-policies.md#custom-timestamps) personalizzate nella guida [utente dei criteri di](../ui/merge-policies.md)unione.
 
-#### Dettagli controllo sistema sorgente esterna Dettagli mix {#mixin-details}
+#### [!DNL External Source System Audit Details Mixin] details {#mixin-details}
 
-L&#39;esempio seguente mostra i campi compilati correttamente nel Mixin dei dettagli di controllo del sistema di origine esterna. Il JSON mixin completo può essere visualizzato anche nel repo [XDM (](https://github.com/adobe/xdm/blob/master/schemas/common/external-source-system-audit-details.schema.json) Public Experience Data Model) su GitHub.
+Nell&#39;esempio seguente vengono visualizzati correttamente i campi popolati nel [!DNL External Source System Audit Details Mixin]. Il JSON mixin completo può essere visualizzato anche nel repo [XDM (](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) Public Experience Data Model) su GitHub.
 
 ```json
 {
