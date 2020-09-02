@@ -5,9 +5,9 @@ title: Connettore di archiviazione Google Cloud
 topic: overview
 description: La documentazione seguente fornisce informazioni su come collegare Google Cloud Storage alla piattaforma utilizzando le API o l'interfaccia utente.
 translation-type: tm+mt
-source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
+source-git-commit: d42351c194bb5a11f3175535de83fbd3b6ac58d2
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '541'
 ht-degree: 0%
 
 ---
@@ -68,6 +68,17 @@ Per generare un nuovo ID chiave di accesso e una chiave di accesso segreta per i
 ![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
 
 Puoi usare l’ID chiave di accesso e la chiave di accesso segreta appena generati per collegare il tuo [!DNL Google Cloud Storage] account a [!DNL Platform].
+
+## Limitazioni per la denominazione di file e directory
+
+Di seguito è riportato un elenco di vincoli per i quali è necessario tenere conto al momento di denominare il file di archiviazione o la directory cloud.
+
+- I nomi di directory e componenti file non possono superare i 255 caratteri.
+- I nomi di directory e file non possono terminare con una barra (`/`). Se fornito, verrà rimosso automaticamente.
+- I seguenti caratteri URL riservati devono essere preceduti da una corretta escape: `! * ' ( ) ; : @ & = + $ , / ? % # [ ]`
+- I seguenti caratteri non sono consentiti: `" \ / : | < > * ?`.
+- Caratteri di percorso URL non validi. I punti di codice come `\uE000`, pur essendo validi nei nomi file NTFS, non sono caratteri Unicode validi. Inoltre, non sono consentiti caratteri ASCII o Unicode, come caratteri di controllo (da 0x00 a 0x1F, \u0081, ecc.). Per le regole che governano le stringhe Unicode in HTTP/1.1, vedere [RFC 2616, Sezione 2.2: Regole](https://www.ietf.org/rfc/rfc2616.txt) di base e [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- I seguenti nomi di file non sono consentiti: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, punto (..) e due punti (..).
 
 ## Connetti [!DNL Google Cloud Storage] a [!DNL Platform]
 
