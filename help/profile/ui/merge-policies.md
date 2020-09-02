@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guida utente per i criteri di unione
 topic: guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 95b4964f4d506a7f5618590fe43116e2297be22e
 workflow-type: tm+mt
-source-wordcount: '1341'
+source-wordcount: '1348'
 ht-degree: 0%
 
 ---
@@ -55,16 +55,16 @@ Viene visualizzata **[!UICONTROL Create merge policy]** la schermata che consent
 * **[!UICONTROL ID stitching]**: Questo campo definisce come determinare le identità correlate di un cliente. Esistono due possibili valori:
    * **[!UICONTROL None]**: Non eseguire alcuna cucitura di identità.
    * **[!UICONTROL Private Graph]**: Esegue l&#39;unione delle identità in base al grafico dell&#39;identità privata.
-* **[!UICONTROL Attribute merge]**: Un frammento di profilo è l&#39;informazione di profilo per una sola identità inclusa nell&#39;elenco di identità esistenti per un singolo cliente. Quando il tipo di grafico identità utilizzato genera più identità, è possibile che vi siano attributi di profilo in conflitto e che sia necessario specificare la priorità. Utilizzando [!UICONTROL Attribute merge] è possibile specificare quali valori di profilo del set di dati dare la priorità in caso di conflitto di unione tra i set di dati di tipo Valore chiave (dati del record). Esistono due possibili valori:
-   * **[!UICONTROL Timestamp ordered]**: In caso di conflitto, date priorità al profilo aggiornato più di recente. [!UICONTROL Timestamp ordered] supporta inoltre marche temporali personalizzate che hanno la priorità sulle marche temporali del sistema quando si uniscono dati all&#39;interno dello stesso dataset (identità multiple) o tra set di dati. Per ulteriori informazioni, vedere la sezione [timestamp ordinati](#timestamp-ordered) che segue.
-   * **[!UICONTROL Dataset precedence]** : Attribuire priorità ai frammenti di profilo in base al set di dati da cui provengono. Quando si seleziona questa opzione, è necessario selezionare i set di dati correlati e il relativo ordine di priorità. Per ulteriori informazioni, vedi i dettagli sulla precedenza [del](#dataset-precedence) set di dati indicati di seguito.
+* **[!UICONTROL Attribute merge]**: Un frammento di profilo contiene informazioni relative a una sola identità nell&#39;elenco delle identità esistenti per un singolo cliente. Quando il tipo di grafico identità utilizzato genera più identità, è possibile che vi siano attributi di profilo in conflitto e che sia necessario specificare la priorità. Utilizzando [!UICONTROL Attribute merge] è possibile specificare quali valori di profilo dei set di dati dare la priorità in caso di conflitto di unione tra i set di dati di tipo key-value (dati di record). Esistono due possibili valori:
+   * **[!UICONTROL Timestamp ordered]**: In caso di conflitto, viene data priorità al profilo aggiornato più di recente. [!UICONTROL Timestamp ordered] supporta inoltre marche temporali personalizzate che hanno la priorità sulle marche temporali del sistema quando si uniscono dati all&#39;interno dello stesso dataset (identità multiple) o tra set di dati. Per ulteriori informazioni, vedere la sezione [timestamp ordinati](#timestamp-ordered) che segue.
+   * **[!UICONTROL Dataset precedence]** : In caso di conflitto, assegnare priorità ai frammenti di profilo basati sul set di dati da cui provengono. Quando si seleziona questa opzione, è necessario scegliere i set di dati correlati e il relativo ordine di priorità. Per ulteriori informazioni, vedi i dettagli sulla precedenza [del](#dataset-precedence) set di dati indicati di seguito.
 * **[!UICONTROL Default merge policy]**: Pulsante di attivazione/disattivazione che consente di selezionare se il criterio di unione sarà o meno il valore predefinito per l&#39;organizzazione. Se il selettore è attivato e il nuovo criterio viene salvato, il criterio predefinito precedente viene aggiornato automaticamente per non essere più il predefinito.
 
 ### Timestamp ordinato {#timestamp-ordered}
 
 Poiché i record Profilo vengono assimilati  Experience Platform, al momento dell&#39;assimilazione viene ottenuta una marca temporale di sistema che viene aggiunta al record. Se [!UICONTROL Timestamp ordered] è selezionato come [!UICONTROL Attribute merge] tipo per un criterio di unione, i profili vengono uniti in base alla marca temporale del sistema. In altre parole, l&#39;unione viene eseguita in base alla marca temporale per l&#39;inserimento del record nella piattaforma.
 
-Talvolta possono verificarsi casi di utilizzo, ad esempio il backfill dei dati o la verifica dell&#39;ordine corretto degli eventi se i record vengono ordinati in modo non corretto, se è necessario fornire una marca temporale personalizzata e fare in modo che il criterio di unione rispetti la marca temporale personalizzata invece che la marca temporale del sistema.
+Talvolta possono verificarsi casi di utilizzo in cui è necessario fornire una marca temporale personalizzata e fare in modo che il criterio di unione rispetti la marca temporale personalizzata anziché la marca temporale del sistema. Alcuni esempi di questo tipo includono il backfill dei dati o la garanzia dell&#39;ordine corretto degli eventi in caso di acquisizione di record non ordinata.
 
 >[!NOTE]
 >
@@ -84,7 +84,7 @@ Nella schermata seguente sono visualizzati i campi nella finestra di dialogo [!U
 
 ![](../images/merge-policies/custom-timestamp-mixin.png)
 
-Per utilizzare le marche temporali personalizzate utilizzando l&#39;API, fare riferimento all&#39;Appendice della guida [endpoint per criteri di](../api/merge-policies.md) unione e quindi alla sezione sull&#39; [uso delle marche temporali](../api/merge-policies.md#custom-timestamps)personalizzate.
+Per utilizzare le marche temporali personalizzate utilizzando l&#39;API, fare riferimento all&#39;Appendice della guida [endpoint per criteri di](../api/merge-policies.md) unione e alla sezione sull&#39; [uso delle marche temporali](../api/merge-policies.md#custom-timestamps)personalizzate.
 
 ### Precedenza set di dati {#dataset-precedence}
 
@@ -92,7 +92,7 @@ Quando si seleziona un [!UICONTROL Attribute merge] valore, è possibile selezio
 
 Un esempio di utilizzo sarebbe se l&#39;organizzazione dispone di informazioni presenti in un set di dati preferito o affidabile rispetto ai dati in un altro set di dati.
 
-Quando si seleziona [!UICONTROL Dataset precedence], si apre un pannello separato che richiede di selezionare tra [!UICONTROL Available datasets] (o utilizzare la casella di controllo per selezionare tutti) i set di dati da includere. Potete quindi trascinare i set di dati nel [!UICONTROL Selected Datasets] pannello e trascinarli nell’ordine di priorità corretto. Al set di dati superiore verrà data la priorità più alta, al secondo sarà il secondo più alto e così via.
+Quando si seleziona [!UICONTROL Dataset precedence], si apre un pannello separato che richiede di selezionare tra [!UICONTROL Available datasets] i set di dati da includere (o di utilizzare la casella di controllo per selezionare tutti). Potete quindi trascinare i set di dati nel [!UICONTROL Selected Datasets] pannello e trascinarli nell’ordine di priorità corretto. Al set di dati principale verrà data la priorità più alta, al secondo sarà il secondo più alto e così via.
 
 ![](../images/merge-policies/dataset-precedence.png)
 
@@ -100,11 +100,11 @@ Dopo aver creato il criterio di unione, selezionare **[!UICONTROL Save]** per to
 
 ## Modificare un criterio di unione
 
-È possibile modificare un criterio di unione esistente tramite la [!UICONTROL Merge policies] scheda facendo clic su [!UICONTROL Policy name]* per il criterio di unione che si desidera modificare.
+È possibile modificare un criterio di unione esistente tramite la [!UICONTROL Merge policies] scheda selezionando il criterio **[!UICONTROL Policy name]** di unione da modificare.
 
 ![Pagina di destinazione Unisci criteri](../images/merge-policies/select-edit.png)
 
-Quando viene [!UICONTROL Edit merge policy] visualizzata la schermata, potete apportare modifiche al [!UICONTROL Name], [!UICONTROL Schema], [!UICONTROL ID stitching] tipo e [!UICONTROL Attribute merge] tipo, nonché selezionare se questo criterio sarà o meno il criterio [!UICONTROL Default merge policy] per l&#39;organizzazione.
+Quando viene **[!UICONTROL Edit merge policy]** visualizzata la schermata, potete apportare modifiche al [!UICONTROL Name], [!UICONTROL Schema], [!UICONTROL ID stitching] tipo e [!UICONTROL Attribute merge] tipo, nonché selezionare se questo criterio sarà o meno il criterio [!UICONTROL Default merge policy] per l&#39;organizzazione.
 
 >[!NOTE]
 >
