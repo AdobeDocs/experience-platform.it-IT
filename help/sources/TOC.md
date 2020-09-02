@@ -4,9 +4,9 @@ audience: user
 user-guide-title: Guida di Adobe Experience Platform Source Connectors
 user-guide-description: Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 translation-type: tm+mt
-source-git-commit: e628621903dbc0ec7381dfeae99902f503b34869
+source-git-commit: 1292e39ea7682b839ea75dd069ce32f1591345b8
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '627'
 ht-degree: 0%
 
 ---
@@ -132,6 +132,7 @@ ht-degree: 0%
    - [Acquisire dati di parquet da un sistema di storage cloud di terze parti](tutorials/api/cloud-storage-parquet.md)
    - [Creazione di una connessione di base di dataset tramite l&#39;API del servizio di flusso](tutorials/api/create-dataset-base-connection.md)
    - [Monitorare i flussi di dati mediante l&#39;API di Flusso Service](tutorials/api/monitor.md)
+   - [Aggiornamento delle informazioni di connessione tramite l&#39;API del servizio di flusso](tutorials/api/update.md)
 - Esercitazioni sull’interfaccia utente {#ui-tutorials}
    - Creare un connettore di origine {#create}
       -  applicazioni Adobe {#adobe-applications}
