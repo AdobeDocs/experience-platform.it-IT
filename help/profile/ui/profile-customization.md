@@ -5,9 +5,9 @@ title: Personalizzazione dei dettagli del profilo
 description: 'Questa guida fornisce istruzioni dettagliate per personalizzare il modo in cui i dati del profilo cliente in tempo reale vengono visualizzati nell’interfaccia utente di Adobe Experience Platform. '
 topic: guide
 translation-type: tm+mt
-source-git-commit: c3076b37d2242fce4fa62e747adeb8b0534e995d
+source-git-commit: b08644102e6455d4c4c8b03e747411d3c05c7deb
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1151'
 ht-degree: 0%
 
 ---
@@ -103,7 +103,7 @@ Dopo il salvataggio, tornate alla [!UICONTROL Detail] scheda in cui sono visibil
 
 ## Ripristina schede predefinite
 
-Se in qualsiasi momento decidete di rimuovere le modifiche e tornare alla visualizzazione predefinita, potete ripristinare rapidamente e facilmente tutte le schede e gli attributi predefiniti. A questo scopo, selezionate **[UICONTROL Modifica dashboard]**, quindi selezionate **[UICONTROL Ripristina schede]** predefinite. In questo modo verranno rimosse tutte le personalizzazioni (incluso il ridimensionamento) effettuate. Per continuare, selezionate **[UICONTROL Save]** per salvare le modifiche. Se avete selezionato di ripristinare per errore, selezionate **[UICONTROL Cancel]** per evitare di salvare le modifiche e mantenere le modifiche apportate.
+Se in qualsiasi momento decidete di rimuovere le modifiche e tornare alla visualizzazione predefinita, potete ripristinare rapidamente e facilmente tutte le schede e gli attributi predefiniti. A questo scopo, selezionate **[!UICONTROL Modify dashboard]**, quindi selezionate **[!UICONTROL Restore default cards]**. In questo modo verranno rimosse tutte le personalizzazioni (incluso il ridimensionamento) effettuate. Potete quindi selezionare **[!UICONTROL Save]** di salvare le modifiche o, se non desiderate ripristinare le modifiche predefinite, selezionare **[!UICONTROL Cancel]** per mantenere le modifiche apportate.
 
 >[!NOTE]
 >
