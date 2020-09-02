@@ -5,9 +5,9 @@ title: Connettore BLOB di Azure
 topic: overview
 description: La documentazione seguente fornisce informazioni su come collegare Azure Blob alla piattaforma utilizzando le API o l'interfaccia utente.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: d42351c194bb5a11f3175535de83fbd3b6ac58d2
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '383'
 ht-degree: 0%
 
 ---
@@ -51,15 +51,28 @@ I seguenti indirizzi IP devono essere aggiunti a un elenco consentiti  prima di 
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
+## Limitazioni per la denominazione di file e directory
+
+Di seguito è riportato un elenco di vincoli per i quali è necessario tenere conto al momento di denominare il file di archiviazione o la directory cloud.
+
+- I nomi di directory e componenti file non possono superare i 255 caratteri.
+- I nomi di directory e file non possono terminare con una barra (`/`). Se fornito, verrà rimosso automaticamente.
+- I seguenti caratteri URL riservati devono essere preceduti da una corretta escape: `! * ' ( ) ; : @ & = + $ , / ? % # [ ]`
+- I seguenti caratteri non sono consentiti: `" \ / : | < > * ?`.
+- Caratteri di percorso URL non validi. I punti di codice come `\uE000`, pur essendo validi nei nomi file NTFS, non sono caratteri Unicode validi. Inoltre, non sono consentiti caratteri ASCII o Unicode, come caratteri di controllo (da 0x00 a 0x1F, \u0081, ecc.). Per le regole che governano le stringhe Unicode in HTTP/1.1, vedere [RFC 2616, Sezione 2.2: Regole](https://www.ietf.org/rfc/rfc2616.txt) di base e [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- I seguenti nomi di file non sono consentiti: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, punto (..) e due punti (..).
+
+## Connetti [!DNL Azure Blob] a [!DNL Platform]
+
 La documentazione seguente fornisce informazioni su come collegare Azure Blob alla piattaforma utilizzando le API o l&#39;interfaccia utente:
 
-## Connessione [!DNL Azure Blob] all&#39; [!DNL Platform] utilizzo delle API
+### Utilizzo delle API
 
 - [Creare un connettore BLOB di Azure utilizzando l&#39;API del servizio di flusso](../../tutorials/api/create/cloud-storage/blob.md)
 - [Esplora un sistema di archiviazione cloud utilizzando l&#39;API del servizio di flusso](../../tutorials/api/explore/cloud-storage.md)
 - [Raccolta di dati di archiviazione cloud tramite l&#39;API del servizio di flusso](../../tutorials/api/collect/cloud-storage.md)
 
-## Collegare [!DNL Blob] e utilizzare S3 all&#39; [!DNL Platform] interfaccia utente
+### Utilizzo dell’interfaccia
 
 - [Creare un connettore di origine Azure Blob nell&#39;interfaccia utente](../../tutorials/ui/create/cloud-storage/blob.md)
 - [Configurare un flusso di dati per un connettore di archiviazione cloud nell&#39;interfaccia utente](../../tutorials/ui/dataflow/batch/cloud-storage.md)
