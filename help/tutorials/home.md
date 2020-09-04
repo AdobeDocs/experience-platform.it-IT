@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;workflow
 solution: Experience Platform
 title: Adobe Experience Platform Query Service
 topic: overview
 description: Queste esercitazioni sono state progettate per arricchire le informazioni contenute nella documentazione del Experience Platform , per garantire risultati ottimali, è necessario tenere a portata di mano i documenti durante il completamento delle esercitazioni.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
 workflow-type: tm+mt
 source-wordcount: '175'
 ht-degree: 0%
