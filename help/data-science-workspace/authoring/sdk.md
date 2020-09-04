@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;developer guide;SDK;Model authoring;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;SDK;Model authoring;Data Science Workspace;popular topics;testing
 solution: Experience Platform
 title: Guida per gli sviluppatori di SDK
 topic: Overview
 description: L’SDK per l’authoring dei modelli consente di sviluppare ricette di apprendimento automatico personalizzate e pipeline di funzionalità utilizzabili in Adobe Experience Platform Data Science Workspace, fornendo modelli implementabili in PySpark e Spark (Scala).
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
 workflow-type: tm+mt
 source-wordcount: '964'
 ht-degree: 1%
