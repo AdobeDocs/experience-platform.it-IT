@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;IAB;IAB 2.0;
+keywords: Experience Platform;home;IAB;IAB 2.0;consent;Consent
 solution: Experience Platform
 title: Supporto IAB TCF 2.0 nella piattaforma dati cliente in tempo reale
 topic: privacy events
+description: Questo documento fornisce i passaggi per impostare i due insiemi di dati richiesti per la raccolta dei dati di consenso IAB TCF 2.0.
 translation-type: tm+mt
-source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
+source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
 workflow-type: tm+mt
-source-wordcount: '1282'
+source-wordcount: '1299'
 ht-degree: 0%
 
 ---
