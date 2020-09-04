@@ -5,9 +5,9 @@ title: Anteprima profilo - API profilo cliente in tempo reale
 description: Adobe Experience Platform consente di acquisire dati dei clienti da più origini per creare profili unificati solidi per i singoli clienti. Poiché i dati attivati per il profilo cliente in tempo reale vengono trasferiti nella piattaforma, vengono memorizzati nell'archivio dati del profilo. Con l’aumento o la diminuzione del numero di record nell’archivio profili, viene eseguito un processo di esempio che include informazioni sul numero di frammenti di profilo e di profili uniti presenti nell’archivio dati. Utilizzando l'API Profile è possibile visualizzare in anteprima l'esempio di successo più recente, nonché distribuire il profilo di elenco per set di dati e per namespace di identità.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 75a07abd27f74bcaa2c7348fcf43820245b02334
+source-git-commit: 2edba7cba4892f5c8dd41b15219bf45597bd5219
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: '1475'
 ht-degree: 1%
 
 ---
@@ -59,6 +59,10 @@ La risposta include i dettagli dell&#39;ultimo processo di esempio riuscito eseg
 ```json
 {
   "numRowsToRead": "41003",
+  "sampleJobRunning": {
+    "status": true,
+    "submissionTimestamp": "2020-08-01 17:57:57.0"
+  },
   "cosmosDocCount": "\"300803\"",
   "totalFragmentCount": 47429,
   "lastSuccessfulBatchTimestamp": "\"null\"",
@@ -75,6 +79,7 @@ La risposta include i dettagli dell&#39;ultimo processo di esempio riuscito eseg
 | Proprietà | Descrizione |
 |---|---|
 | `numRowsToRead` | Il numero totale di profili uniti nell&#39;esempio. |
+| `sampleJobRunning` | Un valore booleano che restituisce `true` se è in corso un processo di esempio. Fornisce la trasparenza della latenza che si verifica da quando un file batch viene caricato quando viene effettivamente aggiunto all&#39;archivio dei profili. |
 | `cosmosDocCount` | Totale del numero di documenti in Cosmo. |
 | `totalFragmentCount` | Numero totale di frammenti di profilo nell&#39;archivio profili. |
 | `lastSuccessfulBatchTimestamp` | Timestamp ultimo caricamento batch riuscito. |
@@ -206,7 +211,7 @@ La richiesta seguente non specifica un `date` parametro e pertanto restituisce i
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
