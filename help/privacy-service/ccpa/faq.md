@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;consent;Consent
 solution: Experience Platform
 title: Domande frequenti su CCPA
 topic: troubleshooting
+description: Questo documento contiene le risposte alle domande frequenti sulla California Consumer Protection Act (CCPA) e sulla sua implementazione in Adobe Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '809'
 ht-degree: 0%
 
 ---
@@ -24,7 +25,7 @@ La [!DNL California Consumer Privacy Act] (CCPA) è la nuova legge sulla privacy
 >
 >Anche se tecnicamente efficace nel gennaio 2020, l&#39;CCPA è ancora messa a punto dai legislatori. Inoltre, importanti dettagli di attuazione e altri orientamenti sono disponibili nelle norme che devono ancora essere scritte dall&#39;autorità di regolamentazione della California.
 
-Sebbene l’APP condivida alcuni concetti forniti dal Regolamento generale sulla protezione dei dati (General Data Protection Regulation, GDPR) dell’Unione europea, come il diritto di accesso ed eliminazione dei dati personali, esistono diversi modi chiave in cui l’APP differisce dal GDPR. Ad esempio, l&#39;APP offre ai consumatori il diritto di non partecipare a determinate attività di condivisione dei dati che possono essere considerate come &quot;vendita&quot; di informazioni personali a terzi, piuttosto che richiedere il consenso preventivo.
+Sebbene l’APP condivida alcuni concetti forniti dal Regolamento generale sulla protezione dei dati (General Data Protection Regulation, GDPR) dell’Unione europea, come il diritto di accesso e cancellazione dei dati personali, esistono diversi modi chiave in cui l’APP differisce dal Regolamento generale sulla protezione dei dati (GDPR). Ad esempio, l&#39;APP offre ai consumatori il diritto di non partecipare a determinate attività di condivisione dei dati che possono essere considerate come &quot;vendita&quot; di informazioni personali a terzi, piuttosto che richiedere il consenso preventivo.
 
 ## Qual è la definizione di informazioni personali nell&#39;ambito dell&#39;APP?
 
@@ -75,7 +76,7 @@ Considerata tale relazione e  Adobe  lingua contrattuale, le informazioni al Ado
 
 ## Come posso supportare i requisiti sulla privacy dei consumatori in base all&#39;APP se mantengo certi tipi di dati coperti dai requisiti?
 
-Una volta che avete adottato le misure necessarie per autenticare i consumatori CA,  Adobe Experience Platform [!DNL Privacy Service] consente di inviare le richieste di privacy dei consumatori alle [!DNL Experience Cloud] applicazioni compatibili. Per ulteriori informazioni, consultate la panoramica [dei](../home.md) Privacy Service. Per informazioni su come [!DNL Experience Cloud] le applicazioni specifiche possono soddisfare le richieste di privacy, fare riferimento alla guida sulle applicazioni [](../experience-cloud-apps.md)Privacy Service e  Experience Cloud.
+Una volta che avete effettuato i passaggi necessari per autenticare i consumatori CA, Adobe Experience Platform [!DNL Privacy Service] vi consente di inviare le richieste di privacy dei consumatori ad [!DNL Experience Cloud] applicazioni compatibili. Per ulteriori informazioni, consultate la panoramica [dei](../home.md) Privacy Service. Per informazioni su come [!DNL Experience Cloud] le applicazioni specifiche possono soddisfare le richieste di privacy, fare riferimento alla guida sulle applicazioni [](../experience-cloud-apps.md)Privacy Service e  Experience Cloud.
 
 >[!NOTE]
 >
