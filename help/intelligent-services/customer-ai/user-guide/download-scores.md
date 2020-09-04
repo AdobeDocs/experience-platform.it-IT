@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;download scores;customer ai;popular topics
+keywords: Experience Platform;download scores;customer ai;popular topics;Export;export
 solution: Experience Platform
 title: Download dei punteggi nell'AI del cliente
 topic: Downloading scores
 description: L'AI del cliente consente di scaricare i punteggi nel formato file parquet.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
 workflow-type: tm+mt
 source-wordcount: '943'
 ht-degree: 2%
