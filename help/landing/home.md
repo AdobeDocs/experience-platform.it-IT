@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey
+keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration
 solution: Experience Platform
 title: Panoramica di Adobe Experience Platform
 topic: getting started
 description: Adobe Experience Platform è il sistema più potente, flessibile e aperto sul mercato per la creazione e la gestione di soluzioni complete che stimolano l'esperienza dei clienti.  Experience Platform consente alle organizzazioni di centralizzare e standardizzare i dati e i contenuti dei clienti da qualsiasi sistema e di applicare la scienza dei dati e l'apprendimento automatico per migliorare notevolmente la progettazione e la distribuzione di esperienze ricche e personalizzate.
 translation-type: tm+mt
-source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
+source-git-commit: 96be9401b3d3bf28176cbce5d139c42f63707c81
 workflow-type: tm+mt
-source-wordcount: '870'
-ht-degree: 3%
+source-wordcount: '934'
+ht-degree: 4%
 
 ---
 
@@ -82,6 +82,13 @@ La documentazione Adobe Experience Platform è disponibile in diverse lingue. Pe
 
 [!DNL Experience Platform] la documentazione è fornita in più formati per una varietà di funzioni e servizi. Per ulteriori informazioni sui tipi di documentazione disponibili, nonché per leggere brevi descrizioni di ciascuno dei [!DNL Platform] servizi, consultare la documentazione di [Experience Platform](documentation/overview.md). Oppure, per iniziare subito a conoscere un [!DNL Platform] servizio specifico, selezionate una guida dall&#39;elenco alfabetico nel menu di navigazione a sinistra.
 
+### Documentazione per i servizi di applicazione integrata in [!DNL Experience Platform]
+
+Oltre ai servizi di navigazione a sinistra,  Adobe ha creato altri servizi applicativi sopra  Experience Platform. La documentazione relativa a questi servizi è reperibile nei rispettivi archivi di documentazione, collegati di seguito:
+
+* [[!Customer Journey Analytics DNL]](https://docs.adobe.com/content/help/it-IT/analytics-platform/using/cja-landing.html)
+* [[!Journey Orchestration DNL]](https://docs.adobe.com/content/help/it-IT/journeys/using/journey-orchestration-home.html)
+
 >[!NOTE]
 >
 >A partire da maggio 2020,  Adobe sta distribuendo aggiornamenti al dominio e alla barra di intestazione per unificare e migliorare l&#39;esperienza in tutte le applicazioni  Experience Cloud. Include un nuovo menu Aiuto. Il nuovo menu Aiuto include le seguenti opzioni:
@@ -97,7 +104,7 @@ Di tanto in tanto, potreste ricevere un sondaggio per ricevere un feedback aggiu
 >
 >Questo rollout è graduale, pertanto le modifiche potrebbero non essere visualizzate immediatamente. Potete visualizzare l&#39;esperienza aggiornata in qualsiasi momento accedendo a [https://experience.adobe.com/platform](https://experience.adobe.com/platform).
 
-## [!DNL Experience Platform] esercitazioni
+## Esercitazioni del [!DNL Experience Platform]
 
 Per iniziare, seguite [!DNL Platform] rapidamente e facilmente le esercitazioni dettagliate per ogni tipo di attività, dalla preparazione dei dati per l&#39;assimilazione agli algoritmi di machine learning avanzati. Queste esercitazioni sono state progettate per arricchire le informazioni presenti nella [!DNL Experience Platform] documentazione, per garantire risultati ottimali, è necessario tenere a portata di mano i documenti durante il completamento delle esercitazioni. Per iniziare, visita le esercitazioni sul [Experience Platform](../tutorials/home.md) .
 
@@ -117,7 +124,7 @@ Per una breve panoramica dell&#39;interfaccia [!DNL Experience Platform's] utent
 
 * [**Guida alla risoluzione dei problemi**](troubleshooting.md)<br/> Risolvere gli errori più comuni e le risposte alle domande frequenti.
 
-* [**Nozioni di base sulle**](api-fundamentals.md)<br/> API Scopri le nozioni di base sull&#39;utilizzo delle [!DNL Platform] API.
+* [**Nozioni di base sulle**](api-fundamentals.md)<br/> API Scoprite le nozioni di base dell&#39;utilizzo delle [!DNL Platform] API.
 
 * [**API di riferimento**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>Discover [!DNL Experience Platform] API, incluse intestazioni, parametri, richieste di esempio e risposte. *Questi documenti sono ospitati  I/O Adobe.*
 
@@ -131,7 +138,7 @@ Uno dei vantaggi principali offerti da Adobe Experience Platform è la sua capac
 
 >[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
 
-Per ulteriori informazioni sull&#39;architettura di Adobe Experience Platform, guardate il seguente video:
+Per ulteriori informazioni sull&#39;architettura che abilita Adobe Experience Platform, guardate il seguente video:
 
 >[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)
 
@@ -146,11 +153,6 @@ I video seguenti descrivono le funzionalità chiave e i casi di utilizzo per [!D
 **Casi d’uso:**
 
 >[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
-
-
-
-
-
 
 
 
