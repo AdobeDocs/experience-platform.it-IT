@@ -5,9 +5,9 @@ title: Servizio di segmentazione Adobe Experience Platform
 topic: overview
 description: Questo documento fornisce una panoramica del servizio di segmentazione e del ruolo che esso svolge in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 5dd07bf9afe96be3a4c3f4a4d4e3b23aef4fde70
 workflow-type: tm+mt
-source-wordcount: '1991'
+source-wordcount: '1387'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Una volta che un segmento è stato concettualmente definito, è integrato [!DNL 
 
 Sia che vengano creati mediante l&#39;API o mediante l&#39; [!DNL Segment Builder], i segmenti vengono definiti in ultima analisi utilizzando [!DNL Profile Query Language] (PQL). Qui la definizione del segmento concettuale viene descritta nel linguaggio creato per recuperare i profili che soddisfano i criteri. Per ulteriori informazioni, consultate la panoramica [PQL](./pql/overview.md).
 
-Per informazioni su come creare e utilizzare i segmenti in [!DNL Segment Builder] (l’implementazione dell’interfaccia utente di [!DNL Segmentation Service]), consulta la guida [di](./ui/overview.md)Generatore di segmenti.
+Per informazioni su come creare e utilizzare i segmenti in [!DNL Segment Builder] (l’implementazione dell’interfaccia utente di [!DNL Segmentation Service]), consulta la guida [di](./ui/overview.md)Segment Builder (Generatore di segmenti).
 
 Per informazioni sulla creazione di definizioni di segmenti tramite l&#39;API, consulta l&#39;esercitazione sulla [creazione di segmenti di pubblico tramite l&#39;API](./tutorials/create-a-segment.md).
 
@@ -129,97 +129,11 @@ Assegnando una variabile all&#39;attributo stato acquisto, il segmento dinamico 
 
 ## Segmentazione multi-entità {#multi-entity}
 
-Con la funzione avanzata di segmentazione multi-entità, potete creare segmenti utilizzando più classi XDM, aggiungendo così estensioni agli schemi di persona. Di conseguenza, [!DNL Segmentation Service] è possibile accedere a campi aggiuntivi durante la definizione del segmento, come se fossero nativi dell&#39;archivio dati del profilo.
-
-La segmentazione multi-entità offre la flessibilità necessaria per identificare i tipi di pubblico in base ai dati pertinenti alle esigenze aziendali. Questo processo può essere fatto in modo rapido e semplice senza richiedere la competenza nella query dei database. Questo consente di aggiungere dati chiave ai segmenti senza dover apportare costose modifiche ai flussi di dati o aspettare un&#39;unione di dati back-end.
-
-Il seguente video è stato realizzato per consentire di comprendere meglio la segmentazione tra più entità e mostra sia la segmentazione multi-entità che il contesto del segmento (payload del segmento).
-
->[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
-
-### Caso di utilizzo: Promozione basata sui prezzi
-
-Per illustrare il valore di questa funzione di segmentazione avanzata, è consigliabile che un architetto dati collabori con un esperto di marketing.
-
-In questo esempio, l&#39;architetto dei dati unisce i dati per una singola classe (costituita da schemi con [!DNL XDM Individual Profile] e [!DNL XDM ExperienceEvent] come classi di base) utilizzando una chiave a un&#39;altra classe. Una volta uniti, l&#39;architetto dei dati o l&#39;esperto di marketing possono utilizzare questi nuovi campi durante la definizione del segmento come se fossero nativi dello schema della classe base.
-
-**Il problema**
-
-L&#39;architetto dei dati e l&#39;esperto di marketing lavorano entrambi per lo stesso rivenditore di abbigliamento. Il rivenditore ha più di 1.000 punti vendita in Nord America e riduce periodicamente i prezzi dei prodotti per tutto il loro ciclo di vita. Di conseguenza, l&#39;esperto di marketing vuole eseguire una campagna speciale per dare agli acquirenti che hanno acquistato questi articoli la possibilità di acquistarli al prezzo scontato.
-
-Le risorse dell&#39;architetto dati includono l&#39;accesso ai dati Web dalla navigazione dei clienti e ai dati di aggiunta del carrello contenenti identificatori SKU del prodotto. Hanno inoltre accesso a una classe &quot;prodotti&quot; separata, in cui vengono memorizzate informazioni aggiuntive sul prodotto (incluso il prezzo del prodotto). La loro guida è focalizzata sui clienti che hanno aggiunto un prodotto al loro carrello negli ultimi 14 giorni, ma non hanno acquistato l&#39;articolo, il cui prezzo è ora sceso.
-
-**La soluzione**
-
->[!NOTE]
->
->In questo esempio si suppone che l&#39;architetto dei dati abbia già stabilito uno spazio dei nomi ID.
-
-Utilizzando l&#39;API, l&#39;architetto dati collega la chiave dello [!DNL ExperienceEvent] schema alla classe &quot;products&quot;. In questo modo l&#39;architetto dei dati può utilizzare i campi aggiuntivi della classe &quot;products&quot; come se fossero nativi dello [!DNL ExperienceEvent] schema. Come fase finale del lavoro di configurazione, l&#39;architetto dei dati deve inserire i dati appropriati in [!DNL Real-time Customer Profile]. A questo scopo, abilita il dataset &quot;products&quot; da utilizzare con [!DNL Profile]. Una volta completata la configurazione, l&#39;architetto dei dati o l&#39;esperto di marketing possono creare il segmento di destinazione in [!DNL Segment Builder].
-
-Vedere la panoramica [sulla composizione dello](../xdm/schema/composition.md#union) schema per apprendere come definire le relazioni tra le classi XDM.
-
-<!-- ## Personalization payload
-
-Segments can now carry a payload of contextual details to enable deep personalization of Adobe Solutions as well as external non-Adobe applications. These payloads can be added while defining your target segment.
-
-With contextual data built into the segment itself, this advanced Segmentation Service feature allows you to better connect with your customer.
-
-Segment Payload helps you answer questions surrounding your customer’s frame of reference such as:
-- What: What product was purchased? What product should be recommended next?
-- When: At what time and date did the purchase occur?
-- Where: In which store or city did the customer make their purchase?
-
-While this solution does not change the binary nature of segment membership, it does add additional context to each profile through an associated segment membership object. Each segment membership object has the capacity to include three kinds of contextual data:
-
-- **Identifier**: this is the ID for the segment 
-- **Attributes**: this would include information about the segment ID such as last qualification time, XDM version, status and so on.
-- **Event data**: Specific aspects of experience events which resulted in the profile qualifying for the segment
-
-Adding this specific data to the segment itself allows execution engines to personalize the experience for the customers in their target audience. -->
-
-### Casi di utilizzo
-
-Per illustrare il valore di questa funzione di segmentazione avanzata, prendete in considerazione tre casi d’uso standard che illustrano le sfide presenti nelle applicazioni di marketing prima del miglioramento del payload del segmento:
-- Personalizzazione e-mail
-- Ritargeting e-mail
-- Ad retargeting
-
-**Personalizzazione e-mail**
-
-Un esperto di marketing che crea una campagna e-mail potrebbe aver tentato di creare un segmento per un pubblico target utilizzando gli acquisti recenti da parte dell&#39;archivio clienti negli ultimi tre mesi. Idealmente, questo segmento richiederebbe sia il nome dell&#39;articolo che il nome dello store in cui è stato effettuato l&#39;acquisto. Prima di questo miglioramento, la sfida era catturare l&#39;identificatore dello store dall&#39;evento di acquisto e assegnarlo al profilo del cliente.
-
-**Ritargeting e-mail**
-
-Spesso è complesso creare e qualificare segmenti per le campagne e-mail mirate all&#39;&quot;abbandono del carrello&quot;. Prima del miglioramento, sapere quali prodotti includere in un messaggio personalizzato era difficile a causa della disponibilità dei dati richiesti. I dati per i quali i prodotti sono stati abbandonati sono legati a eventi di esperienza che prima erano difficili da monitorare ed estrarre dati da.
-
-**Ad retargeting**
-
-Un&#39;altra sfida tradizionale per gli esperti di marketing è stata la creazione di annunci per ricompensare i clienti con articoli abbandonati del carrello. Mentre le definizioni dei segmenti affrontavano questa sfida, prima del miglioramento, non esisteva un metodo formale per distinguere tra prodotti acquistati e prodotti abbandonati. Ora è possibile eseguire il targeting di set di dati specifici durante la definizione del segmento.
+Grazie alla funzionalità di segmentazione multi-entità avanzata, è possibile estendere [!DNL Real-time Customer Profile] i dati con dati aggiuntivi basati su prodotti, store o altre entità non associate, note anche come entità &quot;dimensione&quot;. Di conseguenza, [!DNL Segmentation Service] è possibile accedere a campi aggiuntivi durante la definizione del segmento, come se fossero nativi dell&#39;archivio [!DNL Profile] dati. La segmentazione multi-entità offre flessibilità nell&#39;identificazione delle audience in base ai dati pertinenti alle esigenze aziendali specifiche. Per ulteriori informazioni, compresi i casi di utilizzo e i flussi di lavoro, consultate la guida [alla segmentazione per](multi-entity-segmentation.md)più entità.
 
 ## [!DNL Segmentation Service] tipi di dati
 
-[!DNL Segmentation Service] supporta diversi tipi di dati, tra cui:
-
-- Stringa
-- Uniform Resource Identifier
-- Enum
-- Numero
-- Long
-- Intero
-- Breve
-- Byte
-- Booleano
-- Data
-- Data-ora
-- Matrice
-- Oggetto
-- Mappa
-- Eventi
-- Tipi di pubblico esterni
-- Segmenti
-
-Informazioni più dettagliate su questi tipi di dati supportati sono disponibili nel documento [sui tipi di dati](./data-types.md)supportati.
+[!DNL Segmentation Service] supporta una serie di tipi di dati primitivi e complessi. Informazioni dettagliate, incluso un elenco dei tipi di dati supportati, sono disponibili nella guida [ai tipi di dati](./data-types.md)supportati.
 
 ## Passaggi successivi
 
