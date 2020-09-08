@@ -5,9 +5,9 @@ title: Configurare un flusso di dati per un connettore di pagamento nell'interfa
 topic: overview
 description: Un flusso di dati è un'attività pianificata che recupera e trasferisce dati da un'origine a un set di dati Adobe Experience Platform. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando il tuo account di pagamento.
 translation-type: tm+mt
-source-git-commit: 14044f9af50cd4c922294cd60f7b6549828e8aca
+source-git-commit: 5d4aa8eebc1837a5d8b275fa631f4af73c38158e
 workflow-type: tm+mt
-source-wordcount: '1236'
+source-wordcount: '1280'
 ht-degree: 0%
 
 ---
@@ -35,9 +35,15 @@ Dopo aver creato il conto pagamenti, viene visualizzato il **[!UICONTROL Select 
 - La metà sinistra dell&#39;interfaccia è un browser di directory che visualizza i file e le directory del server.
 - La metà destra dell&#39;interfaccia consente di visualizzare in anteprima fino a 100 righe di dati da un file compatibile.
 
-Selezionate la directory da utilizzare, quindi selezionate **[!UICONTROL Next]**.
+È possibile utilizzare l&#39; **[!UICONTROL Search]** opzione nella parte superiore della pagina per identificare rapidamente i dati di origine che si intende utilizzare.
 
-![add-data](../../../images/tutorials/dataflow/payments/add-data.png)
+>[!NOTE]
+>
+>L&#39;opzione per i dati dell&#39;origine di ricerca è disponibile per tutti i connettori sorgente basati su tabelle, ad eccezione dei connettori Analytics, Classifications, Event Hubs e Kinesis.
+
+Una volta trovati i dati di origine, seleziona la directory, quindi fai clic su **[!UICONTROL Next]**.
+
+![select-data](../../../images/tutorials/dataflow/all-tabular/select-data.png)
 
 ## Mappatura dei campi dati su uno schema XDM
 
