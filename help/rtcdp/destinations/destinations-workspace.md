@@ -5,9 +5,9 @@ seo-title: Area di lavoro Destinazioni
 description: 'L''area di lavoro Destinazioni è composta da quattro sezioni: Catalogo, Sfoglia, Account e Vista di sistema, descritte nelle sezioni seguenti.'
 seo-description: In  Adobe Piattaforma dati cliente in tempo reale, seleziona Destinazioni dalla barra di navigazione a sinistra per accedere all'area di lavoro delle destinazioni.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 59ac673c35954696fbb37417510035bdebff6f62
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '764'
 ht-degree: 1%
 
 ---
@@ -52,9 +52,31 @@ Selezionate una scheda di destinazione nel catalogo per aprire la barra laterale
 
 Per ulteriori informazioni sulle categorie di destinazione e informazioni su ciascuna destinazione, consulta Catalogo [di](/help/rtcdp/destinations/destinations-catalog.md) destinazione e Tipi e categorie [di](/help/rtcdp/destinations/destination-types.md)destinazione.
 
+## [!UICONTROL Accounts] {#accounts}
+
+Nella **[!UICONTROL Accounts]** scheda è possibile ottenere ulteriori informazioni sulle connessioni stabilite con diverse destinazioni. Vedi la tabella seguente per tutte le informazioni che puoi ottenere su ogni destinazione:
+
+>[!TIP]
+>
+>Utilizzare il pulsante ![](/help/rtcdp/destinations/assets/add-data-symbol.png) Aggiungi dati nella **[!UICONTROL Platform]** colonna per creare una nuova connessione di destinazione per tale account.
+
+![Scheda Account](/help/rtcdp/destinations/assets/accounts-tab.png)
+
+| Elemento | Descrizione |
+---------|----------
+| [!UICONTROL Platform] | Destinazione per la quale è stata impostata la connessione. |
+| [!UICONTROL Connection Type] | Rappresenta il tipo di connessione al bucket di archiviazione o alla destinazione. <ul><li>Per le destinazioni di e-mail marketing: Può essere S3 o FTP.</li><li>Per le destinazioni pubblicitarie in tempo reale: Server-to-server</li><li>Per  destinazioni di archiviazione cloud Amazon S3: Chiave di accesso </li><li>Per le destinazioni di archiviazione cloud SFTP: Autenticazione di base per SFTP</li></ul> |
+| [!UICONTROL Username] | Nome utente selezionato nella procedura guidata [di destinazione di](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination)connessione. |
+| [!UICONTROL Destinations] | Rappresenta il numero di flussi di destinazione univoci con esito positivo collegati alle informazioni di base create per una destinazione. |
+| [!UICONTROL Authorized] | Data in cui è stata autorizzata la connessione a questa destinazione. |
+
 ## [!UICONTROL Browse] {#browse}
 
-Nella **[!UICONTROL Browse]** scheda vengono visualizzate le destinazioni con le quali è stata stabilita una connessione. Le destinazioni con l&#39; **[!UICONTROL enabled]** interruttore attivato impostano la destinazione su attiva e viceversa. Per visualizzare le destinazioni in cui i dati scorrono, seleziona **[!UICONTROL Segments]** > **[!UICONTROL Browse]** e seleziona un segmento da ispezionare. Per tutte le informazioni fornite per ciascuna destinazione, consultate la tabella seguente nella scheda Sfoglia:
+Nella **[!UICONTROL Browse]** scheda vengono visualizzate le destinazioni con le quali è stata stabilita una connessione. Le destinazioni con l&#39; **[!UICONTROL Enabled]** interruttore attivato impostano la destinazione su attiva e viceversa. Per visualizzare le destinazioni in cui i dati scorrono, seleziona **[!UICONTROL Segments]** > **[!UICONTROL Browse]** e seleziona un segmento da ispezionare. Per tutte le informazioni fornite per ciascuna destinazione, consultate la tabella seguente nella scheda Sfoglia:
+
+>[!TIP]
+>
+>Utilizzare il pulsante ![](/help/rtcdp/destinations/assets/add-data-symbol.png) Aggiungi dati nella **[!UICONTROL Name]** colonna per attivare altri segmenti a tale destinazione.
 
 ![Scheda Sfoglia](/help/rtcdp/destinations/assets/browse-tab.png)
 
@@ -73,21 +95,6 @@ Fai clic su una riga di destinazione per visualizzare ulteriori informazioni sul
 ![Fare clic sulla riga di destinazione](/help/rtcdp/destinations/assets/click-destination-row.png)
 
 Selezionate il nome di destinazione per visualizzare informazioni sui segmenti attivati per questa destinazione. Fai clic **[!UICONTROL Edit activation]** per modificare o aggiungere i segmenti che vengono inviati a questa destinazione.
-
-## [!UICONTROL Accounts] {#accounts}
-
-Nella **[!UICONTROL Accounts]** scheda è possibile ottenere ulteriori informazioni sulle connessioni stabilite con diverse destinazioni. Vedi la tabella seguente per tutte le informazioni che puoi ottenere su ogni destinazione:
-
-![Scheda Account](/help/rtcdp/destinations/assets/accounts-tab.png)
-
-| Elemento | Descrizione |
----------|----------
-| [!UICONTROL Platform] | Destinazione per la quale è stata impostata la connessione. |
-| [!UICONTROL Connection Type] | Rappresenta il tipo di connessione al bucket di archiviazione o alla destinazione. <ul><li>Per le destinazioni di e-mail marketing: Può essere S3 o FTP.</li><li>Per le destinazioni pubblicitarie in tempo reale: Server-to-server</li><li>Per  destinazioni di archiviazione cloud Amazon S3: Chiave di accesso </li><li>Per le destinazioni di archiviazione cloud SFTP: Autenticazione di base per SFTP</li></ul> |
-| [!UICONTROL Username] | Nome utente selezionato nella procedura guidata [di destinazione di](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination)connessione. |
-| [!UICONTROL Data Flows] | Rappresenta il numero di flussi di destinazione univoci con esito positivo collegati alle informazioni di base create per una destinazione. |
-| [!UICONTROL Authorized] | Data in cui è stata autorizzata la connessione a questa destinazione. |
-| [!UICONTROL Status] | `Active` o `Inactive`. Indica se i dati sono attualmente attivati per questa destinazione. Per modificare lo stato, consultate [Disattivazione](/help/rtcdp/destinations/activate-destinations.md#disable-activation). |
 
 ## [!UICONTROL System View] {#system-view}
 
