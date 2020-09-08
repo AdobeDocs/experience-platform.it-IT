@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida utente Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: a09d80f4bacd5d4be77443d75aad278ad89259ef
 workflow-type: tm+mt
-source-wordcount: '1023'
+source-wordcount: '1021'
 ht-degree: 0%
 
 ---
@@ -24,11 +24,12 @@ Il dashboard per l’ [!DNL Privacy Service] interfaccia utente offre due widget
 
 ### Tipo di regolamento
 
-[!DNL Privacy Service] supporta le richieste di lavoro per tre tipi di regolamentazione:
+[!DNL Privacy Service] supporta le richieste di lavoro per quattro tipi di regolamentazione:
 
-* L&#39;Unione europea [!DNL General Data Protection Regulation] (RGPD)
-* L&#39; [!DNL California Consumer Privacy Act] (CCPA)
-* Thailandia [!DNL Personal Data Protection Act] (PDPA_THA)
+* L&#39;Unione europea [!DNL General Data Protection Regulation] ([!UICONTROL GDPR])
+* Le selezioni del menu [!DNL California Consumer Privacy Act] ([!UICONTROL CCPA])
+* Brasile [!DNL Lei Geral de Proteção de Dados] ([!UICONTROL LGPD_BRA])
+* Thailandia&#39;s [!DNL Personal Data Protection Act] ([!UICONTROL PDPA_THA])
 
 I processi per ciascun tipo di regolamento vengono tracciati separatamente. Per passare da un tipo di regola all&#39;altro, fare clic sul **[!UICONTROL Regulation Type]** menu a discesa e selezionare la regola desiderata dall&#39;elenco.
 
@@ -56,7 +57,7 @@ Per visualizzare ulteriori dettagli su un dato punto dati, fare clic sul punto d
 
 >[!NOTE]
 >
->Quando un filtro è stato applicato al widget Richieste di processo, potete rimuovere il filtro facendo clic sul **[!UICONTROL X]** filtro nella pillola del filtro. Le richieste di processo tornano quindi all’elenco di tracciamento predefinito.
+>Quando un filtro è stato applicato al widget Richieste di processo, potete rimuovere il filtro facendo clic sulla **X** nella pillola del filtro. Le richieste di processo tornano quindi all’elenco di tracciamento predefinito.
 
 ### Richieste di processo
 
