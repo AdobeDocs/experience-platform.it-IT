@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Monitorare account e flussi di dati
 topic: overview
 translation-type: tm+mt
-source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
+source-git-commit: b900ea05cc046cf19d415543c581d0bcdc4296ba
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '896'
 ht-degree: 0%
 
 ---
@@ -42,15 +42,25 @@ Selezionate l’icona funnel in alto a sinistra per avviare la finestra di ordin
 
 Il pannello di ordinamento consente di accedere agli account da un&#39;origine specifica. Selezionate la fonte con cui desiderate lavorare e selezionate l’account dall’elenco a destra.
 
+>[!TIP]
+>
+> Utilizzate il pulsante di controllo ![](../../images/tutorials/monitor/spectrum-control.png) spettro radio nella **[!UICONTROL Name]** colonna per creare un nuovo flusso di dati sorgente per l&#39;account selezionato.
+
 ![account-select](../../images/tutorials/monitor/accounts-sort.png)
 
-Dalla **[!UICONTROL Accounts]** pagina è possibile visualizzare un elenco dei flussi di dati esistenti o dei set di dati di destinazione associati all&#39;account a cui si è effettuato l&#39;accesso.
+Dalla **[!UICONTROL Accounts]** pagina, è possibile visualizzare un elenco dei flussi di dati esistenti o dei set di dati di destinazione associati all&#39;account a cui si ha accesso.Selezionare il controllo secondario per visualizzare ulteriori opzioni disponibili per il flusso di dati selezionato. Queste opzioni sono descritte di seguito:
+
+| Control | Descrizione |
+| ------- | ----------- |
+| [!UICONTROL Edit Schedule] | Consente di modificare la pianificazione di assimilazione del flusso di dati. |
+| [!UICONTROL Disable dataflow] | Consente di disabilitare l&#39;inserimento dei dati per il flusso di dati selezionato. |
+| [!UICONTROL Delete] | Consente di eliminare il flusso di dati selezionato. |
 
 ![flussi di dati](../../images/tutorials/monitor/dataflows.png)
 
 ## Monitorare i flussi di dati
 
-È possibile accedere ai flussi di dati direttamente dalla **[!UICONTROL Catalog]** pagina senza visualizzarli **[!UICONTROL Accounts]**. Selezionate **[!UICONTROL Dataflows]** dall’intestazione superiore per visualizzare un elenco dei flussi di dati esistenti.
+È possibile accedere ai flussi di dati direttamente dalla **[!UICONTROL Catalog]** pagina senza visualizzarli **[!UICONTROL Accounts]**. Selezionate **[!UICONTROL Dataflows]** dall’intestazione superiore per visualizzare un elenco dei flussi di dati.
 
 ![catalog-dataflows](../../images/tutorials/monitor/catalog-dataflows.png)
 
@@ -58,7 +68,7 @@ Viene visualizzato un elenco dei flussi di dati esistenti. In questa pagina è p
 
 ![elenco dei flussi di dati](../../images/tutorials/monitor/dataflows-list.png)
 
-Viene visualizzato il pannello di ordinamento. Selezionate la sorgente a cui desiderate accedere dal menu di scorrimento e selezionate il flusso di dati dall’elenco a destra.
+Viene visualizzato il pannello di ordinamento. Selezionate la sorgente a cui desiderate accedere dal menu di scorrimento e selezionate il flusso di dati dall’elenco a destra. È inoltre possibile selezionare il controllo secondario per visualizzare ulteriori opzioni disponibili per il flusso di dati selezionato.
 
 ![sort-dataflows](../../images/tutorials/monitor/dataflows-sort.png)
 
@@ -82,11 +92,10 @@ Vengono **[!UICONTROL Dataflow run overview]** visualizzate le informazioni sul 
 
 Fare riferimento alla tabella seguente per i codici di errore che è possibile visualizzare nella **[!UICONTROL Error summary]**.
 
-| Codice errore | Messaggio di errore |
+| Errore | Descrizione |
 | ---------- | ----------- |
-| `CONNECTOR-1001-500` | &quot;Si è verificato un problema con l&#39;attività di copia.&quot; |
-| `CONNECTOR-2001-500` | &quot;Si è verificato un problema durante la copia dall&#39;origine del Experience Platform  al dataset.&quot; |
-| `CONNECTOR-3001-500` | &quot;Si è verificato un problema con il provider di flusso durante la creazione del batch utilizzando l&#39;API di caricamento in blocco.&quot; |
+| `CONNECTOR-1001-500` | Errore durante la copia dei dati da un&#39;origine. |
+| `CONNECTOR-2001-500` | Errore durante l&#39;elaborazione dei dati copiati in [!DNL Platform]. Questo errore può riguardare l&#39;analisi, la convalida o la trasformazione. |
 
 La metà inferiore dello schermo contiene informazioni su **[!UICONTROL Dataflow run errors]**. Da qui, potete anche visualizzare i file acquisiti, visualizzare in anteprima e scaricare la diagnostica degli errori, oppure scaricare il file manifesto.
 
