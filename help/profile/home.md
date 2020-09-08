@@ -5,9 +5,9 @@ title: Panoramica del profilo cliente in tempo reale
 topic: guide
 description: Profilo cliente in tempo reale è un archivio di entità di ricerca generico che unisce i dati da varie risorse di dati aziendali e fornisce l'accesso a tali dati sotto forma di profili cliente individuali ed eventi serie temporali correlati. Questa funzione consente agli esperti di marketing di promuovere esperienze coordinate, coerenti e pertinenti con il pubblico attraverso più canali.
 translation-type: tm+mt
-source-git-commit: 5dd07bf9afe96be3a4c3f4a4d4e3b23aef4fde70
+source-git-commit: cef27082fec97530031061476b46f60859717825
 workflow-type: tm+mt
-source-wordcount: '1649'
+source-wordcount: '1650'
 ht-degree: 1%
 
 ---
@@ -90,7 +90,7 @@ Al fine di promuovere esperienze coordinate, coerenti e personalizzate per i cli
 
 ### [!DNL Profile] metriche di assimilazione
 
-Observability Insights consente di esporre le metriche chiave in Adobe Experience Platform. Oltre alle statistiche di [!DNL Platform] utilizzo e agli indicatori di prestazioni per diverse [!DNL Platform] funzionalità, sono disponibili metriche [!DNL Profile]correlate specifiche che consentono di conoscere i tassi di richieste in entrata, i tassi di acquisizione di successo, le dimensioni dei record acquisiti e altro ancora. Per saperne di più, leggi innanzitutto la panoramica [](../observability/home.md)Approfondimenti sull&#39;osservazione e per un elenco completo delle [!DNL Profile] metriche, consulta la documentazione sulle metriche [](../observability/metrics.md)disponibili.
+Observability Insights consente di esporre le metriche chiave in Adobe Experience Platform. Oltre alle statistiche di [!DNL Platform] utilizzo e agli indicatori di prestazioni per diverse [!DNL Platform] funzionalità, sono disponibili metriche [!DNL Profile]correlate specifiche che consentono di conoscere i tassi di richieste in entrata, i tassi di acquisizione di successo, le dimensioni dei record acquisiti e altro ancora. Per saperne di più, inizia leggendo la panoramica [API](../observability/api/overview.md)Observability Insights e per un elenco completo delle [!DNL Profile] metriche, consulta la documentazione sulle metriche [](../observability/api/metrics.md#available-metrics)disponibili.
 
 ## [!DNL Data governance] ed [!DNL Privacy]
 
