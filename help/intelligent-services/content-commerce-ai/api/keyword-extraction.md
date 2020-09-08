@@ -5,9 +5,9 @@ title: Estrazione colore
 topic: Developer guide
 description: Quando viene fornito un documento di testo, il servizio di estrazione delle parole chiave estrae automaticamente le parole chiave o le frasi chiave che meglio descrivono l’oggetto del documento. Per estrarre le parole chiave, viene utilizzata una combinazione di algoritmi di riconoscimento delle entità con nome (NER) e di estrazione delle parole chiave senza supervisione.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 31e4f1441676daa79f064c567ddc47e9198d0a0b
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '625'
 ht-degree: 3%
 
 ---
@@ -20,14 +20,6 @@ ht-degree: 3%
 >[!DNL Content and Commerce AI] è in versione beta. La documentazione è soggetta a modifiche.
 
 Quando viene fornito un documento di testo, il servizio di estrazione delle parole chiave estrae automaticamente le parole chiave o le frasi chiave che meglio descrivono l’oggetto del documento. Per estrarre le parole chiave, viene utilizzata una combinazione di algoritmi di riconoscimento delle entità con nome (NER) e di estrazione delle parole chiave senza supervisione.
-
-**Estrazione di parole chiave non supervisionata**
-
-Per l&#39;estrazione di parole chiave non supervisionate, viene utilizzato [[!DNL YAKE]](http://yake.inesctec.pt/) . [!DNL YAKE] è un metodo di estrazione automatico delle parole chiave rapido e accurato, utilizzato per selezionare le parole chiave più importanti da un documento. Gli [!DNL YAKE] estratti delle parole chiave vengono quindi filtrati per selezionare solo frasi noun.
-
-**Riconoscimento entità denominato**
-
-Per il riconoscimento di entità con nome, viene utilizzato il modello OntoNotes di [[!DNL spaCy]](https://spacy.io/). Questo modello assegna vettori token specifici per il contesto, tag di parte del discorso (POS), analisi delle dipendenze ed entità denominate. Il modello OntoNotes è uno dei [!DNL spaCy] modelli di base. Ulteriori informazioni sul modello OntoNotes sono disponibili [qui](https://spacy.io/models/en).
 
 Le entità denominate riconosciute da [!DNL Content and Commerce AI] sono elencate nella tabella seguente:
 
@@ -44,8 +36,6 @@ Le entità denominate riconosciute da [!DNL Content and Commerce AI] sono elenca
 | WORK_OF_ART | Titoli di libri, canzoni, ecc. |
 | LEGGE | Documenti denominati creati in leggi. |
 | LINGUA | Qualsiasi lingua con nome. |
-
-I risultati di [!DNL OntoNotes] vengono combinati con le parole chiave di [!DNL YAKE], e vengono quindi restituiti in ordine classifica in base alla loro importanza.
 
 **Formato API**
 
