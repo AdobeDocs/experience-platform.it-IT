@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics;GDPR;gdpr;ccpa:CCPA
+keywords: Experience Platform;home;popular topics;GDPR;gdpr;ccpa:CCPA;pdpa;PDPA;pdpa_that;PDPA_THA;lgpd;LGPD;lgpd_bra;LGPD_BRA;
 solution: Experience Platform
 title: ' Adobe Experience Platform Privacy Service'
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 5d88aca08b7cf1d55e1eed989de6aa514f82e113
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1561'
 ht-degree: 2%
 
 ---
@@ -47,7 +47,8 @@ Nella tabella seguente sono illustrate le normative sulla privacy legali che [!D
 | --- | --- |
 | CCPA (California) | The [!DNL California Consumer Privacy Act] (CCPA) enhances privacy rights and consumer protection for residents of California, United States. L&#39;CCPA fornisce nuovi diritti sulla privacy dei dati ai residenti della California, compreso il diritto di accedere ai loro dati personali ed eliminarli, di sapere se i loro dati personali sono venduti o divulgati (e a chi), e il diritto di non far vendere i loro dati a terzi.<br/><br/>Link per ulteriore documentazione: <ul><li>[Panoramica legale](https://oag.ca.gov/privacy/ccpa)</li><li>[Domande frequenti su CCPA](ccpa/faq.md)</li></ul> |
 | GDPR (Unione europea) | The [!DNL General Data Protection Regulation] (GDPR) introduced several new data privacy rights for members of the European Union, including the **Right to Access** and the **Right to be Forgotten**. Ciò significa che qualsiasi cittadino dell’UE i cui dati personali siano stati raccolti dalla tua azienda può richiedere l’accesso ai dati o la loro cancellazione in qualsiasi momento. <br/><br/>Link per ulteriore documentazione: <ul><li>[Panoramica legale](https://gdpr-info.eu/)</li><li>[Domande frequenti su RGPD](gdpr/faq.md)</li><li>[Terminologia RGPD](gdpr/terminology.md)</li></ul> |
-| PDPA_THA (Thailandia) | Il Personal Data Protection Act of Thailand (PDPA) è stato introdotto per proteggere i proprietari di dati thailandesi dalla raccolta, dall&#39;uso o dalla divulgazione illecita dei loro dati personali. Ispirandosi al GDPR dell&#39;Unione europea, il regolamento concede ai cittadini thailandesi il diritto di chiedere l&#39;accesso ai loro dati personali conservati o di eliminarli.<br/><br/>Link per ulteriore documentazione: <ul><li>[Panoramica legale](https://www.dataprotectionreport.com/2020/02/thailand-personal-data-protection-law/)</li><li>[Domande frequenti su PDPA_THA](pdpa-tha/faq.md)</li><li>[Terminologia PDPA_THA](pdpa-tha/terminology.md)</li></ul> |
+| LGPD (Brasile) | La [!DNL Lei Geral de Proteção de Dados] (LGPD) mira a regolamentare il trattamento dei dati personali di tutte le persone fisiche o giuridiche in Brasile. La LGPD conferisce ai cittadini brasiliani il diritto di accedere ai propri dati personali e di cancellarli, di sapere se i loro dati personali sono stati venduti o divulgati (e a chi), nonché il diritto di non far vendere i propri dati a terzi.<br/><br/>Link per ulteriore documentazione: <ul><li>[Panoramica legale](https://gdpr.eu/gdpr-vs-lgpd/)</li></ul> |
+| PDPA (Thailandia) | La [!DNL Personal Data Protection Act] Thailandia (PDPA) è stata introdotta per proteggere i proprietari di dati thailandesi dalla raccolta, uso o divulgazione illecita dei loro dati personali. Ispirandosi al GDPR dell&#39;Unione europea, il regolamento concede ai cittadini thailandesi il diritto di chiedere l&#39;accesso ai loro dati personali conservati o di eliminarli.<br/><br/>Link per ulteriore documentazione: <ul><li>[Panoramica legale](https://www.dataprotectionreport.com/2020/02/thailand-personal-data-protection-law/)</li><li>[Domande frequenti su PDPA](pdpa-tha/faq.md)</li><li>[Terminologia PDPA](pdpa-tha/terminology.md)</li></ul> |
 
 Se le operazioni relative ai dati rientrano nell&#39;ambito di applicazione di una qualsiasi delle suddette normative, rivedete la loro documentazione per informazioni importanti, quali i diritti specifici sulla privacy che offrono ai clienti e le finestre di conformità per soddisfare le richieste sulla privacy. Queste informazioni devono essere prese in considerazione quando si determina come integrare [!DNL Privacy Service] nel sistema CRM e come i clienti devono interagire con il tuo sito Web per effettuare richieste sulla privacy.
 
