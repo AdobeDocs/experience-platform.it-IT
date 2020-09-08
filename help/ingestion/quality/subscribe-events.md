@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Iscrizione agli eventi di assimilazione dei dati
 topic: overview
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 80a1694f11cd2f38347989731ab7c56c2c198090
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '612'
 ht-degree: 1%
 
 ---
@@ -20,75 +20,77 @@ I dati caricati in [!DNL Platform] devono passare attraverso più passaggi per r
 
 Per assistere nel monitoraggio del processo di assimilazione, [!DNL Experience Platform] consente di sottoscrivere un set di eventi pubblicati in ogni fase del processo, notificando all’utente lo stato dei dati acquisiti e ogni possibile errore.
 
-## Eventi di notifica dello stato disponibili
+## Registrazione di un webhook per le notifiche di assimilazione dei dati
 
-Di seguito è riportato un elenco delle notifiche di stato relative all’inserimento dei dati disponibili a cui puoi iscriverti.
+Per ricevere le notifiche di assimilazione dei dati, è necessario utilizzare [console](https://www.adobe.com/go/devs_console_ui) Sviluppatore di Adobe per registrare un webhook nell&#39;integrazione del Experience Platform .
+
+Seguite l’esercitazione sulle [notifiche [!DNL Adobe I/O Event] di iscrizione](../../observability/notifications/subscribe.md) per i passaggi dettagliati su come ottenere questo risultato.
+
+>[!IMPORTANT]
+>
+>Durante il processo di iscrizione, accertatevi di selezionare **[!UICONTROL Platform notifications]** il fornitore dell&#39;evento e di selezionare la sottoscrizione dell&#39; **[!UICONTROL Data ingestion notification]** evento quando richiesto.
+
+## Ricevere notifiche di assimilazione dei dati
+
+Dopo aver registrato correttamente il webhook e l&#39;acquisizione di nuovi dati, potete iniziare a ricevere le notifiche sull&#39;evento. Questi eventi possono essere visualizzati utilizzando il webhook stesso, oppure selezionando la **[!UICONTROL Debug Tracing]** scheda nella panoramica di registrazione dell&#39;evento del progetto in  Adobe Developer Console.
+
+Il seguente JSON è un esempio di payload di notifica che verrebbe inviato al webhook nel caso di un evento di caricamento batch non riuscito:
+
+```json
+{
+  "event_id": "93a5b11a-b0e6-4b29-ad82-81b1499cb4f2",
+  "event": {
+    "xdm:ingestionId": "01EGK8H8HF9JGFKNDCABHGA24G",
+    "xdm:customerIngestionId": "01EGK8H8HF9JGFKNDCABHGA24G",
+    "xdm:imsOrg": "{IMS_ORG}",
+    "xdm:completed": 1598374341560,
+    "xdm:datasetId": "5e55b556c2ae4418a8446037",
+    "xdm:eventCode": "ing_load_failure",
+    "xdm:sandboxName": "prod",
+    "sentTime": "1598374341595",
+    "processStartTime": 1598374342614,
+    "transformedTime": 1598374342621,
+    "header": {
+      "_adobeio": {
+        "imsOrgId": "{IMS_ORG}",
+        "providerMetadata": "aep_observability_catalog_events",
+        "eventCode": "platform_event"
+      }
+    }
+  }
+}
+```
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `event_id` | Un ID univoco generato dal sistema per la notifica. |
+| `event` | Un oggetto che contiene i dettagli dell&#39;evento che ha attivato la notifica. |
+| `event.xdm:datasetId` | L&#39;ID del set di dati a cui si applica l&#39;evento di assimilazione. |
+| `event.xdm:eventCode` | Un codice di stato che indica il tipo di evento attivato per il set di dati. Cfr. l&#39; [appendice](#event-codes) per i valori specifici e le relative definizioni. |
+
+Per visualizzare lo schema completo delle notifiche degli eventi, fare riferimento all&#39;archivio [GitHub](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json)pubblico.
+
+## Passaggi successivi
+
+Una volta registrate [!DNL Platform] le notifiche al progetto, potete visualizzare gli eventi ricevuti dal [!UICONTROL Project overview]. Per istruzioni dettagliate su come [tracciare gli eventi, consultate  Adobe eventi](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) I/O.
+
+## Appendice
+
+La sezione seguente contiene informazioni aggiuntive sull&#39;interpretazione dei payload di notifica dell&#39;assimilazione dei dati.
+
+### Eventi di notifica dello stato disponibili {#event-codes}
+
+Nella tabella seguente sono elencate le notifiche di stato dell’assimilazione dei dati disponibili alle quali potete iscrivervi.
+
+| Codice evento | Servizio piattaforma | Stato | Descrizione di un evento |
+| --- | ---------------- | ------ | ----------------- |
+| `ing_load_success` | [!DNL Data Ingestion] | success | È stato eseguito l&#39;assimilazione di un batch in un set di dati all&#39;interno dell&#39; [!DNL Data Lake]. |
+| `ing_load_failure` | [!DNL Data Ingestion] | fallimento | Impossibile assimilare un batch in un set di dati all&#39;interno dell&#39; [!DNL Data Lake]. |
+| `ps_load_success` | [!DNL Real-time Customer Profile] | success | Acquisizione batch riuscita nell&#39;archivio [!DNL Profile] dati. |
+| `ps_load_failure` | [!DNL Real-time Customer Profile] | fallimento | Impossibile assimilare un batch nell&#39;archivio [!DNL Profile] dati. |
+| `ig_load_success` | [!DNL Identity Service] | success | Caricamento dei dati nel grafico dell&#39;identità completato. |
+| `ig_load_failure` | [!DNL Identity Service] | fallimento | Impossibile caricare i dati nel grafico dell&#39;identità. |
 
 >[!NOTE]
 >
 >È disponibile un solo argomento evento per tutte le notifiche di assimilazione dei dati. Per distinguere tra stati diversi, è possibile utilizzare il codice evento.
-
-| Servizio piattaforma | Stato | Descrizione di un evento | Codice evento |
-| ---------------- | ------ | ----------------- | ---------- |
-| Destinazione dati | success | Ingestione - Batch completato | ing_load_success |
-| Destinazione dati | fallimento | Ingestione - Batch non riuscito | ing_load_failure |
-| Profilo del cliente in tempo reale | success | Servizio profilo - Batch di caricamento dati completato | ps_load_success |
-| Profilo del cliente in tempo reale | fallimento | Servizio profilo: batch di caricamento dati non riuscito | ps_load_failure |
-| Grafico identità | success | Grafico identità: batch di caricamento dati completato | ig_load_success |
-| Grafico identità | fallimento | Grafico identità: batch di caricamento dati non riuscito | ig_load_failure |
-
-## Schema payload di notifica
-
-Lo schema dell&#39;evento di notifica dell&#39;assimilazione dei dati è uno schema [!DNL Experience Data Model] (XDM) contenente campi e valori che forniscono dettagli sullo stato dei dati da assimilare. Per visualizzare lo schema [!DNL GitHub] di payload di [notifica più recente, visitare il](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json)repo pubblico XDM.
-
-## Iscriviti alle notifiche sullo stato di inserimento dei dati
-
-Attraverso [eventi](https://www.adobe.io/apis/experienceplatform/events.html)I/O di Adobe, potete iscrivervi a più tipi di notifiche mediante i webhooks. Le sezioni seguenti descrivono i passaggi per iscriversi alle [!DNL Platform] notifiche per gli eventi di assimilazione dei dati tramite  Adobe Developer Console.
-
-### Creare un nuovo progetto in  Adobe Developer Console
-
-Andate a [console](https://www.adobe.com/go/devs_console_ui) per sviluppatori di Adobi ed effettuate l&#39;accesso con il vostro Adobe ID . Attenetevi quindi ai passaggi descritti nell&#39;esercitazione sulla [creazione di un progetto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vuoto nella documentazione di  Adobe Developer Console.
-
-### Aggiunta di [!DNL Experience Platform] eventi al progetto
-
-Dopo aver creato un nuovo progetto, andate alla schermata di panoramica del progetto. Da qui, clicca **[!UICONTROL Add event]**.
-
-![](../images/quality/subscribe-events/add-event-button.png)
-
-Viene visualizzata **[!UICONTROL Add events]** la finestra di dialogo. Fare clic **[!UICONTROL Experience Platform]** per filtrare l&#39;elenco delle opzioni disponibili, quindi fare clic **[!UICONTROL Platform notifications]** prima di fare clic su **[!UICONTROL Next]**.
-
-![](../images/quality/subscribe-events/select-platform-events.png)
-
-Nella schermata successiva viene visualizzato un elenco dei tipi di evento a cui effettuare la sottoscrizione. Selezionate **[!UICONTROL Data ingestion notification]**, quindi fate clic su **[!UICONTROL Next]**.
-
-![](../images/quality/subscribe-events/choose-event-subscriptions.png)
-
-Nella schermata successiva viene richiesto di creare un token Web JSON (JWT). Potete generare automaticamente una coppia di chiavi o caricare la vostra chiave pubblica generata nel terminale.
-
-Ai fini di questa esercitazione, viene seguita la prima opzione. Fare clic sulla casella delle opzioni **[!UICONTROL Generate a key pair]**, quindi sul **[!UICONTROL Generate keypair]** pulsante nell&#39;angolo inferiore destro.
-
-![](../images/quality/subscribe-events/generate-keypair.png)
-
-Quando la coppia di chiavi viene generata, viene scaricata automaticamente dal browser. Il file deve essere memorizzato personalmente, in quanto non è persistente nella Developer Console.
-
-Nella schermata successiva è possibile esaminare i dettagli della coppia di chiavi appena generata. Fare clic **[!UICONTROL Next]** per continuare.
-
-![](../images/quality/subscribe-events/keypair-generated.png)
-
-Nella schermata successiva, fornite un nome e una descrizione per la registrazione all’evento. È buona norma creare un nome univoco e facilmente identificabile per distinguere la registrazione a questo evento da altri sullo stesso progetto.
-
-![](../images/quality/subscribe-events/registration-details.png)
-
-Nella stessa schermata, potete configurare facoltativamente la modalità di ricezione degli eventi. **[!UICONTROL Webhook]** consente di fornire un indirizzo webhook personalizzato per ricevere gli eventi, mentre **[!UICONTROL Runtime action]** consente di eseguire le stesse operazioni utilizzando [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
-
-Questa esercitazione salta questo passaggio di configurazione facoltativo. Al termine, fate clic **[!UICONTROL Save configured events]** per completare la registrazione dell&#39;evento.
-
-![](../images/quality/subscribe-events/receive-events.png)
-
-Viene visualizzata la pagina dei dettagli per la registrazione dell&#39;evento appena creata, in cui potete esaminare gli eventi ricevuti, eseguire il debug di traccia e modificare la configurazione.
-
-![](../images/quality/subscribe-events/registration-complete.png)
-
-## Passaggi successivi
-
-Una volta registrate [!DNL Platform] le notifiche al progetto, potete visualizzare gli eventi ricevuti dal dashboard del progetto. Per istruzioni dettagliate su come tracciare gli eventi, consultate la guida [Traccia  eventi](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) I/O del Adobe.
