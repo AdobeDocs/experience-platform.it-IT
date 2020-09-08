@@ -5,9 +5,9 @@ title: Endpoint API classificazione testo
 topic: Developer guide
 description: Il servizio classificazione testo, se dotato di frammento di testo, può classificarlo in una o più etichette. La classificazione può essere di tipo etichetta singola, etichetta multipla o gerarchico.
 translation-type: tm+mt
-source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
+source-git-commit: 31e4f1441676daa79f064c567ddc47e9198d0a0b
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '431'
 ht-degree: 4%
 
 ---
@@ -20,8 +20,6 @@ ht-degree: 4%
 >Content and Commerce AI è in versione beta. La documentazione è soggetta a modifiche.
 
 Il servizio classificazione testo, se dotato di frammento di testo, può classificarlo in una o più etichette. La classificazione può essere di tipo etichetta singola, etichetta multipla o gerarchico.
-
-La classificazione del testo utilizza un modello basato su [FastText](https://fasttext.cc/) che è stato addestrato utilizzando dati personalizzati.
 
 **Formato API**
 
