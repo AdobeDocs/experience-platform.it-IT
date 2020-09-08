@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Notifiche di esecuzione del flusso
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: '773'
 ht-degree: 1%
 
 ---
@@ -25,34 +25,23 @@ In questo documento sono descritti i passaggi necessari per effettuare la sottos
 
 ## Introduzione
 
-Questo documento richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa esercitazione presuppone che sia già stata creata almeno una connessione di origine il cui flusso viene eseguito da monitorare. Se non avete ancora configurato una connessione di origine, visitate la panoramica [delle](./home.md) origini per configurare l&#39;origine desiderata prima di tornare a questa guida.
 
-* [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
-* [[!DNL Profilo cliente in tempo reale]](../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-* [[!DNL Adobe Experience Platform Data Assestation]](../ingestion/home.md): [!DNL Data Ingestion] rappresenta i metodi multipli mediante i quali [!DNL Platform] vengono acquisiti i dati da tali origini, nonché il modo in cui tali dati vengono memorizzati all&#39;interno del [!DNL Data Lake] sistema per essere utilizzati dai [!DNL Platform] servizi a valle.
+Questo documento richiede anche una buona conoscenza dei webhooks e di come collegare un webhook da un&#39;applicazione all&#39;altra. Fare riferimento alla [[!DNL I/O Events] documentazione](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) per un&#39;introduzione ai webhooks.
 
-Questo documento richiede anche una buona conoscenza dei webhooks e di come collegare un webhook da un&#39;applicazione all&#39;altra. Per ulteriori informazioni sui webhooks, consulta la seguente [documentazione](https://requestbin.com/blog/working-with-webhooks/) .
+## Registrazione di un webhook per le notifiche di esecuzione del flusso
 
-## Registrazione del webhook
+Per ricevere le notifiche di esecuzione del flusso, è necessario utilizzare  console Sviluppatore di Adobe per registrare un webhook nell&#39; [!DNL Experience Platform] integrazione.
 
-Per ricevere le notifiche sullo stato dell&#39;esecuzione del flusso, è necessario registrare un webhook specificando un URL webhook univoco come parte dei dettagli di registrazione dell&#39;evento. Per collegare un webhook all&#39; [!DNL I/O Events] iscrizione, visita il servizio [](https://webhook.site/) webhook e copia l&#39;URL univoco fornito.
-
-![gancio](./images/notifications/webhook-url.png)
-
-## Iscriviti agli eventi
-
-Dopo aver acquisito un URL webhook univoco, andate a [eventi](https://www.adobe.io/apis/experienceplatform/events.html) I/O di Adobe e seguite i passaggi descritti nel documento delle notifiche [di assimilazione dei](../ingestion/quality/subscribe-events.md) dati per iniziare a sottoscrivere gli eventi.
+Seguite l’esercitazione sulle [notifiche [!DNL I/O Event] di iscrizione](../observability/notifications/subscribe.md) per i passaggi dettagliati su come ottenere questo risultato.
 
 >[!IMPORTANT]
 >
->Durante il processo di iscrizione, accertatevi di selezionare [!DNL Platform] le notifiche come fornitore dell&#39;evento e di selezionare le seguenti iscrizioni all&#39;evento:
+>Durante il processo di iscrizione, accertatevi di selezionare **[!UICONTROL Platform notifications]** come fornitore dell&#39;evento e di selezionare le seguenti iscrizioni all&#39;evento:
 >
 >* **[!UICONTROL Experience Platform Source's Flow Run Succeeded]**
 >* **[!UICONTROL Experience Platform Source's Flow Run Failed]**
 
->
->
-Quando viene richiesto di fornire un indirizzo webhook, utilizza l’URL webhook acquisito in precedenza.
 
 ## Ricevere notifiche di esecuzione del flusso
 
