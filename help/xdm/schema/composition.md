@@ -5,7 +5,7 @@ title: Nozioni di base sulla composizione dello schema
 topic: overview
 description: Questo documento fornisce un'introduzione agli schemi di Experience Data Model (XDM) e ai blocchi costitutivi, ai principi e alle procedure ottimali per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4251dc292ead3ce4dc8aef68ff04bb774047160d
+source-git-commit: 4a76101cb8a7afb947bdce263a73f79d931db154
 workflow-type: tm+mt
 source-wordcount: '2815'
 ht-degree: 0%
@@ -173,7 +173,7 @@ Un campo è il blocco predefinito più basilare di uno schema. I campi forniscon
 
 * Stringa
 * Intero
-* Numero
+* Doppio
 * Booleano
 * Matrice
 * Oggetto
