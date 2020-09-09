@@ -4,21 +4,29 @@ solution: Experience Platform
 title: Note sulla versione Privacy Service
 topic: release notes
 translation-type: tm+mt
-source-git-commit: 4cfa64e3371496e2408fe8fee64d49883334917c
+source-git-commit: 6eee7e903d36ed641c9f8e6120f549c02cb4bce4
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 5%
+source-wordcount: '538'
+ht-degree: 6%
 
 ---
 
 
 # Note sulla versione di [!DNL Privacy Service]
 
-Questo documento contiene informazioni sulle nuove funzioni per  Adobe Experience Platform [!DNL Privacy Service], nonché miglioramenti e correzioni di bug significativi.
+Questo documento contiene informazioni sulle nuove funzioni di Adobe Experience Platform [!DNL Privacy Service], nonché miglioramenti e correzioni di bug significativi.
 
 >[!NOTE]
 >
 >Le ultime note sulla versione di altri [!DNL Experience Platform] servizi sono disponibili [qui](../release-notes/latest/latest.md).
+
+## 9 settembre 2020
+
+### Nuove funzionalità
+
+| Funzione | Descrizione |
+| --- | --- |
+| Supporto per LGPD (Brasile) | I lavori per la privacy possono ora essere creati in base alla normativa brasiliana [!DNL Lei Geral de Proteção de Dados] (LGPD). Questi posti di lavoro sono tracciati secondo il codice di regolamentazione `lgpd_bra`. |
 
 ## 8 aprile 2020
 
