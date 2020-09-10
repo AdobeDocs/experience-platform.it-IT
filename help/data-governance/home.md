@@ -5,9 +5,9 @@ title: Adobe Experience Platform Data Governance
 topic: overview
 description: Adobe Experience Platform Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all'uso dei dati. Esso svolge un ruolo chiave all'interno  Experience Platform a vari livelli, tra cui catalogazione, linea di dati, etichettatura dell'uso dei dati, criteri di utilizzo dei dati e controllo dell'utilizzo dei dati per le azioni di marketing
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: fb21acc63448ec837b2f3bcbf6eb4da83fcddc63
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1338'
 ht-degree: 0%
 
 ---
@@ -120,3 +120,7 @@ La tabella seguente delinea i termini chiave relativi al [!DNL Data Governance] 
 Il seguente video è pensato per aiutarti a comprendere meglio il [!DNL Data Governance] framework.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
+
+Il seguente video fornisce un&#39;introduzione a varie [!DNL Data Governance] funzioni  Experience Platform.
+
+>[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on)
