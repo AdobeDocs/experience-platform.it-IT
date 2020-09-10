@@ -5,38 +5,36 @@ seo-title: Privacy nel profilo dei dati del cliente in tempo reale
 description: Il profilo dati cliente in tempo reale consente di semplificare il processo di mantenimento delle operazioni sui dati conformi alle normative sulla privacy.
 seo-description: Il profilo dati cliente in tempo reale consente di semplificare il processo di mantenimento delle operazioni sui dati conformi alle normative sulla privacy.
 translation-type: tm+mt
-source-git-commit: f9b21ee51d6246dbdae4500aad050b200539ff88
+source-git-commit: 1eaadb1877cc5221bf6b0b8eed042287e59155bf
 workflow-type: tm+mt
-source-wordcount: '312'
-ht-degree: 1%
+source-wordcount: '361'
+ht-degree: 0%
 
 ---
 
 
-# Privacy in CDP in tempo reale
+# Privacy in [!DNL Real-time CDP]
 
-[!DNL Real-time Customer Data Platform] (CDP in tempo reale) aiuta gli esperti di marketing a unire i dati provenienti da più sistemi aziendali, consentendo loro di identificare, comprendere e coinvolgere meglio i clienti.  Adobe considera la privacy dei dati dei consumatori come un principio fondamentale di progettazione e fornisce vari controlli per aiutare gli addetti al marketing a gestire la privacy dei dati dei loro clienti.
+[!DNL Real-time Customer Data Platform] ([!DNL Real-time CDP]) aiuta gli esperti di marketing a mettere insieme i dati provenienti da più sistemi aziendali, consentendo loro di identificare, comprendere e coinvolgere meglio i clienti.  Adobe considera la privacy dei dati dei consumatori come un principio fondamentale di progettazione e fornisce vari controlli per aiutare gli addetti al marketing a gestire la privacy dei dati dei loro clienti.
 
-La maggior parte delle funzionalità CDP in tempo reale è fornita da Adobe Experience Platform. Questo documento fornisce informazioni sulle diverse tecnologie per il miglioramento della privacy supportate da CDP in tempo reale, con collegamenti alla [!DNL Experience Platform] documentazione per ulteriori informazioni.
+La maggior parte delle [!DNL Real-time CDP] funzionalità è fornita da Adobe Experience Platform. Questo documento fornisce informazioni sulle varie tecnologie per il miglioramento della privacy supportate da [!DNL Real-time CDP], con collegamenti alla [!DNL Experience Platform] documentazione per ulteriori informazioni.
 
-## [!DNL Privacy Service]
+## Come soddisfare le richieste di accesso ed eliminazione dei clienti
 
-Adobe Experience Platform [!DNL Privacy Service] consente di semplificare il processo di conformità delle operazioni sui dati alle normative sulla privacy, quali [!DNL General Data Protection Regulation] (GDPR) e [!DNL California Consumer Privacy Act] (CCPA). Poiché il CDP in tempo reale sfrutta [!DNL Experience Platform] le capacità di raccolta e archiviazione dei dati, le richieste di accesso ed eliminazione per il GDPR e il CCPA devono essere gestite all&#39;interno [!DNL Platform]. Per un&#39;introduzione più dettagliata del servizio, consultate il documento di panoramica [](../../privacy-service/home.md) Privacy Service.
+Le normative sulla privacy legali, come il [!DNL General Data Protection Regulation] (GDPR) e il [!DNL California Consumer Privacy Act] (CCPA), danno ai clienti il diritto di richiedere l&#39;accesso o la cancellazione dei dati personali raccolti. Poiché [!DNL Real-time CDP] sfrutta [!DNL Experience Platform] le capacità di raccolta e archiviazione dei dati, le richieste dei clienti di accedere ed eliminare i loro dati personali devono essere gestite entro [!DNL Platform]. Per ulteriori informazioni, consulta la panoramica su [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) .
 
-Esistono due metodi per inviare le singole richieste di dati GDPR e CCPA per accedere ed eliminare i dati dei clienti:
+## Funzionalità di rifiuto
 
-* Utilizzate l&#39; [[!DNL Privacy Service UI]](https://privacyui.cloud.adobe.io/) per creare e monitorare le richieste di accesso ed eliminazione all&#39;interno di un&#39;area di lavoro visiva. Per istruzioni dettagliate, consultate la guida [utente ai](../../privacy-service/ui/overview.md) Privacy Service.
-* Utilizzate l&#39;API Privacy Service [[!DNL]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) per gestire le richieste di accesso ed eliminazione con le chiamate API RESTful. Per istruzioni dettagliate, vedete l&#39;esercitazione [API](../../privacy-service/api/getting-started.md) Privacy Service.
+[!DNL Real-time CDP] consente ai clienti di scegliere di non includere i propri dati personali nei casi di utilizzo della segmentazione. Le preferenze di rifiuto dei clienti vengono acquisite e memorizzate da [!DNL Real-time Customer Profile]e possono essere applicate escludendo gli utenti che hanno rinunciato da un segmento utilizzando la logica booleana (&quot;AND NOT&quot;) nel predicato del segmento.
 
-<!-- (Capability will not be available for November GA) 
-## Opt-out capabilities
+Per ulteriori informazioni, consulta il documento sul [rispetto delle richieste](../../segmentation/honoring-opt-outs.md) di rifiuto nella documentazione di Adobe Experience Platform Segmentation Service.
 
-Real-time CDP provides two types of consumer opt-out capabilities:
+## Supporto IAB TCF 2.0
 
-1. **General opt-out**: (Waiting on info)
-1. **Segment-level opt-out of sale**: Opt-out of sale requests are captured using the Profile Privacy mixin (see the section on "Handling opt-out requests" in the [Real-time Customer Profile overview](../../profile/home.md) for more information). Using this, you can exclude users who have opted out from a segment using boolean logic ("AND NOT") in the segment predicate.
--->
+[!DNL Real-time CDP] fa parte dell&#39;elenco [di](https://iabeurope.eu/vendor-list-tcf-v2-0/) fornitori registrati per il [!DNL Transparency & Consent Framework] (TCF), come indicato dall&#39; [!DNL Interactive Advertising Bureau] (IAB). In conformità ai requisiti di TCF 2.0, [!DNL Real-time CDP] puoi raccogliere dati dettagliati sul consenso dei clienti e integrarli nei profili dei clienti archiviati. Questi dati di consenso possono quindi essere presi in considerazione per stabilire se alcuni profili sono inclusi nei segmenti di pubblico esportati, a seconda del loro caso di utilizzo.
+
+Per ulteriori informazioni, consulta la panoramica sul supporto [IAB TCF 2.0 in [!DNL Real-time CDP]](./iab/overview.md) .
 
 ## Passaggi successivi
 
-Questo documento fornisce una breve introduzione alle funzionalità Privacy di CDP in tempo reale. Per informazioni più dettagliate sulle procedure ottimali e i passaggi per l&#39;invio delle richieste di accesso/eliminazione, consultare la documentazione [](../../privacy-service/home.md)Privacy Service.
+Questo documento ha fornito una breve introduzione alle capacità di privacy di [!DNL Real-time CDP]. Per ulteriori informazioni su ciascuna funzione, consulta la documentazione collegata in questa guida.
