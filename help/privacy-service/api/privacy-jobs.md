@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Processi
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: e7bb3e8a418631e9220865e49a1651e4dc065daf
+source-git-commit: 5d06932cbfe8a04589d33590c363412c054fc9fd
 workflow-type: tm+mt
-source-wordcount: '1782'
-ht-degree: 2%
+source-wordcount: '1309'
+ht-degree: 1%
 
 ---
 
@@ -15,6 +15,10 @@ ht-degree: 2%
 # Lavori di privacy
 
 Questo documento descrive come lavorare con i processi di privacy utilizzando le chiamate API. Nello specifico, copre l&#39;utilizzo dell&#39; `/job` endpoint nell&#39; [!DNL Privacy Service] API. Prima di leggere questa guida, fate riferimento alla sezione [](./getting-started.md#getting-started) introduttiva per informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all&#39;API, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
+
+>[!NOTE]
+>
+>Se state tentando di gestire richieste di consenso o di rifiuto da parte dei clienti, fate riferimento alla guida [all&#39;endpoint del](./consent.md)consenso.
 
 ## Elenca tutti i processi {#list}
 
@@ -206,128 +210,6 @@ Una risposta corretta restituisce i dettagli dei processi appena creati.
 | `jobId` | ID univoco generato dal sistema di sola lettura per un processo. Questo valore viene utilizzato nel passaggio successivo per cercare un processo specifico. |
 
 Dopo aver inviato correttamente la richiesta di processo, potete procedere alla fase successiva del [controllo dello stato](#check-status)del processo.
-
-### Creare un processo di rinuncia alla vendita {#opt-out}
-
-In questa sezione viene illustrato come effettuare una richiesta di OdL per la rinuncia alla vendita tramite l&#39;API.
-
-**Formato API**
-
-```http
-POST /jobs
-```
-
-**Richiesta**
-
-La richiesta seguente crea una nuova richiesta di processo, configurata dagli attributi forniti nel payload come descritto di seguito.
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/privacy/gdpr/ \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -d '{
-    "companyContexts": [
-      {
-        "namespace": "imsOrgID",
-        "value": "{IMS_ORG}"
-      }
-    ],
-    "users": [
-      {
-        "key": "DavidSmith",
-        "action": ["opt-out-of-sale"],
-        "userIDs": [
-          {
-            "namespace": "email",
-            "value": "dsmith@acme.com",
-            "type": "standard"
-          },
-          {
-            "namespace": "ECID",
-            "type": "standard",
-            "value":  "443636576799758681021090721276",
-            "isDeletedClientSide": false
-          }
-        ]
-      },
-      {
-        "key": "user12345",
-        "action": ["opt-out-of-sale"],
-        "userIDs": [
-          {
-            "namespace": "email",
-            "value": "ajones@acme.com",
-            "type": "standard"
-          },
-          {
-            "namespace": "loyaltyAccount",
-            "value": "12AD45FE30R29",
-            "type": "integrationCode"
-          }
-        ]
-      }
-    ],
-    "include": ["Analytics", "AudienceManager"],
-    "expandIds": false,
-    "priority": "normal",
-    "analyticsDeleteMethod": "anonymize",
-    "regulation": "ccpa"
-}'
-```
-
-| Proprietà | Descrizione |
-| --- | --- |
-| `companyContexts` **(Obbligatorio)** | Un array contenente informazioni di autenticazione per l&#39;organizzazione. Ogni identificatore elencato include i seguenti attributi: <ul><li>`namespace`: Spazio dei nomi di un identificatore.</li><li>`value`: Il valore dell’identificatore.</li></ul>È **necessario** che uno degli identificatori venga utilizzato `imsOrgId` come `namespace`, con `value` l’ID univoco per l’organizzazione IMS. <br/><br/>Gli identificatori aggiuntivi possono essere qualificatori aziendali specifici per il prodotto (ad esempio, `Campaign`), che identificano un&#39;integrazione con un&#39;applicazione di Adobe  appartenente all&#39;organizzazione. I potenziali valori includono nomi account, codici cliente, ID tenant o altri identificatori dell&#39;applicazione. |
-| `users` **(Obbligatorio)** | Array contenente una raccolta di almeno un utente le cui informazioni si desidera accedere o eliminare. In un&#39;unica richiesta è possibile fornire un massimo di 1000 ID utente. Ciascun oggetto utente contiene le informazioni seguenti: <ul><li>`key`: Identificatore per un utente utilizzato per qualificare gli ID processo separati nei dati della risposta. È consigliabile scegliere una stringa univoca e facilmente identificabile per questo valore in modo che possa essere facilmente reperibile o ricercato in un secondo momento.</li><li>`action`: Un array che elenca le azioni da eseguire sui dati. Per le richieste di rinuncia alla vendita, l&#39;array deve contenere solo il valore `opt-out-of-sale`.</li><li>`userIDs`: Raccolta di identità per l&#39;utente. Il numero di identità che un singolo utente può avere è limitato a nove. Ogni identità è costituita da un `namespace`, un `value`e un qualificatore dello spazio dei nomi (`type`). Per ulteriori dettagli su queste proprietà richieste, vedere l&#39; [appendice](appendix.md) .</li></ul> Per una spiegazione più dettagliata di `users` e `userIDs`, consultate la guida alla [risoluzione dei problemi](../troubleshooting-guide.md#user-ids). |
-| `include` **(Obbligatorio)** | Un array di prodotti  Adobe da includere nell&#39;elaborazione. Se questo valore risulta mancante o vuoto, la richiesta verrà rifiutata. Includete solo i prodotti con cui l&#39;organizzazione dispone di un&#39;integrazione. Per ulteriori informazioni, consulta la sezione sui valori [di prodotto](appendix.md) accettati nell’appendice. |
-| `expandIDs` | Una proprietà opzionale che, se impostata su `true`, rappresenta un&#39;ottimizzazione per l&#39;elaborazione degli ID nelle applicazioni (attualmente supportata solo da [!DNL Analytics]). Se omesso, il valore predefinito sarà `false`. |
-| `priority` | Proprietà opzionale utilizzata da  Adobe Analytics che imposta la priorità per l&#39;elaborazione delle richieste. I valori accettati sono `normal` e `low`. Se `priority` viene omesso, il comportamento predefinito è `normal`. |
-| `analyticsDeleteMethod` | Proprietà facoltativa che specifica come  Adobe Analytics deve gestire i dati personali. Per questo attributo sono accettati due possibili valori: <ul><li>`anonymize`: Tutti i dati a cui fa riferimento la raccolta di ID utente specificata vengono resi anonimi. Se `analyticsDeleteMethod` viene omesso, questo è il comportamento predefinito.</li><li>`purge`: Tutti i dati vengono rimossi completamente.</li></ul> |
-| `regulation` **(Obbligatorio)** | Il regolamento per la richiesta. Deve essere uno dei seguenti quattro valori: <ul><li>`gdpr`</li><li>`ccpa`</li><li>`lgpd_bra`</li><li>`pdpa_tha`</li></ul> |
-
-**Risposta**
-
-Una risposta corretta restituisce i dettagli dei processi appena creati.
-
-```json
-{
-    "jobs": [
-        {
-            "jobId": "6fc09b53-c24f-4a6c-9ca2-c6076bd9vjs0",
-            "customer": {
-                "user": {
-                    "key": "DavidSmith",
-                    "action": [
-                        "opt-out-of-sale"
-                    ]
-                }
-            }
-        },
-        {
-            "jobId": "6fc09b53-c24f-4a6c-9ca2-c6076bes0ewj2",
-            "customer": {
-                "user": {
-                    "key": "user12345",
-                    "action": [
-                        "opt-out-of-sale"
-                    ]
-                }
-            }
-        }
-    ],
-    "requestStatus": 1,
-    "totalRecords": 2
-}
-```
-
-| Proprietà | Descrizione |
-| --- | --- |
-| `jobId` | ID univoco generato dal sistema di sola lettura per un processo. Questo valore viene utilizzato per cercare un processo specifico nel passaggio successivo. |
-
-Dopo aver inviato correttamente la richiesta di processo, potete procedere al passaggio successivo per controllare lo stato del processo.
 
 ## Verificare lo stato di un processo {#check-status}
 
