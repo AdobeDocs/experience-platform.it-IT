@@ -1,13 +1,13 @@
 ---
 product: adobe experience platform
 audience: user
-user-guide-title: Guida della piattaforma dati cliente in tempo reale
+user-guide-title: Guida alla piattaforma dati cliente in tempo reale
 user-guide-description: Built on Adobe Experience Platform, Adobe Real-time Customer Data Platform (Real-time CDP) helps companies bring together known and anonymous data from multiple enterprise sources in order to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real time.
 translation-type: tm+mt
-source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
+source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
 workflow-type: tm+mt
 source-wordcount: '460'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 10%
          * [Annunci Google](/help/rtcdp/destinations/google-ads-destination.md)
          * [Estensione Google Ads](/help/rtcdp/destinations/google-ads-extension.md)
          * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
-         * [Google Customer Match](/help/rtcdp/destinations/google-customer-match-destination.md)
+         * [Customer Match di Google](/help/rtcdp/destinations/google-customer-match-destination.md)
          * [Google Display e Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
          * [Estensione Google Gtag](/help/rtcdp/destinations/gtag-advertising-extension.md)
          * [Estensione del tag LinkedIn Insight](/help/rtcdp/destinations/linkedin-extension.md)
