@@ -1,10 +1,10 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Aiuto sul profilo cliente in tempo reale
+user-guide-title: Guida al profilo cliente in tempo reale
 user-guide-description: Real-time Customer Profile provides a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third-party data. Profile allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 translation-type: tm+mt
-source-git-commit: 16f2bd7c650c5fbb09066940a730fa9dc768b261
+source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 16%
@@ -30,7 +30,7 @@ ht-degree: 16%
    * [[!DNL Profile] guida utente](ui/user-guide.md)
    * [[!DNL Profile] personalizzazione dei dettagli](ui/profile-customization.md)
    * [Guida utente per i criteri di unione](ui/merge-policies.md)
-* Esercitazioni {#tutorials}
+* Tutorial {#tutorials}
    * [Aggiungi dati a [!DNL Profile]](tutorials/add-profile-data.md)
    * [Configurare un set di dati [!DNL Profile] & [!DNL Identity] per il servizio](tutorials/dataset-configuration.md)
    * [Altre esercitazioni](https://docs.adobe.com/content/help/it-IT/experience-platform/tutorials/home.html)
