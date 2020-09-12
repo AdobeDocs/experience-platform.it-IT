@@ -2,9 +2,10 @@
 product: experience-platform
 audience: user
 user-guide-title: Guida all'inserimento dei dati Adobe Experience Platform
+breadcrumb-title: Data Ingestion Guide
 user-guide-description: Adobe Experience Platform brings data from multiple sources together in order to help marketers better understand the behavior of their customers. Adobe Experience Platform Data Ingestion represents the multiple methods by which Platform ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream Platform services.
 translation-type: tm+mt
-source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
+source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 5%
@@ -24,7 +25,7 @@ ht-degree: 5%
    - [API di acquisizione batch](batch-ingestion/api-overview.md)
    - [Iniezione parziale del batch](batch-ingestion/partial.md)
    - [Risoluzione dei problemi](batch-ingestion/troubleshooting.md)
-- Esercitazioni {#tutorials}
+- Tutorial {#tutorials}
    - [Mappare un file CSV in XDM](tutorials/map-a-csv-file.md)
    - [Caricamento di dati batch tramite l’interfaccia utente](tutorials/ingest-batch-data.md)
    - [Creare una connessione in streaming autenticata](tutorials/create-authenticated-streaming-connection.md)
