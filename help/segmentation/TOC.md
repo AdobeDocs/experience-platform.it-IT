@@ -2,9 +2,10 @@
 product: experience-platform
 audience: user
 user-guide-title: Guida di Adobe Experience Platform Segmentation Service
+breadcrumb-title: Segmentation Service Guide
 user-guide-description: Adobe Experience Platform Segmentation Service provides a user interface and RESTful API that allows you to build segments and generate audiences from your Real-time Customer Profile data. These segments are centrally configured and maintained on Platform, and are readily accessible by any Adobe application.
 translation-type: tm+mt
-source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
+source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 7%
@@ -46,7 +47,7 @@ ht-degree: 7%
    - [Funzioni filtro](pql/filter-functions.md)
    - [Quantificatori logici](pql/logical-quantifiers.md)
    - [Funzioni varie](pql/misc-functions.md)
-- Esercitazioni {#tutorials}
+- Tutorial {#tutorials}
    - [Creazione di un segmento](tutorials/create-a-segment.md)
    - [Valutazione di un segmento](tutorials/evaluate-a-segment.md)
    - [Creazione di un dataset per esportare i dati](tutorials/create-dataset-export-segment.md)
