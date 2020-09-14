@@ -5,9 +5,9 @@ title: Personalizzazione dei dettagli del profilo
 description: 'Questa guida fornisce istruzioni dettagliate per personalizzare il modo in cui i dati del profilo cliente in tempo reale vengono visualizzati nell’interfaccia utente di Adobe Experience Platform. '
 topic: guide
 translation-type: tm+mt
-source-git-commit: b08644102e6455d4c4c8b03e747411d3c05c7deb
+source-git-commit: 52cccd7436e203725a9fb4be8406332d8f23a71d
 workflow-type: tm+mt
-source-wordcount: '1151'
+source-wordcount: '1094'
 ht-degree: 0%
 
 ---
@@ -103,11 +103,7 @@ Dopo il salvataggio, tornate alla [!UICONTROL Detail] scheda in cui sono visibil
 
 ## Ripristina schede predefinite
 
-Se in qualsiasi momento decidete di rimuovere le modifiche e tornare alla visualizzazione predefinita, potete ripristinare rapidamente e facilmente tutte le schede e gli attributi predefiniti. A questo scopo, selezionate **[!UICONTROL Modify dashboard]**, quindi selezionate **[!UICONTROL Restore default cards]**. In questo modo verranno rimosse tutte le personalizzazioni (incluso il ridimensionamento) effettuate. Potete quindi selezionare **[!UICONTROL Save]** di salvare le modifiche o, se non desiderate ripristinare le modifiche predefinite, selezionare **[!UICONTROL Cancel]** per mantenere le modifiche apportate.
-
->[!NOTE]
->
->Fate attenzione quando ripristinate le schede e gli attributi predefiniti. Una volta ripristinato e salvato il valore predefinito, l&#39;unico modo per tornare alle personalizzazioni della vista è crearle nuovamente utilizzando i passaggi descritti in questo documento.
+Se in qualsiasi momento si decide di ripristinare le schede predefinite che sono state rimosse, è possibile farlo in modo rapido e semplice. Innanzitutto, selezionate **[!UICONTROL Modify dashboard]**, quindi **[!UICONTROL Restore default cards]**. Una volta che le schede predefinite sono visibili, è possibile selezionare **[!UICONTROL Save]** per salvare le modifiche o selezionare **[!UICONTROL Cancel]** se non si desidera ripristinare le schede predefinite.
 
 ![](../images/profile-customization/profiles-restore-default.png)
 
