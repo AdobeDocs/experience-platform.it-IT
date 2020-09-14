@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: ' linee guida del Experience Platform'
 topic: guide
 translation-type: tm+mt
-source-git-commit: d9e4812e3506de3082670a8afde5480cd8f865d6
+source-git-commit: 51111b2e831a37949150b107eb76711e2470523c
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1201'
 ht-degree: 1%
 
 ---
@@ -96,5 +96,5 @@ I seguenti trattini di sicurezza fanno riferimento alla dimensione dei dati e so
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --- | --- | --- | --- |
-| Dimensione totale massima per entità dimensionale | 1 GB | Morbido | **La dimensione totale massima consigliata per un&#39;entità dimensione è 1 GB.** L&#39;inserimento di entità di grandi dimensioni comporterà un peggioramento delle prestazioni del sistema. Ad esempio, non è consigliabile tentare di caricare un catalogo di prodotti da 10 GB come entità dimensione. |
+| Dimensione totale massima per tutte le entità dimensionali | 5 GB | Morbido | **La dimensione totale massima consigliata per tutte le entità dimensionali è 5 GB.** L&#39;inserimento di entità di grandi dimensioni comporterà un peggioramento delle prestazioni del sistema. Ad esempio, non è consigliabile tentare di caricare un catalogo di prodotti da 10 GB come entità dimensione. |
 | Set di dati per schema entità dimensionale | 5 | Morbido | **È consigliabile un massimo di 5 set di dati associati a ogni schema di entità dimensionale.** Ad esempio, se si crea uno schema per &quot;products&quot; e si aggiungono cinque dataset contributivi, non creare un sesto dataset associato allo schema di prodotti. |
