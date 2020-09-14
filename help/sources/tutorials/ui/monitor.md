@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Monitorare account e flussi di dati
 topic: overview
 translation-type: tm+mt
-source-git-commit: 737ee0bd55dbf178505c9be0875b2a0b75d3217a
+source-git-commit: 20c3037295b49cba45fcc5901803107dea26b3b2
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '936'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,14 @@ Il pannello di ordinamento consente di accedere agli account da un&#39;origine s
 > Utilizzate il pulsante di controllo ![](../../images/tutorials/monitor/spectrum-control.png) spettro radio nella **[!UICONTROL Name]** colonna per creare un nuovo flusso di dati sorgente per l&#39;account selezionato.
 
 ![account-select](../../images/tutorials/monitor/accounts-sort.png)
+
+Inoltre, potete modificare le informazioni sull&#39;account esistente e aggiornare le credenziali dell&#39;account. Selezionate l’icona matita per le informazioni sull’account da modificare.
+
+![](../../images/tutorials/monitor/click-edit.png)
+
+Viene **[!UICONTROL Edit account details]** visualizzato il modale. Da questa pagina è possibile aggiornare i dettagli dell&#39;account e le credenziali di autenticazione esistenti.
+
+![](../../images/tutorials/monitor/edit-account.png)
 
 Dalla **[!UICONTROL Accounts]** pagina è possibile visualizzare un elenco dei flussi di dati esistenti o dei set di dati di destinazione associati all&#39;account a cui si è effettuato l&#39;accesso. Per visualizzare ulteriori opzioni disponibili per il flusso di dati selezionato, fate clic`...`sul pulsante con i puntini di sospensione. Queste opzioni sono descritte di seguito:
 
