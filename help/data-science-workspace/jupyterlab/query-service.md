@@ -5,7 +5,7 @@ title: Servizio query nel blocco appunti Jupyter
 topic: Tutorial
 description: Adobe Experience Platform consente di utilizzare il linguaggio SQL (Structures Query Language) in Data Science Workspace integrando il servizio Query in JupyterLab come funzione standard. Questa esercitazione illustra le query SQL di esempio per i casi di utilizzo più comuni per esplorare, trasformare e analizzare  dati Adobe Analytics.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
 workflow-type: tm+mt
 source-wordcount: '812'
 ht-degree: 1%
@@ -37,7 +37,7 @@ Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prer
 
 1. In [[!DNL  Experience Platform]](https://platform.adobe.com), andate **[!UICONTROL Notebooks]** dalla colonna di navigazione a sinistra. Lasciate che venga caricato JupyterLab al momento.
 
-   ![](../images/jupyterlab/query/jupyterlab_launcher.png)
+   ![](../images/jupyterlab/query/jupyterlab-launcher.png)
 
    >[!NOTE]
    >
@@ -289,6 +289,6 @@ ORDER  BY Count DESC
 LIMIT  10;
 ```
 
-## Passaggi successivi <!-- omit in toc -->
+## Passaggi successivi
 
 Questa esercitazione ha mostrato alcuni esempi di utilizzo [!DNL Query Service] in [!DNL Jupyter] notebook. Segui l’esercitazione [Analizza i dati utilizzando Jupyter Notebooks](./analyze-your-data.md) per vedere come vengono eseguite operazioni simili con l’SDK per l’accesso ai dati.
