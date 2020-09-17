@@ -5,9 +5,9 @@ title: Procedura dettagliata di Data Science Workspace
 topic: Walkthrough
 description: Questo documento fornisce una panoramica per Adobe Experience Platform Data Science Workspace. In particolare, il flusso di lavoro generale che un esperto di dati dovrebbe affrontare per risolvere un problema utilizzando l'apprendimento automatico.
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 0d76b14599bc6b6089f9c760ef6a6be3a19243d4
 workflow-type: tm+mt
-source-wordcount: '1667'
+source-wordcount: '1701'
 ht-degree: 0%
 
 ---
@@ -15,22 +15,22 @@ ht-degree: 0%
 
 # [!DNL Data Science Workspace] guida
 
-Questo documento fornisce una guida dettagliata per Adobe Experience Platform [!DNL Data Science Workspace]. Nello specifico, analizzeremo il flusso di lavoro generale che un esperto di dati dovrebbe seguire per risolvere un problema utilizzando l&#39;apprendimento automatico.
+Questo documento fornisce una guida dettagliata per Adobe Experience Platform [!DNL Data Science Workspace]. Questa esercitazione illustra un flusso di lavoro generale di data scienziist e come potrebbero affrontare e risolvere un problema utilizzando l&#39;apprendimento automatico.
 
 ## Prerequisiti
 
 - Un account Adobe ID  registrato
-   - L&#39;account Adobe ID  deve essere stato aggiunto a un&#39;organizzazione con accesso ad Adobe Experience Platform e [!DNL Data Science Workspace]
+   - L&#39;account Adobe ID  deve essere stato aggiunto a un&#39;organizzazione con accesso ad Adobe Experience Platform e [!DNL Data Science Workspace].
 
-## Motivazione dello scienziato informatico
+## Caso di utilizzo al dettaglio
 
-Un rivenditore deve affrontare molte sfide per rimanere competitivo nel mercato attuale. Una delle principali preoccupazioni del rivenditore è quella di decidere il prezzo ottimale dei propri prodotti e di prevedere le tendenze di vendita. Grazie a un modello di previsione accurato, il rivenditore sarà in grado di individuare la relazione tra le politiche di domanda e di prezzo e di prendere decisioni di prezzo ottimizzate per massimizzare le vendite e i ricavi.
+Un rivenditore deve affrontare molte sfide per rimanere competitivo nel mercato attuale. Una delle principali preoccupazioni del rivenditore è quella di decidere il prezzo ottimale di un prodotto e di prevedere le tendenze di vendita. Con un modello di previsione accurato, un rivenditore potrebbe trovare la relazione tra le politiche di domanda e di prezzo e prendere decisioni di prezzo ottimizzate per massimizzare le vendite e i ricavi.
 
 ## La soluzione del Data Scienziato
 
-La soluzione di uno scienziato informatico è quella di sfruttare la ricchezza di dati storici a cui un rivenditore ha accesso, di prevedere le tendenze future e di ottimizzare le decisioni di determinazione dei prezzi. Useremo i dati di vendita passati per formare il nostro modello di apprendimento automatico e utilizzeremo il modello per prevedere le tendenze di vendita future. In questo modo, il rivenditore potrà avere informazioni utili per apportare modifiche ai prezzi.
+La soluzione di uno scienziato informatico è quella di sfruttare la ricchezza di informazioni storiche fornite da un rivenditore, di prevedere le tendenze future e di ottimizzare le decisioni di prezzo. Questa procedura dettagliata utilizza i dati di vendita passati per formare un modello di machine learning e utilizza il modello per prevedere le tendenze di vendita future. Con questo, puoi generare informazioni utili per apportare modifiche ottimali ai prezzi.
 
-In questa panoramica, seguiremo i passi che uno scienziato di dati dovrebbe compiere per prendere un set di dati e creare un modello per prevedere le vendite settimanali. Verranno analizzate le seguenti sezioni nel Sample Retail Sales Notebook di Adobe Experience Platform [!DNL Data Science Workspace]:
+Questa panoramica rispecchia i passi che un esperto di dati dovrebbe compiere per prendere un set di dati e creare un modello per prevedere le vendite settimanali. Questa esercitazione illustra le sezioni seguenti del Sample Retail Sales Notebook di Adobe Experience Platform [!DNL Data Science Workspace]:
 
 - [Configurazione](#setup)
 - [Esplorazione dei dati](#exploring-data)
@@ -39,25 +39,24 @@ In questa panoramica, seguiremo i passi che uno scienziato di dati dovrebbe comp
 
 ### Blocco note in [!DNL Data Science Workspace]
 
-In primo luogo, vogliamo creare un [!DNL JupyterLab] blocco appunti per aprire il blocco appunti di esempio &quot;Vendite al dettaglio&quot;. Seguendo i passi fatti dallo scienziato informatico nel notebook, potremo comprendere meglio il flusso di lavoro tipico.
+Nell’interfaccia utente di Adobe Experience Platform, selezionate **[!UICONTROL Notebooks]** dalla **[!UICONTROL Data Science]** scheda per passare alla pagina della [!UICONTROL Notebooks] panoramica. Da questa pagina, selezionate la [!DNL JupyterLab] scheda per avviare l&#39; [!DNL JupyterLab] ambiente. La pagina di destinazione predefinita per [!DNL JupyterLab] è la **[!UICONTROL Launcher]**.
 
-Nell’interfaccia utente di Adobe Experience Platform, fai clic sulla scheda Scienze dati nel menu principale per passare all’ [!DNL Data Science Workspace]. Da questa pagina, fare clic sulla [!DNL JupyterLab] scheda che aprirà il [!DNL JupyterLab] modulo di avvio. Dovrebbe essere visualizzata una pagina simile a questa.
+![](./images/walkthrough/notebooks.png)
 
 ![](./images/walkthrough/jupyterlab_launcher.png)
 
-Nella nostra esercitazione, useremo [!DNL Python] 3 in [!DNL Jupyter Notebook] per mostrare come accedere ed esplorare i dati. Nella pagina Launcher sono disponibili alcuni blocchi appunti di esempio. Utilizzeremo il campione &quot;Vendite al dettaglio&quot; per [!DNL Python] 3.
-
-![](./images/walkthrough/retail_sales.png)
+Questa esercitazione utilizza [!DNL Python] 3 in [!DNL JupyterLab Notebooks] per mostrare come accedere ed esplorare i dati. Nella pagina Launcher sono disponibili alcuni blocchi appunti di esempio. Il blocco appunti **[!UICONTROL Retail Sales]** di esempio è utilizzato negli esempi riportati di seguito.
 
 ### Configurazione {#setup}
 
-Con il notebook Retail Sales aperto, la prima cosa da fare è caricare le librerie necessarie per il nostro flusso di lavoro. Nell&#39;elenco seguente viene fornita una breve descrizione di ciascuno degli elementi utilizzati:
-- **numpy** - libreria scientifica di calcolo che aggiunge il supporto per array e matrici multidimensionali di grandi dimensioni
-- **panda** - libreria che offre strutture e operazioni di dati utilizzate per la manipolazione e l&#39;analisi dei dati
-- **matplotlib.pyplot** : libreria di plotting che fornisce un&#39;esperienza simile a MATLAB durante la stampa
-- **sea** - libreria di visualizzazione dei dati dell&#39;interfaccia di alto livello basata su matplotlib
-- **sklearn** - libreria di machine learning con classificazione, regressione, supporto di algoritmi vettoriali e cluster
-- **avvisi** : libreria che controlla i messaggi di avviso
+Con il blocco appunti Vendite al dettaglio aperto, la prima cosa da fare è caricare le librerie necessarie per il flusso di lavoro. L&#39;elenco seguente fornisce una breve descrizione per ciascuna libreria utilizzata negli esempi nei passaggi successivi.
+
+- **numpy**: Libreria di informatica scientifica che aggiunge il supporto per array e matrici multidimensionali di grandi dimensioni
+- **panda**: Libreria che offre strutture e operazioni di dati utilizzate per la manipolazione e l&#39;analisi dei dati
+- **matplotlib.pyplot**: Libreria di plottaggio che fornisce un&#39;esperienza simile a MATLAB durante la stampa
+- **marinaio** : Libreria di visualizzazione dei dati dell&#39;interfaccia di alto livello basata su matplotlib
+- **sklearn**: Libreria di machine learning con classificazione, regressione, supporto di algoritmi vettoriali e cluster
+- **avvertenze**: Libreria che controlla i messaggi di avviso
 
 ### Esplorare i dati {#exploring-data}
 
@@ -67,11 +66,11 @@ Una volta caricate le librerie, è possibile iniziare a osservare i dati. Il [!D
 
 ![](./images/walkthrough/read_csv.png)
 
-La struttura dati DataFrame dei panda è una struttura dati con etichetta bidimensionale. Per vedere rapidamente le dimensioni dei nostri dati, possiamo usare `df.shape`. Questo restituisce un tupla che rappresenta la dimensione del DataFrame:
+La struttura dati DataFrame dei panda è una struttura dati con etichetta bidimensionale. Per visualizzare rapidamente le dimensioni dei dati, puoi usare `df.shape`. Questo restituisce un tupla che rappresenta la dimensione del DataFrame:
 
 ![](./images/walkthrough/df_shape.png)
 
-Infine, possiamo dare un&#39;occhiata a come sono fatti i nostri dati. È possibile utilizzare `df.head(n)` per visualizzare le prime `n` righe del DataFrame:
+Infine, potete visualizzare un&#39;anteprima dell&#39;aspetto dei dati. È possibile utilizzare `df.head(n)` per visualizzare le prime `n` righe del DataFrame:
 
 ![](./images/walkthrough/df_head.png)
 
@@ -95,9 +94,9 @@ df.describe()
 
 ![](./images/walkthrough/df_describe.png)
 
-Con questo, possiamo vedere che ci sono 6435 istanze per ogni caratteristica. Inoltre, vengono fornite informazioni statistiche come la media, la deviazione standard (std), il min, il max e gli interquartili. Questo ci dà informazioni sulla deviazione per i dati. Nella sezione successiva, passeremo alla visualizzazione che funziona insieme a queste informazioni per darci una comprensione completa dei nostri dati.
+Con questo, potete vedere 6435 istanze per ciascuna caratteristica. Inoltre, vengono fornite informazioni statistiche come la media, la deviazione standard (std), il min, il max e gli interquartili. Questo ci dà informazioni sulla deviazione per i dati. Nella sezione successiva, passerai alla visualizzazione che funziona insieme a queste informazioni per darci una comprensione completa dei tuoi dati.
 
-Osservando i valori minimo e massimo per `store`, possiamo vedere che ci sono 45 archivi univoci che i dati rappresentano. Ci sono anche `storeTypes` che differenziano quello che è un negozio. Possiamo vedere la distribuzione di `storeTypes` facendo quanto segue:
+Osservando i valori minimo e massimo per `store`, è possibile vedere che ci sono 45 archivi univoci che i dati rappresentano. Ci sono anche `storeTypes` che differenziano quello che è un negozio. potete visualizzare la distribuzione di `storeTypes` effettuando le seguenti operazioni:
 
 ![](./images/walkthrough/df_groupby.png)
 
@@ -105,29 +104,29 @@ Ciò significa che 22 negozi sono di `storeType A` , 17 sono `storeType B`, e 6 
 
 #### Visualizzare i dati
 
-Ora che conosciamo i nostri valori di frame dei dati, vogliamo completarli con visualizzazioni per rendere le cose più chiare e più facili da identificare. Questi grafici sono utili anche per trasmettere i risultati a un pubblico.
+Ora che conosci i valori dei frame dei dati, vuoi integrarli con le visualizzazioni per rendere le cose più chiare e facili da identificare. Questi grafici sono utili anche per trasmettere i risultati a un pubblico.
 
 #### Grafici univoci
 
 I grafici univoci sono grafici di una singola variabile. Un grafico universale comune usato per visualizzare i dati sono i grafici a scatola e a sussurro.
 
-Utilizzando il nostro set di dati per la vendita al dettaglio da prima, possiamo generare il grafico box e whisker per ciascuno dei 45 negozi e le loro vendite settimanali. Il grafico viene generato utilizzando la `seaborn.boxplot` funzione.
+Utilizzando il set di dati per la vendita al dettaglio da prima, potete generare il grafico box e whisker per ciascuno dei 45 negozi e le loro vendite settimanali. Il grafico viene generato utilizzando la `seaborn.boxplot` funzione.
 
 ![](./images/walkthrough/box_whisker.png)
 
 Una trama scatola e sussurro è usato per mostrare la distribuzione dei dati. Le linee esterne della trama mostrano i quarti superiori e inferiori mentre la scatola si estende per l&#39;intervallo interquartile. La linea nella casella indica la mediana. I punti di dati più di 1,5 volte il quartile superiore o inferiore sono contrassegnati come un cerchio. Questi punti sono considerati fuorvianti.
 
-In seguito, possiamo tracciare le vendite settimanali con il tempo. Mostreremo solo l&#39;output del primo negozio. Il codice nel notebook genera 6 punti corrispondenti a 6 dei 45 punti vendita del nostro set di dati.
+Successivamente, puoi tracciare le vendite settimanali con il tempo. Verrà visualizzato solo l&#39;output del primo store. Il codice nel notebook genera 6 punti corrispondenti a 6 dei 45 punti vendita del nostro set di dati.
 
 ![](./images/walkthrough/weekly_sales.png)
 
-Con questo diagramma, possiamo confrontare le vendite settimanali su un periodo di 2 anni. È facile vedere picchi di vendita e attraverso schemi nel tempo.
+Con questo diagramma potete confrontare le vendite settimanali su un periodo di 2 anni. È facile vedere picchi di vendita e attraverso schemi nel tempo.
 
 #### Grafici multivariati
 
 I grafici multivariati sono utilizzati per visualizzare l&#39;interazione tra le variabili. Con la visualizzazione, gli esperti di dati possono verificare se esistono correlazioni o pattern tra le variabili. Un grafico multivariato comune usato è una matrice di correlazione. Con una matrice di correlazione, le dipendenze tra più variabili vengono quantificate con il coefficiente di correlazione.
 
-Utilizzando lo stesso dataset per la vendita al dettaglio, possiamo generare la matrice di correlazione.
+Utilizzando lo stesso dataset per la vendita al dettaglio, potete generare la matrice di correlazione.
 
 ![](./images/walkthrough/correlation_1.png)
 
@@ -135,16 +134,16 @@ Osservate la diagonale di quelle che si trovano al centro. Questo indica che qua
 
 ### Progettazione di funzioni {#feature-engineering}
 
-In questa sezione verranno apportate modifiche al set di dati per la vendita al dettaglio. Verranno eseguite le seguenti operazioni:
+In questa sezione, la funzionalità di progettazione viene utilizzata per apportare modifiche al dataset Retail eseguendo le seguenti operazioni:
 
-- aggiunta di colonne settimana e anno
-- converti storeType in una variabile indicatore
-- converti isHoliday in una variabile numerica
-- previsioni settimanaliVendite della settimana successiva
+- Aggiungi colonne settimana e anno
+- Converti storeType in una variabile indicatore
+- Converti isHoliday in una variabile numerica
+- Predicazione settimanaleVendite della settimana prossima
 
 #### Aggiungi colonne settimana e anno
 
-Il formato corrente per la data (`2010-02-05`) è difficile da distinguere che i dati sono per ogni settimana. Per questo motivo, convertiamo la data in settimana e anno.
+Il formato corrente per la data (`2010-02-05`) può rendere difficile distinguere che i dati sono per ogni settimana. Per questo motivo, è necessario convertire la data in modo che contenga settimana e anno.
 
 ![](./images/walkthrough/date_to_week_year.png)
 
@@ -154,11 +153,11 @@ Ora la settimana e la data sono le seguenti:
 
 #### Converti storeType in variabile indicatore
 
-Quindi, si desidera convertire la colonna storeType in colonne che rappresentano ciascuna `storeType`. Ci sono 3 tipi di store, (`A`, `B`, `C`), da cui stiamo creando 3 nuove colonne. Il valore impostato in ciascuna di esse sarà un valore booleano in cui verrà impostato un valore &#39;1&#39; a seconda di quale `storeType` era e `0` per le altre 2 colonne.
+Quindi, convertire la colonna storeType in colonne che rappresentano ciascuna `storeType`. Esistono 3 tipi di store (`A`, `B`, `C`) da cui si creano 3 nuove colonne. Il valore impostato in ogni è un valore booleano in cui viene impostato un valore &#39;1&#39; a seconda di quale `storeType` era e `0` per le altre 2 colonne.
 
 ![](./images/walkthrough/storeType.png)
 
-La `storeType` colonna corrente verrà eliminata.
+La `storeType` colonna corrente viene eliminata.
 
 #### Converti isHoliday in tipo numerico
 
@@ -166,18 +165,17 @@ La modifica successiva consiste nel modificare il `isHoliday` valore booleano in
 
 ![](./images/walkthrough/isHoliday.png)
 
-
 #### Predicazione settimanaleVendite della settimana prossima
 
-Ora vogliamo aggiungere le vendite settimanali precedenti e future a ciascuno dei nostri set di dati. Lo stiamo facendo compensando la nostra `weeklySales`. Inoltre, stiamo calcolando la `weeklySales` differenza. Questo avviene sottraendo `weeklySales` con quello della settimana precedente `weeklySales`.
+Ora puoi aggiungere le vendite settimanali precedenti e future a ciascun set di dati. Puoi farlo offendendo la tua `weeklySales`. Inoltre, la `weeklySales` differenza viene calcolata. Questo avviene sottraendo `weeklySales` con quello della settimana precedente `weeklySales`.
 
 ![](./images/walkthrough/weekly_past_future.png)
 
-Poiché i `weeklySales` dati vengono impostati in avanti su 45 set di dati e all&#39;indietro su 45 per creare nuove colonne, la prima e l&#39;ultima 45 coordinate avranno valori NaN. Possiamo rimuovere questi punti dal nostro dataset utilizzando la `df.dropna()` funzione che rimuove tutte le righe che hanno valori NaN.
+Poiché si sta effettuando l&#39;offset dei `weeklySales` dati 45 set di dati in avanti e 45 set di dati all&#39;indietro per creare nuove colonne, i primi e gli ultimi 45 punti dati hanno valori NaN. È possibile rimuovere questi punti dal dataset utilizzando la `df.dropna()` funzione che rimuove tutte le righe che hanno valori NaN.
 
 ![](./images/walkthrough/dropna.png)
 
-Di seguito è riportato un riepilogo del set di dati dopo le modifiche apportate:
+Di seguito è riportato un riepilogo del set di dati dopo le modifiche:
 
 ![](./images/walkthrough/df_info_new.png)
 
@@ -193,33 +191,33 @@ Ora, è il momento di creare alcuni modelli di dati e selezionare quale modello 
 
 #### Dividi set di dati a sottoinsiemi di formazione e test
 
-Abbiamo bisogno di un modo per sapere quanto accurato sarà il nostro modello in grado di prevedere i valori. Questa valutazione può essere effettuata assegnando una parte del dataset da utilizzare come convalida e il resto come dati di formazione. Poiché `weeklySalesAhead` sono i valori futuri effettivi di `weeklySales`, possiamo utilizzarli per valutare la precisione con cui il modello è in grado di prevedere il valore. La divisione è effettuata di seguito:
+È necessario un modo per sapere quanto accurato sarà il modello in grado di prevedere i valori. Questa valutazione può essere effettuata assegnando una parte del dataset da utilizzare come convalida e il resto come dati di formazione. Poiché `weeklySalesAhead` sono i valori futuri effettivi di `weeklySales`, è possibile utilizzarli per valutare la precisione con cui il modello è in grado di prevedere il valore. La divisione è effettuata di seguito:
 
 ![](./images/walkthrough/split_data.png)
 
-Ora abbiamo `X_train` e `y_train` per preparare i modelli e `X_test` e `y_test` per la valutazione in seguito.
+Ora avete `X_train` e `y_train` per preparare i modelli e `X_test` e `y_test` per la valutazione in seguito.
 
 #### Algoritmi di controllo spot
 
-In questa sezione, dichiareremo tutti gli algoritmi in un array denominato `model`. Quindi, ripetiamo questo array e per ogni algoritmo, immettiamo i dati di formazione con `model.fit()` cui crea un modello `mdl`. Utilizzando questo modello, prevediamo `weeklySalesAhead` con i nostri `X_test` dati.
+In questa sezione, tutti gli algoritmi vengono dichiarati in un array denominato `model`. Quindi, ripetete l&#39;array e per ogni algoritmo, inserite i dati di formazione con `model.fit()` cui viene creato un modello `mdl`. Utilizzando questo modello, è possibile prevedere `weeklySalesAhead` i `X_test` dati.
 
 ![](./images/walkthrough/training_scoring.png)
 
-Per il punteggio, stiamo prendendo la differenza percentuale media tra il previsto `weeklySalesAhead` con i valori effettivi nei `y_test` dati. Dal momento che vogliamo ridurre al minimo la differenza tra la nostra previsione e l&#39;effettivo, Regressore Incremento sfumatura è il modello più performante.
+Per il punteggio, si sta prendendo la differenza percentuale media tra il previsto `weeklySalesAhead` con i valori effettivi nei `y_test` dati. Poiché si desidera ridurre al minimo la differenza tra la previsione e il risultato effettivo, Regressore incremento sfumatura è il modello con le prestazioni migliori.
 
 #### Visualizzare le previsioni
 
-Infine, visualizzeremo il nostro modello di previsione con i valori di vendita settimanali effettivi. La linea blu rappresenta i numeri effettivi, mentre quella verde rappresenta la nostra previsione utilizzando Incremento sfumatura. Il codice seguente genera 6 appezzamenti che rappresentano 6 dei 45 punti vendita nel nostro dataset. Solo `Store 1` qui:
+Infine, puoi visualizzare il modello di previsione con i valori di vendita settimanali effettivi. La linea blu rappresenta i numeri effettivi, mentre quella verde rappresenta la previsione utilizzando Incremento sfumatura. Il codice seguente genera 6 appezzamenti che rappresentano 6 dei 45 punti vendita del dataset. Solo `Store 1` qui:
 
 ![](./images/walkthrough/visualize_prediction.png)
 
-<!--TODO UI Flow> -->
+## Passaggi successivi
 
-## Conclusione
+Questo documento ha trattato un flusso di lavoro generale di analisi dei dati per risolvere un problema di vendita al dettaglio. Per riepilogare:
 
-Con questa panoramica, abbiamo analizzato il flusso di lavoro che un esperto di dati avrebbe condotto per risolvere un problema di vendita al dettaglio. In particolare, abbiamo fatto i seguenti passi per raggiungere una soluzione che predica le vendite settimanali future.
+- Caricate le librerie necessarie per il flusso di lavoro.
+- Una volta caricate le librerie, è possibile iniziare a osservare i dati utilizzando riepiloghi statistici, visualizzazioni e grafici.
+- Successivamente, la funzionalità di progettazione viene utilizzata per apportare modifiche al set di dati per la vendita al dettaglio.
+- Infine, creare modelli di dati e selezionare quale modello è il più performante per prevedere le vendite future.
 
-- [Configurazione](#setup)
-- [Esplorazione dei dati](#exploring-data)
-- [Progettazione delle funzioni](#feature-engineering)
-- [Formazione e verifica](#training-and-verification)
+Una volta pronti, leggi la guida [utente](./jupyterlab/overview.md) JupyterLab per una rapida panoramica dei notebook in Adobe Experience Platform Data Science Workspace. Inoltre, se siete interessati a conoscere Modelli e Ricette, iniziare leggendo lo schema di vendita al [dettaglio e l&#39;esercitazione sui dataset](./models-recipes/create-retails-sales-dataset.md) . Questa esercitazione prepara le esercitazioni di Data Science Workspace successive, che possono essere visualizzate nella pagina delle [esercitazioni](../tutorials/data-science-workspace.md)di Data Science Workspace.
