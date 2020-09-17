@@ -5,9 +5,9 @@ title: Configurare un flusso di dati per un connettore batch di archiviazione cl
 topic: overview
 description: Un flusso di dati è un'attività pianificata che recupera e trasferisce dati da un'origine a un set di dati della piattaforma. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account di archiviazione cloud.
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
 workflow-type: tm+mt
-source-wordcount: '1493'
+source-wordcount: '1520'
 ht-degree: 0%
 
 ---
@@ -89,6 +89,10 @@ Viene visualizzata **[!UICONTROL Select schema]** la finestra di dialogo. Selezi
 
 In base alle esigenze, è possibile scegliere di mappare direttamente i campi oppure utilizzare le funzioni di mappatura per trasformare i dati di origine in modo da derivare i valori calcolati o calcolati. Per ulteriori informazioni sulla mappatura dei dati e sulle funzioni di mappatura, consulta l’esercitazione sulla [mappatura dei dati CSV ai campi](../../../../../ingestion/tutorials/map-a-csv-file.md)dello schema XDM.
 
+>[!TIP]
+>
+>[!DNL Platform] fornisce raccomandazioni intelligenti per i campi mappati automaticamente in base allo schema di destinazione o al dataset selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi di utilizzo.
+
 Una volta mappati i dati di origine, selezionare **[!UICONTROL Next]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
@@ -148,11 +152,11 @@ Dopo aver rivisto il flusso di dati, fai clic su **[!UICONTROL Finish]** e conse
 
 ## Monitorare il flusso di dati
 
-Una volta creato il flusso di dati, è possibile monitorare i dati che vengono acquisiti attraverso di esso per visualizzare informazioni su velocità di assimilazione, successo ed errori. Per ulteriori informazioni su come monitorare il flusso di dati, consulta l’esercitazione sul [monitoraggio di account e flussi di dati nell’interfaccia utente](../../monitor.md).
+Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti attraverso di esso per visualizzare informazioni su velocità di assimilazione, successo ed errori. Per ulteriori informazioni su come monitorare il flusso di dati, consulta l’esercitazione sul [monitoraggio di account e flussi di dati nell’interfaccia utente](../../monitor.md).
 
 ## Eliminare il flusso di dati
 
-È possibile eliminare i flussi di dati che non sono più necessari o che sono stati creati in modo non corretto utilizzando la **[!UICONTROL Delete]** funzione disponibile nell&#39; **[!UICONTROL Dataflows]** area di lavoro. Per ulteriori informazioni sull’eliminazione dei flussi di dati, consultate l’esercitazione sull’ [eliminazione dei flussi di dati nell’interfaccia](../../delete.md)utente.
+È possibile eliminare i flussi di dati che non sono più necessari o che sono stati creati in modo non corretto utilizzando la **[!UICONTROL Delete]** funzione disponibile nell&#39; **[!UICONTROL Dataflows]** area di lavoro. Per ulteriori informazioni su come eliminare i flussi di dati, consulta l’esercitazione sull’ [eliminazione dei flussi di dati nell’interfaccia](../../delete.md)utente.
 
 ## Passaggi successivi
 
