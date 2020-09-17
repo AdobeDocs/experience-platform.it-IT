@@ -5,9 +5,9 @@ title: Configurare un flusso di dati per un connettore batch di archiviazione cl
 topic: overview
 description: Un flusso di dati è un'attività pianificata che recupera e trasferisce dati da un'origine a un set di dati della piattaforma. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account di archiviazione cloud.
 translation-type: tm+mt
-source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
+source-git-commit: a4fd95904159a7b3e9c420f720a315641fd6706f
 workflow-type: tm+mt
-source-wordcount: '1520'
+source-wordcount: '1559'
 ht-degree: 0%
 
 ---
@@ -93,9 +93,15 @@ In base alle esigenze, è possibile scegliere di mappare direttamente i campi op
 >
 >[!DNL Platform] fornisce raccomandazioni intelligenti per i campi mappati automaticamente in base allo schema di destinazione o al dataset selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi di utilizzo.
 
-Una volta mappati i dati di origine, selezionare **[!UICONTROL Next]**.
-
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
+
+Selezionate **[!UICONTROL Preview data]** per visualizzare i risultati della mappatura di fino a 100 righe di dati di esempio dal set di dati selezionato.
+
+Durante l&#39;anteprima, la colonna dell&#39;identità ha priorità come primo campo, in quanto rappresenta le informazioni chiave necessarie per convalidare i risultati della mappatura.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping-preview.png)
+
+Una volta mappati i dati di origine, selezionare **[!UICONTROL Close]**.
 
 ## Pianificare le esecuzioni dell&#39;assimilazione
 
