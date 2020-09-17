@@ -5,9 +5,9 @@ title: Creare una ricetta utilizzando i notebook Jupyter
 topic: Tutorial
 description: Questa esercitazione si sovrappone a due sezioni principali. Innanzitutto, si crea un modello di machine learning utilizzando un modello all'interno di JupyterLab Notebook. Successivamente, si eserciterà il notebook per il flusso di lavoro delle ricette in JupyterLab per creare una ricetta all'interno di Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
 workflow-type: tm+mt
-source-wordcount: '2317'
+source-wordcount: '2316'
 ht-degree: 0%
 
 ---
@@ -34,11 +34,11 @@ Il [!UICONTROL Recipe Builder] notebook consente di eseguire corsi di formazione
 >
 >Il notebook Recipe Builder supporta l&#39;utilizzo di tutti i formati di file, ma al momento la funzionalità Crea ricetta supporta solo [!DNL Python].
 
-![](../images/jupyterlab/create-recipe/recipe-builder.png)
+![](../images/jupyterlab/create-recipe/recipe_builder.png)
 
 Quando si fa clic sul blocco appunti di Recipe Builder dall&#39;avvio, il blocco appunti viene aperto nella scheda. Il modello utilizzato nel blocco appunti è la Ricetta di previsione delle vendite al dettaglio Python che si trova anche in [questo archivio pubblico](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-Nella barra degli strumenti sono disponibili tre azioni aggiuntive: - **[!UICONTROL Train]**, **[!UICONTROL Score]** e **[!UICONTROL Create Recipe]**. Queste icone verranno visualizzate solo nel [!UICONTROL Recipe Builder] blocco appunti. Ulteriori informazioni su queste azioni verranno discusse [nella sezione](#training-and-scoring) Formazione e punteggio dopo la creazione della Ricetta nel blocco appunti.
+Nella barra degli strumenti sono disponibili tre azioni aggiuntive: - **[!UICONTROL Train]**, **[!UICONTROL Score]** e **[!UICONTROL Create Recipe]**. Queste icone vengono visualizzate solo nel [!UICONTROL Recipe Builder] blocco appunti. Ulteriori informazioni su queste azioni verranno discusse [nella sezione](#training-and-scoring) Formazione e punteggio dopo la creazione della Ricetta nel blocco appunti.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
