@@ -5,9 +5,9 @@ title: Configurare un flusso di dati per un connettore di protocollo nell'interf
 topic: overview
 description: Un flusso di dati è un'attività pianificata che recupera e trasferisce dati da un'origine a un set di dati Adobe Experience Platform. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account dei protocolli.
 translation-type: tm+mt
-source-git-commit: 5d4aa8eebc1837a5d8b275fa631f4af73c38158e
+source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
 workflow-type: tm+mt
-source-wordcount: '1280'
+source-wordcount: '1307'
 ht-degree: 0%
 
 ---
@@ -75,9 +75,13 @@ Viene visualizzata **[!UICONTROL Select schema]** la finestra di dialogo. Selezi
 
 In base alle esigenze, è possibile scegliere di mappare direttamente i campi oppure utilizzare le funzioni di mappatura per trasformare i dati di origine in modo da derivare i valori calcolati o calcolati. Per ulteriori informazioni sulla mappatura dei dati e sulle funzioni di mappatura, consulta l’esercitazione sulla [mappatura dei dati CSV ai campi](../../../../ingestion/tutorials/map-a-csv-file.md)dello schema XDM.
 
-Una volta mappati i dati di origine, fai clic su **[!UICONTROL Next]**.
+>[!TIP]
+>
+>[!DNL Platform] fornisce raccomandazioni intelligenti per i campi mappati automaticamente in base allo schema di destinazione o al dataset selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi di utilizzo.
 
-![](../../../images/tutorials/dataflow/all-tabular/mapping-updated.png)
+Una volta mappati i dati di origine, selezionare **[!UICONTROL Next]**.
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
 
 ## Pianificare le esecuzioni dell&#39;assimilazione
 
