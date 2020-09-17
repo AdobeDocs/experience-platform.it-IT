@@ -5,7 +5,7 @@ title: Servizio query nel blocco appunti Jupyter
 topic: Tutorial
 description: Adobe Experience Platform consente di utilizzare il linguaggio SQL (Structures Query Language) in Data Science Workspace integrando il servizio Query in JupyterLab come funzione standard. Questa esercitazione illustra le query SQL di esempio per i casi di utilizzo più comuni per esplorare, trasformare e analizzare  dati Adobe Analytics.
 translation-type: tm+mt
-source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
+source-git-commit: 69c466658e1cb41f4da957148e63b962ad975a21
 workflow-type: tm+mt
 source-wordcount: '812'
 ht-degree: 1%
@@ -118,14 +118,12 @@ SELECT Substring(timestamp, 1, 10)                               AS Day,
        Count(DISTINCT concat(enduserids._experience.aaid.id, 
                              _experience.analytics.session.num)) AS Visit_Count 
 FROM   {target_table}
-WHERE _acp_year = {target_year} 
-      AND _acp_month = {target_month}  
-      AND _acp_day = {target_day}
+WHERE TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
 GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-Nella query precedente, la destinazione `_acp_year` nella `WHERE` clausola è impostata sul valore di `target_year`. Includere le variabili nelle query SQL includendole tra parentesi graffe (`{}`).
+Nella query precedente, la marca temporale nella `WHERE` clausola è impostata sul valore di `target_year`. Includere le variabili nelle query SQL includendole tra parentesi graffe (`{}`).
 
 La prima riga della query contiene la variabile opzionale `hourly_visitor`. I risultati della query verranno memorizzati in questa variabile come fotogramma dati Pandas. La memorizzazione dei risultati in un dataframe consente di visualizzare in seguito i risultati della query utilizzando un [!DNL Python] pacchetto desiderato. Esegui il seguente [!DNL Python] codice in una nuova cella per generare un grafico a barre:
 
@@ -160,9 +158,7 @@ SELECT Substring(timestamp, 1, 10)                        AS Day,
                     _experience.analytics.session.num,
                     _experience.analytics.session.depth)) AS Count 
 FROM   {target_table}
-WHERE  _acp_year = {target_year} 
-       AND _acp_month = {target_month}  
-       AND _acp_day = {target_day}
+WHERE TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
 GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
@@ -210,9 +206,7 @@ SELECT concat(enduserids._experience.aaid.id,
               _experience.analytics.session.num) AS aaid_sess_key, 
        Count(timestamp)                          AS Count 
 FROM   {target_table}
-WHERE  _acp_year = {target_year} 
-       AND _acp_month = {target_month}  
-       AND _acp_day = {target_day}
+WHERE TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
 GROUP BY aaid_sess_key
 ORDER BY Count DESC;
 ```
@@ -243,9 +237,7 @@ La seguente query restituisce le dieci pagine più popolari per una data specifi
 SELECT web.webpagedetails.name                 AS Page_Name, 
        Sum(web.webpagedetails.pageviews.value) AS Page_Views 
 FROM   {target_table}
-WHERE  _acp_year = {target_year}
-       AND _acp_month = {target_month}
-       AND _acp_day = {target_day}
+WHERE TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
 GROUP  BY web.webpagedetails.name 
 ORDER  BY page_views DESC 
 LIMIT  10;
@@ -262,9 +254,7 @@ La seguente query restituisce i dieci utenti più attivi per una data specificat
 SELECT enduserids._experience.aaid.id AS aaid, 
        Count(timestamp)               AS Count
 FROM   {target_table}
-WHERE  _acp_year = {target_year}
-       AND _acp_month = {target_month}
-       AND _acp_day = {target_day}
+WHERE TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
 GROUP  BY aaid
 ORDER  BY Count DESC
 LIMIT  10;
@@ -281,9 +271,7 @@ La seguente query restituisce le dieci città che stanno generando la maggior pa
 SELECT concat(placeContext.geo.stateProvince, ' - ', placeContext.geo.city) AS state_city, 
        Count(timestamp)                                                     AS Count
 FROM   {target_table}
-WHERE  _acp_year = {target_year}
-       AND _acp_month = {target_month}
-       AND _acp_day = {target_day}
+WHERE TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
 GROUP  BY state_city
 ORDER  BY Count DESC
 LIMIT  10;
