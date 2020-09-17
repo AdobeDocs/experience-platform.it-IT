@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Mappare un file CSV su uno schema XDM
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
 workflow-type: tm+mt
-source-wordcount: '1309'
+source-wordcount: '1297'
 ht-degree: 2%
 
 ---
@@ -61,6 +61,10 @@ La **[!UICONTROL Sample data]** sezione viene visualizzata una volta che il file
 
 Viene **[!UICONTROL Mapping]** visualizzato il passaggio. Le colonne del file CSV sono elencate in **[!UICONTROL Source Field]**, con i campi dello schema XDM corrispondenti elencati in **[!UICONTROL Target Field]**. I campi di destinazione non selezionati sono evidenziati in rosso. È possibile utilizzare l&#39;opzione dei campi filtro per restringere l&#39;elenco dei campi di origine disponibili.
 
+>[!TIP]
+>
+>[!DNL Platform] fornisce raccomandazioni intelligenti per i campi mappati automaticamente in base allo schema di destinazione o al dataset selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi di utilizzo.
+
 Per mappare una colonna CSV su un campo XDM, selezionate l&#39;icona dello schema accanto al campo di destinazione corrispondente della colonna.
 
 ![](../images/tutorials/map-a-csv-file/mapping.png)
@@ -69,17 +73,9 @@ Viene **[!UICONTROL Select schema field]** visualizzata la finestra. Qui puoi sp
 
 ![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
-La **[!UICONTROL Mapping]** schermata viene visualizzata nuovamente, con il campo XDM selezionato ora sotto **[!UICONTROL Target Field]**.
+Dopo aver completato i passaggi per i restanti campi di origine non mappati, la **[!UICONTROL Mapping]** schermata viene visualizzata nuovamente con il campo XDM selezionato ora sotto **[!UICONTROL Target Field]**.
 
 ![](../images/tutorials/map-a-csv-file/field-mapped.png)
-
-Se non desiderate mappare una particolare colonna CSV, potete rimuovere la mappatura facendo clic sull&#39;icona **di** rimozione accanto al campo di destinazione. È inoltre possibile rimuovere tutte le mappature selezionando la **[!UICONTROL Clear all mappings button]**.
-
-![](../images/tutorials/map-a-csv-file/remove-mapping.png)
-
-Per aggiungere una nuova mappatura, selezionate **[!UICONTROL Add new mapping]** nella parte superiore dell&#39; **[!UICONTROL Source Field]** elenco.
-
-![](../images/tutorials/map-a-csv-file/add-mapping.png)
 
 Quando mappate i campi, potete anche includere funzioni per calcolare i valori in base ai campi di origine di input. Per ulteriori informazioni, consulta la sezione delle funzioni [di](#mapping-functions) mappatura nell’appendice.
 
@@ -89,7 +85,7 @@ I campi calcolati consentono la creazione di valori in base agli attributi nello
 
 Selezionare il **[!UICONTROL Add calculated field]** pulsante per continuare.
 
-![](../images/tutorials/map-a-csv-file/add-calculated-field.png)
+![](../images/tutorials/map-a-csv-file/add-calculate-field.png)
 
 Viene visualizzato il **[!UICONTROL Create calculated field]** pannello. La finestra di dialogo a sinistra contiene i campi, le funzioni e gli operatori supportati nei campi calcolati. Selezionare una delle schede per iniziare ad aggiungere funzioni, campi o operatori all&#39;editor di espressioni.
 
