@@ -5,9 +5,9 @@ title: Guida alla risoluzione dei problemi per l'area di lavoro di analisi dati
 topic: Troubleshooting
 description: Questo documento contiene le risposte alle domande frequenti su Adobe Experience Platform Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 76e598c743df320e4b3cb821e118749fe7304d9c
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '750'
 ht-degree: 0%
 
 ---
@@ -112,3 +112,7 @@ Per un elenco delle librerie PySpark preinstallate, consultate la sezione [appen
 ```
 
 Per ulteriori informazioni sulla configurazione delle risorse del [!DNL Spark] cluster, compreso l&#39;elenco completo delle proprietà configurabili, consulta la Guida [utente di](./jupyterlab/overview.md#kernels)JupyterLab.
+
+## Perché si verifica un errore durante l&#39;esecuzione di determinate attività per set di dati più grandi?
+
+Se si riceve un errore per un motivo come `Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues.` Questo indica in genere che il driver o l&#39;esecutore non dispongono di memoria sufficiente. Per ulteriori informazioni sui limiti dei dati e su come eseguire attività su set di dati di grandi dimensioni, consulta la documentazione sull’accesso ai [dati](./jupyterlab/access-notebook-data.md) dei notebook JupyterLab. In genere questo errore può essere risolto modificando il `mode` passaggio da `interactive` a `batch`.
