@@ -5,9 +5,9 @@ title: Configurare un flusso di dati per un connettore di database nell'interfac
 topic: overview
 description: Un flusso di dati è un'attività pianificata che recupera e trasferisce dati da un'origine a un set di dati della piattaforma. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account del database.
 translation-type: tm+mt
-source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
+source-git-commit: ad9b52e46d3eb4f6ed7774e4cbcb031a52801b49
 workflow-type: tm+mt
-source-wordcount: '1294'
+source-wordcount: '1333'
 ht-degree: 0%
 
 ---
@@ -80,9 +80,15 @@ In base alle esigenze, è possibile scegliere di mappare direttamente i campi op
 >
 >[!DNL Platform] fornisce raccomandazioni intelligenti per i campi mappati automaticamente in base allo schema di destinazione o al dataset selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi di utilizzo.
 
-Una volta mappati i dati di origine, selezionare **[!UICONTROL Next]**.
-
 ![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+
+Selezionate **[!UICONTROL Preview data]** per visualizzare i risultati della mappatura di fino a 100 righe di dati di esempio dal set di dati selezionato.
+
+Durante l&#39;anteprima, la colonna dell&#39;identità ha priorità come primo campo, in quanto rappresenta le informazioni chiave necessarie per convalidare i risultati della mappatura.
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
+
+Una volta mappati i dati di origine, selezionare **[!UICONTROL Close]**.
 
 ## Pianificare le esecuzioni dell&#39;assimilazione
 
