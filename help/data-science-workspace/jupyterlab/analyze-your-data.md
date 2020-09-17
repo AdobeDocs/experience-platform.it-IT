@@ -5,7 +5,7 @@ title: Analizzare i dati utilizzando i notebook
 topic: Tutorial
 description: Questa esercitazione si concentra sull'utilizzo dei notebook Jupyter, creati all'interno di Data Science Workspace, per accedere, esplorare e visualizzare i dati.
 translation-type: tm+mt
-source-git-commit: 33b14fed0d52792de0486897c11dd86c1ea2dd45
+source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
 workflow-type: tm+mt
 source-wordcount: '1731'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Per impostazione predefinita, la ricetta Tensorflow funziona in un cluster GPU e
 
 Nell&#39; [!DNL Adobe Experience Platform] interfaccia utente, fai clic sulla scheda Data Science nel menu principale per passare all&#39;area di lavoro Data Science. Da questa pagina, fare clic sulla [!DNL JupyterLab] scheda che aprirà il [!DNL JupyterLab] modulo di avvio. Dovrebbe essere visualizzata una pagina simile a questa.
 
-![](../images/jupyterlab/analyze-data/jupyterlab_launcher.png)
+![](../images/jupyterlab/analyze-data/jupyterlab-launcher.png)
 
 Nella nostra esercitazione, useremo [!DNL Python] 3 nel notebook Jupyter per mostrare come accedere ed esplorare i dati. Nella pagina Launcher sono disponibili alcuni quaderni appunti di esempio. Utilizzeremo la ricetta Vendite al dettaglio per [!DNL Python] 3.
 
