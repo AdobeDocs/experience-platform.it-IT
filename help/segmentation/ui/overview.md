@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida utente del servizio di segmentazione
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: c9ff4d26accd880d5169526f84be607fc722883b
 workflow-type: tm+mt
-source-wordcount: '1327'
+source-wordcount: '1417'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,19 @@ Selezionate la **[!UICONTROL Browse]** scheda per visualizzare un elenco di tutt
 
 ![](../images/ui/overview/segment-browse-all.png)
 
-Questa visualizzazione elenca informazioni sulla definizione del segmento, incluso il metodo di valutazione, la data di creazione e l’ultima data di modifica.
+Questa visualizzazione elenca le informazioni sulla definizione del segmento, tra cui la suddivisione, il churn, il conteggio del profilo, il metodo di valutazione, la data di creazione e l’ultima data di modifica.
+
+La suddivisione mostra un grafico a barre che mostra la percentuale di profili appartenenti a ciascuno dei seguenti stati: [!UICONTROL Entered], [!UICONTROL Realized]e [!UICONTROL Exiting].
+
+![](../images/ui/overview/segment-browse-breakdown.png)
+
+| Stato | Descrizione |
+| ------ | ----------- |
+| Inserito | Un nuovo profilo all’interno del segmento. |
+| Realizzato | Un profilo esistente che è rimasto all&#39;interno del segmento. |
+| Uscita | Un profilo esistente che sta uscendo dal segmento. |
+
+Il churn rappresenta la percentuale di profili che si modificano all&#39;interno di una definizione di segmento rispetto all&#39;ultima esecuzione del processo di segmento, mentre il conteggio dei profili rappresenta il numero totale di profili idonei per il segmento.
 
 Il metodo di valutazione può essere in streaming o batch. I segmenti di streaming vengono valutati costantemente quando i dati entrano nel sistema. I segmenti batch vengono valutati in base a una pianificazione prestabilita.
 
