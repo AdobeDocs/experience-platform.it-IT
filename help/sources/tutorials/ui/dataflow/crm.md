@@ -5,9 +5,9 @@ title: Configurare un flusso di dati per un connettore CRM nell'interfaccia uten
 topic: overview
 description: Un flusso di dati è un'attività pianificata che recupera e trasferisce dati da un'origine a un set di dati della piattaforma. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account CRM.
 translation-type: tm+mt
-source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
+source-git-commit: ad9b52e46d3eb4f6ed7774e4cbcb031a52801b49
 workflow-type: tm+mt
-source-wordcount: '1366'
+source-wordcount: '1404'
 ht-degree: 0%
 
 ---
@@ -79,9 +79,15 @@ In base alle esigenze, è possibile scegliere di mappare direttamente i campi op
 >
 >[!DNL Platform] fornisce raccomandazioni intelligenti per i campi mappati automaticamente in base allo schema di destinazione o al dataset selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi di utilizzo.
 
-Una volta mappati i dati di origine, selezionare **[!UICONTROL Next]**.
-
 ![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+
+Selezionate **[!UICONTROL Preview data]** per visualizzare i risultati della mappatura di fino a 100 righe di dati di esempio dal set di dati selezionato.
+
+Durante l&#39;anteprima, la colonna dell&#39;identità ha priorità come primo campo, in quanto rappresenta le informazioni chiave necessarie per convalidare i risultati della mappatura.
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
+
+Una volta mappati i dati di origine, selezionare **[!UICONTROL Close]**.
 
 ## Pianificare le esecuzioni dell&#39;assimilazione
 
@@ -92,7 +98,7 @@ Viene visualizzato il **[!UICONTROL Scheduling]** passaggio che consente di conf
 | Frequenza | Le frequenze selezionabili includono `Once`, `Minute`, `Hour`, `Day`e `Week`. |
 | Intervallo | Un numero intero che imposta l&#39;intervallo per la frequenza selezionata. |
 | Ora di inizio | Una marca temporale UTC che indica quando è impostata la prima assimilazione. |
-| Backfill | Un valore booleano che determina i dati inizialmente acquisiti. Se **[!UICONTROL Backfill]* è abilitata, tutti i file correnti nel percorso specificato verranno acquisiti durante la prima assimilazione pianificata. Se *Backfill* è disattivato, verranno acquisiti solo i file caricati tra la prima esecuzione dell&#39;assimilazione e il *[!UICONTROL Start time]* file. I file caricati prima di *[!UICONTROL Start time]** non verranno acquisiti. |
+| Backfill | Un valore booleano che determina i dati inizialmente acquisiti. Se **[!UICONTROL Backfill]** è abilitata, tutti i file correnti nel percorso specificato verranno acquisiti durante la prima assimilazione pianificata. Se **[!UICONTROL Backfill]** è disattivato, verranno assimilati solo i file caricati tra la prima esecuzione dell&#39;assimilazione e l&#39; **[!UICONTROL Start time]** assimilazione. I file caricati prima di **[!UICONTROL Start time]** non verranno acquisiti. |
 | Colonna Delta | Opzione con un set filtrato di campi dello schema di origine di tipo, data o ora. Questo campo è utilizzato per distinguere tra dati nuovi ed esistenti. I dati incrementali verranno acquisiti in base alla marca temporale della colonna selezionata. |
 
 I flussi di dati sono progettati per l&#39;acquisizione automatica dei dati su base programmata. Per iniziare, selezionate la frequenza di assimilazione. Quindi, impostare l&#39;intervallo per specificare il periodo tra due esecuzioni di flusso. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero e deve essere impostato su maggiore o uguale a 15.
