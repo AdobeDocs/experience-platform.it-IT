@@ -5,9 +5,9 @@ title: Esercitazioni su Data Science Workspace
 topic: tutorial
 description: Adobe Experience Platform Data Science Workspace utilizza l'apprendimento automatico e l'intelligenza artificiale per creare approfondimenti dai tuoi dati. Integrato in Adobe Experience Platform, Data Science Workspace consente di fare previsioni utilizzando i contenuti e le risorse dati nelle soluzioni  Adobe.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 10c9ce66b0fb3b5d1be931f37d95d283673bef15
 workflow-type: tm+mt
-source-wordcount: '1208'
+source-wordcount: '1295'
 ht-degree: 0%
 
 ---
@@ -41,10 +41,18 @@ Per saperne di più e ottenere i valori richiesti per eseguire le operazioni CRU
 - Accesso e comprensione dell&#39; [!DNL JupyterLab] interfaccia.
 - Comprendere le celle di codice e i kernel disponibili all&#39;interno [!DNL JupyterLab].
 - Informazioni sulla configurazione di GPU e del server di memoria in [!DNL Python]/R.
-- Leggere e interrogare [!DNL Platform] i dati utilizzando i blocchi appunti.
-- Comprendere i limiti dei dati del blocco appunti.
 
 Per saperne di più, visita la guida [utente di](../data-science-workspace/jupyterlab/overview.md)JupyterLab.
+
+## Accesso ai dati nei notebook JupyterLab
+
+Attualmente JupyterLab in Data Science Workspace supporta i notebook per [!DNL Python], R, PySpark e Scala. Ogni kernel supportato fornisce funzionalità integrate che consentono di leggere i dati della piattaforma da un dataset all&#39;interno di un blocco appunti. Tuttavia, il supporto per l&#39;impaginazione dei dati è limitato ai notebook [!DNL Python] e R. Questa guida è incentrata su come utilizzare i notebook JupyterLab per accedere ai dati.
+
+**Questa guida è utile per:**
+- Lettura, scrittura e query dei dati della piattaforma utilizzando i notebook Python, R, PySpark o Scala.
+- Comprendere le limitazioni di lettura di ciascun tipo di notebook.
+
+Per saperne di più, visita la guida per lo sviluppatore di accesso ai dati [JupyterLab](../data-science-workspace/jupyterlab/access-notebook-data.md)
 
 ## Creare pacchetti di file sorgente per la creazione di [!DNL Docker] ricette
 
