@@ -5,9 +5,9 @@ title: Preparare i dati per l'utilizzo in Intelligent Services
 topic: Intelligent Services
 description: 'Per consentire ai servizi intelligenti di scoprire informazioni ricavate dai dati degli eventi di marketing, i dati devono essere arricchiti e mantenuti in modo semantico in una struttura standard. I servizi intelligenti sfruttano gli schemi XDM (Experience Data Model) per ottenere questo risultato. Nello specifico, tutti i set di dati utilizzati in Intelligent Services] devono essere conformi allo schema XDM Consumer ExperienceEvent (CEE). '
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: d9bf87e41fe002ac1d70a241b48c7b9fd1139d6c
 workflow-type: tm+mt
-source-wordcount: '1979'
+source-wordcount: '1978'
 ht-degree: 0%
 
 ---
@@ -238,7 +238,7 @@ Questo campo contiene informazioni relative alle attività di marketing attive c
 
 Per informazioni complete su ciascuno dei campi secondari richiesti per `xdm:productListItems`, consulta le specifiche sechma [di](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) marketing.
 
-## Mappatura e assimilazione dei dati (#mapping)
+## Mapping e acquisizione dei dati {#mapping}
 
 Una volta determinato se i dati degli eventi di marketing possono essere mappati sullo schema CEE, il passaggio successivo consiste nel determinare in quali dati si desidera importare [!DNL Intelligent Services]. Tutti i dati storici utilizzati in [!DNL Intelligent Services] devono rientrare nel periodo minimo di quattro mesi di dati, più il numero di giorni previsti come periodo di lookback.
 
