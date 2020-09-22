@@ -5,10 +5,10 @@ solution: Experience Platform
 title: Monitorare account e flussi di dati
 topic: overview
 translation-type: tm+mt
-source-git-commit: 20c3037295b49cba45fcc5901803107dea26b3b2
+source-git-commit: 8f752d6a08496f9583627781d9143ee7f9159bf0
 workflow-type: tm+mt
-source-wordcount: '936'
-ht-degree: 0%
+source-wordcount: '1019'
+ht-degree: 1%
 
 ---
 
@@ -72,7 +72,18 @@ Dalla **[!UICONTROL Accounts]** pagina è possibile visualizzare un elenco dei f
 
 ![catalog-dataflows](../../images/tutorials/monitor/catalog-dataflows.png)
 
-Viene visualizzato un elenco dei flussi di dati esistenti. In questa pagina è presente un elenco di flussi di dati visualizzabili, con informazioni sull’origine, il nome utente, il numero di flussi di dati e lo stato. Selezionate l’icona funnel in alto a sinistra per ordinare i dati.
+Viene visualizzato un elenco dei flussi di dati esistenti. In questa pagina è presente un elenco di flussi di dati visualizzabili, con informazioni sull’origine, il nome utente, il numero di flussi di dati e lo stato.
+
+Per ulteriori informazioni sugli stati, vedere la tabella seguente:
+
+| Stato | Descrizione |
+| ------ | ----------- |
+| Abilitata | Lo `Enabled` stato indica che un flusso di dati è attivo e che sta acquisendo i dati in base alla pianificazione fornita. |
+| Disabilitata | Lo `Disabled` stato indica che un flusso di dati è inattivo e non sta acquisendo alcun dato. |
+| Elaborazione | Lo `Processing` stato indica che un flusso di dati non è ancora attivo. Questo stato si verifica spesso subito dopo la creazione di un nuovo flusso di dati. |
+| Errore | Lo `Error` stato indica che il processo di attivazione di un flusso di dati è stato interrotto. |
+
+Selezionate l’icona funnel in alto a sinistra per ordinare i dati.
 
 ![elenco dei flussi di dati](../../images/tutorials/monitor/dataflows-list.png)
 
