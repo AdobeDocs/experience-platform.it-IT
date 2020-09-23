@@ -5,9 +5,9 @@ title: Segmentazione multi-entità
 topic: overview
 description: La segmentazione multi-entità è la capacità di estendere i dati del profilo con dati aggiuntivi basati su prodotti, store o altre classi non di profilo. Una volta connessi, i dati di altre classi diventano disponibili come se fossero nativi dello schema Profilo.
 translation-type: tm+mt
-source-git-commit: 8568c55003127a295acff9cfbbc3bbf6005e7a51
+source-git-commit: 4dd5a91146b116953ba180e3f39d24b4e1ec289e
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
@@ -45,14 +45,16 @@ Per creare un segmento con più entità è innanzitutto necessario definire le r
 
 ### Definizione delle relazioni
 
-La definizione di relazioni all&#39;interno della struttura degli schemi del modello dati esperienza (XDM) è parte integrante della creazione di segmenti multi-entità. Questo processo può essere eseguito utilizzando l&#39;API del Registro di sistema dello schema o l&#39;Editor schema. Per i passaggi dettagliati che mostrano come definire una relazione tra due schemi, scegliete una delle seguenti esercitazioni:
+La definizione di relazioni all&#39;interno della struttura degli schemi del modello dati esperienza (XDM) è parte integrante della creazione di segmenti multi-entità. Per le relazioni, il campo nella destinazione deve essere contrassegnato come identità primaria di tale schema. Un&#39;identità può essere contrassegnata solo sulle stringhe e non sulle matrici. Inoltre, le relazioni non devono necessariamente essere uno a uno, in quanto puoi collegare profili ed eventi di esperienza a più destinazioni.
+
+È possibile definire relazioni utilizzando l&#39;API del Registro di sistema dello schema o l&#39;Editor schema. Per i passaggi dettagliati che mostrano come definire una relazione tra due schemi, scegliete una delle seguenti esercitazioni:
 
 * [Definizione di una relazione tra due schemi mediante l&#39;API](../xdm/tutorials/relationship-api.md)
 * [Definizione di una relazione tra due schemi utilizzando l&#39;interfaccia utente dell&#39;Editor di schema](../xdm/tutorials/relationship-ui.md)
 
 ### Creazione di un segmento con più entità
 
-Una volta definite le relazioni XDM necessarie, potete iniziare a creare un segmento con più entità. Questo processo può essere eseguito utilizzando l&#39;API di segmentazione o l&#39;interfaccia utente di Generatore di segmenti. Per ulteriori informazioni, scegliete una delle seguenti guide:
+Una volta definite le relazioni XDM necessarie, potete iniziare a creare un segmento con più entità. Questa operazione può essere eseguita utilizzando l&#39;API Segmentazione o l&#39;interfaccia utente di Generatore di segmenti. Per ulteriori informazioni, scegliete una delle seguenti guide:
 
 * [Creazione di un segmento tramite l’API di segmentazione](./tutorials/create-a-segment.md)
 * [Creazione di un segmento mediante l’interfaccia utente di Generatore di segmenti](./ui/overview.md)
