@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;segment;Segment;search;segment search;
-solution: Adobe Experience Platform
 title: Endpoint di ricerca del segmento
 topic: guide
 description: La ricerca dei segmenti viene utilizzata per cercare i campi contenuti in varie origini dati e restituirli in tempo quasi reale. Questa guida fornisce informazioni utili per comprendere meglio la ricerca dei segmenti e include chiamate API di esempio per l'esecuzione di azioni di base tramite l'API.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '1179'
 ht-degree: 2%
@@ -256,7 +255,7 @@ Nella tabella seguente sono elencate le specifiche del funzionamento delle query
 | barra dei menu o dei menu | Una ricerca booleana. Questo restituisce dei risultati se **la parola &quot;foo&quot; o la parola &quot;bar&quot; si trovano** in uno qualsiasi dei campi ricercabili. |
 | barra NON | Una ricerca booleana. Questo restituisce dei risultati se la parola &quot;foo&quot; è trovata ma la parola &quot;bar&quot; non è trovata in nessuno dei campi ricercabili. |
 | name: foo AND bar | Una ricerca booleana. Questo restituisce risultati se **entrambe** le parole &quot;foo&quot; e &quot;bar&quot; sono presenti nel campo &quot;name&quot;. |
-| run* | Ricerca con caratteri jolly. L&#39;utilizzo di un asterisco (*) corrisponde a 0 o più caratteri, il che significa che restituirà risultati se il contenuto di uno qualsiasi dei campi ricercabili contiene una parola che inizia con &quot;run&quot;. Ad esempio, questo restituisce i risultati se vengono visualizzate le parole &quot;run&quot;, &quot;run&quot;, &quot;runner&quot; o &quot;runt&quot;. |
+| run* | Ricerca con caratteri jolly. L&#39;utilizzo di un asterisco (*) corrisponde a 0 o più caratteri, il che significa che restituirà risultati se il contenuto di uno qualsiasi dei campi ricercabili contiene una parola che inizia con &quot;run&quot;. Ad esempio, questo restituisce risultati se vengono visualizzate le parole &quot;run&quot;, &quot;run&quot;, &quot;runner&quot; o &quot;runt&quot;. |
 | cam? | Ricerca con caratteri jolly. Utilizzo di un punto interrogativo (?) rileva solo un carattere, il che significa che restituirà risultati se il contenuto di uno qualsiasi dei campi ricercabili inizia con &quot;cam&quot; e una lettera aggiuntiva. Ad esempio, questo restituisce i risultati se vengono visualizzate le parole &quot;campeggio&quot; o &quot;cams&quot;, ma non restituisce i risultati se vengono visualizzate le parole &quot;camera&quot; o &quot;fuoco&quot;. |
 | &quot;ombrello blu&quot; | Una ricerca di frasi. Questo restituisce dei risultati se il contenuto di uno qualsiasi dei campi ricercabili contiene la frase completa &quot;ombrello blu&quot;. |
 | blue\~ | Una ricerca sfocata. Facoltativamente, potete inserire un numero compreso tra 0 e 2 dopo la tilde (~) per specificare la distanza di modifica. Ad esempio, &quot;blue\~1&quot; restituisce &quot;blue&quot;, &quot;blues&quot; o &quot;colla&quot;. La ricerca Fuzzy può essere applicata **solo** ai termini, non alle frasi. Tuttavia, è possibile aggiungere piastrelle alla fine di ogni parola di una frase. Così, ad esempio, &quot;campeggio\~ in\~ la\~ estate\~&quot; avrebbe giocato con &quot;campeggio in estate&quot;. |
