@@ -5,9 +5,9 @@ title: Configurare un flusso di dati per un connettore di successo cliente nell'
 topic: overview
 description: Un flusso di dati è un'attività pianificata che recupera e assimila dati da un'origine a un [!DNL Platform] set di dati. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account di successo del cliente.
 translation-type: tm+mt
-source-git-commit: ad9b52e46d3eb4f6ed7774e4cbcb031a52801b49
+source-git-commit: 63eb8407617cda64f3f3b0cefd6bf427314e0216
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1414'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,11 @@ Per assimilare i dati in un nuovo dataset, selezionare **[!UICONTROL Create new 
 
 È possibile allegare un campo dello schema immettendo un nome dello schema nella barra di **[!UICONTROL Select schema]** ricerca. Potete anche selezionare l&#39;icona a discesa per visualizzare un elenco degli schemi esistenti. In alternativa, potete scegliere **[!UICONTROL Advanced search]** di accedere alla schermata degli schemi esistenti, inclusi i rispettivi dettagli.
 
-![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
+Durante questo passaggio, potete abilitare il dataset per [!DNL Real-time Customer Profile] e creare una visualizzazione olistica degli attributi e dei comportamenti di un&#39;entità. I dati di tutti i set di dati abilitati verranno inclusi in [!DNL Profile] e le modifiche verranno applicate al salvataggio del flusso di dati.
+
+Attivate il **[!UICONTROL Profile dataset]** pulsante per attivare il set di dati di destinazione per [!DNL Profile].
+
+![create-new-dataset](../../../images/tutorials/dataflow/crm/new-dataset.png)
 
 Viene visualizzata **[!UICONTROL Select schema]** la finestra di dialogo. Selezionare lo schema che si desidera applicare al nuovo dataset, quindi fare clic su **[!UICONTROL Done]**.
 
