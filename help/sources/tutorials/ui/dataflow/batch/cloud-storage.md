@@ -5,9 +5,9 @@ title: Configurare un flusso di dati per un connettore batch di archiviazione cl
 topic: overview
 description: Un flusso di dati è un'attività pianificata che recupera e trasferisce dati da un'origine a un set di dati della piattaforma. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account di archiviazione cloud.
 translation-type: tm+mt
-source-git-commit: a4fd95904159a7b3e9c420f720a315641fd6706f
+source-git-commit: 63eb8407617cda64f3f3b0cefd6bf427314e0216
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1606'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,11 @@ Viene visualizzata **[!UICONTROL Select dataset]** la finestra di dialogo. Trova
 
 Per assimilare i dati in un nuovo dataset, selezionare **[!UICONTROL New dataset]** e immettere un nome e una descrizione per il dataset nei campi forniti. Per aggiungere uno schema, è possibile immettere un nome di schema esistente nella **[!UICONTROL Select schema]** finestra di dialogo. In alternativa, è possibile selezionare l&#39;opzione **[!UICONTROL Schema advanced search]** per cercare uno schema appropriato.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-new-dataset.png)
+Durante questo passaggio, potete abilitare il dataset per [!DNL Real-time Customer Profile] e creare una visualizzazione olistica degli attributi e dei comportamenti di un&#39;entità. I dati di tutti i set di dati abilitati verranno inclusi in [!DNL Profile] e le modifiche verranno applicate al salvataggio del flusso di dati.
+
+Attivate il **[!UICONTROL Profile dataset]** pulsante per attivare il set di dati di destinazione per [!DNL Profile].
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/new-dataset.png)
 
 Viene visualizzata **[!UICONTROL Select schema]** la finestra di dialogo. Selezionare lo schema da applicare al nuovo dataset, quindi selezionare **[!UICONTROL Done]**.
 
