@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;enable profile;Enable profile
-solution: Adobe Experience Platform
 title: Aggiungere dati al profilo cliente in tempo reale
 topic: tutorial
 description: Questa esercitazione illustra i passaggi necessari per aggiungere dati al profilo cliente in tempo reale.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 0%
@@ -25,7 +24,7 @@ I dati che vengono assimilati [!DNL Experience Platform] per l&#39;utilizzo da [
 
 ## Aggiunta di dati tramite l&#39;assimilazione batch
 
-Tutti i dati caricati per [!DNL Platform] l’assimilazione in batch vengono caricati in singoli set di dati. Prima che questi dati possano essere utilizzati da [!DNL Real-time Customer Profile], il set di dati in questione deve essere configurato in modo specifico. Per istruzioni complete, vedete l&#39;esercitazione sulla [configurazione di un dataset per il servizio](dataset-configuration.md)Profilo e identità.
+Tutti i dati caricati per [!DNL Platform] l’assimilazione batch vengono caricati su singoli set di dati. Prima che questi dati possano essere utilizzati da [!DNL Real-time Customer Profile], il set di dati in questione deve essere configurato in modo specifico. Per istruzioni complete, vedete l&#39;esercitazione sulla [configurazione di un dataset per il servizio](dataset-configuration.md)Profilo e identità.
 
 Una volta configurato il set di dati, è possibile iniziare a assimilarvi i dati. Consultate la guida [per gli sviluppatori per l’assimilazione](../../ingestion/batch-ingestion/api-overview.md) batch per i passaggi dettagliati su come caricare i file in diversi formati.
 
