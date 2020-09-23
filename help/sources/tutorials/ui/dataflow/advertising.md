@@ -5,9 +5,9 @@ title: Configurare un flusso di dati per un connettore pubblicitario nell'interf
 topic: overview
 description: Un flusso di dati è un'attività pianificata che recupera e trasferisce dati da un'origine a un set di dati Adobe Experience Platform. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account pubblicitario.
 translation-type: tm+mt
-source-git-commit: 33b0f69c1552957984c131c72a13e88167211295
+source-git-commit: e504e0be465c755a77aa30589731941ca50426d2
 workflow-type: tm+mt
-source-wordcount: '1354'
+source-wordcount: '1401'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,11 @@ Per assimilare i dati in un nuovo dataset, selezionare **[!UICONTROL Create new 
 
 È possibile allegare un campo dello schema immettendo un nome dello schema nella barra di **[!UICONTROL Select schema]** ricerca. Potete anche selezionare l&#39;icona a discesa per visualizzare un elenco degli schemi esistenti. In alternativa, potete scegliere **[!UICONTROL Advanced search]** di accedere alla schermata degli schemi esistenti, inclusi i rispettivi dettagli.
 
-![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
+Durante questo passaggio, potete abilitare il dataset per [!DNL Real-time Customer Profile] e creare una visualizzazione olistica degli attributi e dei comportamenti di un&#39;entità. I dati di tutti i set di dati abilitati verranno inclusi in [!DNL Profile] e le modifiche verranno applicate al salvataggio del flusso di dati.
+
+Attivate il **[!UICONTROL Profile dataset]** pulsante per attivare il set di dati di destinazione per [!DNL Profile].
+
+![create-new-dataset](../../../images/tutorials/dataflow/advertising/target-dataset.png)
 
 Viene visualizzata **[!UICONTROL Select schema]** la finestra di dialogo. Selezionare lo schema che si desidera applicare al nuovo dataset, quindi fare clic su **[!DNL Done]**.
 
