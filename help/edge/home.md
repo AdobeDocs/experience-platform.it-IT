@@ -3,9 +3,9 @@ title: Guida di Adobe Experience Platform Web SDK
 seo-title: Guida di Adobe Experience Platform Web SDK
 description: Scopri cos’è Adobe Experience Platform Web SDK e come può essere utilizzato.
 seo-description: consentire ai clienti dell'Adobe Experience Cloud di interagire con i vari servizi del Experience Cloud .
-keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;
+keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;web SDK;Launch;launch
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '702'
 ht-degree: 2%
