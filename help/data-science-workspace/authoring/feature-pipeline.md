@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;Tutorial;feature pipeline;Data Science Workspace;popular topics
-solution: Adobe Experience Platform Data Science Workspace
 title: Creazione di una pipeline di feature
 topic: Tutorial
 description: Adobe Experience Platform consente di creare e creare condutture di funzionalità personalizzate per eseguire la progettazione di funzionalità su scala tramite il runtime Sensei Machine Learning Framework. Questo documento descrive le varie classi rilevate in una pipeline delle funzioni e fornisce un'esercitazione dettagliata per la creazione di una pipeline delle funzioni personalizzata tramite l'SDK per l'authoring dei modelli in PySpark.
 translation-type: tm+mt
-source-git-commit: 76e6e1a5484dce0a4640c2ce1f43cf7d84e049bf
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '1426'
 ht-degree: 0%
