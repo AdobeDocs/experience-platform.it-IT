@@ -5,9 +5,9 @@ title: Creare uno schema tramite l’Editor di schema.
 topic: tutorials
 description: Questa esercitazione descrive i passaggi necessari per creare uno schema utilizzando l'Editor di schema all'interno  Experience Platform.
 translation-type: tm+mt
-source-git-commit: 58e0ee234492731d5f875ab845fca11fcda3539b
+source-git-commit: f0d3aad649fa550443db0fc5168c848ae85fb459
 workflow-type: tm+mt
-source-wordcount: '3599'
+source-wordcount: '3637'
 ht-degree: 0%
 
 ---
@@ -143,7 +143,7 @@ Per iniziare, selezionate il nome del mixin nella **[!UICONTROL Mixins]** sezion
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
-Selezionare **[!UICONTROL Add field]** accanto a &quot;[!DNL Loyalty Members]&quot; per creare un nuovo nodo nella struttura. Questo nodo (denominato &quot;_tenantId&quot; in questo esempio) rappresenta l&#39;ID tenant dell&#39;organizzazione IMS, preceduto da un carattere di sottolineatura. La presenza dell&#39;ID tenant indica che i campi che si sta aggiungendo sono contenuti nello spazio dei nomi dell&#39;organizzazione.
+Selezionare **[!UICONTROL Add field]** accanto a &quot;[!DNL Loyalty Members]&quot; per creare un nuovo nodo nella struttura. Questo nodo (chiamato `_tenantId` in questo esempio) rappresenta l&#39;ID tenant dell&#39;organizzazione IMS, preceduto da un carattere di sottolineatura. La presenza dell&#39;ID tenant indica che i campi che si sta aggiungendo sono contenuti nello spazio dei nomi dell&#39;organizzazione.
 
 In altre parole, i campi che state aggiungendo sono univoci per la vostra organizzazione e verranno salvati in [!DNL Schema Registry] un&#39;area specifica accessibile solo alla vostra organizzazione. I campi definiti devono sempre essere aggiunti allo spazio nomi tenant per evitare conflitti con nomi di altre classi, mixin, tipi di dati e campi standard.
 
@@ -236,6 +236,10 @@ Lo schema ora contiene diversi mixin oltre ai campi forniti dalla relativa class
 Se si sta cercando un campo specifico nello schema, è possibile utilizzare la barra di ricerca anche per filtrare i campi visualizzati per nome, indipendentemente dal mixin cui sono forniti.
 
 ![](../images/tutorials/create-schema/search.png)
+
+>[!IMPORTANT]
+>
+>La funzione di ricerca prende in considerazione tutti i filtri mixin selezionati quando vengono visualizzati i campi corrispondenti. Se una query di ricerca non visualizza i risultati previsti, potrebbe essere necessario verificare due volte che non state filtrando i mixin rilevanti.
 
 ## Impostare un campo dello schema come campo di identità {#identity-field}
 
