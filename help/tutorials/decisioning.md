@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Esercitazioni per la scelta
 topic: tutorial
+type: Tutorial
 description: Il servizio di gestione delle decisioni consente di creare esperienze personalizzate, ottimizzate e orchestrate nelle applicazioni in esecuzione su Adobe Experience Platform. Utilizzando il servizio di gestione delle decisioni, potete determinare l'opzione migliore da una serie di opzioni disponibili.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 0%
