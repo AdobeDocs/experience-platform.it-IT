@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;MySQL;mysql
 solution: Experience Platform
 title: Creare un connettore MySQL utilizzando l'API del servizio di flusso
 topic: overview
+type: Tutorial
 description: Questa esercitazione utilizza l'API del servizio di flusso per seguire i passaggi necessari per connettere  Experience Platform a MySQL.
 translation-type: tm+mt
-source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 2%
