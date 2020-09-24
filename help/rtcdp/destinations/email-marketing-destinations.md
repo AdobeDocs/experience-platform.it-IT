@@ -2,10 +2,11 @@
 keywords: email;Email;e-mail;email destinations
 title: Destinazioni marketing e-mail
 seo-title: Destinazioni marketing e-mail
+type: Tutorial
 description: I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio per l’invio di campagne e-mail promozionali.
 seo-description: I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio per l’invio di campagne e-mail promozionali.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 1%
@@ -29,7 +30,7 @@ Nel flusso di destinazione di connessione, descritto nella sezione seguente, col
 
    ![Connetti alla destinazione](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
-2. Nel **[!UICONTROL Authentication]** passaggio, se in precedenza hai impostato una connessione alla destinazione di marketing per le e-mail, seleziona **[!UICONTROL Existing Account]** e seleziona la connessione esistente. In alternativa, potete scegliere **[!UICONTROL New Account]** di impostare una nuova connessione alla destinazione di e-mail marketing. Nel **[!UICONTROL Connection type]** selettore, potete scegliere tra **Amazon S3**, **SFTP con password**, **SFTP con chiave** SSH. Compila le informazioni riportate di seguito, a seconda del tipo di connessione, quindi seleziona **[!UICONTROL Connect]**.
+2. Nel **[!UICONTROL Authentication]** passaggio, se in precedenza hai impostato una connessione alla destinazione di marketing per e-mail, seleziona **[!UICONTROL Existing Account]** e seleziona la connessione esistente. In alternativa, potete scegliere **[!UICONTROL New Account]** di impostare una nuova connessione alla destinazione di e-mail marketing. Nel **[!UICONTROL Connection type]** selettore, potete scegliere tra **Amazon S3**, **SFTP con password**, **SFTP con chiave** SSH. Compila le informazioni riportate di seguito, a seconda del tipo di connessione, quindi seleziona **[!UICONTROL Connect]**.
 
    Per le connessioni **** S3, dovete fornire il vostro ID chiave di accesso Amazon  e la chiave di accesso segreta.
 
