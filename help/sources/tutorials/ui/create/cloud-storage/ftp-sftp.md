@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;SFTP;FTP;ftp;sftp
 solution: Experience Platform
 title: Creare un connettore sorgente FTP o SFTP nell’interfaccia utente
 topic: overview
+type: Tutorial
 description: Questa esercitazione fornisce i passaggi per creare un connettore sorgente FTP o SFTP utilizzando l'interfaccia utente della piattaforma.
 translation-type: tm+mt
-source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '547'
 ht-degree: 1%
