@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Azure Blob;azure blob;Azure bl
 solution: Experience Platform
 title: Creare un connettore di origine Azure Blob nell'interfaccia utente
 topic: overview
+type: Tutorial
 description: Questa esercitazione fornisce passaggi per la creazione di un BLOB di Azure (in seguito denominato "Blob") tramite l'interfaccia utente della piattaforma.
 translation-type: tm+mt
-source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 1%
