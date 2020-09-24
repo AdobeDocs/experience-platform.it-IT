@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;data source connection
 solution: Experience Platform
 title: Acquisire dati di parquet da un sistema di archiviazione cloud di terze parti tramite l'API del servizio di flusso
 topic: overview
+type: Tutorial
 description: Questa esercitazione utilizza l’API del servizio di flusso per illustrare i passaggi necessari per acquisire i dati del parquet da un sistema di archiviazione cloud di terze parti.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1088'
 ht-degree: 2%
 
 ---
@@ -36,17 +37,17 @@ Questa esercitazione fornisce esempi di chiamate API per dimostrare come formatt
 
 Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
 
-- Autorizzazione: Portatore `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
 Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: `{SANDBOX_NAME}`
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva per il tipo di supporto:
 
-- Content-Type: `application/json`
+- `Content-Type: application/json`
 
 ## Creare una connessione
 
