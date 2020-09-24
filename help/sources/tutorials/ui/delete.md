@@ -4,8 +4,9 @@ description: I connettori di origine in Adobe Experience Platform consentono di 
 solution: Experience Platform
 title: Eliminare i flussi di dati
 topic: overview
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '434'
 ht-degree: 1%
@@ -65,5 +66,5 @@ Dopo alcuni istanti, nella parte inferiore dello schermo viene visualizzata una 
 
 Seguendo questa esercitazione, è stato possibile accedere agli account e ai flussi di dati esistenti dall&#39; **[!UICONTROL Sources]** area di lavoro. I dati in entrata possono ora essere utilizzati dai [!DNL Platform] servizi a valle come [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i documenti seguenti:
 
-- [[!DNL Real-time Customer Profile] panoramica](../../../profile/home.md)
-- [[!DNL Data Science Workspace] panoramica](../../../data-science-workspace/home.md)
+- [[!DNL Real-time Customer Profile]  - Panoramica](../../../profile/home.md)
+- [[!DNL Data Science Workspace]  - Panoramica](../../../data-science-workspace/home.md)
