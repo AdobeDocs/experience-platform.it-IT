@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic e
 solution: Experience Platform
 title: Applicazione dei criteri di utilizzo dei dati tramite l'API di Servizio criteri
 topic: enforcement
+type: Tutorial
 description: Dopo aver creato etichette di utilizzo dei dati per i dati e criteri di utilizzo per le azioni di marketing in base a tali etichette, potete utilizzare l'API Servizio criteri per valutare se un'azione di marketing eseguita su un set di dati o su un gruppo arbitrario di etichette costituisce una violazione dei criteri. Potete quindi configurare i vostri protocolli interni per gestire le violazioni dei criteri in base alla risposta API.
 translation-type: tm+mt
-source-git-commit: d99a0a9211b5384b96e959d36f414cae47ab5f4e
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 1%
