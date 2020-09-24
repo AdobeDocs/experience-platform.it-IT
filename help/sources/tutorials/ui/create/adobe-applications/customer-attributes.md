@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;customer attributes
 solution: Experience Platform
 title: Creare un connettore di origine attributi cliente nell'interfaccia utente
 topic: overview
+type: Tutorial
 description: Questa esercitazione fornisce i passaggi per la creazione di un connettore di origine nell'interfaccia utente per la raccolta dei dati di profilo degli attributi del cliente in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 8%
@@ -54,5 +55,5 @@ Viene visualizzato il passaggio *Revisione* , che consente di controllare la nuo
 
 Una volta creata la connessione, vengono automaticamente creati uno schema di destinazione e un set di dati per contenere i dati in arrivo. Al termine dell&#39;assimilazione iniziale, i dati del profilo degli attributi del cliente possono essere utilizzati dai [!DNL Platform] servizi a valle quali [!DNL Real-time Customer Profile] e [!DNL Segmentation Service]. Per ulteriori informazioni, consulta i documenti seguenti:
 
-* [[!DNL Real-time Customer Profile] panoramica](../../../../../profile/home.md)
-* [[!DNL Segmentation Service] panoramica](../../../../../segmentation/home.md)
+* [[!DNL Real-time Customer Profile]  - Panoramica](../../../../../profile/home.md)
+* [[!DNL Segmentation Service]  - Panoramica](../../../../../segmentation/home.md)
