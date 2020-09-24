@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;configure dataflow;customer su
 solution: Experience Platform
 title: Configurare un flusso di dati per un connettore di successo cliente nell'interfaccia utente
 topic: overview
+type: Tutorial
 description: Un flusso di dati è un'attività pianificata che recupera e assimila dati da un'origine a un [!DNL Platform] set di dati. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account di successo del cliente.
 translation-type: tm+mt
-source-git-commit: 63eb8407617cda64f3f3b0cefd6bf427314e0216
+source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
 workflow-type: tm+mt
 source-wordcount: '1414'
 ht-degree: 0%
