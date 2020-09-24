@@ -4,11 +4,12 @@ description: Questa esercitazione fornisce i passaggi per creare un connettore d
 solution: Experience Platform
 title: Creare un connettore dati di classificazione Adobe Analytics  nell'interfaccia utente
 topic: overview
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '587'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -84,4 +85,4 @@ Seguendo questa esercitazione, hai creato un connettore dati di classificazione 
 
 * [Panoramica del connettore dati di Analytics](../../../../connectors/adobe-applications/analytics.md)
 * [Creare un connettore dati di Analytics nell&#39;interfaccia utente](./analytics.md)
-* [Informazioni sulle classificazioni](https://docs.adobe.com/content/help/en/analytics/components/classifications/c-classifications.html#)
+* [Informazioni sulle classificazioni](https://docs.adobe.com/content/help/it-IT/analytics/components/classifications/c-classifications.html#)
