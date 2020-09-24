@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Governance dei dati ed esercitazioni sulla privacy
 topic: tutorial
+type: Tutorial
 description: Questo documento fornisce una panoramica delle diverse esercitazioni disponibili relative a Adobe Experience Platform Data Governance e  Adobe Experience Platform Privacy Service.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 0%
