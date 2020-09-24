@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;manage decisioning;decisioning
 solution: Experience Platform
 title: Gestire le entità del servizio di disattivazione tramite API
 topic: tutorial
+type: Tutorial
 description: 'Questo documento fornisce un''esercitazione per lavorare con le entità aziendali di Decisioning Service utilizzando le API Adobe Experience Platform. '
 translation-type: tm+mt
-source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '7239'
 ht-degree: 0%
@@ -582,7 +583,7 @@ Quando si utilizzano le API con il tipo di contenuto `application/vnd.adobe.plat
 
 >[!NOTE]
 >
->Per ragioni di brevità, in tutti gli snippet JSON solo le proprietà dell&#39;istanza sono illustrate e solo quando è richiesto vengono visualizzate le proprietà busta e la sezione _links.
+>Per motivi di brevità, in tutti gli snippet JSON solo le proprietà dell&#39;istanza sono illustrate e solo quando è richiesto vengono visualizzate le proprietà busta e la sezione _links.
 
 ### Proprietà generali delle offerte
 
