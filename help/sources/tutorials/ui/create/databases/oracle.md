@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Oracle DB;oracle db
 solution: Experience Platform
 title: Creare un connettore di origine Oracle DB nell'interfaccia utente
 topic: overview
+type: Tutorial
 description: Questa esercitazione fornisce i passaggi per la creazione di un connettore di origine Oracle DB utilizzando l'interfaccia utente della piattaforma.
 translation-type: tm+mt
-source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 1%
