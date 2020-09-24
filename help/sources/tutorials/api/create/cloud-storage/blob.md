@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Azure;azure blob;blob;Blob
 solution: Experience Platform
 title: Creare un connettore BLOB di Azure utilizzando l'API del servizio di flusso
 topic: overview
+type: Tutorial
 description: Questa esercitazione utilizza l'API del servizio di flusso per seguire i passaggi necessari per connettere  Experience Platform a un archivio BLOB di Azure (in seguito denominato "BLOB").
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 1%
