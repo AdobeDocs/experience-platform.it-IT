@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Esercitazioni sulla segmentazione
 topic: tutorial
+type: Tutorial
 description: Adobe Experience Platform Segmentation Service fornisce un'interfaccia utente e RESTful API che consente di creare segmenti e generare audience dai dati del profilo cliente in tempo reale. Questi segmenti sono configurati e mantenuti a livello centrale sulla piattaforma e sono facilmente accessibili da qualsiasi soluzione  Adobe.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '584'
 ht-degree: 0%
@@ -27,7 +28,7 @@ Dopo aver sviluppato, testato e salvato la definizione del segmento, puoi valuta
 
 ## Esportare i dati dei segmenti
 
-Per esportare i segmenti contenenti [!DNL Profile] dati è innanzitutto necessario [creare un dataset in cui esportare](../segmentation/tutorials/create-dataset-export-segment.md)i dati e quindi avviare un nuovo processo di esportazione. I passaggi per generare un processo di esportazione si trovano nell’esercitazione sulla [valutazione di un segmento](../segmentation/tutorials/evaluate-a-segment.md).
+Per esportare i segmenti contenenti [!DNL Profile] dati è innanzitutto necessario [creare un dataset in cui esportare](../segmentation/tutorials/create-dataset-export-segment.md)i dati, quindi avviare un nuovo processo di esportazione. I passaggi per generare un processo di esportazione si trovano nell’esercitazione sulla [valutazione di un segmento](../segmentation/tutorials/evaluate-a-segment.md).
 
 ## Configurare i criteri di unione
 
