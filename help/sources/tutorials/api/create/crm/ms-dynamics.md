@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Microsoft Dynamics;microsoft d
 solution: Experience Platform
 title: Creare un connettore Microsoft Dynamics utilizzando l'API del servizio di flusso
 topic: overview
+type: Tutorial
 description: Questa esercitazione utilizza l'API del servizio di flusso per guidarti attraverso i passaggi necessari per connettere la piattaforma a un account Microsoft Dynamics (in seguito denominato "Dynamics") per la raccolta dei dati CRM.
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '709'
 ht-degree: 1%
