@@ -2,10 +2,11 @@
 keywords: Experience Platform;import packaged recipe;Data Science Workspace;popular topics;recipes;api;sensei machine learning;create engine
 solution: Experience Platform
 title: Importare una ricetta in pacchetti (API)
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: 'Questa esercitazione utilizza l''API di apprendimento di Sensei Machine per creare un motore, noto anche come Ricetta nell''interfaccia utente. '
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '981'
 ht-degree: 2%
@@ -198,7 +199,7 @@ Una risposta corretta restituisce un payload contenente i dettagli del motore ap
 }
 ```
 
-Una risposta corretta mostra un payload JSON con informazioni relative al motore appena creato. La `id` chiave rappresenta l’identificatore univoco del motore ed è necessaria nell’esercitazione successiva per creare un’istanza MLI. Prima di continuare con i passaggi successivi, accertati che l’identificatore del motore sia salvato.
+Una risposta corretta mostra un payload JSON con informazioni relative al motore appena creato. La `id` chiave rappresenta l’identificatore univoco del motore ed è necessaria nell’esercitazione successiva per creare un’istanza MLI. Prima di continuare con i passaggi successivi, assicurarsi che l’identificatore del motore sia salvato.
 
 ## Passaggi successivi {#next-steps}
 
