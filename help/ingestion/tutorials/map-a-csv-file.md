@@ -3,8 +3,9 @@ keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv f
 solution: Experience Platform
 title: Mappare un file CSV su uno schema XDM
 topic: tutorial
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1297'
 ht-degree: 2%
@@ -152,7 +153,7 @@ Nella tabella seguente sono elencate tutte le funzioni di mappatura supportate, 
 | timestamp | Recupera l&#39;ora Unix corrente. | timestamp() | 1571850624571 |
 | format | Formatta la data di input in base a un formato specificato. | format({DATE}, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
 | dformat | Converte una marca temporale in una stringa data in base a un formato specificato. | dformat(1571829875, &quot;dd-MMM-yyyy hh:mm&quot;) | &quot;23-ott-2019 11:24&quot; |
-| date | Converte una stringa data in un oggetto ZoningDateTime (formato ISO 8601). | date(&quot;23-ott-2019 11:24&quot;) | &quot;2019-10-23T11:24:00+00:00&quot; |
+| data | Converte una stringa data in un oggetto ZoningDateTime (formato ISO 8601). | date(&quot;23-ott-2019 11:24&quot;) | &quot;2019-10-23T11:24:00+00:00&quot; |
 | date_part | Recupera le parti della data. Sono supportati i seguenti valori di componente: <br><br>&quot;anno&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;trimestre&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;dayofyear&quot;<br><br>&quot;dy&quot;&quot;y&quot;&quot;&quot;&quot;d&quot;&quot;d&quot;&quot;settimana&quot;w&quot;&quot;giorno&quot;kolkkkolw&quot;dw&quot;<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&quot;w&quot;&quot;h&quot;&quot;hh24&quot;&quot;hh12&quot;&quot;minuto&quot;mi&quot;&quot;n&quot;&quot;2D&quot;&quot;2D&quot;&quot;ss&quot;&quot;s&quot;&quot;millisecond&quot;ms&quot; | date_part(date(&quot;2019-10-17 11:55:12&quot;), &quot;MM&quot;) | 10 |
 | set_date_part | Sostituisce un componente in una data specificata. Sono accettati i seguenti componenti: <br><br>&quot;anno&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br><br><br><br><br><br><br><br><br>&quot;hh&quot;&quot;minuti&quot;&quot;mi&quot;&quot;n&quot;&quot;2D&quot;ss&quot;&quot; | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
 | make_date_time /<br>make_timestamp | Crea una data da parti. | make_date_time(2019, 10, 17, 11, 55, 12, 999, &quot;America/Los_Angeles&quot;) | `2019-10-17T11:55:12.0&#x200B;00000999-07:00[America/Los_Angeles]` |
