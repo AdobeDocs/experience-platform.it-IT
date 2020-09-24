@@ -4,8 +4,9 @@ description: I connettori di origine in Adobe Experience Platform consentono di 
 solution: Experience Platform
 title: Monitorare account e flussi di dati
 topic: overview
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: 8f752d6a08496f9583627781d9143ee7f9159bf0
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1019'
 ht-degree: 1%
