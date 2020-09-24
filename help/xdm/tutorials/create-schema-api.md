@@ -2,10 +2,11 @@
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create
 solution: Experience Platform
 title: Creare uno schema utilizzando l'API del Registro di sistema dello schema
-topic: tutorials
+topic: tutorial
+type: Tutorials
 description: Questa esercitazione utilizza l'API del Registro di sistema dello schema per illustrare i passaggi necessari per comporre uno schema utilizzando una classe standard.
 translation-type: tm+mt
-source-git-commit: ed1f2fdac0f9c977d11c867327c084353c1bcd0f
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '2368'
 ht-degree: 1%
