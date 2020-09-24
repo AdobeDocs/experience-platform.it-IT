@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Amazon S3;Azure Blob
 solution: Experience Platform
 title: Creare un connettore di origine Azure Blob o  Amazon S3 nell'interfaccia utente
 topic: overview
+type: Tutorial
 description: 'I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente originati su base programmata. '
 translation-type: tm+mt
-source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%
