@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Oracle;oracle
 solution: Experience Platform
 title: Creare un connettore Oracle utilizzando l'API di servizio di flusso
 topic: overview
+type: Tutorial
 description: Questa esercitazione utilizza l'API del servizio di flusso per illustrare i passaggi necessari per collegare Oracle a  Experience Platform.
 translation-type: tm+mt
-source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '535'
 ht-degree: 2%
