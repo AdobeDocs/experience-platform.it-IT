@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Esercitazioni sull’inserimento dei dati
 topic: tutorial
+type: Tutorial
 description: L’inserimento dei dati include l’assimilazione batch, l’assimilazione in streaming e l’assimilazione mediante connettori sorgente.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 0%
