@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Azure Data Lake Storage Gen2;A
 solution: Experience Platform
 title: Creare un connettore di origine Azure Data Lake Storage Gen2 nell'interfaccia utente
 topic: overview
+type: Tutorial
 description: Questa esercitazione fornisce passaggi per l'autenticazione di un connettore di origine Azure Data Lake Storage Gen2 (di seguito denominato "ADLS Gen2") tramite l'interfaccia utente della piattaforma.
 translation-type: tm+mt
-source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '459'
 ht-degree: 1%
