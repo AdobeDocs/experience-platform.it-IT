@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;IBM DB2;IBM;ibm db2;db2;DB2
 solution: Experience Platform
 title: Creare un connettore IBM DB2 utilizzando l'API Flow Service
 topic: overview
+type: Tutorial
 description: Questa esercitazione utilizza l'API del servizio di flusso per guidarti attraverso i passaggi necessari per connettere IBM DB2 (in seguito denominato "DB2") a  Experience Platform.
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 2%
