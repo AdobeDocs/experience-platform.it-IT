@@ -2,9 +2,10 @@
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;enable profile;Enable profile
 title: Aggiungere dati al profilo cliente in tempo reale
 topic: tutorial
+type: Tutorial
 description: Questa esercitazione illustra i passaggi necessari per aggiungere dati al profilo cliente in tempo reale.
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 0%
