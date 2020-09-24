@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Creare destinazioni di e-mail marketing
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: f31b03f027d8b44f761917f4edf19a0b5eedd76c
+source-git-commit: bde86cc835c2bd579404480ece8e850fbef8a9b2
 workflow-type: tm+mt
 source-wordcount: '1631'
 ht-degree: 1%
@@ -22,7 +22,7 @@ Questa esercitazione utilizza la  destinazione Adobe Campaign in tutti gli esemp
 
 Se preferite utilizzare l&#39;interfaccia utente in  Adobe  CDP in tempo reale per collegare una destinazione e attivare i dati, consultate le esercitazioni [Connetti una destinazione](../../rtcdp/destinations/connect-destination.md) e [Attiva profili e segmenti a una destinazione](../../rtcdp/destinations/activate-destinations.md) .
 
-## introduzione
+## Introduzione
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
@@ -426,7 +426,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --data-raw '{
     "name": "TargetConnection for Adobe Campaign",
     "description": "Connection to Adobe Campaign",
-    "baseConnection": "{BASE_CONNECTION_ID}",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
     "connectionSpec": {
         "id": "{CONNECTION_SPEC_ID}",
         "version": "1.0"
