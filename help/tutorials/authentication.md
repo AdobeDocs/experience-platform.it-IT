@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Authenticate;access
 solution: Experience Platform
 title: Autenticazione e accesso  API Experience Platform
 topic: tutorial
+type: Tutorial
 description: 'Questo documento fornisce un''esercitazione passo-passo per ottenere l''accesso a un account sviluppatore Adobe Experience Platform per effettuare chiamate alle API  Experience Platform. '
 translation-type: tm+mt
-source-git-commit: 76e6e1a5484dce0a4640c2ce1f43cf7d84e049bf
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '868'
 ht-degree: 1%
