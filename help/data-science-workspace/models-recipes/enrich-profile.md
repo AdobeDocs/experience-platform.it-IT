@@ -2,10 +2,11 @@
 keywords: Experience Platform;machine learning model;Data Science Workspace;Real-time Customer Profile;popular topics;machine learning insights
 solution: Experience Platform
 title: Arricchisci il profilo cliente in tempo reale con informazioni approfondite sull'apprendimento automatico
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: Questo documento fornisce un'esercitazione dettagliata per arricchire il profilo cliente in tempo reale con informazioni approfondite sulle attività di machine learning, i passaggi sono suddivisi nelle seguenti sezioni, creare uno schema/set di dati di output, configurare uno schema/set di dati di output e creare segmenti utilizzando Segment Builder (Generatore di segmenti).
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1184'
 ht-degree: 0%
