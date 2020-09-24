@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connessione alle destinazioni di streaming e attivazione dei dati
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: f31b03f027d8b44f761917f4edf19a0b5eedd76c
+source-git-commit: bde86cc835c2bd579404480ece8e850fbef8a9b2
 workflow-type: tm+mt
 source-wordcount: '1817'
 ht-degree: 2%
@@ -26,7 +26,7 @@ Questa esercitazione utilizza la [!DNL Amazon Kinesis] destinazione in tutti gli
 
 Se preferite utilizzare l&#39;interfaccia utente in  Adobe  CDP in tempo reale per collegarvi a una destinazione e attivare i dati, consultate le esercitazioni [Connetti una destinazione](../../rtcdp/destinations/connect-destination.md) e [Attiva profili e segmenti a una destinazione](../../rtcdp/destinations/activate-destinations.md) .
 
-## introduzione
+## Introduzione
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
@@ -298,7 +298,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --data-raw '{
     "name": "Amazon Kinesis/ Azure Event Hubs target connection",
     "description": "Connection to Amazon Kinesis/ Azure Event Hubs",
-    "baseConnection": "{BASE_CONNECTION_ID}",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
     "connectionSpec": {
         "id": "{CONNECTION_SPEC_ID}",
         "version": "1.0"
