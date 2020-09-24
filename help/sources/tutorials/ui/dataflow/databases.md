@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;database connector
 solution: Experience Platform
 title: Configurare un flusso di dati per un connettore di database nell'interfaccia utente
 topic: overview
+type: Tutorial
 description: Un flusso di dati è un'attività pianificata che recupera e trasferisce dati da un'origine a un set di dati della piattaforma. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account del database.
 translation-type: tm+mt
-source-git-commit: 63eb8407617cda64f3f3b0cefd6bf427314e0216
+source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
 workflow-type: tm+mt
 source-wordcount: '1380'
 ht-degree: 0%
@@ -159,8 +160,8 @@ Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti
 
 Seguendo questa esercitazione, è stato creato un flusso di dati per inserire i dati da un database esterno e ottenere informazioni dettagliate sul monitoraggio dei set di dati. I dati in entrata possono ora essere utilizzati dai [!DNL Platform] servizi a valle come [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i documenti seguenti:
 
-- [[!DNL Real-time Customer Profile] panoramica](../../../../profile/home.md)
-- [[!DNL Data Science Workspace] panoramica](../../../../data-science-workspace/home.md)
+- [[!DNL Real-time Customer Profile]  - Panoramica](../../../../profile/home.md)
+- [[!DNL Data Science Workspace]  - Panoramica](../../../../data-science-workspace/home.md)
 
 ## Appendice
 
