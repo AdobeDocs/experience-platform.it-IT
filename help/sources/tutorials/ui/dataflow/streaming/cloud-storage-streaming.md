@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;cloud storage connector;cloud 
 solution: Experience Platform
 title: Configurare un flusso di dati per un connettore di streaming per l'archiviazione cloud nell'interfaccia utente
 topic: overview
+type: Tutorial
 description: Un flusso di dati è un'attività pianificata che recupera e trasferisce dati da un'origine a un set di dati della piattaforma. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando il connettore di base per l'archiviazione cloud.
 translation-type: tm+mt
-source-git-commit: c1b493de7374cbd1c916d90f9382574f831e11e3
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '675'
 ht-degree: 0%
@@ -83,8 +84,8 @@ Una volta creato il flusso di dati per l&#39;archiviazione cloud, potete monitor
 
 Seguendo questa esercitazione, hai creato con successo un flusso di dati per l&#39;inserimento di dati da un archivio cloud esterno e hai acquisito informazioni sul monitoraggio dei set di dati. I dati in entrata possono ora essere utilizzati dai [!DNL Platform] servizi a valle come [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i documenti seguenti:
 
-- [[!DNL Real-time Customer Profile] panoramica](../../../../../profile/home.md)
-- [[!DNL Data Science Workspace] panoramica](../../../../../data-science-workspace/home.md)
+- [[!DNL Real-time Customer Profile]  - Panoramica](../../../../../profile/home.md)
+- [[!DNL Data Science Workspace]  - Panoramica](../../../../../data-science-workspace/home.md)
 
 ## Appendice
 
