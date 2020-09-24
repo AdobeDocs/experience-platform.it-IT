@@ -3,8 +3,9 @@ keywords: Experience Platform;home;popular topics;query service;Query service;ge
 solution: Experience Platform
 title: Generazione di set di dati dai risultati della query
 topic: queries
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '266'
 ht-degree: 1%
@@ -24,7 +25,7 @@ La vera potenza di [!DNL Query Service] viene rivelata quando le query vengono u
 4. Fai clic su **[!UICONTROL Create Dataset]**. ![Immagine](../images/queries/create-datasets/click-create-dataset.png)
 5. Immettete un nome per il set di dati, preceduto dall’ID LDAP (non deve essere univoco o sicuro da SQL); il sistema genera un &quot;nome tabella&quot; in base al nome qui indicato).
 6. Inserite una descrizione del set di dati e fate clic su **[!UICONTROL Run Query]**.![Immagine](../images/queries/create-datasets/run-query.png)
-7. Osservate la query completa, quindi andate alla pagina dell&#39;elenco dei set di dati per vedere il set di dati appena creato.
+7. Osservate la query completa, quindi andate alla pagina dell&#39;elenco dei dataset per vedere il set di dati appena creato.
 
 Dopo la creazione di un set di dati, è possibile accedervi come qualsiasi altro set di dati in [!DNL Data Lake] e utilizzarlo per diversi casi di utilizzo.
 
