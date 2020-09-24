@@ -2,10 +2,11 @@
 keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes
 solution: Experience Platform
 title: Creare lo schema di vendita al dettaglio e il dataset
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: Questa esercitazione fornisce i prerequisiti e le risorse richiesti per tutte le altre esercitazioni di Adobe Experience Platform Data Science Workspace. Al termine, lo schema Vendite al dettaglio e i set di dati saranno disponibili per voi e per i membri dell'organizzazione IMS  Experience Platform.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '544'
 ht-degree: 0%
