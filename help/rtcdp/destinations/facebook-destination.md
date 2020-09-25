@@ -1,14 +1,14 @@
 ---
-keywords: facebook extensions;facebook extension;facebook destinations;facebook
+keywords: facebook extensions;facebook extension;facebook destinations;facebook;instagram;messenger;facebook messenger
 title: Destinazione Facebook
 seo-title: Destinazione Facebook
 description: Attiva profili per le tue campagne Facebook per il targeting dell'audience, la personalizzazione e la soppressione basate su e-mail con hash.
 seo-description: Attiva profili per le tue campagne Facebook per il targeting dell'audience, la personalizzazione e la soppressione basate su e-mail con hash.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 72ceb747bd4b278afc51dfb5ab6d6386d7b05c82
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 2%
+source-wordcount: '758'
+ht-degree: 4%
 
 ---
 
@@ -19,7 +19,10 @@ ht-degree: 2%
 
 Attiva profili per le tue [!DNL Facebook] campagne di targeting dell&#39;audience, personalizzazione e soppressione basate su e-mail con hash.
 
+Puoi utilizzare questa destinazione per il targeting dell&#39;audience tra [!DNL Facebook’s] una famiglia di app supportate da [!DNL Custom Audiences], inclusi [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] e [!DNL Messenger]. La selezione dell’app su cui desideri eseguire la campagna è indicata al livello di posizionamento in [!DNL Facebook Ads Manager].
+
 ![Destinazione Facebook nell’interfaccia CDP in tempo reale](/help/rtcdp/destinations/assets/facebook-destination.png)
+
 
 ## Casi d’uso
 
