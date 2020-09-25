@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Questa esercitazione fornisce i passaggi per creare un connettore sorgente FTP o SFTP utilizzando l'interfaccia utente della piattaforma.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: c3352c090ce9e5a89d9285aabdc4851632d4d437
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '680'
 ht-degree: 1%
 
 ---
@@ -61,9 +61,24 @@ Viene **[!UICONTROL Connect to SFTP]** visualizzata la pagina. In questa pagina 
 
 ### Nuovo account
 
-Se si utilizzano nuove credenziali, selezionare **[!UICONTROL New account]**. Nel modulo di input visualizzato, fornite un nome, una descrizione facoltativa e le credenziali FTP o SFTP. Al termine, selezionare **[!UICONTROL Connect]** e quindi concedere un po&#39; di tempo per stabilire la nuova connessione.
+Se si utilizzano nuove credenziali, selezionare **[!UICONTROL New account]**. Nel modulo di input visualizzato, specificare un nome, una descrizione facoltativa e le credenziali. Al termine, selezionare **[!UICONTROL Connect]** e quindi concedere un po&#39; di tempo per stabilire la nuova connessione.
 
-![connect](../../../../images/tutorials/create/sftp/new.png)
+Il connettore SFTP fornisce diversi tipi di autenticazione per l&#39;accesso. In **[!UICONTROL Account authentication]** selezionare **[!UICONTROL Password]** per utilizzare una credenziale basata su password.
+
+![connect-password](../../../../images/tutorials/create/sftp/password.png)
+
+In alternativa, puoi selezionare la chiave **[pubblica]** SSH e collegare il tuo account SFTP utilizzando una combinazione di **[!UICONTROL Private key content]** e **[!UICONTROL Passphrase]**.
+
+>[!IMPORTANT]
+>
+>Il connettore SFTP supporta una chiave RSA/DSA OpenSSH. Assicurati che il contenuto del file chiave inizi con `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"`. Se il file di chiave privata è un file in formato PPK, usate lo strumento PuTTY per convertire da PPK a OpenSSH.
+
+![connect-ssh](../../../../images/tutorials/create/sftp/ssh.png)
+
+| Credenziali | Descrizione |
+| ---------- | ----------- |
+| Contenuto chiave privata | Un contenuto chiave privata SSH con codifica Base64. La chiave privata SSH deve essere in formato OpenSSH. |
+| Passphrase | Specifica la frase di autorizzazione o la password per decifrare la chiave privata se il file chiave o il contenuto chiave sono protetti da una frase di autorizzazione. Se PrivateKeyContent è protetto da password, questo parametro deve essere utilizzato con la passphrase PrivateKeyContent come valore. |
 
 ### Account esistente
 
