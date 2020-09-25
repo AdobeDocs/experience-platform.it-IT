@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Questa esercitazione utilizza l'API del servizio di flusso per guidarvi attraverso i passaggi necessari per connettere  Experience Platform a un server SFTP (Secure File Transfer Protocol).
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 781a26486a42f304308f567284cef53d591aa124
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '793'
 ht-degree: 2%
 
 ---
@@ -44,6 +44,8 @@ Per poter [!DNL Flow Service] connettersi a SFTP, è necessario fornire valori p
 | `host` | Nome o indirizzo IP associato al server SFTP. |
 | `username` | Il nome utente con accesso al server SFTP. |
 | `password` | La password per il server SFTP. |
+| `privateKeyContent` | Il contenuto della chiave privata SSH con codifica Base64. Formato della chiave privata SSH OpenSSH (RSA/DSA). |
+| `passPhrase` | La frase di autorizzazione o la password per decifrare la chiave privata se il file chiave o il contenuto chiave sono protetti da una frase di autorizzazione. Se PrivateKeyContent è protetto da password, questo parametro deve essere utilizzato con la passphrase PrivateKeyContent come valore. |
 
 ### Lettura di chiamate API di esempio
 
@@ -68,6 +70,10 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 ## Creare una connessione
 
 Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. È necessaria una sola connessione per account SFTP, in quanto può essere utilizzata per creare più connettori sorgente per inserire dati diversi.
+
+### Creazione di una connessione SFTP tramite autenticazione di base
+
+Per creare una connessione SFTP utilizzando l&#39;autenticazione di base, effettua una richiesta POST all&#39; [!DNL Flow Service] API fornendo al contempo i valori per la connessione `host`, `userName`e `password`.
 
 **Formato API**
 
@@ -105,7 +111,62 @@ curl -X POST \
 | `auth.params.host` | Il nome host del server SFTP. |
 | `auth.params.username` | Nome utente associato al server SFTP. |
 | `auth.params.password` | La password associata al server SFTP. |
-| `connectionSpec.id` | ID specifica di connessione del server STFP: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+| `connectionSpec.id` | ID specifica connessione server SFTP: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+
+**Risposta**
+
+Una risposta corretta restituisce l’identificatore univoco (`id`) della connessione appena creata. Questo ID è necessario per esplorare il server SFTP nell&#39;esercitazione successiva.
+
+```json
+{
+    "id": "bf367b0d-3d9b-4060-b67b-0d3d9bd06094",
+    "etag": "\"1700cc7b-0000-0200-0000-5e3b3fba0000\""
+}
+```
+
+### Creare una connessione SFTP utilizzando l&#39;autenticazione a chiave pubblica SSH
+
+Per creare una connessione SFTP utilizzando l&#39;autenticazione a chiave pubblica SSH, effettua una richiesta POST all&#39; [!DNL Flow Service] API fornendo al contempo valori per la connessione `host`, `userName`, `privateKeyContent`e `passPhrase`.
+
+**Formato API**
+
+```http
+POST /connections
+```
+
+**Richiesta**
+
+```shell
+curl -X POST \
+    'http://platform.adobe.io/data/foundation/flowservice/connections' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d  "auth": {
+        "specName": "SSH PublicKey Authentication for sftp",
+        "params": {
+            "host": "{HOST_NAME}",
+            "userName": "{USER_NAME}",
+            "privateKeyContent": "{PRIVATE_KEY_CONTENT}",
+            "passPhrase": "{PASS_PHRASE}"
+        }
+    },
+    "connectionSpec": {
+        "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
+        "version": "1.0"
+    }
+}
+```
+
+| Proprietà | Descrizione |
+| -------- | ----------- |
+| `auth.params.host` | Il nome host del server SFTP. |
+| `auth.params.username` | Nome utente associato al server SFTP. |
+| `auth.params.privateKeyContent` | Il contenuto della chiave privata SSH con codifica base64. Formato della chiave privata SSH OpenSSH (RSA/DSA). |
+| `auth.params.passPhrase` | La frase di autorizzazione o la password per decifrare la chiave privata se il file chiave o il contenuto chiave sono protetti da una frase di autorizzazione. Se PrivateKeyContent è protetto da password, questo parametro deve essere utilizzato con la passphrase PrivateKeyContent come valore. |
+| `connectionSpec.id` | ID specifica connessione server SFTP: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 **Risposta**
 
