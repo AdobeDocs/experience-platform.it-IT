@@ -5,9 +5,9 @@ user-guide-title: Guida di Adobe Experience Platform
 breadcrumb-title: Experience Platform Guide
 user-guide-description: Centralize and standardize customer data and content and apply data science and machine learning to improve the design and delivery of rich, personalized experiences.
 translation-type: tm+mt
-source-git-commit: 857ad65335db338c8d0e5d2ea1f92f00d6a1da1e
+source-git-commit: df881ceaeab7b5e51e1574b6487c3a8368c5c596
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '309'
 ht-degree: 46%
 
 ---
@@ -44,9 +44,10 @@ ht-degree: 46%
    * [Origini (connettori)](https://docs.adobe.com/content/help/en/experience-platform/sources/home.html)
    * [Web SDK](https://docs.adobe.com/content/help/it-IT/experience-platform/edge/home.html)
    * [XDM (modello dati esperienza)](https://docs.adobe.com/content/help/it-IT/experience-platform/xdm/home.html)
-* [Esercitazioni  Experience Platform](https://docs.adobe.com/content/help/it-IT/experience-platform/tutorials/home.html)
+* [Tutorial su Experience Platform](https://docs.adobe.com/content/help/it-IT/experience-platform/tutorials/home.html)
 * [Note sulla versione](https://docs.adobe.com/content/help/it-IT/experience-platform/release-notes/latest.translate.html)
 * [Glossario](glossary.md)
 * [Guida alla risoluzione dei problemi](troubleshooting.md)
+* [Migrazione ADLS Gen2](adls2-gen2-migration.md)
 * [Nozioni di base sulle API](api-fundamentals.md)
 * [Riferimento API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)
