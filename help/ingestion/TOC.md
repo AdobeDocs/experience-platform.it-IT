@@ -5,7 +5,7 @@ user-guide-title: Guida all'inserimento dei dati Adobe Experience Platform
 breadcrumb-title: Data Ingestion Guide
 user-guide-description: Bring in your data to Platform through batch or streaming ingestion.
 translation-type: tm+mt
-source-git-commit: d7b9d2e78273999432355006dff25af6ecfabc25
+source-git-commit: 1bfb876dc1665ebef4450a6f5363fba1ea1b7c61
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 5%
@@ -13,7 +13,7 @@ ht-degree: 5%
 ---
 
 
-# Adobe Experience Platform Data Ingestion {#ingestion}
+# Ingestione dati Adobe Experience Platform {#ingestion}
 
 - [Panoramica sull&#39;inserimento dei dati](home.md)
 - Caricamento in streaming {#streaming}
