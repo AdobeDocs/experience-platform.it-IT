@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Panoramica sull’assimilazione parziale di Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 01b1d9a0d0af82f5380bbc204e65b682d4a50ac1
+source-git-commit: 4652722b17a290c9ef53244498257eb4cb97ac6d
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '881'
 ht-degree: 2%
 
 ---
@@ -292,7 +292,15 @@ Se il batch presenta uno o più errori e la diagnostica degli errori è abilitat
 >}
 >```
 
-## Tipi di errori di assimilazione parziale dei batch {#appendix}
+## Passaggi successivi {#next-steps}
+
+Questa esercitazione ha descritto come monitorare gli errori di caricamento batch parziale. Per ulteriori informazioni sull&#39;assimilazione batch, leggere la guida [per gli sviluppatori di](../batch-ingestion/api-overview.md)inserimento batch.
+
+## Appendice {#appendix}
+
+Questa sezione fornisce informazioni supplementari sui tipi di errori di assimilazione.
+
+### Tipi di errori di assimilazione parziale dei batch {#partial-ingestion-types}
 
 L’assimilazione parziale dei batch presenta tre tipi di errore diversi durante l’assimilazione dei dati:
 
@@ -379,7 +387,3 @@ Di seguito è riportato un esempio di risposta al recupero del file di errore:
     "_filename": "parsing_errors_0.json"
 }
 ```
-
-## Passaggi successivi {#next-steps}
-
-Questa esercitazione ha descritto come monitorare gli errori di caricamento batch parziale. Per ulteriori informazioni sull&#39;assimilazione batch, leggere la guida [per gli sviluppatori di](../batch-ingestion/api-overview.md)inserimento batch.
