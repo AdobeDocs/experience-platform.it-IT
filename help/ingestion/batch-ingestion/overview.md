@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;data ingestion;batch;Batch;enable dataset;Batch ingestion overview;overview;batch ingestion overview;
 solution: Experience Platform
-title: Panoramica sull’inserimento di batch Adobe Experience Platform
+title: Panoramica sull'inserimento batch
 topic: overview
 description: L'API Batch Ingestion consente di trasferire i dati in Adobe Experience Platform come file batch. I dati che si desidera acquisire possono essere i dati di profilo provenienti da un file semplice in un sistema CRM (ad esempio un file parquet), o i dati conformi a uno schema noto nel Registro di sistema di Experience Data Model (XDM).
 translation-type: tm+mt
-source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1196'
 ht-degree: 2%
 
 ---
 
 
-# [!DNL Batch Ingestion]panoramica
+# [!DNL Batch Ingestion] - Panoramica
 
 L&#39; [!DNL Batch Ingestion] API consente di trasferire i dati in Adobe Experience Platform come file batch. I dati che si desidera acquisire possono essere i dati di profilo provenienti da un file semplice in un sistema CRM (ad esempio un file parquet), o i dati conformi a uno schema noto nel Registro di sistema [!DNL Experience Data Model] (XDM).
 
