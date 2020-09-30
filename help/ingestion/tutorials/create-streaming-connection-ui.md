@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Creare una connessione in streaming utilizzando l'interfaccia utente
 topic: tutorial
 type: Tutorial
+description: Questa guida all'interfaccia utente consente di creare una connessione in streaming utilizzando Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---
