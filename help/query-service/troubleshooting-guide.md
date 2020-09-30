@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;query service;Query service;tr
 solution: Experience Platform
 title: Guida alla risoluzione dei problemi di Adobe Experience Platform Query Service
 topic: troubleshooting
+description: Questo documento contiene informazioni sui codici di errore comuni riscontrati e sulle possibili cause.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '154'
-ht-degree: 3%
+source-wordcount: '168'
+ht-degree: 2%
 
 ---
 
