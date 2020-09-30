@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Caricamento di dati in Adobe Experience Platform
 topic: tutorial
 type: Tutorial
+description: Adobe Experience Platform consente di importare facilmente i dati come file batch sotto forma di file parquet o dati conformi a uno schema XDM (Experience Data Model) noto.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1215'
 ht-degree: 0%
 
 ---
