@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;query service;api guide;querie
 solution: Experience Platform
 title: Guida per gli sviluppatori di Query Service
 topic: queries
+description: Le sezioni seguenti descrivono le chiamate che potete effettuare utilizzando l'endpoint /query nell'API del servizio di query.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '663'
 ht-degree: 2%
 
 ---
