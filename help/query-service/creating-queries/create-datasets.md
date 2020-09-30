@@ -4,11 +4,12 @@ solution: Experience Platform
 title: Generazione di set di dati dai risultati della query
 topic: queries
 type: Tutorial
+description: 'Servizio query consente la creazione di set di dati dall’interfaccia utente. Dopo la creazione di un set di dati, è possibile accedervi come qualsiasi altro set di dati nel Data Lake e utilizzarlo per diversi casi di utilizzo. '
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '266'
-ht-degree: 1%
+source-wordcount: '301'
+ht-degree: 0%
 
 ---
 
