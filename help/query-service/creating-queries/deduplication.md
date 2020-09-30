@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Deduplicazione dei dati
 topic: queries
 type: Tutorial
+description: In questo documento sono riportati esempi di query di sottoselezione e di esempio completo per la deduplicazione di tre casi d’uso comuni relativi a ExperienceEvents, acquisti e metriche.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '424'
 ht-degree: 0%
 
 ---
