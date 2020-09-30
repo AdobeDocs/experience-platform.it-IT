@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Unione di set di dati
 topic: queries
 type: Tutorial
+description: L'unione di set di dati consente di includere nella query i dati provenienti da altri set di dati. In questo esempio viene utilizzato un dataset del sistema operativo personalizzato per mappare l'ID del sistema operativo sul valore del sistema operativo.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '53'
+source-wordcount: '82'
 ht-degree: 1%
 
 ---
