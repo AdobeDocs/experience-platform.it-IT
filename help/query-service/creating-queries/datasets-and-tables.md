@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Set di dati e tabelle e schemi
 topic: queries
 type: Tutorial
+description: Questo documento contiene informazioni sulla visualizzazione dei set di dati all'interno della struttura dello schema dei set di dati e sull'utilizzo dei comandi PostSQL.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '198'
 ht-degree: 1%
 
 ---
