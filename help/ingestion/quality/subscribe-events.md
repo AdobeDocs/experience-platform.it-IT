@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;data ingestion notifications;n
 solution: Experience Platform
 title: Iscrizione agli eventi di assimilazione dei dati
 topic: overview
+description: Per assistere nel monitoraggio del processo di assimilazione, Adobe Experience Platform consente di sottoscrivere un set di eventi pubblicati in ogni fase del processo, notificando all’utente lo stato dei dati acquisiti e ogni possibile errore.
 translation-type: tm+mt
-source-git-commit: 80a1694f11cd2f38347989731ab7c56c2c198090
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '654'
 ht-degree: 1%
 
 ---
