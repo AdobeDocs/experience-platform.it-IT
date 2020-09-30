@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;query service;Query service;Po
 solution: Experience Platform
 title: Connetti con Power BI
 topic: connect
+description: Questo documento descrive i passaggi necessari per la connessione di Power BI con Adobe Experience Platform Query Service.
 translation-type: tm+mt
-source-git-commit: f9749dbc5f2e3ac15be50cc5317ad60586b2c07e
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
@@ -16,7 +17,7 @@ ht-degree: 0%
 
 Gli utenti del PC possono effettuare l&#39;installazione [!DNL Power BI] da [https://powerbi.microsoft.com/en-us/desktop/](https://powerbi.microsoft.com/en-us/desktop/).
 
-## Set up [!DNL Power BI]
+## Configurare [!DNL Power BI]
 
 Dopo aver [!DNL Power BI] installato, è necessario impostare i componenti necessari per supportare il connettore PostgreSQL. Effettuate le seguenti operazioni:
 
