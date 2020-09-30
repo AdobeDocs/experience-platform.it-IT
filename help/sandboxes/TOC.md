@@ -3,12 +3,12 @@ product: experience-platform
 audience: user
 user-guide-title: Sandbox nell’Aiuto di Adobe Experience Platform
 breadcrumb-title: Sandoxes Guide
-user-guide-description: Partition a single Platform instance into separate virtual environments for development, testing, and deployment of applications.
+user-guide-description: Partition a Platform instance into virtual environments for development, testing, and application deployment.
 translation-type: tm+mt
-source-git-commit: ee0272c36259d5d6fcf7896e1cff166ebd404acd
+source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
-source-wordcount: '71'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
