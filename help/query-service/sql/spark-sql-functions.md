@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;query service;Query service;sp
 solution: Experience Platform
 title: Funzioni SQL Spark
 topic: spark sql functions
+description: Questa documentazione contiene informazioni sugli assistenti SQL Spark che forniscono funzioni SQL Spark integrate per estendere le funzionalità SQL.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '4991'
+source-wordcount: '5009'
 ht-degree: 5%
 
 ---
@@ -993,7 +994,7 @@ Esempio:
 
 `not expr`: Not logico.
 
-#### o
+#### oppure
 
 `expr1 or expr2`: OR logico.
 
@@ -1837,7 +1838,7 @@ Esempio:
  10
 ```
 
-#### date
+#### data
 
 `date(expr)`: Crea il valore `expr` in base al tipo di dati di destinazione `date`.
 
@@ -3051,7 +3052,7 @@ Esempio:
 ```
 
 
-#### exists
+#### esiste
 
 `exists(array, lambdaExpression returning Boolean): Boolean`
 
