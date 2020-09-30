@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;query service;Query service;sa
 solution: Experience Platform
 title: Query di esempio
 topic: queries
+description: I dati provenienti da suite di rapporti Adobe Analytics selezionate  vengono trasformati in XDM ExperienceEvents e quindi trasferiti in Adobe Experience Platform come set di dati. In questo documento vengono illustrati alcuni casi di utilizzo in cui Adobe Experience Platform Query Service utilizza questi dati e le query di esempio incluse devono essere compatibili con i set di dati Adobe Analytics .
 translation-type: tm+mt
-source-git-commit: f9749dbc5f2e3ac15be50cc5317ad60586b2c07e
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '862'
+source-wordcount: '915'
 ht-degree: 1%
 
 ---
