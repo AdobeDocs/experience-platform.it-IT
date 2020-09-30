@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;Query service;query service;Lo
 solution: Experience Platform
 title: Connetti con Looker
 topic: connect
+description: Questo documento descrive i passaggi necessari per la connessione di Looker con Adobe Experience Platform Query Service.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '193'
-ht-degree: 1%
+source-wordcount: '208'
+ht-degree: 0%
 
 ---
 
