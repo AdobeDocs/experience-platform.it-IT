@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;query service;Query service;Aq
 solution: Experience Platform
 title: Connetti con Aqua Data Studio
 topic: connect
+description: Questo documento descrive i passaggi necessari per la connessione di Aqua Data Studio con Adobe Experience Platform Query Service.
 translation-type: tm+mt
-source-git-commit: 106d5150371a890e2d4c295bf5d12c110c593568
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '237'
 ht-degree: 2%
 
 ---
