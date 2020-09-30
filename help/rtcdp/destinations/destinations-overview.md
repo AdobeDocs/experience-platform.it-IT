@@ -2,18 +2,18 @@
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;destinations;destination;rtcdp
 title: Panoramica delle destinazioni
 seo-title: Panoramica delle destinazioni
-description: Utilizza le destinazioni in Adobe Experience Platform per attivare i dati noti e sconosciuti per campagne di marketing multicanale, campagne e-mail, pubblicità mirata e molti altri casi di utilizzo.
+description: Attiva i dati della piattaforma per le destinazioni per campagne di marketing multicanale, e-mail, pubblicità mirata e altro ancora.
 seo-description: Le destinazioni sono integrazioni preconfigurate con piattaforme di destinazione che consentono l'attivazione senza soluzione di continuità dei dati dalla piattaforma dati cliente in tempo reale. Puoi utilizzare Destinazioni nel  Adobe Real-time Customer Data Platform (Piattaforma dati cliente in tempo reale) per attivare i dati noti e sconosciuti per campagne di marketing su più canali, campagne e-mail, campagne pubblicitarie mirate e molti altri casi di utilizzo.
 translation-type: tm+mt
-source-git-commit: 5c3016e822ea23407af5de525c27785df8e2f795
+source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Destinations]panoramica{#overview}
+# [!DNL Destinations] - Panoramica{#overview}
 
 ![Banner della panoramica delle destinazioni](/help/rtcdp/destinations/assets/destinations-overview-banner.png)
 
