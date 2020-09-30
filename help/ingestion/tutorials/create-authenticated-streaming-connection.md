@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Creare una connessione in streaming autenticata
 topic: tutorial
 type: Tutorial
+description: La raccolta dei dati autenticati consente ai servizi Adobe Experience Platform, come Profilo cliente e Identità in tempo reale, di distinguere tra record provenienti da fonti attendibili e fonti non attendibili.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '659'
 ht-degree: 2%
 
 ---
