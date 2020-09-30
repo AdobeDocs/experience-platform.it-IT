@@ -1,12 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;ingested data;troubleshooting;faq;Ingestion;Batch ingestion;batch ingestion;
 solution: Experience Platform
-title: Guida alla risoluzione dei problemi di inserimento batch Adobe Experience Platform
+title: Guida alla risoluzione dei problemi di inserimento batch
 topic: troubleshooting
+description: 'Questa documentazione aiuterà a rispondere alle domande frequenti sulle API di inserimento dati batch di Adobe Experience Platform. '
 translation-type: tm+mt
-source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1389'
+source-wordcount: '1402'
 ht-degree: 1%
 
 ---
