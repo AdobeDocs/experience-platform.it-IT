@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;namespace;Namespace;Namespaces
 solution: Experience Platform
 title: Servizio Adobe Experience Platform Identity
 topic: overview
-description: 'Gli spazi dei nomi delle identità sono un componente di Servizio identità che funge da indicatori del contesto a cui si riferisce un''identità. Ad esempio, distinguono un valore di "name<span>@email.com" come indirizzo e-mail o "443522" come ID CRM numerico. '
+description: 'Gli spazi dei nomi delle identità sono un componente di Servizio identità che funge da indicatori del contesto a cui si riferisce un''identità. Ad esempio, distinguono il valore "name@email.com" come indirizzo e-mail o "443522" come ID CRM numerico. '
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: dfb16c1808ac61e6c4f4d97c08ac3d1dcc8499a8
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '759'
 ht-degree: 1%
 
 ---
