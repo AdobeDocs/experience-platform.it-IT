@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Streaming dei dati delle serie temporali
 topic: tutorial
 type: Tutorial
+description: Questa esercitazione ti aiuterà a iniziare a utilizzare le API di assimilazione in streaming, parte delle API del servizio Adobe Experience Platform Data Ingestion.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1163'
 ht-degree: 2%
 
 ---
