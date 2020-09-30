@@ -1,12 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;ingestion;developer guide;api guide;upload;ingest parquet;ingest json;
 solution: Experience Platform
-title: Guida per lo sviluppatore Adobe Experience Platform Batch Ingestion
+title: Guida per lo sviluppatore di batch Ingestion
 topic: developer guide
+description: Questo documento fornisce una panoramica completa dell’utilizzo delle API di assimilazione batch.
 translation-type: tm+mt
-source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '2670'
+source-wordcount: '2678'
 ht-degree: 5%
 
 ---
