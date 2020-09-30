@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;Segmentation Service;segmentat
 solution: Experience Platform
 title: Guida utente del servizio di segmentazione
 topic: ui guide
+description: Adobe Experience Platform Segmentation Service fornisce un'interfaccia utente per la creazione e la gestione delle definizioni dei segmenti.
 translation-type: tm+mt
-source-git-commit: c9ff4d26accd880d5169526f84be607fc722883b
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1417'
+source-wordcount: '1432'
 ht-degree: 0%
 
 ---
@@ -133,7 +134,7 @@ Selezionando **[!UICONTROL Create segment]** [!DNL Segment Builder] nell’angol
 
 ### [!DNL Segment Builder] workspace
 
-[!DNL Segment Builder] offre un’area di lavoro ricca di contenuti che consente di interagire con gli elementi [!DNL Profile] dati. L’area di lavoro offre controlli intuitivi per la creazione e la modifica di regole, come le sezioni di trascinamento utilizzate per rappresentare le proprietà dei dati.
+[!DNL Segment Builder] offre un’area di lavoro completa che consente di interagire con gli elementi [!DNL Profile] dati. L’area di lavoro offre controlli intuitivi per la creazione e la modifica di regole, come le sezioni di trascinamento utilizzate per rappresentare le proprietà dei dati.
 
 Per informazioni più dettagliate sull’utilizzo dell’ [!DNL Segment Builder] area di lavoro, consultate la guida [[!DNL Segment Builder] ](./segment-builder.md)utente.
 
