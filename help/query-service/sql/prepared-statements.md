@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;query service;Query service;pr
 solution: Experience Platform
 title: Dichiarazioni preparate
 topic: prepared statements
+description: In SQL, le istruzioni preparate vengono utilizzate per creare un modello di query o aggiornamenti simili. Adobe Experience Platform Query Service supporta le istruzioni preparate utilizzando una query con parametri.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '365'
 ht-degree: 7%
 
 ---
@@ -82,7 +83,7 @@ SELECT * FROM table WHERE id >= 10000 AND id <= 10005;
 
 La query SQL precedente restituirà la risposta seguente:
 
-| id | firstName | lastname | natalità | email | city | country |
+| id | firstName | lastname | natalità | e-mail | city | country |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
 | 10000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | Canada |
 | 10001 | antoina | dubois | 1967-03-14 | example2@example.com | Paris | Francia |
@@ -105,12 +106,12 @@ EXECUTE getIdRange(10000, 10005);
 
 Quando viene chiamato, si vedranno esattamente gli stessi risultati di prima:
 
-| id | firstName | lastname | natalità | email | city | country |
+| id | firstName | lastname | natalità | e-mail | city | country |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
 | 10000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | Canada |
 | 10001 | antoina | dubois | 1967-03-14 | example2@example.com | Paris | Francia |
 | 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tokyo | Giappone |
-| 10003 | linus | pettersson | 1982-06-03 | example4@example.com | Stoccolma | Svezia |
+| 10003 | linus | pettersson | 1982-06-03 | Svezia | Stoccolma | Svezia |
 | 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | Nairobi | Kenya |
 | 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Cile |
 
