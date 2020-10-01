@@ -5,15 +5,20 @@ description: Note sulla versione di Adobe Experience Platform Web SDK.
 seo-description: Note sulla versione di Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 738dfe782ee7d6bef06d14910e0c26540b0ec734
 workflow-type: tm+mt
-source-wordcount: '77'
+source-wordcount: '108'
 ht-degree: 3%
 
 ---
 
 
 # Note sulla versione
+
+## Versione 2.2.0
+
+* Correzione dei bug: L&#39;oggetto Opt-in impediva ad Alloy di effettuare chiamate quando `idMigrationEnabled` è `true`.
+* Correzione dei bug: Rendete già consapevoli delle richieste che dovrebbero restituire le offerte di personalizzazione per evitare un problema sfarfallio.
 
 ## Versione 2.1.0
 
