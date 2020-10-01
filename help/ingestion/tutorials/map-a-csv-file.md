@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: Questa esercitazione illustra come mappare un file CSV su uno schema XDM utilizzando l'interfaccia utente di Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 7adf18e4251f377fee586c8a0f23b89acd75afca
 workflow-type: tm+mt
-source-wordcount: '1317'
-ht-degree: 2%
+source-wordcount: '833'
+ht-degree: 1%
 
 ---
 
@@ -113,50 +113,16 @@ La schermata di mappatura viene visualizzata nuovamente con il campo di origine 
 
 Una volta mappato e creato il file CSV, potete monitorare i dati che vengono acquisiti tramite di esso. Per ulteriori informazioni sul monitoraggio dei flussi di dati, consulta l’esercitazione sul [monitoraggio dei flussi di dati](../../ingestion/quality/monitor-data-flows.md).
 
-## Passaggi successivi
+## Uso delle funzioni di mappatura
 
-Seguendo questa esercitazione, avete mappato correttamente un file CSV semplice su uno schema XDM e lo avete assimilato in [!DNL Platform]. Questi dati possono ora essere utilizzati da [!DNL Platform] servizi a valle come [!DNL Real-time Customer Profile]. Per ulteriori informazioni, consulta la panoramica del profilo cliente [[!DNL in tempo reale]](../../profile/home.md) .
-
-## Appendice
-
-La sezione seguente fornisce informazioni aggiuntive per la mappatura delle colonne CSV ai campi XDM.
-
-### Funzioni di mappatura
-
-Alcune funzioni di mappatura possono essere utilizzate per calcolare e calcolare i valori in base a quanto immesso nei campi di origine. Per utilizzare una funzione, digitarla in **[!UICONTROL Source Field]** base alla sintassi e agli input appropriati.
+Per utilizzare una funzione, digitarla in **[!UICONTROL Source Field]** base alla sintassi e agli input appropriati.
 
 Ad esempio, per concatenare i campi CSV **città** e **paese** e assegnarli al campo XDM **città** , impostate il campo di origine come `concat(city, ", ", county)`.
 
 ![](../images/tutorials/map-a-csv-file/mapping-function.png)
 
-Nella tabella seguente sono elencate tutte le funzioni di mappatura supportate, incluse le espressioni di esempio e i relativi output.
+Per ulteriori informazioni sulla mappatura delle colonne ai campi XDM, consultare la guida sull&#39; [utilizzo delle funzioni](../../data-prep/functions.md)di mappatura dei dati.
 
-| Funzione | Descrizione | Espressione esempio | Output di esempio |
-| -------- | ----------- | ----------------- | ------------- |
-| concat | Concatenate le stringhe date. | concat(&quot;Ciao, &quot;, &quot;lì&quot;, &quot;!&quot;) | `"Hi, there!"` |
-| esplodere | Divide la stringa in base a un regex e restituisce un array di parti. | esplode(&quot;Ciao, ciao!&quot;, &quot; &quot;) | `["Hi,", "there"]` |
-| instr | Restituisce la posizione/indice di una sottostringa. | instr(&quot;adobe<span>.com&quot;, &quot;com&quot;) | 6 |
-| sostituto | Sostituisce la stringa di ricerca, se presente nella stringa originale. | replace(&quot;Questa è una stringa ri test&quot;, &quot;re&quot;, &quot;replace&quot;) | &quot;Questo è un test di sostituzione delle stringhe&quot; |
-| substr | Restituisce una sottostringa della lunghezza specificata. | substr(&quot;Questo è un test di sottostringa&quot;, 7, 8) | &quot; a subst&quot; |
-| Lower /<br>lcase | Converte una stringa in caratteri minuscoli. | lower(&quot;HeLL&quot;)<br>lcase(&quot;HeLLo&quot;) | &quot;hello&quot; |
-| Upper /<br>ucase | Converte una stringa in caratteri maiuscoli. | Upper(&quot;HeLL&quot;)<br>ucase(&quot;HeLLo&quot;) | &quot;HELLO&quot; |
-| split | Divide una stringa di input su un separatore. | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
-| join | Unisce un elenco di oggetti utilizzando il separatore. | `join(" ", ["Hello", "world"]`) | &quot;Hello world&quot; |
-| fondersi | Restituisce il primo oggetto non-null in un elenco specificato. | coalesce(null, null, null, &quot;first&quot;, null, &quot;seconda&quot;) | &quot;first&quot; |
-| decodificare | Data una chiave e un elenco di coppie di valori chiave appiattite come array, la funzione restituisce il valore se viene trovata una chiave o restituisce un valore predefinito se presente nell&#39;array. | decode(&quot;k2&quot;, &quot;k1&quot;, &quot;v1&quot;, &quot;k2&quot;, &quot;v2&quot;, &quot;default&quot;) | &quot;v2&quot; |
-| iif | Valuta una determinata espressione booleana e restituisce il valore specificato in base al risultato. | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
-| min | Restituisce il minimo degli argomenti specificati. Utilizza l&#39;ordine naturale. | min(3, 1, 4) | 1 |
-| max | Restituisce il massimo degli argomenti specificati. Utilizza l&#39;ordine naturale. | max(3, 1, 4) | 4 |
-| first | Recupera il primo argomento specificato. | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
-| last | Recupera l&#39;ultimo argomento specificato. | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;3&quot; |
-| uuid /<br>guid | Genera un ID pseudo-casuale. | uuid()<br>guid() | {UNIQUE_ID} |
-| now | Recupera l&#39;ora corrente. | now() | `2019-10-23T10:10:24.556-07:00[America/Los_Angeles]` |
-| timestamp | Recupera l&#39;ora Unix corrente. | timestamp() | 1571850624571 |
-| format | Formatta la data di input in base a un formato specificato. | format({DATE}, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
-| dformat | Converte una marca temporale in una stringa data in base a un formato specificato. | dformat(1571829875, &quot;dd-MMM-yyyy hh:mm&quot;) | &quot;23-ott-2019 11:24&quot; |
-| data | Converte una stringa data in un oggetto ZoningDateTime (formato ISO 8601). | date(&quot;23-ott-2019 11:24&quot;) | &quot;2019-10-23T11:24:00+00:00&quot; |
-| date_part | Recupera le parti della data. Sono supportati i seguenti valori di componente: <br><br>&quot;anno&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;trimestre&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;dayofyear&quot;<br><br>&quot;dy&quot;&quot;y&quot;&quot;&quot;&quot;d&quot;&quot;d&quot;&quot;settimana&quot;w&quot;&quot;giorno&quot;kolkkkolw&quot;dw&quot;<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&quot;w&quot;&quot;h&quot;&quot;hh24&quot;&quot;hh12&quot;&quot;minuto&quot;mi&quot;&quot;n&quot;&quot;2D&quot;&quot;2D&quot;&quot;ss&quot;&quot;s&quot;&quot;millisecond&quot;ms&quot; | date_part(date(&quot;2019-10-17 11:55:12&quot;), &quot;MM&quot;) | 10 |
-| set_date_part | Sostituisce un componente in una data specificata. Sono accettati i seguenti componenti: <br><br>&quot;anno&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br><br><br><br><br><br><br><br><br>&quot;hh&quot;&quot;minuti&quot;&quot;mi&quot;&quot;n&quot;&quot;2D&quot;ss&quot;&quot; | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
-| make_date_time /<br>make_timestamp | Crea una data da parti. | make_date_time(2019, 10, 17, 11, 55, 12, 999, &quot;America/Los_Angeles&quot;) | `2019-10-17T11:55:12.0&#x200B;00000999-07:00[America/Los_Angeles]` |
-| current_timestamp | Restituisce il timestamp corrente. | current_timestamp() | 1571850624571 |
-| current_date | Restituisce la data corrente senza un componente ora. | current_date() | &quot;18-nov-2019&quot; |
+## Passaggi successivi
+
+Seguendo questa esercitazione, avete mappato correttamente un file CSV semplice su uno schema XDM e lo avete assimilato in [!DNL Platform]. Questi dati possono ora essere utilizzati da [!DNL Platform] servizi a valle come [!DNL Real-time Customer Profile]. Per ulteriori informazioni, consulta la panoramica del profilo cliente [[!DNL in tempo reale]](../../profile/home.md) .
