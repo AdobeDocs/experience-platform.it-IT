@@ -5,9 +5,9 @@ seo-title: (Beta) Destinazione degli hub eventi di Azure
 description: Crea una connessione in uscita in tempo reale all'archivio degli hub eventi di Azure per lo streaming dei dati dal Experience Platform .
 seo-description: Crea una connessione in uscita in tempo reale all'archivio degli hub eventi di Azure per lo streaming dei dati dal Experience Platform .
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '496'
 ht-degree: 2%
 
 ---
@@ -36,6 +36,10 @@ ht-degree: 2%
 Utilizzando destinazioni di streaming come [!DNL Azure Event Hubs], potete facilmente inserire nei sistemi di vostra scelta eventi di segmentazione di alto valore e attributi di profilo associati.
 
 Ad esempio, un potenziale ha scaricato un white paper che li qualifica come segmento &quot;alta propensione alla conversione&quot;. Mappando il segmento in cui il potenziale rientra nella [!DNL Azure Event Hubs] destinazione, si riceverebbe questo evento in [!DNL Azure Event Hubs]. È possibile utilizzare un approccio &quot;fai da te&quot; e descrivere la logica di business in cima all&#39;evento, come si pensa che funzionerebbe meglio con i sistemi IT aziendali.
+
+## Tipo esportazione {#export-type}
+
+**Esportazione** profilo: si esportano tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata degli attributi selezionati del flusso di lavoro [di attivazione della](/help/rtcdp/destinations/activate-destinations.md#select-attributes)destinazione.\
 
 ## Destinazione Connect {#connect-destination}
 
