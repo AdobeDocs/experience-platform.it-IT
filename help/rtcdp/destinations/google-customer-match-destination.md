@@ -5,10 +5,10 @@ seo-title: Destinazione di corrispondenza cliente Google
 description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti nelle proprietà di Google possedute e gestite, come ad esempio Cerca, Shopping, Gmail e YouTube.
 seo-description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti nelle proprietà di Google possedute e gestite, come ad esempio Cerca, Shopping, Gmail e YouTube.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
 workflow-type: tm+mt
 source-wordcount: '1490'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -32,7 +32,7 @@ Un marchio di abbigliamento atletico vuole raggiungere i clienti esistenti attra
 
 ### Caso di utilizzo n. 2
 
-Un&#39;importante azienda tecnologica ha appena lanciato un nuovo telefono. Nel tentativo di promuovere questo nuovo modello di telefono, stanno cercando di sensibilizzare i clienti sulle nuove funzionalità e caratteristiche del telefono ai clienti che possiedono modelli precedenti dei loro telefoni.
+Un&#39;importante azienda tecnologica ha appena lanciato un nuovo telefono. Nel tentativo di promuovere questo nuovo modello di telefono, stanno cercando di sensibilizzare i clienti che possiedono i loro modelli precedenti di telefoni sulle nuove funzionalità e caratteristiche del telefono.
 
 Per promuovere il rilascio, caricano gli indirizzi e-mail dal proprio database CRM nel CDP in tempo reale  Adobe, utilizzando gli indirizzi e-mail come identificatori. I segmenti vengono creati in base ai clienti che possiedono modelli di telefono meno recenti e li inviano a clienti [!DNL Google Customer Match] che possono essere indirizzati a clienti correnti, clienti che possiedono modelli di telefono più vecchi, nonché a clienti simili su [!DNL YouTube].
 
@@ -40,7 +40,7 @@ Per promuovere il rilascio, caricano gli indirizzi e-mail dal proprio database C
 
 Le destinazioni nel  Adobe CDP in tempo reale possono avere determinate regole e obblighi per i dati inviati o ricevuti dalla piattaforma di destinazione. L&#39;Utente è tenuto a comprendere i limiti e gli obblighi dei propri dati e come li utilizza in Adobe Experience Platform e nella piattaforma di destinazione. Adobe Experience Platform offre strumenti per la gestione dei dati che consentono di gestire alcuni di questi obblighi di utilizzo dei dati. [Ulteriori](/help/data-governance/labels/overview.md) informazioni sugli strumenti e sulle politiche per la gestione dei dati.
 
-## Tipo di attivazione e identità {#activation-type}
+## Tipo di esportazione e identità {#export-type}
 
 **Esportazione** segmento - vengono esportati tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono, ecc.) utilizzato nella [!DNL Google Customer Match] destinazione.
 
@@ -54,7 +54,7 @@ Prima di impostare una [!DNL Google Customer Match] destinazione in  CDP in temp
 
 >[!NOTE]
 >
->È obbligatorio essere aggiunti al elenco consentiti  Google prima di configurare la prima [!DNL Google Customer Match] destinazione  Adobe CDP in tempo reale. Prima di creare una destinazione, verificare che il processo di elenco consentiti  descritto di seguito sia stato completato da Google.
+>È obbligatorio essere aggiunti al elenco consentiti di Google  prima di configurare la prima [!DNL Google Customer Match] destinazione  Adobe CDP in tempo reale. Prima di creare una destinazione, verificare che il processo di elenco consentiti  descritto di seguito sia stato completato da Google.
 
 Prima di creare la [!DNL Google Customer Match] destinazione in CDP in tempo reale  Adobe, è necessario contattare Google e seguire le istruzioni  elenco consentiti in [Usa partner di corrispondenza cliente per caricare i dati](https://support.google.com/google-ads/answer/7361372?hl=en&amp;ref_topic=6296507) nella documentazione di Google.
 
@@ -92,7 +92,7 @@ Se selezionate di hash gli indirizzi e-mail, accertatevi di soddisfare i requisi
 
 >[!IMPORTANT]
 >
->Se si sceglie di non utilizzare l&#39;hash degli indirizzi e-mail,  CDP in tempo reale Adobe lo farà automaticamente quando si attivano i segmenti in [!DNL Google Customer Match]. Nel flusso di lavoro [di](/help/rtcdp/destinations/google-customer-match-destination.md#activate-segments) attivazione (vedere il punto 5), selezionate l’ `Email` opzione come illustrato di seguito per gli indirizzi *e-mail di testo* normale e `Email_LC_SHA256` per gli indirizzi e-mail con *hash*.
+>Se si sceglie di non utilizzare l&#39;hash degli indirizzi e-mail,  CDP in tempo reale Adobe lo farà automaticamente quando si attivano i segmenti in [!DNL Google Customer Match]. Nel flusso di lavoro [di](/help/rtcdp/destinations/google-customer-match-destination.md#activate-segments) attivazione (vedere il punto 5), selezionate l’ `Email` opzione come mostrato di seguito per gli indirizzi *e-mail di testo* normale e `Email_LC_SHA256` per gli indirizzi e-mail con *hash*.
 
 
 ![Hashing all&#39;attivazione](/help/rtcdp/destinations/assets/identity-mapping.png)
