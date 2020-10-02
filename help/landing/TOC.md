@@ -5,10 +5,10 @@ user-guide-title: Guida di Adobe Experience Platform
 breadcrumb-title: Experience Platform Guide
 user-guide-description: Learn how Experience Platform makes it possible to deliver personalized experiences to your customers in real-time.
 translation-type: tm+mt
-source-git-commit: bafc3265a808871912949409228625fc828cbbb1
+source-git-commit: c9daf77f4b7db113b972ee268681999bc7f7fa8d
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '319'
+ht-degree: 45%
 
 ---
 
@@ -24,6 +24,7 @@ ht-degree: 0%
    * [Catalogo e set di dati](https://docs.adobe.com/content/help/en/experience-platform/catalog/home.html)
    * [Accesso ai dati](https://docs.adobe.com/content/help/en/experience-platform/data-access/home.html)
    * [Governance dei dati](https://docs.adobe.com/content/help/en/experience-platform/data-governance/home.html)
+   * [Preparazione dati](https://docs.adobe.com/content/help/en/experience-platform/data-prep/home.html)
    * [Acquisizione dei dati](https://docs.adobe.com/content/help/en/experience-platform/ingestion/home.html)
    * [Area di lavoro Data Science](https://docs.adobe.com/content/help/en/experience-platform/data-science-workspace/home.html)
    * [Strumento di debug](https://docs.adobe.com/content/help/it-IT/debugger/using/experience-cloud-debugger.html)
