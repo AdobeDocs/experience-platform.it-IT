@@ -5,9 +5,9 @@ seo-title: ' destinazione Amazon Kinesis'
 description: Crea una connessione in uscita in tempo reale allo storage Amazon  Kinesis per lo streaming dei dati da Adobe Experience Platform.
 seo-description: Crea una connessione in uscita in tempo reale allo storage Amazon  Kinesis per lo streaming dei dati da Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4c45da353b1deeb66b0dedb37450158f4bdc2a7c
+source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '475'
 ht-degree: 2%
 
 ---
@@ -38,6 +38,10 @@ Il [!DNL Kinesis Data Streams] servizio [!DNL Amazon Web Services] consente di r
 Utilizzando destinazioni di streaming come [!DNL Amazon Kinesis], potete facilmente inserire nei sistemi di vostra scelta eventi di segmentazione di alto valore e attributi di profilo associati.
 
 Ad esempio, un potenziale ha scaricato un white paper che li qualifica come segmento &quot;alta propensione alla conversione&quot;. Mappando il segmento in cui il potenziale rientra nella [!DNL Amazon Kinesis] destinazione, si riceverebbe questo evento in [!DNL Amazon Kinesis]. È possibile utilizzare un approccio &quot;fai da te&quot; e descrivere la logica di business in cima all&#39;evento, come si pensa che funzionerebbe meglio con i sistemi IT aziendali.
+
+## Tipo esportazione {#export-type}
+
+**Esportazione** profilo: si esportano tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata degli attributi selezionati del flusso di lavoro [di attivazione della](/help/rtcdp/destinations/activate-destinations.md#select-attributes)destinazione.
 
 ## Destinazione Connect {#connect-destination}
 
