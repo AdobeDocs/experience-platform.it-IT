@@ -5,17 +5,17 @@ description: Guida di avvio rapido per l'utilizzo dell'estensione SDK Web  Exper
 seo-description: Guida di avvio rapido per l'utilizzo dell'estensione SDK Web  Experience Platform per la raccolta dei dati
 keywords: 1st-party domain;CNAME;schema;create schema;launch;aep web sdk extension;extension;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: a9c45aed92dc7c7148db7c9383060bbeab763447
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '566'
 ht-degree: 3%
 
 ---
 
 
-# Benvenuti
+# Guida rapida all&#39;avvio di Adobe Experience Platform Web SDK
 
-Questa guida illustra i diversi modi in cui impostare Adobe Experience Platform Web SDK in Launch. Per utilizzare questa funzione è necessario essere inseriti nella white list. Se vuoi entrare nella lista d&#39;attesa, contatta il tuo CSM.
+Questa guida illustra i diversi modi in cui impostare Adobe Experience Platform Web SDK in Launch. Per utilizzare questa funzione è necessario essere sul inserire nell&#39;elenco Consentiti . Se desideri essere inserito nella lista d&#39;attesa, contatta il tuo software manager certificato (CSM).
 
 - Accertati che sia attivato un dominio di [prime parti (CNAME)](https://docs.adobe.com/content/help/it-IT/core-services/interface/ec-cookies/cookies-first-party.html) . Se hai già un CNAME per Analytics, devi usarlo. Il test in fase di sviluppo funziona senza un CNAME, ma ne hai bisogno prima di andare in produzione.
 - Avere diritto ad Adobe Experience Platform. Se non hai acquistato la piattaforma,  Adobe ti fornirà  Experience Platform Data Services Foundation da utilizzare in modo limitato con l&#39;SDK senza alcun costo aggiuntivo.
@@ -23,7 +23,7 @@ Questa guida illustra i diversi modi in cui impostare Adobe Experience Platform 
 
 ## Preparare uno schema
 
-Il  Experience Platform Edge Network accetta i dati come XDM. XDM è un formato di dati che consente di definire gli schemi. Lo schema definisce il modo in cui Edge Network prevede la formattazione dei dati. Per inviare i dati, è necessario definire lo schema.
+Il  Experience Platform Edge Network utilizza il modello dati esperienza (XDM). XDM è un formato di dati che consente di definire gli schemi. Lo schema definisce il modo in cui Edge Network prevede la formattazione dei dati. Per inviare i dati, è necessario definire lo schema.
 
 1. [Creare uno schema](../../xdm/tutorials/create-schema-ui.md)
 2. Aggiungete il [!DNL Web SDK ExperienceEvent] Mixin AEP allo schema creato.
@@ -45,7 +45,7 @@ Puoi creare un ID di configurazione utilizzando lo strumento [di configurazione]
 
 >[!NOTE]
 >
->Per questa funzione è necessario autorizzare l&#39;organizzazione. Contatta il tuo CSM per essere inserito nella lista per eventuali whitelist.
+>La vostra organizzazione deve essere sul inserire nell&#39;elenco Consentiti  di questa funzione. Contattare il software manager certificato (CSM) per ottenere il inserire nell&#39;elenco Consentiti .
 
 ## Creazione di un elemento dati basato sullo schema
 
@@ -66,6 +66,7 @@ Dopo avere eseguito lo scorrimento dei dati, è possibile effettuare le seguenti
 - [Creare lo schema](https://docs.adobe.com/content/help/en/experience-platform/xdm/schema/composition.html)
 - [Informazioni sul debug](../fundamentals/debugging.md)
 - Scoprite come [personalizzare l&#39;esperienza](../fundamentals/rendering-personalization-content.md)
+- Integrare [IAB Transparency &amp; Consent Framework 2.0](../solution-specific/iab-tcf/with-launch.md) in  Adobe Experience Platform Launch.
 - Scopri come inviare dati a più soluzioni
    - [Adobe Analytics](../solution-specific/analytics/analytics-overview.md)
    - [Adobe Audience Manager](../solution-specific/audience-manager/audience-manager-overview.md)
