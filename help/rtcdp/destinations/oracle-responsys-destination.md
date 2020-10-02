@@ -5,9 +5,9 @@ seo-title: Destinazione Oracle Responsys
 description: Responsys è uno strumento di marketing e-mail aziendale per campagne di marketing multicanale offerto da Oracle per personalizzare le interazioni tra e-mail, dispositivi mobili, visualizzazione e social.
 seo-description: Responsys è uno strumento di marketing e-mail aziendale per campagne di marketing multicanale offerto da Oracle per personalizzare le interazioni tra e-mail, dispositivi mobili, visualizzazione e social.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,10 @@ ht-degree: 0%
 [Responsys](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) è uno strumento di marketing e-mail aziendale per campagne di marketing multicanale offerte [!DNL Oracle] per personalizzare le interazioni tra e-mail, dispositivi mobili, visualizzazione e social network.
 
 Per inviare i dati del segmento a [!DNL Oracle Responsys], è innanzitutto necessario [collegarsi alla destinazione](#connect-destination) in  Adobe Real-time Customer Data Platform (Piattaforma dati cliente in tempo reale), quindi [impostare un&#39;importazione](#import-data-into-responsys) di dati dalla posizione di archiviazione in [!DNL Oracle Responsys].
+
+## Tipo esportazione {#export-type}
+
+**Esportazione** profilo: si esportano tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata degli attributi selezionati del flusso di lavoro [di attivazione della](/help/rtcdp/destinations/activate-destinations.md#select-attributes)destinazione.
 
 ## Destinazione Connect {#connect-destination}
 
