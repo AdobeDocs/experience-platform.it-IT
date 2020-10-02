@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;mapping fields;mapping functions;
 solution: Experience Platform
-title: Funzioni di mappatura
+title: Funzioni di preparazione dei dati
 topic: overview
 description: Questo documento introduce le funzioni di mappatura utilizzate con Data Prep.
 translation-type: tm+mt
-source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
+source-git-commit: d47410106a6d3955cc9af78e605c893f08185ffa
 workflow-type: tm+mt
-source-wordcount: '3288'
-ht-degree: 5%
+source-wordcount: '3432'
+ht-degree: 3%
 
 ---
 
 
-# Funzioni di mappatura
+# Funzioni di preparazione dei dati
 
-Le funzioni di mappatura possono essere utilizzate per calcolare e calcolare i valori in base a quanto immesso nei campi di origine.
+Le funzioni Prep dati possono essere utilizzate per calcolare e calcolare i valori in base a quanto immesso nei campi di origine.
 
 ## Campi
 
@@ -37,6 +37,10 @@ Le tabelle seguenti elencano tutte le funzioni di mappatura supportate, incluse 
 
 ### Funzioni stringa
 
+>[!NOTE]
+>
+>Scorrere a sinistra/destra per visualizzare il contenuto completo della tabella.
+
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | concat | Conconcentra le stringhe specificate. | <ul><li>STRINGA: Stringhe che verranno concatenate.</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Ciao, &quot;, &quot;lì&quot;, &quot;!&quot;) | `"Hi, there!"` |
@@ -47,7 +51,7 @@ Le tabelle seguenti elencano tutte le funzioni di mappatura supportate, incluse 
 | Lower /<br>lcase | Converte una stringa in caratteri minuscoli. | <ul><li>INGRESSO: **Obbligatorio** Stringa che verrà convertita in minuscolo.</li></ul> | lower(INPUT) | lower(&quot;HeLL&quot;)<br>lcase(&quot;HeLLo&quot;) | &quot;hello&quot; |
 | Upper /<br>ucase | Converte una stringa in caratteri maiuscoli. | <ul><li>INGRESSO: **Obbligatorio** Stringa che verrà convertita in maiuscolo.</li></ul> | Upper(INPUT) | Upper(&quot;HeLL&quot;)<br>ucase(&quot;HeLLo&quot;) | &quot;HELLO&quot; |
 | split | Divide una stringa di input su un separatore. | <ul><li>INGRESSO: **Obbligatorio** Stringa di input da dividere.</li><li>SEPARATORE: **Obbligatorio** Stringa utilizzata per dividere l&#39;input.</li></ul> | split(INPUT, SEPARATORE) | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
-| join | Unisce un elenco di oggetti utilizzando il separatore. | <ul><li>SEPARATORE: **Obbligatorio** Stringa che verrà utilizzata per unire gli oggetti.</li><li>OGGETTI: **Obbligatorio** Un array di stringhe a cui verrà applicato il join.</li></ul> | join(SEPARATOR, [OBJECTS]) | `join(" ", ["Hello", "world"])` | &quot;Hello world&quot; |
+| join | Unisce un elenco di oggetti utilizzando il separatore. | <ul><li>SEPARATORE: **Obbligatorio** Stringa che verrà utilizzata per unire gli oggetti.</li><li>OGGETTI: **Obbligatorio** Un array di stringhe a cui verrà applicato il join.</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", ["Hello", "world"])` | &quot;Hello world&quot; |
 | lpad | Inserisce il lato sinistro di una stringa con l&#39;altra stringa specificata. | <ul><li>INGRESSO: **Obbligatorio** Stringa che verrà rimossa. Questa stringa può essere null.</li><li>CONTEGGIO: **Obbligatorio** La dimensione della stringa da aggiungere.</li><li>PADDING: **Obbligatorio** Stringa con cui aggiungere il pad dell&#39;input. Se null o empty, verrà trattato come un singolo spazio.</li></ul> | lpad(INPUT, COUNT, PADDING) | lpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;yzyzybat&quot; |
 | pad | Inserisce il lato destro di una stringa con l&#39;altra stringa specificata. | <ul><li>INGRESSO: **Obbligatorio** Stringa che verrà rimossa. Questa stringa può essere null.</li><li>CONTEGGIO: **Obbligatorio** La dimensione della stringa da aggiungere.</li><li>PADDING: **Obbligatorio** Stringa con cui aggiungere il pad dell&#39;input. Se null o empty, verrà trattato come un singolo spazio.</li></ul> | rpad(INPUT, COUNT, PADDING) | rpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;batyzyzy&quot; |
 | left | Ottiene i primi caratteri &quot;n&quot; della stringa specificata. | <ul><li>STRINGA: **Obbligatorio** Stringa per la quale si ottengono i primi caratteri &quot;n&quot;.</li><li>CONTEGGIO: **** ObbligatorioI caratteri &quot;n&quot; che si desidera ottenere dalla stringa.</li></ul> | left(STRING, COUNT) | left(&quot;abcde&quot;, 2) | &quot;ab&quot; |
@@ -60,15 +64,23 @@ Le tabelle seguenti elencano tutte le funzioni di mappatura supportate, incluse 
 
 ### Funzioni di hashing
 
+>[!NOTE]
+>
+>Scorrere a sinistra/destra per visualizzare il contenuto completo della tabella.
+
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| sha1 | Accetta un input e produce un valore hash utilizzando l&#39;algoritmo hash sicuro 1 (SHA-1). | <ul><li>INGRESSO: **Obbligatorio** Testo normale con hash.</li><li>CARATTERE: *Facoltativo* Il nome del set di caratteri. I valori possibili sono UTF-8, UTF-16, ISO-8859-1 e US-ASCII.</li></ul> | sha1(INPUT, CHARSET) | sha1(&quot;my text&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a2448690840c5dfcce3c80 |
-| sha256 | Accetta un input e produce un valore hash utilizzando l&#39;algoritmo hash sicuro 256 (SHA-256). | <ul><li>INGRESSO: **Obbligatorio** Testo normale con hash.</li><li>CARATTERE: *Facoltativo* Il nome del set di caratteri. I valori possibili sono UTF-8, UTF-16, ISO-8859-1 e US-ASCII.</li></ul> | sha256(INPUT, CHARSET) | sha256(&quot;my text&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21ee6a39af698154a83a586ee270a0d372104 |
-| sha512 | Accetta un input e produce un valore hash utilizzando l&#39;algoritmo hash sicuro 512 (SHA-512). | <ul><li>INGRESSO: **Obbligatorio** Testo normale con hash.</li><li>CARATTERE: *Facoltativo* Il nome del set di caratteri. I valori possibili sono UTF-8, UTF-16, ISO-8859-1 e US-ASCII.</li></ul> | sha512(INPUT, CHARSET) | sha512(&quot;my text&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef708bf11b4232bb21d2a8704ada2cdcd7b367dd0788a89a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
-| md5 | Immette un input e produce un valore hash utilizzando MD5. | <ul><li>INGRESSO: **Obbligatorio** Testo normale con hash.</li><li>CARATTERE: *Facoltativo* Il nome del set di caratteri. I valori possibili sono UTF-8, UTF-16, ISO-8859-1 e US-ASCII. </li></ul> | md5(INPUT, CHARSET) | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4e9bd0198d03ba6852c7 |
+| sha1 | Accetta un input e produce un valore hash utilizzando l&#39;algoritmo hash sicuro 1 (SHA-1). | <ul><li>INGRESSO: **Obbligatorio** Testo normale con hash.</li><li>CARATTERE: *Facoltativo* Il nome del set di caratteri. I valori possibili sono UTF-8, UTF-16, ISO-8859-1 e US-ASCII.</li></ul> | sha1(INPUT, CHARSET) | sha1(&quot;my text&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a24 &#x200B; 48690840c5dfcce3c80 |
+| sha256 | Accetta un input e produce un valore hash utilizzando l&#39;algoritmo hash sicuro 256 (SHA-256). | <ul><li>INGRESSO: **Obbligatorio** Testo normale con hash.</li><li>CARATTERE: *Facoltativo* Il nome del set di caratteri. I valori possibili sono UTF-8, UTF-16, ISO-8859-1 e US-ASCII.</li></ul> | sha256(INPUT, CHARSET) | sha256(&quot;my text&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21 &#x200B; ee6a39af698154a83a586ee270a0d372104 |
+| sha512 | Accetta un input e produce un valore hash utilizzando l&#39;algoritmo hash sicuro 512 (SHA-512). | <ul><li>INGRESSO: **Obbligatorio** Testo normale con hash.</li><li>CARATTERE: *Facoltativo* Il nome del set di caratteri. I valori possibili sono UTF-8, UTF-16, ISO-8859-1 e US-ASCII.</li></ul> | sha512(INPUT, CHARSET) | sha512(&quot;my text&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef &#x200B; 708bf11b4232bb21d2a8704ada2cdcd7b367dd07 88a89 &#x200B; a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
+| md5 | Immette un input e produce un valore hash utilizzando MD5. | <ul><li>INGRESSO: **Obbligatorio** Testo normale con hash.</li><li>CARATTERE: *Facoltativo* Il nome del set di caratteri. I valori possibili sono UTF-8, UTF-16, ISO-8859-1 e US-ASCII. </li></ul> | md5(INPUT, CHARSET) | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4 &#x200B; e9bd0198d03ba6852c7 |
 | crc32 | Richiede un input che utilizza un algoritmo di controllo della ridondanza ciclica (CRC) per produrre un codice ciclico a 32 bit. | <ul><li>INGRESSO: **Obbligatorio** Testo normale con hash.</li><li>CARATTERE: *Facoltativo* Il nome del set di caratteri. I valori possibili sono UTF-8, UTF-16, ISO-8859-1 e US-ASCII.</li></ul> | crc32(INPUT, CHARSET) | crc32(&quot;my text&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
 ### funzioni URL
+
+>[!NOTE]
+>
+>Scorrere a sinistra/destra per visualizzare il contenuto completo della tabella.
 
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -79,6 +91,10 @@ Le tabelle seguenti elencano tutte le funzioni di mappatura supportate, incluse 
 | get_url_query_str | Restituisce la stringa di query di un URL specificato. | <ul><li>URL: **Obbligatorio** L&#39;URL dal quale si sta tentando di ottenere la stringa di query.</li><li>ANCORAGGIO: **Obbligatorio** Determina l&#39;operazione da eseguire con l&#39;ancoraggio nella stringa di query. Può essere uno dei tre valori seguenti: &quot;keep&quot;, &quot;remove&quot; o &quot;append&quot;.<br><br>Se il valore è &quot;keep&quot; (Conserva), l&#39;ancoraggio viene associato al valore restituito.<br>Se il valore è &quot;remove&quot;, l&#39;ancoraggio viene rimosso dal valore restituito.<br>Se il valore è &quot;append&quot;, l&#39;ancoraggio viene restituito come valore separato.</li></ul> | get_url_query_str(URL, ANCHOR) | get_url_query_str(&quot;foo://example.com:8042/over/there?name=ferret#nose&quot;, &quot;retain&quot;)<br>get_url_query_str(&quot;foo://example.com:8042/over/there?name=ferret#nose&quot;, &quot;remove&quot;)<br>get_url_query_str(&quot;foo://example.com:8042/over/there?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 
 ### Funzioni di data e ora
+
+>[!NOTE]
+>
+>Scorrere a sinistra/destra per visualizzare il contenuto completo della tabella.
 
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -97,6 +113,10 @@ Le tabelle seguenti elencano tutte le funzioni di mappatura supportate, incluse 
 
 ### Gerarchie - Oggetti
 
+>[!NOTE]
+>
+>Scorrere a sinistra/destra per visualizzare il contenuto completo della tabella.
+
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | size_of | Restituisce la dimensione dell&#39;input. | <ul><li>INGRESSO: **Obbligatorio** L&#39;oggetto di cui si sta tentando di trovare la dimensione.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
@@ -108,6 +128,10 @@ Le tabelle seguenti elencano tutte le funzioni di mappatura supportate, incluse 
 
 ### Gerarchie - Array
 
+>[!NOTE]
+>
+>Scorrere a sinistra/destra per visualizzare il contenuto completo della tabella.
+
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | fondersi | Restituisce il primo oggetto non-null in un dato array. | <ul><li>INGRESSO: **Obbligatorio** L&#39;array di cui si desidera trovare il primo oggetto non-null.</li></ul> | coalesce(INPUT) | coalesce(null, null, null, &quot;first&quot;, null, &quot;seconda&quot;) | &quot;first&quot; |
@@ -117,6 +141,10 @@ Le tabelle seguenti elencano tutte le funzioni di mappatura supportate, incluse 
 
 ### Operatori logici
 
+>[!NOTE]
+>
+>Scorrere a sinistra/destra per visualizzare il contenuto completo della tabella.
+
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | decodificare | Data una chiave e un elenco di coppie di valori chiave appiattite come array, la funzione restituisce il valore se viene trovata una chiave o restituisce un valore predefinito se presente nell&#39;array. | <ul><li>CHIAVE: **Obbligatorio** Il codice da associare.</li><li>OPTIONS : **Obbligatorio** Un array appiattito di coppie chiave/valore. Facoltativamente, è possibile mettere alla fine un valore predefinito.</li></ul> | decode(KEY,  OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | Se il valore stateCode specificato è &quot;ca&quot;, &quot;California&quot;.<br>Se il codice stateCode fornito è &quot;pa&quot;, &quot;Pennsylvania&quot;.<br>Se stateCode non corrisponde a quanto segue, &quot;N/D&quot;. |
@@ -124,12 +152,20 @@ Le tabelle seguenti elencano tutte le funzioni di mappatura supportate, incluse 
 
 ### Aggregazione
 
+>[!NOTE]
+>
+>Scorrere a sinistra/destra per visualizzare il contenuto completo della tabella.
+
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | min | Restituisce il minimo degli argomenti specificati. Utilizza l&#39;ordine naturale. | <ul><li>OPTIONS : **Obbligatorio** Uno o più oggetti che è possibile confrontare tra loro.</li></ul> | min( OPTIONS) | min(3, 1, 4) | 1 |
 | max | Restituisce il massimo degli argomenti specificati. Utilizza l&#39;ordine naturale. | <ul><li>OPTIONS : **Obbligatorio** Uno o più oggetti che è possibile confrontare tra loro.</li></ul> | max( OPTIONS) | max(3, 1, 4) | 4 |
 
 ### Conversioni tipo
+
+>[!NOTE]
+>
+>Scorrere a sinistra/destra per visualizzare il contenuto completo della tabella.
 
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -140,17 +176,29 @@ Le tabelle seguenti elencano tutte le funzioni di mappatura supportate, incluse 
 
 ### Funzioni JSON
 
+>[!NOTE]
+>
+>Scorrere a sinistra/destra per visualizzare il contenuto completo della tabella.
+
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | json_to_object | Consente di deserializzare il contenuto JSON dalla stringa specificata. | <ul><li>STRINGA: **Obbligatorio** Stringa JSON da deserializzare.</li></ul> | json_to_object(STRING) | json_to_object({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;: &quot;Doe&quot;}) | Un oggetto che rappresenta il JSON. |
 
 ### Operazioni speciali
 
+>[!NOTE]
+>
+>Scorrere a sinistra/destra per visualizzare il contenuto completo della tabella.
+
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | Genera un ID pseudo-casuale. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
 ### Funzioni agente utente
+
+>[!NOTE]
+>
+>Scorrere a sinistra/destra per visualizzare il contenuto completo della tabella.
 
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
