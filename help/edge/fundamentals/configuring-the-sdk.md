@@ -5,7 +5,7 @@ description: 'Scopri come configurare l’SDK Web per Experienci Platform '
 seo-description: 'Scopri come configurare l’SDK Web per Experienci Platform '
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: fe53ecbf6adff4f1e09979cd170a88ac0bd3cb75
+source-git-commit: d036595dc96af98fd53c7eb40162585bac48f05c
 workflow-type: tm+mt
 source-wordcount: '745'
 ht-degree: 7%
@@ -36,7 +36,7 @@ alloy("configure", {
 
 | **Tipo** | **Obbligatorio** | **Valore predefinito** |
 | -------- | ------------ | ----------------- |
-| Stringa | Sì | none |
+| Stringa | Sì | Nessuno |
 
 L’ID di configurazione assegnato, che collega l’SDK agli account e alla configurazione appropriati.  Quando si configurano più istanze all&#39;interno di una singola pagina, è necessario configurare un&#39;altra istanza `edgeConfigId` per ciascuna.
 
@@ -73,7 +73,7 @@ Il dominio utilizzato per interagire con  servizi di Adobe. Questo viene utilizz
 
 | **Tipo** | **Obbligatorio** | **Valore predefinito** |
 | -------- | ------------ | ----------------- |
-| Stringa | Sì | none |
+| Stringa | Sì | Nessuno |
 
 Your assigned [!DNL Experience Cloud] organization ID.  Quando si configurano più istanze all&#39;interno di una pagina, è necessario configurare un&#39;altra istanza `orgId` per ciascuna.
 
@@ -103,7 +103,7 @@ Impostate questa opzione per configurare un callback che viene chiamato per ogni
 
 ## Opzioni sulla privacy
 
-### `defaultConsent`
+### `defaultConsent` {#default-consent}
 
 | **Tipo** | **Obbligatorio** | **Valore predefinito** |
 | -------- | ------------ | ----------------- |
@@ -117,7 +117,7 @@ Imposta il consenso predefinito dell&#39;utente. Questo viene utilizzato quando 
 
 | **Tipo** | **Obbligatorio** | **Valore predefinito** |
 | -------- | ------------ | ----------------- |
-| Stringa | No | none |
+| Stringa | No | Nessuno |
 
 Utilizzato per creare una definizione di stile CSS che nasconde le aree contenuto della pagina Web mentre il contenuto personalizzato viene caricato dal server. Se non viene fornita questa opzione, l’SDK non tenta di nascondere alcuna area di contenuto mentre viene caricato del contenuto personalizzato, generando potenzialmente uno &quot;sfarfallio&quot;.
 
