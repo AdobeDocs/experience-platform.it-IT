@@ -5,9 +5,9 @@ seo-title: Destinazione Google Display e Video 360
 description: Display & Video 360, precedentemente noto come DoubleClick Bid Manager è uno strumento che consente di eseguire campagne di retargeting e di targeting delle audience su diverse fonti di inventario di Display, Video e Mobile.
 seo-description: 'Display & Video 360, precedentemente noto come DoubleClick Bid Manager è uno strumento che consente di eseguire campagne di retargeting e di targeting delle audience su diverse fonti di inventario di Display, Video e Mobile. '
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '696'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,10 @@ Tenete presenti i seguenti dettagli specifici per [!DNL Google Display & Video 3
 >[!IMPORTANT]
 >
 >Se stai cercando di creare la tua prima destinazione con Google Display &amp; Video 360 e non hai attivato la funzionalità [di sincronizzazione](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) ID in  Experience Cloud ID Service in passato (con Adobe Audience Manager o altre applicazioni), contatta l&#39;Assistenza Adobe o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID. Se in precedenza avevate impostato integrazioni Google in  Audience Manager, le sincronizzazioni ID che avevate impostato per il riporto  CDP in tempo reale del Adobe.
+
+### Tipo esportazione {#export-type}
+
+**Esportazione** segmento - vengono esportati tutti i membri di un segmento (pubblico) nella destinazione Google.
 
 ## Prerequisiti
 
