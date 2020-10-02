@@ -5,7 +5,7 @@ seo-title: Destinazione Facebook
 description: Attiva profili per le tue campagne Facebook per il targeting dell'audience, la personalizzazione e la soppressione basate su e-mail con hash.
 seo-description: Attiva profili per le tue campagne Facebook per il targeting dell'audience, la personalizzazione e la soppressione basate su e-mail con hash.
 translation-type: tm+mt
-source-git-commit: 72ceb747bd4b278afc51dfb5ab6d6386d7b05c82
+source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 4%
@@ -52,7 +52,7 @@ In seguito, possono utilizzare i dati offline, inclusi gli ID di appartenenza as
 >
 >I dati inviati a non [!DNL Facebook] devono includere identità unite. L&#39;Utente è tenuto a rispettare tale obbligo e può farlo accertandosi che i segmenti selezionati per l&#39;attivazione non utilizzino un&#39;opzione di cucitura nel proprio criterio di unione. Ulteriori informazioni sui criteri di [unione](/help/profile/ui/merge-policies.md).
 
-### Tipo di attivazione {#activation-type}
+### Tipo esportazione {#export-type}
 
 **Esportazione** segmento - vengono esportati tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono, ecc.) utilizzato nella destinazione Facebook.
 
@@ -105,4 +105,4 @@ Ad [!DNL Facebook]esempio, un&#39;attivazione riuscita significa che un&#39;audi
 
 >[!TIP]
 >
->L&#39;integrazione tra CDP in tempo reale  Adobe e [!DNL Facebook] supporta le ricadute storiche del pubblico. Tutte le qualifiche del segmento storico vengono inviate a [!DNL Facebook] quando si attivano i segmenti alla destinazione.
+>L&#39;integrazione tra  CDP in tempo reale del Adobe e [!DNL Facebook] supporta le ricadute storiche del pubblico. Tutte le qualifiche del segmento storico vengono inviate a [!DNL Facebook] quando si attivano i segmenti alla destinazione.
