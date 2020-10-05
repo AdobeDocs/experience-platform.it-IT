@@ -5,9 +5,9 @@ description: Scopri come inviare dati collegamento a  Adobe Analytics con  Exper
 seo-description: Scopri come inviare dati collegamento a  Adobe Analytics con  Experience Platform Web SDK
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: c6b572f8757e46ccb22ccea326a7537747f81893
+source-git-commit: 8840e00ec3aa28d43c371b793da4a4b9bfc8d259
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '362'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Invio di dati a  Adobe Analytics
 
-Mentre in passato esistevano diverse funzioni da distinguere tra una visualizzazione di pagina e un collegamento (ad esempio, `s.t(), s.tl()`), nell’SDK per Web è presente solo il `sendEvent` comando. I dati inviati con un evento determinano se si tratta di una visualizzazione di pagina o di un collegamento.
+Mentre in passato esistevano funzioni diverse per distinguere tra una visualizzazione di pagina e un collegamento (ad esempio, `s.t(), s.tl()`), nell’SDK Web è presente solo il `sendEvent` comando. I dati inviati con un evento determinano se si tratta di una visualizzazione di pagina o di un collegamento.
 
 ## Invio di una visualizzazione pagina
 
@@ -35,7 +35,7 @@ alloy("sendEvent", {
 });
 ```
 
-Sebbene l&#39;analisi registri tecnicamente una visualizzazione di pagina anche se questa variabile non è impostata, è comunque consigliabile impostare questa variabile ogni volta che si desidera registrare una visualizzazione di pagina per essere esplicita nei dati e per garantire l&#39;implementazione futura.
+Sebbene l&#39;analisi registri tecnicamente una visualizzazione di pagina anche se questa variabile non è impostata, è comunque consigliabile impostare questa variabile ogni volta che si desidera registrare una visualizzazione di pagina in modo che sia esplicita nei dati e che sia provata in futuro l&#39;implementazione.
 
 ## Tracciamento dei collegamenti
 
