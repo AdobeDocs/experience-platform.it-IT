@@ -5,9 +5,9 @@ seo-title: ' destinazione Amazon S3'
 description: Crea una connessione in uscita diretta con l'archivio  Amazon Web Services (AWS) S3 per esportare periodicamente file di dati CSV o delimitati da tabulazioni da Adobe Experience Platform nei tuoi bucket S3.
 seo-description: Crea una connessione in uscita diretta con l'archivio  Amazon Web Services (AWS) S3 per esportare periodicamente file di dati CSV o delimitati da tabulazioni da Adobe Experience Platform nei tuoi bucket S3.
 translation-type: tm+mt
-source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
+source-git-commit: 67a353c950bef11ccbaa52c49d213f08449baa96
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '255'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Crea una connessione in uscita dal vivo con il tuo storage [!DNL Amazon Web Serv
 
 ## Tipo esportazione {#export-type}
 
-**Esportazione** profilo: si esportano tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata degli attributi selezionati del flusso di lavoro [di attivazione della](/help/rtcdp/destinations/activate-destinations.md#select-attributes)destinazione.
+**Basato** su profilo: si esportano tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata degli attributi selezionati del flusso di lavoro [di attivazione della](/help/rtcdp/destinations/activate-destinations.md#select-attributes)destinazione.
 
 ![tipo di esportazione basato su profilo Amazon S3](/help/rtcdp/destinations/assets/aws-export-type.png)
 
