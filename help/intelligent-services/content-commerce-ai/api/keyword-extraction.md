@@ -5,9 +5,9 @@ title: Estrazione colore
 topic: Developer guide
 description: Quando viene fornito un documento di testo, il servizio di estrazione delle parole chiave estrae automaticamente le parole chiave o le frasi chiave che meglio descrivono l’oggetto del documento. Per estrarre le parole chiave, viene utilizzata una combinazione di algoritmi di riconoscimento delle entità con nome (NER) e di estrazione delle parole chiave senza supervisione.
 translation-type: tm+mt
-source-git-commit: 31e4f1441676daa79f064c567ddc47e9198d0a0b
+source-git-commit: eb92a7d57b1ef0ca19bc2d175ad1b2014ac1a8b0
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '1059'
 ht-degree: 3%
 
 ---
@@ -36,6 +36,10 @@ Le entità denominate riconosciute da [!DNL Content and Commerce AI] sono elenca
 | WORK_OF_ART | Titoli di libri, canzoni, ecc. |
 | LEGGE | Documenti denominati creati in leggi. |
 | LINGUA | Qualsiasi lingua con nome. |
+
+>[!NOTE]
+>
+>Se si prevede di elaborare i PDF, passare alle istruzioni per l&#39;estrazione [delle parole chiave](#pdf-extraction) PDF all&#39;interno del documento. Inoltre, il supporto per tipi di file aggiuntivi come docx, ppt, amd xml è impostato per essere rilasciato in una data successiva.
 
 **Formato API**
 
@@ -111,7 +115,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | Proprietà | Descrizione | Obbligatorio |
 | --- | --- | --- |
 | `analyzer_id` | L’ID [!DNL Sensei] del servizio in cui viene distribuita la richiesta. Questo ID determina quale dei due [!DNL Sensei Content Frameworks] vengono utilizzati. Per i servizi personalizzati, contattate il team di Content and Commerce AI per configurare un ID personalizzato. | Sì |
-| `application-id` | ID dell&#39;applicazione creata. | Sì |
+| `application-id` | ID dell’applicazione creata. | Sì |
 | `data` | Un array che contiene un oggetto JSON con ogni oggetto nell&#39;array che rappresenta un documento. Eventuali parametri passati come parte di questa matrice sovrascrivono i parametri globali specificati al di fuori della `data` matrice. Qualsiasi proprietà rimanente descritta in questa tabella può essere ignorata dall&#39;interno `data`. | Sì |
 | `language` | Lingua del testo di input. Il valore predefinito è `en`. | No |
 | `content-type` | Utilizzato per indicare se l&#39;input fa parte del corpo della richiesta o un URL firmato per un bucket S3. L&#39;impostazione predefinita di questa proprietà è `inline`. | Sì |
@@ -223,6 +227,139 @@ Una risposta corretta restituisce un oggetto JSON contenente le parole chiave es
   "error": []
 }
 ```
+
+## Estrazione di parole chiave PDF {#pdf-extraction}
+
+Il servizio di estrazione delle parole chiave supporta i file PDF, tuttavia, è necessario utilizzare un nuovo AnalyzerID per i file PDF e modificare il tipo di documento in PDF. Per ulteriori informazioni, consulta l’esempio di seguito.
+
+**Formato API**
+
+```http
+POST /services/v1/predict
+```
+
+**Richiesta**
+
+La richiesta seguente estrae le parole chiave da un documento PDF in base ai parametri di input forniti nel payload.
+
+>[!CAUTION]
+>
+>`analyzer_id` determina quale [!DNL Sensei Content Framework] viene utilizzato. Prima di effettuare la richiesta, verificare di disporre dei dati necessari `analyzer_id` . Per l&#39;estrazione di parole chiave PDF, l&#39; `analyzer_id` ID è:
+>`Feature:cintel-ner:Service-7a87cb57461345c280b62470920bcdc5`
+
+```SHELL
+curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
+  -H "Authorization: Bearer {ACCESS_TOKEN}" \
+  -H "Content-Type: multipart/form-data" \
+  -H "cache-control: no-cache,no-cache" \
+  -H "x-api-key: {API_KEY}" \
+  -F file=@TestPDF.pdf \
+  -F 'contentAnalyzerRequests={
+    "enable_diagnostics":"true",
+    "requests":[{
+    "analyzer_id": "Feature:cintel-ner:Service-7a87cb57461345c280b62470920bcdc5",
+    "parameters": {
+      "application-id": "1234",
+      "content-type": "file",
+      "encoding": "pdf",
+      "threshold": "0.01",
+      "top-N": "0",
+      "custom": {},
+      "data": [{
+        "content-id": "abc123",
+        "content": "file",
+        }]
+      }
+    }]
+  }'
+```
+
+| Proprietà | Descrizione | Obbligatorio |
+| --- | --- | --- |
+| `analyzer_id` | L’ID [!DNL Sensei] del servizio in cui viene distribuita la richiesta. Questo ID determina quale dei due [!DNL Sensei Content Frameworks] vengono utilizzati. Per i servizi personalizzati, contattate il team di Content and Commerce AI per configurare un ID personalizzato. | Sì |
+| `application-id` | ID dell’applicazione creata. | Sì |
+| `data` | Un array che contiene un oggetto JSON con ogni oggetto nell&#39;array che rappresenta un documento. Eventuali parametri passati come parte di questa matrice sovrascrivono i parametri globali specificati al di fuori della `data` matrice. Qualsiasi proprietà rimanente descritta in questa tabella può essere ignorata dall&#39;interno `data`. | Sì |
+| `language` | Lingua di input. The default value is `en` (english). | No |
+| `content-type` | Utilizzato per indicare il tipo di contenuto in input. Deve essere impostato su `file`. | Sì |
+| `encoding` | Formato di codifica dell&#39;input. Deve essere impostato su `pdf`. Altri tipi di codifica verranno impostati in modo da essere supportati in un secondo momento. | Sì |
+| `threshold` | La soglia di punteggio (da 0 a 1) al di sopra della quale devono essere restituiti i risultati. Utilizzate il valore `0` per restituire tutti i risultati. L&#39;impostazione predefinita di questa proprietà è `0`. | No |
+| `top-N` | Il numero di risultati da restituire (non può essere un numero intero negativo). Utilizzate il valore `0` per restituire tutti i risultati. Se utilizzato insieme a `threshold`, il numero di risultati restituiti è minore di uno dei due set di limiti. L&#39;impostazione predefinita di questa proprietà è `0`. | No |
+| `custom` | Eventuali parametri personalizzati da passare. Questa proprietà richiede un oggetto JSON valido per funzionare. Per ulteriori informazioni sui parametri personalizzati, consultate l&#39; [appendice](#appendix) . | No |
+| `content-id` | L&#39;ID univoco per l&#39;elemento dati restituito nella risposta. Se non viene passato, viene assegnato un ID generato automaticamente. | No |
+| `content` | Deve essere impostato su `file`. | Sì |
+
+**Risposta**
+
+Una risposta corretta restituisce un oggetto JSON contenente le parole chiave estratte nell&#39; `response` array.
+
+```json
+{
+  "statusCode": 200,
+  "body": {
+    "type": "JSON",
+    "matchType": "strict",
+    "json": {
+      "status": 200,
+      "content_id": "161hw2.pdf",
+      "cas_responses": [
+        {
+          "status": 200,
+          "analyzer_id": "Feature:cintel-ner:Service-7a87cb57461345c280b62470920bcdc5",
+          "content_id": "161hw2.pdf",
+          "result": {
+            "response_type": "feature",
+            "response": [
+              {
+                "feature_value": [
+                  {
+                    "feature_name": "status",
+                    "feature_value": "success"
+                  },
+                  {
+                    "feature_value": [
+                      {
+                        "feature_name": "delbick",
+                        "feature_value": [
+                          {
+                            "feature_name": "score",
+                            "feature_value": 0.03673855028832046
+                          },
+                          {
+                            "feature_name": "type",
+                            "feature_value": "KEYWORD"
+                          }
+                        ]
+                      },
+                      {
+                        "feature_name": "Ci",
+                        "feature_value": [
+                          {
+                            "feature_name": "score",
+                            "feature_value": 0
+                          },
+                          {
+                            "feature_name": "type",
+                            "feature_value": "PERSON"
+                          }
+                        ]
+                      }
+                    ],
+                    "feature_name": "labels"
+                  }
+                ],
+                "feature_name": "abc123"
+              }
+            ]
+          }
+        }
+      ],
+      "error": []
+    }
+  }
+}
+```
+
+Per ulteriori informazioni e un esempio sull’utilizzo dell’estrazione PDF contenente istruzioni su come impostare, implementare e integrare con il servizio cloud AEM. Visita il repository [di github del lavoratore estrazione](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-ccai-pdfextract)CCAI PDF.
 
 ## Appendice {#appendix}
 
