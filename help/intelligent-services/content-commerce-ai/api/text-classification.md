@@ -5,9 +5,9 @@ title: Endpoint API classificazione testo
 topic: Developer guide
 description: Il servizio classificazione testo, se dotato di frammento di testo, può classificarlo in una o più etichette. La classificazione può essere di tipo etichetta singola, etichetta multipla o gerarchico.
 translation-type: tm+mt
-source-git-commit: 31e4f1441676daa79f064c567ddc47e9198d0a0b
+source-git-commit: 09200be6eb078ecbefc91c6449373f811b602797
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '432'
 ht-degree: 4%
 
 ---
@@ -63,7 +63,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | Proprietà | Descrizione | Obbligatorio |
 | --- | --- | --- |
 | `analyzer_id` | L’ID [!DNL Sensei] del servizio in cui viene distribuita la richiesta. Questo ID determina quale dei due [!DNL Sensei Content Frameworks] vengono utilizzati. Per i servizi personalizzati, contattate il team di Content and Commerce AI per configurare un ID personalizzato. | Sì |
-| `application-id` | ID dell&#39;applicazione creata. | Sì |
+| `application-id` | ID dell’applicazione creata. | Sì |
 | `data` | Un array che contiene un oggetto JSON con ogni oggetto nell&#39;array che rappresenta un documento. Eventuali parametri passati come parte di questa matrice sovrascrivono i parametri globali specificati al di fuori della `data` matrice. Qualsiasi proprietà rimanente descritta in questa tabella può essere ignorata dall&#39;interno `data`. | Sì |
 | `language` | Lingua del testo di input. Il valore predefinito è `en`. | No |
 | `content-type` | Utilizzato per indicare se l&#39;input fa parte del corpo della richiesta o un URL firmato per un bucket S3. L&#39;impostazione predefinita di questa proprietà è `inline`. | No |
