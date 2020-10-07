@@ -5,7 +5,7 @@ description: Scopri come eseguire il rendering del contenuto personalizzato con 
 seo-description: Scopri come eseguire il rendering del contenuto personalizzato con  Experience Platform Web SDK tramite  Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 43a2074d4d1b9f642c3cbfb0c29217eb2fb112c3
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 3%
@@ -87,7 +87,7 @@ alloy
 
 `decisionScopes` definisce sezioni, posizioni o parti delle pagine in cui eseguire il rendering di un&#39;esperienza personalizzata. Sono `decisionScopes` personalizzabili e definiti dall’utente. Per [!DNL Target] i clienti correnti, `decisionScopes` sono noti anche come &quot;mbox&quot;. Nell’ [!DNL Target] interfaccia utente, `decisionScopes` viene visualizzato come &quot;posizioni&quot;.
 
-## __visualizza__ ambito
+## Il `__view__` campo di applicazione
 
 AEP [!DNL Web SDK] offre una funzionalità che consente di recuperare le azioni VEC senza affidarsi all&#39;AEP [!DNL Web SDK] per eseguire il rendering delle azioni VEC. Invia un evento con `__view__` definito come `decisionScopes`.
 
@@ -127,10 +127,10 @@ Se hai attività Target con audience predefinite che utilizzano parametri person
 
 ## Terminologia
 
-__Decisioni__ - In [!DNL Target], queste sono correlate all&#39;esperienza selezionata da un&#39;attività.
+**Decisioni** - In [!DNL Target], queste sono correlate all&#39;esperienza selezionata da un&#39;attività.
 
-__Ambito__ - Ambito di applicazione della decisione. In [!DNL Target], questo è l&#39;mBox. L&#39;mBox globale è l&#39; `__view__` ambito.
+**Ambito** - Ambito di applicazione della decisione. In [!DNL Target], questo è l&#39;mBox. L&#39;mBox globale è l&#39; `__view__` ambito.
 
-__Schema__ - Lo schema di una decisione è il tipo di offerta in [!DNL Target].
+**Schema** - Lo schema di una decisione è il tipo di offerta in [!DNL Target].
 
-__XDM__ - L&#39;XDM viene serializzato nella notazione del punto e quindi inserito [!DNL Target] come parametri mBox.
+**XDM** - L&#39;XDM viene serializzato nella notazione del punto e quindi inserito [!DNL Target] come parametri mBox.
