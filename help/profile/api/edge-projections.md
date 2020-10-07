@@ -3,7 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Proiezioni Edge - API Profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1905'
 ht-degree: 2%
@@ -226,7 +226,7 @@ L&#39;oggetto response mostra i dettagli della destinazione di proiezione. L&#39
 
 ### Aggiornare una destinazione
 
-Una destinazione esistente può essere aggiornata effettuando una richiesta di PUT all&#39; `/config/destinations` endpoint e includendo l&#39;ID della destinazione da aggiornare nel percorso della richiesta. Questa operazione _riscrive_ la destinazione, pertanto nel corpo della richiesta devono essere forniti gli stessi attributi forniti al momento della creazione di una nuova destinazione.
+Una destinazione esistente può essere aggiornata effettuando una richiesta di PUT all&#39; `/config/destinations` endpoint e includendo l&#39;ID della destinazione da aggiornare nel percorso della richiesta. Questa operazione è essenzialmente la riscrittura della destinazione, pertanto gli stessi attributi devono essere forniti nel corpo della richiesta come vengono forniti quando si crea una nuova destinazione.
 
 >[!CAUTION]
 >
