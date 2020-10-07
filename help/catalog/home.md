@@ -5,19 +5,19 @@ title: Panoramica di Servizio catalogo
 topic: overview
 description: Catalog Service è il sistema di registrazione per la posizione dei dati e la linea di origine dei dati in Adobe Experience Platform. Mentre tutti i dati acquisiti  Experience Platform vengono memorizzati nel Data Lake come file e directory, Catalog contiene i metadati e la descrizione di tali file e directory a scopo di ricerca e monitoraggio.
 translation-type: tm+mt
-source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '782'
 ht-degree: 5%
 
 ---
 
 
-# [!DNL Catalog Service]panoramica
+# [!DNL Catalog Service] - Panoramica
 
 [!DNL Catalog Service] è il sistema di record per la posizione dei dati e la linea di dati in Adobe Experience Platform. Anche se tutti i dati in cui [!DNL Experience Platform] viene effettuato il caricamento vengono memorizzati [!DNL Data Lake] come file e directory, [!DNL Catalog] contiene i metadati e la descrizione di tali file e directory a scopo di ricerca e monitoraggio.
 
-In poche parole, [!DNL Catalog] funge da archivio di metadati o &quot;[!UICONTROL catalog]&quot; per trovare informazioni sui dati all&#39;interno [!DNL Experience Platform]. Potete usare [!DNL Catalog] per rispondere alle seguenti domande:
+In poche parole, [!DNL Catalog] funge da archivio di metadati o &quot;catalogo&quot; in cui è possibile trovare informazioni sui dati all&#39;interno [!DNL Experience Platform]. Potete usare [!DNL Catalog] per rispondere alle seguenti domande:
 
 * Dove si trovano i miei dati?
 * In quale fase di elaborazione si trovano questi dati?
@@ -35,7 +35,7 @@ Le risorse che [!DNL Catalog Service] tengono traccia vengono utilizzate da più
 
 [!DNL Experience Data Model] (XDM) Il sistema è il framework standardizzato tramite il quale [!DNL Platform] vengono organizzati i dati sull&#39;esperienza del cliente. [!DNL Experience Platform] sfrutta gli schemi XDM per descrivere la struttura dei dati in modo coerente e riutilizzabile.
 
-Quando i dati vengono assimilati in [!DNL Platform], la struttura di tali dati viene mappata su uno schema XDM e memorizzata all&#39;interno del [!DNL Data Lake] set di **dati**. I metadati per ogni dataset vengono tracciati da [!DNL Catalog Service], che include un riferimento allo schema XDM a cui è conforme il dataset.
+Quando i dati vengono assimilati in [!DNL Platform], la struttura di tali dati viene mappata su uno schema XDM e memorizzata all&#39;interno di [!DNL Data Lake] un dataset. I metadati per ogni dataset vengono tracciati da [!DNL Catalog Service], che include un riferimento allo schema XDM a cui è conforme il dataset.
 
 Per ulteriori informazioni generali sul sistema XDM, vedere la panoramica [del sistema](../xdm/home.md)XDM.
 
@@ -43,7 +43,7 @@ Per ulteriori informazioni generali sul sistema XDM, vedere la panoramica [del s
 
 [!DNL Experience Platform] acquisisce i dati da più origini e persiste come insiemi di dati all&#39;interno dell&#39; [!DNL Data Lake]. [!DNL Catalog] tiene traccia dei metadati per questi set di dati, indipendentemente dalla loro origine o dal metodo di assimilazione.
 
-Quando si utilizza il metodo di assimilazione batch, [!DNL Catalog] vengono inoltre tracciati i metadati aggiuntivi per i file **batch** . I batch sono unità di dati costituite da uno o più file da acquisire come una singola unità. [!DNL Catalog] tiene traccia dei metadati per questi file batch, nonché dei set di dati in cui sono persistenti dopo l’assimilazione. I metadati batch includono informazioni sul numero di record acquisiti con successo, nonché eventuali record con errore e messaggi di errore associati.
+Quando si utilizza il metodo di assimilazione batch, [!DNL Catalog] vengono inoltre tracciati i metadati aggiuntivi per i file batch. I batch sono unità di dati costituite da uno o più file da acquisire come una singola unità. [!DNL Catalog] tiene traccia dei metadati per questi file batch, nonché dei set di dati in cui sono persistenti dopo l’assimilazione. I metadati batch includono informazioni sul numero di record acquisiti con successo, nonché eventuali record con errore e messaggi di errore associati.
 
 Per ulteriori informazioni, consulta la panoramica [sull’assimilazione dei](../ingestion/home.md) dati.
 
