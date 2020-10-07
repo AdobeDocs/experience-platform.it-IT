@@ -5,7 +5,7 @@ seo-title: Governance dei dati in tempo reale della piattaforma dati del cliente
 description: 'Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all''uso dei dati. '
 seo-description: 'Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all''uso dei dati. '
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
 workflow-type: tm+mt
 source-wordcount: '1015'
 ht-degree: 0%
@@ -48,7 +48,7 @@ I casi di utilizzo del marketing possono essere selezionati solo quando si confi
 
 Affinché le etichette di utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario definire e abilitare i criteri di utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing consentite o con cui è consentito eseguire attività sui dati all’interno di un CDP in tempo reale. Per ulteriori informazioni, consulta la sezione &quot;Criteri di utilizzo dei dati&quot; nella panoramica [!DNL Experience Platform] sulla governance dei [](../../data-governance/home.md) dati.
 
-Adobe Experience Platform fornisce diversi criteri **** fondamentali per i casi di utilizzo più comuni dell&#39;esperienza cliente. Questi criteri possono essere visualizzati nell&#39;interfaccia utente accedendo all&#39;area di lavoro e selezionando la **[!UICONTROL Policies]** **[!UICONTROL Browse]** scheda. Per informazioni dettagliate sull&#39;utilizzo dei criteri nell&#39;interfaccia utente, consultate la guida [utente relativa ai](../../data-governance/policies/user-guide.md) criteri nella [!DNL Experience Platform] documentazione, inclusa la procedura per l&#39;elaborazione di criteri personalizzati.
+Adobe Experience Platform fornisce diversi criteri di base per i casi di utilizzo più comuni dell&#39;esperienza cliente. Questi criteri possono essere visualizzati nell&#39;interfaccia utente accedendo all&#39;area di lavoro e selezionando la **[!UICONTROL Policies]** **[!UICONTROL Browse]** scheda. Per informazioni dettagliate sull&#39;utilizzo dei criteri nell&#39;interfaccia utente, consultate la guida [utente relativa ai](../../data-governance/policies/user-guide.md) criteri nella [!DNL Experience Platform] documentazione, inclusa la procedura per l&#39;elaborazione di criteri personalizzati.
 
 ## Applica conformità all&#39;utilizzo dei dati {#enforce-data-usage-compliance}
 
