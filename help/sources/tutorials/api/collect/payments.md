@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi necessari per recuperare i dati da un'applicazione di pagamento e trasferirli in Piattaforma tramite connettori di origine e API.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1743'
 ht-degree: 1%
@@ -69,7 +69,7 @@ Con la creazione di uno schema XDM ad hoc, ora è possibile creare una connessio
 
 Per creare una connessione di origine, è inoltre necessario definire un valore enum per l&#39;attributo del formato dati.
 
-Utilizzate i seguenti valori enum per i connettori **basati su** file:
+Utilizzate i seguenti valori enum per i connettori basati su file:
 
 | Data.format | Valore Enum |
 | ----------- | ---------- |
@@ -77,7 +77,7 @@ Utilizzate i seguenti valori enum per i connettori **basati su** file:
 | File JSON | `json` |
 | Parquet, file | `parquet` |
 
-Per tutti i connettori **basati su** tabelle, utilizzate il valore enum: `tabular`.
+Per tutti i connettori basati su tabelle, utilizzate il valore enum: `tabular`.
 
 **Formato API**
 
