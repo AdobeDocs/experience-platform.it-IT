@@ -5,7 +5,7 @@ title: Panoramica dell'applicazione dei criteri
 topic: enforcement
 description: Una volta applicate le etichette di utilizzo dei dati ai set di dati Adobe Experience Platform e definite le policy di utilizzo dei dati per le azioni di marketing relative a tali etichette, le funzionalità di governance dei dati consentono di applicare tali criteri e di impedire le operazioni sui dati che costituiscono violazioni dei criteri. Esistono due metodi per l'applicazione dei criteri forniti dalle funzionalità di governance dei dati sulla piattaforma, l'applicazione basata sulle API e l'applicazione automatica.
 translation-type: tm+mt
-source-git-commit: 2fdab7d984a7368df77110f8ba0e0ba687e96d7e
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Una volta applicate le etichette di utilizzo dei dati ai [!DNL Platform] set di dati e definite le policy di utilizzo dei dati per le azioni di marketing relative a tali etichette, [!DNL Data Governance] le funzionalità consentono di applicare tali criteri e di impedire le operazioni sui dati che costituiscono violazioni dei criteri.
 
-Esistono due metodi di applicazione delle regole forniti dalle [!DNL Data Governance] funzionalità per [!DNL Platform]: **Implementazione** basata su API e **applicazione** automatica.
+Esistono due metodi di applicazione delle regole forniti dalle [!DNL Data Governance] funzionalità per [!DNL Platform]: Applicazione basata su API e applicazione automatica.
 
 ## Applicazione basata sulle API
 
