@@ -5,7 +5,7 @@ title: Adobe Experience Platform Data Governance
 topic: overview
 description: Adobe Experience Platform Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all'uso dei dati. Esso svolge un ruolo chiave all'interno  Experience Platform a vari livelli, tra cui catalogazione, linea di dati, etichettatura dell'uso dei dati, criteri di utilizzo dei dati e controllo dell'utilizzo dei dati per le azioni di marketing
 translation-type: tm+mt
-source-git-commit: fb21acc63448ec837b2f3bcbf6eb4da83fcddc63
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1338'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# [!DNL Data Governance]panoramica
+# [!DNL Data Governance] - Panoramica
 
 Una delle funzionalità di base di Adobe Experience Platform consiste nel mettere insieme i dati provenienti da più sistemi aziendali per consentire agli addetti al marketing di identificare, comprendere e coinvolgere meglio i clienti. Questi dati possono essere soggetti a restrizioni d&#39;uso definite dalla tua organizzazione o dalle normative legali. È pertanto importante garantire che le operazioni relative ai dati all&#39;interno dell&#39;area [!DNL Platform] siano conformi ai criteri di utilizzo dei dati.
 
@@ -21,7 +21,7 @@ Adobe Experience Platform [!DNL Data Governance] consente di gestire i dati dei 
 
 ## Ruoli di governance dei dati
 
-Come concetto, la governance dei dati non è automatica, né avviene nel vuoto. Ciò che è iniziato come un ruolo per un singolo individuo, generalmente riconosciuto come amministratore dei **dati**, è cresciuto considerevolmente con l&#39;espansione dell&#39;ecosistema di governance dei dati. Oggi, la governance dei dati richiede una gestione e un monitoraggio continui per avere successo e si affida agli amministratori dei dati che dispongono di strumenti con cui i dati possono essere correttamente etichettati, è possibile creare criteri di utilizzo e applicare la conformità a tali criteri.
+Come concetto, la governance dei dati non è automatica, né avviene nel vuoto. Ciò che è iniziato come un ruolo per un singolo individuo, generalmente riconosciuto come amministratore dei dati, è cresciuto notevolmente con l&#39;espansione dell&#39;ecosistema di governance dei dati. Oggi, la governance dei dati richiede una gestione e un monitoraggio continui per avere successo e si affida agli amministratori dei dati che dispongono di strumenti con cui i dati possono essere correttamente etichettati, è possibile creare criteri di utilizzo e applicare la conformità a tali criteri.
 
 Mentre la governance dei dati dovrebbe essere responsabilità di ogni individuo nell&#39;organizzazione, ecco alcuni dei ruoli essenziali all&#39;interno del ciclo di governance dei dati:
 
