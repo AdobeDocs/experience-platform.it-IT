@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Questa esercitazione fornisce i passaggi per la creazione di un connettore di origine nell'interfaccia utente per la raccolta dei dati di profilo degli attributi del cliente in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 8%
@@ -28,7 +28,7 @@ Accedete ad [Adobe Experience Platform](https://platform.adobe.com) , quindi sel
 
 ![](../../../../images/tutorials/create/customer-attributes/catalog.png)
 
-Nella schermata Attività *di* origine sono elencate tutte le connessioni precedentemente stabilite per i dati di profilo degli attributi cliente. È possibile creare una nuova connessione facendo clic su **Seleziona dati**.
+Nella schermata Attività **di** origine sono elencate tutte le connessioni precedentemente stabilite per i dati di profilo degli attributi cliente. È possibile creare una nuova connessione facendo clic su **Seleziona dati**.
 
 >[!NOTE]
 >
@@ -44,10 +44,10 @@ Dall&#39;elenco dei set di dati di profilo di attributi cliente disponibili, sel
 
 ![](../../../../images/tutorials/create/customer-attributes/select_data.png)
 
-Viene visualizzato il passaggio *Revisione* , che consente di controllare la nuova connessione in ingresso prima della creazione. I dettagli della connessione sono raggruppati per categorie, tra cui:
+Viene visualizzato il passaggio **Revisione** , che consente di controllare la nuova connessione in ingresso prima della creazione. I dettagli della connessione sono raggruppati per categorie, tra cui:
 
-* *Dettagli* origine: Mostra il tipo di connessione di origine e i dati di origine selezionati.
-* *Dettagli* di destinazione: Quando si creano altri connettori di origine, questo contenitore mostra in quale set di dati di origine vengono acquisiti i dati, incluso lo schema a cui il dataset aderisce. I dati del profilo degli attributi del cliente vengono mappati automaticamente e assimilati in profili cliente in tempo reale.
+* **Dettagli** origine: Mostra il tipo di connessione di origine e i dati di origine selezionati.
+* **Dettagli** di destinazione: Quando si creano altri connettori di origine, questo contenitore mostra in quale set di dati di origine vengono acquisiti i dati, incluso lo schema a cui il dataset aderisce. I dati del profilo degli attributi del cliente vengono mappati automaticamente e assimilati in profili cliente in tempo reale.
 
 ![](../../../../images/tutorials/create/customer-attributes/review.png)
 
