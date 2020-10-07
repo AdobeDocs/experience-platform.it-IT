@@ -5,9 +5,9 @@ seo-title: Destinazione Google Display e Video 360
 description: Display & Video 360, precedentemente noto come DoubleClick Bid Manager è uno strumento che consente di eseguire campagne di retargeting e di targeting delle audience su diverse fonti di inventario di Display, Video e Mobile.
 seo-description: 'Display & Video 360, precedentemente noto come DoubleClick Bid Manager è uno strumento che consente di eseguire campagne di retargeting e di targeting delle audience su diverse fonti di inventario di Display, Video e Mobile. '
 translation-type: tm+mt
-source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '697'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Tenete presenti i seguenti dettagli specifici per [!DNL Google Display & Video 360] le destinazioni:
 
-* Puoi inviare le seguenti [identità](../../identity-service/namespaces.md) alle [!DNL Google Display & Video 360] destinazioni: **ID di cookie Google, IDFA, GAID, Roku ID, Microsoft ID,  Amazon Fire TV ID**.
+* Puoi inviare le seguenti [identità](../../identity-service/namespaces.md) alle [!DNL Google Display & Video 360] destinazioni: ID di cookie Google, IDFA, GAID, Roku ID, Microsoft ID e  Amazon Fire TV ID.
 * I tipi di pubblico attivati vengono creati a livello di programmazione nella piattaforma Google.
 *  CDP in tempo reale del Adobe attualmente non include una metrica di misurazione per convalidare l’attivazione. Per convalidare l&#39;integrazione e comprendere le dimensioni del targeting dell&#39;audience, fare riferimento ai conteggi dell&#39;audience in Google.
 
@@ -56,7 +56,7 @@ Prima di creare la [!DNL Google Display & Video 360] destinazione in  Adobe CDP 
 
    >[!NOTE]
    >
-   >Se esiste già una connessione con questa destinazione, è possibile visualizzare un **[!UICONTROL Activate]** pulsante sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra **[!UICONTROL Activate]** e **[!UICONTROL Configure]**, consultate la sezione [Catalogo](/help/rtcdp/destinations/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
+   >Se esiste già una connessione con questa destinazione, è possibile visualizzare un **[!UICONTROL Activate]** pulsante sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra [!UICONTROL Activate] e [!UICONTROL Configure], consultate la sezione [Catalogo](/help/rtcdp/destinations/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
 
 2. Nel passaggio **Configurazione** del flusso di lavoro di creazione della destinazione, compila i casi di utilizzo [!UICONTROL Basic Information] per la destinazione e marketing da applicare a tale destinazione. <br>
 
