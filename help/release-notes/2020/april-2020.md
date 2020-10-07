@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '991'
 ht-degree: 5%
@@ -79,7 +79,7 @@ Il [!DNL Data Governance] framework semplifica e semplifica il processo di class
 
 | Funzione | Descrizione |
 | -----------| ---------- |
-| Gestione dei criteri di utilizzo dei dati nell’interfaccia utente | I criteri di utilizzo dei dati possono ora essere gestiti nell&#39;area di lavoro _Criteri_ dell&#39; [!DNL Experience Platform] interfaccia utente. Per ulteriori informazioni, consultate la guida [utente ai](../../data-governance/policies/user-guide.md) criteri. |
+| Gestione dei criteri di utilizzo dei dati nell’interfaccia utente | I criteri di utilizzo dei dati possono ora essere gestiti nell&#39;area di lavoro **Criteri** dell&#39; [!DNL Experience Platform] interfaccia utente. Per ulteriori informazioni, consultate la guida [utente ai](../../data-governance/policies/user-guide.md) criteri. |
 
 **Problemi noti**
 
