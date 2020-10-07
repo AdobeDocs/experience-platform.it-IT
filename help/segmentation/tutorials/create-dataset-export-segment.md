@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Questa esercitazione descrive i passaggi necessari per creare un dataset che può essere utilizzato per esportare un segmento di pubblico utilizzando l'interfaccia utente del Experience Platform .
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '722'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Per visualizzare gli schemi di unione nell&#39;interfaccia utente, fate clic **[
 
 L&#39;area di lavoro dei set di dati nell&#39; [!DNL Experience Platform] interfaccia utente consente di visualizzare e gestire tutti i set di dati creati dall&#39;organizzazione IMS e di crearne di nuovi.
 
-Per visualizzare l&#39;area di lavoro dei set di dati, fare clic **[!UICONTROL Datasets]** nella barra di navigazione a sinistra, quindi fare clic sulla **[!UICONTROL Browse]** scheda. L&#39;area di lavoro dei dataset contiene un elenco di set di dati, tra cui colonne che mostrano **[!UICONTROL Name]**, **[!UICONTROL Created]** (data e ora), **[!UICONTROL Source]**, **[!UICONTROL Schema]** e **[!UICONTROL Last Batch Status]** la data e l&#39;ora in cui si trovava il dataset **[!UICONTROL Last Updated]**. A seconda della larghezza di ciascuna colonna, potrebbe essere necessario scorrere verso sinistra o verso destra per visualizzare tutte le colonne.
+Per visualizzare l&#39;area di lavoro dei set di dati, fare clic **[!UICONTROL Datasets]** nella barra di navigazione a sinistra, quindi fare clic sulla **[!UICONTROL Browse]** scheda. L&#39;area di lavoro dei dataset contiene un elenco di set di dati, tra cui colonne che mostrano nome, data e ora create, origine, schema e ultimo stato batch, nonché la data e l&#39;ora dell&#39;ultimo aggiornamento del dataset. A seconda della larghezza di ciascuna colonna, potrebbe essere necessario scorrere verso sinistra o verso destra per visualizzare tutte le colonne.
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ Per visualizzare l&#39;area di lavoro dei set di dati, fare clic **[!UICONTROL D
 
 ## Creare un dataset
 
-Per creare un set di dati, fate clic **[!UICONTROL Create Dataset]** nell’angolo superiore destro dell’ [!UICONTROL Datasets] area di lavoro.
+Per creare un set di dati, fate clic **[!UICONTROL Create Dataset]** nell’angolo superiore destro dell’ **[!UICONTROL Datasets]** area di lavoro.
 
 ![Fate clic su Crea set di dati](../images/tutorials/segment-export-dataset/dataset-click-create.png)
 
@@ -63,7 +63,7 @@ Selezionato il pulsante di scelta accanto a **[!UICONTROL XDM Individual Profile
 
 ## Configura set di dati
 
-Sullo **[!UICONTROL Configure Dataset]** schermo, sarà necessario fornire al dataset un **[!UICONTROL Name]** e può anche fornire un **[!UICONTROL Description]** del dataset.
+Sullo **[!UICONTROL Configure Dataset]** schermo, verrà richiesto di assegnare al dataset un nome e potrebbe anche fornire una descrizione del dataset.
 
 **Note sui nomi dei set di dati:**
 - I nomi dei set di dati devono essere brevi e descrittivi in modo che il set di dati possa essere facilmente trovato nella libreria in un secondo momento.
@@ -76,9 +76,9 @@ Una volta che il dataset ha un nome e una descrizione, fare clic su **[!UICONTRO
 
 ## Attività DataSet
 
-Ora è stato creato un set di dati vuoto e si è tornati alla **[!UICONTROL Dataset Activity]** scheda nell&#39; [!UICONTROL Datasets] area di lavoro. Il nome del set di dati deve essere visualizzato nell’angolo in alto a sinistra dell’area di lavoro, insieme alla notifica che &quot;Non sono stati aggiunti batch&quot;. Questo è previsto perché non avete ancora aggiunto alcun batch a questo set di dati.
+Ora è stato creato un set di dati vuoto e si è tornati alla **[!UICONTROL Dataset Activity]** scheda nell&#39; **[!UICONTROL Datasets]** area di lavoro. Il nome del set di dati deve essere visualizzato nell’angolo in alto a sinistra dell’area di lavoro, insieme alla notifica che &quot;Non sono stati aggiunti batch&quot;. Questo è previsto perché non avete ancora aggiunto alcun batch a questo set di dati.
 
-Sul lato destro dell&#39;area di lavoro Set di dati è visibile la **[!UICONTROL Info]** scheda contenente informazioni relative al nuovo set di dati, ad esempio **[!UICONTROL Dataset ID]**, **[!UICONTROL Name]**, **[!UICONTROL Description]**, **[!UICONTROL Table Name]**, **[!UICONTROL Schema]**, **[!UICONTROL Streaming]** e **[!UICONTROL Source]**. La [!UICONTROL Info] scheda include inoltre informazioni su quando il set di dati era **[!UICONTROL Created]** e la relativa **[!UICONTROL Last Modified]** data.
+Sul lato destro dell&#39;area di lavoro Set di dati viene visualizzata la **[!UICONTROL Info]** scheda contenente informazioni relative al nuovo set di dati come ID dataset, nome, descrizione, nome tabella, schema], streaming e origine. La **[!UICONTROL Info]** scheda include inoltre informazioni sulla data di creazione del set di dati e sulla data dell&#39;ultima modifica.
 
 Tenete presente **[!UICONTROL Dataset ID]**, in quanto questo valore è richiesto per completare il flusso di lavoro di esportazione del segmento di pubblico.
 
@@ -86,6 +86,6 @@ Tenete presente **[!UICONTROL Dataset ID]**, in quanto questo valore è richiest
 
 ## Passaggi successivi
 
-Dopo aver creato un set di dati basato su [!DNL XDM Individual Profile Union Schema], puoi utilizzare il set **[!UICONTROL Dataset ID]** per continuare l’esercitazione sui risultati [di](./evaluate-a-segment.md) valutazione e accesso ai segmenti.
+Dopo aver creato un set di dati basato su [!DNL XDM Individual Profile Union Schema], puoi utilizzare l’ID del set di dati per continuare l’esercitazione [di valutazione e accesso ai risultati](./evaluate-a-segment.md) del segmento.
 
 Al momento, tornate all’esercitazione sui risultati del segmento di valutazione e fate clic sul passaggio dei profili di [generazione per i membri](./evaluate-a-segment.md#generate-profiles) dell’audience nel passaggio del flusso di lavoro di esportazione di un segmento.
