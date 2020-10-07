@@ -5,7 +5,7 @@ title: Panoramica sulle sandbox
 topic: overview
 description: Le sandbox sono partizioni virtuali all'interno di un'unica istanza di  Experience Platform, che consentono un'integrazione perfetta con il processo di sviluppo delle applicazioni di esperienza digitale.
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Adobe Experience Platform è progettato per arricchire le applicazioni di esperienza digitale su scala globale. Le aziende spesso eseguono più applicazioni di esperienza digitale in parallelo e devono provvedere allo sviluppo, al test e all&#39;implementazione di tali applicazioni, garantendo al contempo la conformità operativa.
 
-Per rispondere a questa esigenza,  Experience Platform fornisce **sandbox** che dividono una singola istanza della piattaforma in ambienti virtuali separati per contribuire allo sviluppo e all&#39;evoluzione di applicazioni per esperienze digitali.
+Per rispondere a questa esigenza,  Experience Platform fornisce sandbox che dividono una singola istanza della piattaforma in ambienti virtuali separati per aiutare a sviluppare e sviluppare applicazioni di esperienza digitale.
 
 Questo documento fornisce una panoramica di alto livello delle sandbox in  Experience Platform.
 
