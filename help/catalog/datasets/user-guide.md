@@ -5,9 +5,9 @@ title: Guida utente dei set di dati
 topic: datasets
 description: Questa guida utente per i set di dati fornisce istruzioni sulle operazioni più comuni quando si utilizzano i set di dati nell'interfaccia utente di Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: eaff457140ba4ac7c25a0f3a3e5aef47d1b99773
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1105'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Fare clic sul nome di un dataset per accedere alla **[!UICONTROL Dataset activit
 
 ## Anteprima di un dataset
 
-Dalla **[!UICONTROL Dataset activity]** schermata, fai clic **[!UICONTROL Preview dataset]** vicino all&#39;angolo superiore destro dello schermo per visualizzare in anteprima fino a 100 righe di dati. Se il set di dati è vuoto, il collegamento di anteprima verrà disattivato e verrà detto **[!UICONTROL Preview not available]**.
+Dalla **[!UICONTROL Dataset activity]** schermata, fai clic **[!UICONTROL Preview dataset]** vicino all&#39;angolo superiore destro dello schermo per visualizzare in anteprima fino a 100 righe di dati. Se il set di dati è vuoto, il collegamento di anteprima verrà disattivato e verrà invece indicato che l&#39;anteprima non è disponibile.
 
 ![](../images/datasets/user-guide/click_to_preview.png)
 
