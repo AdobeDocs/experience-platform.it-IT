@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Domande frequenti sui Privacy Service
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '853'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # [!DNL Privacy Service] guida alla risoluzione dei problemi
 
- Adobe Experience Platform [!DNL Privacy Service] fornisce un&#39;API RESTful e un&#39;interfaccia utente per aiutare le aziende a gestire le richieste di privacy dei dati dei clienti. Con [!DNL Privacy Service], puoi inviare richieste di accesso ed eliminazione di dati di clienti privati o personali, facilitando la conformità automatica alle normative aziendali e legali sulla privacy.
+Adobe Experience Platform [!DNL Privacy Service] fornisce un&#39;API RESTful e un&#39;interfaccia utente per aiutare le aziende a gestire le richieste di privacy dei dati dei clienti. Con [!DNL Privacy Service], puoi inviare richieste di accesso ed eliminazione di dati di clienti privati o personali, facilitando la conformità automatica alle normative aziendali e legali sulla privacy.
 
 Questo documento contiene le risposte alle domande frequenti su [!DNL Privacy Service]di , nonché informazioni sugli errori più comuni riscontrati nell&#39;API.
 
@@ -94,7 +94,7 @@ Per ulteriori dettagli, consultate la sezione sulla [ricerca di un processo in b
 
 ### Utilizzo dell’interfaccia
 
-Nel dashboard [!DNL Privacy Service] dell’interfaccia utente, individuate il processo da scaricare dal widget Richieste **di** processo. Fate clic sull’ID del processo per aprire la pagina Dettagli __ processo. Da qui, fate clic su **Scarica** nell&#39;angolo in alto a destra per scaricare il file ZIP. Per informazioni dettagliate, consultate la guida [utente ai](ui/user-guide.md) Privacy Service.
+Nel dashboard [!DNL Privacy Service] dell’interfaccia utente, individuate il processo da scaricare dal widget Richieste **di** processo. Fate clic sull’ID del processo per aprire la pagina Dettagli processo. Da qui, fate clic su **Scarica** nell&#39;angolo in alto a destra per scaricare il file ZIP. Per informazioni dettagliate, consultate la guida [utente ai](ui/user-guide.md) Privacy Service.
 
 ## Messaggi di errore comuni
 
