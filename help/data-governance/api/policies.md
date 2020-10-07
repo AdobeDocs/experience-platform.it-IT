@@ -5,7 +5,7 @@ title: Criteri
 topic: developer guide
 description: I criteri di utilizzo dei dati sono regole adottate dalla tua organizzazione che descrivono i tipi di azioni di marketing consentite, o da cui sono previste restrizioni, per i dati all'interno  Experience Platform. L'endpoint /policy viene utilizzato per tutte le chiamate API relative alla visualizzazione, alla creazione, all'aggiornamento o all'eliminazione dei criteri di utilizzo dei dati.
 translation-type: tm+mt
-source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '1804'
 ht-degree: 2%
@@ -235,7 +235,7 @@ Nell&#39; [!DNL Policy Service] API, un criterio è definito dai seguenti elemen
 * Riferimento a una specifica azione di marketing
 * Un&#39;espressione che descrive le etichette di utilizzo dei dati per le quali l&#39;azione di marketing non può essere eseguita
 
-Per soddisfare quest&#39;ultimo requisito, le definizioni dei criteri devono includere un&#39;espressione booleana relativa alla presenza di etichette di utilizzo dei dati. Questa espressione è chiamata espressione **** policy.
+Per soddisfare quest&#39;ultimo requisito, le definizioni dei criteri devono includere un&#39;espressione booleana relativa alla presenza di etichette di utilizzo dei dati. Questa espressione è denominata espressione di criterio.
 
 Le espressioni del criterio sono fornite sotto forma di una `deny` proprietà all&#39;interno di ogni definizione del criterio. Esempio di un semplice `deny` oggetto che verifica solo la presenza di una singola etichetta avrà l&#39;aspetto seguente:
 
@@ -245,7 +245,7 @@ Le espressioni del criterio sono fornite sotto forma di una `deny` proprietà al
 }
 ```
 
-Tuttavia, molti criteri specificano condizioni più complesse relative alla presenza di etichette di utilizzo dei dati. Per supportare questi casi di utilizzo, è anche possibile includere operazioni booleane per descrivere le espressioni dei criteri. L&#39;oggetto policy espressione deve contenere _un&#39;etichetta_ o __ un operatore e gli operandi, ma non entrambi. A sua volta, ogni operando è anche un oggetto con espressione di criterio.
+Tuttavia, molti criteri specificano condizioni più complesse relative alla presenza di etichette di utilizzo dei dati. Per supportare questi casi di utilizzo, è anche possibile includere operazioni booleane per descrivere le espressioni dei criteri. L&#39;oggetto policy espressione deve contenere un&#39;etichetta o un operatore e gli operandi, ma non entrambi. A sua volta, ogni operando è anche un oggetto con espressione di criterio.
 
 Ad esempio, per definire un criterio che impedisca l&#39;esecuzione di un&#39;azione di marketing sui dati in cui `C1 OR (C3 AND C7)` sono presenti etichette, la `deny` proprietà del criterio viene specificata come:
 
@@ -375,7 +375,7 @@ Una risposta corretta restituisce i dettagli del criterio appena creato, incluso
 >
 >È possibile aggiornare solo i criteri personalizzati. Se desiderate abilitare o disabilitare i criteri di base, consultate la sezione sull&#39; [aggiornamento dell&#39;elenco dei criteri](#update-enabled-core)di base abilitati.
 
-Potete aggiornare un criterio personalizzato esistente fornendo il relativo ID nel percorso di una richiesta di PUT con un payload che include il modulo aggiornato del criterio nella sua interezza. In altre parole, la richiesta PUT essenzialmente _riscrive_ il criterio.
+Potete aggiornare un criterio personalizzato esistente fornendo il relativo ID nel percorso di una richiesta di PUT con un payload che include il modulo aggiornato del criterio nella sua interezza. In altre parole, la richiesta PUT sostanzialmente riscrive il criterio.
 
 >[!NOTE]
 >
