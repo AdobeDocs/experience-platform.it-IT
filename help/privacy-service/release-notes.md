@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Note sulla versione Privacy Service
 topic: release notes
 translation-type: tm+mt
-source-git-commit: 6eee7e903d36ed641c9f8e6120f549c02cb4bce4
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 6%
@@ -53,7 +53,7 @@ Questo documento contiene informazioni sulle nuove funzioni di Adobe Experience 
 
 * [!DNL Privacy Service] Miglioramenti dell’interfaccia utente:
    * Pagine separate per il monitoraggio dei processi per le normative GDPR e CCPA.
-   * Nuovo menu a discesa Tipo __ regolamento per passare dai dati di monitoraggio per GDPR e CCPA.
+   * Nuovo menu a discesa Tipo ** regolamento per passare dai dati di monitoraggio per GDPR e CCPA.
 
 ## 25 luglio 2019
 
