@@ -5,7 +5,7 @@ title: Guida utente del notebook Real-time Machine Learning
 topic: Training and scoring a ML model
 description: La seguente guida illustra i passaggi necessari per creare un'applicazione Real-time Machine Learning in Adobe Experience Platform JupyterLab.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '1637'
 ht-degree: 0%
@@ -23,7 +23,7 @@ La seguente guida illustra i passaggi necessari per creare un&#39;applicazione R
 
 ## Creazione di un notebook Real-time Machine Learning
 
-Nell’interfaccia utente di Adobe Experience Platform, seleziona **[!UICONTROL Notebooks]** da *Data Science*. Quindi, selezionate **[!UICONTROL JupyterLab]** e lasciate che il caricamento dell&#39;ambiente abbia un po&#39; di tempo.
+Nell’interfaccia utente di Adobe Experience Platform, seleziona **[!UICONTROL Notebooks]** da **Data Science**. Quindi, selezionate **[!UICONTROL JupyterLab]** e lasciate che il caricamento dell&#39;ambiente abbia un po&#39; di tempo.
 
 ![open JupyterLab](../images/rtml/open-jupyterlab.png)
 
@@ -117,7 +117,7 @@ Utilizzando il **[!UICONTROL Real-time ML]** modello, è necessario analizzare, 
 
 **Trasformazioni dei dati**
 
-La cella **[!UICONTROL Real-time ML]** template *Data Transformations (Trasformazioni* dati) deve essere modificata per lavorare con il set di dati personale. In genere si tratta di rinominare le colonne, il rollup dei dati e la preparazione/progettazione di funzioni.
+La cella **[!UICONTROL Real-time ML]** template **Data Transformations (Trasformazioni** dati) deve essere modificata per lavorare con il set di dati personale. In genere si tratta di rinominare le colonne, il rollup dei dati e la preparazione/progettazione di funzioni.
 
 >[!NOTE]
 >
@@ -355,7 +355,7 @@ Una volta completato, viene restituito un `edge` oggetto contenente ciascuno dei
 
 >[!NOTE]
 >
->L&#39;apprendimento automatico in tempo reale viene temporaneamente distribuito e gestito dall&#39;hub  Adobe Experience Platform. Per ulteriori dettagli, visitare la sezione panoramica sull&#39;architettura [di apprendimento automatico in tempo](./home.md#architecture)reale.
+>L&#39;apprendimento automatico in tempo reale viene temporaneamente distribuito e gestito da Adobe Experience Platform Hub. Per ulteriori dettagli, visitare la sezione panoramica sull&#39;architettura [di apprendimento automatico in tempo](./home.md#architecture)reale.
 
 Dopo aver creato un grafico DSL, potete distribuire il grafico al [!DNL Edge].
 
