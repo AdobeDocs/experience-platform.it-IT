@@ -5,7 +5,7 @@ title: Guida utente per i criteri di utilizzo dei dati
 topic: policies
 description: Adobe Experience Platform Data Governance fornisce un'interfaccia utente che consente di creare e gestire i criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle azioni che potete eseguire nell'area di lavoro Criteri dell'interfaccia utente del Experience Platform .
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '724'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Guida utente per i criteri di utilizzo dei dati
 
-Adobe Experience Platform [!DNL Data Governance] fornisce un&#39;interfaccia utente che consente di creare e gestire i criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle azioni che è possibile eseguire nell&#39;area di lavoro _Criteri_ nell&#39;interfaccia [!DNL Experience Platform] utente.
+Adobe Experience Platform [!DNL Data Governance] fornisce un&#39;interfaccia utente che consente di creare e gestire i criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle azioni che è possibile eseguire nell&#39;area di lavoro **Criteri** nell&#39;interfaccia [!DNL Experience Platform] utente.
 
 >[!IMPORTANT]
 >
@@ -56,7 +56,7 @@ Viene **[!UICONTROL Select marketing actions]** visualizzato il passaggio. Scegl
 
 >[!NOTE]
 >
->Quando si selezionano più azioni di marketing, il criterio le interpreta come una regola &quot;OR&quot;. In altre parole, il criterio si applica se viene eseguita _una_ delle azioni di marketing selezionate.
+>Quando si selezionano più azioni di marketing, il criterio le interpreta come una regola &quot;OR&quot;. In altre parole, il criterio si applica se viene eseguita **una** delle azioni di marketing selezionate.
 
 ![](../images/policies/add-marketing-actions.png)
 
