@@ -5,7 +5,7 @@ title: Creazione di integrazioni ETL
 topic: overview
 description: La guida all'integrazione ETL descrive i passaggi generali per la creazione di connettori sicuri e ad alte prestazioni per  Experience Platform e l'assimilazione dei dati nella piattaforma.
 translation-type: tm+mt
-source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '4173'
 ht-degree: 0%
@@ -95,7 +95,7 @@ Utilizzando l&#39;origine dei dati per la mappatura, è possibile recuperare un 
 
 Potete inviare una singola richiesta API per visualizzare tutti i set di dati disponibili (ad es. `GET /dataSets`), in cui si consiglia di includere parametri di query che limitano la dimensione della risposta.
 
-Nei casi in cui vengono richieste informazioni _complete_ sui dataset, il payload di risposta può raggiungere oltre 3 GB di dimensione, il che può rallentare le prestazioni complessive. Pertanto, l&#39;utilizzo di parametri di query per filtrare solo le informazioni necessarie renderà [!DNL Catalog] le query più efficienti.
+Nei casi in cui vengono richieste informazioni complete sui dataset, il payload di risposta può raggiungere oltre 3 GB di dimensioni, il che può rallentare le prestazioni complessive. Pertanto, l&#39;utilizzo di parametri di query per filtrare solo le informazioni necessarie renderà [!DNL Catalog] le query più efficienti.
 
 #### Filtro elenco
 
@@ -165,7 +165,7 @@ La risposta include tre (`limit=3`) set di dati che mostrano &quot;name&quot;, &
 
 ### Visualizza schema set di dati
 
-La proprietà &quot;schemaRef&quot; di un dataset contiene un URI che fa riferimento allo schema XDM su cui si basa il dataset. Lo schema XDM (&quot;schemaRef&quot;) rappresenta tutti i campi _potenziali_ che possono essere utilizzati dal dataset, non necessariamente i campi che _sono_ utilizzati (vedere &quot;osservableSchema&quot; di seguito).
+La proprietà &quot;schemaRef&quot; di un dataset contiene un URI che fa riferimento allo schema XDM su cui si basa il dataset. Lo schema XDM (&quot;schemaRef&quot;) rappresenta tutti i potenziali campi che possono essere utilizzati dal dataset, non necessariamente i campi che vengono utilizzati (vedere &quot;osservableSchema&quot; di seguito).
 
 Lo schema XDM è lo schema utilizzato per presentare all&#39;utente un elenco di tutti i campi disponibili su cui è possibile scrivere.
 
@@ -601,7 +601,7 @@ I dettagli per la creazione di un batch, incluse le richieste di esempio e le ri
 
 ### Scrivi in dataset
 
-Dopo aver creato un nuovo batch, i file possono essere caricati in un set di dati specifico. È possibile pubblicare più file in un batch finché non vengono promossi. I file possono essere caricati utilizzando l&#39;API _di caricamento file_ piccola; tuttavia, se i file sono troppo grandi e il limite del gateway viene superato, potete utilizzare l&#39;API _Caricamento file_ grande. Per informazioni sull’utilizzo di caricamento di file grandi e piccoli, consultate la panoramica [sull’inserimento dei](../ingestion/batch-ingestion/overview.md)batch.
+Dopo aver creato un nuovo batch, i file possono essere caricati in un set di dati specifico. È possibile pubblicare più file in un batch finché non vengono promossi. I file possono essere caricati utilizzando l&#39;API di caricamento dei file di piccole dimensioni; tuttavia, se i file sono troppo grandi e il limite del gateway viene superato, potete utilizzare l&#39;API di caricamento dei file grandi. Per informazioni sull’utilizzo di caricamento di file grandi e piccoli, consultate la panoramica [sull’inserimento dei](../ingestion/batch-ingestion/overview.md)batch.
 
 **Richiesta**
 
