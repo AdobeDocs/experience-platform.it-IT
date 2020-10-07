@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform consente di importare facilmente i dati come file batch sotto forma di file parquet o dati conformi a uno schema XDM (Experience Data Model) noto.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1247'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Se preferite assimilare i dati utilizzando le API di inserimento dati, iniziate 
 
 L&#39;area di lavoro Set di dati all&#39;interno [!DNL Experience Platform] consente di visualizzare e gestire tutti i set di dati creati dall&#39;organizzazione IMS e di crearne di nuovi.
 
-Visualizzare l&#39;area di lavoro Set di dati facendo clic **[!UICONTROL Datasets]** nella barra di navigazione a sinistra. L&#39;area di lavoro Set di dati contiene un elenco di set di dati, incluse colonne che mostrano **[!UICONTROL Name]**, **[!UICONTROL Created]** (data e ora), **[!UICONTROL Source]**, **[!UICONTROL Schema]** e **[!UICONTROL Last Batch Status]** la data e l&#39;ora in cui si trovava il dataset **[!UICONTROL Last Updated]**.
+Visualizzare l&#39;area di lavoro Set di dati facendo clic **[!UICONTROL Datasets]** nella barra di navigazione a sinistra. L&#39;area di lavoro Set di dati contiene un elenco di set di dati, tra cui colonne che mostrano nome, data e ora create, origine, schema e ultimo stato batch, nonché la data e l&#39;ora dell&#39;ultimo aggiornamento del set di dati.
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ Dopo aver selezionato il pulsante di scelta accanto allo schema da utilizzare, f
 
 ## Configura set di dati
 
-Sullo **[!UICONTROL Configure Dataset]** schermo, sarà necessario fornire al dataset un **[!UICONTROL Name]** e può anche fornire un **[!UICONTROL Description]** del dataset.
+Sullo **[!UICONTROL Configure Dataset]** schermo, verrà richiesto di assegnare al dataset un nome e potrebbe anche fornire una descrizione del set di dati.
 
 **Note sui nomi dei set di dati:**
 
@@ -74,7 +74,7 @@ Una volta che il dataset ha un nome e una descrizione, fare clic su **[!UICONTRO
 
 È stato creato un set di dati vuoto e l&#39;utente è stato riportato nella **[!UICONTROL Dataset Activity]** scheda nell&#39;area di lavoro Set di dati. Il nome del set di dati deve essere visualizzato nell’angolo in alto a sinistra dell’area di lavoro, insieme alla notifica che &quot;Non sono stati aggiunti batch&quot;. Questo è previsto perché non avete ancora aggiunto alcun batch a questo set di dati.
 
-Sul lato destro dell&#39;area di lavoro Set di dati è visibile la **[!UICONTROL Info]** scheda contenente informazioni relative al nuovo set di dati, ad esempio **[!UICONTROL Dataset ID]**, **[!UICONTROL Name]**, **[!UICONTROL Description]**, **[!UICONTROL Table Name]**, **[!UICONTROL Schema]**, **[!UICONTROL Streaming]** e **[!UICONTROL Source]**. La scheda Informazioni include anche informazioni su quando il set di dati era **[!UICONTROL Created]** e la relativa **[!UICONTROL Last Modified]** data.
+Sul lato destro dell&#39;area di lavoro Set di dati viene visualizzata la **[!UICONTROL Info]** scheda contenente informazioni relative al nuovo set di dati come ID dataset, nome, descrizione, nome tabella, schema, streaming e origine. La scheda Informazioni include inoltre informazioni sulla data di creazione del set di dati e sulla data dell&#39;ultima modifica.
 
 Nella scheda Informazioni è inoltre disponibile un **[!UICONTROL Profile]** interruttore che consente di abilitare il set di dati per l’uso con [!DNL Real-time Customer Profile]. L&#39;utilizzo di questa opzione e [!DNL Real-time Customer Profile], verranno spiegati più dettagliatamente nella sezione che segue.
 
@@ -122,13 +122,13 @@ Dopo aver trascinato e rilasciato (o sfogliare e selezionare) un file parquet o 
 
 Al termine del caricamento del file, nella **[!UICONTROL Dataset Activity]** scheda non viene più visualizzato &quot;Nessun batch aggiunto&quot;. Al contrario, la **[!UICONTROL Dataset Activity]** scheda ora mostra le metriche del set di dati. Tutte le metriche mostreranno &quot;0&quot; in questa fase perché il batch non è ancora caricato.
 
-Nella parte inferiore della scheda è presente un elenco che mostra i dati **[!UICONTROL Batch ID]** appena acquisiti tramite il processo [&quot;Aggiungi dati a dataset&quot;](#add-data-to-dataset) . Sono incluse anche le informazioni relative al batch, inclusa **[!UICONTROL Ingested]** la data, il numero di **[!UICONTROL Records Ingested]** e il batch corrente **[!UICONTROL Status]**.
+Nella parte inferiore della scheda è presente un elenco che mostra i dati **[!UICONTROL Batch ID]** appena acquisiti tramite il processo [&quot;Aggiungi dati a dataset&quot;](#add-data-to-dataset) . Sono incluse anche le informazioni relative al batch, inclusa la data di acquisizione, il numero di record acquisiti e lo stato corrente del batch.
 
 ![Metriche DataSet](../images/tutorials/ingest-batch-data/batch-id.png)
 
 ## Dettagli batch
 
-Fare clic sul **[!UICONTROL Batch ID]** pulsante per visualizzare un **[!UICONTROL Batch Overview]**, con dettagli aggiuntivi relativi al batch. Al termine del caricamento del batch, le informazioni relative al batch vengono aggiornate per mostrare il numero di **[!UICONTROL Records Ingested]** e di **[!UICONTROL File Size]**. Inoltre, **[!UICONTROL Status]** verrà sostituita da &quot;Success&quot; o &quot;Failed&quot; (Non riuscito). Se il batch non riesce, la **[!UICONTROL Error Code]** sezione conterrà dettagli relativi a eventuali errori durante l&#39;assimilazione.
+Fare clic sul **[!UICONTROL Batch ID]** pulsante per visualizzare un **[!UICONTROL Batch Overview]**, con dettagli aggiuntivi relativi al batch. Al termine del caricamento del batch, le informazioni relative al batch verranno aggiornate per mostrare il numero di record acquisiti e la dimensione del file. Anche lo stato diventa &quot;Success&quot; o &quot;Failed&quot; (Successo). Se il batch non riesce, la **[!UICONTROL Error Code]** sezione conterrà dettagli relativi a eventuali errori durante l&#39;assimilazione.
 
 Per ulteriori informazioni e domande frequenti sull’inserimento di batch, consulta la guida [alla risoluzione dei problemi di inserimento](../batch-ingestion/troubleshooting.md)batch.
 
