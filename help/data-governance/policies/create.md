@@ -6,7 +6,7 @@ topic: policies
 type: Tutorial
 description: L'API Policy Service consente di creare e gestire i criteri di utilizzo dei dati per determinare quali azioni di marketing possono essere eseguite rispetto ai dati che contengono determinate etichette di utilizzo dei dati. Questo documento fornisce un'esercitazione passo-passo per la creazione di un criterio tramite l'API del servizio criteri.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 2%
@@ -195,7 +195,7 @@ Registra l&#39;ID URI dell&#39;azione di marketing appena creata, che verrà uti
 
 Per creare un nuovo criterio è necessario fornire l&#39;ID URI di un&#39;azione di marketing con un&#39;espressione delle etichette di utilizzo che ne impediscono l&#39;esecuzione.
 
-Questa espressione è denominata espressione **** policy ed è un oggetto contenente (A) un&#39;etichetta, (B) un operatore e gli operandi, ma non entrambi. A sua volta, ogni operando è anche un oggetto con espressione di criterio. Ad esempio, un criterio relativo all&#39;esportazione di dati a terzi potrebbe essere vietato se sono presenti `C1 OR (C3 AND C7)` etichette. Questa espressione viene specificata come:
+Questa espressione è denominata espressione policy ed è un oggetto contenente (A) un&#39;etichetta, (B) un operatore e gli operandi, ma non entrambi. A sua volta, ogni operando è anche un oggetto con espressione di criterio. Ad esempio, un criterio relativo all&#39;esportazione di dati a terzi potrebbe essere vietato se sono presenti `C1 OR (C3 AND C7)` etichette. Questa espressione viene specificata come:
 
 ```json
 "deny": {
