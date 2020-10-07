@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform consente di utilizzare il linguaggio SQL (Structures Query Language) in Data Science Workspace integrando il servizio Query in JupyterLab come funzione standard. Questa esercitazione illustra le query SQL di esempio per i casi di utilizzo più comuni per esplorare, trasformare e analizzare  dati Adobe Analytics.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '813'
 ht-degree: 1%
 
 ---
@@ -104,7 +104,7 @@ Quando un blocco appunti è inattivo per un periodo di tempo prolungato, la conn
 
 ![](../images/jupyterlab/query/restart_button.png)
 
-Il kernel del notebook verrà reimpostato ma le celle rimarranno, rieseguire **[!UICONTROL all]** le celle per continuare dove si era lasciato.
+Il kernel del notebook verrà reimpostato, ma le celle rimarranno, rieseguire **tutte** le celle per continuare dove si era lasciato.
 
 ### Conteggio orario dei visitatori {#hourly-visitor-count}
 
