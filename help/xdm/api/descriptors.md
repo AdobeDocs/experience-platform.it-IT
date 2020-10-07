@@ -5,7 +5,7 @@ title: Descrittori
 description: 'Gli schemi definiscono una visualizzazione statica delle entità di dati, ma non forniscono dettagli specifici su come i dati basati su tali schemi (ad esempio, set di dati) possono essere correlati tra loro. Adobe Experience Platform consente di descrivere queste relazioni e altri metadati interpretativi relativi a uno schema utilizzando i descrittori. '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '1526'
 ht-degree: 1%
@@ -200,7 +200,7 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 
 **Richiesta**
 
-Questa richiesta _riscrive_ in sostanza il descrittore, pertanto il corpo della richiesta deve includere tutti i campi necessari per definire un descrittore di quel tipo. In altre parole, il payload di richiesta per aggiornare (PUT) un descrittore è lo stesso del payload per creare (POST) un descrittore dello stesso tipo.
+La richiesta riscrive essenzialmente il descrittore, pertanto il corpo della richiesta deve includere tutti i campi necessari per definire un descrittore di quel tipo. In altre parole, il payload di richiesta per aggiornare (PUT) un descrittore è lo stesso del payload per creare (POST) un descrittore dello stesso tipo.
 
 In questo esempio, il descrittore di identità viene aggiornato per fare riferimento a un altro `xdm:sourceProperty` (&quot;telefono cellulare&quot;) e cambiare il `xdm:namespace` nome in &quot;telefono&quot;.
 
