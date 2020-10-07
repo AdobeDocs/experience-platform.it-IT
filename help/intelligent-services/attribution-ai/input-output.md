@@ -5,9 +5,9 @@ title: ' ingresso e uscita Attribution AI'
 topic: Input and Output data for Attribution AI
 description: Il seguente documento illustra i diversi input e output utilizzati nelle Attribution AI .
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
-source-wordcount: '2067'
+source-wordcount: '2068'
 ht-degree: 3%
 
 ---
@@ -140,7 +140,7 @@ Puoi visualizzare il percorso dei punteggi non elaborati nell’interfaccia uten
 
 ![Scegli lo schema](./images/input-output/schemas_browse.png)
 
-Quindi, selezionate un campo all’interno della **[!UICONTROL Structure]** finestra dell’interfaccia utente, si apre la **[!UICONTROL Field properties]** scheda. All&#39;interno **[!UICONTROL Field properties]** è il **[!UICONTROL Path]** campo associato ai punteggi non elaborati.
+Quindi, selezionate un campo all’interno della **[!UICONTROL Structure]** finestra dell’interfaccia utente, si apre la **[!UICONTROL Field properties]** scheda. All&#39;interno **[!UICONTROL Field properties]** è il campo percorso associato ai punteggi non elaborati.
 
 ![Selezione di uno schema](./images/input-output/field_properties.png)
 
