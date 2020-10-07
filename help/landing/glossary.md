@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Documentazione del prodotto Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
-source-wordcount: '7136'
+source-wordcount: '7145'
 ht-degree: 0%
 
 ---
@@ -214,7 +214,7 @@ ht-degree: 0%
 
 **Catalogo di destinazione:** Un catalogo di destinazione è un elenco di destinazioni disponibili nel [!DNL Real-time Customer Data Platform].
 
-**Regole di chiamata diretta:** in [!DNL Experience Platform Launch], è possibile impostare un [!UICONTROL direct call] [!UICONTROL rule] che viene eseguito quando viene chiamato direttamente dalla pagina. Se il caricamento della pagina o l&#39;azione sul sito è molto semplice, o se è univoco e può eseguire un set di istruzioni specifico ogni volta (impostato [!DNL eVar4] su X e attivato [!DNL event2] ogni volta), è possibile utilizzare un [!UICONTROL direct call][!UICONTROL rule]. Consultate [!DNL Launch] la documentazione relativa alla creazione [!UICONTROL direct call] . [!UICONTROL rules]
+**Regole di chiamata diretta:** in [!DNL Experience Platform Launch], puoi impostare una regola di chiamata diretta che viene eseguita quando viene chiamata direttamente dalla pagina. Se il caricamento della pagina o l&#39;azione sul sito è molto semplice, o se è univoco e può eseguire un set di istruzioni specifico ogni volta (impostato [!DNL eVar4] su X e attivato [!DNL event2] ogni volta), puoi utilizzare una regola di chiamata diretta. Consulta [!DNL Launch] la documentazione relativa alla creazione di regole per le chiamate dirette.
 
 **Nome visualizzato:** Il nome visualizzato è un nome di facile utilizzo per un campo che viene visualizzato nell’interfaccia utente.
 
@@ -370,7 +370,7 @@ ht-degree: 0%
 
 **Offerta:** Un&#39;offerta è un messaggio di marketing a cui possono essere associate delle regole, che specifica chi è idoneo a visualizzare l&#39;offerta.
 
-**Decisioni offerte:** La decisione delle offerte consente agli esperti di marketing di gestire le regole e i modelli formati di proposte quando interagiscono con un utente finale in base ai dati raccolti tra canali e applicazioni.
+**Offer Decisioning:** La decisione delle offerte consente agli esperti di marketing di gestire le regole e i modelli formati di proposte quando interagiscono con un utente finale in base ai dati raccolti tra canali e applicazioni.
 
 **Libreria offerte:** La libreria delle offerte è una libreria centrale utilizzata per gestire offerte personalizzate e di fallback, regole decisionali e attività.
 
