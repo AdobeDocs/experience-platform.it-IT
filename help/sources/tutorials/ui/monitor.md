@@ -6,9 +6,9 @@ title: Monitorare account e flussi di dati
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1019'
+source-wordcount: '1031'
 ht-degree: 1%
 
 ---
@@ -96,7 +96,7 @@ La **[!UICONTROL Dataflow activity]** pagina contiene dettagli sul numero di rec
 
 ![datflow-activity](../../images/tutorials/monitor/dataflow-activity.png)
 
-Il calendario consente di visualizzare i diversi intervalli di tempo per i record acquisiti. Potete scegliere una delle due opzioni predefinite **[!UICONTROL Last 7 days]** o **[!UICONTROL Last 30 days]**. In alternativa, potete impostare un intervallo di tempo personalizzato utilizzando il calendario. Selezionare l&#39;intervallo di tempo desiderato e selezionare **[!UICONTROL Apply]** per continuare.
+Il calendario consente di visualizzare i diversi intervalli di tempo per i record acquisiti. Potete scegliere una delle due opzioni preimpostate &quot;[!UICONTROL Last 7 days]&quot; o &quot;[!UICONTROL Last 30 days]&quot;. In alternativa, potete impostare un intervallo di tempo personalizzato utilizzando il calendario. Selezionare l&#39;intervallo di tempo desiderato e selezionare **[!UICONTROL Apply]** per continuare.
 
 ![flow-Calendar](../../images/tutorials/monitor/flow-calendar.png)
 
@@ -106,7 +106,7 @@ Selezionate **[!UICONTROL Dataflow run start]** per accedere al **[!UICONTROL Da
 
 ![run](../../images/tutorials/monitor/run-metadata.png)
 
-Vengono **[!UICONTROL Dataflow run overview]** visualizzate le informazioni sul flusso di dati, inclusi i metadati, **[!UICONTROL Partial ingestion]** lo stato e l&#39;assegnazione **[!UICONTROL Error threshold]**. L’intestazione superiore include anche un **[!UICONTROL Error summary]**. Il **[!UICONTROL Error summary]** contiene l&#39;errore di livello principale specifico che mostra in quale fase il processo di assimilazione ha rilevato un errore.
+Il **[!UICONTROL Dataflow run overview]** file visualizza informazioni sul flusso di dati, inclusi i relativi metadati, lo stato di inserimento parziale e la soglia di errore assegnata. L&#39;intestazione superiore include anche un riepilogo degli errori. Il **[!UICONTROL Error summary]** contiene l&#39;errore di livello principale specifico che mostra in quale fase il processo di assimilazione ha rilevato un errore.
 
 ![dataflow-run-overview](../../images/tutorials/monitor/dataflow-run-overview.png)
 
@@ -119,13 +119,13 @@ Fare riferimento alla tabella seguente per gli errori che è possibile visualizz
 
 La metà inferiore dello schermo contiene informazioni su **[!UICONTROL Dataflow run errors]**. Da qui, potete anche visualizzare i file acquisiti, visualizzare in anteprima e scaricare la diagnostica degli errori, oppure scaricare il file manifesto.
 
-Nella **[!UICONTROL Dataflow run errors]** sezione vengono visualizzati i **[!UICONTROL Error code]**, il numero di record con errore e le informazioni che descrivono l&#39;errore.
+Nella **[!UICONTROL Dataflow run errors]** sezione sono visualizzati il codice di errore, il numero di record con errore e le informazioni che descrivono l&#39;errore.
 
 Selezionate **[!UICONTROL Preview error diagnostics]** per visualizzare ulteriori informazioni sull’errore di inserimento.
 
 ![Errori di esecuzione dei dataflow](../../images/tutorials/monitor/dataflow-run-errors.png)
 
-Viene visualizzato il **[!UICONTROL Error diagnostics preview]** pannello. In questa schermata vengono visualizzate informazioni specifiche relative all&#39;errore di assimilazione, inclusi **[!UICONTROL File name]**, **[!UICONTROL Error code]**, il nome della colonna in cui si è verificato l&#39;errore e una descrizione dell&#39;errore.
+Viene visualizzato il **[!UICONTROL Error diagnostics preview]** pannello. In questa schermata vengono visualizzate informazioni specifiche relative all&#39;errore di inserimento, incluso il nome del file, il codice di errore, il nome della colonna in cui si è verificato l&#39;errore e una descrizione dell&#39;errore.
 
 Questa sezione include anche un&#39;anteprima della colonna che contiene l&#39;errore.
 
