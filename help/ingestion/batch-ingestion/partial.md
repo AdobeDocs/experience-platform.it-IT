@@ -5,9 +5,9 @@ title: Panoramica sull’assimilazione parziale dei batch
 topic: overview
 description: Questo documento fornisce un’esercitazione per la gestione dell’assimilazione parziale dei batch.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '857'
 ht-degree: 0%
 
 ---
@@ -121,7 +121,7 @@ L&#39; **[!UICONTROL Error diagnostics]** interruttore viene visualizzato solo q
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-Consente di **[!UICONTROL Error threshold]** impostare la percentuale di errori accettabili prima che l&#39;intero batch non riesca. Per impostazione predefinita, questo valore è impostato su 5%.
+**[!UICONTROL Error threshold]** consente di impostare la percentuale di errori accettabili prima che l’intero batch non riesca. Per impostazione predefinita, questo valore è impostato su 5%.
 
 ## Passaggi successivi {#next-steps}
 
