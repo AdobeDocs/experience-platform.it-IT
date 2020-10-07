@@ -5,7 +5,7 @@ title: Servizio Adobe Experience Platform Identity
 topic: overview
 description: Adobe Experience Platform Identity Service ti aiuta a ottenere una visione migliore del tuo cliente e del suo comportamento attraverso il collegamento di identità tra dispositivi e sistemi, per offrire esperienze digitali personali e di forte impatto in tempo reale.
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '1711'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# [!DNL Identity Service]panoramica
+# [!DNL Identity Service] - Panoramica
 
 Fornire esperienze digitali rilevanti richiede una comprensione completa del cliente. Ciò è reso più difficile quando i dati del cliente sono frammentati in sistemi diversi, causando l&#39;apparenza di più &quot;identità&quot; per ogni singolo cliente. Adobe Experience Platform [!DNL Identity Service] consente di acquisire una visione migliore del cliente e del suo comportamento collegando le identità tra dispositivi e sistemi, per offrire esperienze digitali personali e di forte impatto in tempo reale.
 
@@ -35,11 +35,11 @@ Le relazioni di identità che [!DNL Identity Service] definiscono e mantengono s
 
 ### Identità
 
-Un&#39;identità è un dato univoco per un&#39;entità, in genere una singola persona. Un&#39;identità, ad esempio un ID di login, un ECID o un ID fedeltà, viene definita identità **** nota.
+Un&#39;identità è un dato univoco per un&#39;entità, in genere una singola persona. Un&#39;identità, ad esempio un ID di login, un ID ECID o un ID fedeltà, viene definita identità nota.
 
 Informazioni quali indirizzo e-mail e numero di telefono, utili per identificare direttamente un cliente. Di conseguenza, i dati PII vengono utilizzati per far corrispondere le identità multiple di un cliente ai diversi sistemi.
 
-**Identità** sconosciute o anonime che separano un dispositivo senza identificare la persona che lo utilizza. Questa categoria include informazioni quali l&#39;indirizzo IP del visitatore e l&#39;ID del cookie. Anche se i dati comportamentali possono essere raccolti da un dispositivo utilizzando identità sconosciute, l&#39;associazione di tali identità tra dispositivi o supporti è limitata fino a quando il cliente non fornisce i dati PII durante il suo viaggio.
+Identità sconosciute o anonime che distinguono un dispositivo senza identificare la persona che lo utilizza. Questa categoria include informazioni quali l&#39;indirizzo IP del visitatore e l&#39;ID del cookie. Anche se i dati comportamentali possono essere raccolti da un dispositivo utilizzando identità sconosciute, l&#39;associazione di tali identità tra dispositivi o supporti è limitata fino a quando il cliente non fornisce i dati PII durante il suo viaggio.
 
 Come mostrato nell&#39;immagine seguente, le identità conosciute e anonime sono entrambe componenti importanti dei grafici [di](#identity-graphs)identità, che vengono discussi più avanti in questo documento.
 
