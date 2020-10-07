@@ -5,9 +5,9 @@ title: Guida utente del Generatore di segmenti del servizio di segmentazione
 topic: ui guide
 description: 'Segment Builder (Generatore di segmenti) fornisce un’area di lavoro completa che consente di interagire con gli elementi dati del profilo. L’area di lavoro offre controlli intuitivi per la creazione e la modifica di regole, come le sezioni di trascinamento utilizzate per rappresentare le proprietà dei dati. '
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
-source-wordcount: '1660'
+source-wordcount: '1668'
 ht-degree: 0%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 0%
 
 # [!DNL Segment Builder] guida utente
 
-[!DNL Segment Builder] offre un’area di lavoro ricca di contenuti che consente di interagire con gli elementi [!DNL Profile] dati. L’area di lavoro offre controlli intuitivi per la creazione e la modifica di regole, come le sezioni di trascinamento utilizzate per rappresentare le proprietà dei dati.
+[!DNL Segment Builder] offre un’area di lavoro completa che consente di interagire con gli elementi [!DNL Profile] dati. L’area di lavoro offre controlli intuitivi per la creazione e la modifica di regole, come le sezioni di trascinamento utilizzate per rappresentare le proprietà dei dati.
 
 ![](../images/ui/segment-builder/segment-builder.png)
 
 ## Blocchi di generazione delle definizioni dei segmenti
 
-I mattoni base delle definizioni dei segmenti sono **[!UICONTROL Attributes]** e **[!UICONTROL Events]**. Inoltre, gli attributi e gli eventi contenuti in esistenti **[!UICONTROL Audiences]** possono essere utilizzati anche come componenti per nuove definizioni.
+Gli elementi costitutivi di base delle definizioni dei segmenti sono attributi ed eventi. Inoltre, gli attributi e gli eventi contenuti nelle audience esistenti possono essere utilizzati anche come componenti per le nuove definizioni.
 
-Potete vedere questi blocchi nella **[!UICONTROL Fields]** sezione sul lato sinistro dell’ [!DNL Segment Builder] area di lavoro. **[!UICONTROL Fields]** contiene una scheda per ciascuno dei blocchi di generazione principali: **[!UICONTROL Attributes]**, **[!UICONTROL Events]** e **[!UICONTROL Audiences]**.
+Potete vedere questi blocchi nella **[!UICONTROL Fields]** sezione sul lato sinistro dell’ [!DNL Segment Builder] area di lavoro. **[!UICONTROL Fields]** contiene una scheda per ciascuno dei blocchi di generazione principali: &quot;[!UICONTROL Attributes]&quot;, &quot;[!UICONTROL Events]&quot; e &quot;[!UICONTROL Audiences]&quot;.
 
 ![](../images/ui/segment-builder/segment-fields.png)
 
@@ -37,7 +37,7 @@ La **[!UICONTROL Attributes]** scheda consente di esplorare [!DNL Profile] gli a
 
 La **[!UICONTROL Events]** scheda consente di creare un&#39;audience basata su eventi o azioni che si sono verificati utilizzando elementi [!DNL XDM ExperienceEvent] dati. Potete anche trovare i tipi di evento nella **[!UICONTROL Events]** scheda, una raccolta di eventi di uso comune che consente di creare i segmenti più rapidamente.
 
-Oltre a poter individuare [!DNL ExperienceEvent] gli elementi, potete anche cercare i tipi di evento. I tipi di evento utilizzano la stessa logica di codifica utilizzata [!DNL ExperienceEvents], senza che sia necessario eseguire ricerche nella [!DNL XDM ExperienceEvent] classe alla ricerca dell&#39;evento corretto. Ad esempio, utilizzando la barra di ricerca per cercare &quot;carrello&quot;, vengono restituiti i tipi di evento &quot;[!UICONTROL AddCart]&quot; e &quot;[!UICONTROL RemoveCart]&quot;, due azioni carrello utilizzate di frequente durante la creazione delle definizioni dei segmenti.
+Oltre a poter individuare [!DNL ExperienceEvent] gli elementi, potete anche cercare i tipi di evento. I tipi di evento utilizzano la stessa logica di codifica utilizzata [!DNL ExperienceEvents], senza che sia necessario eseguire ricerche nella [!DNL XDM ExperienceEvent] classe alla ricerca dell&#39;evento corretto. Ad esempio, utilizzando la barra di ricerca per cercare &quot;carrello&quot; vengono restituiti i tipi di evento &quot;[!UICONTROL AddCart]&quot; e &quot;[!UICONTROL RemoveCart]&quot;, due azioni carrello utilizzate di frequente per la creazione delle definizioni dei segmenti.
 
 Per cercare qualsiasi tipo di componente, digitatene il nome nella barra di ricerca, che utilizza la sintassi [di ricerca di](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. I risultati della ricerca iniziano a essere compilati man mano che vengono inserite parole intere. Ad esempio, per creare una regola basata sul campo XDM `ExperienceEvent.commerce.productViews`, iniziate a digitare &quot;product views&quot; nel campo di ricerca. Una volta digitata la parola &quot;prodotto&quot;, i risultati della ricerca iniziano a comparire. Ogni risultato include la gerarchia di oggetti alla quale appartiene.
 
@@ -45,11 +45,11 @@ Per cercare qualsiasi tipo di componente, digitatene il nome nella barra di rice
 >
 >I campi dello schema personalizzato definiti dall&#39;organizzazione possono richiedere fino a 24 ore per essere visualizzati e diventare disponibili per l&#39;uso nelle regole di creazione.
 
-Puoi quindi trascinare [!DNL ExperienceEvents] e rilasciare facilmente i segmenti e [!UICONTROL Event Types] inserirli nella definizione del segmento.
+Puoi quindi trascinare e rilasciare facilmente [!DNL ExperienceEvents] e &quot;[!UICONTROL Event Types]&quot; nella definizione del segmento.
 
 ![](../images/ui/segment-builder/events-eventTypes.png)
 
-Per impostazione predefinita, vengono visualizzati solo i campi dello schema compilati dall&#39;archivio dati. Ciò include [!UICONTROL Event Types]. Se l’ [!UICONTROL Event Types] elenco non è visibile, oppure è possibile selezionare &quot;[!UICONTROL Any]&quot; solo come [!UICONTROL Event Type], selezionare l’icona a forma di ingranaggio accanto a **[!UICONTROL Fields]**, quindi **[!UICONTROL Show full XDM schema]** sotto **[!UICONTROL Available Fields]**. Seleziona di nuovo l&#39;icona a forma di ingranaggio per tornare alla **[!UICONTROL Fields]** scheda ed è ora possibile visualizzare più campi [!UICONTROL Event Types] e schema, indipendentemente dal fatto che contengano o meno dati.
+Per impostazione predefinita, vengono visualizzati solo i campi dello schema compilati dall&#39;archivio dati. Ciò include &quot;[!UICONTROL Event Types]&quot;. Se l&#39;elenco &quot;[!UICONTROL Event Types]&quot; non è visibile, oppure è possibile selezionare &quot;[!UICONTROL Any]&quot; solo come &quot;[!UICONTROL Event Type]&quot;, selezionare l&#39;icona **** ingranaggio accanto a **[!UICONTROL Fields]**, quindi **[!UICONTROL Show full XDM schema]** sotto **[!UICONTROL Available Fields]**. Seleziona di nuovo l&#39;icona **** ingranaggio per tornare alla **[!UICONTROL Fields]** scheda e ora dovresti essere in grado di visualizzare più campi &quot;[!UICONTROL Event Types]&quot; e schema, indipendentemente dal fatto che contengano o meno dati.
 
 ![](../images/ui/segment-builder/show-populated.png)
 
@@ -63,13 +63,13 @@ Puoi passare il cursore del mouse sul ⓘ accanto a un&#39;audience per visualiz
 
 ![](../images/ui/segment-builder/audience-folder-structure.png)
 
-Potete anche cercare [!UICONTROL Audiences] utilizzando la barra di ricerca, che utilizza la sintassi [di ricerca di](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Nella **[!UICONTROL Audiences]** scheda, se si seleziona una cartella di livello principale viene visualizzata la barra di ricerca, che consente di effettuare ricerche all’interno della cartella. I risultati della ricerca iniziano a essere compilati solo dopo l&#39;immissione di intere parole. Ad esempio, per trovare un [!UICONTROL Audience] nome `Online Shoppers`, iniziate a digitare &quot;Online&quot; nella barra di ricerca. Una volta digitata la parola &quot;Online&quot;, vengono visualizzati i risultati della ricerca contenenti la parola &quot;Online&quot;.
+Potete anche cercare audience utilizzando la barra di ricerca, che utilizza la sintassi [di ricerca di](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Nella **[!UICONTROL Audiences]** scheda, se si seleziona una cartella di livello principale viene visualizzata la barra di ricerca, che consente di effettuare ricerche all’interno della cartella. I risultati della ricerca iniziano a essere compilati solo dopo l&#39;immissione di intere parole. Ad esempio, per trovare un&#39;audience denominata `Online Shoppers`, iniziate a digitare &quot;Online&quot; nella barra di ricerca. Una volta digitata la parola &quot;Online&quot;, vengono visualizzati i risultati della ricerca contenenti la parola &quot;Online&quot;.
 
 ## Area di lavoro del generatore di regole {#rule-builder-canvas}
 
 Una definizione di segmento è una raccolta di regole utilizzate per descrivere le caratteristiche o il comportamento chiave di un&#39;audience target. Queste regole vengono create utilizzando l&#39;area di lavoro del generatore di regole, situata al centro di [!DNL Segment Builder].
 
-Per aggiungere una nuova regola alla definizione del segmento, trascinate una sezione dalla **[!UICONTROL Fields]** scheda e rilasciatela nell’area di lavoro del generatore di regole. Verranno quindi presentate opzioni specifiche per il contesto in base al tipo di dati aggiunto. I tipi di dati disponibili includono: stringhe, date, [!DNL ExperienceEvents][!UICONTROL Event Types]e [!UICONTROL Audiences].
+Per aggiungere una nuova regola alla definizione del segmento, trascinate una sezione dalla **[!UICONTROL Fields]** scheda e rilasciatela nell’area di lavoro del generatore di regole. Verranno quindi presentate opzioni specifiche per il contesto in base al tipo di dati aggiunto. I tipi di dati disponibili includono: stringhe, date, [!DNL ExperienceEvents]&quot;[!UICONTROL Event Types]&quot; e audience.
 
 ![](../images/ui/segment-builder/rule-builder-canvas.png)
 
@@ -133,7 +133,7 @@ Per selezionare un criterio di unione per la definizione del segmento, seleziona
 
 Quando si crea una definizione di segmento, la **[!UICONTROL Segment Properties]** sezione sul lato destro dell&#39;area di lavoro visualizza una stima della dimensione del segmento risultante, consentendo di regolare la definizione del segmento come necessario prima di creare il pubblico stesso.
 
-La **[!UICONTROL Segment Properties]** sezione è anche il punto in cui potete specificare informazioni importanti sulla definizione del segmento, inclusi i relativi **[!UICONTROL Name]** e **[!UICONTROL Description]**. I nomi delle definizioni dei segmenti vengono utilizzati per identificare il segmento tra quelli definiti dall’organizzazione e devono pertanto essere descrittivi, concisi e univoci.
+Nella **[!UICONTROL Segment Properties]** sezione è inoltre possibile specificare informazioni importanti sulla definizione del segmento, incluso nome e descrizione. I nomi delle definizioni dei segmenti vengono utilizzati per identificare il segmento tra quelli definiti dall’organizzazione e devono pertanto essere descrittivi, concisi e univoci.
 
 Mentre continuate a generare la definizione del segmento, potete visualizzare un&#39;anteprima impaginata del pubblico selezionando **[!UICONTROL View Profiles]**.
 
