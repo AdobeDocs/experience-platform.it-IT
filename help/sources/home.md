@@ -5,7 +5,7 @@ title: Panoramica dei connettori sorgente Adobe Experience Platform
 topic: overview
 description: Adobe Experience Platform consente l'acquisizione di dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Piattaforma. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, database e molti altri.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 0%
@@ -118,7 +118,7 @@ La tabella seguente illustra il comportamento dell’interfaccia utente in base 
 
 | Livello di autorizzazione | Descrizione |
 | ---- | ----|
-| **[!UICONTROL View Sources]** Attivato | Concedere l&#39;accesso in sola lettura alle origini in ciascun tipo di origine nella scheda *Catalogo* , nonché alle schede *Sfoglia*, *Account* e *DataFlow* . |
+| **[!UICONTROL View Sources]** Attivato | Concedere l&#39;accesso in sola lettura alle origini in ciascun tipo di origine nella scheda Catalogo, nonché alle schede Sfoglia, Account e Flusso di dati. |
 | **[!UICONTROL Manage Sources]** Attivato | Oltre alle funzioni incluse in **[!UICONTROL View Sources]**, concede l&#39;accesso all&#39; **[!UICONTROL Connect Source]** opzione in **[!UICONTROL Catalog]** e all&#39; **[!UICONTROL Select Data]** opzione in **[!UICONTROL Browse]**. **[!UICONTROL Manage Sources]** consente inoltre di abilitare o disabilitare **[!UICONTROL DataFlows]** e modificare le relative pianificazioni. |
 | **[!UICONTROL View Sources]** Disattivato e **[!UICONTROL Manage Sources]** disattivato | Revoca tutti gli accessi alle origini. |
 
