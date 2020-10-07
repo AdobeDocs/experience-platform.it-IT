@@ -5,9 +5,9 @@ topic: overview
 title: Panoramica sul controllo degli accessi
 description: Il controllo degli accessi per Adobe Experience Platform è fornito tramite Adobe Admin Console. Questa funzionalità sfrutta i profili di prodotto in  Admin Console, che collegano gli utenti con autorizzazioni e sandbox.
 translation-type: tm+mt
-source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
-source-wordcount: '1087'
+source-wordcount: '1097'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ Il controllo di accesso per [!DNL Experience Platform] è fornito tramite [Adobe
 
 ## Gerarchia e flusso di lavoro del controllo degli accessi
 
-Per configurare il controllo di accesso per [!DNL Experience Platform], è necessario disporre dei privilegi di amministratore per un&#39;organizzazione che dispone di un&#39;integrazione con un [!DNL Experience Platform] prodotto. Il ruolo minimo che concede o ritira le autorizzazioni è un **[!UICONTROL product profile administrator]**. Altri ruoli di amministratore che possono gestire le autorizzazioni sono **[!UICONTROL product administrators]** (è possibile gestire tutti i profili all&#39;interno di un prodotto) e **[!UICONTROL system administrators]** (senza restrizioni). Per ulteriori informazioni, consultate l&#39;articolo Adobe Help Center sui ruoli [](https://helpx.adobe.com/enterprise/using/admin-roles.html) amministrativi.
+Per configurare il controllo di accesso per [!DNL Experience Platform], è necessario disporre dei privilegi di amministratore per un&#39;organizzazione che dispone di un&#39;integrazione con un [!DNL Experience Platform] prodotto. Il ruolo minimo che concede o revoca le autorizzazioni è un amministratore del profilo di prodotto. Altri ruoli di amministratore che possono gestire le autorizzazioni sono gli amministratori dei prodotti (che possono gestire tutti i profili all&#39;interno di un prodotto) e gli amministratori di sistema (senza restrizioni). Per ulteriori informazioni, consultate l&#39;articolo Adobe Help Center sui ruoli [](https://helpx.adobe.com/enterprise/using/admin-roles.html) amministrativi.
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ Adobe Admin Console fornisce una posizione centrale per la gestione delle adesio
 
 ### Profili di prodotto
 
-Nel pannello [!DNL Admin Console], le autorizzazioni vengono assegnate agli utenti tramite l’uso di **[!UICONTROL product profiles]**. I profili di prodotto consentono di concedere le autorizzazioni a uno o più utenti e contengono anche il loro accesso all&#39;ambito delle sandbox che sono loro assegnate tramite i profili di prodotto. Gli utenti possono essere assegnati a uno o più profili di prodotto appartenenti alla tua organizzazione.
+Nel pannello [!DNL Admin Console], le autorizzazioni vengono assegnate agli utenti tramite l&#39;uso di profili di prodotto. I profili di prodotto consentono di concedere le autorizzazioni a uno o più utenti e contengono anche il loro accesso all&#39;ambito delle sandbox che sono loro assegnate tramite i profili di prodotto. Gli utenti possono essere assegnati a uno o più profili di prodotto appartenenti alla tua organizzazione.
 
 ### Profili di prodotto predefiniti
 
@@ -57,7 +57,7 @@ Nel pannello [!DNL Admin Console], le autorizzazioni vengono assegnate agli uten
 
 ## Sandbox e autorizzazioni
 
-Le sandbox non di produzione sono una forma di virtualizzazione dei dati che consente di isolare i dati da altre sandbox e sono generalmente utilizzate per esperimenti di sviluppo, test o test. I profili di prodotto **[!UICONTROL permissions]** consentono agli utenti del profilo di accedere alle [!DNL Platform] funzionalità all&#39;interno degli ambienti sandbox a cui gli è stato concesso l&#39;accesso. Una licenza di Experience Platform  predefinita concede cinque sandbox (una produzione e quattro non di produzione). Potete aggiungere pacchetti di dieci sandbox non di produzione fino a un massimo di 75 sandbox in totale. Per maggiori informazioni, contattate l&#39;amministratore dell&#39;organizzazione IMS o il rappresentante commerciale  Adobe.
+Le sandbox non di produzione sono una forma di virtualizzazione dei dati che consente di isolare i dati da altre sandbox e sono generalmente utilizzate per esperimenti di sviluppo, test o test. Le autorizzazioni del profilo di prodotto consentono agli utenti del profilo di accedere alle [!DNL Platform] funzionalità all&#39;interno degli ambienti sandbox a cui gli è stato concesso l&#39;accesso. Una licenza di Experience Platform  predefinita concede cinque sandbox (una produzione e quattro non di produzione). Potete aggiungere pacchetti di dieci sandbox non di produzione fino a un massimo di 75 sandbox in totale. Per maggiori informazioni, contattate l&#39;amministratore dell&#39;organizzazione IMS o il rappresentante commerciale  Adobe.
 
 Per ulteriori informazioni sulle sandbox in [!DNL Experience Platform], consultate la panoramica sulle [sandbox](../sandboxes/home.md).
 
@@ -71,7 +71,7 @@ L&#39;autorizzazione &quot;Gestione sandbox&quot; consente agli utenti di gestir
 
 ### Autorizzazioni
 
-La scheda **Autorizzazioni** all&#39;interno di un profilo di prodotto visualizza le sandbox e le autorizzazioni attive per tale profilo:
+La scheda Autorizzazioni all&#39;interno di un profilo di prodotto visualizza le sandbox e le autorizzazioni attive per tale profilo:
 
 ![](./images/permissions-overview.png)
 
