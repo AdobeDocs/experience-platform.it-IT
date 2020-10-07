@@ -5,9 +5,9 @@ title: Creazione di segmenti di clienti con punteggi previsti
 topic: Create a segment
 description: Al termine di un'esecuzione della previsione, i punteggi di propensione previsti vengono automaticamente utilizzati da Profili. L'arricchimento dei profili con i punteggi AI dei clienti consente di creare segmenti di clienti per trovare audience in base ai loro punteggi di propensione. Questa sezione descrive i passaggi per la creazione di segmenti con Segment Builder (Generatore di segmenti).
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '305'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Nell’interfaccia utente della piattaforma, fate clic **[!UICONTROL Segments]**
 
 ![](../images/user-guide/segments.png)
 
-Viene visualizzato *Segment Builder (Generatore* di segmenti). Dalla colonna *Campi* a sinistra e nella scheda *Attributi* fare clic sulla cartella denominata **[!UICONTROL XDM Individual Profile]** e quindi sulla cartella con lo spazio dei nomi dell&#39;organizzazione. La cartella denominata **[!UICONTROL Customer AI]** contiene i risultati delle esecuzioni di previsione e prende il nome dall’istanza a cui appartengono i punteggi. Fate clic su una cartella di istanza per accedere ai risultati dell’istanza desiderata.
+Viene visualizzato **Segment Builder (Generatore** di segmenti). Dalla **[!UICONTROL Fields]** colonna sinistra e nella **[!UICONTROL Attributes]** scheda fare clic sulla cartella denominata **[!UICONTROL XDM Individual Profile]** , quindi fare clic sulla cartella con lo spazio dei nomi dell&#39;organizzazione. La cartella denominata **[!UICONTROL Customer AI]** contiene i risultati delle esecuzioni di previsione e prende il nome dall’istanza a cui appartengono i punteggi. Fate clic su una cartella di istanza per accedere ai risultati dell’istanza desiderata.
 
 ![](../images/user-guide/results.png)
 
