@@ -5,7 +5,7 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform consente di creare e creare condutture di funzionalità personalizzate per eseguire la progettazione di funzionalità su scala tramite il runtime Sensei Machine Learning Framework. Questo documento descrive le varie classi rilevate in una pipeline delle funzioni e fornisce un'esercitazione dettagliata per la creazione di una pipeline delle funzioni personalizzata tramite l'SDK per l'authoring dei modelli in PySpark.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1426'
 ht-degree: 0%
@@ -71,7 +71,7 @@ Il file JSON di configurazione è costituito da coppie chiave-valore ed è desti
 
 L&#39;esempio seguente illustra le coppie chiave-valore rilevate all&#39;interno di un file di configurazione:
 
-**esempio JSON di configurazione**
+**Esempio JSON di configurazione**
 
 ```json
 [
