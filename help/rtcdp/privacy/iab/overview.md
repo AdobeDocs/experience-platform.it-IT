@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Supporto IAB TCF 2.0 nella piattaforma dati cliente in tempo reale
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '2377'
 ht-degree: 1%
@@ -89,7 +89,7 @@ Questa finestra di dialogo deve consentire al cliente di:
 
 ### Consenso di stringhe {#consent-strings}
 
-Indipendentemente dal metodo utilizzato per raccogliere i dati, l&#39;obiettivo è quello di generare un valore stringa basato sulle opzioni di consenso scelte dal cliente, denominate stringa **di** consenso.
+Indipendentemente dal metodo utilizzato per raccogliere i dati, l&#39;obiettivo è quello di generare un valore stringa basato sulle opzioni di consenso scelte dal cliente, denominate stringa di consenso.
 
 Nella specifica TCF, le stringhe di consenso vengono utilizzate per codificare i dettagli rilevanti sulle impostazioni di consenso di un cliente, in termini di scopi di marketing specifici, come definiti da policy e fornitori. [!DNL Real-time CDP] utilizza queste stringhe per memorizzare le impostazioni del consenso per ciascun cliente, pertanto ogni volta che tali impostazioni cambiano è necessario generare una nuova stringa di consenso.
 
