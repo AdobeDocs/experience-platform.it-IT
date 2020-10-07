@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;offer management;Offer Management;Journey;customer journey;journey;decision events;decision event;Decision events
 solution: Experience Platform
-title: Servizio di disattivazione
+title: Decisioning Service
 topic: overview
 description: Il servizio di gestione delle decisioni consente di creare esperienze personalizzate, ottimizzate e orchestrate nelle applicazioni in esecuzione su Adobe Experience Platform. Utilizzando il servizio di gestione delle decisioni, potete determinare l'opzione migliore da una serie di opzioni disponibili. Queste opzioni, denominate anche alternative, potrebbero essere offerte, raccomandazioni di prodotto, componenti di contenuto per un'esperienza Web, script di conversazione e azioni da intraprendere.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '1648'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Panoramica sul servizio di disattivazione
 
-[!DNL Decisioning Service] consente di creare esperienze personalizzate, ottimizzate e orchestrate nelle applicazioni in esecuzione su Adobe Experience Platform. Utilizzando [!DNL Decisioning Service]potete determinare l&#39; *opzione* migliore da un set di scelte disponibili. Queste opzioni, denominate anche alternative, potrebbero essere offerte, raccomandazioni di prodotto, componenti di contenuto per un&#39;esperienza Web, script di conversazione e azioni da intraprendere. Attualmente il caso d&#39;uso e il dominio di *Offer Decisioning* sono supportati, dove le opzioni di decisione sono modellate specificatamente come offerte, con il supporto per ulteriori casi d&#39;uso a venire.
+[!DNL Decisioning Service] consente di creare esperienze personalizzate, ottimizzate e orchestrate nelle applicazioni in esecuzione su Adobe Experience Platform. Utilizzando [!DNL Decisioning Service]potete determinare l&#39; *opzione* migliore da un set di scelte disponibili. Queste opzioni, denominate anche alternative, potrebbero essere offerte, raccomandazioni di prodotto, componenti di contenuto per un&#39;esperienza Web, script di conversazione e azioni da intraprendere. Attualmente il caso d&#39;uso e il dominio di *Offer Decisioning* sono supportati, dove le opzioni di decisione sono modellate specificamente come offerte, con il supporto per ulteriori casi d&#39;uso a venire.
 
 I clienti [!DNL Decisioning Service]possono riutilizzare la logica aziendale e condividere un catalogo di opzioni tra canali e applicazioni. Invece di gestire le opzioni decisionali e le strategie per selezionarle direttamente all&#39;interno di un&#39;applicazione, ora possono essere sfruttate indipendentemente da quando, come e su quale canale l&#39;utente finale di un cliente interagisce con un&#39;azienda o un&#39;organizzazione.
 
@@ -49,7 +49,7 @@ In alternativa o in aggiunta, una strategia potrebbe essere basata sui risultati
 
 ### Strategia di decisione
 
-Le strategie decisionali sono configurate tramite oggetti denominati _attività_. Ogni strategia di decisione è essenzialmente un algoritmo o una funzione che utilizza le opzioni N {o1, o2, ...oN} come input e produce un elenco ordinato di opzioni (o1, o2,...oK) in cui la prima opzione nell&#39;elenco viene considerata la migliore in base a criteri di ottimizzazione, la seconda opzione nell&#39;elenco dei risultati viene quindi considerata la seconda opzione migliore e così via.
+Le strategie decisionali sono configurate tramite oggetti denominati attività. Ogni strategia di decisione è essenzialmente un algoritmo o una funzione che utilizza le opzioni N {o1, o2, ...oN} come input e produce un elenco ordinato di opzioni (o1, o2,...oK) in cui la prima opzione nell&#39;elenco viene considerata la migliore in base a criteri di ottimizzazione, la seconda opzione nell&#39;elenco dei risultati viene quindi considerata la seconda opzione migliore e così via.
 
 In qualsiasi momento durante il percorso del cliente, l&#39;opzione migliore per una determinata attività viene rivalutata in base al set più recente di variabili di contesto, regole e vincoli. Le variabili di contesto includono i record memorizzati in [!DNL Real Time Customer Profile]. Un&#39;entità record centrale è un profilo del cliente, ma altre entità come i dati aziendali operativi sono ugualmente disponibili per l&#39;attività.
 
