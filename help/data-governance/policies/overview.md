@@ -5,7 +5,7 @@ title: Panoramica sui criteri di utilizzo dei dati
 topic: policies
 description: Affinché le etichette di utilizzo dei dati supportino efficacemente la conformità dei dati, è necessario implementare dei criteri di utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni di marketing consentite o da cui è consentito eseguire attività sui dati all'interno  Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
 workflow-type: tm+mt
 source-wordcount: '1003'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Questo documento fornisce una panoramica di alto livello dei criteri di utilizzo
 
 ## Azioni di marketing {#marketing-actions}
 
-**Le azioni** di marketing (o casi **di utilizzo** marketing) nel contesto del framework di governance dei dati sono azioni che un consumatore di [!DNL Experience Platform] dati può intraprendere, per le quali l&#39;organizzazione intende limitare l&#39;utilizzo dei dati. Di conseguenza, un criterio di utilizzo dei dati è definito come segue:
+Le azioni di marketing (o casi di utilizzo del marketing) nel contesto del framework di governance dei dati sono azioni che un consumatore di [!DNL Experience Platform] dati può intraprendere, per le quali la tua organizzazione intende limitare l&#39;utilizzo dei dati. Di conseguenza, un criterio di utilizzo dei dati è definito come segue:
 
 1. Un&#39;azione di marketing specifica
 2. Le etichette di utilizzo dei dati a cui è stata limitata l&#39;esecuzione dell&#39;azione
