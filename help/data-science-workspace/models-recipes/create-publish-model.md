@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace offre i mezzi per raggiungere il tuo obiettivo utilizzando la Recommendations Recipe del prodotto precostruita. Segui questa esercitazione per scoprire come accedere e comprendere i dati di vendita al dettaglio, creare e ottimizzare un modello di machine learning e generare informazioni in Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1542'
 ht-degree: 0%
@@ -85,7 +85,7 @@ Le entrate sono la base per un modello in quanto contengono algoritmi di machine
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2. Individuate e aprite il file fornito **[!UICONTROL Recommendations Recipe]** facendo clic sul suo nome.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. Nella barra a destra, fate clic **[!UICONTROL Recommendations Input Schema]** per visualizzare lo schema che dà origine alla ricetta. I campi dello schema **[!UICONTROL itemId]** e **[!UICONTROL userId]** corrispondono a un prodotto acquistato (**[!UICONTROL interactionType]**) dal cliente in un momento (**[!UICONTROL timestamp]**) specifico. Seguire gli stessi passaggi per esaminare i campi per l&#39; **[!UICONTROL Recommendations Output Schema]**.
+3. Nella barra a destra, fate clic **[!UICONTROL Recommendations Input Schema]** per visualizzare lo schema che dà origine alla ricetta. I campi dello schema &quot;[!UICONTROL itemId]&quot; e &quot;[!UICONTROL userId]&quot; corrispondono a un prodotto acquistato ([!UICONTROL interactionType]) dal cliente in un momento ([!UICONTROL timestamp]) specifico. Seguire gli stessi passaggi per esaminare i campi per l&#39; **[!UICONTROL Recommendations Output Schema]**.
    ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
 
 Sono stati revisionati gli schemi di input e output richiesti da Product Recommendations Recipe. È ora possibile continuare la sezione successiva per scoprire come creare, formare e valutare un modello Recommendations di prodotto.
@@ -113,9 +113,9 @@ Potete scegliere di attendere il termine dell’esecuzione della formazione oppu
 
 ### Formazione del modello utilizzando i parametri ipertestuali personalizzati
 
-1. Nella pagina Panoramica ** modello, fate clic **[!UICONTROL Train]** in alto a destra per creare una nuova esecuzione della formazione. Selezionare lo stesso set di dati di input utilizzato per creare il modello e fare clic su **[!UICONTROL Next]**.
+1. Nella pagina Panoramica **** modello, fate clic **[!UICONTROL Train]** in alto a destra per creare una nuova esecuzione della formazione. Selezionare lo stesso set di dati di input utilizzato per creare il modello e fare clic su **[!UICONTROL Next]**.
    ![](../images/models-recipes/model-walkthrough/training_select_dataset.png)
-2. Viene visualizzata la pagina *Configurazione* . Qui puoi configurare il **[!UICONTROL num_recommendations]** valore dell’esecuzione della formazione, noto anche come Hyperparameter. Un modello qualificato e ottimizzato utilizzerà i parametri Hyperparameters più performanti in base ai risultati dell&#39;esecuzione di formazione.
+2. Viene visualizzata la pagina **Configurazione** . Qui puoi configurare il valore &quot;[!UICONTROL num_recommendations]&quot; dell’esecuzione della formazione, noto anche come Hyperparameter. Un modello qualificato e ottimizzato utilizzerà i parametri Hyperparameters più performanti in base ai risultati dell&#39;esecuzione di formazione.
 
    I parametri ipertestuali non possono essere appresi, pertanto devono essere assegnati prima dell&#39;esecuzione della formazione. La regolazione dei parametri Hyperparameters può modificare la precisione del modello Tradotto. Poiché l&#39;ottimizzazione di un modello è un processo iterativo, prima di ottenere una valutazione soddisfacente possono essere necessarie più esecuzioni di formazione.
 
@@ -159,7 +159,7 @@ Una volta completata l&#39;esecuzione del punteggio, potrai visualizzare in ante
 
 1. Nella pagina delle esecuzioni del punteggio fare clic sull&#39;esecuzione del punteggio completato, quindi fare clic **[!UICONTROL Preview Scoring Results Dataset]** sulla barra a destra.
    ![](../images/models-recipes/model-walkthrough/score_complete.png)
-2. Nella tabella di anteprima, ogni riga contiene raccomandazioni sui prodotti per un cliente specifico, etichettate rispettivamente come **[!UICONTROL recommendations]** e **[!UICONTROL userId]** . Poiché il parametro **[!UICONTROL num_recommendations]** Hyperparameter è stato impostato su 10 nelle schermate di esempio, ciascuna riga di raccomandazioni può contenere fino a 10 identità di prodotto delimitate da un numero (#).
+2. Nella tabella di anteprima, ogni riga contiene raccomandazioni sui prodotti per un cliente specifico, etichettate rispettivamente come [!UICONTROL recommendations] e [!UICONTROL userId] . Poiché il parametro [!UICONTROL num_recommendations] Hyperparameter è stato impostato su 10 nelle schermate di esempio, ciascuna riga di raccomandazioni può contenere fino a 10 identità di prodotto delimitate da un numero (#).
    ![](../images/models-recipes/model-walkthrough/preview_score_results.png)
 
 ## Passaggi successivi {#next-steps}
