@@ -5,7 +5,7 @@ title: Preparare i dati per l'utilizzo in Intelligent Services
 topic: Intelligent Services
 description: 'Per consentire ai servizi intelligenti di scoprire informazioni ricavate dai dati degli eventi di marketing, i dati devono essere arricchiti e mantenuti in modo semantico in una struttura standard. I servizi intelligenti sfruttano gli schemi XDM (Experience Data Model) per ottenere questo risultato. Nello specifico, tutti i set di dati utilizzati in Intelligent Services] devono essere conformi allo schema XDM Consumer ExperienceEvent (CEE). '
 translation-type: tm+mt
-source-git-commit: d9bf87e41fe002ac1d70a241b48c7b9fd1139d6c
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1978'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Preparare i dati per l&#39;utilizzo in [!DNL Intelligent Services]
 
-Per [!DNL Intelligent Services] scoprire informazioni ricavate dai dati degli eventi di marketing, i dati devono essere arricchiti e mantenuti in modo semantico in una struttura standard. [!DNL Intelligent Services] utilizzare gli schemi [!DNL Experience Data Model] (XDM) per ottenere questo risultato. Nello specifico, tutti i set di dati utilizzati in [!DNL Intelligent Services] devono essere conformi allo schema XDM **Consumer ExperienceEvent (CEE)** .
+Per [!DNL Intelligent Services] scoprire informazioni ricavate dai dati degli eventi di marketing, i dati devono essere arricchiti e mantenuti in modo semantico in una struttura standard. [!DNL Intelligent Services] utilizzare gli schemi [!DNL Experience Data Model] (XDM) per ottenere questo risultato. Nello specifico, tutti i set di dati utilizzati in [!DNL Intelligent Services] devono essere conformi allo schema XDM (Consumer Experience Event).
 
 Questo documento fornisce linee guida generali sulla mappatura dei dati degli eventi di marketing da più canali a questo schema, delineando le informazioni sui campi importanti all&#39;interno dello schema per consentire di determinare in modo efficace come mappare i dati alla relativa struttura.
 
@@ -70,7 +70,7 @@ Uno dei campi dello schema deve essere impostato come campo di identità princip
 
 È necessario determinare il campo migliore da utilizzare come identità primaria in base all&#39;origine e alla natura dei dati. Un campo di identità deve includere uno spazio dei nomi **di** identità che indichi il tipo di dati di identità che il campo prevede come valore. Alcuni valori di spazio nomi validi includono:
 
-* &quot;email&quot;
+* &quot;e-mail&quot;
 * &quot;phone&quot;
 * &quot;mcid&quot; (per Adobe Audience Manager ID)
 * &quot;aaid&quot; (per  Adobe Analytics ID)
