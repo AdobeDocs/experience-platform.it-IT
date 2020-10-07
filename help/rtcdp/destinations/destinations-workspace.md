@@ -5,7 +5,7 @@ seo-title: Area di lavoro Destinazioni
 description: 'L''area di lavoro Destinazioni è composta da quattro sezioni: Catalogo, Sfoglia, Account e Vista di sistema, descritte nelle sezioni seguenti.'
 seo-description: In  Adobe Piattaforma dati cliente in tempo reale, seleziona Destinazioni dalla barra di navigazione a sinistra per accedere all'area di lavoro delle destinazioni.
 translation-type: tm+mt
-source-git-commit: 59ac673c35954696fbb37417510035bdebff6f62
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 1%
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 In  Adobe Piattaforma dati cliente in tempo reale, selezionate **[!UICONTROL Destinations]** dalla barra di navigazione a sinistra per accedere all&#39; [!UICONTROL Destinations] area di lavoro.
 
-L’ [!UICONTROL Destinations] area di lavoro è composta da quattro sezioni, **[!UICONTROL Catalog]**, **[!UICONTROL Browse]**, **[!UICONTROL Accounts]** e **[!UICONTROL System View]**, descritte nelle sezioni seguenti.
+L’ [!UICONTROL Destinations] area di lavoro è composta da quattro sezioni, [!UICONTROL Catalog], [!UICONTROL Browse], [!UICONTROL Accounts]e [!UICONTROL System View], descritte nelle sezioni seguenti.
 
 ![Destinazioni-panoramica](/help/rtcdp/destinations/assets/destinations-overview.png)
 
@@ -28,8 +28,8 @@ Nella **[!UICONTROL Catalog]** scheda viene visualizzato un elenco di tutte le d
 L’interfaccia utente CDP in tempo reale del Adobe  fornisce una serie di opzioni di ricerca e filtro nella pagina del catalogo delle destinazioni:
 
 * Utilizzate la funzionalità di ricerca sulla pagina per individuare una destinazione specifica.
-* Filtrare le destinazioni utilizzando il **[!UICONTROL Categories]** controllo.
-* Passa da **[!UICONTROL All destinations]** a **[!UICONTROL My destinations]**. Quando **[!UICONTROL All destinations]** è selezionato, vengono visualizzate tutte le destinazioni CDP in tempo reale  Adobe disponibili. Quando **[!UICONTROL My destinations]** è selezionata, è possibile visualizzare solo le destinazioni con le quali è stata stabilita una connessione.
+* Filtrare le destinazioni utilizzando il [!UICONTROL Categories] controllo.
+* Passa da [!UICONTROL All destinations] a [!UICONTROL My destinations]. Quando **[!UICONTROL All destinations]** è selezionato, vengono visualizzate tutte le destinazioni CDP in tempo reale  Adobe disponibili. Quando **[!UICONTROL My destinations]** è selezionata, è possibile visualizzare solo le destinazioni con le quali è stata stabilita una connessione.
 * Selezionare per visualizzare **[!UICONTROL Connections]** e/o **[!UICONTROL Extensions]**. Per comprendere la differenza tra le due categorie, vedere Tipi di [destinazione e categorie](/help/rtcdp/destinations/destination-types.md).
 
 ![demo di filtraggio delle destinazioni e ricerca](/help/rtcdp/destinations/assets/destinations-search-and-filter.gif)
@@ -88,7 +88,7 @@ Nella **[!UICONTROL Browse]** scheda vengono visualizzate le destinazioni con le
 | [!UICONTROL Username] | Le credenziali account selezionate per il flusso di destinazione. |
 | [!UICONTROL Segments] | Il numero di segmenti che vengono attivati in questa destinazione. |
 | [!UICONTROL Created] | Data e ora UTC alla quale è stato creato il flusso di attivazione per la destinazione. |
-| [!UICONTROL Status] | `Active` o `Inactive`. Indica se i dati sono attualmente attivati per questa destinazione. Per modificare lo stato, consultate [Disattivazione](/help/rtcdp/destinations/activate-destinations.md#disable-activation). |
+| [!UICONTROL Status] | `Active` oppure `Inactive`. Indica se i dati sono attualmente attivati per questa destinazione. Per modificare lo stato, consultate [Disattivazione](/help/rtcdp/destinations/activate-destinations.md#disable-activation). |
 
 Fai clic su una riga di destinazione per visualizzare ulteriori informazioni sulla destinazione nella barra a destra.
 
