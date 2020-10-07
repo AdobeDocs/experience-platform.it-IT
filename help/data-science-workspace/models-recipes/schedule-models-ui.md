@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace consente di configurare l’esecuzione programmata di punteggi e formazioni su un servizio di machine learning. Automatizzare il processo di formazione e valutazione può contribuire a mantenere e migliorare l'efficienza del servizio nel tempo, tenendo al passo con i pattern all'interno dei dati.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '519'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Adobe Experience Platform [!DNL Data Science Workspace] consente di configurare l’esecuzione programmata del punteggio e della formazione su un servizio di machine learning. Automatizzare il processo di formazione e valutazione può contribuire a mantenere e migliorare l&#39;efficienza del servizio nel tempo, tenendo al passo con i pattern all&#39;interno dei dati.
 
-Questa esercitazione illustra i passaggi necessari per configurare le pianificazioni di formazione e assegnazione dei punteggi per un servizio esistente tramite **[!UICONTROL Service Gallery]**. È suddiviso nelle seguenti sezioni principali:
+Questa esercitazione illustra i passaggi necessari per configurare le pianificazioni di formazione e assegnazione dei punteggi per un servizio esistente tramite [!UICONTROL Service Gallery]. È suddiviso nelle seguenti sezioni principali:
 
 - [Configurare il punteggio pianificato](#configure-scheduled-scoring)
 - [Configurare la formazione pianificata](#configure-scheduled-training)
@@ -33,7 +33,7 @@ Questa esercitazione richiede un servizio esistente. Se non disponete di un serv
 
 Il punteggio del modello può essere configurato in modo da essere automatizzato su base programmata. Una volta creato il servizio, puoi seguire i passaggi descritti di seguito per configurare e applicare una pianificazione del punteggio:
 
-1. In Adobe Experience Platform, fare clic sulla **[!UICONTROL Services]** scheda situata nella colonna di navigazione a sinistra per accedere al *[!DNL Service Gallery]*. Trova il servizio su cui desideri pianificare le esecuzioni dei punteggi e fai clic **[!UICONTROL Open]** per visualizzarne la pagina *Panoramica* .
+1. In Adobe Experience Platform, fare clic sulla **[!UICONTROL Services]** scheda situata nella colonna di navigazione a sinistra per accedere al **[!DNL Service Gallery]**. Trova il servizio su cui desideri pianificare le esecuzioni dei punteggi e fai clic **[!UICONTROL Open]** per visualizzarne la pagina **Panoramica** .
    ![](../images/models-recipes/schedule/click_to_open.png)
 
 2. Nella pagina Panoramica sono visualizzate le informazioni relative al punteggio del servizio. Fate clic sul **[!UICONTROL Update Schedule]** collegamento per configurare una pianificazione del punteggio.
@@ -42,7 +42,7 @@ Il punteggio del modello può essere configurato in modo da essere automatizzato
 3. Configura la frequenza, la data di inizio, la data di fine, il dataset di input e il dataset di output per la pianificazione del punteggio. Una volta completate le configurazioni, fare clic su **[!UICONTROL Create]** per aggiornare la pianificazione del punteggio del Servizio.
    ![](../images/models-recipes/schedule/14_configure_scoring_schedule.png)
 
-4. La pianificazione aggiornata del punteggio viene visualizzata nella pagina *Panoramica* del servizio.
+4. La pianificazione aggiornata del punteggio viene visualizzata nella pagina **Panoramica** del servizio.
    ![](../images/models-recipes/schedule/service_with_scoring_schedule.png)
 
 
@@ -52,7 +52,7 @@ La configurazione delle esecuzioni di formazione pianificate su un servizio assi
 
 Una volta creato il servizio, potete seguire i passaggi descritti di seguito per configurare e applicare un programma di formazione:
 
-1. In Adobe Experience Platform, fare clic sulla **[!UICONTROL Services]** scheda situata nella colonna di navigazione a sinistra per accedere al **[!UICONTROL Service Gallery]**. Individuate il servizio sul quale desiderate pianificare l&#39;esecuzione della formazione e fate clic **[!UICONTROL Open]** per visualizzarne la pagina *Panoramica* .
+1. In Adobe Experience Platform, fare clic sulla **[!UICONTROL Services]** scheda situata nella colonna di navigazione a sinistra per accedere al **[!UICONTROL Service Gallery]**. Individuate il servizio sul quale desiderate pianificare l&#39;esecuzione della formazione e fate clic **[!UICONTROL Open]** per visualizzarne la pagina **Panoramica** .
    ![](../images/models-recipes/schedule/click_to_open.png)
 
 2. Nella pagina Panoramica sono visualizzate le informazioni di formazione del Servizio. Fate clic sul **[!UICONTROL Update Schedule]** collegamento per configurare una pianificazione della formazione.
@@ -61,7 +61,7 @@ Una volta creato il servizio, potete seguire i passaggi descritti di seguito per
 3. Configurate la frequenza, la data di inizio, la data di fine e il set di dati di input utilizzati per la pianificazione della formazione. Una volta completate le configurazioni, fate clic su **[!UICONTROL Create]** per aggiornare la pianificazione della formazione del Servizio.
    ![](../images/models-recipes/schedule/12_configure_training_schedule.png)
 
-4. La pianificazione della formazione aggiornata viene visualizzata nella pagina *Panoramica* del servizio.
+4. La pianificazione della formazione aggiornata viene visualizzata nella pagina **Panoramica** del servizio.
    ![](../images/models-recipes/schedule/service_with_training_schedule.png)
 
 ## Passaggi successivi
