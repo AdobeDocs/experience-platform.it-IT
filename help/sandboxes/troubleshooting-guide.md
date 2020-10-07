@@ -5,7 +5,7 @@ title: Guida alla risoluzione dei problemi sandbox
 topic: troubleshooting guide
 description: Questo documento contiene le risposte alle domande frequenti sulle sandbox in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '544'
 ht-degree: 0%
@@ -30,9 +30,9 @@ Le sandbox sono partizioni virtuali all&#39;interno di una singola istanza di  E
 * Sandbox produzione
 * Sandbox non di produzione
 
- Experience Platform fornisce un unico sandbox **di** produzione, che non può essere eliminato o reimpostato. Per una singola istanza della piattaforma può esistere un solo sandbox di produzione.
+ Experience Platform fornisce una singola sandbox di produzione, che non può essere eliminata o reimpostata. Per una singola istanza della piattaforma può esistere un solo sandbox di produzione.
 
-Per contro, più sandbox **non di produzione** possono essere create dagli amministratori sandbox per una singola istanza della piattaforma. Le sandbox non di produzione consentono di testare le funzioni, eseguire esperimenti e creare configurazioni personalizzate senza influire sulla sandbox di produzione. Inoltre, le sandbox non di produzione dispongono di una funzione di ripristino che rimuove tutte le risorse create dal cliente dalla sandbox. I sandbox non di produzione non possono essere convertiti in sandbox di produzione. Una licenza di Experience Platform  predefinita concede cinque sandbox (una produzione e quattro non di produzione). Potete aggiungere pacchetti di dieci sandbox non di produzione fino a un massimo di 75 sandbox totali. Per maggiori informazioni, contattate l&#39;amministratore dell&#39;organizzazione IMS o il rappresentante commerciale  Adobe.
+Per contro, più sandbox non di produzione possono essere create dagli amministratori sandbox per una singola istanza della piattaforma. Le sandbox non di produzione consentono di testare le funzioni, eseguire esperimenti e creare configurazioni personalizzate senza influire sulla sandbox di produzione. Inoltre, le sandbox non di produzione dispongono di una funzione di ripristino che rimuove tutte le risorse create dal cliente dalla sandbox. I sandbox non di produzione non possono essere convertiti in sandbox di produzione. Una licenza di Experience Platform  predefinita concede cinque sandbox (una produzione e quattro non di produzione). Potete aggiungere pacchetti di dieci sandbox non di produzione fino a un massimo di 75 sandbox totali. Per maggiori informazioni, contattate l&#39;amministratore dell&#39;organizzazione IMS o il rappresentante commerciale  Adobe.
 
 Per ulteriori informazioni, consultate la panoramica [delle](./home.md) sandbox.
 
@@ -50,7 +50,7 @@ Le sandbox sono partizioni isolate di una singola istanza della piattaforma, con
 
 ## Ho appena creato una sandbox. Come si impostano le autorizzazioni per gli utenti che lavoreranno con questa sandbox?
 
-Adobe Admin Console collega gli utenti alle sandbox e alle autorizzazioni tramite l&#39;uso dei profili **di** prodotto. Dopo aver creato una nuova sandbox, andate alla scheda _Autorizzazioni_ del profilo di prodotto a cui desiderate concedere l&#39;accesso, quindi fate clic su **Sandbox**. Da qui, potete aggiungere o rimuovere l&#39;accesso alla nuova sandbox allo stesso modo delle altre autorizzazioni.
+Adobe Admin Console collega gli utenti alle sandbox e alle autorizzazioni tramite l&#39;uso dei profili di prodotto. Dopo aver creato una nuova sandbox, andate alla scheda **Autorizzazioni** del profilo di prodotto a cui desiderate concedere l&#39;accesso, quindi fate clic su **Sandbox**. Da qui, potete aggiungere o rimuovere l&#39;accesso alla nuova sandbox allo stesso modo delle altre autorizzazioni.
 
 Se desiderate aggiungere autorizzazioni univoche agli utenti di una particolare sandbox, potrebbe essere necessario creare un nuovo profilo di prodotto con le sandbox e le autorizzazioni appropriate applicate, e assegnare tali utenti a tale profilo.
 
