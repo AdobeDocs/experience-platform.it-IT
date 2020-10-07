@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;offer management;Offer Management
 solution: Experience Platform
-title: Offer Decisition Domain Model
+title: ', modello di dominio Offer Decisioning'
 topic: overview
 description: La decisione dell'offerta è un caso d'uso del servizio di gestione del servizio all'interno del quale si formalizzano e si gestiscono centralmente le regole e le previsioni utilizzate per coinvolgere i clienti nelle offerte.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '2640'
 ht-degree: 0%
@@ -13,25 +13,25 @@ ht-degree: 0%
 ---
 
 
-# Panoramica sul modello di dominio di decisione offerta
+# Panoramica  modello di dominio Offer Decisioning
 
-La decisione dell&#39;offerta è un caso d&#39;uso [!DNL Decisioning Service] entro il quale si formalizzano e si gestiscono centralmente le regole e le previsioni utilizzate per coinvolgere i clienti nelle offerte. La decisione dell&#39;offerta è considerata un tipo di decisione _**sul**_ contenuto. In questo caso d’uso, le opzioni _****_ decisionali sono denominate _**offerte**_ e sono caratterizzate in quanto tali dal contenuto ad esse allegato. Per un&#39;introduzione al modello a oggetti utilizzato dal [!DNL Decisioning Service], fare riferimento a [Decisioning Service Domain Model](experience-model.md).
+La decisione dell&#39;offerta è un caso d&#39;uso [!DNL Decisioning Service] entro il quale si formalizzano e si gestiscono centralmente le regole e le previsioni utilizzate per coinvolgere i clienti nelle offerte. La decisione dell&#39;offerta è considerata un tipo di decisione del contenuto. In questo caso d&#39;uso, le opzioni decisionali sono denominate offerte e sono caratterizzate come tali dal contenuto ad esse allegato. Per un&#39;introduzione al modello a oggetti utilizzato dal [!DNL Decisioning Service], fare riferimento a [Decisioning Service Domain Model](experience-model.md).
 
 L&#39;obiettivo è quello di presentare all&#39;utente finale una &quot;Migliore offerta&quot; in qualsiasi canale basata su criteri di targeting, vincoli di costi e di frequenza, nonché interazioni preliminari tra i canali, comprese le offerte precedenti.
 
-Come per tutti i casi di utilizzo di decisioni, le opzioni di decisione (offerte) vengono gestite in un archivio condiviso da un numero qualsiasi di applicazioni. Le offerte possono essere create da diversi dipartimenti dell&#39;organizzazione o da partner, e tali offerte possono essere aggiunte e rimosse ogni giorno.
+Come per tutti i casi di utilizzo di decisioni, le opzioni di decisione (offerte) vengono gestite in un repository condiviso da un numero qualsiasi di applicazioni. Le offerte possono essere create da diversi dipartimenti dell&#39;organizzazione o da partner, e tali offerte possono essere aggiunte e rimosse ogni giorno.
 
-Le offerte sono visivamente posizionate in esperienze più grandi dall&#39;applicazione che fornisce l&#39;esperienza. _**I posizionamenti**_, talvolta denominati punti o slot, sono componenti importanti per la creazione di una strategia. La progettazione di una strategia di offerta spesso inizia con la definizione di tali posizionamenti. In genere, un&#39;offerta presenta più rappresentazioni _**di**_ contenuto in modo che possa essere correttamente integrata in una varietà di esperienze, ognuna delle quali presenta vincoli dimensionali o di altro tipo e richiede formati multimediali diversi.
+Le offerte sono visivamente posizionate in esperienze più grandi dall&#39;applicazione che fornisce l&#39;esperienza. I posizionamenti, talvolta denominati punti o slot, sono componenti importanti per la creazione di una strategia. La progettazione di una strategia di offerta spesso inizia con la definizione di tali posizionamenti. In genere, un&#39;offerta presenta più rappresentazioni di contenuto in modo che possa essere correttamente integrata in una varietà di esperienze, ognuna delle quali presenta vincoli di dimensione variabile o di altro tipo e richiede formati multimediali diversi.
 
-Le offerte hanno spesso un&#39;associazione con i beni o servizi fisici e il calcolo dei costi comporta. Un&#39;organizzazione deve essere in grado di limitare le risorse consumate dalle offerte e deve quindi essere in grado di _**limitare**_ il numero totale di volte che un&#39;offerta può essere proposta.
+Le offerte hanno spesso un&#39;associazione con i beni o servizi fisici e il calcolo dei costi comporta. Un&#39;organizzazione deve essere in grado di limitare le risorse consumate dalle offerte e deve quindi essere in grado di contenere il numero totale di volte che un&#39;offerta può essere proposta.
 
 Il valore previsto di un&#39;offerta accettata all&#39;organizzazione è il criterio di ottimizzazione e si oppone al costo di fare un&#39;offerta. Costo, probabilità di accettazione e valore previsto viene utilizzato per classificare le offerte. L&#39;offerta migliore è quella con il maggiore impatto positivo previsto sugli obiettivi delle attività dell&#39;offerta.
 
-La decisione dell&#39;offerta considera le interazioni che un utente finale ha avuto, _**su molti canali**_ e applicazioni, sfruttando i dati evento del profilo e dell&#39;esperienza dell&#39;utente finale. Ad esempio, un’applicazione call center può utilizzare la funzione di decodifica delle offerte per attivare o disattivare un’offerta basata sugli acquisti effettuati e sulle revisioni pubblicate dall’utente finale; oppure un&#39;applicazione di gestione e-mail può basarsi sulla decisione dell&#39;offerta per selezionare la prossima offerta migliore in una newsletter settimanale, in base alla cronologia di navigazione di un sito Web.
+ Offer Decisioning considera le interazioni che un utente finale ha avuto, su molti canali e applicazioni, sfruttando i dati evento relativi al profilo e all&#39;esperienza dell&#39;utente finale. Ad esempio, un’applicazione call center può utilizzare  Offer Decisioning per abilitare o sopprimere un’offerta basata sugli acquisti effettuati e sulle revisioni pubblicate dall’utente finale; oppure un&#39;applicazione di gestione e-mail può basarsi su  Offer Decisioning per selezionare la Next Best Offer in una newsletter settimanale in base alla cronologia di navigazione di un sito Web.
 
-Le offerte hanno altre proprietà interessanti. Spesso, esiste un _**programma**_ o un intervallo di date e ore definito quando l&#39;offerta è valida e quando l&#39;offerta deve essere annullata.
+Le offerte hanno altre proprietà interessanti. Spesso, esiste un programma o un intervallo di date e date definiti quando l&#39;offerta è valida e quando l&#39;offerta deve essere annullata.
 
-Infine, l&#39;appello di un&#39;offerta si degrada con la frequenza con cui viene presentata. Un&#39;offerta che non viene accettata dopo essere stata ripetutamente proposta è un&#39;opportunità persa, perché una diversa offerta avrebbe potuto essere presentata. Per questo motivo, è _**necessario gestire la stanchezza**_ dell&#39;utente finale.
+Infine, l&#39;appello di un&#39;offerta si degrada con la frequenza con cui viene presentata. Un&#39;offerta che non viene accettata dopo essere stata ripetutamente proposta è un&#39;opportunità persa, perché una diversa offerta avrebbe potuto essere presentata. Per questo motivo, è necessario gestire la stanchezza degli utenti finali.
 
 ## Strategia di decisione dell&#39;offerta
 
@@ -52,7 +52,7 @@ L&#39;approccio generale consiste nel limitare la selezione delle offerte fino a
 | Modello per utilità *prevista* | Livello o priorità dell&#39;offerta |
 
 Il numero totale di offerte nell&#39;inventario delle opzioni è in genere abbastanza grande (nell&#39;ordine di 10.000) e ogni attività di offerta può essere focalizzata su offerte che rientrano in una categoria diversa (argomento). La strategia di decisione dell&#39;offerta consente di allegare un filtro dell&#39;offerta a un&#39;attività dell&#39;offerta. Ulteriori vincoli saranno valutati al momento della richiesta della decisione.
-Nelle sezioni seguenti vengono descritti in dettaglio i componenti per il dominio di decisione delle offerte.
+Nelle sezioni seguenti vengono descritti in dettaglio i componenti per il dominio Offer Decisioning .
 
 ## Offerte generali
 
@@ -126,7 +126,7 @@ Quando le opzioni vengono posizionate in modo esplicito in una raccolta, il rela
 
 ## Attività offerta
 
-Le attività configurano e controllano il processo decisionale. Attualmente, la strategia di decisione è principalmente predeterminata, ma le future iterazioni del modello di dominio di Offer Decisioning consentiranno la selezione di modelli, regole aggiuntive e vincoli.
+Le attività configurano e controllano il processo decisionale. Attualmente, la strategia decisionale è principalmente predeterminata, ma le future iterazioni del modello di dominio Offer Decisioning  consentiranno la selezione di modelli, regole e vincoli aggiuntivi.
 
 Un&#39;esperienza può essere assemblata utilizzando più attività contemporaneamente. Attualmente, fino a 30 attività possono essere affrontate in un&#39;unica richiesta di decisione. Se più di 30 attività o slot in un&#39;esperienza devono essere riempiti di contenuto, è possibile effettuare più richieste per lo stesso profilo. Tuttavia, quando le attività sono incluse nella stessa richiesta di decisione, la deduplicazione delle proposte di offerta sarà effettuata tra tali attività.
 
@@ -150,5 +150,5 @@ Quando i client creano e collegano il grafico degli oggetti per le decisioni, in
 
       - La creazione di offerte di fallback adeguate è l&#39;ultimo passaggio di questo flusso di lavoro. Un&#39;offerta di fallback è molto simile a un&#39;offerta generale senza vincoli.
 
-- L&#39;ultimo flusso di lavoro riguarda la creazione di attività. Tuttavia, questo passaggio non si verifica necessariamente in sequenza dopo il flusso di lavoro per la creazione delle offerte. Entrambi i processi sono in corso e simultanei. Le attività sono utilizzate per limitare l&#39;ambito delle opzioni per argomento e per luogo in cui vengono presentate le decisioni. Un&#39;attività fa riferimento a una [raccolta](#offer-collections) e a una posizione. Deve inoltre specificare un&#39;offerta [di](#fallback-offers) fallback utilizzata nei casi in cui non è possibile determinare un&#39;offerta valida.
+- L&#39;ultimo flusso di lavoro riguarda la creazione di attività. Tuttavia, questo passaggio non si verifica necessariamente in sequenza dopo il flusso di lavoro per la creazione delle offerte. Entrambi i processi sono in corso e simultanei. Le attività sono utilizzate per limitare l&#39;ambito delle opzioni per argomento e per luogo in cui vengono presentate le decisioni. Un&#39;attività fa riferimento a una [raccolta](#offer-collections) e a una posizione. Deve inoltre specificare un&#39;offerta [di](#fallback-offers) fallback utilizzata nei casi in cui non è possibile determinare un&#39;offerta di qualificazione.
 
