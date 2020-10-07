@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
-source-wordcount: '679'
-ht-degree: 5%
+source-wordcount: '676'
+ht-degree: 7%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 **Data di rilascio: 11 dicembre 2019**
 
-Aggiornamenti alle funzionalità esistenti in Adobe Experience Platform:
+Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 * [[!DNL Segmentation Service]](#segmentation)
 * [[!DNL Decisioning Service]](#decisioning)
@@ -34,7 +34,7 @@ Adobe Experience Platform Segmentation Service fornisce un&#39;interfaccia utent
 
 | Funzione | Descrizione |
 |--- | ---|
-| Scheda Pubblico unito in [!DNL Segment Builder] | Le schede [!UICONTROL _Segmenti_] e [!UICONTROL _Pubblico_] di [!DNL Segment Builder] sono state combinate in una singola scheda [!UICONTROL _Audience_] . Questa scheda consente di individuare e cercare audience esistenti, che potete quindi trascinare e rilasciare nell&#39;area di lavoro del generatore di regole per creare una nuova definizione di segmento. Il riferimento a un&#39;audience può aggiungere uno dei seguenti set di regole logiche alla nuova definizione di segmento: Iscrizione dell&#39;audience come regola, L&#39;intero set di logica di regole che ha definito l&#39;audience di riferimento. |
+| Scheda Pubblico unito in [!DNL Segment Builder] | Le [!UICONTROL Segments] e [!UICONTROL Audiences] le schede [!DNL Segment Builder] sono state combinate in una singola [!UICONTROL Audiences] scheda. Questa scheda consente di individuare e cercare audience esistenti, che potete quindi trascinare e rilasciare nell&#39;area di lavoro del generatore di regole per creare una nuova definizione di segmento. Il riferimento a un&#39;audience può aggiungere uno dei seguenti set di regole logiche alla nuova definizione di segmento: Iscrizione dell&#39;audience come regola, L&#39;intero set di logica di regole che ha definito l&#39;audience di riferimento. |
 | Nuova posizione per il selettore dei criteri di unione | La posizione del selettore dei criteri di unione nell&#39; [!DNL Segment Builder] area è stata modificata. Per selezionare un criterio di unione per una definizione di segmento, fai clic sull&#39;icona a forma di ingranaggio nella **[!UICONTROL Fields]** scheda, quindi utilizza il menu a **[!UICONTROL Merge Policy]** discesa per selezionare il criterio di unione che desideri utilizzare. |
 
 **Problemi noti**
