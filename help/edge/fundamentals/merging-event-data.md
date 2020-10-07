@@ -5,7 +5,7 @@ description: Scoprite come unire i dati dell'evento SDK Web  Experience Platform
 seo-description: Scoprite come unire i dati dell'evento SDK Web  Experience Platform
 keywords: merge;event data;eventMergeId;createEventMergeId;sendEvent;mergeId;merge id;eventMergeIdPromise; Merge Id Promise;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >Questa funzione è ancora in fase di sviluppo. Non tutte le soluzioni saranno in grado di unire i dati dell&#39;evento come descritto in questa pagina.
 
-A volte, non tutti i dati sono disponibili quando si verifica un evento. Potrebbe essere utile acquisire i dati _disponibili_ , in modo che non vadano perduti se, ad esempio, l&#39;utente chiude il browser. D&#39;altro canto, è possibile includere anche qualsiasi dato che diventerà disponibile in un secondo momento.
+A volte, non tutti i dati sono disponibili quando si verifica un evento. Potrebbe essere utile acquisire i dati che si dispone, in modo che non vadano persi se, ad esempio, l&#39;utente chiude il browser. D&#39;altro canto, è possibile includere anche qualsiasi dato che diventerà disponibile in un secondo momento.
 
 In questi casi, è possibile unire i dati con gli eventi precedenti passando `eventMergeId` come opzione ai `event` comandi come segue:
 
