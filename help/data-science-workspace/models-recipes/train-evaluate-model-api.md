@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Questa esercitazione mostrerà come creare, formare e valutare un modello utilizzando le chiamate API Sensei Machine Learning.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1210'
 ht-degree: 1%
@@ -35,7 +35,7 @@ Dall&#39;esercitazione dovrebbero ora essere disponibili i seguenti valori:
 
 ## Flusso di lavoro API
 
-Utilizzeremo le API per creare un Experience Run per la formazione. Per questa esercitazione, ci occuperemo degli endpoint **Motori**, **MLInants** e **Sperimenti** . Il grafico seguente delinea la relazione tra i tre e introduce anche l&#39;idea di un&#39;esecuzione e un modello.
+Utilizzeremo le API per creare un Experience Run per la formazione. Per questa esercitazione, ci concentreremo sui motori, sulle istanze MLI e sugli endpoint degli esperimenti. Il grafico seguente delinea la relazione tra i tre e introduce anche l&#39;idea di un&#39;esecuzione e un modello.
 
 ![](../images/models-recipes/train-evaluate-api/engine_hierarchy_api.png)
 
