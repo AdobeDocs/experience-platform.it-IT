@@ -4,7 +4,7 @@ seo-title: Domande frequenti su Adobe Experience Platform Web SDK
 description: Domande frequenti sull’SDK Adobe Experience Platform Web
 seo-description: Domande frequenti sull’SDK Adobe Experience Platform Web
 translation-type: tm+mt
-source-git-commit: f178da80d0902f76868986426600f3da426cf24d
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1683'
 ht-degree: 2%
@@ -117,7 +117,7 @@ Dipende. Adobe Experience Platform Web SDK può essere distribuito in due stili 
 
 * **Un altro tag:** Se al sito sono già stati assegnati tag per soluzioni e non è possibile eseguire un nuovo tag, ma si desidera inviare i dati ad Adobe Experience Platform Edge Network per casi di utilizzo  Experience Platform o per le prossime funzioni lato server di Launch (vedi sotto), è possibile aggiungere il `alloy.js` tag al sito, dove funziona come &quot;un altro tag&quot;.
 
-* **Il tag uno e solo:** Se desiderate utilizzare l&#39;SDK Web per una soluzione di Experience Cloud , dovete utilizzarlo per _tutte_ le soluzioni presenti nella pagina. Ad esempio, se il sito dispone già di tag per Analytics e lo desiderate utilizzare per Target, dovete utilizzarlo sia per entrambi, sia per tutti gli altri siti in futuro.
+* **Il tag uno e solo:** Se desiderate utilizzare l&#39;SDK Web per una soluzione di Experience Cloud , dovete utilizzarlo per tutte le soluzioni presenti nella pagina. Ad esempio, se il sito dispone già di tag per Analytics e lo desiderate utilizzare per Target, dovete utilizzarlo sia per entrambi, sia per tutti gli altri siti in futuro.
 
 In altre parole, se decidi di utilizzare l’SDK Web per Adobe Experience Platform per i casi di utilizzo non-soluzione, puoi assegnare un tag al sito `alloy.js` e continuare come se si trattasse di una nuova soluzione. Se desiderate utilizzarlo per  Adobe Analytics, Target o  Audience Manager, o per i casi di utilizzo di applicazioni, potrebbe essere necessario rimuovere uno qualsiasi dei codici legacy nella pagina.
 
@@ -141,7 +141,7 @@ Tuttavia:
 
 * Adobe Experience Platform Web SDK richiede un ID di configurazione Experience Edge che consente alla rete periferica di identificare il flusso e determinare le operazioni da eseguire con i dati. Questo ID viene creato in Launch. Ciò non significa che devi usare Launch per creare proprietà o distribuire il codice JavaScript, ma devi usare Launch per creare un ID di configurazione.
 
-*  Adobe Experience Platform Launch non è solo il migliore gestore di tag e SDK disponibile, ma semplifica notevolmente la distribuzione `alloy.js` e la mappatura dei dati agli schemi XDM. Se decidi di non utilizzare Launch, devi gestire la distribuzione, l&#39;evento `alloy.js`e la mappatura dei dati in XDM prima di inviarli. Si tratta di un processo _molto_ più difficile rispetto all&#39;utilizzo di Launch.
+*  Adobe Experience Platform Launch non è solo il migliore gestore di tag e SDK disponibile, ma semplifica notevolmente la distribuzione `alloy.js` e la mappatura dei dati agli schemi XDM. Se decidi di non utilizzare Launch, devi gestire la distribuzione, l&#39;evento `alloy.js`e la mappatura dei dati in XDM prima di inviarli. Si tratta di un processo molto più difficile rispetto all&#39;utilizzo di Launch.
 
 * È consigliabile utilizzare Launch per la distribuzione, anche se è l&#39;unico tag utilizzato per `alloy.js`la distribuzione.
 
