@@ -5,7 +5,7 @@ title: Nozioni di base sulla composizione dello schema
 topic: overview
 description: Questo documento fornisce un'introduzione agli schemi di Experience Data Model (XDM) e ai blocchi costitutivi, ai principi e alle procedure ottimali per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f7abccb677294e1595fb35c27e03c30eb968082a
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '2815'
 ht-degree: 0%
@@ -54,7 +54,7 @@ I dati destinati all&#39;uso in [!DNL Experience Platform] sono raggruppati in d
 * **Record data**: Fornisce informazioni sugli attributi di un oggetto. Un soggetto potrebbe essere un&#39;organizzazione o un individuo.
 * **Dati** serie temporali: Fornisce un&#39;istantanea del sistema al momento in cui un&#39;azione è stata eseguita direttamente o indirettamente da un soggetto del record.
 
-Tutti gli schemi XDM descrivono i dati che possono essere classificati come record o serie temporali. Il comportamento dei dati di uno schema è definito dalla **classe** dello schema, che viene assegnata a uno schema al momento della sua creazione. Le classi XDM sono descritte in dettaglio più avanti in questo documento.
+Tutti gli schemi XDM descrivono i dati che possono essere classificati come record o serie temporali. Il comportamento dei dati di uno schema è definito dalla classe dello schema, che viene assegnata a uno schema al momento della sua prima creazione. Le classi XDM sono descritte in dettaglio più avanti in questo documento.
 
 Gli schemi di record e di serie temporali contengono una mappa di identità (`xdm:identityMap`). Questo campo contiene la rappresentazione di identità di un oggetto, ricavata dai campi contrassegnati come &quot;Identità&quot; come descritto nella sezione successiva.
 
@@ -133,7 +133,7 @@ Gli schemi sono composti utilizzando la seguente formula:
 
 **Classe + Mixin&amp;ast; = Schema XDM**
 
-&amp;ast;Uno schema è composto da una classe e da _zero o più_ mixin. Ciò significa che è possibile comporre uno schema di set di dati senza utilizzare i mixin.
+&amp;ast;Uno schema è composto da una classe e da zero o più mixin. Ciò significa che è possibile comporre uno schema di set di dati senza utilizzare i mixin.
 
 ### Classe
 
