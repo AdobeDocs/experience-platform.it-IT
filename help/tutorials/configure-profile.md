@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Questo documento illustra i passaggi da seguire e fornisce collegamenti alle esercitazioni per completare ogni singolo flusso di lavoro.
 translation-type: tm+mt
-source-git-commit: 844ef4a0131e41d3a7a3da319ccf7f8d5cf1f40d
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1000'
 ht-degree: 0%
