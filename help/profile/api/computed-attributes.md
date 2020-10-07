@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Attributi calcolati - API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '2365'
+source-wordcount: '2366'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ L&#39;endpoint API utilizzato in questa guida fa parte dell&#39;API [Profilo cli
 
 Adobe Experience Platform consente di importare e unire facilmente dati da più origini per generare [!DNL Real-time Customer Profiles]. Ogni profilo contiene informazioni importanti relative a un individuo, come le informazioni di contatto, le preferenze e la cronologia degli acquisti, fornendo una visualizzazione a 360 gradi del cliente.
 
-Alcune delle informazioni raccolte nel profilo sono facilmente comprensibili quando si leggono direttamente i campi di dati (ad esempio, &quot;nome&quot;), mentre altri dati richiedono l&#39;esecuzione di più calcoli o l&#39;utilizzo di altri campi e valori per generare le informazioni (ad esempio, &quot;totale dell&#39;acquisto nel corso del ciclo di vita&quot;). Per semplificare la comprensione dei dati, [!DNL Platform] è possibile creare **[!UICONTROL computed attributes]** che esegua automaticamente i riferimenti e i calcoli, restituendo il valore nel campo appropriato.
+Alcune delle informazioni raccolte nel profilo sono facilmente comprensibili quando si leggono direttamente i campi di dati (ad esempio, &quot;nome&quot;), mentre altri dati richiedono l&#39;esecuzione di più calcoli o l&#39;utilizzo di altri campi e valori per generare le informazioni (ad esempio, &quot;totale dell&#39;acquisto nel corso del ciclo di vita&quot;). Per semplificare la comprensione dei dati, [!DNL Platform] è possibile creare attributi calcolati che eseguono automaticamente i riferimenti e i calcoli, restituendo il valore nel campo appropriato.
 
 Gli attributi calcolati includono la creazione di un&#39;espressione, o &quot;regola&quot;, che opera sui dati in arrivo e memorizza il valore risultante in un attributo o un evento di profilo. Le espressioni possono essere definite in diversi modi, consentendo di specificare che una regola valuta solo gli eventi in arrivo, un evento in arrivo e i dati del profilo o un evento in arrivo, i dati del profilo e gli eventi storici.
 
@@ -69,7 +69,7 @@ Una volta individuato lo schema, fare clic sul suo nome per aprire il [!DNL Sche
 
 ### Creare un mixin
 
-Per creare un nuovo mixin, fate clic su **[!UICONTROL Add]** accanto a *Mixins* nella **[!UICONTROL Composition]** sezione a sinistra dell’editor. Viene visualizzata una finestra di **[!UICONTROL Add mixin]** dialogo in cui potete visualizzare i mixin esistenti. Fate clic sul pulsante di scelta per **[!UICONTROL Create new mixin]** definire il nuovo mixin.
+Per creare un nuovo mixin, fate clic su **[!UICONTROL Add]** accanto a **[!UICONTROL Mixins]** nella **[!UICONTROL Composition]** sezione a sinistra dell’editor. Viene visualizzata una finestra di **[!UICONTROL Add mixin]** dialogo in cui potete visualizzare i mixin esistenti. Fate clic sul pulsante di scelta per **[!UICONTROL Create new mixin]** definire il nuovo mixin.
 
 Assegna al mixin un nome e una descrizione e fai clic su **[!UICONTROL Add mixin]** al termine.
 
@@ -77,7 +77,7 @@ Assegna al mixin un nome e una descrizione e fai clic su **[!UICONTROL Add mixin
 
 ### Aggiunta di un campo attributo calcolato allo schema
 
-Il nuovo mixin dovrebbe ora essere visualizzato nella **[!UICONTROL Mixins]** sezione sotto **[!UICONTROL Composition]**. Fate clic sul nome del mixin e più **[!UICONTROL Add field]** pulsanti verranno visualizzati nella sezione *[!UICONTROL Structure]** dell&#39;editor.
+Il nuovo mixin dovrebbe ora essere visualizzato nella sezione &quot;[!UICONTROL Mixins]&quot; in &quot;[!UICONTROL Composition]&quot;. Fate clic sul nome del mixin e **[!UICONTROL Add field]** **[!UICONTROL Structure]** nella sezione dell’editor verranno visualizzati più pulsanti.
 
 Selezionare **[!UICONTROL Add field]** accanto al nome dello schema per aggiungere un campo di primo livello, oppure è possibile aggiungere il campo in qualsiasi punto dello schema desiderato.
 
