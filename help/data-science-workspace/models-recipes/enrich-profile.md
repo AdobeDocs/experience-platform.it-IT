@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Questo documento fornisce un'esercitazione dettagliata per arricchire il profilo cliente in tempo reale con informazioni approfondite sulle attività di machine learning, i passaggi sono suddivisi nelle seguenti sezioni, creare uno schema/set di dati di output, configurare uno schema/set di dati di output e creare segmenti utilizzando Segment Builder (Generatore di segmenti).
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1184'
 ht-degree: 0%
@@ -43,10 +43,10 @@ Il primo passo verso l&#39;arricchimento [!DNL Real-time Customer Profile] con l
 
 La composizione di uno schema inizia con l&#39;assegnazione di una classe. Le classi definiscono gli aspetti comportamentali dei dati che lo schema conterrà (record o serie temporali). Questa sezione fornisce istruzioni di base per creare uno schema utilizzando il generatore di schemi. Per un&#39;esercitazione più dettagliata, fare riferimento all&#39;esercitazione sulla [creazione di uno schema con l&#39;Editor](../../xdm/tutorials/create-schema-ui.md)di schema.
 
-1. In Adobe Experience Platform, fare clic sulla **[!UICONTROL Schema]** scheda per accedere al browser dello schema. Fare clic **[!UICONTROL Create Schema]** per accedere all&#39;Editor **schema, in cui è possibile creare e creare schemi in modo interattivo.
+1. In Adobe Experience Platform, fare clic sulla **[!UICONTROL Schema]** scheda per accedere al browser dello schema. Fare clic **[!UICONTROL Create Schema]** per accedere all&#39;Editor ****schema, in cui è possibile creare e creare schemi in modo interattivo.
    ![](../images/models-recipes/enrich-rtcdp/schema_browser.png)
 
-2. Nella finestra *Composizione* , fate clic **[!UICONTROL Assign]** per esplorare le classi disponibili.
+2. Nella finestra **Composizione** , fate clic **[!UICONTROL Assign]** per esplorare le classi disponibili.
    * Per assegnare una classe esistente, fate clic sulla classe desiderata ed evidenziatela, quindi fate clic su **[!UICONTROL Assign Class]**.
       ![](../images/models-recipes/enrich-rtcdp/existing_class.png)
 
@@ -55,7 +55,7 @@ La composizione di uno schema inizia con l&#39;assegnazione di una classe. Le cl
 
    A questo punto, la struttura dello schema deve contenere alcuni campi di classe ed è possibile assegnare i mixin. Un mixin è un gruppo di uno o più campi che descrivono un concetto particolare.
 
-3. Nella finestra *Composizione* , fate clic **[!UICONTROL Add]** nella sottosezione *Mixins* .
+3. Nella finestra **Composizione** , fate clic **[!UICONTROL Add]** nella sottosezione **Mixins** .
    * Per assegnare un mixin esistente, fate clic ed evidenziate il mixin desiderato, quindi fate clic **[!UICONTROL Add Mixin]**. A differenza delle classi, è possibile assegnare più mixin a un singolo schema, purché sia appropriato.
       ![](../images/models-recipes/enrich-rtcdp/existing_mixin.png)
 
