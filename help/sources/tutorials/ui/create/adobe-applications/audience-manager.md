@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Questa esercitazione illustra i passaggi necessari per creare un connettore sorgente che consenta ad Adobe Audience Manager di inserire i dati dell'evento Consumer Experience Event nella piattaforma utilizzando l'interfaccia utente.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 2%
@@ -20,9 +20,9 @@ Questa esercitazione illustra i passaggi necessari per creare un connettore sorg
 
 ## Creare una connessione di origine con Adobe Audience Manager
 
-Accedete ad [Adobe Experience Platform](https://platform.adobe.com) , quindi selezionate **Origini** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro delle origini. Nella schermata *Catalogo* sono visualizzate diverse sorgenti con le quali è possibile creare connessioni sorgente e ogni origine mostra il numero di connessioni esistenti ad esse associate.
+Accedete ad [Adobe Experience Platform](https://platform.adobe.com) , quindi selezionate **Origini** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro delle origini. Nella schermata **Catalogo** sono visualizzate diverse sorgenti con le quali è possibile creare connessioni sorgente e ogni origine mostra il numero di connessioni esistenti ad esse associate.
 
-Nella categoria *applicazioni* Adobe, selezionate **Adobe Audience Manager** per esporre una barra delle informazioni sul lato destro dello schermo. La barra delle informazioni fornisce una breve descrizione dell’origine selezionata e delle opzioni per visualizzarne la documentazione o per collegarsi all’origine.
+Nella categoria **applicazioni** Adobe, selezionate **Adobe Audience Manager** per esporre una barra delle informazioni sul lato destro dello schermo. La barra delle informazioni fornisce una breve descrizione dell’origine selezionata e delle opzioni per visualizzarne la documentazione o per collegarsi all’origine.
 
 Per creare un nuovo connettore di origine per Adobe Audience Manager, fare clic su **Aggiungi dati**.
 
@@ -32,7 +32,7 @@ Viene visualizzata una finestra di dialogo. Fate clic su **Connect** per creare 
 
 ![](../../../../images/tutorials/create/aam/connect_full.png)
 
-Se è stabilita una connessione di origine con Adobe Audience Manager, viene visualizzata la pagina dell&#39;attività ** Origine per  connettore Audience Manager.
+Se è stabilita una connessione di origine con Adobe Audience Manager, viene visualizzata la pagina dell&#39;attività **** Origine per  connettore Audience Manager.
 
 ![](../../../../images/tutorials/create/aam/flow.png)
 
