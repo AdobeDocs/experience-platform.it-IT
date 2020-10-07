@@ -5,7 +5,7 @@ title: Guida alla risoluzione dei problemi di Adobe Experience Platform Identity
 topic: troubleshooting
 description: Questo documento contiene le risposte alle domande frequenti su Adobe Experience Platform Identity Service e una guida alla risoluzione dei problemi per individuare gli errori più comuni.
 translation-type: tm+mt
-source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '2248'
 ht-degree: 1%
@@ -100,7 +100,7 @@ Utilizzando l&#39;API [Servizio](https://www.adobe.io/apis/experienceplatform/ho
 
 ## Cosa sono le identità composite e gli XID?
 
-Alle identità viene fatto riferimento nelle chiamate API tramite la loro identità composita o XID. Un&#39;identità **** composita è una rappresentazione di un&#39;identità che contiene un valore ID e uno spazio dei nomi. Un **XID** è un identificatore a valore singolo che rappresenta lo stesso costrutto di un&#39;identità composita (un ID e uno spazio dei nomi) e viene automaticamente assegnato alle nuove identità se persistente da Identity Service. Per ulteriori informazioni, consulta la panoramica [API del servizio](./home.md) identità.
+Alle identità viene fatto riferimento nelle chiamate API tramite la loro identità composita o XID. Un&#39;identità composita è una rappresentazione di un&#39;identità che contiene un valore ID e uno spazio dei nomi. Un XID è un identificatore a valore singolo che rappresenta lo stesso costrutto di un&#39;identità composita (un ID e uno spazio dei nomi) e viene assegnato automaticamente alle nuove identità se persistente da Servizio identità. Per ulteriori informazioni, consulta la panoramica [API del servizio](./home.md) identità.
 
 ## In che modo Identity Service gestisce le informazioni personali (PII)?
 
@@ -114,7 +114,7 @@ Per i passaggi relativi all&#39;applicazione e alla gestione delle etichette di 
 
 ## Ci sono delle considerazioni quando si hashing delle identità basate su PII?
 
-Se si inviano valori PII con hash a Servizio identità, è necessario utilizzare lo stesso metodo di crittografia per tutti i set di dati. In questo modo lo stesso valore di identità nei set di dati genera gli stessi valori con hash e può essere confrontato e collegato correttamente nel grafico dell&#39;identità.
+Se si inviano valori PII con hash al servizio identità, è necessario utilizzare lo stesso metodo di crittografia per tutti i set di dati. In questo modo lo stesso valore di identità nei set di dati genera gli stessi valori con hash e può essere confrontato e collegato correttamente nel grafico dell&#39;identità.
 
 <!-- Documentation does not show any methods of editing the identityMap directly, and this table never overtly recommends using identityMap anyway. This should probably be removed unless PM thinks otherwise. -->
 <!-- ## When should I use the Identity map rather than labeling individual XDM schema fields?
