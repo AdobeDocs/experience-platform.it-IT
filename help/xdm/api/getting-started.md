@@ -5,7 +5,7 @@ title: Guida per lo sviluppo API del Registro di sistema dello schema
 description: Il Registro di sistema dello schema viene utilizzato per accedere alla Libreria schema in Adobe Experience Platform, fornendo un'interfaccia utente e RESTful API da cui sono accessibili tutte le risorse libreria disponibili. Utilizzando l'API del Registro di sistema dello schema, è possibile eseguire operazioni CRUD di base per visualizzare e gestire tutti gli schemi e le risorse correlate disponibili in Adobe Experience Platform.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '1295'
 ht-degree: 0%
@@ -162,7 +162,7 @@ Una risposta di successo restituisce informazioni relative all&#39;utilizzo dell
 
 ## Comprendere le `CONTAINER_ID` {#container}
 
-Le chiamate all&#39; [!DNL Schema Registry] API richiedono l&#39;utilizzo di un `CONTAINER_ID`. Esistono due contenitori in base ai quali è possibile effettuare chiamate API: il contenitore **** globale e il contenitore **** tenant.
+Le chiamate all&#39; [!DNL Schema Registry] API richiedono l&#39;utilizzo di un `CONTAINER_ID`. Esistono due contenitori in base ai quali è possibile effettuare chiamate API: il contenitore globale e il contenitore tenant.
 
 ### Contenitore globale
 
