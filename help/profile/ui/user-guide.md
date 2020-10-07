@@ -4,9 +4,9 @@ title: Guida utente del profilo cliente in tempo reale
 topic: guide
 description: Profilo cliente in tempo reale crea una visualizzazione olistica di ciascuno dei tuoi clienti, combinando dati da più canali tra cui dati online, offline, CRM e di terze parti. Questo documento funge da guida per l'interazione con il profilo cliente in tempo reale nell'interfaccia utente di Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1243'
+source-wordcount: '1256'
 ht-degree: 0%
 
 ---
@@ -40,11 +40,11 @@ Selezionate la **[!UICONTROL Browse]** scheda per cercare i profili in base all&
 
 ### Metriche profilo {#profile-metrics}
 
-Sul lato destro della [!UICONTROL Browse] scheda sono presenti diverse metriche importanti correlate ai dati del profilo, tra cui il conteggio [totale del](#profile-count) profilo e un elenco di [profili in base allo spazio dei nomi](#profiles-by-namespace).
+Sul lato destro della **[!UICONTROL Browse]** scheda sono presenti diverse metriche importanti correlate ai dati del profilo, tra cui il conteggio [totale del](#profile-count) profilo e un elenco di [profili in base allo spazio dei nomi](#profiles-by-namespace).
 
 Queste metriche del profilo vengono valutate utilizzando il criterio di unione predefinito dell&#39;organizzazione. Per ulteriori informazioni sull&#39;utilizzo dei criteri di unione, inclusa la modalità di definizione di un criterio di unione predefinito, vedere la guida [utente](merge-policies.md)Unisci criteri.
 
-Oltre a queste metriche, la sezione delle metriche del profilo fornisce anche una [!UICONTROL Last updated] data e un&#39;ora, che mostrano quando sono state valutate per l&#39;ultima volta.
+Oltre a queste metriche, la sezione relativa alle metriche del profilo fornisce anche una data e un&#39;ora dell&#39;ultimo aggiornamento, che mostrano quando le metriche sono state valutate per l&#39;ultima volta.
 
 ![](../images/user-guide/profiles-profile-metrics.png)
 
@@ -80,7 +80,7 @@ Dalla **[!UICONTROL Select identity namespace]** finestra di dialogo, scegliete 
 
 ### Valore identità
 
-Dopo aver selezionato un [!UICONTROL Identity namespace], tornate alla [!UICONTROL Browse] scheda in cui potete inserire un **[!UICONTROL Identity value]**. Questo valore è specifico di un profilo cliente singolo e deve essere una voce valida per lo spazio dei nomi fornito. Ad esempio, la selezione di [!UICONTROL Identity namespace] &quot;E-mail&quot; richiede un indirizzo e-mail [!UICONTROL Identity value] valido.
+Dopo aver selezionato uno spazio dei nomi di identità, tornate alla **[!UICONTROL Browse]** scheda in cui potete inserire un **[!UICONTROL Identity value]**. Questo valore è specifico di un profilo cliente singolo e deve essere una voce valida per lo spazio dei nomi fornito. Ad esempio, se si seleziona lo spazio nomi identità &quot;E-mail&quot; sarà necessario un valore di identità sotto forma di indirizzo e-mail valido.
 
 ![](../images/user-guide/profiles-show-profile.png)
 
@@ -90,17 +90,17 @@ Una volta immesso il valore, selezionare **[!UICONTROL Show profile]** e viene r
 
 ### Dettagli profilo {#profile-detail}
 
-Dopo aver selezionato [!UICONTROL Profile ID], si apre la **[!UICONTROL Detail]** scheda. Le informazioni di profilo visualizzate nella [!UICONTROL Detail] scheda sono state unite da più frammenti di profilo per formare una singola vista del singolo cliente. Ciò include dettagli del cliente quali attributi di base, identità collegate e preferenze del canale. I campi predefiniti visualizzati possono essere modificati anche a livello di organizzazione per visualizzare gli attributi di profilo preferiti. Per ulteriori informazioni sulla personalizzazione di questi campi, comprese istruzioni dettagliate per l’aggiunta e la rimozione di attributi e il ridimensionamento dei pannelli della dashboard, consultate la guida [alla personalizzazione dei dettagli del](profile-customization.md)profilo.
+Dopo aver selezionato **[!UICONTROL Profile ID]**, si apre la **[!UICONTROL Detail]** scheda. Le informazioni di profilo visualizzate nella **[!UICONTROL Detail]** scheda sono state unite da più frammenti di profilo per formare una singola vista del singolo cliente. Ciò include dettagli del cliente quali attributi di base, identità collegate e preferenze del canale. I campi predefiniti visualizzati possono essere modificati anche a livello di organizzazione per visualizzare gli attributi di profilo preferiti. Per ulteriori informazioni sulla personalizzazione di questi campi, comprese istruzioni dettagliate per l’aggiunta e la rimozione di attributi e il ridimensionamento dei pannelli della dashboard, consultate la guida [alla personalizzazione dei dettagli del](profile-customization.md)profilo.
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-Per visualizzare ulteriori informazioni relative al singolo profilo, seleziona un&#39;altra delle schede disponibili. Queste schede includono [!UICONTROL Attributes], [!UICONTROL Events], e [!UICONTROL Segment membership], che mostrano [!UICONTROL Segments] per quale profilo è attualmente qualificato.
+Per visualizzare ulteriori informazioni relative al singolo profilo, seleziona un&#39;altra delle schede disponibili. Queste schede includono attributi, eventi e appartenenza al segmento, che mostra i segmenti per i quali il profilo è attualmente qualificato.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Unisci criteri
 
-Dal [!UICONTROL Profiles] menu principale, selezionare la **[!UICONTROL Merge Policies]** scheda per visualizzare un elenco di criteri di unione appartenenti alla propria organizzazione. Ogni criterio elencato visualizza il nome, indipendentemente dal fatto che si tratti del criterio di unione predefinito, e lo schema a cui si applica.
+Dal **[!UICONTROL Profiles]** menu principale, selezionare la **[!UICONTROL Merge Policies]** scheda per visualizzare un elenco di criteri di unione appartenenti alla propria organizzazione. Ogni criterio elencato visualizza il nome, indipendentemente dal fatto che si tratti del criterio di unione predefinito, e lo schema a cui si applica.
 
 Per ulteriori informazioni sui criteri di unione, vedere la guida [utente relativa ai criteri di](merge-policies.md)unione.
 
@@ -108,7 +108,7 @@ Per ulteriori informazioni sui criteri di unione, vedere la guida [utente relati
 
 ## Schema unione {#union-schema}
 
-Dal [!UICONTROL Profiles] menu principale, selezionate la **[!UICONTROL Union Schema]** scheda per visualizzare gli schemi di unione per i dati del profilo. Uno schema unione è un&#39;unione di tutti i campi [!DNL Experience Data Model] (XDM) della stessa classe, i cui schemi sono stati abilitati per l&#39;uso in [!DNL Real-time Customer Profile]. Selezionando una classe dall&#39; [!UICONTROL Class] elenco a sinistra, è possibile visualizzare la struttura del relativo schema nel quadro. Ad esempio, selezionando &quot;[!DNL XDM Profile]&quot; viene visualizzato lo schema di unione per la [!DNL XDM Individual Profile] classe.
+Dal **[!UICONTROL Profiles]** menu principale, selezionate la **[!UICONTROL Union Schema]** scheda per visualizzare gli schemi di unione per i dati del profilo. Uno schema unione è un&#39;unione di tutti i campi [!DNL Experience Data Model] (XDM) della stessa classe, i cui schemi sono stati abilitati per l&#39;uso in [!DNL Real-time Customer Profile]. Selezionando una classe dall&#39;elenco &quot;[!UICONTROL Class]&quot; a sinistra, è possibile visualizzare la struttura del relativo schema nel quadro. Ad esempio, selezionando &quot;[!DNL XDM Profile]&quot; viene visualizzato lo schema di unione per la [!DNL XDM Individual Profile] classe.
 
 Per ulteriori informazioni sugli schemi di unione e sul loro ruolo all&#39;interno di Adobe Experience Platform, vedete la sezione sugli schemi di unione nella guida [alla composizione](../../xdm/schema/composition.md)dello schema.
 
