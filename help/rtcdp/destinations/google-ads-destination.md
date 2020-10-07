@@ -5,9 +5,9 @@ seo-title: Destinazione annunci Google
 description: Google Ads, precedentemente noto come Google AdWords, è un servizio pubblicitario online che consente alle aziende di pagare per clic pubblicità tra ricerche basate su testo, display grafici, video YouTube e display mobili in-app.
 seo-description: Google Ads, precedentemente noto come Google AdWords, è un servizio pubblicitario online che consente alle aziende di pagare per clic pubblicità tra ricerche basate su testo, display grafici, video YouTube e display mobili in-app.
 translation-type: tm+mt
-source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '635'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Tenete presenti i seguenti dettagli specifici per [!DNL Google Ads] le destinazioni:
 
-* Puoi inviare le seguenti [identità](../../identity-service/namespaces.md) alle [!DNL Google Ads] destinazioni: **ID di cookie Google, IDFA, GAID, Roku ID, Microsoft ID,  Amazon Fire TV ID**.
+* Puoi inviare le seguenti [identità](../../identity-service/namespaces.md) alle [!DNL Google Ads] destinazioni: ID di cookie Google, IDFA, GAID, Roku ID, Microsoft ID e  Amazon Fire TV ID.
 * I tipi di pubblico attivati vengono creati a livello di programmazione nella [!DNL Google] piattaforma.
 *  CDP in tempo reale del Adobe attualmente non include una metrica di misurazione per convalidare l’attivazione. Per convalidare l&#39;integrazione e comprendere le dimensioni del targeting dell&#39;audience, fare riferimento ai conteggi dell&#39;audience in Google.
 
