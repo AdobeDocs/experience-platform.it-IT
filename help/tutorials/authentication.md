@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 'Questo documento fornisce un''esercitazione passo-passo per ottenere l''accesso a un account sviluppatore Adobe Experience Platform per effettuare chiamate alle API  Experience Platform. '
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '868'
 ht-degree: 1%
@@ -89,17 +89,17 @@ I passaggi sono descritti in dettaglio di seguito.
 
 Andate a [console](https://www.adobe.com/go/devs_console_ui) per sviluppatori di Adobi ed effettuate l&#39;accesso con il vostro Adobe ID . Attenetevi quindi ai passaggi descritti nell&#39;esercitazione sulla [creazione di un progetto](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vuoto nella documentazione di  Adobe Developer Console.
 
-Dopo aver creato un nuovo progetto, fate clic **[!UICONTROL Add API]** sulla schermata Panoramica __ progetto.
+Dopo aver creato un nuovo progetto, fate clic **[!UICONTROL Add API]** sulla schermata Panoramica **** progetto.
 
 ![](images/authentication/add-api-button.png)
 
-Viene visualizzata la schermata _Aggiungi un&#39;API_ . Fate clic sull&#39;icona del prodotto per Adobe Experience Platform, quindi selezionate **[!UICONTROL Experience Platform API]** prima di fare clic su **[!UICONTROL Next]**.
+Viene visualizzata la schermata **Aggiungi un&#39;API** . Fate clic sull&#39;icona del prodotto per Adobe Experience Platform, quindi selezionate **[!UICONTROL Experience Platform API]** prima di fare clic su **[!UICONTROL Next]**.
 
 ![](images/authentication/add-platform-api.png)
 
 Dopo aver selezionato [!DNL Experience Platform] come API da aggiungere al progetto, segui i passaggi descritti nell&#39;esercitazione sull&#39; [aggiunta di un&#39;API a un progetto utilizzando un account di servizio (JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) (a partire dal passaggio &quot;Configura API&quot;) per completare il processo.
 
-Una volta aggiunta l&#39;API al progetto, la pagina di panoramica _del_ progetto visualizza le seguenti credenziali che sono richieste in tutte le chiamate alle [!DNL Experience Platform] API:
+Una volta aggiunta l&#39;API al progetto, la pagina di panoramica **del** progetto visualizza le seguenti credenziali che sono richieste in tutte le chiamate alle [!DNL Experience Platform] API:
 
 * `{API_KEY}` (ID client)
 * `{IMS_ORG}` (ID organizzazione)
