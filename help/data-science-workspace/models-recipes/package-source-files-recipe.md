@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Questa esercitazione fornisce istruzioni su come creare pacchetti di file sorgente di esempio per le vendite al dettaglio in un file di archivio, che può essere utilizzato per creare una ricetta in Adobe Experience Platform Data Science Workspace seguendo il flusso di lavoro di importazione delle ricette nell'interfaccia utente o utilizzando l'API.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1143'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Per ottenere le credenziali del Registro di sistema del contenitore di Azure, ac
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-Viene visualizzata la pagina *Configura* . Fornite un Nome ** ricetta appropriato, ad esempio &quot;Ricetta vendite al dettaglio&quot;, e facoltativamente fornite una descrizione o un URL della documentazione. Al termine, fate clic **[!UICONTROL Next]**.
+The **[!UICONTROL Configure]** page opens. Fornite una definizione appropriata **[!UICONTROL Recipe Name]**, ad esempio &quot;Ricetta vendite al dettaglio&quot; e, facoltativamente, fornite una descrizione o un URL della documentazione. Al termine, fate clic **[!UICONTROL Next]**.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
@@ -64,7 +64,7 @@ Selezionate il *runtime* appropriato, quindi scegliete un **[!UICONTROL Classifi
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
 
-Prendete nota dei valori per *Docker Host*, *Nome utente* e *Password*. Vengono utilizzati per creare e inviare l’ [!DNL Docker] immagine ai flussi di lavoro descritti di seguito.
+Notate i valori per l&#39;host Docker, il nome utente e la password. Vengono utilizzati per creare e inviare l’ [!DNL Docker] immagine ai flussi di lavoro descritti di seguito.
 
 >[!NOTE]
 >
