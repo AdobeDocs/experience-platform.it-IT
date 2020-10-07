@@ -5,7 +5,7 @@ title: Supporto IAB TCF 2.0 nella piattaforma dati cliente in tempo reale
 topic: privacy events
 description: Questo documento fornisce i passaggi per impostare i due insiemi di dati richiesti per la raccolta dei dati di consenso IAB TCF 2.0.
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '1299'
 ht-degree: 0%
@@ -72,7 +72,7 @@ Anche se ogni mixin della privacy varia a seconda della struttura e dei tipi di 
 
 ## Creare schemi di consenso dei clienti {#create-schemas}
 
-Nell’interfaccia utente della piattaforma, fate clic **[!UICONTROL Schemas]** nella barra di navigazione a sinistra per aprire l’ *[!UICONTROL Schemas]area di lavoro*. Da qui, seguite i passaggi descritti nelle sezioni seguenti per creare ogni schema richiesto.
+Nell’interfaccia utente della piattaforma, fate clic **[!UICONTROL Schemas]** nella barra di navigazione a sinistra per aprire l’ **[!UICONTROL Schemas]** area di lavoro. Da qui, seguite i passaggi descritti nelle sezioni seguenti per creare ogni schema richiesto.
 
 >[!NOTE]
 >
@@ -80,7 +80,7 @@ Nell’interfaccia utente della piattaforma, fate clic **[!UICONTROL Schemas]** 
 
 ### Creare uno schema di consenso basato su record {#profile-schema}
 
-Dalla **[!UICONTROL Browse]** scheda dell&#39; **[!UICONTROL Schemas]area di lavoro**, creare un nuovo schema basato sulla **[!DNL XDM Individual Profile]classe**. Una volta aperto lo schema nell&#39;Editor schema, fare clic **[!UICONTROL Add]** sotto la **[!UICONTROL Mixins]** sezione sul lato sinistro del quadro.
+Dalla **[!UICONTROL Browse]** scheda dell&#39; **[!UICONTROL Schemas]area di lavoro**, creare un nuovo schema basato sulla [!DNL XDM Individual Profile] classe. Una volta aperto lo schema nell&#39;Editor schema, fare clic **[!UICONTROL Add]** sotto la **[!UICONTROL Mixins]** sezione sul lato sinistro del quadro.
 
 ![](../assets/iab/add-mixin-profile.png)
 
@@ -127,7 +127,7 @@ Infine, fate clic **[!UICONTROL Save]** per confermare le modifiche.
 
 ### Creare uno schema di consenso basato su serie temporali {#event-schema}
 
-Dalla **[!UICONTROL Browse]** scheda dell&#39; **[!UICONTROL Schemas]area di lavoro**, creare un nuovo schema basato sulla **[!DNL XDM ExperienceEvent]classe**. Una volta aperto lo schema nell&#39;Editor schema, fare clic **[!UICONTROL Add]** sotto la **[!UICONTROL Mixins]** sezione sul lato sinistro del quadro.
+Dalla **[!UICONTROL Browse]** scheda dell&#39;area di lavoro, creare un nuovo schema basato sulla **[!UICONTROL Schemas]** [!DNL XDM ExperienceEvent] classe. Una volta aperto lo schema nell&#39;Editor schema, fare clic **[!UICONTROL Add]** sotto la **[!UICONTROL Mixins]** sezione sul lato sinistro del quadro.
 
 ![](../assets/iab/add-mixin-event.png)
 
