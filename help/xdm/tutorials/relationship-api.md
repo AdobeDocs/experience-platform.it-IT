@@ -6,7 +6,7 @@ description: Questo documento fornisce un'esercitazione per definire una relazio
 topic: tutorial
 type: Tutorials
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1304'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 La capacità di comprendere le relazioni tra i clienti e le loro interazioni con il tuo marchio attraverso vari canali è una parte importante di Adobe Experience Platform. La definizione di queste relazioni all&#39;interno della struttura degli schemi [!DNL Experience Data Model] (XDM) consente di acquisire informazioni complesse sui dati dei clienti.
 
-Sebbene sia possibile dedurre le relazioni dello schema utilizzando lo schema unione e [!DNL Real-time Customer Profile], ciò vale solo per gli schemi che condividono la stessa classe. Per stabilire una relazione tra due schemi appartenenti a classi diverse, è necessario aggiungere un campo **di** relazione dedicato a uno schema di origine che faccia riferimento all&#39;identità di uno schema di destinazione.
+Sebbene sia possibile dedurre le relazioni dello schema utilizzando lo schema unione e [!DNL Real-time Customer Profile], ciò vale solo per gli schemi che condividono la stessa classe. Per stabilire una relazione tra due schemi appartenenti a classi diverse, è necessario aggiungere un campo di relazione dedicato a uno schema di origine che faccia riferimento all&#39;identità di uno schema di destinazione.
 
 Questo documento fornisce un&#39;esercitazione per definire una relazione uno-a-uno tra due schemi definiti dall&#39;organizzazione utilizzando l&#39;API del Registro di sistema [[!DNL Schema API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
@@ -111,7 +111,7 @@ Registrare i `$id` valori dei due schemi tra cui si desidera definire una relazi
 
 ## Definire un campo di riferimento per lo schema di origine
 
-All&#39;interno [!DNL Schema Registry], i descrittori di relazione funzionano in modo simile alle chiavi esterne nelle tabelle di database relazionali: un campo nello schema di origine funge da riferimento al campo identità **** principale di uno schema di destinazione. Se lo schema di origine non dispone di un campo a questo scopo, potrebbe essere necessario creare un mixin con il nuovo campo e aggiungerlo allo schema. Questo nuovo campo deve avere un `type` valore &quot;[!DNL string]&quot;.
+All&#39;interno [!DNL Schema Registry], i descrittori di relazione funzionano in modo simile alle chiavi esterne nelle tabelle di database relazionali: un campo nello schema di origine funge da riferimento al campo identità principale di uno schema di destinazione. Se lo schema di origine non dispone di un campo a questo scopo, potrebbe essere necessario creare un mixin con il nuovo campo e aggiungerlo allo schema. Questo nuovo campo deve avere un `type` valore &quot;[!DNL string]&quot;.
 
 >[!IMPORTANT]
 >
