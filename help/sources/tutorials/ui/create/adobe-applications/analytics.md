@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi necessari per creare un connettore sorgente Adobe Analytics  nell’interfaccia utente per trasferire i dati di consumo in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '766'
 ht-degree: 1%
@@ -28,7 +28,7 @@ Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Ad
 
 ## Creare una connessione di origine con  Adobe Analytics
 
-Accedete ad [Adobe Experience Platform](https://platform.adobe.com) , quindi selezionate **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro delle origini. Nella schermata *Catalogo* sono visualizzate le origini disponibili con cui creare connessioni in ingresso e ogni origine mostra il numero di account e flussi di dati esistenti associati a tali account.
+Accedete ad [Adobe Experience Platform](https://platform.adobe.com) , quindi selezionate **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro delle origini. Nella schermata **Catalogo** sono visualizzate le origini disponibili con cui creare connessioni in ingresso e ogni origine mostra il numero di account e flussi di dati esistenti associati a tali account.
 
 Potete selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l&#39;origine specifica con cui si desidera lavorare utilizzando l&#39;opzione di ricerca.
 
@@ -73,7 +73,7 @@ Una volta creato il flusso di set di dati, è possibile monitorare i dati che ve
 
 ![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
 
-Viene visualizzata la schermata *Flussi* di dati. In questa pagina sono presenti una coppia di flussi di dati, con informazioni su nome, dati di origine, ora di creazione e stato.
+Viene visualizzata la schermata **Flussi** di dati. In questa pagina sono presenti una coppia di flussi di dati, con informazioni su nome, dati di origine, ora di creazione e stato.
 
 Il connettore crea un&#39;istanza di due flussi di dati. Un flusso rappresenta i dati di backfill e l&#39;altro è per i dati live. I dati di backfill non sono configurati per il profilo, ma vengono inviati al lago di dati per casi d’uso analitici e scientifici.
 
@@ -83,7 +83,7 @@ Selezionare dall&#39;elenco il flusso di dati che si desidera visualizzare.
 
 ![](../../../../images/tutorials/create/analytics/backfill.png)
 
-Viene visualizzata la pagina *Attività* DataSet. In questa pagina viene visualizzata la frequenza dei messaggi utilizzati sotto forma di grafico. Seleziona *Gestione* dati dall&#39;intestazione superiore per accedere ai campi di etichettatura.
+Viene visualizzata la pagina **Attività** DataSet. In questa pagina viene visualizzata la frequenza dei messaggi utilizzati sotto forma di grafico. Seleziona *Gestione* dati dall&#39;intestazione superiore per accedere ai campi di etichettatura.
 
 ![](../../../../images/tutorials/create/analytics/batches.png)
 
@@ -91,7 +91,7 @@ Viene visualizzata la pagina *Attività* DataSet. In questa pagina viene visuali
 
 ![](../../../../images/tutorials/create/analytics/data-gov.png)
 
-Viene visualizzato il pannello *Modifica etichette* governance. Questa schermata consente di accedere e modificare il contratto, l&#39;identità e le etichette sensibili di un flusso di dati.
+Viene visualizzato il pannello **Modifica etichette** governance. Questa schermata consente di accedere e modificare il contratto, l&#39;identità e le etichette sensibili di un flusso di dati.
 
 Per ulteriori informazioni su come etichettare i dati provenienti da Analytics, consulta la guida [alle etichette di utilizzo dei](../../../../../data-governance/labels/user-guide.md)dati.
 
