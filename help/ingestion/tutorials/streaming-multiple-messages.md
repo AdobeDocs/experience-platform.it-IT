@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Questo documento fornisce un’esercitazione per l’invio di più messaggi ad Adobe Experience Platform all’interno di una singola richiesta HTTP tramite l’assimilazione in streaming.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1480'
+source-wordcount: '1482'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,7 @@ Dopo la registrazione di una connessione di streaming, l&#39;utente, in qualità
 
 L&#39;esempio seguente mostra come inviare più messaggi a uno specifico dataset all&#39;interno di una singola richiesta HTTP. Inserire l&#39;ID del set di dati nell&#39;intestazione del messaggio per consentirne l&#39;inserimento diretto.
 
-Potete ottenere l&#39;ID per un set di dati esistente utilizzando l&#39; [!DNL Platform] interfaccia utente o un&#39;operazione di elenco nell&#39;API. L&#39;ID del set di dati si trova [Experience Platform](https://platform.adobe.com) andando alla **[!UICONTROL Datasets]** scheda, facendo clic sul set di dati per il quale si desidera utilizzare l&#39;ID e copiando la stringa dal **[!UICONTROL Dataset ID]** campo della **[!UICONTROL Info]** scheda. Per informazioni su come recuperare i set di dati tramite l’API, consultate la panoramica [del servizio](../../catalog/home.md) catalogo.
+Potete ottenere l&#39;ID per un set di dati esistente utilizzando l&#39; [!DNL Platform] interfaccia utente o un&#39;operazione di elenco nell&#39;API. L&#39;ID del set di dati si trova [Experience Platform](https://platform.adobe.com) andando alla **[!UICONTROL Datasets]** scheda, facendo clic sul set di dati per il quale si desidera utilizzare l&#39;ID e copiando la stringa dal campo ID del set di dati della **[!UICONTROL Info]** scheda. Per informazioni su come recuperare i set di dati tramite l’API, consultate la panoramica [del servizio](../../catalog/home.md) catalogo.
 
 Invece di utilizzare un dataset esistente, potete creare un nuovo dataset. Per ulteriori informazioni sulla creazione di un set di dati tramite API [, consultate l&#39;esercitazione](../../catalog/api/create-dataset.md) Create a dataset using API (Creazione di un set di dati tramite API).
 
@@ -543,7 +543,7 @@ Nella tabella seguente sono riportati i codici di stato restituiti dai messaggi 
 
 | Codice di stato | Descrizione |
 | :---: | --- |
-| 207 | Anche se &#39;207&#39; viene utilizzato come codice di stato della risposta globale, il destinatario deve consultare il contenuto del corpo di risposta multistato per ulteriori informazioni sull&#39;esito positivo o negativo dell&#39;esecuzione del metodo. Il codice di risposta viene utilizzato in caso di esito positivo o parziale e anche in situazioni di fallimento. |
+| 207 | Anche se &#39;207&#39; viene utilizzato come codice di stato della risposta globale, il destinatario deve consultare il contenuto del corpo di risposta con più stati per ulteriori informazioni sul successo o il fallimento dell&#39;esecuzione del metodo. Il codice di risposta viene utilizzato in caso di esito positivo o parziale e anche in situazioni di fallimento. |
 | 400 | C&#39;è stato un problema con la richiesta. Vedere il corpo della risposta per un messaggio di errore più specifico (ad esempio, payload di messaggi mancavano i campi obbligatori oppure Messaggio era in formato xdm sconosciuto). |
 | 401 | Non autorizzato: nella richiesta manca un&#39;intestazione di autorizzazione valida. Viene restituito solo per le insenature con autenticazione abilitata. |
 | 403 | Non autorizzato:  Il token di autorizzazione fornito non è valido o è scaduto. Viene restituito solo per le insenature con autenticazione abilitata. |
