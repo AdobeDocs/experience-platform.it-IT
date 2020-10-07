@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Questo documento fornisce un'esercitazione per lo sviluppo, il test, la visualizzazione in anteprima e il salvataggio di una definizione di segmento mediante l'API di Adobe Experience Platform Segmentation Service.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '916'
 ht-degree: 0%
@@ -56,7 +56,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 ## Sviluppo di una definizione di segmento
 
-Il primo passo nella segmentazione consiste nel definire un segmento, rappresentato in un costrutto chiamato definizione **di** segmento. Una definizione di segmento è un oggetto che racchiude una query scritta in [!DNL Profile Query Language] (PQL). Questo oggetto è anche denominato predicato **PQL**. I predicati PQL definiscono le regole per il segmento in base alle condizioni relative a qualsiasi record o dati delle serie temporali forniti da [!DNL Real-time Customer Profile]. Per ulteriori informazioni sulla scrittura di query PQL, consultate la guida [](../pql/overview.md) PQL.
+Il primo passo nella segmentazione consiste nel definire un segmento, rappresentato in un costrutto chiamato definizione di segmento. Una definizione di segmento è un oggetto che racchiude una query scritta in [!DNL Profile Query Language] (PQL). Questo oggetto è anche denominato predicato PQL. I predicati PQL definiscono le regole per il segmento in base alle condizioni relative a qualsiasi record o dati delle serie temporali forniti da [!DNL Real-time Customer Profile]. Per ulteriori informazioni sulla scrittura di query PQL, consultate la guida [](../pql/overview.md) PQL.
 
 Puoi creare una nuova definizione di segmento effettuando una richiesta di POST all’ `/segment/definitions` endpoint nell’ [!DNL Segmentation] API. L&#39;esempio seguente illustra come formattare una richiesta di definizione, incluse le informazioni necessarie per definire correttamente un segmento.
 
