@@ -5,7 +5,7 @@ description: Scoprite come ottenere l'ID Adobe Experience Cloud.
 seo-description: Scoprite come ottenere l'ID Adobe Experience Cloud.
 keywords: Identity;First Party Identity;Identity Service;3rd Party Identity;ID Migration;Visitor ID;third party identity;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;Syncing Identities;syncIdentity;sendEvent;identityMap;primary;ecid;Identity Namespace;namespace id;authenticationState;hashEnabled;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '729'
 ht-degree: 3%
@@ -89,15 +89,15 @@ alloy("sendEvent", {
 
 | **Tipo** | **Obbligatorio** | **Valore predefinito** |
 | -------- | ------------ | ----------------- |
-| Stringa | Sì | none |
+| Stringa | Sì | Nessuno |
 
-La chiave dell&#39;oggetto è il simbolo [Identity Namespace](../../identity-service/namespaces.md) . Potete trovare questo elenco nell&#39;interfaccia utente di Adobe Experience Platform in [!UICONTROL Identities].
+La chiave dell&#39;oggetto è il simbolo [Identity Namespace](../../identity-service/namespaces.md) . È possibile trovarlo elencato nell&#39;interfaccia utente di Adobe Experience Platform in &quot;[!UICONTROL Identities]&quot;.
 
 #### `id`
 
 | **Tipo** | **Obbligatorio** | **Valore predefinito** |
 | -------- | ------------ | ----------------- |
-| Stringa | Sì | none |
+| Stringa | Sì | Nessuno |
 
 Questo è l&#39;ID che si desidera sincronizzare per lo spazio dei nomi specificato.
 
