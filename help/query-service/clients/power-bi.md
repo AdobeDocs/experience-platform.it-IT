@@ -5,7 +5,7 @@ title: Connetti con Power BI
 topic: connect
 description: Questo documento descrive i passaggi necessari per la connessione di Power BI con Adobe Experience Platform Query Service.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 0%
@@ -61,7 +61,7 @@ ORDER BY SUM(web.webPageDetails.pageviews.value) DESC
 LIMIT 10
 ```
 
-- Selezionate una **[!UICONTROL DirectQuery]** o **[!UICONTROL Import]** una modalità. In **[!UICONTROL Import]** modalità, i dati verranno importati in [!DNL Power BI]. In **[!UICONTROL DirectQuery]** modalità, tutte le query verranno inviate [!DNL Query Service] per l&#39;esecuzione.
+- Selezionate la modalità &quot;[!UICONTROL DirectQuery]&quot; o &quot;[!UICONTROL Import]&quot;. In [!UICONTROL DirectQuery] modalità, tutte le query verranno inviate [!DNL Query Service] per l&#39;esecuzione. In [!UICONTROL Import] modalità, i dati verranno importati in [!DNL Power BI].
 
 - Fai clic su **[!UICONTROL OK]**. A questo punto, [!DNL Power BI] si connette al pannello [!DNL Query Service] e produce un&#39;anteprima in assenza di errori. Esiste un problema noto con le colonne numeriche di rendering Anteprima. Procedete quindi con il passaggio successivo.
 
