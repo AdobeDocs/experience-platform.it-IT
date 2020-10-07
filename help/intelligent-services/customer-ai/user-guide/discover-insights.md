@@ -5,9 +5,9 @@ title: Scopri informazioni approfondite con l'AI del cliente
 topic: Discovering insights
 description: L'AI del cliente, come parte di Intelligent Services, fornisce agli esperti di marketing la possibilità di sfruttare  Adobe Sensei per anticipare quali saranno le prossime azioni da intraprendere per i clienti. L'AI del cliente viene utilizzata per generare punteggi di propensione personalizzati, come il churn e la conversione per i singoli profili su scala. Ciò è possibile senza dover trasformare le esigenze aziendali in un problema di machine learning, scegliendo un algoritmo, una formazione o un'implementazione.
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1094'
 ht-degree: 0%
 
 ---
@@ -98,7 +98,7 @@ Riepilogo punteggio visualizza il numero totale di profili con punteggio e li cl
 
 ## Distribuzione dei punteggi
 
-La scheda *Distribuzione dei punteggi* fornisce un riepilogo visivo della popolazione in base al punteggio. I colori visualizzati nella scheda *Distribuzione di punteggi* rappresentano il tipo di punteggio di propensione generato.
+La **[!UICONTROL Distribution of Scores]** scheda fornisce un riepilogo visivo della popolazione in base al punteggio. I colori visualizzati nella scheda *Distribuzione di punteggi* rappresentano il tipo di punteggio di propensione generato.
 
 ![distribuzione dei punteggi](../images/insights/distribution-of-scores.png)
 
@@ -128,7 +128,7 @@ Il generatore di segmenti viene utilizzato per definire un segmento. Quando si s
 
 ![Riempimento segmento in](../images/insights/segment-saving.png)
 
-Per visualizzare il nuovo segmento nell’interfaccia utente della piattaforma, fai clic su **[!UICONTROL Segments]** nella barra di navigazione a sinistra. Viene visualizzata la pagina *Sfoglia* , con tutti i segmenti disponibili.
+Per visualizzare il nuovo segmento nell’interfaccia utente della piattaforma, fai clic su **[!UICONTROL Segments]** nella barra di navigazione a sinistra. Viene visualizzata **[!UICONTROL Browse]** la pagina e vengono visualizzati tutti i segmenti disponibili.
 
 ![Tutti i segmenti](../images/insights/Segments-dashboard.png)
 
