@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Questa esercitazione si sovrappone a due sezioni principali. Innanzitutto, si crea un modello di machine learning utilizzando un modello all'interno di JupyterLab Notebook. Successivamente, si eserciterà il notebook per il flusso di lavoro delle ricette in JupyterLab per creare una ricetta all'interno di Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '2316'
 ht-degree: 0%
@@ -302,7 +302,7 @@ Lo scopo della formazione è quello di creare un modello utilizzando le funzioni
 
 >[!NOTE]
 > 
->_Le funzioni_ fanno riferimento alla variabile di input utilizzata dal modello di apprendimento automatico per prevedere le _etichette_.
+>Le funzioni fanno riferimento alla variabile di input utilizzata dal modello di apprendimento automatico per prevedere le etichette.
 
 La `train()` funzione deve includere il modello di addestramento e restituire il modello addestrato. Alcuni esempi di diversi modelli sono disponibili nella documentazione [della guida](https://scikit-learn.org/stable/user_guide.html)scikit-learn utente.
 
