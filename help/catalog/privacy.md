@@ -5,9 +5,9 @@ title: Elaborazione delle richieste di privacy nel Data Lake
 topic: overview
 description: ' Adobe Experience Platform Privacy Service elabora le richieste dei clienti di accedere, rifiutare la vendita o cancellare i propri dati personali, come indicato dalle normative sulla privacy legali e organizzative. Questo documento tratta i concetti essenziali relativi all''elaborazione delle richieste di privacy per i dati dei clienti memorizzati nel Data Lake.'
 translation-type: tm+mt
-source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
-source-wordcount: '1239'
+source-wordcount: '1243'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Prima di leggere la presente guida è consigliabile conoscere i seguenti [!DNL E
 
 ## Informazioni sugli spazi dei nomi delle identità {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] collega i dati di identità dei clienti tra sistemi e dispositivi. [!DNL Identity Service] utilizza **[!UICONTROL identity namespaces]** per fornire contesto ai valori di identità collegandoli al loro sistema di origine. Uno spazio dei nomi può rappresentare un concetto generico come un indirizzo e-mail (&quot;E-mail&quot;) o associare l&#39;identità a un&#39;applicazione specifica, ad esempio un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o  Adobe Target ID (&quot;TNTID&quot;).
+Adobe Experience Platform [!DNL Identity Service] collega i dati di identità dei clienti tra sistemi e dispositivi. [!DNL Identity Service] utilizza gli spazi dei nomi di identità per fornire contesto ai valori di identità collegandoli al loro sistema di origine. Uno spazio dei nomi può rappresentare un concetto generico come un indirizzo e-mail (&quot;E-mail&quot;) o associare l&#39;identità a un&#39;applicazione specifica, ad esempio un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) o  Adobe Target ID (&quot;TNTID&quot;).
 
 [!DNL Identity Service] gestisce un archivio di spazi dei nomi di identità definiti a livello globale (standard) e definiti dall’utente (personalizzati). Gli spazi dei nomi standard sono disponibili per tutte le organizzazioni (ad esempio, &quot;E-mail&quot; e &quot;ECID&quot;), mentre l&#39;organizzazione può anche creare spazi dei nomi personalizzati in base alle proprie esigenze.
 
@@ -38,7 +38,7 @@ Per ulteriori informazioni sugli spazi dei nomi delle identità in [!DNL Experie
 
 ## Aggiunta di dati di identità ai set di dati
 
-Durante la creazione di richieste di privacy per i [!DNL Data Lake]clienti, è necessario fornire valori di identità validi (e relativi spazi di nomi associati) per ciascun cliente al fine di individuare i propri dati ed elaborarli di conseguenza. Pertanto, tutti i set di dati soggetti a richieste di privacy devono contenere un elemento **[!UICONTROL identity descriptor]** nello schema XDM associato.
+Durante la creazione di richieste di privacy per i [!DNL Data Lake]clienti, è necessario fornire valori di identità validi (e relativi spazi di nomi associati) per ciascun cliente al fine di individuare i propri dati ed elaborarli di conseguenza. Pertanto, tutti i set di dati soggetti a richieste di privacy devono contenere un descrittore di identità nello schema XDM associato.
 
 >[!NOTE]
 >
