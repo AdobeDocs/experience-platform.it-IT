@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 'Il punteggio in Adobe Experience Platform Data Science Workspace può essere ottenuto inserendo i dati in un modello già preparato. I risultati del punteggio vengono quindi memorizzati e visualizzati in un set di dati di output specificato come nuovo batch. '
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Un’esecuzione del punteggio viene creata utilizzando configurazioni ottimizzat
 
 1. Trovate l&#39;esecuzione di formazione ottimale per utilizzare le relative configurazioni per il punteggio. Aprite l’esecuzione della formazione desiderata facendo clic sul suo nome.
 
-2. Dalla scheda Esecuzione formazione **[!UICONTROL Evaluation]** , fate clic sul **[!UICONTROL Score]** pulsante in alto a destra dello schermo. Verrà avviato un nuovo flusso di lavoro *Esegui punteggio* .
+2. Dalla scheda Esecuzione formazione **[!UICONTROL Evaluation]** , fate clic sul **[!UICONTROL Score]** pulsante in alto a destra dello schermo. Verrà avviato un nuovo flusso di lavoro **Esegui punteggio** .
    ![](../images/models-recipes/score/training_run_overview.png)
 
 3. Selezionare il set di dati per il punteggio di input e fare clic su **[!UICONTROL Next]**.
