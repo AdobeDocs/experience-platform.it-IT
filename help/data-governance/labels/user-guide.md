@@ -5,9 +5,9 @@ title: Guida utente etichette di utilizzo dati
 topic: labels
 description: Questa guida utente descrive i passaggi necessari per utilizzare le etichette di utilizzo dei dati nell'interfaccia utente di Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
 workflow-type: tm+mt
-source-wordcount: '1053'
+source-wordcount: '1052'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Questa guida utente descrive i passaggi necessari per utilizzare le etichette di
 
 ## Gestione delle etichette di utilizzo dei dati a livello di dataset
 
-Per gestire le etichette di utilizzo dei dati a livello di dataset, è necessario selezionare un dataset esistente o crearne uno nuovo. Dopo aver effettuato l&#39;accesso ad Adobe Experience Platform, selezionare **[!UICONTROL Datasets]** nella barra di navigazione a sinistra per aprire l&#39;area di lavoro _Set_ dati. In questa pagina sono elencati tutti i set di dati creati appartenenti alla propria organizzazione, insieme a utili dettagli relativi a ciascun set di dati.
+Per gestire le etichette di utilizzo dei dati a livello di dataset, è necessario selezionare un dataset esistente o crearne uno nuovo. Dopo aver effettuato l’accesso ad Adobe Experience Platform, selezionate **[!UICONTROL Datasets]** la barra di navigazione a sinistra per aprire l’ **[!UICONTROL Datasets]** area di lavoro. In questa pagina sono elencati tutti i set di dati creati appartenenti alla propria organizzazione, insieme a utili dettagli relativi a ciascun set di dati.
 
 ![Scheda Set di dati in Area di lavoro dati](../images/labels/datasets.png)
 
@@ -43,7 +43,7 @@ Viene visualizzata **[!UICONTROL Select Schema]** la schermata, in cui sono elen
 
 ![Seleziona schema dati](../images/labels/dataset_schema.png)
 
-Viene **[!UICONTROL Configure Dataset]** visualizzata la schermata. Immettete un **nome** (obbligatorio) e una **descrizione** (facoltativo, ma consigliato) per il nuovo set di dati, quindi fate clic **[!UICONTROL Finish]**.
+Viene **[!UICONTROL Configure Dataset]** visualizzata la schermata. Immettete un nome (obbligatorio) e una descrizione (facoltativo, ma consigliato) per il nuovo set di dati, quindi fate clic **[!UICONTROL Finish]**.
 
 ![Configura set di dati con nome e descrizione](../images/labels/dataset_configure.png)
 
