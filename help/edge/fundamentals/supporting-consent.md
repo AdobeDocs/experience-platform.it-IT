@@ -5,7 +5,7 @@ description: Scoprite come supportare le preferenze di consenso con  Experience 
 seo-description: Scoprite come supportare le preferenze di consenso con  Experience Platform Web SDK
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: f178da80d0902f76868986426600f3da426cf24d
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 0%
@@ -56,7 +56,7 @@ alloy("setConsent", {
 });
 ```
 
-Poiché l’utente ha acconsentito, l’SDK esegue tutti i comandi precedentemente in coda. I comandi futuri che dipendono dal consenso dell&#39;utente _non_ saranno messi in coda e verranno invece eseguiti immediatamente.
+Poiché l’utente ha acconsentito, l’SDK esegue tutti i comandi precedentemente in coda. I comandi futuri che dipendono dal consenso dell&#39;utente non saranno messi in coda e verranno invece eseguiti immediatamente.
 
 Se l&#39;utente sceglie di rifiutare, eseguire il `setConsent` comando con l&#39; `general` opzione impostata su `out` quanto segue:
 
