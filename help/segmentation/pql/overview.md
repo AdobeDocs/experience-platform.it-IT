@@ -5,7 +5,7 @@ title: Panoramica della lingua query profilo (PQL)
 topic: developer guide
 description: Questa guida fornisce una panoramica generale del linguaggio PQL, con linee guida per la formattazione e con espressioni PQL di esempio.
 translation-type: tm+mt
-source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '705'
 ht-degree: 2%
@@ -29,7 +29,7 @@ Le query PQL hanno la firma seguente:
 
 Il parametro di input può essere un semplice carattere primitivo, ad esempio un valore booleano o una stringa, oppure un tipo più complesso, ad esempio un oggetto, un array o una mappa.
 
-Esistono **tre** modi diversi per fare riferimento ai parametri di input all&#39;interno del corpo di un&#39;espressione PQL:
+Esistono tre modi diversi per fare riferimento ai parametri di input all&#39;interno del corpo di un&#39;espressione PQL:
 
 ### Riferimento implicito al primo parametro
 
