@@ -5,7 +5,7 @@ title: Panoramica sull'inserimento batch
 topic: overview
 description: L'API Batch Ingestion consente di trasferire i dati in Adobe Experience Platform come file batch. I dati che si desidera acquisire possono essere i dati di profilo provenienti da un file semplice in un sistema CRM (ad esempio un file parquet), o i dati conformi a uno schema noto nel Registro di sistema di Experience Data Model (XDM).
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1196'
 ht-degree: 2%
@@ -127,7 +127,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 Dopo aver creato un nuovo batch per il caricamento, i file possono essere caricati in un set di dati specifico.
 
-Potete caricare i file mediante l’API **di caricamento dei file** piccoli. Tuttavia, se i file sono troppo grandi e il limite del gateway viene superato (ad esempio timeout estesi, richieste di dimensioni del corpo superate e altre restrizioni), potete passare all&#39;API **di caricamento dei file di** grandi dimensioni. Questa API carica il file in blocchi e unisce i dati utilizzando la chiamata API **** Large File Upload Complete.
+Potete caricare i file mediante l’API di caricamento dei file di dimensioni ridotte. Tuttavia, se i file sono troppo grandi e il limite del gateway viene superato (ad esempio timeout estesi, richieste di dimensioni del corpo superate e altre restrizioni), potete passare all&#39;API di caricamento dei file di grandi dimensioni. Questa API carica il file in blocchi e unisce i dati utilizzando la chiamata API Large File Upload Complete.
 
 >[!NOTE]
 >
@@ -238,7 +238,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## Completamento batch segnale
 
-Dopo aver caricato tutti i file nel batch, il batch può essere segnalato per il completamento. In questo modo, le voci [!DNL Catalog] DataSetFile **** vengono create per i file completati e associate al batch generato in precedenza. Il [!DNL Catalog] batch viene quindi contrassegnato come riuscito, che attiva i flussi a valle per l&#39;acquisizione dei dati disponibili.
+Dopo aver caricato tutti i file nel batch, il batch può essere segnalato per il completamento. In questo modo, le voci [!DNL Catalog] DataSetFile vengono create per i file completati e associate al batch generato in precedenza. Il [!DNL Catalog] batch viene quindi contrassegnato come riuscito, che attiva i flussi a valle per l&#39;acquisizione dei dati disponibili.
 
 **Richiesta**
 
@@ -389,10 +389,10 @@ Il `"status"` campo indica lo stato corrente del batch richiesto. I batch posson
 | Stato | Descrizione |
 | ------ | ----------- |
 | Abbandonato | Il batch non è stato completato nel periodo di tempo previsto. |
-| Interrotto | Un&#39;operazione di interruzione è stata **esplicitamente** chiamata (tramite l&#39;API Batch Ingest) per il batch specificato. Una volta che il batch è in stato **caricato** , non può essere interrotto. |
-| Attivo | Il batch è stato promosso con successo ed è disponibile per il consumo a valle. Questo stato può essere utilizzato in modo intercambiabile con **Success**. |
+| Interrotto | Un&#39;operazione di interruzione è stata **esplicitamente** chiamata (tramite l&#39;API Batch Ingest) per il batch specificato. Una volta che il batch è in stato &quot;Caricato&quot;, non può essere interrotto. |
+| Attivo | Il batch è stato promosso con successo ed è disponibile per il consumo a valle. Questo stato può essere utilizzato in modo intercambiabile con &quot;Success&quot;. |
 | Eliminato | I dati per il batch sono stati rimossi completamente. |
-| Non riuscito | Uno stato terminale che risulta da una configurazione non corretta e/o da dati non corretti. I dati per un batch con errore **non** vengono visualizzati. Questo stato può essere utilizzato in modo intercambiabile con **Errore**. |
+| Non riuscito | Uno stato terminale che risulta da una configurazione non corretta e/o da dati non corretti. I dati per un batch con errore **non** vengono visualizzati. Questo stato può essere utilizzato in modo intercambiabile con &quot;Errore&quot;. |
 | Inattivo | Il batch è stato promosso con successo, ma è stato ripristinato o è scaduto. Il batch non è più disponibile per il consumo a valle. |
 | Caricato | I dati per il batch sono completi e il batch è pronto per la promozione. |
 | Caricamento | I dati per questo batch vengono caricati e il batch **non** è attualmente pronto per essere promosso. |
