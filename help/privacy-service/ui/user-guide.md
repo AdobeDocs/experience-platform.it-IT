@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guida utente Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: a09d80f4bacd5d4be77443d75aad278ad89259ef
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1021'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Questo documento fornisce i passaggi per creare e gestire le richieste di privac
 
 ## Sfogliare il dashboard dell&#39; [!DNL Privacy Service] interfaccia utente
 
-Il dashboard per l’ [!DNL Privacy Service] interfaccia utente offre due widget che consentono di visualizzare lo stato dei processi di privacy: **[!UICONTROL Status Report]** e **[!UICONTROL Job Requests]**. Il dashboard visualizza anche il regolamento selezionato corrente per i processi visualizzati.
+Il dashboard per l’ [!DNL Privacy Service] interfaccia utente offre due widget che consentono di visualizzare lo stato dei processi di privacy: &quot;[!UICONTROL Status Report]&quot; e &quot;[!UICONTROL Job Requests]&quot;. Il dashboard visualizza anche il regolamento selezionato corrente per i processi visualizzati.
 
 ![Pannello interfaccia](../images/user-guide/dashboard.png)
 
@@ -96,7 +96,7 @@ I passaggi per utilizzare ciascuno di questi metodi sono descritti nelle sezioni
 
 ### Utilizzare il Generatore di richieste {#request-builder}
 
-Utilizzando Request Builder, potete creare manualmente una nuova richiesta di processo per la privacy nell’interfaccia utente. Il Generatore di richieste è indicato per set di richieste sempre più semplici, perché il Generatore di richieste limita le richieste ad avere solo un ID per utente. Per richieste più complesse, potrebbe essere meglio [caricare un file](#json) JSON.
+Utilizzando Request Builder, potete creare manualmente una nuova richiesta di processo per la privacy nell’interfaccia utente. Il Generatore di richieste è indicato per set di richieste sempre più semplici, perché il Generatore di richieste limita le richieste a disporre solo di ID per utente. Per richieste più complesse, potrebbe essere meglio [caricare un file](#json) JSON.
 
 Per iniziare a utilizzare il generatore di richieste, fate clic **[!UICONTROL Create Request]** sotto il widget Rapporto di stato sul lato destro dello schermo.
 
@@ -106,7 +106,7 @@ Viene visualizzata la **[!UICONTROL Create Request]** finestra di dialogo con le
 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
-Selezionate la **[!UICONTROL Job Type]** richiesta (&quot;Elimina&quot; o &quot;Accesso&quot;) e una o più richieste disponibili **[!UICONTROL Products]** dall’elenco.
+Selezionare dall&#39;elenco **[!UICONTROL Job Type]** la richiesta (&quot;Elimina&quot; o &quot;Accesso&quot;) e uno o più prodotti disponibili.
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
@@ -114,11 +114,11 @@ In **[!UICONTROL Namespace type]**, selezionate il tipo di spazio nomi appropria
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
-Quando si utilizza il tipo di spazio dei nomi _standard_ , selezionare uno spazio dei nomi dal menu a discesa (e-mail, ECID o AAID), quindi digitare i valori ID nella casella di testo a destra, premendo **\&lt;enter>** affinché ciascun ID venga aggiunto all&#39;elenco.
+Quando si utilizza il tipo di spazio dei nomi standard, selezionare uno spazio dei nomi dal menu a discesa (e-mail, ECID o AAID), quindi digitare i valori ID nella casella di testo a destra, premendo **\&lt;enter>** per ogni ID per aggiungerlo all&#39;elenco.
 
 <img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
 
-Quando si utilizza il tipo di spazio dei nomi _personalizzato_ , è necessario digitare manualmente lo spazio dei nomi prima di fornire i valori ID riportati di seguito.
+Quando si utilizza il tipo di spazio dei nomi personalizzato, è necessario digitare manualmente lo spazio dei nomi prima di fornire i valori ID riportati di seguito.
 
 <img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
 
@@ -148,7 +148,7 @@ Se non hai un file JSON da caricare, fai clic **[!UICONTROL Download Adobe-GDPR-
 
 Individuate il file JSON sul computer e trascinatelo nella finestra di dialogo. Se il caricamento ha esito positivo, il nome del file viene visualizzato nella finestra di dialogo. Per continuare ad aggiungere altri file JSON, trascinateli e rilasciateli nella finestra di dialogo.
 
-Al termine, fai clic su **[!UICONTROL Create]**. La finestra di dialogo scompare e il nuovo processo o i nuovi processi sono elencati nel widget Richieste _di_ processo insieme al relativo stato di elaborazione corrente.
+Al termine, fai clic su **[!UICONTROL Create]**. La finestra di dialogo scompare e il nuovo processo (o i nuovi processi) sono elencati nel widget Richieste di processo insieme al relativo stato di elaborazione corrente.
 
 ### Passaggi successivi
 
