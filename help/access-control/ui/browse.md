@@ -5,9 +5,9 @@ title: Sfogliare l’area di lavoro del controllo di accesso
 topic: user guide
 description: Questo documento descrive i passaggi necessari per esplorare l'area di lavoro del controllo degli accessi. Per configurare il controllo di accesso per  Experience Platform tramite l'Adobe Admin Console, è necessario essere un amministratore per un'organizzazione IMS che dispone di un'iscrizione a  Experience Platform.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '295'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 # Sfogliare l’area di lavoro del controllo di accesso
 
-Per configurare il controllo di accesso per [!DNL Experience Platform] tramite Adobe Admin Console, è necessario essere un amministratore per un&#39;organizzazione IMS a cui è associato un abbonamento [!DNL Experience Platform]. Sebbene  Adobe supporti gerarchie di amministratori flessibili per le organizzazioni IMS, per configurare il controllo di accesso è necessario disporre di **[!UICONTROL system administrator]**, **[!UICONTROL product administrator]** o **[!UICONTROL product profile administrator]** privilegi. Per ulteriori informazioni, consultate l&#39;articolo Adobe Help Center sui ruoli [](https://helpx.adobe.com/enterprise/using/admin-roles.html) amministrativi.
+Per configurare il controllo di accesso per [!DNL Experience Platform] tramite Adobe Admin Console, è necessario essere un amministratore per un&#39;organizzazione IMS a cui è associato un abbonamento [!DNL Experience Platform]. Sebbene  Adobe supporti gerarchie di amministratori flessibili per le organizzazioni IMS, per configurare il controllo di accesso è necessario disporre dei privilegi di amministratore di sistema, amministratore di prodotto o amministratore del profilo di prodotto. Per ulteriori informazioni, consultate l&#39;articolo Adobe Help Center sui ruoli [](https://helpx.adobe.com/enterprise/using/admin-roles.html) amministrativi.
 
 Se non disponete dei privilegi di amministratore, contattate l&#39;amministratore di sistema per ottenere l&#39;accesso.
 
