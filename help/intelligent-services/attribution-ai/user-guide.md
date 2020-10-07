@@ -5,9 +5,9 @@ title: Guida utente  Attribution AI
 topic: User guide
 description: Questo documento funge da guida per l'interazione con  Attribution AI nell'interfaccia utente di Intelligent Services.
 translation-type: tm+mt
-source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1420'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Questo documento funge da guida per l&#39;interazione con  Attribution AI nell&#
 
 ## Creare un&#39;istanza
 
-Nell’ [!DNL Adobe Experience Platform] interfaccia utente, fai clic su **Servizi** nella barra di navigazione a sinistra. Viene visualizzato il browser *Servizi* , che presenta i servizi intelligenti  Adobe disponibili. Nel contenitore per  Attribution AI, fate clic su **Apri**.
+Nell’ [!DNL Adobe Experience Platform] interfaccia utente, fate clic **[!UICONTROL Services]** nel menu di navigazione a sinistra. Viene visualizzato il **[!UICONTROL Services]** browser e vengono visualizzati i servizi intelligenti  Adobe disponibili. Nel contenitore per  Attribution AI, fare clic su **[!UICONTROL Open]**.
 
 ![Accesso all’istanza](./images/user-guide/open_Attribution_ai.png)
 
@@ -35,7 +35,7 @@ Viene quindi visualizzata la pagina di configurazione per  Attribution AI, in cu
 
 ### Denominate l’istanza
 
-In *Informazioni* di base, fornite un nome e una descrizione facoltativa per l’istanza del servizio.
+In **[!UICONTROL Basic information]**, specificate un nome e una descrizione facoltativa per l’istanza del servizio.
 
 ![denominazione di un&#39;istanza](./images/user-guide/naming_instance.png)
 
@@ -67,15 +67,15 @@ Una volta selezionato un evento, viene visualizzato un nuovo menu a discesa a de
 
 ![nessun menu a discesa](./images/user-guide/conversion_event_1.png)
 
-I pulsanti *Aggiungi evento* e *Aggiungi gruppo* vengono utilizzati per definire ulteriormente la conversione. A seconda della conversione che si sta definendo, potrebbe essere necessario utilizzare i pulsanti *Aggiungi evento* e *Aggiungi gruppo* per fornire ulteriore contesto.
+I **[!UICONTROL Add event]** pulsanti e **[!UICONTROL Add Group]** i pulsanti consentono di definire ulteriormente la conversione. A seconda della conversione che state definendo, potrebbe essere necessario utilizzare i **[!UICONTROL Add event]** pulsanti e **[!UICONTROL Add group]** i pulsanti per fornire un ulteriore contesto.
 
 ![add, evento](./images/user-guide/add_event.png)
 
-Facendo clic su **Aggiungi evento** vengono creati altri campi che possono essere compilati con lo stesso metodo descritto sopra. In questo modo viene aggiunta un&#39;istruzione *AND* alla definizione della stringa sotto il nome *di* conversione. Fate clic sulla **x** per rimuovere un evento aggiunto.
+Facendo clic su **[!UICONTROL Add event]** di essa vengono creati altri campi che possono essere compilati con lo stesso metodo descritto in precedenza. In questo modo viene aggiunta un&#39;istruzione AND alla definizione della stringa sotto il nome di conversione. Fate clic sulla **x** per rimuovere un evento aggiunto.
 
 ![add event, menu](./images/user-guide/add_event_result.png)
 
-Facendo clic su **Aggiungi gruppo** potete creare altri campi separati dall’originale. Con l’aggiunta di gruppi, viene visualizzato un pulsante blu *E* . Facendo clic su **And** (E) è possibile modificare il parametro in modo che contenga &quot;OR&quot;. &quot;OR&quot; viene utilizzato per definire più percorsi di conversione con esito positivo. &quot;And&quot; estende il percorso di conversione per includere condizioni aggiuntive.
+Facendo clic **[!UICONTROL Add Group]** potete creare altri campi separati dall’originale. Con l’aggiunta di gruppi, viene visualizzato un pulsante blu *E* . Facendo clic su **And** (E) è possibile modificare il parametro in modo che contenga &quot;OR&quot;. &quot;OR&quot; viene utilizzato per definire più percorsi di conversione con esito positivo. &quot;And&quot; estende il percorso di conversione per includere condizioni aggiuntive.
 
 ![e](./images/user-guide/and_or.png)
 
@@ -157,7 +157,7 @@ Per modificare l&#39;ora del giorno in cui si desidera che venga eseguito il pun
 
 I comportamenti dei clienti possono essere significativamente diversi per paese e area geografica. Per le aziende globali, l&#39;utilizzo di modelli basati su paesi o regioni può aumentare la precisione di attribuzione. Ogni area aggiunta crea un nuovo modello con i dati di tale regione.
 
-Per definire una nuova area, fare clic su **Aggiungi area**. Nel contenitore visualizzato, specificate un nome per la regione. Un solo valore (&quot;placeContext.geo.countryCode&quot;) viene compilato dall&#39;elenco a discesa *Immettere il nome* del campo. Selezionare questo valore.
+Per definire una nuova area, fare clic su **[!UICONTROL Add region]**. Nel contenitore visualizzato, specificate un nome per la regione. Solo un valore (&quot;placeContext.geo.countryCode&quot;) viene popolato dall&#39; **[!UICONTROL Enter Field Name]** elenco a discesa. Selezionare questo valore.
 
 ![Seleziona regione in](./images/user-guide/select_region_att.png)
 
@@ -165,7 +165,7 @@ Quindi, selezionare un operatore.
 
 ![operatore regionale](./images/user-guide/region_operators.png)
 
-Infine, digitare il codice del paese nel menu a discesa *Inserisci valore* campo.
+Infine, digitare il codice del paese nel **[!UICONTROL Enter Field Value]** menu a discesa.
 
 >[!NOTE]
 >
@@ -183,7 +183,7 @@ Per garantire che si ottenga il modello più accurato possibile, è importante f
 
 ![finestra di formazione](./images/user-guide/training_window.png)
 
-Dopo aver selezionato la finestra di formazione, fate clic su **Fine** nell’angolo in alto a destra. Consentire l&#39;elaborazione dei dati entro un certo periodo di tempo. Al termine, viene visualizzata una finestra di dialogo di conferma del completamento dell’impostazione dell’istanza. Fate clic su **OK** per reindirizzare la pagina delle istanze *del* servizio in cui è possibile visualizzare l&#39;istanza del servizio.
+Dopo aver selezionato la finestra di formazione, fate clic **[!UICONTROL Finish]** nell’angolo in alto a destra. Consentire l&#39;elaborazione dei dati entro un certo periodo di tempo. Al termine, viene visualizzata una finestra di dialogo di conferma del completamento dell’impostazione dell’istanza. Fate clic per **[!UICONTROL Ok]** essere reindirizzati alla **[!UICONTROL Service instances]** pagina in cui è possibile visualizzare l&#39;istanza del servizio.
 
 ![configurazione completata](./images/user-guide/instance_setup_complete.png)
 
