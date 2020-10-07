@@ -5,9 +5,9 @@ description: 'Scopri come configurare l’SDK Web per Experienci Platform '
 seo-description: 'Scopri come configurare l’SDK Web per Experienci Platform '
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: d036595dc96af98fd53c7eb40162585bac48f05c
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '749'
 ht-degree: 7%
 
 ---
@@ -135,7 +135,7 @@ Ad esempio, se nella pagina Web era presente un elemento con un ID del `containe
 | -------- | ------------ | ----------------- |
 | Booleano | No | `true` |
 
-Abilita [!DNL Audience Manager] [!UICONTROL cookie destinations], che consente di impostare i cookie in base alla qualifica del segmento.
+Abilita le destinazioni dei [!DNL Audience Manager] cookie, che consentono di impostare i cookie in base alla qualifica del segmento.
 
 ### `urlDestinationsEnabled`
 
@@ -143,7 +143,7 @@ Abilita [!DNL Audience Manager] [!UICONTROL cookie destinations], che consente d
 | -------- | ------------ | ----------------- |
 | Booleano | No | `true` |
 
-Abilita [!DNL Audience Manager] , [!UICONTROL URL destinations]che consente di attivare gli URL in base alla qualifica del segmento.
+Abilita le destinazioni [!DNL Audience Manager] URL, che consentono di attivare gli URL in base alla qualifica del segmento.
 
 ## Opzioni identità
 
