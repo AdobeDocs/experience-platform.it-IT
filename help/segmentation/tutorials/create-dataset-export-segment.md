@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Questa esercitazione descrive i passaggi necessari per creare un dataset che può essere utilizzato per esportare un segmento di pubblico utilizzando l'interfaccia utente del Experience Platform .
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: fce215edb99cccc8be0109f8743c9e56cace2be0
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 0%
@@ -78,7 +78,7 @@ Una volta che il dataset ha un nome e una descrizione, fare clic su **[!UICONTRO
 
 Ora è stato creato un set di dati vuoto e si è tornati alla **[!UICONTROL Dataset Activity]** scheda nell&#39; **[!UICONTROL Datasets]** area di lavoro. Il nome del set di dati deve essere visualizzato nell’angolo in alto a sinistra dell’area di lavoro, insieme alla notifica che &quot;Non sono stati aggiunti batch&quot;. Questo è previsto perché non avete ancora aggiunto alcun batch a questo set di dati.
 
-Sul lato destro dell&#39;area di lavoro Set di dati viene visualizzata la **[!UICONTROL Info]** scheda contenente informazioni relative al nuovo set di dati come ID dataset, nome, descrizione, nome tabella, schema], streaming e origine. La **[!UICONTROL Info]** scheda include inoltre informazioni sulla data di creazione del set di dati e sulla data dell&#39;ultima modifica.
+Sul lato destro dell&#39;area di lavoro Set di dati viene visualizzata la **[!UICONTROL Info]** scheda contenente informazioni relative al nuovo set di dati come ID dataset, nome, descrizione, nome tabella, schema, streaming e origine. La **[!UICONTROL Info]** scheda include inoltre informazioni sulla data di creazione del set di dati e sulla data dell&#39;ultima modifica.
 
 Tenete presente **[!UICONTROL Dataset ID]**, in quanto questo valore è richiesto per completare il flusso di lavoro di esportazione del segmento di pubblico.
 
