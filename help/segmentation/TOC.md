@@ -5,9 +5,9 @@ user-guide-title: Guida di Adobe Experience Platform Segmentation Service
 breadcrumb-title: Segmentation Service Guide
 user-guide-description: Build segments and generate audiences from your Real-time Customer Profile data.
 translation-type: tm+mt
-source-git-commit: 1bfb876dc1665ebef4450a6f5363fba1ea1b7c61
+source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
 workflow-type: tm+mt
-source-wordcount: '118'
+source-wordcount: '121'
 ht-degree: 7%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 7%
 
 - [Panoramica](home.md)
 - [Tipi di dati di segmentazione](data-types.md)
-- Guida per gli sviluppatori API di segmentazione{#api}
+- Guida per gli sviluppatori API di segmentazione {#api}
    - [Panoramica](api/overview.md)
    - [Introduzione](api/getting-started.md)
    - [Esportare i processi](api/export-jobs.md)
@@ -31,6 +31,7 @@ ht-degree: 7%
    - [Panoramica](ui/overview.md)
    - [Generatore di segmenti](ui/segment-builder.md)
    - [Segmentazione in streaming](ui/streaming-segmentation.md)
+   - [Refactoring dei vincoli temporali](ui/segment-refactoring.md)
 - [Rispetto delle eccezioni](honoring-opt-outs.md)
 - [Segmentazione multi-entità](multi-entity-segmentation.md)
 - Lingua query profilo {#pql}
