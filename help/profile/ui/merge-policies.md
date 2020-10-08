@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Guida utente per i criteri di unione
 topic: guide
 translation-type: tm+mt
-source-git-commit: fcced39c0a78457ebb108b7378e32f1b2f75808b
+source-git-commit: 45f42bae4060e107e6c131659cea5d10457c34f8
 workflow-type: tm+mt
-source-wordcount: '1368'
+source-wordcount: '1365'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ Viene visualizzata **[!UICONTROL Create merge policy]** la schermata che consent
 
 ### Timestamp ordinato {#timestamp-ordered}
 
-Poiché i record Profilo vengono assimilati  Experience Platform, al momento dell&#39;assimilazione viene ottenuta una marca temporale di sistema che viene aggiunta al record. Se **[!UICONTROL Timestamp ordered]** viene selezionato come tipo &quot;[!UICONTROL Attribute merge]&quot; per un criterio di unione, i profili vengono uniti in base alla marca temporale del sistema. In altre parole, l&#39;unione viene eseguita in base alla marca temporale per l&#39;inserimento del record nella piattaforma.
+Poiché i record Profilo vengono assimilati  Experience Platform, al momento dell&#39;assimilazione viene ottenuta una marca temporale di sistema che viene aggiunta al record. Se **[!UICONTROL Timestamp ordered]** è selezionato come **[!UICONTROL Attribute merge]** tipo per un criterio di unione, i profili vengono uniti in base alla marca temporale del sistema. In altre parole, l&#39;unione viene eseguita in base alla marca temporale per l&#39;inserimento del record nella piattaforma.
 
 Talvolta possono verificarsi casi di utilizzo in cui è necessario fornire una marca temporale personalizzata e fare in modo che il criterio di unione rispetti la marca temporale personalizzata anziché la marca temporale del sistema. Alcuni esempi di questo tipo includono il backfill dei dati o la garanzia dell&#39;ordine corretto degli eventi in caso di acquisizione di record non ordinata.
 
@@ -91,7 +91,7 @@ Quando si seleziona un **[!UICONTROL Attribute merge]** valore, è possibile sel
 
 Un esempio di utilizzo sarebbe se l&#39;organizzazione dispone di informazioni presenti in un set di dati preferito o affidabile rispetto ai dati in un altro set di dati.
 
-Quando si seleziona **[!UICONTROL Dataset precedence]**, si apre un pannello separato che richiede di selezionare tra **[!UICONTROL Available datasets]** i set di dati da includere (o di utilizzare la casella di controllo per selezionare tutti). È quindi possibile trascinare i set di dati nel pannello [**!UICONTROL DataSet]selezionati** e trascinarli nell&#39;ordine di priorità corretto. Al set di dati principale verrà data la priorità più alta, al secondo sarà il secondo più alto e così via.
+Quando si seleziona **[!UICONTROL Dataset precedence]**, si apre un pannello separato che richiede di selezionare tra **[!UICONTROL Available datasets]** i set di dati da includere (o di utilizzare la casella di controllo per selezionare tutti). Potete quindi trascinare i set di dati nel **[!UICONTROL Selected Datasets]** pannello e trascinarli nell’ordine di priorità corretto. Al set di dati principale verrà data la priorità più alta, al secondo sarà il secondo più alto e così via.
 
 ![](../images/merge-policies/dataset-precedence.png)
 
