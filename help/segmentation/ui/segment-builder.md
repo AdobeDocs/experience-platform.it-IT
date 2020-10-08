@@ -5,9 +5,9 @@ title: Guida utente del Generatore di segmenti del servizio di segmentazione
 topic: ui guide
 description: 'Segment Builder (Generatore di segmenti) fornisce un’area di lavoro completa che consente di interagire con gli elementi dati del profilo. L’area di lavoro offre controlli intuitivi per la creazione e la modifica di regole, come le sezioni di trascinamento utilizzate per rappresentare le proprietà dei dati. '
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
 workflow-type: tm+mt
-source-wordcount: '1668'
+source-wordcount: '1719'
 ht-degree: 0%
 
 ---
@@ -72,6 +72,10 @@ Una definizione di segmento è una raccolta di regole utilizzate per descrivere 
 Per aggiungere una nuova regola alla definizione del segmento, trascinate una sezione dalla **[!UICONTROL Fields]** scheda e rilasciatela nell’area di lavoro del generatore di regole. Verranno quindi presentate opzioni specifiche per il contesto in base al tipo di dati aggiunto. I tipi di dati disponibili includono: stringhe, date, [!DNL ExperienceEvents]&quot;[!UICONTROL Event Types]&quot; e audience.
 
 ![](../images/ui/segment-builder/rule-builder-canvas.png)
+
+>[!IMPORTANT]
+>
+>Le ultime modifiche ad Adobe Experience Platform hanno aggiornato l&#39;utilizzo degli operatori `OR` e `AND` logici tra gli eventi. Questi aggiornamenti non influiranno sui segmenti esistenti. Tuttavia, tutti gli aggiornamenti successivi ai segmenti esistenti e alle nuove creazioni di segmenti saranno interessati da queste modifiche. Per ulteriori informazioni, leggere l&#39;aggiornamento [delle costanti](./segment-refactoring.md) ora.
 
 ### Aggiunta di audience
 
