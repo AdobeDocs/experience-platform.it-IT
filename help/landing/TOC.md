@@ -5,10 +5,10 @@ user-guide-title: Guida di Adobe Experience Platform
 breadcrumb-title: Experience Platform Guide
 user-guide-description: Learn how Experience Platform makes it possible to deliver personalized experiences to your customers in real-time.
 translation-type: tm+mt
-source-git-commit: c9daf77f4b7db113b972ee268681999bc7f7fa8d
+source-git-commit: 84f1f840e15cb4487807c13131d0787772fa063a
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 45%
+source-wordcount: '323'
+ht-degree: 46%
 
 ---
 
@@ -17,6 +17,7 @@ ht-degree: 45%
 
 * [Panoramica del Experience Platform](home.md)
 * [Introduzione](get-started.md)
+* [Guida utente di Experience Platform ](./ui-guide.md)
 * Documentazione di Experience Platform {#documentation}
    * [Panoramica della documentazione](documentation/overview.md)
    * [Controllo di accesso](https://docs.adobe.com/content/help/it-IT/experience-platform/access-control/home.html)
@@ -26,7 +27,7 @@ ht-degree: 45%
    * [Governance dei dati](https://docs.adobe.com/content/help/en/experience-platform/data-governance/home.html)
    * [Preparazione dati](https://docs.adobe.com/content/help/en/experience-platform/data-prep/home.html)
    * [Acquisizione dei dati](https://docs.adobe.com/content/help/en/experience-platform/ingestion/home.html)
-   * [Area di lavoro Data Science](https://docs.adobe.com/content/help/en/experience-platform/data-science-workspace/home.html)
+   * [Data Science Workspace](https://docs.adobe.com/content/help/en/experience-platform/data-science-workspace/home.html)
    * [Strumento di debug](https://docs.adobe.com/content/help/it-IT/debugger/using/experience-cloud-debugger.html)
    * [Debugger 2.0 (versione beta)](https://docs.adobe.com/content/help/it-IT/debugger/using-v2/experience-cloud-debugger.html)
    * [Decisioning Service](https://docs.adobe.com/content/help/en/experience-platform/decisioning/home.html)
@@ -35,7 +36,7 @@ ht-degree: 45%
    * [Servizio identità](https://docs.adobe.com/content/help/it-IT/experience-platform/identity/home.html)
    * [Intelligent Services](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/home.html)
    * [Launch](https://docs.adobe.com/content/help/it-IT/launch/using/overview.html)
-   * [Approfondimenti sull&#39;osservabilità](https://docs.adobe.com/content/help/en/experience-platform/observability/home.html)
+   * [Observability Insights](https://docs.adobe.com/content/help/en/experience-platform/observability/home.html)
    * [Privacy Service](https://docs.adobe.com/content/help/en/experience-platform/privacy/home.html)
    * [Profilo (profilo cliente in tempo reale)](https://docs.adobe.com/content/help/it-IT/experience-platform/profile/home.html)
    * [Servizio query](https://docs.adobe.com/content/help/en/experience-platform/query/home.html)
