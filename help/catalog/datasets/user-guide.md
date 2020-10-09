@@ -5,7 +5,7 @@ title: Guida utente dei set di dati
 topic: datasets
 description: Questa guida utente per i set di dati fornisce istruzioni sulle operazioni più comuni quando si utilizzano i set di dati nell'interfaccia utente di Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: eaff457140ba4ac7c25a0f3a3e5aef47d1b99773
+source-git-commit: 79dca07d3e6ecf998a6278fa49178a7fa8cc0e8c
 workflow-type: tm+mt
 source-wordcount: '1105'
 ht-degree: 0%
@@ -62,10 +62,10 @@ Per creare un nuovo set di dati, fai clic su **[!UICONTROL Create dataset]** nel
 
 Nella schermata successiva vengono visualizzate le due opzioni seguenti per creare un nuovo set di dati:
 
-* [Crea set di dati dallo schema](#create-a-dataset-with-an-existing-schema)
-* [Crea set di dati da file CSV](#create-a-dataset-with-a-csv-file)
+* [Crea set di dati dallo schema](#schema)
+* [Crea set di dati da file CSV](#csv)
 
-### Creare un dataset con uno schema esistente
+### Creare un dataset con uno schema esistente {#schema}
 
 Nella **[!UICONTROL Create dataset]** schermata fare clic **[!UICONTROL Create dataset from schema]** per creare un nuovo set di dati vuoto.
 
@@ -79,7 +79,7 @@ Viene **[!UICONTROL Configure dataset]** visualizzato il passaggio. Immettete un
 
 ![](../images/datasets/user-guide/configure_dataset_schema.png)
 
-### Creare un set di dati con un file CSV
+### Creare un set di dati con un file CSV {#csv}
 
 Quando un set di dati viene creato utilizzando un file CSV, viene creato uno schema ad hoc per fornire al set di dati una struttura che corrisponde al file CSV fornito. Nella **[!UICONTROL Create dataset]** schermata fare clic sulla casella di testo **[!UICONTROL Create dataset from CSV file]**.
 
