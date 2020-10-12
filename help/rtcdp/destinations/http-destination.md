@@ -5,7 +5,7 @@ seo-title: La destinazione HTTP è una destinazione  Adobe Real-Time Customer Da
 description: La destinazione HTTP è una destinazione  Adobe Real-Time Customer Data Platform che consente di inviare dati di profilo a endpoint HTTP di terze parti.
 seo-description: La destinazione HTTP è una destinazione  Adobe Real-Time Customer Data Platform che consente di inviare dati di profilo a endpoint HTTP di terze parti.
 translation-type: tm+mt
-source-git-commit: cf100e8df225a665eade5ee6ddab071707e93f8b
+source-git-commit: 5a5cbc31c6445f141d41fca5082b666ec3b26510
 workflow-type: tm+mt
 source-wordcount: '540'
 ht-degree: 2%
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 La [!DNL HTTP] destinazione è una destinazione di [!DNL Adobe Real-Time Customer Data Platform] streaming che consente di inviare i dati del profilo agli [!DNL HTTP] endpoint di terze parti.
 
-Per inviare i dati del profilo agli [!DNL HTTP] endpoint, è innanzitutto necessario connettersi alla destinazione nell&#39; [!DNL Adobe Real-Time Customer Data Platform](#connect-destination).
+Per inviare i dati del profilo agli [!DNL HTTP] endpoint, è innanzitutto necessario connettersi alla destinazione nell&#39; [[!DNL Adobe Real-Time Customer Data Platform]](#connect-destination).
 
 ## Casi d’uso {#use-cases}
 
@@ -33,14 +33,15 @@ La [!DNL HTTP] destinazione è destinata ai clienti che devono esportare dati di
 
 ## Connetti a destinazione {#connect-destination}
 
-1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, selezionare [!DNL  HTTP API], quindi **[!UICONTROL Configure]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, selezionare [!DNL HTTP API], quindi **[!UICONTROL Configure]**.
 
    ![Attiva destinazione HTTP](assets/activate-http-destination.png)
 
    >[!NOTE]
    >
    >Se esiste già una connessione con questa destinazione, è possibile visualizzare un **[!UICONTROL Activate]** pulsante sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra **[!UICONTROL Activate]** e **[!UICONTROL Configure]**, consultate la sezione [Catalogo](../destinations/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
-   ![Attiva destinazione HTTP](assets/connect-http-destination.png)
+   >
+   >![Attiva destinazione HTTP](assets/connect-http-destination.png)
 
 2. Nel [!UICONTROL Account] passaggio, è necessario definire i dettagli di connessione dell&#39;endpoint HTTP. Selezionate **[!UICONTROL New account]** e immettete i dettagli di connessione per l’endpoint HTTP a cui desiderate connettervi.
    * **[!UICONTROL httpEndpoint]**: il completamento [!DNL URL] dell’endpoint HTTP a cui si desidera inviare i dati del profilo.
