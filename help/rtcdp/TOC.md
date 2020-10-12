@@ -2,11 +2,11 @@
 product: adobe experience platform
 audience: user
 user-guide-title: Guida alla piattaforma dati cliente in tempo reale
-user-guide-description: Bring together known and anonymous data from multiple enterprise sources to create customer profiles, create audience segments from those profiles, and activate those segments to third-party destinations.
+user-guide-description: Riunisci dati noti e anonimi provenienti da più origini aziendali per creare profili cliente, creare segmenti di pubblico da tali profili e attivare tali segmenti in destinazioni di terze parti.
 translation-type: tm+mt
-source-git-commit: e3017744bfe35c6a60cf921121135352a1119bdd
+source-git-commit: ac114a7d0313582c6adf05404e0626c618a13253
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '489'
 ht-degree: 12%
 
 ---
@@ -31,6 +31,7 @@ ht-degree: 12%
       * [Pagina dei dettagli sulla destinazione](destinations/destination-details-page.md)
    * Catalogo delle destinazioni {#destinations-cat}
       * [Panoramica del catalogo delle destinazioni](destinations/destinations-catalog.md)
+      * [Destinazione HTTP](/help/rtcdp/destinations/http-destination.md)
       * Adobe destinations{#adobe-destinations}
          * [Panoramica sulle destinazioni dei Adobi](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
@@ -148,4 +149,4 @@ ht-degree: 12%
    * [Panoramica delle origini](sources/sources-overview.md)
    * [Implementare i tag dei siti Web con  lancio Adobe](sources/launch.md)
 * [Note sulla versione  Experience Platform](https://www.adobe.com/go/platform-release-notes-en)
-* [Glossario  Experience Platform](https://www.adobe.com/go/platform-glossary-en)
+* [Glossario di Experience Platform](https://www.adobe.com/go/platform-glossary-en)
