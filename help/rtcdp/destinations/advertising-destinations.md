@@ -5,10 +5,10 @@ seo-title: Destinazioni pubblicitarie
 description: Connetti la tua Piattaforma dati cliente in tempo reale a una piattaforma pubblicitaria 3rd-party (ad es. DSP, rete pubblicitaria, SSP) e condividi tipi di pubblico pseudonimi con queste piattaforme.
 seo-description: Connetti la tua Piattaforma dati cliente in tempo reale a una piattaforma pubblicitaria 3rd-party (ad es. DSP, rete pubblicitaria, SSP) e condividi tipi di pubblico pseudonimi con queste piattaforme.
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: b510f715133cc3fed98861f977b3ce9a857a5ced
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 0%
+source-wordcount: '219'
+ht-degree: 2%
 
 ---
 
@@ -21,6 +21,21 @@ Quando ci si connette a una destinazione pubblicitaria, le audience vengono invi
 
 Attualmente, Real-time CDP supporta le destinazioni pubblicitarie elencate di seguito. Per informazioni su come connettersi a queste destinazioni, consulta i singoli collegamenti:
 
+## Connessioni
+
+Per comprendere la differenza tra connessioni ed estensioni, vedere [Connessioni](/help/rtcdp/destinations/destination-types.md#connections) nella pagina Tipi di destinazione e categorie.
+
+
+* [Google Display e Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
+* [Annunci Google](/help/rtcdp/destinations/google-ads-destination.md)
+* [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
+* [Customer Match di Google](/help/rtcdp/destinations/google-customer-match-destination.md)
+
+
+## Estensioni
+
+Per comprendere la differenza tra connessioni ed estensioni, vedere [Estensioni](/help/rtcdp/destinations/destination-types.md#extensions) nella pagina Tipi di destinazione e categorie.
+
 * [Estensione Adobe Advertising Cloud](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
 * [Estensione Awin Advertising Conversion Tag](/help/rtcdp/destinations/awin-conversiontag-extension.md)
 * [Awin Advertising Mastertag extension](/help/rtcdp/destinations/awin-mastertag-extension.md)
@@ -30,13 +45,8 @@ Attualmente, Real-time CDP supporta le destinazioni pubblicitarie elencate di se
 * [Estensione DoubleClick Floodlight](/help/rtcdp/destinations/doubleclick-floodlight-extension.md)
 * [Estensione Facebook Pixel](/help/rtcdp/destinations/facebook-pixel-extension.md)
 * [Estensione Flashspeak OneTag](/help/rtcdp/destinations/flashtalking-extension.md)
-* [Google Display e Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
-* [Annunci Google](/help/rtcdp/destinations/google-ads-destination.md)
 * [Estensione Google Ads](/help/rtcdp/destinations/google-ads-extension.md)
-* [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
-* [Google Customer Match](/help/rtcdp/destinations/google-customer-match-destination.md)
 * [Estensione Google Gtag](/help/rtcdp/destinations/gtag-advertising-extension.md)
 * [Estensione del tag LinkedIn Insight](linkedin-extension.md)
 * [Estensione Pinterest Conversion Tracking](pinterest-extension.md)
 * [Estensione dei tag Twitter Universal Website](twitter-uwt-extension.md)
-
