@@ -5,9 +5,9 @@ seo-title: Tipi e categorie di destinazioni
 description: ' Adobe Piattaforma dati cliente in tempo reale, le destinazioni di esportazione profilo/segmento acquisiscono i dati dell''evento, li combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Avviate le estensioni per inoltrare i dati degli eventi non elaborati a diversi tipi di destinazioni. '
 seo-description: ' Adobe Piattaforma dati cliente in tempo reale, le destinazioni di esportazione profilo/segmento acquisiscono i dati dell''evento, li combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Avviate le estensioni per inoltrare i dati degli eventi non elaborati a diversi tipi di destinazioni.'
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: b510f715133cc3fed98861f977b3ce9a857a5ced
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '576'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ In  Adobe Real-time Customer Data Platform, distinguiamo tra due tipi di destina
 
 <br> 
 
-### Connessioni
+### Connessioni {#connections}
 
 **[!UICONTROL Profile Export]** e **[!UICONTROL Segment Export]** le destinazioni in  Adobe Acquisizione dati evento in tempo reale dalla piattaforma dati cliente, combinate con altre origini dati per formare il profilo [cliente in tempo](/help/profile/home.md)reale, applicare segmentazione ed esportare segmenti e profili qualificati per destinazioni.
 
@@ -37,7 +37,7 @@ Le destinazioni di esportazione dei profili generano un file contenente profili 
 
 #### Destinazioni di esportazione dei segmenti
 
-Le destinazioni di esportazione dei segmenti inviano i profili e i segmenti per i quali si sono qualificati alle piattaforme di destinazione. Queste destinazioni utilizzano ID segmento o ID utente. Le destinazioni pubblicitarie come [[!DNL Google Display &amp; Video 360]](/help/rtcdp/destinations/google-dv360-destination.md) o [[!DNL Google Ads]](/help/rtcdp/destinations/google-ads-destination.md) sono esempi di questi tipi di destinazioni.
+Le destinazioni di esportazione dei segmenti inviano i profili e i segmenti per i quali si sono qualificati alle piattaforme di destinazione. Queste destinazioni utilizzano ID segmento o ID utente. Destinazioni pubblicitarie come [[!DNL Google Display & Video 360]](/help/rtcdp/destinations/google-dv360-destination.md) o [[!DNL Google Ads]](/help/rtcdp/destinations/google-ads-destination.md) sono esempi di questi tipi di destinazioni.
 
 #### Destinazioni di esportazione dei profili e dei segmenti - Panoramica video
 
@@ -47,7 +47,7 @@ Il video seguente illustra le particolarità dei due tipi di destinazioni:
 
 <br> 
 
-### Estensioni
+### Estensioni {#extensions}
 
  Adobe Real-time CDP sfrutta la potenza e la flessibilità del Experience Platform Launch per includere le estensioni Launch nell&#39;interfaccia  Adobe CDP in tempo reale.
 
