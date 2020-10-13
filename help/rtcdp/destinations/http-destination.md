@@ -5,7 +5,7 @@ seo-title: La destinazione HTTP è una destinazione  Adobe Real-Time Customer Da
 description: La destinazione HTTP è una destinazione  Adobe Real-Time Customer Data Platform che consente di inviare dati di profilo a endpoint HTTP di terze parti.
 seo-description: La destinazione HTTP è una destinazione  Adobe Real-Time Customer Data Platform che consente di inviare dati di profilo a endpoint HTTP di terze parti.
 translation-type: tm+mt
-source-git-commit: 5a5cbc31c6445f141d41fca5082b666ec3b26510
+source-git-commit: f4840f028bb855e79c0f2ae5c82bc38906a7aaec
 workflow-type: tm+mt
 source-wordcount: '540'
 ht-degree: 2%
