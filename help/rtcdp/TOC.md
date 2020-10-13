@@ -4,9 +4,9 @@ audience: user
 user-guide-title: Guida alla piattaforma dati cliente in tempo reale
 user-guide-description: Riunisci dati noti e anonimi provenienti da più sorgenti aziendali per creare profili cliente, segmenti di pubblico da tali profili e attivare tali segmenti in destinazioni di terze parti.
 translation-type: tm+mt
-source-git-commit: 797aff558f0f8b818609631792e96be3f6277b62
+source-git-commit: d9e9440bb8a7735aa8a5d24285c1fb56f32733cb
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '507'
 ht-degree: 17%
 
 ---
@@ -35,6 +35,7 @@ ht-degree: 17%
       * Adobe destinations{#adobe-destinations}
          * [Panoramica sulle destinazioni dei Adobi](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
+         * [Condivisione  segmento di Experience Platform (apre  documentazione del Audience Manager)](https://docs.adobe.com/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * Destinazioni pubblicitarie{#advertising-destinations}
          * [Panoramica sulle destinazioni pubblicitarie](destinations/advertising-destinations.md)
          * [Estensione Adobe Advertising Cloud](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
