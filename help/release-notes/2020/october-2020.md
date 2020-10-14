@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 43ceda3d95511c3972fd0588f472c6c412dd95bf
+source-git-commit: fc1174c8435c1afc3c58dd748daf89f387a19980
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '591'
 ht-degree: 7%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 7%
 
 - [Preparazione dei dati](#data-prep)
 - [Profilo cliente in tempo reale](#profile)
+- [Servizio di segmentazione](#segmentation)
 - [Origini](#sources)
 
 ## Preparazione dei dati {#data-prep}
@@ -44,6 +45,20 @@ Adobe Experience Platform consente di creare esperienze coordinate, coerenti e p
 | Aggiornamenti della visualizzazione dello schema dell&#39;unione | Nell&#39;interfaccia utente del Experience Platform di , gli utenti possono trovare più facilmente informazioni su tutti gli schemi e i set di dati che contribuiscono allo schema unione, nonché attributi di chiave di superficie quali i campi di identità e relazione. Questi aggiornamenti migliorano la capacità di risolvere eventuali problemi e convalidare la corretta configurazione dei profili, la corretta unione delle identità e l’acquisizione dei dati. |
 
 Per ulteriori informazioni [!DNL Real-time Customer Profile], comprese esercitazioni e best practice per l’utilizzo dei [!DNL Profile] dati, consulta la panoramica [Profilo cliente](../../profile/home.md)in tempo reale.
+
+## Servizio di segmentazione {#segmentation}
+
+Adobe Experience Platform Segmentation Service fornisce un&#39;interfaccia utente e RESTful API che consente di creare segmenti e generare audience dai [!DNL Real-time Customer Profile] dati. Questi segmenti sono configurati e mantenuti a livello centrale [!DNL Platform], rendendoli facilmente accessibili da qualsiasi applicazione  Adobe.
+
+[!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo di persone commerciabili all&#39;interno della base cliente. I segmenti possono essere basati su dati di record (come informazioni demografiche) o eventi di serie temporali che rappresentano le interazioni dei clienti con il tuo marchio.
+
+**Nuove funzionalità**
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Rimozione del limite di segmentazione in streaming | Il limite di sette giorni per il periodo di lookback è stato rimosso. |
+
+Per ulteriori informazioni su [!DNL Segmentation Service], consulta la panoramica sulla [segmentazione](../../segmentation/home.md)
 
 ## Origini {#sources}
 
