@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Questa esercitazione utilizza l'API del servizio di flusso per guidarti attraverso i passaggi necessari per connettere la piattaforma a un account Microsoft Dynamics (in seguito denominato "Dynamics") per la raccolta dei dati CRM.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: d332226541685108b58d88096146ed6048606774
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '703'
 ht-degree: 1%
 
 ---
@@ -142,11 +142,9 @@ Una risposta corretta restituisce le specifiche di connessione per [!DNL Dynamic
 }
 ```
 
-## Creazione di una connessione di base
+## Creare una connessione per l&#39;API
 
-Una connessione di base specifica un&#39;origine e contiene le credenziali per tale origine. È necessaria una sola connessione di base per [!DNL Dynamics] account, in quanto può essere utilizzata per creare più connettori sorgente per inserire dati diversi.
-
-Eseguite la seguente richiesta di POST per creare una connessione di base.
+Una connessione per l&#39;API specifica le origini e contiene le credenziali per tale origine. È necessaria una sola connessione per l&#39;API per [!DNL Dynamics] account, in quanto può essere utilizzata per creare più connettori sorgente per inserire dati diversi.
 
 **Formato API**
 
@@ -158,7 +156,7 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/connections' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -202,4 +200,4 @@ Una risposta corretta contiene l&#39;identificatore univoco (`id`) della conness
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato una connessione di base per il tuo [!DNL Dynamics] account utilizzando le API e un ID univoco è stato ottenuto come parte del corpo della risposta. Puoi utilizzare questo ID di connessione di base nell&#39;esercitazione successiva per imparare a [esplorare i sistemi CRM utilizzando l&#39;API](../../explore/crm.md)del servizio di flusso.
+Seguendo questa esercitazione, avete creato una connessione per il vostro [!DNL Dynamics] account mediante le API e un ID univoco è stato ottenuto come parte del corpo della risposta. Puoi utilizzare questo ID connessione nell&#39;esercitazione successiva per imparare a [esplorare i sistemi CRM utilizzando l&#39;API](../../explore/crm.md)del servizio di flusso.
