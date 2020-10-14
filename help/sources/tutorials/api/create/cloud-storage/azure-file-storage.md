@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Questa esercitazione utilizza l'API del servizio di flusso per seguire i passaggi necessari per collegare l'archiviazione dei file di Azure a  Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: d332226541685108b58d88096146ed6048606774
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 2%
@@ -79,7 +79,6 @@ POST /connections
 **Richiesta**
 
 La richiesta seguente crea una nuova [!DNL Azure File Storage] connessione, configurata dalle proprietà fornite nel payload:
-
 
 ```shell
 curl -X POST \
