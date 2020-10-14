@@ -5,9 +5,9 @@ title: Segmentazione in streaming
 topic: ui guide
 description: La segmentazione in streaming su Adobe Experience Platform consente di eseguire la segmentazione in tempo quasi reale, concentrandosi sulla ricchezza dei dati. Con la segmentazione in streaming, la qualifica del segmento ora avviene quando i dati entrano in piattaforma, eliminando la necessità di pianificare ed eseguire processi di segmentazione. Grazie a questa funzionalità, ora è possibile valutare la maggior parte delle regole del segmento quando i dati vengono passati in Piattaforma, il che significa che l'appartenenza al segmento verrà mantenuta aggiornata senza eseguire processi di segmentazione pianificati.
 translation-type: tm+mt
-source-git-commit: c7e8cf31f4c03eec9b24064c6888e09a7070aaa5
+source-git-commit: 578579438ca1d6a7a8c0a023efe2abd616a6dff2
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '751'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Lo streaming della segmentazione su [!DNL Adobe Experience Platform] consente ai
 
 >[!NOTE]
 >
->La segmentazione in streaming può essere utilizzata solo per valutare i dati in streaming in Piattaforma. In altre parole, i dati acquisiti tramite l’assimilazione batch non saranno valutati tramite la segmentazione in streaming e sarà necessario avviare la valutazione batch.
+>La segmentazione in streaming può essere utilizzata solo per valutare i dati in streaming in Piattaforma. In altre parole, i dati acquisiti tramite l’assimilazione batch non verranno valutati tramite la segmentazione in streaming e verranno valutati insieme al processo segmentato pianificato ogni sera.
 
 ## Tipi di query di segmentazione in streaming
 
@@ -36,26 +36,25 @@ Una query verrà valutata automaticamente con segmentazione in streaming se sodd
 | Tipo di query | Dettagli | Esempio |
 | ---------- | ------- | ------- |
 | hit in ingresso | Definizione di segmento che fa riferimento a un singolo evento in arrivo senza limitazioni temporali. | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
-| Hit in arrivo all’interno di una finestra temporale relativa | Definizione di segmento che fa riferimento a un singolo evento in arrivo **negli ultimi sette giorni**. | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| Hit in arrivo all’interno di una finestra temporale relativa | Definizione di segmento che fa riferimento a un singolo evento in arrivo. | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
 | Solo profilo | Definizione di segmento che fa riferimento solo a un attributo di profilo. |  |
 | Hit in arrivo che fa riferimento a un profilo | Definizione di segmento che fa riferimento a un singolo evento in arrivo, senza limitazioni temporali, e uno o più attributi di profilo. | ![](../images/ui/streaming-segmentation/profile-hit.png) |
-| Hit in arrivo che fa riferimento a un profilo all’interno di una finestra temporale relativa | Definizione di segmento che fa riferimento a un singolo evento in arrivo e a uno o più attributi di profilo, **negli ultimi sette giorni**. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
+| Hit in arrivo che fa riferimento a un profilo all’interno di una finestra temporale relativa | Definizione di segmento che fa riferimento a un singolo evento in arrivo e a uno o più attributi di profilo. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
 | Più eventi che fanno riferimento a un profilo | Qualsiasi definizione di segmento che fa riferimento a più eventi **nelle ultime 24 ore** e (facoltativamente) ha uno o più attributi di profilo. | ![](../images/ui/streaming-segmentation/event-history-success.png) |
 
 Nella sezione seguente sono elencati alcuni esempi di definizione del segmento che **non** saranno abilitati per la segmentazione in streaming.
 
-| Tipo di query | Dettagli | Esempio |
-| ---------- | ------- | ------- |
-| Hit in arrivo all’interno di una finestra temporale relativa | Se la definizione del segmento si riferisce a un evento in arrivo **non** entro l’ **ultimo periodo** di sette giorni. Ad esempio, entro le **ultime due settimane**. | ![](../images/ui/streaming-segmentation/relative-hit-failure.png) |
-| Hit in arrivo che fa riferimento a un profilo all’interno di una finestra relativa | Le seguenti opzioni **non** supportano la segmentazione in streaming:<ul><li>Un evento in arrivo **non** entro l&#39; **ultimo periodo** di sette giorni.</li><li>Definizione del segmento che include [!DNL Adobe Audience Manager (AAM)] segmenti o caratteristiche.</li></ul> | ![](../images/ui/streaming-segmentation/profile-relative-failure.png) |
-| Più eventi che fanno riferimento a un profilo | Le seguenti opzioni **non** supportano la segmentazione in streaming:<ul><li>Un evento che **non** si verifica entro **le ultime 24 ore**.</li><li>Definizione di segmento che include segmenti o caratteristiche Adobe Audience Manager (AAM).</li></ul> | ![](../images/ui/streaming-segmentation/event-history-failure.png) |
-| Query con più entità | Nel complesso, le query con più entità **non** sono supportate dalla segmentazione in streaming. |  |
+| Tipo di query | Dettagli |
+| ---------- | ------- |
+| Hit in arrivo che fa riferimento a un profilo all’interno di una finestra relativa | Definizione del segmento che include [!DNL Adobe Audience Manager (AAM)] segmenti o caratteristiche. |
+| Più eventi che fanno riferimento a un profilo | Definizione di segmento che include segmenti o caratteristiche Adobe Audience Manager (AAM). |
+| Query con più entità | Nel complesso, le query con più entità **non** sono supportate dalla segmentazione in streaming. |
 
 Inoltre, durante la segmentazione in streaming si applicano alcune linee guida:
 
 | Tipo di query | Indirizzo |
 | ---------- | -------- |
-| Query evento singolo | La finestra di look-back è limitata a **sette giorni**. |
+| Query evento singolo | Non ci sono limiti alla finestra di lookback. |
 | Query con cronologia eventi | <ul><li>La finestra di look-back è limitata a **un giorno**.</li><li>Tra gli eventi **deve** esistere una condizione di ordine di tempo restrittivo.</li><li>Sono consentiti solo gli ordini temporali semplici (prima e dopo) tra gli eventi.</li><li>I singoli eventi **non possono** essere negati. Tuttavia, l’intera query **può** essere negata.</li></ul> |
 
 Se la definizione di un segmento viene modificata e non soddisfa più i criteri per la segmentazione in streaming, la definizione del segmento passerà automaticamente da &quot;Streaming&quot; a &quot;Batch&quot;.
