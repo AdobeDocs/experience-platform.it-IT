@@ -5,9 +5,9 @@ title: Funzioni data
 topic: overview
 description: Questo documento introduce le funzioni data utilizzate con Data Prep.
 translation-type: tm+mt
-source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
+source-git-commit: 1f9833c06a3423c334edb8aa7e441adfd74be0f2
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '384'
 ht-degree: 17%
 
 ---
@@ -80,4 +80,4 @@ Nella tabella seguente sono illustrate le lettere del pattern definite per le st
 
 **Esempio**
 
-L&#39;espressione `date(orderDate, 'yyyy-MM-dd')` converte orderDate, se il valore era &quot;31 dicembre 2020&quot;, in un&#39;ora di data con il valore &quot;2020-12-31&quot;.
+L&#39;espressione `date(orderDate, 'yyyy-MM-dd')` converte un `orderDate` valore di &quot;31 dicembre 2020&quot; in un valore datetime di &quot;2020-12-31&quot;.
