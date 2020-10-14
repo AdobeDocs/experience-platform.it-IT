@@ -1,104 +1,49 @@
 ---
 title: 'Note sulla versione di Adobe Experience Platform '
-description: ' Experience Platform note sulla versione 9 settembre 2020'
+description: ' Experience Platform note sulla versione 14 ottobre 2020'
 doc-type: release notes
-last-update: September 8, 2020
+last-update: October 13, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 312794af2cdb111fb81c0aa226dec68db2cbc374
+source-git-commit: 43ceda3d95511c3972fd0588f472c6c412dd95bf
 workflow-type: tm+mt
-source-wordcount: '883'
-ht-degree: 4%
+source-wordcount: '478'
+ht-degree: 7%
 
 ---
 
 
 # Note sulla versione di Adobe Experience Platform
 
-**Data di rilascio: 9 settembre 2020**
+**Data di rilascio: 14 ottobre 2020**
 
-Aggiornamenti alle funzionalità esistenti in Adobe Experience Platform:
+- [Preparazione dei dati](#data-prep)
+- [Profilo cliente in tempo reale](#profile)
+- [Origini](#sources)
 
-- [[!DNL Data Governance]](#governance)
-- [[!DNL Destinazioni]](#destinations)
-- [[!DNL Approfondimenti sull&#39;osservabilità]](#observability)
-- [[!DNL Privacy Service]](#privacy)
-- [[!DNL Profilo cliente in tempo reale]](#profile)
-- [[!DNL Segmentation Service]](#segmentation)
-- [[!DNL Sources]](#sources)
+## Preparazione dei dati {#data-prep}
 
-## [!DNL Data Governance] {#governance}
+Data Prep consente agli ingegneri di mappare, trasformare e convalidare i dati da e verso Experience Data Model (XDM).
 
-Adobe Experience Platform Data Governance è una serie di strategie e tecnologie utilizzate per gestire i dati dei clienti e garantire la conformità a normative, restrizioni e criteri applicabili all&#39;utilizzo dei dati. Esso svolge un ruolo chiave a vari livelli, [!DNL Experience Platform] tra cui catalogazione, linea di dati, etichettatura dell&#39;utilizzo dei dati, criteri di accesso ai dati e controllo dell&#39;accesso ai dati per le azioni di marketing.
-
-**Nuove funzionalità**
+**Funzionalità chiave**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Miglioramenti all&#39;interfaccia utente per l&#39;etichettatura dei set di dati | Diversi nuovi controlli di ordinamento e filtro sono stati aggiunti all&#39;interfaccia utente per l&#39;etichettatura dei set di dati per facilitare l&#39;utilizzo di schemi di grandi dimensioni: <ul><li>Ordinare i campi in ordine alfabetico in base al percorso completo dello schema.</li><li>Eseguire ricerche parziali sui nomi dei percorsi dei campi.</li><li>Filtrare i campi senza etichette, etichetta selezionata o categoria di etichette.</li></ul> |
+| Funzione  di `is_set` | La `is_set` funzione consente di verificare la presenza di un attributo all&#39;interno dei dati di origine. `is_set` può essere utilizzato in combinazione con `is_empty` per verificare sia la presenza dell&#39;attributo che la presenza del valore all&#39;interno dell&#39;attributo. |
+| Funzione  di `get_values` | La `get_values` funzione permette di ottenere i valori dalla mappa di input per ogni chiave. |
 
-Per ulteriori informazioni sul servizio, consulta la panoramica [sulla governance dei](../../data-governance/home.md) dati.
+Per ulteriori informazioni, consulta la panoramica [Prep](../../data-prep/home.md)dati.
 
-## Destinazioni {#destinations}
-
-In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni sono integrazioni precostruite con piattaforme di destinazione che attivano i dati a tali partner in modo semplice.
-
-**Nuove funzionalità**
-
-| Funzione | Descrizione |
-| ------- | ----------- |
-| Miglioramenti UX | Gli utenti possono accedere alle azioni della tabella in linea per un accesso più semplice alle azioni principali, ad esempio l&#39;aggiunta di dati, la modifica della pianificazione e l&#39;aggiunta di segmenti. Per ulteriori informazioni, consulta il documento sull’area di lavoro [delle](../../rtcdp/destinations/destinations-workspace.md) destinazioni. |
-
-Per saperne di più, visita la panoramica [delle destinazioni](../../rtcdp/destinations/destinations-overview.md)
-
-## [!DNL Observability Insights] {#observability}
-
-[!DNL Observability Insights] consente di monitorare le attività su Adobe Experience Platform mediante l&#39;uso di metriche statistiche e notifiche di eventi.
-
-**Nuove funzionalità**
-
-| Funzione | Descrizione |
-| --- | --- |
-|  Notifiche evento I/O Adobe | [!DNL Observability Insights] sfrutta  eventi I/O di Adobe per creare notifiche di eventi per diversi servizi  Experience Platform. I payload di notifica vengono inviati a un webhook configurato che puoi quindi utilizzare per automatizzare ulteriori processi a valle. Per ulteriori informazioni, consulta la panoramica [delle](../../observability/notifications/overview.md) notifiche. |
-
-Per ulteriori informazioni sul servizio, consultate la [[!DNL Observability Insights] panoramica](../../observability/home.md) .
-
-## [!DNL Privacy Service] {#privacy}
-
-Diverse normative legali e organizzative danno agli utenti il diritto di accedere o cancellare i propri dati personali dall&#39;archivio dei dati su richiesta. Adobe Experience Platform [!DNL Privacy Service] fornisce un&#39;API RESTful e un&#39;interfaccia utente per aiutarti a gestire queste richieste di dati dai tuoi clienti. Con [!DNL Privacy Service]questa opzione puoi inviare richieste di accesso ed eliminazione di dati di clienti privati o personali dalle applicazioni Adobe Experience Cloud, facilitando la conformità automatica alle normative sulla privacy legali e organizzative.
-
-**Nuove funzionalità**
-
-| Funzione | Descrizione |
-| ------- | ----------- |
-| Supporto per LGPD (Brasile) | I lavori per la privacy possono ora essere creati in base alla normativa brasiliana [!DNL Lei Geral de Proteção de Dados] (LGPD). Questi posti di lavoro sono tracciati secondo il codice di regolamentazione `lgpd_bra`. |
-
-Per ulteriori informazioni sul servizio, consultate la panoramica [dei](../../privacy-service/home.md) Privacy Service.
-
-## Profilo del cliente in tempo reale {#profile}
+## Profilo cliente in tempo reale {#profile}
 
 Adobe Experience Platform consente di creare esperienze coordinate, coerenti e pertinenti per i clienti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con [!DNL Real-time Customer Profile], puoi vedere una visualizzazione olistica di ogni singolo cliente che combina dati provenienti da più canali, inclusi online, offline, CRM e dati di terze parti. [!DNL Profile] consente di consolidare i diversi dati dei clienti in una visualizzazione unificata che offre un account utilizzabile e con marca temporale per ogni interazione con il cliente.
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Visualizzatore profilo | Il visualizzatore del profilo, nell’interfaccia utente della piattaforma, è stato aggiornato per essere un dashboard con personalizzazione completa. L&#39;utente ora può effettuare le seguenti operazioni: <ul><li>Aggiorna gli attributi standard e personalizzati selezionati nel widget delle informazioni di base.</li><li>Creare, modificare e rimuovere widget personalizzati</li><li>Ridimensionare e ridisporre i widget</li></ul> |
+| Aggiunte API di anteprima profilo | L&#39;API di anteprima profilo (`/previewsamplestatus`) ora include la possibilità di visualizzare una suddivisione dei frammenti di profilo totali nell&#39;organizzazione IMS, nonché di visualizzare la distribuzione dei frammenti di profilo negli spazi dei nomi delle identità. |
+| Aggiornamenti della visualizzazione dello schema dell&#39;unione | Nell&#39;interfaccia utente del Experience Platform di , gli utenti possono trovare più facilmente informazioni su tutti gli schemi e i set di dati che contribuiscono allo schema unione, nonché attributi di chiave di superficie quali i campi di identità e relazione. Questi aggiornamenti migliorano la capacità di risolvere eventuali problemi e convalidare la corretta configurazione dei profili, la corretta unione delle identità e l’acquisizione dei dati. |
 
 Per ulteriori informazioni [!DNL Real-time Customer Profile], comprese esercitazioni e best practice per l’utilizzo dei [!DNL Profile] dati, consulta la panoramica [Profilo cliente](../../profile/home.md)in tempo reale.
-
-## Servizio di segmentazione {#segmentation}
-
-Adobe Experience Platform Segmentation Service fornisce un&#39;interfaccia utente e RESTful API che consente di creare segmenti e generare audience dai [!DNL Real-time Customer Profile] dati. Questi segmenti sono configurati e mantenuti a livello centrale [!DNL Platform], rendendoli facilmente accessibili da qualsiasi applicazione  Adobe.
-
-[!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo di persone commerciabili all&#39;interno della base cliente. I segmenti possono essere basati su dati di record (come informazioni demografiche) o eventi di serie temporali che rappresentano le interazioni dei clienti con il tuo marchio.
-
-**Nuove funzionalità**
-
-| Funzione | Descrizione |
-| ------- | ----------- |
-| Esportare i processi | È stato aggiunto un flag per consentire la valutazione dei segmenti come parte di un processo di esportazione. Di conseguenza, gli utenti possono eseguire sia la segmentazione che le esportazioni in un singolo processo. |
-| Unisci criteri | È possibile includere più criteri di unione in un singolo processo di segmentazione batch. |
-
-Per ulteriori informazioni su [!DNL Segmentation Service], consulta la panoramica sulla [segmentazione](../../segmentation/home.md)
 
 ## Origini {#sources}
 
@@ -110,7 +55,8 @@ Adobe Experience Platform è in grado di acquisire dati da origini esterne e di 
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Mappatura automatica | [!DNL Platform] fornisce raccomandazioni intelligenti per la mappatura automatica durante il flusso di lavoro di assimilazione dei dati, in base a uno schema di destinazione o set di dati selezionato dall&#39;utente. Potete regolare manualmente le regole di mappatura automatica flessibili in base ai casi di utilizzo. |
-| Miglioramenti UX | Gli utenti possono accedere alle azioni della tabella in linea per un accesso più semplice alle azioni principali, ad esempio l&#39;aggiunta di dati, la modifica della pianificazione e l&#39;aggiunta di segmenti. Per ulteriori informazioni, consulta il documento [sui flussi di dati](../../sources/tutorials/ui/monitor.md) di monitoraggio. |
+| Mappatura gerarchica | Durante il processo di assimilazione dei dati è possibile visualizzare l&#39;anteprima di un file di origine gerarchico, ad esempio JSON o Parquet. |
+| Supporto dell&#39;autenticazione SSH per SFTP | Puoi collegare il tuo account SFTP a [!DNL Platform] utilizzando le chiavi SSH RSA/DSA Open. Per ulteriori informazioni, consulta la panoramica [](../../sources/connectors/cloud-storage/ftp-sftp.md) SFTP. |
+| Miglioramenti UX | È possibile abilitare il set di dati per [!DNL Profile] durante il processo di assimilazione dei dati. Per ulteriori informazioni, consulta l’esercitazione sul flusso di lavoro [del flusso di lavoro per l’archiviazione](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) cloud. |
 
 Per ulteriori informazioni sulle origini, consultate la panoramica sulle [origini](../../sources/home.md).
