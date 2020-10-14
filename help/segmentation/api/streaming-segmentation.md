@@ -5,9 +5,9 @@ title: Segmentazione in streaming
 topic: developer guide
 description: Questo documento contiene esempi sull’utilizzo della segmentazione in streaming con l’API di segmentazione in streaming.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 578579438ca1d6a7a8c0a023efe2abd616a6dff2
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1359'
 ht-degree: 1%
 
 ---
@@ -25,14 +25,14 @@ Lo streaming della segmentazione su [!DNL Adobe Experience Platform] consente ai
 
 >[!NOTE]
 >
->La segmentazione in streaming può essere utilizzata solo per valutare i dati in streaming in Piattaforma. In altre parole, i dati acquisiti tramite l’assimilazione batch non saranno valutati tramite la segmentazione in streaming e sarà necessario avviare la valutazione batch.
+>La segmentazione in streaming può essere utilizzata solo per valutare i dati in streaming in Piattaforma. In altre parole, i dati acquisiti tramite l’assimilazione batch non verranno valutati tramite la segmentazione in streaming e verranno valutati insieme al processo segmentato pianificato ogni sera.
 
 ## Introduzione
 
 Questa guida per gli sviluppatori richiede una buona conoscenza dei vari [!DNL Adobe Experience Platform] servizi coinvolti nella segmentazione dello streaming. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
-- [[!DNL Profilo cliente in tempo reale]](../../profile/home.md): Fornisce un profilo del consumatore unificato in tempo reale, basato su dati aggregati provenienti da più origini.
-- [[!Segmentazione DNL]](../home.md): Consente di creare segmenti e audience dai [!DNL Real-time Customer Profile] dati.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo del consumatore unificato in tempo reale, basato su dati aggregati provenienti da più origini.
+- [[!DNL Segmentation]](../home.md): Consente di creare segmenti e audience dai [!DNL Real-time Customer Profile] dati.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per eseguire correttamente le chiamate alle [!DNL Platform] API.
@@ -74,26 +74,25 @@ Affinché un segmento possa essere valutato utilizzando la segmentazione in stre
 | Tipo di query | Dettagli |
 | ---------- | ------- |
 | hit in ingresso | Definizione di segmento che fa riferimento a un singolo evento in arrivo senza limitazioni temporali. |
-| Hit in arrivo all’interno di una finestra temporale relativa | Definizione di segmento che fa riferimento a un singolo evento in arrivo **negli ultimi sette giorni**. |
+| Hit in arrivo all’interno di una finestra temporale relativa | Definizione di segmento che fa riferimento a un singolo evento in arrivo. |
 | Solo profilo | Definizione di segmento che fa riferimento solo a un attributo di profilo. |
 | Hit in arrivo che fa riferimento a un profilo | Definizione di segmento che fa riferimento a un singolo evento in arrivo, senza limitazioni temporali, e uno o più attributi di profilo. |
-| Hit in arrivo che fa riferimento a un profilo all’interno di una finestra temporale relativa | Definizione di segmento che fa riferimento a un singolo evento in arrivo e a uno o più attributi di profilo, **negli ultimi sette giorni**. |
+| Hit in arrivo che fa riferimento a un profilo all’interno di una finestra temporale relativa | Definizione di segmento che fa riferimento a un singolo evento in arrivo e a uno o più attributi di profilo. |
 | Più eventi che fanno riferimento a un profilo | Qualsiasi definizione di segmento che fa riferimento a più eventi **nelle ultime 24 ore** e (facoltativamente) ha uno o più attributi di profilo. |
 
 Nella sezione seguente sono elencati alcuni esempi di definizione del segmento che **non** saranno abilitati per la segmentazione in streaming.
 
 | Tipo di query | Dettagli |
 | ---------- | ------- | 
-| Hit in arrivo all’interno di una finestra temporale relativa | Se la definizione del segmento si riferisce a un evento in arrivo **non** entro l’ **ultimo periodo** di sette giorni. Ad esempio, entro le **ultime due settimane**. |
-| Hit in arrivo che fa riferimento a un profilo all’interno di una finestra relativa | Le seguenti opzioni **non** supportano la segmentazione in streaming:<ul><li>Un evento in arrivo **non** entro l&#39; **ultimo periodo** di sette giorni.</li><li>Definizione di segmento che include segmenti o caratteristiche Adobe Audience Manager (AAM).</li></ul> |
-| Più eventi che fanno riferimento a un profilo | Le seguenti opzioni **non** supportano la segmentazione in streaming:<ul><li>Un evento che **non** si verifica entro **le ultime 24 ore**.</li><li>Definizione di segmento che include segmenti o caratteristiche Adobe Audience Manager (AAM).</li></ul> |
+| Hit in arrivo che fa riferimento a un profilo all’interno di una finestra relativa | Definizione di segmento che include segmenti o caratteristiche Adobe Audience Manager (AAM). |
+| Più eventi che fanno riferimento a un profilo | Definizione di segmento che include segmenti o caratteristiche Adobe Audience Manager (AAM). |
 | Query con più entità | Nel complesso, le query con più entità **non** sono supportate dalla segmentazione in streaming. |
 
 Inoltre, durante la segmentazione in streaming si applicano alcune linee guida:
 
 | Tipo di query | Indirizzo |
 | ---------- | -------- |
-| Query evento singolo | La finestra di look-back è limitata a **sette giorni**. |
+| Query evento singolo | Non ci sono limiti alla finestra di lookback. |
 | Query con cronologia eventi | <ul><li>La finestra di look-back è limitata a **un giorno**.</li><li>Tra gli eventi **deve** esistere una condizione di ordine di tempo restrittivo.</li><li>Sono consentiti solo gli ordini temporali semplici (prima e dopo) tra gli eventi.</li><li>I singoli eventi **non possono** essere negati. Tuttavia, l’intera query **può** essere negata.</li></ul> |
 
 ## Recupera tutti i segmenti abilitati per la segmentazione in streaming
@@ -336,7 +335,7 @@ curl -X POST \
 | `name` | **(Obbligatorio)** Nome della pianificazione. Deve essere una stringa. |
 | `type` | **(Obbligatorio)** Il tipo di processo in formato stringa. I tipi supportati sono `batch_segmentation` e `export`. |
 | `properties` | **(Obbligatorio)** Un oggetto contenente proprietà aggiuntive correlate alla pianificazione. |
-| `properties.segments` | **(Obbligatorio quando`type`è uguale`batch_segmentation`)** L&#39;utilizzo di `["*"]` assicura che tutti i segmenti siano inclusi. |
+| `properties.segments` | **(Obbligatorio quando `type` è uguale `batch_segmentation`)** L&#39;utilizzo di `["*"]` assicura che tutti i segmenti siano inclusi. |
 | `schedule` | **(Obbligatorio)** Una stringa contenente la pianificazione del processo. È possibile pianificare l’esecuzione dei processi solo una volta al giorno, pertanto non è possibile pianificare l’esecuzione di un processo più volte durante un periodo di 24 ore. L’esempio mostrato (`0 0 1 * * ?`) indica che il processo viene attivato ogni giorno alle 1:00:00 UTC. Per ulteriori informazioni, consulta la documentazione relativa al formato [delle espressioni](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) cron. |
 | `state` | *(Facoltativo)* Stringa contenente lo stato di pianificazione. Valori disponibili: `active` e `inactive`. Il valore predefinito è `inactive`. Un&#39;organizzazione IMS può creare una sola pianificazione. I passaggi per aggiornare la pianificazione sono disponibili più avanti in questa esercitazione. |
 
