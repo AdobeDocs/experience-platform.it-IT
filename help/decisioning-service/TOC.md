@@ -2,12 +2,12 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Decisioning Service
-breadcrumb-title: Decisioning Service Guide
-user-guide-description: Create personalized, optimized, and orchestrated experiences in Adobe applications by determining the best option from a set of available choices.
+breadcrumb-title: Guida al servizio di scomposizione
+user-guide-description: Crea esperienze personalizzate, ottimizzate e orchestrate in applicazioni  Adobe, determinando l'opzione migliore da una serie di opzioni disponibili.
 translation-type: tm+mt
 source-git-commit: ee0272c36259d5d6fcf7896e1cff166ebd404acd
 workflow-type: tm+mt
-source-wordcount: '53'
+source-wordcount: '76'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 - [Panoramica sul servizio di disattivazione](home.md)
 - [Modello di dominio per la decodifica delle esperienze](experience-model.md)
-- [Offer Decisition Domain Model](offer-model.md)
+- [, modello di dominio Offer Decisioning](offer-model.md)
 - Tutorial {#tutorials}
    - [Operazioni con il runtime di Decisioning Service tramite API](tutorials/runtime.md)
    - [Gestire le entità del servizio di disattivazione tramite API](tutorials/entities.md)
