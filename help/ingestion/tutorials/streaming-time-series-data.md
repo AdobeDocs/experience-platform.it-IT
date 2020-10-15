@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Questa esercitazione ti aiuterà a iniziare a utilizzare le API di assimilazione in streaming, parte delle API del servizio Adobe Experience Platform Data Ingestion.
 translation-type: tm+mt
-source-git-commit: fce215edb99cccc8be0109f8743c9e56cace2be0
+source-git-commit: e94272bf9a18595a4efd0742103569a26e4be415
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1215'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ Questa esercitazione aiuterà a iniziare a utilizzare le API di assimilazione in
 Questa esercitazione richiede una buona conoscenza dei diversi servizi Adobe Experience Platform. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza.
-- [[!DNL Profilo cliente in tempo reale]](../../profile/home.md): Fornisce un profilo di consumo unificato in tempo reale basato su dati aggregati provenienti da più origini.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo di consumo unificato in tempo reale basato su dati aggregati provenienti da più origini.
 - [Schema Guida](../../xdm/api/getting-started.md)per lo sviluppatore del Registro di sistema: Una guida completa che illustra tutti gli endpoint disponibili dell&#39; [!DNL Schema Registry] API e come effettuare chiamate a tali endpoint. Ciò include la conoscenza `{TENANT_ID}`dell&#39;utente, che viene visualizzata nelle chiamate durante questa esercitazione, nonché la conoscenza di come creare gli schemi, che viene utilizzata per creare un set di dati per l&#39;assimilazione.
 
 Inoltre, questa esercitazione richiede che sia già stata creata una connessione in streaming. Per ulteriori informazioni sulla creazione di una connessione in streaming, consulta l’esercitazione sulla [creazione di una connessione in streaming](./create-streaming-connection.md).
@@ -101,7 +101,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | Nome da utilizzare per lo schema. Questo nome deve essere univoco. |
 | `description` | Una descrizione significativa dello schema che si sta creando. |
-| `meta:immutableTags` | In questo esempio, il `union` tag viene utilizzato per mantenere i dati in [[!DNL Profilo cliente in tempo reale]](../../profile/home.md). |
+| `meta:immutableTags` | In questo esempio, il `union` tag viene utilizzato per salvare i dati in modo permanente [[!DNL Real-time Customer Profile]](../../profile/home.md). |
 
 **Risposta**
 
@@ -312,10 +312,13 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 **Richiesta**
 
+È possibile inserire i dati delle serie temporali in una connessione in streaming con o senza il nome di origine.
+
+La richiesta di esempio riportata di seguito consente di inserire in Platform i dati delle serie temporali con un nome di origine mancante. Se ai dati manca il nome di origine, verrà aggiunto l&#39;ID di origine dalla definizione della connessione di streaming.
+
 >[!NOTE]
 >
 >Dovrete generare il vostro `xdmEntity._id` e `xdmEntity.timestamp`. Per generare un ID è utile utilizzare un UUID. Inoltre, la seguente chiamata API **non** richiede intestazioni di autenticazione.
-
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
@@ -380,6 +383,22 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 }'
 ```
 
+Se desiderate includere un nome di origine, l&#39;esempio seguente mostra come includerlo.
+
+```json
+    "header": {
+        "schemaRef": {
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+        },
+        "imsOrgId": "{IMS_ORG}",
+        "datasetId": "{DATASET_ID}",
+        "source": {
+            "name": "Sample source name"
+        }
+    }
+```
+
 **Risposta**
 
 Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del nuovo streaming [!DNL Profile].
@@ -404,7 +423,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del nuovo str
 
 ## Recuperare i nuovi dati delle serie temporali acquisiti
 
-Per convalidare i record precedentemente acquisiti, è possibile utilizzare [[!DNL Profile Access API]](../../profile/api/entities.md) per recuperare i dati delle serie temporali. Questa operazione può essere eseguita utilizzando una richiesta di GET all&#39; `/access/entities` endpoint e parametri di query facoltativi. Possono essere utilizzati più parametri, separati da e commerciale (&amp;).&quot;
+Per convalidare i record acquisiti in precedenza, è possibile utilizzare [[!DNL Profile Access API]](../../profile/api/entities.md) per recuperare i dati delle serie temporali. Questa operazione può essere eseguita utilizzando una richiesta di GET all&#39; `/access/entities` endpoint e parametri di query facoltativi. Possono essere utilizzati più parametri, separati da e commerciale (&amp;).&quot;
 
 >[!NOTE]
 >
