@@ -1,19 +1,19 @@
 ---
-title: Eseguire il debug
+title: Eseguire il debug di
 seo-title: Debug Adobe Experience Platform Web SDK
 description: Scopri come attivare o disattivare  debug SDK Web per Experienci Platform
 seo-description: Scopri come attivare o disattivare  debug SDK Web per Experienci Platform
 keywords: debugging web sdk;debugging;configure;configure command;debug command;edgeConfigId;setDebug;debugEnabled;debug;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: e21374eb51ec1d572f6a4973d33cadf9ae17969b
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '384'
 ht-degree: 0%
 
 ---
 
 
-# Eseguire il debug
+# Eseguire il debug di
 
 Quando il debug è abilitato, l’SDK invia messaggi alla console del browser che possono essere utili per eseguire il debug dell’implementazione e comprendere il funzionamento dell’SDK. Il debug comporta inoltre una convalida sincrona lato server dei dati raccolti rispetto allo schema configurato.
 
@@ -68,3 +68,17 @@ Quando il debugging viene impostato tramite il parametro della stringa di `debug
 * Fine della sessione
 * Esecuzione del `debug` comando
 * Impostare di nuovo il parametro della stringa di query
+
+## Recupero delle informazioni sulla libreria
+
+Spesso è utile accedere ad alcuni dei dettagli della libreria caricata sul sito Web. A questo scopo, eseguite il `getLibraryInfo` comando come segue:
+
+```js
+alloy("getLibraryInfo").then(function(libraryInfo) {
+  console.log(libraryInfo.version);
+});
+```
+
+Attualmente, l&#39; `libraryInfo` oggetto fornito contiene le proprietà seguenti:
+
+* `version` Questa è la versione della libreria caricata. Ad esempio, se la versione della libreria caricata fosse 1.0.0, il valore sarebbe `1.0.0`.
