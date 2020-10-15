@@ -5,9 +5,9 @@ description: 'Scopri come installare l’SDK Web per Experienci Platform '
 seo-description: 'Scopri come installare l’SDK Web per Experienci Platform '
 keywords: web sdk installation;installing web sdk;internet explorer;promise;
 translation-type: tm+mt
-source-git-commit: 7aa0e654300f10db774794d66ece9d0d040cb2ba
+source-git-commit: 5ef902ef7f7717121744f7f0074c0aa17e5a9e9a
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '626'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 # Installazione dell’SDK {#installing-the-sdk}
 
-Il modo migliore per utilizzare Adobe Experience Platform Web SDK è tramite [Launch](http://launch.adobe.com/). Cercate l&#39;estensione `AEP Web SDK` nel catalogo delle estensioni, installatela e configuratela.
+Il modo migliore per utilizzare Adobe Experience Platform Web SDK è tramite [Adobe Experience Platform Launch](http://launch.adobe.com/). Cercate l&#39;estensione `AEP Web SDK` nel catalogo delle estensioni, installatela e configuratela.
 
 L’SDK Web AEP è disponibile anche su una rete CDN da usare. È possibile fare riferimento a questo file o scaricarlo e ospitarlo nella propria infrastruttura. È disponibile in una versione ridotta e non minificata. La versione non limitata è utile per il debug.
 
