@@ -1,18 +1,18 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Guida per informazioni sull'osservabilità
-user-guide-description: Monitor Platform activities through the use of statistical metrics and event notifications.
+user-guide-title: Guida alle informazioni sull’osservabilità
+user-guide-description: Monitora le attività di Platform mediante l’uso di metriche statistiche e notifiche di eventi.
 translation-type: tm+mt
 source-git-commit: 72b2172bbcc8613a2030b4784270321c3933f6aa
 workflow-type: tm+mt
-source-wordcount: '43'
-ht-degree: 13%
+source-wordcount: '55'
+ht-degree: 41%
 
 ---
 
 
-# Approfondimenti sull&#39;osservabilità {#observability}
+# Observability Insights {#observability}
 
 * [Panoramica sull&#39;osservabilità](home.md)
 * Guida per gli sviluppatori API Observability Insights {#api}
