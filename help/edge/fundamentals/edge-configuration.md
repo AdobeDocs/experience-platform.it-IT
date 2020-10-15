@@ -5,9 +5,9 @@ description: 'Scoprite come configurare  Experience Platform Edge Network. '
 seo-description: 'Scoprite come configurare  Experience Platform Edge Network. '
 keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: d069b3007265406367ca9de2b85540b2a070cf36
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '834'
 ht-degree: 2%
 
 ---
@@ -17,21 +17,23 @@ ht-degree: 2%
 
 La configurazione per l&#39;Adobe Experience Platform [!DNL Web SDK] è suddivisa in due posizioni. Il comando [](configuring-the-sdk.md) Configura nell’SDK controlla gli elementi che devono essere gestiti sul client, come nel caso del `edgeDomain`. La configurazione edge gestisce tutte le altre configurazioni per l’SDK. Quando una richiesta viene inviata all&#39;Adobe Experience Platform [!DNL Edge Network], `edgeConfigId` viene utilizzata per fare riferimento alla configurazione lato server. Questo consente di aggiornare la configurazione senza dover apportare modifiche al codice sul sito Web.
 
+Per questa funzione è necessario effettuare il provisioning dell&#39;organizzazione. Contattare il software manager certificato (CSM) per ottenere il inserire nell&#39;elenco Consentiti .
+
 ## Creazione di un ID di configurazione Edge
 
-Gli ID di configurazione Edge possono essere creati in  Adobe [!DNL Launch] utilizzando lo strumento di configurazione edge. Questo strumento consente di creare sia la configurazione dei bordi che gli ambienti all&#39;interno di tali configurazioni.
+Gli ID di configurazione Edge possono essere creati in  Adobe [!DNL Experience Platform Launch] utilizzando lo strumento di configurazione edge. Questo strumento consente di creare sia la configurazione dei bordi che gli ambienti all&#39;interno di tali configurazioni.
 
 ![navigazione tramite strumento di configurazione del bordo](../../assets/edge_configuration_nav.png)
 
 >[!NOTE]
 >
->Lo strumento di configurazione edge è disponibile per i clienti del elenco consentiti , a prescindere dal fatto che vengano utilizzati [!DNL Launch] come gestore di tag. Inoltre, gli utenti richiedono le autorizzazioni Sviluppo in [!DNL Launch]. Per ulteriori dettagli, consultate l&#39;articolo Autorizzazioni [](https://docs.adobe.com/content/help/it-IT/launch/using/reference/admin/user-permissions.html) utente nella [!DNL Launch] documentazione.
+>Lo strumento di configurazione edge è disponibile per i clienti del elenco consentiti , a prescindere dal fatto che vengano utilizzati [!DNL Experience Platform Launch] come gestore di tag. Inoltre, gli utenti richiedono le autorizzazioni Sviluppo in [!DNL Experience Platform Launch]. Per ulteriori dettagli, consultate l&#39;articolo Autorizzazioni [](https://docs.adobe.com/content/help/it-IT/launch/using/reference/admin/user-permissions.html) utente nella [!DNL Experience Platform Launch] documentazione.
 
 Per creare una configurazione dei bordi, fate clic su **[!UICONTROL New Edge Configuration]** nell’area in alto a destra dello schermo. Dopo aver fornito un nome e una descrizione, viene richiesto di specificare le impostazioni predefinite per ogni ambiente.
 
 ### Impostazioni ambiente predefinite
 
-Queste impostazioni predefinite vengono utilizzate per creare i primi tre ambienti con impostazioni identiche. Questi tre ambienti sono *dev*, *stage* e *prod*. Corrispondono ai tre ambienti predefiniti in [!DNL Launch]. Quando si crea una [!DNL Launch] libreria in un ambiente di sviluppo, la libreria utilizza automaticamente l&#39;ambiente di sviluppo dalla configurazione. È possibile modificare le impostazioni in singoli ambienti con la massima flessibilità.
+Queste impostazioni predefinite vengono utilizzate per creare i primi tre ambienti con impostazioni identiche. Questi tre ambienti sono *dev*, *stage* e *prod*. Corrispondono ai tre ambienti predefiniti in [!DNL Experience Platform Launch]. Quando si crea una [!DNL Experience Platform Launch] libreria in un ambiente di sviluppo, la libreria utilizza automaticamente l&#39;ambiente di sviluppo dalla configurazione. È possibile modificare le impostazioni in singoli ambienti con la massima flessibilità.
 
 L’ID utilizzato nell’SDK come ID `edgeConfigId` è composito che specifica la configurazione e l’ambiente. Se non è presente alcun ambiente, viene utilizzato l&#39;ambiente di produzione.
 
@@ -113,7 +115,7 @@ Consente all’SDK di condividere le informazioni sui segmenti tramite le destin
 
 #### Adobe Analytics
 
-Controlla se i dati vengono inviati a  Adobe Analytics. Ulteriori dettagli sono disponibili in Panoramica [di](../solution-specific/analytics/analytics-overview.md)Analytics.
+Controlla se i dati vengono inviati a  Adobe Analytics. Ulteriori dettagli sono disponibili in Panoramica [di](../data-collection/adobe-analytics/analytics-overview.md)Analytics.
 
 ![Adobe Analytics Settings Block](../../assets/edge_configuration_aa.png)
 
