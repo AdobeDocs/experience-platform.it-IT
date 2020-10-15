@@ -1,14 +1,14 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform ETL Guide
-breadcrumb-title: ETL Guide
-user-guide-description: Learn the general steps for creating secure, high-performance connectors for ingesting data into Platform.
+user-guide-title: Guida ad Adobe Experience Platform ETL
+breadcrumb-title: Guida a ETL
+user-guide-description: Scopri i passaggi generali per la creazione di connettori sicuri e ad alte prestazioni per l’acquisizione dei dati in Platform.
 translation-type: tm+mt
 source-git-commit: ab90919bcc478eac9fce02f5a4104cc251035b1a
 workflow-type: tm+mt
-source-wordcount: '27'
-ht-degree: 0%
+source-wordcount: '43'
+ht-degree: 48%
 
 ---
 
