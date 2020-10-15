@@ -5,9 +5,9 @@ description: Scopri come tenere traccia  eventi SDK Web per Experienci Platform
 seo-description: Scopri come tenere traccia  eventi SDK Web per Experienci Platform
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 69ddfca041624123b03eb01d0f10a5bdb36cd119
+source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1139'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ Al momento, l&#39;invio di dati che non corrispondono a uno schema XDM non è su
 
 ### Impostazione `eventType`
 
-In un evento di esperienza XDM, è presente un `eventType` campo facoltativo. Contiene il tipo di evento principale per il record. L&#39;impostazione di un tipo di evento può facilitare la distinzione tra i diversi eventi da inviare. XDM fornisce diversi tipi di evento predefiniti che è possibile utilizzare oppure creare sempre tipi di evento personalizzati per i casi di utilizzo. Di seguito è riportato un elenco di tutti i tipi di evento predefiniti forniti da XDM.
+In un evento di esperienza XDM, è presente un `eventType` campo facoltativo. Contiene il tipo di evento principale per il record. L&#39;impostazione di un tipo di evento può facilitare la distinzione tra i diversi eventi da inviare. XDM fornisce diversi tipi di evento predefiniti che è possibile utilizzare oppure creare sempre tipi di evento personalizzati per i casi di utilizzo. Di seguito è riportato un elenco di tutti i tipi di evento predefiniti forniti da XDM. [Ulteriori informazioni nel repo pubblico XDM](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values)
 
 
 | **Tipo evento:** | **Definizione:** |
@@ -83,7 +83,7 @@ In un evento di esperienza XDM, è presente un `eventType` campo facoltativo. Co
 | delivery.feedback | Eventi di feedback per una consegna. Esempi di eventi di feedback per la consegna di un&#39;e-mail |
 
 
-Questi tipi di evento verranno visualizzati in un menu a discesa se si utilizza l&#39;estensione Launch o se è sempre possibile trasmetterli senza Launch. Possono essere passati come parte dell&#39; `xdm` opzione.
+Questi tipi di evento saranno visualizzati in un menu a discesa se utilizzate l&#39;estensione Adobe Experience Platform Launch  oppure potete sempre trasmetterli senza Experience Platform Launch. Possono essere passati come parte dell&#39; `xdm` opzione.
 
 
 ```javascript
@@ -131,7 +131,7 @@ alloy("sendEvent", {
 
 ### Aggiunta di informazioni sull&#39;identità
 
-È inoltre possibile aggiungere informazioni sull&#39;identità personalizzata all&#39;evento. Consultate [Recupero dell’ID Experience Cloud](./identity.md)
+È inoltre possibile aggiungere informazioni sull&#39;identità personalizzata all&#39;evento. Consultate [Recupero dell’ID Experience Cloud](../identity/overview.md)
 
 ## Utilizzo dell&#39;API sendBeacon
 
@@ -205,7 +205,7 @@ alloy("configure", {
 `xdm` i campi sono impostati in questo ordine:
 
 1. Valori passati come opzioni al comando evento `alloy("sendEvent", { xdm: ... });`
-2. Raccolti automaticamente i valori.  Consultate Informazioni [](../reference/automatic-information.md)automatiche.
+2. Raccolti automaticamente i valori.  Consultate Informazioni [](../data-collection/automatic-information.md)automatiche.
 3. Modifiche apportate al `onBeforeEventSend` callback.
 
 Se il `onBeforeEventSend` callback genera un’eccezione, l’evento viene comunque inviato; tuttavia, nessuna delle modifiche apportate all’interno del callback viene applicata all’evento finale.
