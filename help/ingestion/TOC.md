@@ -1,19 +1,19 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Guida all'inserimento dei dati Adobe Experience Platform
-breadcrumb-title: Data Ingestion Guide
-user-guide-description: Bring your data into Platform through batch or streaming ingestion.
+user-guide-title: Guida all’acquisizione dei dati di Adobe Experience Platform
+breadcrumb-title: Guida all’acquisizione dei dati
+user-guide-description: Trasferisci i tuoi dati in Platform tramite l’acquisizione in batch o in streaming.
 translation-type: tm+mt
 source-git-commit: da0c65b5afc19e2497816c4b84270f5f5c4617f2
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '124'
+ht-degree: 20%
 
 ---
 
 
-# Ingestione dati Adobe Experience Platform {#ingestion}
+# Adobe Experience Platform Data Ingestion {#ingestion}
 
 - [Panoramica sull&#39;inserimento dei dati](home.md)
 - Caricamento in streaming {#streaming}
