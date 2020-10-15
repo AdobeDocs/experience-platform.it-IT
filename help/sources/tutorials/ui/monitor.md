@@ -6,9 +6,9 @@ title: Monitorare account e flussi di dati
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 2514c282d16a1b6ddb2232e46e6283ab2ab3d356
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1037'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Ad
 - [[!DNL Experience Data Model] (XDM) Sistema](../../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
    - [Nozioni di base sulla composizione](../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
    - [Esercitazione](../../../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
-- [[!DNL Profilo cliente in tempo reale]](../../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+- [[!DNL Real-time Customer Profile]](../../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
 ## Monitorare gli account
 
@@ -54,6 +54,10 @@ Inoltre, potete modificare le informazioni sull&#39;account esistente e aggiorna
 ![](../../images/tutorials/monitor/click-edit.png)
 
 Viene **[!UICONTROL Edit account details]** visualizzato il modale. Da questa pagina è possibile aggiornare i dettagli dell&#39;account e le credenziali di autenticazione esistenti.
+
+>[!NOTE]
+>
+> I dettagli dell&#39;account di modifica sono disponibili su tutti i connettori sorgente batch.
 
 ![](../../images/tutorials/monitor/edit-account.png)
 
