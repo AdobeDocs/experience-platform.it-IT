@@ -2,13 +2,13 @@
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
 title: Guida introduttiva alla piattaforma dati cliente  Adobe in tempo reale
 seo-title: Guida introduttiva alla piattaforma dati cliente  Adobe in tempo reale
-description: Scenario di esempio per  Adobe Real-time Customer Data Platform
-seo-description: Scenario di esempio per  Adobe Real-time Customer Data Platform
+description: Scenario di esempio per Adobe Real-time Customer Data Platform
+seo-description: Scenario di esempio per Adobe Real-time Customer Data Platform
 translation-type: tm+mt
 source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2321'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
