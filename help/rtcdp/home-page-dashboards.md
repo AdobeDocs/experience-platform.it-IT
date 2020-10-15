@@ -2,13 +2,13 @@
 keywords: metrics overview; rtcdp metrics overview
 title: Pagina principale e dashboard della piattaforma dati cliente in tempo reale
 seo-title: Pagina principale e dashboard della piattaforma dati cliente in tempo reale
-description: Dashboard, Home Page e la prima esperienza utente di Adobe Experience Platform
-seo-description: Dashboard, Home Page e la prima esperienza utente di Adobe Experience Platform
+description: Dashboard, home page e la prima esperienza utente di Adobe Experience Platform
+seo-description: Dashboard, home page e la prima esperienza utente di Adobe Experience Platform
 translation-type: tm+mt
 source-git-commit: 98d3792f50f2ab95b86d162c51af9445f06343b5
 workflow-type: tm+mt
 source-wordcount: '614'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
