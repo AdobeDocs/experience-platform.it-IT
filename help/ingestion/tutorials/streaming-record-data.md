@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Questa esercitazione ti aiuterà a iniziare a utilizzare le API di assimilazione in streaming, parte delle API del servizio Adobe Experience Platform Data Ingestion.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: e94272bf9a18595a4efd0742103569a26e4be415
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1142'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ Questa esercitazione aiuterà a iniziare a utilizzare le API di assimilazione in
 Questa esercitazione richiede una buona conoscenza dei diversi servizi Adobe Experience Platform. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza.
-- [[!DNL Profilo cliente in tempo reale]](../../profile/home.md): Fornisce un profilo di consumo unificato in tempo reale basato su dati aggregati provenienti da più origini.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo di consumo unificato in tempo reale basato su dati aggregati provenienti da più origini.
 - [Schema Guida](../../xdm/api/getting-started.md)per lo sviluppatore del Registro di sistema: Una guida completa che illustra tutti gli endpoint disponibili dell&#39; [!DNL Schema Registry] API e come effettuare chiamate a tali endpoint. Ciò include la conoscenza `{TENANT_ID}`dell&#39;utente, che viene visualizzata nelle chiamate durante questa esercitazione, nonché la conoscenza di come creare gli schemi, che viene utilizzata per creare un set di dati per l&#39;assimilazione.
 
 Inoltre, questa esercitazione richiede che sia già stata creata una connessione in streaming. Per ulteriori informazioni sulla creazione di una connessione in streaming, consulta l’esercitazione sulla [creazione di una connessione in streaming](./create-streaming-connection.md).
@@ -98,7 +98,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | Nome da utilizzare per lo schema. Questo nome deve essere univoco. |
 | `description` | Una descrizione significativa dello schema che si sta creando. |
-| `meta:immutableTags` | In questo esempio, il `union` tag viene utilizzato per mantenere i dati in [[!DNL Profilo cliente in tempo reale]](../../profile/home.md). |
+| `meta:immutableTags` | In questo esempio, il `union` tag viene utilizzato per salvare i dati in modo permanente [[!DNL Real-time Customer Profile]](../../profile/home.md). |
 
 **Risposta**
 
@@ -281,6 +281,10 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 **Richiesta**
 
+È possibile inserire dati di record in una connessione di streaming con o senza il nome di origine.
+
+Nella richiesta di esempio riportata di seguito viene acquisito un record con un nome di origine mancante in Platform. Se a un record manca il nome di origine, aggiungerà l&#39;ID di origine dalla definizione della connessione di streaming.
+
 >[!NOTE]
 >
 >La seguente chiamata API **non** richiede intestazioni di autenticazione.
@@ -326,6 +330,22 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 }'
 ```
 
+Se desiderate includere un nome di origine, l&#39;esempio seguente mostra come includerlo.
+
+```json
+    "header": {
+        "schemaRef": {
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+        },
+        "imsOrgId": "{IMS_ORG}",
+        "datasetId": "{DATASET_ID}",
+        "source": {
+            "name": "Sample source name"
+        }
+    }
+```
+
 **Risposta**
 
 Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del nuovo streaming [!DNL Profile].
@@ -350,7 +370,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del nuovo str
 
 ## Recuperare i dati del nuovo record acquisito
 
-Per convalidare i record precedentemente acquisiti, è possibile utilizzare [[!DNL Profile Access API]](../../profile/api/entities.md) per recuperare i dati del record.
+Per convalidare i record precedentemente acquisiti, è possibile utilizzare il [[!DNL Profile Access API]](../../profile/api/entities.md) per recuperare i dati del record.
 
 >[!NOTE]
 >
