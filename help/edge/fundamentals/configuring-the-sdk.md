@@ -5,7 +5,7 @@ description: 'Scopri come configurare l’SDK Web per Experienci Platform '
 seo-description: 'Scopri come configurare l’SDK Web per Experienci Platform '
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 233bbd33e3d1e89ff67a9daa00372732934ac573
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 7%
@@ -46,7 +46,7 @@ L’ID di configurazione assegnato, che collega l’SDK agli account e alla conf
 | ---------------- | ------------ | -------------------------------------------------- |
 | Matrice di stringhe | No | `["web", "device", "environment", "placeContext"]` |
 
-Indica le categorie di contesto da raccogliere automaticamente come descritto in Informazioni [](../reference/automatic-information.md)automatiche.  Se questa configurazione non è specificata, per impostazione predefinita vengono utilizzate tutte le categorie.
+Indica le categorie di contesto da raccogliere automaticamente come descritto in Informazioni [](../data-collection/automatic-information.md)automatiche.  Se questa configurazione non è specificata, per impostazione predefinita vengono utilizzate tutte le categorie.
 
 ### `debugEnabled`
 
@@ -109,7 +109,7 @@ Impostate questa opzione per configurare un callback che viene chiamato per ogni
 | -------- | ------------ | ----------------- |
 | Oggetto | No | `"in"` |
 
-Imposta il consenso predefinito dell&#39;utente. Questo viene utilizzato quando non è già stata salvata alcuna preferenza di consenso per l&#39;utente. L&#39;altro valore valido è `"pending"`. Una volta impostato, il lavoro verrà messo in coda fino a quando l&#39;utente non fornirà le preferenze di consenso. Dopo aver fornito le preferenze dell&#39;utente, lavorare procede o viene interrotto in base alle preferenze dell&#39;utente. Per ulteriori informazioni, consultate [Supporto](supporting-consent.md) .
+Imposta il consenso predefinito dell&#39;utente. Questo viene utilizzato quando non è già stata salvata alcuna preferenza di consenso per l&#39;utente. L&#39;altro valore valido è `"pending"`. Una volta impostato, il lavoro verrà messo in coda fino a quando l&#39;utente non fornirà le preferenze di consenso. Dopo aver fornito le preferenze dell&#39;utente, lavorare procede o viene interrotto in base alle preferenze dell&#39;utente. Per ulteriori informazioni, consultate [Supporto](../consent/supporting-consent.md) .
 
 ## Opzioni di personalizzazione
 
