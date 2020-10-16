@@ -5,9 +5,9 @@ title: Guida all'interfaccia utente Adobe Experience Platform
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 84f1f840e15cb4487807c13131d0787772fa063a
+source-git-commit: bde9763aafb4ba32877f7ec14873eeae99760a45
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1543'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ La navigazione sul lato sinistro dello schermo elenca tutti i diversi servizi su
 
 La **[!UICONTROL Home]** sezione consente di tornare alla home page dell&#39;interfaccia utente della piattaforma.
 
-Nella **[!UICONTROL Workflows]** sezione viene visualizzato un elenco di flussi di lavoro in più fasi per l&#39;esecuzione di operazioni all&#39;interno della piattaforma.
+Nella **[!UICONTROL Workflows]** sezione viene visualizzato un elenco di flussi di lavoro in più fasi per l&#39;esecuzione di operazioni all&#39;interno della piattaforma. Ulteriori informazioni sui flussi di lavoro sono disponibili nella panoramica [](./workflows.md)dei flussi di lavoro.
 
 ### [!UICONTROL Connections]
 
