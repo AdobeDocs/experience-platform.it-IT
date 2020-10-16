@@ -5,7 +5,7 @@ title: Panoramica della documentazione Adobe Experience Platform
 topic: overview
 description: La documentazione Adobe Experience Platform è disponibile in diversi formati, tra cui panoramiche, esercitazioni e guide per l'interfaccia utente e l'API. Di seguito viene fornita una breve descrizione dei tipi di documentazione più comuni disponibili per  servizi di Experience Platform.
 translation-type: tm+mt
-source-git-commit: 13aa49c28db0818df5d47560ae7a220d0790610f
+source-git-commit: 36707e95a63b6be60d1d7badbe1cdc9d0bc3548c
 workflow-type: tm+mt
 source-wordcount: '1035'
 ht-degree: 3%
@@ -31,7 +31,7 @@ La documentazione Adobe Experience Platform è disponibile in diversi formati, t
 
 * **Esercitazione:** Un&#39;esercitazione è una guida passo-passo attraverso l&#39;interfaccia utente, l&#39;API o un mix di entrambe, che porta a un risultato specifico. A differenza di una guida per gli sviluppatori, un&#39;esercitazione API può concentrarsi su uno o due endpoint e non è una risorsa API esaustiva. Allo stesso modo, le esercitazioni sull&#39;interfaccia utente possono concentrarsi solo su passaggi specifici, non sull&#39;interfaccia utente completa disponibile per quel servizio. I Tutorials fanno spesso parte di un flusso di lavoro più ampio e presentano i &quot;passaggi successivi&quot; che descrivono le esercitazioni da provare successivamente.
 
-* **Guida utente:** Una guida utente illustra le azioni disponibili nell’ [!DNL Platform] interfaccia utente per un servizio specifico. Questi documenti contengono schermate e passaggi incentrati sull&#39;interazione con la piattaforma attraverso l&#39;interfaccia utente. Simile a una guida per gli sviluppatori, la guida per l&#39;utente descrive tutte le azioni e le opzioni disponibili, tra cui &quot;gotchas&quot; per evitare il problema. Questa è la risorsa più dettagliata per l’utilizzo dell’interfaccia utente.
+* **Guida all&#39;interfaccia utente:** Una guida all&#39;interfaccia utente illustra le azioni disponibili nell&#39;interfaccia [!DNL Platform] utente per un servizio specifico. Questi documenti contengono schermate e passaggi incentrati sull&#39;interazione con la piattaforma tramite l&#39;interfaccia utente. Simile a una guida per gli sviluppatori, la guida all&#39;interfaccia utente descrive tutte le azioni e le opzioni disponibili, compresi i gotchas, da evitare. Questa è la risorsa più dettagliata per l’utilizzo dell’interfaccia utente.
 
 ## Supporto per il linguaggio di documentazione
 
@@ -63,6 +63,6 @@ La documentazione è attualmente disponibile per i servizi e le funzioni Adobe E
 * **[!DNL Query Service]:** Utilizzate le query SQL per recuperare dati da Adobe Experience Platform, ad esempio  dati della soluzione di Adobe, dati di prime parti cliente o qualsiasi altro dato della piattaforma.
 * **[!DNL Real-time Customer Data Platform]:** CDP in tempo reale combina più origini dati aziendali per creare profili unificati in tempo reale che possono essere utilizzati per fornire esperienze cliente personalizzate uno-a-uno su tutti i canali e dispositivi.
 * **[!DNL Sandboxes]:** Le sandbox suddividono una singola [!DNL Platform] istanza in ambienti virtuali distinti per consentire lo sviluppo e l&#39;evoluzione di applicazioni per esperienze digitali.
+* **Schemi**: Guidato da  Adobe, Experience Data Model (XDM) è uno sforzo per standardizzare i dati sull&#39;esperienza cliente e definire schemi per la gestione dell&#39;esperienza cliente. Gli schemi XDM supportano l&#39;interoperabilità dei dati tra [!DNL Experience Platform] i componenti.
 * **[!DNL Segmentation]:** Crea segmenti basati su dati del profilo cliente in tempo reale per generare audience e fornire esperienze ai consumatori.
 * **[!DNL Sources](Connessioni):** {#sources} Consente di inserire dati in Adobe Experience Platform da origini diverse, come applicazioni  Adobe, storage basato su cloud, database e altro ancora.
-* **Schemi**: Guidato da  Adobe, Experience Data Model (XDM) è uno sforzo per standardizzare i dati sull&#39;esperienza cliente e definire schemi per la gestione dell&#39;esperienza cliente. Gli schemi XDM supportano l&#39;interoperabilità dei dati tra [!DNL Experience Platform] i componenti.
