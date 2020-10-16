@@ -9,9 +9,9 @@ doc-type: video
 activity: understand
 thumbnail: 32792.jpg
 translation-type: tm+mt
-source-git-commit: 13aa49c28db0818df5d47560ae7a220d0790610f
+source-git-commit: 86d6476877eb7a0413658e476802a1cd8905dcc3
 workflow-type: tm+mt
-source-wordcount: '87'
+source-wordcount: '105'
 ht-degree: 0%
 
 ---
@@ -20,5 +20,10 @@ ht-degree: 0%
 # Presentazione dell&#39;interfaccia utente  Experience Platform
 
 Questo video fornisce una breve panoramica dell’interfaccia utente (interfaccia utente) di Adobe Experience Platform, che mostra come navigare  Experience Platform da  Experience Cloud, interagire con la pagina principale, cambiare le sandbox e utilizzare vari elementi di navigazione all’interno dell’interfaccia utente.
+
+>[!NOTE]
+>
+>L’interfaccia utente del Experience Platform  viene aggiornata di frequente e può essere cambiata dopo la registrazione del video.
+
 
 >[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)
