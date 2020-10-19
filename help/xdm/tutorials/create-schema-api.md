@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorials
 description: Questa esercitazione utilizza l'API del Registro di sistema dello schema per illustrare i passaggi necessari per comporre uno schema utilizzando una classe standard.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: de3d3a12e5e362bfa5d3149481a0eb7a6b278b70
 workflow-type: tm+mt
-source-wordcount: '2368'
+source-wordcount: '2343'
 ht-degree: 1%
 
 ---
@@ -26,8 +26,8 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Expe
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
    * [Nozioni di base sulla composizione](../schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
-* [[!DNL Profilo cliente in tempo reale]](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-* [[!DNL Sandbox]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 Prima di iniziare questa esercitazione, consulta la guida [allo](../api/getting-started.md) sviluppo per informazioni importanti da conoscere per effettuare correttamente le chiamate all&#39; [!DNL Schema Registry] API. Ciò include il vostro `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all’intestazione Accetta e ai suoi possibili valori).
 
@@ -956,9 +956,9 @@ L&#39;esecuzione di una richiesta di GET per la ricerca dello schema ora mostra 
 
 ### Definire un descrittore di identità
 
-Gli schemi vengono utilizzati per assimilare i dati in [!DNL Experience Platform]. Questi dati vengono utilizzati in più servizi per creare una singola visualizzazione unificata di un singolo utente. Per facilitare questo processo, i campi chiave possono essere contrassegnati come &quot;Identità&quot; e, al momento dell&#39;inserimento dei dati, i dati in tali campi vengono inseriti nel &quot;Grafico identità&quot; per l&#39;individuo in questione. I dati del grafico sono quindi accessibili da [[!DNL Real-time Customer Profile]](../../profile/home.md) e da altri [!DNL Experience Platform] servizi, per fornire una vista unita di ogni singolo cliente.
+Gli schemi vengono utilizzati per assimilare i dati in [!DNL Experience Platform]. Questi dati vengono utilizzati in più servizi per creare una singola visualizzazione unificata di un singolo utente. Per facilitare questo processo, i campi chiave possono essere contrassegnati come &quot;Identità&quot; e, al momento dell&#39;inserimento dei dati, i dati in tali campi vengono inseriti nel &quot;Grafico identità&quot; per l&#39;individuo in questione. I dati del grafico sono quindi accessibili da [[!DNL Real-time Customer Profile]](../../profile/home.md) e da altri [!DNL Experience Platform] servizi per fornire una vista unita di ciascun cliente.
 
-I campi generalmente contrassegnati come &quot;Identità&quot; includono: indirizzo e-mail, numero di telefono, [[!DNL  ID Experience Cloud (ECID)]](https://docs.adobe.com/content/help/it-IT/id-service/using/home.html), ID CRM o altri campi ID univoci.
+I campi generalmente contrassegnati come &quot;Identità&quot; includono: indirizzo e-mail, numero di telefono, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/it-IT/id-service/using/home.html), ID CRM o altri campi ID univoci.
 
 Considerate eventuali identificatori univoci specifici della vostra organizzazione, in quanto possono essere buoni anche campi di identità.
 
@@ -997,7 +997,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->È possibile elencare i valori &quot;xdm:namespace&quot; disponibili, oppure crearne di nuovi, utilizzando l&#39;API [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). Il valore di &quot;xdm:property&quot; può essere &quot;xdm:code&quot; o &quot;xdm:id&quot;, a seconda di &quot;xdm:namespace&quot; utilizzato.
+>È possibile elencare i valori &quot;xdm:namespace&quot; disponibili, oppure crearne di nuovi, utilizzando [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). Il valore di &quot;xdm:property&quot; può essere &quot;xdm:code&quot; o &quot;xdm:id&quot;, a seconda di &quot;xdm:namespace&quot; utilizzato.
 
 **Risposta**
 
@@ -1614,7 +1614,7 @@ Di seguito viene mostrato lo schema Membri fedeltà completati in formato JSON:
                 "stateProvince": {
                     "title": "State or province",
                     "type": "string",
-                    "description": "The state, or province portion of the observation. The format follows the [ISO 3166-2 (country and subdivision)][http://www.unece.org/cefact/locode/subdivisions.html] standard.",
+                    "description": "The state, or province portion of the observation. The format follows the ISO 3166-2 (country and subdivision) standard.",
                     "examples": [
                         "US-CA",
                         "DE-BB",
