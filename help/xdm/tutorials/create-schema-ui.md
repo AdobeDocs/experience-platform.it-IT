@@ -8,7 +8,7 @@ description: Questa esercitazione descrive i passaggi necessari per creare uno s
 translation-type: tm+mt
 source-git-commit: 9c7119ad836007af3437dc2e938b68aff3ca0f56
 workflow-type: tm+mt
-source-wordcount: '3650'
+source-wordcount: '3634'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Questa esercitazione richiede una conoscenza approfondita dei vari aspetti di Ad
 
 * [[!DNL Experience Data Model (XDM)]](../home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
    * [Nozioni di base sulla composizione](../schema/composition.md)dello schema: Panoramica degli schemi XDM e dei relativi blocchi costitutivi, incluse classi, mixin, tipi di dati e campi.
-* [[!DNL Profilo cliente in tempo reale]](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
 ## Sfogliare gli schemi esistenti nell’ [!UICONTROL Schemas] area di lavoro {#browse}
 
@@ -274,11 +274,11 @@ Dopo aver applicato la modifica, l&#39;icona relativa `loyaltyId` mostra un simb
 
 ![](../images/tutorials/create-schema/identity-applied.png)
 
-Ora tutti i dati immessi nel `loyaltyId` campo verranno utilizzati per identificare l&#39;individuo e unire una singola vista del cliente. Per ulteriori informazioni sull&#39;utilizzo delle identità in [!DNL Experience Platform], consulta la documentazione di [[!DNL Identity Service]](../../identity-service/home.md) .
+Ora tutti i dati immessi nel `loyaltyId` campo verranno utilizzati per identificare l&#39;individuo e unire una singola vista del cliente. Per ulteriori informazioni sull&#39;utilizzo delle identità in [!DNL Experience Platform], consulta la [[!DNL Identity Service]](../../identity-service/home.md) documentazione.
 
 ## Abilita lo schema da utilizzare in [!DNL Real-time Customer Profile] {#profile}
 
-[[!DNL Real-time Customer Profile]](../../profile/home.md) sfrutta i dati di identità per fornire una visione olistica [!DNL Experience Platform] di ogni singolo cliente. Il servizio crea solidi profili a 360° degli attributi del cliente e account con marca temporale di ogni interazione che i clienti hanno avuto in tutti i sistemi integrati con [!DNL Experience Platform].
+[[!DNL Real-time Customer Profile]](../../profile/home.md) sfrutta i dati di identità [!DNL Experience Platform] per fornire una visione olistica di ciascun cliente. Il servizio crea solidi profili a 360° degli attributi del cliente e account con marca temporale di ogni interazione che i clienti hanno avuto in tutti i sistemi integrati con [!DNL Experience Platform].
 
 Affinché uno schema possa essere abilitato per l&#39;uso con [!DNL Real-time Customer Profile], è necessario che sia definita un&#39;identità primaria. Se si tenta di abilitare uno schema senza prima definire un&#39;identità primaria, verrà visualizzato un messaggio di errore.
 
