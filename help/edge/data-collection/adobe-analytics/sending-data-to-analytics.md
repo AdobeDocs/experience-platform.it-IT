@@ -5,7 +5,7 @@ description: Scopri come inviare dati collegamento a  Adobe Analytics con  Exper
 seo-description: Scopri come inviare dati collegamento a  Adobe Analytics con  Experience Platform Web SDK
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: 9e1ad05285b27a9fc8b56db903609add3fef144e
+source-git-commit: c9d777f4350f0b039608c4f9b01d5206994e2572
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Invio di dati a  Adobe Analytics
 
-Mentre in passato esistevano funzioni diverse per distinguere tra una visualizzazione di pagina e un collegamento (ad esempio, `s.t(), s.tl()`), nell’SDK Web è presente solo il `sendEvent` comando. I dati inviati con un evento determinano se si tratta di una visualizzazione di pagina o di un collegamento. [Ulteriori informazioni sul tracciamento dei collegamenti](../track-links.md)
+Mentre in passato esistevano funzioni diverse per distinguere tra una visualizzazione di pagina e un collegamento (ad esempio, `s.t(), s.tl()`), nell’SDK Web è presente solo il `sendEvent` comando. I dati inviati con un evento determinano se si tratta di una visualizzazione di pagina o di un collegamento. [Ulteriori informazioni sul tracciamento dei collegamenti](../track-links.md).
 
 ## Invio di una visualizzazione pagina
 
