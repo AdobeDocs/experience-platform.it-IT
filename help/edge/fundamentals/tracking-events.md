@@ -5,7 +5,7 @@ description: Scopri come tenere traccia  eventi SDK Web per Experienci Platform
 seo-description: Scopri come tenere traccia  eventi SDK Web per Experienci Platform
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
+source-git-commit: 14b10aeeb382e9d638cf9fdf62deddbee3e72600
 workflow-type: tm+mt
 source-wordcount: '1139'
 ht-degree: 0%
@@ -54,7 +54,7 @@ Al momento, l&#39;invio di dati che non corrispondono a uno schema XDM non è su
 
 ### Impostazione `eventType`
 
-In un evento di esperienza XDM, è presente un `eventType` campo facoltativo. Contiene il tipo di evento principale per il record. L&#39;impostazione di un tipo di evento può facilitare la distinzione tra i diversi eventi da inviare. XDM fornisce diversi tipi di evento predefiniti che è possibile utilizzare oppure creare sempre tipi di evento personalizzati per i casi di utilizzo. Di seguito è riportato un elenco di tutti i tipi di evento predefiniti forniti da XDM. [Ulteriori informazioni nel repo pubblico XDM](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values)
+In un evento di esperienza XDM, è presente un `eventType` campo facoltativo. Contiene il tipo di evento principale per il record. L&#39;impostazione di un tipo di evento può facilitare la distinzione tra i diversi eventi da inviare. XDM fornisce diversi tipi di evento predefiniti che è possibile utilizzare oppure creare sempre tipi di evento personalizzati per i casi di utilizzo. Di seguito è riportato un elenco di tutti i tipi di evento predefiniti forniti da XDM. [Per saperne di più, consulta il repo](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values)pubblico XDM.
 
 
 | **Tipo evento:** | **Definizione:** |
@@ -131,7 +131,7 @@ alloy("sendEvent", {
 
 ### Aggiunta di informazioni sull&#39;identità
 
-È inoltre possibile aggiungere informazioni sull&#39;identità personalizzata all&#39;evento. Consultate [Recupero dell’ID Experience Cloud](../identity/overview.md)
+È inoltre possibile aggiungere informazioni sull&#39;identità personalizzata all&#39;evento. Consultate [Recupero  ID](../identity/overview.md)Experience Cloud.
 
 ## Utilizzo dell&#39;API sendBeacon
 
