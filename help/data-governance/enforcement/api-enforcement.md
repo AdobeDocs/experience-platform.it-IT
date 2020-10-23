@@ -6,9 +6,9 @@ topic: enforcement
 type: Tutorial
 description: Dopo aver creato etichette di utilizzo dei dati per i dati e criteri di utilizzo per le azioni di marketing in base a tali etichette, potete utilizzare l'API Servizio criteri per valutare se un'azione di marketing eseguita su un set di dati o su un gruppo arbitrario di etichette costituisce una violazione dei criteri. Potete quindi configurare i vostri protocolli interni per gestire le violazioni dei criteri in base alla risposta API.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 00688e271b3c1e3ad1a17ceb6045e3316bd65961
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '993'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 # Applicazione dei criteri di utilizzo dei dati tramite l&#39; [!DNL Policy Service] API
 
-Dopo aver creato etichette di utilizzo dei dati per i dati e criteri di utilizzo per le azioni di marketing relative a tali etichette, è possibile utilizzare [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) per valutare se un&#39;azione di marketing eseguita su un set di dati o su un gruppo arbitrario di etichette costituisce una violazione dei criteri. Potete quindi configurare i vostri protocolli interni per gestire le violazioni dei criteri in base alla risposta API.
+Dopo aver creato etichette di utilizzo dei dati per i dati e criteri di utilizzo per le azioni di marketing in base a tali etichette, è possibile utilizzare l&#39;etichetta [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) per valutare se un&#39;azione di marketing eseguita su un set di dati o su un gruppo arbitrario di etichette costituisce una violazione dei criteri. Potete quindi configurare i vostri protocolli interni per gestire le violazioni dei criteri in base alla risposta API.
 
 >[!NOTE]
 >
@@ -170,7 +170,13 @@ curl -X POST \
     },
     {
       "entityType": "dataSet",
-      "entityId": "5cc1fb685410ef14b748c55f"
+      "entityId": "5cc1fb685410ef14b748c55f",
+      "entityMeta": {
+          "fields": [
+              "/properties/personalEmail/properties/address",
+              "/properties/person/properties/name/properties/fullName"
+          ]
+      }
     }
   ]'
 ```
@@ -179,6 +185,7 @@ curl -X POST \
 | --- | --- |
 | `entityType` | Ogni elemento nell&#39;array di payload deve indicare il tipo di entità da definire. In questo caso d’uso, il valore sarà sempre &quot;dataSet&quot;. |
 | `entityId` | Ogni elemento nell&#39;array di payload deve fornire l&#39;ID univoco per un dataset. |
+| `entityMeta.fields` | (Facoltativo) Un array di stringhe [JSON Pointer](../../landing/api-fundamentals.md#json-pointer) , che fanno riferimento a campi specifici nello schema del set di dati. Se questa matrice è inclusa, solo i campi contenuti nell&#39;array partecipano alla valutazione. Eventuali campi dello schema non inclusi nell&#39;array non parteciperanno alla valutazione.<br><br>Se questo campo non è incluso, tutti i campi all&#39;interno dello schema del set di dati saranno inclusi nella valutazione. |
 
 **Risposta**
 
@@ -304,13 +311,13 @@ Una risposta corretta restituisce l&#39;URL dell&#39;azione di marketing, le eti
                         "labels": [
                             "C5"
                         ],
-                        "path": "/properties/createdByBatchID"
+                        "path": "/properties/personalEmail/properties/address",
                     },
                     {
                         "labels": [
                             "C5"
                         ],
-                        "path": "/properties/faxPhone"
+                        "path": "/properties/person/properties/name/properties/fullName"
                     }
                 ]
             }
