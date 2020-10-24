@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: October 13, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 578579438ca1d6a7a8c0a023efe2abd616a6dff2
+source-git-commit: 133aa5ace2567e9380eb970b5737d7327d0c99b2
 workflow-type: tm+mt
-source-wordcount: '591'
-ht-degree: 7%
+source-wordcount: '1025'
+ht-degree: 4%
 
 ---
 
@@ -75,3 +75,45 @@ Adobe Experience Platform è in grado di acquisire dati da origini esterne e di 
 | Miglioramenti UX | È possibile abilitare il set di dati per [!DNL Profile] durante il processo di assimilazione dei dati. Per ulteriori informazioni, consulta l’esercitazione sul flusso di lavoro [del flusso di lavoro per l’archiviazione](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) cloud. |
 
 Per ulteriori informazioni sulle origini, consultate la panoramica sulle [origini](../../sources/home.md).
+
+## Time to Value
+
+Adobe Experience Platform consente ai team delle operazioni di marketing di creare una visualizzazione a 360 gradi dei propri clienti senza richiedere un&#39;ampia esperienza di progettazione dei dati. L&#39;obiettivo è quello di accelerare i team e valutare la velocità dei dati.
+
+&quot;Time to Value&quot; taglia tra le persone. Gli ingegneri dei dati possono completare le attività in modo efficiente e accelerato grazie alla trasparenza dell&#39;attività dei dati, in modo da rendere disponibile prima un profilo cliente in tempo reale affidabile e scalabile. Gli addetti al marketing possono quindi utilizzare un profilo cliente completo e affidabile per la segmentazione e l&#39;attivazione.
+
+### Funzioni principali
+
+#### Schema
+
+Consente di aggiornare usabilità e flusso di lavoro e fornisce approfondimenti pratici, standardizzazione e trasparenza dei campi chiave all&#39;interno delle composizioni di schema. Espone la linea di dati per la combinazione di singoli modelli di dati rappresentati come &quot;schema unione&quot;, fornendo informazioni sulla struttura e gli ingredienti del profilo cliente in tempo reale.
+
+- Aggiornamento del flusso di lavoro dello schema
+   - Utilizzate i collegamenti per il tipo più comune di schemi XDM, con le impostazioni automatizzate nell&#39;editor di schemi e le raccomandazioni di mixin base agli obiettivi prefissati
+   - Maggiore efficienza del flusso di lavoro grazie alla selezione e alla funzionalità di anteprima dei mixer
+   - Trasparenza sugli attributi chiave della composizione dello schema, inclusi identità, relazione e campi obbligatori e obsoleti
+- Trasparenza di proprietà e attributi chiave dello schema unione
+
+#### Ingestione e raccolta dati
+
+La mappatura automatica, l&#39;anteprima della mappatura e l&#39;aggiornamento dell&#39;usabilità consentono di inserire dati da qualsiasi piattaforma o origine da utilizzare in profili, segmentazione a valle e attivazione. Il sistema ha l&#39;efficienza e l&#39;intelligenza necessarie per semplificare l&#39;utilizzo di questo processo, anche per le persone esterne all&#39;IT.
+
+- Accesso più semplice alle origini dati con scheda della pagina del catalogo e modello di azione in linea della tabella dati
+- Campo/espressione calcolata per l&#39;assimilazione dei dati
+- Le raccomandazioni di mappatura dei dati velocizzano il processo di assimilazione
+- Anteprima e convalide mappatura
+
+#### Configurazione profilo
+
+Il visualizzatore di profili intuitivo per gli esperti di marketing con la personalizzazione consente di comprendere la composizione di un profilo da usare nei casi di segmentazione, pianificazione e attivazione. Il flusso di lavoro consolidato idrata il profilo in modo controllato ed efficiente fornendo un flusso di lavoro graduale per i criteri di unione.
+
+- Visualizzate ogni singolo profilo in un visualizzatore di profili avanzato che visualizza una dashboard con personalizzazione completa, consentendo la condivisione di dati multicanale raggruppati in base agli obiettivi aziendali degli esperti di marketing.
+- Modificate gli attributi standard e personalizzati nel widget Informazioni di base, in base alle esigenze aziendali.
+- Potete personalizzare i widget con gli attributi del profilo cliente in tempo reale utilizzando il selettore dello schema unione. Lo schema unione è derivato dai modelli di dati sottostanti utilizzati nell&#39;assimilazione dei dati del profilo.
+
+
+#### Monitoraggio
+
+Garantisce la trasparenza del flusso di dati e fornisce informazioni sullo stato del traffico dei dati nel sistema dai connettori di origine, fornendo maggiore self-service e maggiore facilità di utilizzo per la risoluzione di problemi.
+
+- Monitorate tutte le esecuzioni del flusso e visualizzate una visualizzazione dettagliata di ciascuna esecuzione, incluso lo stato di completamento, la durata dell&#39;esecuzione, l&#39;elenco dei file elaborati, gli errori e la diagnostica utilizzabile
