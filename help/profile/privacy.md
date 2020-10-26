@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Elaborazione delle richieste di privacy in Real-time Customer Profile
 topic: overview
 translation-type: tm+mt
-source-git-commit: f7abccb677294e1595fb35c27e03c30eb968082a
+source-git-commit: 066337419431db24bde0a8d0d30b85132d08f43c
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,9 @@ Il presente documento illustra i concetti essenziali relativi all’elaborazione
 
 Prima di leggere la presente guida è consigliabile conoscere i seguenti [!DNL Experience Platform] servizi:
 
-* [[!Privacy Service DNL]](home.md): Gestisce le richieste dei clienti relative all&#39;accesso, al rifiuto della vendita o all&#39;eliminazione dei loro dati personali tra le applicazioni Adobe Experience Cloud.
+* [[!DNL Privacy Service]](home.md): Gestisce le richieste dei clienti relative all&#39;accesso, al rifiuto della vendita o all&#39;eliminazione dei loro dati personali tra le applicazioni Adobe Experience Cloud.
 * [[!DNL Identity Service]](../identity-service/home.md): Risolve la sfida fondamentale rappresentata dalla frammentazione dei dati relativi all&#39;esperienza dei clienti attraverso il collegamento di identità tra dispositivi e sistemi.
-* [[!DNL Profilo cliente in tempo reale]](../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Real-time Customer Profile]](../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
 ## Informazioni sugli spazi dei nomi delle identità {#namespaces}
 
@@ -43,6 +43,8 @@ Le sezioni seguenti descrivono come effettuare richieste di privacy per [!DNL Re
 >Privacy Service è in grado di elaborare [!DNL Profile] i dati solo utilizzando un criterio di unione che non esegue l&#39;unione delle identità. Se utilizzate l&#39;interfaccia utente per confermare se le richieste di privacy sono in fase di elaborazione, assicuratevi di utilizzare un criterio con il[!DNL None]tipo &quot; [!UICONTROL ID stitching] &quot;. In altre parole, non è possibile utilizzare un criterio di unione in cui [!UICONTROL ID stitching] è impostato su &quot;[!UICONTROL Private graph]&quot;.
 >
 >![](./images/privacy/no-id-stitch.png)
+>
+>È inoltre importante notare che il tempo necessario per completare una richiesta di privacy non può essere garantito. Se si verificano delle modifiche nei [!DNL Profile] dati durante l&#39;elaborazione di una richiesta, non è possibile garantire l&#39;elaborazione di tali record.
 
 ### Utilizzo dell&#39;API
 
