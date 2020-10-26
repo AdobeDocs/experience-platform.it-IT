@@ -5,7 +5,7 @@ title: Sintassi SQL
 topic: syntax
 description: Questo documento mostra la sintassi SQL supportata da Query Service.
 translation-type: tm+mt
-source-git-commit: 43bebfbe0c0fca57d6e1ed0116e317b03125f175
+source-git-commit: c044194ed22b5e6fcd5e2e2102f3cd4eda45aa84
 workflow-type: tm+mt
 source-wordcount: '2067'
 ht-degree: 1%
@@ -118,7 +118,7 @@ La sintassi seguente definisce una query `CREATE TABLE AS SELECT` (CTAS) support
 CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
 ```
 
-dove,`target_schema_title` è il titolo dello schema XDM. Utilizzare questa clausola solo se si desidera utilizzare uno schema XDM esistente per il nuovo dataset creato dalla query`rowvalidation` CTAS specifica se l&#39;utente desidera la convalida a livello di riga di ogni nuovo batch assimilato per il nuovo dataset creato. Il valore predefinito è &#39;false&#39;
+dove,`target_schema_title` è il titolo dello schema XDM. Utilizzare questa clausola solo se si desidera utilizzare uno schema XDM esistente per il nuovo dataset creato dalla query`rowvalidation` CTAS specifica se l&#39;utente desidera la convalida a livello di riga di ogni nuovo batch assimilato per il nuovo dataset creato. Il valore predefinito è &#39;true&#39;
 
 ed `select_query` è un&#39; `SELECT` istruzione la cui sintassi è definita sopra in questo documento.
 
