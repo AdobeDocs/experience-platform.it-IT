@@ -5,9 +5,9 @@ title: Elaborazione delle richieste di privacy nel Data Lake
 topic: overview
 description: ' Adobe Experience Platform Privacy Service elabora le richieste dei clienti di accedere, rifiutare la vendita o cancellare i propri dati personali, come indicato dalle normative sulla privacy legali e organizzative. Questo documento tratta i concetti essenziali relativi all''elaborazione delle richieste di privacy per i dati dei clienti memorizzati nel Data Lake.'
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: 066337419431db24bde0a8d0d30b85132d08f43c
 workflow-type: tm+mt
-source-wordcount: '1243'
+source-wordcount: '1266'
 ht-degree: 0%
 
 ---
@@ -23,8 +23,8 @@ Questo documento tratta i concetti essenziali relativi all&#39;elaborazione dell
 
 Prima di leggere la presente guida è consigliabile conoscere i seguenti [!DNL Experience Platform] servizi:
 
-* [[!Privacy Service DNL]](../privacy-service/home.md): Gestisce le richieste dei clienti relative all&#39;accesso, al rifiuto della vendita o all&#39;eliminazione dei loro dati personali tra le applicazioni Adobe Experience Cloud.
-* [[!Servizio catalogo DNL]](home.md): Il sistema di record per la posizione dei dati e la linea [!DNL Experience Platform]. Fornisce un&#39;API che può essere utilizzata per aggiornare i metadati del set di dati.
+* [[!DNL Privacy Service]](../privacy-service/home.md): Gestisce le richieste dei clienti relative all&#39;accesso, al rifiuto della vendita o all&#39;eliminazione dei loro dati personali tra le applicazioni Adobe Experience Cloud.
+* [[!DNL Catalog Service]](home.md): Il sistema di record per la posizione dei dati e la linea [!DNL Experience Platform]. Fornisce un&#39;API che può essere utilizzata per aggiornare i metadati del set di dati.
 * [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
 * [[!DNL Identity Service]](../identity-service/home.md): Risolve la sfida fondamentale rappresentata dalla frammentazione dei dati relativi all&#39;esperienza dei clienti attraverso il collegamento di identità tra dispositivi e sistemi.
 
@@ -136,6 +136,10 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e i dettagli del de
 >In questa sezione viene illustrato come formattare le richieste di privacy per l’ [!DNL Data Lake]. È vivamente consigliato di consultare la documentazione relativa all&#39; [[!DNL Privacy Service] interfaccia utente](../privacy-service/ui/overview.md) o all&#39; [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) per i passaggi completi relativi all&#39;invio di un processo per la privacy, incluso il modo in cui formattare correttamente i dati di identità dell&#39;utente inviati nei payload di richiesta.
 
 Nella sezione seguente viene illustrato come effettuare richieste di privacy per [!DNL Data Lake] l’utente tramite l’ [!DNL Privacy Service] interfaccia utente o l’API.
+
+>[!IMPORTANT]
+>
+>Il tempo necessario per completare una richiesta di privacy non può essere garantito. Se si verificano modifiche all&#39;interno del Data Lake mentre una richiesta è ancora in elaborazione, non è possibile garantire l&#39;elaborazione di tali record.
 
 ### Utilizzo dell’interfaccia
 
