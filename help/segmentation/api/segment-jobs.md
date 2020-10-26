@@ -5,10 +5,10 @@ title: Processi segmento
 topic: developer guide
 description: Questa guida fornisce informazioni utili per comprendere meglio i processi dei segmenti e include chiamate API di esempio per eseguire azioni di base tramite l'API.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c5c3aed4d46c8b3873009ab9f17ff9bca93302c
 workflow-type: tm+mt
-source-wordcount: '1025'
-ht-degree: 3%
+source-wordcount: '1153'
+ht-degree: 2%
 
 ---
 
@@ -96,9 +96,9 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di processi di
                             "format": "pql/json",
                             "value": "{PQL_EXPRESSION}"
                         },
-                        "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                        "mergePolicyId": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
                         "mergePolicy": {
-                            "id": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                            "id": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
                             "version": 1
                         }
                     }
@@ -115,14 +115,25 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di processi di
                     "endTimeInMs": 1573204395655,
                     "totalTimeInMs": 128928
                 },
-                "totalProfiles": 0,
-                "segmentedProfileCounter": {
-                    "30230300-ccf1-48ad-8012-c5563a007069": 0,
-                    "ca763983-5572-4ea4-809c-b7dff7e0d79b": 0
+                "totalProfiles":13146432,
+                "segmentedProfileCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":1033
                 },
-                "segmentedProfileByNamespaceCounter": {
-                    "30230300-ccf1-48ad-8012-c5563a007069": {},
-                    "ca763983-5572-4ea4-809c-b7dff7e0d79b": {}
+                "segmentedProfileByNamespaceCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
+                        "tenantiduserobjid":1033,
+                        "campaign_profile_mscom_mkt_prod2":1033
+                    }
+                },
+                "segmentedProfileByStatusCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
+                        "exited":144646,
+                        "existing":10,
+                        "realized":2056
+                    }
+                },
+                "totalProfilesByMergePolicy":{
+                    "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
                 }
             },
             "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
@@ -162,6 +173,12 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di processi di
 | `segments.segment.id` | ID della definizione del segmento. |
 | `segments.segment.expression` | Un oggetto che contiene informazioni sull&#39;espressione della definizione del segmento, scritta in PQL. |
 | `metrics` | Un oggetto che contiene informazioni diagnostiche sul processo del segmento. |
+| `metrics.totalTime` | Un oggetto che contiene informazioni sulle ore di inizio e fine del processo di segmentazione, nonché sul tempo totale impiegato. |
+| `metrics.profileSegmentationTime` | Un oggetto che contiene informazioni sulle ore di inizio e fine della valutazione della segmentazione, nonché sul tempo totale impiegato. |
+| `metrics.segmentProfileCounter` | Il numero di profili qualificati per segmento. |
+| `metrics.segmentedProfileByNamespaceCounter` | Il numero di profili qualificati per ogni namespace di identità per segmento. |
+| `metrics.segmentProfileByStatusCounter` | Il numero di frammenti **di** profilo per ogni stato. Sono supportati i tre stati seguenti: <ul><li>&quot;realizzato&quot; - Il numero di nuovi profili immessi nel segmento.</li><li>&quot;existing&quot; - Il numero di profili che continuano a esistere nel segmento.</li><li>&quot;uscito&quot; - Il numero di segmenti di profilo che non esistono più nel segmento.</li></ul> |
+| `metrics.totalProfilesByMergePolicy` | Numero totale di profili uniti in base ai criteri di unione. |
 
 ## Creare un nuovo processo segmento {#create}
 
