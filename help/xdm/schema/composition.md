@@ -5,9 +5,9 @@ title: Nozioni di base sulla composizione dello schema
 topic: overview
 description: Questo documento fornisce un'introduzione agli schemi di Experience Data Model (XDM) e ai blocchi costitutivi, ai principi e alle procedure ottimali per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: b7b57c0b70b1af3a833f0386bc809bb92c9b50f8
+source-git-commit: 7aac7b717b47466527434024e40d19ae70296e55
 workflow-type: tm+mt
-source-wordcount: '2810'
+source-wordcount: '3075'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Oltre a descrivere la struttura dei dati, gli schemi applicano vincoli e aspetta
 
 Quando si utilizzano i database relazionali, le best practice prevedono la normalizzazione dei dati o la suddivisione di un&#39;entità in parti distinte che vengono visualizzate in più tabelle. Per leggere i dati nel loro insieme o aggiornare l&#39;entità, le operazioni di lettura e scrittura devono essere eseguite in più singole tabelle utilizzando JOIN.
 
-Utilizzando gli oggetti incorporati, gli schemi XDM possono rappresentare direttamente dati complessi e archiviarli in documenti indipendenti con struttura gerarchica. Uno dei principali vantaggi di questa struttura è che consente di eseguire query sui dati senza dover ricostruire l&#39;entità tramite join costosi a più tabelle denormalizzate.
+Utilizzando gli oggetti incorporati, gli schemi XDM possono rappresentare direttamente dati complessi e archiviarli in documenti indipendenti con una struttura gerarchica. Uno dei principali vantaggi di questa struttura è che consente di eseguire query sui dati senza dover ricostruire l&#39;entità tramite join costosi a più tabelle denormalizzate. Non esistono vincoli rigidi per il numero di livelli possibili per la gerarchia dello schema.
 
 ### Schemi e grandi dati
 
@@ -42,6 +42,8 @@ Gli schemi risolvono questo problema consentendo l&#39;integrazione dei dati da 
 La standardizzazione è un concetto chiave dietro [!DNL Experience Platform]. XDM, guidato da  Adobe, è uno sforzo per standardizzare i dati sull&#39;esperienza cliente e definire schemi standard per la gestione dell&#39;esperienza cliente.
 
 L&#39;infrastruttura su cui [!DNL Experience Platform] viene creata, nota come [!DNL XDM System], facilita i flussi di lavoro basati su schemi e include i pattern di utilizzo dei servizi, [!DNL Schema Registry], [!DNL Schema Editor]i metadati dello schema e i relativi pattern. See the [XDM System overview](../home.md) for more information.
+
+Ci sono diversi vantaggi chiave per costruire e utilizzare schemi in [!DNL Experience Platform]. In primo luogo, gli schemi consentono una migliore governance dei dati e una minimizzazione dei dati, che è particolarmente importante con le normative sulla privacy. In secondo luogo, la creazione di schemi con  Adobe  componenti standard consente di ottenere informazioni dettagliate e l&#39;utilizzo dei servizi AI/ML con personalizzazioni minime. Infine, gli schemi forniscono infrastrutture per la condivisione dei dati e un&#39;orchestrazione efficiente.
 
 ## Pianificazione dello schema
 
@@ -135,19 +137,13 @@ Gli schemi sono composti utilizzando la seguente formula:
 
 &amp;ast;Uno schema è composto da una classe e da zero o più mixin. Ciò significa che è possibile comporre uno schema di set di dati senza utilizzare i mixin.
 
-### Classe
+### Class {#class}
 
 La composizione di uno schema inizia con l&#39;assegnazione di una classe. Le classi definiscono gli aspetti comportamentali dei dati che lo schema conterrà (record o serie temporali). Inoltre, le classi descrivono il minor numero di proprietà comuni che tutti gli schemi basati su tale classe dovrebbero includere e forniscono un modo per l&#39;unione di più set di dati compatibili.
 
-Una classe determina inoltre quali mixin saranno utilizzabili nello schema. Questo viene descritto più dettagliatamente nella sezione [mixin](#mixin) che segue.
+La classe di uno schema determina quali mixin saranno utilizzabili in tale schema. Questo argomento viene discusso più dettagliatamente nella [sezione](#mixin)successiva.
 
-Esistono classi standard fornite con ogni integrazione di classi [!DNL Experience Platform], note come &quot;Industria&quot;. Le classi di settore sono standard di settore generalmente accettati che si applicano a un&#39;ampia serie di casi d&#39;uso. Esempi di classi Industry includono le [!DNL XDM Individual Profile] classi e [!DNL XDM ExperienceEvent] le classi fornite dal Adobe .
-
-[!DNL Experience Platform] consente anche classi &quot;Fornitore&quot;, che sono classi definite dai [!DNL Experience Platform] partner e rese disponibili a tutti i clienti che utilizzano il servizio o l&#39;applicazione del fornitore all&#39;interno [!DNL Platform].
-
-Esistono anche classi utilizzate per descrivere casi di utilizzo più specifici per singole organizzazioni all&#39;interno delle classi [!DNL Platform], denominate &quot;Customer&quot;. Le classi cliente sono definite da un&#39;organizzazione quando non sono disponibili classi Settore o Fornitore per descrivere un caso di utilizzo univoco.
-
-Ad esempio, uno schema che rappresenta i membri di un programma Fedeltà descrive i dati dei record relativi a un singolo e può quindi essere basato sulla [!DNL XDM Individual Profile] classe, una classe Industry standard definita da  Adobe.
+ Adobe fornisce due classi XDM standard (&quot;core&quot;): [!DNL XDM Individual Profile] e [!DNL XDM ExperienceEvent]. Inoltre, è possibile creare classi personalizzate per descrivere casi d&#39;uso più specifici per l&#39;organizzazione. Le classi personalizzate sono definite da un&#39;organizzazione quando non sono disponibili  classi di base definite dal Adobe per descrivere un caso d&#39;uso univoco.
 
 ### Mixin {#mixin}
 
@@ -155,15 +151,21 @@ Un mixin è un componente riutilizzabile che definisce uno o più campi che impl
 
 Le combinazioni definiscono le classi con cui sono compatibili in base al comportamento dei dati che rappresentano (record o serie temporali). Ciò significa che non tutti i mixin sono disponibili per l&#39;uso con tutte le classi.
 
-I mixin hanno lo stesso ambito e la stessa definizione delle classi: esistono mixin di settore, mixin di fornitori e mixin di clienti definiti dalle singole organizzazioni che utilizzano [!DNL Platform]. [!DNL Experience Platform] include molti mixer standard di settore, consentendo al contempo ai fornitori di definire mixin per i propri utenti e ai singoli utenti di definire mixin base ai propri concetti specifici.
+[!DNL Experience Platform] include molti mixer standard  Adobe, consentendo al contempo ai fornitori di definire mixin per i propri utenti e ai singoli utenti di definire mixin base ai propri concetti specifici.
 
 Ad esempio, per acquisire dettagli quali &quot;[!UICONTROL First Name]&quot; e &quot;[!UICONTROL Home Address]&quot; per lo schema &quot;[!UICONTROL Loyalty Members]&quot;, potreste utilizzare mixin standard che definiscono questi concetti comuni. Tuttavia, i concetti specifici per casi di utilizzo meno comuni (come &quot;[!UICONTROL Loyalty Program Level]&quot;) spesso non hanno un mixin predefinito. In questo caso, per acquisire queste informazioni dovete definire un mixin personalizzato.
 
 Tenere presente che gli schemi sono composti da &quot;zero o più&quot; mixin, pertanto è possibile comporre uno schema valido senza utilizzare alcun mixin.
 
+Per un elenco di tutti i mixin standard correnti, fare riferimento al repository [XDM](https://github.com/adobe/xdm/tree/master/components/mixins)ufficiale.
+
 ### Data type {#data-type}
 
 I tipi di dati sono utilizzati come tipi di campi di riferimento in classi o schemi allo stesso modo dei campi letterali di base. La differenza principale sta nel fatto che i tipi di dati possono definire più sottocampi. Analogamente a un mixin, un tipo di dati consente l&#39;uso coerente di una struttura multi-campo, ma offre maggiore flessibilità rispetto a un mixin, perché un tipo di dati può essere incluso in qualsiasi punto dello schema aggiungendo il tipo di dati &quot;tipo&quot; di un campo.
+
+>[!NOTE]
+>
+>Per ulteriori informazioni sulle differenze tra i mixini e i tipi di dati, vedere l&#39; [appendice](#mixins-v-datatypes) , e sui pro e contro dell&#39;uso uno sull&#39;altro per casi d&#39;uso simili.
 
 [!DNL Experience Platform] fornisce una serie di tipi di dati comuni come parte del [!DNL Schema Registry] supporto all&#39;uso di pattern standard per la descrizione di strutture di dati comuni. Questo è spiegato più dettagliatamente nelle [!DNL Schema Registry] esercitazioni, dove diventerà più chiaro man mano che si passano i passaggi per definire i tipi di dati.
 
@@ -177,6 +179,10 @@ Un campo è il blocco predefinito più basilare di uno schema. I campi forniscon
 * Booleano
 * Matrice
 * Oggetto
+
+>[!TIP]
+>
+>Per informazioni sui vantaggi e gli svantaggi dell’uso dei campi a forma libera [nei campi di tipo oggetto, vedere l’appendice](#objects-v-freeform) .
 
 Gli intervalli validi di questi tipi scalari possono essere ulteriormente vincolati a determinati pattern, formati, minimi/massimi o valori predefiniti. Utilizzando questi vincoli, è possibile rappresentare un&#39;ampia gamma di tipi di campo più specifici, tra cui:
 
@@ -250,3 +256,44 @@ L&#39; [!DNL Schema Registry] interfaccia viene utilizzata per accedere all&#39;
 Per iniziare a comporre lo schema utilizzando l&#39;interfaccia utente, seguire l&#39;esercitazione [Editor](../tutorials/create-schema-ui.md) schema per creare lo schema &quot;Membri fedeltà&quot; menzionato in questo documento.
 
 Per iniziare a utilizzare l&#39; [!DNL Schema Registry] API, iniziare leggendo la guida per lo sviluppatore di API del Registro di [schema](../api/getting-started.md). Dopo aver letto la guida per gli sviluppatori, segui i passaggi descritti nell&#39;esercitazione sulla [creazione di uno schema tramite l&#39;API](../tutorials/create-schema-api.md)del Registro di sistema dello schema.
+
+## Appendice
+
+La sezione seguente contiene informazioni aggiuntive sui principi della composizione dello schema.
+
+### Oggetti e campi a forma libera {#objects-v-freeform}
+
+Durante la progettazione degli schemi, è necessario tenere in considerazione alcuni fattori chiave nella scelta degli oggetti rispetto ai campi a forma libera:
+
+| Oggetti | Campi per modulo libero |
+| --- | --- |
+| Aumenta la nidificazione | Minore o nessuna nidificazione |
+| Crea raggruppamenti di campi logici | I campi vengono inseriti in posizioni ad hoc |
+
+#### Oggetti
+
+Di seguito sono elencati i pro e i contro dell&#39;uso degli oggetti nei campi a forma libera.
+
+**Pros**:
+
+* Gli oggetti sono utili per creare un raggruppamento logico di determinati campi.
+* Gli oggetti organizzano lo schema in modo più strutturato.
+* Gli oggetti facilitano indirettamente la creazione di una buona struttura di menu nell’interfaccia utente di Generatore di segmenti. I campi raggruppati nello schema si riflettono direttamente nella struttura di cartelle fornita nell’interfaccia utente di Segment Builder.
+
+**Cons**:
+
+* I campi diventano più nidificati.
+* Quando si utilizza [Adobe Experience Platform Query Service](../../query-service/home.md), è necessario fornire stringhe di riferimento più lunghe ai campi di query nidificati negli oggetti.
+
+#### Campi per modulo libero
+
+Di seguito sono elencati i pro e i contro dell&#39;utilizzo di campi a forma libera sugli oggetti.
+
+**Pros**:
+
+* I campi a forma libera vengono creati direttamente sotto l&#39;oggetto principale dello schema (`_tenantId`), aumentando la visibilità.
+* Le stringhe di riferimento per i campi a forma libera tendono ad essere più corte quando si utilizza il servizio Query.
+
+**Cons**:
+
+* La posizione dei campi a forma libera all&#39;interno dello schema è ad hoc, ovvero sono visualizzati in ordine alfabetico nell&#39;Editor di schema. In questo modo gli schemi potrebbero risultare meno strutturati e campi gratuiti simili potrebbero risultare molto separati a seconda dei nomi.
