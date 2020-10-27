@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;
 solution: Experience Platform
-title: Mixin ExperienceEvent EndUserIDs
+title: Mixaggio dettagli ID utente finale
 topic: overview
-description: Questo documento fornisce una panoramica del mixin ExperienceEvent EndUserIDs.
+description: Questo documento fornisce una panoramica del mixin Dettagli ID utente finale.
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '146'
+source-wordcount: '167'
 ht-degree: 1%
 
 ---
 
 
-# [!UICONTROL ExperienceEvent EndUserIDs] mixin
+# [!UICONTROL End User ID Details] mixin
 
-[!UICONTROL ExperienceEvent EndUserIDs] è un mixin standard per la [[!DNL XDM ExperienceEvent] classe](../../classes/individual-profile.md), utilizzato per descrivere le informazioni di identità di un individuo in diverse applicazioni  Adobe. Il mixin fornisce un oggetto a livello principale `endUserIDs` `_experience` , che a sua volta contiene un campo di sola lettura i cui valori vengono aggiornati automaticamente durante l&#39;assimilazione dei dati.
+>[!NOTE]
+>
+>I nomi di diversi mixin sono cambiati. Per ulteriori informazioni, consulta il documento sugli aggiornamenti [dei nomi dei](../name-updates.md) mixin.
+
+[!UICONTROL End User ID Details] è un mixin standard per la [[!DNL XDM ExperienceEvent] classe](../../classes/individual-profile.md), utilizzato per descrivere le informazioni di identità di un individuo in diverse applicazioni  Adobe. Il mixin fornisce un oggetto a livello principale `endUserIDs` `_experience` , che a sua volta contiene un campo di sola lettura i cui valori vengono aggiornati automaticamente durante l&#39;assimilazione dei dati.
 
 <img src="../../images/mixins/enduserids.png" width="700" /><br />
 
