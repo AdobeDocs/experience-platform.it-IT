@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;environment;environment details;
 solution: Experience Platform
-title: Mixin dei dettagli sull'ambiente ExperienceEvent
+title: Miscela Dettagli ambiente
 topic: overview
 description: Questo documento fornisce una panoramica del mixin Dettagli ambiente ExperienceEvent.
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '159'
+source-wordcount: '175'
 ht-degree: 2%
 
 ---
 
 
-# [!UICONTROL ExperienceEvent environment details] mixin
+# [!UICONTROL Environment Details] mixin
 
-[!UICONTROL ExperienceEvent environment details] è un mixin standard per la [[!DNL XDM ExperienceEvent] classe](../../classes/individual-profile.md) utilizzata per acquisire le informazioni relative ai dettagli ambientali relativi a un evento Experience, ad esempio i dettagli del dispositivo, le informazioni del browser, l&#39;ora locale e altre informazioni geografiche.
+>[!NOTE]
+>
+>I nomi di diversi mixin sono cambiati. Per ulteriori informazioni, consulta il documento sugli aggiornamenti [dei nomi dei](../name-updates.md) mixin.
+
+[!UICONTROL Environment Details] è un mixin standard per la [[!DNL XDM ExperienceEvent] classe](../../classes/individual-profile.md) utilizzata per acquisire le informazioni relative ai dettagli ambientali relativi a un evento Experience, ad esempio i dettagli del dispositivo, le informazioni del browser, l&#39;ora locale e altre informazioni geografiche.
 
 <img src="../../images/mixins/environment-details.png" width="500" /><br />
 
