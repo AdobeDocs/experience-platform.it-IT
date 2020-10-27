@@ -5,15 +5,19 @@ title: Mixin IdentityMap
 topic: overview
 description: Questo documento fornisce una panoramica della classe Profilo singolo XDM.
 translation-type: tm+mt
-source-git-commit: fd5bd4134bd35d5d87c79bf1e75bc88c67511b2b
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '94'
+source-wordcount: '111'
 ht-degree: 0%
 
 ---
 
 
 # [!UICONTROL IdentityMap] mixin
+
+>[!NOTE]
+>
+>I nomi di diversi mixin sono cambiati. Per ulteriori informazioni, consulta il documento sugli aggiornamenti [dei nomi dei](../name-updates.md) mixin.
 
 [!UICONTROL IdentityMap] è un mixin standard per la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Il mixin fornisce un singolo campo mappa, che contiene un insieme di identità utente chiave per namespace.
 
