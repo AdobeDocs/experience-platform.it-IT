@@ -4,11 +4,11 @@ solution: Experience Platform
 title: Definire una relazione tra due schemi utilizzando l'API del Registro di sistema dello schema
 description: Questo documento fornisce un'esercitazione per definire una relazione uno-a-uno tra due schemi definiti dall'organizzazione mediante l'API del Registro di sistema dello schema.
 topic: tutorial
-type: Tutorials
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1296'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ La capacità di comprendere le relazioni tra i clienti e le loro interazioni con
 
 Sebbene sia possibile dedurre le relazioni dello schema utilizzando lo schema unione e [!DNL Real-time Customer Profile], ciò vale solo per gli schemi che condividono la stessa classe. Per stabilire una relazione tra due schemi appartenenti a classi diverse, è necessario aggiungere un campo di relazione dedicato a uno schema di origine che faccia riferimento all&#39;identità di uno schema di destinazione.
 
-Questo documento fornisce un&#39;esercitazione per definire una relazione uno-a-uno tra due schemi definiti dall&#39;organizzazione utilizzando l&#39;API del Registro di sistema [[!DNL Schema API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Questo documento fornisce un&#39;esercitazione per definire una relazione uno-a-uno tra due schemi definiti dall&#39;organizzazione che utilizza l&#39; [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
 ## Introduzione
 
@@ -28,7 +28,7 @@ Questa esercitazione richiede una buona conoscenza di [!DNL Experience Data Mode
 
 * [Sistema XDM in  Experience Platform](../home.md): Panoramica di XDM e relativa implementazione in [!DNL Experience Platform].
    * [Nozioni di base sulla composizione](../schema/composition.md)dello schema: Introduzione dei blocchi costitutivi degli schemi XDM.
-* [[!DNL Profilo cliente in tempo reale]](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 * [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 Prima di iniziare questa esercitazione, consulta la guida [allo](../api/getting-started.md) sviluppo per informazioni importanti da conoscere per effettuare correttamente le chiamate all&#39; [!DNL Schema Registry] API. Questo include il vostro `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all&#39; [!DNL Accept] intestazione e ai suoi possibili valori).
