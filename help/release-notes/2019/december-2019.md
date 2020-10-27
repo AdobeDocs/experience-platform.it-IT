@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
+source-git-commit: 801da8a705360688f230eae5772a8bed9a1e856e
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '650'
 ht-degree: 7%
 
 ---
@@ -56,8 +56,6 @@ Adobe Experience Platform [!DNL Decisioning Service] offre la possibilità di se
 **Problemi noti**
 
 * Nessuna.
-
-Per un&#39;introduzione completa al servizio, consultate la panoramica [del servizio](../../decisioning-service/home.md) Decisioning.
 
 ## [!DNL Sources] {#sources}
 
