@@ -5,9 +5,9 @@ title: Processi segmento
 topic: developer guide
 description: Questa guida fornisce informazioni utili per comprendere meglio i processi dei segmenti e include chiamate API di esempio per eseguire azioni di base tramite l'API.
 translation-type: tm+mt
-source-git-commit: 8c5c3aed4d46c8b3873009ab9f17ff9bca93302c
+source-git-commit: 521b760da850144d7a8e75126453c2aae5c2ce72
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1152'
 ht-degree: 2%
 
 ---
@@ -177,7 +177,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di processi di
 | `metrics.profileSegmentationTime` | Un oggetto che contiene informazioni sulle ore di inizio e fine della valutazione della segmentazione, nonché sul tempo totale impiegato. |
 | `metrics.segmentProfileCounter` | Il numero di profili qualificati per segmento. |
 | `metrics.segmentedProfileByNamespaceCounter` | Il numero di profili qualificati per ogni namespace di identità per segmento. |
-| `metrics.segmentProfileByStatusCounter` | Il numero di frammenti **di** profilo per ogni stato. Sono supportati i tre stati seguenti: <ul><li>&quot;realizzato&quot; - Il numero di nuovi profili immessi nel segmento.</li><li>&quot;existing&quot; - Il numero di profili che continuano a esistere nel segmento.</li><li>&quot;uscito&quot; - Il numero di segmenti di profilo che non esistono più nel segmento.</li></ul> |
+| `metrics.segmentProfileByStatusCounter` | Il numero di profili per ogni stato. Sono supportati i tre stati seguenti: <ul><li>&quot;realizzato&quot; - Il numero di nuovi profili immessi nel segmento.</li><li>&quot;existing&quot; - Il numero di profili che continuano a esistere nel segmento.</li><li>&quot;uscito&quot; - Il numero di segmenti di profilo che non esistono più nel segmento.</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | Numero totale di profili uniti in base ai criteri di unione. |
 
 ## Creare un nuovo processo segmento {#create}
