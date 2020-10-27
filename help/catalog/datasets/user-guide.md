@@ -5,9 +5,9 @@ title: Guida utente dei set di dati
 topic: datasets
 description: Questa guida utente per i set di dati fornisce istruzioni sulle operazioni più comuni quando si utilizzano i set di dati nell'interfaccia utente di Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 79dca07d3e6ecf998a6278fa49178a7fa8cc0e8c
+source-git-commit: 1c00456ee06c1fc09c8e4ce070c90255f51811e1
 workflow-type: tm+mt
-source-wordcount: '1105'
+source-wordcount: '1089'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Questa guida utente richiede una buona conoscenza dei seguenti componenti di Ado
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
    * [Nozioni di base sulla composizione](../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
    * [Editor](../../xdm/tutorials/create-schema-ui.md)schema: Scoprite come creare schemi XDM personalizzati utilizzando l&#39; [!DNL Schema Editor] interfaccia [!DNL Platform] utente.
-* [[!DNL Profilo cliente in tempo reale]](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Assicurati la conformità a normative, restrizioni e criteri relativi all&#39;utilizzo dei dati dei clienti.
 
 ## Visualizzare i set di dati
@@ -122,7 +122,7 @@ Le etichette di utilizzo dei dati consentono di classificare set di dati e campi
 
 >[!NOTE]
 >
->Non è possibile eliminare i set di dati creati e utilizzati da applicazioni e servizi  Adobe (come  Adobe Analytics, Adobe Audience Manager o [!DNL Decisioning Service]).
+>Non è possibile eliminare i set di dati creati e utilizzati da applicazioni e servizi  Adobe (come  Adobe Analytics, Adobe Audience Manager o [!DNL Offer Decisioning]).
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 
