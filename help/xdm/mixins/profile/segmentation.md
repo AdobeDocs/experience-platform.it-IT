@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;segment;segmentMembership;segment membership;Schema design;map;Map;
 solution: Experience Platform
-title: Mixaggio segmentazione profilo
+title: Mixin Dettagli iscrizione segmento
 topic: overview
-description: Questo documento fornisce una panoramica della classe Profilo singolo XDM.
+description: Questo documento fornisce una panoramica del mixin Segment Membership Details (Dettagli appartenenza al segmento).
 translation-type: tm+mt
-source-git-commit: 53575488c08f73a65a7f1cc5f803f9ead707ae48
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '379'
 ht-degree: 1%
 
 ---
 
 
-# [!UICONTROL Profile segmentation] mixin
+# [!UICONTROL Segment Membership Details] mixin
 
-[!UICONTROL Profile segmentation] è un mixin standard per la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Il mixin fornisce un singolo campo mappa che acquisisce le informazioni relative all&#39;appartenenza al segmento, inclusi i segmenti a cui appartiene l&#39;individuo, l&#39;ultima ora di qualifica e quando l&#39;appartenenza è valida fino a quando.
+>[!NOTE]
+>
+>I nomi di diversi mixin sono cambiati. Per ulteriori informazioni, consulta il documento sugli aggiornamenti [dei nomi dei](../name-updates.md) mixin.
+
+[!UICONTROL Segment Membership Details] è un mixin standard per la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Il mixin fornisce un singolo campo mappa che acquisisce le informazioni relative all&#39;appartenenza al segmento, inclusi i segmenti a cui appartiene l&#39;individuo, l&#39;ultima ora di qualifica e quando l&#39;appartenenza è valida fino a quando.
 
 >[!WARNING]
 >
