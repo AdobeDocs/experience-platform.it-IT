@@ -5,10 +5,10 @@ title: Panoramica sui set di dati
 topic: datasets
 description: Questo documento fornisce una panoramica di alto livello dei set di dati in  Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 1c00456ee06c1fc09c8e4ce070c90255f51811e1
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 2%
+source-wordcount: '683'
+ht-degree: 3%
 
 ---
 
@@ -58,11 +58,10 @@ Di seguito è riportato un elenco di servizi a valle che utilizzano set di dati 
 
 * [[!DNL Data Access API]](../../data-access/home.md): Consente di accedere e scaricare il contenuto dei file memorizzati nei set di dati.
 * [Servizio](../../identity-service/home.md)identità Adobe Experience Platform: Collega le identità tra dispositivi e sistemi, collegando i dataset in base ai campi di identità definiti dagli schemi XDM a cui sono conformi.
-* [[!DNL Profilo cliente in tempo reale]](../../profile/home.md): Consente [!DNL Identity Service] di creare profili cliente dettagliati dai set di dati in tempo reale. [!DNL Real-time Customer Profile] estrae i dati dai profili cliente [!DNL Data Lake] e persiste nel proprio archivio dati separato.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md): Consente [!DNL Identity Service] di creare profili cliente dettagliati dai set di dati in tempo reale. [!DNL Real-time Customer Profile] estrae i dati dai profili cliente [!DNL Data Lake] e persiste nel proprio archivio dati separato.
 * [Servizio](../../segmentation/home.md)di segmentazione Adobe Experience Platform: Consente di creare segmenti e generare audience dai [!DNL Real-time Customer Profile] dati. Tali tipi di pubblico possono quindi essere esportati nei rispettivi set di dati all’interno dell’ [!DNL Data Lake].
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md): Utilizza l&#39;apprendimento automatico e l&#39;intelligenza artificiale per scoprire informazioni approfondite in insiemi di dati di grandi dimensioni.
 * [Adobe Experience Platform Query Service](../../query-service/home.md): Consente di utilizzare l&#39;SQL standard per eseguire query sui dati [!DNL Experience Platform], unire eventuali set di dati all&#39;interno dei risultati delle query [!DNL Data Lake] e acquisire i risultati come nuovo set di dati da utilizzare nei rapporti [!DNL Data Science Workspace], o [!DNL Real-time Customer Profile].
-* [Servizio](../../decisioning-service/home.md)di gestione Adobe Experience Platform: Sfrutta [!DNL Real-time Customer Profile] per determinare la scelta più probabile che un cliente effettuerà da un insieme di opzioni, in base ai dati comportamentali che [!DNL Profile] richiamano dai set di dati abilitati.
 
 ## Passaggi successivi
 
