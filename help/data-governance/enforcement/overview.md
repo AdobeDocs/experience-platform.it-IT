@@ -5,9 +5,9 @@ title: Panoramica dell'applicazione dei criteri
 topic: enforcement
 description: Una volta applicate le etichette di utilizzo dei dati ai set di dati Adobe Experience Platform e definite le policy di utilizzo dei dati per le azioni di marketing relative a tali etichette, le funzionalità di governance dei dati consentono di applicare tali criteri e di impedire le operazioni sui dati che costituiscono violazioni dei criteri. Esistono due metodi per l'applicazione dei criteri forniti dalle funzionalità di governance dei dati sulla piattaforma, l'applicazione basata sulle API e l'applicazione automatica.
 translation-type: tm+mt
-source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
+source-git-commit: 83f1392ffab3571ebd91325123fbe7095ad59e28
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---
@@ -29,4 +29,4 @@ Per istruzioni su come valutare i criteri mediante l&#39;API, vedete l&#39;eserc
 
 Alcune applicazioni integrate [!DNL Experience Platform] (ad esempio, [!DNL Real-time Customer Data Platform]) forniscono l&#39;applicazione automatica dei criteri di utilizzo dei dati. Ogni applicazione mantiene un proprio metodo per individuare le violazioni dei criteri e per fornire le misure necessarie per risolvere i problemi.
 
-Per ulteriori informazioni sull&#39;applicazione [!DNL Platform]basata sui criteri di utilizzo automatico dei dati, consultare la documentazione relativa all&#39;applicazione. Per informazioni sull&#39;applicazione automatica delle regole nel CDP in tempo reale, fare riferimento alla panoramica [sulla governance dei dati in tempo](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)reale del CDP.
+L&#39;applicazione automatica delle regole in CDP in tempo reale sfrutta la linea di dati, la classificazione dei dati e le funzionalità di gestione delle politiche per valutare e monitorare le violazioni delle regole. Per ulteriori informazioni, fare riferimento alla panoramica [sulla governance dei dati in tempo](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance) reale della CDP.
