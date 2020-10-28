@@ -2,12 +2,12 @@
 keywords: destinations;destination;destination types
 title: Tipi e categorie di destinazioni
 seo-title: Tipi e categorie di destinazioni
-description: ' Adobe Piattaforma dati cliente in tempo reale, le destinazioni di esportazione profilo/segmento acquisiscono i dati dell''evento, li combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Avviate le estensioni per inoltrare i dati degli eventi non elaborati a diversi tipi di destinazioni. '
-seo-description: ' Adobe Piattaforma dati cliente in tempo reale, le destinazioni di esportazione profilo/segmento acquisiscono i dati dell''evento, li combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Avviate le estensioni per inoltrare i dati degli eventi non elaborati a diversi tipi di destinazioni.'
+description: ' Adobe Piattaforma dati cliente in tempo reale, le destinazioni di esportazione profilo/segmento acquisiscono i dati dell''evento, li combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Le estensioni di Experience Platform Launch inoltrano i dati dell''evento non elaborati a diversi tipi di destinazioni. '
+seo-description: ' Adobe Piattaforma dati cliente in tempo reale, le destinazioni di esportazione profilo/segmento acquisiscono i dati dell''evento, li combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Le estensioni di Experience Platform Launch inoltrano i dati dell''evento non elaborati a diversi tipi di destinazioni.'
 translation-type: tm+mt
-source-git-commit: b510f715133cc3fed98861f977b3ce9a857a5ced
+source-git-commit: e6276eac05f0a20a668051034e83831002a464f0
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '587'
 ht-degree: 0%
 
 ---
@@ -49,13 +49,13 @@ Il video seguente illustra le particolarità dei due tipi di destinazioni:
 
 ### Estensioni {#extensions}
 
- Adobe Real-time CDP sfrutta la potenza e la flessibilità del Experience Platform Launch per includere le estensioni Launch nell&#39;interfaccia  Adobe CDP in tempo reale.
+ Adobe Real-time CDP sfrutta la potenza e la flessibilità di  Adobe Experience Platform Launch per includere estensioni Platform Launch nell&#39;interfaccia  Adobe Real-time CDP.
 
 >[!TIP]
 >
->Per informazioni dettagliate sulle estensioni di Experience Platform Launch, compresi i casi di utilizzo e come trovarle nell&#39;interfaccia, consultate la panoramica [sulle estensioni di](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Launch.
+>Per informazioni dettagliate su  estensioni Adobe Experience Platform Launch, compresi i casi di utilizzo e come trovarle nell&#39;interfaccia, consultate la panoramica [delle estensioni Adobe Experience Platform Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
-Avviate le estensioni per inoltrare i dati degli eventi non elaborati a diversi tipi di destinazioni. Considerate le estensioni come un tipo di destinazione di inoltro **** degli eventi. Si tratta di un tipo di integrazione più semplice con le piattaforme di destinazione, che inoltra solo dati di evento non elaborati. Esempi di questi sono l&#39;estensione [di personalizzazione](/help/rtcdp/destinations/gainsight-extension.md) Gainsight o la [voce Conferma dell&#39;estensione](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)del cliente.
+Le estensioni Launch piattaforma inoltrano i dati evento non elaborati a diversi tipi di destinazioni. Considerate le estensioni come un tipo di destinazione di inoltro **** degli eventi. Si tratta di un tipo di integrazione più semplice con le piattaforme di destinazione, che inoltra solo dati di evento non elaborati. Esempi di questi sono l&#39;estensione [di personalizzazione](/help/rtcdp/destinations/gainsight-extension.md) Gainsight o la [voce Conferma dell&#39;estensione](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)del cliente.
 
 ![Estensioni Experience Platform Launch confrontate con altre destinazioni](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
