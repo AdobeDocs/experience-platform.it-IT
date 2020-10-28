@@ -5,9 +5,9 @@ seo-title: Governance dei dati in tempo reale della piattaforma dati del cliente
 description: 'Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all''uso dei dati. '
 seo-description: 'Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all''uso dei dati. '
 translation-type: tm+mt
-source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
+source-git-commit: 66042cb9397b9c7b507fc063f33e92f4f4c381c7
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1580'
 ht-degree: 0%
 
 ---
@@ -41,8 +41,7 @@ Puoi impostare le restrizioni di utilizzo dei dati su una destinazione definendo
 
 La definizione dei casi di utilizzo del marketing sulle destinazioni consente di garantire che tutti i profili o i segmenti inviati a tali destinazioni siano conformi ai criteri di utilizzo dei dati. È pertanto necessario aggiungere alle destinazioni i casi di utilizzo del marketing appropriati in base alle esigenze aziendali per applicare restrizioni all&#39;attivazione.
 
-I casi di utilizzo del marketing possono essere selezionati solo quando si configura una destinazione per la prima volta. A seconda del tipo di destinazione con cui state lavorando, l’opportunità di configurare i casi di utilizzo del marketing verrà visualizzata in punti diversi del flusso di lavoro di configurazione. Consulta la documentazione [di](../destinations/destinations-overview.md) destinazione per i passaggi su come configurare una particolare destinazione.
-
+I casi di utilizzo del marketing possono essere selezionati solo quando si configura una destinazione per la prima volta. A seconda del tipo di destinazione con cui state lavorando, l’opportunità di configurare i casi di utilizzo del marketing verrà visualizzata in punti diversi del flusso di lavoro di configurazione. Consulta la documentazione [sulle](../destinations/destinations-overview.md#data-governance) destinazioni per i passaggi su come configurare una particolare destinazione.
 
 ## Gestire i criteri di utilizzo dei dati {#policies}
 
@@ -56,7 +55,7 @@ Una volta etichettati i dati e definiti i criteri di utilizzo, potete applicare 
 
 Il diagramma seguente illustra come l&#39;implementazione dei criteri è integrata nel flusso di dati dell&#39;attivazione dei segmenti:
 
-![](assets/enforcement-flow.png)
+<img src="assets/governance/enforcement-flow.png" width="650">
 
 Quando un segmento viene attivato per la prima volta, [!DNL Policy Service] verifica la presenza di violazioni dei criteri in base ai seguenti fattori:
 
@@ -70,23 +69,57 @@ Quando un segmento viene attivato per la prima volta, [!DNL Policy Service] veri
 >* I campi sono configurati come attributi proiettati per la destinazione di destinazione.
 
 
+### Linea di dati {#lineage}
+
+In CDP in tempo reale, la linea di dati svolge un ruolo chiave nel modo in cui vengono applicati i criteri. In termini generali, la linea di dati si riferisce all&#39;origine di un insieme di dati e a cosa gli accade (o dove si sposta) nel tempo.
+
+Nel contesto di [!DNL Data Governance], la linea consente alle etichette di utilizzo dei dati di propagarsi da set di dati a servizi a valle che utilizzano i loro dati, come Profilo cliente in tempo reale e destinazioni. Questo consente di valutare e applicare le politiche in diversi punti chiave del percorso dei dati attraverso la piattaforma e fornisce contesto ai consumatori di dati in merito al motivo per cui si è verificata una violazione della politica.
+
+In CDP in tempo reale, l&#39;applicazione delle regole riguarda la seguente linea:
+
+1. I dati vengono trasferiti in CDP in tempo reale e memorizzati in **set di dati**.
+1. I profili cliente sono identificati e costruiti a partire da tali set di dati unendo frammenti di dati in base al criterio **di** unione.
+1. I gruppi di profili sono suddivisi in **segmenti** basati su attributi comuni.
+1. I segmenti sono attivati nelle **destinazioni** a valle.
+
+Ogni fase nella timeline di cui sopra rappresenta un&#39;entità che può contribuire alla violazione di un criterio, come indicato nella tabella seguente:
+
+| Fase di lineamento dei dati | Ruolo nell&#39;applicazione della politica |
+| --- | --- |
+| Set di dati | I set di dati contengono etichette di utilizzo dei dati (applicate a livello di set di dati o di campi) per le quali è possibile utilizzare l&#39;intero set di dati o campi specifici. Le violazioni dei criteri si verificheranno se un set di dati o un campo contenente determinate etichette viene utilizzato per uno scopo limitato da un criterio. |
+| Unisci criterio | I criteri di unione sono regole utilizzate dalla piattaforma per determinare in che modo i dati verranno assegnati priorità durante l&#39;unione di frammenti da più set di dati. Le violazioni dei criteri si verificheranno se i criteri di unione sono configurati in modo che i set di dati con etichette limitate siano attivati a una destinazione. Per ulteriori informazioni, vedere la guida sull&#39; [unione dei criteri](../../profile/ui/merge-policies.md) . |
+| Segmento | Le regole di segmento definiscono quali attributi devono essere inclusi dai profili cliente. A seconda dei campi inclusi nella definizione di un segmento, il segmento erediterà tutte le etichette di utilizzo applicate a tali campi. Le violazioni dei criteri si verificheranno se attivi un segmento le cui etichette ereditate sono limitate dai criteri applicabili della destinazione di destinazione, in base al relativo caso di utilizzo di marketing. |
+| Destinazione | Quando si configura una destinazione, è possibile definire un&#39;azione di marketing (talvolta denominata caso di utilizzo del marketing). Questo caso di utilizzo è correlato a un&#39;azione di marketing come definita in un criterio di utilizzo dei dati. In altre parole, il caso di utilizzo del marketing definito per una destinazione determina quali criteri di utilizzo dei dati sono applicabili a tale destinazione. Le violazioni dei criteri si verificheranno se attivi un segmento le cui etichette di utilizzo sono limitate dai criteri applicabili alla destinazione di destinazione. |
+
+Quando si verificano violazioni dei criteri, i messaggi risultanti visualizzati nell&#39;interfaccia utente forniscono strumenti utili per esplorare la linea di dati che contribuiscono alla violazione per risolvere il problema. Ulteriori dettagli sono forniti nella sezione successiva.
+
 ### Messaggi sulle violazioni dei criteri {#enforcement}
 
-Se si verifica una violazione del criterio durante il tentativo di attivare un segmento (o di [apportare modifiche a un segmento](#policy-enforcement-for-activated-segments)già attivato), l&#39;azione viene impedita e viene visualizzato un puntatore che indica che sono stati violati uno o più criteri. Selezionate una violazione di criterio nella colonna a sinistra del puntatore per visualizzare i dettagli relativi a tale violazione.
+Se si verifica una violazione del criterio durante il tentativo di attivare un segmento (o di [apportare modifiche a un segmento](#policy-enforcement-for-activated-segments)già attivato), l&#39;azione viene impedita e viene visualizzato un puntatore che indica che sono stati violati uno o più criteri. Una volta attivata la violazione, il **[!UICONTROL Save]** pulsante viene disattivato per l&#39;entità che si sta modificando fino a quando i componenti appropriati non vengono aggiornati in conformità ai criteri di utilizzo dei dati.
 
-![](assets/violation-popover.png)
+Selezionate una violazione di criterio nella colonna a sinistra del puntatore per visualizzare i dettagli relativi a tale violazione.
 
-La **[!UICONTROL Details]** scheda del puntatore indica l&#39;azione che ha attivato la violazione il motivo della violazione e fornisce suggerimenti per la possibile risoluzione del problema.
+![](assets/governance/violation-policy-select.png)
 
-Fare clic **[!UICONTROL Data Lineage]** per tenere traccia delle destinazioni, dei segmenti, dei criteri di unione o dei set di dati le cui etichette dati hanno attivato la violazione.
+Il messaggio di violazione fornisce un riepilogo del criterio che è stato violato, incluse le condizioni che il criterio è configurato per verificare, l&#39;azione specifica che ha attivato la violazione e un elenco delle possibili risoluzioni del problema.
 
-![](assets/data-lineage.png)
+![](assets/governance/violation-summary.png)
 
-Una volta attivata la violazione, il **[!UICONTROL Save]** pulsante viene disattivato per l&#39;attivazione fino a quando i componenti appropriati non vengono aggiornati in conformità ai criteri di utilizzo dei dati.
+Sotto il riepilogo delle violazioni viene visualizzato un grafico della linea di dati che consente di visualizzare quali set di dati, criteri di unione, segmenti e destinazioni sono stati coinvolti nella violazione del criterio. L&#39;entità che si sta modificando è evidenziata nel grafico, indicando quale punto del flusso sta causando la violazione. Potete selezionare un nome entità all&#39;interno del grafico per aprire la pagina dei dettagli per l&#39;entità in questione.
+
+![](assets/governance/data-lineage.png)
+
+Potete anche utilizzare l&#39; **[!UICONTROL Filter]** icona (![](./assets/governance/filter.png)) per filtrare le entità visualizzate per categoria. Affinché i dati possano essere visualizzati, è necessario selezionare almeno due categorie.
+
+![](assets/governance/lineage-filter.png)
+
+Selezionare **[!UICONTROL List view]** per visualizzare la linea di dati come un elenco. Per tornare al grafico visivo, selezionare **[!UICONTROL Path view]**.
+
+![](assets/governance/list-view.png)
 
 ### Applicazione dei criteri per i segmenti attivati {#policy-enforcement-for-activated-segments}
 
-L&#39;applicazione dei criteri continua a essere applicata ai segmenti dopo che questi sono stati attivati, limitando le modifiche a un segmento o alla sua destinazione che si tradurrebbero in una violazione dei criteri. A causa dei numerosi componenti coinvolti nell&#39;attivazione dei segmenti alle destinazioni, una delle seguenti azioni può potenzialmente determinare una violazione:
+L&#39;applicazione dei criteri continua a essere applicata ai segmenti dopo che questi sono stati attivati, limitando le modifiche a un segmento o alla sua destinazione che si tradurrebbero in una violazione dei criteri. A causa del funzionamento della linea di [dati](#lineage) nell&#39;applicazione dei criteri, una delle seguenti azioni può potenzialmente determinare una violazione:
 
 * Aggiornamento delle etichette di utilizzo dei dati
 * Modifica dei set di dati per un segmento
