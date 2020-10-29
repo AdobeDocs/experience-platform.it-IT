@@ -5,10 +5,10 @@ description: Scopri quali variabili vengono mappate automaticamente in  Adobe An
 seo-description: Scopri quali variabili vengono mappate automaticamente in  Adobe Analytics con  Experience Platform Web SDK
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: 8e3bef77b84e40c836a6279a9a3e3901565c9920
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 2%
+source-wordcount: '681'
+ht-degree: 0%
 
 ---
 
@@ -28,11 +28,12 @@ Di seguito è riportato un elenco di variabili in cui Adobe Experience Platform 
 | `commerce.checkouts.value` | `events` | Parametro della query AppMeasurement EVENT_LIST_FULL con conversione COMMERCE_SC_CHECKOUT, utilizzando il delimitatore `,`. |
 | `commerce.productListAdds.value` | `events` | Parametro della query AppMeasurement EVENT_LIST_FULL con conversione COMMERCE_SC_ADD, utilizzando il delimitatore `,`. |
 | `commerce.productListRemovals.value` | `events` | Parametro query AppMeasurement EVENT_LIST_FULL con conversione COMMERCE_SC_REMOVE, utilizzando il delimitatore `,`. |
-| `commerce.productViews.id` | `events` | `prodView` Serializzazione degli eventi. |
-| `commerce.productListOpens.id` | `events` | `scOpen` Serializzazione degli eventi. |
-| `commerce.productListViews.id` | `events` | `scView` Serializzazione degli eventi. |
-| `commerce.productListAdds.id` | `events` | `scAdd` Serializzazione degli eventi. |
-| `commerce.productListRemovals.id` | `events` | `scRemove` Serializzazione degli eventi. |
+| `commerce.productViews.id` | `events` | (Facoltativo) Serializzazione `prodView` evento. Se questo campo viene escluso (ad esempio, per gli eventi non serializzati), il sistema genera e assegna il proprio valore ID all&#39;entità. |
+| `commerce.productListOpens.id` | `events` | (Facoltativo) Serializzazione `scOpen` evento. Se questo campo viene escluso (ad esempio, per gli eventi non serializzati), il sistema genera e assegna il proprio valore ID all&#39;entità. |
+| `commerce.productListViews.id` | `events` | (Facoltativo) Serializzazione `scView` evento. Se questo campo viene escluso (ad esempio, per gli eventi non serializzati), il sistema genera e assegna il proprio valore ID all&#39;entità. |
+| `commerce.productListAdds.id` | `events` | (Facoltativo) Serializzazione `scAdd` evento. Se questo campo viene escluso (ad esempio, per gli eventi non serializzati), il sistema genera e assegna il proprio valore ID all&#39;entità. |
+| `commerce.productListRemovals.id` | `events` | (Facoltativo) Serializzazione `scRemove` evento. Se questo campo viene escluso (ad esempio, per gli eventi non serializzati), il sistema genera e assegna il proprio valore ID all&#39;entità. |
+| `commerce.checkouts.id` | `events` | (Facoltativo) Serializzazione `scCheckout` evento. Se questo campo viene escluso (ad esempio, per gli eventi non serializzati), il sistema genera e assegna il proprio valore ID all&#39;entità. |
 | `commerce.checkouts.id` | `events` | `scCheckout` Serializzazione degli eventi. |
 | `device.screenHeight` | `s` | Mappatura risoluzione schermo del parametro query AppMeasurement. |
 | `device.screenWidth` | `s` | Mappatura risoluzione schermo del parametro query AppMeasurement. |
