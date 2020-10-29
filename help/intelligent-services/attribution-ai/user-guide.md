@@ -5,17 +5,17 @@ title: Guida utente  Attribution AI
 topic: User guide
 description: Questo documento funge da guida per l'interazione con  Attribution AI nell'interfaccia utente di Intelligent Services.
 translation-type: tm+mt
-source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
+source-git-commit: 4c1aa1fc5ca1f335dedba47623709d5d2ce12c6e
 workflow-type: tm+mt
-source-wordcount: '1420'
-ht-degree: 0%
+source-wordcount: '1691'
+ht-degree: 1%
 
 ---
 
 
 # Guida utente  Attribution AI
 
- Attribution AI, come parte di Intelligent Services è un servizio di attribuzione algoritmica multicanale che calcola l&#39;influenza e l&#39;impatto incrementale delle interazioni dei clienti rispetto a determinati risultati. Con  Attribution AI, gli esperti di marketing possono misurare e ottimizzare le spese di marketing e pubblicitarie comprendendo l&#39;impatto di ogni singola interazione con i clienti in ogni fase dei viaggi dei clienti.
+ Attribution AI, come parte di Intelligent Services è un servizio di attribuzione algoritmica multicanale che calcola l&#39;influenza e l&#39;impatto incrementale delle interazioni dei clienti rispetto a determinati risultati. Con Attribution AI, gli esperti di marketing possono misurare e ottimizzare le spese di marketing e pubblicitarie comprendendo l’impatto di ogni singola interazione con i clienti in ogni fase del percorso del cliente.
 
 Questo documento funge da guida per l&#39;interazione con  Attribution AI nell&#39;interfaccia utente di Intelligent Services.
 
@@ -25,7 +25,29 @@ Nell’ [!DNL Adobe Experience Platform] interfaccia utente, fate clic **[!UICON
 
 ![Accesso all’istanza](./images/user-guide/open_Attribution_ai.png)
 
-Viene visualizzata la pagina del servizio  Attribution AI. In questa pagina sono elencate le istanze di servizio delle  Attribution AI e vengono visualizzate informazioni su di esse, incluso il nome dell&#39;istanza, gli eventi di conversione, la frequenza di esecuzione dell&#39;istanza e lo stato dell&#39;ultimo aggiornamento. Fate clic su **Crea istanza** per iniziare.
+Viene visualizzata la pagina del servizio  Attribution AI. In questa pagina sono elencate le istanze di servizio delle  Attribution AI e vengono visualizzate informazioni su di esse, incluso il nome dell&#39;istanza, gli eventi di conversione, la frequenza di esecuzione dell&#39;istanza e lo stato dell&#39;ultimo aggiornamento.
+
+Potete trovare la **[!UICONTROL Total conversion events scored]** metrica in basso a destra del **[!UICONTROL Create instance]** contenitore. Questa metrica tiene traccia del numero totale di eventi di conversione segnati da  Attribution AI per l&#39;anno civile corrente, compresi tutti gli ambienti sandbox ed eventuali istanze di servizi eliminate.
+
+![](./images/user-guide/total_conversions.png)
+
+Le istanze del servizio possono essere modificate, clonate ed eliminate utilizzando i controlli sul lato destro dell’interfaccia utente. Per visualizzare questi controlli, selezionare un&#39;istanza dall&#39;istanza esistente **[!UICONTROL Service instances]**. I controlli contengono le seguenti informazioni:
+
+- **[!UICONTROL Edit]**: La selezione **[!UICONTROL Edit]** consente di modificare un&#39;istanza di servizio esistente. Potete modificare il nome, la descrizione, lo stato e la frequenza di punteggio dell’istanza.
+- **[!UICONTROL Clone]**: Selezionando **[!UICONTROL Clone]** copia l&#39;istanza di servizio selezionata. Potete quindi modificare il flusso di lavoro per apportare modifiche minori e rinominarlo come nuova istanza.
+- **[!UICONTROL Delete]**: È possibile eliminare un&#39;istanza di servizio, comprese eventuali esecuzioni cronologiche.
+- **[!UICONTROL Data source]**: Un collegamento al set di dati utilizzato dall&#39;istanza.
+- **[!UICONTROL Last run details]**: Viene visualizzato solo quando un&#39;esecuzione non riesce. Le informazioni sul motivo per cui l&#39;esecuzione non riuscita, ad esempio i codici di errore, sono visualizzate qui.
+
+![](./images/user-guide/side_panel.png)
+
+- **[!UICONTROL Conversion events]**: Panoramica rapida degli eventi di conversione configurati per questa istanza.
+- **[!UICONTROL Lookback window]**: L&#39;intervallo di tempo definito che indica quanti giorni prima dei punti di contatto dell&#39;evento di conversione sono inclusi.
+- **[!UICONTROL Touchpoints]**: Elenco di tutti i punti di contatto definiti durante la creazione dell’istanza.
+
+![](./images/user-guide/side_panel_2.png)
+
+Selezionare **[!UICONTROL Create instance]** per iniziare.
 
 ![Crea istanza](./images/user-guide/landing_page.png)
 
@@ -133,7 +155,7 @@ Dopo aver definito tutti i punti di contatto necessari, scorri verso l’alto e 
 
 ## Configurazione avanzata della formazione e del punteggio
 
-La pagina finale in  Attribution AI è la pagina *Avanzate* utilizzata per impostare formazione e punteggio.
+La pagina finale in  Attribution AI è la **[!UICONTROL Advanced]** pagina utilizzata per impostare formazione e punteggio.
 
 ![nuova pagina avanzata](./images/user-guide/advanced_settings.png)
 
@@ -152,6 +174,12 @@ Per modificare l&#39;ora del giorno in cui si desidera che venga eseguito il pun
 >Il completamento di ogni processo di punteggio può richiedere fino a 24 ore.
 
 ![icona orologio](./images/user-guide/time_of_day.png)
+
+### Colonne di set di dati con punteggio aggiuntivo (facoltativo)
+
+Per impostazione predefinita, viene creato un dataset di valutazione per ogni istanza di servizio in uno schema standard. È possibile scegliere di aggiungere ulteriori colonne in base alle configurazioni Evento conversione e Punto di contatto all&#39;output del set di dati del punteggio. Per iniziare, seleziona le colonne dal set di dati di input, puoi trascinarle e rilasciarle per modificare l&#39;ordine tenendo premuto il pulsante sinistro del mouse sull&#39;icona dell&#39;hamburger.
+
+![aggiunta colonna set di dati di valutazione](./images/user-guide/Add-score-dataset.png)
 
 ### Modellazione basata sulle regioni (facoltativo) {#region-based-modeling-optional}
 
@@ -189,7 +217,7 @@ Dopo aver selezionato la finestra di formazione, fate clic **[!UICONTROL Finish]
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, è stata creata correttamente un&#39;istanza di servizio in  Attribution AI. Una volta che l&#39;istanza ha terminato il punteggio (consentire fino a 24 ore), è possibile [scoprire  approfondimenti](./discover-insights.md)delle Attribution AI. Inoltre, se desideri scaricare i risultati del punteggio, consulta la documentazione [sul download dei punteggi](./download-scores.md) non elaborati.
+Seguendo questa esercitazione, è stata creata correttamente un&#39;istanza di servizio in  Attribution AI. Una volta che l&#39;istanza ha terminato il punteggio (consentire fino a 24 ore), è possibile [scoprire  approfondimenti](./discover-insights.md)delle Attribution AI. Inoltre, se desideri scaricare i risultati del punteggio, consulta la documentazione sul [download dei punteggi](./download-scores.md) .
 
 ## Risorse aggiuntive
 
