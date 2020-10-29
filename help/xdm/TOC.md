@@ -5,9 +5,9 @@ user-guide-title: Guida al sistema Experience Data Model (XDM)
 breadcrumb-title: Guida a Data Model (XDM)
 user-guide-description: Utilizza le classi e i mixin Experience Data Model (XDM) per standardizzare i dati dell’esperienza.
 translation-type: tm+mt
-source-git-commit: 6c52998421b6a5d9719f287ec8cb7099780cb1ff
+source-git-commit: 0a5b6bab6a0a11a572a4cd5de95b33f8d61d34bc
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '203'
 ht-degree: 18%
 
 ---
@@ -18,6 +18,7 @@ ht-degree: 18%
 * [Panoramica del sistema XDM](home.md)
 * Schemi {#schema}
    * [Nozioni di base sulla composizione dello schema](schema/composition.md)
+   * [Best practice per la modellazione dei dati](schema/best-practices.md)
    * [Vincoli del tipo di campo XDM](schema/field-constraints.md)
    * [Dizionario campo XDM](schema/field-dictionary.md)
    * Casi di utilizzo dello schema {#use-cases}
