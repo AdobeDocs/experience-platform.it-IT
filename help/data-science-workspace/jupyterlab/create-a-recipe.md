@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Questa esercitazione si sovrappone a due sezioni principali. Innanzitutto, si crea un modello di machine learning utilizzando un modello all'interno di JupyterLab Notebook. Successivamente, si eserciterà il notebook per il flusso di lavoro delle ricette in JupyterLab per creare una ricetta all'interno di Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: adaa7fbaf78a37131076501c21bf18559c17ed94
 workflow-type: tm+mt
-source-wordcount: '2316'
+source-wordcount: '2331'
 ht-degree: 0%
 
 ---
@@ -67,10 +67,10 @@ Ora che si conoscono le basi per l&#39;ambiente [!DNL JupyterLab] notebook, è p
 
 ### File dei requisiti {#requirements-file}
 
-Il file dei requisiti viene utilizzato per dichiarare librerie aggiuntive da utilizzare nella ricetta. È possibile specificare il numero di versione in presenza di una dipendenza. Per ulteriori librerie, visitate https://anaconda.org. L&#39;elenco delle librerie principali già in uso include:
+Il file dei requisiti viene utilizzato per dichiarare librerie aggiuntive da utilizzare nella ricetta. È possibile specificare il numero di versione in presenza di una dipendenza. Per cercare altre librerie, visita [anaconda.org](https://anaconda.org). Per informazioni su come formattare il file dei requisiti, visitare [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually). L&#39;elenco delle librerie principali già in uso include:
 
 ```JSON
-python=3.5.2
+python=3.6.7
 scikit-learn
 pandas
 numpy
@@ -79,7 +79,7 @@ data_access_sdk_python
 
 >[!NOTE]
 >
->Le librerie o versioni specifiche aggiunte potrebbero essere incompatibili con le librerie elencate sopra.
+>Le librerie o versioni specifiche aggiunte potrebbero essere incompatibili con le librerie elencate sopra. Inoltre, se scegliete di creare manualmente un file di ambiente, il `name` campo non può essere ignorato.
 
 ### File di configurazione {#configuration-files}
 
@@ -148,30 +148,32 @@ df = pd.read_json(data)
 
 Ora i dati si trovano nell&#39;oggetto dataframe e possono essere analizzati e modificati nella sezione [](#data-preparation-and-feature-engineering)successiva.
 
-### Dall&#39;SDK per l&#39;accesso ai dati (obsoleto)
+### Da SDK piattaforma
 
->[!CAUTION]
->
-> `data_access_sdk_python` non è più consigliato. Consulta [Converti codice di accesso dati in SDK](../authoring/platform-sdk.md) piattaforma per una guida sull&#39;utilizzo del `platform_sdk` caricatore dati.
+Puoi caricare i dati tramite l’SDK della piattaforma. La libreria può essere importata nella parte superiore della pagina includendo la riga:
 
-Gli utenti possono caricare i dati utilizzando l&#39;SDK per l&#39;accesso ai dati. La libreria può essere importata nella parte superiore della pagina includendo la riga:
-
-`from data_access_sdk_python.reader import DataSetReader`
+`from platform_sdk.dataset_reader import DatasetReader`
 
 Quindi utilizziamo il `load()` metodo per acquisire il set di dati di formazione dal `trainingDataSetId` set nel nostro file di configurazione (`recipe.conf`).
 
 ```PYTHON
-prodreader = DataSetReader(client_id=configProperties['ML_FRAMEWORK_IMS_USER_CLIENT_ID'],
-                           user_token=configProperties['ML_FRAMEWORK_IMS_TOKEN'],
-                           service_token=configProperties['ML_FRAMEWORK_IMS_ML_TOKEN'])
+def load(config_properties):
+    print("Training Data Load Start")
 
-df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
-                     ims_org=configProperties['ML_FRAMEWORK_IMS_TENANT_ID'])
+    #########################################
+    # Load Data
+    #########################################    
+    client_context = get_client_context(config_properties)
+    
+    dataset_reader = DatasetReader(client_context, config_properties['trainingDataSetId'])
+    
+    timeframe = config_properties.get("timeframe")
+    tenant_id = config_properties.get("tenant_id")
 ```
 
 >[!NOTE]
 >
->Come indicato nella sezione [File di](#configuration-files)configurazione, i seguenti parametri di configurazione vengono impostati automaticamente quando si accede ai dati da [!DNL Experience Platform]:
+>Come indicato nella sezione [File di](#configuration-files)configurazione, i seguenti parametri di configurazione vengono impostati automaticamente quando si accede ai dati da  Experience Platform utilizzando `client_context`:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -227,46 +229,51 @@ La `load()` funzione deve completare con il `train` `val` set di dati e il set d
 La procedura per caricare i dati per il punteggio è simile ai dati di formazione di caricamento nella `split()` funzione. Utilizziamo l’SDK per l’accesso ai dati per caricare i dati dal `scoringDataSetId` `recipe.conf` file trovato.
 
 ```PYTHON
-def load(configProperties):
+def load(config_properties):
 
     print("Scoring Data Load Start")
 
     #########################################
     # Load Data
     #########################################
-    prodreader = DataSetReader(client_id=configProperties['ML_FRAMEWORK_IMS_USER_CLIENT_ID'],
-                               user_token=configProperties['ML_FRAMEWORK_IMS_TOKEN'],
-                               service_token=configProperties['ML_FRAMEWORK_IMS_ML_TOKEN'])
+    client_context = get_client_context(config_properties)
 
-    df = prodreader.load(data_set_id=configProperties['scoringDataSetId'],
-                         ims_org=configProperties['ML_FRAMEWORK_IMS_TENANT_ID'])
+    dataset_reader = DatasetReader(client_context, config_properties['scoringDataSetId'])
+    timeframe = config_properties.get("timeframe")
+    tenant_id = config_properties.get("tenant_id")
 ```
 
 Dopo il caricamento dei dati, la preparazione dei dati e la progettazione delle funzioni vengono eseguite.
 
 ```PYTHON
-#########################################
-# Data Preparation/Feature Engineering
-#########################################
-df.date = pd.to_datetime(df.date)
-df['week'] = df.date.dt.week
-df['year'] = df.date.dt.year
+    #########################################
+    # Data Preparation/Feature Engineering
+    #########################################
+    if '_id' in dataframe.columns:
+        #Rename columns to strip tenantId
+        dataframe = dataframe.rename(columns = lambda x : str(x)[str(x).find('.')+1:])
+        #Drop id, eventType and timestamp
+        dataframe.drop(['_id', 'eventType', 'timestamp'], axis=1, inplace=True)
 
-df = pd.concat([df, pd.get_dummies(df['storeType'])], axis=1)
-df.drop('storeType', axis=1, inplace=True)
-df['isHoliday'] = df['isHoliday'].astype(int)
+    dataframe.date = pd.to_datetime(dataframe.date)
+    dataframe['week'] = dataframe.date.dt.week
+    dataframe['year'] = dataframe.date.dt.year
 
-df['weeklySalesAhead'] = df.shift(-45)['weeklySales']
-df['weeklySalesLag'] = df.shift(45)['weeklySales']
-df['weeklySalesDiff'] = (df['weeklySales'] - df['weeklySalesLag']) / df['weeklySalesLag']
-df.dropna(0, inplace=True)
+    dataframe = pd.concat([dataframe, pd.get_dummies(dataframe['storeType'])], axis=1)
+    dataframe.drop('storeType', axis=1, inplace=True)
+    dataframe['isHoliday'] = dataframe['isHoliday'].astype(int)
 
-df = df.set_index(df.date)
-df.drop('date', axis=1, inplace=True)
+    dataframe['weeklySalesAhead'] = dataframe.shift(-45)['weeklySales']
+    dataframe['weeklySalesLag'] = dataframe.shift(45)['weeklySales']
+    dataframe['weeklySalesDiff'] = (dataframe['weeklySales'] - dataframe['weeklySalesLag']) / dataframe['weeklySalesLag']
+    dataframe.dropna(0, inplace=True)
 
-print("Scoring Data Load Finish")
+    dataframe = dataframe.set_index(dataframe.date)
+    dataframe.drop('date', axis=1, inplace=True)
 
-return df
+    print("Scoring Data Load Finish")
+
+    return dataframe
 ```
 
 Poiché lo scopo del nostro modello è prevedere le vendite settimanali future, sarà necessario creare un set di dati di punteggio utilizzato per valutare le prestazioni della previsione del modello.
