@@ -5,9 +5,9 @@ title: Connessione alle destinazioni di streaming e attivazione dei dati
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 51dd255156229adcb80c2a04aa1ccd5b01208a66
+source-git-commit: 34bf1c8aba555c5c8a527f4c0162cec4535b1dcf
 workflow-type: tm+mt
-source-wordcount: '1808'
+source-wordcount: '1866'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Le [!DNL Amazon Kinesis] destinazioni e [!DNL Azure Event Hubs] le destinazioni in CDP in tempo reale  Adobe sono attualmente in versione beta. La documentazione e la funzionalità sono soggette a modifiche.
+>Le [!DNL Amazon Kinesis] destinazioni e [!DNL Azure Event Hubs] le destinazioni in CDP in tempo reale  Adobe sono attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
 
 Questa esercitazione illustra come utilizzare le chiamate API per connettersi ai dati Adobe Experience Platform, creare una connessione a una destinazione di archiviazione cloud in streaming ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) o [Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), creare un flusso di dati per la nuova destinazione creata e attivare i dati per la nuova destinazione creata.
 
@@ -231,6 +231,10 @@ POST /connections
 
 **Richiesta**
 
+>[!IMPORTANT]
+>
+>L&#39;esempio seguente include commenti di codice con prefisso `//`. Questi commenti evidenziano dove devono essere utilizzati valori diversi per destinazioni di streaming diverse. Rimuovere i commenti prima di utilizzare lo snippet.
+
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -240,7 +244,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --data-raw '{
     "name": "Connection for Amazon Kinesis/ Azure Event Hubs",
-    "description": "your company's holiday campaign",
+    "description": "summer advertising campaign",
     "connectionSpec": {
         "id": "{_CONNECTION_SPEC_ID}",
         "version": "1.0"
@@ -289,6 +293,10 @@ POST /targetConnections
 ```
 
 **Richiesta**
+
+>[!IMPORTANT]
+>
+>L&#39;esempio seguente include commenti di codice con prefisso `//`. Questi commenti evidenziano dove devono essere utilizzati valori diversi per destinazioni di streaming diverse. Rimuovere i commenti prima di utilizzare lo snippet.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
