@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Un flusso di dati è un'attività pianificata che recupera e trasferisce dati da un'origine a un set di dati della piattaforma. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account di archiviazione cloud.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 52129cbc597c6bef6f858e581edc0db23b06ad67
 workflow-type: tm+mt
-source-wordcount: '1610'
+source-wordcount: '1724'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Ad
 * [[!DNL Experience Data Model] (XDM) Sistema](../../../../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
    * [Nozioni di base sulla composizione](../../../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
    * [Esercitazione](../../../../../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
-* [[!DNL Profilo cliente in tempo reale]](../../../../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
 Inoltre, questa esercitazione richiede l&#39;utilizzo di un account di archiviazione cloud prestabilito. Un elenco di esercitazioni per la creazione di diversi account di archiviazione cloud nell&#39;interfaccia utente è disponibile nella panoramica [dei connettori](../../../../home.md)sorgente.
 
@@ -54,17 +54,23 @@ Una volta completata la finestra di anteprima, potete selezionare **[!UICONTROL 
 
 ### Inviare file Parquet o JSON
 
-I formati di file supportati per un account di archiviazione cloud includono anche JSON e Parquet. I file JSON e Parquet devono essere conformi allo standard XDM. Per caricare i file JSON o Parquet, selezionate il formato di file appropriato dal browser directory e applicate il formato di dati compatibile dall&#39;interfaccia giusta. Selezionare **[!UICONTROL Next]** per continuare.
+Gli account di archiviazione cloud supportano anche i file JSON e Parquet. I file parquet devono essere conformi a XDM, mentre i file JSON non devono presentare reclamo XDM. Per caricare i file JSON o Parquet, selezionate il formato di file appropriato dal browser directory e applicate il formato di dati compatibile dall&#39;interfaccia giusta.
+
+Se il formato dei dati è in JSON, verrà visualizzata un&#39;anteprima con informazioni sui dati all&#39;interno del file. Nella schermata di anteprima, potete selezionare se il JSON è conforme a XDM utilizzando il **[!UICONTROL XDM compliant]** menu a discesa.
+
+Selezionare **[!UICONTROL Next]** per continuare.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/json-preview.png)
 
 >[!IMPORTANT]
 >
->A differenza dei tipi di file delimitati, i file in formato JSON e Parquet non sono disponibili per l’anteprima.
+>A differenza dei tipi di file delimitati e JSON, i file in formato Parquet non sono disponibili per l&#39;anteprima.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-parquet.png)
 
 ## Mappatura dei campi dati su uno schema XDM
 
-Viene visualizzato il **[!UICONTROL Mapping]** passaggio che fornisce un&#39;interfaccia interattiva per mappare i dati di origine a un [!DNL Platform] dataset. I file sorgente formattati in JSON o Parquet devono essere conformi a XDM e non devono essere configurati manualmente. I file CSV, al contrario, richiedono la configurazione esplicita della mappatura, ma consentono di scegliere quali campi di dati di origine mappare.
+Viene visualizzato il **[!UICONTROL Mapping]** passaggio che fornisce un&#39;interfaccia interattiva per mappare i dati di origine a un [!DNL Platform] dataset. I file di origine formattati in Parquet devono essere conformi a XDM e non devono essere configurati manualmente, mentre i file CSV richiedono la configurazione esplicita della mappatura, ma consentono di scegliere quali campi di dati di origine mappare. I file JSON, se contrassegnati come reclamo XDM, non richiedono la configurazione manuale. Tuttavia, se non è contrassegnato come conforme con XDM, sarà necessario configurare esplicitamente la mappatura.
 
 Scegliere un set di dati in entrata in cui assimilare i dati. È possibile utilizzare un set di dati esistente o crearne uno nuovo.
 
@@ -94,11 +100,19 @@ Viene visualizzata **[!UICONTROL Select schema]** la finestra di dialogo. Selezi
 
 In base alle esigenze, è possibile scegliere di mappare direttamente i campi oppure utilizzare le funzioni di mappatura per trasformare i dati di origine in modo da derivare i valori calcolati o calcolati. Per ulteriori informazioni sulla mappatura dei dati e sulle funzioni di mappatura, consulta l’esercitazione sulla [mappatura dei dati CSV ai campi](../../../../../ingestion/tutorials/map-a-csv-file.md)dello schema XDM.
 
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
+
+Per i file JSON, oltre alla mappatura diretta dei campi ad altri campi, è possibile mappare direttamente gli oggetti ad altri oggetti e array ad altri array.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/source-field-json.png)
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/target-field-json.png)
+
+Non è possibile eseguire la mappatura tra tipi diversi. Ad esempio, non è possibile eseguire il mapping di un oggetto a una matrice o di un campo a un oggetto.
+
 >[!TIP]
 >
 >[!DNL Platform] fornisce raccomandazioni intelligenti per i campi mappati automaticamente in base allo schema di destinazione o al dataset selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi di utilizzo.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
 Selezionate **[!UICONTROL Preview data]** per visualizzare i risultati della mappatura di fino a 100 righe di dati di esempio dal set di dati selezionato.
 
@@ -173,8 +187,8 @@ Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti
 
 Seguendo questa esercitazione, hai creato con successo un flusso di dati per l&#39;inserimento di dati da un archivio cloud esterno e hai acquisito informazioni sul monitoraggio dei set di dati. Per saperne di più sulla creazione di flussi di dati, puoi completare l’apprendimento guardando il video sottostante. Inoltre, i dati in entrata possono ora essere utilizzati dai [!DNL Platform] servizi a valle come [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i documenti seguenti:
 
-* [[!DNL Real-time Customer Profile]  - Panoramica](../../../../../profile/home.md)
-* [[!DNL Data Science Workspace]  - Panoramica](../../../../../data-science-workspace/home.md)
+* [[!DNL Real-time Customer Profile] panoramica](../../../../../profile/home.md)
+* [[!DNL Data Science Workspace] panoramica](../../../../../data-science-workspace/home.md)
 
 >[!WARNING]
 >
