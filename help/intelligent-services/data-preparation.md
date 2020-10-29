@@ -5,9 +5,9 @@ title: Preparare i dati per l'utilizzo in Intelligent Services
 topic: Intelligent Services
 description: 'Per consentire ai servizi intelligenti di scoprire informazioni ricavate dai dati degli eventi di marketing, i dati devono essere arricchiti e mantenuti in modo semantico in una struttura standard. I servizi intelligenti sfruttano gli schemi XDM (Experience Data Model) per ottenere questo risultato. Nello specifico, tutti i set di dati utilizzati in Intelligent Services] devono essere conformi allo schema XDM Consumer ExperienceEvent (CEE). '
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 3083c50b31746bfd32634278cb55b926bd477b2b
 workflow-type: tm+mt
-source-wordcount: '1978'
+source-wordcount: '1881'
 ht-degree: 0%
 
 ---
@@ -276,81 +276,15 @@ Dopo la creazione del set di dati, è possibile trovarlo nell&#39;interfaccia ut
 
 ![](images/data-preparation/dataset-location.png)
 
-#### Aggiunta di un tag dello spazio dei nomi dell&#39;identità primaria al dataset
+#### Aggiunta di campi identità al set di dati
 
 >[!NOTE]
 >
 >I rilasci futuri di [!DNL Intelligent Services] Adobe Experience Platform Identity Service [](../identity-service/home.md) integreranno le funzionalità di identificazione dei clienti. Di conseguenza, i passaggi descritti di seguito sono soggetti a modifiche.
 
-Se trasferisci dati da [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]o da un&#39;altra origine esterna, devi aggiungere un `primaryIdentityNameSpace` tag al dataset. Questa operazione può essere eseguita eseguendo una richiesta PATCH all&#39;API Catalog Service.
+Se si stanno inserendo dati da [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]o da un&#39;altra origine esterna, è possibile impostare un campo dello schema come campo di identità. Per impostare un campo di schema come campo di identità, visualizzare la sezione relativa all&#39;impostazione dei campi di identità all&#39;interno dell&#39;esercitazione [dell&#39;](../xdm/tutorials/create-schema-ui.md#identity-field) interfaccia utente per la creazione di uno schema utilizzando l&#39;Editor di schema o, in alternativa, l&#39;esercitazione [](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor)API.
 
 Se state acquisendo dati da un file CSV locale, potete passare alla sezione successiva sulla [mappatura e l’assimilazione dei dati](#ingest).
-
-Prima di seguire la chiamata API di esempio riportata di seguito, consultate la sezione [](../catalog/api/getting-started.md) introduttiva nella guida per gli sviluppatori di Catalog per informazioni importanti sulle intestazioni richieste.
-
-**Formato API**
-
-```http
-PATCH /dataSets/{DATASET_ID}
-```
-
-| Parametro | Descrizione |
-| --- | --- |
-| `{DATASET_ID}` | ID del set di dati creato in precedenza. |
-
-**Richiesta**
-
-A seconda dell’origine da cui vengono acquisiti i dati, nel payload della richiesta dovete fornire valori `primaryIdentityNamespace` e `sourceConnectorId` tag appropriati.
-
-La richiesta seguente aggiunge i valori tag appropriati per  Audience Manager:
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "tags": {
-          "primaryIdentityNameSpace": ["mcid"],
-          "sourceConnectorId": ["audiencemanager"],
-        }
-      }'
-```
-
-La seguente richiesta aggiunge i valori tag appropriati per Analytics:
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "tags": {
-          "primaryIdentityNameSpace": ["aaid"],
-          "sourceConnectorId": ["analytics"],
-        }
-      }'
-```
-
->[!NOTE]
->
->Per ulteriori informazioni sull&#39;utilizzo degli spazi dei nomi di identità in Piattaforma, consultate la panoramica [dello spazio dei nomi](../identity-service/namespaces.md)di identità.
-
-**Risposta**
-
-Una risposta corretta restituisce un array contenente l&#39;ID del set di dati aggiornato. Questo ID deve corrispondere a quello inviato nella richiesta PATCH.
-
-```json
-[
-    "@/dataSets/5ba9452f7de80400007fc52a"
-]
-```
 
 #### Mappa e acquisizione dei dati {#ingest}
 
