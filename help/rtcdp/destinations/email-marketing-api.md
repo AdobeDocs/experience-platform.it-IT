@@ -5,7 +5,7 @@ title: Creare destinazioni di e-mail marketing
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 51dd255156229adcb80c2a04aa1ccd5b01208a66
+source-git-commit: 34bf1c8aba555c5c8a527f4c0162cec4535b1dcf
 workflow-type: tm+mt
 source-wordcount: '1620'
 ht-degree: 1%
@@ -344,7 +344,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --data-raw '{
     "name": "S3 Connection for Adobe Campaign",
-    "description": "your company's holiday campaign",
+    "description": "summer advertising campaign",
     "connectionSpec": {
         "id": "{_CONNECTION_SPEC_ID}",
         "version": "1.0"
@@ -601,7 +601,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 * `{DATAFLOW_ID}`: Utilizzare il flusso di dati ottenuto nel passaggio precedente.
 * `{ETAG}`: Utilizzate il tag ottenuto nel passaggio precedente.
 * `{SEGMENT_ID}`: Specifica l&#39;ID del segmento da esportare in questa destinazione. Per recuperare gli ID del segmento per i segmenti da attivare, andate a **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, selezionate **[!UICONTROL Segmentation Service API]** nel menu di navigazione a sinistra e cercate l’ `GET /segment/definitions` operazione in **[!UICONTROL Segment Definitions]**.
-* `{PROFILE_ATTRIBUTE}`: Ad esempio, `"person.lastName"`
+* `{PROFILE_ATTRIBUTE}`: Esempio, `"person.lastName"`
 
 **Risposta**
 
