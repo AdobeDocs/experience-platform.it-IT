@@ -5,9 +5,9 @@ title: Ingresso e uscita AI del cliente
 topic: Getting started
 description: Il seguente documento delinea i diversi input e output utilizzati nell'AI del cliente.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: 0f45f12ca4f43de9489eb609fd541aa2be3bae78
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '824'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ L&#39;AI del cliente utilizza i dati Evento esperienza cliente per calcolare i p
 
 L&#39;AI del cliente richiede dati storici per la formazione dei modelli, ma la quantità di dati richiesta è basata su due elementi chiave: finestra dei risultati e popolazione ammissibile.
 
-Per impostazione predefinita, l&#39;API del cliente cerca che un utente abbia avuto attività negli ultimi 120 giorni, se durante la configurazione dell&#39;applicazione non viene fornita alcuna definizione di popolazione idonea. Oltre alla quantità minima di dati sull&#39;evento di esperienza del consumatore richiesta, l&#39;AI del cliente necessita anche di una quantità minima di eventi di successo basati su una definizione di obiettivo prevista. Attualmente, l&#39;AI del cliente richiede almeno 500 eventi di successo.
+Per impostazione predefinita, l&#39;API del cliente cerca che un utente abbia avuto attività negli ultimi 120 giorni, se durante la configurazione dell&#39;applicazione non viene fornita alcuna definizione di popolazione idonea. Inoltre, l&#39;AI del cliente richiede un minimo di 500 eventi idonei e 500 non qualificati (1000 totali) di dati storici basati su una definizione dell&#39;obiettivo prevista.
 
 Gli esempi seguenti hanno fornito una semplice formula per determinare la quantità minima di dati richiesti. Se il requisito minimo è superiore, è probabile che il modello fornisca risultati più precisi. Se la quantità minima richiesta è inferiore, il modello non riuscirà in quanto non è disponibile una quantità sufficiente di dati per la formazione dei modelli.
 
