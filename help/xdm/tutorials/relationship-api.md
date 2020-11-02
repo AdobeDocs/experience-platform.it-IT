@@ -6,7 +6,7 @@ description: Questo documento fornisce un'esercitazione per definire una relazio
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
+source-git-commit: 4d9e66a55c265b60ab12070dd5e435c6567b7d0f
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 1%
@@ -117,7 +117,7 @@ All&#39;interno [!DNL Schema Registry], i descrittori di relazione funzionano in
 >
 >A differenza dello schema di destinazione, lo schema di origine non può utilizzare la propria identità primaria come campo di riferimento.
 
-In questa esercitazione, lo schema di destinazione &quot;[!DNL Hotels]&quot; contiene un `email` campo che funge da identità primaria dello schema e che pertanto funge anche da campo di riferimento. Tuttavia, lo schema di origine &quot;[!DNL Loyalty Members]&quot; non dispone di un campo dedicato da utilizzare come riferimento e deve essere dotato di un nuovo mixin che aggiunge un nuovo campo allo schema: `favoriteHotel`.
+In questa esercitazione, lo schema di destinazione &quot;[!DNL Hotels]&quot; contiene un `hotelId` campo che funge da identità primaria dello schema e che pertanto funge anche da campo di riferimento. Tuttavia, lo schema di origine &quot;[!DNL Loyalty Members]&quot; non dispone di un campo dedicato da utilizzare come riferimento e deve essere dotato di un nuovo mixin che aggiunge un nuovo campo allo schema: `favoriteHotel`.
 
 >[!NOTE]
 >
@@ -339,7 +339,7 @@ Una risposta corretta restituisce i dettagli dello schema aggiornato, che ora in
 
 ## Creare un descrittore di identità di riferimento {#reference-identity}
 
-Ai campi dello schema deve essere applicato un descrittore di identità di riferimento se questi vengono utilizzati come riferimento da altri schemi in una relazione. Poiché il `favoriteHotel` campo in &quot;[!DNL Loyalty Members]&quot; farà riferimento al `email` campo in &quot;[!DNL Hotels]&quot;, `email` deve essere fornito un descrittore di identità di riferimento.
+Ai campi dello schema deve essere applicato un descrittore di identità di riferimento se questi vengono utilizzati come riferimento da altri schemi in una relazione. Poiché il `favoriteHotel` campo in &quot;[!DNL Loyalty Members]&quot; farà riferimento al `hotelId` campo in &quot;[!DNL Hotels]&quot;, `favoriteHotel` deve essere fornito un descrittore di identità di riferimento.
 
 Create un descrittore di riferimento per lo schema di destinazione effettuando una richiesta di POST all&#39; `/tenant/descriptors` endpoint.
 
@@ -351,7 +351,7 @@ POST /tenant/descriptors
 
 **Richiesta**
 
-La richiesta seguente crea un descrittore di riferimento per il `email` campo nello schema di destinazione &quot;[!DNL Hotels]&quot;.
+La richiesta seguente crea un descrittore di riferimento per il `hotelId` campo nello schema di destinazione &quot;[!DNL Hotels]&quot;.
 
 ```shell
 curl -X POST \
@@ -365,8 +365,8 @@ curl -X POST \
     "@type": "xdm:descriptorReferenceIdentity",
     "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/email",
-    "xdm:identityNamespace": "Email"
+    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:identityNamespace": "Hotel ID"
   }'
 ```
 
@@ -387,8 +387,8 @@ Una risposta corretta restituisce i dettagli del descrittore di riferimento appe
     "@type": "xdm:descriptorReferenceIdentity",
     "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/email",
-    "xdm:identityNamespace": "Email",
+    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:identityNamespace": "Hotel ID",
     "meta:containerId": "tenant",
     "@id": "53180e9f86eed731f6bf8bf42af4f59d81949ba6"
 }
@@ -423,7 +423,7 @@ curl -X POST \
     "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:destinationVersion": 1,
-    "xdm:destinationProperty": "/_{TENANT_ID}/email"
+    "xdm:destinationProperty": "/_{TENANT_ID}/hotelId"
   }'
 ```
 
