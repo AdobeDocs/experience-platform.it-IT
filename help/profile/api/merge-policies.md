@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Unisci criteri - API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
 workflow-type: tm+mt
-source-wordcount: '2382'
+source-wordcount: '2458'
 ht-degree: 1%
 
 ---
@@ -13,11 +13,17 @@ ht-degree: 1%
 
 # Endpoint criteri di unione
 
-Adobe Experience Platform consente di unire dati provenienti da più origini e combinarli per visualizzare una visione completa di ogni singolo cliente. Quando si uniscono questi dati, i criteri di unione sono le regole che [!DNL Platform] utilizzano per determinare in che modo i dati verranno classificati come priorità e quali dati verranno combinati per creare tale visualizzazione unificata. Utilizzando le API RESTful o l&#39;interfaccia utente, puoi creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la tua organizzazione. Questa guida illustra i passaggi per l&#39;utilizzo dei criteri di unione tramite l&#39;API. Per utilizzare i criteri di unione utilizzando l&#39;interfaccia utente, fare riferimento alla guida [utente dei criteri di](../ui/merge-policies.md)unione.
+Adobe Experience Platform consente di unire frammenti di dati provenienti da più origini e di combinarli per visualizzare in modo completo i singoli clienti. Quando si uniscono questi dati, i criteri di unione sono le regole che [!DNL Platform] utilizzano per determinare in che modo i dati verranno classificati come priorità e quali dati verranno combinati per creare tale visualizzazione unificata.
+
+Ad esempio, se un cliente interagisce con il tuo marchio su più canali, l&#39;organizzazione avrà più frammenti di profilo correlati a tale singolo cliente che saranno visualizzati in più set di dati. Quando questi frammenti vengono assimilati in Piattaforma, vengono uniti per creare un unico profilo per il cliente. Quando i dati provenienti da più origini sono in conflitto (ad esempio, un frammento indica il cliente come &quot;singolo&quot; mentre l&#39;altro elenca il cliente come &quot;sposato&quot;), il criterio di unione determina quali informazioni includere nel profilo dell&#39;individuo.
+
+Utilizzando le API RESTful o l&#39;interfaccia utente, puoi creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la tua organizzazione. Questa guida fornisce i passaggi per l&#39;utilizzo dei criteri di unione tramite l&#39;API.
+
+Per utilizzare i criteri di unione utilizzando l&#39;interfaccia utente, fare riferimento alla guida [utente dei criteri di](../ui/merge-policies.md)unione.
 
 ## Introduzione
 
-L&#39;endpoint API utilizzato in questa guida fa parte dell&#39;API [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Prima di continuare, consultate la guida [introduttiva per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente chiamate a qualsiasi](getting-started.md) [!DNL Experience Platform] API.
+L&#39;endpoint API utilizzato in questa guida fa parte dell&#39; [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Prima di continuare, consultate la guida [introduttiva per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente chiamate a qualsiasi](getting-started.md) [!DNL Experience Platform] API.
 
 ## Componenti dei criteri di unione {#components-of-merge-policies}
 
@@ -126,7 +132,7 @@ Se `{ATTRIBUTE_MERGE_TYPE}` è uno dei seguenti casi:
 * **`dataSetPrecedence`** : Attribuire priorità ai frammenti di profilo in base al set di dati da cui provengono. Questo può essere utilizzato quando le informazioni presenti in un set di dati sono preferite o attendibili rispetto ai dati contenuti in un altro set di dati. Quando si utilizza questo tipo di unione, l&#39; `order` attributo è obbligatorio, in quanto elenca i set di dati in ordine di priorità.
    * **`order`**: Quando si utilizza &quot;dataSetPrecedence&quot;, è necessario fornire un `order` array con un elenco di set di dati. Eventuali set di dati non inclusi nell&#39;elenco non verranno uniti. In altre parole, i set di dati devono essere esplicitamente elencati per essere uniti in un profilo. L&#39; `order` array elenca gli ID dei set di dati in ordine di priorità.
 
-**Esempio di oggetto attributeMerge con`dataSetPrecedence`tipo**
+**Esempio di oggetto attributeMerge con `dataSetPrecedence` tipo**
 
 ```json
     "attributeMerge": {
@@ -140,7 +146,7 @@ Se `{ATTRIBUTE_MERGE_TYPE}` è uno dei seguenti casi:
     }
 ```
 
-**Esempio di oggetto attributeMerge con`timestampOrdered`tipo**
+**Esempio di oggetto attributeMerge con `timestampOrdered` tipo**
 
 ```json
     "attributeMerge": {
@@ -737,7 +743,7 @@ Poiché i record vengono trasferiti  Experience Platform, al momento dell&#39;as
 
 Talvolta possono verificarsi casi di utilizzo, ad esempio il backfill dei dati o la verifica dell&#39;ordine corretto degli eventi se i record vengono ordinati in modo non corretto, se è necessario fornire una marca temporale personalizzata e fare in modo che il criterio di unione rispetti la marca temporale personalizzata invece che la marca temporale del sistema.
 
-Per utilizzare una marca temporale personalizzata, è necessario aggiungere allo schema del profilo [[!DNL External Source Audit Details Mixin]](#mixin-details) . Una volta aggiunta, la marca temporale personalizzata può essere compilata utilizzando il `xdm:lastUpdatedDate` campo. Quando un record viene assimilato con il `xdm:lastUpdatedDate` campo popolato,  Experience Platform utilizzerà tale campo per unire record o frammenti di profilo all&#39;interno e tra set di dati. Se non `xdm:lastUpdatedDate` è presente o non è popolato, la piattaforma continuerà a utilizzare la marca temporale del sistema.
+Per utilizzare una marca temporale personalizzata, è [[!DNL External Source System Audit Details Mixin]](#mixin-details) necessario aggiungerla allo schema Profilo. Una volta aggiunta, la marca temporale personalizzata può essere compilata utilizzando il `xdm:lastUpdatedDate` campo. Quando un record viene assimilato con il `xdm:lastUpdatedDate` campo popolato,  Experience Platform utilizzerà tale campo per unire record o frammenti di profilo all&#39;interno e tra set di dati. Se non `xdm:lastUpdatedDate` è presente o non è popolato, la piattaforma continuerà a utilizzare la marca temporale del sistema.
 
 >[!NOTE]
 >
