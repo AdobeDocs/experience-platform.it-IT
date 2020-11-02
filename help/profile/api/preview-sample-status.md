@@ -4,9 +4,9 @@ title: Anteprima profilo - API profilo cliente in tempo reale
 description: Adobe Experience Platform consente di acquisire dati dei clienti da più origini per creare profili unificati solidi per i singoli clienti. Poiché i dati attivati per il profilo cliente in tempo reale vengono trasferiti nella piattaforma, vengono memorizzati nell'archivio dati del profilo. Con l’aumento o la diminuzione del numero di record nell’archivio profili, viene eseguito un processo di esempio che include informazioni sul numero di frammenti di profilo e di profili uniti presenti nell’archivio dati. Utilizzando l'API Profile è possibile visualizzare in anteprima l'esempio di successo più recente, nonché distribuire il profilo di elenco per set di dati e per namespace di identità.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1605'
 ht-degree: 1%
 
 ---
@@ -23,6 +23,12 @@ Queste metriche sono disponibili anche nella [!UICONTROL Profiles] sezione dell&
 ## Introduzione
 
 L&#39;endpoint API utilizzato in questa guida è parte dell&#39; [[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Prima di continuare, consultate la guida [introduttiva per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente chiamate a qualsiasi](getting-started.md) [!DNL Experience Platform] API.
+
+## Frammenti di profilo e profili uniti
+
+Questa guida fa riferimento sia ai &quot;frammenti di profilo&quot; che ai &quot;profili uniti&quot;. È importante comprendere la differenza tra questi termini prima di procedere.
+
+Ciascun profilo cliente è composto da più frammenti di profilo che sono stati uniti per formare una singola vista del cliente. Ad esempio, se un cliente interagisce con il tuo marchio su più canali, l&#39;organizzazione avrà più frammenti di profilo correlati a tale singolo cliente che saranno visualizzati in più set di dati. Quando questi frammenti vengono assimilati in Piattaforma, vengono uniti (in base ai criteri di unione) per creare un unico profilo per il cliente. Pertanto, è probabile che il numero totale di frammenti di profilo sia sempre superiore al numero totale di profili uniti, in quanto ogni profilo è composto da più frammenti.
 
 ## Visualizza stato ultimo esempio {#view-last-sample-status}
 
