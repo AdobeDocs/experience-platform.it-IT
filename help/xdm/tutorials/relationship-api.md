@@ -6,7 +6,7 @@ description: Questo documento fornisce un'esercitazione per definire una relazio
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 4d9e66a55c265b60ab12070dd5e435c6567b7d0f
+source-git-commit: ce06550e9608163e6e5819d79cc73a4b1f92e915
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 1%
@@ -339,7 +339,7 @@ Una risposta corretta restituisce i dettagli dello schema aggiornato, che ora in
 
 ## Creare un descrittore di identità di riferimento {#reference-identity}
 
-Ai campi dello schema deve essere applicato un descrittore di identità di riferimento se questi vengono utilizzati come riferimento da altri schemi in una relazione. Poiché il `favoriteHotel` campo in &quot;[!DNL Loyalty Members]&quot; farà riferimento al `hotelId` campo in &quot;[!DNL Hotels]&quot;, `favoriteHotel` deve essere fornito un descrittore di identità di riferimento.
+Ai campi dello schema deve essere applicato un descrittore di identità di riferimento se questi vengono utilizzati come riferimento da altri schemi in una relazione. Poiché il `favoriteHotel` campo in &quot;[!DNL Loyalty Members]&quot; farà riferimento al `hotelId` campo in &quot;[!DNL Hotels]&quot;, `hotelId` deve essere fornito un descrittore di identità di riferimento.
 
 Create un descrittore di riferimento per lo schema di destinazione effettuando una richiesta di POST all&#39; `/tenant/descriptors` endpoint.
 
