@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Guida al profilo cliente in tempo reale
 user-guide-description: Unisci i dati dei clienti per creare una visualizzazione unificata delle interazioni dei clienti nei diversi canali.
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: 8971d373228099d42249d3ec4af13e711323a0cc
 workflow-type: tm+mt
-source-wordcount: '96'
-ht-degree: 33%
+source-wordcount: '100'
+ht-degree: 32%
 
 ---
 
@@ -27,9 +27,10 @@ ht-degree: 33%
    * [Stato dell’anteprima del campione ([!DNL Profile] anteprima)](api/preview-sample-status.md)
    * [[!DNL Profile] processi di sistema (richieste di eliminazione)](api/profile-system-jobs.md)
 * Guide dell&#39;interfaccia {#ui}
-   * [[!DNL Profile] guida utente](ui/user-guide.md)
+   * [[!DNL Profile] Guida all&#39;interfaccia](ui/user-guide.md)
    * [[!DNL Profile] personalizzazione dei dettagli](ui/profile-customization.md)
-   * [Guida utente per i criteri di unione](ui/merge-policies.md)
+   * [Guida all&#39;interfaccia utente per i criteri di unione](ui/merge-policies.md)
+   * [Guida all&#39;interfaccia utente dello schema unione](ui/union-schema.md)
 * Tutorial {#tutorials}
    * [Aggiungi dati a [!DNL Profile]](tutorials/add-profile-data.md)
    * [Configurare un set di dati [!DNL Profile] & [!DNL Identity] per il servizio](tutorials/dataset-configuration.md)
