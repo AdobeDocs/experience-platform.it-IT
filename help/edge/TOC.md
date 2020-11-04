@@ -6,10 +6,10 @@ user-guide-title: Guida all’SDK per web di Adobe Experience Platform
 breadcrumb-title: Guida all’SDK per web
 user-guide-description: Interagisci con i servizi di Experience Cloud tramite la rete Edge.
 translation-type: tm+mt
-source-git-commit: 7f3d4f0266b58b1327d2b8743538c7fc9b67669b
+source-git-commit: 502da50576dfd550598111658b41da6a62bb7e79
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '123'
+ht-degree: 34%
 
 ---
 
@@ -43,6 +43,7 @@ ht-degree: 0%
    * [Gestisci sfarfallio](personalization/manage-flicker.md)
    * Adobe Target {#adobe-target}
       * [Panoramica di Target](personalization/adobe-target/target-overview.md)
+      * [Implementazione di un&#39;applicazione a pagina singola](personalization/adobe-target/spa-implementation.md)
 * Consenso {#consent}
    * [Consenso di sostegno](consent/supporting-consent.md)
    * IAB Quadro di trasparenza e di consenso 2.0 {#iab-tcf}
