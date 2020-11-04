@@ -1,19 +1,29 @@
 ---
-title: Note sulla versione di Adobe Experience Platform Web SDK
-seo-title: Note sulla versione di Adobe Experience Platform Web SDK
-description: Note sulla versione di Adobe Experience Platform Web SDK.
-seo-description: Note sulla versione di Adobe Experience Platform Web SDK.
+title: Note sulla versione dell’SDK per web di Adobe Experience Platform
+seo-title: Note sulla versione dell’SDK per web di Adobe Experience Platform
+description: Note sulla versione dell’SDK per web di Adobe Experience Platform.
+seo-description: Note sulla versione dell’SDK per web di Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 translation-type: tm+mt
-source-git-commit: 738dfe782ee7d6bef06d14910e0c26540b0ec734
+source-git-commit: 77c1e693668bc50a81713d02cfe4b0fabc661404
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 3%
+source-wordcount: '221'
+ht-degree: 14%
 
 ---
 
 
 # Note sulla versione
+
+## Versione 2.3.0
+
+* È stato aggiunto il supporto per consentire l&#39;applicazione di criteri di protezione dei contenuti più severi.
+* È stato aggiunto il supporto per la personalizzazione per le applicazioni a pagina singola.
+* È stata migliorata la compatibilità con altri codici JavaScript presenti sulla pagina che potrebbero sovrascrivere `window.console` le API.
+* Correzione dei bug: `sendBeacon` non veniva utilizzato quando `documentUnloading` era impostato su `true` o quando i clic del collegamento venivano tracciati automaticamente.
+* Correzione dei bug: Un collegamento non viene tracciato automaticamente se l&#39;elemento di ancoraggio conteneva contenuto HTML.
+* Correzione dei bug: Alcuni errori del browser contenenti una proprietà di sola lettura non sono stati gestiti in modo appropriato, con conseguente esposizione al cliente di un errore diverso. `message`
+* Correzione dei bug: L&#39;esecuzione dell&#39;SDK all&#39;interno di un iframe causerebbe un errore se la pagina HTML dell&#39;iframe provenisse da un sottodominio diverso rispetto alla pagina HTML della finestra principale.
 
 ## Versione 2.2.0
 
