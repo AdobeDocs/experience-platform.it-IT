@@ -5,10 +5,10 @@ title: Elenca le sandbox attive per l'utente corrente
 topic: developer guide
 description: Potete elencare le sandbox attive per l'utente corrente eseguendo una richiesta di GET all'endpoint principale.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 6326b3072737acf30ba2aee7081ce28dc9627a9a
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 1%
+source-wordcount: '345'
+ht-degree: 2%
 
 ---
 
@@ -24,14 +24,18 @@ Potete elencare le sandbox attive per l&#39;utente corrente eseguendo una richie
 **Formato API**
 
 ```http
-GET /
+GET /{QUERY_PARAMS}
 ```
+
+| Parametro | Descrizione |
+| --------- | ----------- |
+| `{QUERY_PARAMS}` | Parametri di query facoltativi per filtrare i risultati per. Per ulteriori informazioni, consulta la sezione sui parametri [di](#query) query. |
 
 **Richiesta**
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/sandbox-management/ \
+  https://platform.adobe.io/data/foundation/sandbox-management/?&limit=3&offset=1 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -84,7 +88,17 @@ Una risposta corretta restituisce un elenco di sandbox attive per l’utente cor
             "createdBy": "{USER_ID}",
             "modifiedBy": "{USER_ID}"
         }
-    ]
+    ],
+    "_page": {
+        "limit": 3,
+        "count": 1
+    },
+    "_links": {
+        "page": {
+            "href": "https://platform.adobe.io:443/data/foundation/sandbox-management/?limit={limit}&offset={offset}",
+            "templated": true
+        }
+    }
 }
 ```
 
@@ -96,3 +110,16 @@ Una risposta corretta restituisce un elenco di sandbox attive per l’utente cor
 | `type` | Il tipo di sandbox, &quot;development&quot; o &quot;production&quot;. |
 | `isDefault` | Una proprietà booleana che indica se questa sandbox è la sandbox predefinita per l&#39;organizzazione. In genere si tratta della sandbox di produzione. |
 | `eTag` | Identificatore per una versione specifica della sandbox. Utilizzato per il controllo della versione e l&#39;efficienza del caching, questo valore viene aggiornato ogni volta che viene apportata una modifica alla sandbox. |
+
+## Utilizzo dei parametri di query {#query}
+
+L&#39; [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) API supporta l&#39;utilizzo di parametri di query per visualizzare la pagina e filtrare i risultati quando vengono elencate le sandbox.
+
+>[!NOTE]
+>
+>I parametri `limit` e di `offset` query devono essere specificati insieme. Se ne specificate solo uno, l&#39;API restituirà un errore. Se non si specifica alcun valore, il limite predefinito è 50 e l&#39;offset è 0.
+
+| Parametro | Descrizione |
+| --------- | ----------- |
+| `limit` | Il numero massimo di record da restituire nella risposta. |
+| `offset` | Il numero di entità dal primo record da cui iniziare (offset) l&#39;elenco di risposte. |
