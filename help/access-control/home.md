@@ -5,9 +5,9 @@ topic: overview
 title: Panoramica sul controllo degli accessi
 description: Il controllo degli accessi per Adobe Experience Platform è fornito tramite Adobe Admin Console. Questa funzionalità sfrutta i profili di prodotto in  Admin Console, che collegano gli utenti con autorizzazioni e sandbox.
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: ccb7286e47aa4cf6356d22f84111b0c0fb30dfa8
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '1199'
 ht-degree: 2%
 
 ---
@@ -73,7 +73,7 @@ L&#39;autorizzazione &quot;Gestione sandbox&quot; consente agli utenti di gestir
 
 La scheda Autorizzazioni all&#39;interno di un profilo di prodotto visualizza le sandbox e le autorizzazioni attive per tale profilo:
 
-![](./images/permissions-overview.png)
+![permissions-overview](./images/permissions-overview.png)
 
 Le autorizzazioni concesse tramite l&#39; [!DNL Admin Console] opzione sono ordinate per categoria, con alcune autorizzazioni che concedono l&#39;accesso a diverse funzionalità di basso livello.
 
@@ -83,12 +83,19 @@ La tabella seguente delinea le autorizzazioni disponibili per [!DNL Experience P
 | --- | --- | --- |
 | [!DNL Data Modeling] | [!UICONTROL Manage Schemas] | Accesso per leggere, creare, modificare ed eliminare schemi e risorse correlate. |
 | [!DNL Data Modeling] | [!UICONTROL View Schemas] | Accesso in sola lettura agli schemi e alle risorse correlate. |
+| [!DNL Data Modeling] | [!UICONTROL Manage Relationships] | Accesso per leggere, creare, modificare ed eliminare le relazioni tra schemi. |
+| [!DNL Data Modeling] | [!UICONTROL Manage Identity Metadata] | Accesso per leggere, creare, modificare ed eliminare i metadati di identità per gli schemi. |
 | [!DNL Data Management] | [!UICONTROL Manage Datasets] | Accesso per la lettura, la creazione, la modifica e l&#39;eliminazione dei set di dati. Accesso in sola lettura per gli schemi. |
 | [!DNL Data Management] | [!UICONTROL View Datasets] | Accesso in sola lettura per set di dati e schemi. |
 | [!DNL Data Management] | [!UICONTROL Data Monitoring] | Accesso in sola lettura ai set di dati e ai flussi di monitoraggio. |
 | [!DNL Profile Management] | [!UICONTROL Manage Profiles] | Accesso per leggere, creare, modificare ed eliminare i set di dati utilizzati per i profili cliente. Accesso in sola lettura ai profili disponibili. |
 | [!DNL Profile Management] | [!UICONTROL View Profiles] | Accesso in sola lettura ai profili disponibili. |
+| [!DNL Profile Management] | [!UICONTROL Manage Segments] | Accesso ai segmenti di lettura, creazione, modifica ed eliminazione. |
+| [!DNL Profile Management] | [!UICONTROL View Segments] | Accesso in sola lettura ai segmenti disponibili. |
+| [!DNL Profile Management] | [!UICONTROL Manage Merge Policies] | Accesso per la lettura, la creazione, la modifica e l&#39;eliminazione dei criteri di unione. |
+| [!DNL Profile Management] | [!UICONTROL View Merge Policies] | Accesso in sola lettura ai criteri di unione disponibili. |
 | [!DNL Profile Management] | [!UICONTROL Export Audience for Segment] | Possibilità di esportare un segmento di pubblico valutato in un dataset. |
+| [!DNL Profile Management] | [!UICONTROL Evaluate a Segment to an Audience] | Possibilità di generare profili per un&#39;audience valutando la definizione di un segmento. |
 | [!DNL Identities] | [!UICONTROL Manage Identity Namespaces] | Accesso agli spazi dei nomi delle identità di lettura, creazione, modifica ed eliminazione. |
 | [!DNL Identities] | [!UICONTROL View Identity Namespaces] | Accesso in sola lettura per gli spazi dei nomi di identità. |
 | [!DNL Sandbox Administration] | [!UICONTROL Manage Sandboxes] | Accesso alle sandbox di lettura, creazione, modifica ed eliminazione. |
@@ -100,8 +107,12 @@ La tabella seguente delinea le autorizzazioni disponibili per [!DNL Experience P
 | [!DNL Data Ingestion] | [!UICONTROL Manage Sources] | Accesso alle origini di lettura, creazione, modifica e disattivazione. |
 | [!DNL Data Ingestion] | [!UICONTROL View Sources] | Accesso in sola lettura alle origini disponibili nella **[!UICONTROL Catalog]** scheda e alle origini autenticate nella **[!UICONTROL Browse]** scheda. |
 | [!DNL Data Science Workspace] | [!UICONTROL Manage Data Science Workspace] | Accesso a lettura, creazione, modifica ed eliminazione in [!DNL Data Science Workspace]. |
+| [!DNL Data Governance] | [!UICONTROL Apply Data Usage Labels] | Accesso per la lettura, la creazione e l&#39;eliminazione delle etichette di utilizzo. |
+| [!DNL Data Governance] | [!UICONTROL Manage Data Usage Policies] | Accesso a criteri di utilizzo dei dati di lettura, creazione, modifica ed eliminazione. |
+| [!DNL Data Governance] | [!UICONTROL View Data Usage Policies] | Accesso in sola lettura per i criteri di utilizzo dei dati appartenenti alla tua organizzazione. |
+| [!DNL Query Service] | [!UICONTROL Manage Queries] | Accesso per leggere, creare, modificare ed eliminare query SQL strutturate per i dati della piattaforma. |
 
-_(*) Questa autorizzazione richiede disposizioni per[!DNL Real-time Customer Data Platform]. Per ulteriori informazioni sulla CDP in tempo reale, consultare la panoramica[CDP in tempo](https://docs.adobe.com/content/help/it-IT/experience-platform/rtcdp/overview.html)reale._
+_(*) Questa autorizzazione richiede disposizioni per [!DNL Real-time Customer Data Platform]. Per ulteriori informazioni sulla CDP in tempo reale, consultare la panoramica [CDP in tempo](https://docs.adobe.com/content/help/it-IT/experience-platform/rtcdp/overview.html)reale._
 
 ## Passaggi successivi
 
