@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;enum;;primary identity;primary identity;XDM individual profile;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design
+keywords: Experience Platform;home;popular topics;schema;Schema;enum;;primary identity;primary identity;XDM individual profile;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design;best practices
 solution: Experience Platform
 title: Best practice per la modellazione dei dati in Adobe Experience Platform
 topic: overview
 description: Questo documento fornisce un'introduzione agli schemi di Experience Data Model (XDM) e ai blocchi costitutivi, ai principi e alle procedure ottimali per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: e15df78978c06da254319d9d394be35c4668caa9
+source-git-commit: 5fe75ab7c939c8437d675212b71229fe3fb70c01
 workflow-type: tm+mt
-source-wordcount: '2472'
+source-wordcount: '2480'
 ht-degree: 1%
 
 ---
@@ -220,7 +220,7 @@ Questo documento ha trattato le linee guida generali e le procedure ottimali per
 
 * Utilizzate un approccio dall&#39;alto verso il basso, ordinando le tabelle di dati in categorie di profili, ricerche ed eventi prima di creare gli schemi.
 * Spesso sono disponibili diversi approcci e opzioni per la progettazione di schemi per diversi scopi.
-* Il modello dati deve supportare i casi di utilizzo della segmentazione.
+* Il modello dati deve supportare i casi di utilizzo aziendale, ad esempio la segmentazione o l&#39;analisi del percorso del cliente.
 * Semplificate il più possibile gli schemi e aggiungete nuovi campi solo quando necessario.
 
 Una volta pronti, vedete l&#39;esercitazione sulla [creazione di uno schema nell&#39;interfaccia utente](../tutorials/create-schema-ui.md) per istruzioni dettagliate su come creare uno schema, assegnare la classe appropriata per l&#39;entità e aggiungere campi per la mappatura dei dati.
