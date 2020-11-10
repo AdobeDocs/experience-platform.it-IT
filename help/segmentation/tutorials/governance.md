@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per imporre la conformità dell'utilizzo dei dati per i segmenti di pubblico Profilo cliente in tempo reale che utilizzano le API.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '1351'
+source-wordcount: '1338'
 ht-degree: 1%
 
 ---
@@ -22,9 +22,9 @@ Questa esercitazione descrive i passaggi per imporre la conformità dell&#39;uti
 
 Questa esercitazione richiede una buona conoscenza dei seguenti componenti di [!DNL Adobe Experience Platform]:
 
-- [[!DNL Profilo cliente in tempo reale]](../../profile/home.md): [!DNL Real-time Customer Profile] è un archivio di entità di ricerca generico e viene utilizzato per gestire i dati [!DNL Experience Data Model] (XDM) all&#39;interno [!DNL Platform]. Il profilo unisce i dati tra diverse risorse di dati aziendali e fornisce l&#39;accesso a tali dati in una presentazione unificata.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): [!DNL Real-time Customer Profile] è un archivio di entità di ricerca generico e viene utilizzato per gestire [!DNL Experience Data Model (XDM)] i dati all&#39;interno di [!DNL Platform]. Il profilo unisce i dati tra diverse risorse di dati aziendali e fornisce l&#39;accesso a tali dati in una presentazione unificata.
    - [Unisci criteri](../../profile/api/merge-policies.md): Regole utilizzate [!DNL Real-time Customer Profile] per determinare quali dati possono essere uniti in una visualizzazione unificata in determinate condizioni. I criteri di unione possono essere configurati a [!DNL Data Governance] scopo.
-- [[!Segmentazione DNL]](../home.md): Come [!DNL Real-time Customer Profile] divide un ampio gruppo di individui contenuti nello store di profili in gruppi più piccoli che condividono caratteristiche simili e risponderanno in modo simile alle strategie di marketing.
+- [[!DNL Segmentation]](../home.md): Come [!DNL Real-time Customer Profile] divide un ampio gruppo di individui contenuti nello store di profili in gruppi più piccoli che condividono caratteristiche simili e risponderanno in modo simile alle strategie di marketing.
 - [[!DNL Data Governance]](../../data-governance/home.md): [!DNL Data Governance] fornisce l&#39;infrastruttura per l&#39;etichettatura e l&#39;applicazione dell&#39;uso dei dati, utilizzando i seguenti componenti:
    - [Etichette](../../data-governance/labels/user-guide.md)di utilizzo dati: Etichette utilizzate per descrivere insiemi di dati e campi in termini di livello di sensibilità con cui gestire i rispettivi dati.
    - [Criteri](../../data-governance/policies/overview.md)di utilizzo dei dati: Configurazioni che indicano quali azioni di marketing sono consentite sui dati classificati da particolari etichette di utilizzo dei dati.
@@ -385,4 +385,4 @@ Per ulteriori informazioni, consulta la sezione sull’ [esportazione di un segm
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai cercato le etichette di utilizzo dei dati associate a un segmento di pubblico e li hai testati per verificare la presenza di violazioni dei criteri rispetto a determinate azioni di marketing. Per ulteriori informazioni [!DNL Data Governance] in [!DNL Experience Platform], leggere la panoramica per [[!DNL Data Governance]](../../data-governance/home.md).
+Seguendo questa esercitazione, hai cercato le etichette di utilizzo dei dati associate a un segmento di pubblico e li hai testati per verificare la presenza di violazioni dei criteri rispetto a determinate azioni di marketing. Per ulteriori informazioni [!DNL Data Governance] in [!DNL Experience Platform], leggete la panoramica per [[!DNL Data Governance]](../../data-governance/home.md).
