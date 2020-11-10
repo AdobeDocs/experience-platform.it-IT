@@ -5,9 +5,9 @@ title: Guida per lo sviluppatore di batch Ingestion
 topic: developer guide
 description: Questo documento fornisce una panoramica completa dell’utilizzo delle API di assimilazione batch.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '2678'
+source-wordcount: '2675'
 ht-degree: 5%
 
 ---
@@ -28,8 +28,8 @@ Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario cono
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 - [Caricamento](./overview.md)batch: Consente di assimilare i dati in Adobe Experience Platform come file batch.
-- [[!DNL Experience Data Model] (XDM) Sistema](../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
-- [[!DNL Sandbox]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+- [[!DNL Experience Data Model (XDM)] Sistema](../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
+- [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 ### Lettura di chiamate API di esempio
 
