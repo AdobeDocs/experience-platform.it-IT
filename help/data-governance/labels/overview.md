@@ -5,9 +5,9 @@ title: Panoramica delle etichette di utilizzo dei dati
 topic: labels
 description: Adobe Experience Platform Data Governance consente di applicare etichette di utilizzo dei dati a set di dati e campi, suddividendo ciascuna in categorie in base ai relativi criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle etichette di utilizzo dei dati nel  Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '615'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Oltre alle etichette fornite da  Adobe, potete anche definire etichette personal
 
 ## Ereditarietà delle etichette per i segmenti di pubblico
 
-Tutti i segmenti di pubblico creati da [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) ereditano le etichette di utilizzo dei set di dati corrispondenti. Questo consente alle applicazioni integrate [!DNL Experience Platform] (come [!DNL Real-time Customer Data Platform]) di fornire l&#39;applicazione automatica dei criteri di utilizzo dei dati durante l&#39;attivazione dei segmenti nelle destinazioni.
+Tutti i segmenti di pubblico creati da [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) ereditano le etichette di utilizzo dei set di dati corrispondenti. Questo consente alle applicazioni create sopra  Experience Platform (ad esempio [!DNL Real-time Customer Data Platform]) di fornire un&#39;applicazione automatica dei criteri di utilizzo dei dati durante l&#39;attivazione dei segmenti nelle destinazioni.
 
 Oltre a ereditare le etichette a livello di set di dati, per impostazione predefinita i segmenti ereditano tutte le etichette a livello di campo dai set di dati associati. A seconda del modo in cui l’applicazione [!DNL Platform]basata sui segmenti utilizza i segmenti, è possibile specificare quali campi vengono utilizzati, impedendo al segmento di ereditare le etichette dai campi esclusi.
 
