@@ -5,9 +5,9 @@ title: Iscriviti  notifiche di I/O Adobe
 topic: developer guide
 description: In questo documento vengono fornite istruzioni su come effettuare la sottoscrizione  notifiche di eventi I/O Adobe per i servizi Adobe Experience Platform. Vengono inoltre fornite informazioni di riferimento sui tipi di evento disponibili, insieme a collegamenti verso ulteriori informazioni su come interpretare i dati dell'evento restituiti per ciascun servizio [!DNL Platform] applicativo.
 translation-type: tm+mt
-source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '733'
 ht-degree: 1%
 
 ---
@@ -62,7 +62,7 @@ Nella schermata successiva viene visualizzato un elenco dei tipi di evento a cui
 >
 >* [[!DNL Privacy Service] Notifiche](../../privacy-service/privacy-events.md)
 >* [[!DNL Data Ingestion] Notifiche](../../ingestion/quality/subscribe-events.md)
->* [[!DNL Flow Service] (origini) notifiche](../../sources/notifications.md)
+>* [[!DNL Flow Service (sources)] Notifiche](../../sources/notifications.md)
 
 
 ![](../images/notifications/choose-event-subscriptions.png)
@@ -99,6 +99,6 @@ Seguendo questa esercitazione, hai registrato un webhook per ricevere [!DNL I/O 
 
 * [[!DNL Privacy Service] Notifiche](../../privacy-service/privacy-events.md)
 * [[!DNL Data Ingestion] Notifiche](../../ingestion/quality/subscribe-events.md)
-* [[!DNL Flow Service] (origini) notifiche](../../sources/notifications.md)
+* [[!DNL Flow Service (sources)] Notifiche](../../sources/notifications.md)
 
 Consulta la [[!DNL Observability Insights] panoramica](../home.md) per ulteriori informazioni su come monitorare le attività su [!DNL Experience Platform] e [!DNL Privacy Service].
