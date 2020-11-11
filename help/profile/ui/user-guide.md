@@ -4,9 +4,9 @@ title: Guida all'interfaccia utente del profilo cliente in tempo reale
 topic: guide
 description: Profilo cliente in tempo reale crea una visualizzazione olistica di ciascuno dei tuoi clienti, combinando dati da più canali tra cui dati online, offline, CRM e di terze parti. Questo documento funge da guida per l'interazione con il profilo cliente in tempo reale nell'interfaccia utente di Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 295315ab052ff151bea9037567bf2690d705367b
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1210'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ Simile alla metrica del conteggio [del](#profile-count) profilo, quando l&#39;in
 
 ### Unisci criterio
 
-Il **[!UICONTROL Merge policy]** selettore seleziona automaticamente il criterio di unione predefinito per l&#39;organizzazione. Se non si desidera utilizzare tale criterio di unione, è possibile selezionare il criterio di unione `X` accanto al criterio di unione predefinito per aprire la finestra di dialogo in cui **[!UICONTROL Select merge policy]** è possibile scegliere un altro criterio di unione. Per ulteriori informazioni sull&#39;unione dei criteri e il relativo ruolo all&#39;interno della piattaforma, consultare la guida [utente relativa ai criteri di](merge-policies.md)unione.
+Il **[!UICONTROL Merge policy]** selettore seleziona automaticamente il criterio di unione predefinito per l&#39;organizzazione. Se non si desidera utilizzare tale criterio di unione, è possibile selezionare il criterio di unione `X` accanto al criterio di unione predefinito per aprire la finestra di dialogo in cui **[!UICONTROL Select merge policy]** è possibile scegliere un altro criterio di unione. Per ulteriori informazioni sull&#39;unione dei criteri e sul loro ruolo all&#39;interno della piattaforma, consulta la guida [all&#39;interfaccia utente dei criteri di](merge-policies.md)unione.
 
 ![](../images/user-guide/profiles-search-merge-policy.png)
 
@@ -98,7 +98,7 @@ Per visualizzare ulteriori informazioni relative al singolo profilo, seleziona u
 
 ## Unisci criteri
 
-Dal **[!UICONTROL Profiles]** menu principale, selezionare la **[!UICONTROL Merge Policies]** scheda per visualizzare un elenco di criteri di unione appartenenti alla propria organizzazione. Ogni criterio elencato visualizza il nome, indipendentemente dal fatto che si tratti del criterio di unione predefinito, e lo schema a cui si applica.
+Dal **[!UICONTROL Profiles]** menu principale, selezionare la **[!UICONTROL Merge Policies]** scheda per visualizzare un elenco di criteri di unione appartenenti alla propria organizzazione. Ogni criterio elencato visualizza il nome, indipendentemente dal fatto che si tratti del criterio di unione predefinito, e la classe dello schema a cui si applica.
 
 Per ulteriori informazioni sui criteri di unione, consultare la guida [all&#39;interfaccia utente dei criteri di](merge-policies.md)unione.
 
