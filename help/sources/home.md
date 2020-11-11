@@ -5,9 +5,9 @@ title: Panoramica dei connettori sorgente Adobe Experience Platform
 topic: overview
 description: Adobe Experience Platform consente l'acquisizione di dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Piattaforma. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, database e molti altri.
 translation-type: tm+mt
-source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
+source-git-commit: d26eaf699a67a1bc7111f5f97da277368fcc4629
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '856'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Le origini [!DNL Experience Platform] sono raggruppate nelle seguenti categorie:
 
 [!DNL Experience Platform] fornisce il supporto per l&#39;acquisizione di dati da un sistema pubblicitario di terze parti. Per ulteriori informazioni su connettori sorgente specifici, consultate i seguenti documenti correlati:
 
-- [Connettore [!DNL Google AdWords]](connectors/advertising/ads.md)
+- [[!DNL Google AdWords]](connectors/advertising/ads.md) connettore
 
 ### Archiviazione cloud
 
@@ -91,6 +91,12 @@ I sistemi CRM forniscono dati che possono aiutare a creare relazioni con i clien
 - [[!DNL Oracle] connettore](connectors/databases/oracle.md)
 - [[!DNL Phoenix] connettore](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL] connettore](connectors/databases/postgres.md)
+
+### eCommerce
+
+[!DNL Experience Platform] fornisce supporto per l’acquisizione di dati da un sistema eCommerce di terze parti. Per ulteriori informazioni su connettori sorgente specifici, consultate i seguenti documenti correlati:
+
+- [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
 ### Marketing Automation
 
