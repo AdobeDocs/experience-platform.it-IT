@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Unisci criteri - API profilo cliente in tempo reale
 topic: guide
 translation-type: tm+mt
-source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
+source-git-commit: 6bfc256b50542e88e28f8a0c40cec7a109a05aa6
 workflow-type: tm+mt
-source-wordcount: '2458'
+source-wordcount: '2494'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,13 @@ L&#39;endpoint API utilizzato in questa guida fa parte dell&#39; [[!DNL Real-tim
 
 ## Componenti dei criteri di unione {#components-of-merge-policies}
 
-I criteri di unione sono privati per l&#39;organizzazione IMS e consentono di creare criteri diversi per unire gli schemi nel modo desiderato. Qualsiasi [!DNL Profile] dato di accesso API richiede un criterio di unione, anche se un valore predefinito verrà utilizzato se non viene fornito in modo esplicito. [!DNL Platform] fornisce un criterio di unione predefinito, oppure è possibile creare un criterio di unione per uno schema specifico e contrassegnarlo come predefinito per l&#39;organizzazione. Ogni organizzazione può avere potenzialmente più criteri di unione per schema, tuttavia ogni schema può avere un solo criterio di unione predefinito. I criteri di unione impostati come predefiniti verranno utilizzati nei casi in cui il nome dello schema è fornito e un criterio di unione è obbligatorio ma non fornito. Quando si imposta un criterio di unione come predefinito, tutti i criteri di unione esistenti precedentemente impostati come predefiniti verranno automaticamente aggiornati in modo da non essere più utilizzati come predefiniti.
+I criteri di unione sono privati per l&#39;organizzazione IMS e consentono di creare diversi criteri per unire gli schemi nei modi specifici necessari. Qualsiasi [!DNL Profile] dato di accesso API richiede un criterio di unione, anche se un valore predefinito verrà utilizzato se non viene fornito in modo esplicito. [!DNL Platform] fornisce alle organizzazioni un criterio di unione predefinito, oppure potete creare un criterio di unione per una classe di schema XDM (Experience Data Model) specifica e contrassegnarlo come predefinito per la vostra organizzazione.
+
+Sebbene ogni organizzazione possa avere potenzialmente più criteri di unione per classe di schema, ciascuna classe può avere un solo criterio di unione predefinito. I criteri di unione impostati come predefiniti verranno utilizzati nei casi in cui viene fornito il nome della classe dello schema e viene richiesto un criterio di unione, ma non viene fornito.
+
+>[!NOTE]
+>
+>Quando si imposta come predefinito un nuovo criterio di unione, tutti i criteri di unione esistenti precedentemente impostati come predefiniti verranno automaticamente aggiornati in modo da non essere più utilizzati come predefiniti.
 
 ### Oggetto criteri di unione completo
 
@@ -41,7 +47,7 @@ L&#39;oggetto criteri di unione completo rappresenta un insieme di preferenze ch
         "name": "{NAME}",
         "imsOrgId": "{IMS_ORG}",
         "schema": {
-            "name": "{SCHEMA_NAME}"
+            "name": "{SCHEMA_CLASS_NAME}"
         },
         "version": 1,
         "identityGraph": {
@@ -62,7 +68,7 @@ L&#39;oggetto criteri di unione completo rappresenta un insieme di preferenze ch
 | `imsOrgId` | ID organizzazione a cui appartiene il criterio di unione |
 | `identityGraph` | [Oggetto grafico](#identity-graph) dell&#39;identità che indica il grafico dell&#39;identità da cui verranno ottenute le identità correlate. I frammenti di profilo trovati per tutte le identità correlate verranno uniti. |
 | `attributeMerge` | [Oggetto unione](#attribute-merge) attributi che indica il modo in cui il criterio di unione darà priorità agli attributi del profilo in caso di conflitti di dati. |
-| `schema` | L&#39;oggetto [schema](#schema) su cui è possibile utilizzare il criterio di unione. |
+| `schema.name` | Parte dell&#39; [`schema`](#schema) oggetto, il `name` campo contiene la classe dello schema XDM a cui si riferisce il criterio di unione. Per ulteriori informazioni sugli schemi e sulle classi, consulta la documentazione [](../../xdm/home.md)XDM. |
 | `default` | Valore booleano che indica se il criterio di unione è il valore predefinito per lo schema specificato. |
 | `version` | [!DNL Platform] versione aggiornata del criterio di unione. Questo valore di sola lettura viene incrementato ogni volta che viene aggiornato un criterio di unione. |
 | `updateEpoch` | Data dell&#39;ultimo aggiornamento del criterio di unione. |
@@ -132,7 +138,7 @@ Se `{ATTRIBUTE_MERGE_TYPE}` è uno dei seguenti casi:
 * **`dataSetPrecedence`** : Attribuire priorità ai frammenti di profilo in base al set di dati da cui provengono. Questo può essere utilizzato quando le informazioni presenti in un set di dati sono preferite o attendibili rispetto ai dati contenuti in un altro set di dati. Quando si utilizza questo tipo di unione, l&#39; `order` attributo è obbligatorio, in quanto elenca i set di dati in ordine di priorità.
    * **`order`**: Quando si utilizza &quot;dataSetPrecedence&quot;, è necessario fornire un `order` array con un elenco di set di dati. Eventuali set di dati non inclusi nell&#39;elenco non verranno uniti. In altre parole, i set di dati devono essere esplicitamente elencati per essere uniti in un profilo. L&#39; `order` array elenca gli ID dei set di dati in ordine di priorità.
 
-**Esempio di oggetto attributeMerge con `dataSetPrecedence` tipo**
+#### Esempio `attributeMerge` di oggetto con `dataSetPrecedence` tipo
 
 ```json
     "attributeMerge": {
@@ -146,7 +152,7 @@ Se `{ATTRIBUTE_MERGE_TYPE}` è uno dei seguenti casi:
     }
 ```
 
-**Esempio di oggetto attributeMerge con `timestampOrdered` tipo**
+#### Esempio `attributeMerge` di oggetto con `timestampOrdered` tipo
 
 ```json
     "attributeMerge": {
@@ -156,7 +162,7 @@ Se `{ATTRIBUTE_MERGE_TYPE}` è uno dei seguenti casi:
 
 ### Schema {#schema}
 
-L&#39;oggetto schema specifica lo schema Experience Data Model (XDM) per il quale viene creato il criterio di unione.
+L&#39;oggetto schema specifica la classe dello schema Experience Data Model (XDM) per il quale viene creato il criterio di unione.
 
 **`schema`object**
 
@@ -731,7 +737,7 @@ Una richiesta di eliminazione riuscita restituisce lo stato HTTP 200 (OK) e un c
 
 ## Passaggi successivi
 
-Ora che sai come creare e configurare criteri di unione per la tua organizzazione IMS, puoi utilizzarli per creare segmenti di pubblico dai tuoi [!DNL Real-time Customer Profile] dati. Per iniziare a definire e utilizzare i segmenti, consulta la documentazione [di](../../segmentation/home.md) Adobe Experience Platform Segmentation Service.
+Ora che sai come creare e configurare criteri di unione per la tua organizzazione, puoi utilizzarli per regolare la visualizzazione dei profili cliente all&#39;interno della piattaforma e per creare segmenti di pubblico dai tuoi [!DNL Real-time Customer Profile] dati. Per iniziare a definire e utilizzare i segmenti, consulta la documentazione [di](../../segmentation/home.md) Adobe Experience Platform Segmentation Service.
 
 ## Appendice
 
