@@ -5,9 +5,9 @@ user-guide-title: Guida ai connettori di sorgenti di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di sorgenti
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 translation-type: tm+mt
-source-git-commit: 9e005b0b225e8a643a080fb3d4b014d981748973
+source-git-commit: 89a807c0adbc3c9e4396adbb96764453034c8ea3
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '680'
 ht-degree: 3%
 
 ---
@@ -208,4 +208,5 @@ ht-degree: 3%
    - [Elimina account](tutorials/ui/delete-accounts.md)
    - [Eliminare i flussi di dati](tutorials/ui/delete.md)
 - [Notifiche di esecuzione del flusso](notifications.md)
+- [Indirizzo IP  elenco consentiti](ip-address-allow-list.md)
 - [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-en)
