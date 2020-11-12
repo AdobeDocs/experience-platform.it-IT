@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai;keyword extraction;Keyword extraction
 solution: Experience Platform
-title: Estrazione colore
+title: Estrazione di parole chiave
 topic: Developer guide
 description: Quando viene fornito un documento di testo, il servizio di estrazione delle parole chiave estrae automaticamente le parole chiave o le frasi chiave che meglio descrivono l’oggetto del documento. Per estrarre le parole chiave, viene utilizzata una combinazione di algoritmi di riconoscimento delle entità con nome (NER) e di estrazione delle parole chiave senza supervisione.
 translation-type: tm+mt
-source-git-commit: eb92a7d57b1ef0ca19bc2d175ad1b2014ac1a8b0
+source-git-commit: e397711baf31092402de83b826887ebef16321eb
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 3%
