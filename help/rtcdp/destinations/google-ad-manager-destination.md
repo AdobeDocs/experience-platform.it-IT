@@ -5,9 +5,9 @@ seo-title: Destinazione Google Ad Manager
 description: 'Google Ad Manager, precedentemente noto come DoubleClick for Publishers o DoubleClick AdX, è una piattaforma di annunci pubblicitari di Google che offre agli editori i mezzi per gestire la visualizzazione degli annunci sui loro siti Web, attraverso video e nelle app mobili. '
 seo-description: 'Google Ad Manager, precedentemente noto come DoubleClick for Publishers o DoubleClick AdX, è una piattaforma di annunci pubblicitari di Google che offre agli editori i mezzi per gestire la visualizzazione degli annunci sui loro siti Web, attraverso video e nelle app mobili. '
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 485c4b1c3c68755396da087d4b5864c8a36e64df
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
@@ -33,9 +33,9 @@ Tenete presenti i seguenti dettagli specifici per [!DNL Google Ad Manager] le de
 
 ### Tipo esportazione {#export-type}
 
-**Esportazione** segmento - vengono esportati tutti i membri di un segmento (pubblico) nella destinazione Google.
+**[!DNL Segment Export]** - state esportando tutti i membri di un segmento (pubblico) nella destinazione Google.
 
-## Prerequisiti
+## Prerequisiti  
 
 ### elenco consentiti 
 
