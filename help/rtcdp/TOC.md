@@ -5,9 +5,9 @@ audience: user
 user-guide-title: Guida alla piattaforma dati cliente in tempo reale
 user-guide-description: Riunisci dati noti e anonimi provenienti da più sorgenti aziendali per creare profili cliente, segmenti di pubblico da tali profili e attivare tali segmenti in destinazioni di terze parti.
 translation-type: tm+mt
-source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
+source-git-commit: 77b1ffdd20cbc4e1645688da83769277f6729091
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '510'
 ht-degree: 17%
 
 ---
@@ -56,6 +56,7 @@ ht-degree: 17%
          * [Estensione Google Gtag](/help/rtcdp/destinations/gtag-advertising-extension.md)
          * [Estensione del tag LinkedIn Insight](/help/rtcdp/destinations/linkedin-extension.md)
          * [Estensione Pinterest Conversion Tracking](destinations/pinterest-extension.md)
+         * [Il banco commerciale](/help/rtcdp/destinations/tradedesk-destination.md)
          * [Estensione dei tag Twitter Universal Website](destinations/twitter-uwt-extension.md)
       * Destinazioni di Analytics {#analytics-destinations}
          * [Panoramica delle destinazioni di Analytics](destinations/analytics-destinations.md)
