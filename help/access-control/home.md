@@ -5,9 +5,9 @@ topic: overview
 title: Panoramica sul controllo degli accessi
 description: Il controllo degli accessi per Adobe Experience Platform è fornito tramite Adobe Admin Console. Questa funzionalità sfrutta i profili di prodotto in  Admin Console, che collegano gli utenti con autorizzazioni e sandbox.
 translation-type: tm+mt
-source-git-commit: ccb7286e47aa4cf6356d22f84111b0c0fb30dfa8
+source-git-commit: 205bfb5f3b3fa083f64fc0160ea6bdf7bba74c9b
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1198'
 ht-degree: 2%
 
 ---
@@ -52,8 +52,8 @@ Nel pannello [!DNL Admin Console], le autorizzazioni vengono assegnate agli uten
 
 | Profilo di prodotto | Accesso sandbox | Autorizzazioni |
 | --- | --- | --- |
-| Produzione predefinita - Accesso completo | Produzione | Tutte le autorizzazioni applicabili a [!DNL Experience Platform], tranne quelle per l&#39;amministrazione sandbox. |
-| Amministrazione sandbox predefinita | N/D | Fornisce l&#39;accesso solo alle autorizzazioni Amministrazione sandbox. |
+| Accesso completo alla produzione predefinita | Produzione | Tutte le autorizzazioni applicabili a [!DNL Experience Platform], tranne quelle per l&#39;amministrazione sandbox. |
+| Amministratori sandbox | N/D | Fornisce l&#39;accesso solo alle autorizzazioni Amministrazione sandbox. |
 
 ## Sandbox e autorizzazioni
 
