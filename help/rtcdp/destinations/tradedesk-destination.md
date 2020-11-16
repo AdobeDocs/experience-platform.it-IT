@@ -5,9 +5,9 @@ seo-title: Destinazione scrivania
 description: 'Il Trade Desk è una piattaforma self-service per gli acquirenti di annunci che esegue retargeting e campagne digitali mirate per il pubblico attraverso fonti di visualizzazione, video e inventario mobile. '
 seo-description: Il Trade Desk è una piattaforma self-service per gli acquirenti di annunci che esegue retargeting e campagne digitali mirate per il pubblico attraverso fonti di visualizzazione, video e inventario mobile.
 translation-type: tm+mt
-source-git-commit: 43795e31f4e39dcabeaf6d69529e80cabe9c90c5
+source-git-commit: a64f9f1f078d8380cc25c9760eac1699512a5870
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -46,9 +46,9 @@ In qualità di esperto di marketing, voglio poter utilizzare i segmenti generati
    >[!NOTE]
    >
    >Se esiste già una connessione con questa destinazione, è possibile visualizzare un **[!UICONTROL Activate]** pulsante sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra **[!UICONTROL Activate]** e **[!UICONTROL Configure]**, consultate la sezione [Catalogo](../destinations/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
+   >
+   >![Attivare La Destinazione Del Scrivania](assets/tradedesk-destination-activate.png)
 
-       ![Attiva Destinazione Scrivania Commerciale](assets/tradedesk-destination-activate.png)
-   
 2. Nel [!UICONTROL Authentication] passaggio, è necessario inserire i dettagli di [!DNL The Trade Desk] connessione:
 
    * **[!UICONTROL Name]**: Un nome con cui riconoscerete questa destinazione in futuro.
