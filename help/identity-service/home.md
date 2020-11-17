@@ -5,15 +5,15 @@ title: Servizio Adobe Experience Platform Identity
 topic: overview
 description: Adobe Experience Platform Identity Service ti aiuta a ottenere una visione migliore del tuo cliente e del suo comportamento attraverso il collegamento di identità tra dispositivi e sistemi, per offrire esperienze digitali personali e di forte impatto in tempo reale.
 translation-type: tm+mt
-source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
+source-git-commit: af7eab0599b17be55d5a4c129f7ebaeba91333bc
 workflow-type: tm+mt
-source-wordcount: '1711'
+source-wordcount: '1719'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Identity Service] - Panoramica
+# [!DNL Identity Service]panoramica
 
 Fornire esperienze digitali rilevanti richiede una comprensione completa del cliente. Ciò è reso più difficile quando i dati del cliente sono frammentati in sistemi diversi, causando l&#39;apparenza di più &quot;identità&quot; per ogni singolo cliente. Adobe Experience Platform [!DNL Identity Service] consente di acquisire una visione migliore del cliente e del suo comportamento collegando le identità tra dispositivi e sistemi, per offrire esperienze digitali personali e di forte impatto in tempo reale.
 
@@ -87,6 +87,8 @@ Tutti i grafici dell&#39;identità del cliente sono gestiti collettivamente e ag
 
 Come esempio dei potenziali tipi di fattori da considerare quando si forniscono ed etichettano i dati di identità, l&#39;uso di numeri di telefono come &quot;telefono di lavoro&quot; potrebbe portare a più relazioni di quanto si intende nel grafico di identità. Molti dipendenti fanno riferimento allo stesso numero di posti di lavoro, e che &quot;casa&quot; e &quot;mobile&quot; servono meglio a mantenere le relazioni il più possibile precise.
 
+Per ulteriori informazioni, consultate l&#39;esercitazione sull&#39; [accesso al visualizzatore del grafico dell&#39;identità](./ui/identity-graph-viewer.md)
+
 ## Invio dei dati di identità a [!DNL Identity Service]
 
 In questa sezione viene illustrato come i dati forniti ad Adobe Experience Platform vengono elaborati prima di essere utilizzati per [!DNL Identity Service] creare un grafico dell&#39;identità per ciascun cliente.
@@ -146,4 +148,4 @@ Adobe Experience Platform è stata creata tenendo presente la privacy e include 
 
 ## Passaggi successivi
 
-Ora che hai compreso i concetti chiave di [!DNL Identity Service] e il suo ruolo all&#39;interno [!DNL Experience Platform], puoi iniziare a imparare a lavorare con il grafico di identità utilizzando l&#39;API [[!DNL Identity Service API]](./api/getting-started.md).
+Ora che hai compreso i concetti chiave di [!DNL Identity Service] e il suo ruolo all&#39;interno [!DNL Experience Platform], puoi iniziare a imparare come lavorare con il grafico di identità utilizzando il [[!DNL Identity Service API]](./api/getting-started.md).
