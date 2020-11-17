@@ -5,10 +5,10 @@ user-guide-title: Servizio Adobe Experience Platform Identity
 breadcrumb-title: Guida a Platform Identity Service
 user-guide-description: Collega le identità dei clienti su più dispositivi e sistemi per offrire esperienze digitali personalizzate.
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: 6cee9331acde303951718a5be6f5aeaa18a458f6
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 31%
+source-wordcount: '96'
+ht-degree: 29%
 
 ---
 
@@ -26,6 +26,8 @@ ht-degree: 31%
    - [Elenca spazi dei nomi disponibili](api/list-namespaces.md)
    - [Creare uno spazio dei nomi personalizzato](api/create-custom-namespace.md)
    - [Elenco dell&#39;ID nativo per un&#39;identità](api/list-native-id.md)
+- Interfaccia del servizio identità {#ui}
+   - [Visualizzatore grafico identità](ui/identity-graph-viewer.md)
 - [Panoramica ECID](ecid.md)
 - [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
 - [Riferimento API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)
