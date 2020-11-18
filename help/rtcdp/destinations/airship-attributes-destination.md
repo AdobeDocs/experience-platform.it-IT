@@ -1,19 +1,19 @@
 ---
 keywords: airship attributes;airship destination
-title: Destinazione attributi di volo
-seo-title: Destinazione attributi di volo
+title: Destinazione degli attributi di volo
+seo-title: Destinazione degli attributi di volo
 description: Trasmettete senza problemi  dati di pubblico Adobe a Airship come attributi di pubblico per il targeting all'interno di Airship.
 seo-description: Trasmettete senza problemi  dati di pubblico Adobe a Airship come attributi di pubblico per il targeting all'interno di Airship.
 translation-type: tm+mt
-source-git-commit: 0e065bbc0917d5009738b4cae890ffd13c0ab154
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
-source-wordcount: '1187'
+source-wordcount: '1186'
 ht-degree: 1%
 
 ---
 
 
-# (Beta) [!DNL Airship Attributes] Destinazione {#airship-attributes-destination}
+# (Beta) [!DNL Airship Attributes] destinazione {#airship-attributes-destination}
 
 >[!IMPORTANT]
 >
@@ -69,7 +69,7 @@ Utilizza i dati del profilo raccolti in Adobe Experience Platform per personaliz
 
 Utilizzate gli attributi di Adobe Experience Platform per arricchire ulteriormente [!DNL Airship] i profili e combinarli con dati SDK o [!DNL Airship] predittivi. Ad esempio, un rivenditore può creare un segmento con dati relativi allo stato di fedeltà e alla posizione (attributi della piattaforma) e [!DNL Airship] prevedere l&#39;invio di dati mirati agli utenti che vivono a Las Vegas, NV, con un&#39;elevata probabilità di esecuzione.
 
-## Connetti agli [!DNL Airship] attributi {#connect-airship-attributes}
+## Connetti a [!DNL Airship Attributes] {#connect-airship-attributes}
 
 1. In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scorrete fino alla **[!UICONTROL Mobile Engagement]** categoria. Selezionate **[!DNL Airship Attributes]**, quindi **[!UICONTROL Configure]**.
 
