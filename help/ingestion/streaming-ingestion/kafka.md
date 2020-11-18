@@ -5,9 +5,9 @@ title: Connettore Kafka
 topic: overview
 description: Il connettore del flusso per Adobe Experience Platform si basa su Apache Kafka Connect. Questa libreria può essere utilizzata per lo streaming di eventi JSON da argomenti Kafka nel tuo centro dati direttamente  Experience Platform in tempo reale.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 7fc7f0e525d994904dc71b1eb7136f11c05d5672
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '177'
 ht-degree: 0%
 
 ---
@@ -22,4 +22,4 @@ Il connettore di flusso è un connettore di tipo &quot;lavello&quot; (unidirezio
 - Raccolta di dati autenticata
 - Batch di messaggi per ridurre le chiamate di rete e aumentare il throughput
 
-Per ulteriori informazioni sul [!DNL Kafka] connettore, comprese le istruzioni su come impostare il connettore, consultare la guida [](https://github.com/adobe/experience-platform-streaming-connect)introduttiva. Per un flusso di lavoro più dettagliato, consultate la guida [](https://github.com/adobe/experience-platform-streaming-connect/blob/master/DEVELOPER_GUIDE.md)per gli sviluppatori.
+Per ulteriori informazioni sul [!DNL Kafka] connettore, comprese le istruzioni su come impostare il connettore, consultare la guida [](https://github.com/adobe/experience-platform-streaming-connect)introduttiva. Per un flusso di lavoro più dettagliato, consultate la guida [](https://www.adobe.com/go/kafka-connector-developer-guide)per gli sviluppatori.
