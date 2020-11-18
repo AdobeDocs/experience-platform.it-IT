@@ -5,9 +5,9 @@ audience: user
 user-guide-title: Guida alla piattaforma dati cliente in tempo reale
 user-guide-description: Riunisci dati noti e anonimi provenienti da più sorgenti aziendali per creare profili cliente, segmenti di pubblico da tali profili e attivare tali segmenti in destinazioni di terze parti.
 translation-type: tm+mt
-source-git-commit: 2a4d55b2d429fbeb1459a6bd095b0bc39d52917d
+source-git-commit: 8fa7642f90653ba11ad6ff90175a4bb705ae6d80
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '520'
 ht-degree: 16%
 
 ---
@@ -102,6 +102,9 @@ ht-degree: 16%
          * [Marketing Cloud Salesforce](destinations/salesforce-marketing-cloud-destination.md)
       * Experience Platform Launch extensions{#launch-extensions}
          * [Panoramica sulle estensioni di Experience Platform Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
+      * Destinazioni mobili {#mobile}
+         * [Panoramica delle destinazioni mobili](destinations/mobile-destinations.md)
+         * [Destinazione del freno](destinations/braze-destination.md)
       * Destinazioni di personalizzazione {#personalization-destinations}
          * [Panoramica sulle destinazioni di personalizzazione](/help/rtcdp/destinations/personalization-destinations.md)
          * [Estensione Adobe Target](/help/rtcdp/destinations/adobe-target-extension.md)
