@@ -5,9 +5,9 @@ audience: user
 user-guide-title: Guida alla piattaforma dati cliente in tempo reale
 user-guide-description: Riunisci dati noti e anonimi provenienti da più sorgenti aziendali per creare profili cliente, segmenti di pubblico da tali profili e attivare tali segmenti in destinazioni di terze parti.
 translation-type: tm+mt
-source-git-commit: 8fa7642f90653ba11ad6ff90175a4bb705ae6d80
+source-git-commit: 97a4e335314d23a436817d46f9d218a2532acfe5
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '525'
 ht-degree: 16%
 
 ---
@@ -102,9 +102,11 @@ ht-degree: 16%
          * [Marketing Cloud Salesforce](destinations/salesforce-marketing-cloud-destination.md)
       * Experience Platform Launch extensions{#launch-extensions}
          * [Panoramica sulle estensioni di Experience Platform Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
-      * Destinazioni mobili {#mobile}
-         * [Panoramica delle destinazioni mobili](destinations/mobile-destinations.md)
-         * [Destinazione del freno](destinations/braze-destination.md)
+      * Destinazioni di coinvolgimento mobili {#mobile}
+         * [Panoramica delle destinazioni di coinvolgimento mobile](destinations/mobile-destinations.md)
+         * [Attributi di volo](destinations/airship-attributes-destination.md)
+         * [Tag](destinations/airship-tags-destination.md)
+         * [Braccio](destinations/braze-destination.md)
       * Destinazioni di personalizzazione {#personalization-destinations}
          * [Panoramica sulle destinazioni di personalizzazione](/help/rtcdp/destinations/personalization-destinations.md)
          * [Estensione Adobe Target](/help/rtcdp/destinations/adobe-target-extension.md)
