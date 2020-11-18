@@ -1,11 +1,11 @@
 ---
 keywords: mobile; braze; messaging;
-title: Destinazione Del Braccio
-seo-title: Destinazione Del Braccio
+title: Destinazione del freno
+seo-title: Destinazione del freno
 description: Braze è una piattaforma completa di coinvolgimento dei clienti che offre esperienze rilevanti e memorabili tra i clienti e i marchi che amano.
 seo-description: Braze è una piattaforma completa di coinvolgimento dei clienti che offre esperienze rilevanti e memorabili tra i clienti e i marchi che amano.
 translation-type: tm+mt
-source-git-commit: 9126a9b3a27aa0a0ecefb5d490475423d7840791
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 1%
@@ -57,6 +57,7 @@ Come esperto di marketing, voglio indirizzare gli utenti verso una destinazione 
    >![Attiva destinazione di branding](assets/braze-destination-activate.png)
 
 1. Nel [!UICONTROL Account] passaggio, dovete fornire il token [!DNL Braze] dell&#39;account. Questa è la sua [!DNL Braze][!DNL API] chiave. Per istruzioni dettagliate su come ottenere la [!DNL API] chiave, consultate: [Panoramica](https://www.braze.com/docs/api/api_key/)della chiave API REST. Immettete il token e fate clic **[!UICONTROL Connect to destination]**.
+
    ![Passaggio dell&#39;account di destinazione del branding](assets/braze-destination-account.png)
 
 1. Fai clic su **[!UICONTROL Next]**.
