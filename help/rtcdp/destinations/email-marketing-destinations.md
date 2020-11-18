@@ -6,9 +6,9 @@ type: Tutorial
 description: I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio per l’invio di campagne e-mail promozionali.
 seo-description: I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio per l’invio di campagne e-mail promozionali.
 translation-type: tm+mt
-source-git-commit: 42b694c532f140b51913ba5ceb0aaeacc2263039
+source-git-commit: 425287d78deebf0113d6cf6350bcb516c99ee995
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '823'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ Nella **[!UICONTROL Select Segments]** pagina, seleziona i segmenti da inviare a
 
 ## Configurare i nomi dei file
 
-Per informazioni sulle opzioni di modifica del nome del file, fare riferimento al passaggio [Configura](/help/rtcdp/destinations/activate-destinations.md#configure) nell&#39;esercitazione sulle destinazioni di attivazione.
+Per informazioni sulla pianificazione del segmento e sulle opzioni di modifica del nome del file, fare riferimento al passaggio [Configura](/help/rtcdp/destinations/activate-destinations.md#configure) nell&#39;esercitazione sulle destinazioni di attivazione.
 
 ## Seleziona attributi - Seleziona i campi dello schema da usare come attributi di destinazione nei file esportati {#destination-attributes}
 
