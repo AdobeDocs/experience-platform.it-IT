@@ -6,9 +6,9 @@ seo-title: Attivare profili e segmenti su una destinazione
 description: Attiva i dati disponibili in Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 seo-description: Attiva i dati disponibili in Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 translation-type: tm+mt
-source-git-commit: 74f49db15028aa27fc7ee73a79ea236ee42f37e8
+source-git-commit: bb59d93e016d49a0ebba77af1f90563a8767f072
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1691'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,19 @@ Si applica a: Destinazioni di marketing e-mail e destinazioni di archiviazione c
 
 ![Configura passaggio](./assets/configure-icon.png)
 
-Nel **[!UICONTROL Configure]** passaggio, puoi configurare i nomi dei file per ogni segmento che stai esportando. La configurazione del nome del file è facoltativa.
+Nel **[!UICONTROL Configure]** passaggio, puoi configurare la pianificazione e i nomi dei file per ciascun segmento da esportare. La configurazione della pianificazione è obbligatoria, ma la configurazione del nome del file è facoltativa.
+
+Per aggiungere una pianificazione per il segmento, selezionare **[!UICONTROL Create schedule]**.
+
+![](./assets/activate-destinations/configure-destination-schedule.png)
+
+Viene visualizzato un profilo che mostra le opzioni per creare la pianificazione dei segmenti.
+
+- **Esportazione** file: Potete esportare file completi o incrementali. Quando si esporta un file completo, viene pubblicata un’istantanea completa di tutti i profili idonei per tale segmento. Quando si esporta un file incrementale, viene pubblicato il delta di profili idonei per tale segmento dall’ultima esportazione.
+- **Frequenza**: Se **[!UICONTROL Export full files]** è selezionata, è possibile esportare **[!UICONTROL Once]** o **[!UICONTROL Daily]**. Se **[!UICONTROL Export incremental files]** è selezionata, potete solo esportare **[!UICONTROL Daily]**. Quando si esporta un file **[!UICONTROL Once]** , il file viene esportato una volta. L’esportazione di un file **[!UICONTROL Daily]** esporta il file ogni giorno dalla data di inizio alla data di fine alle 12:00 UTC (7:00 PM EST) se sono selezionati file completi e alle 12:00 UTC (7:00 AM EST) se sono selezionati file incrementali.
+- **Data**: Se **[!UICONTROL Once]** è selezionata, potete selezionare la data per l&#39;esportazione una tantum. Se **[!UICONTROL Daily]** è selezionata, è possibile selezionare le date di inizio e fine per le esportazioni.
+
+![](./assets/activate-destinations/export-full-file.png)
 
 I nomi di file predefiniti sono costituiti dal nome di destinazione, dall’ID segmento e da un indicatore di data e ora. Ad esempio, è possibile modificare i nomi dei file esportati per distinguere tra campagne diverse o per fare in modo che il tempo di esportazione dei dati venga aggiunto ai file.
 
