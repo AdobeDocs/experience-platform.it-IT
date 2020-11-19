@@ -4,9 +4,9 @@ seo-title: Impostazione del consenso IAB TCF 2.0 con  Adobe Experience Platform 
 description: Scopri come impostare il consenso IAB TCF 2.0 con  Adobe Experience Platform Launch e Adobe Experience Platform Web SDK
 seo-description: Scopri come impostare il consenso IAB TCF 2.0 con  Adobe Experience Platform Launch e Adobe Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
+source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
 workflow-type: tm+mt
-source-wordcount: '892'
+source-wordcount: '852'
 ht-degree: 0%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 0%
 
 # Utilizzo di IAB TCF 2.0 con Experience Platform Launch e estensione AEP Web SDK
 
-Adobe Experience Platform Web Software Development Kit (Adobe Experience Platform Web SDK) supporta Interactive Advertising Bureau Transparency &amp; Consent Framework, versione 2.0 (IAB TCF 2.0). Questa guida mostra come impostare una proprietà Adobe Experience Platform Launch  per l&#39;invio di informazioni di consenso IAB TCF 2.0 a  Adobe tramite l&#39;estensione AEP Web SDK per Experience Platform Launch.
+Adobe Experience Platform Web SDK supporta Interactive Advertising Bureau Transparency &amp; Consent Framework, versione 2.0 (IAB TCF 2.0). Questa guida mostra come impostare una proprietà Adobe Experience Platform Launch  per l&#39;invio di informazioni di consenso IAB TCF 2.0 a  Adobe tramite l&#39;estensione AEP Web SDK per Experience Platform Launch.
 
 Se non si desidera utilizzare il Experience Platform Launch, fare riferimento alla guida sull&#39; [utilizzo di IAB TCF 2.0 senza Experience Platform Launch](./without-launch.md).
 
 ## Introduzione
 
-Per utilizzare IAB TCF 2.0 con Experience Platform Launch e estensione AEP Web SDK, è necessario disporre di uno schema XDM e di un set di dati. Se non avete impostato nessuno di questi, prima di continuare, visualizzate la guida di avvio rapido di Adobe Experience Platform Web SDK.
+Per utilizzare IAB TCF 2.0 con Experience Platform Launch e estensione AEP Web SDK, è necessario disporre di uno schema XDM e di un set di dati.
 
-Inoltre, questa guida richiede una buona conoscenza dell’SDK Web per Adobe Experience Platform. Per un aggiornamento rapido, consulta la panoramica [](../../home.md) Adobe Experience Platform Web SDK e la documentazione sulle domande [](../../web-sdk-faq.md) frequenti.
+Inoltre, questa guida richiede una buona conoscenza di Adobe Experience Platform Web SDK. Per un aggiornamento rapido, consulta la panoramica [](../../home.md) Adobe Experience Platform Web SDK e la documentazione sulle domande [](../../web-sdk-faq.md) frequenti.
 
 ## Impostazione del consenso predefinito
 
@@ -75,7 +75,7 @@ Questo codice personalizzato esegue due operazioni:
 
 >[!IMPORTANT]
 >
->Non è possibile scegliere questi elementi di dati utilizzando il selettore degli elementi di dati perché sono stati creati tramite codice personalizzato. È necessario digitare nel nome dell&#39;elemento dati i segni di percentuale. Questo codice aggiorna il profilo del cliente con le nuove preferenze di consenso ogni volta che viene modificato. Inoltre, il server restituisce un valore di cookie che potrebbe impedire all’SDK Web per Adobe Experience Platform di registrare eventi esperienza.
+>Non è possibile scegliere questi elementi di dati utilizzando il selettore degli elementi di dati perché sono stati creati tramite codice personalizzato. È necessario digitare nel nome dell&#39;elemento dati i segni di percentuale. Questo codice aggiorna il profilo del cliente con le nuove preferenze di consenso ogni volta che viene modificato. Inoltre, il server restituisce un valore di cookie che potrebbe impedire ad Adobe Experience Platform Web SDK di registrare eventi esperienza.
 
 ## Creazione di un elemento dati XDM per gli eventi di esperienza
 
@@ -122,12 +122,12 @@ addEventListener();
 
 Questo codice è identico al codice personalizzato precedente, con la differenza che vengono gestiti sia `useractioncomplete` gli `tcloaded` eventi che Il codice [personalizzato](#consent-code-1) precedente viene attivato solo quando il cliente sceglie per la prima volta le proprie preferenze. Questo codice viene attivato anche quando il cliente ha già scelto le proprie preferenze. Ad esempio, al secondo caricamento della pagina.
 
-Aggiungete un&#39;azione &quot;Invia evento&quot; dall&#39;estensione Adobe Experience Platform Web SDK. All&#39;interno del campo XDM, scegliete l&#39;elemento dati XDM creato nella sezione precedente.
+Aggiungete un&#39;azione &quot;Invia evento&quot; dall&#39;estensione AEP Web SDK. All&#39;interno del campo XDM, scegliete l&#39;elemento dati XDM creato nella sezione precedente.
 
 ## Invio di altri eventi con informazioni di consenso IAB TCF 2.0
 
-Quando gli eventi vengono attivati dopo l’evento esperienza iniziale, i due elementi di dati sono ancora definiti e possono essere utilizzati per inviare le informazioni di consenso IAB. Utilizzate lo stesso elemento dati XDM per inviare eventi futuri. Sono incluse le informazioni IAB TCF 2.0.
+Quando gli eventi vengono attivati dopo l’evento esperienza iniziale, i due elementi di dati sono ancora definiti e possono essere utilizzati per inviare le informazioni di consenso IAB. Utilizzate lo stesso elemento dati XDM per inviare eventi futuri. Sono incluse informazioni IAB TCF 2.0.
 
 ## Passaggi successivi
 
-Ora che hai imparato a utilizzare IAB TCF 2.0 con l&#39;estensione Adobe Experience Platform Web SDK, puoi anche scegliere di integrarsi con altre soluzioni  Adobe come  Adobe Analytics o la piattaforma dati cliente in tempo reale. Per ulteriori informazioni, consulta [la panoramica](./overview.md) IAB Transparency &amp; Consent Framework 2.0.
+Ora che hai imparato a utilizzare IAB TCF 2.0 con l&#39;estensione AEP Web SDK, puoi anche scegliere di integrarsi con altre soluzioni  Adobe come  Adobe Analytics o la piattaforma Real-time Customer Data. Per ulteriori informazioni, consulta [la panoramica](./overview.md) IAB Transparency &amp; Consent Framework 2.0.
