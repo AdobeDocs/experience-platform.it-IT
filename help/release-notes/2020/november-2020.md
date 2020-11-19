@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 5aa8dbcd85fa506f90515ce3e01d35993dd99c10
+source-git-commit: d6b603e2918b502635b11fb1aa693a4b4311c125
 workflow-type: tm+mt
-source-wordcount: '2054'
+source-wordcount: '2103'
 ht-degree: 3%
 
 ---
@@ -122,6 +122,7 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni 
 
 | Funzione | Descrizione |
 | ------- | ----------- |
+| Dettagli di destinazione Aggiornamenti UX | Il flusso di lavoro di destinazione del CDP in tempo reale ora include il monitoraggio in linea per vedere quali attivazioni batch hanno avuto successo. Questa funzione consente agli utenti di risolvere i problemi direttamente nel flusso di lavoro per le destinazioni batch tramite avvisi e una dashboard di monitoraggio per monitorare gli errori nella pipeline di elaborazione. |
 | Campi obbligatori | Gli utenti possono contrassegnare i campi come obbligatori, assicurando che vengano esportati solo i campi contenenti il campo obbligatorio. |
 
 <!-- | File scheduling | For both email based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
