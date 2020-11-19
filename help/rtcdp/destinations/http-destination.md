@@ -1,13 +1,13 @@
 ---
 keywords: streaming;
-title: La destinazione HTTP è una destinazione  Adobe Real-Time Customer Data Platform che consente di inviare dati di profilo a endpoint HTTP di terze parti.
-seo-title: La destinazione HTTP è una destinazione  Adobe Real-Time Customer Data Platform che consente di inviare dati di profilo a endpoint HTTP di terze parti.
-description: La destinazione HTTP è una destinazione  Adobe Real-Time Customer Data Platform che consente di inviare dati di profilo a endpoint HTTP di terze parti.
-seo-description: La destinazione HTTP è una destinazione  Adobe Real-Time Customer Data Platform che consente di inviare dati di profilo a endpoint HTTP di terze parti.
+title: La destinazione HTTP è una destinazione della piattaforma dati cliente in tempo reale che consente di inviare dati di profilo a endpoint HTTP di terze parti.
+seo-title: La destinazione HTTP è una destinazione della piattaforma dati cliente in tempo reale che consente di inviare dati di profilo a endpoint HTTP di terze parti.
+description: La destinazione HTTP è una destinazione della piattaforma dati cliente in tempo reale che consente di inviare dati di profilo a endpoint HTTP di terze parti.
+seo-description: La destinazione HTTP è una destinazione della piattaforma dati cliente in tempo reale che consente di inviare dati di profilo a endpoint HTTP di terze parti.
 translation-type: tm+mt
-source-git-commit: f4840f028bb855e79c0f2ae5c82bc38906a7aaec
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '536'
 ht-degree: 2%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->La [!DNL HTTP] destinazione in CDP in tempo reale  Adobe è attualmente in alfa. La documentazione e la funzionalità sono soggette a modifiche.
+>La [!DNL HTTP] destinazione in CDP in tempo reale  Adobe è attualmente in alfa. La documentazione e le funzionalità sono soggette a modifiche.
 
 ## Panoramica {#overview}
 
-La [!DNL HTTP] destinazione è una destinazione di [!DNL Adobe Real-Time Customer Data Platform] streaming che consente di inviare i dati del profilo agli [!DNL HTTP] endpoint di terze parti.
+La [!DNL HTTP] destinazione è una destinazione di [!DNL Real-time Customer Data Platform] streaming che consente di inviare i dati del profilo agli [!DNL HTTP] endpoint di terze parti.
 
-Per inviare i dati del profilo agli [!DNL HTTP] endpoint, è innanzitutto necessario connettersi alla destinazione nell&#39; [[!DNL Adobe Real-Time Customer Data Platform]](#connect-destination).
+Per inviare i dati del profilo agli [!DNL HTTP] endpoint, è innanzitutto necessario connettersi alla destinazione nell&#39; [[!DNL Real-time Customer Data Platform]](#connect-destination).
 
 ## Casi d’uso {#use-cases}
 
