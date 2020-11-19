@@ -5,9 +5,9 @@ description: Scopri come eseguire il rendering del contenuto personalizzato con 
 seo-description: Scopri come eseguire il rendering del contenuto personalizzato con  Experience Platform Web SDK
 keywords: personalization;renderDecisions;sendEvent;decisionScopes;result.decisions;
 translation-type: tm+mt
-source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Panoramica delle opzioni di personalizzazione
 
-Adobe Experience Platform [!DNL Web SDK] supporta la query sulle soluzioni di personalizzazione  Adobe, incluso  Adobe Target. Esistono due modalità di personalizzazione: recupero del contenuto che può essere rappresentato automaticamente e del contenuto di cui lo sviluppatore deve eseguire il rendering. L’SDK fornisce inoltre le strutture per [gestire lo sfarfallio](../personalization/manage-flicker.md).
+Adobe Experience Platform [!DNL Web SDK] supporta l&#39;esecuzione di query sulle soluzioni di personalizzazione  Adobe, incluso  Adobe Target. Esistono due modalità di personalizzazione: recupero del contenuto che può essere rappresentato automaticamente e del contenuto di cui lo sviluppatore deve eseguire il rendering. L’SDK fornisce inoltre le strutture per [gestire lo sfarfallio](../personalization/manage-flicker.md).
 
 ## Rendering automatico del contenuto
 
@@ -51,12 +51,12 @@ alloy("sendEvent",{
     if (result.decisions){
       // Do something with the decisions.
     }
-  })
+  });
 ```
 
 Questo restituirà un elenco di decisioni come oggetto JSON per ogni decisione.
 
-```javascript
+```json
 {
   "decisions": [
     {
