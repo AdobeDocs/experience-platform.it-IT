@@ -5,9 +5,9 @@ seo-title: Destinazione Facebook
 description: Attiva profili per le tue campagne Facebook per il targeting dell'audience, la personalizzazione e la soppressione basate su e-mail con hash.
 seo-description: Attiva profili per le tue campagne Facebook per il targeting dell'audience, la personalizzazione e la soppressione basate su e-mail con hash.
 translation-type: tm+mt
-source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '753'
 ht-degree: 4%
 
 ---
@@ -26,7 +26,7 @@ Puoi utilizzare questa destinazione per il targeting dell&#39;audience tra [!DNL
 
 ## Casi d’uso
 
-Per comprendere meglio come e quando utilizzare la [!DNL Facebook] destinazione, ecco due esempi di casi di utilizzo che  clienti della piattaforma dati cliente in tempo reale del Adobe possono risolvere utilizzando questa funzione.
+Per comprendere meglio come e quando utilizzare la [!DNL Facebook] destinazione, ecco due esempi di casi di utilizzo che i clienti della piattaforma dati cliente in tempo reale possono risolvere utilizzando questa funzione.
 
 
 ### Caso di utilizzo n. 1
@@ -101,8 +101,8 @@ Per istruzioni su come attivare i segmenti in [!DNL Facebook], consulta [Attivar
 
 ## Dati esportati {#exported-data}
 
-Ad [!DNL Facebook]esempio, un&#39;attivazione riuscita significa che un&#39;audience [!DNL Facebook] personalizzata verrà creata a livello di programmazione in [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). L&#39;appartenenza al segmento nel pubblico viene aggiunta e rimossa man mano che gli utenti sono qualificati o non qualificati per i segmenti attivati.
+Ad [!DNL Facebook]esempio, un&#39;attivazione riuscita implica la creazione di un&#39;audience personalizzata a livello di programmazione in [!DNL Facebook] [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). L&#39;appartenenza al segmento nel pubblico viene aggiunta e rimossa man mano che gli utenti sono qualificati o non qualificati per i segmenti attivati.
 
 >[!TIP]
 >
->L&#39;integrazione tra  CDP in tempo reale del Adobe e [!DNL Facebook] supporta le ricadute storiche del pubblico. Tutte le qualifiche del segmento storico vengono inviate a [!DNL Facebook] quando si attivano i segmenti alla destinazione.
+>L&#39;integrazione tra CDP in tempo reale  Adobe e [!DNL Facebook] supporta le ricadute storiche del pubblico. Tutte le qualifiche del segmento storico vengono inviate a [!DNL Facebook] quando si attivano i segmenti alla destinazione.
