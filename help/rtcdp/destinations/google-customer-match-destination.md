@@ -5,9 +5,9 @@ seo-title: Destinazione di corrispondenza cliente Google
 description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti nelle proprietà di Google possedute e gestite, come ad esempio Cerca, Shopping, Gmail e YouTube.
 seo-description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti nelle proprietà di Google possedute e gestite, come ad esempio Cerca, Shopping, Gmail e YouTube.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '1490'
+source-wordcount: '1489'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ## Casi d’uso
 
-Per comprendere meglio come e quando utilizzare la [!DNL Google Customer Match] destinazione, ecco alcuni esempi di casi di utilizzo che  clienti della piattaforma dati cliente in tempo reale del Adobe possono risolvere utilizzando questa funzione.
+Per comprendere meglio come e quando utilizzare la [!DNL Google Customer Match] destinazione, ecco alcuni esempi di casi di utilizzo che i clienti della piattaforma dati cliente in tempo reale possono risolvere utilizzando questa funzione.
 
 
 ### Caso di utilizzo n. 1
