@@ -2,12 +2,12 @@
 keywords: bing;bing ads event tracking;event tracking bing;UET;UET extension
 title: Estensione Bing Ads Universal Event Tracking (UET)
 seo-title: Estensione Bing Ads Universal Event Tracking (UET)
-description: L'estensione Bing Ads Universal Event Tracking (UET) è una destinazione pubblicitaria  piattaforma dati cliente in tempo reale del Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L'estensione Bing Ads Universal Event Tracking (UET) è una destinazione pubblicitaria  piattaforma dati cliente in tempo reale del Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+description: L'estensione Bing Ads Universal Event Tracking (UET) è una destinazione pubblicitaria nella Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+seo-description: L'estensione Bing Ads Universal Event Tracking (UET) è una destinazione pubblicitaria nella Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '565'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 [!DNL Bing Ads Universal Event Tracking] (UET) per [!DNL Experience Platform Launch] è un modo utile per monitorare cosa accade dopo che qualcuno ha fatto clic sul tuo annuncio di ricerca. Utilizzando un singolo tag UET per registrare le attività dei clienti sul sito Web, potete sfruttare tali dati, per monitorare le conversioni o indirizzare i tipi di pubblico utilizzando elenchi di remarketing.
 
-[!DNL Bing Ads Universal Event Tracking] (UET) è un&#39;estensione pubblicitaria nel  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100154.html).
+[!DNL Bing Ads Universal Event Tracking] (UET) è un&#39;estensione pubblicitaria nella piattaforma dati cliente in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100154.html).
 
 Questa destinazione è un&#39; [!DNL Adobe Experience Platform Launch] estensione. Per ulteriori informazioni sul funzionamento [!DNL Platform Launch] delle estensioni  Adobe CDP in tempo reale, consultate Panoramica sulle estensioni [di Experience Platform Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
