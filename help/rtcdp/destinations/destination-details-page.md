@@ -5,62 +5,86 @@ seo-title: Pagina Dettagli destinazioni
 description: 'La pagina dei dettagli per una singola destinazione fornisce una panoramica dei dettagli di destinazione, come il nome di destinazione, l''ID, i segmenti mappati alla destinazione, e i controlli per modificare l''attivazione e per abilitare e disabilitare il flusso di dati. '
 seo-description: 'La pagina dei dettagli per una singola destinazione fornisce una panoramica dei dettagli di destinazione, come il nome di destinazione, l''ID, i segmenti mappati alla destinazione, e i controlli per modificare l''attivazione e per abilitare e disabilitare il flusso di dati. '
 translation-type: tm+mt
-source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
+source-git-commit: 0c2acd79492c474ba664ce32d1592969da71f385
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 2%
+source-wordcount: '640'
+ht-degree: 0%
 
 ---
 
 
-# Pagina dei dettagli sulla destinazione {#destinations-details-page}
+# Pagina dei dettagli sulla destinazione
 
-La pagina dei dettagli per una singola destinazione fornisce una panoramica dei dettagli di destinazione, come il nome di destinazione, l&#39;ID, i segmenti mappati alla destinazione, e i controlli per modificare l&#39;attivazione e per abilitare e disabilitare il flusso di dati. Per visualizzare questi dettagli, andate a **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** e fate clic sul nome della destinazione con cui desiderate lavorare.
+Nell’interfaccia utente di Adobe Experience Platform, puoi visualizzare e monitorare gli attributi e le attività delle tue destinazioni. Tali dettagli includono il nome e l&#39;ID della destinazione, i controlli per attivare o disattivare le destinazioni e altro ancora. I dettagli per le destinazioni batch includono anche metriche per i record di profilo attivati e una cronologia delle esecuzioni dei flussi di dati.
 
-I componenti core di una singola destinazione sono:
+>[!NOTE]
+>
+>La pagina dei dettagli delle destinazioni fa parte dell&#39; [!UICONTROL Destinations] area di lavoro nell&#39;interfaccia utente della piattaforma. Per ulteriori informazioni, consultate la panoramica [[!UICONTROL Destinations]](./destinations-workspace.md) dell’area di lavoro.
 
-* 1 - Nome e ID della destinazione
-* 2 - Segmenti attivati per la destinazione
-* 3 - Informazioni sulla barra a destra
-* 4 - Controlli per modificare l&#39;attivazione e attivare/disattivare il flusso di dati
+Nell&#39; **[!UICONTROL Destinations]** area di lavoro all&#39;interno dell&#39;interfaccia utente della piattaforma, andate alla **[!UICONTROL Browse]** scheda e selezionate il nome di una destinazione batch da visualizzare.
 
-![Pagina Destinazioni numerata](/help/rtcdp/destinations/assets/destination-page-numbered.png)
+![](./assets/details-page/select-destination.png)
 
-Passate a una singola pagina di destinazione per ottenere una panoramica dei dettagli di destinazione, ad esempio:
+Viene visualizzata la pagina dei dettagli della destinazione, con i relativi controlli disponibili. Se state visualizzando i dettagli di una destinazione batch, viene visualizzata anche una dashboard di monitoraggio.
 
-## 1. Nome e ID della destinazione
+![](./assets/details-page/details.png)
 
-Nell’URL della pagina potete visualizzare il nome della destinazione nell’intestazione della pagina e l’ID di destinazione.
+## Barra destra
 
-## 2. Segmenti attivati per la destinazione
+Nella barra a destra sono visualizzate le informazioni di base sulla destinazione.
 
-In questa sezione vengono visualizzati i segmenti attualmente mappati sulla destinazione e ulteriori informazioni su di essi. Per ulteriori informazioni, consulta la tabella seguente:
+![](./assets/details-page/right-rail.png)
 
-| Elemento | Descrizione |
----------|----------|
-| Nome segmento | Nome del segmento. |
-| Descrizione segmento | Descrizione del segmento. |
-| Data inizio | Data in cui questi segmenti vengono attivati nella destinazione. |
-| Data fine | Data in cui questi segmenti cesseranno di essere attivati sulla destinazione. |
-| ID mappatura | *Non disponibile per le destinazioni* di e-mail marketing. Indica l&#39;ID tramite il quale il segmento è noto nella piattaforma di destinazione. |
+La tabella seguente illustra i controlli e i dettagli forniti dalla barra a destra:
 
-## 3. Informazioni sulla barra a destra
+| Elemento a destra | Descrizione |
+| --- | --- |
+| [!UICONTROL Activate] | Selezionare questo controllo per modificare i segmenti mappati alla destinazione. Per ulteriori informazioni, consulta la guida sull’ [attivazione dei segmenti su una destinazione](/help/rtcdp/destinations/activate-destinations.md) . |
+| [!UICONTROL Destination name] | Questo campo può essere modificato per aggiornare il nome della destinazione. |
+| [!UICONTROL Description] | Questo campo può essere modificato per aggiornare o aggiungere una descrizione facoltativa alla destinazione. |
+| [!UICONTROL Destination] | Rappresenta la piattaforma di destinazione a cui vengono inviati i tipi di pubblico. Per ulteriori informazioni, vedi il catalogo [delle](./destinations-catalog.md) destinazioni. |
+| [!UICONTROL Status] | Indica se la destinazione è abilitata o disabilitata. |
+| [!UICONTROL Marketing actions] | Indica le azioni di marketing (esempi di utilizzo) che si applicano a questa destinazione a fini di governance dei dati. |
+| [!UICONTROL Category] | Indica il tipo di destinazione. Per ulteriori informazioni, vedi il catalogo [delle](./destinations-catalog.md) destinazioni. |
+| [!UICONTROL Connection type] | Indica il modulo tramite il quale le audience vengono inviate alla destinazione. I valori possibili includono &quot;[!UICONTROL Cookie]&quot; e &quot;[!UICONTROL Profile-based]&quot;. |
+| [!UICONTROL Frequency] | Indica la frequenza con cui le audience vengono inviate alla destinazione. I valori possibili includono &quot;[!UICONTROL Streaming]&quot; e &quot;[!UICONTROL Batch]&quot;. |
+| [!UICONTROL Identity] | Rappresenta lo spazio nomi identità accettato dalla destinazione, ad esempio `GAID`, `IDFA`o `email`. Per ulteriori informazioni sugli spazi dei nomi di identità accettati, consultate la panoramica [dello spazio dei nomi di](../../identity-service/namespaces.md)identità. |
+| [!UICONTROL Created by] | Indica l&#39;utente che ha creato la destinazione. |
+| [!UICONTROL Created] | Indica il datetime UTC al momento della creazione della destinazione. |
 
-La barra laterale destra include informazioni sulla destinazione. Per ulteriori informazioni, consulta la tabella seguente:
+## [!UICONTROL Enabled]/[!UICONTROL Disabled] toggle
 
-| Elemento | Descrizione |
----------|----------|
-| Piattaforma | Rappresenta la piattaforma di destinazione a cui vengono inviati i tipi di pubblico. Per ulteriori informazioni, consulta Catalogo [delle](/help/rtcdp/destinations/destinations-catalog.md) destinazioni. |
-| Descrizione | Puoi modificare la descrizione del flusso di destinazione. |
-| Categoria | Indica il tipo di destinazione. Per ulteriori informazioni, consulta Catalogo [delle](/help/rtcdp/destinations/destinations-catalog.md) destinazioni. |
-| Tipo connessione | Indica in quale modulo le audience vengono inviate alla destinazione. Può essere [!UICONTROL Cookie] o [!UICONTROL Profile-based]. |
-| Frequenza | Indica la frequenza con cui le audience vengono inviate alla destinazione. Può essere [!UICONTROL Streaming] o [!UICONTROL Batch]. |
-| Identità | Rappresenta lo spazio nomi identità accettato dalla destinazione. Ad esempio, il campo Identità può essere GAID, IDFA, email. Per tutti gli spazi dei nomi di identità accettati, vedere Spazi dei nomi standard nella panoramica [dello spazio dei nomi dell&#39;](../../identity-service/namespaces.md)identità. |
-| Creato da | Indica l&#39;utente che ha creato il flusso di destinazione. |
-| Creato | Indica la data e l&#39;ora UTC in cui è stato creato il flusso di destinazione. |
+Potete utilizzare l&#39; **[!UICONTROL Enabled]interruttore/[!UICONTROL Disabled]** per avviare e mettere in pausa tutte le esportazioni di dati verso la destinazione.
 
-## 4. Controlli per modificare l&#39;attivazione e attivare/disattivare il flusso di dati
+![](./assets/details-page/enable-disable.png)
 
-Il controllo di attivazione Modifica consente di modificare i segmenti mappati alla destinazione. Premere Modifica attivazione per aprire il flusso di lavoro [di attivazione del](/help/rtcdp/destinations/activate-destinations.md)segmento.
+## [!UICONTROL Dataflow runs]
 
-Utilizzate l&#39; **opzione Attiva/Disattiva** per avviare e mettere in pausa l&#39;esportazione dei dati verso una destinazione.
+La [!UICONTROL Dataflow runs] scheda fornisce i dati delle metriche nel flusso di dati, che vengono eseguiti sulle destinazioni batch. Viene visualizzato un elenco di singole esecuzioni e delle relative metriche specifiche, insieme ai seguenti totali per i record di profilo:
+
+* **[!UICONTROL Profile records activated]**: Totale dei record di profilo creati o aggiornati per l&#39;attivazione.
+* **[!UICONTROL Profile records skipped]**:  Totale dei record di profilo saltati per l&#39;attivazione in base alle uscite di profilo o agli attributi mancanti.
+
+![](./assets/details-page/dataflow-runs.png)
+
+>[!NOTE]
+>
+>Le esecuzioni dei flussi di dati vengono generate in base alla frequenza di programmazione del flusso di dati di destinazione. Per ogni criterio di unione applicato a un segmento viene eseguita un&#39;esecuzione distinta per il flusso di dati.
+
+Per visualizzare i dettagli di una particolare esecuzione di un flusso di dati, selezionare l&#39;ora di inizio dell&#39;esecuzione dall&#39;elenco. La pagina dei dettagli per un&#39;esecuzione di un flusso di dati contiene informazioni aggiuntive, come la dimensione dei dati elaborati e un elenco degli eventuali errori che si sono verificati con i dettagli per la diagnostica degli errori.
+
+![](./assets/details-page/dataflow.png)
+
+## [!UICONTROL Segments]
+
+Nella [!UICONTROL Segments] scheda viene visualizzato un elenco di segmenti che sono stati mappati sulla destinazione, inclusa la data di inizio e la data di fine (se applicabile). Per visualizzare i dettagli di un particolare segmento, selezionatene il nome dall’elenco.
+
+![](./assets/details-page/segments.png)
+
+>[!NOTE]
+>
+>Per informazioni dettagliate su come esplorare la pagina dei dettagli di un segmento, consulta la panoramica [dell’interfaccia utente di](../../segmentation/ui/overview.md#segment-details)segmentazione.
+
+## Passaggi successivi
+
+Questo documento descrive le capacità della pagina dei dettagli di destinazione. Per ulteriori informazioni sulla gestione delle destinazioni nell’interfaccia utente, consultate la panoramica nell’ [[!UICONTROL Destinations] area di lavoro](./destinations-workspace.md).
