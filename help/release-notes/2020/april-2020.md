@@ -6,10 +6,10 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '991'
-ht-degree: 5%
+source-wordcount: '972'
+ht-degree: 8%
 
 ---
 
@@ -24,7 +24,7 @@ Nuove funzioni in Adobe Experience Platform:
 Aggiornamenti alle funzioni esistenti:
 * [[!DNL Experience Data Model (XDM)]](#xdm)
 * [[!DNL Data Governance]](#governance)
-* [[!DNL Destinazioni]](#destinations)
+* [[!DNL Destinations]](#destinations)
 * [[!DNL Privacy Service]](#privacy)
 * [[!DNL Sources]](#sources)
 
@@ -37,7 +37,7 @@ Aggiornamenti alle funzioni esistenti:
 | Funzione | Descrizione |
 |---|---|
 | [!DNL Customer AI] | [!DNL Customer AI] fornisce agli esperti di marketing il potere di generare previsioni dei clienti a livello individuale con spiegazioni. Con l&#39;aiuto di fattori influenti, [!DNL Customer AI] puoi sapere cosa è probabile che faccia un cliente e perché. Inoltre, gli esperti di marketing possono trarre vantaggio da [!DNL Customer AI] previsioni e informazioni per personalizzare l&#39;esperienza dei clienti servendo le offerte e i messaggi più appropriati. |
-| [!DNL Attribution AI] | [!DNL Attribution AI] è un servizio di attribuzione algoritmica multicanale che calcola l&#39;influenza e l&#39;impatto incrementale delle interazioni dei clienti rispetto a risultati specifici. Grazie a [!DNL Attribution AI]questa soluzione, gli esperti di marketing possono misurare e ottimizzare le spese di marketing e pubblicitarie comprendendo l&#39;impatto di ogni singola interazione con i clienti in ogni fase dei viaggi dei clienti. |
+| [!DNL Attribution AI] | [!DNL Attribution AI] è un servizio di attribuzione algoritmica multicanale che calcola l&#39;influenza e l&#39;impatto incrementale delle interazioni dei clienti rispetto a risultati specifici. Con [!DNL Attribution AI], gli esperti di marketing possono misurare e ottimizzare le spese di marketing e pubblicitarie comprendendo l’impatto di ogni singola interazione con i clienti in ogni fase del percorso del cliente. |
 
 **Problemi noti**
 
@@ -90,7 +90,7 @@ Per ulteriori informazioni, consulta la panoramica sulla governance dei [dati](.
 
 ## Destinazioni {#destinations}
 
-In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni sono integrazioni precostruite con piattaforme di destinazione che attivano i dati a tali partner in modo semplice.
+In [Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni sono integrazioni pre-costruite con piattaforme di destinazione che attivano i dati a tali partner in modo semplice.
 
 **Nuove destinazioni**
 
