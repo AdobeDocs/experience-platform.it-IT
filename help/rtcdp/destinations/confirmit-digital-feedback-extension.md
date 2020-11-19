@@ -2,12 +2,12 @@
 keywords: Confirmit Digital Feedback;confirmit extension;confirmit
 title: Conferma estensione Digital Feedback
 seo-title: Conferma estensione Digital Feedback
-description: L'estensione Confirmit Digital Feedback è una voce della destinazione del cliente nella  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L'estensione Confirmit Digital Feedback è una voce della destinazione del cliente nella  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+description: L'estensione Confirmit Digital Feedback è una voce della destinazione del cliente nella piattaforma dati del cliente in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+seo-description: L'estensione Confirmit Digital Feedback è una voce della destinazione del cliente nella piattaforma dati del cliente in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '593'
 ht-degree: 4%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 4%
 * Soddisfazione generale dei clienti
 * E molto altro
 
-[!DNL Confirmit] Digital Feedback è una voce dell&#39;estensione del cliente in  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html).
+[!DNL Confirmit] Digital Feedback è una voce dell&#39;estensione del cliente in tempo reale Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html).
 
 Questa destinazione è un&#39;estensione Adobe Experience Platform Launch . Per ulteriori informazioni sul funzionamento delle estensioni Platform Launch  Adobe CDP in tempo reale, consultate [panoramica](/help/rtcdp/destinations/experience-platform-launch-extensions.md)delle estensioni Adobe Experience Platform Launch.
 
