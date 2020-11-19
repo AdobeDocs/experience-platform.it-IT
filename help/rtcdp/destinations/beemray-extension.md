@@ -2,12 +2,12 @@
 keywords: beemray,beemray extension
 title: Estensione Beemray
 seo-title: Estensione Beemray
-description: L'estensione Beemray è una destinazione di personalizzazione  piattaforma dati cliente in tempo reale del Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L'estensione Beemray è una destinazione di personalizzazione  piattaforma dati cliente in tempo reale del Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+description: L’estensione Beemray è una destinazione di personalizzazione nella piattaforma dati cliente in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+seo-description: L’estensione Beemray è una destinazione di personalizzazione nella piattaforma dati cliente in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '547'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 [!DNL Beemray] consente di accelerare il prodotto con il contesto situazionale. Consentendoti di acquisire informazioni, creare nuove esperienze, stimolare le interazioni e interagire con momenti davvero importanti. Beemray automatizza l&#39;intelligenza contestuale utilizzando l&#39;apprendimento automatico. Beemray si collega all&#39;Adobe Experience Cloud e agli altri partner tecnologici. Tutto ha luogo in tempo reale. Questa estensione installa [!DNL Beemray] l’SDK sul sito.
 
-Beemray è un&#39;estensione di personalizzazione  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
+Beemray è un&#39;estensione di personalizzazione in Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
 
 Questa destinazione è un&#39; [!DNL Adobe Experience Platform Launch] estensione. Per ulteriori informazioni sul funzionamento [!DNL Platform Launch] delle estensioni  Adobe CDP in tempo reale, consultate Panoramica sulle estensioni [di Experience Platform Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
