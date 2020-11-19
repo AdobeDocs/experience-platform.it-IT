@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 5aa8dbcd85fa506f90515ce3e01d35993dd99c10
+source-git-commit: b5fa40deb480f264b02a8be56aff2c50e4149cb2
 workflow-type: tm+mt
-source-wordcount: '2054'
+source-wordcount: '2103'
 ht-degree: 3%
 
 ---
@@ -122,6 +122,7 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni 
 
 | Funzione | Descrizione |
 | ------- | ----------- |
+| Dettagli di destinazione Aggiornamenti UX | Il flusso di lavoro di destinazione del CDP in tempo reale ora include il monitoraggio in linea per vedere quali attivazioni batch hanno avuto successo. Questa funzione consente agli utenti di risolvere i problemi direttamente nel flusso di lavoro per le destinazioni batch tramite avvisi e una dashboard di monitoraggio per monitorare gli errori nella pipeline di elaborazione. |
 | Campi obbligatori | Gli utenti possono contrassegnare i campi come obbligatori, assicurando che vengano esportati solo i campi contenenti il campo obbligatorio. |
 
 <!-- | File scheduling | For both email based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
@@ -159,7 +160,7 @@ Per ulteriori informazioni, consulta la sezione sull’ [aggiunta di campi di id
 | Tracciamento adesione | Puoi trovare la quantità totale di approfondimenti di attribuzione utilizzati dal tuo account nel contenitore delle istanze di creazione. |
 | Suddivisione punti di contatto per posizione | Un nuovo grafico di approfondimenti che fornisce un&#39;analisi dei punti di contatto per le posizioni dei percorsi di conversione. |
 | Percorsi di conversione principali | Un nuovo grafico delle informazioni nella scheda Analisi percorso. Il grafico contiene un elenco dei primi cinque percorsi di conversione con la sequenza di punti di contatto dei canali di marketing che hanno portato al maggior numero di conversioni. |
-| Efficienza punto di contatto | Fornisce informazioni approfondite sulle tre variabili più importanti per cui il modello misura l’efficacia dei punti di contatto. Le variabili sono rapporto tra percorsi positivi e negativi, efficienza dei punti di contatto e volume dei punti di contatto. |
+| Efficienza punto di contatto | Fornisce informazioni approfondite sulle tre variabili più importanti per le quali il modello misura l’efficacia dei punti di contatto. Le variabili sono rapporto tra percorsi positivi e negativi, efficienza dei punti di contatto e volume dei punti di contatto. |
 
 Per ulteriori informazioni, leggere la [panoramica](../../intelligent-services/attribution-ai/overview.md)delle Attribution AI.
 
