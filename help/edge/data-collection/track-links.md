@@ -5,9 +5,9 @@ description: Scopri come inviare dati collegamento a  Adobe Analytics con  Exper
 seo-description: Scopri come inviare dati collegamento a  Adobe Analytics con  Experience Platform Web SDK
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
@@ -46,9 +46,9 @@ Il tipo di collegamento può essere uno dei tre valori seguenti:
 
 ## Tracciamento automatico dei collegamenti {#automaticLinkTracking}
 
-Per impostazione predefinita, l&#39;SDK Web acquisisce, [etichette](#labelingLinks)e [record](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/webinteraction.schema.md) fa clic su tag di collegamento [idonei](#qualifyingLinks) . I clic vengono acquisiti con un listener di eventi [Capture](https://www.w3.org/TR/uievents/#capture-phase) click associato al documento.
+Per impostazione predefinita, l’SDK Web acquisisce, etichette e registra i clic su tag di collegamento idonei. I clic vengono acquisiti con un listener di eventi [Capture](https://www.w3.org/TR/uievents/#capture-phase) click associato al documento.
 
-La disattivazione del tracciamento automatico dei collegamenti può essere effettuata [configurando](../fundamentals/configuring-the-sdk.md#clickCollectionEnabled) l’SDK per il Web.
+Il tracciamento automatico dei collegamenti può essere disabilitato [configurando](../fundamentals/configuring-the-sdk.md#clickCollectionEnabled) l&#39;SDK Web.
 
 ```javascript
 clickCollectionEnabled: false
