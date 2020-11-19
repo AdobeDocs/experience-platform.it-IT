@@ -4,9 +4,9 @@ seo-title: Domande frequenti su Adobe Experience Platform Web SDK
 description: Domande frequenti sull’SDK Adobe Experience Platform Web
 seo-description: Domande frequenti sull’SDK Adobe Experience Platform Web
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1629'
 ht-degree: 2%
 
 ---
@@ -48,7 +48,7 @@ Inoltre, al momento non esiste alcuna libreria JavaScript che invia dati diretta
 
 ### Con Adobe Experience Platform Web SDK
 
-Il nuovo SDK Web invia i dati per le seguenti soluzioni a un&#39;unica destinazione (AEP Edge Network) e risolve i casi di utilizzo della soluzione più comuni indicati sopra.
+Il nuovo SDK Web invia i dati per le seguenti soluzioni a un&#39;unica destinazione (Adobe Experience Platform Edge Network) e risolve i casi di utilizzo più comuni delle soluzioni indicate sopra.
 
 * Adobe Analytics
 * Adobe Audience Manager
@@ -67,7 +67,7 @@ Adobe Experience Platform Web SDK può anche inviare dati direttamente ad Adobe 
 **Semplicità:** La combinazione di XDM, Web SDK, Experience Platform Launch, Experience Edge, soluzioni Adobe Experience Cloud e Adobe Experience Platform crea un racconto di raccolta dati semplice e intuitivo.
 
 * **XDM:** Lo schema agnostico della soluzione utilizzato per inviare dati al Adobe . Non è più necessario aggiungere tag per le variabili evar o mbox.
-* **SDK Web:** Semplifica l&#39;invio e la ricezione di dati ad Adobe Experience Platform Edge Network.
+* **Adobe Experience Platform Web SDK:** Semplifica l&#39;invio e la ricezione di dati ad Adobe Experience Platform Edge Network.
 * **Experience Platform Launch:** Semplifica la distribuzione e la configurazione dell’SDK Web (e di eventuali altri tag JavaScript) in un sito.
 * **Experience Edge:** Distribuisci facilmente i dati ad Adobe Experience Platform e alle soluzioni nel formato richiesto.
 * **Soluzioni Adobe Experience Platform e  Adobe:** Abilitare la relativa proposta di valore.
@@ -78,9 +78,9 @@ Adobe Experience Platform Web SDK può anche inviare dati direttamente ad Adobe 
 
 **Time-to-value:**  Adobe ha lavorato duramente (e continuerà) per semplificare il più possibile la distribuzione dell’SDK Web tramite Experience Platform Launch e la mappatura dei dati lato client su XDM.  Al termine del lavoro, tutte le altre soluzioni  Adobe e i servizi Adobe Experience Platform possono essere attivati o disattivati sul lato server. Ad esempio, se utilizzate questo per  Adobe Analytics e desiderate attivare Target o  Experience Platform, potete semplicemente attivare la configurazione Experience Edge e illuminare i casi di utilizzo.
 
-## Che cosa è `alloy.js`?
+## Cos&#39;è Alloy?
 
-`Alloy.js` è il nome del file per l’SDK Web di Adobe Experience Platform. Adobe Experience Platform Web SDK è il nome ufficiale, ma molti sviluppatori lo chiamano &quot;lega&quot;.
+Il nome del codice è già il nome dell’SDK Web per Adobe Experience Platform. Viene utilizzato nel codice sorgente e nel nome del file dell&#39;SDK, anche se Adobe Experience Platform Web SDK è il nome ufficiale.
 
 ## I clienti devono acquistare Adobe Experience Platform per utilizzare l&#39;SDK Web?
 
@@ -119,7 +119,7 @@ Dipende. Adobe Experience Platform Web SDK può essere distribuito in due stili 
 
 * **Il tag uno e solo:** Se desiderate utilizzare l&#39;SDK Web per una soluzione di Experience Cloud , dovete utilizzarlo per _tutte_ le soluzioni presenti nella pagina. Ad esempio, se al sito è già assegnato un tag per  Adobe Analytics e desiderate usarlo per Target, è necessario utilizzarlo sia per entrambi, sia per tutti gli altri siti in futuro.
 
-In altre parole, se decidi di utilizzare l’SDK Web per Adobe Experience Platform per i casi di utilizzo non-soluzione, puoi assegnare un tag al sito `alloy.js` e continuare come se si trattasse di una nuova soluzione. Se desiderate utilizzarlo per  Adobe Analytics, Target o  Audience Manager, o per i casi di utilizzo di applicazioni, potrebbe essere necessario rimuovere uno qualsiasi dei codici legacy nella pagina.
+In altre parole, se decidi di utilizzare Adobe Experience Platform Web SDK per casi di utilizzo non-soluzione, puoi assegnare un tag al sito `alloy.js` e continuare come se si trattasse di una nuova soluzione. Se desiderate utilizzarlo per  Adobe Analytics, Target o  Audience Manager, o per i casi di utilizzo di applicazioni, potrebbe essere necessario rimuovere uno qualsiasi dei codici legacy nella pagina.
 
 ## È possibile migrare gli ECID quando si inizia a utilizzare Alloy in modo che i visitatori del sito Web non inizino a presentarsi come nuovi visitatori?
 
@@ -139,7 +139,7 @@ No. Potete scaricare il `alloy.js` file manualmente.
 
 Tuttavia:
 
-* Adobe Experience Platform Web SDK richiede un ID di configurazione Experience Edge che consente alla rete periferica di identificare il flusso e determinare le operazioni da eseguire con i dati. Questo ID viene creato all&#39;interno del Experience Platform Launch. Ciò non significa che per creare le proprietà o distribuire il codice JavaScript è necessario utilizzare l&#39;Experience Platform Launch, ma è necessario utilizzare l&#39;Experience Platform Launch per creare un ID di configurazione.
+* Adobe Experience Platform Web SDK richiede un ID di configurazione Experience Edge in modo che la rete periferica possa identificare il flusso e determinare cosa fare con i dati. Questo ID viene creato all&#39;interno del Experience Platform Launch. Ciò non significa che per creare le proprietà o distribuire il codice JavaScript è necessario utilizzare l&#39;Experience Platform Launch, ma è necessario utilizzare l&#39;Experience Platform Launch per creare un ID di configurazione.
 
 *  Adobe Experience Platform Launch non è solo il migliore gestore di tag e SDK disponibile, ma semplifica notevolmente la distribuzione `alloy.js` e la mappatura dei dati agli schemi XDM. Se decidi di non utilizzare l&#39;Experience Platform Launch, dovrai gestire la distribuzione `alloy.js`e gli eventi e mappare i dati in XDM prima di inviarli. Si tratta di un processo _molto_ più difficile che utilizzare il Experience Platform Launch.
 
@@ -147,7 +147,7 @@ Tuttavia:
 
 ## Cos&#39;è  lato server Adobe Experience Platform Launch?
 
-Più tardi nel 2020, il Experience Platform Launch rilascerà le funzioni di inoltro lato server. Se utilizzi i nostri SDK e invii XDM a Experience Edge, queste nuove funzionalità ti permetteranno di installare nuove estensioni lato server e mappare tali dati a qualsiasi cosa, e inviarli ovunque, dalla nostra rete Edge. Consideralo come &quot;raccolta di dati come un servizio&quot;.  Questo sarà disponibile per un costo, oltre che per un bundle nell&#39;Adobe Experience Platform.
+Più tardi nel 2020, il Experience Platform Launch rilascerà le funzioni di inoltro lato server. Se utilizzi i nostri SDK e invii XDM a Experience Edge, queste nuove funzionalità ti permetteranno di installare nuove estensioni lato server e mappare tali dati a qualsiasi cosa, e inviarli ovunque, dalla nostra rete Edge. Consideralo come &quot;raccolta di dati come un servizio&quot;.  Questo sarà disponibile per un costo, oltre che per un bundle come parte di Adobe Experience Platform.
 
 ## Cos’è un CNAME o un dominio di prime parti e perché è importante?
 
