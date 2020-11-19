@@ -6,9 +6,9 @@ type: Tutorial
 description: Istruzioni per la connessione alle posizioni di archiviazione cloud
 seo-description: Istruzioni per la connessione alle posizioni di archiviazione cloud
 translation-type: tm+mt
-source-git-commit: d72f392bc3b47bb23ed36b3d1d218373f62b4679
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '520'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## Panoramica
 
-In questa pagina viene illustrato come connettersi alle posizioni di archiviazione cloud  Adobe Real-time Customer Data Platform (Piattaforma dati cliente in tempo reale).
+Questa pagina spiega come collegarsi alle posizioni di archiviazione cloud nella piattaforma dati cliente in tempo reale.
 
 1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, seleziona la destinazione di archiviazione cloud preferita, quindi seleziona **[!UICONTROL Configure]**.
 
