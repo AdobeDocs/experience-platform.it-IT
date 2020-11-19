@@ -5,9 +5,9 @@ description: Adobe Experience Platform Web SDK può distribuire ed eseguire il r
 seo-description: Adobe Experience Platform Web SDK può distribuire ed eseguire il rendering di offerte personalizzate gestite in  Offer Decisioning. Potete creare le offerte e altri oggetti correlati utilizzando l'interfaccia  Offer Decisioning o l'API.
 keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized offers;deliver offers;offer delivery;offer personalization;
 translation-type: tm+mt
-source-git-commit: a0ede8c7d3088fe80d6ea014b4a4f9f08ee8a7aa
+source-git-commit: 5f90f238a8845cc7bf07d54b89c5c6ccff40469a
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '831'
 ht-degree: 9%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 9%
 
 Adobe Experience Platform [!DNL Web SDK] può distribuire ed eseguire il rendering di offerte personalizzate gestite in  Offer Decisioning. Potete creare le offerte e altri oggetti correlati utilizzando l&#39;interfaccia utente (interfaccia utente) o le API di  Offer Decisioning.
 
-## Prerequisiti
+## Prerequisiti  
 
 * L&#39;organizzazione IMS è abilitata per le decisioni edge
 * Offerte, Attività create
@@ -29,7 +29,7 @@ Adobe Experience Platform [!DNL Web SDK] può distribuire ed eseguire il renderi
 
 ## Terminologia
 
-È importante comprendere la seguente terminologia quando si utilizza  Offer Decisioning. <!--For more information and to view additional terms, please visit the [Offer Decisioning glossary](/docs/offer-decisioning/using/get-started/glossary.html)-->.
+È importante comprendere la seguente terminologia quando si utilizza  Offer Decisioning. Per ulteriori informazioni e per visualizzare i termini aggiuntivi, visitare il [glossario](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html)Offer Decisioning.
 
 * **Contenitore:** Un contenitore è un meccanismo di isolamento per tenere distanti le diverse preoccupazioni. L&#39;ID contenitore è il primo elemento percorso per tutte le API del repository. Tutti gli oggetti di decisione risiedono all&#39;interno di un contenitore.
 
