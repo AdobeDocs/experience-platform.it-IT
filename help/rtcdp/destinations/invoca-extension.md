@@ -2,12 +2,12 @@
 keywords: Invoca;invoca
 title: Estensione Invoca Tags
 seo-title: Estensione Invoca Tags
-description: L'estensione Invoca Tags è una voce della destinazione del cliente  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L'estensione Invoca Tags è una voce della destinazione del cliente  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+description: L'estensione Invoca Tags è una voce della destinazione del cliente in tempo reale Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+seo-description: L'estensione Invoca Tags è una voce della destinazione del cliente in tempo reale Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '568'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 [!DNL Invoca] porta informazioni audio e sui dati delle chiamate nel percorso del cliente digitale. Grazie alla piattaforma di [!DNL Invoca’s] intelligence delle chiamate, gli esperti di marketing possono finalmente disporre di dati analitici per misurare i risultati delle chiamate e legare le conversioni offline alla spesa digitale.
 
-[!DNL Invoca Tags] è una voce dell&#39;estensione del cliente nel  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100067.invoca.html).
+[!DNL Invoca Tags] è una voce dell&#39;estensione del cliente in Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100067.invoca.html).
 
 Questa destinazione è un&#39;estensione Adobe Experience Platform Launch . Per ulteriori informazioni sul funzionamento delle estensioni Platform Launch  Adobe CDP in tempo reale, consultate [panoramica](/help/rtcdp/destinations/experience-platform-launch-extensions.md)delle estensioni Adobe Experience Platform Launch.
 
