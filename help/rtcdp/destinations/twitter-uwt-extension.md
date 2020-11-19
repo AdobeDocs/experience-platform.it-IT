@@ -2,12 +2,12 @@
 keywords: twitter;Twitter;twitter universal website tag;Twitter universal website tag;Twitter UWT Tag;Twitter uwt;twitter uwt
 title: Estensione dei tag Twitter Universal Website
 seo-title: Estensione dei tag Twitter Universal Website
-description: L'estensione Twitter Universal Website Tag è una destinazione pubblicitaria  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L'estensione Tag Web site universale di Twitter è una destinazione pubblicitaria  piattaforma dati cliente in tempo reale del Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+description: L'estensione Tag Web site universale di Twitter è una destinazione pubblicitaria nella piattaforma dati cliente in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+seo-description: L'estensione Tag Web site universale di Twitter è una destinazione pubblicitaria nella piattaforma dati cliente in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '526'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 [!DNL Twitter Universal Website Tag] fornisce azioni per inviare beacon al tag UWT di Twitter.
 
-[!DNL Twitter Universal Website Tag] è un&#39;estensione pubblicitaria in  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate Tracciamento [conversione](https://business.twitter.com/en/solutions/twitter-ads/website-clicks/advanced-conversion-tracking.html)avanzato.
+[!DNL Twitter Universal Website Tag] è un&#39;estensione pubblicitaria in Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate Tracciamento [conversione](https://business.twitter.com/en/solutions/twitter-ads/website-clicks/advanced-conversion-tracking.html)avanzato.
 
 Questa destinazione è un&#39;estensione Adobe Experience Platform Launch . Per ulteriori informazioni sul funzionamento delle estensioni Platform Launch  Adobe CDP in tempo reale, consultate [panoramica](/help/rtcdp/destinations/experience-platform-launch-extensions.md)delle estensioni Adobe Experience Platform Launch.
 
