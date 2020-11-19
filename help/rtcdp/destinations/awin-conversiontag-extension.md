@@ -2,12 +2,12 @@
 keywords: Awin Advertiser Conversion Tag extension;conversion tag;Awin;awin;AWIN
 title: Estensione Tag di conversione dell'inserzionista Awin
 seo-title: Estensione Tag di conversione dell'inserzionista Awin
-description: L'estensione Awin Advertiser Conversion Tag è una destinazione pubblicitaria  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L'estensione Awin Advertiser Conversion Tag è una destinazione pubblicitaria  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+description: L'estensione Awin Advertiser Conversion Tag è una destinazione pubblicitaria nella Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+seo-description: L'estensione Awin Advertiser Conversion Tag è una destinazione pubblicitaria nella Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '554'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 Il Tag Conversion è la dichiarazione dell&#39;oggetto JavaScript AWIN.Tracking.Sale, che viene eseguita nella pagina di conferma per indicare al tag Mastertag che è stata eseguita una conversione. In seguito, eseguirà le richieste di tracciamento necessarie.
 
-Il tag di conversione dell&#39;inserzionista Awin è un&#39;estensione pubblicitaria  piattaforma dati cliente in tempo reale del Adobe. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103240.awin-conversion-tag.html).
+Il tag Conversione inserzionista Awin è un&#39;estensione pubblicitaria nella piattaforma dati cliente in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103240.awin-conversion-tag.html).
 
 Questa destinazione è un&#39; [!DNL Adobe Experience Platform Launch] estensione. Per ulteriori informazioni sul funzionamento [!DNL Platform Launch] delle estensioni  Adobe CDP in tempo reale, consultate Panoramica sulle estensioni [di Experience Platform Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
