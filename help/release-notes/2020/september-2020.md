@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 9436779e91bf82382056acd526671b30b55e11d4
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '883'
-ht-degree: 4%
+source-wordcount: '862'
+ht-degree: 6%
 
 ---
 
@@ -17,13 +17,13 @@ ht-degree: 4%
 
 **Data di rilascio: 9 settembre 2020**
 
-Aggiornamenti alle funzionalità esistenti in Adobe Experience Platform:
+Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 - [[!DNL Data Governance]](#governance)
-- [[!DNL Destinazioni]](#destinations)
-- [[!DNL Approfondimenti sull&#39;osservabilità]](#observability)
+- [[!DNL Destinations]](#destinations)
+- [[!DNL Observability Insights]](#observability)
 - [[!DNL Privacy Service]](#privacy)
-- [[!DNL Profilo cliente in tempo reale]](#profile)
+- [[!DNL Real-time Customer Profile]](#profile)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
@@ -41,7 +41,7 @@ Per ulteriori informazioni sul servizio, consulta la panoramica [sulla governanc
 
 ## Destinazioni {#destinations}
 
-In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni sono integrazioni precostruite con piattaforme di destinazione che attivano i dati a tali partner in modo semplice.
+In [Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni sono integrazioni pre-costruite con piattaforme di destinazione che attivano i dati a tali partner in modo semplice.
 
 **Nuove funzionalità**
 
@@ -75,7 +75,7 @@ Diverse normative legali e organizzative danno agli utenti il diritto di acceder
 
 Per ulteriori informazioni sul servizio, consultate la panoramica [dei](../../privacy-service/home.md) Privacy Service.
 
-## Profilo del cliente in tempo reale {#profile}
+## Profilo cliente in tempo reale {#profile}
 
 Adobe Experience Platform consente di creare esperienze coordinate, coerenti e pertinenti per i clienti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con [!DNL Real-time Customer Profile], puoi vedere una visualizzazione olistica di ogni singolo cliente che combina dati provenienti da più canali, inclusi online, offline, CRM e dati di terze parti. [!DNL Profile] consente di consolidare i diversi dati dei clienti in una visualizzazione unificata che offre un account utilizzabile e con marca temporale per ogni interazione con il cliente.
 
