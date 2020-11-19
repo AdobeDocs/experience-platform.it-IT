@@ -6,10 +6,10 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '854'
-ht-degree: 5%
+source-wordcount: '840'
+ht-degree: 6%
 
 ---
 
@@ -18,11 +18,11 @@ ht-degree: 5%
 
 **Data di rilascio: 11 marzo 2020**
 
-Aggiornamenti alle funzionalità esistenti in Adobe Experience Platform:
+Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 * [[!DNL Data Governance]](#governance)
 * [[!DNL Data Ingestion]](#ingestion)
-* [[!DNL Destinazioni]](#destinations)
+* [[!DNL Destinations]](#destinations)
 * [[!DNL Identity Service]](#identity)
 * [[!DNL Sources]](#sources)
 
@@ -50,7 +50,7 @@ Adobe Experience Platform [!DNL Data Governance] è una serie di strategie e tec
 
 Per ulteriori informazioni su [!DNL Data Governance]di esso, consulta la panoramica sulla governance dei [dati](../../data-governance/home.md).
 
-## Ingestione dati {#ingestion}
+## Acquisizione dei dati {#ingestion}
 
 Adobe Experience Platform offre un set completo di funzioni per acquisire qualsiasi tipo e latenza di dati. Adobe Experience Platform [!DNL Data Ingestion] offre diverse alternative per l’assimilazione dei dati, tra cui API Batch, API Streaming, connettori  Adobe nativi, partner per l’integrazione dei dati o l’interfaccia utente di Adobe Experience Platform.
 
@@ -69,7 +69,7 @@ Per ulteriori informazioni sull’assimilazione dei dati in Piattaforma, consult
 
 ## Destinazioni {#destinations}
 
-In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni sono integrazioni precostruite con piattaforme di destinazione che attivano i dati a tali partner in modo semplice.
+In [Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni sono integrazioni pre-costruite con piattaforme di destinazione che attivano i dati a tali partner in modo semplice.
 
 **Nuove destinazioni**
 
