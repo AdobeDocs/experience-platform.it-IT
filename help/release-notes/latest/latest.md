@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: b5fa40deb480f264b02a8be56aff2c50e4149cb2
+source-git-commit: 6cf9c88f6dc751a4cc877670a89cc99d1efb1b2a
 workflow-type: tm+mt
-source-wordcount: '2103'
+source-wordcount: '2157'
 ht-degree: 3%
 
 ---
@@ -113,20 +113,18 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni 
 
 | Destinazione | Descrizione |
 | ----------- | ----------- |
+| Braccio | Braze è una piattaforma completa di coinvolgimento dei clienti che offre esperienze rilevanti e memorabili tra i clienti e i marchi che amano. |
 | Microsoft Bing | La destinazione Microsoft Bing consente di eseguire il retargeting e campagne digitali mirate per l&#39;audience in Microsoft Display Advertising. |
 | Il banco commerciale | Il Trade Desk è una piattaforma self-service per gli acquirenti di annunci che esegue retargeting e campagne digitali mirate per il pubblico attraverso fonti di visualizzazione, video e inventario mobile. |
-
-<!-- | Braze | Braze is a comprehensive customer engagement platform that power relevant and memorable experiences between customers and the brands they love. |  -->
 
 **Nuove funzionalità**
 
 | Funzione | Descrizione |
 | ------- | ----------- |
 | Dettagli di destinazione Aggiornamenti UX | Il flusso di lavoro di destinazione del CDP in tempo reale ora include il monitoraggio in linea per vedere quali attivazioni batch hanno avuto successo. Questa funzione consente agli utenti di risolvere i problemi direttamente nel flusso di lavoro per le destinazioni batch tramite avvisi e una dashboard di monitoraggio per monitorare gli errori nella pipeline di elaborazione. |
+| Cifratura file | Per le destinazioni basate su file, gli utenti ora possono aggiungere la cifratura ai propri file esportati. |
+| Pianificazione file | Per le destinazioni di archiviazione cloud e basate su e-mail, gli utenti possono creare un&#39;esportazione una tantum o istantanee giornaliere. |
 | Campi obbligatori | Gli utenti possono contrassegnare i campi come obbligatori, assicurando che vengano esportati solo i campi contenenti il campo obbligatorio. |
-
-<!-- | File scheduling | For both email based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
-| File encryption | For file based destinations, users can now add encryption to their exported files. | -->
 
 Per ulteriori informazioni, consulta la panoramica [](../../rtcdp/destinations/destinations-overview.md)Destinazioni.
 
@@ -160,7 +158,7 @@ Per ulteriori informazioni, consulta la sezione sull’ [aggiunta di campi di id
 | Tracciamento adesione | Puoi trovare la quantità totale di approfondimenti di attribuzione utilizzati dal tuo account nel contenitore delle istanze di creazione. |
 | Suddivisione punti di contatto per posizione | Un nuovo grafico di approfondimenti che fornisce un&#39;analisi dei punti di contatto per le posizioni dei percorsi di conversione. |
 | Percorsi di conversione principali | Un nuovo grafico delle informazioni nella scheda Analisi percorso. Il grafico contiene un elenco dei primi cinque percorsi di conversione con la sequenza di punti di contatto dei canali di marketing che hanno portato al maggior numero di conversioni. |
-| Efficienza punto di contatto | Fornisce informazioni approfondite sulle tre variabili più importanti per le quali il modello misura l’efficacia dei punti di contatto. Le variabili sono rapporto tra percorsi positivi e negativi, efficienza dei punti di contatto e volume dei punti di contatto. |
+| Efficienza punto di contatto | Fornisce informazioni approfondite sulle tre variabili più importanti per cui il modello misura l’efficacia dei punti di contatto. Le variabili sono rapporto tra percorsi positivi e negativi, efficienza dei punti di contatto e volume dei punti di contatto. |
 
 Per ulteriori informazioni, leggere la [panoramica](../../intelligent-services/attribution-ai/overview.md)delle Attribution AI.
 
@@ -202,8 +200,9 @@ Adobe Experience Platform è in grado di acquisire dati da origini esterne e di 
 [!DNL Experience Platform] fornisce un&#39;API RESTful e un&#39;interfaccia utente interattiva che consente di impostare connessioni sorgente per vari provider di dati con facilità. Queste connessioni di origine consentono di autenticare e connettersi a sistemi di storage e servizi CRM esterni, impostare i tempi per l&#39;esecuzione dell&#39;assimilazione e gestire il throughput di assimilazione dei dati.
 
 **Nuove origini**
+
 | Funzione | Descrizione |
-| — | — |
+| ------- | ----------- |
 | [!DNL Shopify] | È ora possibile connettersi [!DNL Shopify] a [!DNL Experience Platform] utilizzando l&#39; [!DNL Flow Service] API o l&#39;interfaccia utente. Per ulteriori informazioni, vedere la panoramica [del connettore](../../sources/connectors/ecommerce/shopify.md) Shopify. |
 
 **Funzionalità chiave**
