@@ -2,12 +2,12 @@
 keywords: target extension;target;target v2;target v2 extension
 title: Estensione Adobe Target v2
 seo-title: Estensione Adobe Target v2
-description: L'estensione  Adobe Target v2 è una destinazione di personalizzazione  piattaforma dati cliente in tempo reale del Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L'estensione  Adobe Target v2 è una destinazione di personalizzazione  piattaforma dati cliente in tempo reale del Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+description: L’estensione  Adobe Target v2 è una destinazione di personalizzazione nella piattaforma dati cliente in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+seo-description: L’estensione  Adobe Target v2 è una destinazione di personalizzazione nella piattaforma dati cliente in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '559'
 ht-degree: 16%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 16%
 
 Adobe Target è la soluzione di Adobe Experience Cloud che offre tutto il necessario per adattare e personalizzare l’esperienza dei clienti al fine di massimizzare le entrate sui siti web e mobili, le app, i social media e altri canali digitali.
 
- Adobe Target v2 è un&#39;estensione di personalizzazione nella piattaforma dati cliente in tempo reale  Adobe. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102722.adobe-target-v2-launch-extension.html).
+ Adobe Target v2 è un&#39;estensione di personalizzazione in Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102722.adobe-target-v2-launch-extension.html).
 
 Questa destinazione è un&#39;estensione Adobe Experience Platform Launch . Per ulteriori informazioni sul funzionamento delle estensioni Platform Launch  Adobe CDP in tempo reale, consultate [panoramica](/help/rtcdp/destinations/experience-platform-launch-extensions.md)delle estensioni Adobe Experience Platform Launch.
 
