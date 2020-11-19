@@ -5,9 +5,9 @@ description: Adobe Experience Platform Web SDK può distribuire ed eseguire il r
 seo-description: Adobe Experience Platform Web SDK può distribuire ed eseguire il rendering di offerte personalizzate gestite in  Offer Decisioning. Potete creare le offerte e altri oggetti correlati utilizzando l'interfaccia  Offer Decisioning o l'API.
 keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized offers;deliver offers;offer delivery;offer personalization;
 translation-type: tm+mt
-source-git-commit: 86d819daf26eaf1b46afe76054d475e61720dd27
+source-git-commit: a0ede8c7d3088fe80d6ea014b4a4f9f08ee8a7aa
 workflow-type: tm+mt
-source-wordcount: '839'
+source-wordcount: '810'
 ht-degree: 9%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 9%
 >
 >L&#39;utilizzo di  Offer Decisioning in Adobe Experience Platform Web SDK è attualmente disponibile per l&#39;accesso anticipato a determinati utenti. Questa funzionalità non è disponibile per tutte le organizzazioni IMS.
 
-L&#39;Adobe Experience Platform [!DNL Web SDK] può distribuire ed eseguire il rendering di offerte personalizzate gestite in  Offer Decisioning. Potete creare le offerte e altri oggetti correlati utilizzando l&#39;interfaccia utente (interfaccia utente) o le API di  Offer Decisioning.
+Adobe Experience Platform [!DNL Web SDK] può distribuire ed eseguire il rendering di offerte personalizzate gestite in  Offer Decisioning. Potete creare le offerte e altri oggetti correlati utilizzando l&#39;interfaccia utente (interfaccia utente) o le API di  Offer Decisioning.
 
 ## Prerequisiti
 
@@ -29,7 +29,7 @@ L&#39;Adobe Experience Platform [!DNL Web SDK] può distribuire ed eseguire il r
 
 ## Terminologia
 
-È importante comprendere la seguente terminologia quando si utilizza  Offer Decisioning. Per ulteriori informazioni e per visualizzare i termini aggiuntivi, visitare il [glossario](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html?lang=en#get-started)Offer Decisioning.
+È importante comprendere la seguente terminologia quando si utilizza  Offer Decisioning. <!--For more information and to view additional terms, please visit the [Offer Decisioning glossary](/docs/offer-decisioning/using/get-started/glossary.html)-->.
 
 * **Contenitore:** Un contenitore è un meccanismo di isolamento per tenere distanti le diverse preoccupazioni. L&#39;ID contenitore è il primo elemento percorso per tutte le API del repository. Tutti gli oggetti di decisione risiedono all&#39;interno di un contenitore.
 
@@ -83,7 +83,7 @@ Per attivare  Offer Decisioning, è necessario eseguire le seguenti operazioni:
    * SDK per avvio piattaforma
       1. [Creare una proprietà Launch piattaforma](https://docs.adobe.com/content/help/it-IT/launch/using/reference/admin/companies-and-properties.html)
       2. [Aggiungere il codice da incorporare per il lancio della piattaforma](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. Installa e configura l’estensione Adobe Experience Platform Web SDK con la configurazione Edge appena creata selezionando la configurazione dal menu a discesa &quot;Edge Configuration&quot; (Configurazione Edge). Documentazione utile sulle [estensioni](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
+      3. Installa e configura l’estensione AEP Web SDK con la configurazione Edge appena creata selezionando la configurazione dal menu a discesa &quot;Edge Configuration&quot; (Configurazione Edge). Documentazione utile sulle [estensioni](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
@@ -240,7 +240,7 @@ Per attivare  Offer Decisioning, è necessario eseguire le seguenti operazioni:
                 "language": [
                   "en-US"
                 ],
-                "content": "<p style="color:red;">20% Off on shipping</p>",
+                "content": "<p style=\"color:red;\">20% Off on shipping</p>",
                 "characteristics": {
                   "foo": "bar",
                   "foo1": "bar1"
