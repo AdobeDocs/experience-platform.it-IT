@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 5ff73aa1745e78f0026ada2c66908888be5f4498
+source-git-commit: ade9da107ee6dd100a33a7e7e9a20b4335721e0a
 workflow-type: tm+mt
-source-wordcount: '2063'
+source-wordcount: '2055'
 ht-degree: 3%
 
 ---
@@ -213,7 +213,7 @@ Adobe Experience Platform è in grado di acquisire dati da origini esterne e di 
 | Elimina connessioni | Le connessioni batch che contengono errori o che non sono più necessarie ora possono essere eliminate utilizzando l&#39; [!DNL Flow Service] API e l&#39;interfaccia utente. Per ulteriori informazioni, consultate l&#39;esercitazione sull&#39; [eliminazione di connessioni tramite l&#39;API](../../sources/tutorials/api/delete.md) del servizio di flusso e sull&#39; [eliminazione di account tramite l&#39;interfaccia utente](../../sources/tutorials/ui/delete-accounts.md). |
 | Mappatura gerarchica | Durante il processo di assimilazione dei dati è possibile visualizzare l&#39;anteprima di un file di origine gerarchico, ad esempio JSON o Parquet. Per ulteriori informazioni, consulta l’esercitazione sulla [configurazione di un flusso di dati per i connettori di archiviazione cloud nell’interfaccia utente](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) . |
 | Supporto API per la mappatura nelle origini di streaming | Ora puoi utilizzare le API per eseguire funzioni di mappatura con le origini di streaming. |
-| Supporto API per delimitatori personalizzati per le origini di archiviazione cloud | Ora potete raccogliere file non delimitati da CSV utilizzando le origini di archiviazione cloud. Potete utilizzare un carattere di delimitazione di colonna singolo, ad esempio tabulazione, virgola, tubazione, punto e virgola o hash per raccogliere file semplici in qualsiasi formato. Il valore predefinito è una virgola se non viene fornito. |
+| Supporto API per delimitatori personalizzati per le origini di archiviazione cloud | Ora potete raccogliere file non delimitati da CSV utilizzando le origini di archiviazione cloud. Potete utilizzare un carattere di delimitazione di colonna singolo, ad esempio tabulazione, virgola, tubazione, punto e virgola o hash per raccogliere file semplici in qualsiasi formato. |
 | Supporto sandbox per connettore Adobe Audience Manager | Il connettore del Audience Manager  ora è in grado di riconoscere la sandbox. Gli utenti possono abilitare il connettore per indirizzare  set di dati di Audience Manager alla sandbox di loro scelta (comprese le sandbox non di produzione). La configurazione è limitata a una sandbox per organizzazione IMS. |
 | Miglioramenti UX | L&#39;assimilazione basata su file ora è accessibile tramite il catalogo delle origini. |
 
