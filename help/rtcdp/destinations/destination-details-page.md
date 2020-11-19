@@ -5,9 +5,9 @@ seo-title: Pagina Dettagli destinazioni
 description: 'La pagina dei dettagli per una singola destinazione fornisce una panoramica dei dettagli di destinazione, come il nome di destinazione, l''ID, i segmenti mappati alla destinazione, e i controlli per modificare l''attivazione e per abilitare e disabilitare il flusso di dati. '
 seo-description: 'La pagina dei dettagli per una singola destinazione fornisce una panoramica dei dettagli di destinazione, come il nome di destinazione, l''ID, i segmenti mappati alla destinazione, e i controlli per modificare l''attivazione e per abilitare e disabilitare il flusso di dati. '
 translation-type: tm+mt
-source-git-commit: 0c2acd79492c474ba664ce32d1592969da71f385
+source-git-commit: ff36899f455848584ab2f5e236812795d2c81681
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Nell’interfaccia utente di Adobe Experience Platform, puoi visualizzare e moni
 >
 >La pagina dei dettagli delle destinazioni fa parte dell&#39; [!UICONTROL Destinations] area di lavoro nell&#39;interfaccia utente della piattaforma. Per ulteriori informazioni, consultate la panoramica [[!UICONTROL Destinations]](./destinations-workspace.md) dell’area di lavoro.
 
-Nell&#39; **[!UICONTROL Destinations]** area di lavoro all&#39;interno dell&#39;interfaccia utente della piattaforma, andate alla **[!UICONTROL Browse]** scheda e selezionate il nome di una destinazione batch da visualizzare.
+Nell&#39; **[!UICONTROL Destinations]** area di lavoro all&#39;interno dell&#39;interfaccia utente della piattaforma, andate alla **[!UICONTROL Browse]** scheda e selezionate il nome di una destinazione che desiderate visualizzare.
 
 ![](./assets/details-page/select-destination.png)
 
