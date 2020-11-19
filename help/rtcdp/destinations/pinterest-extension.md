@@ -2,12 +2,12 @@
 keywords: Pinterest;pinterest;Pinterest Conversion Tracking;pintrest conversion tracking
 title: Estensione Pinterest Conversion Tracking
 seo-title: Estensione Pinterest Conversion Tracking
-description: L'estensione Pinterest Conversion Tracking è una destinazione pubblicitaria  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L'estensione Pinterest Conversion Tracking è una destinazione pubblicitaria  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+description: L'estensione Pinterest Conversion Tracking è una destinazione pubblicitaria nella piattaforma dati cliente in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+seo-description: L'estensione Pinterest Conversion Tracking è una destinazione pubblicitaria nella piattaforma dati cliente in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '561'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 Monitora le azioni dei visitatori sul tuo sito Web dopo le visualizzazioni del pin promosso. Misura il rendimento degli annunci e crea audience mirate. Puoi trovare ulteriori informazioni [qui](https://ads.pinterest.com/).
 
-[!DNL Pinterest Conversion Tracking] è un&#39;estensione pubblicitaria in  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100523.pinterest-conversion-tracking-for-adobe-launch.html).
+[!DNL Pinterest Conversion Tracking] è un&#39;estensione pubblicitaria in Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100523.pinterest-conversion-tracking-for-adobe-launch.html).
 
 Questa destinazione è un&#39;estensione Adobe Experience Platform Launch . Per ulteriori informazioni sul funzionamento delle estensioni Platform Launch  Adobe CDP in tempo reale, consultate [panoramica](/help/rtcdp/destinations/experience-platform-launch-extensions.md)delle estensioni Adobe Experience Platform Launch.
 
