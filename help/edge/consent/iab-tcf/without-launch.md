@@ -1,20 +1,20 @@
 ---
 title: Utilizzo di IAB TCF 2.0 senza Experience Platform Launch
 seo-title: Impostazione del consenso IAB TCF 2.0 con Adobe Experience Platform Web SDK
-description: Scopri come impostare il consenso IAB TCF 2.0 con Adobe Experience Platform Web SDK
-seo-description: Scopri come impostare il consenso IAB TCF 2.0 con Adobe Experience Platform Web SDK
+description: Scoprite come impostare il consenso IAB TCF 2.0 con Adobe Experience Platform Web SDK
+seo-description: Scoprite come impostare il consenso IAB TCF 2.0 con Adobe Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
+source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '687'
 ht-degree: 0%
 
 ---
 
 
-# Utilizzo di IAB TCF 2.0 con l&#39;estensione Adobe Experience Platform Web SDK
+# Utilizzo di IAB TCF 2.0 con l&#39;estensione AEP Web SDK
 
-Questa guida illustra come integrare il Interactive Advertising Bureau Transparency &amp; Consent Framework, versione 2.0 (IAB TCF 2.0) con l’SDK Web di Adobe Experience Platform senza utilizzare il Experience Platform Launch. Per una panoramica dell&#39;integrazione con IAB TCF 2.0, leggere la [panoramica](./overview.md). Per una guida sull&#39;integrazione con il Experience Platform Launch, leggere la guida [IAB TCF 2.0 per Experience Platform Launch](./with-launch.md).
+Questa guida mostra come integrare il Interactive Advertising Bureau Transparency &amp; Consent Framework, versione 2.0 (IAB TCF 2.0) con Adobe Experience Platform Web SDK senza utilizzare il Experience Platform Launch. Per una panoramica dell&#39;integrazione con IAB TCF 2.0, leggere la [panoramica](./overview.md). Per una guida sull&#39;integrazione con il Experience Platform Launch, leggere la guida [IAB TCF 2.0 per Experience Platform Launch](./with-launch.md).
 
 ## Introduzione
 
@@ -26,7 +26,7 @@ Questa guida utilizza l&#39; `__tcfapi` interfaccia per accedere alle informazio
 
 Per utilizzare IAB TCF 2.0 con Experience Platform Launch e estensione AEP Web SDK, è necessario disporre di uno schema XDM. Se non avete impostato nessuno dei due, iniziate a visualizzare la pagina prima di continuare.
 
-Inoltre, questa guida richiede una buona conoscenza dell’SDK Web per Adobe Experience Platform. Per un aggiornamento rapido, consulta la panoramica [](../../home.md) Adobe Experience Platform Web SDK e la documentazione sulle domande [](../../web-sdk-faq.md) frequenti.
+Inoltre, questa guida richiede una buona conoscenza di Adobe Experience Platform Web SDK. Per un aggiornamento rapido, consulta la panoramica [](../../home.md) Adobe Experience Platform Web SDK e la documentazione sulle domande [](../../web-sdk-faq.md) frequenti.
 
 ## Abilitazione del consenso predefinito
 
@@ -110,4 +110,4 @@ L&#39;altro modo per aggiungere le informazioni sul consenso a ogni richiesta è
 
 ## Passaggi successivi
 
-Ora che hai imparato a utilizzare IAB TCF 2.0 con l&#39;estensione Adobe Experience Platform Web SDK, puoi anche scegliere di integrarsi con altre soluzioni  Adobe come  Adobe Analytics o la piattaforma dati cliente in tempo reale. Per ulteriori informazioni, consulta [la panoramica](./overview.md) IAB Transparency &amp; Consent Framework 2.0.
+Ora che hai imparato a utilizzare IAB TCF 2.0 con l&#39;estensione AEP Web SDK, puoi anche scegliere di integrarsi con altre soluzioni  Adobe come  Adobe Analytics o la piattaforma Real-time Customer Data. Per ulteriori informazioni, consulta [la panoramica](./overview.md) IAB Transparency &amp; Consent Framework 2.0.
