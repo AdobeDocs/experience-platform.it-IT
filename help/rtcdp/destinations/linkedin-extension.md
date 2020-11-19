@@ -2,12 +2,12 @@
 keywords: LinkedIn;linkedin;Linkedin;LinkedIn Insight Tag;insight tag;Insight Tag
 title: Estensione del tag LinkedIn Insight
 seo-title: Estensione del tag LinkedIn Insight
-description: L'estensione LinkedIn Insight Tag è una destinazione pubblicitaria  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L'estensione LinkedIn Insight Tag è una destinazione pubblicitaria  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+description: L'estensione del tag LinkedIn Insight è una destinazione pubblicitaria nella piattaforma dati cliente in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+seo-description: L'estensione del tag LinkedIn Insight è una destinazione pubblicitaria nella piattaforma dati cliente in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '538'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 Installate l’icona [!DNL LinkedIn Insight Tag] per utilizzare le funzioni di tracciamento conversione, retargeting e demografia del sito Web.
 
-[!DNL LinkedIn Insight Tag] è un&#39;estensione pubblicitaria in  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate Tag [LinkedIn Insight](https://business.linkedin.com/marketing-solutions/insight-tag).
+[!DNL LinkedIn Insight Tag] è un&#39;estensione pubblicitaria in Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate Tag [LinkedIn Insight](https://business.linkedin.com/marketing-solutions/insight-tag).
 
 Questa destinazione è un&#39;estensione Adobe Experience Platform Launch . Per ulteriori informazioni sul funzionamento delle estensioni Platform Launch  Adobe CDP in tempo reale, consultate [panoramica](/help/rtcdp/destinations/experience-platform-launch-extensions.md)delle estensioni Adobe Experience Platform Launch.
 
