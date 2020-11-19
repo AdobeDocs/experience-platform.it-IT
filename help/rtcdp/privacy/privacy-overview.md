@@ -5,9 +5,9 @@ seo-title: Privacy nel profilo dei dati del cliente in tempo reale
 description: Il profilo dati cliente in tempo reale consente di semplificare il processo di mantenimento delle operazioni sui dati conformi alle normative sulla privacy.
 seo-description: Il profilo dati cliente in tempo reale consente di semplificare il processo di mantenimento delle operazioni sui dati conformi alle normative sulla privacy.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: bdd80b15258bf4e3c0dee1e260fd3469c76d5885
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Per ulteriori informazioni, consulta il documento sul [rispetto delle richieste]
 
 ## Supporto IAB TCF 2.0
 
-[!DNL Real-time CDP] fa parte dell&#39;elenco [di](https://iabeurope.eu/vendor-list-tcf-v2-0/) fornitori registrati per il [!DNL Transparency & Consent Framework (TCF)], come indicato dall&#39; [!DNL Interactive Advertising Bureau] (IAB). In conformità ai requisiti di TCF 2.0, [!DNL Real-time CDP] puoi raccogliere dati dettagliati sul consenso dei clienti e integrarli nei profili dei clienti archiviati. Questi dati di consenso possono quindi essere presi in considerazione per stabilire se alcuni profili sono inclusi nei segmenti di pubblico esportati, a seconda del loro caso di utilizzo.
+[!DNL Real-time CDP] fa parte dell&#39;elenco [di](https://iabeurope.eu/vendor-list-tcf-v2-0/) fornitori registrati per il [!DNL Transparency & Consent Framework (TCF)], come indicato dal [!DNL Interactive Advertising Bureau (IAB)]. In conformità ai requisiti di TCF 2.0, [!DNL Real-time CDP] puoi raccogliere dati dettagliati sul consenso dei clienti e integrarli nei profili dei clienti archiviati. Questi dati di consenso possono quindi essere presi in considerazione per stabilire se alcuni profili sono inclusi nei segmenti di pubblico esportati, a seconda del loro caso di utilizzo.
 
 Per ulteriori informazioni, consulta la panoramica sul supporto [IAB TCF 2.0 in [!DNL Real-time CDP]](./iab/overview.md) .
 
