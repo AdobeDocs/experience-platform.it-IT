@@ -5,9 +5,9 @@ description: 'Scopri come configurare l’SDK Web per Experienci Platform '
 seo-description: 'Scopri come configurare l’SDK Web per Experienci Platform '
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '710'
 ht-degree: 7%
 
 ---
@@ -85,13 +85,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  Quando si configurano pi
 | -------- | ------------ | ----------------- |
 | Booleano | No | `true` |
 
-Indica se i dati associati ai clic del collegamento devono essere raccolti automaticamente. Per i clic considerati come clic del collegamento, vengono raccolti i seguenti dati di interazione [](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/webinteraction.schema.md) Web:
-
-| **Proprietà** | **Descrizione** |
-| ------------ | ----------------------------------- |
-| Nome collegamento | Nome determinato dal contesto del collegamento |
-| URL collegamento | URL normalizzato |
-| Tipo di collegamento | Impostato per scaricare, uscire o altro |
+Indica se i dati associati ai clic del collegamento devono essere raccolti automaticamente. Per ulteriori informazioni, consulta Tracciamento [](../data-collection/track-links.md#automaticLinkTracking) automatico dei collegamenti.
 
 ### `onBeforeEventSend`
 
@@ -153,7 +147,7 @@ Abilita le destinazioni [!DNL Audience Manager] URL, che consentono di attivare 
 | -------- | ------------ | ----------------- |
 | Booleano | No | true |
 
-Se true, l’SDK leggerà e imposterà i cookie AMCV precedenti. Questo consente di passare all’SDK Web AEP mentre alcune parti del sito potrebbero ancora utilizzare Visitor.js. Inoltre, se nella pagina è definita l’API del visitatore, l’SDK eseguirà una query sull’API del visitatore per l’ECID. Questo consente di aggiungere due tag alle pagine con l’SDK Web AEP e di avere lo stesso ECID.
+Se true, l’SDK leggerà e imposterà i cookie AMCV precedenti. In questo modo è possibile passare all’Adobe Experience Platform Web SDK mentre alcune parti del sito potrebbero ancora utilizzare Visitor.js. Inoltre, se nella pagina è definita l’API del visitatore, l’SDK eseguirà una query sull’API del visitatore per l’ECID. Questo consente di aggiungere due tag alle pagine con l’SDK Web AEP e di avere lo stesso ECID.
 
 ### `thirdPartyCookiesEnabled`
 
