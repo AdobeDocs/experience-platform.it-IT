@@ -6,9 +6,9 @@ type: Tutorial
 description: I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio per l’invio di campagne e-mail promozionali.
 seo-description: I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio per l’invio di campagne e-mail promozionali.
 translation-type: tm+mt
-source-git-commit: 425287d78deebf0113d6cf6350bcb516c99ee995
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '822'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 # Destinazioni di marketing e-mail {#email-marketing-destinations}
 
-I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio l&#39;invio di campagne e-mail promozionali.  Piattaforma dati cliente in tempo reale si integra con ESP consentendo di attivare i segmenti nelle destinazioni di marketing via e-mail.
+I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio l&#39;invio di campagne e-mail promozionali. La piattaforma dati cliente in tempo reale si integra con ESP consentendo di attivare i segmenti per le destinazioni di e-mail marketing.
 
 Per inviare segmenti alle destinazioni di marketing via e-mail per le campagne,  CDP in tempo reale del Adobe deve prima connettersi alla destinazione.
 
