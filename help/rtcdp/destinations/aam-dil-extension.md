@@ -2,12 +2,12 @@
 keywords: Audience Manager DIL extension;destination audience manager;dil extension
 title: 'Estensione DIL Audience Manager '
 seo-title: 'Estensione DIL Audience Manager '
-description: L'estensione DIL Audience Manager  è una destinazione DMP (Data Management Platform)  piattaforma dati cliente in tempo reale Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L'estensione DIL Audience Manager  è una destinazione DMP (Data Management Platform)  piattaforma dati cliente in tempo reale Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+description: L'estensione DIL Audience Manager  è una destinazione DMP (Data Management Platform) in Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+seo-description: L'estensione DIL Audience Manager  è una destinazione DMP (Data Management Platform) in Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '592'
 ht-degree: 7%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 7%
 
 Questa è l&#39;estensione Adobe Audience Manager Data Integration Library (implementazione lato client). Nota: Questa estensione non è destinata all&#39;inoltro lato server (SSF) di  dati Adobe Analytics. Per SSF, utilizzate l&#39;estensione Adobe Analytics . Importante: A partire dalla versione 8.0, il DIL ha una dipendenza rigida dal servizio [!DNL Experience Cloud] ID, versione 3.3 o successiva. Implementa sia il servizio [!DNL Experience Cloud] ID che il DIL per funzionalità complete di integrazione dei [!DNL Audience Manager] dati.
 
-[!DNL Audience Manager] DIL è un&#39;estensione DMP (Data Management Platform)  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina [dell&#39;estensione dell&#39;Audience Manager](https://docs.adobe.com/content/help/it-IT/launch/using/extensions-ref/adobe-extension/adobe-audience-manager-extension.html) nella documentazione dell&#39;Experience Platform Launch.
+[!DNL Audience Manager] DIL è un’estensione DMP (Data Management Platform) in tempo reale per la piattaforma dati del cliente. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina [dell&#39;estensione dell&#39;Audience Manager](https://docs.adobe.com/content/help/it-IT/launch/using/extensions-ref/adobe-extension/adobe-audience-manager-extension.html) nella documentazione dell&#39;Experience Platform Launch.
 
 Questa destinazione è un&#39; [!DNL Experience Platform Launch] estensione. Per ulteriori informazioni sul funzionamento delle estensioni Launch  Adobe CDP in tempo reale, vedere Panoramica [sulle estensioni](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Experience Platform Launch.
 
