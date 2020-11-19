@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: b4ce4c2e5ff5083f663c2daf23c32a1cec32124c
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '597'
-ht-degree: 5%
+source-wordcount: '582'
+ht-degree: 7%
 
 ---
 
@@ -17,11 +17,11 @@ ht-degree: 5%
 
 **Data di rilascio: 12 agosto 2020**
 
-Aggiornamenti alle funzionalità esistenti in Adobe Experience Platform:
+Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
-- [[!DNL Destinazioni]](#destinations)
-- [[!DNL Piattaforma dati cliente in tempo reale]](#rtcdp)
+- [[!DNL Destinations]](#destinations)
+- [[!DNL Real-time Customer Data Platform]](#rtcdp)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -38,7 +38,7 @@ Per ulteriori informazioni su [!DNL JupyterLab], consulta la guida [[!DNL Jupyte
 
 ## Destinazioni {#destinations}
 
-In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni sono integrazioni precostruite con piattaforme di destinazione che attivano i dati a tali partner in modo semplice.
+In [Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni sono integrazioni pre-costruite con piattaforme di destinazione che attivano i dati a tali partner in modo semplice.
 
 **Nuove destinazioni**
 
@@ -57,7 +57,7 @@ Sono disponibili nuove destinazioni in cui è possibile attivare i dati Adobe Ex
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
-Basato  Experience Platform,  piattaforma dati ([!DNL Real-time CDP]) cliente Real-time Adobe (Real-time Customer Data Platform) consente alle aziende di mettere insieme dati noti e sconosciuti per attivare profili cliente con decisioni intelligenti per tutto il percorso del cliente. [!DNL Real-time CDP] combina più origini dati aziendali per creare profili cliente in tempo reale. I segmenti generati da questi profili possono quindi essere inviati a destinazioni a valle per fornire esperienze cliente personalizzate uno-a-uno su tutti i canali e i dispositivi.
+Basato  Experience Platform, la piattaforma dati ([!DNL Real-time CDP]) in tempo reale aiuta le aziende a mettere insieme dati noti e sconosciuti per attivare profili cliente con decisioni intelligenti per tutto il percorso del cliente. [!DNL Real-time CDP] combina più origini dati aziendali per creare profili cliente in tempo reale. I segmenti generati da questi profili possono quindi essere inviati a destinazioni a valle per fornire esperienze cliente personalizzate uno-a-uno su tutti i canali e i dispositivi.
 
 **Nuove funzionalità**
 
