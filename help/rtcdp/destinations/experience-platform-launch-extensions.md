@@ -5,9 +5,9 @@ seo-title: Estensioni di Experience Platform Launch
 description: Launch è la soluzione Adobe di nuova generazione per la gestione dei tag. Launch offre ai clienti un modo semplice di implementare e gestire tutti i tag pubblicitari, di analisi e di marketing necessari per fornire ai clienti esperienze personalizzate.
 seo-description: Launch è la soluzione Adobe di nuova generazione per la gestione dei tag. Launch offre ai clienti un modo semplice di implementare e gestire tutti i tag pubblicitari, di analisi e di marketing necessari per fornire ai clienti esperienze personalizzate.
 translation-type: tm+mt
-source-git-commit: 6bb7bbeaceac8a69641138248a1c41cf9fb3dc63
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '641'
 ht-degree: 21%
 
 ---
@@ -31,7 +31,7 @@ Per trovare le estensioni Platform Launch nell&#39;interfaccia CDP  Adobe in tem
 
 Le estensioni Launch piattaforma inoltrano i dati evento non elaborati a diversi tipi di destinazioni. Considerate le estensioni come un tipo di destinazione di inoltro **** degli eventi. Si tratta di un tipo di integrazione più semplice con le piattaforme di destinazione, che inoltra solo dati di evento non elaborati. Esempi di questi sono l&#39;estensione [di personalizzazione](/help/rtcdp/destinations/gainsight-extension.md) Gainsight o la [voce Conferma dell&#39;estensione](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)del cliente.
 
-**Destinazioni di esportazione** profilo/segmento nel  Adobe Acquisizione dati evento in tempo reale dalla piattaforma dati cliente, combinate con altre origini dati, applicate segmentazione ed esportate segmenti e profili qualificati per destinazioni. Esempi di questi sono la destinazione [di archiviazione cloud](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 o la destinazione [pubblicitaria](/help/rtcdp/destinations/google-dv360-destination.md)Google Display &amp; Video 360.
+**Destinazioni di esportazione** profilo/segmento in tempo reale della piattaforma dati cliente acquisiscono i dati dell&#39;evento, la combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Esempi di questi sono la destinazione [di archiviazione cloud](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 o la destinazione [pubblicitaria](/help/rtcdp/destinations/google-dv360-destination.md)Google Display &amp; Video 360.
 
 ![Estensioni Experience Platform Launch confrontate con altre destinazioni](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
