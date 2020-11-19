@@ -5,9 +5,9 @@ seo-title: Destinazioni di Analytics
 description: Le destinazioni di Analytics tengono traccia del modo in cui i visitatori interagiscono con il contenuto del sito e raccolgono i dati per comprendere il comportamento del pubblico. Queste piattaforme forniscono informazioni esclusive sull'impegno e la conversione dei visitatori più importanti.
 seo-description: Le destinazioni di Analytics tengono traccia del modo in cui i visitatori interagiscono con il contenuto del sito e raccolgono i dati per comprendere il comportamento del pubblico. Queste piattaforme forniscono informazioni esclusive sull'impegno e la conversione dei visitatori più importanti.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '201'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 Le destinazioni di Analytics tengono traccia del modo in cui i visitatori interagiscono con il contenuto del sito e raccolgono i dati per comprendere il comportamento del pubblico. Queste piattaforme forniscono informazioni esclusive sull&#39;impegno e la conversione dei visitatori più importanti.
 
-Attualmente,  piattaforma dati cliente in tempo reale Adobe supporta le destinazioni di analisi elencate di seguito. Per informazioni su come connettersi a queste destinazioni, consulta i singoli collegamenti:
+Attualmente, la piattaforma dati cliente in tempo reale supporta le destinazioni di analisi elencate di seguito. Per informazioni su come connettersi a queste destinazioni, consulta i singoli collegamenti:
 
 * [Aggiungi estensione tracciamento sito Web](/help/rtcdp/destinations/adform-extension.md)
 * [Estensione Adobe Analytics](/help/rtcdp/destinations/adobe-analytics-extension.md)
