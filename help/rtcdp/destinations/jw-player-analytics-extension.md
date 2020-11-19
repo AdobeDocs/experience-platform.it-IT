@@ -2,12 +2,12 @@
 keywords: JW player;jw player;JW Player;jw extension;JW extension
 title: Estensione JW Player Analytics (BETA)
 seo-title: Estensione JW Player Analytics (BETA)
-description: L'estensione JW Player Analytics (BETA) è una destinazione di analisi nella  Real-time Customer Data Platform del Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L'estensione JW Player Analytics (BETA) è una destinazione di analisi nella  Real-time Customer Data Platform del Adobe. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+description: L'estensione JW Player Analytics (BETA) è una destinazione di analisi nella piattaforma dati cliente in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+seo-description: L'estensione JW Player Analytics (BETA) è una destinazione di analisi nella piattaforma dati cliente in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '570'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 Questa estensione installa la [!DNL JW Player] scheda di rete per collegare [!DNL JW Player] gli eventi  Video Analytics Adobe. Sfruttate la potenza  analisi video dei Adobi per acquisire informazioni dettagliate sulle abitudini di visualizzazione dei video dei clienti.
 
-[!DNL JW Player Analytics] (BETA) è un&#39;estensione di analisi nel  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html).
+[!DNL JW Player Analytics] (BETA) è un&#39;estensione di analisi nella piattaforma dati cliente in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html).
 
 Questa destinazione è un&#39;estensione Adobe Experience Platform Launch . Per ulteriori informazioni sul funzionamento delle estensioni Platform Launch  Adobe CDP in tempo reale, consultate [panoramica](/help/rtcdp/destinations/experience-platform-launch-extensions.md)delle estensioni Adobe Experience Platform Launch.
 
