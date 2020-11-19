@@ -2,12 +2,12 @@
 keywords: TMMData;tmm data;tmmdata;TMM data
 title: Estensione TMMData
 seo-title: Estensione TMMData
-description: L'estensione TMMData è una destinazione di analisi in  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L'estensione TMMData è una destinazione di analisi  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+description: L'estensione TMMData è una destinazione di analisi nella piattaforma dati cliente in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+seo-description: L'estensione TMMData è una destinazione di analisi nella piattaforma dati cliente in tempo reale. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '567'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 [!DNL TMMData's] La piattaforma Foundation per Adobe Marketing Cloud offre ai team di marketing gli strumenti per accedere e fondere tutte le loro origini dati critiche - inclusi dati interni/esterni e online/off-line - per un&#39;analisi completa e sicura su più canali, con la configurazione automatica delle campagne e l&#39;importazione diretta di  Adobe e altri strumenti di analisi e BI.
 
-[!DNL TMMData] è un&#39;estensione di analisi in  Adobe Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](hhttps://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
+[!DNL TMMData] è un&#39;estensione di analisi in Real-time Customer Data Platform. Per ulteriori informazioni sulla funzionalità di estensione, consultate la pagina dell&#39;estensione in [Adobe Exchange](hhttps://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
 
 Questa destinazione è un&#39;estensione Adobe Experience Platform Launch . Per ulteriori informazioni sul funzionamento delle estensioni Platform Launch  Adobe CDP in tempo reale, consultate [panoramica](/help/rtcdp/destinations/experience-platform-launch-extensions.md)delle estensioni Adobe Experience Platform Launch.
 
