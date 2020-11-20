@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi necessari per recuperare i dati da un archivio cloud di terze parti e inserirli nella piattaforma tramite connettori sorgente e API.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: b0f6e51a784aec7850d92be93175c21c91654563
 workflow-type: tm+mt
-source-wordcount: '1581'
+source-wordcount: '1567'
 ht-degree: 1%
 
 ---
@@ -22,15 +22,15 @@ Questa esercitazione descrive i passaggi necessari per recuperare i dati da un a
 
 ## Introduzione
 
-Questa esercitazione richiede l&#39;accesso a un archivio cloud di terze parti tramite una connessione valida e informazioni sul file che si desidera portare nella piattaforma DNL, incluso il percorso e la struttura del file. Se non disponete di queste informazioni, prima di provare questa esercitazione, vedete l&#39;esercitazione [sull&#39;esplorazione di un archivio cloud di terze parti tramite [!DNL Flow Service] l&#39;API](../explore/cloud-storage.md) .
+Questa esercitazione richiede l&#39;accesso a un archivio cloud di terze parti tramite una connessione valida e le informazioni sul file in cui si desidera eseguire l&#39;operazione, [!DNL Platform]incluso il percorso e la struttura del file. Se non disponete di queste informazioni, prima di provare questa esercitazione, vedete l&#39;esercitazione [sull&#39;esplorazione di un archivio cloud di terze parti tramite [!DNL Flow Service] l&#39;API](../explore/cloud-storage.md) .
 
 Questa esercitazione richiede inoltre di conoscere i seguenti componenti di Adobe Experience Platform:
 
 - [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Il framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
    - [Nozioni di base sulla composizione](../../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
    - [Schema Guida](../../../../xdm/api/getting-started.md)per lo sviluppatore del Registro di sistema: Include informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all&#39;API del Registro di sistema dello schema. Ciò include il vostro `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all’intestazione Accetta e ai suoi possibili valori).
-- [[!Servizio catalogo DNL]](../../../../catalog/home.md): Catalogo è il sistema di registrazione per la posizione dei dati e la linea all&#39;interno [!DNL Experience Platform].
-- [[!DNL Caricamento batch]](../../../../ingestion/batch-ingestion/overview.md): L&#39;API Batch Ingestion consente di assimilare i dati in [!DNL Experience Platform] file batch.
+- [[!DNL Catalog Service]](../../../../catalog/home.md): Catalogo è il sistema di registrazione per la posizione dei dati e la linea all&#39;interno [!DNL Experience Platform].
+- [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): L&#39;API Batch Ingestion consente di assimilare i dati in [!DNL Experience Platform] file batch.
 - [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegarsi correttamente a un archivio cloud utilizzando l&#39; [!DNL Flow Service] API.
 
