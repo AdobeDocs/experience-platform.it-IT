@@ -5,9 +5,9 @@ user-guide-title: Guida ai connettori di sorgenti di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di sorgenti
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 translation-type: tm+mt
-source-git-commit: 89a807c0adbc3c9e4396adbb96764453034c8ea3
+source-git-commit: 39e419b78938afd91e3d7471241e377f352214ee
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '683'
 ht-degree: 3%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 3%
       - [Apache Hive sul connettore Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark sul connettore Azure HDInsights](connectors/databases/spark.md)
       - [Connettore di Data Explorer Azure](connectors/databases/data-explorer.md)
-      - [Connettore Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
+      - [connettore Azure synapse Analytics](connectors/databases/synapse-analytics.md)
       - [Connettore archiviazione tabella Azure](connectors/databases/ats.md)
       - [Connettore Couchbase](connectors/databases/couchbase.md)
       - [Connettore Google BigQuery](connectors/databases/bigquery.md)
@@ -59,7 +59,7 @@ ht-degree: 3%
       - [Connettore IBM DB2](connectors/databases/ibm-db2.md)
       - [Connettore di Microsoft SQL Server](connectors/databases/sql-server.md)
       - [Connettore MySQL](connectors/databases/mysql.md)
-      - [Connettore Oracle](connectors/databases/oracle.md)
+      - [Connettore  Oracle](connectors/databases/oracle.md)
       - [Connettore Phoenix](connectors/databases/phoenix.md)
       - [Connettore PostgreSQL](connectors/databases/postgres.md)
    - eCommerce {#ecommerce}
@@ -96,7 +96,7 @@ ht-degree: 3%
          - [Apache Hive sul connettore Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark sul connettore Azure HDInsights](tutorials/api/create/databases/spark.md)
          - [Connettore di Data Explorer Azure](tutorials/api/create/databases/data-explorer.md)
-         - [Connettore Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
+         - [connettore Azure synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Connettore archiviazione tabella Azure](tutorials/api/create/databases/ats.md)
          - [Connettore Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Connettore Google BigQuery](tutorials/api/create/databases/bigquery.md)
@@ -104,7 +104,7 @@ ht-degree: 3%
          - [Connettore HP Vertica](tutorials/api/create/databases/hp-vertica.md)
          - [Connettore IBM DB2](tutorials/api/create/databases/ibm-db2.md)
          - [Connettore MySQL](tutorials/api/create/databases/mysql.md)
-         - [Connettore Oracle](tutorials/api/create/databases/oracle.md)
+         - [Connettore  Oracle](tutorials/api/create/databases/oracle.md)
          - [Connettore Phoenix](tutorials/api/create/databases/phoenix.md)
          - [Connettore PostgreSQL](tutorials/api/create/databases/postgres.md)
          - [Connettore SQL Server](tutorials/api/create/databases/sql-server.md)
@@ -136,6 +136,7 @@ ht-degree: 3%
       - [Raccolta di dati di automazione marketing](tutorials/api/collect/marketing-automation.md)
       - [Raccolta dei dati di pagamento](tutorials/api/collect/payments.md)
       - [Raccolta dei dati del protocollo](tutorials/api/collect/protocols.md)
+      - [Raccogliere i dati di streaming](tutorials/api/collect/streaming.md)
    - [Acquisire dati di parquet da un sistema di storage cloud di terze parti](tutorials/api/cloud-storage-parquet.md)
    - [Creazione di una connessione di base di dataset tramite l&#39;API del servizio di flusso](tutorials/api/create-dataset-base-connection.md)
    - [Monitorare i flussi di dati mediante l&#39;API di Flusso Service](tutorials/api/monitor.md)
@@ -172,7 +173,7 @@ ht-degree: 3%
          - [Apache Hive sul connettore Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark sul connettore Azure HDInsights](tutorials/ui/create/databases/spark.md)
          - [Connettore di Data Explorer Azure](tutorials/ui/create/databases/data-explorer.md)
-         - [Connettore Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
+         - [connettore Azure synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Connettore archiviazione tabella Azure](tutorials/ui/create/databases/ats.md)
          - [Connettore Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Connettore Google Big Query](tutorials/ui/create/databases/bigquery.md)
@@ -181,7 +182,7 @@ ht-degree: 3%
          - [Connettore IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
          - [Connettore di Microsoft SQL Server](tutorials/ui/create/databases/sql-server.md)
          - [Connettore MySQL](tutorials/ui/create/databases/mysql.md)
-         - [Connettore Oracle](tutorials/ui/create/databases/oracle.md)
+         - [Connettore  Oracle](tutorials/ui/create/databases/oracle.md)
          - [Connettore Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [Connettore PostgreSQL](tutorials/ui/create/databases/postgres.md)
       - eCommerce {#ecommerce}
