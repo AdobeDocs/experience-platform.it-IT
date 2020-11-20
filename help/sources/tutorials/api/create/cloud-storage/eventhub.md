@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Questa esercitazione utilizza l'API del servizio di flusso per seguire i passaggi necessari per connettere  Experience Platform a un account Hubs evento di Azure.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 967585ba078edd13f90c820f6b1a0490140ca0cf
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '553'
 ht-degree: 2%
 
 ---
@@ -54,17 +54,17 @@ Questa esercitazione fornisce esempi di chiamate API per dimostrare come formatt
 
 Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../../../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
 
-- Autorizzazione: Portatore `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
 Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti al gruppo [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva per il tipo di supporto:
 
-- Content-Type: `application/json`
+- `Content-Type: application/json`
 
 ## Creare una connessione
 
@@ -124,4 +124,4 @@ Una risposta corretta restituisce i dettagli della nuova connessione creata, inc
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, avete creato una [!DNL Azure Event Hubs] connessione utilizzando le API e un ID univoco è stato ottenuto come parte del corpo della risposta. Puoi utilizzare questo ID connessione per [esplorare gli storage cloud utilizzando l&#39;API](../../explore/cloud-storage.md)del servizio di flusso.
+Seguendo questa esercitazione, avete creato una [!DNL Azure Event Hubs] connessione utilizzando le API e un ID univoco è stato ottenuto come parte del corpo della risposta. Puoi utilizzare questo ID connessione per [raccogliere i dati in streaming utilizzando l&#39;API](../../collect/streaming.md)del servizio di flusso.
