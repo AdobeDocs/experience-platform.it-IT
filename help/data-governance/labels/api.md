@@ -5,9 +5,9 @@ title: 'Gestione delle etichette di utilizzo dei dati tramite API '
 topic: developer guide
 description: L'API del servizio DataSet consente di applicare e modificare le etichette di utilizzo per i set di dati. Fa parte delle funzionalità dei cataloghi di dati di Adobe Experience Platform, ma è separata dall'API Catalog Service che gestisce i metadati dei set di dati.
 translation-type: tm+mt
-source-git-commit: 4096a7c1ec2b3640886d3a8c69b578987fe96dd4
+source-git-commit: 4b5e116d221e6689f95c8da0c54ef3af6827adc1
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1003'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 In questo documento sono descritti i passaggi necessari per gestire le etichette di utilizzo dei dati utilizzando l&#39; [!DNL Policy Service] API e l&#39; [!DNL Dataset Service] API.
 
-L&#39;API [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) fornisce diversi endpoint che consentono di creare e gestire le etichette di utilizzo dei dati per la propria organizzazione.
+Sono [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) disponibili diversi endpoint che consentono di creare e gestire le etichette di utilizzo dei dati per la propria organizzazione.
 
 L&#39; [!DNL Dataset Service] API consente di applicare e modificare le etichette di utilizzo per i set di dati. Fa parte delle funzionalità dei cataloghi di dati di Adobe Experience Platform, ma è separata dall&#39; [!DNL Catalog Service] API che gestisce i metadati dei set di dati.
 
@@ -327,7 +327,7 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `labels` | Elenco di etichette di utilizzo dati da aggiungere al dataset. |
-| `optionalLabels` | Un elenco di tutti i singoli campi all&#39;interno del set di dati a cui si desidera aggiungere etichette. Ogni elemento di questa matrice deve avere le seguenti proprietà: <br/><br/>`option`: Un oggetto che contiene gli attributi [!DNL Experience Data Model] (XDM) del campo. Sono richieste le tre proprietà seguenti:<ul><li>id</code>: Il valore URI $id</code> dello schema associato al campo.</li><li>contentType</code>: Il tipo di contenuto e il numero di versione dello schema. Questo deve assumere la forma di una delle intestazioni <a href="../../xdm/api/look-up-resource.md"></a> Accetta valide per una richiesta di ricerca XDM.</li><li>schemaPath</code>: Percorso del campo all&#39;interno dello schema del set di dati.</li></ul>`labels`: Elenco di etichette di utilizzo dati da aggiungere al campo. |
+| `optionalLabels` | Un elenco di tutti i singoli campi all&#39;interno del set di dati a cui si desidera aggiungere etichette. Ogni elemento di questa matrice deve avere le seguenti proprietà: <br/><br/>`option`: Un oggetto che contiene gli attributi [!DNL Experience Data Model] (XDM) del campo. Sono richieste le tre proprietà seguenti:<ul><li>id</code>: Il valore URI $id</code> dello schema associato al campo.</li><li>contentType</code>: Il tipo di contenuto e il numero di versione dello schema. Questo deve assumere la forma di una delle intestazioni <a href="../../xdm/api/getting-started.md#accept"></a> Accetta valide per una richiesta di ricerca XDM.</li><li>schemaPath</code>: Percorso del campo all&#39;interno dello schema del set di dati.</li></ul>`labels`: Elenco di etichette di utilizzo dati da aggiungere al campo. |
 
 **Risposta**
 
