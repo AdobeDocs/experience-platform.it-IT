@@ -5,7 +5,7 @@ title: Vincoli del tipo di campo XDM
 topic: overview
 description: Un riferimento per i vincoli dei tipi di campo XDM, compresi gli altri formati di serializzazione a cui possono essere mappati e come definire i propri tipi di campo nell'API.
 translation-type: tm+mt
-source-git-commit: 19167f58fae6fac7d938deb74182d2e19960beb3
+source-git-commit: e92294b9dcea37ae2a4a398c9d3397dcf5aa9b9e
 workflow-type: tm+mt
 source-wordcount: '994'
 ht-degree: 5%
@@ -40,7 +40,7 @@ La tabella seguente descrive la mappatura tra ciascun tipo XDM (`meta:xdmType`) 
 | data-ora | type:<br>stringformat:date-time<br>(RFC 3339, sezione 5.6) | INT64/TIMESTAMP_MILLIS | TimestampType | java.util.Date | java.util.Date | System.DateTime | Stringa | timestamp | Integer<br>(unix millis) | int64<br>(unix millis) |
 | map | object | MAP annotated group<br><br>&lt;<span>key_type</span>> DEVE essere STRING<br><br>&lt;<span>value_type</span>> tipo di valori mappa | MapType<br><br>&quot;keyType&quot; DEVE essere StringType<br><br>&quot;valueType&quot; è il tipo di valori della mappa. | java.util.Map | Mappa | --- | object | object | map | map&lt;<span>key_type, value_type</span>> |
 
-## Definizione dei tipi di campo XDM nell&#39;API
+## Definizione dei tipi di campo XDM nell&#39;API {#define-fields}
 
 Gli schemi XDM sono definiti utilizzando gli standard [JSON Schema](https://json-schema.org/) e i tipi di campo di base, con vincoli aggiuntivi per i nomi di campo che vengono applicati da [!DNL Experience Platform]. L&#39;API [del Registro di sistema dello](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) schema consente di definire ulteriori tipi di campi mediante l&#39;uso di formati e vincoli facoltativi. I tipi di campo XDM sono esposti dall&#39;attributo a livello di campo `meta:xdmType`.
 
@@ -50,7 +50,7 @@ Gli schemi XDM sono definiti utilizzando gli standard [JSON Schema](https://json
 
 La tabella seguente delinea la formattazione appropriata per definire i tipi di campi scalari e i tipi di campi più specifici utilizzando le proprietà facoltative. Ulteriori informazioni sulle proprietà facoltative e sulle parole chiave specifiche per i tipi sono disponibili nella documentazione [sullo schema](https://json-schema.org/understanding-json-schema/reference/type.html)JSON.
 
-Per iniziare, trova il tipo di campo desiderato e utilizza il codice di esempio fornito per creare la richiesta API per [creare un mixin](../api/create-mixin.md) o [creare un tipo](../api/create-data-type.md)di dati.
+Per iniziare, trova il tipo di campo desiderato e utilizza il codice di esempio fornito per creare la richiesta API per [creare un mixin](../api/mixins.md#create) o [creare un tipo](../api/data-types.md#create)di dati.
 
 <table>
   <tr>
