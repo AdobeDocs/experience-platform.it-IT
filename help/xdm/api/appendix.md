@@ -5,9 +5,9 @@ title: Appendice sviluppatore del Registro di sistema dello schema
 description: Questo documento fornisce informazioni supplementari relative all'utilizzo dell'API del Registro di sistema dello schema.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 42d3bed14c5f926892467baeeea09ee7a140ebdc
+source-git-commit: 0b55f18eabcf1d7c5c233234c59eb074b2670b93
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '730'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,43 @@ ht-degree: 0%
 # Appendice
 
 Questo documento fornisce informazioni supplementari relative all&#39;utilizzo dell&#39; [!DNL Schema Registry] API.
+
+## Utilizzo dei parametri di query {#query}
+
+Supporta [!DNL Schema Registry] l&#39;utilizzo di parametri di query per visualizzare la pagina e filtrare i risultati quando vengono elencate le risorse.
+
+>[!NOTE]
+>
+>Quando si combinano più parametri di query, questi devono essere separati da e commerciale (`&`).
+
+### Pagine {#paging}
+
+I parametri di query più comuni per il paging includono:
+
+| Parametro | Descrizione |
+| --- | --- |
+| `start` | Specificate dove devono iniziare i risultati elencati. Questo valore può essere ottenuto dall&#39; `_page.next` attributo di una risposta a un elenco e utilizzato per accedere alla pagina successiva dei risultati. Se il `_page.next` valore è null, non è disponibile alcuna pagina aggiuntiva. |
+| `limit` | Limita il numero di risorse restituite. Esempio: `limit=5` restituirà un elenco di cinque risorse. |
+| `orderby` | Ordinare i risultati in base a una proprietà specifica. Esempio: `orderby=title` ordinerà i risultati in ordine crescente (A-Z) in base al titolo. Se si aggiunge un `-` valore prima del parametro (`orderby=-title`), gli elementi vengono ordinati per titolo in ordine decrescente (Z-A). |
+
+### Filtro {#filtering}
+
+Potete filtrare i risultati utilizzando il `property` parametro, utilizzato per applicare un operatore specifico a una determinata proprietà JSON all&#39;interno delle risorse recuperate. Gli operatori supportati includono:
+
+| Operatore | Descrizione | Esempio |
+| --- | --- | --- |
+| `==` | Filtra in base al fatto che la proprietà sia uguale al valore fornito. | `property=title==test` |
+| `!=` | Filtra in base al fatto che la proprietà non sia uguale al valore fornito. | `property=title!=test` |
+| `<` | Filtra in base al fatto che la proprietà sia minore del valore fornito. | `property=version<5` |
+| `>` | Filtra in base al fatto che la proprietà sia maggiore del valore fornito. | `property=version>5` |
+| `<=` | Filtra se la proprietà è minore o uguale al valore specificato. | `property=version<=5` |
+| `>=` | Filtra in base al fatto che la proprietà sia maggiore o uguale al valore fornito. | `property=version>=5` |
+| `~` | Filtra in base al fatto che la proprietà corrisponda o meno a un&#39;espressione regolare specificata. | `property=title~test$` |
+| (Nessuna) | Se si specifica solo il nome della proprietà, vengono restituite solo le voci in cui esiste la proprietà. | `property=title` |
+
+>[!TIP]
+>
+>Potete usare il `property` parametro per filtrare i mixin in base alla classe compatibile. Ad esempio, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` restituisce solo i mixin compatibili con la [!DNL XDM Individual Profile] classe.
 
 ## Modalità compatibilità
 
