@@ -5,9 +5,9 @@ title: Esplora un sistema di archiviazione cloud utilizzando l'API del servizio 
 topic: overview
 description: Questa esercitazione utilizza l’API del servizio di flusso per esplorare un sistema di archiviazione cloud di terze parti.
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 026007e5f80217f66795b2b53001b6cf5e6d2344
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '745'
 ht-degree: 2%
 
 ---
@@ -15,9 +15,7 @@ ht-degree: 2%
 
 # Esplora un sistema di archiviazione cloud utilizzando l&#39; [!DNL Flow Service] API
 
-[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
-
-Questa esercitazione utilizza l&#39; [!DNL Flow Service] API per esplorare un sistema di archiviazione cloud di terze parti.
+Questa esercitazione utilizza l&#39; [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) per esplorare un sistema di archiviazione cloud di terze parti.
 
 ## Introduzione
 
@@ -28,14 +26,16 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Expe
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegarsi correttamente a un sistema di archiviazione cloud utilizzando l&#39; [!DNL Flow Service] API.
 
-### Ottenere una connessione di base
+### Ottenere un ID connessione
 
-Per esplorare un archivio cloud di terze parti tramite [!DNL Platform] le API, è necessario possedere un ID di connessione di base valido. Se non si dispone già di una connessione di base per l&#39;archivio con cui si desidera lavorare, è possibile crearne una tramite le seguenti esercitazioni:
+Per esplorare un archivio cloud di terze parti tramite [!DNL Platform] le API, è necessario possedere un ID connessione valido. Se non si dispone già di una connessione per lo storage con cui si desidera lavorare, è possibile crearne una tramite le seguenti esercitazioni:
 
 * [Amazon S3](../create/cloud-storage/s3.md)
 * [BLOB di Azure](../create/cloud-storage/blob.md)
 * [Azure Data Lake Storage Gen2](../create/cloud-storage/adls-gen2.md)
+* [Archiviazione file Azure](../create/cloud-storage/azure-file-storage.md)
 * [Google Cloud Store](../create/cloud-storage/google.md)
+* [HDFS](../create/cloud-storage/hdfs.md)
 * [SFTP](../create/cloud-storage/sftp.md)
 
 ### Lettura di chiamate API di esempio
@@ -46,21 +46,21 @@ Questa esercitazione fornisce esempi di chiamate API per dimostrare come formatt
 
 Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
 
-* Autorizzazione: Portatore `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva per il tipo di supporto:
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## Esplora l&#39;archiviazione cloud
 
-Utilizzando la connessione di base per l&#39;archiviazione cloud, potete esplorare file e directory eseguendo richieste di GET. Quando si eseguono richieste di GET per esplorare l&#39;archiviazione cloud, è necessario includere i parametri di query elencati nella tabella seguente:
+Utilizzando l&#39;ID connessione per l&#39;archiviazione cloud, potete esplorare file e directory eseguendo richieste di GET. Quando si eseguono richieste di GET per esplorare l&#39;archiviazione cloud, è necessario includere i parametri di query elencati nella tabella seguente:
 
 | Parametro | Descrizione |
 | --------- | ----------- |
@@ -72,20 +72,20 @@ Utilizzate la seguente chiamata per trovare il percorso del file in cui desidera
 **Formato API**
 
 ```http
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=folder&object={PATH}
+GET /connections/{CONNECTION_ID}/explore?objectType=root
+GET /connections/{CONNECTION_ID}/explore?objectType=folder&object={PATH}
 ```
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | ID di una connessione di base per l&#39;archiviazione cloud. |
+| `{CONNECTION_ID}` | L&#39;ID di connessione per il connettore di origine dell&#39;archiviazione cloud. |
 | `{PATH}` | Percorso di una directory. |
 
 **Richiesta**
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID}/explore?objectType=folder&object=/some/path/' \
+    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=folder&object=/some/path/' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -113,25 +113,30 @@ Una risposta corretta restituisce un array di file e cartelle presenti nella dir
 
 ##  Inspect la struttura di un file
 
-Per esaminare la struttura del file di dati dall&#39;archivio cloud, esegui una richiesta di GET fornendo il percorso del file come parametro di query.
+Per esaminare la struttura del file di dati dall&#39;archivio cloud, eseguire una richiesta di GET fornendo il percorso del file e digitare come parametro di query.
+
+Potete esaminare la struttura di un file CSV o TSV specificando un delimitatore personalizzato come perimetro di query. Qualsiasi valore di carattere singolo è un delimitatore di colonna consentito. Se non viene fornito, come valore predefinito `(,)` viene utilizzata una virgola.
 
 **Formato API**
 
 ```http
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&preview=true&fileType=delimited&columnDelimiter=;
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&preview=true&fileType=delimited&columnDelimiter=\t
 ```
 
 | Parametro | Descrizione |
-| --- | --- |
-| `{BASE_CONNECTION_ID}` | ID di una connessione di base per l&#39;archiviazione cloud. |
-| `{FILE_PATH}` | Percorso di un file. |
+| --------- | ----------- |
+| `{CONNECTION_ID}` | L&#39;ID di connessione del connettore di origine dell&#39;archiviazione cloud. |
+| `{FILE_PATH}` | Percorso del file da esaminare. |
 | `{FILE_TYPE}` | Il tipo di file. I tipi di file supportati includono:<ul><li>DELIMITATO</code>: Valore separato da delimitatore. I file DSV devono essere separati da virgole.</li><li>JSON</code>: Notazione oggetto JavaScript. I file JSON devono essere conformi a XDM</li><li>PARQUET</code>: Parquet Apache. I file parquet devono essere conformi a XDM.</li></ul> |
+| `columnDelimiter` | Il valore del singolo carattere specificato come delimitatore di colonna per esaminare i file CSV o TSV. Se il parametro non è specificato, per impostazione predefinita il valore è una virgola `(,)`. |
 
 **Richiesta**
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID}/explore?objectType=file&object=/some/path/data.csv&fileType=DELIMITED' \
+    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=file&object=/some/path/data.csv&fileType=DELIMITED' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
