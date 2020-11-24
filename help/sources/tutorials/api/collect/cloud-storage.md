@@ -6,17 +6,15 @@ topic: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi necessari per recuperare i dati da un archivio cloud di terze parti e inserirli nella piattaforma tramite connettori sorgente e API.
 translation-type: tm+mt
-source-git-commit: b0f6e51a784aec7850d92be93175c21c91654563
+source-git-commit: 026007e5f80217f66795b2b53001b6cf5e6d2344
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1583'
 ht-degree: 1%
 
 ---
 
 
 # Raccolta di dati di archiviazione cloud tramite connettori di origine e API
-
-[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
 Questa esercitazione descrive i passaggi necessari per recuperare i dati da un archivio cloud di terze parti e inserirli nella piattaforma tramite connettori sorgente e [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
@@ -62,13 +60,17 @@ Per creare una connessione di origine, è inoltre necessario definire un valore 
 
 Utilizzate i seguenti valori enum per i connettori basati su file:
 
-| Data.format | Valore Enum |
+| Formato dati | Valore Enum |
 | ----------- | ---------- |
-| File delimitati | `delimited` |
-| File JSON | `json` |
-| Parquet, file | `parquet` |
+| Delimitato | `delimited` |
+| JSON | `json` |
+| Parquet | `parquet` |
 
-Per tutti i connettori basati su tabelle, utilizzate il valore enum: `tabular`.
+Per tutti i connettori basati su tabelle, impostate il valore su `tabular`.
+
+>[!NOTE]
+>
+>Potete assimilare i file CSV e TSV con un connettore origine di archiviazione cloud specificando un delimitatore di colonna come proprietà. Qualsiasi valore di carattere singolo è un delimitatore di colonna consentito. Se non viene fornito, come valore predefinito `(,)` viene utilizzata una virgola.
 
 **Formato API**
 
@@ -88,13 +90,14 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Cloud storage source connector",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "connectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
         "description": "Cloud storage source connector",
         "data": {
-            "format": "delimited"
+            "format": "delimited",
+            "columnDelimiter": "\t"
         },
         "params": {
-            "path": "/demo/data7.csv",
+            "path": "/ingestion-demos/leads/tsv_data/*.tsv",
             "recursive": "true"
         },
             "connectionSpec": {
@@ -106,7 +109,9 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `baseConnectionId` | L&#39;ID di connessione univoco del sistema di archiviazione cloud di terze parti a cui si accede. |
+| `connectionId` | L&#39;ID di connessione univoco del sistema di archiviazione cloud di terze parti a cui si accede. |
+| `data.format` | Un valore enum che definisce l&#39;attributo del formato dati. |
+| `data.columnDelimiter` | Potete utilizzare un carattere di delimitazione di colonna singolo per raccogliere file semplici. Questa proprietà è necessaria solo per l’assimilazione di file CSV o TSV. |
 | `params.path` | Percorso del file di origine a cui si accede. |
 | `connectionSpec.id` | L&#39;ID della specifica di connessione associato al sistema di archiviazione cloud di terze parti specifico. Vedi l&#39; [appendice](#appendix) per un elenco degli ID delle specifiche di connessione. |
 
@@ -126,8 +131,6 @@ Una risposta corretta restituisce l’identificatore univoco (`id`) della connes
 Affinché i dati di origine siano utilizzati in [!DNL Platform], è necessario creare uno schema di destinazione per strutturare i dati di origine in base alle esigenze. Lo schema di destinazione viene quindi utilizzato per creare un [!DNL Platform] dataset in cui sono contenuti i dati di origine.
 
 È possibile creare uno schema XDM di destinazione eseguendo una richiesta POST all&#39;API [del Registro di](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)schema.
-
-Se si preferisce utilizzare l&#39;interfaccia utente in [!DNL Experience Platform], l&#39;esercitazione [Editor](../../../../xdm/tutorials/create-schema-ui.md) schema fornisce istruzioni dettagliate per eseguire azioni simili nell&#39;Editor schema.
 
 **Formato API**
 
@@ -279,9 +282,9 @@ Una risposta corretta restituisce un array contenente l&#39;ID del set di dati a
 
 ## Creare una connessione di destinazione {#target-connection}
 
-Una connessione di destinazione rappresenta la connessione alla destinazione in cui i dati acquisiti entrano. Per creare una connessione di destinazione, è necessario fornire l&#39;ID di specifica di connessione fisso associato al data Lake. Questo ID della specifica di connessione è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Una connessione di destinazione rappresenta la connessione alla destinazione in cui i dati acquisiti entrano. Per creare una connessione di destinazione, è necessario fornire l&#39;ID di specifica di connessione fisso associato al Data Lake. Questo ID della specifica di connessione è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Ora sono disponibili gli identificatori univoci, uno schema di destinazione, un set di dati di destinazione e l&#39;ID delle specifiche di connessione al data Lake. Utilizzando questi identificatori, potete creare una connessione di destinazione utilizzando l&#39; [!DNL Flow Service] API per specificare il dataset che conterrà i dati di origine in ingresso.
+Ora gli identificatori univoci sono uno schema di destinazione, un set di dati di destinazione e l&#39;ID della specifica di connessione al Data Lake. Utilizzando questi identificatori, potete creare una connessione di destinazione utilizzando l&#39; [!DNL Flow Service] API per specificare il dataset che conterrà i dati di origine in ingresso.
 
 **Formato API**
 
@@ -322,7 +325,7 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | Il valore `$id` dello schema XDM di destinazione. |
 | `params.dataSetId` | ID del set di dati di destinazione. |
-| `connectionSpec.id` | L&#39;ID della specifica di connessione fissa al data Lake. Questo ID è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | L&#39;ID della specifica di connessione fissa al Data Lake. Questo ID è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Risposta**
 
@@ -403,8 +406,8 @@ Una risposta corretta restituisce i dettagli della mappatura appena creata, incl
     "version": 0,
     "createdDate": 1597784069368,
     "modifiedDate": 1597784069368,
-    "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
-    "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}"
 }
 ```
 
