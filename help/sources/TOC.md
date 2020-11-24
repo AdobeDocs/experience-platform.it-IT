@@ -5,10 +5,10 @@ user-guide-title: Guida ai connettori di sorgenti di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di sorgenti
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 translation-type: tm+mt
-source-git-commit: 39e419b78938afd91e3d7471241e377f352214ee
+source-git-commit: 68ed1ceb2f7410bd970fa43c5f0db11b1b8ea388
 workflow-type: tm+mt
-source-wordcount: '683'
-ht-degree: 3%
+source-wordcount: '663'
+ht-degree: 4%
 
 ---
 
@@ -138,10 +138,11 @@ ht-degree: 3%
       - [Raccolta dei dati del protocollo](tutorials/api/collect/protocols.md)
       - [Raccogliere i dati di streaming](tutorials/api/collect/streaming.md)
    - [Acquisire dati di parquet da un sistema di storage cloud di terze parti](tutorials/api/cloud-storage-parquet.md)
-   - [Creazione di una connessione di base di dataset tramite l&#39;API del servizio di flusso](tutorials/api/create-dataset-base-connection.md)
-   - [Monitorare i flussi di dati mediante l&#39;API di Flusso Service](tutorials/api/monitor.md)
-   - [Aggiornamento delle informazioni di connessione tramite l&#39;API del servizio di flusso](tutorials/api/update.md)
-   - [Eliminare le connessioni tramite l&#39;API del servizio di flusso](tutorials/api/delete.md)
+   - [Creazione di una connessione dataset](tutorials/api/create-dataset-base-connection.md)
+   - [Monitorare i flussi di dati](tutorials/api/monitor.md)
+   - [Aggiorna connessioni](tutorials/api/update.md)
+   - [Elimina connessioni](tutorials/api/delete.md)
+   - [Eliminare i flussi di dati](tutorials/api/delete-dataflows.md)
 - Esercitazioni sull’interfaccia utente {#ui-tutorials}
    - Creare un connettore di origine {#create}
       -  applicazioni Adobe {#adobe-applications}
