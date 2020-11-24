@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai
 solution: Experience Platform
-title: Guida introduttiva a Content and Commerce AI]
+title: Guida introduttiva a Content and Commerce AI
 topic: Getting started
 description: Content and Commerce AI utilizza  API I/O Adobe. Per effettuare chiamate alle API I/O  Adobe e all'integrazione della console I/O, è innanzitutto necessario completare l'esercitazione sull'autenticazione.
 translation-type: tm+mt
-source-git-commit: 9ee888b02b4a402200ca4fcaed4a59c0a7eb94cd
+source-git-commit: 2be04547b96e1a6c293cc63e782fe1b3259619ba
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '571'
 ht-degree: 0%
 
 ---
 
 
-# Getting started with [!DNL Content and Commerce AI]
+# Guida introduttiva a Content and Commerce AI
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valor
 
 ## Creare un ambiente Postman (facoltativo)
 
-Dopo aver configurato il progetto e l&#39;API in  Adobe Developer Console, potete scaricare un file di ambiente per Postman. Sotto **[!UICONTROL APIs]** la barra a sinistra del progetto, selezionate **[!UICONTROL Content and Commerce AI]**. Si apre una nuova scheda contenente una scheda con etichetta &quot;[!DNL Try it out]&quot;. Selezionate **Scarica per Postman** per scaricare un file JSON usato per configurare l’ambiente postman.
+Dopo aver configurato il progetto e l&#39;API in  Adobe Developer Console, potete scaricare un file di ambiente per Postman. Sotto **[!UICONTROL APIs]** la barra a sinistra del progetto, selezionate **[!UICONTROL Content and Commerce AI]**. Si apre una nuova scheda contenente una scheda con etichetta &quot;[!DNL Try it out]&quot;. Selezionate **Scarica per Postman** per scaricare un file JSON utilizzato per configurare l&#39;ambiente postman.
 
 ![download per postman](./images/add-to-postman.png)
 
@@ -75,4 +75,4 @@ Una volta ottenute tutte le credenziali, è possibile impostare un lavoratore pe
 
 Per ulteriori informazioni sul framework di estensibilità, consultare innanzitutto il documento [introduttivo all’estensibilità](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html) . Questo documento descrive i prerequisiti e i requisiti di provisioning.
 
-Per ulteriori informazioni sulla configurazione di un ambiente per [!DNL Content and Commerce AI], consultare la guida alla [configurazione di un ambiente](https://docs.adobe.com/content/help/en/asset-compute/using/extend/setup-environment.html)di sviluppo. Questo documento fornisce istruzioni di configurazione che consentono di sviluppare per il servizio di calcolo delle risorse.
+Per ulteriori informazioni sulla configurazione di un ambiente per [!DNL Content and Commerce AI], consultare la guida alla [configurazione di un ambiente](https://docs.adobe.com/content/help/en/asset-compute/using/extend/setup-environment.html)di sviluppo. Questo documento fornisce istruzioni di configurazione che consentono di sviluppare per il servizio di Asset compute .
