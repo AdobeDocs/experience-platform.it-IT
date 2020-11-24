@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; update connections
+keywords: Experience Platform;home;popular topics;flow service;delete connections;delete;api
 solution: Experience Platform
 title: Eliminare una connessione utilizzando l'API del servizio di flusso
 topic: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per eliminare una connessione mediante l'API del servizio di flusso.
 translation-type: tm+mt
-source-git-commit: 9c807270181084a94f288c248a678821ca58e194
+source-git-commit: 9e28591ef9f07217363cddf72356b8e5cd8a15a3
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '580'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Questa esercitazione richiede inoltre di conoscere i seguenti componenti di Adob
 * [Origini](../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi.
 * [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per aggiornare correttamente le informazioni della connessione utilizzando l&#39; [!DNL Flow Service] API.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per eliminare correttamente una connessione utilizzando l&#39; [!DNL Flow Service] API.
 
 ### Lettura di chiamate API di esempio
 
@@ -132,7 +132,7 @@ DELETE /connections/{CONNECTION_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | Il `id` valore univoco della connessione da aggiornare. |
+| `{CONNECTION_ID}` | Il `id` valore univoco della connessione da eliminare. |
 
 **Richiesta**
 
