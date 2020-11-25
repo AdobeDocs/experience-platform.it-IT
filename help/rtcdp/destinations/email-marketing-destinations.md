@@ -6,9 +6,9 @@ type: Tutorial
 description: I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio per l’invio di campagne e-mail promozionali.
 seo-description: I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio per l’invio di campagne e-mail promozionali.
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 7903d6c715747dfc298a5e4a4615d8ecbbe5d359
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '828'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Nel **[!UICONTROL Authentication]** passaggio, se in precedenza hai impostato un
 - Per **SFTP con connessioni con password** , dovete fornire Domain, Port, Username e Password per il vostro server SFTP.
 - Per **SFTP con connessioni chiavi** SSH, dovete fornire Domain, Port, Username e Chiave SSH per il vostro server SFTP.
 
-Facoltativamente, puoi allegare la chiave pubblica in formato RSA per aggiungere la cifratura ai file esportati nella **[!UICONTROL Key]** sezione. Questa chiave pubblica **deve** essere scritta come una stringa codificata Base64.
+Facoltativamente, nella **[!UICONTROL Encryption PGP/GPG]** sezione è possibile allegare la chiave pubblica in formato RSA per aggiungere la crittografia con PGP/GPG ai file esportati nella **[!UICONTROL Key]** sezione. Questa chiave pubblica **deve** essere scritta come una stringa codificata Base64.
 
 Nel **[!UICONTROL Setup]** passaggio, immettete un nome e una descrizione per la nuova destinazione, nonché il formato del file per i file esportati.
 
