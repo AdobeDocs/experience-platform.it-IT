@@ -5,7 +5,7 @@ title: Accesso ai dati nei notebook Jupyterlab
 topic: Developer Guide
 description: Questa guida è incentrata su come utilizzare i notebook Jupyter, creati in Data Science Workspace per accedere ai dati.
 translation-type: tm+mt
-source-git-commit: a9d65c107d0490910239ed73ac5c19881206c189
+source-git-commit: 645a0f595d268fb08ebfa5652f77a4b1628afcd3
 workflow-type: tm+mt
 source-wordcount: '3008'
 ht-degree: 9%
@@ -129,9 +129,8 @@ L&#39;esecuzione del codice seguente consente di leggere l&#39;intero set di dat
 ```python
 # Python
 
-client_context = PLATFORM_SDK_CLIENT_CONTEXT
 from platform_sdk.dataset_reader import DatasetReader
-dataset_reader = DatasetReader(client_context, "{DATASET_ID}")
+dataset_reader = DatasetReader(get_platform_sdk_client_context(), dataset_id="{DATASET_ID}")
 df = dataset_reader.read()
 df.head()
 ```
@@ -143,10 +142,9 @@ L&#39;esecuzione del codice seguente consente di leggere i dati dal set di dati 
 ```python
 # Python
 
-client_context = PLATFORM_SDK_CLIENT_CONTEXT
 from platform_sdk.dataset_reader import DatasetReader
 
-dataset_reader = DatasetReader(client_context, "{DATASET_ID}")
+dataset_reader = DatasetReader(get_platform_sdk_client_context(), dataset_id="{DATASET_ID}")
 df = dataset_reader.limit(100).offset(10).read()
 ```
 
@@ -166,8 +164,8 @@ In alternativa, è possibile copiare e incollare la seguente cella di codice. So
 from platform_sdk.models import Dataset
 from platform_sdk.dataset_writer import DatasetWriter
 
-dataset = Dataset(client_context).get_by_id("{DATASET_ID}")
-dataset_writer = DatasetWriter(client_context, dataset)
+dataset = Dataset(get_platform_sdk_client_context()).get_by_id(dataset_id="{DATASET_ID}")
+dataset_writer = DatasetWriter(get_platform_sdk_client_context(), dataset)
 write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 ```
 
@@ -229,10 +227,9 @@ La cella seguente filtra un [!DNL ExperienceEvent] set di dati a dati esistenti 
 ```python
 # Python
 
-client_context = PLATFORM_SDK_CLIENT_CONTEXT
 from platform_sdk.dataset_reader import DatasetReader
 
-dataset_reader = DatasetReader(client_context, "{DATASET_ID}")
+dataset_reader = DatasetReader(get_platform_sdk_client_context(), dataset_id="{DATASET_ID}")
 df = dataset_reader.\
     where(dataset_reader["timestamp"].gt("2019-01-01 00:00:00").\
     And(dataset_reader["timestamp"].lt("2019-12-31 23:59:59"))\
@@ -261,6 +258,7 @@ L&#39;esecuzione del codice seguente consente di leggere l&#39;intero set di dat
 library(reticulate)
 use_python("/usr/local/bin/ipython")
 psdk <- import("platform_sdk")
+datetime <- import("datetime", convert = FALSE)
 py_run_file("~/.ipython/profile_default/startup/platform_sdk_context.py")
 DatasetReader <- psdk$dataset_reader$DatasetReader
 dataset_reader <- DatasetReader(py$get_platform_sdk_client_context(), dataset_id="{DATASET_ID}")
@@ -278,6 +276,7 @@ L&#39;esecuzione del codice seguente consente di leggere i dati dal set di dati 
 library(reticulate)
 use_python("/usr/local/bin/ipython")
 psdk <- import("platform_sdk")
+datetime <- import("datetime", convert = FALSE)
 py_run_file("~/.ipython/profile_default/startup/platform_sdk_context.py")
 
 DatasetReader <- psdk$dataset_reader$DatasetReader
@@ -325,6 +324,7 @@ La cella seguente filtra un [!DNL ExperienceEvent] set di dati a dati esistenti 
 library(reticulate)
 use_python("/usr/local/bin/ipython")
 psdk <- import("platform_sdk")
+datetime <- import("datetime", convert = FALSE)
 py_run_file("~/.ipython/profile_default/startup/platform_sdk_context.py")
 
 client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
@@ -397,7 +397,7 @@ Selezionate la scheda Icona dati (evidenziata di seguito) nella navigazione a si
 
 ### Creare un dataframe locale {#pyspark-create-dataframe}
 
-Per creare un dataframe locale utilizzando PySpark 3, utilizzate le query SQL. Ad esempio:
+Per creare un dataframe locale utilizzando PySpark 3, utilizzate le query SQL. Esempio:
 
 ```scala
 date_aggregation.createOrReplaceTempView("temp_df")
@@ -487,6 +487,7 @@ val df1 = spark.read.format("com.adobe.platform.query")
   .option("ims-org", clientContext.getOrgId())
   .option("api-key", clientContext.getApiKey())
   .option("service-token", clientContext.getServiceToken())
+  .option("sandbox-name", clientContext.getSandboxName())
   .option("mode", "interactive")
   .option("dataset-id", "5e68141134492718af974844")
   .load()
@@ -531,6 +532,7 @@ df1.write.format("com.adobe.platform.query")
   .option("service-token", clientContext.getServiceToken())
   .option("ims-org", clientContext.getOrgId())
   .option("api-key", clientContext.getApiKey())
+  .option("sandbox-name", clientContext.getSandboxName())
   .option("mode", "interactive")
   .option("dataset-id", "5e68141134492718af974844")
   .save()
@@ -550,7 +552,7 @@ df1.write.format("com.adobe.platform.query")
 
 ### creare un dataframe locale {#scala-create-dataframe}
 
-Per creare un dataframe locale utilizzando Scala, sono necessarie query SQL. Ad esempio:
+Per creare un dataframe locale utilizzando Scala, sono necessarie query SQL. Esempio:
 
 ```scala
 sparkdf.createOrReplaceTempView("sparkdf")
