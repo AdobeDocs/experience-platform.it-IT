@@ -6,9 +6,9 @@ seo-title: Attivare profili e segmenti su una destinazione
 description: Attiva i dati disponibili in Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 seo-description: Attiva i dati disponibili in Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 translation-type: tm+mt
-source-git-commit: bb59d93e016d49a0ebba77af1f90563a8767f072
+source-git-commit: 5928242537acdb1f130a0e8ac1bca3f14c184c6a
 workflow-type: tm+mt
-source-wordcount: '1691'
+source-wordcount: '1647'
 ht-degree: 0%
 
 ---
@@ -127,14 +127,6 @@ Sulla **[!UICONTROL Segment schedule]** pagina è possibile impostare la data in
 >Per le destinazioni social, devi selezionare l&#39;origine del pubblico in questo passaggio. Puoi passare al passaggio successivo solo dopo aver selezionato una delle opzioni nell’immagine sottostante.
 
 ![scegli origine dati](./assets/choose-data-origin.png)
-
-### **[!UICONTROL Scheduling]** step {#scheduling}
-
-Si applica a: destinazioni di e-mail marketing e archiviazione cloud
-
-![fase di pianificazione del segmento](./assets/scheduling-icon.png)
-
-Sulla **[!UICONTROL Scheduling]** pagina è possibile visualizzare la data di inizio per l&#39;invio dei dati alla destinazione e la frequenza di invio dei dati alla destinazione. Questi valori non possono essere modificati.
 
 ### **[!UICONTROL Select attributes]** step {#select-attributes}
 
