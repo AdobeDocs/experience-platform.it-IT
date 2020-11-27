@@ -2,10 +2,10 @@
 title: Mappatura manuale delle variabili in  Adobe Analytics
 seo-title: Mappatura manuale delle variabili in  Adobe Analytics con SDK Web
 description: Come mappare manualmente le variabili in  Adobe Analytics utilizzando le regole di elaborazione
-seo-description: mappare manualmente le variabili in  Adobe Analytics utilizzando le regole di elaborazione con SDK Web
+seo-description: Mappatura manuale delle variabili in  Adobe Analytics tramite regole di elaborazione con Web SDK
 keywords: adobe analytics;analytics;variables;mapping variables;map variables;contextData;context Data;Processing rules;rules;xdm;schema;
 translation-type: tm+mt
-source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
+source-git-commit: 206b5addd6baf5a120b469b21313ee86ac1fe53b
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%
@@ -52,7 +52,7 @@ Per essere utilizzati da [!DNL Analytics], i dati XDM vengono appiattiti mediant
 
 Tutti i dati raccolti dalla rete edge sono accessibili tramite regole [di](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html)elaborazione. In [!DNL Analytics], puoi utilizzare le regole di elaborazione per incorporare dati contestuali in [!DNL Analytics] variabili.
 
-Ad esempio, nella regola seguente,  Adobe Analytics è impostato per compilare i termini di ricerca **interna ( eVar2)** con i dati associati a **a.x_atag.search.term(Context Data)**.
+Ad esempio, nella regola seguente,  Adobe Analytics è impostato per compilare i termini di ricerca **interna ( eVar2)** con i dati associati a **a.x._atag.search.term(Context Data)**.
 
 ![](assets/examplerule.png)
 
