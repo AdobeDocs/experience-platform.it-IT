@@ -5,9 +5,9 @@ description: Scopri come tenere traccia  eventi SDK Web per Experienci Platform
 seo-description: Scopri come tenere traccia  eventi SDK Web per Experienci Platform
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 51a846124f71012b2cb324cc1469ec7c9753e574
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1331'
 ht-degree: 0%
 
 ---
@@ -43,6 +43,35 @@ alloy("sendEvent", {
   }
 });
 ```
+
+È possibile che passi un certo tempo tra il momento in cui il `sendEvent` comando viene eseguito e il momento in cui i dati vengono inviati al server (ad esempio, se la libreria SDK Web non è stata caricata completamente o se il consenso non è ancora stato ricevuto). Se si desidera modificare una parte dell&#39; `xdm` oggetto dopo l&#39;esecuzione del `sendEvent` comando, è consigliabile duplicare l&#39; `xdm` oggetto _prima_ dell&#39;esecuzione del `sendEvent` comando. Esempio:
+
+```javascript
+var clone = function(value) {
+  return JSON.parse(JSON.stringify(value));
+};
+
+var dataLayer = {
+  "commerce": {
+    "order": {
+      "purchaseID": "a8g784hjq1mnp3",
+      "purchaseOrderNumber": "VAU3123",
+      "currencyCode": "USD",
+      "priceTotal": 999.98
+    }
+  }
+};
+
+alloy("sendEvent", {
+  "xdm": clone(dataLayer)
+});
+
+// This change will not be reflected in the data sent to the 
+// server for the prior sendEvent command.
+dataLayer.commerce = null;
+```
+
+In questo esempio, il livello dati viene clonato serializzandolo in JSON e quindi deserializzandolo. Quindi, il risultato clonato viene passato nel `sendEvent` comando. In questo modo si assicura che il `sendEvent` comando disponga di un&#39;istantanea del livello dati così come esisteva quando il `sendEvent` comando è stato eseguito, in modo che le modifiche successive all&#39;oggetto livello dati originale non si riflettano nei dati inviati al server. Se utilizzate un livello dati basato su eventi, è probabile che la duplicazione dei dati sia già gestita automaticamente. Ad esempio, se utilizzate il Livello [dati client](https://github.com/adobe/adobe-client-data-layer/wiki)Adobe, il `getState()` metodo fornisce un&#39;istantanea calcolata e clonata di tutte le modifiche precedenti. Questo viene gestito automaticamente anche se utilizzi l’estensione AEP Web SDK Launch.
 
 >[!NOTE]
 >
