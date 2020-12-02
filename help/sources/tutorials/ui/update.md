@@ -1,0 +1,66 @@
+---
+keywords: Experience Platform;home;popular topics;update accounts;
+description: null
+solution: Experience Platform
+title: Aggiornamento dei dettagli dell'account nell'interfaccia utente
+topic: overview
+type: Tutorial
+translation-type: tm+mt
+source-git-commit: 413687a0d9e790ea3f61a858002e9510216d7c34
+workflow-type: tm+mt
+source-wordcount: '389'
+ht-degree: 1%
+
+---
+
+
+# Aggiornamento dei dettagli dell&#39;account nell&#39;interfaccia utente
+
+In alcuni casi, potrebbe essere necessario aggiornare i dettagli di un account di origine esistente. L’ [!UICONTROL Sources] area di lavoro consente di modificare, aggiungere ed eliminare i dettagli di un account, inclusi i valori per il nome, la descrizione e le credenziali di autenticazione.
+
+Questa esercitazione fornisce i passaggi per aggiornare i dettagli e le credenziali di un account esistente dall&#39; [!UICONTROL Sources] area di lavoro.
+
+## Introduzione
+
+Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+
+- [[!DNL Experience Data Model (XDM)] Sistema](../../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
+   - [Nozioni di base sulla composizione](../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
+   - [Esercitazione](../../../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
+- [[!DNL Real-time Customer Profile]](../../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+
+## Aggiorna account
+
+Accedete per accedere all’interfaccia utente [del Experience Platform](https://platform.adobe.com) , quindi selezionate **[!UICONTROL Sources]** dal menu di navigazione a sinistra per accedere all’ [!UICONTROL Sources] area di lavoro. Selezionate **[!UICONTROL Accounts]** dall&#39;intestazione superiore per visualizzare gli account esistenti.
+
+![catalogo](../../images/tutorials/update/catalog.png)
+
+Viene **[!UICONTROL Accounts]** visualizzata la pagina. In questa pagina è presente un elenco di account visualizzabili, con informazioni sull’origine, il nome utente, il numero di flussi di dati e la data di creazione.
+
+Selezionate il ![filtro](../../images/tutorials/update/filter.png) dell’icona del filtro in alto a sinistra per avviare il pannello di ordinamento.
+
+![accounts-list](../../images/tutorials/update/accounts-list.png)
+
+Il pannello di ordinamento fornisce un elenco di tutte le origini. È possibile selezionare più origini dall&#39;elenco per accedere a una selezione filtrata di account associati a origini diverse.
+
+Selezionate l’origine con cui desiderate lavorare per visualizzare un elenco dei relativi account esistenti. Dopo aver identificato l’account da aggiornare, selezionate le ellissi (`...`) accanto al nome dell’account.
+
+![ordinamento degli account](../../images/tutorials/update/accounts-sort.png)
+
+Viene visualizzato un menu a discesa con opzioni per **[!UICONTROL Add data]**, **[!UICONTROL Edit details]** e **[!UICONTROL Delete]**. Selezionate **[!UICONTROL Edit details]** dal menu per aggiornare l&#39;account.
+
+![update](../../images/tutorials/update/update.png)
+
+La **[!UICONTROL Edit account details]** finestra di dialogo consente di aggiornare il nome, la descrizione e le credenziali di autenticazione di un account. Dopo aver aggiornato le informazioni desiderate, selezionate **[!UICONTROL Save]**.
+
+![edit-account-details](../../images/tutorials/update/edit-account-details.png)
+
+Dopo alcuni istanti, nella parte inferiore della schermata viene visualizzata una casella di conferma verde per confermare l’esito positivo dell’aggiornamento.
+
+![update-Confirm](../../images/tutorials/update/update-confirmed.png)
+
+## Passaggi successivi
+
+Seguendo questa esercitazione, avete utilizzato con successo l&#39;area di lavoro per [!UICONTROL Sources] aggiornare le informazioni sull&#39;account.
+
+Per i passaggi su come eseguire queste operazioni a livello di programmazione utilizzando l&#39; [!DNL Flow Service] API, fare riferimento all&#39;esercitazione sull&#39; [aggiornamento delle informazioni di connessione tramite l&#39;API](../../tutorials/api/update.md)del servizio di flusso.
