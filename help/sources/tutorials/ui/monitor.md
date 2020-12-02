@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;data flows
-description: I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente originati su base programmata. Questa esercitazione fornisce i passaggi per visualizzare gli account e i flussi di dati esistenti dall'area di lavoro Origini.
+keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows
+description: I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente originati su base programmata. Questa esercitazione fornisce i passaggi per visualizzare i flussi di dati esistenti dall'area di lavoro Origini.
 solution: Experience Platform
-title: Monitorare account e flussi di dati
+title: Monitorare i flussi di dati
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 12b8ced6705c2b14b50ea237391d9f829c894b99
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '771'
 ht-degree: 1%
 
 ---
 
 
-# Monitorare gli account e i flussi di dati nell&#39;interfaccia utente
+# Monitorare i flussi di dati nell’interfaccia
 
-I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente originati su base programmata. Questa esercitazione fornisce i passaggi per visualizzare gli account e i flussi di dati esistenti dall&#39; [!UICONTROL Sources] area di lavoro.
+I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente originati su base programmata. Questa esercitazione fornisce i passaggi per visualizzare i flussi di dati esistenti dall&#39; [!UICONTROL Sources] area di lavoro.
 
 ## Introduzione
 
@@ -27,53 +27,9 @@ Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Ad
    - [Esercitazione](../../../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
 - [[!DNL Real-time Customer Profile]](../../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
-## Monitorare gli account
-
-Accedete ad [Adobe Experience Platform](https://platform.adobe.com) , quindi selezionate **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39; **[!UICONTROL Sources]** area di lavoro. Nella **[!UICONTROL Catalog]** schermata sono visualizzate diverse origini per le quali è possibile creare account e flussi di dati. Ogni origine mostra il numero di account e di flussi di dati esistenti ad essi associati.
-
-Selezionate **[!UICONTROL Accounts]** dall&#39;intestazione superiore per visualizzare gli account esistenti.
-
-![catalogo](../../images/tutorials/monitor/catalog-accounts.png)
-
-Vengono **[!UICONTROL Accounts]** visualizzate le pagine. In questa pagina è presente un elenco di account visualizzabili, con informazioni sull’origine, il nome utente, il numero di flussi di dati e la data di creazione.
-
-Selezionate l’icona funnel in alto a sinistra per avviare la finestra di ordinamento.
-
-![accounts](../../images/tutorials/monitor/accounts-list.png)
-
-Il pannello di ordinamento consente di accedere agli account da un&#39;origine specifica. Selezionate la fonte con cui desiderate lavorare e selezionate l’account dall’elenco a destra.
-
->[!TIP]
->
-> Utilizzate il pulsante di controllo ![](../../images/tutorials/monitor/spectrum-control.png) spettro radio nella **[!UICONTROL Name]** colonna per creare un nuovo flusso di dati sorgente per l&#39;account selezionato.
-
-![account-select](../../images/tutorials/monitor/accounts-sort.png)
-
-Inoltre, potete modificare le informazioni sull&#39;account esistente e aggiornare le credenziali dell&#39;account. Selezionate l’icona matita per le informazioni sull’account da modificare.
-
-![](../../images/tutorials/monitor/click-edit.png)
-
-Viene **[!UICONTROL Edit account details]** visualizzato il modale. Da questa pagina è possibile aggiornare i dettagli dell&#39;account e le credenziali di autenticazione esistenti.
-
->[!NOTE]
->
-> I dettagli dell&#39;account di modifica sono disponibili su tutti i connettori sorgente batch.
-
-![](../../images/tutorials/monitor/edit-account.png)
-
-Dalla **[!UICONTROL Accounts]** pagina è possibile visualizzare un elenco dei flussi di dati esistenti o dei set di dati di destinazione associati all&#39;account a cui si è effettuato l&#39;accesso. Per visualizzare ulteriori opzioni disponibili per il flusso di dati selezionato, fate clic`...`sul pulsante con i puntini di sospensione. Queste opzioni sono descritte di seguito:
-
-| Control | Descrizione |
-| ------- | ----------- |
-| [!UICONTROL Edit schedule] | Consente di modificare la pianificazione di assimilazione del flusso di dati. |
-| [!UICONTROL Disable dataflow] | Consente di disabilitare l&#39;inserimento dei dati per il flusso di dati selezionato. |
-| [!UICONTROL Delete] | Consente di eliminare il flusso di dati selezionato. |
-
-![flussi di dati](../../images/tutorials/monitor/dataflows.png)
-
 ## Monitorare i flussi di dati
 
-È possibile accedere ai flussi di dati direttamente dalla **[!UICONTROL Catalog]** pagina senza visualizzarli **[!UICONTROL Accounts]**. Selezionate **[!UICONTROL Dataflows]** dall’intestazione superiore per visualizzare un elenco dei flussi di dati.
+Accedete per accedere all’interfaccia utente [del Experience Platform](https://platform.adobe.com) , quindi selezionate **[!UICONTROL Sources]** dal menu di navigazione a sinistra per accedere all’ [!UICONTROL Sources] area di lavoro. Selezionate **[!UICONTROL Dataflows]** dall’intestazione superiore per visualizzare i flussi di dati esistenti.
 
 ![catalog-dataflows](../../images/tutorials/monitor/catalog-dataflows.png)
 
