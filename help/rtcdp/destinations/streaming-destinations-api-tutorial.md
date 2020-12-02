@@ -5,9 +5,9 @@ title: Connessione alle destinazioni di streaming e attivazione dei dati
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 502d913400a8ddc0132c64253cd30ea9f9fcd239
+source-git-commit: f12b400ca95e23d8e6ac282fafa8f4bb141d703a
 workflow-type: tm+mt
-source-wordcount: '1865'
+source-wordcount: '2007'
 ht-degree: 2%
 
 ---
@@ -592,6 +592,31 @@ La risposta restituita deve includere nel `transformations` parametro i segmenti
   }
 }
 ```
+
+## Utilizzo delle raccolte Postman per connettersi alle destinazioni di streaming  {#collections}
+
+Per collegarvi alle destinazioni di streaming descritte in questa esercitazione in modo più semplice, potete utilizzare [[!DNL Postman]](https://www.postman.com/).
+
+[!DNL Postman] è uno strumento che puoi utilizzare per effettuare chiamate API e gestire librerie di chiamate e ambienti predefiniti.
+
+Per questa esercitazione specifica, abbiamo incluso le seguenti [!DNL Postman] raccolte, allegate a questo articolo:
+
+* [!DNL AWS Kinesis] [!DNL Postman] collection
+* [!DNL Azure Event Hubs] [!DNL Postman] collection
+
+Fate clic [qui](assets/DestinationPostmanCollection.zip) per scaricare l&#39;archivio delle raccolte.
+
+Ciascuna raccolta include le richieste necessarie e le variabili di ambiente, rispettivamente per [!DNL AWS Kinesis]e [!DNL Azure Event Hub].
+
+### Come utilizzare le raccolte Postman
+
+Per collegarsi correttamente alle destinazioni utilizzando le raccolte allegate [!DNL Postman] , attenetevi alla seguente procedura:
+
+* Download and install [!DNL Postman];
+* [Scaricare](assets/DestinationPostmanCollection.zip) e decomprimere le raccolte allegate;
+* Importa le raccolte dalle rispettive cartelle in Postman;
+* Compila le variabili di ambiente secondo le istruzioni del presente articolo;
+* Esegui le [!DNL API] richieste da Postman, in base alle istruzioni in questo articolo.
 
 ## Passaggi successivi
 
