@@ -5,7 +5,7 @@ user-guide-title: Guida ai connettori di sorgenti di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di sorgenti
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 translation-type: tm+mt
-source-git-commit: 68ed1ceb2f7410bd970fa43c5f0db11b1b8ea388
+source-git-commit: e31e09449b79b8a1600cfb2b162f51c26d482847
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 4%
@@ -206,7 +206,8 @@ ht-degree: 4%
       - [Configurare un flusso di dati per un connettore pagamenti](tutorials/ui/dataflow/payments.md)
       - [Configurare un flusso di dati per un connettore di protocollo](tutorials/ui/dataflow/protocols.md)
    - [Attivare i dati in entrata per compilare i profili cliente](tutorials/ui/profile.md)
-   - [Monitorare account e flussi di dati](tutorials/ui/monitor.md)
+   - [Monitorare i flussi di dati](tutorials/ui/monitor.md)
+   - [Aggiorna account](tutorials/ui/update.md)
    - [Elimina account](tutorials/ui/delete-accounts.md)
    - [Eliminare i flussi di dati](tutorials/ui/delete.md)
 - [Notifiche di esecuzione del flusso](notifications.md)
