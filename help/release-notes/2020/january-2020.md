@@ -1,13 +1,13 @@
 ---
-title: 'Note sulla versione di Adobe Experience Platform '
+title: Note sulla versione di Adobe Experience Platform
 description: ' note sulla versione del Experience Platform 15 gennaio 2020'
 doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '877'
 ht-degree: 7%
 
 ---
@@ -22,7 +22,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 * [[!DNL Experience Data Model (XDM) System]](#xdm)
 * [[!DNL Privacy Service]](#privacy)
 * [[!DNL Sources]](#sources)
-* [[!DNL Destinazioni]](#destinations)
+* [[!DNL Destinations]](#destinations)
 
 ## [!DNL Experience Data Model] Sistema (XDM) {#xdm}
 
@@ -92,7 +92,7 @@ Per ulteriori informazioni sulle origini, consultate la panoramica [delle origin
 
 ## Destinazioni {#destinations}
 
-In [CDP](../../rtcdp/overview.md)in tempo reale, le destinazioni sono integrazioni pre-costruite con piattaforme di destinazione che attivano i dati a tali partner in modo semplice.
+In CDP [in tempo](../../rtcdp/overview.md)reale, le destinazioni sono integrazioni precostruite con piattaforme di destinazione che attivano i dati per tali partner in modo semplice.
 
 **Nuove funzionalità**
 
@@ -112,4 +112,4 @@ In [CDP](../../rtcdp/overview.md)in tempo reale, le destinazioni sono integrazio
 
 * Nessuna
 
-Per ulteriori informazioni, consulta la panoramica [](../../rtcdp/destinations/destinations-overview.md) Destinazioni.
+Per ulteriori informazioni, consulta la panoramica [](../../destinations/home.md) Destinazioni.
