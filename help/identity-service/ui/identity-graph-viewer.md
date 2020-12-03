@@ -5,9 +5,9 @@ title: Servizio Adobe Experience Platform Identity
 topic: tutorial
 description: Un grafico di identità è una mappa delle relazioni tra identità diverse per un particolare cliente, che fornisce una rappresentazione visiva del modo in cui il cliente interagisce con il proprio marchio tra canali diversi.
 translation-type: tm+mt
-source-git-commit: df165baceaf8dc2b21055201ec78bd392044b938
+source-git-commit: ef1025dfacc91b13c064db99e6304f2c09abb3d9
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '871'
 ht-degree: 1%
 
 ---
@@ -93,14 +93,19 @@ I grafici di identità con cluster di identità più grandi sono accessibili anc
 
 ## Appendice
 
-Il visualizzatore grafico restituisce un errore se i seguenti prerequisiti non sono soddisfatti:
+La sezione seguente contiene informazioni aggiuntive sull’utilizzo del visualizzatore grafico dell’identità.
 
-- Il valore dell&#39;identità non esiste nello spazio dei nomi selezionato.
-- Il grafico ha meno di due identità.
-- Il grafico supera il massimo di 400 identità.
-- Vi trovate in un ambiente sandbox non di produzione.
+### Informazioni sui messaggi di errore
 
-![grande cluster](../images/identity-graph-viewer/error-screen.png)
+Gli errori possono verificarsi quando si accede al visualizzatore del grafico dell&#39;identità. Di seguito è riportato un elenco di prerequisiti e limitazioni di cui tenere conto quando si utilizza il visualizzatore grafico dell’identità.
+
+- Un valore di identità deve esistere nello spazio nomi selezionato.
+- Il visualizzatore del grafico dell&#39;identità richiede almeno due identità collegate da generare.
+- Il visualizzatore grafico dell&#39;identità non può superare il massimo di 400 identità.
+- Il visualizzatore del grafico dell&#39;identità non è attualmente accessibile nelle sandbox non di produzione.
+- Il visualizzatore del grafico dell&#39;identità al momento supporta solo i dati acquisiti in batch e non visualizza i dati acquisiti utilizzando le origini di streaming.
+
+![error-screen](../images/identity-graph-viewer/error-screen.png)
 
 ## Passaggi successivi
 
