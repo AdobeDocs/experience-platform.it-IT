@@ -5,7 +5,7 @@ title: Guida utente del servizio di segmentazione
 topic: ui guide
 description: Adobe Experience Platform Segmentation Service fornisce un'interfaccia utente per la creazione e la gestione delle definizioni dei segmenti.
 translation-type: tm+mt
-source-git-commit: 1aff9329e1ae97caa34a205bbfbbc6f51b54b8fb
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 0%
@@ -102,7 +102,7 @@ La **[!UICONTROL Activated destinations]** sezione mostra le destinazioni per le
 
 >[!NOTE]
 >
-> Le destinazioni sono una funzione disponibile con [!DNL Real-time Customer Data Platform]e consentono di esportare i dati su piattaforme esterne. Per ulteriori informazioni sulle destinazioni, consulta la panoramica [delle](../../rtcdp/destinations/destinations-overview.md)destinazioni. Per informazioni su come attivare un segmento a una destinazione, consulta la [guida sull’attivazione dei segmenti a una destinazione](../../rtcdp/destinations/activate-destinations.md).
+> Le destinazioni sono una funzione disponibile con [!DNL Real-time Customer Data Platform]e consentono di esportare i dati su piattaforme esterne. Per ulteriori informazioni sulle destinazioni, consulta la panoramica [delle](../../destinations/home.md)destinazioni. Per informazioni su come attivare un segmento a una destinazione, consulta la [guida sull’attivazione dei segmenti a una destinazione](../../destinations/ui/activate-destinations.md).
 
 ### Esempi di profilo
 
@@ -134,7 +134,7 @@ Selezionando **[!UICONTROL Create segment]** [!DNL Segment Builder] nell’angol
 
 ### [!DNL Segment Builder] workspace
 
-[!DNL Segment Builder] offre un’area di lavoro completa che consente di interagire con gli elementi [!DNL Profile] dati. L’area di lavoro offre controlli intuitivi per la creazione e la modifica di regole, come le sezioni di trascinamento utilizzate per rappresentare le proprietà dei dati.
+[!DNL Segment Builder] offre un’area di lavoro ricca di contenuti che consente di interagire con gli elementi [!DNL Profile] dati. L’area di lavoro offre controlli intuitivi per la creazione e la modifica di regole, come le sezioni di trascinamento utilizzate per rappresentare le proprietà dei dati.
 
 Per informazioni più dettagliate sull’utilizzo dell’ [!DNL Segment Builder] area di lavoro, consultate la guida [[!DNL Segment Builder] ](./segment-builder.md)utente.
 
