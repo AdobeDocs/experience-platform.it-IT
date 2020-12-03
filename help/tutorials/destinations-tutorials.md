@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Scopri come creare diversi tipi di destinazioni e attivare i dati.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: d29f7c7243ec798abe60fff895b36277996cb4a0
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 10%
@@ -20,8 +20,8 @@ Scopri come creare diversi tipi di destinazioni e attivare i dati. Questa funzio
 
 ## Destinazioni di marketing e-mail {#email-destinations}
 
-* [Creare una destinazione di e-mail marketing e attivare i dati](/help/rtcdp/destinations/email-marketing-api.md)
+* [Creare una destinazione di e-mail marketing e attivare i dati](../destinations/api/email-marketing.md)
 
 ## Destinazioni di streaming per l&#39;archiviazione cloud {#streaming-destinations}
 
-* [Connessione alle destinazioni di streaming e attivazione dei dati](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
+* [Connessione alle destinazioni di streaming e attivazione dei dati](../destinations/api/streaming-destinations.md)
