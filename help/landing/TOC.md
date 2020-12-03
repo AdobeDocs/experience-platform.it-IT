@@ -2,13 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: Panoramica di Adobe Experience Platform
-breadcrumb-title: 'Panoramica del Experience Platform '
+breadcrumb-title: Panoramica di Experience Platform
 user-guide-description: Scopri come Experience Platform consente di offrire esperienze personalizzate ai clienti in tempo reale.
 translation-type: tm+mt
-source-git-commit: 36707e95a63b6be60d1d7badbe1cdc9d0bc3548c
+source-git-commit: 5761394285e56214fd59e31d530756eed1f5ad08
 workflow-type: tm+mt
-source-wordcount: '402'
-ht-degree: 38%
+source-wordcount: '399'
+ht-degree: 39%
 
 ---
 
@@ -43,9 +43,9 @@ ht-degree: 38%
    * [Preparazione dei dati](https://docs.adobe.com/content/help/en/experience-platform/data-prep/home.html)
    * [Acquisizione dei dati](https://docs.adobe.com/content/help/en/experience-platform/ingestion/home.html)
    * [Data Science Workspace](https://docs.adobe.com/content/help/en/experience-platform/data-science-workspace/home.html)
-   * [Strumento di debug](https://docs.adobe.com/content/help/it-IT/debugger/using/experience-cloud-debugger.html)
+   * [Debugger](https://docs.adobe.com/content/help/it-IT/debugger/using/experience-cloud-debugger.html)
    * [Debugger 2.0 (versione beta)](https://docs.adobe.com/content/help/it-IT/debugger/using-v2/experience-cloud-debugger.html)
-   * [Destinazioni](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html)
+   * [Destinazioni](https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html)
    * [ETL (Extract, Transform, Load)](https://docs.adobe.com/content/help/en/experience-platform/etl/home.html)
    * [Servizio identità](https://docs.adobe.com/content/help/it-IT/experience-platform/identity/home.html)
    * [Intelligent Services](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/home.html)
@@ -59,7 +59,7 @@ ht-degree: 38%
    * [Schemi (XDM)](https://docs.adobe.com/content/help/it-IT/experience-platform/xdm/home.html)
    * [Segmentazione](https://docs.adobe.com/content/help/en/experience-platform/segmentation/home.html)
    * [Origini (connettori)](https://docs.adobe.com/content/help/en/experience-platform/sources/home.html)
-   * [Web SDK](https://docs.adobe.com/content/help/it-IT/experience-platform/edge/home.html)
+   * [SDK per web](https://docs.adobe.com/content/help/it-IT/experience-platform/edge/home.html)
 * Piattaforma nell&#39;ecosistema  Adobe {#ecosystem}
    * [Servizi applicazione](application-services.md)
    * [Applicazioni e servizi intelligenti (video)](video/application-intelligent-services.md)
