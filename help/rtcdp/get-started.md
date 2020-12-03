@@ -5,9 +5,9 @@ seo-title: Guida introduttiva alla piattaforma dati cliente in tempo reale
 description: Scenario di esempio per Real-time Customer Data Platform
 seo-description: Scenario di esempio per Real-time Customer Data Platform
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 8369bd517639cc66eeb95a811c3ddf46b8c4c48d
 workflow-type: tm+mt
-source-wordcount: '2313'
+source-wordcount: '2312'
 ht-degree: 1%
 
 ---
@@ -237,7 +237,7 @@ Quando hai aggiunto il segmento &quot;Regalo agli abbandonatori del carrello&quo
 
 Fai clic su **[!UICONTROL Send to destinations]**.
 
-In  CDP in tempo reale, Luma può agire direttamente sui segmenti di pubblico per la personalizzazione.\
+In CDP in tempo reale, Luma può agire direttamente sui segmenti di pubblico per la personalizzazione.\
 Qui vediamo tutte le destinazioni disponibili per Luma per l&#39;invio di questa destinazione, sia  soluzioni di Adobe che non :
 
 ![immagine](assets/luma-dest.png)
