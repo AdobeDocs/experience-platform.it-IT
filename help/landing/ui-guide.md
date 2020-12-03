@@ -5,7 +5,7 @@ title: Guida all'interfaccia utente Adobe Experience Platform
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: bde9763aafb4ba32877f7ec14873eeae99760a45
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '1543'
 ht-degree: 0%
@@ -37,7 +37,7 @@ La **[!UICONTROL Profiles]** sezione mostra il numero totale di persone con prof
 
 La **[!UICONTROL Segments]** sezione mostra il numero totale di segmenti creati all’interno dell’organizzazione IMS. Questo numero viene aggiornato al momento della creazione di un nuovo segmento. Ulteriori informazioni sui segmenti sono disponibili nella panoramica [del servizio di](../segmentation/home.md)segmentazione.
 
-La **[!UICONTROL Destinations]** sezione mostra il numero totale di destinazioni create per l&#39;organizzazione IMS. Questo numero viene aggiornato al momento della creazione di una nuova destinazione. Ulteriori informazioni sulle destinazioni sono disponibili nella panoramica [delle](../rtcdp/destinations/destinations-overview.md)destinazioni.
+La **[!UICONTROL Destinations]** sezione mostra il numero totale di destinazioni create per l&#39;organizzazione IMS. Questo numero viene aggiornato al momento della creazione di una nuova destinazione. Ulteriori informazioni sulle destinazioni sono disponibili nella panoramica [delle](../destinations/home.md)destinazioni.
 
 ### Dati recenti
 
@@ -51,7 +51,7 @@ Nella **[!UICONTROL Recent sources]** sezione sono elencati i cinque connettori 
 
 Nella **[!UICONTROL Recent segments]** sezione sono elencate le cinque definizioni di segmento create più di recente all&#39;interno dell&#39;organizzazione IMS. Questo elenco viene aggiornato ogni volta che viene creata una nuova definizione di segmento. Puoi selezionare una definizione di segmento dall’elenco per visualizzare ulteriori informazioni sulla definizione di segmento specificata oppure **[!UICONTROL View all]** per visualizzare un elenco di tutte le definizioni di segmento create. Ulteriori informazioni sui segmenti sono disponibili nella panoramica [del servizio di](../segmentation/home.md)segmentazione.
 
-Nella **[!UICONTROL Recent destinations]** sezione sono elencate le cinque destinazioni create più di recente all&#39;interno dell&#39;organizzazione IMS. Questo elenco viene aggiornato ogni volta che viene creata una nuova destinazione. È possibile selezionare una destinazione dall&#39;elenco per visualizzare ulteriori informazioni sulla destinazione specificata oppure **[!UICONTROL View all]** per visualizzare un elenco di tutte le destinazioni create. Ulteriori informazioni sulle destinazioni sono disponibili nella panoramica [delle](../rtcdp/destinations/destinations-overview.md)destinazioni.
+Nella **[!UICONTROL Recent destinations]** sezione sono elencate le cinque destinazioni create più di recente all&#39;interno dell&#39;organizzazione IMS. Questo elenco viene aggiornato ogni volta che viene creata una nuova destinazione. È possibile selezionare una destinazione dall&#39;elenco per visualizzare ulteriori informazioni sulla destinazione specificata oppure **[!UICONTROL View all]** per visualizzare un elenco di tutte le destinazioni create. Ulteriori informazioni sulle destinazioni sono disponibili nella panoramica [delle](../destinations/home.md)destinazioni.
 
 ### Apprendimento consigliato
 
@@ -117,7 +117,7 @@ Nella **[!UICONTROL Workflows]** sezione viene visualizzato un elenco di flussi 
 
 La **[!UICONTROL Sources]** sezione consente di creare, aggiornare ed eliminare connessioni di origine, consentendo di trasferire dati da origini esterne alla piattaforma. Ulteriori informazioni sulle origini sono disponibili nella panoramica delle [origini](../sources/home.md).
 
-La **[!UICONTROL Destinations]** sezione consente di creare, aggiornare ed eliminare le destinazioni, consentendo di esportare i dati dalla piattaforma in molte destinazioni esterne. Ulteriori informazioni sulle destinazioni sono disponibili nella panoramica [delle](../rtcdp/destinations/destinations-overview.md)destinazioni.
+La **[!UICONTROL Destinations]** sezione consente di creare, aggiornare ed eliminare le destinazioni, consentendo di esportare i dati dalla piattaforma in molte destinazioni esterne. Ulteriori informazioni sulle destinazioni sono disponibili nella panoramica [delle](../destinations/home.md)destinazioni.
 
 ### [!UICONTROL Customer]
 
