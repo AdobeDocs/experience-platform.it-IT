@@ -1,11 +1,11 @@
 ---
-title: 'Note sulla versione di Adobe Experience Platform '
+title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione del Experience Platform  18 novembre 2019
 doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
 workflow-type: tm+mt
 source-wordcount: '1878'
 ht-degree: 2%
@@ -65,7 +65,7 @@ Per ulteriori informazioni, consulta la panoramica delle metriche della piattafo
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] sono integrazioni pre-costruite con piattaforme di destinazione supportate dalla piattaforma dati cliente in tempo reale del  Adobe che attivano i dati per tali partner in modo semplice. Per ulteriori informazioni, consulta l’articolo Panoramica [](../../rtcdp/destinations/destinations-overview.md) Destinazioni.
+[!DNL Destinations] sono integrazioni pre-costruite con piattaforme di destinazione supportate dalla piattaforma dati cliente in tempo reale del  Adobe che attivano i dati per tali partner in modo semplice. Per ulteriori informazioni, consulta l’articolo Panoramica [](../../destinations/home.md) Destinazioni.
 
 **Destinazioni disponibili**
 
@@ -74,12 +74,12 @@ Con la release di novembre,  piattaforma dati cliente  in tempo reale supporta l
 * Pubblicità: [!DNL Google]
 * Marketing e-mail:  Adobe Campaign, [!DNL Salesforce Marketing Cloud], [!DNL Responsys], [!DNL Oracle Eloqua]
 
-Consultate il catalogo [di](../../rtcdp/destinations/destinations-catalog.md) destinazione per informazioni su ciascuna delle destinazioni.
+Consultate il catalogo [di](../../destinations/catalog/overview.md) destinazione per informazioni su ciascuna delle destinazioni.
 
 **Limitazioni note**
 
-* Il controllo per consentire le pianificazioni di attivazione personalizzate nel flusso [di](../../rtcdp/destinations/activate-destinations.md#activate-data) attivazione (passaggio Pianificazione) non è disponibile con il rilascio iniziale.
-* Al momento non è possibile modificare o eliminare una configurazione di destinazione. Per ovviare a questo limite, è possibile abilitare o disabilitare la destinazione nell&#39;angolo superiore destro della pagina [dei dettagli di](../../rtcdp/destinations/destination-details-page.md)destinazione.
+* Il controllo per consentire le pianificazioni di attivazione personalizzate nel flusso [di](../../destinations/ui/activate-destinations.md#activate-data) attivazione (passaggio Pianificazione) non è disponibile con il rilascio iniziale.
+* Al momento non è possibile modificare o eliminare una configurazione di destinazione. Per ovviare a questo limite, è possibile abilitare o disabilitare la destinazione nell&#39;angolo superiore destro della pagina [dei dettagli di](../../destinations/ui/destination-details-page.md)destinazione.
 * Al momento non è disponibile alcuna convalida per i dettagli dell&#39;account, il percorso o le credenziali durante la connessione all&#39;account di destinazione o di archiviazione. Assicurarsi di immettere le credenziali corrette e di controllare due volte la presenza di errori di ortografia o errori di battitura.
 * Nessun rinnovo delle credenziali è disponibile con il rilascio iniziale. Una volta scaduto o che è necessario aggiornare un account, dovete creare una nuova connessione di destinazione e mappare nuovamente i segmenti mappati in precedenza.
 
