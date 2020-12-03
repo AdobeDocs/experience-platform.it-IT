@@ -1,11 +1,11 @@
 ---
-title: 'Note sulla versione di Adobe Experience Platform '
+title: Note sulla versione di Adobe Experience Platform
 description: ' Experience Platform note sulla versione 9 settembre 2020'
 doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '862'
 ht-degree: 6%
@@ -47,9 +47,9 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni 
 
 | Funzione | Descrizione |
 | ------- | ----------- |
-| Miglioramenti UX | Gli utenti possono accedere alle azioni della tabella in linea per un accesso più semplice alle azioni principali, ad esempio l&#39;aggiunta di dati, la modifica della pianificazione e l&#39;aggiunta di segmenti. Per ulteriori informazioni, consulta il documento sull’area di lavoro [delle](../../rtcdp/destinations/destinations-workspace.md) destinazioni. |
+| Miglioramenti UX | Gli utenti possono accedere alle azioni della tabella in linea per un accesso più semplice alle azioni principali, ad esempio l&#39;aggiunta di dati, la modifica della pianificazione e l&#39;aggiunta di segmenti. Per ulteriori informazioni, consulta il documento sull’area di lavoro [delle](../../destinations/ui/destinations-workspace.md) destinazioni. |
 
-Per saperne di più, visita la panoramica [delle destinazioni](../../rtcdp/destinations/destinations-overview.md)
+Per saperne di più, visita la panoramica [delle destinazioni](../../destinations/home.md)
 
 ## [!DNL Observability Insights] {#observability}
 
@@ -59,7 +59,7 @@ Per saperne di più, visita la panoramica [delle destinazioni](../../rtcdp/desti
 
 | Funzione | Descrizione |
 | --- | --- |
-|  Notifiche evento I/O Adobe | [!DNL Observability Insights] sfrutta  eventi I/O di Adobe per creare notifiche di eventi per diversi servizi  Experience Platform. I payload di notifica vengono inviati a un webhook configurato che puoi quindi utilizzare per automatizzare ulteriori processi a valle. Per ulteriori informazioni, consulta la panoramica [delle](../../observability/notifications/overview.md) notifiche. |
+|  Notifiche evento Adobe I/O | [!DNL Observability Insights] sfrutta  Adobe I/O Events per creare notifiche di eventi per diversi servizi  Experience Platform. I payload di notifica vengono inviati a un webhook configurato che puoi quindi utilizzare per automatizzare ulteriori processi a valle. Per ulteriori informazioni, consulta la panoramica [delle](../../observability/notifications/overview.md) notifiche. |
 
 Per ulteriori informazioni sul servizio, consultate la [[!DNL Observability Insights] panoramica](../../observability/home.md) .
 
