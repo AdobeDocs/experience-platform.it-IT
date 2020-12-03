@@ -1,14 +1,14 @@
 ---
-title: 'Note sulla versione di Adobe Experience Platform '
+title: Note sulla versione di Adobe Experience Platform
 description: ' Experience Platform note sulla versione 11 marzo 2020'
 doc-type: release notes
 last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '838'
 ht-degree: 6%
 
 ---
@@ -77,10 +77,10 @@ Sono disponibili nuove destinazioni in cui è possibile attivare i dati Adobe Ex
 
 | Destinazione | Descrizione |
 |--- | ---|
-| Destinazioni di archiviazione cloud |  CDP in tempo reale può ora distribuire i segmenti come file di dati alle posizioni di archiviazione cloud SFTP [!DNL Amazon S3] o del Adobe. Questo consente di inviare audience e i relativi attributi di profilo ai sistemi interni, tramite file CSV o delimitati da tabulazioni. |
-| Destinazioni pubblicitarie | La scheda di [!DNL Google] destinazione è ora divisa in tre schede di destinazione, per le tre diverse [!DNL Google] piattaforme attualmente supportate in  CDP in tempo reale del Adobe: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display &amp; Video 360. |
+| Destinazioni di archiviazione cloud | CDP in tempo reale ora può distribuire i segmenti come file di dati alle posizioni di archiviazione cloud SFTP [!DNL Amazon S3] o SFTP. Questo consente di inviare audience e i relativi attributi di profilo ai sistemi interni, tramite file CSV o delimitati da tabulazioni. |
+| Destinazioni pubblicitarie | La scheda di [!DNL Google] destinazione è ora divisa in tre schede di destinazione, per le tre diverse [!DNL Google] piattaforme attualmente supportate in CDP in tempo reale: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display &amp; Video 360. |
 
-Per saperne di più, visita la panoramica [delle destinazioni](../../rtcdp/destinations/destinations-overview.md)
+Per saperne di più, visita la panoramica [delle destinazioni](../../destinations/home.md)
 
 ## [!DNL Identity Service] {#identity}
 
