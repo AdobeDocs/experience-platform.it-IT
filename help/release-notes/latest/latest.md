@@ -1,11 +1,11 @@
 ---
-title: 'Note sulla versione di Adobe Experience Platform '
+title: Note sulla versione di Adobe Experience Platform
 description: ' Experience Platform note sulla versione 11 novembre 2020'
 doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 6cf9c88f6dc751a4cc877670a89cc99d1efb1b2a
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '2157'
 ht-degree: 3%
@@ -126,7 +126,7 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), le destinazioni 
 | Pianificazione file | Per le destinazioni di archiviazione cloud e basate su e-mail, gli utenti possono creare un&#39;esportazione una tantum o istantanee giornaliere. |
 | Campi obbligatori | Gli utenti possono contrassegnare i campi come obbligatori, assicurando che vengano esportati solo i campi contenenti il campo obbligatorio. |
 
-Per ulteriori informazioni, consulta la panoramica [](../../rtcdp/destinations/destinations-overview.md)Destinazioni.
+Per ulteriori informazioni, consulta la panoramica [](../../destinations/home.md)Destinazioni.
 
 ## Intelligent Services {#intelligent-services}
 
