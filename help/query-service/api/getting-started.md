@@ -7,7 +7,7 @@ description: Questa guida per gli sviluppatori fornisce i passaggi necessari per
 translation-type: tm+mt
 source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '369'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Questa guida richiede una buona conoscenza dei diversi servizi Adobe Experience 
 
 - [[!DNL Query Service]](../home.md): Consente di eseguire query sui set di dati e acquisire le query risultanti come nuovi set di dati in [!DNL Experience Platform].
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
-- [[!DNL Sandbox]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+- [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che dovrete conoscere per poter utilizzare con successo [!DNL Query Service] l&#39;API.
 
