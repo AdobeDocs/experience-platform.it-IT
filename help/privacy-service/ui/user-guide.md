@@ -96,7 +96,7 @@ I passaggi per utilizzare ciascuno di questi metodi sono descritti nelle sezioni
 
 ### Utilizzare il Generatore di richieste {#request-builder}
 
-Utilizzando Request Builder, potete creare manualmente una nuova richiesta di processo per la privacy nell’interfaccia utente. Il Generatore di richieste è indicato per set di richieste sempre più semplici, perché il Generatore di richieste limita le richieste a disporre solo di ID per utente. Per richieste più complesse, potrebbe essere meglio [caricare un file](#json) JSON.
+Utilizzando Request Builder, potete creare manualmente una nuova richiesta di processo per la privacy nell’interfaccia utente. Il Generatore di richieste è indicato per set di richieste sempre più semplici, perché il Generatore di richieste limita le richieste ad avere solo un ID per utente. Per richieste più complesse, potrebbe essere meglio [caricare un file](#json) JSON.
 
 Per iniziare a utilizzare il generatore di richieste, fate clic **[!UICONTROL Create Request]** sotto il widget Rapporto di stato sul lato destro dello schermo.
 
