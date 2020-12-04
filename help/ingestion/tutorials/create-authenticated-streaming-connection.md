@@ -8,7 +8,7 @@ description: La raccolta dei dati autenticati consente ai servizi Adobe Experien
 translation-type: tm+mt
 source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '650'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ Dopo la registrazione di una connessione di streaming, l&#39;utente, in qualità
 Questa esercitazione richiede anche una buona conoscenza dei diversi servizi Adobe Experience Platform. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza.
-- [[!DNL Profilo cliente in tempo reale]](../../profile/home.md): Fornisce un profilo di consumo unificato in tempo reale basato su dati aggregati provenienti da più origini.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo di consumo unificato in tempo reale basato su dati aggregati provenienti da più origini.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per effettuare correttamente chiamate alle API di assimilazione in streaming.
 
