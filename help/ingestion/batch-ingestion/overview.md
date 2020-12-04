@@ -7,13 +7,13 @@ description: L'API Batch Ingestion consente di trasferire i dati in Adobe Experi
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1193'
 ht-degree: 2%
 
 ---
 
 
-# [!DNL Batch Ingestion] - Panoramica
+# [!DNL Batch Ingestion]panoramica
 
 L&#39; [!DNL Batch Ingestion] API consente di trasferire i dati in Adobe Experience Platform come file batch. I dati che si desidera acquisire possono essere i dati di profilo provenienti da un file semplice in un sistema CRM (ad esempio un file parquet), o i dati conformi a uno schema noto nel Registro di sistema [!DNL Experience Data Model] (XDM).
 
@@ -35,7 +35,7 @@ L&#39; [!DNL Data Ingestion] API consente di assimilare i dati come batch (un&#3
 ### [!DNL Data Ingestion] prerequisiti
 
 - I dati da caricare devono essere in formato Parquet o JSON.
-- Un set di dati creato nei servizi [[!DNL Catalog]](../../catalog/home.md).
+- Un set di dati creato in [[!DNL Catalog services]](../../catalog/home.md).
 - Il contenuto del file parquet deve corrispondere a un sottoinsieme dello schema del set di dati in fase di caricamento.
 - Dopo l&#39;autenticazione, avrai il tuo token di accesso univoco.
 
@@ -398,5 +398,5 @@ Il `"status"` campo indica lo stato corrente del batch richiesto. I batch posson
 | Caricamento | I dati per questo batch vengono caricati e il batch **non** è attualmente pronto per essere promosso. |
 | Nuovo | Elaborazione dei dati per questo batch in corso. Tuttavia, a causa di un errore di sistema o temporaneo, il batch non è riuscito, come risultato, il batch viene riprovato. |
 | In pila | La fase intermedia del processo di promozione per un batch è completa e il processo di assimilazione è stato eseguito. |
-| Gestione temporanea | Elaborazione dei dati per il batch in corso. |
+| Staging | Elaborazione dei dati per il batch in corso. |
 | Bloccato | Elaborazione dei dati per il batch in corso. Tuttavia, la promozione batch si è arrestata dopo diversi tentativi. |
