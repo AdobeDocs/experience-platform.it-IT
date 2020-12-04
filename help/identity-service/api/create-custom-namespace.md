@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;namespace;Namespace;namespaces
 solution: Experience Platform
 title: Creare uno spazio dei nomi personalizzato
 topic: API guide
-description: Utilizzando l'API Identity Namespace, potete creare uno spazio nomi identità personalizzato che sarà disponibile solo per la vostra organizzazione.
+description: Utilizzando l'API Identity Namespace (Spazio nomi identità), potete creare uno spazio nomi identità personalizzato che sarà disponibile solo per la vostra organizzazione.
 translation-type: tm+mt
 source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
 workflow-type: tm+mt
