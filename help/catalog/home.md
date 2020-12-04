@@ -13,7 +13,7 @@ ht-degree: 5%
 ---
 
 
-# [!DNL Catalog Service] - Panoramica
+# [!DNL Catalog Service]panoramica
 
 [!DNL Catalog Service] è il sistema di record per la posizione dei dati e la linea di dati in Adobe Experience Platform. Anche se tutti i dati in cui [!DNL Experience Platform] viene effettuato il caricamento vengono memorizzati [!DNL Data Lake] come file e directory, [!DNL Catalog] contiene i metadati e la descrizione di tali file e directory a scopo di ricerca e monitoraggio.
 
