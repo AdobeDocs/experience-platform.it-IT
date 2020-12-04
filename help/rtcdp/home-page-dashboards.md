@@ -5,7 +5,7 @@ seo-title: Pagina principale e dashboard della piattaforma dati cliente in tempo
 description: Dashboard, home page e la prima esperienza utente di Adobe Experience Platform
 seo-description: Dashboard, home page e la prima esperienza utente di Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 4%
@@ -68,7 +68,7 @@ Per ulteriori informazioni sui segmenti, consulta Panoramica [del servizio](segm
 
 **[!UICONTROL Destinations]** mostra il numero totale di destinazioni create per l&#39;organizzazione. Questo numero viene aggiornato al momento della creazione di nuove destinazioni.
 
-Per ulteriori informazioni sulle destinazioni, consulta Panoramica sulle [destinazioni](destinations/destinations-overview.md).
+Per ulteriori informazioni sulle destinazioni, consulta Panoramica sulle [destinazioni](destinations/overview.md).
 
 <!-- ### Successful profile records
 
@@ -134,4 +134,4 @@ La scheda **[!UICONTROL Recent destinations]** metrica mostra le cinque destinaz
 
 Fate clic su una destinazione per visualizzare i dettagli dell’elemento o **[!UICONTROL View all]** per visualizzare informazioni su altre destinazioni.
 
-Per ulteriori informazioni sulle destinazioni, consulta Panoramica sulle [destinazioni](destinations/destinations-overview.md).
+Per ulteriori informazioni sulle destinazioni, consulta Panoramica sulle [destinazioni](destinations/overview.md).
