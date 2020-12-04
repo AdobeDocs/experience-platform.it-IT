@@ -23,7 +23,7 @@ Questo video fornisce una panoramica dei servizi applicativi e intelligenti crea
 
 * Attribution AI 
 * AI cliente
-* Documentazione di Customer Journey Analytics
+* Customer Journey Analytics
 * Journey Orchestration
 * Real-time Customer Data Platform
 
