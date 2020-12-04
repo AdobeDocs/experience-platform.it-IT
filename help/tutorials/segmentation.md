@@ -28,7 +28,7 @@ Dopo aver sviluppato, testato e salvato la definizione del segmento, puoi valuta
 
 ## Esportare i dati dei segmenti
 
-Per esportare i segmenti contenenti [!DNL Profile] dati è innanzitutto necessario [creare un dataset in cui esportare](../segmentation/tutorials/create-dataset-export-segment.md)i dati, quindi avviare un nuovo processo di esportazione. I passaggi per generare un processo di esportazione si trovano nell’esercitazione sulla [valutazione di un segmento](../segmentation/tutorials/evaluate-a-segment.md).
+Per esportare i segmenti contenenti [!DNL Profile] dati è innanzitutto necessario [creare un dataset in cui esportare](../segmentation/tutorials/create-dataset-export-segment.md)i dati e quindi avviare un nuovo processo di esportazione. I passaggi per generare un processo di esportazione si trovano nell’esercitazione sulla [valutazione di un segmento](../segmentation/tutorials/evaluate-a-segment.md).
 
 ## Configurare i criteri di unione
 
