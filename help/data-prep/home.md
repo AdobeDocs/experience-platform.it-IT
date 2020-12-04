@@ -8,12 +8,12 @@ translation-type: tm+mt
 source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
 workflow-type: tm+mt
 source-wordcount: '304'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 
-# Preparazione dati
+# Preparazione dei dati
 
 Data Prep consente agli ingegneri di mappare, trasformare e convalidare i dati da e verso Experience Data Model (XDM). Prep dati viene visualizzato come un passaggio &quot;Mappa&quot; nei processi di inserimento dei dati, compreso il flusso di lavoro di inserimento CSV. Gli ingegneri dei dati possono utilizzare Data Prep per eseguire le seguenti operazioni di manipolazione dei dati durante l&#39;assimilazione:
 
