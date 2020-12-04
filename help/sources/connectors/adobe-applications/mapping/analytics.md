@@ -46,7 +46,7 @@ La tabella seguente include colonne che mostrano il nome del campo Analytics (ca
 | m_keywords | search.keywords | string | Variabile utilizzata nella dimensione Parola chiave. |
 | m_os | _experience.analytics.environment.operationSystemID | integer | L&#39;ID numerico che rappresenta il sistema operativo del visitatore. Si basa sulla colonna user_agent. |
 | m_page_url | web.webPageDetails.URL | string | URL dell’hit di pagina. |
-| m_pagename_no_url | web.webPageDetails.</span>nome | string | Variabile utilizzata per compilare la dimensione Pagine. |
+| m_pagename_no_url | web.webPageDetails.</span>name | string | Variabile utilizzata per compilare la dimensione Pagine. |
 | m_referrer | web.webReferrer.URL | string | URL pagina della pagina precedente. |
 | m_search_page_num | search.pageDepth | integer | Utilizzata dalla dimensione Classifica pagina di ricerca. Indica in quale pagina di risultati di ricerca il sito è stato visualizzato prima che l’utente facesse clic sul sito. |
 | m_state | _experience.analytics.customDimensions.stateProvince | string | Variabile di stato. |
@@ -57,9 +57,9 @@ La tabella seguente include colonne che mostrano il nome del campo Analytics (ca
 | ipv6 | environment.ipV6 | string |
 | j_jscript | environment.browserDetails.javaScriptVersion | string | La versione di JavaScript supportata dal browser. |
 | user_agent | environment.browserDetails.userAgent | string | Stringa agente utente inviata nell’intestazione HTTP. |
-| mobileappid | applicazione.</span>nome | string | L&#39;ID app mobile, memorizzato nel seguente formato: `[AppName][BundleVersion]`. |
+| mobileappid | applicazione.</span>name | string | L&#39;ID app mobile, memorizzato nel seguente formato: `[AppName][BundleVersion]`. |
 | mobiledevice | device.model | string | Nome del dispositivo mobile. Su iOS, viene memorizzato come stringa di 2 cifre separate da virgola. Il primo numero rappresenta la generazione del dispositivo e il secondo numero rappresenta la famiglia di dispositivi. |
-| puntiniere | placeContext.POIinteraction.POIDetail.</span>nome | string | Utilizzato dai servizi mobili. Rappresenta il punto di interesse. |
+| puntiniere | placeContext.POIinteraction.POIDetail.</span>name | string | Utilizzato dai servizi mobili. Rappresenta il punto di interesse. |
 | puntofinterestdistanze | placeContext.POIinteraction.POIDetail.geoInteractionDetails.distanceToCenter | numero | Utilizzato dai servizi mobili. Rappresenta la distanza del punto di interesse. |
 | mobilesegnaposto | placeContext.POIinteraction.POIDetail.geoInteractionDetails.deviceGeoAccuracy | numero | Raccolte dalla variabile di dati contestuali a.loc.acc. Indica la precisione del GPS in metri al momento della raccolta. |
 | mobileplacecategory | placeContext.POIinteraction.POIDetail.category | string | Raccolti dalla variabile di dati contestuali a.loc.category. Descrive la categoria di un luogo specifico. |
@@ -146,7 +146,7 @@ La tabella seguente include colonne che mostrano il nome del campo Analytics (ca
 
 | Campo Analytics | Campo XDM | XDM, tipo | Descrizione |
 | --------------- | --------- | -------- | ----------- |
-| m_prop1 - m_prop75 | _experience.analytics.customDimensions.listprop.prop1 - _experience.analytics.customDimensions.listprops.prop75 | Oggetto | Variabili di traffico personalizzate, comprese tra 1 e 75 | {} |
+| m_prop1 - m_prop75 | _experience.analytics.customDimensions.listprop.prop1 - _experience.analytics.customDimensions.listprop.prop75 | Oggetto | Variabili di traffico personalizzate, comprese tra 1 e 75 | {} |
 | m_hier1 - m_hier5 | _experience.analytics.customDimensions.hierarchy.hier1 - _experience.analytics.customDimensions.hierarchy.hier5 | Oggetto | Utilizzata dalle variabili della gerarchia. Contiene un | elenco delimitato di valori. | {values (array), delimiter (stringa)} |
 | m_mvvar1 - m_mvvar3 | _experience.analytics.customDimensions.lists.list1.list[] - _experience.analytics.customDimensions.lists.list3.list[] | array | Elenco di valori variabili. Contiene un elenco delimitato di valori personalizzati, a seconda dell&#39;implementazione | {value (stringa), key (stringa)} |
 | m_color | device.colorDepth | integer | L’ID della profondità colore, che si basa sul valore della colonna c_color. |
