@@ -5,9 +5,9 @@ title: Segmentazione in streaming
 topic: developer guide
 description: Questo documento contiene esempi sull’utilizzo della segmentazione in streaming con l’API di segmentazione in streaming.
 translation-type: tm+mt
-source-git-commit: 578579438ca1d6a7a8c0a023efe2abd616a6dff2
+source-git-commit: 2bd4b773f7763ca408b55e3b0e2d0bbe9e7b66ba
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1310'
 ht-degree: 1%
 
 ---
@@ -80,20 +80,17 @@ Affinché un segmento possa essere valutato utilizzando la segmentazione in stre
 | Hit in arrivo che fa riferimento a un profilo all’interno di una finestra temporale relativa | Definizione di segmento che fa riferimento a un singolo evento in arrivo e a uno o più attributi di profilo. |
 | Più eventi che fanno riferimento a un profilo | Qualsiasi definizione di segmento che fa riferimento a più eventi **nelle ultime 24 ore** e (facoltativamente) ha uno o più attributi di profilo. |
 
-Nella sezione seguente sono elencati alcuni esempi di definizione del segmento che **non** saranno abilitati per la segmentazione in streaming.
+Una definizione di segmento **non** sarà abilitata per la segmentazione in streaming nei seguenti scenari:
 
-| Tipo di query | Dettagli |
-| ---------- | ------- | 
-| Hit in arrivo che fa riferimento a un profilo all’interno di una finestra relativa | Definizione di segmento che include segmenti o caratteristiche Adobe Audience Manager (AAM). |
-| Più eventi che fanno riferimento a un profilo | Definizione di segmento che include segmenti o caratteristiche Adobe Audience Manager (AAM). |
-| Query con più entità | Nel complesso, le query con più entità **non** sono supportate dalla segmentazione in streaming. |
+- La definizione del segmento include segmenti o caratteristiche Adobe Audience Manager (AAM).
+- La definizione del segmento include più entità (query con più entità).
 
 Inoltre, durante la segmentazione in streaming si applicano alcune linee guida:
 
 | Tipo di query | Indirizzo |
 | ---------- | -------- |
 | Query evento singolo | Non ci sono limiti alla finestra di lookback. |
-| Query con cronologia eventi | <ul><li>La finestra di look-back è limitata a **un giorno**.</li><li>Tra gli eventi **deve** esistere una condizione di ordine di tempo restrittivo.</li><li>Sono consentiti solo gli ordini temporali semplici (prima e dopo) tra gli eventi.</li><li>I singoli eventi **non possono** essere negati. Tuttavia, l’intera query **può** essere negata.</li></ul> |
+| Query con cronologia eventi | <ul><li>La finestra di lookback è limitata a **un giorno**.</li><li>Tra gli eventi **deve** esistere una condizione di ordine di tempo rigoroso.</li><li>Sono supportate le query con almeno un evento negativo. Tuttavia, l&#39;intero evento **non può** essere una negazione.</li></ul> |
 
 ## Recupera tutti i segmenti abilitati per la segmentazione in streaming
 
