@@ -8,7 +8,7 @@ description: Questo documento fornisce un'esercitazione dettagliata per arricchi
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1184'
+source-wordcount: '1172'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Questo documento fornisce un&#39;esercitazione passo-passo per arricchire [!DNL 
 
 Questa esercitazione richiede una conoscenza approfondita dei vari aspetti relativi al [!DNL Adobe Experience Platform] processo di assimilazione dei [!DNL Profile] dati e alla creazione di segmenti. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
-* [[!DNL Profilo cliente in tempo reale]](../../rtcdp/overview.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Real-time Customer Profile]](../../rtcdp/overview.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 * [[!DNL Identity Service]](../../identity-service/home.md): Consente [!DNL Real-time Customer Profile] di collegare identità da origini dati diverse che vengono caricate in Piattaforma.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standardizzato tramite il quale la piattaforma organizza i dati sull&#39;esperienza cliente.
 
