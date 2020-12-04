@@ -7,7 +7,7 @@ description: Adobe Experience Platform consente di creare e creare condutture di
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1421'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,7 @@ L&#39;esempio seguente illustra le coppie chiave-valore rilevate all&#39;interno
 ]
 ```
 
-Potete accedere alla configurazione JSON tramite qualsiasi metodo di classe definito `config_properties` come parametro. Ad esempio:
+Potete accedere alla configurazione JSON tramite qualsiasi metodo di classe definito `config_properties` come parametro. Esempio:
 
 **PySpark**
 
@@ -439,4 +439,4 @@ Una volta completato il punteggio, la pipeline delle caratteristiche deve essere
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-Leggendo questo documento, hai creato una pipeline di feature utilizzando l’SDK per l’authoring dei modelli, creato un’immagine Docker e utilizzato l’URL dell’immagine Docker per creare un modello di pipeline delle feature utilizzando l’ [!DNL Sensei Machine Learning] API. È ora possibile continuare a trasformare i set di dati ed estrarre le funzionalità di dati in scala utilizzando l&#39;API [[!DNL Sensei Machine Learning API]](../api/getting-started.md).
+Leggendo questo documento, hai creato una pipeline di feature utilizzando l’SDK per l’authoring dei modelli, creato un’immagine Docker e utilizzato l’URL dell’immagine Docker per creare un modello di pipeline delle feature utilizzando l’ [!DNL Sensei Machine Learning] API. È ora possibile continuare a trasformare i set di dati ed estrarre le funzioni di dati in scala utilizzando l&#39; [[!DNL Sensei Machine Learning API]](../api/getting-started.md).
