@@ -44,7 +44,7 @@ ht-degree: 0%
 
 **Servizi intelligenti  Adobe:**  Adobe Sensei è la struttura di intelligence che dà potere [!DNL Experience Platform]. Offre inoltre una serie di servizi AI che consentono ai marchi di migliorare la loro capacità di offrire esperienze cliente personalizzate in tempo reale.
 
-**I/O Adobe :**  I/O Adobe fa parte di [!DNL Experience Platform] e fornisce l&#39;accesso a tutto ciò che gli sviluppatori devono integrare, estendere e personalizzare Adobe Experience Platform, incluse API, eventi, console per sviluppatori e utili strumenti.
+**Adobe I/O:**  Adobe I/O fa parte di [!DNL Experience Platform] e fornisce l&#39;accesso a tutto ciò che gli sviluppatori devono integrare, estendere e personalizzare Adobe Experience Platform, incluse API, eventi, console per sviluppatori e utili strumenti.
 
 **Adobe Sensei:**  Adobe Sensei è la struttura di intelligence che dà potere [!DNL Experience Platform]. Offre inoltre una serie di servizi AI che consentono ai marchi di migliorare la loro capacità di offrire esperienze cliente personalizzate in tempo reale.
 
