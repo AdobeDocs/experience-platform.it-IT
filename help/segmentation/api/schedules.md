@@ -142,7 +142,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `name` | **Obbligatorio.** Nome della pianificazione come stringa. |
 | `type` | **Obbligatorio.** Il tipo di processo come stringa. I due tipi supportati sono &quot;batch_segmentation&quot; e &quot;export&quot;. |
 | `properties` | **Obbligatorio.** Un oggetto contenente proprietà aggiuntive correlate alla pianificazione. |
-| `properties.segments` | **Obbligatorio se`type`è uguale a &quot;batch_segmentation&quot;.** L&#39;utilizzo `["*"]` assicura che tutti i segmenti siano inclusi. |
+| `properties.segments` | **Obbligatorio se `type` è uguale a &quot;batch_segmentation&quot;.** L&#39;utilizzo `["*"]` assicura che tutti i segmenti siano inclusi. |
 | `schedule` | *Facoltativo.* Una stringa contenente la pianificazione del processo. È possibile pianificare l’esecuzione dei processi solo una volta al giorno, pertanto non è possibile pianificare l’esecuzione di un processo più volte durante un periodo di 24 ore. Per ulteriori informazioni sulle pianificazioni cron, consulta la documentazione sul formato [delle espressioni](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) cron. In questo esempio, &quot;0 0 1 * * *&quot; significa che questa pianificazione si terrà a mezzanotte il primo di ogni mese. <br><br>Se questa stringa non viene fornita, verrà generata automaticamente una pianificazione generata dal sistema. |
 | `state` | *Facoltativo.* Una stringa contenente lo stato di pianificazione. I due stati supportati sono &quot;attivi&quot; e &quot;inattivi&quot;. Per impostazione predefinita, lo stato è impostato su &quot;inactive&quot;. |
 
