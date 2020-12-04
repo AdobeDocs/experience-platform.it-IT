@@ -9,7 +9,7 @@ translation-type: tm+mt
 source-git-commit: cea3e2f32d9489f5f06be70581bd974b9374646d
 workflow-type: tm+mt
 source-wordcount: '128'
-ht-degree: 32%
+ht-degree: 38%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 32%
    * Adobe Target {#adobe-target}
       * [Panoramica di Target](personalization/adobe-target/target-overview.md)
       * [Implementazione di un&#39;applicazione a pagina singola](personalization/adobe-target/spa-implementation.md)
-   *  Offer Decisioning {#offer-decisioning}
+   * Offer Decisioning {#offer-decisioning}
       * [Panoramica di  Offer Decisioning](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Consenso {#consent}
    * [Consenso di sostegno](consent/supporting-consent.md)
