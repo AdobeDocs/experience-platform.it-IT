@@ -8,7 +8,7 @@ description: Questo documento fornisce un’esercitazione per l’invio di più 
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1475'
 ht-degree: 1%
 
 ---
@@ -510,7 +510,7 @@ Il secondo messaggio non è riuscito perché mancava un corpo del messaggio. La 
     },
 ```
 
-Il terzo messaggio non è riuscito a causa di un ID organizzazione IMS non valido utilizzato nell&#39;intestazione. L&#39;organizzazione IMS deve corrispondere al {CONNECTION_ID} a cui si sta tentando di inviare. Per determinare quale ID organizzazione IMS corrisponde alla connessione di streaming in uso, potete eseguire una `GET inlet` richiesta utilizzando l&#39;API di inserimento dati [[!DNL]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Consultate [il recupero di una connessione](./create-streaming-connection.md#get-data-collection-url) in streaming per un esempio di come recuperare le connessioni in streaming create in precedenza.
+Il terzo messaggio non è riuscito a causa di un ID organizzazione IMS non valido utilizzato nell&#39;intestazione. L&#39;organizzazione IMS deve corrispondere al {CONNECTION_ID} a cui si sta tentando di inviare. Per determinare l&#39;ID organizzazione IMS corrispondente alla connessione di streaming in uso, potete eseguire una `GET inlet` richiesta utilizzando il [[!DNL Data Ingestion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Consultate [il recupero di una connessione](./create-streaming-connection.md#get-data-collection-url) in streaming per un esempio di come recuperare le connessioni in streaming create in precedenza.
 
 Il quarto messaggio non è riuscito perché non seguiva lo schema XDM previsto. L&#39;elemento `xdmSchema` incluso nell&#39;intestazione e nel corpo della richiesta non corrisponde allo schema XDM del `{DATASET_ID}`. La correzione dello schema nell&#39;intestazione e nel corpo del messaggio consente di superare la convalida DCCS e di inviarlo correttamente [!DNL Platform]. È inoltre necessario aggiornare il corpo del messaggio in modo che corrisponda allo schema XDM dell&#39; `{DATASET_ID}` istanza affinché possa trasmettere la convalida del flusso in [!DNL Platform]. Per ulteriori informazioni su cosa accade ai messaggi che sono stati inviati correttamente alla piattaforma, consulta la sezione [Conferma messaggi acquisiti](#confirm-messages-ingested) in questa esercitazione.
 
@@ -531,7 +531,7 @@ I messaggi batch per i quali [!DNL Platform] viene passata la convalida dello st
 
 ## Passaggi successivi
 
-Ora che sai come inviare più messaggi in una singola richiesta e quando i messaggi vengono correttamente inseriti nel set di dati di destinazione, puoi iniziare a inviare in streaming i tuoi dati a [!DNL Platform]. Per una panoramica su come eseguire query e recuperare dati acquisiti da [!DNL Platform], vedere la guida [[!DNL Data Access]](../../data-access/tutorials/dataset-data.md) .
+Ora che sai come inviare più messaggi in una singola richiesta e quando i messaggi vengono correttamente inseriti nel set di dati di destinazione, puoi iniziare a inviare in streaming i tuoi dati a [!DNL Platform]. Per una panoramica su come eseguire query e recuperare dati acquisiti da [!DNL Platform], consultate la [[!DNL Data Access]](../../data-access/tutorials/dataset-data.md) guida.
 
 ## Appendice
 
