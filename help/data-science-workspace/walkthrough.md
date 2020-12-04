@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Questo documento fornisce una guida dettagliata per Adobe Experience Platform [!DNL Data Science Workspace]. Questa esercitazione illustra un flusso di lavoro generale di data scienziist e come potrebbero affrontare e risolvere un problema utilizzando l&#39;apprendimento automatico.
 
-## Prerequisiti
+## Prerequisiti  
 
 - Un account Adobe ID  registrato
    - L&#39;account Adobe ID  deve essere stato aggiunto a un&#39;organizzazione con accesso ad Adobe Experience Platform e [!DNL Data Science Workspace].
