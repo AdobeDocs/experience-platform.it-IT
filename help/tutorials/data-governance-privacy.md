@@ -36,6 +36,6 @@ Dopo aver aggiunto le etichette di utilizzo per i dati e aver creato criteri per
 
 I segmenti abilitati per l’uso in [!DNL Real-time Customer Profile] contengono un ID criterio di unione all’interno della definizione del segmento. Questo criterio di unione contiene informazioni sui set di dati da includere nel segmento, che a loro volta contengono eventuali etichette di utilizzo dei dati applicabili. Per passaggi specifici relativi all&#39;applicazione della conformità dell&#39;utilizzo dei dati per un segmento di pubblico, segui l&#39;esercitazione sull&#39;applicazione della conformità dell&#39;uso [dei dati per i segmenti](../segmentation/tutorials/governance.md).
 
-## Get started with [!DNL Privacy Service]
+## Guida introduttiva a [!DNL Privacy Service]
 
 [!DNL Privacy Service] fornisce un&#39;API RESTful e un&#39;interfaccia utente che consentono di gestire i dati personali degli interessati (clienti) nelle applicazioni Adobe Experience Cloud. [!DNL Privacy Service] fornisce inoltre un meccanismo centrale di controllo e registrazione che consente di accedere allo stato e ai risultati dei processi che coinvolgono [!DNL Experience Cloud] le applicazioni. Per istruzioni su come creare e monitorare [!DNL Privacy Service] i processi, seguite i passaggi forniti nella guida [per gli sviluppatori di](../privacy-service/api/getting-started.md) Privacy Service o nella guida [per gli utenti di](../privacy-service/ui/overview.md)Privacy Service.
