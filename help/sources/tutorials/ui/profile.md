@@ -69,4 +69,4 @@ Con lo schema e il set di dati abilitati per [!DNL Profile], i dati inseriti in 
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, i dati in entrata sono stati attivati correttamente per la [!DNL Profile] popolazione. For more information, see the [[!DNL Real-time Customer Profile] overview](../../../profile/home.md).
+Seguendo questa esercitazione, i dati in entrata sono stati attivati correttamente per la [!DNL Profile] popolazione. Per ulteriori informazioni, consultate la [[!DNL Real-time Customer Profile] panoramica](../../../profile/home.md).
