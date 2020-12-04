@@ -5,23 +5,23 @@ topic: guide
 translation-type: tm+mt
 source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
 
 
-# Guida introduttiva all&#39; [!DNL Real-time Customer Profile] API {#getting-started}
+# Getting started with the [!DNL Real-time Customer Profile] API {#getting-started}
 
 Utilizzando l&#39; [!DNL Real-time Customer Profile] API, potete eseguire operazioni CRUD di base rispetto alle risorse Profilo, come la configurazione degli attributi calcolati, l&#39;accesso alle entità, l&#39;esportazione dei dati del profilo ed eliminazione di set di dati o batch non necessari.
 
 L&#39;utilizzo della guida per gli sviluppatori richiede una buona conoscenza dei diversi servizi Adobe Experience Platform coinvolti nell&#39;utilizzo dei [!DNL Profile] dati. Prima di iniziare a lavorare con l&#39; [!DNL Real-time Customer Profile] API, consulta la documentazione relativa ai seguenti servizi:
 
-* [[!DNL Profilo cliente in tempo reale]](../home.md): Fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Real-time Customer Profile]](../home.md): Fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
 * [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Ottieni una visione migliore del tuo cliente e del suo comportamento attraverso il collegamento di identità tra dispositivi e sistemi.
 * [[!DNL Adobe Experience Platform Segmentation Service]](../../segmentation/home.md): Consente di creare segmenti di pubblico dai dati del profilo cliente in tempo reale.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standardizzato tramite il quale la piattaforma organizza i dati sull&#39;esperienza cliente.
-* [[!DNL Sandbox]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per eseguire correttamente chiamate agli endpoint [!DNL Profile] API.
 
