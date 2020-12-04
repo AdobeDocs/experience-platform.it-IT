@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics;Azure Synapse Analytics;Synapse;synapse;azure synapse analytics
 solution: Experience Platform
-title: Creare un connettore di origine Azure Synapse Analytics nell'interfaccia utente
+title: Creare un connettore sorgente Azure synapse Analytics  nell’interfaccia utente
 topic: overview
 type: Tutorial
-description: Questa esercitazione fornisce i passaggi per la creazione di un connettore di origine Azure Synapse Analytics (in seguito denominato "Synapse") tramite l'interfaccia utente della piattaforma.
+description: Questa esercitazione fornisce i passaggi necessari per creare un connettore sorgente  Azure synapse Analytics (di seguito denominato "Synapse") tramite l'interfaccia utente della piattaforma.
 translation-type: tm+mt
 source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
