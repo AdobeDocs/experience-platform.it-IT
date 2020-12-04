@@ -88,7 +88,7 @@ La query SQL precedente restituirà la risposta seguente:
 | 10000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | Canada |
 | 10001 | antoina | dubois | 1967-03-14 | example2@example.com | Paris | Francia |
 | 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tokyo | Giappone |
-| 10003 | linus | pettersson | 1982-06-03 | example4@example.com | Stoccolma | Kenya |
+| 10003 | linus | pettersson | 1982-06-03 | example4@example.com | Stoccolma | Svezia |
 | 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | Nairobi | Kenya |
 | 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Cile |
 
@@ -111,7 +111,7 @@ Quando viene chiamato, si vedranno esattamente gli stessi risultati di prima:
 | 10000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | Canada |
 | 10001 | antoina | dubois | 1967-03-14 | example2@example.com | Paris | Francia |
 | 10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tokyo | Giappone |
-| 10003 | linus | pettersson | 1982-06-03 | Svezia | Stoccolma | Svezia |
+| 10003 | linus | pettersson | 1982-06-03 | example4@example.com | Stoccolma | Svezia |
 | 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | Nairobi | Kenya |
 | 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Cile |
 
