@@ -7,7 +7,7 @@ description: Questa guida per gli sviluppatori fornisce i passaggi necessari per
 translation-type: tm+mt
 source-git-commit: c8e53a25c5b22e8d840658fe26ff47875947a6d0
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '583'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Questa guida per gli sviluppatori fornisce i passaggi necessari per iniziare a utilizzare l&#39; [!DNL Catalog] API. La guida fornisce quindi chiamate API di esempio per eseguire operazioni chiave utilizzando [!DNL Catalog].
 
-## Prerequisiti
+## Prerequisiti  
 
 [!DNL Catalog] tiene traccia dei metadati per diversi tipi di risorse e operazioni all’interno [!DNL Experience Platform]. Questa guida per gli sviluppatori richiede una buona conoscenza dei vari [!DNL Experience Platform] servizi coinvolti nella creazione e gestione di tali risorse:
 
