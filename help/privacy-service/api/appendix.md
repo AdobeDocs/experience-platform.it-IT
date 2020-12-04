@@ -16,16 +16,16 @@ ht-degree: 9%
 
 ## Spazi dei nomi identità standard {#standard-namespaces}
 
-Tutte le identità inviate [!DNL Privacy Service] devono essere fornite in uno specifico namespace di identità. Gli spazi dei nomi delle identità sono un componente di [Servizio](../../identity-service/home.md) identità Adobe Experience Platform che indica il contesto a cui si riferisce un&#39;identità.
+Tutte le identità inviate [!DNL Privacy Service] devono essere fornite in uno specifico namespace di identità. Gli spazi dei nomi delle identità sono un componente di [Adobe Experience Platform Identity Service](../../identity-service/home.md) che indica il contesto a cui si riferisce un&#39;identità.
 
 Nella tabella seguente sono riportati diversi tipi di identità predefiniti di uso comune resi disponibili da [!DNL Experience Platform], con i relativi `namespace` valori associati:
 
-| Identity type | `namespace` | `namespaceId` |
+| Tipo di identità | `namespace` | `namespaceId` |
 | --- | --- | --- |
 | E-mail | E-mail | 6 |
 | Telefono | Telefono | 7 |
 | ID Adobe Advertising Cloud | AdCloud | 411 |
-|  UUID Adobe Audience Manager | CORE | 0 |
+| Adobe Audience Manager UUID | CORE | 0 |
 | Adobe Experience Cloud ID | ECID | 4 |
 | ID Adobe Target  | TNTID | 9 |
 | [!DNL Apple] ID per inserzionisti | IDFA | 20915 |
@@ -66,4 +66,4 @@ Nella tabella seguente sono riportati i valori accettati per specificare un prod
 | Autenticazione  Adobe Primetime | &quot;primetimeAuthentication&quot; |
 | Adobe Target | &quot;Target&quot; |
 | Servizio Record cliente | &quot;CRS&quot; |
-| Profilo del cliente in tempo reale | &quot;ProfileService&quot; |
+| Profilo cliente in tempo reale | &quot;ProfileService&quot; |
