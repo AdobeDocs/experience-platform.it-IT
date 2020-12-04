@@ -8,7 +8,7 @@ description: Git è un sistema distribuito di controllo delle versioni per tener
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '277'
+source-wordcount: '270'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 [!DNL Git] è un sistema distribuito di controllo della versione per tenere traccia delle modifiche apportate al codice sorgente durante lo sviluppo del software. Git è preinstallato nell&#39; [!DNL Data Science Workspace JupyterLab] ambiente.
 
-## Prerequisiti
+## Prerequisiti  
 
 >[!NOTE]
 >
@@ -28,7 +28,7 @@ L&#39; [!DNL Data Science Workspace JupyterLab] ambiente è un ambiente ospitato
 
 ## Connessione [!DNL Git] all&#39; [!DNL Data Science Workspace JupyterLab Notebooks] ambiente
 
-Per iniziare, avvia [!DNL Adobe Experience Platform] e passa all&#39;ambiente [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab) .
+Per iniziare, avvia [!DNL Adobe Experience Platform] e passa all&#39; [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab) ambiente.
 
 Entro [!DNL JupyterLab], selezionate **[!UICONTROL File]** quindi passate il mouse **[!UICONTROL New]**. Dal menu a discesa visualizzato, selezionate **[!UICONTROL Terminal]**.
 
@@ -60,4 +60,4 @@ Quindi, clonate il repository che desiderate utilizzare con il `git clone` coman
 
 ## Passaggi successivi
 
-Dopo aver completato la duplicazione del repository, è possibile utilizzare Git come si farebbe normalmente sul computer locale per collaborare con altri utenti su notebook. Per ulteriori informazioni sulle operazioni che è possibile eseguire all&#39;interno [!DNL JupyterLab], consultate la guida utente di [[!DNL JupyterLab]](./overview.md).
+Dopo aver completato la duplicazione del repository, è possibile utilizzare Git come si farebbe normalmente sul computer locale per collaborare con altri utenti su notebook. Per ulteriori informazioni sulle operazioni che è possibile eseguire all’interno [!DNL JupyterLab], consulta la sezione [[!DNL JupyterLab user guide]](./overview.md).
