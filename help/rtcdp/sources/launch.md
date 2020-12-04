@@ -17,7 +17,7 @@ ht-degree: 7%
 
 Questa esercitazione spiega come implementare i tag del sito Web per inviare i dati ad Adobe Experience Platform tramite  Adobe Launch.
 
-## Prerequisiti
+## Prerequisiti  
 
 * Lo schema e il dataset necessari vengono creati in [!DNL Platform].
 * La configurazione necessaria è stata implementata in Experience Edge e ha l&#39;ID di configurazione e il dominio Edge corrispondenti.
@@ -35,7 +35,7 @@ Questa esercitazione contiene i passaggi seguenti:
 
 Innanzitutto, installate l&#39; [!DNL Web SDK] estensione Adobe Experience Platform.
 
-1. In [!DNL Launch], open the **[!UICONTROL Extensions]** tab.
+1. In [!DNL Launch] , apri la scheda **[!UICONTROL Extensions]**.
 
    ![immagine](assets/launch-overview.png)
 
