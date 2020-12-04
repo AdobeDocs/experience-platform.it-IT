@@ -6,7 +6,7 @@ seo-title: Flusso di lavoro destinazioni social network
 description: Istruzioni per la connessione agli account degli annunci social network
 seo-description: Istruzioni per la connessione agli account degli annunci social network
 translation-type: tm+mt
-source-git-commit: 85e6a65e1407ca60e7b63681c045fadaaa24aef9
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '468'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Nel passaggio **Autenticazione** , se in precedenza avete impostato una connessi
 
 Una volta confermate le credenziali e che Adobe Experience Cloud è connesso al social network, potete scegliere **[!UICONTROL Next]** di procedere con il **[!UICONTROL Setup]** passaggio.
 
-![Credenziali confermate](/help/rtcdp/destinations/assets/facebook-post-connection-view.png)
+![Credenziali confermate](../../assets/catalog/social/workflow/post-connect.png)
 
 Nel **[!UICONTROL Setup]** passaggio, immettete un [!UICONTROL Name] e un [!UICONTROL Description] per il flusso di attivazione e inserite il contenuto [!UICONTROL Account ID] del social network e dell’account.
 
