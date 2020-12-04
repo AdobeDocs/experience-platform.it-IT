@@ -7,7 +7,7 @@ description: In questo documento viene illustrato come connettersi a Query Servi
 translation-type: tm+mt
 source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '97'
+source-wordcount: '78'
 ht-degree: 0%
 
 ---
