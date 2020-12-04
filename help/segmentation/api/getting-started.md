@@ -7,7 +7,7 @@ description: La seguente documentazione fornisce informazioni aggiuntive che è 
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ Adobe Experience Platform [!DNL Segmentation Service] consente di creare segment
 
 La guida per gli sviluppatori richiede una conoscenza approfondita dei vari [!DNL Experience Platform] servizi che intervengono nell&#39;utilizzo [!DNL Segmentation Service].
 
-- [[!Segmentazione DNL]](../home.md): Consente di creare segmenti di pubblico dai [!DNL Real-time Customer Profile] dati.
+- [[!DNL Segmentation]](../home.md): Consente di creare segmenti di pubblico dai [!DNL Real-time Customer Profile] dati.
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
-- [[!DNL Profilo cliente in tempo reale]](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 - [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che dovrete conoscere per poter utilizzare con successo l&#39; [!DNL Segmentation] API.
