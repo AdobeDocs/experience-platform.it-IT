@@ -13,7 +13,7 @@ ht-degree: 1%
 ---
 
 
-# [!DNL Data Access] - Panoramica
+# [!DNL Data Access]panoramica
 
 [!DNL Data Access] supporta Adobe Experience Platform fornendo agli utenti strumenti incentrati sulla possibilità di individuare e accedere facilmente ai set di dati acquisiti all’interno [!DNL Experience Platform].
 
