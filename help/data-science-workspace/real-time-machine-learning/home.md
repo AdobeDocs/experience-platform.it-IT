@@ -39,7 +39,7 @@ Il flusso di lavoro seguente illustra i passaggi e i risultati tipici relativi a
 
 I dati vengono assimilati e trasformati con [!DNL Experience Data Model] (XDM) in Adobe Experience Platform. Questi dati vengono utilizzati per la formazione dei modelli. Per ulteriori informazioni su XDM, visitare la panoramica [](../../xdm/home.md)XDM.
 
-### Authoring  
+### Authoring
 
 Create un modello Real-time Machine Learning creando un nuovo modello da zero o inserendolo come modello ONNX serializzato prepreparato in Adobe Experience Platform Jupyter Notebooks.
 
