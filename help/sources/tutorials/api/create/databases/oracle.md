@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics;Oracle;oracle
 solution: Experience Platform
-title: Creare un connettore Oracle utilizzando l'API di servizio di flusso
+title: Creare un connettore Oracle  utilizzando l'API di Flusso Service
 topic: overview
 type: Tutorial
-description: Questa esercitazione utilizza l'API del servizio di flusso per illustrare i passaggi necessari per collegare Oracle a  Experience Platform.
+description: Questa esercitazione utilizza l'API del servizio di flusso per guidarvi attraverso i passaggi necessari per collegarvi  Oracle a  Experience Platform.
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
@@ -38,7 +38,7 @@ Le sezioni seguenti forniscono informazioni aggiuntive che dovrete conoscere per
 | `connectionString` | Stringa di connessione utilizzata per connettersi a [!DNL Oracle]. Il pattern della stringa di [!DNL Oracle] connessione è: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | Identificatore univoco necessario per creare una connessione. L&#39;ID della specifica di connessione per [!DNL Oracle] è `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
-Per ulteriori informazioni su come iniziare, fare riferimento a [questo documento](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)Oracle.
+Per ulteriori informazioni su come iniziare, consulta [questo  documento](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)Oracle.
 
 ### Lettura di chiamate API di esempio
 
