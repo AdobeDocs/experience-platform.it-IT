@@ -1,7 +1,7 @@
 ---
 keywords: identities rtcdp;rtcdp identities;real-time cdp identities
 title: Identità in CDP in tempo reale
-description: Adobe Experience Platform Identity Service consente di ottenere una visione migliore dei clienti e del loro comportamento collegando identità tra dispositivi e sistemi.
+description: Adobe Experience Platform Identity Service ti aiuta a ottenere una visione migliore dei tuoi clienti e del loro comportamento collegando le identità tra dispositivi e sistemi.
 translation-type: tm+mt
 source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
@@ -25,7 +25,7 @@ Gli spazi dei nomi delle identità sono un componente di [!DNL Identity Service]
 
 Un grafico di identità è una mappa di relazioni tra diversi spazi dei nomi di identità, che fornisce una rappresentazione visiva di come il cliente interagisce con il proprio marchio tra canali diversi. Tutti i grafici dell&#39;identità del cliente sono gestiti collettivamente e aggiornati [!DNL Identity Service] in tempo quasi reale, in risposta all&#39;attività del cliente.
 
-[!DNL Identity Service] gestisce un grafico di identità visibile solo dalla tua organizzazione e basato sui dati, detto grafico privato. [!DNL Identity Service] amplia il grafico privato quando un record di dati assimilato contiene più identità, aggiungendo una relazione tra le identità trovate.
+[!DNL Identity Service] gestisce un grafico di identità visibile solo dalla tua organizzazione e basato sui dati, detto grafico privato. [!DNL Identity Service] amplia il grafico privato quando un record di dati acquisito contiene più identità, aggiungendo una relazione tra le identità trovate.
 
 ## Passaggi successivi
 
