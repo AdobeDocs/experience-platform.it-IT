@@ -168,7 +168,7 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `entityType` | Il tipo di entità il cui ID è indicato nella `entityId` proprietà di pari livello. Attualmente, l&#39;unico valore accettato è `dataSet`. |
-| `entityId` | ID di un set di dati con cui sottoporre a test l&#39;azione di marketing. È possibile ottenere un elenco di set di dati e dei relativi ID effettuando una richiesta di GET all&#39; `/dataSets` endpoint nell&#39; [!DNL Catalog Service] API. Per ulteriori informazioni, vedere la guida sull&#39; [ [!DNL Catalog] elenco degli oggetti](../../catalog/api/list-objects.md) . |
+| `entityId` | ID di un set di dati con cui sottoporre a test l&#39;azione di marketing. È possibile ottenere un elenco di set di dati e dei relativi ID effettuando una richiesta di GET all&#39; `/dataSets` endpoint nell&#39; [!DNL Catalog Service] API. See the guide on [listing [!DNL Catalog] objects](../../catalog/api/list-objects.md) for more information. |
 
 **Risposta**
 
@@ -416,7 +416,7 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `entityType` | Il tipo di entità il cui ID è indicato nella `entityId` proprietà di pari livello. Attualmente, l&#39;unico valore accettato è `dataSet`. |
-| `entityId` | ID di un set di dati i cui campi devono essere valutati in base all&#39;azione di marketing. È possibile ottenere un elenco di set di dati e dei relativi ID effettuando una richiesta di GET all&#39; `/dataSets` endpoint nell&#39; [!DNL Catalog Service] API. Per ulteriori informazioni, vedere la guida sull&#39; [ [!DNL Catalog] elenco degli oggetti](../../catalog/api/list-objects.md) . |
+| `entityId` | ID di un set di dati i cui campi devono essere valutati in base all&#39;azione di marketing. È possibile ottenere un elenco di set di dati e dei relativi ID effettuando una richiesta di GET all&#39; `/dataSets` endpoint nell&#39; [!DNL Catalog Service] API. See the guide on [listing [!DNL Catalog] objects](../../catalog/api/list-objects.md) for more information. |
 | `entityMeta.fields` | Un array di percorsi per campi specifici all&#39;interno dello schema del set di dati, fornito sotto forma di stringhe JSON Pointer. Per informazioni dettagliate sulla sintassi accettata per queste stringhe, consulta la sezione relativa al puntatore [](../../landing/api-fundamentals.md#json-pointer) JSON nella guida di base delle API. |
 
 **Risposta**
