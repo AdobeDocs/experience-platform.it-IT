@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema editor;Schema Editor;schema;Schema;schemas;Schemas;create
 solution: Experience Platform
-title: Creare uno schema tramite l’Editor di schema.
+title: Creare uno schema tramite l’Editor di schema
 topic: tutorial
 type: Tutorial
 description: Questa esercitazione illustra i passaggi necessari per creare uno schema utilizzando Schema Editor all’interno di Experience Platform.
