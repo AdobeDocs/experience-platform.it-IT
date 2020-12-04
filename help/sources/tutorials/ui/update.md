@@ -6,10 +6,10 @@ title: Aggiornamento dei dettagli dell'account nell'interfaccia utente
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 413687a0d9e790ea3f61a858002e9510216d7c34
+source-git-commit: 51a09cdced9a21aa785a43d8d9740d70a5fbc46c
 workflow-type: tm+mt
-source-wordcount: '389'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +31,7 @@ Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Ad
 
 ## Aggiorna account
 
-Accedete per accedere all’interfaccia utente [del Experience Platform](https://platform.adobe.com) , quindi selezionate **[!UICONTROL Sources]** dal menu di navigazione a sinistra per accedere all’ [!UICONTROL Sources] area di lavoro. Selezionate **[!UICONTROL Accounts]** dall&#39;intestazione superiore per visualizzare gli account esistenti.
+Accedete all&#39;interfaccia utente [del Experience Platform](https://platform.adobe.com) , quindi selezionate **[!UICONTROL Sources]** dal menu di navigazione a sinistra per accedere all&#39; [!UICONTROL Sources] area di lavoro. Selezionate **[!UICONTROL Accounts]** dall&#39;intestazione superiore per visualizzare gli account esistenti.
 
 ![catalogo](../../images/tutorials/update/catalog.png)
 
