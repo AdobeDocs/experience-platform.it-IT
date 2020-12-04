@@ -42,7 +42,7 @@ Questa ricetta utilizza gli schemi [](../../xdm/schema/field-dictionary.md) XDM 
 
 | Nome campo | Tipo |
 --- | ---
-| date | Stringa |
+| data | Stringa |
 | store | Intero |
 | storeType | Stringa |
 | weekSales | Numero |
