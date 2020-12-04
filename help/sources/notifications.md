@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics; notifications
-description: Con gli eventi I/O di  Adobe, potete iscrivervi agli eventi e utilizzare i webhooks per ricevere notifiche sullo stato delle esecuzioni di flusso. Queste notifiche contengono informazioni sull'esito positivo dell'esecuzione di flusso o sugli errori che hanno contribuito al fallimento di un'esecuzione.
+description: Con gli eventi Adobe I/O , potete iscrivervi agli eventi e utilizzare i webhooks per ricevere le notifiche relative allo stato delle esecuzioni di flusso. Queste notifiche contengono informazioni sull'esito positivo dell'esecuzione di flusso o sugli errori che hanno contribuito al fallimento di un'esecuzione.
 solution: Experience Platform
 title: Notifiche di esecuzione del flusso
 topic: overview
 translation-type: tm+mt
 source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '767'
 ht-degree: 1%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 1%
 
 Adobe Experience Platform consente l&#39;acquisizione di dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, database e molti altri.
 
-[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) è utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti all&#39;interno [!DNL Platform]. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
+[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti all&#39;interno [!DNL Platform]. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
-Con  eventi I/O di Adobe, potete iscrivervi agli eventi e utilizzare i webhooks per ricevere notifiche sullo stato delle esecuzioni di flusso. Queste notifiche contengono informazioni sull&#39;esito positivo dell&#39;esecuzione di flusso o sugli errori che hanno contribuito al fallimento di un&#39;esecuzione.
+Con  Adobe I/O Events, potete iscrivervi agli eventi e utilizzare i webhooks per ricevere le notifiche relative allo stato delle esecuzioni dei flussi. Queste notifiche contengono informazioni sull&#39;esito positivo dell&#39;esecuzione di flusso o sugli errori che hanno contribuito al fallimento di un&#39;esecuzione.
 
 In questo documento sono descritti i passaggi necessari per effettuare la sottoscrizione agli eventi, registrare i webhooks e ricevere le notifiche contenenti informazioni sullo stato delle esecuzioni di flusso.
 
