@@ -73,7 +73,7 @@ Per visualizzare lo schema completo delle notifiche degli eventi, fare riferimen
 
 ## Passaggi successivi
 
-Una volta registrate [!DNL Platform] le notifiche al progetto, potete visualizzare gli eventi ricevuti dal [!UICONTROL Project overview]. Per istruzioni dettagliate su come [tracciare gli eventi, consultate  Adobe eventi](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) I/O.
+Una volta registrate [!DNL Platform] le notifiche al progetto, potete visualizzare gli eventi ricevuti dal [!UICONTROL Project overview]. Per istruzioni dettagliate su come [tracciare gli eventi, consultate la guida  Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) .
 
 ## Appendice
 
