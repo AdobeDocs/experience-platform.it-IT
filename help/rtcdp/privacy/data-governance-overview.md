@@ -5,7 +5,7 @@ seo-title: Governance dei dati in tempo reale della piattaforma dati del cliente
 description: 'Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all''uso dei dati. '
 seo-description: 'Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all''uso dei dati. '
 translation-type: tm+mt
-source-git-commit: 66042cb9397b9c7b507fc063f33e92f4f4c381c7
+source-git-commit: 91b60539010318ea8d545bff4e5cc7e2d0aa70fc
 workflow-type: tm+mt
 source-wordcount: '1580'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Puoi impostare le restrizioni di utilizzo dei dati su una destinazione definendo
 
 La definizione dei casi di utilizzo del marketing sulle destinazioni consente di garantire che tutti i profili o i segmenti inviati a tali destinazioni siano conformi ai criteri di utilizzo dei dati. È pertanto necessario aggiungere alle destinazioni i casi di utilizzo del marketing appropriati in base alle esigenze aziendali per applicare restrizioni all&#39;attivazione.
 
-I casi di utilizzo del marketing possono essere selezionati solo quando si configura una destinazione per la prima volta. A seconda del tipo di destinazione con cui state lavorando, l’opportunità di configurare i casi di utilizzo del marketing verrà visualizzata in punti diversi del flusso di lavoro di configurazione. Consulta la documentazione [sulle](../destinations/destinations-overview.md#data-governance) destinazioni per i passaggi su come configurare una particolare destinazione.
+I casi di utilizzo del marketing possono essere selezionati solo quando si configura una destinazione per la prima volta. A seconda del tipo di destinazione con cui state lavorando, l’opportunità di configurare i casi di utilizzo del marketing verrà visualizzata in punti diversi del flusso di lavoro di configurazione. Consulta la documentazione [sulle](../destinations/overview.md) destinazioni per i passaggi su come configurare una particolare destinazione.
 
 ## Gestire i criteri di utilizzo dei dati {#policies}
 
@@ -87,7 +87,7 @@ Ogni fase nella timeline di cui sopra rappresenta un&#39;entità che può contri
 | Fase di lineamento dei dati | Ruolo nell&#39;applicazione della politica |
 | --- | --- |
 | Set di dati | I set di dati contengono etichette di utilizzo dei dati (applicate a livello di set di dati o di campi) per le quali è possibile utilizzare l&#39;intero set di dati o campi specifici. Le violazioni dei criteri si verificheranno se un set di dati o un campo contenente determinate etichette viene utilizzato per uno scopo limitato da un criterio. |
-| Unisci criterio | I criteri di unione sono regole utilizzate dalla piattaforma per determinare in che modo i dati verranno assegnati priorità durante l&#39;unione di frammenti da più set di dati. Le violazioni dei criteri si verificheranno se i criteri di unione sono configurati in modo che i set di dati con etichette limitate siano attivati a una destinazione. Per ulteriori informazioni, vedere la guida sull&#39; [unione dei criteri](../../profile/ui/merge-policies.md) . |
+| Unisci criterio | I criteri di unione sono regole utilizzate dalla piattaforma per determinare in che modo i dati verranno assegnati priorità durante l&#39;unione di frammenti da più set di dati. Le violazioni dei criteri si verificheranno se i criteri di unione sono configurati in modo che i set di dati con etichette limitate siano attivati a una destinazione. See the guide on [merge policies](../../profile/ui/merge-policies.md) for more information. |
 | Segmento | Le regole di segmento definiscono quali attributi devono essere inclusi dai profili cliente. A seconda dei campi inclusi nella definizione di un segmento, il segmento erediterà tutte le etichette di utilizzo applicate a tali campi. Le violazioni dei criteri si verificheranno se attivi un segmento le cui etichette ereditate sono limitate dai criteri applicabili della destinazione di destinazione, in base al relativo caso di utilizzo di marketing. |
 | Destinazione | Quando si configura una destinazione, è possibile definire un&#39;azione di marketing (talvolta denominata caso di utilizzo del marketing). Questo caso di utilizzo è correlato a un&#39;azione di marketing come definita in un criterio di utilizzo dei dati. In altre parole, il caso di utilizzo del marketing definito per una destinazione determina quali criteri di utilizzo dei dati sono applicabili a tale destinazione. Le violazioni dei criteri si verificheranno se attivi un segmento le cui etichette di utilizzo sono limitate dai criteri applicabili alla destinazione di destinazione. |
 
