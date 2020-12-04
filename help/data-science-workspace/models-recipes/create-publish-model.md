@@ -8,7 +8,7 @@ description: Adobe Experience Platform Data Science Workspace offre i mezzi per 
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1536'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prer
    * [[!DNL Experience Data Model]](../../xdm/home.md): Lo sforzo di standardizzazione condotto da  Adobe per definire schemi standard come [!DNL Profile] e ExperienceEvent per la gestione dell&#39;esperienza cliente.
    * Set di dati: Un costrutto di storage e gestione per i dati effettivi. Un&#39;istanza fisica istanziata di uno schema [](../../xdm/schema/field-dictionary.md)XDM.
    * Batch: I set di dati sono costituiti da batch. Un batch è un insieme di dati raccolti in un periodo di tempo ed elaborati insieme come un&#39;unica unità.
-   * [!DNL JupyterLab]: [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) è un&#39;interfaccia web open-source per Project [!DNL Jupyter] ed è strettamente integrata in [!DNL Experience Platform].
+   * [!DNL JupyterLab]: [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) è un&#39;interfaccia Web open-source per Project [!DNL Jupyter] ed è strettamente integrata in [!DNL Experience Platform].
 
 ## Prepare your data {#prepare-your-data}
 
