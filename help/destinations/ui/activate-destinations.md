@@ -6,7 +6,7 @@ seo-title: Attivare profili e segmenti su una destinazione
 description: Attiva i dati disponibili in Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 seo-description: Attiva i dati disponibili in Real-time Customer Data Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '1691'
 ht-degree: 0%
@@ -68,7 +68,7 @@ Se state utilizzando un altro ID, ad esempio &quot;ID ricompensa&quot; o &quot;I
 
 ![ID fedeltà come identità](../assets/ui/activate-destinations/rewardsid-as-identity.gif)
 
-Selezionate `Email_LC_SHA256` come identità di destinazione se avete hashing gli indirizzi e-mail dei clienti durante l&#39;inserimento di dati in Adobe Experience Platform, in base ai requisiti [!DNL Facebook] di hashing delle [](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)e-mail.
+Selezionate `Email_LC_SHA256` come identità di destinazione se avete hashing gli indirizzi e-mail dei clienti durante l&#39;inserimento di dati in Adobe Experience Platform, in base ai requisiti [!DNL Facebook] di hashing delle [](../catalog/social/facebook.md#email-hashing-requirements)e-mail.
 
 Selezionate `Email` come identità di destinazione se gli indirizzi e-mail utilizzati non sono crittografati. CDP in tempo reale eseguirà l&#39;hash degli indirizzi e-mail per soddisfare [!DNL Facebook] i requisiti.
 
@@ -158,7 +158,7 @@ Le esportazioni di file variano nei seguenti modi, a seconda che `segmentMembers
 
 Inoltre, potete contrassegnare attributi diversi come obbligatori. Se un attributo è contrassegnato come obbligatorio, viene impostato in modo che il segmento esportato contenga tale attributo. Di conseguenza, può essere utilizzato come ulteriore forma di filtro. Contrassegnare un attributo come obbligatorio **non** è necessario.
 
-È consigliabile che uno degli attributi sia un identificatore [](/help/rtcdp/destinations/email-marketing-destinations.md#identity) univoco dello schema. Per ulteriori informazioni sugli attributi obbligatori, consulta la sezione relativa all’identità nella documentazione delle destinazioni [di marketing per e-](/help/rtcdp/destinations/email-marketing-destinations.md#identity) mail.
+È consigliabile che uno degli attributi sia un identificatore [](../../destinations/catalog/email-marketing/overview.md#identity) univoco dello schema. Per ulteriori informazioni sugli attributi obbligatori, consulta la sezione relativa all’identità nella documentazione delle destinazioni [di marketing per e-](../../destinations/catalog/email-marketing/overview.md#identity) mail.
 
 >[!NOTE]
 > 
