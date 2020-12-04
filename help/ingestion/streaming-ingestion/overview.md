@@ -41,7 +41,7 @@ Per ulteriori informazioni sull&#39;abilitazione di un dataset per [!DNL Profile
 
 | Destinazione | Latenza prevista |
 | --------- | ---------------- |
-| Profilo del cliente in tempo reale | &lt; 1 minuto |
+| Profilo cliente in tempo reale | &lt; 1 minuto |
 | Data Lake | &lt; 60 minuti |
 
 ## Estensione Adobe Experience Platform
