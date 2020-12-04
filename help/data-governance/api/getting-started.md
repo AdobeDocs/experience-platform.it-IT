@@ -7,23 +7,23 @@ description: L'API Policy Service consente di creare e gestire varie risorse cor
 translation-type: tm+mt
 source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '427'
 ht-degree: 0%
 
 ---
 
 
-# Guida introduttiva all&#39; [!DNL Policy Service] API
+# Getting started with the [!DNL Policy Service] API
 
 L&#39; [!DNL Policy Service] API consente di creare e gestire diverse risorse correlate ad Adobe Experience Platform [!DNL Data Governance]. Questo documento fornisce un&#39;introduzione ai concetti di base da conoscere prima di tentare di effettuare chiamate all&#39; [!DNL Policy Service] API.
 
-## Prerequisiti
+## Prerequisiti  
 
 L&#39;utilizzo della guida per gli sviluppatori richiede una buona conoscenza dei vari [!DNL Experience Platform] servizi coinvolti nell&#39;utilizzo delle funzionalità di governance dei dati. Prima di iniziare a lavorare con [!DNL Policy Service API], consulta la documentazione relativa ai seguenti servizi:
 
 * [[!DNL Data Governance]](../home.md): Il framework in base al quale [!DNL Experience Platform] viene applicata la conformità all&#39;utilizzo dei dati.
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
-* [[!DNL Profilo cliente in tempo reale]](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 * [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 ## Lettura di chiamate API di esempio
