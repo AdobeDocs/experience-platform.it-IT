@@ -6,7 +6,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '489'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ Le etichette di utilizzo dei dati consentono di classificare i dati in base ai c
 
 ## Introduzione
 
-L&#39;endpoint API utilizzato in questa guida fa parte dell&#39;API [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Prima di continuare, consultate la guida [introduttiva per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente chiamate a qualsiasi](getting-started.md) [!DNL Experience Platform] API.
+L&#39;endpoint API utilizzato in questa guida fa parte dell&#39; [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Prima di continuare, consultate la guida [introduttiva per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente chiamate a qualsiasi](getting-started.md) [!DNL Experience Platform] API.
 
 ## Recupero di un elenco di etichette {#list}
 
