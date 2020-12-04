@@ -24,7 +24,7 @@ In particolare, per acquisire i dati di consenso di TCF 2.0 sono necessari due s
 
 Questo documento fornisce i passaggi per impostare questi due insiemi di dati per la raccolta dei dati di consenso IAB TCF 2.0. Per una panoramica del flusso di lavoro completo da configurare [!DNL Real-time CDP] per TCF 2.0, fare riferimento alla panoramica [sulla conformità](./overview.md)IAB TCF 2.0.
 
-## Prerequisiti
+## Prerequisiti  
 
 Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
