@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics;Oracle DB;oracle db
 solution: Experience Platform
-title: Creare un connettore di origine Oracle DB nell'interfaccia utente
+title: Creare un connettore sorgente Oracle DB  nell'interfaccia utente
 topic: overview
 type: Tutorial
-description: Questa esercitazione fornisce i passaggi per la creazione di un connettore di origine Oracle DB utilizzando l'interfaccia utente della piattaforma.
+description: Questa esercitazione fornisce i passaggi per la creazione di un connettore sorgente Oracle DB  utilizzando l'interfaccia utente della piattaforma.
 translation-type: tm+mt
 source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
@@ -42,7 +42,7 @@ Per accedere al tuo [!DNL Oracle DB] account su [!DNL Platform], devi fornire i 
 | `connectionString` | Stringa di connessione utilizzata per connettersi a [!DNL Oracle DB]. Il pattern della stringa di [!DNL Oracle DB] connessione è: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | Identificatore univoco necessario per creare una connessione. L&#39;ID della specifica di connessione per [!DNL Oracle DB] è `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
-Per ulteriori informazioni su come iniziare, consultare [questo documento](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)Oracle.
+Per ulteriori informazioni su come iniziare, consulta [questo  documento](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)Oracle.
 
 ## Collegamento dell&#39; [!DNL Oracle DB] account
 
