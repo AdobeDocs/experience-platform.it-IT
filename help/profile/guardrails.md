@@ -5,7 +5,7 @@ topic: guide
 translation-type: tm+mt
 source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1192'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platform offre una serie di guardrail per evitare la creazione 
 
 Prima di provare a creare modelli di dati da utilizzare in, si consiglia di leggere la seguente documentazione sui servizi di Experience Platform  [!DNL Real-time Customer Profile]. L&#39;utilizzo dei modelli di dati e dei custodi descritti in questo documento richiede la comprensione dei vari servizi di Experience Platform  relativi alle [!DNL Real-time Customer Profile] entità di gestione:
 
-* [[!DNL Profilo cliente in tempo reale]](home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Real-time Customer Profile]](home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 * [Servizio](../identity-service/home.md)identità Adobe Experience Platform: Supporta la creazione di una &quot;singola vista del cliente&quot;, collegando le identità provenienti da origini dati diverse durante l&#39;assimilazione [!DNL Platform].
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Il framework standardizzato tramite il quale la piattaforma organizza i dati sull&#39;esperienza cliente.
    * [Nozioni di base sulla composizione](../xdm/schema/composition.md)dello schema: Introduzione agli schemi e alla modellazione dei dati all&#39;interno  Experience Platform.
@@ -62,7 +62,7 @@ Durante la creazione di un modello dati da utilizzare con [!DNL Real-time Custom
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --- | --- | --- | --- |
-| Numero di set di dati consigliati per contribuire allo schema [!DNL Profile] unione | 20 | Morbido | **È consigliabile un massimo di 20 set di dati[!DNL Profile]abilitati.** Per abilitare un altro set di dati per [!DNL Profile], un set di dati esistente deve prima essere rimosso o disabilitato. |
+| Numero di set di dati consigliati per contribuire allo schema [!DNL Profile] unione | 20 | Morbido | **È consigliabile un massimo di 20 set di dati [!DNL Profile]abilitati.** Per abilitare un altro set di dati per [!DNL Profile], un set di dati esistente deve prima essere rimosso o disabilitato. |
 | Numero di relazioni con più entità consigliate | 5 | Morbido | **È consigliabile un massimo di 5 relazioni tra più entità definite tra entità primarie ed entità dimensione.** Non è possibile eseguire mappature aggiuntive delle relazioni finché una relazione esistente non viene rimossa o disabilitata. |
 | Profondità JSON massima per il campo ID utilizzato nella relazione tra più entità | 4 | Morbido | **La profondità JSON massima consigliata per un campo ID utilizzato nelle relazioni tra più entità è 4.** Ciò significa che in uno schema altamente nidificato, i campi nidificati con profondità superiore a 4 livelli non devono essere utilizzati come campo ID in una relazione. |
 | Cardinalità degli array in un frammento di profilo | &lt;=500 | Morbido | **La cardinalità ottimale dell&#39;array in un frammento di profilo (dati indipendenti dal tempo) è &lt;=500.** |
@@ -72,8 +72,8 @@ Durante la creazione di un modello dati da utilizzare con [!DNL Real-time Custom
 
 | Guardrail | Limite | Tipo limite | Descrizione |
 | --- | --- | --- | --- |
-| Nessun dato delle serie temporali consentito per le entità non[!DNL XDM Individual Profile] entità | 0 | Rigido | **I dati delle serie temporali non sono consentiti per le entità non[!DNL XDM Individual Profile]incluse in Profile Service.** Se un set di dati della serie temporale è associato a un non-[!DNL XDM Individual Profile] ID, il set di dati non deve essere abilitato per [!DNL Profile]. |
-| Nessuna relazione nidificata | 0 | Morbido | **Non creare una relazione tra due schemi diversi[!DNL XDM Individual Profile].** La capacità di creare relazioni non è consigliata per gli schemi che non fanno parte dello schema [!DNL Profile] unione. |
+| Nessun dato delle serie temporali consentito per le entità non[!DNL XDM Individual Profile] entità | 0 | Rigido | **I dati delle serie temporali non sono consentiti per le entità non[!DNL XDM Individual Profile] incluse in Profile Service.** Se un set di dati della serie temporale è associato a un non-[!DNL XDM Individual Profile] ID, il set di dati non deve essere abilitato per [!DNL Profile]. |
+| Nessuna relazione nidificata | 0 | Morbido | **Non creare una relazione tra due schemi diversi[!DNL XDM Individual Profile] .** La capacità di creare relazioni non è consigliata per gli schemi che non fanno parte dello schema [!DNL Profile] unione. |
 | Profondità JSON massima per il campo ID principale | 4 | Morbido | **La profondità JSON massima consigliata per il campo ID principale è 4.** Questo significa che in uno schema altamente nidificato non è necessario selezionare un campo come ID primario se nidificato con più di 4 livelli di profondità. Un campo al quarto livello nidificato può essere utilizzato come ID principale. |
 
 ## Garanzie dimensioni dati
