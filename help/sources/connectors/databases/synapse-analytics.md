@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;Azure Synapse Analytics;azure synapse analytics;Synapse;synapse
 solution: Experience Platform
-title: Connettore Azure Synapse Analytics
+title: ' connettore Azure synapse Analytics'
 topic: overview
-description: La documentazione seguente fornisce informazioni su come collegare Azure Synapse Analytics alla piattaforma utilizzando le API o l'interfaccia utente.
+description: La documentazione seguente fornisce informazioni su come collegare  Azure synapse Analytics alla piattaforma utilizzando le API o l'interfaccia utente.
 translation-type: tm+mt
 source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
 workflow-type: tm+mt
@@ -27,11 +27,11 @@ La documentazione seguente fornisce informazioni su come connettersi [!DNL Azure
 
 ## Connessione [!DNL Azure Synapse Analytics] all&#39; [!DNL Platform] utilizzo delle API
 
-- [Creare un connettore Azure Synapse Analytics utilizzando l&#39;API del servizio di flusso](../../tutorials/api/create/databases/synapse-analytics.md)
+- [Creare un connettore Azure synapse Analytics  utilizzando l&#39;API del servizio di flusso](../../tutorials/api/create/databases/synapse-analytics.md)
 - [Esplora un sistema di database utilizzando l&#39;API del servizio di flusso](../../tutorials/api/explore/database-nosql.md)
 - [Raccolta di dati da un database tramite l&#39;API del servizio di flusso](../../tutorials/api/collect/database-nosql.md)
 
 ## Connessione [!DNL Azure Synapse Analytics] all’ [!DNL Platform] interfaccia utente
 
-- [Creare un connettore di origine Azure Synapse Analytics nell&#39;interfaccia utente](../../tutorials/ui/create/databases/synapse-analytics.md)
+- [Creare un connettore sorgente Azure synapse Analytics  nell’interfaccia utente](../../tutorials/ui/create/databases/synapse-analytics.md)
 - [Configurare un flusso di dati per un connettore di database nell&#39;interfaccia utente](../../tutorials/ui/dataflow/databases.md)
