@@ -8,7 +8,7 @@ description: Adobe Experience Platform consente di utilizzare il linguaggio SQL 
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '794'
 ht-degree: 1%
 
 ---
@@ -29,14 +29,14 @@ Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prer
 - Un [!DNL Adobe Analytics] dataset
 
 - Una conoscenza approfondita dei seguenti concetti chiave utilizzati in questa esercitazione:
-   - [[!DNL Experience Data Model (XDM) e XDM System]](../../xdm/home.md)
+   - [[!DNL Experience Data Model (XDM) and XDM System]](../../xdm/home.md)
    - [[!DNL Query Service]](../../query-service/home.md)
-   - [[!Sintassi SQL servizio query DNL]](../../query-service/sql/overview.md)
+   - [[!DNL Query Service SQL Syntax]](../../query-service/sql/overview.md)
    - Adobe Analytics
 
 ## Accesso [!DNL JupyterLab] e [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. In [[!DNL  Experience Platform]](https://platform.adobe.com), andate **[!UICONTROL Notebooks]** dalla colonna di navigazione a sinistra. Lasciate che venga caricato JupyterLab al momento.
+1. In [[!DNL Experience Platform]](https://platform.adobe.com), andate **[!UICONTROL Notebooks]** dalla colonna di navigazione a sinistra. Lasciate che venga caricato JupyterLab al momento.
 
    ![](../images/jupyterlab/query/jupyterlab-launcher.png)
 
