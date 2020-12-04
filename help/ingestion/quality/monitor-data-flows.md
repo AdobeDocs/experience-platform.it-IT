@@ -7,7 +7,7 @@ description: Questa guida utente descrive come monitorare i dati nell’interfac
 translation-type: tm+mt
 source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '544'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Nell’interfaccia utente [del Experience Platform](https://platform.adobe.com),
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-Viene visualizzata la pagina **[!UICONTROL Streaming end-to-end]** di monitoraggio. Questa area di lavoro fornisce un grafico che mostra la frequenza degli eventi in streaming ricevuti da [!DNL Platform], un grafico che mostra la frequenza degli eventi in streaming elaborati con successo da [[!DNL Profilo cliente in tempo reale]](../../profile/home.md), nonché un elenco dettagliato dei dati in arrivo.
+Viene visualizzata la pagina **[!UICONTROL Streaming end-to-end]** di monitoraggio. Questa area di lavoro fornisce un grafico che mostra la frequenza degli eventi in streaming ricevuti da [!DNL Platform], un grafico che mostra la frequenza degli eventi in streaming elaborati con successo da [[!DNL Real-time Customer Profile]](../../profile/home.md), nonché un elenco dettagliato dei dati in arrivo.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -61,7 +61,7 @@ Inoltre, i record con errore forniscono dettagli sugli errori che si sono verifi
 
 ## Monitorare l’inserimento di dati end-to-end in batch
 
-Nell&#39;interfaccia [[!DNL  Experience Platform]](https://platform.adobe.com), fate clic **[!UICONTROL Monitoring]** sul menu di navigazione a sinistra.
+Nel [[!DNL Experience Platform UI]](https://platform.adobe.com), fate clic **[!UICONTROL Monitoring]** sul menu di navigazione a sinistra.
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 
