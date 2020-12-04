@@ -7,7 +7,7 @@ description: Questo documento contiene le risposte alle domande frequenti sull�
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1002'
 ht-degree: 0%
 
 ---
@@ -101,4 +101,4 @@ Se [!DNL Real-time Customer Profile] rifiuta un messaggio, è probabile che sia 
 
 Esistono due tipi di spazi dei nomi di identità: predefinito e personalizzato. Quando si utilizzano spazi dei nomi personalizzati, assicurarsi che lo spazio dei nomi sia stato registrato all&#39;interno di [!DNL Identity Service]. Per ulteriori informazioni sull&#39;utilizzo degli spazi dei nomi predefiniti e personalizzati, consultate la panoramica [dello spazio dei nomi](../../identity-service/namespaces.md) identità.
 
-Puoi utilizzare l&#39; [[!DNL  interfaccia utente del Experience Platform]](https://platform.adobe.com) per visualizzare ulteriori informazioni sul motivo per cui un&#39;assimilazione non riuscita di un messaggio. Fai clic **[!UICONTROL Monitoring]** nella barra di navigazione a sinistra, quindi visualizza la **[!UICONTROL Streaming end-to-end]** scheda per visualizzare i batch di messaggi in streaming durante un periodo di tempo selezionato.
+Puoi utilizzare il [[!DNL Experience Platform UI]](https://platform.adobe.com) per visualizzare ulteriori informazioni sul motivo per cui un messaggio non è stato inviato correttamente. Fai clic **[!UICONTROL Monitoring]** nella barra di navigazione a sinistra, quindi visualizza la **[!UICONTROL Streaming end-to-end]** scheda per visualizzare i batch di messaggi in streaming durante un periodo di tempo selezionato.
