@@ -17,6 +17,6 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform [!DNL Web SDK] è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e la funzionalità sono soggette a modifiche.
+>Adobe Experience Platform [!DNL Web SDK] è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
 
 Nei browser incorporati nelle applicazioni mobili, l&#39;SDK si comporta esattamente come in un normale browser; tuttavia, devi accertarti che l’ID visitatore venga passato dall’applicazione mobile al sito Web tramite l’URL. Questo processo è descritto nella documentazione per l&#39;SDK [Experience per Mobile](https://docs.adobe.com/content/help/en/mobile-services/ios/sdk-reference-ios/hybrid-app.html).
