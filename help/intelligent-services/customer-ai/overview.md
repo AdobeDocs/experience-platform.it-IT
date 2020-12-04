@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;overview;customer ai;popular topics;customer ai overview
 solution: Experience Platform
-title: Panoramica dell'AI del cliente
+title: Panoramica di Customer AI
 topic: Customer AI overview
-description: L'AI del cliente viene utilizzata per generare punteggi di propensione personalizzati, come il churn e la conversione per i singoli profili su scala. Ciò è possibile senza dover trasformare le esigenze aziendali in un problema di machine learning, scegliere un algoritmo, un treno o un'implementazione.
+description: Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala. Per poter usufruire di queste funzioni non occorre trasformare le esigenze aziendali in problematiche di machine learning né scegliere un algoritmo, e non sono richieste formazione o implementazioni specifiche.
 translation-type: tm+mt
 source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
 source-wordcount: '526'
-ht-degree: 0%
+ht-degree: 16%
 
 ---
 
 
-# Panoramica dell&#39;AI del cliente
+# Panoramica di Customer AI
 
 Customer AI , come parte di Intelligent Services, fornisce agli esperti di marketing la possibilità di generare previsioni sui clienti a livello individuale con spiegazioni.
 
@@ -21,7 +21,7 @@ Con l&#39;aiuto di fattori influenti, l&#39;intelligenza artificiale del cliente
 
 ## Informazioni sull&#39;AI del cliente
 
-L&#39;AI del cliente viene utilizzata per generare punteggi di propensione personalizzati, come il churn e la conversione per i singoli profili su scala. Ciò è possibile senza dover trasformare le esigenze aziendali in un problema di machine learning, scegliere un algoritmo, un treno o un&#39;implementazione.
+Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala. Per poter usufruire di queste funzioni non occorre trasformare le esigenze aziendali in problematiche di machine learning né scegliere un algoritmo, e non sono richieste formazione o implementazioni specifiche.
 
 L&#39;AI del cliente è stata creata per:
 
