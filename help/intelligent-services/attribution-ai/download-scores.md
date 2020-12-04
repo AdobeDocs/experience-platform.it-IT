@@ -267,17 +267,17 @@ I punteggi scaricati saranno in formato parquet e avrà bisogno di un lettore [!
 
 In questo documento sono descritti i passaggi necessari per scaricare  valutazioni delle Attribution AI. Per maggiori informazioni sulle uscite dei punteggi, consulta la documentazione di input e output [di](./input-output.md) Attribuzione AI.
 
-## Accesso ai punteggi tramite  Snowflake
+## Accesso ai punteggi tramite Snowflake
 
 >[!IMPORTANT]
 >
->Per ulteriori informazioni sull&#39;accesso ai punteggi utilizzando  Snowflake, contattate attributionai-support@adobe.com.
+>Per ulteriori informazioni sull’accesso ai punteggi tramite Snowflake, contattate attributionai-support@adobe.com.
 
-È possibile accedere ai punteggi aggregati  Attribution AI tramite  Snowflake. Al momento, è necessario inviare tramite e-mail  supporto del Adobe all&#39;indirizzo attributionai-support@adobe.com per configurare e ricevere le credenziali per  Snowflake nel proprio account lettore.
+È possibile accedere ai punteggi aggregati  Attribution AI attraverso il Snowflake. Al momento, è necessario inviare tramite e-mail  supporto del Adobe all&#39;indirizzo attributionai-support@adobe.com per configurare e ricevere le credenziali per l&#39;account del lettore, ad Snowflake.
 
-Una volta che  supporto Adobe ha elaborato la richiesta, vi viene fornito un URL per l&#39;account lettore  Snowflake e le credenziali corrispondenti riportate di seguito:
+Una volta che  supporto Adobe ha elaborato la richiesta, vi viene fornito un URL per l&#39;account lettore da Snowflake e le credenziali corrispondenti riportate di seguito:
 
-- URL Snowflake 
+- URL Snowflake
 - Nome utente
 - Password
 
@@ -287,9 +287,9 @@ Una volta che  supporto Adobe ha elaborato la richiesta, vi viene fornito un URL
 
 Una volta ottenute le credenziali e l&#39;URL, è possibile eseguire query sulle tabelle dei modelli, aggregate per data punto di contatto o data di conversione.
 
-### Ricerca dello schema in  Snowflake
+### Ricerca dello schema nel Snowflake
 
-Utilizzando le credenziali fornite, accedete al  Snowflake. Fare clic sulla scheda **Fogli** di lavoro nella navigazione principale in alto a sinistra, quindi passare alla directory del database nel pannello a sinistra.
+Utilizzando le credenziali fornite, accedete al Snowflake. Fare clic sulla scheda **Fogli** di lavoro nella navigazione principale in alto a sinistra, quindi passare alla directory del database nel pannello a sinistra.
 
 ![Fogli di lavoro e navigazione](./images/download-scores/edited_snowflake_1.png)
 
@@ -297,12 +297,12 @@ Fare clic su **Seleziona schema** nell&#39;angolo superiore destro dello schermo
 
 ![trovare uno schema](./images/download-scores/edited_snowflake_2.png)
 
-## Collegamento di PowerBI al Snowflake  (facoltativo)
+## Collegamento di PowerBI al Snowflake (facoltativo)
 
-Le credenziali  Snowflake possono essere utilizzate per impostare una connessione tra PowerBI Desktop e  database di Snowflake.
+Le credenziali di Snowflake possono essere utilizzate per impostare una connessione tra PowerBI Desktop e i database di Snowflake.
 
-Innanzitutto, nella casella *Server* , digitate l’URL  Snowflake. Quindi, in *Warehouse*, digitare &quot;XSMALL&quot;. Digitare quindi il nome utente e la password.
+Innanzitutto, nella casella *Server* , digitate l’URL del vostro Snowflake. Quindi, in *Warehouse*, digitare &quot;XSMALL&quot;. Digitare quindi il nome utente e la password.
 
 ![esempio di POWERBI](./images/download-scores/powerbi-snowflake.png)
 
-Una volta stabilita la connessione, selezionate il database del Snowflake , quindi selezionate lo schema appropriato. Ora è possibile caricare tutte le tabelle.
+Una volta stabilita la connessione, selezionate il database del Snowflake, quindi selezionate lo schema appropriato. Ora è possibile caricare tutte le tabelle.
