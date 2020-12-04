@@ -5,7 +5,7 @@ seo-title: Panoramica della piattaforma dati cliente in tempo reale
 description: Panoramica della piattaforma dati cliente in tempo reale
 seo-description: Panoramica della piattaforma dati cliente in tempo reale
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 4dfef6649b3ae07593667eb5165dad6bacc8ed2f
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%
@@ -38,5 +38,5 @@ Per iniziare a usare la piattaforma dati cliente in tempo reale, si consiglia di
 * [Come acquisire i dati](sources/sources-overview.md)
 * [Come accedere ai profili](profile/profile-overview.md)
 * [Come creare segmenti](segmentation/segmentation-overview.md)
-* [Come attivare i segmenti nelle destinazioni](destinations/activate-destinations.md)
+* [Come attivare i segmenti nelle destinazioni](destinations/overview.md)
 * [Come definire e applicare criteri di governance dei dati](privacy/data-governance-overview.md)
