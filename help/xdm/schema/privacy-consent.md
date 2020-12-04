@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Il [!DNL Privacy/Marketing Preferences (Consent)] mixin (in seguito denominato &quot;[!DNL Privacy Consent] mixin&quot;) è un mixin [!DNL Experience Data Model] (XDM) destinato a supportare la raccolta di autorizzazioni e preferenze utente generate dai CMP e da altre fonti dei clienti. Il presente documento illustra la struttura e l&#39;uso previsto dei vari campi forniti dal mixin.
 
-## Prerequisiti  {#prerequisites}
+## Prerequisiti   {#prerequisites}
 
 Questo documento richiede una conoscenza approfondita di [!DNL Experience Data Model] (XDM) e dell&#39;utilizzo degli schemi in [!DNL Experience Platform]. Prima di continuare, consulta la seguente documentazione:
 
