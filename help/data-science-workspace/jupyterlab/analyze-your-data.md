@@ -8,7 +8,7 @@ description: Questa esercitazione si concentra sull'utilizzo dei notebook Jupyte
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1731'
+source-wordcount: '1723'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Sono introdotti i seguenti concetti:
 
 - **[!DNL JupyterLab]:** [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) è l&#39;interfaccia Web di nuova generazione per Project Jupyter ed è strettamente integrata in [!DNL Adobe Experience Platform].
 - **Batch:** I set di dati sono costituiti da batch. Un batch è un insieme di dati raccolti in un periodo di tempo ed elaborati insieme come un&#39;unica unità. Vengono creati nuovi batch quando i dati vengono aggiunti a un dataset.
-- **SDK accesso ai dati (obsoleto):** L&#39;SDK per l&#39;accesso ai dati ora è obsoleto. Utilizzate la guida [[!DNL Platform SDK]](../authoring/platform-sdk.md) .
+- **SDK accesso ai dati (obsoleto):** L&#39;SDK per l&#39;accesso ai dati ora è obsoleto. Per favore, usi la [[!DNL Platform SDK]](../authoring/platform-sdk.md) guida.
 
 ## Esplora i notebook in Data Science Workspace
 
@@ -92,7 +92,7 @@ Ora, possiamo fare clic con il pulsante destro del mouse sul `Retail-Training-<y
 
 >[!TIP]
 >
->Fate riferimento alla guida [[!DNL Platform SDK]](../authoring/platform-sdk.md) per convertire il codice.
+>Fare riferimento alla [[!DNL Platform SDK]](../authoring/platform-sdk.md) guida per convertire il codice.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
