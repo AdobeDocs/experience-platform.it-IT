@@ -260,7 +260,7 @@ Per ulteriori informazioni su ciascuno dei notebook supportati e su come utilizz
 | gensim | 3.7.3 |
 | ipyparallelo | 0.5.2 |
 | jq | 1.6 |
-| grano | 2.2.4 |
+| cheras | 2.2.4 |
 | nltk | 3.2.5 |
 | panda | 0.22.0 |
 | pandasql | 0.7.3 |
@@ -268,17 +268,17 @@ Per ulteriori informazioni su ciascuno dei notebook supportati e su come utilizz
 | scikit-image | 0.15.0 |
 | scikit-learn | 0.21.3 |
 | sciolto | 1.3.0 |
-| andatura | 1.3.0 |
+| grassa | 1.3.0 |
 | marinaio | 0.9.0 |
-| optslm | 0.10.1 |
-| Il elastico | 5.1.0.17 |
+| statsmodels | 0.10.1 |
+| elastico | 5.1.0.17 |
 | ggplot | 0.11.5 |
 | py xgipplo | 0.90 |
 | opencv | 3.4.1 |
 | pyspark | 2.4.3 |
 | torcia | 1.0.1 |
 | wxpitone | 4.0.6 |
-| naso | 0.3.0 |
+| colorante | 0.3.0 |
 | geopandas | 0.5.1 |
 | pirata | 2.1.0 |
 | sagomato | 1.6.4 |
@@ -336,7 +336,7 @@ Per ulteriori informazioni su ciascuno dei notebook supportati e su come utilizz
 | ipympl | 0.3.3 |
 | fonts-anacond | 1,0 |
 | psycopg2 | 2.8.3 |
-| stringere | 1.3.7 |
+| naso | 1.3.7 |
 | autovwidget | 0.12.9 |
 | altair | 3.1.0 |
 | vega_datasets | 0.7.0 |
@@ -359,11 +359,11 @@ Per ulteriori informazioni su ciascuno dei notebook supportati e su come utilizz
 | scikit-image | 0.13.0 |
 | scikit-learn | 0.19.0 |
 | sciolto | 0.19.1 |
-| andatura | 1.3.3 |
+| grassa | 1.3.3 |
 | statsmodels | 0.8.0 |
-| sciolto | 4.0.30.44 |
+| elastico | 4.0.30.44 |
 | py xgipplo | 0.60 |
-| pirencv | 3.1.0 |
+| opencv | 3.1.0 |
 | freccia | 0.8.0 |
 | boto3 | 1.5.18 |
 | azure-storage-blob | 1.4.0 |
