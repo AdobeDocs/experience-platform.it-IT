@@ -175,7 +175,7 @@ Questo messaggio di errore viene visualizzato quando manca un&#39; `Authorizatio
 }
 ```
 
-Questo messaggio di errore viene visualizzato quando il token di accesso fornito nell&#39; `Authorization` intestazione non è valido. Verificate che il token sia stato immesso correttamente o [generate un nuovo token](../tutorials/authentication.md) nella console I/O  Adobe.
+Questo messaggio di errore viene visualizzato quando il token di accesso fornito nell&#39; `Authorization` intestazione non è valido. Verifica che il token sia stato immesso correttamente o [genera un nuovo token](../tutorials/authentication.md) nella  Adobe I/O Console.
 
 ### Chiave API obbligatoria
 
@@ -197,7 +197,7 @@ Questo messaggio di errore viene visualizzato quando manca un&#39;intestazione d
 }
 ```
 
-Questo messaggio di errore viene visualizzato quando il valore dell&#39;intestazione della chiave API (`x-api-key`) specificata non è valido. Prima di riprovare, verificate di aver immesso correttamente la chiave. Se non conosci la tua chiave API, puoi trovarlo nella console [I/O](https://console.adobe.io)Adobe: nella scheda **Integrazioni** , andate alla sezione **Panoramica** di un&#39;integrazione specifica per trovare la chiave API in Credenziali **client**.
+Questo messaggio di errore viene visualizzato quando il valore dell&#39;intestazione della chiave API (`x-api-key`) specificata non è valido. Prima di riprovare, verificate di aver immesso correttamente la chiave. Se non conosci la tua chiave API, puoi trovarlo nella [console](https://console.adobe.io)Adobe I/O: nella scheda **Integrazioni** , andate alla sezione **Panoramica** di un&#39;integrazione specifica per trovare la chiave API in Credenziali **client**.
 
 
 ### Intestazione mancante
@@ -220,7 +220,7 @@ Questo messaggio di errore viene visualizzato quando un&#39;intestazione organiz
 }
 ```
 
-Questo messaggio di errore viene visualizzato quando l&#39;integrazione I/O utente o  Adobe (identificata dal token [di](#how-do-i-get-an-access-token) accesso nell&#39; `Authorization` intestazione) non ha diritto di effettuare chiamate alle [!DNL Experience Platform] API per l&#39;organizzazione IMS fornita nell&#39; `x-gw-ims-org-id` intestazione. Prima di riprovare, verificate di aver fornito l’ID corretto per l’organizzazione IMS nell’intestazione. Se non conosci il tuo ID organizzazione, puoi trovarlo nella console [I/O](https://console.adobe.io)Adobe: nella scheda **Integrazioni** , andate alla sezione **Panoramica** di un&#39;integrazione specifica per trovare l&#39;ID in Credenziali **client**.
+Questo messaggio di errore viene visualizzato quando l&#39;utente o &#39;integrazione Adobe I/O (identificata dal token [di](#how-do-i-get-an-access-token) accesso nell&#39; `Authorization` intestazione) non è autorizzato a effettuare chiamate alle [!DNL Experience Platform] API per l&#39;organizzazione IMS fornita nell&#39; `x-gw-ims-org-id` intestazione. Prima di riprovare, verificate di aver fornito l’ID corretto per l’organizzazione IMS nell’intestazione. Se non conosci il tuo ID organizzazione, puoi trovarlo nella [console](https://console.adobe.io)Adobe I/O: nella scheda **Integrazioni** , andate alla sezione **Panoramica** di un&#39;integrazione specifica per trovare l&#39;ID in Credenziali **client**.
 
 ### Tipo di contenuto valido non specificato
 
