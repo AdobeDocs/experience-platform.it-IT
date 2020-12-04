@@ -3,7 +3,7 @@ keywords: Experience Platform;getting started;content ai;commerce ai;content and
 solution: Experience Platform
 title: Guida introduttiva a Content and Commerce AI
 topic: Getting started
-description: Content and Commerce AI utilizza  API I/O Adobe. Per effettuare chiamate alle API I/O  Adobe e all'integrazione della console I/O, è innanzitutto necessario completare l'esercitazione sull'autenticazione.
+description: Content and Commerce AI utilizza  API Adobe I/O. Per effettuare chiamate alle API  Adobe I/O e all'integrazione della console di I/O, è innanzitutto necessario completare l'esercitazione sull'autenticazione.
 translation-type: tm+mt
 source-git-commit: 2be04547b96e1a6c293cc63e782fe1b3259619ba
 workflow-type: tm+mt
@@ -19,13 +19,13 @@ ht-degree: 0%
 >
 >Content and Commerce AI è in versione beta. La documentazione è soggetta a modifiche.
 
-[!DNL Content and Commerce AI] utilizza  API I/O Adobe. Per effettuare chiamate alle API I/O  Adobe e all&#39;integrazione della console di I/O, è innanzitutto necessario completare l&#39;esercitazione [di](../../tutorials/authentication.md)autenticazione.
+[!DNL Content and Commerce AI] utilizza  API Adobe I/O. Per effettuare chiamate alle API  Adobe I/O e all&#39;integrazione della console di I/O, è innanzitutto necessario completare l&#39;esercitazione sull&#39; [autenticazione](../../tutorials/authentication.md).
 
 Tuttavia, quando si passa al passaggio **Aggiungi API** , l&#39;API si trova in  Experience Cloud invece che in Adobe Experience Platform, come mostrato nella schermata seguente:
 
 ![aggiunta di contenuto e AI di Commerce](./images/add-api.png)
 
-Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API I/O  Adobe, come illustrato di seguito:
+Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API Adobe I/O , come illustrato di seguito:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -33,7 +33,7 @@ Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valor
 
 ## Creare un ambiente Postman (facoltativo)
 
-Dopo aver configurato il progetto e l&#39;API in  Adobe Developer Console, potete scaricare un file di ambiente per Postman. Sotto **[!UICONTROL APIs]** la barra a sinistra del progetto, selezionate **[!UICONTROL Content and Commerce AI]**. Si apre una nuova scheda contenente una scheda con etichetta &quot;[!DNL Try it out]&quot;. Selezionate **Scarica per Postman** per scaricare un file JSON utilizzato per configurare l&#39;ambiente postman.
+Dopo aver configurato il progetto e l&#39;API in  Adobe Developer Console, potete scaricare un file di ambiente per Postman. Sotto **[!UICONTROL APIs]** la barra a sinistra del progetto, selezionate **[!UICONTROL Content and Commerce AI]**. Si apre una nuova scheda contenente una scheda con etichetta &quot;[!DNL Try it out]&quot;. Selezionate **Scarica per Postman** per scaricare un file JSON usato per configurare l’ambiente postman.
 
 ![download per postman](./images/add-to-postman.png)
 
@@ -63,7 +63,7 @@ Ora potete selezionare l&#39;ambiente dal menu a discesa nell&#39;angolo in alto
 
 ![esempio](./images/select-environment.png)
 
-Per ulteriori informazioni sull&#39;utilizzo  API I/O di Adobe tramite Postman, vedere il post Medium sull&#39; [uso di Postman per l&#39;autenticazione JWT  Adobe I/O](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f).
+Per ulteriori informazioni sull&#39;utilizzo  API Adobe I/O tramite Postman, consultate il post Medium sull&#39; [uso dell&#39;autenticazione Postman per l&#39;autenticazione JWT su  Adobe I/O](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f).
 
 ## Lettura di chiamate API di esempio
 
