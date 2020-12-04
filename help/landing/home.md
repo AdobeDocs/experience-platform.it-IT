@@ -45,7 +45,7 @@ Per iniziare a utilizzarli in modo [!DNL Platform] rapido e semplice, seguite le
    Scopri le basi dell&#39;utilizzo delle [!DNL Platform] API.
 
 * [**Documenti di riferimento API**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)\
-   Scopri [!DNL Experience Platform] le API, comprese intestazioni, parametri, richieste di esempio e risposte.<br/>*Questi documenti sono ospitati  I/O Adobe.*
+   Scopri [!DNL Experience Platform] le API, comprese intestazioni, parametri, richieste di esempio e risposte.<br/>*Questi documenti sono in hosting su  Adobe I/O.*
 
 * [**Glossario**](glossary.md)\
    Esaminate la terminologia di Adobe Experience Platform.
