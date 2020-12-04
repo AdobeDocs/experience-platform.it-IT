@@ -8,7 +8,7 @@ description: Questa esercitazione descrive i passaggi per aggiornare le informaz
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '709'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ Adobe Experience Platform consente l&#39;acquisizione di dati da origini esterne
 
 [!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
-Questa esercitazione descrive i passaggi necessari per aggiornare le informazioni sulla connessione, inclusi nome, descrizione e credenziali tramite l&#39;API [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Questa esercitazione descrive i passaggi necessari per aggiornare le informazioni sulla connessione, inclusi nome, descrizione e credenziali che utilizzano l&#39; [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Introduzione
 
