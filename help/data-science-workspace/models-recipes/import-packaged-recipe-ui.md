@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Questa esercitazione fornisce informazioni su come configurare e importare una ricetta in pacchetti utilizzando l&#39;esempio di vendita al dettaglio fornito. Al termine di questa esercitazione, sarà possibile creare, formare e valutare un modello in Adobe Experience Platform [!DNL Data Science Workspace].
 
-## Prerequisiti
+## Prerequisiti  
 
 Questa esercitazione richiede una ricetta in pacchetti sotto forma di URL immagine Docker. Per ulteriori informazioni, consulta l’esercitazione su come [creare pacchetti di file sorgente in una ricetta](./package-source-files-recipe.md) .
 
