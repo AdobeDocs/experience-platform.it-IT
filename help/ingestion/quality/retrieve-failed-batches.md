@@ -8,7 +8,7 @@ description: Questa esercitazione descrive i passaggi per recuperare informazion
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '613'
 ht-degree: 1%
 
 ---
