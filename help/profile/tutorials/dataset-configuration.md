@@ -6,7 +6,7 @@ type: Tutorial
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1035'
+source-wordcount: '1020'
 ht-degree: 1%
 
 ---
@@ -27,9 +27,9 @@ Questa esercitazione descrive il processo di attivazione di un dataset da utiliz
 
 Questa esercitazione richiede una conoscenza approfondita dei diversi servizi Adobe Experience Platform coinvolti nella gestione dei set di dati [!DNL Profile]abilitati. Prima di iniziare questa esercitazione, consulta la documentazione relativa a questi [!DNL Platform] servizi correlati:
 
-- [[!DNL Profilo cliente in tempo reale]](../home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+- [[!DNL Real-time Customer Profile]](../home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 - [[!DNL Identity Service]](../../identity-service/home.md): Consente [!DNL Real-time Customer Profile] di colmare le identità provenienti da origini dati diverse in cui viene eseguito il caricamento [!DNL Platform].
-- [[!Servizio catalogo DNL]](../../catalog/home.md): Un&#39;API RESTful che consente di creare set di dati e configurarli per [!DNL Real-time Customer Profile] e [!DNL Identity Service].
+- [[!DNL Catalog Service]](../../catalog/home.md): Un&#39;API RESTful che consente di creare set di dati e configurarli per [!DNL Real-time Customer Profile] e [!DNL Identity Service].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per effettuare correttamente chiamate alle API della piattaforma.
