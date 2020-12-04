@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;Oracle;oracle
 solution: Experience Platform
-title: Connettore Oracle
+title: Connettore  Oracle
 topic: overview
-description: La documentazione seguente fornisce informazioni su come collegare Oracle alla piattaforma utilizzando le API o l'interfaccia utente.
+description: La documentazione seguente fornisce informazioni su come collegare  Oracle alla piattaforma utilizzando le API o l'interfaccia utente.
 translation-type: tm+mt
 source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
 workflow-type: tm+mt
@@ -31,11 +31,11 @@ La documentazione seguente fornisce informazioni su come connettersi [!DNL Oracl
 
 ## Connessione [!DNL Oracle] all&#39; [!DNL Platform] utilizzo delle API
 
-- [Creare un connettore Oracle utilizzando l&#39;API di servizio di flusso](../../tutorials/api/create/databases/oracle.md)
+- [Creare un connettore Oracle  utilizzando l&#39;API di Flusso Service](../../tutorials/api/create/databases/oracle.md)
 - [Esplora un sistema di database utilizzando l&#39;API del servizio di flusso](../../tutorials/api/explore/database-nosql.md)
 - [Raccolta di dati da un database tramite l&#39;API del servizio di flusso](../../tutorials/api/collect/database-nosql.md)
 
 ## Connessione [!DNL Oracle] all’ [!DNL Platform] interfaccia utente
 
-- [Creare un connettore di origine Oracle nell&#39;interfaccia utente](../../tutorials/ui/create/databases/oracle.md)
+- [Creare un connettore sorgente Oracle  nell’interfaccia utente](../../tutorials/ui/create/databases/oracle.md)
 - [Configurare un flusso di dati per un connettore di database nell&#39;interfaccia utente](../../tutorials/ui/dataflow/databases.md)
