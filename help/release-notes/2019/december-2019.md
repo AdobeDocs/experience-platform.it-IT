@@ -1,5 +1,5 @@
 ---
-title: 'Note sulla versione di Adobe Experience Platform '
+title: Note sulla versione di Adobe Experience Platform
 description: ' Experience Platform note sulla versione 11 dicembre 2019'
 doc-type: release notes
 last-update: December 12, 2019
