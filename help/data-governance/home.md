@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# [!DNL Data Governance] - Panoramica
+# [!DNL Data Governance]panoramica
 
 Una delle funzionalità di base di Adobe Experience Platform consiste nel mettere insieme i dati provenienti da più sistemi aziendali per consentire agli addetti al marketing di identificare, comprendere e coinvolgere meglio i clienti. Questi dati possono essere soggetti a restrizioni d&#39;uso definite dalla tua organizzazione o dalle normative legali. È pertanto importante garantire che le operazioni relative ai dati all&#39;interno dell&#39;area [!DNL Platform] siano conformi ai criteri di utilizzo dei dati.
 
