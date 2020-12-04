@@ -19,7 +19,7 @@ ht-degree: 1%
 
 Questa esercitazione illustra come creare, formare e valutare un modello utilizzando le chiamate API. Fate riferimento a [questo documento](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) per un elenco dettagliato della documentazione API.
 
-## Prerequisiti
+## Prerequisiti  
 
 Seguite [Importa una ricetta inclusa nel pacchetto utilizzando l&#39;API](./import-packaged-recipe-api.md) per creare un motore, richiesto per formare e valutare un modello utilizzando l&#39;API.
 
