@@ -5,7 +5,7 @@ title: Creare destinazioni di e-mail marketing
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '1619'
 ht-degree: 1%
@@ -344,7 +344,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{CONNECTION_SPEC_ID}`: Utilizza l&#39;ID delle specifiche di connessione ottenuto nel passaggio [Ottieni l&#39;elenco delle destinazioni](#get-the-list-of-available-destinations)disponibili.
-* `{S3 or SFTP}`: compila il tipo di connessione desiderato per questa destinazione. Nel catalogo [di](../../rtcdp/destinations/destinations-catalog.md)destinazione, scorrete fino alla destinazione desiderata per verificare se sono supportati i tipi di connessione S3 e/o SFTP.
+* `{S3 or SFTP}`: compila il tipo di connessione desiderato per questa destinazione. Nel catalogo [di](../catalog/overview.md)destinazione, scorrete fino alla destinazione desiderata per verificare se sono supportati i tipi di connessione S3 e/o SFTP.
 * `{ACCESS_ID}`: L&#39;ID di accesso per la posizione di archiviazione [!DNL Amazon] S3.
 * `{SECRET_KEY}`: Chiave segreta per la posizione di archiviazione [!DNL Amazon] S3.
 
