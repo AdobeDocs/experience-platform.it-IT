@@ -92,7 +92,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 ### Qual è la differenza tra le righe JSON (Single Line JSON) e JSON multi-riga?
 
-Per le righe JSON, esiste un oggetto JSON per riga. Ad esempio:
+Per le righe JSON, esiste un oggetto JSON per riga. Esempio:
 
 ```json
 {"string":"string1","int":1,"array":[1,2,3],"dict": {"key": "value1"}}
@@ -100,7 +100,7 @@ Per le righe JSON, esiste un oggetto JSON per riga. Ad esempio:
 {"string":"string3","int":3,"array":[3,6,9],"dict": {"key": "value3", "extra_key": "extra_value3"}}
 ```
 
-Per il JSON su più righe, un oggetto può occupare più righe, mentre tutti gli oggetti sono racchiusi in un array JSON. Ad esempio:
+Per il JSON su più righe, un oggetto può occupare più righe, mentre tutti gli oggetti sono racchiusi in un array JSON. Esempio:
 
 ```json
 [
@@ -192,7 +192,7 @@ Un batch può, nel suo ciclo di vita, attraversare i seguenti stati:
 | Caricamento |  | Il client sta attualmente scrivendo i dati per il batch. Al momento, il batch **non** è pronto per la promozione. |
 | Caricato |  | Il client ha completato la scrittura dei dati per il batch. Il batch è pronto per la promozione. |
 | Mantenuto |  | I dati sono stati estratti da Master, e in un archivio designato in  Adobe Data Lake. |
-| Gestione temporanea |  | Il client ha segnalato il batch per la promozione e i dati sono stati messi in fase di consumo a valle. |
+| Staging |  | Il client ha segnalato il batch per la promozione e i dati sono stati messi in fase di consumo a valle. |
 | Nuovo |  | Il client ha segnalato il batch per la promozione, ma a causa di un errore, il batch viene riprovato da un servizio di monitoraggio batch. Questo stato può essere utilizzato per indicare ai client che potrebbe verificarsi un ritardo nell’assimilazione dei dati. |
 | Bloccato |  | Il client ha segnalato il batch per la promozione, ma dopo `n` i tentativi di un servizio di monitoraggio batch, la promozione batch è stata bloccata. |
 
