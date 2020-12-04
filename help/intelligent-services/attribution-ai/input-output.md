@@ -37,7 +37,7 @@ Non tutte le colonne dello schema [!DNL Consumer Experience Event] (CEE) sono ob
 | Marketing.trackingCode | Punto di contatto |
 | Marketing.campaignname | Punto di contatto |
 | Marketing.campaigngroup | Punto di contatto |
-| Commercio | Conversione |
+| Commerce | Conversione |
 
 In genere, l&#39;attribuzione viene eseguita su colonne di conversione quali ordine, acquisti e pagamenti in &quot;commerce&quot;. Le colonne &quot;canale&quot; e &quot;marketing&quot; sono consigliate per definire punti di contatto per una buona conoscenza. Tuttavia, puoi includere qualsiasi altra colonna aggiuntiva insieme alle colonne precedenti da configurare come definizione di conversione o punto di contatto.
 
