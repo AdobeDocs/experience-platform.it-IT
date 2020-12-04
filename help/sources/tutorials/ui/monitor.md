@@ -6,10 +6,10 @@ title: Monitorare i flussi di dati
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 12b8ced6705c2b14b50ea237391d9f829c894b99
+source-git-commit: 51a09cdced9a21aa785a43d8d9740d70a5fbc46c
 workflow-type: tm+mt
-source-wordcount: '771'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +29,7 @@ Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Ad
 
 ## Monitorare i flussi di dati
 
-Accedete per accedere all’interfaccia utente [del Experience Platform](https://platform.adobe.com) , quindi selezionate **[!UICONTROL Sources]** dal menu di navigazione a sinistra per accedere all’ [!UICONTROL Sources] area di lavoro. Selezionate **[!UICONTROL Dataflows]** dall’intestazione superiore per visualizzare i flussi di dati esistenti.
+Accedete all&#39;interfaccia utente [del Experience Platform](https://platform.adobe.com) , quindi selezionate **[!UICONTROL Sources]** dal menu di navigazione a sinistra per accedere all&#39; [!UICONTROL Sources] area di lavoro. Selezionate **[!UICONTROL Dataflows]** dall’intestazione superiore per visualizzare i flussi di dati esistenti.
 
 ![catalog-dataflows](../../images/tutorials/monitor/catalog-dataflows.png)
 
