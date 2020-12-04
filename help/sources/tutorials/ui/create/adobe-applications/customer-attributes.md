@@ -55,5 +55,5 @@ Viene visualizzato il passaggio **Revisione** , che consente di controllare la n
 
 Una volta creata la connessione, vengono automaticamente creati uno schema di destinazione e un set di dati per contenere i dati in arrivo. Al termine dell&#39;assimilazione iniziale, i dati del profilo degli attributi del cliente possono essere utilizzati dai [!DNL Platform] servizi a valle quali [!DNL Real-time Customer Profile] e [!DNL Segmentation Service]. Per ulteriori informazioni, consulta i documenti seguenti:
 
-* [[!DNL Real-time Customer Profile]  - Panoramica](../../../../../profile/home.md)
-* [[!DNL Segmentation Service]  - Panoramica](../../../../../segmentation/home.md)
+* [[!DNL Real-time Customer Profile] panoramica](../../../../../profile/home.md)
+* [[!DNL Segmentation Service] panoramica](../../../../../segmentation/home.md)
