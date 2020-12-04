@@ -7,7 +7,7 @@ description: Adobe Experience Platform Data Governance fornisce un'interfaccia u
 translation-type: tm+mt
 source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '721'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Adobe Experience Platform [!DNL Data Governance] fornisce un&#39;interfaccia ute
 >
 >Tutti i criteri di utilizzo dei dati (inclusi i criteri di base forniti dal Adobe ) sono disattivati per impostazione predefinita. Affinché un singolo criterio possa essere preso in considerazione per l&#39;applicazione, è necessario abilitare manualmente tale criterio. Per informazioni su come [abilitare i criteri](#enable) , consulta la sezione relativa all’attivazione dei criteri nell’interfaccia utente.
 
-## Prerequisiti
+## Prerequisiti  
 
 Questa guida richiede una buona comprensione dei seguenti [!DNL Experience Platform] concetti:
 
