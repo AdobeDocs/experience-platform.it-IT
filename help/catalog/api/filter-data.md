@@ -7,7 +7,7 @@ description: L'API Catalog Service consente di filtrare i dati delle risposte ut
 translation-type: tm+mt
 source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '2084'
+source-wordcount: '2077'
 ht-degree: 1%
 
 ---
@@ -207,8 +207,8 @@ L&#39;uso dei tag presenta alcune limitazioni:
 * I nomi dei tag sono univoci per l’organizzazione IMS.
 *  processi di Adobe possono utilizzare i tag per determinati comportamenti. I nomi di questi tag hanno il prefisso &quot;adobe&quot; come standard. Pertanto, è consigliabile evitare questa convenzione quando si dichiarano i nomi dei tag.
 * I seguenti nomi di tag sono riservati all’uso in tutta [!DNL Experience Platform]l’organizzazione e pertanto non possono essere dichiarati come nome di tag:
-   * `unifiedProfile`: Questo nome di tag è riservato per i set di dati da acquisire da [[!DNL Profilo cliente in tempo reale]](../../profile/home.md).
-   * `unifiedIdentity`: Il nome del tag è riservato per i set di dati che devono essere acquisiti da [[!DNL Identity Service]](../../identity-service/home.md).
+   * `unifiedProfile`: Questo nome di tag è riservato ai set di dati da cui eseguire l&#39;assimilazione [[!DNL Real-time Customer Profile]](../../profile/home.md).
+   * `unifiedIdentity`: Questo nome di tag è riservato ai set di dati da cui eseguire l&#39;assimilazione [[!DNL Identity Service]](../../identity-service/home.md).
 
 Di seguito è riportato un esempio di un set di dati contenente una `tags` proprietà. I tag all&#39;interno di tale proprietà si presentano sotto forma di coppie chiave-valore, con ciascun valore di tag che viene visualizzato come una matrice contenente una singola stringa:
 
