@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Creare una ricetta utilizzando i notebook Jupyter
 
-Questa esercitazione si sovrappone a due sezioni principali. Innanzitutto, creerete un modello di machine learning utilizzando un modello all&#39;interno di [!DNL JupyterLab Notebook]. Successivamente, verrà eseguito il flusso di lavoro di ricetta del blocco appunti [!DNL JupyterLab] per creare una ricetta all&#39;interno [!DNL Data Science Workspace].
+Questa esercitazione si sovrappone a due sezioni principali. Innanzitutto, creerete un modello di machine learning utilizzando un modello all&#39;interno [!DNL JupyterLab Notebook]. Successivamente, verrà eseguito il flusso di lavoro di ricetta del blocco appunti [!DNL JupyterLab] per creare una ricetta all&#39;interno [!DNL Data Science Workspace].
 
 ## Concetti introdotti:
 
