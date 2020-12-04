@@ -1,5 +1,5 @@
 ---
-title: 'Note sulla versione di Adobe Experience Platform '
+title: Note sulla versione di Adobe Experience Platform
 description: ' note sulla versione del Experience Platform ottobre, 2020'
 doc-type: release notes
 last-update: October, 2020
