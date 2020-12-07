@@ -1,626 +1,336 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;consent;Consent;preferences;Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;consent;Consent
 title: Panoramica sul mixaggio della privacy
-description: Il mixin Privacy/Marketing Preferences (Consent) è un mixin Experience Data Model (XDM) che supporta la raccolta di autorizzazioni e preferenze utente generate dai CMP e da altre fonti dei clienti. Il presente documento illustra la struttura e l'uso previsto dei vari campi forniti dal mixin.
+description: Il tipo di dati Privacy/Marketing Preferences (Consent) è destinato a supportare la raccolta di autorizzazioni e preferenze del cliente generate dalle piattaforme di gestione del consenso (CMP) e da altre fonti dalle operazioni sui dati.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: ba045a635f840c62980288a1a3ad5015f54121da
 workflow-type: tm+mt
-source-wordcount: '1827'
+source-wordcount: '2022'
 ht-degree: 1%
 
 ---
 
 
-# [!DNL Privacy Consent] panoramica del mixin
+# [!DNL Consents & Preferences] panoramica del tipo di dati
 
-Il [!DNL Privacy/Marketing Preferences (Consent)] mixin (in seguito denominato &quot;[!DNL Privacy Consent] mixin&quot;) è un mixin [!DNL Experience Data Model] (XDM) destinato a supportare la raccolta di autorizzazioni e preferenze utente generate dai CMP e da altre fonti dei clienti. Il presente documento illustra la struttura e l&#39;uso previsto dei vari campi forniti dal mixin.
+Il tipo di [!DNL Privacy/Marketing Preferences (Consent)] dati (in seguito denominato &quot;tipo di[!DNL Consents & Preferences] dati&quot;) è un tipo di dati [!DNL Experience Data Model] (XDM) destinato a supportare la raccolta di autorizzazioni e preferenze del cliente generate dalle piattaforme di gestione del consenso (CMP) e da altre fonti provenienti dalle operazioni sui dati.
+
+Il presente documento illustra la struttura e l&#39;uso previsto dei campi forniti dal tipo di [!DNL Consents & Preferences] dati.
+
+>[!IMPORTANT]
+>
+>Il tipo di [!DNL Consents & Preferences] dati è progettato per coprire una serie di casi di utilizzo di consenso e gestione delle preferenze. Di conseguenza, questo documento descrive l&#39;uso dei campi del tipo di dati in termini generali e formula solo suggerimenti su come interpretare l&#39;uso di tali campi. Consulta il team legale per la privacy per allineare la struttura del tipo di dati con il modo in cui l&#39;organizzazione interpreta e presenta ai clienti le scelte di consenso e preferenza.
 
 ## Prerequisiti   {#prerequisites}
 
-Questo documento richiede una conoscenza approfondita di [!DNL Experience Data Model] (XDM) e dell&#39;utilizzo degli schemi in [!DNL Experience Platform]. Prima di continuare, consulta la seguente documentazione:
+Questo documento richiede una buona conoscenza di XDM e l&#39;utilizzo degli schemi in [!DNL Experience Platform]. Prima di continuare, consulta la seguente documentazione:
 
 * [Panoramica del sistema XDM](http://www.adobe.com/go/xdm-home-en)
 * [Nozioni di base sulla composizione dello schema](http://www.adobe.com/go/xdm-schema-best-practices-en)
 
-## Esempio di schema {#schema}
+## Struttura del tipo di dati {#structure}
+
+Il tipo di [!DNL Consents & Preferences] dati fornisce diversi campi utilizzati per acquisire informazioni sul **consenso** e sulle **preferenze** .
+
+Un consenso è un&#39;opzione che consente al cliente di specificare come possono essere utilizzati i propri dati. La maggior parte dei consensi hanno un aspetto legale, in quanto alcune giurisdizioni richiedono l&#39;autorizzazione prima che i dati possano essere utilizzati in un modo particolare, o richiedono che il cliente abbia la possibilità di interrompere tale uso (rinuncia) se non è richiesto il consenso positivo.
+
+Una preferenza è un&#39;opzione che consente al cliente di specificare in che modo devono essere gestiti i diversi aspetti della propria esperienza con un marchio. Questi rientrano in due categorie:
+
+* **Preferenze** di personalizzazione: Preferenze relative alla modalità in cui il marchio deve personalizzare le esperienze distribuite a un cliente.
+* **Preferenze** di marketing: Preferenze relative alla possibilità o meno di contattare un cliente attraverso vari canali.
+
+Il seguente JSON mostra un esempio del tipo di dati che il tipo di [!DNL Consents & Preferences] dati può elaborare. Le informazioni sull&#39;uso specifico di ciascuno di questi campi sono fornite nelle sezioni che seguono.
+
+```json
+{
+  "xdm:consents": {
+    "xdm:collect": {
+      "xdm:val": "y",
+    },
+    "xdm:adID": {
+      "xdm:val": "VI"
+    },
+    "xdm:share": {
+      "xdm:val": "y",
+    },
+    "xdm:personalize": {
+      "xdm:any": {
+        "xdm:val": "y",
+      },
+      "xdm:content": {
+        "xdm:val": "y"
+      }
+    },
+    "xdm:marketing": {
+      "xdm:preferred": "email",
+      "xdm:any": {
+        "xdm:val": "u"
+      },
+      "xdm:push": {
+        "xdm:val": "n",
+        "xdm:reason": "Too Frequent",
+        "xdm:time": "2019-01-01T15:52:25+00:00"
+      }
+    },
+    "xdm:idSpecific": {
+      "email": {
+        "jdoe@example.com": {
+          "xdm:marketing": {
+            "xdm:email": {
+              "xdm:val": "n"
+            }
+          }
+        }
+      }
+    }
+  },
+  "xdm:metadata": {
+    "xdm:time": "2019-01-01T15:52:25+00:00"
+  }
+}
+```
 
 >[!NOTE]
 >
->L&#39;esempio seguente illustra la struttura dei dati inviati [!DNL Platform] tramite il [!DNL Privacy Consent] mixin, in modo da contestualizzare la sezione successiva di questo documento che illustra i principali campi forniti dal mixin. Un esempio completo della struttura dello schema si trova nell&#39; [appendice](#full-schema) a scopo di riferimento.
+>L&#39;esempio precedente è inteso a illustrare la struttura dei dati inviati [!DNL Platform] tramite il tipo di [!DNL Consents & Preferences] dati, in modo da fornire contesto al resto del documento, che illustra i principali campi forniti dal tipo di dati. Lo schema completo per la struttura del tipo di dati si trova nell&#39; [appendice](#full-schema) a scopo di riferimento.
 
-Il seguente JSON mostra un esempio del tipo di dati che il [!DNL Privacy Consent] mixin è in grado di elaborare. Le informazioni sull&#39;uso specifico di ciascuno di questi campi sono fornite nella sezione successiva.
+## xdm:consents {#choices}
+
+`xdm:consents` contiene diversi campi che descrivono il consenso e le preferenze di un cliente. Tali campi sono descritti in dettaglio nelle sottosezioni seguenti.
 
 ```json
-{
-  "xdm:privacyOptOuts": [
-     {
-        "xdm:optOutType": "general_opt_out",
-        "xdm:optOutValue": "in",
-        "xdm:timestamp": "2019-01-01T15:52:25+00:00",
-        "xdm:basisOfProcessing": "legitimate_interest"
-     },
-     {
-        "xdm:optOutType": "device_linking",
-        "xdm:optOutValue": "not_provided",
-        "xdm:basisOfProcessing": "vital_interest"
-     },
-     {
-        "xdm:optOutType": "anonymous_analysis",
-        "xdm:optOutValue": "out"
-     }
-  ],
-  "xdm:personalizationPreferences": {
-     "xdm:default": {
-        "xdm:choice": "unknown",
-        "xdm:timestamp": "2019-01-01T15:52:25+00:00",
-        "xdm:basisOfProcessing": "consent"
-     },
-     "xdm:details": [
-        {
-           "xdm:type": "email",
-           "xdm:choice": "in"
-        },
-        {
-           "xdm:type": "push_notifications",
-           "xdm:choice": "out",
-           "xdm:basisOfProcessing": "legitimate_interest",
-           "xdm:timestamp": "2019-01-01T15:52:25+00:00"
-        }
-     ]
+"xdm:consents": {
+  "xdm:collect": {
+    "xdm:val": "y",
   },
-  "xdm:marketingPreferences": {
-     "xdm:default": {
-        "xdm:choice": "unknown"
-     },
-     "xdm:details": [
-        {
-           "xdm:type": "email",
-           "xdm:choice": "in",
-           "xdm:subscriptions": {
-              "weekly_mailer": {
-                 "xdm:choice": "out",
-                 "xdm:timestamp": "2019-02-03T15:52:25+00:00"
-              },
-              "daily_newsletter": {
-                 "xdm:choice": "pending"
-              }
-           }
-        },
-        {
-           "xdm:type": "iot",
-           "xdm:choice": "out",
-           "xdm:timestamp": "2019-01-01T15:52:25+00:00",
-           "xdm:basisOfProcessing": "legitimate_interest",
-           "xdm:subscriptions": {
-              "out_of_milk": {
-                 "xdm:choice": "in"
-              }
-           }
-        }
-     ]
+  "xdm:adID": {
+    "xdm:val": "VI"
   },
-  "xdm:version": "1.0.0",
-  "xdm:timestamp": "2019-01-01T15:52:25+00:00",
-  "xdm:userLocale": "UK",
-  "xdm:localeSource": "ip"
+  "xdm:share": {
+    "xdm:val": "y",
+  },
+  "xdm:personalize": {
+    "xdm:any": {
+      "xdm:val": "y",
+    },
+    "xdm:content": {
+      "xdm:val": "y"
+    }
+  },
+  "xdm:marketing": {
+    "xdm:preferred": "email",
+    "xdm:any": {
+      "xdm:val": "u"
+    },
+    "xdm:email": {
+      "xdm:val": "n",
+      "xdm:reason": "Too Frequent",
+      "xdm:time": "2019-01-01T15:52:25+00:00"
+    }
+  }
 }
 ```
 
-## Campi {#fields}
+### xdm:collect
 
-Le sezioni seguenti descrivono l’uso di ciascuno dei principali campi forniti dal [!DNL Privacy Consent] mixin e la struttura dei relativi sottocampi.
-
-### xdm:privacyOptOuts {#privacyOptOuts}
-
-`xdm:privacyOptOuts` è un array che rappresenta le impostazioni generali di rifiuto selezionate dal cliente. Diversi oggetti possono essere inclusi in questa matrice, ciascuno dei quali rappresenta un tipo specifico di rinuncia e le preferenze selezionate dal cliente per quel tipo.
+`xdm:collect` rappresenta il consenso del cliente per la raccolta dei dati.
 
 ```json
-"xdm:privacyOptOuts": [
-     {
-        "xdm:optOutType": "general_opt_out",
-        "xdm:optOutValue": "in",
-        "xdm:timestamp": "2019-01-01T15:52:25+00:00",
-        "xdm:basisOfProcessing": "legitimate_interest"
-     },
-     {
-        "xdm:optOutType": "device_linking",
-        "xdm:optOutValue": "not_provided",
-        "xdm:basisOfProcessing": "vital_interest"
-     },
-     {
-        "xdm:optOutType": "anonymous_analysis",
-        "xdm:optOutValue": "out"
-     }
-  ]
+"xdm:collect" : {
+  "xdm:val": "y"
+}
 ```
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `xdm:optOutType` | Tipo di rifiuto. Cfr. l&#39; [appendice](#optOutType-values) per i valori e le definizioni accettati. |
-| `xdm:optOutValue` | La preferenza selezionata dal cliente per questo particolare tipo di rinuncia. Cfr. l&#39; [appendice](#choice-optOutValue-values) per i valori e le definizioni accettati. |
-| `xdm:timestamp` | Una marca temporale ISO 8601 che indica quando la preferenza di rifiuto è cambiata, se applicabile. |
-| `xdm:basisOfProcessing` | Indica la base relativa alla privacy tramite la quale i dati devono essere raccolti ed elaborati. Per impostazione predefinita, questo campo è impostato su `consent`, il che indica che i dati devono essere elaborati solo se l&#39;utente ha fornito il consenso (come mostrato in `xdm:optOutValue`).<br><br>In alcune circostanze, ai clienti non viene richiesto di fornire il consenso per l&#39;elaborazione dei dati. `xdm:basisOfProcessing` deve essere incluso nell&#39;oggetto di rinuncia in questi casi, indicando il motivo per cui non è stata fornita una richiesta di consenso. Cfr. l&#39; [appendice](#basisOfProcessing-values) per i valori e le definizioni accettati. |
+| `xdm:val` | La scelta del consenso fornita dal cliente per questo caso di utilizzo. Cfr. l&#39; [appendice](#choice-values) per i valori e le definizioni accettati. |
 
-### xdm:personalizationPreferences {#personalizationPreferences}
+### xdm:adID
 
-`xdm:personalizationPreferences` acquisisce le preferenze dei clienti in merito alle modalità in cui i loro dati possono essere utilizzati per la personalizzazione. Gli utenti possono scegliere di non partecipare a specifici casi di utilizzo della personalizzazione o di rinunciare completamente alla personalizzazione.
+`xdm:adID` rappresenta il consenso del cliente circa la possibilità di utilizzare un ID pubblicitario (IDFA o GAID) per collegare il cliente tra le app su questo dispositivo.
+
+```json
+"xdm:adID" : {
+  "xdm:val": "y"
+}
+```
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `xdm:val` | La scelta del consenso fornita dal cliente per questo caso di utilizzo. Cfr. l&#39; [appendice](#choice-values) per i valori e le definizioni accettati. |
+
+### xdm:share
+
+`xdm:share` rappresenta il consenso del cliente per sapere se i suoi dati possono essere condivisi con (o venduti a) terze parti.
+
+```json
+"xdm:share" : {
+  "xdm:val": "y"
+}
+```
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `xdm:val` | La scelta del consenso fornita dal cliente per questo caso di utilizzo. Cfr. l&#39; [appendice](#choice-values) per i valori e le definizioni accettati. |
+
+### xdm:personalize {#personalize}
+
+`xdm:personalize` acquisisce le preferenze dei clienti in merito alle modalità in cui i loro dati possono essere utilizzati per la personalizzazione. I clienti possono scegliere di non partecipare a casi d&#39;uso specifici per la personalizzazione, o rinunciare completamente alla personalizzazione.
 
 >[!IMPORTANT]
 >
->`xdm:personalizationPreferences` non copre i casi di utilizzo marketing. Ad esempio, se un cliente rinuncia alla personalizzazione per le e-mail, non smetterà di ricevere le e-mail. Piuttosto, le e-mail che ricevono saranno generiche e non basate sul loro profilo.
+>`xdm:personalize` non copre i casi di utilizzo marketing. Ad esempio, se un cliente rinuncia alla personalizzazione per tutti i canali, non deve smettere di ricevere comunicazioni attraverso tali canali. Piuttosto, i messaggi che ricevono devono essere generici e non basati sul loro profilo.
 >
->Nello stesso esempio, se un cliente rinuncia al marketing tramite e-mail ( `xdm:marketingPreferences`come spiegato nella sezione [](#marketingPreferences)successiva), non riceverà alcuna e-mail, anche se è consentita la personalizzazione tramite e-mail.
+>Nello stesso esempio, se un cliente rinuncia al marketing diretto per tutti i canali (attraverso `xdm:marketing`, come spiegato nella sezione [](#marketing)successiva), non deve ricevere alcun messaggio, anche se è consentita la personalizzazione.
 
 ```json
-"xdm:personalizationPreferences": {
-     "xdm:default": {
-        "xdm:choice": "unknown",
-        "xdm:timestamp": "2019-01-01T15:52:25+00:00",
-        "xdm:basisOfProcessing": "consent"
-     },
-     "xdm:details": [
-        {
-           "xdm:type": "email",
-           "xdm:choice": "in"
-        },
-        {
-           "xdm:type": "push_notifications",
-           "xdm:choice": "out",
-           "xdm:basisOfProcessing": "legitimate_interest",
-           "xdm:timestamp": "2019-01-01T15:52:25+00:00"
-        }
-     ]
+"xdm:personalize": {
+  "xdm:content": {
+    "xdm:val": "y",
   }
+}
 ```
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `xdm:default` | I dati forniti in questo oggetto rappresentano le preferenze del cliente per la personalizzazione nel suo insieme. |
-| `xdm:details` | Un array di oggetti, uno per ciascun tipo di personalizzazione specifico per il quale il cliente ha fornito le preferenze. |
-| `xdm:choice` | La preferenza di consenso fornita dal cliente per la personalizzazione in generale, o un tipo di personalizzazione specifico, a seconda che sia fornita in `xdm:default` o `xdm:details`, rispettivamente. Cfr. l&#39; [appendice](#choice-optOutValue-values) per i valori e le definizioni accettati. |
-| `xdm:type` | Gli oggetti nell&#39; `xdm:details` array devono fornire questo campo per indicare il caso di utilizzo della personalizzazione specifico per il quale il cliente fornisce i dati di consenso. Cfr. l&#39; [appendice](#type-values) per i valori e le definizioni accettati. |
-| `xdm:timestamp` | Una marca temporale ISO 8601 che indica quando la preferenza di rifiuto è cambiata, se applicabile. |
-| `xdm:basisOfProcessing` | Indica la base relativa alla privacy tramite la quale i dati devono essere raccolti ed elaborati. Per impostazione predefinita, questo campo è impostato su `consent`, il che indica che i dati devono essere elaborati solo se l&#39;utente ha fornito il consenso (come mostrato in `xdm:choice`).<br><br>In alcune circostanze, ai clienti non viene richiesto di fornire il consenso per la personalizzazione. `xdm:basisOfProcessing` deve essere incluso nell&#39;oggetto di rinuncia in questi casi, indicando il motivo per cui non è stata fornita una richiesta di consenso. Cfr. l&#39; [appendice](#basisOfProcessing-values) per i valori e le definizioni accettati. |
+| `xdm:content` | Rappresenta le preferenze del cliente per il contenuto personalizzato sul sito Web o l’applicazione. |
+| `xdm:val` | La preferenza di personalizzazione fornita dal cliente per il caso di utilizzo specificato. Nei casi in cui al cliente non venga richiesto di fornire il consenso, il valore di questo campo deve indicare la base su cui dovrebbe avvenire la personalizzazione. Cfr. l&#39; [appendice](#choice-values) per i valori e le definizioni accettati. |
 
+### xdm:marketing {#marketing}
 
-### xdm:marketingPreferences {#marketingPreferences}
-
-`xdm:marketingPreferences` acquisisce le preferenze dei clienti in merito alle finalità di marketing per le quali i loro dati possono essere utilizzati. Gli utenti possono scegliere di non partecipare a specifici casi di utilizzo del marketing o di non partecipare al marketing diretto.
+`xdm:marketing` acquisisce le preferenze dei clienti in merito alle finalità di marketing per le quali i loro dati possono essere utilizzati. I clienti possono scegliere di non partecipare a specifici casi di utilizzo del marketing o di non partecipare al marketing diretto.
 
 ```json
-"xdm:marketingPreferences": {
-     "xdm:default": {
-        "xdm:choice": "unknown"
-     },
-     "xdm:details": [
-        {
-           "xdm:type": "email",
-           "xdm:choice": "in",
-           "xdm:subscriptions": {
-              "weekly_mailer": {
-                 "xdm:choice": "out",
-                 "xdm:timestamp": "2019-02-03T15:52:25+00:00"
-              },
-              "daily_newsletter": {
-                 "xdm:choice": "pending"
-              }
-           }
-        },
-        {
-           "xdm:type": "iot",
-           "xdm:choice": "out",
-           "xdm:timestamp": "2019-01-01T15:52:25+00:00",
-           "xdm:basisOfProcessing": "legitimate_interest",
-           "xdm:subscriptions": {
-              "out_of_milk": {
-                 "xdm:choice": "in"
-              }
-           }
-        }
-     ]
+"xdm:marketing": {
+  "xdm:preferred": "email",
+  "xdm:any": {
+    "xdm:val": "u"
+  },
+  "xdm:email": {
+    "xdm:val": "n",
+    "xdm:reason": "Too Frequent"
+  },
+  "xdm:push": {
+    "xdm:val": "y"
+  },
+  "xdm:sms": {
+    "xdm:val": "y"
   }
+}
 ```
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `xdm:default` | I dati forniti in questo oggetto rappresentano le preferenze del cliente per l&#39;intero marketing diretto. |
-| `xdm:details` | Un array di oggetti, uno per ogni caso di utilizzo marketing specifico per cui il cliente ha fornito le preferenze. |
-| `xdm:choice` | La preferenza di consenso fornita dal cliente per la commercializzazione in generale, o un caso di utilizzo marketing specifico, a seconda che sia fornita rispettivamente in `xdm:default` o `xdm:details`. Cfr. l&#39; [appendice](#choice-optOutValue-values) per i valori e le definizioni accettati. |
-| `xdm:subscriptions` | Un oggetto le cui chiavi rappresentano sottoscrizioni specifiche per la società, come mailing list o newsletter. Ciascun oggetto di iscrizione deve a sua volta contenere un `xdm:choice` valore per la sottoscrizione in questione. |
-| `xdm:type` | Gli oggetti nell&#39; `xdm:details` array devono fornire questo campo per indicare il caso di utilizzo marketing specifico per il quale il cliente fornisce i dati di consenso. Cfr. l&#39; [appendice](#type-values) per i valori e le definizioni accettati. |
-| `xdm:timestamp` | Una marca temporale ISO 8601 che indica quando la preferenza di rifiuto è cambiata, se applicabile. |
-| `xdm:basisOfProcessing` | Indica la base relativa alla privacy tramite la quale i dati devono essere raccolti ed elaborati. Per impostazione predefinita, questo campo è impostato su `consent`, il che indica che i dati devono essere elaborati solo se l&#39;utente ha fornito il consenso (come mostrato in `xdm:choice`).<br><br>In alcune circostanze, ai clienti non viene richiesto di fornire il consenso per il marketing diretto. `xdm:basisOfProcessing` deve essere incluso nell&#39;oggetto di rinuncia in questi casi, indicando il motivo per cui non è stata fornita una richiesta di consenso. Cfr. l&#39; [appendice](#basisOfProcessing-values) per i valori e le definizioni accettati. |
+| `xdm:preferred` | Indica il canale preferito dal cliente per la ricezione delle comunicazioni. Cfr. l&#39; [appendice](#preferred-values) per i valori accettati. |
+| `xdm:any` | Rappresenta le preferenze del cliente per il marketing diretto nel suo insieme. La preferenza di consenso fornita in questo campo è considerata la preferenza &quot;predefinita&quot; per qualsiasi canale di marketing, a meno che non venga ignorata da altri sottocampi forniti in `xdm:marketing`. Se prevedete di utilizzare opzioni di consenso più dettagliate, si consiglia di escludere questo campo.<br><br>Se il valore è impostato su `n`, tutte le impostazioni di personalizzazione più specifiche devono essere ignorate. Se il valore è impostato su `y`, anche tutte le opzioni di personalizzazione con granulometria più fine dovrebbero essere trattate come `y`, a meno che non siano esplicitamente impostate su `n`. Se il valore non è impostato, i valori per ciascuna opzione di personalizzazione devono essere rispettati come specificato. |
+| `xdm:email` | Indica se il cliente accetta di ricevere messaggi e-mail. |
+| `xdm:push` | Indica se il cliente consente la ricezione di notifiche push. |
+| `xdm:sms` | Indica se il cliente accetta di ricevere messaggi di testo. |
+| `xdm:val` | La preferenza fornita dal cliente per il caso di utilizzo specificato. Nei casi in cui il cliente non debba essere invitato a fornire il consenso, il valore di questo campo deve indicare la base su cui dovrebbe avvenire il caso di utilizzo del marketing. Cfr. l&#39; [appendice](#choice-values) per i valori e le definizioni accettati. |
+| `xdm:time` | Una marca temporale ISO 8601 di quando la preferenza di marketing è cambiata, se applicabile. Tenere presente che se la marca temporale di una preferenza singola è la stessa fornita in `xdm:metadata`, il campo non deve essere impostato per tale preferenza. |
+| `xdm:reason` | Quando un cliente rinuncia a un caso di utilizzo marketing, questo campo stringa rappresenta il motivo per cui il cliente ha rinunciato. |
 
-## Inserimento di dati di consenso tramite il mixin {#ingest}
+### xdm:idSpecific
 
-Per utilizzare il [!DNL Privacy Consent] mixin per acquisire i dati di consenso dai clienti, è necessario aggiungere il mixin a uno schema nuovo o esistente e creare un dataset basato su tale schema.
-
-Per informazioni sull&#39;aggiunta di mixin a uno schema, vedere l&#39;esercitazione sulla [creazione di uno schema nell&#39;interfaccia utente](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) . Il[!DNL  Privacy Consent] mixin è compatibile con schemi basati sulle classi [!DNL XDM Individual Profile] o [!DNL XDM ExperienceEvent].
-
-Dopo aver creato uno schema contenente il [!DNL Privacy Consent] mixin, fare riferimento alla sezione sulla [creazione di un dataset](../../catalog/datasets/user-guide.md#create) nella guida utente del dataset, seguendo la procedura per creare un dataset con uno schema esistente.
+`xdm:idSpecific` può essere utilizzato quando un determinato consenso o preferenza non si applica universalmente a un cliente, ma è limitato a un solo dispositivo o ID. Ad esempio, un cliente può scegliere di non ricevere e-mail a un indirizzo, consentendo al contempo la ricezione di e-mail su un altro.
 
 >[!IMPORTANT]
 >
->Se si desidera inviare i dati di consenso a [!DNL Real-time Customer Profile], è necessario creare uno schema [!DNL Profile]abilitato basato sulla [!DNL XDM Individual Profile] classe che contiene il [!DNL Privacy Consent] mixin. Anche il set di dati creato in base a tale schema deve essere abilitato per [!DNL Profile]. Per i passaggi specifici relativi ai [!DNL Real-time Customer Profile] requisiti, fare riferimento alle esercitazioni di cui sopra.
+>Gli ID all’interno di tale canale sono soggetti alle autorizzazioni e alle preferenze a livello di canale (ossia `xdm:consents` al di fuori di `xdm:idSpecific`). Pertanto, tutti i permessi e le preferenze a livello di canale influiscono direttamente sul rispetto delle impostazioni ID o specifiche del dispositivo:
+>
+>* Se il cliente ha acconsentito a livello di canale, tutti i consensi o preferenze equivalenti in `xdm:idSpecific` vengono ignorati.
+>* Se il consenso o la preferenza a livello di canale non è impostato, o se il cliente ha acconsentito, `xdm:idSpecific` vengono rispettati i consensi o le preferenze equivalenti in.
+
+
+Ogni chiave dell&#39; `xdm:idSpecific` oggetto rappresenta uno spazio dei nomi identità specifico riconosciuto da Adobe Experience Platform Identity Service. Sebbene sia possibile definire spazi dei nomi personalizzati per classificare identificatori diversi, si consiglia di utilizzare uno degli spazi dei nomi standard forniti dal servizio identità per ridurre le dimensioni di archiviazione per il profilo cliente in tempo reale. Per ulteriori informazioni sugli spazi dei nomi di identità, consulta la panoramica [dello spazio dei nomi di](../../identity-service/namespaces.md) identità nella documentazione del servizio identità.
+
+Le chiavi di ciascun oggetto namespace rappresentano i valori di identità univoci per i quali il cliente ha impostato le preferenze. Ogni valore di identità può contenere un set completo di autorizzazioni e preferenze, formattate come `xdm:consents`.
+
+```json
+"xdm:idSpecific": {
+  "email": {
+    "jdoe@example.com": {
+      "xdm:marketing": {
+        "xdm:email": {
+          "xdm:val": "n"
+        }
+      }
+    }
+  }
+}
+```
+
+## xdm:metadati
+
+`xdm:metadata` acquisisce i metadati generali relativi al consenso e alle preferenze del cliente ogni volta che sono stati aggiornati per l&#39;ultima volta.
+
+```json
+"xdm:metadata": {
+  "xdm:time": "2019-01-01T15:52:25+00:00",
+}
+```
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `xdm:time` | Una marca temporale per l&#39;ultima volta che è stato aggiornato qualsiasi consenso e preferenze del cliente. Questo campo può essere utilizzato invece di applicare marche temporali alle singole preferenze per ridurre il carico e la complessità. Se si fornisce un `xdm:time` valore in una preferenza individuale, la `xdm:metadata` marca temporale di tale preferenza viene ignorata. |
+
+## Inserimento di dati con il tipo di dati {#ingest}
+
+Per utilizzare il tipo di [!DNL Consents & Preferences] dati per acquisire i dati di consenso dai clienti, è necessario creare un dataset basato su uno schema che contiene tale tipo di dati.
+
+Per informazioni sull&#39;assegnazione dei tipi di dati ai campi, vedere l&#39;esercitazione sulla [creazione di uno schema nell&#39;interfaccia utente](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) . Dopo aver creato uno schema contenente un campo con il tipo di [!DNL Consents & Preferences] dati, fare riferimento alla sezione sulla [creazione di un dataset](../../catalog/datasets/user-guide.md#create) nella guida utente del dataset, seguendo la procedura per creare un dataset con uno schema esistente.
+
+>[!IMPORTANT]
+>
+>Se si desidera inviare i dati di consenso a [!DNL Real-time Customer Profile], è necessario creare uno schema [!DNL Profile]abilitato basato sulla [!DNL XDM Individual Profile] classe che contiene il tipo di [!DNL Consents & Preferences] dati. Anche il set di dati creato in base a tale schema deve essere abilitato per [!DNL Profile]. Per i passaggi specifici relativi ai [!DNL Real-time Customer Profile] requisiti per gli schemi e i set di dati, fare riferimento alle esercitazioni precedentemente collegate.
+>
+>Inoltre, per poter aggiornare correttamente i profili dei clienti, devi anche verificare che i criteri di unione siano configurati per assegnare priorità ai set di dati contenenti i dati di consenso e preferenze più recenti. Per ulteriori informazioni, vedere la panoramica sui criteri di [unione](../../rtcdp/profile/merge-policies.md) .
+
+## Gestione delle modifiche di consenso e preferenza
+
+Quando un cliente modifica il proprio consenso o le proprie preferenze sul sito Web, queste modifiche devono essere raccolte e applicate immediatamente tramite [Adobe Experience Platform Web SDK](../../edge/consent/supporting-consent.md). Se un cliente rinuncia alla raccolta dei dati, la raccolta deve cessare immediatamente. Se un cliente si oppone alla personalizzazione, non dovrebbe essere presente alcuna personalizzazione nella pagina successiva che visita.
 
 ## Appendice {#appendix}
 
-Le sezioni seguenti forniscono ulteriori informazioni di riferimento relative alla [!DNL Privacy Consent] miscelazione.
+Le sezioni seguenti forniscono informazioni di riferimento aggiuntive relative al tipo di [!DNL Consents & Preferences] dati.
 
-### Valori accettati per xdm:optOutType {#optOutType-values}
+### Valori accettati per xdm:val {#choice-values}
 
-Nella tabella seguente sono riportati i valori accettati per `xdm:optOutType`:
+Nella tabella seguente sono riportati i valori accettati per `xdm:val`:
 
-| Valore | Descrizione |
-| --- | --- |
-| `general_opt_out` | I dati non possono essere utilizzati per alcun scopo. In genere questo blocca la raccolta dei dati, tranne quando la base di elaborazione non è &quot;consenso&quot;.<br><br>Quando si utilizza questo tipo di rifiuto, i valori accettati `in` e `out` ottenere il seguente significato contestuale:<ul><li>`in`: L&#39;utente **ha acconsentito** all&#39;utilizzo dei propri dati per l&#39;elaborazione generale.</li><li>`out`: L&#39;utente **non accetta** che i propri dati vengano utilizzati per l&#39;elaborazione generale.</li></ul>Per ulteriori informazioni, vedere la tabella sui valori [accettati per xdm:optOutValue](#choice-optOutValue-values) . |
-| `anonymous_analysis` | I dati non possono essere utilizzati per metriche Web generiche che non richiedono alcun tipo di ID utente, ad esempio il numero di volte in cui una particolare pagina è stata visualizzata. |
-| `device_linking` | I dati di un dispositivo utilizzato da un visitatore non possono essere combinati con i dati di un altro dispositivo utilizzato dallo stesso visitatore. I dispositivi sono collegati utilizzando tecniche quali un nome utente o un indirizzo e-mail comuni, spesso tramite la cooperativa di dispositivi  Adobe o un grafico di dispositivi privati. |
-| `pseudonymous_analysis` | I dati non possono essere utilizzati per le metriche Web fornite da  Adobe Analytics, che richiedono ID pseudonimi per identificare i percorsi seguiti dagli utenti attraverso un sito Web (ad esempio un rapporto di abbandono), per stabilire le sessioni e per scopi di attribuzione. |
-| `sales_sharing_opt_out` | I dati non possono essere utilizzati a fini di vendita o per la condivisione con terzi.<br><br>Quando si utilizza questo tipo di rifiuto, i valori accettati `in` e `out` ottenere il seguente significato contestuale:<ul><li>`in`: L&#39;utente **ha fornito il consenso** affinché i propri dati vengano utilizzati a fini di vendita e condivisione.</li><li>`out`: L&#39;utente **non accetta** che i propri dati vengano utilizzati a fini di vendita e condivisione.</li></ul>Per ulteriori informazioni, vedere la tabella sui valori [accettati per xdm:optOutValue](#choice-optOutValue-values) . |
+| Valore | Title | Descrizione |
+| --- | --- | --- |
+| `y` | Sì | Il cliente ha scelto il consenso o la preferenza. In altre parole, essi **acconsentono** all&#39;uso dei loro dati come indicato dal consenso o dalla preferenza in questione. |
+| `n` | No | Il cliente ha rifiutato il consenso o la preferenza. In altre parole, essi **non** acconsentono all&#39;uso dei loro dati come indicato dal consenso o dalla preferenza in questione. |
+| `p` | Verifica in sospeso | Il sistema non ha ancora ricevuto un consenso o un valore di preferenza finale. Questo viene utilizzato più spesso come parte di un consenso che richiede una verifica in due fasi. Ad esempio, se un cliente sceglie di ricevere e-mail, il consenso viene impostato su `p` finché non seleziona un collegamento in un messaggio e-mail per verificare che abbia fornito l&#39;indirizzo e-mail corretto, al momento in cui il consenso verrà aggiornato a `y`.<br><br>Se questo consenso o preferenza non utilizza un processo di verifica a due set, la `p` scelta può essere utilizzata per indicare che il cliente non ha ancora risposto al prompt del consenso. Ad esempio, potete impostare automaticamente il valore su `p` nella prima pagina di un sito Web, prima che il cliente abbia risposto al prompt del consenso. Nelle giurisdizioni che non richiedono un consenso esplicito, l&#39;utente può anche utilizzarlo per indicare che il cliente non ha esplicitamente rinunciato (in altre parole, il consenso è assunto). |
+| `u` | Sconosciuto | Le informazioni sul consenso o sulle preferenze del cliente sono sconosciute. |
+| `LI` | Interesse legittimo | Il legittimo interesse commerciale a raccogliere ed elaborare tali dati per lo scopo specificato supera il potenziale danno che comporta per l&#39;individuo. |
+| `CT` | Contratto | La raccolta di dati per lo scopo specificato è necessaria per adempiere agli obblighi contrattuali con l&#39;individuo. |
+| `CP` | Rispetto di un obbligo giuridico | La raccolta di dati per lo scopo specificato è necessaria per soddisfare gli obblighi legali dell&#39;impresa. |
+| `VI` | Interesse vitale del singolo | La raccolta di dati per lo scopo specificato è necessaria per proteggere gli interessi vitali dell&#39;individuo. |
+| `PI` | Interesse pubblico | La raccolta di dati per lo scopo specificato è necessaria per svolgere un compito di interesse pubblico o nell&#39;esercizio di un&#39;autorità ufficiale. |
 
-### Valori accettati per xdm:baseOfProcessing {#basisOfProcessing-values}
+### Valori accettati per xdm:favorite {#preferred-values}
 
-Nella tabella seguente sono riportati i valori accettati per `xdm:basisOfProcessing`:
-
-| Valore | Descrizione |
-| --- | --- |
-| `consent` **(Predefinito)** | La raccolta di dati per lo scopo specificato è consentita, dato che l&#39;individuo ha fornito l&#39;autorizzazione esplicita. Questo è il valore predefinito di `xdm:basisOfProcessing` se non viene fornito nessun altro valore. <br><br>**IMPORTANTE**: I valori per `xdm:choice` e `xdm:optOutValue` vengono rispettati solo se `xdm:basisOfProcessing` è impostato su `consent`. Se vengono utilizzati per `xdm:basisOfProcessing` sostituire gli altri valori indicati in questa tabella, le scelte di consenso dell&#39;utente vengono ignorate. |
-| `compliance` | La raccolta di dati per lo scopo specificato è necessaria per soddisfare gli obblighi legali dell&#39;impresa. |
-| `contract` | La raccolta di dati per lo scopo specificato è necessaria per adempiere agli obblighi contrattuali con l&#39;individuo. |
-| `legitimate_interest` | Il legittimo interesse commerciale a raccogliere ed elaborare tali dati per lo scopo specificato supera il potenziale danno che comporta per l&#39;individuo. |
-| `public_interest` | La raccolta di dati per lo scopo specificato è necessaria per svolgere un compito di interesse pubblico o nell&#39;esercizio di un&#39;autorità ufficiale. |
-| `vital_interest` | La raccolta di dati per lo scopo specificato è necessaria per proteggere gli interessi vitali dell&#39;individuo. |
-
-### Valori accettati per xdm:choice e xdm:optOutValue {#choice-optOutValue-values}
-
-La tabella seguente delinea i valori accettati per `xdm:choice` e `xdm:optOutValue`:
+Nella tabella seguente sono riportati i valori accettati per `xdm:preferred`:
 
 | Valore | Descrizione |
 | --- | --- |
-| `pending` | Il sistema non ha ancora ricevuto informazioni di consenso-preferenza dal cliente. Può essere utilizzato per la prima pagina di un sito Web mentre viene ottenuto il consenso. Può anche essere utilizzato per indicare che il consenso è &quot;presunto&quot;, piuttosto che esplicitamente fornito. |
-| `in` | L&#39;utente ha scelto la preferenza di consenso. In altre parole, essi **acconsentono** all&#39;uso dei loro dati come indicato dalla preferenza di consenso in questione. |
-| `out` | L&#39;utente ha rinunciato alla preferenza di consenso. In altre parole, essi **non** acconsentono all&#39;uso dei loro dati come indicato dalla preferenza di consenso in questione. |
-| `not_applicable` | La preferenza di consenso in questione non si applica al cliente. |
-| `not_provided` | Il cliente non ha fornito informazioni sulla preferenza relativa al consenso. |
-| `unknown` | Le informazioni sulle preferenze del cliente relative al consenso sono sconosciute. |
-
-### Valori accettati per xdm:type {#type-values}
-
-Nella tabella seguente sono riportati i valori accettati per `xdm:type`:
-
-| Valore | Descrizione |
-| --- | --- |
-| `ads` | Annunci che possono essere visualizzati da siti Web non correlati. |
-| `content` | Contenuto visualizzato sul sito Web. |
-| `customer_support` | Dati relativi all’assistenza clienti. |
 | `email` | Messaggi e-mail. |
-| `iot` | Dati relativi all&#39;&quot;Internet delle cose&quot; (IoT). |
-| `in_app_messages` | Messaggi in-app. |
-| `in_home` | Messaggi interni. |
-| `in_store` | Messaggi in-store. |
-| `in_vehicle` | Messaggi di bordo. |
-| `offers` | Offerte speciali. |
-| `phone_calls` | Dati relativi alle interazioni telefoniche. |
-| `push_notifications` | Notifiche push. |
+| `push` | Notifiche push. |
+| `inApp` | Messaggi in-app. |
 | `sms` | Messaggi SMS. |
-| `social_media` | Contenuto social media. |
-| `snail_mail` | Messaggi inviati tramite la distribuzione postale convenzionale. |
-| `third_party_content` | Contenuto o articoli visualizzati sul sito Web forniti da un&#39;entità non correlata. |
-| `third_party_offers` | Offerte o annunci visualizzati sul tuo sito Web servizi pubblicitari da un&#39;entità non correlata. |
+| `phone` | Interazioni telefoniche. |
+| `phyMail` | Posta fisica. |
+| `inVehicle` | Messaggi di bordo. |
+| `inHome` | Messaggi interni. |
+| `iot` | Internet dei messaggi di cose (IoT). |
+| `social` | Contenuto social media. |
+| `other` | Canale che non rientra in una categoria standard. |
+| `none` | Nessun canale preferito. |
+| `unknown` | Il canale preferito è sconosciuto. |
 
-### Schema completo [!DNL Privacy Consent] {#full-schema}
+### Schema completo [!DNL Consents & Preferences] {#full-schema}
 
-Il seguente JSON rappresenta lo [!DNL Privacy Consent] schema completo così come viene visualizzato nel Registro di sistema dello schema:
-
-```json
-{
-  "meta:license": [
-    "Copyright 2019 Adobe Systems Incorporated. All rights reserved.",
-    "This work is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license",
-    "you may not use this file except in compliance with the License. You may obtain a copy",
-    "of the License at https://creativecommons.org/licenses/by/4.0/"
-  ],
-  "$id": "https://ns.adobe.com/xdm/context/consent-preferences",
-  "$schema": "http://json-schema.org/draft-06/schema#",
-  "title": "Privacy/Marketing Preferences (Consent)",
-  "description": "This schema captures privacy, personalization and marketing preferences (consents).",
-  "type": "object",
-  "meta:extensible": true,
-  "meta:abstract": true,
-  "definitions": {
-    "consentValue": {
-      "type": "string",
-      "enum": [
-        "not_provided",
-        "pending",
-        "in",
-        "out",
-        "unknown",
-        "not_applicable"
-      ],
-      "meta:enum": {
-        "not_provided": "Not provided",
-        "pending": "Pending verification",
-        "in": "Opt-in",
-        "out": "Opt-out",
-        "unknown": "Unknown",
-        "not_applicable": "Not Applicable"
-      }
-    },
-    "basisOfProcessing": {
-      "title": "Basis Of Processing",
-      "type": "string",
-      "description": "Basis of Processing",
-      "enum": [
-        "consent",
-        "legitimate_interest",
-        "contract",
-        "vital_interest",
-        "compliance",
-        "public_interest"
-      ],
-      "meta:enum": {
-        "consent": "User Consent",
-        "legitimate_interest": "Legitimate Interest",
-        "contract": "Contract",
-        "vital_interest": "Vital Interest of the Individual",
-        "compliance": "Compliance with a Legal Obligation",
-        "public_interest": "Public Interest"
-      }
-    },
-    "timestamp": {
-      "title": "Preference timestamp",
-      "description": "Timestamp of this specific opt out or preference.",
-      "type": "string",
-      "format": "date-time"
-    },
-    "consent-preferences": {
-      "properties": {
-        "xdm:privacyOptOuts": {
-          "title": "Privacy Preferences",
-          "description": "Encapsulates data privacy preferences.",
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "xdm:optOutType": {
-                "title": "Opt-out type",
-                "type": "string",
-                "description": "The type of user permission.",
-                "enum": [
-                  "general_opt_out",
-                  "sales_sharing_opt_out",
-                  "anonymous_analysis",
-                  "pseudonymous_analysis",
-                  "device_linking"
-                ],
-                "meta:enum": {
-                  "general_opt_out": "General opt-out",
-                  "sales_sharing_opt_out": "Sales/sharing opt-out",
-                  "anonymous_analysis": "Anonymous Analysis",
-                  "pseudonymous_analysis": "Pseudonymous Analysis",
-                  "device_linking": "Device Linking"
-                }
-              },
-              "xdm:optOutValue": {
-                "title": "Opt Out Value",
-                "description": "The value of the specific opt out.",
-                "$ref": "#/definitions/consentValue"
-              },
-              "xdm:basisOfProcessing": {
-                "$ref": "#/definitions/basisOfProcessing"
-              },
-              "xdm:timestamp": {
-                "$ref": "#/definitions/timestamp"
-              }
-            }
-          }
-        },
-        "xdm:personalizationPreferences": {
-          "title": "Personalization Preferences",
-          "description": "User's Personalization Preferences",
-          "type": "object",
-          "properties": {
-            "xdm:default": {
-              "title": "Global Personalization Preferences",
-              "description": "User's Default Personalization Preference",
-              "type": "object",
-              "properties": {
-                "xdm:choice": {
-                  "title": "Default Personalization Preferences Value",
-                  "description": "The default value for personalization",
-                  "$ref": "#/definitions/consentValue"
-                },
-                "xdm:basisOfProcessing": {
-                  "$ref": "#/definitions/basisOfProcessing"
-                },
-                "xdm:timestamp": {
-                  "$ref": "#/definitions/timestamp"
-                }
-              }
-            },
-            "xdm:details": {
-              "title": "Itemized Personalization Preferences",
-              "description": "Preferences for specific types of personalization",
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "meta:enum": {
-                    "content": "Personalize Content",
-                    "in_app": "Personalize In App Messages",
-                    "offers": "Personalize Offers",
-                    "email": "Personalize eMail",
-                    "snail_mail": "Personalize Regular Mail",
-                    "phone_calls": "Personalize Phone Calls",
-                    "push_notifications": "Personalize Push Notifications",
-                    "sms": "Personalize SMS",
-                    "customer_support": "Personalize Customer Support",
-                    "in_store": "Personalize In Store",
-                    "in_vehicle": "Personalize In Vehicle",
-                    "in_home": "Personalize In Home",
-                    "iot": "Personalize IoT",
-                    "social_media": "Personalize Social Media",
-                    "third_party_offers": "Personalize Third-party Offers",
-                    "third_party_content": "Personalize Third-party Content",
-                    "ads": "Personalize My Business's Ads on Other Sites"
-                  }
-                },
-                "xdm:choice": {
-                  "title": "Personalization Preference Value",
-                  "description": "The value for this specific personalization preference",
-                  "$ref": "#/definitions/consentValue"
-                },
-                "xdm:basisOfProcessing": {
-                  "$ref": "#/definitions/basisOfProcessing"
-                },
-                "xdm:timestamp": {
-                  "$ref": "#/definitions/timestamp"
-                }
-              }
-            }
-          }
-        }
-      },
-      "xdm:marketingPreferences": {
-        "title": "Marketing Preferences",
-        "description": "User's Direct Marketing Preferences",
-        "type": "object",
-        "properties": {
-          "xdm:default": {
-            "title": "Default Direct Marketing Preference",
-            "description": "User's Default Marketing Preference",
-            "type": "object",
-            "properties": {
-              "xdm:choice": {
-                "title": "Default Marketing Preferences Value",
-                "description": "The default value for direct marketing preferences",
-                "$ref": "#/definitions/consentValue"
-              },
-              "xdm:basisOfProcessing": {
-                "$ref": "#/definitions/basisOfProcessing"
-              },
-              "xdm:timestamp": {
-                "$ref": "#/definitions/timestamp"
-              }
-            }
-          },
-          "xdm:details": {
-            "title": "Itemized Direct Marketing Preferences",
-            "description": "Preferences for specific types of direct marketing",
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "xdm:type": {
-                  "title": "Marketing Preference",
-                  "type": "string",
-                  "description": "The specific marketing preference.",
-                  "enum": [
-                    "email",
-                    "push_notifications",
-                    "in_app_messages",
-                    "sms",
-                    "phone_calls",
-                    "snail_mail",
-                    "in_vehicle_messages",
-                    "in_home_messages",
-                    "iot",
-                    "social_media"
-                  ],
-                  "meta:enum": {
-                    "email": "Receive eMail",
-                    "push_notifications": "Receive Push Notifications",
-                    "in_app_messages": "Receive In App Messages",
-                    "sms": "Receive SMS",
-                    "phone_calls": "Receive Phone Calls",
-                    "snail_mail": "Receive Regular Mail",
-                    "in_vehicle_messages": "Receive In Vehicle Messages",
-                    "in_home_messages": "Receive In Home Messages",
-                    "iot": "Receive IoT",
-                    "social_media": "Receive Social Media Messages"
-                  }
-                },
-                "xdm:choice": {
-                  "title": "Marketing Preference Value",
-                  "description": "The value for this specific marketing preference",
-                  "$ref": "#/definitions/consentValue"
-                },
-                "xdm:basisOfProcessing": {
-                  "$ref": "#/definitions/basisOfProcessing"
-                },
-                "xdm:timestamp": {
-                  "$ref": "#/definitions/timestamp"
-                },
-                "xdm:subscriptions": {
-                  "title": "Company-specific subscriptions",
-                  "description": "Company-specific subscriptions, such as mailing lists or newsletters",
-                  "type": "object",
-                  "meta:xdmType": "map",
-                  "additionalProperties": {
-                    "xdm:choice": {
-                      "title": "Marketing Preference Value",
-                      "description": "The value for this specific marketing preference",
-                      "$ref": "#/definitions/consentValue"
-                    },
-                    "xdm:timestamp": {
-                      "$ref": "#/definitions/timestamp"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "xdm:timestamp": {
-        "title": "Consent Preferences timestamp",
-        "description": "Timestamp of the complete set of user consent preferences.",
-        "type": "string",
-        "format": "date-time"
-      },
-      "xdm:version": {
-        "title": "Preferences Version",
-        "description": "Version of the Privacy Preferences Standard",
-        "type": "string"
-      },
-      "xdm:userLocale": {
-        "title": "User Locale",
-        "description": "User location or jurisdiction that applies to the consents for this user",
-        "type": "string"
-      },
-      "xdm:localeSource": {
-        "title": "Locale Source",
-        "description": "Method used to determine the user's locale",
-        "enum": [
-          "ip",
-          "gps",
-          "user_provided",
-          "website_location",
-          "inferred",
-          "other"
-        ],
-        "meta:enum": {
-          "ip": "IP Address",
-          "gps": "Device GPS",
-          "user_provided": "User Provided",
-          "website_location": "Website eTDL",
-          "inferred": "Inferred",
-          "other": "Other"
-        }
-      }
-    }
-  },
-  "allOf": [
-    {
-      "$ref": "https://ns.adobe.com/xdm/common/extensible#/definitions/@context"
-    },
-    {
-      "$ref": "#/definitions/consent-preferences"
-    }
-  ],
-  "meta:status": "experimental"
-}
-```
+Per visualizzare lo schema completo per il tipo di [!DNL Consents & Preferences] dati, fare riferimento al repository [XDM](https://github.com/adobe/xdm/blob/master/components/datatypes/consentpreferences.schema.json)ufficiale.
