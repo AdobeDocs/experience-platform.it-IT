@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Questa esercitazione utilizza l'interfaccia utente  Experience Platform per illustrare i passaggi necessari per comporre un tipo di dati personalizzato.
 translation-type: tm+mt
-source-git-commit: 9008b49e1eb5e32b0f4cda7049bf873c689f6442
+source-git-commit: bfb65743764b454754ca8ebb01bfe4407833b291
 workflow-type: tm+mt
 source-wordcount: '1215'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Questa esercitazione descrive i passaggi per la creazione e la modifica di tipi 
 
 Questa esercitazione richiede una buona conoscenza del sistema XDM. Fare riferimento alla panoramica [](../home.md) XDM per un&#39;introduzione al ruolo di XDM all&#39;interno dell&#39;ecosistema  Experience Platform, e alle [nozioni di base della composizione](../schema/composition.md) dello schema per vedere in che modo i tipi di dati contribuiscono agli schemi XDM.
 
-Anche se non è richiesto per questa esercitazione, si consiglia di seguire l’esercitazione sulla [composizione di uno schema nell’interfaccia utente](./-schema-ui.md) per acquisire dimestichezza con le varie funzionalità di [!DNL Schema Editor].
+Anche se non è richiesto per questa esercitazione, si consiglia di seguire l’esercitazione sulla [composizione di uno schema nell’interfaccia utente](./create-schema-ui.md) per acquisire dimestichezza con le varie funzionalità di [!DNL Schema Editor].
 
 ## Aprire [!DNL Schema Editor] un tipo di dati
 
