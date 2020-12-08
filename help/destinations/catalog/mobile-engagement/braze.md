@@ -5,9 +5,9 @@ seo-title: Destinazione del freno
 description: Braze è una piattaforma completa di coinvolgimento dei clienti che offre esperienze rilevanti e memorabili tra i clienti e i marchi che amano.
 seo-description: Braze è una piattaforma completa di coinvolgimento dei clienti che offre esperienze rilevanti e memorabili tra i clienti e i marchi che amano.
 translation-type: tm+mt
-source-git-commit: 9380c9c24267f815b788eb51949da13b8c47558f
+source-git-commit: 6b19cfa3c4a5327b6b7543123f631d0355995f09
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: '900'
 ht-degree: 1%
 
 ---
@@ -33,6 +33,10 @@ Notate i seguenti dettagli specifici per la [!DNL Braze] destinazione:
 
 * Puoi inviare qualsiasi [identità](../../../identity-service/namespaces.md) alla [!DNL Braze] destinazione, purché sia mappata sulla [!DNL Braze] destinazione [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation).
 * [!DNL Adobe Experience Platform] i segmenti vengono esportati in [!DNL Braze] base all’ `AdobeExperiencePlatformSegments` attributo .
+
+>[!NOTE]
+>
+>Tenere presente che l&#39;invio di attributi personalizzati aggiuntivi [!DNL Braze] potrebbe causare un aumento del consumo dei punti [!DNL Braze] dati. Consultate il vostro [!DNL Braze] account manager prima di inviare altri attributi personalizzati.
 
 ## Casi d’uso {#use-cases}
 
