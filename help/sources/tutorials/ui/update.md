@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;update accounts;
-description: null
+keywords: Experience Platform;home;popular topics;update accounts
+description: In alcuni casi, potrebbe essere necessario aggiornare i dettagli di un account di origine esistente. L'area di lavoro Origini consente di aggiungere, modificare ed eliminare dettagli di una connessione batch o in streaming esistente, inclusi nome, descrizione e credenziali.
 solution: Experience Platform
 title: Aggiornamento dei dettagli dell'account nell'interfaccia utente
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 51a09cdced9a21aa785a43d8d9740d70a5fbc46c
+source-git-commit: 9b48bc1426e6259ea0b2cf9b420b55b92712f7c2
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '424'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Aggiornamento dei dettagli dell&#39;account nell&#39;interfaccia utente
 
-In alcuni casi, potrebbe essere necessario aggiornare i dettagli di un account di origine esistente. L’ [!UICONTROL Sources] area di lavoro consente di modificare, aggiungere ed eliminare i dettagli di un account, inclusi i valori per il nome, la descrizione e le credenziali di autenticazione.
+In alcuni casi, potrebbe essere necessario aggiornare i dettagli di un account di origine esistente. L’ [!UICONTROL Sources] area di lavoro consente di aggiungere, modificare ed eliminare dettagli di una connessione batch o in streaming esistente, inclusi nome, descrizione e credenziali.
 
 Questa esercitazione fornisce i passaggi per aggiornare i dettagli e le credenziali di un account esistente dall&#39; [!UICONTROL Sources] area di lavoro.
 
@@ -24,10 +24,8 @@ Questa esercitazione fornisce i passaggi per aggiornare i dettagli e le credenzi
 
 Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)] Sistema](../../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
-   - [Nozioni di base sulla composizione](../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
-   - [Esercitazione](../../../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
-- [[!DNL Real-time Customer Profile]](../../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+- [Origini](../../home.md): DNL  Experience Platform consente di acquisire dati da varie fonti, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Piattaforma.
+- [Sandbox](../../../sandboxes/home.md): DNL  Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 ## Aggiorna account
 
