@@ -4,10 +4,10 @@ title: Guida all'interfaccia utente del profilo cliente in tempo reale
 topic: guide
 description: Profilo cliente in tempo reale crea una visualizzazione olistica di ciascuno dei tuoi clienti, combinando dati da più canali tra cui dati online, offline, CRM e di terze parti. Questo documento funge da guida per l'interazione con il profilo cliente in tempo reale nell'interfaccia utente di Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 295315ab052ff151bea9037567bf2690d705367b
+source-git-commit: b991a767f34f0e318b9ca5092fd4cf099de11e0a
 workflow-type: tm+mt
-source-wordcount: '1210'
-ht-degree: 0%
+source-wordcount: '1267'
+ht-degree: 1%
 
 ---
 
@@ -26,9 +26,19 @@ Questa guida all&#39;interfaccia utente richiede una comprensione dei vari [!DNL
 
 ## Panoramica
 
-Nell’ [[!DNL Experience Platform] interfaccia](http://platform.adobe.com), selezionate **[!UICONTROL Profiles]** nel menu di navigazione a sinistra per aprire la **[!UICONTROL Overview]** scheda. Questa scheda fornisce collegamenti alla documentazione e ai video per agevolare la comprensione e l&#39;utilizzo dei profili.
+Nell’interfaccia utente del Experience Platform , selezionate **[!UICONTROL Profiles]** nel menu di navigazione a sinistra per aprire la **[!UICONTROL Overview]** scheda. Questa scheda fornisce collegamenti alla documentazione e ai video per agevolare la comprensione e l&#39;utilizzo dei profili.
 
 ![](../images/user-guide/profiles-overview.png)
+
+### (Alfa) Pannello profilo
+
+>[!IMPORTANT]
+>
+>La funzionalità del dashboard è attualmente in alfa e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
+
+Per alcuni utenti, la selezione **[!UICONTROL Profiles]** nella navigazione a sinistra e l&#39;apertura della **[!UICONTROL Overview]** scheda fornisce una dashboard che mostra le metriche chiave correlate ai dati del profilo.
+
+Per ulteriori informazioni, consulta la guida [alla dashboard](profile-dashboard.md)Profilo.
 
 ## Sfoglia
 
