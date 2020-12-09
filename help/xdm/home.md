@@ -5,9 +5,9 @@ title: Panoramica del sistema XDM
 topic: overview
 description: 'Standardizzazione e interoperabilità sono concetti chiave di Adobe Experience Platform. Experience Data Model (XDM), guidato da  Adobe, è uno sforzo per standardizzare i dati sull''esperienza cliente e definire schemi per la gestione dell''esperienza cliente. '
 translation-type: tm+mt
-source-git-commit: d96890fd79acaa09628dbba49ee6930ed4f9d0e6
+source-git-commit: b0b2f0c5aa91a5aeb5836d9795a580ccc69e3e17
 workflow-type: tm+mt
-source-wordcount: '1584'
+source-wordcount: '1581'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ I dati destinati all&#39;uso in [!DNL Experience Platform] sono raggruppati in d
 
 Tutti gli schemi XDM descrivono i dati che possono essere classificati come record o serie temporali. Il comportamento dei dati di uno schema è definito dalla classe dello schema, che viene assegnata a uno schema al momento della sua prima creazione. Le classi XDM descrivono il numero minimo di proprietà che uno schema deve contenere per rappresentare un particolare comportamento di dati.
 
-Sebbene sia possibile definire classi personalizzate all&#39;interno di [!DNL Schema Registry], si consiglia di utilizzare rispettivamente le classi preferite **[!DNL XDM Individual Profile]** e **[!DNL XDM ExperienceEvent]** i dati di record e serie temporali. Queste classi sono descritte più dettagliatamente di seguito.
+Sebbene sia possibile definire classi personalizzate all&#39;interno di [!DNL Schema Registry], si consiglia di utilizzare rispettivamente le classi preferite **[!DNL XDM Individual Profile]** e **[!DNL XDM ExperienceEvent]** per i dati di record e serie temporali. Queste classi sono descritte più dettagliatamente di seguito.
 
 ### [!DNL XDM Individual Profile] {#xdm-individual-profile}
 
@@ -68,7 +68,7 @@ Anche se non tutti gli eventi sono facilmente organizzati per tutte le origini d
 
 ## schemi e [!DNL Experience Platform] servizi XDM
 
-[!DNL Experience Platform] è agnostico dello schema, il che significa che qualsiasi schema conforme allo standard XDM è disponibile per l&#39;uso da parte [!DNL Platform] dei servizi. I modi in cui i diversi [!DNL Platform] servizi utilizzano gli schemi sono descritti più dettagliatamente di seguito.
+[!DNL Experience Platform] è agnostico allo schema, il che significa che qualsiasi schema conforme allo standard XDM è disponibile per l&#39;uso da parte [!DNL Platform] dei servizi. I modi in cui i diversi [!DNL Platform] servizi utilizzano gli schemi sono descritti più dettagliatamente di seguito.
 
 ### [!DNL Catalog Service], [!DNL Data Ingestion] &amp; [!DNL Data Lake]
 
