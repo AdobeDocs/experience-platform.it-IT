@@ -3,12 +3,12 @@ title: Note sulla versione di Adobe Experience Platform
 description: ' note sulla versione del Experience Platform 9 dicembre 2020'
 doc-type: release notes
 last-update: December 9, 2020
-author: ens60013
+author: ens60013 & ens72471
 translation-type: tm+mt
-source-git-commit: 25c162f50f0a66d77eb638dbf87893af3c543ddc
+source-git-commit: 908b9e6e8b548dea8e39f9f9a5de396d4c9520f4
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 10%
+source-wordcount: '343'
+ht-degree: 7%
 
 ---
 
@@ -19,7 +19,20 @@ ht-degree: 10%
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
+- [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Sources]](#sources)
+
+## [!DNL Data Science Workspace] {#dsw}
+
+Data Science Workspace utilizza l&#39;apprendimento automatico e l&#39;intelligenza artificiale per creare approfondimenti dai tuoi dati. Integrato in Adobe Experience Platform, Data Science Workspace consente di fare previsioni utilizzando i contenuti e le risorse dati nelle soluzioni  Adobe.
+
+### Funzioni chiave
+
+| Funzione | Descrizione |
+|--- | ---|
+| Aggiungi pacchetto Adobe Experience Platform Intelligence | L&#39;aggiunta del pacchetto Adobe Experience Platform Intelligence è un aggiornamento di Data Science Workspace che consente di accedere a funzionalità chiave aggiuntive, come: <li> Sperimentazione e valutazione basata sull’interfaccia utente.</li><li> Possibilità di implementare e rendere operativi modelli con formazione programmata e processi di deduzione.</li><li> Supporto per l&#39;apprendimento profondo nei modelli Tensorflow (GPU Compute).</li><li> Calcolo distribuito basato su Spark per la formazione e il punteggio rispetto a set di dati di grandi dimensioni (10MM + righe).</li><li>E altro</li> |
+
+Per ulteriori informazioni sull&#39;aggiunta del pacchetto Adobe Experience Platform Intelligence, consulta la documentazione sull&#39;accesso e sulle funzioni [di](../../data-science-workspace/access-features-dsw.md)Data Science Workspace.
 
 ## [!DNL Sources] {#sources}
 
@@ -35,3 +48,5 @@ Adobe Experience Platform è in grado di acquisire dati da origini esterne e di 
 | Eliminare i flussi di dati | I flussi di dati in streaming che contengono errori o che non sono più necessari ora possono essere eliminati tramite l&#39; [!DNL Flow Service] API e l&#39;interfaccia utente. Per ulteriori informazioni, consultate l&#39;esercitazione sull&#39; [eliminazione dei flussi di dati tramite l&#39;API](../../sources/tutorials/api/delete-dataflows.md) e l&#39; [eliminazione dei flussi di dati tramite l&#39;interfaccia utente](../../sources/tutorials/ui/delete.md). |
 
 Per ulteriori informazioni sulle origini, consultate la panoramica sulle [origini](../../sources/home.md).
+
+
