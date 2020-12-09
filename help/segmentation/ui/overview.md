@@ -5,7 +5,7 @@ title: Guida utente del servizio di segmentazione
 topic: ui guide
 description: Adobe Experience Platform Segmentation Service fornisce un'interfaccia utente per la creazione e la gestione delle definizioni dei segmenti.
 translation-type: tm+mt
-source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
+source-git-commit: 3e83215cc24b32b7fe9486c6faf455f247b6c922
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Guida utente del servizio di segmentazione
+# Guida all’interfaccia utente del servizio di segmentazione
 
 [!DNL Adobe Experience Platform Segmentation Service] fornisce un&#39;interfaccia utente per la creazione e la gestione delle definizioni dei segmenti.
 
@@ -134,7 +134,7 @@ Selezionando **[!UICONTROL Create segment]** [!DNL Segment Builder] nell’angol
 
 ### [!DNL Segment Builder] workspace
 
-[!DNL Segment Builder] offre un’area di lavoro completa che consente di interagire con gli elementi [!DNL Profile] dati. L’area di lavoro offre controlli intuitivi per la creazione e la modifica di regole, come le sezioni di trascinamento utilizzate per rappresentare le proprietà dei dati.
+[!DNL Segment Builder] offre un’area di lavoro ricca di contenuti che consente di interagire con gli elementi [!DNL Profile] dati. L’area di lavoro offre controlli intuitivi per la creazione e la modifica di regole, come le sezioni di trascinamento utilizzate per rappresentare le proprietà dei dati.
 
 Per informazioni più dettagliate sull’utilizzo dell’ [!DNL Segment Builder] area di lavoro, consultate la guida [[!DNL Segment Builder] ](./segment-builder.md)utente.
 
@@ -174,7 +174,7 @@ Ulteriori informazioni sulla segmentazione in streaming sono disponibili nella g
 >
 >Le violazioni dei criteri si applicano solo se stai creando un segmento che è stato assegnato a una destinazione.
 
-Dopo aver creato il segmento, il segmento verrà analizzato da Adobe Experience Platform Data Governance per assicurarsi che non ci siano violazioni dei criteri all&#39;interno del segmento. Per ulteriori informazioni, consulta la [[!DNL Data Governance] panoramica](../../data-governance/home.md) .
+Dopo aver creato il segmento, il segmento verrà analizzato da Adobe Experience Platform Data Governance per assicurarsi che non ci siano violazioni dei criteri all&#39;interno del segmento. See the [[!DNL Data Governance] overview](../../data-governance/home.md) for more information.
 
 ![](../images/ui/overview/segment-dule-policy-violations.png)
 
