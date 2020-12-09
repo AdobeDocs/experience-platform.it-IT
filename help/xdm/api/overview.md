@@ -5,9 +5,9 @@ title: Guida per lo sviluppo API del Registro di sistema dello schema
 description: 'L''API del Registro di sistema dello schema consente di gestire in modo programmatico tutti gli schemi e le relative risorse XDM disponibili all''interno  Experience Platform. '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d0e5865fddcf2592e9b6d8d4b2747bdceee6bda7
+source-git-commit: 33f9ee45e8dd649d23f9b3b4f03ecf00d8e18fd2
 workflow-type: tm+mt
-source-wordcount: '929'
+source-wordcount: '961'
 ht-degree: 0%
 
 ---
@@ -33,9 +33,13 @@ Gli schemi XDM rappresentano e convalidano la struttura e il formato dei dati ac
 
 Per una guida dettagliata su come creare uno schema completo nell&#39;API del Registro di sistema dello schema, compresa la creazione e l&#39;aggiunta di mixin e tipi di dati, vedere l&#39;esercitazione [sulla creazione dello schema](../tutorials/create-schema-api.md)API.
 
+## Comportamenti
+
+I comportamenti definiscono la natura dei dati che uno schema descrive. Ogni classe XDM deve fare riferimento a un comportamento specifico che tutti gli schemi che utilizzano tale classe erediteranno. Consultate la guida [all&#39;endpoint dei](./behaviors.md) comportamenti per apprendere come visualizzare i comportamenti disponibili nell&#39;API.
+
 ## Classi
 
-Le classi definiscono gli aspetti comportamentali dei dati che uno schema conterrà (record o serie temporali). Inoltre, una classe determina la struttura di base delle proprietà comuni che devono contenere tutti gli schemi basati su tale classe. La classe di uno schema determina quali mixin possono essere utilizzati in tale schema. Per informazioni dettagliate sull&#39;utilizzo delle classi nell&#39;API, consultate la guida [all&#39;endpoint delle](./classes.md) classi.
+Una classe definisce la struttura di base delle proprietà comuni che devono contenere tutti gli schemi basati su tale classe e determina quali mixin possono essere utilizzati in tali schemi. Ogni classe deve essere associata a un comportamento esistente. Per informazioni dettagliate sull&#39;utilizzo delle classi nell&#39;API, consultate la guida [all&#39;endpoint delle](./classes.md) classi.
 
 ## Mixin
 
@@ -47,7 +51,7 @@ I tipi di dati vengono utilizzati come campi di tipo riferimento nelle classi o 
 
 ## Descrittori
 
-I descrittori sono insiemi di metadati a cui sono assegnati campi specifici all&#39;interno di uno schema, che forniscono vari dettagli contestuali, tra cui il modo in cui tali campi (e lo schema stesso) sono correlati ad altri schemi. A ogni schema possono essere applicate una o più entità descrittore e vi sono diversi tipi di descrittori diversi per scopi diversi. Per ulteriori informazioni sull&#39;utilizzo dei descrittori nell&#39;API, consultate la guida [all&#39;endpoint dei](./descriptors.md) descrittori e una panoramica dei diversi tipi di descrittori e dei relativi casi di utilizzo.
+I descrittori sono insiemi di metadati assegnati a campi specifici all&#39;interno di uno schema, che forniscono vari dettagli contestuali, tra cui il modo in cui tali campi (e lo schema stesso) sono correlati ad altri schemi. A ogni schema possono essere applicate una o più entità descrittore e vi sono diversi tipi di descrittori diversi per scopi diversi. Per ulteriori informazioni sull&#39;utilizzo dei descrittori nell&#39;API, consultate la guida [all&#39;endpoint dei](./descriptors.md) descrittori e una panoramica dei diversi tipi di descrittori e dei relativi casi di utilizzo.
 
 ## Unioni
 
