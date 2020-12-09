@@ -5,10 +5,10 @@ user-guide-title: Guida al servizio di segmentazione di Adobe Experience Platfor
 breadcrumb-title: Guida al servizio di segmentazione
 user-guide-description: Crea segmenti e genera tipi di pubblico dai dati dei profili cliente in tempo reale.
 translation-type: tm+mt
-source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
+source-git-commit: ff7c2854d45191b27e23df54b3638955b3535e76
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 25%
+source-wordcount: '139'
+ht-degree: 24%
 
 ---
 
@@ -22,13 +22,14 @@ ht-degree: 25%
    - [Introduzione](api/getting-started.md)
    - [Esportare i processi](api/export-jobs.md)
    - [Anteprime e stime](api/previews-and-estimates.md)
-   - [Scheduler](api/schedules.md)
+   - [Pianificazioni](api/schedules.md)
    - [Definizioni dei segmenti](api/segment-definitions.md)
    - [Processi segmento](api/segment-jobs.md)
    - [Ricerca di segmenti](api/segment-search.md)
    - [Segmentazione in streaming](api/streaming-segmentation.md)
 - Interfaccia utente di segmentazione {#ui}
-   - [Panoramica](ui/overview.md)
+   - [Guida all&#39;interfaccia utente di segmentazione](ui/overview.md)
+   - [Pannello segmento](ui/segment-dashboard.md)
    - [Generatore di segmenti](ui/segment-builder.md)
    - [Segmentazione in streaming](ui/streaming-segmentation.md)
    - [Refactoring dei vincoli temporali](ui/segment-refactoring.md)
