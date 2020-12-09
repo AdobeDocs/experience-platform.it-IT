@@ -5,9 +5,9 @@ title: Guida all'interfaccia utente Adobe Experience Platform
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
+source-git-commit: 761a212abc407fac5bc59c6f5a57c6c17c932230
 workflow-type: tm+mt
-source-wordcount: '1543'
+source-wordcount: '1666'
 ht-degree: 0%
 
 ---
@@ -143,13 +143,25 @@ La **[!UICONTROL Services]** sezione consente di gestire i modelli pubblicati pe
 
 ### [!UICONTROL Data management]
 
-La **[!UICONTROL Schemas]** sezione consente di creare e gestire gli schemi. Per ulteriori informazioni sull&#39;utilizzo della sezione Schemi, vedere l&#39;esercitazione sulla [creazione di uno schema](../xdm/tutorials/create-schema-ui.md). Ulteriori informazioni sul modello dati esperienza (XDM) sono disponibili nella panoramica [](../xdm/home.md)XDM.
+La **[!UICONTROL Schemas]** sezione consente di creare e gestire schemi Experience Data Model (XDM). Per ulteriori informazioni sugli schemi, vedere l&#39;esercitazione sulla [creazione di uno schema](../xdm/tutorials/create-schema-ui.md). Ulteriori informazioni su XDM sono disponibili nella panoramica [](../xdm/home.md)XDM System.
 
-La **[!UICONTROL Datasets]** sezione consente di creare e gestire i set di dati. Ulteriori informazioni sulla sezione Set di dati sono disponibili nella guida [utente](../catalog/datasets/user-guide.md)DataSet.
+La **[!UICONTROL Datasets]** sezione consente di creare e gestire i set di dati. Ulteriori informazioni sui set di dati sono disponibili nella guida [utente](../catalog/datasets/user-guide.md)per i set di dati.
 
-La **[!UICONTROL Queries]** sezione consente di creare e gestire query, registrare query SQL eseguite da Query Service e visualizzare le credenziali PostSQL. Ulteriori informazioni sulla sezione Query sono disponibili nella guida [utente del servizio](../query-service/ui/overview.md)query.
+La **[!UICONTROL Queries]** sezione consente di creare e gestire query, registrare query SQL eseguite da Adobe Experience Platform Query Service e visualizzare le credenziali PostSQL. Ulteriori informazioni sulle query sono disponibili nella guida [utente di](../query-service/ui/overview.md)Query Service.
 
-La **[!UICONTROL Monitoring]** sezione consente di monitorare l’assimilazione batch e in streaming. Ulteriori informazioni sulla sezione Monitoraggio sono disponibili nella guida [utente per l&#39;inserimento dei dati di](../ingestion/quality/monitor-data-flows.md)monitoraggio.
+La **[!UICONTROL Monitoring]** sezione consente di monitorare l’assimilazione batch e in streaming. Ulteriori informazioni sul monitoraggio sono disponibili nella guida [utente per l&#39;inserimento dei dati di](../ingestion/quality/monitor-data-flows.md)monitoraggio.
+
+### [!UICONTROL Decisioning]
+
+ Offer Decisioning è un servizio applicazione integrato con Adobe Experience Platform. Consente di sfruttare  Experience Platform per offrire ai clienti la migliore offerta ed esperienza in tutti i punti di contatto al momento giusto. Per saperne di più su  Offer Decisioning, compreso l&#39;utilizzo [!UICONTROL Offers] e [!UICONTROL Activities] visitare la documentazione [di](https://experienceleague.adobe.com/docs/offer-decisioning.html)Offer Decisioning.
+
+### [!UICONTROL Administration]
+
+L&#39;interfaccia utente della piattaforma (interfaccia utente) fornisce un dashboard attraverso il quale potete visualizzare informazioni importanti sull&#39;utilizzo della licenza dell&#39;organizzazione, come acquisito durante uno snapshot giornaliero. È possibile accedervi selezionando **[!UICONTROL License usage]** nella navigazione. Per ulteriori informazioni sul dashboard di utilizzo della licenza, vedere la guida [all&#39;utilizzo della](license-usage-dashboard.md)licenza.
+
+>[!IMPORTANT]
+>
+>La funzionalità del dashboard di utilizzo licenza è attualmente in alfa e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
 
 ## Passaggi successivi
 
