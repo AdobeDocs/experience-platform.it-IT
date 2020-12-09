@@ -4,9 +4,9 @@ title: Panoramica del profilo cliente in tempo reale
 topic: guide
 description: Profilo cliente in tempo reale è un archivio di entità di ricerca generico che unisce i dati da varie risorse di dati aziendali e fornisce l'accesso a tali dati sotto forma di profili cliente individuali ed eventi serie temporali correlati. Questa funzione consente agli esperti di marketing di promuovere esperienze coordinate, coerenti e pertinenti con il pubblico attraverso più canali.
 translation-type: tm+mt
-source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
+source-git-commit: b8d6bd5caf6c6f4d1da218b6ca12cec154d64412
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1844'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,9 @@ Il rapporto tra Profilo cliente in tempo reale e altri servizi all&#39;interno  
 
 ### Archivio dati profilo
 
-Anche se [!DNL Real-time Customer Profile] elabora i dati acquisiti e utilizza Adobe Experience Platform [!DNL Identity Service] per unire i dati correlati attraverso la mappatura dell&#39;identità, mantiene i propri dati nello [!DNL Profile] store. In altre parole, lo [!DNL Profile] store è separato dai [!DNL Catalog] dati ([!DNL Data Lake]) e [!DNL Identity Service] dai dati (grafico dell&#39;identità).
+Anche se [!DNL Real-time Customer Profile] elabora i dati acquisiti e utilizza Adobe Experience Platform [!DNL Identity Service] per unire i dati correlati attraverso la mappatura dell&#39;identità, mantiene i propri dati nello [!DNL Profile] store. Lo [!DNL Profile] store è separato dai [!DNL Catalog] dati presenti nel [!DNL Data Lake] grafico di identità e dai [!DNL Identity Service] dati nel grafico di identità.
+
+L&#39;archivio dei profili utilizza un&#39;infrastruttura DB Cosmos di Microsoft Azure e la piattaforma Data Lake utilizza l&#39;archiviazione Data Lake di Microsoft Azure.
 
 ### Guardrail profilo
 
@@ -34,7 +36,7 @@ Anche se [!DNL Real-time Customer Profile] elabora i dati acquisiti e utilizza A
 
 [!DNL Real-time Customer Profile] unisce i dati provenienti da diversi sistemi aziendali e fornisce l&#39;accesso a tali dati sotto forma di profili cliente con gli eventi relativi alle serie temporali. Questa funzione consente agli esperti di marketing di promuovere esperienze coordinate, coerenti e pertinenti con il pubblico attraverso più canali. Nelle sezioni seguenti vengono evidenziati alcuni dei concetti fondamentali che è necessario comprendere per creare e mantenere in modo efficace i profili all&#39;interno della piattaforma.
 
-### Frammenti di profilo e profili uniti
+### Frammenti di profilo e profili uniti {#profile-fragments-vs-merged-profiles}
 
 Ciascun profilo cliente è composto da più frammenti di profilo che sono stati uniti per formare una singola vista del cliente. Ad esempio, se un cliente interagisce con il tuo marchio su più canali, l&#39;organizzazione avrà più frammenti di profilo correlati a tale singolo cliente che saranno visualizzati in più set di dati. Quando questi frammenti vengono assimilati in Piattaforma, vengono uniti per creare un unico profilo per il cliente.
 
