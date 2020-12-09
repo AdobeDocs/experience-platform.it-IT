@@ -1,69 +1,66 @@
 ---
 keywords: Experience Platform;home;popular topics; delete dataflows
-description: I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente originati su base programmata. Questa esercitazione fornisce i passaggi per eliminare i flussi di dati dall'area di lavoro Origini.
+description: L’area di lavoro origini consente di eliminare i flussi di dati in batch e in streaming esistenti contenenti errori o che sono diventati obsoleti.
 solution: Experience Platform
 title: Eliminare i flussi di dati
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: e327a3e195d97c0b547608f360c5b0b6a8aded61
+source-git-commit: 7cb5862112c80e386e697aa2bd503abe49f11a3f
 workflow-type: tm+mt
-source-wordcount: '432'
-ht-degree: 0%
+source-wordcount: '349'
+ht-degree: 1%
 
 ---
 
 
-# Eliminare i flussi di dati
+# Eliminare i flussi di dati nell’interfaccia utente
 
-I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente originati su base programmata. Questa esercitazione fornisce i passaggi per eliminare i flussi di dati dall&#39; **[!UICONTROL Sources]** area di lavoro.
+L’ [!UICONTROL Sources] area di lavoro consente di eliminare i flussi di dati in batch e in streaming esistenti che contengono errori o che sono diventati obsoleti.
+
+Questa esercitazione fornisce i passaggi per eliminare i flussi di dati dall&#39;area di [!UICONTROL Sources] lavoro.
 
 ## Introduzione
 
 Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)] Sistema](../../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
-   - [Nozioni di base sulla composizione](../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
-   - [Esercitazione](../../../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
-- [[!DNL Real-time Customer Profile]](../../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+- [Origini](../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi.
+- [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
-## Eliminare i flussi di dati mediante l’interfaccia utente
+## Eliminare i flussi di dati
 
-Accedete ad [Adobe Experience Platform](https://platform.adobe.com) , quindi selezionate **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39; **[!UICONTROL Sources]** area di lavoro. Nella **[!UICONTROL Catalog]** schermata sono visualizzate diverse origini per le quali è possibile creare account e flussi di dati. Ogni origine mostra il numero di account e di flussi di dati esistenti ad essi associati.
+Nell’interfaccia utente [del Experience Platform](https://platform.adobe.com), selezionate **[!UICONTROL Sources]** dalla navigazione a sinistra per accedere all’ [!UICONTROL Sources] area di lavoro, quindi selezionate **[!UICONTROL Dataflows]** dall’intestazione superiore.
 
-Selezionate **[!UICONTROL Dataflows]** per accedere alla **[!UICONTROL Dataflows]** pagina.
+![catalogo](../../images/tutorials/delete/catalog.png)
 
-![dataset-flow-activity](../../images/tutorials/delete/dataflows.png)
+Viene **[!UICONTROL Dataflows]** visualizzata la pagina. In questa pagina è presente un elenco di flussi di dati visualizzabili, con informazioni sul set di dati di destinazione, l’origine, il nome account e la data di creazione.
 
-Viene visualizzato un elenco dei flussi di dati esistenti. In questa pagina è presente un elenco di informazioni ordinabili per i flussi di dati esistenti, quali origine, nome utente, stato di esecuzione e data dell&#39;ultima esecuzione. Selezionate l’icona **** funnel in alto a sinistra per ordinare i dati.
+Selezionate l’icona del filtro (icona![del](../../images/tutorials/delete/filter.png)filtro) in alto a sinistra per avviare il pannello di ordinamento.
 
-![elenco dei flussi di dati](../../images/tutorials/delete/dataflows-list.png)
+![flussi di dati](../../images/tutorials/delete/dataflows.png)
 
-Il pannello di ordinamento viene visualizzato sul lato sinistro dello schermo, contenente un elenco delle sorgenti disponibili.
-È possibile selezionare più origini utilizzando la funzione di ordinamento.
+Il pannello di ordinamento fornisce un elenco di tutte le origini. È possibile selezionare più origini dall&#39;elenco per accedere a una selezione filtrata di flussi di dati associati alle origini specifiche selezionate.
 
-Selezionare l&#39;origine a cui si desidera accedere e individuare il flusso di dati che si desidera eliminare dall&#39;elenco dei flussi di dati nell&#39;interfaccia principale. Nell&#39;esempio, l&#39;origine selezionata è e il nome del flusso di dati è **[!DNL Azure Blob Storage]** **[!UICONTROL Customer profiles dataflow]**. Quando si selezionano più origini dal pannello di ordinamento, i flussi di dati creati più di recente vengono visualizzati per primi, perché l&#39;elenco è ordinato in base alla data di creazione.
+Selezionate l&#39;origine con cui desiderate lavorare per visualizzare un elenco dei relativi flussi di dati esistenti. Una volta identificato il flusso di dati da eliminare, selezionate le ellissi (`...`) accanto al nome del flusso di dati.
 
-Selezionare il flusso di dati da eliminare.
+![dataflows-filter](../../images/tutorials/delete/dataflows-filter.png)
 
-![ordinamento dei dati](../../images/tutorials/delete/dataflows-sort.png)
+Viene visualizzato un menu a discesa che fornisce opzioni per modificare la pianificazione del flusso di dati, disattivare il flusso di dati o eliminarlo completamente.
 
-Il **[!UICONTROL Properties]** pannello viene visualizzato sul lato destro dello schermo, contenente informazioni relative al flusso di dati selezionato e un’opzione per **[!UICONTROL Edit schedule]**.
-
-Per eliminare il flusso di dati, selezionare **[!UICONTROL Delete]**.
-
-![ordinamento dei dati](../../images/tutorials/delete/dataflows-properties.png)
-
-Viene visualizzata una finestra di dialogo di conferma finale; selezionate **[!UICONTROL Delete]** per completare il processo.
+Selezionare **[!UICONTROL Delete]** per eliminare il flusso di dati.
 
 ![delete](../../images/tutorials/delete/delete.png)
 
-Dopo alcuni istanti, nella parte inferiore dello schermo viene visualizzata una casella di conferma verde per confermare l’avvenuta eliminazione.
+Viene visualizzata una finestra di dialogo di conferma finale. Selezionare **[!UICONTROL Delete]** per completare il processo.
+
+![verify](../../images/tutorials/delete/confirm.png)
+
+Dopo alcuni istanti, nella parte inferiore dello schermo viene visualizzata una casella di conferma per confermare l’avvenuta eliminazione.
 
 ![confermata](../../images/tutorials/delete/confirmed.png)
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, l&#39;area di lavoro **[!UICONTROL Sources]** è stata utilizzata per eliminare i flussi di dati esistenti.
+Seguendo questa esercitazione, l&#39;area di lavoro [!UICONTROL Sources] è stata utilizzata per eliminare un flusso di dati esistente.
 
-Per i passaggi su come eseguire queste operazioni a livello di programmazione utilizzando l&#39; [!DNL Flow Service] API, fare riferimento all&#39;esercitazione sull&#39; [eliminazione dei flussi di dati tramite l&#39;API del servizio di flusso](../../tutorials/api/delete-dataflows.md)
+Per informazioni su come eseguire queste operazioni a livello di programmazione tramite le chiamate API, vedere l&#39;esercitazione sull&#39; [eliminazione dei flussi di dati tramite l&#39;API](../../tutorials/api/delete-dataflows.md) del servizio di flusso.
