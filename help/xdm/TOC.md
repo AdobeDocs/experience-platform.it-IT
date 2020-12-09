@@ -2,13 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: Guida al sistema Experience Data Model (XDM)
-breadcrumb-title: Guida a Data Model (XDM)
+breadcrumb-title: Guida al modello dati esperienza (XDM)
 user-guide-description: Utilizza le classi e i mixin Experience Data Model (XDM) per standardizzare i dati dell’esperienza.
 translation-type: tm+mt
-source-git-commit: 465582e0d1503426104a048561b1c8c68e7f55ee
+source-git-commit: d96890fd79acaa09628dbba49ee6930ed4f9d0e6
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 20%
+source-wordcount: '191'
+ht-degree: 18%
 
 ---
 
