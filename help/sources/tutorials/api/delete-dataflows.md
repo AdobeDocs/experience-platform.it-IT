@@ -4,11 +4,11 @@ solution: Experience Platform
 title: Eliminare un flusso di dati utilizzando l'API del servizio di flusso
 topic: overview
 type: Tutorial
-description: Questa esercitazione descrive i passaggi per eliminare un flusso di dati utilizzando l'API del servizio di flusso.
+description: Questa esercitazione descrive i passaggi per eliminare i flussi di dati in batch e in streaming utilizzando l'API del servizio di flusso.
 translation-type: tm+mt
-source-git-commit: ae3e64a5f9a82c0efe3cffeb6d4d425ae2e72bda
+source-git-commit: b63b17f2a7271fc673abc8245a4917c0daca4ef3
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '467'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,9 @@ ht-degree: 1%
 
 # Eliminare un flusso di dati utilizzando l&#39;API del servizio di flusso
 
-Questa esercitazione descrive i passaggi per eliminare i flussi di dati creati con origini batch e in streaming mediante l&#39; [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Potete eliminare i flussi di dati in batch e in streaming contenenti errori o obsoleti utilizzando l&#39; [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+
+Questa esercitazione descrive i passaggi per eliminare i flussi di dati creati con origini batch e in streaming che utilizzano [!DNL Flow Service].
 
 ## Introduzione
 
