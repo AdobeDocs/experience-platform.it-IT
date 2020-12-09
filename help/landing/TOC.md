@@ -5,9 +5,9 @@ user-guide-title: Panoramica di Adobe Experience Platform
 breadcrumb-title: Panoramica di Experience Platform
 user-guide-description: Scopri come Experience Platform consente di offrire esperienze personalizzate ai clienti in tempo reale.
 translation-type: tm+mt
-source-git-commit: 5761394285e56214fd59e31d530756eed1f5ad08
+source-git-commit: 761a212abc407fac5bc59c6f5a57c6c17c932230
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '402'
 ht-degree: 39%
 
 ---
@@ -64,6 +64,7 @@ ht-degree: 39%
    * [Servizi applicazione](application-services.md)
    * [Applicazioni e servizi intelligenti (video)](video/application-intelligent-services.md)
    * [Integrazioni con  Experience Cloud (video)](video/experience-cloud-integrations.md)
+* [Pannello Utilizzo licenza](license-usage-dashboard.md)
 * [Guida alla risoluzione dei problemi](troubleshooting.md)
 * [Migrazione ADLS Gen2](adls2-gen2-migration.md)
 * [Glossario](glossary.md)
