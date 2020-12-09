@@ -5,9 +5,9 @@ seo-title: Pagina Dettagli destinazioni
 description: 'La pagina dei dettagli per una singola destinazione fornisce una panoramica dei dettagli di destinazione, come il nome di destinazione, l''ID, i segmenti mappati alla destinazione, e i controlli per modificare l''attivazione e per abilitare e disabilitare il flusso di dati. '
 seo-description: 'La pagina dei dettagli per una singola destinazione fornisce una panoramica dei dettagli di destinazione, come il nome di destinazione, l''ID, i segmenti mappati alla destinazione, e i controlli per modificare l''attivazione e per abilitare e disabilitare il flusso di dati. '
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: 8ac368081c37ca5bfc2cc3382774a912e8ad68eb
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '691'
 ht-degree: 0%
 
 ---
@@ -29,6 +29,10 @@ Viene visualizzata la pagina dei dettagli della destinazione, con i relativi con
 
 ![](../assets/ui/details-page/details.png)
 
+Inoltre, nella scheda Sfoglia, potete scegliere di eliminare il flusso di dati selezionato selezionando l&#39;icona del ![cestino](../assets/ui/details-page/trash-icon.png) . Tutti i segmenti attivati in una destinazione verranno non mappati prima che il flusso di dati venga eliminato.
+
+![](../assets/ui/details-page/delete-flow.png)
+
 ## Barra destra
 
 Nella barra a destra sono visualizzate le informazioni di base sulla destinazione.
@@ -40,6 +44,7 @@ La tabella seguente illustra i controlli e i dettagli forniti dalla barra a dest
 | Elemento a destra | Descrizione |
 | --- | --- |
 | [!UICONTROL Activate] | Selezionare questo controllo per modificare i segmenti mappati alla destinazione. Per ulteriori informazioni, consulta la guida sull’ [attivazione dei segmenti su una destinazione](./activate-destinations.md) . |
+| [!UICONTROL Delete] | Consente di eliminare questo flusso di dati e di mappare i segmenti precedentemente attivati, se esistenti. |
 | [!UICONTROL Destination name] | Questo campo può essere modificato per aggiornare il nome della destinazione. |
 | [!UICONTROL Description] | Questo campo può essere modificato per aggiornare o aggiungere una descrizione facoltativa alla destinazione. |
 | [!UICONTROL Destination] | Rappresenta la piattaforma di destinazione a cui vengono inviati i tipi di pubblico. Per ulteriori informazioni, vedi il catalogo [delle](../catalog/overview.md) destinazioni. |
@@ -75,11 +80,11 @@ Per visualizzare i dettagli di una particolare esecuzione di un flusso di dati, 
 
 ![](../assets/ui/details-page/dataflow.png)
 
-## [!UICONTROL Segments]
+## [!UICONTROL Activation data]
 
-Nella [!UICONTROL Segments] scheda viene visualizzato un elenco di segmenti che sono stati mappati sulla destinazione, inclusa la data di inizio e la data di fine (se applicabile). Per visualizzare i dettagli di un particolare segmento, selezionatene il nome dall’elenco.
+Nella [!UICONTROL Activation data] scheda viene visualizzato un elenco di segmenti che sono stati mappati sulla destinazione, inclusa la data di inizio e la data di fine (se applicabile). Per visualizzare i dettagli di un particolare segmento, selezionatene il nome dall’elenco.
 
-![](../assets/ui/details-page/segments.png)
+![](../assets/ui/details-page/activation-data.png)
 
 >[!NOTE]
 >
