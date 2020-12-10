@@ -5,9 +5,9 @@ user-guide-title: Guida ai connettori di sorgenti di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di sorgenti
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 translation-type: tm+mt
-source-git-commit: e31e09449b79b8a1600cfb2b162f51c26d482847
+source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '665'
 ht-degree: 4%
 
 ---
@@ -36,8 +36,9 @@ ht-degree: 4%
       - [Connettore BLOB di Azure](connectors/cloud-storage/blob.md)
       - [Connettore Azure Event Hubs](connectors/cloud-storage/eventhub.md)
       - [Connettore archiviazione file Azure](connectors/cloud-storage/azure-file-storage.md)
-      - [Connettore FTP e SFTP](connectors/cloud-storage/ftp-sftp.md)
+      - [Connettore FTP](connectors/cloud-storage/ftp.md)
       - [Connettore di archiviazione Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
+      - [Connettore SFTP](connectors/cloud-storage/sftp.md)
       - [connettore Amazon S3 e Azure Blob](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
       - [Connettore Microsoft Dynamics](connectors/crm/ms-dynamics.md)
@@ -82,6 +83,7 @@ ht-degree: 4%
          - [Connettore Azure Data Lake Storage Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Connettore Azure Event Hubs](tutorials/api/create/cloud-storage/eventhub.md)
          - [Connettore archiviazione file Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
+         - [Connettore FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Connettore di archiviazione Google Cloud](tutorials/api/create/cloud-storage/google.md)
          - [Connettore SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
@@ -160,8 +162,9 @@ ht-degree: 4%
          - [Connettore BLOB di Azure](tutorials/ui/create/cloud-storage/blob.md)
          - [Connettore Azure Event Hubs](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Connettore archiviazione file Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
-         - [Connettore FTP e SFTP](tutorials/ui/create/cloud-storage/ftp-sftp.md)
+         - [Connettore FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Connettore di archiviazione Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [Connettore SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [connettore Amazon S3 e Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
          - [Connettore Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
