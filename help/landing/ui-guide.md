@@ -5,10 +5,10 @@ title: Guida all'interfaccia utente Adobe Experience Platform
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 3fc24b996d2c8bdf062e70a1c5e8d8206641cd06
+source-git-commit: 852792c1288cf7b4815fb0afb742046d7a595da2
 workflow-type: tm+mt
-source-wordcount: '1666'
-ht-degree: 0%
+source-wordcount: '1677'
+ht-degree: 1%
 
 ---
 
@@ -17,15 +17,15 @@ ht-degree: 0%
 
 Questa guida fornisce un’introduzione all’interfaccia utente (interfaccia utente) di Adobe Experience Platform, spiega i diversi componenti utilizzati e fornisce collegamenti verso ulteriori informazioni.
 
-Per ulteriori informazioni su Adobe Experience Platform, consultate la [panoramica](./home.md)dell&#39;Experience Platform.
+Per ulteriori informazioni su Adobe Experience Platform, consultate la [panoramica](home.md)dell&#39;Experience Platform.
 
 ## Schermata principale
 
-Dopo aver effettuato l’accesso ad Adobe Experience Platform, arriverete sulla [!UICONTROL Home] pagina, che comprende il dashboard delle metriche, i dati recenti e le sezioni di apprendimento consigliate.
+Dopo aver effettuato l’accesso ad Adobe Experience Platform, ti trovi sulla [!UICONTROL Home] pagina, che comprende il dashboard [delle](#metrics)metriche, i dati [](#recent-data)recenti e le sezioni di apprendimento [](#recommended-learning) consigliate.
 
 ![](images/user-guide/homepage.png)
 
-### Pannello metriche
+### Metriche
 
 Il dashboard delle metriche fornisce schede che forniscono informazioni su set di dati, profili, segmenti e destinazioni all&#39;interno dell&#39;organizzazione.
 
@@ -63,13 +63,13 @@ La **[!UICONTROL Recommended learning]** sezione contiene collegamenti verso uti
 
 La barra di navigazione superiore nell’interfaccia utente della piattaforma mostra l’organizzazione IMS a cui siete attualmente collegati e fornisce diversi controlli importanti.
 
-Sul lato sinistro della barra di navigazione si trova il logo Adobe Experience Platform. Selezionando questa opzione tornerete alla schermata iniziale dell&#39;interfaccia utente della piattaforma.
+Sul lato sinistro della barra di navigazione si trova il logo Adobe Experience Platform. Selezionando questa opzione in qualsiasi momento potrete tornare alla schermata iniziale dell&#39;interfaccia utente della piattaforma.
 
 ![](./images/user-guide/homepage-top-nav-bar.png)
 
 ### Switcher di organizzazione IMS
 
-Il primo elemento a destra della barra di navigazione è lo switcher **IMS Organization**.
+Il primo elemento a destra della barra di navigazione superiore è lo switcher **IMS Organization**.
 
 ![](./images/user-guide/homepage-ims-org.png)
 
@@ -79,7 +79,7 @@ Selezionando lo switcher, si apre un menu a discesa delle organizzazioni IMS a c
 
 ### Cambiare le applicazioni
 
-L&#39;elemento successivo a destra è lo switcher **** applicazione, rappresentato dall&#39;icona dello switcher ![](./images/user-guide/app-switcher-icon.png) applicazione. Quando selezionate questa icona, potete passare da  Experience Platform, risorse, Exchange e Launch.
+L&#39;elemento successivo a destra della navigazione superiore è lo switcher di **applicazione**, rappresentato dall&#39;icona ![dello switcher](./images/user-guide/app-switcher-icon.png) applicazione. Quando selezionate questa icona, potete passare  applicazioni di Adobe a cui l&#39;organizzazione IMS ha accesso, come  Experience Platform, Analytics, Assets e Launch.
 
 ### Aiuto
 
@@ -89,7 +89,7 @@ A destra dello switcher applicazione si trova il menu **** Aiuto e Supporto, rap
 
 ### Notifiche e annunci
 
-Dopo che il menu di aiuto e supporto è la sezione **** delle notifiche, che è rappresentata dall&#39;icona ![Bell/Notifications e Annunci](images/user-guide/notification-icon.png) . La **[!UICONTROL Notifications]** scheda mostra informazioni importanti sul prodotto e altri aggiornamenti rilevanti, mentre la **[!UICONTROL Announcements]** scheda mostra le notifiche sulla manutenzione del servizio.
+Nella sezione **** Notifiche, rappresentata dall’icona ![Bell/Notifications (Notifiche) e Annunci](images/user-guide/notification-icon.png) . La **[!UICONTROL Notifications]** scheda mostra informazioni importanti sul prodotto e altri aggiornamenti rilevanti, mentre la **[!UICONTROL Announcements]** scheda mostra informazioni sulla manutenzione del servizio.
 
 ### Profilo utente
 
