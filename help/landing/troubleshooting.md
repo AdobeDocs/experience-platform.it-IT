@@ -7,10 +7,10 @@ landing-page-description: Find answers to frequently asked questions and a guide
 topic: getting started
 type: Documentation
 translation-type: tm+mt
-source-git-commit: 4a65d5e31eda3973d3e8e0d8e066692c667934e1
+source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
 workflow-type: tm+mt
-source-wordcount: '1940'
-ht-degree: 3%
+source-wordcount: '1954'
+ht-degree: 2%
 
 ---
 
@@ -25,7 +25,7 @@ Segue un elenco di risposte alle domande frequenti su Adobe Experience Platform.
 
 ## Cosa sono [!DNL Experience Platform] le API? {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] offre più API RESTful che utilizzano richieste HTTP per accedere alle [!DNL Platform] risorse. Ciascuna di queste API di servizio espone più endpoint e consente di eseguire operazioni per elencare (GET), cercare (GET), modificare (PUT e/o PATCH) e eliminare (DELETE) risorse. Per ulteriori informazioni su endpoint e operazioni specifici disponibili per ogni servizio, consulta la documentazione [di riferimento](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) API  Adobe I/O.
+[!DNL Experience Platform] offre più API RESTful che utilizzano richieste HTTP per accedere alle [!DNL Platform] risorse. Ciascuna di queste API di servizio espone più endpoint e consente di eseguire operazioni per elencare (GET), cercare (GET), modificare (PUT e/o PATCH) e eliminare (DELETE) risorse. Per ulteriori informazioni su endpoint e operazioni specifici disponibili per ogni servizio, consulta la documentazione [di riferimento](http://www.adobe.com/go/platform-api-reference-en) API  Adobe I/O.
 
 ## Come si formatta una richiesta API? {#how-do-i-format-an-api-request}
 
@@ -87,19 +87,19 @@ La risposta illustra cosa ci si aspetta di ricevere in seguito a una chiamata al
 }
 ```
 
-Per ulteriori informazioni su endpoint specifici nelle API della piattaforma, comprese le intestazioni richieste e i corpi di richiesta, consultate la documentazione [di riferimento](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)API.
+Per ulteriori informazioni su endpoint specifici nelle API della piattaforma, comprese le intestazioni richieste e i corpi di richiesta, consultate la documentazione [di riferimento](http://www.adobe.com/go/platform-api-reference-en)API.
 
 ## Qual è la mia organizzazione IMS? {#what-is-my-ims-organization}
 
-Un&#39;organizzazione IMS è una rappresentazione  Adobe di un cliente. Tutte le soluzioni  Adobe con licenza sono integrate con questa organizzazione cliente. Quando un&#39;organizzazione IMS ha diritto a [!DNL Experience Platform], può assegnare l&#39;accesso agli sviluppatori. L&#39;ID organizzazione IMS (`x-gw-ims-org-id`) rappresenta l&#39;organizzazione per la quale deve essere eseguita una chiamata API ed è pertanto richiesto come intestazione in tutte le richieste API. Questo ID si trova tramite la [console](https://www.adobe.com/go/devs_console_ui)Sviluppatore di Adobe: nella scheda **Integrazioni** , andate alla sezione **Panoramica** di una particolare integrazione per trovare l’ID in Credenziali **client**. Per una descrizione dettagliata di come autenticarsi, [!DNL Platform]consulta l’esercitazione [sull’](../tutorials/authentication.md)autenticazione.
+Un&#39;organizzazione IMS è una rappresentazione  Adobe di un cliente. Tutte le soluzioni  Adobe con licenza sono integrate con questa organizzazione cliente. Quando un&#39;organizzazione IMS ha diritto a [!DNL Experience Platform], può assegnare l&#39;accesso agli sviluppatori. L&#39;ID organizzazione IMS (`x-gw-ims-org-id`) rappresenta l&#39;organizzazione per la quale deve essere eseguita una chiamata API ed è pertanto richiesto come intestazione in tutte le richieste API. Questo ID si trova tramite la [console](https://www.adobe.com/go/devs_console_ui)Sviluppatore di Adobe: nella scheda **Integrazioni** , andate alla sezione **Panoramica** di una particolare integrazione per trovare l’ID in Credenziali **client**. Per una descrizione dettagliata di come autenticarsi, [!DNL Platform]consulta l’esercitazione [sull’](http://www.adobe.com/go/platform-api-authentication-en)autenticazione.
 
 ## Dove posso trovare la mia chiave API? {#where-can-i-find-my-api-key}
 
-Una chiave API è obbligatoria come intestazione in tutte le richieste API. È possibile accedervi tramite la [Developer Console](https://www.adobe.com/go/devs_console_ui). Nella console, nella scheda **Integrazioni** , passare alla sezione **Panoramica** per un&#39;integrazione specifica e la chiave si trova in Credenziali **client**. Per una descrizione dettagliata di come autenticarsi, [!DNL Platform]consulta l’esercitazione [sull’](../tutorials/authentication.md)autenticazione.
+Una chiave API è obbligatoria come intestazione in tutte le richieste API. È possibile accedervi tramite la [Developer Console](https://www.adobe.com/go/devs_console_ui). Nella console, nella scheda **Integrazioni** , passare alla sezione **Panoramica** per un&#39;integrazione specifica e la chiave si trova in Credenziali **client**. Per una descrizione dettagliata di come autenticarsi, [!DNL Platform]consulta l’esercitazione [sull’](http://www.adobe.com/go/platform-api-authentication-en)autenticazione.
 
 ## Come posso ottenere un token di accesso? {#how-do-i-get-an-access-token}
 
-I token di accesso sono richiesti nell&#39;intestazione Autorizzazione di tutte le chiamate API. Possono essere generati utilizzando un `curl` comando, a condizione che sia possibile accedere a un&#39;integrazione per un&#39;organizzazione IMS. I token di accesso sono validi solo 24 ore, dopo di che è necessario generare un nuovo token per continuare a utilizzare l&#39;API. Per informazioni dettagliate sulla generazione dei token di accesso, consultate l&#39;esercitazione [sull&#39;](../tutorials/authentication.md)autenticazione.
+I token di accesso sono richiesti nell&#39;intestazione Autorizzazione di tutte le chiamate API. Possono essere generati utilizzando un `curl` comando, a condizione che sia possibile accedere a un&#39;integrazione per un&#39;organizzazione IMS. I token di accesso sono validi solo 24 ore, dopo di che è necessario generare un nuovo token per continuare a utilizzare l&#39;API. Per informazioni dettagliate sulla generazione dei token di accesso, consultate l&#39;esercitazione [sull&#39;](http://www.adobe.com/go/platform-api-authentication-en)autenticazione.
 
 ## Come si utilizzano i parametri di query? {#how-do-i-user-query-parameters}
 
@@ -153,7 +153,7 @@ I seguenti codici di stato possono essere rilevati su qualsiasi [!DNL Experience
 
 ## Errori di intestazione richiesta {#request-header-errors}
 
-Tutte le chiamate API in [!DNL Platform] richiedono intestazioni di richiesta specifiche. Per vedere quali intestazioni sono necessarie per i singoli servizi, consulta la documentazione [di riferimento](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)API. Per trovare i valori per le intestazioni di autenticazione richieste, vedete l&#39;esercitazione [](../tutorials/authentication.md)Autenticazione. Se una di queste intestazioni risulta mancante o non valida durante una chiamata API, si possono verificare i seguenti errori.
+Tutte le chiamate API in [!DNL Platform] richiedono intestazioni di richiesta specifiche. Per vedere quali intestazioni sono necessarie per i singoli servizi, consulta la documentazione [di riferimento](http://www.adobe.com/go/platform-api-reference-en)API. Per trovare i valori per le intestazioni di autenticazione richieste, vedete l&#39;esercitazione [](http://www.adobe.com/go/platform-api-authentication-en)Autenticazione. Se una di queste intestazioni risulta mancante o non valida durante una chiamata API, si possono verificare i seguenti errori.
 
 ### Token OAuth mancante {#oauth-token-is-missing}
 
@@ -175,7 +175,7 @@ Questo messaggio di errore viene visualizzato quando manca un&#39; `Authorizatio
 }
 ```
 
-Questo messaggio di errore viene visualizzato quando il token di accesso fornito nell&#39; `Authorization` intestazione non è valido. Verifica che il token sia stato immesso correttamente o [genera un nuovo token](../tutorials/authentication.md) nella  Adobe I/O Console.
+Questo messaggio di errore viene visualizzato quando il token di accesso fornito nell&#39; `Authorization` intestazione non è valido. Verifica che il token sia stato immesso correttamente o [genera un nuovo token](http://www.adobe.com/go/platform-api-authentication-en) nella  Adobe I/O Console.
 
 ### Chiave API obbligatoria
 
