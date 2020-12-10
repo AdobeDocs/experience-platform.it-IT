@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Questa esercitazione ti aiuterà a iniziare a utilizzare le API di assimilazione in streaming, parte delle API del servizio Adobe Experience Platform Data Ingestion.
 translation-type: tm+mt
-source-git-commit: e94272bf9a18595a4efd0742103569a26e4be415
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '1142'
 ht-degree: 2%
@@ -453,7 +453,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli delle entità
 
 ## Passaggi successivi
 
-Leggendo questo documento, ora puoi capire come trasferire i dati dei record nelle [!DNL Platform] connessioni in streaming. Puoi provare a effettuare più chiamate con valori diversi e a recuperare i valori aggiornati. È inoltre possibile iniziare a monitorare i dati acquisiti tramite [!DNL Platform] l’interfaccia utente. Per ulteriori informazioni, consulta la guida all’inserimento dei dati di [monitoraggio](../quality/monitor-data-flows.md) .
+Leggendo questo documento, ora puoi capire come trasferire i dati dei record nelle [!DNL Platform] connessioni in streaming. Puoi provare a effettuare più chiamate con valori diversi e a recuperare i valori aggiornati. È inoltre possibile iniziare a monitorare i dati acquisiti tramite [!DNL Platform] l’interfaccia utente. Per ulteriori informazioni, consulta la guida all’inserimento dei dati di [monitoraggio](../quality/monitor-data-ingestion.md) .
 
 Per ulteriori informazioni sull’assimilazione in streaming in generale, consultate la panoramica sull’assimilazione in [streaming](../streaming-ingestion/overview.md).
 
