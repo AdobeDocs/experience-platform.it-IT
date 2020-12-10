@@ -5,10 +5,10 @@ user-guide-title: Panoramica di Adobe Experience Platform
 breadcrumb-title: Panoramica di Experience Platform
 user-guide-description: Scopri come Experience Platform consente di offrire esperienze personalizzate ai clienti in tempo reale.
 translation-type: tm+mt
-source-git-commit: 761a212abc407fac5bc59c6f5a57c6c17c932230
+source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
 workflow-type: tm+mt
-source-wordcount: '402'
-ht-degree: 39%
+source-wordcount: '142'
+ht-degree: 21%
 
 ---
 
@@ -31,35 +31,10 @@ ht-degree: 39%
    * [Supporto per browser e lingue](browser-language-support.md)
 *  API Experience Platform {#platform-apis}
    * [Nozioni di base sulle API](api-fundamentals.md)
-   * [Documenti di riferimento API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)
-   * [Eseguire l&#39;autenticazione  API di Experience Platform](https://docs.adobe.com/content/help/en/platform-learn/tutorials/platform-api-authentication.html)
+   * [Documenti di riferimento API](http://www.adobe.com/go/platform-api-reference-en)
+   * [Eseguire l&#39;autenticazione  API di Experience Platform](http://www.adobe.com/go/platform-api-authentication-en)
 * Documentazione della piattaforma {#documentation}
    * [Panoramica della documentazione](documentation/overview.md)
-   * [Controllo di accesso](https://docs.adobe.com/content/help/it-IT/experience-platform/access-control/home.html)
-   * [Auditor](https://docs.adobe.com/content/help/it-IT/auditor/using/overview.html)
-   * [Catalogo e set di dati](https://docs.adobe.com/content/help/en/experience-platform/catalog/home.html)
-   * [Accesso ai dati](https://docs.adobe.com/content/help/en/experience-platform/data-access/home.html)
-   * [Governance dei dati](https://docs.adobe.com/content/help/en/experience-platform/data-governance/home.html)
-   * [Preparazione dei dati](https://docs.adobe.com/content/help/en/experience-platform/data-prep/home.html)
-   * [Acquisizione dei dati](https://docs.adobe.com/content/help/en/experience-platform/ingestion/home.html)
-   * [Data Science Workspace](https://docs.adobe.com/content/help/en/experience-platform/data-science-workspace/home.html)
-   * [Debugger](https://docs.adobe.com/content/help/it-IT/debugger/using/experience-cloud-debugger.html)
-   * [Debugger 2.0 (versione beta)](https://docs.adobe.com/content/help/it-IT/debugger/using-v2/experience-cloud-debugger.html)
-   * [Destinazioni](https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html)
-   * [ETL (Extract, Transform, Load)](https://docs.adobe.com/content/help/en/experience-platform/etl/home.html)
-   * [Servizio identità](https://docs.adobe.com/content/help/it-IT/experience-platform/identity/home.html)
-   * [Intelligent Services](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/home.html)
-   * [Launch](https://docs.adobe.com/content/help/it-IT/launch/using/overview.html)
-   * [Observability Insights](https://docs.adobe.com/content/help/en/experience-platform/observability/home.html)
-   * [Privacy Service](https://docs.adobe.com/content/help/en/experience-platform/privacy/home.html)
-   * [Profilo (profilo cliente in tempo reale)](https://docs.adobe.com/content/help/it-IT/experience-platform/profile/home.html)
-   * [Servizio query](https://docs.adobe.com/content/help/en/experience-platform/query/home.html)
-   * [Real-time Customer Data Platform](https://docs.adobe.com/content/help/it-IT/experience-platform/rtcdp/overview.html)
-   * [Sandbox](https://docs.adobe.com/content/help/en/experience-platform/sandbox/home.html)
-   * [Schemi (XDM)](https://docs.adobe.com/content/help/it-IT/experience-platform/xdm/home.html)
-   * [Segmentazione](https://docs.adobe.com/content/help/en/experience-platform/segmentation/home.html)
-   * [Origini (connettori)](https://docs.adobe.com/content/help/en/experience-platform/sources/home.html)
-   * [SDK per web](https://docs.adobe.com/content/help/it-IT/experience-platform/edge/home.html)
 * Piattaforma nell&#39;ecosistema  Adobe {#ecosystem}
    * [Servizi applicazione](application-services.md)
    * [Applicazioni e servizi intelligenti (video)](video/application-intelligent-services.md)
@@ -68,4 +43,4 @@ ht-degree: 39%
 * [Guida alla risoluzione dei problemi](troubleshooting.md)
 * [Migrazione ADLS Gen2](adls2-gen2-migration.md)
 * [Glossario](glossary.md)
-* [Note sulla versione](https://docs.adobe.com/content/help/it-IT/experience-platform/release-notes/latest.translate.html)
+* [Note sulla versione](https://www.adobe.com/go/platform-release-notes-en)
