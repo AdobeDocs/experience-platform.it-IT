@@ -9,9 +9,9 @@ doc-type: video
 activity: understand
 thumbnail: 32792.jpg
 translation-type: tm+mt
-source-git-commit: 86d6476877eb7a0413658e476802a1cd8905dcc3
+source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
 workflow-type: tm+mt
-source-wordcount: '105'
+source-wordcount: '118'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Questo video fornisce una breve panoramica dell’interfaccia utente (interfacci
 
 >[!NOTE]
 >
->L’interfaccia utente del Experience Platform  viene aggiornata di frequente e può essere cambiata dopo la registrazione del video.
+>L’interfaccia utente del Experience Platform  viene aggiornata di frequente e può essere cambiata dopo la registrazione del video. Per informazioni aggiornate, consulta la guida [all’interfaccia utente di](../ui-guide.md)Adobe Experience Platform.
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)
