@@ -5,9 +5,9 @@ title: Guida all'interfaccia utente per i flussi di lavoro Adobe Experience Plat
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 068e8270f389ed84cae6ef4b7185259cb5f6dadc
+source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '252'
 ht-degree: 1%
 
 ---
@@ -21,9 +21,9 @@ Nella **[!UICONTROL Workflows]** sezione dell&#39;interfaccia utente di Adobe Ex
 
 ## [!UICONTROL Data ingestion]
 
-Il **[!UICONTROL Map CSV to XDM schema]** flusso di lavoro consente di caricare e convertire un file CSV in un formato di schema Experience Data Model (XDM). Ulteriori informazioni su questo flusso di lavoro sono disponibili nell&#39;esercitazione sulla [mappatura di un file CSV su uno schema](../ingestion/tutorials/map-a-csv-file.md)XDM.
+Il **[!UICONTROL Map CSV to XDM schema]** flusso di lavoro consente di caricare e convertire un file CSV in uno schema Experience Data Model (XDM). Ulteriori informazioni su questo flusso di lavoro sono disponibili nell&#39;esercitazione sulla [mappatura di un file CSV su uno schema](../ingestion/tutorials/map-a-csv-file.md)XDM.
 
-Il **[!UICONTROL Create dataset from schema]** flusso di lavoro consente di creare un nuovo dataset da uno schema XDM registrato. Ulteriori informazioni su questo flusso di lavoro sono disponibili nella guida [utente](../catalog/datasets/user-guide.md#schema)per i set di dati.
+Il **[!UICONTROL Create dataset from schema]** flusso di lavoro consente di creare un nuovo dataset da uno schema XDM esistente. Ulteriori informazioni su questo flusso di lavoro sono disponibili nella guida [utente](../catalog/datasets/user-guide.md#schema)per i set di dati.
 
 Il **[!UICONTROL Create dataset from CSV]** flusso di lavoro consente di creare un nuovo set di dati caricando un file CSV. Ulteriori informazioni su questo flusso di lavoro sono disponibili nella guida [utente](../catalog/datasets/user-guide.md#csv)per i set di dati.
 
@@ -37,4 +37,4 @@ Il **[!UICONTROL Publish a model as a service]** flusso di lavoro consente di pu
 
 ## Passaggi successivi
 
-Leggendo questa guida, è stata introdotta la [!UICONTROL Workflows] pagina nell’interfaccia utente del Experience Platform . Per ulteriori informazioni sull&#39;interfaccia utente della piattaforma in generale, consulta la guida [all&#39;interfaccia utente di](./ui-guide.md)Adobe Experience Platform.
+Leggendo questa guida, sono state introdotte le informazioni [!UICONTROL Workflows] disponibili nell&#39;interfaccia utente del Experience Platform . Per ulteriori informazioni sulle funzionalità e sulle funzionalità dell&#39;interfaccia utente della piattaforma, consulta la guida [all&#39;interfaccia utente di](ui-guide.md)Adobe Experience Platform.
