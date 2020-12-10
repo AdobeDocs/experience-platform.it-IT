@@ -5,10 +5,10 @@ title: Panoramica della documentazione Adobe Experience Platform
 topic: overview
 description: La documentazione Adobe Experience Platform è disponibile in diversi formati, tra cui panoramiche, esercitazioni e guide per l'interfaccia utente e l'API. Di seguito viene fornita una breve descrizione dei tipi di documentazione più comuni disponibili per  servizi di Experience Platform.
 translation-type: tm+mt
-source-git-commit: 36707e95a63b6be60d1d7badbe1cdc9d0bc3548c
+source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
 workflow-type: tm+mt
-source-wordcount: '1035'
-ht-degree: 3%
+source-wordcount: '485'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,11 @@ ht-degree: 3%
 >
 >La documentazione Adobe Experience Platform è stata spostata di recente. Esaminare la nuova navigazione e aggiornare eventuali segnalibri esistenti.
 
-La documentazione Adobe Experience Platform è disponibile in diversi formati, tra cui panoramiche, esercitazioni e guide per l&#39;interfaccia utente e l&#39;API. Di seguito viene fornita una breve descrizione dei tipi di documentazione più comuni disponibili per [!DNL Experience Platform] i servizi:
+La documentazione Adobe Experience Platform è attualmente disponibile per diversi servizi della piattaforma. Per accedere alla documentazione della piattaforma, tornate alla pagina [di destinazione della](https://experienceleague.adobe.com/docs/experience-platform.html) documentazione e selezionate la guida da visualizzare.
+
+## Tipi di documentazione  Experience Platform
+
+ documentazione di Experience Platform è disponibile in diversi formati, tra cui panoramiche, esercitazioni e guide per l&#39;interfaccia utente (UI) e l&#39;API. I tipi di documentazione più comuni sono riepilogati nel seguente elenco:
 
 * **Riferimento API:** Consultate la documentazione di riferimento API per ciascun servizio per informazioni sugli endpoint disponibili, comprese intestazioni, parametri, richieste di esempio e risposte. Questi materiali di riferimento non forniscono lo stesso livello di dettaglio della documentazione. È consigliabile consultare la guida per gli sviluppatori specifica per il servizio per esempi di utilizzo delle API dettagliati.
 
@@ -39,30 +43,3 @@ La documentazione Adobe Experience Platform è disponibile in diversi formati, t
 
 ![immagine](../images/overview/lang.jpg)
 
-## [!DNL Experience Platform] 
-
-La documentazione è attualmente disponibile per i servizi e le funzioni Adobe Experience Platform elencati di seguito. Per saperne di più sui servizi, consulta le brevi descrizioni fornite qui e scopri di più selezionando dall’elenco alfabetico nella barra di navigazione a sinistra.
-
-* **[!DNL Access control]:** [!DNL Experience Platform] sfrutta i profili di prodotto in Adobe Admin Console, che collegano gli utenti con autorizzazioni e sandbox.
-* **[!DNL Auditor]:** Auditor valuta la vostra implementazione Adobe Experience Cloud e fornisce indicazioni su come migliorarla. Auditor aiuta a ottenere più valore dai prodotti Adobe, individualmente e collettivamente.
-* **[!DNL Catalog & Datasets]:** Gestisce i metadati per i set di dati creati nel tenant, nella linea di dati e nei relativi criteri.
-* **[!DNL Data Access]:** Fornisce l&#39;accesso al contenuto dei set di dati registrati per l&#39;esportazione dei dati.
-* **[!DNL Data Governance]:** Adobe Experience Platform riunisce i dati provenienti da più sistemi aziendali per consentire agli addetti al marketing di identificare, comprendere e coinvolgere meglio i clienti. [!DNL Experience Platform] include un&#39;infrastruttura end-to-end [!DNL Data Governance] per garantire l&#39;uso corretto dei dati all&#39;interno [!DNL Platform] e quando vengono condivisi tra sistemi.
-* **[!DNL Data Ingestion](batch e streaming):** Trasferite i dati in Adobe Experience Platform utilizzando l&#39;assimilazione batch, l&#39;assimilazione in streaming e i connettori [](#sources)sorgente.
-* **[!DNL Data Science Workspace]:** [!DNL Data Science Workspace] offre modelli di machine learning predefiniti che potete utilizzare nelle vostre soluzioni e la capacità di creare modelli personalizzati.
-* **[!DNL Debugger]:** L&#39;estensione Adobe Debugger per esamina le pagine Web e aiuta a individuare problemi nell&#39;implementazione delle soluzioni Experience Cloud.[!DNL Chrome][!DNL Experience Cloud]
-* **[!DNL Destinations]:** Le destinazioni sono integrazioni precostruite con applicazioni comunemente utilizzate che consentono l&#39;attivazione senza soluzione di continuità dei dati dalla piattaforma dati cliente in tempo reale. Puoi utilizzare Destinazioni per attivare i dati noti e sconosciuti per campagne di marketing multicanale, campagne e-mail, pubblicità mirata e molti altri casi di utilizzo.
-* **ETL (Extract, Transform, Load):** Creazione di connettori ad alte prestazioni per strumenti di integrazione dei dati per l&#39;integrazione con Adobe Experience Platform.
-* **Experience Platform Launch:** Il Experience Platform Launch fornisce un modo semplice per implementare e gestire tutti i tag di analisi, marketing e pubblicità necessari per fornire ai clienti un&#39;esperienza personalizzata, rilevante e in tempo reale.
-* **[!DNL Experience Platform Web SDK](Beta):** La libreria JavaScript lato client di Adobe Experience Platform Web SDK consente ai clienti di Adobe Experience Cloud di interagire con i vari servizi nell&#39;Experience Cloud di .
-* **[!DNL Identity Service]:** Comprensione migliore dei clienti grazie alla possibilità di collegare identità da più dispositivi e comportamenti tra canali per formare una singola vista di ogni singolo cliente.
-* **[!DNL Intelligent Services]:** Dare agli esperti di marketing e agli analisti di marketing la possibilità di sfruttare la forza dell&#39;intelligenza artificiale e dell&#39;apprendimento automatico per offrire esperienze cliente.
-* **[!DNL Observability Insights]:** Esporre le metriche chiave di osservabilità in Adobe Experience Platform, fornendo informazioni approfondite sulle statistiche di utilizzo, sulle tendenze storiche e sugli indicatori di prestazioni per varie [!DNL Platform] funzionalità.
-* **[!DNL Privacy Service]:** Privacy Service fornisce un&#39;API RESTful e un&#39;interfaccia utente che consentono di effettuare l&#39;accesso ai dati ed eliminare richieste conformi alle normative sulla privacy.
-* **[!DNL Profile](Profilo cliente in tempo reale):** Visualizza una visualizzazione olistica di ciascun cliente combinando dati provenienti da più canali, inclusi online, offline, CRM e dati di terze parti in [!DNL Real-time Customer Profiles].
-* **[!DNL Query Service]:** Utilizzate le query SQL per recuperare dati da Adobe Experience Platform, ad esempio  dati della soluzione di Adobe, dati di prime parti cliente o qualsiasi altro dato della piattaforma.
-* **[!DNL Real-time Customer Data Platform]:** CDP in tempo reale combina più origini dati aziendali per creare profili unificati in tempo reale che possono essere utilizzati per fornire esperienze cliente personalizzate uno-a-uno su tutti i canali e dispositivi.
-* **[!DNL Sandboxes]:** Le sandbox suddividono una singola [!DNL Platform] istanza in ambienti virtuali distinti per consentire lo sviluppo e l&#39;evoluzione di applicazioni per esperienze digitali.
-* **Schemi**: Guidato da  Adobe, Experience Data Model (XDM) è uno sforzo per standardizzare i dati sull&#39;esperienza cliente e definire schemi per la gestione dell&#39;esperienza cliente. Gli schemi XDM supportano l&#39;interoperabilità dei dati tra [!DNL Experience Platform] i componenti.
-* **[!DNL Segmentation]:** Crea segmenti basati su dati del profilo cliente in tempo reale per generare audience e fornire esperienze ai consumatori.
-* **[!DNL Sources](Connessioni):** {#sources} Consente di inserire dati in Adobe Experience Platform da origini diverse, come applicazioni  Adobe, storage basato su cloud, database e altro ancora.
