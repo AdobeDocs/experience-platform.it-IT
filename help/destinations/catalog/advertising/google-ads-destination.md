@@ -5,9 +5,9 @@ seo-title: Destinazione annunci Google
 description: Google Ads, precedentemente noto come Google AdWords, è un servizio pubblicitario online che consente alle aziende di pagare per clic pubblicità tra ricerche basate su testo, display grafici, video YouTube e display mobili in-app.
 seo-description: Google Ads, precedentemente noto come Google AdWords, è un servizio pubblicitario online che consente alle aziende di pagare per clic pubblicità tra ricerche basate su testo, display grafici, video YouTube e display mobili in-app.
 translation-type: tm+mt
-source-git-commit: c24676970629f5a39297001357f8af40895533d9
+source-git-commit: 7129a375b1bf4623f78989ed75fcd2bb5dad4a02
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '646'
 ht-degree: 0%
 
 ---
@@ -35,11 +35,13 @@ Tenete presenti i seguenti dettagli specifici per [!DNL Google Ads] le destinazi
 
 **Esportazione** segmento - vengono esportati tutti i membri di un segmento (pubblico) nella destinazione Google.
 
-## Prerequisiti  
+## Prerequisiti
 
 ### Account [!DNL Google Ads] esistente
 
-[!DNL Google] ha messo in pausa qualsiasi nuova [!DNL Google Ads] integrazione con fornitori di terze parti. Per poter eseguire i passaggi del elenco consentiti  nella sezione successiva e creare una [!DNL Google Ads] destinazione in CDP in tempo reale, è necessario disporre di un&#39;integrazione esistente con [!DNL Google Ads] il sistema.
+>[!IMPORTANT]
+>
+> [!DNL Google] ha dichiarato obsolete le nuove integrazioni di [!DNL Google Ads] cookie con fornitori di terze parti. Per eseguire i passaggi  elenco consentiti nella sezione successiva, è necessario disporre di un&#39;integrazione esistente con [!DNL Google Ads]. Di conseguenza, l&#39;approccio consigliato per l&#39;utilizzo [!DNL Google Ads] è l&#39;impostazione di un&#39; [!DNL Google Customer Match] integrazione. Per ulteriori dettagli sulla creazione di un&#39; [!DNL Google Customer Match] integrazione, consulta l&#39;esercitazione sulla creazione di una [[!DNL Google Customer Match]](./google-customer-match.md) connessione.
 
 ### elenco consentiti 
 
