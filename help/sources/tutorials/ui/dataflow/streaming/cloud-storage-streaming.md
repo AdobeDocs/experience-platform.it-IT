@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Un flusso di dati è un'attività pianificata che recupera e trasferisce dati da un'origine a un set di dati della piattaforma. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando il connettore di base per l'archiviazione cloud.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '670'
 ht-degree: 0%
@@ -78,7 +78,7 @@ Dopo aver rivisto il flusso di dati, fai clic su **[!UICONTROL Finish]** e conse
 
 ## Monitorare ed eliminare il flusso di dati
 
-Una volta creato il flusso di dati per l&#39;archiviazione cloud, potete monitorare i dati che vengono acquisiti tramite di esso. Per ulteriori informazioni sul monitoraggio e l’eliminazione dei flussi di dati, consulta l’esercitazione sul [monitoraggio dei flussi](../../../../../ingestion/quality/monitor-data-flows.md)di dati.
+Una volta creato il flusso di dati per l&#39;archiviazione cloud, potete monitorare i dati che vengono acquisiti tramite di esso. Per ulteriori informazioni sul monitoraggio e l’eliminazione dei flussi di dati, consulta l’esercitazione sul [monitoraggio dei flussi](../../../../../ingestion/quality/monitor-data-ingestion.md)di dati.
 
 ## Passaggi successivi
 
