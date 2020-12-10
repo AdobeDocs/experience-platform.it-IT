@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi necessari per recuperare i dati da un archivio cloud di terze parti e inserirli nella piattaforma tramite connettori sorgente e API.
 translation-type: tm+mt
-source-git-commit: 026007e5f80217f66795b2b53001b6cf5e6d2344
+source-git-commit: 7f24413a99b57e28ca2106214b7eedb5b068b045
 workflow-type: tm+mt
-source-wordcount: '1583'
+source-wordcount: '1599'
 ht-degree: 1%
 
 ---
@@ -572,6 +572,10 @@ L&#39;ultimo passo verso la raccolta dei dati di archiviazione cloud è creare u
 Un flusso di dati è responsabile della pianificazione e della raccolta dei dati da un&#39;origine. È possibile creare un flusso di dati eseguendo una richiesta di POST fornendo al contempo i valori indicati in precedenza all&#39;interno del payload.
 
 Per pianificare un&#39;assimilazione, è innanzitutto necessario impostare il valore dell&#39;ora di inizio in modo che l&#39;ora dell&#39;epoch sia espressa in secondi. Quindi, è necessario impostare il valore della frequenza su una delle cinque opzioni: `once`, `minute`, `hour`, `day`o `week`. Il valore dell&#39;intervallo indica il periodo tra due assimilazioni consecutive e la creazione di un&#39;assimilazione una tantum non richiede l&#39;impostazione di un intervallo. Per tutte le altre frequenze, il valore dell&#39;intervallo deve essere impostato su uguale o maggiore di `15`.
+
+>[!IMPORTANT]
+>
+>È vivamente consigliato pianificare il flusso di dati per l&#39;inserimento una tantum quando si utilizza il connettore [](../../../connectors/cloud-storage/ftp.md)FTP.
 
 **Formato API**
 
