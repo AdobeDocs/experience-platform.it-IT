@@ -5,7 +5,7 @@ user-guide-title: Guida all’acquisizione dei dati di Adobe Experience Platform
 breadcrumb-title: Guida all’acquisizione dei dati
 user-guide-description: Trasferisci i tuoi dati in Platform tramite l’acquisizione in batch o in streaming.
 translation-type: tm+mt
-source-git-commit: da0c65b5afc19e2497816c4b84270f5f5c4617f2
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 20%
@@ -36,7 +36,7 @@ ht-degree: 20%
    - [Streaming di più messaggi](tutorials/streaming-multiple-messages.md)
 - Qualità e monitoraggio dell&#39;acquisizione dei dati{#quality}
    - [Panoramica](quality/overview.md)
-   - [Monitorare i flussi di dati](quality/monitor-data-flows.md)
+   - [Caricamento dei dati del monitor](quality/monitor-data-ingestion.md)
    - [Recupero della diagnostica degli errori](quality/error-diagnostics.md)
    - [Recupero batch non riusciti](quality/retrieve-failed-batches.md)
    - [Convalida dell&#39;assimilazione in streaming](quality/streaming-validation.md)
