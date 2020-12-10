@@ -5,7 +5,7 @@ title: Guida all'interfaccia utente Adobe Experience Platform
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 761a212abc407fac5bc59c6f5a57c6c17c932230
+source-git-commit: 3fc24b996d2c8bdf062e70a1c5e8d8206641cd06
 workflow-type: tm+mt
 source-wordcount: '1666'
 ht-degree: 0%
@@ -149,7 +149,7 @@ La **[!UICONTROL Datasets]** sezione consente di creare e gestire i set di dati.
 
 La **[!UICONTROL Queries]** sezione consente di creare e gestire query, registrare query SQL eseguite da Adobe Experience Platform Query Service e visualizzare le credenziali PostSQL. Ulteriori informazioni sulle query sono disponibili nella guida [utente di](../query-service/ui/overview.md)Query Service.
 
-La **[!UICONTROL Monitoring]** sezione consente di monitorare l’assimilazione batch e in streaming. Ulteriori informazioni sul monitoraggio sono disponibili nella guida [utente per l&#39;inserimento dei dati di](../ingestion/quality/monitor-data-flows.md)monitoraggio.
+La **[!UICONTROL Monitoring]** sezione consente di monitorare l’assimilazione batch e in streaming. Ulteriori informazioni sul monitoraggio sono disponibili nella guida [utente per l&#39;inserimento dei dati di](../ingestion/quality/monitor-data-ingestion.md)monitoraggio.
 
 ### [!UICONTROL Decisioning]
 
