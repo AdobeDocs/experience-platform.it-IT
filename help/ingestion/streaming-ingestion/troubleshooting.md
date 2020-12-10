@@ -5,7 +5,7 @@ title: Risoluzione dei problemi di caricamento in streaming
 topic: troubleshooting
 description: Questo documento contiene le risposte alle domande frequenti sull’assimilazione in streaming su Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Per ulteriori informazioni sulla convalida sincrona e asincrona, vedere la panor
 
 ### Posso convalidare un payload di richiesta prima di inviarlo a [!DNL Platform]?
 
-I payload di richieste possono essere valutati solo dopo che sono stati inviati a [!DNL Platform]. Durante l&#39;esecuzione della convalida sincrona, i payload validi restituiscono oggetti JSON popolati mentre i payload non validi restituiscono messaggi di errore. Durante la convalida asincrona, il servizio rileva e invia tutti i dati non corretti al [!DNL Data Lake] punto in cui può essere successivamente recuperato per l&#39;analisi. Per ulteriori informazioni, consulta la panoramica [sulla convalida](../quality/streaming-validation.md) dello streaming.
+I payload di richieste possono essere valutati solo dopo che sono stati inviati a [!DNL Platform]. Durante l&#39;esecuzione della convalida sincrona, i payload validi restituiscono oggetti JSON popolati mentre i payload non validi restituiscono messaggi di errore. Durante la convalida asincrona, il servizio rileva e invia tutti i dati non corretti al [!DNL Data Lake] punto in cui può essere successivamente recuperato per l&#39;analisi. See the [streaming validation overview](../quality/streaming-validation.md) for more information.
 
 ### Cosa accade quando viene richiesta la convalida sincrona su un bordo che non la supporta?
 
@@ -59,7 +59,7 @@ Puoi raggruppare più messaggi all’interno di un singolo payload di richiesta 
 
 Tutti i dati inviati a [!DNL Platform] (correttamente o in altro modo) vengono memorizzati come file batch prima di essere memorizzati nei set di dati. Lo stato di elaborazione dei batch viene visualizzato all’interno del set di dati a cui sono stati inviati.
 
-È possibile verificare se i dati sono stati acquisiti correttamente controllando l&#39;attività del dataset utilizzando l&#39;interfaccia [utente del Experience Platform](https://platform.adobe.com). Fare clic **[!UICONTROL Datasets]** nella barra di navigazione a sinistra per visualizzare un elenco di set di dati. Selezionate dall’elenco visualizzato il set di dati a cui si sta eseguendo lo streaming per aprire la **[!UICONTROL Dataset activity]** pagina, mostrando tutti i batch inviati durante un periodo di tempo selezionato. Per ulteriori informazioni sull&#39;utilizzo [!DNL Experience Platform] per monitorare i flussi di dati, consulta la guida sul [monitoraggio dei flussi](../quality/monitor-data-flows.md)di dati in streaming.
+È possibile verificare se i dati sono stati acquisiti correttamente controllando l&#39;attività del dataset utilizzando l&#39;interfaccia [utente del Experience Platform](https://platform.adobe.com). Fare clic **[!UICONTROL Datasets]** nella barra di navigazione a sinistra per visualizzare un elenco di set di dati. Selezionate dall’elenco visualizzato il set di dati a cui si sta eseguendo lo streaming per aprire la **[!UICONTROL Dataset activity]** pagina, mostrando tutti i batch inviati durante un periodo di tempo selezionato. Per ulteriori informazioni sull&#39;utilizzo [!DNL Experience Platform] per monitorare i flussi di dati, consulta la guida sul [monitoraggio dei flussi](../quality/monitor-data-ingestion.md)di dati in streaming.
 
 Se il caricamento dei dati non è riuscito e si desidera ripristinarlo da [!DNL Platform], è possibile recuperare i batch non riusciti inviando i relativi ID al [!DNL Data Access API]. Per ulteriori informazioni, consulta la guida sul [recupero dei batch](../quality/retrieve-failed-batches.md) con errore.
 
