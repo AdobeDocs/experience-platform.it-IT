@@ -5,7 +5,7 @@ title: Qualità dell'assimilazione dei dati
 topic: overview
 description: Il seguente documento fornisce un riepilogo dei controlli e dei comportamenti di convalida supportati per l’assimilazione in batch e in streaming in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 5%
@@ -56,4 +56,4 @@ Le seguenti convalide vengono eseguite per l&#39;assimilazione in streaming:
 | Set di dati | Assicurarsi che il dataset sia specificato, attivato e non sia stato rimosso. |
 | Header | Assicurarsi che l&#39;intestazione sia specificata ed è valida. |
 
-Ulteriori informazioni sulle modalità di [!DNL Platform] monitoraggio e convalida dei dati sono disponibili nella documentazione [sui flussi di dati di](./monitor-data-flows.md)monitoraggio.
+Ulteriori informazioni sulle modalità di [!DNL Platform] monitoraggio e convalida dei dati sono disponibili nella documentazione [sui flussi di dati di](./monitor-data-ingestion.md)monitoraggio.
