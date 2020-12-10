@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Un flusso di dati è un'attività pianificata che recupera e trasferisce dati da un'origine a un set di dati della piattaforma. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account di archiviazione cloud.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 7f24413a99b57e28ca2106214b7eedb5b068b045
 workflow-type: tm+mt
-source-wordcount: '1723'
+source-wordcount: '1742'
 ht-degree: 0%
 
 ---
@@ -143,11 +143,11 @@ Specificare i valori per la pianificazione e selezionare **[!UICONTROL Next]**.
 
 ### Impostazione di un flusso di dati per l’assimilazione una tantum
 
-Per impostare l’inserimento una tantum, selezionate la freccia a discesa di frequenza e selezionate **[!UICONTROL Once]**. È possibile continuare a apportare modifiche a un set di flussi di dati per l’inserimento di una frequenza una tantum, purché l’ora di inizio rimanga in futuro. Una volta trascorso l’ora di inizio, il valore di frequenza una tantum non può più essere modificato.
+Per impostare l’inserimento una tantum, selezionate la freccia a discesa di frequenza e selezionate **[!UICONTROL Once]**. È possibile continuare a apportare modifiche a un set di flussi di dati per l’inserimento di una frequenza una tantum, purché l’ora di inizio rimanga in futuro. Una volta trascorso l’ora di inizio, il valore di frequenza una tantum non può più essere modificato. **[!UICONTROL Interval]** e non **[!UICONTROL Backfill]** sono visibili quando si configura un flusso di dati per l’assimilazione una tantum.
 
->[!TIP]
+>[!IMPORTANT]
 >
->**[!UICONTROL Interval]** e non **[!UICONTROL Backfill]** sono visibili durante un&#39;assimilazione una tantum.
+>È vivamente consigliato pianificare il flusso di dati per l&#39;inserimento una tantum quando si utilizza il connettore [](../../../../connectors/cloud-storage/ftp.md)FTP.
 
 Dopo aver fornito i valori appropriati alla pianificazione, selezionare **[!UICONTROL Next]**.
 
