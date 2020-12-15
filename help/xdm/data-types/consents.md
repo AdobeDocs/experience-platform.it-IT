@@ -4,7 +4,7 @@ title: Tipi di dati Consensi e Preferenze
 description: Il tipo di dati Privacy/Marketing Preferences (Consent) è destinato a supportare la raccolta di autorizzazioni e preferenze del cliente generate dalle piattaforme di gestione del consenso (CMP) e da altre fonti dalle operazioni sui dati.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 1a4dd167ecd4f4f61ffe26af786b355e4561b30d
+source-git-commit: 640f0be8a297fada0eee10ff80fec3b3142c09b9
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 1%
@@ -18,7 +18,7 @@ Il tipo di [!DNL Privacy/Marketing Preferences (Consent)] dati (in seguito denom
 
 Il presente documento illustra la struttura e l&#39;uso previsto dei campi forniti dal tipo di [!DNL Consents & Preferences] dati.
 
-## Prerequisiti   {#prerequisites}
+## Prerequisiti {#prerequisites}
 
 Questo documento richiede una buona conoscenza di XDM e l&#39;utilizzo degli schemi in [!DNL Experience Platform]. Prima di continuare, consulta la seguente documentazione:
 
@@ -285,7 +285,7 @@ Per informazioni sull&#39;assegnazione dei tipi di dati ai campi, vedere l&#39;e
 >
 >Se si desidera inviare i dati di consenso a [!DNL Real-time Customer Profile], è necessario creare uno schema [!DNL Profile]abilitato basato sulla [!DNL XDM Individual Profile] classe che contiene il tipo di [!DNL Consents & Preferences] dati. Anche il set di dati creato in base a tale schema deve essere abilitato per [!DNL Profile]. Per i passaggi specifici relativi ai [!DNL Real-time Customer Profile] requisiti per gli schemi e i set di dati, fare riferimento alle esercitazioni precedentemente collegate.
 >
->Inoltre, per poter aggiornare correttamente i profili dei clienti, devi anche verificare che i criteri di unione siano configurati per assegnare priorità ai set di dati contenenti i dati di consenso e preferenze più recenti. Per ulteriori informazioni, vedere la panoramica sui criteri di [unione](../../rtcdp/profile/merge-policies.md) .
+>Inoltre, per poter aggiornare correttamente i profili dei clienti, devi anche verificare che i criteri di unione siano configurati per assegnare priorità ai set di dati contenenti i dati di consenso e preferenze più recenti. See the overview on [merge policies](../../rtcdp/profile/merge-policies.md) for more information.
 
 ## Gestione delle modifiche di consenso e preferenza
 
@@ -333,4 +333,4 @@ Nella tabella seguente sono riportati i valori accettati per `xdm:preferred`:
 
 ### Schema completo [!DNL Consents & Preferences] {#full-schema}
 
-Per visualizzare lo schema completo per il tipo di [!DNL Consents & Preferences] dati, fare riferimento al repository [XDM](https://github.com/adobe/xdm/blob/master/components/datatypes/consentpreferences.schema.json)ufficiale.
+Per visualizzare lo schema completo per il tipo di [!DNL Consents & Preferences] dati, fare riferimento al repository [XDM](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json)ufficiale.
