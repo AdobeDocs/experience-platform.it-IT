@@ -1,13 +1,13 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Guida alle destinazioni
-user-guide-description: Inserire qui la descrizione delle destinazioni.
+user-guide-title: Guida ai dataflows
+user-guide-description: I flussi di dati sono una rappresentazione dei processi di dati che consentono di spostare i dati tra piattaforme.
 translation-type: tm+mt
-source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
+source-git-commit: 12a6682b6e28e656899aee5c38d3bb4a84bcdd2f
 workflow-type: tm+mt
-source-wordcount: '24'
-ht-degree: 8%
+source-wordcount: '31'
+ht-degree: 0%
 
 ---
 
