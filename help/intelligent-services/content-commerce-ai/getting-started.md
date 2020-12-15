@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: Guida introduttiva a Content and Commerce AI
 topic: Getting started
 description: Content and Commerce AI utilizza  API Adobe I/O. Per effettuare chiamate alle API  Adobe I/O e all'integrazione della console di I/O, è innanzitutto necessario completare l'esercitazione sull'autenticazione.
 translation-type: tm+mt
-source-git-commit: 2be04547b96e1a6c293cc63e782fe1b3259619ba
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '571'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valor
 
 ## Creare un ambiente Postman (facoltativo)
 
-Dopo aver configurato il progetto e l&#39;API in  Adobe Developer Console, potete scaricare un file di ambiente per Postman. Sotto **[!UICONTROL APIs]** la barra a sinistra del progetto, selezionate **[!UICONTROL Content and Commerce AI]**. Si apre una nuova scheda contenente una scheda con etichetta &quot;[!DNL Try it out]&quot;. Selezionate **Scarica per Postman** per scaricare un file JSON usato per configurare l’ambiente postman.
+Dopo aver configurato il progetto e l&#39;API in  Adobe Developer Console, potete scaricare un file di ambiente per Postman. Sotto **[!UICONTROL APIs]** la barra a sinistra del progetto, selezionate **[!UICONTROL Content and Commerce AI]**. Si apre una nuova scheda contenente una scheda con etichetta &quot;[!DNL Try it out]&quot;. Selezionate **Scarica per Postman** per scaricare un file JSON utilizzato per configurare l&#39;ambiente postman.
 
 ![download per postman](./images/add-to-postman.png)
 
