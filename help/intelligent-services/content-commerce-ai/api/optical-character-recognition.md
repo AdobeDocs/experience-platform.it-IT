@@ -1,11 +1,11 @@
 ---
 keywords: OCR;text presence;optical character recognition
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: Riconoscimento ottico dei caratteri
 topic: Developer guide
 description: Il servizio di riconoscimento ottico dei caratteri (OCR, Text Presence / Optical Character Recognition), quando viene fornita un'immagine, può indicare se nell'immagine è presente del testo. Se il testo è presente, OCR può restituire il testo
 translation-type: tm+mt
-source-git-commit: 4d12caf949aeb6619cd27b55855014a61d4e54bb
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 3%
