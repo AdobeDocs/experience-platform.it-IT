@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;Intelligent Services;popular topics;intelligent service;Intelligent service
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: Preparare i dati per l'utilizzo in Intelligent Services
 topic: Intelligent Services
 description: 'Per consentire ai servizi intelligenti di scoprire informazioni ricavate dai dati degli eventi di marketing, i dati devono essere arricchiti e mantenuti in modo semantico in una struttura standard. I servizi intelligenti sfruttano gli schemi XDM (Experience Data Model) per ottenere questo risultato. Nello specifico, tutti i set di dati utilizzati in Intelligent Services] devono essere conformi allo schema XDM Consumer ExperienceEvent (CEE). '
 translation-type: tm+mt
-source-git-commit: 630f3bd0249dc3d0e73ace52c534d5f20ec0f87a
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '1850'
 ht-degree: 0%
