@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;user guide;customer ai;popular topics;configure instance;create instance;
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Configurazione di un'istanza dell'AI cliente
 topic: Instance creation
 description: I servizi intelligenti forniscono ai clienti un servizio semplice da usare  Adobe Sensei che può essere configurato per diversi casi di utilizzo. Le sezioni seguenti forniscono i passaggi per configurare un'istanza dell'API cliente.
 translation-type: tm+mt
-source-git-commit: 0b92346065b7c9615d8aef4c9b13c84e0383b4b9
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '1213'
 ht-degree: 0%
