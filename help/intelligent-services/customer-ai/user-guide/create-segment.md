@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;insights;customer ai;popular topics
-solution: Experience Platform
+keywords: Experience Platform;insights;customer ai;popular topics;customer ai segments
+solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Creazione di segmenti di clienti con punteggi previsti
 topic: Create a segment
 description: Al termine di un'esecuzione della previsione, i punteggi di propensione previsti vengono automaticamente utilizzati da Profili. L'arricchimento dei profili con i punteggi AI dei clienti consente di creare segmenti di clienti per trovare audience in base ai loro punteggi di propensione. Questa sezione descrive i passaggi per la creazione di segmenti con Segment Builder (Generatore di segmenti).
 translation-type: tm+mt
-source-git-commit: d29f7c7243ec798abe60fff895b36277996cb4a0
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
@@ -41,4 +41,4 @@ Sopra la colonna *Campi* a sinistra, fate clic sull’icona a forma di **ingrana
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, con Segment Builder (Generatore di segmenti) è stato possibile trovare le audience in base ai loro punteggi di tendenza. Ora potete eseguire il targeting delle audience attivandole nelle destinazioni. Per ulteriori informazioni, consulta [la panoramica](../../../destinations/home.md) delle destinazioni.
+Seguendo questa esercitazione, con Segment Builder (Generatore di segmenti) è stato possibile trovare le audience in base ai loro punteggi di tendenza. Ora potete eseguire il targeting delle audience attivandole nelle destinazioni. See the [destinations overview](../../../destinations/home.md) for more information.
