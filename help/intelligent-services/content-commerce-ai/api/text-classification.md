@@ -1,11 +1,11 @@
 ---
 keywords: text classification;Text classification
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: Endpoint API classificazione testo
 topic: Developer guide
 description: Il servizio classificazione testo, se dotato di frammento di testo, può classificarlo in una o più etichette. La classificazione può essere di tipo etichetta singola, etichetta multipla o gerarchico.
 translation-type: tm+mt
-source-git-commit: 09200be6eb078ecbefc91c6449373f811b602797
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 4%
