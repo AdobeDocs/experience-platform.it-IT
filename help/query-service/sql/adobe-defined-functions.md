@@ -5,59 +5,62 @@ title: ' funzioni definite dal Adobe'
 topic: functions
 description: Questo documento fornisce informazioni sulle funzioni definite dal Adobe  disponibili in Servizio query.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: c95f976efd4a281640d2f47888b34bdd12a6c7a8
 workflow-type: tm+mt
-source-wordcount: '2167'
-ht-degree: 3%
+source-wordcount: '2889'
+ht-degree: 2%
 
 ---
 
 
 #  funzioni definite dal Adobe
 
- funzioni definite dal Adobe (ADF) sono funzioni preconfigurate [!DNL Query Service] che consentono di eseguire le comuni attività aziendali relative ai [!DNL ExperienceEvent] dati. tra cui funzioni di Sessionizzazione e Attribuzione, come quelle presenti in  Adobe Analytics. Per ulteriori informazioni su  Adobe Analytics e sui concetti alla base delle ADF definiti in questa pagina, consulta la [documentazione](https://docs.adobe.com/content/help/it-IT/analytics/landing/home.html) Adobe Analytics. Questo documento fornisce informazioni  funzioni definite dal Adobe disponibili in [!DNL Query Service].
+ funzioni definite dal Adobe, di seguito denominate ADF, sono funzioni preconfigurate in Adobe Experience Platform Query Service che consentono di eseguire le attività aziendali comuni sui dati [!DNL Experience Event]. Tra questi rientrano funzioni per [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) e [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) come quelle di  Adobe Analytics.
 
-## Funzioni della finestra
+Questo documento fornisce informazioni  funzioni definite dal Adobe disponibili in [!DNL Query Service].
 
-La maggior parte della logica di business richiede la raccolta dei punti di contatto per un cliente e l&#39;ordine per tempo. Questo supporto viene fornito da [!DNL Spark] SQL sotto forma di funzioni finestra. Le funzioni finestra fanno parte di SQL standard e sono supportate da molti altri motori SQL.
+## Funzioni della finestra {#window-functions}
+
+La maggior parte della logica di business richiede la raccolta dei punti di contatto per un cliente e l&#39;ordine per tempo. Questo supporto è fornito da [!DNL Spark] SQL sotto forma di funzioni finestra. Le funzioni finestra fanno parte di SQL standard e sono supportate da molti altri motori SQL.
 
 Una funzione finestra aggiorna un&#39;aggregazione e restituisce un singolo elemento per ogni riga del sottoinsieme ordinato. La funzione di aggregazione di base è `SUM()`. `SUM()` prende le righe e le dà un totale. Se invece si applica `SUM()` a una finestra, trasformandola in una funzione finestra, si riceve una somma cumulativa con ogni riga.
 
-La maggior parte degli assistenti [!DNL Spark] SQL sono funzioni finestra che aggiornano ogni riga nella finestra, con l&#39;aggiunta dello stato della riga.
+La maggior parte degli assistenti [!DNL Spark] SQL sono funzioni finestra che aggiornano ogni riga nella finestra, con l&#39;aggiunta dello stato di tale riga.
 
-### Specifiche
+**Sintassi query**
 
-Sintassi: `OVER ([partition] [order] [frame])`
+```sql
+OVER ({PARTITION} {ORDER} {FRAME})
+```
 
-| Parametro | Descrizione |
-| --- | --- |
-| [partizione] | Un sottogruppo delle righe in base a una colonna o a un campo disponibile. Esempio, `PARTITION BY endUserIds._experience.mcid.id` |
-| [order] | Colonna o campo disponibile utilizzato per ordinare il sottoinsieme o le righe. Esempio, `ORDER BY timestamp` |
-| [frame] | Un sottogruppo delle righe in una partizione. Esempio, `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` |
+| Parametro | Descrizione | Esempio |
+| --------- | ----------- | ------- |
+| `{PARTITION}` | Un sottogruppo di righe basato su una colonna o su un campo disponibile. | `PARTITION BY endUserIds._experience.mcid.id` |
+| `{ORDER}` | Colonna o campo disponibile utilizzato per ordinare il sottoinsieme o le righe. | `ORDER BY timestamp` |
+| `{FRAME}` | Un sottogruppo delle righe in una partizione. | `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` |
 
 ## Sessionizzazione
 
-Quando si lavora con [!DNL ExperienceEvent] dati provenienti da un sito Web, un&#39;applicazione mobile, un sistema di risposta vocale interattivo o qualsiasi altro canale di interazione con i clienti, è possibile raggruppare gli eventi intorno a un periodo di attività correlato. In genere, l&#39;attività è guidata da un intento specifico, come la ricerca di un prodotto, il pagamento di una fattura, il controllo del saldo del conto, la compilazione di un&#39;applicazione e così via. Questo raggruppamento consente di associare gli eventi per scoprire un contesto più ampio sull&#39;esperienza del cliente.
+Quando si lavora con dati [!DNL Experience Event] provenienti da un sito Web, un&#39;applicazione mobile, un sistema di risposta vocale interattivo o qualsiasi altro canale di interazione con i clienti, è utile raggruppare gli eventi intorno a un periodo di attività correlato. In genere, l&#39;attività è guidata da un intento specifico, come la ricerca di un prodotto, il pagamento di una fattura, il controllo del saldo del conto, la compilazione di un&#39;applicazione e così via.
 
-Per ulteriori informazioni sulle sessioni in  Adobe Analytics, consulta la documentazione sulle sessioni in base al [contesto](https://docs.adobe.com/content/help/en/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
+Questo raggruppamento, o sessionizzazione dei dati, consente di associare gli eventi per scoprire un contesto più ampio sull&#39;esperienza del cliente.
 
-### Specifiche
+Per ulteriori informazioni sulla sessione in  Adobe Analytics, consultate la documentazione relativa alle [sessioni basate sul contesto](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html.
 
-Sintassi: `SESS_TIMEOUT(timestamp, expirationInSeconds) OVER ([partition] [order] [frame])`
+**Sintassi query**
+
+```sql
+SESS_TIMEOUT({TIMESTAMP}, {EXPIRATION_IN_SECONDS}) OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Parametro | Descrizione |
-| --- | --- |
-| `timestamp` | Campo marca temporale trovato nel dataset |
-| `expirationInSeconds` | Numero di secondi necessari tra gli eventi per qualificare la fine della sessione corrente e l&#39;inizio di una nuova sessione |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Campo timestamp trovato nel set di dati. |
+| `{EXPIRATION_IN_SECONDS}` | Il numero di secondi necessari tra gli eventi per qualificare la fine della sessione corrente e l&#39;inizio di una nuova sessione. |
 
-| Parametri oggetto restituiti | Descrizione |
-| ---------------------- | ------------- |
-| `timestamp_diff` | Tempo in secondi tra il record corrente e il record precedente |
-| `num` | Un numero di sessione univoco, a partire da 1, per la chiave definita nella funzione `PARTITION BY` della finestra. |
-| `is_new` | Valore booleano utilizzato per identificare se un record è il primo di una sessione |
-| `depth` | Profondità del record corrente nella sessione |
+Una spiegazione dei parametri all&#39;interno della funzione `OVER()` si trova nella sezione [funzioni finestra](#window-functions).
 
-#### Query di esempio
+**Query di esempio**
 
 ```sql
 SELECT 
@@ -73,7 +76,7 @@ ORDER BY id, timestamp ASC
 LIMIT 10
 ```
 
-#### Risultati
+**Risultati**
 
 ```console
                 id                |       timestamp       |      session       
@@ -91,37 +94,176 @@ LIMIT 10
 (10 rows)
 ```
 
+Per la query di esempio fornita, i risultati sono riportati nella colonna `session`. La colonna `session` è composta dai seguenti componenti:
+
+```sql
+({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
+```
+
+| Parametri | Descrizione |
+| ---------- | ------------- |
+| `{TIMESTAMP_DIFF}` | La differenza di tempo, in secondi, tra il record corrente e il record precedente. |
+| `{NUM}` | Un numero di sessione univoco, a partire da 1, per la chiave definita in `PARTITION BY` della funzione finestra. |
+| `{IS_NEW}` | Valore booleano utilizzato per identificare se un record è il primo di una sessione. |
+| `{DEPTH}` | Profondità del record corrente all&#39;interno della sessione. |
+
+### SESS_START_IF
+
+Questa query restituisce lo stato della sessione per la riga corrente, in base alla marca temporale corrente e all&#39;espressione data, e avvia una nuova sessione con la riga corrente.
+
+**Sintassi query**
+
+```sql
+SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| Parametro | Descrizione |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Campo timestamp trovato nel set di dati. |
+| `{TEST_EXPRESSION}` | Espressione con cui si desidera controllare i campi dei dati. Ad esempio, `application.launches > 0`. |
+
+Una spiegazione dei parametri all&#39;interno della funzione `OVER()` si trova nella sezione [funzioni finestra](#window-functions).
+
+**Query di esempio**
+
+```sql
+SELECT
+    endUserIds._experience.mcid.id AS id,
+    timestamp,
+    IF(application.launches.value > 0, true, false) AS isLaunch,
+    SESS_START_IF(timestamp, application.launches.value > 0)
+        OVER (PARTITION BY endUserIds._experience.mcid.id
+            ORDER BY timestamp
+            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
+        AS session
+    FROM experience_events
+    ORDER BY id, timestamp ASC
+    LIMIT 10
+```
+
+**Risultati**
+
+```console
+                id                |       timestamp       | isLaunch |      session       
+----------------------------------+-----------------------+----------+--------------------
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | true     | (0,1,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | false    | (58,1,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | false    | (56,1,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:58:27.0 | true     | (40,2,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:59:22.0 | false    | (55,2,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:16:23.0 | false    | (1361821,2,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:17:17.0 | false    | (54,2,false,4)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:06.0 | false    | (49,2,false,5)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:39.0 | false    | (33,2,false,6)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:19:10.0 | false    | (31,2,false,7)
+(10 rows)
+```
+
+Per la query di esempio fornita, i risultati sono riportati nella colonna `session`. La colonna `session` è composta dai seguenti componenti:
+
+```sql
+({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
+```
+
+| Parametri | Descrizione |
+| ---------- | ------------- |
+| `{TIMESTAMP_DIFF}` | La differenza di tempo, in secondi, tra il record corrente e il record precedente. |
+| `{NUM}` | Un numero di sessione univoco, a partire da 1, per la chiave definita in `PARTITION BY` della funzione finestra. |
+| `{IS_NEW}` | Valore booleano utilizzato per identificare se un record è il primo di una sessione. |
+| `{DEPTH}` | Profondità del record corrente all&#39;interno della sessione. |
+
+### SESS_END_IF
+
+Questa query restituisce lo stato della sessione per la riga corrente, in base alla marca temporale corrente e all&#39;espressione data, termina la sessione corrente e inizia una nuova sessione nella riga successiva.
+
+**Sintassi query**
+
+```sql
+SESS_END_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| Parametro | Descrizione |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Campo timestamp trovato nel set di dati. |
+| `{TEST_EXPRESSION}` | Espressione con cui si desidera controllare i campi dei dati. Ad esempio, `application.launches > 0`. |
+
+Una spiegazione dei parametri all&#39;interno della funzione `OVER()` si trova nella sezione [funzioni finestra](#window-functions).
+
+**Query di esempio**
+
+```sql
+SELECT
+    endUserIds._experience.mcid.id AS id,
+    timestamp,
+    IF(application.applicationCloses.value > 0 OR application.crashes.value > 0, true, false) AS isExit,
+    SESS_END_IF(timestamp, application.applicationCloses.value > 0 OR application.crashes.value > 0)
+        OVER (PARTITION BY endUserIds._experience.mcid.id
+            ORDER BY timestamp
+            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
+        AS session
+    FROM experience_events
+    ORDER BY id, timestamp ASC
+    LIMIT 10
+```
+
+**Risultati**
+
+```console
+                id                |       timestamp       | isExit   |      session       
+----------------------------------+-----------------------+----------+--------------------
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | false    | (0,1,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | false    | (58,1,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | true     | (56,1,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:58:27.0 | false    | (40,2,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:59:22.0 | false    | (55,2,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:16:23.0 | false    | (1361821,2,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:17:17.0 | false    | (54,2,false,4)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:06.0 | false    | (49,2,false,5)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:39.0 | false    | (33,2,false,6)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:19:10.0 | false    | (31,2,false,7)
+(10 rows)
+```
+
+Per la query di esempio fornita, i risultati sono riportati nella colonna `session`. La colonna `session` è composta dai seguenti componenti:
+
+```sql
+({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
+```
+
+| Parametri | Descrizione |
+| ---------- | ------------- |
+| `{TIMESTAMP_DIFF}` | La differenza di tempo, in secondi, tra il record corrente e il record precedente. |
+| `{NUM}` | Un numero di sessione univoco, a partire da 1, per la chiave definita in `PARTITION BY` della funzione finestra. |
+| `{IS_NEW}` | Valore booleano utilizzato per identificare se un record è il primo di una sessione. |
+| `{DEPTH}` | Profondità del record corrente all&#39;interno della sessione. |
+
 ## Attribution
 
-Associare le azioni dei clienti al successo è una parte importante della comprensione dei fattori che influenzano l&#39;esperienza dei clienti. I seguenti ADF supportano l’attribuzione Primo e Ultimo con diverse impostazioni di scadenza.
+Associare le azioni dei clienti al successo è una parte importante della comprensione dei fattori che influenzano le esperienze dei clienti. I seguenti file ADF supportano l’attribuzione di tipo primo tocco e ultimo tocco con diverse impostazioni di scadenza.
 
-Per ulteriori informazioni sull’attribuzione in  Adobe Analytics, consulta la [panoramica](https://docs.adobe.com/content/help/it-IT/analytics/analyze/analysis-workspace/panels/attribution.html) delle Attribution IQ nella Guida all’ [!DNL Analytics] analisi.
+Per ulteriori informazioni sull&#39;attribuzione in  Adobe Analytics, vedere la [ Attribution IQ panoramica](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html) nella [!DNL Analytics] Guida del pannello Attribuzione.
 
 ### Attribuzione primo tocco
 
-Restituisce il primo valore di attribuzione touch e i dettagli per un singolo canale nel [!DNL ExperienceEvent] dataset di destinazione. La query restituisce un `struct` oggetto con il primo valore di tocco, marca temporale e attribuzione per ogni riga restituita per il canale selezionato.
+Questa query restituisce il valore di attribuzione del primo tocco e i dettagli per un singolo canale nel set di dati [!DNL Experience Event] di destinazione. La query restituisce un oggetto `struct` con il primo valore di tocco, marca temporale e attribuzione per ogni riga restituita per il canale selezionato.
 
-Questa query è utile per visualizzare quale interazione ha portato a una serie di azioni da parte del cliente. Nell’esempio riportato di seguito, al codice di tracciamento iniziale (`em:946426`) nei [!DNL ExperienceEvent] dati viene attribuita la responsabilità del 100% (`1.0`) per le azioni del cliente, in quanto si trattava della prima interazione.
+Questa query è utile per visualizzare quale interazione ha portato a una serie di azioni da parte del cliente. Nell&#39;esempio riportato di seguito, il codice di tracciamento iniziale (`em:946426`) nei dati [!DNL Experience Event] è attribuito al 100% (`1.0`) della responsabilità per le azioni del cliente, in quanto si è trattato della prima interazione.
 
-### Specifiche
+**Sintassi query**
 
-Sintassi: `ATTRIBUTION_FIRST_TOUCH(timestamp, channelName, channelValue) OVER ([partition] [order] [frame])`
+```sql
+ATTRIBUTION_FIRST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Parametro | Descrizione |
-| --- | --- |
-| `timestamp` | Campo marca temporale trovato nel dataset |
-| `channelName` | Un nome descrittivo da utilizzare come etichetta nell&#39;oggetto restituito |
-| `channelValue` | Colonna o campo che rappresenta il canale di destinazione per la query |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Campo timestamp trovato nel set di dati. |
+| `{CHANNEL_NAME}` | Etichetta per l&#39;oggetto restituito. |
+| `{CHANNEL_VALUE}` | Colonna o campo che rappresenta il canale di destinazione per la query. |
 
+Una spiegazione dei parametri all&#39;interno di `OVER()` si trova nella sezione [funzioni finestra](#window-functions).
 
-| Parametri oggetto restituiti | Descrizione |
-| ---------------------- | ------------- |
-| `name` | L’etichetta `channelName` immessa nell’ADF |
-| `value` | Il valore di `channelValue` questo è il primo tocco nel pannello [!DNL ExperienceEvent] |
-| `timestamp` | Timestamp del [!DNL ExperienceEvent] punto in cui si è verificato il primo tocco |
-| `fraction` | Attribuzione del primo tocco espresso come credito frazionario |
-
-#### Query di esempio
+**Query di esempio**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -135,7 +277,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 LIMIT 10
 ```
 
-#### Risultati
+**Risultati**
 
 ```console
                 id                 |       timestamp       | trackingCode |                   first_touch                    
@@ -153,31 +295,40 @@ LIMIT 10
 (10 rows)
 ```
 
-### Ultima attribuzione tocco
+Per la query di esempio fornita, i risultati sono riportati nella colonna `first_touch`. La colonna `first_touch` è composta dai seguenti componenti:
 
-Restituisce l’ultimo valore di attribuzione touch e i dettagli per un singolo canale nel [!DNL ExperienceEvent] dataset di destinazione. La query restituisce un `struct` oggetto con l&#39;ultimo valore di tocco, marca temporale e attribuzione per ogni riga restituita per il canale selezionato.
-
-Questa query è utile per visualizzare l&#39;interazione finale in una serie di azioni cliente. Nell&#39;esempio riportato di seguito, il codice di tracciamento nell&#39;oggetto restituito è l&#39;ultima interazione in ciascun [!DNL ExperienceEvent] record. A ciascun codice viene attribuita la responsabilità al 100% (`1.0`) per le azioni dei clienti, così come è stata l&#39;ultima interazione.
-
-### Specifiche
-
-Sintassi: `ATTRIBUTION_LAST_TOUCH(timestamp, channelName, channelValue) OVER ([partition] [order] [frame])`
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
 
 | Parametro | Descrizione |
-| --- | --- |
-| `timestamp` | Campo marca temporale trovato nel dataset |
-| `channelName` | Un nome descrittivo da utilizzare come etichetta nell&#39;oggetto restituito |
-| `channelValue` | Colonna o campo che rappresenta il canale di destinazione per la query |
+| --------- | ----------- |
+| `{NAME}` | `{CHANNEL_NAME}`, immesso come etichetta nell&#39;ADF. |
+| `{VALUE}` | Il valore di `{CHANNEL_VALUE}` che è il primo tocco in [!DNL Experience Event] |
+| `{TIMESTAMP}` | Il timestamp del [!DNL Experience Event] in cui si è verificato il primo tocco. |
+| `{FRACTION}` | Attribuzione del primo tocco, espressa come frazione decimale. |
 
+### Attribuzione last-touch
 
-| Parametri oggetto restituiti | Descrizione |
-| ---------------------- | ------------- |
-| `name` | L’etichetta `channelName` immessa nell’ADF |
-| `value` | Il valore di `channelValue` questo è l’ultimo tocco nel pannello [!DNL ExperienceEvent] |
-| `timestamp` | La marca temporale della [!DNL ExperienceEvent] posizione in cui `channelValue` è stato utilizzato |
-| `fraction` | Attribuzione dell&#39;ultimo tocco espresso come credito frazionario |
+Questa query restituisce il valore di attribuzione dell&#39;ultimo tocco e i dettagli per un singolo canale nel set di dati [!DNL Experience Event] di destinazione. La query restituisce un oggetto `struct` con l&#39;ultimo valore di tocco, marca temporale e attribuzione per ogni riga restituita per il canale selezionato.
 
-#### Query di esempio
+Questa query è utile per visualizzare l&#39;interazione finale in una serie di azioni cliente. Nell&#39;esempio riportato di seguito, il codice di tracciamento nell&#39;oggetto restituito è l&#39;ultima interazione in ciascun record [!DNL Experience Event]. A ciascun codice viene attribuita la responsabilità del 100% (`1.0`) per le azioni del cliente, in quanto si trattava dell&#39;ultima interazione.
+
+**Sintassi query**
+
+```sql
+ATTRIBUTION_LAST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| Parametro | Descrizione |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Campo timestamp trovato nel set di dati. |
+| `{CHANNEL_NAME}` | Etichetta dell&#39;oggetto restituito. |
+| `{CHANNEL_VALUE}` | Colonna o campo che rappresenta il canale di destinazione per la query. |
+
+Una spiegazione dei parametri all&#39;interno di `OVER()` si trova nella sezione [funzioni finestra](#window-functions).
+
+**Query di esempio**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -190,7 +341,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-#### Risultati
+**Risultati**
 
 ```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
@@ -208,32 +359,44 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
+Per la query di esempio fornita, i risultati sono riportati nella colonna `last_touch`. La colonna `last_touch` è composta dai seguenti componenti:
+
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
+
+| Parametri | Descrizione |
+| ---------- | ----------- |
+| `{NAME}` | `{CHANNEL_NAME}`, immesso come etichetta nell&#39;ADF. |
+| `{VALUE}` | Il valore di `{CHANNEL_VALUE}` che è l&#39;ultimo tocco in [!DNL Experience Event] |
+| `{TIMESTAMP}` | La marca temporale del [!DNL Experience Event] in cui è stato utilizzato il `channelValue`. |
+| `{FRACTION}` | L&#39;attribuzione dell&#39;ultimo tocco, espressa come frazione decimale. |
+
 ### Attribuzione del primo tocco con condizione di scadenza
 
-Restituisce il primo valore di attribuzione touch e i dettagli per un singolo canale nel [!DNL ExperienceEvent] dataset di destinazione, che scade dopo o prima di una condizione. La query restituisce un `struct` oggetto con il primo valore di tocco, marca temporale e attribuzione per ogni riga restituita per il canale selezionato.
+Questa query restituisce il valore di attribuzione del primo tocco e i dettagli per un singolo canale nel set di dati [!DNL Experience Event] di destinazione, con scadenza dopo o prima di una condizione. La query restituisce un oggetto `struct` con il primo valore di tocco, marca temporale e attribuzione per ogni riga restituita per il canale selezionato.
 
-Questa query è utile se si desidera vedere quale interazione ha portato a una serie di azioni da parte del cliente all&#39;interno di una parte del [!DNL ExperienceEvent] dataset determinata da una condizione scelta. Nell&#39;esempio riportato di seguito, un acquisto viene registrato (`commerce.purchases.value IS NOT NULL`) in ciascuno dei quattro giorni mostrati nei risultati (15 luglio, 21, 23 e 29) e al codice di tracciamento iniziale di ogni giorno viene attribuita la responsabilità del 100% (`1.0`) per le azioni dei clienti.
+Questa query è utile se si desidera vedere quale interazione ha portato a una serie di azioni da parte del cliente all&#39;interno di una parte del [!DNL Experience Event] dataset determinata da una condizione di scelta. Nell&#39;esempio riportato di seguito, un acquisto viene registrato (`commerce.purchases.value IS NOT NULL`) in ciascuno dei quattro giorni mostrati nei risultati (15 luglio, 21, 23 e 29) e il codice di tracciamento iniziale in ogni giorno viene attribuito al 100% (`1.0`) la responsabilità delle azioni del cliente.
 
-#### Specifiche
+**Sintassi query**
 
-Sintassi: `ATTRIBUTION_FIRST_TOUCH_EXP_IF(timestamp, channelName, channelValue, expCondition, expBefore) OVER ([partition] [order] [frame])`
+```sql
+ATTRIBUTION_FIRST_TOUCH_EXP_IF(
+    {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_CONDITION}, {EXP_BEFORE}) 
+    OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Parametro | Descrizione |
-| --- | --- |
-| `timestamp` | Campo marca temporale trovato nel dataset |
-| `channelName` | Un nome descrittivo da utilizzare come etichetta nell&#39;oggetto restituito |
-| `channelValue` | Colonna o campo che rappresenta il canale di destinazione per la query |
-| `expCondition` | La condizione che determina il punto di scadenza del canale |
-| `expBefore` | Defaults to `false`. Valore booleano per indicare se il canale scade prima o dopo il soddisfacimento della condizione specificata. Attivato principalmente per le condizioni di scadenza di una sessione (ad esempio, `sess.depth = 1, true`), per fare in modo che il primo tocco non sia selezionato da una sessione precedente. |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Campo timestamp trovato nel set di dati. |
+| `{CHANNEL_NAME}` | Etichetta per l&#39;oggetto restituito. |
+| `{CHANNEL_VALUE}` | Colonna o campo che rappresenta il canale di destinazione per la query. |
+| `{EXP_CONDITION}` | La condizione che determina il punto di scadenza del canale. |
+| `{EXP_BEFORE}` | Valore booleano che indica se il canale scade prima o dopo la condizione specificata, `{EXP_CONDITION}`, è soddisfatto. Questo è attivato principalmente per le condizioni di scadenza di una sessione, per garantire che il primo tocco non sia selezionato da una sessione precedente. Per impostazione predefinita, questo valore è impostato su `false`. |
 
-| Parametri oggetto restituiti | Descrizione |
-| ---------------------- | ------------- |
-| `name` | L’etichetta `channelName` immessa nell’ADF |
-| `value` | Il valore di `channelValue` questo è il primo tocco nella finestra [!DNL ExperienceEvent] precedente `expCondition` |
-| `timestamp` | Timestamp del [!DNL ExperienceEvent] punto in cui si è verificato il primo tocco |
-| `fraction` | Attribuzione del primo tocco espresso come credito frazionario |
+Una spiegazione dei parametri all&#39;interno della funzione `OVER()` si trova nella sezione [funzioni finestra](#window-functions).
 
-#### Query di esempio
+**Query di esempio**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -246,7 +409,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-#### Risultati
+**Risultati**
 
 ```console
                 id                 |       timestamp       | trackingCode |                   first_touch                    
@@ -264,29 +427,43 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-### Prima attribuzione touch con timeout di scadenza
+Per la query di esempio fornita, i risultati sono riportati nella colonna `first_touch`. La colonna `first_touch` è composta dai seguenti componenti:
 
-Restituisce il primo valore di attribuzione touch e i dettagli per un singolo canale nel [!DNL ExperienceEvent] dataset di destinazione per un periodo di tempo specificato. La query restituisce un `struct` oggetto con il primo valore di tocco, marca temporale e attribuzione per ogni riga restituita per il canale selezionato. Questa query è utile se si desidera vedere quale interazione, entro un intervallo di tempo selezionato, ha portato a un&#39;azione del cliente. Nell’esempio riportato di seguito, il primo tocco restituito per ogni azione del cliente è la prima interazione nei sette giorni precedenti (`expTimeout = 86400 * 7`).
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
 
-#### Specifiche
+| Parametri | Descrizione |
+| ---------- | ----------- |
+| `{NAME}` | `{CHANNEL_NAME}`, immesso come etichetta nell&#39;ADF. |
+| `{VALUE}` | Il valore di `CHANNEL_VALUE}` che è il primo tocco nella [!DNL Experience Event], prima della `{EXP_CONDITION}`. |
+| `{TIMESTAMP}` | Il timestamp del [!DNL Experience Event] in cui si è verificato il primo tocco. |
+| `{FRACTION}` | Attribuzione del primo tocco, espressa come frazione decimale. |
 
-Sintassi: `ATTRIBUTION_FIRST_TOUCH_EXP_TIMEOUT(timestamp, channelName, channelValue, expTimeout) OVER ([partition] [order] [frame])`
+### Attribuzione primo tocco con timeout di scadenza
+
+Questa query restituisce il valore di attribuzione del primo tocco e i dettagli per un singolo canale nel set di dati [!DNL Experience Event] di destinazione per un periodo di tempo specificato. La query restituisce un oggetto `struct` con il primo valore di tocco, marca temporale e attribuzione per ogni riga restituita per il canale selezionato.
+
+Questa query è utile se si desidera vedere quale interazione, entro un intervallo di tempo selezionato, ha portato a un&#39;azione del cliente. Nell&#39;esempio riportato di seguito, il primo tocco restituito per ogni azione del cliente è la prima interazione nei sette giorni precedenti (`expTimeout = 86400 * 7`).
+
+**Specifiche**
+
+```sql
+ATTRIBUTION_FIRST_TOUCH_EXP_TIMEOUT(
+    {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_TIMEOUT}) 
+    OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Parametro | Descrizione |
-| --- | --- |
-| `timestamp` | Campo marca temporale trovato nel dataset |
-| `channelName` | Un nome descrittivo da utilizzare come etichetta nell&#39;oggetto restituito |
-| `channelValue` | Colonna o campo che rappresenta il canale di destinazione per la query |
-| `expTimeout` | La finestra di tempo (in secondi) prima dell&#39;evento del canale che la query cerca per un primo evento di tocco |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Campo timestamp trovato nel set di dati. |
+| `{CHANNEL_NAME}` | Etichetta per l&#39;oggetto restituito. |
+| `{CHANNEL_VALUE}` | Colonna o campo che rappresenta il canale di destinazione per la query. |
+| `{EXP_TIMEOUT}` | La finestra di tempo prima dell&#39;evento del canale, in secondi, in cui la query cerca un primo evento di tocco. |
 
-| Parametri oggetto restituiti | Descrizione |
-| ---------------------- | ------------- |
-| `name` | L’etichetta `channelName` immessa nell’ADF |
-| `value` | Il valore da `channelValue` cui proviene il primo tocco entro l&#39;intervallo specificato `expTimeout` |
-| `timestamp` | Timestamp del [!DNL ExperienceEvent] punto in cui si è verificato il primo tocco |
-| `fraction` | Attribuzione del primo tocco espresso come credito frazionario |
+Una spiegazione dei parametri all&#39;interno della funzione `OVER()` si trova nella sezione [funzioni finestra](#window-functions).
 
-#### Query di esempio
+**Query di esempio**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -299,7 +476,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-#### Risultati
+**Risultati**
 
 ```console
                 id                 |       timestamp       | trackingCode |                   first_touch                    
@@ -317,30 +494,42 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-### Attribuzione dell&#39;ultimo tocco con condizione di scadenza
+Per la query di esempio fornita, i risultati sono riportati nella colonna `first_touch`. La colonna `first_touch` è composta dai seguenti componenti:
 
-Restituisce l’ultimo valore di attribuzione touch e i dettagli per un singolo canale nel [!DNL ExperienceEvent] set di dati di destinazione, che scade dopo o prima di una condizione. La query restituisce un `struct` oggetto con l&#39;ultimo valore di tocco, marca temporale e attribuzione per ogni riga restituita per il canale selezionato. Questa query è utile se si desidera visualizzare l&#39;ultima interazione in una serie di azioni cliente all&#39;interno di una parte del [!DNL ExperienceEvent] dataset determinata da una condizione di scelta. Nell&#39;esempio riportato di seguito, un acquisto viene registrato (`commerce.purchases.value IS NOT NULL`) in ciascuno dei quattro giorni mostrati nei risultati (15 luglio, 21, 23 e 29) e all&#39;ultimo codice di tracciamento in ogni giorno viene attribuito il 100% (`1.0`) di responsabilità per le azioni dei clienti.
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
 
-#### Specifiche
+| Parametri | Descrizione |
+| ---------- | ----------- |
+| `{NAME}` | `{CHANNEL_NAME}`, immesso come etichetta nell&#39;ADF. |
+| `{VALUE}` | Il valore di `CHANNEL_VALUE}` che rappresenta il primo tocco entro l&#39;intervallo `{EXP_TIMEOUT}` specificato. |
+| `{TIMESTAMP}` | Il timestamp del [!DNL Experience Event] in cui si è verificato il primo tocco. |
+| `{FRACTION}` | Attribuzione del primo tocco, espressa come frazione decimale. |
 
-Sintassi: `ATTRIBUTION_LAST_TOUCH_EXP_IF(timestamp, channelName, channelValue, expCondition, expBefore) OVER ([partition] [order] [frame])`
+### Attribuzione dell’ultimo tocco con condizione di scadenza
+
+Questa query restituisce il valore di attribuzione dell&#39;ultimo tocco e i dettagli per un singolo canale nel set di dati [!DNL Experience Event] di destinazione, con scadenza dopo o prima di una condizione. La query restituisce un oggetto `struct` con l&#39;ultimo valore di tocco, marca temporale e attribuzione per ogni riga restituita per il canale selezionato.
+
+Questa query è utile se si desidera visualizzare l&#39;ultima interazione in una serie di azioni cliente all&#39;interno di una parte del [!DNL Experience Event] dataset determinata da una condizione di scelta. Nell&#39;esempio riportato di seguito, un acquisto viene registrato (`commerce.purchases.value IS NOT NULL`) in ciascuno dei quattro giorni mostrati nei risultati (15 luglio, 21, 23 e 29) e l&#39;ultimo codice di tracciamento in ogni giorno è attribuito al 100% (`1.0`) la responsabilità delle azioni del cliente.
+
+**Sintassi query**
+
+```sql
+ATTRIBUTION_LAST_TOUCH_EXP_IF(
+    {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_CONDITION}, {EXP_BEFORE}) 
+    OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Parametro | Descrizione |
-| --- | --- |
-| `timestamp` | Campo marca temporale trovato nel dataset |
-| `channelName` | Un nome descrittivo da utilizzare come etichetta nell&#39;oggetto restituito |
-| `channelValue` | Colonna o campo che rappresenta il canale di destinazione per la query |
-| `expCondition` | La condizione che determina il punto di scadenza del canale |
-| `expBefore` | Defaults to `false`. Valore booleano per indicare se il canale scade prima o dopo il soddisfacimento della condizione specificata. Attivato principalmente per le condizioni di scadenza della sessione (ad esempio, `sess.depth = 1, true`), per fare in modo che l’ultimo tocco non sia selezionato da una sessione precedente. |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Campo timestamp trovato nel set di dati. |
+| `{CHANNEL_NAME}` | Etichetta per l&#39;oggetto restituito. |
+| `{CHANNEL_VALUE}` | Colonna o campo che rappresenta il canale di destinazione per la query. |
+| `{EXP_CONDITION}` | La condizione che determina il punto di scadenza del canale. |
+| `{EXP_BEFORE}` | Valore booleano che indica se il canale scade prima o dopo la condizione specificata, `{EXP_CONDITION}`, è soddisfatto. Questo è attivato principalmente per le condizioni di scadenza di una sessione, per garantire che il primo tocco non sia selezionato da una sessione precedente. Per impostazione predefinita, questo valore è impostato su `false`. |
 
-| Parametri oggetto restituiti | Descrizione |
-| ---------------------- | ------------- |
-| `name` | L’etichetta `channelName` immessa nell’ADF |
-| `value` | Il valore di `channelValue` questo è l’ultimo tocco nella finestra [!DNL ExperienceEvent] precedente `expCondition` |
-| `timestamp` | Il timestamp dell’ [!DNL ExperienceEvent] ultimo tocco |
-| `percentage` | Attribuzione dell&#39;ultimo tocco espresso come credito frazionario |
-
-#### Query di esempio
+**Query di esempio**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -353,7 +542,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-#### Risultati
+**Esempio di risultati**
 
 ```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
@@ -371,29 +560,43 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-### Ultima attribuzione touch con timeout di scadenza
+Per la query di esempio fornita, i risultati sono riportati nella colonna `last_touch`. La colonna `last_touch` è composta dai seguenti componenti:
 
-Restituisce l’ultimo valore di attribuzione touch e i dettagli per un singolo canale nel [!DNL ExperienceEvent] dataset di destinazione per un periodo di tempo specificato. La query restituisce un `struct` oggetto con l&#39;ultimo valore di tocco, marca temporale e attribuzione per ogni riga restituita per il canale selezionato. Questa query è utile se si desidera visualizzare l&#39;ultima interazione entro un intervallo di tempo selezionato. Nell’esempio riportato di seguito, l’ultimo tocco restituito per ogni azione del cliente è l’interazione finale entro i sette giorni successivi (`expTimeout = 86400 * 7`).
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
 
-#### Specifiche
+| Parametri | Descrizione |
+| ---------- | ----------- |
+| `{NAME}` | `{CHANNEL_NAME}`, immesso come etichetta nell&#39;ADF. |
+| `{VALUE}` | Il valore di `{CHANNEL_VALUE}` che è l&#39;ultimo tocco nella [!DNL Experience Event], prima della `{EXP_CONDITION}`. |
+| `{TIMESTAMP}` | Il timestamp del [!DNL Experience Event] in cui si è verificato l&#39;ultimo tocco. |
+| `{FRACTION}` | L&#39;attribuzione dell&#39;ultimo tocco, espressa come frazione decimale. |
 
-Sintassi: `ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(timestamp, channelName, channelValue, expTimeout) OVER ([partition] [order] [frame])`
+### Attribuzione last-touch con timeout di scadenza
+
+Questa query restituisce il valore dell&#39;attribuzione last-touch e i dettagli per un singolo canale nel set di dati [!DNL Experience Event] di destinazione per un periodo di tempo specificato. La query restituisce un oggetto `struct` con l&#39;ultimo valore di tocco, marca temporale e attribuzione per ogni riga restituita per il canale selezionato.
+
+Questa query è utile se si desidera visualizzare l&#39;ultima interazione entro un intervallo di tempo selezionato. Nell&#39;esempio riportato di seguito, l&#39;ultimo tocco restituito per ogni azione del cliente è l&#39;interazione finale entro i sette giorni successivi (`expTimeout = 86400 * 7`).
+
+**Sintassi query**
+
+```sql
+ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(
+    {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_TIMEOUT}) 
+    OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Parametro | Descrizione |
-| --- | --- |
-| `timestamp` | Campo marca temporale trovato nel dataset |
-| `channelName` | Un nome descrittivo da utilizzare come etichetta nell&#39;oggetto restituito |
-| `channelValue` | Colonna o campo che rappresenta il canale di destinazione per la query |
-| `expTimeout` | La finestra di tempo (in secondi) dopo l’evento del canale che la query cerca per un ultimo evento di tocco |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Campo timestamp trovato nel set di dati. |
+| `{CHANNEL_NAME}` | Etichetta per l&#39;oggetto restituito |
+| `{CHANNEL_VALUE}` | Colonna o campo che rappresenta il canale di destinazione per la query |
+| `{EXP_TIMEOUT}` | La finestra di tempo dopo l’evento del canale, in secondi, in cui la query cerca un ultimo evento di tocco. |
 
-| Parametri oggetto restituiti | Descrizione |
-| ---------------------- | ------------- |
-| `name` | L’etichetta `channelName` immessa nell’ADF |
-| `value` | Il valore da `channelValue` cui proviene l&#39;ultimo tocco entro l&#39;intervallo specificato `expTimeout` |
-| `timestamp` | Il timestamp dell’ [!DNL ExperienceEvent] ultimo tocco |
-| `percentage` | Attribuzione dell&#39;ultimo tocco espresso come credito frazionario |
+Una spiegazione dei parametri all&#39;interno della funzione `OVER()` si trova nella sezione [funzioni finestra](#window-functions).
 
-#### Query di esempio
+**Query di esempio**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -406,7 +609,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-#### Risultati
+**Risultati**
 
 ```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
@@ -424,30 +627,44 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-## Tocco precedente/successivo
+Per la query di esempio fornita, i risultati sono riportati nella colonna `last_touch`. La colonna `last_touch` è composta dai seguenti componenti:
 
-È importante comprendere in che modo i clienti si spostano all&#39;interno di un&#39;esperienza. Può essere utilizzato per comprendere la profondità di coinvolgimento del cliente, confermare che i passaggi previsti di un&#39;esperienza funzionano correttamente e identificare potenziali punti di dolore che possono avere un impatto sul cliente. Le seguenti ADF supportano la definizione delle visualizzazioni dei percorsi dalle relazioni Precedente e Successivo. Potrete creare la pagina precedente e la pagina successiva, oppure seguire più eventi per creare il percorso.
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
 
-### Tocco precedente
+| Parametri | Descrizione |
+| ---------- | ----------- |
+| `{NAME}` | La `{CHANNEL_NAME}`, immessa come etichetta nell&#39;ADF. |
+| `{VALUE}` | Il valore di `{CHANNEL_VALUE}` che è l&#39;ultimo tocco entro l&#39;intervallo `{EXP_TIMEOUT}` specificato |
+| `{TIMESTAMP}` | Il timestamp della [!DNL Experience Event] in cui si è verificato l&#39;ultimo tocco |
+| `{FRACTION}` | L&#39;attribuzione dell&#39;ultimo tocco, espressa come frazione decimale. |
 
-Determina il valore precedente di un particolare campo a un numero definito di passi dall&#39;interno della finestra. Tenere presente nell&#39;esempio che la `WINDOW` funzione è configurata con un fotogramma che consente di `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` impostare l&#39;ADF per osservare la riga corrente e tutti gli elementi precedenti.
+## Tracciatura percorso
 
-#### Specifiche
+I percorsi possono essere utilizzati per comprendere la profondità di coinvolgimento del cliente, per confermare che le fasi previste di un&#39;esperienza funzionano correttamente e per identificare potenziali punti critici che possono avere un impatto sul cliente.
 
-Sintassi: `PREVIOUS(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])`
+Le seguenti ADF supportano la definizione di visualizzazioni di percorso dalle relazioni precedenti e successive. Potrete creare pagine precedenti e pagine successive, oppure scorrere più eventi per creare percorsi.
+
+### Pagina precedente
+
+Determina il valore precedente di un particolare campo a un numero definito di passi dall&#39;interno della finestra. Tenere presente nell&#39;esempio che la funzione `WINDOW` è configurata con un frame di `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` che imposta l&#39;ADF in modo da visualizzare la riga corrente e tutte le righe successive.
+
+**Sintassi query**
+
+```sql
+PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Parametro | Descrizione |
-| --- | --- |
-| `key` | Colonna o campo dell’evento. |
-| `shift` | (Facoltativo) Il numero di eventi lontani dall’evento corrente. Il valore predefinito è 1. |
-| `ingnoreNulls` | Valore booleano che indica se `key` i valori null devono essere ignorati. Default is `false`. |
+| --------- | ----------- |
+| `{KEY}` | Colonna o campo dell’evento. |
+| `{SHIFT}` | (Facoltativo) Il numero di eventi lontani dall&#39;evento corrente. Per impostazione predefinita, il valore è 1. |
+| `{IGNORE_NULLS}` | (Facoltativo) Valore booleano che indica se i valori null `{KEY}` devono essere ignorati. Per impostazione predefinita, il valore è `false`. |
 
+Una spiegazione dei parametri all&#39;interno della funzione `OVER()` si trova nella sezione [funzioni finestra](#window-functions).
 
-| Parametri oggetto restituiti | Descrizione |
-| ---------------------- | ------------- |
-| `value` | Il valore basato sul valore `key` utilizzato nell&#39;ADF |
-
-#### Query di esempio
+**Query di esempio**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, _experience.analytics.session.num, timestamp, web.webPageDetails.name
@@ -460,7 +677,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, _experience.analytics.session.num, timestamp ASC
 ```
 
-#### Risultati
+**Risultati**
 
 ```console
                 id                 |       timestamp       |                 name                |                    previous_page                    
@@ -478,26 +695,27 @@ ORDER BY endUserIds._experience.mcid.id, _experience.analytics.session.num, time
 (10 rows)
 ```
 
-### Tasto successivo
+Per la query di esempio fornita, i risultati sono riportati nella colonna `previous_page`. Il valore all&#39;interno della colonna `previous_page` è basato sulla `{KEY}` utilizzata nell&#39;ADF.
 
-Determina il valore successivo di un particolare campo a un numero definito di passi di distanza all&#39;interno della finestra. Tenere presente nell&#39;esempio che la `WINDOW` funzione è configurata con un fotogramma che consente di `ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` impostare l&#39;ADF per osservare la riga corrente e tutte le righe successive.
+### Pagina successiva
 
-#### Specifiche
+Determina il valore successivo di un particolare campo a un numero definito di passi di distanza all&#39;interno della finestra. Tenere presente nell&#39;esempio che la funzione `WINDOW` è configurata con un frame di `ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` che imposta l&#39;ADF in modo da visualizzare la riga corrente e tutte le righe successive.
 
-Sintassi: `NEXT(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])`
+**Sintassi query**
+
+```sql
+NEXT({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Parametro | Descrizione |
-| --- | --- |
-| `key` | Colonna o campo dell’evento |
-| `shift` | (Facoltativo) Il numero di eventi lontani dall’evento corrente. Il valore predefinito è 1. |
-| `ingnoreNulls` | Valore booleano che indica se `key` i valori null devono essere ignorati. Default is `false`. |
+| --------- | ----------- |
+| `{KEY}` | Colonna o campo dell’evento. |
+| `{SHIFT}` | (Facoltativo) Il numero di eventi lontani dall&#39;evento corrente. Per impostazione predefinita, il valore è 1. |
+| `{IGNORE_NULLS}` | (Facoltativo) Valore booleano che indica se i valori null `{KEY}` devono essere ignorati. Per impostazione predefinita, il valore è `false`. |
 
+Una spiegazione dei parametri all&#39;interno della funzione `OVER()` si trova nella sezione [funzioni finestra](#window-functions).
 
-| Parametri oggetto restituiti | Descrizione |
-| ---------------------- | ------------- |
-| `value` | Il valore basato sul valore `key` utilizzato nell&#39;ADF |
-
-#### Query di esempio
+**Query di esempio**
 
 ```sql
 SELECT endUserIds._experience.aaid.id, timestamp, web.webPageDetails.name,
@@ -511,7 +729,7 @@ ORDER BY endUserIds._experience.aaid.id, timestamp ASC
 LIMIT 10
 ```
 
-#### Risultati
+**Risultati**
 
 ```console
                 id                 |       timestamp       |                name                 |             previous_page             
@@ -529,27 +747,33 @@ LIMIT 10
 (10 rows)
 ```
 
+Per la query di esempio fornita, i risultati sono riportati nella colonna `previous_page`. Il valore all&#39;interno della colonna `previous_page` è basato sulla `{KEY}` utilizzata nell&#39;ADF.
+
 ## Intervallo di tempo
 
-Il time-between consente di esplorare il comportamento latente dei clienti entro un periodo di tempo precedente o successivo all&#39;evento. Guardate gli eventi entro 7 giorni dalla campagna o da un altro tipo di evento per tutti i vostri clienti.
+Il time-between consente di esplorare il comportamento latente dei clienti entro un determinato periodo di tempo prima o dopo l’evento.
 
 ### Tempo tra la corrispondenza precedente
 
-Fornisce una nuova dimensione che misura il tempo trascorso da un particolare incidente.
+Questa query restituisce un numero che rappresenta l&#39;unità di tempo dopo la visualizzazione dell&#39;evento corrispondente precedente. Se non è stato trovato alcun evento corrispondente, restituisce null.
 
-#### Specifiche
+**Sintassi query**
 
-Sintassi: `TIME_BETWEEN_PREVIOUS_MATCH(timestamp, eventDefintion, [timeUnit]) OVER ([partition] [order] [frame])`
+```sql
+TIME_BETWEEN_PREVIOUS_MATCH(
+    {TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT})
+    OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Parametro | Descrizione |
-| --- | --- |
-| `timestamp` | Campo marca temporale trovato nel set di dati popolato su tutti gli eventi. |
-| `eventDefintion` | Espressione per qualificare l&#39;evento precedente. |
-| `timeUnit` | Unità di uscita: giorni, ore, minuti e secondi. Il valore predefinito è secondi. |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Campo marca temporale trovato nel set di dati popolato su tutti gli eventi. |
+| `{EVENT_DEFINITION}` | L&#39;espressione per qualificare l&#39;evento precedente. |
+| `{TIME_UNIT}` | Unità di uscita. Il valore possibile include giorni, ore, minuti e secondi. Per impostazione predefinita, il valore è secondi. |
 
-Output: Restituisce un numero che rappresenta l&#39;unità di tempo dal momento che l&#39;evento corrispondente precedente è stato visto o rimane null se non è stato trovato alcun evento corrispondente.
+Una spiegazione dei parametri all&#39;interno della funzione `OVER()` si trova nella sezione [funzioni finestra](#window-functions).
 
-#### Query di esempio
+**Query di esempio**
 
 ```sql
 SELECT 
@@ -573,7 +797,7 @@ ORDER BY average_minutes_since_registration
 LIMIT 10
 ```
 
-#### Risultati
+**Risultati**
 
 ```console
              page_name             | average_minutes_since_registration 
@@ -591,23 +815,27 @@ LIMIT 10
 (10 rows)
 ```
 
+Per la query di esempio fornita, i risultati sono riportati nella colonna `average_minutes_since_registration`. Il valore all&#39;interno della colonna `average_minutes_since_registration` è la differenza di tempo tra gli eventi corrente e precedente. L&#39;unità di tempo è stata definita in precedenza in `{TIME_UNIT}`.
+
 ### Tempo tra la partita successiva
 
-Fornisce una nuova dimensione, che misura il tempo prima che si verifichi un particolare evento.
+Questa query restituisce un numero negativo che rappresenta l&#39;unità di tempo dietro l&#39;evento corrispondente successivo. Se non viene trovato un evento corrispondente, viene restituito null.
 
-#### Specifiche
+**Sintassi query**
 
-Sintassi: `TIME_BETWEEN_NEXT_MATCH(timestamp, eventDefintion, [timeUnit]) OVER ([partition] [order] [frame])`
+```sql
+TIME_BETWEEN_NEXT_MATCH({TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT}) OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Parametro | Descrizione |
-| --- | --- |
-| `timestamp` | Campo marca temporale trovato nel set di dati popolato su tutti gli eventi. |
-| `eventDefintion` | Espressione per qualificare l&#39;evento successivo. |
-| `timeUnit` | Unità di uscita: giorni, ore, minuti e secondi. Il valore predefinito è secondi. |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Campo marca temporale trovato nel set di dati popolato su tutti gli eventi. |
+| `{EVENT_DEFINITION}` | L&#39;espressione per qualificare l&#39;evento successivo. |
+| `{TIME_UNIT}` | (Facoltativo) Unità di uscita. Il valore possibile include giorni, ore, minuti e secondi. Per impostazione predefinita, il valore è secondi. |
 
-Output: Restituisce un numero negativo che rappresenta l&#39;unità di tempo dietro l&#39;evento di corrispondenza successivo o rimane null se non viene trovato un evento corrispondente.
+Una spiegazione dei parametri all&#39;interno della funzione `OVER()` si trova nella sezione [funzioni finestra](#window-functions).
 
-#### Query di esempio
+**Query di esempio**
 
 ```sql
 SELECT 
@@ -631,7 +859,7 @@ ORDER BY average_minutes_until_order_confirmation DESC
 LIMIT 10
 ```
 
-#### Risultati
+**Risultati**
 
 ```console
              page_name             | average_minutes_until_order_confirmation 
@@ -649,6 +877,14 @@ LIMIT 10
 (10 rows)
 ```
 
+Per la query di esempio fornita, i risultati sono riportati nella colonna `average_minutes_until_order_confirmation`. Il valore all&#39;interno della colonna `average_minutes_until_order_confirmation` corrisponde alla differenza di tempo tra gli eventi corrente e successivo. L&#39;unità di tempo è stata definita in precedenza in `{TIME_UNIT}`.
+
 ## Passaggi successivi
 
-Utilizzando le funzioni qui descritte, è possibile scrivere query per accedere ai propri [!DNL ExperienceEvent] dataset utilizzando [!DNL Query Service]. Per ulteriori informazioni sull’authoring delle query in [!DNL Query Service], consulta la documentazione sulla [creazione delle query](../creating-queries/creating-queries.md).
+Utilizzando le funzioni qui descritte, è possibile scrivere query per accedere ai propri dataset [!DNL Experience Event] utilizzando [!DNL Query Service]. Per ulteriori informazioni sull&#39;authoring delle query in [!DNL Query Service], consultare la documentazione relativa alla creazione di query [in ](../creating-queries/creating-queries.md).
+
+## Risorse aggiuntive
+
+Il seguente video mostra come eseguire le query nell&#39;interfaccia Adobe Experience Platform e in un client PSQL. Inoltre, il video utilizza anche esempi che coinvolgono singole proprietà in un oggetto XDM, utilizzando  funzioni definite dal Adobe e utilizzando CREATE TABLE AS SELECT (CTAS).
+
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
