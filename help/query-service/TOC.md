@@ -5,9 +5,9 @@ user-guide-title: Guida al servizio query di Adobe Experience Platform
 breadcrumb-title: Guida al servizio query
 user-guide-description: Utilizza SQL standard per eseguire query sui dati in Platform Data Lake.
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: e38190aabfa5d36de85e03eb5fb4e76283fb7934
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '144'
 ht-degree: 18%
 
 ---
@@ -24,11 +24,10 @@ ht-degree: 18%
    - [Query pianificate](api/scheduled-queries.md)
    - [Esecuzione per query pianificate](api/runs-scheduled-queries.md)
    - [Modelli di query](api/query-templates.md)
-- Interfaccia utente del servizio Query {#ui}
+- Interfaccia utente del servizio query {#ui}
    - [Panoramica dell’interfaccia utente](ui/overview.md)
    - [Guida utente per l’editor di query](ui/user-guide.md)
 - Creazione di query {#creating-queries}
-   - [funzioni definite dal Adobe](creating-queries/using-adobe-defined-functions.md)
    - [Panoramica sulla creazione di query](creating-queries/creating-queries.md)
    - [Set di dati e tabelle e schemi](creating-queries/datasets-and-tables.md)
    - [Guida generale per l&#39;esecuzione delle query](creating-queries/writing-queries.md)
@@ -39,7 +38,7 @@ ht-degree: 18%
 - Riferimento SQL {#sql}
    - [Panoramica di SQL](sql/overview.md)
    - [Sintassi SQL](sql/syntax.md)
-   - [funzioni definite dal Adobe](sql/adobe-defined-functions.md)
+   - [ funzioni definite dal Adobe](sql/adobe-defined-functions.md)
    - [Funzioni SQL Spark](sql/spark-sql-functions.md)
    - [Metadati, comandi](sql/metadata.md)
    - [Dichiarazioni preparate](sql/prepared-statements.md)
@@ -47,7 +46,7 @@ ht-degree: 18%
    - [Panoramica sulle query di esempio](sample-queries/overview.md)
    - [Adobe Analytics](sample-queries/adobe-analytics.md)
    - [Adobe Target](sample-queries/adobe-target.md)
-- Connessione dei client a Query Service {#clients}
+- Connettere i client a Query Service {#clients}
    - [Panoramica delle connessioni client](clients/overview.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
    - [Looker](clients/looker.md)
