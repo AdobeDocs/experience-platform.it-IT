@@ -6,148 +6,65 @@ topic: overview
 type: Tutorial
 description: Questa esercitazione utilizza l'API del servizio di flusso per guidarti nei passaggi necessari per connettere la piattaforma a un account Salesforce per la raccolta dei dati CRM.
 translation-type: tm+mt
-source-git-commit: d332226541685108b58d88096146ed6048606774
+source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
 workflow-type: tm+mt
-source-wordcount: '701'
-ht-degree: 1%
+source-wordcount: '559'
+ht-degree: 2%
 
 ---
 
 
-# Creare un [!DNL Salesforce] connettore utilizzando l&#39; [!DNL Flow Service] API
+# Creare un connettore [!DNL Salesforce] utilizzando l&#39;API [!DNL Flow Service]
 
 Flow Service è utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini diverse all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
-Questa esercitazione utilizza l&#39; [!DNL Flow Service] API per guidarti nei passaggi necessari per connettersi [!DNL Platform] a un [!DNL Salesforce] account per la raccolta dei dati CRM.
-
-Se si preferisce utilizzare l&#39;interfaccia utente in [!DNL Experience Platform], l&#39;esercitazione [dell&#39;interfaccia utente del connettore sorgente](../../../ui/create/crm/salesforce.md) Salesforce fornisce istruzioni dettagliate per eseguire azioni simili.
+Questa esercitazione utilizza l&#39;API [!DNL Flow Service] per guidarti attraverso i passaggi necessari per connettersi [!DNL Platform] a un account [!DNL Salesforce] per la raccolta dei dati CRM.
 
 ## Introduzione
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi.
-* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [Origini](../../../../home.md):  [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite  [!DNL Platform] i servizi.
+* [Sandbox](../../../../../sandboxes/home.md):  [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola  [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che dovrete conoscere per collegarvi correttamente [!DNL Platform] a un [!DNL Salesforce] account utilizzando l&#39; [!DNL Flow Service] API.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegarsi correttamente [!DNL Platform] a un account [!DNL Salesforce] utilizzando l&#39;API [!DNL Flow Service].
 
 ### Raccogli credenziali richieste
 
-Per [!DNL Flow Service] collegarsi a [!DNL Salesforce], è necessario fornire valori per le seguenti proprietà di connessione:
+Affinché [!DNL Flow Service] possa connettersi a [!DNL Salesforce], è necessario fornire i valori per le seguenti proprietà di connessione:
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `environmentUrl` | L&#39;URL dell&#39;istanza [!DNL Salesforce] di origine. |
-| `username` | Nome utente per l’account [!DNL Salesforce] utente. |
-| `password` | La password per l&#39;account [!DNL Salesforce] utente. |
-| `securityToken` | Token di sicurezza per l&#39;account [!DNL Salesforce] utente. |
+| `environmentUrl` | L&#39;URL dell&#39;istanza di origine [!DNL Salesforce]. |
+| `username` | Il nome utente per l&#39;account utente [!DNL Salesforce]. |
+| `password` | La password per l&#39;account utente [!DNL Salesforce]. |
+| `securityToken` | Token di sicurezza per l&#39;account utente [!DNL Salesforce]. |
 
-Per ulteriori informazioni su come iniziare, consulta [questo documento](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm)Salesforce.
+Per ulteriori informazioni su come iniziare, visita [questo documento Salesforce](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
 
 ### Lettura di chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere chiamate](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla [!DNL Experience Platform] risoluzione dei problemi.
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consultate la sezione relativa a [come leggere chiamate API di esempio](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../../../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](../../../../../tutorials/authentication.md) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
 
-* Autorizzazione: Portatore `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti al gruppo [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform], incluse quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui verrà eseguita l&#39;operazione:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva per il tipo di supporto:
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
-## Cercare le specifiche di connessione
+## Creare una connessione
 
-Prima [!DNL Platform] di connettersi a un [!DNL Salesforce] account, è necessario verificare l&#39;esistenza delle specifiche di connessione per [!DNL Salesforce]. Se le specifiche di connessione non esistono, non è possibile stabilire una connessione.
-
-Ogni origine disponibile dispone di un proprio set di specifiche di connessione per descrivere le proprietà del connettore, ad esempio i requisiti di autenticazione. È possibile ricercare le specifiche di connessione [!DNL Salesforce] eseguendo una richiesta di GET e utilizzando i parametri della query.
-
-**Formato API**
-
-L&#39;invio di una richiesta di GET senza parametri di query restituirà le specifiche di connessione per tutte le origini disponibili. È possibile includere la query `property=name=="salesforce"` per ottenere informazioni specifiche per [!DNL Salesforce].
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="salesforce"
-```
-
-**Richiesta**
-
-La richiesta seguente recupera le specifiche di connessione per [!DNL Salesforce].
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name==%22salesforce%22' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Risposta**
-
-Una risposta corretta restituisce le specifiche di connessione per [!DNL Salesforce], incluso il relativo identificatore univoco (`id`). Questo ID è richiesto nel passaggio successivo per creare una connessione di base.
-
-```json
-{
-    "items": [
-        {
-            "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
-            "name": "salesforce",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Basic Authentication",
-                    "type": "Basic_Authentication",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params",
-                        "properties": {
-                            "environmentUrl": {
-                                "type": "string",
-                                "description": "URL of the source instance"
-                            },
-                            "username": {
-                                "type": "string",
-                                "description": "User name for the user account"
-                            },
-                            "password": {
-                                "type": "string",
-                                "description": "Password for the user account",
-                                "format": "password"
-                            },
-                            "securityToken": {
-                                "type": "string",
-                                "description": "Security token for the user account",
-                                "format": "password"
-                            }
-                        },
-                        "required": [
-                            "username",
-                            "password",
-                            "securityToken"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
-
-## Creare una connessione per l&#39;API
-
-Una connessione per l&#39;API specifica le origini e contiene le credenziali per tale origine. È necessaria una sola connessione per l&#39;API per [!DNL Salesforce] account, in quanto può essere utilizzata per creare più connettori sorgente per inserire dati diversi.
+Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. È necessaria una sola connessione per ogni account [!DNL Salesforce], in quanto può essere utilizzata per creare più connettori sorgente per inserire dati diversi.
 
 **Formato API**
 
@@ -156,6 +73,8 @@ POST /connections
 ```
 
 **Richiesta**
+
+Per creare una connessione [!DNL Salesforce], è necessario fornire l&#39;ID univoco della specifica di connessione come parte della richiesta di POST. L&#39;ID della specifica di connessione per [!DNL Salesforce] è `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`.
 
 ```shell
 curl -X POST \
@@ -166,8 +85,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Salesforce Base Connection",
-        "description": "Base connection for Salesforce account",
+        "name": "Salesforce Connection",
+        "description": "Connection for Salesforce account",
         "auth": {
             "specName": "Basic Authentication",
             "params": {
@@ -185,14 +104,14 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `auth.params.username` | Nome utente associato al tuo [!DNL Salesforce] account. |
-| `auth.params.password` | La password associata al tuo [!DNL Salesforce] account. |
-| `auth.params.securityToken` | Token di sicurezza associato al tuo [!DNL Salesforce] account. |
-| `connectionSpec.id` | Specifica di connessione `id` dell’ [!DNL Salesforce] account recuperato nel passaggio precedente. |
+| `auth.params.username` | Il nome utente associato al tuo account [!DNL Salesforce]. |
+| `auth.params.password` | La password associata al tuo account [!DNL Salesforce]. |
+| `auth.params.securityToken` | Token di sicurezza associato all&#39;account [!DNL Salesforce]. |
+| `connectionSpec.id` | Specifica di connessione `id` dell&#39;account [!DNL Salesforce] recuperato nel passaggio precedente. |
 
 **Risposta**
 
-Una risposta corretta contiene l&#39;identificatore univoco (`id`) della connessione di base. Questo ID è necessario per esplorare i dati nell&#39;esercitazione successiva.
+Una risposta corretta restituisce la nuova connessione creata, incluso il relativo identificatore univoco (`id`). Questo ID è necessario per esplorare il sistema CRM nel passaggio successivo.
 
 ```json
 {
@@ -203,4 +122,4 @@ Una risposta corretta contiene l&#39;identificatore univoco (`id`) della conness
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, avete creato una connessione per il vostro [!DNL Salesforce] account mediante le API e un ID univoco è stato ottenuto come parte del corpo della risposta. Puoi utilizzare questo ID connessione nell&#39;esercitazione successiva per imparare a [esplorare i sistemi CRM utilizzando l&#39;API](../../explore/crm.md)del servizio di flusso.
+Seguendo questa esercitazione, hai creato una connessione [!DNL Salesforce] utilizzando l&#39;API [!DNL Flow Service] e hai ottenuto il valore ID univoco della connessione. Puoi utilizzare questo ID nell&#39;esercitazione successiva per imparare a esplorare i sistemi CRM utilizzando l&#39;API del servizio di flusso[.](../../explore/crm.md)
