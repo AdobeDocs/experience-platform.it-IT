@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Questa esercitazione utilizza l'API del servizio di flusso per guidarvi attraverso i passaggi necessari per collegare  Experience Platform a un account  Amazon Kinesis.
 translation-type: tm+mt
-source-git-commit: 967585ba078edd13f90c820f6b1a0490140ca0cf
+source-git-commit: fc6449d260ea7b96956689ce6c95c5e8b9002d89
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 2%
@@ -14,51 +14,51 @@ ht-degree: 2%
 ---
 
 
-# Creazione di un [!DNL Amazon Kinesis] connettore tramite l&#39;API del servizio di flusso
+# Creare un connettore [!DNL Amazon Kinesis] utilizzando l&#39;API del servizio di flusso
 
 >[!NOTE]
 >
->Il [!DNL Amazon Kineses] connettore è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la panoramica [](../../../../home.md#terms-and-conditions) Origini.
+>Il connettore [!DNL Amazon Kineses] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, vedere [Panoramica delle sorgenti](../../../../home.md#terms-and-conditions).
 
 [!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
-Questa esercitazione utilizza l&#39; [!DNL Flow Service] API per illustrare i passaggi necessari per connettersi [!DNL Experience Platform] a un [!DNL Amazon Kinesis] account.
+Questa esercitazione utilizza l&#39;API [!DNL Flow Service] per guidarti attraverso i passaggi necessari per connettersi [!DNL Experience Platform] a un account [!DNL Amazon Kinesis].
 
 ## Introduzione
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi.
-* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [Origini](../../../../home.md):  [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite  [!DNL Platform] i servizi.
+* [Sandbox](../../../../../sandboxes/home.md):  [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola  [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che dovrete conoscere per collegarvi correttamente a un [!DNL Amazon Kinesis] account utilizzando l&#39; [!DNL Flow Service] API.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegarsi correttamente a un account [!DNL Amazon Kinesis] utilizzando l&#39;API [!DNL Flow Service].
 
 ### Raccogli credenziali richieste
 
-Per [!DNL Flow Service] connettersi all&#39; [!DNL Amazon Kinesis] account, è necessario fornire i valori per le seguenti proprietà di connessione:
+Affinché [!DNL Flow Service] possa connettersi con l&#39;account [!DNL Amazon Kinesis], è necessario fornire valori per le seguenti proprietà di connessione:
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `accessKeyId` | ID chiave di accesso per il tuo [!DNL Kinesis] account. |
-| `secretKey` | La chiave di accesso segreta per il tuo [!DNL Kinesis] account. |
-| `region` | Regione per il tuo [!DNL Kinesis] account. |
-| `connectionSpec.id` | ID specifica [!DNL Kinesis] connessione: `86043421-563b-46ec-8e6c-e23184711bf6` |
+| `accessKeyId` | ID chiave di accesso per l&#39;account [!DNL Kinesis]. |
+| `secretKey` | La chiave di accesso segreta per l&#39;account [!DNL Kinesis]. |
+| `region` | L&#39;area per l&#39;account [!DNL Kinesis]. |
+| `connectionSpec.id` | ID specifica di connessione [!DNL Kinesis]: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
-Per ulteriori informazioni su questi valori, consultare [questo documento](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html)Kinesis.
+Per ulteriori informazioni su questi valori, fare riferimento a [questo documento Kinesis](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html).
 
 ### Lettura di chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere chiamate](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla [!DNL Experience Platform] risoluzione dei problemi.
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consultate la sezione relativa a [come leggere chiamate API di esempio](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../../../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](../../../../../tutorials/authentication.md) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti al gruppo [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform], incluse quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui verrà eseguita l&#39;operazione:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -68,7 +68,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 ## Creare una connessione
 
-Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. È necessaria una sola connessione per [!DNL Amazon Kinesis] account, in quanto può essere utilizzata per creare più connettori sorgente per inserire dati diversi.
+Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. È necessaria una sola connessione per ogni account [!DNL Amazon Kinesis], in quanto può essere utilizzata per creare più connettori sorgente per inserire dati diversi.
 
 **Formato API**
 
@@ -105,10 +105,10 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `auth.params.accessKeyId` | ID chiave di accesso per il tuo [!DNL Kinesis] account. |
-| `auth.params.secretKey` | La chiave di accesso segreta per il tuo [!DNL Kinesis] account. |
-| `auth.params.region` | Regione per il tuo [!DNL Kinesis] account. |
-| `connectionSpec.id` | ID specifica [!DNL Kinesis] connessione: `86043421-563b-46ec-8e6c-e23184711bf6` |
+| `auth.params.accessKeyId` | ID chiave di accesso per l&#39;account [!DNL Kinesis]. |
+| `auth.params.secretKey` | La chiave di accesso segreta per l&#39;account [!DNL Kinesis]. |
+| `auth.params.region` | L&#39;area per l&#39;account [!DNL Kinesis]. |
+| `connectionSpec.id` | ID specifica di connessione [!DNL Kinesis]: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
 **Risposta**
 
@@ -123,4 +123,4 @@ Una risposta corretta restituisce i dettagli della nuova connessione creata, inc
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, avete creato una [!DNL Amazon Kinesis] connessione utilizzando le API e un ID univoco è stato ottenuto come parte del corpo della risposta. Puoi utilizzare questo ID connessione per [raccogliere i dati in streaming utilizzando l&#39;API](../../collect/streaming.md)del servizio di flusso.
+Seguendo questa esercitazione, avete creato una connessione [!DNL Amazon Kinesis] mediante le API e un ID univoco è stato ottenuto come parte del corpo della risposta. Puoi utilizzare questo ID connessione per [raccogliere i dati di streaming utilizzando l&#39;API del servizio di flusso](../../collect/streaming.md).
