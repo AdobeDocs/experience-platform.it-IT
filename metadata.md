@@ -6,13 +6,14 @@ solution-hub-url: https://docs.adobe.com/content/help/it-IT/experience-platform/
 solution-image: assets/experience_cloud_appicon_32.png
 getting-started-title: Documentazione
 getting-started-url: https://docs.adobe.com/content/help/en/experience-platform/landing/documentation/overview.html
-tutorials-title: Esercitazioni
+tutorials-title: Tutorial
 tutorials-url: https://docs.adobe.com/content/help/it-IT/experience-platform/tutorials/home.html
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-platform.it-IT
 solution: Experience Platform
+type: Documentation
 index: true
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: ffa637c7a0c30bb1b41746b2278f00e40aa2e11e
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 86%
