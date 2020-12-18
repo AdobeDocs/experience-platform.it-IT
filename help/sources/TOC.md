@@ -5,9 +5,9 @@ user-guide-title: Guida ai connettori di sorgenti di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di sorgenti
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 translation-type: tm+mt
-source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
+source-git-commit: c9552b4d3bbb34c81996344f2e8c7cc385c525b6
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '663'
 ht-degree: 4%
 
 ---
@@ -17,20 +17,20 @@ ht-degree: 4%
 
 - [Panoramica sui connettori sorgente](home.md)
 - Connettori sorgente disponibili {#connectors}
-   -  applicazioni Adobe {#adobe-applications}
+   -  applicazioni di Adobe {#adobe-applications}
       - [Connettore dati classificazione analisi](connectors/adobe-applications/classifications.md)
       - [Connettore dati di Analytics](connectors/adobe-applications/analytics.md)
-      - [Connettore Audience Manager](connectors/adobe-applications/audience-manager.md)
+      - [Connettore Audience Manager ](connectors/adobe-applications/audience-manager.md)
       - [Connettore attributi cliente](connectors/adobe-applications/customer-attributes.md)
-      - Mappatura  campi applicazione Adobe {#mapping}
+      - Mapping  campi applicazione Adobe {#mapping}
          - [Campi di mappatura di Analytics](connectors/adobe-applications/mapping/analytics.md)
-         - [campi di mappatura Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
+         - [ campi di mappatura Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Campi di mappatura di destinazione](connectors/adobe-applications/mapping/target.md)
    - Pubblicità {#advertising}
       - [Connettore Google AdWords](connectors/advertising/ads.md)
    - Archiviazione cloud {#cloud-storage}
-      - [connettore Kinesis Amazon](connectors/cloud-storage/kinesis.md)
-      - [connettore Amazon S3](connectors/cloud-storage/s3.md)
+      - [ connettore Kinesis Amazon](connectors/cloud-storage/kinesis.md)
+      - [ connettore Amazon S3](connectors/cloud-storage/s3.md)
       - [Connettore Apache HDFS](connectors/cloud-storage/hdfs.md)
       - [Connettore Azure Data Lake Storage Gen2](connectors/cloud-storage/adls-gen2.md)
       - [Connettore BLOB di Azure](connectors/cloud-storage/blob.md)
@@ -39,7 +39,7 @@ ht-degree: 4%
       - [Connettore FTP](connectors/cloud-storage/ftp.md)
       - [Connettore di archiviazione Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
       - [Connettore SFTP](connectors/cloud-storage/sftp.md)
-      - [connettore Amazon S3 e Azure Blob](connectors/cloud-storage/blob-s3.md)
+      - [ connettore Amazon S3 e Azure Blob](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
       - [Connettore Microsoft Dynamics](connectors/crm/ms-dynamics.md)
       - [Connettore Salesforce](connectors/crm/salesforce.md)
@@ -47,11 +47,11 @@ ht-degree: 4%
       - [Connettore Salesforce Service Cloud](connectors/customer-success/salesforce-service-cloud.md)
       - [Connettore ServiceNow](connectors/customer-success/servicenow.md)
    - Database {#databases}
-      - [connettore Amazon Redshift](connectors/databases/redshift.md)
+      - [ connettore Amazon Redshift](connectors/databases/redshift.md)
       - [Apache Hive sul connettore Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark sul connettore Azure HDInsights](connectors/databases/spark.md)
       - [Connettore di Data Explorer Azure](connectors/databases/data-explorer.md)
-      - [connettore Azure synapse Analytics](connectors/databases/synapse-analytics.md)
+      - [ connettore Azure synapse Analytics](connectors/databases/synapse-analytics.md)
       - [Connettore archiviazione tabella Azure](connectors/databases/ats.md)
       - [Connettore Couchbase](connectors/databases/couchbase.md)
       - [Connettore Google BigQuery](connectors/databases/bigquery.md)
@@ -65,7 +65,7 @@ ht-degree: 4%
       - [Connettore PostgreSQL](connectors/databases/postgres.md)
    - eCommerce {#ecommerce}
       - [Connettore Shopify](connectors/ecommerce/shopify.md)
-   - Automazione del marketing {#marketing-automation}
+   - Automazione marketing {#marketing-automation}
       - [Connettore HubSpot](connectors/marketing-automation/hubspot.md)
    - Pagamenti {#payments}
       - [Connettore PayPal](connectors/payments/paypal.md)
@@ -76,8 +76,8 @@ ht-degree: 4%
       - Pubblicità {#advertising}
          - [Connettore Google AdWords](tutorials/api/create/advertising/ads.md)
       - Archiviazione cloud {#cloud-storage}
-         - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
-         - [connettore Amazon S3](tutorials/api/create/cloud-storage/s3.md)
+         - [ Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
+         - [ connettore Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Connettore Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
          - [Connettore BLOB di Azure](tutorials/api/create/cloud-storage/blob.md)
          - [Connettore Azure Data Lake Storage Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
@@ -87,18 +87,17 @@ ht-degree: 4%
          - [Connettore di archiviazione Google Cloud](tutorials/api/create/cloud-storage/google.md)
          - [Connettore SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
-         - [Connettore HubSpot](tutorials/api/create/crm/hubspot.md)
          - [Connettore Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Connettore Salesforce](tutorials/api/create/crm/salesforce.md)
       - Successo cliente {#customer-success}
          - [Connettore Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [Connettore ServiceNow](tutorials/api/create/customer-success/servicenow.md)
       - Database {#databases}
-         - [connettore Amazon Redshift](tutorials/api/create/databases/redshift.md)
+         - [ connettore Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Apache Hive sul connettore Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark sul connettore Azure HDInsights](tutorials/api/create/databases/spark.md)
          - [Connettore di Data Explorer Azure](tutorials/api/create/databases/data-explorer.md)
-         - [connettore Azure synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
+         - [ connettore Azure synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Connettore archiviazione tabella Azure](tutorials/api/create/databases/ats.md)
          - [Connettore Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Connettore Google BigQuery](tutorials/api/create/databases/bigquery.md)
@@ -112,13 +111,13 @@ ht-degree: 4%
          - [Connettore SQL Server](tutorials/api/create/databases/sql-server.md)
       - eCommerce {#ecommerce}
          - [Connettore Shopify](tutorials/api/create/ecommerce/shopify.md)
-      - Automazione del marketing {#marketing-automation}
+      - Automazione marketing {#marketing-automation}
          - [Connettore HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
       - Pagamenti {#payments}
          - [Connettore PayPal](tutorials/api/create/payments/paypal.md)
       - Protocolli {#protocols}
          - [Connettore OData generico](tutorials/api/create/protocols/odata.md)
-   - Esplorare i dati {#explore}
+   - Esplora dati {#explore}
       - [Esplora i dati pubblicitari](tutorials/api/explore/advertising.md)
       - [Esplora i dati di archiviazione cloud](tutorials/api/explore/cloud-storage.md)
       - [Esplora i dati CRM](tutorials/api/explore/crm.md)
@@ -145,18 +144,18 @@ ht-degree: 4%
    - [Aggiorna connessioni](tutorials/api/update.md)
    - [Elimina connessioni](tutorials/api/delete.md)
    - [Eliminare i flussi di dati](tutorials/api/delete-dataflows.md)
-- Esercitazioni sull’interfaccia utente {#ui-tutorials}
+- Esercitazioni sull&#39;interfaccia utente {#ui-tutorials}
    - Creare un connettore di origine {#create}
-      -  applicazioni Adobe {#adobe-applications}
-         - [Connettore dati di classificazione Adobe Analytics](tutorials/ui/create/adobe-applications/classifications.md)
+      -  applicazioni di Adobe {#adobe-applications}
+         - [ Connettore dati di classificazione Adobe Analytics](tutorials/ui/create/adobe-applications/classifications.md)
          - [Connettore  Adobe Analytics](tutorials/ui/create/adobe-applications/analytics.md)
          - [Connettore Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Connettore attributi cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - Pubblicità {#create}
          - [Connettore Google AdWords](tutorials/ui/create/advertising/ads.md)
       - Archiviazione cloud {#cloud-storage}
-         - [connettore Kinesis Amazon](tutorials/ui/create/cloud-storage/kinesis.md)
-         - [connettore Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
+         - [ connettore Kinesis Amazon](tutorials/ui/create/cloud-storage/kinesis.md)
+         - [ connettore Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
          - [Connettore Apache HDFS](tutorials/ui/create/cloud-storage/hdfs.md)
          - [Connettore Azure Data Lake Storage Gen2](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Connettore BLOB di Azure](tutorials/ui/create/cloud-storage/blob.md)
@@ -165,7 +164,7 @@ ht-degree: 4%
          - [Connettore FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Connettore di archiviazione Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Connettore SFTP](tutorials/ui/create/cloud-storage/sftp.md)
-         - [connettore Amazon S3 e Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
+         - [ connettore Amazon S3 e Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
          - [Connettore Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Connettore Salesforce](tutorials/ui/create/crm/salesforce.md)
@@ -173,11 +172,11 @@ ht-degree: 4%
          - [Connettore Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [Connettore ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
       - Database {#databases}
-         - [connettore Amazon Redshift](tutorials/ui/create/databases/redshift.md)
+         - [ connettore Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Apache Hive sul connettore Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark sul connettore Azure HDInsights](tutorials/ui/create/databases/spark.md)
          - [Connettore di Data Explorer Azure](tutorials/ui/create/databases/data-explorer.md)
-         - [connettore Azure synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
+         - [ connettore Azure synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Connettore archiviazione tabella Azure](tutorials/ui/create/databases/ats.md)
          - [Connettore Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Connettore Google Big Query](tutorials/ui/create/databases/bigquery.md)
@@ -191,7 +190,7 @@ ht-degree: 4%
          - [Connettore PostgreSQL](tutorials/ui/create/databases/postgres.md)
       - eCommerce {#ecommerce}
          - [Connettore Shopify](tutorials/ui/create/ecommerce/shopify.md)
-      - Automazione del marketing {#marketing-automation}
+      - Automazione marketing {#marketing-automation}
          - [Connettore HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
       - Pagamenti {#payments}
          - [Connettore PayPal](tutorials/ui/create/payments/paypal.md)
