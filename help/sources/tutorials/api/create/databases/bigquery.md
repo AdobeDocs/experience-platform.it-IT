@@ -6,150 +6,69 @@ topic: overview
 type: Tutorial
 description: Questa esercitazione utilizza l'API del servizio di flusso per guidarvi attraverso i passaggi necessari per connettere  Experience Platform a Google BigQuery (in seguito denominata "BigQuery").
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
 workflow-type: tm+mt
-source-wordcount: '721'
+source-wordcount: '608'
 ht-degree: 1%
 
 ---
 
 
-# Creare un [!DNL Google BigQuery] connettore utilizzando l&#39; [!DNL Flow Service] API
+# Creare un connettore [!DNL Google BigQuery] utilizzando l&#39;API [!DNL Flow Service]
 
 >[!NOTE]
 >
->Il [!DNL Google BigQuery] connettore è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la panoramica [](../../../../home.md#terms-and-conditions) Origini.
+>Il connettore [!DNL Google BigQuery] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, vedere [Panoramica delle sorgenti](../../../../home.md#terms-and-conditions).
 
 [!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
-Questa esercitazione utilizza l&#39; [!DNL Flow Service] API per guidarvi attraverso i passaggi necessari per la connessione [!DNL Experience Platform] a [!DNL Google BigQuery] (in seguito denominata &quot;BigQuery&quot;).
+Questa esercitazione utilizza l&#39;API [!DNL Flow Service] per guidarvi attraverso i passaggi necessari per collegarvi [!DNL Experience Platform] a [!DNL Google BigQuery] (in seguito denominata &quot;BigQuery&quot;).
 
 ## Introduzione
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi.
-* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [Origini](../../../../home.md):  [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite  [!DNL Platform] i servizi.
+* [Sandbox](../../../../../sandboxes/home.md):  [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola  [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegarsi correttamente a BigQuery utilizzando l&#39; [!DNL Flow Service] API.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegarsi correttamente a BigQuery utilizzando l&#39;API [!DNL Flow Service].
 
 ### Raccogli credenziali richieste
 
-Per [!DNL Flow Service] connettersi a BigQuery, è necessario specificare le seguenti proprietà di connessione:
+Affinché [!DNL Flow Service] possa connettersi a BigQuery, è necessario fornire le seguenti proprietà di connessione:
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `project` | L&#39;ID progetto del [!DNL BigQuery] progetto predefinito su cui eseguire la query. |
+| `project` | L&#39;ID progetto del progetto predefinito [!DNL BigQuery] su cui eseguire la query. |
 | `clientID` | Il valore ID utilizzato per generare il token di aggiornamento. |
 | `clientSecret` | Il valore segreto utilizzato per generare il token di aggiornamento. |
-| `refreshToken` | Token di aggiornamento ottenuto da [!DNL Google] utilizzato per autorizzare l&#39;accesso a [!DNL BigQuery]. |
+| `refreshToken` | Il token di aggiornamento ottenuto da [!DNL Google] utilizzato per autorizzare l&#39;accesso a [!DNL BigQuery]. |
 
-Per ulteriori informazioni su questi valori, consultare [questo documento](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing)BigQuery.
+Per ulteriori informazioni su questi valori, fare riferimento a [questo documento BigQuery](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing).
 
 ### Lettura di chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere chiamate](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla [!DNL Experience Platform] risoluzione dei problemi.
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consultate la sezione relativa a [come leggere chiamate API di esempio](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../../../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](../../../../../tutorials/authentication.md) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
 
-* Autorizzazione: Portatore `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti al gruppo [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform], incluse quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui verrà eseguita l&#39;operazione:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva per il tipo di supporto:
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
-## Cercare le specifiche di connessione
+## Creare una connessione
 
-Per creare una [!DNL BigQuery] connessione, è necessario che all&#39;interno di [!DNL BigQuery] sia presente una serie di specifiche di [!DNL Flow Service]connessione. Il primo passo per collegarsi [!DNL Platform] a [!DNL BigQuery] è recuperare queste specifiche.
-
-**Formato API**
-
-Ogni origine disponibile dispone di un proprio set di specifiche di connessione per descrivere le proprietà del connettore, ad esempio i requisiti di autenticazione. È possibile ricercare le specifiche di connessione [!DNL BigQuery] eseguendo una richiesta di GET e utilizzando i parametri della query.
-
-L&#39;invio di una richiesta di GET senza parametri di query restituirà le specifiche di connessione per tutte le origini disponibili. È possibile includere la query `property=name=="google-big-query"` per ottenere informazioni specifiche per [!DNL BigQuery].
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="google-big-query"
-```
-
-**Richiesta**
-
-La richiesta seguente recupera le specifiche di connessione per [!DNL BigQuery].
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="google-big-query"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Risposta**
-
-Una risposta corretta restituisce le specifiche di connessione per [!DNL BigQuery], incluso il relativo identificatore univoco (`id`). Questo ID è richiesto nel passaggio successivo per creare una connessione di base.
-
-```json
-{
-    "items": [
-        {
-            "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
-            "name": "google-big-query",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Basic Authentication",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params",
-                        "properties": {
-                            "project": {
-                                "type": "string",
-                                "description": "The project ID of the default BigQuery project to query against"
-                            },
-                            "clientId": {
-                                "type": "string",
-                                "description": "ID of the application used to generate the refresh token."
-                            },
-                            "clientSecret": {
-                                "type": "string",
-                                "description": "Secret of the application used to generate the refresh token.",
-                                "format": "password"
-                            },
-                            "refreshToken": {
-                                "type": "string",
-                                "description": "The refresh token obtained from Google used to authorize access to BigQuery.",
-                                "format": "password"
-                            }
-                        },
-                        "required": [
-                            "project",
-                            "clientId",
-                            "clientSecret",
-                            "refreshToken"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
-
-## Creazione di una connessione di base
-
-Una connessione di base specifica un&#39;origine e contiene le credenziali per tale origine. È necessaria una sola connessione di base per [!DNL BigQuery] account, in quanto può essere utilizzata per creare più connettori sorgente per inserire dati diversi.
+Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. È necessaria una sola connessione per ogni account [!DNL BigQuery], in quanto può essere utilizzata per creare più flussi di dati per inserire dati diversi.
 
 **Formato API**
 
@@ -158,6 +77,8 @@ POST /connections
 ```
 
 **Richiesta**
+
+Per creare una connessione [!DNL BigQuery], è necessario fornire l&#39;ID univoco della specifica di connessione come parte della richiesta di POST. L&#39;ID della specifica di connessione per [!DNL BigQuery] è `3c9b37f8-13a6-43d8-bad3-b863b941fedd`.
 
 ```shell
 curl -X POST \
@@ -187,15 +108,15 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --------- | ----------- |
-| `auth.params.project` | L&#39;ID progetto del [!DNL BigQuery] progetto predefinito su cui eseguire la query. contro. |
+| `auth.params.project` | L&#39;ID progetto del progetto predefinito [!DNL BigQuery] su cui eseguire la query. contro. |
 | `auth.params.clientId` | Il valore ID utilizzato per generare il token di aggiornamento. |
 | `auth.params.clientSecret` | Il valore client utilizzato per generare il token di aggiornamento. |
-| `auth.params.refreshToken` | Token di aggiornamento ottenuto da [!DNL Google] utilizzato per autorizzare l&#39;accesso a [!DNL BigQuery]. |
-| `connectionSpec.id` | Specifica di connessione `id` dell’ [!DNL BigQuery] account recuperato nel passaggio precedente. |
+| `auth.params.refreshToken` | Il token di aggiornamento ottenuto da [!DNL Google] utilizzato per autorizzare l&#39;accesso a [!DNL BigQuery]. |
+| `connectionSpec.id` | Specifica di connessione `id` dell&#39;account [!DNL BigQuery] recuperato nel passaggio precedente. |
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della connessione di base appena creata, incluso il relativo identificatore univoco (`id`). Questo ID è necessario per esplorare i dati nell&#39;esercitazione successiva.
+Una risposta corretta restituisce i dettagli della nuova connessione creata, incluso il relativo identificatore univoco (`id`). Questo ID è necessario per esplorare i dati nell&#39;esercitazione successiva.
 
 ```json
 {
@@ -206,4 +127,4 @@ Una risposta corretta restituisce i dettagli della connessione di base appena cr
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato una connessione di [!DNL BigQuery] base utilizzando l&#39; [!DNL Flow Service] API e hai ottenuto il valore ID univoco della connessione. È possibile utilizzare questo ID connessione di base nell&#39;esercitazione successiva per apprendere come [esplorare i database o i sistemi NoSQL utilizzando l&#39;API](../../explore/database-nosql.md)del servizio di flusso.
+Seguendo questa esercitazione, hai creato una connessione [!DNL BigQuery] utilizzando l&#39;API [!DNL Flow Service] e hai ottenuto il valore ID univoco della connessione. È possibile utilizzare questo ID connessione nell&#39;esercitazione successiva per imparare a esplorare i database o i sistemi NoSQL utilizzando l&#39;API del servizio di flusso[.](../../explore/database-nosql.md)
