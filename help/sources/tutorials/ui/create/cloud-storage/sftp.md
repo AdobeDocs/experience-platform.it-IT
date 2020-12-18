@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Questa esercitazione fornisce i passaggi per creare un connettore sorgente SFTP utilizzando l'interfaccia utente della piattaforma.
 translation-type: tm+mt
-source-git-commit: 7b638f0516804e6a2dbae3982d6284a958230f42
+source-git-commit: 0d0d3aa4213f3a8252de82c47eef6e9caa4d3e9e
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '672'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Il connettore SFTP è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la panoramica [](../../../../home.md#terms-and-conditions) Origini.
+>Il connettore SFTP è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, vedere [Panoramica delle sorgenti](../../../../home.md#terms-and-conditions).
 
 Questa esercitazione fornisce i passaggi per creare un connettore sorgente SFTP utilizzando l&#39;interfaccia utente della piattaforma.
 
@@ -27,11 +27,15 @@ Questa esercitazione fornisce i passaggi per creare un connettore sorgente SFTP 
 Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): Il framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
-   * [Nozioni di base sulla composizione](../../../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
-   * [Esercitazione](../../../../../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
+   * [Nozioni di base sulla composizione](../../../../../xdm/schema/composition.md) dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
+   * [Esercitazione](../../../../../xdm/tutorials/create-schema-ui.md) sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
-Se disponete già di una connessione SFTP valida, potete ignorare il resto del documento e procedere all&#39;esercitazione sulla [configurazione di un flusso di dati](../../dataflow/batch/cloud-storage.md).
+>[!IMPORTANT]
+>
+>Si consiglia di evitare la presenza di newline o ritorni a capo durante l&#39;assimilazione di oggetti JSON con una connessione sorgente SFTP. Per aggirare il limite, utilizzate un singolo oggetto JSON per riga e più righe per i file successivi.
+
+Se disponete già di una connessione SFTP valida, potete ignorare il resto del documento e continuare l&#39;esercitazione su [configurazione di un flusso di dati](../../dataflow/batch/cloud-storage.md).
 
 ### Raccogli credenziali richieste
 
@@ -49,25 +53,25 @@ Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi descritti d
 
 ## Connessione al server SFTP
 
-Accedete ad [Adobe Experience Platform](https://platform.adobe.com) , quindi selezionate **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39; [!UICONTROL Sources] area di lavoro. Nella [!UICONTROL Catalog] schermata sono visualizzate diverse sorgenti con cui è possibile creare un account in ingresso.
+Accedete a [Adobe Experience Platform](https://platform.adobe.com), quindi selezionate **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Sources]. Nella schermata [!UICONTROL Catalog] sono visualizzate diverse sorgenti con le quali è possibile creare un account in ingresso.
 
 Potete selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l&#39;origine specifica con cui si desidera lavorare utilizzando l&#39;opzione di ricerca.
 
-Sotto la [!UICONTROL Cloud storage] categoria, selezionare **[!UICONTROL SFTP]**. Se si tratta della prima volta che si utilizza questo connettore, selezionare **[!UICONTROL Configure]**. In caso contrario, selezionate **[!UICONTROL Add data]** per creare una nuova connessione SFTP.
+Sotto la categoria [!UICONTROL Cloud storage], selezionare **[!UICONTROL SFTP]**. Se si tratta della prima volta che si utilizza questo connettore, selezionare **[!UICONTROL Configure]**. In caso contrario, selezionare **[!UICONTROL Add data]** per creare una nuova connessione SFTP.
 
 ![catalogo](../../../../images/tutorials/create/sftp/catalog.png)
 
-Viene **[!UICONTROL Connect to SFTP]** visualizzata la pagina. In questa pagina è possibile utilizzare credenziali nuove o già esistenti.
+Viene visualizzata la pagina **[!UICONTROL Connect to SFTP]**. In questa pagina è possibile utilizzare credenziali nuove o già esistenti.
 
 ### Nuovo account
 
-Se si utilizzano nuove credenziali, selezionare **[!UICONTROL New account]**. Nel modulo di input visualizzato, specificare un nome, una descrizione facoltativa e le credenziali. Al termine, selezionare **[!UICONTROL Connect]** e quindi concedere un po&#39; di tempo per stabilire la nuova connessione.
+Se si utilizzano nuove credenziali, selezionare **[!UICONTROL New account]**. Nel modulo di input visualizzato, specificare un nome, una descrizione facoltativa e le credenziali. Al termine, selezionare **[!UICONTROL Connect]**, quindi concedere un po&#39; di tempo per stabilire la nuova connessione.
 
 Il connettore SFTP fornisce diversi tipi di autenticazione per l&#39;accesso. In **[!UICONTROL Account authentication]** selezionare **[!UICONTROL Password]** per utilizzare una credenziale basata su password.
 
 ![connect-password](../../../../images/tutorials/create/sftp/password.png)
 
-In alternativa, puoi selezionare la chiave **[pubblica]** SSH e collegare il tuo account SFTP utilizzando una combinazione di [!UICONTROL Private key content] e [!UICONTROL Passphrase].
+In alternativa, è possibile selezionare **[Chiave pubblica SSH]** e collegare l&#39;account SFTP utilizzando una combinazione di [!UICONTROL Private key content] e [!UICONTROL Passphrase].
 
 >[!IMPORTANT]
 >
@@ -82,10 +86,10 @@ In alternativa, puoi selezionare la chiave **[pubblica]** SSH e collegare il tuo
 
 ### Account esistente
 
-Per collegare un account esistente, seleziona l&#39;account FTP o SFTP con cui vuoi connetterti, quindi seleziona **[!UICONTROL Next]** per continuare.
+Per collegare un account esistente, selezionate l&#39;account FTP o SFTP con cui desiderate connettervi, quindi selezionate **[!UICONTROL Next]** per continuare.
 
 ![esistenti](../../../../images/tutorials/create/sftp/existing.png)
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione hai stabilito una connessione al tuo account FTP o SFTP. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per trasferire i dati dall’archiviazione cloud alla piattaforma](../../dataflow/batch/cloud-storage.md).
+Seguendo questa esercitazione hai stabilito una connessione al tuo account FTP o SFTP. È ora possibile continuare l&#39;esercitazione successiva e [configurare un flusso di dati per portare i dati dall&#39;archiviazione cloud nella piattaforma](../../dataflow/batch/cloud-storage.md).
