@@ -5,18 +5,18 @@ user-guide-title: Guida alla governance dei dati di Adobe Experience Platform
 breadcrumb-title: Guida alla governance dei dati
 user-guide-description: Applica restrizioni all’utilizzo dei dati tramite l’uso di etichette, azioni di marketing e criteri.
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: d139eed4768384412a17b62037ed41c06c2941bd
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 22%
+source-wordcount: '118'
+ht-degree: 23%
 
 ---
 
 
-# Adobe Experience Platform Data Governance {#data-governance}
+# Governance dei dati Adobe Experience Platform {#data-governance}
 
 * [Panoramica sulla governance dei dati](home.md)
-* Etichette di utilizzo dati {#labels}
+* Etichette di utilizzo dei dati {#labels}
    * [Panoramica delle etichette di utilizzo dei dati](labels/overview.md)
    * [Etichette di utilizzo dati di base](labels/reference.md)
    * [Gestione delle etichette di utilizzo dei dati nell’interfaccia utente](labels/user-guide.md)
@@ -25,9 +25,10 @@ ht-degree: 22%
    * [Panoramica sui criteri di utilizzo dei dati](policies/overview.md)
    * [Guida utente per i criteri di utilizzo dei dati](policies/user-guide.md)
    * [Creare un criterio di utilizzo dei dati utilizzando l&#39;API di Servizio criteri](policies/create.md)
-* Applicazione delle regole {#enforcement}
+* Applicazione dei criteri {#enforcement}
    * [Panoramica dell&#39;applicazione dei criteri](enforcement/overview.md)
-   * [Applicazione dei criteri di utilizzo dei dati tramite l&#39;API di Servizio criteri](enforcement/api-enforcement.md)
+   * [Esecuzione automatica](enforcement/auto-enforcement.md)
+   * [Applicazione basata sulle API](enforcement/api-enforcement.md)
 * Guida per gli sviluppatori API di Policy Service {#api}
    * [Panoramica](api/overview.md)
    * [Introduzione](api/getting-started.md)
