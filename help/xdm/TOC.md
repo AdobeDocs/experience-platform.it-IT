@@ -1,19 +1,19 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Guida al sistema Experience Data Model (XDM)
-breadcrumb-title: Guida al modello dati esperienza (XDM)
+user-guide-title: Guida del sistema Experience Data Model (XDM)
+breadcrumb-title: Guida di Data Model (XDM)
 user-guide-description: Utilizza le classi e i mixin Experience Data Model (XDM) per standardizzare i dati dell’esperienza.
 translation-type: tm+mt
-source-git-commit: df763e246cd6930a31402f0a2c94d657159f4fe8
+source-git-commit: 099e88373d945660e7529bbd508e616869fd01da
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 17%
+source-wordcount: '215'
+ht-degree: 22%
 
 ---
 
 
-# Experience Data Model (XDM) System {#xdm}
+# Sistema del modello dati esperienza (XDM) {#xdm}
 
 * [Panoramica del sistema XDM](home.md)
 * Schemi {#schema}
@@ -26,14 +26,14 @@ ht-degree: 17%
 * Classi {#classes}
    * [Profilo singolo XDM](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
-* Mixin {#mixins}
-   * Mixine profilo {#profile}
+* Mixins {#mixins}
+   * Mixer di profilo {#profile}
       * [IdentityMap](./mixins/profile/identitymap.md)
       * [Dettagli demografici](./mixins/profile/person-details.md)
       * [Dettagli contatto personale](./mixins/profile/personal-details.md)
       * [Dettagli iscrizione segmento](./mixins/profile/segmentation.md)
       * [Dettagli contatto di lavoro](./mixins/profile/work-details.md)
-   * Mixins evento {#event}
+   * Mixer eventi {#event}
       * [Dettagli ID utente finale](./mixins/event/enduserids.md)
       * [Dettagli ambiente](./mixins/event/environment-details.md)
    * [Aggiornamenti dei nomi misti](./mixins/name-updates.md)
@@ -56,6 +56,22 @@ ht-degree: 17%
    * [Dettagli POI](./data-types/poi-details.md)
    * [Interazione POI](./data-types/poi-interaction.md)
    * [Indirizzo postale](./data-types/postal-address.md)
+* [!UICONTROL Schemas] Interfaccia {#ui}
+   * [Panoramica](./ui/overview.md)
+   * [Esplora risorse XDM](./ui/explore.md)
+   * Creazione e modifica di risorse {#resources}
+      * [Schemi](./ui/resources/schemas.md)
+      * [Classi](./ui/resources/classes.md)
+      * [Mixin](./ui/resources/mixins.md)
+      * [Tipi di dati](./ui/resources/data-types.md)
+   * Definire i campi {#fields}
+      * [Panoramica](./ui/fields/overview.md)
+      * [Campi obbligatori](./ui/fields/required.md)
+      * [Campi oggetto](./ui/fields/object.md)
+      * [Campi Matrice](./ui/fields/array.md)
+      * [campi Enum](./ui/fields/enum.md)
+      * [Campi identità](./ui/fields/identity.md)
+      * [Campi di relazione](./ui/fields/relationship.md)
 * API del Registro di sistema dello schema {#api}
    * [Panoramica](api/overview.md)
    * [Introduzione](api/getting-started.md)
@@ -69,10 +85,8 @@ ht-degree: 17%
    * [Schemi ad hoc](api/ad-hoc.md)
    * [Appendice](api/appendix.md)
 * Tutorial {#tutorials}
-   * [Esplora risorse nell’interfaccia](./tutorials/explore.md)
    * [Creare uno schema (API)](tutorials/create-schema-api.md)
    * [Creare uno schema (interfaccia utente)](tutorials/create-schema-ui.md)
-   * [Creazione e modifica di tipi di dati (interfaccia utente)](./tutorials/create-data-type.md)
    * [Definire una relazione tra due schemi (API)](tutorials/relationship-api.md)
    * [Definire una relazione tra due schemi (interfaccia utente)](tutorials/relationship-ui.md)
    * [Creare uno schema ad hoc (API)](tutorials/ad-hoc.md)
