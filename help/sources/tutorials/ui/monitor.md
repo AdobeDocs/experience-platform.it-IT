@@ -18,4 +18,4 @@ ht-degree: 0%
 
 I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente originati su base programmata.
 
-Per ulteriori informazioni sul monitoraggio dei flussi di dati per i connettori sorgente, consulta l’esercitazione sui flussi di dati di [monitoraggio in origini](../../../dataflows/ui/monitor-sources.md) .
+Per ulteriori informazioni sul monitoraggio dei flussi di dati per i connettori di origine, consultare l&#39;esercitazione [Monitoring dataflows in sources](../../../dataflows/ui/monitor-sources.md).
