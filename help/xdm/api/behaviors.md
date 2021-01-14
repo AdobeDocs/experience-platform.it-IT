@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;behavior;behaviour;behaviors;behaviours;
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;behavior;behaviour;behaviors;behaviours;
 solution: Experience Platform
 title: Guida all'endpoint dei comportamenti
 description: L'endpoint /Behaviors nell'API del Registro di sistema dello schema consente di recuperare tutti i comportamenti disponibili nel contenitore globale.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 72c9147cefd00c9fe734ac64f8062c899b0588bc
+source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
 source-wordcount: '392'
 ht-degree: 2%
@@ -22,19 +22,19 @@ In Experience Data Model (XDM), i comportamenti definiscono la natura dei dati d
 
 >[!NOTE]
 >
->In alcuni casi di utilizzo in Piattaforma è richiesto l&#39;uso di uno schema che non utilizza nessuno dei due comportamenti indicati. Per questi casi, è disponibile un terzo comportamento &quot;ad hoc&quot;. Per ulteriori informazioni, vedere l&#39;esercitazione sulla [creazione di uno schema](../tutorials/ad-hoc.md) ad hoc.
+>In alcuni casi di utilizzo in Piattaforma è richiesto l&#39;uso di uno schema che non utilizza nessuno dei due comportamenti indicati. Per questi casi, è disponibile un terzo comportamento &quot;ad hoc&quot;. Per ulteriori informazioni, vedere l&#39;esercitazione su [creazione di uno schema ad hoc](../tutorials/ad-hoc.md).
 >
->Per informazioni più generali sui comportamenti dei dati in termini di impatto sulla composizione dello schema, fare riferimento alla guida sulle [nozioni di base della composizione](../schema/composition.md)dello schema.
+>Per informazioni più generali sui comportamenti dei dati in termini di impatto sulla composizione dello schema, fare riferimento alla guida sulle [nozioni di base della composizione dello schema](../schema/composition.md).
 
-L&#39; `/behaviors` endpoint nell&#39; [!DNL Schema Registry] API consente di visualizzare i comportamenti disponibili nel `global` contenitore.
+L&#39;endpoint `/behaviors` nell&#39;API [!DNL Schema Registry] consente di visualizzare i comportamenti disponibili nel contenitore `global`.
 
 ## Introduzione
 
-L&#39;endpoint utilizzato in questa guida fa parte dell&#39; [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml). Prima di continuare, consultate la guida [](./getting-started.md) introduttiva per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente chiamate a qualsiasi API  Experience Platform.
+L&#39;endpoint utilizzato in questa guida fa parte dell&#39; [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml). Prima di continuare, consultare la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni richieste necessarie per eseguire correttamente chiamate a qualsiasi API  Experience Platform.
 
-## Recupero di un elenco di comportamenti {#list}
+## Recupera un elenco di comportamenti {#list}
 
-Potete recuperare un elenco di tutti i comportamenti disponibili effettuando una richiesta di GET all&#39; `/behaviors` endpoint.
+È possibile recuperare un elenco di tutti i comportamenti disponibili effettuando una richiesta di GET all&#39;endpoint `/behaviors`.
 
 **Formato API**
 
@@ -91,7 +91,7 @@ curl -X GET \
 
 ## Cercare un comportamento {#lookup}
 
-Puoi cercare un comportamento specifico inserendo il relativo ID nel percorso di una richiesta di GET all’ `/behaviors` endpoint.
+Puoi cercare un comportamento specifico inserendo il relativo ID nel percorso di una richiesta di GET all&#39;endpoint `/behaviors`.
 
 **Formato API**
 
@@ -101,11 +101,11 @@ GET /global/behaviors/{BEHAVIOR_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{BEHAVIOR_ID}` | Il `meta:altId` o l’URL codificato `$id` del comportamento da ricercare. |
+| `{BEHAVIOR_ID}` | Il `meta:altId` o l&#39;URL-encoded `$id` del comportamento da ricercare. |
 
 **Richiesta**
 
-La richiesta seguente recupera i dettagli del comportamento del record fornendo il relativo `meta:altId` nel percorso della richiesta.
+La richiesta seguente recupera i dettagli del comportamento del record fornendo la relativa `meta:altId` nel percorso della richiesta.
 
 ```shell
 curl -X GET \
@@ -172,4 +172,4 @@ Una risposta corretta restituisce i dettagli del comportamento, inclusa la versi
 
 ## Passaggi successivi
 
-Questa guida riguardava l&#39;utilizzo dell&#39; `/behaviors` endpoint nell&#39; [!DNL Schema Registry] API. Per informazioni su come assegnare un comportamento a una classe utilizzando l&#39;API, consultate la guida [all&#39;endpoint delle](./classes.md)classi.
+Questa guida riguardava l&#39;utilizzo dell&#39;endpoint `/behaviors` nell&#39;API [!DNL Schema Registry]. Per informazioni su come assegnare un comportamento a una classe utilizzando l&#39;API, vedere la guida [endpoint classi](./classes.md).
