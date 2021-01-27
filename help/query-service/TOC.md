@@ -5,10 +5,10 @@ user-guide-title: Guida al servizio query di Adobe Experience Platform
 breadcrumb-title: Guida al servizio query
 user-guide-description: Utilizza SQL standard per eseguire query sui dati in Platform Data Lake.
 translation-type: tm+mt
-source-git-commit: e38190aabfa5d36de85e03eb5fb4e76283fb7934
+source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '144'
-ht-degree: 18%
+source-wordcount: '135'
+ht-degree: 17%
 
 ---
 
@@ -27,14 +27,13 @@ ht-degree: 18%
 - Interfaccia utente del servizio query {#ui}
    - [Panoramica dell’interfaccia utente](ui/overview.md)
    - [Guida utente per l’editor di query](ui/user-guide.md)
-- Creazione di query {#creating-queries}
-   - [Panoramica sulla creazione di query](creating-queries/creating-queries.md)
-   - [Set di dati e tabelle e schemi](creating-queries/datasets-and-tables.md)
-   - [Guida generale per l&#39;esecuzione delle query](creating-queries/writing-queries.md)
-   - [Query ExperienceEvent](creating-queries/experience-event-queries.md)
-   - [Unione di set di dati](creating-queries/joining-datasets.md)
-   - [Deduplicazione dei dati](creating-queries/deduplication.md)
-- [Generazione di set di dati dai risultati della query](creating-queries/create-datasets.md)
+   - [Generazione di set di dati dai risultati della query](ui/create-datasets.md)
+- Best practice {#best-practices}
+   - [Guida generale per l&#39;esecuzione delle query](best-practices/writing-queries.md)
+   - [Deduplicazione dei dati](best-practices/deduplication.md)
+   - [Query Evento esperienza di esempio](best-practices/experience-event-queries.md)
+   - [Esempio  query Adobe Analytics](best-practices/adobe-analytics.md)
+   - [Esempio  query Adobe Target](best-practices/adobe-target.md)
 - Riferimento SQL {#sql}
    - [Panoramica di SQL](sql/overview.md)
    - [Sintassi SQL](sql/syntax.md)
@@ -42,10 +41,6 @@ ht-degree: 18%
    - [Funzioni SQL Spark](sql/spark-sql-functions.md)
    - [Metadati, comandi](sql/metadata.md)
    - [Dichiarazioni preparate](sql/prepared-statements.md)
-- Query di esempio {#samples}
-   - [Panoramica sulle query di esempio](sample-queries/overview.md)
-   - [Adobe Analytics](sample-queries/adobe-analytics.md)
-   - [Adobe Target](sample-queries/adobe-target.md)
 - Connettere i client a Query Service {#clients}
    - [Panoramica delle connessioni client](clients/overview.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
