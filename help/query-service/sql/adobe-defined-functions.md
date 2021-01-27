@@ -5,7 +5,7 @@ title: ' funzioni definite dal Adobe'
 topic: functions
 description: Questo documento fornisce informazioni sulle funzioni definite dal Adobe  disponibili in Servizio query.
 translation-type: tm+mt
-source-git-commit: c95f976efd4a281640d2f47888b34bdd12a6c7a8
+source-git-commit: e15229601d35d1155fc9a8ab9296f8c41811ebf9
 workflow-type: tm+mt
 source-wordcount: '2889'
 ht-degree: 2%
@@ -667,14 +667,14 @@ Una spiegazione dei parametri all&#39;interno della funzione `OVER()` si trova n
 **Query di esempio**
 
 ```sql
-SELECT endUserIds._experience.mcid.id, _experience.analytics.session.num, timestamp, web.webPageDetails.name
+SELECT endUserIds._experience.mcid.id, timestamp, web.webPageDetails.name
     PREVIOUS(web.webPageDetails.name, 3)
-      OVER(PARTITION BY endUserIds._experience.mcid.id, _experience.analytics.session.num
+      OVER(PARTITION BY endUserIds._experience.mcid.id
            ORDER BY timestamp
            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
       AS previous_page
 FROM experience_events
-ORDER BY endUserIds._experience.mcid.id, _experience.analytics.session.num, timestamp ASC
+ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
 **Risultati**
@@ -723,7 +723,7 @@ SELECT endUserIds._experience.aaid.id, timestamp, web.webPageDetails.name,
       OVER(PARTITION BY endUserIds._experience.aaid.id
            ORDER BY timestamp
            ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)
-      AS previous_page
+      AS next_page
 FROM experience_events
 ORDER BY endUserIds._experience.aaid.id, timestamp ASC
 LIMIT 10
@@ -881,7 +881,7 @@ Per la query di esempio fornita, i risultati sono riportati nella colonna `avera
 
 ## Passaggi successivi
 
-Utilizzando le funzioni qui descritte, è possibile scrivere query per accedere ai propri dataset [!DNL Experience Event] utilizzando [!DNL Query Service]. Per ulteriori informazioni sull&#39;authoring delle query in [!DNL Query Service], consultare la documentazione relativa alla creazione di query [in ](../creating-queries/creating-queries.md).
+Utilizzando le funzioni qui descritte, è possibile scrivere query per accedere ai propri dataset [!DNL Experience Event] utilizzando [!DNL Query Service]. Per ulteriori informazioni sull&#39;authoring delle query in [!DNL Query Service], consultare la documentazione relativa alla creazione di query [in ](../best-practices/writing-queries.md).
 
 ## Risorse aggiuntive
 
