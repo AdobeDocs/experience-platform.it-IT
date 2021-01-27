@@ -5,9 +5,9 @@ title: Guida per gli sviluppatori di Query Service
 topic: connection parameters
 description: È possibile recuperare i parametri di connessione per l'utilizzo del servizio interattivo effettuando una richiesta di GET all'endpoint /connection_parameters.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 648544bc60c0cee8ca8b167118391980b6c33d91
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '134'
 ht-degree: 1%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 1%
 
 ## Chiamate API di esempio
 
-Ora che hai compreso quali intestazioni utilizzare, sei pronto a iniziare a effettuare chiamate all&#39; [!DNL Query Service] API. Le sezioni seguenti descrivono le varie chiamate API che potete effettuare tramite l&#39; [!DNL Query Service] API. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
+Ora che hai compreso quali intestazioni utilizzare, sei pronto a iniziare a effettuare chiamate all&#39;API [!DNL Query Service]. Le sezioni seguenti descrivono le varie chiamate API che potete effettuare tramite l&#39;API [!DNL Query Service]. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
 
-### Richiedi parametri di connessione per il servizio interattivo
+### Richiedi parametri di connessione
 
-È possibile recuperare i parametri di connessione per l&#39;utilizzo del servizio [](../creating-queries/writing-queries.md) interattivo effettuando una richiesta di GET all&#39; `/connection_parameters` endpoint. Per ulteriori informazioni sui client che utilizzano i parametri di connessione per connettersi tramite il servizio interattivo, consultare la documentazione sui client [](../clients/overview.md)Query Service.
+È possibile recuperare i parametri di connessione effettuando una richiesta di GET all&#39;endpoint `/connection_parameters`. Per ulteriori informazioni sui client che utilizzano i parametri di connessione per connettersi tramite il servizio interattivo, consultare la documentazione sui client [Query Service](../clients/overview.md).
 
 **Formato API**
 
