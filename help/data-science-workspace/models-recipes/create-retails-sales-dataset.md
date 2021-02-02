@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes
+keywords: Experience Platform ;ricetta di vendita al dettaglio;Data Science Workspace;argomenti popolari;ricette
 solution: Experience Platform
 title: Creare lo schema di vendita al dettaglio e il dataset
 topic: tutorial
 type: Tutorial
 description: Questa esercitazione fornisce i prerequisiti e le risorse richiesti per tutte le altre esercitazioni di Adobe Experience Platform Data Science Workspace. Al termine, lo schema Vendite al dettaglio e i set di dati saranno disponibili per voi e per i membri dell'organizzazione IMS  Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '554'
 ht-degree: 0%
 
 ---
@@ -16,20 +16,20 @@ ht-degree: 0%
 
 # Creare lo schema di vendita al dettaglio e il dataset
 
-Questa esercitazione fornisce i prerequisiti e le risorse richiesti per tutte le altre [!DNL Adobe Experience Platform][!DNL Data Science Workspace] esercitazioni. Al termine, lo schema Vendite al dettaglio e i set di dati saranno disponibili per voi e per i membri dell&#39;organizzazione IMS in [!DNL Experience Platform].
+Questa esercitazione fornisce i prerequisiti e le risorse richiesti per tutte le altre esercitazioni [!DNL Adobe Experience Platform] [!DNL Data Science Workspace]. Al termine, lo schema Vendite al dettaglio e i set di dati saranno disponibili per voi e per i membri dell&#39;organizzazione IMS su [!DNL Experience Platform].
 
 ## Introduzione
 
 Prima di iniziare questa esercitazione, è necessario disporre dei seguenti prerequisiti:
 - Accesso a [!DNL Adobe Experience Platform]. Se non disponete dell&#39;accesso a un&#39;organizzazione IMS in [!DNL Experience Platform], rivolgetevi all&#39;amministratore di sistema prima di procedere.
-- Autorizzazione per effettuare chiamate [!DNL Experience Platform] API. Completate l&#39;esercitazione [Authenticate e accedete all&#39;esercitazione API](../../tutorials/authentication.md) Adobe Experience Platform per ottenere i seguenti valori al fine di completare con successo l&#39;esercitazione:
-   - Autorizzazione: `{ACCESS_TOKEN}`
+- Autorizzazione a effettuare chiamate API [!DNL Experience Platform]. Completate l&#39;esercitazione [Authenticate e accedete alle API Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) per ottenere i seguenti valori al fine di completare correttamente l&#39;esercitazione:
+   - Authorization: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
    - x-gw-ims-org-id: `{IMS_ORG}`
    - Segreto cliente: `{CLIENT_SECRET}`
    - Certificato client: `{PRIVATE_KEY}`
-- Dati di esempio e file sorgente per la Ricetta vendite [al dettaglio](../pre-built-recipes/retail-sales.md). Scaricate le risorse necessarie per questa e altre [!DNL Data Science Workspace] esercitazioni dall’archivio [Git pubblico del Adobe](https://github.com/adobe/experience-platform-dsw-reference/).
-- [Python >= 2.7](https://www.python.org/downloads/) e i seguenti [!DNL Python] pacchetti:
+- Dati di esempio e file di origine per la [Ricetta vendite al dettaglio](../pre-built-recipes/retail-sales.md). Scaricate le risorse necessarie per questa e altre [!DNL Data Science Workspace] esercitazioni dal [archivio pubblico  Adobe Git](https://github.com/adobe/experience-platform-dsw-reference/).
+- [Python >= 2.7 ](https://www.python.org/downloads/) e i seguenti  [!DNL Python] pacchetti:
    - [pip](https://pypi.org/project/pip/)
    - [PyYAML](https://pyyaml.org/)
    - [dictor](https://pypi.org/project/dictor/)
@@ -44,8 +44,8 @@ Lo schema Vendite al dettaglio e i set di dati vengono creati automaticamente ut
 
 ### Configurare i file
 
-1. All’interno del pacchetto di risorse per l’ [!DNL Experience Platform] esercitazione, andate alla directory `bootstrap`e aprite `config.yaml` utilizzando un editor di testo appropriato.
-2. Nella sezione `Enterprise` immettere i seguenti valori:
+1. All&#39;interno del pacchetto di risorse per l&#39;esercitazione [!DNL Experience Platform], andate alla directory `bootstrap` e aprite `config.yaml` utilizzando un editor di testo appropriato.
+2. Nella sezione `Enterprise`, inserire i seguenti valori:
 
    ```yaml
    Enterprise:
@@ -56,7 +56,7 @@ Lo schema Vendite al dettaglio e i set di dati vengono creati automaticamente ut
        priv_key_filename: {PRIVATE_KEY}
    ```
 
-3. Modificate i valori trovati sotto la `Platform` sezione, Esempio riportato di seguito:
+3. Modificate i valori trovati sotto la sezione `Platform`, Esempio riportato di seguito:
 
    ```yaml
    Platform:
@@ -68,12 +68,12 @@ Lo schema Vendite al dettaglio e i set di dati vengono creati automaticamente ut
    ```
 
    - `platform_gateway` : Percorso di base per le chiamate API. Non modificate questo valore.
-   - `ims_token` : La tua `{ACCESS_TOKEN}` va qui.
-   - `ingest_data` : Ai fini di questa esercitazione, impostare questo valore come `"True"` per creare gli schemi di vendita al dettaglio e i set di dati. Un valore di `"False"` verrà creato solo per gli schemi.
-   - `build_recipe_artifacts` : Con questa esercitazione, impostare questo valore in modo `"False"` da impedire che lo script generi un artefatto Recipe.
-   - `kernel_type` : Il tipo di esecuzione dell&#39;artifact della ricetta. Lasciate questo valore come `Python` se `build_recipe_artifacts` fosse impostato come `"False"`, altrimenti specificate il tipo di esecuzione corretto.
+   - `ims_token` : La tua  `{ACCESS_TOKEN}` va qui.
+   - `ingest_data` : Ai fini di questa esercitazione, impostare questo valore come  `"True"` per creare gli schemi di vendita al dettaglio e i set di dati. Il valore `"False"` crea solo gli schemi.
+   - `build_recipe_artifacts` : Con questa esercitazione, impostare questo valore in modo  `"False"` da impedire che lo script generi un artefatto Recipe.
+   - `kernel_type` : Il tipo di esecuzione dell&#39;artifact della ricetta. Lasciate questo valore come `Python` se `build_recipe_artifacts` è impostato come `"False"`, altrimenti specificate il tipo di esecuzione corretto.
 
-4. Nella sezione `Titles` , fornite le seguenti informazioni appropriate per i dati di esempio Vendite al dettaglio, salvate e chiudete il file dopo aver apportato le modifiche. Esempio riportato di seguito:
+4. Nella sezione `Titles`, fornite le seguenti informazioni appropriate per i dati di esempio Vendite al dettaglio, salvate e chiudete il file dopo che sono state apportate le modifiche. Esempio riportato di seguito:
 
    ```yaml
    Titles:
@@ -93,8 +93,8 @@ Lo schema Vendite al dettaglio e i set di dati vengono creati automaticamente ut
 
 ### Eseguire lo script bootstrap
 
-1. Aprite l’applicazione terminale e accedete alla directory delle risorse di [!DNL Experience Platform] esercitazione.
-2. Impostate la `bootstrap` directory come percorso di lavoro corrente ed eseguite lo `bootstrap.py` [!DNL Python] script immettendo il seguente comando:
+1. Aprite l&#39;applicazione terminale e andate alla directory delle risorse di esercitazione [!DNL Experience Platform].
+2. Impostate la directory `bootstrap` come percorso di lavoro corrente ed eseguite lo script `bootstrap.py` [!DNL Python] immettendo il comando seguente:
 
    ```bash
    python bootstrap.py
@@ -106,12 +106,13 @@ Lo schema Vendite al dettaglio e i set di dati vengono creati automaticamente ut
 
 ## Passaggi successivi
 
-Al completamento dello script di avvio, è possibile visualizzare gli schemi di input e output di Vendita al dettaglio e i set di dati [!DNL Experience Platform]. Per ulteriori informazioni, vedere l&#39;esercitazione [sullo schema di](./preview-schema-data.md)anteprima.
+Al completamento dello script di avvio, gli schemi di input e output di Vendita al dettaglio e i set di dati possono essere visualizzati su [!DNL Experience Platform]. Vedere l&#39; [esercitazione sui dati dello schema di anteprima](./preview-schema-data.md)
+per ulteriori informazioni.
 
-Sono stati inoltre acquisiti con successo i dati di esempio Vendite al dettaglio [!DNL Experience Platform] utilizzando lo script di avvio fornito.
+È stato anche acquisito con successo i dati di esempio Vendite al dettaglio in [!DNL Experience Platform] utilizzando lo script di avvio fornito.
 
 Per continuare a utilizzare i dati acquisiti:
 - [Analizzare i dati utilizzando i notebook Jupyter](../jupyterlab/analyze-your-data.md)
    - Utilizza i notebook Jupyter in Data Science Workspace per accedere, esplorare, visualizzare e comprendere i tuoi dati.
 - [Creare pacchetti di file sorgente in una casella](./package-source-files-recipe.md)
-   - Segui questa esercitazione per scoprire come inserire un modello personalizzato [!DNL Data Science Workspace] creando pacchetti di file sorgente in un file Recipe importabile.
+   - Segui questa esercitazione per apprendere come portare il tuo modello in [!DNL Data Science Workspace] creando pacchetti di file sorgente in un file Recipe importabile.
