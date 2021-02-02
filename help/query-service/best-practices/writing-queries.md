@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;writing queries;writing query;
+keywords: ' Experience Platform;home;argomenti popolari;servizio query;servizio query;scrivere query;scrivere query;'
 solution: Experience Platform
 title: Scrittura di query
 topic: queries
@@ -8,7 +8,7 @@ description: In questo documento sono riportati i dettagli importanti da conosce
 translation-type: tm+mt
 source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '957'
+source-wordcount: '970'
 ht-degree: 3%
 
 ---
