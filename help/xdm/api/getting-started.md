@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
+keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;modello dati;schema Registro di sistema;schema;'
 solution: Experience Platform
 title: Guida introduttiva all'API del Registro di sistema dello schema
 description: Questo documento fornisce un'introduzione ai concetti di base da conoscere prima di tentare di eseguire chiamate all'API del Registro di sistema dello schema.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1163'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ La documentazione API [!DNL Schema Registry] fornisce esempi di chiamate API per
 
 ## Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](../../tutorials/authentication.md) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](https://www.adobe.com/go/platform-api-authentication-en) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -203,7 +203,7 @@ Quando si eseguono operazioni di elenco e ricerca (GET) nell&#39;API [!DNL Schem
 
 Nella tabella seguente sono elencati i valori di intestazione `Accept` compatibili, inclusi quelli con numeri di versione, insieme alle descrizioni di ciò che l&#39;API restituirà quando verrà utilizzata.
 
-| Accetta | Descrizione |
+| Accept | Descrizione |
 | ------- | ------------ |
 | `application/vnd.adobe.xed-id+json` | Restituisce solo un elenco di ID. Viene utilizzato più comunemente per elencare le risorse. |
 | `application/vnd.adobe.xed+json` | Restituisce un elenco dello schema JSON completo con `$ref` originale e `allOf` inclusi. Viene utilizzato per restituire un elenco completo delle risorse. |
