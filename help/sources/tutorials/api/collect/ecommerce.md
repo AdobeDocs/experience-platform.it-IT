@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Collect eCommerce data;eCommerce data
+keywords: ' Experience Platform;home;argomenti popolari;Raccogliere dati eCommerce;dati eCommerce'
 solution: Experience Platform
 title: Raccolta di dati eCommerce tramite connettori di origine e API
 topic: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati da un sistema eCommerce di terze parti e trasferirli in Piattaforma tramite connettori di origine e API.
 translation-type: tm+mt
-source-git-commit: a7a7c52f5b0c57562039883ae8ff48efefbcbbf5
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1467'
+source-wordcount: '1481'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ Questa esercitazione fornisce esempi di chiamate API per dimostrare come formatt
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](../../../../tutorials/authentication.md) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](https://www.adobe.com/go/platform-api-authentication-en) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
