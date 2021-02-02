@@ -1,53 +1,53 @@
 ---
-keywords: Experience Platform;home;popular topics;dataset connection flow service;flow service;Flow service connection
+keywords: ' Experience Platform;home;argomenti più comuni;dataset connection flow service;flow service;Flow service connection connection'
 solution: Experience Platform
 title: Creazione di una connessione di base di Experienci Platform  tramite l'API del servizio di flusso
 topic: overview
 type: Tutorial
 description: Flow Service è utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini diverse all'interno di Adobe Experience Platform. Il servizio fornisce un'interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '736'
 ht-degree: 1%
 
 ---
 
 
-# Creazione di una connessione di base [!DNL Experience Platform] di set di dati tramite l&#39; [!DNL Flow Service] API
+# Creare una connessione di base di dataset [!DNL Experience Platform] utilizzando l&#39;API [!DNL Flow Service]
 
 [!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
-Per collegare i dati da un&#39;origine di terze parti a [!DNL Platform], è innanzitutto necessario stabilire una connessione alla base di dati.
+Per collegare i dati da un&#39;origine di terze parti a [!DNL Platform], è necessario stabilire prima una connessione alla base di dati.
 
-Questa esercitazione utilizza l&#39; [!DNL Flow Service] API per guidarvi nei passaggi necessari per creare una connessione di base per i dataset.
+Questa esercitazione utilizza l&#39;API [!DNL Flow Service] per guidarvi nei passaggi necessari per creare una connessione di base per i dataset.
 
 ## Introduzione
 
 Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [Sistema](../../../xdm/home.md)XDM (Experience Data Model): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
-   * [Nozioni di base sulla composizione](../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
-   * [Schema Guida](../../../xdm/api/getting-started.md)per lo sviluppatore del Registro di sistema: Include informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all&#39;API del Registro di sistema dello schema. Ciò include il vostro `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all’intestazione Accetta e ai suoi possibili valori).
-* [Servizio](../../../catalog/home.md)catalogo: Catalogo è il sistema di registrazione per la posizione dei dati e la linea all&#39;interno [!DNL Experience Platform].
-* [Caricamento](../../../ingestion/batch-ingestion/overview.md)batch: L&#39;API di assimilazione batch consente di assimilare i dati  Experience Platform come file batch.
-* [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [Sistema](../../../xdm/home.md) XDM (Experience Data Model): Il framework standard con cui  [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza dei clienti.
+   * [Nozioni di base sulla composizione](../../../xdm/schema/composition.md) dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
+   * [Schema Guida](../../../xdm/api/getting-started.md) per lo sviluppatore del Registro di sistema: Include informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all&#39;API del Registro di sistema dello schema. Ciò include il `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni necessarie per effettuare le richieste (con particolare attenzione all&#39;intestazione Accetta e ai relativi valori possibili).
+* [Servizio](../../../catalog/home.md) catalogo: Catalogo è il sistema di registrazione per la posizione dei dati e la linea all&#39;interno  [!DNL Experience Platform].
+* [Caricamento](../../../ingestion/batch-ingestion/overview.md) batch: L&#39;API di assimilazione batch consente di assimilare i dati  Experience Platform come file batch.
+* [Sandbox](../../../sandboxes/home.md):  [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola  [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegarsi correttamente a Data Lake tramite l&#39; [!DNL Flow Service] API.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegarsi correttamente a Data Lake utilizzando l&#39;API [!DNL Flow Service].
 
 ### Lettura di chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere chiamate](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla [!DNL Experience Platform] risoluzione dei problemi.
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consultate la sezione relativa a [come leggere chiamate API di esempio](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](https://www.adobe.com/go/platform-api-authentication-en) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform], incluse quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui verrà eseguita l&#39;operazione:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -57,7 +57,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 ## Cercare le specifiche di connessione
 
-Il primo passaggio per la creazione di una connessione di base di dataset consiste nel recuperare una serie di specifiche di connessione dall&#39;interno [!DNL Flow Service].
+Il primo passaggio per la creazione di una connessione di base di dataset consiste nel recuperare una serie di specifiche di connessione dall&#39;interno di [!DNL Flow Service].
 
 **Formato API**
 
@@ -173,7 +173,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della connessione di base appena creata, incluso il relativo identificatore univoco (`id`). Questo ID è necessario per creare una connessione di destinazione e acquisire i dati da un connettore di origine di terze parti.
+Una risposta corretta restituisce i dettagli della nuova connessione di base creata, incluso il relativo identificatore univoco (`id`). Questo ID è necessario per creare una connessione di destinazione e acquisire i dati da un connettore di origine di terze parti.
 
 ```json
 {
@@ -184,7 +184,7 @@ Una risposta corretta restituisce i dettagli della connessione di base appena cr
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato una connessione di base di dati tramite l&#39; [!DNL Flow Service] API e hai ottenuto il valore ID univoco della connessione. È possibile utilizzare questa connessione di base per creare una connessione di destinazione. Le seguenti esercitazioni descrivono i passaggi necessari per creare una connessione di destinazione, a seconda della categoria di connettore di origine utilizzata:
+Seguendo questa esercitazione, hai creato una connessione di base di dati utilizzando l&#39;API [!DNL Flow Service] e hai ottenuto il valore ID univoco della connessione. È possibile utilizzare questa connessione di base per creare una connessione di destinazione. Le seguenti esercitazioni descrivono i passaggi necessari per creare una connessione di destinazione, a seconda della categoria di connettore di origine utilizzata:
 
 * [Archiviazione cloud](./collect/cloud-storage.md)
 * [CRM](./collect/crm.md)
