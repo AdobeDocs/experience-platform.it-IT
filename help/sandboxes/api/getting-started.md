@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;sandbox developer guide
+keywords: ' Experience Platform;home;argomenti popolari;guida per lo sviluppo di sandbox'
 solution: Experience Platform
 title: Guida per gli sviluppatori API Sandbox
 topic: developer guide
 description: Questa guida per gli sviluppatori fornisce passaggi utili per utilizzare l'API Sandbox per gestire le sandbox in  Experience Platform e include chiamate API di esempio per eseguire varie operazioni.
 translation-type: tm+mt
-source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
@@ -21,15 +21,15 @@ Questa guida per gli sviluppatori fornisce passaggi utili per utilizzare l&#39;A
 
 ## Guida introduttiva all&#39;API Sandbox
 
-Per gestire le sandbox per l’organizzazione IMS, è necessario disporre delle autorizzazioni Amministrazione sandbox. Gli utenti senza autorizzazioni di accesso possono utilizzare l&#39;endpoint solo per [elencare le sandbox attive per l&#39;utente](./list-active-sandboxes.md)corrente. Consultate la panoramica [del controllo di](../../access-control/home.md) accesso per ulteriori informazioni su come assegnare le autorizzazioni sandbox per  Experience Platform.
+Per gestire le sandbox per l’organizzazione IMS, è necessario disporre delle autorizzazioni Amministrazione sandbox. Gli utenti senza autorizzazioni di accesso possono utilizzare l&#39;endpoint solo per [elencare le sandbox attive per l&#39;utente corrente](./list-active-sandboxes.md). Per ulteriori informazioni sull&#39;assegnazione delle autorizzazioni sandbox per  Experience Platform, consultate la [panoramica sul controllo degli accessi](../../access-control/home.md).
 
 ### Lettura di chiamate API di esempio
 
-Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere le chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla risoluzione dei problemi del Experience Platform .
+Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consultate la sezione relativa a [come leggere chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi del Experience Platform .
 
 ### Raccogli valori per le intestazioni richieste
 
-Questa guida richiede che sia stata completata l&#39;esercitazione [di](../../tutorials/authentication.md) autenticazione per effettuare correttamente le chiamate alle API della piattaforma. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API di Experience Platform, come illustrato di seguito:
+Per effettuare correttamente le chiamate alle API della piattaforma, questa guida richiede che sia stata completata l&#39; [esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API di Experience Platform, come illustrato di seguito:
 
 * Autorizzazione: Portatore `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
