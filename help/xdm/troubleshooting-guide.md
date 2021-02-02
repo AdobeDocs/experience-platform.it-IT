@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;;XDM;XDM system;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience eventExperience event;XDM Experience Event;XDM ExperienceEvent;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema;troubleshooting;FAQ;faq;Union schema;UNION PROFILE;union profile
+keywords: ' Experience Platform;home;argomenti più comuni;XDM;XDM, sistema;XDM, profilo individuale;XDM Experience Event;XDM Experience Event;XDM Experience Event;XDM Experience Event;XDM Experience Event;XDM Experience Data Model;Experience Data Model;Data Model;Data Model;schema;risoluzione dei problemi;FAQ;faq;Union Schema;UNION PROFILE;Union profile'
 solution: Experience Platform
 title: Guida alla risoluzione dei problemi del sistema XDM (Experience Data Model)
 description: Questo documento contiene le risposte alle domande frequenti sul sistema Experience Data Model (XDM) e una guida alla risoluzione dei problemi per individuare gli errori più comuni.
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: e87fcd9f028bc6dedaec0435c4eef54e6aecae2d
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '1821'
+source-wordcount: '1863'
 ht-degree: 0%
 
 ---
@@ -15,45 +15,45 @@ ht-degree: 0%
 
 # [!DNL Experience Data Model] (XDM) Guida alla risoluzione dei problemi di sistema
 
-Questo documento contiene le risposte alle domande frequenti sul sistema [!DNL Experience Data Model] (XDM) e una guida alla risoluzione dei problemi per individuare gli errori più comuni. Per domande e risoluzione dei problemi relativi ad altri servizi Adobe Experience Platform, consulta la guida [alla risoluzione dei problemi del Experience Platform](../landing/troubleshooting.md).
+Questo documento contiene le risposte alle domande frequenti sul sistema [!DNL Experience Data Model] (XDM) e una guida alla risoluzione dei problemi per individuare gli errori più comuni. Per le domande e la risoluzione dei problemi relativi ad altri servizi Adobe Experience Platform, consultare la [Guida alla risoluzione dei problemi  Experience Platform](../landing/troubleshooting.md).
 
-**[!DNL Experience Data Model](XDM)** è una specifica open-source che definisce schemi standardizzati per la gestione dell&#39;esperienza cliente. La metodologia su cui [!DNL Experience Platform] è costruito, **XDM System**, rende operativi [!DNL Experience Data Model] gli schemi per l&#39;uso da parte dei [!DNL Platform] servizi. L&#39; **[!DNL Schema Registry]** applicazione fornisce un&#39;interfaccia utente e un&#39;API RESTful per accedere all&#39; **[!DNL Schema Library]** interno [!DNL Experience Platform]. See the [XDM documentation](home.md) for more information.
+**[!DNL Experience Data Model](XDM)** è una specifica open-source che definisce schemi standardizzati per la gestione dell&#39;esperienza cliente. La metodologia su cui è costruito [!DNL Experience Platform], **XDM System**, rende operativi gli schemi [!DNL Experience Data Model] per l&#39;utilizzo da parte dei servizi [!DNL Platform]. **[!DNL Schema Registry]** fornisce un&#39;interfaccia utente e un&#39;API RESTful per accedere alla **[!DNL Schema Library]** all&#39;interno di [!DNL Experience Platform]. Per ulteriori informazioni, consultare la [documentazione XDM](home.md).
 
 ## Domande frequenti
 
-Di seguito è riportato un elenco di risposte alle domande frequenti sul sistema XDM e sull&#39;utilizzo dell&#39; [!DNL Schema Registry] API.
+Di seguito è riportato un elenco di risposte alle domande frequenti sul sistema XDM e sull&#39;utilizzo dell&#39;API [!DNL Schema Registry].
 
 ### Come si aggiungono i campi a uno schema?
 
 È possibile aggiungere campi a uno schema utilizzando un mixin. Ciascun mixin è compatibile con una o più classi, consentendo l&#39;utilizzo del mixin in qualsiasi schema che implementa una di queste classi compatibili. Adobe Experience Platform fornisce diversi mixin di settore con campi predefiniti, ma è possibile aggiungere campi personalizzati a uno schema creando nuovi mixin utilizzando l&#39;API o l&#39;interfaccia utente.
 
-Per informazioni dettagliate sulla creazione di nuovi mixin nell&#39; [!DNL Schema Registry] API, consultate la guida [all&#39;endpoint](api/mixins.md#create)mixin. Se si utilizza l&#39;interfaccia utente, vedere l&#39;esercitazione [Editor](./tutorials/create-schema-ui.md)schema.
+Per informazioni dettagliate sulla creazione di nuovi mixin nell&#39;API [!DNL Schema Registry], consultate la guida [agli endpoint del mixin](api/mixins.md#create). Se si utilizza l&#39;interfaccia utente, vedere l&#39;esercitazione [Editor di schema](./tutorials/create-schema-ui.md).
 
 ### Quali sono gli usi migliori per i mixin rispetto ai tipi di dati?
 
-[Le miscele](./schema/composition.md#mixin) sono componenti che definiscono uno o più campi in uno schema. I mixin applicano la modalità di visualizzazione dei campi nella gerarchia dello schema, mostrando quindi la stessa struttura in ogni schema in cui sono inclusi. Le miscele sono compatibili solo con classi specifiche, identificate dal relativo `meta:intendedToExtend` attributo.
+[I ](./schema/composition.md#mixin) diversi componenti sono componenti che definiscono uno o più campi in uno schema. I mixin applicano la modalità di visualizzazione dei campi nella gerarchia dello schema, mostrando quindi la stessa struttura in ogni schema in cui sono inclusi. I mixin sono compatibili solo con classi specifiche, identificate dall&#39;attributo `meta:intendedToExtend`.
 
-[I tipi](./schema/composition.md#data-type) di dati possono anche fornire uno o più campi per uno schema. Tuttavia, a differenza dei mixin, i tipi di dati non sono vincolati a una determinata classe. Questo rende i tipi di dati un&#39;opzione più flessibile per descrivere le strutture di dati comuni riutilizzabili tra più schemi con classi potenzialmente diverse.
+[I ](./schema/composition.md#data-type) tipi di dati possono anche fornire uno o più campi per uno schema. Tuttavia, a differenza dei mixin, i tipi di dati non sono vincolati a una determinata classe. Questo rende i tipi di dati un&#39;opzione più flessibile per descrivere le strutture di dati comuni riutilizzabili tra più schemi con classi potenzialmente diverse.
 
 ### Qual è l&#39;ID univoco per uno schema?
 
-Tutte [!DNL Schema Registry] le risorse (schemi, mixin, tipi di dati, classi) dispongono di un URI che funge da ID univoco a scopo di riferimento e di ricerca. Quando si visualizza uno schema nell&#39;API, questo si trova negli attributi `$id` e `meta:altId` di livello principale.
+Tutte le risorse [!DNL Schema Registry] (schemi, mixin, tipi di dati, classi) dispongono di un URI che funge da ID univoco a scopo di riferimento e di ricerca. Quando si visualizza uno schema nell&#39;API, questo si trova negli attributi di livello principale `$id` e `meta:altId`.
 
-Per ulteriori informazioni, consultate la sezione Identificazione delle [](api/getting-started.md#resource-identification) risorse nella guida per gli sviluppatori di [!DNL Schema Registry] API.
+Per ulteriori informazioni, vedete la sezione [identificazione delle risorse](api/getting-started.md#resource-identification) nella guida per gli sviluppatori di [!DNL Schema Registry] API.
 
 ### Quando inizia uno schema per impedire l&#39;interruzione delle modifiche?
 
-È possibile apportare modifiche allo schema a condizione che non sia mai stato utilizzato nella creazione di un dataset o sia abilitato per l&#39;uso in [[!DNL Real-time Customer Profile]](../profile/home.md). Una volta che uno schema è stato utilizzato nella creazione del set di dati o è abilitato per l&#39;uso con [!DNL Real-time Customer Profile], le regole di Evoluzione [](schema/composition.md#evolution) schema vengono applicate in modo rigoroso dal sistema.
+È possibile apportare modifiche allo schema a condizione che non sia mai stato utilizzato nella creazione di un dataset o sia abilitato per l&#39;uso in [[!DNL Real-time Customer Profile]](../profile/home.md). Una volta che uno schema è stato utilizzato nella creazione di set di dati o abilitato per l&#39;uso con [!DNL Real-time Customer Profile], le regole di [Evoluzione schema](schema/composition.md#evolution) vengono applicate in modo rigoroso dal sistema.
 
 ### Qual è la dimensione massima di un tipo di campo lungo?
 
 Un tipo di campo lungo è un numero intero con una dimensione massima di 53 (+1) bit, il cui intervallo potrebbe essere compreso tra -9007199254740992 e 9007199254740992. Ciò è dovuto a una limitazione del modo in cui le implementazioni JavaScript di JSON rappresentano numeri interi lunghi.
 
-Per ulteriori informazioni sui tipi di campo, consultare il documento sui vincoli relativi ai tipi di campo [XDM](./schema/field-constraints.md).
+Per ulteriori informazioni sui tipi di campo, consultare il documento relativo ai vincoli dei tipi di campo [XDM](./schema/field-constraints.md).
 
 ### Come si definiscono le identità per lo schema?
 
-In [!DNL Experience Platform], le identità vengono utilizzate per identificare un oggetto (in genere una singola persona) indipendentemente dalle origini dei dati che vengono interpretate. Sono definiti negli schemi contrassegnando i campi chiave come &quot;Identità&quot;. I campi comunemente utilizzati per l&#39;identità includono indirizzo e-mail, numero di telefono, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/it-IT/id-service/using/home.html)ID CRM e altri campi ID univoci.
+In [!DNL Experience Platform], le identità vengono utilizzate per identificare un oggetto (in genere una singola persona) indipendentemente dalle origini dei dati che vengono interpretate. Sono definiti negli schemi contrassegnando i campi chiave come &quot;Identità&quot;. I campi utilizzati comunemente per l&#39;identità includono indirizzo e-mail, numero di telefono, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), ID CRM e altri campi ID univoci.
 
 I campi possono essere contrassegnati come identità tramite l&#39;API o l&#39;interfaccia utente.
 
@@ -63,34 +63,34 @@ Nell&#39;API, le identità vengono stabilite creando descrittori di identità. I
 
 I descrittori di identità vengono creati da una richiesta di POST all&#39;endpoint /descriptors. In caso di esito positivo, riceverete uno stato HTTP 201 (Creato) e un oggetto di risposta contenente i dettagli del nuovo descrittore.
 
-Per ulteriori dettagli sulla creazione di descrittori di identità nell&#39;API, consultate il documento nella sezione [descrittori](api/descriptors.md) nella guida per [!DNL Schema Registry] gli sviluppatori.
+Per ulteriori dettagli sulla creazione di descrittori di identità nell&#39;API, consultate il documento nella sezione [descrittori](api/descriptors.md) nella guida per gli sviluppatori [!DNL Schema Registry].
 
 #### Definizione delle identità nell’interfaccia utente
 
-Con lo schema aperto nell&#39;Editor schema, fare clic sul campo nella **[!UICONTROL Structure]** sezione dell&#39;editor che si desidera contrassegnare come identità. Sotto **[!UICONTROL Field Properties]** a destra, fate clic sulla **[!UICONTROL Identity]** casella di controllo.
+Con lo schema aperto nell&#39;Editor schema, selezionare il campo nella sezione **[!UICONTROL Structure]** dell&#39;editor che si desidera contrassegnare come identità. In **[!UICONTROL Field Properties]** a destra, selezionare la casella di controllo **[!UICONTROL Identity]**.
 
-Per ulteriori dettagli sulla gestione delle identità nell&#39;interfaccia utente, vedere la sezione sulla [definizione dei campi](./tutorials/create-schema-ui.md#identity-field) di identità nell&#39;esercitazione Editor di schema.
+Per ulteriori dettagli sulla gestione delle identità nell&#39;interfaccia utente, vedere la sezione relativa alla [definizione dei campi identità](./tutorials/create-schema-ui.md#identity-field) nell&#39;esercitazione dell&#39;Editor di schema.
 
 ### Lo schema deve avere un&#39;identità primaria?
 
-Le identità principali sono facoltative, poiché gli schemi possono avere 0 o 1 di essi. Tuttavia, uno schema deve avere un&#39;identità primaria affinché lo schema sia abilitato per l&#39;uso in [!DNL Real-time Customer Profile]. Per ulteriori informazioni, vedere la sezione [identità](./tutorials/create-schema-ui.md#identity-field) dell&#39;esercitazione Editor di schema.
+Le identità principali sono facoltative, poiché gli schemi possono avere 0 o 1 di essi. Tuttavia, uno schema deve avere un&#39;identità primaria affinché lo schema sia abilitato per l&#39;uso in [!DNL Real-time Customer Profile]. Per ulteriori informazioni, vedere la sezione [identity](./tutorials/create-schema-ui.md#identity-field) dell&#39;esercitazione Editor di schema.
 
 ### Come si abilita uno schema da utilizzare in [!DNL Real-time Customer Profile]?
 
-Gli schemi sono attivati per essere utilizzati [[!DNL Real-time Customer Profile]](../profile/home.md) tramite l&#39;aggiunta di un tag &quot;unione&quot;, situato nell&#39; `meta:immutableTags` attributo dello schema. Per attivare uno schema da utilizzare con [!DNL Profile] è possibile utilizzare l&#39;API o l&#39;interfaccia utente.
+Gli schemi sono abilitati per l&#39;utilizzo in [[!DNL Real-time Customer Profile]](../profile/home.md) tramite l&#39;aggiunta di un tag &quot;unione&quot;, situato nell&#39;attributo `meta:immutableTags` dello schema. Per abilitare uno schema da utilizzare con [!DNL Profile] è possibile utilizzare l&#39;API o l&#39;interfaccia utente.
 
-#### Abilitazione di uno schema esistente per [!DNL Profile] l&#39;utilizzo dell&#39;API
+#### Abilitazione di uno schema esistente per [!DNL Profile] mediante l&#39;API
 
-Eseguite una richiesta di PATCH per aggiornare lo schema e aggiungere l&#39; `meta:immutableTags` attributo come array contenente il valore &quot;union&quot;. Se l&#39;aggiornamento ha esito positivo, la risposta mostrerà lo schema aggiornato che ora contiene il tag unione.
+Eseguite una richiesta di PATCH per aggiornare lo schema e aggiungere l&#39;attributo `meta:immutableTags` come array contenente il valore &quot;union&quot;. Se l&#39;aggiornamento ha esito positivo, la risposta mostrerà lo schema aggiornato che ora contiene il tag unione.
 
-Per ulteriori informazioni sull&#39;utilizzo dell&#39;API per abilitare uno schema da utilizzare in [!DNL Real-time Customer Profile], vedere il documento [sindacati](./api/unions.md) della guida per [!DNL Schema Registry] gli sviluppatori.
+Per ulteriori informazioni sull&#39;utilizzo dell&#39;API per abilitare uno schema da utilizzare in [!DNL Real-time Customer Profile], consultare il documento [sindacati](./api/unions.md) della guida per gli sviluppatori [!DNL Schema Registry].
 
-#### Abilitazione di uno schema esistente per [!DNL Profile] l&#39;utilizzo dell&#39;interfaccia utente
+#### Abilitazione di uno schema esistente per [!DNL Profile] utilizzando l&#39;interfaccia utente
 
-In [!DNL Experience Platform], fare clic su **[!UICONTROL Schemas]** nella navigazione a sinistra e selezionare il nome dello schema che si desidera abilitare dall&#39;elenco degli schemi. Quindi, sul lato destro dell’editor sotto **[!UICONTROL Schema Properties]**, fate clic su per attivarlo **[!UICONTROL Profile]** e attivarlo.
+In [!DNL Experience Platform], selezionare **[!UICONTROL Schemas]** nella navigazione a sinistra, quindi selezionare il nome dello schema che si desidera abilitare dall&#39;elenco degli schemi. Quindi, sul lato destro dell&#39;editor in **[!UICONTROL Schema Properties]**, selezionare **[!UICONTROL Profile]** per attivarlo.
 
 
-Per ulteriori informazioni, consulta la sezione sull’ [uso nel profilo](./tutorials/create-schema-ui.md#profile) cliente in tempo reale nell’ [!UICONTROL Schema Editor] esercitazione.
+Per ulteriori informazioni, vedere la sezione sull&#39; [utilizzo in Real-time Customer Profile](./tutorials/create-schema-ui.md#profile) nell&#39; [!UICONTROL Schema Editor] esercitazione.
 
 ### Posso modificare direttamente uno schema di unione?
 
@@ -100,11 +100,11 @@ Per ulteriori informazioni sui sindacati in XDM, consultate la sezione [sindacat
 
 ### Come si formatta il file di dati per inserire i dati nello schema?
 
-[!DNL Experience Platform] accetta file di dati in formato JSON [!DNL Parquet] o . Il contenuto di questi file deve essere conforme allo schema a cui fa riferimento il dataset. Per informazioni dettagliate sulle procedure ottimali per l&#39;assimilazione dei file di dati, consultate la panoramica [sull&#39;assimilazione dei](../ingestion/home.md)batch.
+[!DNL Experience Platform] accetta file di dati in formato JSON  [!DNL Parquet] o . Il contenuto di questi file deve essere conforme allo schema a cui fa riferimento il dataset. Per informazioni dettagliate sulle procedure ottimali per l&#39;assimilazione dei file di dati, vedere la [panoramica sull&#39;inserimento dei batch](../ingestion/home.md).
 
 ## Errori e risoluzione dei problemi
 
-Di seguito è riportato un elenco di messaggi di errore che potrebbero verificarsi durante l&#39;utilizzo dell&#39; [!DNL Schema Registry] API.
+Di seguito è riportato un elenco di messaggi di errore che potrebbero verificarsi durante l&#39;utilizzo dell&#39;API [!DNL Schema Registry].
 
 ### Oggetto non trovato
 
@@ -120,7 +120,7 @@ Di seguito è riportato un elenco di messaggi di errore che potrebbero verificar
 
 Questo errore viene visualizzato quando il sistema non è in grado di trovare una risorsa specifica. La risorsa potrebbe essere stata eliminata oppure il percorso nella chiamata API non è valido. Prima di riprovare, verifica di aver immesso un percorso valido per la chiamata API. È possibile verificare di aver immesso l&#39;ID corretto per la risorsa e che il percorso sia correttamente associato al contenitore appropriato (globale o tenant).
 
-Per ulteriori informazioni sulla creazione di percorsi di ricerca nell&#39;API, consultate le sezioni relative al [contenitore](./api/getting-started.md#container) e all&#39;identificazione [delle](api/getting-started.md#resource-identification) risorse nella guida [!DNL Schema Registry] per gli sviluppatori.
+Per ulteriori informazioni sulla creazione di percorsi di ricerca nell&#39;API, vedere le sezioni [container](./api/getting-started.md#container) e [identificazione delle risorse](api/getting-started.md#resource-identification) nella guida per gli sviluppatori [!DNL Schema Registry].
 
 ### Il titolo deve essere univoco
 
@@ -149,12 +149,12 @@ Questo messaggio di errore viene visualizzato quando tentate di creare una risor
 }
 ```
 
-Questo messaggio di errore viene visualizzato quando tentate di creare un nuovo mixin con campi con nome non corretto. Le miscele definite dall&#39;organizzazione IMS devono assegnare ai propri campi uno spazio dei nomi con un `TENANT_ID` per evitare conflitti con altre risorse del settore e del fornitore. Esempi dettagliati di strutture di dati adeguate per i mixin sono disponibili nella guida [dell&#39;endpoint](./api/mixins.md#create)dei mixins.
+Questo messaggio di errore viene visualizzato quando tentate di creare un nuovo mixin con campi con nome non corretto. I mixin definiti dall&#39;organizzazione IMS devono assegnare ai campi uno spazio dei nomi `TENANT_ID` per evitare conflitti con altre risorse del settore e del fornitore. Esempi dettagliati di strutture di dati adeguate per i mixin si trovano nella [guida endpoint mixins](./api/mixins.md#create).
 
 
 ### [!DNL Real-time Customer Profile] error
 
-I messaggi di errore riportati di seguito sono associati alle operazioni di abilitazione degli schemi per [!DNL Real-time Customer Profile]. Per ulteriori informazioni, consultate la sezione [sindacati](./api/unions.md) nella guida per gli sviluppatori di [!DNL Schema Registry] API.
+I messaggi di errore riportati di seguito sono associati alle operazioni di abilitazione degli schemi per [!DNL Real-time Customer Profile]. Per ulteriori informazioni, vedi la sezione [sindacati](./api/unions.md) nella [!DNL Schema Registry] Guida per gli sviluppatori di API.
 
 #### Per abilitare i set di dati del profilo, lo schema deve essere valido
 
@@ -167,7 +167,7 @@ I messaggi di errore riportati di seguito sono associati alle operazioni di abil
 }
 ```
 
-Questo messaggio di errore viene visualizzato quando si tenta di abilitare un dataset di profilo per uno schema per il quale non è stato attivato [!DNL Real-time Customer Profile]. Prima di abilitare il dataset, assicurarsi che lo schema contenga un tag di unione.
+Questo messaggio di errore viene visualizzato quando si tenta di abilitare un dataset di profilo per uno schema che non è stato abilitato per [!DNL Real-time Customer Profile]. Prima di abilitare il dataset, assicurarsi che lo schema contenga un tag di unione.
 
 #### Deve essere presente un descrittore di identità di riferimento
 
@@ -200,13 +200,13 @@ Questo messaggio di errore viene visualizzato quando si tenta di abilitare uno s
 }
 ```
 
-Per abilitare gli schemi che contengono descrittori di relazione da utilizzare in [!DNL Profile], lo spazio dei nomi del campo di origine e dello spazio dei nomi primario del campo di destinazione deve essere lo stesso. Questo messaggio di errore viene visualizzato quando si tenta di abilitare uno schema che contiene uno spazio nomi non corrispondente per il relativo descrittore di identità di riferimento. Per risolvere il problema, assicurarsi che il `xdm:namespace` valore del campo identità dello schema di destinazione corrisponda a quello della `xdm:identityNamespace` proprietà nel descrittore dell&#39;identità di riferimento del campo di origine.
+Per abilitare gli schemi che contengono descrittori di relazione da utilizzare in [!DNL Profile], lo spazio dei nomi del campo di origine e dello spazio dei nomi primario del campo di destinazione deve essere lo stesso. Questo messaggio di errore viene visualizzato quando si tenta di abilitare uno schema che contiene uno spazio nomi non corrispondente per il relativo descrittore di identità di riferimento. Verificare che il valore `xdm:namespace` del campo identità dello schema di destinazione corrisponda a quello della proprietà `xdm:identityNamespace` nel descrittore dell&#39;identità di riferimento del campo di origine per risolvere il problema.
 
-Per un elenco dei codici dei namespace di identità supportati, consultate la sezione sugli spazi dei nomi [standard](../identity-service/namespaces.md) nella panoramica dello spazio dei nomi di identità.
+Per un elenco dei codici dei nomi identità supportati, consultate la sezione relativa agli [spazi dei nomi standard](../identity-service/namespaces.md) nella panoramica dello spazio dei nomi identità.
 
 ### Accetta errori di intestazione
 
-La maggior parte delle richieste di GET nell&#39; [!DNL Schema Registry] API richiede un&#39;intestazione Accetto per consentire al sistema di determinare come formattare la risposta. Di seguito è riportato un elenco di errori comuni associati all&#39;intestazione Accetto. Per gli elenchi delle intestazioni Accetta compatibili per diverse richieste API, fare riferimento alle sezioni corrispondenti nella guida [per gli sviluppatori del Registro di](api/getting-started.md)schema.
+La maggior parte delle richieste di GET nell&#39;API [!DNL Schema Registry] richiede un&#39;intestazione Accetto per consentire al sistema di determinare come formattare la risposta. Di seguito è riportato un elenco di errori comuni associati all&#39;intestazione Accetto. Per gli elenchi delle intestazioni Accetta compatibili per diverse richieste API, fare riferimento alle sezioni corrispondenti nella [Guida per gli sviluppatori del Registro di sistema dello schema](api/getting-started.md).
 
 #### Il parametro di intestazione Accetta è obbligatorio
 
@@ -245,7 +245,7 @@ Questo messaggio di errore viene visualizzato quando un&#39;intestazione Accetto
 }
 ```
 
-Questo messaggio di errore viene visualizzato quando l&#39;intestazione Accetto è stata fornita in modo non corretto durante la ricerca di un descrittore. Prima di riprovare, assicurarsi di aver immesso correttamente una delle intestazioni Accetta [supportate per i descrittori](./api/descriptors.md) .
+Questo messaggio di errore viene visualizzato quando l&#39;intestazione Accetto è stata fornita in modo non corretto durante la ricerca di un descrittore. Prima di riprovare, assicurarsi di aver immesso correttamente una delle [intestazioni di accettazione supportate per i descrittori](./api/descriptors.md).
 
 #### La versione deve essere fornita nell&#39;intestazione Accetto
 
@@ -265,7 +265,7 @@ Questo messaggio di errore viene visualizzato quando un numero di versione non �
 application/vnd.adobe.xed+json; version=1
 ```
 
-Per un elenco delle intestazioni Accetto supportate, consultate la sezione [Accetta intestazione](api/getting-started.md#accept) nella guida per [!DNL Schema Registry] gli sviluppatori.
+Per un elenco delle intestazioni Accetto supportate, consultate la sezione [Accetta intestazione](api/getting-started.md#accept) nella guida per gli sviluppatori [!DNL Schema Registry].
 
 #### La versione non deve essere specificata nell&#39;intestazione Accetto
 
