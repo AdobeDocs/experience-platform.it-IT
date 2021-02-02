@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;adobe defined functions;sql;
+keywords: ' Experience Platform;home;argomenti popolari;servizio query;servizio query;funzioni definite da Adobe;sql;'
 solution: Experience Platform
 title: ' funzioni definite dal Adobe'
 topic: functions
@@ -7,7 +7,7 @@ description: Questo documento fornisce informazioni sulle funzioni definite dal 
 translation-type: tm+mt
 source-git-commit: e15229601d35d1155fc9a8ab9296f8c41811ebf9
 workflow-type: tm+mt
-source-wordcount: '2889'
+source-wordcount: '2902'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ La maggior parte della logica di business richiede la raccolta dei punti di cont
 
 Una funzione finestra aggiorna un&#39;aggregazione e restituisce un singolo elemento per ogni riga del sottoinsieme ordinato. La funzione di aggregazione di base è `SUM()`. `SUM()` prende le righe e le dà un totale. Se invece si applica `SUM()` a una finestra, trasformandola in una funzione finestra, si riceve una somma cumulativa con ogni riga.
 
-La maggior parte degli assistenti [!DNL Spark] SQL sono funzioni finestra che aggiornano ogni riga nella finestra, con l&#39;aggiunta dello stato di tale riga.
+La maggior parte degli assistenti [!DNL Spark] SQL sono funzioni di finestra che aggiornano ogni riga nella finestra, con l&#39;aggiunta dello stato della riga.
 
 **Sintassi query**
 
