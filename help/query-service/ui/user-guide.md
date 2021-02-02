@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Query editor;query editor;Query service;query service;
+keywords: ' Experience Platform;home;argomenti popolari;editor query;editor query;servizio query;servizio query;'
 solution: Experience Platform
 title: Guida utente per l’editor di query
 topic: query editor
@@ -7,13 +7,13 @@ description: Query Editor è uno strumento interattivo fornito da Adobe Experien
 translation-type: tm+mt
 source-git-commit: f35443046a3d2bc5101d0fa2a58d07f4b6a31151
 workflow-type: tm+mt
-source-wordcount: '1041'
+source-wordcount: '1054'
 ht-degree: 1%
 
 ---
 
 
-# [!DNL Query Editor] guida utente
+# [!DNL Query Editor] Guida utente
 
 [!DNL Query Editor] è uno strumento interattivo fornito da Adobe Experience Platform  [!DNL Query Service], che consente di scrivere, convalidare ed eseguire query per i dati relativi all&#39;esperienza cliente all&#39;interno dell&#39;interfaccia  [!DNL Experience Platform] utente. [!DNL Query Editor] supporta lo sviluppo di query per l&#39;analisi e l&#39;esplorazione dei dati e consente di eseguire query interattive a scopo di sviluppo, nonché query non interattive per la compilazione dei set di dati in  [!DNL Experience Platform].
 
