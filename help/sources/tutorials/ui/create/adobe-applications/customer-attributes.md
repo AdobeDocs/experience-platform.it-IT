@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;home;popular topics;customer attributes
+keywords: ' Experience Platform;home;argomenti popolari;attributi cliente'
 solution: Experience Platform
 title: Creare un connettore di origine attributi cliente nell'interfaccia utente
 topic: overview
 type: Tutorial
 description: Questa esercitazione fornisce i passaggi per la creazione di un connettore di origine nell'interfaccia utente per la raccolta dei dati di profilo degli attributi del cliente in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '368'
-ht-degree: 8%
+source-wordcount: '373'
+ht-degree: 5%
 
 ---
 
 
 # Creare un connettore di origine attributi cliente nell&#39;interfaccia utente
 
-Questa esercitazione fornisce i passaggi per la creazione di un connettore di origine nell&#39;interfaccia utente per la raccolta dei dati di profilo degli attributi del cliente in Adobe Experience Platform. Per ulteriori informazioni sugli attributi del cliente, consultate il documento [](https://docs.adobe.com/content/help/it-IT/core-services/interface/customer-attributes/attributes.html)della panoramica.
+Questa esercitazione fornisce i passaggi per la creazione di un connettore di origine nell&#39;interfaccia utente per la raccolta dei dati di profilo degli attributi del cliente in Adobe Experience Platform. Per ulteriori informazioni sugli attributi del cliente, consultate il documento [panoramica](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html).
 
 ## Creazione di una connessione di origine
 
-Accedete ad [Adobe Experience Platform](https://platform.adobe.com) , quindi selezionate **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro delle origini. Nella **[!UICONTROL Catalog]** schermata sono visualizzate le origini disponibili con cui creare connessioni in ingresso e ogni origine mostra il numero di connessioni esistenti ad esse associate. Selezionare l&#39;opzione per **[!UICONTROL Customer Attributes]** e quindi **[!UICONTROL Add data]**. Se la connessione viene stabilita, l&#39;utente verrà reindirizzato se la connessione viene stabilita correttamente.
+Accedete a [Adobe Experience Platform](https://platform.adobe.com), quindi selezionate **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro delle origini. Nella schermata **[!UICONTROL Catalog]** sono visualizzate le sorgenti disponibili con cui creare connessioni in ingresso e ogni origine mostra il numero di connessioni esistenti ad esse associate. Selezionare l&#39;opzione per **[!UICONTROL Customer Attributes]**, quindi selezionare **[!UICONTROL Add data]**. Se la connessione viene stabilita, l&#39;utente verrà reindirizzato se la connessione viene stabilita correttamente.
 
 >[!NOTE]
 >
@@ -28,7 +28,7 @@ Accedete ad [Adobe Experience Platform](https://platform.adobe.com) , quindi sel
 
 ![](../../../../images/tutorials/create/customer-attributes/catalog.png)
 
-Nella schermata Attività **di** origine sono elencate tutte le connessioni precedentemente stabilite per i dati di profilo degli attributi cliente. È possibile creare una nuova connessione facendo clic su **Seleziona dati**.
+Nella schermata **Attività origine** sono elencate tutte le connessioni precedentemente stabilite per i dati di profilo degli attributi cliente. È possibile creare una nuova connessione facendo clic su **Seleziona dati**.
 
 >[!NOTE]
 >
@@ -36,7 +36,7 @@ Nella schermata Attività **di** origine sono elencate tutte le connessioni prec
 
 ![](../../../../images/tutorials/create/customer-attributes/source_activity.png)
 
-Dall&#39;elenco dei set di dati di profilo di attributi cliente disponibili, selezionate quello in cui desiderate inserire [!DNL Platform] e fate clic su **Avanti**.
+Dall&#39;elenco dei set di dati di profilo di attributi cliente disponibili, selezionare quello da inserire in [!DNL Platform] e fare clic su **Next**.
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ Dall&#39;elenco dei set di dati di profilo di attributi cliente disponibili, sel
 
 ![](../../../../images/tutorials/create/customer-attributes/select_data.png)
 
-Viene visualizzato il passaggio **Revisione** , che consente di controllare la nuova connessione in ingresso prima della creazione. I dettagli della connessione sono raggruppati per categorie, tra cui:
+Viene visualizzato il passaggio **Review**, che consente di controllare la nuova connessione in ingresso prima della creazione. I dettagli della connessione sono raggruppati per categorie, tra cui:
 
 * **Dettagli** origine: Mostra il tipo di connessione di origine e i dati di origine selezionati.
 * **Dettagli** di destinazione: Quando si creano altri connettori di origine, questo contenitore mostra in quale set di dati di origine vengono acquisiti i dati, incluso lo schema a cui il dataset aderisce. I dati del profilo degli attributi del cliente vengono mappati automaticamente e assimilati in profili cliente in tempo reale.
@@ -53,7 +53,7 @@ Viene visualizzato il passaggio **Revisione** , che consente di controllare la n
 
 ## Passaggi successivi
 
-Una volta creata la connessione, vengono automaticamente creati uno schema di destinazione e un set di dati per contenere i dati in arrivo. Al termine dell&#39;assimilazione iniziale, i dati del profilo degli attributi del cliente possono essere utilizzati dai [!DNL Platform] servizi a valle quali [!DNL Real-time Customer Profile] e [!DNL Segmentation Service]. Per ulteriori informazioni, consulta i documenti seguenti:
+Una volta creata la connessione, vengono automaticamente creati uno schema di destinazione e un set di dati per contenere i dati in arrivo. Al termine dell&#39;assimilazione iniziale, i dati del profilo degli attributi del cliente possono essere utilizzati dai servizi a valle [!DNL Platform] quali [!DNL Real-time Customer Profile] e [!DNL Segmentation Service]. Per ulteriori informazioni, consulta i documenti seguenti:
 
 * [[!DNL Real-time Customer Profile] panoramica](../../../../../profile/home.md)
 * [[!DNL Segmentation Service] panoramica](../../../../../segmentation/home.md)
