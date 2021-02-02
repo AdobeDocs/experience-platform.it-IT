@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;required;field;
+keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati;ui;area di lavoro;obbligatorio;campo;'
 solution: Experience Platform
 title: Definire un campo obbligatorio nell'interfaccia utente
 description: Scoprite come definire un campo XDM richiesto nell'interfaccia utente del Experience Platform .
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: 48025fc11558bf6773ce5c48054483758c7e993f
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '189'
 ht-degree: 1%
 
 ---
