@@ -1,13 +1,13 @@
 ---
-keywords: email;Email;e-mail;email destinations;oracle eloqua;oracle
+keywords: email;Email;e-mail;destinazioni e-mail; oracle eloqua; oracle
 title: ' destinazione Oracle Eloqua'
 seo-title: ' destinazione Oracle Eloqua'
 description: ' Oracle Eloqua è un software come piattaforma di servizio (SaaS) per l''automazione del marketing offerto da  Oracle che mira ad aiutare gli esperti di marketing e le organizzazioni B2B a gestire campagne di marketing e la generazione di lead di vendita.'
 seo-description: ' Oracle Eloqua è un software come piattaforma di servizio (SaaS) per l''automazione del marketing offerto da  Oracle che mira ad aiutare gli esperti di marketing e le organizzazioni B2B a gestire campagne di marketing e la generazione di lead di vendita.'
 translation-type: tm+mt
-source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---
@@ -17,49 +17,49 @@ ht-degree: 0%
 
 ## Panoramica
 
-[[!DNL Oracle Eloqua]](https://www.oracle.com/marketingcloud/products/marketing-automation/) è un software come piattaforma di servizio (SaaS) per l&#39;automazione del marketing offerto da [!DNL Oracle] che mira ad aiutare gli esperti di marketing e le organizzazioni B2B a gestire le campagne di marketing e la generazione di lead di vendita.
+[[!DNL Oracle Eloqua]](https://www.oracle.com/marketingcloud/products/marketing-automation/) è un software come piattaforma di servizio (SaaS) per l&#39;automazione del marketing offerto da  [!DNL Oracle] che mira ad aiutare gli esperti di marketing e le organizzazioni B2B a gestire le campagne di marketing e la generazione di lead di vendita.
 
-Per inviare i dati del segmento a [!DNL Oracle Eloqua], è innanzitutto necessario [collegare la destinazione](#connect-destination) in Real-time Customer Data Platform, quindi [impostare un&#39;importazione](#import-data-into-eloqua) di dati dalla posizione di archiviazione in [!DNL Oracle Eloqua].
+Per inviare i dati del segmento a [!DNL Oracle Eloqua], è necessario prima [collegare la destinazione](#connect-destination) in Adobe Experience Platform, quindi [impostare un&#39;importazione di dati](#import-data-into-eloqua) dal percorso di memorizzazione in [!DNL Oracle Eloqua].
 
-## Tipo esportazione {#export-type}
+## Tipo di esportazione {#export-type}
 
-**Basato** su profilo: si esportano tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata degli attributi selezionati del flusso di lavoro [di attivazione della](../../ui/activate-destinations.md#select-attributes)destinazione.
+**Basato**  su profilo: si esportano tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nella schermata degli attributi selezionati del flusso di lavoro [ di attivazione della ](../../ui/activate-destinations.md#select-attributes)destinazione.
 
 ## Connetti alla destinazione {#connect-destination}
 
-In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, selezionare [!DNL Oracle Eloqua], quindi **[!UICONTROL Connect destination]**.
+In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, selezionare [!DNL Oracle Eloqua], quindi selezionare **[!UICONTROL Connect destination]**.
 
 [Connetti a Eloqua](../../assets/catalog/email-marketing/oracle-eloqua/catalog.png)
 
-Nel **[!UICONTROL Authentication]** passaggio, se in precedenza hai impostato una connessione alla destinazione di archiviazione cloud, seleziona **[!UICONTROL Existing Account]** e seleziona una delle tue connessioni esistenti. In alternativa, potete selezionare **[!UICONTROL New Account]** di impostare una nuova connessione. Compilate le credenziali di autenticazione dell&#39;account e selezionate **[!UICONTROL Connect to destination]**. Ad [!DNL Oracle Eloqua]esempio, potete scegliere tra **[!UICONTROL SFTP with Password]** e **[!UICONTROL SFTP with SSH Key]**. Compila le informazioni riportate di seguito, a seconda del tipo di connessione, e seleziona **[!UICONTROL Connect to destination]**.
+Nel passaggio **[!UICONTROL Authentication]**, se in precedenza è stata impostata una connessione alla destinazione di archiviazione cloud, selezionare **[!UICONTROL Existing Account]** e selezionare una delle connessioni esistenti. In alternativa, è possibile selezionare **[!UICONTROL New Account]** per impostare una nuova connessione. Compilate le credenziali di autenticazione dell&#39;account e selezionate **[!UICONTROL Connect to destination]**. Per [!DNL Oracle Eloqua], è possibile selezionare tra **[!UICONTROL SFTP with Password]** e **[!UICONTROL SFTP with SSH Key]**. Compila le informazioni riportate di seguito, a seconda del tipo di connessione, e seleziona **[!UICONTROL Connect to destination]**.
 
-Per **[!UICONTROL SFTP with Password]** le connessioni, dovete fornire Domain, Port, UserName e Password.
-Per **[!UICONTROL SFTP with SSH Key]** le connessioni, è necessario fornire Domain, Port, Username e SSH Key.
+Per le connessioni **[!UICONTROL SFTP with Password]**, dovete fornire Domain, Port, UserName e Password.
+Per le connessioni **[!UICONTROL SFTP with SSH Key]**, è necessario fornire Domain, Port, Username e SSH Key.
 
 ![Configurare la procedura guidata Eloqua](../../assets/catalog/email-marketing/oracle-eloqua/account-info.png)
 
-Nel **[!UICONTROL Setup]** passaggio, compila le informazioni rilevanti per la tua destinazione come indicato di seguito:
+Nel passaggio **[!UICONTROL Setup]**, compila le informazioni rilevanti per la tua destinazione come indicato di seguito:
 - **[!UICONTROL Name]**: Scegli un nome appropriato per la tua destinazione.
 - **[!UICONTROL Description]**: Inserite una descrizione per la destinazione.
-- **[!UICONTROL Folder Path]**: Specificate il percorso nel percorso di archiviazione in cui CDP in tempo reale depositerà i dati di esportazione come file CSV o delimitati da tabulazioni.
-- **[!UICONTROL File Format]**: **CSV** o **TAB_DELIMITED**. Selezionare il formato di file da esportare nel percorso di memorizzazione.
+- **[!UICONTROL Folder Path]**: Specificate il percorso nel percorso di archiviazione in cui Platform depositerà i dati di esportazione come file CSV o delimitati da tabulazioni.
+- **[!UICONTROL File Format]**:  **** CSVo  **TAB_DELIMITED**. Selezionare il formato di file da esportare nel percorso di memorizzazione.
 
 ![Informazioni di base Eloqua](../../assets/catalog/email-marketing/oracle-eloqua/basic-information.png)
 
-Fare clic **[!UICONTROL Create destination]** dopo aver compilato i campi sopra. Ora viene creata la destinazione e puoi [attivare i segmenti](../../ui/activate-destinations.md) alla destinazione.
+Fare clic su **[!UICONTROL Create destination]** dopo aver compilato i campi riportati sopra. La destinazione viene creata e potete [attivare i segmenti](../../ui/activate-destinations.md) alla destinazione.
 
 ## Attivare i segmenti {#activate-segments}
 
-Consulta [Attivare profili e segmenti su una destinazione](../../ui/activate-destinations.md) per informazioni sul flusso di lavoro di attivazione dei segmenti.
+Per informazioni sul flusso di lavoro di attivazione dei segmenti, vedere [Attivare profili e segmenti in una destinazione](../../ui/activate-destinations.md).
 
 ## Attributi di destinazione {#destination-attributes}
 
-Quando si [attivano i segmenti](../../ui/activate-destinations.md) alla [!DNL Oracle Eloqua] destinazione, si consiglia di selezionare un identificatore univoco dallo schema [](../../../profile/home.md#profile-fragments-and-union-schemas)unione. Selezionate l’identificatore univoco ed eventuali altri campi XDM da esportare nella destinazione. Per ulteriori informazioni, vedere [Selezionare i campi dello schema da utilizzare come attributi di destinazione nei file](./overview.md#destination-attributes) esportati in Destinazioni di marketing e-mail.
+Quando si attivano [segmenti](../../ui/activate-destinations.md) alla destinazione [!DNL Oracle Eloqua], è consigliabile selezionare un identificatore univoco dal [schema unione](../../../profile/home.md#profile-fragments-and-union-schemas). Selezionate l’identificatore univoco ed eventuali altri campi XDM da esportare nella destinazione. Per ulteriori informazioni, vedere [Selezionare i campi dello schema da utilizzare come attributi di destinazione nei file esportati](./overview.md#destination-attributes) in Destinazioni marketing e-mail.
 
 ## Dati esportati {#exported-data}
 
-Per [!DNL Oracle Eloqua] le destinazioni, in Real-time CDP viene creato un file delimitato da tabulazioni `.txt` o `.csv` nel percorso di memorizzazione specificato. Per ulteriori informazioni sui file, vedi Destinazioni di marketing [e-mail e destinazioni](../../ui/activate-destinations.md#esp-and-cloud-storage) di archiviazione cloud nell&#39;esercitazione sull&#39;attivazione del segmento.
+Per le destinazioni [!DNL Oracle Eloqua], Platform crea un file delimitato da tabulazioni `.txt` o `.csv` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, vedi [Destinazioni di marketing e archiviazione di e-mail e Cloud](../../ui/activate-destinations.md#esp-and-cloud-storage) nell&#39;esercitazione sull&#39;attivazione dei segmenti.
 
-## Imposta importazione dati in [!DNL Oracle Eloqua] {#import-data-into-eloqua}
+## Imposta l&#39;importazione dei dati in [!DNL Oracle Eloqua] {#import-data-into-eloqua}
 
-Dopo aver collegato CDP in tempo reale allo storage Amazon S3 o SFTP , è necessario configurare l&#39;importazione dei dati dalla posizione di archiviazione in [!DNL Oracle Eloqua]. Per informazioni su come eseguire questa operazione, consulta [Importazione di contatti o account](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm) nella [!DNL Oracle Eloqua Help Center].
+Dopo aver collegato la piattaforma allo storage Amazon S3 o SFTP , è necessario impostare l&#39;importazione dei dati dalla posizione di archiviazione in [!DNL Oracle Eloqua]. Per informazioni su come eseguire questa operazione, vedere [Importazione di contatti o account](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm) in [!DNL Oracle Eloqua Help Center].
