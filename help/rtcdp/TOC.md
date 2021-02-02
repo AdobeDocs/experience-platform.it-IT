@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Guida alla piattaforma dati cliente in tempo reale
 user-guide-description: Riunisci dati noti e anonimi provenienti da più sorgenti aziendali per creare profili cliente, segmenti di pubblico da tali profili e attivare tali segmenti in destinazioni di terze parti.
 translation-type: tm+mt
-source-git-commit: de2f4b16677ec6e820903b1e586213a132b126be
+source-git-commit: 4a282f8890ace3be7808ffbf018377d792e30cb7
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 41%
+source-wordcount: '109'
+ht-degree: 47%
 
 ---
 
@@ -29,9 +29,6 @@ ht-degree: 41%
 * Privacy e governance dei dati {#privacy}
    * [Panoramica sulla privacy](privacy/privacy-overview.md)
    * [Panoramica sulla governance dei dati](privacy/data-governance-overview.md)
-   * Supporto IAB TCF 2.0 {#iab}
-      * [Supporto IAB TCF 2.0 in CDP in tempo reale](privacy/iab/overview.md)
-      * [Creazione di set di dati per l&#39;acquisizione dei dati di consenso IAB TCF 2.0](privacy/iab/dataset-preparation.md)
 * Profili {#profile}
    * [Panoramica del profilo](profile/profile-overview.md)
    * [Identità e spazi dei nomi delle identità](profile/identities-overview.md)
