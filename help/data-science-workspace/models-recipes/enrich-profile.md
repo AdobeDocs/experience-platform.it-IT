@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;machine learning model;Data Science Workspace;Real-time Customer Profile;popular topics;machine learning insights
+keywords: ' Experience Platform;modello di apprendimento automatico;Area di lavoro dati;Profilo cliente in tempo reale;argomenti più comuni;informazioni sull''apprendimento automatico'
 solution: Experience Platform
 title: Arricchisci il profilo cliente in tempo reale con informazioni approfondite sull'apprendimento automatico
 topic: tutorial
@@ -8,7 +8,7 @@ description: Questo documento fornisce una guida su come arricchire il profilo c
 translation-type: tm+mt
 source-git-commit: 62e6bb7e72637b06808ff87dc21f40af2c4e2d45
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '635'
 ht-degree: 0%
 
 ---
