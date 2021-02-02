@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
+keywords: ' Experience Platform;home;argomenti popolari;Applicazione delle regole;Applicazione automatica;Applicazione basata sulle API;governance dei dati'
 solution: Experience Platform
-title: Panoramica dell'applicazione dei criteri
-topic: enforcement
+title: Applicazione automatica delle regole
+topic: guide
 description: Questo documento illustra come vengono applicati automaticamente i criteri di utilizzo dei dati quando si attivano segmenti per destinazioni in  Experience Platform.
 translation-type: tm+mt
-source-git-commit: 385084f3de2ebfcbee94d6b0c116dae82f5df764
+source-git-commit: acc4fa59a4808ed9a32c2aaf664039e0d12dc1d8
 workflow-type: tm+mt
-source-wordcount: '1109'
+source-wordcount: '1122'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Quando un segmento viene attivato per la prima volta, [!DNL Policy Service] veri
 
 La linea di dati svolge un ruolo chiave nel modo in cui i criteri vengono applicati in Piattaforma. In termini generali, la linea di dati si riferisce all&#39;origine di un insieme di dati e a cosa gli accade (o dove si sposta) nel tempo.
 
-Nel contesto di [!DNL Data Governance], la linea consente alle etichette di utilizzo dei dati di propagarsi dai set di dati ai servizi a valle che utilizzano i loro dati, come Profilo cliente in tempo reale e le destinazioni. Questo consente di valutare e applicare le politiche in diversi punti chiave del percorso dei dati attraverso la piattaforma e fornisce contesto ai consumatori di dati in merito al motivo per cui si è verificata una violazione della politica.
+Nel contesto di [!DNL Data Governance], la linea consente alle etichette di utilizzo dei dati di propagarsi dai set di dati ai servizi a valle che utilizzano i loro dati, come Profilo cliente in tempo reale e le destinazioni. Questo consente di valutare e applicare i criteri in diversi punti chiave del percorso di dati tramite Piattaforma e fornisce contesto ai consumatori di dati in merito al motivo per cui si è verificata una violazione della politica.
 
 In  Experience Platform, l&#39;applicazione delle politiche riguarda la seguente linea di prodotti:
 
