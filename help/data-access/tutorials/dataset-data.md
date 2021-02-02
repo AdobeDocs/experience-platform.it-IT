@@ -1,48 +1,48 @@
 ---
-keywords: Experience Platform;home;popular topics;data access;data access api;query data access
+keywords: ' Experience Platform;home;argomenti comuni;accesso ai dati;data access api;query data access'
 solution: Experience Platform
 title: Panoramica sull'accesso ai dati
 topic: tutorial
 type: Tutorial
 description: Questo documento fornisce un'esercitazione passo-passo che illustra come individuare, accedere e scaricare i dati memorizzati in un dataset utilizzando l'API di accesso ai dati in Adobe Experience Platform. Verranno inoltre introdotte alcune delle caratteristiche uniche dell'API di accesso ai dati, come il paging e i download parziali.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '1384'
+source-wordcount: '1400'
 ht-degree: 2%
 
 ---
 
 
-# Dati del set di query tramite [!DNL Data Access] API
+# Dati del set di query con l&#39;API [!DNL Data Access]
 
-Questo documento fornisce un&#39;esercitazione passo-passo che illustra come individuare, accedere e scaricare i dati memorizzati all&#39;interno di un dataset utilizzando l&#39; [!DNL Data Access] API in Adobe Experience Platform. Verranno inoltre introdotte alcune delle caratteristiche uniche dell&#39; [!DNL Data Access] API, come il paging e i download parziali.
+Questo documento fornisce un&#39;esercitazione passo-passo che illustra come individuare, accedere e scaricare i dati memorizzati in un dataset utilizzando l&#39;API [!DNL Data Access] in Adobe Experience Platform. Verranno inoltre introdotte alcune delle funzionalità uniche dell&#39;API [!DNL Data Access], come il paging e i download parziali.
 
 ## Introduzione
 
-Questa esercitazione richiede una buona conoscenza di come creare e compilare un dataset. Per ulteriori informazioni, consulta l’esercitazione [sulla creazione dei](../../catalog/datasets/create.md) set di dati.
+Questa esercitazione richiede una buona conoscenza di come creare e compilare un dataset. Per ulteriori informazioni, consulta l&#39;esercitazione sulla creazione di [set di dati](../../catalog/datasets/create.md).
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per effettuare correttamente chiamate alle API della piattaforma.
 
 ### Lettura di chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla [!DNL Experience Platform] risoluzione dei problemi.
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consultate la sezione relativa a [come leggere chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](https://www.adobe.com/go/platform-api-authentication-en) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui verrà eseguita l&#39;operazione:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+>Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione di [panoramica sulla sandbox](../../sandboxes/home.md).
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva:
 
@@ -50,23 +50,23 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 ## Diagramma della sequenza
 
-Questa esercitazione segue i passaggi descritti nel diagramma di sequenza seguente, evidenziando le funzionalità di base dell&#39; [!DNL Data Access] API.</br>
+Questa esercitazione segue i passaggi descritti nel diagramma di sequenza seguente, evidenziando le funzionalità di base dell&#39;API [!DNL Data Access].</br>
 ![](../images/sequence_diagram.png)
 
-L&#39; [!DNL Catalog] API consente di recuperare informazioni relative a batch e file. L&#39; [!DNL Data Access] API consente di accedere e scaricare questi file via HTTP come download completi o parziali, a seconda delle dimensioni del file.
+L&#39;API [!DNL Catalog] consente di recuperare informazioni relative a batch e file. L&#39;API [!DNL Data Access] consente di accedere e scaricare questi file via HTTP come download completi o parziali, a seconda delle dimensioni del file.
 
 ## Individuare i dati
 
-Prima di iniziare a utilizzare l&#39; [!DNL Data Access] API, è necessario identificare la posizione dei dati a cui si desidera accedere. Nell&#39; [!DNL Catalog] API, sono disponibili due endpoint da utilizzare per esplorare i metadati di un&#39;organizzazione e recuperare l&#39;ID di un batch o di un file a cui si desidera accedere:
+Prima di iniziare a utilizzare l&#39;API [!DNL Data Access], è necessario identificare la posizione dei dati a cui si desidera accedere. Nell&#39;API [!DNL Catalog] sono disponibili due endpoint che è possibile utilizzare per esplorare i metadati di un&#39;organizzazione e recuperare l&#39;ID di un batch o di un file a cui si desidera accedere:
 
 - `GET /batches`: Restituisce un elenco di batch all&#39;interno dell&#39;organizzazione
 - `GET /dataSetFiles`: Restituisce un elenco di file nell&#39;organizzazione
 
-Per un elenco completo degli endpoint nell&#39; [!DNL Catalog] API, fate riferimento a [API Reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
+Per un elenco completo degli endpoint nell&#39;API [!DNL Catalog], fare riferimento a [API Reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
 
 ## Recupera un elenco di batch nell&#39;organizzazione IMS
 
-Utilizzando l&#39; [!DNL Catalog] API, potete restituire un elenco di batch all&#39;interno dell&#39;organizzazione:
+Utilizzando l&#39;API [!DNL Catalog], puoi restituire un elenco di batch all&#39;interno dell&#39;organizzazione:
 
 **Formato API**
 
@@ -109,7 +109,7 @@ La risposta include un oggetto che elenca tutti i batch relativi all&#39;organiz
 
 ### Filtrare l’elenco dei batch
 
-I filtri sono spesso necessari per trovare un particolare lotto al fine di recuperare i dati rilevanti per un particolare caso d’uso. I parametri possono essere aggiunti a una `GET /batches` richiesta per filtrare la risposta restituita. Nella richiesta seguente verranno restituiti tutti i batch creati dopo un determinato periodo di tempo, all’interno di un particolare set di dati, ordinati in base a quando sono stati creati.
+I filtri sono spesso necessari per trovare un particolare lotto al fine di recuperare i dati rilevanti per un particolare caso d’uso. I parametri possono essere aggiunti a una richiesta `GET /batches` per filtrare la risposta restituita. Nella richiesta seguente verranno restituiti tutti i batch creati dopo un determinato periodo di tempo, all’interno di un particolare set di dati, ordinati in base a quando sono stati creati.
 
 **Formato API**
 
@@ -193,11 +193,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAf
 }
 ```
 
-Un elenco completo di parametri e filtri si trova nel riferimento [API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)Catalog.
+Un elenco completo di parametri e filtri si trova nel [Riferimento API catalogo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
 
 ## Recuperare un elenco di tutti i file appartenenti a un particolare batch
 
-Ora che disponete dell&#39;ID del batch a cui desiderate accedere, potete utilizzare l&#39; [!DNL Data Access] API per ottenere un elenco di file appartenenti a tale batch.
+Ora che si dispone dell&#39;ID del batch a cui si desidera accedere, è possibile utilizzare l&#39;API [!DNL Data Access] per ottenere un elenco di file appartenenti a tale batch.
 
 **Formato API**
 
@@ -250,11 +250,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c6f332168
 | -------- | ----------- |
 | `data._links.self.href` | URL per accedere a questo file. |
 
-La risposta contiene un array di dati che elenca tutti i file all&#39;interno del batch specificato. Ai file viene fatto riferimento dal relativo ID file, che si trova nel `dataSetFileId` campo.
+La risposta contiene un array di dati che elenca tutti i file all&#39;interno del batch specificato. Ai file viene fatto riferimento dal relativo ID file, che si trova nel campo `dataSetFileId`.
 
 ## Accesso a un file con un ID file
 
-Una volta ottenuto un ID file univoco, potete utilizzare l&#39; [!DNL Data Access] API per accedere ai dettagli specifici sul file, incluso il nome, la dimensione in byte e un collegamento per scaricarlo.
+Una volta ottenuto un ID file univoco, potete utilizzare l&#39;API [!DNL Data Access] per accedere ai dettagli specifici sul file, incluso il nome, la dimensione in byte e un collegamento per scaricarlo.
 
 **Formato API**
 
@@ -387,7 +387,7 @@ Le intestazioni di risposta contengono i metadati del file interrogato, compresi
 
 ## Accesso al contenuto di un file
 
-Potete inoltre accedere al contenuto di un file utilizzando l&#39; [!DNL Data Access] API.
+Potete inoltre accedere al contenuto di un file utilizzando l&#39;API [!DNL Data Access].
 
 **Formato API**
 
@@ -416,9 +416,9 @@ Una risposta corretta restituisce il contenuto del file.
 
 ## Scaricare contenuti parziali di un file
 
-L&#39; [!DNL Data Access] API consente di scaricare i file in blocchi. È possibile specificare un&#39;intestazione di intervallo durante una `GET /files/{FILE_ID}` richiesta per scaricare un intervallo specifico di byte da un file. Se l&#39;intervallo non è specificato, l&#39;API scaricherà l&#39;intero file per impostazione predefinita.
+L&#39;API [!DNL Data Access] consente di scaricare i file in blocchi. È possibile specificare un&#39;intestazione di intervallo durante una `GET /files/{FILE_ID}` richiesta per scaricare un intervallo specifico di byte da un file. Se l&#39;intervallo non è specificato, l&#39;API scaricherà l&#39;intero file per impostazione predefinita.
 
-L&#39;esempio HEAD nella sezione [](#retrieve-the-metadata-of-a-file) precedente indica la dimensione di un file specifico in byte.
+L&#39;esempio HEAD nella sezione [precedente](#retrieve-the-metadata-of-a-file) indica la dimensione di un file specifico in byte.
 
 **Formato API**
 
@@ -451,12 +451,12 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 Il corpo della risposta include i primi 100 byte del file (come specificato dall&#39;intestazione &quot;Range&quot; nella richiesta) insieme allo stato HTTP 206 (Contenuti parziali). La risposta include anche le seguenti intestazioni:
 
 - Durata contenuto: 100 (numero di byte restituiti)
-- Tipo di contenuto: application/parquet (è stato richiesto un file parquet, pertanto il tipo di contenuto della risposta è parquet)
+- Tipo di contenuto: application/parquet (è stato richiesto un file Parquet, pertanto il tipo di contenuto della risposta è `parquet`)
 - Content-Range: byte 0-99/249058 (l&#39;intervallo richiesto (0-99) del numero totale di byte (249058)
 
 ## Configurare l&#39;impaginazione delle risposte API
 
-Le risposte all&#39;interno dell&#39; [!DNL Data Access] API sono impaginate. Per impostazione predefinita, il numero massimo di voci per pagina è 100. I parametri di paging possono essere utilizzati per modificare il comportamento predefinito.
+Le risposte all&#39;interno dell&#39;API [!DNL Data Access] sono impaginate. Per impostazione predefinita, il numero massimo di voci per pagina è 100. I parametri di paging possono essere utilizzati per modificare il comportamento predefinito.
 
 - `limit`: Potete specificare il numero di voci per pagina in base alle vostre esigenze utilizzando il parametro &quot;limit&quot;.
 - `start`: L&#39;offset può essere impostato dal parametro di query &quot;start&quot;.
@@ -488,9 +488,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c102cac7c
 
 **Risposta**:
 
-La risposta contiene un `"data"` array con un singolo elemento, come specificato dal parametro request `limit=1`. Questo elemento è un oggetto che contiene i dettagli del primo file disponibile, come specificato dal `start=0` parametro nella richiesta (ricordate che nella numerazione a base zero, il primo elemento è &quot;0&quot;).
+La risposta contiene un array `"data"` con un singolo elemento, come specificato dal parametro di richiesta `limit=1`. Questo elemento è un oggetto che contiene i dettagli del primo file disponibile, come specificato dal parametro `start=0` nella richiesta (ricordate che nella numerazione a base zero, il primo elemento è &quot;0&quot;).
 
-Il `_links.next.href` valore contiene il collegamento alla pagina successiva di risposte, dove è possibile vedere che il `start` parametro è avanzato `start=1`.
+Il valore `_links.next.href` contiene il collegamento alla pagina successiva di risposte, dove è possibile vedere che il parametro `start` è avanzato fino a `start=1`.
 
 ```json
 {
