@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
+keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;modello dati;schema Registro di sistema;schema;'
 solution: Experience Platform
 title: Guida per lo sviluppo API del Registro di sistema dello schema
 description: 'L''API del Registro di sistema dello schema consente di gestire in modo programmatico tutti gli schemi e le relative risorse XDM disponibili all''interno  Experience Platform. '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 44a727f6ce4c2b90aa010379583c7c4d3ebd011c
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 0%
@@ -63,19 +63,19 @@ Per informazioni su come visualizzare le unioni nell&#39;API del Registro di sis
 
 L&#39;API del Registro di sistema dello schema consente di trasferire e condividere risorse XDM tra le sandbox e le organizzazioni IMS. Per qualsiasi schema, mixin o tipo di dati, puoi generare un payload di esportazione contenente la struttura della risorsa e tutte le risorse dipendenti. Questo payload può quindi essere utilizzato per importare la risorsa in una sandbox di destinazione e in un&#39;organizzazione IMS.
 
-Per ulteriori informazioni sull&#39;utilizzo di questo endpoint, vedere [Riferimento API del Registro di sistema dello schema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Per ulteriori informazioni sull&#39;utilizzo di questi endpoint, vedere la guida [export/import endpoint](./export-import.md).
 
 ## Dati di esempio
 
 È possibile generare dati di esempio per qualsiasi schema specificato nella Libreria schema. L&#39;oggetto response restituito può quindi essere utilizzato come origine di inserimento dei dati.
 
-Per ulteriori informazioni sull&#39;utilizzo di questo endpoint, vedere [Riferimento API del Registro di sistema dello schema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Per ulteriori informazioni sull&#39;utilizzo di questo endpoint, vedere la [guida dell&#39;endpoint di dati di esempio](./sample-data.md).
 
 ## Registro di controllo
 
 Il Registro di sistema dello schema mantiene un registro di tutte le modifiche apportate a una risorsa (classe, mixin, tipo di dati o schema) tra diversi aggiornamenti. È possibile recuperare il registro di una risorsa specifica fornendo il relativo `$id` o `meta:altId` nel percorso di una richiesta di GET a questo endpoint.
 
-Per ulteriori informazioni sull&#39;utilizzo di questo endpoint, vedere [Riferimento API del Registro di sistema dello schema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Per ulteriori informazioni sull&#39;utilizzo di questo endpoint, vedere la [guida dell&#39;endpoint del registro di controllo](./audit-log.md).
 
 ## Passaggi successivi
 
