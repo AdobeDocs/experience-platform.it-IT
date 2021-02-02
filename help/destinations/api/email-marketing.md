@@ -1,37 +1,38 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: ' Experience Platform;home;argomenti popolari'
 solution: Experience Platform
 title: Creare destinazioni di e-mail marketing
+description: Questo documento descrive la creazione di destinazioni di marketing tramite e-mail mediante l'API di Adobe Experience Platform
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
+source-git-commit: d1f357659313aba0811b267598deda9770d946a1
 workflow-type: tm+mt
-source-wordcount: '1619'
+source-wordcount: '1640'
 ht-degree: 1%
 
 ---
 
 
-# Creare destinazioni di e-mail marketing e attivare i dati utilizzando le chiamate API  Adobi  [!DNL Real-time Customer Data Platform]
+# Creare destinazioni di e-mail marketing e attivare i dati utilizzando le chiamate API in Adobe Experience Platform
 
-Questa esercitazione illustra come utilizzare le chiamate API per connettersi ai dati Adobe Experience Platform, creare una destinazione [di marketing per](../catalog/email-marketing/overview.md)e-mail, creare un flusso di dati per la nuova destinazione creata e attivare i dati per la nuova destinazione creata.
+Questa esercitazione illustra come utilizzare le chiamate API per connettersi ai dati Adobe Experience Platform, creare una [destinazione di marketing e-mail](../catalog/email-marketing/overview.md), creare un flusso di dati per la nuova destinazione creata e attivare i dati per la nuova destinazione creata.
 
 Questa esercitazione utilizza la  destinazione Adobe Campaign in tutti gli esempi, ma i passaggi sono identici per tutte le destinazioni di e-mail marketing.
 
 ![Panoramica: i passaggi per creare una destinazione e attivare i segmenti](../assets/api/email-marketing/overview.png)
 
-Se preferite utilizzare l&#39;interfaccia utente in  Adobe  CDP in tempo reale per collegare una destinazione e attivare i dati, consultate le esercitazioni [Connetti una destinazione](../ui/connect-destination.md) e [Attiva profili e segmenti a una destinazione](../ui/activate-destinations.md) .
+Se preferisci utilizzare l&#39;interfaccia utente in Piattaforma per collegare una destinazione e attivare i dati, consulta le esercitazioni [Connetti una destinazione](../ui/connect-destination.md) e [Attiva profili e segmenti a una destinazione](../ui/activate-destinations.md).
 
 ## Introduzione
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
-* [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] è il sistema di record per la posizione dei dati e la linea all&#39;interno [!DNL Experience Platform].
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Il framework standard con cui  [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza dei clienti.
+* [[!DNL Catalog Service]](../../catalog/home.md):  [!DNL Catalog] è il sistema di record per la posizione dei dati e la linea all&#39;interno  [!DNL Experience Platform].
+* [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola  [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per attivare i dati per le destinazioni di e-mail marketing in CDP in tempo reale.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per attivare i dati per le destinazioni di marketing tramite e-mail in Piattaforma.
 
 ### Raccogli credenziali richieste
 
@@ -42,11 +43,11 @@ Per completare i passaggi di questa esercitazione, devi disporre delle seguenti 
 
 ### Lettura di chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla [!DNL Experience Platform] risoluzione dei problemi.
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consultate la sezione relativa a [come leggere chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
 
 ### Raccogli i valori delle intestazioni obbligatorie e facoltative
 
-Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](https://www.adobe.com/go/platform-api-authentication-en) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
 
 * Autorizzazione: Portatore `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -58,7 +59,7 @@ Le risorse in [!DNL Experience Platform] possono essere isolate in sandbox virtu
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in [!DNL Experience Platform], consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+>Per ulteriori informazioni sulle sandbox in [!DNL Experience Platform], consultate la documentazione di [panoramica sulla sandbox](../../sandboxes/home.md).
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva per il tipo di supporto:
 
@@ -66,13 +67,13 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 ### Swagger, documentazione
 
-In questa esercitazione potete trovare la documentazione di riferimento associata a tutte le chiamate API in Swagger. Consulta la documentazione API del servizio [di flusso  Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). È consigliabile utilizzare questa esercitazione e la pagina della documentazione Swagger in parallelo.
+In questa esercitazione potete trovare la documentazione di riferimento associata a tutte le chiamate API in Swagger. Consulta la [documentazione API del servizio di flusso su  Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). È consigliabile utilizzare questa esercitazione e la pagina della documentazione Swagger in parallelo.
 
 ## Ottenere l&#39;elenco delle destinazioni disponibili {#get-the-list-of-available-destinations}
 
 ![Passaggi di destinazione - Panoramica passo 1](../assets/api/email-marketing/step1.png)
 
-Come primo passo, devi decidere a quale destinazione di e-mail marketing inviare i dati. Per iniziare, esegui una chiamata per richiedere un elenco di destinazioni disponibili a cui puoi collegare e attivare i segmenti. Eseguite la seguente richiesta di GET all&#39; `connectionSpecs` endpoint per restituire un elenco di destinazioni disponibili:
+Come primo passo, devi decidere a quale destinazione di e-mail marketing inviare i dati. Per iniziare, esegui una chiamata per richiedere un elenco di destinazioni disponibili a cui puoi collegare e attivare i segmenti. Eseguite la seguente richiesta di GET all&#39;endpoint `connectionSpecs` per restituire un elenco di destinazioni disponibili:
 
 **Formato API**
 
@@ -120,14 +121,14 @@ Una risposta corretta contiene un elenco delle destinazioni disponibili e dei re
 }
 ```
 
-## Connessione ai [!DNL Experience Platform] dati {#connect-to-your-experience-platform-data}
+## Connettersi ai dati [!DNL Experience Platform] {#connect-to-your-experience-platform-data}
 
 ![Passaggi di destinazione - Panoramica passo 2](../assets/api/email-marketing/step2.png)
 
-Successivamente, è necessario connettersi ai [!DNL Experience Platform] dati, in modo da poter esportare i dati del profilo e attivarli nella destinazione desiderata. Si tratta di due sottogruppi descritti di seguito.
+Successivamente, è necessario connettersi ai dati [!DNL Experience Platform] per esportare i dati del profilo e attivarli nella destinazione desiderata. Si tratta di due sottogruppi descritti di seguito.
 
 1. Innanzitutto, è necessario eseguire una chiamata per autorizzare l&#39;accesso ai dati in [!DNL Experience Platform], configurando una connessione di base.
-2. Quindi, utilizzando l&#39;ID connessione di base, effettuerai un&#39;altra chiamata in cui creerai una connessione di origine, che stabilirà la connessione ai tuoi [!DNL Experience Platform] dati.
+2. Quindi, utilizzando l&#39;ID connessione di base, effettuerai un&#39;altra chiamata in cui creerai una connessione di origine, che stabilisce la connessione ai tuoi dati [!DNL Experience Platform].
 
 
 ### Autorizza l&#39;accesso ai tuoi dati in [!DNL Experience Platform]
@@ -182,11 +183,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-* `{CONNECTION_SPEC_ID}`: Utilizzate l&#39;ID delle specifiche di connessione per Unified Profile Service - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Utilizzate l&#39;ID delle specifiche di connessione per Unified Profile Service -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Risposta**
 
-Una risposta corretta contiene l&#39;identificatore univoco (`id`) della connessione di base. Memorizzate questo valore come richiesto nel passaggio successivo per creare la connessione di origine.
+Una risposta corretta contiene l&#39;identificatore univoco della connessione di base (`id`). Memorizzate questo valore come richiesto nel passaggio successivo per creare la connessione di origine.
 
 ```json
 {
@@ -194,7 +195,7 @@ Una risposta corretta contiene l&#39;identificatore univoco (`id`) della conness
 }
 ```
 
-### Connessione ai [!DNL Experience Platform] dati {#connect-to-platform-data}
+### Connettersi ai dati [!DNL Experience Platform] {#connect-to-platform-data}
 
 **Formato API**
 
@@ -256,11 +257,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}`: Utilizzate l&#39;ID ottenuto nel passaggio precedente.
-* `{CONNECTION_SPEC_ID}`: Utilizzate l&#39;ID della specifica di connessione per [!DNL Unified Profile Service] - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Utilizzate l&#39;ID della specifica di connessione per  [!DNL Unified Profile Service] -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Risposta**
 
-Una risposta corretta restituisce l’identificatore univoco (`id`) per la nuova connessione di origine a [!DNL Unified Profile Service]. Questo conferma che la connessione ai [!DNL Experience Platform] dati è stata completata. Memorizza questo valore come richiesto in un passaggio successivo.
+Una risposta corretta restituisce l&#39;identificatore univoco (`id`) per la nuova connessione di origine a [!DNL Unified Profile Service]. Questo conferma che la connessione ai dati [!DNL Experience Platform] è stata completata. Memorizza questo valore come richiesto in un passaggio successivo.
 
 ```json
 {
@@ -269,7 +270,7 @@ Una risposta corretta restituisce l’identificatore univoco (`id`) per la nuova
 ```
 
 
-## Connessione alla destinazione di e-mail marketing {#connect-to-email-marketing-destination}
+## Connetti alla destinazione di e-mail marketing {#connect-to-email-marketing-destination}
 
 ![Passaggi di destinazione - Panoramica passo 3](../assets/api/email-marketing/step3.png)
 
@@ -343,14 +344,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{CONNECTION_SPEC_ID}`: Utilizza l&#39;ID delle specifiche di connessione ottenuto nel passaggio [Ottieni l&#39;elenco delle destinazioni](#get-the-list-of-available-destinations)disponibili.
-* `{S3 or SFTP}`: compila il tipo di connessione desiderato per questa destinazione. Nel catalogo [di](../catalog/overview.md)destinazione, scorrete fino alla destinazione desiderata per verificare se sono supportati i tipi di connessione S3 e/o SFTP.
-* `{ACCESS_ID}`: L&#39;ID di accesso per la posizione di archiviazione [!DNL Amazon] S3.
-* `{SECRET_KEY}`: Chiave segreta per la posizione di archiviazione [!DNL Amazon] S3.
+* `{CONNECTION_SPEC_ID}`: Utilizza l&#39;ID delle specifiche di connessione ottenuto nel passaggio  [Ottieni l&#39;elenco delle destinazioni](#get-the-list-of-available-destinations) disponibili.
+* `{S3 or SFTP}`: compila il tipo di connessione desiderato per questa destinazione. Nel [catalogo di destinazione](../catalog/overview.md), scorrete fino alla destinazione desiderata per verificare se sono supportati i tipi di connessione S3 e/o SFTP.
+* `{ACCESS_ID}`: L&#39;ID di accesso per la posizione di archiviazione  [!DNL Amazon] S3.
+* `{SECRET_KEY}`: Chiave segreta per la posizione di archiviazione  [!DNL Amazon] S3.
 
 **Risposta**
 
-Una risposta corretta contiene l&#39;identificatore univoco (`id`) della connessione di base. Archiviate questo valore come richiesto nel passaggio successivo per creare una connessione di destinazione.
+Una risposta corretta contiene l&#39;identificatore univoco della connessione di base (`id`). Archiviate questo valore come richiesto nel passaggio successivo per creare una connessione di destinazione.
 
 ```json
 {
@@ -433,13 +434,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}`: Utilizzate l&#39;ID di connessione di base ottenuto nel passaggio precedente.
-* `{CONNECTION_SPEC_ID}`: Utilizzare le specifiche di connessione ottenute nel passaggio [Ottenere l&#39;elenco delle destinazioni](#get-the-list-of-available-destinations)disponibili.
-* `{BUCKETNAME}`: Il bucket [!DNL Amazon] S3, dove CDP in tempo reale depositerà l&#39;esportazione dei dati.
-* `{FILEPATH}`: Percorso nella directory del bucket [!DNL Amazon] S3 in cui il CDP in tempo reale depositerà l&#39;esportazione dei dati.
+* `{CONNECTION_SPEC_ID}`: Utilizzare le specifiche di connessione ottenute nel passaggio  [Ottenere l&#39;elenco delle destinazioni](#get-the-list-of-available-destinations) disponibili.
+* `{BUCKETNAME}`: Il bucket  [!DNL Amazon] S3, dove Platform depositerà l&#39;esportazione dei dati.
+* `{FILEPATH}`: Percorso nella directory bucket  [!DNL Amazon] S3 in cui Platform depositerà l&#39;esportazione dei dati.
 
 **Risposta**
 
-Una risposta corretta restituisce l’identificatore univoco (`id`) per la nuova connessione di destinazione alla destinazione di marketing dell’e-mail. Memorizza questo valore come richiesto nei passaggi successivi.
+Una risposta corretta restituisce l&#39;identificatore univoco (`id`) per la connessione di destinazione appena creata alla destinazione di e-mail marketing. Memorizza questo valore come richiesto nei passaggi successivi.
 
 ```json
 {
@@ -451,7 +452,7 @@ Una risposta corretta restituisce l’identificatore univoco (`id`) per la nuova
 
 ![Passaggi di destinazione - Panoramica passo 4](../assets/api/email-marketing/step4.png)
 
-Utilizzando gli ID ottenuti nei passaggi precedenti, ora puoi creare un flusso di dati tra [!DNL Experience Platform] i dati e la destinazione in cui attiverai i dati. Considerate questo passaggio come la costruzione della pipeline, attraverso la quale i dati scorreranno successivamente, tra la destinazione [!DNL Experience Platform] e quella desiderata.
+Utilizzando gli ID ottenuti nei passaggi precedenti, ora puoi creare un flusso di dati tra i dati [!DNL Experience Platform] e la destinazione in cui attiverai i dati. Considerate questo passaggio come la costruzione della pipeline, attraverso la quale i dati scorreranno successivamente, tra [!DNL Experience Platform] e la destinazione desiderata.
 
 Per creare un flusso di dati, eseguite una richiesta di POST, come mostrato di seguito, fornendo al contempo i valori indicati di seguito all&#39;interno del payload.
 
@@ -503,13 +504,13 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`: Utilizzate il flusso per la destinazione di e-mail marketing a cui desiderate connettervi. Per ottenere la specifica di flusso, eseguire un&#39;operazione di GET sull&#39; `flowspecs` endpoint. Consulta la documentazione Swagger qui: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. Nella risposta, cercate `upsTo` e copiate l&#39;ID corrispondente della destinazione di e-mail marketing a cui desiderate connettervi. Ad esempio, per  Adobe Campaign, cercate `upsToCampaign` e copiate il `id` parametro.
-* `{SOURCE_CONNECTION_ID}`: Utilizzate l&#39;ID di connessione di origine ottenuto nel passaggio [Connetti al Experience Platform](#connect-to-your-experience-platform-data).
-* `{TARGET_CONNECTION_ID}`: Utilizzate l&#39;ID di connessione di destinazione ottenuto nel passaggio [Connetti alla destinazione](#connect-to-email-marketing-destination)di e-mail marketing.
+* `{FLOW_SPEC_ID}`: Utilizzate il flusso per la destinazione di e-mail marketing a cui desiderate connettervi. Per ottenere la specifica di flusso, eseguire un&#39;operazione di GET sull&#39;endpoint `flowspecs`. Consulta la documentazione Swagger qui: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. Nella risposta, cercate `upsTo` e copiate l&#39;ID corrispondente della destinazione di e-mail marketing a cui desiderate connettervi. Ad esempio, per  Adobe Campaign, cercate `upsToCampaign` e copiate il parametro `id`.
+* `{SOURCE_CONNECTION_ID}`: Utilizzate l&#39;ID di connessione di origine ottenuto nel passaggio  [Connetti al Experience Platform](#connect-to-your-experience-platform-data) .
+* `{TARGET_CONNECTION_ID}`: Utilizzate l&#39;ID di connessione di destinazione ottenuto nel passaggio  [Connetti alla destinazione](#connect-to-email-marketing-destination) di e-mail marketing.
 
 **Risposta**
 
-Una risposta corretta restituisce l’ID (`id`) del flusso di dati appena creato e un ID `etag`. Prendete nota di entrambi i valori. come previsto nel passaggio successivo, per attivare i segmenti.
+Una risposta corretta restituisce l&#39;ID (`id`) del flusso di dati appena creato e un `etag`. Prendete nota di entrambi i valori. come previsto nel passaggio successivo, per attivare i segmenti.
 
 ```json
 {
@@ -525,7 +526,7 @@ Una risposta corretta restituisce l’ID (`id`) del flusso di dati appena creato
 
 Dopo aver creato tutte le connessioni e il flusso di dati, ora puoi attivare i dati del profilo nella piattaforma di e-mail marketing. In questo passaggio, puoi selezionare i segmenti e gli attributi di profilo che stai inviando alla destinazione e pianificare e inviare i dati alla destinazione.
 
-Per attivare i segmenti nella nuova destinazione, è necessario eseguire un&#39;operazione PATCH JSON, simile all&#39;esempio seguente. Puoi attivare più segmenti e attributi di profilo in una sola chiamata. Per ulteriori informazioni sul PATCH JSON, consultate la specifica [](https://tools.ietf.org/html/rfc6902)RFC.
+Per attivare i segmenti nella nuova destinazione, è necessario eseguire un&#39;operazione PATCH JSON, simile all&#39;esempio seguente. Puoi attivare più segmenti e attributi di profilo in una sola chiamata. Per ulteriori informazioni sul PATCH JSON, vedere la [specifica RFC](https://tools.ietf.org/html/rfc6902).
 
 **Formato API**
 
@@ -584,8 +585,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}`: Utilizzare il flusso di dati ottenuto nel passaggio precedente.
 * `{ETAG}`: Utilizzate il tag ottenuto nel passaggio precedente.
-* `{SEGMENT_ID}`: Specifica l&#39;ID del segmento da esportare in questa destinazione. Per recuperare gli ID del segmento per i segmenti da attivare, andate a **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, selezionate **[!UICONTROL Segmentation Service API]** nel menu di navigazione a sinistra e cercate l’ `GET /segment/definitions` operazione in **[!UICONTROL Segment Definitions]**.
-* `{PROFILE_ATTRIBUTE}`: Esempio, `"person.lastName"`
+* `{SEGMENT_ID}`: Specifica l&#39;ID del segmento da esportare in questa destinazione. Per recuperare gli ID del segmento per i segmenti che si desidera attivare, andare a **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, selezionare **[!UICONTROL Segmentation Service API]** nel menu di navigazione a sinistra e cercare l&#39;operazione `GET /segment/definitions` in **[!UICONTROL Segment Definitions]**.
+* `{PROFILE_ATTRIBUTE}`: Ad esempio, `"person.lastName"`
 
 **Risposta**
 
@@ -622,7 +623,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **Risposta**
 
-La risposta restituita deve includere nel `transformations` parametro i segmenti e gli attributi di profilo inviati nel passaggio precedente. Un `transformations` parametro di esempio nella risposta potrebbe essere simile al seguente:
+La risposta restituita deve includere nel parametro `transformations` i segmenti e gli attributi di profilo inviati nel passaggio precedente. Un parametro `transformations` di esempio nella risposta potrebbe essere simile al seguente:
 
 ```json
 "transformations": [
@@ -651,7 +652,7 @@ La risposta restituita deve includere nel `transformations` parametro i segmenti
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai collegato con successo CDP in tempo reale a una delle tue destinazioni di e-mail marketing preferite e hai configurato un flusso di dati per la rispettiva destinazione. I dati in uscita possono ora essere utilizzati nella destinazione per campagne e-mail, pubblicità mirata e molti altri casi di utilizzo. Per ulteriori informazioni, consulta le pagine seguenti:
+Seguendo questa esercitazione, hai collegato correttamente la piattaforma a una delle tue destinazioni di e-mail marketing preferite e hai impostato un flusso di dati per la rispettiva destinazione. I dati in uscita possono ora essere utilizzati nella destinazione per campagne e-mail, pubblicità mirata e molti altri casi di utilizzo. Per ulteriori informazioni, consulta le pagine seguenti:
 
 * [Panoramica sulle destinazioni](../home.md)
 * [Panoramica del catalogo delle destinazioni](../catalog/overview.md)
