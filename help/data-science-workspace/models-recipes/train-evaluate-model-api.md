@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;Sensei Machine Learning API
+keywords: Experience Platform ;treno e valutazione;Data Science Workspace;argomenti più comuni;Sensei Machine Learning API
 solution: Experience Platform
 title: Formazione e valutazione di un modello (API)
 topic: tutorial
 type: Tutorial
 description: Questa esercitazione mostrerà come creare, formare e valutare un modello utilizzando le chiamate API Sensei Machine Learning.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1210'
+source-wordcount: '1230'
 ht-degree: 1%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 1%
 # Formazione e valutazione di un modello (API)
 
 
-Questa esercitazione illustra come creare, formare e valutare un modello utilizzando le chiamate API. Fate riferimento a [questo documento](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) per un elenco dettagliato della documentazione API.
+Questa esercitazione illustra come creare, formare e valutare un modello utilizzando le chiamate API. Fare riferimento a [questo documento](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) per un elenco dettagliato della documentazione API.
 
-## Prerequisiti  
+## Prerequisiti
 
-Seguite [Importa una ricetta inclusa nel pacchetto utilizzando l&#39;API](./import-packaged-recipe-api.md) per creare un motore, richiesto per formare e valutare un modello utilizzando l&#39;API.
+Seguite la procedura [Importa una ricetta inclusa nel pacchetto utilizzando l&#39;API](./import-packaged-recipe-api.md) per creare un motore, necessaria per formare e valutare un modello utilizzando l&#39;API.
 
-Segui questa [esercitazione](../../tutorials/authentication.md) per ottenere l&#39;autorizzazione per iniziare a effettuare chiamate API.
+Seguite l&#39;[ Experience Platform di esercitazione sull&#39;autenticazione API](https://www.adobe.com/go/platform-api-authentication-en) per iniziare a effettuare chiamate API.
 
 Dall&#39;esercitazione dovrebbero ora essere disponibili i seguenti valori:
 
@@ -54,7 +54,7 @@ Utilizzeremo le API per creare un Experience Run per la formazione. Per questa e
 
 ### Creare un&#39;istanza MLI
 
-La creazione di un&#39;istanza MLI può essere effettuata utilizzando la richiesta seguente. Utilizzerete le risorse `{ENGINE_ID}` restituite durante la creazione di un motore da [Importa una ricetta inclusa nel pacchetto tramite l&#39;esercitazione API](./import-packaged-recipe-ui.md) .
+La creazione di un&#39;istanza MLI può essere effettuata utilizzando la richiesta seguente. Utilizzerete la `{ENGINE_ID}` restituita durante la creazione di un motore da [Importare una ricetta in un pacchetto tramite l&#39;esercitazione API](./import-packaged-recipe-ui.md).
 
 **Richiesta**
 
@@ -126,9 +126,9 @@ curl -X POST \
 
 >[!NOTE]
 >
->Nel `{JSON_PAYLOAD}`pannello vengono definiti i parametri utilizzati per la formazione e il punteggio nell’ `tasks` array. L’ID `{ENGINE_ID}` è il motore che si desidera utilizzare e il `tag` campo è un parametro facoltativo utilizzato per identificare l’istanza.
+>In `{JSON_PAYLOAD}`, definiamo i parametri utilizzati per la formazione e il punteggio nell&#39;array `tasks`. L&#39; `{ENGINE_ID}` è l&#39;ID del motore che si desidera utilizzare e il campo `tag` è un parametro facoltativo utilizzato per identificare l&#39;istanza.
 
-La risposta conterrà l’istanza `{INSTANCE_ID}` che rappresenta l’istanza MLI creata. È possibile creare più istanze MLI con diverse configurazioni.
+La risposta conterrà il simbolo `{INSTANCE_ID}` che rappresenta l&#39;istanza MLI creata. È possibile creare più istanze MLI con diverse configurazioni.
 
 **Risposta**
 
@@ -222,7 +222,7 @@ La risposta della creazione dell&#39;esperimento si presenta così.
 
 Gli esperimenti pianificati vengono utilizzati in modo che non sia necessario creare ogni singolo esperimento eseguito tramite una chiamata API. Al contrario, durante la creazione dell&#39;esperimento forniamo tutti i parametri necessari e ogni esecuzione verrà creata periodicamente.
 
-Per indicare la creazione di un esperimento programmato, dobbiamo aggiungere una `template` sezione nel corpo della richiesta. In `template`, tutti i parametri necessari per le esecuzioni di programmazione sono inclusi, ad esempio `tasks`, che indicano quale azione, e `schedule`, che indica i tempi delle esecuzioni programmate.
+Per indicare la creazione di un esperimento programmato, è necessario aggiungere una sezione `template` nel corpo della richiesta. In `template`, tutti i parametri necessari per la pianificazione delle esecuzioni sono inclusi, come `tasks`, che indicano quale azione, e `schedule`, che indica la tempistica delle esecuzioni programmate.
 
 **Richiesta**
 
@@ -269,7 +269,7 @@ curl -X POST \
 }
 ```
 
-Quando creiamo un Esperimento, il corpo, `{JSON_PAYLOAD}`, deve contenere il `mlInstanceId` o il `mlInstanceQuery` parametro. In questo esempio, un esperimento pianificato richiamerà un&#39;esecuzione ogni 20 minuti, impostata nel `cron` parametro, a partire dal `startTime` fino al `endTime`.
+Quando si crea un esperimento, il corpo `{JSON_PAYLOAD}` deve contenere il parametro `mlInstanceId` o `mlInstanceQuery`. In questo esempio, un esperimento pianificato richiamerà un&#39;esecuzione ogni 20 minuti, impostata nel parametro `cron`, a partire da `startTime` fino a `endTime`.
 
 **Risposta**
 
@@ -309,7 +309,7 @@ Quando creiamo un Esperimento, il corpo, `{JSON_PAYLOAD}`, deve contenere il `ml
 
 ### Creazione di un&#39;esecuzione di un esperimento per la formazione
 
-Con la creazione di un&#39;entità Sperimento, è possibile creare un&#39;esecuzione di formazione ed eseguirla utilizzando la chiamata seguente. Sarà necessario specificare `{EXPERIMENT_ID}` e specificare cosa `mode` si desidera attivare nel corpo della richiesta.
+Con la creazione di un&#39;entità Sperimento, è possibile creare un&#39;esecuzione di formazione ed eseguirla utilizzando la chiamata seguente. Sarà necessario il `{EXPERIMENT_ID}` e specificare quale `mode` si desidera attivare nel corpo della richiesta.
 
 **Richiesta**
 
@@ -335,7 +335,7 @@ curl -X POST \
 }
 ```
 
-È inoltre possibile ignorare i parametri di configurazione includendo una `tasks` matrice:
+È inoltre possibile ignorare i parametri di configurazione includendo una matrice `tasks`:
 
 ```JSON
 {
@@ -354,7 +354,7 @@ curl -X POST \
 }
 ```
 
-Riceverai la seguente risposta che ti permetterà di conoscere la configurazione `{EXPERIMENT_RUN_ID}` e la configurazione in `tasks`.
+Riceverai la seguente risposta che ti permetterà di conoscere la `{EXPERIMENT_RUN_ID}` e la configurazione in `tasks`.
 
 **Risposta**
 
@@ -375,12 +375,12 @@ Riceverai la seguente risposta che ti permetterà di conoscere la configurazione
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`:  ID che rappresenta l’esecuzione dell’esperimento.\
+`{EXPERIMENT_RUN_ID}`: ID che rappresenta l’esecuzione dell’esperimento.\
 `{EXPERIMENT_ID}`: L&#39;ID che rappresenta l&#39;Esperimento sotto il quale si trova l&#39;Esperimento.
 
 ### Ottenere lo stato di esecuzione di un esperimento
 
-Lo stato dell&#39;esecuzione dell&#39;esperimento può essere interrogato con l&#39; `{EXPERIMENT_RUN_ID}`.
+Lo stato dell&#39;esecuzione dell&#39;esperimento può essere interrogato con il `{EXPERIMENT_RUN_ID}`.
 
 **Richiesta**
 
@@ -400,7 +400,7 @@ curl -X GET \
 
 **Risposta**
 
-La chiamata di GET fornirà lo stato nel `state` parametro come mostrato di seguito:
+La chiamata di GET fornirà lo stato nel parametro `state` come mostrato di seguito:
 
 ```JSON
 {
@@ -433,15 +433,15 @@ La chiamata di GET fornirà lo stato nel `state` parametro come mostrato di segu
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`:  ID che rappresenta l’esecuzione dell’esperimento.\
+`{EXPERIMENT_RUN_ID}`: ID che rappresenta l’esecuzione dell’esperimento.\
 `{EXPERIMENT_ID}`: L&#39;ID che rappresenta l&#39;Esperimento sotto il quale si trova l&#39;Esperimento.
 
-Oltre allo `DONE` stato, altri stati includono:
+Oltre allo stato `DONE`, altri stati includono:
 - `PENDING`
 - `RUNNING`
 - `FAILED`
 
-Per ottenere ulteriori informazioni, i registri dettagliati si trovano sotto il `tasklogs` parametro.
+Per ottenere ulteriori informazioni, i registri dettagliati si trovano sotto il parametro `tasklogs`.
 
 ### Recuperare il modello addestrato
 
@@ -487,7 +487,7 @@ La risposta rappresenta il modello addestrato creato.
 ```
 
 `{MODEL_ID}`: L&#39;ID corrispondente al modello.\
-`{EXPERIMENT_ID}`:  L&#39;ID corrispondente all&#39;Esperimento eseguito è sotto.\
+`{EXPERIMENT_ID}`: L&#39;ID corrispondente all&#39;Esperimento eseguito è sotto.\
 `{EXPERIMENT_RUN_ID}`: L’ID corrispondente all’esecuzione dell’esperimento.
 
 ### Arrestare ed eliminare un esperimento pianificato
@@ -503,7 +503,7 @@ curl -X DELETE \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-`{EXPERIMENT_ID}`:  L’ID corrispondente all’esperimento.\
+`{EXPERIMENT_ID}`: L’ID corrispondente all’esperimento.\
 `{ACCESS_TOKEN}`: Il valore del token del portatore specificato dopo l&#39;autenticazione.\
 `{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra unica integrazione con Adobe Experience Platform.
 
@@ -525,4 +525,4 @@ Di seguito viene riportata la risposta che informa che l’eliminazione dell’e
 
 ## Passaggi successivi
 
-Questa esercitazione spiega come utilizzare le API per creare un motore, un esperimento, esecuzioni di esperti programmate e modelli formati. Nell&#39;esercizio [successivo](./score-model-api.md), effettuerai previsioni assegnando un nuovo set di dati al modello qualificato con le prestazioni migliori.
+Questa esercitazione spiega come utilizzare le API per creare un motore, un esperimento, esecuzioni di esperti programmate e modelli formati. Nell&#39;esercizio [successivo](./score-model-api.md), si effettueranno previsioni assegnando un nuovo set di dati al modello qualificato con le prestazioni migliori.
