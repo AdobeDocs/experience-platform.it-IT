@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;date;date functions;dates;
+keywords: ' Experience Platform;home;argomenti popolari;mappare csv;mappare file CSV;mappare file CSV su xdm;mappare csv a xdm;ui guide;mapper;mapping;date;date function;date;'
 solution: Experience Platform
 title: Funzioni data
 topic: overview
 description: Questo documento introduce le funzioni data utilizzate con Data Prep.
 translation-type: tm+mt
-source-git-commit: 1f9833c06a3423c334edb8aa7e441adfd74be0f2
+source-git-commit: 28c13101be37c5c7680c5d46005509bfd122018f
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 17%
+source-wordcount: '411'
+ht-degree: 16%
 
 ---
 
@@ -80,4 +80,4 @@ Nella tabella seguente sono illustrate le lettere del pattern definite per le st
 
 **Esempio**
 
-L&#39;espressione `date(orderDate, 'yyyy-MM-dd')` converte un `orderDate` valore di &quot;31 dicembre 2020&quot; in un valore datetime di &quot;2020-12-31&quot;.
+L&#39;espressione `date(orderDate, "yyyy-MM-dd")` converte un valore `orderDate` di &quot;31 dicembre 2020&quot; in un valore datetime di &quot;2020-12-31&quot;.
