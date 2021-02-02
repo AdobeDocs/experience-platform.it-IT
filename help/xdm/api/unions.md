@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;union;Union;unions;Unions;segmentMembership;timeSeriesEvents;
+keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;schema di registro;schema Registro di sistema;unione;unione;unions;segmentMembership;timeSeriesEvents;'
 solution: Experience Platform
 title: Unioni
 description: L'endpoint /sindacati nell'API del Registro di sistema dello schema consente di gestire in modo programmatico gli schemi unione XDM nell'applicazione dell'esperienza.
@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '910'
 ht-degree: 1%
 
 ---
@@ -124,7 +124,7 @@ Le richieste di ricerca unionali richiedono l&#39;inclusione di un elemento `ver
 
 Le seguenti intestazioni Accetta sono disponibili per le ricerche dello schema unione:
 
-| Accetta | Descrizione |
+| Accept | Descrizione |
 | -------|------------ |
 | application/vnd.adobe.xed+json; version={MAJOR_VERSION} | Non elaborato con `$ref` e `allOf`. Include titoli e descrizioni. |
 | application/vnd.adobe.xed-full+json; version={MAJOR_VERSION} | `$ref` e  `allOf` risolto. Include titoli e descrizioni. |
