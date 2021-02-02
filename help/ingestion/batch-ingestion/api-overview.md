@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;ingestion;developer guide;api guide;upload;ingest parquet;ingest json;
+keywords: ' Experience Platform;home;argomenti popolari;ingestione batch;inserimento batch;inserimento;guida sviluppatore;api guide;upload;ingest Parquet;ingest json;'
 solution: Experience Platform
 title: Guida per lo sviluppatore di batch Ingestion
 topic: developer guide
 description: Questo documento fornisce una panoramica completa dell’utilizzo delle API di assimilazione batch.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '2675'
+source-wordcount: '2698'
 ht-degree: 5%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 5%
 
 # Guida per sviluppatori per l&#39;inserimento di batch
 
-Questo documento fornisce una panoramica completa dell’utilizzo delle API di assimilazione [batch](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
+Questo documento fornisce una panoramica completa sull&#39;utilizzo delle [API di caricamento batch](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
 
-L&#39;appendice di questo documento contiene informazioni sulla [formattazione dei dati da utilizzare per l&#39;assimilazione](#data-transformation-for-batch-ingestion), inclusi file di dati CSV e JSON di esempio.
+L&#39;appendice di questo documento contiene informazioni sulla [formattazione dei dati da utilizzare per l&#39;assimilazione](#data-transformation-for-batch-ingestion), compresi file di dati CSV e JSON di esempio.
 
 ## Introduzione
 
@@ -27,39 +27,39 @@ Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario cono
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-- [Caricamento](./overview.md)batch: Consente di assimilare i dati in Adobe Experience Platform come file batch.
-- [[!DNL Experience Data Model (XDM)] Sistema](../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
-- [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+- [Caricamento](./overview.md) batch: Consente di assimilare i dati in Adobe Experience Platform come file batch.
+- [[!DNL Experience Data Model (XDM)] Sistema](../../xdm/home.md): Il framework standard con cui  [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza dei clienti.
+- [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola  [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
 ### Lettura di chiamate API di esempio
 
-Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla [!DNL Experience Platform] risoluzione dei problemi.
+Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consultate la sezione relativa a [come leggere chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](https://www.adobe.com/go/platform-api-authentication-en) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui verrà eseguita l&#39;operazione:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+>Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione di [panoramica sulla sandbox](../../sandboxes/home.md).
 
-Le richieste che contengono un payload (POST, PUT, PATCH) possono richiedere un&#39; `Content-Type` intestazione aggiuntiva. I valori accettati specifici per ogni chiamata vengono forniti nei parametri della chiamata.
+Le richieste che contengono un payload (POST, PUT, PATCH) possono richiedere un&#39;altra intestazione `Content-Type`. I valori accettati specifici per ogni chiamata vengono forniti nei parametri della chiamata.
 
 ## Tipi
 
-Durante l&#39;assimilazione dei dati, è importante comprendere il funzionamento degli schemi [!DNL Experience Data Model] (XDM). Per ulteriori informazioni sulla mappatura dei tipi di campo XDM in formati diversi, consultare la guida [per gli sviluppatori del Registro di](../../xdm/api/getting-started.md)schema.
+Durante l&#39;assimilazione dei dati, è importante comprendere il funzionamento degli schemi [!DNL Experience Data Model] (XDM). Per ulteriori informazioni sulla mappatura dei tipi di campo XDM in formati diversi, consultare la [Guida per lo sviluppatore del Registro di sistema dello schema](../../xdm/api/getting-started.md).
 
 Durante l&#39;assimilazione dei dati vi è una certa flessibilità: se un tipo non corrisponde a quello presente nello schema di destinazione, i dati verranno convertiti nel tipo di destinazione espresso. In caso contrario, il batch non riuscirà con un `TypeCompatibilityException`.
 
-Ad esempio, né JSON né CSV hanno un tipo data o ora. Di conseguenza, questi valori vengono espressi utilizzando stringhe [formattate](https://www.iso.org/iso-8601-date-and-time-format.html) ISO 8061 (&quot;2018-07-10T15:05:59.000-08:00&quot;) o Tempo Unix formattato in millisecondi (15312639590 00) e sono convertiti al momento dell&#39;assimilazione nel tipo XDM di destinazione.
+Ad esempio, né JSON né CSV hanno un tipo data o ora. Di conseguenza, questi valori vengono espressi utilizzando le stringhe formattate [ISO 8061](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) o Unix Time formattate in millisecondi (15312639 59000) e sono convertiti al momento dell&#39;assimilazione nel tipo XDM di destinazione.
 
 La tabella seguente mostra le conversioni supportate durante l’assimilazione dei dati.
 
@@ -100,7 +100,7 @@ In primo luogo, sarà necessario creare un batch, con JSON come formato di input
 
 >[!NOTE]
 >
->Gli esempi di seguito sono per JSON a riga singola. Per acquisire JSON con più righe, è necessario impostare il `isMultiLineJson` flag. Per ulteriori informazioni, consulta la guida [alla risoluzione dei problemi di caricamento](./troubleshooting.md)batch.
+>Gli esempi di seguito sono per JSON a riga singola. Per acquisire JSON con più righe, è necessario impostare il flag `isMultiLineJson`. Per ulteriori informazioni, consultare la [guida per la risoluzione dei problemi di inserimento batch](./troubleshooting.md).
 
 **Formato API**
 
@@ -158,11 +158,11 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Caricare i file
 
-Dopo aver creato un batch, potete usare il file `batchId` da prima per caricare i file nel batch. Potete caricare più file nel batch.
+Dopo aver creato un batch, è possibile utilizzare `batchId` da prima per caricare i file nel batch. Potete caricare più file nel batch.
 
 >[!NOTE]
 >
->Consulta la sezione appendice per un [esempio di file](#data-transformation-for-batch-ingestion)di dati JSON formattati correttamente.
+>Vedere la sezione appendice per un [esempio di un file di dati JSON formattato correttamente](#data-transformation-for-batch-ingestion).
 
 **Formato API**
 
@@ -297,7 +297,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 ### Caricare i file
 
-Dopo aver creato un batch, potete usare il file `batchId` da prima per caricare i file nel batch. Potete caricare più file nel batch.
+Dopo aver creato un batch, è possibile utilizzare `batchId` da prima per caricare i file nel batch. Potete caricare più file nel batch.
 
 **Formato API**
 
@@ -515,7 +515,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### Completa file di grandi dimensioni
 
-Dopo aver creato un batch, potete usare il file `batchId` da prima per caricare i file nel batch. Potete caricare più file nel batch.
+Dopo aver creato un batch, è possibile utilizzare `batchId` da prima per caricare i file nel batch. Potete caricare più file nel batch.
 
 **Formato API**
 
@@ -578,7 +578,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Caricamento di file CSV
 
-Per assimilare i file CSV, dovrete creare una classe, uno schema e un set di dati che supporti il CSV. Per informazioni dettagliate su come creare la classe e lo schema necessari, seguire le istruzioni fornite nell&#39;esercitazione [sulla creazione dello schema](../../xdm/api/ad-hoc.md)ad hoc.
+Per assimilare i file CSV, dovrete creare una classe, uno schema e un set di dati che supporti il CSV. Per informazioni dettagliate su come creare la classe e lo schema necessari, seguire le istruzioni fornite nell&#39; [tutorial per la creazione di schemi ad hoc](../../xdm/api/ad-hoc.md).
 
 >[!NOTE]
 >
@@ -646,10 +646,10 @@ Una spiegazione di cosa la parte diversa della sezione &quot;fileDescription&quo
 | `delimiters` | Il carattere da utilizzare come delimitatore. |
 | `quotes` | Il carattere da utilizzare per le virgolette. |
 | `escapes` | Il carattere da utilizzare come carattere di escape. |
-| `header` | Il file caricato **deve** contenere intestazioni. Poiché la convalida dello schema è stata eseguita, è necessario impostare questo valore su true. Inoltre, le intestazioni **non** possono contenere spazi. Se avete degli spazi nell’intestazione, sostituiteli con caratteri di sottolineatura. |
+| `header` | Il file caricato **deve contenere intestazioni**. Poiché la convalida dello schema è stata eseguita, è necessario impostare questo valore su true. Inoltre, le intestazioni possono **not** contenere spazi. Se avete degli spazi nell&#39;intestazione, sostituiteli con caratteri di sottolineatura. |
 | `charset` | Un campo facoltativo. Altri charset supportati includono &quot;US-ASCII&quot; e &quot;ISO-8869-1&quot;. Se lasciato vuoto, per impostazione predefinita viene utilizzato UTF-8. |
 
-Il set di dati a cui si fa riferimento deve avere il blocco di descrizione del file elencato sopra e deve puntare a uno schema valido nel Registro di sistema. In caso contrario, il file non verrà masterizzato in parquet.
+Il set di dati a cui si fa riferimento deve avere il blocco di descrizione del file elencato sopra e deve puntare a uno schema valido nel Registro di sistema. In caso contrario, il file non verrà masterizzato in Parquet.
 
 ### Crea batch
 
@@ -716,11 +716,11 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Caricare i file
 
-Dopo aver creato un batch, potete usare il file `batchId` da prima per caricare i file nel batch. Potete caricare più file nel batch.
+Dopo aver creato un batch, è possibile utilizzare `batchId` da prima per caricare i file nel batch. Potete caricare più file nel batch.
 
 >[!NOTE]
 >
->Consultate la sezione appendice per un [esempio di file](#data-transformation-for-batch-ingestion)di dati CSV con formattazione corretta.
+>Consultate la sezione appendice per un [esempio di file di dati CSV con formattazione corretta](#data-transformation-for-batch-ingestion).
 
 **Formato API**
 
@@ -819,7 +819,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Eliminare un batch {#delete-a-batch}
 
-È possibile eliminare un batch eseguendo la seguente richiesta di POST con il parametro `action=REVERT` query all&#39;ID del batch che si desidera eliminare. Il batch è contrassegnato come &quot;inattivo&quot; e può quindi essere utilizzato per la raccolta dei rifiuti. Il batch verrà raccolto in modo asincrono, al momento in cui verrà contrassegnato come &quot;eliminato&quot;.
+È possibile eliminare un batch eseguendo la seguente richiesta di POST con il parametro di query `action=REVERT` all&#39;ID del batch che si desidera eliminare. Il batch è contrassegnato come &quot;inattivo&quot; e può quindi essere utilizzato per la raccolta dei rifiuti. Il batch verrà raccolto in modo asincrono, al momento in cui verrà contrassegnato come &quot;eliminato&quot;.
 
 **Formato API**
 
@@ -853,7 +853,7 @@ Se desiderate sostituire un batch già assimilato, potete farlo con &quot;riprod
 
 ### Crea batch
 
-In primo luogo, sarà necessario creare un batch, con JSON come formato di input. Durante la creazione del batch, dovrete fornire un ID di set di dati. Sarà inoltre necessario assicurarsi che tutti i file caricati come parte del batch siano conformi allo schema XDM collegato al set di dati fornito. Inoltre, sarà necessario fornire i vecchi batch come riferimento nella sezione di ripetizione. Nell’esempio seguente, vengono riprodotti i batch con ID `batchIdA` e `batchIdB`.
+In primo luogo, sarà necessario creare un batch, con JSON come formato di input. Durante la creazione del batch, dovrete fornire un ID di set di dati. Sarà inoltre necessario assicurarsi che tutti i file caricati come parte del batch siano conformi allo schema XDM collegato al set di dati fornito. Inoltre, sarà necessario fornire i vecchi batch come riferimento nella sezione di ripetizione. Nell&#39;esempio seguente, vengono riprodotti i batch con ID `batchIdA` e `batchIdB`.
 
 **Formato API**
 
@@ -927,7 +927,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Caricare i file
 
-Dopo aver creato un batch, potete usare il file `batchId` da prima per caricare i file nel batch. Potete caricare più file nel batch.
+Dopo aver creato un batch, è possibile utilizzare `batchId` da prima per caricare i file nel batch. Potete caricare più file nel batch.
 
 **Formato API**
 
@@ -1003,7 +1003,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 Per assimilare un file di dati in [!DNL Experience Platform], la struttura gerarchica del file deve essere conforme allo schema [Experience Data Model (XDM)](../../xdm/home.md) associato al set di dati in fase di caricamento.
 
-Informazioni su come mappare un file CSV per conformarsi a uno schema XDM sono disponibili nel documento di trasformazione [di](../../etl/transformations.md) esempio, insieme a un esempio di file di dati JSON formattato correttamente. I file di esempio forniti nel documento sono disponibili qui:
+Informazioni su come mappare un file CSV per conformarsi a uno schema XDM sono disponibili nel documento [trasformazioni di esempio](../../etl/transformations.md), insieme a un esempio di file di dati JSON formattato correttamente. I file di esempio forniti nel documento sono disponibili qui:
 
 - [CRM_profile.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profile.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
