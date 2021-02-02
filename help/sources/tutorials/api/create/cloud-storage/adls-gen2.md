@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics;Azure Data Lake Storage Gen2;azure data lake storage;Azure
+keywords: ' Experience Platform;home;argomenti popolari;Azure Data Lake Storage Gen2;azol data lago storage;Azure'
 solution: Experience Platform
 title: Creare un connettore Azure Data Lake Storage Gen2 utilizzando l'API del servizio di flusso
 topic: overview
 type: Tutorial
 description: Questa esercitazione utilizza l'API del servizio di flusso per seguire i passaggi necessari per connettere  Experience Platform ad Azure Data Lake Storage Gen2 (di seguito "ADLS Gen2").
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '592'
-ht-degree: 2%
+source-wordcount: '611'
+ht-degree: 1%
 
 ---
 
@@ -48,7 +48,7 @@ Questa esercitazione fornisce esempi di chiamate API per dimostrare come formatt
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](../../../../../tutorials/authentication.md) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](https://www.adobe.com/go/platform-api-authentication-en) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -124,4 +124,4 @@ Una risposta corretta restituisce i dettagli della nuova connessione creata, inc
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato una connessione ADLS Gen2 utilizzando le API e un ID univoco è stato ottenuto come parte del corpo della risposta. Puoi utilizzare questo ID connessione per [esplorare gli archivi cloud utilizzando l&#39;API del servizio di flusso](../../explore/cloud-storage.md) o [assimilare i dati del parquet tramite l&#39;API del servizio di flusso](../../cloud-storage-parquet.md).
+Seguendo questa esercitazione, hai creato una connessione ADLS Gen2 utilizzando le API e un ID univoco è stato ottenuto come parte del corpo della risposta. Puoi utilizzare questo ID connessione per [esplorare gli archivi cloud utilizzando l&#39;API del servizio di flusso](../../explore/cloud-storage.md) o i dati del parquet di acquisizione [tramite l&#39;API del servizio di flusso](../../cloud-storage-parquet.md).
