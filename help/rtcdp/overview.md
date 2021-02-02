@@ -1,13 +1,13 @@
 ---
-keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp
+keywords: RTCDP;CDP;Piattaforma dati cliente in tempo reale;piattaforma dati cliente in tempo reale;cdp;cdp;cdp;AI cliente
 title: Panoramica della piattaforma dati cliente in tempo reale
 seo-title: Panoramica della piattaforma dati cliente in tempo reale
 description: Panoramica della piattaforma dati cliente in tempo reale
 seo-description: Panoramica della piattaforma dati cliente in tempo reale
 translation-type: tm+mt
-source-git-commit: 4dfef6649b3ae07593667eb5165dad6bacc8ed2f
+source-git-commit: 9f20f8bfeefb5bc427a72a11ac1f01816cdbc4b2
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Con la piattaforma dati cliente in tempo reale, puoi:
 
 ## Informazioni aggiuntive
 
-Per saperne di più su Adobe Experience Platform, leggete innanzitutto la [panoramica](../landing/home.md)del Experience Platform.
+Per saperne di più su Adobe Experience Platform, iniziare leggendo la [panoramica  Experience Platform](../landing/home.md).
 
 Per iniziare a usare la piattaforma dati cliente in tempo reale, si consiglia di consultare la seguente documentazione:
 
