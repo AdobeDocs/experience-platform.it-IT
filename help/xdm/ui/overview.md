@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;
+keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati;ui;area di lavoro;'
 solution: Experience Platform
 title: Panoramica dell’area di lavoro Schemi
 description: Questa panoramica descrive le principali funzionalità dell'area di lavoro Schemi in  Experience Platform.
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '287'
 ht-degree: 2%
 
 ---
