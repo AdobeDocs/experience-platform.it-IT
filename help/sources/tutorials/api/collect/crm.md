@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;crm;CRM
+keywords: ' Experience Platform;home;argomenti popolari;crm;CRM'
 solution: Experience Platform
 title: Raccolta di dati CRM tramite connettori di origine e API
 topic: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi necessari per recuperare i dati da un sistema CRM di terze parti e inserirli nella piattaforma tramite connettori di origine e API.
 translation-type: tm+mt
-source-git-commit: 90a7e49033afe3bc348225df0688e17dbf842a15
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1541'
+source-wordcount: '1552'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ Questa esercitazione fornisce esempi di chiamate API per dimostrare come formatt
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle API della piattaforma, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a1/>. ](../../../../tutorials/authentication.md) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API di Experience Platform, come illustrato di seguito:
+Per effettuare chiamate alle API della piattaforma, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a1/>. ](https://www.adobe.com/go/platform-api-authentication-en) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API di Experience Platform, come illustrato di seguito:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
