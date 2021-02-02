@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;data usage labels overview
+keywords: ' Experience Platform;home;argomenti popolari;governance dei dati;etichetta di utilizzo dei dati api;API del servizio criteri;descrizione delle etichette di utilizzo dei dati'
 solution: Experience Platform
 title: Panoramica delle etichette di utilizzo dei dati
 topic: labels
 description: Adobe Experience Platform Data Governance consente di applicare etichette di utilizzo dei dati a set di dati e campi, suddividendo ciascuna in categorie in base ai relativi criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle etichette di utilizzo dei dati nel  Experience Platform.
 translation-type: tm+mt
-source-git-commit: e680191d495e4c33baa8242d40a15b9124eec8cd
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '618'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Per ulteriori informazioni sul funzionamento dell&#39;applicazione automatica in
 
 [!DNL Experience Platform] è in grado di condividere segmenti con Adobe Audience Manager. Tutti i controlli di esportazione dei dati applicati  segmenti di Audience Manager vengono convertiti in etichette equivalenti e azioni di marketing riconosciute da [!DNL Experience Platform] [!DNL Data Governance].
 
-Per un riferimento alla mappatura di controlli specifici sull&#39;esportazione dei dati sulle etichette di utilizzo dei dati in [!DNL Platform], fare riferimento alla [documentazione  Audience Manager](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
+Per un riferimento alla mappatura di controlli specifici sull&#39;esportazione dei dati sulle etichette di utilizzo dei dati in [!DNL Platform], fare riferimento alla [documentazione  Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
 ## Gestione delle etichette di utilizzo dei dati in [!DNL Experience Platform] {#manage-labels}
 
