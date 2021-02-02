@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Collect protocol data;protocol data
+keywords: ' Experience Platform;home;argomenti popolari;Raccogliere dati del protocollo;dati del protocollo'
 solution: Experience Platform
 title: Raccogliere i dati dei protocolli tramite connettori di origine e API
 topic: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi necessari per recuperare i dati da un'applicazione protocolli e trasferirli in Piattaforma tramite connettori di origine e API.
 translation-type: tm+mt
-source-git-commit: d8ec9b4b28602bce30365fe64829c8c8df1b9211
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1514'
+source-wordcount: '1528'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ Questa esercitazione fornisce esempi di chiamate API per dimostrare come formatt
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle API della piattaforma, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a1/>. ](../../../../tutorials/authentication.md) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API di Experience Platform, come illustrato di seguito:
+Per effettuare chiamate alle API della piattaforma, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a1/>. ](https://www.adobe.com/go/platform-api-authentication-en) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API di Experience Platform, come illustrato di seguito:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
