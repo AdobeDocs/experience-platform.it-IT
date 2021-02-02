@@ -1,5 +1,5 @@
 ---
-keywords: insights;attribution ai;attribution ai insights;AAI query service;attribution queries;attribution scores
+keywords: approfondimenti;attribuzione ai;attribuzione ai approfondimenti;servizio query AAI;query di attribuzione;punteggi di attribuzione
 solution: Intelligent Services, Experience Platform
 title: Guida di avvio rapido di AAI Query Service
 topic: Attribution AI queries
@@ -7,7 +7,7 @@ description: Questo documento contiene una guida e modelli per l’utilizzo di Q
 translation-type: tm+mt
 source-git-commit: 32d49c9244414afeb2729ef44eb364fb2c609380
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '483'
 ht-degree: 0%
 
 ---
