@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;array;field;
+keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati;ui;workspace;array;field;'
 solution: Experience Platform
 title: Definire un campo array nell’interfaccia utente
 description: Scoprite come definire un campo array nell'interfaccia utente del Experience Platform .
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '349'
 ht-degree: 0%
 
 ---
