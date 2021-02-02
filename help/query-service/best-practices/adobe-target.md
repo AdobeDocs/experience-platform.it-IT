@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sample queries;sample query;adobe target;
+keywords: ' Experience Platform;home;argomenti popolari;servizio query;query di esempio;query di esempio;target adobe;'
 solution: Experience Platform
 title: Query di esempio
 topic: queries
@@ -7,7 +7,7 @@ description: I dati di  Adobe Target vengono trasformati in schema XDM di Experi
 translation-type: tm+mt
 source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '324'
 ht-degree: 1%
 
 ---
