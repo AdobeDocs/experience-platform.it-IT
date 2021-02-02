@@ -1,13 +1,13 @@
 ---
-keywords: social network;social network destinations;Livefyre;facebook;Facebook
+keywords: social network;destinazioni social network;Livefyre;facebook;Facebook
 title: Destinazioni social network
 seo-title: Destinazioni social network
 description: Con le destinazioni dei social network, puoi attivare profili per le tue campagne di targeting dell'audience, personalizzazione e soppressione basate su e-mail con hash.
 seo-description: Con le destinazioni dei social network, puoi attivare profili per le tue campagne di targeting dell'audience, personalizzazione e soppressione basate su e-mail con hash.
 translation-type: tm+mt
-source-git-commit: 85e6a65e1407ca60e7b63681c045fadaaa24aef9
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '86'
+source-wordcount: '93'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Con le destinazioni dei social network, puoi attivare profili per le tue campagne di targeting dell&#39;audience, personalizzazione e soppressione basate su e-mail con hash.
 
-La piattaforma dati cliente in tempo reale supporta attualmente le seguenti destinazioni di social network:
+Adobe Experience Platform supporta attualmente le seguenti destinazioni di social network:
 
 - [Estensione  Adobe Livefyre](./adobe-livefyre.md)
 - [[!DNL Facebook]](./facebook.md)
