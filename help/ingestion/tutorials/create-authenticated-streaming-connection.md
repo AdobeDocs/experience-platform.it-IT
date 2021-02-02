@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;authenticated streaming connection;streaming connection;create streaming connection;create authenticated streaming connection;streaming ingestion;ingestion;
+keywords: ' Experience Platform;home;popolari argomenti;connessione streaming autenticata;connessione streaming;creare una connessione streaming;creare una connessione streaming autenticata;assimilazione streaming;assimilazione;'
 solution: Experience Platform
 title: Creare una connessione in streaming autenticata
 topic: tutorial
 type: Tutorial
 description: La raccolta dei dati autenticati consente ai servizi Adobe Experience Platform, come Profilo cliente e Identità in tempo reale, di distinguere tra record provenienti da fonti attendibili e fonti non attendibili.
 translation-type: tm+mt
-source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '674'
 ht-degree: 2%
 
 ---
@@ -22,34 +22,34 @@ La raccolta dati autenticata consente ai servizi Adobe Experience Platform, ad e
 
 Per avviare lo streaming dei dati su Adobe Experience Platform è necessaria la registrazione della connessione. Quando registrate una connessione in streaming, dovete fornire alcuni dettagli chiave come l&#39;origine dei dati in streaming.
 
-Dopo la registrazione di una connessione di streaming, l&#39;utente, in qualità di produttore di dati, avrà un URL univoco che può essere utilizzato per lo streaming dei dati [!DNL Platform].
+Dopo la registrazione di una connessione di streaming, l&#39;utente, in qualità di produttore di dati, avrà un URL univoco che può essere utilizzato per lo streaming dei dati su [!DNL Platform].
 
 Questa esercitazione richiede anche una buona conoscenza dei diversi servizi Adobe Experience Platform. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standard con cui  [!DNL Platform] organizzare i dati relativi all&#39;esperienza.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo di consumo unificato in tempo reale basato su dati aggregati provenienti da più origini.
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per effettuare correttamente chiamate alle API di assimilazione in streaming.
 
 ### Lettura di chiamate API di esempio
 
-Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla [!DNL Experience Platform] risoluzione dei problemi.
+Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consultate la sezione relativa a [come leggere chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](https://www.adobe.com/go/platform-api-authentication-en) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui verrà eseguita l&#39;operazione:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+>Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione di [panoramica sulla sandbox](../../sandboxes/home.md).
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva:
 
@@ -69,7 +69,7 @@ POST /flowservice/connections
 
 >[!NOTE]
 >
->I valori per l&#39;elenco `providerId` e per l&#39;evento `connectionSpec` devono **** essere utilizzati come mostrato nell&#39;esempio, in quanto sono ciò che specifica all&#39;API che si sta creando una connessione di streaming per l&#39;assimilazione in streaming.
+>I valori per le `providerId` e `connectionSpec` **devono essere utilizzati come mostrato nell&#39;esempio, in quanto sono quelli che specificano all&#39;API che si sta creando una connessione di streaming per l&#39;assimilazione in streaming.**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -111,7 +111,7 @@ Una risposta corretta restituisce lo stato HTTP 201 con i dettagli della nuova c
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `id` | La `id` nuova connessione appena creata. In questo caso si farà riferimento a `{CONNECTION_ID}`. |
+| `id` | `id` della nuova connessione creata. Di seguito viene indicato come `{CONNECTION_ID}`. |
 | `etag` | Identificatore assegnato alla connessione, che specifica la revisione della connessione. |
 
 ## Ottieni URL raccolta dati
@@ -126,7 +126,7 @@ GET /flowservice/connections/{CONNECTION_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | Il `id` valore della connessione precedentemente creata. |
+| `{CONNECTION_ID}` | Il valore `id` della connessione creata in precedenza. |
 
 **Richiesta**
 
@@ -140,7 +140,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate sulla connessione richiesta. L&#39;URL di raccolta dati viene creato automaticamente con la connessione e può essere recuperato utilizzando il `inletUrl` valore.
+Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate sulla connessione richiesta. L&#39;URL di raccolta dati viene creato automaticamente con la connessione e può essere recuperato utilizzando il valore `inletUrl`.
 
 ```json
 {
@@ -179,7 +179,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 
 ## Passaggi successivi
 
-Dopo aver creato una connessione di streaming autenticata, è possibile trasmettere in streaming le serie temporali o registrare i dati, in modo da acquisire i dati all&#39;interno [!DNL Platform]. Per informazioni su come eseguire lo streaming dei dati delle serie temporali [!DNL Platform], consulta l’esercitazione [sui dati delle serie temporali in](./streaming-time-series-data.md)streaming. Per informazioni su come eseguire lo streaming dei dati dei record, [!DNL Platform]passare all&#39;esercitazione [sui dati dei record in](./streaming-record-data.md)streaming.
+Dopo aver creato una connessione di streaming autenticata, è possibile trasmettere in streaming le serie temporali o i dati dei record, consentendo di assimilare i dati all&#39;interno di [!DNL Platform]. Per informazioni su come eseguire lo streaming dei dati delle serie temporali su [!DNL Platform], fare clic su [streaming time series data tutorial](./streaming-time-series-data.md). Per informazioni su come eseguire lo streaming dei dati dei record in [!DNL Platform], fare clic su [streaming record tutorial](./streaming-record-data.md).
 
 ## Appendice
 
@@ -187,9 +187,9 @@ Questa sezione fornisce informazioni supplementari sulle connessioni in streamin
 
 ### Invio di messaggi a una connessione in streaming autenticata
 
-Se l’autenticazione di una connessione in streaming è abilitata, il client dovrà aggiungere l’ `Authorization` intestazione alla propria richiesta.
+Se l&#39;autenticazione di una connessione in streaming è abilitata, il client dovrà aggiungere l&#39;intestazione `Authorization` alla propria richiesta.
 
-Se l’ `Authorization` intestazione non è presente o viene inviato un token di accesso non valido/scaduto, viene restituita una risposta non autorizzata HTTP 401 con una risposta simile come segue:
+Se l&#39;intestazione `Authorization` non è presente o viene inviato un token di accesso non valido/scaduto, viene restituita una risposta non autorizzata HTTP 401, con una risposta simile come segue:
 
 **Risposta**
 
