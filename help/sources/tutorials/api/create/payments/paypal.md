@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;PayPal connector;paypal;Paypal
+keywords: ' Experience Platform;home;argomenti popolari;Connettore PayPal;paypal;Paypal'
 solution: Experience Platform
 title: Creare un connettore PayPal utilizzando l'API del servizio di flusso
 topic: overview
 type: Tutorial
 description: Questa esercitazione utilizza l'API del servizio di flusso per guidarvi attraverso i passaggi necessari per collegare PayPal a  Experience Platform.
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '579'
 ht-degree: 2%
 
 ---
@@ -52,7 +52,7 @@ Questa esercitazione fornisce esempi di chiamate API per dimostrare come formatt
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](../../../../../tutorials/authentication.md) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](https://www.adobe.com/go/platform-api-authentication-en) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -126,4 +126,4 @@ Una risposta corretta restituisce la nuova connessione creata, incluso il relati
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato una connessione [!DNL PayPal] utilizzando l&#39;API [!DNL Flow Service] e hai ottenuto il valore ID univoco della connessione. Puoi utilizzare questo ID nell&#39;esercitazione successiva per imparare a esplorare l&#39;applicazione dei pagamenti utilizzando l&#39;API del servizio di flusso[.](../../explore/payments.md)
+Seguendo questa esercitazione, hai creato una connessione [!DNL PayPal] utilizzando l&#39;API [!DNL Flow Service] e hai ottenuto il valore ID univoco della connessione. Puoi utilizzare questo ID nell&#39;esercitazione successiva per imparare a esplorare l&#39;applicazione dei pagamenti utilizzando l&#39;API del servizio di flusso](../../explore/payments.md).[
