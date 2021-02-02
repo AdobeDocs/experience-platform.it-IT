@@ -4,9 +4,9 @@ seo-title: Domande frequenti su Adobe Experience Platform Web SDK
 description: Domande frequenti sull’SDK Adobe Experience Platform Web
 seo-description: Domande frequenti sull’SDK Adobe Experience Platform Web
 translation-type: tm+mt
-source-git-commit: a493fad1bbd6114ba06074ebb3064268ba25b445
+source-git-commit: f4f0b00dfd324f69aa2b4348740f6e767e86a6de
 workflow-type: tm+mt
-source-wordcount: '1683'
+source-wordcount: '1808'
 ht-degree: 2%
 
 ---
@@ -73,7 +73,7 @@ Adobe Experience Platform Web SDK può anche inviare dati direttamente ad Adobe 
 * **Experience Edge:** indirizza facilmente i dati ad Adobe Experience Platform e alle soluzioni nel formato richiesto.
 * **Soluzioni Adobe Experience Platform e  Adobe:** Abilita la loro proposta di valore.
 
-**Controllo:** Poiché tutti i dati utilizzano un singolo e collegato flusso di dati, è possibile seguire e controllare logicamente l&#39;aspetto dei dati ogni millisecondo del suo percorso, da e verso le applicazioni.
+**Controllo:** Poiché tutti i dati utilizzano un singolo e collegato flusso di dati, è possibile seguire e controllare logicamente l&#39;aspetto dei dati ogni millisecondo del percorso, da e verso le applicazioni.
 
 **Moderna e pronta per il futuro:** L’SDK Web e la sua connessione a Experience Edge Network hanno consentito  Adobe di modernizzare in modo significativo  Adobe la raccolta dei dati, la personalizzazione, il consenso e il futuro dei cookie di terze parti. Abilita un dominio di prime parti, gestito da  Adobe.
 
@@ -124,7 +124,7 @@ In altre parole, se decidete di utilizzare Adobe Experience Platform Web SDK per
 
 ## È possibile migrare gli ECID quando si inizia a utilizzare Alloy in modo che i visitatori del sito Web non inizino a presentarsi come nuovi visitatori?
 
-Sì, Adobe Experience Platform Web SDK fornisce una funzione di migrazione delle identità. Seguire le istruzioni riportate in [questo documento](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/identity.html#id-migration) per ulteriori dettagli.
+Sì, Adobe Experience Platform Web SDK fornisce una funzione di migrazione delle identità. Segui le istruzioni per la migrazione degli ID nella [documentazione dell&#39;identità SDK Web della piattaforma](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#id-migration) per ulteriori dettagli.
 
 ## In che modo l’SDK Web è diverso da  Adobe Experience Platform Launch?
 
@@ -153,6 +153,18 @@ Più tardi nel 2020, il Experience Platform Launch rilascerà le funzioni di ino
 ## Cos’è un CNAME o un dominio di prime parti e perché è importante?
 
 Ulteriori informazioni su un CNAME sono disponibili nella [documentazione  Adobe](https://docs.adobe.com/content/help/it-IT/id-service/using/reference/analytics-reference/cname.html)
+
+## Adobe Experience Platform Web SDK utilizza i cookie? In caso affermativo, quali cookie vengono utilizzati?
+
+Sì, al momento l&#39;SDK Web utilizza da 1 a 4 cookie a seconda dell&#39;implementazione. Di seguito è riportato un elenco dei 4 cookie che potreste visualizzare con l’SDK Web e il modo in cui vengono utilizzati:
+
+**kndct_orgid_identity:** Il cookie di identità viene utilizzato per memorizzare l’ECID, nonché altre informazioni relative all’ECID.
+
+**kndctr_orgid_assenso:** Questo cookie memorizza le preferenze di consenso dell&#39;utente per il sito Web.
+
+**kndctr_orgid_personalization:** Questo cookie include informazioni sulle sessioni che  Adobe Target utilizza per personalizzare le pagine Web.
+
+**kndctr_orgid_consencheck:** Questo cookie basato su sessione segnala al server di cercare il lato server delle preferenze di consenso.
 
 ## Dove è possibile ottenere ulteriori informazioni sull’SDK Web per Adobe Experience Platform?
 
