@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;namespace;Namespace;Namespaces;namespaces;identity namespace;Identity namespace;identity;Identity;Identity service;identity service
+keywords: ' Experience Platform;home;argomenti comuni;spazio dei nomi;spazio dei nomi;spazi dei nomi;spazio dei nomi;spazio dei nomi identità;spazio dei nomi identità;identità;identità;servizio identità;identità'
 solution: Experience Platform
 title: Servizio Adobe Experience Platform Identity
 topic: overview
@@ -7,7 +7,7 @@ description: 'Gli spazi dei nomi delle identità sono un componente di Servizio 
 translation-type: tm+mt
 source-git-commit: 0547c33e831fe1ac684f55a0e79978cd7f191e65
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1451'
 ht-degree: 1%
 
 ---
