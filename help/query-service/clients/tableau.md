@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;tableau;Tableau;query service;Query service;connect to query service;
+keywords: ' Experience Platform;home;argomenti popolari;tableau;Tableau;query service;Query service;connect to query service;'
 solution: Experience Platform
 title: Connetti con Tableau
 topic: connect
@@ -7,8 +7,8 @@ description: Questo documento descrive i passaggi necessari per la connessione d
 translation-type: tm+mt
 source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 1%
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
