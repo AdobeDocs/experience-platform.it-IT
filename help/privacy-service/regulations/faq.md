@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;faq;FAQ;regulation;Regulation;regulations;Regulations;privacy;Privacy;
+keywords: ' Experience Platform;home;argomenti popolari;GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;faq;FAQ;Regulation;Regulation;Regulation;Regulations;privacy;privacy;privacy;'
 solution: Experience Platform
 title: Domande frequenti sulla normativa sulla privacy
 topic: troubleshooting
 description: Questo documento contiene le risposte alle domande frequenti sulle normative sulla privacy legali supportate e sulla loro implementazione in Adobe Experience Cloud.
 translation-type: tm+mt
-source-git-commit: b36e6c4e92d6591f87c2cc4f5e1e607056b0957c
+source-git-commit: 00904291ab7e2f119d3886b5aae9be50d4e8bd2b
 workflow-type: tm+mt
-source-wordcount: '1578'
+source-wordcount: '1599'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Questo documento contiene le risposte alle domande frequenti sulle normative sul
 
 >[!NOTE]
 >
->Le definizioni per i vari termini utilizzati in questo documento si trovano nella guida terminologica per la [normativa sulla](terminology.md) privacy.
+>Le definizioni per i vari termini utilizzati in questo documento sono disponibili nella guida [privacy Regulation terminology](terminology.md).
 
 ## Domande generali
 
@@ -27,7 +27,7 @@ Le seguenti domande riguardano tutte le norme sulla privacy supportate dal  Expe
 
 ### Quali sono gli effetti delle normative sulla privacy supportate?
 
-Le norme sulla [privacy supportate dal Experience Cloud](./overview.md)  si applicano a tutte le organizzazioni che memorizzano ed elaborano i dati personali dei cittadini nelle rispettive giurisdizioni, indipendentemente dalla posizione geografica dell&#39;organizzazione.
+Le [norme sulla privacy supportate dal Experience Cloud ](./overview.md) si applicano a tutte le organizzazioni che memorizzano ed elaborano i dati personali dei cittadini all&#39;interno delle rispettive giurisdizioni, indipendentemente dalla posizione geografica dell&#39;organizzazione.
 
 ### Cosa si intende per dati personali?
 
@@ -53,21 +53,21 @@ Anche se le norme sulla privacy riguardano un&#39;ampia serie di informazioni pe
 
 ### Qual è la differenza tra un controller dati e un processore dati?
 
-Un **titolare del trattamento** dei dati è l&#39;entità che determina le finalità, le condizioni e i mezzi del trattamento dei dati personali, mentre il responsabile del trattamento dei **dati** è un&#39;entità che tratta i dati personali per conto del titolare del trattamento.
+Un **titolare del trattamento dei dati** è l&#39;entità che determina le finalità, le condizioni e i mezzi del trattamento dei dati personali, mentre il **responsabile del trattamento dei dati** è un&#39;entità che tratta i dati personali per conto del titolare del trattamento.
 
-Un **titolare del trattamento**&#x200B;è la persona o l&#39;organizzazione che ha il potere e la responsabilità di prendere decisioni in merito alla raccolta, all&#39;uso o alla divulgazione dei dati personali. Un **responsabile del trattamento** dei dati è la persona o l&#39;organizzazione che opera in relazione alla raccolta, all&#39;uso o alla divulgazione dei dati personali e alla direzione del titolare del trattamento.
+Un **titolare del trattamento dei dati** è la persona o l&#39;organizzazione che ha il potere e la responsabilità di prendere decisioni in merito alla raccolta, all&#39;uso o alla divulgazione di dati personali. Un **elaboratore dati** è la persona o l&#39;organizzazione che opera in relazione alla raccolta, all&#39;uso o alla divulgazione dei dati personali e alla direzione del titolare del trattamento.
 
 ### Qual è la differenza tra il consenso esplicito e non ambiguo degli interessati?
 
-**Il consenso** esplicito si riferisce a uno standard di consenso che comporta un&#39;indicazione specifica, informata e univoca dei desideri dell&#39;interessato in forma orale o scritta. In parole povere, l&#39;interessato deve dire letteralmente ed esplicitamente &quot;io consenso&quot; o &quot;io sono d&#39;accordo&quot; affinché il consenso sia considerato esplicito. Inoltre, il consenso deve essere revocato con la stessa facilità con cui viene dato.
+**Il** consenso esplicito si riferisce a uno standard di consenso che comporta un&#39;indicazione specifica, informata e univoca dei desideri dell&#39;interessato in forma orale o scritta. In parole povere, l&#39;interessato deve dire letteralmente ed esplicitamente &quot;io consenso&quot; o &quot;io sono d&#39;accordo&quot; affinché il consenso sia considerato esplicito. Inoltre, il consenso deve essere revocato con la stessa facilità con cui viene dato.
 
-**Il consenso** esplicito (implicito) si riferisce al consenso che non è stato esplicitamente fornito dall’interessato, ma che è comunque privo di ambiguità. Ad esempio, durante il processo di registrazione per un sito Web aziendale, viene segnalato che fornendo un indirizzo e-mail, l&#39;interessato accetta di ricevere e-mail su offerte speciali. Se l&#39;interessato legge l&#39;avviso, l&#39;azione affermativa di immettere l&#39;e-mail è sufficiente per essere considerato un consenso non ambiguo.
+**Il** consenso esplicito (implicito) si riferisce al consenso che non è stato dato esplicitamente dall’interessato, ma che è comunque privo di ambiguità. Ad esempio, durante il processo di registrazione per un sito Web aziendale, viene segnalato che fornendo un indirizzo e-mail, l&#39;interessato accetta di ricevere e-mail su offerte speciali. Se l&#39;interessato legge l&#39;avviso, l&#39;azione affermativa di immettere l&#39;e-mail è sufficiente per essere considerato un consenso non ambiguo.
 
 Per molti regolamenti come il GDPR, è necessario un consenso esplicito per il trattamento di dati personali sensibili, dove non basterà nient&#39;altro che l&#39;&quot;opt in&quot;. Per i dati non sensibili, tuttavia, il consenso esplicito (implicito) è accettabile.
 
 ### I soggetti con dati di età inferiore a quella stabilita possono dare il loro consenso?
 
-Tutte le norme sulla privacy stabiliscono che, se un soggetto è al di sotto di una certa età, non può fornire legalmente il consenso per la raccolta dei propri dati personali. Alcuni regolamenti prevedono che il titolare della responsabilità genitoriale per l&#39;interessato dia il proprio consenso in questi casi, ma non tutti. La tabella seguente elenca l&#39;età minima entro la quale gli interessati possono fornire il proprio consenso per ogni regolamento, con note per ulteriori informazioni:
+Molte norme sulla privacy stabiliscono che, se un soggetto è al di sotto di una certa età, non può fornire legalmente il consenso per la raccolta dei propri dati personali. Alcuni regolamenti prevedono che il titolare della responsabilità genitoriale per l&#39;interessato dia il proprio consenso in questi casi, ma non tutti. La tabella seguente elenca l&#39;età minima entro la quale gli interessati possono fornire il proprio consenso per ogni regolamento, con note per ulteriori informazioni:
 
 | regolamento | Età del consenso | Note |
 | --- | --- | --- |
@@ -75,6 +75,8 @@ Tutte le norme sulla privacy stabiliscono che, se un soggetto è al di sotto di 
 | GDPR (Unione europea) | 16 | <ul><li>Alcuni Stati membri dell&#39;UE possono prevedere a tal fine una legge per un&#39;età INFERIORE, MA NoN INFERIORE a 13 ANNI.</li><li>Il consenso dei genitori deve essere fornito per tutti gli interessati al di sotto del limite di età.</li></ul> |
 | LGPD (Brasile) | 13 | <ul><li>Il consenso dei genitori deve essere fornito per tutti gli interessati al di sotto del limite di età.</li><li>Il consenso può essere concesso da una persona fisica di età compresa tra i 13 e i 18 anni, purché il trattamento dei dati personali sia soggetto nel loro interesse superiore.</li></ul> |
 | PDPA (Thailandia) | 10 | <ul><li>Il consenso dei genitori deve essere fornito per tutti gli interessati al di sotto del limite di età.</li></ul> |
+
+<!-- | New Zealand [!DNL Privacy Act] | 16 | <ul><li>Parental consent must be provided for all data subjects below the age limit in cases where consent is required.</li></ul> | -->
 
 ### Quanti giorni ha un&#39;azienda per rispondere a una richiesta del consumatore di accedere o cancellare informazioni personali?
 
@@ -86,6 +88,8 @@ Presupponendo che l&#39;azienda abbia raccolto informazioni personali e che poss
 | GDPR (Unione europea) | 30 giorni | Se la richiesta è complessa, o sono state effettuate numerose richieste dallo stesso soggetto, la richiesta può essere estesa a 60 giorni. |
 | LGPD (Brasile) | 15 giorni |  |
 | PDPA (Thailandia) | 30 giorni | Se un&#39;azienda non è in grado di rispondere alla richiesta di un soggetto dati entro la finestra di conformità, l&#39;azienda avrà 30 giorni aggiuntivi dalla data in cui non è stata in grado di soddisfare la richiesta di rispondere per iscritto all&#39;interessato. |
+
+<!-- | New Zealand [!DNL Privacy Act] | 20 working days | | -->
 
 ### La mia azienda deve nominare un responsabile della protezione dei dati?
 
@@ -101,17 +105,11 @@ Se le operazioni relative ai dati della tua organizzazione rientrano nella giuri
 
 ### Come posso supportare le richieste di privacy dei consumatori se mantengo i dati coperti dalle normative sulla privacy?
 
-Una volta che avete adottato le misure necessarie per autenticare i consumatori che rientrano nelle giurisdizioni legali appropriate,  Adobe Experience Platform Privacy Service vi consente di inviare le richieste di privacy dei consumatori ad applicazioni  Experience Cloud compatibili. Per ulteriori informazioni, consulta la [[!DNL Privacy Service] panoramica](../home.md) . Per informazioni su come le applicazioni  Experience Cloud possono soddisfare le richieste di privacy, consultare la guida sulle applicazioni [di](../experience-cloud-apps.md)Privacy Service e  Experience Cloud.
+Una volta che avete adottato le misure necessarie per autenticare i consumatori che rientrano nelle giurisdizioni legali appropriate,  Adobe Experience Platform Privacy Service vi consente di inviare le richieste di privacy dei consumatori ad applicazioni  Experience Cloud compatibili. Per ulteriori informazioni, vedere la [[!DNL Privacy Service] panoramica](../home.md). Per informazioni su come le applicazioni  Experience Cloud possono soddisfare le richieste di privacy, fare riferimento alla guida in [applicazioni di Privacy Service e  di Experience Cloud](../experience-cloud-apps.md).
 
 >[!NOTE]
 >
 >Ulteriori indicazioni da parte dell&#39;autorità di regolamentazione californiana sono ancora disponibili in merito a quali tipi di dati sono ammissibili per le richieste di privacy dei consumatori.
-
-###  Adobe offre altri strumenti utili per soddisfare i requisiti CCPA?
-
-Le applicazioni Adobe Experience Cloud forniscono funzioni di gestione e governance dei dati utili per le esigenze di privacy delle aziende. Tra questi strumenti figurano l’etichettatura dell’utilizzo dei dati, i controlli di accesso basati su ruoli, l’offuscamento IP e le funzionalità di hashing.
-
- Adobe ha ricevuto diverse certificazioni sulle proprie pratiche di privacy e sicurezza, come una certificazione ISO 27001 e una convalida del TrustArc GDPR.
 
 ## Domande CCPA
 
@@ -121,8 +119,8 @@ Le seguenti domande riguardano specificamente l&#39;APP.
 
 Come definito da CCPA, i seguenti ruoli si applicano al Adobe  e ai suoi clienti:
 
-*  clienti Adobi (la parte che richiede la raccolta e l&#39;uso di informazioni personali da parte di residenti della California) sarebbe considerata un **Business**.
-*  Adobe, nel suo ruolo di fornitore del servizio, sarebbe considerato un **fornitore** di servizi.
+*  clienti del Adobe (la parte che richiede la raccolta e l&#39;uso di informazioni personali da residenti della California) sarebbe considerata un **Business**.
+*  Adobe, nel suo ruolo di fornitore del servizio, sarebbe considerato un **fornitore di servizi**.
 
 In qualità di fornitore di servizi,  Adobe raccoglie ed elabora informazioni personali per conto dell&#39;Azienda ed è contrattualmente vincolato a utilizzare tali informazioni solo per gli scopi specifici stabiliti nel contratto.
 
@@ -130,13 +128,19 @@ Considerata tale relazione e  Adobe  lingua contrattuale, le informazioni al Ado
 
 Tuttavia,  servizi Adobi possono essere utilizzati per consentire la condivisione e il trasferimento di dati a terzi. Tali trasferimenti di terzi potrebbero essere considerati una &quot;vendita&quot; e richiedere legalmente la divulgazione e il consenso. I clienti devono collaborare con il proprio consulente legale per valutare casi di utilizzo specifici al fine di valutare i requisiti applicabili.
 
+###  Adobe offre altri strumenti utili per soddisfare i requisiti CCPA?
+
+Le applicazioni Adobe Experience Cloud forniscono funzioni di gestione e governance dei dati utili per le esigenze di privacy delle aziende. Tra questi strumenti figurano l’etichettatura dell’utilizzo dei dati, i controlli di accesso basati su ruoli, l’offuscamento IP e le funzionalità di hashing.
+
+ Adobe ha ricevuto diverse certificazioni sulle proprie pratiche di privacy e sicurezza, come una certificazione ISO 27001 e una convalida del TrustArc GDPR.
+
 ## Domande GDPR
 
 Le seguenti domande riguardano in particolare il GDPR.
 
 ### Qual è la differenza tra un regolamento e una direttiva?
 
-Un **regolamento** è un atto legislativo vincolante e deve essere applicato integralmente in tutta l&#39;UE. Una **direttiva** è un atto legislativo che stabilisce un obiettivo che tutti i paesi dell&#39;Unione devono raggiungere, ma spetta ai singoli paesi decidere come.
+Un **regolamento** è un atto legislativo vincolante e deve essere applicato integralmente in tutta l&#39;UE. Una **direttiva** è un atto legislativo che stabilisce un obiettivo che tutti i paesi dell&#39;UE devono raggiungere, ma spetta ai singoli paesi decidere come.
 
 È importante notare che il GDPR è un regolamento, a differenza della precedente legislazione (la direttiva sulla protezione dei dati), che è una direttiva.
 
