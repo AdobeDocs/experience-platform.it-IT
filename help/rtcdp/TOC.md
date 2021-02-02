@@ -5,15 +5,15 @@ audience: user
 user-guide-title: Guida alla piattaforma dati cliente in tempo reale
 user-guide-description: Riunisci dati noti e anonimi provenienti da più sorgenti aziendali per creare profili cliente, segmenti di pubblico da tali profili e attivare tali segmenti in destinazioni di terze parti.
 translation-type: tm+mt
-source-git-commit: 6043ecb8e32dec70b7eaf7695a266d797f97b9f4
+source-git-commit: de2f4b16677ec6e820903b1e586213a132b126be
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '126'
 ht-degree: 41%
 
 ---
 
 
-# Real-time Customer Data Platform Help {#rtcdp}
+# Guida della piattaforma dati cliente in tempo reale {#rtcdp}
 
 * [Panoramica su CDP in tempo reale](overview.md)
 * Introduzione {#intro}
@@ -40,6 +40,7 @@ ht-degree: 41%
 * Segmenti {#segmentation}
    * [Panoramica sulla segmentazione](segmentation/segmentation-overview.md)
    * [Guida al generatore di segmenti](segmentation/segment-builder-guide.md)
+   * [AI cliente](segmentation/customer-ai.md)
 * Origini {#sources}
    * [Panoramica delle origini](sources/sources-overview.md)
    * [Implementare i tag dei siti Web con  lancio Adobe](sources/launch.md)
