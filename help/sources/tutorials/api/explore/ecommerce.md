@@ -1,52 +1,52 @@
 ---
-keywords: Experience Platform;home;popular topics;ecommerce;eCommerce
+keywords: ' Experience Platform;home;argomenti popolari;eCommerce;eCommerce'
 solution: Experience Platform
 title: Esplora una connessione di eCommerce tramite l’API del servizio di flusso
 topic: overview
 description: Questa esercitazione utilizza l’API del servizio di flusso per esplorare le connessioni eCommerce.
 translation-type: tm+mt
-source-git-commit: 4696bcb17427bb50549a315294baf7fbd87ac01d
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '562'
 ht-degree: 2%
 
 ---
 
 
-# Esplora una connessione di eCommerce tramite l&#39; [!DNL Flow Service] API
+# Esplora una connessione di eCommerce utilizzando l&#39;API [!DNL Flow Service]
 
 [!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
-Questa esercitazione utilizza l&#39; [!DNL Flow Service] API per esplorare una connessione di terze parti **[!UICONTROL eCommerce]** .
+Questa esercitazione utilizza l&#39;API [!DNL Flow Service] per esplorare una connessione di terze parti **[!UICONTROL eCommerce]**.
 
 ## Introduzione
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [[!DNL Sources]](../../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi.
-* [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [[!DNL Sources]](../../../home.md):  [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite  [!DNL Platform] i servizi.
+* [[!DNL Sandboxes]](../../../../sandboxes/home.md):  [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola  [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegarsi correttamente a una **[!UICONTROL eCommerce]** connessione utilizzando l&#39; [!DNL Flow Service] API.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegarsi correttamente a una connessione **[!UICONTROL eCommerce]** utilizzando l&#39;API [!DNL Flow Service].
 
 ### Ottenere un ID connessione
 
-Per esplorare la **[!UICONTROL eCommerce]** connessione utilizzando [!DNL Platform] le API, è necessario possedere un ID di connessione valido. Se non disponete già di una connessione per la **[!UICONTROL eCommerce]** connessione con cui desiderate lavorare, potete crearne una tramite la seguente esercitazione:
+Per esplorare la connessione **[!UICONTROL eCommerce]** utilizzando le API [!DNL Platform], è necessario possedere un ID di connessione valido. Se non disponete già di una connessione per la connessione **[!UICONTROL eCommerce]** con cui desiderate lavorare, potete crearne una tramite la seguente esercitazione:
 
 * [Shopificare](../create/ecommerce/shopify.md)
 
 ### Lettura di chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere chiamate](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla [!DNL Experience Platform] risoluzione dei problemi.
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consultate la sezione relativa a [come leggere chiamate API di esempio](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](https://www.adobe.com/go/platform-api-authentication-en) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform], incluse quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui verrà eseguita l&#39;operazione:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -56,7 +56,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 ## Esplora le tabelle di dati
 
-Utilizzando l&#39;ID **[!UICONTROL eCommerce]** connessione, è possibile esplorare le tabelle di dati eseguendo richieste di GET. Utilizzate la seguente chiamata per trovare il percorso della tabella in cui desiderate ispezionare o assimilare [!DNL Platform].
+Utilizzando l&#39;ID di connessione **[!UICONTROL eCommerce]**, puoi esplorare le tabelle di dati eseguendo le richieste di GET. Utilizzate la seguente chiamata per trovare il percorso della tabella che desiderate ispezionare o assimilare in [!DNL Platform].
 
 **Formato API**
 
@@ -66,7 +66,7 @@ GET /connections/{CONNECTION_ID}/explore?objectType=root
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{CONNECTION_ID}` | L&#39;ID **[!UICONTROL eCommerce]** connessione. |
+| `{CONNECTION_ID}` | L&#39;ID connessione **[!UICONTROL eCommerce]**. |
 
 **Richiesta**
 
@@ -81,7 +81,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un array di tabelle dalla **[!UICONTROL eCommerce]** connessione. Trovare la tabella che si desidera inserire [!DNL Platform] e prendere nota della relativa `path` proprietà, in quanto è necessario fornire nel passaggio successivo per ispezionare la sua struttura.
+Una risposta corretta restituisce un array di tabelle dalla connessione **[!UICONTROL eCommerce]**. Trovare la tabella che si desidera inserire in [!DNL Platform] e prendere nota della relativa proprietà `path`, in quanto è necessario fornirla nel passaggio successivo per ispezionare la struttura.
 
 ```json
 [
@@ -118,7 +118,7 @@ Una risposta corretta restituisce un array di tabelle dalla **[!UICONTROL eComme
 
 ##  Inspect la struttura di una tabella
 
-Per esaminare la struttura di una tabella dalla **[!UICONTROL eCommerce]** connessione, eseguire una richiesta di GET specificando il percorso di una tabella all&#39;interno di un parametro di `object` query.
+Per esaminare la struttura di una tabella dalla connessione **[!UICONTROL eCommerce]**, eseguire una richiesta di GET specificando il percorso di una tabella all&#39;interno di un parametro di query `object`.
 
 **Formato API**
 
@@ -128,8 +128,8 @@ GET /connections/{CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | ID connessione della **[!UICONTROL eCommerce]** connessione. |
-| `{TABLE_PATH}` | Percorso di una tabella all&#39;interno della **[!UICONTROL eCommerce]** connessione. |
+| `{CONNECTION_ID}` | L&#39;ID di connessione della connessione **[!UICONTROL eCommerce]**. |
+| `{TABLE_PATH}` | Percorso di una tabella all&#39;interno della connessione **[!UICONTROL eCommerce]**. |
 
 **Richiesta**
 
@@ -144,7 +144,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce la struttura della tabella specificata. I dettagli relativi a ciascuna colonna della tabella si trovano all&#39;interno degli elementi dell&#39; `columns` array.
+Una risposta corretta restituisce la struttura della tabella specificata. I dettagli relativi a ciascuna colonna della tabella si trovano all&#39;interno degli elementi dell&#39;array `columns`.
 
 ```json
 {
@@ -198,4 +198,4 @@ Una risposta corretta restituisce la struttura della tabella specificata. I dett
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai esplorato la tua **[!UICONTROL eCommerce]** connessione, trovato il percorso della tabella in cui desideri immergerti [!DNL Platform]e ottenuto informazioni sulla sua struttura. Potete utilizzare queste informazioni nell&#39;esercitazione successiva per [raccogliere i dati eCommerce e importarli nella piattaforma](../collect/ecommerce.md).
+Seguendo questa esercitazione, hai esplorato la connessione **[!UICONTROL eCommerce]**, trovato il percorso della tabella che desideri inserire in [!DNL Platform] e ottenuto informazioni sulla sua struttura. Puoi utilizzare queste informazioni nell&#39;esercitazione successiva per [raccogliere i dati eCommerce e inserirli nella piattaforma](../collect/ecommerce.md).
