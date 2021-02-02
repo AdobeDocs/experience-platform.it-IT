@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;class registry;Schema Registry;class;Class;classes;Classes;create
+keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;modello dati;registro di classe;schema;classe;classi;classi;creare'
 solution: Experience Platform
 title: Creazione di una classe
 description: L'endpoint /class nell'API del Registro di sistema dello schema consente di gestire le classi XDM a livello di programmazione all'interno dell'applicazione dell'esperienza.
@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '1463'
+source-wordcount: '1495'
 ht-degree: 1%
 
 ---
