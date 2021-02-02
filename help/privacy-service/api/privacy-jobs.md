@@ -1,32 +1,33 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: ' Experience Platform;home;argomenti popolari'
 solution: Experience Platform
-title: Processi
+title: Endpoint per processi di privacy
 topic: developer guide
+description: Scoprite come gestire i processi di privacy per  applicazioni di Experience Cloud utilizzando l'API Privacy Service.
 translation-type: tm+mt
-source-git-commit: 5d06932cbfe8a04589d33590c363412c054fc9fd
+source-git-commit: 238a9200e4b43d41335bed0efab079780b252717
 workflow-type: tm+mt
-source-wordcount: '1309'
+source-wordcount: '1343'
 ht-degree: 1%
 
 ---
 
 
-# Lavori di privacy
+# Endpoint per processi di privacy
 
-Questo documento descrive come lavorare con i processi di privacy utilizzando le chiamate API. Nello specifico, copre l&#39;utilizzo dell&#39; `/job` endpoint nell&#39; [!DNL Privacy Service] API. Prima di leggere questa guida, fate riferimento alla sezione [](./getting-started.md#getting-started) introduttiva per informazioni importanti che è necessario conoscere per eseguire correttamente le chiamate all&#39;API, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
+Questo documento descrive come lavorare con i processi di privacy utilizzando le chiamate API. Nello specifico, copre l&#39;utilizzo dell&#39;endpoint `/job` nell&#39;API [!DNL Privacy Service]. Prima di leggere questa guida, fare riferimento alla sezione [guida introduttiva](./getting-started.md#getting-started) per informazioni importanti che è necessario conoscere per effettuare correttamente chiamate all&#39;API, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
 
 >[!NOTE]
 >
->Se state tentando di gestire richieste di consenso o di rifiuto da parte dei clienti, fate riferimento alla guida [all&#39;endpoint del](./consent.md)consenso.
+>Se stai cercando di gestire richieste di consenso o di rifiuto da parte dei clienti, fai riferimento alla [guida all&#39;endpoint del consenso](./consent.md).
 
 ## Elenca tutti i processi {#list}
 
-Potete visualizzare un elenco di tutti i processi di privacy disponibili all’interno dell’organizzazione effettuando una richiesta di GET all’ `/jobs` endpoint.
+È possibile visualizzare un elenco di tutti i processi di privacy disponibili all&#39;interno dell&#39;organizzazione effettuando una richiesta di GET all&#39;endpoint `/jobs`.
 
 **Formato API**
 
-Questo formato di richiesta utilizza un parametro di `regulation` query sull’ `/jobs` endpoint, pertanto inizia con un punto interrogativo (`?`) come mostrato di seguito. La risposta è impaginata e consente di utilizzare altri parametri di query (`page` e `size`) per filtrare la risposta. Potete separare più parametri utilizzando le e commerciale (`&`).
+Questo formato di richiesta utilizza un parametro di query `regulation` sull&#39;endpoint `/jobs`, quindi inizia con un punto interrogativo (`?`) come mostrato di seguito. La risposta è impaginata e consente di utilizzare altri parametri di query (`page` e `size`) per filtrare la risposta. Potete separare più parametri utilizzando le e commerciale (`&`).
 
 ```http
 GET /jobs?regulation={REGULATION}
@@ -37,9 +38,9 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{REGULATION}` | Il tipo di regolamento per cui eseguire la query. I valori accettati sono `gdpr`, `ccpa`, `lgpd_bra`e `pdpa_tha`. |
+| `{REGULATION}` | Il tipo di regolamento per cui eseguire la query. I valori accettati includono: <ul><li>`gdpr` (Unione europea)</li><li>`ccpa` (California)</li><li>`lgpd_bra` (Brasile)</li><li>`nzpa_nzl` (Nuova Zelanda)</li><li>`pdpa_tha` (Tailandia)</li></ul> |
 | `{PAGE}` | Pagina di dati da visualizzare, con numerazione basata su 0. Il valore predefinito è `0`. |
-| `{SIZE}` | Il numero di risultati da visualizzare su ogni pagina. Il valore predefinito è `1` e il valore massimo è `100`. Se si supera il limite massimo, l&#39;API restituisce un errore di 400 codice. |
+| `{SIZE}` | Il numero di risultati da visualizzare su ogni pagina. Il valore predefinito è `1` e il massimo è `100`. Se si supera il limite massimo, l&#39;API restituisce un errore di 400 codice. |
 
 **Richiesta**
 
@@ -55,21 +56,21 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di processi, con ogni processo contenente dettagli come il relativo `jobId`. In questo esempio, la risposta conterrebbe un elenco di 50 processi, a partire dalla terza pagina dei risultati.
+Una risposta corretta restituisce un elenco di processi, con ogni processo contenente dettagli come `jobId`. In questo esempio, la risposta conterrebbe un elenco di 50 processi, a partire dalla terza pagina dei risultati.
 
 ### Accesso alle pagine successive
 
-Per recuperare il set di risultati successivo in una risposta impaginata, dovete effettuare un&#39;altra chiamata API allo stesso endpoint aumentando il parametro della `page` query di 1.
+Per recuperare il set di risultati successivo in una risposta impaginata, dovete effettuare un&#39;altra chiamata API allo stesso endpoint aumentando il parametro di query `page` di 1.
 
-## Creazione di un processo di privacy {#create-job}
+## Creare un processo di privacy {#create-job}
 
-Prima di creare una nuova richiesta di processo, è necessario innanzitutto raccogliere informazioni identificative sugli interessati di cui si desidera accedere, eliminare o rifiutare la vendita. Una volta ricevuti i dati richiesti, questi devono essere forniti nel payload di una richiesta POST all&#39; `/jobs` endpoint.
+Prima di creare una nuova richiesta di processo, è necessario innanzitutto raccogliere informazioni identificative sugli interessati di cui si desidera accedere, eliminare o rifiutare la vendita. Una volta ricevuti i dati richiesti, questi devono essere forniti nel payload di una richiesta POST all&#39;endpoint `/jobs`.
 
 >[!NOTE]
 >
->Le applicazioni Adobe Experience Cloud compatibili utilizzano valori diversi per identificare gli oggetti dei dati. Per ulteriori informazioni sugli identificatori richiesti per le applicazioni, consultate la guida sulle applicazioni [](../experience-cloud-apps.md) Privacy Service e  Experience Cloud. Per indicazioni più generali su come determinare a quali ID inviare [!DNL Privacy Service], consulta il documento sui dati di [identità nelle richieste](../identity-data.md)di privacy.
+>Le applicazioni Adobe Experience Cloud compatibili utilizzano valori diversi per identificare gli oggetti dei dati. Per ulteriori informazioni sugli identificatori richiesti per le applicazioni, vedere la guida relativa alle applicazioni per Privacy Service e Experienci Cloud [](../experience-cloud-apps.md). Per indicazioni più generali sulla determinazione degli ID da inviare a [!DNL Privacy Service], consultare il documento relativo ai [dati di identità nelle richieste di privacy](../identity-data.md).
 
-L&#39; [!DNL Privacy Service] API supporta due tipi di richieste di lavoro per i dati personali:
+L&#39;API [!DNL Privacy Service] supporta due tipi di richieste di lavoro per i dati personali:
 
 * [Accesso e/o eliminazione](#access-delete): Accesso (lettura) o eliminazione di dati personali.
 * [Rifiuto della vendita](#opt-out): Contrassegnare i dati personali come non da vendere.
@@ -78,7 +79,7 @@ L&#39; [!DNL Privacy Service] API supporta due tipi di richieste di lavoro per i
 >
 >Mentre le richieste di accesso ed eliminazione possono essere combinate come una singola chiamata API, le richieste di rifiuto devono essere effettuate separatamente.
 
-### Creazione di un processo di accesso/eliminazione {#access-delete}
+### Creare un processo di accesso/eliminazione {#access-delete}
 
 Questa sezione illustra come effettuare una richiesta di accesso/eliminazione tramite l’API.
 
@@ -151,13 +152,13 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `companyContexts` **(Obbligatorio)** | Un array contenente informazioni di autenticazione per l&#39;organizzazione. Ogni identificatore elencato include i seguenti attributi: <ul><li>`namespace`: Spazio dei nomi di un identificatore.</li><li>`value`: Il valore dell’identificatore.</li></ul>È **necessario** che uno degli identificatori venga utilizzato `imsOrgId` come `namespace`, con `value` l’ID univoco per l’organizzazione IMS. <br/><br/>Gli identificatori aggiuntivi possono essere qualificatori aziendali specifici per il prodotto (ad esempio, `Campaign`), che identificano un&#39;integrazione con un&#39;applicazione di Adobe  appartenente all&#39;organizzazione. I potenziali valori includono nomi account, codici cliente, ID tenant o altri identificatori dell&#39;applicazione. |
-| `users` **(Obbligatorio)** | Array contenente una raccolta di almeno un utente le cui informazioni si desidera accedere o eliminare. In un&#39;unica richiesta è possibile fornire un massimo di 1000 ID utente. Ciascun oggetto utente contiene le informazioni seguenti: <ul><li>`key`: Identificatore per un utente utilizzato per qualificare gli ID processo separati nei dati della risposta. È consigliabile scegliere una stringa univoca e facilmente identificabile per questo valore in modo che possa essere facilmente reperibile o ricercato in un secondo momento.</li><li>`action`: Un array che elenca le azioni desiderate da eseguire sui dati dell&#39;utente. A seconda delle azioni che si desidera eseguire, l&#39;array deve includere `access`, `delete`o entrambi.</li><li>`userIDs`: Raccolta di identità per l&#39;utente. Il numero di identità che un singolo utente può avere è limitato a nove. Ogni identità è costituita da un `namespace`, un `value`e un qualificatore dello spazio dei nomi (`type`). Per ulteriori dettagli su queste proprietà richieste, vedere l&#39; [appendice](appendix.md) .</li></ul> Per una spiegazione più dettagliata di `users` e `userIDs`, consultate la guida alla [risoluzione dei problemi](../troubleshooting-guide.md#user-ids). |
-| `include` **(Obbligatorio)** | Un array di prodotti  Adobe da includere nell&#39;elaborazione. Se questo valore risulta mancante o vuoto, la richiesta verrà rifiutata. Includete solo i prodotti con cui l&#39;organizzazione dispone di un&#39;integrazione. Per ulteriori informazioni, consulta la sezione sui valori [di prodotto](appendix.md) accettati nell’appendice. |
+| `companyContexts` **(Obbligatorio)** | Un array contenente informazioni di autenticazione per l&#39;organizzazione. Ogni identificatore elencato include i seguenti attributi: <ul><li>`namespace`: Spazio dei nomi di un identificatore.</li><li>`value`: Il valore dell’identificatore.</li></ul>È **obbligatorio** che uno degli identificatori utilizza `imsOrgId` come `namespace`, con il suo `value` contenente l&#39;ID univoco per l&#39;organizzazione IMS. <br/><br/>Gli identificatori aggiuntivi possono essere qualificatori aziendali specifici per il prodotto (ad esempio,  `Campaign`), che identificano un&#39;integrazione con un&#39;applicazione di Adobe  appartenente all&#39;organizzazione. I potenziali valori includono nomi account, codici cliente, ID tenant o altri identificatori dell&#39;applicazione. |
+| `users` **(Obbligatorio)** | Array contenente una raccolta di almeno un utente le cui informazioni si desidera accedere o eliminare. In un&#39;unica richiesta è possibile fornire un massimo di 1000 ID utente. Ciascun oggetto utente contiene le informazioni seguenti: <ul><li>`key`: Identificatore per un utente utilizzato per qualificare gli ID processo separati nei dati della risposta. È consigliabile scegliere una stringa univoca e facilmente identificabile per questo valore in modo che possa essere facilmente reperibile o ricercato in un secondo momento.</li><li>`action`: Un array che elenca le azioni desiderate da eseguire sui dati dell&#39;utente. A seconda delle azioni che si desidera eseguire, l&#39;array deve includere `access`, `delete` o entrambi.</li><li>`userIDs`: Raccolta di identità per l&#39;utente. Il numero di identità che un singolo utente può avere è limitato a nove. Ogni identità è costituita da un `namespace`, un `value` e un qualificatore dello spazio dei nomi (`type`). Per ulteriori informazioni sulle proprietà richieste, vedere l&#39; [appendice](appendix.md).</li></ul> Per una spiegazione più dettagliata di `users` e `userIDs`, vedere la [guida alla risoluzione dei problemi](../troubleshooting-guide.md#user-ids). |
+| `include` **(Obbligatorio)** | Un array di prodotti  Adobe da includere nell&#39;elaborazione. Se questo valore risulta mancante o vuoto, la richiesta verrà rifiutata. Includete solo i prodotti con cui l&#39;organizzazione dispone di un&#39;integrazione. Per ulteriori informazioni, consultare la sezione sui [valori di prodotto accettati](appendix.md) nell&#39;appendice. |
 | `expandIDs` | Una proprietà opzionale che, se impostata su `true`, rappresenta un&#39;ottimizzazione per l&#39;elaborazione degli ID nelle applicazioni (attualmente supportata solo da [!DNL Analytics]). Se omesso, il valore predefinito sarà `false`. |
 | `priority` | Proprietà opzionale utilizzata da  Adobe Analytics che imposta la priorità per l&#39;elaborazione delle richieste. I valori accettati sono `normal` e `low`. Se `priority` viene omesso, il comportamento predefinito è `normal`. |
 | `analyticsDeleteMethod` | Proprietà facoltativa che specifica come  Adobe Analytics deve gestire i dati personali. Per questo attributo sono accettati due possibili valori: <ul><li>`anonymize`: Tutti i dati a cui fa riferimento la raccolta di ID utente specificata vengono resi anonimi. Se `analyticsDeleteMethod` viene omesso, questo è il comportamento predefinito.</li><li>`purge`: Tutti i dati vengono rimossi completamente.</li></ul> |
-| `regulation` **(Obbligatorio)** | Il regolamento per la richiesta. Deve essere uno dei seguenti quattro valori: <ul><li>`gdpr`</li><li>`ccpa`</li><li>`lgpd_bra`</li><li>`pdpa_tha`</li></ul> |
+| `regulation` **(Obbligatorio)** | Il regolamento per il lavoro sulla privacy. Sono accettati i seguenti valori: <ul><li>`gdpr` (Unione europea)</li><li>`ccpa` (California)</li><li>`lgpd_bra` (Brasile)</li><li>`nzpa_nzl` (Nuova Zelanda)</li><li>`pdpa_tha` (Tailandia)</li></ul> |
 
 **Risposta**
 
@@ -209,11 +210,11 @@ Una risposta corretta restituisce i dettagli dei processi appena creati.
 | --- | --- |
 | `jobId` | ID univoco generato dal sistema di sola lettura per un processo. Questo valore viene utilizzato nel passaggio successivo per cercare un processo specifico. |
 
-Dopo aver inviato correttamente la richiesta di processo, potete procedere alla fase successiva del [controllo dello stato](#check-status)del processo.
+Dopo aver inviato correttamente la richiesta di processo, potete procedere al passaggio successivo di [controllo dello stato del processo](#check-status).
 
 ## Verificare lo stato di un processo {#check-status}
 
-È possibile recuperare informazioni su un processo specifico, ad esempio lo stato di elaborazione corrente, includendo tale processo nel percorso di una richiesta di GET `jobId` all&#39; `/jobs` endpoint.
+È possibile recuperare informazioni su un processo specifico, ad esempio lo stato di elaborazione corrente, includendo il processo `jobId` nel percorso di una richiesta di GET all&#39;endpoint `/jobs`.
 
 >[!IMPORTANT]
 >
@@ -227,11 +228,11 @@ GET /jobs/{JOB_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{JOB_ID}` | ID del processo da cercare. Questo ID viene restituito in `jobId` nelle risposte API corrette per la [creazione di un processo](#create-job) e l’ [elencazione di tutti i processi](#list). |
+| `{JOB_ID}` | ID del processo da cercare. Questo ID viene restituito in `jobId` nelle risposte API corrette per la creazione di un processo [e [l&#39;elencazione di tutti i processi](#list).](#create-job) |
 
 **Richiesta**
 
-La richiesta seguente recupera i dettagli del processo `jobId` fornito nel percorso della richiesta.
+La richiesta seguente recupera i dettagli del processo di cui `jobId` viene fornito nel percorso della richiesta.
 
 ```shell
 curl -X GET \
@@ -317,15 +318,15 @@ Una risposta corretta restituisce i dettagli del processo specificato.
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `productStatusResponse` | Ogni oggetto all&#39;interno dell&#39; `productResponses` array contiene informazioni sullo stato corrente del processo rispetto a una specifica [!DNL Experience Cloud] applicazione. |
-| `productStatusResponse.status` | La categoria di stato corrente del processo. Per un elenco delle categorie [di stato](#status-categories) disponibili e i significati corrispondenti, vedere la tabella seguente. |
+| `productStatusResponse` | Ciascun oggetto all&#39;interno dell&#39;array `productResponses` contiene informazioni sullo stato corrente del processo rispetto a un&#39;applicazione [!DNL Experience Cloud] specifica. |
+| `productStatusResponse.status` | La categoria di stato corrente del processo. Vedere la tabella seguente per un elenco delle [categorie di stato disponibili](#status-categories) e i significati corrispondenti. |
 | `productStatusResponse.message` | Stato specifico del processo, corrispondente alla categoria di stato. |
-| `productStatusResponse.responseMsgCode` | Un codice standard per i messaggi di risposta ai prodotti ricevuti da [!DNL Privacy Service]. I dettagli del messaggio sono forniti in `responseMsgDetail`. |
+| `productStatusResponse.responseMsgCode` | Un codice standard per i messaggi di risposta del prodotto ricevuti da [!DNL Privacy Service]. I dettagli del messaggio sono forniti in `responseMsgDetail`. |
 | `productStatusResponse.responseMsgDetail` | Una spiegazione più dettagliata dello stato del processo. I messaggi per stati simili possono variare tra i prodotti. |
-| `productStatusResponse.results` | Per alcuni stati, alcuni prodotti possono restituire un `results` oggetto che fornisce informazioni aggiuntive non coperte da `responseMsgDetail`. |
+| `productStatusResponse.results` | Per alcuni stati, alcuni prodotti possono restituire un oggetto `results` che fornisce informazioni aggiuntive non coperte da `responseMsgDetail`. |
 | `downloadURL` | Se lo stato del processo è `complete`, questo attributo fornisce un URL per scaricare i risultati del processo come file ZIP. Questo file può essere scaricato per 60 giorni al termine del processo. |
 
-### Categorie stato processo {#status-categories}
+### Categorie di stato del processo {#status-categories}
 
 Nella tabella seguente sono elencate le diverse possibili categorie di stato del processo e il relativo significato:
 
@@ -338,8 +339,8 @@ Nella tabella seguente sono elencate le diverse possibili categorie di stato del
 
 >[!NOTE]
 >
->Un processo inviato potrebbe rimanere in uno `processing` stato se presenta un processo figlio dipendente in fase di elaborazione.
+>Un processo inviato potrebbe rimanere in stato `processing` se presenta un processo figlio dipendente in fase di elaborazione.
 
 ## Passaggi successivi
 
-Ora sai come creare e monitorare i processi relativi alla privacy utilizzando l&#39; [!DNL Privacy Service] API. Per informazioni su come eseguire le stesse attività mediante l’interfaccia utente, consultate la panoramica [dell’interfaccia utente](../ui/overview.md)Privacy Service.
+Ora sai come creare e monitorare i processi relativi alla privacy utilizzando l&#39;API [!DNL Privacy Service]. Per informazioni su come eseguire le stesse attività utilizzando l&#39;interfaccia utente, vedere la [panoramica dell&#39;interfaccia utente Privacy Service](../ui/overview.md).
