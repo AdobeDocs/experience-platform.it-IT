@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Authenticate;access
+keywords: ' Experience Platform;home;argomenti popolari;Authenticate;access'
 solution: Experience Platform
 title: Autenticazione e accesso  API Experience Platform
 topic: tutorial
@@ -8,7 +8,7 @@ description: 'Questo documento spiega passo-passo come accedere a un account svi
 translation-type: tm+mt
 source-git-commit: 681a2554111f988ec03d40f23a3b2c8225a077ae
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '872'
 ht-degree: 4%
 
 ---
