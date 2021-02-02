@@ -1,79 +1,37 @@
 ---
-keywords: Experience Platform;home;popular topics;PSQL;psqlconnect to query service;Query service;query service;
+keywords: ' Experience Platform;home;argomenti popolari;PSQL;psqlconnect to query service;Query service;query service;'
 solution: Experience Platform
 title: Connetti con PSQL
 topic: connect
-description: 'PSQL è un''interfaccia della riga di comando che viene visualizzata quando installate Postgres sul computer. Potete installarlo seguendo queste istruzioni. '
+description: 'PSQL è un''interfaccia della riga di comando che viene visualizzata quando si installa PostgreSQL nel computer. Potete installarlo seguendo queste istruzioni. '
 translation-type: tm+mt
-source-git-commit: 8ffe7c68c87cacb6b54d9634a5204fa24a9986ac
+source-git-commit: bc1bbdddd75b11ac180b5e6faa391fd74e5f7e02
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 0%
+source-wordcount: '240'
+ht-degree: 1%
 
 ---
 
 
-# Connetti con PSQL
+# PSQL
 
-PSQL è un&#39;interfaccia della riga di comando che viene visualizzata quando si esegue l&#39;installazione [!DNL Postgres] sul computer. Potete installarlo seguendo queste istruzioni.
+PSQL è un&#39;interfaccia della riga di comando che viene installata quando si installa [!DNL PostgreSQL] nel computer. Questo documento descrive i passaggi per la connessione di PSQL con Adobe Experience Platform [!DNL Query Service].
 
-## Installare i post su Mac
-
-Aprite una finestra terminale ed eseguite i seguenti tre comandi:
-
-```shell
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
-```shell
-brew install postgres
-```
-
-```shell
-which psql
-```
-
-Dopo aver emesso questi comandi, dovrebbero essere visualizzati i seguenti elementi:
-
-```shell
-/usr/local/bin/psql
-```
-
-## Installazione [!DNL Postgres] su un PC
-
-Scarica e installa [!DNL Postgres] da questa [posizione](https://www.postgresql.org/download/windows/).
-
-Modificate la variabile del percorso:
-
-![Immagine](../images/clients/psql/path.png)
-
-Aggiungete le due righe visualizzate che includono &quot;[!DNL Postgres]&quot;.
-
-Salva gli aggiornamenti, quindi apri un prompt dei comandi e digita:
-
-```shell
-psql -V
-```
-
-Dovresti vedere qualcosa di simile a questo:
-
-```shell
-psql (PostgreSQL) 9.5.14
-```
+>[!NOTE]
+>
+> Questa guida presuppone che abbiate già accesso a [!DNL PSQL] e che abbiate familiarità con come usarlo. Ulteriori informazioni su [!DNL PSQL] sono disponibili nella [documentazione ufficiale [!DNL PSQL]](https://www.postgresql.org/docs/current/app-psql.html.
 
 ## Connect PSQL e [!DNL Query Service]
 
-Tornate all’ [!DNL Platform] interfaccia sulla **[!UICONTROL Connect BI Tools]** pagina.
-
-Fate clic **[!UICONTROL copy]** per **[!UICONTROL PSQL Command]**.
+Dopo aver installato PSQL sul computer, è possibile collegare PSQL con Query Service. Tornate all&#39;interfaccia [!DNL Platform], quindi selezionate **[!UICONTROL Queries]**, seguito da **[!UICONTROL Credentials]**.
 
 ![Immagine](../images/clients/psql/connect-bi.png)
+
+Selezionare l&#39;icona per copiare la sezione etichettata **[!UICONTROL PSQL Command]**, quindi incollare la stringa del comando in un terminale o in una finestra della riga di comando prima di premere Invio.
 
 >[!IMPORTANT]
 >
 >Se ti trovi su un PC, utilizza un editor di testo per rimuovere le interruzioni di riga nella stringa del comando, quindi copia la stringa. Inoltre, se si utilizza la versione 12.0 o successiva, sarà necessario aggiungere `PGGSSENCMODE=disable` alla stringa di connessione.
-
-Incollare la stringa del comando in una finestra di terminale o di comando e premere Invio.
 
 Dovreste visualizzare un risultato simile al seguente:
 
@@ -85,3 +43,7 @@ all=>
 ```
 
 Se non visualizzi almeno la versione 10.5, devi scaricare la versione o la versione successiva.
+
+## Passaggi successivi
+
+Ora che si è connessi con [!DNL Query Service], è possibile utilizzare PSQL per scrivere le query. Per ulteriori informazioni su come scrivere ed eseguire query, consultare la guida in [esecuzione query](../best-practices/writing-queries.md).
