@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;ui;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create;data type;data types;
+keywords: ' Experience Platform;home;argomenti più comuni;ui;XDM;XDM sistema;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;schema di registro;schema di registro;schema;schema;schemi;schemi;schemi;creare;tipo di dati;tipi di dati;'
 solution: Experience Platform
 title: Creazione e modifica di tipi di dati tramite l'interfaccia utente
 topic: tutorial
@@ -8,7 +8,7 @@ description: Scoprite come creare e modificare i tipi di dati nell'interfaccia u
 translation-type: tm+mt
 source-git-commit: eca896ca068a02da7ec7379e8ced2105bbca9f2d
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '1106'
 ht-degree: 0%
 
 ---
@@ -89,7 +89,7 @@ Dopo aver aggiunto i campi al tipo di dati, selezionare **[!UICONTROL Save]** pe
 
 Dopo aver creato un tipo di dati, è possibile iniziare a utilizzarlo negli schemi. Poiché gli schemi XDM sono composti da una classe e da zero o più mixin, i campi forniti da un tipo di dati non possono essere aggiunti direttamente a uno schema. Devono invece essere inclusi in una classe o in un mixin.
 
-Per iniziare, seguire i passaggi relativi all&#39;aggiunta di un campo a una classe[ o ](./classes.md#add-fields)aggiunta di un campo a un mixin[. ](./mixins.md#add-fields) Quando si sceglie **[!UICONTROL Type]** per il nuovo campo, selezionare il nome del tipo di dati dal menu a discesa.
+Per iniziare, seguire i passaggi relativi all&#39;aggiunta di un campo a una classe](./classes.md#add-fields) o [aggiunta di un campo a un mixin](./mixins.md#add-fields). [ Quando si sceglie **[!UICONTROL Type]** per il nuovo campo, selezionare il nome del tipo di dati dal menu a discesa.
 
 ## Conversione di un oggetto multicampo in un tipo di dati {#convert}
 
