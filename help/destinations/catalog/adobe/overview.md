@@ -1,21 +1,21 @@
 ---
-keywords: destinations;experience cloud solutions; target;target destination; ad cloud; advertising cloud; audience manager; adobe target destination; target; audience manager destination;
+keywords: destinazioni;soluzioni Experience Cloud; target;destinazione; ad cloud; pubblicità cloud; audience manager; destinazione adobe; target; destinazione del manager dell'audience;
 title: 'Destinazioni Adobe '
 seo-title: 'Destinazioni Adobe '
-description: Gestisci la tua esperienza cliente collegando i dati in CDP in tempo reale ad altre soluzioni Adobe Experience Cloud per il targeting degli annunci, la personalizzazione, l'automazione del marketing e altro ancora
-seo-description: Gestisci la tua esperienza cliente collegando i dati in CDP in tempo reale ad altre soluzioni Adobe Experience Cloud per il targeting degli annunci, la personalizzazione, l'automazione del marketing e altro ancora
+description: Gestisci la tua esperienza cliente connettendo i dati in Piattaforma ad altre soluzioni Adobe Experience Cloud per il targeting degli annunci, la personalizzazione, l'automazione del marketing e altro ancora
+seo-description: Gestisci la tua esperienza cliente connettendo i dati in Piattaforma ad altre soluzioni Adobe Experience Cloud per il targeting degli annunci, la personalizzazione, l'automazione del marketing e altro ancora
 translation-type: tm+mt
-source-git-commit: 0bb1622895b1e0f97fc47b5c61d456bc369746c8
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 13%
+source-wordcount: '243'
+ht-degree: 12%
 
 ---
 
 
-# Adobe Destinations {#adobe-destinations}
+#  Destinazioni Adobe {#adobe-destinations}
 
-Gestisci la tua esperienza cliente collegando i dati in CDP in tempo reale ad altre soluzioni Adobe Experience Cloud per il targeting degli annunci, la personalizzazione, l&#39;automazione del marketing e altro ancora.
+Gestisci la tua esperienza cliente connettendo i dati in Adobe Experience Platform ad altre soluzioni Adobe Experience Cloud per il targeting degli annunci, la personalizzazione, l&#39;automazione del marketing e altro ancora.
 
 ## Connessioni
 
@@ -33,7 +33,7 @@ Per comprendere la differenza tra connessioni ed estensioni, vedere [Estensioni]
 - [Estensione Adobe Media Analytics for Audio and Video](../analytics/adobe-video-analytics.md)
 - [Estensione Adobe Target](../personalization/adobe-target.md)
 - [Estensione Adobe Target v2](../personalization/adobe-target-v2.md)
-- [Estensione DIL Audience Manager](../data-management/aam-dil-extension.md)
+- [Estensione DIL Audience Manager ](../data-management/aam-dil-extension.md)
 - [Estensione del servizio Experience Cloud ID](../personalization/adobe-ecid.md)
 - [Estensione Marketo](../email/marketo.md)
 - [Estensione Marketo Munchkin](../email/marketo-munchkin.md)
@@ -43,4 +43,4 @@ Per comprendere la differenza tra connessioni ed estensioni, vedere [Estensioni]
 
 Utilizzate la funzionalità di condivisione del segmento di Experience Platform  per condividere i segmenti di Experience Platform  in destinazioni   aggiuntive. Per ulteriori informazioni, consultate la pagina seguente (disponibile nel portale della documentazione del Audience Manager ):
 
-- [condivisione di segmenti di Experience Platform con Adobe Audience Manager, Adobe Advertising Cloud e  Adobe Target tramite l&#39;integrazione con i servizi core](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+- [ condivisione di segmenti di Experience Platform con Adobe Audience Manager, Adobe Advertising Cloud e  Adobe Target tramite l&#39;integrazione con i servizi core](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
