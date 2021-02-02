@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;source connectors;source connector;sources;data sources;data source;data source connection
+keywords: ' Experience Platform;home;argomenti comuni;connettori di origine;connettore di origine;origini dati;origine dati;connessione origine dati'
 solution: Experience Platform
 title: Panoramica dei connettori sorgente Adobe Experience Platform
 topic: overview
 description: Adobe Experience Platform consente l'acquisizione di dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Piattaforma. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, database e molti altri.
 translation-type: tm+mt
-source-git-commit: 466cb072537cbf462d2c4d8f3ee4b6eccc0199a0
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '913'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Le origini  Experience Platform sono raggruppate nelle seguenti categorie:
 
 ### Archiviazione cloud
 
-Le origini di archiviazione cloud possono portare i tuoi dati in Platform senza bisogno di scaricare, formattare o caricare. I dati ingeriti possono essere formattati come JSON XDM, parquet XDM o delimitati. Ogni fase del processo è integrata nel flusso di lavoro Origini tramite l&#39;interfaccia utente. Per ulteriori informazioni, consulta i seguenti documenti correlati:
+Le origini di archiviazione cloud possono portare i tuoi dati in Platform senza bisogno di scaricare, formattare o caricare. I dati ingeriti possono essere formattati come JSON XDM, Parquet XDM o delimitati. Ogni fase del processo è integrata nel flusso di lavoro Origini tramite l&#39;interfaccia utente. Per ulteriori informazioni, consulta i seguenti documenti correlati:
 
 - [[!DNL Azure Data Lake Storage Gen2] connettore](connectors/cloud-storage/adls-gen2.md)
 - [[!DNL Azure Blob] connettore](connectors/cloud-storage/blob.md)
