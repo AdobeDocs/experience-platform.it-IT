@@ -5,9 +5,9 @@ user-guide-title: Guida del sistema Experience Data Model (XDM)
 breadcrumb-title: Guida di Data Model (XDM)
 user-guide-description: Utilizza le classi e i mixin Experience Data Model (XDM) per standardizzare i dati dell’esperienza.
 translation-type: tm+mt
-source-git-commit: baf39df0e03170d6b2b5a151e753d4ad269a43fa
+source-git-commit: 2c0dc4d54dcd1dcd17ffec70dbe3b16bb45ee141
 workflow-type: tm+mt
-source-wordcount: '214'
+source-wordcount: '216'
 ht-degree: 23%
 
 ---
@@ -48,12 +48,14 @@ ht-degree: 23%
    * [Dettagli interazione geografica](./data-types/geo-interaction-details.md)
    * [Forma geografica](./data-types/geo-shape.md)
    * [Identità](./data-types/identity.md)
+   * [Person](./data-types/person.md)
    * [Nome della persona](./data-types/person-name.md)
    * [Numero di telefono](./data-types/phone-number.md)
    * [Inserisci contesto](./data-types/place-context.md)
    * [Dettagli POI](./data-types/poi-details.md)
    * [Interazione POI](./data-types/poi-interaction.md)
    * [Indirizzo postale](./data-types/postal-address.md)
+   * [Iscrizione](./data-types/subscription.md)
 * [!UICONTROL Schemas] Interfaccia {#ui}
    * [Panoramica](./ui/overview.md)
    * [Esplora risorse XDM](./ui/explore.md)
