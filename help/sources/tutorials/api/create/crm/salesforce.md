@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Salesforce;salesforce
+keywords: ' Experience Platform;home;argomenti popolari;Salesforce;salesforce'
 solution: Experience Platform
 title: Creare un connettore Salesforce utilizzando l'API del servizio di flusso
 topic: overview
 type: Tutorial
 description: Questa esercitazione utilizza l'API del servizio di flusso per guidarti nei passaggi necessari per connettere la piattaforma a un account Salesforce per la raccolta dei dati CRM.
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '570'
 ht-degree: 2%
 
 ---
@@ -48,7 +48,7 @@ Questa esercitazione fornisce esempi di chiamate API per dimostrare come formatt
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](../../../../../tutorials/authentication.md) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](https://www.adobe.com/go/platform-api-authentication-en) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -122,4 +122,4 @@ Una risposta corretta restituisce la nuova connessione creata, incluso il relati
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato una connessione [!DNL Salesforce] utilizzando l&#39;API [!DNL Flow Service] e hai ottenuto il valore ID univoco della connessione. Puoi utilizzare questo ID nell&#39;esercitazione successiva per imparare a esplorare i sistemi CRM utilizzando l&#39;API del servizio di flusso[.](../../explore/crm.md)
+Seguendo questa esercitazione, hai creato una connessione [!DNL Salesforce] utilizzando l&#39;API [!DNL Flow Service] e hai ottenuto il valore ID univoco della connessione. Puoi utilizzare questo ID nell&#39;esercitazione successiva per imparare a esplorare i sistemi CRM utilizzando l&#39;API del servizio di flusso](../../explore/crm.md).[
