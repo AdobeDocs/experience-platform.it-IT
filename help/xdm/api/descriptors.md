@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;descriptor;Descriptor;descriptors;Descriptors;identity;Identity;friendly name;Friendly name;alternatedisplayinfo;reference;Reference;relationship;Relationship
+keywords: ' Experience Platform;home;argomenti più comuni;api;API;XDM;XDM system;experience data model;Experience Data Model;data model;data model;schema Registry;Schema Registry;Descriptor;Descriptor;Descriptor;Descriptor;Identity;friendly name;Alternativeisplayinfo;reference;Reference;relation;Relationship;Relationship'
 solution: Experience Platform
 title: Descrittori
 description: L'endpoint /descriptors nell'API del Registro di sistema dello schema consente di gestire in modo programmatico i descrittori XDM all'interno dell'applicazione dell'esperienza.
@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1609'
 ht-degree: 1%
 
 ---
@@ -377,7 +377,7 @@ I descrittori delle relazioni descrivono una relazione tra due schemi diversi, b
 
 #### Descrittore identità di riferimento
 
-I descrittori di identità di riferimento forniscono un contesto di riferimento all&#39;identità primaria di un campo dello schema, consentendo di farvi riferimento dai campi di altri schemi. Per poter applicare un descrittore di riferimento, i campi devono essere già etichettati con un descrittore di identità.
+I descrittori di identità di riferimento forniscono un contesto di riferimento all&#39;identità primaria di un campo dello schema, consentendo di farvi riferimento dai campi di altri schemi. Per poter applicare un descrittore di riferimento, i campi devono già essere etichettati con un descrittore di identità.
 
 ```json
 {
