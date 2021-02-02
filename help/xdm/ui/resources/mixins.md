@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;mixin;mixins;
+keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati;ui;workspace;mixin;mixin;'
 solution: Experience Platform
 title: Creazione e modifica di mixin nell’interfaccia utente
 description: Scopri come creare e modificare i mixin nell’interfaccia utente del Experience Platform .
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ La [!DNL Schema Editor] viene visualizzata di nuovo, con il nuovo mixin elencato
 
 Per modificare un mixin esistente, è innanzitutto necessario aprire uno schema che utilizza il mixin all&#39;interno di [!DNL Schema Editor]. È possibile [selezionare uno schema esistente da modificare](./schemas.md#edit) oppure [creare un nuovo schema](./schemas.md#create) e aggiungere il mixin in questione.
 
-Una volta aperto lo schema nell&#39;editor, è possibile iniziare ad aggiungere i campi al mixin[.](#add-fields)
+Una volta aperto lo schema nell&#39;editor, è possibile iniziare ad aggiungere i campi al mixin](#add-fields).[
 
 ## Aggiungere campi a un mixin {#add-fields}
 
