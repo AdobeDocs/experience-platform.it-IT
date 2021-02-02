@@ -1,31 +1,32 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sql syntax;sql;ctas;CTAS;Create table as select
+keywords: ' Experience Platform;home;argomenti popolari;servizio query;servizio query;sintassi SQL;sql;ctas;CTAS;Creare una tabella come selezionato'
 solution: Experience Platform
 title: Sintassi SQL
 topic: syntax
 description: Questo documento mostra la sintassi SQL supportata da Query Service.
 translation-type: tm+mt
-source-git-commit: e02028e9808eab3373143aba7bbc4a115c52746b
+source-git-commit: 14cb1d304fd8aad2ca287f8d66ac6865425db4c5
 workflow-type: tm+mt
-source-wordcount: '2067'
-ht-degree: 1%
+source-wordcount: '2212'
+ht-degree: 0%
 
 ---
 
 
 # Sintassi SQL
 
-[!DNL Query Service] consente di utilizzare SQL ANSI standard per `SELECT` istruzioni e altri comandi limitati. Questo documento mostra la sintassi SQL supportata da [!DNL Query Service].
+[!DNL Query Service] consente di utilizzare SQL ANSI standard per  `SELECT` istruzioni e altri comandi limitati. Questo documento mostra la sintassi SQL supportata da [!DNL Query Service].
 
 ## Definire una query SELECT
 
-La sintassi seguente definisce una `SELECT` query supportata da [!DNL Query Service]:
+La sintassi seguente definisce una query `SELECT` supportata da [!DNL Query Service]:
 
 ```sql
 [ WITH with_query [, ...] ]
 SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ * | expression [ [ AS ] output_name ] [, ...] ]
     [ FROM from_item [, ...] ]
+    [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
     [ WHERE condition ]
     [ GROUP BY grouping_element [, ...] ]
     [ HAVING condition [, ...] ]
@@ -36,7 +37,7 @@ SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ OFFSET start ]
 ```
 
-dove `from_item` può essere:
+dove `from_item` può essere uno dei seguenti:
 
 ```sql
 table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
@@ -56,13 +57,37 @@ e `grouping_element` può essere:
     GROUPING SETS ( grouping_element [, ...] )
 ```
 
-ed `with_query` è:
+e `with_query` è:
 
 ```sql
  with_query_name [ ( column_name [, ...] ) ] AS ( select | values )
  
 TABLE [ ONLY ] table_name [ * ]
 ```
+
+### Clausola SNAPSHOT
+
+Questa clausola può essere utilizzata per leggere i dati in una tabella in modo incrementale in base agli ID snapshot. Un ID snapshot è un indicatore del punto di controllo identificato da un numero, di tipo Long, su una tabella data-ake ogni volta che vi vengono scritti dati. La clausola SNAPSHOT si collega alla relazione della tabella utilizzata accanto a essa.
+
+```sql
+    [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
+```
+
+#### Esempio
+
+```sql
+SELECT * FROM Customers SNAPSHOT SINCE 123;
+
+SELECT * FROM Customers SNAPSHOT AS OF 345;
+
+SELECT * FROM Customers SNAPSHOT BETWEEN 123 AND 345;
+
+SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C 
+
+SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
+```
+
+Una clausola SNAPSHOT funziona con un alias di tabella o di tabella, ma non sopra una sottoquery o una visualizzazione. Una clausola SNAPHOST funzionerà ovunque sia possibile applicare una query SELECT su una tabella.
 
 ### Clausola WHERE ILIKE
 
@@ -73,10 +98,10 @@ La parola chiave ILIKE può essere utilizzata invece di LIKE per effettuare corr
 ```
 
 La logica delle clausole LIKE e ILIKE è la seguente:
-- ```WHERE condition LIKE pattern```, ```~~``` equivale a un pattern
-- ```WHERE condition NOT LIKE pattern```, ```!~~``` equivale a un pattern
-- ```WHERE condition ILIKE pattern```, ```~~*``` equivalente al pattern
-- ```WHERE condition NOT ILIKE pattern```, ```!~~*``` equivalente al pattern
+- ```WHERE condition LIKE pattern```,  ```~~``` equivale a un pattern
+- ```WHERE condition NOT LIKE pattern```,  ```!~~``` equivale a un pattern
+- ```WHERE condition ILIKE pattern```,  ```~~*``` equivalente al pattern
+- ```WHERE condition NOT ILIKE pattern```,  ```!~~*``` equivalente al pattern
 
 
 #### Esempio
@@ -90,7 +115,7 @@ Restituisce i clienti con nomi che iniziano in &quot;A&quot; o &quot;a&quot;.
 
 ## JOINS
 
-Una `SELECT` query con join ha la sintassi seguente:
+Una query `SELECT` con join ha la sintassi seguente:
 
 ```sql
 SELECT statement
@@ -102,7 +127,7 @@ ON join condition
 
 ## UNIONE, INTERSECT ed ECCETTO
 
-Le `UNION`, `INTERSECT`e `EXCEPT` clausole sono supportate per combinare o escludere righe simili da due o più tabelle:
+Le clausole `UNION`, `INTERSECT` e `EXCEPT` sono supportate per combinare o escludere righe simili da due o più tabelle:
 
 ```sql
 SELECT statement 1
@@ -118,9 +143,11 @@ La sintassi seguente definisce una query `CREATE TABLE AS SELECT` (CTAS) support
 CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
 ```
 
-dove,`target_schema_title` è il titolo dello schema XDM. Utilizzare questa clausola solo se si desidera utilizzare uno schema XDM esistente per il nuovo dataset creato dalla query`rowvalidation` CTAS specifica se l&#39;utente desidera la convalida a livello di riga di ogni nuovo batch assimilato per il nuovo dataset creato. Il valore predefinito è &#39;true&#39;
+dove
+`target_schema_title` è il titolo dello schema XDM. Utilizzare questa clausola solo se si desidera utilizzare uno schema XDM esistente per il nuovo dataset creato dalla query CTAS
+`rowvalidation` specifica se l&#39;utente desidera la convalida a livello di riga di ogni nuovo batch acquisito per il nuovo set di dati creato. Il valore predefinito è &#39;true&#39;
 
-ed `select_query` è un&#39; `SELECT` istruzione la cui sintassi è definita sopra in questo documento.
+e `select_query` è un&#39;istruzione `SELECT` la cui sintassi è definita sopra in questo documento.
 
 
 ### Esempio
@@ -132,18 +159,23 @@ CREATE TABLE Chairs WITH (schema='target schema title') AS (SELECT color, count(
 
 Si prega di notare che per una data query CTAS:
 
-1. L&#39; `SELECT` istruzione deve avere un alias per le funzioni di aggregazione quali `COUNT`, `SUM`, `MIN`e così via.
-2. L&#39; `SELECT` istruzione può essere fornita con o senza parentesi ().
+1. L&#39;istruzione `SELECT` deve avere un alias per le funzioni di aggregazione come `COUNT`, `SUM`, `MIN` e così via.
+2. L&#39;istruzione `SELECT` può essere fornita con o senza parentesi ().
+3. L&#39;istruzione `SELECT` può essere fornita con una clausola SNAPSHOT per leggere i delta incrementali nella tabella di destinazione.
+
+```sql
+CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
+```
 
 ## INSERISCI IN
 
-La sintassi seguente definisce una `INSERT INTO` query supportata da [!DNL Query Service]:
+La sintassi seguente definisce una query `INSERT INTO` supportata da [!DNL Query Service]:
 
 ```sql
 INSERT INTO table_name select_query
 ```
 
-dove `select_query` è un&#39; `SELECT` istruzione la cui sintassi è definita sopra in questo documento.
+dove `select_query` è un&#39;istruzione `SELECT` la cui sintassi è definita sopra in questo documento.
 
 ### Esempio
 
@@ -153,8 +185,13 @@ INSERT INTO Customers SELECT SupplierName, City, Country FROM OnlineCustomers;
 
 Si noti che per una data query INSERT INTO:
 
-1. L&#39; `SELECT` istruzione NON DEVE essere racchiusa tra parentesi ().
-2. Lo schema del risultato dell&#39; `SELECT` istruzione deve essere conforme a quello della tabella definita nell&#39; `INSERT INTO` istruzione.
+1. L&#39;istruzione `SELECT` NON DEVE essere racchiusa tra parentesi ().
+2. Lo schema del risultato dell&#39;istruzione `SELECT` deve essere conforme a quello della tabella definita nell&#39;istruzione `INSERT INTO`.
+3. L&#39;istruzione `SELECT` può essere fornita con una clausola SNAPSHOT per leggere i delta incrementali nella tabella di destinazione.
+
+```sql
+INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
+```
 
 ### TABELLA DI RILASCIO
 
@@ -171,13 +208,14 @@ DROP [TEMP] TABLE [IF EXISTS] [db_name.]table_name
 
 ## CREA VISUALIZZAZIONE
 
-La sintassi seguente definisce una `CREATE VIEW` query supportata da [!DNL Query Service]:
+La sintassi seguente definisce una query `CREATE VIEW` supportata da [!DNL Query Service]:
 
 ```sql
 CREATE [ OR REPLACE ] VIEW view_name AS select_query
 ```
 
-Dove `view_name` è il nome della vista da creare e `select_query` è un&#39; `SELECT` istruzione, la cui sintassi è definita sopra in questo documento.
+Dove `view_name` è il nome della visualizzazione da creare
+e `select_query` è un&#39;istruzione `SELECT` la cui sintassi è definita sopra in questo documento.
 
 Esempio:
 
@@ -188,7 +226,7 @@ CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 
 ### VISUALIZZAZIONE A DISCESA
 
-La sintassi seguente definisce una `DROP VIEW` query supportata da [!DNL Query Service]:
+La sintassi seguente definisce una query `DROP VIEW` supportata da [!DNL Query Service]:
 
 ```sql
 DROP VIEW [IF EXISTS] view_name
@@ -213,13 +251,13 @@ Impostare una proprietà, restituire il valore di una proprietà esistente o ele
 SET property_key [ To | =] property_value
 ```
 
-Per restituire il valore per qualsiasi impostazione, utilizzate `SHOW [setting name]`.
+Per restituire il valore per qualsiasi impostazione, utilizzare `SHOW [setting name]`.
 
 ## Comandi PostgreSQL
 
 ### INIZIO
 
-Questo comando viene analizzato e il comando completato viene inviato nuovamente al client. This is the same as the `START TRANSACTION` command.
+Questo comando viene analizzato e il comando completato viene inviato nuovamente al client. È lo stesso del comando `START TRANSACTION`.
 
 ```sql
 BEGIN [ TRANSACTION ]
@@ -243,7 +281,7 @@ CLOSE { name }
 
 ### COMMIT
 
-Non viene eseguita alcuna azione [!DNL Query Service] come risposta all&#39;istruzione della transazione di commit.
+Nessuna azione viene eseguita in [!DNL Query Service] come risposta all&#39;istruzione della transazione di commit.
 
 ```sql
 COMMIT [ WORK | TRANSACTION ]
@@ -280,13 +318,13 @@ DECLARE name CURSOR [ WITH  HOLD ] FOR query
 
 - `name`: Nome del cursore da creare.
 - `WITH HOLD`: Specifica che il cursore può continuare a essere utilizzato dopo che la transazione che l&#39;ha creato ha avuto esito positivo.
-- `query`: Un `SELECT` comando o `VALUES` che fornisce le righe che devono essere restituite dal cursore.
+- `query`: Un  `SELECT` comando  `VALUES` o che fornisce le righe che devono essere restituite dal cursore.
 
 ### ESECUZIONE
 
-`EXECUTE` viene utilizzata per eseguire un&#39;istruzione preparata in precedenza. Poiché le istruzioni preparate esistono solo per la durata di una sessione, l&#39;istruzione preparata deve essere stata creata da un&#39; `PREPARE` istruzione eseguita in precedenza nella sessione corrente.
+`EXECUTE` viene utilizzata per eseguire un&#39;istruzione preparata in precedenza. Poiché le istruzioni preparate esistono solo per la durata di una sessione, l&#39;istruzione preparata deve essere stata creata da un&#39;istruzione `PREPARE` eseguita in precedenza nella sessione corrente.
 
-Se l&#39; `PREPARE` istruzione che ha creato l&#39;istruzione ha specificato alcuni parametri, è necessario trasmettere all&#39; `EXECUTE` istruzione un insieme compatibile di parametri, altrimenti viene generato un errore. Tenere presente che le istruzioni preparate (a differenza delle funzioni) non vengono sovraccaricate in base al tipo o al numero dei relativi parametri. Il nome di un&#39;istruzione preparata deve essere univoco all&#39;interno di una sessione del database.
+Se l&#39;istruzione `PREPARE` che ha creato l&#39;istruzione ha specificato alcuni parametri, è necessario trasmettere un insieme compatibile di parametri all&#39;istruzione `EXECUTE`, altrimenti viene generato un errore. Tenere presente che le istruzioni preparate (a differenza delle funzioni) non vengono sovraccaricate in base al tipo o al numero dei relativi parametri. Il nome di un&#39;istruzione preparata deve essere univoco all&#39;interno di una sessione del database.
 
 ```sql
 EXECUTE name [ ( parameter [, ...] ) ]
@@ -301,9 +339,9 @@ EXECUTE name [ ( parameter [, ...] ) ]
 
 Questo comando visualizza il piano di esecuzione generato dal planner PostgreSQL per l&#39;istruzione fornita. Il piano di esecuzione mostra come verranno analizzate le tabelle a cui fa riferimento l&#39;istruzione — mediante scansione sequenziale normale, scansione indice e così via — e se si fa riferimento a più tabelle, quali algoritmi di join vengono utilizzati per riunire le righe richieste da ogni tabella di input.
 
-La parte più critica del display è il costo stimato di esecuzione del rendiconto, che è la stima del planner in base al tempo necessario per eseguire l&#39;istruzione (misurato in unità di costo arbitrarie, ma tradizionalmente medie del recupero di pagine disco). In realtà, vengono visualizzati due numeri: il costo iniziale prima della prima riga può essere restituito e il costo totale per restituire tutte le righe. Per la maggior parte delle query, il costo totale è ciò che conta, ma in contesti come una sottoquery in EXISTS, il planner sceglie il costo iniziale più piccolo invece del costo totale più piccolo (perché l&#39;esecutore si ferma dopo aver ottenuto una riga, comunque). Inoltre, se si limita il numero di righe da restituire con una `LIMIT` clausola, il planner effettua un&#39;interpolazione appropriata tra i costi dell&#39;endpoint per stimare quale piano è in realtà il più economico.
+La parte più critica del display è il costo stimato di esecuzione del rendiconto, che è la stima del planner in base al tempo necessario per eseguire l&#39;istruzione (misurato in unità di costo arbitrarie, ma tradizionalmente medie del recupero di pagine disco). In realtà, vengono visualizzati due numeri: il costo iniziale prima della prima riga può essere restituito e il costo totale per restituire tutte le righe. Per la maggior parte delle query, il costo totale è ciò che conta, ma in contesti come una sottoquery in EXISTS, il planner sceglie il costo iniziale più piccolo invece del costo totale più piccolo (perché l&#39;esecutore si ferma dopo aver ottenuto una riga, comunque). Inoltre, se si limita il numero di righe da restituire con una clausola `LIMIT`, il planner effettua un&#39;interpolazione appropriata tra i costi dell&#39;endpoint per stimare quale piano è effettivamente il più economico.
 
-L&#39; `ANALYZE` opzione determina l&#39;esecuzione dell&#39;istruzione, non solo pianificata. Quindi, vengono aggiunte statistiche sul tempo di esecuzione effettivo, compreso il tempo totale trascorso all&#39;interno di ciascun nodo del piano (in millisecondi) e il numero totale di righe che ha restituito. Questo è utile per vedere se le stime dell&#39;urbanista sono vicine alla realtà.
+L&#39;opzione `ANALYZE` determina l&#39;esecuzione dell&#39;istruzione, non solo pianificata. Quindi, vengono aggiunte statistiche sul tempo di esecuzione effettivo, compreso il tempo totale trascorso all&#39;interno di ciascun nodo del piano (in millisecondi) e il numero totale di righe che ha restituito. Questo è utile per vedere se le stime dell&#39;urbanista sono vicine alla realtà.
 
 ```sql
 EXPLAIN [ ( option [, ...] ) ] statement
@@ -317,17 +355,17 @@ where option can be one of:
 
 #### Parametri
 
-- `ANALYZE`: Eseguire il comando e visualizzare i tempi di esecuzione effettivi e altre statistiche. Per impostazione predefinita, questo parametro è `FALSE`.
-- `FORMAT`: Specificate il formato di output, che può essere TEXT, XML, JSON o YAML. L&#39;output non testuale contiene le stesse informazioni del formato di output del testo, ma è più semplice da analizzare per i programmi. Per impostazione predefinita, questo parametro è `TEXT`.
-- `statement`: Qualsiasi `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`o `CREATE MATERIALIZED VIEW AS` istruzione di cui si desidera visualizzare il piano di esecuzione.
+- `ANALYZE`: Eseguire il comando e visualizzare i tempi di esecuzione effettivi e altre statistiche. Il valore predefinito di questo parametro è `FALSE`.
+- `FORMAT`: Specificate il formato di output, che può essere TEXT, XML, JSON o YAML. L&#39;output non testuale contiene le stesse informazioni del formato di output del testo, ma è più semplice da analizzare per i programmi. Il valore predefinito di questo parametro è `TEXT`.
+- `statement`: Qualsiasi  `SELECT`,  `INSERT`,  `UPDATE`,  `DELETE`,  `VALUES`,  `EXECUTE`,  `DECLARE`,  `CREATE TABLE AS`o  `CREATE MATERIALIZED VIEW AS` istruzione di cui si desidera visualizzare il piano di esecuzione.
 
 >[!IMPORTANT]
 >
->Tenere presente che l&#39;istruzione viene effettivamente eseguita quando si utilizza l&#39; `ANALYZE` opzione. Anche se `EXPLAIN` scarta l&#39;output che un&#39;istruzione `SELECT` restituisce, gli altri effetti collaterali dell&#39;istruzione hanno luogo come al solito.
+>Tenere presente che l&#39;istruzione viene effettivamente eseguita quando si utilizza l&#39;opzione `ANALYZE`. Sebbene `EXPLAIN` scarti qualsiasi output restituito da un `SELECT`, altri effetti collaterali dell&#39;istruzione si verificano normalmente.
 
 #### Esempio
 
-Per visualizzare il piano per una semplice query su una tabella con una sola `integer` colonna e 10000 righe:
+Per visualizzare il piano per una semplice query su una tabella con una singola `integer` colonna e 10000 righe:
 
 ```sql
 EXPLAIN SELECT * FROM foo;
@@ -342,7 +380,7 @@ EXPLAIN SELECT * FROM foo;
 
 `FETCH` recupera le righe utilizzando un cursore creato in precedenza.
 
-A un cursore è associata una posizione, utilizzata da `FETCH`. La posizione del cursore può essere prima della prima riga del risultato della query, su una riga specifica del risultato o dopo l&#39;ultima riga del risultato. Quando viene creato, un cursore viene posizionato prima della prima riga. Dopo aver recuperato alcune righe, il cursore viene posizionato sulla riga recuperata più di recente. Se `FETCH` si trova al di fuori della fine delle righe disponibili, il cursore rimane posizionato dopo l&#39;ultima riga. In assenza di tale riga, viene restituito un risultato vuoto e i cursori vengono posizionati prima della prima riga o dopo l&#39;ultima riga, a seconda dei casi.
+A un cursore è associata una posizione, che viene utilizzata da `FETCH`. La posizione del cursore può essere prima della prima riga del risultato della query, su una riga specifica del risultato o dopo l&#39;ultima riga del risultato. Quando viene creato, un cursore viene posizionato prima della prima riga. Dopo aver recuperato alcune righe, il cursore viene posizionato sulla riga recuperata più di recente. Se `FETCH` viene eseguito al di fuori della fine delle righe disponibili, il cursore viene posizionato a sinistra dopo l&#39;ultima riga. In assenza di tale riga, viene restituito un risultato vuoto e i cursori vengono posizionati prima della prima riga o dopo l&#39;ultima riga, a seconda dei casi.
 
 ```sql
 FETCH num_of_rows [ IN | FROM ] cursor_name
@@ -355,11 +393,11 @@ FETCH num_of_rows [ IN | FROM ] cursor_name
 
 ### PREPARARE
 
-`PREPARE` crea un&#39;istruzione preparata. Un&#39;istruzione preparata è un oggetto lato server che può essere utilizzato per ottimizzare le prestazioni. Quando l&#39; `PREPARE` istruzione viene eseguita, l&#39;istruzione specificata viene analizzata, analizzata e riscritta. Quando viene emesso un `EXECUTE` comando, l&#39;istruzione preparata viene pianificata ed eseguita. Questa divisione del lavoro evita il lavoro ripetitivo di analisi parse, consentendo al piano di esecuzione di dipendere dai valori specifici dei parametri forniti.
+`PREPARE` crea un&#39;istruzione preparata. Un&#39;istruzione preparata è un oggetto lato server che può essere utilizzato per ottimizzare le prestazioni. Quando l&#39;istruzione `PREPARE` viene eseguita, l&#39;istruzione specificata viene analizzata, analizzata e riscritta. Quando viene emesso un comando `EXECUTE`, l&#39;istruzione preparata viene pianificata ed eseguita. Questa divisione del lavoro evita il lavoro ripetitivo di analisi parse, consentendo al piano di esecuzione di dipendere dai valori specifici dei parametri forniti.
 
-Le istruzioni preparate possono accettare parametri, valori che vengono sostituiti nell&#39;istruzione quando viene eseguita. Durante la creazione dell&#39;istruzione preparata, fare riferimento ai parametri per posizione, utilizzando $1, $2 e così via. Facoltativamente, è possibile specificare un elenco corrispondente di tipi di dati di parametro. Se il tipo di dati di un parametro non è specificato o è dichiarato sconosciuto, il tipo viene ricavato dal contesto in cui il parametro viene fatto riferimento per la prima volta, se possibile. Durante l&#39;esecuzione dell&#39;istruzione, specificare i valori effettivi per questi parametri nell&#39; `EXECUTE` istruzione.
+Le istruzioni preparate possono accettare parametri, valori che vengono sostituiti nell&#39;istruzione quando viene eseguita. Durante la creazione dell&#39;istruzione preparata, fare riferimento ai parametri per posizione, utilizzando $1, $2 e così via. Facoltativamente, è possibile specificare un elenco corrispondente di tipi di dati di parametro. Se il tipo di dati di un parametro non è specificato o è dichiarato sconosciuto, il tipo viene ricavato dal contesto in cui il parametro viene fatto riferimento per la prima volta, se possibile. Durante l&#39;esecuzione dell&#39;istruzione, specificare i valori effettivi di questi parametri nell&#39;istruzione `EXECUTE`.
 
-Le istruzioni preparate durano solo per la durata della sessione corrente del database. Al termine della sessione, l&#39;istruzione preparata viene dimenticata, pertanto deve essere ricreata prima di essere riutilizzata. Ciò significa anche che una singola istruzione preparata non può essere utilizzata da più client di database simultanei. Tuttavia, ogni client può creare una propria istruzione preparata da utilizzare. Le istruzioni preparate possono essere pulite manualmente utilizzando il `DEALLOCATE` comando.
+Le istruzioni preparate durano solo per la durata della sessione corrente del database. Al termine della sessione, l&#39;istruzione preparata viene dimenticata, pertanto deve essere ricreata prima di essere riutilizzata. Ciò significa anche che una singola istruzione preparata non può essere utilizzata da più client di database simultanei. Tuttavia, ogni client può creare una propria istruzione preparata da utilizzare. Le istruzioni preparate possono essere pulite manualmente utilizzando il comando `DEALLOCATE`.
 
 Le istruzioni preparate possono potenzialmente avere il maggiore vantaggio in termini di prestazioni quando una singola sessione viene utilizzata per eseguire un numero elevato di istruzioni simili. La differenza di prestazioni è particolarmente significativa se le istruzioni sono complesse da pianificare o riscrivere, ad esempio se la query include un join di molte tabelle o richiede l&#39;applicazione di più regole. Se l&#39;istruzione è relativamente semplice da pianificare e riscrivere ma relativamente costoso da eseguire, il vantaggio di prestazioni delle istruzioni preparate è meno evidente.
 
@@ -387,7 +425,7 @@ ROLLBACK [ WORK ]
 
 ### SELEZIONA IN
 
-`SELECT INTO` crea una nuova tabella e la riempie con i dati calcolati da una query. I dati non vengono restituiti al client, come accade con una normale `SELECT`. Alle colonne della nuova tabella sono associati i nomi e i tipi di dati alle colonne di output della `SELECT`.
+`SELECT INTO` crea una nuova tabella e la riempie con i dati calcolati da una query. I dati non vengono restituiti al client, come avviene con un `SELECT` normale. Alle colonne della nuova tabella sono associati i nomi e i tipi di dati alle colonne di output della `SELECT`.
 
 ```sql
 [ WITH [ RECURSIVE ] with_query [, ...] ]
@@ -409,13 +447,13 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
 
 #### Parametri
 
-- `TEMPORARAY` o `TEMP`: Se specificato, la tabella viene creata come tabella temporanea.
+- `TEMPORARAY` o  `TEMP`: Se specificato, la tabella viene creata come tabella temporanea.
 - `UNLOGGED:` se specificato, la tabella viene creata come tabella non registrata.
 - `new_table` Nome (eventualmente qualificato per lo schema) della tabella da creare.
 
 #### Esempio
 
-Creare una nuova tabella `films_recent` composta solo da voci recenti dalla tabella `films`:
+Creare una nuova tabella `films_recent` costituita esclusivamente da voci recenti della tabella `films`:
 
 ```sql
 SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
@@ -423,7 +461,7 @@ SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 
 ### MOSTRA
 
-`SHOW` visualizza l&#39;impostazione corrente dei parametri di esecuzione. Queste variabili possono essere impostate utilizzando l&#39; `SET` istruzione, modificando il file di configurazione postgresql.conf, tramite la variabile `PGOPTIONS` ambientale (quando si utilizza libpq o un&#39;applicazione basata su libpq), o tramite i flag della riga di comando all&#39;avvio del server postgres.
+`SHOW` visualizza l&#39;impostazione corrente dei parametri di esecuzione. Queste variabili possono essere impostate utilizzando l&#39;istruzione `SET`, modificando il file di configurazione postgresql.conf, tramite la variabile ambientale `PGOPTIONS` (quando si utilizza libpq o un&#39;applicazione basata su libpq), o tramite i flag della riga di comando all&#39;avvio del server postgres.
 
 ```sql
 SHOW name
@@ -431,7 +469,7 @@ SHOW name
 
 #### Parametri
 
-- `name`:
+- `name`
    - `SERVER_VERSION`: Mostra il numero di versione del server.
    - `SERVER_ENCODING`: Mostra la codifica del set di caratteri lato server. Al momento, questo parametro può essere mostrato ma non impostato, perché la codifica è determinata al momento della creazione del database.
    - `LC_COLLATE`: Mostra le impostazioni internazionali del database per le regole di confronto (ordine del testo). Al momento, questo parametro può essere mostrato ma non impostato, perché l&#39;impostazione è determinata al momento della creazione del database.
@@ -453,7 +491,7 @@ SHOW DateStyle;
 
 ### AVVIA TRANSAZIONE
 
-Questo comando viene analizzato e invia di nuovo il comando completato al client. This is the same as the `BEGIN` command.
+Questo comando viene analizzato e invia di nuovo il comando completato al client. È lo stesso del comando `BEGIN`.
 
 ```sql
 START TRANSACTION [ transaction_mode [, ...] ]
