@@ -1,51 +1,51 @@
 ---
-keywords: Experience Platform;home;popular topics;retrieve failed batches;failed batches;batch ingestion;Batch ingestion;Failed batches;Get failed batches;get failed batches;Download failed batches;download failed batches;
+keywords: ' Experience Platform;home;argomenti popolari;recuperare batch non riusciti;batch non riusciti;ingestione batch;batch non riusciti;Ottenere batch non riusciti;Ottenere batch non riusciti;Download batch non riusciti;download batch con errore;'
 solution: Experience Platform
 title: Recupero batch non riusciti
 topic: tutorial
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare informazioni su un batch con errore utilizzando le API di inserimento dati.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '613'
-ht-degree: 1%
+source-wordcount: '645'
+ht-degree: 2%
 
 ---
 
 
 # Recupero di batch con errore tramite l&#39;API
 
-Adobe Experience Platform offre due metodi per caricare e acquisire i dati. Potete utilizzare l’assimilazione batch, che consente di inserire i dati utilizzando vari tipi di file (come i CSV), oppure l’assimilazione in streaming, per inserire i dati [!DNL Platform] utilizzando gli endpoint in streaming in tempo reale.
+Adobe Experience Platform offre due metodi per caricare e acquisire i dati. Potete utilizzare l&#39;assimilazione batch, che consente di inserire i dati utilizzando vari tipi di file (come i CSV), oppure l&#39;assimilazione in streaming, che consente di inserire i dati in [!DNL Platform] utilizzando gli endpoint in streaming in tempo reale.
 
-Questa esercitazione descrive i passaggi per recuperare informazioni su un batch con errore utilizzando [!DNL Data Ingestion] le API.
+Questa esercitazione descrive i passaggi necessari per recuperare informazioni su un batch con errore utilizzando [!DNL Data Ingestion] API.
 
 ## Introduzione
 
 Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
-- [[!DNL Data Ingestion]](../home.md): I metodi con cui i dati possono essere inviati [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Il framework standard con cui  [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza dei clienti.
+- [[!DNL Data Ingestion]](../home.md): I metodi con cui i dati possono essere inviati  [!DNL Experience Platform].
 
 ### Lettura di chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla [!DNL Experience Platform] risoluzione dei problemi.
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consultate la sezione relativa a [come leggere chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](https://www.adobe.com/go/platform-api-authentication-en) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti al gruppo [!DNL Schema Registry], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform], incluse quelle appartenenti a [!DNL Schema Registry], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui verrà eseguita l&#39;operazione:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+>Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione di [panoramica sulla sandbox](../../sandboxes/home.md).
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva:
 
@@ -135,7 +135,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 }
 ```
 
-Con la risposta di cui sopra, potete vedere quali blocchi del batch sono riusciti e non riusciti. Da questa risposta, potete vedere che il file `part-00000-44c7b669-5e38-43fb-b56c-a0686dabb982-c000.json` contiene il batch con errore.
+Con la risposta di cui sopra, potete vedere quali blocchi del batch sono riusciti e non riusciti. Da questa risposta è possibile vedere che il file `part-00000-44c7b669-5e38-43fb-b56c-a0686dabb982-c000.json` contiene il batch con errore.
 
 ## Download del batch non riuscito
 
@@ -186,7 +186,7 @@ Poiché la data-ora del precedente batch assimilato non era valida, verrà visua
 
 ## Passaggi successivi
 
-Dopo aver letto questa esercitazione, hai imparato a recuperare gli errori dai batch con errore. Per ulteriori informazioni sull&#39;assimilazione batch, leggere la guida [per gli sviluppatori di assimilazione](../batch-ingestion/overview.md)batch. Per ulteriori informazioni sull&#39;assimilazione in streaming, consulta l&#39;esercitazione sulla [creazione di una connessione in streaming](../tutorials/create-streaming-connection.md).
+Dopo aver letto questa esercitazione, hai imparato a recuperare gli errori dai batch con errore. Per ulteriori informazioni sull&#39;assimilazione batch, leggere la [guida per gli sviluppatori di assimilazione batch](../batch-ingestion/overview.md). Per ulteriori informazioni sull&#39;assimilazione in streaming, leggere l&#39; [creazione di un&#39;esercitazione sulla connessione in streaming](../tutorials/create-streaming-connection.md).
 
 ## Appendice
 
@@ -213,7 +213,7 @@ Questo errore viene mostrato se l&#39;ID organizzazione IMS mancante nel payload
 
 ### Schema XDM mancante
 
-Questo errore viene visualizzato se `schemaRef` manca il `xdmMeta` modulo.
+Questo errore viene mostrato se manca `schemaRef` per `xdmMeta`.
 
 ```json
 {
@@ -228,7 +228,7 @@ Questo errore viene visualizzato se `schemaRef` manca il `xdmMeta` modulo.
 
 ### Nome origine mancante
 
-Questo errore viene mostrato se `source` nell’intestazione manca il valore `name`.
+Questo errore viene mostrato se la `source` nell&#39;intestazione manca la `name`.
 
 ```json
 {
@@ -244,7 +244,7 @@ Questo errore viene mostrato se `source` nell’intestazione manca il valore `na
 
 ### Entità XDM mancante
 
-Questo errore viene mostrato se non è `xdmEntity` presente.
+Questo errore viene mostrato se non è presente `xdmEntity`.
 
 ```json
 {
