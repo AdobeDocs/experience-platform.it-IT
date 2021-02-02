@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;audit;audit log;changelog;change log;rpc;
+keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;modello dati;audit;log audit;changelog;change log;rpc;'
 solution: Experience Platform
 title: Guida all'endpoint del registro di controllo
 description: L'endpoint /auditlog nell'API del Registro di sistema dello schema consente di recuperare un elenco cronologico delle modifiche apportate a una risorsa XDM esistente.
@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: eb5e34dc3b48a6fe0757635cad1df08caa68b019
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '396'
 ht-degree: 2%
 
 ---
