@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;region
+keywords: ' Experience Platform;home;argomenti popolari;CJA;analisi dei percorsi;analisi percorsi cliente;orchestrazione campagna;orchestrazione;percorso cliente;percorso;orchestrazione percorso;funzionalità;regione'
 solution: Experience Platform
 title: Supporto per browser e lingue Adobe Experience Platform
 topic: getting started
 description: Adobe Experience Platform è il sistema più potente, flessibile e aperto sul mercato per la creazione e la gestione di soluzioni complete che stimolano l'esperienza dei clienti. Experience Platform consente alle organizzazioni di centralizzare e standardizzare i dati e i contenuti dei clienti da qualsiasi sistema, e di applicare tecniche di data science e apprendimento automatico al fine di migliorare la progettazione e la consegna di esperienze personalizzate.
 translation-type: tm+mt
-source-git-commit: 56116abcb4273b27ffcb3aefed0acf2ac35152fe
+source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
 workflow-type: tm+mt
-source-wordcount: '220'
-ht-degree: 19%
+source-wordcount: '241'
+ht-degree: 18%
 
 ---
 
@@ -19,7 +19,7 @@ L’interfaccia utente di Adobe Experience Platform è progettata per supportare
 
 ## Supporto browser
 
-L’interfaccia utente della piattaforma è progettata per funzionare in modo ottimale nelle versioni **** più recenti di Google Chrome, Safari, Firefox e Microsoft Edge. Potrebbero verificarsi problemi durante l&#39;utilizzo di determinate funzionalità nelle versioni precedenti dei browser.
+L&#39;interfaccia utente della piattaforma è progettata per funzionare in modo ottimale nelle **versioni più recenti** di Google Chrome, Safari, Firefox e Microsoft Edge. Potrebbero verificarsi problemi durante l&#39;utilizzo di determinate funzionalità nelle versioni precedenti dei browser.
 
 | Sistema operativo | Browser supportati |
 |---|---|
@@ -48,8 +48,8 @@ La lingua predefinita dell’interfaccia utente è determinata dalla regione spe
 
 Per modificare la lingua:
 
-1. Selezionare la lingua corrente nel piè di pagina dell&#39;interfaccia [!DNL Experience Platform] utente.
-2. Nelle impostazioni del profilo, fai clic su **[!UICONTROL Change Region]**.
+1. Selezionare la lingua corrente nel piè di pagina dell&#39;interfaccia utente [!DNL Experience Platform].
+2. Nelle impostazioni del profilo, selezionare **[!UICONTROL Change Region]**.
 3. Selezionate la vostra area geografica.
 
 >[!NOTE]
