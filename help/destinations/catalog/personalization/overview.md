@@ -1,13 +1,13 @@
 ---
-keywords: personalization;Personalization
+keywords: personalizzazione;Personalizzazione
 title: Destinazioni di personalizzazione
 seo-title: Destinazioni di personalizzazione
 description: Le piattaforme di personalizzazione raccolgono dati e informazioni dai singoli comportamenti. Queste piattaforme possono aiutare gli esperti di marketing a navigare nei dati anonimi, a distribuire offerte o annunci a potenziali clienti in base alle attività precedenti o come parte di segmenti di pubblico con abitudini simili.
 seo-description: Le piattaforme di personalizzazione raccolgono dati e informazioni dai singoli comportamenti. Queste piattaforme possono aiutare gli esperti di marketing a navigare nei dati anonimi, a distribuire offerte o annunci a potenziali clienti in base alle attività precedenti o come parte di segmenti di pubblico con abitudini simili.
 translation-type: tm+mt
-source-git-commit: 3486aa053be903a3844bbc79a957699b18b30a74
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '170'
 ht-degree: 7%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 7%
 
 Le piattaforme di personalizzazione raccolgono dati e informazioni dai singoli comportamenti. Queste piattaforme possono aiutare gli esperti di marketing a navigare nei dati anonimi, a distribuire offerte o annunci a potenziali clienti in base alle attività precedenti o come parte di segmenti di pubblico con abitudini simili.
 
-Attualmente, Real-time CDP supporta le destinazioni di personalizzazione elencate di seguito. Per informazioni su come connettersi a queste destinazioni, consulta i singoli collegamenti:
+Attualmente, Platform supporta le destinazioni di personalizzazione elencate di seguito. Per informazioni su come connettersi a queste destinazioni, consulta i singoli collegamenti:
 
 * [Estensione Adobe Target](./adobe-target.md)
 * [Estensione Adobe Target v2](./adobe-target-v2.md)
