@@ -1,11 +1,11 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Guida ai connettori di sorgenti di Adobe Experience Platform
-breadcrumb-title: Guida ai connettori di sorgenti
+user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
+breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 translation-type: tm+mt
-source-git-commit: c9552b4d3bbb34c81996344f2e8c7cc385c525b6
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 4%
@@ -138,7 +138,7 @@ ht-degree: 4%
       - [Raccolta dei dati di pagamento](tutorials/api/collect/payments.md)
       - [Raccolta dei dati del protocollo](tutorials/api/collect/protocols.md)
       - [Raccogliere i dati di streaming](tutorials/api/collect/streaming.md)
-   - [Acquisire dati di parquet da un sistema di storage cloud di terze parti](tutorials/api/cloud-storage-parquet.md)
+   - [Acquisire dati Parquet da un sistema di storage cloud di terze parti](tutorials/api/cloud-storage-parquet.md)
    - [Creazione di una connessione dataset](tutorials/api/create-dataset-base-connection.md)
    - [Monitorare i flussi di dati](tutorials/api/monitor.md)
    - [Aggiorna connessioni](tutorials/api/update.md)
