@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;mixin registry;Schema Registry;mixin;Mixin;mixins;Mixins;create
+keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;schema registro;schema;mixin;mixin;mixins;Mixins;create'
 solution: Experience Platform
 title: Creare un mixin
 description: L'endpoint /mixins nell'API del Registro di sistema dello schema consente di gestire i mixin XDM a livello di programmazione all'interno dell'applicazione dell'esperienza.
@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1134'
 ht-degree: 2%
 
 ---
