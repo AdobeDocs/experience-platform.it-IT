@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;field;
+keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati;ui;area di lavoro;campo;'
 solution: Experience Platform
 title: Definire i campi XDM nell'interfaccia utente
 description: Scoprite come definire i campi XDM nell'interfaccia utente del Experience Platform .
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: 70b3ad788dd78c6100782869e3065cc17a54ece1
 workflow-type: tm+mt
-source-wordcount: '1176'
+source-wordcount: '1236'
 ht-degree: 3%
 
 ---
@@ -86,10 +86,10 @@ Durante la definizione di un nuovo campo, nella barra a destra possono essere vi
 | [!UICONTROL Format] | [!UICONTROL String] | Selezionare da un elenco di formati predefiniti per le stringhe a cui il valore deve essere conforme. I formati disponibili includono: <ul><li>[[!UICONTROL date-time]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL email]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL Minimum length] | [!UICONTROL String] | Il numero minimo di caratteri che la stringa deve contenere affinché il valore venga accettato durante l&#39;assimilazione. |
 | [!UICONTROL Maximum length] | [!UICONTROL String] | Il numero massimo di caratteri che la stringa deve contenere affinché il valore venga accettato durante l&#39;assimilazione. |
-| [!UICONTROL Minimum value] | [!UICONTROL Double] | Il valore minimo per il valore Double da accettare durante l&#39;assimilazione. Se il valore assimilato corrisponde esattamente a quello immesso qui, il valore viene accettato. |
-| [!UICONTROL Maximum value] | [!UICONTROL Double] | Il valore massimo per il valore Double da accettare durante l&#39;assimilazione. Se il valore assimilato corrisponde esattamente a quello immesso qui, il valore viene accettato. |
-| [!UICONTROL Exclusive minimum value] | [!UICONTROL Double] | Il valore massimo per il valore Double da accettare durante l&#39;assimilazione. Se il valore assimilato corrisponde esattamente a quello immesso qui, il valore viene rifiutato. |
-| [!UICONTROL Exclusive maximum value] | [!UICONTROL Double] | Il valore massimo per il valore Double da accettare durante l&#39;assimilazione. Se il valore assimilato corrisponde esattamente a quello immesso qui, il valore viene rifiutato. |
+| [!UICONTROL Minimum value] | [!UICONTROL Double] | Il valore minimo per il valore Double da accettare durante l&#39;assimilazione. Se il valore assimilato corrisponde esattamente a quello immesso qui, il valore viene accettato. Quando si utilizza questo vincolo, il vincolo &quot;[!UICONTROL Exclusive minimum value]&quot; deve essere lasciato vuoto. |
+| [!UICONTROL Maximum value] | [!UICONTROL Double] | Il valore massimo per il valore Double da accettare durante l&#39;assimilazione. Se il valore assimilato corrisponde esattamente a quello immesso qui, il valore viene accettato. Quando si utilizza questo vincolo, il vincolo &quot;[!UICONTROL Exclusive maximum value]&quot; deve essere lasciato vuoto. |
+| [!UICONTROL Exclusive minimum value] | [!UICONTROL Double] | Il valore massimo per il valore Double da accettare durante l&#39;assimilazione. Se il valore assimilato corrisponde esattamente a quello immesso qui, il valore viene rifiutato. Quando si utilizza questo vincolo, il vincolo &quot;[!UICONTROL Minimum value]&quot; (non esclusivo) deve essere lasciato vuoto. |
+| [!UICONTROL Exclusive maximum value] | [!UICONTROL Double] | Il valore massimo per il valore Double da accettare durante l&#39;assimilazione. Se il valore assimilato corrisponde esattamente a quello immesso qui, il valore viene rifiutato. Quando si utilizza questo vincolo, il vincolo &quot;[!UICONTROL Maximum value]&quot; (non esclusivo) deve essere lasciato vuoto. |
 
 ## Tipi di campi speciali {#special}
 
