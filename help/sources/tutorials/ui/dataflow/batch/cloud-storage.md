@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;dataflow;Dataflow
+keywords: ' Experience Platform;home;argomenti popolari;flusso di dati;Flusso di dati'
 solution: Experience Platform
 title: Configurare un flusso di dati per un connettore batch di archiviazione cloud nell'interfaccia utente
 topic: overview
 type: Tutorial
 description: Un flusso di dati è un'attività pianificata che recupera e trasferisce dati da un'origine a un set di dati della piattaforma. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account di archiviazione cloud.
 translation-type: tm+mt
-source-git-commit: 7f24413a99b57e28ca2106214b7eedb5b068b045
+source-git-commit: 4e85dc702cda5c6c495a6f7fb70453b7897baa36
 workflow-type: tm+mt
-source-wordcount: '1742'
+source-wordcount: '1810'
 ht-degree: 0%
 
 ---
@@ -16,18 +16,18 @@ ht-degree: 0%
 
 # Configurare un flusso di dati per un connettore batch di archiviazione cloud nell&#39;interfaccia utente
 
-Un flusso di dati è un&#39;attività pianificata che recupera e trasferisce dati da un&#39;origine a un [!DNL Platform] set di dati. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l&#39;account di archiviazione cloud.
+Un flusso di dati è un&#39;attività pianificata che recupera e trasferisce dati da un&#39;origine a un set di dati [!DNL Platform]. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l&#39;account di archiviazione cloud.
 
 ## Introduzione
 
 Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): Il framework standard con cui [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza del cliente.
-   * [Nozioni di base sulla composizione](../../../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
-   * [Esercitazione](../../../../../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): Il framework standard con cui  [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza dei clienti.
+   * [Nozioni di base sulla composizione](../../../../../xdm/schema/composition.md) dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
+   * [Esercitazione](../../../../../xdm/tutorials/create-schema-ui.md) sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
-Inoltre, questa esercitazione richiede l&#39;utilizzo di un account di archiviazione cloud prestabilito. Un elenco di esercitazioni per la creazione di diversi account di archiviazione cloud nell&#39;interfaccia utente è disponibile nella panoramica [dei connettori](../../../../home.md)sorgente.
+Inoltre, questa esercitazione richiede l&#39;utilizzo di un account di archiviazione cloud prestabilito. Un elenco di esercitazioni per la creazione di diversi account di archiviazione cloud nell&#39;interfaccia utente è disponibile nella [panoramica dei connettori sorgente](../../../../home.md).
 
 ### Formati di file supportati
 
@@ -39,24 +39,30 @@ Inoltre, questa esercitazione richiede l&#39;utilizzo di un account di archiviaz
 
 ## Seleziona dati
 
-Dopo aver creato l&#39;account di archiviazione cloud, viene visualizzato il **[!UICONTROL Select data]** passaggio che fornisce un&#39;interfaccia interattiva per esplorare la gerarchia di archiviazione cloud.
+Dopo aver creato l&#39;account di archiviazione cloud, viene visualizzato il passaggio **[!UICONTROL Select data]**, che fornisce un&#39;interfaccia per esplorare la gerarchia dei file di archiviazione cloud.
 
 * La metà sinistra dell&#39;interfaccia è un browser di directory che visualizza i file e le directory del server.
 * La metà destra dell&#39;interfaccia consente di visualizzare in anteprima fino a 100 righe di dati da un file compatibile.
 
-Selezionando una cartella elencata potete scorrere la gerarchia delle cartelle in cartelle più profonde. Dopo aver selezionato un file o una cartella compatibile, viene visualizzato il **[!UICONTROL Select data format]** menu a discesa, in cui è possibile scegliere un formato per visualizzare i dati nella finestra di anteprima.
+Selezionando una cartella elencata potete scorrere la gerarchia delle cartelle in cartelle più profonde. Dopo aver selezionato un file o una cartella compatibile, viene visualizzato il menu a discesa **[!UICONTROL Select data format]**, in cui è possibile scegliere un formato per visualizzare i dati nella finestra di anteprima.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
 
-Una volta completata la finestra di anteprima, potete selezionare **[!UICONTROL Next]** di caricare tutti i file nella cartella selezionata. Per caricare un file specifico, selezionatelo dall’elenco prima di selezionarlo **[!UICONTROL Next]**.
+Selezionate il formato di dati appropriato per il file da acquisire e consentite la compilazione della finestra di anteprima per alcuni secondi.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-preview.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/data-format.png)
+
+Potete impostare un delimitatore personalizzato al momento dell’assimilazione dei file delimitati. Selezionate l&#39;opzione **[!UICONTROL Delimiter]**, quindi selezionate un delimitatore dal menu a discesa. Nel menu sono visualizzate le opzioni utilizzate più di frequente per i delimitatori, inclusi una virgola (`,`), una scheda (`\t`) e una pipe (`|`). In alternativa, è possibile selezionare **[!UICONTROL Custom]** e immettere un delimitatore personalizzato desiderato nella barra di input a comparsa.
+
+Dopo aver selezionato il formato dei dati e impostato il delimitatore, selezionare **[!UICONTROL Next]**.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/delimiter.png)
 
 ### Inviare file Parquet o JSON
 
 Gli account di archiviazione cloud supportano anche i file JSON e Parquet. I file parquet devono essere conformi a XDM, mentre i file JSON non devono presentare reclamo XDM. Per caricare i file JSON o Parquet, selezionate il formato di file appropriato dal browser directory e applicate il formato di dati compatibile dall&#39;interfaccia giusta.
 
-Se il formato dei dati è in JSON, verrà visualizzata un&#39;anteprima con informazioni sui dati all&#39;interno del file. Nella schermata di anteprima, potete selezionare se il JSON è conforme a XDM utilizzando il **[!UICONTROL XDM compliant]** menu a discesa.
+Se il formato dei dati è in JSON, verrà visualizzata un&#39;anteprima con informazioni sui dati all&#39;interno del file. Nella schermata di anteprima, potete selezionare se il JSON è conforme a XDM utilizzando il menu a discesa **[!UICONTROL XDM compliant]**.
 
 Selezionare **[!UICONTROL Next]** per continuare.
 
@@ -70,7 +76,7 @@ Selezionare **[!UICONTROL Next]** per continuare.
 
 ## Mappatura dei campi dati su uno schema XDM
 
-Viene visualizzato il **[!UICONTROL Mapping]** passaggio che fornisce un&#39;interfaccia interattiva per mappare i dati di origine a un [!DNL Platform] dataset. I file di origine formattati in Parquet devono essere conformi a XDM e non devono essere configurati manualmente, mentre i file CSV richiedono la configurazione esplicita della mappatura, ma consentono di scegliere quali campi di dati di origine mappare. I file JSON, se contrassegnati come reclamo XDM, non richiedono la configurazione manuale. Tuttavia, se non è contrassegnato come conforme con XDM, sarà necessario configurare esplicitamente la mappatura.
+Viene visualizzato il passaggio **[!UICONTROL Mapping]**, che fornisce un&#39;interfaccia interattiva per mappare i dati di origine su un set di dati [!DNL Platform]. I file di origine formattati in Parquet devono essere conformi a XDM e non devono essere configurati manualmente, mentre i file CSV richiedono la configurazione esplicita della mappatura, ma consentono di scegliere quali campi di dati di origine mappare. I file JSON, se contrassegnati come reclamo XDM, non richiedono la configurazione manuale. Tuttavia, se non è contrassegnato come conforme con XDM, sarà necessario configurare esplicitamente la mappatura.
 
 Scegliere un set di dati in entrata in cui assimilare i dati. È possibile utilizzare un set di dati esistente o crearne uno nuovo.
 
@@ -80,25 +86,25 @@ Per assimilare i dati in un dataset esistente, selezionare **[!UICONTROL Existin
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-existing-data.png)
 
-Viene visualizzata **[!UICONTROL Select dataset]** la finestra di dialogo. Trovare il set di dati che si desidera utilizzare, selezionarlo, quindi fare clic **[!UICONTROL Continue]**.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Select dataset]**. Trovare il set di dati che si desidera utilizzare, selezionarlo, quindi fare clic su **[!UICONTROL Continue]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-existing-dataset.png)
 
 **Utilizza un nuovo set di dati**
 
-Per assimilare i dati in un nuovo dataset, selezionare **[!UICONTROL New dataset]** e immettere un nome e una descrizione per il dataset nei campi forniti. Per aggiungere uno schema, è possibile immettere un nome di schema esistente nella **[!UICONTROL Select schema]** finestra di dialogo. In alternativa, è possibile selezionare l&#39;opzione **[!UICONTROL Schema advanced search]** per cercare uno schema appropriato.
+Per inserire i dati in un nuovo dataset, selezionare **[!UICONTROL New dataset]** e immettere un nome e una descrizione per il dataset nei campi forniti. Per aggiungere uno schema, è possibile immettere un nome di schema esistente nella finestra di dialogo **[!UICONTROL Select schema]**. In alternativa, è possibile selezionare **[!UICONTROL Schema advanced search]** per cercare uno schema appropriato.
 
-Durante questo passaggio, potete abilitare il dataset per [!DNL Real-time Customer Profile] e creare una visualizzazione olistica degli attributi e dei comportamenti di un&#39;entità. I dati di tutti i set di dati abilitati verranno inclusi in [!DNL Profile] e le modifiche verranno applicate al salvataggio del flusso di dati.
+Durante questo passaggio, potete abilitare il dataset per [!DNL Real-time Customer Profile] e creare una visualizzazione olistica degli attributi e dei comportamenti di un&#39;entità. I dati di tutti i set di dati abilitati saranno inclusi in [!DNL Profile] e le modifiche verranno applicate al salvataggio del flusso di dati.
 
-Attivate il **[!UICONTROL Profile dataset]** pulsante per attivare il set di dati di destinazione per [!DNL Profile].
+Attivate il pulsante **[!UICONTROL Profile dataset]** per abilitare il set di dati di destinazione per [!DNL Profile].
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/new-dataset.png)
 
-Viene visualizzata **[!UICONTROL Select schema]** la finestra di dialogo. Selezionare lo schema da applicare al nuovo dataset, quindi selezionare **[!UICONTROL Done]**.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Select schema]**. Selezionare lo schema che si desidera applicare al nuovo dataset, quindi selezionare **[!UICONTROL Done]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
-In base alle esigenze, è possibile scegliere di mappare direttamente i campi oppure utilizzare le funzioni di mappatura per trasformare i dati di origine in modo da derivare i valori calcolati o calcolati. Per ulteriori informazioni sulla mappatura dei dati e sulle funzioni di mappatura, consulta l’esercitazione sulla [mappatura dei dati CSV ai campi](../../../../../ingestion/tutorials/map-a-csv-file.md)dello schema XDM.
+In base alle esigenze, è possibile scegliere di mappare direttamente i campi oppure utilizzare le funzioni di mappatura per trasformare i dati di origine in modo da derivare i valori calcolati o calcolati. Per ulteriori informazioni sulla mappatura dei dati e sulle funzioni di mappatura, fare riferimento all&#39;esercitazione sulla [mappatura dei dati CSV ai campi dello schema XDM](../../../../../ingestion/tutorials/map-a-csv-file.md).
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
@@ -114,7 +120,7 @@ Non è possibile eseguire la mappatura tra tipi diversi. Ad esempio, non è poss
 >
 >[!DNL Platform] fornisce raccomandazioni intelligenti per i campi mappati automaticamente in base allo schema di destinazione o al dataset selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi di utilizzo.
 
-Selezionate **[!UICONTROL Preview data]** per visualizzare i risultati della mappatura di fino a 100 righe di dati di esempio dal set di dati selezionato.
+Selezionare **[!UICONTROL Preview data]** per visualizzare i risultati della mappatura fino a 100 righe di dati di esempio dal set di dati selezionato.
 
 Durante l&#39;anteprima, la colonna dell&#39;identità ha priorità come primo campo, in quanto rappresenta le informazioni chiave necessarie per convalidare i risultati della mappatura.
 
@@ -124,14 +130,14 @@ Una volta mappati i dati di origine, selezionare **[!UICONTROL Close]**.
 
 ## Pianificare le esecuzioni dell&#39;assimilazione
 
-Viene visualizzato il **[!UICONTROL Scheduling]** passaggio che consente di configurare una pianificazione di assimilazione per l&#39;acquisizione automatica dei dati di origine selezionati tramite le mappature configurate. Nella tabella seguente sono riportati i diversi campi configurabili per la pianificazione:
+Viene visualizzato il passaggio **[!UICONTROL Scheduling]**, che consente di configurare una pianificazione di assimilazione per l&#39;acquisizione automatica dei dati di origine selezionati tramite le mappature configurate. Nella tabella seguente sono riportati i diversi campi configurabili per la pianificazione:
 
 | Campo | Descrizione |
 | --- | --- |
-| Frequenza | Le frequenze selezionabili includono `Once`, `Minute`, `Hour`, `Day`e `Week`. |
+| Frequenza | Le frequenze selezionabili sono `Once`, `Minute`, `Hour`, `Day` e `Week`. |
 | Intervallo | Un numero intero che imposta l&#39;intervallo per la frequenza selezionata. |
 | Ora di inizio | Una marca temporale UTC che indica quando è impostata la prima assimilazione. |
-| Backfill | Un valore booleano che determina i dati inizialmente acquisiti. Se **[!UICONTROL Backfill]** è abilitata, tutti i file correnti nel percorso specificato verranno acquisiti durante la prima assimilazione pianificata. Se **[!UICONTROL Backfill]** è disattivato, verranno assimilati solo i file caricati tra la prima esecuzione dell&#39;assimilazione e l&#39;ora di inizio. I file caricati prima dell&#39;ora di inizio non vengono assimilati. |
+| Backfill | Un valore booleano che determina i dati inizialmente acquisiti. Se **[!UICONTROL Backfill]** è abilitato, tutti i file correnti nel percorso specificato verranno acquisiti durante la prima assimilazione pianificata. Se **[!UICONTROL Backfill]** è disattivato, verranno acquisiti solo i file caricati tra la prima esecuzione dell&#39;assimilazione e l&#39;ora di inizio. I file caricati prima dell&#39;ora di inizio non vengono assimilati. |
 
 I flussi di dati sono progettati per l&#39;acquisizione automatica dei dati su base programmata. Per iniziare, selezionate la frequenza di assimilazione. Quindi, impostare l&#39;intervallo per specificare il periodo tra due esecuzioni di flusso. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero e deve essere impostato su maggiore o uguale a 15.
 
@@ -143,11 +149,11 @@ Specificare i valori per la pianificazione e selezionare **[!UICONTROL Next]**.
 
 ### Impostazione di un flusso di dati per l’assimilazione una tantum
 
-Per impostare l’inserimento una tantum, selezionate la freccia a discesa di frequenza e selezionate **[!UICONTROL Once]**. È possibile continuare a apportare modifiche a un set di flussi di dati per l’inserimento di una frequenza una tantum, purché l’ora di inizio rimanga in futuro. Una volta trascorso l’ora di inizio, il valore di frequenza una tantum non può più essere modificato. **[!UICONTROL Interval]** e non **[!UICONTROL Backfill]** sono visibili quando si configura un flusso di dati per l’assimilazione una tantum.
+Per impostare l&#39;inserimento una tantum, selezionate la freccia a discesa di frequenza e selezionate **[!UICONTROL Once]**. È possibile continuare a apportare modifiche a un set di flussi di dati per l’inserimento di una frequenza una tantum, purché l’ora di inizio rimanga in futuro. Una volta trascorso l’ora di inizio, il valore di frequenza una tantum non può più essere modificato. **[!UICONTROL Interval]** e non  **[!UICONTROL Backfill]** sono visibili quando si configura un flusso di dati per l’assimilazione una tantum.
 
 >[!IMPORTANT]
 >
->È vivamente consigliato pianificare il flusso di dati per l&#39;inserimento una tantum quando si utilizza il connettore [](../../../../connectors/cloud-storage/ftp.md)FTP.
+>È vivamente consigliato pianificare il flusso di dati per l&#39;inserimento una tantum quando si utilizza il [connettore FTP](../../../../connectors/cloud-storage/ftp.md).
 
 Dopo aver fornito i valori appropriati alla pianificazione, selezionare **[!UICONTROL Next]**.
 
@@ -155,9 +161,9 @@ Dopo aver fornito i valori appropriati alla pianificazione, selezionare **[!UICO
 
 ## Fornire i dettagli del flusso di dati
 
-Viene visualizzato il **[!UICONTROL Dataflow detail]** passaggio che consente di assegnare un nome e una breve descrizione al nuovo flusso di dati.
+Viene visualizzato il passaggio **[!UICONTROL Dataflow detail]**, che consente di assegnare un nome e una breve descrizione al nuovo flusso di dati.
 
-Durante questo processo, potete anche abilitare **[!UICONTROL Partial ingestion]** e **[!UICONTROL Error diagnostics]**. L&#39;abilitazione **[!UICONTROL Partial ingestion]** consente di acquisire i dati contenenti errori, fino a una certa soglia che è possibile impostare. L&#39;attivazione **[!UICONTROL Error diagnostics]** fornirà dettagli su eventuali dati errati che vengono inseriti separatamente in batch. Per ulteriori informazioni, consultate la panoramica sull’assimilazione [parziale dei](../../../../../ingestion/batch-ingestion/partial.md)batch.
+Durante questo processo, è inoltre possibile abilitare **[!UICONTROL Partial ingestion]** e **[!UICONTROL Error diagnostics]**. L&#39;abilitazione di **[!UICONTROL Partial ingestion]** consente di assimilare i dati contenenti errori, fino a una determinata soglia che è possibile impostare. Se si abilita **[!UICONTROL Error diagnostics]**, verranno forniti dettagli su tutti i dati errati che vengono inseriti separatamente in batch. Per ulteriori informazioni, vedere la [panoramica sull&#39;assimilazione parziale dei batch](../../../../../ingestion/batch-ingestion/partial.md).
 
 Immettete i valori per il flusso di dati e selezionate **[!UICONTROL Next]**.
 
@@ -165,34 +171,34 @@ Immettete i valori per il flusso di dati e selezionate **[!UICONTROL Next]**.
 
 ## Controllare il flusso di dati
 
-Viene visualizzato il **[!UICONTROL Review]** passaggio che consente di rivedere il nuovo flusso di dati prima della creazione. I dettagli sono raggruppati nelle seguenti categorie:
+Viene visualizzato il passaggio **[!UICONTROL Review]**, che consente di rivedere il nuovo flusso di dati prima che venga creato. I dettagli sono raggruppati nelle seguenti categorie:
 
 * **[!UICONTROL Connection]**: Mostra il tipo di origine, il percorso pertinente del file di origine scelto e la quantità di colonne all&#39;interno del file di origine.
 * **[!UICONTROL Assign dataset & map fields]**: Mostra il set di dati in cui vengono acquisiti i dati di origine, incluso lo schema a cui il set di dati aderisce.
 * **[!UICONTROL Scheduling]**: Mostra il periodo, la frequenza e l’intervallo attivi della pianificazione di assimilazione.
 
-Dopo aver rivisto il flusso di dati, fai clic su **[!UICONTROL Finish]** e consenti la creazione del flusso di dati.
+Dopo aver rivisto il flusso di dati, fate clic su **[!UICONTROL Finish]** e lasciate che sia possibile creare il flusso di dati.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/review.png)
 
 ## Monitorare il flusso di dati
 
-Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti attraverso di esso per visualizzare informazioni su velocità di assimilazione, successo ed errori. Per ulteriori informazioni su come monitorare il flusso di dati, consulta l’esercitazione sul [monitoraggio di account e flussi di dati nell’interfaccia utente](../../monitor.md).
+Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti attraverso di esso per visualizzare informazioni su velocità di assimilazione, successo ed errori. Per ulteriori informazioni su come monitorare il flusso di dati, consulta l&#39;esercitazione su [monitorare gli account e i flussi di dati nell&#39;interfaccia utente](../../monitor.md).
 
 ## Eliminare il flusso di dati
 
-È possibile eliminare i flussi di dati che non sono più necessari o che sono stati creati in modo non corretto utilizzando la **[!UICONTROL Delete]** funzione disponibile nell&#39; **[!UICONTROL Dataflows]** area di lavoro. Per ulteriori informazioni su come eliminare i flussi di dati, consulta l’esercitazione sull’ [eliminazione dei flussi di dati nell’interfaccia](../../delete.md)utente.
+È possibile eliminare i flussi di dati che non sono più necessari o che sono stati creati in modo non corretto utilizzando la funzione **[!UICONTROL Delete]** disponibile nell&#39;area di lavoro **[!UICONTROL Dataflows]**. Per ulteriori informazioni sull&#39;eliminazione dei flussi di dati, vedere l&#39;esercitazione sull&#39;eliminazione dei flussi di dati nell&#39;interfaccia utente](../../delete.md).[
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato con successo un flusso di dati per l&#39;inserimento di dati da un archivio cloud esterno e hai acquisito informazioni sul monitoraggio dei set di dati. Per saperne di più sulla creazione di flussi di dati, puoi completare l’apprendimento guardando il video sottostante. Inoltre, i dati in entrata possono ora essere utilizzati dai [!DNL Platform] servizi a valle come [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i documenti seguenti:
+Seguendo questa esercitazione, hai creato con successo un flusso di dati per l&#39;inserimento di dati da un archivio cloud esterno e hai acquisito informazioni sul monitoraggio dei set di dati. Per saperne di più sulla creazione di flussi di dati, puoi completare l’apprendimento guardando il video sottostante. Inoltre, i dati in entrata possono ora essere utilizzati dai servizi a valle [!DNL Platform] quali [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i documenti seguenti:
 
 * [[!DNL Real-time Customer Profile] panoramica](../../../../../profile/home.md)
 * [[!DNL Data Science Workspace] panoramica](../../../../../data-science-workspace/home.md)
 
 >[!WARNING]
 >
-> L’ [!DNL Platform] interfaccia utente mostrata nel video seguente è obsoleta. Per informazioni sulle ultime funzionalità e videate dell’interfaccia, consulta la documentazione precedente.
+> L&#39;interfaccia [!DNL Platform] mostrata nel video seguente è obsoleta. Per informazioni sulle ultime funzionalità e videate dell’interfaccia, consulta la documentazione precedente.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29695?quality=12&learn=on)
 
@@ -204,14 +210,14 @@ Le sezioni seguenti forniscono informazioni aggiuntive sull&#39;utilizzo dei con
 
 Quando un flusso di dati viene creato, diventa immediatamente attivo e i dati vengono acquisiti in base alla pianificazione specificata. Puoi disattivare un flusso di dati attivo in qualsiasi momento seguendo le istruzioni riportate di seguito.
 
-Nell’area di **[!UICONTROL Sources]** lavoro, fate clic sulla **[!UICONTROL Browse]** scheda. Quindi, fare clic sul nome dell&#39;account associato al flusso di dati attivo che si desidera disattivare.
+Nell&#39;area di lavoro **[!UICONTROL Sources]**, fare clic sulla scheda **[!UICONTROL Browse]**. Quindi, fare clic sul nome dell&#39;account associato al flusso di dati attivo che si desidera disattivare.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/browse.png)
 
-Viene **[!UICONTROL Source activity]** visualizzata la pagina. Selezionate il flusso di dati attivo dall’elenco per aprire la relativa **[!UICONTROL Properties]** colonna sul lato destro dello schermo, che contiene un pulsante di **[!UICONTROL Enabled]** attivazione/disattivazione. Fate clic sull’interruttore per disattivare il flusso di dati. La stessa opzione può essere utilizzata per riattivare un flusso di dati dopo che è stato disabilitato.
+Viene visualizzata la pagina **[!UICONTROL Source activity]**. Selezionate il flusso di dati attivo dall&#39;elenco per aprire la relativa colonna **[!UICONTROL Properties]** sul lato destro dello schermo, che contiene un pulsante di attivazione/disattivazione **[!UICONTROL Enabled]**. Fate clic sull’interruttore per disattivare il flusso di dati. La stessa opzione può essere utilizzata per riattivare un flusso di dati dopo che è stato disabilitato.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/disable-source.png)
 
-### Attivare i dati in entrata per la [!DNL Profile] popolazione
+### Attivare i dati in entrata per la popolazione [!DNL Profile]
 
-I dati in entrata provenienti dal connettore di origine possono essere utilizzati per arricchire e compilare [!DNL Real-time Customer Profile] i dati. Per ulteriori informazioni sulla compilazione [!DNL Real-time Customer Profile] dei dati, consulta l’esercitazione sulla popolazione [di](../../profile.md)profili.
+I dati in entrata provenienti dal connettore di origine possono essere utilizzati per arricchire e compilare i dati [!DNL Real-time Customer Profile]. Per ulteriori informazioni sulla compilazione dei dati [!DNL Real-time Customer Profile], vedere l&#39;esercitazione sulla popolazione di [profili](../../profile.md).
