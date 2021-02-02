@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;streaming multiple messages;multiple messages;
+keywords: ' Experience Platform;home;popolari argomenti;streaming, assimilazione;streaming, messaggi multipli;messaggi multipli;messaggi multipli;'
 solution: Experience Platform
 title: Streaming di più messaggi in una singola richiesta HTTP
 topic: tutorial
 type: Tutorial
 description: Questo documento fornisce un’esercitazione per l’invio di più messaggi ad Adobe Experience Platform all’interno di una singola richiesta HTTP tramite l’assimilazione in streaming.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1492'
 ht-degree: 1%
 
 ---
@@ -16,18 +16,18 @@ ht-degree: 1%
 
 # Invio di più messaggi in una singola richiesta HTTP
 
-Quando si inviano dati in streaming ad Adobe Experience Platform, effettuare numerose chiamate HTTP può essere costoso. Ad esempio, invece di creare 200 richieste HTTP con payload da 1 KB, è molto più efficiente creare 1 richiesta HTTP con 200 messaggi da 1 KB ciascuno, con un singolo payload di 200 KB. Se utilizzati correttamente, il raggruppamento di più messaggi all’interno di una singola richiesta è un metodo eccellente per ottimizzare i dati a cui si sta inviando [!DNL Experience Platform].
+Quando si inviano dati in streaming ad Adobe Experience Platform, effettuare numerose chiamate HTTP può essere costoso. Ad esempio, invece di creare 200 richieste HTTP con payload da 1 KB, è molto più efficiente creare 1 richiesta HTTP con 200 messaggi da 1 KB ciascuno, con un singolo payload di 200 KB. Se utilizzati correttamente, il raggruppamento di più messaggi all&#39;interno di una singola richiesta è un metodo eccellente per ottimizzare i dati inviati a [!DNL Experience Platform].
 
-Questo documento fornisce un&#39;esercitazione per l&#39;invio di più messaggi all&#39; [!DNL Experience Platform] interno di una singola richiesta HTTP tramite l&#39;assimilazione in streaming.
+Questo documento fornisce un&#39;esercitazione per l&#39;invio di più messaggi a [!DNL Experience Platform] all&#39;interno di una singola richiesta HTTP tramite invio in streaming.
 
 ## Introduzione
 
 Questa esercitazione richiede una buona conoscenza di Adobe Experience Platform [!DNL Data Ingestion]. Prima di iniziare questa esercitazione, consulta la seguente documentazione:
 
-- [Panoramica sull](../home.md)’inserimento dei dati: Copre i concetti fondamentali di [!DNL Experience Platform Data Ingestion], compresi i metodi di caricamento e i connettori dati.
-- [Panoramica sull](../streaming-ingestion/overview.md)’assimilazione dello streaming: Il flusso di lavoro e gli elementi costitutivi dell&#39;assimilazione dei flussi di lavoro, ad esempio connessioni di streaming, set di dati [!DNL XDM Individual Profile]e [!DNL XDM ExperienceEvent].
+- [Panoramica sull](../home.md)’inserimento dei dati: Copre i concetti fondamentali di  [!DNL Experience Platform Data Ingestion], compresi i metodi di caricamento e i connettori dati.
+- [Panoramica sull](../streaming-ingestion/overview.md)’assimilazione dello streaming: Il flusso di lavoro e gli elementi costitutivi dell&#39;assimilazione dei flussi di lavoro, ad esempio connessioni di streaming, set di dati  [!DNL XDM Individual Profile]e  [!DNL XDM ExperienceEvent].
 
-Questa esercitazione richiede anche di completare l&#39;esercitazione [Autenticazione su Adobe Experience Platform](../../tutorials/authentication.md) per effettuare correttamente le chiamate alle [!DNL Platform] API. Completando l&#39;esercitazione sull&#39;autenticazione viene fornito il valore per l&#39;intestazione Autorizzazione richiesto da tutte le chiamate API in questa esercitazione. L’intestazione è mostrata nelle chiamate di esempio come segue:
+Questa esercitazione richiede inoltre di aver completato l&#39;esercitazione [Authentication to Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) per eseguire correttamente le chiamate alle [!DNL Platform] API. Completando l&#39;esercitazione sull&#39;autenticazione viene fornito il valore per l&#39;intestazione Autorizzazione richiesto da tutte le chiamate API in questa esercitazione. L’intestazione è mostrata nelle chiamate di esempio come segue:
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 
@@ -37,7 +37,7 @@ Tutte le richieste POST richiedono un&#39;intestazione aggiuntiva:
 
 ## Creare una connessione in streaming
 
-Prima di avviare lo streaming dei dati su [!DNL Experience Platform], è necessario creare una connessione in streaming. Leggi la guida [per la creazione di una connessione](./create-streaming-connection.md) in streaming.
+Prima di avviare lo streaming dei dati su [!DNL Experience Platform], è necessario creare una connessione di streaming. Leggi la [guida alla creazione di una connessione in streaming](./create-streaming-connection.md) per apprendere come creare una connessione in streaming.
 
 Dopo la registrazione di una connessione di streaming, l&#39;utente, in qualità di produttore di dati, avrà un URL univoco che può essere utilizzato per lo streaming dei dati su Platform.
 
@@ -45,9 +45,9 @@ Dopo la registrazione di una connessione di streaming, l&#39;utente, in qualità
 
 L&#39;esempio seguente mostra come inviare più messaggi a uno specifico dataset all&#39;interno di una singola richiesta HTTP. Inserire l&#39;ID del set di dati nell&#39;intestazione del messaggio per consentirne l&#39;inserimento diretto.
 
-Potete ottenere l&#39;ID per un set di dati esistente utilizzando l&#39; [!DNL Platform] interfaccia utente o un&#39;operazione di elenco nell&#39;API. L&#39;ID del set di dati si trova [Experience Platform](https://platform.adobe.com) andando alla **[!UICONTROL Datasets]** scheda, facendo clic sul set di dati per il quale si desidera utilizzare l&#39;ID e copiando la stringa dal campo ID del set di dati della **[!UICONTROL Info]** scheda. Per informazioni su come recuperare i set di dati tramite l’API, consultate la panoramica [del servizio](../../catalog/home.md) catalogo.
+Potete ottenere l&#39;ID per un set di dati esistente utilizzando l&#39;interfaccia [!DNL Platform] o un&#39;operazione di elenco nell&#39;API. L&#39;ID del set di dati si trova in [ Experience Platform](https://platform.adobe.com) andando alla scheda **[!UICONTROL Datasets]**, facendo clic sul set di dati per il quale si desidera utilizzare l&#39;ID e copiando la stringa dal campo ID del set di dati nella scheda **[!UICONTROL Info]**. Per informazioni su come recuperare i set di dati mediante l&#39;API, consultate la [Panoramica del servizio catalogo](../../catalog/home.md).
 
-Invece di utilizzare un dataset esistente, potete creare un nuovo dataset. Per ulteriori informazioni sulla creazione di un set di dati tramite API [, consultate l&#39;esercitazione](../../catalog/api/create-dataset.md) Create a dataset using API (Creazione di un set di dati tramite API).
+Invece di utilizzare un dataset esistente, potete creare un nuovo dataset. Per ulteriori informazioni sulla creazione di un set di dati tramite le API, leggere l&#39;esercitazione [create un set di dati utilizzando le API.](../../catalog/api/create-dataset.md)
 
 **Formato API**
 
@@ -208,22 +208,22 @@ Una risposta corretta restituisce uno stato HTTP 207 (stato multiplo). La revisi
 }
 ```
 
-Per ulteriori informazioni sui codici di stato, consulta la tabella dei codici [di](#response-codes) risposta nell’appendice di questa esercitazione.
+Per ulteriori informazioni sui codici di stato, consultare la tabella [response codes](#response-codes) nell&#39;appendice di questa esercitazione.
 
 ## Identificare i messaggi non riusciti
 
 Rispetto all&#39;invio di una richiesta con un singolo messaggio, quando si invia una richiesta HTTP con più messaggi, è necessario tenere in considerazione altri fattori, quali: come identificare quando i dati non sono stati inviati, quali messaggi specifici non sono stati inviati e come possono essere recuperati, e cosa accade ai dati che hanno esito positivo quando altri messaggi nella stessa richiesta non arrivano a destinazione.
 
-Prima di continuare con questa esercitazione, è consigliabile rivedere la guida al [recupero dei batch](../quality/retrieve-failed-batches.md) non riusciti.
+Prima di continuare con questa esercitazione, si consiglia di rivedere la guida [recupero batch non riusciti](../quality/retrieve-failed-batches.md).
 
 ### Invia payload di richiesta con messaggi validi e non validi
 
 L&#39;esempio seguente mostra cosa accade quando il batch include messaggi validi e non validi.
 
 Il payload della richiesta è un array di oggetti JSON che rappresenta l&#39;evento nello schema XDM. Per la corretta convalida del messaggio è necessario rispettare le seguenti condizioni:
-- Il `imsOrgId` campo nell’intestazione del messaggio deve corrispondere alla definizione di ingresso. Se il payload della richiesta non include un `imsOrgId` campo, il [!DNL Data Collection Core Service] (DCCS) aggiungerà il campo automaticamente.
-- L&#39;intestazione del messaggio deve fare riferimento a uno schema XDM esistente creato nell&#39; [!DNL Platform] interfaccia utente.
-- Il `datasetId` campo deve fare riferimento a un dataset esistente in [!DNL Platform], e il relativo schema deve corrispondere allo schema fornito nell&#39; `header` oggetto all&#39;interno di ciascun messaggio incluso nel corpo della richiesta.
+- Il campo `imsOrgId` nell&#39;intestazione del messaggio deve corrispondere alla definizione di ingresso. Se il payload della richiesta non include un campo `imsOrgId`, il campo [!DNL Data Collection Core Service] (DCCS) verrà aggiunto automaticamente.
+- L&#39;intestazione del messaggio deve fare riferimento a uno schema XDM esistente creato nell&#39;interfaccia utente [!DNL Platform].
+- Il campo `datasetId` deve fare riferimento a un dataset esistente in [!DNL Platform] e il relativo schema deve corrispondere allo schema fornito nell&#39;oggetto `header` all&#39;interno di ciascun messaggio incluso nel corpo della richiesta.
 
 **Formato API**
 
@@ -462,7 +462,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
 
 **Risposta**
 
-Il payload di risposta include uno stato per ciascun messaggio insieme a un GUID nel `xactionId` quale è possibile utilizzare il tracciamento.
+Il payload di risposta include uno stato per ciascun messaggio insieme a un GUID in `xactionId` che può essere utilizzato per il tracciamento.
 
 ```JSON
 {
@@ -489,7 +489,7 @@ Il payload di risposta include uno stato per ciascun messaggio insieme a un GUID
 }
 ```
 
-La risposta di esempio riportata sopra mostra i messaggi di errore per la richiesta precedente. Confrontando questa risposta alla precedente risposta valida, potete osservare che la richiesta ha avuto esito positivo, con un messaggio che è stato acquisito correttamente e tre messaggi che hanno avuto esito negativo. Si noti che entrambe le risposte restituiscono un codice di stato &#39;207&#39;. Per ulteriori informazioni sui codici di stato, consulta la tabella dei codici [di](#response-codes) risposta nell’appendice di questa esercitazione.
+La risposta di esempio riportata sopra mostra i messaggi di errore per la richiesta precedente. Confrontando questa risposta alla precedente risposta valida, potete osservare che la richiesta ha avuto esito positivo, con un messaggio che è stato acquisito correttamente e tre messaggi che hanno avuto esito negativo. Si noti che entrambe le risposte restituiscono un codice di stato &#39;207&#39;. Per ulteriori informazioni sui codici di stato, consultare la tabella [response codes](#response-codes) nell&#39;appendice di questa esercitazione.
 
 Il primo messaggio è stato inviato correttamente a [!DNL Platform] e non viene influenzato dai risultati degli altri messaggi. Di conseguenza, quando si tenta di inviare nuovamente i messaggi non riusciti, non è necessario includere nuovamente il messaggio.
 
@@ -510,28 +510,28 @@ Il secondo messaggio non è riuscito perché mancava un corpo del messaggio. La 
     },
 ```
 
-Il terzo messaggio non è riuscito a causa di un ID organizzazione IMS non valido utilizzato nell&#39;intestazione. L&#39;organizzazione IMS deve corrispondere al {CONNECTION_ID} a cui si sta tentando di inviare. Per determinare l&#39;ID organizzazione IMS corrispondente alla connessione di streaming in uso, potete eseguire una `GET inlet` richiesta utilizzando il [[!DNL Data Ingestion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Consultate [il recupero di una connessione](./create-streaming-connection.md#get-data-collection-url) in streaming per un esempio di come recuperare le connessioni in streaming create in precedenza.
+Il terzo messaggio non è riuscito a causa di un ID organizzazione IMS non valido utilizzato nell&#39;intestazione. L&#39;organizzazione IMS deve corrispondere al {CONNECTION_ID} a cui si sta tentando di inviare. Per determinare l&#39;ID organizzazione IMS corrispondente alla connessione di streaming in uso, è possibile eseguire una richiesta `GET inlet` utilizzando [[!DNL Data Ingestion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Per un esempio di come recuperare le connessioni di streaming create in precedenza, vedere [recupero di una connessione di streaming](./create-streaming-connection.md#get-data-collection-url).
 
-Il quarto messaggio non è riuscito perché non seguiva lo schema XDM previsto. L&#39;elemento `xdmSchema` incluso nell&#39;intestazione e nel corpo della richiesta non corrisponde allo schema XDM del `{DATASET_ID}`. La correzione dello schema nell&#39;intestazione e nel corpo del messaggio consente di superare la convalida DCCS e di inviarlo correttamente [!DNL Platform]. È inoltre necessario aggiornare il corpo del messaggio in modo che corrisponda allo schema XDM dell&#39; `{DATASET_ID}` istanza affinché possa trasmettere la convalida del flusso in [!DNL Platform]. Per ulteriori informazioni su cosa accade ai messaggi che sono stati inviati correttamente alla piattaforma, consulta la sezione [Conferma messaggi acquisiti](#confirm-messages-ingested) in questa esercitazione.
+Il quarto messaggio non è riuscito perché non seguiva lo schema XDM previsto. Il `xdmSchema` incluso nell&#39;intestazione e nel corpo della richiesta non corrisponde allo schema XDM del `{DATASET_ID}`. La correzione dello schema nell&#39;intestazione e nel corpo del messaggio consente di superare la convalida DCCS e di inviarlo correttamente a [!DNL Platform]. È inoltre necessario aggiornare il corpo del messaggio in modo che corrisponda allo schema XDM del `{DATASET_ID}` affinché trasmetta la convalida dello streaming su [!DNL Platform]. Per ulteriori informazioni su cosa accade ai messaggi che sono stati inviati correttamente alla piattaforma, vedere la sezione [conferma messaggi ingeriti](#confirm-messages-ingested) di questa esercitazione.
 
 ### Recupero di messaggi non riusciti da [!DNL Platform]
 
 I messaggi con errore vengono identificati da un codice di stato dell&#39;errore nell&#39;array di risposte.
-I messaggi non validi vengono raccolti e memorizzati in un batch di &quot;errore&quot; all&#39;interno del set di dati specificato da `{DATASET_ID}`.
+I messaggi non validi vengono raccolti e memorizzati in un batch &quot;error&quot; all&#39;interno del dataset specificato da `{DATASET_ID}`.
 
-Leggere la guida [al recupero dei batch](../quality/retrieve-failed-batches.md) non riusciti per ulteriori informazioni sul recupero dei messaggi batch non riusciti.
+Leggere la guida [recupero batch non riusciti](../quality/retrieve-failed-batches.md) per ulteriori informazioni sul recupero dei messaggi batch non riusciti.
 
 ## Conferma messaggi inviati
 
-I messaggi che superano la convalida DCCS vengono inviati in streaming a [!DNL Platform]. Su [!DNL Platform]questa opzione, i messaggi batch vengono sottoposti a test mediante convalida in streaming prima di essere trasferiti nell&#39; [!DNL Data Lake]. Lo stato dei batch, con esito positivo o meno, viene visualizzato all&#39;interno del set di dati specificato da `{DATASET_ID}`.
+I messaggi che superano la convalida DCCS vengono inviati in streaming a [!DNL Platform]. In [!DNL Platform], i messaggi batch vengono sottoposti a test di convalida in streaming prima di essere trasferiti nella cartella [!DNL Data Lake]. Lo stato dei batch, con esito positivo o meno, viene visualizzato all&#39;interno del set di dati specificato da `{DATASET_ID}`.
 
-Per visualizzare lo stato dei messaggi batch che sono stati inviati correttamente [!DNL Platform] tramite l&#39;interfaccia utente [del Experience Platform](https://platform.adobe.com) , passare alla **[!UICONTROL Datasets]** scheda, fare clic sul set di dati a cui si sta eseguendo lo streaming e selezionare la **[!UICONTROL Dataset Activity]** scheda.
+È possibile visualizzare lo stato dei messaggi batch che sono stati inviati correttamente a [!DNL Platform] utilizzando l&#39;interfaccia utente del Experience Platform [](https://platform.adobe.com) andando nella scheda **[!UICONTROL Datasets]**, facendo clic sul set di dati a cui si sta eseguendo lo streaming e selezionando la scheda **[!UICONTROL Dataset Activity]**.
 
-I messaggi batch per i quali [!DNL Platform] viene passata la convalida dello streaming vengono trasferiti nell&#39; [!DNL Data Lake]. I messaggi sono quindi disponibili per l’analisi o l’esportazione.
+I messaggi batch che superano la convalida dello streaming su [!DNL Platform] vengono trasferiti in [!DNL Data Lake]. I messaggi sono quindi disponibili per l’analisi o l’esportazione.
 
 ## Passaggi successivi
 
-Ora che sai come inviare più messaggi in una singola richiesta e quando i messaggi vengono correttamente inseriti nel set di dati di destinazione, puoi iniziare a inviare in streaming i tuoi dati a [!DNL Platform]. Per una panoramica su come eseguire query e recuperare dati acquisiti da [!DNL Platform], consultate la [[!DNL Data Access]](../../data-access/tutorials/dataset-data.md) guida.
+Ora che sai come inviare più messaggi in una singola richiesta e quando i messaggi vengono correttamente inseriti nel dataset di destinazione, puoi iniziare a inviare in streaming i tuoi dati a [!DNL Platform]. Per una panoramica su come eseguire query e recuperare i dati acquisiti da [!DNL Platform], vedere la guida [[!DNL Data Access]](../../data-access/tutorials/dataset-data.md).
 
 ## Appendice
 
