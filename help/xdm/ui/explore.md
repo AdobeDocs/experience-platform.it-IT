@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;explore;class;mixin;data type;schema;
+keywords: ' Experience Platform;home;argomenti popolari;ui;interfaccia utente;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;esplorare;classe;mixin;tipo di dati;schema;'
 solution: Experience Platform
 title: Esplora risorse XDM nell'interfaccia utente
 description: Scopri come esplorare gli schemi, le classi, i mixin e i tipi di dati esistenti nell'interfaccia utente del Experience Platform .
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: e5c5fea783aa4088d225f771905fa8b2098613cf
+source-git-commit: 912d02477febdafa4a53aebc83bc3a93b0f84f09
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '912'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ L&#39;interruttore **[!UICONTROL Included in Profile]** consente di filtrare i r
 
 ![](../images/ui/explore/filter.png)
 
-È inoltre possibile utilizzare la barra di ricerca per limitare i risultati alle risorse i cui nomi corrispondono alla query di ricerca.
+Potete anche usare la barra di ricerca per limitare ulteriormente i risultati. Quando si cerca un termine, gli elementi principali rappresentano le risorse i cui nomi corrispondono alla query di ricerca. Sotto questi elementi, in **[!UICONTROL Standard Fields]** verranno elencate tutte le risorse contenenti campi corrispondenti alla query. Questo consente di cercare risorse XDM in base al tipo di dati che contengono, senza dover conoscere in anticipo il nome della risorsa.
 
 ![](../images/ui/explore/search.png)
 
