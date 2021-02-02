@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;time series data;stream time series data;
+keywords: ' Experience Platform;home;popolari argomenti;streaming, assimilazione;inserimento;data delle serie temporali;data delle serie temporali;'
 solution: Experience Platform
 title: Streaming dei dati delle serie temporali
 topic: tutorial
 type: Tutorial
 description: Questa esercitazione ti aiuterà a iniziare a utilizzare le API di assimilazione in streaming, parte delle API del servizio Adobe Experience Platform Data Ingestion.
 translation-type: tm+mt
-source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1234'
 ht-degree: 2%
 
 ---
@@ -16,39 +16,39 @@ ht-degree: 2%
 
 # Trasmissione dei dati delle serie temporali ad Adobe Experience Platform
 
-Questa esercitazione aiuterà a iniziare a utilizzare le API di assimilazione in streaming, parte delle [!DNL Data Ingestion Service] API di Adobe Experience Platform.
+Questa esercitazione aiuterà a iniziare a utilizzare le API di assimilazione in streaming, parte delle API Adobe Experience Platform [!DNL Data Ingestion Service].
 
 ## Introduzione
 
 Questa esercitazione richiede una buona conoscenza dei diversi servizi Adobe Experience Platform. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standard con cui  [!DNL Platform] organizzare i dati relativi all&#39;esperienza.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo di consumo unificato in tempo reale basato su dati aggregati provenienti da più origini.
-- [Schema Guida](../../xdm/api/getting-started.md)per lo sviluppatore del Registro di sistema: Una guida completa che illustra tutti gli endpoint disponibili dell&#39; [!DNL Schema Registry] API e come effettuare chiamate a tali endpoint. Ciò include la conoscenza `{TENANT_ID}`dell&#39;utente, che viene visualizzata nelle chiamate durante questa esercitazione, nonché la conoscenza di come creare gli schemi, che viene utilizzata per creare un set di dati per l&#39;assimilazione.
+- [Schema Guida](../../xdm/api/getting-started.md) per lo sviluppatore del Registro di sistema: Una guida completa che illustra tutti gli endpoint disponibili dell&#39; [!DNL Schema Registry] API e come effettuare chiamate a tali endpoint. Ciò include la conoscenza di `{TENANT_ID}`, che viene visualizzata nelle chiamate durante questa esercitazione, nonché la conoscenza di come creare schemi, che viene utilizzata per creare un dataset per l&#39;assimilazione.
 
-Inoltre, questa esercitazione richiede che sia già stata creata una connessione in streaming. Per ulteriori informazioni sulla creazione di una connessione in streaming, consulta l’esercitazione sulla [creazione di una connessione in streaming](./create-streaming-connection.md).
+Inoltre, questa esercitazione richiede che sia già stata creata una connessione in streaming. Per ulteriori informazioni sulla creazione di una connessione in streaming, leggere l&#39; [creazione di un&#39;esercitazione sulla connessione in streaming](./create-streaming-connection.md).
 
 Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per effettuare correttamente chiamate alle API di assimilazione in streaming.
 
 ### Lettura di chiamate API di esempio
 
-Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere chiamate](../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla [!DNL Experience Platform] risoluzione dei problemi.
+Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consultate la sezione relativa a [come leggere chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](https://www.adobe.com/go/platform-api-authentication-en) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui verrà eseguita l&#39;operazione:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione [sulla panoramica della](../../sandboxes/home.md)sandbox.
+>Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione di [panoramica sulla sandbox](../../sandboxes/home.md).
 
 Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva:
 
@@ -56,7 +56,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 ## Comporre uno schema basato sulla classe ExperienceEvent XDM
 
-Per creare un dataset, è innanzitutto necessario creare un nuovo schema che implementa la [!DNL XDM ExperienceEvent] classe. Per ulteriori informazioni sulla creazione degli schemi, consultare la guida [per gli sviluppatori API del Registro di](../../xdm/api/getting-started.md)schema.
+Per creare un dataset, è innanzitutto necessario creare un nuovo schema che implementa la classe [!DNL XDM ExperienceEvent]. Per ulteriori informazioni sulla creazione di schemi, consultare la [Guida per gli sviluppatori API del Registro di sistema ](../../xdm/api/getting-started.md).
 
 **Formato API**
 
@@ -101,7 +101,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | Nome da utilizzare per lo schema. Questo nome deve essere univoco. |
 | `description` | Una descrizione significativa dello schema che si sta creando. |
-| `meta:immutableTags` | In questo esempio, il `union` tag viene utilizzato per salvare i dati in modo permanente [[!DNL Real-time Customer Profile]](../../profile/home.md). |
+| `meta:immutableTags` | In questo esempio, il tag `union` viene utilizzato per mantenere i dati in [[!DNL Real-time Customer Profile]](../../profile/home.md). |
 
 **Risposta**
 
@@ -179,13 +179,13 @@ Una risposta corretta restituisce lo stato HTTP 201 con i dettagli dello schema 
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{TENANT_ID}` | Questo ID viene utilizzato per garantire che le risorse create siano correttamente denominate e contenute all’interno dell’organizzazione IMS. Per ulteriori informazioni sull&#39;ID tenant, consultare la guida [al Registro di sistema](../../xdm/api/getting-started.md#know-your-tenant-id)dello schema. |
+| `{TENANT_ID}` | Questo ID viene utilizzato per garantire che le risorse create siano correttamente denominate e contenute all’interno dell’organizzazione IMS. Per ulteriori informazioni sull&#39;ID tenant, leggere la guida del Registro di sistema [schema](../../xdm/api/getting-started.md#know-your-tenant-id). |
 
-Prendete nota `$id` e degli `version` attributi, in quanto entrambi verranno utilizzati per la creazione del set di dati.
+Prendete nota degli attributi `$id` e `version`, in quanto entrambi verranno utilizzati durante la creazione del set di dati.
 
 ## Impostare un descrittore di identità principale per lo schema
 
-Quindi, aggiungere un descrittore [di](../../xdm/api/descriptors.md) identità allo schema creato sopra, utilizzando l&#39;attributo indirizzo e-mail di lavoro come identificatore principale. Ciò comporterà due modifiche:
+Quindi, aggiungere un [descrittore di identità](../../xdm/api/descriptors.md) allo schema creato sopra, utilizzando l&#39;attributo dell&#39;indirizzo e-mail di lavoro come identificatore principale. Ciò comporterà due modifiche:
 
 1. L&#39;indirizzo e-mail di lavoro diventerà un campo obbligatorio. Ciò significa che i messaggi inviati senza questo campo non potranno essere convalidati e che non verranno trasferiti.
 
@@ -213,15 +213,15 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{SCHEMA_REF_ID}` | L&#39;oggetto `$id` ricevuto in precedenza al momento della composizione dello schema. Dovrebbe assomigliare a questo: `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
+| `{SCHEMA_REF_ID}` | La `$id` ricevuta in precedenza quando si componeva lo schema. Dovrebbe assomigliare a questo: `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
 
 >[!NOTE]
 >
->Codici Dei Nomi Di **Identità &#x200B;**
+>&#x200B;**Codici dello spazio dei nomi identità**
 >
-> Assicurarsi che i codici siano validi. Nell&#39;esempio precedente viene utilizzato &quot;email&quot;, che è uno spazio dei nomi di identità standard. Altri spazi dei nomi di identità standard comunemente utilizzati si trovano nelle domande frequenti relative al servizio [identità](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform).
+> Assicurarsi che i codici siano validi. Nell&#39;esempio precedente viene utilizzato &quot;email&quot;, che è uno spazio dei nomi di identità standard. Altri spazi dei nomi di identità standard comunemente utilizzati sono disponibili nelle [Domande frequenti su Servizio identità](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform).
 >
-> Se desiderate creare uno spazio nomi personalizzato, seguite i passaggi descritti nella panoramica [dello spazio nomi](../../identity-service/home.md)identità.
+> Per creare uno spazio nomi personalizzato, seguire i passaggi descritti nella [panoramica dello spazio nomi identità](../../identity-service/home.md).
 
 **Risposta**
 
@@ -297,7 +297,7 @@ Una risposta corretta restituisce lo stato HTTP 201 e un array contenente l&#39;
 
 ## Trasferimento dei dati delle serie temporali alla connessione in streaming
 
-Con il set di dati e la connessione in streaming in posizione, potete assimilare record JSON in formato XDM per acquisire i dati delle serie temporali all&#39;interno [!DNL Platform].
+Con il set di dati e la connessione in streaming in posizione, è possibile assimilare record JSON in formato XDM per acquisire i dati delle serie temporali all&#39;interno di [!DNL Platform].
 
 **Formato API**
 
@@ -307,7 +307,7 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | Il `id` valore della nuova connessione di streaming creata. |
+| `{CONNECTION_ID}` | Il valore `id` della nuova connessione di streaming creata. |
 | `synchronousValidation` | Un parametro di query facoltativo destinato allo sviluppo. Se impostato su `true`, può essere utilizzato per il feedback immediato per determinare se la richiesta è stata inviata correttamente. Per impostazione predefinita, questo valore è impostato su `false`. |
 
 **Richiesta**
@@ -318,7 +318,7 @@ La richiesta di esempio riportata di seguito consente di inserire in Platform i 
 
 >[!NOTE]
 >
->Dovrete generare il vostro `xdmEntity._id` e `xdmEntity.timestamp`. Per generare un ID è utile utilizzare un UUID. Inoltre, la seguente chiamata API **non** richiede intestazioni di autenticazione.
+>Sarà necessario generare le proprie `xdmEntity._id` e `xdmEntity.timestamp`. Per generare un ID è utile utilizzare un UUID. Inoltre, la seguente chiamata API **non** richiede intestazioni di autenticazione.
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
@@ -419,15 +419,15 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del nuovo str
 | `{CONNECTION_ID}` | ID della connessione di streaming creata in precedenza. |
 | `xactionId` | Identificatore univoco generato sul lato server per il record appena inviato. Questo ID aiuta  Adobe a tracciare il ciclo di vita del record attraverso diversi sistemi e con il debug. |
 | `receivedTimeMs`: Una marca temporale (epoch in millisecondi) che mostra l’ora in cui è stata ricevuta la richiesta. |
-| `synchronousValidation.status` | Poiché il parametro query `synchronousValidation=true` è stato aggiunto, questo valore verrà visualizzato. Se la convalida ha esito positivo, lo stato sarà `pass`. |
+| `synchronousValidation.status` | Poiché il parametro di query `synchronousValidation=true` è stato aggiunto, questo valore viene visualizzato. Se la convalida ha esito positivo, lo stato sarà `pass`. |
 
 ## Recuperare i nuovi dati delle serie temporali acquisiti
 
-Per convalidare i record acquisiti in precedenza, è possibile utilizzare [[!DNL Profile Access API]](../../profile/api/entities.md) per recuperare i dati delle serie temporali. Questa operazione può essere eseguita utilizzando una richiesta di GET all&#39; `/access/entities` endpoint e parametri di query facoltativi. Possono essere utilizzati più parametri, separati da e commerciale (&amp;).&quot;
+Per convalidare i record acquisiti in precedenza, è possibile utilizzare il simbolo [[!DNL Profile Access API]](../../profile/api/entities.md) per recuperare i dati delle serie temporali. Questo può essere fatto utilizzando una richiesta di GET all&#39;endpoint `/access/entities` e utilizzando parametri di query facoltativi. Possono essere utilizzati più parametri, separati da e commerciale (&amp;).&quot;
 
 >[!NOTE]
 >
->Se l&#39;ID del criterio di unione non è definito e l&#39;ID `schema.name` o `relatedSchema.name` è `_xdm.context.profile`, [!DNL Profile Access] recupererà **tutte** le identità correlate.
+>Se l&#39;ID del criterio di unione non è definito e il `schema.name` o `relatedSchema.name` è `_xdm.context.profile`, [!DNL Profile Access] recupererà tutte le identità correlate **a5/>.**
 
 **Formato API**
 
@@ -440,7 +440,7 @@ GET /access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `schema.name` | **Obbligatorio.** Nome dello schema a cui si accede. |
-| `relatedSchema.name` | **Obbligatorio.** Poiché si sta effettuando l&#39;accesso a un `_xdm.context.experienceevent`, questo valore specifica lo schema per l&#39;entità profilo a cui sono collegati gli eventi delle serie temporali. |
+| `relatedSchema.name` | **Obbligatorio.** Poiché si sta effettuando l&#39;accesso a un  `_xdm.context.experienceevent`, questo valore specifica lo schema per l&#39;entità profilo a cui sono collegati gli eventi delle serie temporali. |
 | `relatedEntityId` | L&#39;ID dell&#39;entità correlata. Se fornito, è necessario fornire anche lo spazio nomi entità. |
 | `relatedEntityIdNS` | Spazio dei nomi dell’ID che si sta tentando di recuperare. |
 
@@ -525,6 +525,6 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli delle entità
 
 ## Passaggi successivi
 
-Leggendo questo documento, ora puoi capire come trasferire i dati dei record nelle [!DNL Platform] connessioni in streaming. Puoi provare a effettuare più chiamate con valori diversi e a recuperare i valori aggiornati. È inoltre possibile iniziare a monitorare i dati acquisiti tramite [!DNL Platform] l’interfaccia utente. Per ulteriori informazioni, consulta la guida all’inserimento dei dati di [monitoraggio](../quality/monitor-data-ingestion.md) .
+Leggendo questo documento, ora puoi capire come trasferire i dati dei record in [!DNL Platform] utilizzando le connessioni di streaming. Puoi provare a effettuare più chiamate con valori diversi e a recuperare i valori aggiornati. Inoltre, puoi iniziare a monitorare i dati acquisiti tramite l&#39;interfaccia utente [!DNL Platform]. Per ulteriori informazioni, consultare la [guida all&#39;inserimento dei dati di monitoraggio](../quality/monitor-data-ingestion.md).
 
-Per ulteriori informazioni sull’assimilazione in streaming in generale, consultate la panoramica sull’assimilazione in [streaming](../streaming-ingestion/overview.md).
+Per ulteriori informazioni sull&#39;assimilazione in streaming in generale, leggere la [panoramica sull&#39;assimilazione in streaming](../streaming-ingestion/overview.md).
