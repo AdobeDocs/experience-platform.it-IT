@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;ip address;ip addresses;ip address allow list; allow list
+keywords: ' Experience Platform;home;argomenti popolari;indirizzo ip;indirizzi ip;indirizzo ip  elenco consentiti; elenco consentiti '
 description: Gli indirizzi IP devono essere aggiunti a un elenco consentiti  prima di utilizzare i connettori di origine.
 solution: Experience Platform
 title: Indirizzo IP  elenco consentiti
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7ba46b68a5910d5657ad8df73b6db574b421d513
+source-git-commit: a812ad3b130c5998013688dcda522e7d20ae578f
 workflow-type: tm+mt
-source-wordcount: '95'
+source-wordcount: '110'
 ht-degree: 0%
 
 ---
@@ -19,12 +19,12 @@ ht-degree: 0%
 
 ## Regione degli Stati Uniti d&#39;America
 
-- `20.41.2.0/23`
-- `20.41.4.0/26`
-- `20.44.17.80/28`
-- `20.49.102.16/29`
-- `40.70.148.160/28`
-- `52.167.107.224/28`
+- `20.42.2.0/23`
+- `20.42.4.0/26`
+- `20.42.64.0/28`
+- `20.49.111.0/29`
+- `40.71.14.32/28`
+- `40.78.229.96/28`
 
 ## Europa occidentale
 
