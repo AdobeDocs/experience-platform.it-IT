@@ -1,28 +1,29 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: ' Experience Platform;home;argomenti popolari'
 solution: Experience Platform
 title: Nozioni di base sulle API Adobe Experience Platform
 topic: getting started
+description: Questo documento fornisce una breve panoramica di alcune tecnologie e sintassi sottostanti coinvolte con  API di Experience Platform.
 translation-type: tm+mt
-source-git-commit: b6d62492a60494deb848a88a9334e3ef20a93919
+source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
 workflow-type: tm+mt
-source-wordcount: '483'
-ht-degree: 2%
+source-wordcount: '506'
+ht-degree: 1%
 
 ---
 
 
 # Nozioni di base sulle API Adobe Experience Platform
 
-Le API di Adobe Experience Platform utilizzano diverse tecnologie e sintassi di base importanti per gestire efficacemente le risorse basate su JSON [!DNL Platform] . Il presente documento fornisce una breve panoramica di queste tecnologie e collegamenti alla documentazione esterna per ulteriori informazioni.
+Le API di Adobe Experience Platform utilizzano diverse tecnologie e sintassi di base importanti per gestire efficacemente le risorse [!DNL Platform] basate su JSON. Il presente documento fornisce una breve panoramica di queste tecnologie e collegamenti alla documentazione esterna per ulteriori informazioni.
 
 ## Puntatore JSON {#json-pointer}
 
-JSON Pointer è una sintassi di stringa standard ([RFC 6901](https://tools.ietf.org/html/rfc6901)) per identificare valori specifici all&#39;interno dei documenti JSON. Un puntatore JSON è una stringa di token separati da `/` caratteri, che specificano le chiavi oggetto o gli indici di array e i token possono essere una stringa o un numero. Le stringhe Puntatore JSON vengono utilizzate in molte operazioni PATCH per [!DNL Platform] le API, come descritto più avanti in questo documento. Per maggiori informazioni su JSON Pointer, consulta la documentazione [sulla panoramica di](https://rapidjson.org/md_doc_pointer.html)JSON Pointer.
+JSON Pointer è una sintassi di stringa standard ([RFC 6901](https://tools.ietf.org/html/rfc6901)) per identificare valori specifici all&#39;interno dei documenti JSON. Un puntatore JSON è una stringa di token separati da `/` caratteri, che specificano le chiavi oggetto o gli indici di array e i token possono essere una stringa o un numero. Le stringhe Puntatore JSON vengono utilizzate in molte operazioni PATCH per le API [!DNL Platform], come descritto più avanti in questo documento. Per ulteriori informazioni su JSON Pointer, fare riferimento alla [JSON Pointer overview documentation](https://rapidjson.org/md_doc_pointer.html).
 
 ### Esempio di oggetto schema JSON
 
-Il seguente JSON rappresenta uno schema XDM semplificato i cui campi possono essere utilizzati come riferimento utilizzando le stringhe JSON Pointer. Tenere presente che tutti i campi aggiunti utilizzando mixin personalizzati (come `loyaltyLevel`ad esempio) sono delimitati da un `_{TENANT_ID}` oggetto, mentre i campi aggiunti utilizzando i mixin di base (come `fullName`) non lo sono.
+Il seguente JSON rappresenta uno schema XDM semplificato i cui campi possono essere utilizzati come riferimento utilizzando le stringhe JSON Pointer. Tenere presente che tutti i campi aggiunti utilizzando i mixin personalizzati (come `loyaltyLevel`) sono delimitati da un oggetto `_{TENANT_ID}`, mentre i campi aggiunti utilizzando i mixin di base (come `fullName`) non sono consentiti.
 
 ```json
 {
@@ -86,18 +87,18 @@ Il seguente JSON rappresenta uno schema XDM semplificato i cui campi possono ess
 | Puntatore JSON | Risolve a |
 | --- | --- |
 | `"/title"` | `"Example schema"` |
-| `"/properties/person/properties/name/properties/fullName"` | (Restituisce un riferimento al `fullName` campo, fornito da un mixin di base.) |
-| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Restituisce un riferimento al `loyaltyLevel` campo, fornito da un mixin personalizzato.) |
+| `"/properties/person/properties/name/properties/fullName"` | (Restituisce un riferimento al campo `fullName`, fornito da un mixin di base.) |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Restituisce un riferimento al campo `loyaltyLevel`, fornito da un mixin personalizzato.) |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
 >[!NOTE]
 >
->Quando si utilizzano gli `xdm:sourceProperty` attributi e `xdm:destinationProperty` gli attributi dei descrittori [!DNL Experience Data Model] (XDM), qualsiasi `properties` chiave deve essere **esclusa** dalla stringa Puntatore JSON. Per ulteriori informazioni, consulta la guida per gli sviluppatori di [!DNL Schema Registry] API in [descrittori](../xdm/api/descriptors.md) .
+>Quando si utilizzano gli attributi `xdm:sourceProperty` e `xdm:destinationProperty` dei descrittori [!DNL Experience Data Model] (XDM), tutte le chiavi `properties` devono essere **escluse** dalla stringa Puntatore JSON. Per ulteriori informazioni, consultate la guida per gli sviluppatori [!DNL Schema Registry] API nella sezione [descriptors](../xdm/api/descriptors.md).
 
 ## Patch JSON {#json-patch}
 
-Esistono molte operazioni PATCH per [!DNL Platform] le API che accettano oggetti JSON Patch per i payload di richiesta. La patch JSON è un formato standard ([RFC 6902](https://tools.ietf.org/html/rfc6902)) per descrivere le modifiche a un documento JSON. Consente di definire aggiornamenti parziali a JSON senza dover inviare l’intero documento in un corpo della richiesta.
+Esistono molte operazioni PATCH per le API [!DNL Platform] che accettano oggetti patch JSON per i payload di richiesta. La patch JSON è un formato standard ([RFC 6902](https://tools.ietf.org/html/rfc6902)) per descrivere le modifiche apportate a un documento JSON. Consente di definire aggiornamenti parziali a JSON senza dover inviare l’intero documento in un corpo della richiesta.
 
 ### Esempio di oggetto patch JSON
 
@@ -108,21 +109,21 @@ Esistono molte operazioni PATCH per [!DNL Platform] le API che accettano oggetti
 }
 ```
 
-* `op`: Tipo di operazione della patch. Sebbene la patch JSON supporti diversi tipi di operazioni, non tutte le operazioni PATCH nelle [!DNL Platform] API sono compatibili con ogni tipo di operazione. I tipi di operazioni disponibili sono:
+* `op`: Tipo di operazione della patch. Sebbene la patch JSON supporti diversi tipi di operazioni, non tutte le operazioni PATCH nelle API [!DNL Platform] sono compatibili con ogni tipo di operazione. I tipi di operazioni disponibili sono:
    * `add`
    * `remove`
    * `replace`
    * `copy`
    * `move`
    * `test`
-* `path`: La parte della struttura JSON da aggiornare, identificata utilizzando la notazione [JSON Pointer](#json-pointer) .
+* `path`: La parte della struttura JSON da aggiornare, identificata utilizzando  [JSON ](#json-pointer) Pointernotation.
 
-A seconda del tipo di operazione indicato in `op`, l&#39;oggetto Patch JSON potrebbe richiedere proprietà aggiuntive. Per ulteriori informazioni sulle diverse operazioni di patch JSON e sulla relativa sintassi richiesta, consulta la documentazione [relativa alla patch](http://jsonpatch.com/)JSON.
+A seconda del tipo di operazione indicato in `op`, l&#39;oggetto Patch JSON potrebbe richiedere proprietà aggiuntive. Per ulteriori informazioni sulle diverse operazioni di patch JSON e sulla relativa sintassi richiesta, fare riferimento alla [documentazione relativa alla patch JSON](http://jsonpatch.com/).
 
 ## Schema JSON
 
-Lo schema JSON è un formato utilizzato per descrivere e convalidare la struttura dei dati JSON. [Experience Data Model (XDM)](../xdm/home.md) sfrutta le funzionalità dello schema JSON per applicare vincoli alla struttura e al formato dei dati esperienza cliente acquisiti. Per ulteriori informazioni sullo schema JSON, consulta la documentazione [](https://json-schema.org/)ufficiale.
+Lo schema JSON è un formato utilizzato per descrivere e convalidare la struttura dei dati JSON. [Experience Data Model (XDM) ](../xdm/home.md) sfrutta le funzionalità dello schema JSON per applicare vincoli alla struttura e al formato dei dati esperienza cliente acquisiti. Per ulteriori informazioni sullo schema JSON, fare riferimento alla [documentazione ufficiale](https://json-schema.org/).
 
 ## Passaggi successivi
 
-In questo documento sono state introdotte alcune tecnologie e sintassi relative alla gestione delle risorse basate su JSON per [!DNL Experience Platform]. Per ulteriori informazioni sull&#39;utilizzo delle [!DNL Platform] API, comprese le procedure ottimali e le risposte alle domande frequenti, consultate la guida alla risoluzione dei problemi della [piattaforma](troubleshooting.md).
+In questo documento sono state introdotte alcune tecnologie e sintassi per la gestione delle risorse basate su JSON per [!DNL Experience Platform]. Per ulteriori informazioni sull&#39;utilizzo delle [!DNL Platform] API, incluse le procedure ottimali e le risposte alle domande frequenti, consultare la [Guida alla risoluzione dei problemi della piattaforma](troubleshooting.md).
