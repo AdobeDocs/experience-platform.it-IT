@@ -1,13 +1,13 @@
 ---
-keywords: voice destinations;Voice destinations
+keywords: destinazioni vocali;Destinazioni vocali
 title: Voce delle destinazioni dei clienti
 seo-title: Voce delle destinazioni dei clienti
 description: Le piattaforme vocali raccolgono e raccolgono i dati da varie fonti, compresi i messaggi vocali, i dati delle chiamate e le conversazioni via chat. Le informazioni raccolte possono essere filtrate e analizzate per consentire alle aziende di ottimizzare il sito Web in base alle proprie esigenze.
 seo-description: Le piattaforme vocali raccolgono e raccolgono i dati da varie fonti, compresi i messaggi vocali, i dati delle chiamate e le conversazioni via chat. Le informazioni raccolte possono essere filtrate e analizzate per consentire alle aziende di ottimizzare il sito Web in base alle proprie esigenze.
 translation-type: tm+mt
-source-git-commit: 85e6a65e1407ca60e7b63681c045fadaaa24aef9
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '166'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Le piattaforme vocali raccolgono e raccolgono i dati da varie fonti, compresi i messaggi vocali, i dati delle chiamate e le conversazioni via chat. Le informazioni raccolte possono essere filtrate e analizzate per consentire alle aziende di ottimizzare il sito Web in base alle proprie esigenze.
 
-Attualmente, la piattaforma dati cliente in tempo reale supporta la voce delle destinazioni cliente elencate di seguito. Per informazioni su come connettersi a queste destinazioni, consulta i singoli collegamenti:
+Attualmente, Adobe Experience Platform supporta Voice of the Customer destinations elencate di seguito. Per informazioni su come connettersi a queste destinazioni, consulta i singoli collegamenti:
 
 - [Conferma estensione Digital Feedback](./confirmit-digital-feedback.md)
 - [Estensione Invoca Tags](./invoca.md)
