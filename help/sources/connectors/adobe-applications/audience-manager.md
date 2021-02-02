@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Audience Manager connector;Audience manager;audience manager
+keywords: ' Experience Platform;home;argomenti comuni; connettore Audience Manager;Audience manager;audience manager;audience manager'
 solution: Experience Platform
 title: 'Connettore Audience Manager '
 topic: overview
-description: Il connettore dati Adobe Audience Manager trasferisce in Adobe Experience Platform i dati di prime parti raccolti in Adobe Audience Manager. Il connettore del Audience Manager  acquisisce tre categorie di dati in Platform.
+description: Il connettore dati Adobe Audience Manager trasferisce in Adobe Experience Platform i dati di prime parti raccolti in Adobe Audience Manager. Il connettore del Audience Manager  acquisisce due categorie di dati in Platform.
 translation-type: tm+mt
-source-git-commit: e51f750dae2a76cd05076edfe8c6423efe949891
+source-git-commit: b88c358d128ba2016c9449fefc8862bd503c4aa5
 workflow-type: tm+mt
-source-wordcount: '798'
+source-wordcount: '879'
 ht-degree: 0%
 
 ---
@@ -15,14 +15,14 @@ ht-degree: 0%
 
 # Connettore Audience Manager 
 
-Il connettore dati Adobe Audience Manager trasferisce in Adobe Experience Platform i dati di prime parti raccolti in Adobe Audience Manager. Il connettore del Audience Manager  acquisisce tre categorie di dati sulla piattaforma:
+Il connettore dati Adobe Audience Manager trasferisce in Adobe Experience Platform i dati di prime parti raccolti in Adobe Audience Manager. Il connettore del Audience Manager  acquisisce due categorie di dati in Platform:
 
-- **Dati in tempo reale:** Dati acquisiti in tempo reale  server  raccolta dati. Questi dati vengono utilizzati in  Audience Manager per popolare caratteristiche basate su regole e verranno visualizzati in Piattaforma nel tempo di latenza più breve.
-- **Dati profilo:**  Audience Manager utilizza dati in tempo reale e caricati per derivare i profili dei clienti. Questi profili vengono utilizzati per compilare grafici identità e caratteristiche sulle realizzazioni dei segmenti.
+- **Dati in tempo reale:** dati acquisiti in tempo reale  server  raccolta dati. Questi dati vengono utilizzati in  Audience Manager per popolare caratteristiche basate su regole e verranno visualizzati in Piattaforma nel tempo di latenza più breve.
+- **Dati profilo:**  Audience Manager utilizza dati in tempo reale e dati caricati per derivare i profili dei clienti. Questi profili vengono utilizzati per compilare grafici identità e caratteristiche sulle realizzazioni dei segmenti.
 
 Il connettore  Audience Manager mappa queste categorie di dati sullo schema Experience Data Model (XDM) e le invia alla piattaforma. I dati in tempo reale vengono inviati come dati XDM ExperienceEvent, mentre quelli del profilo vengono inviati come profili XDM singoli.
 
-Per istruzioni su come creare una connessione con Adobe Audience Manager utilizzando l&#39;interfaccia utente della piattaforma, vedere l&#39;esercitazione [sui connettori di Audience Manager](../../tutorials/ui/create/adobe-applications/audience-manager.md).
+Per istruzioni su come creare una connessione con Adobe Audience Manager utilizzando l&#39;interfaccia utente della piattaforma, vedere l&#39;esercitazione sui connettori di Audience Manager [](../../tutorials/ui/create/adobe-applications/audience-manager.md).
 
 ## Cos&#39;è Experience Data Model (XDM)?
 
@@ -30,7 +30,7 @@ XDM è una specifica documentata pubblicamente che fornisce un framework standar
 
 Il rispetto degli standard XDM consente di incorporare uniformemente i dati sull&#39;esperienza dei clienti, semplificando la distribuzione dei dati e la raccolta delle informazioni.
 
-Per ulteriori informazioni sull&#39;utilizzo di XDM in  Experience Platform, vedere la panoramica [del sistema](../../../xdm/home.md)XDM. Per ulteriori informazioni sulla struttura degli schemi XDM come Profile e ExperienceEvent, consulta le [nozioni di base della composizione](../../../xdm/schema/composition.md)dello schema.
+Per ulteriori informazioni sull&#39;utilizzo di XDM in  Experience Platform, vedere [Panoramica del sistema XDM](../../../xdm/home.md). Per ulteriori informazioni sulla struttura degli schemi XDM come Profile e ExperienceEvent, vedere le [nozioni di base della composizione dello schema](../../../xdm/schema/composition.md).
 
 ## Esempi di schemi XDM
 
@@ -46,7 +46,7 @@ Di seguito sono riportati alcuni esempi della struttura del Audience Manager  ma
 
 ## Come vengono mappati i campi da Adobe Audience Manager a XDM?
 
-Per ulteriori informazioni, consulta la documentazione relativa ai campi [di mappatura](./mapping/audience-manager.md) Audience Manager.
+Per ulteriori informazioni, consulta la documentazione relativa ai campi di mappatura dei Audienci Manager [](./mapping/audience-manager.md).
 
 ## Gestione dei dati sulla piattaforma
 
@@ -58,16 +58,18 @@ I set di dati sono un costrutto di archiviazione e gestione per una raccolta di 
 
 | Nome set di dati | Descrizione |
 | ------------ | ----------- |
-|  Audience Manager in tempo reale | Questo set di dati contiene i dati raccolti dagli hit diretti sugli endpoint DCS  Audience Manager e le mappe di identità per i profili  Audience Manager. Mantieni questo set di dati abilitato per l’assimilazione del profilo. |
-|  Aggiornamenti del profilo in tempo reale del Audience Manager | Questo set di dati consente il targeting in tempo reale di caratteristiche e segmenti  Audience Manager. Include informazioni per l’instradamento, la caratteristica e l’appartenenza al segmento regionale Edge. Mantieni questo set di dati abilitato per l’assimilazione del profilo. I dati non sono visibili come batch nel dataset. Puoi attivare l’attivazione/disattivazione del profilo per assimilare direttamente i dati su Profilo. |
-| Dati sui dispositivi  Audience Manager | Dati dispositivo con ECID e corrispondenti realizzazioni segmenti aggregate in  Audience Manager. I dati non sono visibili come batch nel dataset. Puoi attivare l’attivazione/disattivazione del profilo per assimilare direttamente i dati su Profilo. |
-| Dati profilo dispositivo Audience Manager  | Utilizzato per  diagnostica connettore Audience Manager. I dati non sono visibili come batch nel dataset. Puoi attivare l’attivazione/disattivazione del profilo per assimilare direttamente i dati su Profilo. |
-| Profili di autenticazione Audience Manager  | Questo set di dati contiene  profili autenticati di Audience Manager. I dati non sono visibili come batch nel dataset. Puoi attivare l’attivazione/disattivazione del profilo per assimilare direttamente i dati su Profilo. |
-|  Audience Manager Metadati Profili autenticati | Utilizzato per  diagnostica del connettore Audience Manager. I dati non sono visibili come batch nel dataset. Puoi attivare l’attivazione/disattivazione del profilo per assimilare direttamente i dati su Profilo. |
+| AAM in tempo reale | Questo set di dati contiene i dati raccolti dagli hit diretti sugli endpoint DCS  Audience Manager e le mappe di identità per i profili  Audience Manager. Mantieni questo set di dati abilitato per l’assimilazione del profilo. |
+| AAM aggiornamenti del profilo in tempo reale | Questo set di dati consente il targeting in tempo reale di caratteristiche e segmenti  Audience Manager. Include informazioni per l’instradamento, la caratteristica e l’appartenenza al segmento regionale Edge. Mantieni questo set di dati abilitato per l’assimilazione del profilo. I dati non sono visibili come batch nel dataset. È possibile attivare l&#39;interruttore **[!UICONTROL Profile]** per assimilare direttamente i dati a Profile. |
+| Dati dispositivi AAM | Dati dispositivo con ECID e corrispondenti realizzazioni segmenti aggregate in  Audience Manager. I dati non sono visibili come batch nel dataset. È possibile attivare l&#39;interruttore **[!UICONTROL Profile]** per assimilare direttamente i dati a Profile. |
+| Dati profilo dispositivo AAM | Utilizzato per  diagnostica connettore Audience Manager. I dati non sono visibili come batch nel dataset. È possibile attivare l&#39;interruttore **[!UICONTROL Profile]** per assimilare direttamente i dati a Profile. |
+| AAM profili autenticati | Questo set di dati contiene  profili autenticati di Audience Manager. I dati non sono visibili come batch nel dataset. È possibile attivare l&#39;interruttore **[!UICONTROL Profile]** per assimilare direttamente i dati a Profile. |
+| AAM metadati profili autenticati | Utilizzato per  diagnostica del connettore Audience Manager. I dati non sono visibili come batch nel dataset. È possibile attivare l&#39;interruttore **[!UICONTROL Profile]** per assimilare direttamente i dati a Profile. |
+| Backfill dei dati dei dispositivi AAM | Set di dati per l&#39;inserimento di dati di dispositivi passati. Contiene ECID e realizzazioni di segmenti corrispondenti aggregate in  Audience Manager. I dati non sono visibili come batch nel dataset. Puoi attivare l&#39;opzione **[!UICONTROL Profile]** per assimilare direttamente i dati su Profile. |
+| AAM Backfill Profili autenticati | Set di dati per l&#39;inserimento di dati autenticati passati. Contiene  Audience Manager profili autenticati. I dati non sono visibili come batch nel dataset. Puoi attivare l&#39;opzione **[!UICONTROL Profile]** per assimilare direttamente i dati su Profile. |
 
 ### Connessioni
 
-Adobe Audience Manager crea una connessione in Catalog:  connessione Audience Manager. Catalog è il sistema dei record per la posizione dei dati e la linea di dati in Adobe Experience Platform. Una connessione è un oggetto Catalog che è un&#39;istanza specifica del cliente dei connettori. Per ulteriori informazioni su Catalogo, connessioni e connettori, consultate la panoramica [Servizio](../../../catalog/home.md) catalogo.
+Adobe Audience Manager crea una connessione in Catalog:  connessione Audience Manager. Catalog è il sistema dei record per la posizione dei dati e la linea di dati in Adobe Experience Platform. Una connessione è un oggetto Catalog che è un&#39;istanza specifica del cliente dei connettori. Per ulteriori informazioni su catalogo, connessioni e connettori, vedere [Panoramica del servizio Catalogo](../../../catalog/home.md).
 
 ## Qual è la latenza prevista per i dati  Audience Manager sulla piattaforma?
 
