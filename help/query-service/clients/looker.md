@@ -1,45 +1,51 @@
 ---
-keywords: Experience Platform;home;popular topics;Query service;query service;Looker;looker;connect to query service;
+keywords: ' Experience Platform;home;argomenti popolari;servizio query;servizio query;Looker;looker;connect to query service;'
 solution: Experience Platform
 title: Connetti con Looker
 topic: connect
 description: Questo documento descrive i passaggi necessari per la connessione di Looker con Adobe Experience Platform Query Service.
 translation-type: tm+mt
-source-git-commit: 9fbb6b829cd9ddec30f22b0de66874be7710e465
+source-git-commit: bc1bbdddd75b11ac180b5e6faa391fd74e5f7e02
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
 
 
-# Connetti con [!DNL Looker]
+# [!DNL Looker]
 
-Per collegare [!DNL Looker] con [!DNL Query Service] su Adobe Experience Platform, procedere come segue:
-
-Dopo aver eseguito l&#39;accesso in [!DNL Looker], fare clic su **[!UICONTROL Admin]**, seguito da **[!UICONTROL Connections]**.
-
-![](../images/clients/looker/click-admin-connections.png)
-
-In questa pagina, fare clic su **Nuova connessione**.
-
-![](../images/clients/looker/click-new-connection.png)
-
-Da qui, potete compilare i dettagli per le Impostazioni di connessione.
-
-![](../images/clients/looker/new-connection.png)
-
-- **Nome:** il nome della connessione.
-- **Dialetto:** dialetto utilizzato per il database SQL. [!DNL Query Service] use  **[!DNL PostgreSQL]**.
-- **Host e porta:** l&#39;endpoint host e la relativa porta per  [!DNL Query Service].
-- **Database:** il database che verrà utilizzato.
-- **Nome utente e password:** le credenziali di accesso che verranno utilizzate. Il nome utente sarà in forma di `ORG_ID@AdobeOrg`.
+Questo documento descrive i passaggi per la connessione di [!DNL Looker] con Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
->Per ulteriori informazioni su come trovare l&#39;host e la porta, il nome del database e le credenziali di accesso, visitare la pagina delle [credenziali sulla piattaforma](https://platform.adobe.com/query/configuration). Per trovare le credenziali, accedere a [!DNL Platform], fare clic su **[!UICONTROL Queries]**, quindi su **[!UICONTROL Credentials]**.
+> Questa guida presuppone che abbiate già accesso a [!DNL Looker] e che abbiate familiarità con come navigare all&#39;interfaccia. Ulteriori informazioni su [!DNL Looker] sono disponibili nella [documentazione  [!DNL Looker] ufficiale](https://docs.looker.com/).
 
-Dopo aver inserito i dettagli di connessione, fate clic su **[!UICONTROL Test These Settings]** per verificare il corretto funzionamento delle credenziali. In caso affermativo, di seguito verrà visualizzato un messaggio in cui si informa che è possibile connettersi. Se la connessione ha esito positivo, fare clic su **[!UICONTROL Add Connection]** per creare la connessione.
+## Connetti [!DNL Looker] con la piattaforma
+
+Dopo aver eseguito l&#39;accesso in [!DNL Looker], selezionare **[!DNL Admin]**, seguito da **[!DNL Connections]**.
+
+![](../images/clients/looker/click-admin-connections.png)
+
+In questa pagina, selezionare **[!DNL New Connection]**.
+
+![](../images/clients/looker/click-new-connection.png)
+
+Da qui è possibile compilare i dettagli delle impostazioni di connessione.
+
+![](../images/clients/looker/new-connection.png)
+
+- **[!DNL Name]:** Il nome della connessione.
+- **[!DNL Dialect]:** Il dialetto utilizzato per il database SQL. [!DNL Query Service] use  **[!DNL PostgreSQL]**.
+- **[!DNL Host and Port]:** L&#39;endpoint host e la relativa porta per  [!DNL Query Service].
+- **[!DNL Database]:** Il database che verrà utilizzato.
+- **[!DNL Username and Password]:** Le credenziali di accesso che verranno utilizzate. Il nome utente sarà in forma di `ORG_ID@AdobeOrg`.
+
+>[!NOTE]
+>
+>Per ulteriori informazioni su come trovare l&#39;host e la porta, il nome del database e le credenziali di accesso, visitare la pagina delle [credenziali sulla piattaforma](https://platform.adobe.com/query/configuration). Per trovare le credenziali, accedere a [!DNL Platform], quindi selezionare **[!UICONTROL Queries]**, seguito da **[!UICONTROL Credentials]**.
+
+Dopo aver inserito i dettagli di connessione, selezionare **[!DNL Test These Settings]** per assicurarsi che le credenziali funzionino correttamente. In caso affermativo, di seguito verrà visualizzato un messaggio che indica che è possibile connettersi. Se la connessione ha esito positivo, selezionare **[!DNL Add Connection]** per creare la connessione.
 
 ![](../images/clients/looker/click-test-connection.png)
 
