@@ -1,11 +1,13 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: Unisci criteri - API profilo cliente in tempo reale
+keywords: Experience Platform ;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API
+title: Endpoint API Criteri di unione
 topic: guide
+type: Documentation
+description: 'Adobe Experience Platform consente di unire frammenti di dati provenienti da più origini e di combinarli per visualizzare in modo completo i singoli clienti. Quando si uniscono questi dati, i criteri di unione sono le regole utilizzate dalla Piattaforma per determinare in che modo i dati verranno classificati come priorità e quali dati verranno combinati per creare una visualizzazione unificata. '
 translation-type: tm+mt
-source-git-commit: 6bfc256b50542e88e28f8a0c40cec7a109a05aa6
+source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
-source-wordcount: '2494'
+source-wordcount: '2560'
 ht-degree: 1%
 
 ---
@@ -13,21 +15,21 @@ ht-degree: 1%
 
 # Endpoint criteri di unione
 
-Adobe Experience Platform consente di unire frammenti di dati provenienti da più origini e di combinarli per visualizzare in modo completo i singoli clienti. Quando si uniscono questi dati, i criteri di unione sono le regole che [!DNL Platform] utilizzano per determinare in che modo i dati verranno classificati come priorità e quali dati verranno combinati per creare tale visualizzazione unificata.
+Adobe Experience Platform consente di unire frammenti di dati provenienti da più origini e di combinarli per visualizzare in modo completo i singoli clienti. Quando si uniscono questi dati, i criteri di unione sono le regole utilizzate da [!DNL Platform] per determinare in che modo i dati verranno classificati come priorità e quali dati verranno combinati per creare una visualizzazione unificata.
 
 Ad esempio, se un cliente interagisce con il tuo marchio su più canali, l&#39;organizzazione avrà più frammenti di profilo correlati a tale singolo cliente che saranno visualizzati in più set di dati. Quando questi frammenti vengono assimilati in Piattaforma, vengono uniti per creare un unico profilo per il cliente. Quando i dati provenienti da più origini sono in conflitto (ad esempio, un frammento indica il cliente come &quot;singolo&quot; mentre l&#39;altro elenca il cliente come &quot;sposato&quot;), il criterio di unione determina quali informazioni includere nel profilo dell&#39;individuo.
 
 Utilizzando le API RESTful o l&#39;interfaccia utente, puoi creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la tua organizzazione. Questa guida fornisce i passaggi per l&#39;utilizzo dei criteri di unione tramite l&#39;API.
 
-Per utilizzare i criteri di unione utilizzando l&#39;interfaccia utente, fare riferimento alla guida [utente dei criteri di](../ui/merge-policies.md)unione.
+Per utilizzare i criteri di unione utilizzando l&#39;interfaccia utente, fare riferimento alla [guida per l&#39;interfaccia utente dei criteri di unione](../ui/merge-policies.md).
 
 ## Introduzione
 
-L&#39;endpoint API utilizzato in questa guida fa parte dell&#39; [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Prima di continuare, consultate la guida [introduttiva per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente chiamate a qualsiasi](getting-started.md) [!DNL Experience Platform] API.
+L&#39;endpoint API utilizzato in questa guida è parte del [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Prima di continuare, consultare la [guida introduttiva](getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per eseguire correttamente chiamate a qualsiasi API [!DNL Experience Platform].
 
 ## Componenti dei criteri di unione {#components-of-merge-policies}
 
-I criteri di unione sono privati per l&#39;organizzazione IMS e consentono di creare diversi criteri per unire gli schemi nei modi specifici necessari. Qualsiasi [!DNL Profile] dato di accesso API richiede un criterio di unione, anche se un valore predefinito verrà utilizzato se non viene fornito in modo esplicito. [!DNL Platform] fornisce alle organizzazioni un criterio di unione predefinito, oppure potete creare un criterio di unione per una classe di schema XDM (Experience Data Model) specifica e contrassegnarlo come predefinito per la vostra organizzazione.
+I criteri di unione sono privati per l&#39;organizzazione IMS e consentono di creare diversi criteri per unire gli schemi nei modi specifici necessari. Qualsiasi API che accede a dati [!DNL Profile] richiede un criterio di unione, anche se un&#39;API predefinita verrà utilizzata se non viene specificata in modo esplicito. [!DNL Platform] fornisce alle organizzazioni un criterio di unione predefinito, oppure potete creare un criterio di unione per una classe di schema XDM (Experience Data Model) specifica e contrassegnarlo come predefinito per la vostra organizzazione.
 
 Sebbene ogni organizzazione possa avere potenzialmente più criteri di unione per classe di schema, ciascuna classe può avere un solo criterio di unione predefinito. I criteri di unione impostati come predefiniti verranno utilizzati nei casi in cui viene fornito il nome della classe dello schema e viene richiesto un criterio di unione, ma non viene fornito.
 
@@ -66,9 +68,9 @@ L&#39;oggetto criteri di unione completo rappresenta un insieme di preferenze ch
 | `id` | Identificatore univoco generato dal sistema assegnato al momento della creazione |
 | `name` | Nome descrittivo per l&#39;identificazione del criterio di unione nelle viste elenco. |
 | `imsOrgId` | ID organizzazione a cui appartiene il criterio di unione |
-| `identityGraph` | [Oggetto grafico](#identity-graph) dell&#39;identità che indica il grafico dell&#39;identità da cui verranno ottenute le identità correlate. I frammenti di profilo trovati per tutte le identità correlate verranno uniti. |
-| `attributeMerge` | [Oggetto unione](#attribute-merge) attributi che indica il modo in cui il criterio di unione darà priorità agli attributi del profilo in caso di conflitti di dati. |
-| `schema.name` | Parte dell&#39; [`schema`](#schema) oggetto, il `name` campo contiene la classe dello schema XDM a cui si riferisce il criterio di unione. Per ulteriori informazioni sugli schemi e sulle classi, consulta la documentazione [](../../xdm/home.md)XDM. |
+| `identityGraph` | [Oggetto ](#identity-graph) grafico dell&#39;identità che indica il grafico dell&#39;identità da cui verranno ottenute le identità correlate. I frammenti di profilo trovati per tutte le identità correlate verranno uniti. |
+| `attributeMerge` | [Oggetto ](#attribute-merge) unione attributo che indica il modo in cui il criterio di unione darà priorità agli attributi del profilo in caso di conflitti di dati. |
+| `schema.name` | Parte dell&#39;oggetto [`schema`](#schema), il campo `name` contiene la classe dello schema XDM a cui si riferisce il criterio di unione. Per ulteriori informazioni sugli schemi e sulle classi, consultare la [documentazione XDM](../../xdm/home.md). |
 | `default` | Valore booleano che indica se il criterio di unione è il valore predefinito per lo schema specificato. |
 | `version` | [!DNL Platform] versione aggiornata del criterio di unione. Questo valore di sola lettura viene incrementato ogni volta che viene aggiornato un criterio di unione. |
 | `updateEpoch` | Data dell&#39;ultimo aggiornamento del criterio di unione. |
@@ -97,7 +99,7 @@ L&#39;oggetto criteri di unione completo rappresenta un insieme di preferenze ch
 
 ### Grafico identità {#identity-graph}
 
-[Adobe Experience Platform Identity Service](../../identity-service/home.md) gestisce i grafici di identità utilizzati a livello globale e per ogni organizzazione in [!DNL Experience Platform]. L&#39; `identityGraph` attributo del criterio di unione definisce come determinare le identità correlate per un utente.
+[Adobe Experience Platform Identity ](../../identity-service/home.md) Services gestisce i grafici di identità utilizzati a livello globale e per ogni organizzazione in  [!DNL Experience Platform]. L&#39;attributo `identityGraph` del criterio di unione definisce come determinare le identità correlate per un utente.
 
 **oggetto identityGraph**
 
@@ -107,10 +109,10 @@ L&#39;oggetto criteri di unione completo rappresenta un insieme di preferenze ch
     }
 ```
 
-Se `{IDENTITY_GRAPH_TYPE}` è uno dei seguenti casi:
+Dove `{IDENTITY_GRAPH_TYPE}` è uno dei seguenti:
 
-* **&quot;none&quot;:** Non eseguire alcuna cucitura di identità.
-* **&quot;pdg&quot;:** Esegue l&#39;unione delle identità in base al grafico dell&#39;identità privata.
+* **&quot;none&quot;:non** eseguire alcuna unione di identità.
+* **&quot;pdg&quot;:** eseguire il ritaglio delle identità in base al grafico dell&#39;identità privata.
 
 **Esempio`identityGraph`**
 
@@ -122,7 +124,7 @@ Se `{IDENTITY_GRAPH_TYPE}` è uno dei seguenti casi:
 
 ### Unione attributi {#attribute-merge}
 
-Un frammento di profilo è l&#39;informazione di profilo per una sola identità inclusa nell&#39;elenco di identità esistenti per un particolare utente. Quando il tipo di grafico dell&#39;identità utilizzato genera più identità, è possibile che vi siano attributi di profilo in conflitto e specificare la priorità. Utilizzando `attributeMerge`, è possibile specificare quali attributi di profilo assegnare la priorità in caso di conflitto di unione tra i set di dati di tipo Valore chiave (dati di record).
+Un frammento di profilo è l&#39;informazione di profilo per una sola identità inclusa nell&#39;elenco di identità esistenti per un particolare utente. Quando il tipo di grafico dell&#39;identità utilizzato genera più identità, è possibile che vi siano attributi di profilo in conflitto e specificare la priorità. Utilizzando `attributeMerge`, è possibile specificare gli attributi di profilo da assegnare come priorità in caso di conflitto di unione tra i set di dati di tipo Valore chiave (dati di record).
 
 **oggetto attributeMerge**
 
@@ -132,13 +134,13 @@ Un frammento di profilo è l&#39;informazione di profilo per una sola identità 
     }
 ```
 
-Se `{ATTRIBUTE_MERGE_TYPE}` è uno dei seguenti casi:
+Dove `{ATTRIBUTE_MERGE_TYPE}` è uno dei seguenti:
 
-* **`timestampOrdered`**: (impostazione predefinita) Assegna priorità al profilo aggiornato per ultimo. Utilizzando questo tipo di unione, l&#39; `data` attributo non è obbligatorio. `timestampOrdered` supporta inoltre marche temporali personalizzate che avranno precedenza durante l&#39;unione di frammenti di profilo all&#39;interno o tra set di dati. Per ulteriori informazioni, consulta la sezione Appendice sull’ [utilizzo di marche temporali](#custom-timestamps)personalizzate.
-* **`dataSetPrecedence`** : Attribuire priorità ai frammenti di profilo in base al set di dati da cui provengono. Questo può essere utilizzato quando le informazioni presenti in un set di dati sono preferite o attendibili rispetto ai dati contenuti in un altro set di dati. Quando si utilizza questo tipo di unione, l&#39; `order` attributo è obbligatorio, in quanto elenca i set di dati in ordine di priorità.
-   * **`order`**: Quando si utilizza &quot;dataSetPrecedence&quot;, è necessario fornire un `order` array con un elenco di set di dati. Eventuali set di dati non inclusi nell&#39;elenco non verranno uniti. In altre parole, i set di dati devono essere esplicitamente elencati per essere uniti in un profilo. L&#39; `order` array elenca gli ID dei set di dati in ordine di priorità.
+* **`timestampOrdered`**: (impostazione predefinita) Assegna priorità al profilo aggiornato per ultimo. Utilizzando questo tipo di unione, l&#39;attributo `data` non è obbligatorio. `timestampOrdered` supporta inoltre marche temporali personalizzate che avranno precedenza durante l&#39;unione di frammenti di profilo all&#39;interno o tra set di dati. Per ulteriori informazioni, consultare la sezione relativa all&#39;appendice su [uso di marche temporali personalizzate](#custom-timestamps).
+* **`dataSetPrecedence`** : Attribuire priorità ai frammenti di profilo in base al set di dati da cui provengono. Questo può essere utilizzato quando le informazioni presenti in un set di dati sono preferite o attendibili rispetto ai dati contenuti in un altro set di dati. Quando si utilizza questo tipo di unione, l&#39;attributo `order` è obbligatorio, in quanto elenca i set di dati in ordine di priorità.
+   * **`order`**: Quando si utilizza &quot;dataSetPrecedence&quot;, è necessario fornire un  `order` array con un elenco di set di dati. Eventuali set di dati non inclusi nell&#39;elenco non verranno uniti. In altre parole, i set di dati devono essere esplicitamente elencati per essere uniti in un profilo. L&#39;array `order` elenca gli ID dei set di dati in ordine di priorità.
 
-#### Esempio `attributeMerge` di oggetto con `dataSetPrecedence` tipo
+#### Esempio di oggetto `attributeMerge` che utilizza il tipo `dataSetPrecedence`
 
 ```json
     "attributeMerge": {
@@ -152,7 +154,7 @@ Se `{ATTRIBUTE_MERGE_TYPE}` è uno dei seguenti casi:
     }
 ```
 
-#### Esempio `attributeMerge` di oggetto con `timestampOrdered` tipo
+#### Esempio di oggetto `attributeMerge` che utilizza il tipo `timestampOrdered`
 
 ```json
     "attributeMerge": {
@@ -172,7 +174,7 @@ L&#39;oggetto schema specifica la classe dello schema Experience Data Model (XDM
     }
 ```
 
-Se il valore di `name` è il nome della classe XDM su cui si basa lo schema associato al criterio di unione.
+Dove il valore di `name` è il nome della classe XDM su cui si basa lo schema associato al criterio di unione.
 
 **Esempio`schema`**
 
@@ -182,15 +184,15 @@ Se il valore di `name` è il nome della classe XDM su cui si basa lo schema asso
     }
 ```
 
-Per ulteriori informazioni su XDM e sull&#39;utilizzo degli schemi in  Experience Platform, consultare la panoramica [di sistema](../../xdm/home.md)XDM.
+Per ulteriori informazioni su XDM e sull&#39;utilizzo degli schemi in  Experience Platform, iniziare leggendo la [Panoramica del sistema XDM](../../xdm/home.md).
 
 ## Accedere ai criteri di unione {#access-merge-policies}
 
-Utilizzando l&#39; [!DNL Real-time Customer Profile] API, l&#39; `/config/mergePolicies` endpoint consente di eseguire una richiesta di ricerca per visualizzare un criterio di unione specifico in base al relativo ID, oppure di accedere a tutti i criteri di unione nell&#39;organizzazione IMS, filtrati in base a criteri specifici. Potete inoltre utilizzare l&#39; `/config/mergePolicies/bulk-get` endpoint per recuperare più criteri di unione in base ai relativi ID. I passaggi per eseguire ciascuna di queste chiamate sono descritti nelle sezioni seguenti.
+Utilizzando l&#39;API [!DNL Real-time Customer Profile], l&#39;endpoint `/config/mergePolicies` consente di eseguire una richiesta di ricerca per visualizzare un criterio di unione specifico in base all&#39;ID o per accedere a tutti i criteri di unione nell&#39;organizzazione IMS, filtrati in base a criteri specifici. È inoltre possibile utilizzare l&#39;endpoint `/config/mergePolicies/bulk-get` per recuperare più criteri di unione in base ai relativi ID. I passaggi per eseguire ciascuna di queste chiamate sono descritti nelle sezioni seguenti.
 
 ### Accesso a un singolo criterio di unione tramite ID
 
-Puoi accedere a un singolo criterio di unione con il relativo ID effettuando una richiesta di GET all&#39; `/config/mergePolicies` endpoint e includendo l&#39; `mergePolicyId` elemento nel percorso della richiesta.
+È possibile accedere a un singolo criterio di unione utilizzando il relativo ID effettuando una richiesta di GET all&#39;endpoint `/config/mergePolicies` e includendo `mergePolicyId` nel percorso della richiesta.
 
 **Formato API**
 
@@ -236,11 +238,11 @@ Una risposta corretta restituisce i dettagli del criterio di unione.
 }
 ```
 
-Per informazioni dettagliate su ciascuno dei singoli elementi che compongono un criterio di unione, vedere la sezione [Componenti di criteri](#components-of-merge-policies) di unione all&#39;inizio del documento.
+Vedere la sezione [componenti di criteri di unione](#components-of-merge-policies) all&#39;inizio del documento per informazioni dettagliate su ciascuno dei singoli elementi che compongono un criterio di unione.
 
 ### Recuperare più criteri di unione in base ai relativi ID
 
-È possibile recuperare più criteri di unione eseguendo una richiesta POST all&#39; `/config/mergePolicies/bulk-get` endpoint e includendo gli ID dei criteri di unione che si desidera recuperare nel corpo della richiesta.
+È possibile recuperare più criteri di unione eseguendo una richiesta POST all&#39;endpoint `/config/mergePolicies/bulk-get` e includendo gli ID dei criteri di unione che si desidera recuperare nel corpo della richiesta.
 
 **Formato API**
 
@@ -333,11 +335,11 @@ Una risposta corretta restituisce lo stato HTTP 207 (Stato multiplo) e i dettagl
 }
 ```
 
-Per informazioni dettagliate su ciascuno dei singoli elementi che compongono un criterio di unione, vedere la sezione [Componenti di criteri](#components-of-merge-policies) di unione all&#39;inizio del documento.
+Vedere la sezione [componenti di criteri di unione](#components-of-merge-policies) all&#39;inizio del documento per informazioni dettagliate su ciascuno dei singoli elementi che compongono un criterio di unione.
 
 ### Elenca più criteri di unione
 
-È possibile elencare più criteri di unione all&#39;interno dell&#39;organizzazione IMS inviando una richiesta di GET all&#39; `/config/mergePolicies` endpoint e utilizzando parametri di query facoltativi per filtrare, ordinare e impaginare la risposta. È possibile includere più parametri, separati da e commerciale (&amp;). Effettuando una chiamata a questo endpoint senza parametri, tutti i criteri di unione disponibili per l&#39;organizzazione verranno recuperati.
+È possibile elencare più criteri di unione all&#39;interno dell&#39;organizzazione IMS inviando una richiesta di GET all&#39;endpoint `/config/mergePolicies` e utilizzando parametri di query facoltativi per filtrare, ordinare e impaginare la risposta. È possibile includere più parametri, separati da e commerciale (&amp;). Effettuando una chiamata a questo endpoint senza parametri, tutti i criteri di unione disponibili per l&#39;organizzazione verranno recuperati.
 
 **Formato API**
 
@@ -349,14 +351,14 @@ GET /config/mergePolicies?{QUERY_PARAMS}
 |---|---|
 | `default` | Valore booleano che filtra i risultati in base al fatto che i criteri di unione siano o meno i valori predefiniti per una classe di schema. |
 | `limit` | Specifica il limite delle dimensioni di pagina per controllare il numero di risultati inclusi in una pagina. Valore predefinito: 20 |
-| `orderBy` | Specifica il campo in base al quale ordinare i risultati come in `orderBy=name` o `orderBy=+name` ordinare per nome in ordine crescente o `orderBy=-name`, per l&#39;ordinamento decrescente. Omettendo questo valore si ottiene l&#39;ordinamento predefinito di `name` crescente. |
+| `orderBy` | Specifica il campo in base al quale ordinare i risultati come in `orderBy=name` o `orderBy=+name` per l&#39;ordinamento in ordine crescente o `orderBy=-name` per l&#39;ordinamento in ordine decrescente. Omettendo questo valore si ottiene l&#39;ordinamento predefinito di `name` in ordine crescente. |
 | `schema.name` | Nome dello schema per il quale recuperare i criteri di unione disponibili. |
 | `identityGraph.type` | Filtra i risultati in base al tipo di grafico dell&#39;identità. I valori possibili includono &quot;none&quot; e &quot;pdg&quot; (grafico privato). |
 | `attributeMerge.type` | Filtra i risultati in base al tipo di unione degli attributi utilizzato. I valori possibili includono &quot;timestampOrdered&quot; e &quot;dataSetPrecedence&quot;. |
 | `start` | Offset pagina - specifica l&#39;ID iniziale per i dati da recuperare. Valore predefinito: 0 |
 | `version` | Specificate questo valore se desiderate utilizzare una versione specifica del criterio di unione. Per impostazione predefinita, verrà utilizzata la versione più recente. |
 
-Per ulteriori informazioni sui `schema.name`componenti `identityGraph.type`e `attributeMerge.type`, consultare la sezione relativa ai [componenti dei criteri](#components-of-merge-policies) di unione fornita in precedenza in questa guida.
+Per ulteriori informazioni sui `schema.name`, `identityGraph.type` e `attributeMerge.type`, fare riferimento alla sezione [componenti dei criteri di unione](#components-of-merge-policies) fornita in precedenza in questa guida.
 
 
 **Richiesta**
@@ -448,7 +450,7 @@ Una risposta corretta restituisce un elenco impaginato di criteri di unione che 
 
 ## Creare un criterio di unione
 
-È possibile creare un nuovo criterio di unione per la propria organizzazione effettuando una richiesta di POST all&#39; `/config/mergePolicies` endpoint.
+Puoi creare un nuovo criterio di unione per la tua organizzazione effettuando una richiesta di POST all&#39;endpoint `/config/mergePolicies`.
 
 **Formato API**
 
@@ -456,7 +458,8 @@ Una risposta corretta restituisce un elenco impaginato di criteri di unione che 
 POST /config/mergePolicies
 ```
 
-**Richiesta** La richiesta seguente crea un nuovo criterio di unione, configurato dai valori attributo forniti nel payload:
+****
+RequestLa richiesta seguente crea un nuovo criterio di unione, configurato dai valori attributo forniti nel payload:
 
 ```shell
 curl -X POST \
@@ -493,7 +496,7 @@ curl -X POST \
 | `schema` | La classe dello schema XDM associata al criterio di unione. |
 | `default` | Specifica se il criterio di unione è il valore predefinito per lo schema. |
 
-Per ulteriori informazioni, fare riferimento alla sezione [Componenti dei criteri](#components-of-merge-policies) di unione.
+Per ulteriori informazioni, fare riferimento alla sezione [Componenti di criteri di unione](#components-of-merge-policies).
 
 **Risposta**
 
@@ -529,15 +532,15 @@ Una risposta corretta restituisce i dettagli del criterio di unione appena creat
 }
 ```
 
-Per informazioni dettagliate su ciascuno dei singoli elementi che compongono un criterio di unione, vedere la sezione [Componenti di criteri](#components-of-merge-policies) di unione all&#39;inizio del documento.
+Vedere la sezione [componenti di criteri di unione](#components-of-merge-policies) all&#39;inizio del documento per informazioni dettagliate su ciascuno dei singoli elementi che compongono un criterio di unione.
 
-## Aggiornare un criterio di unione {#update}
+## Aggiornare il criterio di unione {#update}
 
 È possibile modificare un criterio di unione esistente modificando singoli attributi (PATCH) o sovrascrivendo l&#39;intero criterio di unione con nuovi attributi (PUT). Di seguito sono riportati alcuni esempi.
 
 ### Modificare singoli campi dei criteri di unione
 
-È possibile modificare singoli campi per un criterio di unione eseguendo una richiesta PATCH all&#39; `/config/mergePolicies/{mergePolicyId}` endpoint:
+È possibile modificare singoli campi per un criterio di unione eseguendo una richiesta PATCH all&#39;endpoint `/config/mergePolicies/{mergePolicyId}`:
 
 **Formato API**
 
@@ -551,7 +554,7 @@ PATCH /config/mergePolicies/{mergePolicyId}
 
 **Richiesta**
 
-La richiesta seguente aggiorna uno specifico criterio di unione modificando il valore della `default` proprietà in `true`:
+La richiesta seguente aggiorna uno specifico criterio di unione modificando il valore della relativa proprietà `default` in `true`:
 
 ```shell
 curl -X PATCH \
@@ -570,11 +573,11 @@ curl -X PATCH \
 
 | Proprietà | Descrizione |
 |---|---|
-| `op` | Specifica l&#39;operazione da eseguire. Esempi di altre operazioni PATCH sono disponibili nella documentazione [JSON Patch](http://jsonpatch.com) |
+| `op` | Specifica l&#39;operazione da eseguire. Esempi di altre operazioni PATCH sono disponibili nella [documentazione relativa alle patch JSON](http://jsonpatch.com) |
 | `path` | Percorso del campo da aggiornare. I valori accettati sono: &quot;/name&quot;, &quot;/identityGraph.type&quot;, &quot;/attributeMerge.type&quot;, &quot;/schema.name&quot;, &quot;/version&quot;, &quot;/default&quot; |
 | `value` | Il valore su cui impostare il campo specificato. |
 
-Per ulteriori informazioni, fare riferimento alla sezione [Componenti dei criteri](#components-of-merge-policies) di unione.
+Per ulteriori informazioni, fare riferimento alla sezione [Componenti di criteri di unione](#components-of-merge-policies).
 
 
 **Risposta**
@@ -667,7 +670,7 @@ curl -X PUT \
 | `schema` | La classe dello schema XDM associata al criterio di unione. |
 | `default` | Specifica se il criterio di unione è il valore predefinito per lo schema. |
 
-Per ulteriori informazioni, fare riferimento alla sezione [Componenti dei criteri](#components-of-merge-policies) di unione.
+Per ulteriori informazioni, fare riferimento alla sezione [Componenti di criteri di unione](#components-of-merge-policies).
 
 
 **Risposta**
@@ -706,7 +709,7 @@ Una risposta corretta restituisce i dettagli del criterio di unione aggiornato.
 
 ## Eliminare un criterio di unione
 
-È possibile eliminare un criterio di unione eseguendo una richiesta di DELETE all&#39; `/config/mergePolicies` endpoint e includendo l&#39;ID del criterio di unione che si desidera eliminare nel percorso della richiesta.
+È possibile eliminare un criterio di unione eseguendo una richiesta di DELETE all&#39;endpoint `/config/mergePolicies` e includendo l&#39;ID del criterio di unione che si desidera eliminare nel percorso della richiesta.
 
 **Formato API**
 
@@ -737,7 +740,7 @@ Una richiesta di eliminazione riuscita restituisce lo stato HTTP 200 (OK) e un c
 
 ## Passaggi successivi
 
-Ora che sai come creare e configurare criteri di unione per la tua organizzazione, puoi utilizzarli per regolare la visualizzazione dei profili cliente all&#39;interno della piattaforma e per creare segmenti di pubblico dai tuoi [!DNL Real-time Customer Profile] dati. Per iniziare a definire e utilizzare i segmenti, consulta la documentazione [di](../../segmentation/home.md) Adobe Experience Platform Segmentation Service.
+Ora che sai come creare e configurare criteri di unione per la tua organizzazione, puoi utilizzarli per regolare la visualizzazione dei profili cliente all&#39;interno della piattaforma e per creare segmenti di pubblico dai tuoi dati [!DNL Real-time Customer Profile]. Per iniziare a definire e utilizzare i segmenti, consulta la [documentazione del servizio di segmentazione Adobe Experience Platform](../../segmentation/home.md).
 
 ## Appendice
 
@@ -745,23 +748,23 @@ Questa sezione fornisce informazioni supplementari relative all&#39;utilizzo dei
 
 ### Utilizzo di marche temporali personalizzate {#custom-timestamps}
 
-Poiché i record vengono trasferiti  Experience Platform, al momento dell&#39;assimilazione viene ottenuta una marca temporale di sistema che viene aggiunta al record. Se `timestampOrdered` è selezionato come `attributeMerge` tipo per un criterio di unione, i profili vengono uniti in base alla marca temporale del sistema. In altre parole, l&#39;unione viene eseguita in base alla marca temporale per l&#39;inserimento del record nella piattaforma.
+Poiché i record vengono trasferiti  Experience Platform, al momento dell&#39;assimilazione viene ottenuta una marca temporale di sistema che viene aggiunta al record. Quando `timestampOrdered` è selezionato come tipo `attributeMerge` per un criterio di unione, i profili vengono uniti in base alla marca temporale del sistema. In altre parole, l&#39;unione viene eseguita in base alla marca temporale per l&#39;inserimento del record nella piattaforma.
 
 Talvolta possono verificarsi casi di utilizzo, ad esempio il backfill dei dati o la verifica dell&#39;ordine corretto degli eventi se i record vengono ordinati in modo non corretto, se è necessario fornire una marca temporale personalizzata e fare in modo che il criterio di unione rispetti la marca temporale personalizzata invece che la marca temporale del sistema.
 
-Per utilizzare una marca temporale personalizzata, è [[!DNL External Source System Audit Details Mixin]](#mixin-details) necessario aggiungerla allo schema Profilo. Una volta aggiunta, la marca temporale personalizzata può essere compilata utilizzando il `xdm:lastUpdatedDate` campo. Quando un record viene assimilato con il `xdm:lastUpdatedDate` campo popolato,  Experience Platform utilizzerà tale campo per unire record o frammenti di profilo all&#39;interno e tra set di dati. Se non `xdm:lastUpdatedDate` è presente o non è popolato, la piattaforma continuerà a utilizzare la marca temporale del sistema.
+Per utilizzare una marca temporale personalizzata, è necessario aggiungere la [[!DNL External Source System Audit Details Mixin]](#mixin-details) allo schema del profilo. Una volta aggiunta, la marca temporale personalizzata può essere compilata utilizzando il campo `xdm:lastUpdatedDate`. Quando un record viene assimilato con il campo `xdm:lastUpdatedDate` popolato,  Experience Platform utilizzerà tale campo per unire record o frammenti di profilo all&#39;interno e tra set di dati. Se `xdm:lastUpdatedDate` non è presente o non è popolato, la piattaforma continuerà a utilizzare la marca temporale del sistema.
 
 >[!NOTE]
 >
->È necessario assicurarsi che la `xdm:lastUpdatedDate` marca temporale sia compilata quando si invia un PATCH sullo stesso record.
+>È necessario assicurarsi che la marca temporale `xdm:lastUpdatedDate` sia compilata quando si invia un PATCH sullo stesso record.
 
-Per istruzioni dettagliate sull&#39;utilizzo degli schemi tramite l&#39;API del Registro di sistema dello schema, inclusa l&#39;aggiunta di mixin agli schemi, vedere l&#39; [esercitazione per la creazione di uno schema tramite l&#39;API](../../xdm/tutorials/create-schema-api.md).
+Per istruzioni dettagliate sull&#39;utilizzo degli schemi tramite l&#39;API del Registro di sistema dello schema, inclusa l&#39;aggiunta di mixin agli schemi, vedere l&#39;esercitazione [per creare uno schema utilizzando l&#39;API](../../xdm/tutorials/create-schema-api.md).
 
-Per utilizzare le marche temporali personalizzate utilizzando l&#39;interfaccia utente, consultare la sezione sull&#39; [uso delle marche temporali](../ui/merge-policies.md#custom-timestamps) personalizzate nella guida [utente dei criteri di](../ui/merge-policies.md)unione.
+Per utilizzare le marche temporali personalizzate utilizzando l&#39;interfaccia utente, fare riferimento alla sezione sull&#39; [utilizzo di marche temporali personalizzate](../ui/merge-policies.md#custom-timestamps) nella [guida utente dei criteri di unione](../ui/merge-policies.md).
 
-#### [!DNL External Source System Audit Details Mixin] details {#mixin-details}
+#### [!DNL External Source System Audit Details Mixin] details  {#mixin-details}
 
-Nell&#39;esempio seguente vengono visualizzati correttamente i campi popolati nel [!DNL External Source System Audit Details Mixin]. Il JSON mixin completo può essere visualizzato anche nel repo [XDM (](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) Public Experience Data Model) su GitHub.
+L&#39;esempio seguente mostra i campi compilati correttamente in [!DNL External Source System Audit Details Mixin]. Il JSON mixin completo può essere visualizzato anche nel repo [public Experience Data Model (XDM) ](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) su GitHub.
 
 ```json
 {
