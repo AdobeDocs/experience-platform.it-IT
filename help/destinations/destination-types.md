@@ -1,13 +1,13 @@
 ---
-keywords: destinations;destination;destination types
+keywords: destinazioni;destinazione;tipi di destinazione
 title: Tipi e categorie di destinazioni
 seo-title: Tipi e categorie di destinazioni
-description: 'In Real-time Customer Data Platform (Piattaforma dati cliente in tempo reale), le destinazioni di esportazione profilo/segmento acquisiscono i dati dell''evento, li combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Le estensioni di Experience Platform Launch inoltrano i dati dell''evento non elaborati a diversi tipi di destinazioni. '
-seo-description: In Real-time Customer Data Platform (Piattaforma dati cliente in tempo reale), le destinazioni di esportazione profilo/segmento acquisiscono i dati dell'evento, li combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Le estensioni di Experience Platform Launch inoltrano i dati dell'evento non elaborati a diversi tipi di destinazioni.
+description: 'In Adobe Experience Platform, le destinazioni di esportazione Profilo/Segmento acquisiscono i dati degli eventi, li combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Le estensioni di Experience Platform Launch inoltrano i dati dell''evento non elaborati a diversi tipi di destinazioni. '
+seo-description: In Adobe Experience Platform, le destinazioni di esportazione Profilo/Segmento acquisiscono i dati degli eventi, li combinano con altre origini dati, applicano la segmentazione ed esportano segmenti e profili qualificati per destinazioni. Le estensioni di Experience Platform Launch inoltrano i dati dell'evento non elaborati a diversi tipi di destinazioni.
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '577'
 ht-degree: 0%
 
 ---
@@ -15,25 +15,25 @@ ht-degree: 0%
 
 # Tipi di destinazione e categorie
 
-Leggi questa pagina per comprendere i diversi tipi e categorie di destinazioni della piattaforma dati cliente in tempo reale.
+Leggi questa pagina per comprendere i diversi tipi e categorie di destinazioni Adobe Experience Platform.
 
 ## Tipi di destinazione
 
-In Real-time Customer Data Platform, distinguiamo tra due tipi di destinazione: connessioni ed estensioni. Esistono due tipi di destinazioni di connessione, le destinazioni di esportazione dei profili e le destinazioni di esportazione dei segmenti.
+In Adobe Experience Platform, distinguiamo tra due tipi di destinazione: connessioni ed estensioni. Esistono due tipi di destinazioni di connessione, le destinazioni di esportazione dei profili e le destinazioni di esportazione dei segmenti.
 
 ![Tipi di destinazioni](./assets/destination-types/types-of-destinations.png)
 
 ### Connessioni {#connections}
 
-**[!UICONTROL Profile Export]** e **[!UICONTROL Segment Export]** le destinazioni in Real-time Customer Data Platform acquisiscono i dati dell&#39;evento, li combinano con altre origini dati per formare il profilo [cliente in tempo](../profile/home.md)reale, applicare segmentazione ed esportare segmenti e profili qualificati per destinazioni.
+**[!UICONTROL Profile Export]** e  **[!UICONTROL Segment Export]** le destinazioni in Adobe Experience Platform acquisiscono i dati degli eventi, li combinano con altre origini dati per formare il profilo [ cliente in tempo ](../profile/home.md)reale, applicare la segmentazione ed esportare segmenti e profili qualificati per destinazioni.
 
 #### Destinazioni di esportazione profilo
 
-Le destinazioni di esportazione dei profili generano un file contenente profili e/o attributi. Queste destinazioni utilizzano dati non elaborati, spesso con l&#39;indirizzo e-mail come chiave primaria. La [destinazione](./catalog/cloud-storage/amazon-s3.md) di archiviazione cloud Amazon S3 è un esempio di destinazione in cui è possibile depositare i file contenenti esportazioni di profilo.
+Le destinazioni di esportazione dei profili generano un file contenente profili e/o attributi. Queste destinazioni utilizzano dati non elaborati, spesso con l&#39;indirizzo e-mail come chiave primaria. La [ destinazione di archiviazione cloud Amazon S3](./catalog/cloud-storage/amazon-s3.md) è un esempio di destinazione in cui è possibile depositare i file contenenti esportazioni di profilo.
 
 #### Destinazioni di esportazione dei segmenti
 
-Le destinazioni di esportazione dei segmenti inviano i profili e i segmenti per i quali si sono qualificati alle piattaforme di destinazione. Queste destinazioni utilizzano ID segmento o ID utente. Destinazioni pubblicitarie come [[!DNL Google Display & Video 360]](./catalog/advertising/google-dv360.md) o [[!DNL Google Ads]](./catalog/advertising/google-ads-destination.md) sono esempi di questi tipi di destinazioni.
+Le destinazioni di esportazione dei segmenti inviano i profili e i segmenti per i quali si sono qualificati alle piattaforme di destinazione. Queste destinazioni utilizzano ID segmento o ID utente. Le destinazioni pubblicitarie come [[!DNL Google Display & Video 360]](./catalog/advertising/google-dv360.md) o [[!DNL Google Ads]](./catalog/advertising/google-ads-destination.md) sono esempi di questo tipo di destinazioni.
 
 #### Destinazioni di esportazione dei profili e dei segmenti - Panoramica video
 
@@ -43,13 +43,13 @@ Il video seguente illustra le particolarità dei due tipi di destinazioni:
 
 ### Estensioni {#extensions}
 
-CDP in tempo reale sfrutta la potenza e la flessibilità di  Adobe Experience Platform Launch per includere estensioni Platform Launch nell&#39;interfaccia CDP in tempo reale.
+La piattaforma sfrutta la potenza e la flessibilità di  Adobe Experience Platform Launch per includere estensioni Platform Launch nell&#39;interfaccia della piattaforma.
 
 >[!TIP]
 >
->Per informazioni dettagliate su  estensioni Adobe Experience Platform Launch, compresi i casi di utilizzo e come trovarle nell&#39;interfaccia, consultate la panoramica [delle estensioni Adobe Experience Platform Launch](./catalog/launch-extensions/overview.md).
+>Per informazioni dettagliate su  estensioni Adobe Experience Platform Launch, compresi i casi di utilizzo e come trovarle nell&#39;interfaccia, vedere la [ panoramica delle estensioni Adobe Experience Platform Launch](./catalog/launch-extensions/overview.md).
 
-Le estensioni Launch piattaforma inoltrano i dati evento non elaborati a diversi tipi di destinazioni. Considerate le estensioni come un tipo di destinazione di inoltro **** degli eventi. Si tratta di un tipo di integrazione più semplice con le piattaforme di destinazione, che inoltra solo dati di evento non elaborati. Esempi di questi sono l&#39;estensione [di personalizzazione](./catalog/personalization/gainsight.md) Gainsight o la [voce Conferma dell&#39;estensione](./catalog/voice/confirmit-digital-feedback.md)del cliente.
+Le estensioni Launch piattaforma inoltrano i dati evento non elaborati a diversi tipi di destinazioni. Considerate le estensioni come un tipo di destinazione **Inoltro eventi**. Si tratta di un tipo di integrazione più semplice con le piattaforme di destinazione, che inoltra solo dati di evento non elaborati. Alcuni esempi sono l&#39; [Estensione di personalizzazione del guadagno](./catalog/personalization/gainsight.md) o la [Conferma voce dell&#39;estensione del cliente](./catalog/voice/confirmit-digital-feedback.md).
 
 ![Estensioni Experience Platform Launch confrontate con altre destinazioni](./assets/common/launch-and-other-destinations.png)
 
@@ -63,7 +63,7 @@ Le estensioni sono utili quando i dati dell&#39;evento vengono utilizzati per at
 
 ## Categorie di destinazione
 
-Le connessioni e le estensioni nel catalogo [delle](https://platform.adobe.com/destination/catalog) destinazioni sono raggruppate per categoria di destinazione (**Annuncio**, Archivio **** Cloud, Piattaforme **** per sondaggi, Marketing **tramite** e-mail, ecc.), a seconda del caso di utilizzo del marketing che aiutano a ottenere. Per ulteriori informazioni su ciascuna categoria, nonché sulle destinazioni incluse in ciascuna categoria, consulta la documentazione [del catalogo](./catalog/overview.md)Destinazioni.
+Le connessioni e le estensioni nel catalogo [delle destinazioni](https://platform.adobe.com/destination/catalog) sono raggruppate per categoria di destinazione (**Pubblicità**, **Cloud storage**, **Piattaforme di sondaggio**, **Email marketing** ecc.), a seconda del caso di utilizzo del marketing che consentono di ottenere. Per ulteriori informazioni su ciascuna categoria, nonché sulle destinazioni incluse in ciascuna categoria, consultare la [Documentazione del catalogo delle destinazioni](./catalog/overview.md).
 
 ![Categorie di destinazione](./assets/destination-types/destination-categories-menu.png)
 
