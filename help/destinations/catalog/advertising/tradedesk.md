@@ -1,13 +1,13 @@
 ---
-keywords: advertising; the trade desk;
+keywords: pubblicità; il banco commerciale;
 title: Destinazione scrivania
 seo-title: Destinazione scrivania
 description: 'Il Trade Desk è una piattaforma self-service per gli acquirenti di annunci che esegue retargeting e campagne digitali mirate per il pubblico attraverso fonti di visualizzazione, video e inventario mobile. '
 seo-description: Il Trade Desk è una piattaforma self-service per gli acquirenti di annunci che esegue retargeting e campagne digitali mirate per il pubblico attraverso fonti di visualizzazione, video e inventario mobile.
 translation-type: tm+mt
-source-git-commit: c24676970629f5a39297001357f8af40895533d9
+source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '543'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## Panoramica {#overview}
 
-[!DNL The Trade Desk] la destinazione consente di inviare i dati del profilo a [!DNL The Trade Desk].
+[!DNL The Trade Desk] la destinazione consente di inviare i dati del profilo a  [!DNL The Trade Desk].
 
 [!DNL The Trade Desk] è una piattaforma self-service per gli acquirenti di annunci che consente di eseguire il retargeting e campagne digitali mirate per il pubblico attraverso le origini di visualizzazione, video e inventario mobile.
 
@@ -25,13 +25,13 @@ Per inviare i dati del profilo a [!DNL The Trade Desk], è innanzitutto necessar
 
 ## Specifiche di destinazione {#destination-specs}
 
-Notate i seguenti dettagli specifici per la [!DNL The Trade Desk] destinazione:
+Notate i seguenti dettagli specifici della destinazione [!DNL The Trade Desk]:
 
-* Puoi inviare le seguenti [identità](../../../identity-service/namespaces.md) alle [!DNL The Trade Desk] destinazioni: [!DNL The Trade Desk ID], [!DNL IDFA], [!DNL GAID].
+* È possibile inviare le seguenti [identità](../../../identity-service/namespaces.md) alle [!DNL The Trade Desk] destinazioni: [!DNL The Trade Desk ID], [!DNL IDFA], [!DNL GAID].
 
 ## Casi d’uso {#use-cases}
 
-In qualità di esperto di marketing, voglio poter utilizzare i segmenti generati da ID dispositivo [!DNL Trade Desk IDs] o dispositivo per creare retargeting o campagne digitali mirate per l&#39;audience.
+In qualità di esperto di marketing, voglio essere in grado di utilizzare i segmenti generati da [!DNL Trade Desk IDs] o ID dispositivo per creare retargeting o campagne digitali mirate per l&#39;audience.
 
 ## Tipo di esportazione {#export-type}
 
@@ -39,23 +39,23 @@ In qualità di esperto di marketing, voglio poter utilizzare i segmenti generati
 
 ## Connetti alla destinazione {#connect-destination}
 
-In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, selezionare [!DNL The Trade Desk], quindi **[!UICONTROL Configure]**.
+In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, selezionare [!DNL The Trade Desk], quindi selezionare **[!UICONTROL Configure]**.
 
 ![Configurare La Destinazione Del Desktop Commerciale](../../assets/catalog/advertising/tradedesk/configure.png)
 
 >[!NOTE]
 >
->Se esiste già una connessione con questa destinazione, è possibile visualizzare un **[!UICONTROL Activate]** pulsante sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra **[!UICONTROL Activate]** e **[!UICONTROL Configure]**, consultate la sezione [Catalogo](../../ui/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
+>Se esiste già una connessione con questa destinazione, è possibile visualizzare un pulsante **[!UICONTROL Activate]** sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra **[!UICONTROL Activate]** e **[!UICONTROL Configure]**, fare riferimento alla sezione [Catalog](../../ui/destinations-workspace.md#catalog) della documentazione relativa all&#39;area di lavoro di destinazione.
 >
 >![Attivare La Destinazione Del Scrivania](../../assets/catalog/advertising/tradedesk/activate.png)
 
-Nel [!UICONTROL Authentication] passaggio, è necessario inserire i dettagli di [!DNL The Trade Desk] connessione:
+Nel passaggio [!UICONTROL Authentication], è necessario immettere i dettagli di connessione [!DNL The Trade Desk]:
 
 * **[!UICONTROL Name]**: Un nome con cui riconoscerete questa destinazione in futuro.
 * **[!UICONTROL Description]**: Descrizione che ti aiuterà a identificare questa destinazione in futuro.
 * **[!UICONTROL Account ID]**: Il [!DNL Trade Desk] [!UICONTROL Account ID].
-* **[!UICONTROL Client Secret]**: Il `clientSecret` parametro utilizzato nelle credenziali [!DNL OAuth2] client.
-* **[!UICONTROL Server Location]**: Chiedi al tuo [!DNL The Trade Desk] rappresentante quale server regionale utilizzare. Sono disponibili i seguenti server regionali:
+* **[!UICONTROL Client Secret]**: Il  `clientSecret` parametro utilizzato nelle credenziali  [!DNL OAuth2] client.
+* **[!UICONTROL Server Location]**: Chiedi al tuo  [!DNL The Trade Desk] rappresentante quale server regionale utilizzare. Sono disponibili i seguenti server regionali:
 
    * **[!UICONTROL Europe]**
    * **[!UICONTROL Singapore]**
@@ -64,24 +64,24 @@ Nel [!UICONTROL Authentication] passaggio, è necessario inserire i dettagli di 
    * **[!UICONTROL North America West]**
    * **[!UICONTROL Latin America]**
 
-* **[!UICONTROL Marketing use case]**: I casi di utilizzo del marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra  casi di utilizzo di marketing definiti dal Adobe o creare un caso di utilizzo di marketing personale. Per ulteriori informazioni sui casi di utilizzo del marketing, consulta la pagina [Governance dei dati in Adobe Experience Platform](../../../rtcdp/privacy/data-governance-overview.md#destinations) . Per informazioni sui singoli casi di utilizzo marketing definiti dal Adobe , consulta la panoramica [sui criteri di utilizzo dei](../../../data-governance/policies/overview.md#core-actions)dati.
+* **[!UICONTROL Marketing use case]**: I casi di utilizzo del marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra  casi di utilizzo di marketing definiti dal Adobe o creare un caso di utilizzo di marketing personale. Per ulteriori informazioni sui casi di utilizzo del marketing, vedere la pagina [Governance dei dati in Adobe Experience Platform](../../../data-governance/policies/overview.md). Per informazioni sui singoli casi d&#39;uso di marketing definiti dal Adobe , vedere la [panoramica dei criteri di utilizzo dei dati](../../../data-governance/policies/overview.md).
 
 ![Passaggio Autenticazione Desktop Commerciale](../../assets/catalog/advertising/tradedesk/authenticate.png)
 
-Fai clic su **[!UICONTROL Create destination]**. La destinazione è stata creata. Puoi fare clic su [!UICONTROL Save & Exit] se vuoi attivare i segmenti in un secondo momento, oppure puoi selezionare [!UICONTROL Next] per continuare il flusso di lavoro e selezionare i segmenti da attivare. In entrambi i casi, consulta la sezione successiva, [Attiva segmenti](#activate-segments), per il resto del flusso di lavoro.
+Fai clic su **[!UICONTROL Create destination]**. La destinazione è stata creata. È possibile fare clic su [!UICONTROL Save & Exit] se si desidera attivare i segmenti in un secondo momento, oppure è possibile selezionare [!UICONTROL Next] per continuare il flusso di lavoro e selezionare i segmenti da attivare. In entrambi i casi, vedere la sezione successiva, [Attiva segmenti](#activate-segments), per il resto del flusso di lavoro.
 
 ## Attivare i segmenti {#activate-segments}
 
-Consulta [Attivare profili e segmenti su una destinazione](../../ui/activate-destinations.md#select-attributes) per informazioni sul flusso di lavoro di attivazione dei segmenti.
+Per informazioni sul flusso di lavoro di attivazione dei segmenti, vedere [Attivare profili e segmenti in una destinazione](../../ui/activate-destinations.md#select-attributes).
 
-Nel passaggio della pianificazione [](../../ui/activate-destinations.md#segment-schedule) Segmento, devi mappare manualmente i segmenti sul relativo ID o nome descrittivo nella destinazione.
+Nel passaggio [Programmazione segmenti](../../ui/activate-destinations.md#segment-schedule), devi mappare manualmente i segmenti sul relativo ID o nome descrittivo nella destinazione.
 
-Per la mappatura dei segmenti, si consiglia di utilizzare il nome del [!DNL Platform] segmento o una forma più breve, per facilitarne l’uso. Tuttavia, l’ID o il nome del segmento nella destinazione non deve necessariamente corrispondere a quello nel tuo [!DNL Platform] account. Qualsiasi valore inserito nel campo di mappatura verrà riflesso dalla destinazione.
+Per la mappatura dei segmenti, si consiglia di utilizzare il nome del segmento [!DNL Platform] o una forma più breve, per semplificare l&#39;utilizzo. Tuttavia, l&#39;ID o il nome del segmento nella destinazione non deve corrispondere a quello nell&#39;account [!DNL Platform]. Qualsiasi valore inserito nel campo di mappatura verrà riflesso dalla destinazione.
 
-Se utilizzate più mappature dispositivo (ID cookie [!DNL IDFA], [!DNL GAID]), accertatevi di utilizzare lo stesso valore di mappatura per tutte e tre le mappature. [!DNL The Trade Desk] vengono aggregati tutti in un singolo segmento, con una suddivisione a livello di dispositivo.
+Se utilizzate più mappature dispositivo (ID cookie, [!DNL IDFA], [!DNL GAID]), accertatevi di utilizzare lo stesso valore di mappatura per tutte e tre le mappature. [!DNL The Trade Desk] vengono aggregati tutti in un singolo segmento, con una suddivisione a livello di dispositivo.
 
 ![ID mappatura segmento](../../assets/common/segment-mapping-id.png)
 
 ## Dati esportati {#exported-data}
 
-Per verificare se i dati sono stati esportati correttamente nella [!DNL The Trade Desk] destinazione, controlla il tuo [!DNL The Trade Desk] account. Se l&#39;attivazione ha avuto esito positivo, l&#39;audience viene popolata nel vostro account.
+Per verificare se i dati sono stati esportati correttamente in [!DNL The Trade Desk] destinazione, controlla il tuo account [!DNL The Trade Desk]. Se l&#39;attivazione ha avuto esito positivo, l&#39;audience viene popolata nel vostro account.
