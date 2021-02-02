@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;flow service;API;api;delete;delete dataflows
+keywords: ' Experience Platform;home;argomenti popolari;servizio di flusso;API;api;delete;eliminare i flussi di dati'
 solution: Experience Platform
 title: Eliminare un flusso di dati utilizzando l'API del servizio di flusso
 topic: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per eliminare i flussi di dati in batch e in streaming utilizzando l'API del servizio di flusso.
 translation-type: tm+mt
-source-git-commit: b63b17f2a7271fc673abc8245a4917c0daca4ef3
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '483'
 ht-degree: 1%
 
 ---
@@ -16,34 +16,34 @@ ht-degree: 1%
 
 # Eliminare un flusso di dati utilizzando l&#39;API del servizio di flusso
 
-Potete eliminare i flussi di dati in batch e in streaming contenenti errori o obsoleti utilizzando l&#39; [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Potete eliminare i flussi di dati batch e in streaming contenenti errori o obsoleti utilizzando l&#39;API [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
-Questa esercitazione descrive i passaggi per eliminare i flussi di dati creati con origini batch e in streaming che utilizzano [!DNL Flow Service].
+Questa esercitazione descrive i passaggi per eliminare i flussi di dati creati con origini batch e in streaming utilizzando [!DNL Flow Service].
 
 ## Introduzione
 
-Questa esercitazione richiede un ID flusso valido. Se non disponi di un ID flusso valido, seleziona il connettore desiderato dalla panoramica [delle](../../home.md) origini ed esegui i passaggi descritti prima di eseguire l&#39;esercitazione.
+Questa esercitazione richiede un ID flusso valido. Se non si dispone di un ID di flusso valido, selezionare il connettore desiderato dalla [scheda madre ](../../home.md) e seguire i passaggi descritti prima di eseguire l&#39;esercitazione.
 
 Questa esercitazione richiede inoltre di conoscere i seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../home.md): [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi.
-* [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [Origini](../../home.md):  [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite  [!DNL Platform] i servizi.
+* [Sandbox](../../../sandboxes/home.md):  [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola  [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per eliminare correttamente un flusso di dati utilizzando l&#39; [!DNL Flow Service] API.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per eliminare correttamente un flusso di dati utilizzando l&#39;API [!DNL Flow Service].
 
 ### Lettura di chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, vedete la sezione [come leggere chiamate](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) API di esempio nella guida alla [!DNL Experience Platform] risoluzione dei problemi.
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consultate la sezione relativa a [come leggere chiamate API di esempio](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
 
 ### Raccogli valori per le intestazioni richieste
 
-Per effettuare chiamate alle [!DNL Platform] API, è prima necessario completare l&#39;esercitazione [sull&#39;](../../../tutorials/authentication.md)autenticazione. Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate [!DNL Experience Platform] API, come illustrato di seguito:
+Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](https://www.adobe.com/go/platform-api-authentication-en) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform], incluse quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui verrà eseguita l&#39;operazione:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -53,7 +53,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 ## Eliminare un flusso di dati
 
-Con un ID flusso esistente, potete eliminare un flusso di dati eseguendo una richiesta di DELETE all&#39; [!DNL Flow Service] API.
+Con un ID flusso esistente, potete eliminare un flusso di dati eseguendo una richiesta di DELETE all&#39;API [!DNL Flow Service].
 
 **Formato API**
 
@@ -63,7 +63,7 @@ DELETE /flows/{FLOW_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{FLOW_ID}` | Il `id` valore univoco del flusso di dati da eliminare. |
+| `{FLOW_ID}` | Valore `id` univoco per il flusso di dati da eliminare. |
 
 **Richiesta**
 
@@ -82,6 +82,6 @@ Una risposta corretta restituisce lo stato HTTP 204 (Nessun contenuto) e un corp
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, l&#39; [!DNL Flow Service] API è stata utilizzata correttamente per eliminare un flusso di dati esistente.
+Seguendo questa esercitazione, è stata utilizzata correttamente l&#39;API [!DNL Flow Service] per eliminare un flusso di dati esistente.
 
-Per informazioni su come eseguire queste operazioni utilizzando l&#39;interfaccia utente, fare riferimento all&#39;esercitazione sull&#39; [eliminazione dei flussi di dati nell&#39;interfaccia utente](../../tutorials/ui/delete.md)
+Per i passaggi su come eseguire queste operazioni utilizzando l&#39;interfaccia utente, fare riferimento all&#39;esercitazione sull&#39;eliminazione dei flussi di dati nell&#39;interfaccia utente](../../tutorials/ui/delete.md)[
