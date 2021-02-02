@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;preview;sample
+keywords: Experience Platform ;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API;anteprima;esempio
 title: Anteprima profilo - API profilo cliente in tempo reale
-description: Adobe Experience Platform consente di acquisire dati dei clienti da più origini per creare profili unificati solidi per i singoli clienti. Poiché i dati attivati per il profilo cliente in tempo reale vengono trasferiti nella piattaforma, vengono memorizzati nell'archivio dati del profilo. Con l’aumento o la diminuzione del numero di record nell’archivio profili, viene eseguito un processo di esempio che include informazioni sul numero di frammenti di profilo e di profili uniti presenti nell’archivio dati. Utilizzando l'API Profile è possibile visualizzare in anteprima l'esempio di successo più recente, nonché distribuire il profilo di elenco per set di dati e per namespace di identità.
+description: Utilizzando gli endpoint API del profilo cliente in tempo reale, potete visualizzare l'anteprima dell'ultimo esempio di successo dei dati del profilo, nonché elencare la distribuzione del profilo per set di dati e per namespace di identità all'interno di Adobe Experience Platform.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
+source-git-commit: fe93a3672f65168744b3a242be7f42012f323544
 workflow-type: tm+mt
-source-wordcount: '1605'
+source-wordcount: '1551'
 ht-degree: 1%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 1%
 
 # Anteprima dell’endpoint di stato del campione (anteprima profilo)
 
-Adobe Experience Platform consente di acquisire dati dei clienti da più origini per creare profili unificati solidi per i singoli clienti. Poiché i dati abilitati per il profilo cliente in tempo reale vengono acquisiti, [!DNL Platform]vengono memorizzati nell&#39;archivio dati del profilo.
+Adobe Experience Platform consente di acquisire dati dei clienti da più origini per creare profili unificati solidi per i singoli clienti. Poiché i dati abilitati per il profilo cliente in tempo reale vengono trasferiti in [!DNL Platform], vengono memorizzati nell&#39;archivio dati del profilo.
 
 Quando l’inserimento di record nell’archivio profili aumenta o diminuisce il conteggio totale dei profili di oltre il 5%, viene attivato un processo per aggiornare il conteggio. Per i flussi di lavoro dei dati in streaming, viene effettuato un controllo ogni ora per determinare se è stata raggiunta la soglia di incremento o riduzione del 5%. In caso affermativo, viene attivato automaticamente un processo per aggiornare il conteggio. Per l’inserimento batch, entro 15 minuti dal corretto inserimento di un batch nell’archivio profili, se viene raggiunta la soglia di incremento o riduzione del 5%, viene eseguito un processo per aggiornare il conteggio. Utilizzando l&#39;API Profile è possibile visualizzare in anteprima l&#39;ultimo processo di esempio riuscito, nonché la distribuzione del profilo di elenco per set di dati e per namespace di identità.
 
-Queste metriche sono disponibili anche nella [!UICONTROL Profiles] sezione dell&#39;interfaccia utente del Experience Platform . Per informazioni su come accedere ai dati del profilo utilizzando l&#39;interfaccia utente, consulta la guida [[!DNL Profile] ](../ui/user-guide.md)utente.
+Queste metriche sono disponibili anche nella sezione [!UICONTROL Profiles] dell&#39;interfaccia utente del Experience Platform . Per informazioni su come accedere ai dati del profilo utilizzando l&#39;interfaccia utente, visitare la [[!DNL Profile] guida utente](../ui/user-guide.md).
 
 ## Introduzione
 
-L&#39;endpoint API utilizzato in questa guida è parte dell&#39; [[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Prima di continuare, consultate la guida [introduttiva per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente chiamate a qualsiasi](getting-started.md) [!DNL Experience Platform] API.
+L&#39;endpoint API utilizzato in questa guida fa parte dell&#39; [[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Prima di continuare, consultare la [guida introduttiva](getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per eseguire correttamente chiamate a qualsiasi API [!DNL Experience Platform].
 
 ## Frammenti di profilo e profili uniti
 
@@ -30,9 +30,9 @@ Questa guida fa riferimento sia ai &quot;frammenti di profilo&quot; che ai &quot
 
 Ciascun profilo cliente è composto da più frammenti di profilo che sono stati uniti per formare una singola vista del cliente. Ad esempio, se un cliente interagisce con il tuo marchio su più canali, l&#39;organizzazione avrà più frammenti di profilo correlati a tale singolo cliente che saranno visualizzati in più set di dati. Quando questi frammenti vengono assimilati in Piattaforma, vengono uniti (in base ai criteri di unione) per creare un unico profilo per il cliente. Pertanto, è probabile che il numero totale di frammenti di profilo sia sempre superiore al numero totale di profili uniti, in quanto ogni profilo è composto da più frammenti.
 
-## Visualizza stato ultimo esempio {#view-last-sample-status}
+## Visualizza stato ultimo campione {#view-last-sample-status}
 
-Potete eseguire una richiesta di GET all&#39; `/previewsamplestatus` endpoint per visualizzare i dettagli dell&#39;ultimo processo di esempio eseguito correttamente per l&#39;organizzazione IMS. Ciò include il numero totale di profili nell&#39;esempio, nonché la metrica del conteggio dei profili, o il numero totale di profili di cui dispone l&#39;organizzazione all&#39;interno  Experience Platform. Il conteggio dei profili viene generato dopo l&#39;unione dei frammenti di profilo per creare un unico profilo per ciascun cliente. In altre parole, l&#39;organizzazione potrebbe avere più frammenti di profilo correlati a un singolo cliente che interagisce con il proprio marchio tra canali diversi, ma tali frammenti sarebbero uniti (in base al criterio di unione predefinito) e restituirebbero un conteggio di profilo pari a &quot;1&quot; perché tutti correlati allo stesso individuo.
+È possibile eseguire una richiesta di GET all&#39;endpoint `/previewsamplestatus` per visualizzare i dettagli dell&#39;ultimo processo di esempio eseguito correttamente per l&#39;organizzazione IMS. Ciò include il numero totale di profili nell&#39;esempio, nonché la metrica del conteggio dei profili, o il numero totale di profili di cui dispone l&#39;organizzazione all&#39;interno  Experience Platform. Il conteggio dei profili viene generato dopo l&#39;unione dei frammenti di profilo per creare un unico profilo per ciascun cliente. In altre parole, l&#39;organizzazione potrebbe avere più frammenti di profilo correlati a un singolo cliente che interagisce con il proprio marchio tra canali diversi, ma tali frammenti sarebbero uniti (in base al criterio di unione predefinito) e restituirebbero un conteggio di profilo pari a &quot;1&quot; perché tutti correlati allo stesso individuo.
 
 Il conteggio dei profili include anche profili con attributi (dati di record) e profili contenenti solo dati di serie temporali (eventi), come  profili Adobe Analytics. Il processo di esempio viene aggiornato regolarmente durante l’assimilazione dei dati del profilo, al fine di fornire un numero totale aggiornato di profili all’interno della piattaforma.
 
@@ -59,7 +59,7 @@ La risposta include i dettagli dell&#39;ultimo processo di esempio riuscito eseg
 
 >[!NOTE]
 >
->In questo esempio, la risposta `numRowsToRead` e `totalRows` sono uguali tra loro. A seconda del numero di profili di cui dispone la vostra organizzazione nel  Experience Platform, questo potrebbe essere il caso. Tuttavia, in genere questi due numeri sono diversi, con `numRowsToRead` un numero minore poiché rappresenta il campione come un sottoinsieme del numero totale di profili (`totalRows`).
+>In questo esempio, `numRowsToRead` e `totalRows` sono uguali tra loro. A seconda del numero di profili di cui dispone la vostra organizzazione nel  Experience Platform, questo potrebbe essere il caso. Tuttavia, in genere questi due numeri sono diversi, con `numRowsToRead` il numero più piccolo, perché rappresenta il campione come un sottoinsieme del numero totale di profili (`totalRows`).
 
 ```json
 {
@@ -84,7 +84,7 @@ La risposta include i dettagli dell&#39;ultimo processo di esempio riuscito eseg
 | Proprietà | Descrizione |
 |---|---|
 | `numRowsToRead` | Il numero totale di profili uniti nell&#39;esempio. |
-| `sampleJobRunning` | Un valore booleano che restituisce `true` se è in corso un processo di esempio. Fornisce la trasparenza della latenza che si verifica da quando un file batch viene caricato quando viene effettivamente aggiunto all&#39;archivio dei profili. |
+| `sampleJobRunning` | Valore booleano che restituisce `true` quando è in corso un processo di esempio. Fornisce la trasparenza della latenza che si verifica da quando un file batch viene caricato quando viene effettivamente aggiunto all&#39;archivio dei profili. |
 | `cosmosDocCount` | Totale del numero di documenti in Cosmo. |
 | `totalFragmentCount` | Numero totale di frammenti di profilo nell&#39;archivio profili. |
 | `lastSuccessfulBatchTimestamp` | Timestamp ultimo caricamento batch riuscito. |
@@ -98,7 +98,7 @@ La risposta include i dettagli dell&#39;ultimo processo di esempio riuscito eseg
 
 ## Distribuzione dei profili di elenco per set di dati
 
-Per visualizzare la distribuzione dei profili per set di dati, puoi eseguire una richiesta di GET all&#39; `/previewsamplestatus/report/dataset` endpoint.
+Per visualizzare la distribuzione dei profili per set di dati, puoi eseguire una richiesta di GET all&#39;endpoint `/previewsamplestatus/report/dataset`.
 
 **Formato API**
 
@@ -113,7 +113,7 @@ GET /previewsamplestatus/report/dataset?{QUERY_PARAMETERS}
 
 **Richiesta**
 
-La richiesta seguente utilizza il `date` parametro per restituire il report più recente per la data specificata.
+La richiesta seguente utilizza il parametro `date` per restituire il report più recente per la data specificata.
 
 ```shell
 curl -X GET \
@@ -126,7 +126,7 @@ curl -X GET \
 
 **Risposta**
 
-La risposta include una `data` matrice contenente un elenco di oggetti dataset. La risposta mostrata è stata troncata per mostrare tre set di dati.
+La risposta include un array `data` contenente un elenco di oggetti dataset. La risposta mostrata è stata troncata per mostrare tre set di dati.
 
 >[!NOTE]
 >
@@ -179,21 +179,21 @@ La risposta include una `data` matrice contenente un elenco di oggetti dataset. 
 | Proprietà | Descrizione |
 |---|---|
 | `sampleCount` | Il numero totale di profili uniti campionati con questo ID set di dati. |
-| `samplePercentage` | Percentuale `sampleCount` del numero totale di profili uniti campionati (il `numRowsToRead` valore restituito nell&#39; [ultimo stato](#view-last-sample-status)del campione), espressa in formato decimale. |
+| `samplePercentage` | Il valore `sampleCount` come percentuale del numero totale di profili uniti campionati (il valore `numRowsToRead` come restituito nell&#39; [ultimo stato del campione](#view-last-sample-status)), espresso in formato decimale. |
 | `fullIDsCount` | Numero totale di profili uniti con questo ID set di dati. |
-| `fullIDsPercentage` | Percentuale `fullIDsCount` del numero totale di profili uniti (il `totalRows` valore restituito nell&#39; [ultimo stato](#view-last-sample-status)del campione), espressa in formato decimale. |
+| `fullIDsPercentage` | Il valore `fullIDsCount` come percentuale del numero totale di profili uniti (il valore `totalRows` restituito nell&#39; [ultimo stato del campione](#view-last-sample-status)), espresso in formato decimale. |
 | `name` | Nome del set di dati, come fornito durante la creazione del set di dati. |
 | `description` | Descrizione del dataset, come fornito durante la creazione del dataset. |
 | `value` | ID del set di dati. |
 | `streamingIngestionEnabled` | Indica se il set di dati è abilitato per l’assimilazione in streaming. |
 | `createdUser` | L&#39;ID utente dell&#39;utente che ha creato il set di dati. |
-| `reportTimestamp` | Il timestamp del report. Se durante la richiesta è stato fornito un `date` parametro, il rapporto restituito è relativo alla data specificata. Se non viene fornito alcun `date` parametro, viene restituito il rapporto più recente. |
+| `reportTimestamp` | Il timestamp del report. Se durante la richiesta è stato fornito un parametro `date`, il rapporto restituito è relativo alla data specificata. Se non viene fornito alcun parametro `date`, viene restituito il rapporto più recente. |
 
 
 
 ## Distribuzione dei profili di elenco per namespace
 
-Potete eseguire una richiesta di GET all&#39; `/previewsamplestatus/report/namespace` endpoint per visualizzare la suddivisione per namespace identità in tutti i profili uniti nell&#39;archivio profili. Gli spazi dei nomi delle identità sono un componente importante di Adobe Experience Platform Identity Service che funge da indicatori del contesto a cui si riferiscono i dati dei clienti. Per ulteriori informazioni, visitare la panoramica [dello spazio nomi](../../identity-service/namespaces.md)identità.
+Potete eseguire una richiesta di GET all&#39;endpoint `/previewsamplestatus/report/namespace` per visualizzare la suddivisione per namespace identità in tutti i profili uniti nell&#39;archivio dei profili. Gli spazi dei nomi delle identità sono un componente importante di Adobe Experience Platform Identity Service che funge da indicatori del contesto a cui si riferiscono i dati dei clienti. Per ulteriori informazioni, visitare la [panoramica dello spazio nomi identità](../../identity-service/namespaces.md).
 
 >[!NOTE]
 >
@@ -212,7 +212,7 @@ GET /previewsamplestatus/report/namespace?{QUERY_PARAMETERS}
 
 **Richiesta**
 
-La richiesta seguente non specifica un `date` parametro e pertanto restituisce il report più recente.
+La richiesta seguente non specifica un parametro `date` e pertanto restituisce il report più recente.
 
 ```shell
 curl -X GET \
@@ -225,7 +225,7 @@ curl -X GET \
 
 **Risposta**
 
-La risposta include una `data` matrice, con singoli oggetti che contengono i dettagli per ogni spazio dei nomi. La risposta mostrata è stata troncata per mostrare quattro spazi dei nomi.
+La risposta include un array `data`, con singoli oggetti che contengono i dettagli per ogni namespace. La risposta mostrata è stata troncata per mostrare quattro spazi dei nomi.
 
 ```json
 {
@@ -278,15 +278,15 @@ La risposta include una `data` matrice, con singoli oggetti che contengono i det
 | Proprietà | Descrizione |
 |---|---|
 | `sampleCount` | Il numero totale di profili uniti campionati nello spazio dei nomi. |
-| `samplePercentage` | Percentuale `sampleCount` dei profili uniti campionati (il `numRowsToRead` valore restituito nello stato [dell&#39;](#view-last-sample-status)ultimo campione), espressa in formato decimale. |
-| `reportTimestamp` | Il timestamp del report. Se durante la richiesta è stato fornito un `date` parametro, il rapporto restituito è relativo alla data specificata. Se non viene fornito alcun `date` parametro, viene restituito il rapporto più recente. |
+| `samplePercentage` | La `sampleCount` come percentuale dei profili uniti campionati (il valore `numRowsToRead` come restituito nell&#39; [ultimo stato del campione](#view-last-sample-status)), espresso in formato decimale. |
+| `reportTimestamp` | Il timestamp del report. Se durante la richiesta è stato fornito un parametro `date`, il rapporto restituito è relativo alla data specificata. Se non viene fornito alcun parametro `date`, viene restituito il rapporto più recente. |
 | `fullIDsFragmentCount` | Numero totale di frammenti di profilo nello spazio dei nomi. |
 | `fullIDsCount` | Il numero totale di profili uniti nello spazio dei nomi. |
-| `fullIDsPercentage` | Percentuale `fullIDsCount` dei profili uniti totali (il `totalRows` valore restituito nello stato [dell&#39;](#view-last-sample-status)ultimo campione), espressa in formato decimale. |
-| `code` | Indica `code` lo spazio dei nomi. Questo si può trovare quando si utilizzano gli spazi dei nomi mediante l&#39;API [](../../identity-service/api/list-namespaces.md) Adobe Experience Platform Identity Service e viene indicato anche come [!UICONTROL Identity symbol] nell&#39;interfaccia utente del Experience Platform . Per ulteriori informazioni, visitare la panoramica [dello spazio nomi](../../identity-service/namespaces.md)identità. |
-| `value` | Il `id` valore dello spazio dei nomi. Questo è possibile quando si utilizzano gli spazi dei nomi mediante l&#39;API [](../../identity-service/api/list-namespaces.md)del servizio identità. |
+| `fullIDsPercentage` | La `fullIDsCount` come percentuale del totale dei profili uniti (il valore `totalRows` come restituito nell&#39; [ultimo stato del campione](#view-last-sample-status)), espresso in formato decimale. |
+| `code` | `code` per lo spazio dei nomi. Questo si può trovare quando si utilizzano gli spazi dei nomi utilizzando l&#39; [API del servizio identità Adobe Experience Platform](../../identity-service/api/list-namespaces.md) ed è anche denominato [!UICONTROL Identity symbol] nell&#39;interfaccia utente del Experience Platform . Per ulteriori informazioni, visitare la [panoramica dello spazio nomi identità](../../identity-service/namespaces.md). |
+| `value` | Il valore `id` dello spazio dei nomi. Questo è possibile quando si utilizzano gli spazi dei nomi mediante l&#39;API [Servizio identità](../../identity-service/api/list-namespaces.md). |
 
 ## Passaggi successivi
 
-Potete inoltre utilizzare stime e anteprime simili per visualizzare le informazioni a livello di riepilogo relative alle definizioni dei segmenti, in modo da garantire l&#39;isolamento dell&#39;audience prevista. Per trovare i passaggi dettagliati per l&#39;utilizzo delle anteprime e delle stime dei segmenti tramite l&#39; [!DNL Adobe Experience Platform Segmentation Service] API, visita la guida [alle](../../segmentation/api/previews-and-estimates.md)anteprime e alle stime degli endpoint, parte della guida per gli sviluppatori di [!DNL Segmentation] API.
+Potete inoltre utilizzare stime e anteprime simili per visualizzare le informazioni a livello di riepilogo relative alle definizioni dei segmenti, in modo da garantire l&#39;isolamento dell&#39;audience prevista. Per trovare i passaggi dettagliati per l&#39;utilizzo delle anteprime e delle stime dei segmenti utilizzando l&#39;API [!DNL Adobe Experience Platform Segmentation Service], visita la [guida alle anteprime e alle endpoint delle stime](../../segmentation/api/previews-and-estimates.md), parte della [!DNL Segmentation] Guida per gli sviluppatori di API.
 
