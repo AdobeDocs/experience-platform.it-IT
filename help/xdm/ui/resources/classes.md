@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;class;classes;
+keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati;ui;area di lavoro;classe;classi;'
 solution: Experience Platform
 title: Creazione e modifica di classi nell'interfaccia utente
 description: Scoprite come creare e modificare le classi nell'interfaccia utente del Experience Platform .
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '829'
 ht-degree: 0%
 
 ---
