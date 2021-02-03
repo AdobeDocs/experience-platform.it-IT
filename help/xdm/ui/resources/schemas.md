@@ -5,7 +5,7 @@ title: Creare e modificare schemi nell’interfaccia utente
 description: Scoprite le nozioni di base su come creare e modificare gli schemi nell’interfaccia utente del Experience Platform .
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 3aa838509e4e24c57508e7411b0ffcf135fbcf04
+source-git-commit: e9df977272524b6aba516982e93f3128d1b9278b
 workflow-type: tm+mt
 source-wordcount: '1133'
 ht-degree: 0%
@@ -81,7 +81,7 @@ Selezionate la casella di controllo accanto al nome del mixin che desiderate agg
 >
 >Per qualsiasi mixin elencato, potete passare il puntatore del mouse sull&#39;icona delle informazioni (![](../../images/ui/resources/schemas/info-icon.png)) per visualizzare una breve descrizione del tipo di dati acquisito dal mixin. È inoltre possibile selezionare l&#39;icona di anteprima (![](../../images/ui/resources/schemas/preview-icon.png)) per visualizzare la struttura dei campi forniti dal mixin prima di decidere di aggiungerlo allo schema.
 
-Dopo aver scelto il mixin, selezionare **[!UICONTROL Add mixin]** per aggiungerli allo schema.
+Dopo aver selezionato i mixin, selezionare **[!UICONTROL Add mixin]** per aggiungerli allo schema.
 
 ![](../../images/ui/resources/schemas/add-mixin-finish.png)
 
