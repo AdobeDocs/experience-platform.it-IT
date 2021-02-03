@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Questa esercitazione utilizza l'API del servizio di flusso per guidarvi attraverso i passaggi necessari per collegare  Experience Platform a Google AdWords.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '622'
 ht-degree: 1%
 
 ---
@@ -39,12 +39,12 @@ Affinché [!DNL Flow Service] possa connettersi ad AdWords, è necessario fornir
 
 | **Credenziali** | **Descrizione** |
 | -------------- | --------------- |
-| ID cliente client | L&#39;ID cliente client dell&#39;account AdWords. |
-| Token sviluppatore | Token sviluppatore associato all&#39;account manager. |
-| Aggiorna token | Token di aggiornamento ottenuto da [!DNL Google] per autorizzare l&#39;accesso ad AdWords. |
-| ID client | ID client dell&#39;applicazione [!DNL Google] utilizzata per acquisire il token di aggiornamento. |
-| Segreto cliente | Il segreto client dell&#39;applicazione [!DNL Google] utilizzata per acquisire il token di aggiornamento. |
-| ID specifica connessione | Identificatore univoco necessario per creare una connessione. L&#39;ID della specifica di connessione per [!DNL Google AdWords] è: `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
+| `clientCustomerId` | L&#39;ID cliente client dell&#39;account AdWords. |
+| `developerToken` | Token sviluppatore associato all&#39;account manager. |
+| `refreshToken` | Token di aggiornamento ottenuto da [!DNL Google] per autorizzare l&#39;accesso ad AdWords. |
+| `clientId` | ID client dell&#39;applicazione [!DNL Google] utilizzata per acquisire il token di aggiornamento. |
+| `clientSecret` | Il segreto client dell&#39;applicazione [!DNL Google] utilizzata per acquisire il token di aggiornamento. |
+| `connectionSpec` | Identificatore univoco necessario per creare una connessione. L&#39;ID della specifica di connessione per [!DNL Google AdWords] è: `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
 
 Per ulteriori informazioni su questi valori, fare riferimento a questo documento [Google AdWords](https://developers.google.com/adwords/api/docs/guides/authentication).
 
