@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Un flusso di dati è un'attività pianificata che recupera e trasferisce dati da un'origine a un set di dati della piattaforma. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account di archiviazione cloud.
 translation-type: tm+mt
-source-git-commit: 4e85dc702cda5c6c495a6f7fb70453b7897baa36
+source-git-commit: 2d1b49d774d04e7befbcc1c9e5417ee82323634a
 workflow-type: tm+mt
-source-wordcount: '1810'
+source-wordcount: '1831'
 ht-degree: 0%
 
 ---
@@ -108,7 +108,7 @@ In base alle esigenze, è possibile scegliere di mappare direttamente i campi op
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
-Per i file JSON, oltre alla mappatura diretta dei campi ad altri campi, è possibile mappare direttamente gli oggetti ad altri oggetti e array ad altri array.
+Per i file JSON, oltre a mappare direttamente i campi ad altri campi, è possibile mappare direttamente gli oggetti ad altri oggetti e array ad altri array. È inoltre possibile visualizzare in anteprima e mappare tipi di dati complessi, ad esempio array in file JSON, utilizzando un connettore origine di archiviazione cloud.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/source-field-json.png)
 
