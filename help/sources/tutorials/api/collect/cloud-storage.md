@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi necessari per recuperare i dati da un archivio cloud di terze parti e inserirli nella piattaforma tramite connettori sorgente e API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 64627592b873a48b9cb58ef911e049869a2c21fb
 workflow-type: tm+mt
 source-wordcount: '1621'
 ht-degree: 1%
@@ -90,7 +90,7 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Cloud storage source connector",
-        "connectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
         "description": "Cloud storage source connector",
         "data": {
             "format": "delimited",
@@ -109,7 +109,7 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `connectionId` | L&#39;ID di connessione univoco del sistema di archiviazione cloud di terze parti a cui si accede. |
+| `baseConnectionId` | L&#39;ID di connessione univoco del sistema di archiviazione cloud di terze parti a cui si accede. |
 | `data.format` | Un valore enum che definisce l&#39;attributo del formato dati. |
 | `data.columnDelimiter` | Potete utilizzare un carattere di delimitazione di colonna singolo per raccogliere file semplici. Questa proprietà è necessaria solo per l’assimilazione di file CSV o TSV. |
 | `params.path` | Percorso del file di origine a cui si accede. |
