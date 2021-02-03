@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi necessari per recuperare i dati da un archivio cloud di terze parti e inserirli nella piattaforma tramite connettori sorgente e API.
 translation-type: tm+mt
-source-git-commit: 64627592b873a48b9cb58ef911e049869a2c21fb
+source-git-commit: c168a1b597a1ac2d85a8b896f3b6a8d213fcb1ae
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1639'
 ht-degree: 1%
 
 ---
@@ -341,6 +341,10 @@ Una risposta corretta restituisce l&#39;identificatore univoco della nuova conne
 ## Creare una mappatura {#mapping}
 
 Affinché i dati di origine siano assimilati in un set di dati di destinazione, devono essere mappati sullo schema di destinazione a cui aderisce il set di dati di destinazione. Questo si ottiene eseguendo una richiesta POST al servizio di conversione con mappature dati definite nel payload della richiesta.
+
+>[!TIP]
+>
+>È possibile mappare tipi di dati complessi, ad esempio array in file JSON utilizzando un connettore origine di archiviazione cloud.
 
 **Formato API**
 
