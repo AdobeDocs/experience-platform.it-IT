@@ -5,9 +5,9 @@ title: Creare e modificare schemi nell’interfaccia utente
 description: Scoprite le nozioni di base su come creare e modificare gli schemi nell’interfaccia utente del Experience Platform .
 topic: user guide
 translation-type: tm+mt
-source-git-commit: e9df977272524b6aba516982e93f3128d1b9278b
+source-git-commit: babe47cc864d9f79eee28989ca8b658350b9d790
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1283'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ Per modificare uno schema esistente, selezionare la scheda **[!UICONTROL Browse]
 >
 >È possibile utilizzare le funzionalità di ricerca e filtro dell&#39;area di lavoro per facilitare la ricerca dello schema. Per ulteriori informazioni, consulta la guida [Esplora risorse XDM](../explore.md).
 
-Dopo aver selezionato uno schema, il simbolo [!DNL Schema Editor] viene visualizzato con la struttura dello schema visualizzata nel quadro. Ora è possibile [aggiungere mixin](#add-mixins) allo schema, oppure [modificare mixin personalizzati esistenti](./mixins.md#edit) se lo schema ne utilizza uno.
+Dopo aver selezionato uno schema, il simbolo [!DNL Schema Editor] viene visualizzato con la struttura dello schema visualizzata nel quadro. Ora è possibile [aggiungere mixin](#add-mixins) allo schema, [modificare i nomi visualizzati dei campi](#display-names) oppure [modificare i mixin personalizzati esistenti](./mixins.md#edit) se lo schema ne utilizza uno.
 
 ## Aggiunta di mixaggi a uno schema {#add-mixins}
 
@@ -116,6 +116,22 @@ Per completare il processo, selezionare **[!UICONTROL Save]** per salvare lo sch
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
 Lo schema ora è abilitato per l&#39;uso in Real-time Customer Profile (Profilo cliente in tempo reale). Quando Platform (Piattaforma) trasferisce i dati in set di dati basati su questo schema, questi verranno incorporati nei dati del profilo amalgamato.
+
+## Modificare i nomi visualizzati per i campi dello schema {#display-names}
+
+Dopo aver assegnato una classe e aggiunto mixin a uno schema, è possibile modificare i nomi visualizzati di qualsiasi campo dello schema, indipendentemente dal fatto che tali campi siano stati forniti da risorse XDM standard o personalizzate.
+
+>[!NOTE]
+>
+>Tenere presente che i nomi visualizzati dei campi appartenenti a classi o mixin standard possono essere modificati solo nel contesto di uno schema specifico. In altre parole, la modifica del nome visualizzato di un campo standard in uno schema non ha effetto sugli altri schemi che utilizzano la stessa classe o lo stesso mixin associato.
+
+Per modificare il nome visualizzato di un campo dello schema, selezionare il campo nell&#39;area di lavoro. Nella barra a destra, immettete il nuovo nome in **[!UICONTROL Display name]**.
+
+![](../../images/ui/resources/schemas/display-name.png)
+
+Selezionate **[!UICONTROL Apply]** nella barra a destra e gli aggiornamenti del quadro mostrano il nuovo nome visualizzato del campo. Selezionare **[!UICONTROL Save]** per applicare le modifiche allo schema.
+
+![](../../images/ui/resources/schemas/display-name-changed.png)
 
 ## Modificare la classe di uno schema {#change-class}
 
