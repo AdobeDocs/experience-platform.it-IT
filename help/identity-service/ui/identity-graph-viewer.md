@@ -5,9 +5,9 @@ title: Servizio Adobe Experience Platform Identity
 topic: tutorial
 description: Un grafico di identità è una mappa delle relazioni tra identità diverse per un particolare cliente, che fornisce una rappresentazione visiva del modo in cui il cliente interagisce con il proprio marchio tra canali diversi.
 translation-type: tm+mt
-source-git-commit: 7c9c81492df9333945ac62602f10b6097296d62b
+source-git-commit: 22685a8519529ba7afb7e50262ea4d40a450b382
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '891'
 ht-degree: 1%
 
 ---
@@ -100,7 +100,7 @@ La sezione seguente contiene informazioni aggiuntive sull’utilizzo del visuali
 Gli errori possono verificarsi quando si accede al visualizzatore del grafico dell&#39;identità. Di seguito è riportato un elenco di prerequisiti e limitazioni di cui tenere conto quando si utilizza il visualizzatore grafico dell’identità.
 
 - Un valore di identità deve esistere nello spazio nomi selezionato.
-- Il visualizzatore del grafico dell&#39;identità richiede almeno due identità collegate da generare.
+- Il visualizzatore del grafico dell&#39;identità richiede almeno due identità collegate da generare. È possibile che esista un solo valore di identità e nessuna identità collegata e, in questo caso, il valore esiste solo nel visualizzatore [!DNL Profile].
 - Il visualizzatore grafico dell&#39;identità non può superare il massimo di 150 identità.
 
 ![error-screen](../images/identity-graph-viewer/error-screen.png)
