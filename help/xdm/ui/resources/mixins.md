@@ -5,9 +5,9 @@ title: Creazione e modifica di mixin nell’interfaccia utente
 description: Scopri come creare e modificare i mixin nell’interfaccia utente del Experience Platform .
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: cf74c7922271035474c7f10534692983add48616
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '689'
 ht-degree: 0%
 
 ---
@@ -45,9 +45,9 @@ La [!DNL Schema Editor] viene visualizzata di nuovo, con il nuovo mixin elencato
 
 >[!NOTE]
 >
->È possibile modificare solo i mixin personalizzati definiti dall’organizzazione.
+>È possibile modificare e personalizzare solo i mixin personalizzati definiti dall’organizzazione. Per i mixin di base definiti da  Adobe, solo i nomi visualizzati per i relativi campi possono essere modificati nel contesto dei singoli schemi. Per ulteriori informazioni, vedere la sezione relativa alla [modifica dei nomi visualizzati per i campi dello schema](./schemas.md#display-names).
 >
->Inoltre, una volta che un mixin è stato salvato e utilizzato in uno schema per l&#39;inserimento dei dati, è possibile apportare solo modifiche aggiuntive al mixin in seguito. Per ulteriori informazioni, vedere le [regole dell&#39;evoluzione dello schema](../../schema/composition.md#evolution).
+>Dopo aver salvato e utilizzato un mixin personalizzato in uno schema per l&#39;inserimento dei dati, è possibile apportare solo modifiche aggiuntive al mixin in seguito. Per ulteriori informazioni, vedere le [regole dell&#39;evoluzione dello schema](../../schema/composition.md#evolution).
 
 Per modificare un mixin esistente, è innanzitutto necessario aprire uno schema che utilizza il mixin all&#39;interno di [!DNL Schema Editor]. È possibile [selezionare uno schema esistente da modificare](./schemas.md#edit) oppure [creare un nuovo schema](./schemas.md#create) e aggiungere il mixin in questione.
 
