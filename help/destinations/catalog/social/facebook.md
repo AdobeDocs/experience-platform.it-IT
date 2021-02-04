@@ -5,10 +5,10 @@ seo-title: Destinazione Facebook
 description: Attiva profili per le tue campagne Facebook per il targeting dell'audience, la personalizzazione e la soppressione basate su e-mail con hash.
 seo-description: Attiva profili per le tue campagne Facebook per il targeting dell'audience, la personalizzazione e la soppressione basate su e-mail con hash.
 translation-type: tm+mt
-source-git-commit: 4e3b7e5ad440cae1ce15e5ecb2c9bd53863a445a
+source-git-commit: 38b2bfd93bda85cf87dde4e0345ca9c11e419c2f
 workflow-type: tm+mt
-source-wordcount: '956'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->È in corso la migrazione dei clienti alla nuova esperienza di configurazione della destinazione. Potrebbero verificarsi delle difficoltà nell&#39;accesso alla pagina di configurazione della destinazione.
+>È in corso la migrazione dei clienti alle nuove versioni di destinazione. Fino al completamento della migrazione, verranno visualizzate solo le identità [!UICONTROL EMAIL] e [!UICONTROL EMAIL_LC_SHA_256] disponibili per questa destinazione.
 
 Attiva profili per le tue campagne [!DNL Facebook] per il targeting dell&#39;audience, la personalizzazione e la soppressione basate su e-mail con hash.
 
