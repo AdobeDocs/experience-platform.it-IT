@@ -5,9 +5,9 @@ title: Creazione e modifica di classi nell'interfaccia utente
 description: Scoprite come creare e modificare le classi nell'interfaccia utente del Experience Platform .
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: 5bf729197de53e9d24675c8a1d0455e807fb90c5
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '865'
 ht-degree: 0%
 
 ---
@@ -53,9 +53,9 @@ Viene visualizzato il [!DNL Schema Editor], che mostra un nuovo schema nel quadr
 
 >[!NOTE]
 >
->È possibile modificare solo le classi personalizzate definite dall&#39;organizzazione.
+>È possibile modificare e personalizzare solo le classi personalizzate definite dall&#39;organizzazione. Per le classi di base definite da  Adobe, è possibile modificare solo i nomi visualizzati per i relativi campi nel contesto dei singoli schemi. Per ulteriori informazioni, vedere la sezione relativa alla [modifica dei nomi visualizzati per i campi dello schema](./schemas.md#display-names).
 >
->Inoltre, una volta che una classe è stata salvata e utilizzata per l&#39;inserimento dei dati, è possibile apportare solo modifiche aggiuntive. Per ulteriori informazioni, vedere le [regole dell&#39;evoluzione dello schema](../../schema/composition.md#evolution).
+>Una volta salvata e utilizzata una classe personalizzata per l&#39;inserimento dei dati, in seguito sarà possibile apportare solo modifiche aggiuntive. Per ulteriori informazioni, vedere le [regole dell&#39;evoluzione dello schema](../../schema/composition.md#evolution).
 
 Per modificare una classe esistente, selezionare la scheda **[!UICONTROL Browse]**, quindi selezionare il nome di uno schema che utilizza la classe da modificare.
 
