@@ -5,9 +5,9 @@ seo-title: Destinazione di corrispondenza cliente Google
 description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti nelle proprietà di Google possedute e gestite, come ad esempio Cerca, Shopping, Gmail e YouTube.
 seo-description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti nelle proprietà di Google possedute e gestite, come ad esempio Cerca, Shopping, Gmail e YouTube.
 translation-type: tm+mt
-source-git-commit: 3837f00ff8b950e1f7642a9ffb5d194388dcab28
+source-git-commit: 4e3b7e5ad440cae1ce15e5ecb2c9bd53863a445a
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1462'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 0%
 # Destinazione di corrispondenza cliente Google
 
 ## Panoramica {#overview}
+
+>[!IMPORTANT]
+>
+>È in corso la migrazione dei clienti alla nuova esperienza di configurazione della destinazione. Potrebbero verificarsi delle difficoltà nell&#39;accesso alla pagina di configurazione della destinazione.
 
 [Google Customer ](https://support.google.com/google-ads/answer/6379332?hl=en) Matchlet consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti attraverso le proprietà di Google possedute e gestite, ad esempio:  [!DNL Search],  [!DNL Shopping],  [!DNL Gmail], e  [!DNL YouTube].
 
