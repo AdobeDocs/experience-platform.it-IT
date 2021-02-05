@@ -5,9 +5,9 @@ topic: guide
 type: Documentation
 description: La guida introduttiva all'API profilo descrive i concetti chiave e le funzionalità di base che è necessario conoscere per utilizzare gli endpoint API Profilo cliente in tempo reale per eseguire operazioni CRUD di base rispetto ai dati del profilo.
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---
