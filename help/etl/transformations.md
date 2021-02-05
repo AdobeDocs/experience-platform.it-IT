@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;etl;ETL;etl transformations;ETL transformations
+keywords: ' Experience Platform;home;argomenti popolari;etl;ETL;trasformazioni etl;trasformazioni ETL;trasformazioni ETL'
 solution: Experience Platform
 title: Trasformazioni ETL di esempio
 topic: overview
 description: Questo articolo illustra le seguenti trasformazioni che uno sviluppatore di estrazione, trasformazione, caricamento (ETL) può incontrare.
 translation-type: tm+mt
-source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
+source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '493'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Questo articolo illustra le seguenti trasformazioni che uno sviluppatore di estr
 
 ### File di esempio
 
-I file CSV e JSON di esempio sono disponibili dal [!DNL GitHub] repo pubblico di riferimento ETL gestito dal Adobe :
+I file CSV di esempio e JSON sono disponibili dal repo pubblico di riferimento ETL [!DNL GitHub] gestito dal  Adobe:
 
 - [CRM_profile.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profile.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
@@ -44,7 +44,7 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 ### Mapping
 
 I requisiti di mappatura per i dati CRM sono descritti nella tabella seguente e includono le seguenti trasformazioni:
-- Colonne di identità per le `identityMap` proprietà
+- Colonne identità nelle proprietà `identityMap`
 - Data di nascita (DOB) a anno e mese
 - Stringhe a doppio o numero intero corto.
 
@@ -54,11 +54,11 @@ I requisiti di mappatura per i dati CRM sono descritti nella tabella seguente e 
 | F_NAME | person.name.firstName | Copia come stringa |
 | L_NAME | person.name.lastName | Copia come stringa |
 | GENERE | person.gender | Trasforma il genere come valore enum persona.genere corrispondente |
-| DOB | Persona.bornDayAndMonth: &quot;MM-GG&quot;<br/>Persona.nascitaData: &quot;AAAA-MM-GG&quot;<br/>persona.nascitaAnno: YYYY | Trasforma nascitaGiornoAndMonth come<br/>stringaTransform dataNascita come<br/>stringaTransform natalizioAnno come numero breve |
+| DOB | Persona.bornDayAndMonth: &quot;MM-DD&quot;<br/>Persona.nascitaData: &quot;AAAA-MM-GG&quot;<br/>persona.natalitàAnno: YYYY | Trasforma la data di nascitaDayAndMonth come stringa<br/>Trasforma la data di nascita come stringa<br/>Trasforma l&#39;anno di nascita come numero breve |
 | E-MAIL | personalEmail.address | Copia come stringa |
-| CRMID | identityMap.CRMID[{&quot;id&quot;:x, primario:false}] | Copia come stringa nell&#39;array CRMID in identityMap e imposta Primary come false |
+| CRMID | identityMap.CRMID[{&quot;id&quot;:x, main:false}] | Copia come stringa nell&#39;array CRMID in identityMap e imposta Primary come false |
 | ECID | identityMap.ECID[{&quot;id&quot;:x, primario: false}] | Copia come stringa nella prima voce dell&#39;array ECID in identityMap e imposta Primary come false |
-| LOYALTIID | identityMap.LOYALTYID[{&quot;id&quot;:x, primario:true}] | Copia come stringa nell&#39;array LOYALTYID in identityMap e imposta Primary come true |
+| LOYALTIID | identityMap.LOYALTYID[{&quot;id&quot;:x, main:true}] | Copia come stringa nell&#39;array LOYALTYID in identityMap e imposta Primary come true |
 | ECID2 | identityMap.ECID[{&quot;id&quot;:x, primario:false}] | Copia come stringa nella seconda voce dell’array ECID in identityMap e imposta Primary su false |
 | TELEFONO | homePhone.number | Copia come stringa |
 | STRADA | homeAddress.street1 | Copia come stringa |
@@ -72,7 +72,7 @@ I requisiti di mappatura per i dati CRM sono descritti nella tabella seguente e 
 
 ### Output XDM
 
-L’esempio seguente mostra le prime due righe del CSV trasformato in XDM, come illustrato in `CRM_profiles.json`:
+L&#39;esempio seguente mostra le prime due righe del CSV trasformato in XDM, come mostrato in `CRM_profiles.json`:
 
 ```json
 {
@@ -178,7 +178,7 @@ La gerarchia di un dataframe (ad esempio un file Parquet) deve corrispondere a q
 
 ### Esempio di dataframe
 
-La struttura del dataframe di esempio seguente è stata mappata a uno schema che implementa la [!DNL XDM Individual Profile] classe e contiene i campi più comuni associati agli schemi di tale tipo.
+La struttura del dataframe di esempio seguente è stata mappata su uno schema che implementa la classe [!DNL XDM Individual Profile] e contiene i campi più comuni associati agli schemi di quel tipo.
 
 ```python
 [
@@ -286,9 +286,9 @@ I requisiti di mappatura per l&#39;array di identità sono descritti nella tabel
 
 | Campo identità | campo identityMap | Tipo di dati |
 | -------------- | ----------------- | --------- |
-| identità[0].id | [identityMapEmail][{"id"}] | copia come stringa |
-| identità[1].id | [identityMapCRMID][{"id"}] | copia come stringa |
-| identità[2].id | [identityMapLOYALTYID][{"id"}] | copia come stringa |
+| identità[0].id | identityMap[Email][{"id"}] | copia come stringa |
+| identità[1].id | identityMap[CRMID][{"id"}] | copia come stringa |
+| identità[2].id | identityMap[LOYALTYID][{"id"}] | copia come stringa |
 
 ### Output XDM
 
