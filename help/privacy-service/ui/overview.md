@@ -5,7 +5,7 @@ title: Panoramica dell’interfaccia Privacy Service
 topic: UI guide
 description: Scopri come utilizzare l’interfaccia utente Privacy Service per coordinare e monitorare le richieste di privacy nelle varie applicazioni  Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 1%
