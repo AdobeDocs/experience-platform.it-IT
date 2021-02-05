@@ -1,25 +1,21 @@
 ---
 keywords: mobile; brazo; messaggistica;
-title: Destinazione del freno
-seo-title: Destinazione del freno
+title: Destinazione di collegamento del freno
 description: Braze è una piattaforma completa di coinvolgimento dei clienti che offre esperienze rilevanti e memorabili tra i clienti e i marchi che amano.
-seo-description: Braze è una piattaforma completa di coinvolgimento dei clienti che offre esperienze rilevanti e memorabili tra i clienti e i marchi che amano.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '879'
 ht-degree: 1%
 
 ---
 
 
-# (Beta) [!DNL Braze] destinazione
+# (Beta) Connessione [!DNL Braze]
 
 >[!IMPORTANT]
 >
 >La destinazione Braze in Adobe Experience Platform è attualmente in versione Beta. La documentazione e le funzionalità sono soggette a modifiche.
-
-## Panoramica {#overview}
 
 La destinazione [!DNL Braze] consente di inviare i dati del profilo a [!DNL Braze].
 
