@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: L’inserimento dei dati include l’assimilazione batch, l’assimilazione in streaming e l’assimilazione mediante connettori sorgente.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Adobe Experience Platform riunisce i dati provenienti da più origini per aiutare gli addetti al marketing a comprendere meglio il comportamento dei loro clienti.  Adobe [!DNL Experience Platform Data Ingestion] rappresenta i diversi metodi mediante i quali [!DNL Platform] acquisisce i dati da tali origini, nonché il modo in cui tali dati vengono memorizzati all&#39;interno del Data Lake per essere utilizzati da parte di [!DNL Platform services] a valle. [!DNL Data Ingestion] include l’assimilazione batch, l’assimilazione in streaming e l’assimilazione mediante connettori sorgente. Per saperne di più, leggere la [Panoramica sull&#39;inserimento dei dati](../ingestion/home.md) o passare direttamente alla [Documentazione di Origini](../sources/home.md).
 
-## Creare un connettore sorgente nell’interfaccia utente e nell’API
+## Creare una connessione sorgente nell’interfaccia utente e nell’API
 
 I connettori di origine consentono di acquisire dati da più sorgenti, dove possono essere etichettati, strutturati e migliorati utilizzando [!DNL Platform services]. Per iniziare a creare un connettore di origine, vedere la [panoramica delle origini](../sources/home.md).
 
