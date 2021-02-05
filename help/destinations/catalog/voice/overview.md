@@ -1,19 +1,17 @@
 ---
 keywords: destinazioni vocali;Destinazioni vocali
-title: Voce delle destinazioni dei clienti
-seo-title: Voce delle destinazioni dei clienti
+title: Voce della panoramica delle destinazioni cliente
 description: Le piattaforme vocali raccolgono e raccolgono i dati da varie fonti, compresi i messaggi vocali, i dati delle chiamate e le conversazioni via chat. Le informazioni raccolte possono essere filtrate e analizzate per consentire alle aziende di ottimizzare il sito Web in base alle proprie esigenze.
-seo-description: Le piattaforme vocali raccolgono e raccolgono i dati da varie fonti, compresi i messaggi vocali, i dati delle chiamate e le conversazioni via chat. Le informazioni raccolte possono essere filtrate e analizzate per consentire alle aziende di ottimizzare il sito Web in base alle proprie esigenze.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '166'
+source-wordcount: '127'
 ht-degree: 0%
 
 ---
 
 
-# Voce delle destinazioni cliente {#voice-of-customer-destinations}
+# Panoramica delle destinazioni cliente {#voice-of-customer-destinations}
 
 Le piattaforme vocali raccolgono e raccolgono i dati da varie fonti, compresi i messaggi vocali, i dati delle chiamate e le conversazioni via chat. Le informazioni raccolte possono essere filtrate e analizzate per consentire alle aziende di ottimizzare il sito Web in base alle proprie esigenze.
 
