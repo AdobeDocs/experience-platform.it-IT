@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;
+keywords: ' Experience Platform;home;argomenti popolari;schema;schema;XDM;ExperienceEvent;fields;schemas;Schema design;mixin;mixin;enduserids;end user;end user;ids;'
 solution: Experience Platform
-title: Mixaggio dettagli ID utente finale
+title: Mixin dettagli ID utente finale
 topic: overview
 description: Questo documento fornisce una panoramica del mixin Dettagli ID utente finale.
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '188'
 ht-degree: 1%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->I nomi di diversi mixin sono cambiati. Per ulteriori informazioni, consulta il documento sugli aggiornamenti [dei nomi dei](../name-updates.md) mixin.
+>I nomi di diversi mixin sono cambiati. Per ulteriori informazioni, consulta il documento relativo agli [aggiornamenti del nome del mixin](../name-updates.md).
 
-[!UICONTROL End User ID Details] è un mixin standard per la [[!DNL XDM ExperienceEvent] classe](../../classes/individual-profile.md), utilizzato per descrivere le informazioni di identità di un individuo in diverse applicazioni  Adobe. Il mixin fornisce un oggetto a livello principale `endUserIDs` `_experience` , che a sua volta contiene un campo di sola lettura i cui valori vengono aggiornati automaticamente durante l&#39;assimilazione dei dati.
+[!UICONTROL End User ID Details] è un mixin standard per la  [[!DNL XDM ExperienceEvent] classe](../../classes/individual-profile.md), utilizzato per descrivere le informazioni di identità di un individuo in diverse applicazioni  Adobe. Il mixin fornisce un oggetto a livello principale `endUserIDs`, che a sua volta contiene un campo di sola lettura `_experience` i cui valori vengono automaticamente aggiornati durante l&#39;assimilazione dei dati.
 
 <img src="../../images/mixins/enduserids.png" width="700" /><br />
 
