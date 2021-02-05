@@ -1,11 +1,11 @@
 ---
 keywords: ' Experience Platform;casa;argomenti popolari;sistema pubblicitario;sistema pubblicitario'
 solution: Experience Platform
-title: Esplora un sistema pubblicitario utilizzando l'API di Flusso Service
+title: Esplora un sistema pubblicitario utilizzando l'API del servizio di flusso
 topic: overview
 description: Flow Service è utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini diverse all'interno di Adobe Experience Platform. Il servizio fornisce un'interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate. Questa esercitazione utilizza l'API del servizio di flusso per esplorare i sistemi pubblicitari.
 translation-type: tm+mt
-source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 1%
