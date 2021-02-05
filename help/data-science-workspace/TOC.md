@@ -1,14 +1,14 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Guida ad Adobe Experience Platform Data Science Workspace
-breadcrumb-title: Guida a Data Science Workspace
+user-guide-title: Guida di Adobe Experience Platform Data Science Workspace
+breadcrumb-title: Guida di Data Science Workspace
 user-guide-description: Utilizza l’apprendimento automatico per sviluppare, addestrare e valutare modelli e ricette con Adobe Sensei e JupyterLab Notebooks.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 15%
+source-wordcount: '233'
+ht-degree: 16%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 15%
 * [Accesso e funzionalità di Data Science Workspace](access-features-dsw.md)
 * [Procedura dettagliata di Data Science Workspace](walkthrough.md)
 * Notebook JupyterLab {#jupyterlab}
-   * [Guida utente di JupyterLab](jupyterlab/overview.md)
+   * [Panoramica](jupyterlab/overview.md)
    * [Accesso ai dati](jupyterlab/access-notebook-data.md)
    * [Analisi dei dati](jupyterlab/analyze-your-data.md)
    * [Servizio query](jupyterlab/query-service.md)
@@ -37,20 +37,20 @@ ht-degree: 15%
 * Real-time Machine Learning (Alpha) {#real-time-machine-learning}
    * [Panoramica](real-time-machine-learning/home.md)
    * [Introduzione](real-time-machine-learning/getting-started.md)
-   * [Guida utente per l’authoring di notebook RTML](real-time-machine-learning/rtml-authoring-notebook.md)
+   * [Gestire i blocchi appunti](real-time-machine-learning/rtml-authoring-notebook.md)
    * [Guida di riferimento ai nodi](real-time-machine-learning/node-reference.md)
-* Ricette precostruite {#pre-built-recipes}
+* Ricette pre-costruite {#pre-built-recipes}
    * [Ricetta raccomandazione prodotto](pre-built-recipes/product-recommendations.md)
    * [Previsione acquisto prodotto](pre-built-recipes/product-purchase-prediction.md)
    * [Ricetta di vendita al dettaglio](pre-built-recipes/retail-sales.md)
 * Authoring dei modelli {#authoring}
    * [Model Authoring SDK](authoring/sdk.md)
    * [Creare una tubazione di feature](authoring/feature-pipeline.md)
-   * [Guida all&#39;SDK della piattaforma (Python)](authoring/platform-sdk.md)
+   * [Authoring dei modelli con l’SDK della piattaforma (Python)](authoring/platform-sdk.md)
    * [Accesso ai dati Python](authoring/python.md)
    * [Accesso ai dati Spark](authoring/spark.md)
 * Esercitazioni su modelli e ricette {#models-recipes}
-   * [Creazione e pubblicazione di un modello di machine learning](models-recipes/create-publish-model.md)
+   * [Creare e pubblicare un modello di machineLearning](models-recipes/create-publish-model.md)
    * [Creare lo schema Vendite al dettaglio e il dataset](models-recipes/create-retails-sales-dataset.md)
    * [Anteprima di schemi e set di dati](models-recipes/preview-schema-data.md)
    * [Creare pacchetti di file sorgente in una ricetta](models-recipes/package-source-files-recipe.md)
