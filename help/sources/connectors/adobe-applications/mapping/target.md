@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;target mapping;Target mapping
+keywords: Experience Platform ;home;argomenti popolari;mappatura destinazione;Mappatura destinazione
 solution: Experience Platform
-title: Campo mappatura destinazione
+title: Mappatura  dati evento Adobe Target in XDM
 topic: overview
-description: La tabella seguente illustra i campi di uno schema Evento esperienza (*Campo ExperienceEvent XDM*) e i campi Target corrispondenti a cui devono essere mappati (campo Richiesta Target). Sono inoltre disponibili note aggiuntive per alcune mappature.
+description: Scoprite come mappare  campi evento Adobe Target su uno schema Experience Data Model (XDM) da utilizzare in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '462'
 ht-degree: 0%
@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# Campi di mappatura di destinazione
+# Mappature dei campi di mappatura di destinazione
 
-Adobe Experience Platform consente di acquisire  dati Adobe Target tramite il connettore di origine di Target. Quando si utilizza il connettore, tutti i dati provenienti dai campi di Target devono essere mappati ai campi [Experience Data Model (XDM)](../../../../xdm/home.md) associati alla classe XDM ExperienceEvent.
+Adobe Experience Platform consente di acquisire  dati Adobe Target tramite il connettore di origine di Target. Quando si utilizza il connettore, tutti i dati provenienti dai campi Target devono essere mappati sui campi [Experience Data Model (XDM)](../../../../xdm/home.md) associati alla classe XDM ExperienceEvent.
 
-La tabella seguente illustra i campi di uno schema Evento esperienza (campo *ExperienceEvent* XDM) e i campi Target corrispondenti a cui devono essere mappati (campo *Richiesta* Target). Sono inoltre disponibili note aggiuntive per alcune mappature.
+La tabella seguente illustra i campi di uno schema Evento esperienza (*Campo ExperienceEvent XDM*) e i campi Target corrispondenti a cui devono essere mappati (*Campo Richiesta destinazione*). Sono inoltre disponibili note aggiuntive per alcune mappature.
 
 >[!NOTE]
 >
