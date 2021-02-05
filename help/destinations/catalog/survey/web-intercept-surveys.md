@@ -1,21 +1,17 @@
 ---
 keywords: Intercept Sondaggi di QuestionePro;indagini di intercettazione di domandePro;Questionpro
-title: Estensione Questionari Intercept Pro
-seo-title: Estensione Questionari Intercept Pro
+title: Destinazione estensione sondaggi Intercept di QuestPro
 description: L’estensione QuestPro Intercept Survey è una destinazione di sondaggio in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L’estensione QuestPro Intercept Survey è una destinazione di sondaggio in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '518'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL QuestionPro Intercept Surveys] Estensione {#questionpro-extension}
-
-## Panoramica {#overview}
 
 [!DNL QuestionPro Intercept Surveys] è una piattaforma per l’implementazione di sondaggi e la raccolta di dati attitudinali al punto di transazione o quando gli utenti entrano/escono dal sito Web.
 
