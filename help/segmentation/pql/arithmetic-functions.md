@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;arithmetic functions;arithmetic;
+keywords: ' Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Segmentation Service;pql;PQL;Profile Query Language;funzioni aritmetiche;funzioni aritmetiche;'
 solution: Experience Platform
-title: Funzioni aritmetiche
+title: PAL Funzioni aritmetiche
 topic: developer guide
 description: Le funzioni aritmetiche vengono utilizzate per eseguire calcoli di base sui valori in PQL (Profile Query Language).
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '260'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ Le funzioni aritmetiche vengono utilizzate per eseguire calcoli di base sui valo
 
 ## Add
 
-La funzione `+` (addizione) viene utilizzata per trovare la somma di due espressioni di argomento.
+La funzione `+` (aggiunta) viene utilizzata per trovare la somma di due espressioni di argomento.
 
 **Formato**
 
@@ -91,7 +91,7 @@ totalProduct.price / totalProduct.sold
 
 ## Resto
 
-La funzione `%` (modulo/rest) viene utilizzata per trovare il resto dopo la divisione delle due espressioni di argomento.
+La funzione `%` (modulo/avanzo) viene utilizzata per trovare il resto dopo aver diviso le due espressioni di argomento.
 
 **Formato**
 
@@ -109,4 +109,4 @@ person.age % 5 = 0
 
 ## Passaggi successivi
 
-Ora che avete imparato le funzioni aritmetiche, potete usarle nelle query PQL. Per ulteriori informazioni sulle altre funzioni PQL, consultate la panoramica [Lingua query](./overview.md)profilo.
+Ora che avete imparato le funzioni aritmetiche, potete usarle nelle query PQL. Per ulteriori informazioni sulle altre funzioni PQL, leggere la [Panoramica del linguaggio di query profilo](./overview.md).
