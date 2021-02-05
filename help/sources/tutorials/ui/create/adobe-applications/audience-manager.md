@@ -1,12 +1,12 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;Audience Manager connettore origine; Audience Manager;Audience Manager connettore'
 solution: Experience Platform
-title: Creare un connettore sorgente Adobe Audience Manager nell’interfaccia utente
+title: Creare una connessione sorgente Adobe Audience Manager nell’interfaccia utente
 topic: overview
 type: Tutorial
 description: Questa esercitazione illustra i passaggi necessari per creare un connettore sorgente che consenta ad Adobe Audience Manager di inserire i dati dell'evento Consumer Experience Event nella piattaforma utilizzando l'interfaccia utente.
 translation-type: tm+mt
-source-git-commit: bdf95d75bf8db9f3438011f298d17c4259d2c63c
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '435'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 ---
 
 
-# Creare un connettore sorgente Adobe Audience Manager nell’interfaccia utente
+# Creare una connessione sorgente Adobe Audience Manager nell’interfaccia utente
 
 Questa esercitazione illustra i passaggi necessari per creare un connettore di origine per Adobe Audience Manager che consenta di inserire i dati dell&#39;evento di esperienza del consumatore nella piattaforma utilizzando l&#39;interfaccia utente.
 
