@@ -1,11 +1,11 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;schema di registro;schema di registro;ad hoc;ad hoc;ad hoc;ad hoc;ad hoc;Adhoc;Adhoc;'
 solution: Experience Platform
-title: Schemi ad hoc
+title: Regimi ad hoc
 description: In circostanze specifiche, potrebbe essere necessario creare uno schema XDM con campi che vengono denominati separati per l'uso solo da un singolo dataset. Questo viene definito schema ad hoc.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 0%
