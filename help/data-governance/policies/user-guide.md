@@ -1,19 +1,19 @@
 ---
 keywords: ' Experience Platform;home;argomenti più comuni;gestione dei dati;guida utente per l''utilizzo dei dati'
 solution: Experience Platform
-title: Guida utente per i criteri di utilizzo dei dati
+title: Gestione dei criteri di utilizzo dei dati nell'interfaccia utente
 topic: policies
 description: Adobe Experience Platform Data Governance fornisce un'interfaccia utente che consente di creare e gestire i criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle azioni che potete eseguire nell'area di lavoro Criteri dell'interfaccia utente del Experience Platform .
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '731'
 ht-degree: 0%
 
 ---
 
 
-# Guida utente per i criteri di utilizzo dei dati
+# Gestione dei criteri di utilizzo dei dati nell’interfaccia utente
 
 Adobe Experience Platform [!DNL Data Governance] fornisce un&#39;interfaccia utente che consente di creare e gestire i criteri di utilizzo dei dati. Questo documento fornisce una panoramica delle azioni che è possibile eseguire nell&#39;area di lavoro **Criteri** nell&#39;interfaccia utente [!DNL Experience Platform].
 
@@ -28,7 +28,7 @@ Questa guida richiede una conoscenza approfondita dei seguenti concetti di [!DNL
 - [[!DNL Data Governance]](../home.md)
 - [Criteri di utilizzo dei dati](./overview.md)
 
-## Visualizza criteri di utilizzo dei dati {#view-policies}
+## Visualizza criteri esistenti {#view-policies}
 
 Nell&#39;interfaccia di [!DNL Experience Platform], selezionare **[!UICONTROL Policies]** per aprire l&#39;area di lavoro **[!UICONTROL Policies]**. Nella scheda **[!UICONTROL Browse]** è possibile visualizzare un elenco dei criteri disponibili, incluse le etichette associate, le azioni di marketing e lo stato.
 
@@ -38,7 +38,7 @@ Selezionate un criterio elencato per visualizzarne la descrizione e il tipo. Se 
 
 ![](../images/policies/policy-details.png)
 
-## Creare un criterio di utilizzo dei dati personalizzato {#create-policy}
+## Creare un criterio personalizzato {#create-policy}
 
 Per creare un nuovo criterio di utilizzo dei dati personalizzato, selezionare **[!UICONTROL Create policy]** nell&#39;angolo superiore destro della scheda **[!UICONTROL Browse]** nell&#39;area di lavoro **[!UICONTROL Policies]**.
 
@@ -68,7 +68,7 @@ Viene nuovamente visualizzata la scheda **[!UICONTROL Browse]**, che ora elenca 
 
 ![](../images/policies/created-policy.png)
 
-## Abilita o disabilita un criterio di utilizzo dei dati {#enable}
+## Attivare o disattivare un criterio {#enable}
 
 Tutti i criteri di utilizzo dei dati (inclusi i criteri di base forniti dal Adobe ) sono disattivati per impostazione predefinita. Affinché un singolo criterio venga preso in considerazione per l&#39;implementazione, è necessario attivarlo manualmente tramite l&#39;API o l&#39;interfaccia utente.
 
