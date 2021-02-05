@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output
+keywords: Experience Platform ;guida introduttiva;argomenti più comuni;informazioni sui clienti;informazioni sui clienti;output ai clienti
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Ingresso e uscita AI del cliente
+title: Ingresso e uscita nell'AI del cliente
 topic: Getting started
 description: Il seguente documento delinea i diversi input e output utilizzati nell'AI del cliente.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '840'
 ht-degree: 0%
 
 ---
 
 
-# Ingresso e uscita AI del cliente
+# Ingresso e uscita nell&#39;AI del cliente
 
 Il seguente documento delinea i diversi input e output utilizzati nell&#39;AI del cliente.
 
 ## Dati di input AI del cliente
 
-L&#39;AI del cliente utilizza i dati Evento esperienza cliente per calcolare i punteggi di propensione. Per ulteriori informazioni su Consumer Experience Event, consulta la sezione [Prepara dati per l&#39;utilizzo nella documentazione](../data-preparation.md)dei servizi intelligenti.
+L&#39;AI del cliente utilizza i dati Evento esperienza cliente per calcolare i punteggi di propensione. Per ulteriori informazioni su Consumer Experience Event, fare riferimento alla sezione [Preparare i dati per l&#39;utilizzo nella documentazione di Intelligent Services](../data-preparation.md).
 
 ### Dati storici
 
@@ -68,4 +68,4 @@ La tabella seguente descrive i vari attributi rilevati nell&#39;output dell&#39;
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver preparato i dati e avere a disposizione tutte le credenziali e gli schemi, inizia seguendo la guida [Configura un&#39;istanza](./user-guide/configure.md) AI del cliente. Questa guida illustra come creare un&#39;istanza per l&#39;AI cliente.
+Dopo aver preparato i dati e aver installato tutte le credenziali e gli schemi, iniziare seguendo la [Configura un&#39;istanza AI del cliente](./user-guide/configure.md) guida. Questa guida illustra come creare un&#39;istanza per l&#39;AI cliente.
