@@ -5,7 +5,7 @@ title: Creare e modificare schemi nell’interfaccia utente
 description: Scoprite le nozioni di base su come creare e modificare gli schemi nell’interfaccia utente del Experience Platform .
 topic: user guide
 translation-type: tm+mt
-source-git-commit: babe47cc864d9f79eee28989ca8b658350b9d790
+source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
 workflow-type: tm+mt
 source-wordcount: '1283'
 ht-degree: 0%
