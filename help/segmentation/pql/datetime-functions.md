@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;date and time functions;datetime functions;datetime;date;time;
+keywords: ' Experience Platform;home;argomenti popolari;segmentazione;segmentazione;Segmentation Service;pql;PQL;Profile Query Language;data e ora function;datetime function;datetime;date;time;'
 solution: Experience Platform
-title: Funzioni di data e ora
+title: Funzioni di data e ora PQL
 topic: developer guide
 description: Le funzioni di data e ora sono utilizzate per eseguire operazioni di data e ora sui valori all'interno del linguaggio PQL (Profile Query Language).
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '508'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ Le funzioni di data e ora sono utilizzate per eseguire operazioni di data e ora 
 
 ## Mese corrente
 
-La `currentMonth` funzione restituisce il mese corrente come numero intero.
+La funzione `currentMonth` restituisce il mese corrente come numero intero.
 
 **Formato**
 
@@ -37,7 +37,7 @@ person.birthMonth = currentMonth()
 
 ## Ottieni mese
 
-La `getMonth` funzione restituisce il mese, sotto forma di numero intero, in base a una data marca temporale.
+La funzione `getMonth` restituisce il mese, sotto forma di numero intero, in base a una data marca temporale.
 
 **Formato**
 
@@ -55,7 +55,7 @@ person.birthdate.getMonth() = 6
 
 ## Anno corrente
 
-La `currentYear` funzione restituisce l&#39;anno corrente come numero intero.
+La funzione `currentYear` restituisce l&#39;anno corrente come numero intero.
 
 **Formato**
 
@@ -73,7 +73,7 @@ product.saleYear = currentYear()
 
 ## Ottieni anno
 
-La `getYear` funzione restituisce l&#39;anno, sotto forma di numero intero, in base a una data marca temporale.
+La funzione `getYear` restituisce l&#39;anno, sotto forma di numero intero, in base a una data marca temporale.
 
 **Formato**
 
@@ -91,7 +91,7 @@ person.birthday.getYear() in [1991, 1992, 1993, 1994, 1995]
 
 ## Giorno corrente del mese
 
-La `currentDayOfMonth` funzione restituisce il giorno corrente del mese come numero intero.
+La funzione `currentDayOfMonth` restituisce il giorno corrente del mese come numero intero.
 
 **Formato**
 
@@ -109,7 +109,7 @@ person.birthDay = currentDayOfMonth()
 
 ## Ottieni giorno del mese
 
-La `getDayOfMonth` funzione restituisce il giorno, sotto forma di numero intero, in base a una data marca temporale.
+La funzione `getDayOfMonth` restituisce il giorno, sotto forma di numero intero, in base a una data marca temporale.
 
 **Formato**
 
@@ -127,11 +127,11 @@ product.sale.getDayOfMonth() <= 15
 
 ## Occurs
 
-La `occurs` funzione confronta la funzione timestamp specificata con un periodo di tempo fisso.
+La funzione `occurs` confronta la funzione timestamp specificata con un periodo di tempo fisso.
 
 **Formato**
 
-La `occurs` funzione può essere scritta utilizzando uno dei seguenti formati:
+La funzione `occurs` può essere scritta utilizzando uno dei seguenti formati:
 
 ```sql
 {TIMESTAMP} occurs {COMPARISON} {INTEGER} {TIME_UNIT} {DIRECTION} {TIME}
@@ -142,15 +142,15 @@ La `occurs` funzione può essere scritta utilizzando uno dei seguenti formati:
 
 | Argomento | Descrizione |
 | --------- | ----------- |
-| `{COMPARISON}` | Un operatore di confronto. Può essere uno dei seguenti operatori: `>`, `>=`, `<`, `<=`, `=`, `!=`. Ulteriori informazioni sulle funzioni di confronto sono disponibili nel documento [sulle funzioni di](./comparison-functions.md)confronto. |
+| `{COMPARISON}` | Un operatore di confronto. Può essere uno dei seguenti operatori: `>`, `>=`, `<`, `<=`, `=`, `!=`. Ulteriori informazioni sulle funzioni di confronto si trovano nel documento [funzioni di confronto](./comparison-functions.md). |
 | `{INTEGER}` | Un numero intero non negativo. |
-| `{TIME_UNIT}` | Unità di tempo. Può essere una delle seguenti parole: `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`, `decade(s)`, `century`, `centuries``millennium``millennia`, , . |
+| `{TIME_UNIT}` | Unità di tempo. Può essere una delle seguenti parole: `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`, `decade(s)`, `century`, `centuries`, `millennium`, `millennia`. |
 | `{DIRECTION}` | Una preposizione che descrive quando confrontare la data con. Può essere una delle seguenti parole: `before`, `after`, `from`. |
-| `{TIME}` | Può essere un letterale di marca temporale (`today`, `now`, `yesterday`, `tomorrow`), un&#39;unità di tempo relativa (una di `this`, `last`o `next` seguita da un&#39;unità di tempo) o un attributo di marca temporale. |
+| `{TIME}` | Può essere un letterale di marca temporale (`today`, `now`, `yesterday`, `tomorrow`), un&#39;unità di tempo relativa (una di `this`, `last` o `next` seguita da un&#39;unità di tempo) o un attributo di marca temporale. |
 
 >[!NOTE]
 >
->L&#39;uso della parola `on` è facoltativo. È disponibile per migliorare la leggibilità di alcune combinazioni, ad esempio `timestamp occurs on date(2019,12,31)`.
+>L&#39;utilizzo della parola `on` è facoltativo. È lì per migliorare la leggibilità di alcune combinazioni, come `timestamp occurs on date(2019,12,31)`.
 
 **Esempio**
 
@@ -166,7 +166,7 @@ La seguente query PQL verifica se un articolo è stato venduto tra l’8 gennaio
 product.saleDate occurs between date(2015, 1, 8) and date(2017, 7, 1)
 ```
 
-## Adesso
+## Subito
 
 `now` è una parola riservata che rappresenta la marca temporale dell&#39;esecuzione PQL.
 
@@ -192,4 +192,4 @@ person.birthday occurs = 3 days before today
 
 ## Passaggi successivi
 
-Ora che hai imparato le funzioni di data e ora, puoi utilizzarle nelle query PQL. Per ulteriori informazioni sulle altre funzioni PQL, consultate la panoramica [Lingua query](./overview.md)profilo.
+Ora che hai imparato le funzioni di data e ora, puoi utilizzarle nelle query PQL. Per ulteriori informazioni sulle altre funzioni PQL, leggere la [Panoramica del linguaggio di query profilo](./overview.md).
