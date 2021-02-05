@@ -1,22 +1,18 @@
 ---
 keywords: Facebook;facebook;Social network;Social network;autenticazione social network;Social network;autenticazione social network
-title: Flusso di lavoro destinazioni social network
+title: Creare una destinazione social network
 type: Tutorial
-seo-title: Flusso di lavoro destinazioni social network
-description: Istruzioni per la connessione agli account degli annunci social network
-seo-description: Istruzioni per la connessione agli account degli annunci social network
+description: Scopri come connettersi ai tuoi account di annunci social network in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: d1aa2c825cd679d593cf97d84506058482a7fe8f
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '429'
 ht-degree: 0%
 
 ---
 
 
-# Flusso di lavoro di autenticazione delle destinazioni social network {#social-network-destinations-workflow}
-
-## Flusso di lavoro per creare destinazioni social network
+# Creare una destinazione social network {#social-network-destinations-workflow}
 
 Questa esercitazione utilizza [!DNL Facebook] come esempio, ma il flusso di lavoro in Adobe Experience Platform sarà lo stesso per tutte le destinazioni social network, una volta aggiunto di nuovo al prodotto.
 
