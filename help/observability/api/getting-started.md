@@ -1,11 +1,11 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;intervallo date'
 solution: Experience Platform
-title: Guida introduttiva all'API Observability Insights
+title: Guida introduttiva all’API Observability Insights
 topic: developer guide
 description: L'API Observability Insights consente di recuperare dati delle metriche per diverse funzionalità di Adobe Experience Platform. Questo documento fornisce un'introduzione ai concetti di base da conoscere prima di tentare di effettuare chiamate all'API Observability Insights.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 0%
