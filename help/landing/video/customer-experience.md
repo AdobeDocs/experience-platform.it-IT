@@ -1,5 +1,5 @@
 ---
-title: Un'esperienza cliente con Adobe Experience Platform
+title: Un'esperienza cliente con  Experience Platform
 description: Questo video segue un'esperienza ipotetica realizzata con Adobe Experience Platform, come visto dal punto di vista di un cliente. Scopri come  Experience Platform crea un'esperienza ricca, rilevante e in tempo reale.
 feature: null
 topics: null
@@ -9,9 +9,9 @@ doc-type: video
 activity: understand
 thumbnail: 27361.jpg
 translation-type: tm+mt
-source-git-commit: 333b89ccf2365c04646df9dc0434036bdd6f12ac
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '78'
+source-wordcount: '77'
 ht-degree: 0%
 
 ---
