@@ -1,5 +1,5 @@
 ---
-title: Funzionalità chiave di Adobe Experience Platform
+title: 'Funzionalità chiave del Experience Platform '
 description: Questo video esamina le funzionalità chiave di Adobe Experience Platform&mdash;Create profili cliente fruibili, intelligenti e in tempo reale; arricchire i dati e ottenere maggiori informazioni con modelli AI/ML e query di dati; Innovare con componenti aperti e componibili; migliorare la fornitura e la personalizzazione di esperienze in tempo reale; e conquistare la fiducia con governance, sicurezza e controlli sulla privacy.
 feature: null
 topics: null
@@ -9,9 +9,9 @@ doc-type: video
 activity: understand
 thumbnail: 32502.jpg
 translation-type: tm+mt
-source-git-commit: 333b89ccf2365c04646df9dc0434036bdd6f12ac
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '112'
 ht-degree: 0%
 
 ---
