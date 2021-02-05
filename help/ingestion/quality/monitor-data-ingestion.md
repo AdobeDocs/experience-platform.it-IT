@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;monitoring;monitor;data flows;monitor ingestion;data ingestion;Data ingestion;view records;view batches;
+keywords: ' Experience Platform;home;argomenti popolari;monitoraggio;monitorare;flussi di dati;monitorare l''assimilazione dei dati;inserimento dei dati;visualizzare i record;visualizzare i batch;'
 solution: Experience Platform
-title: Monitoraggio dell’assimilazione dei dati
+title: Monitoraggio dell'inserimento dei dati
 topic: overview
 description: Questa guida utente descrive come monitorare i dati nell’interfaccia utente di Adobe Experience Platform. Questa guida richiede un Adobe ID  e l'accesso ad Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '563'
 ht-degree: 0%
 
 ---
@@ -15,17 +15,17 @@ ht-degree: 0%
 
 # Monitoraggio dell’assimilazione dei dati
 
-L’assimilazione dei dati consente di trasferire i dati ad Adobe Experience Platform. Potete utilizzare l’assimilazione batch, che consente di inserire i dati utilizzando vari tipi di file (come i CSV), oppure l’assimilazione in streaming, per acquisire i dati [!DNL Platform] utilizzando gli endpoint in streaming in tempo reale.
+L’assimilazione dei dati consente di trasferire i dati ad Adobe Experience Platform. È possibile utilizzare l&#39;assimilazione batch, che consente di inserire i dati utilizzando vari tipi di file (come i CSV), oppure l&#39;assimilazione in streaming, che consente di assimilare i dati a [!DNL Platform] utilizzando gli endpoint in streaming in tempo reale.
 
 Questa guida utente descrive come monitorare i dati nell’interfaccia utente di Adobe Experience Platform. Questa guida richiede un Adobe ID  e l&#39;accesso ad Adobe Experience Platform.
 
 ## Monitorare l’inserimento di dati end-to-end
 
-Nell’interfaccia utente [del Experience Platform](https://platform.adobe.com), fate clic **[!UICONTROL Monitoring]** sul menu di navigazione a sinistra, quindi fate clic su **[!UICONTROL Streaming end-to-end]**.
+Nell&#39; [ interfaccia utente del Experience Platform](https://platform.adobe.com), fare clic su **[!UICONTROL Monitoring]** nel menu di navigazione a sinistra, quindi scegliere **[!UICONTROL Streaming end-to-end]**.
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-Viene visualizzata la pagina **[!UICONTROL Streaming end-to-end]** di monitoraggio. Questa area di lavoro fornisce un grafico che mostra la frequenza degli eventi in streaming ricevuti da [!DNL Platform], un grafico che mostra la frequenza degli eventi in streaming elaborati con successo da [[!DNL Real-time Customer Profile]](../../profile/home.md), nonché un elenco dettagliato dei dati in arrivo.
+Viene visualizzata la pagina di monitoraggio **[!UICONTROL Streaming end-to-end]**. Questa area di lavoro fornisce un grafico che mostra la frequenza degli eventi in streaming ricevuti da [!DNL Platform], un grafico che mostra la frequenza degli eventi in streaming elaborati correttamente da [[!DNL Real-time Customer Profile]](../../profile/home.md), nonché un elenco dettagliato dei dati in arrivo.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -33,11 +33,11 @@ Per impostazione predefinita, il grafico superiore mostra il tasso di assimilazi
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-top-graph.png)
 
-Il grafico inferiore mostra la frequenza degli eventi in streaming elaborati correttamente [!DNL Profile] negli ultimi sette giorni. È possibile modificare questo intervallo di date per visualizzare diversi periodi di tempo facendo clic sul pulsante evidenziato.
+Il grafico inferiore mostra la frequenza degli eventi in streaming elaborati correttamente da [!DNL Profile] negli ultimi sette giorni. È possibile modificare questo intervallo di date per visualizzare diversi periodi di tempo facendo clic sul pulsante evidenziato.
 
 >[!NOTE]
 >
->Affinché i dati vengano visualizzati su questo grafico, è necessario che i dati siano **esplicitamente** attivati per [!DNL Profile]. Per informazioni su come abilitare i dati di streaming per [!DNL Profile], consulta la guida [utente per i](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)set di dati.
+>Per visualizzare i dati su questo grafico, i dati devono essere **esplicitamente** abilitati per [!DNL Profile]. Per informazioni su come abilitare i dati di streaming per [!DNL Profile], leggere la guida utente [datasets](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
 
@@ -61,11 +61,11 @@ Inoltre, i record con errore forniscono dettagli sugli errori che si sono verifi
 
 ## Monitorare l’inserimento di dati end-to-end in batch
 
-Nel [[!DNL Experience Platform UI]](https://platform.adobe.com), fate clic **[!UICONTROL Monitoring]** sul menu di navigazione a sinistra.
+In [[!DNL Experience Platform UI]](https://platform.adobe.com), fare clic su **[!UICONTROL Monitoring]** nel menu di navigazione a sinistra.
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 
-Viene visualizzata la pagina di **[!UICONTROL Batch end-to-end]** monitoraggio, in cui è riportato un elenco dei batch precedentemente assimilati. Potete fare clic su uno dei batch per ottenere informazioni più dettagliate su tale record.
+Viene visualizzata la pagina di monitoraggio **[!UICONTROL Batch end-to-end]**, in cui sono elencati i batch precedentemente assimilati. Potete fare clic su uno dei batch per ottenere informazioni più dettagliate su tale record.
 
 ![](../images/quality/monitor-data-flows/list-batches.png)
 
