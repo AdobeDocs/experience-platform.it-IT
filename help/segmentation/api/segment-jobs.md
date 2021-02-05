@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;segment jobs;segment job;API;api;
+keywords: ' Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Segmentation Service;Segmentation job;Segment job;API;api;'
 solution: Experience Platform
-title: Processi segmento
+title: Endpoint API processi segmento
 topic: developer guide
-description: Questa guida fornisce informazioni utili per comprendere meglio i processi dei segmenti e include chiamate API di esempio per eseguire azioni di base tramite l'API.
+description: L’endpoint dei processi del segmento nell’API di Adobe Experience Platform Segmentation Service consente di gestire i processi del segmento a livello di programmazione per la propria organizzazione.
 translation-type: tm+mt
-source-git-commit: 521b760da850144d7a8e75126453c2aae5c2ce72
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1152'
+source-wordcount: '1168'
 ht-degree: 2%
 
 ---
@@ -15,21 +15,21 @@ ht-degree: 2%
 
 # Endpoint processi segmento
 
-Un processo di segmento è un processo asincrono che crea un nuovo segmento di pubblico. Fa riferimento a una definizione [di](./segment-definitions.md)segmento, nonché a eventuali criteri [di](../../profile/api/merge-policies.md) unione che controllano il modo in cui [!DNL Real-time Customer Profile] unisce gli attributi sovrapposti nei frammenti di profilo. Quando un processo del segmento viene completato correttamente, potete raccogliere varie informazioni sul segmento, ad esempio eventuali errori che si sono verificati durante l&#39;elaborazione e le dimensioni finali del pubblico.
+Un processo di segmento è un processo asincrono che crea un nuovo segmento di pubblico. Fa riferimento a una [definizione del segmento](./segment-definitions.md), nonché a qualsiasi [criteri di unione](../../profile/api/merge-policies.md) che controlla in che modo [!DNL Real-time Customer Profile] unisce gli attributi di sovrapposizione nei frammenti di profilo. Quando un processo del segmento viene completato correttamente, potete raccogliere varie informazioni sul segmento, ad esempio eventuali errori che si sono verificati durante l&#39;elaborazione e le dimensioni finali del pubblico.
 
 Questa guida fornisce informazioni utili per comprendere meglio i processi dei segmenti e include chiamate API di esempio per eseguire azioni di base tramite l&#39;API.
 
 ## Introduzione
 
-Gli endpoint utilizzati in questa guida fanno parte dell&#39; [!DNL Adobe Experience Platform Segmentation Service] API. Prima di continuare, controllate la guida [](./getting-started.md) introduttiva per informazioni importanti che dovete conoscere per effettuare correttamente le chiamate all&#39;API, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
+Gli endpoint utilizzati in questa guida fanno parte dell&#39;API [!DNL Adobe Experience Platform Segmentation Service]. Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all&#39;API, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
 
-## Recupero di un elenco di processi di segmento {#retrieve-list}
+## Recuperare un elenco di processi di segmento {#retrieve-list}
 
-È possibile recuperare un elenco di tutti i processi del segmento per l&#39;organizzazione IMS effettuando una richiesta di GET all&#39; `/segment/jobs` endpoint.
+È possibile recuperare un elenco di tutti i processi del segmento per l&#39;organizzazione IMS effettuando una richiesta di GET all&#39;endpoint `/segment/jobs`.
 
 **Formato API**
 
-L&#39; `/segment/jobs` endpoint supporta diversi parametri di query per facilitare il filtraggio dei risultati. Anche se questi parametri sono opzionali, il loro utilizzo è fortemente consigliato per ridurre i costi di sovraccarico. Effettuando una chiamata a questo endpoint senza parametri, tutti i processi di esportazione disponibili per la vostra organizzazione verranno recuperati. È possibile includere più parametri, separati da e-mail (`&`).
+L&#39;endpoint `/segment/jobs` supporta diversi parametri di query per facilitare il filtro dei risultati. Anche se questi parametri sono opzionali, il loro utilizzo è fortemente consigliato per ridurre i costi di sovraccarico. Effettuando una chiamata a questo endpoint senza parametri, tutti i processi di esportazione disponibili per la vostra organizzazione verranno recuperati. È possibile includere più parametri, separati da e-mail (`&`).
 
 ```http
 GET /segment/jobs
@@ -180,9 +180,9 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di processi di
 | `metrics.segmentProfileByStatusCounter` | Il numero di profili per ogni stato. Sono supportati i tre stati seguenti: <ul><li>&quot;realizzato&quot; - Il numero di nuovi profili immessi nel segmento.</li><li>&quot;existing&quot; - Il numero di profili che continuano a esistere nel segmento.</li><li>&quot;uscito&quot; - Il numero di segmenti di profilo che non esistono più nel segmento.</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | Numero totale di profili uniti in base ai criteri di unione. |
 
-## Creare un nuovo processo segmento {#create}
+## Crea un nuovo processo segmento {#create}
 
-Puoi creare un nuovo processo per segmenti effettuando una richiesta di POST all’ `/segment/jobs` endpoint e includendo nel corpo l’ID della definizione del segmento da cui desideri creare una nuova audience.
+Puoi creare un nuovo processo per segmenti effettuando una richiesta di POST all&#39;endpoint `/segment/jobs` e includendo nel corpo l&#39;ID della definizione del segmento da cui desideri creare una nuova audience.
 
 **Formato API**
 
@@ -209,7 +209,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `segmentId` | L’ID della definizione del segmento per cui desiderate creare un processo di segmento. Queste definizioni di segmento possono appartenere a criteri di unione diversi. Ulteriori informazioni sulle definizioni dei segmenti sono disponibili nella guida [all&#39;endpoint per la definizione dei](./segment-definitions.md)segmenti. |
+| `segmentId` | L’ID della definizione del segmento per cui desiderate creare un processo di segmento. Queste definizioni di segmento possono appartenere a criteri di unione diversi. Ulteriori informazioni sulle definizioni dei segmenti sono disponibili nella guida [alla definizione dell&#39;endpoint ](./segment-definitions.md). |
 
 **Risposta**
 
@@ -276,7 +276,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del processo 
 
 ## Recuperare un processo segmento specifico {#get}
 
-Potete recuperare informazioni dettagliate su un processo segmento specifico effettuando una richiesta di GET all’ `/segment/jobs` endpoint e fornendo l’ID del processo del segmento che desiderate recuperare nel percorso della richiesta.
+Potete recuperare informazioni dettagliate su un processo di segmento specifico effettuando una richiesta di GET all&#39;endpoint `/segment/jobs` e fornendo l&#39;ID del processo di segmento che desiderate recuperare nel percorso della richiesta.
 
 **Formato API**
 
@@ -286,7 +286,7 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- | 
-| `{SEGMENT_JOB_ID}` | Il `id` valore del processo del segmento da recuperare. |
+| `{SEGMENT_JOB_ID}` | Il valore `id` del processo del segmento da recuperare. |
 
 **Richiesta**
 
@@ -371,9 +371,9 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 | `segments.segment.expression` | Un oggetto che contiene informazioni sull&#39;espressione della definizione del segmento, scritta in PQL. |
 | `metrics` | Un oggetto che contiene informazioni diagnostiche sul processo del segmento. |
 
-## Recupero in blocco dei processi dei segmenti {#bulk-get}
+## Recupero in blocco dei processi del segmento {#bulk-get}
 
-Potete recuperare informazioni dettagliate su più processi di segmento eseguendo una richiesta POST all’ `/segment/jobs/bulk-get` endpoint e fornendo i `id` valori dei processi di segmento nel corpo della richiesta.
+Potete recuperare informazioni dettagliate su più processi di segmento eseguendo una richiesta POST all&#39;endpoint `/segment/jobs/bulk-get` e fornendo i valori `id` dei processi di segmento nel corpo della richiesta.
 
 **Formato API**
 
@@ -477,9 +477,9 @@ Una risposta corretta restituisce lo stato HTTP 207 con i processi di segmento r
 | `segments.segment.id` | ID della definizione del segmento. |
 | `segments.segment.expression` | Un oggetto che contiene informazioni sull&#39;espressione della definizione del segmento, scritta in PQL. |
 
-## Annullamento o eliminazione di un processo di segmento specifico {#delete}
+## Annullare o eliminare un processo di segmento specifico{#delete}
 
-Potete eliminare un processo segmento specifico effettuando una richiesta di DELETE all’ `/segment/jobs` endpoint e fornendo l’ID del processo del segmento da eliminare nel percorso della richiesta.
+Potete eliminare un processo di segmento specifico eseguendo una richiesta di DELETE all&#39;endpoint `/segment/jobs` e fornendo l&#39;ID del processo di segmento da eliminare nel percorso della richiesta.
 
 >[!NOTE]
 >
@@ -493,7 +493,7 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- | 
-| `{SEGMENT_JOB_ID}` | Il `id` valore del processo del segmento da eliminare. |
+| `{SEGMENT_JOB_ID}` | Il valore `id` del processo del segmento da eliminare. |
 
 **Richiesta**
 
