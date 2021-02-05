@@ -1,20 +1,20 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;PostgreSQL;postgresql;PSQL;psql'
 solution: Experience Platform
-title: Creare un connettore PostgreSQL utilizzando l'API del servizio di flusso
+title: Creare una connessione di origine PostgreSQL utilizzando l'API del servizio di flusso
 topic: overview
 type: Tutorial
-description: Questa esercitazione utilizza l'API del servizio di flusso per seguire i passaggi necessari per connettere  Experience Platform a PostgreSQL (di seguito "PSQL").
+description: Scoprite come collegare Adobe Experience Platform a PostgreSQL utilizzando l'API del servizio di flusso.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '576'
 ht-degree: 2%
 
 ---
 
 
-# Creare un connettore [!DNL PostgreSQL] utilizzando l&#39;API [!DNL Flow Service]
+# Creare una connessione di origine [!DNL PostgreSQL] utilizzando l&#39;API [!DNL Flow Service]
 
 >[!NOTE]
 >
