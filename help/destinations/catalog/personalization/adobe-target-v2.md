@@ -1,21 +1,17 @@
 ---
 keywords: estensione di destinazione;target v2;target v2;target v2 extension
-title: Estensione Adobe Target v2
-seo-title: Estensione Adobe Target v2
+title: Destinazione  estensione Adobe Target v2
 description: L’estensione  Adobe Target v2 è una destinazione di personalizzazione in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L’estensione  Adobe Target v2 è una destinazione di personalizzazione in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 12%
+source-wordcount: '518'
+ht-degree: 11%
 
 ---
 
 
 # Estensione Adobe Target v2 {#adobe-target-v2-extension}
-
-## Panoramica {#overview}
 
 Adobe Target è la soluzione di Adobe Experience Cloud che offre tutto il necessario per adattare e personalizzare l’esperienza dei clienti al fine di massimizzare le entrate sui siti web e mobili, le app, i social media e altri canali digitali.
 
