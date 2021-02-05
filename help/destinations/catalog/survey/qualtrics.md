@@ -1,21 +1,17 @@
 ---
 keywords: Qualtrics;qualtrics;Qualtrics Website Feedback;qualtrics sito feedback;qualtricks sito feedback;Qualtricks sito web feedback;Qualtricks
-title: Estensione Qualtrics Website Feedback
-seo-title: Estensione Qualtrics Website Feedback
+title: Destinazione di estensione qualtric website Feedback
 description: L'estensione Qualtrics Website Feedback è una destinazione di sondaggi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L'estensione Qualtrics Website Feedback è una destinazione di sondaggi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '607'
+source-wordcount: '576'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Qualtrics Website Feedback] Estensione {#qualtrics-extension}
-
-## Panoramica {#overview}
 
 [!DNL Qualtrics Website Feedback] consente di coinvolgere i visitatori del sito Web con il messaggio giusto, al momento giusto. Sia che desideriate migliorare l&#39;esperienza dei visitatori con i sondaggi di feedback sui siti Web o aumentare la conversione, [!DNL Qualtrics Website Feedback] vi ha fornito informazioni.
 
