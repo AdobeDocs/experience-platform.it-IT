@@ -1,13 +1,13 @@
 ---
-keywords: Experience Cloud;getting started;content and commerce ai;popular topics;Intelligent Services;ccai
+keywords: Experience Cloud ;iniziare;contenuto e commercio ai;argomenti più comuni;Servizi intelligenti;ccai
 solution: Experience Cloud, Intelligent Services, Experience Platform
-title: Panoramica di Content and Commerce AI
+title: Panoramica di AI su contenuto e commercio
 topic: Content and Commerce AI
 description: Content and Commerce AI è un set di servizi AI che consente di estrarre funzionalità intelligenti dai contenuti, organizzare, ottimizzare il flusso dei contenuti e fornire esperienze più coinvolgenti e personalizzate ai clienti.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '419'
 ht-degree: 1%
 
 ---
@@ -29,8 +29,8 @@ Il contenuto è un componente essenziale di queste esperienze. Per rispondere me
 
 | Tipo di contenuto | Funzioni | Panoramica delle funzionalità |
 | --- | --- | --- |
-| Testo | - Estrazione di parole chiave e entità <br>- Classificatori personalizzati | - Estrarre automaticamente parole chiave e tag da documenti aziendali e pagine Web utilizzando un servizio AI fornito con il prodotto. <br> - Etichettare automaticamente i documenti o le pagine Web aziendali per una tassonomia aziendale utilizzando un servizio basato su modelli AI personalizzati. |
-| Immagini | - Consigli visivi <br> - Estrazione del colore | - Offrite ai consumatori consigli visivamente simili sui prodotti, basati su un modello AI sviluppato su caratteristiche di prodotto intuitive (design, colore, forma). <br> - Estrarre accuratamente i colori dominanti (etichette e valori esadecimali) e il loro peso da un&#39;immagine di prodotto. |
+| Testo | - Estrazione parole chiave ed entità <br>- Classificatori personalizzati | - Estrarre automaticamente parole chiave e tag da documenti aziendali e pagine Web utilizzando un servizio AI fornito con il prodotto. <br> - Etichettare automaticamente i documenti o le pagine Web aziendali per una tassonomia aziendale utilizzando un servizio basato su modelli AI personalizzati. |
+| Immagini | - Raccomandazioni visive <br> - Estrazione del colore | - Offrite ai consumatori consigli visivamente simili sui prodotti, basati su un modello AI sviluppato su caratteristiche di prodotto intuitive (design, colore, forma). <br> - Estrarre accuratamente i colori dominanti (etichette e valori esadecimali) e il loro peso da un&#39;immagine di prodotto. |
 
 ## Informazioni su contenuto e AI per il commercio
 
@@ -38,7 +38,7 @@ La visione globale di Content and Commerce AI è suddivisa in tre fasi per reali
 
 >[!NOTE]
 >
->Per la versione beta, Content and Commerce AI si sta concentrando sul test della fase di base del percorso (passaggio 1). I passaggi 2 e 3 dovrebbero essere documentati in una versione successiva e non essere espansi nella documentazione corrente.
+>Per la versione beta, Content and Commerce AI è incentrato sul test della fase di base nel percorso (passaggio 1). I passaggi 2 e 3 dovrebbero essere documentati in una versione successiva e non essere espansi nella documentazione corrente.
 
 **Passaggio 1: Informazioni sul contenuto**
 - Estrarre funzioni intelligenti e metadati.
