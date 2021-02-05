@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics;namespace list;list namespace
+keywords: ' Experience Platform;home;argomenti comuni;elenco dei nomi;elenco dei nomi'
 solution: Experience Platform
-title: Elenca spazi dei nomi disponibili
+title: Elenca spazi dei nomi identità disponibili
 topic: API guide
 description: Elenca tutti gli spazi dei nomi disponibili.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '68'
+source-wordcount: '79'
 ht-degree: 5%
 
 ---
 
 
-# Elenca spazi dei nomi disponibili
+# Elenca spazi dei nomi di identità disponibili
 
 **Formato API**
 
@@ -34,7 +34,7 @@ curl -X GET \
 
 **Risposta**
 
-La risposta include un array di oggetti, con ogni oggetto che rappresenta uno spazio dei nomi disponibile. Gli spazi dei nomi con un valore &quot;[!UICONTROL custom]&quot; pari a &quot;[!UICONTROL false]&quot; sono spazi dei nomi standard, mentre quelli con un valore &quot;[!UICONTROL custom]&quot; pari a &quot;[!UICONTROL true]&quot; sono spazi dei nomi creati dalla tua organizzazione.
+La risposta include un array di oggetti, con ogni oggetto che rappresenta uno spazio dei nomi disponibile. Gli spazi dei nomi con il valore &quot;[!UICONTROL custom]&quot; di &quot;[!UICONTROL false]&quot; sono spazi dei nomi standard, mentre quelli con il valore &quot;[!UICONTROL custom]&quot; di &quot;[!UICONTROL true]&quot; sono spazi dei nomi creati dall&#39;organizzazione.
 
 >[!NOTE]
 >
@@ -80,4 +80,4 @@ La risposta include un array di oggetti, con ogni oggetto che rappresenta uno sp
 
 ## Passaggi successivi
 
-Passate all&#39;esercitazione successiva per [creare uno spazio nomi personalizzato](./create-custom-namespace.md)
+Passate all&#39;esercitazione successiva per [creare uno spazio dei nomi personalizzato](./create-custom-namespace.md)
