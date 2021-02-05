@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;Data Science Workspace;popular topics;Real time machine learning;
+keywords: ' Experience Platform;guida allo sviluppo;Data Science Workspace;argomenti più comuni;Real time machine learning;'
 solution: Experience Platform
 title: Guida introduttiva all'apprendimento automatico in tempo reale
 topic: Getting started
 description: Il seguente documento illustra i passaggi necessari per creare un modello di apprendimento automatico in tempo reale in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '438'
 ht-degree: 0%
 
 ---
@@ -21,26 +21,26 @@ ht-degree: 0%
 
 Per utilizzare l&#39;apprendimento automatico in tempo reale, è necessario avere accesso a un&#39;organizzazione con provisioning Adobe Experience Platform e [!DNL Data Science Workspace]. Inoltre, è necessario disporre di un set di dati completo da utilizzare per la formazione e il punteggio.
 
-Le guide per l&#39;apprendimento automatico in tempo reale richiedono una conoscenza operativa di Python 3, [Jupyter notebook](../jupyterlab/overview.md), data science e machine learning.
+Le guide per l&#39;apprendimento automatico in tempo reale richiedono una conoscenza operativa di Python 3, [Jupyter Notebooks](../jupyterlab/overview.md), data Science e machine learning.
 
 **Termini chiave:**
 
-- **DSL:** Lingua specifica del dominio.
-- **Bordo:** Il servizio di valutazione del Machine Learning in tempo reale può essere eseguito su cluster Edge più vicini alle attivazioni e alle applicazioni.
-- **Hub:** L&#39;alfa corrente esegue il servizio di punteggio Real-time Machine Learning su Adobe Experience Platform Hub mentre Experience Edge Network è in fase di sviluppo.
+- **DSL: linguaggio specifico per** il dominio.
+- **Edge: il servizio** Real-time Machine Learning Scoring può essere eseguito su cluster Edge più vicino alle attivazioni e alle applicazioni.
+- **Hub:** l&#39;alfa corrente esegue il servizio di punteggio Real-time Machine Learning nell&#39;hub Adobe Experience Platform mentre Experience Edge Network è in fase di sviluppo.
 - **Nodo:** Un nodo è l&#39;unità fondamentale di cui si formano i grafici. Ogni nodo esegue un&#39;attività specifica e può essere concatenato utilizzando i collegamenti per creare un grafico che rappresenta una pipeline ML. L&#39;attività eseguita da un nodo rappresenta un&#39;operazione sui dati di input, ad esempio una trasformazione di dati o schema, o un&#39;inferenza di apprendimento di una macchina. Il nodo genera il valore trasformato o dedotto nei nodi successivi.
 
 ## Set di dati in Adobe Experience Platform
 
-Per iniziare a utilizzare l&#39;apprendimento automatico in tempo reale, è necessario avere accesso a un dataset. Potete utilizzare un set di dati esterno e caricarlo nel vostro [!DNL JupyterLab] ambiente oppure creare un nuovo set di dati all&#39;interno della piattaforma, se non lo avete già fatto.
+Per iniziare a utilizzare l&#39;apprendimento automatico in tempo reale, è necessario avere accesso a un dataset. È possibile utilizzare un dataset esterno e caricarlo nell&#39;ambiente [!DNL JupyterLab] oppure creare un nuovo dataset all&#39;interno della piattaforma, se non lo avete già fatto.
 
 >[!NOTE]
 >
->Se si dispone già di un set di dati da utilizzare, è possibile passare ai passaggi [](#next-steps)Successivi.
+>Se si dispone già di un set di dati da utilizzare, è possibile passare a [Passaggi successivi](#next-steps).
 
 ### Utilizzare un dataset esterno
 
-Per ulteriori informazioni sull&#39;utilizzo di un set di dati esterno, ad esempio il caricamento di dati nell&#39; [!DNL JupyterLab] ambiente, visitare l&#39;esercitazione sull&#39; [analisi dei dati utilizzando i blocchi appunti](../jupyterlab/analyze-your-data.md#external-data).
+Per ulteriori informazioni sull&#39;utilizzo di un dataset esterno, ad esempio il caricamento di dati nell&#39;ambiente [!DNL JupyterLab], visitare l&#39;esercitazione su [l&#39;analisi dei dati mediante blocchi appunti](../jupyterlab/analyze-your-data.md#external-data).
 
 ### Creare un nuovo dataset
 
@@ -51,5 +51,5 @@ Per creare un nuovo dataset da utilizzare in Real-time Machine Learning, è nece
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver preparato i dati per l&#39;apprendimento automatico in tempo reale, iniziare seguendo la guida [utente del notebook](./rtml-authoring-notebook.md) Real-time Machine Learning per imparare a creare e caricare un modello ONNX nel negozio di modelli Real-time Machine Learning.
+Dopo aver preparato i dati per l&#39;apprendimento automatico in tempo reale, iniziare seguendo la [Guida utente del notebook per l&#39;apprendimento automatico in tempo reale](./rtml-authoring-notebook.md) per imparare a creare e caricare un modello ONNX nel negozio di modelli di apprendimento automatico in tempo reale.
 
