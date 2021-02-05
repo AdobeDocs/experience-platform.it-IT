@@ -1,20 +1,20 @@
 ---
 keywords: ' Experience Platform;home;popolari argomenti;streaming assimilation;ingestion;record data;stream record data;'
 solution: Experience Platform
-title: Streaming dei dati dei record
+title: Dati del record di flusso mediante le API di ingestione dello streaming
 topic: tutorial
 type: Tutorial
 description: Questa esercitazione ti aiuterà a iniziare a utilizzare le API di assimilazione in streaming, parte delle API del servizio Adobe Experience Platform Data Ingestion.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1163'
 ht-degree: 2%
 
 ---
 
 
-# Trasmissione dei dati del record ad Adobe Experience Platform
+# Dati del record del flusso utilizzando le API di ingestione dello streaming
 
 Questa esercitazione aiuterà a iniziare a utilizzare le API di assimilazione in streaming, parte delle API Adobe Experience Platform [!DNL Data Ingestion Service].
 
