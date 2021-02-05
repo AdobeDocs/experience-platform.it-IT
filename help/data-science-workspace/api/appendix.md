@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;
+keywords: ' Experience Platform;guida sviluppatore;endpoint;Data Science Workspace;argomenti più comuni;'
 solution: Experience Platform
-title: Appendice
+title: Guida all'API di apprendimento di una macchina Sensei
 topic: Developer guide
 description: Le sezioni seguenti forniscono informazioni di riferimento per le varie funzionalità di Sensei Machine Learning API.
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '330'
 ht-degree: 1%
 
 ---
 
 
-# Appendice
+# [!DNL Sensei Machine Learning] Appendice della guida API
 
-Le sezioni seguenti forniscono informazioni di riferimento per le varie funzioni dell&#39; [!DNL Sensei Machine Learning] API.
+Le sezioni seguenti forniscono informazioni di riferimento per le varie funzionalità dell&#39;API [!DNL Sensei Machine Learning].
 
 ## Parametri di query per il recupero delle risorse {#query}
 
-L&#39; [!DNL Sensei Machine Learning] API fornisce il supporto per i parametri di query con il recupero delle risorse. I parametri di query disponibili e i relativi utilizzi sono descritti nella tabella seguente:
+L&#39;API [!DNL Sensei Machine Learning] fornisce il supporto per i parametri di query con il recupero delle risorse. I parametri di query disponibili e i relativi utilizzi sono descritti nella tabella seguente:
 
 | Parametro query | Descrizione | Valore predefinito |
 | --------------- | ----------- | ------- |
@@ -30,11 +30,11 @@ L&#39; [!DNL Sensei Machine Learning] API fornisce il supporto per i parametri d
 
 >[!NOTE]
 >
->Quando si combinano più parametri di query, questi devono essere separati da e-mail (**&amp;**).
+>Quando si combinano più parametri di query, questi devono essere separati da e commerciale (**&amp;**).
 
-## Configurazioni CPU e GPU Python {#cpu-gpu-config}
+## Configurazione CPU Python e GPU {#cpu-gpu-config}
 
-I Motori Python hanno la possibilità di scegliere tra una CPU o una GPU a scopo di formazione o punteggio, ed è definita su un&#39;istanza [MLI](./mlinstances.md) come specifica di attività (`tasks.specification`).
+I motori Python hanno la possibilità di scegliere tra una CPU o una GPU a scopo di formazione o punteggio, ed è definita su un [MLIninstance](./mlinstances.md) come specifica di attività (`tasks.specification`).
 
 Esempio di configurazione che specifica l’utilizzo di una CPU per la formazione e di una GPU per il punteggio:
 
@@ -71,9 +71,9 @@ Esempio di configurazione che specifica l’utilizzo di una CPU per la formazion
 
 >[!NOTE]
 >
->I valori di `cpus` e `gpus` non indicano il numero di CPU o GPU, ma piuttosto il numero di computer fisici. Questi valori sono consentiti `"1"` e genereranno un&#39;eccezione in caso contrario.
+>I valori di `cpus` e `gpus` non indicano il numero di CPU o GPU, ma il numero di computer fisici. Questi valori sono consentiti `"1"` e genereranno un&#39;eccezione in caso contrario.
 
-## Configurazioni delle risorse PySpark e Spark {#resource-config}
+## Configurazioni risorse PySpark e Spark {#resource-config}
 
 I motori Spark sono in grado di modificare le risorse computazionali a scopo di formazione e punteggio. Queste risorse sono descritte nella tabella seguente:
 
@@ -85,7 +85,7 @@ I motori Spark sono in grado di modificare le risorse computazionali a scopo di 
 | esecutoreCores | Numero di core utilizzati dall&#39;esecutore | int |
 | numExecutor | Numero di esecutori | int |
 
-Le risorse possono essere specificate su un&#39;istanza [MLI](./mlinstances.md) come (A) parametri di formazione individuali o di punteggio, o (B) all&#39;interno di un oggetto di specifiche aggiuntivo (`specification`). Ad esempio, le seguenti configurazioni di risorse sono le stesse sia per la formazione che per il punteggio:
+Le risorse possono essere specificate su un [MLIninstance](./mlinstances.md) come (A) singoli parametri di formazione o punteggio oppure (B) all&#39;interno di un oggetto di specifiche aggiuntivo (`specification`). Ad esempio, le seguenti configurazioni di risorse sono le stesse sia per la formazione che per il punteggio:
 
 ```json
 [
