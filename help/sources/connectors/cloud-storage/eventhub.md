@@ -1,11 +1,11 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;Azure Event Hubs;azure event hubs;Event Hubs;event hubs;hubs'
 solution: Experience Platform
-title: Connettore Azure Event Hubs
+title: Panoramica del connettore origine hub eventi di Azure
 topic: overview
-description: La documentazione seguente fornisce informazioni su come collegare gli hub eventi di Azure alla piattaforma utilizzando le API o l'interfaccia utente.
+description: Scoprite come collegare gli hub eventi di Azure ad Adobe Experience Platform utilizzando le API o l'interfaccia utente.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%
@@ -33,10 +33,10 @@ La documentazione seguente fornisce informazioni su come connettersi [!DNL Azure
 
 ### Utilizzo delle API
 
-- [Creare un connettore Azure Event Hubs utilizzando l&#39;API del servizio di flusso](../../tutorials/api/create/cloud-storage/eventhub.md)
+- [Creazione di una connessione di origine Azure Event Hubs tramite l&#39;API del servizio di flusso](../../tutorials/api/create/cloud-storage/eventhub.md)
 - [Raccogli i dati di streaming tramite l&#39;API del servizio di flusso](../../tutorials/api/collect/streaming.md)
 
 ### Utilizzo dell’interfaccia
 
-- [Creare un connettore di origine Azure Event Hubs nell&#39;interfaccia utente](../../tutorials/ui/create/cloud-storage/eventhub.md)
-- [Configurare un flusso di dati per un connettore di archiviazione cloud nell&#39;interfaccia utente](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+- [Creare una connessione di origine Azure Event Hubs nell&#39;interfaccia utente](../../tutorials/ui/create/cloud-storage/eventhub.md)
+- [Configurare un flusso di dati per una connessione di archiviazione cloud nell&#39;interfaccia utente](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
