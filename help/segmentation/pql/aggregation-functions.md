@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;aggregation functions;aggregation;
+keywords: ' Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Segmentation Service;pql;PQL;Profile Query Language;funzioni di aggregazione;aggregazione;'
 solution: Experience Platform
-title: Funzioni di aggregazione
+title: Funzioni di aggregazione PQL
 topic: developer guide
 description: 'Le funzioni di aggregazione vengono utilizzate per raggruppare più valori all''interno degli array PQL (Profile Query Language) per creare un singolo valore di riepilogo. '
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 6%
+source-wordcount: '244'
+ht-degree: 5%
 
 ---
 
 
 # Funzioni di aggregazione
 
-Le funzioni di aggregazione sono utilizzate per raggruppare più valori all&#39;interno di array [!DNL Profile Query Language] (PQL) per formare un singolo valore di riepilogo. Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
+Le funzioni di aggregazione vengono utilizzate per raggruppare più valori all&#39;interno di array [!DNL Profile Query Language] (PQL) per creare un singolo valore di riepilogo. Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
 
 ## Count
 
-La `count` funzione restituisce il numero di elementi all&#39;interno dell&#39;array specificato.
+La funzione `count` restituisce il numero di elementi all&#39;interno dell&#39;array specificato.
 
 **Formato**
 
@@ -37,7 +37,7 @@ orders.count()
 
 ## Sum
 
-La `sum` funzione restituisce la somma di tutti i valori selezionati all&#39;interno dell&#39;array.
+La funzione `sum` restituisce la somma di tutti i valori selezionati all&#39;interno dell&#39;array.
 
 **Formato**
 
@@ -55,7 +55,7 @@ orders.sum(order.price)
 
 ## Media
 
-La `average` funzione restituisce la media aritmetica di tutti i valori selezionati all&#39;interno dell&#39;array.
+La funzione `average` restituisce la media aritmetica di tutti i valori selezionati all&#39;interno dell&#39;array.
 
 **Formato**
 
@@ -73,7 +73,7 @@ orders.average(order.price)
 
 ## Minimo
 
-La `min` funzione restituisce il più piccolo di tutti i valori selezionati all&#39;interno dell&#39;array.
+La funzione `min` restituisce il più piccolo di tutti i valori selezionati all&#39;interno dell&#39;array.
 
 **Formato**
 
@@ -91,7 +91,7 @@ orders.min(order.price)
 
 ## Massimo
 
-La `max` funzione restituisce il valore più elevato tra tutti i valori selezionati all&#39;interno dell&#39;array.
+La funzione `max` restituisce il valore più elevato tra tutti i valori selezionati all&#39;interno dell&#39;array.
 
 **Formato**
 
@@ -109,4 +109,4 @@ orders.max(order.price)
 
 ## Passaggi successivi
 
-Dopo aver appreso le funzioni di aggregazione, è possibile utilizzarle all&#39;interno delle query PQL. Per ulteriori informazioni sulle altre funzioni PQL, consultate la panoramica [Lingua query](./overview.md)profilo.
+Dopo aver appreso le funzioni di aggregazione, è possibile utilizzarle all&#39;interno delle query PQL. Per ulteriori informazioni sulle altre funzioni PQL, leggere la [Panoramica del linguaggio di query profilo](./overview.md).
