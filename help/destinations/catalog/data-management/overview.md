@@ -1,19 +1,17 @@
 ---
 keywords: destinazioni dmp;DIL;estensione dmp di Gestione dell'audience;estensione dmp;piattaforma di gestione dei dati;destinazioni della piattaforma di gestione dei dati
-title: Destinazioni della piattaforma di gestione dati (DMP)
-seo-title: Destinazioni della piattaforma di gestione dati (DMP)
+title: Panoramica delle destinazioni della piattaforma di gestione dati (DMP)
 description: Le piattaforme di gestione dei dati (DMP) consentono a inserzionisti, editori e agenzie di creare profili di audience univoci, identificare i segmenti di maggior valore e utilizzarli su qualsiasi canale digitale. Questo consente di creare una visualizzazione 360 effettiva di un profilo del consumatore, creare e attivare audience significative.
-seo-description: Le piattaforme di gestione dei dati (DMP) consentono a inserzionisti, editori e agenzie di creare profili di audience univoci, identificare i segmenti di maggior valore e utilizzarli su qualsiasi canale digitale. Questo consente di creare una visualizzazione 360 effettiva di un profilo del consumatore, creare e attivare audience significative.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '138'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Data Management Platform] (DMP) destinazioni  {#dmp-destinations}
+# [!DNL Data Management Platform] Panoramica delle destinazioni (DMP)  {#dmp-destinations}
 
 [!DNL Data Management Platforms] (DMP) consente a inserzionisti, editori e agenzie di creare profili di audience univoci, identificare i segmenti di maggior valore e utilizzarli su qualsiasi canale digitale. Questo consente di creare una visualizzazione 360 effettiva di un profilo del consumatore, creare e attivare audience significative.
 
