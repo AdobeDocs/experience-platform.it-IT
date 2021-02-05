@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;miscellaneous functions;misc;
+keywords: ' Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Segmentation Service;pql;PQL;Profile Query Language;funzioni varie;misc;'
 solution: Experience Platform
-title: Funzioni varie
+title: Funzioni varie PQL
 topic: developer guide
 description: La seguente funzione è una funzione diversa per la lingua query profilo (PQL, Profile Query Language).
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '114'
+source-wordcount: '132'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ La seguente funzione è una funzione diversa per [!DNL Profile Query Language] (
 
 ## Lascia
 
-La `let` funzione consente di memorizzare un&#39;espressione come variabile da utilizzare successivamente in una query.
+La funzione `let` consente di memorizzare un&#39;espressione come variabile da utilizzare successivamente in una query.
 
 **Formato**
 
@@ -37,4 +37,4 @@ let S = (sum X.commerce.order.priceTotal over X from xEvent where X.commerce.ord
 
 ## Passaggi successivi
 
-Ora che avete appreso le varie funzioni, potete utilizzarle nelle query PQL. Per ulteriori informazioni sulle altre funzioni PQL, consultate la panoramica [Lingua query](./overview.md)profilo.
+Ora che avete appreso le varie funzioni, potete utilizzarle nelle query PQL. Per ulteriori informazioni sulle altre funzioni PQL, leggere la [Panoramica del linguaggio di query profilo](./overview.md).
