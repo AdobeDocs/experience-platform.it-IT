@@ -1,12 +1,12 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;Raccogliere dati del protocollo;dati del protocollo'
 solution: Experience Platform
-title: Raccogliere i dati dei protocolli tramite connettori di origine e API
+title: Raccolta di dati di protocolli tramite connettori di origine e API
 topic: overview
 type: Tutorial
-description: Questa esercitazione descrive i passaggi necessari per recuperare i dati da un'applicazione protocolli e trasferirli in Piattaforma tramite connettori di origine e API.
+description: Questa esercitazione descrive i passaggi necessari per recuperare i dati da un'applicazione protocolli e trasferirli in Piattaforma utilizzando connettori sorgente e API.
 translation-type: tm+mt
-source-git-commit: 478c73935d674ef4eb40511cc562b27df77f58c8
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# Raccogliere i dati dei protocolli tramite connettori di origine e API
+# Raccogliere i dati dei protocolli utilizzando connettori di origine e API
 
 Questa esercitazione descrive i passaggi necessari per recuperare i dati da un&#39;applicazione protocollo di terze parti e trasferirli in Adobe Experience Platform tramite connettori di origine e l&#39;API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
