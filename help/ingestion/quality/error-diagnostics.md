@@ -1,11 +1,11 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;inserimento batch;inserimento batch;assimilazione parziale;inserimento parziale;recupero errori;recupero errori;recupero errori;recupero errori;inserimento parziale batch;parziale;inserimento batch;parziale;inserimento;inserimento;ingestione;diagnosi errore;recupero diagnostica errori;ottenere errori diagnostici;ottenere errori;ottenere errori;ottenere errori;recuperare errori;'
 solution: Experience Platform
-title: Panoramica sull’assimilazione parziale di Adobe Experience Platform
+title: Recupero della diagnostica degli errori di inserimento dati
 topic: overview
 description: Questo documento fornisce informazioni sul monitoraggio dell’inserimento batch, sulla gestione degli errori di inserimento batch parziale e un riferimento per i tipi di inserimento batch parziale.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 ---
 
 
-# Recupero della diagnostica degli errori
+# Recupero della diagnostica degli errori di caricamento dei dati
 
 Adobe Experience Platform offre due metodi per caricare e acquisire i dati. Potete utilizzare l&#39;assimilazione batch, che consente di inserire i dati utilizzando vari tipi di file (come i CSV), oppure l&#39;assimilazione in streaming, che consente di inserire i dati in [!DNL Platform] utilizzando gli endpoint in streaming in tempo reale.
 
