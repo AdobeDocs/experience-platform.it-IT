@@ -1,12 +1,12 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;servizio di flusso;pubblicità;google adwords;pubblicità'
 solution: Experience Platform
-title: Raccolta di dati pubblicitari tramite connettori di origine e API
+title: Raccolta di dati pubblicitari tramite connettori e API di origine
 topic: overview
 type: Tutorial
-description: Questa esercitazione descrive i passaggi necessari per recuperare i dati da un’applicazione pubblicitaria di terze parti e trasferirli in Piattaforma tramite connettori di origine e API del servizio di flusso.
+description: Questa esercitazione descrive i passaggi necessari per recuperare i dati da un’applicazione pubblicitaria di terze parti e trasferirli in Piattaforma utilizzando i connettori di origine e l’API del servizio di flusso.
 translation-type: tm+mt
-source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1513'
 ht-degree: 1%
