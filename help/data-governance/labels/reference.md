@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ;home;argomenti più comuni;governance dei dati;etichetta di utilizzo dei dati api;API del servizio criteri;etichette di utilizzo dei dati supportate;etichette dei contratti;etichette di identità;etichette sensibili
 solution: Experience Platform
-title: Etichette di utilizzo dati di base
+title: Glossario Etichette sull'uso dei dati
 topic: labels
 description: In questo documento vengono delineate tutte le etichette di utilizzo dei dati attualmente supportate da Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1904'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 ---
 
 
-# Etichette di utilizzo dati di base
+# Glossario delle etichette di utilizzo dei dati
 
 Le etichette di utilizzo dei dati consentono di classificare set di dati e campi in base ai criteri di utilizzo applicabili ai dati. Adobe Experience Platform Data Governance fornisce diverse etichette di utilizzo dei dati di base che puoi utilizzare per iniziare a classificare i tuoi dati.
 
