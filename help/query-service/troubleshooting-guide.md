@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;troubleshooting guide;faq;troubleshooting;
+keywords: ' Experience Platform;home;argomenti comuni;servizio query;servizio query;guida alla risoluzione dei problemi;faq;risoluzione dei problemi;'
 solution: Experience Platform
-title: Guida alla risoluzione dei problemi di Adobe Experience Platform Query Service
+title: Guida alla risoluzione dei problemi del servizio query
 topic: troubleshooting
 description: Questo documento contiene informazioni sui codici di errore comuni riscontrati e sulle possibili cause.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 2%
+source-wordcount: '177'
+ht-degree: 3%
 
 ---
 
 
-# Errori e risoluzione dei problemi
+# [!DNL Query Service] Guida alla risoluzione dei problemi
 
 ## Errori API REST
 
@@ -27,13 +27,13 @@ ht-degree: 2%
 
 | Codice errore e stato connessione | Descrizione | Possibile causa |
 | ------------------------------- | ----------- | -------------- |
-| **Avvio 28P01** - autenticazione | Password non valida | Token di autenticazione non valido |
-| **28000** Start-up - autenticazione | Tipo di autorizzazione non valido | Tipo di autorizzazione non valido. Dev&#39;essere `AuthenticationCleartextPassword`. |
-| **Avvio 42P12** - autenticazione | Nessuna tabella trovata | Nessuna tabella trovata per l&#39;uso |
-| **Query 42601** | Errore di sintassi | Errore di comando o sintassi non valido |
-| **Query 58000** | Errore di sistema | Errore interno del sistema |
-| **Query 42P01** | Tabella non trovata | Impossibile trovare la tabella specificata nella query |
-| **Query 42P07** | Tabella esistente | La tabella esiste già con lo stesso nome (CREATE TABLE) |
-| **Query 53400** | LIMIT supera il valore massimo | L&#39;utente ha specificato una clausola LIMIT superiore a 100.000 |
-| **Query 53400** | Timeout istruzioni | Il resoconto live presentato dura più di 10 minuti |
+| **28P01** Start-up - autenticazione | Password non valida | Token di autenticazione non valido |
+| **28000** Start-up - autenticazione | Tipo di autorizzazione non valido | Tipo di autorizzazione non valido. Deve essere `AuthenticationCleartextPassword`. |
+| **42P12** Start-up - autenticazione | Nessuna tabella trovata | Nessuna tabella trovata per l&#39;uso |
+| **42601** Query | Errore di sintassi | Errore di comando o sintassi non valido |
+| **58000** Query | Errore di sistema | Errore interno del sistema |
+| **42P01** Query | Tabella non trovata | Impossibile trovare la tabella specificata nella query |
+| **42P07** Query | Tabella esistente | La tabella esiste già con lo stesso nome (CREATE TABLE) |
+| **53400** Query | LIMIT supera il valore massimo | L&#39;utente ha specificato una clausola LIMIT superiore a 100.000 |
+| **53400** Query | Timeout istruzioni | Il resoconto live presentato dura più di 10 minuti |
 | **08P01** N/D | Tipo di messaggio non supportato | Tipo di messaggio non supportato |
