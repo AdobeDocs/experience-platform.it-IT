@@ -1,19 +1,19 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;Query service;query service;postico;Postico;connect;connect to query service;'
 solution: Experience Platform
-title: Connetti con Postico
+title: Connect Postico to Query Service
 topic: connect
 description: Questo documento contiene il collegamento per l'installazione del client di backup Postico per Adobe Experience Platform Query Service.
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Postico]
+# Connessione di [!DNL Postico] a Query Service (Mac)
 
 Questo documento descrive i passaggi per la connessione di [!DNL Postico] con Adobe Experience Platform [!DNL Query Service].
 
@@ -22,8 +22,6 @@ Questo documento descrive i passaggi per la connessione di [!DNL Postico] con Ad
 > Questa guida presuppone che abbiate già accesso a [!DNL Postico] e che abbiate familiarità con come navigare all&#39;interfaccia. Ulteriori informazioni su [!DNL Postico] sono disponibili nella [documentazione  [!DNL Postico] ufficiale](https://eggerapps.at/postico/docs).
 > 
 > Inoltre, [!DNL Postico] è disponibile solo **su dispositivi MacOS.**
-
-## Connetti [!DNL Postico] al servizio query
 
 Per connettere [!DNL Postico] a Query Service, aprire [!DNL Postico] e selezionare **[!DNL New Favorite]**.
 
