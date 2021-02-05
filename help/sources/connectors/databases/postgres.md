@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;home;popular topics;PostgreSQL;postgresql
+keywords: ' Experience Platform;home;argomenti popolari;PostgreSQL;postgresql'
 solution: Experience Platform
-title: Connettore PostgreSQL
+title: Panoramica del connettore origine PostgreSQL
 topic: overview
-description: La documentazione seguente fornisce informazioni su come collegare PostgreSQL alla piattaforma utilizzando le API o l'interfaccia utente.
+description: Scopri come collegare PostgreSQL ad Adobe Experience Platform utilizzando le API o l'interfaccia utente.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
 
 
-# Connettore (Beta) [!DNL PostgreSQL]
+# (Beta) [!DNL PostgreSQL] connettore
 
 >[!NOTE]
 >
->Il [!DNL PostgreSQL] connettore è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la panoramica [](../../home.md#terms-and-conditions) Origini.
+>Il connettore [!DNL PostgreSQL] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, vedere [Panoramica delle sorgenti](../../home.md#terms-and-conditions).
 
 Adobe Experience Platform consente l&#39;acquisizione di dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Piattaforma. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, database e molti altri.
 
@@ -25,17 +25,17 @@ Adobe Experience Platform consente l&#39;acquisizione di dati da origini esterne
 
 ## Indirizzo IP  elenco consentiti
 
-Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti . Se non si aggiungono al elenco consentiti  gli indirizzi IP specifici per la regione, potrebbero verificarsi errori o prestazioni insufficienti quando si utilizzano le origini. Per ulteriori informazioni, vedere l&#39;indirizzo [IP  pagina di elenco consentiti](../../ip-address-allow-list.md) .
+Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti . Se non si aggiungono al elenco consentiti  gli indirizzi IP specifici per la regione, potrebbero verificarsi errori o prestazioni insufficienti quando si utilizzano le origini. Per ulteriori informazioni, vedere la pagina [Indirizzo IP  elenco consentiti](../../ip-address-allow-list.md).
 
-La documentazione seguente fornisce informazioni su come connettersi [!DNL PostgreSQL] all&#39; [!DNL Platform] utilizzo delle API o dell&#39;interfaccia utente:
+La documentazione seguente fornisce informazioni su come connettersi [!DNL PostgreSQL] a [!DNL Platform] utilizzando le API o l&#39;interfaccia utente:
 
-## Connessione [!DNL PostgreSQL] all&#39; [!DNL Platform] utilizzo delle API
+## Connetti [!DNL PostgreSQL] a [!DNL Platform] utilizzando le API
 
-- [Creare un connettore PostgreSQL utilizzando l&#39;API del servizio di flusso](../../tutorials/api/create/databases/postgres.md)
+- [Creare una connessione di origine PostgreSQL utilizzando l&#39;API del servizio di flusso](../../tutorials/api/create/databases/postgres.md)
 - [Esplora un sistema di database utilizzando l&#39;API del servizio di flusso](../../tutorials/api/explore/database-nosql.md)
 - [Raccolta di dati da un database tramite l&#39;API del servizio di flusso](../../tutorials/api/collect/database-nosql.md)
 
-## Connessione [!DNL PostgreSQL] all’ [!DNL Platform] interfaccia utente
+## Connetti [!DNL PostgreSQL] a [!DNL Platform] utilizzando l&#39;interfaccia utente
 
-- [Creare un connettore di origine PostgreSQL nell&#39;interfaccia utente](../../tutorials/ui/create/databases/postgres.md)
-- [Configurare un flusso di dati per un connettore di database nell&#39;interfaccia utente](../../tutorials/ui/dataflow/databases.md)
+- [Creare una connessione di origine PostgreSQL nell&#39;interfaccia utente](../../tutorials/ui/create/databases/postgres.md)
+- [Configurare un flusso di dati per una connessione al database nell&#39;interfaccia utente](../../tutorials/ui/dataflow/databases.md)
