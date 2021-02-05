@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes;pre build recipe
+keywords: ' Experience Platform;ricetta di vendita al dettaglio;Data Science Workspace;argomenti più comuni;ricette;pre-costruire ricetta'
 solution: Experience Platform
-title: Ricetta di vendita al dettaglio
+title: Ricetta vendite al dettaglio
 topic: overview
 description: La ricetta Vendite al dettaglio consente di prevedere le previsioni di vendita per tutti i negozi preimpostati per un determinato periodo di tempo. Grazie a un modello di previsione accurato, il rivenditore sarà in grado di individuare la relazione tra le politiche di domanda e di prezzo e di prendere decisioni di prezzo ottimizzate per massimizzare le vendite e i ricavi.
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '585'
 ht-degree: 2%
 
 ---
@@ -38,7 +38,7 @@ Questa esercitazione passerà alla creazione della ricetta Vendite al dettaglio 
 
 ## Schema dati
 
-Questa ricetta utilizza gli schemi [](../../xdm/schema/field-dictionary.md) XDM per modellare i dati. Lo schema utilizzato per questa ricetta è riportato di seguito:
+Questa ricetta utilizza [schemi XDM](../../xdm/schema/field-dictionary.md) per modellare i dati. Lo schema utilizzato per questa ricetta è riportato di seguito:
 
 | Nome campo | Tipo |
 --- | ---
@@ -57,7 +57,7 @@ Questa ricetta utilizza gli schemi [](../../xdm/schema/field-dictionary.md) XDM 
 
 ## Algoritmo
 
-Innanzitutto, viene caricato il dataset di formazione nello schema *DSWRetailSales* . Da qui, il modello viene addestrato utilizzando un algoritmo [di regressione con](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)gradiente. Il miglioramento della sfumatura utilizza l&#39;idea che gli utenti in formazione deboli (almeno leggermente migliori delle possibilità casuali) possano formare una serie di studenti focalizzati sul miglioramento delle debolezze degli studenti precedenti. Insieme, possono essere utilizzati per creare un potente modello predittivo.
+Innanzitutto, viene caricato il dataset di formazione nello schema *DSWRetailSales*. Da qui, il modello viene addestrato utilizzando un [algoritmo di regressione del gradiente che incrementa la pendenza](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). Il miglioramento della sfumatura utilizza l&#39;idea che gli utenti in formazione deboli (almeno leggermente migliori delle possibilità casuali) possano formare una serie di studenti focalizzati sul miglioramento delle debolezze degli studenti precedenti. Insieme, possono essere utilizzati per creare un potente modello predittivo.
 
 Il processo comprende tre elementi: una funzione di perdita, uno studente debole e un modello additivo.
 
