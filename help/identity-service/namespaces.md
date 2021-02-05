@@ -1,13 +1,13 @@
 ---
 keywords: ' Experience Platform;home;argomenti comuni;spazio dei nomi;spazio dei nomi;spazi dei nomi;spazio dei nomi;spazio dei nomi identità;spazio dei nomi identità;identità;identità;servizio identità;identità'
 solution: Experience Platform
-title: Servizio Adobe Experience Platform Identity
+title: Panoramica spazio nomi identità
 topic: overview
 description: 'Gli spazi dei nomi delle identità sono un componente di Servizio identità che funge da indicatori del contesto a cui si riferisce un''identità. Ad esempio, distinguono il valore "name@email.com" come indirizzo e-mail o "443522" come ID CRM numerico. '
 translation-type: tm+mt
-source-git-commit: 0547c33e831fe1ac684f55a0e79978cd7f191e65
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '1451'
+source-wordcount: '1449'
 ht-degree: 1%
 
 ---
