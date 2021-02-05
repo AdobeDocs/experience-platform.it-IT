@@ -1,21 +1,17 @@
 ---
 keywords: Marketo;marketo;Marketo extension;marketo extension;marketo extension
-title: Estensione Marketo
-seo-title: Estensione Marketo
+title: Destinazione estensione Marketo
 description: L’estensione Marketo è una destinazione di posta elettronica in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L’estensione Marketo è una destinazione di posta elettronica in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '505'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Marketo] Estensione {#marketo-extension}
-
-## Panoramica {#overview}
 
 [!DNL Marketo]Il potente software di automazione del marketing aiuta i professionisti del marketing a padroneggiare l&#39;arte e la scienza del marketing digitale per coinvolgere clienti e potenziali clienti.
 
