@@ -6,9 +6,9 @@ user-guide-title: Guida ai servizi intelligenti
 breadcrumb-title: Guida a Intelligent Services
 user-guide-description: Utilizza i servizi di intelligenza artificiale per generare valutazioni, scoprire informazioni approfondite e creare segmenti dai dati degli eventi di marketing.
 translation-type: tm+mt
-source-git-commit: 0675b38397667e8764c75e22a1e2f2e4aaddeb3c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '119'
 ht-degree: 23%
 
 ---
@@ -24,8 +24,8 @@ ht-degree: 23%
    - [Ingresso e uscita](attribution-ai/input-output.md)
    - [Guida all&#39;interfaccia utente](attribution-ai/user-guide.md)
    - [Scopri informazioni approfondite](attribution-ai/discover-insights.md)
-   - [Accesso ai punteggi](attribution-ai/download-scores.md)
-   - [Guida di avvio rapido di AAI Query Service](attribution-ai/aai-query-service.md)
+   - [Download dei punteggi](attribution-ai/download-scores.md)
+   - [Analisi dei punteggi con Query Service](attribution-ai/aai-query-service.md)
 - Content and Commerce AI (beta) {#content-commerce-ai}
    - [Panoramica](content-commerce-ai/overview.md)
    - [Introduzione](content-commerce-ai/getting-started.md)
