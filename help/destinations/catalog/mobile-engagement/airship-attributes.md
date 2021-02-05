@@ -1,25 +1,21 @@
 ---
 keywords: attributi di volo;destinazione di volo
-title: Destinazione degli attributi di volo
-seo-title: Destinazione degli attributi di volo
+title: Destinazione di connessione attributi di volo
 description: Trasmettete senza problemi  dati di pubblico Adobe a Airship come attributi di pubblico per il targeting all'interno di Airship.
-seo-description: Trasmettete senza problemi  dati di pubblico Adobe a Airship come attributi di pubblico per il targeting all'interno di Airship.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1147'
 ht-degree: 1%
 
 ---
 
 
-# (Beta) [!DNL Airship Attributes] destinazione {#airship-attributes-destination}
+# (Beta) Connessione [!DNL Airship Attributes] {#airship-attributes-destination}
 
 >[!IMPORTANT]
 >
 >La destinazione [!DNL Airship Attributes] in Adobe Experience Platform è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
-
-## Panoramica {#overview}
 
 [!DNL Airship] è la principale piattaforma di coinvolgimento dei clienti, che ti consente di distribuire messaggi omnicanale significativi e personalizzati agli utenti in ogni fase del ciclo di vita del cliente.
 
