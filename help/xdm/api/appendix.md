@@ -1,19 +1,19 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;schema di registro;schema di registro;compatibilità;compatibilità;modalità compatibilità;modalità compatibilità;tipo di campo;tipi di campo;'
 solution: Experience Platform
-title: Appendice sviluppatore del Registro di sistema dello schema
+title: Appendice API del Registro di sistema
 description: Questo documento fornisce informazioni supplementari relative all'utilizzo dell'API del Registro di sistema dello schema.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
 workflow-type: tm+mt
-source-wordcount: '767'
-ht-degree: 1%
+source-wordcount: '772'
+ht-degree: 0%
 
 ---
 
 
-# Appendice
+# Appendice della guida API del Registro di sistema
 
 Questo documento fornisce informazioni supplementari relative all&#39;utilizzo dell&#39;API [!DNL Schema Registry].
 
