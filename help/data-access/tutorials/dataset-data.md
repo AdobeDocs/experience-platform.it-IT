@@ -1,20 +1,20 @@
 ---
 keywords: ' Experience Platform;home;argomenti comuni;accesso ai dati;data access api;query data access'
 solution: Experience Platform
-title: Panoramica sull'accesso ai dati
+title: Visualizzazione dei dati del set di dati tramite l'API di accesso ai dati
 topic: tutorial
 type: Tutorial
-description: Questo documento fornisce un'esercitazione passo-passo che illustra come individuare, accedere e scaricare i dati memorizzati in un dataset utilizzando l'API di accesso ai dati in Adobe Experience Platform. Verranno inoltre introdotte alcune delle caratteristiche uniche dell'API di accesso ai dati, come il paging e i download parziali.
+description: Scopri come individuare, accedere e scaricare i dati memorizzati in un dataset utilizzando l'API di accesso ai dati in Adobe Experience Platform. Verranno inoltre introdotte alcune delle caratteristiche uniche dell'API di accesso ai dati, come il paging e i download parziali.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1400'
+source-wordcount: '1398'
 ht-degree: 2%
 
 ---
 
 
-# Dati del set di query con l&#39;API [!DNL Data Access]
+# Visualizzare i dati del set di dati utilizzando l&#39;API [!DNL Data Access]
 
 Questo documento fornisce un&#39;esercitazione passo-passo che illustra come individuare, accedere e scaricare i dati memorizzati in un dataset utilizzando l&#39;API [!DNL Data Access] in Adobe Experience Platform. Verranno inoltre introdotte alcune delle funzionalità uniche dell&#39;API [!DNL Data Access], come il paging e i download parziali.
 
