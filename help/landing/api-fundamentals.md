@@ -1,19 +1,19 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari'
 solution: Experience Platform
-title: Nozioni di base sulle API Adobe Experience Platform
+title: ' Principi di base delle API Experienci Platform'
 topic: getting started
 description: Questo documento fornisce una breve panoramica di alcune tecnologie e sintassi sottostanti coinvolte con  API di Experience Platform.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '504'
 ht-degree: 1%
 
 ---
 
 
-# Nozioni di base sulle API Adobe Experience Platform
+#  Principi di base delle API Experienci Platform
 
 Le API di Adobe Experience Platform utilizzano diverse tecnologie e sintassi di base importanti per gestire efficacemente le risorse [!DNL Platform] basate su JSON. Il presente documento fornisce una breve panoramica di queste tecnologie e collegamenti alla documentazione esterna per ulteriori informazioni.
 
