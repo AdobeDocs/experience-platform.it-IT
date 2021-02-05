@@ -1,19 +1,19 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;mappare csv;mappare file CSV;mappare file CSV su xdm;mappare csv a xdm;ui guide;mapper;mapping;date;date function;date;'
 solution: Experience Platform
-title: Funzioni data
+title: Funzioni data di preparazione dati
 topic: overview
 description: Questo documento introduce le funzioni data utilizzate con Data Prep.
 translation-type: tm+mt
-source-git-commit: 28c13101be37c5c7680c5d46005509bfd122018f
+source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '415'
 ht-degree: 16%
 
 ---
 
 
-# Funzioni data
+# Funzioni data di preparazione dati
 
 Data Prep supporta le funzioni data, sia come stringhe che come oggetti datetime.
 
