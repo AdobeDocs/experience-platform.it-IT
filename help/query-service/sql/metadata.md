@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;PSQL;psql;Query service;query service;metadata;commands;metadata commands;
+keywords: ' Experience Platform;home;argomenti comuni;PSQL;psql;servizio query;servizio query;metadati;comandi;comandi di metadati;'
 solution: Experience Platform
-title: Metadati, comandi
+title: Comandi PostgreSQL metadati nel servizio query
 topic: metadata
-description: Elenco di comandi PSQL attualmente supportati per la query dei metadati.
+description: Elenco di comandi PostSQL attualmente supportati per la query dei metadati in Adobe Experience Platform Query Service.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '338'
 ht-degree: 0%
 
 ---
 
 
-# Metadati, comandi
+# Comandi PostSQL metadati in Servizio query
 
-Per i metadati del set di dati, i seguenti comandi PSQL sono attualmente supportati per le query:
+Per i metadati del set di dati, i seguenti comandi PostSQL sono attualmente supportati per le query:
 
 >[!NOTE]
 >
@@ -39,10 +39,10 @@ Per i metadati del set di dati, i seguenti comandi PSQL sono attualmente support
 | `\errverbose` | Ripete il messaggio di errore server più recente alla massima verbosità. |
 | `\l or \list` | Visualizza un elenco di database nel server. |
 | `\set` | Visualizza i nomi e i valori di tutte le variabili psql correnti. |
-| `\showtables` | Mostra le informazioni seguenti: <br>name: Nome a cui verrà fatto riferimento la tabella.<br>datasetId: ID del set di dati memorizzato.<br>dataset: Nome del set di dati memorizzato.<br>descrizione: Una descrizione del set di dati.<br>risolto: Un valore booleano che indica se il set di dati viene risolto o meno nella sessione corrente. |
+| `\showtables` | Mostra le informazioni seguenti: <br>nome: Nome a cui verrà fatto riferimento la tabella.<br>datasetId: ID del set di dati memorizzato.<br>dataset: Nome del set di dati memorizzato.<br>descrizione: Una descrizione del set di dati.<br>risolto: Un valore booleano che indica se il set di dati viene risolto o meno nella sessione corrente. |
 | `\timing` | Attiva e disattiva la visualizzazione. La visualizzazione è espressa in millisecondi. Gli intervalli più lunghi di un secondo vengono visualizzati in formato minuti:secondi, con i campi ore e giorni aggiunti quando necessario. |
 
-Tutti i comandi che iniziano con `\d` possono essere combinati. Ad esempio, è possibile pubblicare un elenco `\dtsn` di tutte le tabelle, le sequenze e gli schemi. `\d` di per sé mostra tutte le tabelle, le viste, le viste materializzate e le sequenze visibili.
+Tutti i comandi che iniziano con `\d` possono essere combinati. Ad esempio, è possibile emettere `\dtsn` per visualizzare un elenco di tutte le tabelle, le sequenze e gli schemi. `\d` di per sé mostra tutte le tabelle, le viste, le viste materializzate e le sequenze visibili.
 
-Per ulteriori informazioni sui comandi elencati sopra, consulta la documentazione disponibile in [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Tuttavia, tenete presente che non tutte le opzioni visualizzate nella documentazione PostSQL sono supportate da [!DNL Experience Platform].
+Per ulteriori informazioni sui comandi elencati sopra, fare riferimento alla documentazione all&#39;indirizzo [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Tuttavia, tenere presente che non tutte le opzioni visualizzate nella documentazione PostSQL sono supportate da [!DNL Experience Platform].
 
