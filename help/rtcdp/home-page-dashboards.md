@@ -5,15 +5,15 @@ seo-title: Pagina principale e dashboard della piattaforma dati cliente in tempo
 description: Dashboard, home page e la prima esperienza utente di Adobe Experience Platform
 seo-description: Dashboard, home page e la prima esperienza utente di Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '618'
 ht-degree: 4%
 
 ---
 
 
-# [!DNL Real-time Customer Data Platform] panoramica delle metriche
+# [!DNL Real-time Customer Data Platform] home page e dashboard
 
 La home page della piattaforma CDP (Real-time Customer Data Platform), che include un dashboard delle metriche, viene visualizzata quando si accede a CDP in tempo reale.
 
