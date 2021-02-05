@@ -1,11 +1,11 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari'
 solution: Experience Platform
-title: Panoramica della libreria JavaScript per la privacy  Adobe
+title: ' Adobe Panoramica della libreria JavaScript sulla privacy'
 topic: overview
 description: La  libreria JavaScript per la privacy di Adobe consente di recuperare le identità dell'oggetto dati da utilizzare nei Privacy Service.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '944'
 ht-degree: 6%
