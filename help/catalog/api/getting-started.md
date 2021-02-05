@@ -1,19 +1,19 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;servizio catalogo;catalogo;servizio catalogo;Catalogo'
 solution: Experience Platform
-title: Guida per gli sviluppatori di Catalog Service
+title: Guida API del servizio catalogo
 topic: developer guide
-description: Questa guida per gli sviluppatori fornisce i passaggi necessari per iniziare a utilizzare l'API Catalog. La guida fornisce quindi chiamate API di esempio per eseguire operazioni chiave utilizzando Catalog.
+description: L’API Catalog Service consente agli sviluppatori di gestire i metadati del set di dati in Adobe Experience Platform. Seguite questa guida per apprendere come eseguire operazioni chiave tramite l'API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '599'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Catalog Service] guida per sviluppatori
+# [!DNL Catalog Service] Guida API
 
 [!DNL Catalog Service] è il sistema di record per la posizione dei dati e la linea di dati in Adobe Experience Platform. [!DNL Catalog] funge da archivio di metadati o &quot;catalogo&quot; in cui è possibile trovare informazioni sui dati al loro interno  [!DNL Experience Platform], senza necessità di accedere ai dati stessi. Per ulteriori informazioni, vedere la [[!DNL Catalog] panoramica](../home.md).
 
