@@ -1,21 +1,17 @@
 ---
 keywords: estensioni facebook;estensione facebook;destinazioni facebook;facebook;instagram;messenger;facebook messenger
-title: Destinazione Facebook
-seo-title: Destinazione Facebook
+title: Destinazione estensione Facebook
 description: Attiva profili per le tue campagne Facebook per il targeting dell'audience, la personalizzazione e la soppressione basate su e-mail con hash.
-seo-description: Attiva profili per le tue campagne Facebook per il targeting dell'audience, la personalizzazione e la soppressione basate su e-mail con hash.
 translation-type: tm+mt
-source-git-commit: 38b2bfd93bda85cf87dde4e0345ca9c11e419c2f
+source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '941'
+ht-degree: 3%
 
 ---
 
 
-# [!DNL Facebook] Destinazione
-
-## Panoramica {#overview}
+# [!DNL Facebook] Estensione
 
 >[!IMPORTANT]
 >
