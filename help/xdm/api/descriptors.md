@@ -1,13 +1,13 @@
 ---
 keywords: ' Experience Platform;home;argomenti più comuni;api;API;XDM;XDM system;experience data model;Experience Data Model;data model;data model;schema Registry;Schema Registry;Descriptor;Descriptor;Descriptor;Descriptor;Identity;friendly name;Alternativeisplayinfo;reference;Reference;relation;Relationship;Relationship'
 solution: Experience Platform
-title: Descrittori
+title: Endpoint API Descriptor
 description: L'endpoint /descriptors nell'API del Registro di sistema dello schema consente di gestire in modo programmatico i descrittori XDM all'interno dell'applicazione dell'esperienza.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1609'
+source-wordcount: '1611'
 ht-degree: 1%
 
 ---
