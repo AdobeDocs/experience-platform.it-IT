@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science Workspace;popular topics
+keywords: ' Experience Platform;guida allo sviluppo;SDK;Data Access SDK;Data Science Workspace;argomenti più comuni'
 solution: Experience Platform
-title: Guida all'SDK per la piattaforma
+title: Authoring dei modelli con l’SDK della piattaforma Adobe Experience Platform
 topic: SDK authoring
 description: Questa esercitazione fornisce informazioni sulla conversione di data_access_sdk_python nel nuovo Python platform_sdk sia in Python che in R.
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '495'
 ht-degree: 5%
 
 ---
 
 
-# [!DNL Platform] Guida all&#39;SDK
+# Authoring dei modelli con l&#39;SDK Adobe Experience Platform [!DNL Platform]
 
-Questa esercitazione fornisce informazioni sulla conversione `data_access_sdk_python` al nuovo Python `platform_sdk` sia in Python che in R. Questa esercitazione fornisce informazioni sulle operazioni seguenti:
+Questa esercitazione fornisce informazioni sulla conversione di `data_access_sdk_python` nel nuovo Python `platform_sdk` sia in Python che in R. Questa esercitazione fornisce informazioni sulle operazioni seguenti:
 
 - [Autenticazione build](#build-authentication)
 - [Lettura di base dei dati](#basic-reading-of-data)
@@ -23,7 +23,7 @@ Questa esercitazione fornisce informazioni sulla conversione `data_access_sdk_py
 
 ## Autenticazione build {#build-authentication}
 
-L’autenticazione è necessaria per effettuare chiamate a [!DNL Adobe Experience Platform]e comprende chiave API, ID organizzazione IMS, token utente e token di servizio.
+L&#39;autenticazione è necessaria per effettuare chiamate a [!DNL Adobe Experience Platform] ed è composta da chiave API, ID organizzazione IMS, token utente e token di servizio.
 
 ### Python
 
@@ -70,7 +70,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## Lettura di base dei dati {#basic-reading-of-data}
 
-Con la nuova [!DNL Platform] SDK, la dimensione massima di lettura è 32 GB, con un tempo massimo di lettura di 10 minuti.
+Con il nuovo SDK [!DNL Platform], la dimensione massima di lettura è 32 GB, con un tempo massimo di lettura di 10 minuti.
 
 Se il tempo di lettura è troppo lungo, è possibile provare a utilizzare una delle seguenti opzioni di filtro:
 
@@ -81,7 +81,7 @@ Se il tempo di lettura è troppo lungo, è possibile provare a utilizzare una de
 
 >[!NOTE]
 >
->L’organizzazione IMS è impostata all’interno dell’ `client_context`.
+>L&#39;organizzazione IMS è impostata all&#39;interno di `client_context`.
 
 ### Python
 
@@ -147,7 +147,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-Il nuovo [!DNL Platform] SDK supporta le seguenti operazioni:
+Il nuovo SDK [!DNL Platform] supporta le seguenti operazioni:
 
 | Funzionamento | Funzione |
 | --------- | -------- |
@@ -156,7 +156,7 @@ Il nuovo [!DNL Platform] SDK supporta le seguenti operazioni:
 | Maggiore o uguale a (`>=`) | `ge()` |
 | Minore di (`<`) | `lt()` |
 | Minore o uguale a (`<=`) | `le()` |
-| And (`&`) | `And()` |
+| E (`&`) | `And()` |
 | Oppure (`|`) | `Or()` |
 
 ## Filtra per colonne selezionate {#filter-by-selected-columns}
@@ -197,7 +197,7 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 >[!NOTE]
 >
->L’organizzazione IMS è impostata all’interno dell’ `client_context`.
+>L&#39;organizzazione IMS è impostata all&#39;interno di `client_context`.
 
 Per scrivere dati in Python e R, utilizzare uno dei seguenti esempi:
 
@@ -222,4 +222,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Passaggi successivi
 
-Una volta configurato il `platform_sdk` data loader, i dati vengono preparati e quindi suddivisi nei `train` set di dati e `val` nei set di dati. Per saperne di più sulla preparazione dei dati e sulla progettazione di funzionalità, consulta la sezione sulla preparazione [dei dati e la progettazione](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) di funzionalità nell’esercitazione per la creazione di una ricetta con [!DNL JupyterLab] notebook.
+Una volta configurato il caricatore di dati `platform_sdk`, i dati vengono preparati e quindi suddivisi nei set di dati `train` e `val`. Per informazioni sulla preparazione dei dati e sulla progettazione di funzionalità, consultare la sezione relativa alla [preparazione dei dati e alla progettazione di funzionalità](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) nell&#39;esercitazione per la creazione di una ricetta con [!DNL JupyterLab] notebook.
