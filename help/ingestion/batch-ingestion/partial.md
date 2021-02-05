@@ -1,11 +1,11 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;ingestione batch;ingestione parziale;assimilazione parziale;errore di recupero;errore di recupero;errore di recupero;inserimento batch parziale;assimilazione parziale;parziale;inserimento;inserimento;'
 solution: Experience Platform
-title: Panoramica sull’assimilazione parziale dei batch
+title: Panoramica sull'inserimento batch parziale
 topic: overview
 description: Questo documento fornisce un’esercitazione per la gestione dell’assimilazione parziale dei batch.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 0%
