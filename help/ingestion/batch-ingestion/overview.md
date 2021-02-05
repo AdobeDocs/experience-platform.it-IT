@@ -3,19 +3,19 @@ keywords: ' Experience Platform;home;argomenti popolari;inserimento dati;batch;a
 solution: Experience Platform
 title: Panoramica sull'inserimento batch
 topic: overview
-description: L'API Batch Ingestion consente di trasferire i dati in Adobe Experience Platform come file batch. I dati che si desidera acquisire possono essere i dati di profilo provenienti da un file semplice in un sistema CRM (ad esempio un file Parquet), o i dati conformi a uno schema noto nel Registro di sistema di Experience Data Model (XDM).
+description: L'API Adobe Experience Platform Data Ingestion consente di trasferire i dati nella piattaforma come file batch. I dati che si desidera acquisire possono essere i dati di profilo provenienti da un file semplice in un sistema CRM (ad esempio un file Parquet), o i dati conformi a uno schema noto nel Registro di sistema di Experience Data Model (XDM).
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1222'
 ht-degree: 2%
 
 ---
 
 
-# [!DNL Batch Ingestion]panoramica
+# Panoramica sull’assimilazione dei batch
 
-L&#39;API [!DNL Batch Ingestion] consente di trasferire i dati in Adobe Experience Platform come file batch. I dati che si desidera acquisire possono essere i dati di profilo provenienti da un file semplice in un sistema CRM (ad esempio un file Parquet), o i dati conformi a uno schema noto nel Registro di sistema [!DNL Experience Data Model] (XDM).
+L&#39;API Adobe Experience Platform Data Ingestion consente di trasferire i dati nella piattaforma come file batch. I dati che si desidera acquisire possono essere i dati di profilo provenienti da un file semplice in un sistema CRM (ad esempio un file Parquet), o i dati conformi a uno schema noto nel Registro di sistema [!DNL Experience Data Model] (XDM).
 
 Il riferimento API [Data Ingestion](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) fornisce informazioni aggiuntive su queste chiamate API.
 
