@@ -1,28 +1,28 @@
 ---
-keywords: Experience Platform;Score a model;Data Science Workspace;popular topics;sensei machine learning api
+keywords: Experience Platform ;Punteggio di un modello;Data Science Workspace;argomenti più comuni;sensei macchina apprendimento api
 solution: Experience Platform
-title: Punteggio di un modello (API)
+title: Punteggio di un modello utilizzando l'API di apprendimento di Sensei Machine
 topic: tutorial
 type: Tutorial
 description: Questa esercitazione vi mostrerà come sfruttare le API di apprendimento di Sensei Machine per creare un esperimento e un'esecuzione di un esperimento.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '549'
 ht-degree: 1%
 
 ---
 
 
-# Punteggio di un modello (API)
+# Punteggio di un modello con il simbolo [!DNL Sensei Machine Learning API]
 
-Questa esercitazione vi mostrerà come sfruttare le API per creare un esperimento e un&#39;esecuzione di prova. Per un elenco dettagliato della documentazione API, consultate [questo documento](https://www.adobe.io/apis/cloudplatform/dataservices/api-reference.html).
+Questa esercitazione vi mostrerà come sfruttare le API per creare un esperimento e un&#39;esecuzione di prova. Per un elenco dettagliato della documentazione API, fare riferimento a [questo documento](https://www.adobe.io/apis/cloudplatform/dataservices/api-reference.html).
 
 ## Creazione di un esperimento pianificato per il punteggio
 
-Come per gli esperimenti pianificati per la formazione, la creazione di un esperimento pianificato per il punteggio viene anche effettuata includendo una `template` sezione al parametro body. Inoltre, il `name` campo sotto `tasks` nel corpo è impostato come `score`.
+Come per gli esperimenti pianificati per la formazione, la creazione di un esperimento pianificato per il punteggio viene eseguita anche includendo una sezione `template` nel parametro body. Inoltre, il campo `name` in `tasks` nel corpo è impostato come `score`.
 
-Di seguito è riportato un esempio di creazione di un esperimento che verrà eseguito ogni 20 minuti a partire da `startTime` e che verrà eseguito fino a `endTime`.
+Di seguito è riportato un esempio di creazione di un esperimento che verrà eseguito ogni 20 minuti a partire da `startTime` e verrà eseguito fino a `endTime`.
 
 **Richiesta**
 
@@ -110,7 +110,7 @@ Di seguito è riportata la risposta dopo la creazione dell&#39;esperimento piani
 
 ### Creazione di un&#39;esecuzione di un esperimento per il punteggio
 
-Ora, con il modello addestrato, possiamo creare una Prova Sperimentale per il punteggio. Il valore del `modelId` parametro è il `id` parametro restituito nella richiesta del modello di GET precedente.
+Ora, con il modello addestrato, possiamo creare una Prova Sperimentale per il punteggio. Il valore del parametro `modelId` è il parametro `id` restituito nella richiesta del modello di GET precedente.
 
 **Richiesta**
 
@@ -170,7 +170,7 @@ La risposta della creazione di Experience Run è mostrata di seguito:
 }
 ```
 
-`{EXPERIMENT_ID}`:  L&#39;ID corrispondente all&#39;esperimento su cui si trova l&#39;esecuzione.\
+`{EXPERIMENT_ID}`: L&#39;ID corrispondente all&#39;esperimento su cui si trova l&#39;esecuzione.\
 `{EXPERIMENT_RUN_ID}`: L’ID corrispondente all’esecuzione dell’esperimento appena creata.
 
 
@@ -187,7 +187,7 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-`{EXPERIMENT_ID}`:  L&#39;ID corrispondente all&#39;esperimento su cui si trova l&#39;esecuzione.\
+`{EXPERIMENT_ID}`: L&#39;ID corrispondente all&#39;esperimento su cui si trova l&#39;esecuzione.\
 `{ACCESS_TOKEN}`: Il valore del token del portatore specificato dopo l&#39;autenticazione.\
 `{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra unica integrazione con Adobe Experience Platform.
 
@@ -215,7 +215,7 @@ Poiché per un esperimento specifico sono presenti più esecuzioni sperimentali,
 ```
 
 `{EXPERIMENT_RUN_ID}`: L’ID corrispondente all’esecuzione dell’esperimento.\
-`{EXPERIMENT_ID}`:  L&#39;ID corrispondente all&#39;esperimento su cui si trova l&#39;esecuzione.
+`{EXPERIMENT_ID}`: L&#39;ID corrispondente all&#39;esperimento su cui si trova l&#39;esecuzione.
 
 ### Arrestare ed eliminare un esperimento pianificato
 
@@ -230,7 +230,7 @@ curl -X DELETE \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-`{EXPERIMENT_ID}`:  L’ID corrispondente all’esperimento.\
+`{EXPERIMENT_ID}`: L’ID corrispondente all’esperimento.\
 `{ACCESS_TOKEN}`: Il valore del token del portatore specificato dopo l&#39;autenticazione.\
 `{IMS_ORG}`: Credenziali organizzazione IMS trovate nella vostra unica integrazione con Adobe Experience Platform.
 
