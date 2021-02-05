@@ -1,21 +1,17 @@
 ---
 keywords: estensione di analisi dei supporti;analisi dei supporti;estensione audio e video
-title: Estensione Adobe Media Analytics for Audio and Video
-seo-title: Estensione Adobe Media Analytics for Audio and Video
+title: ' Adobe Media Analytics per la destinazione di estensione audio e video'
 description: L' Adobe Media Analytics per l'estensione Audio e Video è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L' Adobe Media Analytics for Video extension è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '561'
-ht-degree: 8%
+source-wordcount: '524'
+ht-degree: 6%
 
 ---
 
 
 # Estensione Adobe Media Analytics for Audio and Video {#adobe-analytics-for-video-extension}
-
-## Panoramica {#overview}
 
  Adobe Media Analytics for Audio and Video è un componente aggiuntivo all&#39;offerta Analytics di base che fornisce ai client misurazioni affidabili per video, audio e annunci pubblicitari.
 
