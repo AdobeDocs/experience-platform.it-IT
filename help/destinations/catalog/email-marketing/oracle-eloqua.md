@@ -1,21 +1,17 @@
 ---
 keywords: email;Email;e-mail;destinazioni e-mail; oracle eloqua; oracle
-title: ' destinazione Oracle Eloqua'
-seo-title: ' destinazione Oracle Eloqua'
+title: ' destinazione di connessione Eloqua Oracle'
 description: ' Oracle Eloqua è un software come piattaforma di servizio (SaaS) per l''automazione del marketing offerto da  Oracle che mira ad aiutare gli esperti di marketing e le organizzazioni B2B a gestire campagne di marketing e la generazione di lead di vendita.'
-seo-description: ' Oracle Eloqua è un software come piattaforma di servizio (SaaS) per l''automazione del marketing offerto da  Oracle che mira ad aiutare gli esperti di marketing e le organizzazioni B2B a gestire campagne di marketing e la generazione di lead di vendita.'
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '483'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Oracle Eloqua]
-
-## Panoramica
+# [!DNL Oracle Eloqua] connection
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/marketingcloud/products/marketing-automation/) è un software come piattaforma di servizio (SaaS) per l&#39;automazione del marketing offerto da  [!DNL Oracle] che mira ad aiutare gli esperti di marketing e le organizzazioni B2B a gestire le campagne di marketing e la generazione di lead di vendita.
 
