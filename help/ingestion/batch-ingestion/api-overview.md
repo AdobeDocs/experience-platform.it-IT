@@ -1,11 +1,11 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;ingestione batch;inserimento batch;inserimento;guida sviluppatore;api guide;upload;ingest Parquet;ingest json;'
 solution: Experience Platform
-title: Guida per lo sviluppatore di batch Ingestion
+title: Guida API per l'inserimento batch
 topic: developer guide
 description: Questo documento fornisce una panoramica completa dell’utilizzo delle API di assimilazione batch.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '2698'
 ht-degree: 5%
@@ -13,7 +13,7 @@ ht-degree: 5%
 ---
 
 
-# Guida per sviluppatori per l&#39;inserimento di batch
+# Guida API per l&#39;assimilazione batch
 
 Questo documento fornisce una panoramica completa sull&#39;utilizzo delle [API di caricamento batch](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
 
