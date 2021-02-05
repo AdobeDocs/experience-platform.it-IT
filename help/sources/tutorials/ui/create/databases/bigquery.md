@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;home;popular topics;Google Big Query;google big query;GBQ;gbq
+keywords: ' Experience Platform;home;argomenti popolari;Google Big Query;google big query;GBQ;gbq'
 solution: Experience Platform
-title: Creare un connettore di origine Google Big Query nell'interfaccia utente
+title: Creare una connessione Google Big Query Source nell'interfaccia utente
 topic: overview
 type: Tutorial
-description: Questa esercitazione fornisce i passaggi per la creazione di un connettore sorgente Google Big Query (di seguito "GBQ") tramite l'interfaccia utente della piattaforma.
+description: Scoprite come creare una connessione di origine Google Big Query utilizzando l'interfaccia utente di Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 74fbf388cf645c89f9f6d00a5ae2e59ba94041b9
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '496'
 ht-degree: 1%
 
 ---
 
 
-# Creare un connettore [!DNL Google Big Query] sorgente nell&#39;interfaccia utente
+# Creare una connessione di origine [!DNL Google Big Query] nell&#39;interfaccia utente
 
 >[!NOTE]
 >
