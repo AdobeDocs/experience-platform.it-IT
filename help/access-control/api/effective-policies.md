@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;effective policies;access control api
+keywords: ' Experience Platform;home;argomenti popolari;politiche efficaci;accedere all''API di controllo'
 solution: Experience Platform
-title: Visualizza criteri efficaci
+title: Endpoint API criteri effettivi
 topic: developer guide
 description: Il controllo degli accessi in Adobe Experience Platform consente di gestire ruoli e autorizzazioni per diverse funzionalità della piattaforma utilizzando l'Adobe Admin Console. Questo documento funge da guida per la visualizzazione dei criteri effettivi tramite l'API di controllo degli accessi per Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 8967a820ab19bceb2be69f37e3399ed99f0b8e72
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '317'
 ht-degree: 1%
 
 ---
 
 
-# Visualizza criteri efficaci
+# Endpoint criteri effettivi
 
-Per visualizzare i criteri effettivi per l&#39;utente corrente, effettuate una richiesta di POST all&#39; `/acl/effective-policies` endpoint nell&#39; [!DNL Access Control] API. Le autorizzazioni e i tipi di risorse che si desidera recuperare devono essere forniti nel payload della richiesta sotto forma di array. Questo è dimostrato nella chiamata API di esempio riportata di seguito.
+Per visualizzare i criteri effettivi per l&#39;utente corrente, effettua una richiesta di POST all&#39;endpoint `/acl/effective-policies` nell&#39;API [!DNL Access Control]. Le autorizzazioni e i tipi di risorse che si desidera recuperare devono essere forniti nel payload della richiesta sotto forma di array. Questo è dimostrato nella chiamata API di esempio riportata di seguito.
 
 **Formato API**
 
@@ -25,7 +25,7 @@ POST /acl/effective-policies
 
 **Richiesta**
 
-Le seguenti richieste recuperano informazioni sull&#39;autorizzazione &quot;[!UICONTROL Manage Datasets]&quot; e l&#39;accesso al tipo di risorsa &quot;[!UICONTROL schemas]&quot; per l&#39;utente corrente.
+Le seguenti richieste recuperano informazioni sull&#39;autorizzazione &quot;[!UICONTROL Manage Datasets]&quot; e sull&#39;accesso al tipo di risorsa &quot;[!UICONTROL schemas]&quot; per l&#39;utente corrente.
 
 ```shell
 curl -X POST \
@@ -43,7 +43,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Per un elenco completo delle autorizzazioni e dei tipi di risorse che possono essere forniti nell&#39;array di payload, consultate la sezione appendice sulle autorizzazioni e i tipi [di risorse](#accepted-permissions-and-resource-types)accettati.
+>Per un elenco completo delle autorizzazioni e dei tipi di risorse che possono essere forniti nell&#39;array di payload, vedere la sezione dell&#39;appendice sulle [autorizzazioni e sui tipi di risorse accettati](#accepted-permissions-and-resource-types).
 
 **Risposta**
 
@@ -66,15 +66,15 @@ Una risposta corretta restituisce informazioni sulle autorizzazioni e i tipi di 
 
 ## Passaggi successivi
 
-In questo documento è stato illustrato come effettuare chiamate all&#39; [!DNL Access Control] API per restituire informazioni sulle autorizzazioni attive e sui criteri correlati per i tipi di risorse. Per ulteriori informazioni sul controllo degli accessi per [!DNL Experience Platform], consultate la panoramica [sul controllo](../home.md)degli accessi.
+In questo documento è stato illustrato come effettuare chiamate all&#39;API [!DNL Access Control] per restituire informazioni sulle autorizzazioni attive e sui criteri correlati per i tipi di risorse. Per ulteriori informazioni sul controllo degli accessi per [!DNL Experience Platform], vedere la [panoramica sul controllo degli accessi](../home.md).
 
 ## Appendice
 
-Questa sezione fornisce informazioni supplementari per l&#39;utilizzo dell&#39; [!DNL Access Control] API.
+Questa sezione fornisce informazioni supplementari per l&#39;utilizzo dell&#39;API [!DNL Access Control].
 
 ### Autorizzazioni accettate e tipi di risorse
 
-Di seguito è riportato un elenco di autorizzazioni e tipi di risorse che potete includere nel payload di una richiesta di POST all&#39; `/acl/active-permissions` endpoint.
+Di seguito è riportato un elenco di autorizzazioni e tipi di risorse che potete includere nel payload di una richiesta di POST all&#39;endpoint `/acl/active-permissions`.
 
 **Autorizzazioni**
 
