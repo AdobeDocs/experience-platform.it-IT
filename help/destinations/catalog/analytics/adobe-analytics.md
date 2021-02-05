@@ -1,21 +1,17 @@
 ---
 keywords: Estensione Analytics;estensione Analytics;analisi di destinazione
-title: Estensione Adobe Analytics
-seo-title: Estensione Adobe Analytics
+title: Destinazione estensione  Adobe Analytics
 description: L'estensione Adobe Analytics  è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L'estensione Adobe Analytics  è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '514'
-ht-degree: 10%
+source-wordcount: '485'
+ht-degree: 9%
 
 ---
 
 
 # Estensione Adobe Analytics {#adobe-analytics-extension}
-
-## Panoramica {#overview}
 
 Adobe Analytics è una soluzione leader di settore che ti consente di comprendere i tuoi clienti come persone e gestire la tua attività grazie alle informazioni sul cliente.
 
