@@ -1,10 +1,10 @@
 ---
 keywords: ' Experience Platform;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API;consenso;preferenze;preferenze;preferenze;privacyOptOuts;marketingPreferences;optOutType;baseOfProcessing;consenso;Consent'
-title: Tipi di dati Consensi e Preferenze
+title: Consensi e tipi di dati delle preferenze
 description: Il tipo di dati Privacy/Marketing Preferences (Consent) è destinato a supportare la raccolta di autorizzazioni e preferenze del cliente generate dalle piattaforme di gestione del consenso (CMP) e da altre fonti dalle operazioni sui dati.
 topic: guide
 translation-type: tm+mt
-source-git-commit: caebdcd48e03bd8b91da624532569b55d8696fb4
+source-git-commit: 10ccccf72ff7a2fd726066332b9771dff1929af6
 workflow-type: tm+mt
 source-wordcount: '2040'
 ht-degree: 1%
