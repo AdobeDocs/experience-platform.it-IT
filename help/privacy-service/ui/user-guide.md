@@ -1,19 +1,19 @@
 ---
 keywords: ' Experience Platform;casa;argomenti più comuni;esportazione;esportazione'
 solution: Experience Platform
-title: Guida utente Privacy Service
+title: Gestione dei processi di privacy nell’interfaccia Privacy Service
 topic: UI guide
 description: Scoprite come utilizzare l'interfaccia utente Privacy Service per coordinare e monitorare le richieste di privacy nelle varie applicazioni  Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 238a9200e4b43d41335bed0efab079780b252717
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: '1061'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Privacy Service] Guida utente
+# Gestire i processi di privacy nell’interfaccia Privacy Service
 
 Questo documento fornisce i passaggi per creare e gestire le richieste di privacy utilizzando l&#39;interfaccia utente [!DNL Privacy Service].
 
