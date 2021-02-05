@@ -1,11 +1,11 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;modello dati;esportazione;importazione;rpc;'
 solution: Experience Platform
-title: Guida all'endpoint Esporta/Importa
+title: Esporta/Importa endpoint API
 description: Gli endpoint /export e /import nell'API del Registro di sistema dello schema consentono di condividere risorse XDM tra organizzazioni IMS e sandbox.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: dfa91e387b6fcd0d528a523a06d2516bc8befc20
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 1%
