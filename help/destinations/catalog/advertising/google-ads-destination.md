@@ -1,21 +1,17 @@
 ---
 keywords: Google ads;google ads;google adwords;Google AdWords;Google Adwords;Google Adwords
-title: Google AdsDestination
-seo-title: Destinazione annunci Google
+title: Destinazione connessione annunci Google
 description: Google Ads, precedentemente noto come Google AdWords, è un servizio pubblicitario online che consente alle aziende di pagare per clic pubblicità tra ricerche basate su testo, display grafici, video YouTube e display mobili in-app.
-seo-description: Google Ads, precedentemente noto come Google AdWords, è un servizio pubblicitario online che consente alle aziende di pagare per clic pubblicità tra ricerche basate su testo, display grafici, video YouTube e display mobili in-app.
 translation-type: tm+mt
-source-git-commit: bb2fc2658d32c59b476dd9d526eb8bc2f055a1af
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '643'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Google Ads] Destinazione
-
-## Panoramica
+# [!DNL Google Ads] connection
 
 [!DNL Google Ads], precedentemente noto come  [!DNL Google AdWords], è un servizio pubblicitario online che consente alle aziende di effettuare pubblicità pay-per-click tra ricerche basate su testo, display grafici,  [!DNL YouTube] video e display mobili in-app.
 
