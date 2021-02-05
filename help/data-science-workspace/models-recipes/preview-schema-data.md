@@ -1,41 +1,41 @@
 ---
-keywords: Experience Platform;preview schema data;Data Science Workspace;popular topics
+keywords: Experience Platform ;anteprima dati schema;Data Science Workspace;argomenti più comuni
 solution: Experience Platform
-title: Anteprima di schemi e set di dati
+title: Anteprima dello schema di vendita al dettaglio e del set di dati
 topic: tutorial
 type: Tutorial
 description: Nel seguente documento sono illustrati gli schemi di anteprima e i set di dati in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
 
 
-# Anteprima di schemi e set di dati
+# Anteprima dello schema di vendita al dettaglio e del dataset
 
-Al completamento dello script di avvio da [Create the retail sales schema and dataset](./create-retails-sales-dataset.md) tutorial (Creare lo schema di vendita al dettaglio e l&#39;esercitazione sui dataset). Gli schemi di output e i set di dati possono essere visualizzati su [!DNL Experience Platform]. Per visualizzare gli schemi e i set di dati, procedere come segue:
+Al completamento corretto dello script di avvio dall&#39;esercitazione [Crea lo schema di vendita al dettaglio e il dataset](./create-retails-sales-dataset.md). Gli schemi di output e i set di dati possono essere visualizzati su [!DNL Experience Platform]. Per visualizzare gli schemi e i set di dati, procedere come segue:
 
-1. Fate clic sul **[!UICONTROL Schemas]** collegamento situato nella colonna di navigazione a sinistra e individuate lo schema di input creato dallo script di avvio. Il nome dello schema corrisponderà a quello definito `config.yaml` dal passaggio precedente. Visualizzare i dettagli dello schema e la relativa composizione facendo clic su di esso.
+1. Fate clic sul collegamento **[!UICONTROL Schemas]** situato nella colonna di navigazione a sinistra e individuate lo schema di input creato dallo script di avvio. Il nome dello schema corrisponderà a quello definito in `config.yaml` dal passaggio precedente. Visualizzare i dettagli dello schema e la relativa composizione facendo clic su di esso.
 
    ![](../images/models-recipes/access-data/schema_overview.png)
 
-2. Fate clic sul **[!UICONTROL Datasets]** collegamento situato nella colonna di navigazione a sinistra e aprite il set di dati di input creato facendo clic sul nome dell&#39;elenco. Il nome del set di dati corrisponderà a quanto definito `config.yaml` nel passaggio precedente.
+2. Fate clic sul collegamento **[!UICONTROL Datasets]** situato nella colonna di navigazione a sinistra e aprite il set di dati di input creato facendo clic sul nome dell&#39;elenco. Il nome del set di dati corrisponderà a quanto definito in `config.yaml` dal passaggio precedente.
 
    ![](../images/models-recipes/access-data/dataset_overview.png)
 
-3. Fare clic **[!UICONTROL Preview Dataset]** in alto a destra per visualizzare un sottoinsieme del set di dati.
+3. Fare clic su **[!UICONTROL Preview Dataset]** in alto a destra per visualizzare in anteprima un sottoinsieme del set di dati.
 
    ![](../images/models-recipes/access-data/preview_dataset.png)
 
 ## Passaggi successivi
 
-I dati di esempio Vendite al dettaglio sono stati inviati correttamente [!DNL Experience Platform] utilizzando lo script di avvio fornito.
+I dati di esempio Vendite al dettaglio sono stati inviati correttamente in [!DNL Experience Platform] utilizzando lo script di avvio fornito.
 
 Per continuare a utilizzare i dati acquisiti:
-- [Analizzare i dati utilizzando i notebook Jupyter](../jupyterlab/analyze-your-data.md)
-   - Utilizza i notebook Jupyter [!DNL Data Science Workspace] per accedere, esplorare, visualizzare e comprendere i tuoi dati.
+- [Analizzare i dati utilizzando i blocchi appunti Jupyter](../jupyterlab/analyze-your-data.md)
+   - Utilizzare i notebook Jupyter in [!DNL Data Science Workspace] per accedere, esplorare, visualizzare e comprendere i dati.
 - [Creare pacchetti di file sorgente in una casella](./package-source-files-recipe.md)
-   - Segui questa esercitazione per scoprire come inserire un modello personalizzato [!DNL Data Science Workspace] creando pacchetti di file sorgente in un file Recipe importabile.
+   - Segui questa esercitazione per apprendere come portare il tuo modello in [!DNL Data Science Workspace] creando pacchetti di file sorgente in un file Recipe importabile.
