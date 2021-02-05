@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;data ingestion notifications;notifications;subscribe events;data ingestion status events;status events;subscribe;status notifications;
+keywords: ' Experience Platform;home;argomenti popolari;notifiche di assimilazione dei dati;notifiche;eventi di sottoscrizione;eventi di stato di inserimento dei dati;eventi di stato;sottoscrizione;notifiche di stato;'
 solution: Experience Platform
-title: Iscrizione agli eventi di assimilazione dei dati
+title: Notifiche di inserimento dati
 topic: overview
 description: Per assistere nel monitoraggio del processo di assimilazione, Adobe Experience Platform consente di sottoscrivere un set di eventi pubblicati in ogni fase del processo, notificando all’utente lo stato dei dati acquisiti e ogni possibile errore.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '672'
 ht-degree: 1%
 
 ---
@@ -15,25 +15,25 @@ ht-degree: 1%
 
 # Notifiche di assimilazione dei dati
 
-Il processo di assimilazione dei dati in Adobe Experience Platform consiste di più passaggi. Una volta identificati i file di dati in cui è necessario eseguire l&#39;assimilazione, [!DNL Platform]il processo di assimilazione inizia e ogni passaggio si verifica consecutivamente fino a quando i dati non vengono correttamente acquisiti o non hanno esito negativo. Il processo di inserimento può essere avviato utilizzando l&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) Adobe Experience Platform Data Ingestion o l&#39;interfaccia [!DNL Experience Platform] utente.
+Il processo di assimilazione dei dati in Adobe Experience Platform consiste di più passaggi. Una volta identificati i file di dati da assimilare in [!DNL Platform], il processo di assimilazione inizia e ogni passaggio si verifica consecutivamente fino a quando i dati non vengono correttamente assimilati o non si verificano errori. Il processo di inserimento può essere avviato utilizzando l&#39;API di [inserimento dati Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) o l&#39;interfaccia utente [!DNL Experience Platform].
 
-I dati caricati in [!DNL Platform] devono passare attraverso più passaggi per raggiungere la destinazione, l&#39;archivio [!DNL Data Lake] o l&#39;archivio [!DNL Real-time Customer Profile] dati. Ogni passaggio prevede l&#39;elaborazione dei dati, la convalida dei dati e la memorizzazione dei dati prima di passare al passaggio successivo. A seconda della quantità di dati che vengono acquisiti, questo può diventare un processo che richiede molto tempo ed è sempre possibile che il processo non riesca a causa di errori di convalida, semantica o elaborazione. In caso di errore, i problemi relativi ai dati devono essere risolti e l&#39;intero processo di assimilazione deve essere riavviato utilizzando i file di dati corretti.
+I dati caricati in [!DNL Platform] devono passare attraverso più passaggi per raggiungere la destinazione, l&#39;archivio di dati [!DNL Data Lake] o [!DNL Real-time Customer Profile]. Ogni passaggio prevede l&#39;elaborazione dei dati, la convalida dei dati e la memorizzazione dei dati prima di passare al passaggio successivo. A seconda della quantità di dati che vengono acquisiti, questo può diventare un processo che richiede molto tempo ed è sempre possibile che il processo non riesca a causa di errori di convalida, semantica o elaborazione. In caso di errore, i problemi relativi ai dati devono essere risolti e l&#39;intero processo di assimilazione deve essere riavviato utilizzando i file di dati corretti.
 
-Per assistere nel monitoraggio del processo di assimilazione, [!DNL Experience Platform] consente di sottoscrivere un set di eventi pubblicati in ogni fase del processo, notificando all’utente lo stato dei dati acquisiti e ogni possibile errore.
+Per facilitare il monitoraggio del processo di assimilazione, [!DNL Experience Platform] consente di sottoscrivere un set di eventi pubblicati da ogni fase del processo, notificando all&#39;utente lo stato dei dati acquisiti e ogni possibile errore.
 
 ## Registrazione di un webhook per le notifiche di assimilazione dei dati
 
-Per ricevere le notifiche di assimilazione dei dati, è necessario utilizzare [console](https://www.adobe.com/go/devs_console_ui) Sviluppatore di Adobe per registrare un webhook nell&#39;integrazione del Experience Platform .
+Per ricevere le notifiche di assimilazione dei dati, è necessario utilizzare [ Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) per registrare un webhook nell&#39;integrazione del Experience Platform .
 
-Seguite l’esercitazione sulle [notifiche [!DNL Adobe I/O Event] di iscrizione](../../observability/notifications/subscribe.md) per i passaggi dettagliati su come ottenere questo risultato.
+Seguite l&#39;esercitazione su [iscrivetevi a [!DNL Adobe I/O Event] notifiche](../../observability/notifications/subscribe.md) per istruzioni dettagliate su come eseguire questa operazione.
 
 >[!IMPORTANT]
 >
->Durante il processo di iscrizione, accertatevi di selezionare **[!UICONTROL Platform notifications]** il fornitore dell&#39;evento e di selezionare la sottoscrizione dell&#39; **[!UICONTROL Data ingestion notification]** evento quando richiesto.
+>Durante il processo di iscrizione, accertatevi di selezionare **[!UICONTROL Platform notifications]** come provider di eventi, quindi selezionate la sottoscrizione all&#39;evento **[!UICONTROL Data ingestion notification]** quando richiesto.
 
 ## Ricevere notifiche di assimilazione dei dati
 
-Dopo aver registrato correttamente il webhook e l&#39;acquisizione di nuovi dati, potete iniziare a ricevere le notifiche sull&#39;evento. Questi eventi possono essere visualizzati utilizzando il webhook stesso, oppure selezionando la **[!UICONTROL Debug Tracing]** scheda nella panoramica di registrazione dell&#39;evento del progetto in  Adobe Developer Console.
+Dopo aver registrato correttamente il webhook e l&#39;acquisizione di nuovi dati, potete iniziare a ricevere le notifiche sull&#39;evento. Questi eventi possono essere visualizzati utilizzando il webhook stesso oppure selezionando la scheda **[!UICONTROL Debug Tracing]** nella panoramica di registrazione dell&#39;evento del progetto nella  Adobe Developer Console.
 
 Il seguente JSON è un esempio di payload di notifica che verrebbe inviato al webhook nel caso di un evento di caricamento batch non riuscito:
 
@@ -67,13 +67,13 @@ Il seguente JSON è un esempio di payload di notifica che verrebbe inviato al we
 | `event_id` | Un ID univoco generato dal sistema per la notifica. |
 | `event` | Un oggetto che contiene i dettagli dell&#39;evento che ha attivato la notifica. |
 | `event.xdm:datasetId` | L&#39;ID del set di dati a cui si applica l&#39;evento di assimilazione. |
-| `event.xdm:eventCode` | Un codice di stato che indica il tipo di evento attivato per il set di dati. Cfr. l&#39; [appendice](#event-codes) per i valori specifici e le relative definizioni. |
+| `event.xdm:eventCode` | Un codice di stato che indica il tipo di evento attivato per il set di dati. Vedere l&#39; [appendice](#event-codes) per i valori specifici e le relative definizioni. |
 
-Per visualizzare lo schema completo delle notifiche degli eventi, fare riferimento all&#39;archivio [GitHub](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json)pubblico.
+Per visualizzare lo schema completo delle notifiche dell&#39;evento, fare riferimento al [repository GitHub pubblico](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json).
 
 ## Passaggi successivi
 
-Una volta registrate [!DNL Platform] le notifiche al progetto, potete visualizzare gli eventi ricevuti dal [!UICONTROL Project overview]. Per istruzioni dettagliate su come [tracciare gli eventi, consultate la guida  Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) .
+Dopo aver registrato [!DNL Platform] notifiche al progetto, puoi visualizzare gli eventi ricevuti dalla [!UICONTROL Project overview]. Per istruzioni dettagliate su come tracciare gli eventi, consultate la guida [traccia  eventi Adobe I/O](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md).
 
 ## Appendice
 
@@ -85,10 +85,10 @@ Nella tabella seguente sono elencate le notifiche di stato dell’assimilazione 
 
 | Codice evento | Servizio piattaforma | Stato | Descrizione di un evento |
 | --- | ---------------- | ------ | ----------------- |
-| `ing_load_success` | [!DNL Data Ingestion] | success | È stato eseguito l&#39;assimilazione di un batch in un set di dati all&#39;interno dell&#39; [!DNL Data Lake]. |
-| `ing_load_failure` | [!DNL Data Ingestion] | fallimento | Impossibile assimilare un batch in un set di dati all&#39;interno dell&#39; [!DNL Data Lake]. |
-| `ps_load_success` | [!DNL Real-time Customer Profile] | success | Acquisizione batch riuscita nell&#39;archivio [!DNL Profile] dati. |
-| `ps_load_failure` | [!DNL Real-time Customer Profile] | fallimento | Impossibile assimilare un batch nell&#39;archivio [!DNL Profile] dati. |
+| `ing_load_success` | [!DNL Data Ingestion] | success | L&#39;acquisizione di un batch in un dataset all&#39;interno di [!DNL Data Lake] è riuscita. |
+| `ing_load_failure` | [!DNL Data Ingestion] | fallimento | Impossibile assimilare un batch in un dataset all&#39;interno di [!DNL Data Lake]. |
+| `ps_load_success` | [!DNL Real-time Customer Profile] | success | L&#39;acquisizione di un batch nell&#39;archivio dati [!DNL Profile] è riuscita. |
+| `ps_load_failure` | [!DNL Real-time Customer Profile] | fallimento | Impossibile assimilare un batch nell&#39;archivio dati [!DNL Profile]. |
 | `ig_load_success` | [!DNL Identity Service] | success | Caricamento dei dati nel grafico dell&#39;identità completato. |
 | `ig_load_failure` | [!DNL Identity Service] | fallimento | Impossibile caricare i dati nel grafico dell&#39;identità. |
 
