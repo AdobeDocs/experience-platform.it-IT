@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;profile;segment;segments;segmentation;user interface;UI;customization;segment dashboard;dashboard
-title: Pannello segmento
+keywords: ' Experience Platform;profilo;segmento;segmenti;segmentazione;interfaccia utente;interfaccia utente;personalizzazione;dashboard del segmento;dashboard'
+title: Guida all’interfaccia utente del dashboard di segmenti
 description: 'Questa guida illustra il dashboard dei segmenti disponibile nell’interfaccia utente di Adobe Experience Platform. '
 topic: guide
 type: Documentation
 translation-type: tm+mt
-source-git-commit: 63758450276d47e7e0eddeb047779222cb80a3e2
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '700'
+source-wordcount: '715'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 L’interfaccia utente di Adobe Experience Platform (interfaccia utente) fornisce un dashboard attraverso il quale è possibile visualizzare informazioni importanti sui segmenti, come acquisito durante un’istantanea giornaliera. Questa guida descrive come accedere e utilizzare il dashboard dei segmenti nell’interfaccia utente e fornisce ulteriori informazioni sulle visualizzazioni visualizzate nel dashboard.
 
-Per una panoramica di tutte le funzionalità di Adobe Experience Platform Segmentation Service presenti nell&#39;interfaccia utente della piattaforma, visita la guida [all&#39;interfaccia utente del servizio di](overview.md)segmentazione.
+Per una panoramica di tutte le funzioni del servizio di segmentazione Adobe Experience Platform nell&#39;interfaccia utente della piattaforma, visitare la [Guida dell&#39;interfaccia utente del servizio di segmentazione](overview.md).
 
 ## Segmentazione dei dati del dashboard
 
@@ -35,23 +35,23 @@ I dati attributo nello snapshot mostrano esattamente come appaiono nel momento i
 
 ## Esplorazione del dashboard dei segmenti
 
-Per passare al dashboard dei segmenti nell&#39;interfaccia utente della piattaforma, seleziona **[!UICONTROL Segments]** nella barra a sinistra, quindi seleziona la **[!UICONTROL Overview]** scheda per visualizzare il dashboard.
+Per passare al dashboard dei segmenti nell&#39;interfaccia utente della piattaforma, seleziona **[!UICONTROL Segments]** nella barra a sinistra, quindi seleziona la scheda **[!UICONTROL Overview]** per visualizzare il dashboard.
 
 ![](../images/ui/segment-dashboard/dashboard-overview.png)
 
 ### Selezionare un segmento
 
-Per selezionare un segmento da visualizzare nel dashboard, scegliete il selettore della finestra di dialogo per la casella di **[!UICONTROL Select segment]** testo.
+Per selezionare un segmento da visualizzare nel dashboard, scegliere il selettore della finestra di dialogo per la casella di testo **[!UICONTROL Select segment]**.
 
 ![](../images/ui/segment-dashboard/select-segment.png)
 
 >[!NOTE]
 >
->Se un segmento è già selezionato, utilizzate prima `X` per rimuovere il segmento, quindi viene visualizzato il selettore della finestra di dialogo.
+>Se un segmento è già selezionato, utilizzate il simbolo `X` per rimuovere prima il segmento, quindi viene visualizzato il selettore della finestra di dialogo.
 >
 >![](../images/ui/segment-dashboard/remove-segment.png)
 
-Viene aperta la **[!UICONTROL Select segment]** finestra di dialogo che consente di scegliere il segmento da visualizzare. Dopo aver scelto il segmento desiderato, utilizzate **[!UICONTROL Select]** per tornare al dashboard.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Select segment]**, che consente di scegliere il segmento da visualizzare. Dopo aver scelto il segmento desiderato, utilizzate **[!UICONTROL Select]** per tornare al dashboard.
 
 ![](../images/ui/segment-dashboard/select-segment-dialog.png)
 
@@ -59,7 +59,7 @@ Viene aperta la **[!UICONTROL Select segment]** finestra di dialogo che consente
 
 Dopo aver selezionato un segmento, la casella di testo del criterio di unione si popolerà automaticamente con il criterio di unione relativo a tale segmento.
 
-Per ulteriori informazioni sulla creazione di segmenti in  Experience Platform, consulta la guida [all’interfaccia utente di Generatore di](segment-builder.md)segmenti. Per ulteriori informazioni sui criteri di unione, si prega di iniziare leggendo la panoramica [Profilo cliente in tempo](../../profile/home.md)reale.
+Per ulteriori informazioni sulla creazione di segmenti in  Experience Platform, visitare la [Guida all&#39;interfaccia utente di Generatore di segmenti](segment-builder.md). Per ulteriori informazioni sui criteri di unione, consultare la [Panoramica sul profilo cliente in tempo reale](../../profile/home.md).
 
 ![](../images/ui/segment-dashboard/merge-policy.png)
 
@@ -78,17 +78,17 @@ Il dashboard dei segmenti è composto da widget, che sono metriche di sola lettu
 
 ### [!UICONTROL Segment size] {#segment-size}
 
-Il **[!UICONTROL Segment size]** widget visualizza il numero totale di profili uniti all’interno del segmento selezionato al momento dell’istantanea. Questo numero è il risultato dell&#39;applicazione del criterio di unione dei segmenti ai dati del profilo per unire insieme i frammenti del profilo e creare un unico profilo per ogni individuo del segmento.
+Il widget **[!UICONTROL Segment size]** visualizza il numero totale di profili uniti all&#39;interno del segmento selezionato al momento dell&#39;acquisizione dello snapshot. Questo numero è il risultato dell&#39;applicazione del criterio di unione dei segmenti ai dati del profilo per unire insieme i frammenti del profilo e creare un unico profilo per ogni individuo del segmento.
 
-Per ulteriori informazioni sui frammenti e i profili uniti, consulta la panoramica [Profilo cliente](../home.md)in tempo reale.
+Per ulteriori informazioni sui frammenti e i profili uniti, consultare la [Panoramica sul profilo cliente in tempo reale](../home.md).
 
 ![](../images/ui/segment-dashboard/segment-size.png)
 
 ### [!UICONTROL Profiles by namespace] {#profiles-by-namespace}
 
-Il **[!UICONTROL Profiles by namespace]** widget visualizza la suddivisione degli spazi dei nomi in tutti i profili uniti nel segmento selezionato. Il numero totale di profili per [!UICONTROL ID namespace] (in altre parole, aggiungendo insieme i valori mostrati per ogni spazio nomi) in genere sarà superiore al numero totale di profili nel segmento, perché a un profilo potrebbero essere associati più spazi di nomi. Ad esempio, se un cliente interagisce con il tuo marchio su più di un canale, è possibile associare più spazi dei nomi a quel singolo cliente.
+Il widget **[!UICONTROL Profiles by namespace]** visualizza la suddivisione degli spazi dei nomi in tutti i profili uniti nel segmento selezionato. Il numero totale di profili per [!UICONTROL ID namespace] (in altre parole, aggiungendo insieme i valori mostrati per ogni spazio dei nomi) in genere sarà superiore al numero totale di profili nel segmento, perché a un profilo potrebbero essere associati più spazi dei nomi. Ad esempio, se un cliente interagisce con il tuo marchio su più di un canale, è possibile associare più spazi dei nomi a quel singolo cliente.
 
-Per ulteriori informazioni sugli spazi dei nomi di identità, consulta la documentazione [del servizio](../../identity-service/home.md)Adobe Experience Platform Identity.
+Per ulteriori informazioni sugli spazi dei nomi di identità, consultare la [documentazione del servizio Adobe Experience Platform Identity](../../identity-service/home.md).
 
 ![](../images/ui/segment-dashboard/profiles-by-namespace.png)
 
@@ -101,4 +101,4 @@ L&#39;interfaccia utente della piattaforma offre dashboard aggiuntivi per visual
 
 ## Passaggi successivi
 
-Seguendo questo documento, ora dovresti essere in grado di individuare il dashboard dei segmenti e selezionare un segmento da visualizzare. È inoltre necessario comprendere le metriche visualizzate nei widget disponibili. Per ulteriori informazioni sull’utilizzo dei segmenti nell’interfaccia utente del Experience Platform , consulta la guida [all’interfaccia utente del servizio](overview.md)di segmentazione.
+Seguendo questo documento, ora dovresti essere in grado di individuare il dashboard dei segmenti e selezionare un segmento da visualizzare. È inoltre necessario comprendere le metriche visualizzate nei widget disponibili. Per ulteriori informazioni sull&#39;utilizzo dei segmenti nell&#39;interfaccia utente del Experience Platform , fare riferimento alla [Guida all&#39;interfaccia utente del servizio di segmentazione](overview.md).
