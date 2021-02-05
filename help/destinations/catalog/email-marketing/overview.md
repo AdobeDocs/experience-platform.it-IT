@@ -1,20 +1,18 @@
 ---
 keywords: e-mail;E-mail;e-mail;destinazioni e-mail
-title: Destinazioni marketing e-mail
-seo-title: Destinazioni marketing e-mail
+title: Panoramica delle destinazioni di marketing e-mail
 type: Tutorial
 description: I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio per l’invio di campagne e-mail promozionali.
-seo-description: I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio per l’invio di campagne e-mail promozionali.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '776'
 ht-degree: 1%
 
 ---
 
 
-# Destinazioni di marketing e-mail {#email-marketing-destinations}
+# Panoramica delle destinazioni di marketing e-mail {#email-marketing-destinations}
 
 I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio l&#39;invio di campagne e-mail promozionali. Adobe Experience Platform si integra con ESP consentendo di attivare i segmenti nelle destinazioni di e-mail marketing.
 
