@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;models;sensei machine learning api
+keywords: ', Experience Platform;guida allo sviluppo;endpoint;Data Science Workspace;argomenti comuni;modelli;sensei macchina imparare api'
 solution: Experience Platform
-title: Modelli
+title: Endpoint API Models
 topic: Developer guide
 description: Un modello è un'istanza di una ricetta di machine learning che viene formata utilizzando dati storici e configurazioni per risolvere un caso d'uso aziendale.
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: '864'
 ht-degree: 4%
 
 ---
 
 
-# Modelli
+# Endpoint modelli
 
 Un modello è un&#39;istanza di una ricetta di machine learning che viene formata utilizzando dati storici e configurazioni per risolvere un caso d&#39;uso aziendale.
 
 ## Recupera un elenco di Modelli
 
-È possibile recuperare un elenco di dettagli modello appartenenti a tutti i modelli eseguendo una singola richiesta di GET a /models. Per impostazione predefinita, questo elenco si ordina dal modello meno recente creato e limita i risultati a 25. Potete scegliere di filtrare i risultati specificando alcuni parametri di query. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri delle [query per il recupero](./appendix.md#query)delle risorse.
+È possibile recuperare un elenco di dettagli modello appartenenti a tutti i modelli eseguendo una singola richiesta di GET a /models. Per impostazione predefinita, questo elenco si ordina dal modello meno recente creato e limita i risultati a 25. Potete scegliere di filtrare i risultati specificando alcuni parametri di query. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri di query [per il recupero delle risorse](./appendix.md#query).
 
 **Formato API**
 
@@ -40,7 +40,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un payload contenente i dettagli dei modelli, incluso ciascun identificatore univoco (`id`) dei modelli.
+Una risposta corretta restituisce un payload contenente i dettagli dei modelli, incluso ciascun identificatore univoco dei modelli (`id`).
 
 ```json
 {
@@ -95,13 +95,13 @@ Una risposta corretta restituisce un payload contenente i dettagli dei modelli, 
 | Proprietà | Descrizione |
 | --- | --- |
 | `id` | L&#39;ID corrispondente al modello. |
-| `modelArtifactUri` | URI che indica la posizione di memorizzazione del modello. L&#39;URI termina con il `name` valore del modello. |
+| `modelArtifactUri` | URI che indica la posizione di memorizzazione del modello. L&#39;URI termina con il valore `name` del modello. |
 | `experimentId` | Un ID di esperimento valido. |
 | `experimentRunId` | Un ID di esecuzione dell&#39;esperimento valido. |
 
 ## Recuperare un modello specifico
 
-È possibile recuperare un elenco di dettagli modello appartenenti a un particolare modello eseguendo una singola richiesta di GET e fornendo un ID modello valido nel percorso della richiesta. Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri delle [query per il recupero](./appendix.md#query)delle risorse.
+È possibile recuperare un elenco di dettagli modello appartenenti a un particolare modello eseguendo una singola richiesta di GET e fornendo un ID modello valido nel percorso della richiesta. Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri di query [per il recupero delle risorse](./appendix.md#query).
 
 **Formato API**
 
@@ -159,13 +159,13 @@ Una risposta corretta restituisce un payload contenente i dettagli del modello, 
 | Proprietà | Descrizione |
 | --- | --- |
 | `id` | L&#39;ID corrispondente al modello. |
-| `modelArtifactUri` | URI che indica la posizione di memorizzazione del modello. L&#39;URI termina con il `name` valore del modello. |
+| `modelArtifactUri` | URI che indica la posizione di memorizzazione del modello. L&#39;URI termina con il valore `name` del modello. |
 | `experimentId` | Un ID di esperimento valido. |
 | `experimentRunId` | Un ID di esecuzione dell&#39;esperimento valido. |
 
-## Registrazione di un modello pregenerato {#register-a-model}
+## Registrazione di un modello pre-generato {#register-a-model}
 
-È possibile registrare un modello pregenerato effettuando una richiesta di POST all&#39; `/models` endpoint. Per registrare il modello, è necessario includere nel corpo della richiesta i valori del `modelArtifact` file e `model` delle proprietà.
+È possibile registrare un modello pregenerato effettuando una richiesta di POST all&#39;endpoint `/models`. Per registrare il modello, i valori delle proprietà `modelArtifact` e `model` devono essere inclusi nel corpo della richiesta.
 
 **Formato API**
 
@@ -175,7 +175,7 @@ POST /models
 
 **Richiesta**
 
-L&#39;POST seguente contiene i valori `modelArtifact` di file e `model` proprietà necessari. Per ulteriori informazioni su questi valori, vedere la tabella seguente.
+Il seguente POST contiene i valori di proprietà `modelArtifact` e `model` necessari. Per ulteriori informazioni su questi valori, vedere la tabella seguente.
 
 ```shell
 curl -X POST \
@@ -215,7 +215,7 @@ Una risposta corretta restituisce un payload contenente i dettagli del modello, 
 | Proprietà | Descrizione |
 | --- | --- |
 | `id` | L&#39;ID corrispondente al modello. |
-| `modelArtifactUri` | URI che indica la posizione di memorizzazione del modello. L&#39;URI termina con il `id` valore del modello. |
+| `modelArtifactUri` | URI che indica la posizione di memorizzazione del modello. L&#39;URI termina con il valore `id` del modello. |
 
 ## Aggiornare un modello in base all&#39;ID
 
@@ -319,7 +319,7 @@ Una risposta corretta restituisce un payload contenente uno stato di 200 che con
 
 ## Creare una nuova transcodifica per un modello {#create-transcoded-model}
 
-La transcodifica è la conversione diretta da digitale a digitale di una codifica a un’altra. È possibile creare una nuova transcodifica per un modello fornendo l&#39;output `{MODEL_ID}` e l&#39; `targetFormat` output desiderato.
+La transcodifica è la conversione diretta da digitale a digitale di una codifica a un’altra. È possibile creare una nuova transcodifica per un modello fornendo il `{MODEL_ID}` e un `targetFormat` in cui si desidera inserire il nuovo output.
 
 **Formato API**
 
@@ -356,7 +356,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituisce un payload contenente un oggetto JSON con le informazioni della transcodifica. Ciò include l&#39;identificatore univoco (`id`) di transcodifica utilizzato per [recuperare uno specifico modello](#retrieve-transcoded-model)transcodificato.
+Una risposta corretta restituisce un payload contenente un oggetto JSON con le informazioni della transcodifica. Questo include l&#39;identificatore univoco di transcodifica (`id`) utilizzato in [recupero di un modello transcodificato specifico](#retrieve-transcoded-model).
 
 ```json
 {
@@ -372,7 +372,7 @@ Una risposta corretta restituisce un payload contenente un oggetto JSON con le i
 }
 ```
 
-## Recuperare un elenco di transcodifiche per un modello {#retrieve-transcoded-model-list}
+## Recupera un elenco di transcodifiche per un modello {#retrieve-transcoded-model-list}
 
 È possibile recuperare un elenco delle transcodifiche eseguite su un modello eseguendo una richiesta di GET con il `{MODEL_ID}`.
 
@@ -434,7 +434,7 @@ Una risposta corretta restituisce un payload contenente un oggetto json con un e
 
 ## Recuperare un modello transcodificato specifico {#retrieve-transcoded-model}
 
-È possibile recuperare uno specifico modello transcodificato eseguendo una richiesta di GET con il proprio `{MODEL_ID}` e l&#39;ID di un modello transcodificato.
+È possibile recuperare uno specifico modello transcodificato eseguendo una richiesta di GET con il `{MODEL_ID}` e l&#39;ID di un modello transcodificato.
 
 **Formato API**
 
