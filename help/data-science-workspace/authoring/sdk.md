@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;developer guide;SDK;Model authoring;Data Science Workspace;popular topics;testing
+keywords: ' Experience Platform;guida per gli sviluppatori;SDK;creazione di modelli;Area di lavoro di analisi dati;argomenti comuni;test'
 solution: Experience Platform
-title: Guida per gli sviluppatori di SDK
+title: Model Authoring SDK
 topic: Overview
 description: L’SDK per l’authoring dei modelli consente di sviluppare ricette di apprendimento automatico personalizzate e pipeline di funzionalità utilizzabili in Adobe Experience Platform Data Science Workspace, fornendo modelli implementabili in PySpark e Spark (Scala).
 translation-type: tm+mt
-source-git-commit: e1b8bc378c2f72862c0c28e44dceb8a35e44a29e
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '977'
 ht-degree: 1%
 
 ---
 
 
-# Guida per gli sviluppatori di SDK
+# Model Authoring SDK
 
-L’SDK per l’authoring dei modelli consente di sviluppare ricette di machine learning personalizzate e pipeline di funzionalità utilizzabili in [!DNL Adobe Experience Platform] Data Science Workspace, fornendo modelli implementabili in [!DNL PySpark] e [!DNL Spark (Scala)].
+L’SDK per l’authoring dei modelli consente di sviluppare ricette di apprendimento automatico personalizzate e pipeline delle funzioni che possono essere utilizzate in [!DNL Adobe Experience Platform] Data Science Workspace, fornendo modelli implementabili in [!DNL PySpark] e [!DNL Spark (Scala)].
 
 Questo documento fornisce informazioni sulle varie classi rilevate nell’SDK per l’authoring dei modelli.
 
 ## DataLoader {#dataloader}
 
-La classe DataLoader racchiude qualsiasi elemento correlato al recupero, al filtraggio e alla restituzione di dati di input non elaborati. Esempi di dati di input includono quelli per la formazione, il punteggio o la progettazione di funzionalità. I caricatori di dati estendono la classe astratta `DataLoader` e devono sostituire il metodo abstract `load`.
+La classe DataLoader racchiude qualsiasi elemento correlato al recupero, al filtraggio e alla restituzione di dati di input non elaborati. Esempi di dati di input includono quelli per la formazione, il punteggio o la progettazione di funzionalità. I caricatori di dati estendono la classe astratta `DataLoader` e devono sostituire il metodo astratto `load`.
 
 **PySpark**
 
@@ -78,9 +78,9 @@ Nella tabella seguente sono descritti i metodi astratti di una classe [!DNL Spar
     </tbody>
 </table>
 
-### Carica dati da un [!DNL Platform] set di dati {#load-data-from-a-platform-dataset}
+### Carica dati da un set di dati [!DNL Platform] {#load-data-from-a-platform-dataset}
 
-L&#39;esempio seguente recupera [!DNL Platform] i dati per ID e restituisce un DataFrame, dove l&#39;ID del set di dati (`datasetId`) è una proprietà definita nel file di configurazione.
+L&#39;esempio seguente recupera i dati [!DNL Platform] per ID e restituisce un DataFrame, dove l&#39;ID dataset (`datasetId`) è una proprietà definita nel file di configurazione.
 
 **PySpark**
 
@@ -195,7 +195,7 @@ class MyDataLoader extends DataLoader {
 
 ## DataSaver {#datasaver}
 
-La classe DataSaver racchiude qualsiasi elemento correlato alla memorizzazione dei dati di output, inclusi quelli derivanti dal punteggio o dalla progettazione di funzionalità. I salvatori di dati estendono la classe astratta `DataSaver` e devono ignorare il metodo abstract `save`.
+La classe DataSaver racchiude qualsiasi elemento correlato alla memorizzazione dei dati di output, inclusi quelli derivanti dal punteggio o dalla progettazione di funzionalità. I salvatori di dati estendono la classe astratta `DataSaver` e devono sostituire il metodo astratto `save`.
 
 **PySpark**
 
@@ -252,14 +252,14 @@ Nella tabella seguente sono descritti i metodi astratti di una classe [!DNL Spar
     </tbody>
 </table>
 
-### Salva dati in un [!DNL Platform] dataset {#save-data-to-a-platform-dataset}
+### Salva i dati in un set di dati [!DNL Platform] {#save-data-to-a-platform-dataset}
 
-Per memorizzare i dati in un [!DNL Platform] dataset, le proprietà devono essere fornite o definite nel file di configurazione:
+Per memorizzare i dati in un dataset [!DNL Platform], le proprietà devono essere fornite o definite nel file di configurazione:
 
-- Un ID [!DNL Platform] dataset valido a cui memorizzare i dati
+- Un ID di set di dati [!DNL Platform] valido a cui memorizzare i dati
 - L&#39;ID tenant appartenente alla tua organizzazione
 
-Gli esempi seguenti memorizzano i dati (`prediction`) in un [!DNL Platform] dataset, dove l&#39;ID dataset (`datasetId`) e l&#39;ID tenant (`tenantId`) sono proprietà definite all&#39;interno del file di configurazione.
+Gli esempi seguenti memorizzano i dati (`prediction`) in un dataset [!DNL Platform], dove l&#39;ID dataset (`datasetId`) e l&#39;ID tenant (`tenantId`) sono proprietà definite all&#39;interno del file di configurazione.
 
 
 **PySpark**
@@ -395,7 +395,7 @@ class ScoringDataSaver extends DataSaver {
 
 ## DatasetTransformer {#datasettransformer}
 
-La classe DatasetTransformer modifica e trasforma la struttura di un dataset. Il componente [!DNL Sensei Machine Learning Runtime] non deve essere definito e viene implementato in base ai requisiti dell&#39;utente.
+La classe DatasetTransformer modifica e trasforma la struttura di un dataset. Il componente [!DNL Sensei Machine Learning Runtime] non richiede la definizione di questo componente ed è implementato in base ai requisiti dell&#39;utente.
 
 Per quanto riguarda una tubazione di feature, i trasformatori di set di dati possono essere utilizzati in modo collaborativo con una fabbrica di tubazioni di feature per preparare i dati per la progettazione di feature.
 
@@ -429,7 +429,7 @@ Nella tabella seguente sono descritti i metodi di classe di una classe di trasfo
 
 **Spark (Scala)**
 
-Nella tabella seguente sono descritti i metodi astratti di una classe di trasformatore di [!DNL Spark] set di dati:
+Nella tabella seguente sono descritti i metodi astratti di una classe di trasformatore di set di dati [!DNL Spark]:
 
 <table>
     <thead>
@@ -500,7 +500,7 @@ Nella tabella seguente sono descritti i metodi di classe di una FeaturePipelineF
 
 **Spark (Scala)**
 
-Nella tabella seguente sono descritti i metodi di classe di una featurePipelineFactory: [!DNL Spark]
+Nella tabella seguente sono descritti i metodi di classe di una [!DNL Spark] FeaturePipelineFactory:
 
 <table>
     <thead>
@@ -645,7 +645,7 @@ Nella tabella seguente sono descritti i metodi di classe di una [!DNL Spark] Pip
     </tbody>
 </table>
 
-## MLEvalue {#mlevaluator}
+## MLEperatore {#mlevaluator}
 
 La classe MLEvalue fornisce metodi per definire le metriche di valutazione e determinare i set di dati di formazione e test.
 
