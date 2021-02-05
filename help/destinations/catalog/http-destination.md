@@ -1,25 +1,21 @@
 ---
 keywords: streaming;
-title: La destinazione HTTP è una destinazione Adobe Experience Platform che consente di inviare i dati del profilo a endpoint HTTP di terze parti.
-seo-title: La destinazione HTTP è una destinazione Adobe Experience Platform che consente di inviare i dati del profilo a endpoint HTTP di terze parti.
-description: La destinazione HTTP è una destinazione Adobe Experience Platform che consente di inviare i dati del profilo a endpoint HTTP di terze parti.
-seo-description: La destinazione HTTP è una destinazione Adobe Experience Platform che consente di inviare i dati del profilo a endpoint HTTP di terze parti.
+title: Destinazione connessione HTTP
+description: La destinazione HTTP in Adobe Experience Platform consente di inviare i dati del profilo a endpoint HTTP di terze parti.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '456'
 ht-degree: 2%
 
 ---
 
 
-# (Alfa) [!DNL HTTP] Destinazione
+# (Alfa) [!DNL HTTP] connessione
 
 >[!IMPORTANT]
 >
 >La destinazione [!DNL HTTP] in Platform è attualmente in alpha. La documentazione e le funzionalità sono soggette a modifiche.
-
-## Panoramica {#overview}
 
 La destinazione [!DNL HTTP] è una destinazione di streaming [!DNL Adobe Experience Platform] che consente di inviare i dati del profilo a endpoint [!DNL HTTP] di terze parti.
 
