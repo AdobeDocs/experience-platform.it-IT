@@ -1,21 +1,17 @@
 ---
 keywords: Parse. ly;pars;Parser;parse.ly;Parse.ly
-title: Estensione Parse.ly Analytics
-seo-title: Estensione Parse.ly Analytics
+title: Destinazione estensione Parse.ly Analytics
 description: L'estensione Parse.ly Analytics è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L'estensione Parse.ly Analytics è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '488'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Parse.ly Analytics] Estensione {#parsely-analytics-extension}
-
-## Panoramica {#overview}
 
 [!DNL Parse.ly Analytics] aiuta più di 2.500 aziende a utilizzare i dati per comprendere il pubblico online. Questa estensione installa uno snippet JavaScript che tiene traccia del modo in cui i visitatori interagiscono con il contenuto del sito.
 
