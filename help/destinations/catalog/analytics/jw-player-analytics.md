@@ -1,25 +1,21 @@
 ---
 keywords: JW player;jw player;JW Player;jw extension;JW extension;JW extension
-title: Estensione JW Player Analytics (BETA)
-seo-title: Estensione JW Player Analytics (BETA)
-description: L'estensione JW Player Analytics (BETA) è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L'estensione JW Player Analytics (BETA) è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
+title: Destinazione estensione JW Player Analytics (Beta)
+description: L’estensione JW Player Analytics (Beta) è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '531'
 ht-degree: 3%
 
 ---
 
 
-# [!DNL JW Player Analytics] (BETA) estensione  {#jw-player-analytics-extension}
-
-## Panoramica {#overview}
+# [!DNL JW Player Analytics] Estensione (Beta)  {#jw-player-analytics-extension}
 
 Questa estensione installa la scheda [!DNL JW Player] per collegare gli eventi [!DNL JW Player]  Adobe Video Analytics. Sfruttate la potenza  analisi video dei Adobi per acquisire informazioni dettagliate sulle abitudini di visualizzazione dei video dei clienti.
 
-[!DNL JW Player Analytics] (BETA) è un&#39;estensione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina dell&#39;estensione in [ Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html).
+[!DNL JW Player Analytics] (Beta) è un&#39;estensione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina dell&#39;estensione in [ Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html).
 
 Questa destinazione è un&#39;estensione Adobe Experience Platform Launch . Per ulteriori informazioni sul funzionamento delle estensioni Platform Launch in Platform, vedere [ panoramica delle estensioni Adobe Experience Platform Launch](../launch-extensions/overview.md).
 
@@ -33,7 +29,7 @@ Per utilizzare questa estensione, è necessario accedere a  Adobe Experience Pla
 
 ## Installare l&#39;estensione {#install-extension}
 
-Per installare l&#39;estensione [!DNL JW Player Analytics] (BETA):
+Per installare l&#39;estensione [!DNL JW Player Analytics] (Beta):
 
 Nell&#39;interfaccia [Piattaforma](http://platform.adobe.com/), passare a **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
@@ -45,7 +41,7 @@ Nella finestra **[!UICONTROL Select available Platform Launch property]**, selez
 
 Il flusso di lavoro consente di passare al lancio della piattaforma per completare l’installazione.
 
-Per informazioni sulle opzioni di configurazione dell&#39;estensione, consultate la pagina dell&#39;estensione [JW Player Analytics (BETA)](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html) in  Adobe Exchange.
+Per informazioni sulle opzioni di configurazione dell&#39;estensione, vedere la pagina dell&#39;estensione [JW Player Analytics (Beta)](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html) in  Adobe Exchange.
 
 È inoltre possibile installare l&#39;estensione direttamente nell&#39; [ interfaccia Adobe Experience Platform Launch](https://launch.adobe.com/). Consultate [Aggiungere una nuova estensione](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension) nella documentazione di Launch piattaforma.
 
