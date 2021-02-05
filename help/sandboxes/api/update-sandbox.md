@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;update sandbox
+keywords: ' Experience Platform;home;argomenti popolari;aggiornare la sandbox'
 solution: Experience Platform
-title: Aggiornare una sandbox
+title: Aggiornare una sandbox nell'API
 topic: developer guide
 description: Potete aggiornare uno o più campi in una sandbox effettuando una richiesta di PATCH che includa il nome della sandbox nel percorso della richiesta e la proprietà da aggiornare nel payload della richiesta.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '133'
 ht-degree: 3%
 
 ---
 
 
-# Aggiornare una sandbox
+# Aggiornare una sandbox nell&#39;API
 
-Potete aggiornare uno o più campi in una sandbox effettuando una richiesta di PATCH che includa la sandbox `name` nel percorso della richiesta e la proprietà da aggiornare nel payload della richiesta.
+Potete aggiornare uno o più campi in una sandbox effettuando una richiesta di PATCH che includa la `name` sandbox nel percorso della richiesta e la proprietà da aggiornare nel payload della richiesta.
 
 >[!NOTE]
 >
->Al momento è possibile aggiornare solo la `title` proprietà di una sandbox.
+>Al momento è possibile aggiornare solo la proprietà `title` di una sandbox.
 
 **Formato API**
 
@@ -29,11 +29,11 @@ PATCH /sandboxes/{SANDBOX_NAME}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{SANDBOX_NAME}` | La `name` proprietà della sandbox da aggiornare. |
+| `{SANDBOX_NAME}` | La proprietà `name` della sandbox da aggiornare. |
 
 **Richiesta**
 
-La richiesta seguente aggiorna la `title` proprietà della sandbox denominata &quot;dev-2&quot;.
+La richiesta seguente aggiorna la proprietà `title` della sandbox denominata &quot;dev-2&quot;.
 
 ```shell
 curl -X PATCH \
