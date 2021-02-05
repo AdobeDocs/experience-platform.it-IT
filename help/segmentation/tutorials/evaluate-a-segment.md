@@ -1,14 +1,14 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;valutazione del segmento;Segmentazione del servizio;segmentazione;segmentazione;valutazione di un segmento;risultati del segmento di accesso;valutazione e segmento di accesso;'
 solution: Experience Platform
-title: Valutazione di un segmento
+title: Valutazione e accesso dei risultati dei segmenti
 topic: tutorial
 type: Tutorial
-description: Questo documento fornisce un'esercitazione per valutare i segmenti e accedere ai risultati dei segmenti utilizzando l'API Segmentazione.
+description: Segui questa esercitazione per scoprire come valutare i segmenti e accedere ai risultati dei segmenti utilizzando l'API di Adobe Experience Platform Segmentation Service.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1567'
 ht-degree: 0%
 
 ---
