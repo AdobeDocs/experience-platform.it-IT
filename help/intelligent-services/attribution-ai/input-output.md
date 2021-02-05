@@ -1,31 +1,31 @@
 ---
-keywords: Experience Platform;getting started;Attribution ai;popular topics;Attribution ai input;Attribution ai output;
+keywords: ' Experience Platform;iniziare;Attribution ai;popolari argomenti;Attribution ai input;Attribution ai output;'
 solution: Experience Platform, Intelligent Services
-title: ' ingresso e uscita Attribution AI'
+title: 'Ingresso e uscita nelle Attribution AI '
 topic: Input and Output data for Attribution AI
 description: Il seguente documento illustra i diversi input e output utilizzati nelle Attribution AI .
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '2068'
+source-wordcount: '2084'
 ht-degree: 3%
 
 ---
 
 
-# [!DNL Attribution AI] ingresso e uscita
+# Ingresso e uscita in [!DNL Attribution AI]
 
-Il documento seguente illustra i diversi input e output utilizzati in [!DNL Attribution AI].
+Il seguente documento illustra i diversi input e output utilizzati in [!DNL Attribution AI].
 
 ## [!DNL Attribution AI] dati di input
 
-[!DNL Attribution AI] utilizza [!DNL Consumer Experience Event] i dati per calcolare i punteggi algoritmici. Per ulteriori informazioni su [!DNL Consumer Experience Event], consulta la sezione [Preparare i dati per l&#39;utilizzo nella documentazione](../data-preparation.md)dei servizi intelligenti.
+[!DNL Attribution AI] utilizza  [!DNL Consumer Experience Event] i dati per calcolare i punteggi algoritmici. Per ulteriori informazioni su [!DNL Consumer Experience Event], fare riferimento alla sezione [Preparare i dati per l&#39;utilizzo nella documentazione dei servizi intelligenti](../data-preparation.md).
 
 Non tutte le colonne dello schema [!DNL Consumer Experience Event] (CEE) sono obbligatorie per  Attribution AI.
 
 >[!NOTE]
 >
-> Le seguenti 9 colonne sono obbligatorie. Le colonne aggiuntive sono facoltative ma consigliate/necessarie se si desidera utilizzare gli stessi dati per altre soluzioni di Adobe  come [!DNL Customer AI] e [!DNL Journey AI].
+> Le seguenti 9 colonne sono obbligatorie, le colonne aggiuntive sono facoltative ma consigliate/necessarie se si desidera utilizzare gli stessi dati per altre soluzioni di  Adobe come [!DNL Customer AI] e [!DNL Journey AI].
 
 | Colonne obbligatorie | Necessario per |
 | --- | --- |
@@ -60,7 +60,7 @@ Le colonne riportate di seguito non sono obbligatorie, ma si consiglia di includ
 
  Attribution AI richiede dati storici come input per la formazione dei modelli. La durata dei dati richiesti è determinata principalmente da due fattori chiave: finestra di formazione e finestra di look-back. L&#39;input con finestre di formazione più brevi è più sensibile alle tendenze recenti, mentre le finestre di formazione più lunghe consentono di produrre modelli più stabili e precisi. È importante modellare l&#39;obiettivo con dati storici che meglio rappresentano gli obiettivi aziendali.
 
-La configurazione della finestra di [formazione](./user-guide.md#training-window) filtra gli eventi di conversione impostati per essere inclusi nella formazione del modello in base al tempo di occorrenza. Attualmente, la finestra di formazione minima è di 1 quarto (90 giorni). La finestra [di](./user-guide.md#lookback-window) lookback fornisce un intervallo di tempo che indica quanti giorni prima dei punti di contatto dell&#39;evento di conversione relativi a questo evento di conversione devono essere inclusi. Questi due concetti insieme determinano la quantità di dati di input (misurati in giorni) necessaria per un&#39;applicazione.
+La [configurazione della finestra di formazione](./user-guide.md#training-window) filtra gli eventi di conversione impostati per essere inclusi nella formazione del modello in base al tempo di occorrenza. Attualmente, la finestra di formazione minima è di 1 quarto (90 giorni). La [finestra di lookback](./user-guide.md#lookback-window) fornisce un intervallo di tempo che indica quanti giorni prima dei punti di contatto dell&#39;evento di conversione relativi a questo evento di conversione devono essere inclusi. Questi due concetti insieme determinano la quantità di dati di input (misurati in giorni) necessaria per un&#39;applicazione.
 
 Per impostazione predefinita,  Attribution AI definisce la finestra di formazione come l’ultima finestra di 2 trimestri (6 mesi) e la finestra di lookback come 56 giorni. In altre parole, il modello terrà conto di tutti gli eventi di conversione definiti che si sono verificati negli ultimi 2 trimestri e cercherà tutti i punti di contatto che si sono verificati entro 56 giorni prima degli eventi di conversione associati.
 
@@ -87,9 +87,9 @@ Esempio :
 
 ![](./images/input-output/schema_output.gif)
 
-### Punteggi granulari grezzi {#raw-granular-scores}
+### Punti granulari grezzi {#raw-granular-scores}
 
- Attribution AI produce i punteggi di attribuzione nel livello più granulare possibile, in modo che sia possibile suddividere i punteggi e renderli più dadi per qualsiasi colonna di punteggio. Per visualizzare questi punteggi nell’interfaccia utente, leggi la sezione sulla [visualizzazione dei percorsi](#raw-score-path)di valutazione non elaborati. Per scaricare i punteggi utilizzando l&#39;API, visita i punteggi di [download nel documento  Attribution AI](./download-scores.md) .
+ Attribution AI produce i punteggi di attribuzione nel livello più granulare possibile, in modo che sia possibile suddividere i punteggi e renderli più dadi per qualsiasi colonna di punteggio. Per visualizzare questi punteggi nell&#39;interfaccia utente, leggi la sezione relativa alla [visualizzazione di percorsi di valutazione non elaborati](#raw-score-path). Per scaricare i punteggi utilizzando l&#39;API, visita il documento [download dei punteggi in  Attribution AI](./download-scores.md).
 
 >[!NOTE]
 >
@@ -105,7 +105,7 @@ Nella tabella seguente sono delineati i campi dello schema nell’esempio di out
 | timestamp (DateTime) | False | L&#39;ora in cui si è verificato un evento o un&#39;osservazione di conversione. <br> **Esempio:** 2020-06-09T00:01:51.000Z |
 | identityMap (Map) | True | identityMap dell&#39;utente simile al formato CEE XDM. |
 | eventType (String) | True | Il tipo di evento principale per il record della serie temporale. <br> **Esempio:** &quot;Order&quot;, &quot;Purchase&quot;, &quot;Visit&quot; |
-| eventMergeId (String) | True | Un ID per correlare o unire più [!DNL Experience Events] elementi che sono sostanzialmente lo stesso evento o che devono essere uniti. Questo è destinato a essere compilato dal produttore di dati prima dell’assimilazione. <br> **Esempio:** 575525617716-0-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
+| eventMergeId (String) | True | Un ID per correlare o unire più [!DNL Experience Events] che sono essenzialmente lo stesso evento o che devono essere uniti. Questo è destinato a essere compilato dal produttore di dati prima dell’assimilazione. <br> **Esempio:** 575525617716-0-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
 | _id (String) | False | Un identificatore univoco per l&#39;evento delle serie temporali. <br> **Esempio:** 4461-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
 | _tenantId (oggetto) | False | Il contenitore di oggetti di livello superiore che viene associato all&#39;ID tentante. <br> **Esempio:** _atsdsnrmsv2 |
 | your_schema_name (Object) | False | Riga di punteggio con evento di conversione tutti gli eventi dei punti di contatto ad esso associati e i relativi metadati. <br> **Esempio:**  Punteggi Attribution AI - Nome Modello__2020 |
@@ -116,7 +116,7 @@ Nella tabella seguente sono delineati i campi dello schema nell’esempio di out
 | eventSource (String) | True | L&#39;origine dell&#39;evento effettivo. <br> **Esempio:**  Adobe.com |
 | eventType (String) | True | Il tipo di evento principale per il record della serie temporale. <br> **Esempio:** Ordine |
 | geo (String) | True | Posizione geografica in cui è stata consegnata la conversione `placeContext.geo.countryCode`. <br> **Esempio:** US |
-| priceTotal (Double) | True | Entrate ottenute mediante la conversione <br> **Esempio:** 99,9 |
+| priceTotal (Double) | True | Entrate ottenute mediante la conversione <br> **Esempio:** 99.9 |
 | product (String) | True | Identificatore XDM del prodotto stesso. <br> **Esempio:** RX 1080 ti |
 | productType (String) | True | Nome visualizzato per il prodotto presentato all&#39;utente per la visualizzazione del prodotto. <br> **Esempio:** Gpus |
 | quantità (numero intero) | True | Quantità acquistata durante la conversione. <br> **Esempio:** 1 1080 ti |
@@ -124,28 +124,28 @@ Nella tabella seguente sono delineati i campi dello schema nell’esempio di out
 | skuId (String) | True | Unità di conservazione delle scorte (SKU), identificatore univoco per un prodotto definito dal fornitore. <br> **Esempio:** MJ-03-XS-Black |
 | timestamp (DateTime) | True | Timestamp della conversione. <br> **Esempio:** 2020-06-09T00:01:51.000Z |
 | passThrough (oggetto) | True | Colonne di set di dati di punteggio aggiuntive specificate dall&#39;utente durante la configurazione del modello. |
-| commerce_order_purchaseCity (String) | True | Colonna dataset Punteggio Aggiuntiva. <br> **Esempio:** città : San Jose |
+| commerce_order_purchaseCity (String) | True | Colonna dataset Punteggio Aggiuntiva. <br> **Esempio:** city: San Jose |
 | customerProfile (Oggetto) | False | Dettagli identità dell&#39;utente utilizzato per creare il modello. |
 | identity (Object) | False | Contiene i dettagli dell&#39;utente utilizzato per creare il modello, ad esempio `id` e `namespace`. |
-| id (String) | True | ID identità dell’utente, ad esempio ID cookie o AAID o MCID ecc. <br> **Esempio:** 1734876272540865634468320891369597404 |
-| namespace (String) | True | Spazio dei nomi identità utilizzato per creare i percorsi e quindi il modello. <br> **Esempio:** aid |
+| id (String) | True | ID identità dell’utente, ad esempio ID cookie o AAID o MCID ecc. <br> **Esempio:** 17348762725408656344688320891369597404 |
+| namespace (String) | True | Spazio dei nomi identità utilizzato per creare i percorsi e quindi il modello. <br> **Esempio:** aaid |
 | touchpointsDetail (array di oggetti) | True | Elenco dei dettagli dei punti di contatto che determinano la conversione ordinata dall&#39;occorrenza del punto di contatto o dalla marca temporale. |
 | touchPointName (String) | True | Nome del punto di contatto configurato durante l’installazione. <br> **Esempio:** PAID_SEARCH_CLICK |
-| scores (oggetto) | True | Contributo punto di contatto a questa conversione come punteggio. Per ulteriori informazioni sui punteggi prodotti all&#39;interno di questo oggetto, vedere la sezione [punteggi](#aggregated-attribution-scores) di attribuzione aggregati. |
-| touchPoint (oggetto) | True | Metadati punto di contatto. Per ulteriori informazioni sui punteggi prodotti all&#39;interno di questo oggetto, vedere la sezione [punteggi](#aggregated-scores) aggregati. |
+| scores (oggetto) | True | Contributo punto di contatto a questa conversione come punteggio. Per ulteriori informazioni sui punteggi prodotti all&#39;interno di questo oggetto, vedere la sezione [punteggi di attribuzione aggregati](#aggregated-attribution-scores). |
+| touchPoint (oggetto) | True | Metadati punto di contatto. Per ulteriori informazioni sui punteggi prodotti all&#39;interno di questo oggetto, vedere la sezione [scores aggregate](#aggregated-scores). |
 
 ### Visualizzazione di percorsi di valutazione non elaborati (interfaccia utente) {#raw-score-path}
 
-Puoi visualizzare il percorso dei punteggi non elaborati nell’interfaccia utente. Per iniziare, seleziona **[!UICONTROL Schemas]** nell’interfaccia utente della piattaforma, quindi cerca e seleziona il tuo schema di valutazione AI dell’attribuzione dall’interno della **[!UICONTROL Browse]** scheda.
+Puoi visualizzare il percorso dei punteggi non elaborati nell’interfaccia utente. Per iniziare, seleziona **[!UICONTROL Schemas]** nell&#39;interfaccia utente della piattaforma, quindi cerca e seleziona lo schema di attribuzione dei punteggi AI dalla scheda **[!UICONTROL Browse]**.
 
 ![Scegli lo schema](./images/input-output/schemas_browse.png)
 
-Quindi, selezionate un campo all’interno della **[!UICONTROL Structure]** finestra dell’interfaccia utente, si apre la **[!UICONTROL Field properties]** scheda. All&#39;interno **[!UICONTROL Field properties]** è il campo percorso associato ai punteggi non elaborati.
+Quindi, selezionate un campo all&#39;interno della **[!UICONTROL Structure]** finestra dell&#39;interfaccia utente, si apre la scheda **[!UICONTROL Field properties]**. All&#39;interno di **[!UICONTROL Field properties]** è il campo percorso associato ai punteggi non elaborati.
 
 ![Selezione di uno schema](./images/input-output/field_properties.png)
 
 
-### Punteggi di attribuzione aggregati {#aggregated-attribution-scores}
+### Punti di attribuzione aggregati {#aggregated-attribution-scores}
 
 I punteggi aggregati possono essere scaricati in formato CSV dall’interfaccia utente della piattaforma se l’intervallo di date è inferiore a 30 giorni.
 
@@ -171,7 +171,7 @@ Per ulteriori informazioni su ciascuno di questi punteggi di attribuzione, consu
 
 **Riferimento Punteggio non elaborato (punteggi di attribuzione)**
 
-La tabella seguente mappa i punteggi di attribuzione ai punteggi non elaborati. Se desiderate scaricare i punteggi grezzi, visitate i punteggi di [download nella documentazione  Attribution AI](./download-scores.md) .
+La tabella seguente mappa i punteggi di attribuzione ai punteggi non elaborati. Se desideri scaricare i punteggi grezzi, visita la documentazione [download dei punteggi in  Attribution AI](./download-scores.md).
 
 | Punti di attribuzione | Colonna di riferimento per la valutazione non elaborata |
 | --- | --- |
@@ -190,23 +190,23 @@ I punteggi aggregati possono essere scaricati in formato CSV dall’interfaccia 
 | Nome colonna | Vincolo | Nullable | Descrizione |
 | --- | --- | --- | --- |
 | customerevents_date (DateTime) | Formato definito dall&#39;utente e fisso | False | Data evento cliente in formato AAAA-MM-GG. <br> **Esempio**: 2016-05-02 |
-| mediatouchpoints_date (DateTime) | Formato definito dall&#39;utente e fisso | True | Media Touchpoint Date in formato AAAA-MM-GG <br> **Esempio**: 21/04/2017 |
+| mediatouchpoints_date (DateTime) | Formato definito dall&#39;utente e fisso | True | Data punto di contatto multimediale in formato AAAA-MM-GG <br> **Esempio**: 21/04/2017 |
 | segment (String) | Calcolato | False | Segmento di conversione, ad esempio la segmentazione geografica rispetto alla quale il modello è costruito. In caso di assenza di segmenti, il segmento è uguale a conversion_scope. <br> **Esempio**: ORDER_AMER |
 | conversion_scope (String) | Definito dall&#39;utente | False | Nome della conversione configurata dall&#39;utente. <br> **Esempio**: ORDINE |
-| touchpoint_scope (String) | Definito dall&#39;utente | True | Nome del punto di contatto configurato dall’utente <br> **Esempio**: PAID_SEARCH_CLICK |
+| touchpoint_scope (String) | Definito dall&#39;utente | True | Nome del punto di contatto configurato dall&#39;utente <br> **Esempio**: PAID_SEARCH_CLICK |
 | product (String) | Definito dall&#39;utente | True | Identificatore XDM del prodotto. <br> **Esempio**: CC |
 | product_type (String) | Definito dall&#39;utente | True | Nome visualizzato per il prodotto presentato all&#39;utente per la visualizzazione del prodotto. <br> **Esempio**: gpus, laptop |
 | geo (String) | Definito dall&#39;utente | True | Posizione geografica in cui è stata distribuita la conversione (placeContext.geo.countryCode) <br> **Esempio**: US |
-| event_type (String) | Definito dall&#39;utente | True | Il tipo di evento principale per questo record della serie temporale <br> **Esempio**: Conversione a pagamento |
+| event_type (String) | Definito dall&#39;utente | True | Il tipo di evento principale per il record della serie temporale <br> **Esempio**: Conversione a pagamento |
 | media_type (String) | ENUM | False | Descrive se il tipo di supporto è pagato, posseduto o ottenuto. <br> **Esempio**: PAGATO, PROPRIETARIO |
-| channel (String) | ENUM | False | La `channel._type` proprietà utilizzata per fornire una classificazione approssimativa dei canali con proprietà simili in [!DNL Consumer Experience Event] XDM. <br> **Esempio**: CERCA |
-| action (String) | ENUM | False | La `mediaAction` proprietà viene utilizzata per fornire un tipo di azione multimediale evento esperienza. <br> **Esempio**: FATE CLIC |
+| channel (String) | ENUM | False | La proprietà `channel._type` utilizzata per fornire una classificazione approssimativa dei canali con proprietà simili in [!DNL Consumer Experience Event] XDM. <br> **Esempio**: CERCA |
+| action (String) | ENUM | False | La proprietà `mediaAction` viene utilizzata per fornire un tipo di azione multimediale evento esperienza. <br> **Esempio**: FATE CLIC |
 | campaign_group (String) | Definito dall&#39;utente | True | Nome del gruppo di campagne in cui più campagne sono raggruppate come &#39;50%_DISCOUNT&#39;. <br> **Esempio**: COMMERCIALE |
 | campaign_name (String) | Definito dall&#39;utente | True | Nome della campagna utilizzata per identificare la campagna di marketing come &#39;50%_DISCOUNT_USA&#39; o &#39;50%_DISCOUNT_ASIA&#39;. <br> **Esempio**: Vendita ringraziamento |
 
 **Riferimento Raw Score (aggregato)**
 
-La tabella seguente mappa i punteggi aggregati sulle valutazioni non elaborate. Se desiderate scaricare i punteggi grezzi, visitate i punteggi di [download nella documentazione  Attribution AI](./download-scores.md) . Per visualizzare i percorsi di valutazione non elaborati dall&#39;interfaccia utente, visita la sezione sulla [visualizzazione dei percorsi](#raw-score-path) di valutazione non elaborati all&#39;interno di questo documento.
+La tabella seguente mappa i punteggi aggregati sulle valutazioni non elaborate. Se desideri scaricare i punteggi grezzi, visita la documentazione [download dei punteggi in  Attribution AI](./download-scores.md). Per visualizzare i percorsi di valutazione non elaborati dall&#39;interfaccia utente, visitare la sezione relativa alla [visualizzazione di percorsi di valutazione non elaborati](#raw-score-path) all&#39;interno di questo documento.
 
 | Nome colonna | Colonna di riferimento Punteggio non elaborato |
 | --- | --- |
@@ -228,4 +228,4 @@ La tabella seguente mappa i punteggi aggregati sulle valutazioni non elaborate. 
 
 ## Passaggi successivi {#next-steps}
 
-Dopo aver preparato i dati e aver inserito tutte le credenziali e gli schemi, iniziare seguendo la guida [utente](./user-guide.md)Attribution AI. Questa guida illustra come creare un’istanza per  Attribution AI.
+Dopo aver preparato i dati e aver inserito tutte le credenziali e gli schemi, iniziare seguendo la [ guida utente delle Attribution AI](./user-guide.md). Questa guida illustra come creare un’istanza per  Attribution AI.
