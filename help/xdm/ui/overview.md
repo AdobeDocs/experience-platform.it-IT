@@ -1,11 +1,11 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati;ui;area di lavoro;'
 solution: Experience Platform
-title: Panoramica dell’area di lavoro Schemi
+title: Panoramica dell’interfaccia utente Schemi
 description: Questa panoramica descrive le principali funzionalità dell'area di lavoro Schemi in  Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 ---
 
 
-# [!UICONTROL Schemas] panoramica dell&#39;area di lavoro
+# [!UICONTROL Schemas] Panoramica dell’interfaccia utente
 
 L&#39;area di lavoro [!UICONTROL Schemas] nell&#39;interfaccia utente di Adobe Experience Platform consente di gestire le risorse di Experience Data Model (XDM), inclusi schemi, classi, mixin e tipi di dati. Potete visualizzare ed esplorare le risorse di base fornite  Adobe e creare risorse e schemi personalizzati per la vostra organizzazione.
 
@@ -38,7 +38,7 @@ L&#39;area di lavoro [!UICONTROL Schemas] offre potenti strumenti per la creazio
 
 ## Definizione di campi XDM
 
-Le classi, i mixin e i tipi di dati contribuiscono tutti i campi a uno schema. È possibile scegliere da un elenco di tipi di campi standard quando si aggiungono campi a tali risorse, nonché definire campi specializzati per determinati casi di utilizzo. Per ulteriori informazioni, consultare la guida relativa alla [definizione dei campi XDM nell&#39;interfaccia utente](./fields/overview.md).
+Le classi, i mixin e i tipi di dati contribuiscono tutti i campi a uno schema. È possibile scegliere da un elenco di tipi di campo standard quando si aggiungono campi a tali risorse, nonché definire campi specializzati per determinati casi di utilizzo. Per ulteriori informazioni, consultare la guida relativa alla [definizione dei campi XDM nell&#39;interfaccia utente](./fields/overview.md).
 
 ## Passaggi successivi
 
