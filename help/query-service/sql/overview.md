@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sql;sql reference;
+keywords: ' Experience Platform;home;argomenti popolari;servizio query;servizio query;sql;riferimento SQL;'
 solution: Experience Platform
-title: Riferimento SQL
+title: Riferimento SQL per il servizio query
 topic: reference
-description: Servizio query consente di utilizzare SQL ANSI standard per le istruzioni SELECT e altri comandi limitati.
+description: Adobe Experience Platform Query Service consente di utilizzare SQL ANSI standard per le istruzioni SELECT e altri comandi limitati.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '59'
+source-wordcount: '78'
 ht-degree: 0%
 
 ---
 
 
-# Riferimento SQL
+# Riferimento SQL di Servizio query
 
-[!DNL Query Service] consente di utilizzare SQL ANSI standard per `SELECT` istruzioni e altri comandi limitati. [!DNL Query Service] non include la funzionalità Lingua definizione dati o Lingua di manipolazione dati. I dati interrogati tramite il servizio provengono da [!DNL Experience Data Lake], che contiene insiemi di dati in gran parte immutabili.
+[!DNL Query Service] consente di utilizzare SQL ANSI standard per  `SELECT` istruzioni e altri comandi limitati. [!DNL Query Service] non include la funzionalità Lingua definizione dati o Lingua di manipolazione dati. I dati interrogati tramite il servizio provengono da [!DNL Experience Data Lake], che contiene insiemi di dati in gran parte immutabili.
