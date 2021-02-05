@@ -1,11 +1,11 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;Applicazione delle regole;Applicazione automatica;Applicazione basata sulle API;governance dei dati'
 solution: Experience Platform
-title: Applicazione automatica delle regole
+title: Applicazione automatica dei criteri
 topic: guide
 description: Questo documento illustra come vengono applicati automaticamente i criteri di utilizzo dei dati quando si attivano segmenti per destinazioni in  Experience Platform.
 translation-type: tm+mt
-source-git-commit: acc4fa59a4808ed9a32c2aaf664039e0d12dc1d8
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '1122'
 ht-degree: 0%
