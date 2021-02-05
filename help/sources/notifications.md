@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics; notifications
-description: Con gli eventi Adobe I/O , potete iscrivervi agli eventi e utilizzare i webhooks per ricevere le notifiche relative allo stato delle esecuzioni di flusso. Queste notifiche contengono informazioni sull'esito positivo dell'esecuzione di flusso o sugli errori che hanno contribuito al fallimento di un'esecuzione.
+keywords: ' Experience Platform;casa;argomenti popolari; notifiche'
+description: Iscrivendosi a  Adobe I/O Events, potete utilizzare i webhooks per ricevere le notifiche relative agli stati di esecuzione del flusso delle connessioni di origine. Queste notifiche contengono informazioni sull'esito positivo dell'esecuzione di flusso o sugli errori che hanno contribuito al fallimento di un'esecuzione.
 solution: Experience Platform
-title: Notifiche di esecuzione del flusso
+title: Notifiche esecuzione flusso
 topic: overview
 translation-type: tm+mt
-source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '767'
+source-wordcount: '771'
 ht-degree: 1%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 1%
 
 # Notifiche di esecuzione del flusso
 
-Adobe Experience Platform consente l&#39;acquisizione di dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, database e molti altri.
+Adobe Experience Platform consente l&#39;acquisizione di dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo utilizzando i servizi [!DNL Platform]. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, database e molti altri.
 
-[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti all&#39;interno [!DNL Platform]. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
+[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti all&#39;interno  [!DNL Platform]. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
 Con  Adobe I/O Events, potete iscrivervi agli eventi e utilizzare i webhooks per ricevere le notifiche relative allo stato delle esecuzioni dei flussi. Queste notifiche contengono informazioni sull&#39;esito positivo dell&#39;esecuzione di flusso o sugli errori che hanno contribuito al fallimento di un&#39;esecuzione.
 
@@ -25,19 +25,19 @@ In questo documento sono descritti i passaggi necessari per effettuare la sottos
 
 ## Introduzione
 
-Questa esercitazione presuppone che sia già stata creata almeno una connessione di origine il cui flusso viene eseguito da monitorare. Se non avete ancora configurato una connessione di origine, visitate la panoramica [delle](./home.md) origini per configurare l&#39;origine desiderata prima di tornare a questa guida.
+Questa esercitazione presuppone che sia già stata creata almeno una connessione di origine il cui flusso viene eseguito da monitorare. Se non avete ancora configurato una connessione di origine, iniziate visitando la [panoramica delle origini](./home.md) per configurare l&#39;origine desiderata prima di tornare a questa guida.
 
 Questo documento richiede anche una buona conoscenza dei webhooks e di come collegare un webhook da un&#39;applicazione all&#39;altra. Fare riferimento alla [[!DNL I/O Events] documentazione](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) per un&#39;introduzione ai webhooks.
 
 ## Registrazione di un webhook per le notifiche di esecuzione del flusso
 
-Per ricevere le notifiche di esecuzione del flusso, è necessario utilizzare  console Sviluppatore di Adobe per registrare un webhook nell&#39; [!DNL Experience Platform] integrazione.
+Per ricevere le notifiche di esecuzione del flusso, è necessario utilizzare  console Sviluppatore di Adobe per registrare un webhook nell&#39;integrazione [!DNL Experience Platform].
 
-Seguite l’esercitazione sulle [notifiche [!DNL I/O Event] di iscrizione](../observability/notifications/subscribe.md) per i passaggi dettagliati su come ottenere questo risultato.
+Seguite l&#39;esercitazione su [iscrivetevi a [!DNL I/O Event] notifiche](../observability/notifications/subscribe.md) per istruzioni dettagliate su come eseguire questa operazione.
 
 >[!IMPORTANT]
 >
->Durante il processo di iscrizione, accertatevi di selezionare **[!UICONTROL Platform notifications]** come fornitore dell&#39;evento e di selezionare le seguenti iscrizioni all&#39;evento:
+>Durante il processo di iscrizione, accertatevi di selezionare **[!UICONTROL Platform notifications]** come fornitore dell&#39;evento, quindi selezionate le seguenti iscrizioni all&#39;evento:
 >
 >* **[!UICONTROL Experience Platform Source's Flow Run Succeeded]**
 >* **[!UICONTROL Experience Platform Source's Flow Run Failed]**
@@ -51,11 +51,11 @@ Una notifica restituisce informazioni quali il numero di processi di assimilazio
 
 >[!IMPORTANT]
 >
->Se durante il processo di creazione del flusso è abilitata l’assimilazione parziale, un flusso che contiene sia l’assimilazione riuscita che quella non riuscita sarà contrassegnato come `sources_flow_run_success` solo se il numero di errori è inferiore alla percentuale di soglia di errore impostata durante il processo di creazione del flusso. Se un&#39;esecuzione di flusso corretta contiene errori, questi errori verranno comunque inclusi nel payload restituito.
+>Se durante il processo di creazione del flusso è abilitata l&#39;assimilazione parziale, un flusso che contiene sia l&#39;assimilazione riuscita che quella non riuscita sarà contrassegnato come `sources_flow_run_success` solo se il numero di errori è inferiore alla percentuale di soglia di errore impostata durante il processo di creazione del flusso. Se un&#39;esecuzione di flusso corretta contiene errori, questi errori verranno comunque inclusi nel payload restituito.
 
 ### Operazione riuscita
 
-Una risposta corretta restituisce un set di `metrics` elementi che definiscono le caratteristiche di un&#39;esecuzione di flusso specifica e `activities` che delineano il modo in cui i dati vengono trasformati.
+Una risposta corretta restituisce un insieme di `metrics` che definiscono le caratteristiche di un&#39;esecuzione di flusso specifica e di `activities` che delineano il modo in cui i dati vengono trasformati.
 
 ```json
 {
@@ -314,11 +314,11 @@ La risposta seguente è un esempio di esecuzione di flusso non riuscita, con un 
 
 >[!NOTE]
 >
->Per ulteriori informazioni sui messaggi di errore, vedere l&#39; [appendice](#errors) .
+>Per ulteriori informazioni sui messaggi di errore, vedere l&#39; [appendice](#errors).
 
 ## Passaggi successivi
 
-Ora puoi abbonarti agli eventi che ti consentono di ricevere notifiche in tempo reale sugli stati di esecuzione del flusso. Per ulteriori informazioni sulle esecuzioni di flusso e sulle origini, consulta la panoramica sulle [origini](./home.md).
+Ora puoi abbonarti agli eventi che ti consentono di ricevere notifiche in tempo reale sugli stati di esecuzione del flusso. Per ulteriori informazioni sulle esecuzioni di flusso e sulle origini, vedere la [panoramica delle origini](./home.md).
 
 ## Appendice
 
@@ -331,4 +331,4 @@ Gli errori di inserimento possono verificarsi quando i dati vengono copiati dall
 | Errore | Descrizione |
 | ---------- | ----------- |
 | `CONNECTOR-1001-500` | Errore durante la copia dei dati da un&#39;origine. |
-| `CONNECTOR-2001-500` | Errore durante l&#39;elaborazione dei dati copiati in [!DNL Platform]. Questo errore può riguardare l&#39;analisi, la convalida o la trasformazione. |
+| `CONNECTOR-2001-500` | Errore durante l&#39;elaborazione dei dati copiati su [!DNL Platform]. Questo errore può riguardare l&#39;analisi, la convalida o la trasformazione. |
