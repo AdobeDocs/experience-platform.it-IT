@@ -1,24 +1,24 @@
 ---
 keywords: ' Experience Platform;modello di apprendimento automatico;Area di lavoro dati;Profilo cliente in tempo reale;argomenti più comuni;informazioni sull''apprendimento automatico'
 solution: Experience Platform
-title: Arricchisci il profilo cliente in tempo reale con informazioni approfondite sull'apprendimento automatico
+title: Ottimizzazione del profilo cliente in tempo reale con informazioni approfondite sull'apprendimento automatico
 topic: tutorial
 type: Tutorial
-description: Questo documento fornisce una guida su come arricchire il profilo cliente in tempo reale con informazioni acquisite da computer.
+description: Questo documento fornisce una guida su come arricchire il profilo cliente in tempo reale con informazioni approfondite sull'apprendimento automatico.
 translation-type: tm+mt
-source-git-commit: 62e6bb7e72637b06808ff87dc21f40af2c4e2d45
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '635'
+source-wordcount: '640'
 ht-degree: 0%
 
 ---
 
 
-# Arricchisci [!DNL Real-time Customer Profile] con approfondimenti di machine-learning
+# Arricchisci [!DNL Real-time Customer Profile] con approfondimenti di machine learning
 
-Adobe Experience Platform [!DNL Data Science Workspace] fornisce gli strumenti e le risorse per creare, valutare e utilizzare modelli di machine-learning per generare previsioni e approfondimenti sui dati. Quando le informazioni di machine-learning vengono acquisite in un dataset abilitato [!DNL Profile], gli stessi dati vengono anche assimilati a record [!DNL Profile] che possono essere segmentati utilizzando [!DNL Adobe Experience Platform Segmentation Service]. Con l&#39;acquisizione dei dati di profilo e serie temporali, il profilo cliente in tempo reale decide automaticamente di includere o escludere tali dati dai segmenti attraverso un processo continuo denominato segmentazione in streaming, prima di unirli ai dati esistenti e di aggiornare la visualizzazione unione. Di conseguenza, puoi eseguire istantaneamente dei calcoli e prendere decisioni per offrire esperienze personalizzate e avanzate ai clienti mentre interagiscono con il tuo marchio.
+Adobe Experience Platform [!DNL Data Science Workspace] fornisce gli strumenti e le risorse per creare, valutare e utilizzare modelli di machine learning per generare previsioni e approfondimenti sui dati. Quando le informazioni sull&#39;apprendimento automatico vengono inserite in un dataset [!DNL Profile] abilitato, gli stessi dati vengono anche assimilati a record [!DNL Profile] che possono essere segmentati utilizzando [!DNL Adobe Experience Platform Segmentation Service]. Con l&#39;acquisizione dei dati di profilo e serie temporali, il profilo cliente in tempo reale decide automaticamente di includere o escludere tali dati dai segmenti attraverso un processo continuo denominato segmentazione in streaming, prima di unirli ai dati esistenti e di aggiornare la visualizzazione unione. Di conseguenza, puoi eseguire istantaneamente dei calcoli e prendere decisioni per offrire esperienze personalizzate e avanzate ai clienti mentre interagiscono con il tuo marchio.
 
-Questo documento contiene collegamenti alle esercitazioni che consentono di arricchire [!DNL Real-time Customer Profile] con le informazioni acquisite dal computer.
+Questo documento contiene collegamenti alle esercitazioni che consentono di arricchire [!DNL Real-time Customer Profile] le informazioni sull&#39;apprendimento delle computer.
 
 ## Introduzione
 
