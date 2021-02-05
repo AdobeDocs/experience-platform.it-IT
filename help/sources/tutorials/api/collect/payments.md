@@ -1,12 +1,12 @@
 ---
 keywords: ' Experience Platform;casa;argomenti comuni;Raccolta di dati di pagamento;dati di pagamento'
 solution: Experience Platform
-title: Raccolta di dati di pagamento tramite connettori di origine e API
+title: Raccolta di dati di pagamento tramite connettori e API di origine
 topic: overview
 type: Tutorial
-description: Questa esercitazione descrive i passaggi necessari per recuperare i dati da un'applicazione di pagamento e trasferirli in Piattaforma tramite connettori di origine e API.
+description: Questa esercitazione descrive i passaggi necessari per recuperare i dati da un'applicazione di pagamento e trasferirli in Piattaforma utilizzando connettori di origine e API.
 translation-type: tm+mt
-source-git-commit: 9b4965e4256967961a92c544bbe355eae768e3dd
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# Raccogliere i dati di pagamento tramite connettori di origine e API
+# Raccolta di dati di pagamento tramite connettori di origine e API
 
 Questa esercitazione descrive i passaggi necessari per recuperare i dati da un&#39;applicazione di pagamento di terze parti e trasferirli in Piattaforma tramite connettori di origine e l&#39;API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
