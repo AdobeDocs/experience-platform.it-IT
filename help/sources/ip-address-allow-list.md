@@ -2,12 +2,12 @@
 keywords: ' Experience Platform;home;argomenti popolari;indirizzo ip;indirizzi ip;indirizzo ip  elenco consentiti; elenco consentiti '
 description: Gli indirizzi IP devono essere aggiunti a un elenco consentiti  prima di utilizzare i connettori di origine.
 solution: Experience Platform
-title: Indirizzo IP  elenco consentiti
+title: ELENCO CONSENTITI di indirizzi IP  connessioni di origine
 topic: overview
 translation-type: tm+mt
-source-git-commit: a812ad3b130c5998013688dcda522e7d20ae578f
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '110'
+source-wordcount: '113'
 ht-degree: 0%
 
 ---
