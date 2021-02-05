@@ -1,14 +1,14 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;servizio query;servizio query;deduplicazione dei dati;deduplicazione;'
 solution: Experience Platform
-title: Deduplicazione dei dati
+title: Deduplicazione dei dati nel servizio query
 topic: queries
 type: Tutorial
 description: In questo documento sono riportati esempi di query di sottoselezione e di esempio completo per la deduplicazione di tre casi d’uso comuni Eventi esperienza, acquisti e metriche.
 translation-type: tm+mt
-source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
