@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Raccolta di dati in streaming tramite connettori di origine e API
 topic: overview
 type: Tutorial
-description: Questa esercitazione descrive i passaggi necessari per recuperare i dati in streaming e portarli in Piattaforma tramite connettori sorgente e API.
+description: Questa esercitazione descrive i passaggi per recuperare i dati in streaming e portarli in piattaforma utilizzando connettori sorgente e API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '1303'
 ht-degree: 2%
