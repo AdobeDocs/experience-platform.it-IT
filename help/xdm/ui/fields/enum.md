@@ -1,19 +1,19 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati;ui;workspace;enum;field;'
 solution: Experience Platform
-title: Definire un campo enum nell’interfaccia utente
+title: Definire campi enumerati nell’interfaccia utente
 description: Scoprite come definire un campo enum nell’interfaccia utente del Experience Platform .
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '244'
 ht-degree: 0%
 
 ---
 
 
-# Definire un campo enum nell’interfaccia utente
+# Definire campi enum nell’interfaccia utente
 
 In Experience Data Model (XDM), un campo enum rappresenta un campo vincolato a un elenco predefinito di valori accettabili.
 
