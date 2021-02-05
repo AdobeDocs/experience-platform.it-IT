@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;prepared statements;prepared;sql;
+keywords: ' Experience Platform;home;argomenti popolari;servizio query;servizio query;istruzioni preparate;preparate;sql;'
 solution: Experience Platform
-title: Dichiarazioni preparate
+title: Istruzioni preparate nel servizio query
 topic: prepared statements
 description: In SQL, le istruzioni preparate vengono utilizzate per creare un modello di query o aggiornamenti simili. Adobe Experience Platform Query Service supporta le istruzioni preparate utilizzando una query con parametri.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '365'
-ht-degree: 7%
+source-wordcount: '381'
+ht-degree: 6%
 
 ---
 
@@ -27,7 +27,7 @@ Quando si utilizzano le istruzioni preparate, sono supportate le seguenti sintas
 
 ### Preparare una dichiarazione preparata {#prepare}
 
-Questa query SQL salva la query SELECT scritta con il nome specificato come `PLAN_NAME`. È possibile utilizzare le variabili, ad esempio `$1` al posto dei valori effettivi. Questa istruzione preparata verrà salvata durante la sessione corrente. I nomi dei piani **non** fanno distinzione tra maiuscole e minuscole.
+Questa query SQL salva la query SELECT scritta con il nome specificato come `PLAN_NAME`. È possibile utilizzare le variabili, ad esempio `$1` al posto dei valori effettivi. Questa istruzione preparata verrà salvata durante la sessione corrente. Tenere presente che i nomi dei piani sono **non** con distinzione tra maiuscole e minuscole.
 
 #### Formato SQL
 
@@ -41,7 +41,7 @@ PREPARE {PLAN_NAME} AS {SELECT_QUERY}
 PREPARE test AS SELECT * FROM table WHERE country = $1 AND city = $2;
 ```
 
-### Esecuzione di un&#39;istruzione preparata {#execute}
+### Eseguire un&#39;istruzione preparata {#execute}
 
 Questa query SQL utilizza l&#39;istruzione preparata creata in precedenza.
 
