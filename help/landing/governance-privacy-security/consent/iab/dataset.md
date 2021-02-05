@@ -5,7 +5,7 @@ title: Creazione di set di dati per l'acquisizione dei dati di consenso IAB TCF 
 topic: privacy events
 description: Questo documento fornisce i passaggi per impostare i due insiemi di dati richiesti per la raccolta dei dati di consenso IAB TCF 2.0.
 translation-type: tm+mt
-source-git-commit: 58bafd206e42caba9879594ca95fe17376be327b
+source-git-commit: b0af9d49f6cfe50f6dff745dfac174dbaa76d070
 workflow-type: tm+mt
 source-wordcount: '1563'
 ht-degree: 0%
