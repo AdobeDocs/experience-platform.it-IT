@@ -3,9 +3,9 @@ keywords: Experience Platform ;home;IAB;IAB 2.0;consenso;consenso
 solution: Experience Platform
 title: 'Supporto IAB TCF 2.0 nel Experience Platform '
 topic: privacy events
-description: Scopri come configurare le operazioni e gli schemi di dati per trasmettere le scelte di consenso degli utenti quando si attivano segmenti per destinazioni in Adobe Experience Platform.
+description: Scopri come configurare le operazioni e gli schemi di dati per trasmettere le scelte di consenso dei clienti quando si attivano segmenti per destinazioni in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: b2d3e4608dc0640472966edccd3fb5a612d7583c
+source-git-commit: b0af9d49f6cfe50f6dff745dfac174dbaa76d070
 workflow-type: tm+mt
 source-wordcount: '2447'
 ht-degree: 0%
