@@ -1,19 +1,17 @@
 ---
 keywords: targhette di bordo;destinazione di volo
-title: Destinazione tag di volo
-seo-title: Destinazione dei tag di volo
+title: Destinazione di connessione dei tag di volo
 description: Trasmettete senza problemi  dati Adobi di pubblico a Airship come tag di pubblico per il targeting all'interno di Airship.
-seo-description: Trasmettete senza problemi  dati Adobi di pubblico a Airship come tag di pubblico per il targeting all'interno di Airship.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '1155'
+source-wordcount: '1139'
 ht-degree: 1%
 
 ---
 
 
-# (Beta) [!DNL Airship Tags] destinazione {#airship-tags-destination}
+# (Beta) Connessione [!DNL Airship Tags] {#airship-tags-destination}
 
 >[!IMPORTANT]
 >
