@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;comparison functions;comparison;
+keywords: ' Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Segmentation Service;pql;PQL;Profile Query Language;funzioni di confronto;confronto;'
 solution: Experience Platform
-title: Funzioni di confronto
+title: Funzioni di confronto PQL
 topic: developer guide
 description: Le funzioni di confronto sono utilizzate per confrontare espressioni e valori diversi, restituendo "true" o "false" di conseguenza.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '308'
-ht-degree: 10%
+source-wordcount: '326'
+ht-degree: 9%
 
 ---
 
@@ -37,7 +37,7 @@ homeAddress.countryISO = "CA"
 
 ## Non uguale
 
-La funzione `!=` (non uguale) controlla se un valore o un&#39;espressione **non** è uguale a un altro valore o espressione.
+La funzione `!=` (non uguale) controlla se un valore o un&#39;espressione è **not** uguale a un altro valore o espressione.
 
 **Formato**
 
@@ -55,7 +55,7 @@ homeAddress.countryISO != "CA"
 
 ## Maggiore di
 
-La funzione `>` (maggiore di) viene utilizzata per verificare se il primo valore è maggiore del secondo valore.
+La funzione `>` (maggiore di) viene utilizzata per verificare se il primo valore è maggiore del secondo.
 
 **Formato**
 
@@ -127,4 +127,4 @@ person.birthMonth <= 2
 
 ## Passaggi successivi
 
-Ora che hai imparato le funzioni di confronto, puoi usarle nelle tue query PQL. Per ulteriori informazioni sulle altre funzioni PQL, consultate la panoramica [Lingua query](./overview.md)profilo.
+Ora che hai imparato le funzioni di confronto, puoi usarle nelle tue query PQL. Per ulteriori informazioni sulle altre funzioni PQL, leggere la [Panoramica del linguaggio di query profilo](./overview.md).
