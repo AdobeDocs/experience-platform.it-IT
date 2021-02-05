@@ -1,37 +1,37 @@
 ---
-keywords: Experience Platform;home;popular topics;FTP;ftp
+keywords: Experience Platform ;home;argomenti popolari;FTP;ftp
 solution: Experience Platform
-title: Creare un connettore sorgente FTP nell’interfaccia utente
+title: Creare una connessione sorgente FTP nell’interfaccia utente
 topic: overview
 type: Tutorial
-description: Questa esercitazione fornisce i passaggi per la creazione di un connettore sorgente FTP utilizzando l'interfaccia utente della piattaforma.
+description: Scoprite come creare una connessione sorgente FTP utilizzando l'interfaccia utente di Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: e28a3ec2d4330f0e9f3895e0236c9ebea2ef2776
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '447'
 ht-degree: 1%
 
 ---
 
 
-# Creare un connettore sorgente FTP nell’interfaccia utente
+# Creare una connessione sorgente FTP nell’interfaccia utente
 
 >[!NOTE]
 >
->Il connettore FTP è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la panoramica [](../../../../home.md#terms-and-conditions) Origini.
+>Il connettore FTP è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, vedere [Panoramica delle sorgenti](../../../../home.md#terms-and-conditions).
 
-Questa esercitazione fornisce i passaggi per la creazione di un connettore sorgente FTP utilizzando l&#39;interfaccia utente della piattaforma.
+Questa esercitazione fornisce i passaggi per la creazione di una connessione sorgente FTP utilizzando l&#39;interfaccia utente di Adobe Experience Platform.
 
 ## Introduzione
 
 Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): Il framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
-   * [Nozioni di base sulla composizione](../../../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
-   * [Esercitazione](../../../../../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
+   * [Nozioni di base sulla composizione](../../../../../xdm/schema/composition.md) dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
+   * [Esercitazione](../../../../../xdm/tutorials/create-schema-ui.md) sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
-Se disponete già di una connessione FTP valida, potete ignorare il resto del documento e continuare a seguire l&#39;esercitazione sulla [configurazione di un flusso di dati](../../dataflow/batch/cloud-storage.md).
+Se si dispone già di una connessione FTP valida, è possibile ignorare il resto del documento e procedere all&#39;esercitazione su [configurazione di un flusso di dati](../../dataflow/batch/cloud-storage.md).
 
 ### Raccogli credenziali richieste
 
@@ -47,19 +47,19 @@ Per connettersi all&#39;FTP, è necessario fornire valori per le seguenti propri
 
 Dopo aver raccolto le credenziali necessarie, puoi seguire i passaggi descritti di seguito per creare un nuovo account FTP per la connessione alla piattaforma.
 
-Accedete ad [Adobe Experience Platform](https://platform.adobe.com) , quindi selezionate **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39; [!UICONTROL Sources] area di lavoro. Nella [!UICONTROL Catalog] schermata sono visualizzate diverse sorgenti con cui è possibile creare un account in ingresso.
+Accedete a [Adobe Experience Platform](https://platform.adobe.com), quindi selezionate **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro [!UICONTROL Sources]. Nella schermata [!UICONTROL Catalog] sono visualizzate diverse sorgenti con le quali è possibile creare un account in ingresso.
 
 Potete selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l&#39;origine specifica con cui si desidera lavorare utilizzando l&#39;opzione di ricerca.
 
-Sotto la [!UICONTROL Cloud storage] categoria, selezionare **[!UICONTROL FTP]**. Se si tratta della prima volta che si utilizza questo connettore, selezionare **[!UICONTROL Configure]**. In caso contrario, selezionate **[!UICONTROL Add data]** per creare una nuova connessione FTP.
+Sotto la categoria [!UICONTROL Cloud storage], selezionare **[!UICONTROL FTP]**. Se si tratta della prima volta che si utilizza questo connettore, selezionare **[!UICONTROL Configure]**. In caso contrario, selezionare **[!UICONTROL Add data]** per creare una nuova connessione FTP.
 
 ![catalogo](../../../../images/tutorials/create/ftp/catalog.png)
 
-Viene **[!UICONTROL Connect to FTP]** visualizzata la pagina. In questa pagina è possibile utilizzare credenziali nuove o già esistenti.
+Viene visualizzata la pagina **[!UICONTROL Connect to FTP]**. In questa pagina è possibile utilizzare credenziali nuove o già esistenti.
 
 ### Nuovo account
 
-Se si utilizzano nuove credenziali, selezionare **[!UICONTROL New account]**. Nel modulo di input visualizzato, specificare un nome, una descrizione facoltativa e le credenziali. Al termine, selezionare **[!UICONTROL Connect]** e quindi concedere un po&#39; di tempo per stabilire la nuova connessione.
+Se si utilizzano nuove credenziali, selezionare **[!UICONTROL New account]**. Nel modulo di input visualizzato, specificare un nome, una descrizione facoltativa e le credenziali. Al termine, selezionare **[!UICONTROL Connect]**, quindi concedere un po&#39; di tempo per stabilire la nuova connessione.
 
 ![new](../../../../images/tutorials/create/ftp/new.png)
 
@@ -71,4 +71,4 @@ Per collegare un account esistente, selezionate l&#39;account FTP con cui deside
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione hai stabilito una connessione al tuo account FTP. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per trasferire i dati dall’archiviazione cloud alla piattaforma](../../dataflow/batch/cloud-storage.md).
+Seguendo questa esercitazione hai stabilito una connessione al tuo account FTP. È ora possibile continuare l&#39;esercitazione successiva e [configurare un flusso di dati per portare i dati dall&#39;archiviazione cloud nella piattaforma](../../dataflow/batch/cloud-storage.md).
