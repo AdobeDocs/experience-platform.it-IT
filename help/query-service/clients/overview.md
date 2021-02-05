@@ -1,11 +1,11 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;servizio query;servizio query;connect;connect to query service;aqua data studio;Aqua Data Studio;Looker;Looker;postico;postico;Power BI;power bi;psql;rstudio;PSQL;RStudio;Tableau;tableau;'
 solution: Experience Platform
-title: Connessione dei client a Query Service
+title: Connessione dei client al servizio di query
 topic: connect
 description: In questo documento viene illustrato come connettersi a Query Service da diverse applicazioni client desktop e come verificare tali connessioni.
 translation-type: tm+mt
-source-git-commit: 5c5ea35dbed85518f7925bd13a2280cae6215927
+source-git-commit: 2b8c08dad34bcd69368c00050323835f05379c82
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 0%
