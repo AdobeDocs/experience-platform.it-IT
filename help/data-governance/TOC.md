@@ -5,10 +5,10 @@ user-guide-title: Guida alla governance dei dati di Adobe Experience Platform
 breadcrumb-title: Guida alla governance dei dati
 user-guide-description: Applica restrizioni all’utilizzo dei dati tramite l’uso di etichette, azioni di marketing e criteri.
 translation-type: tm+mt
-source-git-commit: d139eed4768384412a17b62037ed41c06c2941bd
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 23%
+source-wordcount: '98'
+ht-degree: 31%
 
 ---
 
@@ -17,19 +17,19 @@ ht-degree: 23%
 
 * [Panoramica sulla governance dei dati](home.md)
 * Etichette di utilizzo dei dati {#labels}
-   * [Panoramica delle etichette di utilizzo dei dati](labels/overview.md)
-   * [Etichette di utilizzo dati di base](labels/reference.md)
-   * [Gestione delle etichette di utilizzo dei dati nell’interfaccia utente](labels/user-guide.md)
-   * [Gestione delle etichette per set di dati e campi tramite API](labels/dataset-api.md)
+   * [Panoramica](labels/overview.md)
+   * [Glossario delle etichette](labels/reference.md)
+   * [Gestire le etichette nell’interfaccia](labels/user-guide.md)
+   * [Gestire le etichette per i set di dati tramite le API](labels/dataset-api.md)
 * Criteri di utilizzo dei dati {#policies}
-   * [Panoramica sui criteri di utilizzo dei dati](policies/overview.md)
-   * [Guida utente per i criteri di utilizzo dei dati](policies/user-guide.md)
-   * [Creare un criterio di utilizzo dei dati utilizzando l&#39;API di Servizio criteri](policies/create.md)
+   * [Panoramica](policies/overview.md)
+   * [Gestire i criteri nell&#39;interfaccia](policies/user-guide.md)
+   * [Creare un criterio nell&#39;API](policies/create.md)
 * Applicazione dei criteri {#enforcement}
-   * [Panoramica dell&#39;applicazione dei criteri](enforcement/overview.md)
+   * [Panoramica](enforcement/overview.md)
    * [Esecuzione automatica](enforcement/auto-enforcement.md)
    * [Applicazione basata sulle API](enforcement/api-enforcement.md)
-* Guida per gli sviluppatori API di Policy Service {#api}
+* API Servizio criteri {#api}
    * [Panoramica](api/overview.md)
    * [Introduzione](api/getting-started.md)
    * [Etichette](api/labels.md)
