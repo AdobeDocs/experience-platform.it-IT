@@ -1,24 +1,24 @@
 ---
 keywords: ' Experience Platform;home;argomenti più comuni;Microsoft Dynamics;microsoft dDynamics;dDynamics;Dynamics'
 solution: Experience Platform
-title: Creare un connettore Microsoft Dynamics utilizzando l'API del servizio di flusso
+title: Creare una connessione di origine Microsoft Dynamics utilizzando l'API del servizio di flusso
 topic: overview
 type: Tutorial
-description: Questa esercitazione utilizza l'API del servizio di flusso per guidarti attraverso i passaggi necessari per connettere la piattaforma a un account Microsoft Dynamics (in seguito denominato "Dynamics") per la raccolta dei dati CRM.
+description: Scoprite come collegare la piattaforma a un account Microsoft Dynamics utilizzando l'API del servizio di flusso.
 translation-type: tm+mt
-source-git-commit: 75566ef0dc45f59b47af0b85f4692c2496e53f29
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '739'
 ht-degree: 2%
 
 ---
 
 
-# Creare un connettore [!DNL Microsoft Dynamics] utilizzando l&#39;API [!DNL Flow Service]
+# Creare una connessione di origine [!DNL Microsoft Dynamics] utilizzando l&#39;API [!DNL Flow Service]
 
 [!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
 
-Questa esercitazione utilizza l&#39;API [!DNL Flow Service] per guidarti attraverso i passaggi necessari per connettere la piattaforma a un account [!DNL Microsoft Dynamics] (in seguito denominato &quot;Dynamics&quot;) per la raccolta dei dati CRM.
+Questa esercitazione utilizza l&#39;API [!DNL Flow Service] per guidarti attraverso i passaggi necessari per connettere la piattaforma a un account [!DNL Microsoft Dynamics] (in seguito denominato &quot;Dynamics&quot;) tramite l&#39;API del servizio di flusso.
 
 ## Introduzione
 
