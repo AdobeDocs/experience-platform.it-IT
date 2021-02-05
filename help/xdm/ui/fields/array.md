@@ -1,19 +1,19 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati;ui;workspace;array;field;'
 solution: Experience Platform
-title: Definire un campo array nell’interfaccia utente
+title: Definire i campi array nell’interfaccia utente
 description: Scoprite come definire un campo array nell'interfaccia utente del Experience Platform .
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '347'
 ht-degree: 0%
 
 ---
 
 
-# Definire un campo array nell’interfaccia utente
+# Definire i campi array nell&#39;interfaccia utente
 
 Quando si definisce un campo Experience Data Model (XDM) nell&#39;interfaccia utente di Adobe Experience Platform, è possibile designare tale campo come un array.
 
