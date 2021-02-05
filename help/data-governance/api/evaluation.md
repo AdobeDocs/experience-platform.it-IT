@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
+keywords: ' Experience Platform;home;argomenti popolari;Applicazione delle regole;Applicazione automatica;Applicazione basata sulle API;governance dei dati'
 solution: Experience Platform
-title: Criteri
+title: Endpoint API di valutazione criteri
 topic: developer guide
 description: Una volta create le azioni di marketing e definite le policy, potete utilizzare l'API del servizio criteri per valutare se eventuali criteri vengono violati da determinate azioni. I vincoli restituiti assumono la forma di un insieme di criteri che verrebbero violati tentando di eseguire un'azione di marketing sui dati specificati contenenti etichette di utilizzo dei dati.
 translation-type: tm+mt
-source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1544'
 ht-degree: 1%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 1%
 
 # Finalità della valutazione politica
 
-Una volta create le azioni di marketing e definite le policy, potete utilizzare l&#39; [!DNL Policy Service] API per valutare se eventuali criteri vengono violati da determinate azioni. I vincoli restituiti assumono la forma di un insieme di criteri che verrebbero violati tentando di eseguire un&#39;azione di marketing sui dati specificati contenenti etichette di utilizzo dei dati.
+Una volta create le azioni di marketing e definite le policy, puoi utilizzare l&#39;API [!DNL Policy Service] per valutare se alcune azioni violano i criteri. I vincoli restituiti assumono la forma di un insieme di criteri che verrebbero violati tentando di eseguire un&#39;azione di marketing sui dati specificati contenenti etichette di utilizzo dei dati.
 
-Per impostazione predefinita, solo le politiche il cui stato è impostato per `ENABLED` partecipare alla valutazione. Tuttavia, potete utilizzare il parametro query `?includeDraft=true` per includere `DRAFT` i criteri nella valutazione.
+Per impostazione predefinita, solo i criteri il cui stato è impostato su `ENABLED` partecipano alla valutazione. Tuttavia, potete utilizzare il parametro di query `?includeDraft=true` per includere i criteri `DRAFT` nella valutazione.
 
 Le richieste di valutazione possono essere effettuate in uno dei tre modi seguenti:
 
@@ -27,11 +27,11 @@ Le richieste di valutazione possono essere effettuate in uno dei tre modi seguen
 
 ## Introduzione
 
-Gli endpoint API utilizzati in questa guida fanno parte dell&#39; [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Prima di continuare, consultate la guida [introduttiva per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni richieste necessarie per effettuare correttamente chiamate a qualsiasi](./getting-started.md) [!DNL Experience Platform] API.
+Gli endpoint API utilizzati in questa guida fanno parte dell&#39; [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Prima di continuare, consultare la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per eseguire correttamente chiamate a qualsiasi API [!DNL Experience Platform].
 
 ## Valutazione delle violazioni dei criteri utilizzando le etichette di utilizzo dei dati {#labels}
 
-È possibile valutare le violazioni dei criteri in base alla presenza di un set specifico di etichette di utilizzo dei dati utilizzando il parametro di `duleLabels` query in una richiesta di GET.
+È possibile valutare le violazioni dei criteri in base alla presenza di un set specifico di etichette di utilizzo dei dati utilizzando il parametro di query `duleLabels` in una richiesta di GET.
 
 **Formato API**
 
@@ -42,8 +42,8 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Il nome dell&#39;azione di marketing da sottoporre a test rispetto a un set di etichette di utilizzo dei dati. Puoi recuperare un elenco delle azioni di marketing disponibili effettuando una richiesta di [GET all&#39;endpoint](./marketing-actions.md#list)delle azioni di marketing. |
-| `{LABELS_LIST}` | Un elenco separato da virgole di nomi di etichette di utilizzo dei dati con cui verificare l&#39;azione di marketing. Ad esempio: `duleLabels=C1,C2,C3`<br><br>I nomi delle etichette seguono la distinzione tra maiuscole e minuscole. Accertatevi di usare le maiuscole e le minuscole corrette per inserirle nel `duleLabels` parametro. |
+| `{MARKETING_ACTION_NAME}` | Il nome dell&#39;azione di marketing da sottoporre a test rispetto a un set di etichette di utilizzo dei dati. Puoi recuperare un elenco delle azioni di marketing disponibili effettuando una richiesta di [GET all&#39;endpoint delle azioni di marketing](./marketing-actions.md#list). |
+| `{LABELS_LIST}` | Un elenco separato da virgole di nomi di etichette di utilizzo dei dati con cui verificare l&#39;azione di marketing. Ad esempio: `duleLabels=C1,C2,C3`<br><br>I nomi delle etichette sono sensibili alle maiuscole/minuscole. Accertatevi di utilizzare le maiuscole/minuscole corrette quando elencate nel parametro `duleLabels`. |
 
 **Richiesta**
 
@@ -51,7 +51,7 @@ La richiesta di esempio riportata di seguito valuta un&#39;azione di marketing r
 
 >[!IMPORTANT]
 >
->Prestate attenzione agli `AND` `OR` operatori e agli operatori nelle espressioni dei criteri. Nell&#39;esempio seguente, se nella richiesta fosse stata visualizzata un&#39;etichetta (`C1` o `C3`) da sola, l&#39;azione di marketing non avrebbe violato tale criterio. Sono necessarie sia etichette (`C1` che `C3`) per restituire la politica violata. Assicurati di valutare attentamente i criteri e di definirne le espressioni con la stessa attenzione.
+>Nelle espressioni dei criteri, è importante conoscere gli operatori `AND` e `OR`. Nell&#39;esempio seguente, se nella richiesta fosse stata visualizzata l&#39;etichetta (`C1` o `C3`) da sola, l&#39;azione di marketing non avrebbe violato questo criterio. Sono necessarie entrambe le etichette (`C1` e `C3`) per restituire il criterio violato. Assicurati di valutare attentamente i criteri e di definirne le espressioni con la stessa attenzione.
 
 ```shell
 curl -X GET \
@@ -64,7 +64,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta di successo include un `violatedPolicies` array che contiene i dettagli dei criteri violati a seguito dell&#39;esecuzione dell&#39;azione di marketing sulle etichette fornite. Se non vengono violati i criteri, la `violatedPolicies` matrice sarà vuota.
+Una risposta corretta include un array `violatedPolicies` che contiene i dettagli dei criteri violati a seguito dell&#39;esecuzione dell&#39;azione di marketing sulle etichette fornite. Se non vengono violati i criteri, l&#39;array `violatedPolicies` sarà vuoto.
 
 ```JSON
 {
@@ -124,7 +124,7 @@ Una risposta di successo include un `violatedPolicies` array che contiene i dett
 
 ## Valutazione delle violazioni dei criteri tramite set di dati {#datasets}
 
-È possibile valutare le violazioni dei criteri in base a un set di uno o più set di dati da cui è possibile raccogliere le etichette di utilizzo dei dati. Questa operazione viene eseguita eseguendo una richiesta di POST all&#39; `/constraints` endpoint per una specifica azione di marketing e fornendo un elenco di ID di set di dati all&#39;interno del corpo della richiesta.
+È possibile valutare le violazioni dei criteri in base a un set di uno o più set di dati da cui è possibile raccogliere le etichette di utilizzo dei dati. A questo scopo, esegui una richiesta di POST all&#39;endpoint `/constraints` per una specifica azione di marketing e fornisci un elenco di ID di set di dati all&#39;interno del corpo della richiesta.
 
 **Formato API**
 
@@ -135,11 +135,11 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Il nome dell&#39;azione di marketing da sottoporre a test in base a uno o più set di dati. Puoi recuperare un elenco delle azioni di marketing disponibili effettuando una richiesta di [GET all&#39;endpoint](./marketing-actions.md#list)delle azioni di marketing. |
+| `{MARKETING_ACTION_NAME}` | Il nome dell&#39;azione di marketing da sottoporre a test in base a uno o più set di dati. Puoi recuperare un elenco delle azioni di marketing disponibili effettuando una richiesta di [GET all&#39;endpoint delle azioni di marketing](./marketing-actions.md#list). |
 
 **Richiesta**
 
-La richiesta seguente esegue l&#39;azione di `crossSiteTargeting` marketing in base a un insieme di tre set di dati per valutare eventuali violazioni dei criteri.
+La seguente richiesta esegue l&#39;azione di marketing `crossSiteTargeting` in base a un insieme di tre set di dati per valutare eventuali violazioni dei criteri.
 
 ```shell
 curl -X POST \
@@ -167,12 +167,12 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `entityType` | Il tipo di entità il cui ID è indicato nella `entityId` proprietà di pari livello. Attualmente, l&#39;unico valore accettato è `dataSet`. |
-| `entityId` | ID di un set di dati con cui sottoporre a test l&#39;azione di marketing. È possibile ottenere un elenco di set di dati e dei relativi ID effettuando una richiesta di GET all&#39; `/dataSets` endpoint nell&#39; [!DNL Catalog Service] API. See the guide on [listing [!DNL Catalog] objects](../../catalog/api/list-objects.md) for more information. |
+| `entityType` | Il tipo di entità il cui ID è indicato nella proprietà di pari livello `entityId`. Attualmente, l&#39;unico valore accettato è `dataSet`. |
+| `entityId` | ID di un set di dati con cui sottoporre a test l&#39;azione di marketing. È possibile ottenere un elenco di set di dati e dei relativi ID effettuando una richiesta di GET all&#39;endpoint `/dataSets` nell&#39;API [!DNL Catalog Service]. Per ulteriori informazioni, vedere la guida sull&#39; [elenco [!DNL Catalog] oggetti](../../catalog/api/list-objects.md). |
 
 **Risposta**
 
-Una risposta di successo include un `violatedPolicies` array che contiene i dettagli dei criteri violati a seguito dell&#39;esecuzione dell&#39;azione di marketing sui set di dati forniti. Se non vengono violati i criteri, la `violatedPolicies` matrice sarà vuota.
+Una risposta corretta include un array `violatedPolicies` che contiene i dettagli dei criteri violati a seguito dell&#39;esecuzione dell&#39;azione di marketing rispetto ai set di dati forniti. Se non vengono violati i criteri, l&#39;array `violatedPolicies` sarà vuoto.
 
 ```JSON
 {
@@ -345,16 +345,16 @@ Una risposta di successo include un `violatedPolicies` array che contiene i dett
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `duleLabels` | L&#39;oggetto response include una `duleLabels` matrice che contiene un elenco consolidato di tutte le etichette trovate all&#39;interno dei set di dati specificati. Questo elenco include etichette a livello di set di dati e di campi su tutti i campi all&#39;interno del set di dati. |
-| `discoveredLabels` | La risposta include anche una `discoveredLabels` matrice contenente oggetti per ogni dataset, `datasetLabels` suddivisi in etichette a livello di set di dati e di campi. Ogni etichetta a livello di campo mostra il percorso del campo specifico con tale etichetta. |
+| `duleLabels` | L&#39;oggetto response include un array `duleLabels` che contiene un elenco consolidato di tutte le etichette trovate all&#39;interno dei set di dati specificati. Questo elenco include etichette a livello di set di dati e di campi su tutti i campi all&#39;interno del set di dati. |
+| `discoveredLabels` | La risposta include anche un array `discoveredLabels` contenente oggetti per ogni dataset, che mostra `datasetLabels` suddivisi in etichette a livello di set di dati e di campo. Ogni etichetta a livello di campo mostra il percorso del campo specifico con tale etichetta. |
 
-## Valutazione delle violazioni dei criteri utilizzando campi set di dati specifici {#fields}
+## Valutazione delle violazioni dei criteri utilizzando campi dataset specifici {#fields}
 
 È possibile valutare le violazioni dei criteri in base a un sottoinsieme di campi all&#39;interno di uno o più set di dati, in modo che vengano valutate solo le etichette di utilizzo dei dati applicate a tali campi.
 
 Quando si valutano i criteri utilizzando i campi dataset, tenere presente quanto segue:
 
-* **I nomi dei campi sono con distinzione tra maiuscole e minuscole**: Quando forniscono i campi, devono essere scritti esattamente come appaiono nel set di dati (ad esempio, `firstName` vs `firstname`).
+* **I nomi dei campi sono con distinzione tra maiuscole e minuscole**: Quando forniscono i campi, devono essere scritti esattamente come appaiono nel set di dati (ad esempio,  `firstName` vs  `firstname`).
 * **Ereditarietà** dell&#39;etichetta del set di dati: I singoli campi di un set di dati ereditano tutte le etichette applicate a livello di set di dati. Se le valutazioni dei criteri non restituiscono come previsto, verificare la presenza di eventuali etichette che potrebbero essere state ereditate dal livello del set di dati fino ai campi, oltre a quelli applicati a livello di campo.
 
 **Formato API**
@@ -366,11 +366,11 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Il nome dell&#39;azione di marketing da sottoporre a test rispetto a un sottoinsieme di campi di set di dati. Puoi recuperare un elenco delle azioni di marketing disponibili effettuando una richiesta di [GET all&#39;endpoint](./marketing-actions.md#list)delle azioni di marketing. |
+| `{MARKETING_ACTION_NAME}` | Il nome dell&#39;azione di marketing da sottoporre a test rispetto a un sottoinsieme di campi di set di dati. Puoi recuperare un elenco delle azioni di marketing disponibili effettuando una richiesta di [GET all&#39;endpoint delle azioni di marketing](./marketing-actions.md#list). |
 
 **Richiesta**
 
-La richiesta seguente esegue il test dell&#39;azione di marketing `crossSiteTargeting` su un set specifico di campi appartenenti a tre set di dati. Il payload è simile a una richiesta di [valutazione che interessa solo i set di dati](#datasets), aggiungendo campi specifici per ogni set di dati da cui raccogliere le etichette.
+La richiesta seguente esegue il test dell&#39;azione di marketing `crossSiteTargeting` su un set specifico di campi appartenenti a tre set di dati. Il payload è simile a una richiesta di [valutazione che interessa solo i dataset](#datasets), aggiungendo campi specifici per ogni dataset da cui raccogliere le etichette.
 
 ```shell
 curl -X POST \
@@ -415,15 +415,15 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `entityType` | Il tipo di entità il cui ID è indicato nella `entityId` proprietà di pari livello. Attualmente, l&#39;unico valore accettato è `dataSet`. |
-| `entityId` | ID di un set di dati i cui campi devono essere valutati in base all&#39;azione di marketing. È possibile ottenere un elenco di set di dati e dei relativi ID effettuando una richiesta di GET all&#39; `/dataSets` endpoint nell&#39; [!DNL Catalog Service] API. See the guide on [listing [!DNL Catalog] objects](../../catalog/api/list-objects.md) for more information. |
-| `entityMeta.fields` | Un array di percorsi per campi specifici all&#39;interno dello schema del set di dati, fornito sotto forma di stringhe JSON Pointer. Per informazioni dettagliate sulla sintassi accettata per queste stringhe, consulta la sezione relativa al puntatore [](../../landing/api-fundamentals.md#json-pointer) JSON nella guida di base delle API. |
+| `entityType` | Il tipo di entità il cui ID è indicato nella proprietà di pari livello `entityId`. Attualmente, l&#39;unico valore accettato è `dataSet`. |
+| `entityId` | ID di un set di dati i cui campi devono essere valutati in base all&#39;azione di marketing. È possibile ottenere un elenco di set di dati e dei relativi ID effettuando una richiesta di GET all&#39;endpoint `/dataSets` nell&#39;API [!DNL Catalog Service]. Per ulteriori informazioni, vedere la guida sull&#39; [elenco [!DNL Catalog] oggetti](../../catalog/api/list-objects.md). |
+| `entityMeta.fields` | Un array di percorsi per campi specifici all&#39;interno dello schema del set di dati, fornito sotto forma di stringhe JSON Pointer. Per informazioni dettagliate sulla sintassi accettata per queste stringhe, vedere la sezione relativa al puntatore [JSON](../../landing/api-fundamentals.md#json-pointer) nella guida API di base. |
 
 **Risposta**
 
-Una risposta di successo include un `violatedPolicies` array che contiene i dettagli dei criteri violati a seguito dell&#39;esecuzione dell&#39;azione di marketing nei campi del set di dati forniti. Se non vengono violati i criteri, la `violatedPolicies` matrice sarà vuota.
+Una risposta corretta include un array `violatedPolicies` che contiene i dettagli dei criteri violati a seguito dell&#39;esecuzione dell&#39;azione di marketing nei campi del set di dati forniti. Se non vengono violati i criteri, l&#39;array `violatedPolicies` sarà vuoto.
 
-Confrontando la risposta di esempio riportata di seguito con la [risposta che include solo set di dati](#datasets), si noti che l&#39;elenco delle etichette raccolte è più breve. Anche `discoveredLabels` per ogni set di dati sono stati ridotti, in quanto includono solo i campi specificati nel corpo della richiesta. Inoltre, il criterio precedentemente violato `Targeting Ads or Content` richiede la presentazione di entrambe `C4 AND C6` le etichette e non è più violato come indicato dall&#39;array vuoto `violatedPolicies` .
+Confrontando la risposta di esempio riportata di seguito con la risposta [che interessa solo i set di dati](#datasets), si noti che l&#39;elenco delle etichette raccolte è più breve. Sono stati ridotti anche i `discoveredLabels` per ogni set di dati, in quanto includono solo i campi specificati nel corpo della richiesta. Inoltre, il criterio precedentemente violato `Targeting Ads or Content` richiede la presenza di entrambe le etichette `C4 AND C6` e pertanto non viene più violato come indicato dalla matrice vuota `violatedPolicies`.
 
 ```JSON
 {
@@ -525,7 +525,7 @@ Confrontando la risposta di esempio riportata di seguito con la [risposta che in
 
 ## Valutazione dei criteri in blocco {#bulk}
 
-L&#39; `/bulk-eval` endpoint consente di eseguire più processi di valutazione in una singola chiamata API.
+L&#39;endpoint `/bulk-eval` consente di eseguire più processi di valutazione in una singola chiamata API.
 
 **Formato API**
 
@@ -535,11 +535,11 @@ POST /bulk-eval
 
 **Richiesta**
 
-Il payload di una richiesta di valutazione di massa deve essere un array di oggetti; uno per ogni processo di valutazione da eseguire. Per i processi che valutano in base a insiemi di dati e campi, è necessario fornire un `entityList` array. Per i processi che valutano in base alle etichette di utilizzo dei dati, è necessario fornire una `labels` matrice.
+Il payload di una richiesta di valutazione di massa deve essere un array di oggetti; uno per ogni processo di valutazione da eseguire. Per i processi che valutano in base a insiemi di dati e campi, è necessario fornire un array `entityList`. Per i processi che valutano in base alle etichette di utilizzo dei dati, è necessario fornire un array `labels`.
 
 >[!WARNING]
 >
->Se un qualsiasi processo di valutazione elencato contiene sia un `entityList` array che un `labels` array, si verificherà un errore. Se desideri valutare la stessa azione di marketing in base a set di dati ed etichette, devi includere processi di valutazione separati per tale azione di marketing.
+>Se un processo di valutazione elencato contiene sia un array `entityList` che un array `labels`, si verificherà un errore. Se desideri valutare la stessa azione di marketing in base a set di dati ed etichette, devi includere processi di valutazione separati per tale azione di marketing.
 
 ```shell
 curl -X POST \
@@ -580,10 +580,10 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `evalRef` | URI dell&#39;azione di marketing da sottoporre a test per etichette o set di dati per violazioni dei criteri. |
-| `includeDraft` | Per impostazione predefinita, solo i criteri abilitati partecipano alla valutazione. Se `includeDraft` è impostato su `true`, parteciperanno anche le politiche in `DRAFT` stato. |
-| `labels` | Un array di etichette di utilizzo dei dati con cui sottoporre a test l&#39;azione di marketing.<br><br>**IMPORTANTE**: Quando si utilizza questa proprietà, NON è necessario includere una `entityList` proprietà nello stesso oggetto. Per valutare la stessa azione di marketing utilizzando insiemi di dati e/o campi, è necessario includere nel payload della richiesta un oggetto separato che contenga un `entityList` array. |
-| `entityList` | Un array di set di dati e (facoltativamente) campi specifici all&#39;interno di tali set di dati per sottoporre a test l&#39;azione di marketing.<br><br>**IMPORTANTE**: Quando si utilizza questa proprietà, NON è necessario includere una `labels` proprietà nello stesso oggetto. Per valutare la stessa azione di marketing utilizzando etichette di utilizzo dati specifiche, è necessario includere un oggetto separato nel payload della richiesta che contenga un `labels` array. |
-| `entityType` | Il tipo di entità con cui sottoporre a test l&#39;azione di marketing. Al momento, `dataSet` è supportato solo. |
+| `includeDraft` | Per impostazione predefinita, solo i criteri abilitati partecipano alla valutazione. Se `includeDraft` è impostato su `true`, parteciperanno anche i criteri che si trovano nello stato `DRAFT`. |
+| `labels` | Un array di etichette di utilizzo dei dati con cui sottoporre a test l&#39;azione di marketing.<br><br>**IMPORTANTE**: Quando si utilizza questa proprietà, NON è necessario includere una  `entityList` proprietà nello stesso oggetto. Per valutare la stessa azione di marketing utilizzando insiemi di dati e/o campi, è necessario includere un oggetto separato nel payload della richiesta che contenga un array `entityList`. |
+| `entityList` | Un array di set di dati e (facoltativamente) campi specifici all&#39;interno di tali set di dati per sottoporre a test l&#39;azione di marketing.<br><br>**IMPORTANTE**: Quando si utilizza questa proprietà, NON è necessario includere una  `labels` proprietà nello stesso oggetto. Per valutare la stessa azione di marketing utilizzando etichette di utilizzo dati specifiche, è necessario includere un oggetto separato nel payload di richiesta che contenga un array `labels`. |
+| `entityType` | Il tipo di entità con cui sottoporre a test l&#39;azione di marketing. Attualmente, è supportato solo `dataSet`. |
 | `entityId` | ID di un set di dati con cui sottoporre a test l&#39;azione di marketing. |
 | `entityMeta.fields` | (Facoltativo) Un elenco di campi specifici all&#39;interno del dataset per verificare l&#39;azione di marketing rispetto a. |
 
@@ -683,6 +683,6 @@ Una risposta di successo restituisce un array di risultati di valutazione; uno p
 ]
 ```
 
-## Valutazione delle politiche [!DNL Real-time Customer Profile]
+## Valutazione criteri per [!DNL Real-time Customer Profile]
 
-L&#39; [!DNL Policy Service] API può essere utilizzata anche per verificare la presenza di violazioni dei criteri che implicano l&#39;uso di [!DNL Real-time Customer Profile] segmenti. Per ulteriori informazioni, consulta l’esercitazione sull’ [imposizione della conformità per l’utilizzo dei dati per i segmenti](../../segmentation/tutorials/governance.md) di pubblico.
+L&#39;API [!DNL Policy Service] può essere utilizzata anche per verificare la presenza di violazioni dei criteri che implicano l&#39;uso di segmenti [!DNL Real-time Customer Profile]. Per ulteriori informazioni, consulta l&#39;esercitazione su [imposizione della conformità per l&#39;utilizzo dei dati per i segmenti di pubblico](../../segmentation/tutorials/governance.md).
