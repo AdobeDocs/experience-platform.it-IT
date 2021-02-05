@@ -5,7 +5,7 @@ title: Guida introduttiva a Content and Commerce AI
 topic: Getting started
 description: Content and Commerce AI utilizza  API Adobe I/O. Per effettuare chiamate alle API  Adobe I/O e all'integrazione della console di I/O, è innanzitutto necessario completare l'esercitazione sull'autenticazione.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
 source-wordcount: '591'
 ht-degree: 0%
