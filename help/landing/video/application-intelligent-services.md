@@ -1,5 +1,5 @@
 ---
-title: Applicazioni e servizi intelligenti basati su Adobe Experience Platform
+title: Applicazioni e servizi intelligenti  Experience Platform
 description: Questo video offre una panoramica dei servizi applicativi e intelligenti creati con Adobe Experience Platform, che completano il  Experience Cloud Applications&mdash;Real-time Customer Data Platform, Journey Orchestration, Customer Journey Analytics, Attribution AI  e AI cliente.
 feature: platform
 topics: null
@@ -9,10 +9,10 @@ doc-type: video
 activity: understand
 thumbnail: 32554.jpg
 translation-type: tm+mt
-source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '119'
-ht-degree: 21%
+source-wordcount: '118'
+ht-degree: 22%
 
 ---
 
