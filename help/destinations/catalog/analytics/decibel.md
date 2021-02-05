@@ -1,21 +1,17 @@
 ---
 keywords: estensione decibel;decibel;destinazione decibel
-title: Estensione Decibel
-seo-title: Estensione Decibel
+title: Destinazione estensione decimale
 description: L'estensione Decibel è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L'estensione Decibel è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '507'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Decibel] Estensione {#decibel-extension}
-
-## Panoramica {#overview}
 
 Implementazione rapida e semplice di [!DNL Decibel] sulle proprietà Web. È inoltre possibile implementare configurazioni avanzate aggiuntive con regole che utilizzano azioni rese disponibili tramite l&#39;estensione.
 
