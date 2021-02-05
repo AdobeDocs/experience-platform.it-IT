@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: In alcuni casi, potrebbe essere necessario aggiornare i dettagli di una connessione di origine esistente. L'API di servizio di flusso consente di aggiungere, modificare ed eliminare dettagli di una connessione batch o in streaming esistente, inclusi nome, descrizione e credenziali.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '709'
 ht-degree: 2%
