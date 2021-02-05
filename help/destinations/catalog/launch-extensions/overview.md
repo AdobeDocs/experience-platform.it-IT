@@ -1,19 +1,17 @@
 ---
 keywords: estensioni lancio;estensione lancio;destinazioni lancio; estensioni lancio piattaforma;estensione lancio piattaforma;destinazioni lancio piattaforma
-title: Estensioni di Experience Platform Launch
-seo-title: Estensioni di Experience Platform Launch
-description: Launch è la soluzione Adobe di nuova generazione per la gestione dei tag. Launch offre ai clienti un modo semplice di implementare e gestire tutti i tag pubblicitari, di analisi e di marketing necessari per fornire ai clienti esperienze personalizzate.
-seo-description: Launch è la soluzione Adobe di nuova generazione per la gestione dei tag. Launch offre ai clienti un modo semplice di implementare e gestire tutti i tag pubblicitari, di analisi e di marketing necessari per fornire ai clienti esperienze personalizzate.
+title: ' delle destinazioni di estensioni Adobe Experience Platform Launch'
+description: ' Adobe Experience Platform Launch è la nuova generazione di funzionalità di gestione dei tag  Adobe. Platform Launch offre ai clienti un modo semplice di implementare e gestire tutti i tag pubblicitari, di analisi e di marketing necessari per fornire ai clienti esperienze personalizzate.'
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '644'
-ht-degree: 19%
+source-wordcount: '613'
+ht-degree: 12%
 
 ---
 
 
-# Estensioni di Adobe Experience Platform Launch {#overview.md}
+# Estensioni di Adobe Experience Platform Launch
 
  Adobe Experience Platform Launch è la nuova generazione di funzionalità di gestione dei tag  Adobe. Platform Launch offre ai clienti un modo semplice di implementare e gestire tutti i tag pubblicitari, di analisi e di marketing necessari per fornire ai clienti esperienze personalizzate. Launch piattaforma è disponibile per i clienti Adobe Experience Cloud come funzione inclusa a valore aggiunto.
 
