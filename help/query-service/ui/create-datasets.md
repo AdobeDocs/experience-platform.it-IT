@@ -1,20 +1,20 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;servizio query;servizio query;genera dataset;genera dataset;crea dataset;'
 solution: Experience Platform
-title: Generazione di set di dati dai risultati della query
+title: Generazione di set di dati dai risultati del servizio query
 topic: queries
 type: Tutorial
-description: 'Servizio query consente la creazione di set di dati dall’interfaccia utente. Dopo la creazione di un set di dati, è possibile accedervi come qualsiasi altro set di dati nel Data Lake e utilizzarlo per diversi casi di utilizzo. '
+description: 'Adobe Experience Platform Query Service consente la creazione di set di dati dall''interfaccia utente. Dopo la creazione di un set di dati, è possibile accedervi come qualsiasi altro set di dati nel Data Lake e utilizzarlo per diversi casi di utilizzo. '
 translation-type: tm+mt
-source-git-commit: 0ba4e26927cdc96855f35d72a8a6de55f4a34bfa
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '323'
 ht-degree: 0%
 
 ---
 
 
-# Generazione di set di dati dai risultati della query
+# Generazione di set di dati dai risultati in Servizio query
 
 La vera potenza di [!DNL Query Service] viene rivelata quando le query vengono utilizzate per generare set di dati in [!DNL Data Lake] da utilizzare come input in più query o in altri servizi come [!DNL Data Science Workspace], [!DNL Real-time Customer Profile] o [!DNL Analysis Workspace].
 
