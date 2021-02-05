@@ -1,13 +1,13 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;Blob;blob;Azure Blob;azure blob'
 solution: Experience Platform
-title: Connettore BLOB di Azure
+title: Panoramica del connettore origine BLOB di Azure
 topic: overview
-description: La documentazione seguente fornisce informazioni su come collegare Azure Blob alla piattaforma utilizzando le API o l'interfaccia utente.
+description: Scopri come connettere Azure Blob ad Adobe Experience Platform utilizzando le API o l'interfaccia utente.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '399'
 ht-degree: 0%
 
 ---
@@ -36,15 +36,15 @@ Di seguito è riportato un elenco di vincoli per i quali è necessario tenere co
 
 ## Connetti [!DNL Azure Blob] a [!DNL Platform]
 
-La documentazione seguente fornisce informazioni su come collegare Azure Blob alla piattaforma utilizzando le API o l&#39;interfaccia utente:
+La documentazione seguente fornisce informazioni su come collegare Azure Blob ad Adobe Experience Platform utilizzando le API o l&#39;interfaccia utente:
 
 ### Utilizzo delle API
 
-- [Creare un connettore BLOB di Azure utilizzando l&#39;API del servizio di flusso](../../tutorials/api/create/cloud-storage/blob.md)
+- [Creare una connessione di origine Azure Blob utilizzando l&#39;API del servizio di flusso](../../tutorials/api/create/cloud-storage/blob.md)
 - [Esplora un sistema di archiviazione cloud utilizzando l&#39;API del servizio di flusso](../../tutorials/api/explore/cloud-storage.md)
 - [Raccolta di dati di archiviazione cloud tramite l&#39;API del servizio di flusso](../../tutorials/api/collect/cloud-storage.md)
 
 ### Utilizzo dell’interfaccia
 
-- [Creare un connettore di origine Azure Blob nell&#39;interfaccia utente](../../tutorials/ui/create/cloud-storage/blob.md)
-- [Configurare un flusso di dati per un connettore di archiviazione cloud nell&#39;interfaccia utente](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Creare una connessione di origine Azure Blob nell&#39;interfaccia utente](../../tutorials/ui/create/cloud-storage/blob.md)
+- [Configurare un flusso di dati per una connessione di archiviazione cloud nell&#39;interfaccia utente](../../tutorials/ui/dataflow/batch/cloud-storage.md)
