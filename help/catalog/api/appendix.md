@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics;Catalog service;catalog api;appendix
+keywords: ' Experience Platform;home;argomenti popolari;Catalogo servizi;catalogo api;appendice'
 solution: Experience Platform
-title: Appendice della guida per gli sviluppatori di Catalog Service
+title: Appendice della Guida API del servizio catalogo
 topic: developer guide
 description: Questo documento contiene informazioni aggiuntive utili per l’utilizzo dell’API Catalog in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
 workflow-type: tm+mt
-source-wordcount: '910'
-ht-degree: 0%
+source-wordcount: '920'
+ht-degree: 1%
 
 ---
 
 
-# [!DNL Catalog Service] appendice della guida per sviluppatori
+# [!DNL Catalog Service] Appendice della guida API
 
-Questo documento contiene informazioni aggiuntive utili per l&#39;utilizzo dell&#39; [!DNL Catalog] API.
+Questo documento contiene informazioni aggiuntive utili per l&#39;utilizzo dell&#39;API [!DNL Catalog].
 
-## Visualizzare gli oggetti correlati {#view-interrelated-objects}
+## Visualizza oggetti correlati {#view-interrelated-objects}
 
-Alcuni [!DNL Catalog] oggetti possono essere correlati ad altri [!DNL Catalog] oggetti. Tutti i campi con il prefisso `@` nei payload di risposta indicano gli oggetti correlati. I valori di questi campi sono costituiti da un URI, che può essere utilizzato in una richiesta di GET separata per recuperare gli oggetti correlati che rappresentano.
+Alcuni oggetti [!DNL Catalog] possono essere correlati ad altri oggetti [!DNL Catalog]. Tutti i campi con il prefisso `@` nei payload di risposta indicano gli oggetti correlati. I valori di questi campi sono costituiti da un URI, che può essere utilizzato in una richiesta di GET separata per recuperare gli oggetti correlati che rappresentano.
 
-Il set di dati di esempio restituito nel documento per la [ricerca di un set di dati](look-up-object.md) `files` specifico contiene un campo con il seguente valore URI: `"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"`. Il contenuto del `files` campo può essere visualizzato utilizzando questo URI come percorso per una nuova richiesta di GET.
+Il set di dati di esempio restituito nel documento in [ricerca di un set di dati specifico](look-up-object.md) contiene un campo `files` con il seguente valore URI: `"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"`. Il contenuto del campo `files` può essere visualizzato utilizzando questo URI come percorso per una nuova richiesta di GET.
 
 **Formato API**
 
@@ -31,11 +31,11 @@ GET {OBJECT_URI}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{OBJECT_URI}` | URI fornito dal campo oggetto correlato (escluso il `@` simbolo). |
+| `{OBJECT_URI}` | URI fornito dal campo oggetto correlato (escluso il simbolo `@`). |
 
 **Richiesta**
 
-La richiesta seguente utilizza l&#39;URI fornito dalla `files` proprietà del dataset di esempio per recuperare un elenco dei file associati del dataset.
+La richiesta seguente utilizza l&#39;URI fornito dalla proprietà `files` del dataset di esempio per recuperare un elenco dei file associati del dataset.
 
 ```shell
 curl -X GET \
@@ -93,9 +93,9 @@ Una risposta corretta restituisce un elenco degli oggetti correlati. In questo e
 
 ## Eseguire più richieste in una singola chiamata
 
-L&#39;endpoint principale dell&#39; [!DNL Catalog] API consente di effettuare più richieste all&#39;interno di una singola chiamata. Il payload della richiesta contiene un array di oggetti che rappresentano normalmente le singole richieste, che vengono quindi eseguite in ordine.
+L&#39;endpoint principale dell&#39;API [!DNL Catalog] consente di effettuare più richieste all&#39;interno di una singola chiamata. Il payload della richiesta contiene un array di oggetti che rappresentano normalmente le singole richieste, che vengono quindi eseguite in ordine.
 
-Se queste richieste sono modifiche o aggiunte [!DNL Catalog] e una delle modifiche non riesce, tutte le modifiche verranno ripristinate.
+Se queste richieste sono modifiche o aggiunte a [!DNL Catalog] e una delle modifiche non riesce, tutte le modifiche verranno ripristinate.
 
 **Formato API**
 
@@ -107,7 +107,7 @@ POST /
 
 La richiesta seguente crea un nuovo dataset, quindi crea le viste correlate per tale dataset. Questo esempio illustra l’utilizzo del linguaggio dei modelli per accedere ai valori restituiti nelle chiamate precedenti e utilizzabili nelle chiamate successive.
 
-Ad esempio, se desiderate fare riferimento a un valore restituito da una richiesta secondaria precedente, potete creare un riferimento nel formato seguente: `<<{REQUEST_ID}.{ATTRIBUTE_NAME}>>` (dove `{REQUEST_ID}` è l’ID fornito dall’utente per la richiesta secondaria, come illustrato di seguito). È possibile fare riferimento a qualsiasi attributo disponibile nel corpo di un oggetto di risposta di una richiesta secondaria precedente utilizzando questi modelli.
+Ad esempio, se desiderate fare riferimento a un valore restituito da una richiesta secondaria precedente, potete creare un riferimento nel formato seguente: `<<{REQUEST_ID}.{ATTRIBUTE_NAME}>>` (dove `{REQUEST_ID}` è l&#39;ID fornito dall&#39;utente per la richiesta secondaria, come mostrato di seguito). È possibile fare riferimento a qualsiasi attributo disponibile nel corpo di un oggetto di risposta di una richiesta secondaria precedente utilizzando questi modelli.
 
 >[!NOTE]
 >
@@ -146,13 +146,13 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `id` | ID fornito dall&#39;utente che è allegato all&#39;oggetto response in modo da poter far corrispondere le richieste alle risposte. [!DNL Catalog] non memorizza questo valore e lo restituisce semplicemente nella risposta a scopo di riferimento. |
-| `resource` | Percorso della risorsa relativo alla directory principale dell&#39; [!DNL Catalog] API. Il protocollo e il dominio non devono far parte di questo valore e devono avere il prefisso &quot;/&quot;. <br/><br/> Quando utilizzate PATCH o DELETE come richieste secondarie `method`, includete l&#39;ID oggetto nel percorso della risorsa. Da non confondere con l&#39;oggetto fornito dall&#39;utente `id`, il percorso della risorsa utilizza l&#39;ID dell&#39; [!DNL Catalog] oggetto stesso (ad esempio, `resource: "/dataSets/1234567890"`). |
+| `resource` | Percorso della risorsa relativo alla directory principale dell&#39;API [!DNL Catalog]. Il protocollo e il dominio non devono far parte di questo valore e devono avere il prefisso &quot;/&quot;. <br/><br/> Quando utilizzate PATCH o DELETE come richieste secondarie  `method`, includete l&#39;ID oggetto nel percorso della risorsa. Da non confondere con l&#39;elemento `id` fornito dall&#39;utente, il percorso della risorsa utilizza l&#39;ID dell&#39;oggetto [!DNL Catalog] stesso (ad esempio, `resource: "/dataSets/1234567890"`). |
 | `method` | Nome del metodo (GET, PUT, POST, PATCH o DELETE) relativo all’azione in corso nella richiesta. |
 | `body` | Il documento JSON che normalmente viene passato come payload in una richiesta POST, PUT o PATCH. Questa proprietà non è necessaria per le richieste di GET o DELETE. |
 
 **Risposta**
 
-Una risposta corretta restituisce un array di oggetti contenente gli oggetti `id` assegnati a ciascuna richiesta, il codice di stato HTTP per la singola richiesta e la risposta `body`. Poiché le tre richieste di esempio erano tutte volte a creare nuovi oggetti, `body` di ogni oggetto è un array contenente solo l&#39;ID del nuovo oggetto creato, come lo è lo standard con le risposte POST più efficaci in [!DNL Catalog].
+Una risposta corretta restituisce un array di oggetti contenenti la `id` assegnata a ciascuna richiesta, il codice di stato HTTP per la singola richiesta e la risposta `body`. Poiché le tre richieste di esempio erano tutte volte a creare nuovi oggetti, la `body` di ciascun oggetto è una matrice contenente solo l&#39;ID del nuovo oggetto creato, così come lo standard con le risposte POST più efficaci in [!DNL Catalog].
 
 ```json
 [
@@ -183,16 +183,16 @@ Prestate attenzione durante l&#39;analisi della risposta a una richiesta multipl
 
 È buona norma utilizzare il controllo delle versioni degli oggetti per evitare il tipo di danneggiamento dei dati che si verifica quando un oggetto viene salvato da più utenti quasi contemporaneamente.
 
-Come procedura ottimale, quando si aggiorna un oggetto occorre prima effettuare una chiamata API per visualizzare (GET) l&#39;oggetto da aggiornare. Contenuto nella risposta (e in qualsiasi chiamata in cui la risposta contiene un singolo oggetto) è un&#39; `E-Tag` intestazione contenente la versione dell&#39;oggetto. Se si aggiunge la versione dell&#39;oggetto come intestazione di richiesta denominata `If-Match` nelle chiamate di aggiornamento (PUT o PATCH), l&#39;aggiornamento avrà esito positivo solo se la versione è ancora la stessa, in modo da evitare possibili collisioni di dati.
+Come procedura ottimale, quando si aggiorna un oggetto occorre prima effettuare una chiamata API per visualizzare (GET) l&#39;oggetto da aggiornare. Contenuto nella risposta (e in qualsiasi chiamata in cui la risposta contiene un singolo oggetto) è un&#39;intestazione `E-Tag` contenente la versione dell&#39;oggetto. Se si aggiunge la versione dell&#39;oggetto come intestazione di richiesta denominata `If-Match` nelle chiamate di aggiornamento (PUT o PATCH), l&#39;aggiornamento avrà esito positivo solo se la versione è ancora la stessa, in modo da evitare eventuali collisioni di dati.
 
 Se le versioni non corrispondono (l&#39;oggetto è stato modificato da un altro processo dopo il recupero), riceverete lo stato HTTP 412 (Precondizione non riuscita) per indicare che l&#39;accesso alla risorsa di destinazione è stato negato.
 
-### Praga
+### Pragma
 
-In alcuni casi, è possibile convalidare un oggetto senza salvare le informazioni. L&#39;utilizzo dell&#39; `Pragma` intestazione con un valore di `validate-only` consente di inviare richieste di POST o PUT solo a scopo di convalida, impedendo la persistenza di eventuali modifiche ai dati.
+In alcuni casi, è possibile convalidare un oggetto senza salvare le informazioni. L&#39;utilizzo dell&#39;intestazione `Pragma` con un valore di `validate-only` consente di inviare richieste di POST o PUT solo a scopo di convalida, impedendo la persistenza di eventuali modifiche ai dati.
 
 ## Compattazione dei dati
 
-Compaction è un [!DNL Experience Platform] servizio che unisce i dati da file di piccole dimensioni a file più grandi senza modificare alcun dato. Per motivi di prestazioni, a volte è utile combinare un set di file di piccole dimensioni in file più grandi, in modo da fornire un accesso più rapido ai dati durante la query.
+Compaction è un servizio [!DNL Experience Platform] che unisce i dati da file di piccole dimensioni a file più grandi senza modificare alcun dato. Per motivi di prestazioni, a volte è utile combinare un set di file di piccole dimensioni in file più grandi, in modo da fornire un accesso più rapido ai dati durante la query.
 
-Quando i file di un batch assimilato sono stati compattati, l’ [!DNL Catalog] oggetto associato viene aggiornato a scopo di monitoraggio.
+Quando i file in un batch assimilato sono stati compattati, l&#39;oggetto associato [!DNL Catalog] viene aggiornato a scopo di monitoraggio.
