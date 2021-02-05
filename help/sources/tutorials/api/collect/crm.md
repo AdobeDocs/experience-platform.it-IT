@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Raccolta di dati CRM tramite connettori di origine e API
 topic: overview
 type: Tutorial
-description: Questa esercitazione descrive i passaggi necessari per recuperare i dati da un sistema CRM di terze parti e inserirli nella piattaforma tramite connettori di origine e API.
+description: Questa esercitazione descrive i passaggi necessari per recuperare i dati da un sistema CRM di terze parti e inserirli nella piattaforma utilizzando connettori e API di origine.
 translation-type: tm+mt
-source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 1%
