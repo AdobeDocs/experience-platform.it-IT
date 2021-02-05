@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;insights;sensei machine learning api
+keywords: ' Experience Platform;guida per sviluppatori;endpoint;Data Science Workspace;argomenti più comuni;informazioni;sensei macchina imparare api'
 solution: Experience Platform
-title: Approfondimenti
+title: Endpoint API Insights
 topic: Developer guide
 description: Gli approfondimenti contengono metriche utilizzate per consentire a uno scienziato dei dati di valutare e scegliere modelli ML ottimali, mostrando metriche di valutazione rilevanti.
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '515'
 ht-degree: 3%
 
 ---
 
 
-# Approfondimenti
+# Endpoint Insights
 
 Gli approfondimenti contengono metriche utilizzate per consentire a uno scienziato dei dati di valutare e scegliere modelli ML ottimali, mostrando metriche di valutazione rilevanti.
 
 ## Recupera un elenco di approfondimenti
 
-Puoi recuperare un elenco di approfondimenti eseguendo una singola richiesta di GET all’endpoint di approfondimenti.  Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri delle [query per il recupero](./appendix.md#query)delle risorse.
+Puoi recuperare un elenco di approfondimenti eseguendo una singola richiesta di GET all’endpoint di approfondimenti.  Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri di query [per il recupero delle risorse](./appendix.md#query).
 
 **Formato API**
 
@@ -40,7 +40,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un payload che include un elenco di approfondimenti e ogni approfondimento ha un identificatore univoco ( `id` ). Inoltre, riceverai `context` che contiene gli identificatori univoci associati a tale approfondimento in seguito ai dati degli eventi e delle metriche Insights.
+Una risposta corretta restituisce un payload che include un elenco di approfondimenti e ogni approfondimento ha un identificatore univoco ( `id` ). Inoltre, riceverai `context` che contiene gli identificatori univoci associati a tale approfondimento particolare a seguito degli eventi Insights e dei dati delle metriche.
 
 ```json
 {
@@ -109,7 +109,7 @@ Una risposta corretta restituisce un payload che include un elenco di approfondi
 
 ## Recuperare un&#39;interfaccia specifica
 
-Per cercare una particolare conoscenza, effettua una richiesta di GET e fornisci una valida `{INSIGHT_ID}` nel percorso della richiesta. Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri delle [query per il recupero](./appendix.md#query)delle risorse.
+Per cercare una particolare conoscenza, effettuare una richiesta di GET e fornire una `{INSIGHT_ID}` valida nel percorso della richiesta. Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri di query [per il recupero delle risorse](./appendix.md#query).
 
 **Formato API**
 
@@ -134,7 +134,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un payload che include l’identificatore univoco dell’analisi (`id`). Inoltre riceverai `context` che contiene gli identificatori univoci associati alle informazioni specifiche che seguono con gli eventi Insights e i dati delle metriche.
+Una risposta corretta restituisce un payload che include l&#39;identificatore univoco dell&#39;insights (`id`). Inoltre riceverai `context` che contiene gli identificatori univoci associati alle informazioni specifiche che seguono con gli eventi Insights e i dati delle metriche.
 
 ```json
 {
@@ -230,7 +230,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituirà un payload con un `{INSIGHT_ID}` ed eventuali parametri forniti nella richiesta iniziale.
+Una risposta corretta restituirà un payload con un valore `{INSIGHT_ID}` ed eventuali parametri forniti nella richiesta iniziale.
 
 ```json
 {
@@ -265,7 +265,7 @@ Una risposta corretta restituirà un payload con un `{INSIGHT_ID}` ed eventuali 
 
 ## Recupera un elenco di metriche predefinite per gli algoritmi
 
-Puoi recuperare un elenco di tutte le metriche dell&#39;algoritmo e predefinite eseguendo una singola richiesta all&#39;endpoint delle metriche. Per eseguire una query su una particolare metrica, effettuare una richiesta di GET e fornire una valida `{ALGORITHM}` nel percorso della richiesta.
+Puoi recuperare un elenco di tutte le metriche dell&#39;algoritmo e predefinite eseguendo una singola richiesta all&#39;endpoint delle metriche. Per eseguire una query su una particolare metrica, effettuare una richiesta di GET e fornire una `{ALGORITHM}` valida nel percorso della richiesta.
 
 **Formato API**
 
@@ -293,7 +293,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un payload che include l&#39;identificatore `algorithm` univoco e un array di metriche predefinite.
+Una risposta corretta restituisce un payload che include l&#39;identificatore univoco `algorithm` e un array di metriche predefinite.
 
 ```json
 {
