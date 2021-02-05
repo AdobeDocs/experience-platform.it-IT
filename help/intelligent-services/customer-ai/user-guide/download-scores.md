@@ -5,7 +5,7 @@ title: Download dei punteggi nell'AI del cliente
 topic: Downloading scores
 description: L'AI del cliente consente di scaricare i punteggi nel formato file Parquet.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 ---
 
 
-# Download dei punteggi nell&#39;AI del cliente
+# Download dei punteggi in Customer AI
 
 Questo documento funge da guida per il download dei punteggi per l&#39;AI del cliente.
 
