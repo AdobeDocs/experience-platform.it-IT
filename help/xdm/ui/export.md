@@ -5,7 +5,7 @@ description: Scoprite come esportare uno schema esistente in una sandbox o in un
 topic: user guide
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 2d6e833db7cd79135e6da4c68c9dca8cbed09ce4
+source-git-commit: 8d6916890a94300dc68d018d56579df9616c177c
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 0%
@@ -205,11 +205,11 @@ Questo copia un payload JSON negli Appunti, generato in base alla struttura dell
 
 Il payload assume la forma di un array, in cui ogni elemento di array è un oggetto che rappresenta una risorsa XDM personalizzata da esportare. Nell&#39;esempio precedente, sono inclusi il mixin personalizzato &quot;[!DNL Loyalty details]&quot; e lo schema &quot;[!DNL Loyalty Members]&quot;. Tutte le risorse di base utilizzate dallo schema non sono incluse nell&#39;esportazione, in quanto sono disponibili in tutte le sandbox e le organizzazioni IMS.
 
-Ogni istanza dell&#39;ID tenant dell&#39;organizzazione viene visualizzata come `<XDM_TENANTID_PLACEHOLDER>` nel payload. Questi segnaposto verranno sostituiti automaticamente con il valore ID tenant appropriato a seconda della posizione in cui si esporta lo schema nel passaggio successivo.
+Ogni istanza dell&#39;ID tenant dell&#39;organizzazione viene visualizzata come `<XDM_TENANTID_PLACEHOLDER>` nel payload. Questi segnaposto verranno sostituiti automaticamente con il valore ID tenant appropriato a seconda della posizione in cui si importa lo schema nel passaggio successivo.
 
 ## Importare la risorsa tramite l&#39;API
 
-Dopo aver copiato il JSON di esportazione per lo schema, potete usarlo come payload per una richiesta di POST all&#39;endpoint `/import` nell&#39;API del Registro di sistema dello schema. Per informazioni dettagliate su come configurare la chiamata per l&#39;invio dello schema all&#39;organizzazione IMS e alla sandbox corretta, consultate la sezione sull [importazione di una risorsa XDM nell&#39;API](../api/export-import.md#import).
+Dopo aver copiato il JSON di esportazione per lo schema, potete usarlo come payload per una richiesta di POST all&#39;endpoint `/import` nell&#39;API del Registro di sistema dello schema. Consultate la sezione sull [importazione di una risorsa XDM nell&#39;API](../api/export-import.md#import) per informazioni dettagliate su come configurare la chiamata per l&#39;invio dello schema all&#39;organizzazione IMS e alla sandbox desiderata.
 
 ## Passaggi successivi
 
