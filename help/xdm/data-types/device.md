@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;device;datatype;data-type;data type;
+keywords: ' Experience Platform;home;argomenti più comuni;schema;schema;XDM;campi;schemi;dispositivi;tipo di dati;tipo di dati;tipo di dati;'
 solution: Experience Platform
 title: Tipo di dati dispositivo
 topic: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM dispositivo.
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '322'
 ht-degree: 4%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 4%
 | `screenWidth` | Stringa | Il numero di pixel orizzontali della visualizzazione attiva del dispositivo nell&#39;orientamento predefinito. |
 | `type` | Stringa | Tipo di dispositivo di cui tenere traccia. I valori accettati includono: <ul><li>`mobile`</li><li>`tablet`</li><li>`desktop`</li><li>`ereader`</li><li>`gaming`</li><li>`television`</li><li>`settop`</li><li>`mediaplayer`</li><li>`computers`</li><li>`tv screens`</li></ul> |
 | `typeID` | Stringa | Identificatore del dispositivo. Può trattarsi di un identificatore di DeviceAtlas o di un altro servizio che identifica l&#39;hardware utilizzato. |
-| `typeIDService` | Stringa | Spazio dei nomi del servizio utilizzato per identificare il tipo di dispositivo. Per informazioni dettagliate sui valori accettati, consultare l&#39; [appendice](#typeIDService) . |
+| `typeIDService` | Stringa | Spazio dei nomi del servizio utilizzato per identificare il tipo di dispositivo. Per informazioni sui valori accettati, vedere l&#39; [appendice](#typeIDService). |
 
 Per ulteriori dettagli sul mixin, fare riferimento al repository XDM pubblico:
 
@@ -39,7 +39,7 @@ Per ulteriori dettagli sul mixin, fare riferimento al repository XDM pubblico:
 
 ## Appendice
 
-La sezione seguente contiene informazioni aggiuntive sul tipo di [!UICONTROL Device] dati.
+La sezione seguente contiene informazioni aggiuntive sul tipo di dati [!UICONTROL Device].
 
 ## Valori accettati per typeIDService {#typeIDService}
 
