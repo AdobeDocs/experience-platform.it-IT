@@ -1,21 +1,17 @@
 ---
 keywords: Estensione della metrica quantistica;Metrica quantistica;metrica quantistica;Metrica quantistica
-title: Estensione quantistica
-seo-title: Estensione quantistica
+title: Destinazione estensione metrica quantistica
 description: L’estensione Quantum Metric (Metrica quantistica) è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L’estensione Quantum Metric (Metrica quantistica) è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '522'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Quantum Metric] Estensione {#quantum-metric-extension}
-
-## Panoramica {#overview}
 
 [!DNL Quantum Metric's] l&#39;integrazione con  lancio del Adobe facilita la distribuzione in modo uniforme dei tag di raccolta  [!DNL Quantum Metric's] dei dati. Inoltre, questa estensione offre la possibilità di acquisire gli elementi di dati di Launch contenenti informazioni utili dall&#39;API [!DNL Quantum Metric].
 
