@@ -1,21 +1,17 @@
 ---
 keywords: Casella in entrata URL conversazione;casella in entrata URL conversazione;casella in entrata URL conversazione;inbox URL conversazione;URL conversazione;URL conversazione;URL conversazione;URL conversazione
-title: Estensione Inbox URL conversazione
-seo-title: Casella di controllo URL
+title: Destinazione estensione inbox URL conversazione
 description: L’estensione Talk URL Inbox è una voce della destinazione del cliente in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L’estensione Talk URL Inbox è una voce della destinazione del cliente in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '536'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Talk URL Inbox] Estensione {#talk-url-extension}
-
-## Panoramica {#overview}
 
 Ricevi messaggi vocali dai visitatori della pagina Web. Include l&#39;interfaccia utente in hosting e l&#39;apprendimento automatico basato su cloud per trascrivere istantaneamente i messaggi vocali in approfondimenti testuali.
 
