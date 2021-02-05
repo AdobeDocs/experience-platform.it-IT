@@ -1,19 +1,19 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;mappare csv;mappare file CSV;mappare file csv a xdm;mappare csv a xdm;ui guide;mapper;mapping;mapping fields;mapping fields;mapping fields;mapping services;mapping function;'
 solution: Experience Platform
-title: Funzioni di preparazione dei dati
+title: Funzioni di mappatura dei dati
 topic: overview
 description: Questo documento introduce le funzioni di mappatura utilizzate con Data Prep.
 translation-type: tm+mt
-source-git-commit: bfcb1924e40b67c0af41dc789b5ff0bf8e8366e1
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '3597'
+source-wordcount: '3599'
 ht-degree: 3%
 
 ---
 
 
-# Funzioni di preparazione dei dati
+# Funzioni di mappatura di Data Prep
 
 Le funzioni Prep dati possono essere utilizzate per calcolare e calcolare i valori in base a quanto immesso nei campi di origine.
 
