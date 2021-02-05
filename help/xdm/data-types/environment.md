@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;environment;datatype;data-type;data type;
+keywords: ' Experience Platform;home;argomenti più comuni;schema;schema;XDM;campi;schemi;schemi;ambiente;tipo di dati;tipo di dati;tipo di dati;'
 solution: Experience Platform
 title: Tipo dati ambiente
 topic: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM di ambiente.
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '461'
 ht-degree: 4%
 
 ---
@@ -19,13 +19,13 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->Tutti i valori devono essere allineati con il database [DeviceAtlas](https://deviceatlas.com) , concesso in licenza per  Adobe.
+>Tutti i valori devono essere allineati con il database [DeviceAtlas](https://deviceatlas.com), concesso in licenza per  Adobe.
 
 <img src="../images/data-types/environment.png" width="400" /><br />
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `_dc` | Oggetto | Un oggetto che contiene un singolo campo, `language`, che indica la lingua dell&#39;ambiente in cui rappresentare le preferenze linguistiche, geografiche o culturali dell&#39;utente per la presentazione dei dati. Le lingue sono specificate nel codice della lingua come definito in [IETF RFC 3066](https://www.ietf.org/rfc/rfc3066.txt). |
+| `_dc` | Oggetto | Un oggetto che contiene un singolo campo, `language`, che indica la lingua dell&#39;ambiente per rappresentare le preferenze linguistiche, geografiche o culturali dell&#39;utente per la presentazione dei dati. Le lingue sono specificate nel codice della lingua come definito in [IETF RFC 3066](https://www.ietf.org/rfc/rfc3066.txt). |
 | `browserDetails` | [Dettagli del browser](./browser-details.md) | Descrive i dettagli specifici dell&#39;ambiente del browser, come nome del browser, versione, versione JavaScript, stringa agente utente e linguaggio di accettazione. |
 | `ISP` | Stringa | Nome del provider di servizi Internet dell&#39;utente. |
 | `carrier` | Stringa | Nome del gestore della rete mobile o MNO (noto anche come fornitore di servizi wireless, vettore wireless, società cellulare o vettore di rete mobile) che vende e fornisce servizi di comunicazione all&#39;utente. |
@@ -37,7 +37,7 @@ ht-degree: 4%
 | `operatingSystem` | Stringa | Nome del sistema operativo utilizzato al momento dell&#39;osservazione. L&#39;attributo non deve contenere informazioni sulla versione, ad esempio `10.5.3`, ma deve contenere denominazioni &quot;edition&quot; quali `Ultimate` o `Professional`. |
 | `operatingSystemVendor` | Stringa | Nome del fornitore del sistema operativo utilizzato al momento dell&#39;osservazione. |
 | `operatingSystemVersion` | Stringa | Identificatore completo della versione per il sistema operativo utilizzato al momento dell&#39;osservazione. Le versioni sono generalmente composte numericamente, ma possono essere in un formato definito dal fornitore. |
-| `type` | Stringa | Il tipo di ambiente dell&#39;applicazione. Cfr. l&#39; [appendice](#type) per i valori accettati. |
+| `type` | Stringa | Il tipo di ambiente dell&#39;applicazione. Per i valori accettati, vedere l&#39; [appendice](#type). |
 | `viewportHeight` | Intero | La dimensione verticale in pixel della finestra in cui è stata visualizzata l&#39;esperienza. Per un evento di visualizzazione Web, si tratta dell&#39;altezza della finestra del browser. |
 | `viewPortWidth` | Intero | La dimensione orizzontale in pixel della finestra in cui è stata visualizzata l&#39;esperienza. Per un evento di visualizzazione Web, si tratta della larghezza di visualizzazione del browser. |
 
@@ -48,7 +48,7 @@ Per ulteriori dettagli sul mixin, fare riferimento al repository XDM pubblico:
 
 ## Appendice
 
-La sezione seguente contiene informazioni aggiuntive sul tipo di [!UICONTROL Device] dati.
+La sezione seguente contiene informazioni aggiuntive sul tipo di dati [!UICONTROL Device].
 
 ## Valori accettati per il tipo {#type}
 
