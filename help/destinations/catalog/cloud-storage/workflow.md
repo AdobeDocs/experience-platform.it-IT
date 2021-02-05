@@ -1,22 +1,19 @@
 ---
 keywords: destinazione di archiviazione cloud;archiviazione cloud
-title: Flusso di lavoro per destinazioni di archiviazione cloud
-seo-title: Flusso di lavoro per destinazioni di archiviazione cloud
+title: Creare una destinazione di archiviazione cloud
 type: Tutorial
 description: Istruzioni per la connessione alle posizioni di archiviazione cloud
 seo-description: Istruzioni per la connessione alle posizioni di archiviazione cloud
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
 
 
-# Flusso di lavoro per creare destinazioni di archiviazione cloud
-
-## Panoramica
+# Creare una destinazione di archiviazione cloud
 
 In questa pagina viene illustrato come connettersi alle posizioni di archiviazione cloud in Adobe Experience Platform.
 
