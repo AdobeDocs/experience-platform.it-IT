@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform ;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API;anteprima;esempio
-title: Anteprima profilo - API profilo cliente in tempo reale
+title: Endpoint API stato esempio profilo
 description: Utilizzando gli endpoint API del profilo cliente in tempo reale, potete visualizzare l'anteprima dell'ultimo esempio di successo dei dati del profilo, nonché elencare la distribuzione del profilo per set di dati e per namespace di identità all'interno di Adobe Experience Platform.
 topic: guide
 translation-type: tm+mt
-source-git-commit: fe93a3672f65168744b3a242be7f42012f323544
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1551'
+source-wordcount: '1550'
 ht-degree: 1%
 
 ---
