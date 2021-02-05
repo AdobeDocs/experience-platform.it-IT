@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;run scheduled queries;run scheduled query;Query service;scheduled queries;scheduled query;
+keywords: ' Experience Platform;home;argomenti popolari;servizio query;eseguire query programmate;eseguire query programmate;servizio query;query programmate;query programmate;'
 solution: Experience Platform
-title: Guida per gli sviluppatori di Query Service
+title: Endpoint API esecuzione query pianificata
 topic: runs for scheduled queries
 description: Le sezioni seguenti descrivono le varie chiamate API che è possibile effettuare per eseguire query pianificate con l'API di Query Service.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '696'
 ht-degree: 2%
 
 ---
 
 
-# Esecuzione per query pianificate
+# Endpoint esecuzione query pianificata
 
 ## Chiamate API di esempio
 
-Ora che hai compreso quali intestazioni utilizzare, sei pronto a iniziare a effettuare chiamate all&#39; [!DNL Query Service] API. Le sezioni seguenti descrivono le varie chiamate API che potete effettuare tramite l&#39; [!DNL Query Service] API. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
+Ora che hai compreso quali intestazioni utilizzare, sei pronto a iniziare a effettuare chiamate all&#39;API [!DNL Query Service]. Le sezioni seguenti descrivono le varie chiamate API che potete effettuare tramite l&#39;API [!DNL Query Service]. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
 
 ### Recupera un elenco di tutte le esecuzioni per una query pianificata specificata
 
-È possibile recuperare un elenco di tutte le esecuzioni per una specifica query pianificata, indipendentemente dal fatto che siano in esecuzione o già completate. Questa operazione viene eseguita eseguendo una richiesta di GET all&#39; `/schedules/{SCHEDULE_ID}/runs` endpoint, dove `{SCHEDULE_ID}` è il `id` valore della query pianificata di cui si desidera recuperare le esecuzioni.
+È possibile recuperare un elenco di tutte le esecuzioni per una specifica query pianificata, indipendentemente dal fatto che siano in esecuzione o già completate. Questa operazione viene eseguita eseguendo una richiesta di GET all&#39;endpoint `/schedules/{SCHEDULE_ID}/runs`, dove `{SCHEDULE_ID}` è il valore `id` della query pianificata di cui si desidera recuperare le esecuzioni.
 
 **Formato API**
 
@@ -32,8 +32,8 @@ GET /schedules/{SCHEDULE_ID}/runs?{QUERY_PARAMETERS}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Il `id` valore della query pianificata che si desidera recuperare. |
-| `{QUERY_PARAMETERS}` | (*Facoltativo*) Parametri aggiunti al percorso di richiesta che configurano i risultati restituiti nella risposta. È possibile includere più parametri, separati da e-mail (`&`). I parametri disponibili sono elencati di seguito. |
+| `{SCHEDULE_ID}` | Il valore `id` della query pianificata che si desidera recuperare. |
+| `{QUERY_PARAMETERS}` | (*Optional*) Parametri aggiunti al percorso di richiesta che configurano i risultati restituiti nella risposta. È possibile includere più parametri, separati da e-mail (`&`). I parametri disponibili sono elencati di seguito. |
 
 **Parametri query**
 
@@ -41,10 +41,10 @@ Di seguito è riportato un elenco di parametri di query disponibili per le esecu
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `orderby` | Specifica il campo in base al quale ordinare i risultati. I campi supportati sono `created` e `updated`. Ad esempio, `orderby=created` ordinerà i risultati in base alla creazione in ordine crescente. Se si aggiunge un elemento `-` prima della creazione (`orderby=-created`), gli elementi verranno ordinati in base alla creazione in ordine decrescente. |
-| `limit` | Specifica il limite delle dimensioni di pagina per controllare il numero di risultati inclusi in una pagina. (valore *predefinito: 20*) |
-| `start` | Consente di scostare l&#39;elenco di risposte utilizzando la numerazione basata su zero. Ad esempio, `start=2` restituirà un elenco a partire dalla terza query elencata. (valore *predefinito: 0*) |
-| `property` | Filtrare i risultati in base ai campi. I filtri **devono** essere con escape HTML. Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `created`, `state`e `externalTrigger`. L&#39;elenco degli operatori supportati è `>` (maggiore di), `<` (minore di) e `==` (uguale a) e `!=` (non uguale a). Ad esempio, `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` restituirà tutte le esecuzioni che hanno creato, avuto successo e creato manualmente dopo il 20 aprile 2019. |
+| `orderby` | Specifica il campo in base al quale ordinare i risultati. I campi supportati sono `created` e `updated`. Ad esempio, `orderby=created` ordinerà i risultati in base alla creazione in ordine crescente. L&#39;aggiunta di un `-` prima della creazione (`orderby=-created`) consente di ordinare gli elementi in base alla creazione in ordine decrescente. |
+| `limit` | Specifica il limite delle dimensioni di pagina per controllare il numero di risultati inclusi in una pagina. (*Valore predefinito: 20*) |
+| `start` | Consente di scostare l&#39;elenco di risposte utilizzando la numerazione basata su zero. Ad esempio, `start=2` restituirà un elenco a partire dalla terza query elencata. (*Valore predefinito: 0*) |
+| `property` | Filtrare i risultati in base ai campi. I filtri **devono essere preceduti da una sequenza di escape HTML.** Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `created`, `state` e `externalTrigger`. L&#39;elenco degli operatori supportati è `>` (maggiore di), `<` (minore di), `==` (uguale a) e `!=` (non uguale a). Ad esempio, `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` restituirà tutte le esecuzioni create manualmente, completate e create dopo il 20 aprile 2019. |
 
 **Richiesta**
 
@@ -150,11 +150,11 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di esecuzioni 
 
 >[!NOTE]
 >
->È possibile utilizzare il valore di `_links.cancel` per [arrestare un&#39;esecuzione per una query](#immediately-stop-a-run-for-a-specific-scheduled-query)pianificata specificata.
+>È possibile utilizzare il valore di `_links.cancel` per [interrompere un&#39;esecuzione per una query pianificata specificata](#immediately-stop-a-run-for-a-specific-scheduled-query).
 
 ### Attivazione immediata di un&#39;esecuzione per una query pianificata specifica
 
-È possibile attivare immediatamente un&#39;esecuzione per una query pianificata specificata eseguendo una richiesta di POST all&#39; `/schedules/{SCHEDULE_ID}/runs` endpoint, dove `{SCHEDULE_ID}` è il `id` valore della query pianificata di cui si desidera attivare l&#39;esecuzione.
+È possibile attivare immediatamente un&#39;esecuzione per una query pianificata specificata effettuando una richiesta di POST all&#39;endpoint `/schedules/{SCHEDULE_ID}/runs`, dove `{SCHEDULE_ID}` è il valore `id` della query pianificata di cui si desidera attivare l&#39;esecuzione.
 
 **Formato API**
 
@@ -185,7 +185,7 @@ Una risposta corretta restituisce lo stato HTTP 202 (Accettato) con il seguente 
 
 ### Recupero dei dettagli di un&#39;esecuzione per una query pianificata specifica
 
-È possibile recuperare i dettagli di un&#39;esecuzione per una query pianificata specifica, eseguendo una richiesta di GET all&#39; `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` endpoint e fornendo sia l&#39;ID della query pianificata che l&#39;esecuzione nel percorso della richiesta.
+È possibile recuperare i dettagli relativi a un&#39;esecuzione per una query pianificata specifica eseguendo una richiesta di GET all&#39;endpoint `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` e fornendo sia l&#39;ID della query pianificata che l&#39;esecuzione nel percorso della richiesta.
 
 **Formato API**
 
@@ -195,8 +195,8 @@ GET /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Il `id` valore della query pianificata di cui si desidera recuperare i dettagli. |
-| `{RUN_ID}` | Il `id` valore dell&#39;esecuzione che si desidera recuperare. |
+| `{SCHEDULE_ID}` | Il valore `id` della query pianificata di cui si desidera recuperare i dettagli. |
+| `{RUN_ID}` | Il valore `id` dell&#39;esecuzione che si desidera recuperare. |
 
 **Richiesta**
 
@@ -246,7 +246,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli dell&#39;esec
 
 ### Interrompere immediatamente un&#39;esecuzione per una specifica query pianificata
 
-È possibile interrompere immediatamente un&#39;esecuzione per una specifica query pianificata effettuando una richiesta di PATCH all&#39; `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` endpoint e fornendo sia l&#39;ID della query pianificata che l&#39;esecuzione nel percorso della richiesta.
+È possibile interrompere immediatamente un&#39;esecuzione per una specifica query pianificata effettuando una richiesta di PATCH all&#39;endpoint `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` e fornendo sia l&#39;ID della query pianificata che l&#39;esecuzione nel percorso della richiesta.
 
 **Formato API**
 
@@ -256,8 +256,8 @@ PATCH /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Il `id` valore della query pianificata di cui si desidera recuperare i dettagli. |
-| `{RUN_ID}` | Il `id` valore dell&#39;esecuzione che si desidera recuperare. |
+| `{SCHEDULE_ID}` | Il valore `id` della query pianificata di cui si desidera recuperare i dettagli. |
+| `{RUN_ID}` | Il valore `id` dell&#39;esecuzione che si desidera recuperare. |
 
 **Richiesta**
 
