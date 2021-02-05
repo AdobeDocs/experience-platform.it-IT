@@ -1,14 +1,14 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;servizio query;servizio query;scrivere query;scrivere query;'
 solution: Experience Platform
-title: Scrittura di query
+title: Guida generale per l'esecuzione delle query nel servizio query
 topic: queries
 type: Tutorial
 description: In questo documento sono riportati i dettagli importanti da conoscere durante la scrittura di query in Adobe Experience Platform Query Service.
 translation-type: tm+mt
-source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '976'
 ht-degree: 3%
 
 ---
