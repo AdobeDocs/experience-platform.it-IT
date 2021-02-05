@@ -1,21 +1,17 @@
 ---
 keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Google Ad Manager;Google Ad Manager;Google ad manager
-title: Destinazione Google Ad Manager
-seo-title: Destinazione Google Ad Manager
-description: 'Google Ad Manager, precedentemente noto come DoubleClick for Publishers o DoubleClick AdX, è una piattaforma di annunci pubblicitari di Google che offre agli editori i mezzi per gestire la visualizzazione degli annunci sui loro siti Web, attraverso video e nelle app mobili. '
-seo-description: 'Google Ad Manager, precedentemente noto come DoubleClick for Publishers o DoubleClick AdX, è una piattaforma di annunci pubblicitari di Google che offre agli editori i mezzi per gestire la visualizzazione degli annunci sui loro siti Web, attraverso video e nelle app mobili. '
+title: Destinazione connessione Google Ad Manager
+description: 'Google Ad Manager, precedentemente noto come DoubleClick for Publishers o DoubleClick AdX, è una piattaforma di annunci pubblicitari di Google che offre agli editori i mezzi per gestire la visualizzazione degli annunci sui loro siti Web, attraverso video e nelle app mobili.  '
 translation-type: tm+mt
-source-git-commit: bb2fc2658d32c59b476dd9d526eb8bc2f055a1af
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '659'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Google Ad Manager Destination]
-
-## Panoramica
+# [!DNL Google Ad Manager] connection
 
 [!DNL Google Ad Manager], precedentemente noto come  [!DNL DoubleClick] per gli editori o  [!DNL DoubleClick AdX]per gli editori, è una piattaforma di annunci da  [!DNL Google] cui gli editori possono gestire la visualizzazione degli annunci sui propri siti Web, attraverso video e nelle app mobili.
 
