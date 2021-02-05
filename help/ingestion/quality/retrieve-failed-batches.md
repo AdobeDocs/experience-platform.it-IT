@@ -1,20 +1,20 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;recuperare batch non riusciti;batch non riusciti;ingestione batch;batch non riusciti;Ottenere batch non riusciti;Ottenere batch non riusciti;Download batch non riusciti;download batch con errore;'
 solution: Experience Platform
-title: Recupero batch non riusciti
+title: Recupero di batch con errore tramite l'API di accesso ai dati
 topic: tutorial
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare informazioni su un batch con errore utilizzando le API di inserimento dati.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '652'
 ht-degree: 2%
 
 ---
 
 
-# Recupero di batch con errore tramite l&#39;API
+# Recupero di batch non riusciti tramite l&#39;API di accesso ai dati
 
 Adobe Experience Platform offre due metodi per caricare e acquisire i dati. Potete utilizzare l&#39;assimilazione batch, che consente di inserire i dati utilizzando vari tipi di file (come i CSV), oppure l&#39;assimilazione in streaming, che consente di inserire i dati in [!DNL Platform] utilizzando gli endpoint in streaming in tempo reale.
 
