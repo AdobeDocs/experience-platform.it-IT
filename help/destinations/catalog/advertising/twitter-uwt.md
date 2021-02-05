@@ -1,21 +1,17 @@
 ---
 keywords: twitter;Twitter;twitter universale web tag;Twitter universale web tag;Twitter UWT Tag;Twitter uwt;twitter uwwwwwwwwwwwt
-title: Estensione dei tag Twitter Universal Website
-seo-title: Estensione dei tag Twitter Universal Website
+title: Destinazione di estensione tag universali Twitter
 description: L'estensione Tag Web site universale di Twitter è una destinazione pubblicitaria in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L'estensione Tag Web site universale di Twitter è una destinazione pubblicitaria in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '527'
+source-wordcount: '494'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Twitter Universal Website Tag] Estensione {#twitter-uwt-extension}
-
-## Panoramica {#overview}
 
 [!DNL Twitter Universal Website Tag] fornisce azioni per inviare beacon al tag UWT di Twitter.
 
