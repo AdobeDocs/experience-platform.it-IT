@@ -1,21 +1,17 @@
 ---
 keywords: Invoca;invoca
-title: Estensione Invoca Tags
-seo-title: Estensione Invoca Tags
+title: Destinazione estensione Invoca tag
 description: L’estensione Invoca Tags è una voce della destinazione del cliente in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L’estensione Invoca Tags è una voce della destinazione del cliente in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '522'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Invoca Tags] Estensione {#invoca-extension}
-
-## Panoramica {#overview}
 
 [!DNL Invoca] porta informazioni audio e sui dati delle chiamate nel percorso di clienti digitali. Grazie alla piattaforma di intelligence delle chiamate [!DNL Invoca’s], gli esperti di marketing possono finalmente disporre di dati analitici per misurare i risultati delle chiamate e legare le conversioni offline alla spesa digitale.
 
