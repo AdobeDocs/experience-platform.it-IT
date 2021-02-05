@@ -1,14 +1,14 @@
 ---
 keywords: ' Experience Platform;home;argomenti più comuni;connessione all''origine dati'
 solution: Experience Platform
-title: Acquisire dati Parquet da un sistema di archiviazione cloud di terze parti tramite l'API del servizio di flusso
+title: Acquisizione di dati parquet da un sistema di archiviazione cloud di terze parti tramite l'API del servizio di flusso
 topic: overview
 type: Tutorial
-description: Questa esercitazione utilizza l’API del servizio di flusso per illustrare i passaggi necessari per acquisire i dati di Parquet da un sistema di archiviazione cloud di terze parti.
+description: Questa esercitazione utilizza l’API del servizio di flusso per illustrare i passaggi necessari per acquisire i dati Apache Parquet da un sistema di archiviazione cloud di terze parti.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '1100'
+source-wordcount: '1101'
 ht-degree: 2%
 
 ---
