@@ -1,19 +1,19 @@
 ---
 keywords: ' Experience Platform;home;argomenti più comuni;dataset;Dataset;creare un dataset;creare un dataset;abilitare il dataset'
 solution: Experience Platform
-title: Creare un dataset
+title: Creare un set di dati nell'API
 topic: developer guide
-description: In questo documento viene illustrato come creare un oggetto dataset in Catalog.
+description: In questo documento viene illustrato come creare un oggetto dataset nell'API di Catalog Service.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '232'
 ht-degree: 1%
 
 ---
 
 
-# Creare un dataset
+# Creare un set di dati nell&#39;API
 
 Per creare un dataset utilizzando l&#39;API [!DNL Catalog], è necessario conoscere il valore `$id` dello schema [!DNL Experience Data Model] (XDM) su cui verrà basato il dataset. Una volta ottenuto l&#39;ID dello schema, è possibile creare un dataset effettuando una richiesta di POST all&#39;endpoint `/datasets` nell&#39;API [!DNL Catalog].
 
