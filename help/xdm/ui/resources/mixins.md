@@ -1,11 +1,11 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati;ui;workspace;mixin;mixin;'
 solution: Experience Platform
-title: Creazione e modifica di mixin nell’interfaccia utente
+title: Creare e modificare mixin nell’interfaccia utente
 description: Scopri come creare e modificare i mixin nell’interfaccia utente del Experience Platform .
 topic: user guide
 translation-type: tm+mt
-source-git-commit: cf74c7922271035474c7f10534692983add48616
+source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 0%
