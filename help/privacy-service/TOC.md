@@ -1,34 +1,34 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Guida ad Adobe Experience Platform Privacy Service
-breadcrumb-title: Guida a Privacy Service
+user-guide-title: Guida di Adobe Experience Platform Privacy Service
+breadcrumb-title: Guida di Privacy Service
 user-guide-description: Gestisci le richieste di dati dei clienti per rispettare le normative legali sulla privacy come RGPD e CCPA.
 translation-type: tm+mt
-source-git-commit: 37f07e11abe3c6757edc635153454339118fc45c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '91'
-ht-degree: 32%
+source-wordcount: '86'
+ht-degree: 39%
 
 ---
 
 
-# Adobe Experience Platform Privacy Service {#privacy}
+#  Adobe Experience Platform Privacy Service {#privacy}
 
 * [Panoramica Privacy Service](home.md)
-* [Applicazioni Privacy Service e Experience Cloud](experience-cloud-apps.md)
+* [Applicazioni Privacy Service e Experience Cloud ](experience-cloud-apps.md)
 * [Dati identità per richieste di privacy](identity-data.md)
 * [Panoramica della libreria JS](js-library.md)
-* Privacy Service API {#api}
+* API Privacy Service {#api}
    * [Introduzione](api/getting-started.md)
    * [Lavori di privacy](api/privacy-jobs.md)
    * [Consenso](api/consent.md)
    * [Appendice](api/appendix.md)
 * Interfaccia Privacy Service {#ui}
-   * [Panoramica dell’interfaccia Privacy Service](ui/overview.md)
-   * [Guida utente Privacy Service](ui/user-guide.md)
+   * [Panoramica](ui/overview.md)
+   * [Gestire i processi di privacy](ui/user-guide.md)
 * [Iscriviti agli eventi sulla privacy](privacy-events.md)
-* Guide alla regolamentazione sulla privacy {#regulations}
+* Normative sulla privacy {#regulations}
    * [Panoramica](regulations/overview.md)
    * [Domande frequenti](regulations/faq.md)
    * [Terminologia](regulations/terminology.md)
