@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;catalog;multiple object lookup;api
+keywords: ' Experience Platform;home;argomenti popolari;catalogo;ricerca di più oggetti;api'
 solution: Experience Platform
-title: Cercare più oggetti
+title: Ricerca di più oggetti catalogo
 topic: developer guide
 description: Se si desidera visualizzare diversi oggetti specifici, anziché effettuare una richiesta per oggetto, Catalog fornisce una semplice scelta rapida per richiedere più oggetti dello stesso tipo. Potete utilizzare una singola richiesta di GET per restituire più oggetti specifici includendo un elenco di ID separati da virgola.
 translation-type: tm+mt
-source-git-commit: b791e9e060d7686e8fc264c445bbfd1e01ff5987
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '237'
 ht-degree: 1%
 
 ---
 
 
-# Cercare più oggetti
+# Cercare più oggetti catalogo
 
-Se si desidera visualizzare diversi oggetti specifici, anziché effettuare una richiesta per oggetto, [!DNL Catalog] fornisce una semplice scelta rapida per richiedere più oggetti dello stesso tipo. Potete utilizzare una singola richiesta di GET per restituire più oggetti specifici includendo un elenco di ID separati da virgola.
+Se si desidera visualizzare diversi oggetti specifici, invece di effettuare una richiesta per oggetto, [!DNL Catalog] fornisce una semplice scelta rapida per richiedere più oggetti dello stesso tipo. Potete utilizzare una singola richiesta di GET per restituire più oggetti specifici includendo un elenco di ID separati da virgola.
 
 >[!NOTE]
 >
->Anche quando si richiedono [!DNL Catalog] oggetti specifici, è comunque consigliabile eseguire una `properties` query sui parametri per restituire solo le proprietà necessarie.
+>Anche quando si richiedono specifici oggetti [!DNL Catalog], è comunque consigliabile utilizzare il parametro di query `properties` per restituire solo le proprietà necessarie.
 
 **Formato API**
 
@@ -30,7 +30,7 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY
 
 | Parametro | Descrizione |
 | -------- | ----------- |
-| `{OBJECT_TYPE}` | Tipo di [!DNL Catalog] oggetto da recuperare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Il tipo di oggetto [!DNL Catalog] da recuperare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{ID}` | Identificatore di uno degli oggetti specifici che si desidera recuperare. |
 
 **Richiesta**
@@ -48,11 +48,11 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco dei set di dati specificati, contenente solo le proprietà (`name`, `description`e `files`) richieste per ciascuno di essi.
+Una risposta corretta restituisce un elenco dei set di dati specificati, contenente solo le proprietà richieste (`name`, `description` e `files`) per ciascuno di essi.
 
 >[!NOTE]
 >
->Se un oggetto restituito non contiene una o più delle proprietà richieste indicate dalla `properties` query, la risposta restituisce solo le proprietà richieste che non include, come mostrato in ***`Sample Dataset 3`*** e ***`Sample Dataset 4`*** di seguito.
+>Se un oggetto restituito non contiene una o più delle proprietà richieste indicate dalla query `properties`, la risposta restituisce solo le proprietà richieste che non include, come mostrato in ***`Sample Dataset 3`*** e ***`Sample Dataset 4`*** di seguito.
 
 ```json
 {
