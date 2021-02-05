@@ -1,20 +1,20 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;green plum;Greenplum'
 solution: Experience Platform
-title: Creare un connettore GreenPlum utilizzando l'API del servizio di flusso
+title: Creare una connessione di origine GreenPlum utilizzando l'API del servizio di flusso
 topic: overview
 type: Tutorial
-description: Questa esercitazione utilizza l’API del servizio di flusso per guidarvi attraverso i passaggi necessari per collegare GreenPlum a  Experience Platform.
+description: Scopri come collegare GreenPlum ad Adobe Experience Platform utilizzando l’API del servizio di flusso.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '549'
 ht-degree: 2%
 
 ---
 
 
-# Creare un connettore [!DNL GreenPlum] utilizzando l&#39;API [!DNL Flow Service]
+# Creare una connessione di origine [!DNL GreenPlum] utilizzando l&#39;API [!DNL Flow Service]
 
 >[!NOTE]
 >
