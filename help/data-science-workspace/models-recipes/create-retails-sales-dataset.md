@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform ;ricetta di vendita al dettaglio;Data Science Workspace;argomenti popolari;ricette
 solution: Experience Platform
-title: Creare lo schema di vendita al dettaglio e il dataset
+title: Creare lo schema di vendita al dettaglio e il set di dati
 topic: tutorial
 type: Tutorial
 description: Questa esercitazione fornisce i prerequisiti e le risorse richiesti per tutte le altre esercitazioni di Adobe Experience Platform Data Science Workspace. Al termine, lo schema Vendite al dettaglio e i set di dati saranno disponibili per voi e per i membri dell'organizzazione IMS  Experience Platform.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 0%
@@ -112,7 +112,7 @@ per ulteriori informazioni.
 È stato anche acquisito con successo i dati di esempio Vendite al dettaglio in [!DNL Experience Platform] utilizzando lo script di avvio fornito.
 
 Per continuare a utilizzare i dati acquisiti:
-- [Analizzare i dati utilizzando i notebook Jupyter](../jupyterlab/analyze-your-data.md)
-   - Utilizza i notebook Jupyter in Data Science Workspace per accedere, esplorare, visualizzare e comprendere i tuoi dati.
+- [Analizzare i dati utilizzando i blocchi appunti Jupyter](../jupyterlab/analyze-your-data.md)
+   - Utilizza Jupyter Notebooks in Data Science Workspace per accedere, esplorare, visualizzare e comprendere i tuoi dati.
 - [Creare pacchetti di file sorgente in una casella](./package-source-files-recipe.md)
    - Segui questa esercitazione per apprendere come portare il tuo modello in [!DNL Data Science Workspace] creando pacchetti di file sorgente in un file Recipe importabile.
