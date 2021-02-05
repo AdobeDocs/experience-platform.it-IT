@@ -1,14 +1,14 @@
 ---
 keywords: ' Experience Platform;home;argomenti più comuni;ui;interfaccia utente;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;editor schema;Editor schema;schema;schema;schemi;schemi;schemi;creare;relazione;relazione;riferimento;riferimento;'
 solution: Experience Platform
-title: Definire una relazione tra due schemi utilizzando l'Editor schema
+title: Definire una relazione tra due schemi utilizzando l'Editor di schema
 description: Questo documento fornisce un'esercitazione per definire una relazione tra due schemi utilizzando l'Editor di schema nell'interfaccia utente del Experience Platform .
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '915'
 ht-degree: 1%
 
 ---
