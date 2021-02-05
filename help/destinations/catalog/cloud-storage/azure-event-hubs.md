@@ -1,25 +1,21 @@
 ---
 keywords: Destinazione hub eventi di Azure;hub eventi di azzure;azure eventhub
-title: (Beta) Destinazione degli hub eventi di Azure
-seo-title: (Beta) Destinazione degli hub eventi di Azure
+title: (Beta) Destinazione connessione hub eventi di Azure
 description: Crea una connessione in uscita in tempo reale all'archivio degli hub eventi di Azure per lo streaming dei dati dal Experience Platform .
-seo-description: Crea una connessione in uscita in tempo reale all'archivio degli hub eventi di Azure per lo streaming dei dati dal Experience Platform .
 translation-type: tm+mt
-source-git-commit: 97c0a9f4726ec85b7a72dc682fbd201a6152c1ba
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '478'
 ht-degree: 2%
 
 ---
 
 
-# (Beta) [!DNL Azure Event Hubs] destinazione
+# (Beta) Connessione [!DNL Azure Event Hubs]
 
 >[!IMPORTANT]
 >
 >La destinazione [!DNL Azure Event Hubs] in Platform è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
-
-## Panoramica {#overview}
 
 [!DNL Azure Event Hubs] è una grande piattaforma di streaming dati e un servizio di caricamento eventi. Può ricevere ed elaborare milioni di eventi al secondo. I dati inviati a un hub eventi possono essere trasformati e memorizzati utilizzando qualsiasi provider di analisi in tempo reale o adattatori di batch/storage.
 
