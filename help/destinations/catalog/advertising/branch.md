@@ -1,21 +1,17 @@
 ---
 keywords: diramazione;estensione ramo;destinazione ramo
-title: Estensione ramo
-seo-title: Estensione ramo
+title: Destinazione estensione ramo
 description: L'estensione Branch è una destinazione pubblicitaria in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L'estensione Branch è una destinazione pubblicitaria in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '484'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Branch] Estensione {#branch-extension}
-
-## Panoramica {#overview}
 
 Branch fornisce collegamenti e soluzioni potenti che consentono di acquisire, interagire e misurare su tutti i dispositivi, canali e piattaforme.
 
