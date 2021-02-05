@@ -1,13 +1,13 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;CJA;analisi dei percorsi;analisi percorsi cliente;orchestrazione campagna;orchestrazione;percorso cliente;percorso;orchestrazione percorso;funzionalità;flusso di lavoro'
 solution: Experience Platform
-title: Panoramica della documentazione Adobe Experience Platform
+title: 'Panoramica della documentazione relativa al Experience Platform '
 topic: overview
 description: La documentazione Adobe Experience Platform è disponibile in diversi formati, tra cui panoramiche, esercitazioni e guide per l'interfaccia utente e l'API. Di seguito viene fornita una breve descrizione dei tipi di documentazione più comuni disponibili per  servizi di Experience Platform.
 translation-type: tm+mt
-source-git-commit: 96600567bb4965a1611e2b9a7cd6cb49298a567f
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '483'
 ht-degree: 0%
 
 ---
