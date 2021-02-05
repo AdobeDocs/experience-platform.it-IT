@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;string functions;string;
+keywords: ' Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Segmentation Service;pql;PQL;Profile Query Language;funzioni stringa;stringa;'
 solution: Experience Platform
-title: Funzioni stringa
+title: Funzioni stringa PQL
 topic: developer guide
 description: Il linguaggio PQL (Profile Query Language) offre funzioni che semplificano l'interazione con le stringhe.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '784'
 ht-degree: 6%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 6%
 
 ## Simile
 
-La `like` funzione viene utilizzata per determinare se una stringa corrisponde a un pattern specificato.
+La funzione `like` viene utilizzata per determinare se una stringa corrisponde a un pattern specificato.
 
 **Formato**
 
@@ -42,7 +42,7 @@ city like "%es%"
 
 ## Inizia con
 
-La `startsWith` funzione viene utilizzata per determinare se una stringa inizia con una sottostringa specificata.
+La funzione `startsWith` viene utilizzata per determinare se una stringa inizia con una sottostringa specificata.
 
 **Formato**
 
@@ -66,7 +66,7 @@ person.name.startsWith("Joe")
 
 ## Non inizia con
 
-La `doesNotStartWith` funzione viene utilizzata per determinare se una stringa non inizia con una sottostringa specificata.
+La funzione `doesNotStartWith` viene utilizzata per determinare se una stringa non inizia con una sottostringa specificata.
 
 **Formato**
 
@@ -90,7 +90,7 @@ person.name.doesNotStartWith("Joe")
 
 ## Termina con
 
-La `endsWith` funzione viene utilizzata per determinare se una stringa termina con una sottostringa specificata.
+La funzione `endsWith` viene utilizzata per determinare se una stringa termina con una sottostringa specificata.
 
 **Formato**
 
@@ -114,7 +114,7 @@ person.emailAddress.endsWith(".com")
 
 ## Non termina con
 
-La `doesNotEndWith` funzione viene utilizzata per determinare se una stringa non termina con una sottostringa specificata.
+La funzione `doesNotEndWith` viene utilizzata per determinare se una stringa non termina con una sottostringa specificata.
 
 **Formato**
 
@@ -138,7 +138,7 @@ person.emailAddress.doesNotEndWith(".com")
 
 ## Contains
 
-La `contains` funzione viene utilizzata per determinare se una stringa contiene una sottostringa specificata.
+La funzione `contains` viene utilizzata per determinare se una stringa contiene una sottostringa specificata.
 
 **Formato**
 
@@ -162,7 +162,7 @@ person.emailAddress.contains("2010@gm")
 
 ## Non contiene
 
-La `doesNotContain` funzione viene utilizzata per determinare se una stringa non contiene una sottostringa specificata.
+La funzione `doesNotContain` viene utilizzata per determinare se una stringa non contiene una sottostringa specificata.
 
 **Formato**
 
@@ -186,7 +186,7 @@ person.emailAddress.doesNotContain("2010@gm")
 
 ## È uguale a
 
-La `equals` funzione viene utilizzata per determinare se una stringa è uguale alla stringa specificata.
+La funzione `equals` viene utilizzata per determinare se una stringa è uguale alla stringa specificata.
 
 **Formato**
 
@@ -209,7 +209,7 @@ person.name.equals("John")
 
 ## Non uguale a
 
-La `notEqualTo` funzione viene utilizzata per determinare se una stringa non è uguale alla stringa specificata.
+La funzione `notEqualTo` viene utilizzata per determinare se una stringa non è uguale alla stringa specificata.
 
 **Formato**
 
@@ -232,7 +232,7 @@ person.name.notEqualTo("John")
 
 ## Corrisponde
 
-La `matches` funzione viene utilizzata per determinare se una stringa corrisponde a una specifica espressione regolare. Per ulteriori informazioni sui pattern di corrispondenza nelle espressioni regolari, fare riferimento a [questo documento](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) .
+La funzione `matches` viene utilizzata per determinare se una stringa corrisponde a una specifica espressione regolare. Per ulteriori informazioni sui pattern di corrispondenza nelle espressioni regolari, fare riferimento a [questo documento](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html).
 
 **Formato**
 
@@ -250,7 +250,7 @@ person.name.matches("(?i)^John")
 
 ## Gruppo di espressioni regolari
 
-La `regexGroup` funzione viene utilizzata per estrarre informazioni specifiche, in base all&#39;espressione regolare fornita.
+La funzione `regexGroup` viene utilizzata per estrarre informazioni specifiche, in base all&#39;espressione regolare fornita.
 
 **Formato**
 
@@ -268,5 +268,5 @@ emailAddress.regexGroup("@(\w+)", 1)
 
 ## Passaggi successivi
 
-Ora che hai imparato le funzioni stringa, puoi usarle nelle tue query PQL. Per ulteriori informazioni sulle altre funzioni PQL, consultate la panoramica [Lingua query](./overview.md)profilo.
+Ora che hai imparato le funzioni stringa, puoi usarle nelle tue query PQL. Per ulteriori informazioni sulle altre funzioni PQL, leggere la [Panoramica del linguaggio di query profilo](./overview.md).
 
