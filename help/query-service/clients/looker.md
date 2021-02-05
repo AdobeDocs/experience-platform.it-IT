@@ -1,27 +1,25 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;servizio query;servizio query;Looker;looker;connect to query service;'
 solution: Experience Platform
-title: Connetti con Looker
+title: Connect Loker to Query Service
 topic: connect
 description: Questo documento descrive i passaggi necessari per la connessione di Looker con Adobe Experience Platform Query Service.
 translation-type: tm+mt
-source-git-commit: bc1bbdddd75b11ac180b5e6faa391fd74e5f7e02
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Looker]
+# Connetti [!DNL Looker] al servizio query
 
 Questo documento descrive i passaggi per la connessione di [!DNL Looker] con Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
 > Questa guida presuppone che abbiate già accesso a [!DNL Looker] e che abbiate familiarità con come navigare all&#39;interfaccia. Ulteriori informazioni su [!DNL Looker] sono disponibili nella [documentazione  [!DNL Looker] ufficiale](https://docs.looker.com/).
-
-## Connetti [!DNL Looker] con la piattaforma
 
 Dopo aver eseguito l&#39;accesso in [!DNL Looker], selezionare **[!DNL Admin]**, seguito da **[!DNL Connections]**.
 
