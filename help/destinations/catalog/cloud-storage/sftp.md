@@ -1,21 +1,17 @@
 ---
 keywords: SFTP;sftp
-title: Destinazione SFTP
-seo-title: Destinazione SFTP
+title: Destinazione connessione SFTP
 description: Crea una connessione in uscita dal vivo al server SFTP per esportare periodicamente file di dati delimitati da  Experience Platform.
-seo-description: Crea una connessione in uscita dal vivo al server SFTP per esportare periodicamente file di dati delimitati da  Experience Platform.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '185'
 ht-degree: 0%
 
 ---
 
 
-# Destinazione SFTP
-
-## Panoramica
+# Connessione SFTP
 
 Crea una connessione in uscita dal vivo al server SFTP per esportare periodicamente file di dati delimitati da  Experience Platform.
 
