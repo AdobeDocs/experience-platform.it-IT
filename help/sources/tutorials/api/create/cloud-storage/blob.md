@@ -1,22 +1,22 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;Azure;azure blob;blob;blob;blob'
 solution: Experience Platform
-title: Creare un connettore BLOB di Azure utilizzando l'API del servizio di flusso
+title: Creazione di una connessione di origine BLOB di Azure tramite l'API del servizio di flusso
 topic: overview
 type: Tutorial
-description: Questa esercitazione utilizza l'API del servizio di flusso per seguire i passaggi necessari per connettere  Experience Platform a un archivio BLOB di Azure (in seguito denominato "BLOB").
+description: Scoprite come collegare Adobe Experience Platform ad Azure Blob utilizzando l'API del servizio di flusso.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '761'
 ht-degree: 2%
 
 ---
 
 
-# Creare un connettore [!DNL Azure Blob] utilizzando l&#39;API [!DNL Flow Service]
+# Creare una connessione di origine [!DNL Azure Blob] utilizzando l&#39;API [!DNL Flow Service]
 
-Questa esercitazione utilizza l&#39; [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) per guidarvi attraverso i passaggi necessari per connettere [!DNL Azure Blob] (in seguito denominato &quot;Blob&quot;) a  Experience Platform.
+Questa esercitazione utilizza l&#39; [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) per guidarvi attraverso i passaggi necessari per connettere [!DNL Azure Blob] (di seguito &quot;Blob&quot;) ad Adobe Experience Platform.
 
 ## Introduzione
 
@@ -25,7 +25,7 @@ Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Expe
 * [Origini](../../../../home.md):  Experience Platform consente l&#39;acquisizione di dati da varie fonti, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Piattaforma.
 * [Sandbox](../../../../../sandboxes/home.md):  Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per creare correttamente un connettore di origine [!DNL Blob] utilizzando l&#39;API [!DNL Flow Service].
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per creare correttamente una connessione di origine [!DNL Blob] utilizzando l&#39;API [!DNL Flow Service].
 
 ### Raccogli credenziali richieste
 
