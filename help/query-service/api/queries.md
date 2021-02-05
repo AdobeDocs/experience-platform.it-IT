@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;api guide;queries;query;Query service;
+keywords: ' Experience Platform;home;argomenti comuni;servizio query;guida API;query;servizio query;servizio query;'
 solution: Experience Platform
-title: Guida per gli sviluppatori di Query Service
+title: Endpoint API query
 topic: queries
 description: Le sezioni seguenti descrivono le chiamate che potete effettuare utilizzando l'endpoint /query nell'API del servizio di query.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '676'
 ht-degree: 2%
 
 ---
 
 
-# Query
+# Endpoint query
 
 ## Chiamate API di esempio
 
-Le sezioni seguenti descrivono le chiamate che potete effettuare utilizzando l&#39; `/queries` endpoint nell&#39; [!DNL Query Service] API. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
+Le sezioni seguenti descrivono le chiamate che potete effettuare utilizzando l&#39;endpoint `/queries` nell&#39;API [!DNL Query Service]. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
 
 ### Recupero di un elenco di query
 
-È possibile recuperare un elenco di tutte le query per l&#39;organizzazione IMS effettuando una richiesta di GET all&#39; `/queries` endpoint.
+È possibile recuperare un elenco di tutte le query per l&#39;organizzazione IMS effettuando una richiesta di GET all&#39;endpoint `/queries`.
 
 **Formato API**
 
@@ -38,12 +38,12 @@ Di seguito è riportato un elenco di parametri di query disponibili per l&#39;el
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `orderby` | Specifica il campo in base al quale ordinare i risultati. I campi supportati sono `created` e `updated`. Ad esempio, `orderby=created` ordinerà i risultati in base alla creazione in ordine crescente. Se si aggiunge un elemento `-` prima della creazione (`orderby=-created`), gli elementi verranno ordinati in base alla creazione in ordine decrescente. |
-| `limit` | Specifica il limite delle dimensioni di pagina per controllare il numero di risultati inclusi in una pagina. (valore *predefinito: 20*) |
-| `start` | Consente di scostare l&#39;elenco di risposte utilizzando la numerazione basata su zero. Ad esempio, `start=2` restituirà un elenco a partire dalla terza query elencata. (valore *predefinito: 0*) |
-| `property` | Filtrare i risultati in base ai campi. I filtri **devono** essere con escape HTML. Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `created`, `updated`, `state`e `id`. L&#39;elenco degli operatori supportati è `>` (maggiore di), `<` (minore di), `>=` (maggiore o uguale a), `<=` (minore o uguale a), `==` (uguale a), `!=` (non uguale a) e `~` (contiene). Ad esempio, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` restituisce tutte le query con l&#39;ID specificato. |
-| `excludeSoftDeleted` | Indica se includere o meno una query che è stata eliminata in modo soft. Ad esempio, `excludeSoftDeleted=false` includerà **** query eliminate con software. (*booleano, valore predefinito: true*) |
-| `excludeHidden` | Indica se devono essere visualizzate query non guidate dall&#39;utente. Impostando questo valore su false **verranno incluse** le query non guidate dall&#39;utente, come le definizioni CURSOR, FETCH o le query di metadati. (*booleano, valore predefinito: true*) |
+| `orderby` | Specifica il campo in base al quale ordinare i risultati. I campi supportati sono `created` e `updated`. Ad esempio, `orderby=created` ordinerà i risultati in base alla creazione in ordine crescente. L&#39;aggiunta di un `-` prima della creazione (`orderby=-created`) consente di ordinare gli elementi in base alla creazione in ordine decrescente. |
+| `limit` | Specifica il limite delle dimensioni di pagina per controllare il numero di risultati inclusi in una pagina. (*Valore predefinito: 20*) |
+| `start` | Consente di scostare l&#39;elenco di risposte utilizzando la numerazione basata su zero. Ad esempio, `start=2` restituirà un elenco a partire dalla terza query elencata. (*Valore predefinito: 0*) |
+| `property` | Filtrare i risultati in base ai campi. I filtri **devono essere preceduti da una sequenza di escape HTML.** Le virgole vengono utilizzate per combinare più set di filtri. I campi supportati sono `created`, `updated`, `state` e `id`. L&#39;elenco degli operatori supportati è `>` (maggiore di), `<` (minore di), `>=` (maggiore o uguale a), `<=` (minore o uguale a), `==` (uguale a), `!=` (non uguale a) e `~` (contiene). Ad esempio, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` restituirà tutte le query con l&#39;ID specificato. |
+| `excludeSoftDeleted` | Indica se includere o meno una query che è stata eliminata in modo soft. Ad esempio, `excludeSoftDeleted=false` includerà **query eliminate soft**. (*Booleano, valore predefinito: true*) |
+| `excludeHidden` | Indica se devono essere visualizzate query non guidate dall&#39;utente. Impostando questo valore su false, **verranno incluse query non guidate dall&#39;utente, come definizioni CURSOR, FETCH o query di metadati.** (*Booleano, valore predefinito: true*) |
 
 **Richiesta**
 
@@ -120,7 +120,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di query per l
 
 ### Creazione di una query
 
-Potete creare una nuova query eseguendo una richiesta di POST all&#39; `/queries` endpoint.
+Potete creare una nuova query eseguendo una richiesta di POST all&#39;endpoint `/queries`.
 
 **Formato API**
 
@@ -156,7 +156,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 202 (Accettato) con i dettagli della query appena creata. Una volta terminata l&#39;attivazione della query ed eseguita correttamente, la query `state` passerà da `SUBMITTED` a `SUCCESS`.
+Una risposta corretta restituisce lo stato HTTP 202 (Accettato) con i dettagli della query appena creata. Una volta terminata l&#39;attivazione della query ed eseguita correttamente, la `state` passerà da `SUBMITTED` a `SUCCESS`.
 
 ```json
 {
@@ -199,11 +199,11 @@ Una risposta corretta restituisce lo stato HTTP 202 (Accettato) con i dettagli d
 
 >[!NOTE]
 >
->È possibile utilizzare il valore di `_links.cancel` per [annullare la query](#cancel-a-query)creata.
+>È possibile utilizzare il valore di `_links.cancel` per annullare la query creata](#cancel-a-query).[
 
 ### Recuperare una query per ID
 
-È possibile recuperare informazioni dettagliate su una query specifica effettuando una richiesta di GET all&#39; `/queries` endpoint e fornendo il valore della query `id` nel percorso della richiesta.
+È possibile recuperare informazioni dettagliate su una query specifica effettuando una richiesta di GET all&#39;endpoint `/queries` e fornendo il valore `id` della query nel percorso della richiesta.
 
 **Formato API**
 
@@ -213,7 +213,7 @@ GET /queries/{QUERY_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{QUERY_ID}` | Il `id` valore della query da recuperare. |
+| `{QUERY_ID}` | Il valore `id` della query da recuperare. |
 
 **Richiesta**
 
@@ -270,11 +270,11 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 
 >[!NOTE]
 >
->È possibile utilizzare il valore di `_links.cancel` per [annullare la query](#cancel-a-query)creata.
+>È possibile utilizzare il valore di `_links.cancel` per annullare la query creata](#cancel-a-query).[
 
 ### Annullamento di una query
 
-È possibile richiedere di eliminare una query specificata effettuando una richiesta di PATCH all&#39; `/queries` endpoint e fornendo il valore della query `id` nel percorso della richiesta.
+È possibile richiedere di eliminare una query specificata effettuando una richiesta di PATCH all&#39;endpoint `/queries` e fornendo il valore `id` della query nel percorso della richiesta.
 
 **Formato API**
 
@@ -284,7 +284,7 @@ PATCH /queries/{QUERY_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{QUERY_ID}` | Il `id` valore della query da annullare. |
+| `{QUERY_ID}` | Il valore `id` della query da annullare. |
 
 
 **Richiesta**
