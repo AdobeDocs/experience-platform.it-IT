@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment builder;Segment builder
+keywords: ' Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Generatore di segmenti;Generatore di segmenti'
 solution: Experience Platform
-title: Guida alle modifiche al Generatore di segmenti di servizio di segmentazione
+title: Guida all’interfaccia utente per i vincoli temporali di segmentazione ristrutturati
 topic: ui guide
 description: 'Segment Builder (Generatore di segmenti) fornisce un’area di lavoro completa che consente di interagire con gli elementi dati del profilo. L’area di lavoro offre controlli intuitivi per la creazione e la modifica di regole, come le sezioni di trascinamento utilizzate per rappresentare le proprietà dei dati. '
 translation-type: tm+mt
-source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '259'
 ht-degree: 0%
 
 ---
