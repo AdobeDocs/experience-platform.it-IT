@@ -1,11 +1,11 @@
 ---
 keywords: ' Experience Platform;casa;argomenti popolari;GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;panoramica;panoramica;regolamento;regolamentazione;regolamenti;privacy;privacy;privacy;panoramica;panoramica generale;regolamentazione;regolamentazione;regolamentazione;regolamento;privacy;privacy;;'
 solution: Experience Platform
-title: Informazioni sulle normative sulla privacy
+title: Informazioni sulla normativa sulla privacy
 topic: troubleshooting
 description: Questo documento fornisce una panoramica delle diverse normative sulla privacy supportate da Adobe Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 238a9200e4b43d41335bed0efab079780b252717
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 6%
