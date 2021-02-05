@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;Schema design;mixin;mixins;work details;profile work;
+keywords: ' Experience Platform;home;argomenti popolari;schema;schema;XDM;profilo singolo;campi;schemi;schema di progettazione;mixin;mixin;mixin;dettagli di lavoro;profilo di lavoro;'
 solution: Experience Platform
-title: Miscela Dettagli contatto di lavoro
+title: Miscela dettagli contatto lavoro
 topic: overview
 description: Questo documento fornisce una panoramica del mixin Dettagli contatto di lavoro.
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '150'
+source-wordcount: '171'
 ht-degree: 2%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->I nomi di diversi mixin sono cambiati. Per ulteriori informazioni, consulta il documento sugli aggiornamenti [dei nomi dei](../name-updates.md) mixin.
+>I nomi di diversi mixin sono cambiati. Per ulteriori informazioni, consulta il documento relativo agli [aggiornamenti del nome del mixin](../name-updates.md).
 
-[!UICONTROL Work Contact Details] è un mixin standard per la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Il mixin fornisce diversi campi che acquisiscono informazioni professionali relative a una singola persona, come l&#39;indirizzo di lavoro, l&#39;e-mail di lavoro, il numero di telefono di lavoro e le organizzazioni a cui la persona appartiene.
+[!UICONTROL Work Contact Details] è un mixin standard per la  [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Il mixin fornisce diversi campi che acquisiscono informazioni professionali relative a una singola persona, come l&#39;indirizzo di lavoro, l&#39;e-mail di lavoro, il numero di telefono di lavoro e le organizzazioni a cui la persona appartiene.
 
 <img src="../../images/mixins/profile-work-details.png" width="550" /><br />
 
