@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;identities;cluster history
+keywords: ' Experience Platform;home;argomenti popolari;identità;cronologia cluster'
 solution: Experience Platform
-title: Ottenere la cronologia cluster di un'identità
+title: Ottieni cronologia cluster di un'identità
 topic: API guide
 description: Le identità possono spostare i cluster nel corso di diverse esecuzioni del grafico del dispositivo. Il servizio identità fornisce visibilità alle associazioni cluster di una determinata identità nel tempo.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '337'
 ht-degree: 1%
 
 ---
@@ -17,10 +17,10 @@ ht-degree: 1%
 
 Le identità possono spostare i cluster nel corso di diverse esecuzioni del grafico del dispositivo. [!DNL Identity Service] fornisce visibilità alle associazioni cluster di una determinata identità nel tempo.
 
-Utilizzate `graph-type` il parametro opzionale per indicare il tipo di output da cui ottenere il cluster. Le opzioni sono:
+Utilizzate il parametro opzionale `graph-type` per indicare il tipo di output da cui ottenere il cluster. Le opzioni sono:
 
 - `None` - Non eseguire cuciture di identità.
-- `Private Graph` - Eseguire la cucitura dell&#39;identità in base al grafico dell&#39;identità privata. Se non `graph-type` viene fornito alcun valore, questo è il valore predefinito.
+- `Private Graph` - Eseguire la cucitura dell&#39;identità in base al grafico dell&#39;identità privata. Se non viene fornito alcun `graph-type`, questo è il valore predefinito.
 
 ## Ottenere la cronologia del cluster di una singola identità
 
@@ -54,7 +54,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opzione 3: Specificate l&#39;identità come XID (`xid`). Per ulteriori informazioni su come ottenere l&#39;XID di un&#39;identità, consulta la sezione di questo documento relativa al [recupero dell&#39;XID per un&#39;identità](./list-native-id.md).
+Opzione 3: Specificate l&#39;identità come XID (`xid`). Per ulteriori informazioni su come ottenere l&#39;XID di un&#39;identità, vedere la sezione di questo documento relativa alla [ottenimento dell&#39;XID per un&#39;identità](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -67,7 +67,7 @@ curl -X GET \
 
 ## Ottenere la cronologia del cluster di più identità
 
-Utilizzate il `POST` metodo come equivalente batch del `GET` metodo descritto sopra per restituire le storie cluster di identità multiple.
+Utilizzare il metodo `POST` come equivalente batch del metodo `GET` descritto sopra per restituire le storie del cluster di identità multiple.
 
 >[!NOTE]
 >
@@ -110,7 +110,7 @@ Opzione 2: Fornite un elenco di identità come ID compositi, in cui ogni nome in
 
 **Richiesta stub**
 
-L’utilizzo dell’ `x-uis-cst-ctx: stub` intestazione restituirà una risposta con stub. Si tratta di una soluzione temporanea per facilitare i primi progressi nello sviluppo dell&#39;integrazione, mentre i servizi sono in fase di completamento. Questa opzione verrà rimossa quando non sarà più necessario.
+L&#39;utilizzo dell&#39;intestazione `x-uis-cst-ctx: stub` restituirà una risposta con stub. Si tratta di una soluzione temporanea per facilitare i primi progressi nello sviluppo dell&#39;integrazione, mentre i servizi sono in fase di completamento. Questa opzione verrà rimossa quando non sarà più necessario.
 
 ```shell
 curl -X POST \
