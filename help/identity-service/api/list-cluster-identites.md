@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;list identities;list cluster
+keywords: ' Experience Platform;home;argomenti popolari;elenco identità;elenco cluster'
 solution: Experience Platform
-title: Elenca identità cluster
+title: Elenca tutte le identità in un cluster
 topic: API guide
 description: Le identità correlate a un grafico di identità, a prescindere dallo spazio dei nomi, sono considerate parte dello stesso "cluster" in tale grafico di identità. Le opzioni riportate di seguito forniscono i mezzi per accedere a tutti i membri del cluster.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '359'
 ht-degree: 1%
 
 ---
@@ -21,10 +21,10 @@ Le identità correlate a un grafico di identità, a prescindere dallo spazio dei
 
 Recuperate tutti i membri del cluster per una singola identità.
 
-Potete utilizzare il `graph-type` parametro opzionale per indicare il grafico dell&#39;identità da cui ottenere il cluster. Le opzioni sono:
+Potete utilizzare il parametro opzionale `graph-type` per indicare il grafico dell&#39;identità da cui ottenere il cluster. Le opzioni sono:
 
 - Nessuno - Non eseguire l&#39;unione delle identità.
-- Grafico privato: consente di creare punti di identità in base al grafico dell&#39;identità privata. Se non `graph-type` viene fornito alcun valore, questo è il valore predefinito.
+- Grafico privato: consente di creare punti di identità in base al grafico dell&#39;identità privata. Se non viene fornito alcun `graph-type`, questo è il valore predefinito.
 
 **Formato API**
 
@@ -56,7 +56,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opzione 3: Specificate l&#39;identità come XID (`xid`). Per ulteriori informazioni su come ottenere l&#39;XID di un&#39;identità, consulta la sezione di questo documento relativa al [recupero dell&#39;XID per un&#39;identità](./list-native-id.md).
+Opzione 3: Specificate l&#39;identità come XID (`xid`). Per ulteriori informazioni su come ottenere l&#39;XID di un&#39;identità, vedere la sezione di questo documento relativa alla [ottenimento dell&#39;XID per un&#39;identità](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -69,7 +69,7 @@ curl -X GET \
 
 ## Ottenere identità associate per più identità
 
-Utilizzate `POST` come equivalente batch il `GET` metodo descritto sopra per restituire le identità nei cluster di identità multiple.
+Utilizzare `POST` come equivalente batch del metodo `GET` descritto sopra per restituire le identità nei cluster di identità multiple.
 
 >[!NOTE]
 >
@@ -87,7 +87,7 @@ La richiesta seguente illustra come fornire un elenco di XID per i quali recuper
 
 **Richiesta stub**
 
-L’utilizzo dell’ `x-uis-cst-ctx: stub` intestazione restituirà una risposta con stub. Si tratta di una soluzione temporanea per facilitare i primi progressi nello sviluppo dell&#39;integrazione, mentre i servizi sono in fase di completamento. Questa opzione verrà rimossa quando non sarà più necessario.
+L&#39;utilizzo dell&#39;intestazione `x-uis-cst-ctx: stub` restituirà una risposta con stub. Si tratta di una soluzione temporanea per facilitare i primi progressi nello sviluppo dell&#39;integrazione, mentre i servizi sono in fase di completamento. Questa opzione verrà rimossa quando non sarà più necessario.
 
 ```shell
 curl -X POST \
@@ -243,4 +243,4 @@ curl -X POST \
 
 ## Passaggi successivi
 
-Passate all&#39;esercitazione successiva per [elencare la cronologia cluster di un&#39;identità](./list-cluster-history.md)
+Passare all&#39;esercitazione successiva per [elencare la cronologia cluster di un&#39;identità](./list-cluster-history.md)
