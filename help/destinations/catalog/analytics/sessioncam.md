@@ -1,21 +1,17 @@
 ---
 keywords: SessionCam;session cam;session cam
-title: Estensione SessionCam
-seo-title: Estensione SessionCam
+title: Destinazione estensione SessionCam
 description: L’estensione SessionCam è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L’estensione SessionCam è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '503'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL SessionCam] Estensione {#sessioncam-extension}
-
-## Panoramica {#overview}
 
 [!DNL SessionCam] fornisce una suite essenziale di strumenti che rivelano il comportamento degli utenti e mostrano i problemi più importanti da risolvere.
 
