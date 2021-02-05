@@ -1,21 +1,17 @@
 ---
 keywords: Google customer match;Google customer match;Google Customer Match;Google Customer Match
-title: Destinazione di corrispondenza cliente Google
-seo-title: Destinazione di corrispondenza cliente Google
+title: Destinazione connessione di corrispondenza cliente Google
 description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti nelle proprietà di Google possedute e gestite, come ad esempio Cerca, Shopping, Gmail e YouTube.
-seo-description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti nelle proprietà di Google possedute e gestite, come ad esempio Cerca, Shopping, Gmail e YouTube.
 translation-type: tm+mt
-source-git-commit: 38b2bfd93bda85cf87dde4e0345ca9c11e419c2f
+source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1430'
 ht-degree: 0%
 
 ---
 
 
-# Destinazione di corrispondenza cliente Google
-
-## Panoramica {#overview}
+# Connessione Google Customer Match
 
 >[!IMPORTANT]
 >
