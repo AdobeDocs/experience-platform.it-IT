@@ -1,21 +1,17 @@
 ---
 keywords: Gestore Nielsen IMA;gestore nielsen ima;nielsen ima;Nielsen ima;Nielsen IMA;Nielsen IMA
-title: Estensione del gestore Nielsen IMA
-seo-title: Estensione del gestore Nielsen IMA
+title: Destinazione estensione gestore Nielsen IMA
 description: L’estensione del gestore Nielsen IMA è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L’estensione del gestore Nielsen IMA è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '459'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Nielsen IMA Handler] Estensione {#nielsen-ima-extension}
-
-## Panoramica {#overview}
 
 [!DNL Nielsen IMA Handler] è un&#39;estensione di analisi in Adobe Experience Platform.
 
