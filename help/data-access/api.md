@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics;data access;python sdk;spark sdk;data access api;export;Export
+keywords: ' Experience Platform;home;temi comuni;accesso ai dati;python sdk;spark sdk;data access api;export;Export'
 solution: Experience Platform
-title: Guida per gli sviluppatori Data Access
+title: Guida API per l'accesso ai dati
 topic: developer guide
-description: L'API Data Access supporta Adobe Experience Platform fornendo agli utenti un'interfaccia RESTful incentrata sulla possibilità di individuare e accedere ai set di dati acquisiti all'interno  Experience Platform.
+description: L'API Data Access supporta Adobe Experience Platform fornendo agli sviluppatori un'interfaccia RESTful incentrata sulla scoperta e l'accessibilità dei set di dati acquisiti all'interno  Experience Platform.
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '528'
 ht-degree: 4%
 
 ---
 
 
-# Guida per gli sviluppatori Data Access
+# Guida API per l&#39;accesso ai dati
 
-L&#39;API Data Access supporta Adobe Experience Platform fornendo agli utenti un&#39;interfaccia RESTful incentrata sulla possibilità di individuare e accedere ai set di dati acquisiti all&#39;interno [!DNL Experience Platform].
+L&#39;API Data Access supporta Adobe Experience Platform fornendo agli utenti un&#39;interfaccia RESTful incentrata sulla possibilità di individuare e accedere ai set di dati acquisiti all&#39;interno di [!DNL Experience Platform].
 
 ![Accesso ai dati  Experience Platform](images/Data_Access_Experience_Platform.png)
 
 ## Riferimento della specifica API
 
-La documentazione di riferimento per le API Swagger è disponibile [qui](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml).
+La documentazione di riferimento per le API Swagger è disponibile qui [qui](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml).
 
 ## Terminologia
 
@@ -95,7 +95,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 }
 ```
 
-L&#39; `"data"` array contiene un elenco di tutti i file all&#39;interno del batch specificato. Ogni file restituito ha un proprio ID univoco (`{FILE_ID}`) contenuto nel `"dataSetFileId"` campo. Questo ID univoco può quindi essere utilizzato per accedere o scaricare il file.
+L&#39;array `"data"` contiene un elenco di tutti i file all&#39;interno del batch specificato. Ogni file restituito ha un ID univoco (`{FILE_ID}`) contenuto nel campo `"dataSetFileId"`. Questo ID univoco può quindi essere utilizzato per accedere o scaricare il file.
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
@@ -104,7 +104,7 @@ L&#39; `"data"` array contiene un elenco di tutti i file all&#39;interno del bat
 
 ## Accedere e scaricare i file in un batch
 
-Utilizzando un identificatore file (`{FILE_ID}`), l&#39;API di accesso ai dati può essere utilizzata per accedere ai dettagli specifici di un file, incluso il nome, la dimensione in byte e un collegamento da scaricare.
+Utilizzando un identificatore di file (`{FILE_ID}`), l&#39;API di accesso ai dati può essere utilizzata per accedere ai dettagli specifici di un file, incluso il nome, la dimensione in byte e un collegamento da scaricare.
 
 La risposta conterrà un array di dati. A seconda che il file a cui fa riferimento l’ID sia un singolo file o una directory, l’array di dati restituito può contenere una singola voce o un elenco di file appartenenti a tale directory. Ogni elemento file includerà i dettagli del file.
 
@@ -116,7 +116,7 @@ GET /files/{FILE_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{FILE_ID}` | Uguale all’ `"dataSetFileId"`, l’ID del file a cui accedere. |
+| `{FILE_ID}` | Uguale al `"dataSetFileId"`, l&#39;ID del file a cui accedere. |
 
 **Richiesta**
 
@@ -204,7 +204,7 @@ Quando viene restituita una directory, essa contiene un array di tutti i file al
 
 ## Accesso al contenuto di un file
 
-L&#39; [!DNL Data Access] API può essere utilizzata anche per accedere al contenuto di un file. Questo può essere utilizzato per scaricare il contenuto in un&#39;origine esterna.
+L&#39;API [!DNL Data Access] può essere utilizzata anche per accedere al contenuto di un file. Questo può essere utilizzato per scaricare il contenuto in un&#39;origine esterna.
 
 **Formato API**
 
@@ -237,8 +237,8 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 ## Esempi di codice aggiuntivi
 
-Per ulteriori esempi, fare riferimento all&#39;esercitazione sull&#39;accesso ai [dati](tutorials/dataset-data.md).
+Per ulteriori esempi, fare riferimento all&#39; [esercitazione sull&#39;accesso ai dati](tutorials/dataset-data.md).
 
 ## Iscrizione agli eventi di assimilazione dei dati
 
-[!DNL Platform] rende disponibili per l&#39;iscrizione specifici eventi di alto valore tramite la [Developer Console](https://www.adobe.com/go/devs_console_ui). Ad esempio, puoi abbonarti agli eventi di inserimento dei dati per ricevere una notifica di potenziali ritardi e guasti. Per ulteriori informazioni, consulta l’esercitazione sulla [sottoscrizione alle notifiche](../ingestion/quality/subscribe-events.md) di assimilazione dei dati.
+[!DNL Platform] rende disponibili per l&#39;iscrizione specifici eventi di alto valore tramite la  [ Developer Console](https://www.adobe.com/go/devs_console_ui). Ad esempio, puoi abbonarti agli eventi di inserimento dei dati per ricevere una notifica di potenziali ritardi e guasti. Per ulteriori informazioni, vedere l&#39;esercitazione su [iscrizione alle notifiche di assimilazione dei dati](../ingestion/quality/subscribe-events.md).
