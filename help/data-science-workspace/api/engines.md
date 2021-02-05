@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;engines;sensei machine learning api
+keywords: ', Experience Platform;guida allo sviluppo;endpoint;Data Science Workspace;argomenti più comuni;motori;sensei macchina imparare api'
 solution: Experience Platform
-title: Motori
+title: Endpoint API del motore
 topic: Developer guide
 description: I motori sono le basi per i modelli di apprendimento automatico in Data Science Workspace. Contengono algoritmi di machine learning che risolvono problemi specifici, oleodotti per eseguire la progettazione di funzionalità o entrambi.
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1165'
 ht-degree: 3%
 
 ---
 
 
-# Motori
+# Endpoint del motore
 
 I motori sono le basi per i modelli di apprendimento automatico in Data Science Workspace. Contengono algoritmi di machine learning che risolvono problemi specifici, oleodotti per eseguire la progettazione di funzionalità o entrambi.
 
@@ -21,7 +21,7 @@ I motori sono le basi per i modelli di apprendimento automatico in Data Science 
 
 >[!TIP]
 >
->Se non disponete di un URL Docker, visitate i file sorgente del [pacchetto in un&#39;esercitazione di ricetta](../models-recipes/package-source-files-recipe.md) per una dettagliata procedura per la creazione di un URL host Docker.
+>Se non disponete di un URL Docker, visitate i [File sorgente del pacchetto in un&#39;esercitazione di ricetta](../models-recipes/package-source-files-recipe.md) per un&#39;esercitazione dettagliata sulla creazione di un URL host Docker.
 
 Le credenziali del Registro di sistema del Docker sono necessarie per caricare un file Recipe incluso l&#39;URL host Docker, il nome utente e la password. Potete cercare queste informazioni eseguendo la seguente richiesta di GET:
 
@@ -43,7 +43,7 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 
 **Risposta**
 
-Una risposta corretta restituisce un payload contenente i dettagli del Registro di sistema del Docker, inclusi l’URL (`host`), il nome utente (`username`) e la password (`password`) del Docker.
+Una risposta corretta restituisce un payload contenente i dettagli del Registro di sistema del Docker, inclusi l&#39;URL Docker (`host`), il nome utente (`username`) e la password (`password`).
 
 >[!NOTE]
 >
@@ -105,7 +105,7 @@ curl -X POST \
 
 **Richiesta PySpark/Scala**
 
-Quando si fa una richiesta per le ricette PySpark, il `executionType` ed `type` è &quot;PySpark&quot;. Quando si fa una richiesta per ricette Scala, il `executionType` ed `type` è &quot;Spark&quot;. Nell&#39;esempio di ricetta Scala riportato di seguito viene utilizzato Spark:
+Quando si effettua una richiesta per le ricette PySpark, `executionType` e `type` è &quot;PySpark&quot;. Quando si effettua una richiesta di ricette Scala, le `executionType` e `type` sono &quot;Spark&quot;. Nell&#39;esempio di ricetta Scala riportato di seguito viene utilizzato Spark:
 
 ```shell
 curl -X POST \
@@ -171,7 +171,7 @@ Una risposta corretta restituisce un payload contenente i dettagli del motore ap
 }
 ```
 
-## Creare un motore di pipeline delle funzioni utilizzando gli URL Docker {#feature-pipeline-docker}
+## Creare un motore di pipeline delle funzionalità utilizzando gli URL Docker {#feature-pipeline-docker}
 
 Potete creare un motore di pipeline delle funzioni eseguendo una richiesta di POST fornendo i relativi metadati e un URL Docker che fa riferimento a un&#39;immagine Docker.
 
@@ -215,14 +215,14 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `type` | Il tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui è basata l&#39;immagine Docker. Il valore può essere impostato su Spark o PySpark. |
-| `algorithm` | L&#39;algoritmo utilizzato, imposta questo valore su `fp` (pipeline delle caratteristiche). |
+| `algorithm` | L&#39;algoritmo utilizzato, imposta questo valore su `fp` (pipeline delle funzioni). |
 | `name` | Il nome desiderato per il motore della pipeline delle feature. La ricetta corrispondente a questo motore erediterà questo valore per essere visualizzata nell&#39;interfaccia utente come nome della ricetta. |
 | `description` | Una descrizione facoltativa per il motore. La ricetta corrispondente a questo motore erediterà il valore che verrà visualizzato nell&#39;interfaccia utente come descrizione della ricetta. Questa proprietà è obbligatoria. Se non si desidera fornire una descrizione, impostare il relativo valore su una stringa vuota. |
 | `mlLibrary` | Campo richiesto per la creazione di motori per le ricette PySpark e Scala. Questo campo deve essere impostato su `databricks-spark`. |
 | `artifacts.default.image.location` | Posizione dell&#39;immagine Docker. È supportato solo Azure ACR o Public (non autenticato) Dockerhub. |
 | `artifacts.default.image.executionType` | Il tipo di esecuzione del motore. Questo valore corrisponde alla lingua in cui è basata l&#39;immagine Docker. Può essere &quot;Spark&quot; o &quot;PySpark&quot;. |
 | `artifacts.default.image.packagingType` | Tipo di imballaggio del motore. Questo valore deve essere impostato su `docker`. |
-| `artifacts.default.defaultMLInstanceConfigs` | I parametri del file `pipeline.json` di configurazione. |
+| `artifacts.default.defaultMLInstanceConfigs` | I parametri del file di configurazione `pipeline.json`. |
 
 **Risposta**
 
@@ -255,7 +255,7 @@ Una risposta corretta restituisce un payload contenente i dettagli del motore di
 
 ## Recupero di un elenco di motori
 
-È possibile recuperare un elenco di motori eseguendo una singola richiesta di GET. Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri delle [query per il recupero](./appendix.md#query)delle risorse.
+È possibile recuperare un elenco di motori eseguendo una singola richiesta di GET. Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri di query [per il recupero delle risorse](./appendix.md#query).
 
 **Formato API**
 
