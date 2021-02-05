@@ -1,14 +1,14 @@
 ---
 keywords: ' Experience Platform;home;argomenti più comuni;dataset connection flow service;flow service;Flow service connection connection'
 solution: Experience Platform
-title: Creazione di una connessione di base di Experienci Platform  tramite l'API del servizio di flusso
+title: Creazione di una connessione di base del set di dati Adobe Experience Platform tramite l'API del servizio di flusso
 topic: overview
 type: Tutorial
-description: Flow Service è utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini diverse all'interno di Adobe Experience Platform. Il servizio fornisce un'interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
+description: Scoprite come utilizzare l'API del servizio di flusso per creare una connessione di base di set di dati ad Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '721'
 ht-degree: 1%
 
 ---
