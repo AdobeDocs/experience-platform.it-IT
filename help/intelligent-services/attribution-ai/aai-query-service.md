@@ -1,19 +1,19 @@
 ---
 keywords: approfondimenti;attribuzione ai;attribuzione ai approfondimenti;servizio query AAI;query di attribuzione;punteggi di attribuzione
 solution: Intelligent Services, Experience Platform
-title: Guida di avvio rapido di AAI Query Service
+title: Analisi dei punteggi di attribuzione mediante il servizio query
 topic: Attribution AI queries
-description: Questo documento contiene una guida e modelli per l’utilizzo di Query Service per analizzare i punteggi di attribuzione.
+description: Scoprite come utilizzare Adobe Experience Platform Query Service per analizzare  punteggi delle Attribution AI.
 translation-type: tm+mt
-source-git-commit: 32d49c9244414afeb2729ef44eb364fb2c609380
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---
 
 
-# Guida rapida di Adobe Experience Platform Query Service per l&#39;analisi dei punteggi di attribuzione
+# Analisi dei punteggi di attribuzione tramite Query Service
 
 Ogni riga nei dati rappresenta una conversione, in cui le informazioni per i punti di contatto correlati vengono memorizzate come un array di strutture sotto la colonna `touchpointsDetail`.
 
@@ -21,7 +21,7 @@ Ogni riga nei dati rappresenta una conversione, in cui le informazioni per i pun
 | ---------------------- | ------ |
 | Nome punto di contatto | `touchpointsDetail. touchpointName` |
 | Canale punto di contatto | `touchpointsDetail.touchPoint.mediaChannel` |
-| Punti algoritmici di Touchpoint AAI | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
+| Punti di contatto  punteggi algoritmici Attribution AI | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
 
 ## Ricerca dei percorsi di dati
 
