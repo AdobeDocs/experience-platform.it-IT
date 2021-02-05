@@ -1,19 +1,19 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;servizio query;servizio query;Power BI;power bi;connect to query service;'
 solution: Experience Platform
-title: Connetti con Power BI
+title: Connect Power BI to Query Service
 topic: connect
 description: Questo documento descrive i passaggi necessari per la connessione di Power BI con Adobe Experience Platform Query Service.
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '464'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Power BI]
+# Connetti [!DNL Power BI] a Servizio query (PC)
 
 Questo documento descrive i passaggi per la connessione di Power BI con Adobe Experience Platform Query Service.
 
@@ -22,8 +22,6 @@ Questo documento descrive i passaggi per la connessione di Power BI con Adobe Ex
 > Questa guida presuppone che abbiate già accesso a [!DNL Power BI] e che abbiate familiarità con come navigare all&#39;interfaccia. Ulteriori informazioni su [!DNL Power BI] sono disponibili nella [documentazione  [!DNL Power BI] ufficiale](https://docs.looker.com/).
 >
 > Inoltre, l&#39;Power BI è **disponibile solo** sui dispositivi Windows.
-
-## Imposta [!DNL Power BI]
 
 Dopo l&#39;installazione di Power BI, sarà necessario installare `Npgsql`, un pacchetto di driver .NET per PostgreSQL. Ulteriori informazioni su Npgsql sono disponibili nella [Documentazione Npgsql](https://www.npgsql.org/doc/index.html).
 
