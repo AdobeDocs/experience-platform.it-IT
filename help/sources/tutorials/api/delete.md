@@ -1,14 +1,14 @@
 ---
 keywords: ' Experience Platform;home;argomenti più comuni;servizio di flusso;eliminare connessioni;eliminare;api'
 solution: Experience Platform
-title: Eliminare una connessione utilizzando l'API del servizio di flusso
+title: Eliminazione di una connessione tramite l'API del servizio di flusso
 topic: overview
 type: Tutorial
-description: Questa esercitazione descrive i passaggi per eliminare una connessione mediante l'API del servizio di flusso.
+description: Scoprite come eliminare una connessione utilizzando l'API del servizio di flusso.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '592'
 ht-degree: 2%
 
 ---
