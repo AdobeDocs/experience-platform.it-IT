@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;find sandbox;look up a sandbox
+keywords: ' Experience Platform;home;argomenti popolari;trovare sandbox;cercare una sandbox'
 solution: Experience Platform
-title: Cercare una sandbox
+title: Cercare una sandbox nell'API
 topic: developer guide
 description: Potete cercare un singolo sandbox effettuando una richiesta di GET che include la proprietà name della sandbox nel percorso della richiesta.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '243'
 ht-degree: 2%
 
 ---
 
 
-# Cercare una sandbox
+# Cercare una sandbox nell&#39;API
 
-Potete cercare un singolo sandbox effettuando una richiesta di GET che include la `name` proprietà sandbox nel percorso della richiesta.
+Potete cercare un singolo sandbox effettuando una richiesta di GET che include la proprietà `name` della sandbox nel percorso della richiesta.
 
 **Formato API**
 
@@ -25,7 +25,7 @@ GET /sandboxes/{SANDBOX_NAME}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{SANDBOX_NAME}` | La `name` proprietà della sandbox che si desidera cercare. |
+| `{SANDBOX_NAME}` | La proprietà `name` della sandbox da cercare. |
 
 **Richiesta**
 
@@ -42,7 +42,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della sandbox, inclusi `name`, `title`, `state`e `type`.
+Una risposta corretta restituisce i dettagli della sandbox, inclusi i relativi `name`, `title`, `state` e `type`.
 
 ```json
 {
