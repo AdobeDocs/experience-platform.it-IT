@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;overview;customer ai;popular topics;customer ai overview
+keywords: ' Experience Platform;panoramica;cliente ai;argomenti più comuni;customer ai overview'
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Panoramica di Customer AI
-topic: Customer AI overview
+topic: Customer AI Overview
 description: Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala. Per poter usufruire di queste funzioni non occorre trasformare le esigenze aziendali in problematiche di machine learning né scegliere un algoritmo, e non sono richieste formazione o implementazioni specifiche.
-landing-page-description: Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale.
+landing-page-description: Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 16%
+source-wordcount: '554'
+ht-degree: 18%
 
 ---
 
@@ -37,8 +37,8 @@ Il cliente non è costruito per:
 
 - L&#39;AI del cliente non deve essere utilizzata per prevedere un prezzo dinamico, o il punto in cui il cliente effettuerà un acquisto.
 - L&#39;AI del cliente non è in grado di determinare se l&#39;offerta renda più probabile l&#39;acquisto di un articolo da parte del cliente. Anche se potete decidere di inviare offerte di sconto basate sui punteggi di propensione, non è necessariamente il modo migliore per convertire tali clienti.
-- L&#39;AI del cliente non è uno strumento di raccomandazione del prodotto. Se disponete di migliaia di SKU, non utilizzate l&#39;AI del cliente come proxy per una soluzione di raccomandazioni sui prodotti reale come [!DNL Adobe Target].
-- L&#39;AI del cliente non può prevedere in quale fase del viaggio di acquisto il cliente si trovi, ad esempio, se si trova nelle fasi di &quot;consapevolezza&quot;, &quot;considerazione&quot;, &quot;acquisto&quot; o &quot;conservazione&quot;.
+- L&#39;AI del cliente non è uno strumento di raccomandazione del prodotto. Se disponete di migliaia di SKU, non utilizzate l&#39;AI del cliente come proxy per una soluzione di raccomandazioni di prodotto reale come [!DNL Adobe Target].
+- L&#39;AI del cliente non può prevedere in quale fase del Percorso di acquisto il cliente si trovi, ad esempio, se si trova nelle fasi &quot;consapevolezza&quot;, &quot;considerazione&quot;, &quot;acquisto&quot; o &quot;conservazione&quot;.
 - Non utilizzate l&#39;API del cliente per determinare i clienti che probabilmente acquisteranno un prodotto per il lancio in futuro. Ciò richiede che in passato siano presenti alcuni eventi di successo affinché l&#39;AI del cliente possa addestrare con successo l&#39;algoritmo di machine learning sui dati.
 
 Il seguente video è stato progettato per supportare la comprensione dell&#39;API cliente.
@@ -51,4 +51,4 @@ L&#39;AI del cliente funziona analizzando i dati esistenti relativi all&#39;even
 
 ## Passaggi successivi
 
-Per iniziare, segui la guida [introduttiva](./getting-started.md) . Questa guida illustra come impostare tutti i prerequisiti richiesti per l&#39;AI del cliente. Se disponi già di tutte le tue credenziali e dati, visita [la sezione dedicata alla configurazione di un&#39;istanza](./user-guide/configure.md)AI del cliente. Fornisce i passaggi per utilizzare l&#39;intelligenza artificiale del cliente.
+Per iniziare, seguire la guida [guida introduttiva](./getting-started.md). Questa guida illustra come impostare tutti i prerequisiti richiesti per l&#39;AI del cliente. Se disponi già di tutte le tue credenziali e i tuoi dati, visita [la sezione dedicata alla configurazione di un&#39;istanza AI del cliente](./user-guide/configure.md). Fornisce i passaggi per utilizzare l&#39;intelligenza artificiale del cliente.
