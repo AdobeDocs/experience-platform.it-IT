@@ -1,21 +1,17 @@
 ---
 keywords: PebblePost;pebblepost;PebblePost Programmatic Direct Mail;pebblepost programmatic direct mail
-title: Estensione PebblePost
-seo-title: Estensione PebblePost
+title: Destinazione estensione PebblePost
 description: L'estensione PebblePost è una destinazione di posta elettronica in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L'estensione PebblePost è una destinazione di posta elettronica in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '540'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL PebblePost] Estensione {#pebblepost-extension}
-
-## Panoramica {#overview}
 
 [!DNL PebblePost's Programmatic Direct Mail®] Questa soluzione consente agli esperti di marketing digitale di collegare l&#39;interesse e l&#39;intento online a supporti offline tangibili per la conversione. Gli addetti al marketing possono sfruttare i segmenti di dati personalizzati creati in  Adobe per offrire ai consumatori un&#39;impressione media interna rilevante e di lunga durata. Analizzare le prestazioni in tempo reale in base all&#39;attività del percorso di risposta e alle conversioni sul sito.
 
