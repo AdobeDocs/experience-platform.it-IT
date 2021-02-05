@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;schedules;schedule;api;API;
+keywords: ' Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Segmentation Service;pianificazioni;pianificazione;api;API;'
 solution: Experience Platform
-title: Pianificazioni
+title: Endpoint API di pianificazione
 topic: developer guide
 description: Le pianificazioni sono uno strumento che può essere utilizzato per eseguire automaticamente i processi di segmentazione batch una volta al giorno.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1203'
 ht-degree: 3%
 
 ---
@@ -15,19 +15,19 @@ ht-degree: 3%
 
 # Endpoint di pianificazione
 
-Le pianificazioni sono uno strumento che può essere utilizzato per eseguire automaticamente i processi di segmentazione batch una volta al giorno. Potete utilizzare l&#39; `/config/schedules` endpoint per recuperare un elenco di pianificazioni, creare una nuova pianificazione, recuperare i dettagli di una pianificazione specifica, aggiornare una pianificazione specifica o eliminare una pianificazione specifica.
+Le pianificazioni sono uno strumento che può essere utilizzato per eseguire automaticamente i processi di segmentazione batch una volta al giorno. È possibile utilizzare l&#39;endpoint `/config/schedules` per recuperare un elenco di pianificazioni, creare una nuova pianificazione, recuperare i dettagli di una pianificazione specifica, aggiornare una pianificazione specifica o eliminare una pianificazione specifica.
 
 ## Introduzione
 
-Gli endpoint utilizzati in questa guida fanno parte dell&#39; [!DNL Adobe Experience Platform Segmentation Service] API. Prima di continuare, controllate la guida [](./getting-started.md) introduttiva per informazioni importanti che dovete conoscere per effettuare correttamente le chiamate all&#39;API, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
+Gli endpoint utilizzati in questa guida fanno parte dell&#39;API [!DNL Adobe Experience Platform Segmentation Service]. Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all&#39;API, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
 
-## Recupero di un elenco di pianificazioni {#retrieve-list}
+## Recupera un elenco di pianificazioni {#retrieve-list}
 
-È possibile recuperare un elenco di tutte le pianificazioni per la propria organizzazione IMS effettuando una richiesta di GET all&#39; `/config/schedules` endpoint.
+È possibile recuperare un elenco di tutte le pianificazioni per la propria organizzazione IMS effettuando una richiesta di GET all&#39;endpoint `/config/schedules`.
 
 **Formato API**
 
-L&#39; `/config/schedules` endpoint supporta diversi parametri di query per facilitare il filtraggio dei risultati. Anche se questi parametri sono opzionali, il loro utilizzo è fortemente consigliato per ridurre i costi di sovraccarico. Effettuando una chiamata a questo endpoint senza parametri, tutte le pianificazioni disponibili per l&#39;organizzazione verranno recuperate. È possibile includere più parametri, separati da e-mail (`&`).
+L&#39;endpoint `/config/schedules` supporta diversi parametri di query per facilitare il filtro dei risultati. Anche se questi parametri sono opzionali, il loro utilizzo è fortemente consigliato per ridurre i costi di sovraccarico. Effettuando una chiamata a questo endpoint senza parametri, tutte le pianificazioni disponibili per l&#39;organizzazione verranno recuperate. È possibile includere più parametri, separati da e-mail (`&`).
 
 ```http
 GET /config/schedules
@@ -100,13 +100,13 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di pianificazi
 | `children.name` | Nome della pianificazione come stringa. |
 | `children.type` | Il tipo di processo come stringa. I due tipi supportati sono &quot;batch_segmentation&quot; e &quot;export&quot;. |
 | `children.properties` | Un oggetto contenente proprietà aggiuntive correlate alla pianificazione. |
-| `children.properties.segments` | L&#39;utilizzo `["*"]` assicura che tutti i segmenti siano inclusi. |
-| `children.schedule` | Una stringa contenente la pianificazione del processo. È possibile pianificare l’esecuzione dei processi solo una volta al giorno, pertanto non è possibile pianificare l’esecuzione di un processo più volte durante un periodo di 24 ore. Per ulteriori informazioni sulle pianificazioni cron, consulta la documentazione sul formato [delle espressioni](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) cron. In questo esempio, &quot;0 0 1 * * *&quot; significa che questa pianificazione si terrà a mezzanotte il primo di ogni mese. |
+| `children.properties.segments` | L&#39;utilizzo di `["*"]` assicura che tutti i segmenti siano inclusi. |
+| `children.schedule` | Una stringa contenente la pianificazione del processo. È possibile pianificare l’esecuzione dei processi solo una volta al giorno, pertanto non è possibile pianificare l’esecuzione di un processo più volte durante un periodo di 24 ore. Per ulteriori informazioni sulle pianificazioni cron, leggere la documentazione [formato di espressione cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). In questo esempio, &quot;0 0 1 * * *&quot; significa che questa pianificazione si terrà a mezzanotte il primo di ogni mese. |
 | `children.state` | Una stringa contenente lo stato di pianificazione. I due stati supportati sono &quot;attivi&quot; e &quot;inattivi&quot;. Per impostazione predefinita, lo stato è impostato su &quot;inactive&quot;. |
 
-## Create a new schedule {#create}
+## Creare una nuova pianificazione {#create}
 
-Potete creare una nuova pianificazione effettuando una richiesta POST all&#39; `/config/schedules` endpoint.
+Puoi creare una nuova pianificazione effettuando una richiesta di POST all&#39;endpoint `/config/schedules`.
 
 **Formato API**
 
@@ -142,8 +142,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `name` | **Obbligatorio.** Nome della pianificazione come stringa. |
 | `type` | **Obbligatorio.** Il tipo di processo come stringa. I due tipi supportati sono &quot;batch_segmentation&quot; e &quot;export&quot;. |
 | `properties` | **Obbligatorio.** Un oggetto contenente proprietà aggiuntive correlate alla pianificazione. |
-| `properties.segments` | **Obbligatorio se `type` è uguale a &quot;batch_segmentation&quot;.** L&#39;utilizzo `["*"]` assicura che tutti i segmenti siano inclusi. |
-| `schedule` | *Facoltativo.* Una stringa contenente la pianificazione del processo. È possibile pianificare l’esecuzione dei processi solo una volta al giorno, pertanto non è possibile pianificare l’esecuzione di un processo più volte durante un periodo di 24 ore. Per ulteriori informazioni sulle pianificazioni cron, consulta la documentazione sul formato [delle espressioni](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) cron. In questo esempio, &quot;0 0 1 * * *&quot; significa che questa pianificazione si terrà a mezzanotte il primo di ogni mese. <br><br>Se questa stringa non viene fornita, verrà generata automaticamente una pianificazione generata dal sistema. |
+| `properties.segments` | **Obbligatorio se  `type` è uguale a &quot;batch_segmentation&quot;.** L&#39;utilizzo  `["*"]` assicura che tutti i segmenti siano inclusi. |
+| `schedule` | *Facoltativo.* Una stringa contenente la pianificazione del processo. È possibile pianificare l’esecuzione dei processi solo una volta al giorno, pertanto non è possibile pianificare l’esecuzione di un processo più volte durante un periodo di 24 ore. Per ulteriori informazioni sulle pianificazioni cron, leggere la documentazione [formato di espressione cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). In questo esempio, &quot;0 0 1 * * *&quot; significa che questa pianificazione si terrà a mezzanotte il primo di ogni mese. <br><br>Se questa stringa non viene fornita, verrà generata automaticamente una pianificazione generata dal sistema. |
 | `state` | *Facoltativo.* Una stringa contenente lo stato di pianificazione. I due stati supportati sono &quot;attivi&quot; e &quot;inattivi&quot;. Per impostazione predefinita, lo stato è impostato su &quot;inactive&quot;. |
 
 **Risposta**
@@ -176,7 +176,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli della nuova p
 
 ## Recuperare una pianificazione specifica {#get}
 
-Potete recuperare informazioni dettagliate su una pianificazione specifica effettuando una richiesta di GET all&#39; `/config/schedules` endpoint e fornendo l&#39;ID della pianificazione che desiderate recuperare nel percorso della richiesta.
+Potete recuperare informazioni dettagliate su una pianificazione specifica effettuando una richiesta di GET all&#39;endpoint `/config/schedules` e fornendo l&#39;ID della pianificazione che desiderate recuperare nel percorso della richiesta.
 
 **Formato API**
 
@@ -186,7 +186,7 @@ GET /config/schedules/{SCHEDULE_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | Il `id` valore della pianificazione da recuperare. |
+| `{SCHEDULE_ID}` | Il valore `id` della pianificazione da recuperare. |
 
 **Richiesta**
 
@@ -231,19 +231,19 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 | `name` | Nome della pianificazione come stringa. |
 | `type` | Il tipo di processo come stringa. I due tipi supportati sono `batch_segmentation` e `export`. |
 | `properties` | Un oggetto contenente proprietà aggiuntive correlate alla pianificazione. |
-| `properties.segments` | L&#39;utilizzo `["*"]` assicura che tutti i segmenti siano inclusi. |
-| `schedule` | Una stringa contenente la pianificazione del processo. È possibile pianificare l’esecuzione dei processi solo una volta al giorno, pertanto non è possibile pianificare l’esecuzione di un processo più volte durante un periodo di 24 ore. Per ulteriori informazioni sulle pianificazioni cron, consulta la documentazione sul formato [delle espressioni](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) cron. In questo esempio, &quot;0 0 1 * * *&quot; significa che questa pianificazione si terrà a mezzanotte il primo di ogni mese. |
+| `properties.segments` | L&#39;utilizzo di `["*"]` assicura che tutti i segmenti siano inclusi. |
+| `schedule` | Una stringa contenente la pianificazione del processo. È possibile pianificare l’esecuzione dei processi solo una volta al giorno, pertanto non è possibile pianificare l’esecuzione di un processo più volte durante un periodo di 24 ore. Per ulteriori informazioni sulle pianificazioni cron, leggere la documentazione [formato di espressione cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). In questo esempio, &quot;0 0 1 * * *&quot; significa che questa pianificazione si terrà a mezzanotte il primo di ogni mese. |
 | `state` | Una stringa contenente lo stato di pianificazione. I due stati supportati sono `active` e `inactive`. Per impostazione predefinita, lo stato è impostato su `inactive`. |
 
 ## Dettagli di aggiornamento per una pianificazione specifica {#update}
 
-Potete aggiornare una pianificazione specifica effettuando una richiesta di PATCH all&#39; `/config/schedules` endpoint e fornendo l&#39;ID della pianificazione che state tentando di aggiornare nel percorso della richiesta.
+Puoi aggiornare una pianificazione specifica effettuando una richiesta di PATCH all&#39;endpoint `/config/schedules` e fornendo l&#39;ID della pianificazione che stai tentando di aggiornare nel percorso della richiesta.
 
-La richiesta PATCH consente di aggiornare lo [stato](#update-state) o la pianificazione [cron per una singola pianificazione](#update-schedule) .
+La richiesta PATCH consente di aggiornare la pianificazione [state](#update-state) o la pianificazione del cron [cron](#update-schedule) per una singola pianificazione.
 
 ### Aggiorna stato pianificazione {#update-state}
 
-Potete utilizzare un&#39;operazione di patch JSON per aggiornare lo stato della pianificazione. Per aggiornare lo stato, è necessario dichiarare la `path` proprietà come `/state` e impostare `value` il valore su `active` o `inactive`. Per ulteriori informazioni sulla patch JSON, consulta la documentazione relativa alla patch [](http://jsonpatch.com/) JSON.
+Potete utilizzare un&#39;operazione di patch JSON per aggiornare lo stato della pianificazione. Per aggiornare lo stato, dichiarare la proprietà `path` come `/state` e impostare `value` su `active` o `inactive`. Per ulteriori informazioni sulla patch JSON, consultate la documentazione [JSON Patch](http://jsonpatch.com/).
 
 **Formato API**
 
@@ -253,7 +253,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | Il `id` valore della pianificazione da aggiornare. |
+| `{SCHEDULE_ID}` | Il valore `id` della pianificazione da aggiornare. |
 
 **Richiesta**
 
@@ -275,16 +275,16 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `path` | Percorso del valore da applicare alla patch. In questo caso, poiché state aggiornando lo stato della pianificazione, è necessario impostare il valore di `path` &quot;/state&quot;. |
+| `path` | Percorso del valore da applicare alla patch. In questo caso, poiché state aggiornando lo stato della pianificazione, è necessario impostare il valore di `path` su &quot;/state&quot;. |
 | `value` | Valore aggiornato dello stato della pianificazione. Questo valore può essere impostato come &quot;attivo&quot; o &quot;inattivo&quot; per attivare o disattivare la pianificazione. |
 
 **Risposta**
 
 Una risposta corretta restituisce lo stato HTTP 204 (nessun contenuto).
 
-### Aggiorna pianificazione cron {#update-schedule}
+### Aggiornamento pianificazione cron {#update-schedule}
 
-Potete utilizzare un&#39;operazione di patch JSON per aggiornare la pianificazione cron. Per aggiornare la pianificazione, è necessario dichiarare la `path` proprietà come `/schedule` e impostare la proprietà `value` su una pianificazione cron valida. Per ulteriori informazioni sulla patch JSON, consulta la documentazione relativa alla patch [](http://jsonpatch.com/) JSON. Per ulteriori informazioni sulle pianificazioni cron, consulta la documentazione sul formato [delle espressioni](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) cron.
+Potete utilizzare un&#39;operazione di patch JSON per aggiornare la pianificazione cron. Per aggiornare la pianificazione, dichiarare la proprietà `path` come `/schedule` e impostare la proprietà `value` su una pianificazione cron valida. Per ulteriori informazioni sulla patch JSON, consultate la documentazione [JSON Patch](http://jsonpatch.com/). Per ulteriori informazioni sulle pianificazioni cron, leggere la documentazione [formato di espressione cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
 
 **Formato API**
 
@@ -294,7 +294,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | Il `id` valore della pianificazione da aggiornare. |
+| `{SCHEDULE_ID}` | Il valore `id` della pianificazione da aggiornare. |
 
 **Richiesta**
 
@@ -316,7 +316,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `path` | Percorso del valore da aggiornare. In questo caso, poiché state aggiornando la pianificazione cron, dovete impostare il valore di `path` a `/schedule`. |
+| `path` | Percorso del valore da aggiornare. In questo caso, poiché si sta aggiornando la pianificazione cron, è necessario impostare il valore di `path` su `/schedule`. |
 | `value` | Valore aggiornato della pianificazione cron. Questo valore deve essere sotto forma di programmazione cron. In questo esempio, la pianificazione verrà eseguita il secondo di ogni mese. |
 
 **Risposta**
@@ -325,7 +325,7 @@ Una risposta corretta restituisce lo stato HTTP 204 (nessun contenuto).
 
 ## Eliminare una pianificazione specifica
 
-Potete richiedere di eliminare una pianificazione specifica eseguendo una richiesta DELETE all’ `/config/schedules` endpoint e fornendo l’ID della pianificazione che desiderate eliminare nel percorso della richiesta.
+Puoi richiedere di eliminare una pianificazione specifica eseguendo una richiesta DELETE all&#39;endpoint `/config/schedules` e fornendo l&#39;ID della pianificazione che desideri eliminare nel percorso della richiesta.
 
 **Formato API**
 
@@ -335,7 +335,7 @@ DELETE /config/schedules/{SCHEDULE_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | Il `id` valore della pianificazione da eliminare. |
+| `{SCHEDULE_ID}` | Il valore `id` della pianificazione da eliminare. |
 
 **Richiesta**
 
