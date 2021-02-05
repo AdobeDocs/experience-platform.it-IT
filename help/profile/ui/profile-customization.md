@@ -1,12 +1,12 @@
 ---
 keywords: ' Experience Platform;profilo;profilo cliente in tempo reale;interfaccia utente;interfaccia utente;personalizzazione;dettagli profilo;dettagli'
-title: Personalizzare la modalità di visualizzazione dei profili nell’interfaccia utente
+title: Personalizzazione dei dettagli dei profili nell’interfaccia utente
 description: 'Questa guida fornisce istruzioni dettagliate per personalizzare il modo in cui i dati del profilo cliente in tempo reale vengono visualizzati nell’interfaccia utente di Adobe Experience Platform. '
 topic: guide
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: ba1cbed3b5e3f3a8879b3882856a03ef4be9b96a
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1111'
 ht-degree: 0%
 
 ---
