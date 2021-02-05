@@ -1,21 +1,17 @@
 ---
 keywords: Conferma feedback digitale;conferma estensione;conferma
-title: Conferma estensione Digital Feedback
-seo-title: Conferma estensione Digital Feedback
+title: Conferma destinazione estensione feedback digitale
 description: L'estensione Conferma feedback digitale è una voce della destinazione del cliente in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
-seo-description: L'estensione Conferma feedback digitale è una voce della destinazione del cliente in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '549'
 ht-degree: 3%
 
 ---
 
 
-# Estensione [!DNL Confirmit Digital Feedback]
-
-## Panoramica {#overview}
+# [!DNL Confirmit Digital Feedback] Estensione
 
 [!DNL Confirmit Digital Feedback] consente di trasformare il traffico del sito Web in informazioni in tempo reale. Con [!DNL Confirmit], è possibile visualizzare sondaggi non invasivi e mirati in base alle proprie esigenze, incoraggiando i visitatori a fornire feedback, ad esempio:
 
