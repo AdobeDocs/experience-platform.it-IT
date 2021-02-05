@@ -1,19 +1,17 @@
 ---
 keywords: Destinazioni sondaggio;sondaggio;prevedere;momento invisibile;indagini intermittenti web;qualtrics
-title: Destinazioni sondaggio
-seo-title: Destinazioni sondaggio
-description: Le piattaforme di sondaggi rilevano gli eventi dei sondaggi, acquisiscono il feedback dei clienti in tempo reale attraverso gli elementi dei dati e condividono i dati con la piattaforma.
-seo-description: Le piattaforme di sondaggi rilevano gli eventi dei sondaggi, acquisiscono il feedback dei clienti in tempo reale attraverso gli elementi dei dati e condividono i dati con la piattaforma.
+title: Panoramica delle destinazioni del sondaggio
+description: Le piattaforme di sondaggi rilevano gli eventi dei sondaggi, acquisiscono il feedback dei clienti in tempo reale attraverso gli elementi dei dati e condividono i dati con Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '105'
+source-wordcount: '89'
 ht-degree: 0%
 
 ---
 
 
-# Destinazioni sondaggio {#survey-destinations}
+# Panoramica delle destinazioni di sondaggio {#survey-destinations}
 
 Le piattaforme di sondaggi rilevano gli eventi dei sondaggi, acquisiscono il feedback dei clienti in tempo reale attraverso gli elementi dei dati e condividono i dati con Adobe Experience Platform.
 
