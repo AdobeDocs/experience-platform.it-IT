@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;experiments;sensei machine learning api
+keywords: ;guida per sviluppatori;endpoint;Data Science Workspace;argomenti popolari;esperimenti;sensei macchina imparare api
 solution: Experience Platform
-title: Esperimenti
+title: Endpoint API degli esperimenti
 topic: Developer guide
 description: Lo sviluppo di modelli e la formazione si svolgono a livello di Esperimento, dove un Esperimento consiste in un'istanza MLI, in esecuzioni di formazione e in esecuzioni di punteggio.
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '783'
 ht-degree: 4%
 
 ---
 
 
-# Esperimenti
+# Punto finale degli esperimenti
 
 Lo sviluppo di modelli e la formazione si svolgono a livello di Esperimento, dove un Esperimento consiste in un&#39;istanza MLI, in esecuzioni di formazione e in esecuzioni di punteggio.
 
@@ -54,7 +54,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituisce un payload contenente i dettagli dell’esperimento appena creato, incluso il relativo identificatore univoco (`id`).
+Una risposta corretta restituisce un payload contenente i dettagli dell&#39;esperimento appena creato, incluso il relativo identificatore univoco (`id`).
 
 ```json
 {
@@ -101,7 +101,7 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `{TASK}` | Specifica l&#39;attività dell&#39;esecuzione. Impostate questo valore come `train` per la formazione, `score` per il punteggio o `featurePipeline` per la pipeline delle funzioni. |
+| `{TASK}` | Specifica l&#39;attività dell&#39;esecuzione. Impostate questo valore come `train` per la formazione, `score` per il punteggio o `featurePipeline` per la pipeline delle caratteristiche. |
 
 **Risposta**
 
@@ -134,7 +134,7 @@ Una risposta corretta restituisce un payload contenente i dettagli della nuova e
 
 ## Recuperare un elenco di esperimenti
 
-Potete recuperare un elenco di Esperimenti appartenenti a una particolare istanza MLIneseguendo una singola richiesta e fornendo un ID MLInvalido come parametro di query. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri delle [query per il recupero](./appendix.md#query)delle risorse.
+Potete recuperare un elenco di Esperimenti appartenenti a una particolare istanza MLIneseguendo una singola richiesta e fornendo un ID MLInvalido come parametro di query. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri di query [per il recupero delle risorse](./appendix.md#query).
 
 
 **Formato API**
@@ -161,7 +161,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di Esperimenti che condividono lo stesso ID istanza (`{MLINSTANCE_ID}`).
+Una risposta corretta restituisce un elenco di Esperimenti che condividono lo stesso ID istanza MLI (`{MLINSTANCE_ID}`).
 
 ```json
 {
@@ -243,7 +243,7 @@ Una risposta corretta restituisce un payload contenente i dettagli dell’esperi
 
 ## Recuperare un elenco di esecuzioni sperimentali
 
-Potete recuperare un elenco di sessioni di formazione o di valutazione appartenenti a un particolare esperimento eseguendo una singola richiesta di GET e fornendo un ID di esperimento valido. Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco completo dei parametri di query disponibili, consultate la sezione appendice sui parametri di [query per il recupero](./appendix.md#query)delle risorse.
+Potete recuperare un elenco di sessioni di formazione o di valutazione appartenenti a un particolare esperimento eseguendo una singola richiesta di GET e fornendo un ID di esperimento valido. Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco completo dei parametri di query disponibili, consultate la sezione appendice sui parametri di query [per il recupero delle risorse](./appendix.md#query).
 
 >[!NOTE]
 >
@@ -260,7 +260,7 @@ GET /experiments/{EXPERIMENT_ID}/runs?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAM
 | Parametro | Descrizione |
 | --- | --- |
 | `{EXPERIMENT_ID}` | Un ID di esperimento valido. |
-| `{QUERY_PARAMETER}` | Uno dei parametri [di query](./appendix.md#query) disponibili utilizzati per filtrare i risultati. |
+| `{QUERY_PARAMETER}` | Uno dei [parametri di query disponibili](./appendix.md#query) utilizzati per filtrare i risultati. |
 | `{VALUE}` | Il valore del parametro di query precedente. |
 
 **Richiesta**
@@ -278,7 +278,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un payload contenente un elenco di esecuzioni e ciascuno dei relativi dettagli, incluso il relativo ID di esecuzione degli esperimenti (`{RUN_ID}`).
+Una risposta corretta restituisce un payload contenente un elenco di esecuzioni e ciascuno dei relativi dettagli, compreso l&#39;ID di esecuzione dell&#39;esperimento (`{RUN_ID}`).
 
 ```json
 {
@@ -308,7 +308,7 @@ Potete aggiornare un esperimento esistente sovrascrivendone le proprietà tramit
 
 >[!TIP]
 >
->Per garantire il successo di questa richiesta di PUT, si consiglia di eseguire prima una richiesta di GET per [recuperare l&#39;esperimento con l&#39;ID](#retrieve-specific). Quindi, modificate e aggiornate l&#39;oggetto JSON restituito e applicate l&#39;intero oggetto JSON modificato come payload per la richiesta di PUT.
+>Per garantire il successo di questa richiesta di PUT, si consiglia innanzitutto di eseguire una richiesta di GET per [recuperare l&#39;esperimento per ID](#retrieve-specific). Quindi, modificate e aggiornate l&#39;oggetto JSON restituito e applicate l&#39;intero oggetto JSON modificato come payload per la richiesta di PUT.
 
 La seguente chiamata API di esempio aggiorna il nome di un Esperimento pur avendo inizialmente queste proprietà:
 
