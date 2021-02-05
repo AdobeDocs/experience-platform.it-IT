@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;attribution ai overview;popular topics;attribution ai;Attribution ai
+keywords: ' Experience Platform;attribuzione ai panoramica;argomenti popolari;attribuzione ai;attribuzione ai'
 solution: Experience Platform, Intelligent Services
-title: Panoramica di Attribution AI
+title: 'Panoramica sulle Attribution AI '
 topic: Attribution AI
 description: Attribution AI viene utilizzato per attribuire il merito ai punti di contatto da cui derivano gli eventi di conversione. Può essere utilizzato dagli addetti al marketing per quantificare l’impatto di ogni punto di contatto marketing lungo i percorsi dei clienti. I punti di contatto includono, ad esempio, le visualizzazioni di ad impression, gli invii di e-mail, le aperture delle e-mail e i clic su risultati di ricerca a pagamento.
-landing-page-description: Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
+landing-page-description: Attribution AI viene utilizzato per attribuire il merito ai punti di contatto da cui derivano gli eventi di conversione. Può essere utilizzato dagli addetti al marketing per quantificare l’impatto di ogni punto di contatto marketing lungo i percorsi dei clienti.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 29%
+source-wordcount: '499'
+ht-degree: 32%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 29%
 
 Attribution AI viene utilizzato per attribuire il merito ai punti di contatto da cui derivano gli eventi di conversione. Può essere utilizzato dagli addetti al marketing per quantificare l’impatto di ogni punto di contatto marketing lungo i percorsi dei clienti. I punti di contatto includono, ad esempio, le visualizzazioni di ad impression, gli invii di e-mail, le aperture delle e-mail e i clic su risultati di ricerca a pagamento.
 
- uscite di Attribution AI possono essere suddivise in diverse dimensioni e utilizzate in diverse fasi del percorso del cliente. Ciò è possibile senza dover tradurre le esigenze aziendali in problemi di machine learning, algoritmi di scelta, formazione o implementazione di modelli.
+ uscite di Attribution AI possono essere suddivise in diverse dimensioni e utilizzate in diverse fasi del percorso cliente. Ciò è possibile senza dover tradurre le esigenze aziendali in problemi di machine learning, algoritmi di scelta, formazione o implementazione di modelli.
 
  i dati delle Attribution AI possono provenire da  Adobe (ad es. [!DNL Analytics]) o origini dati non  Adobe.
 
@@ -39,7 +39,7 @@ Il seguente video è stato progettato per consentire agli utenti di comprendere 
 - **Segnalazione** esecutiva: Consentire ai dirigenti di comprendere il vero impatto incrementale del marketing, sia nel suo insieme che per canale, regione, SKU, ecc.
 - **Stanziamento** di bilancio: Informare le decisioni di allocazione del budget tra i canali di marketing.
 - **Ottimizzazione** campagna: All&#39;interno di ciascun canale, potete comprendere quali campagne, creativi e parole chiave funzionano meglio per le quali SKU o Geos. Questo consente di guardare ogni canale in modo che il team marketing possa ottimizzare le tattiche.
-- **Attribuzione** full-funnel: Comprendi l&#39;impatto del marketing sull&#39;intero percorso del cliente. Ad esempio, l&#39;iscrizione gratuita all&#39;account per la conversione a pagamento e oltre.
+- **Attribuzione** full-funnel: Comprendi l&#39;impatto del marketing sull&#39;intero percorso di clienti. Ad esempio, l&#39;iscrizione gratuita all&#39;account per la conversione a pagamento e oltre.
 - **Valutazioni** partner: Valutare l&#39;efficacia delle agenzie e dei partner, sulla base dei risultati dell&#39;attribuzione.
 
 ### Funzioni aggiuntive
@@ -48,4 +48,4 @@ Il seguente video è stato progettato per consentire agli utenti di comprendere 
 
 ## Passaggi successivi
 
-Per iniziare, segui la guida [introduttiva](./getting-started.md) . Questa guida illustra come impostare tutte le pre-richieste necessarie per  Attribution AI. Se disponete già di credenziali e dati, visitate la guida [utente](./user-guide.md)Attribution AI. Questa guida illustra come creare un’istanza e inviarla per la formazione e il punteggio.
+Per iniziare, seguire la guida [guida introduttiva](./getting-started.md). Questa guida illustra come impostare tutte le pre-richieste necessarie per  Attribution AI. Se disponi già delle tue credenziali e dei tuoi dati, visita la [ guida utente delle Attribution AI](./user-guide.md). Questa guida illustra come creare un’istanza e inviarla per la formazione e il punteggio.
