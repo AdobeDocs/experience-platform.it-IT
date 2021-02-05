@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;mlinstances;sensei machine learning api
+keywords: ', Experience Platform;guida sviluppatore;endpoint;Data Science Workspace;argomenti comuni;mlinstance;sensei macchina imparare api'
 solution: Experience Platform
-title: MLInances
+title: Endpoint API MLInances
 topic: Developer guide
 description: Un'istanza MLI è un accoppiamento di un motore esistente con un set appropriato di configurazioni che definisce eventuali parametri di formazione, parametri di punteggio o configurazioni di risorse hardware.
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '619'
 ht-degree: 4%
 
 ---
 
 
-# MLInances
+# Endpoint MLInances
 
-Un&#39;istanza MLI è un accoppiamento di un [motore](./engines.md) esistente con un set appropriato di configurazioni che definisce eventuali parametri di formazione, parametri di punteggio o configurazioni di risorse hardware.
+Un&#39;istanza MLI è un accoppiamento di un [Engine](./engines.md) esistente con un set appropriato di configurazioni che definisce eventuali parametri di formazione, parametri di punteggio o configurazioni di risorse hardware.
 
 ## Creare un&#39;istanza MLI {#create-an-mlinstance}
 
-È possibile creare un&#39;istanza MLI eseguendo una richiesta di POST mentre fornisce un payload di richiesta composto da un ID motore (`{ENGINE_ID}`) valido e da un set appropriato di configurazioni predefinite.
+È possibile creare un&#39;istanza MLI eseguendo una richiesta di POST durante la fornitura di un payload di richiesta costituito da un ID motore valido (`{ENGINE_ID}`) e da un set appropriato di configurazioni predefinite.
 
-Se l’ID del motore fa riferimento a un motore PySpark o Spark Engine, potete configurare la quantità di risorse di calcolo, ad esempio il numero di core o la quantità di memoria. Se viene fatto riferimento a un Motore Python, potete scegliere se utilizzare una CPU o una GPU a scopo di formazione e valutazione. Per ulteriori informazioni, consulta le sezioni di appendice sulle configurazioni [delle risorse](./appendix.md#resource-config) PySpark e Spark e sulle configurazioni [della CPU e della GPU](./appendix.md#cpu-gpu-config) Python.
+Se l’ID del motore fa riferimento a un motore PySpark o Spark Engine, potete configurare la quantità di risorse di calcolo, ad esempio il numero di core o la quantità di memoria. Se viene fatto riferimento a un Motore Python, potete scegliere se utilizzare una CPU o una GPU a scopo di formazione e valutazione. Per ulteriori informazioni, consultare le sezioni dell&#39;appendice sulle [configurazioni delle risorse PySpark e Spark](./appendix.md#resource-config) e [configurazioni della CPU e della GPU Python](./appendix.md#cpu-gpu-config).
 
 **Formato API**
 
@@ -131,7 +131,7 @@ Una risposta corretta restituisce un payload contenente i dettagli dell’istanz
 
 ## Recuperare un elenco di istanze MLI
 
-Potete recuperare un elenco di istanze MLI eseguendo una singola richiesta di GET. Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri delle [query per il recupero](./appendix.md#query)delle risorse.
+Potete recuperare un elenco di istanze MLI eseguendo una singola richiesta di GET. Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri di query [per il recupero delle risorse](./appendix.md#query).
 
 **Formato API**
 
@@ -143,7 +143,7 @@ GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Uno dei parametri [di query](./appendix.md#query) disponibili utilizzati per filtrare i risultati. |
+| `{QUERY_PARAMETER}` | Uno dei [parametri di query disponibili](./appendix.md#query) utilizzati per filtrare i risultati. |
 | `{VALUE}` | Il valore del parametro di query precedente. |
 
 **Richiesta**
@@ -276,7 +276,7 @@ Potete aggiornare un&#39;istanza MLI esistente sovrascrivendone le proprietà tr
 
 >[!TIP]
 >
->Per garantire il successo di questa richiesta di PUT, si consiglia innanzitutto di eseguire una richiesta di GET per [recuperare l’istanza MLI per ID](#retrieve-specific). Quindi, modificate e aggiornate l&#39;oggetto JSON restituito e applicate l&#39;intero oggetto JSON modificato come payload per la richiesta di PUT.
+>Per garantire il successo di questa richiesta di PUT, si consiglia innanzitutto di eseguire una richiesta di GET per [recuperare l&#39;istanza MLI per ID](#retrieve-specific). Quindi, modificate e aggiornate l&#39;oggetto JSON restituito e applicate l&#39;intero oggetto JSON modificato come payload per la richiesta di PUT.
 
 La seguente chiamata API di esempio aggiornerà i parametri di formazione e punteggio di un&#39;istanza MLIn, pur disponendo inizialmente di queste proprietà:
 
