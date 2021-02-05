@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ;treno e valutazione;Data Science Workspace;argomenti più comuni;Sensei Machine Learning API
 solution: Experience Platform
-title: Formazione e valutazione di un modello (API)
+title: Formazione e valutazione di un modello utilizzando l'API di apprendimento di Sensei Machine
 topic: tutorial
 type: Tutorial
 description: Questa esercitazione mostrerà come creare, formare e valutare un modello utilizzando le chiamate API Sensei Machine Learning.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1237'
 ht-degree: 1%
 
 ---
 
 
-# Formazione e valutazione di un modello (API)
+# Formazione e valutazione di un modello mediante l&#39;API [!DNL Sensei Machine Learning]
 
 
 Questa esercitazione illustra come creare, formare e valutare un modello utilizzando le chiamate API. Fare riferimento a [questo documento](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) per un elenco dettagliato della documentazione API.
