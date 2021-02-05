@@ -1,21 +1,17 @@
 ---
 keywords: email;Email;email;email;email destinations;salesforce;salesforce Destination
-title: Marketing Cloud Salesforce
-seo-title: Marketing Cloud Salesforce
-description: Salesforce Marketing Cloud è una suite di marketing digitale precedentemente nota come ExactTarget che consente di creare e personalizzare percorsi per visitatori e clienti per personalizzare la loro esperienza.
+title: Destinazione connessione Marketing Cloud Salesforce
 seo-description: Salesforce Marketing Cloud è una suite di marketing digitale precedentemente nota come ExactTarget che consente di creare e personalizzare percorsi per visitatori e clienti per personalizzare la loro esperienza.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '472'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Salesforce Marketing Cloud]
-
-## Panoramica
+# [!DNL Salesforce Marketing Cloud] connection
 
 [[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/) è una suite di marketing digitale precedentemente nota come ExactTarget che consente di creare e personalizzare percorsi per visitatori e clienti per personalizzare la loro esperienza.
 
