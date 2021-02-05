@@ -1,11 +1,11 @@
 ---
 keywords: ' Experience Platform;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API;abilita set di dati'
-title: Configurare un set di dati per il servizio Profilo e identità utilizzando le API
+title: Configurare un set di dati per il profilo e il servizio identità utilizzando le API
 topic: tutorial
 type: Tutorial
 description: Questa esercitazione mostra come abilitare un dataset da utilizzare con il profilo cliente e il servizio identità in tempo reale mediante le API Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f34983dc13a900e7c8fe2e2cef454400c1b6a726
+source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
 workflow-type: tm+mt
 source-wordcount: '1057'
 ht-degree: 1%
