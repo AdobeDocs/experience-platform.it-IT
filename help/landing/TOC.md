@@ -5,10 +5,10 @@ user-guide-title: Panoramica di Adobe Experience Platform
 breadcrumb-title: Panoramica di Experience Platform
 user-guide-description: Scopri come Experience Platform consente di offrire esperienze personalizzate ai clienti in tempo reale.
 translation-type: tm+mt
-source-git-commit: 6ec317dd790b6ad77d8181c1398934f9636c5f5f
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '161'
-ht-degree: 21%
+source-wordcount: '159'
+ht-degree: 22%
 
 ---
 
@@ -30,12 +30,12 @@ ht-degree: 21%
    * [Guida all&#39;interfaccia utente Flussi di lavoro](workflows.md)
    * [Supporto per browser e lingue](browser-language-support.md)
 *  API Experience Platform {#platform-apis}
+   * [API Authenticate e della piattaforma di accesso](api-authentication.md)
    * [Nozioni di base sulle API](api-fundamentals.md)
    * [Documenti di riferimento API](http://www.adobe.com/go/platform-api-reference-en)
-   * [Esercitazione sulle API Authenticate e della piattaforma di accesso](api-authentication.md)
 * Documentazione della piattaforma {#documentation}
-   * [Panoramica della documentazione](documentation/overview.md)
-   * [Supporto per il linguaggio di documentazione](documentation/language-support.md)
+   * [Panoramica](documentation/overview.md)
+   * [Lingue supportate](documentation/language-support.md)
 * Piattaforma nell&#39;ecosistema  Adobe {#ecosystem}
    * [Servizi applicazione](application-services.md)
    * [Applicazioni e servizi intelligenti (video)](video/application-intelligent-services.md)
@@ -48,6 +48,6 @@ ht-degree: 21%
          * [Configurare un dataset per acquisire i dati di consenso e preferenze](./governance-privacy-security/consent/iab/dataset.md)
 * [Pannello Utilizzo licenza](license-usage-dashboard.md)
 * [Guida alla risoluzione dei problemi](troubleshooting.md)
-* [Migrazione ADLS Gen2](adls2-gen2-migration.md)
+* [Migrazione Gen2 data lago](adls2-gen2-migration.md)
 * [Glossario](glossary.md)
 * [Note sulla versione](https://www.adobe.com/go/platform-release-notes-en)
