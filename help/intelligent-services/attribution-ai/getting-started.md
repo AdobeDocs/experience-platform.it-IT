@@ -1,11 +1,11 @@
 ---
 keywords: ' Experience Platform;iniziare;attribuzione ai;argomenti più comuni'
 solution: Experience Platform, Intelligent Services
-title: Guida introduttiva alle  Attribution AI
+title: Guida introduttiva  Attribution AI
 topic: Getting started
 description: Le guide seguenti richiedono una conoscenza approfondita dei diversi servizi Adobe Experience Platform relativi all'utilizzo delle Attribution AI . Prima di iniziare le esercitazioni, consulta i documenti seguenti.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
