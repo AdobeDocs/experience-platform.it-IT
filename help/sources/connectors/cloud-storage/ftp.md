@@ -1,11 +1,11 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;FTP;ftp;'
 solution: Experience Platform
-title: Connettore FTP
+title: Panoramica del connettore di origine FTP
 topic: overview
-description: La documentazione seguente fornisce informazioni su come collegare un server FTP alla piattaforma utilizzando le API o l'interfaccia utente.
+description: Scoprite come collegare un server FTP ad Adobe Experience Platform utilizzando le API o l'interfaccia utente.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 0%
@@ -48,11 +48,11 @@ La documentazione seguente fornisce informazioni su come collegare un server FTP
 
 ### Utilizzo delle API
 
-- [Creazione di un connettore FTP tramite l&#39;API del servizio di flusso](../../tutorials/api/create/cloud-storage/ftp.md)
+- [Creare una connessione sorgente FTP utilizzando l&#39;API del servizio di flusso](../../tutorials/api/create/cloud-storage/ftp.md)
 - [Esplora un sistema di archiviazione cloud utilizzando l&#39;API del servizio di flusso](../../tutorials/api/explore/cloud-storage.md)
 - [Raccolta di dati di archiviazione cloud tramite l&#39;API del servizio di flusso](../../tutorials/api/collect/cloud-storage.md)
 
 ### Utilizzo dell’interfaccia
 
-- [Creare un connettore sorgente FTP nell’interfaccia utente](../../tutorials/ui/create/cloud-storage/ftp.md)
-- [Configurare un flusso di dati per un connettore di archiviazione cloud nell&#39;interfaccia utente](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Creare una connessione sorgente FTP nell’interfaccia utente](../../tutorials/ui/create/cloud-storage/ftp.md)
+- [Configurare un flusso di dati per una connessione di archiviazione cloud nell&#39;interfaccia utente](../../tutorials/ui/dataflow/batch/cloud-storage.md)
