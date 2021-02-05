@@ -1,14 +1,14 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;servizio di flusso;API;api;delete;eliminare i flussi di dati'
 solution: Experience Platform
-title: Eliminare un flusso di dati utilizzando l'API del servizio di flusso
+title: Eliminazione di un flusso di dati tramite l'API del servizio di flusso
 topic: overview
 type: Tutorial
-description: Questa esercitazione descrive i passaggi per eliminare i flussi di dati in batch e in streaming utilizzando l'API del servizio di flusso.
+description: Scoprite come eliminare i flussi di dati in batch e in streaming utilizzando l'API del servizio di flusso.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '480'
 ht-degree: 1%
 
 ---
