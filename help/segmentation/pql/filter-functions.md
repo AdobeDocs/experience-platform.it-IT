@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;filter functions;filter;
+keywords: ' Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Segmentation Service;pql;PQL;Profile Query Language;filter function;filter;'
 solution: Experience Platform
-title: Funzioni filtro
+title: Funzioni filtro PQL
 topic: developer guide
 description: Le funzioni filtro vengono utilizzate per filtrare i dati all'interno degli array in PQL (Profile Query Language).
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '220'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ Le funzioni filtro vengono utilizzate per filtrare i dati all&#39;interno di arr
 
 ## Filtro
 
-La funzione `[]` (filtro) consente l&#39;applicazione di filtri a un array e restituisce un sottoinsieme dell&#39;array che corrisponde alla condizione specificata.
+La funzione `[]` (filter) consente di applicare i filtri a un array e restituisce un sottoinsieme dell&#39;array che corrisponde alla condizione specificata.
 
 **Formato**
 
@@ -37,7 +37,7 @@ xEvent[productListItems[SKU="PS"]]
 
 ## Up, operatore
 
-L&#39;operatore `^` (up) consente di fare riferimento a proprietà nei livelli superiori dei filtri.
+L&#39;operatore `^` (su) consente di fare riferimento a proprietà nei livelli superiori dei filtri.
 
 **Formato**
 
@@ -50,11 +50,11 @@ L&#39;operatore `^` (up) consente di fare riferimento a proprietà nei livelli s
 | `{ARRAY}` | Matrice da filtrare. |
 | `{FILTER_1}` | Lo strato esterno del filtro. |
 | `{FILTER_2}` | Livello interno del filtro |
-| `^{PROPERTY}` | Proprietà su cui viene applicato il filtro. A causa di `^`, controlla una proprietà basata su filter1. |
+| `^{PROPERTY}` | Proprietà su cui viene applicato il filtro. A causa di `^`, sta controllando una proprietà basata su filter1. |
 
 **Esempio**
 
-La seguente query PQL ottiene tutti gli eventi che hanno almeno un elemento prodotto con uno SKU uguale a &quot;PS&quot; **o hanno** una persona il cui genere è femminile.
+La seguente query PQL ottiene tutti gli eventi che hanno almeno un elemento prodotto con uno SKU uguale a &quot;PS&quot; **o** con una persona il cui genere è femminile.
 
 ```sql
 xEvent[productListItems[SKU="PS" or ^^.person.gender="female"]]
@@ -62,4 +62,4 @@ xEvent[productListItems[SKU="PS" or ^^.person.gender="female"]]
 
 ## Passaggi successivi
 
-Dopo aver appreso le funzioni filtro, potete utilizzarle nelle query PQL. Per ulteriori informazioni sulle altre funzioni PQL, consultate la panoramica [Lingua query](./overview.md)profilo.
+Dopo aver appreso le funzioni filtro, potete utilizzarle nelle query PQL. Per ulteriori informazioni sulle altre funzioni PQL, leggere la [Panoramica del linguaggio di query profilo](./overview.md).
