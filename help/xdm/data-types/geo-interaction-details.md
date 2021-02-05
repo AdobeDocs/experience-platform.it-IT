@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;beacon;interaction details;datatype;data-type;data type;
+keywords: ' Experience Platform;home;argomenti più comuni;schema;schema;XDM;campi;schemi;schemi;beacon;dettagli interazione;tipo di dati;tipo di dati;'
 solution: Experience Platform
-title: Tipo di dati dettagli interazione geografica
+title: Tipo dati dettagli interazione geografica
 topic: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM Dettagli interazione geografica.
 translation-type: tm+mt
-source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '130'
-ht-degree: 3%
+source-wordcount: '148'
+ht-degree: 2%
 
 ---
 
