@@ -1,11 +1,11 @@
 ---
 keywords: ' Experience Platform;guida introduttiva;customer ai;argomenti più comuni'
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Guida introduttiva all'intelligenza artificiale
+title: Guida introduttiva all'AI del cliente
 topic: Getting started
 description: Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
 source-wordcount: '571'
 ht-degree: 0%
