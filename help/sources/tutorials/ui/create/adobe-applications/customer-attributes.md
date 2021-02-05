@@ -1,22 +1,22 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;attributi cliente'
 solution: Experience Platform
-title: Creare un connettore di origine attributi cliente nell'interfaccia utente
+title: Creare una connessione di origine attributi cliente nell'interfaccia utente
 topic: overview
 type: Tutorial
-description: Questa esercitazione fornisce i passaggi per la creazione di un connettore di origine nell'interfaccia utente per la raccolta dei dati di profilo degli attributi del cliente in Adobe Experience Platform.
+description: Scoprite come creare una connessione di origine nell'interfaccia utente per la raccolta dei dati di profilo degli attributi del cliente in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '371'
 ht-degree: 5%
 
 ---
 
 
-# Creare un connettore di origine attributi cliente nell&#39;interfaccia utente
+# Creare una connessione di origine Attributi del cliente nell&#39;interfaccia utente
 
-Questa esercitazione fornisce i passaggi per la creazione di un connettore di origine nell&#39;interfaccia utente per la raccolta dei dati di profilo degli attributi del cliente in Adobe Experience Platform. Per ulteriori informazioni sugli attributi del cliente, consultate il documento [panoramica](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html).
+Questa esercitazione fornisce i passaggi per creare una connessione di origine nell&#39;interfaccia utente per la raccolta dei dati del profilo Attributi cliente in Adobe Experience Platform. Per ulteriori informazioni sugli attributi del cliente, vedere il documento [panoramica](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html).
 
 ## Creazione di una connessione di origine
 
