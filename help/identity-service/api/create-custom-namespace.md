@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;home;popular topics;namespace;Namespace;namespaces;Namespaces;identity namespace;Identity namespace;identity;Identity
+keywords: ' Experience Platform;home;argomenti comuni;spazio dei nomi;spazio dei nomi;spazi dei nomi;spazi dei nomi;spazio dei nomi identità;spazio dei nomi identità;identità;identità'
 solution: Experience Platform
-title: Creare uno spazio dei nomi personalizzato
+title: Creare uno spazio dei nomi personalizzato nell'API del servizio identità
 topic: API guide
 description: Utilizzando l'API Identity Namespace (Spazio nomi identità), potete creare uno spazio nomi identità personalizzato che sarà disponibile solo per la vostra organizzazione.
 translation-type: tm+mt
-source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '95'
-ht-degree: 4%
+source-wordcount: '120'
+ht-degree: 3%
 
 ---
 
 
-# Creazione di uno spazio dei nomi personalizzato
+# Creare uno spazio dei nomi personalizzato nell&#39;API del servizio identità
 
-Utilizzando l&#39; [!DNL Identity Namespace] API, potete creare uno spazio nomi identità personalizzato che sarà disponibile solo per la vostra organizzazione.
+Utilizzando l&#39;API [!DNL Identity Namespace], potete creare uno spazio nomi identità personalizzato che sarà disponibile solo per la vostra organizzazione.
 
-Per consigli sulla creazione di spazi dei nomi personalizzati, consultate [la documentazione](../troubleshooting-guide.md)Domande frequenti sul servizio identità.
+Per le raccomandazioni sulla creazione di spazi dei nomi personalizzati, consultate [la documentazione Domande frequenti sul servizio identità](../troubleshooting-guide.md).
 
 >[!NOTE]
 >
@@ -65,4 +65,4 @@ curl -X POST \
 
 ## Passaggi successivi
 
-Passate all&#39;esercitazione successiva per [elencare l&#39;ID nativo di un&#39;identità](./list-native-id.md)
+Procedete con l&#39;esercitazione successiva su [elencare l&#39;ID nativo di un&#39;identità](./list-native-id.md)
