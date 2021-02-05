@@ -1,19 +1,17 @@
 ---
 keywords: destinazioni;soluzioni Experience Cloud; target;destinazione; ad cloud; pubblicità cloud; audience manager; destinazione adobe; target; destinazione del manager dell'audience;
-title: 'Destinazioni Adobe '
-seo-title: 'Destinazioni Adobe '
+title: 'Panoramica sulle destinazioni dei Adobi '
 description: Gestisci la tua esperienza cliente connettendo i dati in Piattaforma ad altre soluzioni Adobe Experience Cloud per il targeting degli annunci, la personalizzazione, l'automazione del marketing e altro ancora
-seo-description: Gestisci la tua esperienza cliente connettendo i dati in Piattaforma ad altre soluzioni Adobe Experience Cloud per il targeting degli annunci, la personalizzazione, l'automazione del marketing e altro ancora
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 12%
+source-wordcount: '219'
+ht-degree: 13%
 
 ---
 
 
-#  Destinazioni Adobe {#adobe-destinations}
+#  delle destinazioni dei Adobi {#adobe-destinations}
 
 Gestisci la tua esperienza cliente connettendo i dati in Adobe Experience Platform ad altre soluzioni Adobe Experience Cloud per il targeting degli annunci, la personalizzazione, l&#39;automazione del marketing e altro ancora.
 
