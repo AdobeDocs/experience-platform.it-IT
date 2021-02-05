@@ -1,31 +1,31 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment service;segments;Segments;multi-entity;multi-entity segmentation;multi-entity segments;
+keywords: ' Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;servizio segmenti;segmenti;segmenti;multi-entità;segmentazione multi-entità;segmenti multi-entità;'
 solution: Experience Platform
-title: Segmentazione multi-entità
+title: Panoramica sulla segmentazione multi-entità
 topic: overview
 description: La segmentazione multi-entità è la capacità di estendere i dati del profilo con dati aggiuntivi basati su prodotti, store o altre classi non di profilo. Una volta connessi, i dati di altre classi diventano disponibili come se fossero nativi dello schema Profilo.
 translation-type: tm+mt
-source-git-commit: 4dd5a91146b116953ba180e3f39d24b4e1ec289e
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '674'
 ht-degree: 0%
 
 ---
 
 
-# Segmentazione multi-entità
+# Panoramica sulla segmentazione multi-entità
 
-La segmentazione multi-entità è una funzione avanzata disponibile come parte di Adobe Experience Platform [!DNL Segmentation Service]. Questa funzione consente di estendere [!DNL Real-time Customer Profile] i dati con dati &quot;non relativi alle persone&quot; aggiuntivi (denominati anche &quot;entità dimensione&quot;) che l&#39;organizzazione può definire, ad esempio dati relativi a prodotti o store. La segmentazione multi-entità offre flessibilità nella definizione dei segmenti di pubblico in base ai dati pertinenti alle esigenze aziendali specifiche e può essere eseguita senza disporre di competenze nella creazione di query sui database. Con la segmentazione multi-entità, puoi aggiungere dati chiave ai tuoi segmenti senza dover apportare costose modifiche ai flussi di dati o aspettare un&#39;unione di dati back-end.
+La segmentazione multi-entità è una funzione avanzata disponibile come parte di Adobe Experience Platform [!DNL Segmentation Service]. Questa funzione consente di estendere i dati [!DNL Real-time Customer Profile] con dati &quot;non-persone&quot; aggiuntivi (denominati anche &quot;entità dimensione&quot;) che l&#39;organizzazione può definire, ad esempio dati relativi a prodotti o store. La segmentazione multi-entità offre flessibilità nella definizione dei segmenti di pubblico in base ai dati pertinenti alle esigenze aziendali specifiche e può essere eseguita senza disporre di competenze nella creazione di query sui database. Con la segmentazione multi-entità, puoi aggiungere dati chiave ai tuoi segmenti senza dover apportare costose modifiche ai flussi di dati o aspettare un&#39;unione di dati back-end.
 
 ## Introduzione
 
 La segmentazione multi-entità richiede una conoscenza approfondita dei vari servizi Adobe Experience Platform coinvolti nella segmentazione. Prima di continuare con questa guida, consulta la seguente documentazione:
 
 * [[!DNL Real-time Customer Profile]](../profile/home.md): Fornisce un profilo del consumatore unificato in tempo reale, basato su dati aggregati provenienti da più origini.
-   * [Profili](../profile/guardrails.md)profilo: Procedure ottimali per la creazione di modelli di dati supportati da [!DNL Profile].
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Consente di creare segmenti dai [!DNL Real-time Customer Profile] dati.
+   * [Profili](../profile/guardrails.md) profilo: Procedure ottimali per la creazione di modelli di dati supportati da  [!DNL Profile].
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Consente di creare segmenti dai  [!DNL Real-time Customer Profile] dati.
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Il framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
-   * [Nozioni di base sulla composizione](../xdm/schema/composition.md#union)dello schema: Scoprite le procedure ottimali per la composizione degli schemi da utilizzare  Experience Platform.
+   * [Nozioni di base sulla composizione](../xdm/schema/composition.md#union) dello schema: Scoprite le procedure ottimali per la composizione degli schemi da utilizzare  Experience Platform.
 
 ## Casi di utilizzo
 
@@ -41,7 +41,7 @@ Spesso è complesso creare e qualificare gli utenti in segmenti che puntano all&
 
 ## Creazione di segmenti con più entità
 
-Per creare un segmento con più entità è innanzitutto necessario definire le relazioni tra gli schemi prima di utilizzare l&#39;interfaccia utente [!DNL Segmentation] API o Generatore di segmenti per creare la definizione del segmento.
+La creazione di un segmento con più entità richiede prima di tutto la definizione di relazioni tra schemi prima di utilizzare l&#39;API [!DNL Segmentation] o l&#39;interfaccia utente di Generatore di segmenti per creare la definizione del segmento.
 
 ### Definizione delle relazioni
 
@@ -61,4 +61,4 @@ Una volta definite le relazioni XDM necessarie, potete iniziare a creare un segm
 
 ## Valutazione e accesso a segmenti con più entità
 
-Dopo aver creato un segmento, puoi valutare e accedere ai risultati del segmento utilizzando l&#39;API di segmentazione. La valutazione di un segmento con più entità è molto simile alla valutazione di un segmento standard. Questo processo può essere eseguito solo tramite l&#39;API di segmentazione. Per una guida dettagliata che mostra come utilizzare l&#39;API per valutare e accedere ai segmenti, consulta l&#39;esercitazione sulla [valutazione e l&#39;accesso ai segmenti](./tutorials/evaluate-a-segment.md) .
+Dopo aver creato un segmento, puoi valutare e accedere ai risultati del segmento utilizzando l&#39;API di segmentazione. La valutazione di un segmento con più entità è molto simile alla valutazione di un segmento standard. Questo processo può essere eseguito solo tramite l&#39;API di segmentazione. Per una guida dettagliata che mostra come utilizzare l&#39;API per valutare e accedere ai segmenti, leggi l&#39;esercitazione [relativa alla valutazione e all&#39;accesso ai segmenti](./tutorials/evaluate-a-segment.md).
