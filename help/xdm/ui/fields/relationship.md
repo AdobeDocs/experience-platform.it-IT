@@ -1,19 +1,19 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati;ui;workspace;relazione;campo;'
 solution: Experience Platform
-title: Definire un campo di relazione nell'interfaccia utente
+title: Definire i campi di relazione nell'interfaccia utente
 description: Scoprite come definire un campo di relazione nell'interfaccia utente del Experience Platform .
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
 
 
-# Definire un campo di relazione nell&#39;interfaccia utente
+# Definire i campi delle relazioni nell&#39;interfaccia utente
 
 In Experience Data Model (XDM), uno [schema unione](../../schema/composition.md#union) è una visualizzazione unificata di tutti gli schemi appartenenti alla stessa classe che sono stati abilitati anche per [Real-time Customer Profile](../../../profile/home.md). Lo schema unione è basato su Profile per creare una rappresentazione completa di un cliente da dati esperienza diversi.
 
