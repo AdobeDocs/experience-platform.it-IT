@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;catalog;api;update an object
+keywords: ' Experience Platform;home;argomenti popolari;catalogo;api;aggiornare un oggetto'
 solution: Experience Platform
-title: Aggiornare un oggetto
+title: Aggiornare un oggetto catalogo
 topic: developer guide
 description: 'Potete aggiornare parte di un oggetto Catalog inserendone l’ID nel percorso di una richiesta di PATCH. In questo documento viene illustrato l''uso dei campi e della notazione della patch JSON per eseguire operazioni PATCH sugli oggetti Catalog. '
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '361'
 ht-degree: 3%
 
 ---
 
 
-# Aggiornare un oggetto
+# Aggiornare un oggetto Catalog
 
-È possibile aggiornare parte di un [!DNL Catalog] oggetto inserendone l&#39;ID nel percorso di una richiesta di PATCH. Questo documento descrive i due metodi per eseguire le operazioni PATCH sugli oggetti Catalog:
+È possibile aggiornare parte di un oggetto [!DNL Catalog] inserendone l&#39;ID nel percorso di una richiesta di PATCH. Questo documento descrive i due metodi per eseguire le operazioni PATCH sugli oggetti Catalog:
 
 * Uso dei campi
 * Utilizzo della notazione patch JSON
@@ -36,12 +36,12 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{OBJECT_TYPE}` | Il tipo di [!DNL Catalog] oggetto da aggiornare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Il tipo di oggetto [!DNL Catalog] da aggiornare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Identificatore dell&#39;oggetto specifico da aggiornare. |
 
 **Richiesta**
 
-La seguente richiesta aggiorna i campi `name` e `description` i campi di un dataset ai valori forniti nel payload. I campi oggetto che non devono essere aggiornati possono essere esclusi dal payload.
+La seguente richiesta aggiorna i campi `name` e `description` di un dataset ai valori forniti nel payload. I campi oggetto che non devono essere aggiornati possono essere esclusi dal payload.
 
 ```shell
 curl -X PATCH \
@@ -59,7 +59,7 @@ curl -X PATCH \
 
 **Risposta**
 
-Una risposta corretta restituisce un array contenente l&#39;ID del set di dati aggiornato. Questo ID deve corrispondere a quello inviato nella richiesta PATCH. L&#39;esecuzione di una richiesta di GET per questo dataset ora mostra che solo l&#39;oggetto `name` e `description` sono stati aggiornati, mentre tutti gli altri valori rimangono invariati.
+Una risposta corretta restituisce un array contenente l&#39;ID del set di dati aggiornato. Questo ID deve corrispondere a quello inviato nella richiesta PATCH. L&#39;esecuzione di una richiesta di GET per questo dataset ora mostra che solo i valori `name` e `description` sono stati aggiornati, mentre tutti gli altri valori rimangono invariati.
 
 ```json
 [
@@ -85,12 +85,12 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{OBJECT_TYPE}` | Il tipo di [!DNL Catalog] oggetto da aggiornare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Il tipo di oggetto [!DNL Catalog] da aggiornare. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Identificatore dell&#39;oggetto specifico da aggiornare. |
 
 **Richiesta**
 
-La seguente richiesta aggiorna i campi `name` e `description` di un dataset ai valori forniti in ciascun oggetto Patch JSON. Quando utilizzate la patch JSON, dovete anche impostare l&#39;intestazione Content-Type su `application/json-patch+json`.
+La richiesta seguente aggiorna i campi `name` e `description` di un dataset ai valori forniti in ciascun oggetto Patch JSON. Quando utilizzate la patch JSON, dovete anche impostare l&#39;intestazione Content-Type su `application/json-patch+json`.
 
 ```shell
 curl -X PATCH \
@@ -108,7 +108,7 @@ curl -X PATCH \
 
 **Risposta**
 
-Una risposta corretta restituisce un array contenente l&#39;ID dell&#39;oggetto aggiornato. Questo ID deve corrispondere a quello inviato nella richiesta PATCH. L&#39;esecuzione di una richiesta di GET per questo oggetto ora mostra che solo l&#39;oggetto `name` e `description` sono stati aggiornati, mentre tutti gli altri valori rimangono invariati.
+Una risposta corretta restituisce un array contenente l&#39;ID dell&#39;oggetto aggiornato. Questo ID deve corrispondere a quello inviato nella richiesta PATCH. L&#39;esecuzione di una richiesta di GET per questo oggetto ora mostra che solo i valori `name` e `description` sono stati aggiornati, mentre tutti gli altri valori rimangono invariati.
 
 ```json
 [
