@@ -5,15 +5,15 @@ user-guide-title: Guida all’acquisizione dei dati di Adobe Experience Platform
 breadcrumb-title: Guida all’acquisizione dei dati
 user-guide-description: Trasferisci i tuoi dati in Platform tramite l’acquisizione in batch o in streaming.
 translation-type: tm+mt
-source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '121'
 ht-degree: 20%
 
 ---
 
 
-# Adobe Experience Platform Data Ingestion {#ingestion}
+# Ingestione dati Adobe Experience Platform {#ingestion}
 
 - [Panoramica sull&#39;inserimento dei dati](home.md)
 - Caricamento in streaming {#streaming}
@@ -34,13 +34,13 @@ ht-degree: 20%
    - [Streaming dei dati dei record](tutorials/streaming-record-data.md)
    - [Streaming dei dati delle serie temporali](tutorials/streaming-time-series-data.md)
    - [Streaming di più messaggi](tutorials/streaming-multiple-messages.md)
-- Qualità e monitoraggio dell&#39;acquisizione dei dati{#quality}
+- Qualità dei dati e monitoraggio{#quality}
    - [Panoramica](quality/overview.md)
    - [Caricamento dei dati del monitor](quality/monitor-data-ingestion.md)
    - [Recupero della diagnostica degli errori](quality/error-diagnostics.md)
    - [Recupero batch non riusciti](quality/retrieve-failed-batches.md)
    - [Convalida dell&#39;assimilazione in streaming](quality/streaming-validation.md)
-   - [Iscrizione agli eventi di assimilazione dei dati](quality/subscribe-events.md)
+   - [Notifiche di assimilazione dei dati](quality/subscribe-events.md)
 - [Connettori sorgente](source-connectors.md)
 - [Riferimento API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
 - [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-en)
