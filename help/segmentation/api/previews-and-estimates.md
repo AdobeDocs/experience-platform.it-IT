@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;previews;estimates;previews and estimates;estimates and previews;api;API;
+keywords: ' Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Segmentation Service;anteprime;stime;anteprime e stime;stime e anteprime;api;API;'
 solution: Experience Platform
-title: Anteprime e endpoint stime
+title: Anteprime e stime degli endpoint API
 topic: developer guide
-description: Mentre sviluppate la definizione del segmento, potete utilizzare gli strumenti di stima e anteprima in Adobe Experience Platform per visualizzare le informazioni a livello di riepilogo per garantire che l'audience attesa sia isolata.
+description: Le anteprime e le stime degli endpoint nell'API di Adobe Experience Platform Segmentation Service API consentono di visualizzare informazioni a livello di riepilogo per garantire che l'audience prevista sia isolata nei segmenti.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '793'
 ht-degree: 2%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 2%
 
 # Anteprime e endpoint stime
 
-Mentre sviluppate la definizione del segmento, potete utilizzare gli strumenti di stima e anteprima all’interno [!DNL Adobe Experience Platform] per visualizzare le informazioni a livello di riepilogo per garantire che l’audience attesa sia isolata. **Le anteprime** forniscono elenchi impaginati di profili idonei per una definizione di segmento, consentendo di confrontare i risultati con quanto previsto. **Le stime** forniscono informazioni statistiche sulla definizione di un segmento, come la dimensione dell&#39;audience prevista, l&#39;intervallo di confidenza e la deviazione standard dell&#39;errore.
+Mentre sviluppate la definizione del segmento, potete utilizzare gli strumenti di stima e anteprima all&#39;interno di [!DNL Adobe Experience Platform] per visualizzare le informazioni a livello di riepilogo per garantire che l&#39;audience attesa sia isolata. **Le** anteprime forniscono elenchi impaginati di profili di qualifica per una definizione di segmento, consentendo di confrontare i risultati rispetto alle aspettative. **Le** stime forniscono informazioni statistiche su una definizione di segmento, come la dimensione dell&#39;audience proiettata, l&#39;intervallo di confidenza e la deviazione standard dell&#39;errore.
 
 ## Introduzione
 
-Gli endpoint utilizzati in questa guida fanno parte dell&#39; [!DNL Adobe Experience Platform Segmentation Service] API. Prima di continuare, controllate la guida [](./getting-started.md) introduttiva per informazioni importanti che dovete conoscere per effettuare correttamente le chiamate all&#39;API, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
+Gli endpoint utilizzati in questa guida fanno parte dell&#39;API [!DNL Adobe Experience Platform Segmentation Service]. Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all&#39;API, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
 
 ## Modalità di generazione delle stime
 
@@ -41,9 +41,9 @@ La dimensione del campione della scansione dipende dal numero complessivo di ent
 >
 >Le stime impiegano generalmente dai 10 ai 15 secondi per essere eseguite, a partire da una stima approssimativa e affinando man mano che vengono letti più record.
 
-## Create a new preview {#create-preview}
+## Creare una nuova anteprima {#create-preview}
 
-Potete creare una nuova anteprima effettuando una richiesta di POST all’ `/preview` endpoint.
+Potete creare una nuova anteprima effettuando una richiesta di POST all&#39;endpoint `/preview`.
 
 >[!NOTE]
 >
@@ -99,7 +99,7 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) con i dettagli dell
 
 ## Recuperare i risultati di un&#39;anteprima specifica {#get-preview}
 
-Potete recuperare informazioni dettagliate su una specifica anteprima effettuando una richiesta di GET all’ `/preview` endpoint e fornendo l’ID anteprima nel percorso della richiesta.
+Potete recuperare informazioni dettagliate su una specifica anteprima effettuando una richiesta di GET all&#39;endpoint `/preview` e fornendo l&#39;ID di anteprima nel percorso della richiesta.
 
 **Formato API**
 
@@ -109,7 +109,7 @@ GET /preview/{PREVIEW_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | Il `previewId` valore dell’anteprima da recuperare. |
+| `{PREVIEW_ID}` | Il valore `previewId` dell&#39;anteprima che si desidera recuperare. |
 
 **Richiesta**
 
@@ -172,11 +172,11 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `results` | Un elenco di ID entità, con le relative identità. I collegamenti forniti possono essere utilizzati per cercare le entità specificate, utilizzando l&#39; [[!DNL Profile Access API]](../../profile/api/entities.md). |
+| `results` | Un elenco di ID entità, con le relative identità. I collegamenti forniti possono essere utilizzati per cercare le entità specificate, utilizzando la [[!DNL Profile Access API]](../../profile/api/entities.md). |
 
 ## Recuperare i risultati di un processo di stima specifico {#get-estimate}
 
-Dopo aver creato un processo di anteprima, potete usarlo `previewId` `/estimate` nel percorso di una richiesta di GET all’endpoint per visualizzare informazioni statistiche sulla definizione del segmento, incluse le dimensioni del pubblico proiettate, l’intervallo di confidenza e la deviazione standard dell’errore.
+Dopo aver creato un processo di anteprima, potete utilizzare il relativo percorso `previewId` nel percorso di una richiesta di GET all&#39;endpoint `/estimate` per visualizzare informazioni statistiche sulla definizione del segmento, incluse le dimensioni del pubblico proiettate, l&#39;intervallo di confidenza e la deviazione standard dell&#39;errore.
 
 **Formato API**
 
@@ -186,7 +186,7 @@ GET /estimate/{PREVIEW_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | Un processo di stima viene attivato solo quando viene creato un processo di anteprima e i due processi condividono lo stesso valore ID a scopo di ricerca. In modo specifico, si tratta del `previewId` valore restituito al momento della creazione del processo di anteprima. |
+| `{PREVIEW_ID}` | Un processo di stima viene attivato solo quando viene creato un processo di anteprima e i due processi condividono lo stesso valore ID a scopo di ricerca. Nello specifico, si tratta del valore `previewId` restituito al momento della creazione del processo di anteprima. |
 
 **Richiesta**
 
@@ -231,4 +231,4 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del processo 
 
 ## Passaggi successivi
 
-Dopo aver letto questa guida è ora possibile comprendere meglio come utilizzare le anteprime e le stime. Per ulteriori informazioni sugli altri endpoint [!DNL Segmentation Service] API, consulta la panoramica [della guida per gli sviluppatori del servizio](./overview.md)di segmentazione.
+Dopo aver letto questa guida è ora possibile comprendere meglio come utilizzare le anteprime e le stime. Per ulteriori informazioni sugli altri endpoint [!DNL Segmentation Service] API, consultare la [Guida per gli sviluppatori di servizi di segmentazione](./overview.md).
