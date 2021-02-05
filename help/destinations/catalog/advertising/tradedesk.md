@@ -1,21 +1,17 @@
 ---
 keywords: pubblicità; il banco commerciale;
-title: Destinazione scrivania
-seo-title: Destinazione scrivania
+title: Destinazione di connessione del desk commerciale
 description: 'Il Trade Desk è una piattaforma self-service per gli acquirenti di annunci che esegue retargeting e campagne digitali mirate per il pubblico attraverso fonti di visualizzazione, video e inventario mobile. '
-seo-description: Il Trade Desk è una piattaforma self-service per gli acquirenti di annunci che esegue retargeting e campagne digitali mirate per il pubblico attraverso fonti di visualizzazione, video e inventario mobile.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '514'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL The Trade Desk] destinazione
-
-## Panoramica {#overview}
+# [!DNL The Trade Desk] connection
 
 [!DNL The Trade Desk] la destinazione consente di inviare i dati del profilo a  [!DNL The Trade Desk].
 
