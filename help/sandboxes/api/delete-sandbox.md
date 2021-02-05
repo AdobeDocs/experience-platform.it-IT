@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;delete sandbox
+keywords: Experience Platform ;home;argomenti più comuni;eliminare sandbox
 solution: Experience Platform
-title: Eliminare una sandbox
+title: Eliminare una sandbox nell'API
 topic: developer guide
 description: Potete eliminare una sandbox effettuando una richiesta di DELETE che include il nome della sandbox nel percorso della richiesta.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '103'
+source-wordcount: '116'
 ht-degree: 3%
 
 ---
 
 
-# Eliminare una sandbox
+# Eliminare una sandbox nell&#39;API
 
-Potete eliminare una sandbox effettuando una richiesta di DELETE che include la sandbox `name` nel percorso della richiesta.
+Potete eliminare una sandbox effettuando una richiesta di DELETE che include nel percorso della richiesta l&#39;elemento `name` della sandbox.
 
 >[!NOTE]
 >
->Facendo questa chiamata API, la proprietà della `status` sandbox viene aggiornata in &quot;eliminata&quot; e disattivata. Le richieste di GET possono ancora recuperare i dettagli della sandbox dopo che è stata eliminata.
+>Facendo questa chiamata API, la proprietà `status` della sandbox viene aggiornata in &quot;eliminata&quot; e disattivata. Le richieste di GET possono ancora recuperare i dettagli della sandbox dopo che è stata eliminata.
 
 **Formato API**
 
@@ -29,7 +29,7 @@ DELETE /sandboxes/{SANDBOX_NAME}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{SANDBOX_NAME}` | Indica `name` la sandbox da eliminare. |
+| `{SANDBOX_NAME}` | La `name` della sandbox da eliminare. |
 
 **Richiesta**
 
@@ -46,7 +46,7 @@ curl -X DELETE \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli aggiornati della sandbox, indicando che `state` è &quot;eliminata&quot;.
+Una risposta corretta restituisce i dettagli aggiornati della sandbox, indicando che la `state` è &quot;eliminata&quot;.
 
 ```json
 {
