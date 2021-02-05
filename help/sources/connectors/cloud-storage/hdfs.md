@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform ;home;argomenti popolari;HDFS;hdfs;Apache HDFS;apache hdfs
 solution: Experience Platform
-title: Connettore HDFS
+title: Panoramica del connettore di origine Apache HDFS
 topic: overview
-description: La documentazione seguente fornisce informazioni su come collegare Apache HDFS alla piattaforma utilizzando le API o l'interfaccia utente.
+description: Scoprite come collegare Apache HDFS ad Adobe Experience Platform utilizzando le API o l'interfaccia utente.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
@@ -42,11 +42,11 @@ La documentazione seguente fornisce informazioni su come collegare [!DNL Apache]
 
 ### Utilizzo delle API
 
-- [Creare un connettore HDFS utilizzando l&#39;API di servizio di flusso](../../tutorials/api/create/cloud-storage/hdfs.md)
+- [Creare una connessione sorgente HDFS utilizzando l&#39;API del servizio di flusso](../../tutorials/api/create/cloud-storage/hdfs.md)
 - [Esplora un sistema di archiviazione cloud utilizzando l&#39;API del servizio di flusso](../../tutorials/api/explore/cloud-storage.md)
 - [Raccolta di dati di archiviazione cloud tramite l&#39;API del servizio di flusso](../../tutorials/api/collect/cloud-storage.md)
 
 ### Utilizzo dell’interfaccia
 
-- [Creare un connettore sorgente Apache HDFS nell’interfaccia utente](../../tutorials/ui/create/cloud-storage/hdfs.md)
-- [Configurare un flusso di dati per un connettore di archiviazione cloud nell&#39;interfaccia utente](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Creare una connessione sorgente Apache HDFS nell’interfaccia utente](../../tutorials/ui/create/cloud-storage/hdfs.md)
+- [Configurare un flusso di dati per una connessione di archiviazione cloud nell&#39;interfaccia utente](../../tutorials/ui/dataflow/batch/cloud-storage.md)
