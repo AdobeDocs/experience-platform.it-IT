@@ -1,19 +1,17 @@
 ---
 keywords: social network;destinazioni social network;Livefyre;facebook;Facebook
-title: Destinazioni social network
-seo-title: Destinazioni social network
+title: Panoramica delle destinazioni social network
 description: Con le destinazioni dei social network, puoi attivare profili per le tue campagne di targeting dell'audience, personalizzazione e soppressione basate su e-mail con hash.
-seo-description: Con le destinazioni dei social network, puoi attivare profili per le tue campagne di targeting dell'audience, personalizzazione e soppressione basate su e-mail con hash.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '93'
+source-wordcount: '71'
 ht-degree: 0%
 
 ---
 
 
-# Destinazioni social network {#social-network-destinations}
+# Panoramica delle destinazioni social network {#social-network-destinations}
 
 Con le destinazioni dei social network, puoi attivare profili per le tue campagne di targeting dell&#39;audience, personalizzazione e soppressione basate su e-mail con hash.
 
