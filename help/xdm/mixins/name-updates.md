@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;updates;
+keywords: ' Experience Platform;home;argomenti popolari;schema;schema;XDM;ExperienceEvent;fields;schemas;Schema design;mixin;mixin;enduserids;end user;end user;ids;updates;'
 solution: Experience Platform
-title: Aggiornamenti dei nomi misti
+title: Aggiornamenti dei nomi dei mixin
 topic: overview
 description: Viene visualizzato un elenco delle modifiche recenti apportate al nome del mixin XDM.
 translation-type: tm+mt
-source-git-commit: 4f50926a9c5bc02255bd62c51cca13fc9094a9e8
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '93'
+source-wordcount: '115'
 ht-degree: 0%
 
 ---
