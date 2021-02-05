@@ -1,19 +1,19 @@
 ---
 keywords: destinazioni pubblicitarie;destinazioni;destinazioni di piattaforme
 title: Destinazioni pubblicitarie
-seo-title: Destinazioni pubblicitarie
+seo-title: Panoramica delle destinazioni pubblicitarie
 description: Collegate Adobe Experience Platform a una piattaforma pubblicitaria 3rd party (ad es. DSP, rete pubblicitaria, SSP) e condividete tipi di pubblico pseudonimi con queste piattaforme.
 seo-description: Collegate Adobe Experience Platform a una piattaforma pubblicitaria 3rd party (ad es. DSP, rete pubblicitaria, SSP) e condividete tipi di pubblico pseudonimi con queste piattaforme.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '227'
 ht-degree: 2%
 
 ---
 
 
-# Destinazioni pubblicitarie {#advertising-destinations}
+# Panoramica delle destinazioni pubblicitarie {#advertising-destinations}
 
 Collegate Adobe Experience Platform a una piattaforma pubblicitaria 3rd party (ad es. DSP, rete pubblicitaria, SSP) e condividete tipi di pubblico pseudonimi con queste piattaforme.
 
