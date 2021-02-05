@@ -1,20 +1,20 @@
 ---
 keywords: ' Experience Platform;importazione di ricetta confezionata;Data Science Workspace;argomenti più comuni;ricette;api;sensei macchina apprendimento;creare motore'
 solution: Experience Platform
-title: Importare una ricetta in pacchetti (API)
+title: Importare una ricetta in pacchetti utilizzando l'API di apprendimento di Sensei Machine
 topic: tutorial
 type: Tutorial
 description: 'Questa esercitazione utilizza l''API di apprendimento di Sensei Machine per creare un motore, noto anche come Ricetta nell''interfaccia utente. '
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '1007'
 ht-degree: 2%
 
 ---
 
 
-# Importare una ricetta in pacchetti (API)
+# Importare una ricetta in pacchetti utilizzando l&#39;API di apprendimento di Sensei Machine
 
 Questa esercitazione utilizza [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) per creare un [Motore](../api/engines.md), noto anche come Ricetta nell&#39;interfaccia utente.
 
