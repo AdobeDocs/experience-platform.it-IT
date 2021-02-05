@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;catalog;api;replace an object
+keywords: ' Experience Platform;home;argomenti popolari;catalogo;api;sostituire un oggetto'
 solution: Experience Platform
-title: Sostituire un oggetto
+title: Sostituire un oggetto catalogo
 topic: developer guide
 description: Potete sovrascrivere il contenuto di un oggetto Catalog utilizzando una richiesta di PUT in cui l'intera risorsa viene sostituita con il payload della richiesta.
 translation-type: tm+mt
-source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '173'
 ht-degree: 2%
 
 ---
 
 
-# Sostituire un oggetto
+# Sostituire un oggetto Catalog
 
-Potete sovrascrivere il contenuto di un [!DNL Catalog] oggetto utilizzando una richiesta di PUT in cui l&#39;intera risorsa viene sostituita con il payload della richiesta.
+Potete sovrascrivere il contenuto di un oggetto [!DNL Catalog] utilizzando una richiesta di PUT, in cui l&#39;intera risorsa viene sostituita con il payload della richiesta.
 
 >[!NOTE]
 >
->Se è necessario aggiornare solo alcuni campi specifici all&#39;interno di un [!DNL Catalog] oggetto, l&#39;utilizzo di una richiesta PATCH potrebbe essere più efficiente.
+>Se è necessario aggiornare solo alcuni campi specifici all&#39;interno di un oggetto [!DNL Catalog], l&#39;utilizzo di una richiesta di PATCH potrebbe essere più efficiente.
 
 **Formato API**
 
@@ -29,7 +29,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{OBJECT_TYPE}` | Tipo di [!DNL Catalog] oggetto da sostituire. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Il tipo di oggetto [!DNL Catalog] da sostituire. Gli oggetti validi sono: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Identificatore dell&#39;oggetto specifico da aggiornare. |
 
 **Richiesta**
