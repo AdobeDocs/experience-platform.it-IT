@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;Intelligent Services;popular topics;intelligent service;Intelligent service
+keywords: ;casa;servizi intelligenti;argomenti comuni;servizio intelligente;servizio intelligente
 solution: Experience Platform, Intelligent Services
-title: Preparare i dati per l'utilizzo in Intelligent Services
+title: Preparare i dati per l'utilizzo in servizi intelligenti
 topic: Intelligent Services
 description: 'Per consentire ai servizi intelligenti di scoprire informazioni ricavate dai dati degli eventi di marketing, i dati devono essere arricchiti e mantenuti in modo semantico in una struttura standard. I servizi intelligenti sfruttano gli schemi XDM (Experience Data Model) per ottenere questo risultato. Nello specifico, tutti i set di dati utilizzati in Intelligent Services] devono essere conformi allo schema XDM Consumer ExperienceEvent (CEE). '
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '1850'
+source-wordcount: '1861'
 ht-degree: 0%
 
 ---
 
 
-# Preparare i dati per l&#39;utilizzo in [!DNL Intelligent Services]
+# Preparare i dati per l&#39;uso in [!DNL Intelligent Services]
 
-Per [!DNL Intelligent Services] scoprire informazioni ricavate dai dati degli eventi di marketing, i dati devono essere arricchiti e mantenuti in modo semantico in una struttura standard. [!DNL Intelligent Services] utilizzare gli schemi [!DNL Experience Data Model] (XDM) per ottenere questo risultato. Nello specifico, tutti i set di dati utilizzati in [!DNL Intelligent Services] devono essere conformi allo schema XDM (Consumer Experience Event).
+Affinché [!DNL Intelligent Services] possa scoprire informazioni tratte dai dati degli eventi di marketing, i dati devono essere arricchiti e mantenuti in modo semantico in una struttura standard. [!DNL Intelligent Services] sfruttare gli schemi  [!DNL Experience Data Model] (XDM) per ottenere questo risultato. Nello specifico, tutti i set di dati utilizzati in [!DNL Intelligent Services] devono essere conformi allo schema XDM (Consumer ExperienceEvent).
 
 Questo documento fornisce linee guida generali sulla mappatura dei dati degli eventi di marketing da più canali a questo schema, delineando le informazioni sui campi importanti all&#39;interno dello schema per consentire di determinare in modo efficace come mappare i dati alla relativa struttura.
 
@@ -25,22 +25,22 @@ Il processo di preparazione varia a seconda che i dati siano memorizzati in Adob
 
 ### Preparazione dati esterni
 
-Se i dati sono memorizzati al di fuori di [!DNL Experience Platform], attenetevi alla procedura seguente:
+Se i dati sono memorizzati al di fuori di [!DNL Experience Platform], segui i passaggi seguenti:
 
 1. Contattare  Adobe Consulting Services per richiedere le credenziali di accesso per un contenitore di archiviazione BLOB di Azure dedicato.
 1. Utilizzando le credenziali di accesso, caricate i dati nel contenitore BLOB.
-1. Utilizzate  Adobe Consulting Services per mappare i dati sullo schema [Consumer ExperienceEvent e assimilarli in](#cee-schema) [!DNL Intelligent Services].
+1. I servizi di consulenza  Adobe consentono di mappare i dati sullo [schema ExperienceEvent del consumatore](#cee-schema) e di assimilarli in [!DNL Intelligent Services].
 
 ### [!DNL Experience Platform] preparazione dei dati
 
-Se i dati sono già memorizzati in [!DNL Platform], segui i passaggi indicati di seguito:
+Se i dati sono già memorizzati in [!DNL Platform], segui i passaggi seguenti:
 
-1. Esaminare la struttura dello schema [](#cee-schema) Consumer ExperienceEvent e determinare se i dati possono essere mappati ai relativi campi.
-1. Contattare  Adobe Consulting Services per facilitare la mappatura dei dati sullo schema e l&#39;assimilazione [!DNL Intelligent Services]oppure [seguire i passaggi di questa guida](#mapping) se si desidera mappare i dati da soli.
+1. Esaminare la struttura dello [schema Consumer ExperienceEvent](#cee-schema) e determinare se i dati possono essere mappati ai relativi campi.
+1. Contattare  Adobe Consulting Services per facilitare la mappatura dei dati sullo schema e l&#39;assimilazione in [!DNL Intelligent Services] oppure [seguire i passaggi descritti in questa guida](#mapping) per mappare i dati da soli.
 
 ## Informazioni sullo schema CEE {#cee-schema}
 
-Lo schema Consumer ExperienceEvent descrive il comportamento di un individuo in quanto si riferisce a eventi di marketing digitale (Web o mobile) nonché alle attività commerciali online o offline. L&#39;utilizzo di questo schema è richiesto [!DNL Intelligent Services] a causa dei relativi campi (colonne) semanticamente ben definiti, evitando nomi sconosciuti che altrimenti renderebbero i dati meno chiari.
+Lo schema Consumer ExperienceEvent descrive il comportamento di un individuo in quanto si riferisce a eventi di marketing digitale (Web o mobile) nonché alle attività commerciali online o offline. L&#39;utilizzo di questo schema è richiesto per [!DNL Intelligent Services] a causa dei relativi campi (colonne) semanticamente ben definiti, evitando nomi sconosciuti che altrimenti renderebbero i dati meno chiari.
 
 Lo schema CEE, come tutti gli schemi XDM ExperienceEvent, acquisisce lo stato del sistema basato sulle serie temporali quando si verifica un evento (o un set di eventi), incluso il punto nel tempo e l&#39;identità dell&#39;oggetto interessato. Gli eventi di esperienza sono registrazioni di fatti di ciò che è accaduto, e quindi sono immutabili e rappresentano ciò che è accaduto senza aggregazione o interpretazione.
 
@@ -50,15 +50,15 @@ Lo schema CEE, come tutti gli schemi XDM ExperienceEvent, acquisisce lo stato de
 
 Come tutti gli schemi XDM, il mixin CEE è estensibile. In altre parole, è possibile aggiungere altri campi al mixin CEE, e se necessario è possibile includere diverse varianti in più schemi.
 
-Un esempio completo del mixin è disponibile nell&#39;archivio [XDM](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)pubblico. Inoltre, potete visualizzare e copiare il seguente file [](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) JSON per un esempio di come i dati possono essere strutturati in modo da rispettare lo schema CEE. Fare riferimento a entrambi gli esempi per apprendere i campi chiave descritti nella sezione seguente, al fine di determinare come mappare i propri dati sullo schema.
+Un esempio completo del mixin è disponibile nell&#39; [archivio XDM pubblico](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). Inoltre, è possibile visualizzare e copiare il seguente [file JSON](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) per un esempio di come i dati possono essere strutturati in modo da rispettare lo schema CEE. Fare riferimento a entrambi gli esempi per apprendere i campi chiave descritti nella sezione seguente, al fine di determinare come mappare i propri dati sullo schema.
 
 ## Campi chiave
 
-All&#39;interno del mixin CEE esistono diversi campi chiave che devono essere utilizzati per [!DNL Intelligent Services] generare informazioni utili. Questa sezione descrive i casi di utilizzo e i dati previsti per questi campi e fornisce collegamenti alla documentazione di riferimento per ulteriori esempi.
+All&#39;interno del mixin CEE sono presenti diversi campi chiave che devono essere utilizzati per consentire a [!DNL Intelligent Services] di generare informazioni utili. Questa sezione descrive i casi di utilizzo e i dati previsti per questi campi e fornisce collegamenti alla documentazione di riferimento per ulteriori esempi.
 
 ### Campi obbligatori
 
-Sebbene l&#39;uso di tutti i campi chiave sia fortemente consigliato, esistono due campi **obbligatori** per [!DNL Intelligent Services] funzionare:
+Sebbene l&#39;uso di tutti i campi chiave sia fortemente consigliato, esistono due campi **obbligatori** per il funzionamento di [!DNL Intelligent Services]:
 
 * [Campo identità principale](#identity)
 * [xdm:timestamp](#timestamp)
@@ -66,9 +66,9 @@ Sebbene l&#39;uso di tutti i campi chiave sia fortemente consigliato, esistono d
 
 #### Identità principale {#identity}
 
-Uno dei campi dello schema deve essere impostato come campo di identità principale, che consente [!DNL Intelligent Services] di collegare ogni istanza di dati relativi alle serie temporali a una singola persona.
+Uno dei campi dello schema deve essere impostato come campo di identità principale, che consente a [!DNL Intelligent Services] di collegare ogni istanza di dati relativi alle serie temporali a una singola persona.
 
-È necessario determinare il campo migliore da utilizzare come identità primaria in base all&#39;origine e alla natura dei dati. Un campo di identità deve includere uno spazio dei nomi **di** identità che indichi il tipo di dati di identità che il campo prevede come valore. Alcuni valori di spazio nomi validi includono:
+È necessario determinare il campo migliore da utilizzare come identità primaria in base all&#39;origine e alla natura dei dati. Un campo di identità deve includere un **spazio nomi identità** che indichi il tipo di dati di identità che il campo prevede come valore. Alcuni valori di spazio nomi validi includono:
 
 * &quot;e-mail&quot;
 * &quot;phone&quot;
@@ -102,11 +102,11 @@ Questo campo rappresenta il canale di marketing correlato a ExperienceEvent. Il 
 }
 ```
 
-Per informazioni complete su ciascuno dei campi secondari richiesti per `xdm:channel`, consultate la specifica dello schema [del canale](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) esperienza. Per alcuni esempi di mappature, vedere la [tabella seguente](#example-channels).
+Per informazioni complete su ciascuno dei campi secondari richiesti per `xdm:channel`, fare riferimento alla specifica [experience channel schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md). Per alcuni esempi di mappature, vedere la [tabella seguente](#example-channels).
 
-##### Esempio di mappature dei canali {#example-channels}
+##### Esempio di mappature canale {#example-channels}
 
-Nella tabella seguente sono riportati alcuni esempi di canali di marketing mappati allo `xdm:channel` schema:
+Nella tabella seguente sono riportati alcuni esempi di canali di marketing mappati allo schema `xdm:channel`:
 
 | Channel | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
@@ -121,7 +121,7 @@ Nella tabella seguente sono riportati alcuni esempi di canali di marketing mappa
 
 ### Campi consigliati
 
-Gli altri campi chiave sono descritti in questa sezione. Anche se questi campi non sono necessariamente necessari [!DNL Intelligent Services] per funzionare, si consiglia vivamente di utilizzarne il maggior numero possibile per ottenere informazioni più approfondite.
+Gli altri campi chiave sono descritti in questa sezione. Anche se questi campi non sono necessariamente necessari per il funzionamento di [!DNL Intelligent Services], si consiglia vivamente di utilizzarne il maggior numero possibile per ottenere informazioni più approfondite.
 
 #### xdm:productListItems
 
@@ -150,7 +150,7 @@ Questo campo è un array di elementi che rappresentano i prodotti selezionati da
 ]
 ```
 
-Per informazioni complete su ciascuno dei campi secondari richiesti per `xdm:productListItems`, fare riferimento alla specifica dello schema [dei dettagli](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) commerciali.
+Per informazioni complete su ciascuno dei campi secondari richiesti per `xdm:productListItems`, fare riferimento alla specifica [commerce details schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md).
 
 #### xdm:commerce
 
@@ -188,7 +188,7 @@ Questo campo contiene informazioni commerciali specifiche sull’ExperienceEvent
   }
 ```
 
-Per informazioni complete su ciascuno dei campi secondari richiesti per `xdm:commerce`, fare riferimento alla specifica dello schema [dei dettagli](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) commerciali.
+Per informazioni complete su ciascuno dei campi secondari richiesti per `xdm:commerce`, fare riferimento alla specifica [commerce details schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md).
 
 #### xdm:web
 
@@ -218,7 +218,7 @@ Questo campo rappresenta i dettagli Web relativi a ExperienceEvent, ad esempio l
 }
 ```
 
-Per informazioni complete su ciascuno dei campi secondari richiesti per `xdm:productListItems`, consulta la specifica dello schema [dei dettagli Web](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-web.schema.md) ExperienceEvent.
+Per informazioni complete su ciascuno dei campi secondari richiesti per `xdm:productListItems`, fare riferimento alla specifica [Dettagli Web ExperienceEvent](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-web.schema.md).
 
 #### xdm:marketing
 
@@ -236,23 +236,23 @@ Questo campo contiene informazioni relative alle attività di marketing attive c
 }
 ```
 
-Per informazioni complete su ciascuno dei campi secondari richiesti per `xdm:productListItems`, consulta le specifiche sechma [di](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) marketing.
+Per informazioni complete su ciascuno dei campi secondari richiesti per `xdm:productListItems`, fare riferimento alla specifica [marketing sechma](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md).
 
 ## Mapping e acquisizione dei dati {#mapping}
 
-Una volta determinato se i dati degli eventi di marketing possono essere mappati sullo schema CEE, il passaggio successivo consiste nel determinare in quali dati si desidera importare [!DNL Intelligent Services]. Tutti i dati storici utilizzati in [!DNL Intelligent Services] devono rientrare nel periodo minimo di quattro mesi di dati, più il numero di giorni previsti come periodo di lookback.
+Una volta determinato se i dati degli eventi di marketing possono essere mappati sullo schema CEE, il passaggio successivo consiste nel determinare quali dati includere in [!DNL Intelligent Services]. Tutti i dati storici utilizzati in [!DNL Intelligent Services] devono rientrare nel periodo minimo di quattro mesi di dati, più il numero di giorni previsti come periodo di lookback.
 
 Dopo aver deciso l&#39;intervallo di dati da inviare, contattare  Adobe Consulting Services per facilitare la mappatura dei dati sullo schema e l&#39;assimilazione nel servizio.
 
-Se disponete di un’ [!DNL Adobe Experience Platform] iscrizione e desiderate mappare e assimilare i dati voi stessi, seguite i passaggi descritti nella sezione seguente.
+Se disponete di un&#39;iscrizione [!DNL Adobe Experience Platform] e desiderate mappare e assimilare i dati voi stessi, seguite i passaggi descritti nella sezione seguente.
 
 ### Utilizzo di Adobe Experience Platform
 
 >[!NOTE]
 >
->Per i passaggi seguenti è necessaria una sottoscrizione a  Experience Platform. Se non disponete dell&#39;accesso alla piattaforma, passate alla sezione dei passaggi [](#next-steps) successivi.
+>Per i passaggi seguenti è necessaria una sottoscrizione a  Experience Platform. Se non disponete dell&#39;accesso alla piattaforma, passate alla sezione [passi successivi](#next-steps).
 
-In questa sezione viene illustrato il flusso di lavoro per la mappatura e l’assimilazione dei dati in  Experience Platform da utilizzare in [!DNL Intelligent Services], compresi i collegamenti alle esercitazioni per i passaggi dettagliati.
+In questa sezione viene illustrato il flusso di lavoro per la mappatura e l&#39;assimilazione dei dati in  Experience Platform da utilizzare in [!DNL Intelligent Services], compresi i collegamenti alle esercitazioni per i passaggi dettagliati.
 
 #### Creare uno schema e un dataset CEE
 
@@ -263,38 +263,38 @@ Quando si è pronti per iniziare a preparare i dati per l&#39;assimilazione, il 
 
 >[!IMPORTANT]
 >
->Le esercitazioni riportate sopra seguono un flusso di lavoro generico per la creazione di uno schema. Quando si sceglie una classe per lo schema, è necessario utilizzare la classe **ExperienceEvent** XDM. Una volta scelta questa classe, è possibile aggiungere il mixin CEE allo schema.
+>Le esercitazioni riportate sopra seguono un flusso di lavoro generico per la creazione di uno schema. Quando si sceglie una classe per lo schema, è necessario utilizzare la classe **XDM ExperienceEvent**. Una volta scelta questa classe, è possibile aggiungere il mixin CEE allo schema.
 
 Dopo aver aggiunto il mixin CEE allo schema, è possibile aggiungere altri mixin come richiesto per campi aggiuntivi all&#39;interno dei dati.
 
 Dopo aver creato e salvato lo schema, è possibile creare un nuovo dataset basato su tale schema. Le seguenti esercitazioni forniscono informazioni dettagliate sul processo di creazione di un nuovo set di dati nell&#39;interfaccia utente o nell&#39;API:
 
-* [Creare un set di dati nell’interfaccia](../catalog/datasets/user-guide.md#create) (seguire il flusso di lavoro per utilizzare uno schema esistente)
+* [Creare un set di dati nell’interfaccia](../catalog/datasets/user-guide.md#create)  (seguire il flusso di lavoro per utilizzare uno schema esistente)
 * [Creare un set di dati nell&#39;API](../catalog/datasets/create.md)
 
-Dopo la creazione del set di dati, è possibile trovarlo nell&#39;interfaccia utente della piattaforma all&#39;interno dell&#39; **[!UICONTROL Datasets]** area di lavoro.
+Dopo la creazione del set di dati, è possibile trovarlo nell&#39;interfaccia utente della piattaforma all&#39;interno dell&#39;area di lavoro **[!UICONTROL Datasets]**.
 
 ![](images/data-preparation/dataset-location.png)
 
 #### Aggiunta di campi identità al set di dati
 
-Se si stanno inserendo dati da [!DNL Adobe Audience Manager], [!DNL Adobe Analytics]o da un&#39;altra origine esterna, è possibile impostare un campo dello schema come campo di identità. Per impostare un campo di schema come campo di identità, visualizzare la sezione relativa all&#39;impostazione dei campi di identità nell&#39;esercitazione [](../xdm/tutorials/create-schema-ui.md#identity-field) UI o nell&#39;esercitazione [](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor) API per la creazione di uno schema.
+Se si stanno inserendo dati da [!DNL Adobe Audience Manager], [!DNL Adobe Analytics] o da un&#39;altra origine esterna, è possibile impostare un campo dello schema come campo di identità. Per impostare un campo di schema come campo di identità, visualizzare la sezione relativa all&#39;impostazione dei campi di identità nell&#39;esercitazione sull&#39;interfaccia utente [a1/> o nell&#39;esercitazione API [API](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor) per la creazione di uno schema.](../xdm/tutorials/create-schema-ui.md#identity-field)
 
-Se state acquisendo dati da un file CSV locale, potete passare alla sezione successiva sulla [mappatura e l’assimilazione dei dati](#ingest).
+Se state acquisendo dati da un file CSV locale, potete passare alla sezione successiva sulla [mappatura e acquisizione di dati](#ingest).
 
-#### Mappa e acquisizione dei dati {#ingest}
+#### Mappare e inserire i dati {#ingest}
 
-Dopo aver creato uno schema CEE e un set di dati, è possibile iniziare a mappare le tabelle di dati sullo schema e a assimilare i dati in Platform. Per informazioni su come eseguire questa operazione nell’interfaccia utente, consultate l’esercitazione sulla [mappatura di un file CSV su uno schema](../ingestion/tutorials/map-a-csv-file.md) XDM. Puoi usare il seguente file [JSON di](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) esempio per testare il processo di assimilazione prima di usare i tuoi dati.
+Dopo aver creato uno schema CEE e un set di dati, è possibile iniziare a mappare le tabelle di dati sullo schema e a assimilare i dati in Platform. Per istruzioni su come eseguire questa operazione nell&#39;interfaccia utente, consultate l&#39;esercitazione su [mappatura di un file CSV su uno schema XDM](../ingestion/tutorials/map-a-csv-file.md). È possibile utilizzare il seguente file JSON di esempio [file JSON](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) per verificare il processo di assimilazione prima di utilizzare i propri dati.
 
 Una volta compilato il set di dati, lo stesso set di dati può essere utilizzato per acquisire file di dati aggiuntivi.
 
-Se i dati sono memorizzati in un&#39;applicazione di terze parti supportata, puoi anche scegliere di creare un connettore [](../sources/home.md) sorgente per trasferire i dati degli eventi di marketing [!DNL Platform] in tempo reale.
+Se i dati sono memorizzati in un&#39;applicazione di terze parti supportata, puoi anche scegliere di creare un [connettore di origine](../sources/home.md) per trasferire i dati degli eventi di marketing in [!DNL Platform] in tempo reale.
 
 ## Passaggi successivi {#next-steps}
 
 Questo documento fornisce indicazioni generali sulla preparazione dei dati da utilizzare in [!DNL Intelligent Services]. Se hai bisogno di consulenze aggiuntive in base al tuo caso d&#39;uso, contatta  Adobe Consulenza Assistenza.
 
-Dopo aver popolato con successo un dataset con i dati dell&#39;esperienza cliente, potete utilizzarlo [!DNL Intelligent Services] per generare informazioni approfondite. Per iniziare, consulta i seguenti documenti:
+Dopo aver compilato con successo un dataset con i dati sull&#39;esperienza cliente, potete utilizzare [!DNL Intelligent Services] per generare informazioni approfondite. Per iniziare, consulta i seguenti documenti:
 
 * [Panoramica di Attribution AI](./attribution-ai/overview.md)
 * [Panoramica di Customer AI](./customer-ai/overview.md)
