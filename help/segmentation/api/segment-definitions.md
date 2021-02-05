@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;segment definition;segment definitions;api;API;
+keywords: ' Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Servizio segmentazione;definizione del segmento;definizioni del segmento;api;API;'
 solution: Experience Platform
-title: Definizioni dei segmenti
+title: Endpoint API Definizioni segmento
 topic: developer guide
-description: Questa guida fornisce informazioni utili per comprendere meglio le definizioni dei segmenti e include chiamate API di esempio per eseguire azioni di base tramite l'API.
+description: L’endpoint delle definizioni dei segmenti nell’API di Adobe Experience Platform Segmentation Service consente di gestire le definizioni dei segmenti a livello di programmazione per la tua organizzazione.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1064'
+source-wordcount: '1080'
 ht-degree: 3%
 
 ---
@@ -15,21 +15,21 @@ ht-degree: 3%
 
 # Endpoint definizioni segmento
 
-Adobe Experience Platform consente di creare segmenti che definiscono un gruppo di attributi o comportamenti specifici da un gruppo di profili. Una definizione di segmento è un oggetto che racchiude una query scritta in [!DNL Profile Query Language] (PQL). Questo oggetto è anche denominato predicato PQL. I predicati PQL definiscono le regole per il segmento in base alle condizioni relative a qualsiasi record o dati delle serie temporali forniti da [!DNL Real-time Customer Profile]. Per ulteriori informazioni sulla scrittura di query PQL, consultate la guida [](../pql/overview.md) PQL.
+Adobe Experience Platform consente di creare segmenti che definiscono un gruppo di attributi o comportamenti specifici da un gruppo di profili. Una definizione di segmento è un oggetto che racchiude una query scritta in [!DNL Profile Query Language] (PQL). Questo oggetto è anche denominato predicato PQL. I predicati PQL definiscono le regole per il segmento in base alle condizioni relative a qualsiasi record o dati delle serie temporali forniti a [!DNL Real-time Customer Profile]. Per ulteriori informazioni sulla scrittura di query PQL, vedere la [Guida PQL](../pql/overview.md).
 
 Questa guida fornisce informazioni utili per comprendere meglio le definizioni dei segmenti e include chiamate API di esempio per eseguire azioni di base tramite l&#39;API.
 
 ## Introduzione
 
-Gli endpoint utilizzati in questa guida fanno parte dell&#39; [!DNL Adobe Experience Platform Segmentation Service] API. Prima di continuare, controllate la guida [](./getting-started.md) introduttiva per informazioni importanti che dovete conoscere per effettuare correttamente le chiamate all&#39;API, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
+Gli endpoint utilizzati in questa guida fanno parte dell&#39;API [!DNL Adobe Experience Platform Segmentation Service]. Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all&#39;API, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
 
 ## Recupera un elenco di definizioni di segmento {#list}
 
-È possibile recuperare un elenco di tutte le definizioni di segmento per l&#39;organizzazione IMS effettuando una richiesta di GET all&#39; `/segment/definitions` endpoint.
+È possibile recuperare un elenco di tutte le definizioni di segmento per l&#39;organizzazione IMS effettuando una richiesta di GET all&#39;endpoint `/segment/definitions`.
 
 **Formato API**
 
-L&#39; `/segment/definitions` endpoint supporta diversi parametri di query per facilitare il filtraggio dei risultati. Anche se questi parametri sono opzionali, il loro utilizzo è fortemente consigliato per ridurre i costi di sovraccarico. Effettuando una chiamata a questo endpoint senza parametri, verranno recuperate tutte le definizioni di segmento disponibili per l&#39;organizzazione. È possibile includere più parametri, separati da e-mail (`&`).
+L&#39;endpoint `/segment/definitions` supporta diversi parametri di query per facilitare il filtro dei risultati. Anche se questi parametri sono opzionali, il loro utilizzo è fortemente consigliato per ridurre i costi di sovraccarico. Effettuando una chiamata a questo endpoint senza parametri, verranno recuperate tutte le definizioni di segmento disponibili per l&#39;organizzazione. È possibile includere più parametri, separati da e-mail (`&`).
 
 ```http
 GET /segment/definitions
@@ -152,9 +152,9 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di definizioni
 }
 ```
 
-## Creare una nuova definizione di segmento {#create}
+## Crea una nuova definizione di segmento {#create}
 
-Puoi creare una nuova definizione di segmento effettuando una richiesta di POST all’ `/segment/definitions` endpoint.
+Puoi creare una nuova definizione di segmento effettuando una richiesta di POST all&#39;endpoint `/segment/definitions`.
 
 **Formato API**
 
@@ -191,7 +191,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `name` | **Obbligatorio.** Un nome univoco con cui fare riferimento al segmento. |
-| `schema` | **Obbligatorio.** Schema associato alle entità nel segmento. È costituito da un campo `id` o `name` . |
+| `schema` | **Obbligatorio.** Schema associato alle entità nel segmento. È costituito da un campo `id` o `name`. |
 | `expression` | **Obbligatorio.** Entità che contiene informazioni sui campi relativi alla definizione del segmento. |
 | `expression.type` | Specifica il tipo di espressione. Attualmente, è supportato solo &quot;PQL&quot;. |
 | `expression.format` | Indica la struttura dell&#39;espressione in valore. Attualmente è supportato il seguente formato: <ul><li>`pql/text`: Una rappresentazione testuale di una definizione di segmento, in base alla grammatica PQL pubblicata.  Ad esempio, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
@@ -251,7 +251,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli della nuova d
 
 ## Recupera una definizione di segmento specifica {#get}
 
-Puoi recuperare informazioni dettagliate su una definizione di segmento specifica effettuando una richiesta di GET all’ `/segment/definitions` endpoint e fornendo l’ID della definizione di segmento che desideri recuperare nel percorso della richiesta.
+Puoi recuperare informazioni dettagliate su una definizione di segmento specifica effettuando una richiesta di GET all&#39;endpoint `/segment/definitions` e fornendo l&#39;ID della definizione di segmento che desideri recuperare nel percorso della richiesta.
 
 **Formato API**
 
@@ -261,7 +261,7 @@ GET /segment/definitions/{SEGMENT_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | Il `id` valore della definizione del segmento da recuperare. |
+| `{SEGMENT_ID}` | Il valore `id` della definizione del segmento da recuperare. |
 
 **Richiesta**
 
@@ -323,7 +323,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 | -------- | ----------- |
 | `id` | ID di sola lettura generato dal sistema per la definizione del segmento. |
 | `name` | Un nome univoco con cui fare riferimento al segmento. |
-| `schema` | Schema associato alle entità nel segmento. È costituito da un campo `id` o `name` . |
+| `schema` | Schema associato alle entità nel segmento. È costituito da un campo `id` o `name`. |
 | `expression` | Entità che contiene informazioni sui campi relativi alla definizione del segmento. |
 | `expression.type` | Specifica il tipo di espressione. Attualmente, è supportato solo &quot;PQL&quot;. |
 | `expression.format` | Indica la struttura dell&#39;espressione in valore. Attualmente è supportato il seguente formato: <ul><li>`pql/text`: Una rappresentazione testuale di una definizione di segmento, in base alla grammatica PQL pubblicata.  Ad esempio, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
@@ -333,7 +333,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 
 ## Recupero in blocco delle definizioni dei segmenti {#bulk-get}
 
-Puoi recuperare informazioni dettagliate su più definizioni di segmento specificate effettuando una richiesta di POST all’ `/segment/definitions/bulk-get` endpoint e fornendo i `id` valori delle definizioni di segmento nel corpo della richiesta.
+È possibile recuperare informazioni dettagliate su definizioni di segmenti multiple specificate effettuando una richiesta di POST all&#39;endpoint `/segment/definitions/bulk-get` e fornendo i valori `id` delle definizioni di segmento nel corpo della richiesta.
 
 **Formato API**
 
@@ -456,7 +456,7 @@ Una risposta corretta restituisce lo stato HTTP 207 con le definizioni dei segme
 | -------- | ----------- |
 | `id` | ID di sola lettura generato dal sistema per la definizione del segmento. |
 | `name` | Un nome univoco con cui fare riferimento al segmento. |
-| `schema` | Schema associato alle entità nel segmento. È costituito da un campo `id` o `name` . |
+| `schema` | Schema associato alle entità nel segmento. È costituito da un campo `id` o `name`. |
 | `expression` | Entità che contiene informazioni sui campi relativi alla definizione del segmento. |
 | `expression.type` | Specifica il tipo di espressione. Attualmente, è supportato solo &quot;PQL&quot;. |
 | `expression.format` | Indica la struttura dell&#39;espressione in valore. Attualmente è supportato il seguente formato: <ul><li>`pql/text`: Una rappresentazione testuale di una definizione di segmento, in base alla grammatica PQL pubblicata.  Ad esempio, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
@@ -466,7 +466,7 @@ Una risposta corretta restituisce lo stato HTTP 207 con le definizioni dei segme
 
 ## Eliminare una definizione di segmento specifica {#delete}
 
-Puoi richiedere di eliminare una definizione di segmento specifica effettuando una richiesta di DELETE all’ `/segment/definitions` endpoint e fornendo l’ID della definizione di segmento che desideri eliminare nel percorso della richiesta.
+Puoi richiedere di eliminare una definizione di segmento specifica effettuando una richiesta di DELETE all&#39;endpoint `/segment/definitions` e fornendo l&#39;ID della definizione di segmento che desideri eliminare nel percorso della richiesta.
 
 **Formato API**
 
@@ -476,7 +476,7 @@ DELETE /segment/definitions/{SEGMENT_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | Il `id` valore della definizione del segmento da eliminare. |
+| `{SEGMENT_ID}` | Il valore `id` della definizione del segmento da eliminare. |
 
 **Richiesta**
 
@@ -494,7 +494,7 @@ Una risposta corretta restituisce lo stato HTTP 200 senza messaggio.
 
 ## Aggiornare una definizione di segmento specifica
 
-Puoi aggiornare una definizione di segmento specifica effettuando una richiesta di PATCH all’ `/segment/definitions` endpoint e fornendo l’ID della definizione di segmento che desideri aggiornare nel percorso della richiesta.
+Puoi aggiornare una definizione di segmento specifica effettuando una richiesta di PATCH all&#39;endpoint `/segment/definitions` e fornendo l&#39;ID della definizione di segmento che desideri aggiornare nel percorso della richiesta.
 
 **Formato API**
 
@@ -504,7 +504,7 @@ PATCH /segment/definitions/{SEGMENT_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | Il `id` valore della definizione del segmento da aggiornare. |
+| `{SEGMENT_ID}` | Il valore `id` della definizione del segmento da aggiornare. |
 
 **Richiesta**
 
@@ -587,4 +587,4 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli della nuova d
 
 ## Passaggi successivi
 
-Dopo aver letto questa guida è ora possibile comprendere meglio il funzionamento delle definizioni dei segmenti. Per ulteriori informazioni sulla creazione di un segmento, consulta l’esercitazione sulla [creazione di un segmento](../tutorials/create-a-segment.md) .
+Dopo aver letto questa guida è ora possibile comprendere meglio il funzionamento delle definizioni dei segmenti. Per ulteriori informazioni sulla creazione di un segmento, consultare l&#39;esercitazione [creating a segment](../tutorials/create-a-segment.md) tutorial.
