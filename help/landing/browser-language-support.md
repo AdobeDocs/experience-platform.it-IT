@@ -1,19 +1,19 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;CJA;analisi dei percorsi;analisi percorsi cliente;orchestrazione campagna;orchestrazione;percorso cliente;percorso;orchestrazione percorso;funzionalità;regione'
 solution: Experience Platform
-title: Supporto per browser e lingue Adobe Experience Platform
+title: 'Supporto di browser e lingue per l''interfaccia utente del Experience Platform '
 topic: getting started
 description: Adobe Experience Platform è il sistema più potente, flessibile e aperto sul mercato per la creazione e la gestione di soluzioni complete che stimolano l'esperienza dei clienti. Experience Platform consente alle organizzazioni di centralizzare e standardizzare i dati e i contenuti dei clienti da qualsiasi sistema, e di applicare tecniche di data science e apprendimento automatico al fine di migliorare la progettazione e la consegna di esperienze personalizzate.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 18%
+source-wordcount: '246'
+ht-degree: 17%
 
 ---
 
 
-#  supporto per browser e lingua di Experience Platform
+# Supporto di browser e lingue per l&#39;interfaccia utente del Experience Platform 
 
 L’interfaccia utente di Adobe Experience Platform è progettata per supportare più browser e lingue.
 
