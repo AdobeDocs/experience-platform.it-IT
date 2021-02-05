@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;realized;existing;exiting;
+keywords: ' Experience Platform;home;argomenti popolari;Segmentation Service;segmentation service;guida utente;ui guide;segmentation ui guide;Segmentation ui builder;Segment builder;realizza;esistente;exting;'
 solution: Experience Platform
-title: Guida utente del servizio di segmentazione
+title: Guida all’interfaccia utente del servizio di segmentazione
 topic: ui guide
 description: Adobe Experience Platform Segmentation Service fornisce un'interfaccia utente per la creazione e la gestione delle definizioni dei segmenti.
 translation-type: tm+mt
-source-git-commit: 3e83215cc24b32b7fe9486c6faf455f247b6c922
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '1416'
+source-wordcount: '1440'
 ht-degree: 0%
 
 ---
@@ -19,12 +19,12 @@ ht-degree: 0%
 
 ## Introduzione
 
-Per utilizzare le definizioni dei segmenti è necessario conoscere i diversi [!DNL Experience Platform] servizi coinvolti nella segmentazione. Prima di leggere questa guida utente, consulta la documentazione relativa ai seguenti servizi:
+Per utilizzare le definizioni dei segmenti è necessario conoscere i vari servizi [!DNL Experience Platform] coinvolti nella segmentazione. Prima di leggere questa guida utente, consulta la documentazione relativa ai seguenti servizi:
 
-- [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] consente di dividere in gruppi più piccoli i dati memorizzati in [!DNL Experience Platform] relazione a individui (come clienti, potenziali, utenti o organizzazioni).
+- [[!DNL Segmentation Service]](../home.md):  [!DNL Segmentation Service] consente di dividere in gruppi più piccoli i dati memorizzati in  [!DNL Experience Platform] relazione a individui (come clienti, potenziali, utenti o organizzazioni).
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
-- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Consente la creazione di profili cliente collegando le identità di origini dati diverse in cui viene eseguito il caricamento [!DNL Platform].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
+- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Consente la creazione di profili cliente collegando le identità di origini dati diverse in cui viene eseguito il caricamento  [!DNL Platform].
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standard con cui  [!DNL Platform] organizzare i dati relativi all&#39;esperienza dei clienti.
 
 È inoltre importante conoscere due termini chiave utilizzati in questo documento e comprendere la differenza tra questi:
 - **Definizione** segmento: Set di regole utilizzato per descrivere le caratteristiche o i comportamenti chiave di un&#39;audience di destinazione.
@@ -32,19 +32,19 @@ Per utilizzare le definizioni dei segmenti è necessario conoscere i diversi [!D
 
 ## Panoramica
 
-Nell’ [[!DNL Experience Platform] interfaccia](http://platform.adobe.com/), selezionate **[!UICONTROL Segments]** nel menu di navigazione a sinistra per aprire la **[!UICONTROL Overview]** scheda. Questa scheda fornisce collegamenti alla documentazione e ai video per agevolare la comprensione e l&#39;utilizzo dei segmenti.
+Nell&#39; [[!DNL Experience Platform] interfaccia utente](http://platform.adobe.com/), selezionare **[!UICONTROL Segments]** nel menu di navigazione a sinistra per aprire la scheda **[!UICONTROL Overview]**. Questa scheda fornisce collegamenti alla documentazione e ai video per agevolare la comprensione e l&#39;utilizzo dei segmenti.
 
 ![](../images/ui/overview/segment-overview.png)
 
 ## Sfoglia
 
-Selezionate la **[!UICONTROL Browse]** scheda per visualizzare un elenco di tutte le definizioni di segmento per la vostra organizzazione IMS.
+Selezionate la scheda **[!UICONTROL Browse]** per visualizzare un elenco di tutte le definizioni di segmento per l&#39;organizzazione IMS.
 
 ![](../images/ui/overview/segment-browse-all.png)
 
 Questa visualizzazione elenca le informazioni sulla definizione del segmento, tra cui la suddivisione, il churn, il conteggio del profilo, il metodo di valutazione, la data di creazione e l’ultima data di modifica.
 
-La suddivisione mostra un grafico a barre che mostra la percentuale di profili appartenenti a ciascuno dei seguenti stati: [!UICONTROL Entered], [!UICONTROL Realized]e [!UICONTROL Exiting].
+La suddivisione mostra un grafico a barre che mostra la percentuale di profili appartenenti a ciascuno dei seguenti stati: [!UICONTROL Entered], [!UICONTROL Realized] e [!UICONTROL Exiting].
 
 ![](../images/ui/overview/segment-browse-breakdown.png)
 
@@ -62,9 +62,9 @@ Il metodo di valutazione può essere in streaming o batch. I segmenti di streami
 
 Nella parte superiore della pagina sono disponibili opzioni per aggiungere tutti i segmenti a una pianificazione e per creare un nuovo segmento.
 
-Attiva/disattiva **[!UICONTROL Add all segments to schedule]** la segmentazione pianificata. Ulteriori informazioni sulla segmentazione pianificata sono disponibili nella sezione della segmentazione [pianificata di questa guida](#scheduled-segmentation)utente.
+Attivando **[!UICONTROL Add all segments to schedule]** la segmentazione pianificata verrà abilitata. Ulteriori informazioni sulla segmentazione pianificata sono disponibili nella sezione [segmentazione pianificata di questa guida utente](#scheduled-segmentation).
 
-Selezionando **[!UICONTROL Create segment]** potrai accedere al Generatore di segmenti. Per ulteriori informazioni sulla creazione di segmenti, consulta la sezione sulla [creazione di un segmento nella guida](#create-segment)utente.
+Se si seleziona **[!UICONTROL Create segment]** si passa al Generatore di segmenti. Per ulteriori informazioni sulla creazione di segmenti, consultare la sezione sulla [creazione di un segmento nella guida utente](#create-segment).
 
 ![](../images/ui/overview/segment-browse-top.png)
 
@@ -78,7 +78,7 @@ La selezione della riga della definizione del segmento fornisce un riepilogo del
 
 ## Dettagli definizione segmento {#segment-details}
 
-Per visualizzare ulteriori dettagli su una definizione di segmento specifica, seleziona il nome di un segmento all&#39;interno della **[!UICONTROL Browse]** scheda.
+Per visualizzare ulteriori dettagli su una definizione di segmento specifica, seleziona il nome di un segmento nella scheda **[!UICONTROL Browse]**.
 
 Viene visualizzata la pagina dei dettagli del segmento. In alto, è disponibile un riepilogo della definizione del segmento, delle informazioni sulla dimensione del pubblico qualificata e delle destinazioni per le quali il segmento è attivato.
 
@@ -86,27 +86,27 @@ Viene visualizzata la pagina dei dettagli del segmento. In alto, è disponibile 
 
 ### Riepilogo segmento
 
-La **[!UICONTROL Segment summary]** sezione contiene informazioni quali l’ID, il nome, la descrizione e i dettagli degli attributi.
+La sezione **[!UICONTROL Segment summary]** contiene informazioni quali l&#39;ID, il nome, la descrizione e i dettagli degli attributi.
 
-Inoltre, potete modificare il segmento. Selezionando **[!UICONTROL Edit segment]** potrai accedere al [!DNL Segment Builder]sito. Per informazioni più dettagliate sull’utilizzo dell’ [!DNL Segment Builder] area di lavoro, consultate la guida [[!DNL Segment Builder] ](./segment-builder.md)utente.
+Inoltre, potete modificare il segmento. Se si seleziona **[!UICONTROL Edit segment]** si passa alla [!DNL Segment Builder]. Per informazioni più dettagliate sull&#39;utilizzo dell&#39;area di lavoro [!DNL Segment Builder], leggere la [[!DNL Segment Builder] guida utente](./segment-builder.md).
 
 ### Totale pubblico nel segmento
 
-La **[!UICONTROL Total audience in segment]** sezione mostra il numero totale di profili idonei per il segmento.
+La sezione **[!UICONTROL Total audience in segment]** mostra il numero totale di profili idonei per il segmento.
 
-Le stime vengono generate utilizzando una dimensione di esempio dei dati di quel giorno. Se nell&#39;archivio profili sono presenti meno di 1 milione di entità, viene utilizzato l&#39;intero set di dati; per un periodo compreso tra 1 e 20 milioni di entità, sono utilizzate 1 milione di entità; e per oltre 20 milioni di entità, viene utilizzato il 5% del totale delle entità. Ulteriori informazioni sulla generazione delle stime dei segmenti sono disponibili nella sezione [Generazione delle](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) stime dell’esercitazione sulla creazione dei segmenti.
+Le stime vengono generate utilizzando una dimensione di esempio dei dati di quel giorno. Se nell&#39;archivio profili sono presenti meno di 1 milione di entità, viene utilizzato l&#39;intero set di dati; per un periodo compreso tra 1 e 20 milioni di entità, sono utilizzate 1 milione di entità; e per oltre 20 milioni di entità, viene utilizzato il 5% del totale delle entità. Ulteriori informazioni sulla generazione delle stime dei segmenti sono disponibili nella sezione [generazione delle stime](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) dell&#39;esercitazione sulla creazione dei segmenti.
 
 ### Destinazioni attivate
 
-La **[!UICONTROL Activated destinations]** sezione mostra le destinazioni per le quali questo segmento è attivato.
+La sezione **[!UICONTROL Activated destinations]** mostra le destinazioni per le quali questo segmento è attivato.
 
 >[!NOTE]
 >
-> Le destinazioni sono una funzione disponibile con [!DNL Real-time Customer Data Platform]e consentono di esportare i dati su piattaforme esterne. Per ulteriori informazioni sulle destinazioni, consulta la panoramica [delle](../../destinations/home.md)destinazioni. Per informazioni su come attivare un segmento a una destinazione, consulta la [guida sull’attivazione dei segmenti a una destinazione](../../destinations/ui/activate-destinations.md).
+> Le destinazioni sono una funzionalità disponibile con [!DNL Real-time Customer Data Platform] e consentono di esportare i dati su piattaforme esterne. Per ulteriori informazioni sulle destinazioni, leggere la [panoramica delle destinazioni](../../destinations/home.md). Per informazioni su come attivare un segmento in una destinazione, leggere la guida [sull&#39;attivazione dei segmenti in una destinazione](../../destinations/ui/activate-destinations.md).
 
 ### Esempi di profilo
 
-Sotto è presente un esempio di profili idonei per il segmento, con informazioni dettagliate quali [!DNL Profile] ID, nome, cognome ed e-mail personali.
+Sotto c&#39;è un esempio di profili idonei per il segmento, con informazioni dettagliate che includono l&#39;ID [!DNL Profile], il nome, il cognome e l&#39;e-mail personale.
 
 Il modo in cui viene attivato il campionamento dei dati dipende dal metodo di assimilazione.
 
@@ -122,51 +122,51 @@ La dimensione del campione della scansione dipende dal numero complessivo di ent
 | Da 1 a 20 milioni | 1 milione |
 | Oltre 20 milioni | 5% del totale |
 
-Per informazioni più dettagliate su ciascuna di esse, [!DNL Profile] selezionate l’ [!DNL Profile] ID. Per ulteriori informazioni sui dettagli di un profilo, consulta la guida [[!DNL Real-time Customer Profile] ](../../profile/ui/user-guide.md#profile-detail)utente.
+Per informazioni più dettagliate su ciascun [!DNL Profile], selezionare l&#39;ID [!DNL Profile]. Per ulteriori informazioni sui dettagli di un profilo, leggere la [[!DNL Real-time Customer Profile] guida utente](../../profile/ui/user-guide.md#profile-detail).
 
 ![](../images/ui/overview/segment-details-profiles.png)
 
 ## Creazione di un segmento {#create-segment}
 
-Selezionando **[!UICONTROL Create segment]** [!DNL Segment Builder] nell’angolo superiore destro, si apre l’area di lavoro, dove è possibile iniziare a creare una definizione di segmento.
+Se si seleziona **[!UICONTROL Create segment]** nell&#39;angolo superiore destro, si apre l&#39;area di lavoro [!DNL Segment Builder], dove è possibile iniziare a creare una definizione di segmento.
 
 ![](../images/ui/overview/segment-browse-create.png)
 
 ### [!DNL Segment Builder] workspace
 
-[!DNL Segment Builder] offre un’area di lavoro ricca di contenuti che consente di interagire con gli elementi [!DNL Profile] dati. L’area di lavoro offre controlli intuitivi per la creazione e la modifica di regole, come le sezioni di trascinamento utilizzate per rappresentare le proprietà dei dati.
+[!DNL Segment Builder] offre un’area di lavoro completa che consente di interagire con gli elementi  [!DNL Profile] dati. L’area di lavoro offre controlli intuitivi per la creazione e la modifica di regole, come le sezioni di trascinamento utilizzate per rappresentare le proprietà dei dati.
 
-Per informazioni più dettagliate sull’utilizzo dell’ [!DNL Segment Builder] area di lavoro, consultate la guida [[!DNL Segment Builder] ](./segment-builder.md)utente.
+Per informazioni più dettagliate sull&#39;utilizzo dell&#39;area di lavoro [!DNL Segment Builder], leggere la [[!DNL Segment Builder] guida utente](./segment-builder.md).
 
 ![](../images/ui/overview/segment-builder.png)
 
 ## Segmentazione pianificata {#scheduled-segmentation}
 
-Una volta create le definizioni dei segmenti, potete valutarle tramite una valutazione su richiesta o pianificata (continua). Valutazione significa spostare [!DNL Real-time Customer Profile] i dati attraverso le definizioni dei segmenti per produrre audience corrispondenti. Una volta creati, i tipi di pubblico vengono salvati e memorizzati in modo che possano essere esportati tramite [!DNL Experience Platform] le API.
+Una volta create le definizioni dei segmenti, potete valutarle tramite una valutazione su richiesta o pianificata (continua). Valutazione significa spostare i dati [!DNL Real-time Customer Profile] attraverso le definizioni dei segmenti al fine di produrre le audience corrispondenti. Una volta creati, i tipi di pubblico vengono salvati e memorizzati in modo che possano essere esportati utilizzando le [!DNL Experience Platform] API.
 
 La valutazione su richiesta prevede l&#39;utilizzo dell&#39;API per eseguire la valutazione e generare audience in base alle esigenze, mentre la valutazione programmata (nota anche come &quot;segmentazione pianificata&quot;) consente di creare una pianificazione periodica per valutare le definizioni dei segmenti in un momento specifico (al massimo, una volta al giorno).
 
 ### Abilita segmentazione pianificata {#enable-scheduled-segmentation}
 
-Per abilitare le definizioni dei segmenti per la valutazione pianificata, puoi utilizzare l’interfaccia utente o l’API. Nell’interfaccia utente, tornate alla **[!UICONTROL Browse]** scheda all’interno **[!UICONTROL Segments]** e attivate **[!UICONTROL Add all segments to schedule]**. In questo modo tutti i segmenti verranno valutati in base alla pianificazione impostata dall&#39;organizzazione.
+Per abilitare le definizioni dei segmenti per la valutazione pianificata, puoi utilizzare l’interfaccia utente o l’API. Nell&#39;interfaccia utente, tornare alla scheda **[!UICONTROL Browse]** all&#39;interno di **[!UICONTROL Segments]** e attivare **[!UICONTROL Add all segments to schedule]**. In questo modo tutti i segmenti verranno valutati in base alla pianificazione impostata dall&#39;organizzazione.
 
 >[!NOTE]
 >
->La valutazione pianificata può essere abilitata per le sandbox con un massimo di cinque (5) criteri di unione per [!DNL XDM Individual Profile]. Se l&#39;organizzazione dispone di più di cinque criteri di unione per [!DNL XDM Individual Profile] un unico ambiente sandbox, non sarà possibile utilizzare la valutazione pianificata.
+>La valutazione pianificata può essere abilitata per le sandbox con un massimo di cinque (5) criteri di unione per [!DNL XDM Individual Profile]. Se l&#39;organizzazione dispone di più di cinque criteri di unione per [!DNL XDM Individual Profile] all&#39;interno di un unico ambiente sandbox, non sarà possibile utilizzare la valutazione pianificata.
 
-Le pianificazioni al momento possono essere create solo tramite l&#39;API. Per informazioni dettagliate sulla creazione, la modifica e l&#39;utilizzo delle pianificazioni tramite l&#39;API, seguite l&#39;esercitazione per valutare e accedere ai risultati dei segmenti, in particolare la sezione sulla valutazione [pianificata tramite l&#39;API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
+Le pianificazioni al momento possono essere create solo tramite l&#39;API. Per informazioni dettagliate sulla creazione, la modifica e l&#39;utilizzo delle pianificazioni tramite l&#39;API, seguite l&#39;esercitazione per valutare e accedere ai risultati dei segmenti, in particolare la sezione sulla [valutazione pianificata utilizzando l&#39;API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
 ![](../images/ui/overview/segment-browse-scheduled.png)
 
-## Segmentazione in streaming {#streaming-segmentation}
+## Segmentazione streaming {#streaming-segmentation}
 
-La segmentazione in streaming è la capacità di eseguire la segmentazione [!DNL Platform] in tempo quasi reale, concentrandosi sulla ricchezza dei dati. Con la segmentazione in streaming, la qualificazione del segmento ora avviene con l&#39;arrivo dei dati, [!DNL Platform]riducendo la necessità di pianificare ed eseguire processi di segmentazione.
+La segmentazione in streaming è la capacità di eseguire la segmentazione su [!DNL Platform] in tempo quasi reale, concentrandosi sulla ricchezza dei dati. Con la segmentazione in streaming, la qualifica del segmento ora avviene quando i dati entrano in [!DNL Platform], eliminando la necessità di pianificare ed eseguire i processi di segmentazione.
 
-Ulteriori informazioni sulla segmentazione in streaming sono disponibili nella guida [utente per la segmentazione](./streaming-segmentation.md)in streaming.
+Ulteriori informazioni sulla segmentazione in streaming sono disponibili nella [guida utente della segmentazione in streaming](./streaming-segmentation.md).
 
 >[!NOTE]
 >
->Per consentire il funzionamento della segmentazione in streaming, è necessario abilitare la segmentazione pianificata per l&#39;organizzazione. Per informazioni dettagliate sull&#39;abilitazione della segmentazione pianificata, consultate [la sezione relativa alla segmentazione in streaming in questa guida](#scheduled-segmentation)utente.
+>Per consentire il funzionamento della segmentazione in streaming, è necessario abilitare la segmentazione pianificata per l&#39;organizzazione. Per informazioni dettagliate sull&#39;abilitazione della segmentazione pianificata, consultate [la sezione sulla segmentazione in streaming in questa guida utente](#scheduled-segmentation).
 
 ## Violazioni dei criteri
 
@@ -174,12 +174,12 @@ Ulteriori informazioni sulla segmentazione in streaming sono disponibili nella g
 >
 >Le violazioni dei criteri si applicano solo se stai creando un segmento che è stato assegnato a una destinazione.
 
-Dopo aver creato il segmento, il segmento verrà analizzato da Adobe Experience Platform Data Governance per assicurarsi che non ci siano violazioni dei criteri all&#39;interno del segmento. See the [[!DNL Data Governance] overview](../../data-governance/home.md) for more information.
+Dopo aver creato il segmento, il segmento verrà analizzato da Adobe Experience Platform Data Governance per assicurarsi che non ci siano violazioni dei criteri all&#39;interno del segmento. Per ulteriori informazioni, vedere la [[!DNL Data Governance] panoramica](../../data-governance/home.md).
 
 ![](../images/ui/overview/segment-dule-policy-violations.png)
 
 ## Passaggi successivi e risorse aggiuntive {#next-steps}
 
-L&#39; [!DNL Segmentation Service] interfaccia utente offre un flusso di lavoro avanzato che consente di isolare i tipi di pubblico commerciabili dai [!DNL Real-time Customer Profile] dati.
+L&#39;interfaccia [!DNL Segmentation Service] offre un flusso di lavoro avanzato che consente di isolare i tipi di pubblico commerciabili dai dati [!DNL Real-time Customer Profile].
 
-Per saperne di più [!DNL Segmentation Service], continua a leggere la documentazione. Per informazioni sull&#39;utilizzo dell&#39; [!DNL Segmentation Service] API, consultate la guida [[!DNL Segmentation Service] ](../api/overview.md)per gli sviluppatori.
+Per ulteriori informazioni su [!DNL Segmentation Service], continuare a leggere la documentazione. Per informazioni sull&#39;utilizzo dell&#39;API [!DNL Segmentation Service], leggere la guida [[!DNL Segmentation Service] per gli sviluppatori](../api/overview.md).
