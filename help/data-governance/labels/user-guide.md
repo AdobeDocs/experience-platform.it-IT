@@ -1,23 +1,23 @@
 ---
 keywords: ' Experience Platform;home;argomenti più comuni;governance dei dati;etichetta di utilizzo dei dati;servizio criteri;etichetta di utilizzo dei dati Guida utente'
 solution: Experience Platform
-title: Guida utente etichette di utilizzo dati
+title: Gestione delle etichette di utilizzo dei dati nell’interfaccia utente
 topic: labels
-description: Questa guida utente descrive i passaggi necessari per utilizzare le etichette di utilizzo dei dati nell'interfaccia utente di Adobe Experience Platform.
+description: Questa guida descrive i passaggi per l'utilizzo delle etichette di utilizzo dei dati all'interno dell'interfaccia utente di Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1067'
 ht-degree: 0%
 
 ---
 
 
-# Guida utente etichette di utilizzo dati
+# Gestione delle etichette di utilizzo dei dati nell’interfaccia utente
 
 Questa guida utente descrive i passaggi necessari per utilizzare le etichette di utilizzo dei dati nell&#39;interfaccia utente [!DNL Experience Platform]. Prima di utilizzare la guida, vedere la [[!DNL Data Governance] panoramica](../home.md) per un&#39;introduzione più affidabile al framework [!DNL Data Governance].
 
-## Gestione delle etichette di utilizzo dei dati a livello di dataset
+## Gestire le etichette a livello di dataset
 
 Per gestire le etichette di utilizzo dei dati a livello di dataset, è necessario selezionare un dataset esistente o crearne uno nuovo. Dopo aver effettuato l&#39;accesso ad Adobe Experience Platform, selezionare **[!UICONTROL Datasets]** nella barra di navigazione a sinistra per aprire l&#39;area di lavoro **[!UICONTROL Datasets]**. In questa pagina sono elencati tutti i set di dati creati appartenenti alla propria organizzazione, insieme a utili dettagli relativi a ciascun set di dati.
 
@@ -75,7 +75,7 @@ L&#39;opzione **[!UICONTROL Show Inherited Labels]** è attivata per impostazion
 
 ![Nascondi etichette ereditate](../images/labels/hide_inherited_labels.png)
 
-## Gestione delle etichette di utilizzo dei dati a livello di campo dataset
+## Gestione delle etichette a livello di campo
 
 Continuando il flusso di lavoro per l&#39; [aggiunta e modifica delle etichette di utilizzo dei dati a livello di dataset](#add-labels), è anche possibile gestire le etichette a livello di campo all&#39;interno dell&#39;area di lavoro **[!UICONTROL Data Governance]** per tale dataset.
 
@@ -101,7 +101,7 @@ L&#39;area di lavoro **[!UICONTROL Data Governance]** viene visualizzata di nuov
 
 È importante ricordare che l&#39;ereditarietà si sposta solo dal livello superiore verso il basso (dataset → campi), il che significa che le etichette applicate a livello di campo non vengono propagate ad altri campi o set di dati.
 
-## Gestione delle etichette personalizzate
+## Gestire le etichette personalizzate
 
 È possibile creare etichette di utilizzo personalizzate all&#39;interno dell&#39;area di lavoro **[!UICONTROL Policies]** nell&#39;interfaccia di [!DNL Experience Platform]. Selezionare **[!UICONTROL Policies]** nella navigazione a sinistra, quindi selezionare **[!UICONTROL Labels]** per visualizzare un elenco delle etichette esistenti. Da qui, selezionare **[!UICONTROL Create label]**.
 
