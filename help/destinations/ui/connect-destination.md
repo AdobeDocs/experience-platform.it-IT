@@ -1,19 +1,18 @@
 ---
 keywords: connessione destinazione;destinazione connessione;modalità di connessione della destinazione
 title: Connessione a una destinazione in Adobe Experience Platform
-seo-title: Connessione a una destinazione in Adobe Experience Platform
 type: Tutorial
 description: Questa esercitazione elenca i passaggi necessari per collegare una destinazione in Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
 
-# Come collegare una destinazione
+# Connessione a una destinazione
 
 Per collegarsi a una destinazione in Adobe Experience Platform, effettuate le seguenti operazioni:
 
