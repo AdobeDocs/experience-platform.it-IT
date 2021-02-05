@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform ;home;argomenti comuni;database di database;database di terze parti
 solution: Experience Platform
-title: Raccolta di dati da un database tramite connettori di origine e API
+title: Raccolta di dati da un database tramite connettori e API di origine
 topic: overview
 type: Tutorial
-description: Questa esercitazione descrive i passaggi necessari per recuperare i dati da un database e trasferirli in Piattaforma tramite connettori di origine e API.
+description: Questa esercitazione descrive i passaggi necessari per recuperare i dati da un database e trasferirli in Piattaforma utilizzando connettori sorgente e API.
 translation-type: tm+mt
-source-git-commit: ddf5be2f30bc347a881bdcbc6b880f087c03e263
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1611'
 ht-degree: 1%
