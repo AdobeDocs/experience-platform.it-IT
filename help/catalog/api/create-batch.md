@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;create batch;catalog service;api
+keywords: Experience Platform ;home;argomenti popolari;creare batch;servizio catalogo;api
 solution: Experience Platform
-title: Creare un dataset
+title: Creare un batch nell'API
 topic: developer guide
-description: Affinché un dataset possa acquisire i dati, deve essere associato a un batch. Utilizzando il valore id di un set di dati esistente, potete creare un batch effettuando una richiesta di POST all'endpoint /batch nell'API Catalog.
+description: Potete creare un batch effettuando una richiesta di POST all'endpoint /batch nell'API Catalog.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: 8a213ac0ef1ac0f9c42e4b880b24157d28878bf1
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '117'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 # Creare un batch
 
-Affinché un dataset possa acquisire i dati, deve essere associato a un batch. Utilizzando il `id` valore di un set di dati esistente, potete creare un batch effettuando una richiesta di POST all&#39; `/batches` endpoint nell&#39; [!DNL Catalog] API.
+Affinché un dataset possa acquisire i dati, deve essere associato a un batch. Utilizzando il valore `id` di un dataset esistente, potete creare un batch effettuando una richiesta di POST all&#39;endpoint `/batches` nell&#39;API [!DNL Catalog].
 
 **Formato API**
 
@@ -40,11 +40,11 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `datasetId` | Il set `id` di dati a cui sarà associato il batch. |
+| `datasetId` | Il `id` del set di dati a cui sarà associato il batch. |
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un oggetto risposta contenente i dettagli del batch appena creato, inclusa `id`una stringa generata dal sistema di sola lettura.
+Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un oggetto risposta contenente i dettagli del batch appena creato, inclusa la stringa `id`, di sola lettura, generata dal sistema.
 
 ```JSON
 {
