@@ -1,19 +1,19 @@
 ---
 keywords: destinazioni rtcdp;destinazioni rtcdp;destinazioni della piattaforma di dati del cliente in tempo reale
-title: Panoramica sulle destinazioni
+title: Destinazioni nella piattaforma dati cliente in tempo reale
 seo-title: Destinazioni in Adobe Experience Platform
 description: Questo documento fornisce una panoramica delle destinazioni in Adobe Experience Platform
 seo-description: Questo documento fornisce una panoramica delle destinazioni in Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 3%
+source-wordcount: '114'
+ht-degree: 0%
 
 ---
 
 
-# Panoramica sulle destinazioni
+# Destinazioni nella piattaforma dati cliente in tempo reale
 
 Le destinazioni sono integrazioni predefinite con piattaforme di destinazione che consentono l&#39;attivazione senza soluzione di continuità dei dati da Adobe Experience Platform. Puoi utilizzare le destinazioni per attivare i dati noti e sconosciuti per campagne di marketing multicanale, campagne e-mail, pubblicità mirata e molti altri casi di utilizzo.
 
