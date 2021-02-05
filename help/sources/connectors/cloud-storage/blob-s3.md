@@ -1,19 +1,19 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;Azure Blob; Amazon S3;blob;Blob;S3;s3'
 solution: Experience Platform
-title: Connettore Azure Blob e  Amazon S3
+title: Panoramica di Azure Blob e  dei connettori di origine Amazon S3
 topic: overview
-description: La documentazione seguente fornisce informazioni su come collegare Azure Blob e  Amazon S3 alla piattaforma utilizzando le API o l'interfaccia utente.
+description: Scoprite come collegare Azure Blob e  Amazon S3 ad Adobe Experience Platform utilizzando le API o l'interfaccia utente.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '140'
 ht-degree: 0%
 
 ---
 
 
-# Connettore Azure Blob e  Amazon S3
+# Connettori Azure Blob e  Amazon S3
 
 Adobe Experience Platform fornisce connettività nativa per i fornitori di cloud come AWS, [!DNL Google Cloud Platform] e [!DNL Azure]. È possibile trasferire i dati da questi sistemi in [!DNL Platform].
 
