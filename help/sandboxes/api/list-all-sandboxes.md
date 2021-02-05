@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;list sandboxes
+keywords: Experience Platform ;home;argomenti più comuni;sandbox elenco
 solution: Experience Platform
-title: Elenca tutte le sandbox
+title: Elenca le sandbox nell'API
 topic: developer guide
 description: Per elencare tutte le sandbox appartenenti all’organizzazione IMS (attive o meno), effettuate una richiesta di GET all’endpoint /sandbox.
 translation-type: tm+mt
-source-git-commit: 6326b3072737acf30ba2aee7081ce28dc9627a9a
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '320'
 ht-degree: 2%
 
 ---
 
 
-# Elenca tutte le sandbox
+# Elenca le sandbox nell&#39;API
 
-Per elencare tutte le sandbox appartenenti all’organizzazione IMS (attive o meno), effettuate una richiesta di GET all’ `/sandboxes` endpoint.
+Per elencare tutte le sandbox appartenenti all&#39;organizzazione IMS (attive o di altro tipo), effettuate una richiesta di GET all&#39;endpoint `/sandboxes`.
 
 **Formato API**
 
@@ -25,7 +25,7 @@ GET /sandboxes?{QUERY_PARAMS}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Parametri di query facoltativi per filtrare i risultati per. Per ulteriori informazioni, consulta la sezione sui parametri [di](#query) query. |
+| `{QUERY_PARAMS}` | Parametri di query facoltativi per filtrare i risultati per. Per ulteriori informazioni, vedere la sezione relativa ai [parametri di query](#query). |
 
 **Richiesta**
 
@@ -40,7 +40,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di sandbox appartenenti alla vostra organizzazione, con dettagli quali `name`, `title`, `state`e `type`.
+Una risposta corretta restituisce un elenco di sandbox appartenenti alla vostra organizzazione, con dettagli quali `name`, `title`, `state` e `type`.
 
 ```json
 {
@@ -130,11 +130,11 @@ Una risposta corretta restituisce un elenco di sandbox appartenenti alla vostra 
 
 ## Utilizzo dei parametri di query {#query}
 
-L&#39; [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) API supporta l&#39;utilizzo di parametri di query per visualizzare la pagina e filtrare i risultati quando vengono elencate le sandbox.
+L&#39;API [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) supporta l&#39;utilizzo di parametri di query per visualizzare la pagina e filtrare i risultati durante l&#39;elencazione delle sandbox.
 
 >[!NOTE]
 >
->I parametri `limit` e di `offset` query devono essere specificati insieme. Se ne specificate solo uno, l&#39;API restituirà un errore. Se non si specifica alcun valore, il limite predefinito è 50 e l&#39;offset è 0.
+>I parametri di query `limit` e `offset` devono essere specificati insieme. Se ne specificate solo uno, l&#39;API restituirà un errore. Se non si specifica alcun valore, il limite predefinito è 50 e l&#39;offset è 0.
 
 | Parametro | Descrizione |
 | --------- | ----------- |
