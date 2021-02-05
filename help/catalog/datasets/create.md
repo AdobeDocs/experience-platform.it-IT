@@ -1,11 +1,11 @@
 ---
 keywords: ' Experience Platform;home;argomenti più comuni;dataset;Dataset;creare un dataset;creare un dataset'
 solution: Experience Platform
-title: Creazione di un set di dati tramite le API
+title: Creare un set di dati utilizzando le API
 topic: datasets
 description: Questo documento fornisce i passaggi generali per la creazione di un dataset utilizzando le API Adobe Experience Platform e la compilazione del dataset tramite un file.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '1268'
 ht-degree: 1%
