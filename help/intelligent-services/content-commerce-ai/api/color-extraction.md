@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai;color extraction;Color extraction
+keywords: ' Experience Platform;guida introduttiva;content ai;commerce ai;content ai;commerce ai;color estrazione;Colour Extract'
 solution: Experience Platform, Intelligent Services
-title: Estrazione colore
+title: Estrazione del colore nell'API AI di contenuto e Commerce
 topic: Developer guide
 description: Il servizio di estrazione del colore, se viene data un'immagine, può calcolare l'istogramma dei colori in pixel e ordinarli in base ai colori dominanti in bucket.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: d10c00694b0a3b2a9da693bd59615b533cfae468
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '712'
 ht-degree: 2%
 
 ---
@@ -47,7 +47,7 @@ La richiesta seguente estrae i colori da un’immagine in base ai parametri di i
 
 >[!CAUTION]
 >
->`analyzer_id` determina quale [!DNL Sensei Content Framework] viene utilizzato. Prima di effettuare la richiesta, verificare di disporre dei dati necessari `analyzer_id` . Per il servizio di estrazione del colore, l’ `analyzer_id` ID è:
+>`analyzer_id` determina quale  [!DNL Sensei Content Framework] viene utilizzato. Prima di effettuare la richiesta, verificare di disporre del `analyzer_id` corretto. Per il servizio di estrazione del colore, l&#39;ID `analyzer_id` è:
 >`Feature:image-color-histogram:Service-6fe52999293e483b8e4ae9a95f1b81a7`
 
 ```SHELL
@@ -87,27 +87,27 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Proprietà | Descrizione | Obbligatorio |
 | --- | --- | --- |
-| `analyzer_id` | L’ID [!DNL Sensei] del servizio in cui viene distribuita la richiesta. Questo ID determina quale dei due [!DNL Sensei Content Frameworks] vengono utilizzati. Per i servizi personalizzati, contattate il team di Content and Commerce AI per configurare un ID personalizzato. | Sì |
+| `analyzer_id` | L&#39;ID del servizio [!DNL Sensei] in cui viene distribuita la richiesta. Questo ID determina quale delle [!DNL Sensei Content Frameworks] vengono utilizzate. Per i servizi personalizzati, contattate il team di Content and Commerce AI per configurare un ID personalizzato. | Sì |
 | `application-id` | ID dell’applicazione creata. | Sì |
-| `data` | Un array che contiene oggetti JSON. Ciascun oggetto nell&#39;array rappresenta un&#39;immagine. Eventuali parametri passati come parte di questa matrice sovrascrivono i parametri globali specificati al di fuori della `data` matrice. Qualsiasi proprietà rimanente descritta in questa tabella può essere ignorata dall&#39;interno `data`. | Sì |
+| `data` | Un array che contiene oggetti JSON. Ciascun oggetto nell&#39;array rappresenta un&#39;immagine. Tutti i parametri passati come parte di questa matrice sostituiscono i parametri globali specificati all&#39;esterno dell&#39;array `data`. Qualsiasi proprietà rimanente descritta in questa tabella può essere ignorata dall&#39;interno di `data`. | Sì |
 | `content-id` | L&#39;ID univoco per l&#39;elemento dati restituito nella risposta. Se non viene passato, viene assegnato un ID generato automaticamente. | No |
-| `content` | Contenuto da analizzare dal servizio di estrazione del colore. Se l’immagine fa parte del corpo della richiesta, usate `-F file=@<filename>` il comando curl per trasmettere l’immagine, lasciando questo parametro come una stringa vuota. <br> Se l&#39;immagine è un file su S3, passare l&#39;URL firmato. Quando il contenuto fa parte del corpo della richiesta, l&#39;elenco degli elementi dati deve avere un solo oggetto. Se vengono passati più oggetti, viene elaborato solo il primo oggetto. | Sì |
-| `content-type` | Utilizzato per indicare se l&#39;input fa parte del corpo della richiesta o un URL firmato per un bucket S3. L&#39;impostazione predefinita di questa proprietà è `inline`. | No |
-| `encoding` | Il formato file dell&#39;immagine di input. Attualmente è possibile elaborare solo immagini JPEG e PNG. L&#39;impostazione predefinita di questa proprietà è `jpeg`. | No |
-| `threshold` | La soglia di punteggio (da 0 a 1) al di sopra della quale devono essere restituiti i risultati. Utilizzate il valore `0` per restituire tutti i risultati. L&#39;impostazione predefinita di questa proprietà è `0`. | No |
-| `top-N` | Il numero di risultati da restituire (non può essere un numero intero negativo). Utilizzate il valore `0` per restituire tutti i risultati. Se utilizzato insieme a `threshold`, il numero di risultati restituiti è minore di uno dei due set di limiti. L&#39;impostazione predefinita di questa proprietà è `0`. | No |
+| `content` | Contenuto da analizzare dal servizio di estrazione del colore. Nel caso in cui l&#39;immagine faccia parte del corpo della richiesta, utilizzate `-F file=@<filename>` nel comando curl per trasmettere l&#39;immagine, lasciando questo parametro come una stringa vuota. <br> Se l&#39;immagine è un file su S3, passare l&#39;URL firmato. Quando il contenuto fa parte del corpo della richiesta, l&#39;elenco degli elementi dati deve avere un solo oggetto. Se vengono passati più oggetti, viene elaborato solo il primo oggetto. | Sì |
+| `content-type` | Utilizzato per indicare se l&#39;input fa parte del corpo della richiesta o un URL firmato per un bucket S3. Il valore predefinito di questa proprietà è `inline`. | No |
+| `encoding` | Il formato file dell&#39;immagine di input. Attualmente è possibile elaborare solo immagini JPEG e PNG. Il valore predefinito di questa proprietà è `jpeg`. | No |
+| `threshold` | La soglia di punteggio (da 0 a 1) al di sopra della quale devono essere restituiti i risultati. Utilizzare il valore `0` per restituire tutti i risultati. Il valore predefinito di questa proprietà è `0`. | No |
+| `top-N` | Il numero di risultati da restituire (non può essere un numero intero negativo). Utilizzare il valore `0` per restituire tutti i risultati. Se utilizzato insieme a `threshold`, il numero di risultati restituiti è minore di uno dei due set di limiti. Il valore predefinito di questa proprietà è `0`. | No |
 | `custom` | Eventuali parametri personalizzati da passare. | No |
 | `historic-metadata` | Un array che può essere trasmesso dai metadati. | No |
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dei colori estratti. Ogni colore è rappresentato da una `feature_value` chiave, che contiene le seguenti informazioni:
+Una risposta corretta restituisce i dettagli dei colori estratti. Ogni colore è rappresentato da una chiave `feature_value`, che contiene le seguenti informazioni:
 
 - Un nome di colore
 - Percentuale di questo colore rispetto all’immagine
 - Il valore RGB del colore
 
-Nel primo oggetto di esempio riportato di seguito, il valore `feature_value` di `White,0.59,251,251,243` indica che il colore rilevato è bianco, il bianco si trova nel 59% dell&#39;immagine e ha un valore RGB di 251.251.243.
+Nel primo oggetto di esempio riportato di seguito, la `feature_value` di `White,0.59,251,251,243` indica che il colore trovato è bianco, il bianco si trova nel 59% dell&#39;immagine e ha un valore RGB di 251.251.243.
 
 ```json
 {
@@ -153,4 +153,4 @@ Nel primo oggetto di esempio riportato di seguito, il valore `feature_value` di 
 | Proprietà | Descrizione |
 | --- | --- |
 | `content_id` | Nome dell’immagine caricata nella richiesta di POST. |
-| `feature_value` | Un array i cui oggetti contengono chiavi con lo stesso nome di proprietà. Queste chiavi contengono una stringa che rappresenta il nome del colore, una percentuale che questo colore appare in relazione all’immagine inviata in `content_id`e il valore RGB del colore. |
+| `feature_value` | Un array i cui oggetti contengono chiavi con lo stesso nome di proprietà. Queste chiavi contengono una stringa che rappresenta il nome del colore, una percentuale che questo colore appare in relazione all&#39;immagine inviata in `content_id` e il valore RGB del colore. |
