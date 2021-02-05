@@ -5,7 +5,7 @@ title: Esplora un database utilizzando l'API del servizio di flusso
 topic: overview
 description: Questa esercitazione utilizza l’API del servizio di flusso per esplorare i contenuti e la struttura dei file di un database di terze parti.
 translation-type: tm+mt
-source-git-commit: ddf5be2f30bc347a881bdcbc6b880f087c03e263
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 2%
