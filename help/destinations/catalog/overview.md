@@ -5,17 +5,17 @@ seo-title: Catalogo destinazioni
 description: Il Catalogo destinazioni fornisce un elenco delle destinazioni disponibili pronte per ricevere i dati. Tali destinazioni includono soluzioni  Adobe, piattaforme pubblicitarie, piattaforme di sondaggi, piattaforme di marketing e-mail e altro ancora.
 seo-description: Il Catalogo destinazioni fornisce un elenco delle destinazioni disponibili pronte per ricevere i dati. Tali destinazioni includono soluzioni  Adobe, piattaforme pubblicitarie, piattaforme di sondaggi, piattaforme di marketing e-mail e altro ancora.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '174'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Destinations Catalog]
+# Catalogo delle destinazioni
 
-**[!DNL Destinations Catalog]** fornisce un elenco delle piattaforme di destinazione disponibili pronte per la ricezione dei dati. Queste piattaforme di destinazione includono  soluzioni di Adobe, piattaforme pubblicitarie, piattaforme per sondaggi, piattaforme di marketing per e-mail, estensioni  Experience Platform e altro ancora.
+Il catalogo delle destinazioni fornisce un elenco delle piattaforme di destinazione disponibili pronte per ricevere i dati. Queste piattaforme di destinazione includono  soluzioni di Adobe, piattaforme pubblicitarie, piattaforme per sondaggi, piattaforme di marketing per e-mail, estensioni  Experience Platform e altro ancora.
 
 Sfogliate il catalogo per determinare quali piattaforme di destinazione sono migliori per i casi di utilizzo di pubblicità e personalizzazione, quindi configurate i flussi per attivare i segmenti nelle destinazioni.
 
