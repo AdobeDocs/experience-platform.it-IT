@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Guida alla piattaforma dati cliente in tempo reale
 user-guide-description: Riunisci dati noti e anonimi provenienti da più sorgenti aziendali per creare profili cliente, segmenti di pubblico da tali profili e attivare tali segmenti in destinazioni di terze parti.
 translation-type: tm+mt
-source-git-commit: 4a282f8890ace3be7808ffbf018377d792e30cb7
+source-git-commit: 1305d789c68ac8f84d5a5f82d8f17035e56ef712
 workflow-type: tm+mt
-source-wordcount: '109'
-ht-degree: 47%
+source-wordcount: '103'
+ht-degree: 50%
 
 ---
 
@@ -40,6 +40,5 @@ ht-degree: 47%
    * [AI cliente](segmentation/customer-ai.md)
 * Origini {#sources}
    * [Panoramica delle origini](sources/sources-overview.md)
-   * [Implementare i tag dei siti Web con  lancio Adobe](sources/launch.md)
 * [Note sulla versione  Experience Platform](https://www.adobe.com/go/platform-release-notes-en)
 * [Glossario di Experience Platform](https://www.adobe.com/go/platform-glossary-en)
