@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;data prep;data preparation;preparing data;
+keywords: ' Experience Platform;home;argomenti popolari;mappare csv;mappare file CSV;mappare file csv a xdm;mappare csv a xdm;ui guide;mapper;mapping;mappatura;data prep;preparazione dei dati;preparazione dei dati;'
 solution: Experience Platform
-title: Funzioni di mappatura
+title: Panoramica sulla preparazione dei dati
 topic: overview
-description: In questo documento vengono introdotti i predefiniti dati in Adobe Experience Platform.
+description: In questo documento vengono introdotti i predefiniti per dati in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
+source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
 workflow-type: tm+mt
-source-wordcount: '304'
-ht-degree: 1%
+source-wordcount: '335'
+ht-degree: 0%
 
 ---
 
 
-# Preparazione dei dati
+# Panoramica sulla preparazione dei dati
 
 Data Prep consente agli ingegneri di mappare, trasformare e convalidare i dati da e verso Experience Data Model (XDM). Prep dati viene visualizzato come un passaggio &quot;Mappa&quot; nei processi di inserimento dei dati, compreso il flusso di lavoro di inserimento CSV. Gli ingegneri dei dati possono utilizzare Data Prep per eseguire le seguenti operazioni di manipolazione dei dati durante l&#39;assimilazione:
 
@@ -29,7 +29,7 @@ Prep dati applica anche diverse convalide intrinseche per garantire che l&#39;in
 
 Un mapping è un&#39;associazione di un attributo di input o di un campo calcolato a un attributo XDM. Un singolo attributo può essere mappato a più attributi XDM creando mappature individuali.
 
-Per ulteriori informazioni sulle diverse funzioni di mappatura, consulta la guida [alle funzioni di](./functions.md)mappatura.
+Per ulteriori informazioni sulle diverse funzioni di mappatura, leggere la guida [alle funzioni di mappatura](./functions.md).
 
 ## Set di mapping
 
@@ -37,4 +37,4 @@ Un set di mappature che trasforma uno schema in un altro è noto come insieme di
 
 ## Passaggi successivi
 
-In questo documento sono state illustrate le nozioni di base su Data Prep in Adobe Experience Platform. Per ulteriori informazioni sulle diverse funzioni di mappatura, consulta la guida [alle funzioni di](./functions.md)mappatura. Per ulteriori informazioni sulle diverse stringhe data/ora, consultare la guida [alle stringhe](./dates.md)data.
+In questo documento sono state illustrate le nozioni di base su Data Prep in Adobe Experience Platform. Per ulteriori informazioni sulle diverse funzioni di mappatura, leggere la guida [alle funzioni di mappatura](./functions.md). Per ulteriori informazioni sulle diverse stringhe data/ora, leggere la guida alle stringhe data [guide](./dates.md).
