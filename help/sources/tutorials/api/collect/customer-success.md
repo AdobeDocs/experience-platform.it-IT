@@ -1,12 +1,12 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;raccogliere successo cliente;successo cliente'
 solution: Experience Platform
-title: Raccolta di dati da un sistema di successo cliente tramite connettori di origine e API
+title: Raccolta di dati da un sistema di successo cliente tramite connettori e API di origine
 topic: overview
 type: Tutorial
-description: Questa esercitazione descrive i passaggi necessari per recuperare i dati da un sistema di successo cliente e trasferirli in Piattaforma tramite connettori di origine e API.
+description: Questa esercitazione descrive i passaggi necessari per recuperare i dati da un sistema di successo cliente e trasferirli in Piattaforma utilizzando connettori sorgente e API.
 translation-type: tm+mt
-source-git-commit: 85a715a6a56c0a885cb6f5b63c1a90ba81479862
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1541'
 ht-degree: 1%
