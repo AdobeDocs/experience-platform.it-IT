@@ -5,7 +5,7 @@ title: Guida introduttiva all'API di Policy Service
 topic: developer guide
 description: L'API Policy Service consente di creare e gestire varie risorse correlate alla governance dei dati di Adobe Experience Platform. Questo documento fornisce un'introduzione ai concetti di base che è necessario conoscere prima di tentare di effettuare chiamate all'API del servizio criteri.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 0%
