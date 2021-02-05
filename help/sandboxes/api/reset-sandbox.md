@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;reset sandbox
+keywords: Experience Platform ;home;argomenti popolari;reimpostare la sandbox
 solution: Experience Platform
-title: Reimpostare una sandbox
+title: Reimpostare una sandbox nell'API
 topic: developer guide
 description: Le sandbox di sviluppo dispongono di una funzione di "reimpostazione della fabbrica" che elimina tutte le risorse non predefinite da una sandbox. Potete ripristinare una sandbox effettuando una richiesta di PUT che include il nome della sandbox nel percorso della richiesta.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '156'
+source-wordcount: '169'
 ht-degree: 3%
 
 ---
 
 
-# Reimpostare una sandbox
+# Reimpostare una sandbox nell&#39;API
 
-Le sandbox di sviluppo dispongono di una funzione di &quot;reimpostazione della fabbrica&quot; che elimina tutte le risorse non predefinite da una sandbox. Potete ripristinare una sandbox effettuando una richiesta di PUT che include la sandbox `name` nel percorso della richiesta.
+Le sandbox di sviluppo dispongono di una funzione di &quot;reimpostazione della fabbrica&quot; che elimina tutte le risorse non predefinite da una sandbox. Potete ripristinare una sandbox effettuando una richiesta di PUT che include nel percorso della richiesta l&#39;elemento `name` della sandbox.
 
 **Formato API**
 
@@ -25,7 +25,7 @@ PUT /sandboxes/{SANDBOX_NAME}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{SANDBOX_NAME}` | La `name` proprietà della sandbox da reimpostare. |
+| `{SANDBOX_NAME}` | La proprietà `name` della sandbox da reimpostare. |
 
 **Richiesta**
 
@@ -50,7 +50,7 @@ curl -X PUT \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli della sandbox aggiornata, mostrando che `state` è &quot;resettata&quot;.
+Una risposta corretta restituisce i dettagli della sandbox aggiornata, mostrando che la relativa `state` è &quot;reimpostazione&quot;.
 
 ```json
 {
@@ -65,4 +65,4 @@ Una risposta corretta restituisce i dettagli della sandbox aggiornata, mostrando
 
 >[!NOTE]
 >
->Una volta ripristinata la sandbox, il provisioning da parte del sistema richiede circa 15 minuti. Una volta eseguito il provisioning, il sandbox `state` diventa &quot;attivo&quot; o &quot;non riuscito&quot;.
+>Una volta ripristinata la sandbox, il provisioning da parte del sistema richiede circa 15 minuti. Una volta eseguito il provisioning, l&#39;elemento `state` della sandbox diventa &quot;attivo&quot; o &quot;non riuscito&quot;.
