@@ -1,33 +1,33 @@
 ---
-keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cloud storage;GCS;gcs
+keywords: Experience Platform ;home;argomenti popolari;Google Cloud Storage;google cloud storage;GCS;gcs
 solution: Experience Platform
-title: Connettore origine di archiviazione Google Cloud (interfaccia utente)
+title: Creare una connessione di origine di archiviazione Google Cloud nell'interfaccia utente
 topic: overview
 type: Tutorial
-description: Questa esercitazione fornisce i passaggi per la creazione di un connettore sorgente Google Cloud Storage (in seguito denominato "GCS") tramite l'interfaccia utente della piattaforma.
+description: Scopri come creare una connessione di origine di archiviazione Google Cloud utilizzando l'interfaccia utente di Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '542'
 ht-degree: 1%
 
 ---
 
 
-# Creare un connettore [!DNL Google Cloud Storage] sorgente nell’interfaccia utente
+# Creare una connessione di origine [!DNL Google Cloud Storage] nell&#39;interfaccia utente
 
-I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente originati su base programmata. Questa esercitazione fornisce i passaggi necessari per creare un connettore sorgente [!DNL Google Cloud Storage] (in seguito denominato &quot;GCS&quot;) utilizzando l&#39;interfaccia [!DNL Platform] utente.
+I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente originati su base programmata. Questa esercitazione fornisce i passaggi necessari per creare un connettore sorgente [!DNL Google Cloud Storage] (di seguito &quot;GCS&quot;) utilizzando l&#39;interfaccia utente [!DNL Platform].
 
 ## Introduzione
 
 Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): Il framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
-   * [Nozioni di base sulla composizione](../../../../../xdm/schema/composition.md)dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
-   * [Esercitazione](../../../../../xdm/tutorials/create-schema-ui.md)sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
+   * [Nozioni di base sulla composizione](../../../../../xdm/schema/composition.md) dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
+   * [Esercitazione](../../../../../xdm/tutorials/create-schema-ui.md) sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
-Se disponete già di una connessione GCS valida, potete ignorare il resto del documento e procedere all&#39;esercitazione sulla [configurazione di un flusso di dati](../../dataflow/batch/cloud-storage.md).
+Se disponete già di una connessione GCS valida, potete ignorare il resto del documento e continuare l&#39;esercitazione su [configurazione di un flusso di dati](../../dataflow/batch/cloud-storage.md).
 
 ### Formati di file supportati
 
@@ -39,32 +39,32 @@ Se disponete già di una connessione GCS valida, potete ignorare il resto del do
 
 ### Raccogli credenziali richieste
 
-Per accedere ai dati GCS su [!DNL Platform], devi fornire i seguenti valori:
+Per accedere ai dati GCS su [!DNL Platform], è necessario fornire i seguenti valori:
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| ID chiave di accesso | ID chiave di accesso dell&#39; [!DNL Google Cloud Storage] account. |
-| Chiave di accesso segreta | Il segreto client dell&#39; [!DNL Google Cloud Storage] account. |
+| ID chiave di accesso | ID chiave di accesso dell&#39;account [!DNL Google Cloud Storage]. |
+| Chiave di accesso segreta | Il segreto client dell&#39;account [!DNL Google Cloud Storage]. |
 
-Per ulteriori informazioni su come iniziare, consulta la guida [all’autenticazione da](https://cloud.google.com/docs/authentication/production) server a server per [!DNL Google Cloud Storage].
+Per ulteriori informazioni su come iniziare, fare riferimento a [guida all&#39;autenticazione server-to-server](https://cloud.google.com/docs/authentication/production) per [!DNL Google Cloud Storage].
 
-## Collegamento dell&#39; [!DNL Google Cloud Storage] account
+## Collegare l&#39;account [!DNL Google Cloud Storage]
 
-Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi descritti di seguito per collegare il tuo account GCS a [!DNL Platform].
+Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi descritti di seguito per collegare l&#39;account GCS a [!DNL Platform].
 
-Accedete ad [Adobe Experience Platform](https://platform.adobe.com) , quindi selezionate **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39; **[!UICONTROL Sources]** area di lavoro. Nella **[!UICONTROL Catalog]** schermata sono visualizzate diverse sorgenti con cui è possibile creare un account.
+Accedete a [Adobe Experience Platform](https://platform.adobe.com), quindi selezionate **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro **[!UICONTROL Sources]**. Nella schermata **[!UICONTROL Catalog]** sono visualizzate diverse sorgenti con le quali è possibile creare un account.
 
 Potete selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l&#39;origine specifica con cui si desidera lavorare utilizzando l&#39;opzione di ricerca.
 
-Sotto la **[!UICONTROL Databases]** categoria, selezionare **[!UICONTROL Google Cloud Storage]**. Se si tratta della prima volta che si utilizza questo connettore, selezionare **[!UICONTROL Configure]**. In caso contrario, selezionare **[!UICONTROL Add data]** per creare un nuovo connettore GCS.
+Sotto la categoria **[!UICONTROL Databases]**, selezionare **[!UICONTROL Google Cloud Storage]**. Se si tratta della prima volta che si utilizza questo connettore, selezionare **[!UICONTROL Configure]**. In caso contrario, selezionare **[!UICONTROL Add data]** per creare un nuovo connettore GCS.
 
 ![catalogo](../../../../images/tutorials/create/google-cloud-storage/catalog.png)
 
-Viene **[!UICONTROL Connect to Google Cloud Storage]** visualizzata la pagina. In questa pagina è possibile utilizzare credenziali nuove o già esistenti.
+Viene visualizzata la pagina **[!UICONTROL Connect to Google Cloud Storage]**. In questa pagina è possibile utilizzare credenziali nuove o già esistenti.
 
 ### Nuovo account
 
-Se si utilizzano nuove credenziali, selezionare **[!UICONTROL New account]**. Nel modulo di input visualizzato, fornite un nome, una descrizione facoltativa e le credenziali GCS. Al termine, selezionare **[!UICONTROL Connect]** e quindi concedere un po&#39; di tempo per stabilire la nuova connessione.
+Se si utilizzano nuove credenziali, selezionare **[!UICONTROL New account]**. Nel modulo di input visualizzato, fornite un nome, una descrizione facoltativa e le credenziali GCS. Al termine, selezionare **[!UICONTROL Connect]**, quindi concedere un po&#39; di tempo per stabilire la nuova connessione.
 
 ![connect](../../../../images/tutorials/create/google-cloud-storage/connect.png)
 
@@ -76,4 +76,4 @@ Per collegare un account esistente, selezionate l&#39;account GCS con cui deside
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione hai stabilito una connessione al tuo account GCS. Ora puoi continuare con l’esercitazione successiva e [configurare un flusso di dati per trasferire i dati dall’archiviazione cloud [!DNL Platform]](../../dataflow/batch/cloud-storage.md).
+Seguendo questa esercitazione hai stabilito una connessione al tuo account GCS. È ora possibile continuare l&#39;esercitazione successiva e [configurare un flusso di dati per portare i dati dall&#39;archiviazione cloud in  [!DNL Platform]](../../dataflow/batch/cloud-storage.md).
