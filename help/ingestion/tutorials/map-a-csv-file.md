@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;
+keywords: ' Experience Platform;home;argomenti popolari;mappare csv;mappare file CSV;mappare file CSV su xdm;mappare csv a xdm;ui guide;'
 solution: Experience Platform
 title: Mappare un file CSV su uno schema XDM
 topic: tutorial
 type: Tutorial
 description: Questa esercitazione illustra come mappare un file CSV su uno schema XDM utilizzando l'interfaccia utente di Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: c19360450d7b1f11063683b796774a04f3dbe16c
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '828'
 ht-degree: 1%
 
 ---
@@ -16,28 +16,28 @@ ht-degree: 1%
 
 # Mappare un file CSV su uno schema XDM
 
-Per assimilare i dati CSV in [!DNL Adobe Experience Platform], i dati devono essere mappati su uno schema [!DNL Experience Data Model] (XDM). Questa esercitazione illustra come mappare un file CSV su uno schema XDM utilizzando l&#39;interfaccia [!DNL Platform] utente.
+Per assimilare i dati CSV in [!DNL Adobe Experience Platform], i dati devono essere mappati su uno schema [!DNL Experience Data Model] (XDM). Questa esercitazione illustra come mappare un file CSV su uno schema XDM utilizzando l&#39;interfaccia utente [!DNL Platform].
 
-Inoltre, l&#39;appendice di questa esercitazione fornisce ulteriori informazioni sull&#39;utilizzo delle funzioni [di](#mapping-functions)mappatura.
+Inoltre, l&#39;appendice di questa esercitazione fornisce ulteriori informazioni sull&#39;utilizzo di [funzioni di mappatura](#mapping-functions).
 
 ## Introduzione
 
 Questa esercitazione richiede una buona conoscenza dei seguenti componenti di [!DNL Platform]:
 
-- [[!DNL Experience Data Model (XDM System)]](../../xdm/home.md): Il framework standard con cui [!DNL Platform] organizzare i dati relativi all&#39;esperienza del cliente.
-- [[!DNL Batch ingestion]](../batch-ingestion/overview.md): Metodo con cui [!DNL Platform] vengono acquisiti i dati dai file di dati forniti dall&#39;utente.
+- [[!DNL Experience Data Model (XDM System)]](../../xdm/home.md): Il framework standard con cui  [!DNL Platform] organizzare i dati relativi all&#39;esperienza dei clienti.
+- [[!DNL Batch ingestion]](../batch-ingestion/overview.md): Metodo con cui  [!DNL Platform] vengono acquisiti i dati dai file di dati forniti dall&#39;utente.
 
-Questa esercitazione richiede anche che sia già stato creato un set di dati in cui assimilare i dati CSV. Per i passaggi sulla creazione di un dataset nell&#39;interfaccia utente, consulta l&#39;esercitazione [sull&#39;acquisizione dei](./ingest-batch-data.md)dati.
+Questa esercitazione richiede anche che sia già stato creato un set di dati in cui assimilare i dati CSV. Per i passaggi sulla creazione di un set di dati nell&#39;interfaccia utente, vedete l&#39; [esercitazione sull&#39;acquisizione dei dati](./ingest-batch-data.md).
 
 ## Scegliere una destinazione
 
-Accedete a [[!DNL Adobe Experience Platform]](https://platform.adobe.com) e selezionate **[!UICONTROL Workflows]** dalla barra di navigazione a sinistra per accedere all’ **[!UICONTROL Workflows]** area di lavoro.
+Accedete a [[!DNL Adobe Experience Platform]](https://platform.adobe.com), quindi selezionate **[!UICONTROL Workflows]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro **[!UICONTROL Workflows]**.
 
-Dalla **[!UICONTROL Workflows]** schermata, selezionate **[!UICONTROL Map CSV to XDM schema]** sotto la **[!UICONTROL Data ingestion]** sezione, quindi selezionate **[!UICONTROL Launch]**.
+Dalla schermata **[!UICONTROL Workflows]**, selezionare **[!UICONTROL Map CSV to XDM schema]** nella sezione **[!UICONTROL Data ingestion]**, quindi selezionare **[!UICONTROL Launch]**.
 
 ![](../images/tutorials/map-a-csv-file/workflows.png)
 
-Viene **[!UICONTROL Map CSV to XDM schema]** visualizzato il flusso di lavoro, a partire dal **[!UICONTROL Destination]** passaggio. Scegliere un set di dati in entrata in cui assimilare i dati. È possibile utilizzare un set di dati esistente o crearne uno nuovo.
+Viene visualizzato il flusso di lavoro **[!UICONTROL Map CSV to XDM schema]**, a partire dal passaggio **[!UICONTROL Destination]**. Scegliere un set di dati in entrata in cui assimilare i dati. È possibile utilizzare un set di dati esistente o crearne uno nuovo.
 
 **Utilizzare un dataset esistente**
 
@@ -51,17 +51,17 @@ Per assimilare i dati CSV in un nuovo set di dati, selezionate **[!UICONTROL Cre
 
 ## Aggiungi dati
 
-Viene **[!UICONTROL Add data]** visualizzato il passaggio. Trascinate e rilasciate il file CSV nello spazio disponibile oppure selezionate **[!UICONTROL Choose files]** per inserire manualmente il file CSV.
+Viene visualizzato il passaggio **[!UICONTROL Add data]**. Trascinate e rilasciate il file CSV nello spazio disponibile oppure selezionate **[!UICONTROL Choose files]** per inserire manualmente il file CSV.
 
 ![](../images/tutorials/map-a-csv-file/add-data.png)
 
-La **[!UICONTROL Sample data]** sezione viene visualizzata una volta che il file è stato caricato, mostrando le prime dieci righe di dati. Dopo aver confermato che i dati sono stati caricati come previsto, selezionate **[!UICONTROL Next]**.
+La sezione **[!UICONTROL Sample data]** viene visualizzata una volta che il file è stato caricato, mostrando le prime dieci righe di dati. Dopo aver confermato che i dati sono stati caricati come previsto, selezionate **[!UICONTROL Next]**.
 
 ![](../images/tutorials/map-a-csv-file/sample-data.png)
 
 ## Mappatura di campi CSV nei campi dello schema XDM
 
-Viene **[!UICONTROL Mapping]** visualizzato il passaggio. Le colonne del file CSV sono elencate in **[!UICONTROL Source Field]**, con i campi dello schema XDM corrispondenti elencati in **[!UICONTROL Target Field]**.
+Viene visualizzato il passaggio **[!UICONTROL Mapping]**. Le colonne del file CSV sono elencate in **[!UICONTROL Source Field]**, con i campi dello schema XDM corrispondenti elencati in **[!UICONTROL Target Field]**.
 
 [!DNL Platform] fornisce automaticamente raccomandazioni intelligenti per i campi mappati automaticamente in base allo schema di destinazione o al dataset selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi di utilizzo.
 
@@ -79,7 +79,7 @@ In alternativa, è possibile scegliere di mappare manualmente lo schema di origi
 
 ![](../images/tutorials/map-a-csv-file/mapping-with-suggestions-and-buttons.png)
 
-Viene **[!UICONTROL Map source to target field]** visualizzato il puntatore. Da qui è possibile selezionare il campo da mappare, seguito **[!UICONTROL Save]** da aggiungere la nuova mappatura.
+Viene visualizzato il puntatore **[!UICONTROL Map source to target field]**. Da qui è possibile selezionare il campo da mappare, seguito da **[!UICONTROL Save]** per aggiungere la nuova mappatura.
 
 ![](../images/tutorials/map-a-csv-file/manual-mapping.png)
 
@@ -89,18 +89,18 @@ Se si desidera rimuovere una delle mappature, passare il mouse su tale mappatura
 
 I campi calcolati consentono la creazione di valori in base agli attributi nello schema di input. Questi valori possono quindi essere assegnati agli attributi nello schema di destinazione e ricevere un nome e una descrizione che consentano un riferimento più semplice.
 
-Selezionare il **[!UICONTROL Add calculated field]** pulsante per continuare.
+Selezionare il pulsante **[!UICONTROL Add calculated field]** per continuare.
 
 ![](../images/tutorials/map-a-csv-file/add-calculated-field.png)
 
-Viene visualizzato il **[!UICONTROL Create calculated field]** pannello. La finestra di dialogo a sinistra contiene i campi, le funzioni e gli operatori supportati nei campi calcolati. Selezionare una delle schede per iniziare ad aggiungere funzioni, campi o operatori all&#39;editor di espressioni.
+Viene visualizzato il pannello **[!UICONTROL Create calculated field]**. La finestra di dialogo a sinistra contiene i campi, le funzioni e gli operatori supportati nei campi calcolati. Selezionare una delle schede per iniziare ad aggiungere funzioni, campi o operatori all&#39;editor di espressioni.
 
 ![](../images/tutorials/map-a-csv-file/create-calculated-fields.png)
 
 | Scheda | Descrizione |
 | --------- | ----------- |
 | Campi | La scheda Campi elenca i campi e gli attributi disponibili nello schema di origine. |
-| Funzioni | La scheda Funzioni elenca le funzioni disponibili per trasformare i dati. Per ulteriori informazioni sulle funzioni che è possibile utilizzare all&#39;interno dei campi calcolati, consultare la guida sull&#39; [utilizzo delle funzioni](../../data-prep/functions.md)di mappatura dei dati. |
+| Funzioni | La scheda Funzioni elenca le funzioni disponibili per trasformare i dati. Per ulteriori informazioni sulle funzioni che è possibile utilizzare all&#39;interno dei campi calcolati, leggere la guida in [utilizzando le funzioni di preparazione dati (Mapper)](../../data-prep/functions.md). |
 | Operatori | La scheda operatori elenca gli operatori disponibili per trasformare i dati. |
 
 È possibile aggiungere manualmente campi, funzioni e operatori utilizzando l&#39;editor di espressioni al centro. Selezionate l&#39;editor per iniziare a creare un&#39;espressione.
@@ -115,8 +115,8 @@ La schermata di mappatura viene visualizzata nuovamente con il campo di origine 
 
 ## Caricamento dei dati del monitor
 
-Una volta mappato e creato il file CSV, potete monitorare i dati che vengono acquisiti tramite di esso. Per ulteriori informazioni sul monitoraggio dell’inserimento dei dati, consulta l’esercitazione sul [monitoraggio dell’inserimento](../../ingestion/quality/monitor-data-ingestion.md)dei dati.
+Una volta mappato e creato il file CSV, potete monitorare i dati che vengono acquisiti tramite di esso. Per ulteriori informazioni sul monitoraggio dell&#39;inserimento dei dati, vedere l&#39;esercitazione sul [monitoraggio dell&#39;inserimento dei dati](../../ingestion/quality/monitor-data-ingestion.md).
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, avete mappato correttamente un file CSV semplice su uno schema XDM e lo avete assimilato in [!DNL Platform]. Questi dati possono ora essere utilizzati da [!DNL Platform] servizi a valle come [!DNL Real-time Customer Profile]. Per [[!DNL Real-time Customer Profile]](../../profile/home.md) ulteriori informazioni, consulta la panoramica.
+Seguendo questa esercitazione, è stato mappato correttamente un file CSV semplice su uno schema XDM ed è stato assimilato in [!DNL Platform]. Questi dati possono ora essere utilizzati dai servizi a valle [!DNL Platform] come [!DNL Real-time Customer Profile]. Per ulteriori informazioni, vedere la panoramica di [[!DNL Real-time Customer Profile]](../../profile/home.md).
