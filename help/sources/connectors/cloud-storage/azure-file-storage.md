@@ -1,11 +1,11 @@
 ---
 keywords: ' Experience Platform;home;argomenti più comuni;Azure File Storage;Azure File Storage'
 solution: Experience Platform
-title: Connettore archiviazione file Azure
+title: Panoramica del connettore origine archiviazione file di Azure
 topic: overview
-description: La documentazione seguente fornisce informazioni su come collegare Azure File Storage alla piattaforma utilizzando le API o l'interfaccia utente.
+description: Scoprite come collegare Azure File Storage ad Adobe Experience Platform utilizzando le API o l'interfaccia utente.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 0%
@@ -44,11 +44,11 @@ La documentazione seguente fornisce informazioni su come connettersi [!DNL Azure
 
 ### Utilizzo delle API
 
-- [Creare un connettore Azure File Storage utilizzando l&#39;API del servizio di flusso](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
+- [Creazione di una connessione di origine Azure File Storage tramite l&#39;API del servizio di flusso](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
 - [Esplora un sistema di archiviazione cloud utilizzando l&#39;API del servizio di flusso](../../tutorials/api/explore/cloud-storage.md)
 - [Raccolta di dati di archiviazione cloud tramite l&#39;API del servizio di flusso](../../tutorials/api/collect/cloud-storage.md)
 
 ### Utilizzo dell’interfaccia
 
-- [Creare un connettore di origine Azure File Storage nell&#39;interfaccia utente](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
-- [Configurare un flusso di dati per un connettore di archiviazione cloud nell&#39;interfaccia utente](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Creazione di una connessione di origine Azure File Storage nell&#39;interfaccia utente](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
+- [Configurare un flusso di dati per una connessione di archiviazione cloud nell&#39;interfaccia utente](../../tutorials/ui/dataflow/batch/cloud-storage.md)
