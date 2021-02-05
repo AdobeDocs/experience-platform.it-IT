@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;mlservices;sensei machine learning api
+keywords: ', Experience Platform;guida allo sviluppo;endpoint;Data Science Workspace;argomenti più comuni;mlservices;sensei machine learning api'
 solution: Experience Platform
-title: Servizi
+title: Endpoint API MLServices
 topic: Developer guide
 description: Un servizio MLService è un modello di formazione pubblicato che consente alla vostra azienda di accedere e riutilizzare modelli sviluppati in precedenza. Una caratteristica chiave di MLServices è la capacità di automatizzare la formazione e il punteggio su base programmata. Le sessioni di formazione pianificate possono contribuire a mantenere l'efficienza e la precisione di un modello, mentre le esecuzioni di punteggio pianificate possono garantire la generazione coerente di nuove informazioni.
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: '890'
 ht-degree: 2%
 
 ---
 
 
-# MLServices
+# Endpoint MLServices
 
 Un servizio MLService è un modello di formazione pubblicato che consente alla vostra azienda di accedere e riutilizzare modelli sviluppati in precedenza. Una caratteristica chiave di MLServices è la capacità di automatizzare la formazione e il punteggio su base programmata. Le sessioni di formazione pianificate possono contribuire a mantenere l&#39;efficienza e la precisione di un modello, mentre le esecuzioni di punteggio pianificate possono garantire la generazione coerente di nuove informazioni.
 
-I programmi di formazione e valutazione automatizzati sono definiti con una marca temporale iniziale, una marca temporale finale e una frequenza rappresentata come espressione [](https://en.wikipedia.org/wiki/Cron)cron. Le pianificazioni possono essere definite durante la [creazione di un servizio MLService](#create-an-mlservice) o applicate [aggiornando un servizio MLService](#update-an-mlservice)esistente.
+I programmi di formazione e valutazione automatizzati sono definiti con una marca temporale iniziale, una marca temporale finale e una frequenza rappresentata come espressione [cron](https://en.wikipedia.org/wiki/Cron). Le pianificazioni possono essere definite durante la [creazione di un servizio MLS](#create-an-mlservice) o applicate mediante l&#39;aggiornamento di un servizio MLService esistente](#update-an-mlservice).[
 
 ## Creare un servizio MLS {#create-an-mlservice}
 
@@ -78,7 +78,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta di successo restituisce un payload contenente i dettagli del servizio MLService appena creato, incluso il relativo identificatore univoco (`id`), ID esperimento per la formazione (`trainingExperimentId`), ID esperimento per il punteggio (`scoringExperimentId`) e ID set di dati per la formazione in input (`trainingDataSetId`).
+Una risposta corretta restituisce un payload contenente i dettagli del servizio MLService appena creato, incluso l&#39;identificatore univoco (`id`), l&#39;ID esperimento per la formazione (`trainingExperimentId`), l&#39;ID esperimento per il punteggio (`scoringExperimentId`) e l&#39;ID del set di dati di formazione in input (`trainingDataSetId`).
 
 ```json
 {
@@ -107,9 +107,9 @@ Una risposta di successo restituisce un payload contenente i dettagli del serviz
 }
 ```
 
-## Recuperare un elenco di MLServices {#retrieve-a-list-of-mlservices}
+## Recupera un elenco di MLServices {#retrieve-a-list-of-mlservices}
 
-È possibile recuperare un elenco di MLServices eseguendo una singola richiesta di GET. Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri delle [query per il recupero](./appendix.md#query)delle risorse.
+È possibile recuperare un elenco di MLServices eseguendo una singola richiesta di GET. Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri di query [per il recupero delle risorse](./appendix.md#query).
 
 **Formato API**
 
@@ -121,7 +121,7 @@ GET /mlServices?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Uno dei parametri [di query](./appendix.md#query) disponibili utilizzati per filtrare i risultati. |
+| `{QUERY_PARAMETER}` | Uno dei [parametri di query disponibili](./appendix.md#query) utilizzati per filtrare i risultati. |
 | `{VALUE}` | Il valore del parametro di query precedente. |
 
 **Richiesta**
@@ -139,7 +139,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta di successo restituisce un elenco di MLServices con i relativi dettagli, inclusi MLService ID (`{MLSERVICE_ID}`), Experience ID for Training (`{TRAINING_ID}`), Experience ID for Scoring (`{SCORING_ID}`) e l&#39;ID del set di dati per la formazione in input (`{DATASET_ID}`).
+Una risposta corretta restituisce un elenco di MLServices e i relativi dettagli, inclusi l&#39;ID di servizio MLS (`{MLSERVICE_ID}`), l&#39;ID di esperimento per la formazione (`{TRAINING_ID}`), l&#39;ID di esperimento per il punteggio (`{SCORING_ID}`) e l&#39;ID di set di dati per la formazione di input (`{DATASET_ID}`).
 
 ```json
 {
@@ -166,7 +166,7 @@ Una risposta di successo restituisce un elenco di MLServices con i relativi dett
 }
 ```
 
-## Recuperare un servizio MLService specifico {#retrieve-a-specific-mlservice}
+## Recuperare un servizio MLS specifico {#retrieve-a-specific-mlservice}
 
 Potete recuperare i dettagli di un esperimento specifico eseguendo una richiesta di GET che include l&#39;ID del servizio MLS desiderato nel percorso della richiesta.
 
@@ -210,7 +210,7 @@ Una risposta corretta restituisce un payload contenente i dettagli del servizio 
 }
 ```
 
-## Aggiornare un servizio MLService {#update-an-mlservice}
+## Aggiornare un servizio MLS {#update-an-mlservice}
 
 Potete aggiornare un servizio MLS esistente sovrascrivendone le proprietà tramite una richiesta di PUT che include l&#39;ID di MLService di destinazione nel percorso di richiesta e fornisce un payload JSON contenente le proprietà aggiornate.
 
