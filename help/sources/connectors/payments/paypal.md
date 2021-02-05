@@ -1,41 +1,40 @@
 ---
-keywords: Experience Platform;home;popular topics;Paypal;paypal;PayPal
+keywords: ' Experience Platform;home;argomenti popolari;Paypal;paypal;PayPal'
 solution: Experience Platform
-title: Connettore PayPal
-topic: overview
-description: La documentazione seguente fornisce informazioni su come collegare PayPal alla piattaforma utilizzando le API o l'interfaccia utente.
+title: Panoramica del connettore di origine PayPal
+description: Scopri come collegare PayPal ad Adobe Experience Platform utilizzando le API o l'interfaccia utente.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '230'
 ht-degree: 0%
 
 ---
 
 
-# Connettore (Beta) [!DNL PayPal]
+# (Beta) [!DNL PayPal] connettore
 
 >[!NOTE]
 >
->Il [!DNL PayPal] connettore è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la panoramica [](../../home.md#terms-and-conditions) Origini.
+>Il connettore [!DNL PayPal] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, vedere [Panoramica delle sorgenti](../../home.md#terms-and-conditions).
 
-Adobe Experience Platform consente l&#39;acquisizione di dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite [!DNL Platform] i servizi. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, database e molti altri.
+Adobe Experience Platform consente l&#39;acquisizione di dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo utilizzando i servizi [!DNL Platform]. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, database e molti altri.
 
 [!DNL Experience Platform] fornisce supporto per l&#39;acquisizione di dati da un&#39;applicazione di pagamento di terze parti. Il supporto per i fornitori di pagamenti include [!DNL PayPal].
 
 ## Indirizzo IP  elenco consentiti
 
-Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti . Se non si aggiungono al elenco consentiti  gli indirizzi IP specifici per la regione, potrebbero verificarsi errori o prestazioni insufficienti quando si utilizzano le origini. Per ulteriori informazioni, vedere l&#39;indirizzo [IP  pagina di elenco consentiti](../../ip-address-allow-list.md) .
+Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti . Se non si aggiungono al elenco consentiti  gli indirizzi IP specifici per la regione, potrebbero verificarsi errori o prestazioni insufficienti quando si utilizzano le origini. Per ulteriori informazioni, vedere la pagina [Indirizzo IP  elenco consentiti](../../ip-address-allow-list.md).
 
-La documentazione seguente fornisce informazioni su come connettersi [!DNL PayPal] all&#39; [!DNL Platform] utilizzo delle API o dell&#39;interfaccia utente:
+La documentazione seguente fornisce informazioni su come connettersi [!DNL PayPal] a [!DNL Platform] utilizzando le API o l&#39;interfaccia utente:
 
-## Connessione [!DNL PayPal] all&#39; [!DNL Platform] utilizzo delle API
+## Connetti [!DNL PayPal] a [!DNL Platform] utilizzando le API
 
-- [Creare un connettore PayPal utilizzando l&#39;API del servizio di flusso](../../tutorials/api/create/payments/paypal.md)
+- [Creare una connessione di origine PayPal utilizzando l&#39;API del servizio di flusso](../../tutorials/api/create/payments/paypal.md)
 - [Esplorare un&#39;applicazione di pagamento tramite l&#39;API del servizio di flusso](../../tutorials/api/explore/payments.md)
 - [Raccolta di dati da un&#39;applicazione di pagamento tramite l&#39;API del servizio di flusso](../../tutorials/api/collect/payments.md)
 
-## Connessione [!DNL PayPal] all’ [!DNL Platform] interfaccia utente
+## Connetti [!DNL PayPal] a [!DNL Platform] utilizzando l&#39;interfaccia utente
 
-- [Creare un connettore di origine PayPal nell&#39;interfaccia utente](../../tutorials/ui/create/payments/paypal.md)
-- [Configurare un flusso di dati per un connettore pagamenti nell&#39;interfaccia utente](../../tutorials/ui/dataflow/payments.md)
+- [Creare una connessione di origine PayPal nell’interfaccia utente](../../tutorials/ui/create/payments/paypal.md)
+- [Configurare un flusso di dati per una connessione pagamenti nell&#39;interfaccia utente](../../tutorials/ui/dataflow/payments.md)
