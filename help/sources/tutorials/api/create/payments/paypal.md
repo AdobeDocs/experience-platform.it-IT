@@ -1,20 +1,20 @@
 ---
 keywords: ' Experience Platform;home;argomenti popolari;Connettore PayPal;paypal;Paypal'
 solution: Experience Platform
-title: Creare un connettore PayPal utilizzando l'API del servizio di flusso
+title: Creare una connessione di origine PayPal utilizzando l'API del servizio di flusso
 topic: overview
 type: Tutorial
-description: Questa esercitazione utilizza l'API del servizio di flusso per guidarvi attraverso i passaggi necessari per collegare PayPal a  Experience Platform.
+description: Scopri come collegare PayPal ad Adobe Experience Platform utilizzando l'API del servizio di flusso.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '576'
 ht-degree: 2%
 
 ---
 
 
-# Creare un connettore [!DNL PayPal] utilizzando l&#39;API [!DNL Flow Service]
+# Creare una connessione di origine [!DNL PayPal] utilizzando l&#39;API [!DNL Flow Service]
 
 >[!NOTE]
 >
