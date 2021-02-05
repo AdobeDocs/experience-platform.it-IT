@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;identity;Identity
+keywords: ' Experience Platform;casa;argomenti popolari;identità;identità'
 solution: Experience Platform
 title: Elenca mappature identità
 topic: API guide
 description: Una mappatura è una raccolta di tutte le identità in un cluster, per uno spazio dei nomi specificato.
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '270'
 ht-degree: 1%
 
 ---
@@ -51,7 +51,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Opzione 3: Specificate l&#39;identità come XID (`xid`). Per ulteriori informazioni su come ottenere l&#39;XID di un&#39;identità, consulta la sezione di questo documento relativa al [recupero dell&#39;XID per un&#39;identità](./list-native-id.md).
+Opzione 3: Specificate l&#39;identità come XID (`xid`). Per ulteriori informazioni su come ottenere l&#39;XID di un&#39;identità, vedere la sezione di questo documento relativa alla [ottenimento dell&#39;XID per un&#39;identità](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -64,7 +64,7 @@ curl -X GET \
 
 ### Ottenere le mappature di identità per più identità
 
-Utilizzate il `POST` metodo come equivalente batch del `GET` metodo descritto sopra per recuperare mappature per più identità.
+Utilizzare il metodo `POST` come equivalente batch del metodo `GET` descritto sopra per recuperare i mapping per più identità.
 
 >[!NOTE]
 >
@@ -87,7 +87,7 @@ Opzione 1: Fornire un elenco di XID per i quali recuperare le mappature.
 }
 ```
 
-Opzione 2: Fornite un elenco di identità come ID compositi, in cui ogni nome indica il valore ID e lo spazio nomi per ID namespace. Questo esempio illustra come utilizzare questo metodo per sovrascrivere il valore predefinito `graph-type` di &quot;Grafico privato&quot;.
+Opzione 2: Fornite un elenco di identità come ID compositi, in cui ogni nome indica il valore ID e lo spazio nomi per ID namespace. Questo esempio illustra l&#39;utilizzo di questo metodo durante la sovrascrittura del valore predefinito `graph-type` di &quot;Private Graph&quot;.
 
 ```shell
 {
@@ -146,7 +146,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-Se non viene trovata alcuna identità correlata con l&#39;input fornito, viene restituito un codice di `HTTP 204` risposta senza contenuto.
+Se non viene trovata alcuna identità correlata con l&#39;input fornito, viene restituito un codice di risposta `HTTP 204` senza contenuto.
 
 **Risposta**
 
@@ -185,8 +185,8 @@ Se non viene trovata alcuna identità correlata con l&#39;input fornito, viene r
 ```
 
 - `lastAssociationTime`: Il timestamp dell&#39;ultima associazione dell&#39;identità di input a questa identità.
-- `regions`: Fornisce il `regionId` e `lastAssociationTime` la posizione in cui è stata visualizzata l&#39;identità.
+- `regions`: Fornisce l&#39; `regionId` e  `lastAssociationTime` la posizione in cui è stata visualizzata l&#39;identità.
 
 ## Passaggi successivi
 
-Passate all&#39;esercitazione successiva per [elencare gli spazi dei nomi](./list-namespaces.md)disponibili.
+Passare all&#39;esercitazione successiva per [elencare gli spazi dei nomi disponibili](./list-namespaces.md).
