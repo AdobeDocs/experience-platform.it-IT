@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente di Generatore di segmenti
 topic: ui guide
 description: 'Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro completa che consente di interagire con gli elementi dei dati del profilo. L’area di lavoro offre controlli intuitivi per la creazione e la modifica di regole, come le sezioni di trascinamento utilizzate per rappresentare le proprietà dei dati. '
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: 8fc1c5414f38e84ed1700ee95b1c382007ff2c27
 workflow-type: tm+mt
-source-wordcount: '1745'
+source-wordcount: '1871'
 ht-degree: 0%
 
 ---
@@ -100,6 +100,22 @@ In alternativa, è possibile visualizzare una versione basata su codice di una r
 La vista Codice fornisce un pulsante che consente di copiare il valore del segmento da utilizzare nelle chiamate API. Per ottenere la versione più recente del segmento, accertati di aver salvato le ultime modifiche al segmento.
 
 ![](../images/ui/segment-builder/copy-code.png)
+
+### Funzioni di aggregazione
+
+Un&#39;aggregazione in [!DNL Segment Builder] è un calcolo su un gruppo di attributi XDM il cui tipo di dati è un numero (un doppio o un numero intero). Le quattro funzioni di aggregazione supportate in Segment Builder (Generatore di segmenti) sono SUM, AVERAGE, MIN e MAX.
+
+Per creare una funzione di aggregazione, selezionare un evento dalla barra a sinistra, quindi inserirlo nel contenitore [!UICONTROL Events].
+
+![](../images/ui/segment-builder/select-event.png)
+
+Dopo aver posizionato l&#39;evento all&#39;interno del contenitore Eventi, selezionate l&#39;icona con le ellissi (...), seguita da **[!UICONTROL Aggregate]**.
+
+![](../images/ui/segment-builder/add-aggregation.png)
+
+L&#39;aggregazione ora viene aggiunta. È ora possibile selezionare la funzione di aggregazione, scegliere l&#39;attributo da aggregare, la funzione di uguaglianza e il valore. Per l&#39;esempio seguente, questo segmento qualificherebbe qualsiasi profilo con una somma di valori acquistati maggiore di $100, anche se ogni singolo acquisto è inferiore a $100.
+
+![](../images/ui/segment-builder/filled-aggregation.png)
 
 ## Contenitori
 
