@@ -3,11 +3,11 @@ keywords: ' Experience Platform;home;argomenti popolari;segmentazione;Segmentazi
 solution: Experience Platform
 title: Anteprime e stime degli endpoint API
 topic: developer guide
-description: Le anteprime e le stime degli endpoint nell'API di Adobe Experience Platform Segmentation Service API consentono di visualizzare informazioni a livello di riepilogo per garantire che l'audience prevista sia isolata nei segmenti.
+description: Man mano che la definizione del segmento viene sviluppata, potete utilizzare gli strumenti di stima e anteprima in Adobe Experience Platform per visualizzare le informazioni a livello di riepilogo per garantire che stiate isolando il pubblico previsto.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: eba6de210dcbc12b829b09ba6e7083d342517ba2
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '949'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,15 @@ ht-degree: 2%
 
 # Anteprime e endpoint stime
 
-Mentre sviluppate la definizione del segmento, potete utilizzare gli strumenti di stima e anteprima all&#39;interno di [!DNL Adobe Experience Platform] per visualizzare le informazioni a livello di riepilogo per garantire che l&#39;audience attesa sia isolata. **Le** anteprime forniscono elenchi impaginati di profili di qualifica per una definizione di segmento, consentendo di confrontare i risultati rispetto alle aspettative. **Le** stime forniscono informazioni statistiche su una definizione di segmento, come la dimensione dell&#39;audience proiettata, l&#39;intervallo di confidenza e la deviazione standard dell&#39;errore.
+Nello sviluppo di una definizione di segmento, potete utilizzare gli strumenti di stima e anteprima in Adobe Experience Platform per visualizzare le informazioni a livello di riepilogo, in modo da garantire che l&#39;audience prevista sia isolata.
+
+* **Le** anteprime forniscono elenchi impaginati di profili di qualifica per una definizione di segmento, consentendo di confrontare i risultati rispetto alle aspettative.
+
+* **Le** stime forniscono informazioni statistiche su una definizione di segmento, come la dimensione dell&#39;audience proiettata, l&#39;intervallo di confidenza e la deviazione standard dell&#39;errore.
+
+>[!NOTE]
+>
+>Per accedere a metriche simili correlate ai dati del profilo cliente in tempo reale, ad esempio il numero totale di frammenti di profilo e profili uniti all&#39;interno di spazi dei nomi specifici o dell&#39;archivio dei dati del profilo nel suo insieme, fare riferimento alla guida dell&#39;endpoint [profile preview (preview sample status) (guida di anteprima dello stato)](../../profile/api/preview-sample-status.md), parte della guida per gli sviluppatori dell&#39;API del profilo.
 
 ## Introduzione
 
@@ -23,11 +31,10 @@ Gli endpoint utilizzati in questa guida fanno parte dell&#39;API [!DNL Adobe Exp
 
 ## Modalità di generazione delle stime
 
-Il modo in cui viene attivato il campionamento dei dati dipende dal metodo di assimilazione.
+Quando l’inserimento di record nell’archivio profili aumenta o diminuisce il conteggio totale dei profili di oltre il 5%, viene attivato un processo di campionamento per aggiornare il conteggio. Il modo in cui viene attivato il campionamento dei dati dipende dal metodo di assimilazione:
 
-Per l’assimilazione batch, lo store del profilo viene analizzato automaticamente ogni quindici minuti per verificare se un nuovo batch è stato correttamente assimilato dall’ultima esecuzione del processo di campionamento. In tal caso, lo store del profilo viene successivamente analizzato per verificare se il numero di record è stato modificato almeno del 5%. Se tali condizioni sono soddisfatte, viene attivato un nuovo processo di campionamento.
-
-Per l&#39;assimilazione in streaming, lo store del profilo viene automaticamente analizzato ogni ora per verificare se il numero di record è cambiato almeno del 5%. Se questa condizione viene soddisfatta, viene attivato un nuovo processo di campionamento.
+* **Caricamento batch:** Per l&#39;assimilazione batch, entro 15 minuti dal corretto inserimento di un batch nell&#39;archivio profili, se viene raggiunta la soglia di incremento o riduzione del 5%, viene eseguito un processo per aggiornare il conteggio.
+* **Caricamento streaming:** Per i flussi di lavoro con dati in streaming, viene effettuato un controllo ogni ora per determinare se è stata raggiunta la soglia di aumento o riduzione del 5%. In caso affermativo, viene attivato automaticamente un processo per aggiornare il conteggio.
 
 La dimensione del campione della scansione dipende dal numero complessivo di entità nell&#39;archivio profili. Queste dimensioni di campione sono rappresentate nella seguente tabella:
 
@@ -76,7 +83,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | -------- | ----------- |
 | `predicateExpression` | Espressione PQL per eseguire una query sui dati. |
 | `predicateType` | Il tipo di predicato per l&#39;espressione della query in `predicateExpression`. Attualmente, l&#39;unico valore accettato per questa proprietà è `pql/text`. |
-| `predicateModel` | Nome dello schema [!DNL Experience Data Model] (XDM) su cui si basano i dati del profilo. |
+| `predicateModel` | Nome della classe dello schema [!DNL Experience Data Model] (XDM) su cui si basano i dati del profilo. |
 
 **Risposta**
 
@@ -172,7 +179,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `results` | Un elenco di ID entità, con le relative identità. I collegamenti forniti possono essere utilizzati per cercare le entità specificate, utilizzando la [[!DNL Profile Access API]](../../profile/api/entities.md). |
+| `results` | Un elenco di ID entità, con le relative identità. I collegamenti forniti possono essere utilizzati per cercare le entità specificate, utilizzando l&#39;endpoint API di accesso profilo [](../../profile/api/entities.md). |
 
 ## Recuperare i risultati di un processo di stima specifico {#get-estimate}
 
@@ -206,17 +213,27 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del processo 
 
 ```json
 {
-    "estimatedSize": 0,
-    "numRowsToRead": 1,
+    "estimatedSize": 4275,
+    "numRowsToRead": 4275,
+    "estimatedNamespaceDistribution": [
+        {
+            "namespaceId": "4",
+            "profilesMatchedSoFar": 35
+        },
+        {
+            "namespaceId": "6",
+            "profilesMatchedSoFar": 4275
+        }
+    ],
     "state": "RESULT_READY",
-    "profilesReadSoFar": 1,
+    "profilesReadSoFar": 4275,
     "standardError": 0,
     "error": {
         "description": "",
         "traceback": ""
     },
-    "profilesMatchedSoFar": 0,
-    "totalRows": 1,
+    "profilesMatchedSoFar": 4275,
+    "totalRows": 4275,
     "confidenceInterval": "95%",
     "_links": {
         "preview": "https://platform.adobe.io/data/core/ups/preview/app-32be0328-3f31-4b64-8d84-acd0c4fbdad3/execution/0?previewQueryId=e890068b-f5ca-4a8f-a6b5-af87ff0caac3"
@@ -226,9 +243,10 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del processo 
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `state` | Stato corrente del processo di anteprima. Sarà &quot;IN ESECUZIONE&quot; fino al completamento dell&#39;elaborazione, al punto in cui diventa &quot;RESULT_READY&quot; o &quot;FAILED&quot;. |
-| `_links.preview` | Quando lo stato corrente del processo di anteprima è &quot;RESULT_READY&quot;, questo attributo fornisce un URL per visualizzare la stima. |
+| `estimatedNamespaceDistribution` | Un array di oggetti che mostra il numero di profili all&#39;interno del segmento suddivisi per namespace di identità. Il numero totale di profili per namespace (sommando insieme i valori mostrati per ogni namespace) potrebbe essere superiore alla metrica del conteggio dei profili, perché un profilo potrebbe essere associato a più spazi dei nomi. Ad esempio, se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente saranno associati più spazi dei nomi. |
+| `state` | Stato corrente del processo di anteprima. Lo stato sarà &quot;ESECUZIONE&quot; finché l&#39;elaborazione non viene completata, al punto che diventa &quot;RESULT_READY&quot; o &quot;FAILED&quot;. |
+| `_links.preview` | Quando il valore `state` è &quot;RESULT_READY&quot;, questo campo fornisce un URL per visualizzare la stima. |
 
 ## Passaggi successivi
 
-Dopo aver letto questa guida è ora possibile comprendere meglio come utilizzare le anteprime e le stime. Per ulteriori informazioni sugli altri endpoint [!DNL Segmentation Service] API, consultare la [Guida per gli sviluppatori di servizi di segmentazione](./overview.md).
+Dopo aver letto questa guida è necessario avere una migliore comprensione di come lavorare con le anteprime e le stime utilizzando l&#39;API di segmentazione. Per informazioni su come accedere alle metriche correlate ai dati del profilo cliente in tempo reale, ad esempio il numero totale di frammenti di profilo e di profili uniti all&#39;interno di spazi dei nomi specifici o dell&#39;archivio dati del profilo nel suo insieme, visita la [guida dell&#39;endpoint Anteprima profilo (`/previewsamplestatus`)](../../profile/api/preview-sample-status.md).
