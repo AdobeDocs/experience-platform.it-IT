@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform ;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API;anteprima;esempio
-title: Endpoint API stato esempio profilo
-description: Utilizzando gli endpoint API del profilo cliente in tempo reale, potete visualizzare l'anteprima dell'ultimo esempio di successo dei dati del profilo, nonché elencare la distribuzione del profilo per set di dati e per namespace di identità all'interno di Adobe Experience Platform.
+title: Endpoint API Preview Sample Status (Anteprima profilo)
+description: Utilizzando l’endpoint di stato dell’esempio di anteprima, parte dell’API Profilo cliente in tempo reale, potete visualizzare l’anteprima dell’ultimo esempio riuscito dei dati del profilo, nonché la distribuzione del profilo dell’elenco per set di dati e per namespace dell’identità in Adobe Experience Platform.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5266c393b034d1744134522cf1769304f39733da
 workflow-type: tm+mt
-source-wordcount: '1550'
+source-wordcount: '1652'
 ht-degree: 1%
 
 ---
@@ -16,13 +16,20 @@ ht-degree: 1%
 
 Adobe Experience Platform consente di acquisire dati dei clienti da più origini per creare profili unificati solidi per i singoli clienti. Poiché i dati abilitati per il profilo cliente in tempo reale vengono trasferiti in [!DNL Platform], vengono memorizzati nell&#39;archivio dati del profilo.
 
-Quando l’inserimento di record nell’archivio profili aumenta o diminuisce il conteggio totale dei profili di oltre il 5%, viene attivato un processo per aggiornare il conteggio. Per i flussi di lavoro dei dati in streaming, viene effettuato un controllo ogni ora per determinare se è stata raggiunta la soglia di incremento o riduzione del 5%. In caso affermativo, viene attivato automaticamente un processo per aggiornare il conteggio. Per l’inserimento batch, entro 15 minuti dal corretto inserimento di un batch nell’archivio profili, se viene raggiunta la soglia di incremento o riduzione del 5%, viene eseguito un processo per aggiornare il conteggio. Utilizzando l&#39;API Profile è possibile visualizzare in anteprima l&#39;ultimo processo di esempio riuscito, nonché la distribuzione del profilo di elenco per set di dati e per namespace di identità.
+Quando l’inserimento di record nell’archivio profili aumenta o diminuisce il conteggio totale dei profili di oltre il 5%, viene attivato un processo di campionamento per aggiornare il conteggio. Il modo in cui il campione viene attivato dipende dal tipo di assimilazione utilizzato:
+
+* Per i flussi di lavoro di **streaming dei dati**, viene eseguito un controllo ogni ora per determinare se è stata raggiunta la soglia di incremento o riduzione del 5%. In caso affermativo, viene attivato automaticamente un processo di esempio per aggiornare il conteggio.
+* Per **l&#39;assimilazione batch**, entro 15 minuti dal corretto inserimento di un batch nell&#39;archivio profili, se viene raggiunta la soglia di incremento o riduzione del 5%, viene eseguito un processo per aggiornare il conteggio. Utilizzando l&#39;API Profile è possibile visualizzare in anteprima l&#39;ultimo processo di esempio riuscito, nonché la distribuzione del profilo di elenco per set di dati e per namespace di identità.
 
 Queste metriche sono disponibili anche nella sezione [!UICONTROL Profiles] dell&#39;interfaccia utente del Experience Platform . Per informazioni su come accedere ai dati del profilo utilizzando l&#39;interfaccia utente, visitare la [[!DNL Profile] guida utente](../ui/user-guide.md).
 
+>[!NOTE]
+>
+>Esistono endpoint stimati e di anteprima disponibili come parte dell’API di Adobe Experience Platform Segmentation Service che consentono di visualizzare informazioni a livello di riepilogo relative alle definizioni dei segmenti per garantire l’isolamento dell’audience prevista. Per trovare i passaggi dettagliati per l&#39;utilizzo delle anteprime dei segmenti e degli endpoint di stima, consultare la [guida agli endpoint delle anteprime e delle stime](../../segmentation/api/previews-and-estimates.md), parte della [!DNL Segmentation] Guida per gli sviluppatori di API.
+
 ## Introduzione
 
-L&#39;endpoint API utilizzato in questa guida fa parte dell&#39; [[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Prima di continuare, consultare la [guida introduttiva](getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per eseguire correttamente chiamate a qualsiasi API [!DNL Experience Platform].
+L&#39;endpoint API utilizzato in questa guida fa parte dell&#39; [[!DNL Real-time Customer Profile] API](https://www.adobe.com/go/profile-apis-en). Prima di continuare, consultare la [guida introduttiva](getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per eseguire correttamente chiamate a qualsiasi API [!DNL Experience Platform].
 
 ## Frammenti di profilo e profili uniti
 
@@ -89,7 +96,7 @@ La risposta include i dettagli dell&#39;ultimo processo di esempio riuscito eseg
 | `totalFragmentCount` | Numero totale di frammenti di profilo nell&#39;archivio profili. |
 | `lastSuccessfulBatchTimestamp` | Timestamp ultimo caricamento batch riuscito. |
 | `streamingDriven` | *Questo campo è stato dichiarato obsoleto e non contiene alcun significato per la risposta.* |
-| `totalRows` | Numero totale di profili uniti nella piattaforma Experience, noti anche come &#39;profilo count&#39;. |
+| `totalRows` | Numero totale di profili uniti nel  Experience Platform, noto anche come &#39;conteggio profilo&#39;. |
 | `lastBatchId` | ID assimilazione ultimo batch. |
 | `status` | Stato dell’ultimo campione. |
 | `samplingRatio` | Rapporto tra i profili uniti campionati (`numRowsToRead`) e i profili uniti totali (`totalRows`), espressi in percentuale in formato decimale. |
@@ -189,8 +196,6 @@ La risposta include un array `data` contenente un elenco di oggetti dataset. La 
 | `createdUser` | L&#39;ID utente dell&#39;utente che ha creato il set di dati. |
 | `reportTimestamp` | Il timestamp del report. Se durante la richiesta è stato fornito un parametro `date`, il rapporto restituito è relativo alla data specificata. Se non viene fornito alcun parametro `date`, viene restituito il rapporto più recente. |
 
-
-
 ## Distribuzione dei profili di elenco per namespace
 
 Potete eseguire una richiesta di GET all&#39;endpoint `/previewsamplestatus/report/namespace` per visualizzare la suddivisione per namespace identità in tutti i profili uniti nell&#39;archivio dei profili. Gli spazi dei nomi delle identità sono un componente importante di Adobe Experience Platform Identity Service che funge da indicatori del contesto a cui si riferiscono i dati dei clienti. Per ulteriori informazioni, visitare la [panoramica dello spazio nomi identità](../../identity-service/namespaces.md).
@@ -288,5 +293,4 @@ La risposta include un array `data`, con singoli oggetti che contengono i dettag
 
 ## Passaggi successivi
 
-Potete inoltre utilizzare stime e anteprime simili per visualizzare le informazioni a livello di riepilogo relative alle definizioni dei segmenti, in modo da garantire l&#39;isolamento dell&#39;audience prevista. Per trovare i passaggi dettagliati per l&#39;utilizzo delle anteprime e delle stime dei segmenti utilizzando l&#39;API [!DNL Adobe Experience Platform Segmentation Service], visita la [guida alle anteprime e alle endpoint delle stime](../../segmentation/api/previews-and-estimates.md), parte della [!DNL Segmentation] Guida per gli sviluppatori di API.
-
+Ora che sai come visualizzare l’anteprima dei dati di esempio nello store Profilo, puoi anche utilizzare gli endpoint stimati e di anteprima dell’API del servizio di segmentazione per visualizzare informazioni a livello di riepilogo sulle definizioni dei segmenti. Queste informazioni sono utili per garantire che l’audience attesa nel segmento venga isolata. Per ulteriori informazioni sull&#39;utilizzo delle anteprime e delle stime dei segmenti mediante l&#39;API di segmentazione, visitare la [guida di anteprima e stima degli endpoint](../../segmentation/api/previews-and-estimates.md).
