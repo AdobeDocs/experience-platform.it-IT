@@ -5,9 +5,9 @@ description: Scoprite come ottenere l'ID Adobe Experience Cloud.
 seo-description: Scoprite come ottenere l'ID Adobe Experience Cloud.
 keywords: Identità;Identità di prima parte;Identità di terza parte;Migrazione ID;ID visitatore;identità di terza parte;identità di terza parte;terze partiCookiesEnabled;idMigrationEnabled;getIdentity;Syncing Identities;sendEvent;identityMap;primario;ecid;Identity Namespace;namespace id;authenticationState;hashEnabled;
 translation-type: tm+mt
-source-git-commit: 60945f7f3a87568b82d968692cc7a6e07593fa01
+source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '918'
 ht-degree: 2%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 2%
 
 Adobe Experience Platform Web SDK utilizza [ Adobe Identity Service](../../identity-service/ecid.md). In questo modo, ogni dispositivo ha un identificatore univoco persistente sul dispositivo, in modo che l&#39;attività tra le pagine possa essere legata insieme.
 
-## Identità di prima parte
+## Identità di prime parti
 
 L&#39; [!DNL Identity Service] memorizza l&#39;identità in un cookie in un dominio di prime parti. Il [!DNL Identity Service] tenta di impostare il cookie utilizzando un&#39;intestazione HTTP sul dominio. In caso contrario, la [!DNL Identity Service] tornerà a impostare i cookie tramite Javascript.  Adobe consiglia di impostare un CNAME in modo che i cookie non siano limitati dalle restrizioni ITP lato client.
 
 ## identità di terze parti
 
-[!DNL Identity Service] è in grado di sincronizzare un ID con un dominio di terze parti (demdex.net) per abilitare il tracciamento tra i siti. Quando questa opzione è attivata, la prima richiesta per un visitatore (ad esempio, un utente senza un ECID) verrà effettuata su demdex.net. Questo verrà fatto solo sui browser che lo consentono (ad es. Chrome) ed è controllato dal parametro `thirdPartyCookiesEnabled` nella configurazione. Se desiderate disattivare questa funzione tutte insieme, impostate `thirdPartyCookiesEnabled` su false.
+[!DNL Identity Service] è in grado di sincronizzare un ID con un dominio di terze parti (demdex.net) per abilitare il tracciamento tra i siti. Quando questa opzione è attivata, la prima richiesta per un visitatore (ad esempio, un utente senza un ECID) verrà effettuata su demdex.net. Questo verrà fatto solo sui browser che lo consentono, come Chrome) ed è controllato dal parametro `thirdPartyCookiesEnabled` nella configurazione. Se desiderate disattivare questa funzione tutte insieme, impostate `thirdPartyCookiesEnabled` su false.
 
 ## Migrazione ID
 
