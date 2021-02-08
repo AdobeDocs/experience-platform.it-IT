@@ -5,7 +5,7 @@ description: 'Scopri come configurare l’SDK Web per Experienci Platform '
 seo-description: 'Scopri come configurare l’SDK Web per Experienci Platform '
 keywords: configurazione;configurazione;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehideStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdParty CookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 723711ee0c2b7b5ca4aea617a81241dbebbc839c
+source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
 workflow-type: tm+mt
 source-wordcount: '740'
 ht-degree: 7%
@@ -94,7 +94,7 @@ Indica se i dati associati ai clic del collegamento devono essere raccolti autom
 | -------- | ------------ | ----------------- |
 | Funzione | No | () => non definito |
 
-Impostate questa opzione per configurare un callback che viene chiamato per ogni evento appena prima che venga inviato.  Un oggetto con il campo `xdm` viene inviato al callback.  Modificare l&#39;oggetto `xdm` per modificare l&#39;elemento inviato.  All&#39;interno del callback, l&#39;oggetto `xdm` avrà già i dati passati nel comando dell&#39;evento e le informazioni raccolte automaticamente.  Per ulteriori informazioni sui tempi di questa callback e un esempio, vedere [Modifica di eventi globali](tracking-events.md#modifying-events-globally).
+Impostate questa opzione per configurare un callback che viene chiamato per ogni evento appena prima che venga inviato.  Un oggetto con il campo `xdm` viene inviato al callback.  Modificare l&#39;oggetto `xdm` per modificare l&#39;elemento inviato.  All&#39;interno del callback, l&#39;oggetto `xdm` avrà già i dati passati nel comando dell&#39;evento e le informazioni raccolte automaticamente. Per ulteriori informazioni sui tempi di questa callback e un esempio, vedere [Modifica di eventi globali](tracking-events.md#modifying-events-globally).
 
 ## Opzioni sulla privacy
 
