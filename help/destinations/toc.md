@@ -5,9 +5,9 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: f98fb81fee57151e6424355f64bccb29c5669dad
 workflow-type: tm+mt
-source-wordcount: '332'
+source-wordcount: '339'
 ht-degree: 18%
 
 ---
@@ -129,3 +129,4 @@ ht-degree: 18%
       * [Tag Invoca](./catalog/voice/invoca.md)
       * [Medallia](./catalog/voice/medallia.md)
       * [Casella di controllo URL](./catalog/voice/talkurl.md)
+* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-en)
