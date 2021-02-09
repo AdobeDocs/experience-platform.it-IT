@@ -5,7 +5,7 @@ title: ' Adobe Analytics Source Connector per i dati delle suite di rapporti'
 topic: overview
 description: Questo documento fornisce una panoramica di Analytics e descrive i casi di utilizzo per i dati di Analytics.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: e480ce789c849db24713da312345ea3162e617a6
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 2%
@@ -49,7 +49,7 @@ Per informazioni dettagliate sulla mappatura dei campi che si verifica tra [!DNL
 | -------------- | ---------------- |
 | Nuovi dati su [!DNL Real-time Customer Profile] (A4T **not** abilitato) | &lt; 2 minuti |
 | Nuovi dati su [!DNL Real-time Customer Profile] (A4T **is** abilitato) | &lt; 15 minuti |
-| Nuovi dati su Data Lake | &lt; 45 minuti |
+| Nuovi dati su Data Lake | &lt; 90 minuti |
 | Dati di backfill (13 mesi di dati o 10 miliardi di eventi, a seconda di quale sia il valore inferiore) | &lt; 4 settimane |
 
 >[!NOTE]
