@@ -1,9 +1,9 @@
 ---
 keywords: prevedere;prevedere l'estensione;prevedere la destinazione
-title: Destinazione estensione prevista
+title: Destinazione dell'estensione Foresee
 description: L’estensione Foresee è una destinazione di sondaggio in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 3%
