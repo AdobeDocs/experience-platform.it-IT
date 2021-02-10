@@ -1,17 +1,17 @@
 ---
 keywords: ' destinazione Amazon S3;S3;s3;amazon s3'
-title: ' destinazione di connessione Amazon S3'
+title: ' connessione Amazon S3'
 description: Crea una connessione in uscita diretta con l'archivio  Amazon Web Services (AWS) S3 per esportare periodicamente file di dati CSV o delimitati da tabulazioni da Adobe Experience Platform nei tuoi bucket S3.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '222'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Amazon S3] connection
+# [!DNL Amazon S3] connection  {#s3-connection}
 
 Crea una connessione in uscita dal vivo con l&#39;archivio [!DNL Amazon Web Services] (AWS) S3 per esportare periodicamente file di dati CSV o delimitati da tabulazioni da Adobe Experience Platform nei tuoi bucket S3.
 
