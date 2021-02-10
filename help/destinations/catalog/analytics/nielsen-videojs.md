@@ -1,11 +1,11 @@
 ---
 keywords: Gestore di lettori video Nielsen VideoJS;lettore js nielsen video nielsen;lettore video nielsen;lettore video nielsen;Nielsen;lettore video Nielsen;Nielsen Digital SDK;nielsen digital sdk
-title: Destinazione estensione gestore videoJS Nielsen
+title: Estensione del gestore del lettore Nielsen VideoJS
 description: L’estensione del gestore Nielsen VideoJS Player è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '599'
 ht-degree: 3%
 
 ---
