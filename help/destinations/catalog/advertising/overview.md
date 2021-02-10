@@ -1,14 +1,14 @@
 ---
 keywords: destinazioni pubblicitarie;destinazioni;destinazioni di piattaforme
-title: Destinazioni pubblicitarie
-seo-title: Panoramica delle destinazioni pubblicitarie
+title: Panoramica sulle destinazioni pubblicitarie
+seo-title: Panoramica sulle destinazioni pubblicitarie
 description: Collegate Adobe Experience Platform a una piattaforma pubblicitaria 3rd party (ad es. DSP, rete pubblicitaria, SSP) e condividete tipi di pubblico pseudonimi con queste piattaforme.
 seo-description: Collegate Adobe Experience Platform a una piattaforma pubblicitaria 3rd party (ad es. DSP, rete pubblicitaria, SSP) e condividete tipi di pubblico pseudonimi con queste piattaforme.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 2%
+source-wordcount: '233'
+ht-degree: 0%
 
 ---
 
@@ -25,12 +25,12 @@ Attualmente, Platform supporta le destinazioni pubblicitarie elencate di seguito
 
 Per comprendere la differenza tra connessioni ed estensioni, vedere [Connessioni](../../destination-types.md#connections) nella pagina Tipi di destinazione e categorie.
 
-- [Google Display e Video 360](./google-dv360.md)
-- [Annunci Google](./google-ads-destination.md)
-- [Google Ad Manager](./google-ad-manager.md)
-- [Customer Match di Google](./google-customer-match.md)
-- [Microsoft Bing](./bing.md)
-- [La destinazione del banco commerciale](./tradedesk.md)
+- [Connessione Google Display e Video 360](./google-dv360.md)
+- [Connessione Google Ads](./google-ads-destination.md)
+- [Connessione Google Ad Manager](./google-ad-manager.md)
+- [Connessione Google Customer Match](./google-customer-match.md)
+- [Connessione Microsoft Bing](./bing.md)
+- [Collegamento Trade Desk](./tradedesk.md)
 
 ## Estensioni
 
