@@ -1,12 +1,12 @@
 ---
 Keywords: ECID;ecid
-title: ' Destinazione estensione del servizio ID Experience Cloud'
+title: Estensione del servizio Experience Cloud ID
 description: L’estensione del servizio ID Experience Cloud  è una destinazione di personalizzazione in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '487'
-ht-degree: 3%
+source-wordcount: '486'
+ht-degree: 4%
 
 ---
 
