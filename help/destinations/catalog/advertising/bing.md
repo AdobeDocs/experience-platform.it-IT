@@ -1,17 +1,17 @@
 ---
 keywords: 'pubblicità; bing; '
-title: Destinazione connessione Bing Microsoft
+title: Connessione Microsoft Bing
 description: Con la destinazione di connessione di Microsoft Bing, è possibile eseguire il retargeting e campagne digitali mirate per l'audience in Microsoft Display Advertising.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '439'
 ht-degree: 1%
 
 ---
 
 
-# [!DNL Microsoft Bing] connection
+# [!DNL Microsoft Bing] connection  {#bing-destination}
 
 La destinazione [!DNL Microsoft Bing] consente di inviare i dati del profilo a [!DNL Microsoft Display Advertising].
 
