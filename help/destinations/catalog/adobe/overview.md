@@ -3,10 +3,10 @@ keywords: destinazioni;soluzioni Experience Cloud; target;destinazione; ad cloud
 title: 'Panoramica sulle destinazioni dei Adobi '
 description: Gestisci la tua esperienza cliente connettendo i dati in Piattaforma ad altre soluzioni Adobe Experience Cloud per il targeting degli annunci, la personalizzazione, l'automazione del marketing e altro ancora
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
 workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 13%
+source-wordcount: '220'
+ht-degree: 12%
 
 ---
 
@@ -19,7 +19,7 @@ Gestisci la tua esperienza cliente connettendo i dati in Adobe Experience Platfo
 
 Per comprendere la differenza tra connessioni ed estensioni, vedere [Connessioni](../../destination-types.md#connections) nella pagina Tipi di destinazione e categorie.
 
-- [Adobe Campaign](../email-marketing/adobe-campaign.md)
+- [ connessione Adobe Campaign](../email-marketing/adobe-campaign.md)
 
 ## Estensioni
 
