@@ -1,12 +1,12 @@
 ---
 keywords: ' Experience Platform;casa;argomenti popolari; Esercitazioni API; API delle destinazioni di streaming; Piattaforma'
 solution: Experience Platform
-title: Connessione a Destinazioni in streaming e attivazione dei dati tramite chiamate API
+title: Connettiti alle destinazioni di streaming e attiva i dati utilizzando le chiamate API in Adobe Experience Platform
 description: Questo documento descrive la creazione di destinazioni di streaming utilizzando l'API di Adobe Experience Platform
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '2016'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 ---
 
 
-# Connettiti alle destinazioni di streaming e attiva i dati utilizzando le chiamate API in Adobe Experience Platform
+# Connessione alle destinazioni di streaming e attivazione dei dati tramite chiamate API
 
 >[!NOTE]
 >
