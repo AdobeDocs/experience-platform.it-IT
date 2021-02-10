@@ -1,11 +1,11 @@
 ---
 keywords: ' Advertising Cloud;pubblicità cloud extension; destinazione cloud pubblicitario'
-title: Destinazione estensione Adobe Advertising Cloud
+title: Estensione Adobe Advertising Cloud
 description: L'estensione Adobe Advertising Cloud è una destinazione pubblicitaria in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '450'
 ht-degree: 3%
 
 ---
