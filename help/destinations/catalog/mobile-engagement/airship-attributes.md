@@ -1,11 +1,11 @@
 ---
 keywords: attributi di volo;destinazione di volo
-title: Destinazione di connessione attributi di volo
+title: Collegamento attributi di volo
 description: Trasmettete senza problemi  dati di pubblico Adobe a Airship come attributi di pubblico per il targeting all'interno di Airship.
 translation-type: tm+mt
-source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1146'
 ht-degree: 1%
 
 ---
