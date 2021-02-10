@@ -5,9 +5,9 @@ seo-title: Panoramica sulle destinazioni
 description: Scopri come attivare i dati Adobe Experience Platform nelle destinazioni per campagne di marketing multicanale, e-mail, pubblicità mirata e altro ancora.
 seo-description: Le destinazioni sono integrazioni predefinite con piattaforme di destinazione che consentono l'attivazione senza soluzione di continuità dei dati da Adobe Experience Platform. Puoi utilizzare Destinazioni in Adobe Experience Platform per attivare i dati noti e sconosciuti per campagne di marketing multicanale, campagne e-mail, pubblicità mirata e molti altri casi di utilizzo.
 translation-type: tm+mt
-source-git-commit: fc0813b457f039c0f0fa965df2d1100170424d23
+source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '493'
 ht-degree: 1%
 
 ---
@@ -21,12 +21,12 @@ ht-degree: 1%
 
 ## Destinazioni e origini {#destinations-and-sources}
 
-Una delle funzionalità principali di Platform è l&#39;acquisizione dei dati di prime parti e l&#39;attivazione per le esigenze aziendali. Utilizzate le origini per assimilare i dati nella piattaforma e nelle destinazioni per esportare i dati dalla piattaforma.
+Una delle funzionalità principali di Platform è l&#39;acquisizione dei dati di prime parti e l&#39;attivazione per le esigenze aziendali. Utilizzate [sources](../sources/home.md) per assimilare i dati nella piattaforma e nelle destinazioni per esportare i dati dalla piattaforma.
 
 ## Passaggi delle destinazioni {#steps}
 
 * Scegliete tra un [catalogo self-service](./catalog/overview.md) di tutte le destinazioni disponibili in Piattaforma.
-* Utilizzate **[!UICONTROL Destinations]** per [attivare](./ui/activate-destinations.md) e inviare profili o segmenti alle piattaforme di automazione del marketing, alle piattaforme di pubblicità digitale e altro ancora.
+* Utilizza le destinazioni per [attivare](./ui/activate-destinations.md) e invia profili o segmenti a piattaforme di automazione marketing, piattaforme pubblicitarie digitali e altro ancora.
 * Programmate le esportazioni di dati nelle destinazioni preferite in orari regolari.
 
 ## Controlli {#controls}
