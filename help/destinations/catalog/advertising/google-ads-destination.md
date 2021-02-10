@@ -1,11 +1,11 @@
 ---
 keywords: Google ads;google ads;google adwords;Google AdWords;Google Adwords;Google Adwords
-title: Destinazione connessione annunci Google
+title: Connessione Google Ads
 description: Google Ads, precedentemente noto come Google AdWords, è un servizio pubblicitario online che consente alle aziende di pagare per clic pubblicità tra ricerche basate su testo, display grafici, video YouTube e display mobili in-app.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '642'
 ht-degree: 0%
 
 ---
