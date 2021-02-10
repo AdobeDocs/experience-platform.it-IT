@@ -1,11 +1,11 @@
 ---
 keywords: Estensione della metrica quantistica;Metrica quantistica;metrica quantistica;Metrica quantistica
-title: Destinazione estensione metrica quantistica
+title: Estensione quantistica
 description: L’estensione Quantum Metric (Metrica quantistica) è una destinazione di analisi in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, vedere la pagina di estensione in  Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '521'
 ht-degree: 3%
 
 ---
