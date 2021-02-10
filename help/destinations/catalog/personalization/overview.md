@@ -1,9 +1,9 @@
 ---
 keywords: personalizzazione;Personalizzazione
-title: Panoramica delle destinazioni di personalizzazione
+title: Panoramica sulle destinazioni di personalizzazione
 description: Le piattaforme di personalizzazione raccolgono dati e informazioni dai singoli comportamenti. Queste piattaforme possono aiutare gli esperti di marketing a navigare nei dati anonimi, a distribuire offerte o annunci a potenziali clienti in base alle attività precedenti o come parte di segmenti di pubblico con abitudini simili.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 9%
