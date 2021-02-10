@@ -3,7 +3,7 @@ keywords: messaggistica mobile;destinazioni di messaggistica mobile;Braze; Airsh
 title: Panoramica delle destinazioni di coinvolgimento mobile
 description: Scopri le diverse destinazioni di coinvolgimento dei dispositivi mobili supportate da Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '39'
 ht-degree: 0%
