@@ -1,11 +1,11 @@
 ---
 keywords: Destinazione hub eventi di Azure;hub eventi di azzure;azure eventhub
-title: (Beta) Destinazione connessione hub eventi di Azure
+title: (Beta) Connessione ad Azure Event Hubs
 description: Crea una connessione in uscita in tempo reale all'archivio degli hub eventi di Azure per lo streaming dei dati dal Experience Platform .
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '477'
 ht-degree: 2%
 
 ---
