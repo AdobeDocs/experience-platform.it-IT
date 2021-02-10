@@ -3,7 +3,7 @@ keywords: destinazioni di analisi;destinazione di analisi
 title: Panoramica delle destinazioni di Analytics
 description: Le destinazioni di Analytics tengono traccia del modo in cui i visitatori interagiscono con il contenuto del sito e raccolgono i dati per comprendere il comportamento del pubblico. Queste piattaforme forniscono informazioni esclusive sull'impegno e la conversione dei visitatori più importanti.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 6%
