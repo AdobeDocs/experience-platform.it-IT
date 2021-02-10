@@ -5,9 +5,9 @@ seo-title: Panoramica del catalogo delle destinazioni
 description: Il catalogo Destinazioni contiene un elenco delle destinazioni disponibili pronte per ricevere i dati. Tali destinazioni includono soluzioni  Adobe, piattaforme pubblicitarie, piattaforme di sondaggi, piattaforme di marketing e-mail e altro ancora.
 seo-description: Il catalogo Destinazioni contiene un elenco delle destinazioni disponibili pronte per ricevere i dati. Tali destinazioni includono soluzioni  Adobe, piattaforme pubblicitarie, piattaforme di sondaggi, piattaforme di marketing e-mail e altro ancora.
 translation-type: tm+mt
-source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
+source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
 workflow-type: tm+mt
-source-wordcount: '194'
+source-wordcount: '198'
 ht-degree: 0%
 
 ---
@@ -29,6 +29,7 @@ Sfogliate il catalogo per determinare quali piattaforme di destinazione sono mig
 - [Panoramica delle destinazioni di archiviazione cloud](./cloud-storage/overview.md)
 - [Panoramica delle destinazioni della piattaforma di gestione dati (DMP)](./data-management/overview.md)
 - [Panoramica delle destinazioni di marketing e-mail](./email-marketing/overview.md)
+- [Panoramica delle destinazioni di coinvolgimento mobile](./mobile-engagement/overview.md)
 - [Panoramica sulle destinazioni di personalizzazione](./personalization/overview.md)
 - [Panoramica delle destinazioni social network](./social/overview.md)
 - [Panoramica delle destinazioni di sondaggio](./survey/overview.md)
