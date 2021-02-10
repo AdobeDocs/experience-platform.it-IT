@@ -3,7 +3,7 @@ keywords: destinazione di archiviazione cloud;archiviazione cloud
 title: Panoramica delle destinazioni di archiviazione cloud
 description: Adobe Experience Platform può distribuire i segmenti come file di dati alle  posizioni di archiviazione cloud Amazon S3, AWS Kinesis, Azure Event Hubs o SFTP.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 0%
@@ -25,11 +25,11 @@ Per informazioni su come connettersi alle destinazioni di archiviazione cloud, v
 
 ## Destinazioni di archiviazione cloud disponibili
 
-- [ destinazione Amazon S3](./amazon-s3.md)
-- [Destinazione BLOB di Azure](./azure-blob.md)
-- [Destinazione SFTP](./sftp.md)
+- [ connessione Amazon S3](./amazon-s3.md)
+- [Connessione BLOB di Azure](./azure-blob.md)
+- [Connessione SFTP](./sftp.md)
 
 ## Destinazioni di streaming di archiviazione cloud disponibili
 
-- [ destinazione Amazon Kinesis](./amazon-kinesis.md)
-- [Destinazione Hubs evento Azure](./azure-event-hubs.md)
+- [ connessione Amazon Kinesis](./amazon-kinesis.md)
+- [Connessione Hubs evento di Azure](./azure-event-hubs.md)
