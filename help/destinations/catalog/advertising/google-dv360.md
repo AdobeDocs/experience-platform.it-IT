@@ -1,11 +1,11 @@
 ---
 keywords: Doppio clic su Gestione offerte;Doppio clic su Gestione offerte;DoubleClick;Display & Video 360;display 360;video 360;Video 360;Display 360;display and video
-title: Destinazione di connessione Google Display e Video 360
+title: Connessione Google Display e Video 360
 description: Display & Video 360, precedentemente noto come DoubleClick Bid Manager è uno strumento che consente di eseguire campagne di retargeting e di targeting delle audience su diverse fonti di inventario di Display, Video e Mobile.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '693'
 ht-degree: 0%
 
 ---
