@@ -5,9 +5,9 @@ seo-title: Panoramica del catalogo delle destinazioni
 description: Il catalogo Destinazioni contiene un elenco delle destinazioni disponibili pronte per ricevere i dati. Tali destinazioni includono soluzioni  Adobe, piattaforme pubblicitarie, piattaforme di sondaggi, piattaforme di marketing e-mail e altro ancora.
 seo-description: Il catalogo Destinazioni contiene un elenco delle destinazioni disponibili pronte per ricevere i dati. Tali destinazioni includono soluzioni  Adobe, piattaforme pubblicitarie, piattaforme di sondaggi, piattaforme di marketing e-mail e altro ancora.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '194'
 ht-degree: 0%
 
 ---
@@ -23,13 +23,13 @@ Sfogliate il catalogo per determinare quali piattaforme di destinazione sono mig
 
 È possibile attivare i dati in diverse categorie di destinazione in Adobe Experience Platform. I collegamenti seguenti forniscono ulteriori informazioni su ciascuna categoria di destinazione:
 
-- [Soluzioni  Adobe](./adobe/overview.md)
-- [Destinazioni pubblicitarie](./advertising/overview.md)
-- [Destinazioni di Analytics](./analytics/overview.md)
-- [Destinazioni di archiviazione cloud](./cloud-storage/overview.md)
-- [Piattaforma di gestione dati](./data-management/overview.md)
-- [Marketing e-mail](./email-marketing/overview.md)
-- [Personalizzazione](./personalization/overview.md)
-- [Destinazioni social](./social/overview.md)
-- [Sondaggi](./survey/overview.md)
-- [Voce del cliente](./voice/overview.md)
+- [Panoramica sulle destinazioni dei Adobi ](./adobe/overview.md)
+- [Panoramica sulle destinazioni pubblicitarie](./advertising/overview.md)
+- [Panoramica delle destinazioni di Analytics](./analytics/overview.md)
+- [Panoramica delle destinazioni di archiviazione cloud](./cloud-storage/overview.md)
+- [Panoramica delle destinazioni della piattaforma di gestione dati (DMP)](./data-management/overview.md)
+- [Panoramica delle destinazioni di marketing e-mail](./email-marketing/overview.md)
+- [Panoramica sulle destinazioni di personalizzazione](./personalization/overview.md)
+- [Panoramica delle destinazioni social network](./social/overview.md)
+- [Panoramica delle destinazioni di sondaggio](./survey/overview.md)
+- [Panoramica delle destinazioni cliente](./voice/overview.md)
