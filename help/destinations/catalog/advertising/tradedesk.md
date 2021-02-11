@@ -3,9 +3,9 @@ keywords: pubblicità; il banco commerciale;
 title: Collegamento Trade Desk
 description: 'Il Trade Desk è una piattaforma self-service per gli acquirenti di annunci che esegue retargeting e campagne digitali mirate per il pubblico attraverso fonti di visualizzazione, video e inventario mobile. '
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: ad025630cbae5c220f5bbd7f55cad70620b6f335
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '506'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,6 @@ Nel passaggio [!UICONTROL Authentication], è necessario immettere i dettagli di
 * **[!UICONTROL Name]**: Un nome con cui riconoscerete questa destinazione in futuro.
 * **[!UICONTROL Description]**: Descrizione che ti aiuterà a identificare questa destinazione in futuro.
 * **[!UICONTROL Account ID]**: Il [!DNL Trade Desk] [!UICONTROL Account ID].
-* **[!UICONTROL Client Secret]**: Il  `clientSecret` parametro utilizzato nelle credenziali  [!DNL OAuth2] client.
 * **[!UICONTROL Server Location]**: Chiedi al tuo  [!DNL The Trade Desk] rappresentante quale server regionale utilizzare. Sono disponibili i seguenti server regionali:
 
    * **[!UICONTROL Europe]**
