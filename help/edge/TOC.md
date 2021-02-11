@@ -2,14 +2,14 @@
 product: experience-platform
 solution: Experience Platform, Data Collection
 audience: user
-user-guide-title: Guida all’SDK per web di Adobe Experience Platform
-breadcrumb-title: Guida all’SDK per web
+user-guide-title: Guida di Adobe Experience Platform Web SDK
+breadcrumb-title: Guida di SDK Web
 user-guide-description: Interagisci con i servizi di Experience Cloud tramite la rete Edge.
 translation-type: tm+mt
-source-git-commit: cea3e2f32d9489f5f06be70581bd974b9374646d
+source-git-commit: b7e8a1a72ed199440748f570f13ea844f3276682
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 38%
+source-wordcount: '144'
+ht-degree: 37%
 
 ---
 
@@ -48,10 +48,14 @@ ht-degree: 38%
       * [Panoramica di  Offer Decisioning](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Consenso {#consent}
    * [Consenso di sostegno](consent/supporting-consent.md)
-   * IAB Quadro di trasparenza e di consenso 2.0 {#iab-tcf}
+   * IAB Transparency and Consenso Framework 2.0 {#iab-tcf}
       * [Panoramica](consent/iab-tcf/overview.md)
       * [Integrazione con  Adobe Experience Platform Launch](consent/iab-tcf/with-launch.md)
       * [Integrazione senza  Adobe Experience Platform Launch](consent/iab-tcf/without-launch.md)
+* Estensione SDK Web per  Adobe Experience Platform Launch {#extension}
+   * [Estensione SDK Web](extension/web-sdk-extension.md)
+   * [Tipi di azioni](extension/action-types.md)
+   * [Tipi di elementi dati](extension/data-element-types.md)
 * [Note sulla versione](release-notes.md)
 * [Domande frequenti](web-sdk-faq.md)
 * [Post blog](blog-posts.md)
