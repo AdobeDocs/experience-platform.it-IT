@@ -6,7 +6,7 @@ seo-title: Attivare profili e segmenti su una destinazione
 description: Attiva i dati in Adobe Experience Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 seo-description: Attiva i dati in Adobe Experience Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: ef0f7e20a55804c013756e261818c2ee2df4d103
 workflow-type: tm+mt
 source-wordcount: '2058'
 ht-degree: 0%
@@ -60,7 +60,7 @@ Si applica a: destinazioni social e destinazione pubblicitaria di Google Custome
 
 Per le destinazioni social, è necessario selezionare gli attributi di origine o gli spazi dei nomi di identità da mappare come identità di destinazione nella destinazione.
 
-#### Esempio: attivazione dei dati sul pubblico in [!DNL Facebook] {#example-facebook}
+#### Esempio: attivazione dei dati sul pubblico in [!DNL Facebook Custom Audience] {#example-facebook}
 
 Questo è un esempio di mappatura identità corretta durante l&#39;attivazione dei dati dell&#39;audience in [!DNL Facebook].
 
