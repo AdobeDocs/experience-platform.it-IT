@@ -3,9 +3,9 @@ keywords: connessione Facebook;connessione facebook;destinazioni facebook;facebo
 title: Connessione Facebook
 description: Attiva profili per le tue campagne Facebook per il targeting dell'audience, la personalizzazione e la soppressione basate su e-mail con hash.
 translation-type: tm+mt
-source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
+source-git-commit: 8b7befd9775654a2d55d28a64b4b104e7f9576aa
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '988'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,9 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->È in corso la migrazione dei clienti alle nuove versioni di destinazione. Fino al completamento della migrazione, verranno visualizzate solo le identità [!UICONTROL EMAIL] e [!UICONTROL EMAIL_LC_SHA_256] disponibili per questa destinazione.
+>È in corso la migrazione dei clienti alla nuova versione di questa destinazione, [!DNL Facebook Custom Audience].
+>
+> Le istruzioni contenute in questo articolo si applicano a entrambe le versioni, con la seguente nota: mentre la migrazione è in corso, nell&#39;interfaccia utente verrà visualizzata solo la versione corrente della destinazione [!DNL Facebook], in cui è possibile utilizzare solo le identità [!UICONTROL EMAIL] e [!UICONTROL EMAIL_LC_SHA_256] per l&#39;attivazione.
 
 Attiva profili per le tue campagne [!DNL Facebook] per il targeting dell&#39;audience, la personalizzazione e la soppressione basate su e-mail con hash.
 
@@ -95,9 +97,12 @@ Se selezionate l’hash degli indirizzi e-mail, accertatevi di soddisfare i segu
    - Esempio: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, non `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
 - Non saldare la stringa.
 
-I dati provenienti dagli spazi dei nomi senza hash vengono automaticamente crittografati da [!DNL Platform] al momento dell&#39;attivazione.
+>[!NOTE]
+>
+>I dati provenienti dagli spazi dei nomi senza hash vengono automaticamente crittografati da [!DNL Platform] al momento dell&#39;attivazione.
+> I dati origine attributo non vengono automaticamente crittografati. Se il campo di origine contiene attributi non crittografati, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** per fare in modo che [!DNL Platform] hash automaticamente i dati all&#39;attivazione.
+> L&#39;opzione **[!UICONTROL Apply transformation]** viene visualizzata solo quando si selezionano gli attributi come campi di origine. Non viene visualizzato quando si scelgono gli spazi dei nomi.
 
-I dati origine attributo non vengono automaticamente crittografati. Se il campo di origine contiene attributi non crittografati, selezionare l&#39;opzione **[!UICONTROL Apply transformation]** per fare in modo che [!DNL Platform] hash automaticamente i dati all&#39;attivazione.
 ![Trasformazione mapping identità](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 #### Utilizzo di spazi dei nomi personalizzati {#custom-namespaces}
