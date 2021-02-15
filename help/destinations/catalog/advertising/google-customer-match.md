@@ -3,9 +3,9 @@ keywords: Google customer match;Google customer match;Google Customer Match;Goog
 title: Connessione Google Customer Match
 description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti nelle proprietà di Google possedute e gestite, come ad esempio Cerca, Shopping, Gmail e YouTube.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: ef0f7e20a55804c013756e261818c2ee2df4d103
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1454'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->È in corso la migrazione dei clienti alle nuove versioni di destinazione. Fino al completamento della migrazione, verranno visualizzate solo le identità [!UICONTROL EMAIL] e [!UICONTROL EMAIL_LC_SHA_256] disponibili per questa destinazione.
+>Stiamo effettuando la migrazione dei clienti alla nuova versione di questa destinazione.
+>
+> Le istruzioni contenute in questo articolo si applicano a entrambe le versioni, con la seguente nota: mentre la migrazione è in corso, nell&#39;interfaccia utente verrà visualizzata solo la versione corrente della destinazione [!DNL Google Customer Match], in cui è possibile utilizzare solo le identità [!UICONTROL EMAIL] e [!UICONTROL EMAIL_LC_SHA_256] per l&#39;attivazione.
 
 [Google Customer ](https://support.google.com/google-ads/answer/6379332?hl=en) Matchlet consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti attraverso le proprietà di Google possedute e gestite, ad esempio:  [!DNL Search],  [!DNL Shopping],  [!DNL Gmail], e  [!DNL YouTube].
 
@@ -31,7 +33,7 @@ Un marchio di abbigliamento atletico vuole raggiungere i clienti esistenti attra
 
 ### Caso di utilizzo n. 2
 
-Un&#39;importante azienda tecnologica ha appena lanciato un nuovo telefono. Nel tentativo di promuovere questo nuovo modello di telefono, stanno cercando di sensibilizzare i clienti che possiedono i loro modelli precedenti di telefoni sulle nuove funzionalità e caratteristiche del telefono.
+Un&#39;importante azienda tecnologica ha appena lanciato un nuovo telefono. Nel tentativo di promuovere questo nuovo modello di telefono, stanno cercando di sensibilizzare i clienti sulle nuove funzioni e funzionalità del telefono ai clienti che possiedono modelli precedenti dei loro telefoni.
 
 Per promuovere il rilascio, caricano gli indirizzi e-mail dal loro database CRM in CDP in tempo reale, utilizzando gli indirizzi e-mail come identificatori. I segmenti vengono creati in base ai clienti che possiedono vecchi modelli di telefono e li inviano a [!DNL Google Customer Match] in modo da poter essere indirizzati ai clienti attuali, ai clienti che possiedono modelli di telefono meno recenti e a clienti simili su [!DNL YouTube].
 
