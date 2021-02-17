@@ -5,9 +5,9 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 17eb7b9cb715d7d8d0d7bce930ddec43259149cc
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '557'
 ht-degree: 9%
 
 ---
@@ -117,6 +117,8 @@ ht-degree: 9%
          - [PayPal](tutorials/api/create/payments/paypal.md)
       - Protocolli {#protocols}
          - [OData generico](tutorials/api/create/protocols/odata.md)
+      - Streaming {#streaming}
+         - [API HTTP](tutorials/api/create/streaming/http.md)
    - Esplora dati {#explore}
       - [Esplora i dati pubblicitari](tutorials/api/explore/advertising.md)
       - [Esplora i dati di archiviazione cloud](tutorials/api/explore/cloud-storage.md)
@@ -196,6 +198,8 @@ ht-degree: 9%
          - [PayPal](tutorials/ui/create/payments/paypal.md)
       - Protocolli {#protocols}
          - [OData generico](tutorials/ui/create/protocols/odata.md)
+      - Streaming {#streaming}
+         - [API HTTP](tutorials/ui/create/streaming/http.md)
    - Configurare un flusso di dati {#dataflow}
       - [Flusso di dati della connessione pubblicitaria](tutorials/ui/dataflow/advertising.md)
       - [Flusso di dati connessione archiviazione cloud batch](tutorials/ui/dataflow/batch/cloud-storage.md)
