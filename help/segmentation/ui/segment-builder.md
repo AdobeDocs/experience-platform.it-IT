@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente di Generatore di segmenti
 topic: ui guide
 description: 'Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro completa che consente di interagire con gli elementi dei dati del profilo. L’area di lavoro offre controlli intuitivi per la creazione e la modifica di regole, come le sezioni di trascinamento utilizzate per rappresentare le proprietà dei dati. '
 translation-type: tm+mt
-source-git-commit: 8fc1c5414f38e84ed1700ee95b1c382007ff2c27
+source-git-commit: 354b756e53b360f31c1832c2b0f946b67099a87f
 workflow-type: tm+mt
-source-wordcount: '1871'
+source-wordcount: '1839'
 ht-degree: 0%
 
 ---
@@ -151,7 +151,7 @@ Per selezionare un criterio di unione per la definizione del segmento, seleziona
 
 ## Proprietà dei segmenti
 
-Durante la creazione di una definizione di segmento, la sezione **[!UICONTROL Segment Properties]** sul lato destro dell&#39;area di lavoro visualizza una stima delle dimensioni del segmento risultante, consentendo di regolare la definizione del segmento come necessario prima di creare l&#39;audience stessa.
+Quando si crea una definizione di segmento, la sezione **[!UICONTROL Segment Properties]** sul lato destro dell&#39;area di lavoro visualizza una stima delle dimensioni del segmento risultante, consentendo di regolare la definizione del segmento come necessario prima di creare l&#39;audience stessa.
 
 La sezione **[!UICONTROL Segment Properties]** contiene anche informazioni importanti sulla definizione del segmento, incluso nome e descrizione. I nomi delle definizioni dei segmenti vengono utilizzati per identificare il segmento tra quelli definiti dall’organizzazione e devono pertanto essere descrittivi, concisi e univoci.
 
@@ -163,7 +163,7 @@ Mentre continuate a generare la definizione del segmento, potete visualizzare un
 >
 >Le stime dell&#39;audience vengono generate utilizzando una dimensione di esempio dei dati di quel giorno. Se nell&#39;archivio profili sono presenti meno di 1 milione di entità, viene utilizzato l&#39;intero set di dati; per un periodo compreso tra 1 e 20 milioni di entità, sono utilizzate 1 milione di entità; e per oltre 20 milioni di entità, viene utilizzato il 5% del totale delle entità. Ulteriori informazioni sulla generazione delle stime dei segmenti sono disponibili nella sezione [generazione delle stime](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) dell&#39;esercitazione sulla creazione dei segmenti.
 
-## Passaggi successivi e risorse aggiuntive {#next-steps}
+## Passaggi successivi {#next-steps}
 
 Segment Builder (Generatore di segmenti) offre un flusso di lavoro avanzato che consente di isolare i tipi di pubblico commerciabili dai dati [!DNL Real-time Customer Profile]. Dopo aver letto questa guida, è ora possibile:
 
@@ -173,16 +173,4 @@ Segment Builder (Generatore di segmenti) offre un flusso di lavoro avanzato che 
 - Abilita tutte le definizioni di segmento per la segmentazione pianificata.
 - Abilita le definizioni di segmento specificate per la segmentazione in streaming.
 
-Per saperne di più su [!DNL Segmentation Service], continuate a leggere la documentazione e completate le vostre lezioni guardando i video qui sotto. Per ulteriori informazioni sulle altre parti dell&#39;interfaccia utente [!DNL Segmentation Service], leggere la [[!DNL Segmentation Service] guida utente](./overview.md)
-
->[!WARNING]
->
-> L&#39;interfaccia [!DNL Platform] mostrata nei video seguenti non è aggiornata. Per informazioni sulle ultime funzionalità e videate dell’interfaccia, consulta la documentazione precedente.
-
-**Crea un segmento:**
-
->[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)
-
-**Crea un segmento dinamico:**
-
->[!VIDEO](https://video.tv.adobe.com/v/27428?quality=12&learn=on)
+Per saperne di più su [!DNL Segmentation Service], continuate a leggere la documentazione e completate le vostre lezioni guardando i relativi video. Per ulteriori informazioni sulle altre parti dell&#39;interfaccia utente [!DNL Segmentation Service], leggere la [[!DNL Segmentation Service] guida utente](./overview.md)
