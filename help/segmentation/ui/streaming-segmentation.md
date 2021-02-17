@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente per la segmentazione in streaming
 topic: ui guide
 description: La segmentazione in streaming su Adobe Experience Platform consente di eseguire la segmentazione in tempo quasi reale, concentrandosi sulla ricchezza dei dati. Con la segmentazione in streaming, la qualifica del segmento ora avviene quando i dati entrano in piattaforma, eliminando la necessità di pianificare ed eseguire processi di segmentazione. Grazie a questa funzionalità, ora è possibile valutare la maggior parte delle regole del segmento quando i dati vengono passati in Piattaforma, il che significa che l'appartenenza al segmento verrà mantenuta aggiornata senza eseguire processi di segmentazione pianificati.
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: c0c42f872666323bfb3bdbdf5fb02475d3b5bc79
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '794'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,9 @@ La segmentazione in streaming su [!DNL Adobe Experience Platform] consente ai cl
 
 >[!NOTE]
 >
->La segmentazione in streaming può essere utilizzata solo per valutare i dati in streaming in Piattaforma. In altre parole, i dati acquisiti tramite l’assimilazione batch non verranno valutati tramite la segmentazione in streaming e verranno valutati insieme al processo segmentato pianificato ogni sera.
+>La segmentazione in streaming può essere utilizzata solo per valutare i dati in streaming in Piattaforma. In altre parole, i dati acquisiti tramite l’assimilazione batch non saranno valutati tramite la segmentazione in streaming e verranno valutati insieme al processo di segmento pianificato ogni sera.
+>
+>Inoltre, i segmenti valutati con la segmentazione in streaming possono variare tra l’appartenenza ideale e quella effettiva se il segmento è basato su un altro segmento valutato utilizzando la segmentazione batch. Ad esempio, se il segmento A è basato sul segmento B, e il segmento B viene valutato utilizzando la segmentazione batch, poiché il segmento B si aggiorna solo ogni 24 ore, il segmento A si allontanerà ulteriormente dai dati effettivi fino a quando non viene nuovamente sincronizzato con l&#39;aggiornamento del segmento B.
 
 ## Tipi di query di segmentazione in streaming
 
