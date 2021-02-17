@@ -5,9 +5,9 @@ title: Panoramica del servizio di segmentazione
 topic: overview
 description: Informazioni su Adobe Experience Platform Segmentation Service e sul ruolo che gioca nell'ecosistema della piattaforma.
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: c0c42f872666323bfb3bdbdf5fb02475d3b5bc79
 workflow-type: tm+mt
-source-wordcount: '1394'
+source-wordcount: '1407'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,8 @@ Per informazioni sulla creazione di definizioni di segmenti mediante l&#39;API, 
 >Nel caso in cui uno schema venga esteso, tutti i caricamenti futuri devono aggiornare di conseguenza i campi aggiunti di recente. Per ulteriori informazioni sulla personalizzazione di [!DNL Experience Data Model] (XDM), fare clic sull&#39;esercitazione [Editor di schema](../xdm/tutorials/create-schema-ui.md).
 
 ## Valutazione dei segmenti
+
+Piattaforma supporta attualmente due metodi di valutazione dei segmenti: segmentazione in streaming e segmentazione batch.
 
 ### Segmentazione in streaming
 
