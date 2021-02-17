@@ -5,7 +5,7 @@ title: ' Principi di base delle API Experienci Platform'
 topic: getting started
 description: Questo documento fornisce una breve panoramica di alcune tecnologie e sintassi sottostanti coinvolte con  API di Experience Platform.
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 8c98632b67ddae4fb7800e80fb8c83aca9bfa291
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 1%
@@ -120,7 +120,7 @@ Esistono molte operazioni PATCH per le API [!DNL Platform] che accettano oggetti
 
 A seconda del tipo di operazione indicato in `op`, l&#39;oggetto Patch JSON potrebbe richiedere proprietà aggiuntive. Per ulteriori informazioni sulle diverse operazioni di patch JSON e sulla relativa sintassi richiesta, fare riferimento alla [documentazione relativa alla patch JSON](http://jsonpatch.com/).
 
-## Schema JSON
+## Schema JSON {#json-schema}
 
 Lo schema JSON è un formato utilizzato per descrivere e convalidare la struttura dei dati JSON. [Experience Data Model (XDM) ](../xdm/home.md) sfrutta le funzionalità dello schema JSON per applicare vincoli alla struttura e al formato dei dati esperienza cliente acquisiti. Per ulteriori informazioni sullo schema JSON, fare riferimento alla [documentazione ufficiale](https://json-schema.org/).
 
