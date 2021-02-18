@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
-title: 'Dashboard Experience Platform '
+title: Introduzione  dashboard di Experience Platform
 topic: overview
 type: Documentation
-description: 'Adobe Experience Platform fornisce diverse dashboard attraverso le quali è possibile visualizzare informazioni importanti sui dati aziendali, come acquisito durante le istantanee giornaliere. '
+description: 'Esplora più dashboard in Adobe Experience Platform per visualizzare informazioni importanti sui dati aziendali, come acquisito durante le istantanee giornaliere. '
 translation-type: tm+mt
-source-git-commit: 5d33b8db91491ec5d7f45b3ebe3067cd382d9d46
+source-git-commit: d97fd09b382877608edf665d7559a684be00c0bb
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 3%
