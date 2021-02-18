@@ -1,37 +1,35 @@
 ---
-title: ' Adobe Target e Adobe Experience Platform Web SDK. '
-seo-title: Adobe Experience Platform Web SDK e utilizzo di  Adobe Target
-description: Scopri come eseguire il rendering del contenuto personalizzato con  Experience Platform Web SDK tramite  Adobe Target
-seo-description: Scopri come eseguire il rendering del contenuto personalizzato con  Experience Platform Web SDK tramite  Adobe Target
-keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
+title: Utilizzo di  Adobe Target con Platform Web SDK
+description: Scopri come eseguire il rendering del contenuto personalizzato con l’SDK Web per Experienci Platform  utilizzando  Adobe Target
+keywords: target;adobe target;activity.id;experience.id;renderingDecisions;DecisionScopes;prehide snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '632'
 ht-degree: 3%
 
 ---
 
 
-# [!DNL Target] Panoramica
+# Utilizzo di  Adobe Target con Platform Web SDK
 
-Adobe Experience Platform [!DNL Web SDK] può distribuire e rappresentare esperienze personalizzate gestite da Adobe Target  al canale Web. Potete utilizzare un editor WYSIWYG, denominato [Visual Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) (VEC), o un&#39;interfaccia non visiva, Experience Composer (Compositore [esperienza basato su](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html)modulo), per creare, attivare e distribuire le attività e le esperienze di personalizzazione.
+Adobe Experience Platform [!DNL Web SDK] è in grado di distribuire e rappresentare esperienze personalizzate gestite in Adobe Target  canale Web. Potete utilizzare un editor WYSIWYG, denominato [Visual Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) (VEC), o un&#39;interfaccia non visiva, il [Composer esperienza basato su moduli](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html), per creare, attivare e distribuire le attività e le esperienze di personalizzazione.
 
 ## Abilitazione  Adobe Target
 
-Per attivare [!DNL Target], è necessario effettuare le seguenti operazioni:
+Per abilitare [!DNL Target], è necessario effettuare le seguenti operazioni:
 
-1. Attivate la destinazione nella configurazione [](../../fundamentals/edge-configuration.md) edge con il codice client appropriato.
-1. Aggiungete l&#39; `renderDecisions` opzione agli eventi.
+1. Abilitare la destinazione nella [configurazione periferica](../../fundamentals/edge-configuration.md) con il codice client appropriato.
+1. Aggiungete l&#39;opzione `renderDecisions` agli eventi.
 
 Quindi, facoltativamente, puoi anche:
 
 * Aggiungete `decisionScopes` agli eventi per recuperare attività specifiche (utile per le attività create con il compositore basato su modulo).
-* Aggiungete lo snippet di [anteprima](../manage-flicker.md) per nascondere solo alcune parti della pagina.
+* Aggiungete il [snippet di anteprima](../manage-flicker.md) per nascondere solo alcune porzioni della pagina.
 
 ## Utilizzo di  Adobe Target VEC
 
-Per utilizzare VEC con un&#39;implementazione SDK Web piattaforma, è necessario installare e attivare [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension.
+Per utilizzare VEC con un&#39;implementazione SDK Web della piattaforma, è necessario installare e attivare l&#39;estensione [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension.
 
 ## Rendering automatico delle attività VEC
 
@@ -81,11 +79,11 @@ alloy
 
 ## Ambiti decisionali
 
-`decisionScopes` definisce sezioni, posizioni o parti delle pagine in cui eseguire il rendering di un&#39;esperienza personalizzata. Sono `decisionScopes` personalizzabili e definiti dall’utente. Per [!DNL Target] i clienti correnti, `decisionScopes` sono noti anche come &quot;mbox&quot;. Nell’ [!DNL Target] interfaccia utente, `decisionScopes` viene visualizzato come &quot;posizioni&quot;.
+`decisionScopes` definisce sezioni, posizioni o parti delle pagine in cui eseguire il rendering di un&#39;esperienza personalizzata. Questi `decisionScopes` sono personalizzabili e definiti dall&#39;utente. Per i clienti [!DNL Target] correnti, `decisionScopes` sono noti anche come &quot;mbox&quot;. Nell&#39;interfaccia [!DNL Target], `decisionScopes` viene visualizzato come &quot;locations&quot;.
 
-## Il `__view__` campo di applicazione
+## L&#39;ambito `__view__`
 
-Adobe Experience Platform Web SDK fornisce funzionalità che consentono di recuperare azioni VEC senza affidarsi all&#39;SDK per eseguire il rendering delle azioni VEC. Invia un evento con `__view__` definito come `decisionScopes`.
+Adobe Experience Platform Web SDK fornisce funzionalità che consentono di recuperare azioni VEC senza affidarsi all&#39;SDK per eseguire il rendering delle azioni VEC. Inviare un evento con `__view__` definito come `decisionScopes`.
 
 ```javascript
 alloy("sendEvent", {
@@ -124,10 +122,10 @@ Se hai attività Target con audience predefinite che utilizzano parametri person
 
 ## Terminologia
 
-__Decisioni:__ In [!DNL Target], questi sono correlati all&#39;esperienza selezionata da un&#39;attività.
+__Decisioni:__ In  [!DNL Target], queste sono correlate all&#39;esperienza selezionata da un&#39;attività.
 
-__Schema:__ Lo schema di una decisione è il tipo di offerta in [!DNL Target].
+__Schema:__ Lo schema di una decisione è il tipo di offerta in  [!DNL Target].
 
-__Ambito:__ Il campo di applicazione della decisione. In [!DNL Target], questo è l&#39;mBox. L&#39;mBox globale è l&#39; `__view__` ambito.
+__Campo di applicazione:__ Ambito di applicazione della decisione. In [!DNL Target], questo è l&#39;mBox. L&#39;mBox globale è l&#39;ambito `__view__`.
 
-__XDM:__ L&#39;XDM viene serializzato nella notazione del punto e quindi inserito [!DNL Target] come parametri mBox.
+__XDM:__ l&#39;XDM viene serializzato nella notazione del punto e quindi inserito  [!DNL Target] come parametri mBox.
