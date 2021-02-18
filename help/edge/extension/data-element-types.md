@@ -1,11 +1,11 @@
 ---
-title: Tipi di elementi dell'estensione SDK per la piattaforma Web
-description: 'Adobe Experience Platform Web SDK Extension Data Element Types in Adobe Experience Platform Launch '
+title: Tipi di elementi di dati nell’estensione Adobe Experience Platform Web SDK
+description: Scopri i diversi tipi di elementi dati forniti dall’estensione Adobe Experience Platform Web SDK in  Adobe Experience Platform Launch.
 translation-type: tm+mt
-source-git-commit: 473cc1f7617f1d65cdb70ff0e758178ea0174f00
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '307'
-ht-degree: 81%
+source-wordcount: '318'
+ht-degree: 78%
 
 ---
 
