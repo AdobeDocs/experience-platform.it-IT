@@ -1,19 +1,17 @@
 ---
-title: Unione dei dati evento
-seo-title: Unione dei dati evento Adobe Experience Platform Web SDK
+title: Unisci dati evento in Adobe Experience Platform Web SDK
 description: Scoprite come unire i dati dell'evento SDK Web  Experience Platform
-seo-description: Scoprite come unire i dati dell'evento SDK Web  Experience Platform
-keywords: merge;event data;eventMergeId;createEventMergeId;sendEvent;mergeId;merge id;eventMergeIdPromise; Merge Id Promise;
+keywords: merge;data evento;eventMergeId;createEventMergeId;sendEvent;mergeId;merge id;eventMergeIdPromise; Unisci Id Promise;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '464'
 ht-degree: 0%
 
 ---
 
 
-# Unione dei dati evento
+# Unisci dati evento
 
 >[!IMPORTANT]
 >
@@ -21,7 +19,7 @@ ht-degree: 0%
 
 A volte, non tutti i dati sono disponibili quando si verifica un evento. Potrebbe essere utile acquisire i dati che si dispone, in modo che non vadano persi se, ad esempio, l&#39;utente chiude il browser. D&#39;altro canto, è possibile includere anche qualsiasi dato che diventerà disponibile in un secondo momento.
 
-In questi casi, è possibile unire i dati con gli eventi precedenti passando `mergeId` come opzione ai `event` comandi come segue:
+In tali casi, è possibile unire i dati con gli eventi precedenti passando `mergeId` come opzione ai comandi `event` come segue:
 
 ```javascript
 alloy("sendEvent", {
@@ -59,13 +57,13 @@ alloy("sendEvent", {
 });
 ```
 
-Trasmettendo lo stesso valore per l&#39; `mergeId` opzione a entrambi i comandi dell&#39;evento in questo esempio, i dati nel secondo comando dell&#39;evento vengono incrementati ai dati precedentemente inviati sul primo comando dell&#39;evento. Un record per ciascun comando evento viene creato nel [!DNL Experience Data Platform], ma durante il reporting i record vengono uniti utilizzando l&#39;ID unione evento e visualizzati come un singolo evento.
+Trasmettendo lo stesso valore per l&#39;opzione `mergeId` a entrambi i comandi dell&#39;evento in questo esempio, i dati nel secondo comando dell&#39;evento vengono incrementati ai dati precedentemente inviati sul primo comando dell&#39;evento. Un record per ciascun comando evento viene creato in [!DNL Experience Data Platform], ma durante il reporting i record vengono uniti utilizzando l&#39;ID unione evento e visualizzati come un singolo evento.
 
 Se inviate dati su un particolare evento a fornitori terzi, potete includere anche lo stesso ID unione evento con tali dati. Successivamente, se si sceglie di importare dati di terze parti in Adobe Experience Platform, l&#39;ID unione eventi verrà utilizzato per unire tutti i dati raccolti a seguito dell&#39;evento discreto che si è verificato sulla pagina Web.
 
 ## Generazione di un ID unione eventi
 
-L&#39;ID unione eventi può essere una qualsiasi stringa scelta, ma ricordate che tutti gli eventi inviati utilizzando lo stesso ID sono segnalati come un singolo evento, quindi prestate attenzione a imporre l&#39;univocità quando gli eventi non devono essere uniti. Se desiderate che l’SDK generi un ID unione evento univoco per vostro conto (in base alla specifica [UUID v4 più diffusa), potete utilizzare il](https://www.ietf.org/rfc/rfc4122.txt)`createEventMergeId` comando per farlo.
+L&#39;ID unione eventi può essere una qualsiasi stringa scelta, ma ricordate che tutti gli eventi inviati utilizzando lo stesso ID sono segnalati come un singolo evento, quindi prestate attenzione a imporre l&#39;univocità quando gli eventi non devono essere uniti. Se desiderate che l&#39;SDK generi un ID unione evento univoco per vostro conto (in seguito alla [specifica UUID v4 più diffusa](https://www.ietf.org/rfc/rfc4122.txt)), potete utilizzare il comando `createEventMergeId` per farlo.
 
 Come per tutti i comandi, viene restituita una promessa perché è possibile eseguire il comando prima che l’SDK abbia terminato il caricamento. La promessa verrà risolta il prima possibile con un ID unione evento univoco. È possibile attendere la risoluzione della promessa prima di inviare dati al server come segue:
 
@@ -124,7 +122,7 @@ eventMergeIdPromise.then(function(results) {
 
 ## Nota sul formato XDM
 
-All&#39;interno del comando dell&#39;evento, l&#39;ID unione evento viene aggiunto al `xdm` payload nella posizione corretta per conto dell&#39;utente.  Se lo desiderate, l&#39;ID unione evento può essere inviato come parte dell&#39; `xdm` opzione, come segue:
+All&#39;interno del comando dell&#39;evento, l&#39;ID unione evento viene aggiunto al payload `xdm` nella posizione corretta per conto dell&#39;utente.  Se lo desiderate, l&#39;ID unione eventi può essere inviato come parte dell&#39;opzione `xdm`, come segue:
 
 ```javascript
 alloy("sendEvent", {
@@ -142,4 +140,4 @@ alloy("sendEvent", {
 });
 ```
 
-Quando si aggiunge direttamente l&#39;ID unione eventi all&#39; `xdm` oggetto, si noti che il nome `eventMergeID` è utilizzato invece di `mergeId`.
+Quando si aggiunge direttamente l&#39;ID unione eventi all&#39;oggetto `xdm`, si noti che il nome `eventMergeID` viene utilizzato invece di `mergeId`.
