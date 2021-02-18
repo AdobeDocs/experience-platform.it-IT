@@ -1,19 +1,17 @@
 ---
-title: ' Panoramica di Offer Decisioning'
-seo-title: ' Offer Decisioning e Adobe Experience Platform Web SDK'
+title: Utilizzo di  Offer Decisioning con Platform Web SDK
 description: Adobe Experience Platform Web SDK può distribuire ed eseguire il rendering di offerte personalizzate gestite in  Offer Decisioning. Potete creare le offerte e altri oggetti correlati utilizzando l'interfaccia  Offer Decisioning o l'API.
-seo-description: Adobe Experience Platform Web SDK può distribuire ed eseguire il rendering di offerte personalizzate gestite in  Offer Decisioning. Potete creare le offerte e altri oggetti correlati utilizzando l'interfaccia  Offer Decisioning o l'API.
 keywords: decisione offerta;decisione;SDK Web;SDK per Web piattaforma;offerte personalizzate;offrire offerte;consegna offerta;personalizzazione offerta;
 translation-type: tm+mt
-source-git-commit: 05049025bdfc67af4d811e90218bf6e2613fab51
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '849'
 ht-degree: 9%
 
 ---
 
 
-# [!DNL Offer Decisioning] Panoramica
+# Utilizzo di  Offer Decisioning con Platform Web SDK
 
 >[!NOTE]
 >
