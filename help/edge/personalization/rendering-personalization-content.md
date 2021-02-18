@@ -1,25 +1,23 @@
 ---
-title: Rendering di contenuti personalizzati
-seo-title: Adobe Experience Platform Web SDK Rendering del contenuto personalizzato
-description: Scopri come eseguire il rendering del contenuto personalizzato con  Experience Platform Web SDK
-seo-description: Scopri come eseguire il rendering del contenuto personalizzato con  Experience Platform Web SDK
-keywords: personalization;renderDecisions;sendEvent;decisionScopes;result.decisions;
+title: Rendering di contenuti personalizzati con Adobe Experience Platform Web SDK
+description: Scoprite come eseguire il rendering del contenuto personalizzato con Adobe Experience Platform Web SDK.
+keywords: personalizzazione;renderingDecisions;sendEvent;DecisionScopes;result.decisions;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '230'
 ht-degree: 0%
 
 ---
 
 
-# Panoramica delle opzioni di personalizzazione
+# Rendering di contenuti personalizzati
 
-Adobe Experience Platform [!DNL Web SDK] supporta l&#39;esecuzione di query sulle soluzioni di personalizzazione  Adobe, incluso  Adobe Target. Esistono due modalità di personalizzazione: recupero del contenuto che può essere rappresentato automaticamente e del contenuto di cui lo sviluppatore deve eseguire il rendering. L’SDK fornisce inoltre le strutture per [gestire lo sfarfallio](../personalization/manage-flicker.md).
+Adobe Experience Platform [!DNL Web SDK] supporta l&#39;esecuzione di query sulle soluzioni di personalizzazione  Adobe, incluso  Adobe Target. Esistono due modalità di personalizzazione: recupero del contenuto che può essere rappresentato automaticamente e del contenuto di cui lo sviluppatore deve eseguire il rendering. L&#39;SDK fornisce inoltre funzionalità per [gestire lo sfarfallio](../personalization/manage-flicker.md).
 
 ## Rendering automatico del contenuto
 
-L’SDK esegue automaticamente il rendering del contenuto personalizzato quando si invia un evento al server e si imposta `renderDecisions` come opzione `true` sull’evento.
+L&#39;SDK esegue automaticamente il rendering del contenuto personalizzato quando si invia un evento al server e si imposta `renderDecisions` su `true` come opzione sull&#39;evento.
 
 ```javascript
 alloy("sendEvent", {
@@ -41,7 +39,7 @@ Il rendering del contenuto personalizzato è asincrono, pertanto non dovrebbe es
 
 ## Rendering manuale del contenuto
 
-È possibile richiedere la restituzione dell&#39;elenco di decisioni come promessa nel `sendEvent` comando specificando l&#39; `decisionScopes` opzione. Un ambito è una stringa che consente alla soluzione di personalizzazione di sapere quale decisione si desidera prendere.
+È possibile richiedere la restituzione dell&#39;elenco di decisioni come promessa nel comando `sendEvent` specificando l&#39;opzione `decisionScopes`. Un ambito è una stringa che consente alla soluzione di personalizzazione di sapere quale decisione si desidera prendere.
 
 ```javascript
 alloy("sendEvent",{
@@ -97,4 +95,4 @@ Questo restituirà un elenco di decisioni come oggetto JSON per ogni decisione.
 
 ### Recuperare il contenuto automatico
 
-Se desiderate che il modulo `result.decisions` includa le decisioni di rendering automatico e NON disponga del rendering automatico di ALLEY, potete impostare `renderDecisions` su `false`e includere l&#39;ambito speciale `__view__`.
+Se si desidera che `result.decisions` includa le decisioni di rendering automatico e NON che siano sottoposte a rendering automatico, è possibile impostare `renderDecisions` su `false` e includere l&#39;ambito speciale `__view__`.
