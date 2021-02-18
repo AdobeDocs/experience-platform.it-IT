@@ -6,27 +6,27 @@ user-guide-title: Guida di Adobe Experience Platform Web SDK
 breadcrumb-title: Guida di SDK Web
 user-guide-description: Interagisci con i servizi di Experience Cloud tramite la rete Edge.
 translation-type: tm+mt
-source-git-commit: 090050d89c628d82ebe1da6625a2ef1f2adf3e6c
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 36%
+source-wordcount: '142'
+ht-degree: 34%
 
 ---
 
 
 # Adobe Experience Platform Web SDK {#edge}
 
-* [Panoramica SDK per Web](home.md)
+* [Panoramica dell’SDK Web per la piattaforma](home.md)
 * Nozioni di base {#fundamentals}
-   * [Prerequisito](fundamentals/prerequisite.md)
-   * [Configurazione di Edge](fundamentals/edge-configuration.md)
-   * [Installazione dell’SDK](fundamentals/installing-the-sdk.md)
-   * [Configurazione dell’SDK](fundamentals/configuring-the-sdk.md)
-   * [Esecuzione di comandi](fundamentals/executing-commands.md)
-   * [Tracciamento degli eventi](fundamentals/tracking-events.md)
+   * [Prerequisiti](fundamentals/prerequisite.md)
+   * [Creare una configurazione Edge](fundamentals/edge-configuration.md)
+   * [Installare l’SDK](fundamentals/installing-the-sdk.md)
+   * [Configurare l’SDK](fundamentals/configuring-the-sdk.md)
+   * [Esegui, comandi](fundamentals/executing-commands.md)
+   * [Tracciare gli eventi](fundamentals/tracking-events.md)
    * [Eseguire il debug di](fundamentals/debugging.md)
-   * [Unione dei dati evento](fundamentals/merging-event-data.md)
-   * [Interazione con più proprietà](fundamentals/interacting-with-multiple-properties.md)
+   * [Unisci dati evento](fundamentals/merging-event-data.md)
+   * [Interagisci con più proprietà](fundamentals/interacting-with-multiple-properties.md)
 * Identità {#identity}
    * [Panoramica](identity/overview.md)
 * Raccolta dati {#data-collection}
@@ -34,18 +34,18 @@ ht-degree: 36%
    * [Tracciare i collegamenti](data-collection/track-links.md)
    * [Raccolta di dati su prodotti e commercio](data-collection/collect-commerce-data.md)
    * Adobe Analytics {#adobe-analytics}
-      * [Panoramica di Analytics](data-collection/adobe-analytics/analytics-overview.md)
-      * [Mappatura manuale delle variabili in  Adobe Analytics](data-collection/adobe-analytics/manually-mapping-variables.md)
+      * [Panoramica](data-collection/adobe-analytics/analytics-overview.md)
+      * [Mappatura delle variabili di Analytics](data-collection/adobe-analytics/manually-mapping-variables.md)
       * [Variabili mappate automaticamente](data-collection/adobe-analytics/automatically-mapped-vars.md)
-      * [Invio di dati a  Adobe Analytics](data-collection/adobe-analytics/sending-data-to-analytics.md)
+      * [Invio di dati ad Analytics](data-collection/adobe-analytics/sending-data-to-analytics.md)
 * Personalizzazione {#personalization}
    * [Rendering di contenuti personalizzati](personalization/rendering-personalization-content.md)
    * [Gestisci sfarfallio](personalization/manage-flicker.md)
    * Adobe Target {#adobe-target}
-      * [Panoramica di Target](personalization/adobe-target/target-overview.md)
-      * [Implementazione di un&#39;applicazione a pagina singola](personalization/adobe-target/spa-implementation.md)
+      * [Panoramica](personalization/adobe-target/target-overview.md)
+      * [Implementazione applicazione a pagina singola](personalization/adobe-target/spa-implementation.md)
    * Offer Decisioning {#offer-decisioning}
-      * [Panoramica di  Offer Decisioning](personalization/offer-decisioning/offer-decisioning-overview.md)
+      * [Panoramica](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Consenso {#consent}
    * [Consenso di sostegno](consent/supporting-consent.md)
    * IAB Transparency and Consenso Framework 2.0 {#iab-tcf}
