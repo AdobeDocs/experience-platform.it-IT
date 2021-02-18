@@ -1,13 +1,11 @@
 ---
 title: Prerequisiti per l’utilizzo di Adobe Experience Platform Web SDK
-seo-title: Prerequisiti per l’utilizzo di Adobe Experience Platform Web SDK
-description: Prerequisiti per l’utilizzo di Adobe Experience Platform Web SDK
-seo-description: Prerequisiti per l’utilizzo di Adobe Experience Platform Web SDK
+description: Informazioni sui prerequisiti per l’utilizzo di Adobe Experience Platform Web SDK.
 keywords: dominio di prime parti;CNAME;schema;creare schema;avvio;estensione di sdk web aep;extension;configuration id;tool di configurazione;data element;create data element;XDM Object;sendEvent;send Event;
 translation-type: tm+mt
-source-git-commit: a19b4384e2ea64eb9ab5f0f5443fd329ec44a2a0
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---
