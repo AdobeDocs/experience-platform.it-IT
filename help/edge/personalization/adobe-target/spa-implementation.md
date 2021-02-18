@@ -1,37 +1,35 @@
 ---
-title: ' Adobe Target e Adobe Experience Platform Web SDK. '
-seo-title: Adobe Experience Platform Web SDK e utilizzo di  Adobe Target
-description: Scopri come eseguire il rendering del contenuto personalizzato con  Experience Platform Web SDK tramite  Adobe Target
-seo-description: Scopri come eseguire il rendering del contenuto personalizzato con  Experience Platform Web SDK tramite  Adobe Target
+title: Implementazione dell’applicazione in una sola pagina per l’SDK Web per Adobe Experience Platform
+description: Scoprite come creare un’implementazione dell’SDK Web per Adobe Experience Platform con SPA a pagina singola utilizzando  Adobe Target.
 keywords: target;adobe target;visualizzazioni xdm; viste;applicazioni a pagina singola;SPA;SPA ciclo di vita;lato client;AB testing;AB;Experience Targeting;XT;VEC
 translation-type: tm+mt
-source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '1688'
+source-wordcount: '1665'
 ht-degree: 12%
 
 ---
 
 
-# Implementazione di un’applicazione a pagina singola
+# Implementazione applicazione a pagina singola
 
-Adobe Experience Platform Web SDK offre funzionalità avanzate che consentono alla tua azienda di eseguire la personalizzazione su tecnologie lato client di prossima generazione, come le applicazioni a pagina singola (SPA).
+Adobe Experience Platform Web SDK offre funzionalità avanzate che consentono alla tua azienda di eseguire la personalizzazione su tecnologie lato client di nuova generazione, come le applicazioni a pagina singola (SPA).
 
 I siti web tradizionali funzionavano su modelli di navigazione “da pagina a pagina”, altrimenti noti come Applicazioni a più pagine, in cui le progettazioni del sito web erano strettamente collegate a URL e le transizioni da una pagina web a un’altra richiedevano un caricamento di pagina.
 
-Le moderne applicazioni Web, come le applicazioni per pagina singola, hanno invece adottato un modello che consente di utilizzare rapidamente il rendering dell&#39;interfaccia utente del browser, spesso indipendente dai ricarichi di pagina. Queste esperienze possono essere attivate dalle interazioni con i clienti, ad esempio con scorrimento, clic e movimenti del cursore. Con l&#39;evoluzione dei paradigmi del web moderno, la rilevanza degli eventi generici tradizionali, come il caricamento di una pagina, per implementare la personalizzazione e la sperimentazione non funziona più.
+Le moderne applicazioni Web, come le applicazioni a pagina singola, hanno invece adottato un modello che consente di utilizzare rapidamente il rendering dell&#39;interfaccia utente del browser, spesso indipendente dai ricarichi di pagina. Queste esperienze possono essere attivate dalle interazioni con i clienti, ad esempio con scorrimento, clic e movimenti del cursore. Con l&#39;evoluzione dei paradigmi del web moderno, la rilevanza di eventi generici tradizionali, come un caricamento di pagina, per distribuire personalizzazione e sperimentazione non funziona più.
 
 ![](assets/spa-vs-traditional-lifecycle.png)
 
 ## Vantaggi di Platform Web SDK per SPA
 
-Di seguito sono riportati alcuni vantaggi derivanti dall’utilizzo di Adobe Experience Platform Web SDK per le applicazioni a pagina singola:
+Di seguito sono riportati alcuni vantaggi offerti dall’utilizzo di Adobe Experience Platform Web SDK per le applicazioni a pagina singola:
 
 * Capacità di memorizzare nella cache tutte le offerte al caricamento di pagina per ridurre più chiamate al server a una singola chiamata al server.
 * Migliorate notevolmente l&#39;esperienza utente sul vostro sito, perché le offerte vengono visualizzate immediatamente tramite la cache senza ritardi, grazie alle chiamate server tradizionali.
 * Una singola riga di codice e una configurazione per sviluppatori una tantum consentono agli addetti al marketing di creare ed eseguire attività A/B e Experience Targeting (XT) tramite Visual Experience Composer (VEC) sul SPA.
 
-## Visualizzazioni XDM e applicazioni per pagina singola
+## Visualizzazioni XDM e applicazioni a pagina singola
 
 Il  Adobe Target VEC per SPA si avvale di un concetto denominato Viste: un gruppo logico di elementi visivi che insieme formano un&#39;esperienza SPA. Pertanto, un’applicazione a pagina singola può essere considerata come un passaggio tra le visualizzazioni, anziché tramite gli URL, in base alle interazioni dell’utente. In genere, una visualizzazione può rappresentare un intero sito o elementi visivi raggruppati all&#39;interno di un sito.
 
