@@ -1,13 +1,12 @@
 ---
-title: Mappatura manuale delle variabili in  Adobe Analytics
-seo-title: Mappatura manuale delle variabili in  Adobe Analytics con SDK Web
-description: Come mappare manualmente le variabili in  Adobe Analytics utilizzando le regole di elaborazione
+title: Mappatura manuale  variabili Adobe Analytics nell’SDK per Adobe Experience Platform Web
+description: Scoprite come mappare manualmente le variabili in  Adobe Analytics utilizzando le regole di elaborazione nell’SDK Web del Experience Platform .
 seo-description: Mappatura manuale delle variabili in  Adobe Analytics tramite regole di elaborazione con Web SDK
 keywords: adobe analytics;analytics;variables;mapping variables;map variables;contextData;context Data;Processing rules;rules;xdm;schema;
 translation-type: tm+mt
-source-git-commit: 206b5addd6baf5a120b469b21313ee86ac1fe53b
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
@@ -15,15 +14,15 @@ ht-degree: 0%
 
 # Mappatura manuale delle variabili in  Adobe Analytics
 
-Adobe Experience Platform [!DNL Web SDK] può mappare alcune variabili automaticamente, ma le variabili personalizzate devono essere mappate manualmente.
+Adobe Experience Platform [!DNL Web SDK] può mappare automaticamente determinate variabili, ma queste devono essere mappate manualmente.
 
-Per i dati XDM a cui non viene mappato automaticamente [!DNL Analytics], è possibile utilizzare dati [](https://docs.adobe.com/content/help/en/analytics/implementation/vars/page-vars/contextdata.html) contestuali per corrispondere allo [schema](https://docs.adobe.com/content/help/en/experience-platform/xdm/schema/composition.html). Quindi può essere mappato in [!DNL Analytics] utilizzando le regole [di](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html) elaborazione per compilare [!DNL Analytics] le variabili.
+Per i dati XDM non mappati automaticamente su [!DNL Analytics], è possibile utilizzare [dati contestuali](https://docs.adobe.com/content/help/en/analytics/implementation/vars/page-vars/contextdata.html) per corrispondere allo [schema](https://docs.adobe.com/content/help/en/experience-platform/xdm/schema/composition.html). Quindi può essere mappato in [!DNL Analytics] utilizzando [regole di elaborazione](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html) per compilare le variabili [!DNL Analytics].
 
-È inoltre possibile utilizzare un set predefinito di azioni ed elenchi di prodotti per inviare o recuperare dati con Adobe Experience Platform Web SDK. Per eseguire questa operazione, vedi [Prodotti](https://docs.adobe.com/content/help/en/experience-platform/edge/implement/commerce.html).
+È inoltre possibile utilizzare un set predefinito di azioni ed elenchi di prodotti per inviare o recuperare dati con Adobe Experience Platform Web SDK. A tale scopo, vedere [Products](https://docs.adobe.com/content/help/en/experience-platform/edge/implement/commerce.html).
 
 ## Dati contestuali
 
-Per essere utilizzati da [!DNL Analytics], i dati XDM vengono appiattiti mediante la notazione del punto e resi disponibili come `contextData`. Il seguente elenco di coppie di valori mostra un esempio di `context data`:
+Per essere utilizzati da [!DNL Analytics], i dati XDM vengono appiattiti utilizzando la notazione del punto e resi disponibili come `contextData`. Il seguente elenco di coppie di valori mostra un esempio di `context data`:
 
 ```json
 {
@@ -50,9 +49,9 @@ Per essere utilizzati da [!DNL Analytics], i dati XDM vengono appiattiti mediant
 
 ## Regole di elaborazione
 
-Tutti i dati raccolti dalla rete edge sono accessibili tramite regole [di](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html)elaborazione. In [!DNL Analytics], puoi utilizzare le regole di elaborazione per incorporare dati contestuali in [!DNL Analytics] variabili.
+Tutti i dati raccolti dalla rete Edge sono accessibili tramite [regole di elaborazione](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html). In [!DNL Analytics], puoi utilizzare le regole di elaborazione per incorporare dati contestuali nelle variabili [!DNL Analytics].
 
-Ad esempio, nella regola seguente,  Adobe Analytics è impostato per compilare i termini di ricerca **interna ( eVar2)** con i dati associati a **a.x._atag.search.term(Context Data)**.
+Ad esempio, nella regola seguente,  Adobe Analytics è impostato per compilare i termini di ricerca interna ( eVar2)**con i dati associati a** a.x._atag.search.term(Context Data)**.**
 
 ![](assets/examplerule.png)
 
@@ -61,7 +60,7 @@ Ad esempio, nella regola seguente,  Adobe Analytics è impostato per compilare i
 
 Adobe Experience Platform utilizza gli schemi per descrivere la struttura dei dati in modo coerente e riutilizzabile. Definendo i dati in modo coerente tra i diversi sistemi, diventa più semplice mantenere il significato e, di conseguenza, ottenere valore dai dati. [!DNL Analytics] i dati contestuali funzionano con la struttura definita dallo schema.
 
-L&#39;esempio seguente mostra come il [`event` comando](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/tracking-events.html) può essere utilizzato con l&#39; `xdm` opzione per inviare e recuperare dati con Adobe Experience Platform Web SDK. In questo esempio, il `event` comando corrisponde allo schema [Dettagli](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) ExperienceEvent Commerce in modo che i valori e gli elementi productListItems `name` `SKU` siano tracciati:
+L&#39;esempio seguente mostra come il comando [`event`](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/tracking-events.html) possa essere utilizzato con l&#39;opzione `xdm` per inviare e recuperare dati con Adobe Experience Platform Web SDK. In questo esempio, il comando `event` corrisponde allo schema [ExperienceEvent Commerce Details](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) in modo che i valori productListItems `name` e `SKU` siano tracciati:
 
 
 ```javascript
@@ -86,4 +85,4 @@ alloy("event",{
 });
 ```
 
-Per ulteriori informazioni sul tracciamento degli eventi con Adobe Experience Platform [!DNL Web SDK], vedere [Tracciamento degli eventi](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/tracking-events.html).
+Per ulteriori informazioni sul tracciamento degli eventi con Adobe Experience Platform [!DNL Web SDK], vedere [Eventi di tracciamento](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/tracking-events.html).
