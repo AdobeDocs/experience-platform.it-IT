@@ -1,11 +1,11 @@
 ---
-title: Tipi di azioni di estensione SDK per Web piattaforma
-description: 'Adobe Experience Platform Web SDK Extension Action Types in Adobe Experience Platform Launch '
+title: Tipi di azioni nell’estensione Adobe Experience Platform Web SDK
+description: Scopri i diversi tipi di azione forniti dall’estensione Adobe Experience Platform Web SDK in  Adobe Experience Platform Launch.
 translation-type: tm+mt
-source-git-commit: 473cc1f7617f1d65cdb70ff0e758178ea0174f00
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 70%
+source-wordcount: '352'
+ht-degree: 67%
 
 ---
 
