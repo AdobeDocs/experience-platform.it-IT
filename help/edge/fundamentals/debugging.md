@@ -1,13 +1,11 @@
 ---
-title: Eseguire il debug di
-seo-title: Debug Adobe Experience Platform Web SDK
-description: Scopri come attivare o disattivare  debug SDK Web per Experienci Platform
-seo-description: Scopri come attivare o disattivare  debug SDK Web per Experienci Platform
+title: Debug in Adobe Experience Platform Web SDK
+description: Scoprite come attivare/disattivare le funzionalità di debug nell’SDK Web per Experience Platform .
 keywords: debugging web sdk;debugging;configure;configure command;debug command;edgeConfigId;setDebug;debugEnabled;debug;
 translation-type: tm+mt
-source-git-commit: f63c897dd1a8a8ad9ef7ac025bf05b22265ea95a
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '384'
+source-wordcount: '392'
 ht-degree: 0%
 
 ---
@@ -25,7 +23,7 @@ Il debug è disattivato per impostazione predefinita, ma può essere attivato in
 
 ## Attivazione del debug con il comando Configura
 
-Quando configuri l’SDK con il `configure` comando, abilita il debug impostando l’ `debugEnabled` opzione su `true`.
+Per configurare l&#39;SDK con il comando `configure`, abilita il debug impostando l&#39;opzione `debugEnabled` su `true`.
 
 ```javascript
 alloy("configure", {
@@ -41,7 +39,7 @@ alloy("configure", {
 
 ## Attivazione del debug con il comando Debug
 
-Attiva il debug con un `debug` comando separato, come segue:
+Attiva il debug con un comando `debug` separato, come segue:
 
 ```javascript
 alloy("setDebug", {
@@ -49,29 +47,29 @@ alloy("setDebug", {
 });
 ```
 
-Se preferite non modificare il codice della pagina Web o non desiderate che i messaggi di registrazione vengano prodotti per tutti gli utenti del sito Web, questo è particolarmente utile perché potete eseguire il `debug` comando nella console JavaScript del browser in qualsiasi momento.
+Se si preferisce non modificare il codice della pagina Web o non si desidera che i messaggi di registrazione vengano prodotti per tutti gli utenti del sito Web, ciò è particolarmente utile perché è possibile eseguire il comando `debug` nella console JavaScript del browser in qualsiasi momento.
 
 ## Attivazione del debug con un parametro di stringa di query
 
-Per attivare o disattivare il debugging, impostare un parametro di stringa di `alloy_debug` query su `true` o `false` :
+Per attivare o disattivare il debug, impostare un parametro di stringa di query `alloy_debug` su `true` o `false` come segue:
 
 ```HTTP
 http://example.com/?alloy_debug=true
 ```
 
-Simile al `debug` comando, se preferite non modificare il codice della pagina Web o non desiderate che i messaggi di registrazione vengano prodotti per tutti gli utenti del sito Web, questo è particolarmente utile perché potete impostare il parametro della stringa di query quando caricate la pagina Web all&#39;interno del browser.
+Simile al comando `debug`, se si preferisce non modificare il codice della pagina Web o non si desidera che i messaggi di registrazione vengano prodotti per tutti gli utenti del sito Web, questo è particolarmente utile perché è possibile impostare il parametro della stringa di query quando si carica la pagina Web all&#39;interno del browser.
 
 ## Priorità e durata
 
-Quando il debugging viene impostato tramite il parametro della stringa di `debug` comando o query, sostituisce qualsiasi `debug` opzione impostata nel `configure` comando. In questi due casi, anche il debug rimane attivato per tutta la durata della sessione. In altre parole, se si abilita il debug utilizzando il comando di debug o il parametro della stringa di query, rimane attivato fino a quando non viene eseguita una delle operazioni seguenti:
+Quando il debug viene impostato tramite il parametro `debug` del comando o della stringa di query, sostituisce qualsiasi opzione `debug` impostata nel comando `configure`. In questi due casi, anche il debug rimane attivato per tutta la durata della sessione. In altre parole, se si abilita il debug utilizzando il comando di debug o il parametro della stringa di query, rimane attivato fino a quando non viene eseguita una delle operazioni seguenti:
 
 * Fine della sessione
-* Esecuzione del `debug` comando
+* Eseguire il comando `debug`
 * Impostare di nuovo il parametro della stringa di query
 
 ## Recupero delle informazioni sulla libreria
 
-Spesso è utile accedere ad alcuni dei dettagli della libreria caricata sul sito Web. A questo scopo, eseguite il `getLibraryInfo` comando come segue:
+Spesso è utile accedere ad alcuni dei dettagli della libreria caricata sul sito Web. A tal fine, eseguite il comando `getLibraryInfo` come segue:
 
 ```js
 alloy("getLibraryInfo").then(function(result) {
@@ -79,6 +77,6 @@ alloy("getLibraryInfo").then(function(result) {
 });
 ```
 
-Attualmente, l&#39; `libraryInfo` oggetto fornito contiene le proprietà seguenti:
+Attualmente, l&#39;oggetto `libraryInfo` fornito contiene le proprietà seguenti:
 
 * `version` Questa è la versione della libreria caricata. Ad esempio, se la versione della libreria caricata fosse 1.0.0, il valore sarebbe `1.0.0`.
