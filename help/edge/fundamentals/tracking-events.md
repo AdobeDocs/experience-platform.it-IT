@@ -1,21 +1,19 @@
 ---
-title: Tracciamento degli eventi
-seo-title: Tracciamento degli eventi SDK Web per Adobe Experience Platform
-description: Scopri come tenere traccia  eventi SDK Web per Experienci Platform
-seo-description: Scopri come tenere traccia  eventi SDK Web per Experienci Platform
+title: Tenere traccia degli eventi mediante l’SDK Web per Adobe Experience Platform
+seo-description: Scoprite come tenere traccia degli eventi Adobe Experience Platform Web SDK.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 51a846124f71012b2cb324cc1469ec7c9753e574
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '1331'
+source-wordcount: '1334'
 ht-degree: 0%
 
 ---
 
 
-# Tracciamento degli eventi
+# Tracciare gli eventi
 
-Per inviare i dati dell&#39;evento ad Adobe Experience Cloud, utilizzate il `sendEvent` comando. Il `sendEvent` comando è il modo principale per inviare i dati al [!DNL Experience Cloud]destinatario e per recuperare contenuti, identità e destinazioni personalizzate.
+Per inviare i dati dell&#39;evento ad Adobe Experience Cloud, utilizzate il comando `sendEvent`. Il comando `sendEvent` è il modo principale per inviare i dati a [!DNL Experience Cloud] e per recuperare contenuti, identità e destinazioni personalizzate.
 
 I dati inviati ad Adobe Experience Cloud rientrano in due categorie:
 
@@ -26,7 +24,7 @@ I dati inviati ad Adobe Experience Cloud rientrano in due categorie:
 
 I dati XDM sono un oggetto il cui contenuto e la cui struttura corrispondono a uno schema creato in Adobe Experience Platform. [Ulteriori informazioni sulla creazione di uno schema.](../../xdm/tutorials/create-schema-ui.md)
 
-Qualsiasi dato XDM che desideri far parte dell&#39;analisi, della personalizzazione, dei tipi di pubblico o delle destinazioni deve essere inviato utilizzando l&#39; `xdm` opzione.
+Eventuali dati XDM che desiderate far parte di analisi, personalizzazione, audience o destinazioni devono essere inviati utilizzando l&#39;opzione `xdm`.
 
 
 ```javascript
@@ -44,7 +42,7 @@ alloy("sendEvent", {
 });
 ```
 
-È possibile che passi un certo tempo tra il momento in cui il `sendEvent` comando viene eseguito e il momento in cui i dati vengono inviati al server (ad esempio, se la libreria SDK Web non è stata caricata completamente o se il consenso non è ancora stato ricevuto). Se si desidera modificare una parte dell&#39; `xdm` oggetto dopo l&#39;esecuzione del `sendEvent` comando, è consigliabile duplicare l&#39; `xdm` oggetto _prima_ dell&#39;esecuzione del `sendEvent` comando. Esempio:
+È possibile che passi un certo tempo tra l&#39;esecuzione del comando `sendEvent` e l&#39;invio dei dati al server (ad esempio, se la libreria SDK Web non è stata caricata completamente o se il consenso non è ancora stato ricevuto). Se si intende modificare una parte qualsiasi dell&#39;oggetto `xdm` dopo l&#39;esecuzione del comando `sendEvent`, è consigliabile duplicare l&#39;oggetto `xdm` _prima_ eseguendo il comando `sendEvent`. Esempio:
 
 ```javascript
 var clone = function(value) {
@@ -71,7 +69,7 @@ alloy("sendEvent", {
 dataLayer.commerce = null;
 ```
 
-In questo esempio, il livello dati viene clonato serializzandolo in JSON e quindi deserializzandolo. Quindi, il risultato clonato viene passato nel `sendEvent` comando. In questo modo si assicura che il `sendEvent` comando disponga di un&#39;istantanea del livello dati così come esisteva quando il `sendEvent` comando è stato eseguito, in modo che le modifiche successive all&#39;oggetto livello dati originale non si riflettano nei dati inviati al server. Se utilizzate un livello dati basato su eventi, è probabile che la duplicazione dei dati sia già gestita automaticamente. Ad esempio, se utilizzate il Livello [dati client](https://github.com/adobe/adobe-client-data-layer/wiki)Adobe, il `getState()` metodo fornisce un&#39;istantanea calcolata e clonata di tutte le modifiche precedenti. Questo viene gestito automaticamente anche se utilizzi l’estensione AEP Web SDK Launch.
+In questo esempio, il livello dati viene clonato serializzandolo in JSON e quindi deserializzandolo. Quindi, il risultato clonato viene passato nel comando `sendEvent`. In questo modo si assicura che il comando `sendEvent` abbia un&#39;istantanea del livello dati così come era presente quando il comando `sendEvent` è stato eseguito, in modo che le modifiche successive all&#39;oggetto livello dati originale non vengano riflesse nei dati inviati al server. Se utilizzate un livello dati basato su eventi, è probabile che la duplicazione dei dati sia già gestita automaticamente. Ad esempio, se si utilizza il [ Adobe Client Data Layer](https://github.com/adobe/adobe-client-data-layer/wiki), il metodo `getState()` fornisce un&#39;istantanea calcolata e duplicata di tutte le modifiche precedenti. Questo viene gestito automaticamente anche se utilizzi l’estensione AEP Web SDK Launch.
 
 >[!NOTE]
 >
@@ -83,7 +81,7 @@ Al momento, l&#39;invio di dati che non corrispondono a uno schema XDM non è su
 
 ### Impostazione `eventType`
 
-In un evento di esperienza XDM, è presente un `eventType` campo facoltativo. Contiene il tipo di evento principale per il record. L&#39;impostazione di un tipo di evento può facilitare la distinzione tra i diversi eventi da inviare. XDM fornisce diversi tipi di evento predefiniti che è possibile utilizzare oppure creare sempre tipi di evento personalizzati per i casi di utilizzo. Di seguito è riportato un elenco di tutti i tipi di evento predefiniti forniti da XDM. [Per saperne di più, consulta il repo](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values)pubblico XDM.
+In un evento di esperienza XDM, è presente un campo facoltativo `eventType`. Contiene il tipo di evento principale per il record. L&#39;impostazione di un tipo di evento può facilitare la distinzione tra i diversi eventi da inviare. XDM fornisce diversi tipi di evento predefiniti che è possibile utilizzare oppure creare sempre tipi di evento personalizzati per i casi di utilizzo. Di seguito è riportato un elenco di tutti i tipi di evento predefiniti forniti da XDM. [Per saperne di più, consulta il repo](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values) pubblico XDM.
 
 
 | **Tipo evento:** | **Definizione:** |
@@ -112,7 +110,7 @@ In un evento di esperienza XDM, è presente un `eventType` campo facoltativo. Co
 | delivery.feedback | Eventi di feedback per una consegna. Esempi di eventi di feedback per la consegna di un&#39;e-mail |
 
 
-Questi tipi di evento saranno visualizzati in un menu a discesa se utilizzate l&#39;estensione Adobe Experience Platform Launch  oppure potete sempre trasmetterli senza Experience Platform Launch. Possono essere passati come parte dell&#39; `xdm` opzione.
+Questi tipi di evento saranno visualizzati in un menu a discesa se utilizzate l&#39;estensione Adobe Experience Platform Launch  oppure potete sempre trasmetterli senza Experience Platform Launch. Possono essere passati come parte dell&#39;opzione `xdm`.
 
 
 ```javascript
@@ -131,7 +129,7 @@ alloy("sendEvent", {
 });
 ```
 
-In alternativa, `eventType` è possibile passare al comando dell&#39;evento utilizzando l&#39; `type` opzione. Dietro le quinte, questo viene aggiunto ai dati XDM. Questa `type` opzione consente di impostare più facilmente il payload `eventType` senza dover modificare XDM.
+In alternativa, è possibile trasmettere il `eventType` al comando dell&#39;evento utilizzando l&#39;opzione `type`. Dietro le quinte, questo viene aggiunto ai dati XDM. L&#39;opzione `type` consente di impostare più facilmente il `eventType` senza dover modificare il payload XDM.
 
 
 ```javascript
@@ -145,7 +143,7 @@ alloy("sendEvent", {
 
 ### Sostituzione dell’ID del set di dati
 
-In alcuni casi d’uso, potrebbe essere utile inviare un evento a un set di dati diverso da quello configurato nell’interfaccia utente di configurazione. Per questo è necessario impostare l&#39; `datasetId` opzione sul `sendEvent` comando:
+In alcuni casi d’uso, potrebbe essere utile inviare un evento a un set di dati diverso da quello configurato nell’interfaccia utente di configurazione. Per questo è necessario impostare l&#39;opzione `datasetId` sul comando `sendEvent`:
 
 
 ```javascript
@@ -160,11 +158,11 @@ alloy("sendEvent", {
 
 ### Aggiunta di informazioni sull&#39;identità
 
-È inoltre possibile aggiungere informazioni sull&#39;identità personalizzata all&#39;evento. Consultate [Recupero  ID](../identity/overview.md)Experience Cloud.
+È inoltre possibile aggiungere informazioni sull&#39;identità personalizzata all&#39;evento. Vedere [Recupero  ID Experience Cloud](../identity/overview.md).
 
 ## Utilizzo dell&#39;API sendBeacon
 
-Può essere difficile inviare i dati dell&#39;evento subito prima che l&#39;utente della pagina Web se ne vada. Se la richiesta richiede troppo tempo, il browser potrebbe annullare la richiesta. Alcuni browser hanno implementato un&#39;API standard Web chiamata `sendBeacon` per consentire una raccolta più semplice dei dati durante questo periodo. Quando si utilizza `sendBeacon`, il browser effettua la richiesta Web nel contesto di navigazione globale. Questo significa che il browser esegue la richiesta del beacon in background e non blocca la navigazione della pagina. Per indicare [!DNL Web SDK] ad Adobe Experience Platform di utilizzare `sendBeacon`, aggiungete l&#39;opzione `"documentUnloading": true` al comando dell&#39;evento.  Ecco un esempio:
+Può essere difficile inviare i dati dell&#39;evento subito prima che l&#39;utente della pagina Web se ne vada. Se la richiesta richiede troppo tempo, il browser potrebbe annullare la richiesta. Alcuni browser hanno implementato un&#39;API standard Web denominata `sendBeacon` per consentire la raccolta dei dati in questo periodo con maggiore facilità. Quando si utilizza `sendBeacon`, il browser effettua la richiesta Web nel contesto di navigazione globale. Questo significa che il browser esegue la richiesta del beacon in background e non blocca la navigazione della pagina. Per indicare ad Adobe Experience Platform [!DNL Web SDK] di utilizzare `sendBeacon`, aggiungere l&#39;opzione `"documentUnloading": true` al comando dell&#39;evento.  Ecco un esempio:
 
 
 ```javascript
@@ -183,7 +181,7 @@ alloy("sendEvent", {
 });
 ```
 
-I browser hanno imposto limiti alla quantità di dati che possono essere inviati `sendBeacon` contemporaneamente. In molti browser, il limite è 64 K. Se il browser rifiuta l’evento perché il payload è troppo grande, Adobe Experience Platform [!DNL Web SDK] torna a utilizzare il suo metodo di trasporto normale (ad esempio, fetch).
+I browser hanno imposto limiti alla quantità di dati che è possibile inviare contemporaneamente con `sendBeacon`. In molti browser, il limite è 64 K. Se il browser rifiuta l&#39;evento perché il payload è troppo grande, Adobe Experience Platform [!DNL Web SDK] torna a utilizzare il normale metodo di trasporto (ad esempio, fetch).
 
 ## Gestione delle risposte dagli eventi
 
@@ -213,7 +211,7 @@ alloy("sendEvent", {
 
 ## Modifica degli eventi a livello globale {#modifying-events-globally}
 
-Se desiderate aggiungere, rimuovere o modificare i campi dall’evento a livello globale, potete configurare un `onBeforeEventSend` callback.  Questa callback viene chiamata ogni volta che un evento viene inviato.  Questo callback viene passato in un oggetto evento con un `xdm` campo.  Modificare `event.xdm` per modificare i dati inviati nell&#39;evento.
+Se desiderate aggiungere, rimuovere o modificare i campi dall&#39;evento a livello globale, potete configurare un callback `onBeforeEventSend`.  Questa callback viene chiamata ogni volta che un evento viene inviato.  Questo callback viene passato in un oggetto evento con un campo `xdm`.  Modificare `event.xdm` per modificare i dati inviati nell&#39;evento.
 
 
 ```javascript
@@ -234,10 +232,10 @@ alloy("configure", {
 `xdm` i campi sono impostati in questo ordine:
 
 1. Valori passati come opzioni al comando evento `alloy("sendEvent", { xdm: ... });`
-2. Raccolti automaticamente i valori.  Consultate Informazioni [](../data-collection/automatic-information.md)automatiche.
-3. Modifiche apportate al `onBeforeEventSend` callback.
+2. Raccolti automaticamente i valori.  (Vedere [Informazioni automatiche](../data-collection/automatic-information.md).)
+3. Modifiche apportate al callback `onBeforeEventSend`.
 
-Se il `onBeforeEventSend` callback genera un’eccezione, l’evento viene comunque inviato; tuttavia, nessuna delle modifiche apportate all’interno del callback viene applicata all’evento finale.
+Se il callback `onBeforeEventSend` genera un&#39;eccezione, l&#39;evento viene comunque inviato; tuttavia, nessuna delle modifiche apportate all’interno del callback viene applicata all’evento finale.
 
 ## potenziali errori fruibili
 
