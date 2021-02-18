@@ -1,19 +1,17 @@
 ---
-title: Interazione con più proprietà
-seo-title: Adobe Experience Platform Web SDK Interazione con più proprietà
-description: Scopri come interagire con più proprietà SDK Web  Experience Platform
-seo-description: Scopri come interagire con più proprietà SDK Web  Experience Platform
-keywords: multiple properties;configure;sendEvent;edgeConfigId;orgId;
+title: Interagire con più proprietà nell’SDK Adobe Experience Platform Web
+description: Scopri come interagire con più proprietà SDK Web  Experience Platform.
+keywords: più proprietà;configurare;sendEvent;edgeConfigId;orgId;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '245'
 ht-degree: 1%
 
 ---
 
 
-# Interazione con più proprietà
+# Interagisci con più proprietà
 
 In alcuni casi può essere utile interagire con due proprietà diverse sulla stessa pagina. Comprendono:
 
@@ -21,7 +19,7 @@ In alcuni casi può essere utile interagire con due proprietà diverse sulla ste
 * Relazioni di condivisione dei dati tra più società
 * Clienti che stanno testando nuove soluzioni  Adobe e non desiderano interrompere la loro implementazione esistente
 
-L’SDK consente di creare un’istanza separata per ciascuna proprietà aggiungendo un altro nome all’array nel codice di base. Nell&#39;esempio seguente sono stati forniti due nomi `mycustomname1` e `mycustomname2`.
+L’SDK consente di creare un’istanza separata per ciascuna proprietà aggiungendo un altro nome all’array nel codice di base. Nell&#39;esempio seguente sono stati forniti due nomi, `mycustomname1` e `mycustomname2`.
 
 ```markup
 <script>
@@ -33,7 +31,7 @@ L’SDK consente di creare un’istanza separata per ciascuna proprietà aggiung
 <script src="alloy.js" async></script>
 ```
 
-Di conseguenza, lo script crea due istanze dell&#39;SDK. Viene denominata la funzione globale per l’interazione con la prima istanza `mycustomname1` e viene denominata la funzione globale per l’interazione con la seconda `mycustomname2`.
+Di conseguenza, lo script crea due istanze dell&#39;SDK. La funzione globale per l&#39;interazione con la prima istanza è denominata `mycustomname1` e la funzione globale per l&#39;interazione con la seconda istanza è denominata `mycustomname2`.
 
 Creando due istanze separate, ciascuna può essere configurata per una proprietà diversa. Qualsiasi comunicazione o persistenza di dati che si verifica a causa dell&#39;interazione con `mycustomname1` viene mantenuta isolata da `mycustomname2` e viceversa.
 
@@ -63,8 +61,8 @@ mycustomname2("sendEvent", {
 });
 ```
 
-Assicurarsi di eseguire il `configure` comando per ogni istanza prima di eseguire altri comandi sulla stessa istanza.
+Assicurarsi di eseguire il comando `configure` per ogni istanza prima di eseguire altri comandi sulla stessa istanza.
 
 ## Limitazioni 
 
-Per evitare conflitti con i cookie, una sola istanza di Adobe Experience Platform [!DNL Web SDK] all’interno di una pagina può avere una particolare `edgeConfigId`.  Analogamente, solo un&#39;istanza di Adobe Experience Platform [!DNL Web SDK] può avere una particolare `orgId`.
+Per evitare conflitti con i cookie, solo un&#39;istanza di Adobe Experience Platform [!DNL Web SDK] all&#39;interno di una pagina può avere un `edgeConfigId` particolare.  Analogamente, solo un&#39;istanza di Adobe Experience Platform [!DNL Web SDK] può avere un `orgId` particolare.
