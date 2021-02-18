@@ -1,19 +1,17 @@
 ---
-title: Panoramica di IAB Transparency & Consent Framework 2.0
-seo-title: Supporto delle preferenze di consenso di Adobe Experience Platform Web SDK da Interactive Advertising Bureau Transparency & Consent Framework 2.0
-description: Scopri come supportare le preferenze di consenso di IAB TCF 2.0 con  Experience Platform Web SDK
-seo-description: Scopri come supportare le preferenze di consenso di IAB TCF 2.0 con  Experience Platform Web SDK
+title: Supporto per IAB TCF 2.0 nell’SDK Web per Adobe Experience Platform
+description: Scoprite come supportare le preferenze di consenso di IAB TCF 2.0 tramite Adobe Experience Platform Web SDK
 keywords: consenso;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Profile
 translation-type: tm+mt
-source-git-commit: 49c984a60fd699706eec508ec1d786340df40b57
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '878'
 ht-degree: 0%
 
 ---
 
 
-# Panoramica di IAB Transparency &amp; Consent Framework 2.0
+# Supporto per IAB TCF 2.0 nell’SDK Web per Adobe Experience Platform
 
 Adobe Experience Platform Web SDK supporta Interactive Advertising Bureau Transparency &amp; Consent Framework, versione 2.0 (IAB TCF 2.0). Questa guida illustra i requisiti per il supporto di IAB TCF 2.0 tramite Adobe Experience Platform Web SDK integrato con Real-time Customer Data Platform,  Audience Manager, Eventi esperienza,  Adobe Analytics ed Experience Edge.
 
@@ -62,7 +60,7 @@ Le sezioni seguenti descrivono i punti di integrazione principali tra IAB TCF 2.
 
 >[!NOTE]
 >
->Anche senza la configurazione del CDP in tempo reale o del Audience Manager , è comunque possibile integrare IAB TCF 2.0 con l&#39;SDK Web. Le preferenze di consenso possono essere utilizzate per controllare la raccolta di Experience Events e per impostare un cookie di identità.
+>Anche senza l&#39;impostazione del CDP in tempo reale o del Audience Manager , è comunque possibile integrare IAB TCF 2.0 con l&#39;SDK Web. Le preferenze di consenso possono essere utilizzate per controllare la raccolta di Experience Events e per impostare un cookie di identità.
 
 ### Consenso predefinito
 
