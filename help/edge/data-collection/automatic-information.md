@@ -1,21 +1,19 @@
 ---
-title: Informazioni raccolte automaticamente
-seo-title: Informazioni raccolte automaticamente da Adobe Experience Platform Web SDK
-description: Descrizione di ciascuna informazione raccolta automaticamente da Adobe Experience Cloud SDK
-seo-description: Descrizione di ciascuna informazione raccolta automaticamente da Adobe Experience Cloud SDK
-keywords: collect information;context;configure;device;screenHeight;screen Height;screenOrientation;screen Orientation;screenWidth;screen Width;environment;viewportHeight;viewport Height;viewportWidth;viewport Width;crowserDetails;browser details;implementationDetails;implementation Details;name;version;placeContext;localTime;local Time;localTimezoneOffset;local Timezone Offset;timestamp;web;url;webPageDetails;web Page Details;webReferrer;web Referrer;landscape;portrait;
+title: Raccolta automatica di informazioni nell’SDK Web per Adobe Experience Platform
+description: Panoramica di ogni informazione che l’SDK Adobe Experience Platform raccoglie automaticamente.
+keywords: raccogliere informazioni;contesto;configurare;dispositivo;screenHeight;screenHeight;screenOrientation;screenWidth;screenWidth;environment;viewportHeight;viewport Height;viewportWidth;viewportWidth;viewportWidth;crowpalcoDetails;applicationDetails;implementationDetails;name;placeContext;localTime;localTimezoneOffset;localTimezone;web timemark;timeestamp;url;webPageDetails;web Page Details;webReferrer;web Referrer;landscape;portrait;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '385'
-ht-degree: 8%
+source-wordcount: '422'
+ht-degree: 7%
 
 ---
 
 
 # Informazioni raccolte automaticamente
 
-Adobe Experience Platform Web SDK raccoglie automaticamente una serie di informazioni senza alcuna configurazione speciale. Tuttavia, queste informazioni possono essere disattivate se necessario utilizzando l&#39; `context` opzione nel `configure` comando. [Consultate Configurazione dell’SDK](../fundamentals/configuring-the-sdk.md). Di seguito è riportato un elenco di queste informazioni. Il nome tra parentesi indica la stringa da utilizzare per la configurazione del contesto.
+Adobe Experience Platform Web SDK raccoglie automaticamente una serie di informazioni senza alcuna configurazione speciale. Tuttavia, queste informazioni possono essere disattivate se necessario utilizzando l&#39;opzione `context` nel comando `configure`. [Consultate Configurazione dell’SDK](../fundamentals/configuring-the-sdk.md). Di seguito è riportato un elenco di queste informazioni. Il nome tra parentesi indica la stringa da utilizzare per la configurazione del contesto.
 
 ## Dispositivo (`device`)
 
@@ -110,7 +108,7 @@ Informazioni sulla posizione dell’utente finale.
 | ------------------------------------- | ------------------------------- |
 | `events[].xdm.placeContext.localTime` | `2019-08-07T15:47:17.129-07:00` |
 
-Timestamp locale per l’utente finale in formato ISO semplificato esteso [ISO 8601](https://tools.ietf.org/html/rfc3339#section-5.6).
+Timestamp locale per l&#39;utente finale in formato ISO semplificato esteso [ISO 8601](https://tools.ietf.org/html/rfc3339#section-5.6).
 
 ### Offset fuso orario locale
 
