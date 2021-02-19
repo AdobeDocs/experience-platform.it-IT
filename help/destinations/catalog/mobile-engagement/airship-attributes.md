@@ -3,9 +3,9 @@ keywords: attributi di volo;destinazione di volo
 title: Collegamento attributi di volo
 description: Trasmettete senza problemi  dati di pubblico Adobe a Airship come attributi di pubblico per il targeting all'interno di Airship.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1141'
 ht-degree: 1%
 
 ---
@@ -89,7 +89,7 @@ Una volta confermate le credenziali e che Adobe Experience Platform è connesso 
 
 Nel passaggio **[!UICONTROL Authentication]**, immettete un **[!UICONTROL Name]** e un **[!UICONTROL Description]** per il flusso di attivazione.
 
-Inoltre, in questo passaggio è possibile selezionare un centro dati USA o UE, a seconda del centro dati [!DNL Airship] applicato a questa destinazione. Infine, selezionare uno o più casi di utilizzo del marketing per i quali i dati verranno esportati nella destinazione. Puoi scegliere tra  casi di utilizzo di marketing definiti dal Adobe o creare un tuo. Per ulteriori informazioni sui casi di utilizzo del marketing, vedere la [panoramica dei criteri di utilizzo dei dati](../../../data-governance/policies/overview.md).
+Inoltre, in questo passaggio è possibile selezionare un centro dati USA o UE, a seconda del centro dati [!DNL Airship] applicato a questa destinazione. Infine, selezionare uno o più **[!UICONTROL Marketing Actions]** per i quali verranno esportati i dati nella destinazione. Puoi scegliere tra  azioni di marketing definite dal Adobe o creare azioni personalizzate. Per ulteriori informazioni sulle azioni di marketing, consulta la [Panoramica sulle politiche di utilizzo dei dati](../../../data-governance/policies/overview.md).
 
 Selezionare **[!UICONTROL Create Destination]** dopo aver compilato i campi riportati sopra.
 
@@ -119,7 +119,7 @@ Nel passaggio **[!UICONTROL Mapping]**, selezionare gli attributi e le identità
 
 ![schermata iniziale mappatura identità](../../assets/catalog/mobile-engagement/airship/identity-mapping.png)
 
-[!DNL Airship] gli attributi possono essere impostati su un canale, che rappresenta l&#39;istanza del dispositivo, ad esempio l&#39;iPhone, o un utente con nome, che mappa tutti i dispositivi di un utente con un identificatore comune, ad esempio un ID cliente. Se nello schema sono presenti indirizzi e-mail di testo normale (senza hash) come identità principale, selezionare il campo e-mail in **[!UICONTROL Source Attributes]** e mappare l&#39;utente [!DNL Airship] denominato nella colonna destra sotto **[!UICONTROL Target Identities]**, come mostrato di seguito.
+[!DNL Airship] gli attributi possono essere impostati su un canale, che rappresenta l&#39;istanza del dispositivo, ad esempio l&#39;iPhone, o un utente con nome, che mappa tutti i dispositivi di un utente a un identificatore comune, ad esempio un ID cliente. Se nello schema sono presenti indirizzi e-mail di testo normale (senza hash) come identità principale, selezionare il campo e-mail in **[!UICONTROL Source Attributes]** e mappare l&#39;utente [!DNL Airship] denominato nella colonna destra sotto **[!UICONTROL Target Identities]**, come mostrato di seguito.
 
 ![Mappatura utente con nome](../../assets/catalog/mobile-engagement/airship/mapping.png)
 
