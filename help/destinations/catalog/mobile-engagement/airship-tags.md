@@ -3,9 +3,9 @@ keywords: targhette di bordo;destinazione di volo
 title: Collegamento tag aerei
 description: Trasmettete senza problemi  dati Adobi di pubblico a Airship come tag di pubblico per il targeting all'interno di Airship.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1133'
 ht-degree: 1%
 
 ---
@@ -99,7 +99,7 @@ Una volta confermate le credenziali e che Adobe Experience Platform è connesso 
 
 Nel passaggio **[!UICONTROL Authentication]**, immettete un **[!UICONTROL Name]** e un **[!UICONTROL Description]** per il flusso di attivazione.
 
-Inoltre, in questo passaggio è possibile selezionare un centro dati USA o UE, a seconda del centro dati [!DNL Airship] applicato a questa destinazione. Infine, selezionare uno o più casi di utilizzo del marketing per i quali i dati verranno esportati nella destinazione. Puoi scegliere tra  casi di utilizzo di marketing definiti dal Adobe o creare un tuo. Per ulteriori informazioni sui casi di utilizzo del marketing, vedere la [panoramica dei criteri di utilizzo dei dati](../../../data-governance/policies/overview.md).
+Inoltre, in questo passaggio è possibile selezionare un centro dati USA o UE, a seconda del centro dati [!DNL Airship] applicato a questa destinazione. Infine, selezionare uno o più **[!UICONTROL Marketing Actions]** per i quali verranno esportati i dati nella destinazione. Puoi scegliere tra  azioni di marketing definite dal Adobe o creare azioni personalizzate. Per ulteriori informazioni sulle azioni di marketing, consulta la [Panoramica sulle politiche di utilizzo dei dati](../../../data-governance/policies/overview.md).
 
 Selezionare **[!UICONTROL Create Destination]** dopo aver compilato i campi riportati sopra.
 
