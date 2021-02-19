@@ -3,9 +3,9 @@ keywords: email;Email;e-mail;destinazioni e-mail; destinazione risposta oracle
 title: ' connessione Oracle Responsys'
 description: Responsys è uno strumento di marketing e-mail aziendale per campagne di marketing multicanale offerte da  Oracle per personalizzare le interazioni tra e-mail, dispositivi mobili, display e social.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '566'
 ht-degree: 0%
 
 ---
@@ -38,8 +38,10 @@ Per le connessioni **[!UICONTROL SFTP with SSH Key]**, è necessario fornire Dom
 Nel passaggio **[!UICONTROL Setup]**, compila le informazioni rilevanti per la tua destinazione come indicato di seguito:
 - **[!UICONTROL Name]**: Scegli un nome appropriato per la tua destinazione.
 - **[!UICONTROL Description]**: Inserite una descrizione per la destinazione.
+- **[!UICONTROL Bucket name]**: Il bucket  Amazon S3, dove Platform depositerà l&#39;esportazione dei dati. La lunghezza dell&#39;input deve essere compresa tra 3 e 63 caratteri. Deve iniziare e terminare con una lettera o un numero. Deve contenere solo lettere minuscole, numeri o trattini ( - ). Non deve essere formattato come indirizzo IP (ad esempio, 192.100.1.1).
 - **[!UICONTROL Folder Path]**: Specificate il percorso nel percorso di archiviazione in cui Platform depositerà i dati di esportazione come file CSV o delimitati da tabulazioni.
 - **[!UICONTROL File Format]**:  **** CSVo  **TAB_DELIMITED**. Selezionare il formato di file da esportare nel percorso di memorizzazione.
+- **[!UICONTROL Marketing actions]**: Le azioni di marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi selezionare  azioni di marketing definite dal Adobe o creare azioni di marketing personalizzate. Per ulteriori informazioni sulle azioni di marketing, vedi la pagina [Governance dei dati in Adobe Experience Platform](../../../data-governance/policies/overview.md). Per informazioni sulle singole azioni di marketing definite dal Adobe , consultate la [Panoramica sulle politiche di utilizzo dei dati](../../../data-governance/policies/overview.md).
 
 ![Rispondi alle informazioni di base](../../assets/catalog/email-marketing/oracle-responsys/basic-information.png)
 
