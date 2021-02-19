@@ -5,9 +5,9 @@ seo-title: Panoramica sulle destinazioni
 description: Scopri come attivare i dati Adobe Experience Platform nelle destinazioni per campagne di marketing multicanale, e-mail, pubblicità mirata e altro ancora.
 seo-description: Le destinazioni sono integrazioni predefinite con piattaforme di destinazione che consentono l'attivazione senza soluzione di continuità dei dati da Adobe Experience Platform. Puoi utilizzare Destinazioni in Adobe Experience Platform per attivare i dati noti e sconosciuti per campagne di marketing multicanale, campagne e-mail, pubblicità mirata e molti altri casi di utilizzo.
 translation-type: tm+mt
-source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '489'
 ht-degree: 1%
 
 ---
@@ -53,12 +53,12 @@ Per ulteriori informazioni sui controlli di accesso, vedere la [Guida utente del
 
 La governance dei dati è applicata alle destinazioni della piattaforma tramite:
 
-* *Casi di utilizzo del marketing* che potete selezionare nel flusso di lavoro di creazione delle destinazioni;
-* *Criteri* di utilizzo dei dati che limitano l&#39;attivazione dei dati contenenti determinate etichette di utilizzo a destinazioni con determinati casi di utilizzo di marketing.
+* *Azioni* di marketing selezionabili nel flusso di lavoro di creazione delle destinazioni;
+* *Criteri* di utilizzo dei dati che limitano l&#39;attivazione dei dati contenenti determinate etichette di utilizzo a destinazioni con determinate azioni di marketing.
 
-Per ulteriori informazioni su [!DNL Data Governance] casi di utilizzo del marketing[casi di utilizzo del marketing](../data-governance/policies/overview.md) e [risoluzione delle violazioni dei criteri dei dati](../data-governance/enforcement/auto-enforcement.md), consultare la sezione  della documentazione della piattaforma.
+Per ulteriori informazioni sulle [!DNL Data Governance] azioni di marketing[azioni di marketing](../data-governance/policies/overview.md) e sulla [risoluzione delle violazioni dei criteri per i dati](../data-governance/enforcement/auto-enforcement.md), vedi la sezione  della documentazione della piattaforma.
 
-Per ulteriori informazioni sulla selezione dei casi di utilizzo del marketing nel flusso di lavoro di creazione della destinazione, consulta le pagine seguenti per i diversi tipi di destinazione in Piattaforma:
+Per ulteriori informazioni sulla selezione di azioni di marketing nel flusso di lavoro di creazione della destinazione, consulta le pagine seguenti per i diversi tipi di destinazione in Piattaforma:
 
 * [Destinazioni pubblicitarie - Google Ad Manager  ](./catalog/advertising/google-ad-manager.md)
 * [Destinazioni pubblicitarie - Google Ads](./catalog/advertising/google-ads-destination.md)
