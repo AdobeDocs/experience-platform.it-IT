@@ -3,9 +3,9 @@ keywords: 'pubblicità; bing; '
 title: Connessione Microsoft Bing
 description: Con la destinazione di connessione di Microsoft Bing, è possibile eseguire il retargeting e campagne digitali mirate per l'audience in Microsoft Display Advertising.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '434'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ Nel passaggio [!UICONTROL Authentication], è necessario immettere i dettagli di
 * **[!UICONTROL Name]**: Un nome con cui riconoscerete questa destinazione in futuro.
 * **[!UICONTROL Description]**: Descrizione che ti aiuterà a identificare questa destinazione in futuro.
 * **[!UICONTROL Account ID]**: Il [!DNL Bing Ads CID].
-* **[!UICONTROL Marketing use case]**: I casi di utilizzo del marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra  casi di utilizzo di marketing definiti dal Adobe o creare un caso di utilizzo di marketing personale. Per ulteriori informazioni sui casi di utilizzo del marketing, vedere la pagina [Governance dei dati in Adobe Experience Platform](../../../data-governance/policies/overview.md). Per informazioni sui singoli casi d&#39;uso di marketing definiti dal Adobe , vedere la [panoramica dei criteri di utilizzo dei dati](../../../data-governance/policies/overview.md).
+* **[!UICONTROL Marketing action]**: Le azioni di marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi selezionare  azioni di marketing definite dal Adobe o creare azioni di marketing personalizzate. Per ulteriori informazioni sulle azioni di marketing, vedi la pagina [Governance dei dati in Adobe Experience Platform](../../../data-governance/policies/overview.md). Per informazioni sulle singole azioni di marketing definite dal Adobe , consultate la [Panoramica sulle politiche di utilizzo dei dati](../../../data-governance/policies/overview.md).
 
 ![Autenticazione destinazione Bing Microsoft](../../assets/catalog/advertising/bing/authentication.png)
 
