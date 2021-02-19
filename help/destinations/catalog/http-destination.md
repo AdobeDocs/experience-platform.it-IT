@@ -3,9 +3,9 @@ keywords: streaming;
 title: Connessione HTTP
 description: La destinazione HTTP in Adobe Experience Platform consente di inviare i dati del profilo a endpoint HTTP di terze parti.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 5435661d750c4138ea6a2d40619a48236b7b1e4f
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '509'
 ht-degree: 2%
 
 ---
@@ -58,6 +58,7 @@ Nel passaggio [!UICONTROL Authentication], immettete le credenziali di autentica
 - **[!UICONTROL Name]**: immettete un nome in base al quale riconoscerete questa destinazione in futuro.
 - **[!UICONTROL Description]**: immettete una descrizione che vi aiuterà a identificare questa destinazione in futuro.
 - **[!UICONTROL Custom Headers]**: immettete le intestazioni personalizzate che desiderate includere nelle chiamate di destinazione, in questo formato:  `header1:value1,header2:value2,...headerN:valueN`.
+- **[!UICONTROL Marketing actions]**: Le azioni di marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi selezionare  azioni di marketing definite dal Adobe o creare azioni di marketing personalizzate. Per ulteriori informazioni sulle azioni di marketing, vedi la pagina [Governance dei dati in Adobe Experience Platform](/help/data-governance/policies/overview.md). Per informazioni sulle singole azioni di marketing definite dal Adobe , consultate la [Panoramica sulle politiche di utilizzo dei dati](/help/data-governance/policies/overview.md).
 
 >[!IMPORTANT]
 >
@@ -65,7 +66,7 @@ Nel passaggio [!UICONTROL Authentication], immettete le credenziali di autentica
 
 ![Autenticazione HTTP](../assets/catalog/http/authenticate.png)
 
-**[!UICONTROL Marketing use case]**: I casi di utilizzo del marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra  casi di utilizzo di marketing definiti dal Adobe o creare un caso di utilizzo di marketing personale. Per ulteriori informazioni sui casi di utilizzo del marketing, vedere la [panoramica dei criteri di utilizzo dei dati](../../data-governance/policies/overview.md).
+**[!UICONTROL Marketing action]**: Le azioni di marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi selezionare  azioni di marketing definite dal Adobe o creare azioni di marketing personalizzate. Per ulteriori informazioni sulle azioni di marketing, consulta la [Panoramica sulle politiche di utilizzo dei dati](../../data-governance/policies/overview.md).
 
 Fai clic su **[!UICONTROL Create destination]**.
 
