@@ -6,9 +6,9 @@ seo-title: Attivare profili e segmenti su una destinazione
 description: Attiva i dati in Adobe Experience Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 seo-description: Attiva i dati in Adobe Experience Platform mappando i segmenti alle destinazioni. A questo scopo, attenetevi alla procedura indicata di seguito.
 translation-type: tm+mt
-source-git-commit: ef0f7e20a55804c013756e261818c2ee2df4d103
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '2058'
+source-wordcount: '2057'
 ht-degree: 0%
 
 ---
@@ -234,7 +234,7 @@ Inoltre, potete contrassegnare attributi diversi come obbligatori. Se un attribu
 
 >
 > 
-Ad esempio, se nel campo `person.name.firstName` sono presenti delle etichette di utilizzo dei dati in conflitto con il caso di utilizzo marketing della destinazione, nel passaggio della revisione viene visualizzata una violazione del criterio di utilizzo dei dati. Per ulteriori informazioni, vedere [Governance dei dati in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+Ad esempio, se nel campo `person.name.firstName` sono presenti delle etichette di utilizzo dei dati in conflitto con l&#39;azione di marketing della destinazione, nel passaggio della revisione viene visualizzata una violazione dei criteri di utilizzo dei dati. Per ulteriori informazioni, vedere [Governance dei dati in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 ### **[!UICONTROL Review]** step  {#review}
 
