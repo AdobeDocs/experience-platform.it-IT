@@ -3,9 +3,9 @@ keywords: mobile; brazo; messaggistica;
 title: Collegamento del freno
 description: Braze è una piattaforma completa di coinvolgimento dei clienti che offre esperienze rilevanti e memorabili tra i clienti e i marchi che amano.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '873'
 ht-degree: 1%
 
 ---
@@ -64,7 +64,7 @@ Fai clic su **[!UICONTROL Next]**. Nel passaggio [!UICONTROL Authentication], è
 * **[!UICONTROL Name]**: immettete un nome in base al quale riconoscerete questa destinazione in futuro.
 * **[!UICONTROL Description]**: immettete una descrizione che vi aiuterà a identificare questa destinazione in futuro.
 * **[!UICONTROL Endpoint Instance]**: chiedete al vostro  [!DNL Braze] rappresentante quale istanza di endpoint utilizzare.
-* **[!UICONTROL Marketing use case]**: i casi di utilizzo marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra  casi di utilizzo di marketing definiti dal Adobe o creare un caso di utilizzo di marketing personale. Per ulteriori informazioni sui casi di utilizzo del marketing, vedere la pagina [Governance dei dati in Adobe Experience Platform](../../../data-governance/policies/overview.md). Per informazioni sui singoli casi d&#39;uso di marketing definiti dal Adobe , vedere la [panoramica dei criteri di utilizzo dei dati](../../../data-governance/policies/overview.md).
+* **[!UICONTROL Marketing action]**: le azioni di marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi selezionare  azioni di marketing definite dal Adobe o creare azioni di marketing personalizzate. Per ulteriori informazioni sulle azioni di marketing, vedi la pagina [Governance dei dati in Adobe Experience Platform](../../../data-governance/policies/overview.md). Per informazioni sulle singole azioni di marketing definite dal Adobe , consultate la [Panoramica sulle politiche di utilizzo dei dati](../../../data-governance/policies/overview.md).
 
 ![Passaggio di autenticazione del freno](../../assets/catalog/mobile-engagement/braze/authentication.png)
 
