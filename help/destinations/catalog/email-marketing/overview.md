@@ -4,9 +4,9 @@ title: Panoramica delle destinazioni di marketing e-mail
 type: Tutorial
 description: I provider di servizi e-mail (ESP) consentono di gestire le attività di marketing relative alle e-mail, ad esempio per l’invio di campagne e-mail promozionali.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '771'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ Nel passaggio **[!UICONTROL Setup]**, immettete un nome e una descrizione per la
 
 Se nel passaggio precedente avete selezionato &#39;opzione di archiviazione Amazon S3, inserite il nome del bucket e il percorso della cartella nella destinazione di archiviazione cloud in cui verranno inviati i file. Per l&#39;opzione di memorizzazione SFTP, inserite il percorso della cartella in cui verranno inviati i file.
 
-Inoltre in questo passaggio, puoi selezionare qualsiasi caso di utilizzo marketing da applicare a questa destinazione. I casi di utilizzo del marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra  casi di utilizzo di marketing definiti dal Adobe o creare un caso di utilizzo di marketing personale. Per ulteriori informazioni sui casi di utilizzo del marketing, vedere la [panoramica dei criteri di utilizzo dei dati](../../../data-governance/policies/overview.md).
+Inoltre in questo passaggio, puoi selezionare qualsiasi azione di marketing da applicare a questa destinazione. Le azioni di marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi selezionare  azioni di marketing definite dal Adobe o creare azioni di marketing personalizzate. Per ulteriori informazioni sulle azioni di marketing, consulta la [Panoramica sulle politiche di utilizzo dei dati](../../../data-governance/policies/overview.md).
 
 ![Passaggio di impostazione e-mail](../../assets/catalog/email-marketing/overview/email-setup-step.png)
 
