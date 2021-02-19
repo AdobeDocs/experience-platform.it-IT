@@ -3,9 +3,9 @@ keywords: Destinazione hub eventi di Azure;hub eventi di azzure;azure eventhub
 title: (Beta) Connessione ad Azure Event Hubs
 description: Crea una connessione in uscita in tempo reale all'archivio degli hub eventi di Azure per lo streaming dei dati dal Experience Platform .
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '535'
 ht-degree: 2%
 
 ---
@@ -55,6 +55,7 @@ Per le destinazioni [!DNL Azure Event Hubs], immetti le seguenti informazioni ne
 * **[!UICONTROL Name]**: Compilate un nome per la connessione a  [!DNL Azure Event Hubs].
 * **[!UICONTROL Description]**: Fornire una descrizione della connessione.  Esempi: &quot;Clienti di livello Premium&quot;, &quot;Maschi interessati a kitesurfing&quot;.
 * **[!UICONTROL eventHubName]**: Specifica un nome per il flusso alla  [!DNL Azure Event Hubs] destinazione.
+* **[!UICONTROL Marketing actions]**: Le azioni di marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi selezionare  azioni di marketing definite dal Adobe o creare azioni di marketing personalizzate. Per ulteriori informazioni sulle azioni di marketing, vedi la pagina [Governance dei dati in Adobe Experience Platform](../../../data-governance/policies/overview.md). Per informazioni sulle singole azioni di marketing definite dal Adobe , consultate la [Panoramica sulle politiche di utilizzo dei dati](../../../data-governance/policies/overview.md).
 
 ![Dati richiesti nel passaggio di configurazione](../../assets/catalog/cloud-storage/event-hubs/setup.png)
 
