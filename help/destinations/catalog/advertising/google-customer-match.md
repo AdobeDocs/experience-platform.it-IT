@@ -3,9 +3,9 @@ keywords: Google customer match;Google customer match;Google Customer Match;Goog
 title: Connessione Google Customer Match
 description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti nelle proprietà di Google possedute e gestite, come ad esempio Cerca, Shopping, Gmail e YouTube.
 translation-type: tm+mt
-source-git-commit: ef0f7e20a55804c013756e261818c2ee2df4d103
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '1454'
+source-wordcount: '1448'
 ht-degree: 0%
 
 ---
@@ -129,13 +129,13 @@ Una volta confermate le credenziali e che Adobe Experience Cloud è connesso al 
 
 Nel passaggio **[!UICONTROL Authentication]**, immettete un [!UICONTROL Name] e un [!UICONTROL Description] per il flusso di attivazione e riempite Google con il [!UICONTROL Account ID].
 
-Inoltre in questo passaggio, è possibile selezionare qualsiasi **[!UICONTROL Marketing use case]** da applicare a questa destinazione. I casi di utilizzo del marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra  casi di utilizzo di marketing definiti dal Adobe o creare un caso di utilizzo di marketing personale. Per ulteriori informazioni sui casi di utilizzo del marketing, vedere la pagina [Governance dei dati in CDP in tempo reale](../../../rtcdp/privacy/data-governance-overview.md#destinations). Per informazioni sui singoli casi d&#39;uso di marketing definiti dal Adobe , vedere la [panoramica dei criteri di utilizzo dei dati](../../../data-governance/policies/overview.md#core-actions).
+Inoltre in questo passaggio, è possibile selezionare qualsiasi **[!UICONTROL Marketing action]** da applicare a questa destinazione. Le azioni di marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi selezionare  azioni di marketing definite dal Adobe o creare azioni di marketing personalizzate. Per ulteriori informazioni sulle azioni di marketing, vedere la pagina [Governance dei dati in CDP in tempo reale](../../../rtcdp/privacy/data-governance-overview.md#destinations). Per informazioni sulle singole azioni di marketing definite dal Adobe , consultate la [Panoramica sulle politiche di utilizzo dei dati](../../../data-governance/policies/overview.md#core-actions).
 
 Selezionare **[!UICONTROL Create Destination]** dopo aver compilato i campi riportati sopra.
 
 >[!IMPORTANT]
 >
-> * Il caso di utilizzo di **[!UICONTROL Combine with PII]** marketing è selezionato per impostazione predefinita per la destinazione [!DNL Google Customer Match] e non può essere rimosso.
+> * L&#39;azione di marketing **[!UICONTROL Combine with PII]** è selezionata per impostazione predefinita per la destinazione [!DNL Google Customer Match] e non può essere rimossa.
 > * Per le destinazioni [!DNL Google Customer Match]. **[!UICONTROL Account ID]** è l&#39;ID cliente con Google. Il formato dell&#39;ID è xxx-xxx-xxxx.
 
 
