@@ -1,13 +1,13 @@
 ---
-keywords: data governance rtcdp;rtcdp data governance;real time customer data profile data governance
+keywords: governance dei dati rtcdp;gestione dei dati rtcdp;governance dei dati dei profili dei clienti in tempo reale
 title: Panoramica sulla governance dei dati
 seo-title: Governance dei dati in tempo reale della piattaforma dati del cliente
 description: 'Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all''uso dei dati. '
 seo-description: 'Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all''uso dei dati. '
 translation-type: tm+mt
-source-git-commit: e680191d495e4c33baa8242d40a15b9124eec8cd
+source-git-commit: 5435661d750c4138ea6a2d40619a48236b7b1e4f
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '699'
 ht-degree: 0%
 
 ---
@@ -31,17 +31,17 @@ CDP in tempo reale è basato su Adobe Experience Platform, e pertanto la maggior
 
 Per informazioni dettagliate sull&#39;utilizzo delle etichette di utilizzo dei dati, vedere la [guida utente delle etichette di utilizzo dei dati](../../data-governance/labels/overview.md) per Adobe Experience Platform.
 
-## Configurare i casi di utilizzo di marketing per le destinazioni {#destinations}
+## Configurare le azioni di marketing per le destinazioni {#destinations}
 
-Puoi impostare le restrizioni di utilizzo dei dati su una destinazione definendo i casi di utilizzo del marketing (o azioni di marketing) per tale destinazione. Un caso di utilizzo marketing per una destinazione indica l&#39;intento dei dati che verranno esportati in quella destinazione.
+Puoi impostare le restrizioni di utilizzo dei dati su una destinazione definendo le azioni di marketing (o &quot;casi di utilizzo del marketing&quot;) per tale destinazione. Un&#39;azione di marketing per una destinazione indica l&#39;intento dei dati che verranno esportati in quella destinazione.
 
 >[!NOTE]
 >
 >Per ulteriori informazioni sulle azioni di marketing e il loro utilizzo nei criteri di utilizzo dei dati, consultare la [panoramica dei criteri di utilizzo dei dati](../../data-governance/policies/overview.md) nella [!DNL Experience Platform] documentazione.
 
-La definizione dei casi di utilizzo del marketing sulle destinazioni consente di garantire che tutti i profili o i segmenti inviati a tali destinazioni siano conformi ai criteri di utilizzo dei dati. È pertanto necessario aggiungere alle destinazioni i casi di utilizzo del marketing appropriati in base alle esigenze aziendali per applicare restrizioni all&#39;attivazione.
+La definizione di azioni di marketing sulle destinazioni consente di garantire che tutti i profili o i segmenti inviati a tali destinazioni siano conformi ai criteri di utilizzo dei dati. È pertanto necessario aggiungere le azioni di marketing appropriate alle destinazioni in base alle esigenze dell&#39;organizzazione per imporre restrizioni all&#39;attivazione.
 
-I casi di utilizzo del marketing possono essere selezionati solo quando si configura una destinazione per la prima volta. A seconda del tipo di destinazione con cui state lavorando, l’opportunità di configurare i casi di utilizzo del marketing verrà visualizzata in punti diversi del flusso di lavoro di configurazione. Per informazioni su come configurare una particolare destinazione, consulta la [documentazione delle destinazioni](../destinations/overview.md).
+Le azioni di marketing possono essere selezionate solo quando si configura una destinazione per la prima volta. A seconda del tipo di destinazione con cui state lavorando, l&#39;opportunità di configurare le azioni di marketing verrà visualizzata in punti diversi del flusso di lavoro di configurazione. Per informazioni su come configurare una particolare destinazione, consulta la [documentazione delle destinazioni](../destinations/overview.md).
 
 ## Gestisci criteri di utilizzo dei dati {#policies}
 
