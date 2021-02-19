@@ -3,9 +3,9 @@ keywords: ' Amazon Kinesis;destinazione kinesis;kinesis'
 title: ' connessione Amazon Kinesis'
 description: Crea una connessione in uscita in tempo reale allo storage Amazon  Kinesis per lo streaming dei dati da Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '508'
 ht-degree: 2%
 
 ---
@@ -55,6 +55,7 @@ Per le destinazioni [!DNL Amazon Kinesis], immetti le seguenti informazioni nel 
 * **Nome**: Specifica un nome per la connessione a  [!DNL Amazon Kinesis]
 * **Descrizione**: Fornire una descrizione della connessione a  [!DNL Amazon Kinesis].
 * **stream**: Specifica il nome di un flusso di dati esistente nel tuo  [!DNL Amazon Kinesis] account. La piattaforma esporterà i dati in questo flusso.
+* **[!UICONTROL Marketing actions]**: Le azioni di marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi selezionare  azioni di marketing definite dal Adobe o creare azioni di marketing personalizzate. Per ulteriori informazioni sulle azioni di marketing, vedi la pagina [Governance dei dati in Adobe Experience Platform](../../../data-governance/policies/overview.md). Per informazioni sulle singole azioni di marketing definite dal Adobe , consultate la [Panoramica sulle politiche di utilizzo dei dati](../../../data-governance/policies/overview.md).
 
 ![Campi di input nel passaggio di autenticazione](../../assets/catalog/cloud-storage/amazon-kinesis/setup.png)
 
