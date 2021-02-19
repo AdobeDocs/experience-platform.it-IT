@@ -3,9 +3,9 @@ keywords: email;Email;e-mail;destinazioni e-mail;adobe campaign;campaign
 title: ' connessione Adobe Campaign'
 description: ' Adobe Campaign è un insieme di soluzioni che consentono di personalizzare e distribuire campagne su tutti i canali online e offline.'
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '669'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,7 @@ In **[!UICONTROL Basic Information]**, compila le informazioni pertinenti per la
 - **[!UICONTROL Folder Path]**: Specificate il percorso nel percorso di archiviazione in cui Platform depositerà i dati di esportazione come file CSV o delimitati da tabulazioni.
 - **[!UICONTROL Container]**:  *Per connessioni* Blob. Il contenitore che contiene il percorso della cartella Blob è in.
 - **[!UICONTROL File Format]**:  **** CSVo  **TAB_DELIMITED**. Selezionare il formato di file da esportare nel percorso di memorizzazione.
+- **[!UICONTROL Marketing actions]**: Le azioni di marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi selezionare  azioni di marketing definite dal Adobe o creare azioni di marketing personalizzate. Per ulteriori informazioni sulle azioni di marketing, vedi la pagina [Governance dei dati in Adobe Experience Platform](../../../data-governance/policies/overview.md). Per informazioni sulle singole azioni di marketing definite dal Adobe , consultate la [Panoramica sulle politiche di utilizzo dei dati](../../../data-governance/policies/overview.md).
 
 ![Informazioni di base sulla campagna](../../assets/catalog/email-marketing/adobe-campaign/basic-information.png)
 
@@ -64,7 +65,7 @@ Quando si attivano [segmenti](../../ui/activate-destinations.md) nella  destinaz
 
 Per le destinazioni [!DNL Adobe Campaign], Platform crea un file delimitato da tabulazioni `.txt` o `.csv` nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, vedi [Destinazioni di marketing e archiviazione di e-mail e Cloud](../../ui/activate-destinations.md#esp-and-cloud-storage) nell&#39;esercitazione sull&#39;attivazione dei segmenti.
 
-## Imposta l&#39;importazione dei dati in  Adobe Campaign {#import-data-into-campaign}
+## Impostazione dell&#39;importazione dei dati in  Adobe Campaign {#import-data-into-campaign}
 
 >[!IMPORTANT]
 >
