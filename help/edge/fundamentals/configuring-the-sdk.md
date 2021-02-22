@@ -4,7 +4,7 @@ description: Scoprite come configurare l’SDK Web per Adobe Experience Platform
 seo-description: 'Scopri come configurare l’SDK Web per Experienci Platform '
 keywords: configurare;configurazione;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehideStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdParty CookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 85bb984231a3069aad0c63707f5024612181798c
 workflow-type: tm+mt
 source-wordcount: '741'
 ht-degree: 7%
@@ -60,7 +60,7 @@ Indica se il debug deve essere abilitato. L&#39;impostazione di questa configura
 | Convalida sincrona | Convalida i dati raccolti rispetto allo schema e restituisce un errore nella risposta sotto la seguente etichetta: `collect:error OR success` |
 | Registrazione della console | Abilita la visualizzazione dei messaggi di debug nella console JavaScript del browser |
 
-### `edgeDomain`
+### `edgeDomain` {#edge-domain}
 
 | **Tipo** | **Obbligatorio** | **Valore predefinito** |
 | -------- | ------------ | ------------------ |
@@ -141,7 +141,7 @@ Abilita le destinazioni di URL [!DNL Audience Manager], che consentono di attiva
 
 ## Opzioni identità
 
-### `idMigrationEnabled`
+### `idMigrationEnabled` {#id-migration-enabled}
 
 | **Tipo** | **Obbligatorio** | **Valore predefinito** |
 | -------- | ------------ | ----------------- |
