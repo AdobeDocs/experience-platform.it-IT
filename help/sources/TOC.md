@@ -5,10 +5,10 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 translation-type: tm+mt
-source-git-commit: 17eb7b9cb715d7d8d0d7bce930ddec43259149cc
+source-git-commit: b8f7f6e7f110dc9ebd025cd594fd1a54126ccdf3
 workflow-type: tm+mt
-source-wordcount: '557'
-ht-degree: 9%
+source-wordcount: '563'
+ht-degree: 10%
 
 ---
 
@@ -38,6 +38,7 @@ ht-degree: 9%
       - [Connettore archiviazione file Azure](connectors/cloud-storage/azure-file-storage.md)
       - [Connettore FTP](connectors/cloud-storage/ftp.md)
       - [Connettore di archiviazione Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
+      - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
       - [Connettore SFTP](connectors/cloud-storage/sftp.md)
       - [ connettore Amazon S3 e Azure Blob](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
@@ -51,7 +52,7 @@ ht-degree: 9%
       - [Apache Hive sul connettore Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark sul connettore Azure HDInsights](connectors/databases/spark.md)
       - [Connettore di Data Explorer Azure](connectors/databases/data-explorer.md)
-      - [ connettore Azure synapse Analytics](connectors/databases/synapse-analytics.md)
+      - [Connettore  Azure Synapse di Analytics](connectors/databases/synapse-analytics.md)
       - [Connettore archiviazione tabella Azure](connectors/databases/ats.md)
       - [Connettore Couchbase](connectors/databases/couchbase.md)
       - [Connettore Google BigQuery](connectors/databases/bigquery.md)
@@ -60,7 +61,7 @@ ht-degree: 9%
       - [Connettore IBM DB2](connectors/databases/ibm-db2.md)
       - [Connettore di Microsoft SQL Server](connectors/databases/sql-server.md)
       - [Connettore MySQL](connectors/databases/mysql.md)
-      - [Connettore  Oracle](connectors/databases/oracle.md)
+      - [Connettore Oracle ](connectors/databases/oracle.md)
       - [Connettore Phoenix](connectors/databases/phoenix.md)
       - [Connettore PostgreSQL](connectors/databases/postgres.md)
    - eCommerce {#ecommerce}
@@ -85,6 +86,7 @@ ht-degree: 9%
          - [Archiviazione file Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Archiviazione Google Cloud](tutorials/api/create/cloud-storage/google.md)
+         - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
@@ -165,6 +167,7 @@ ht-degree: 9%
          - [Archiviazione file Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Archiviazione Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [ Amazon S3 e Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
