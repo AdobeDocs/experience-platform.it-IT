@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: fca0de86630252ab31a49df1ebbc03f13955e8d2
+source-git-commit: 9f7d7ae9c721d1ce7abf0dc7d3eaff18eed09d6f
 workflow-type: tm+mt
-source-wordcount: '251'
-ht-degree: 9%
+source-wordcount: '680'
+ht-degree: 8%
 
 ---
 
@@ -19,7 +19,24 @@ ht-degree: 9%
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
+- [Flussi di dati](#dataflows)
 - [Sistema XDM (Experience Data Model)](#xdm)
+- [Servizio identità](#identity)
+- [Origini](#sources)
+
+## Flussi di dati {#dataflows}
+
+In Adobe Experience Platform, i dati vengono acquisiti da un&#39;ampia varietà di fonti, analizzati all&#39;interno  Experience Platform, e attivati in un&#39;ampia gamma di destinazioni. La piattaforma semplifica il processo di tracciamento di questo flusso di dati potenzialmente non lineare fornendo trasparenza con i flussi di dati.
+
+I flussi di dati sono una rappresentazione dei processi di dati che consentono di spostare i dati in Platform. Questi flussi di dati sono configurati tra diversi servizi, aiutando a spostare i dati dai connettori di origine ai set di dati di destinazione, dove vengono quindi utilizzati da [!DNL Identity Service] e [!DNL Real-time Customer Profile] prima di essere attivati in ultima istanza su [!DNL Destinations].
+
+**Nuove funzionalità**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Nuovo dashboard di monitoraggio | È ora possibile utilizzare il dashboard di monitoraggio per la trasparenza tra i servizi e per informazioni fruibili per l&#39;assimilazione dei dati di origine. Il nuovo dashboard di monitoraggio fornisce una visualizzazione completa dei dati elaborati da [!DNL Data Lake] a [!DNL Identity Service] e a [!DNL Profile], consentendo al contempo di monitorare i tassi di assimilazione, i successi e gli errori. Per ulteriori informazioni, consulta l&#39;esercitazione sui flussi di dati di origine [monitoraggio nell&#39;interfaccia utente](../../dataflows/ui/monitor-sources.md). |
+
+Per informazioni più generali sui flussi di dati, fare riferimento alla [panoramica dei flussi di dati](../../dataflows/home.md).
 
 ## Sistema del modello dati esperienza (XDM) {#xdm}
 
@@ -34,3 +51,32 @@ XDM è una specifica documentata pubblicamente progettata per migliorare la pote
 | Interfaccia di ricerca aggiornata | Funzionalità di ricerca migliorate sono ora disponibili nella scheda [!UICONTROL Browse] nell&#39;area di lavoro [!UICONTROL Schemas] e nella finestra di dialogo di selezione del mixin in [!DNL Schema Editor].<br><br>Durante la ricerca di un termine in precedenza, i risultati includevano solo risorse XDM il cui nome corrisponde alla query di ricerca. Ora, oltre alle risorse il cui nome corrisponde alla query, verranno incluse anche le risorse contenenti attributi singoli che corrispondono al termine. Questo consente di cercare risorse XDM in base agli attributi che contengono anziché in base al nome della risorsa.<br><br>Per ulteriori informazioni, consulta i documenti  [sull’](../../xdm/ui/explore.md) esplorazione delle risorse XDM e sulla  [gestione ](../../xdm/ui/resources/schemas.md) degli schemi nell’interfaccia utente. |
 
 Per ulteriori informazioni generali su XDM, fare riferimento alla [Panoramica del sistema XDM](../../xdm/home.md).
+
+## Servizio Identity {#identity}
+
+Fornire esperienze digitali rilevanti richiede una comprensione completa del cliente. Ciò è reso più difficile quando i dati del cliente sono frammentati in sistemi diversi, causando l&#39;apparenza di più &quot;identità&quot; per ogni singolo cliente.
+
+Adobe Experience Platform [!DNL Identity Service] consente di acquisire una visione migliore del cliente e del suo comportamento collegando le identità tra dispositivi e sistemi, consentendo di offrire esperienze digitali personali e di forte impatto in tempo reale.
+
+**Nuove funzionalità**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Visualizzatore grafico identità | Il visualizzatore per grafici di identità consente di convalidare e visualizzare le identità unite nell’interfaccia utente, per migliorare il debug e la trasparenza. Per ulteriori informazioni, vedere il documento del visualizzatore del grafico di identità [documento](../../identity-service/ui/identity-graph-viewer.md). |
+
+Per ulteriori informazioni generali su [!DNL Identity Service], fare riferimento alla [Panoramica del servizio identità](../../identity-service/home.md).
+
+## Origini {#sources}
+
+Adobe Experience Platform può acquisire dati da origini esterne consentendo al contempo di strutturare, etichettare e migliorare tali dati tramite i servizi Piattaforma. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, software di terze parti e il sistema CRM in uso.
+
+ Experience Platform fornisce un&#39;API RESTful e un&#39;interfaccia utente interattiva che consente di impostare connessioni sorgente per vari provider di dati con facilità. Queste connessioni di origine consentono di autenticare e connettersi a sistemi di storage e servizi CRM esterni, impostare i tempi per l&#39;esecuzione dell&#39;assimilazione e gestire il throughput di assimilazione dei dati.
+
+**Nuove origini**
+
+| Funzione | Descrizione |
+| --- | --- |
+| [!DNL Google PubSub] | È ora possibile connettersi a [!DNL Google PubSub] [!DNL Experience Platform] utilizzando l&#39;API [!DNL Flow Service] o l&#39;interfaccia utente. Per ulteriori informazioni, vedere la [[!DNL Google PubSub] panoramica del connettore](../../sources/connectors/cloud-storage/google-pubsub.md). |
+| [!DNL Oracle Object Storage] | È ora possibile connettersi a [!DNL Oracle Object Storage] [!DNL Experience Platform] utilizzando l&#39;API [!DNL Flow Service] o l&#39;interfaccia utente. Per ulteriori informazioni, vedere la [[!DNL Oracle Object Storage] panoramica del connettore](../../sources/connectors/cloud-storage/oracle-object-storage.md). |
+
+Per informazioni più generali sulle origini, fare riferimento alla [panoramica delle origini](../../sources/home.md).
