@@ -5,10 +5,10 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 translation-type: tm+mt
-source-git-commit: b8f7f6e7f110dc9ebd025cd594fd1a54126ccdf3
+source-git-commit: 0e4fda4abf5c02df81b74f15d2fbcafb68548070
 workflow-type: tm+mt
-source-wordcount: '563'
-ht-degree: 10%
+source-wordcount: '572'
+ht-degree: 9%
 
 ---
 
@@ -39,6 +39,7 @@ ht-degree: 10%
       - [Connettore FTP](connectors/cloud-storage/ftp.md)
       - [Connettore di archiviazione Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
+      - [ Archiviazione oggetti Oracle](connectors/cloud-storage/oracle-object-storage.md)
       - [Connettore SFTP](connectors/cloud-storage/sftp.md)
       - [ connettore Amazon S3 e Azure Blob](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
@@ -87,6 +88,7 @@ ht-degree: 10%
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Archiviazione Google Cloud](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
+         - [ Archiviazione oggetti Oracle](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
@@ -168,6 +170,7 @@ ht-degree: 10%
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Archiviazione Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
+         - [ Archiviazione oggetti Oracle](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [ Amazon S3 e Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
