@@ -2,12 +2,12 @@
 keywords: Experience Platform ;home;argomenti più comuni;cloud storage;Cloud storage
 solution: Experience Platform
 title: Esplora un sistema di storage a voce alta utilizzando l'API del servizio di flusso
-topic: overview
+topic: ' - Panoramica'
 description: Questa esercitazione utilizza l’API del servizio di flusso per esplorare un sistema di archiviazione cloud di terze parti.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 60a70352c2e13565fd3e8c44ae68e011a1d443a6
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '742'
 ht-degree: 2%
 
 ---
@@ -30,14 +30,15 @@ Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario cono
 
 Per esplorare un archivio cloud di terze parti utilizzando le API [!DNL Platform], è necessario possedere un ID connessione valido. Se non si dispone già di una connessione per lo storage con cui si desidera lavorare, è possibile crearne una tramite le seguenti esercitazioni:
 
-* [Amazon S3](../create/cloud-storage/s3.md)
-* [BLOB di Azure](../create/cloud-storage/blob.md)
-* [Azure Data Lake Storage Gen2](../create/cloud-storage/adls-gen2.md)
-* [Archiviazione file Azure](../create/cloud-storage/azure-file-storage.md)
-* [FTP](../create/cloud-storage/ftp.md)
-* [Google Cloud Store](../create/cloud-storage/google.md)
+* [[!DNL Amazon S3]](../create/cloud-storage/s3.md)
+* [[!DNL Azure Blob]](../create/cloud-storage/blob.md)
+* [[!DNL Azure Data Lake Storage Gen2]](../create/cloud-storage/adls-gen2.md)
+* [[!DNL Azure File Storage]](../create/cloud-storage/azure-file-storage.md)
+* [[!DNL FTP]](../create/cloud-storage/ftp.md)
+* [[!DNL Google Cloud Storage]](../create/cloud-storage/google.md)
 * [HDFS](../create/cloud-storage/hdfs.md)
-* [SFTP](../create/cloud-storage/sftp.md)
+* [[!DNL Oracle Object Storage]](../create/cloud-storage/oracle-object-storage.md)
+* [[!DNL SFTP]](../create/cloud-storage/sftp.md)
 
 ### Lettura di chiamate API di esempio
 
