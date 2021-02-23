@@ -5,10 +5,10 @@ title: Connessione RSudio a Query Service
 topic: connect
 description: In questo documento vengono descritti i passaggi per la connessione di R Studio con Adobe Experience Platform Query Service.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: f1b2fd7efd43f317a85c831cd64c09be29688f7a
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 2%
+source-wordcount: '366'
+ht-degree: 0%
 
 ---
 
@@ -20,39 +20,40 @@ Questo documento descrive i passaggi per la connessione di [!DNL RStudio] con Ad
 >[!NOTE]
 >
 > Questa guida presuppone che abbiate già accesso a [!DNL RStudio] e che abbiate familiarità con come usarlo. Ulteriori informazioni su [!DNL RStudio] sono disponibili nella [documentazione  [!DNL RStudio] ufficiale](https://rstudio.com/products/rstudio/).
+> 
+> Inoltre, per utilizzare RStudio con Query Service, è necessario installare il driver PostgreSQL JDBC 4.2. È possibile scaricare il driver JDBC dal [sito ufficiale PostgreSQL](https://jdbc.postgresql.org/download.html).
 
 ## Creare una connessione [!DNL Query Service] nell&#39;interfaccia [!DNL RStudio]
 
-Dopo l&#39;installazione di [!DNL RStudio], nella schermata **[!DNL Console]** visualizzata, sarà prima necessario preparare lo script R per utilizzare [!DNL PostgreSQL].
+Dopo aver installato [!DNL RStudio], è necessario installare il pacchetto RJDBC. Fare clic sul riquadro **[!DNL Packages]** e selezionare **[!DNL Install]**.
 
-```r
-install.packages("RPostgreSQL")
-install.packages("rstudioapi")
-require("RPostgreSQL")
-require("rstudioapi")
+![](../images/clients/rstudio/install-package.png)
+
+Viene visualizzato un pop-up che mostra la schermata **[!DNL Install Packages]**. Assicurarsi che **[!DNL Repository (CRAN)]** sia selezionato per la sezione **[!DNL Install from]**. Il valore di **[!DNL Packages]** deve essere `RJDBC`. Assicurarsi che **[!DNL Install dependencies]** sia selezionato. Dopo aver confermato che tutti i valori sono corretti, selezionare **[!DNL Install]** per installare i pacchetti.
+
+![](../images/clients/rstudio/install-jrdbc.png)
+
+Dopo aver installato il pacchetto RJDBC, riavviare RStudio per completare il processo di installazione.
+
+Dopo il riavvio di RStudio, ora è possibile connettersi a Query Service. Selezionate il pacchetto **[!DNL RJDBC]** nel riquadro **[!DNL Packages]** e immettete il comando seguente nella console:
+
+```console
+pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
 ```
 
-Dopo aver preparato lo script R per l&#39;utilizzo di [!DNL PostgreSQL], è ora possibile connettersi [!DNL RStudio] a [!DNL Query Service] caricando il driver [!DNL PostgreSQL].
+Dove {PATH TO THE POSTGRESQL JDBC JAR} rappresenta il percorso del JAR JDBC JAR PostgreSQL installato sul computer.
 
-```r
-drv <- dbDriver("PostgreSQL")
-con <- dbConnect(drv, 
- dbname = "{DATABASE_NAME}",
- host="{HOST_NUMBER}",
- port={PORT_NUMBER},
- user="{USERNAME}",
- password="{PASSWORD}")
+A questo punto, è possibile creare la connessione a Query Service immettendo il seguente comando nella console:
+
+```console
+qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_NAME}?user={USERNAME}&password={PASSWORD}&sslmode=require")
 ```
-
-| Proprietà | Descrizione |
-| -------- | ----------- |
-| `{DATABASE_NAME}` | Nome del database che verrà utilizzato. |
-| `{HOST_NUMBER` ed `{PORT_NUMBER}` | L&#39;endpoint host e la relativa porta per il servizio query. |
-| `{USERNAME}` ed `{PASSWORD}` | Le credenziali di accesso che verranno utilizzate. Il nome utente assume la forma di `ORG_ID@AdobeOrg`. |
 
 >[!NOTE]
 >
 >Per ulteriori informazioni su come trovare il nome del database, l&#39;host, la porta e le credenziali di accesso, visitare la pagina delle [credenziali sulla piattaforma](https://platform.adobe.com/query/configuration). Per trovare le credenziali, accedere a [!DNL Platform], quindi selezionare **[!UICONTROL Queries]**, seguito da **[!UICONTROL Credentials]**.
+
+![](../images/clients/rstudio/connection-rjdbc.png)
 
 ## Scrittura di query
 
