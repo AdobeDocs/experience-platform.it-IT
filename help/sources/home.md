@@ -5,9 +5,9 @@ title: Panoramica sui connettori di origine
 topic: ' - Panoramica'
 description: Adobe Experience Platform consente l'acquisizione di dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Piattaforma. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, database e molti altri.
 translation-type: tm+mt
-source-git-commit: b8f7f6e7f110dc9ebd025cd594fd1a54126ccdf3
+source-git-commit: 0e4fda4abf5c02df81b74f15d2fbcafb68548070
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '913'
 ht-degree: 0%
 
 ---
@@ -57,6 +57,7 @@ Le origini di archiviazione cloud possono portare i tuoi dati in Platform senza 
 - [[!DNL FTP] connettore](connectors/cloud-storage/ftp.md)
 - [[!DNL Google Cloud Storage] connettore](connectors/cloud-storage/google-cloud-storage.md)
 - [[!DNL Google PubSub] connettore](connectors/cloud-storage/google-pubsub.md)
+- [[!DNL Oracle Object Storage] connettore](connectors/cloud-storage/oracle-object-storage.md)
 - [[!DNL SFTP] connettore](connectors/cloud-storage/sftp.md)
 
 ### Gestione delle relazioni con i clienti (CRM)
