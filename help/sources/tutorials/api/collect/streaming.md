@@ -2,13 +2,13 @@
 keywords: Experience Platform ;home;argomenti più comuni;dati di archiviazione cloud;dati di streaming;streaming
 solution: Experience Platform
 title: Raccolta di dati in streaming tramite connettori di origine e API
-topic: overview
+topic: ' - Panoramica'
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati in streaming e portarli in piattaforma utilizzando connettori sorgente e API.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: b8f7f6e7f110dc9ebd025cd594fd1a54126ccdf3
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1305'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,8 @@ Questa esercitazione richiede un ID di connessione valido per un connettore di s
 
 - [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
 - [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
-- [[!DNL HTTP API]](../../../../ingestion/tutorials/create-streaming-connection.md)
+- [[!DNL HTTP API]](../create/streaming/http.md)
+- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
 Questa esercitazione richiede inoltre di conoscere i seguenti componenti di Adobe Experience Platform:
 
