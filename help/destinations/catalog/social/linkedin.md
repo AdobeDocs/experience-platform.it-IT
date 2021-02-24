@@ -3,7 +3,7 @@ keywords: linkedin connection;linkedin connection;linkedin destinations;linkedin
 title: Collegamento in connessione Audiences Matched
 description: Attiva profili per le campagne LinkedIn per il targeting dell'audience, la personalizzazione e la soppressione, in base a e-mail con hash.
 translation-type: tm+mt
-source-git-commit: 48cc2017e4a65321fb7ef54ea26aca0a98606516
+source-git-commit: 6d64bc362aa8c85e354f5c02cc2acbe6f1405c99
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 0%
@@ -19,17 +19,17 @@ Attiva profili per le tue campagne [!DNL LinkedIn] per il targeting dell&#39;aud
 
 ## Casi d’uso
 
-Per comprendere meglio come e quando utilizzare la destinazione [!DNL LinkedIn Matched Audience], ecco un caso d&#39;uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa funzione.
+Per comprendere meglio come e quando utilizzare la destinazione [!DNL LinkedIn Matched Audiences], ecco un caso d&#39;uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa funzione.
 
 Un&#39;azienda di software organizza una conferenza e desidera tenersi in contatto con i partecipanti e mostrare loro offerte personalizzate in base al loro stato di partecipazione alla conferenza. L&#39;azienda può inserire indirizzi e-mail o ID dispositivo mobile da [!DNL CRM] in Adobe Experience Platform, creare segmenti dai propri dati offline e inviare questi segmenti alla [!DNL LinkedIn] piattaforma social, ottimizzando le spese pubblicitarie.
 
 ## Specifiche di destinazione {#destination-specs}
 
-[!DNL LinkedIn Matched Audience] supporta l&#39;attivazione delle seguenti identità: e-mail con hash  [!DNL GAID], e  [!DNL IDFA].
+[!DNL LinkedIn Matched Audiences] supporta l&#39;attivazione delle seguenti identità: e-mail con hash  [!DNL GAID], e  [!DNL IDFA].
 
 ### Tipo di esportazione {#export-type}
 
-**Esportazione**  segmento - vengono esportati tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono, ecc.) utilizzato nella destinazione [!DNL LinkedIn Matched Audience].
+**Esportazione**  segmento - vengono esportati tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono, ecc.) utilizzato nella destinazione [!DNL LinkedIn Matched Audiences].
 
 ### Prerequisiti per l&#39;account LinkedIn {#LinkedIn-account-prerequisites}
 
@@ -39,7 +39,7 @@ Per informazioni su come modificare le [!DNL LinkedIn Campaign Manager] autorizz
 
 ### Requisiti di corrispondenza ID {#id-matching-requirements}
 
-[!DNL LinkedIn Matched Audience] richiede che non siano inviate informazioni personali (PII) in modo chiaro. Di conseguenza, è possibile disattivare gli identificatori [!DNL LinkedIn Matched Audience] con hash *con*, ad esempio indirizzi e-mail o ID dispositivo mobile.
+[!DNL LinkedIn Matched Audiences] richiede che non siano inviate informazioni personali (PII) in modo chiaro. Di conseguenza, è possibile disattivare gli identificatori [!DNL LinkedIn Matched Audiences] con hash *con*, ad esempio indirizzi e-mail o ID dispositivo mobile.
 
 A seconda del tipo di ID che trasferisci in Adobe Experience Platform, devi soddisfare i requisiti corrispondenti.
 
@@ -71,11 +71,11 @@ Se selezionate l’hash degli indirizzi e-mail, accertatevi di soddisfare i segu
 
 ## Connetti alla destinazione {#connect-destination}
 
-Per connettersi alla destinazione [!DNL LinkedIn Matched Audience], vedere [Flusso di lavoro di autenticazione delle destinazioni social network](./workflow.md).
+Per connettersi alla destinazione [!DNL LinkedIn Matched Audiences], vedere [Flusso di lavoro di autenticazione delle destinazioni social network](./workflow.md).
 
-## Attivare i segmenti su [!DNL LinkedIn Matched Audience] {#activate-segments}
+## Attivare i segmenti su [!DNL LinkedIn Matched Audiences] {#activate-segments}
 
-Per istruzioni su come attivare i segmenti in [!DNL LinkedIn Matched Audience], vedere [Attivare i dati sulle destinazioni](../../ui/activate-destinations.md).
+Per istruzioni su come attivare i segmenti in [!DNL LinkedIn Matched Audiences], vedere [Attivare i dati sulle destinazioni](../../ui/activate-destinations.md).
 
 ## Dati esportati {#exported-data}
 
@@ -83,4 +83,4 @@ L&#39;attivazione corretta implica la creazione di un&#39;audience [!DNL LinkedI
 
 >[!TIP]
 >
->L&#39;integrazione tra Adobe Experience Platform e [!DNL LinkedIn Matched Audience] supporta i backfill storici del pubblico. Tutte le qualifiche del segmento storico vengono inviate a [!DNL LinkedIn] quando si attivano i segmenti nella destinazione.
+>L&#39;integrazione tra Adobe Experience Platform e [!DNL LinkedIn Matched Audiences] supporta i backfill storici del pubblico. Tutte le qualifiche del segmento storico vengono inviate a [!DNL LinkedIn] quando si attivano i segmenti nella destinazione.
