@@ -5,9 +5,9 @@ title: Guida all'interfaccia utente dei set di dati
 topic: datasets
 description: Scoprite come eseguire azioni comuni quando si utilizzano i set di dati nell'interfaccia utente di Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 2b8c08dad34bcd69368c00050323835f05379c82
+source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1084'
 ht-degree: 0%
 
 ---
@@ -97,7 +97,7 @@ Viene visualizzato il passaggio **[!UICONTROL Add data]**. Caricate il file CSV 
 
 ![](../images/datasets/user-guide/add_csv_data.png)
 
-## Abilita un set di dati per il profilo cliente in tempo reale
+## Abilita un set di dati per il profilo cliente in tempo reale {#enable-profile}
 
 Ogni dataset ha la capacità di arricchire i profili dei clienti con i dati acquisiti. A tal fine, lo schema a cui aderisce il dataset deve essere compatibile per l&#39;utilizzo in [!DNL Real-time Customer Profile]. Uno schema compatibile soddisfa i seguenti requisiti:
 
