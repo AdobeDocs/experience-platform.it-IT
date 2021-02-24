@@ -3,10 +3,10 @@ title: Note sulla versione di Adobe Experience Platform Web SDK Extension
 description: Estensione Adobe Experience Platform Web SDK in Adobe Experience Platform Launch
 seo-description: Estensione Adobe Experience Platform Web SDK in Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '988'
-ht-degree: 94%
+source-wordcount: '990'
+ht-degree: 89%
 
 ---
 
@@ -33,7 +33,7 @@ Contiene la versione 2.3.0 della libreria dell’SDK per web di Adobe Experience
 
 #### Correzioni di bug
 
-* Quando si tentava di creare un oggetto XDM da schemi sandbox, si verificavano problemi di autenticazione. L’API che richiama AEP ora tiene conto degli ambienti e agli utenti vengono presentati solo gli schemi che possono modificare.
+* Quando si tentava di creare un oggetto XDM da schemi sandbox, si verificavano problemi di autenticazione. L&#39;API che chiama Piattaforma ora è a conoscenza degli ambienti, quindi agli utenti vengono presentati solo gli schemi a cui hanno accesso per la modifica.
 
 #### Funzioni
 
@@ -62,7 +62,7 @@ Contiene la versione 2.3.0 della libreria dell’SDK per web di Adobe Experience
 * È supportata la possibilità di ignorare l’ID del set di dati nell’azione `sendEvent`.
 * È stato aggiunto un nuovo elemento dati di tipo `IdentityMap` che può essere utilizzato per compilare la voce `identityMap` nell’elemento dati di oggetti XDM che è ora abilitato e nell’azione `setConsent`.
 * È supportato il passaggio di una mappa di identità nell’azione `setConsent`.
-* È supportata la scelta di un ambiente sandbox AEP nell’elemento dati di oggetti XDM.
+* Supporto per la scelta di una sandbox della piattaforma nell&#39;elemento dati oggetto XDM.
 
 
 ## 26 maggio 2020
@@ -92,7 +92,7 @@ Queste decisioni sono restituite dal comando `sendEvent` solo se `renderDecision
 * È stato risolto un problema in ID unione eventi a causa del quale veniva reimpostato ogni volta che si faceva riferimento all’elemento dati.
 * L’azione `setCustomerIds` è stata rinominata `syncIdentity`.
 * È stato aggiunto un comando `getIdentity`. Per il momento questo può essere utilizzato solo tramite codice personalizzato.
-* L’abilitazione del debug mediante `_satellite` ora abilita il debug in AEP Web SDK.
+* Abilitando il debug con `_satellite` ora è possibile eseguire il debug nell&#39;SDK Web di Adobe Experience Platform.
 * È stato aggiunto il supporto per i valori digitati nell’oggetto XDM: booleani, numeri e decimali.
 
 ## 16 marzo 2020
@@ -169,7 +169,7 @@ Queste decisioni sono restituite dal comando `sendEvent` solo se `renderDecision
 * Estensione intrappolata nell&#39;esistenza.
 * Supporto ECID senza librerie o chiamate di rete aggiuntive.
 * Supporto per consenso.
-* Supporto per l&#39;invio di XDM ad AEP.
+* Supporto per l&#39;invio di XDM alla piattaforma
 * Supporto del dominio di prime parti.
 * Contenuto del browser raccolto automaticamente.
 * Sorgente completamente aperta ([estensione](https://github.com/adobe/reactor-extension-alloy), [SDK](https://github.com/adobe/reactor-extension-alloy)).
