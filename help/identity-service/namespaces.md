@@ -1,13 +1,13 @@
 ---
-keywords: ' Experience Platform;home;argomenti comuni;spazio dei nomi;spazio dei nomi;spazi dei nomi;spazio dei nomi;spazio dei nomi identità;spazio dei nomi identità;identità;identità;servizio identità;identità'
+keywords: ' Experience Platform;home;argomenti comuni;spazio dei nomi;spazio dei nomi;spazi dei nomi;spazi dei nomi;spazio dei nomi identità;spazio dei nomi identità;identità;identità;servizio identità;identità'
 solution: Experience Platform
 title: Panoramica spazio nomi identità
-topic: overview
+topic: ' - Panoramica'
 description: 'Gli spazi dei nomi delle identità sono un componente di Servizio identità che funge da indicatori del contesto a cui si riferisce un''identità. Ad esempio, distinguono il valore "name@email.com" come indirizzo e-mail o "443522" come ID CRM numerico. '
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1450'
 ht-degree: 1%
 
 ---
@@ -84,7 +84,7 @@ Selezionate uno spazio nomi per visualizzare informazioni più specifiche nella 
 
 ![](./images/browse-namespaces.png)
 
-## Gestione di spazi dei nomi personalizzati
+## Gestione di spazi dei nomi personalizzati {#manage-namespaces}
 
 A seconda dei dati organizzativi e dei casi di utilizzo, potrebbero essere necessari spazi dei nomi personalizzati. Gli spazi dei nomi personalizzati possono essere creati utilizzando l&#39;API [[!DNL Identity Service]](./api/create-custom-namespace.md) o tramite l&#39;interfaccia utente.
 
