@@ -3,9 +3,9 @@ title: Integrare il supporto per IAB TCF 2.0 con Adobe Experience Platform Web S
 description: Scoprite come configurare il supporto per IAB TCF 2.0 per il sito Web senza utilizzare  Adobe Experience Platform Launch.
 seo-description: Scoprite come impostare il consenso IAB TCF 2.0 con Adobe Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '685'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Questa guida utilizza l&#39;interfaccia `__tcfapi` per accedere alle informazion
 >
 >Questi esempi presuppongono che, al momento dell&#39;esecuzione del codice, `window.__tcfapi` sia definito sulla pagina. I CMP possono fornire un gancio in cui eseguire queste funzioni quando l&#39;oggetto `__tcfapi` è pronto.
 
-Per utilizzare IAB TCF 2.0 con Experience Platform Launch e estensione AEP Web SDK, è necessario disporre di uno schema XDM. Se non avete impostato nessuno dei due, iniziate a visualizzare la pagina prima di continuare.
+Per utilizzare IAB TCF 2.0 con Experience Platform Launch e estensione Adobe Experience Platform Web SDK, è necessario disporre di uno schema XDM. Se non avete impostato nessuno dei due, iniziate a visualizzare la pagina prima di continuare.
 
 Inoltre, questa guida richiede una buona conoscenza di Adobe Experience Platform Web SDK. Per un aggiornamento rapido, leggete la [Adobe Experience Platform Web SDK overview](../../home.md) e la [Domande frequenti](../../web-sdk-faq.md) documentazione.
 
@@ -109,4 +109,4 @@ L&#39;altro modo per aggiungere le informazioni sul consenso a ogni richiesta è
 
 ## Passaggi successivi
 
-Ora che hai imparato a utilizzare IAB TCF 2.0 con l&#39;estensione AEP Web SDK, puoi anche scegliere di integrarsi con altre soluzioni  Adobe come  Adobe Analytics o la piattaforma Real-time Customer Data. Per ulteriori informazioni, vedere la [panoramica su IAB Transparency &amp; Consent Framework 2.0](./overview.md).
+Ora che hai imparato a utilizzare IAB TCF 2.0 con l&#39;estensione SDK Web della piattaforma, puoi anche scegliere di integrarsi con altre soluzioni  Adobe come  Adobe Analytics o la piattaforma dati cliente in tempo reale. Per ulteriori informazioni, vedere la [panoramica su IAB Transparency &amp; Consent Framework 2.0](./overview.md).
