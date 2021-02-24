@@ -3,9 +3,9 @@ title: Tenere traccia degli eventi mediante l’SDK Web per Adobe Experience Pla
 seo-description: Scoprite come tenere traccia degli eventi Adobe Experience Platform Web SDK.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '1334'
+source-wordcount: '1340'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ alloy("sendEvent", {
 dataLayer.commerce = null;
 ```
 
-In questo esempio, il livello dati viene clonato serializzandolo in JSON e quindi deserializzandolo. Quindi, il risultato clonato viene passato nel comando `sendEvent`. In questo modo si assicura che il comando `sendEvent` abbia un&#39;istantanea del livello dati così come era presente quando il comando `sendEvent` è stato eseguito, in modo che le modifiche successive all&#39;oggetto livello dati originale non vengano riflesse nei dati inviati al server. Se utilizzate un livello dati basato su eventi, è probabile che la duplicazione dei dati sia già gestita automaticamente. Ad esempio, se si utilizza il [ Adobe Client Data Layer](https://github.com/adobe/adobe-client-data-layer/wiki), il metodo `getState()` fornisce un&#39;istantanea calcolata e duplicata di tutte le modifiche precedenti. Questo viene gestito automaticamente anche se utilizzi l’estensione AEP Web SDK Launch.
+In questo esempio, il livello dati viene clonato serializzandolo in JSON e quindi deserializzandolo. Quindi, il risultato clonato viene passato nel comando `sendEvent`. In questo modo si assicura che il comando `sendEvent` abbia un&#39;istantanea del livello dati così come era presente quando il comando `sendEvent` è stato eseguito, in modo che le modifiche successive all&#39;oggetto livello dati originale non vengano riflesse nei dati inviati al server. Se utilizzate un livello dati basato su eventi, è probabile che la duplicazione dei dati sia già gestita automaticamente. Ad esempio, se si utilizza il [ Adobe Client Data Layer](https://github.com/adobe/adobe-client-data-layer/wiki), il metodo `getState()` fornisce un&#39;istantanea calcolata e duplicata di tutte le modifiche precedenti. Questo viene gestito automaticamente anche se utilizzi l’estensione Adobe Experience Platform Web SDK in  Adobe Experience Platform Launch.
 
 >[!NOTE]
 >
