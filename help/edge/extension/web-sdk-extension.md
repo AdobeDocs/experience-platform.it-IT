@@ -2,10 +2,10 @@
 title: Estensione di Adobe Experience Platform Web SDK Panoramica
 description: Ulteriori informazioni sull'estensione Adobe Experience Platform Web SDK per  Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '603'
-ht-degree: 88%
+source-wordcount: '598'
+ht-degree: 84%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 88%
 
 Adobe Experience Platform Web SDK Extension invia i dati all’Adobe Experience Cloud dalle proprietà Web tramite Adobe Experience Platform Edge Network. L&#39;estensione Adobe Experience Platform Web SDK consente lo streaming dei dati nella piattaforma, la sincronizzazione delle identità, il consenso e la raccolta automatica dei dati contestuali.
 
-## Configurare l&#39;estensione AEP Web SDK
+## Configura l&#39;estensione
 
 Questa sezione fornisce un riferimento per le opzioni disponibili durante la configurazione dell&#39;estensione Adobe Experience Platform Web SDK.
 
@@ -47,11 +47,11 @@ Per impostazione predefinita, se si verifica un errore con l&#39;estensione, l&#
 
 ### **[!UICONTROL Enable Opt-in]**
 
-Se **[!UICONTROL Enable Opt-in]** è abilitata, l&#39;estensione AEP Web SDK può contenere riscontri fino alla ricezione del consenso. L&#39;estensione presenta un&#39;azione per impostare le preferenze di consenso.
+Se **[!UICONTROL Enable Opt-in]** è abilitato, l&#39;estensione può contenere gli hit fino alla ricezione dell&#39;opzione di consenso. L&#39;estensione presenta un&#39;azione per impostare le preferenze di consenso.
 
 ### **[!UICONTROL Enable Migrate ECID]**
 
-L&#39;estensione AEP Web SDK utilizza un nuovo cookie per memorizzare l&#39;ECID. Questa impostazione rende compatibili il nuovo cookie e il vecchio cookie a scopo di migrazione. Adobe consiglia vivamente di attivarlo, a meno che non siano presenti visitatori con un ECID.
+L’estensione SDK Web della piattaforma utilizza un nuovo cookie per memorizzare l’ECID. Questa impostazione rende compatibili il nuovo cookie e il vecchio cookie a scopo di migrazione. Adobe consiglia vivamente di attivarlo, a meno che non siano presenti visitatori con un ECID.
 
 ### **[!UICONTROL Use 3rd Party Cookies]**
 
