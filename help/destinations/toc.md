@@ -5,10 +5,10 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
+source-git-commit: 2ee4014de1eb5c02ee2b554bb543d2bee5854922
 workflow-type: tm+mt
-source-wordcount: '451'
-ht-degree: 11%
+source-wordcount: '455'
+ht-degree: 10%
 
 ---
 
@@ -92,8 +92,8 @@ ht-degree: 11%
    * Destinazioni di marketing e-mail {#email-marketing}
       * [Panoramica delle destinazioni di marketing e-mail](./catalog/email-marketing/overview.md)
       * [ connessione Adobe Campaign](./catalog/email-marketing/adobe-campaign.md)
-      * [ collegamento Oracle Eloqua](./catalog/email-marketing/oracle-eloqua.md)
-      * [ connessione Oracle Responsys](./catalog/email-marketing/oracle-responsys.md)
+      * [ collegamento Eloqua Oracle](./catalog/email-marketing/oracle-eloqua.md)
+      * [ connessione Risposte Oracle](./catalog/email-marketing/oracle-responsys.md)
       * [Connessione Marketing Cloud Salesforce](./catalog/email-marketing/salesforce-marketing-cloud.md)
    * Estensioni Experience Platform Launch {#launch-extensions}
       * [Panoramica  estensione Adobe Experience Platform Launch](./catalog/launch-extensions/overview.md)
@@ -117,6 +117,7 @@ ht-degree: 11%
       * [Creare una destinazione social network](./catalog/social/workflow.md)
       * [Estensione  Adobe Livefyre](./catalog/social/adobe-livefyre.md)
       * [Connessione Facebook](./catalog/social/facebook.md)
+      * [CollegamentoIn collegamento con l&#39;audience corrispondente](./catalog/social/linkedin.md)
    * Destinazioni sondaggio {#survey}
       * [Panoramica delle destinazioni di sondaggio](./catalog/survey/overview.md)
       * [Destinazione dell&#39;estensione Foresee](./catalog/survey/foresee.md)
