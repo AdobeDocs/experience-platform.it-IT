@@ -2,13 +2,13 @@
 keywords: ' Experience Platform;home;argomenti popolari;streaming;streaming, assimilazione;convalida dell''assimilazione in streaming;convalida;convalida dell''assimilazione in streaming;convalida;convalida sincrona;convalida asincrona;convalida asincrona;'
 solution: Experience Platform
 title: Convalida ingestione in streaming
-topic: tutorial
-type: Tutorial
-description: 'L’assimilazione dello streaming consente di caricare i dati su Adobe Experience Platform utilizzando gli endpoint di streaming in tempo reale. Le API di assimilazione dello streaming supportano due modalità di convalida: sincrona e asincrona.'
+topic: esercitazione
+type: Esercitazione
+description: 'L’assimilazione dello streaming consente di caricare i dati su Adobe Experience Platform utilizzando gli endpoint di streaming in tempo reale. Le API di assimilazione in streaming supportano due modalità di convalida: sincrona e asincrona.'
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 8f863eb3427097406237aa443262917fdc3f3e1c
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '898'
 ht-degree: 3%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 # Convalida dell&#39;assimilazione in streaming
 
-L’assimilazione dello streaming consente di caricare i dati su Adobe Experience Platform utilizzando gli endpoint di streaming in tempo reale. Le API di assimilazione dello streaming supportano due modalità di convalida: sincrona e asincrona.
+L’assimilazione dello streaming consente di caricare i dati su Adobe Experience Platform utilizzando gli endpoint di streaming in tempo reale. Le API di assimilazione in streaming supportano due modalità di convalida: sincrona e asincrona.
 
 ## Introduzione
 
@@ -66,6 +66,10 @@ La convalida sincrona è un metodo di convalida che fornisce un feedback immedia
 Per impostazione predefinita, la convalida sincrona non è attivata. Per attivarla, è necessario trasmettere il parametro di query facoltativo `synchronousValidation=true` quando si effettuano chiamate API. Inoltre, la convalida sincrona è attualmente disponibile solo se l&#39;endpoint del flusso si trova nel centro dati VA7.
 
 Se un messaggio ha esito negativo durante la convalida sincrona, il messaggio non verrà scritto nella coda di output, che fornisce agli utenti un feedback immediato.
+
+>[!NOTE]
+>
+>Le modifiche allo schema potrebbero non essere immediatamente disponibili, poiché le modifiche sono memorizzate nella cache. Lasciate che la cache venga aggiornata in un massimo di quindici minuti.
 
 **Formato API**
 
