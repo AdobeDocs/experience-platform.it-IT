@@ -2,13 +2,13 @@
 keywords: ' Experience Platform;home;popolari argomenti;streaming assimilation;ingestion;record data;stream record data;'
 solution: Experience Platform
 title: Dati del record di flusso mediante le API di ingestione dello streaming
-topic: tutorial
-type: Tutorial
+topic: esercitazione
+type: Esercitazione
 description: Questa esercitazione ti aiuterà a iniziare a utilizzare le API di assimilazione in streaming, parte delle API del servizio Adobe Experience Platform Data Ingestion.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 27a7855492f2f8e7a92651cd97371c904dd1561d
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1165'
 ht-degree: 2%
 
 ---
@@ -264,7 +264,7 @@ Una risposta corretta restituisce lo stato HTTP 201 e un array contenente l&#39;
 ]
 ```
 
-## Invio di dati di record alla connessione di streaming
+## Inviare i dati del record alla connessione di streaming {#ingest-data}
 
 Con il set di dati e la connessione in streaming in posizione, è possibile assimilare record JSON in formato XDM per trasferire i dati dei record in [!DNL Platform].
 
