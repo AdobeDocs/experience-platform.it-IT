@@ -2,26 +2,28 @@
 keywords: ' Experience Platform;home;argomenti più comuni;visualizzatore grafico identità;visualizzatore grafico identità;visualizzatore grafico;visualizzatore grafico;visualizzatore grafico;spazio dei nomi identità;spazio dei nomi identità;identità;identità;servizio identità'
 solution: Experience Platform
 title: Panoramica del visualizzatore per i grafici di identità
-topic: tutorial
+topic: esercitazione
 description: Un grafico di identità è una mappa delle relazioni tra identità diverse per un particolare cliente, che fornisce una rappresentazione visiva del modo in cui il cliente interagisce con il proprio marchio tra canali diversi.
 translation-type: tm+mt
-source-git-commit: 8ec904d584225113a6791533ff544560fc2efdf3
+source-git-commit: f4326c7a8bb8af90c092d3790e51c133744d498f
 workflow-type: tm+mt
-source-wordcount: '907'
-ht-degree: 0%
+source-wordcount: '996'
+ht-degree: 1%
 
 ---
 
 
-# (Beta) Panoramica del visualizzatore grafico dell&#39;identità
-
->[!NOTE]
->
->Il visualizzatore del grafico dell&#39;identità è attualmente in versione beta. Le sue caratteristiche sono soggette a modifiche.
+# Panoramica del visualizzatore grafico identità
 
 Un grafico di identità è una mappa delle relazioni tra identità diverse per un particolare cliente, che fornisce una rappresentazione visiva del modo in cui il cliente interagisce con il proprio marchio tra canali diversi. Tutti i grafici dell&#39;identità del cliente vengono gestiti e aggiornati collettivamente da Adobe Experience Platform Identity Service in tempo quasi reale, in risposta all&#39;attività del cliente.
 
 Il visualizzatore grafico dell&#39;identità nell&#39;interfaccia utente della piattaforma consente di visualizzare e capire meglio le identità dei clienti unite e in che modo. Il visualizzatore consente di trascinare e interagire con diverse parti del grafico, consentendo di esaminare complesse relazioni di identità, eseguire il debug in modo più efficiente e sfruttare una maggiore trasparenza con il modo in cui vengono utilizzate le informazioni.
+
+## Video di esercitazione
+
+Il seguente video è stato realizzato per consentire di comprendere meglio il visualizzatore del grafico dell’identità.
+
+>[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
 
 ## Introduzione
 
@@ -50,6 +52,20 @@ Selezionare lo spazio dei nomi che si desidera utilizzare e fare clic su **[!UIC
 Dopo aver selezionato uno spazio nomi, immettete il valore corrispondente per un cliente specifico nella casella di testo **[!UICONTROL Identity value]** e selezionate **[!UICONTROL View]**.
 
 ![add-identity-value](../images/identity-graph-viewer/identity-value-filled.png)
+
+### Accesso al visualizzatore del grafico dell&#39;identità dai set di dati
+
+Potete inoltre accedere al visualizzatore del grafico dell&#39;identità utilizzando l&#39;interfaccia set di dati. Dalla pagina dei set di dati [!UICONTROL Browse], selezionare un set di dati con cui interagire, quindi selezionare **[!UICONTROL Preview dataset]**
+
+![preview-dataset](../images/identity-graph-viewer/preview-dataset.png)
+
+Dalla finestra di anteprima, selezionate un’icona relativa all’impronta digitale per visualizzare le identità rappresentate mediante il visualizzatore del grafico di identità.
+
+>[!TIP]
+>
+>L&#39;icona dell&#39;impronta digitale viene visualizzata solo se il set di dati ha due o più identità.
+
+![impronta digitale](../images/identity-graph-viewer/fingerprint.png)
 
 Viene visualizzato il visualizzatore del grafico dell&#39;identità. Sul lato sinistro dello schermo è riportato il grafico dell&#39;identità che visualizza tutte le identità collegate allo spazio dei nomi selezionato e il valore dell&#39;identità immesso. Ogni nodo di identità è costituito da uno spazio dei nomi e dal valore ID corrispondente. Potete selezionare e mantenere qualsiasi identità da trascinare e interagire con il grafico. In alternativa, puoi passare il puntatore del mouse su un&#39;identità per visualizzare informazioni sul suo valore ID. L’output del grafico viene visualizzato anche come elenco al centro dello schermo.
 
@@ -109,8 +125,9 @@ Gli errori possono verificarsi quando si accede al visualizzatore del grafico de
 
 Leggendo questo documento, hai imparato a esplorare i grafici di identità dei clienti nell&#39;interfaccia utente della piattaforma. Per ulteriori informazioni sulle identità nella piattaforma, fare riferimento alla [Panoramica del servizio identità](../home.md)
 
-## Risorse aggiuntive
+## Changelog
 
-Il seguente video è stato realizzato per consentire di comprendere meglio il visualizzatore del grafico dell’identità.
-
->[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
+| Data | Azione |
+| ---- | ------ |
+| 01/2021 | <ul><li>È stato aggiunto il supporto per lo streaming di dati acquisiti e sandbox non di produzione.</li><li>Correzioni di bug minori.</li></ul> |
+| 2021-2002 | <ul><li>Il visualizzatore del grafico dell&#39;identità è accessibile tramite l&#39;anteprima del set di dati.</li><li>Correzioni di bug minori.</li><li>Il visualizzatore del grafico delle identità è reso disponibile in genere.</li></ul> |
