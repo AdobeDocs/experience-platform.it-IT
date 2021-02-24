@@ -1,9 +1,9 @@
 ---
 keywords: linkedin connection;linkedin connection;linkedin destinations;linkedin;
-title: CollegamentoIn collegamento con l'audience corrispondente
+title: Collegamento in connessione Audiences Matched
 description: Attiva profili per le campagne LinkedIn per il targeting dell'audience, la personalizzazione e la soppressione, in base a e-mail con hash.
 translation-type: tm+mt
-source-git-commit: d51de1ab4b2d4e91232166657466e597093f22ef
+source-git-commit: db2e5d51a5ed07b91997df8a566272c86a7c1708
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 0%
