@@ -5,10 +5,10 @@ user-guide-title: Servizio di segmentazione di Adobe Experience Platform
 breadcrumb-title: Guida al servizio di segmentazione
 user-guide-description: Crea segmenti e genera tipi di pubblico dai dati dei profili cliente in tempo reale.
 translation-type: tm+mt
-source-git-commit: b37cf48b839ac30026162d2224528d8aabd3d263
+source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 21%
+source-wordcount: '157'
+ht-degree: 20%
 
 ---
 
@@ -56,6 +56,7 @@ ht-degree: 21%
    - [Creare un segmento dinamico (video)](video/create-a-dynamic-segment.md)
    - [Creare un segmento con più entità (video)](video/create-multi-entity-segments.md)
    - [Valutazione di un segmento](tutorials/evaluate-a-segment.md)
+   - [Importazione e utilizzo di audience esterne](tutorials/using-external-audiences.md)
    - [Creazione di un dataset per esportare i dati](tutorials/create-dataset-export-segment.md)
    - [Applica la conformità all&#39;uso dei dati per i segmenti](tutorials/governance.md)
 - [Riferimento API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
