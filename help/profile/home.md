@@ -1,13 +1,13 @@
 ---
 keywords: ', Experience Platform;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API;profilo unificato;profilo unificato;unificato;Profilo;rtcp;XDM, grafici'
 title: Panoramica del profilo cliente in tempo reale
-topic: guide
+topic: guida
 description: Profilo cliente in tempo reale è un archivio di entità di ricerca generico che unisce i dati da varie risorse di dati aziendali e fornisce l'accesso a tali dati sotto forma di profili cliente individuali ed eventi serie temporali correlati. Questa funzione consente agli esperti di marketing di promuovere esperienze coordinate, coerenti e pertinenti con il pubblico attraverso più canali.
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 08eff53f107549fab0f167a6c206b632f3c8c183
 workflow-type: tm+mt
-source-wordcount: '1883'
-ht-degree: 1%
+source-wordcount: '1825'
+ht-degree: 0%
 
 ---
 
@@ -36,11 +36,11 @@ L&#39;archivio dei profili utilizza un&#39;infrastruttura DB Cosmos di Microsoft
 
  Experience Platform offre una serie di tutorial per evitare di creare schemi [Experience Data Model (XDM)](../xdm/home.md) che non possono essere supportati dal profilo cliente in tempo reale. Ciò include limiti morbidi che si traducono in un deterioramento delle prestazioni, nonché limiti rigidi che generano errori e interruzioni del sistema. Per ulteriori informazioni, incluso un elenco di linee guida e di esempi di casi di utilizzo, consultare la documentazione [Profile guardrails](guardrails.md).
 
-### (Alfa) Pannello profilo {#profile-dashboard}
+### (Beta) Pannello del profilo {#profile-dashboard}
 
 >[!IMPORTANT]
 >
->La funzionalità del dashboard è attualmente in alfa e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
+>La funzionalità del dashboard è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
 
 L&#39;interfaccia utente del Experience Platform  fornisce una dashboard attraverso la quale è possibile visualizzare informazioni importanti sui dati del profilo cliente in tempo reale, come acquisito durante un&#39;istantanea giornaliera. Per informazioni su come accedere e utilizzare il dashboard [!DNL Profile] nell&#39;interfaccia utente e per informazioni dettagliate sulle metriche visualizzate nel dashboard, fare riferimento alla [Guida dell&#39;interfaccia utente del dashboard del profilo](ui/profile-dashboard.md).
 
@@ -80,7 +80,7 @@ Per ulteriori informazioni sugli schemi di unione, inclusa la modalità di acces
 >
 >La funzionalità dell&#39;attributo calcolato è in alfa. La documentazione e le funzionalità sono soggette a modifiche.
 
-Gli attributi calcolati consentono di calcolare automaticamente il valore dei campi in base ad altri valori, calcoli ed espressioni. Gli attributi calcolati operano a livello di profilo, il che significa che puoi aggregare i valori per tutti i record ed eventi. Ogni attributo calcolato contiene un&#39;espressione, o &quot;regola&quot;, che valuta i dati in arrivo e memorizza il valore risultante in un attributo di profilo o in un evento. Questi calcoli consentono di rispondere facilmente a domande relative a cose come il valore di acquisto del ciclo di vita, il tempo tra acquisti o il numero di aperture di applicazioni, senza che sia necessario eseguire manualmente calcoli complessi ogni volta che le informazioni sono necessarie. Per ulteriori informazioni sugli attributi calcolati e istruzioni dettagliate per utilizzarli con l&#39;API [!DNL Real-time Customer Profile], vedere la [guida dell&#39;endpoint degli attributi calcolati](api/computed-attributes.md). Questa guida ti aiuterà a comprendere meglio il ruolo che gli attributi calcolati giocano in Adobe Experience Platform e include chiamate API di esempio per eseguire operazioni CRUD di base.
+Gli attributi calcolati sono funzioni utilizzate per aggregare i dati a livello di evento in attributi a livello di profilo. Queste funzioni vengono calcolate automaticamente in modo che possano essere utilizzate tra segmentazione, attivazione e personalizzazione. Questi calcoli consentono di rispondere facilmente a domande relative a cose come il valore di acquisto del ciclo di vita, il tempo tra acquisti o il numero di aperture di applicazioni, senza che sia necessario eseguire manualmente calcoli complessi ogni volta che le informazioni sono necessarie. Per ulteriori informazioni sugli attributi calcolati, compresa la comprensione del ruolo gli attributi calcolati vengono riprodotti in Adobe Experience Platform, si prega di iniziare leggendo la [panoramica degli attributi calcolati](computed-attributes/overview.md).
 
 ## Profili e segmenti
 
@@ -106,7 +106,7 @@ Al fine di promuovere esperienze coordinate, coerenti e personalizzate per i cli
 
 Observability Insights consente di esporre le metriche chiave in Adobe Experience Platform. Oltre alle statistiche sull&#39;utilizzo di [!DNL Experience Platform] e agli indicatori di prestazioni per diverse funzionalità [!DNL Platform], sono disponibili metriche specifiche relative al profilo che consentono di conoscere meglio i tassi di richieste in entrata, i tassi di assimilazione riusciti, le dimensioni dei record acquisiti e altro ancora. Per saperne di più, iniziare leggendo la [Panoramica API di Insights](../observability/api/overview.md) e per un elenco completo delle metriche del profilo cliente in tempo reale, consulta la documentazione sulle [metriche disponibili](../observability/api/metrics.md#available-metrics).
 
-## [!DNL Data governance] ed [!DNL Privacy]
+## [!DNL Data governance] e [!DNL Privacy]
 
 [!DNL Data governance] è una serie di strategie e tecnologie utilizzate per gestire i dati dei clienti e garantire la conformità a normative, restrizioni e politiche applicabili all&#39;uso dei dati.
 
