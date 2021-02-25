@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: d3151d9ccaf61e6ec1a88e147f3694292e953de0
+source-git-commit: a2470d44512821996a2d5ee44722cb24990d1054
 workflow-type: tm+mt
-source-wordcount: '768'
-ht-degree: 6%
+source-wordcount: '1067'
+ht-degree: 7%
 
 ---
 
@@ -17,13 +17,28 @@ ht-degree: 6%
 
 **Data di rilascio: 24 febbraio 2021**
 
+Nuove funzioni in Adobe Experience Platform:
+
+- [(Beta) Dashboard](#dashboards)
+
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Dataflows]](#dataflows)
 - [[!DNL Experience Data Model (XDM) System]](#xdm)
 - [[!DNL Identity Service]](#identity)
+- [[!DNL Real-time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
+
+## (Beta) Dashboard {#dashboards}
+
+Adobe Experience Platform fornisce diverse dashboard attraverso le quali potete visualizzare informazioni importanti sui dati aziendali, come acquisito durante le istantanee giornaliere.
+
+**Nuove funzionalità**
+
+| Funzione | Descrizione |
+| --- | --- |
+| Dashboard per profili, segmenti, destinazioni e utilizzo licenze (Beta) | **Nota: La funzionalità del dashboard è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.**<br/><br/> I dashboard consentono di generare report out-of-the-box sui dati aziendali e sono integrati direttamente nel flusso di lavoro di marketing all&#39;interno di Platform (Piattaforma). Queste dashboard sono disponibili senza bisogno di ulteriore supporto IT e senza il tempo e lo sforzo altrimenti necessari per esportare ed elaborare i dati con un&#39;ulteriore progettazione e implementazione del data warehouse. |
 
 ## [!DNL Data Science Workspace] {#dsw}
 
@@ -78,6 +93,18 @@ Adobe Experience Platform [!DNL Identity Service] consente di acquisire una visi
 | Visualizzatore grafico identità | Il visualizzatore per grafici di identità consente di convalidare e visualizzare le identità unite nell’interfaccia utente, per migliorare il debug e la trasparenza. Per ulteriori informazioni, vedere il documento del visualizzatore del grafico di identità [documento](../../identity-service/ui/identity-graph-viewer.md). |
 
 Per ulteriori informazioni generali su [!DNL Identity Service], fare riferimento alla [Panoramica del servizio identità](../../identity-service/home.md).
+
+## Profilo cliente in tempo reale {#profile}
+
+Adobe Experience Platform consente di creare esperienze coordinate, coerenti e pertinenti per i clienti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con il profilo cliente in tempo reale, puoi vedere una visualizzazione olistica di ogni singolo cliente che combina dati da più canali, inclusi dati online, offline, CRM e di terze parti. [!DNL Profile] consente di consolidare i dati dei clienti in una visualizzazione unificata che offre un account utilizzabile e con marca temporale per ogni interazione con il cliente.
+
+**Nuove funzionalità**
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Attributi calcolati (alfa) | ***Nota: Questa funzionalità è attualmente in alfa e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.*** <br/><br/>Gli attributi calcolati sono funzioni utilizzate per aggregare i dati a livello di evento in attributi a livello di profilo. Potete quindi utilizzare gli aggregati per segmentazione, attivazione e personalizzazione. Alcuni esempi di queste funzioni includono conteggio, somma, media, min, max, true/false. Gli attributi calcolati sono attualmente disponibili solo tramite API. Per ulteriori informazioni, vedere la [panoramica degli attributi calcolati](../../profile/computed-attributes/overview.md). |
+
+Per ulteriori informazioni sul profilo cliente in tempo reale, comprese esercitazioni e best practice per l&#39;utilizzo dei dati [!DNL Profile], si prega di iniziare leggendo la [panoramica sul profilo cliente in tempo reale](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
