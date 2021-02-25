@@ -5,9 +5,9 @@ user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 translation-type: tm+mt
-source-git-commit: 0e4fda4abf5c02df81b74f15d2fbcafb68548070
+source-git-commit: f3b27fbe75af7499f4ce43d8904d2f7e01384cb3
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '574'
 ht-degree: 9%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 9%
       - [Apache Hive sul connettore Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark sul connettore Azure HDInsights](connectors/databases/spark.md)
       - [Connettore di Data Explorer Azure](connectors/databases/data-explorer.md)
-      - [Connettore  Azure Synapse di Analytics](connectors/databases/synapse-analytics.md)
+      - [Connettore  Azure synapse di Analytics](connectors/databases/synapse-analytics.md)
       - [Connettore archiviazione tabella Azure](connectors/databases/ats.md)
       - [Connettore Couchbase](connectors/databases/couchbase.md)
       - [Connettore Google BigQuery](connectors/databases/bigquery.md)
@@ -148,6 +148,7 @@ ht-degree: 9%
    - [Creazione di una connessione dataset](tutorials/api/create-dataset-base-connection.md)
    - [Monitorare i flussi di dati](tutorials/api/monitor.md)
    - [Aggiorna connessioni](tutorials/api/update.md)
+   - [Aggiornare i flussi di dati](tutorials/api/update-dataflows.md)
    - [Elimina connessioni](tutorials/api/delete.md)
    - [Eliminare i flussi di dati](tutorials/api/delete-dataflows.md)
 - Esercitazioni sull&#39;interfaccia utente {#ui-tutorials}
