@@ -1,12 +1,12 @@
 ---
 keywords: ' Experience Platform;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API;profilo unificato;profilo unificato;unificato;profilo;rtcp;abilita profilo;Abilita profilo'
 title: Guida API profilo cliente in tempo reale
-topic: guide
+topic: guida
 description: L'API del profilo cliente in tempo reale consente agli sviluppatori di esplorare e lavorare con i dati del profilo, compresi i profili di vista, creare e aggiornare criteri di unione, esportare o dati del profilo di esempio ed eliminare i dati del profilo che non sono più necessari o che sono stati aggiunti per errore. Seguite questa guida per apprendere come eseguire operazioni chiave tramite l'API.
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 24a5af0440f58b4e1db639ec971c4e1611f107d8
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '895'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,11 @@ Per una guida sull&#39;utilizzo dei dati [!DNL Real-time Customer Profile] nell&
 >
 >La funzionalità dell&#39;attributo calcolato è in alfa e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
 
-Gli attributi calcolati consentono di calcolare automaticamente il valore dei campi in base ad altri valori, calcoli ed espressioni. Gli attributi calcolati operano a livello di profilo, il che significa che puoi aggregare i valori per tutti i record ed eventi. Ogni attributo calcolato contiene un&#39;espressione, o &quot;regola&quot;, che valuta i dati in arrivo e memorizza il valore risultante in un attributo di profilo o in un evento. Questi calcoli consentono di rispondere facilmente a domande relative a cose come il valore di acquisto del ciclo di vita, il tempo tra acquisti o il numero di aperture di applicazioni, senza che sia necessario eseguire manualmente calcoli complessi ogni volta che le informazioni sono necessarie. È possibile creare, visualizzare, modificare ed eliminare gli attributi calcolati utilizzando l&#39;endpoint `config/computedAttributes`. Per informazioni sull&#39;utilizzo di questo endpoint, visitare la [guida dell&#39;endpoint degli attributi calcolati](computed-attributes.md).
+Gli attributi calcolati sono funzioni utilizzate per aggregare i dati a livello di evento in attributi a livello di profilo. Queste funzioni vengono calcolate automaticamente in modo che possano essere utilizzate tra segmentazione, attivazione e personalizzazione.
+
+Ogni attributo calcolato contiene un&#39;espressione, o &quot;regola&quot;, che valuta i dati in arrivo e memorizza il valore risultante in un attributo di profilo. Questi calcoli consentono di rispondere facilmente a domande relative a cose come il valore di acquisto del ciclo di vita, il tempo tra acquisti o il numero di aperture di applicazioni, senza che sia necessario eseguire manualmente calcoli complessi ogni volta che le informazioni sono necessarie. Questi valori di attributi calcolati possono essere visualizzati in un profilo, utilizzati per creare un segmento o a cui si accede tramite una serie di pattern di accesso diversi.
+
+È possibile creare, visualizzare, modificare ed eliminare gli attributi calcolati utilizzando l&#39;endpoint `config/computedAttributes`. Per informazioni sull&#39;utilizzo degli attributi calcolati, fare riferimento alla [panoramica degli attributi calcolati](../computed-attributes/overview.md). Per le operazioni API, visita la [guida all&#39;endpoint API degli attributi calcolati](../computed-attributes/ca-api.md).
 
 ## Proiezioni Edge {#edge-projections}
 
