@@ -2,9 +2,9 @@
 title: Integrare il supporto per IAB TCF 2.0 utilizzando il Platform launch e l'estensione SDK Web della piattaforma
 description: Scopri come impostare il consenso IAB TCF 2.0 con  Adobe Experience Platform Launch e l’estensione Adobe Experience Platform Web SDK.
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 1a51ce92eb5c41ff65ebcf4c652640dd0782487f
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '829'
 ht-degree: 0%
 
 ---
@@ -24,13 +24,9 @@ Inoltre, questa guida richiede una buona conoscenza di Adobe Experience Platform
 
 ## Impostazione del consenso predefinito
 
-Nella configurazione dell&#39;estensione è presente un&#39;impostazione per il consenso predefinito. Questo controlla il comportamento dei clienti che non dispongono di un cookie di consenso. Se desiderate mettere in coda gli eventi esperienza per i clienti che non dispongono di un cookie di consenso, impostate questa opzione su `pending`.
+Nella configurazione dell&#39;estensione è presente un&#39;impostazione per il consenso predefinito. Questo controlla il comportamento dei clienti che non dispongono di un cookie di consenso. Se desiderate mettere in coda gli eventi esperienza per i clienti che non dispongono di un cookie di consenso, impostate questa opzione su `pending`. Potete inoltre utilizzare un elemento dati per impostare in modo dinamico il valore predefinito del consenso.
 
->[!NOTE]
->
->Al momento, non è possibile impostare questo valore in modo dinamico tramite l&#39;estensione del Experience Platform Launch.
-
-Per ulteriori informazioni sul consenso predefinito, consulta la sezione [consenso predefinito](../../fundamentals/configuring-the-sdk.md#default-consent) nella documentazione di configurazione dell&#39;SDK.
+Per ulteriori informazioni su come configurare il consenso predefinito, consulta la sezione [consenso predefinito](../../fundamentals/configuring-the-sdk.md#default-consent) nella guida alla configurazione dell&#39;SDK.
 
 ## Aggiornamento del profilo con le informazioni di consenso {#consent-code-1}
 
@@ -69,7 +65,7 @@ Questo codice personalizzato esegue due operazioni:
 * Valore: &quot;%IAB Stringa di consenso TCF%&quot;
 * GDPR si applica: &quot;%IAB TCF Consenso GDPR%&quot;
 
-![Azione di consenso per i set IAB](../../../assets/iab_set_consent_action.png)
+![Azione di consenso per i set IAB](../../images/consent/iab-tcf/with-launch/iab-action.png)
 
 >[!IMPORTANT]
 >
