@@ -1,25 +1,43 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;mappare csv;mappare file CSV;mappare file CSV su xdm;mappare csv a xdm;ui guide;mapper;mapping;date;date function;date;'
+keywords: ' Experience Platform;home;argomenti popolari;mappare csv;mappare file CSV;mappare file CSV su xdm;mappare csv a xdm;ui guide;mapper;mapping;date;date function;date function;date'
 solution: Experience Platform
 title: Funzioni data di preparazione dati
-topic: overview
-description: Questo documento introduce le funzioni data utilizzate con Data Prep.
+topic: ' - Panoramica'
+description: Questo documento introduce la funzione data utilizzata con Data Prep.
 translation-type: tm+mt
-source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
+source-git-commit: d3531248f8a7116b66f9a7ca00e0eadbc3d9df3d
 workflow-type: tm+mt
-source-wordcount: '415'
-ht-degree: 16%
+source-wordcount: '483'
+ht-degree: 15%
 
 ---
 
 
-# Funzioni data di preparazione dati
+# Data, funzione
 
 Data Prep supporta le funzioni data, sia come stringhe che come oggetti datetime.
 
+## Formato funzione data
+
+La funzione date converte stringhe e oggetti datetime in un oggetto ZoningDateTime formattato ISO 8601.
+
+**Formato**
+
+```http
+date({DATE}, {FORMAT}, {DEFAULT_DATE})
+```
+
+| Parametro | Descrizione |
+| --------- | ----------- |
+| `{DATE}` | Obbligatorio. Stringa che rappresenta la data. |
+| `{FORMAT}` | Facoltativo. Stringa che rappresenta il formato della data. Ulteriori informazioni sulla formattazione delle stringhe sono disponibili nella sezione [stringa formato data/ora](#format). |
+| `{DEFAULT_DATE}` | Facoltativo. La data predefinita da restituire se la data specificata è null. |
+
+Ad esempio, l&#39;espressione `date(orderDate, "yyyy-MM-dd")` converte un valore `orderDate` di &quot;31 dicembre 2020&quot; in un valore datetime di &quot;2020-12-31&quot;.
+
 ## Conversioni di funzioni data
 
-Quando i campi stringa dai dati in arrivo vengono mappati ai campi data negli schemi tramite Experience Data Model (XDM), il formato data deve essere esplicitamente menzionato. Se non menzionato esplicitamente, Data Prep tenterà di convertire i dati di input facendoli corrispondere ai seguenti formati. Una volta trovato il formato corrispondente, questo smetterà di valutare tutti i formati successivi.
+Quando i campi stringa dai dati in arrivo vengono mappati ai campi data negli schemi tramite Experience Data Model (XDM), il formato data deve essere esplicitamente menzionato. Se non menzionato esplicitamente, Data Prep tenterà di convertire i dati di input facendoli corrispondere ai seguenti formati. Una volta trovato un formato corrispondente, questo smetterà di valutare qualsiasi formato successivo.
 
 ```console
 "yyyy-MM-dd HH:mm:ssZ",
@@ -46,7 +64,7 @@ Quando i campi stringa dai dati in arrivo vengono mappati ai campi data negli sc
 >
 > Prep dati cercherà di convertire le stringhe in date nel modo migliore possibile. Tuttavia, queste conversioni possono portare a risultati indesiderati. Ad esempio, il valore della stringa &quot;12112020&quot; corrisponde al pattern &quot;gggaaaa&quot;, ma l&#39;utente potrebbe aver intenzione di leggere la data con il pattern &quot;ggaaaa&quot;. Di conseguenza, gli utenti dovrebbero indicare esplicitamente il formato della data per le stringhe.
 
-## Stringhe formato data/ora
+## Stringhe formato data/ora {#format}
 
 Nella tabella seguente sono illustrate le lettere del pattern definite per le stringhe di formato. Si prega di notare che le lettere sono con distinzione tra maiuscole e minuscole.
 
@@ -77,7 +95,3 @@ Nella tabella seguente sono illustrate le lettere del pattern definite per le st
 | V | ID fuso orario | Testo | America/Los Angeles |
 | O | Offset fuso orario | Testo | GMT+8 |
 | Q/q | Trimestre dell&#39;anno | Numero/Testo | 3; 03; Q3; 3° trimestre |
-
-**Esempio**
-
-L&#39;espressione `date(orderDate, "yyyy-MM-dd")` converte un valore `orderDate` di &quot;31 dicembre 2020&quot; in un valore datetime di &quot;2020-12-31&quot;.
