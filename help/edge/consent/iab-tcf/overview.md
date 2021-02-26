@@ -3,7 +3,7 @@ title: Supporto per IAB TCF 2.0 nell’SDK Web per Adobe Experience Platform
 description: Scoprite come supportare le preferenze di consenso di IAB TCF 2.0 tramite Adobe Experience Platform Web SDK
 keywords: consenso;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Profile
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 1c6238a0cf72230e019fd10d9a72f30444bd9fb9
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 0%
@@ -66,13 +66,13 @@ Le sezioni seguenti descrivono i punti di integrazione principali tra IAB TCF 2.
 
 Il consenso predefinito viene utilizzato quando non esiste già una preferenza di consenso salvata per un cliente. Ciò significa che le opzioni di consenso predefinite possono controllare il comportamento di Adobe Experience Platform Web SDK e apportare modifiche in base all&#39;area geografica del cliente.
 
-Ad esempio, se hai un cliente che non rientra nella giurisdizione del Regolamento generale sulla protezione dei dati (General Data Protection Regulation, GDPR), il consenso predefinito potrebbe essere impostato su `in`, ma all&#39;interno della giurisdizione del GDPR, il consenso predefinito potrebbe essere impostato su `pending`. La piattaforma di gestione cloud (CMP) potrebbe rilevare la regione del cliente e fornire il flag `gdprApplies` a IAB TCF 2.0. Questo flag può essere utilizzato per impostare il consenso predefinito.
+Ad esempio, se hai un cliente che non rientra nella giurisdizione del Regolamento generale sulla protezione dei dati (General Data Protection Regulation, GDPR), il consenso predefinito potrebbe essere impostato su `in`, ma all&#39;interno della giurisdizione del GDPR, il consenso predefinito potrebbe essere impostato su `pending`. La vostra piattaforma di gestione del consenso (CMP) potrebbe rilevare la regione del cliente e fornire il flag `gdprApplies` a IAB TCF 2.0. Questo flag può essere utilizzato per impostare il consenso predefinito.
 
 Per ulteriori informazioni sul consenso predefinito, consulta la sezione [consenso predefinito](../../fundamentals/configuring-the-sdk.md#default-consent) nella documentazione di configurazione dell&#39;SDK.
 
 ### Impostazione del consenso quando cambia
 
-Adobe Experience Platform Web SDK dispone di un comando `setConsent` che comunica le preferenze di consenso del cliente a tutti i servizi del Adobe  utilizzando IAB TCF 2.0. Se vi state integrando con CDP in tempo reale, questo aggiorna il profilo del cliente. Se vi state integrando con  Audience Manager, questo aggiorna le informazioni del cliente. La chiamata imposta anche un cookie con una preferenza di consenso totale o nulla che controlla se gli eventi esperienza futuri possono essere inviati o meno. Si intende che tale azione venga chiamata ogni volta che il consenso cambia. Al caricamento delle pagine future, il cookie di consenso di Experience Edge verrà letto per determinare se gli Eventi esperienza possono essere inviati e se è possibile impostare un cookie di identità.
+Adobe Experience Platform Web SDK dispone di un comando `setConsent` che comunica le preferenze di consenso del cliente a tutti i servizi del Adobe  utilizzando IAB TCF 2.0. Se vi state integrando con CDP in tempo reale, questo aggiorna il profilo del cliente. Se vi state integrando con  Audience Manager, questo aggiorna le informazioni del cliente. La chiamata imposta anche un cookie con una preferenza di consenso totale o nulla che controlla se gli eventi esperienza futuri possono essere inviati o meno. Si intende che questa azione venga chiamata ogni volta che il consenso cambia. Al caricamento delle pagine future, il cookie di consenso di Experience Edge verrà letto per determinare se gli Eventi esperienza possono essere inviati e se è possibile impostare un cookie di identità.
 
 Come per  Audience Manager  integrazione IAB TCF 2.0, Experience Edge fornisce il consenso quando un cliente ha fornito il proprio consenso esplicito ai seguenti scopi:
 
