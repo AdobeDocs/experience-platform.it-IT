@@ -3,11 +3,11 @@ keywords: ' Experience Platform;home;argomenti popolari;indirizzo ip;indirizzi i
 description: Gli indirizzi IP devono essere aggiunti a un elenco consentiti  prima di utilizzare i connettori di origine.
 solution: Experience Platform
 title: ELENCO CONSENTITI di indirizzi IP  connessioni di origine
-topic: overview
+topic: ' - Panoramica'
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 6ee71de86d487a38ca4acc76813111994eb44bd9
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '117'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,15 @@ ht-degree: 0%
 - `20.49.111.0/29`
 - `40.71.14.32/28`
 - `40.78.229.96/28`
+
+## Regione degli Stati Uniti orientali 2
+
+- `20.41.2.0/23`
+- `20.41.4.0/26`
+- `20.44.17.80/28`
+- `20.49.102.16/29`
+- `40.70.148.160/28`
+- `52.167.107.224/28`
 
 ## Europa occidentale
 
