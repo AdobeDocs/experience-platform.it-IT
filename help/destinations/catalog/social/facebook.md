@@ -3,21 +3,15 @@ keywords: connessione Facebook;connessione facebook;destinazioni facebook;facebo
 title: Connessione Facebook
 description: Attiva profili per le tue campagne Facebook per il targeting dell'audience, la personalizzazione e la soppressione basate su e-mail con hash.
 translation-type: tm+mt
-source-git-commit: 28cfac3d7fed311d9eec01ef464cf921f44a10e9
+source-git-commit: bec44832a235dd3f9e2ee0f3ffc77854ee5784d7
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '933'
 ht-degree: 3%
 
 ---
 
 
 # [!DNL Facebook] connection
-
->[!IMPORTANT]
->
->È in corso la migrazione dei clienti alla nuova versione di questa destinazione, [!DNL Facebook Custom Audience].
->
-> Le istruzioni contenute in questo articolo si applicano a entrambe le versioni, con la seguente nota: mentre la migrazione è in corso, nell&#39;interfaccia utente verrà visualizzata solo la versione corrente della destinazione [!DNL Facebook], in cui è possibile utilizzare solo le identità [!UICONTROL EMAIL] e [!UICONTROL EMAIL_LC_SHA_256] per l&#39;attivazione.
 
 Attiva profili per le tue campagne [!DNL Facebook] per il targeting dell&#39;audience, la personalizzazione e la soppressione basate su e-mail con hash.
 
