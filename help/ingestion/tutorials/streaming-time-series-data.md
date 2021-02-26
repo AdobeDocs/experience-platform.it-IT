@@ -2,13 +2,13 @@
 keywords: ' Experience Platform;home;popolari argomenti;streaming, assimilazione;inserimento;data delle serie temporali;data delle serie temporali;'
 solution: Experience Platform
 title: Streaming dei dati della serie temporale tramite le API di ingestione dello streaming
-topic: tutorial
-type: Tutorial
+topic: esercitazione
+type: Esercitazione
 description: Questa esercitazione ti aiuterà a iniziare a utilizzare le API di assimilazione in streaming, parte delle API del servizio Adobe Experience Platform Data Ingestion.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: d3531248f8a7116b66f9a7ca00e0eadbc3d9df3d
 workflow-type: tm+mt
-source-wordcount: '1236'
+source-wordcount: '1313'
 ht-degree: 2%
 
 ---
@@ -316,9 +316,11 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 La richiesta di esempio riportata di seguito consente di inserire in Platform i dati delle serie temporali con un nome di origine mancante. Se ai dati manca il nome di origine, verrà aggiunto l&#39;ID di origine dalla definizione della connessione di streaming.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Sarà necessario generare le proprie `xdmEntity._id` e `xdmEntity.timestamp`. Per generare un ID è utile utilizzare un UUID. Inoltre, la seguente chiamata API **non** richiede intestazioni di autenticazione.
+>Sarà necessario generare le proprie `xdmEntity._id` e `xdmEntity.timestamp`. Un buon modo per generare un ID è utilizzare la funzione UUID in Data Prep. Ulteriori informazioni sulla funzione UUID sono disponibili nella [Guida alle funzioni di preparazione dei dati](../../data-prep/functions.md). L&#39;attributo `xdmEntity._id` rappresenta un identificatore univoco per il record stesso, **not** un ID univoco Per la persona o il dispositivo il cui record è. L&#39;ID persona o dispositivo sarà specifico in tutti gli attributi assegnati come persona o identificatore dispositivo dello schema.
+>
+>Sia `xdmEntity._id` che `xdmEntity.timestamp` sono gli unici campi obbligatori per i dati delle serie temporali. Inoltre, la seguente chiamata API **non** richiede intestazioni di autenticazione.
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
@@ -383,7 +385,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 }'
 ```
 
-Se desiderate includere un nome di origine, l&#39;esempio seguente mostra come includerlo.
+Se si desidera includere un nome di origine, l&#39;esempio seguente mostra come includerlo.
 
 ```json
     "header": {
@@ -401,7 +403,7 @@ Se desiderate includere un nome di origine, l&#39;esempio seguente mostra come i
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del nuovo streaming [!DNL Profile].
+Una risposta riuscita restituisce lo stato HTTP 200 con i dettagli del nuovo streaming [!DNL Profile].
 
 ```json
 {
@@ -416,18 +418,18 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del nuovo str
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{CONNECTION_ID}` | ID della connessione di streaming creata in precedenza. |
-| `xactionId` | Identificatore univoco generato sul lato server per il record appena inviato. Questo ID aiuta  Adobe a tracciare il ciclo di vita del record attraverso diversi sistemi e con il debug. |
-| `receivedTimeMs`: Una marca temporale (epoch in millisecondi) che mostra l’ora in cui è stata ricevuta la richiesta. |
-| `synchronousValidation.status` | Poiché il parametro di query `synchronousValidation=true` è stato aggiunto, questo valore viene visualizzato. Se la convalida ha esito positivo, lo stato sarà `pass`. |
+| `{CONNECTION_ID}` | L&#39;ID della connessione di streaming creata in precedenza. |
+| `xactionId` | Un identificatore univoco ha generato lato server per il record appena inviato. Questo ID consente  Adobe di tracciare il ciclo di vita di questo record attraverso diversi sistemi e con il debug. |
+| `receivedTimeMs`: Indicatore di data e ora (in millisecondi) che mostra l&#39;ora di ricezione della richiesta. |
+| `synchronousValidation.status` | Poiché è stato aggiunto il parametro di query `synchronousValidation=true`, questo valore viene visualizzato. Se la convalida è riuscita, lo stato sarà `pass`. |
 
-## Recuperare i nuovi dati delle serie temporali acquisiti
+## Recuperare i dati delle nuove serie temporali assimilate
 
-Per convalidare i record acquisiti in precedenza, è possibile utilizzare il simbolo [[!DNL Profile Access API]](../../profile/api/entities.md) per recuperare i dati delle serie temporali. Questo può essere fatto utilizzando una richiesta di GET all&#39;endpoint `/access/entities` e utilizzando parametri di query facoltativi. Possono essere utilizzati più parametri, separati da e commerciale (&amp;).&quot;
+Per convalidare i record assimilati in precedenza, è possibile utilizzare il [[!DNL Profile Access API]](../../profile/api/entities.md) per recuperare i dati delle serie temporali. Questa operazione può essere eseguita utilizzando una richiesta di GET all&#39;endpoint `/access/entities` e utilizzando parametri di query opzionali. È possibile utilizzare più parametri, separati da e commerciale (&amp;).&quot;
 
 >[!NOTE]
 >
->Se l&#39;ID del criterio di unione non è definito e il `schema.name` o `relatedSchema.name` è `_xdm.context.profile`, [!DNL Profile Access] recupererà tutte le identità correlate **a5/>.**
+>Se l&#39;ID dei criteri di unione non è definito e il `schema.name` o `relatedSchema.name` è `_xdm.context.profile`, [!DNL Profile Access] recupererà tutte le identità correlate **a5/>.**
 
 **Formato API**
 
@@ -439,10 +441,10 @@ GET /access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `schema.name` | **Obbligatorio.** Nome dello schema a cui si accede. |
-| `relatedSchema.name` | **Obbligatorio.** Poiché si sta effettuando l&#39;accesso a un  `_xdm.context.experienceevent`, questo valore specifica lo schema per l&#39;entità profilo a cui sono collegati gli eventi delle serie temporali. |
-| `relatedEntityId` | L&#39;ID dell&#39;entità correlata. Se fornito, è necessario fornire anche lo spazio nomi entità. |
-| `relatedEntityIdNS` | Spazio dei nomi dell’ID che si sta tentando di recuperare. |
+| `schema.name` | **Obbligatorio.** Il nome dello schema a cui si sta accedendo. |
+| `relatedSchema.name` | **Obbligatorio.** Poiché si sta accedendo a un  `_xdm.context.experienceevent`, questo valore specifica lo schema per l&#39;entità profilo a cui sono correlati gli eventi delle serie temporali. |
+| `relatedEntityId` | ID dell&#39;entità correlata. Se fornito, è necessario fornire anche lo spazio dei nomi di entità. |
+| `relatedEntityIdNS` | Lo spazio dei nomi dell&#39;ID che si sta tentando di recuperare. |
 
 **Richiesta**
 
@@ -457,7 +459,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con i dettagli delle entità richieste. Come potete vedere, si tratta degli stessi dati delle serie temporali precedentemente acquisiti.
+Una risposta corretta restituisce lo stato HTTP 200 con i dettagli delle entità richieste. Come potete vedere, si tratta degli stessi dati della serie temporale precedentemente assimilati.
 
 ```json
 {
@@ -525,6 +527,6 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli delle entità
 
 ## Passaggi successivi
 
-Leggendo questo documento, ora puoi capire come trasferire i dati dei record in [!DNL Platform] utilizzando le connessioni di streaming. Puoi provare a effettuare più chiamate con valori diversi e a recuperare i valori aggiornati. Inoltre, puoi iniziare a monitorare i dati acquisiti tramite l&#39;interfaccia utente [!DNL Platform]. Per ulteriori informazioni, consultare la [guida all&#39;inserimento dei dati di monitoraggio](../quality/monitor-data-ingestion.md).
+Leggendo questo documento, ora si capisce come assimilare i dati di record in [!DNL Platform] utilizzando le connessioni di streaming. Potete provare a effettuare più chiamate con valori diversi e a recuperare i valori aggiornati. Inoltre, è possibile iniziare a monitorare i dati assimilati tramite l&#39;interfaccia utente [!DNL Platform]. Per ulteriori informazioni, consultare la guida [Monitoring data ingestion](../quality/monitor-data-ingestion.md).
 
 Per ulteriori informazioni sull&#39;assimilazione in streaming in generale, leggere la [panoramica sull&#39;assimilazione in streaming](../streaming-ingestion/overview.md).
