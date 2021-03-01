@@ -2,13 +2,13 @@
 keywords: ' Experience Platform;panoramica;cliente ai;argomenti più comuni;customer ai overview'
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Panoramica di Customer AI
-topic: Customer AI Overview
+topic: Panoramica dell'AI del cliente
 description: Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala. Per poter usufruire di queste funzioni non occorre trasformare le esigenze aziendali in problematiche di machine learning né scegliere un algoritmo, e non sono richieste formazione o implementazioni specifiche.
 landing-page-description: Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala.
 translation-type: tm+mt
 source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '557'
 ht-degree: 18%
 
 ---
