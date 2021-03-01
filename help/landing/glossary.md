@@ -2,13 +2,13 @@
 keywords: ' Experience Platform;home;argomenti popolari'
 solution: Experience Platform
 title: Glossario Adobe Experience Platform
-topic: getting started
+topic: guida introduttiva
 description: Un glossario di terminologia importante in Experience Platform.
 translation-type: tm+mt
 source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '7131'
-ht-degree: 0%
+source-wordcount: '7133'
+ht-degree: 1%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 **Servizi** intelligenti  Adobe: I servizi intelligenti come  Attribution AI e Customer AI sono modelli di machine-learning basati su intelligenza artificiale che sono progettati appositamente e richiedono  Experience Platform per funzionare e funzionare.
 
-**Adobe I/O**:  Adobe I/O fa parte  Experience Platform e fornisce l&#39;accesso a tutto ciò che gli sviluppatori devono integrare, estendere e personalizzare la piattaforma, incluse API, eventi, console per sviluppatori e utili strumenti.
+**Adobe I/O** :  Adobe I/O fa parte  Experience Platform e fornisce l&#39;accesso a tutto ciò che gli sviluppatori devono integrare, estendere e personalizzare la piattaforma, incluse API, eventi, console per sviluppatori e utili strumenti.
 
 **Adobe Sensei**:  Adobe Sensei è la struttura di intelligence che dà potere  Experience Platform. Offre inoltre una serie di servizi AI che consentono ai marchi di migliorare la loro capacità di offrire esperienze cliente personalizzate in tempo reale.
 
@@ -355,7 +355,7 @@ ht-degree: 0%
 
 **Offerte** personalizzate: Un&#39;offerta personalizzata è un messaggio di marketing personalizzabile basato su regole e vincoli di idoneità.
 
-**Posizionamenti**: Un posizionamento è la posizione e il contesto in cui un&#39;offerta viene visualizzata per un utente finale.
+**Posizionamenti**: il posizionamento corrisponde a posizione e contesto in cui un’offerta viene mostrata a un utente finale.
 
 **Area di lavoro** Criteri: Area di lavoro nell’interfaccia utente della piattaforma che consente agli amministratori dei dati di visualizzare e gestire le etichette e i criteri di utilizzo dei dati per la propria organizzazione.
 
