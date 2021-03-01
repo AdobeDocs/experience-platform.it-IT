@@ -1,7 +1,7 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Guida alle sandbox in Adobe Experience Platform
+user-guide-title: Guida alle sandbox di Adobe Experience Platform
 breadcrumb-title: Guida alle sandbox
 user-guide-description: Suddividi un’istanza di Platform in ambienti virtuali per lo sviluppo, il test e la distribuzione di applicazioni.
 translation-type: tm+mt
