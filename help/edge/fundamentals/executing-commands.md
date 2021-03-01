@@ -1,35 +1,36 @@
 ---
-title: Esegui comandi Adobe Experience Platform Web SDK
-description: Scopri come eseguire  comandi SDK Web per Experienci Platform
-keywords: eseguire comandi;commandName;Promises;getLibraryInfo;response objects;consenso;
+title: Esegui comandi SDK per web di Adobe Experience Platform
+description: Scopri come eseguire i comandi SDK per web di Experience Platform
+keywords: Esegui comandi;commandName;Promises;getLibraryInfo;oggetti di risposta;consenso;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 308c10eb0d1f78dad2b8b6158f28d0384a65c78c
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '416'
 ht-degree: 2%
 
 ---
 
 
-# Esegui, comandi
+# Esegui comandi
 
-Dopo che il codice di base è stato implementato nella pagina Web, puoi iniziare a eseguire i comandi con l’SDK. Non è necessario attendere che il file esterno (alloy.js) venga caricato dal server prima di eseguire i comandi. Se l’SDK non ha completato il caricamento, i comandi vengono messi in coda ed elaborati dall’SDK il prima possibile.
 
-I comandi vengono eseguiti utilizzando la sintassi seguente.
+Dopo aver implementato il codice di base nella pagina web, puoi iniziare a eseguire i comandi con l&#39;SDK. Non è necessario attendere che il file esterno (`alloy.js`) venga caricato dal server prima di eseguire i comandi. Se il caricamento dell&#39;SDK non è stato completato, i comandi vengono messi in coda ed elaborati dall&#39;SDK il prima possibile.
+
+I comandi vengono eseguiti utilizzando la seguente sintassi.
 
 ```javascript
 alloy("commandName", options);
 ```
 
-L&#39; `commandName` indica all&#39;SDK cosa fare, mentre `options` sono i parametri e i dati che si desidera trasmettere a un comando. Poiché le opzioni disponibili dipendono dal comando, consultare la documentazione per ulteriori dettagli su ciascun comando.
+Il `commandName` indica all&#39;SDK cosa fare, mentre `options` sono i parametri e i dati che desideri trasmettere a un comando. Poiché le opzioni disponibili dipendono dal comando, consulta la documentazione per ulteriori dettagli su ciascun comando.
 
 ## Una nota sulle promesse
 
-[Le ](https://developer.mozilla.org/it-IT/docs/Web/JavaScript/Reference/Global_Objects/Promise) promesse sono fondamentali per il modo in cui l’SDK comunica con il codice sulla tua pagina Web. Una promessa è una struttura di programmazione comune e non è specifica per questo SDK o JavaScript. Una promessa funge da proxy per un valore non noto al momento della creazione della promessa. Una volta noto il valore, la promessa viene &quot;risolta&quot; con il valore. Le funzioni del gestore possono essere associate a una promessa, in modo che sia possibile ricevere una notifica quando la promessa è stata risolta o quando si è verificato un errore nel processo di risoluzione della promessa. Per saperne di più sulle promesse, leggere [questa esercitazione](https://javascript.info/promise-basics) o qualsiasi altra risorsa disponibile sul Web.
+[](https://developer.mozilla.org/it-IT/docs/Web/JavaScript/Reference/Global_Objects/Promise) Le promesse sono fondamentali per il modo in cui l’SDK comunica con il codice sulla tua pagina web. Una promessa è una struttura di programmazione comune e non è specifica per questo SDK o JavaScript. Una promessa funge da proxy per un valore non noto al momento della creazione della promessa. Una volta noto il valore, la promessa viene &quot;risolta&quot; con il valore . Le funzioni del gestore possono essere associate a una promessa, in modo che tu possa essere informato quando la promessa è stata risolta o quando si è verificato un errore nel processo di risoluzione della promessa. Per ulteriori informazioni sulle promesse, leggi [questa esercitazione](https://javascript.info/promise-basics) o una delle altre risorse sul web.
 
-## Gestione del successo o del fallimento {#handling-success-or-failure}
+## Gestione del successo o dell&#39;errore {#handling-success-or-failure}
 
-Ogni volta che viene eseguito un comando, viene restituita una promessa. La promessa rappresenta il completamento finale del comando. Nell&#39;esempio seguente, è possibile utilizzare i metodi `then` e `catch` per determinare quando il comando ha avuto esito positivo o negativo.
+Ogni volta che viene eseguito un comando, viene restituita una promessa. La promessa rappresenta l&#39;eventuale completamento del comando. Nell&#39;esempio seguente, è possibile utilizzare i metodi `then` e `catch` per determinare quando il comando ha avuto esito positivo o negativo.
 
 ```javascript
 alloy("commandName", options)
@@ -43,7 +44,7 @@ alloy("commandName", options)
   });
 ```
 
-Se sapere quando il comando ha esito positivo non è importante, puoi rimuovere la chiamata `then`.
+Se sapere quando il comando ha esito positivo non è importante, puoi rimuovere la chiamata `then` .
 
 ```javascript
 alloy("commandName", options)
@@ -53,7 +54,7 @@ alloy("commandName", options)
   });
 ```
 
-Allo stesso modo, se sapere quando il comando non riesce non è importante per voi, potete rimuovere la chiamata `catch`.
+Allo stesso modo, se sapere quando il comando non riesce non è importante per te, puoi rimuovere la chiamata `catch` .
 
 ```javascript
 alloy("commandName", options)
@@ -65,7 +66,7 @@ alloy("commandName", options)
 
 ### Oggetti di risposta
 
-Tutte le promesse restituite dai comandi vengono risolte con un oggetto `result`. L&#39;oggetto result conterrà i dati in base al comando e al consenso dell&#39;utente. Ad esempio, le informazioni sulla libreria vengono trasmesse come proprietà dell&#39;oggetto result nel comando seguente.
+Tutte le promesse restituite dai comandi vengono risolte con un oggetto `result`. L&#39;oggetto result conterrà i dati in base al comando e al consenso dell&#39;utente. Ad esempio, le informazioni sulla libreria vengono passate come proprietà dell&#39;oggetto results nel comando seguente.
 
 ```js
 alloy("getLibraryInfo")
@@ -76,4 +77,4 @@ alloy("getLibraryInfo")
 
 ### Consenso
 
-Se un utente non ha dato il proprio consenso per uno scopo particolare, la promessa sarà ancora risolta; tuttavia, l&#39;oggetto response conterrà solo le informazioni che possono essere fornite nel contesto a cui l&#39;utente ha acconsentito.
+Se un utente non ha dato il proprio consenso per uno scopo particolare, la promessa sarà comunque risolta; tuttavia, l&#39;oggetto response conterrà solo le informazioni che possono essere fornite nel contesto di ciò a cui l&#39;utente ha acconsentito.
