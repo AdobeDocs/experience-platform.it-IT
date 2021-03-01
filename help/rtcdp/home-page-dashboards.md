@@ -15,7 +15,7 @@ ht-degree: 4%
 
 # [!DNL Real-time Customer Data Platform] home page e dashboard
 
-La home page della piattaforma CDP (Real-time Customer Data Platform), che include un dashboard delle metriche, viene visualizzata quando si accede a CDP in tempo reale.
+La home page della piattaforma CDP (Real-time Customer Data Platform), che include un dashboard delle metriche, viene visualizzata quando accedete a CDP in tempo reale.
 
 La pagina principale è solo uno dei punti in cui vengono visualizzate le schede metriche. Il CDP in tempo reale fornisce schede metriche per tutta l&#39;esperienza. Queste metriche ti informano sui dati, il profilo e il pubblico del segmento nel sistema.
 
