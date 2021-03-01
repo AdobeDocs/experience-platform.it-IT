@@ -2,13 +2,13 @@
 keywords: ' Experience Platform;home;argomenti più diffusi;ui;interfaccia utente;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;editor schema;Editor schema;schema;schemi;schemi;creare'
 solution: Experience Platform
 title: Creazione di uno schema con l'Editor di schema
-topic: tutorial
-type: Tutorial
+topic: esercitazione
+type: Esercitazione
 description: Questa esercitazione illustra i passaggi necessari per creare uno schema utilizzando Schema Editor all’interno di Experience Platform.
 translation-type: tm+mt
 source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '3455'
+source-wordcount: '3457'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Utilizzare i campi a destra dell&#39;editor per fornire un nome visualizzato e u
 Quando si decide un nome per lo schema, è necessario tenere presenti diverse considerazioni importanti:
 
 * I nomi dello schema devono essere brevi e descrittivi in modo che lo schema possa essere facilmente trovato in un secondo momento.
-* I nomi degli schemi devono essere univoci, il che significa che devono essere sufficientemente specifici da non essere riutilizzati in futuro. Se, ad esempio, l&#39;organizzazione dispone di programmi di fedeltà separati per marchi diversi, sarebbe opportuno assegnare al proprio schema il nome &quot;Marca A Fedeltà Members&quot;, in modo da distinguere facilmente gli altri schemi di fedeltà definiti in seguito.
+* I nomi degli schemi devono essere univoci, il che significa che devono essere sufficientemente specifici da non essere riutilizzati in futuro. Ad esempio, se l&#39;organizzazione dispone di programmi di fedeltà separati per marchi diversi, sarebbe opportuno assegnare al proprio schema il nome &quot;Marca A Fedeltà Membri&quot; in modo da distinguere facilmente gli altri schemi di fedeltà che si potrebbero definire in seguito.
 * È inoltre possibile utilizzare la descrizione dello schema per fornire eventuali informazioni contestuali aggiuntive relative allo schema.
 
 Questa esercitazione costituisce uno schema per l&#39;acquisizione di dati relativi ai membri di un programma fedeltà, pertanto lo schema è denominato &quot;Membri fedeltà&quot;.
@@ -262,7 +262,7 @@ Ad esempio, ci possono essere migliaia di membri del programma fedeltà apparten
 >
 >I passaggi descritti di seguito descrivono come aggiungere un descrittore di identità a un campo dello schema esistente. In alternativa alla definizione dei campi di identità all&#39;interno della struttura dello schema stesso, è anche possibile utilizzare un campo `identityMap` per contenere le informazioni di identità.
 >
->Se si prevede di utilizzare `identityMap`, tenere presente che sostituirà l&#39;identità primaria aggiunta direttamente allo schema. Per ulteriori informazioni, vedere la sezione relativa a `identityMap` nella [guida di base alla composizione dello schema](../schema/composition.md#identityMap).
+>Se si prevede di utilizzare `identityMap`, tenere presente che sostituirà l&#39;identità primaria aggiunta direttamente allo schema. Per ulteriori informazioni, vedere la sezione relativa a `identityMap` nella [guida di base sulla composizione dello schema](../schema/composition.md#identityMap).
 
 Nella sezione **[!UICONTROL Structure]** dell&#39;editor, selezionare il campo `loyaltyId` e la casella di controllo **[!UICONTROL Identity]** viene visualizzata sotto **[!UICONTROL Field properties]**. Selezionare la casella e l&#39;opzione per impostare questo valore come **[!UICONTROL Primary identity]** viene visualizzata. Selezionate anche questa casella.
 
