@@ -4,10 +4,11 @@ audience: user
 user-guide-title: Servizio di segmentazione di Adobe Experience Platform
 breadcrumb-title: Guida al servizio di segmentazione
 user-guide-description: Crea segmenti e genera tipi di pubblico dai dati dei profili cliente in tempo reale.
+feature: Segmenti
 translation-type: tm+mt
-source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
+source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '158'
 ht-degree: 20%
 
 ---
@@ -24,40 +25,40 @@ ht-degree: 20%
    - [Anteprime e stime](api/previews-and-estimates.md)
    - [Pianificazioni](api/schedules.md)
    - [Definizioni dei segmenti](api/segment-definitions.md)
-   - [Processi segmento](api/segment-jobs.md)
+   - [Processi dei segmenti](api/segment-jobs.md)
    - [Ricerca di segmenti](api/segment-search.md)
-   - [Segmentazione in streaming](api/streaming-segmentation.md)
+   - [Segmentazione streaming](api/streaming-segmentation.md)
 - Interfaccia utente di segmentazione {#ui}
    - [Panoramica](ui/overview.md)
-   - [Pannello segmento](ui/segment-dashboard.md)
+   - [Dashboard dei segmenti](ui/segment-dashboard.md)
    - [Generatore di segmenti](ui/segment-builder.md)
-   - [Segmentazione in streaming](ui/streaming-segmentation.md)
+   - [Segmentazione streaming](ui/streaming-segmentation.md)
    - [Segmentazione streaming (video)](video/streaming-segmentation-overview.md)
-   - [Refactoring dei vincoli temporali](ui/segment-refactoring.md)
-- [Rispetto delle eccezioni](honoring-opt-outs.md)
-- [Segmentazione multi-entità](multi-entity-segmentation.md)
-- Lingua query profilo {#pql}
+   - [Refactoring dei vincoli di tempo](ui/segment-refactoring.md)
+- [Rispetto delle rinunce](honoring-opt-outs.md)
+- [Segmentazione su più entità](multi-entity-segmentation.md)
+- Lingua della query del profilo {#pql}
    - [Panoramica](pql/overview.md)
    - [Funzioni booleane](pql/boolean-functions.md)
    - [Funzioni di confronto](pql/comparison-functions.md)
-   - [Funzioni di array, elenco e set](pql/array-functions.md)
-   - [Mappa, funzioni](pql/map-functions.md)
+   - [Funzioni Array, list e set](pql/array-functions.md)
+   - [Mappare le funzioni](pql/map-functions.md)
    - [Funzioni stringa](pql/string-functions.md)
    - [Funzioni dell&#39;oggetto](pql/object-functions.md)
    - [Funzioni aritmetiche](pql/arithmetic-functions.md)
    - [Funzioni di aggregazione](pql/aggregation-functions.md)
    - [Funzioni di data e ora](pql/datetime-functions.md)
    - [Funzioni filtro](pql/filter-functions.md)
-   - [Quantificatori logici](pql/logical-quantifiers.md)
+   - [quantificatori logici](pql/logical-quantifiers.md)
    - [Funzioni varie](pql/misc-functions.md)
 - Tutorial {#tutorials}
-   - [Creazione di un segmento](tutorials/create-a-segment.md)
+   - [Creare un segmento](tutorials/create-a-segment.md)
    - [Creare un segmento (video)](video/create-segment.md)
    - [Creare un segmento dinamico (video)](video/create-a-dynamic-segment.md)
    - [Creare un segmento con più entità (video)](video/create-multi-entity-segments.md)
-   - [Valutazione di un segmento](tutorials/evaluate-a-segment.md)
-   - [Importazione e utilizzo di audience esterne](tutorials/using-external-audiences.md)
-   - [Creazione di un dataset per esportare i dati](tutorials/create-dataset-export-segment.md)
-   - [Applica la conformità all&#39;uso dei dati per i segmenti](tutorials/governance.md)
+   - [Valutare un segmento](tutorials/evaluate-a-segment.md)
+   - [Importazione e utilizzo di tipi di pubblico esterni](tutorials/using-external-audiences.md)
+   - [Creare un set di dati per esportare i dati](tutorials/create-dataset-export-segment.md)
+   - [Applicare la conformità per l’utilizzo dei dati per i segmenti](tutorials/governance.md)
 - [Riferimento API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
-- [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-en)
+- [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
