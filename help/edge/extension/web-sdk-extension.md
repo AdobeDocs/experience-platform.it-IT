@@ -1,32 +1,32 @@
 ---
 title: Estensione di Adobe Experience Platform Web SDK Panoramica
-description: Ulteriori informazioni sull'estensione Adobe Experience Platform Web SDK per  Adobe Experience Platform Launch
+description: Scopri l’estensione Adobe Experience Platform Web SDK per Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 18e511337eaa8b6eb7785b1ee5f1ce2366ddd7c7
+source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 24%
+source-wordcount: '525'
+ht-degree: 19%
 
 ---
 
 
-# Panoramica dell’estensione Adobe Experience Platform Web SDK
+# Panoramica dell’estensione dell’SDK per web di Adobe Experience Platform
 
-L’estensione Adobe Experience Platform Web SDK invia dati ad Adobe Experience Cloud da proprietà Web tramite Adobe Experience Platform Edge Network. L&#39;estensione consente di trasmettere dati in streaming alla piattaforma, sincronizzare identità, elaborare i segnali di consenso dei clienti e raccogliere automaticamente i dati contestuali.
+L’estensione Adobe Experience Platform Web SDK invia i dati ad Adobe Experience Cloud dalle proprietà web tramite Adobe Experience Platform Edge Network. L’estensione ti consente di inviare dati in streaming a Platform, sincronizzare le identità, elaborare i segnali di consenso dei clienti e raccogliere automaticamente i dati contestuali.
 
-In questo documento viene illustrato come configurare l’estensione nell’interfaccia utente  Adobe Experience Platform Launch.
+Questo documento illustra come configurare l’estensione nell’interfaccia utente di Adobe Experience Platform Launch.
 
 ## Configura l&#39;estensione
 
-Se l&#39;estensione SDK Web della piattaforma è già stata installata per una proprietà, aprite la proprietà nell&#39;interfaccia utente del Platform launch e selezionate la scheda **[!UICONTROL Extensions]**. In Platform Web SDK, selezionate **[!UICONTROL Configure]**.
+Se l’estensione Platform Web SDK è già stata installata per una proprietà, apri la proprietà nell’interfaccia utente di Platform Launch e seleziona la scheda **[!UICONTROL Extensions]** . In Platform Web SDK, seleziona **[!UICONTROL Configure]**.
 
 ![](../images/extension/overview/configure.png)
 
-Se non avete ancora installato l&#39;estensione, selezionate la scheda **[!UICONTROL Catalog]**. Nell&#39;elenco delle estensioni disponibili, individua l&#39;estensione SDK Web della piattaforma e seleziona **[!UICONTROL Install]**.
+Se non hai ancora installato l&#39;estensione, seleziona la scheda **[!UICONTROL Catalog]** . Dall’elenco delle estensioni disponibili, trova l’estensione Platform Web SDK e seleziona **[!UICONTROL Install]**.
 
 ![](../images/extension/overview/install.png)
 
-In entrambi i casi, arrivate alla pagina di configurazione per l’SDK Web della piattaforma. Le sezioni seguenti illustrano le opzioni di configurazione dell&#39;estensione.
+In entrambi i casi, arrivi alla pagina di configurazione dell’SDK per web di Platform. Le sezioni seguenti illustrano le opzioni di configurazione dell&#39;estensione.
 
 ![](../images/extension/overview/config-screen.png)
 
@@ -36,13 +36,13 @@ Le opzioni di configurazione nella parte superiore della pagina indicano ad Adob
 
 ### [!UICONTROL Name]
 
-L’estensione Adobe Experience Platform Web SDK supporta più istanze sulla pagina. Viene utilizzato per inviare dati a più organizzazioni con una singola configurazione di Platform Launch.
+L’estensione Adobe Experience Platform Web SDK supporta più istanze sulla pagina. Il nome viene utilizzato per inviare dati a più organizzazioni con una singola configurazione di Platform Launch.
 
-Per impostazione predefinita, il nome dell&#39;estensione è &quot;[!DNL alloy]&quot;. Tuttavia, è possibile modificare il nome dell&#39;istanza e inserire un nome oggetto JavaScript valido.
+Il nome dell&#39;estensione viene impostato automaticamente su &quot;[!DNL alloy]&quot;. Tuttavia, è possibile modificare il nome dell&#39;istanza e inserire un nome oggetto JavaScript valido.
 
 ### **[!UICONTROL IMS Organization ID]**
 
-L&#39;[!UICONTROL IMS Organization ID] è l&#39;organizzazione a cui si desidera inviare i dati in Adobe. Nella maggior parte dei casi, si consiglia di utilizzare il valore predefinito compilato automaticamente. Se sulla pagina sono presenti più istanze, compilare il campo con il valore della seconda organizzazione a cui si desidera inviare i dati.
+L&#39;[!UICONTROL IMS Organization ID] è l&#39;organizzazione a cui si desidera inviare i dati in Adobe. Nella maggior parte dei casi, utilizza il valore predefinito compilato automaticamente. Se sulla pagina sono presenti più istanze, compila questo campo con il valore della seconda organizzazione a cui desideri inviare i dati.
 
 ### **[!UICONTROL Edge Domain]**
 
@@ -50,16 +50,16 @@ L&#39;[!UICONTROL IMS Organization ID] è l&#39;organizzazione a cui si desidera
 
 ## [!UICONTROL Edge Configurations]
 
-Quando una richiesta viene inviata ad Adobe Experience Platform Edge Network, viene utilizzato un ID di configurazione periferico per fare riferimento alla configurazione lato server. Questo consente di aggiornare la configurazione senza dover apportare modifiche al codice sul sito Web.
+Quando viene inviata una richiesta ad Adobe Experience Platform Edge Network, viene utilizzato un ID di configurazione perimetrale per fare riferimento alla configurazione lato server. Puoi aggiornare la configurazione senza dover apportare modifiche al codice sul sito web.
 
-Per ulteriori informazioni, vedere la guida sulle [configurazioni dei bordi](../fundamentals/edge-configuration.md).
+Per ulteriori informazioni, consulta la guida sulle [configurazioni edge](../fundamentals/edge-configuration.md) .
 
 ## [!UICONTROL Privacy]
 
-La sezione [!UICONTROL Privacy] consente di configurare il modo in cui l&#39;SDK gestisce i segnali di consenso dei clienti dal sito Web. Nello specifico, consente di selezionare il livello predefinito di consenso che si presume di un cliente se non è stata fornita alcuna altra preferenza esplicita per il consenso. La tabella seguente riassume il contenuto di ogni opzione:
+La sezione [!UICONTROL Privacy] ti consente di configurare in che modo l’SDK gestisce i segnali di consenso dei clienti provenienti dal tuo sito web. Nello specifico, ti consente di selezionare il livello di consenso predefinito che si presume di un cliente se non è stata fornita alcuna altra preferenza di consenso esplicito. La tabella seguente suddivide ciò che ogni opzione comporta:
 
 | [!UICONTROL Default Consent Level] | Descrizione |
 | --- | --- |
-| [!UICONTROL In] | Consenso. Utilizzate questa opzione se per impostazione predefinita si assume il consenso del cliente e si rispettano solo i segnali di rinuncia. |
-| [!UICONTROL Pending] | Si presume che i clienti con il consenso &quot;in sospeso&quot; siano esclusi fino all&#39;invio di un segnale di consenso. Utilizzate questa opzione se richiedete un consenso esplicito da parte del cliente per le operazioni aziendali. |
-| [!UICONTROL Provided by data element] | Il livello di consenso predefinito è determinato da un elemento dati separato definito dall&#39;utente. Quando si utilizza questa opzione, è necessario specificare l&#39;elemento dati utilizzando il menu a discesa fornito. |
+| [!UICONTROL In] | Opt-in. Utilizza questa opzione se supponi il consenso del cliente per impostazione predefinita e rispetta solo i segnali di rinuncia. |
+| [!UICONTROL Pending] | I clienti con consenso &quot;in sospeso&quot; vengono esclusi finché non viene inviato un segnale di consenso. Utilizza questa opzione se richiedi il consenso esplicito del cliente per le operazioni aziendali. |
+| [!UICONTROL Provided by data element] | Il livello di consenso predefinito è determinato da un elemento dati separato definito dall’utente. Quando utilizzi questa opzione, devi specificare l’elemento dati utilizzando il menu a discesa fornito. |
