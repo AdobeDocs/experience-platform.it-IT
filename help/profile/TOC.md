@@ -3,11 +3,12 @@ product: experience-platform
 audience: user
 user-guide-title: Guida di Real-time Customer Profile
 user-guide-description: Unisci i dati dei clienti per creare una visualizzazione unificata delle interazioni dei clienti nei diversi canali.
+feature: Profili
 translation-type: tm+mt
-source-git-commit: 08eff53f107549fab0f167a6c206b632f3c8c183
+source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 19%
+source-wordcount: '123'
+ht-degree: 20%
 
 ---
 
@@ -20,23 +21,23 @@ ht-degree: 19%
 * [!DNL Profile] API {#api}
    * [Panoramica](api/overview.md)
    * [Introduzione](api/getting-started.md)
-   * [Proiezioni Edge](api/edge-projections.md)
+   * [Proiezioni del bordo](api/edge-projections.md)
    * [Entità ([!DNL Profile] accesso)](api/entities.md)
-   * [Processi di esportazione ([!DNL Profile] esportazione)](api/export-jobs.md)
+   * [Attività di esportazione ([!DNL Profile] esportazione)](api/export-jobs.md)
    * [Unisci criteri](api/merge-policies.md)
-   * [Stato dell’anteprima del campione ([!DNL Profile] anteprima)](api/preview-sample-status.md)
+   * [Stato del campione dell’anteprima ([!DNL Profile] anteprima)](api/preview-sample-status.md)
    * [[!DNL Profile] processi di sistema (richieste di eliminazione)](api/profile-system-jobs.md)
-* Guide all&#39;interfaccia utente profilo {#ui}
-   * [[!DNL Profile] Guida all&#39;interfaccia](ui/user-guide.md)
+* Guide all&#39;interfaccia utente del profilo {#ui}
+   * [[!DNL Profile] Guida all’interfaccia utente](ui/user-guide.md)
    * [[!DNL Profile] dashboard](ui/profile-dashboard.md)
    * [[!DNL Profile] personalizzazione dei dettagli](ui/profile-customization.md)
-   * [Guida all&#39;interfaccia utente per i criteri di unione](ui/merge-policies.md)
+   * [Guida all’interfaccia utente per i criteri di unione](ui/merge-policies.md)
    * [Creare criteri di unione (video)](video/create-merge-policies.md)
-   * [Guida all&#39;interfaccia utente dello schema unione](ui/union-schema.md)
-   * [Panoramica dello schema unione (video)](video/union-schemas-overview.md)
+   * [Guida all’interfaccia utente dello schema dell’unione](ui/union-schema.md)
+   * [Panoramica dello schema dell’Unione (video)](video/union-schemas-overview.md)
 * (Alfa) Attributi calcolati {#computed-attributes}
    * [Panoramica](computed-attributes/overview.md)
-   * [API degli attributi calcolati](computed-attributes/ca-api.md)
+   * [API attributi calcolati](computed-attributes/ca-api.md)
    * [Configurare un campo attributo calcolato](computed-attributes/configure-api.md)
    * [Espressioni di esempio](computed-attributes/expressions.md)
 * Tutorial {#tutorials}
@@ -45,5 +46,5 @@ ht-degree: 19%
    * [Altre esercitazioni](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Elaborazione delle richieste di privacy](privacy.md)
 * [[!DNL Profile] guida alla risoluzione dei problemi](troubleshooting.md)
-* [Riferimento API profilo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)
-* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-en)
+* [Riferimento API del profilo](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)
+* [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
