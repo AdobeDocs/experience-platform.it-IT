@@ -4,36 +4,37 @@ audience: user
 user-guide-title: Guida del sistema Experience Data Model (XDM)
 breadcrumb-title: Guida di Data Model (XDM)
 user-guide-description: Utilizza le classi e i mixin Experience Data Model (XDM) per standardizzare i dati dell’esperienza.
+feature: Schemi
 translation-type: tm+mt
-source-git-commit: b735e5f7eb8d1f0526d8786430c844b4d36fa09d
+source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '236'
 ht-degree: 22%
 
 ---
 
 
-# Sistema del modello dati esperienza (XDM) {#xdm}
+# Sistema Experience Data Model (XDM) {#xdm}
 
 * [Panoramica del sistema XDM](home.md)
 * Schemi {#schema}
    * [Nozioni di base sulla composizione dello schema](schema/composition.md)
    * [Best practice per la modellazione dei dati](schema/best-practices.md)
    * [Vincoli del tipo di campo XDM](schema/field-constraints.md)
-   * [Dizionario campo XDM](schema/field-dictionary.md)
+   * [Dizionario dei campi XDM](schema/field-dictionary.md)
 * Classi {#classes}
-   * [Profilo singolo XDM](./classes/individual-profile.md)
-   * [XDM ExperienceEvent](./classes/experienceevent.md)
+   * [Profilo individuale XDM](./classes/individual-profile.md)
+   * [ExperienceEvent XDM](./classes/experienceevent.md)
 * Mixins {#mixins}
-   * Mixer di profilo {#profile}
+   * Mixer di profili {#profile}
       * [IdentityMap](./mixins/profile/identitymap.md)
       * [Dettagli demografici](./mixins/profile/person-details.md)
-      * [Dettagli contatto personale](./mixins/profile/personal-details.md)
-      * [Dettagli iscrizione segmento](./mixins/profile/segmentation.md)
-      * [Dettagli contatto di lavoro](./mixins/profile/work-details.md)
+      * [Dati di contatto personali](./mixins/profile/personal-details.md)
+      * [Dettagli di appartenenza al segmento](./mixins/profile/segmentation.md)
+      * [Dettagli contatto lavoro](./mixins/profile/work-details.md)
    * Mixer eventi {#event}
       * [Dettagli ID utente finale](./mixins/event/enduserids.md)
-      * [Dettagli ambiente](./mixins/event/environment-details.md)
+      * [Dettagli dell&#39;ambiente](./mixins/event/environment-details.md)
    * [Aggiornamenti dei nomi misti](./mixins/name-updates.md)
 * Tipi di dati {#data-types}
    * [Applicazione](./data-types/application.md)
@@ -52,33 +53,33 @@ ht-degree: 22%
    * [Identità](./data-types/identity.md)
    * [Misura](./data-types/measure.md)
    * [Ordine](./data-types/order.md)
-   * [Articolo di pagamento](./data-types/payment-item.md)
-   * [Person](./data-types/person.md)
+   * [Elemento di pagamento](./data-types/payment-item.md)
+   * [Persona](./data-types/person.md)
    * [Nome della persona](./data-types/person-name.md)
    * [Numero di telefono](./data-types/phone-number.md)
-   * [Inserisci contesto](./data-types/place-context.md)
+   * [Posizionare il contesto](./data-types/place-context.md)
    * [Dettagli POI](./data-types/poi-details.md)
    * [Interazione POI](./data-types/poi-interaction.md)
    * [Indirizzo postale](./data-types/postal-address.md)
    * [Ricerca](./data-types/search.md)
-   * [Iscrizione](./data-types/subscription.md)
-   * [Interazione Web](./data-types/web-interactions.md)
-   * [Dettagli pagina Web](./data-types/webpage-details.md)
+   * [Abbonamento](./data-types/subscription.md)
+   * [Interazione web](./data-types/web-interactions.md)
+   * [Dettagli della pagina web](./data-types/webpage-details.md)
 * [!UICONTROL Schemas] Interfaccia {#ui}
    * [Panoramica](./ui/overview.md)
-   * [Esplora risorse XDM](./ui/explore.md)
-   * Creazione e modifica di risorse {#resources}
+   * [Esplorare le risorse XDM](./ui/explore.md)
+   * Creare e modificare risorse {#resources}
       * [Schemi](./ui/resources/schemas.md)
       * [Classi](./ui/resources/classes.md)
-      * [Mixin](./ui/resources/mixins.md)
+      * [Mixins](./ui/resources/mixins.md)
       * [Tipi di dati](./ui/resources/data-types.md)
    * Definire i campi {#fields}
       * [Panoramica](./ui/fields/overview.md)
       * [Campi obbligatori](./ui/fields/required.md)
       * [Campi oggetto](./ui/fields/object.md)
-      * [Campi Matrice](./ui/fields/array.md)
-      * [campi Enum](./ui/fields/enum.md)
-      * [Campi identità](./ui/fields/identity.md)
+      * [Campi array](./ui/fields/array.md)
+      * [Campi enumerati](./ui/fields/enum.md)
+      * [Campi di identità](./ui/fields/identity.md)
       * [Campi di relazione](./ui/fields/relationship.md)
    * [Genera dati XDM di esempio](./ui/sample.md)
    * [Esportare schemi XDM](./ui/export.md)
@@ -88,7 +89,7 @@ ht-degree: 22%
    * [Schemi](api/schemas.md)
    * [Comportamenti](api/behaviors.md)
    * [Classi](api/classes.md)
-   * [Mixin](api/mixins.md)
+   * [Mixins](api/mixins.md)
    * [Tipi di dati](api/data-types.md)
    * [Descrittori](api/descriptors.md)
    * [Unioni](api/unions.md)
@@ -102,7 +103,7 @@ ht-degree: 22%
    * [Creare uno schema (API)](tutorials/create-schema-api.md)
    * [Definire una relazione tra due schemi (interfaccia utente)](tutorials/relationship-ui.md)
    * [Definire una relazione tra due schemi (API)](tutorials/relationship-api.md)
-   * [Creare uno schema ad hoc (API)](tutorials/ad-hoc.md)
+   * [Creare uno schema ad-hoc (API)](tutorials/ad-hoc.md)
 * [Guida alla risoluzione dei problemi](troubleshooting-guide.md)
 * [Riferimento API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
-* [Note sulla versione della piattaforma](https://www.adobe.com/go/platform-release-notes-en)
+* [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
