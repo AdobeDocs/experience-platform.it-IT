@@ -5,9 +5,9 @@ title: Creare set di dati per l’acquisizione dei dati di consenso IAB TCF 2.0
 topic: eventi di privacy
 description: Questo documento fornisce passaggi per impostare i due set di dati necessari per raccogliere i dati di consenso IAB TCF 2.0.
 translation-type: tm+mt
-source-git-commit: a845ade0fc1e6e18c36b5f837fe7673a976f01c7
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1566'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Questa esercitazione richiede una buona comprensione dei seguenti componenti di 
    * [Nozioni di base sulla composizione](../../../../xdm/schema/composition.md) dello schema: Scopri i blocchi di base degli schemi XDM.
 * [Servizio](../../../../identity-service/home.md) Adobe Experience Platform Identity: Consente di collegare le identità dei clienti da diverse origini dati tra dispositivi e sistemi.
    * [Namespace](../../../../identity-service/namespaces.md) di identità: I dati di identità cliente devono essere forniti in uno spazio dei nomi di identità specifico riconosciuto dal servizio Identity.
-* [Profilo](../../../../profile/home.md) cliente in tempo reale: Utilizza  [!DNL Identity Service] per creare profili cliente dettagliati dai set di dati in tempo reale. [!DNL Real-time Customer Profile] richiama i dati dal Data Lake e persiste i profili dei clienti nel proprio archivio dati separato.
+* [Profilo](../../../../profile/home.md) cliente in tempo reale: Utilizza  [!DNL Identity Service] per creare in tempo reale profili cliente dettagliati dai set di dati. [!DNL Real-time Customer Profile] richiama i dati dal Data Lake e persiste i profili dei clienti nel proprio archivio dati separato.
 
 ## [!UICONTROL Privacy Details] struttura in miscela  {#structure}
 
