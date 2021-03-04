@@ -1,218 +1,218 @@
 ---
-keywords: RTCDP;CDP;Real-time Customer Data Platform;real-time customer data platform;real-time customer data platform;cdp;cdp;rtcdp
-title: Guida introduttiva alla piattaforma dati cliente in tempo reale
+keywords: RTCDP;CDP;Real-time Customer Data Platform;piattaforma dati cliente in tempo reale;cdp in tempo reale;cdp;rtcdp
+title: Guida introduttiva a Real-time Customer Data Platform
 description: Utilizza questo scenario di esempio per capire come configurare la tua implementazione di Real-time Customer Data Platform.
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '2321'
+source-wordcount: '2323'
 ht-degree: 1%
 
 ---
 
 
-# Guida introduttiva alla piattaforma dati cliente in tempo reale
+# Guida introduttiva a Real-time Customer Data Platform
 
-Questa guida introduttiva illustra un esempio di implementazione della piattaforma dati cliente in tempo reale (Real-time Customer Data Platform, CDP). Potete utilizzarlo come esempio per configurare la vostra implementazione. Anche se questa guida mostra esempi specifici, contiene collegamenti verso informazioni aggiuntive utilizzabili durante la creazione della configurazione.
+Questa guida introduttiva illustra un esempio di implementazione di Real-time Customer Data Platform (Real-time CDP). Puoi usarlo come esempio durante la configurazione della tua implementazione. Anche se questa guida mostra esempi specifici, è collegata alle informazioni aggiuntive che puoi utilizzare durante la creazione della configurazione.
 
-Questo esempio mostra la potenza della piattaforma dati cliente in tempo reale, basata su Adobe Experience Platform, per:
+Questo esempio mostra la potenza di Real-time Customer Data Platform, con tecnologia Adobe Experience Platform, per:
 
-* Acquisizione di dati da più origini
-* Unirli in un singolo [!DNL real-time customer profile]
-* Offri un&#39;esperienza coerente, rilevante e personalizzata tra i dispositivi.
+* Acquisire dati da più origini
+* Uniscili in un singolo [!DNL real-time customer profile]
+* Offri un’esperienza coerente, pertinente e personalizzata tra i dispositivi.
 
 ## Caso d’uso
 
-Luma, una compagnia di abbigliamento atletico, cerca sempre di migliorare la loro esperienza cliente. Hanno una nuova iniziativa per aumentare le vendite relative ai regali. Vogliono anche ridurre la sovraesposizione, come annunci fastidiosi che seguono i clienti.
+Luma, un&#39;azienda di abbigliamento atletico, cerca sempre di migliorare la loro esperienza con i clienti. Hanno una nuova iniziativa per aumentare le vendite relative ai regali. Vogliono anche ridurre la sovraesposizione, come annunci fastidiosi che seguono i clienti in giro.
 
-Attualmente, stanno spendendo troppo sui supporti multimediali che si ritirano rispetto agli elementi che il visitatore non acquisterà andando avanti. Ad esempio, Luma non desidera richiamare un utente con un elemento destinato a essere acquistato una sola volta per un altro utente.
+Attualmente, spendono troppo sui media che si retargentano contro gli articoli che il visitatore non comprerà in futuro. Ad esempio, Luma non desidera eseguire il retargeting di un utente con un articolo destinato come acquisto una tantum per un altro utente.
 
-Al momento, i dati di Luma sono dispersi tra più fonti. Di conseguenza, devono affrontare sfide importanti:
+Al momento, i dati di Luma sono dispersi tra più fonti. Di conseguenza, devono affrontare sfide significative:
 
-* L&#39;organizzazione marketing deve lavorare con diversi team che possiedono ciascuna un&#39;origine dati, inclusi un sito Web, un&#39;app mobile, sistemi fedeltà, CRM e così via.
-* Quando il team di marketing accede ai dati, spesso risulta obsoleto e non è più rilevante per la campagna con un fattore temporale sensibile.
+* L’organizzazione marketing deve lavorare con diversi team che possiedono ciascuna un’origine dati, inclusi un sito web, un’app mobile, sistemi fedeltà, CRM e così via.
+* Quando il team marketing accede ai dati, spesso non sono più aggiornati e non sono più rilevanti per la campagna che tiene conto del tempo.
 * Devono unificare i dati in modo da indirizzare una persona, non i canali.
 
 Di conseguenza, Luma ha i seguenti obiettivi aziendali:
 
-* Crea una visione singola in tempo reale dei loro consumatori dalle loro diverse fonti di dati.
+* Crea una visione unica in tempo reale dei loro consumatori dalle loro diverse fonti di dati.
 * Personalizza le campagne di marketing con messaggi pertinenti su diversi canali e dispositivi.
 
 Per raggiungere questi obiettivi, il team marketing deve essere in grado di gestire i dati dei clienti su larga scala.
 
-Con CDP in tempo reale, basato su Adobe Experience Platform, l’organizzazione di marketing di Luma può:
+Con Real-time CDP, basato su Adobe Experience Platform, l’organizzazione di marketing di Luma può:
 
-1. Raccogliere i dati da piattaforme diverse e assicurarsi che siano disponibili a valle per altre attività di marketing.
-1. Crea una visione unica e in tempo reale dei loro consumatori, indipendentemente da dove i dati sono originati.
-1. Crea un&#39;esperienza coerente, rilevante e personalizzata in ogni punto di contatto.
+1. Raccogliere dati da piattaforme diverse e assicurarsi che siano disponibili a valle per altre attività di marketing.
+1. Crea una visualizzazione unica e in tempo reale dei propri consumatori, indipendentemente da dove vengono generati i dati.
+1. Crea un’esperienza coerente, pertinente e personalizzata in ogni punto di contatto.
 
 ## Passaggi
 
-Questa esercitazione include i passaggi seguenti:
+Questa esercitazione include i seguenti passaggi:
 
-1. Creare il [profilo cliente](#customer-profile).
-1. [Personalizzare ](#personalizing-the-user-experience) l&#39;esperienza utente.
-1. Utilizzare [origini dati multiple](#using-multiple-data-sources).
-1. [Configurare un&#39;origine](#configuring-a-data-source) dati.
-1. [Raccogli i ](#bringing-the-data-together-for-a-specific-customer) dati per un cliente specifico.
-1. Impostare [segmenti](#segments).
-1. Configurare [le destinazioni](#destinations).
-1. [Stitch il profilo su più dispositivi](#cross-device-identity-stitching).
-1. [Analizzare il profilo](#analyzing-the-profile).
+1. Crea il [profilo cliente](#customer-profile).
+1. [](#personalizing-the-user-experience) Personalizza l’esperienza utente.
+1. Utilizzare [più origini dati](#using-multiple-data-sources).
+1. [Configurare un’origine](#configuring-a-data-source) dati.
+1. [Raccogli i dati ](#bringing-the-data-together-for-a-specific-customer) per un cliente specifico.
+1. Imposta [segmenti](#segments).
+1. Imposta [destinazioni](#destinations).
+1. [Stitch il profilo tra i dispositivi](#cross-device-identity-stitching).
+1. [Analizza il profilo](#analyzing-the-profile).
 
 ## Profilo del cliente
 
-La prima volta che i clienti visitano il tuo sito, non sai nulla di loro.
+Quando i clienti visitano per la prima volta il tuo sito, non sai nulla di loro.
 
 ![immagine](assets/luma-site.png)
 
-Mentre si spostano, i dati vengono acquisiti in tempo reale e inviati non solo a una suite di rapporti in  Adobe Analytics, ma anche direttamente ad Adobe Experience Platform. Durante la raccolta dei dati, si inizia a formare una singola vista del consumatore, basata sui dati comportamentali in [!DNL Experience Platform's real-time customer profile].
+Durante la navigazione, i dati vengono acquisiti in tempo reale e inviati non solo a una suite di rapporti in Adobe Analytics, ma anche direttamente ad Adobe Experience Platform. Man mano che i dati vengono raccolti, inizia a formare una singola vista del consumatore, basata sui dati comportamentali in [!DNL Experience Platform's real-time customer profile].
 
-Molti visitatori del sito Web sono probabilmente clienti ripetuti che hanno precedentemente acquistato da Luma.  Per Luma è importante personalizzare messaggi e offerte per i visitatori nuovi e ripetuti, nonché per i clienti noti.
+Molti visitatori del sito web sono probabilmente clienti ripetuti che hanno precedentemente acquistato da Luma.  È importante che Luma personalizzi messaggi e offerte per indirizzare sia i visitatori nuovi che quelli ripetuti, sia i clienti noti.
 
-### Prima visita del cliente
+### Prima visita del nuovo cliente
 
-Ad esempio, un visitatore non identificato accede alla sezione Uomo del sito Luma e visualizza una coppia di maglie in esecuzione.
+Ad esempio, un visitatore non identificato accede alla sezione Uomo del sito Luma e visualizza una coppia di felpe in esecuzione.
 
 ![immagine](assets/luma-sweatshirts.png)
 
-Man mano che il cliente si sposta per ulteriori informazioni su questi prodotti, queste visualizzazioni di prodotto vengono raccolte in  Adobe Analytics e inviate a [!DNL Experience Platform].
+Man mano che il cliente si sposta per ulteriori informazioni su questi prodotti, queste visualizzazioni di prodotto vengono raccolte in Adobe Analytics e inviate a [!DNL Experience Platform].
 
 <!--![image](assets/luma-shirt-detail.png)-->
 
-Luma può mappare il comportamento del visitatore su un profilo utente su Adobe Experience Platform e iniziare a ricavare una visione più completa del comportamento del consumatore.
+Luma può mappare il comportamento del visitatore a un profilo utente su Adobe Experience Platform e iniziare a assemblare una visione più ricca del comportamento del consumatore.
 
-### Visualizzazione più dettagliata del cliente
+### Ottenere una visualizzazione più dettagliata del cliente
 
-Mentre il cliente continua a interagire con il sito Web, emerge un&#39;immagine più chiara. Ad esempio, supponiamo che il visitatore aggiunga un prodotto al carrello e acceda.
+Mentre il cliente continua a interagire con il sito web, emerge un&#39;immagine più chiara. Ad esempio, supponiamo che il visitatore aggiunga un prodotto al carrello e acceda.
 
-Quando il cliente accede, si identifica come Sarah Rose.
+Quando il cliente effettua l&#39;accesso, si identifica come Sarah Rose.
 
 ![immagine](assets/luma-login.png)
 
 Vengono unite due identità:
 
-* I dati di navigazione anonimi
-* I dati esistenti associati al conto di Sarah Rose
+* Dati di navigazione anonimi
+* I dati esistenti associati all&#39;account di Sarah Rose
 
-Entrambe le identità sono combinate in un unico profilo in [!DNL Experience Platform]. La luma ha ora una visione unificata di questo consumatore.
+Entrambe le identità sono combinate in un singolo profilo in [!DNL Experience Platform]. Luma ha ora una visione unificata di questo consumatore.
 
-In base al comportamento di navigazione del visitatore anonimo nella sezione Uomo del sito, si potrebbe supporre che il cliente fosse un maschio. Ora che ha effettuato l’accesso, Luma riconosce Sarah Rose. Luma utilizza la potenza di [!DNL Real-time Customer Profile] per perfezionare i messaggi che le vengono inviati attraverso i canali.
+In base al comportamento di navigazione del visitatore anonimo nella sezione Uomini del sito, si potrebbe supporre che il cliente fosse un uomo. Ora che ha effettuato l’accesso, Luma riconosce Sarah Rose. Luma utilizza la potenza di [!DNL Real-time Customer Profile] per perfezionare i messaggi consegnati a lei tra i canali.
 
-## Personalizzazione dell&#39;esperienza utente
+## Personalizzazione dell’esperienza utente
 
-Sarah è accolta con un messaggio di fedeltà e ringraziata per essere un membro del Bronzo con maggiori informazioni sui benefici e come aumentare il suo status e punti.
+Sarah viene accolta con un messaggio di fedeltà e ringraziata per essere membro del Bronze con maggiori informazioni sui benefici e come aumentare il suo status e punti.
 
 Passa alla home page per ulteriori informazioni.
 
 ![immagine](assets/luma-personal.png)
 
-Sarah riceve un&#39;esperienza home page personalizzata che viene distribuita in modo dinamico, in base al suo [!DNL Real-time Customer Profile] in Adobe Experience Platform.
+Sarah riceve un’esperienza di home page personalizzata che viene consegnata in modo dinamico, in base a [!DNL Real-time Customer Profile] in Adobe Experience Platform.
 
-Vede contenuti rilevanti, grazie  personalizzazione basata su Adobe Sensei in  Adobe Target, che tiene conto dei suoi acquisti passati e dell&#39;affinità verso l&#39;uso di abbigliamento e abbigliamento. Luma inoltre adatta il contenuto del catalogo degli uomini verso l&#39;attrezzatura di marcia per gli uomini in base alla sua ricerca più recente.
+Vede contenuti rilevanti, grazie alla personalizzazione basata su Adobe Sensei in Adobe Target, che tiene conto dei suoi acquisti e dell’affinità con l’uso di abbigliamento e attrezzatura. Luma inoltre adatta il contenuto del catalogo maschile per gli uomini in base al suo ultimo navigatore.
 
-Più in basso nella pagina, Sarah viene mostrato i prodotti in evidenza, così come un nuovo vassoio delle raccomandazioni basato sui suoi ultimi elementi visualizzati.
+Più in basso nella pagina, a Sarah vengono mostrati i prodotti in evidenza, così come una nuova barra delle raccomandazioni in base ai suoi ultimi articoli visualizzati.
 
-Questo contenuto personalizzato aiuta Sarah a trovare rapidamente gli elementi rilevanti. Questo aumenta le conversioni e offre un&#39;esperienza cliente più piacevole.
+Questo contenuto personalizzato aiuta Sarah a trovare rapidamente gli elementi rilevanti. Questo aumenta le conversioni e offre una customer experience più piacevole.
 
 ### Riportare il cliente
 
-Sarah si distrae e lascia il sito, terminando la sessione. Luma può usare i suoi dati in Adobe Experience Platform per aiutarla a riportarla sul sito.
+Sarah si distrae e lascia il sito, terminando la sessione. Luma può utilizzare i suoi dati in Adobe Experience Platform per aiutarla a tornare al sito.
 
-La piattaforma dati cliente in tempo reale, basata su Adobe Experience Platform, è progettata per la gestione dell&#39;esperienza dei clienti. Consente alle organizzazioni di:
+Real-time Customer Data Platform, con tecnologia Adobe Experience Platform, è progettata per la gestione della customer experience. Consente alle organizzazioni di:
 
-* Integrazione e attivazione dei dati semplificata
-* Gestione dell&#39;utilizzo dei dati noti e sconosciuti
+* Integrazione e attivazione dei dati semplificate
+* Utilizzo dei dati noti e sconosciuti
 * Accelerare i casi di utilizzo del marketing su larga scala
 
 ## Utilizzo di più origini dati
 
-Il team di Luma dispone di tutti i dati comportamentali e dei clienti in un&#39;unica posizione.
+Il team di Luma dispone di tutti i dati comportamentali e dei clienti in un’unica posizione.
 
 ![immagine](assets/luma-dash.png)
 
-Possono acquisire dati da tutte le origini seguenti:
+Possono acquisire dati da tutte le seguenti origini:
 
-* Dati delle soluzioni Adobe Experience Cloud esistenti
-* Fonti non  Adobe, come il programma fedeltà di Luma, i dati del call center e del sistema di punti vendita
+* Dati esistenti sulle soluzioni Adobe Experience Cloud
+* Fonti non Adobe, come il programma fedeltà di Luma, il call center e i dati del sistema dei punti vendita
 * Dati in streaming in tempo reale da origini dati Luma
-* Dati in tempo reale dalle soluzioni  Adobe (non sono necessari nuovi tag)
+* Dati in tempo reale dalle soluzioni Adobe (non sono necessari nuovi tag)
 
-Tutti questi dati provenienti da origini diverse vengono uniti in un unico profilo cliente unificato.
+Tutti questi dati provenienti da fonti diverse vengono uniti in un unico profilo cliente unificato.
 
 ## Configurazione di un’origine dati
 
-Utilizzate [!DNL Real-time Customer Data Platform] per inserire nuove origini di dati nella piattaforma. CDP in tempo reale include un catalogo di origini dati che possono essere aggiunte rapidamente e facilmente al profilo.
+Utilizza [!DNL Real-time Customer Data Platform] per importare nuove origini di dati in Platform. Real-time CDP include un catalogo di origini dati che possono essere aggiunte rapidamente e facilmente al profilo.
 
 ![immagine](assets/luma-source-cat.png)
 
-Ad esempio, per acquisire i dati CRM di Luma, filtrare il catalogo in base a *CRM* e vengono elencati tutti i connettori out-of-the-box contenenti *CRM*. Per aggiungere i dati [!DNL Microsoft Dynamics CRM]:
+Ad esempio, per acquisire i dati CRM di Luma, filtra il catalogo per *CRM* e vengono elencati tutti i connettori preconfigurati contenenti *CRM*. Per aggiungere dati [!DNL Microsoft Dynamics CRM]:
 
-1. Autorizzate la connessione.
+1. Autorizzare la connessione.
 
    ![immagine](assets/luma-source-auth.png)
 
-1. Scegliete cosa importare da un elenco consigliato di tabelle XDM pre-mappate.
+1. Scegli cosa importare da un elenco consigliato di tabelle pre-mappate XDM.
 
    <!--    ![image](assets/luma-source-import.png) -->
 
-   Ad esempio, seleziona **[!UICONTROL Contacts]**. L&#39;anteprima dei dati dei contatti viene caricata automaticamente in modo da poter verificare che l&#39;aspetto sia quello previsto.
+   Ad esempio, seleziona **[!UICONTROL Contacts]**. Viene caricata automaticamente un&#39;anteprima dei dati dei contatti per verificare che tutto sia come previsto.
 
-   La piattaforma Adobe Experience trae molto del lavoro manuale da questo processo mappando automaticamente i campi standard allo schema di profilo [!DNL Experience Data Model] (XDM).
+   Adobe Experience Platform trae gran parte del lavoro manuale da questo processo mappando automaticamente i campi standard allo schema di profilo [!DNL Experience Data Model] (XDM).
 
-1. Esaminare le mappature dei campi.
+1. Esamina le mappature dei campi.
 
    <!--    ![image](assets/luma-source-mapping.png) -->
 
-   Ad esempio, verificate che il campo e-mail per i contatti sia mappato correttamente.\
-   È possibile visualizzare in anteprima i dati ed eseguire la mappatura avanzata.
+   Ad esempio, controlla che il campo e-mail per i contatti sia mappato correttamente.\
+   Puoi visualizzare in anteprima i dati ed eseguire la mappatura avanzata.
 
-1. Impostate una pianificazione.
+1. Imposta una pianificazione.
 
    ![immagine](assets/luma-source-sched.png)
 
-È fatta. È stato aggiunto [!DNL Microsoft CRM] come origine dati in [!DNL Experience Platform].
+È fatto. Hai appena aggiunto [!DNL Microsoft CRM] come origine dati in [!DNL Experience Platform].
 
 ### Etichettatura dei dati acquisiti per i criteri di utilizzo
 
-Luma ha molte politiche interne che limitano l&#39;uso di certi tipi di informazioni raccolte, e devono anche rispettare le preoccupazioni legali e sulla privacy relative all&#39;utilizzo dei dati. Utilizzando Adobe Experience Platform [!DNL Data Governance], le etichette di utilizzo dei dati predefinite possono essere applicate ai set di dati (e a campi specifici all&#39;interno di tali set di dati), consentendo a Luma di suddividere i dati in categorie in base a limitazioni di utilizzo specifiche.
+Luma dispone di numerose politiche interne che limitano l’utilizzo di determinati tipi di informazioni raccolte e deve anche rispettare le preoccupazioni legali e relative alla privacy relative all’utilizzo dei dati. Utilizzando Adobe Experience Platform [!DNL Data Governance], è possibile applicare etichette di utilizzo dati predefinite ai set di dati (e campi specifici all’interno di tali set di dati), consentendo a Luma di categorizzare i propri dati in base a limitazioni di utilizzo specifiche.
 
 ![](assets/governance-labels.png)
 
-Una volta applicate le etichette di utilizzo dei dati, Luma può utilizzare [!DNL Data Governance] per creare criteri di utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono i tipi di azioni consentite sui dati che contengono determinate etichette. Quando si tenta di eseguire un&#39;azione in tempo reale CDP che costituisce una violazione della politica, l&#39;azione viene impedita e viene segnalato un avviso per indicare quale politica è stata violata e perché.
+Una volta applicate le etichette di utilizzo dei dati, Luma può quindi utilizzare [!DNL Data Governance] per creare criteri di utilizzo dei dati. I criteri di utilizzo dei dati sono regole che descrivono il tipo di azioni che è possibile eseguire sui dati che contengono determinate etichette. Quando si tenta di eseguire un&#39;azione in Real-time CDP che costituisce una violazione della politica, l&#39;azione viene impedita e viene dato un avviso per mostrare quale politica è stata violata e perché.
 
 ## Raggruppamento dei dati per un cliente specifico
 
-In questo scenario, cercate i profili per Sarah Rose. Viene visualizzato il suo profilo, con l&#39;e-mail che ha usato per effettuare l&#39;accesso.
+In questo scenario, cerca profili per Sarah Rose. Viene visualizzato il suo profilo, con l&#39;e-mail che usava per effettuare l&#39;accesso.
 
 <!-- ![image](assets/luma-find-profile.png) -->
 
-Tutte le informazioni di profilo che Luma ha su Sarah display. Questo include informazioni personali come indirizzo e numero di telefono, preferenze di comunicazione e i segmenti per i quali si qualifica.
+Tutte le informazioni sul profilo che Luma ha sui display di Sarah. Ciò include informazioni personali come indirizzo e numero di telefono, preferenze di comunicazione e i segmenti per i quali si qualifica.
 
 | Categoria | Descrizione |
 |---|---|
-| Identità | Mostra le identità che sono state collegate in [!DNL Platform] dalle interazioni di Sarah con Luma tra canali e dispositivi. Viene visualizzato il suo ECID dal sito Web. La sua identità include anche l&#39;ECID dalla sua app mobile, il suo ID e-mail, un ID CRM dal set di dati [!DNL Microsoft Dynamics] aggiunto di recente e un ID fedeltà passato in Adobe Experience Platform dal sistema lealtà Luma. |
-| Eventi | Mostra tutti i dati di interazione di Sarah con il marchio Luma. Questo include l&#39;elemento che ha appena visualizzato, tutto ciò che ha visto in passato, le e-mail che ha ricevuto, le interazioni con il call center, e quale canale e dispositivo ha attivato ciascuna di queste interazioni. |
+| Identità | Mostra le identità collegate tra loro in [!DNL Platform] dalle interazioni di Sarah con Luma su canali e dispositivi diversi. Viene visualizzato il suo ECID dal sito web. La sua identità include anche l’ECID dalla sua app mobile, il suo ID e-mail, un ID CRM dal set di dati [!DNL Microsoft Dynamics] aggiunto di recente e un ID fedeltà trasmesso in Adobe Experience Platform dal sistema fedeltà Luma. |
+| Eventi | Mostra tutti i dati di interazione di Sarah con il marchio Luma. Questo include l&#39;oggetto che ha appena visualizzato, tutto quello che ha visto in passato, le e-mail che ha ricevuto, le interazioni con il call center e il canale e il dispositivo su cui si sono verificate ciascuna di queste interazioni. |
 
-Il profilo CDP in tempo reale riduce il flusso di lavoro del team di marketing Luma da settimane a minuti e svela le possibilità di personalizzazione in base a questa visualizzazione cliente a 360 gradi. Il profilo unisce i dati comportamentali da quando ha consultato il sito prima di accedere, con il profilo cliente esistente, creando una visione completa di Sarah.
+Il profilo Real-time CDP riduce il flusso di lavoro del team di marketing Luma da settimane a minuti e sblocca le possibilità di personalizzazione in base a questa vista cliente a 360 gradi. Il profilo unisce i dati comportamentali da quando ha visitato il sito prima di effettuare l’accesso, con il suo profilo cliente esistente, creando una visione completa di Sarah.
 
-Il team marketing può utilizzare questo strumento avanzato [!DNL Real-time Customer Profile] per personalizzare meglio l&#39;esperienza di Sarah e aumentare la fedeltà al marchio con Luma.
+Il team marketing può utilizzare questa funzione avanzata [!DNL Real-time Customer Profile] per personalizzare meglio l’esperienza di Sarah e aumentare la fedeltà al marchio con Luma.
 
 ## Segmenti
 
-Le potenti funzionalità di segmentazione di Adobe Experience Platform consentono agli esperti di marketing di combinare attributi, eventi e segmenti esistenti, in base ai dati acquisiti in [!DNL Real-time Customer Profile].
+Le potenti funzionalità di segmentazione di Adobe Experience Platform consentono agli addetti al marketing di combinare attributi, eventi e segmenti esistenti in base ai dati acquisiti in [!DNL Real-time Customer Profile].
 
 <!-- ![image](assets/luma-segments.png) -->
 
-In questo scenario, le recenti interazioni di Sarah sul sito mostrano un comportamento diverso rispetto alle sue azioni passate. Di solito compra l&#39;abbigliamento femminile. Tuttavia, l&#39;articolo nel suo carrello è una maglia grande da uomo.
+In questo scenario, le recenti interazioni di Sarah sul sito mostrano un comportamento diverso rispetto alle sue azioni passate. Di solito compra abbigliamento femminile. Tuttavia, l&#39;articolo nel suo carrello è una maglia grande uomo.
 
-Il team scientifico dei dati Luma ha creato dei modelli sulla propensione all&#39;acquisto. Un modello identifica un cambiamento improvviso nella categoria degli indumenti (ad esempio uomini/donne) o nella dimensione per il consumatore esistente. Il cambiamento nel comportamento di acquisto di Sarah suggerisce che non sta facendo acquisti da sola.
+Il team Luma di data science ha creato modelli sulla propensione all&#39;acquisto. Un modello identifica un cambiamento improvviso nella categoria di abbigliamento (ad esempio uomini/donne) o nella dimensione per il consumatore esistente. Il cambiamento nel comportamento di acquisto di Sarah suggerisce che non sta facendo acquisti da sola.
 
 <!-- ![image](assets/luma-gift.png) -->
 
 ### Definizione di un segmento
 
-Modifica o crea un segmento che rappresenta gli abbandonatori del carrello che sembrano essere nel processo di acquisto di un regalo:
+Modifica o crea un segmento che rappresenta gli utenti che abbandonano il carrello che sembrano nel processo di acquisto di un regalo:
 
 ```sql
 Profile: Category != Preferred Category 
@@ -227,79 +227,79 @@ Loyalty member
 
 <!-- ![image](assets/luma-abandon.png)-->
 
-Dato che Sarah ha aggiunto un oggetto regalo apparente nel carrello e lo ha abbandonato, Luma può mirare con un&#39;offerta regalo gratuita.
+Dato che Sarah ha aggiunto un oggetto regalo apparente nel carrello e lo ha abbandonato, Luma può mirare con un&#39;offerta regalo-involucro gratuita.
 
 ## Destinazioni
 
-Quando hai aggiunto il segmento &quot;Regalo agli abbandonatori del carrello&quot;, puoi vedere più o meno quante persone fanno parte di questo segmento. Puoi agire su di esso e renderlo disponibile per la personalizzazione su più canali.
+Quando hai aggiunto il segmento &quot;Donare al carrello Abandoners&quot;, puoi vedere più o meno quante persone fanno parte di questo segmento. Puoi intervenire su di esso e renderlo disponibile per la personalizzazione tra i canali.
 
 Seleziona **[!UICONTROL Send to destinations]**.
 
-In CDP in tempo reale, Luma può agire direttamente sui segmenti di pubblico per la personalizzazione.\
-Qui vediamo tutte le destinazioni disponibili per Luma per l&#39;invio di questa destinazione, sia  soluzioni di Adobe che non :
+In Real-time CDP, Luma può agire facilmente sui segmenti di pubblico per la personalizzazione.\
+Qui visualizziamo tutte le destinazioni disponibili per Luma per l’invio di questa destinazione a, sia per le soluzioni Adobe che per quelle non Adobe:
 
 ![immagine](assets/luma-dest.png)
 
 ### Selezione delle destinazioni
 
-In questo scenario, Luma desidera riassegnare l&#39;audience con la personalizzazione tra le seguenti destinazioni:
+In questo scenario, Luma desidera effettuare il retargeting del pubblico con la personalizzazione tra queste destinazioni:
 
 * Google, per la visualizzazione
 
    <!--* Facebook -->
-*  Adobe Campaign, per e-mail
+* Adobe Campaign, per e-mail
 
 <!-- ![image](assets/luma-sched-dest.png) -->
 
-### Destinazioni di programmazione
+### Destinazioni di pianificazione
 
-Puoi anche pianificare l’inizio o la fine del segmento in un dato momento. Il segmento verrà pubblicato e aggiornato automaticamente nelle piattaforme configurate alle date pianificate.
+Puoi anche pianificare l’inizio o la fine del segmento in un determinato momento. Il segmento verrà pubblicato e aggiornato automaticamente nelle piattaforme configurate alle date pianificate.
 
 >[!NOTE]
 >
->Facoltativamente, se si seleziona il campo data, viene automaticamente pianificato per 90 giorni.
+>Facoltativamente, se si seleziona il campo data, questo viene programmato automaticamente per 90 giorni.
 
-Selezionare **[!UICONTROL Save]** per passare alla pagina successiva.
+Seleziona **[!UICONTROL Save]** per passare alla pagina successiva.
 
-Quando un cliente di questo pubblico effettua un acquisto, la sua appartenenza a questo pubblico viene soppressa in tempo reale. Non si qualificano più perché il loro stato è cambiato.
+Quando un cliente di questo pubblico effettua un acquisto, la sua iscrizione a questo pubblico viene soppressa in tempo reale. Non si qualificano più perché il loro stato è cambiato.
 
-In questo modo, il direttore del team multimediale Luma risparmia centinaia di migliaia di dollari, evitando di utilizzare scorte per un pubblico non qualificato.
+In questo modo, il direttore del team multimediale Luma risparmia centinaia di migliaia di dollari non utilizzando l’inventario per un pubblico non qualificato.
 
 ### Applicazione dei criteri di utilizzo dei dati per le destinazioni
 
-Adobe Experience Platform include controlli sulla privacy e sulla sicurezza per stabilire se un segmento è disponibile per essere attivato a una particolare destinazione. L&#39;attivazione è abilitata o limitata in base agli scopi di marketing assegnati alla destinazione al momento della creazione, nonché ai criteri di utilizzo dei dati definiti dall&#39;organizzazione.
+Adobe Experience Platform include i controlli per la privacy e la sicurezza per determinare se un segmento è disponibile per essere attivato in una particolare destinazione. L’attivazione viene abilitata o limitata in base agli scopi di marketing assegnati alla destinazione al momento della creazione, nonché ai criteri di utilizzo dei dati definiti dall’organizzazione.
 
-Se l&#39;attività viola il criterio, viene visualizzato un avviso. Questo avviso contiene informazioni sulla linea di dati che possono essere utili per identificare il motivo della violazione del criterio e le azioni che è possibile eseguire per risolvere la violazione.
+Se l’attività viola i criteri, viene visualizzato un avviso. Questo avviso contiene informazioni di derivazione dei dati che possono aiutarti a identificare il motivo della violazione dei criteri e le operazioni possibili per risolverla.
 
-Grazie a questi controlli, [!DNL Experience Platform] aiuta Luma a rispettare le normative e il mercato in modo responsabile. Questi controlli sono flessibili e possono essere modificati per soddisfare i requisiti dei team di sicurezza e governance di Luma, consentendo loro di soddisfare con sicurezza i requisiti regionali e organizzativi per la gestione dei dati noti e sconosciuti dei clienti.
+Con questi controlli, [!DNL Experience Platform] aiuta Luma a rispettare i regolamenti e a commercializzare in modo responsabile. Questi controlli sono flessibili e possono essere modificati per soddisfare i requisiti dei team di sicurezza e governance di Luma, consentendo loro di soddisfare in modo sicuro i requisiti regionali e organizzativi per la gestione dei dati noti e sconosciuti dei clienti.
 
 ### Area di lavoro del flusso di dati
 
-Durante il salvataggio, un&#39;area di dati visiva mostra il segmento mappato dal profilo unificato alle tre destinazioni selezionate.
+Quando salvi, un’area di flusso di dati visiva mostra il segmento mappato dal profilo unificato alle tre destinazioni selezionate.
 
 ![immagine](assets/luma-flow.png)
 
-## Cucitura identità tra dispositivi
+## Unione delle identità tra più dispositivi
 
-Sarah naviga su un sito di social media sul suo dispositivo mobile e vede una pubblicità Luma. Le ricorda l&#39;oggetto che ha lasciato nel suo carrello.
+Sarah naviga su un sito di social media sul suo dispositivo mobile, e vede un annuncio Luma. Le ricorda l&#39;oggetto che ha lasciato nel carrello.
 
-In seguito, apre la sua e-mail e visualizza le e-mail ritirate. Seleziona un collegamento a Luma da un&#39;e-mail.
+Successivamente, apre la sua e-mail e visualizza le e-mail reindirizzate. Seleziona un collegamento a Luma da un’e-mail.
 
-Il link porta Sarah alla homepage di Luma mobile, dove vede un&#39;esperienza altamente personalizzata con  Adobe Target.
+Il collegamento porta Sarah alla home page di Luma per dispositivi mobili, dove vede un’esperienza altamente personalizzata basata su Adobe Target.
 
-* È accolta come membro del Bronzo.
+* Lei è accolta come membro del Bronzo.
 * Vede il messaggio &quot;Regalo&quot;.
-* Vede anche il messaggio &quot;Free Gift Wrap&quot;, che fa parte dei benefici della sua iscrizione al Bronzo.
-* È ancora nel mirino dell&#39;immagine hero, in base alla sua affinità di correre.
+* Vede anche il messaggio &quot;Free Gift Wrap&quot;, che fa parte dei suoi vantaggi di iscrizione al Bronzo.
+* È ancora nel mirino dell&#39;immagine protagonista in base alla sua affinità per la sua corsa.
 
-Compra il maglione, aggiunge un involucro regalo e scrive una nota regalo. Ha anche la possibilità di ricordare questo evento e ottenere un promemoria l&#39;anno prossimo per ottenere in regalo in questo momento. Dice di sì, ed è programmata per una campagna email l&#39;anno successivo per ricordarle di comprare un altro regalo.
+Compra il maglione, aggiunge una confezione regalo e scrive una nota regalo. Ha anche la possibilità di ricordare questo evento e ottenere un promemoria l&#39;anno prossimo per ottenere in regalo in questo momento. Dice di sì, ed è programmato in una campagna e-mail l&#39;anno successivo per ricordarle di comprare un altro regalo.
 
-Grazie alle capacità di soppressione del pubblico, Sarah non sarà preso di mira con il maglione di quell&#39;uomo che va avanti.
+Grazie alle capacità di soppressione del pubblico, Sarah non sarà presa di mira con il maglione di quell&#39;uomo che si muove avanti.
 
 ## Analisi del profilo
 
-Gli esperti di marketing della luma utilizzano Adobe Experience Platform per esaminare il segmento dei donatori nel dashboard CDP in tempo reale. Vedono i risultati di questa iniziativa nel tempo e vedono che sta crescendo. I clienti rispondono alle offerte e spendono più denaro.
+Gli esperti di marketing Luma utilizzano Adobe Experience Platform per esaminare il segmento dei donatori nella dashboard CDP in tempo reale. Vedono i risultati di questa iniziativa nel tempo e vedono che sta crescendo. I clienti rispondono alle offerte e spendono più soldi.
 
-Queste informazioni consentono agli esperti di marketing di agire su questo segnale, che è stato alimentato dalla disponibilità di questi dati in CDP e dall&#39;associazione di clienti come Sarah al segmento.
+Queste informazioni consentono agli esperti di marketing di intervenire su questo segnale, che è stato alimentato dalla disponibilità di tali dati in CDP e dall’associazione di clienti come Sarah al segmento.
 
-Luma utilizza questi dati CDP per aumentare la fedeltà e la soddisfazione dei clienti.
+Luma utilizza questi dati CDP per incrementare la fedeltà e la soddisfazione dei clienti.
