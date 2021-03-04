@@ -1,57 +1,57 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;streaming;streaming, assimilazione;convalida dell''assimilazione in streaming;convalida;convalida dell''assimilazione in streaming;convalida;convalida sincrona;convalida asincrona;convalida asincrona;'
+keywords: Experience Platform;home;argomenti comuni;streaming;acquisizione streaming;convalida streaming ingestion;convalida;convalida Streaming ingestion;convalida;convalida sincrona;convalida sincrona;convalida asincrona;convalida asincrona;
 solution: Experience Platform
-title: Convalida ingestione in streaming
-topic: esercitazione
-type: Esercitazione
-description: 'L’assimilazione dello streaming consente di caricare i dati su Adobe Experience Platform utilizzando gli endpoint di streaming in tempo reale. Le API di assimilazione in streaming supportano due modalità di convalida: sincrona e asincrona.'
+title: Convalida dell’acquisizione in streaming
+topic: tutorial
+type: Tutorial
+description: L’acquisizione in streaming ti consente di caricare i dati in Adobe Experience Platform utilizzando gli endpoint di streaming in tempo reale. Le API Streaming Ingestion supportano due modalità di convalida, sincrone e asincrona.
 translation-type: tm+mt
-source-git-commit: 8f863eb3427097406237aa443262917fdc3f3e1c
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '900'
 ht-degree: 3%
 
 ---
 
 
-# Convalida dell&#39;assimilazione in streaming
+# Convalida dell’acquisizione in streaming
 
-L’assimilazione dello streaming consente di caricare i dati su Adobe Experience Platform utilizzando gli endpoint di streaming in tempo reale. Le API di assimilazione in streaming supportano due modalità di convalida: sincrona e asincrona.
+L’acquisizione in streaming ti consente di caricare i dati in Adobe Experience Platform utilizzando gli endpoint di streaming in tempo reale. Le API Streaming Ingestion supportano due modalità di convalida, sincrone e asincrona.
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Il framework standard con cui  [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza dei clienti.
-- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md): Uno dei metodi tramite i quali è possibile inviare i dati  [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Il framework standardizzato in base al quale  [!DNL Experience Platform] vengono organizzati i dati sulla customer experience.
+- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md): Uno dei metodi con cui i dati possono essere inviati a  [!DNL Experience Platform].
 
 ### Lettura di chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consultate la sezione relativa a [come leggere chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform] .
 
-### Raccogli valori per le intestazioni richieste
+### Raccogli i valori delle intestazioni richieste
 
-Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](https://www.adobe.com/go/platform-api-authentication-en) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
+Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come mostrato di seguito:
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in [!DNL Experience Platform], incluse quelle appartenenti a [!DNL Schema Registry], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui verrà eseguita l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [!DNL Schema Registry], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- nome x-sandbox: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione di [panoramica sulla sandbox](../../sandboxes/home.md).
+>Per ulteriori informazioni sulle sandbox in [!DNL Platform], consulta la documentazione di panoramica [sandbox](../../sandboxes/home.md).
 
-Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva:
+Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione aggiuntiva:
 
 - Content-Type: `application/json`
 
-### Copertura convalida
+### Copertura della convalida
 
-[!DNL Streaming Validation Service] copre la convalida nei seguenti settori:
+[!DNL Streaming Validation Service] riguarda la convalida nei seguenti settori:
 - Range
 - Presenza
 - Enum
@@ -61,15 +61,15 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#3
 
 ## Convalida sincrona
 
-La convalida sincrona è un metodo di convalida che fornisce un feedback immediato sui motivi per cui un&#39;assimilazione non è riuscita. Tuttavia, in caso di errore, i record con errore di convalida vengono ignorati e non possono essere inviati a valle. Di conseguenza, la convalida sincrona deve essere utilizzata solo durante il processo di sviluppo. Durante la convalida sincrona, i chiamanti vengono informati del risultato della convalida XDM e, in caso di errore, del motivo dell&#39;errore.
+La convalida sincrona è un metodo di convalida che fornisce un feedback immediato sui motivi per cui un’acquisizione non è riuscita. Tuttavia, in caso di errore, i record con errore di convalida vengono eliminati e non possono essere inviati a valle. Di conseguenza, la convalida sincrona deve essere utilizzata solo durante il processo di sviluppo. Durante la convalida sincrona, i chiamanti vengono informati del risultato della convalida XDM e, in caso di errore, del motivo dell’errore.
 
-Per impostazione predefinita, la convalida sincrona non è attivata. Per attivarla, è necessario trasmettere il parametro di query facoltativo `synchronousValidation=true` quando si effettuano chiamate API. Inoltre, la convalida sincrona è attualmente disponibile solo se l&#39;endpoint del flusso si trova nel centro dati VA7.
+Per impostazione predefinita, la convalida sincrona non è attivata. Per abilitarlo, devi trasmettere il parametro di query opzionale `synchronousValidation=true` durante l’esecuzione di chiamate API. Inoltre, la convalida sincrona è attualmente disponibile solo se l&#39;endpoint del flusso si trova nel data center VA7.
 
-Se un messaggio ha esito negativo durante la convalida sincrona, il messaggio non verrà scritto nella coda di output, che fornisce agli utenti un feedback immediato.
+Se un messaggio non riesce durante la convalida sincrona, non verrà scritto nella coda di output, che fornisce un feedback immediato agli utenti.
 
 >[!NOTE]
 >
->Le modifiche allo schema potrebbero non essere immediatamente disponibili, poiché le modifiche sono memorizzate nella cache. Lasciate che la cache venga aggiornata in un massimo di quindici minuti.
+>Le modifiche allo schema potrebbero non essere immediatamente disponibili in quanto le modifiche sono memorizzate nella cache. Consenti fino a quindici minuti per l&#39;aggiornamento della cache.
 
 **Formato API**
 
@@ -79,11 +79,11 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | Il valore `id` della connessione di streaming creata in precedenza. |
+| `{CONNECTION_ID}` | Il valore `id` della connessione streaming creata in precedenza. |
 
 **Richiesta**
 
-Invia la seguente richiesta per l’inserimento di dati all’ingresso dati con convalida sincrona:
+Invia la seguente richiesta per l’acquisizione di dati all’entrata dati con convalida sincrona:
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
@@ -97,7 +97,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 **Risposta**
 
-Quando la convalida sincrona è attivata, una risposta corretta include eventuali errori di convalida nel payload:
+Con la convalida sincrona abilitata, una risposta corretta include eventuali errori di convalida riscontrati nel payload:
 
 ```json
 {
@@ -142,11 +142,11 @@ Quando la convalida sincrona è attivata, una risposta corretta include eventual
 }
 ```
 
-La risposta riportata sopra elenca quante violazioni dello schema sono state trovate e quali sono state riscontrate. Ad esempio, questa risposta indica che le chiavi `workEmail` e `person` non sono state definite nello schema e pertanto non sono consentite. Inoltre contrassegna il valore per `_id` come errato, poiché lo schema prevedeva un `string`, ma è stato inserito un `long`. Si noti che, una volta riscontrati cinque errori, il servizio di convalida eseguirà l&#39;elaborazione del messaggio **stop**. Tuttavia, altri messaggi continueranno ad essere analizzati.
+La risposta di cui sopra elenca quante violazioni dello schema sono state trovate e quali sono state riscontrate. Ad esempio, questa risposta indica che le chiavi `workEmail` e `person` non sono state definite nello schema e pertanto non sono consentite. Inoltre, contrassegna il valore di `_id` come errato, poiché lo schema prevedeva un `string`, ma è stato inserito un `long`. Tieni presente che una volta riscontrati cinque errori, il servizio di convalida **interrompe** l&#39;elaborazione del messaggio. Tuttavia, altri messaggi continueranno ad essere analizzati.
 
 ## Convalida asincrona
 
-La convalida asincrona è un metodo di convalida che non fornisce feedback immediato. Al contrario, i dati vengono inviati a un batch con errore in [!DNL Data Lake] per evitare la perdita di dati. Questi dati con errore possono essere successivamente recuperati per ulteriore analisi e ripetizione. Questo metodo deve essere utilizzato nella produzione. Se non diversamente richiesto, l&#39;assimilazione in streaming viene eseguita in modalità di convalida asincrona.
+La convalida asincrona è un metodo di convalida che non fornisce feedback immediato. Al contrario, i dati vengono inviati a un batch non riuscito in [!DNL Data Lake] per evitare la perdita di dati. Questi dati non riusciti possono essere recuperati in un secondo momento per un’ulteriore analisi e ripetizione. Questo metodo deve essere utilizzato nella produzione. Se non diversamente richiesto, l’acquisizione in streaming funziona in modalità di convalida asincrona.
 
 **Formato API**
 
@@ -156,11 +156,11 @@ POST /collection/{CONNECTION_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | Il valore `id` della connessione di streaming creata in precedenza. |
+| `{CONNECTION_ID}` | Il valore `id` della connessione streaming creata in precedenza. |
 
 **Richiesta**
 
-Invia la seguente richiesta per l’inserimento di dati all’ingresso dati con convalida asincrona:
+Invia la seguente richiesta per inserire i dati nell’entrata dati con convalida asincrona:
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
@@ -178,7 +178,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
 
 **Risposta**
 
-Se la convalida asincrona è attivata, una risposta corretta restituisce quanto segue:
+Con la convalida asincrona abilitata, una risposta corretta restituisce quanto segue:
 
 ```json
 {
@@ -191,19 +191,19 @@ Se la convalida asincrona è attivata, una risposta corretta restituisce quanto 
 }
 ```
 
-Tenere presente che la risposta indica che la convalida sincrona è stata saltata, in quanto non è stata esplicitamente richiesta.
+La risposta indica che la convalida sincrona è stata ignorata, in quanto non è stata esplicitamente richiesta.
 
 ## Appendice
 
-Questa sezione contiene informazioni sul significato dei vari codici di stato per le risposte per l’assimilazione dei dati.
+Questa sezione contiene informazioni sul significato dei vari codici di stato per le risposte per l’acquisizione dei dati.
 
 ### Codici di stato
 
-| Codice di stato | Significato |
+| Codice di stato | Che cosa significa |
 | ----------- | ------------- |
-| 200 | Operazione riuscita. Per la convalida sincrona, significa che ha superato i controlli di convalida. Per la convalida asincrona, significa che ha ricevuto correttamente solo il messaggio. Gli utenti possono scoprire lo stato finale del messaggio osservando il dataset. |
-| 400 | Errore. C&#39;è qualcosa che non va con la tua richiesta. Un messaggio di errore con ulteriori dettagli viene ricevuto dai servizi di convalida in streaming. |
-| 401 | Errore. La tua richiesta non è autorizzata. Dovrai richiedere un token per il portatore. Per ulteriori informazioni su come richiedere l&#39;accesso, consultate questo [tutorial](https://www.adobe.com/go/platform-api-authentication-en) o questo [post di blog](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
+| 200 | Operazione riuscita. Per la convalida sincrona, significa che ha superato i controlli di convalida. Per la convalida asincrona, significa che ha ricevuto il messaggio solo correttamente. Gli utenti possono scoprire l’eventuale stato del messaggio osservando il set di dati. |
+| 400 | Errore. C&#39;è qualcosa che non va nella tua richiesta. Un messaggio di errore con ulteriori dettagli viene ricevuto da Servizi di convalida in streaming. |
+| 401 | Errore. La richiesta non è autorizzata. Sarà necessario richiedere un token portatore. Per ulteriori informazioni su come richiedere l&#39;accesso, consulta questo [tutorial](https://www.adobe.com/go/platform-api-authentication-en) o questo [post di blog](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
 | 500 | Errore. Errore interno del sistema. |
 | 501 | Errore. Ciò significa che la convalida sincrona è **non** supportata per questa posizione. |
-| 503 | Errore. Il servizio non è al momento disponibile. I client devono riprovare almeno tre volte utilizzando una strategia di back-off esponenziale. |
+| 503 | Errore. Il servizio non è al momento disponibile. I clienti devono riprovare almeno tre volte utilizzando una strategia di back-off esponenziale. |
