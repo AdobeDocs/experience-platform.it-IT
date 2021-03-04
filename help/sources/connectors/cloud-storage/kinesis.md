@@ -1,42 +1,42 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari; Amazon Kinesis;amazon kinesis;Kinesis;kinesis'
+keywords: Experience Platform;home;argomenti popolari;Amazon Kinesis;amazon kinesis;Kinesis;kinesis
 solution: Experience Platform
-title: ' Amazon Kinesis Source Connector'
-topic: overview
-description: Scoprite come collegare  Kinesis Amazon ad Adobe Experience Platform utilizzando le API o l'interfaccia utente.
+title: Panoramica del connettore sorgente Amazon Kinesis
+topic: ' - Panoramica'
+description: Scopri come collegare Amazon Kinesis ad Adobe Experience Platform utilizzando API o l’interfaccia utente.
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
 
 
-# (Beta) [!DNL Amazon Kinesis] connettore
+# (Beta) Connettore [!DNL Amazon Kinesis]
 
 >[!NOTE]
 >
->Il connettore [!DNL Amazon Kinesis] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, vedere [Panoramica delle sorgenti](../../home.md#terms-and-conditions).
+>Il connettore [!DNL Amazon Kinesis] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la [Panoramica delle sorgenti](../../home.md#terms-and-conditions) .
 
-Adobe Experience Platform fornisce connettività nativa per i fornitori di cloud come AWS, [!DNL Google Cloud Platform] e [!DNL Azure]. È possibile trasferire i dati da questi sistemi in [!DNL Platform].
+Adobe Experience Platform fornisce connettività nativa per provider cloud come AWS, [!DNL Google Cloud Platform] e [!DNL Azure]. Puoi inserire i tuoi dati da questi sistemi in [!DNL Platform].
 
-Le origini di archiviazione cloud possono portare i tuoi dati in [!DNL Platform] senza bisogno di scaricare, formattare o caricare. I dati ingeriti possono essere formattati come JSON XDM, Parquet XDM o delimitati. Ogni fase del processo è integrata nel flusso di lavoro Origini. [!DNL Platform] consente di inserire dati  [!DNL Amazon Kinesis] in tempo reale.
+Le origini di archiviazione cloud possono inserire i tuoi dati in [!DNL Platform] senza dover scaricare, formattare o caricare. I dati acquisiti possono essere formattati come JSON XDM, Parquet XDM o delimitati. Ogni passaggio del processo viene integrato nel flusso di lavoro Origini . [!DNL Platform] consente di inserire dati in tempo  [!DNL Amazon Kinesis] reale.
 
-## Indirizzo IP  elenco consentiti
+## Elenco indirizzi IP consentiti
 
-Prima di utilizzare i connettori di origine, è necessario aggiungere un elenco di indirizzi IP a un elenco consentiti . Se non si aggiungono al elenco consentiti  gli indirizzi IP specifici per la regione, potrebbero verificarsi errori o prestazioni insufficienti quando si utilizzano le origini. Per ulteriori informazioni, vedere la pagina [Indirizzo IP  elenco consentiti](../../ip-address-allow-list.md).
+Prima di utilizzare i connettori sorgente, è necessario aggiungere a un elenco di indirizzi IP un elenco di indirizzi IP consentiti . Se non aggiungi gli indirizzi IP specifici per l’area geografica all’elenco Consentiti, potrebbero verificarsi errori o prestazioni non soddisfacenti durante l’utilizzo delle origini. Per ulteriori informazioni, consulta la pagina [Elenco indirizzi IP consentiti](../../ip-address-allow-list.md) .
 
 ## Connetti [!DNL Amazon Kinesis] a [!DNL Platform]
 
-La documentazione seguente fornisce informazioni su come connettersi [!DNL Amazon Kinesis] a [!DNL Platform] utilizzando le API o l&#39;interfaccia utente:
+La documentazione seguente fornisce informazioni su come connettersi a [!DNL Amazon Kinesis] utilizzando le API o l&#39;interfaccia utente:[!DNL Platform]
 
 ### Utilizzo delle API
 
-- [Creare una connessione di origine Amazon Kinesis  utilizzando l&#39;API del servizio di flusso](../../tutorials/api/create/cloud-storage/kinesis.md)
-- [Raccogli i dati di streaming tramite l&#39;API del servizio di flusso](../../tutorials/api/collect/streaming.md)
+- [Creare una connessione sorgente Amazon Kinesis utilizzando l’API del servizio di flusso](../../tutorials/api/create/cloud-storage/kinesis.md)
+- [Raccogliere dati in streaming utilizzando l’API del servizio di flusso](../../tutorials/api/collect/streaming.md)
 
 ### Utilizzo dell’interfaccia
 
-- [Creare una connessione sorgente Amazon  Kinesis nell’interfaccia utente](../../tutorials/ui/create/cloud-storage/kinesis.md)
-- [Configurare un flusso di dati per una connessione di archiviazione cloud nell&#39;interfaccia utente](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+- [Creare una connessione sorgente Amazon Kinesis nell’interfaccia utente](../../tutorials/ui/create/cloud-storage/kinesis.md)
+- [Configurare un flusso di dati per una connessione di archiviazione cloud nell’interfaccia utente](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
