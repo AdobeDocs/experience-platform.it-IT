@@ -6,9 +6,9 @@ seo-title: Attivare profili e segmenti in una destinazione
 description: Attiva i dati disponibili in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
 seo-description: Attiva i dati disponibili in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
 translation-type: tm+mt
-source-git-commit: efb66b6374f8c0579d90f63452528353f4d1418d
+source-git-commit: 789534c02746ed24dfa01c7b471cdf3be407711e
 workflow-type: tm+mt
-source-wordcount: '2081'
+source-wordcount: '2101'
 ht-degree: 0%
 
 ---
@@ -147,6 +147,9 @@ Si applica a: Destinazioni e-mail marketing e archiviazione cloud
 >[!IMPORTANT]
 > 
 >[!DNL Adobe Experience Platform] divide automaticamente i file di esportazione a 5 milioni di record (righe) per file. Ogni riga rappresenta un profilo.
+>
+>I nomi dei file divisi vengono aggiunti con un numero che indica che il file fa parte di un’esportazione più grande, in quanto tale: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
+
 
 Per aggiungere una pianificazione per il segmento, seleziona **[!UICONTROL Create schedule]**.
 
