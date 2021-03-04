@@ -1,63 +1,63 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;API del servizio identità;guida per lo sviluppo del servizio identità;regione'
+keywords: Experience Platform;home;argomenti comuni;api del servizio identità;guida per gli sviluppatori del servizio identità;area geografica
 solution: Experience Platform
-title: Guida API del servizio identità
-topic: API guide
-description: L'API di Servizio identità consente agli sviluppatori di gestire l'identificazione in tempo reale dei clienti tra dispositivi, canali e quasi in tempo reale tramite i grafici identità Adobe Experience Platform. Seguite questa guida per apprendere come eseguire operazioni chiave tramite l'API.
+title: Guida all’API del servizio Identity
+topic: Guida all’API
+description: L’API del servizio Identity consente agli sviluppatori di gestire l’identificazione dei clienti tra dispositivi, tra canali e in tempo quasi reale utilizzando grafici di identità di Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Identity Service] Guida API
+# [!DNL Identity Service] Guida all’API
 
-Adobe Experience Platform [!DNL Identity Service] gestisce l&#39;identificazione cross-device, cross-channel e near-real-time dei clienti in quello che è noto come un grafico di identità all&#39;interno di Adobe Experience Platform.
+Adobe Experience Platform [!DNL Identity Service] gestisce l’identificazione dei clienti tra dispositivi, tra canali e in tempo quasi reale in quello che viene definito un grafico delle identità all’interno di Adobe Experience Platform.
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
-- [[!DNL Identity Service]](../home.md): Risolve la sfida fondamentale rappresentata dalla frammentazione dei dati del profilo cliente. Questo avviene attraverso la creazione di identità tra dispositivi e sistemi in cui i clienti interagiscono con il tuo marchio.
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo di consumo unificato in tempo reale basato su dati aggregati provenienti da più origini.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standard con cui  [!DNL Platform] organizzare i dati relativi all&#39;esperienza dei clienti.
+- [[!DNL Identity Service]](../home.md): Risolve la sfida fondamentale rappresentata dalla frammentazione dei dati del profilo cliente. Lo fa collegando le identità tra dispositivi e sistemi in cui i clienti interagiscono con il tuo marchio.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo consumatore unificato in tempo reale basato su dati aggregati provenienti da più origini.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Il framework standardizzato in base al quale  [!DNL Platform] vengono organizzati i dati sulla customer experience.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere o avere a disposizione per eseguire correttamente le chiamate all&#39;API [!DNL Identity Service].
+Le sezioni seguenti forniscono informazioni aggiuntive che dovrai conoscere o disporre di a tua disposizione per effettuare correttamente le chiamate all’ API [!DNL Identity Service] .
 
 ### Lettura di chiamate API di esempio
 
-Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consultate la sezione relativa a [come leggere chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
+Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform] .
 
-### Raccogli valori per le intestazioni richieste
+### Raccogli i valori delle intestazioni richieste
 
-Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](https://www.adobe.com/go/platform-api-authentication-en) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
+Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come mostrato di seguito:
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui verrà eseguita l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- nome x-sandbox: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione di [panoramica sulla sandbox](../../sandboxes/home.md).
+>Per ulteriori informazioni sulle sandbox in [!DNL Platform], consulta la documentazione di panoramica [sandbox](../../sandboxes/home.md).
 
-Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva:
+Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione aggiuntiva:
 
-- Content-Type: application/json
+- Tipo di contenuto: application/json
 
 ### Routing basato su regione
 
-L&#39;API [!DNL Identity Service] utilizza endpoint specifici dell&#39;area geografica che richiedono l&#39;inclusione di un elemento `{REGION}` come parte del percorso di richiesta. Durante il provisioning dell&#39;organizzazione IMS, una regione viene determinata e memorizzata nel profilo IMS. L&#39;utilizzo della regione corretta con ciascun endpoint garantisce che tutte le richieste effettuate utilizzando l&#39;API [!DNL Identity Service] vengano instradate nella regione appropriata.
+L’ API [!DNL Identity Service] utilizza endpoint specifici per l’area geografica che richiedono l’inclusione di un elemento `{REGION}` come parte del percorso della richiesta. Durante il provisioning della tua organizzazione IMS, una regione viene determinata e memorizzata all’interno del profilo dell’organizzazione IMS. L’utilizzo della regione corretta con ogni endpoint assicura che tutte le richieste effettuate utilizzando l’ [!DNL Identity Service] API siano indirizzate all’area appropriata.
 
-Esistono due aree attualmente supportate dalle API [!DNL Identity Service]: VA7 e NLD2.
+Esistono attualmente due aree supportate dalle API [!DNL Identity Service] : VA7 e NLD2.
 
-La tabella seguente mostra alcuni percorsi di esempio che utilizzano le aree:
+La tabella seguente mostra alcuni percorsi di esempio che utilizzano aree geografiche:
 
 | Servizio | Regione: VA7 | Regione: NLD2 |
 | ------ | -------- |--------- |
@@ -66,26 +66,26 @@ La tabella seguente mostra alcuni percorsi di esempio che utilizzano le aree:
 
 >[!NOTE]
 >
->Le richieste effettuate senza specificare una regione possono causare il routing delle chiamate all&#39;area errata o causare errori imprevisti nelle chiamate.
+>Le richieste effettuate senza specificare una regione possono causare l’instradamento delle chiamate all’area errata o un errore imprevisto delle chiamate.
 
-Se non riuscite a individuare la regione all&#39;interno del profilo IMS, contattate l&#39;amministratore di sistema per ottenere assistenza.
+Se non riesci a individuare l’area geografica all’interno del profilo dell’organizzazione IMS, contatta l’amministratore di sistema per richiedere supporto.
 
 ## Utilizzo dell&#39;API [!DNL Identity Service]
 
 I parametri di identità utilizzati in questi servizi possono essere espressi in uno dei due modi seguenti: composito o XID.
 
-Le identità composite sono costrutti che includono sia il valore ID che lo spazio dei nomi. Quando si utilizzano identità composite, lo spazio dei nomi può essere fornito in base al nome (`namespace.code`) o all&#39;ID (`namespace.id`).
+Le identità composite sono costrutti che includono sia il valore ID che lo spazio dei nomi. Quando si utilizzano identità composite, lo spazio dei nomi può essere fornito con un nome (`namespace.code`) o con un ID (`namespace.id`).
 
-Quando un&#39;identità è persistente, [!DNL Identity Service] genera e assegna un ID a tale identità, denominato ID nativo o XID. Tutte le varianti delle API Cluster e Mapping supportano sia le identità composite che XID nelle relative richieste e risposte. Per utilizzare queste API è necessario uno dei parametri: `xid` o una combinazione di [`ns` o `nsid`] e `id`.
+Quando un&#39;identità viene mantenuta, [!DNL Identity Service] genera e assegna un ID a tale identità, denominato ID nativo o XID. Tutte le varianti delle API Cluster e Mapping supportano sia le identità composite che XID nelle loro richieste e risposte. Per utilizzare queste API è necessario uno dei parametri `xid` o una combinazione di [`ns` o `nsid`] e `id` .
 
-Per limitare il payload nelle risposte, le API adattano le proprie risposte al tipo di costrutto di identità utilizzato. In altre parole, se trasmettete XID le risposte avranno XID, se trasmettete identità composite, la risposta seguirà la struttura utilizzata nella richiesta.
+Per limitare il payload nelle risposte, le API adattano le risposte al tipo di costrutto di identità utilizzato. Cioè, se passi XID le tue risposte avranno XID, se passi le identità composite, la risposta seguirà la struttura utilizzata nella richiesta.
 
-Gli esempi in questo documento non coprono la funzionalità completa dell&#39;API [!DNL Identity Service]. Per l&#39;API completa, vedete la [Guida di riferimento API Swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml).
+Gli esempi contenuti in questo documento non coprono la funzionalità completa dell’ API [!DNL Identity Service] . Per l&#39;API completa, consulta [Riferimento API Swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml).
 
 >[!NOTE]
 >
->Quando nella richiesta viene utilizzato XID nativo, tutte le identità restituite saranno in formato XID nativo. Si consiglia di utilizzare il modulo ID/namespace. Per ulteriori informazioni, vedere la sezione relativa al [recupero dell&#39;XID per un&#39;identità](./create-custom-namespace.md).
+>Tutte le identità restituite saranno in formato XID nativo quando nella richiesta viene utilizzato XID nativo. Si consiglia di utilizzare il modulo ID/namespace. Per ulteriori informazioni, consulta la sezione su [ottenere l&#39;XID per un&#39;identità](./create-custom-namespace.md).
 
 ## Passaggi successivi
 
-Ora che avete raccolto le credenziali richieste, potete continuare a leggere il resto della guida per gli sviluppatori. Ogni sezione fornisce informazioni importanti sui relativi endpoint e illustra le chiamate API di esempio per l&#39;esecuzione di operazioni CRUD. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e i payload formattati correttamente e una risposta di esempio per una chiamata riuscita.
+Dopo aver raccolto le credenziali richieste, puoi continuare a leggere il resto della guida per gli sviluppatori. Ogni sezione fornisce informazioni importanti sui loro endpoint e illustra chiamate API di esempio per l’esecuzione di operazioni CRUD. Ciascuna chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e i payload formattati correttamente e una risposta di esempio per una chiamata riuscita.
