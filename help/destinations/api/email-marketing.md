@@ -6,9 +6,9 @@ description: Questo documento tratta la creazione di destinazioni di marketing e
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: c8b08b2feb30bf137d802ce82df92d3f9f8bdb78
+source-git-commit: 789534c02746ed24dfa01c7b471cdf3be407711e
 workflow-type: tm+mt
-source-wordcount: '1676'
+source-wordcount: '1696'
 ht-degree: 1%
 
 ---
@@ -366,6 +366,8 @@ Una risposta corretta contiene l&#39;identificatore univoco della connessione di
 >[!IMPORTANT]
 > 
 >[!DNL Adobe Experience Platform] divide automaticamente i file di esportazione a 5 milioni di record (righe) per file. Ogni riga rappresenta un profilo.
+>
+>I nomi dei file divisi vengono aggiunti con un numero che indica che il file fa parte di un’esportazione più grande, in quanto tale: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
 **Formato API**
 
