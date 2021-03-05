@@ -6,7 +6,7 @@ seo-title: Attivare profili e segmenti in una destinazione
 description: Attiva i dati disponibili in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
 seo-description: Attiva i dati disponibili in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
 translation-type: tm+mt
-source-git-commit: 789534c02746ed24dfa01c7b471cdf3be407711e
+source-git-commit: 6c8bf05285dcfc3e631ae5a41dcf40f90217320a
 workflow-type: tm+mt
 source-wordcount: '2101'
 ht-degree: 0%
