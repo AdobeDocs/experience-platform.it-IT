@@ -3,11 +3,11 @@ keywords: Experience Platform;home;argomenti comuni;api del servizio identità;g
 solution: Experience Platform
 title: Guida all’API del servizio Identity
 topic: Guida all’API
-description: L’API del servizio Identity consente agli sviluppatori di gestire l’identificazione dei clienti tra dispositivi, tra canali e in tempo quasi reale utilizzando grafici di identità di Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
+description: L’API del servizio Identity consente agli sviluppatori di gestire l’identificazione dei clienti tra dispositivi, tra canali e in tempo quasi reale tramite grafici di identità in Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 69c3106070e31377ea8571cd14dc33aa9b6f7037
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '773'
 ht-degree: 0%
 
 ---
