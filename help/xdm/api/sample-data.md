@@ -1,13 +1,13 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;modello dati;dati campionati;dati di esempio;rpc;'
+keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;dati di esempio;dati di esempio;rpc;
 solution: Experience Platform
-title: Endpoint API dati di esempio
-description: L'endpoint /sampledata nell'API del Registro di sistema dello schema consente di generare dati di esempio mappati alla struttura di qualsiasi schema XDM esistente.
-topic: developer guide
+title: Endpoint API per i dati di esempio
+description: L’endpoint /sampledata nell’API del Registro di sistema dello schema consente di generare dati di esempio mappati alla struttura di qualsiasi schema XDM esistente.
+topic: guida per sviluppatori
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '321'
 ht-degree: 1%
 
 ---
@@ -15,19 +15,19 @@ ht-degree: 1%
 
 # Endpoint dati di esempio
 
-Per trasferire i dati in Adobe Experience Platform, il formato e la struttura dei dati devono essere conformi a uno schema XDM (Experience Data Model) esistente. A seconda della complessità dello schema per un particolare set di dati, può essere difficile determinare la forma esatta dei dati che il set di dati prevede al momento dell&#39;assimilazione.
+Per acquisire i dati in Adobe Experience Platform, il formato e la struttura dei dati devono essere conformi a uno schema Experience Data Model (XDM) esistente. A seconda della complessità dello schema per un particolare set di dati, può essere difficile determinare la forma esatta dei dati che il set di dati si aspetta al momento dell’acquisizione.
 
-Utilizzando l&#39;endpoint `/sampledata` nell&#39;API [!DNL Schema Registry], è possibile generare un oggetto di inserimento di esempio per qualsiasi schema creato in precedenza.
+Utilizzando l’endpoint `/sampledata` nell’ API [!DNL Schema Registry], puoi generare un oggetto di acquisizione di esempio per qualsiasi schema creato in precedenza.
 
 ## Introduzione
 
-L&#39;endpoint utilizzato in questa guida fa parte dell&#39; [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml). Prima di continuare, consultare la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni richieste necessarie per eseguire correttamente chiamate a qualsiasi API  Experience Platform.
+L&#39;endpoint utilizzato in questa guida fa parte dell&#39; [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare chiamate a qualsiasi API di Experience Platform.
 
-L&#39;endpoint dei dati di esempio fa parte delle chiamate di routine remote (RPC) supportate da [!DNL Schema Registry]. A differenza di altri endpoint nell&#39;API [!DNL Schema Registry], gli endpoint RPC non richiedono intestazioni aggiuntive come `Accept` o `Content-Type` e non utilizzano un `CONTAINER_ID`. Devono invece utilizzare lo spazio dei nomi `/rpc`, come dimostrato nella chiamata API di seguito.
+L&#39;endpoint dati di esempio fa parte delle chiamate di routine remote (RPC) supportate da [!DNL Schema Registry]. A differenza di altri endpoint nell&#39;API [!DNL Schema Registry], gli endpoint RPC non richiedono intestazioni aggiuntive come `Accept` o `Content-Type` e non utilizzano un `CONTAINER_ID`. Devono invece utilizzare lo spazio dei nomi `/rpc` , come illustrato nella chiamata API riportata di seguito.
 
-## Recupero di dati di esempio per uno schema
+## Recupera dati di esempio per uno schema
 
-È possibile recuperare dati di esempio per qualsiasi schema all&#39;interno della Libreria schema specificando l&#39;ID dello schema nel percorso di una richiesta di GET all&#39;endpoint.
+È possibile recuperare dati di esempio per qualsiasi schema all’interno della Libreria schema specificando l’ID dello schema nel percorso di una richiesta di GET all’endpoint.
 
 **Formato API**
 
@@ -37,7 +37,7 @@ GET /rpc/sampledata/{SCHEMA_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{SCHEMA_ID}` | `meta:altId` o `$id` con codifica URL dello schema per il quale si desidera generare i dati di esempio. |
+| `{SCHEMA_ID}` | La `meta:altId` o la codifica URL `$id` dello schema per cui si desidera generare i dati di esempio. |
 
 **Richiesta**
 
