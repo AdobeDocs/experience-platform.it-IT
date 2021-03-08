@@ -1,31 +1,31 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;modello dati;esportazione;importazione;rpc;'
+keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;modello dati;esportazione;importazione;rpc;
 solution: Experience Platform
 title: Esporta/Importa endpoint API
-description: Gli endpoint /export e /import nell'API del Registro di sistema dello schema consentono di condividere risorse XDM tra organizzazioni IMS e sandbox.
-topic: developer guide
+description: Gli endpoint /export e /import nell’API del Registro di sistema dello schema consentono di condividere risorse XDM tra organizzazioni IMS e sandbox.
+topic: guida per sviluppatori
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '502'
 ht-degree: 1%
 
 ---
 
 
-# Esporta/Importa endpoint
+# Endpoint di esportazione/importazione
 
-Tutte le risorse all&#39;interno di [!DNL Schema Library] sono contenute in una sandbox specifica all&#39;interno di un&#39;organizzazione IMS. In alcuni casi, potrebbe essere utile condividere le risorse Experience Data Model (XDM) tra sandbox e organizzazioni IMS. L&#39;API [!DNL Schema Registry] fornisce due endpoint che consentono di generare un payload di esportazione per qualsiasi schema, mixin o tipo di dati in[!DNL  Schema Library], quindi utilizzare tale payload per importare la risorsa (e tutte le risorse dipendenti) in una sandbox di destinazione e in un&#39;organizzazione IMS.
+Tutte le risorse all’interno di [!DNL Schema Library] sono contenute in una sandbox specifica all’interno di un’organizzazione IMS. In alcuni casi, puoi condividere risorse Experience Data Model (XDM) tra le sandbox e le organizzazioni IMS. L&#39;API [!DNL Schema Registry] fornisce due endpoint che consentono di generare un payload di esportazione per qualsiasi schema, mixin o tipo di dati in[!DNL  Schema Library], quindi di utilizzare tale payload per importare la risorsa (e tutte le risorse dipendenti) in una sandbox di destinazione e nell&#39;organizzazione IMS.
 
 ## Introduzione
 
-Gli endpoint utilizzati in questa guida fanno parte dell&#39; [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml). Prima di continuare, consultare la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni richieste necessarie per eseguire correttamente chiamate a qualsiasi API  Experience Platform.
+Gli endpoint utilizzati in questa guida fanno parte dell’ [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) . Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare chiamate a qualsiasi API di Experience Platform.
 
-Gli endpoint di esportazione/importazione fanno parte delle chiamate di routine remote (RPC) supportate da [!DNL Schema Registry]. A differenza di altri endpoint nell&#39;API [!DNL Schema Registry], gli endpoint RPC non richiedono intestazioni aggiuntive come `Accept` o `Content-Type` e non utilizzano un `CONTAINER_ID`. Devono invece utilizzare lo spazio dei nomi `/rpc`, come dimostrato nelle chiamate API riportate di seguito.
+Gli endpoint di esportazione/importazione fanno parte delle chiamate di procedura remota (RPC) supportate da [!DNL Schema Registry]. A differenza di altri endpoint nell&#39;API [!DNL Schema Registry], gli endpoint RPC non richiedono intestazioni aggiuntive come `Accept` o `Content-Type` e non utilizzano un `CONTAINER_ID`. Devono invece utilizzare lo spazio dei nomi `/rpc` , come illustrato nelle chiamate API riportate di seguito.
 
-## Recuperare un payload di esportazione per una risorsa {#export}
+## Recupera un payload di esportazione per una risorsa {#export}
 
-Per qualsiasi schema, mixin o tipo di dati esistente in [!DNL Schema Library], puoi generare un payload di esportazione effettuando una richiesta di GET all&#39;endpoint `/export`, fornendo l&#39;ID della risorsa nel percorso.
+Per qualsiasi schema, mixin o tipo di dati esistente nel [!DNL Schema Library], puoi generare un payload di esportazione effettuando una richiesta di GET all’ endpoint `/export`, fornendo l’ID della risorsa nel percorso.
 
 **Formato API**
 
@@ -35,7 +35,7 @@ GET /rpc/export/{RESOURCE_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{RESOURCE_ID}` | `meta:altId` o `$id` con codifica URL della risorsa XDM da esportare. |
+| `{RESOURCE_ID}` | La `meta:altId` o la codifica URL `$id` della risorsa XDM da esportare. |
 
 **Richiesta**
 
@@ -53,9 +53,9 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un array di oggetti che rappresentano la risorsa XDM di destinazione e tutte le risorse dipendenti. In questo esempio, il primo oggetto nell&#39;array è un tipo di dati `Property` creato dal tenant utilizzato dal mixin `Restaurant`, mentre il secondo è il mixin `Restaurant` stesso. Questo payload può quindi essere utilizzato per [importare la risorsa](#import) in una sandbox o in un&#39;organizzazione IMS diversa.
+Una risposta corretta restituisce un array di oggetti che rappresentano la risorsa XDM di destinazione e tutte le relative risorse dipendenti. In questo esempio, il primo oggetto dell&#39;array è un tipo di dati `Property` creato dal tenant utilizzato dal mixin `Restaurant`, mentre il secondo è il mixin `Restaurant` stesso. Questo payload può quindi essere utilizzato per [importare la risorsa](#import) in un’organizzazione sandbox o IMS diversa.
 
-Tenere presente che tutte le istanze dell&#39;ID tenant della risorsa vengono sostituite con `<XDM_TENANTID_PLACEHOLDER>`. Questo consente al Registro di sistema dello schema di applicare automaticamente l&#39;ID tenant corretto alle risorse a seconda della posizione in cui vengono inviate nella chiamata di importazione successiva.
+Tieni presente che tutte le istanze dell’ID tenant della risorsa vengono sostituite con `<XDM_TENANTID_PLACEHOLDER>`. Questo consente al Registro di sistema dello schema di applicare automaticamente l’ID tenant corretto alle risorse a seconda della posizione in cui vengono inviate nella successiva chiamata di importazione.
 
 ```json
 [
@@ -195,9 +195,9 @@ Tenere presente che tutte le istanze dell&#39;ID tenant della risorsa vengono so
 ]
 ```
 
-## Importa una risorsa {#import}
+## Importare una risorsa {#import}
 
-Dopo aver [generato un payload di esportazione](#export) per una risorsa XDM, potete utilizzare tale payload in una richiesta POST all&#39;endpoint `/import` per importare la risorsa in un&#39;organizzazione IMS e sandbox di destinazione.
+Dopo aver [generato un payload di esportazione](#export) per una risorsa XDM, è possibile utilizzare tale payload in una richiesta POST all&#39;endpoint `/import` per importare la risorsa in un&#39;organizzazione IMS e sandbox di destinazione.
 
 **Formato API**
 
@@ -207,7 +207,7 @@ POST /rpc/import
 
 **Richiesta**
 
-La richiesta seguente prende il payload restituito nell&#39;esempio di esportazione precedente [per importare il mixin `Restaurant` in una nuova organizzazione IMS e sandbox, come determinato rispettivamente dalle intestazioni `x-gw-ims-org-id` e `x-sandbox-name`.](#export)
+La richiesta seguente prende il payload restituito nell’ esempio di esportazione precedente [](#export) per importare il mixin `Restaurant` in una nuova organizzazione IMS e sandbox, come determinato rispettivamente dalle intestazioni `x-gw-ims-org-id` e `x-sandbox-name` .
 
 ```shell
 curl -X POST \
@@ -358,7 +358,7 @@ curl -X POST \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco delle risorse importate, con l&#39;ID tenant appropriato e i valori dell&#39;organizzazione IMS appropriati applicati.
+Una risposta corretta restituisce un elenco delle risorse importate, a cui sono stati applicati l’ID tenant appropriato e i valori dell’organizzazione IMS appropriati.
 
 ```json
 [
