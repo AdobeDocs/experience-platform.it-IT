@@ -1,13 +1,13 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;modello dati;audit;log audit;changelog;change log;rpc;'
+keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;modello dati;audit;registro di audit;registro modifiche;registro modifiche;rpc;
 solution: Experience Platform
-title: Endpoint API registro di controllo
-description: L'endpoint /auditlog nell'API del Registro di sistema dello schema consente di recuperare un elenco cronologico delle modifiche apportate a una risorsa XDM esistente.
-topic: developer guide
+title: Endpoint API del registro di controllo
+description: L’endpoint /auditlog nell’API del Registro di sistema dello schema consente di recuperare un elenco cronologico delle modifiche apportate a una risorsa XDM esistente.
+topic: guida per sviluppatori
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '398'
 ht-degree: 2%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 2%
 
 # Endpoint del registro di controllo
 
-Per ogni risorsa Experience Data Model (XDM), il [!DNL Schema Registry] mantiene un registro di tutte le modifiche che si sono verificate tra diversi aggiornamenti. L&#39;endpoint `/auditlog` nell&#39;API [!DNL Schema Registry] consente di recuperare un registro di controllo per qualsiasi classe, mixin, tipo di dati o schema specificato dall&#39;ID.
+Per ogni risorsa Experience Data Model (XDM), il [!DNL Schema Registry] mantiene un registro di tutte le modifiche che si sono verificate tra diversi aggiornamenti. L’endpoint `/auditlog` nell’ API [!DNL Schema Registry] consente di recuperare un registro di controllo per qualsiasi classe, mixin, tipo di dati o schema specificato dall’ID.
 
 ## Introduzione
 
-L&#39;endpoint utilizzato in questa guida fa parte dell&#39; [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml). Prima di continuare, consultare la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni richieste necessarie per eseguire correttamente chiamate a qualsiasi API  Experience Platform.
+L&#39;endpoint utilizzato in questa guida fa parte dell&#39; [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare chiamate a qualsiasi API di Experience Platform.
 
-L&#39;endpoint `/auditlog` fa parte delle chiamate di routine remote (RPC) supportate da [!DNL Schema Registry]. A differenza di altri endpoint nell&#39;API [!DNL Schema Registry], gli endpoint RPC non richiedono intestazioni aggiuntive come `Accept` o `Content-Type` e non utilizzano un `CONTAINER_ID`. Devono invece utilizzare lo spazio dei nomi `/rpc`, come dimostrato nella chiamata API di seguito.
+L&#39;endpoint `/auditlog` fa parte delle chiamate di procedura remota (RPC) supportate da [!DNL Schema Registry]. A differenza di altri endpoint nell&#39;API [!DNL Schema Registry], gli endpoint RPC non richiedono intestazioni aggiuntive come `Accept` o `Content-Type` e non utilizzano un `CONTAINER_ID`. Devono invece utilizzare lo spazio dei nomi `/rpc` , come illustrato nella chiamata API riportata di seguito.
 
-## Recupero di un registro di controllo per una risorsa
+## Recuperare un registro di controllo per una risorsa
 
 È possibile recuperare un registro di controllo per qualsiasi classe, mixin, tipo di dati o schema nella Libreria schema specificando l&#39;ID della risorsa nel percorso di una richiesta di GET all&#39;endpoint `/auditlog`.
 
@@ -35,7 +35,7 @@ GET /rpc/auditlog/{RESOURCE_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{RESOURCE_ID}` | `meta:altId` o `$id` con codifica URL della risorsa di cui si desidera recuperare il registro di controllo. |
+| `{RESOURCE_ID}` | La `meta:altId` o la codifica URL `$id` della risorsa di cui si desidera recuperare il registro di controllo. |
 
 **Richiesta**
 
@@ -91,8 +91,8 @@ Una risposta corretta restituisce un elenco cronologico delle modifiche apportat
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `auditTrails` | Un array di oggetti, con ogni oggetto che rappresenta una modifica apportata alla risorsa specificata o a una delle risorse dipendenti. |
-| `id` | La `$id` della risorsa modificata. Questo valore rappresenta in genere la risorsa specificata nel percorso della richiesta, ma può rappresentare una risorsa dipendente se questa è l&#39;origine della modifica. |
+| `auditTrails` | Matrice di oggetti, con ogni oggetto che rappresenta una modifica apportata alla risorsa specificata o a una delle relative risorse dipendenti. |
+| `id` | La `$id` della risorsa modificata. Questo valore rappresenta in genere la risorsa specificata nel percorso della richiesta, ma può rappresentare una risorsa dipendente se questa è l’origine della modifica. |
 | `action` | Tipo di modifica apportata. |
 | `path` | Una stringa [JSON Pointer](../../landing/api-fundamentals.md#json-pointer) che indica il percorso del campo specifico che è stato modificato o aggiunto. |
 | `value` | Valore assegnato al campo nuovo o aggiornato. |
