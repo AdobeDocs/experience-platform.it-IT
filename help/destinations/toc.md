@@ -6,9 +6,9 @@ user-guide-description: Attiva i dati noti e sconosciuti per campagne di marketi
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinazioni
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '460'
 ht-degree: 11%
 
 ---
@@ -19,8 +19,8 @@ ht-degree: 11%
 * [Panoramica sulle destinazioni](./home.md)
 * [Tipi di destinazione e categorie](./destination-types.md)
 * Esercitazioni API {#api}
-   * [Connettiti alle destinazioni di streaming e attiva i dati utilizzando le chiamate API](./api/streaming-destinations.md)
-   * [Connettiti alle destinazioni di marketing e-mail e attiva i dati utilizzando le chiamate API](./api/email-marketing.md)
+   * [Connettiti alle destinazioni di streaming e attiva i dati utilizzando l’API del servizio di flusso](./api/streaming-destinations.md)
+   * [Connettiti alle destinazioni di marketing e-mail e attiva i dati utilizzando l’API del servizio di flusso](./api/email-marketing.md)
 * Guide dell&#39;interfaccia utente {#ui}
    * [Panoramica dell’area di lavoro Destinazioni](./ui/destinations-workspace.md)
    * [Visualizza dettagli destinazione](./ui/destination-details-page.md)
@@ -30,8 +30,8 @@ ht-degree: 11%
    * [Panoramica del catalogo delle destinazioni](./catalog/overview.md)
    * [ Connessione HTTP (Alpha)](./catalog/http-destination.md)
    * Destinazioni Adobe{#adobe}
-      * [Panoramica sulle destinazioni Adobe](./catalog/adobe/overview.md)
-      * [Condivisione dei segmenti di Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [Panoramica sulle destinazioni di Adobe](./catalog/adobe/overview.md)
+      * [Experience Platform di condivisione dei segmenti](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * Destinazioni pubblicitarie{#advertising}
       * [Panoramica sulle destinazioni pubblicitarie](./catalog/advertising/overview.md)
       * [Estensione Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud.md)
@@ -93,11 +93,11 @@ ht-degree: 11%
    * Destinazioni di marketing e-mail {#email-marketing}
       * [Panoramica sulle destinazioni di e-mail marketing](./catalog/email-marketing/overview.md)
       * [Connessione Adobe Campaign](./catalog/email-marketing/adobe-campaign.md)
-      * [Connessione Eloqua Oracle](./catalog/email-marketing/oracle-eloqua.md)
-      * [Connessione Oracle Responsys](./catalog/email-marketing/oracle-responsys.md)
-      * [Connessione Salesforce Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud.md)
-   * Estensioni di Experience Platform Launch {#launch-extensions}
-      * [Panoramica dell’estensione Adobe Experience Platform Launch](./catalog/launch-extensions/overview.md)
+      * [Oracle collegamento Eloqua](./catalog/email-marketing/oracle-eloqua.md)
+      * [Oracle connessione Responsys](./catalog/email-marketing/oracle-responsys.md)
+      * [Collegamento Marketing Cloud Salesforce](./catalog/email-marketing/salesforce-marketing-cloud.md)
+   * Estensioni Experience Platform Launch {#launch-extensions}
+      * [Panoramica dell&#39;estensione Adobe Experience Platform Launch](./catalog/launch-extensions/overview.md)
    * Destinazioni di coinvolgimento mobile {#mobile-engagement}
       * [Panoramica delle destinazioni di coinvolgimento mobile](./catalog/mobile-engagement/overview.md)
       * [Collegamento Attributi del volo](./catalog/mobile-engagement/airship-attributes.md)
