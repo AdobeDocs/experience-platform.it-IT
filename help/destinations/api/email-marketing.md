@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
-title: Connettiti alle destinazioni di marketing e-mail e attiva i dati utilizzando le chiamate API
-description: Questo documento tratta la creazione di destinazioni di marketing e-mail utilizzando l’API di Adobe Experience Platform
+title: Connettiti alle destinazioni di marketing e-mail e attiva i dati utilizzando l’API del servizio di flusso
+description: Questo documento tratta la creazione di destinazioni di marketing e-mail utilizzando l’API Adobe Experience Platform
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 789534c02746ed24dfa01c7b471cdf3be407711e
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '1702'
 ht-degree: 1%
 
 ---
 
 
-# Connettiti alle destinazioni di marketing e-mail e attiva i dati utilizzando le chiamate API
+# Connettiti alle destinazioni di marketing e-mail e attiva i dati utilizzando l’API del servizio di flusso
 
 Questa esercitazione illustra come utilizzare le chiamate API per connettersi ai dati di Adobe Experience Platform, creare una [destinazione di marketing e-mail](../catalog/email-marketing/overview.md), creare un flusso di dati per la nuova destinazione creata e attivare i dati per la nuova destinazione creata.
 
-Questa esercitazione utilizza la destinazione di Adobe Campaign in tutti gli esempi, ma i passaggi sono identici per tutte le destinazioni di e-mail marketing.
+Questa esercitazione utilizza la destinazione Adobe Campaign in tutti gli esempi, ma i passaggi sono identici per tutte le destinazioni di e-mail marketing.
 
 ![Panoramica : i passaggi per creare una destinazione e attivare i segmenti](../assets/api/email-marketing/overview.png)
 
@@ -67,13 +67,13 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 ### Documentazione Swagger
 
-In Swagger puoi trovare la documentazione di riferimento associata per tutte le chiamate API in questa esercitazione. Consulta la [documentazione API del servizio di flusso su Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). È consigliabile utilizzare questa esercitazione e la pagina della documentazione Swagger in parallelo.
+In Swagger puoi trovare la documentazione di riferimento associata per tutte le chiamate API in questa esercitazione. Consulta la [documentazione API del servizio di flusso su Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). È consigliabile utilizzare questa esercitazione e la pagina della documentazione Swagger in parallelo.
 
 ## Ottieni l&#39;elenco delle destinazioni disponibili {#get-the-list-of-available-destinations}
 
 ![Passaggio 1: panoramica dei passaggi di destinazione](../assets/api/email-marketing/step1.png)
 
-Come primo passo, devi decidere a quale destinazione di marketing e-mail attivare i dati. Per iniziare, esegui una chiamata per richiedere un elenco di destinazioni disponibili a cui puoi collegare e attivare i segmenti. Esegui la seguente richiesta GET all’endpoint `connectionSpecs` per restituire un elenco di destinazioni disponibili:
+Come primo passo, devi decidere a quale destinazione di marketing e-mail attivare i dati. Per iniziare, esegui una chiamata per richiedere un elenco di destinazioni disponibili a cui puoi collegare e attivare i segmenti. Esegui la seguente richiesta di GET all’endpoint `connectionSpecs` per restituire un elenco di destinazioni disponibili:
 
 **Formato API**
 
@@ -512,8 +512,8 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`: Utilizza il flusso per la destinazione di marketing e-mail a cui desideri connetterti. Per ottenere le specifiche di flusso, esegui un’operazione GET sull’endpoint `flowspecs`. Vedi la documentazione Swagger qui: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. Nella risposta , cerca `upsTo` e copia l’ID corrispondente della destinazione di marketing e-mail a cui desideri connetterti. Ad esempio, per Adobe Campaign, cerca `upsToCampaign` e copia il parametro `id` .
-* `{SOURCE_CONNECTION_ID}`: Utilizza l’ID di connessione sorgente ottenuto nel passaggio  [Connetti a Experience Platform](#connect-to-your-experience-platform-data) .
+* `{FLOW_SPEC_ID}`: Utilizza il flusso per la destinazione di marketing e-mail a cui desideri connetterti. Per ottenere le specifiche di flusso, esegui un’operazione di GET sull’endpoint `flowspecs`. Vedi la documentazione Swagger qui: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. Nella risposta , cerca `upsTo` e copia l’ID corrispondente della destinazione di marketing e-mail a cui desideri connetterti. Ad esempio, per Adobe Campaign, cerca `upsToCampaign` e copia il parametro `id` .
+* `{SOURCE_CONNECTION_ID}`: Utilizza l&#39;ID di connessione sorgente ottenuto nel passaggio  [Connetti all&#39;Experience Platform](#connect-to-your-experience-platform-data).
 * `{TARGET_CONNECTION_ID}`: Utilizza l’ID di connessione di destinazione ottenuto nel passaggio  [Connetti alla destinazione](#connect-to-email-marketing-destination) di e-mail marketing.
 
 **Risposta**
@@ -606,7 +606,7 @@ Cerca una risposta 202 OK. Non viene restituito alcun corpo di risposta. Per ver
 
 Come passaggio finale nell’esercitazione, dovresti verificare che i segmenti e gli attributi di profilo siano stati mappati correttamente al flusso di dati.
 
-Per convalidare questo, esegui la seguente richiesta GET:
+Per convalidarlo, esegui la seguente richiesta di GET:
 
 **Formato API**
 
