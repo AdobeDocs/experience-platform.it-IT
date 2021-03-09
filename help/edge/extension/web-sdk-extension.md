@@ -2,23 +2,23 @@
 title: Estensione di Adobe Experience Platform Web SDK Panoramica
 description: Scopri l’estensione Adobe Experience Platform Web SDK per Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
+source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 19%
+source-wordcount: '555'
+ht-degree: 18%
 
 ---
 
 
-# Panoramica dell’estensione dell’SDK per web di Adobe Experience Platform
+# Panoramica dell&#39;estensione Adobe Experience Platform Web SDK
 
-L’estensione Adobe Experience Platform Web SDK invia i dati ad Adobe Experience Cloud dalle proprietà web tramite Adobe Experience Platform Edge Network. L’estensione ti consente di inviare dati in streaming a Platform, sincronizzare le identità, elaborare i segnali di consenso dei clienti e raccogliere automaticamente i dati contestuali.
+L’estensione Adobe Experience Platform Web SDK invia i dati a Adobe Experience Cloud dalle proprietà web tramite Adobe Experience Platform Edge Network. L’estensione ti consente di inviare dati in streaming a Platform, sincronizzare le identità, elaborare i segnali di consenso dei clienti e raccogliere automaticamente i dati contestuali.
 
-Questo documento illustra come configurare l’estensione nell’interfaccia utente di Adobe Experience Platform Launch.
+Questo documento illustra come configurare l&#39;estensione nell&#39;interfaccia utente di Adobe Experience Platform Launch.
 
 ## Configura l&#39;estensione
 
-Se l’estensione Platform Web SDK è già stata installata per una proprietà, apri la proprietà nell’interfaccia utente di Platform Launch e seleziona la scheda **[!UICONTROL Extensions]** . In Platform Web SDK, seleziona **[!UICONTROL Configure]**.
+Se l’estensione Platform Web SDK è già stata installata per una proprietà, apri la proprietà nell’interfaccia utente del Platform launch e seleziona la scheda **[!UICONTROL Extensions]** . In Platform Web SDK, seleziona **[!UICONTROL Configure]**.
 
 ![](../images/extension/overview/configure.png)
 
@@ -32,11 +32,11 @@ In entrambi i casi, arrivi alla pagina di configurazione dell’SDK per web di P
 
 ## Opzioni di configurazione generali
 
-Le opzioni di configurazione nella parte superiore della pagina indicano ad Adobe Experience Platform dove indirizzare i dati e quali configurazioni utilizzare sul server.
+Le opzioni di configurazione nella parte superiore della pagina indicano a Adobe Experience Platform dove indirizzare i dati e quali configurazioni utilizzare sul server.
 
 ### [!UICONTROL Name]
 
-L’estensione Adobe Experience Platform Web SDK supporta più istanze sulla pagina. Il nome viene utilizzato per inviare dati a più organizzazioni con una singola configurazione di Platform Launch.
+L&#39;estensione Adobe Experience Platform Web SDK supporta più istanze sulla pagina. Il nome viene utilizzato per inviare dati a più organizzazioni con una singola configurazione di Platform launch.
 
 Il nome dell&#39;estensione viene impostato automaticamente su &quot;[!DNL alloy]&quot;. Tuttavia, è possibile modificare il nome dell&#39;istanza e inserire un nome oggetto JavaScript valido.
 
@@ -50,16 +50,19 @@ L&#39;[!UICONTROL IMS Organization ID] è l&#39;organizzazione a cui si desidera
 
 ## [!UICONTROL Edge Configurations]
 
-Quando viene inviata una richiesta ad Adobe Experience Platform Edge Network, viene utilizzato un ID di configurazione perimetrale per fare riferimento alla configurazione lato server. Puoi aggiornare la configurazione senza dover apportare modifiche al codice sul sito web.
+Quando una richiesta viene inviata ad Adobe Experience Platform Edge Network, viene utilizzato un ID di configurazione perimetrale per fare riferimento alla configurazione lato server. Puoi aggiornare la configurazione senza dover apportare modifiche al codice sul sito web.
 
 Per ulteriori informazioni, consulta la guida sulle [configurazioni edge](../fundamentals/edge-configuration.md) .
 
 ## [!UICONTROL Privacy]
 
-La sezione [!UICONTROL Privacy] ti consente di configurare in che modo l’SDK gestisce i segnali di consenso dei clienti provenienti dal tuo sito web. Nello specifico, ti consente di selezionare il livello di consenso predefinito che si presume di un cliente se non è stata fornita alcuna altra preferenza di consenso esplicito. La tabella seguente suddivide ciò che ogni opzione comporta:
+La sezione [!UICONTROL Privacy] ti consente di configurare in che modo l’SDK gestisce i segnali di consenso degli utenti provenienti dal tuo sito web. Nello specifico, ti consente di selezionare il livello di consenso predefinito che si presume di un utente se non è stata fornita alcuna altra preferenza di consenso esplicito. Il livello di consenso predefinito non viene salvato nel profilo dell’utente. La tabella seguente suddivide ciò che ogni opzione comporta:
 
 | [!UICONTROL Default Consent Level] | Descrizione |
 | --- | --- |
-| [!UICONTROL In] | Opt-in. Utilizza questa opzione se supponi il consenso del cliente per impostazione predefinita e rispetta solo i segnali di rinuncia. |
-| [!UICONTROL Pending] | I clienti con consenso &quot;in sospeso&quot; vengono esclusi finché non viene inviato un segnale di consenso. Utilizza questa opzione se richiedi il consenso esplicito del cliente per le operazioni aziendali. |
+| [!UICONTROL In] | Raccogliere eventi che si verificano prima che l’utente fornisca le preferenze di consenso. |
+| [!UICONTROL Out] | Elimina gli eventi che si verificano prima che l’utente fornisca le preferenze di consenso. |
+| [!UICONTROL Pending] | Eseguire la coda degli eventi che si verificano prima che l’utente fornisca le preferenze di consenso. Quando vengono fornite le preferenze di consenso, gli eventi vengono raccolti o scartati a seconda delle preferenze fornite. |
 | [!UICONTROL Provided by data element] | Il livello di consenso predefinito è determinato da un elemento dati separato definito dall’utente. Quando utilizzi questa opzione, devi specificare l’elemento dati utilizzando il menu a discesa fornito. |
+
+Utilizzare Out o Pending se si richiede un consenso esplicito dell’utente per le operazioni aziendali.
