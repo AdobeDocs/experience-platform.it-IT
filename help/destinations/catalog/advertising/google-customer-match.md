@@ -1,11 +1,11 @@
 ---
 keywords: Google customer match;Google customer match;Google Customer Match;Google Customer Match
-title: Connessione Google Customer Match
-description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti nelle proprietà di Google possedute e gestite, come ad esempio Cerca, Shopping, Gmail e YouTube.
+title: Connessione Customer Match di Google
+description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti tra le proprietà possedute e gestite di Google, come Ricerca, Shopping, Gmail e YouTube.
 translation-type: tm+mt
-source-git-commit: bec44832a235dd3f9e2ee0f3ffc77854ee5784d7
+source-git-commit: 494b41265a0eec71ec15c7896eb8c652b3164e18
 workflow-type: tm+mt
-source-wordcount: '1393'
+source-wordcount: '1381'
 ht-degree: 0%
 
 ---
@@ -13,53 +13,53 @@ ht-degree: 0%
 
 # [!DNL Google Customer Match] connection
 
-[Google Customer ](https://support.google.com/google-ads/answer/6379332?hl=en) Matchlet consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti attraverso le proprietà di Google possedute e gestite, ad esempio:  [!DNL Search],  [!DNL Shopping],  [!DNL Gmail], e  [!DNL YouTube].
+[Google Customer ](https://support.google.com/google-ads/answer/6379332?hl=en) Matchlets consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti nelle proprietà di Google possedute e gestite, ad esempio:  [!DNL Search],  [!DNL Shopping],  [!DNL Gmail], e  [!DNL YouTube].
 
-![Destinazione di corrispondenza cliente Google nell’interfaccia utente CDP in tempo reale](../../assets/catalog/advertising/google-customer-match/catalog.png)
+![Destinazione Customer Match di Google nell’interfaccia utente di Adobe Experience Platform](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
 ## Casi d’uso
 
-Per comprendere meglio come e quando utilizzare la destinazione [!DNL Google Customer Match], ecco alcuni esempi di casi d&#39;uso che i clienti della piattaforma dati cliente in tempo reale possono risolvere utilizzando questa funzione.
+Per comprendere meglio come e quando utilizzare la destinazione [!DNL Google Customer Match], di seguito sono riportati alcuni esempi di casi d’uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa funzione.
 
-### Caso di utilizzo n. 1
+### Caso d&#39;uso n. 1
 
-Un marchio di abbigliamento atletico vuole raggiungere i clienti esistenti attraverso [!DNL Google Search] e [!DNL Google Shopping] per personalizzare offerte e articoli in base ai loro acquisti passati e alla cronologia di navigazione. Il marchio dell&#39;abbigliamento può acquisire indirizzi e-mail da CRM a CDP in tempo reale, creare segmenti dai propri dati offline e inviare questi segmenti a [!DNL Google Customer Match] da utilizzare tra [!DNL Search] e [!DNL Shopping], ottimizzando le spese pubblicitarie.
+Un marchio di abbigliamento atletico vuole raggiungere i clienti esistenti attraverso [!DNL Google Search] e [!DNL Google Shopping] per personalizzare offerte e articoli in base ai loro acquisti precedenti e alla cronologia di navigazione. Il brand di abbigliamento può acquisire indirizzi e-mail dal proprio CRM all’Experience Platform, creare segmenti dai propri dati offline e inviare tali segmenti a [!DNL Google Customer Match] da utilizzare in [!DNL Search] e [!DNL Shopping], ottimizzando le spese pubblicitarie.
 
-### Caso di utilizzo n. 2
+### Caso d&#39;uso n. 2
 
-Un&#39;importante azienda tecnologica ha appena lanciato un nuovo telefono. Nel tentativo di promuovere questo nuovo modello di telefono, stanno cercando di sensibilizzare i clienti sulle nuove funzionalità e caratteristiche del telefono ai clienti che possiedono modelli precedenti dei loro telefoni.
+Un&#39;importante azienda tecnologica ha appena pubblicato un nuovo telefono. Nel tentativo di promuovere questo nuovo modello di telefono, stanno cercando di sensibilizzare i clienti sulle nuove caratteristiche e funzionalità del telefono ai clienti che possiedono i modelli precedenti dei loro telefoni.
 
-Per promuovere il rilascio, caricano gli indirizzi e-mail dal loro database CRM in CDP in tempo reale, utilizzando gli indirizzi e-mail come identificatori. I segmenti vengono creati in base ai clienti che possiedono vecchi modelli di telefono e li inviano a [!DNL Google Customer Match] in modo da poter essere indirizzati ai clienti attuali, ai clienti che possiedono modelli di telefono meno recenti e a clienti simili su [!DNL YouTube].
+Per promuovere il rilascio, caricano gli indirizzi e-mail dal loro database CRM in Experience Platform, utilizzando gli indirizzi e-mail come identificatori. I segmenti vengono creati in base ai clienti che possiedono modelli di telefono precedenti e inviati a [!DNL Google Customer Match] in modo che possano essere indirizzati ai clienti correnti, ai clienti che possiedono modelli di telefono precedenti e a clienti simili su [!DNL YouTube].
 
 ## Specifiche di destinazione {#destination-specs}
 
-### Gestione dei dati per [!DNL Google Customer Match] destinazioni {#data-governance}
+### Governance dei dati per le destinazioni [!DNL Google Customer Match] {#data-governance}
 
-Le destinazioni in CDP in tempo reale possono avere determinate regole e obblighi per i dati inviati o ricevuti dalla piattaforma di destinazione. L&#39;Utente è tenuto a comprendere i limiti e gli obblighi dei propri dati e come li utilizza in Adobe Experience Platform e nella piattaforma di destinazione. Adobe Experience Platform offre strumenti per la gestione dei dati che consentono di gestire alcuni di questi obblighi di utilizzo dei dati. [Scopri ](../../..//data-governance/labels/overview.md) di più sugli strumenti e sulle politiche per la gestione dei dati.
+Le destinazioni di cui all’Experience Platform possono avere determinate regole e obblighi per i dati inviati o ricevuti dalla piattaforma di destinazione. Sei responsabile di comprendere i limiti e gli obblighi dei tuoi dati e come li utilizzi in Adobe Experience Platform e nella piattaforma di destinazione. Adobe Experience Platform fornisce strumenti di governance dei dati per aiutarti a gestire alcuni di questi obblighi di utilizzo dei dati. [Ulteriori ](../../..//data-governance/labels/overview.md) informazioni sugli strumenti e i criteri di governance dei dati.
 
 ### Tipo di esportazione e identità {#export-type}
 
-**Esportazione**  segmento - vengono esportati tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono, ecc.) utilizzato nella destinazione [!DNL Google Customer Match].
+**Esportazione segmento** : stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono, ecc.) utilizzato nella destinazione [!DNL Google Customer Match].
 
-**Identità** : puoi utilizzare e-mail non utilizzate o con hash come ID cliente in Google
+**Identità** : puoi utilizzare e-mail non elaborate o con hash come ID cliente in Google.
 
-### [!DNL Google Customer Match] prerequisiti account  {#google-account-prerequisites}
+### [!DNL Google Customer Match] prerequisiti dell’account  {#google-account-prerequisites}
 
-Prima di impostare una destinazione [!DNL Google Customer Match] in CDP in tempo reale, accertatevi di leggere e aderire ai criteri Google per l&#39;utilizzo di [!DNL Customer Match], descritti nella [documentazione di supporto di Google](https://support.google.com/google-ads/answer/6299717).
+Prima di configurare una destinazione [!DNL Google Customer Match] in Experience Platform, assicurati di leggere e rispettare i criteri di Google per l&#39;utilizzo di [!DNL Customer Match], descritti nella [documentazione di supporto di Google](https://support.google.com/google-ads/answer/6299717).
 
-### elenco consentiti  {#allowlist}
+### Consenti elenco {#allowlist}
 
 >[!NOTE]
 >
->È obbligatorio aggiungere al elenco consentiti  Google prima di configurare la prima [!DNL Google Customer Match] destinazione in CDP in tempo reale. Prima di creare una destinazione, verificare che il processo di elenco consentiti  descritto di seguito sia stato completato da Google.
+>È obbligatorio da aggiungere all’elenco Consentiti di Google prima di configurare la tua prima destinazione [!DNL Google Customer Match] nell’Experience Platform. Prima di creare una destinazione, assicurati che Google abbia completato il processo di elenco Consentiti descritto di seguito.
 
-Prima di creare la destinazione [!DNL Google Customer Match] in CDP in tempo reale, è necessario contattare Google e seguire le istruzioni  elenco consentiti in [Usa partner di corrispondenza clienti per caricare i dati](https://support.google.com/google-ads/answer/7361372?hl=en&amp;ref_topic=6296507) nella documentazione di Google.
+Prima di creare la destinazione [!DNL Google Customer Match] nell&#39;Experience Platform, è necessario contattare Google e seguire le istruzioni dell&#39;elenco Consentiti in [Utilizza i partner Customer Match per caricare i tuoi dati](https://support.google.com/google-ads/answer/7361372?hl=en&amp;ref_topic=6296507) nella documentazione di Google.
 
-Inoltre, è disponibile un secondo elenco consentiti di Google  a cui è necessario aggiungere il proprio account se si intende caricare i dati utilizzando l&#39; [User_ID](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id) di Google. Contattate il vostro account manager Google per essere certi di essere aggiunti ai elenchi consentiti .
+Inoltre, esiste un secondo elenco Consentiti di Google a cui devi aggiungere il tuo account se intendi caricare dati utilizzando Google [User_ID](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id). Contatta il tuo account manager Google per assicurarti di essere aggiunto agli elenchi consentiti.
 
 ### Requisiti di corrispondenza ID {#id-matching-requirements}
 
-[!DNL Google] richiede che non siano inviate informazioni personali (PII) in modo chiaro. Di conseguenza, è possibile disattivare gli identificatori [!DNL Google Customer Match] con hash *con*, ad esempio indirizzi e-mail o numeri di telefono.
+[!DNL Google] richiede che non siano inviate informazioni personali identificabili (PII) in modo chiaro. Pertanto, i tipi di pubblico attivati in [!DNL Google Customer Match] possono essere contrassegnati da identificatori *con hash* come indirizzi e-mail o numeri di telefono.
 
 A seconda del tipo di ID che trasferisci in Adobe Experience Platform, devi soddisfare i requisiti corrispondenti.
 
@@ -67,32 +67,32 @@ A seconda del tipo di ID che trasferisci in Adobe Experience Platform, devi sodd
 
 Esistono due metodi per attivare i numeri di telefono in [!DNL Google Customer Match]:
 
-* **Inserimento di numeri** di telefono non elaborati: è possibile inserire i numeri di telefono non elaborati nel  [!DNL E.164] formato  [!DNL Platform], che verranno automaticamente crittografati al momento dell&#39;attivazione. Se scegliete questa opzione, accertatevi di inserire sempre i numeri di telefono non elaborati nello spazio dei nomi `Phone_E.164`.
-* **Inserimento di numeri** di telefono con hash: è possibile pre-hash i numeri di telefono prima di inviarli in  [!DNL Platform]. Se scegliete questa opzione, accertatevi di inserire sempre i numeri di telefono con hash nello spazio dei nomi `PHONE_SHA256_E.164`.
+* **Inserimento di numeri** di telefono non elaborati: è possibile acquisire i numeri di telefono non elaborati in  [!DNL E.164] formato in  [!DNL Platform], che verrà automaticamente hashing al momento dell’attivazione. Se scegli questa opzione, accertati di inserire sempre i numeri di telefono non elaborati nello spazio dei nomi `Phone_E.164` .
+* **Inserimento di numeri** di telefono con hash: è possibile pre-hash i numeri di telefono prima dell’inserimento in  [!DNL Platform]. Se scegli questa opzione, accertati di inserire sempre i numeri di telefono con hash nello spazio dei nomi `PHONE_SHA256_E.164` .
 
 >[!NOTE]
 >
 >I numeri di telefono acquisiti nello spazio dei nomi `Phone` non possono essere attivati in [!DNL Google Customer Match].
 
-#### Requisiti di hashing e-mail {#hashing-requirements}
+#### Requisiti di hash e-mail {#hashing-requirements}
 
-Potete scegliere di hash gli indirizzi e-mail prima di inviarli in Adobe Experience Platform, oppure potete scegliere di lavorare con gli indirizzi e-mail in  Experience Platform e ottenere l&#39;hash del nostro algoritmo al momento dell&#39;attivazione.
+Puoi scegliere di aggiungere hash agli indirizzi e-mail prima di inviarli in Adobe Experience Platform, oppure puoi scegliere di lavorare con gli indirizzi e-mail in modo chiaro nell’Experience Platform e ottenere l’hash dal nostro algoritmo all’attivazione.
 
-Per ulteriori informazioni sui requisiti di hashing di Google e altre restrizioni all&#39;attivazione, consulta le sezioni seguenti nella documentazione di Google:
+Per ulteriori informazioni sui requisiti di hashing di Google e su altre restrizioni all’attivazione, consulta le sezioni seguenti nella documentazione di Google:
 
 * [[!DNL Customer Match] con indirizzo e-mail, indirizzo o ID utente](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id)
 * [[!DNL Customer Match] considerazioni](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_considerations)
-* [Corrispondenza cliente con numero di telefono](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_phone_number)
+* [Customer Match con numero di telefono](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_phone_number)
 * [Corrispondenza cliente con ID dispositivo mobile](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_mobile_device_ids)
 
 
-Per informazioni sull&#39;acquisizione di indirizzi e-mail in  Experience Platform, vedere la [panoramica sull&#39;assimilazione batch](../../../ingestion/batch-ingestion/overview.md) e la [panoramica sull&#39;assimilazione in streaming](../../../ingestion/streaming-ingestion/overview.md).
+Per informazioni sull’acquisizione degli indirizzi e-mail in Experience Platform, consulta la [panoramica sull’acquisizione batch](../../../ingestion/batch-ingestion/overview.md) e la [panoramica sull’acquisizione in streaming](../../../ingestion/streaming-ingestion/overview.md).
 
-Se selezionate di hash gli indirizzi e-mail, accertatevi di soddisfare i requisiti di Google, descritti nei collegamenti sopra.
+Se scegli di aggiungere l’hash agli indirizzi e-mail da solo, assicurati di soddisfare i requisiti di Google, descritti nei collegamenti di cui sopra.
 
 #### Utilizzo di spazi dei nomi personalizzati {#custom-namespaces}
 
-Prima di poter utilizzare lo spazio dei nomi `User_ID` per inviare dati a Google, assicurarsi di sincronizzare i propri identificatori utilizzando [!DNL gTag]. Per informazioni dettagliate, vedere la [documentazione ufficiale](https://support.google.com/google-ads/answer/9199250).
+Prima di poter utilizzare lo spazio dei nomi `User_ID` per inviare dati a Google, assicurati di sincronizzare i tuoi identificatori utilizzando [!DNL gTag]. Per informazioni dettagliate, consulta la [documentazione ufficiale di Google](https://support.google.com/google-ads/answer/9199250) .
 
 <!-- Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
 
@@ -101,52 +101,52 @@ Attribute source data is not automatically hashed. When your source field contai
 
 ## Connetti alla destinazione {#connect-destination}
 
-In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scorrere fino alla categoria **[!UICONTROL Advertising]**. Selezionare [!DNL Google Customer Match], quindi selezionare **[!UICONTROL Configure]**.
+In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scorri fino alla categoria **[!UICONTROL Advertising]** . Selezionare [!DNL Google Customer Match], quindi selezionare **[!UICONTROL Configure]**.
 
-![Connessione alla destinazione di corrispondenza cliente Google](../../assets/catalog/advertising/google-customer-match/connect.png)
-
->[!NOTE]
->
->Se esiste già una connessione con questa destinazione, è possibile visualizzare un pulsante **[!UICONTROL Activate]** sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra **[!UICONTROL Activate]** e **[!UICONTROL Configure]**, fare riferimento alla sezione [Catalog](../../ui/destinations-workspace.md#catalog) della documentazione relativa all&#39;area di lavoro di destinazione.
-
-Nel passaggio **Account**, se in precedenza è stata impostata una connessione alla destinazione [!DNL Google Customer Match], selezionare **[!UICONTROL Existing Account]** e selezionare la connessione esistente. In alternativa, è possibile selezionare **[!UICONTROL New Account]** per impostare una nuova connessione a [!DNL Google Customer Match]. Selezionare **[!UICONTROL Connect to destination]** per accedere e collegare Adobe Experience Cloud al proprio account [!DNL Google Ad].
+![Connessione alla destinazione Customer Match di Google](../../assets/catalog/advertising/google-customer-match/connect.png)
 
 >[!NOTE]
 >
->CDP in tempo reale supporta la convalida delle credenziali nel processo di autenticazione e visualizza un messaggio di errore se vengono immesse credenziali non corrette nell&#39;account [!DNL Google Ad]. In questo modo si evita di completare il flusso di lavoro con credenziali non corrette.
+>Se esiste già una connessione con questa destinazione, è possibile visualizzare un pulsante **[!UICONTROL Activate]** sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra **[!UICONTROL Activate]** e **[!UICONTROL Configure]**, consulta la sezione [Catalogo](../../ui/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
 
-![Connessione alla destinazione di corrispondenza cliente Google - passaggio di autenticazione](../../assets/catalog/advertising/google-customer-match/connection.png)
+Nel passaggio **Account**, se in precedenza hai impostato una connessione alla destinazione [!DNL Google Customer Match], seleziona **[!UICONTROL Existing Account]** e seleziona la connessione esistente. In alternativa, è possibile selezionare **[!UICONTROL New Account]** per impostare una nuova connessione a [!DNL Google Customer Match]. Seleziona **[!UICONTROL Connect to destination]** per accedere e collegare Adobe Experience Cloud al tuo account [!DNL Google Ad].
 
-Una volta confermate le credenziali e che Adobe Experience Cloud è connesso al tuo account Google, puoi selezionare **[!UICONTROL Next]** per passare al passaggio **[!UICONTROL Setup]**.
+>[!NOTE]
+>
+>Experience Platform supporta la convalida delle credenziali nel processo di autenticazione e visualizza un messaggio di errore se immetti credenziali errate nel tuo account [!DNL Google Ad]. In questo modo non completa il flusso di lavoro con credenziali errate.
+
+![Connessione alla destinazione Customer Match di Google - passaggio di autenticazione](../../assets/catalog/advertising/google-customer-match/connection.png)
+
+Una volta confermate le credenziali e quando Adobe Experience Cloud è connesso al tuo account Google, puoi selezionare **[!UICONTROL Next]** per procedere al passaggio **[!UICONTROL Authentication]** .
 
 ![Credenziali confermate](../../assets/catalog/advertising/google-customer-match/connection-success.png)
 
-Nel passaggio **[!UICONTROL Authentication]**, immettete un [!UICONTROL Name] e un [!UICONTROL Description] per il flusso di attivazione e riempite Google con il [!UICONTROL Account ID].
+Nel passaggio **[!UICONTROL Authentication]** , immetti un **[!UICONTROL Name]** e un **[!UICONTROL Description]** per il flusso di attivazione e compila il tuo Google **[!UICONTROL Account ID]**.
 
-Inoltre in questo passaggio, è possibile selezionare qualsiasi **[!UICONTROL Marketing action]** da applicare a questa destinazione. Le azioni di marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi selezionare  azioni di marketing definite dal Adobe o creare azioni di marketing personalizzate. Per ulteriori informazioni sulle azioni di marketing, vedere la pagina [Governance dei dati in CDP in tempo reale](../../../rtcdp/privacy/data-governance-overview.md#destinations). Per informazioni sulle singole azioni di marketing definite dal Adobe , consultate la [Panoramica sulle politiche di utilizzo dei dati](../../../data-governance/policies/overview.md#core-actions).
+In questo passaggio, puoi anche selezionare qualsiasi **[!UICONTROL Marketing actions]** da applicare a questa destinazione. Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite da Adobi o creare una tua azione di marketing. Per ulteriori informazioni sulle azioni di marketing, consulta la [Panoramica sui criteri di utilizzo dei dati](../../../data-governance/policies/overview.md).
 
-Selezionare **[!UICONTROL Create Destination]** dopo aver compilato i campi riportati sopra.
+Selezionare **[!UICONTROL Create Destination]** dopo aver compilato i campi precedenti.
 
 >[!IMPORTANT]
 >
-> * L&#39;azione di marketing **[!UICONTROL Combine with PII]** è selezionata per impostazione predefinita per la destinazione [!DNL Google Customer Match] e non può essere rimossa.
+> * L’azione di marketing **[!UICONTROL Combine with PII]** è selezionata per impostazione predefinita per la destinazione [!DNL Google Customer Match] e non può essere rimossa.
 > * Per le destinazioni [!DNL Google Customer Match]. **[!UICONTROL Account ID]** è l&#39;ID cliente con Google. Il formato dell&#39;ID è xxx-xxx-xxxx.
 
 
-![Corrispondenza cliente Google Connect - passaggio di autenticazione](../../assets/catalog/advertising/google-customer-match/authentication.png)
+![Connetti Customer Match di Google - passaggio di autenticazione](../../assets/catalog/advertising/google-customer-match/authentication.png)
 
-La destinazione è stata creata. È possibile selezionare **[!UICONTROL Save & Exit]** se si desidera attivare i segmenti in un secondo momento oppure selezionare **[!UICONTROL Next]** per continuare il flusso di lavoro e selezionare i segmenti da attivare. In entrambi i casi, per il resto del flusso di lavoro, vedere la sezione successiva, [Attivare i segmenti su [!DNL Google Customer Match]](#activate-segments).
+La destinazione viene ora creata. Puoi selezionare **[!UICONTROL Save & Exit]** se desideri attivare i segmenti in un secondo momento oppure puoi selezionare **[!UICONTROL Next]** per continuare il flusso di lavoro e selezionare i segmenti da attivare. In entrambi i casi, consulta la sezione successiva [Attivare i segmenti su [!DNL Google Customer Match]](#activate-segments), per il resto del flusso di lavoro.
 
-## Attivare i segmenti su [!DNL Google Customer Match] {#activate-segments}
+## Attiva i segmenti in [!DNL Google Customer Match] {#activate-segments}
 
-Per istruzioni su come attivare i segmenti in [!DNL Google Customer Match], vedere [Attivare i dati sulle destinazioni](../../ui/activate-destinations.md).
+Per istruzioni su come attivare i segmenti su [!DNL Google Customer Match], consulta [Attivare i dati sulle destinazioni](../../ui/activate-destinations.md).
 
 
-Nel passaggio **[!UICONTROL Segment schedule]**, è necessario fornire i segmenti [!UICONTROL App ID] durante l&#39;invio di [!DNL IDFA] o [!DNL GAID] a [!DNL Google Customer Match].
+Nel passaggio **[!UICONTROL Segment schedule]** , devi fornire [!UICONTROL App ID] quando invii segmenti [!DNL IDFA] o [!DNL GAID] a [!DNL Google Customer Match].
 
-![ID app di corrispondenza cliente Google](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
+![ID app di Google Customer Match](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-Per informazioni dettagliate su come trovare la [!DNL App ID], consultare la [documentazione ufficiale](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid).
+Per informazioni su come trovare il [!DNL App ID], consulta la [documentazione ufficiale di Google](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid).
 
 
 
@@ -195,11 +195,11 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 ![confirm-selection](../../assets/catalog/advertising/google-customer-match/review.png) -->
 
-## Verificare che l&#39;attivazione del segmento sia stata eseguita correttamente{#verify-activation}
+## Verifica che l&#39;attivazione del segmento sia avvenuta correttamente {#verify-activation}
 
-Dopo aver completato il flusso di attivazione, passate all&#39;account **[!UICONTROL Google Ads]**. I segmenti attivati verranno ora visualizzati nel tuo account Google come elenchi di clienti. A seconda delle dimensioni del segmento, alcuni tipi di pubblico non verranno popolati a meno che non ci siano più di 100 utenti attivi da distribuire.
+Dopo aver completato il flusso di attivazione, passa al tuo account **[!UICONTROL Google Ads]** . I segmenti attivati verranno ora visualizzati nel tuo account Google come elenchi di clienti. Tieni presente che a seconda della dimensione del segmento, alcuni tipi di pubblico non verranno compilati a meno che non vi siano più di 100 utenti attivi da servire.
 
-Quando si esegue la mappatura di un segmento agli ID [!DNL IDFA] e [!DNL GAID] mobili, [!DNL Google Customer Match] crea un segmento separato per ogni mappatura ID. Il tuo account [!DNL Google Ads] mostrerà due segmenti diversi, uno per il [!DNL IDFA] e uno per il mapping [!DNL GAID].
+Quando mappi un segmento con gli ID mobili [!DNL IDFA] e [!DNL GAID] , [!DNL Google Customer Match] crea un segmento separato per ogni mappatura ID. Il tuo account [!DNL Google Ads] mostrerà due segmenti diversi, uno per il [!DNL IDFA] e uno per la mappatura [!DNL GAID].
 
 ## Risorse aggiuntive {#additional-resources}
 
