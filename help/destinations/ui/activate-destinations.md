@@ -3,12 +3,12 @@ keywords: attivare destinazione;attivare destinazioni;attivare dati
 title: Attivare profili e segmenti in una destinazione
 type: Tutorial
 seo-title: Attivare profili e segmenti in una destinazione
-description: Attiva i dati disponibili in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
-seo-description: Attiva i dati disponibili in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
+description: Attiva i dati in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
+seo-description: Attiva i dati in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
 translation-type: tm+mt
-source-git-commit: 6c8bf05285dcfc3e631ae5a41dcf40f90217320a
+source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
 workflow-type: tm+mt
-source-wordcount: '2101'
+source-wordcount: '2070'
 ht-degree: 0%
 
 ---
@@ -30,19 +30,11 @@ I passaggi nel flusso di lavoro di attivazione variano leggermente tra i tipi di
 
 Si applica a: Tutte le destinazioni
 
-Nell’interfaccia utente di Adobe Experience Platform, passa a **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** e seleziona la destinazione in cui desideri attivare i segmenti.
+Nell’interfaccia utente di Adobe Experience Platform, passa a **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** e premi il pulsante **[!UICONTROL Activate]** corrispondente alla destinazione in cui desideri attivare i segmenti, come illustrato nell’immagine seguente.
 
-![naviga a destinazione](../assets/ui/activate-destinations/connect.png)
+![attiva nella destinazione](../assets/ui/activate-destinations/browse-tab-activate.png)
 
-Seleziona il nome della destinazione per passare al flusso di lavoro di attivazione.
-
-![flusso di attivazione](../assets/ui/activate-destinations/activate-flow.png)
-
->[!NOTE]
->
->Se esiste già un flusso di lavoro di attivazione per una destinazione, puoi vedere i segmenti attualmente attivati nella destinazione. Seleziona **[!UICONTROL Edit activation]** nella barra a destra e segui i passaggi riportati di seguito per modificare i dettagli di attivazione.
-
-Dopo aver selezionato una destinazione, seleziona **[!UICONTROL Activate]**.
+Segui i passaggi della sezione successiva per selezionare i segmenti da attivare.
 
 ### [!UICONTROL Select Segments] step  {#select-segments}
 
