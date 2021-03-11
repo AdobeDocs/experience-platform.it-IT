@@ -4,7 +4,7 @@ title: Panoramica dell’area di lavoro Destinazioni
 description: 'L’area di lavoro Destinazioni è composta da quattro sezioni: Catalogo, Sfoglia, Account e Vista sistema, descritte nelle sezioni seguenti.'
 seo-description: In Adobe Experience Platform, seleziona Destinazioni dalla barra di navigazione a sinistra per accedere all’area di lavoro delle destinazioni.
 translation-type: tm+mt
-source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
+source-git-commit: 37b0ec0e04c45cb065eca9d262249016e80655ef
 workflow-type: tm+mt
 source-wordcount: '947'
 ht-degree: 0%
@@ -117,6 +117,6 @@ La scheda **[!UICONTROL System View]** visualizza una rappresentazione grafica d
 
 ![Flussi di dati1](../assets/ui/workspace/data-flows1.png)
 
-Seleziona una delle destinazioni visualizzate sulla pagina e premi **[!UICONTROL View flows]** per visualizzare informazioni su tutte le connessioni impostate per ciascuna destinazione.
+Seleziona una delle destinazioni visualizzate sulla pagina e fai clic su **[!UICONTROL View flows]** per visualizzare informazioni su tutte le connessioni configurate per ciascuna destinazione.
 
 ![Flussi di dati2](../assets/ui/workspace/data-flows2.png)
