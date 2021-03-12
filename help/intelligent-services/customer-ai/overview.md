@@ -1,8 +1,8 @@
 ---
-keywords: ' Experience Platform;panoramica;cliente ai;argomenti più comuni;customer ai overview'
+keywords: Experience Platform;panoramica;customer ai;argomenti popolari;panoramica customer ai
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Panoramica di Customer AI
-topic: Panoramica dell'AI del cliente
+topic: Panoramica di Customer AI
 description: Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala. Per poter usufruire di queste funzioni non occorre trasformare le esigenze aziendali in problematiche di machine learning né scegliere un algoritmo, e non sono richieste formazione o implementazioni specifiche.
 landing-page-description: Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala.
 translation-type: tm+mt
@@ -16,39 +16,39 @@ ht-degree: 18%
 
 # Panoramica di Customer AI
 
-Customer AI , come parte di Intelligent Services, fornisce agli esperti di marketing la possibilità di generare previsioni sui clienti a livello individuale con spiegazioni.
+Customer AI , come parte di Intelligent Services, fornisce agli addetti al marketing il potere di generare previsioni sui clienti a livello individuale con spiegazioni.
 
-Con l&#39;aiuto di fattori influenti, l&#39;intelligenza artificiale del cliente può dirvi cosa è probabile fare e perché. Inoltre, gli esperti di marketing possono trarre vantaggio dalle previsioni e dalle informazioni dell&#39;AI cliente per personalizzare l&#39;esperienza dei clienti, servendo le offerte e i messaggi più appropriati.
+Con l’aiuto di fattori influenti, Customer AI può dirvi cosa è probabile che faccia un cliente e perché. Inoltre, gli esperti di marketing possono trarre vantaggio dalle previsioni e dalle informazioni di Customer AI per personalizzare le esperienze dei clienti servendo le offerte e i messaggi più appropriati.
 
-## Informazioni sull&#39;AI del cliente
+## Informazioni su Customer AI
 
 Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala. Per poter usufruire di queste funzioni non occorre trasformare le esigenze aziendali in problematiche di machine learning né scegliere un algoritmo, e non sono richieste formazione o implementazioni specifiche.
 
-L&#39;AI del cliente è stata creata per:
+Customer AI è progettato per:
 
-- Fornisci modelli di propensione clienti ad alta precisione per segmentazione e targeting più avanzati.
-- Aiuta a comprendere i fattori influenti e la probabilità dietro determinati comportamenti dei clienti.
-- Fornisci opzioni personalizzabili per i casi di utilizzo e i dati univoci della tua azienda.
-- Migliora il profilo cliente in tempo reale con punteggi di propensione del cliente come il churn e la conversione.
-- Migliorate i profili dei clienti con fattori influenti per i punteggi di propensione.
-- Crea segmenti di clienti basati su fattori influenti e punteggi di propensione.
+- Fornisci modelli di propensione clienti ad alta precisione per segmentazione e targeting più rigorosi.
+- Aiuta a comprendere i fattori influenti e la probabilità dietro alcuni comportamenti dei clienti.
+- Fornisci opzioni personalizzabili per i casi d’uso e i dati unici della tua azienda.
+- Migliora il Profilo del cliente in tempo reale con punteggi di propensione del cliente come abbandono e conversione.
+- Migliora i profili dei clienti con fattori influenti per i punteggi di propensione.
+- Crea segmenti di clienti in base a fattori influenti e punteggi di propensione.
 
-Il cliente non è costruito per:
+Il cliente non è costruito in:
 
-- L&#39;AI del cliente non deve essere utilizzata per prevedere un prezzo dinamico, o il punto in cui il cliente effettuerà un acquisto.
-- L&#39;AI del cliente non è in grado di determinare se l&#39;offerta renda più probabile l&#39;acquisto di un articolo da parte del cliente. Anche se potete decidere di inviare offerte di sconto basate sui punteggi di propensione, non è necessariamente il modo migliore per convertire tali clienti.
-- L&#39;AI del cliente non è uno strumento di raccomandazione del prodotto. Se disponete di migliaia di SKU, non utilizzate l&#39;AI del cliente come proxy per una soluzione di raccomandazioni di prodotto reale come [!DNL Adobe Target].
-- L&#39;AI del cliente non può prevedere in quale fase del Percorso di acquisto il cliente si trovi, ad esempio, se si trova nelle fasi &quot;consapevolezza&quot;, &quot;considerazione&quot;, &quot;acquisto&quot; o &quot;conservazione&quot;.
-- Non utilizzate l&#39;API del cliente per determinare i clienti che probabilmente acquisteranno un prodotto per il lancio in futuro. Ciò richiede che in passato siano presenti alcuni eventi di successo affinché l&#39;AI del cliente possa addestrare con successo l&#39;algoritmo di machine learning sui dati.
+- Customer AI non deve essere utilizzato per prevedere un prezzo dinamico o il punto di prezzo al quale il cliente effettuerà un acquisto.
+- Customer AI non è in grado di determinare se l’offerta rende più probabile l’acquisto di un articolo da parte del cliente. Anche se puoi decidere di inviare offerte di sconto basate sui punteggi di propensione, non è necessariamente il modo migliore per convertire quei clienti.
+- Customer AI non è uno strumento di consigli per i prodotti. Se disponi di migliaia di SKU, non utilizzare Customer AI come proxy per una soluzione di consigli di prodotto reale come [!DNL Adobe Target].
+- Customer AI non può prevedere in quale fase del Percorso di acquisto si trova il cliente, ad esempio, se si trovano nelle fasi di &quot;consapevolezza&quot;, &quot;considerazione&quot;, &quot;acquisto&quot; o &quot;conservazione&quot;.
+- Non utilizzare Customer AI per determinare i clienti che probabilmente acquisteranno un prodotto da lanciare in futuro. Questo richiede che determinati eventi di successo siano presenti in passato affinché Customer AI possa addestrare con successo l’algoritmo di apprendimento automatico sui dati.
 
-Il seguente video è stato progettato per supportare la comprensione dell&#39;API cliente.
+Il seguente video è progettato per supportare la tua comprensione di Customer AI.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
 
 ## Come funziona?
 
-L&#39;AI del cliente funziona analizzando i dati esistenti relativi all&#39;evento dell&#39;esperienza del consumatore per prevedere i punteggi di propensione al cambiamento o alla conversione.  Adobe si rende conto che la definizione di churn e conversione non è uniforme in tutti i casi di utilizzo e per questo motivo, è possibile definire obiettivi target personalizzati come un insieme di condizioni. Puoi configurare l&#39;obiettivo previsto purché l&#39;evento di interesse sia presente nei dati dell&#39;evento Consumer Experience Event in input.
+Customer AI funziona analizzando i dati esistenti dell’evento esperienza del consumatore per prevedere i punteggi di propensione di abbandono o conversione. L’Adobe si rende conto che la definizione di abbandono e conversione non è uniforme in tutti i casi d’uso e, per questo motivo, puoi definire obiettivi di destinazione personalizzati come un insieme di condizioni. Puoi configurare l’obiettivo previsto purché l’evento di interesse sia presente nei dati dell’evento di esperienza del consumatore di input.
 
 ## Passaggi successivi
 
-Per iniziare, seguire la guida [guida introduttiva](./getting-started.md). Questa guida illustra come impostare tutti i prerequisiti richiesti per l&#39;AI del cliente. Se disponi già di tutte le tue credenziali e i tuoi dati, visita [la sezione dedicata alla configurazione di un&#39;istanza AI del cliente](./user-guide/configure.md). Fornisce i passaggi per utilizzare l&#39;intelligenza artificiale del cliente.
+Per iniziare, segui la guida [guida introduttiva](./getting-started.md) . Questa guida descrive come impostare tutti i prerequisiti richiesti per Customer AI. Se disponi già di tutte le tue credenziali e i tuoi dati, visita [configurazione di un&#39;istanza di Customer AI](./user-guide/configure.md). Fornisce i passaggi per l’utilizzo di Customer AI.
