@@ -1,39 +1,39 @@
 ---
-keywords: Experience Platform ;interfaccia utente;interfaccia utente;personalizzazione;dashboard di utilizzo licenza;dashboard;utilizzo licenza;adesione;consumo
-title: Pannello Utilizzo licenza
-description: Adobe Experience Platform fornisce una dashboard tramite la quale è possibile visualizzare informazioni importanti sull'utilizzo della licenza da parte dell'azienda.
-topic: guide
-type: Documentation
+keywords: Experience Platform;interfaccia utente;interfaccia utente;personalizzazione;dashboard utilizzo licenza;dashboard;utilizzo licenza;adesione;consumo
+title: Dashboard di utilizzo della licenza
+description: Adobe Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sull’utilizzo delle licenze dell’organizzazione.
+topic: guida
+type: Documentazione
 translation-type: tm+mt
-source-git-commit: 084aaa315f694d696abee7f078be3a121111f6cc
+source-git-commit: 3908011b31dd24b13a58a2bc5ad5137dd3af5f63
 workflow-type: tm+mt
-source-wordcount: '571'
-ht-degree: 1%
+source-wordcount: '630'
+ht-degree: 3%
 
 ---
 
 
-# (Beta) [!UICONTROL License usage] dashboard {#license-usage-dashboard}
+# (Beta) Dashboard di utilizzo della licenza {#license-usage-dashboard}
 
 >[!IMPORTANT]
 >
 >La funzionalità del dashboard descritta in questo documento è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
 
-L&#39;interfaccia utente di Adobe Experience Platform (interfaccia utente) fornisce una dashboard attraverso la quale è possibile visualizzare informazioni importanti sull&#39;utilizzo della licenza da parte dell&#39;azienda, come acquisito durante un&#39;istantanea giornaliera. Questa guida descrive come accedere e utilizzare il dashboard di utilizzo della licenza nell’interfaccia utente e fornisce ulteriori informazioni sulle visualizzazioni visualizzate nel dashboard.
+L’interfaccia utente di Adobe Experience Platform fornisce un dashboard attraverso il quale è possibile visualizzare informazioni importanti sull’utilizzo delle licenze dell’organizzazione, acquisite durante un’istantanea giornaliera. Questa guida illustra come accedere e utilizzare il dashboard per l’utilizzo delle licenze nell’interfaccia utente e fornisce ulteriori informazioni sulle visualizzazioni visualizzate nel dashboard.
 
-Per una panoramica generale dell&#39;interfaccia utente della piattaforma, visitare la [Guida all&#39;interfaccia utente del Experience Platform ](../../landing/ui-guide.md).
+Per una panoramica generale dell’interfaccia utente di Platform, visita la [guida all’interfaccia utente di Experience Platform](../../landing/ui-guide.md).
 
-## Dati del dashboard di utilizzo licenza
+## Dati del dashboard per l’utilizzo della licenza
 
-Nel dashboard di utilizzo della licenza viene visualizzata un&#39;istantanea dei dati relativi alla licenza dell&#39;organizzazione per  Experience Platform. I dati nel dashboard vengono visualizzati esattamente come visualizzati nel momento in cui è stata scattata l&#39;istantanea. In altre parole, l&#39;istantanea non è un&#39;approssimazione o un esempio dei dati e il dashboard non viene aggiornato in tempo reale.
+Nel dashboard sull’utilizzo delle licenze viene visualizzata un’istantanea dei dati relativi alle licenze dell’organizzazione, ad Experience Platform. I dati nel dashboard vengono visualizzati esattamente come vengono visualizzati nel momento specifico in cui è stata scattata l&#39;istantanea. In altre parole, lo snapshot non è un&#39;approssimazione o un esempio dei dati e il dashboard non viene aggiornato in tempo reale.
 
 >[!NOTE]
 >
->Eventuali modifiche o aggiornamenti apportati ai dati dopo l&#39;acquisizione dell&#39;istantanea non verranno visualizzati nel dashboard fino all&#39;acquisizione dell&#39;istantanea successiva.
+>Eventuali modifiche o aggiornamenti apportati ai dati dall&#39;acquisizione dello snapshot non verranno visualizzati nel dashboard fino all&#39;acquisizione dello snapshot successivo.
 
 ## Esplorazione del dashboard di utilizzo della licenza
 
-Per passare al dashboard di utilizzo della licenza nell&#39;interfaccia utente della piattaforma, selezionate **[!UICONTROL License usage]** nella barra a sinistra. Si apre con la scheda **[!UICONTROL Overview]** che mostra il dashboard.
+Per passare al dashboard dell’utilizzo della licenza nell’interfaccia utente di Platform, seleziona **[!UICONTROL License usage]** nella barra a sinistra. Viene visualizzata la scheda **[!UICONTROL Overview]** che mostra il dashboard.
 
 ![](../images/license-usage/dashboard-overview.png)
 
@@ -43,36 +43,45 @@ Per scegliere una sandbox da visualizzare nel dashboard, selezionare [!UICONTROL
 
 >[!NOTE]
 >
->La generazione di rapporti sui consumi per le sandbox è cumulativa per tutte le sandbox dello stesso tipo. In altre parole, selezionando [!UICONTROL Production] o [!UICONTROL Development] si verificherà un rapporto su tutte le sandbox di produzione o di sviluppo, rispettivamente.
+>La generazione di rapporti sui consumi per le sandbox è cumulativa per tutte le sandbox dello stesso tipo. In altre parole, selezionando [!UICONTROL Production] o [!UICONTROL Development] vengono forniti rapporti di consumo per tutte le sandbox di produzione o di sviluppo, rispettivamente.
 
 ![](../images/license-usage/select-sandbox.png)
 
 ### Selezionare un intervallo di date
 
-Dopo aver selezionato una sandbox, potete utilizzare il menu a discesa dell&#39;intervallo di date per selezionare il periodo di tempo da visualizzare nel dashboard. Sono disponibili tre opzioni: [!UICONTROL Last 30 days], [!UICONTROL Last 90 days] e [!UICONTROL Last 12 months]. Per impostazione predefinita, sono selezionati gli ultimi 30 giorni.
+Dopo aver selezionato una sandbox, puoi utilizzare il menu a discesa dell’intervallo di date per selezionare il periodo di tempo da visualizzare nel dashboard. Sono disponibili tre opzioni: [!UICONTROL Last 30 days], [!UICONTROL Last 90 days] e [!UICONTROL Last 12 months]. Per impostazione predefinita, sono selezionati gli ultimi 30 giorni.
 
 ![](../images/license-usage/select-date-range.png)
 
-### Widget e metriche
+## Widget
 
-Il dashboard di utilizzo della licenza è composto da widget, che mostrano metriche di sola lettura che forniscono informazioni importanti sull&#39;utilizzo della licenza da parte dell&#39;azienda. Per ulteriori informazioni su questi widget, consulta la sezione relativa ai widget disponibili in questa guida.
+Il dashboard per l&#39;utilizzo delle licenze è composto da widget che visualizzano metriche di sola lettura che forniscono informazioni importanti sull&#39;utilizzo delle licenze dell&#39;organizzazione. Le metriche visibili dipendono dalle licenze specifiche della tua organizzazione (consulta la sezione [metriche disponibili](#available-metrics) per i dettagli).
 
-## widget disponibili {#available-widgets}
+Ogni widget visualizza un grafico a linee che confronta i numeri effettivi per la tua organizzazione con il totale disponibile con le licenze della tua organizzazione e fornisce una percentuale dell&#39;utilizzo totale.
 
- Experience Platform attualmente fornisce un widget che è possibile utilizzare per visualizzare l&#39;utilizzo della licenza, con più widget che verranno rilasciati presto.
+![](../images/license-usage/widgets.png)
 
-### [!UICONTROL Addressable audiences] {#addressable-audiences}
+## Metriche disponibili
 
-Il widget **[!UICONTROL Addressable audiences]** visualizza il numero totale di profili uniti nell&#39;archivio dati Profilo, dopo l&#39;applicazione di un criterio di unione generato dal sistema per combinare frammenti di profilo da tutti i set di dati correnti utilizzando un algoritmo grafico deterministico (privato).
+Sono attualmente disponibili quattro metriche nel dashboard di utilizzo della licenza:
 
-Per ulteriori informazioni sui frammenti e i profili uniti, consultare la sezione *Frammenti di profilo rispetto ai profili uniti* della [Panoramica di profilo](../../profile/home.md).
+* [!UICONTROL Addressable Audience] (misurato in numero di profili)
+* [!UICONTROL Average profile richness]
+* [!UICONTROL Total consumed storage]
+* [!UICONTROL Data scanned per segmentation ratio]
 
->[!NOTE]
->
->Il criterio di unione utilizzato per calcolare questa metrica viene generato da  Experience Platform e non può essere modificato, né può essere selezionato un altro criterio di unione. Questo criterio di unione generato dal sistema non equivale al criterio di unione predefinito utilizzato per calcolare [!UICONTROL Audience size] nel dashboard di [!DNL Profile], pertanto è improbabile che il numero di audience nei dashboard [!UICONTROL License usage] e [!DNL Profile] sia esattamente lo stesso.
+La definizione di ciascuna di queste metriche varia a seconda della licenza acquistata dalla tua organizzazione. Per le definizioni dettagliate di ciascuna metrica, fare riferimento alla documentazione appropriata relativa alla descrizione del prodotto:
 
-![](../images/license-usage/addressable-audiences.png)
+| Licenza | Descrizione del prodotto |
+|---|---|
+| <ul><li>Adobe Experience Platform:OD LITE</li><li>Adobe Experience Platform:OD STANDARD</li><li>Adobe Experience Platform:BUONA PESANTE</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>Adobe Experience Platform:OD</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>PIATTAFORMA DATI CLIENTE RT:OD</li><li>PIATTAFORMA DATI DEL CLIENTE RT:BUON PRFL A 10M</li><li>PIATTAFORMA DATI DEL CLIENTE RT:DA BUON PRFL A 50M</li></ul> | [Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>AEP:BUONA ATTIVAZIONE</li><li>AEP:BUONA ATTIVAZIONE PRFL A 10M</li><li>AEP:BUONA ATTIVAZIONE PRFL FINO A 50 M</li></ul> | [Attivazione Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
+| <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 
 ## Passaggi successivi
 
-Seguendo questo documento è ora possibile individuare il dashboard di utilizzo della licenza e selezionare una sandbox da visualizzare. È inoltre necessario comprendere le metriche visualizzate nei widget disponibili. Per ulteriori informazioni sull&#39;interfaccia utente  Experience Platform, fare riferimento alla [Guida all&#39;interfaccia utente della piattaforma](../../landing/ui-guide.md).
+Dopo aver letto questo documento, è possibile individuare il dashboard di utilizzo della licenza e selezionare una sandbox da visualizzare. Puoi anche trovare ulteriori informazioni sulle metriche disponibili per la tua organizzazione, in base alla licenza acquistata dalla tua organizzazione.
+
+Per ulteriori informazioni sulle altre funzioni disponibili nell’interfaccia utente di Experience Platform, consulta la [Guida all’interfaccia utente della piattaforma](../../landing/ui-guide.md) .
