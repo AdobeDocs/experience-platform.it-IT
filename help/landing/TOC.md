@@ -24,7 +24,7 @@ ht-degree: 14%
    * [Casi d’uso principali (video)](video/platform-use-cases.md)
    * [Architettura della piattaforma (video)](video/platform-architecture.md)
    * [Ruoli e fasi del progetto (video)](video/roles-project-phases.md)
-* Interfaccia utente di Experience Platform {#platform-ui}
+* Interfaccia utente Experience Platform {#platform-ui}
    * [Guida all’interfaccia utente di Platform](ui-guide.md)
    * [Presentazione dell’interfaccia utente della piattaforma (video)](video/platform-ui.md)
    * [Guida all’interfaccia utente dei flussi di lavoro](workflows.md)
@@ -41,7 +41,7 @@ ht-degree: 14%
 * Piattaforma nell&#39;ecosistema Adobe {#ecosystem}
    * [Servizi applicazione](application-services.md)
    * [Applicazione e servizi intelligenti (video)](video/application-intelligent-services.md)
-   * [Integrazioni di Platform con Experience Cloud (video)](video/experience-cloud-integrations.md)
+   * [Integrazioni con Experience Cloud (video)](video/experience-cloud-integrations.md)
 * Governance, privacy e sicurezza {#governance-privacy-security}
    * [Panoramica](./governance-privacy-security/overview.md)
    * Gestione del consenso {#consent}
