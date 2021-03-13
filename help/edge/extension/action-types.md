@@ -1,11 +1,13 @@
 ---
 title: Tipi di azioni nell’estensione Adobe Experience Platform Web SDK
 description: Scopri i diversi tipi di azioni forniti dall’estensione Adobe Experience Platform Web SDK in Adobe Experience Platform Launch.
+solution: Experience Platform
+feature: SDK per web
 translation-type: tm+mt
-source-git-commit: ff261c507d310b8132912680b6ddd1e7d5675d08
+source-git-commit: 9ce6dd5a290b55da04f4ae185cab96c120777775
 workflow-type: tm+mt
-source-wordcount: '328'
-ht-degree: 20%
+source-wordcount: '535'
+ht-degree: 8%
 
 ---
 
@@ -18,9 +20,15 @@ In questa pagina sono descritti i tipi di azioni disponibili.
 
 ## Invia evento
 
-Invia un evento ad Adobe [!DNL Experience Platform] in modo che Adobe Experience Platform possa raccogliere i dati inviati e agire in base a tali informazioni. Seleziona un&#39;istanza (se ne hai più di una). Se l&#39;evento si verifica all&#39;inizio del caricamento di una pagina o durante una modifica della visualizzazione in un&#39;applicazione a pagina singola, seleziona **[!UICONTROL Occurs at the start of a view]**.
+Invia un evento ad Adobe [!DNL Experience Platform] in modo che Adobe Experience Platform possa raccogliere i dati inviati e agire in base a tali informazioni. Seleziona un&#39;istanza (se ne hai più di una). Tutti i dati che vuoi inviare possono essere inviati nel campo **[!UICONTROL XDM Data]**. Utilizza un oggetto JSON conforme alla struttura dello schema XDM. Questo oggetto può essere creato sulla pagina o attraverso un **[!UICONTROL Custom Code]** **[!UICONTROL Data Element]**.
 
-Tutti i dati che vuoi inviare possono essere inviati nel campo **[!UICONTROL XDM Data]**. Utilizza un oggetto JSON conforme alla struttura dello schema XDM. Questo oggetto può essere creato sulla pagina o attraverso un **[!UICONTROL Custom Code]** **[!UICONTROL Data Element]**.
+Ci sono alcuni altri campi nel tipo di azione Invia evento che potrebbero essere utili anche a seconda dell&#39;implementazione. Tieni presente che questi campi sono tutti facoltativi.
+
+- **Tipo:** questo campo consente di specificare un tipo di evento che verrà registrato nello schema XDM. Per ulteriori informazioni sui tipi di evento predefiniti, consulta la [documentazione](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) .
+- **ID unione:** se desideri specificare un  [ID unione ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/merging-event-data.html?lang=en#fundamentals) per l’evento, puoi farlo in questo campo. Tieni presente che le soluzioni a valle non sono in grado di unire i dati dell’evento in questo momento.
+- **ID set di dati:** se devi inviare dati a un set di dati diverso da quello specificato nella configurazione perimetrale, puoi specificarlo qui.
+- **Il documento verrà scaricato:** se desideri che gli eventi raggiungano il server anche se l’utente si allontana dalla pagina, seleziona la  **[!UICONTROL Document will unload]** casella di controllo . Questo consente agli eventi di raggiungere il server ma le risposte vengono ignorate.
+- **Decisioni relative al rendering della personalizzazione visiva:** se desideri eseguire il rendering di contenuto personalizzato sulla pagina, seleziona la  **[!UICONTROL Render visual personalization decisions]** casella di controllo. Se necessario, puoi anche specificare gli ambiti decisionali. Per ulteriori informazioni sul rendering di contenuti personalizzati, consulta la [documentazione sulla personalizzazione](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) .
 
 ## Imposta consenso
 
@@ -34,4 +42,4 @@ Se desideri reimpostare l’ID unione eventi sulla pagina, puoi farlo con questa
 
 ## Ulteriori informazioni
 
-Dopo aver impostato i tipi di azione, [configura i tipi di elementi dati](data-element-types.md).
+Dopo aver impostato le azioni, [configura i tipi di elementi dati](data-element-types.md).
