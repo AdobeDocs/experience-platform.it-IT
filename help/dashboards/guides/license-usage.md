@@ -5,10 +5,10 @@ description: Adobe Experience Platform fornisce un dashboard tramite il quale è
 topic: guida
 type: Documentazione
 translation-type: tm+mt
-source-git-commit: 3908011b31dd24b13a58a2bc5ad5137dd3af5f63
+source-git-commit: 6baf1fbff20a02cd599d9ad9102d56db5a9004c3
 workflow-type: tm+mt
-source-wordcount: '630'
-ht-degree: 3%
+source-wordcount: '634'
+ht-degree: 2%
 
 ---
 
@@ -75,8 +75,8 @@ La definizione di ciascuna di queste metriche varia a seconda della licenza acqu
 | Licenza | Descrizione del prodotto |
 |---|---|
 | <ul><li>Adobe Experience Platform:OD LITE</li><li>Adobe Experience Platform:OD STANDARD</li><li>Adobe Experience Platform:BUONA PESANTE</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>Adobe Experience Platform:OD</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>PIATTAFORMA DATI CLIENTE RT:OD</li><li>PIATTAFORMA DATI DEL CLIENTE RT:BUON PRFL A 10M</li><li>PIATTAFORMA DATI DEL CLIENTE RT:DA BUON PRFL A 50M</li></ul> | [Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>Adobe Experience Platform:OD</li></ul> | [Experience Platform, servizi app e servizi intelligenti](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>PIATTAFORMA DATI CLIENTE RT:OD</li><li>PIATTAFORMA DATI DEL CLIENTE RT:BUON PRFL A 10M</li><li>PIATTAFORMA DATI DEL CLIENTE RT:DA BUON PRFL A 50M</li></ul> | [Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP:BUONA ATTIVAZIONE</li><li>AEP:BUONA ATTIVAZIONE PRFL A 10M</li><li>AEP:BUONA ATTIVAZIONE PRFL FINO A 50 M</li></ul> | [Attivazione Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 
