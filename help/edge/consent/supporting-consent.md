@@ -3,9 +3,9 @@ title: Supporto delle preferenze di consenso dei clienti tramite Adobe Experienc
 description: Scopri come supportare le preferenze di consenso con Adobe Experience Platform Web SDK.
 keywords: consenso;consenso predefinito;consenso predefinito;setConsent;Mixin privacy profilo;Mixin privacy evento esperienza;Mixin privacy privacy Privacy;
 translation-type: tm+mt
-source-git-commit: ff261c507d310b8132912680b6ddd1e7d5675d08
+source-git-commit: dd9101079a1093c109f43b268a78c07770221156
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '977'
 ht-degree: 0%
 
 ---
@@ -66,13 +66,16 @@ alloy("setConsent", {
       value: {
         collect: {
           val: "y"
+        },
+        metadata: {
+          time: "2021-03-17T15:48:42-07:00"
         }
       }
     }]
 });
 ```
 
-Se l&#39;utente sceglie di rinunciare, eseguire il comando `setConsent` con la preferenza di raccolta impostata su `n` come segue:
+Il campo temporale deve specificare l’ultima volta che l’utente ha aggiornato le proprie preferenze di consenso. Se l&#39;utente sceglie di rinunciare, eseguire il comando `setConsent` con la preferenza di raccolta impostata su `n` come segue:
 
 ```javascript
 alloy("setConsent", {
@@ -82,6 +85,9 @@ alloy("setConsent", {
       value: {
         collect: {
           val: "n"
+        },
+        metadata: {
+          time: "2021-03-17T15:51:30-07:00"
         }
       }
     }]
@@ -155,6 +161,9 @@ alloy("setConsent", {
       value: {
         collect: {
           val: "y"
+        },
+        metadata: {
+          time: "2021-03-17T15:48:42-07:00"
         }
       }
     },{
