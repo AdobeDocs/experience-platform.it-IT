@@ -3,54 +3,47 @@ keywords: Experience Platform;home;argomenti popolari;raccolta dati;lancio;sdk w
 solution: Experience Platform
 title: Panoramica sulla raccolta dati
 topic: ' - Panoramica'
-description: La raccolta dati supporta Adobe Experience Platform fornendo agli utenti strumenti incentrati sull’assegnazione di tag alle pagine per la raccolta dei dati.
+description: Scopri le varie tecnologie coinvolte nella raccolta di dati sulle esperienze dei clienti in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 323bfc6b5eae5463a86761589fe384aedc40a4d6
+source-git-commit: 629fe68029a9f45e45d5e2d238ffff455c7d6de6
 workflow-type: tm+mt
-source-wordcount: '316'
-ht-degree: 2%
+source-wordcount: '321'
+ht-degree: 3%
 
 ---
 
 
-# [!DNL Collection]panoramica
+# Panoramica sulla raccolta dati
 
-Adobe Experience Platform Collection è una suite di tecnologie che consentono la raccolta dati lato client per Adobe Experience Platform Edge Network da:
+Adobe Experience Platform fornisce una suite di tecnologie che ti consentono di raccogliere i dati sull’esperienza del cliente da sorgenti lato client e di inviarli ad Adobe Experience Platform Edge Network in modo che possano essere arricchiti, trasformati e distribuiti in destinazioni Adobi o non Adobi in pochi secondi.
 
-* Siti Web
+La raccolta dati è supportata per le seguenti origini lato client:
+
+* Applicazioni basate sul web
 * Applicazioni mobili native
-* OTT
+* Applicazioni OTT (Over-the-top)
 
-<!-- * Servers -->
+Le tecnologie di raccolta dati fornite da Experience Platform si concentrano sulla scoperta e l’accessibilità dei set di dati acquisiti. Queste tecnologie comprendono quanto segue:
 
-I dati possono essere arricchiti, trasformati e inviati in destinazioni Adobi o non Adobi in secondi.
-
-[!DNL Data Collection] supporta Adobe Experience Platform fornendo agli utenti strumenti incentrati sulla scoperta e l’accessibilità dei set di dati acquisiti all’interno di  [!DNL Experience Platform].
-
-Adobe Experience Platform Collection Developer include le seguenti tecnologie:
-
-* Flussi dati Adobe Experience Platform
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
-* [Adobe Experience Platform Experience Data Model (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html)
-* [Lato client Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html)
-* [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html)
+* [Adobe Experience Platform Launch](https://adobe.com/go/launch_help_en)
+* [Adobe Experience Platform Web SDK](../edge/home.md)
+* [Experience Data Model (XDM)](../xdm/home.md)
 
 ![](./images/Collection.png)
 
 ## Implementazioni più semplici e prestazioni lato client più veloci
 
-Gli SDK Adobe Experience Platform per web e dispositivi mobili comprimono e comprimono tutte le librerie di prodotti Adobe in un unico SDK per web o dispositivi mobili. La compressione delle librerie velocizza e semplifica la raccolta dei dati in un singolo flusso da questi dispositivi a Adobe Experience Platform Edge Network.
-
-L&#39;SDK di Adobe Experience Platform Server invia i dati da qualsiasi server a Adobe Experience Platform Edge Network.
+Gli SDK Adobe Experience Platform per web e dispositivi mobili comprimono e comprimono tutte le librerie di prodotti Adobe in un unico kit di sviluppo per le piattaforme web o mobili. La compressione di queste librerie velocizza la raccolta dei dati e consolida le operazioni in un unico flusso da dispositivi lato client a Adobe Experience Platform Edge Network.
 
 ## Processo di ribaltamento per l&#39;implementazione della tecnologia Adobe
 
-Adobe Experience Platform Edge Network è una rete di server distribuita a livello globale, rapida e affidabile in grado di ricevere ed elaborare dati su vasta scala. Utilizzando Adobe Experience Platform Data Streams è possibile attivare i prodotti Adobe lato server senza modificare il codice lato client.
+Platform Edge Network è una rete di server distribuita a livello globale, rapida e affidabile in grado di ricevere ed elaborare dati su vasta scala. Utilizzando il Platform launch, è possibile impostare [configurazioni edge](../edge/fundamentals/edge-configuration.md) per prodotti come Adobe Target, Adobe Audience Manager e Adobe Analytics, che consentono di attivare questi prodotti sul lato server senza modificare il codice lato client.
 
 ![](./images/deploy.png)
 
 ## Trasforma, arricchisci e invia dati in modo rapido e sicuro
 
-Adobe Experience Platform Launch Server Side può accedere a qualsiasi flusso di dati Adobe Experience Platform. Puoi trasformare, arricchire e inviare dati a qualsiasi destinazione non Adobe con latenza estremamente bassa senza aggiungere codice di terze parti al dispositivo client, garantendo una raccolta e una distribuzione dei dati più veloci e sicure.
+[Adobe Experience Platform Launch Server ](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html) Sidecan può accedere a qualsiasi flusso di dati Platform. Puoi trasformare, arricchire e inviare dati a qualsiasi destinazione non Adobe con latenza estremamente bassa senza aggiungere codice di terze parti al dispositivo client, garantendo una raccolta e una distribuzione dei dati più veloci e sicure.
 
 ![](./images/launch.png)
