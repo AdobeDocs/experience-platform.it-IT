@@ -6,9 +6,9 @@ breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 feature: Acquisizione dei dati, origini
 translation-type: tm+mt
-source-git-commit: 73ad0a264bcb0e9510ef500592fd945903c5cfea
+source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '582'
 ht-degree: 10%
 
 ---
@@ -227,4 +227,5 @@ ht-degree: 10%
    - [Eliminare i flussi di dati](tutorials/ui/delete.md)
 - [Notifiche di esecuzione del flusso](notifications.md)
 - [ELENCO CONSENTITI di indirizzo IP](ip-address-allow-list.md)
+- [Domande frequenti](./troubleshooting.md)
 - [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
