@@ -3,9 +3,9 @@ keywords: Google customer match;Google customer match;Google Customer Match;Goog
 title: Connessione Customer Match di Google
 description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti tra le proprietà possedute e gestite di Google, come Ricerca, Shopping, Gmail e YouTube.
 translation-type: tm+mt
-source-git-commit: 494b41265a0eec71ec15c7896eb8c652b3164e18
+source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
 workflow-type: tm+mt
-source-wordcount: '1381'
+source-wordcount: '1565'
 ht-degree: 0%
 
 ---
@@ -31,31 +31,39 @@ Un&#39;importante azienda tecnologica ha appena pubblicato un nuovo telefono. Ne
 
 Per promuovere il rilascio, caricano gli indirizzi e-mail dal loro database CRM in Experience Platform, utilizzando gli indirizzi e-mail come identificatori. I segmenti vengono creati in base ai clienti che possiedono modelli di telefono precedenti e inviati a [!DNL Google Customer Match] in modo che possano essere indirizzati ai clienti correnti, ai clienti che possiedono modelli di telefono precedenti e a clienti simili su [!DNL YouTube].
 
-## Specifiche di destinazione {#destination-specs}
-
-### Governance dei dati per le destinazioni [!DNL Google Customer Match] {#data-governance}
+## Governance dei dati per le destinazioni [!DNL Google Customer Match] {#data-governance}
 
 Le destinazioni di cui all’Experience Platform possono avere determinate regole e obblighi per i dati inviati o ricevuti dalla piattaforma di destinazione. Sei responsabile di comprendere i limiti e gli obblighi dei tuoi dati e come li utilizzi in Adobe Experience Platform e nella piattaforma di destinazione. Adobe Experience Platform fornisce strumenti di governance dei dati per aiutarti a gestire alcuni di questi obblighi di utilizzo dei dati. [Ulteriori ](../../..//data-governance/labels/overview.md) informazioni sugli strumenti e i criteri di governance dei dati.
 
-### Tipo di esportazione e identità {#export-type}
+## Identità supportate {#supported-identities}
+
+[!DNL Google Customer Match] supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/namespaces.md).
+
+| Identità di destinazione | Descrizione | Considerazioni |
+|---|---|---|
+| GAID | Google Advertising ID | Seleziona questa identità di destinazione quando l’identità di origine è uno spazio dei nomi GAID. |
+| IDFA | Apple ID per gli inserzionisti | Seleziona questa identità di destinazione quando l’identità di origine è uno spazio dei nomi IDFA. |
+| phone_sha256_e.164 | Numeri di telefono in formato E164, con hash con l&#39;algoritmo SHA256 | Sia il testo normale che i numeri di telefono con hash SHA256 sono supportati da Adobe Experience Platform. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza rispettivamente i namespace appropriati per il testo normale e i numeri di telefono con hash. Quando il campo di origine contiene attributi senza hash, seleziona l’opzione **[!UICONTROL Apply transformation]** per fare in modo che [!DNL Platform] hash automaticamente i dati all’attivazione. |
+| email_lc_sha256 | Indirizzi e-mail con hash con l’algoritmo SHA256 | Gli indirizzi e-mail con hash SHA256 e di testo normale sono supportati da Adobe Experience Platform. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza rispettivamente i namespace appropriati per gli indirizzi e-mail in testo normale e con hash. Quando il campo di origine contiene attributi senza hash, seleziona l’opzione **[!UICONTROL Apply transformation]** per fare in modo che [!DNL Platform] hash automaticamente i dati all’attivazione. |
+| user_id | ID utente personalizzati | Seleziona questa identità di destinazione quando l’identità di origine è uno spazio dei nomi personalizzato. |
+
+## Tipo di esportazione {#export-type}
 
 **Esportazione segmento** : stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono, ecc.) utilizzato nella destinazione [!DNL Google Customer Match].
 
-**Identità** : puoi utilizzare e-mail non elaborate o con hash come ID cliente in Google.
-
-### [!DNL Google Customer Match] prerequisiti dell’account  {#google-account-prerequisites}
+## [!DNL Google Customer Match] prerequisiti dell’account  {#google-account-prerequisites}
 
 Prima di configurare una destinazione [!DNL Google Customer Match] in Experience Platform, assicurati di leggere e rispettare i criteri di Google per l&#39;utilizzo di [!DNL Customer Match], descritti nella [documentazione di supporto di Google](https://support.google.com/google-ads/answer/6299717).
 
-### Consenti elenco {#allowlist}
+### Elenco consentiti {#allowlist}
 
 >[!NOTE]
 >
->È obbligatorio da aggiungere all’elenco Consentiti di Google prima di configurare la tua prima destinazione [!DNL Google Customer Match] nell’Experience Platform. Prima di creare una destinazione, assicurati che Google abbia completato il processo di elenco Consentiti descritto di seguito.
+>È obbligatorio da aggiungere all&#39;elenco consentiti di Google prima di configurare la tua prima destinazione [!DNL Google Customer Match] nell&#39;Experience Platform. Prima di creare una destinazione, assicurati che Google abbia completato il processo di elenco consentiti descritto di seguito.
 
-Prima di creare la destinazione [!DNL Google Customer Match] nell&#39;Experience Platform, è necessario contattare Google e seguire le istruzioni dell&#39;elenco Consentiti in [Utilizza i partner Customer Match per caricare i tuoi dati](https://support.google.com/google-ads/answer/7361372?hl=en&amp;ref_topic=6296507) nella documentazione di Google.
+Prima di creare la destinazione [!DNL Google Customer Match] in Experience Platform, è necessario contattare Google e seguire le istruzioni elenchi consentiti in [Utilizza i partner Customer Match per caricare i tuoi dati](https://support.google.com/google-ads/answer/7361372?hl=en&amp;ref_topic=6296507) nella documentazione di Google.
 
-Inoltre, esiste un secondo elenco Consentiti di Google a cui devi aggiungere il tuo account se intendi caricare dati utilizzando Google [User_ID](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id). Contatta il tuo account manager Google per assicurarti di essere aggiunto agli elenchi consentiti.
+Inoltre, esiste un secondo elenco consentiti di Google a cui devi aggiungere il tuo account se intendi caricare dati utilizzando Google [User_ID](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id). Contatta il tuo account manager Google per assicurarti di essere aggiunto agli elenchi consentiti.
 
 ### Requisiti di corrispondenza ID {#id-matching-requirements}
 
