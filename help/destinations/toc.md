@@ -6,7 +6,7 @@ user-guide-description: Attiva i dati noti e sconosciuti per campagne di marketi
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinazioni
 translation-type: tm+mt
-source-git-commit: 648be489aa77870f67564ee350c4d85885673832
+source-git-commit: 3ae5efca9744e5f5edde56038beab93be5157de3
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 10%
