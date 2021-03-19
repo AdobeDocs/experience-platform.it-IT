@@ -3,9 +3,9 @@ keywords: collegamento;collegamento;collegamento;collegamento;collegamento;desti
 title: Connessione Linkedin Matched Audiences
 description: Attiva profili per le campagne LinkedIn per il targeting del pubblico, la personalizzazione e la soppressione, in base a e-mail con hash.
 translation-type: tm+mt
-source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
+source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '666'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Attiva profili per le campagne [!DNL LinkedIn] per il targeting del pubblico, la
 
 Per comprendere meglio come e quando utilizzare la destinazione [!DNL LinkedIn Matched Audiences], ecco un caso d’uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa funzione.
 
-Una società di software organizza una conferenza e desidera mantenere i contatti con i partecipanti e mostrare loro offerte personalizzate in base al loro stato di partecipazione alla conferenza. L’azienda può acquisire indirizzi e-mail o ID di dispositivi mobili dal proprio [!DNL CRM] in Adobe Experience Platform, creare segmenti dai propri dati offline e inviare tali segmenti alla piattaforma social [!DNL LinkedIn] ottimizzando le spese pubblicitarie.
+Una società di software organizza una conferenza e desidera mantenere i contatti con i partecipanti e mostrare loro offerte personalizzate in base al loro stato di partecipazione alla conferenza. L’azienda può acquisire indirizzi e-mail o ID di dispositivi mobili dal proprio [!DNL CRM] in Adobe Experience Platform. Quindi, possono creare segmenti dai propri dati offline e inviare questi segmenti alla piattaforma social [!DNL LinkedIn] ottimizzando le spese pubblicitarie.
 
 ## Specifiche di destinazione {#destination-specs}
 
@@ -40,7 +40,7 @@ Una società di software organizza una conferenza e desidera mantenere i contatt
 
 ### Tipo di esportazione {#export-type}
 
-**Esportazione segmento** : stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono, ecc.) utilizzato nella destinazione [!DNL LinkedIn Matched Audiences].
+**Esportazione segmento** : esporta tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono e altri) utilizzati nella  [!DNL LinkedIn Matched Audiences] destinazione.
 
 ### Prerequisiti per l’account LinkedIn {#LinkedIn-account-prerequisites}
 
@@ -56,7 +56,7 @@ A seconda del tipo di ID che trasferisci in Adobe Experience Platform, devi sodd
 
 #### Requisiti di hash e-mail {#email-hashing-requirements}
 
-Puoi scegliere di aggiungere hash agli indirizzi e-mail prima di inviarli in Adobe Experience Platform, oppure puoi scegliere di lavorare con gli indirizzi e-mail in modo chiaro nell’Experience Platform e ottenere l’hash dal nostro algoritmo all’attivazione.
+Puoi aggiungere hash agli indirizzi e-mail prima di inviarli in Adobe Experience Platform oppure utilizzare indirizzi e-mail in modo chiaro nell’Experience Platform e inserirli [!DNL Platform] all’attivazione.
 
 Per informazioni sull’acquisizione degli indirizzi e-mail in Experience Platform, consulta la [panoramica sull’acquisizione batch](/help/ingestion/batch-ingestion/overview.md) e la [panoramica sull’acquisizione in streaming](/help/ingestion/streaming-ingestion/overview.md).
 
