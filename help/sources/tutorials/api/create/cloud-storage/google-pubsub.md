@@ -1,35 +1,35 @@
 ---
-keywords: ' Experience Platform;casa;argomenti popolari;Google PubSub;google pubsub'
+keywords: Experience Platform;home;argomenti popolari;Google PubSub;google pubsub
 solution: Experience Platform
-title: Creare una connessione Google PubSub Source utilizzando l'API del servizio di flusso
+title: Creare una connessione Google PubSub Source utilizzando l’API del servizio di flusso
 topic: ' - Panoramica'
 type: Tutorial
-description: Scoprite come collegare Adobe Experience Platform a un account Google PubSub utilizzando l'API del servizio di flusso.
+description: Scopri come collegare Adobe Experience Platform a un account Google PubSub utilizzando l’API del servizio di flusso.
 translation-type: tm+mt
-source-git-commit: 0af90253f04377149986aedf2e9d3012ca06d4f8
+source-git-commit: b5358ce206888c413035b46fe751520fd9aefb14
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '613'
 ht-degree: 2%
 
 ---
 
 
-# Creare una connessione di origine [!DNL Google PubSub] utilizzando l&#39;API del servizio di flusso
+# Creare una connessione sorgente [!DNL Google PubSub] utilizzando l’API del servizio di flusso
 
 >[!NOTE]
 >
->Il connettore [!DNL Google PubSub] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, vedere [Panoramica delle sorgenti](../../../../home.md#terms-and-conditions).
+>Il connettore [!DNL Google PubSub] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la [Panoramica delle sorgenti](../../../../home.md#terms-and-conditions) .
 
-Questa esercitazione utilizza l&#39; [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) per guidarvi nei passaggi necessari per connettere [!DNL Google PubSub] (in seguito denominato &quot;[!DNL PubSub]&quot;) ad Adobe Experience Platform.
+Questa esercitazione utilizza l’ [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) per guidarti nei passaggi per la connessione di [!DNL Google PubSub] (in seguito denominata &quot;[!DNL PubSub]&quot;) a Adobe Experience Platform.
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../../../home.md):  Experience Platform consente l&#39;acquisizione di dati da varie fonti, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Piattaforma.
-* [Sandbox](../../../../../sandboxes/home.md):  Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [Origini](../../../../home.md): L’Experience Platform consente di acquisire dati da varie sorgenti e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform.
+* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per creare correttamente una connessione di origine [!DNL PubSub] utilizzando l&#39;API [!DNL Flow Service].
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per creare correttamente una connessione sorgente [!DNL PubSub] utilizzando l&#39;API [!DNL Flow Service].
 
 ### Raccogli credenziali richieste
 
@@ -37,34 +37,38 @@ Affinché [!DNL Flow Service] possa connettersi a [!DNL PubSub], è necessario f
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `projectId` | L&#39;ID progetto necessario per l&#39;autenticazione [!DNL PubSub]. |
-| `credentials` | La credenziale o la chiave necessaria per autenticare [!DNL PubSub]. |
+| `projectId` | L&#39;ID del progetto necessario per l&#39;autenticazione [!DNL PubSub]. |
+| `credentials` | Credenziale o chiave necessaria per l&#39;autenticazione [!DNL PubSub]. |
 
-Per ulteriori informazioni su questi valori, consultare il seguente documento [PubSub authentication](https://cloud.google.com/pubsub/docs/authentication).
+Per ulteriori informazioni su questi valori, consulta il seguente documento [PubSub authentication](https://cloud.google.com/pubsub/docs/authentication) . Se utilizzi l&#39;autenticazione basata sull&#39;account del servizio, consulta la seguente [Guida PubSub](https://cloud.google.com/docs/authentication/production#create_service_account) per i passaggi su come generare le credenziali.
+
+>[!TIP]
+>
+>Se utilizzi l’autenticazione basata sull’account del servizio, assicurati di aver concesso un accesso utente sufficiente all’account del servizio e che non vi siano spazi bianchi aggiuntivi nel JSON durante la copia e l’incolla delle credenziali.
 
 ### Lettura di chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consultate la sezione relativa a [come leggere chiamate API di esempio](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi del Experience Platform .
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di Experience Platform.
 
-### Raccogli valori per le intestazioni richieste
+### Raccogli i valori delle intestazioni richieste
 
-Per effettuare chiamate alle API della piattaforma, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a1/>. ](https://www.adobe.com/go/platform-api-authentication-en) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API di Experience Platform, come illustrato di seguito:
+Per effettuare chiamate alle API di Platform, devi prima completare l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come mostrato di seguito:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Tutte le risorse in  Experience Platform, incluse quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API della piattaforma richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in Experience Platform, incluse quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API di Platform richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva per il tipo di supporto:
+Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione di tipo multimediale aggiuntiva:
 
 * `Content-Type: application/json`
 
 ## Creare una connessione
 
-Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. È necessaria una sola connessione per ogni account [!DNL PubSub], in quanto può essere utilizzata per creare più flussi di dati per inserire dati diversi.
+Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. È necessaria una sola connessione per ogni account [!DNL PubSub] in quanto può essere utilizzata per creare più flussi di dati per inserire dati diversi.
 
 **Formato API**
 
@@ -74,7 +78,7 @@ POST /connections
 
 **Richiesta**
 
-Per creare una connessione [!DNL PubSub], è necessario fornire l&#39;ID provider e l&#39;ID specifica di connessione come parte della richiesta di POST. L&#39;ID provider è `521eee4d-8cbe-4906-bb48-fb6bd4450033` e l&#39;ID della specifica di connessione è `70116022-a743-464a-bbfe-e226a7f8210c`.
+Per creare una connessione [!DNL PubSub], è necessario fornire l’ID del provider e l’ID della specifica di connessione come parte della richiesta di POST. L&#39;ID provider è `521eee4d-8cbe-4906-bb48-fb6bd4450033` e l&#39;ID della specifica di connessione è `70116022-a743-464a-bbfe-e226a7f8210c`.
 
 **Formato API**
 
@@ -110,13 +114,13 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `auth.params.projectId` | L&#39;ID progetto necessario per l&#39;autenticazione [!DNL PubSub]. |
-| `auth.params.credentials` | La credenziale o la chiave necessaria per autenticare [!DNL PubSub]. |
-| `connectionSpec.id` | ID della specifica di connessione [!DNL PubSub]: `70116022-a743-464a-bbfe-e226a7f8210c`. |
+| `auth.params.projectId` | L&#39;ID del progetto necessario per l&#39;autenticazione [!DNL PubSub]. |
+| `auth.params.credentials` | Credenziale o chiave necessaria per l&#39;autenticazione [!DNL PubSub]. |
+| `connectionSpec.id` | ID delle specifiche di connessione [!DNL PubSub]: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 **Risposta**
 
-Una risposta corretta restituisce l&#39;ID di connessione della nuova connessione [!DNL PubSub] creata. Questo ID è necessario per esplorare i dati di archiviazione cloud nell&#39;esercitazione successiva.
+Una risposta corretta restituisce l&#39;ID di connessione della nuova connessione [!DNL PubSub] creata. Questo ID è necessario per esplorare i dati di archiviazione cloud nell’esercitazione successiva.
 
 ```json
 {
@@ -127,4 +131,4 @@ Una risposta corretta restituisce l&#39;ID di connessione della nuova connession
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, è stata creata una connessione [!DNL PubSub] utilizzando l&#39;API [!DNL Flow Service] e il relativo ID di connessione univoco è stato acquisito. Puoi utilizzare questo ID connessione per [raccogliere i dati di streaming utilizzando l&#39;API del servizio di flusso](../../collect/streaming.md).
+Seguendo questa esercitazione, hai creato una connessione [!DNL PubSub] utilizzando l&#39;API [!DNL Flow Service] e acquisito il relativo ID di connessione univoco. Puoi usare questo ID connessione per [raccogliere dati in streaming utilizzando l&#39;API del servizio di flusso](../../collect/streaming.md).
