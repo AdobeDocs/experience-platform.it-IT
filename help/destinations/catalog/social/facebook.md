@@ -3,10 +3,10 @@ keywords: connessione facebook;connessione facebook;destinazioni facebook;facebo
 title: Connessione Facebook
 description: Attiva profili per le tue campagne Facebook per il targeting del pubblico, la personalizzazione e la soppressione in base a e-mail con hash.
 translation-type: tm+mt
-source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
+source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
 workflow-type: tm+mt
-source-wordcount: '1128'
-ht-degree: 3%
+source-wordcount: '1118'
+ht-degree: 2%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 3%
 
 Attiva profili per le campagne [!DNL Facebook] per il targeting del pubblico, la personalizzazione e la soppressione in base a e-mail con hash.
 
-Puoi utilizzare questa destinazione per il targeting del pubblico tra le [!DNL Facebook’s] app supportate da [!DNL Custom Audiences], incluse [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] e [!DNL Messenger]. La selezione dell’app su cui desideri eseguire la campagna è indicata al livello di posizionamento in [!DNL Facebook Ads Manager].
+Puoi utilizzare questa destinazione per il targeting del pubblico tra [!DNL Facebook’s] la famiglia di app supportate da [!DNL Custom Audiences], inclusi [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] e [!DNL Messenger]. La selezione dell’app su cui desideri eseguire la campagna è indicata al livello di posizionamento in [!DNL Facebook Ads Manager].
 
-![Destinazione Facebook nell’interfaccia utente di Adobe Experience Platform](../../assets/catalog/social/facebook/catalog.png)
+![Destinazione Facebook nell’interfaccia utente Adobe Experience Platform](../../assets/catalog/social/facebook/catalog.png)
 
 ## Casi d’uso
 
@@ -39,7 +39,7 @@ Successivamente, possono utilizzare i propri dati offline, inclusi gli ID di app
 
 >[!IMPORTANT]
 >
->I dati inviati a [!DNL Facebook] non devono includere identità unite. L’utente è responsabile del rispetto di questo obbligo e può farlo assicurando che i segmenti selezionati per l’attivazione non utilizzino un’opzione di unione nei propri criteri di unione. Ulteriori informazioni su [criteri di unione](/help/profile/ui/merge-policies.md).
+>I dati inviati a [!DNL Facebook] non possono includere identità unite. L’utente è responsabile del rispetto di questo obbligo e può farlo assicurando che i segmenti selezionati per l’attivazione non utilizzino un’opzione di unione nei propri criteri di unione. Ulteriori informazioni su [criteri di unione](/help/profile/ui/merge-policies.md).
 
 ## Identità supportate {#supported-identities}
 
@@ -47,15 +47,15 @@ Successivamente, possono utilizzare i propri dati offline, inclusi gli ID di app
 
 | Identità di destinazione | Descrizione | Considerazioni |
 |---|---|---|
-| GAID | Google Advertising ID | Seleziona questa identità di destinazione quando l’identità di origine è uno spazio dei nomi GAID. |
-| IDFA | Apple ID per gli inserzionisti | Seleziona questa identità di destinazione quando l’identità di origine è uno spazio dei nomi IDFA. |
+| GAID | Google Advertising ID | Selezionare l&#39;identità di destinazione GAID quando l&#39;identità di origine è uno spazio dei nomi GAID. |
+| IDFA | Apple ID per gli inserzionisti | Seleziona l’identità di destinazione IDFA quando l’identità di origine è uno spazio dei nomi IDFA. |
 | phone_sha256 | Hash dei numeri di telefono con l&#39;algoritmo SHA256 | Sia il testo normale che i numeri di telefono con hash SHA256 sono supportati da Adobe Experience Platform. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza rispettivamente i namespace appropriati per il testo normale e i numeri di telefono con hash. Quando il campo di origine contiene attributi senza hash, seleziona l’opzione **[!UICONTROL Apply transformation]** per fare in modo che [!DNL Platform] hash automaticamente i dati all’attivazione. |
 | email_lc_sha256 | Indirizzi e-mail con hash con l’algoritmo SHA256 | Gli indirizzi e-mail con hash SHA256 e di testo normale sono supportati da Adobe Experience Platform. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza rispettivamente i namespace appropriati per gli indirizzi e-mail in testo normale e con hash. Quando il campo di origine contiene attributi senza hash, seleziona l’opzione **[!UICONTROL Apply transformation]** per fare in modo che [!DNL Platform] hash automaticamente i dati all’attivazione. |
 | extern_id | ID utente personalizzati | Seleziona questa identità di destinazione quando l’identità di origine è uno spazio dei nomi personalizzato. |
 
 ## Tipo di esportazione {#export-type}
 
-**Esportazione segmento** : stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono, ecc.) utilizzato nella destinazione Facebook.
+**Esportazione segmento** : stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono o altri) utilizzati nella destinazione Facebook.
 
 ## Prerequisiti per l’account Facebook {#facebook-account-prerequisites}
 
@@ -65,8 +65,8 @@ Prima di poter inviare i segmenti di pubblico a [!DNL Facebook], assicurati di s
 - L&#39;account aziendale **Adobe Experience Cloud** deve essere aggiunto come partner pubblicitario nel [!DNL Facebook Ad Account]. Seleziona `business ID=206617933627973`. Per ulteriori informazioni, consulta [Aggiungi partner al tuo Business Manager](https://www.facebook.com/business/help/1717412048538897) nella documentazione di Facebook .
    >[!IMPORTANT]
    >
-   > Quando configuri le autorizzazioni per Adobe Experience Cloud, devi abilitare l&#39;autorizzazione **Gestisci campagne**. Questa è richiesta per l’integrazione di [!DNL Adobe Experience Platform].
-- Leggi e firma i termini del servizio [!DNL Facebook Custom Audiences]. Per fare questo, vai su `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, dove `accountID` è il tuo [!DNL Facebook Ad Account ID].
+   > Quando configuri le autorizzazioni per Adobe Experience Cloud, devi abilitare l&#39;autorizzazione **Gestisci campagne**. L&#39;autorizzazione è necessaria per l&#39;integrazione [!DNL Adobe Experience Platform].
+- Leggi e firma i termini del servizio [!DNL Facebook Custom Audiences]. Per farlo, vai su `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, dove `accountID` è il tuo [!DNL Facebook Ad Account ID].
 
 ## Requisiti di corrispondenza ID {#id-matching-requirements}
 
@@ -78,7 +78,7 @@ A seconda del tipo di ID che trasferisci in Adobe Experience Platform, devi sodd
 
 Esistono due metodi per attivare i numeri di telefono in [!DNL Facebook]:
 
-- **Inserimento di numeri** di telefono non elaborati: è possibile acquisire i numeri di telefono non elaborati in  [!DNL E.164] formato in  [!DNL Platform], che verrà automaticamente hashing al momento dell’attivazione. Se scegli questa opzione, accertati di inserire sempre i numeri di telefono non elaborati nello spazio dei nomi `Phone_E.164` .
+- **Inserimento di numeri** di telefono non elaborati: è possibile inserire numeri di telefono non elaborati nel  [!DNL E.164] formato in  [!DNL Platform]. Hanno automaticamente eseguito l’hash al momento dell’attivazione. Se scegli questa opzione, accertati di inserire sempre i numeri di telefono non elaborati nello spazio dei nomi `Phone_E.164` .
 - **Inserimento di numeri** di telefono con hash: è possibile pre-hash i numeri di telefono prima dell’inserimento in  [!DNL Platform]. Se scegli questa opzione, accertati di inserire sempre i numeri di telefono con hash nello spazio dei nomi `Phone_SHA256` .
 
 >[!NOTE]
@@ -88,7 +88,7 @@ Esistono due metodi per attivare i numeri di telefono in [!DNL Facebook]:
 
 ### Requisiti di hash e-mail {#email-hashing-requirements}
 
-Puoi scegliere di aggiungere hash agli indirizzi e-mail prima di inviarli in Adobe Experience Platform, oppure puoi scegliere di lavorare con gli indirizzi e-mail in modo chiaro nell’Experience Platform e ottenere l’hash dal nostro algoritmo all’attivazione.
+Puoi aggiungere hash agli indirizzi e-mail prima di inviarli in Adobe Experience Platform oppure utilizzare indirizzi e-mail in modo chiaro nell’Experience Platform e inserirli [!DNL Platform] all’attivazione.
 
 Per informazioni sull’acquisizione degli indirizzi e-mail in Experience Platform, consulta la [panoramica sull’acquisizione batch](/help/ingestion/batch-ingestion/overview.md) e la [panoramica sull’acquisizione in streaming](/help/ingestion/streaming-ingestion/overview.md).
 
