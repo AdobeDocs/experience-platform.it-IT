@@ -6,9 +6,9 @@ breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 feature: Acquisizione dei dati, origini
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 73ad0a264bcb0e9510ef500592fd945903c5cfea
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '579'
 ht-degree: 10%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 10%
    - Applicazioni Adobe {#adobe-applications}
       - [Connettore dati classificazioni di Analytics](connectors/adobe-applications/classifications.md)
       - [Connettore dati di Analytics](connectors/adobe-applications/analytics.md)
-      - [Connettore di Audience Manager](connectors/adobe-applications/audience-manager.md)
+      - [Connettore Audience Manager](connectors/adobe-applications/audience-manager.md)
       - [Connettore attributi del cliente](connectors/adobe-applications/customer-attributes.md)
-      - Mappature dei campi dell&#39;applicazione Adobe {#mapping}
+      - Adobe di mappature dei campi dell&#39;applicazione {#mapping}
          - [Mappature dei campi di Analytics](connectors/adobe-applications/mapping/analytics.md)
-         - [Mappature dei campi di Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
+         - [Audience Manager di mappature dei campi](connectors/adobe-applications/mapping/audience-manager.md)
          - [Mappature dei campi di destinazione](connectors/adobe-applications/mapping/target.md)
    - Pubblicità {#advertising}
       - [Connettore Google AdWords](connectors/advertising/ads.md)
@@ -42,7 +42,7 @@ ht-degree: 10%
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
       - [Archiviazione oggetti Oracle](connectors/cloud-storage/oracle-object-storage.md)
       - [Connettore SFTP](connectors/cloud-storage/sftp.md)
-      - [Connettore Amazon S3 e Azure Blob](connectors/cloud-storage/blob-s3.md)
+      - [Connettore BLOB di Amazon S3 e Azure](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
       - [Connettore Microsoft Dynamics](connectors/crm/ms-dynamics.md)
       - [Connettore Salesforce](connectors/crm/salesforce.md)
@@ -53,8 +53,8 @@ ht-degree: 10%
       - [Connettore Amazon Redshift](connectors/databases/redshift.md)
       - [Apache Hive sul connettore Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark sul connettore Azure HDInsights](connectors/databases/spark.md)
-      - [Connettore di Azure Data Explorer](connectors/databases/data-explorer.md)
-      - [Connettore Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
+      - [Connettore di Data Explorer di Azure](connectors/databases/data-explorer.md)
+      - [azure synapse del connettore Analytics](connectors/databases/synapse-analytics.md)
       - [Connettore di archiviazione tabella di Azure](connectors/databases/ats.md)
       - [Connettore Couchbase](connectors/databases/couchbase.md)
       - [Connettore Google BigQuery](connectors/databases/bigquery.md)
@@ -101,8 +101,8 @@ ht-degree: 10%
          - [ Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Apache Hive su Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark su Azure HDInsights](tutorials/api/create/databases/spark.md)
-         - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
-         - [Analisi di sincronizzazione di Azure](tutorials/api/create/databases/synapse-analytics.md)
+         - [Data Explorer di Azure](tutorials/api/create/databases/data-explorer.md)
+         - [azure synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Archiviazione tabella di Azure](tutorials/api/create/databases/ats.md)
          - [Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
@@ -148,9 +148,9 @@ ht-degree: 10%
    - [Acquisire dati Parquet da un sistema di storage cloud di terze parti](tutorials/api/cloud-storage-parquet.md)
    - [Creare una connessione set di dati](tutorials/api/create-dataset-base-connection.md)
    - [Monitorare i flussi di dati](tutorials/api/monitor.md)
-   - [Aggiorna connessioni](tutorials/api/update.md)
+   - [Aggiorna account](tutorials/api/update.md)
    - [Aggiornare i flussi di dati](tutorials/api/update-dataflows.md)
-   - [Eliminare le connessioni](tutorials/api/delete.md)
+   - [Elimina account](tutorials/api/delete.md)
    - [Eliminare i flussi di dati](tutorials/api/delete-dataflows.md)
 - Esercitazioni dell’interfaccia utente {#ui-tutorials}
    - Creare una connessione sorgente {#create}
@@ -185,8 +185,8 @@ ht-degree: 10%
          - [ Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Apache Hive su Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark su Azure HDInsights](tutorials/ui/create/databases/spark.md)
-         - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
-         - [Analisi di sincronizzazione di Azure](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Data Explorer di Azure](tutorials/ui/create/databases/data-explorer.md)
+         - [azure synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Archiviazione tabella di Azure](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Big Query di Google](tutorials/ui/create/databases/bigquery.md)
@@ -222,8 +222,9 @@ ht-degree: 10%
    - [Attivare i dati in entrata per compilare i profili cliente](tutorials/ui/profile.md)
    - [Monitorare i flussi di dati](tutorials/ui/monitor.md)
    - [Aggiorna account](tutorials/ui/update.md)
+   - [Aggiornare i flussi di dati](tutorials/ui/update-dataflows.md)
    - [Elimina account](tutorials/ui/delete-accounts.md)
    - [Eliminare i flussi di dati](tutorials/ui/delete.md)
 - [Notifiche di esecuzione del flusso](notifications.md)
-- [Elenco indirizzi IP consentiti](ip-address-allow-list.md)
+- [ELENCO CONSENTITI di indirizzo IP](ip-address-allow-list.md)
 - [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
