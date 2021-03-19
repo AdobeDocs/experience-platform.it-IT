@@ -6,10 +6,10 @@ user-guide-description: Attiva i dati noti e sconosciuti per campagne di marketi
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinazioni
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 648be489aa77870f67564ee350c4d85885673832
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 11%
+source-wordcount: '464'
+ht-degree: 10%
 
 ---
 
@@ -82,6 +82,7 @@ ht-degree: 11%
       * [Connessione BLOB di Azure](./catalog/cloud-storage/azure-blob.md)
       * [(Beta) Connessione ad Azure Event Hubs](./catalog/cloud-storage/azure-event-hubs.md)
       * [Connessione SFTP](./catalog/cloud-storage/sftp.md)
+      * [ELENCO CONSENTITI di indirizzo IP](./catalog/cloud-storage/ip-address-allow-list.md)
    * Destinazioni della piattaforma di gestione dati {#data-management}
       * [Panoramica sulle destinazioni della Data Management Platform (DMP)](./catalog/data-management/overview.md)
       * [Estensione Audience Manager DIL](./catalog/data-management/aam-dil-extension.md)
