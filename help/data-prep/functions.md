@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;mappare csv;mappare file csv;mappare file csv su xdm;mappare CSV su xdm;guida ui;mappatore;mappatura;campi di mappatura;funzioni di mappatura;
+keywords: Experience Platform;home;argomenti popolari;mappare csv;mappare file csv;mappare file csv su xdm;mappare da csv a xdm;guida interfaccia utente;mappatura;mappatura;campi di mappatura;funzioni di mappatura;
 solution: Experience Platform
 title: Funzioni di mappatura della preparazione dei dati
 topic: ' - Panoramica'
 description: Questo documento introduce le funzioni di mappatura utilizzate con Data Prep.
 translation-type: tm+mt
-source-git-commit: 6a541cca307dec8937c2d49470e8bcab770c80c7
+source-git-commit: 85a99171a6786b47bf50d4579a3ebc88af3c82f6
 workflow-type: tm+mt
 source-wordcount: '3719'
 ht-degree: 3%
@@ -35,7 +35,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, incluse le espressioni di esempio e i relativi output risultanti.
 
-### Funzioni stringa
+### Funzioni stringa {#string}
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 | extract_regex | Estrae i gruppi dalla stringa di input, in base a un&#39;espressione regolare. | <ul><li>STRINGA: **Obbligatorio** La stringa da cui stai estraendo i gruppi.</li><li>REGEX: **Obbligatorio** L&#39;espressione regolare a cui si desidera associare il gruppo.</li></ul> | extract_regex(STRING, REGEX) | extract_regex &#x200B;(&quot;E259,E259B_009,1_1&quot; &#x200B;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | [&quot;E259,E259B_009,1_1&quot;, &quot;E259&quot;, &quot;1_1&quot;] |
 | matches_regex | Controlla se la stringa corrisponde all&#39;espressione regolare inserita. | <ul><li>STRINGA: **Obbligatorio** La stringa che stai controllando corrisponde all&#39;espressione regolare.</li><li>REGEX: **Obbligatorio** L&#39;espressione regolare rispetto alla quale si sta confrontando.</li></ul> | match_regex(STRING, REGEX) | matches_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | true |
 
-### Funzioni di hashing
+### Funzioni di hash {#hashing}
 
 >[!NOTE]
 >
@@ -85,7 +85,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 | md5 | Prende un input e produce un valore hash utilizzando MD5. | <ul><li>INGRESSO: **Obbligatorio** Testo normale da hash.</li><li>CARATTERE: *Facoltativo* Il nome del set di caratteri. I valori possibili sono UTF-8, UTF-16, ISO-8859-1 e US-ASCII. </li></ul> | md5(INPUT, CHARSET) | md5(&quot;il mio testo&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4 &#x200B; e9bd0198d03ba6852c7 |
 | crc32 | Accetta un input che utilizza un algoritmo di controllo della ridondanza ciclica (CRC) per produrre un codice ciclico a 32 bit. | <ul><li>INGRESSO: **Obbligatorio** Testo normale da hash.</li><li>CARATTERE: *Facoltativo* Il nome del set di caratteri. I valori possibili sono UTF-8, UTF-16, ISO-8859-1 e US-ASCII.</li></ul> | crc32 (INGRESSO, CHARSET) | crc32(&quot;il mio testo&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
-### Funzioni URL
+### Funzioni URL {#url}
 
 >[!NOTE]
 >
@@ -99,7 +99,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 | get_url_path | Restituisce il percorso dell&#39;URL specificato. Per impostazione predefinita, viene restituito il percorso completo. | <ul><li>URL: **Obbligatorio** L&#39;URL da cui deve essere estratto il percorso.</li><li>FULL_PATH: *Facoltativo* Un valore booleano che determina se viene restituito il percorso completo. Se è impostato su false, viene restituita solo la fine del percorso.</li></ul> | get_url_path &#x200B;(URL, FULL_PATH) | get_url_path &#x200B;(&quot;sftp://example.com// &#x200B; home/joe/employee.csv&quot;) | &quot;//home/joe/ &#x200B;.csv&quot; |
 | get_url_query_str | Restituisce la stringa di query di un URL specificato. | <ul><li>URL: **Obbligatorio** L&#39;URL da cui si sta tentando di ottenere la stringa di query.</li><li>ANCORAGGIO: **Obbligatorio** Determina cosa verrà fatto con l&#39;ancoraggio nella stringa di query. Può essere uno dei tre valori seguenti: &quot;keep&quot;, &quot;remove&quot; o &quot;append&quot;.<br><br>Se il valore è &quot;keep&quot;, l’ancoraggio viene associato al valore restituito.<br>Se il valore è &quot;remove&quot;, l’ancoraggio viene rimosso dal valore restituito.<br>Se il valore è &quot;append&quot;, l’ancoraggio viene restituito come valore separato.</li></ul> | get_url_query_str &#x200B;(URL, ANCHOR) | get_url_query_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/here?name= &#x200B; ferret#nose&quot;, &quot;keep&quot;)<br>get_url_query_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/there?name= &#x200B; ferret#nose&quot;, &quot;remove&quot;)<br>get_url_query_str &#x200B;(&quot;foo://example.com nome_utente:8042/over/ci?name=ferret?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 
-### Funzioni di data e ora
+### Funzioni di data e ora {#date-and-time}
 
 >[!NOTE]
 >
@@ -122,7 +122,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 
 &#x200B;
 
-### Gerarchie - Oggetti
+### Gerarchie - Oggetti {#objects}
 
 >[!NOTE]
 >
@@ -138,7 +138,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 | is_set | Controlla se l&#39;oggetto esiste all&#39;interno dei dati di origine. | <ul><li>INGRESSO: **Obbligatorio** Il percorso da controllare se esiste all&#39;interno dei dati di origine.</li></ul> | is_set(INPUT) | is_set &#x200B;(&quot;evar.evar.field1&quot;) | true |
 | annullare | Imposta il valore dell&#39;attributo su `null`. Da utilizzare quando non si desidera copiare il campo nello schema di destinazione. |  | nullify() | nullify() | `null` |
 
-### Gerarchie - Array
+### Gerarchie - Array {#arrays}
 
 >[!NOTE]
 >
@@ -153,7 +153,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 | join_array | Combina gli array tra loro. | <ul><li>ARRAY: **Obbligatorio** La matrice a cui si aggiungono gli elementi.</li><li>VALORI: Matrice da aggiungere alla matrice padre.</li></ul> | join_array &#x200B;(ARRAY, VALUES) | join_array &#x200B;([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [&#39;d&#39;, &#39;e&#39;]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;] |
 | to_array | Prende un elenco di input e lo converte in un array. | <ul><li>INCLUDE_NULLS: **Valore booleano obbligatorio** per indicare se includere o meno i valori nulli nell&#39;array di risposta.</li><li>VALORI: **Obbligatorio** Gli elementi da convertire in una matrice.</li></ul> | to_array &#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 
-### Operatori logici
+### Operatori logici {#logical-operators}
 
 >[!NOTE]
 >
@@ -161,10 +161,10 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 -------- | ----------- | ---------- | -------| ---------- | -------------
-| decodificare | Dato un tasto e un elenco di coppie di valori chiave appiattite come array, la funzione restituisce il valore se key viene trovato o restituisce un valore predefinito se presente nell&#39;array. | <ul><li>CHIAVE: **Obbligatorio** Chiave da abbinare.</li><li>OPZIONI: **Obbligatorio** Matrice appiattita di coppie chiave/valore. Facoltativamente, è possibile inserire un valore predefinito alla fine.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | Se il codice di stato specificato è &quot;ca&quot;, &quot;California&quot;.<br>Se lo statoCode dato è &quot;pa&quot;, &quot;Pennsylvania&quot;.<br>Se stateCode non corrisponde a quanto segue, &quot;N/D&quot;. |
+| decodificare | Dato un tasto e un elenco di coppie di valori chiave appiattite come array, la funzione restituisce il valore se key viene trovato o restituisce un valore predefinito se presente nell&#39;array. | <ul><li>CHIAVE: **Obbligatorio** Chiave da abbinare.</li><li>OPTIONS: **Obbligatorio** Matrice appiattita di coppie chiave/valore. Facoltativamente, è possibile inserire un valore predefinito alla fine.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | Se il codice di stato specificato è &quot;ca&quot;, &quot;California&quot;.<br>Se lo statoCode dato è &quot;pa&quot;, &quot;Pennsylvania&quot;.<br>Se stateCode non corrisponde a quanto segue, &quot;N/D&quot;. |
 | iif | Valuta una determinata espressione booleana e restituisce il valore specificato in base al risultato. | <ul><li>ESPRESSIONE: **Obbligatorio** L&#39;espressione booleana in fase di valutazione.</li><li>TRUE_VALUE: **Obbligatorio** Il valore restituito se l&#39;espressione restituisce true.</li><li>FALSE_VALUE: **Obbligatorio** Il valore restituito se l&#39;espressione restituisce false.</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
-### Aggregazione
+### Aggregazione {#aggregation}
 
 >[!NOTE]
 >
@@ -172,10 +172,10 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 -------- | ----------- | ---------- | -------| ---------- | -------------
-| min | Restituisce il minimo degli argomenti specificati. Utilizza l&#39;ordine naturale. | <ul><li>OPZIONI: **Obbligatorio** Uno o più oggetti che possono essere confrontati tra loro.</li></ul> | min(OPZIONI) | min(3, 1, 4) | 1 |
-| max | Restituisce il massimo degli argomenti specificati. Utilizza l&#39;ordine naturale. | <ul><li>OPZIONI: **Obbligatorio** Uno o più oggetti che possono essere confrontati tra loro.</li></ul> | max(OPZIONI) | max(3, 1, 4) | 4 |
+| min | Restituisce il minimo degli argomenti specificati. Utilizza l&#39;ordine naturale. | <ul><li>OPTIONS: **Obbligatorio** Uno o più oggetti che possono essere confrontati tra loro.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
+| max | Restituisce il massimo degli argomenti specificati. Utilizza l&#39;ordine naturale. | <ul><li>OPTIONS: **Obbligatorio** Uno o più oggetti che possono essere confrontati tra loro.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
-### Conversioni di tipo
+### Digita conversioni {#type-conversions}
 
 >[!NOTE]
 >
@@ -188,7 +188,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 | to_float | Converte una stringa in Mobile. | <ul><li>STRINGA: **Obbligatorio** La stringa da convertire in Mobile.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12,34566 |
 | to_integer | Converte una stringa in un numero intero. | <ul><li>STRINGA: **Obbligatorio** La stringa da convertire in un numero intero.</li></ul> | to_integer(STRING) | to_integer(&quot;12&quot;) | 12 |
 
-### Funzioni JSON
+### Funzioni JSON {#json}
 
 >[!NOTE]
 >
@@ -198,7 +198,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | json_to_object | Deserializza il contenuto JSON dalla stringa specificata. | <ul><li>STRINGA: **Obbligatorio** La stringa JSON da deserializzare.</li></ul> | json_to_object &#x200B;(STRING) | json_to_object &#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;: &quot;Doe&quot;}) | Un oggetto che rappresenta il JSON. |
 
-### Operazioni speciali
+### Operazioni speciali {#special-operations}
 
 >[!NOTE]
 >
@@ -208,7 +208,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | uuid /<br>guid | Genera un ID pseudo-casuale. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
-### Funzioni dell&#39;agente utente
+### Funzioni dell&#39;agente utente {#user-agent}
 
 >[!NOTE]
 >
