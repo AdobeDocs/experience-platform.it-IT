@@ -1,11 +1,11 @@
 ---
-keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Google Ad Manager;Google Ad Manager;Google ad manager
+keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Google Ad Manager;Google ad manager
 title: Connessione Google Ad Manager
-description: 'Google Ad Manager, precedentemente noto come DoubleClick for Publishers o DoubleClick AdX, è una piattaforma di annunci pubblicitari di Google che offre agli editori i mezzi per gestire la visualizzazione degli annunci sui loro siti Web, attraverso video e nelle app mobili.  '
+description: 'Google Ad Manager, precedentemente noto come DoubleClick for Publishers o DoubleClick AdX, è una piattaforma di ad serving di Google che offre agli editori i mezzi per gestire la visualizzazione di annunci pubblicitari sui loro siti web, attraverso video e nelle app mobili.  '
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '738'
 ht-degree: 0%
 
 ---
@@ -13,71 +13,83 @@ ht-degree: 0%
 
 # [!DNL Google Ad Manager] connection
 
-[!DNL Google Ad Manager], precedentemente noto come  [!DNL DoubleClick] per gli editori o  [!DNL DoubleClick AdX]per gli editori, è una piattaforma di annunci da  [!DNL Google] cui gli editori possono gestire la visualizzazione degli annunci sui propri siti Web, attraverso video e nelle app mobili.
+[!DNL Google Ad Manager], precedentemente noto come  [!DNL DoubleClick] per Publishers o  [!DNL DoubleClick AdX], è una piattaforma di ad serving  [!DNL Google] che offre agli editori i mezzi per gestire la visualizzazione di annunci pubblicitari sui loro siti web, attraverso video e nelle app mobili.
 
 ## Specifiche di destinazione
 
-Tenete presenti i seguenti dettagli specifici per le destinazioni [!DNL Google Ad Manager]:
+Tieni presente i seguenti dettagli specifici delle destinazioni [!DNL Google Ad Manager]:
 
-* È possibile inviare le seguenti [identità](../../../identity-service/namespaces.md) alle [!DNL Google Ads] destinazioni: [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en), ID cookie Google, IDFA, GAID, ID Roku, ID Microsoft e ID  Amazon Fire TV.
-   * Google utilizzerà [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) per eseguire il targeting degli utenti in California e il Google Cookie ID per tutti gli altri utenti.
-* I tipi di pubblico attivati vengono creati a livello di programmazione nella piattaforma [!DNL Google].
-* Al momento la piattaforma non include una metrica di misura per convalidare l&#39;attivazione. Per convalidare l&#39;integrazione e comprendere le dimensioni del targeting dell&#39;audience, fare riferimento ai conteggi dell&#39;audience in Google.
+* I tipi di pubblico attivati vengono creati a livello di programmazione nella piattaforma [!DNL Google] .
+* Al momento, Platform non include una metrica di misurazione per convalidare l’attivazione. Consulta i conteggi del pubblico in Google per convalidare l’integrazione e comprendere le dimensioni del targeting del pubblico.
 
 >[!IMPORTANT]
 >
->Se stai cercando di creare la tua prima destinazione con [!DNL Google Ad Manager] e non hai attivato la [funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in  Experience Cloud ID Service in passato (con  Audience Manager o altre applicazioni), contatta  Consulente Adobe o l&#39;Assistenza clienti per abilitare le sincronizzazioni ID. Se in precedenza erano state configurate [!DNL Google] integrazioni in  Audience Manager, le sincronizzazioni ID configurate per il passaggio alla piattaforma.
+>Se stai cercando di creare la tua prima destinazione con [!DNL Google Ad Manager] e non hai abilitato in passato la [funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) nel servizio ID di Experience Cloud (con Audience Manager o altre applicazioni), contatta la Consulenza di Adobe o l’Assistenza clienti per abilitare le sincronizzazioni degli ID. Se in precedenza avevi impostato le integrazioni [!DNL Google] in Audience Manager, le sincronizzazioni ID che avevi configurato riportano a Platform.
 
-### Tipo di esportazione {#export-type}
+## Identità supportate {#supported-identities}
 
-**Esportazione**  segmento: tutti i membri di un segmento (pubblico) vengono esportati nella destinazione Google.
+[!DNL Google Ad Manager] supporta l’attivazione delle identità descritte nella tabella seguente.
+
+| Identità di destinazione | Descrizione | Considerazioni |
+|---|---|---|
+| GAID | [!DNL Google Advertising ID] | Seleziona questa identità di destinazione quando l’identità di origine è uno spazio dei nomi GAID. |
+| IDFA | [!DNL Apple ID for Advertisers] | Seleziona questa identità di destinazione quando l’identità di origine è uno spazio dei nomi IDFA. |
+| UUID AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), noto anche come  [!DNL Device ID]. Un ID dispositivo numerico a 38 cifre associato a ciascun dispositivo con cui interagisce. | Google utilizza [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) per eseguire il targeting degli utenti in California e l&#39;ID cookie di Google per tutti gli altri utenti. |
+| [!DNL Google] ID cookie | [!DNL Google] ID cookie | [!DNL Google] utilizza questo ID per eseguire il targeting degli utenti al di fuori della California. |
+| RIDA | ID Roku per la pubblicità. Questo ID identifica in modo univoco i dispositivi Roku. |  |
+| MAID | ID pubblicità Microsoft. Questo ID identifica in modo univoco i dispositivi con Windows 10. |  |
+| Amazon Fire TV ID | Questo ID identifica in modo univoco i Amazon Fire TV. |  |
+
+## Tipo di esportazione {#export-type}
+
+**Esportazione segmento** : stai esportando tutti i membri di un segmento (pubblico) nella destinazione Google.
 
 ## Prerequisiti
 
-### elenco consentiti 
+### Elenco consentiti
 
 >[!NOTE]
 >
->Il elenco consentiti  è obbligatorio prima di configurare la prima [!DNL Google Ad Manager] destinazione in Platform. Prima di creare una destinazione, verificare che il processo di elenco consentiti  descritto di seguito sia stato completato da [!DNL Google].
+>L’elenco consentiti è obbligatorio prima di configurare la tua prima destinazione [!DNL Google Ad Manager] in Platform. Prima di creare una destinazione, assicurati che il processo di elenco consentiti descritto di seguito sia stato completato da [!DNL Google].
 
-Prima di creare la destinazione [!DNL Google Ad Manager] nella piattaforma, è necessario contattare [!DNL Google] per  Adobe nell&#39;elenco dei provider di dati consentiti e per aggiungere l&#39;account al elenco consentiti . Contattare [!DNL Google] e fornire le seguenti informazioni:
+Prima di creare la destinazione [!DNL Google Ad Manager] in Platform, è necessario contattare [!DNL Google] per Adobe per essere inserito nell’elenco dei provider di dati consentiti e per aggiungere l’account all’elenco consentiti. Contatta [!DNL Google] e fornisci le seguenti informazioni:
 
-* **ID**  account:  ID account  Adobe con  [!DNL Google]. Per ottenere questo ID, contatta &#39;Assistenza clienti di Adobe o il rappresentante del Adobe .
-* **ID**  cliente: si tratta  ID account  cliente con  [!DNL Google]. Per ottenere questo ID, contatta &#39;Assistenza clienti di Adobe o il rappresentante del Adobe .
-* **ID**  rete: questo è il tuo account con  [!DNL Google Ad Manager]
+* **ID**  account: questo è l&#39;ID account di Adobe con  [!DNL Google]. Per ottenere questo ID, contatta l’Assistenza clienti Adobe o il tuo rappresentante Adobe.
+* **ID**  cliente: questo è l&#39;ID account cliente Adobe con  [!DNL Google]. Per ottenere questo ID, contatta l’Assistenza clienti Adobe o il tuo rappresentante Adobe.
+* **ID**  di rete: questo è il tuo account con  [!DNL Google Ad Manager]
 * **ID**  collegamento pubblico: questo è il tuo account con  [!DNL Google Ad Manager]
-* Il tipo di account. DFP di Google o dell&#39;acquirente AdX.
+* Tipo di account. DFP di Google o dell&#39;acquirente AdX.
 
-## Configura destinazione
+## Configurare la destinazione
 
-In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, selezionare **[!DNL Google Ad Manager]**, quindi selezionare **[!UICONTROL Configure]**.
+In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, selezionare **[!DNL Google Ad Manager]** e selezionare **[!UICONTROL Configure]**.
 
-![Connect, destinazione Google Ad Manager](../../assets/catalog/advertising/google-ad-manager/catalog.png)
+![Connetti destinazione Google Ad Manager](../../assets/catalog/advertising/google-ad-manager/catalog.png)
 
 >[!NOTE]
 >
->Se esiste già una connessione con questa destinazione, è possibile visualizzare un pulsante **[!UICONTROL Activate]** sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra **[!UICONTROL Activate]** e **[!UICONTROL Configure]**, fare riferimento alla sezione [Catalog](../../ui/destinations-workspace.md#catalog) della documentazione relativa all&#39;area di lavoro di destinazione.
+>Se esiste già una connessione con questa destinazione, è possibile visualizzare un pulsante **[!UICONTROL Activate]** sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra **[!UICONTROL Activate]** e **[!UICONTROL Configure]**, consulta la sezione [Catalogo](../../ui/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
 
-Nel passaggio **Setup** del flusso di lavoro di creazione della destinazione, compilare il [!UICONTROL Basic Information] per la destinazione.
+Nel passaggio **Configurazione** del flusso di lavoro di creazione della destinazione, compila il [!UICONTROL Basic Information] per la destinazione.
 
 ![Informazioni di base Google Ad Manager](../../assets/catalog/advertising/google-ad-manager/setup.png)
 
 * **[!UICONTROL Name]**: Compila il nome preferito per questa destinazione.
-* **[!UICONTROL Description]**: Facoltativo. Ad esempio, potete specificare per quale campagna state utilizzando questa destinazione.
-* **[!UICONTROL Account Type]**: Selezionate un’opzione, a seconda dell’account con Google:
-   * Utilizzate `DFP by Google` per [!DNL DoubleClick] per gli editori
-   * Utilizzare `AdX buyer` per [!DNL Google AdX]
-* **[!UICONTROL Account ID]**: Compila il tuo ID account con  [!DNL Google]. Può trattarsi dell’ID di rete o dell’ID collegamento pubblico. In genere si tratta di un ID di otto cifre.
-* **[!UICONTROL Marketing action]**: Le azioni di marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi selezionare  azioni di marketing definite dal Adobe o creare azioni di marketing personalizzate. Per ulteriori informazioni sulle azioni di marketing, consulta la [Panoramica sulle politiche di utilizzo dei dati](../../../data-governance/policies/overview.md).
+* **[!UICONTROL Description]**: Facoltativo. Ad esempio, è possibile indicare per quale campagna si utilizza questa destinazione.
+* **[!UICONTROL Account Type]**: Seleziona un’opzione, a seconda del tuo account con Google:
+   * Utilizza `DFP by Google` per [!DNL DoubleClick] per gli editori
+   * Utilizza `AdX buyer` per [!DNL Google AdX]
+* **[!UICONTROL Account ID]**: Compila il tuo ID account con  [!DNL Google]. Può essere l&#39;ID di rete o l&#39;ID del collegamento di pubblico. In genere si tratta di un ID a otto cifre.
+* **[!UICONTROL Marketing action]**: Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite da Adobi o creare una tua azione di marketing. Per ulteriori informazioni sulle azioni di marketing, consulta la [Panoramica sui criteri di utilizzo dei dati](../../../data-governance/policies/overview.md).
 
 >[!NOTE]
 >
->Quando si configura una destinazione [!DNL Google Ad Manager], è necessario utilizzare il proprio [!DNL Google Account Manager] o  rappresentante del Adobe per capire quale tipo di account si dispone.
+>Quando imposti una destinazione [!DNL Google Ad Manager], rivolgiti al tuo [!DNL Google Account Manager] o rappresentante di Adobe per capire quale tipo di account hai.
 
-## Attivare i segmenti in [!DNL Google Ad Manager]
+## Attiva i segmenti in [!DNL Google Ad Manager]
 
-Per istruzioni su come attivare i segmenti in [!DNL Google Ad Manager], vedere [Attivare i dati sulle destinazioni](../../ui/activate-destinations.md).
+Per istruzioni su come attivare i segmenti su [!DNL Google Ad Manager], consulta [Attivare i dati sulle destinazioni](../../ui/activate-destinations.md).
 
 ## Dati esportati
 
-Per verificare se i dati sono stati esportati correttamente nella destinazione [!DNL Google Ad Manager], controlla il tuo account [!DNL Google Ad Manager]. Se l&#39;attivazione ha avuto esito positivo, l&#39;audience viene popolata nel vostro account.
+Per verificare se i dati sono stati esportati correttamente nella destinazione [!DNL Google Ad Manager], controlla il tuo account [!DNL Google Ad Manager]. Se l&#39;attivazione ha avuto successo, i tipi di pubblico vengono compilati nel tuo account.
