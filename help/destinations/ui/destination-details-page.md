@@ -4,15 +4,17 @@ title: Visualizza dettagli destinazione
 description: 'La pagina dei dettagli di una singola destinazione fornisce una panoramica dei dettagli della destinazione, ad esempio il nome della destinazione, l’ID, i segmenti mappati alla destinazione, e controlla l’attivazione e l’abilitazione e la disattivazione del flusso di dati. '
 seo-description: 'La pagina dei dettagli di una singola destinazione fornisce una panoramica dei dettagli della destinazione, ad esempio il nome della destinazione, l’ID, i segmenti mappati alla destinazione, e controlla l’attivazione e l’abilitazione e la disattivazione del flusso di dati. '
 translation-type: tm+mt
-source-git-commit: 9305936ca1e73821b2fe948ff1a17a7168840cba
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '697'
 ht-degree: 0%
 
 ---
 
 
 # Visualizza dettagli destinazione
+
+## Panoramica {#overview}
 
 Nell’interfaccia utente di Adobe Experience Platform puoi visualizzare e monitorare gli attributi e le attività delle destinazioni. Questi dettagli includono il nome e l’ID della destinazione, i controlli per attivare o disattivare le destinazioni e altro ancora. I dettagli per le destinazioni batch includono anche metriche per i record di profilo attivati e una cronologia delle esecuzioni dei flussi di dati.
 
