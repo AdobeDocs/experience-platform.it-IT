@@ -3,9 +3,9 @@ keywords: mobile; branco; messaggistica;
 title: Collegamento del freno
 description: Braze è una piattaforma completa di coinvolgimento dei clienti che offre esperienze rilevanti e memorabili tra i clienti e i marchi che amano.
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '901'
 ht-degree: 1%
 
 ---
@@ -16,6 +16,8 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >La destinazione Braze in Adobe Experience Platform è attualmente in versione beta. La documentazione e le funzionalità sono soggette a modifiche.
+
+## Panoramica {#overview}
 
 La destinazione [!DNL Braze] ti aiuta a inviare i dati del profilo a [!DNL Braze].
 
