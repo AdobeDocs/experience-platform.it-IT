@@ -3,7 +3,7 @@ keywords: mobile; branco; messaggistica;
 title: Collegamento del freno
 description: Braze è una piattaforma completa di coinvolgimento dei clienti che offre esperienze rilevanti e memorabili tra i clienti e i marchi che amano.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 1%
@@ -25,7 +25,7 @@ La destinazione [!DNL Braze] ti aiuta a inviare i dati del profilo a [!DNL Braze
 
 Per inviare i dati del profilo a [!DNL Braze], è necessario prima connettersi alla destinazione.
 
-## Specifiche di destinazione {#destination-specs}
+## Specifiche di destinazione {#specifics}
 
 Tieni presente i seguenti dettagli specifici della destinazione [!DNL Braze]:
 
