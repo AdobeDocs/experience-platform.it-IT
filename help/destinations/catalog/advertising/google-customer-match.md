@@ -3,7 +3,7 @@ keywords: Google customer match;Google customer match;Google Customer Match;Goog
 title: Connessione Customer Match di Google
 description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti tra le proprietà possedute e gestite di Google, come Ricerca, Shopping, Gmail e YouTube.
 translation-type: tm+mt
-source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '1545'
 ht-degree: 0%
@@ -65,13 +65,13 @@ Prima di creare la destinazione [!DNL Google Customer Match] in Experience Platf
 
 C&#39;è anche un secondo elenco consentiti di Google a cui devi aggiungere il tuo account se intendi caricare dati utilizzando Google [User_ID](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id). Per aggiungere il tuo account all&#39;elenco consentiti, contatta il tuo account manager Google.
 
-### Requisiti di corrispondenza ID {#id-matching-requirements}
+## Requisiti di corrispondenza ID {#id-matching-requirements}
 
 [!DNL Google] richiede che non siano inviate informazioni personali identificabili (PII) in modo chiaro. Pertanto, i tipi di pubblico attivati in [!DNL Google Customer Match] possono essere contrassegnati da identificatori *con hash* come indirizzi e-mail o numeri di telefono.
 
 A seconda del tipo di ID che trasferisci in Adobe Experience Platform, devi soddisfare i requisiti corrispondenti.
 
-#### Requisiti di hashing del numero di telefono {#phone-number-hashing-requirements}
+## Requisiti di hashing del numero di telefono {#phone-number-hashing-requirements}
 
 Esistono due metodi per attivare i numeri di telefono in [!DNL Google Customer Match]:
 
@@ -82,7 +82,7 @@ Esistono due metodi per attivare i numeri di telefono in [!DNL Google Customer M
 >
 >I numeri di telefono acquisiti nello spazio dei nomi `Phone` non possono essere attivati in [!DNL Google Customer Match].
 
-#### Requisiti di hash e-mail {#hashing-requirements}
+## Requisiti di hash e-mail {#hashing-requirements}
 
 Puoi aggiungere hash agli indirizzi e-mail prima di inviarli in Adobe Experience Platform oppure utilizzare indirizzi e-mail in modo chiaro nell’Experience Platform e inserirli [!DNL Platform] all’attivazione.
 
@@ -98,7 +98,7 @@ Per informazioni sull’acquisizione degli indirizzi e-mail in Experience Platfo
 
 Se scegli di aggiungere l’hash agli indirizzi e-mail da solo, assicurati di soddisfare i requisiti di Google, descritti nei collegamenti di cui sopra.
 
-#### Utilizzo di spazi dei nomi personalizzati {#custom-namespaces}
+## Utilizzo di spazi dei nomi personalizzati {#custom-namespaces}
 
 Prima di poter utilizzare lo spazio dei nomi `User_ID` per inviare dati a Google, assicurati di sincronizzare i tuoi identificatori utilizzando [!DNL gTag]. Per informazioni dettagliate, consulta la [documentazione ufficiale di Google](https://support.google.com/google-ads/answer/9199250) .
 
@@ -155,53 +155,6 @@ Nel passaggio **[!UICONTROL Segment schedule]** , devi fornire [!UICONTROL App I
 ![ID app di Google Customer Match](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
 Per informazioni su come trovare il [!DNL App ID], consulta la [documentazione ufficiale di Google](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid).
-
-
-
-
-
-
-
-<!-- 
-To activate segments to [!DNL Google Customer Match], follow the steps below: 
-
-In **[!UICONTROL Destinations > Browse]**, select the [!DNL Google Customer Match] destination where you want to activate your segments.
-
-Click the name of the destination. This takes you to the Activate flow.
-
-![activate-flow](../../assets/catalog/advertising/google-customer-match/activate-flow.png)
-
-Note that if an activation flow already exists for a destination, you can see the segments that are currently being sent to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details.
-
-Select **[!UICONTROL Activate]**. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to [!DNL Google Customer Match].
-
-![segments-to-destination](../../assets/catalog/advertising/google-customer-match/activate-segments.png)
-
-In the **[!UICONTROL Identity mapping]** step, select which attributes to be included as an identity in this destination. Select **[!UICONTROL Add new mapping]** and browse your schema, select email and/or hashed email, and map them to the corresponding target identity.
-
-![identity mapping initial screen](../../assets/catalog/advertising/google-customer-match/identity-mapping.png) 
-
-**Plain text email address as primary identity**: If you have plain text (unhashed) email addresses as primary identity in your schema, select the email field in your **[!UICONTROL Source Attributes]** and map to the Email field in the right column under **[!UICONTROL Target Identities]**, as shown below:
-
-![select plain text emails identity](../../assets/catalog/advertising/google-customer-match/raw-email.gif) 
-
-**Hashed email address as primary identity**: If you have hashed email addresses as primary identity in your schema, select the hashed email field in your **[!UICONTROL Source Attributes]** and map to the Email_LC_SHA256 field in the right column under **[!UICONTROL Target Identities]**, as shown below:
-
-![select hashed emails identity](../../assets/catalog/advertising/google-customer-match/hashed-emails.gif)
-
-On the **[!UICONTROL Segment schedule]** page, you can set the start date for sending data to the destination.
-
-On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
-
->[!IMPORTANT]
->
->In this step, Real-time CDP checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](../../../rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
- 
-![confirm-selection](../../assets/common/data-policy-violation.png)
-
-If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
-
-![confirm-selection](../../assets/catalog/advertising/google-customer-match/review.png) -->
 
 ## Verifica che l&#39;attivazione del segmento sia avvenuta correttamente {#verify-activation}
 
