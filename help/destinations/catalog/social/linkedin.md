@@ -3,15 +3,17 @@ keywords: collegamento;collegamento;collegamento;collegamento;collegamento;desti
 title: Connessione Linkedin Matched Audiences
 description: Attiva profili per le campagne LinkedIn per il targeting del pubblico, la personalizzazione e la soppressione, in base a e-mail con hash.
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 0%
+source-wordcount: '655'
+ht-degree: 1%
 
 ---
 
 
 # [!DNL LinkedIn Matched Audiences] connection
+
+## Panoramica {#overview}
 
 Attiva profili per le campagne [!DNL LinkedIn] per il targeting del pubblico, la personalizzazione e la soppressione, in base a e-mail con hash e ID mobili.
 
