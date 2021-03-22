@@ -3,10 +3,10 @@ keywords: mobile; branco; messaggistica;
 title: Collegamento del freno
 description: Braze è una piattaforma completa di coinvolgimento dei clienti che offre esperienze rilevanti e memorabili tra i clienti e i marchi che amano.
 translation-type: tm+mt
-source-git-commit: 0759919dc458798ca4bc5f233a9cb319194ea534
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '899'
-ht-degree: 2%
+source-wordcount: '900'
+ht-degree: 1%
 
 ---
 
@@ -37,7 +37,7 @@ Tieni presente i seguenti dettagli specifici della destinazione [!DNL Braze]:
 
 In qualità di addetto al marketing, voglio indirizzare l’attività agli utenti in una destinazione di coinvolgimento mobile, con i segmenti generati in [!DNL Adobe Experience Platform]. Inoltre, voglio offrire loro esperienze personalizzate, basate sugli attributi dei loro profili [!DNL Adobe Experience Platform], non appena i segmenti e i profili vengono aggiornati in [!DNL Adobe Experience Platform].
 
-### Identità supportate {#supported-identities}
+## Identità supportate {#supported-identities}
 
 [!DNL Google Ad Manager] supporta l’attivazione delle identità descritte nella tabella seguente.
 
@@ -49,7 +49,6 @@ In qualità di addetto al marketing, voglio indirizzare l’attività agli utent
 
 **[!DNL Profile-based]** - si esportano tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome) e/o identità, in base alla mappatura del campo.
 [!DNL Adobe Experience Platform] i segmenti vengono esportati in  [!DNL Braze] sotto l’ `AdobeExperiencePlatformSegments` attributo .
-
 
 ## Connetti alla destinazione {#connect-destination}
 
@@ -128,7 +127,7 @@ Ora dovresti vedere la mappatura dei campi nell’elenco.
 
 Per aggiungere altre mappature, ripeti i passaggi precedenti.
 
-### Esempio {#mapping-example}
+## Esempio di mappatura {#mapping-example}
 
 Supponiamo che lo schema del profilo XDM e l’istanza [!DNL Braze] contengano i seguenti attributi ed identità:
 
