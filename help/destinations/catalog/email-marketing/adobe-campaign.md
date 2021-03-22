@@ -3,7 +3,7 @@ keywords: e-mail;e-mail;e-mail;destinazioni;adobe campaign;campaign
 title: Connessione Adobe Campaign
 description: Adobe Campaign è un set di soluzioni che consentono di personalizzare e distribuire campagne su tutti i canali online e offline.
 translation-type: tm+mt
-source-git-commit: b6e795d33b5590001a3270ea42995fdbad28dd88
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '793'
 ht-degree: 0%
@@ -32,7 +32,6 @@ In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, seleziona Adobe
 ![Connettersi ad Adobe Campaign](../../assets/catalog/email-marketing/adobe-campaign/catalog.png)
 
 Nel passaggio **[!UICONTROL Account]** del flusso di lavoro di destinazione Connetti , seleziona **[!UICONTROL Connection type]** per il percorso di archiviazione. Per Adobe Campaign, puoi selezionare tra **[!UICONTROL Amazon S3]**, **[!UICONTROL SFTP with Password]**, **[!UICONTROL SFTP with SSH Key]** e **[!UICONTROL Azure Blob]**. Il metodo preferito per inviare dati ad Adobe Campaign è tramite [!DNL Amazon S3] o [!DNL Azure Blob]. Compila le informazioni seguenti, a seconda del tipo di connessione, quindi seleziona **[!UICONTROL Connect]**.
-
 
 
 ![Configurazione guidata Campaign](../../assets/catalog/email-marketing/adobe-campaign/connection-type.png)
