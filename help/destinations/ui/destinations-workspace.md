@@ -1,18 +1,20 @@
 ---
 keywords: piattaforma;destinazioni;area di lavoro destinazioni;area di lavoro;ui;interfaccia destinazioni;catalogo;catalogo destinazioni;
-title: Panoramica dell’area di lavoro Destinazioni
+title: Area di lavoro Destinazioni
 description: 'L’area di lavoro Destinazioni è composta da quattro sezioni: Catalogo, Sfoglia, Account e Vista sistema, descritte nelle sezioni seguenti.'
 seo-description: In Adobe Experience Platform, seleziona Destinazioni dalla barra di navigazione a sinistra per accedere all’area di lavoro delle destinazioni.
 translation-type: tm+mt
-source-git-commit: 37b0ec0e04c45cb065eca9d262249016e80655ef
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '947'
-ht-degree: 0%
+source-wordcount: '946'
+ht-degree: 1%
 
 ---
 
 
-# Panoramica dell’area di lavoro Destinazioni {#destinations-workspace}
+# Area di lavoro Destinazioni {#destinations-workspace}
+
+## Panoramica {#overview}
 
 In Adobe Experience Platform, seleziona **[!UICONTROL Destinations]** dalla barra di navigazione a sinistra per accedere all’area di lavoro [!UICONTROL Destinations].
 
