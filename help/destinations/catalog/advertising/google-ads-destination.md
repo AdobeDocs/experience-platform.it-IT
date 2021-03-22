@@ -3,7 +3,7 @@ keywords: annunci Google;annunci google;parole adwords Google;Google AdWords;Goo
 title: Connessione Google Ads
 description: Google Ads, precedentemente noto come Google AdWords, è un servizio di pubblicità online che consente alle aziende di effettuare pubblicità a pagamento per clic tra ricerche basate su testo, visualizzazioni grafiche, video YouTube e display mobili in-app.
 translation-type: tm+mt
-source-git-commit: 0759919dc458798ca4bc5f233a9cb319194ea534
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!DNL Google Ads], precedentemente noto come  [!DNL Google AdWords], è un servizio pubblicitario online che consente alle aziende di effettuare pubblicità a pagamento per clic tra ricerche basate su testo, visualizzazioni grafiche,  [!DNL YouTube] video e display mobili in-app.
 
-## Specifiche di destinazione
+## Specifiche di destinazione {#specifics}
 
 Tieni presente i seguenti dettagli specifici delle destinazioni [!DNL Google Ads]:
 
@@ -26,7 +26,7 @@ Tieni presente i seguenti dettagli specifici delle destinazioni [!DNL Google Ads
 >
 >Se stai cercando di creare la tua prima destinazione con [!DNL Google Ads] e non hai abilitato in passato la [funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) nel servizio ID di Experience Cloud (con Audience Manager o altre applicazioni), contatta la Consulenza di Adobe o l’Assistenza clienti per abilitare le sincronizzazioni degli ID. Se in precedenza hai configurato le integrazioni Google in Audience Manager, le sincronizzazioni ID che avevi configurato per il passaggio a Platform.
 
-### Identità supportate {#supported-identities}
+## Identità supportate {#supported-identities}
 
 [!DNL Google Ad Manager] supporta l’attivazione delle identità descritte nella tabella seguente.
 
@@ -40,7 +40,7 @@ Tieni presente i seguenti dettagli specifici delle destinazioni [!DNL Google Ads
 | MAID | ID pubblicità Microsoft. Questo ID identifica in modo univoco i dispositivi con Windows 10. |  |
 | Amazon Fire TV ID | Questo ID identifica in modo univoco i Amazon Fire TV. |  |
 
-### Tipo di esportazione {#export-type}
+## Tipo di esportazione {#export-type}
 
 **Esportazione segmento** : stai esportando tutti i membri di un segmento (pubblico) nella destinazione Google.
 
