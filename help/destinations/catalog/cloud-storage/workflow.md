@@ -5,9 +5,9 @@ type: Tutorial
 description: Istruzioni per la connessione alle posizioni di archiviazione cloud
 seo-description: Istruzioni per la connessione alle posizioni di archiviazione cloud
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '499'
 ht-degree: 0%
 
 ---
@@ -15,48 +15,54 @@ ht-degree: 0%
 
 # Creare una destinazione di archiviazione cloud
 
-In questa pagina viene illustrato come connettersi alle posizioni di archiviazione cloud in Adobe Experience Platform.
+## Panoramica {#overview}
 
-In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, selezionare la destinazione di archiviazione cloud desiderata, quindi selezionare **[!UICONTROL Configure]**.
+Questa pagina spiega come connettersi alle posizioni di archiviazione cloud in Adobe Experience Platform.
+
+In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, seleziona la destinazione di archiviazione cloud preferita, quindi seleziona **[!UICONTROL Configure]**.
 
 ![Connessione alla destinazione di archiviazione cloud](../../assets/catalog/cloud-storage/workflow/connect.png)
 
 >[!NOTE]
 >
->Se esiste già una connessione con questa destinazione, è possibile visualizzare un pulsante **[!UICONTROL Activate]** sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra **[!UICONTROL Activate]** e **[!UICONTROL Configure]**, fare riferimento alla sezione [Catalog](../../ui/destinations-workspace.md#catalog) della documentazione relativa all&#39;area di lavoro di destinazione.
+>Se esiste già una connessione con questa destinazione, è possibile visualizzare un pulsante **[!UICONTROL Activate]** sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra **[!UICONTROL Activate]** e **[!UICONTROL Configure]**, consulta la sezione [Catalogo](../../ui/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
 
-Nel passaggio **[!UICONTROL Authentication]**, se in precedenza è stata impostata una connessione alla destinazione di archiviazione cloud, selezionare **[!UICONTROL Existing Account]** e selezionare la connessione esistente. In alternativa, è possibile selezionare **[!UICONTROL New Account]** per impostare una nuova connessione alla destinazione di archiviazione cloud. Compilate le credenziali di autenticazione dell&#39;account e selezionate **[!UICONTROL Connect to destination]**. Facoltativamente, puoi allegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. Questa chiave pubblica **deve essere scritta come una stringa codificata Base64.**
+## Passaggio di autenticazione {#authentication}
 
-Vedere [ destinazione Amazon S3](./amazon-s3.md), [[!DNL Amazon Kinesis]](./amazon-kinesis.md) destinazione, [[!DNL Azure Event Hubs]](./azure-event-hubs.md) destinazione e [SFTP](./sftp.md) destinazione per informazioni specifiche sulle credenziali immesse nel passaggio **Authentication**.
+Nel passaggio **[!UICONTROL Authentication]**, se in precedenza hai impostato una connessione alla destinazione di archiviazione cloud, seleziona **[!UICONTROL Existing Account]** e seleziona la connessione esistente. In alternativa, è possibile selezionare **[!UICONTROL New Account]** per impostare una nuova connessione alla destinazione di archiviazione cloud. Immetti le credenziali di autenticazione del tuo account e seleziona **[!UICONTROL Connect to destination]**. Facoltativamente, puoi allegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. Tieni presente che questa chiave pubblica **deve** essere scritta come stringa codificata Base64.
+
+Per informazioni specifiche sulle credenziali immesse nel passaggio **Autenticazione** , consulta [Destinazione Amazon S3](./amazon-s3.md), [[!DNL Amazon Kinesis]](./amazon-kinesis.md), destinazione [[!DNL Azure Event Hubs]](./azure-event-hubs.md) e [Destinazione SFTP](./sftp.md) .
 
 >[!NOTE]
 >
->La piattaforma supporta la convalida delle credenziali nel processo di autenticazione e visualizza un messaggio di errore se vengono inserite credenziali non corrette nel percorso di archiviazione cloud. In questo modo si evita di completare il flusso di lavoro con credenziali non corrette.
+>Platform supporta la convalida delle credenziali nel processo di autenticazione e visualizza un messaggio di errore se immetti credenziali errate nel percorso di archiviazione cloud. In questo modo non completa il flusso di lavoro con credenziali errate.
 
 ![Connessione alla destinazione di archiviazione cloud - passaggio di autenticazione](../../assets/catalog/cloud-storage/workflow/destination-account.png)
 
-Nel passaggio **[!UICONTROL Setup]**, immettete un **[!UICONTROL Name]** e un **[!UICONTROL Description]** per il flusso di attivazione.
+## Passaggio di installazione {#setup}
 
-Inoltre in questo passaggio, è possibile selezionare qualsiasi **[!UICONTROL Marketing action]** da applicare a questa destinazione. Le azioni di marketing indicano l&#39;intento per il quale i dati verranno esportati nella destinazione. Puoi selezionare  azioni di marketing definite dal Adobe o creare azioni di marketing personalizzate. Per ulteriori informazioni sulle azioni di marketing, consulta la [Panoramica sulle politiche di utilizzo dei dati](../../../data-governance/policies/overview.md).
+Nel passaggio **[!UICONTROL Setup]** immetti un **[!UICONTROL Name]** e un **[!UICONTROL Description]** per il flusso di attivazione.
 
-Per  destinazioni Amazon S3, inserire i **[!UICONTROL Bucket name]** e **[!UICONTROL Folder path]** nella destinazione di archiviazione cloud in cui verranno inviati i file. Selezionare **[!UICONTROL Create Destination]** dopo aver compilato i campi riportati sopra.
+Anche in questo passaggio, puoi selezionare qualsiasi **[!UICONTROL Marketing action]** che deve essere applicato a questa destinazione. Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite da Adobi o creare una tua azione di marketing. Per ulteriori informazioni sulle azioni di marketing, consulta la [Panoramica sui criteri di utilizzo dei dati](../../../data-governance/policies/overview.md).
 
-![Connessione  destinazione di archiviazione cloud Amazon S3 - passaggio di autenticazione](../../assets/catalog/cloud-storage/workflow/amazon-s3-setup.png)
+Per le destinazioni Amazon S3, inserisci **[!UICONTROL Bucket name]** e **[!UICONTROL Folder path]** nella destinazione di archiviazione cloud in cui verranno consegnati i file. Selezionare **[!UICONTROL Create Destination]** dopo aver compilato i campi precedenti.
 
-Per le destinazioni SFTP, inserire la **[!UICONTROL Folder path]** in cui verranno inviati i file. Selezionare **[!UICONTROL Create Destination]** dopo aver compilato i campi riportati sopra.
+![Connessione alla destinazione di archiviazione cloud Amazon S3 - passaggio di autenticazione](../../assets/catalog/cloud-storage/workflow/amazon-s3-setup.png)
+
+Per le destinazioni SFTP, inserisci **[!UICONTROL Folder path]** dove verranno consegnati i file. Selezionare **[!UICONTROL Create Destination]** dopo aver compilato i campi precedenti.
 
 ![Connessione alla destinazione di archiviazione cloud SFTP - passaggio di autenticazione](../../assets/catalog/cloud-storage/workflow/sftp-setup.png)
 
-Per le destinazioni [!DNL Amazon Kinesis], specifica il nome del flusso di dati esistente nel tuo account [!DNL Amazon Kinesis]. La piattaforma esporterà i dati in questo flusso. Selezionare **[!UICONTROL Create Destination]** dopo aver compilato i campi riportati sopra.
+Per le destinazioni [!DNL Amazon Kinesis] , fornisci il nome del flusso di dati esistente nel tuo account [!DNL Amazon Kinesis] . Platform esporta i dati in questo flusso. Selezionare **[!UICONTROL Create Destination]** dopo aver compilato i campi precedenti.
 
 ![Connessione alla destinazione di archiviazione cloud Kinesis - passaggio di autenticazione](../../assets/catalog/cloud-storage/workflow/kinesis-setup.png)
 
-Per le destinazioni [!DNL Azure Event Hubs], specifica il nome del flusso di dati esistente nel tuo account [!DNL Amazon Event Hubs]. La piattaforma esporterà i dati in questo flusso. Selezionare **[!UICONTROL Create Destination]** dopo aver compilato i campi riportati sopra.
+Per le destinazioni [!DNL Azure Event Hubs] , fornisci il nome del flusso di dati esistente nel tuo account [!DNL Amazon Event Hubs] . Platform esporta i dati in questo flusso. Selezionare **[!UICONTROL Create Destination]** dopo aver compilato i campi precedenti.
 
-![Connessione alla destinazione di archiviazione cloud degli hub eventi - passaggio di autenticazione](../../assets/catalog/cloud-storage/workflow/event-hubs-setup.png)
+![Connessione alla destinazione di archiviazione cloud di Event Hubs - passaggio di autenticazione](../../assets/catalog/cloud-storage/workflow/event-hubs-setup.png)
 
-La destinazione è stata creata. È possibile selezionare **[!UICONTROL Save & Exit]** se si desidera attivare i segmenti in un secondo momento oppure selezionare **[!UICONTROL Next]** per continuare il flusso di lavoro e selezionare i segmenti da attivare. In entrambi i casi, vedere la sezione successiva, [Attiva segmenti](#activate-segments), per il resto del flusso di lavoro per l&#39;esportazione dei dati.
+La destinazione viene ora creata. Puoi selezionare **[!UICONTROL Save & Exit]** se desideri attivare i segmenti in un secondo momento oppure puoi selezionare **[!UICONTROL Next]** per continuare il flusso di lavoro e selezionare i segmenti da attivare. In entrambi i casi, consulta la sezione successiva, [Attiva segmenti](#activate-segments), affinché il resto del flusso di lavoro esporti dati.
 
-## Attivare i segmenti {#activate-segments}
+## Attiva segmenti {#activate-segments}
 
-Per informazioni sul flusso di lavoro di attivazione dei segmenti, vedere [Attivare profili e segmenti in una destinazione](../../ui/activate-destinations.md).
+Per informazioni sul flusso di lavoro di attivazione dei segmenti, consulta [Attivare profili e segmenti su una destinazione](../../ui/activate-destinations.md) .
