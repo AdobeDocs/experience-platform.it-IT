@@ -3,7 +3,7 @@ keywords: connessione facebook;connessione facebook;destinazioni facebook;facebo
 title: Connessione Facebook
 description: Attiva profili per le tue campagne Facebook per il targeting del pubblico, la personalizzazione e la soppressione in base a e-mail con hash.
 translation-type: tm+mt
-source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 2%
@@ -74,7 +74,7 @@ Prima di poter inviare i segmenti di pubblico a [!DNL Facebook], assicurati di s
 
 A seconda del tipo di ID che trasferisci in Adobe Experience Platform, devi soddisfare i requisiti corrispondenti.
 
-### Requisiti di hashing del numero di telefono {#phone-number-hashing-requirements}
+## Requisiti di hashing del numero di telefono {#phone-number-hashing-requirements}
 
 Esistono due metodi per attivare i numeri di telefono in [!DNL Facebook]:
 
@@ -86,7 +86,7 @@ Esistono due metodi per attivare i numeri di telefono in [!DNL Facebook]:
 >I numeri di telefono acquisiti nello spazio dei nomi `Phone` non possono essere attivati in [!DNL Facebook].
 
 
-### Requisiti di hash e-mail {#email-hashing-requirements}
+## Requisiti di hash e-mail {#email-hashing-requirements}
 
 Puoi aggiungere hash agli indirizzi e-mail prima di inviarli in Adobe Experience Platform oppure utilizzare indirizzi e-mail in modo chiaro nell’Experience Platform e inserirli [!DNL Platform] all’attivazione.
 
@@ -109,7 +109,7 @@ Se scegli di aggiungere con hash gli indirizzi e-mail, assicurati di soddisfare 
 
 ![Trasformazione mappatura identità](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
-### Utilizzo di spazi dei nomi personalizzati {#custom-namespaces}
+## Utilizzo di spazi dei nomi personalizzati {#custom-namespaces}
 
 Prima di poter utilizzare lo spazio dei nomi `Extern_ID` per inviare dati a [!DNL Facebook], assicurati di sincronizzare i tuoi identificatori utilizzando [!DNL Facebook Pixel]. Per informazioni dettagliate, consulta la [documentazione ufficiale](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) .
 
