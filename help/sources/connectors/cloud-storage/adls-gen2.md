@@ -5,7 +5,7 @@ title: Panoramica del connettore di origine Gen2 di Azure Data Lake Storage
 topic: ' - Panoramica'
 description: Scopri come collegare Azure Data Lake Storage Gen2 a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 translation-type: tm+mt
-source-git-commit: 5c6539d45df91369c3608965fd887c013d528b98
+source-git-commit: 7fc99214272d2ce743b3666826c66f5d65e4d2ca
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Di seguito è riportato un elenco di vincoli di cui è necessario tenere conto p
 
 - I nomi dei componenti di directory e file non possono superare i 255 caratteri.
 - I nomi di directory e file non possono terminare con una barra (`/`). Se fornito, verrà rimosso automaticamente.
-- I seguenti caratteri URL riservati devono essere correttamente preceduti: `! * ' ( ) ; : @ & = + $ , / ? % # [ ]`
+- I seguenti caratteri URL riservati devono essere correttamente preceduti: `! ' ( ) ; @ & = + $ , % # [ ]`
 - I seguenti caratteri non sono consentiti: `" \ / : | < > * ?`.
 - Caratteri di percorso URL non validi. I punti di codice come `\uE000`, mentre sono validi nei nomi di file NTFS, non sono caratteri Unicode validi. Inoltre, non sono consentiti alcuni caratteri ASCII o Unicode, come caratteri di controllo (da 0x00 a 0x1F, \u0081, ecc.). Per le regole che governano le stringhe Unicode in HTTP/1.1, consulta [RFC 2616, Sezione 2.2: Regole di base](https://www.ietf.org/rfc/rfc2616.txt) e [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - I seguenti nomi di file non sono consentiti: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, carattere punto (..) e due caratteri punto (.).
