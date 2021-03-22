@@ -3,9 +3,9 @@ keywords: radiologia, estensione beemray
 title: Estensione dei raggi anabbaglianti
 description: L’estensione Beemray è una destinazione di personalizzazione in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, consulta la pagina dell'estensione in Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '508'
 ht-degree: 3%
 
 ---
@@ -13,11 +13,13 @@ ht-degree: 3%
 
 # [!DNL Beemray] Estensione {#beemray-extension}
 
-[!DNL Beemray] consente di accelerare il prodotto con il contesto situazionale. Consentendoti di acquisire informazioni, creare nuove esperienze, stimolare le interazioni e interagire con momenti che contano davvero. Beemray automatizza l&#39;intelligenza contestuale utilizzando l&#39;apprendimento automatico. Beemray si collega ad Adobe Experience Cloud e agli altri partner tecnologici. Tutto avviene in tempo reale. Questa estensione installa [!DNL Beemray] SDK sul tuo sito.
+## Panoramica {#overview}
+
+[!DNL Beemray] consente di accelerare il prodotto con il contesto situazionale. Consentendoti di acquisire informazioni, creare nuove esperienze, stimolare le interazioni e interagire con momenti che contano davvero. Beemray automatizza l&#39;intelligenza contestuale utilizzando l&#39;apprendimento automatico. Beemray si collega al Adobe Experience Cloud e al resto dei partner tecnologici. Tutto avviene in tempo reale. Questa estensione installa [!DNL Beemray] SDK sul tuo sito.
 
 Beemray è un’estensione di personalizzazione in Adobe Experience Platform. Per ulteriori informazioni sulla funzionalità di estensione, consulta la pagina dell&#39;estensione in [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
 
-Questa destinazione è un&#39;estensione [!DNL Adobe Experience Platform Launch]. Per ulteriori informazioni sul funzionamento delle estensioni [!DNL Platform Launch] in Platform, consulta [Panoramica delle estensioni Experience Platform Launch](../launch-extensions/overview.md).
+Questa destinazione è un&#39;estensione [!DNL Adobe Experience Platform Launch]. Per ulteriori informazioni sul funzionamento delle estensioni [!DNL Platform Launch] in Platform, consulta [Panoramica delle estensioni di Experience Platform Launch](../launch-extensions/overview.md).
 
 ![Estensione dei raggi anabbaglianti](../../assets/catalog/personalization/beemray/catalog.png)
 
@@ -25,7 +27,7 @@ Questa destinazione è un&#39;estensione [!DNL Adobe Experience Platform Launch]
 
 Questa estensione è disponibile nel catalogo [!DNL Destinations] per tutti i clienti che hanno acquistato Platform.
 
-Per utilizzare questa estensione, devi accedere a [!DNL Adobe Experience Platform Launch]. [!DNL Platform Launch] viene offerto ai clienti di Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contatta l’amministratore dell’organizzazione per accedere a [!DNL Platform Launch] e chiedere loro di concedere l’autorizzazione **[!UICONTROL manage_properties]** in modo da poter installare le estensioni.
+Per utilizzare questa estensione, devi accedere a [!DNL Adobe Experience Platform Launch]. [!DNL Platform Launch] è offerto ai clienti Adobe Experience Cloud come funzionalità inclusa a valore aggiunto. Contatta l’amministratore dell’organizzazione per accedere a [!DNL Platform Launch] e chiedere loro di concedere l’autorizzazione **[!UICONTROL manage_properties]** in modo da poter installare le estensioni.
 
 ## Installa l&#39;estensione {#install-extension}
 
@@ -43,7 +45,7 @@ Il flusso di lavoro ti porta a [!DNL Platform Launch] per completare l’install
 
 Per informazioni sulle opzioni di configurazione dell&#39;estensione e sul supporto dell&#39;installazione, consulta la pagina [Beemray su Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
 
-Puoi anche installare l’estensione direttamente nell’ [Interfaccia di Adobe Experience Platform Launch](https://launch.adobe.com/). Consulta [Aggiungi una nuova estensione](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension) nella documentazione [!DNL Platform Launch] .
+Puoi anche installare l&#39;estensione direttamente nell&#39; [interfaccia Adobe Experience Platform Launch](https://launch.adobe.com/). Consulta [Aggiungi una nuova estensione](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension) nella documentazione [!DNL Platform Launch] .
 
 ## Come utilizzare l&#39;estensione {#how-to-use}
 
