@@ -3,15 +3,17 @@ keywords: Google customer match;Google customer match;Google Customer Match;Goog
 title: Connessione Customer Match di Google
 description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti tra le proprietà possedute e gestite di Google, come Ricerca, Shopping, Gmail e YouTube.
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '1545'
+source-wordcount: '1546'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL Google Customer Match] connection
+
+## Panoramica {#overview}
 
 [Google Customer ](https://support.google.com/google-ads/answer/6379332?hl=en) Matchlets consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti nelle proprietà di Google possedute e gestite, ad esempio:  [!DNL Search],  [!DNL Shopping],  [!DNL Gmail], e  [!DNL YouTube].
 
