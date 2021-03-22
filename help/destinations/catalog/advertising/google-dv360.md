@@ -3,7 +3,7 @@ keywords: DoubleClick Bid Manager;DoubleClick bid manager;DoubleClick;Display & 
 title: Connessione Google Display e Video 360
 description: Display & Video 360, precedentemente noto come DoubleClick Bid Manager è uno strumento utilizzato per eseguire il retargeting e le campagne digitali mirate al pubblico tra le origini di inventario Display, Video e Mobile.
 translation-type: tm+mt
-source-git-commit: 0759919dc458798ca4bc5f233a9cb319194ea534
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!DNL Display & Video 360], precedentemente noto come  [!DNL DoubleClick Bid Manager], è uno strumento utilizzato per eseguire campagne di retargeting e campagne digitali mirate per il pubblico tra le sorgenti di inventario Display, Video e Mobile.
 
-## Specifiche di destinazione
+## Specifiche di destinazione {#specifics}
 
 Tieni presente i seguenti dettagli specifici delle destinazioni [!DNL Google Display & Video 360]:
 
@@ -26,7 +26,7 @@ Tieni presente i seguenti dettagli specifici delle destinazioni [!DNL Google Dis
 >
 >Se stai cercando di creare la tua prima destinazione con Google Display &amp; Video 360 e non hai abilitato la [funzionalità di sincronizzazione ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) nel servizio ID di Experience Cloud in passato (con Adobe Audience Manager o altre applicazioni), contatta la Consulenza Adobe o l&#39;Assistenza clienti per abilitare le sincronizzazioni degli ID. Se in precedenza hai configurato le integrazioni Google in Audience Manager, le sincronizzazioni ID che avevi configurato per il passaggio a Platform.
 
-### Identità supportate {#supported-identities}
+## Identità supportate {#supported-identities}
 
 [!DNL Google Ad Manager] supporta l’attivazione delle identità descritte nella tabella seguente.
 
@@ -40,7 +40,7 @@ Tieni presente i seguenti dettagli specifici delle destinazioni [!DNL Google Dis
 | MAID | ID pubblicità Microsoft. Questo ID identifica in modo univoco i dispositivi con Windows 10. |  |
 | Amazon Fire TV ID | Questo ID identifica in modo univoco i Amazon Fire TV. |  |
 
-### Tipo di esportazione {#export-type}
+## Tipo di esportazione {#export-type}
 
 **Esportazione segmento** : stai esportando tutti i membri di un segmento (pubblico) nella destinazione Google.
 
@@ -52,7 +52,7 @@ Tieni presente i seguenti dettagli specifici delle destinazioni [!DNL Google Dis
 >
 >L’elenco consentiti è obbligatorio prima di configurare la tua prima destinazione [!DNL Google Display & Video 360] in Platform. Prima di creare una destinazione, assicurati che Google abbia completato il processo di elenco consentiti descritto di seguito.
 
-Prima di creare la destinazione [!DNL Google Display & Video 360] in Platform, è necessario contattare Google chiedendo di inserire un Adobe nell’elenco dei provider di dati consentiti e di aggiungere l’account all’elenco consentiti. Contatta Google e fornisci le seguenti informazioni:
+Prima di creare la destinazione [!DNL Google Display & Video 360] in Platform, è necessario contattare Google chiedendo di inserire l’Adobe nell’elenco dei provider di dati consentiti e di aggiungere l’account all’elenco consentiti. Contatta Google e fornisci le seguenti informazioni:
 
 * **ID**  account: questo è l&#39;ID account Adobe con Google. Per ottenere questo ID, contatta l’Assistenza clienti Adobe o il tuo rappresentante Adobe.
 * **ID**  cliente: questo è l&#39;ID account cliente Adobe con Google. Per ottenere questo ID, contatta l’Assistenza clienti Adobe o il tuo rappresentante Adobe.
