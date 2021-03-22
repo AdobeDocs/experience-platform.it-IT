@@ -3,9 +3,9 @@ keywords: collegamento;collegamento;collegamento;collegamento;collegamento;desti
 title: Connessione Linkedin Matched Audiences
 description: Attiva profili per le campagne LinkedIn per il targeting del pubblico, la personalizzazione e la soppressione, in base a e-mail con hash.
 translation-type: tm+mt
-source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '654'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,7 @@ Per comprendere meglio come e quando utilizzare la destinazione [!DNL LinkedIn M
 
 Una società di software organizza una conferenza e desidera mantenere i contatti con i partecipanti e mostrare loro offerte personalizzate in base al loro stato di partecipazione alla conferenza. L’azienda può acquisire indirizzi e-mail o ID di dispositivi mobili dal proprio [!DNL CRM] in Adobe Experience Platform. Quindi, possono creare segmenti dai propri dati offline e inviare questi segmenti alla piattaforma social [!DNL LinkedIn] ottimizzando le spese pubblicitarie.
 
-## Specifiche di destinazione {#destination-specs}
-
-[!DNL LinkedIn Matched Audiences] supporta l&#39;attivazione delle seguenti identità: indirizzi e-mail con hash  [!DNL GAID] e  [!DNL IDFA].
-
-### Identità supportate {#supported-identities}
+## Identità supportate {#supported-identities}
 
 [!DNL LinkedIn Matched Audiences] supporta l’attivazione delle identità descritte nella tabella seguente. Ulteriori informazioni su [identità](/help/identity-service/namespaces.md).
 
@@ -38,23 +34,23 @@ Una società di software organizza una conferenza e desidera mantenere i contatt
 | email_lc_sha256 | Indirizzi e-mail con hash con l’algoritmo SHA256 | Gli indirizzi e-mail con hash SHA256 e di testo normale sono supportati da Adobe Experience Platform. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza rispettivamente i namespace appropriati per le e-mail in testo normale e con hash. Quando il campo di origine contiene attributi senza hash, seleziona l’opzione **[!UICONTROL Apply transformation]** per fare in modo che [!DNL Platform] hash automaticamente i dati all’attivazione. |
 
 
-### Tipo di esportazione {#export-type}
+## Tipo di esportazione {#export-type}
 
 **Esportazione segmento** : esporta tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono e altri) utilizzati nella  [!DNL LinkedIn Matched Audiences] destinazione.
 
-### Prerequisiti per l’account LinkedIn {#LinkedIn-account-prerequisites}
+## Prerequisiti per l’account LinkedIn {#LinkedIn-account-prerequisites}
 
 Prima di poter utilizzare la destinazione [!UICONTROL LinkedIn Matched Audience] , assicurati che l&#39;account [!DNL LinkedIn Campaign Manager] disponga del livello di autorizzazione [!DNL Creative Manager] o superiore.
 
 Per informazioni su come modificare le [!DNL LinkedIn Campaign Manager] autorizzazioni utente, consulta [Aggiungere, modificare e rimuovere le autorizzazioni utente sugli account pubblicitari](https://www.linkedin.com/help/lms/answer/5753) nella documentazione di LinkedIn.
 
-### Requisiti di corrispondenza ID {#id-matching-requirements}
+## Requisiti di corrispondenza ID {#id-matching-requirements}
 
 [!DNL LinkedIn Matched Audiences] richiede che non siano inviate informazioni personali identificabili (PII) in modo chiaro. Pertanto, i tipi di pubblico attivati in [!DNL LinkedIn Matched Audiences] possono essere cancellati dagli identificatori *hashed*, come indirizzi e-mail o ID di dispositivi mobili.
 
 A seconda del tipo di ID che trasferisci in Adobe Experience Platform, devi soddisfare i requisiti corrispondenti.
 
-#### Requisiti di hash e-mail {#email-hashing-requirements}
+## Requisiti di hash e-mail {#email-hashing-requirements}
 
 Puoi aggiungere hash agli indirizzi e-mail prima di inviarli in Adobe Experience Platform oppure utilizzare indirizzi e-mail in modo chiaro nell’Experience Platform e inserirli [!DNL Platform] all’attivazione.
 
