@@ -3,9 +3,9 @@ keywords: DoubleClick Bid Manager;DoubleClick bid manager;DoubleClick;Display & 
 title: Connessione Google Display e Video 360
 description: Display & Video 360, precedentemente noto come DoubleClick Bid Manager è uno strumento utilizzato per eseguire il retargeting e le campagne digitali mirate al pubblico tra le origini di inventario Display, Video e Mobile.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 Tieni presente i seguenti dettagli specifici delle destinazioni [!DNL Google Display & Video 360]:
 
 * I tipi di pubblico attivati vengono creati a livello di programmazione nella piattaforma Google.
-* Al momento, Platform non include una metrica di misurazione per convalidare l’attivazione. Consulta i conteggi del pubblico in Google per convalidare l’integrazione e comprendere le dimensioni del targeting del pubblico.
+* [!DNL Platform] al momento non include una metrica di misurazione per convalidare l’attivazione. Consulta i conteggi del pubblico in Google per convalidare l’integrazione e comprendere le dimensioni del targeting del pubblico.
 
 >[!IMPORTANT]
 >
@@ -54,7 +54,7 @@ Tieni presente i seguenti dettagli specifici delle destinazioni [!DNL Google Dis
 >
 >L’elenco consentiti è obbligatorio prima di configurare la tua prima destinazione [!DNL Google Display & Video 360] in Platform. Prima di creare una destinazione, assicurati che Google abbia completato il processo di elenco consentiti descritto di seguito.
 
-Prima di creare la destinazione [!DNL Google Display & Video 360] in Platform, è necessario contattare Google chiedendo di inserire l’Adobe nell’elenco dei provider di dati consentiti e di aggiungere l’account all’elenco consentiti. Contatta Google e fornisci le seguenti informazioni:
+Prima di creare la destinazione [!DNL Google Display & Video 360] in Platform, è necessario contattare Google chiedendo di inserire un Adobe nell’elenco dei provider di dati consentiti e di aggiungere l’account all’elenco consentiti. Contatta Google e fornisci le seguenti informazioni:
 
 * **ID**  account: questo è l&#39;ID account Adobe con Google. Per ottenere questo ID, contatta l’Assistenza clienti Adobe o il tuo rappresentante Adobe.
 * **ID**  cliente: questo è l&#39;ID account cliente Adobe con Google. Per ottenere questo ID, contatta l’Assistenza clienti Adobe o il tuo rappresentante Adobe.
