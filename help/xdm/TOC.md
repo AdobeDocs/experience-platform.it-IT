@@ -6,10 +6,10 @@ breadcrumb-title: Guida di Data Model (XDM)
 user-guide-description: Utilizza le classi e i mixin Experience Data Model (XDM) per standardizzare i dati dell’esperienza.
 feature: Schemi
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: b99af98c99a75863ed8e8408841d93aa17d61ae0
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 22%
+source-wordcount: '259'
+ht-degree: 20%
 
 ---
 
@@ -22,6 +22,12 @@ ht-degree: 22%
    * [Best practice per la modellazione dei dati](schema/best-practices.md)
    * [Vincoli del tipo di campo XDM](schema/field-constraints.md)
    * [Dizionario dei campi XDM](schema/field-dictionary.md)
+   * Modelli di dati di settore {#industries}
+      * [Panoramica](./schema/industries/overview.md)
+      * [ERD del modello dati retail](./schema/industries/retail.md)
+      * [Modello di dati per i servizi finanziari ERD](./schema/industries/financial.md)
+      * [Modello dati di viaggio e ospitalità ERD](./schema/industries/travel-hospitality.md)
+      * [Modello dati di telecomunicazione ERD](./schema/industries/telecom.md)
 * Classi {#classes}
    * [Profilo individuale XDM](./classes/individual-profile.md)
    * [ExperienceEvent XDM](./classes/experienceevent.md)
@@ -40,7 +46,7 @@ ht-degree: 22%
    * [Applicazione](./data-types/application.md)
    * [Beacon](./data-types/beacon.md)
    * [Dettagli del browser](./data-types/browser-details.md)
-   * [Commercio](./data-types/commerce.md)
+   * [Commerce](./data-types/commerce.md)
    * [Consensi e preferenze](./data-types/consents.md)
    * [Dispositivo](./data-types/device.md)
    * [Indirizzo e-mail](./data-types/email-address.md)
