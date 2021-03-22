@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;destinazione kinesis;kinesis
 title: Connessione Amazon Kinesis
 description: Crea una connessione in uscita in tempo reale all’archiviazione Amazon Kinesis per lo streaming dei dati da Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '504'
 ht-degree: 2%
 
 ---
@@ -43,14 +43,14 @@ Per istruzioni su come connettersi alle destinazioni di archiviazione cloud, inc
 
 Per le destinazioni [!DNL Amazon Kinesis] , inserisci le seguenti informazioni nel flusso di lavoro crea destinazione :
 
-### Nel passaggio Autenticazione {#authentication-step}
+## Passaggio di autenticazione {#authentication-step}
 
 * **[!DNL Amazon Web Services]chiave di accesso e chiave** segreta: In  [!DNL Amazon Web Services], genera una  `access key - secret access key` coppia per concedere a Platform l’accesso al tuo  [!DNL Amazon Kinesis] account. Ulteriori informazioni sono disponibili nella [documentazione di Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **regione**: Indicare la  [!DNL Amazon Web Services] regione a cui inviare i dati.
 
 ![Campi di input nel passaggio dell’account](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
 
-### Nel passaggio Configurazione {#setup-step}
+## Passaggio di installazione {#setup-step}
 
 * **Nome**: Specifica un nome per la connessione a  [!DNL Amazon Kinesis]
 * **Descrizione**: Immetti una descrizione della connessione a  [!DNL Amazon Kinesis].
