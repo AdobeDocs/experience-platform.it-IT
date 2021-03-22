@@ -6,10 +6,10 @@ user-guide-description: Attiva i dati noti e sconosciuti per campagne di marketi
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinazioni
 translation-type: tm+mt
-source-git-commit: 3ae5efca9744e5f5edde56038beab93be5157de3
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 10%
+source-wordcount: '463'
+ht-degree: 11%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 10%
    * [Connettiti alle destinazioni di streaming e attiva i dati utilizzando l’API del servizio di flusso](./api/streaming-destinations.md)
    * [Connettiti alle destinazioni di marketing e-mail e attiva i dati utilizzando l’API del servizio di flusso](./api/email-marketing.md)
 * Guide dell&#39;interfaccia utente {#ui}
-   * [Panoramica dell’area di lavoro Destinazioni](./ui/destinations-workspace.md)
+   * [Area di lavoro Destinazioni](./ui/destinations-workspace.md)
    * [Visualizza dettagli destinazione](./ui/destination-details-page.md)
    * [Connessione a una destinazione](./ui/connect-destination.md)
    * [Attivare profili e segmenti in una destinazione](./ui/activate-destinations.md)
