@@ -3,15 +3,17 @@ keywords: pubblicità; il banco commerciale;
 title: Il collegamento del Trade Desk
 description: 'Il Trade Desk è una piattaforma self-service per gli acquirenti di annunci che esegue il retargeting e campagne digitali mirate per il pubblico tra le varie fonti di visualizzazione, video e inventario mobile. '
 translation-type: tm+mt
-source-git-commit: 0ef107963f7da377070eb845fd7c24218a99464b
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '577'
 ht-degree: 0%
 
 ---
 
 
 # [!DNL The Trade Desk] connection
+
+## Panoramica {#overview}
 
 [!DNL The Trade Desk] La destinazione ti consente di inviare i dati del profilo a  [!DNL The Trade Desk].
 
