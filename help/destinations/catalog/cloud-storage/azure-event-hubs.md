@@ -3,9 +3,9 @@ keywords: Destinazione hub eventi Azure;hub eventi azure;azure eventhub
 title: (Beta) Connessione ad Azure Event Hubs
 description: Crea una connessione in uscita in tempo reale all’archiviazione Azure Event Hubs per lo streaming dei dati dall’Experience Platform.
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '531'
 ht-degree: 2%
 
 ---
@@ -43,14 +43,14 @@ Per istruzioni su come connettersi alle destinazioni di archiviazione cloud, tra
 
 Per le destinazioni [!DNL Azure Event Hubs] , inserisci le seguenti informazioni nel flusso di lavoro crea destinazione :
 
-### Nel passaggio Autenticazione {#authentication-step}
+## Passaggio di autenticazione {#authentication-step}
 
 * **[!UICONTROL SAS Key Name]** e  **[!UICONTROL SAS Key]**: Immettere il nome e la chiave della chiave SAS. Informazioni sull&#39;autenticazione in [!DNL Azure Event Hubs] con chiavi SAS nella [documentazione Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL Namespace]**: Inserisci lo  [!DNL Azure Event Hubs] spazio dei nomi. Ulteriori informazioni sui namespace [!DNL Azure Event Hubs] nella [documentazione Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 
 ![Input richiesto nel passaggio di autenticazione](../../assets/catalog/cloud-storage/event-hubs/authentication.png)
 
-### Nel passaggio Configurazione {#setup-step}
+## Passaggio di installazione {#setup-step}
 
 * **[!UICONTROL Name]**: Immetti un nome per la connessione a  [!DNL Azure Event Hubs].
 * **[!UICONTROL Description]**: Fornire una descrizione della connessione.  Esempi: &quot;Clienti di livello Premium&quot;, &quot;Maschi interessati al kitesurfing&quot;.
