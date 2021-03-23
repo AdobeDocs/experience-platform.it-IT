@@ -4,7 +4,7 @@ title: 'ELENCO CONSENTITI di indirizzi IP per le destinazioni di archiviazione c
 type: Documentazione
 description: Questa pagina fornisce intervalli IP che è possibile aggiungere all’elenco consentiti per esportare in modo sicuro i dati dall’Experience Platform al server SFTP, all’archiviazione Amazon S3 o Azure Blob.
 translation-type: tm+mt
-source-git-commit: 7d7568de57cf79843a833a05b9bdfa6eb048bdbc
+source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 0%
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # ELENCO CONSENTITI di indirizzi IP per le destinazioni di archiviazione cloud {#ip-address-allow-list}
 
-## Panoramica {#overview}
-
 >[!IMPORTANT]
 >
 > * Adobe consiglia di aggiungere un segnalibro a questa pagina e di rivisitarla ogni tre mesi per verificare la presenza degli indirizzi IP più recenti. Adobe non fornisce notifiche sui nuovi intervalli IP.
 > * Mentre Adobe supporta le esportazioni di dati verso server SFTP, le posizioni di archiviazione cloud consigliate per l’esportazione di dati sono [!DNL Amazon S3] e [!DNL Azure Blob].
 
+
+## Panoramica {#overview}
 
 Questa pagina fornisce intervalli IP che è possibile aggiungere all&#39;elenco consentiti per esportare in modo sicuro i dati dall&#39;Experience Platform al server [SFTP](./sftp.md), [Amazon S3](./amazon-s3.md) o all&#39;archiviazione [Azure Blob](./azure-blob.md).
 
