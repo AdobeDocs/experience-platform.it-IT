@@ -4,9 +4,9 @@ title: Area di lavoro Destinazioni
 description: 'L’area di lavoro Destinazioni è composta da quattro sezioni: Catalogo, Sfoglia, Account e Vista sistema, descritte nelle sezioni seguenti.'
 seo-description: In Adobe Experience Platform, seleziona Destinazioni dalla barra di navigazione a sinistra per accedere all’area di lavoro delle destinazioni.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '934'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ L’area di lavoro [!UICONTROL Destinations] è costituita da quattro sezioni, [
 
 La scheda **[!UICONTROL Catalog]** visualizza un elenco di tutte le destinazioni disponibili in Platform, a cui puoi inviare i dati.
 
-L’interfaccia utente di Platform fornisce una serie di opzioni di ricerca e filtro nella pagina del catalogo delle destinazioni:
+L’interfaccia utente di Platform fornisce diverse opzioni di ricerca e filtro nella pagina del catalogo delle destinazioni:
 
 * Utilizza la funzionalità di ricerca nella pagina per individuare una destinazione specifica.
 * Filtrare le destinazioni utilizzando il controllo [!UICONTROL Categories].
@@ -35,7 +35,7 @@ L’interfaccia utente di Platform fornisce una serie di opzioni di ricerca e fi
 
 ![demo di filtro e ricerca delle destinazioni](../assets/ui/workspace/destinations-search-and-filter.gif)
 
-Le schede di destinazione contengono un controllo **[!UICONTROL Configure]** o **[!UICONTROL Activate]** e un controllo secondario che offre più opzioni. Di seguito sono descritte tutte le seguenti operazioni:
+Le schede di destinazione contengono un controllo **[!UICONTROL Configure]** o **[!UICONTROL Activate]** e un controllo secondario che offre più opzioni. Questi controlli sono descritti di seguito:
 
 | Controllo | Descrizione |
 ---------|----------
@@ -47,7 +47,7 @@ Le schede di destinazione contengono un controllo **[!UICONTROL Configure]** o *
 
 ![Controlli sulla scheda delle destinazioni](../assets/ui/workspace/destination-card-options.png)
 
-Seleziona una scheda di destinazione nel catalogo per aprire la barra a destra.  Qui puoi vedere una descrizione della destinazione. La barra a destra fornisce gli stessi controlli descritti nella tabella precedente, nonché una descrizione della destinazione e un’indicazione della categoria e del tipo di destinazione.
+Seleziona una scheda di destinazione nel catalogo per aprire la barra a destra. Qui puoi vedere una descrizione della destinazione. La barra a destra fornisce gli stessi controlli descritti nella tabella precedente, nonché una descrizione della destinazione e un’indicazione della categoria e del tipo di destinazione.
 
 ![Opzioni del catalogo di destinazione](../assets/ui/workspace/destination-right-rail.png)
 
@@ -98,14 +98,14 @@ La scheda **[!UICONTROL Browse]** visualizza le destinazioni con le quali hai st
 | Elemento | Descrizione |
 ---------|----------
 | Nome | Nome fornito per il flusso di attivazione a questa destinazione. La stessa colonna include due controlli: [!UICONTROL Activate ] e [!UICONTROL Delete destination]. |
-| Stato ultima esecuzione flusso | Lo stato dell’ultima esecuzione del flusso di dati. Per ulteriori informazioni sulle esecuzioni dei flussi di dati, consulta [Visualizzare i dettagli di destinazione](destination-details-page.md) . |
-| Data ultima esecuzione flusso | Ora e data dell’ultima esecuzione del flusso di dati. Per ulteriori informazioni sulle esecuzioni dei flussi di dati, consulta [Visualizzare i dettagli di destinazione](destination-details-page.md) . |
+| [!UICONTROL Last Flow Run Status] | Lo stato dell’ultima esecuzione del flusso di dati. Per ulteriori informazioni sulle esecuzioni dei flussi di dati, consulta [Visualizzare i dettagli di destinazione](destination-details-page.md) . |
+| [!UICONTROL Last Flow Run Date] | Ora e data dell’ultima esecuzione del flusso di dati. Per ulteriori informazioni sulle esecuzioni dei flussi di dati, consulta [Visualizzare i dettagli di destinazione](destination-details-page.md) . |
 | [!UICONTROL Destination] | La piattaforma di destinazione selezionata per il flusso di attivazione. |
 | [!UICONTROL Connection Type] | Rappresenta il tipo di connessione al bucket di archiviazione o alla destinazione. <ul><li>Per le destinazioni di marketing e-mail: Può essere S3, FTP o [!DNL Azure Blob].</li><li>Per le destinazioni pubblicitarie in tempo reale: Server-to-server.</li><li>Per le destinazioni di streaming: Può essere [!DNL Azure Event Hubs] o [!DNL Amazon Kinesis].</li></ul> |
 | [!UICONTROL Username] | Le credenziali account selezionate per il flusso di destinazione. |
 | [!UICONTROL Activation Data] | Indica il numero di segmenti che vengono attivati nella destinazione. Seleziona questo controllo per ulteriori informazioni sui segmenti attivati. Per ulteriori informazioni sui segmenti attivati, consulta [Dati di attivazione](/help/destinations/ui/destination-details-page.md#activation-data) nella pagina dei dettagli della destinazione . |
 | [!UICONTROL Created] | Data e ora UTC in cui è stato creato il flusso di attivazione alla destinazione. |
-| [!UICONTROL Status] | `Active` oppure `Inactive`. Indica se i dati sono attualmente attivati per questa destinazione. Per modificare lo stato, consulta [Disabilita attivazione](./activate-destinations.md#disable-activation). |
+| [!UICONTROL Status] | `Active` oppure `Inactive`. Indica se i dati vengono attivati per questa destinazione. Per modificare lo stato, consulta [Disabilita attivazione](./activate-destinations.md#disable-activation). |
 
 Fai clic su una riga di destinazione per visualizzare ulteriori informazioni sulla destinazione nella barra a destra.
 
