@@ -1,12 +1,12 @@
 ---
 keywords: destinazioni;destinazione;pagina dettagli destinazioni;pagina dettagli destinazioni
 title: Visualizza dettagli destinazione
-description: 'La pagina dei dettagli di una singola destinazione fornisce una panoramica dei dettagli della destinazione, ad esempio il nome della destinazione, l’ID, i segmenti mappati alla destinazione, e controlla l’attivazione e l’abilitazione e la disattivazione del flusso di dati. '
-seo-description: 'La pagina dei dettagli di una singola destinazione fornisce una panoramica dei dettagli della destinazione, ad esempio il nome della destinazione, l’ID, i segmenti mappati alla destinazione, e controlla l’attivazione e l’abilitazione e la disattivazione del flusso di dati. '
+description: 'La pagina dei dettagli di una singola destinazione fornisce una panoramica dei dettagli della destinazione. I dettagli della destinazione includono il nome della destinazione, l’ID, i segmenti mappati alla destinazione e i controlli per modificare l’attivazione e per abilitare e disabilitare il flusso di dati. '
+seo-description: 'La pagina dei dettagli di una singola destinazione fornisce una panoramica dei dettagli della destinazione. I dettagli della destinazione includono il nome della destinazione, l’ID, i segmenti mappati alla destinazione e i controlli per modificare l’attivazione e per abilitare e disabilitare il flusso di dati. '
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '698'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Viene visualizzata la pagina dei dettagli della destinazione, con i relativi con
 
 ![](../assets/ui/details-page/details.png)
 
-Inoltre, nella scheda Sfoglia è possibile scegliere di eliminare il flusso di dati selezionato selezionando l&#39;icona ![cestino](../assets/ui/details-page/trash-icon.png). Tutti i segmenti attivati in una destinazione verranno demappati prima che il flusso di dati venga eliminato.
+Inoltre, nella scheda Sfoglia è possibile scegliere di eliminare il flusso di dati selezionato selezionando l&#39;icona ![cestino](../assets/ui/details-page/trash-icon.png). Tutti i segmenti attivati nelle destinazioni verranno demappati prima che il flusso di dati venga eliminato.
 
 ![](../assets/ui/details-page/delete-flow.png)
 
