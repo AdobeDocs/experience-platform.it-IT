@@ -3,9 +3,9 @@ keywords: e-mail;e-mail;e-mail;destinazioni;adobe campaign;campaign
 title: Connessione Adobe Campaign
 description: Adobe Campaign è un set di soluzioni che consentono di personalizzare e distribuire campagne su tutti i canali online e offline.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -38,12 +38,12 @@ Nel passaggio **[!UICONTROL Account]** del flusso di lavoro di destinazione Conn
 
 ![Configurazione guidata Campaign](../../assets/catalog/email-marketing/adobe-campaign/connection-type.png)
 
-- Per le connessioni **[!UICONTROL Amazon S3]**, devi fornire il tuo ID chiave di accesso e la chiave di accesso segreto.
-- Per le connessioni **[!UICONTROL SFTP with Password]**, è necessario specificare Dominio, Porta, Nome utente e Password.
-- Per le connessioni **[!UICONTROL SFTP with SSH Key]**, è necessario specificare Dominio, Porta, Nome utente e Chiave SSH.
+- Per le connessioni **[!UICONTROL Amazon S3]**, è necessario fornire i valori [!UICONTROL Access Key ID] e [!UICONTROL Secret Access Key].
+- Per le connessioni **[!UICONTROL SFTP with Password]**, è necessario specificare [!UICONTROL Domain], [!UICONTROL Port], [!UICONTROL Username] e [!UICONTROL Password].
+- Per le connessioni **[!UICONTROL SFTP with SSH Key]**, è necessario specificare [!UICONTROL Domain], [!UICONTROL Port], [!UICONTROL Username] e [!UICONTROL SSH Key].
 - Per le connessioni **[!UICONTROL Azure Blob]**, è necessario fornire una stringa di connessione.
 
-Facoltativamente, puoi allegare la tua chiave pubblica in formato RSA per aggiungere la crittografia con PGP/GPG ai file esportati nella sezione **[!UICONTROL Key]** . Tieni presente che questa chiave pubblica **deve** essere scritta come stringa codificata Base64.
+Facoltativamente, puoi allegare la tua chiave pubblica in formato RSA per aggiungere la crittografia con PGP/GPG ai file esportati nella sezione **[!UICONTROL Key]** . La chiave pubblica deve essere scritta come stringa codificata [!DNL Base64].
 
 ![Compila le informazioni di Campaign](../../assets/catalog/email-marketing/adobe-campaign/account-info.png)
 
@@ -54,7 +54,7 @@ In **[!UICONTROL Account authentication]**, compila le informazioni rilevanti pe
 - **[!UICONTROL Folder Path]**: Fornisci il percorso nel percorso di archiviazione in cui  [!DNL Platform] verranno depositati i dati di esportazione come file CSV o delimitati da tabulazioni.
 - **[!UICONTROL Container]**:  *Per connessioni* Blob. Il contenitore contenente il BLOB nel percorso della cartella è in.
 - **[!UICONTROL File Format]**:  **** CSVo  **TAB_DELIMITTED**. Selezionare il formato di file da esportare nel percorso di archiviazione.
-- **[!UICONTROL Marketing actions]**: Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite da Adobi o creare una tua azione di marketing. Per ulteriori informazioni sulle azioni di marketing, consulta la pagina [Panoramica dei criteri di utilizzo dei dati](../../../data-governance/policies/overview.md) . Consulta anche [azioni di marketing definite in Adobe](../../../data-governance/policies/overview.md#core-actions) nello stesso documento.
+- **[!UICONTROL Marketing actions]**: Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite da Adobi o creare una tua azione di marketing. Per ulteriori informazioni sulle azioni di marketing, consulta la pagina [Panoramica dei criteri di utilizzo dei dati](../../../data-governance/policies/overview.md) .
 
 ![Informazioni di base su Campaign](../../assets/catalog/email-marketing/adobe-campaign/basic-information.png)
 
@@ -66,7 +66,7 @@ Per informazioni sul flusso di lavoro di attivazione dei segmenti, consulta [Att
 
 ## Attributi di destinazione {#destination-attributes}
 
-Quando si attivano [segmenti](../../ui/activate-destinations.md) nella destinazione Adobe Campaign, si consiglia di selezionare un identificatore univoco dal [schema di unione](../../../profile/home.md#profile-fragments-and-union-schemas). Seleziona l’identificatore univoco e tutti gli altri campi XDM da esportare nella destinazione. Per ulteriori informazioni, consulta [Selezionare i campi dello schema da utilizzare come attributi di destinazione nei file esportati](./overview.md#destination-attributes) nella documentazione sulle destinazioni di marketing e-mail.
+Quando si attivano [segmenti](../../ui/activate-destinations.md) nella destinazione Adobe Campaign, l&#39;Adobe consiglia di selezionare un identificatore univoco dal [schema di unione](../../../profile/home.md#profile-fragments-and-union-schemas). Seleziona l’identificatore univoco e tutti gli altri campi XDM da esportare nella destinazione. Per ulteriori informazioni, consulta [Selezionare i campi dello schema da utilizzare come attributi di destinazione nei file esportati](./overview.md#destination-attributes).
 
 ## Dati esportati {#exported-data}
 
