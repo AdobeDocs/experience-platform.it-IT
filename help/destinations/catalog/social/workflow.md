@@ -4,7 +4,7 @@ title: Creare una destinazione di social network
 type: Tutorial
 description: Scopri come connettersi agli account di annunci social network in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
 workflow-type: tm+mt
 source-wordcount: '433'
 ht-degree: 0%
@@ -54,7 +54,7 @@ Nel passaggio **[!UICONTROL Setup]** , immetti un [!UICONTROL Name] e un [!UICON
 >
 > Per le destinazioni [!DNL LinkedIn], **[!UICONTROL Account ID]** è il tuo [!DNL LinkedIn Campaign Manager Account ID]. Puoi trovare questo ID in [!DNL LinkedIn Campaign Manager].
 
-Anche in questo passaggio, puoi selezionare qualsiasi **[!UICONTROL Marketing action]** che deve essere applicato a questa destinazione. Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite da Adobi o creare una tua azione di marketing. Per ulteriori informazioni sulle azioni di marketing, consulta la [Panoramica sui criteri di utilizzo dei dati](../../../data-governance/policies/overview.md).
+A questo passaggio, puoi anche selezionare qualsiasi **[!UICONTROL Marketing action]** che deve essere applicato a questa destinazione. Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite da Adobi o creare una tua azione di marketing. Per ulteriori informazioni sulle azioni di marketing, consulta la [Panoramica sui criteri di utilizzo dei dati](../../../data-governance/policies/overview.md).
 
 Selezionare **[!UICONTROL Create Destination]** dopo aver compilato i campi precedenti.
 
