@@ -5,7 +5,7 @@ type: Tutorial
 description: Istruzioni per la connessione alle posizioni di archiviazione cloud
 seo-description: Istruzioni per la connessione alle posizioni di archiviazione cloud
 translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+source-git-commit: 632003773100ec8ef0389840695a1c75a1aa663d
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 0%
@@ -27,9 +27,9 @@ In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, seleziona la de
 >
 >Se esiste già una connessione con questa destinazione, è possibile visualizzare un pulsante **[!UICONTROL Activate]** sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra **[!UICONTROL Activate]** e **[!UICONTROL Configure]**, consulta la sezione [Catalogo](../../ui/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
 
-## Passaggio di autenticazione {#authentication}
+## Passaggio account {#account}
 
-Nel passaggio **[!UICONTROL Authentication]**, se in precedenza hai impostato una connessione alla destinazione di archiviazione cloud, seleziona **[!UICONTROL Existing Account]** e seleziona la connessione esistente. In alternativa, è possibile selezionare **[!UICONTROL New Account]** per impostare una nuova connessione alla destinazione di archiviazione cloud. Immetti le credenziali di autenticazione del tuo account e seleziona **[!UICONTROL Connect to destination]**. Facoltativamente, puoi allegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. La chiave pubblica deve essere scritta come stringa codificata [!DNL Base64].
+Nel passaggio **[!UICONTROL Account]**, se in precedenza hai impostato una connessione alla destinazione di archiviazione cloud, seleziona **[!UICONTROL Existing Account]** e seleziona la connessione esistente. In alternativa, è possibile selezionare **[!UICONTROL New Account]** per impostare una nuova connessione alla destinazione di archiviazione cloud. Immetti le credenziali di autenticazione del tuo account e seleziona **[!UICONTROL Connect to destination]**. Facoltativamente, puoi allegare la chiave pubblica in formato RSA per aggiungere la crittografia ai file esportati. La chiave pubblica deve essere scritta come stringa codificata [!DNL Base64].
 
 Per informazioni specifiche sulle credenziali immesse nel passaggio **Autenticazione** , consulta [Destinazione Amazon S3](./amazon-s3.md), [[!DNL Amazon Kinesis]](./amazon-kinesis.md), destinazione [[!DNL Azure Event Hubs]](./azure-event-hubs.md) e [Destinazione SFTP](./sftp.md) .
 
@@ -39,9 +39,9 @@ Per informazioni specifiche sulle credenziali immesse nel passaggio **Autenticaz
 
 ![Connessione alla destinazione di archiviazione cloud - passaggio di autenticazione](../../assets/catalog/cloud-storage/workflow/destination-account.png)
 
-## Passaggio di installazione {#setup}
+## Passaggio di autenticazione {#authentication}
 
-Nel passaggio **[!UICONTROL Setup]** immetti un **[!UICONTROL Name]** e un **[!UICONTROL Description]** per il flusso di attivazione.
+Nel passaggio **[!UICONTROL Authentication]** immetti un **[!UICONTROL Name]** e un **[!UICONTROL Description]** per il flusso di attivazione.
 
 A questo passaggio, puoi anche selezionare qualsiasi **[!UICONTROL Marketing action]** che deve essere applicato a questa destinazione. Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite da Adobi o creare una tua azione di marketing. Per ulteriori informazioni sulle azioni di marketing, consulta la [Panoramica sui criteri di utilizzo dei dati](../../../data-governance/policies/overview.md).
 
