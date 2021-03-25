@@ -1,12 +1,13 @@
 ---
 keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
-title: Applicare la conformità per l’utilizzo dei dati per i segmenti di pubblico
+title: Importazione e utilizzo di tipi di pubblico esterni
+description: Segui questa esercitazione per scoprire come utilizzare i tipi di pubblico esterni con Adobe Experience Platform.
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 400e4d9007212ed2693d031ae912a4f1cca97c57
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '630'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 # Importazione e utilizzo di tipi di pubblico esterni
 
-Adobe Experience Platform supporta la possibilità di importare tipi di pubblico esterni, che possono successivamente essere utilizzati come componenti per una nuova definizione di segmento. Questo documento fornisce un’esercitazione per configurare Experience Platform per importare e utilizzare tipi di pubblico esterni.
+Adobe Experience Platform supporta la possibilità di importare tipi di pubblico esterni, che possono essere successivamente utilizzati come componenti per una nuova definizione di segmento. Questo documento fornisce un’esercitazione per configurare Experience Platform per importare e utilizzare tipi di pubblico esterni.
 
 ## Introduzione
 
@@ -22,7 +23,7 @@ Adobe Experience Platform supporta la possibilità di importare tipi di pubblico
 - [Profilo](../../profile/home.md) cliente in tempo reale: Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 - [Experience Data Model (XDM)](../../xdm/home.md): Il framework standardizzato tramite il quale Platform organizza i dati sulla customer experience.
 - [Set di dati](../../catalog/datasets/overview.md): Il costrutto di archiviazione e gestione per la persistenza dei dati in Experience Platform.
-- [Acquisizione](../../ingestion/streaming-ingestion/overview.md) in streaming: In che modo Experience Platform acquisisce e memorizza in tempo reale dati da dispositivi lato client e lato server.
+- [Acquisizione](../../ingestion/streaming-ingestion/overview.md) in streaming: In che modo Experience Platform acquisisce e memorizza in tempo reale i dati da dispositivi lato client e lato server.
 
 ## Creare uno spazio dei nomi di identità per il pubblico esterno
 
