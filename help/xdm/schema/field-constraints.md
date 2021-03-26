@@ -5,9 +5,9 @@ title: Vincoli del tipo di campo XDM
 topic: ' - Panoramica'
 description: Un riferimento per i vincoli di tipo di campo in Experience Data Model (XDM), inclusi gli altri formati di serializzazione a cui possono essere mappati e le modalità di definizione dei tipi di campo personalizzati nell’API.
 translation-type: tm+mt
-source-git-commit: cc1fa21df0bb2d49106775c75a0cb3c4f4d73941
+source-git-commit: bb5880340ca4c01d0b25c7cb16fd422d3182a89e
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1049'
 ht-degree: 1%
 
 ---
@@ -212,7 +212,7 @@ La tabella seguente delinea la formattazione appropriata per definire diversi ti
 
 Per iniziare, trova il tipo di campo desiderato e utilizza il codice di esempio fornito per generare la richiesta API per [creare un mixin](../api/mixins.md#create) o [creare un tipo di dati](../api/data-types.md#create).
 
-<table>
+<table style="table-layout:auto">
   <tr>
     <th>Tipo XDM</th>
     <th>Proprietà facoltative</th>
@@ -448,5 +448,3 @@ Per iniziare, trova il tipo di campo desiderato e utilizza il codice di esempio 
     </td>
   </tr>
 </table>
-
-{style=&quot;table-layout:auto&quot;}
