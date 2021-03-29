@@ -4,9 +4,9 @@ title: Area di lavoro Destinazioni
 description: 'L’area di lavoro Destinazioni è composta da quattro sezioni: Catalogo, Sfoglia, Account e Vista sistema, descritte nelle sezioni seguenti.'
 seo-description: In Adobe Experience Platform, seleziona Destinazioni dalla barra di navigazione a sinistra per accedere all’area di lavoro delle destinazioni.
 translation-type: tm+mt
-source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
+source-git-commit: 4f5e7dfee17b2dde371efb82cf52d91c08696f39
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '940'
 ht-degree: 1%
 
 ---
@@ -45,6 +45,8 @@ Le schede di destinazione contengono un controllo **[!UICONTROL Configure]** o *
 | [!UICONTROL View dataflows] | Visualizza i flussi di attivazione dei dati esistenti per una destinazione. |
 | [!UICONTROL View documentation] | Apre un collegamento alla pagina di documentazione per la destinazione specifica, per ulteriori informazioni e per facilitarne la configurazione. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ![Controlli sulla scheda delle destinazioni](../assets/ui/workspace/destination-card-options.png)
 
 Seleziona una scheda di destinazione nel catalogo per aprire la barra a destra. Qui puoi vedere una descrizione della destinazione. La barra a destra fornisce gli stessi controlli descritti nella tabella precedente, nonché una descrizione della destinazione e un’indicazione della categoria e del tipo di destinazione.
@@ -70,6 +72,8 @@ Nella scheda **[!UICONTROL Accounts]** puoi trovare ulteriori informazioni sulle
 | [!UICONTROL Username] | Il nome utente selezionato nella [procedura guidata di connessione alla destinazione](../catalog/email-marketing/overview.md#connect-destination). |
 | [!UICONTROL Destinations] | Rappresenta il numero di flussi di destinazione univoci collegati alle informazioni di base create per una destinazione. |
 | [!UICONTROL Authorized] | Data di autorizzazione della connessione a questa destinazione. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Inoltre, puoi modificare o aggiornare le informazioni sul tuo account. Seleziona il ![Pulsante Modifica account](../assets/ui/workspace/pencil-icon.png) nella colonna **[!UICONTROL Platform]** per modificare le informazioni dell&#39;account.
 
