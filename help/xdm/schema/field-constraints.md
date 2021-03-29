@@ -5,10 +5,10 @@ title: Vincoli del tipo di campo XDM
 topic: ' - Panoramica'
 description: Un riferimento per i vincoli di tipo di campo in Experience Data Model (XDM), inclusi gli altri formati di serializzazione a cui possono essere mappati e le modalità di definizione dei tipi di campo personalizzati nell’API.
 translation-type: tm+mt
-source-git-commit: bb5880340ca4c01d0b25c7cb16fd422d3182a89e
+source-git-commit: 456e595e66436c35c7d081ddf4699263e9c87234
 workflow-type: tm+mt
-source-wordcount: '1049'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -33,7 +33,7 @@ XDM è basato su uno schema JSON e pertanto i campi XDM ereditano una sintassi s
 
 La tabella seguente illustra il modo in cui ogni tipo XDM viene rappresentato nello schema JSON, insieme a un valore di esempio conforme al tipo:
 
-<table>
+<table style="table-layout:auto">
   <thead>
     <tr>
       <th>Tipo XDM</th>
@@ -185,6 +185,8 @@ Le sezioni seguenti descrivono come ogni tipo XDM viene mappato su altri formati
 | [!UICONTROL Boolean] | `Boolean` | `System.Boolean` | `Boolean` |
 | [!UICONTROL Map] | `Map` | (N/D) | `object` |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### MongoDB, Aerospike e Protobuf 2 {#mongo}
 
 | Tipo XDM | MongoDB | Aerospik | Protobuf 2 |
@@ -199,6 +201,8 @@ Le sezioni seguenti descrivono come ogni tipo XDM viene mappato su altri formati
 | [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(millisecondi Unix) | `int64`<br>(millisecondi Unix) |
 | [!UICONTROL Boolean] | `bool` | `Integer`<br>(0/1 binario) | `bool` |
 | [!UICONTROL Map] | `object` | `map` | `map<key_type, value_type>` |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Definizione dei tipi di campi XDM nell’API {#define-fields}
 
