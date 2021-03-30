@@ -1,14 +1,14 @@
 ---
-keywords: ' Experience Platform;punteggio di un modello;Data Science Workspace;argomenti più comuni;ui;punteggio run;punteggio dei risultati'
+keywords: Experience Platform;segnare un modello;Data Science Workspace;argomenti comuni;interfaccia utente;esecuzione del punteggio;risultati del punteggio
 solution: Experience Platform
 title: Punteggio di un modello nell’interfaccia utente di Data Science Workspace
 topic: tutorial
 type: Tutorial
-description: 'Il punteggio in Adobe Experience Platform Data Science Workspace può essere ottenuto inserendo i dati in un modello già preparato. I risultati del punteggio vengono quindi memorizzati e visualizzati in un set di dati di output specificato come nuovo batch. '
+description: 'Il punteggio in Adobe Experience Platform Data Science Workspace può essere ottenuto inserendo i dati di input in un modello addestrato esistente. I risultati del punteggio vengono quindi memorizzati e visualizzati in un set di dati di output specificato come nuovo batch. '
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 7feda18351061600b05dc7be8afbbfb9a0fa7ec1
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '621'
 ht-degree: 0%
 
 ---
@@ -16,53 +16,85 @@ ht-degree: 0%
 
 # Punteggio di un modello nell’interfaccia utente di Data Science Workspace
 
-Il punteggio in Adobe Experience Platform [!DNL Data Science Workspace] può essere ottenuto inserendo i dati in un modello già addestrato. I risultati del punteggio vengono quindi memorizzati e visualizzati in un set di dati di output specificato come nuovo batch.
+Il punteggio in Adobe Experience Platform [!DNL Data Science Workspace] può essere ottenuto inserendo i dati di input in un modello addestrato esistente. I risultati del punteggio vengono quindi memorizzati e visualizzati in un set di dati di output specificato come nuovo batch.
 
-Questa esercitazione illustra i passaggi necessari per segnare un modello nell&#39;interfaccia utente [!DNL Data Science Workspace].
+Questa esercitazione illustra i passaggi necessari per valutare un modello nell&#39; interfaccia utente [!DNL Data Science Workspace] .
 
 ## Introduzione
 
-Per completare questa esercitazione, è necessario avere accesso a [!DNL Experience Platform]. Se non disponete dell&#39;accesso a un&#39;organizzazione IMS in [!DNL Experience Platform], rivolgetevi all&#39;amministratore di sistema prima di procedere.
+Per completare questa esercitazione, devi disporre dell&#39;accesso a [!DNL Experience Platform]. Se non hai accesso a un&#39;organizzazione IMS in [!DNL Experience Platform], rivolgiti all&#39;amministratore di sistema prima di procedere.
 
-Questa esercitazione richiede un modello qualificato. Se non si dispone di un modello qualificato, seguire il [treno e valutare un modello nell&#39;esercitazione UI](./train-evaluate-model-ui.md) prima di continuare.
+Questa esercitazione richiede un modello addestrato. Se non disponi di un modello addestrato, segui il [treno e valuta un modello nell&#39;esercitazione UI](./train-evaluate-model-ui.md) prima di continuare.
 
-## Creazione di una nuova esecuzione del punteggio
+## Crea una nuova esecuzione del punteggio
 
-Un’esecuzione del punteggio viene creata utilizzando configurazioni ottimizzate partendo da un’esecuzione di formazione precedentemente completata e valutata. L&#39;insieme di configurazioni ottimali per un modello viene in genere determinato analizzando le metriche di valutazione dell&#39;esecuzione della formazione.
+Un’esecuzione del punteggio viene creata utilizzando configurazioni ottimizzate da un’esecuzione di formazione completata e valutata in precedenza. L&#39;insieme di configurazioni ottimali per un modello viene in genere determinato esaminando le metriche di valutazione dell&#39;esecuzione del corso di formazione.
 
-1. Trovate l&#39;esecuzione di formazione ottimale per utilizzare le relative configurazioni per il punteggio. Aprite l’esecuzione della formazione desiderata facendo clic sul suo nome.
+Trova l’esecuzione di formazione più ottimale per utilizzare le sue configurazioni per il punteggio. Quindi, apri l&#39;esecuzione di formazione desiderata selezionando il collegamento ipertestuale associato al nome.
 
-2. Dalla scheda Esecuzione formazione **[!UICONTROL Evaluation]**, fate clic sul pulsante **[!UICONTROL Score]** in alto a destra dello schermo. Verrà avviato un nuovo flusso di lavoro **Esegui punteggio**.
-   ![](../images/models-recipes/score/training_run_overview.png)
+![Seleziona l’esecuzione della formazione](../images/models-recipes/score/select-run.png)
 
-3. Selezionare il set di dati di punteggio di input e fare clic su **[!UICONTROL Next]**.
-   ![](../images/models-recipes/score/scoring_input.png)
+Dalla scheda dell’esecuzione del corso di formazione **[!UICONTROL Evaluation]** , seleziona **[!UICONTROL Score]** in alto a destra nella schermata. Inizia un nuovo flusso di lavoro di punteggio.
 
-4. Selezionare il set di dati per il punteggio di output. Si tratta del set di dati di output dedicato in cui sono memorizzati i risultati del punteggio. Confermate la selezione e fate clic su **[!UICONTROL Next]**.
-   ![](../images/models-recipes/score/scoring_results.png)
+![](../images/models-recipes/score/training_run_overview.png)
 
-5. Il passaggio finale del flusso di lavoro richiede di configurare l’esecuzione del punteggio. Queste configurazioni vengono utilizzate dal modello per l&#39;esecuzione del punteggio.
-Non sarà possibile rimuovere i parametri ereditati impostati durante la creazione del modello. Per modificare o ripristinare i parametri non ereditati, fai doppio clic sul valore o fai clic sull’icona di ripristino mentre passi il cursore sulla voce.
-   ![](../images/models-recipes/score/configuration.png)
-Rivedete e confermate le configurazioni di punteggio e fate clic  **[!UICONTROL Finish]**  per creare ed eseguire l&#39;esecuzione del punteggio. Viene visualizzata la scheda **[!UICONTROL Scoring Runs]**, mentre la nuova esecuzione del punteggio mostrerà uno stato.
-   ![](../images/models-recipes/score/scoring_runs_tab.png)
-Un&#39;esecuzione del punteggio visualizzerà uno dei quattro stati seguenti: In sospeso, Completato, Non riuscito o In esecuzione e vengono aggiornati automaticamente. Procedete con il passaggio successivo se lo stato è &quot;Completato&quot; o &quot;Non riuscito&quot;.
+Seleziona il set di dati per il punteggio di input e seleziona **[!UICONTROL Next]**.
+
+![](../images/models-recipes/score/scoring_input.png)
+
+Seleziona il set di dati per il punteggio di output, questo è il set di dati di output dedicato in cui vengono memorizzati i risultati del punteggio. Conferma la selezione e seleziona **[!UICONTROL Next]**.
+
+![](../images/models-recipes/score/scoring_results.png)
+
+Il passaggio finale nel flusso di lavoro richiede di configurare l’esecuzione del punteggio. Queste configurazioni vengono utilizzate dal modello per l’esecuzione del punteggio.
+Non è possibile rimuovere i parametri ereditati impostati durante la creazione dei modelli. Per modificare o ripristinare i parametri non ereditati, fai doppio clic sul valore o seleziona l’icona Ripristina mentre passi il cursore sulla voce.
+
+![configurazione](../images/models-recipes/score/configuration.png)
+
+Rivedi e conferma le configurazioni di punteggio e seleziona **[!UICONTROL Finish]** per creare ed eseguire l’esecuzione del punteggio. Viene visualizzata la scheda **[!UICONTROL Scoring Runs]** e la nuova esecuzione del punteggio con lo stato **[!UICONTROL Pending]** .
+
+![scheda delle esecuzioni del punteggio](../images/models-recipes/score/scoring_runs_tab.png)
+
+Un’esecuzione del punteggio può essere visualizzata con uno dei seguenti stati:
+- In sospeso
+- Completa
+- Non riuscito
+- In esecuzione
+
+Gli stati vengono aggiornati automaticamente. Procedi al passaggio successivo se lo stato è **[!UICONTROL Complete]** o **[!UICONTROL Failed]**.
 
 ## Visualizza risultati punteggio
 
-1. Individuate l&#39;esecuzione della formazione utilizzata per l&#39;esecuzione del punteggio e fate clic sul nome per visualizzarne la pagina **[!UICONTROL Evaluation]**.
+Per visualizzare i risultati del punteggio, inizia selezionando un’esecuzione di formazione.
 
-2. Nella parte superiore della pagina di valutazione dell’esecuzione della formazione, fate clic sulla scheda **[!UICONTROL Scoring Runs]** per visualizzare un elenco delle esecuzioni di valutazione esistenti. Fare clic sull&#39;elenco dei punteggi per visualizzarne i dettagli nella colonna a destra.
-   ![](../images/models-recipes/score/view_details.png)
+![Seleziona l’esecuzione della formazione](../images/models-recipes/score/select-run.png)
 
-3. Se l&#39;esecuzione del punteggio selezionata ha lo stato &quot;Completato&quot; o &quot;Non riuscito&quot;, il collegamento **[!UICONTROL View Activity Logs]** trovato nella colonna destra sarà attivo. Fate clic sul collegamento per visualizzare o scaricare i registri di esecuzione. Se un&#39;esecuzione del punteggio non è riuscita, i log di esecuzione possono fornire informazioni utili per determinare il motivo dell&#39;errore.
-   ![](../images/models-recipes/score/activity_logs.png)
+Sei reindirizzato alla pagina dei percorsi di formazione **[!UICONTROL Evaluation]**. Nella parte superiore della pagina di valutazione dell’esecuzione del corso di formazione, seleziona la scheda **[!UICONTROL Scoring Runs]** per visualizzare un elenco delle esecuzioni di punteggio esistenti.
 
-4. Fare clic sul collegamento **[!UICONTROL Preview Scoring Results Dataset]** presente nella colonna di destra. Sarà possibile visualizzare un&#39;anteprima del set di dati di output dall&#39;esecuzione del punteggio.
-   ![](../images/models-recipes/score/preview_results.png)
+![pagina di valutazione](../images/models-recipes/score/view_scoring_runs.png)
 
-5. Per l&#39;insieme completo dei risultati del punteggio, fare clic sul collegamento **[!UICONTROL Scoring Results Dataset]** presente nella colonna di destra.
+Quindi, seleziona un’esecuzione del punteggio per visualizzare i dettagli dell’esecuzione.
+
+![eseguire i dettagli](../images/models-recipes/score/view_details.png)
+
+Se lo stato dell’esecuzione del punteggio selezionata è &quot;Completato&quot; o &quot;Non riuscito&quot;, il collegamento **[!UICONTROL View Activity Logs]** viene reso disponibile. Se un’esecuzione del punteggio non riesce, i registri di esecuzione possono fornire informazioni utili per determinare il motivo dell’errore. Per scaricare i registri di esecuzione, seleziona **[!UICONTROL View Activity Logs]**.
+
+![Seleziona registri di visualizzazione](../images/models-recipes/score/view_logs.png)
+
+Viene visualizzato il puntatore **[!UICONTROL View activity logs]** . Seleziona un URL per scaricare automaticamente i registri associati.
+
+![](../images/models-recipes/score/activity_logs.png)
+
+Puoi anche visualizzare i risultati del punteggio selezionando **[!UICONTROL Preview scoring results dataset]**.
+
+![Seleziona risultati di anteprima](../images/models-recipes/score/view_results.png)
+
+Viene fornita un’anteprima del set di dati di output.
+
+![risultati dell&#39;anteprima](../images/models-recipes/score/preview_results.png)
+
+Per l’insieme completo dei risultati del punteggio, seleziona il collegamento **[!UICONTROL Scoring Results Dataset]** che si trova nella colonna di destra.
 
 ## Passaggi successivi
 
-Questa esercitazione illustra i passaggi necessari per eseguire la valutazione dei dati utilizzando un modello addestrato in [!DNL Data Science Workspace]. Seguite l&#39;esercitazione su [pubblicazione di un modello come servizio nell&#39;interfaccia utente](./publish-model-service-ui.md) per consentire agli utenti all&#39;interno dell&#39;organizzazione di valutare i dati fornendo un facile accesso a un servizio di machine learning.
+Questa esercitazione illustra i passaggi necessari per valutare i dati utilizzando un modello addestrato in [!DNL Data Science Workspace]. Segui l&#39;esercitazione su [pubblicazione di un modello come servizio nell&#39;interfaccia utente](./publish-model-service-ui.md) per consentire agli utenti all&#39;interno della tua organizzazione di valutare i dati fornendo un facile accesso a un servizio di apprendimento automatico.
