@@ -6,19 +6,15 @@ topic: ' - Panoramica'
 type: Tutorial
 description: Scopri come creare una connessione sorgente SFTP utilizzando l’interfaccia utente Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: b39426d768a0c6fdfa742ec74e4e0bed9c432269
+source-git-commit: 0e11acc4a599d360cb3048445003f61848ad23d3
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '678'
 ht-degree: 1%
 
 ---
 
 
 # Creare una connessione sorgente SFTP nell’interfaccia utente
-
->[!NOTE]
->
->Il connettore SFTP è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la [Panoramica delle sorgenti](../../../../home.md#terms-and-conditions) .
 
 Questa esercitazione descrive i passaggi necessari per creare una connessione sorgente SFTP utilizzando l’interfaccia utente di Adobe Experience Platform.
 
