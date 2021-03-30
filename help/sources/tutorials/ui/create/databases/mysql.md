@@ -1,37 +1,33 @@
 ---
-keywords: ' Experience Platform;home;argomenti comuni;mysql;MySQL'
+keywords: Experience Platform;home;argomenti comuni;mysql;MySQL
 solution: Experience Platform
-title: Creare una connessione sorgente MySQL nell’interfaccia utente
-topic: overview
+title: Creare una connessione sorgente MySQL nell'interfaccia utente
+topic: ' - Panoramica'
 type: Tutorial
-description: Scoprite come creare una connessione di origine MySQL utilizzando l'interfaccia utente di Adobe Experience Platform.
+description: Scopri come creare una connessione sorgente MySQL utilizzando l’interfaccia utente Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '404'
 ht-degree: 1%
 
 ---
 
 
-# Creare una connessione di origine [!DNL MySQL] nell&#39;interfaccia utente
+# Creare una connessione sorgente [!DNL MySQL] nell&#39;interfaccia utente
 
->[!NOTE]
->
-> Il connettore [!DNL MySQL] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, vedere [Panoramica delle sorgenti](../../../../home.md#terms-and-conditions).
-
-I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente originati su base programmata. Questa esercitazione fornisce i passaggi necessari per creare una connessione di origine [!DNL MySQL] utilizzando l&#39;interfaccia utente di Adobe Experience Platform.
+I connettori sorgente in Adobe Experience Platform consentono di acquisire dati provenienti dall’esterno su base pianificata. Questa esercitazione descrive i passaggi necessari per creare una connessione sorgente [!DNL MySQL] utilizzando l’interfaccia utente di Adobe Experience Platform.
 
 ## Introduzione
 
-Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa esercitazione richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): Il framework standard con cui  Experience Platform organizza i dati sull&#39;esperienza dei clienti.
-   * [Nozioni di base sulla composizione](../../../../../xdm/schema/composition.md) dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
-   * [Esercitazione](../../../../../xdm/tutorials/create-schema-ui.md) sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): Il framework standardizzato in base al quale l’Experience Platform organizza i dati sulla customer experience.
+   * [Nozioni di base sulla composizione](../../../../../xdm/schema/composition.md) dello schema: Scopri i blocchi di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
+   * [Esercitazione](../../../../../xdm/tutorials/create-schema-ui.md) dell’Editor di schema: Scopri come creare schemi personalizzati utilizzando l’interfaccia utente dell’Editor di schema.
+* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
-Se si dispone già di una connessione [!DNL MySQL], è possibile ignorare il resto del documento e procedere all&#39;esercitazione su [configurazione di un flusso di dati](../../dataflow/databases.md).
+Se disponi già di una connessione [!DNL MySQL], puoi saltare il resto del documento e continuare l&#39;esercitazione su [configurazione di un flusso di dati](../../dataflow/databases.md).
 
 ### Raccogli credenziali richieste
 
@@ -39,32 +35,32 @@ Per accedere al tuo account [!DNL MySQL] su [!DNL Platform], devi fornire il seg
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `connectionString` | Stringa di connessione [!DNL MySQL] associata all&#39;account. Il pattern della stringa di connessione [!DNL MySQL] è: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. Per ulteriori informazioni sulle stringhe di connessione e su come ottenerle, leggere il documento [[!DNL MySQL] document](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html). |
+| `connectionString` | La stringa di connessione [!DNL MySQL] associata al tuo account. Il pattern della stringa di connessione [!DNL MySQL] è: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. Per ulteriori informazioni sulle stringhe di connessione e su come ottenerle, leggere il documento [[!DNL MySQL] document](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html). |
 
-## Collegare l&#39;account [!DNL MySQL]
+## Connetti il tuo account [!DNL MySQL]
 
-Dopo aver raccolto le credenziali necessarie, puoi seguire i passaggi descritti di seguito per collegare l&#39;account [!DNL MySQL] a [!DNL Platform].
+Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare il tuo account [!DNL MySQL] a [!DNL Platform].
 
-Accedete a [Adobe Experience Platform](https://platform.adobe.com), quindi selezionate **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro **[!UICONTROL Sources]**. Nella schermata **[!UICONTROL Catalog]** sono visualizzate diverse sorgenti con le quali è possibile creare un account.
+Accedi a [Adobe Experience Platform](https://platform.adobe.com) e seleziona **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro **[!UICONTROL Sources]**. Nella schermata **[!UICONTROL Catalog]** sono visualizzate diverse origini per le quali è possibile creare un account.
 
-Sotto la categoria **[!UICONTROL Databases]**, selezionare **[!UICONTROL MySQL]**. Se si tratta della prima volta che si utilizza questo connettore, selezionare **[!UICONTROL Configure]**. In caso contrario, selezionare **[!UICONTROL Add data]** per creare un nuovo connettore [!DNL MySQL].
+Sotto la categoria **[!UICONTROL Databases]**, selezionare **[!UICONTROL MySQL]**. Se questa è la prima volta che utilizzi questo connettore, seleziona **[!UICONTROL Configure]**. In caso contrario, seleziona **[!UICONTROL Add data]** per creare un nuovo connettore [!DNL MySQL].
 
 ![](../../../../images/tutorials/create/my-sql/catalog.png)
 
-Viene visualizzata la pagina **[!UICONTROL Connect to MySQL]**. In questa pagina è possibile utilizzare credenziali nuove o già esistenti.
+Viene visualizzata la pagina **[!UICONTROL Connect to MySQL]** . In questa pagina è possibile utilizzare le nuove credenziali o le credenziali esistenti.
 
 ### Nuovo account
 
-Se si utilizzano nuove credenziali, selezionare **[!UICONTROL New account]**. Nel modulo di input visualizzato, specificare un nome, una descrizione facoltativa e le credenziali [!DNL MySQL]. Al termine, selezionare **[!UICONTROL Connect]**, quindi concedere un po&#39; di tempo per stabilire la nuova connessione.
+Se utilizzi nuove credenziali, seleziona **[!UICONTROL New account]**. Nel modulo di input visualizzato, specificare un nome, una descrizione facoltativa e le credenziali [!DNL MySQL]. Al termine, selezionare **[!UICONTROL Connect]** e quindi concedere un po&#39; di tempo per l&#39;impostazione della nuova connessione.
 
 ![](../../../../images/tutorials/create/my-sql/new.png)
 
 ### Account esistente
 
-Per collegare un account esistente, selezionate l&#39;account [!DNL MySQL] con cui desiderate connettervi, quindi selezionate **[!UICONTROL Next]** per continuare.
+Per collegare un account esistente, selezionare l&#39;account [!DNL MySQL] con cui si desidera connettersi, quindi selezionare **[!UICONTROL Next]** per continuare.
 
 ![](../../../../images/tutorials/create/my-sql/existing.png)
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, è stata stabilita una connessione all&#39;account MySQL. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per l&#39;inserimento di dati in [!DNL Platform]](../../dataflow/databases.md).
+Seguendo questa esercitazione, è stata stabilita una connessione all&#39;account MySQL. Ora puoi continuare l’esercitazione successiva e [configurare un flusso di dati per inserire i dati in [!DNL Platform]](../../dataflow/databases.md).
