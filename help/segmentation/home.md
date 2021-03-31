@@ -5,9 +5,9 @@ title: Panoramica del servizio di segmentazione
 topic: ' - Panoramica'
 description: Scopri il servizio di segmentazione di Adobe Experience Platform e il ruolo che svolge nell’ecosistema di Platform.
 translation-type: tm+mt
-source-git-commit: 7eadb14dc71792174dfd750775148763f55834dd
+source-git-commit: 738256021fb583e7dc14fd33f5df193813a6e0bb
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1499'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Questo documento fornisce una panoramica di [!DNL Segmentation Service] e del ru
 
 La segmentazione è il processo di definizione di attributi o comportamenti specifici condivisi da un sottoinsieme di profili dall’archivio dei profili per distinguere un gruppo commerciabile di persone dalla base dei clienti. Ad esempio, in una campagna e-mail intitolata &quot;Ti sei dimenticato di comprare le scarpe da ginnastica?&quot;, potresti volere un pubblico di tutti gli utenti che hanno cercato di correre scarpe negli ultimi 30 giorni, ma che non hanno completato un acquisto.
 
-Una volta definito concettualmente un segmento viene generato in [!DNL Experience Platform]. In genere, i segmenti sono generati dagli addetti al marketing o dagli specialisti di pubblico, anche se alcune organizzazioni preferiscono essere creati dal loro reparto marketing, in collaborazione con i loro analisti di dati. Dopo aver esaminato i dati inviati a [!DNL Platform], l’analista dei dati compone la definizione del segmento selezionando quali campi e valori verranno utilizzati per creare le regole o le condizioni del segmento. Questa operazione viene eseguita utilizzando l’interfaccia utente o l’API.
+Una volta definito concettualmente un segmento, questo viene generato in [!DNL Experience Platform]. In genere, i segmenti sono generati dagli addetti al marketing o dagli specialisti di pubblico, anche se alcune organizzazioni preferiscono essere creati dal loro reparto marketing, in collaborazione con i loro analisti di dati. Dopo aver esaminato i dati inviati a [!DNL Platform], l’analista dei dati compone la definizione del segmento selezionando quali campi e valori verranno utilizzati per creare le regole o le condizioni del segmento. Questa operazione viene eseguita utilizzando l’interfaccia utente o l’API.
 
 ## Creare un segmento
 
@@ -58,6 +58,8 @@ Per ulteriori informazioni sulla segmentazione in streaming, consulta la [docume
 ### Segmentazione in batch
 
 In alternativa a un processo continuo di selezione dei dati, la segmentazione in batch sposta tutti i dati di profilo contemporaneamente attraverso le definizioni dei segmenti per produrre i tipi di pubblico corrispondenti. Una volta creato, questo segmento viene salvato e memorizzato in modo da poterlo esportare per l’uso.
+
+I segmenti valutati utilizzando la segmentazione batch vengono valutati ogni 24 ore. Tuttavia, per i segmenti esistenti, la segmentazione incrementale mantiene i segmenti valutati utilizzando la segmentazione batch freschi per un massimo di un&#39;ora. Eventuali segmenti nuovi o modificati di recente dovranno attendere l’esecuzione del successivo processo di segmentazione batch completa per sfruttare la segmentazione incrementale.
 
 Per scoprire come valutare i segmenti, consulta l’ [esercitazione sulla valutazione dei segmenti](./tutorials/evaluate-a-segment.md).
 
@@ -111,7 +113,7 @@ Queste funzioni avanzate sono descritte più dettagliatamente nelle sezioni segu
 
 ## Segmentazione sequenziale {#sequential}
 
-Un percorso di utenti standard è sequenziale in natura. Adobe Experience Platform consente di definire una serie ordinata di segmenti per riflettere questo percorso, acquisendo così sequenze di eventi man mano che si verificano. Puoi organizzare gli eventi nell’ordine desiderato utilizzando la timeline dell’evento visivo in [!DNL Segment Builder].
+Un percorso di utenti standard è sequenziale in natura. Adobe Experience Platform consente di definire una serie ordinata di segmenti per riflettere questo percorso, acquisendo quindi sequenze di eventi man mano che si verificano. Puoi organizzare gli eventi nell’ordine desiderato utilizzando la timeline dell’evento visivo in [!DNL Segment Builder].
 
 Un esempio di percorso di clienti che richiederebbe la segmentazione sequenziale sarebbe la visualizzazione del prodotto > aggiunta del prodotto > pagamento > Nessun acquisto.
 
@@ -137,7 +139,7 @@ Assegnando una variabile all&#39;attributo dello stato di acquisto, il segmento 
 
 ## Segmentazione multi-entità {#multi-entity}
 
-Con la funzione avanzata di segmentazione multi-entità, puoi estendere i dati [!DNL Real-time Customer Profile] con dati aggiuntivi basati su prodotti, store o altre entità non associate, note anche come entità &quot;dimensione&quot;. Di conseguenza, [!DNL Segmentation Service] può accedere a campi aggiuntivi durante la definizione del segmento come se fossero nativi nell’ archivio dati [!DNL Profile]. La segmentazione su più entità offre flessibilità nell’identificazione dei tipi di pubblico in base ai dati pertinenti alle tue esigenze aziendali specifiche. Per ulteriori informazioni, inclusi casi d&#39;uso e flussi di lavoro, consulta la [guida alla segmentazione su più entità](multi-entity-segmentation.md).
+Con la funzione avanzata di segmentazione multi-entità, puoi estendere i dati [!DNL Real-time Customer Profile] con dati aggiuntivi basati su prodotti, store o altre entità non personali, note anche come entità &quot;dimensione&quot;. Di conseguenza, [!DNL Segmentation Service] può accedere a campi aggiuntivi durante la definizione del segmento come se fossero nativi nell’ archivio dati [!DNL Profile]. La segmentazione su più entità offre flessibilità nell’identificazione dei tipi di pubblico in base ai dati pertinenti alle tue esigenze aziendali specifiche. Per ulteriori informazioni, inclusi casi d&#39;uso e flussi di lavoro, consulta la [guida alla segmentazione su più entità](multi-entity-segmentation.md).
 
 ## [!DNL Segmentation Service] tipi di dati
 
