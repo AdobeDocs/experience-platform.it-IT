@@ -1,25 +1,25 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;aggiornare la sandbox'
+keywords: Experience Platform;home;argomenti popolari;aggiornare sandbox
 solution: Experience Platform
-title: Aggiornare una sandbox nell'API
-topic: developer guide
-description: Potete aggiornare uno o più campi in una sandbox effettuando una richiesta di PATCH che includa il nome della sandbox nel percorso della richiesta e la proprietà da aggiornare nel payload della richiesta.
+title: Aggiornare una sandbox nell’API
+topic: guida per sviluppatori
+description: Puoi aggiornare uno o più campi in una sandbox effettuando una richiesta di PATCH che include il nome della sandbox nel percorso della richiesta e la proprietà da aggiornare nel payload della richiesta.
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
 workflow-type: tm+mt
-source-wordcount: '133'
-ht-degree: 3%
+source-wordcount: '135'
+ht-degree: 2%
 
 ---
 
 
-# Aggiornare una sandbox nell&#39;API
+# Aggiornare una sandbox nell’API
 
-Potete aggiornare uno o più campi in una sandbox effettuando una richiesta di PATCH che includa la `name` sandbox nel percorso della richiesta e la proprietà da aggiornare nel payload della richiesta.
+È possibile aggiornare uno o più campi in una sandbox effettuando una richiesta di PATCH che include il `name` della sandbox nel percorso della richiesta e la proprietà da aggiornare nel payload della richiesta.
 
 >[!NOTE]
 >
->Al momento è possibile aggiornare solo la proprietà `title` di una sandbox.
+>Attualmente è possibile aggiornare solo la proprietà `title` di una sandbox.
 
 **Formato API**
 
@@ -29,7 +29,7 @@ PATCH /sandboxes/{SANDBOX_NAME}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{SANDBOX_NAME}` | La proprietà `name` della sandbox da aggiornare. |
+| `{SANDBOX_NAME}` | La proprietà `name` della sandbox che desideri aggiornare. |
 
 **Richiesta**
 
@@ -41,7 +41,6 @@ curl -X PATCH \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
     "title": "Development B"
@@ -50,7 +49,7 @@ curl -X PATCH \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 (OK) con i dettagli della nuova sandbox aggiornata.
+Una risposta corretta restituisce lo stato HTTP 200 (OK) con i dettagli della sandbox appena aggiornata.
 
 ```json
 {
