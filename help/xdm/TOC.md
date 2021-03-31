@@ -6,9 +6,9 @@ breadcrumb-title: Guida di Data Model (XDM)
 user-guide-description: Utilizza le classi e i mixin Experience Data Model (XDM) per standardizzare i dati dell’esperienza.
 feature: Schemi
 translation-type: tm+mt
-source-git-commit: 27cdb65c846293d7edce340e1cb5a360c0e40604
+source-git-commit: 4a67bcbd2a1458ae47ba64fe2647da442fdf4695
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '238'
 ht-degree: 22%
 
 ---
@@ -25,6 +25,7 @@ ht-degree: 22%
 * Classi {#classes}
    * [Profilo individuale XDM](./classes/individual-profile.md)
    * [ExperienceEvent XDM](./classes/experienceevent.md)
+   * [Definizione del segmento](./classes/segment-definition.md)
 * Mixins {#mixins}
    * Mixer di profili {#profile}
       * [IdentityMap](./mixins/profile/identitymap.md)
