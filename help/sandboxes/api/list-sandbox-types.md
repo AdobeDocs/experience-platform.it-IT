@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform ;home;argomenti più comuni;sandbox elenco
+keywords: Experience Platform;home;argomenti popolari;elenco sandbox
 solution: Experience Platform
-title: Elenca i tipi di sandbox supportati nell'API
-topic: developer guide
-description: Potete recuperare un elenco dei tipi di sandbox supportati per la vostra organizzazione effettuando una richiesta di GET all'endpoint /sandboxTypes.
+title: Elencare i tipi di sandbox supportati nell’API
+topic: guida per sviluppatori
+description: Puoi recuperare un elenco dei tipi di sandbox supportati per la tua organizzazione effettuando una richiesta GET all’endpoint /sandboxTypes .
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
 workflow-type: tm+mt
-source-wordcount: '81'
+source-wordcount: '83'
 ht-degree: 2%
 
 ---
 
 
-# Elenca i tipi di sandbox supportati nell&#39;API
+# Elencare i tipi di sandbox supportati nell’API
 
-Potete recuperare un elenco dei tipi di sandbox supportati per la vostra organizzazione effettuando una richiesta di GET all&#39;endpoint `/sandboxTypes`.
+Puoi recuperare un elenco dei tipi di sandbox supportati per la tua organizzazione effettuando una richiesta di GET all’endpoint `/sandboxTypes` .
 
 **Formato API**
 
@@ -31,12 +31,11 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di tipi di sandbox supportati dalla vostra organizzazione.
+Una risposta corretta restituisce un elenco di tipi di sandbox supportati dalla tua organizzazione.
 
 ```json
 {
