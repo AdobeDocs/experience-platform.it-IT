@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform ;home;argomenti più comuni;sandbox elenco
+keywords: Experience Platform;home;argomenti popolari;elenco sandbox
 solution: Experience Platform
-title: Elenca le sandbox nell'API
-topic: developer guide
-description: Per elencare tutte le sandbox appartenenti all’organizzazione IMS (attive o meno), effettuate una richiesta di GET all’endpoint /sandbox.
+title: Elencare sandbox nell’API
+topic: guida per sviluppatori
+description: Per elencare tutte le sandbox appartenenti alla tua organizzazione IMS (attive o meno), invia una richiesta GET all’endpoint /sandbox.
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '322'
 ht-degree: 2%
 
 ---
 
 
-# Elenca le sandbox nell&#39;API
+# Elencare sandbox nell’API
 
-Per elencare tutte le sandbox appartenenti all&#39;organizzazione IMS (attive o di altro tipo), effettuate una richiesta di GET all&#39;endpoint `/sandboxes`.
+Per elencare tutte le sandbox appartenenti all’organizzazione IMS (attive o meno), invia una richiesta di GET all’endpoint `/sandboxes`.
 
 **Formato API**
 
@@ -25,7 +25,7 @@ GET /sandboxes?{QUERY_PARAMS}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Parametri di query facoltativi per filtrare i risultati per. Per ulteriori informazioni, vedere la sezione relativa ai [parametri di query](#query). |
+| `{QUERY_PARAMS}` | Parametri di query opzionali per filtrare i risultati in base a. Per ulteriori informazioni, consulta la sezione sui [parametri di query](#query) . |
 
 **Richiesta**
 
@@ -35,12 +35,11 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di sandbox appartenenti alla vostra organizzazione, con dettagli quali `name`, `title`, `state` e `type`.
+Una risposta corretta restituisce un elenco di sandbox appartenenti all’organizzazione, inclusi dettagli quali `name`, `title`, `state` e `type`.
 
 ```json
 {
@@ -121,22 +120,22 @@ Una risposta corretta restituisce un elenco di sandbox appartenenti alla vostra 
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `name` | Nome della sandbox. Utilizzata a scopo di ricerca nelle chiamate API. |
-| `title` | Nome visualizzato per la sandbox. |
-| `state` | Lo stato di elaborazione corrente della sandbox. Lo stato di una sandbox può essere uno dei seguenti: <br/><ul><li>**creazione**: La sandbox è stata creata, ma viene ancora fornita dal sistema.</li><li>**active**: La sandbox viene creata e attiva.</li><li>**non riuscito**: A causa di un errore, il provisioning della sandbox non è stato eseguito dal sistema ed è disabilitato.</li><li>**eliminato**: La sandbox è stata disattivata manualmente.</li></ul> |
-| `type` | Il tipo di sandbox, &quot;development&quot; o &quot;production&quot;. |
-| `isDefault` | Una proprietà booleana che indica se questa sandbox è la sandbox predefinita per l&#39;organizzazione. In genere si tratta della sandbox di produzione. |
-| `eTag` | Identificatore per una versione specifica della sandbox. Utilizzato per il controllo della versione e l&#39;efficienza del caching, questo valore viene aggiornato ogni volta che viene apportata una modifica alla sandbox. |
+| `name` | Nome della sandbox. Utilizzato a scopo di ricerca nelle chiamate API. |
+| `title` | Nome visualizzato della sandbox. |
+| `state` | Lo stato di elaborazione corrente della sandbox. Lo stato di una sandbox può essere uno dei seguenti: <br/><ul><li>**creazione**: La sandbox è stata creata, ma viene comunque fornita dal sistema.</li><li>**attivo**: La sandbox viene creata e attiva.</li><li>**non riuscito**: A causa di un errore, il sistema non è in grado di eseguire il provisioning della sandbox ed è disabilitato.</li><li>**eliminato**: La sandbox è stata disabilitata manualmente.</li></ul> |
+| `type` | Il tipo di sandbox, &quot;sviluppo&quot; o &quot;produzione&quot;. |
+| `isDefault` | Proprietà booleana che indica se questa sandbox è la sandbox predefinita per l’organizzazione. In genere si tratta della sandbox di produzione. |
+| `eTag` | Identificatore per una versione specifica della sandbox. Utilizzato per il controllo delle versioni e l’efficienza del caching, questo valore viene aggiornato ogni volta che viene apportata una modifica alla sandbox. |
 
 ## Utilizzo dei parametri di query {#query}
 
-L&#39;API [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) supporta l&#39;utilizzo di parametri di query per visualizzare la pagina e filtrare i risultati durante l&#39;elencazione delle sandbox.
+L&#39;API [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) supporta l&#39;utilizzo di parametri di query per la pagina e filtrare i risultati durante l&#39;elenco delle sandbox.
 
 >[!NOTE]
 >
->I parametri di query `limit` e `offset` devono essere specificati insieme. Se ne specificate solo uno, l&#39;API restituirà un errore. Se non si specifica alcun valore, il limite predefinito è 50 e l&#39;offset è 0.
+>I parametri di query `limit` e `offset` devono essere specificati insieme. Se ne specifichi una sola, l’API restituirà un errore. Se non specificate nessuno, il limite predefinito è 50 e l&#39;offset è 0.
 
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `limit` | Il numero massimo di record da restituire nella risposta. |
-| `offset` | Il numero di entità dal primo record da cui iniziare (offset) l&#39;elenco di risposte. |
+| `offset` | Il numero di entità dal primo record da cui avviare (offset) l&#39;elenco di risposte. |
