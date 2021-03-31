@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: March 31, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 8d4270d9168a570fcf92ba60d70dbc8e9af98136
+source-git-commit: 0192c951a288cc1e0891a12ba9eff32aea120518
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 9%
+source-wordcount: '436'
+ht-degree: 7%
 
 ---
 
@@ -19,7 +19,35 @@ ht-degree: 9%
 
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] consente ai data engineer di mappare, trasformare e convalidare i dati da e verso Experience Data Model (XDM).
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Funzione  di `add_to_array` | Funzionalità aggiornata per supportare gli array come parametro. |
+| Funzione  di `to_array` | Funzionalità aggiornata per supportare gli oggetti come parametro. |
+
+Per ulteriori informazioni, consulta la [[!DNL Data Prep] panoramica](../../data-prep/home.md).
+
+## Servizio di segmentazione {#segmentation}
+
+Il servizio di segmentazione di Adobe Experience Platform fornisce un’interfaccia utente e un’API RESTful che consente di creare segmenti e generare tipi di pubblico dai dati [!DNL Real-time Customer Profile]. Questi segmenti sono configurati e mantenuti a livello centrale su [!DNL Platform], rendendoli facilmente accessibili da qualsiasi applicazione Adobe.
+
+[!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo di persone commerciabili all’interno della base cliente. I segmenti possono essere basati su dati di record (come informazioni demografiche) o su eventi di serie temporali che rappresentano le interazioni dei clienti con il tuo marchio.
+
+**Nuove funzionalità**
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| (Beta) Segmentazione dei bordi | La segmentazione dei bordi valuta i segmenti in tempo reale, che consentono casi d’uso per la stessa pagina e per la personalizzazione della pagina successiva. Ulteriori informazioni sulla segmentazione dei bordi sono disponibili nella [Panoramica dell&#39;interfaccia utente di segmentazione](../../segmentation/ui/overview.md). |
+| (Beta) Segmentazione incrementale | Aumenta la freschezza delle definizioni di segmenti esistenti valutate nella segmentazione batch fino a un’ora. |
+
+Per ulteriori informazioni su [!DNL Segmentation Service], consulta la [Panoramica sulla segmentazione](../../segmentation/home.md).
 
 ## [!DNL Sources] {#sources}
 
