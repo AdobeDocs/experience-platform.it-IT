@@ -5,9 +5,9 @@ title: Nozioni di base sulla composizione dello schema
 topic: ' - Panoramica'
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 8448b5dcedc42898d8a403aae1e044841bc2734c
+source-git-commit: 9a5618674946f67528de1b40609596dbb75ced0c
 workflow-type: tm+mt
-source-wordcount: '3142'
+source-wordcount: '3461'
 ht-degree: 0%
 
 ---
@@ -23,19 +23,9 @@ Uno schema è un insieme di regole che rappresentano e convalidano la struttura 
 
 Oltre a descrivere la struttura dei dati, gli schemi applicano vincoli e aspettative ai dati in modo che possano essere convalidati mentre si spostano tra i sistemi. Queste definizioni standard consentono l’interpretazione coerente dei dati, indipendentemente dall’origine, e rimuovono la necessità di tradurre tra le applicazioni.
 
-[!DNL Experience Platform] mantiene questa normalizzazione semantica attraverso l&#39;uso di schemi. Gli schemi sono il modo standard per descrivere i dati in [!DNL Experience Platform], consentendo a tutti i dati conformi agli schemi di essere riutilizzabili senza conflitti all’interno di un’organizzazione e persino di essere condivisibili tra più organizzazioni.
+[!DNL Experience Platform] mantiene questa normalizzazione semantica utilizzando gli schemi. Gli schemi sono il modo standard per descrivere i dati in [!DNL Experience Platform], consentendo il riutilizzo di tutti i dati conformi agli schemi in un&#39;organizzazione senza conflitti o anche condivisi tra più organizzazioni.
 
-### Tabelle relazionali e oggetti incorporati
-
-Quando si lavora con database relazionali, le best practice prevedono la normalizzazione dei dati o la suddivisione di un’entità in parti discrete che vengono quindi visualizzate su più tabelle. Per leggere i dati nel loro insieme o aggiornare l&#39;entità, è necessario eseguire operazioni di lettura e scrittura in più tabelle singole utilizzando JOIN.
-
-Utilizzando gli oggetti incorporati, gli schemi XDM possono rappresentare direttamente dati complessi e archiviarli in documenti indipendenti con struttura gerarchica. Uno dei principali vantaggi di questa struttura è che consente di eseguire query sui dati senza dover ricostruire l’entità tramite join costosi a più tabelle denormalizzate. Non vi sono restrizioni difficili al numero di livelli possibili nella gerarchia dello schema.
-
-### Schemi e big data
-
-I sistemi digitali moderni generano una grande quantità di segnali comportamentali (dati delle transazioni, registri web, Internet di cose, visualizzazione e così via). Questi big data offrono straordinarie opportunità di ottimizzazione delle esperienze, ma sono difficili da utilizzare a causa della scala e della varietà dei dati. Al fine di trarre valore dai dati, la struttura, il formato e le definizioni devono essere standardizzati in modo da poter essere elaborati in modo coerente ed efficiente.
-
-Gli schemi risolvono questo problema consentendo l&#39;integrazione dei dati da più fonti, standardizzati attraverso strutture e definizioni comuni e condivisi tra le soluzioni. Ciò consente ai processi e ai servizi successivi di rispondere a qualsiasi tipo di domanda posta sui dati, allontanandosi dall’approccio tradizionale alla modellazione dei dati, in cui tutte le domande che verranno poste sui dati sono note in anticipo e i dati sono modellati per conformarsi a tali aspettative.
+Gli schemi XDM sono ideali per l’archiviazione di grandi quantità di dati complessi in un formato autonomo. Per ulteriori informazioni su come XDM esegue questa operazione, consulta le sezioni sugli [oggetti incorporati](#embedded) e [big data](#big-data) nell&#39;appendice di questo documento.
 
 ### Flussi di lavoro basati su schema in [!DNL Experience Platform]
 
@@ -51,30 +41,30 @@ Il primo passaggio nella creazione di uno schema consiste nel determinare il con
 
 ### Comportamenti dei dati in [!DNL Experience Platform]
 
-I dati destinati all&#39;uso in [!DNL Experience Platform] sono raggruppati in due tipi di comportamento:
+I dati destinati a essere utilizzati in [!DNL Experience Platform] sono raggruppati in due tipi di comportamento:
 
-* **Dati** record: Fornisce informazioni sugli attributi di un soggetto. Un soggetto potrebbe essere un&#39;organizzazione o un individuo.
-* **Dati** serie temporali: Fornisce un&#39;istantanea del sistema nel momento in cui un&#39;azione è stata eseguita direttamente o indirettamente da un soggetto del record.
+* **Dati** record: Fornisce informazioni sugli attributi di un oggetto. Un soggetto potrebbe essere un&#39;organizzazione o un individuo.
+* **Dati** delle serie temporali: Fornisce un&#39;istantanea del sistema al momento in cui un&#39;azione è stata eseguita direttamente o indirettamente da un soggetto del record.
 
-Tutti gli schemi XDM descrivono i dati che possono essere classificati come record o serie temporali. Il comportamento dei dati di uno schema è definito dalla classe dello schema, che viene assegnata a uno schema quando viene creato per la prima volta. Le classi XDM sono descritte in dettaglio più avanti in questo documento.
+Tutti gli schemi XDM descrivono i dati che possono essere classificati come record o serie temporali. Il comportamento dei dati di uno schema è definito dalla classe dello schema, che viene assegnata a uno schema quando viene creato per la prima volta. Le classi XDM sono descritte più avanti in questo documento.
 
-Gli schemi di record e serie temporali contengono una mappa di identità (`xdm:identityMap`). Questo campo contiene la rappresentazione di identità di un soggetto, ricavata dai campi contrassegnati come &quot;Identità&quot; come descritto nella sezione successiva.
+Gli schemi di record e serie temporali contengono una mappa di identità (`xdm:identityMap`). Questo campo contiene la rappresentazione di identità di un oggetto, tratta dai campi contrassegnati come &quot;Identità&quot; come descritto nella sezione successiva.
 
 ### [!UICONTROL Identity] {#identity}
 
-Gli schemi vengono utilizzati per assimilare i dati in [!DNL Experience Platform]. Questi dati possono essere utilizzati in più servizi per creare una singola vista unificata di una singola entità. Pertanto, quando si pensa agli schemi, è importante pensare all&#39;identità dei clienti e a quali campi è possibile utilizzare per identificare un soggetto, indipendentemente da dove i dati provengono.
+Gli schemi vengono utilizzati per acquisire i dati in [!DNL Experience Platform]. Questi dati possono essere utilizzati in più servizi per creare una singola visualizzazione unificata di una singola entità. Pertanto, è importante, quando pensi agli schemi, pensare alle identità dei clienti e a quali campi può essere utilizzato per identificare un soggetto indipendentemente da dove i dati potrebbero provenire.
 
-Per facilitare questo processo, i campi chiave all&#39;interno degli schemi possono essere contrassegnati come identità. Al momento dell&#39;assimilazione dei dati, i dati contenuti in tali campi vengono inseriti in &quot;[!UICONTROL Identity Graph]&quot; per tale persona. I dati del grafico possono quindi essere utilizzati da [[!DNL Real-time Customer Profile]](../../profile/home.md) e da altri [!DNL Experience Platform] servizi per fornire una visione unificata di ciascun singolo cliente.
+Per facilitare questo processo, i campi chiave all’interno degli schemi possono essere contrassegnati come identità. Al momento dell’inserimento dei dati, i dati contenuti in tali campi vengono inseriti nel &quot;[!UICONTROL Identity Graph]&quot; per tale individuo. I dati del grafico sono quindi accessibili da [[!DNL Real-time Customer Profile]](../../profile/home.md) e da altri servizi [!DNL Experience Platform] per fornire una visualizzazione unita di ogni singolo cliente.
 
-I campi generalmente contrassegnati come &quot;[!UICONTROL Identity]&quot; includono: indirizzo e-mail, numero di telefono, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), ID CRM o altri campi ID univoci. È inoltre consigliabile prendere in considerazione eventuali identificatori univoci specifici dell&#39;organizzazione, in quanto potrebbero essere validi anche i campi &quot;[!UICONTROL Identity]&quot;.
+I campi comunemente contrassegnati come &quot;[!UICONTROL Identity]&quot; includono: indirizzo e-mail, numero di telefono, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), ID CRM o altri campi ID univoci. È inoltre necessario considerare eventuali identificatori univoci specifici dell&#39;organizzazione, in quanto potrebbero essere validi anche i campi &quot;[!UICONTROL Identity]&quot;.
 
-È importante considerare le identità dei clienti durante la fase di pianificazione dello schema per garantire che i dati vengano riuniti per creare il profilo più affidabile possibile. Consulta la panoramica su [Adobe Experience Platform Identity Service](../../identity-service/home.md) per saperne di più su come le informazioni sull&#39;identità possono aiutarti a distribuire esperienze digitali ai tuoi clienti.
+È importante considerare le identità dei clienti durante la fase di pianificazione dello schema, in modo da garantire che i dati vengano raggruppati per creare il profilo più solido possibile. Per ulteriori informazioni su come le informazioni sull’identità possono aiutarti a fornire esperienze digitali ai tuoi clienti, consulta la panoramica su [Servizio Adobe Experience Platform Identity](../../identity-service/home.md) .
 
-#### xdm:identityMap {#identityMap}
+#### `xdm:identityMap` {#identityMap}
 
-`xdm:identityMap` è un campo del tipo di mappa che descrive i diversi valori di identità di un singolo utente, insieme ai relativi spazi dei nomi associati. Questo campo può essere utilizzato per fornire informazioni di identità per gli schemi, anziché definire i valori di identità all&#39;interno della struttura dello schema stesso.
+`xdm:identityMap` è un campo di tipo mappa che descrive i vari valori di identità di un individuo, insieme ai relativi namespace associati. Questo campo può essere utilizzato per fornire informazioni di identità per gli schemi, anziché definire valori di identità all’interno della struttura dello schema stesso.
 
-Un esempio di mappa di identità semplice ha il seguente aspetto:
+Un esempio di mappa di identità semplice è simile al seguente:
 
 ```json
 "identityMap": {
@@ -103,17 +93,17 @@ Un esempio di mappa di identità semplice ha il seguente aspetto:
 }
 ```
 
-Come illustrato nell&#39;esempio precedente, ogni chiave dell&#39;oggetto `identityMap` rappresenta uno spazio dei nomi Identity. Il valore di ogni chiave è un array di oggetti che rappresenta i valori di identità (`id`) per il rispettivo spazio dei nomi. Fare riferimento alla documentazione [!DNL Identity Service] per un [elenco di spazi dei nomi di identità standard ](../../identity-service/troubleshooting-guide.md#standard-namespaces) riconosciuto dalle applicazioni  Adobe.
+Come illustrato nell’esempio precedente, ogni chiave dell’oggetto `identityMap` rappresenta uno spazio dei nomi di identità. Il valore di ciascuna chiave è una matrice di oggetti che rappresenta i valori di identità (`id`) per il rispettivo namespace. Consulta la documentazione [!DNL Identity Service] relativa a un [elenco di spazi dei nomi di identità standard](../../identity-service/troubleshooting-guide.md#standard-namespaces) riconosciuti dalle applicazioni Adobe.
 
 >[!NOTE]
 >
->È possibile specificare un valore booleano per indicare se il valore è un&#39;identità primaria (`primary`) anche per ogni valore di identità. Le identità principali devono essere impostate solo per gli schemi destinati a essere utilizzati in [!DNL Real-time Customer Profile]. Per ulteriori informazioni, vedere la sezione relativa agli [schemi di unione](#union).
+>Per ogni valore di identità è inoltre possibile specificare un valore booleano che indica se il valore è un&#39;identità primaria (`primary`). È necessario impostare le identità principali solo per gli schemi destinati a essere utilizzati in [!DNL Real-time Customer Profile]. Per ulteriori informazioni, consulta la sezione sugli [schemi di unione](#union) .
 
 ### Principi di evoluzione dello schema {#evolution}
 
-Mentre la natura delle esperienze digitali continua ad evolversi, devono evolversi anche gli schemi utilizzati per rappresentarle. Uno schema ben progettato è quindi in grado di adattarsi e evolvere in base alle esigenze, senza causare modifiche distruttive alle versioni precedenti dello schema.
+Poiché la natura delle esperienze digitali continua ad evolversi, devono evolversi anche gli schemi utilizzati per rappresentarle. Uno schema ben progettato è quindi in grado di adattarsi ed evolvere in base alle esigenze, senza causare modifiche distruttive alle versioni precedenti dello schema.
 
-Poiché il mantenimento della compatibilità con le versioni precedenti è fondamentale per l&#39;evoluzione dello schema, [!DNL Experience Platform] applica un principio di controllo delle versioni puramente additivo per garantire che qualsiasi revisione dello schema produca solo aggiornamenti e modifiche non distruttivi. In altre parole, le **modifiche di interruzione non sono supportate.**
+Poiché il mantenimento della compatibilità con le versioni precedenti è fondamentale per l’evoluzione dello schema, [!DNL Experience Platform] applica un principio di controllo delle versioni puramente additivo per garantire che eventuali revisioni allo schema si traducano solo in aggiornamenti e modifiche non distruttivi. In altre parole, le **modifiche di interruzione non sono supportate.**
 
 | Modifiche supportate | Interruzione delle modifiche (non supportata) |
 |------------------------------------|---------------------------------|
@@ -143,7 +133,13 @@ La composizione di uno schema inizia con l’assegnazione di una classe. Le clas
 
 La classe di uno schema determina quali mixin saranno idonei per essere utilizzati in tale schema. Questo è discusso più dettagliatamente nella [sezione successiva](#mixin).
 
-Adobe fornisce due classi XDM standard (&quot;core&quot;): [!DNL XDM Individual Profile] e [!DNL XDM ExperienceEvent]. Inoltre, puoi creare classi personalizzate per descrivere casi d’uso più specifici per la tua organizzazione. Le classi personalizzate sono definite da un&#39;organizzazione quando non sono disponibili classi principali definite da Adobi per descrivere un caso d&#39;uso univoco.
+Adobe fornisce diverse classi XDM standard (&quot;core&quot;). Due di queste classi, [!DNL XDM Individual Profile] e [!DNL XDM ExperienceEvent], sono necessarie per quasi tutti i processi della piattaforma a valle. Inoltre, puoi creare classi personalizzate per descrivere casi d’uso più specifici per la tua organizzazione. Le classi personalizzate sono definite da un&#39;organizzazione quando non sono disponibili classi principali definite da Adobi per descrivere un caso d&#39;uso univoco.
+
+La schermata seguente illustra come le classi sono rappresentate nell’interfaccia utente di Platform. Poiché lo schema di esempio mostrato non contiene mixin, tutti i campi visualizzati sono forniti dalla classe dello schema ([!UICONTROL XDM Individual Profile]).
+
+![](../images/schema-composition/class.png)
+
+Per l&#39;elenco più aggiornato delle classi XDM standard disponibili, fare riferimento al [repository XDM ufficiale](https://github.com/adobe/xdm/tree/master/components/classes). In alternativa, se preferisci visualizzare le risorse nell’interfaccia utente, puoi consultare la guida sull’ [esplorazione dei componenti XDM](../ui/explore.md) .
 
 ### Mixin {#mixin}
 
@@ -157,17 +153,23 @@ Ad esempio, per acquisire dettagli quali &quot;[!UICONTROL First Name]&quot; e &
 
 Gli schemi sono composti da &quot;zero o più&quot; mixin, quindi è possibile comporre uno schema valido senza utilizzare alcun mixin.
 
-Per un elenco di tutti i mixin standard correnti, fai riferimento al [repository XDM ufficiale](https://github.com/adobe/xdm/tree/master/components/mixins).
+La schermata seguente mostra come i mixin sono rappresentati nell’interfaccia utente di Platform. In questo esempio viene aggiunto un singolo mixin ([!UICONTROL Demographic Details]) a uno schema che fornisce un raggruppamento di campi alla struttura dello schema.
+
+![](../images/schema-composition/mixin.png)
+
+Per l&#39;elenco più aggiornato dei mixin XDM standard disponibili, fai riferimento al [repository XDM ufficiale](https://github.com/adobe/xdm/tree/master/components/mixins). In alternativa, se preferisci visualizzare le risorse nell’interfaccia utente, puoi consultare la guida sull’ [esplorazione dei componenti XDM](../ui/explore.md) .
 
 ### Tipo di dati {#data-type}
 
 I tipi di dati vengono utilizzati come tipi di campi di riferimento in classi o schemi allo stesso modo dei campi letterali di base. La differenza principale consiste nel fatto che i tipi di dati possono definire più campi secondari. Simile a un mixin, un tipo di dati consente l’utilizzo coerente di una struttura a più campi, ma offre maggiore flessibilità rispetto a un mixin perché un tipo di dati può essere incluso ovunque in uno schema, aggiungendolo come &quot;tipo di dati&quot; di un campo.
 
->[!NOTE]
->
->Per ulteriori informazioni sulle differenze tra mixin e tipi di dati, nonché sui pro e i contro dell&#39;utilizzo uno sull&#39;altro per casi d&#39;uso simili, vedere l&#39; [appendice](#mixins-v-datatypes) .
-
 [!DNL Experience Platform] fornisce una serie di tipi di dati comuni come parte del  [!DNL Schema Registry] per supportare l&#39;uso di pattern standard per descrivere le strutture di dati comuni. Questo è spiegato più dettagliatamente nelle [!DNL Schema Registry] esercitazioni, dove diventerà più chiaro man mano che segui i passaggi per definire i tipi di dati.
+
+La schermata seguente illustra come i tipi di dati sono rappresentati nell’interfaccia utente di Platform. Uno dei campi forniti dal mixin ([!UICONTROL Demographic Details]) utilizza il tipo di dati &quot;[!UICONTROL Person name]&quot;, come indicato dal testo che segue il carattere di barra (`|`) accanto al nome del campo. Questo particolare tipo di dati fornisce diversi sottocampi relativi al nome di una singola persona, un costrutto che può essere riutilizzato per altri campi in cui il nome di una persona deve essere catturato.
+
+![](../images/schema-composition/data-type.png)
+
+Per l&#39;elenco più aggiornato dei tipi di dati XDM standard disponibili, consulta l&#39; [archivio XDM ufficiale](https://github.com/adobe/xdm/tree/master/components/datatypes). In alternativa, se preferisci visualizzare le risorse nell’interfaccia utente, puoi consultare la guida sull’ [esplorazione dei componenti XDM](../ui/explore.md) .
 
 ### Campo
 
@@ -242,6 +244,13 @@ Per ulteriori informazioni sulle operazioni con [!DNL Profile], consulta la [Pan
 
 Tutti i file di dati acquisiti in [!DNL Experience Platform] devono essere conformi alla struttura di uno schema XDM. Per ulteriori informazioni su come formattare i file di dati per conformarsi alle gerarchie XDM (inclusi i file di esempio), consulta il documento sulle [trasformazioni ETL di esempio](../../etl/transformations.md). Per informazioni generali sull’acquisizione di file di dati in [!DNL Experience Platform], consulta la [panoramica sull’acquisizione batch](../../ingestion/batch-ingestion/overview.md).
 
+## Schemi per segmenti esterni
+
+Se porti segmenti da sistemi esterni in Platform, devi utilizzare i seguenti componenti per acquisirli negli schemi:
+
+* [[!UICONTROL Segment definition] Classe](../classes/segment-definition.md): Utilizza questa classe standard per acquisire gli attributi chiave di una definizione di segmento esterna.
+* [[!UICONTROL Segment Membership Details] mixin](../mixins/profile/segmentation.md): Aggiungi questo mixin al tuo  [!UICONTROL XDM Individual Profile] schema per associare i profili dei clienti a segmenti specifici.
+
 ## Passaggi successivi
 
 Ora che conosci le nozioni di base della composizione dello schema, sei pronto per iniziare a esplorare e creare schemi utilizzando il [!DNL Schema Registry].
@@ -259,7 +268,19 @@ Per iniziare a utilizzare l&#39;API [!DNL Schema Registry], leggi la [Guida per 
 
 ## Appendice
 
-La sezione seguente contiene informazioni aggiuntive sui principi della composizione dello schema.
+Le sezioni seguenti contengono informazioni aggiuntive relative ai principi di composizione dello schema.
+
+### Tabelle relazionali e oggetti incorporati {#embedded}
+
+Quando si lavora con database relazionali, le best practice prevedono la normalizzazione dei dati o la suddivisione di un’entità in parti discrete che vengono quindi visualizzate su più tabelle. Per leggere i dati nel loro insieme o aggiornare l&#39;entità, è necessario eseguire operazioni di lettura e scrittura in più tabelle singole utilizzando JOIN.
+
+Utilizzando gli oggetti incorporati, gli schemi XDM possono rappresentare direttamente dati complessi e archiviarli in documenti indipendenti con struttura gerarchica. Uno dei principali vantaggi di questa struttura è che consente di eseguire query sui dati senza dover ricostruire l’entità tramite join costosi a più tabelle denormalizzate. Non vi sono restrizioni difficili al numero di livelli possibili nella gerarchia dello schema.
+
+### Schemi e big data {#big-data}
+
+I sistemi digitali moderni generano una grande quantità di segnali comportamentali (dati delle transazioni, registri web, Internet di cose, visualizzazione e così via). Questi big data offrono straordinarie opportunità di ottimizzazione delle esperienze, ma sono difficili da utilizzare a causa della scala e della varietà dei dati. Al fine di trarre valore dai dati, la struttura, il formato e le definizioni devono essere standardizzati in modo da poter essere elaborati in modo coerente ed efficiente.
+
+Gli schemi risolvono questo problema consentendo l&#39;integrazione dei dati da più fonti, standardizzati attraverso strutture e definizioni comuni e condivisi tra le soluzioni. Ciò consente ai processi e ai servizi successivi di rispondere a qualsiasi tipo di domanda posta sui dati, allontanandosi dall’approccio tradizionale alla modellazione dei dati, in cui tutte le domande che verranno poste sui dati sono note in anticipo e i dati sono modellati per conformarsi a tali aspettative.
 
 ### Oggetti e campi a forma libera {#objects-v-freeform}
 
