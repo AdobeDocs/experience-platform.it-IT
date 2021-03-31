@@ -3,11 +3,11 @@ keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazion
 solution: Experience Platform
 title: 'Valutare gli eventi in tempo reale con Segmentazione in streaming '
 topic: guida per sviluppatori
-description: Questo documento contiene esempi sull’utilizzo della segmentazione in streaming con l’API di Adobe Experience Platform Segmentation Service.
+description: Questo documento contiene esempi sull’utilizzo della segmentazione in streaming con l’API del servizio di segmentazione di Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: bb7edcaccca87918c56d00e092e4b7154d7c5d6e
 workflow-type: tm+mt
-source-wordcount: '1341'
+source-wordcount: '1342'
 ht-degree: 1%
 
 ---
@@ -82,7 +82,7 @@ Affinché un segmento possa essere valutato utilizzando la segmentazione in stre
 
 La definizione di un segmento **non** sarà abilitata per la segmentazione in streaming nei seguenti scenari:
 
-- La definizione del segmento include segmenti o caratteristiche di Adobe Audience Manager (AAM).
+- La definizione del segmento include segmenti o caratteristiche Adobe Audience Manager (AAM).
 - La definizione del segmento include più entità (query con più entità).
 
 Inoltre, durante la segmentazione in streaming si applicano alcune linee guida:
@@ -94,7 +94,7 @@ Inoltre, durante la segmentazione in streaming si applicano alcune linee guida:
 
 ## Recupera tutti i segmenti abilitati per la segmentazione in streaming
 
-Puoi recuperare un elenco di tutti i segmenti abilitati per la segmentazione in streaming all’interno dell’organizzazione IMS effettuando una richiesta GET all’endpoint `/segment/definitions` .
+Puoi recuperare un elenco di tutti i segmenti abilitati per la segmentazione in streaming all’interno dell’organizzazione IMS effettuando una richiesta di GET all’endpoint `/segment/definitions` .
 
 **Formato API**
 
@@ -296,7 +296,7 @@ Una volta abilitata la valutazione dello streaming, devi creare una baseline (do
 
 ### Creare una pianificazione
 
-Effettuando una richiesta POST all&#39;endpoint `/config/schedules`, puoi creare una pianificazione e includere l&#39;ora specifica in cui deve essere attivata la pianificazione.
+Effettuando una richiesta POST all’endpoint `/config/schedules`, puoi creare una pianificazione e includere l’ora specifica in cui deve essere attivata la pianificazione.
 
 **Formato API**
 
@@ -366,7 +366,7 @@ Una risposta corretta restituisce i dettagli della nuova pianificazione creata.
 
 ### Abilita pianificazione
 
-Per impostazione predefinita, una pianificazione è inattiva quando viene creata a meno che la proprietà `state` non sia impostata su `active` nel corpo della richiesta di creazione (POST). Puoi abilitare una pianificazione (imposta `state` su `active`) effettuando una richiesta PATCH all&#39;endpoint `/config/schedules` e includendo l&#39;ID della pianificazione nel percorso.
+Per impostazione predefinita, una pianificazione è inattiva quando viene creata a meno che la proprietà `state` non sia impostata su `active` nel corpo della richiesta di creazione (POST). Puoi abilitare una pianificazione (imposta `state` su `active`) effettuando una richiesta PATCH all’endpoint `/config/schedules` e includendo l’ID della pianificazione nel percorso.
 
 **Formato API**
 
@@ -403,6 +403,6 @@ La stessa operazione può essere utilizzata per disabilitare una pianificazione 
 
 ## Passaggi successivi
 
-Ora che hai abilitato segmenti nuovi ed esistenti per la segmentazione in streaming e hai abilitato la segmentazione pianificata per sviluppare una linea di base ed eseguire valutazioni ricorrenti, puoi iniziare a creare segmenti per la tua organizzazione.
+Ora che hai abilitato segmenti nuovi ed esistenti per la segmentazione in streaming e hai abilitato la segmentazione pianificata per sviluppare una linea di base ed eseguire valutazioni ricorrenti, puoi iniziare a creare segmenti abilitati per lo streaming per la tua organizzazione.
 
-Per informazioni su come eseguire azioni simili e lavorare con segmenti utilizzando l’interfaccia utente di Adobe Experience Platform, visita la [guida utente del Generatore di segmenti](../ui/segment-builder.md).
+Per informazioni su come eseguire azioni simili e lavorare con segmenti utilizzando l’interfaccia utente di Adobe Experience Platform, visita la [Guida utente di Generatore di segmenti](../ui/segment-builder.md).
