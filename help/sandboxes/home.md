@@ -5,9 +5,9 @@ title: Panoramica delle sandbox
 topic: ' - Panoramica'
 description: Le sandbox sono partizioni virtuali all’interno di una singola istanza di Experience Platform, che consentono un’integrazione perfetta con il processo di sviluppo delle applicazioni di esperienza digitale.
 translation-type: tm+mt
-source-git-commit: ee2fb54ba59f22a1ace56a6afd78277baba5271e
+source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '755'
 ht-degree: 0%
 
 ---
@@ -23,13 +23,9 @@ Questo documento fornisce una panoramica di alto livello delle sandbox in Experi
 
 ## Informazioni sulle sandbox
 
->[!NOTE]
->
->La funzione Sandbox di produzione multipla è in versione beta.
+Le sandbox sono partizioni virtuali all’interno di una singola istanza di Experience Platform, che consentono un’integrazione perfetta con il processo di sviluppo delle applicazioni di esperienza digitale. Un’istanza di Experience Platform supporta una sandbox di produzione e più sandbox non di produzione, con ogni sandbox che mantiene la propria libreria indipendente di risorse Platform (inclusi schemi, set di dati, profili e così via).  Tutti i contenuti e le azioni eseguite all’interno di una sandbox sono limitati a tale sandbox e non hanno alcun effetto su altre sandbox.
 
-Le sandbox sono partizioni virtuali all’interno di una singola istanza di Experience Platform, che consentono un’integrazione perfetta con il processo di sviluppo delle applicazioni di esperienza digitale. Un’istanza di Experience Platform supporta più sandbox di produzione e non di produzione, con ogni sandbox che mantiene la propria libreria indipendente di risorse Platform (inclusi schemi, set di dati, profili e così via). Tutti i contenuti e le azioni eseguite all’interno di una sandbox sono limitati a tale sandbox e non hanno alcun effetto su altre sandbox.
-
-Le sandbox non di produzione consentono di testare le funzioni, eseguire esperimenti e creare configurazioni personalizzate senza influire sulla sandbox di produzione. Inoltre, le sandbox di produzione e non di produzione dispongono di una funzione di ripristino che rimuove tutte le risorse create dal cliente dalla sandbox. Le sandbox non di produzione non possono essere convertite in sandbox di produzione. Una licenza di Experience Platform predefinita concede cinque sandbox (una produzione e quattro non di produzione). È possibile aggiungere pacchetti di dieci sandbox fino a un massimo di 75 sandbox in totale. Queste sandbox aggiuntive possono essere utilizzate per creare sandbox di produzione e non di produzione. Per ulteriori informazioni, contatta l’amministratore dell’organizzazione IMS o il rappresentante commerciale di Adobe.
+Le sandbox non di produzione consentono di testare le funzioni, eseguire esperimenti e creare configurazioni personalizzate senza influire sulla sandbox di produzione. Inoltre, le sandbox non di produzione hanno una funzione di reimpostazione che rimuove tutte le risorse create dal cliente dalla sandbox. Le sandbox non di produzione non possono essere convertite in sandbox di produzione. Una licenza di Experience Platform predefinita concede cinque sandbox (una produzione e quattro non di produzione). Puoi aggiungere pacchetti di dieci sandbox non di produzione fino a un massimo di 75 sandbox in totale. Per ulteriori informazioni, contatta l’amministratore dell’organizzazione IMS o il rappresentante commerciale di Adobe.
 
 >[!NOTE]
 >
@@ -45,7 +41,7 @@ In sintesi, le sandbox offrono i seguenti vantaggi:
 
 Per impostazione predefinita, tutti gli utenti di un&#39;organizzazione hanno accesso a una sandbox di produzione. L&#39;accesso alle sandbox non di produzione deve essere concesso da un amministratore di sistema, un amministratore di prodotto o un amministratore di profilo di prodotto tramite [Adobe Admin Console](https://adminconsole.adobe.com).
 
-Per visualizzare, creare, aggiornare o eliminare sandbox di produzione e non di produzione, è necessario concedere agli utenti anche le autorizzazioni di amministrazione della sandbox.
+Per visualizzare, creare, aggiornare o eliminare sandbox non di produzione, è necessario concedere agli utenti anche le autorizzazioni di amministrazione sandbox.
 
 Per ulteriori informazioni sulla gestione di ruoli e autorizzazioni per le sandbox, consulta la [panoramica sul controllo degli accessi](../access-control/home.md).
 
