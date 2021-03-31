@@ -1,21 +1,21 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;trovare sandbox;cercare una sandbox'
+keywords: Experience Platform;home;argomenti popolari;trovare sandbox;cercare una sandbox
 solution: Experience Platform
-title: Cercare una sandbox nell'API
-topic: developer guide
-description: Potete cercare un singolo sandbox effettuando una richiesta di GET che include la proprietà name della sandbox nel percorso della richiesta.
+title: Cercare una sandbox nell’API
+topic: guida per sviluppatori
+description: Puoi cercare una singola sandbox effettuando una richiesta GET che include la proprietà name della sandbox nel percorso della richiesta.
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '245'
 ht-degree: 2%
 
 ---
 
 
-# Cercare una sandbox nell&#39;API
+# Cercare una sandbox nell’API
 
-Potete cercare un singolo sandbox effettuando una richiesta di GET che include la proprietà `name` della sandbox nel percorso della richiesta.
+Puoi cercare un singolo sandbox effettuando una richiesta GET che include la proprietà `name` della sandbox nel percorso della richiesta.
 
 **Formato API**
 
@@ -25,7 +25,7 @@ GET /sandboxes/{SANDBOX_NAME}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{SANDBOX_NAME}` | La proprietà `name` della sandbox da cercare. |
+| `{SANDBOX_NAME}` | La proprietà `name` della sandbox che desideri cercare. |
 
 **Richiesta**
 
@@ -37,7 +37,6 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Risposta**
@@ -62,9 +61,9 @@ Una risposta corretta restituisce i dettagli della sandbox, inclusi i relativi `
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `name` | Nome della sandbox. Utilizzata a scopo di ricerca nelle chiamate API. |
-| `title` | Nome visualizzato per la sandbox. |
-| `state` | Lo stato di elaborazione corrente della sandbox. Lo stato di una sandbox può essere uno dei seguenti: <ul><li>**creazione**: La sandbox è stata creata, ma viene ancora fornita dal sistema.</li><li>**active**: La sandbox viene creata e attiva.</li><li>**non riuscito**: A causa di un errore, il provisioning della sandbox non è stato eseguito dal sistema ed è disabilitato.</li><li>**eliminato**: La sandbox è stata disattivata manualmente.</li></ul> |
-| `type` | Il tipo di sandbox, &quot;development&quot; o &quot;production&quot;. |
-| `isDefault` | Una proprietà booleana che indica se questa sandbox è la sandbox predefinita per l&#39;organizzazione. In genere si tratta della sandbox di produzione. |
-| `eTag` | Identificatore per una versione specifica della sandbox. Utilizzato per il controllo della versione e l&#39;efficienza del caching, questo valore viene aggiornato ogni volta che viene apportata una modifica alla sandbox. |
+| `name` | Nome della sandbox. Utilizzato a scopo di ricerca nelle chiamate API. |
+| `title` | Nome visualizzato della sandbox. |
+| `state` | Lo stato di elaborazione corrente della sandbox. Lo stato di una sandbox può essere uno dei seguenti: <ul><li>**creazione**: La sandbox è stata creata, ma viene comunque fornita dal sistema.</li><li>**attivo**: La sandbox viene creata e attiva.</li><li>**non riuscito**: A causa di un errore, il sistema non è in grado di eseguire il provisioning della sandbox ed è disabilitato.</li><li>**eliminato**: La sandbox è stata disabilitata manualmente.</li></ul> |
+| `type` | Il tipo di sandbox, &quot;sviluppo&quot; o &quot;produzione&quot;. |
+| `isDefault` | Proprietà booleana che indica se questa sandbox è la sandbox predefinita per l’organizzazione. In genere si tratta della sandbox di produzione. |
+| `eTag` | Identificatore per una versione specifica della sandbox. Utilizzato per il controllo delle versioni e l’efficienza del caching, questo valore viene aggiornato ogni volta che viene apportata una modifica alla sandbox. |
