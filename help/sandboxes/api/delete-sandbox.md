@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform ;home;argomenti più comuni;eliminare sandbox
+keywords: Experience Platform;home;argomenti popolari;eliminare sandbox
 solution: Experience Platform
-title: Eliminare una sandbox nell'API
-topic: developer guide
-description: Potete eliminare una sandbox effettuando una richiesta di DELETE che include il nome della sandbox nel percorso della richiesta.
+title: Eliminare una sandbox nell’API
+topic: guida per sviluppatori
+description: Puoi eliminare una sandbox effettuando una richiesta di DELETE che include il nome della sandbox nel percorso della richiesta.
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: e7a80dbfdd2d59e4997f6e227b5c2cf336e5a0f6
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '118'
 ht-degree: 3%
 
 ---
 
 
-# Eliminare una sandbox nell&#39;API
+# Eliminare una sandbox nell’API
 
-Potete eliminare una sandbox effettuando una richiesta di DELETE che include nel percorso della richiesta l&#39;elemento `name` della sandbox.
+È possibile eliminare una sandbox effettuando una richiesta di DELETE che include nel percorso della richiesta la versione `name` della sandbox.
 
 >[!NOTE]
 >
->Facendo questa chiamata API, la proprietà `status` della sandbox viene aggiornata in &quot;eliminata&quot; e disattivata. Le richieste di GET possono ancora recuperare i dettagli della sandbox dopo che è stata eliminata.
+>L’esecuzione di questa chiamata API aggiorna la proprietà della sandbox `status` su &quot;eliminata&quot; e la disattiva. Le richieste GET possono ancora recuperare i dettagli della sandbox dopo che è stata eliminata.
 
 **Formato API**
 
@@ -41,12 +41,11 @@ curl -X DELETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli aggiornati della sandbox, indicando che la `state` è &quot;eliminata&quot;.
+Una risposta corretta restituisce i dettagli aggiornati della sandbox, indicando che la relativa `state` è &quot;eliminata&quot;.
 
 ```json
 {
