@@ -5,7 +5,7 @@ title: Cercare una sandbox nell’API
 topic: guida per sviluppatori
 description: Puoi cercare una singola sandbox effettuando una richiesta GET che include la proprietà name della sandbox nel percorso della richiesta.
 translation-type: tm+mt
-source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
+source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 2%
@@ -37,6 +37,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Risposta**
