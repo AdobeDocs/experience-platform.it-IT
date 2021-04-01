@@ -5,9 +5,9 @@ title: Panoramica del servizio di segmentazione
 topic: ' - Panoramica'
 description: Scopri il servizio di segmentazione di Adobe Experience Platform e il ruolo che svolge nell’ecosistema di Platform.
 translation-type: tm+mt
-source-git-commit: 738256021fb583e7dc14fd33f5df193813a6e0bb
+source-git-commit: eff833f20eba4e51579a43fbb98c1e2333e326ef
 workflow-type: tm+mt
-source-wordcount: '1499'
+source-wordcount: '1581'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Per informazioni sulla creazione di definizioni di segmenti utilizzando l&#39;AP
 
 ## Valutare i segmenti
 
-Platform supporta attualmente due metodi di valutazione dei segmenti: segmentazione in streaming e segmentazione in batch.
+Platform supporta attualmente tre metodi di valutazione dei segmenti: segmentazione in streaming, segmentazione in batch e segmentazione edge.
 
 ### Segmentazione streaming
 
@@ -59,7 +59,15 @@ Per ulteriori informazioni sulla segmentazione in streaming, consulta la [docume
 
 In alternativa a un processo continuo di selezione dei dati, la segmentazione in batch sposta tutti i dati di profilo contemporaneamente attraverso le definizioni dei segmenti per produrre i tipi di pubblico corrispondenti. Una volta creato, questo segmento viene salvato e memorizzato in modo da poterlo esportare per l’uso.
 
-I segmenti valutati utilizzando la segmentazione batch vengono valutati ogni 24 ore. Tuttavia, per i segmenti esistenti, la segmentazione incrementale mantiene i segmenti valutati utilizzando la segmentazione batch freschi per un massimo di un&#39;ora. Eventuali segmenti nuovi o modificati di recente dovranno attendere l’esecuzione del successivo processo di segmentazione batch completa per sfruttare la segmentazione incrementale.
+**Segmentazione incrementale (beta)**
+
+I segmenti batch vengono valutati ogni 24 ore. Tuttavia, per i segmenti esistenti, la segmentazione incrementale mantiene i segmenti aggiornati fino a un’ora.
+
+La segmentazione incrementale viene eseguita su nuovi dati che arrivano nell’archivio dei profili. Tuttavia, per la segmentazione incrementale si applicano le seguenti avvertenze:
+
+- Per qualsiasi segmento nuovo o modificato di recente, i profili con nuovi dati inizieranno a qualificarsi nella prossima esecuzione incrementale. Tuttavia, i profili senza modifiche recupereranno il successivo processo di segmentazione batch completa.
+- I segmenti con più entità verranno aggiornati nella segmentazione incrementale. In presenza di aggiornamenti di entità, tutti i profili con nuovi dati inizieranno a utilizzarli nella successiva esecuzione incrementale. Tuttavia, i profili senza modifiche recupereranno il successivo processo di segmentazione batch completa.
+- Gli eventi che eliminano la finestra temporale di un segmento verranno riconciliati nel successivo processo di segmentazione batch completa.
 
 Per scoprire come valutare i segmenti, consulta l’ [esercitazione sulla valutazione dei segmenti](./tutorials/evaluate-a-segment.md).
 
