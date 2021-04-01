@@ -5,7 +5,7 @@ title: Nozioni di base sulla composizione dello schema
 topic: ' - Panoramica'
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 9a5618674946f67528de1b40609596dbb75ced0c
+source-git-commit: ae2c5f9fa4e732fefe55a8536894844986aea1e2
 workflow-type: tm+mt
 source-wordcount: '3461'
 ht-degree: 0%
@@ -165,7 +165,7 @@ I tipi di dati vengono utilizzati come tipi di campi di riferimento in classi o 
 
 [!DNL Experience Platform] fornisce una serie di tipi di dati comuni come parte del  [!DNL Schema Registry] per supportare l&#39;uso di pattern standard per descrivere le strutture di dati comuni. Questo è spiegato più dettagliatamente nelle [!DNL Schema Registry] esercitazioni, dove diventerà più chiaro man mano che segui i passaggi per definire i tipi di dati.
 
-La schermata seguente illustra come i tipi di dati sono rappresentati nell’interfaccia utente di Platform. Uno dei campi forniti dal mixin ([!UICONTROL Demographic Details]) utilizza il tipo di dati &quot;[!UICONTROL Person name]&quot;, come indicato dal testo che segue il carattere di barra (`|`) accanto al nome del campo. Questo particolare tipo di dati fornisce diversi sottocampi relativi al nome di una singola persona, un costrutto che può essere riutilizzato per altri campi in cui il nome di una persona deve essere catturato.
+La schermata seguente illustra come i tipi di dati sono rappresentati nell’interfaccia utente di Platform. Uno dei campi forniti dal mixin [!UICONTROL Demographic Details] utilizza il tipo di dati &quot;[!UICONTROL Person name]&quot;, come indicato dal testo che segue il carattere di barra verticale (`|`) accanto al nome del campo. Questo particolare tipo di dati fornisce diversi sottocampi relativi al nome di una singola persona, un costrutto che può essere riutilizzato per altri campi in cui il nome di una persona deve essere catturato.
 
 ![](../images/schema-composition/data-type.png)
 
