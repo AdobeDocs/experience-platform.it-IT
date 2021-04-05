@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 'Segmentazione Edge tramite API '
 topic: guida per sviluppatori
 description: Questo documento contiene esempi su come utilizzare la segmentazione edge con l’API di Adobe Experience Platform Segmentation Service.
+exl-id: effce253-3d9b-43ab-b330-943fb196180f
 translation-type: tm+mt
-source-git-commit: 0c4625ec0728c8c94b72e3e16e7ecf45ea2d0c0b
+source-git-commit: 692bfca8d14ac247527f956bbcba8b4eb37516e3
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '636'
 ht-degree: 1%
 
 ---
-
 
 # Segmentazione degli spigoli
 
@@ -39,8 +39,8 @@ Affinché un segmento possa essere valutato utilizzando la segmentazione edge, l
 | ---------- | ------- |
 | Hit in entrata | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo senza restrizioni temporali. |
 | Hit in entrata che fa riferimento a un profilo | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo, senza restrizioni di tempo, e a uno o più attributi di profilo. |
-| Query di frequenza | Qualsiasi definizione di segmento che fa riferimento a un evento che si verifica un certo numero di volte. |
-| Query di frequenza che fa riferimento a un profilo | Qualsiasi definizione di segmento che fa riferimento a un evento che si verifica un certo numero di volte e presenta uno o più attributi di profilo. |
+| Query di frequenza | Qualsiasi definizione di segmento che fa riferimento a un evento che si verifica almeno un certo numero di volte. |
+| Query di frequenza che fa riferimento a un profilo | Qualsiasi definizione di segmento che fa riferimento a un evento che si verifica almeno un determinato numero di volte e presenta uno o più attributi di profilo. |
 
 {style=&quot;table-layout:auto&quot;}
 
