@@ -6,9 +6,9 @@ description: Istruzioni per la connessione alle posizioni di archiviazione cloud
 seo-description: Istruzioni per la connessione alle posizioni di archiviazione cloud
 exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
 translation-type: tm+mt
-source-git-commit: 7bb862c4c6c52c42e45d5e736fa6d239e812ac2c
+source-git-commit: ecda1f1c4a2829124aedaae2395a74e54929c7ad
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
@@ -64,6 +64,10 @@ Per le destinazioni [!DNL Azure Event Hubs] , fornisci il nome del flusso di dat
 La destinazione viene ora creata. Puoi selezionare **[!UICONTROL Save & Exit]** se desideri attivare i segmenti in un secondo momento oppure puoi selezionare **[!UICONTROL Next]** per continuare il flusso di lavoro e selezionare i segmenti da attivare. Leggi la sezione [Attiva segmenti](#activate-segments) per il resto del flusso di lavoro per esportare i dati.
 
 ## Utilizzare le macro per creare una cartella nel percorso di archiviazione{#use-macros}
+
+>[!NOTE]
+>
+> La funzionalità descritta in questa sezione è attualmente disponibile solo per le destinazioni [Amazon S3](./amazon-s3.md).
 
 Per creare una cartella personalizzata per ciascun file di segmento nel percorso di archiviazione, è possibile utilizzare le macro nel campo di immissione del percorso della cartella. Inserire le macro alla fine del campo di input, come illustrato di seguito.
 
