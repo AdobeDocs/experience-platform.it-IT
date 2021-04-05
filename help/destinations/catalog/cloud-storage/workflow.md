@@ -4,14 +4,14 @@ title: Creare una destinazione di archiviazione cloud
 type: Tutorial
 description: Istruzioni per la connessione alle posizioni di archiviazione cloud
 seo-description: Istruzioni per la connessione alle posizioni di archiviazione cloud
+exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
 translation-type: tm+mt
-source-git-commit: 632003773100ec8ef0389840695a1c75a1aa663d
+source-git-commit: 1e33a7b48e20d7afe9f10b206a6fd68433b205db
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '581'
 ht-degree: 0%
 
 ---
-
 
 # Creare una destinazione di archiviazione cloud
 
@@ -37,7 +37,7 @@ Per informazioni specifiche sulle credenziali immesse nel passaggio **Autenticaz
 >
 >Platform supporta la convalida delle credenziali nel processo di autenticazione e visualizza un messaggio di errore se immetti credenziali errate nel percorso di archiviazione cloud. In questo modo non completa il flusso di lavoro con credenziali errate.
 
-![Connessione alla destinazione di archiviazione cloud - passaggio di autenticazione](../../assets/catalog/cloud-storage/workflow/destination-account.png)
+![Connessione alla destinazione di archiviazione cloud - passaggio dell&#39;account](../../assets/catalog/cloud-storage/workflow/destination-account.png)
 
 ## Passaggio di autenticazione {#authentication}
 
@@ -61,7 +61,35 @@ Per le destinazioni [!DNL Azure Event Hubs] , fornisci il nome del flusso di dat
 
 ![Connessione alla destinazione di archiviazione cloud di Event Hubs - passaggio di autenticazione](../../assets/catalog/cloud-storage/workflow/event-hubs-setup.png)
 
-La destinazione viene ora creata. Puoi selezionare **[!UICONTROL Save & Exit]** se desideri attivare i segmenti in un secondo momento oppure puoi selezionare **[!UICONTROL Next]** per continuare il flusso di lavoro e selezionare i segmenti da attivare. In entrambi i casi, consulta la sezione successiva, [Attiva segmenti](#activate-segments), affinché il resto del flusso di lavoro esporti dati.
+La destinazione viene ora creata. Puoi selezionare **[!UICONTROL Save & Exit]** se desideri attivare i segmenti in un secondo momento oppure puoi selezionare **[!UICONTROL Next]** per continuare il flusso di lavoro e selezionare i segmenti da attivare. Leggi la sezione [Attiva segmenti](#activate-segments) per il resto del flusso di lavoro per esportare i dati.
+
+## Utilizzare le macro per creare una cartella nel percorso di archiviazione{#use-macros}
+
+Per creare una cartella personalizzata per ciascun file di segmento nel percorso di archiviazione, è possibile utilizzare le macro nel campo di immissione del percorso della cartella. Inserire le macro alla fine del campo di input, come illustrato di seguito.
+
+![Come utilizzare le macro per creare una cartella nell&#39;archivio](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
+
+Gli esempi seguenti fanno riferimento a un segmento di esempio `Luxury Audience` con ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
+
+### Macro 1 - `%SEGMENT_NAME%`
+
+Ingresso: `acme/campaigns/2021/%SEGMENT_NAME%`
+
+Percorso cartella nel percorso di archiviazione: `acme/campaigns/2021/Luxury Audience`
+
+### Macro 2 - `%SEGMENT_ID%`
+
+Ingresso: `acme/campaigns/2021/%SEGMENT_ID%`
+
+Percorso cartella nel percorso di archiviazione: `acme/campaigns/2021/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+### Macro 3 - `%SEGMENT_NAME%/%SEGMENT_ID%`
+
+Ingresso: `acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
+
+Percorso cartella nel percorso di archiviazione: `acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+
 
 ## Attiva segmenti {#activate-segments}
 
