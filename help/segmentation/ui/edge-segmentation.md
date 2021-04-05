@@ -3,15 +3,15 @@ keywords: Experience Platform;home;argomenti popolari;segmentazione edge;Segment
 solution: Experience Platform
 title: Guida all’interfaccia utente di Segmentazione bordo
 topic: guida all'interfaccia utente
-description: 'La segmentazione dei bordi è la capacità di valutare istantaneamente i segmenti in Platform sul bordo, abilitando casi d’uso di personalizzazione della pagina e della stessa pagina. '
+description: La segmentazione dei bordi è la capacità di valutare istantaneamente i segmenti in Platform sul bordo, abilitando casi d’uso di personalizzazione della pagina e della stessa pagina.
+exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 translation-type: tm+mt
-source-git-commit: 7eadb14dc71792174dfd750775148763f55834dd
+source-git-commit: 692bfca8d14ac247527f956bbcba8b4eb37516e3
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '332'
 ht-degree: 1%
 
 ---
-
 
 # Guida all’interfaccia utente per la segmentazione dei bordi
 
@@ -25,8 +25,8 @@ La segmentazione dei bordi è la capacità di valutare i segmenti in Adobe Exper
 | ---------- | ------- | ------- |
 | Hit in entrata | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo senza restrizioni temporali. | ![](../images/ui/edge-segmentation/incoming-hit.png) |
 | Hit in entrata che fa riferimento a un profilo | Qualsiasi definizione di segmento che fa riferimento a un singolo evento in arrivo, senza restrizioni di tempo, e a uno o più attributi di profilo. | ![](../images/ui/edge-segmentation/profile-hit.png) |
-| Query di frequenza | Qualsiasi definizione di segmento che fa riferimento a un evento che si verifica un certo numero di volte. |  |
-| Query di frequenza che fa riferimento a un profilo | Qualsiasi definizione di segmento che fa riferimento a un evento che si verifica un certo numero di volte e presenta uno o più attributi di profilo. |  |
+| Query di frequenza | Qualsiasi definizione di segmento che fa riferimento a un evento che si verifica almeno un certo numero di volte. |  |
+| Query di frequenza che fa riferimento a un profilo | Qualsiasi definizione di segmento che fa riferimento a un evento che si verifica almeno un determinato numero di volte e presenta uno o più attributi di profilo. |  |
 
 Se la query corrisponde a uno qualsiasi dei tipi di query di cui sopra, puoi abilitarla per la segmentazione edge attivando l’opzione **[!UICONTROL Evaluate as streaming segment on the edge]**.
 
