@@ -4,7 +4,7 @@ title: Aggiorna account di destinazione
 type: Tutorial
 description: Questa esercitazione elenca i passaggi per aggiornare gli account di destinazione nell'interfaccia utente di Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 6fd980b486c4a330f9188065bac55c624af584a1
+source-git-commit: e4afbdd6ff8f45ea8d5506f0228f0a80b44eee51
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 1%
@@ -21,7 +21,7 @@ La scheda **[!UICONTROL Accounts]** mostra i dettagli sulle connessioni stabilit
 ![Scheda Account](../assets/ui/update-accounts/destination-accounts.png)
 
 | Elemento | Descrizione |
----------|----------
+|---|---|
 | [!UICONTROL Platform] | Destinazione per la quale è stata impostata la connessione. |
 | [!UICONTROL Connection Type] | Rappresenta il tipo di connessione al bucket di archiviazione o alla destinazione. <ul><li>Per le destinazioni di marketing e-mail: Può essere S3 o FTP.</li><li>Per le destinazioni pubblicitarie in tempo reale: Server-to-server</li><li>Per le destinazioni di archiviazione cloud Amazon S3: Chiave di accesso </li><li>Per le destinazioni di archiviazione cloud SFTP: Autenticazione di base per SFTP</li></ul> |
 | [!UICONTROL Username] | Il nome utente selezionato nella [procedura guidata di connessione alla destinazione](../catalog/email-marketing/overview.md#connect-destination). |
