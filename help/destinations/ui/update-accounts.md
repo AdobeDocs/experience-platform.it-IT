@@ -1,16 +1,16 @@
 ---
-keywords: Aggiorna account di destinazione,Account di destinazione
+keywords: aggiornare account di destinazione;account di destinazione;come aggiornare gli account
 title: Aggiorna account di destinazione
 type: Tutorial
 description: Questa esercitazione elenca i passaggi per aggiornare gli account di destinazione nell'interfaccia utente di Adobe Experience Platform
-exl-id: afb41878-4205-4c64-af4d-e2740f852785
 translation-type: tm+mt
-source-git-commit: 07869d63f395bbab6c49a3976051facdf94d43b7
+source-git-commit: ebe2a35e66b78acf6a9ffa20664877913cd35648
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '313'
 ht-degree: 1%
 
 ---
+
 
 # Aggiorna account di destinazione
 
