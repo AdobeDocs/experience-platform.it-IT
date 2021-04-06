@@ -1,26 +1,37 @@
 ---
-keywords: connessione destinazione;destinazione connessione;modalità di connessione della destinazione
+keywords: collegare destinazione;connessione destinazione;come collegare destinazione
 title: Connessione a una destinazione
 type: Tutorial
-description: Questa esercitazione elenca i passaggi necessari per collegare una destinazione in Adobe Experience Platform
+description: Questa esercitazione elenca i passaggi per collegare una destinazione in Adobe Experience Platform
+exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: cc432f7c07f0f82deec653864154016638ec8138
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '152'
 ht-degree: 0%
 
 ---
 
-
 # Connessione a una destinazione
 
-Per collegarsi a una destinazione in Adobe Experience Platform, effettuate le seguenti operazioni:
+Per connettersi a una destinazione in Adobe Experience Platform, effettua le seguenti operazioni:
 
-1. Andate a **[!UICONTROL Destinations]** dalla barra di navigazione a sinistra.
-2. Nella scheda [[!UICONTROL Catalog]](./destinations-workspace.md#catalog), selezionare la destinazione a cui connettersi.
-3. Premere **[!UICONTROL Connect destination]** per avviare la procedura guidata di connessione alla destinazione.
-4. Per istruzioni dettagliate su come connettersi a destinazioni specifiche, fare riferimento alle pagine di destinazione. Vedere [destinazioni di archiviazione cloud](../catalog/cloud-storage/workflow.md), [destinazioni di marketing e-mail](../catalog/email-marketing/overview.md) e [destinazioni di pubblicità](../catalog/advertising/overview.md).
+1. Accedi a [Interfaccia Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinations]** dalla barra di navigazione a sinistra.
 
-Per una panoramica video su come collegare una destinazione e attivare i segmenti, consulta di seguito.
+   ![Connetti alla destinazione](../assets/ui/connect-destinations/connect-destination.png)
 
->[!VIDEO](https://video.tv.adobe.com/v/29710?quality=12)
+2. Nella scheda [[!UICONTROL Catalog]](./destinations-workspace.md#catalog) , seleziona la destinazione a cui desideri connetterti.
+
+3. Selezionare **[!UICONTROL Configure]** per avviare la procedura guidata di connessione alla destinazione.
+
+   ![Configurare la destinazione](../assets/ui/connect-destinations/configure-destination.png)
+
+   >[!NOTE]
+   >
+   >Se esiste una connessione con una destinazione, è possibile visualizzare un pulsante **[!UICONTROL Activate]** sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra **[!UICONTROL Activate]** e **[!UICONTROL Configure]**, consulta la sezione [Catalogo](../ui/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
+
+4. Per istruzioni su come connettersi a tipi specifici di destinazioni, consulta [Panoramica del catalogo delle destinazioni](../catalog/overview.md) .
+
+5. Facoltativamente, guarda il video seguente per una panoramica su come connettersi a una destinazione e attivare segmenti su di essa.
+
+   >[!VIDEO](https://video.tv.adobe.com/v/29710?quality=12)
