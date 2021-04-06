@@ -6,10 +6,10 @@ user-guide-description: Attiva i dati noti e sconosciuti per campagne di marketi
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinazioni
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 11%
+source-wordcount: '473'
+ht-degree: 10%
 
 ---
 
@@ -23,9 +23,13 @@ ht-degree: 11%
    * [Connettiti alle destinazioni di marketing e-mail e attiva i dati utilizzando l’API del servizio di flusso](./api/email-marketing.md)
 * Guide dell&#39;interfaccia utente {#ui}
    * [Area di lavoro Destinazioni](./ui/destinations-workspace.md)
-   * [Visualizza dettagli destinazione](./ui/destination-details-page.md)
    * [Connessione a una destinazione](./ui/connect-destination.md)
+   * [Visualizza dettagli destinazione](./ui/destination-details-page.md)
    * [Attivare profili e segmenti in una destinazione](./ui/activate-destinations.md)
+   * [Aggiorna account di destinazione](./ui/update-accounts.md)
+   * [Modifica flussi di attivazione](./ui/edit-activation.md)
+   * [Eliminare le destinazioni](./ui/delete-destinations.md)
+   * [Monitorare i flussi di dati](./ui/monitor-dataflows.md)
 * Catalogo delle destinazioni {#catalog}
    * [Panoramica del catalogo delle destinazioni](./catalog/overview.md)
    * [ Connessione HTTP (Alpha)](./catalog/http-destination.md)
