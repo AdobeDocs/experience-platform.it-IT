@@ -1,16 +1,16 @@
 ---
-keywords: cancellare le destinazioni; come eliminare le destinazioni
+keywords: Eliminare destinazioni
 title: Eliminare le destinazioni
 type: Tutorial
 description: Questa esercitazione elenca i passaggi per eliminare una destinazione esistente nell'interfaccia utente di Adobe Experience Platform
+exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
 translation-type: tm+mt
-source-git-commit: c7f01ce5667ad92e95f1576ff466b2a13338b54b
+source-git-commit: 07869d63f395bbab6c49a3976051facdf94d43b7
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '388'
 ht-degree: 1%
 
 ---
-
 
 # Elimina destinazioni {#delete-destinations}
 
