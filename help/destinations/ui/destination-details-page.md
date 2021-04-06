@@ -2,15 +2,15 @@
 keywords: destinazioni;destinazione;pagina dettagli destinazioni;pagina dettagli destinazioni
 title: Visualizza dettagli destinazione
 description: 'La pagina dei dettagli di una singola destinazione fornisce una panoramica dei dettagli della destinazione. I dettagli della destinazione includono il nome della destinazione, l’ID, i segmenti mappati alla destinazione e i controlli per modificare l’attivazione e per abilitare e disabilitare il flusso di dati. '
-seo-description: 'La pagina dei dettagli di una singola destinazione fornisce una panoramica dei dettagli della destinazione. I dettagli della destinazione includono il nome della destinazione, l’ID, i segmenti mappati alla destinazione e i controlli per modificare l’attivazione e per abilitare e disabilitare il flusso di dati. '
+seo-description: La pagina dei dettagli di una singola destinazione fornisce una panoramica dei dettagli della destinazione. I dettagli della destinazione includono il nome della destinazione, l’ID, i segmenti mappati alla destinazione e i controlli per modificare l’attivazione e per abilitare e disabilitare il flusso di dati.
+exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
 translation-type: tm+mt
-source-git-commit: 4f5e7dfee17b2dde371efb82cf52d91c08696f39
+source-git-commit: cc432f7c07f0f82deec653864154016638ec8138
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '614'
 ht-degree: 0%
 
 ---
-
 
 # Visualizza dettagli destinazione
 
@@ -20,29 +20,37 @@ Nell’interfaccia utente di Adobe Experience Platform puoi visualizzare e monit
 
 >[!NOTE]
 >
->La pagina dei dettagli delle destinazioni fa parte dell’area di lavoro [!UICONTROL Destinations] nell’interfaccia utente di Platform. Per ulteriori informazioni, consulta la [[!UICONTROL Destinations] panoramica dell&#39;area di lavoro](./destinations-workspace.md) .
+>La pagina dei dettagli delle destinazioni fa parte dell’area di lavoro [!UICONTROL Destinations] in [!DNL Platform] [!DNL UI]. Per ulteriori informazioni, consulta la [[!UICONTROL Destinations] panoramica dell&#39;area di lavoro](./destinations-workspace.md) .
 
-Nell’area di lavoro **[!UICONTROL Destinations]** all’interno dell’interfaccia utente di Platform, passa alla scheda **[!UICONTROL Browse]** e seleziona il nome di una destinazione da visualizzare.
+## Visualizza i dettagli di destinazione {#view-details}
 
-![](../assets/ui/details-page/select-destination.png)
+Segui i passaggi riportati di seguito per visualizzare ulteriori dettagli su una destinazione esistente.
 
-Viene visualizzata la pagina dei dettagli della destinazione, con i relativi controlli disponibili. Se visualizzi i dettagli di una destinazione batch, viene visualizzata anche una dashboard di monitoraggio.
+1. Accedi a [Interfaccia Experience Platform](https://platform.adobe.com/) e seleziona **[!UICONTROL Destinations]** dalla barra di navigazione a sinistra. Seleziona **[!UICONTROL Browse]** dall’intestazione superiore per visualizzare le destinazioni esistenti.
 
-![](../assets/ui/details-page/details.png)
+   ![Sfoglia destinazioni](../assets/ui/details-page/browse-destinations.png)
 
-Inoltre, nella scheda Sfoglia è possibile scegliere di eliminare il flusso di dati selezionato selezionando l&#39;icona ![cestino](../assets/ui/details-page/trash-icon.png). Tutti i segmenti attivati nelle destinazioni verranno demappati prima che il flusso di dati venga eliminato.
+1. Seleziona l&#39;icona del filtro ![Icona-filtro](../assets/ui/details-page/filter.png) in alto a sinistra per avviare il pannello di ordinamento. Il pannello di ordinamento fornisce un elenco di tutte le destinazioni. Puoi selezionare più di una destinazione dall’elenco per visualizzare una selezione filtrata di flussi di dati associati alla destinazione selezionata.
 
-![](../assets/ui/details-page/delete-flow.png)
+   ![Filtrare le destinazioni](../assets/ui/details-page/filter-destinations.png)
+
+1. Selezionare il nome della destinazione che si desidera visualizzare.
+
+   ![Seleziona destinazione](../assets/ui/details-page/destination-select.png)
+
+1. Viene visualizzata la pagina dei dettagli della destinazione, con i relativi controlli disponibili. Se visualizzi i dettagli di una destinazione batch, viene visualizzata anche una dashboard di monitoraggio.
+
+   ![Dettagli della destinazione](../assets/ui/details-page/destination-details.png)
 
 ## Barra a destra
 
-La barra a destra visualizza le informazioni di base sulla destinazione.
+Nella barra a destra sono visualizzate le informazioni di base sulla destinazione selezionata.
 
-![](../assets/ui/details-page/right-rail.png)
+![barra a destra](../assets/ui/details-page/right-sidebar.png)
 
 La tabella seguente illustra i controlli e i dettagli forniti dalla barra a destra:
 
-| Elemento a destra | Descrizione |
+| Elemento a barra a destra | Descrizione |
 | --- | --- |
 | [!UICONTROL Activate] | Seleziona questo controllo per modificare i segmenti mappati alla destinazione. Per ulteriori informazioni, consulta la guida sull’ [attivazione dei segmenti su una destinazione](./activate-destinations.md) . |
 | [!UICONTROL Delete] | Consente di eliminare questo flusso di dati e di rimuovere la mappatura dei segmenti precedentemente attivati, se presenti. |
@@ -52,8 +60,8 @@ La tabella seguente illustra i controlli e i dettagli forniti dalla barra a dest
 | [!UICONTROL Status] | Indica se la destinazione è abilitata o disabilitata. |
 | [!UICONTROL Marketing actions] | Indica le azioni di marketing (casi d’uso) applicabili a questa destinazione a scopo di governance dei dati. |
 | [!UICONTROL Category] | Indica il tipo di destinazione. Per ulteriori informazioni, consulta il [catalogo delle destinazioni](../catalog/overview.md) . |
-| [!UICONTROL Connection type] | Indica il modulo in base al quale i tipi di pubblico vengono inviati alla destinazione. I valori possibili includono &quot;[!UICONTROL Cookie]&quot; e &quot;[!UICONTROL Profile-based]&quot;. |
-| [!UICONTROL Frequency] | Indica la frequenza con cui i tipi di pubblico vengono inviati alla destinazione. I valori possibili includono &quot;[!UICONTROL Streaming]&quot; e &quot;[!UICONTROL Batch]&quot;. |
+| [!UICONTROL Connection type] | Indica il modulo in base al quale i tipi di pubblico vengono inviati alla destinazione. I valori possibili sono [!UICONTROL Cookie] e [!UICONTROL Profile-based]. |
+| [!UICONTROL Frequency] | Indica la frequenza con cui i tipi di pubblico vengono inviati alla destinazione. I valori possibili sono [!UICONTROL Streaming] e [!UICONTROL Batch]. |
 | [!UICONTROL Identity] | Rappresenta lo spazio dei nomi di identità accettato dalla destinazione, ad esempio `GAID`, `IDFA` o `email`. Per ulteriori informazioni sugli spazi dei nomi di identità accettati, consulta la [panoramica dello spazio dei nomi di identità](../../identity-service/namespaces.md). |
 | [!UICONTROL Created by] | Indica l&#39;utente che ha creato la destinazione. |
 | [!UICONTROL Created] | Indica la data/ora UTC al momento della creazione della destinazione. |
@@ -64,35 +72,18 @@ La tabella seguente illustra i controlli e i dettagli forniti dalla barra a dest
 
 Puoi utilizzare l’interruttore **[!UICONTROL Enabled]/[!UICONTROL Disabled]** per avviare e mettere in pausa tutte le esportazioni di dati verso la destinazione.
 
-![](../assets/ui/details-page/enable-disable.png)
+![Attiva/disattiva attivazione/disattivazione](../assets/ui/details-page/enable-disable.png)
 
 ## [!UICONTROL Dataflow runs]
 
-La scheda [!UICONTROL Dataflow runs] fornisce dati metrici sul flusso di dati da eseguire su destinazioni batch. Viene visualizzato un elenco di singole esecuzioni e delle relative metriche specifiche, insieme ai seguenti totali per i record di profilo:
-
-* **[!UICONTROL Profile records activated]**: Numero totale di record di profilo creati o aggiornati per l’attivazione.
-* **[!UICONTROL Profile records skipped]**: Numero totale di record di profilo saltati per l’attivazione in base alle uscite di profilo o agli attributi mancanti.
-
-![](../assets/ui/details-page/dataflow-runs.png)
-
->[!NOTE]
->
->Le esecuzioni dei flussi di dati vengono generate in base alla frequenza di pianificazione del flusso di dati di destinazione. Viene eseguita un&#39;esecuzione separata del flusso di dati per ogni criterio di unione applicato a un segmento.
-
-Per visualizzare i dettagli di una particolare esecuzione di un flusso di dati, selezionare l’ora di inizio dell’esecuzione dall’elenco. La pagina dei dettagli di un&#39;esecuzione del flusso di dati contiene informazioni aggiuntive, come la dimensione dei dati elaborati e un elenco degli eventuali errori che si sono verificati con i dettagli relativi alla diagnostica degli errori.
-
-![](../assets/ui/details-page/dataflow.png)
+La scheda [!UICONTROL Dataflow runs] fornisce dati metrici sul flusso di dati da eseguire su destinazioni batch. Per ulteriori informazioni, fare riferimento a [Flussi dati di monitoraggio](monitor-dataflows.md).
 
 ## [!UICONTROL Activation data] {#activation-data}
 
 La scheda [!UICONTROL Activation data] visualizza un elenco di segmenti mappati sulla destinazione, con le relative date di inizio e di fine (se applicabili). Per visualizzare i dettagli di un particolare segmento, selezionane il nome dall’elenco.
 
-![](../assets/ui/details-page/activation-data.png)
+![Dati di attivazione](../assets/ui/details-page/activation-data.png)
 
 >[!NOTE]
 >
 >Per informazioni dettagliate sull&#39;esplorazione della pagina dei dettagli di un segmento, consulta la [Panoramica dell&#39;interfaccia utente di segmentazione](../../segmentation/ui/overview.md#segment-details).
-
-## Passaggi successivi
-
-Questo documento illustra le funzionalità della pagina dei dettagli della destinazione. Per ulteriori informazioni sulla gestione delle destinazioni nell&#39;interfaccia utente, consulta la panoramica nell&#39; area di lavoro [[!UICONTROL Destinations]](./destinations-workspace.md).
