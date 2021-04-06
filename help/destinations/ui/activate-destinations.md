@@ -5,14 +5,14 @@ type: Tutorial
 seo-title: Attivare profili e segmenti in una destinazione
 description: Attiva i dati in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
 seo-description: Attiva i dati in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
+exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
 translation-type: tm+mt
-source-git-commit: 0992b223a96b77446a9f9c2823f5195541dd93fa
+source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
 workflow-type: tm+mt
-source-wordcount: '2069'
+source-wordcount: '2025'
 ht-degree: 0%
 
 ---
-
 
 # Attivare profili e segmenti in una destinazione
 
@@ -240,13 +240,6 @@ Nella pagina **[!UICONTROL Review]** è disponibile un riepilogo della selezione
 Se non sono state rilevate violazioni dei criteri, seleziona **[!UICONTROL Finish]** per confermare la selezione e iniziare a inviare dati alla destinazione.
 
 ![confirm-selection](../assets/ui/activate-destinations/confirm-selection.png)
-
-## Modifica attivazione {#edit-activation}
-
-Per modificare i flussi di attivazione esistenti in Adobe Experience Platform, effettua le seguenti operazioni:
-
-1. Seleziona **[!UICONTROL Destinations]** nella barra di navigazione a sinistra, quindi fai clic sulla scheda **[!UICONTROL Browse]** e fai clic sul nome della destinazione.
-2. Seleziona **[!UICONTROL Edit activation]** nella barra a destra per modificare i segmenti da inviare alla destinazione.
 
 ## Verifica che l&#39;attivazione del segmento sia avvenuta correttamente {#verify-activation}
 
