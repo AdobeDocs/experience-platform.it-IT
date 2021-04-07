@@ -1,67 +1,67 @@
 ---
-keywords: ' Experience Platform;home;argomenti più comuni;dataset;Dataset;creare un dataset;creare un dataset'
+keywords: Experience Platform;home;argomenti popolari;set di dati;set di dati;creare un set di dati;creare un set di dati
 solution: Experience Platform
 title: Creare un set di dati utilizzando le API
-topic: datasets
-description: Questo documento fornisce i passaggi generali per la creazione di un dataset utilizzando le API Adobe Experience Platform e la compilazione del dataset tramite un file.
+topic: set di dati
+description: Questo documento fornisce passaggi generali per la creazione di un set di dati utilizzando le API di Adobe Experience Platform e la compilazione del set di dati utilizzando un file .
+exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1268'
+source-wordcount: '1306'
 ht-degree: 1%
 
 ---
 
+# Creare un set di dati utilizzando le API
 
-# Creazione di un set di dati tramite le API
-
-Questo documento fornisce i passaggi generali per la creazione di un dataset utilizzando le API Adobe Experience Platform e la compilazione del dataset tramite un file.
+Questo documento fornisce passaggi generali per la creazione di un set di dati utilizzando le API di Adobe Experience Platform e la compilazione del set di dati utilizzando un file .
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
-* [Caricamento](../../ingestion/batch-ingestion/overview.md) batch:  [!DNL Experience Platform] consente di assimilare i dati come file batch.
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Il framework standard con cui  [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza dei clienti.
-* [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola  [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [Acquisizione](../../ingestion/batch-ingestion/overview.md) batch:  [!DNL Experience Platform] consente di acquisire i dati come file batch.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Il framework standardizzato in base al quale  [!DNL Experience Platform] vengono organizzati i dati sulla customer experience.
+* [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola  [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per eseguire correttamente le chiamate alle [!DNL Platform] API.
+Le sezioni seguenti forniscono informazioni aggiuntive che dovrai conoscere per effettuare correttamente le chiamate alle API [!DNL Platform] .
 
 ### Lettura di chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consultate la sezione relativa a [come leggere chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform] .
 
-### Raccogli valori per le intestazioni richieste
+### Raccogli i valori delle intestazioni richieste
 
-Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](https://www.adobe.com/go/platform-api-authentication-en) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
+Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come mostrato di seguito:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui verrà eseguita l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* nome x-sandbox: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione di [panoramica sulla sandbox](../../sandboxes/home.md).
+>Per ulteriori informazioni sulle sandbox in [!DNL Platform], consulta la documentazione di panoramica [sandbox](../../sandboxes/home.md).
 
-Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva:
+Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione aggiuntiva:
 
-* Content-Type: application/json
+* Tipo di contenuto: application/json
 
 ## Tutorial
 
-Per creare un set di dati, è innanzitutto necessario definire uno schema. Uno schema è un insieme di regole per la rappresentazione dei dati. Oltre a descrivere la struttura dei dati, gli schemi forniscono vincoli e aspettative che possono essere applicati e utilizzati per convalidare i dati mentre vengono spostati tra i sistemi.
+Per creare un set di dati, è innanzitutto necessario definire uno schema. Uno schema è un insieme di regole che facilitano la rappresentazione dei dati. Oltre a descrivere la struttura dei dati, gli schemi forniscono vincoli e aspettative che possono essere applicati e utilizzati per convalidare i dati mentre vengono spostati tra i sistemi.
 
-Queste definizioni standard consentono l&#39;interpretazione coerente dei dati, indipendentemente dall&#39;origine, e rimuovono la necessità di una traduzione tra le applicazioni. Per ulteriori informazioni sulla composizione degli schemi, vedere la guida sulle [nozioni di base della composizione dello schema](../../xdm/schema/composition.md)
+Queste definizioni standard consentono l’interpretazione coerente dei dati, indipendentemente dall’origine, e rimuovono la necessità di tradurre tra le applicazioni. Per ulteriori informazioni sulla composizione degli schemi, consulta la guida sulle [nozioni di base sulla composizione dello schema](../../xdm/schema/composition.md)
 
 ## Cercare uno schema di set di dati
 
-Questa esercitazione inizia dal punto in cui termina l&#39;esercitazione [Schema Registry API ](../../xdm/tutorials/create-schema-api.md), utilizzando lo schema Membri fedeltà creato durante tale esercitazione.
+Questa esercitazione inizia dal punto in cui termina l&#39; [esercitazione API del Registro di sistema dello schema](../../xdm/tutorials/create-schema-api.md), utilizzando lo schema Membri fedeltà creato durante tale esercitazione.
 
-Se non è stata completata l&#39;esercitazione [!DNL Schema Registry], iniziare da questa esercitazione e continuare con l&#39;esercitazione sui dataset solo dopo aver composto lo schema necessario.
+Se non hai completato l&#39;esercitazione [!DNL Schema Registry], inizia da questa sezione e continua con questa esercitazione sui set di dati solo dopo aver composto lo schema necessario.
 
 La seguente chiamata può essere utilizzata per visualizzare lo schema Membri fedeltà creato durante l&#39;esercitazione API [!DNL Schema Registry]:
 
@@ -85,7 +85,7 @@ curl -X GET \
 
 **Risposta**
 
-Il formato dell&#39;oggetto response dipende dall&#39;intestazione Accept inviata nella richiesta. Le singole proprietà di questa risposta sono state ridotte a icona per lo spazio.
+Il formato dell’oggetto di risposta dipende dall’intestazione Accept inviata nella richiesta. Le singole proprietà in questa risposta sono state ridotte a icona per lo spazio.
 
 ```JSON
 {
@@ -179,9 +179,9 @@ Il formato dell&#39;oggetto response dipende dall&#39;intestazione Accept inviat
 }
 ```
 
-## Creare un dataset
+## Creare un set di dati
 
-Con lo schema Membri fedeltà attivo, ora è possibile creare un set di dati che faccia riferimento allo schema.
+Con lo schema Membri fedeltà attivo, ora puoi creare un set di dati che fa riferimento allo schema.
 
 **Formato API**
 
@@ -213,13 +213,18 @@ curl -X POST \
 }'
 ```
 
+| Proprietà | Descrizione |
+| --- | --- |
+| `schemaRef.id` | Il valore URI `$id` per lo schema XDM su cui verrà basato il set di dati. |
+| `schemaRef.contentType` | Indica il formato e la versione dello schema. Per ulteriori informazioni, consulta la sezione sul [controllo delle versioni dello schema](../../xdm/api/getting-started.md#versioning) nella guida API XDM . |
+
 >[!NOTE]
 >
->Questa esercitazione utilizza il formato di file [Apache Parquet](https://parquet.apache.org/documentation/latest/) per tutti i relativi esempi. Un esempio che utilizza il formato di file JSON si trova nella [guida per gli sviluppatori di assimilazione batch](../../ingestion/batch-ingestion/api-overview.md)
+>Questa esercitazione utilizza il formato di file [Apache Parquet](https://parquet.apache.org/documentation/latest/) per tutti i relativi esempi. Un esempio che utilizza il formato di file JSON si trova nella [guida per gli sviluppatori di inserimento batch](../../ingestion/batch-ingestion/api-overview.md)
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un oggetto response costituito da una matrice contenente l&#39;ID del set di dati appena creato nel formato `"@/datasets/{DATASET_ID}"`. L&#39;ID del set di dati è una stringa di sola lettura generata dal sistema che viene utilizzata per fare riferimento al set di dati nelle chiamate API.
+Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un oggetto di risposta costituito da una matrice contenente l&#39;ID del set di dati appena creato nel formato `"@/datasets/{DATASET_ID}"`. L’ID del set di dati è una stringa di sola lettura generata dal sistema che viene utilizzata per fare riferimento al set di dati nelle chiamate API.
 
 ```JSON
 [
@@ -239,7 +244,7 @@ POST /batches
 
 **Richiesta**
 
-Il corpo della richiesta include un campo &quot;datasetId&quot;, il cui valore è il `{DATASET_ID}` generato nel passaggio precedente.
+Il corpo della richiesta include un campo &quot;datasetId&quot; il cui valore è `{DATASET_ID}` generato nel passaggio precedente.
 
 ```SHELL
 curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
@@ -256,7 +261,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un oggetto risposta contenente i dettagli del batch appena creato, inclusa la stringa `id`, di sola lettura, generata dal sistema.
+Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un oggetto di risposta contenente i dettagli del batch appena creato, inclusa la relativa `id`, una stringa generata dal sistema di sola lettura.
 
 ```JSON
 {
@@ -293,13 +298,13 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un oggetto rispos
 }
 ```
 
-## Caricare i file in batch
+## Caricare file in un batch
 
-Dopo aver creato un nuovo batch per il caricamento, ora potete caricare i file nel set di dati specifico. È importante ricordare che quando avete definito il dataset, avete specificato il formato di file come Parquet. Pertanto, i file caricati devono essere in quel formato.
+Dopo aver creato correttamente un nuovo batch per il caricamento, ora puoi caricare i file nel set di dati specifico. È importante ricordare che quando hai definito il set di dati, hai specificato il formato di file come Parquet. Pertanto, i file caricati devono essere in quel formato.
 
 >[!NOTE]
 >
->Il file di caricamento dei dati più grande supportato è 512 MB. Se il file di dati è più grande di questo, deve essere suddiviso in blocchi non superiori a 512 MB, per essere caricato uno alla volta. Potete caricare ciascun file nello stesso batch ripetendo questo passaggio per ciascun file, utilizzando lo stesso ID batch. Non esiste alcun limite al numero se i file possono essere caricati come parte di un batch.
+>Il file di caricamento dati più grande supportato è 512 MB. Se il file di dati è più grande di questo, deve essere suddiviso in blocchi non superiori a 512 MB, per essere caricato uno alla volta. Puoi caricare ogni file nello stesso batch ripetendo questo passaggio per ogni file, utilizzando lo stesso ID batch. Non c&#39;è alcun limite al numero se i file possono essere caricati come parte di un batch.
 
 **Formato API**
 
@@ -309,9 +314,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{BATCH_ID}` | Indica la `id` del batch in cui si sta caricando. |
-| `{DATASET_ID}` | Il `id` del set di dati in cui il batch sarà persistente. |
-| `{FILE_NAME}` | Nome del file che si sta caricando. |
+| `{BATCH_ID}` | Il `id` del batch a cui stai caricando. |
+| `{DATASET_ID}` | Il `id` del set di dati in cui il batch verrà mantenuto. |
+| `{FILE_NAME}` | Nome del file che stai caricando. |
 
 **Richiesta**
 
@@ -328,9 +333,9 @@ curl -X PUT 'https://platform.adobe.io/data/foundation/import/batches/5d01230fc7
 
 Un file caricato correttamente restituisce un corpo di risposta vuoto e lo stato HTTP 200 (OK).
 
-## Completamento batch segnale
+## Completamento batch del segnale
 
-Dopo aver caricato tutti i file di dati nel batch, potete segnalare il batch per il completamento. Il completamento della segnalazione determina la creazione di [!DNL Catalog] `DataSetFile`  voci per i file caricati e l&#39;associazione con il batch generato in precedenza. Il batch [!DNL Catalog] viene contrassegnato correttamente, attivando tutti i flussi a valle che possono quindi funzionare sui dati ora disponibili.
+Dopo aver caricato tutti i file di dati sul batch, puoi segnalare il batch per il completamento. Il completamento della segnalazione causa la creazione di [!DNL Catalog] `DataSetFile` voci per i file caricati e l&#39;associazione con il batch generato in precedenza. Il batch [!DNL Catalog] viene contrassegnato con esito positivo, che attiva tutti i flussi a valle che possono quindi funzionare sui dati ora disponibili.
 
 **Formato API**
 
@@ -355,9 +360,9 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/5d01230fc
 
 Un batch completato correttamente restituisce un corpo di risposta vuoto e lo stato HTTP 200 (OK).
 
-## Caricamento del monitor
+## Acquisizione monitor
 
-A seconda delle dimensioni dei dati, il caricamento dei batch richiede tempi diversi. È possibile monitorare lo stato di un batch aggiungendo un parametro di richiesta `batch` contenente l&#39;ID del batch a una richiesta `GET /batches`. L&#39;API controlla il dataset per lo stato del batch dall&#39;assimilazione fino a quando la `status` nella risposta indica il completamento (&quot;success&quot; o &quot;failure&quot;).
+A seconda delle dimensioni dei dati, il caricamento dei batch richiede diversi periodi di tempo. Puoi monitorare lo stato di un batch aggiungendo un parametro di richiesta `batch` contenente l’ID del batch a una richiesta `GET /batches`. L’API controlla il set di dati per lo stato del batch dall’acquisizione fino a quando la `status` nella risposta indica il completamento (&quot;riuscito&quot; o &quot;non riuscito&quot;).
 
 **Formato API**
 
@@ -382,7 +387,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta positiva restituisce un oggetto con l&#39;attributo `status` contenente il valore di `success`:
+Una risposta positiva restituisce un oggetto con il relativo attributo `status` contenente il valore di `success`:
 
 ```JSON
 {
@@ -414,7 +419,7 @@ Una risposta positiva restituisce un oggetto con l&#39;attributo `status` conten
 }
 ```
 
-Una risposta negativa restituisce un oggetto con il valore di `"failed"` nell&#39;attributo `"status"` e include eventuali messaggi di errore rilevanti:
+Una risposta negativa restituisce un oggetto con il valore `"failed"` nel relativo attributo `"status"` e include eventuali messaggi di errore rilevanti:
 
 ```JSON
 {
@@ -460,20 +465,20 @@ Una risposta negativa restituisce un oggetto con il valore di `"failed"` nell&#3
 >
 >Un intervallo di polling consigliato è di due minuti.
 
-## Leggere i dati dal dataset
+## Leggere i dati dal set di dati
 
-Con l’ID batch, potete utilizzare l’API di accesso ai dati per la lettura e la verifica di tutti i file caricati nel batch. La risposta restituisce un array contenente un elenco di ID file, ciascuno dei quali fa riferimento a un file nel batch.
+Con l’ID batch, puoi utilizzare l’API di accesso ai dati per leggere e verificare tutti i file caricati nel batch. La risposta restituisce un array contenente un elenco di ID file, ciascuno contenente un riferimento a un file nel batch.
 
 È inoltre possibile utilizzare l&#39;API di accesso ai dati per restituire il nome, la dimensione in byte e un collegamento per scaricare il file o la cartella.
 
-I passaggi dettagliati per l&#39;utilizzo dell&#39;API Data Access sono disponibili nella [Guida per gli sviluppatori Data Access](../../data-access/home.md).
+I passaggi dettagliati per l&#39;utilizzo dell&#39;API di accesso ai dati sono disponibili nella [Guida per gli sviluppatori di accesso ai dati](../../data-access/home.md).
 
 ## Aggiornare lo schema del set di dati
 
-È possibile aggiungere campi e inserire dati aggiuntivi nei set di dati creati. A questo scopo, è innanzitutto necessario aggiornare lo schema aggiungendo proprietà aggiuntive che definiscono i nuovi dati. Questa operazione può essere eseguita utilizzando le operazioni PATCH e/o PUT per aggiornare lo schema esistente.
+Puoi aggiungere campi e inserire dati aggiuntivi nei set di dati creati. A questo scopo, devi prima aggiornare lo schema aggiungendo proprietà aggiuntive che definiscono i nuovi dati. È possibile eseguire questa operazione utilizzando le operazioni di PATCH e/o PUT per aggiornare lo schema esistente.
 
-Per ulteriori informazioni sull&#39;aggiornamento degli schemi, vedere la [Schema Registry API Developer Guide](../../xdm/api/getting-started.md).
+Per ulteriori informazioni sull’aggiornamento degli schemi, consulta la [Guida per gli sviluppatori dell’API del Registro di sistema dello schema](../../xdm/api/getting-started.md).
 
-Una volta aggiornato lo schema, è possibile seguire nuovamente i passaggi di questa esercitazione per acquisire nuovi dati conformi allo schema modificato.
+Dopo aver aggiornato lo schema, puoi seguire nuovamente i passaggi descritti in questa esercitazione per acquisire nuovi dati conformi allo schema rivisto.
 
-È importante ricordare che l&#39;evoluzione dello schema è puramente additiva, il che significa che non è possibile introdurre una modifica di interruzione a uno schema una volta che è stato salvato nel Registro di sistema e utilizzato per l&#39;inserimento dei dati. Per ulteriori informazioni sulle procedure ottimali per la composizione dello schema da utilizzare con Adobe Experience Platform, consultare la guida sulle [nozioni di base della composizione dello schema](../../xdm/schema/composition.md).
+È importante tenere presente che l’evoluzione dello schema è puramente additiva, il che significa che non è possibile introdurre una modifica interrompente a uno schema una volta salvato nel Registro di sistema e utilizzato per l’inserimento dei dati. Per ulteriori informazioni sulle best practice per la composizione dello schema da utilizzare con Adobe Experience Platform, consulta la guida sulle [nozioni di base sulla composizione dello schema](../../xdm/schema/composition.md).
