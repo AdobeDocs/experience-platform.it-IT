@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Endpoint API per mixins
 description: L’endpoint /mixins nell’API del Registro di sistema dello schema ti consente di gestire programmaticamente i mixin XDM all’interno dell’applicazione di esperienza.
 topic: guida per sviluppatori
+exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 translation-type: tm+mt
-source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
 source-wordcount: '1136'
 ht-degree: 2%
 
 ---
-
 
 # Endpoint Mixins
 
@@ -140,11 +140,11 @@ Il formato della risposta dipende dall’intestazione `Accept` inviata nella ric
 
 | `Accept` header | Descrizione |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Raw con `$ref` e `allOf`, ha titoli e descrizioni. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` e  `allOf` risolta, ha titoli e descrizioni. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Non elaborato con `$ref` e `allOf`, senza titoli o descrizioni. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` e  `allOf` risolti, senza titoli o descrizioni. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` e  `allOf` risolti, descrittori inclusi. |
+| `application/vnd.adobe.xed+json; version=1` | Raw con `$ref` e `allOf`, ha titoli e descrizioni. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` e  `allOf` risolta, ha titoli e descrizioni. |
+| `application/vnd.adobe.xed-notext+json; version=1` | Non elaborato con `$ref` e `allOf`, senza titoli o descrizioni. |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` e  `allOf` risolti, senza titoli o descrizioni. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` e  `allOf` risolti, descrittori inclusi. |
 
 **Risposta**
 
