@@ -1,35 +1,35 @@
 ---
-keywords: Experience Platform ;home;argomenti più comuni;governance dei dati;etichetta di utilizzo dei dati api;servizio criteri API
+keywords: Experience Platform;home;argomenti popolari;governance dei dati;api dell'etichetta di utilizzo dei dati;api del servizio criteri
 solution: Experience Platform
-title: 'Gestione delle etichette di utilizzo dei dati tramite API '
-topic: developer guide
-description: L'API del servizio DataSet consente di applicare e modificare le etichette di utilizzo per i set di dati. Fa parte delle funzionalità dei cataloghi di dati di Adobe Experience Platform, ma è separata dall'API Catalog Service che gestisce i metadati dei set di dati.
+title: 'Gestire le etichette di utilizzo dei dati utilizzando le API '
+topic: guida per sviluppatori
+description: L’API del servizio Dataset consente di applicare e modificare le etichette di utilizzo per i set di dati. Fa parte delle funzionalità del catalogo dati di Adobe Experience Platform, ma è separato dall’API del servizio catalogo che gestisce i metadati del set di dati.
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 4e75e3fbdcd480c384411c2f33bad5b2cdcc5c42
 workflow-type: tm+mt
-source-wordcount: '1017'
-ht-degree: 3%
+source-wordcount: '1147'
+ht-degree: 2%
 
 ---
 
 
-# Gestione delle etichette di utilizzo dei dati tramite API
+# Gestire le etichette di utilizzo dei dati tramite API
 
-In questo documento sono descritti i passaggi necessari per gestire le etichette di utilizzo dei dati utilizzando l&#39;API [!DNL Policy Service] e l&#39;API [!DNL Dataset Service].
+Questo documento fornisce passaggi su come gestire le etichette di utilizzo dei dati utilizzando le API [!DNL Policy Service] e [!DNL Dataset Service].
 
-[[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) offre diversi endpoint che consentono di creare e gestire le etichette di utilizzo dei dati per la propria organizzazione.
+Il [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) fornisce diversi endpoint che consentono di creare e gestire le etichette di utilizzo dei dati per la tua organizzazione.
 
-L&#39;API [!DNL Dataset Service] consente di applicare e modificare le etichette di utilizzo per i set di dati. Fa parte delle funzionalità dei cataloghi di dati di Adobe Experience Platform, ma è separata dall&#39;API [!DNL Catalog Service] che gestisce i metadati dei dataset.
+L’ API [!DNL Dataset Service] ti consente di applicare e modificare le etichette di utilizzo per i set di dati. Fa parte delle funzionalità del catalogo dati di Adobe Experience Platform, ma è separato dall’ [!DNL Catalog Service] API che gestisce i metadati del set di dati.
 
 ## Introduzione
 
-Prima di leggere questa guida, segui i passaggi descritti nella sezione [guida introduttiva](../../catalog/api/getting-started.md) nella guida per gli sviluppatori di Catalog per raccogliere le credenziali necessarie per effettuare chiamate alle [!DNL Platform] API.
+Prima di leggere questa guida, segui i passaggi descritti nella sezione [guida introduttiva](../../catalog/api/getting-started.md) nella guida per gli sviluppatori del catalogo per raccogliere le credenziali necessarie per effettuare chiamate alle API [!DNL Platform] .
 
-Per effettuare chiamate agli endpoint [!DNL Dataset Service] descritti in questo documento, è necessario avere il valore `id` univoco per un set di dati specifico. Se non si dispone di questo valore, consultare la guida in [elenco degli oggetti catalogo](../../catalog/api/list-objects.md) per individuare gli ID dei set di dati esistenti.
+Per effettuare chiamate agli endpoint [!DNL Dataset Service] descritti in questo documento, è necessario disporre del valore univoco `id` per un set di dati specifico. Se non disponi di questo valore, consulta la guida in [elenco degli oggetti del catalogo](../../catalog/api/list-objects.md) per trovare gli ID dei set di dati esistenti.
 
 ## Elenca tutte le etichette {#list-labels}
 
-Utilizzando l&#39;API [!DNL Policy Service], è possibile elencare tutte le etichette `core` o `custom` effettuando una richiesta di GET rispettivamente a `/labels/core` o `/labels/custom`.
+Utilizzando l’API [!DNL Policy Service], puoi elencare tutte le etichette `core` o `custom` effettuando una richiesta di GET rispettivamente a `/labels/core` o `/labels/custom`.
 
 **Formato API**
 
@@ -40,7 +40,7 @@ GET /labels/custom
 
 **Richiesta**
 
-Nella richiesta seguente sono elencate tutte le etichette personalizzate create all&#39;interno dell&#39;organizzazione.
+Nella richiesta seguente sono elencate tutte le etichette personalizzate create all’interno dell’organizzazione.
 
 ```shell
 curl -X GET \
@@ -53,7 +53,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di etichette personalizzate recuperate dal sistema. Poiché la richiesta di esempio sopra è stata effettuata su `/labels/custom`, la risposta riportata di seguito mostra solo etichette personalizzate.
+Una risposta corretta restituisce un elenco di etichette personalizzate recuperate dal sistema. Poiché la richiesta di esempio precedente è stata effettuata su `/labels/custom`, la risposta seguente mostra solo etichette personalizzate.
 
 ```json
 {
@@ -109,9 +109,9 @@ Una risposta corretta restituisce un elenco di etichette personalizzate recupera
 }
 ```
 
-## Cercare un&#39;etichetta {#look-up-label}
+## Cerca un&#39;etichetta {#look-up-label}
 
-È possibile ricercare un&#39;etichetta specifica inserendo la proprietà `name` dell&#39;etichetta nel percorso di una richiesta di GET all&#39;API [!DNL Policy Service].
+Puoi cercare un’etichetta specifica includendo la proprietà `name` dell’etichetta nel percorso di una richiesta di GET all’ [!DNL Policy Service] API.
 
 **Formato API**
 
@@ -122,11 +122,11 @@ GET /labels/custom/{LABEL_NAME}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{LABEL_NAME}` | La proprietà `name` dell&#39;etichetta personalizzata da ricercare. |
+| `{LABEL_NAME}` | La proprietà `name` dell&#39;etichetta personalizzata che si desidera cercare. |
 
 **Richiesta**
 
-La richiesta seguente recupera l&#39;etichetta personalizzata `L2`, come indicato nel percorso.
+La richiesta seguente recupera l’etichetta personalizzata `L2`, come indicato nel percorso.
 
 ```shell
 curl -X GET \
@@ -139,7 +139,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell&#39;etichetta personalizzata.
+Una risposta corretta restituisce i dettagli dell’etichetta personalizzata.
 
 ```json
 {
@@ -165,7 +165,7 @@ Una risposta corretta restituisce i dettagli dell&#39;etichetta personalizzata.
 
 ## Creare o aggiornare un&#39;etichetta personalizzata {#create-update-label}
 
-Per creare o aggiornare un&#39;etichetta personalizzata, è necessario effettuare una richiesta di PUT all&#39;API [!DNL Policy Service].
+Per creare o aggiornare un’etichetta personalizzata, devi effettuare una richiesta PUT all’API [!DNL Policy Service] .
 
 **Formato API**
 
@@ -175,11 +175,11 @@ PUT /labels/custom/{LABEL_NAME}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{LABEL_NAME}` | La proprietà `name` di un&#39;etichetta personalizzata. Se non esiste un&#39;etichetta personalizzata con questo nome, verrà creata una nuova etichetta. Se ne esiste uno, l&#39;etichetta verrà aggiornata. |
+| `{LABEL_NAME}` | La proprietà `name` di un&#39;etichetta personalizzata. Se non esiste un’etichetta personalizzata con questo nome, verrà creata una nuova etichetta. Se esiste, l’etichetta verrà aggiornata. |
 
 **Richiesta**
 
-La richiesta seguente crea una nuova etichetta, `L3`, che ha lo scopo di descrivere i dati che contengono informazioni relative ai piani di pagamento selezionati dai clienti.
+La seguente richiesta crea una nuova etichetta, `L3`, che ha lo scopo di descrivere i dati che contengono informazioni relative ai piani di pagamento selezionati dai clienti.
 
 ```shell
 curl -X PUT \
@@ -198,14 +198,14 @@ curl -X PUT \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `name` | Identificatore stringa univoco per l&#39;etichetta. Questo valore viene utilizzato a scopo di ricerca e l&#39;etichetta viene applicata a set di dati e campi, pertanto si consiglia di utilizzarlo in modo breve e conciso. |
-| `category` | La categoria dell&#39;etichetta. Sebbene sia possibile creare le proprie categorie per le etichette personalizzate, si consiglia vivamente di utilizzare `Custom` se si desidera che l&#39;etichetta venga visualizzata nell&#39;interfaccia utente. |
-| `friendlyName` | Un nome descrittivo per l&#39;etichetta, utilizzato a scopo di visualizzazione. |
-| `description` | (Facoltativo) Una descrizione dell&#39;etichetta per fornire ulteriore contesto. |
+| `name` | Identificatore stringa univoco per l&#39;etichetta. Questo valore viene utilizzato a scopo di ricerca e applica l’etichetta ai set di dati e ai campi, pertanto si consiglia di breve e concisa. |
+| `category` | La categoria dell&#39;etichetta. Mentre puoi creare categorie personalizzate per le etichette personalizzate, è consigliabile utilizzare `Custom` per visualizzare l’etichetta nell’interfaccia utente. |
+| `friendlyName` | Un nome descrittivo per l’etichetta, utilizzato a scopo di visualizzazione. |
+| `description` | (Facoltativo) Una descrizione dell’etichetta per fornire ulteriore contesto. |
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell&#39;etichetta personalizzata, con codice HTTP 200 (OK) se un&#39;etichetta esistente è stata aggiornata, oppure 201 (Creato) se è stata creata una nuova etichetta.
+Una risposta corretta restituisce i dettagli dell’etichetta personalizzata, con codice HTTP 200 (OK) se è stata aggiornata un’etichetta esistente, oppure 201 (Creato) se è stata creata una nuova etichetta.
 
 ```json
 {
@@ -229,9 +229,9 @@ Una risposta corretta restituisce i dettagli dell&#39;etichetta personalizzata, 
 }
 ```
 
-## Cerca etichette per un set di dati {#look-up-dataset-labels}
+## Cercare etichette per un set di dati {#look-up-dataset-labels}
 
-È possibile ricercare le etichette di utilizzo dei dati applicate a un dataset esistente effettuando una richiesta di GET all&#39;API [!DNL Dataset Service].
+Puoi cercare le etichette di utilizzo dei dati applicate a un set di dati esistente effettuando una richiesta di GET all’ [!DNL Dataset Service] API.
 
 **Formato API**
 
@@ -241,7 +241,7 @@ GET /datasets/{DATASET_ID}/labels
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{DATASET_ID}` | Valore `id` univoco del set di dati di cui si desidera cercare le etichette. |
+| `{DATASET_ID}` | Valore univoco `id` del set di dati di cui si desidera cercare le etichette. |
 
 **Richiesta**
 
@@ -279,12 +279,16 @@ Una risposta corretta restituisce le etichette di utilizzo dei dati applicate al
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `labels` | Elenco di etichette di utilizzo dati applicate al set di dati. |
-| `optionalLabels` | Elenco di singoli campi all’interno del dataset a cui sono applicate etichette di utilizzo dei dati. |
+| `labels` | Elenco di etichette di utilizzo dei dati applicate al set di dati. |
+| `optionalLabels` | Elenco di singoli campi all’interno del set di dati a cui sono applicate etichette di utilizzo dei dati. Sono richieste le seguenti sottoproprietà:<br/><br/>`option`: Oggetto che contiene gli attributi [!DNL Experience Data Model] (XDM) del campo. Sono richieste le tre proprietà seguenti:<ul><li>`id`: Il  `$id` valore URI dello schema associato al campo.</li><li>`contentType`: Indica il formato e la versione dello schema. Per ulteriori informazioni, consulta la sezione sul [controllo delle versioni dello schema](../../xdm/api/getting-started.md#versioning) nella guida API XDM .</li><li>`schemaPath`: Percorso della proprietà dello schema in questione, scritto in  [JSON ](../../landing/api-fundamentals.md#json-pointer) Pointersintassi.</li></ul>`labels`: Elenco di etichette di utilizzo dati da aggiungere al campo. |
+
+- id: Valore URI $id per lo schema XDM su cui si basa il set di dati.
+- contentType: Indica il formato e la versione dello schema. Per ulteriori informazioni, consulta la sezione sul [controllo delle versioni dello schema](../../xdm/api/getting-started.md#versioning) nella guida API XDM .
+- schemaPath: Percorso della proprietà dello schema in questione, scritto con sintassi [JSON Pointer](../../landing/api-fundamentals.md#json-pointer).
 
 ## Applicare etichette a un set di dati {#apply-dataset-labels}
 
-Potete creare un set di etichette per un set di dati inserendole nel payload di una richiesta di POST o PUT all&#39;API [!DNL Dataset Service]. L’utilizzo di uno di questi metodi sovrascrive tutte le etichette esistenti e le sostituisce con quelle fornite nel payload.
+Puoi creare un set di etichette per un set di dati fornendo loro nel payload di una richiesta di POST o PUT all’ API [!DNL Dataset Service] . L’utilizzo di uno di questi metodi sovrascrive le etichette esistenti e le sostituisce con quelle fornite nel payload.
 
 **Formato API**
 
@@ -295,11 +299,11 @@ PUT /datasets/{DATASET_ID}/labels
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{DATASET_ID}` | Valore `id` univoco del set di dati per il quale si creano le etichette. |
+| `{DATASET_ID}` | Valore `id` univoco del set di dati per cui si stanno creando le etichette. |
 
 **Richiesta**
 
-La seguente richiesta di POST aggiunge una serie di etichette al set di dati, oltre a un campo specifico all&#39;interno del set di dati. I campi forniti nel payload sono gli stessi richiesti per una richiesta di PUT.
+La seguente richiesta di POST aggiunge una serie di etichette al set di dati, nonché un campo specifico all’interno di tale set di dati. I campi forniti nel payload sono gli stessi richiesti per una richiesta PUT.
 
 ```shell
 curl -X POST \
@@ -326,8 +330,8 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `labels` | Elenco di etichette di utilizzo dati da aggiungere al dataset. |
-| `optionalLabels` | Un elenco di tutti i singoli campi all&#39;interno del set di dati a cui si desidera aggiungere etichette. Ogni elemento di questa matrice deve avere le seguenti proprietà: <br/><br/>`option`: Un oggetto che contiene gli attributi [!DNL Experience Data Model] (XDM) del campo. Sono richieste le tre proprietà seguenti:<ul><li>id</code>: Il valore URI $id</code> dello schema associato al campo.</li><li>contentType</code>: Il tipo di contenuto e il numero di versione dello schema. Questa operazione deve essere eseguita sotto forma di una delle <a href="../../xdm/api/getting-started.md#accept">Accetta intestazioni</a> valide per una richiesta di ricerca XDM.</li><li>schemaPath</code>: Percorso del campo all&#39;interno dello schema del set di dati.</li></ul>`labels`: Elenco di etichette di utilizzo dati da aggiungere al campo. |
+| `labels` | Elenco di etichette di utilizzo dei dati da aggiungere al set di dati. |
+| `optionalLabels` | Elenco di tutti i singoli campi all’interno del set di dati a cui si desidera aggiungere le etichette. Ogni elemento della matrice deve avere le seguenti proprietà:<br/><br/>`option`: Oggetto che contiene gli attributi [!DNL Experience Data Model] (XDM) del campo. Sono richieste le tre proprietà seguenti:<ul><li>`id`: Il  `$id` valore URI dello schema associato al campo.</li><li>`contentType`: Indica il formato e la versione dello schema. Per ulteriori informazioni, consulta la sezione sul [controllo delle versioni dello schema](../../xdm/api/getting-started.md#versioning) nella guida API XDM .</li><li>`schemaPath`: Percorso della proprietà dello schema in questione, scritto in  [JSON ](../../landing/api-fundamentals.md#json-pointer) Pointersintassi.</li></ul>`labels`: Elenco di etichette di utilizzo dati da aggiungere al campo. |
 
 **Risposta**
 
@@ -351,7 +355,7 @@ Una risposta corretta restituisce le etichette aggiunte al set di dati.
 
 ## Rimuovere le etichette da un set di dati {#remove-dataset-labels}
 
-Potete rimuovere le etichette applicate a un dataset effettuando una richiesta di DELETE all&#39;API [!DNL Dataset Service].
+Puoi rimuovere le etichette applicate a un set di dati effettuando una richiesta DELETE all’ API [!DNL Dataset Service] .
 
 **Formato API**
 
@@ -376,14 +380,14 @@ curl -X DELETE \
 
 **Risposta**
 
-Risposta corretta: stato HTTP 200 (OK), a indicare che le etichette sono state rimosse. È possibile [cercare le etichette esistenti](#look-up-dataset-labels) per il set di dati in una chiamata separata per confermare questo.
+Una risposta corretta, stato HTTP 200 (OK), che indica che le etichette sono state rimosse. Puoi [cercare le etichette esistenti](#look-up-dataset-labels) per il set di dati in una chiamata separata per confermarlo.
 
 ## Passaggi successivi
 
 Leggendo questo documento, hai imparato a gestire le etichette di utilizzo dei dati utilizzando le API.
 
-Dopo aver aggiunto le etichette di utilizzo dei dati a livello di set di dati e di campo, è possibile iniziare a assimilare i dati in [!DNL Experience Platform]. Per saperne di più, leggere la [documentazione di inserimento dei dati](../../ingestion/home.md).
+Dopo aver aggiunto le etichette di utilizzo dei dati a livello di set di dati e di campo, puoi iniziare a inserire i dati in [!DNL Experience Platform]. Per ulteriori informazioni, inizia leggendo la [documentazione sull&#39;acquisizione dei dati](../../ingestion/home.md).
 
-È inoltre possibile definire criteri di utilizzo dei dati in base alle etichette applicate. Per ulteriori informazioni, vedere la [panoramica dei criteri di utilizzo dei dati](../policies/overview.md).
+È inoltre possibile definire criteri di utilizzo dei dati in base alle etichette applicate. Per ulteriori informazioni, consulta la [panoramica dei criteri di utilizzo dei dati](../policies/overview.md).
 
-Per ulteriori informazioni sulla gestione dei set di dati in [!DNL Experience Platform], vedere la [panoramica dei set di dati](../../catalog/datasets/overview.md).
+Per ulteriori informazioni sulla gestione dei set di dati in [!DNL Experience Platform], consulta la [panoramica dei set di dati](../../catalog/datasets/overview.md).
