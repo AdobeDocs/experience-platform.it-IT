@@ -3,14 +3,14 @@ keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;mo
 solution: Experience Platform
 title: Endpoint API per i tipi di dati
 description: L’endpoint /datatypes nell’API del Registro di sistema dello schema consente di gestire programmaticamente i tipi di dati XDM all’interno dell’applicazione di esperienza.
+exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
 translation-type: tm+mt
-source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 2%
 
 ---
-
 
 # Endpoint per tipi di dati
 
@@ -127,11 +127,11 @@ Il formato della risposta dipende dall’intestazione `Accept` inviata nella ric
 
 | `Accept` header | Descrizione |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Raw con `$ref` e `allOf`, ha titoli e descrizioni. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` e  `allOf` risolta, ha titoli e descrizioni. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Non elaborato con `$ref` e `allOf`, senza titoli o descrizioni. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` e  `allOf` risolti, senza titoli o descrizioni. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` e  `allOf` risolti, descrittori inclusi. |
+| `application/vnd.adobe.xed+json; version=1` | Raw con `$ref` e `allOf`, ha titoli e descrizioni. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` e  `allOf` risolta, ha titoli e descrizioni. |
+| `application/vnd.adobe.xed-notext+json; version=1` | Non elaborato con `$ref` e `allOf`, senza titoli o descrizioni. |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` e  `allOf` risolti, senza titoli o descrizioni. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` e  `allOf` risolti, descrittori inclusi. |
 
 **Risposta**
 
