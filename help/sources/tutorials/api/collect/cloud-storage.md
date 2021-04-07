@@ -5,14 +5,14 @@ title: Raccolta di dati di archiviazione cloud tramite connettori di origine e A
 topic: ' - Panoramica'
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati da un archivio cloud di terze parti e inserirli in Platform utilizzando i connettori sorgente e le API.
+exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
 translation-type: tm+mt
-source-git-commit: 8b85b25112ee16b09b1411c5d001bf13fb7fbcaa
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1768'
+source-wordcount: '1806'
 ht-degree: 1%
 
 ---
-
 
 # Raccogliere dati di archiviazione cloud utilizzando connettori di origine e API
 
@@ -332,6 +332,7 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `schemaRef.id` | ID dello schema XDM di destinazione. |
+| `schemaRef.contentType` | Versione dello schema. Questo valore deve essere impostato `application/vnd.adobe.xed-full-notext+json;version=1`, che restituisce la versione secondaria più recente dello schema. |
 
 **Risposta**
 
@@ -371,7 +372,7 @@ curl -X POST \
         "data": {
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -387,6 +388,7 @@ curl -X POST \
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `data.schema.id` | Il `$id` dello schema XDM di destinazione. |
+| `data.schema.version` | Versione dello schema. Questo valore deve essere impostato `application/vnd.adobe.xed-full+json;version=1`, che restituisce la versione secondaria più recente dello schema. |
 | `params.dataSetId` | ID del set di dati di destinazione. |
 | `connectionSpec.id` | ID della specifica di connessione fissa al Data Lake. Questo ID è: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
