@@ -1,25 +1,25 @@
 ---
-keywords: ' Experience Platform;home;argomenti più comuni;dataset;Dataset;creare un dataset;creare un dataset;abilitare il dataset'
+keywords: Experience Platform;home;argomenti popolari;set di dati;set di dati;creare un set di dati;creare un set di dati;abilitare un set di dati
 solution: Experience Platform
-title: Creare un set di dati nell'API
-topic: developer guide
-description: In questo documento viene illustrato come creare un oggetto dataset nell'API di Catalog Service.
+title: Creare un set di dati nell’API
+topic: guida per sviluppatori
+description: Questo documento illustra come creare un oggetto set di dati nell’API del servizio catalogo.
+exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '256'
 ht-degree: 1%
 
 ---
 
+# Creare un set di dati nell’API
 
-# Creare un set di dati nell&#39;API
-
-Per creare un dataset utilizzando l&#39;API [!DNL Catalog], è necessario conoscere il valore `$id` dello schema [!DNL Experience Data Model] (XDM) su cui verrà basato il dataset. Una volta ottenuto l&#39;ID dello schema, è possibile creare un dataset effettuando una richiesta di POST all&#39;endpoint `/datasets` nell&#39;API [!DNL Catalog].
+Per creare un set di dati utilizzando l’API [!DNL Catalog], è necessario conoscere il valore `$id` dello schema [!DNL Experience Data Model] (XDM) su cui verrà basato il set di dati. Una volta ottenuto l’ID schema, puoi creare un set di dati effettuando una richiesta POST all’endpoint `/datasets` nell’ API [!DNL Catalog] .
 
 >[!NOTE]
 >
->Questo documento descrive solo come creare un oggetto dataset in [!DNL Catalog]. Per i passaggi completi su come creare, compilare e monitorare un dataset, fare riferimento alla seguente [esercitazione](../datasets/create.md).
+>Questo documento illustra solo come creare un oggetto set di dati in [!DNL Catalog]. Per i passaggi completi su come creare, compilare e monitorare un set di dati, fai riferimento alla seguente [esercitazione](../datasets/create.md).
 
 **Formato API**
 
@@ -29,7 +29,7 @@ POST /dataSets
 
 **Richiesta**
 
-La richiesta seguente crea un dataset che fa riferimento a uno schema definito in precedenza.
+La richiesta seguente crea un set di dati che fa riferimento a uno schema definito in precedenza.
 
 ```SHELL
 curl -X POST \
@@ -56,15 +56,16 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `name` | Nome del set di dati da creare. |
-| `schemaRef.id` | Il valore URI `$id` per lo schema XDM su cui si baserà il dataset. |
+| `schemaRef.id` | Il valore URI `$id` per lo schema XDM su cui verrà basato il set di dati. |
+| `schemaRef.contentType` | Indica il formato e la versione dello schema. Per ulteriori informazioni, consulta la sezione sul [controllo delle versioni dello schema](../../xdm/api/getting-started.md#versioning) nella guida API XDM . |
 
 >[!NOTE]
 >
->In questo esempio viene utilizzato il formato di file [Apache Parquet](https://parquet.apache.org/documentation/latest/) per la relativa proprietà `containerFormat`. Un esempio che utilizza il formato di file JSON si trova nella [guida per gli sviluppatori di assimilazione batch](../../ingestion/batch-ingestion/api-overview.md).
+>In questo esempio viene utilizzato il formato di file [Apache Parquet](https://parquet.apache.org/documentation/latest/) per la relativa proprietà `containerFormat`. Un esempio che utilizza il formato di file JSON si trova nella [guida per gli sviluppatori per l’acquisizione batch](../../ingestion/batch-ingestion/api-overview.md).
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un oggetto response costituito da una matrice contenente l&#39;ID del set di dati appena creato nel formato `"@/datasets/{DATASET_ID}"`. L&#39;ID del set di dati è una stringa di sola lettura generata dal sistema che viene utilizzata per fare riferimento al set di dati nelle chiamate API.
+Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un oggetto di risposta costituito da una matrice contenente l&#39;ID del set di dati appena creato nel formato `"@/datasets/{DATASET_ID}"`. L’ID del set di dati è una stringa di sola lettura generata dal sistema che viene utilizzata per fare riferimento al set di dati nelle chiamate API.
 
 ```JSON
 [
