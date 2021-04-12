@@ -6,7 +6,7 @@ topic: ' - Panoramica'
 description: Questo documento introduce le funzioni di mappatura utilizzate con Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 translation-type: tm+mt
-source-git-commit: 21782ee74adfe97fa0a88f499d01393155691b29
+source-git-commit: 8b74cf5f54ddf56486d7b947b38bef58823c3684
 workflow-type: tm+mt
 source-wordcount: '3793'
 ht-degree: 3%
@@ -42,7 +42,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 >Scorri verso sinistra/destra per visualizzare il contenuto completo della tabella.
 
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | concat | Concatena le stringhe specificate. | <ul><li>STRINGA: Stringhe che verranno concatenate.</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Ciao, &quot;, &quot;ci&quot;, &quot;!&quot;) | `"Hi, there!"` |
 | esplodere | Divide la stringa in base a un regex e restituisce un array di parti. Facoltativamente, può includere regex per dividere la stringa. Per impostazione predefinita, la divisione viene risolta in &quot;,&quot;. I seguenti delimitatori **devono essere preceduti dalla sequenza di escape** con `\`: `+, ?, ^, |, ., [, (, {, ), *, $, \` Se si includono più caratteri come delimitatore, il delimitatore viene considerato come un delimitatore a più caratteri. | <ul><li>STRINGA: **Obbligatorio** Stringa da dividere.</li><li>REGEX: *Facoltativo* L&#39;espressione regolare che può essere utilizzata per dividere la stringa.</li></ul> | esplode(STRINGA, REGEX) | esplode(&quot;Ciao!&quot;, &quot; &quot;) | `["Hi,", "there"]` |
 | instr | Restituisce la posizione/indice di una sottostringa. | <ul><li>INGRESSO: **Obbligatorio** Stringa in corso di ricerca.</li><li>SOTTOSTRINGA: **Obbligatorio** La sottostringa che viene cercata all&#39;interno della stringa.</li><li>AVVIO_POSIZIONE: *Facoltativo* La posizione in cui iniziare a cercare nella stringa.</li><li>OCCORRENZA: *Facoltativo* L&#39;ennesima occorrenza da cercare dalla posizione iniziale. Per impostazione predefinita, è 1. </li></ul> | instr(INPUT, SUBSTRING, START_POSITION, OCCURRENCE) | instr(&quot;adobe.com&quot;, &quot;com&quot;) | 6 |
@@ -67,7 +67,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 ### Funzioni con espressione regolare
 
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | extract_regex | Estrae i gruppi dalla stringa di input, in base a un&#39;espressione regolare. | <ul><li>STRINGA: **Obbligatorio** La stringa da cui stai estraendo i gruppi.</li><li>REGEX: **Obbligatorio** L&#39;espressione regolare a cui si desidera associare il gruppo.</li></ul> | extract_regex(STRING, REGEX) | extract_regex &#x200B;(&quot;E259,E259B_009,1_1&quot; &#x200B;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | [&quot;E259,E259B_009,1_1&quot;, &quot;E259&quot;, &quot;1_1&quot;] |
 | matches_regex | Controlla se la stringa corrisponde all&#39;espressione regolare inserita. | <ul><li>STRINGA: **Obbligatorio** La stringa che stai controllando corrisponde all&#39;espressione regolare.</li><li>REGEX: **Obbligatorio** L&#39;espressione regolare rispetto alla quale si sta confrontando.</li></ul> | match_regex(STRING, REGEX) | matches_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | true |
 
@@ -80,7 +80,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 >Scorri verso sinistra/destra per visualizzare il contenuto completo della tabella.
 
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | sha1 | Prende un input e produce un valore hash utilizzando Secure Hash Algorithm 1 (SHA-1). | <ul><li>INGRESSO: **Obbligatorio** Testo normale da hash.</li><li>CARATTERE: *Facoltativo* Il nome del set di caratteri. I valori possibili sono UTF-8, UTF-16, ISO-8859-1 e US-ASCII.</li></ul> | sha1(INPUT, CHARSET) | sha1(&quot;il mio testo&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a24 &#x200B; 48690840c5dfcce3c80 |
 | sha256 | Prende un input e produce un valore hash utilizzando Secure Hash Algorithm 256 (SHA-256). | <ul><li>INGRESSO: **Obbligatorio** Testo normale da hash.</li><li>CARATTERE: *Facoltativo* Il nome del set di caratteri. I valori possibili sono UTF-8, UTF-16, ISO-8859-1 e US-ASCII.</li></ul> | sha256(INPUT, CHARSET) | sha256(&quot;il mio testo&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21 &#x200B; e6a39af698154a83a586ee270a0d372104 |
 | sha512 | Prende un input e produce un valore hash utilizzando Secure Hash Algorithm 512 (SHA-512). | <ul><li>INGRESSO: **Obbligatorio** Testo normale da hash.</li><li>CARATTERE: *Facoltativo* Il nome del set di caratteri. I valori possibili sono UTF-8, UTF-16, ISO-8859-1 e US-ASCII.</li></ul> | sha512(INPUT, CHARSET) | sha512(&quot;il mio testo&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef &#x200B; 708bf11b4232bb21d2a8704ada2cdcd7b367dd07 88a89 &#x200B; a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
@@ -96,7 +96,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 >Scorri verso sinistra/destra per visualizzare il contenuto completo della tabella.
 
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | get_url_protocol | Restituisce il protocollo dall&#39;URL specificato. Se l&#39;input non è valido, restituisce null. | <ul><li>URL: **Obbligatorio** L&#39;URL da cui deve essere estratto il protocollo.</li></ul> | get_url_protocol &#x200B;(URL) | get_url_protocol(&quot;https://platform &#x200B; .adobe.com/home&quot;) | https |
 | get_url_host | Restituisce l&#39;host dell&#39;URL specificato. Se l&#39;input non è valido, restituisce null. | <ul><li>URL: **Obbligatorio** L&#39;URL da cui deve essere estratto l&#39;host.</li></ul> | get_url_host &#x200B;(URL) | get_url_host &#x200B;(&quot;https://platform &#x200B; .adobe.com/home&quot;) | platform.adobe.com |
 | get_url_port | Restituisce la porta dell’URL specificato. Se l&#39;input non è valido, restituisce null. | <ul><li>URL: **Obbligatorio** URL da cui estrarre la porta.</li></ul> | get_url_port(URL) | get_url_port &#x200B;(&quot;sftp://example.com//home/ &#x200B; joe/employee.csv&quot;) | 22 |
@@ -112,7 +112,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 >Scorri verso sinistra/destra per visualizzare il contenuto completo della tabella. Ulteriori informazioni sulla funzione `date` sono disponibili nella [guida alla funzione data](./dates.md).
 
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | Recupera l&#39;ora corrente. |  | now() | now() | `2020-09-23T10:10:24.556-07:00[America/Los_Angeles]` |
 | timestamp | Recupera l&#39;ora Unix corrente. |  | timestamp() | timestamp() | 1571850624571 |
 | format | Formatta la data di input in base a un formato specificato. | <ul><li>DATA: **Obbligatorio** La data di input, come oggetto ZoningDateTime, che si desidera formattare.</li><li>FORMATO: **Obbligatorio** Il formato in cui si desidera modificare la data.</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11:24:00+00:00, &quot;aaaa-MM-gg HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
@@ -136,7 +136,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 >Scorri verso sinistra/destra per visualizzare il contenuto completo della tabella.
 
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | size_of | Restituisce le dimensioni dell’input. | <ul><li>INGRESSO: **Obbligatorio** L&#39;oggetto di cui si sta tentando di trovare le dimensioni.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | is_empty | Controlla se un oggetto è vuoto o meno. | <ul><li>INGRESSO: **Obbligatorio** L&#39;oggetto che si sta tentando di controllare è vuoto.</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
 | array_to_object | Crea un elenco di oggetti. | <ul><li>INGRESSO: **Obbligatorio** Un raggruppamento di coppie chiave-array.</li></ul> | array_to_object(INPUT) | campione necessario | campione necessario |
@@ -154,7 +154,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 >Scorri verso sinistra/destra per visualizzare il contenuto completo della tabella.
 
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | fondere | Restituisce il primo oggetto non-null in una matrice specificata. | <ul><li>INGRESSO: **Obbligatorio** La matrice di cui si desidera trovare il primo oggetto non-null.</li></ul> | coalesce(INPUT) | coalesce(null, null, null, &quot;first&quot;, null, &quot;secondo&quot;) | &quot;first&quot; |
 | first | Recupera il primo elemento dell’array specificato. | <ul><li>INGRESSO: **Obbligatorio** La matrice di cui si desidera trovare il primo elemento.</li></ul> | first(INPUT) | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
 | last | Recupera l&#39;ultimo elemento dell&#39;array specificato. | <ul><li>INGRESSO: **Obbligatorio** La matrice di cui si desidera trovare l&#39;ultimo elemento.</li></ul> | last(INPUT) | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;3&quot; |
@@ -171,7 +171,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 >Scorri verso sinistra/destra per visualizzare il contenuto completo della tabella.
 
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | decodificare | Dato un tasto e un elenco di coppie di valori chiave appiattite come array, la funzione restituisce il valore se key viene trovato o restituisce un valore predefinito se presente nell&#39;array. | <ul><li>CHIAVE: **Obbligatorio** Chiave da abbinare.</li><li>OPTIONS: **Obbligatorio** Matrice appiattita di coppie chiave/valore. Facoltativamente, è possibile inserire un valore predefinito alla fine.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | Se il codice di stato specificato è &quot;ca&quot;, &quot;California&quot;.<br>Se lo statoCode dato è &quot;pa&quot;, &quot;Pennsylvania&quot;.<br>Se stateCode non corrisponde a quanto segue, &quot;N/D&quot;. |
 | iif | Valuta una determinata espressione booleana e restituisce il valore specificato in base al risultato. | <ul><li>ESPRESSIONE: **Obbligatorio** L&#39;espressione booleana in fase di valutazione.</li><li>TRUE_VALUE: **Obbligatorio** Il valore restituito se l&#39;espressione restituisce true.</li><li>FALSE_VALUE: **Obbligatorio** Il valore restituito se l&#39;espressione restituisce false.</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
@@ -184,7 +184,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 >Scorri verso sinistra/destra per visualizzare il contenuto completo della tabella.
 
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | min | Restituisce il minimo degli argomenti specificati. Utilizza l&#39;ordine naturale. | <ul><li>OPTIONS: **Obbligatorio** Uno o più oggetti che possono essere confrontati tra loro.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | Restituisce il massimo degli argomenti specificati. Utilizza l&#39;ordine naturale. | <ul><li>OPTIONS: **Obbligatorio** Uno o più oggetti che possono essere confrontati tra loro.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
@@ -197,7 +197,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 >Scorri verso sinistra/destra per visualizzare il contenuto completo della tabella.
 
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | to_bigint | Converte una stringa in un BigInteger. | <ul><li>STRINGA: **Obbligatorio** La stringa da convertire in un valore BigInteger.</li></ul> | to_bigint(STRING) | to_bigint &#x200B;(&quot;100000.34&quot;) | 1000000,34 |
 | to_decimal | Converte una stringa in un valore Double. | <ul><li>STRINGA: **Obbligatorio** La stringa da convertire in Double.</li></ul> | to_decimal(STRING) | to_decimal(&quot;20.5&quot;) | 20,5 |
 | to_float | Converte una stringa in Mobile. | <ul><li>STRINGA: **Obbligatorio** La stringa da convertire in Mobile.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12,34566 |
@@ -212,7 +212,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 >Scorri verso sinistra/destra per visualizzare il contenuto completo della tabella.
 
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | json_to_object | Deserializza il contenuto JSON dalla stringa specificata. | <ul><li>STRINGA: **Obbligatorio** La stringa JSON da deserializzare.</li></ul> | json_to_object &#x200B;(STRING) | json_to_object &#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;: &quot;Doe&quot;}) | Un oggetto che rappresenta il JSON. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -224,7 +224,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 >Scorri verso sinistra/destra per visualizzare il contenuto completo della tabella.
 
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | Genera un ID pseudo-casuale. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
 {style=&quot;table-layout:auto&quot;}
@@ -236,7 +236,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 >Scorri verso sinistra/destra per visualizzare il contenuto completo della tabella.
 
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | ua_os_name | Estrae il nome del sistema operativo dalla stringa dell&#39;agente utente. | <ul><li>USER_AGENT: **Obbligatorio** La stringa dell&#39;agente utente.</li></ul> | ua_os_name &#x200B;(USER_AGENT) | ua_os_name &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 come Mac OS X) AppleWebKit/534.46 (KHTML, come Gecko) Versione/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
 | ua_os_version_major | Estrae la versione principale del sistema operativo dalla stringa dell&#39;agente utente. | <ul><li>USER_AGENT: **Obbligatorio** La stringa dell&#39;agente utente.</li></ul> | ua_os_version_major &#x200B;(USER_AGENT) | ua_os_version_major &#x200B; s(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 come Mac OS X) AppleWebKit/534.46 (KHTML, come Gecko) Versione/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5 |
 | ua_os_version | Estrae la versione del sistema operativo dalla stringa dell&#39;agente utente. | <ul><li>USER_AGENT: **Obbligatorio** La stringa dell&#39;agente utente.</li></ul> | ua_os_version &#x200B;(USER_AGENT) | ua_os_version &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 come Mac OS X) AppleWebKit/534.46 (KHTML, come Gecko) Versione/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1. |
