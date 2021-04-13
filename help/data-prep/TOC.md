@@ -5,10 +5,10 @@ user-guide-title: Guida alla preparazione dei dati
 user-guide-description: Prepara i dati per l’inserimento in Adobe Experience Platform.
 feature: Gestione dei dati, acquisizione dei dati
 translation-type: tm+mt
-source-git-commit: cae6dc80d0394db51dc97478b92459be64c64498
+source-git-commit: c3939d4ce30bf12748b898f461a166f28f010abf
 workflow-type: tm+mt
-source-wordcount: '42'
-ht-degree: 42%
+source-wordcount: '43'
+ht-degree: 41%
 
 ---
 
@@ -22,5 +22,5 @@ ht-degree: 42%
    - [Introduzione](./api/getting-started.md)
    - [Funzioni](./api/functions.md)
    - [Set di mappature](./api/mapping-set.md)
-- [Oggetti Datetime](dates.md)
+- [Gestione dei formati di dati](./data-handling.md)
 - [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
