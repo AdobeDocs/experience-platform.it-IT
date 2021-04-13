@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Panoramica sulla preparazione dei dati
 topic: ' - Panoramica'
 description: Questo documento introduce Data Prep in Adobe Experience Platform.
+exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 translation-type: tm+mt
-source-git-commit: 73bf6abb143c0866a400aafe984f9a553ffc1abf
+source-git-commit: 827a593c046530edba701edf26d9a47918cfd8f8
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '389'
 ht-degree: 0%
 
 ---
@@ -35,6 +36,10 @@ Per ulteriori informazioni sulle diverse funzioni di mappatura, leggere la [guid
 
 Un set di mappature che trasformano uno schema in un altro è noto collettivamente come set di mappature. Viene creato un singolo set di mappatura come parte di ciascun flusso di dati. Un set di mappatura è parte integrante dei flussi di dati e viene creato, modificato e monitorato come parte dei flussi di dati.
 
+## Gestione del formato dati
+
+Data Prep può gestire in modo affidabile diversi formati di dati acquisiti in Platform. Per ulteriori informazioni su come Data Prep gestisce diversi tipi di dati, leggere la [panoramica sulla gestione del formato dati](./data-handling.md).
+
 ## Passaggi successivi
 
-Questo documento illustra le nozioni di base sulla preparazione dei dati in Adobe Experience Platform. Per ulteriori informazioni sulle diverse funzioni di mappatura, leggere la [guida alle funzioni di mappatura](./functions.md). Per ulteriori informazioni sulle diverse stringhe datetime, leggere la [guida alle stringhe data](./dates.md). Per informazioni su come utilizzare l&#39;API di preparazione dati, leggi la [Guida per gli sviluppatori di preparazione dati](api/overview.md).
+Questo documento illustra le nozioni di base sulla preparazione dei dati in Adobe Experience Platform. Per ulteriori informazioni sulle diverse funzioni di mappatura, leggere la [guida alle funzioni di mappatura](./functions.md). Per ulteriori informazioni su come Data Prep gestisce diversi tipi di dati, consulta la [guida alla gestione del formato dei dati](./data-handling.md#dates). Per informazioni su come utilizzare l&#39;API di preparazione dati, leggi la [Guida per gli sviluppatori di preparazione dati](api/overview.md).
