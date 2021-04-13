@@ -6,9 +6,9 @@ topic: ' - Panoramica'
 description: Questo documento introduce le funzioni di mappatura utilizzate con Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 translation-type: tm+mt
-source-git-commit: 8b74cf5f54ddf56486d7b947b38bef58823c3684
+source-git-commit: c3939d4ce30bf12748b898f461a166f28f010abf
 workflow-type: tm+mt
-source-wordcount: '3793'
+source-wordcount: '3798'
 ht-degree: 3%
 
 ---
@@ -109,7 +109,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 
 >[!NOTE]
 >
->Scorri verso sinistra/destra per visualizzare il contenuto completo della tabella. Ulteriori informazioni sulla funzione `date` sono disponibili nella [guida alla funzione data](./dates.md).
+>Scorri verso sinistra/destra per visualizzare il contenuto completo della tabella. Ulteriori informazioni sulla funzione `date` sono disponibili nella sezione date della [guida alla gestione del formato dei dati](./data-handling.md#dates).
 
 | Funzione | Descrizione | Parametri | Sintassi | Espressione | Output di esempio |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
