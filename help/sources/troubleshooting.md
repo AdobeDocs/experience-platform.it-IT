@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Risoluzione dei problemi di Origini
 topic: risoluzione
 description: Questo documento fornisce le risposte alle domande più frequenti sulle origini su Adobe Experience Platform.
+exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
 translation-type: tm+mt
-source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
+source-git-commit: 827a593c046530edba701edf26d9a47918cfd8f8
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---
-
 
 # (Beta) Guida alla risoluzione dei problemi di Origini
 
@@ -57,7 +57,7 @@ I tipi di dati supportati includono numeri interi, stringhe, booleani, oggetti d
 
 ### Quali formati di data e ora sono supportati?
 
-Origini supporta un&#39;ampia varietà di formati di datetime durante l&#39;acquisizione dei dati. Ulteriori informazioni sui formati datetime supportati sono disponibili nella [guida alle funzioni data di preparazione dei dati](../data-prep/dates.md).
+Origini supporta un&#39;ampia varietà di formati di datetime durante l&#39;acquisizione dei dati. Ulteriori informazioni sui formati datetime supportati sono disponibili nella sezione delle date della [guida alla gestione del formato dati](../data-prep/data-handling.md#dates) nella documentazione Data Prep .
 
 ### Come si formattano gli array in file CSV, JSON e Parquet?
 
