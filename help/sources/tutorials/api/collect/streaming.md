@@ -7,9 +7,9 @@ type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati in streaming e inserirli in Platform utilizzando i connettori sorgente e le API.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: a63208dcdbe6851262e567a89c00b160dffa0e41
 workflow-type: tm+mt
-source-wordcount: '1325'
+source-wordcount: '1499'
 ht-degree: 2%
 
 ---
@@ -119,10 +119,89 @@ Una risposta corretta restituisce l&#39;identificatore univoco (`id`) della nuov
 
 ```json
 {
-    "id": "2abd97c4-91bb-4c93-bd97-c491bbfc933d",
+    "id": "e96d6135-4b50-446e-922c-6dd66672b6b2",
     "etag": "\"66013508-0000-0200-0000-5f6e2ae70000\""
 }
 ```
+
+## Ottieni URL endpoint di streaming {#get-endpoint}
+
+Con la connessione sorgente creata, ora puoi recuperare l’URL dell’endpoint di streaming.
+
+**Formato API**
+
+```http
+GET /flowservice/sourceConnections/{CONNECTION_ID}
+```
+
+| Parametro | Descrizione |
+| --------- | ----------- |
+| `{CONNECTION_ID}` | Il valore `id` di sourceConnections creato in precedenza. |
+
+**Richiesta**
+
+```shell
+curl -X GET https://platform.adobe.io/data/foundation/flowservice/sourceConnections/e96d6135-4b50-446e-922c-6dd66672b6b2 \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Risposta**
+
+Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate sulla connessione richiesta. L’URL dell’endpoint di streaming viene creato automaticamente con la connessione e può essere recuperato utilizzando il valore `inletUrl` .
+
+```json
+{
+    "items": [
+        {
+            "id": "e96d6135-4b50-446e-922c-6dd66672b6b2",
+            "createdAt": 1617743929826,
+            "updatedAt": 1617743930363,
+            "createdBy": "{CREATED_BY}",
+            "updatedBy": "{UPDATED_BY}",
+            "createdClient": "{USER_ID}",
+            "updatedClient": "{USER_ID}",
+            "sandboxId": "d537df80-c5d7-11e9-aafb-87c71c35cac8",
+            "sandboxName": "prod",
+            "imsOrgId": "{IMS_ORG}",
+            "name": "Test source connector for streaming data",
+            "description": "Test source connector for streaming data",
+            "baseConnectionId": "f6aa6c58-3c3d-4c59-aa6c-583c3d6c599c",
+            "state": "enabled",
+            "data": {
+                "format": "delimited",
+                "schema": null,
+                "properties": null
+            },
+            "connectionSpec": {
+                "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+                "version": "1.0"
+            },
+            "params": {
+                "sourceId": "Streaming raw data",
+                "inletUrl": "https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b",
+                "inletId": "2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b",
+                "dataType": "raw",
+                "name": "hgtest"
+            },
+            "version": "\"d6006bc1-0000-0200-0000-606cd03a0000\"",
+            "etag": "\"d6006bc1-0000-0200-0000-606cd03a0000\"",
+            "inheritedAttributes": {
+                "baseConnection": {
+                    "id": "f6aa6c58-3c3d-4c59-aa6c-583c3d6c599c",
+                    "connectionSpec": {
+                        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+                        "version": "1.0"
+                    }
+                }
+            }
+        }
+    ]
+}
+```
+
 
 ## Creare uno schema XDM di destinazione {#target-schema}
 
@@ -528,7 +607,7 @@ curl -X POST \
             "version": "1.0"
         },
         "sourceConnectionIds": [
-            "2abd97c4-91bb-4c93-bd97-c491bbfc933d"
+            "e96d6135-4b50-446e-922c-6dd66672b6b2"
         ],
         "targetConnectionIds": [
             "723222e2-6ab9-4b0b-b222-e26ab9bb0bc2"
@@ -563,9 +642,65 @@ Una risposta corretta restituisce l&#39;ID (`id`) del flusso di dati appena crea
 }
 ```
 
+## Registrazione dei dati non elaborati da acquisire {#ingest-data}
+
+Dopo aver creato il flusso, puoi inviare il messaggio JSON all’endpoint di streaming creato in precedenza.
+
+**Formato API**
+
+```http
+POST /collection/{CONNECTION_ID}
+```
+
+| Parametro | Descrizione |
+| --------- | ----------- |
+| `{CONNECTION_ID}` | Il valore `id` della nuova connessione streaming creata. |
+
+**Richiesta**
+
+La richiesta di esempio trasferisce dati non elaborati all’endpoint di streaming creato in precedenza.
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b \
+  -H 'Content-Type: application/json' \
+  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
+  -d '{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male"
+      "birthday": {
+          "year": 1984
+          "month": 6
+          "day": 9
+      }
+  }'
+```
+
+**Risposta**
+
+Una risposta corretta restituisce lo stato HTTP 200 con i dettagli delle informazioni appena acquisite.
+
+```json
+{
+    "inletId": "{CONNECTION_ID}",
+    "xactionId": "1584479347507:2153:240",
+    "receivedTimeMs": 1584479347507
+}
+```
+
+| Proprietà | Descrizione |
+| -------- | ----------- |
+| `{CONNECTION_ID}` | ID della connessione in streaming creata in precedenza. |
+| `xactionId` | Un identificatore univoco generato lato server per il record appena inviato. Questo ID consente ad Adobe di tracciare il ciclo di vita di questo record attraverso vari sistemi e con il debug. |
+| `receivedTimeMs`: Una marca temporale (epoch in millisecondi) che mostra a che ora è stata ricevuta la richiesta. |
+
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato un flusso di dati per raccogliere i dati in streaming dal connettore streaming . I dati in entrata possono ora essere utilizzati dai servizi a valle [!DNL Platform] come [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
+Seguendo questa esercitazione, hai creato un flusso di dati per raccogliere i dati in streaming dal connettore streaming. I dati in entrata possono ora essere utilizzati dai servizi a valle [!DNL Platform] come [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
 
 - [Panoramica del profilo cliente in tempo reale](../../../../profile/home.md)
 - [Panoramica di Data Science Workspace](../../../../data-science-workspace/home.md)
