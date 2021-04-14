@@ -1,49 +1,49 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati;ui;workspace;schema;schemi;'
+keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati;ui;workspace;schema;schemi;
 solution: Experience Platform
 title: Creare e modificare schemi nell’interfaccia utente
-description: Scoprite le nozioni di base su come creare e modificare gli schemi nell’interfaccia utente del Experience Platform .
-topic: user guide
+description: Scopri le nozioni di base su come creare e modificare schemi nell’interfaccia utente di Experience Platform.
+topic: Guida utente
+exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 translation-type: tm+mt
-source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
+source-git-commit: 90a0c4e8d47d9bce38c9e13272e4f41f78f46e35
 workflow-type: tm+mt
-source-wordcount: '1283'
+source-wordcount: '1342'
 ht-degree: 0%
 
 ---
 
-
 # Creare e modificare schemi nell’interfaccia utente
 
-Questa guida fornisce una panoramica su come creare, modificare e gestire schemi di Experience Data Model (XDM) per la tua organizzazione nell&#39;interfaccia utente di Adobe Experience Platform.
+Questa guida fornisce una panoramica su come creare, modificare e gestire gli schemi Experience Data Model (XDM) per la tua organizzazione nell’interfaccia utente di Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
->Gli schemi XDM sono estremamente personalizzabili e pertanto i passaggi necessari per creare uno schema possono variare a seconda del tipo di dati che si desidera acquisire dallo schema. Di conseguenza, questo documento copre solo le interazioni di base che è possibile eseguire con gli schemi nell&#39;interfaccia utente ed esclude i passaggi correlati quali la personalizzazione di classi, mixin, tipi di dati e campi.
+>Gli schemi XDM sono estremamente personalizzabili e pertanto i passaggi necessari per creare uno schema possono variare a seconda del tipo di dati che si desidera acquisire dallo schema. Di conseguenza, questo documento copre solo le interazioni di base che è possibile eseguire con gli schemi nell’interfaccia utente ed esclude i passaggi correlati come la personalizzazione di classi, mixin, tipi di dati e campi.
 >
->Per una panoramica completa del processo di creazione dello schema, seguire l&#39;esercitazione [sulla creazione dello schema](../../tutorials/create-schema-ui.md) per creare uno schema di esempio completo e acquisire dimestichezza con le numerose funzionalità della [!DNL Schema Editor].
+>Per una panoramica completa del processo di creazione dello schema, segui l&#39;esercitazione [creazione dello schema](../../tutorials/create-schema-ui.md) per creare uno schema di esempio completo e acquisire familiarità con le numerose funzionalità di [!DNL Schema Editor].
 
 ## Prerequisiti
 
-Questa guida richiede una buona conoscenza del sistema XDM. Per un&#39;introduzione al ruolo di XDM all&#39;interno dell&#39;ecosistema  Experience Platform, fare riferimento alla [panoramica XDM](../../home.md) e alle [nozioni di base della composizione dello schema](../../schema/composition.md) per una panoramica della struttura degli schemi.
+Questa guida richiede una buona comprensione del sistema XDM. Per un&#39;introduzione al ruolo di XDM all&#39;interno dell&#39;ecosistema di Experience Platform, fai riferimento alla [panoramica XDM](../../home.md) e alle [nozioni di base sulla composizione dello schema](../../schema/composition.md) per una panoramica della creazione degli schemi.
 
-## Creare un nuovo schema {#create}
+## Crea un nuovo schema {#create}
 
-Nell&#39;area di lavoro [!UICONTROL Schemas], selezionare **[!UICONTROL Create schema]** nell&#39;angolo superiore destro. Nel menu a discesa visualizzato, è possibile scegliere tra **[!UICONTROL XDM Individual Profile]** e **[!UICONTROL XDM ExperienceEvent]** come classe base per lo schema. In alternativa, è possibile selezionare **[!UICONTROL Browse]** per selezionare dall&#39;elenco completo delle classi disponibili oppure [creare una nuova classe personalizzata](./classes.md#create).
+Nell’area di lavoro [!UICONTROL Schemas], seleziona **[!UICONTROL Create schema]** nell’angolo in alto a destra. Nel menu a discesa visualizzato, puoi scegliere tra **[!UICONTROL XDM Individual Profile]** e **[!UICONTROL XDM ExperienceEvent]** come classe di base per lo schema. In alternativa, è possibile selezionare **[!UICONTROL Browse]** per selezionare dall&#39;elenco completo delle classi disponibili oppure [creare una nuova classe personalizzata](./classes.md#create).
 
 ![](../../images/ui/resources/schemas/create-schema.png)
 
-Dopo aver selezionato una classe, viene visualizzato il simbolo [!DNL Schema Editor] e la struttura di base dello schema (fornita dalla classe) viene visualizzata nell&#39;area di lavoro. Da qui, è possibile utilizzare la barra a destra per aggiungere un **[!UICONTROL Display name]** e **[!UICONTROL Description]** per lo schema.
+Dopo aver selezionato una classe, viene visualizzato il simbolo [!DNL Schema Editor] e la struttura di base dello schema (fornita dalla classe) viene visualizzata nell&#39;area di lavoro. Da qui, puoi utilizzare la barra a destra per aggiungere un **[!UICONTROL Display name]** e **[!UICONTROL Description]** per lo schema.
 
 ![](../../images/ui/resources/schemas/schema-details.png)
 
-È ora possibile iniziare a creare la struttura dello schema [aggiungendo mixin](#add-mixins).
+Ora puoi iniziare a creare la struttura dello schema aggiungendo mixin](#add-mixins).[
 
 ## Modificare uno schema esistente {#edit}
 
 >[!NOTE]
 >
->Una volta che uno schema è stato salvato e utilizzato per l&#39;inserimento dei dati, è possibile apportare solo modifiche aggiuntive. Per ulteriori informazioni, vedere le [regole dell&#39;evoluzione dello schema](../../schema/composition.md#evolution).
+>Una volta salvato e utilizzato lo schema nell’inserimento dei dati, è possibile apportare solo modifiche aggiuntive. Per ulteriori informazioni, consulta le [regole di evoluzione dello schema](../../schema/composition.md#evolution) .
 
 Per modificare uno schema esistente, selezionare la scheda **[!UICONTROL Browse]**, quindi selezionare il nome dello schema da modificare.
 
@@ -51,116 +51,124 @@ Per modificare uno schema esistente, selezionare la scheda **[!UICONTROL Browse]
 
 >[!TIP]
 >
->È possibile utilizzare le funzionalità di ricerca e filtro dell&#39;area di lavoro per facilitare la ricerca dello schema. Per ulteriori informazioni, consulta la guida [Esplora risorse XDM](../explore.md).
+>È possibile utilizzare le funzionalità di ricerca e filtro dell&#39;area di lavoro per facilitare lo schema. Per ulteriori informazioni, consulta la guida sull’ [esplorazione delle risorse XDM](../explore.md) .
 
-Dopo aver selezionato uno schema, il simbolo [!DNL Schema Editor] viene visualizzato con la struttura dello schema visualizzata nel quadro. Ora è possibile [aggiungere mixin](#add-mixins) allo schema, [modificare i nomi visualizzati dei campi](#display-names) oppure [modificare i mixin personalizzati esistenti](./mixins.md#edit) se lo schema ne utilizza uno.
+Dopo aver selezionato uno schema, il [!DNL Schema Editor] viene visualizzato con la struttura dello schema mostrata nell&#39;area di lavoro. Ora è possibile [aggiungere mixins](#add-mixins) allo schema, [modificare i nomi visualizzati dei campi](#display-names) o [modificare i mixin personalizzati esistenti](./mixins.md#edit) se lo schema ne utilizza uno.
 
-## Aggiunta di mixaggi a uno schema {#add-mixins}
+## Aggiungi mixins a uno schema {#add-mixins}
 
 >[!NOTE]
 >
->In questa sezione viene illustrato come aggiungere mixin esistenti a uno schema. Se desiderate creare un nuovo mixin personalizzato, consultate la guida alla [creazione e modifica di mixin](./mixins.md#create).
+>Questa sezione illustra come aggiungere mixin esistenti a uno schema. Per creare un nuovo mixin personalizzato, consulta la guida alla [creazione e modifica di mixin](./mixins.md#create) .
 
-Dopo aver aperto uno schema all&#39;interno di [!DNL Schema Editor], è possibile aggiungere campi allo schema tramite l&#39;uso di mixin. Per iniziare, selezionare **[!UICONTROL Add]** accanto a **[!UICONTROL Mixins]** nella barra a sinistra.
+Dopo aver aperto uno schema all&#39;interno di [!DNL Schema Editor], è possibile aggiungere campi allo schema tramite l&#39;utilizzo di mixin. Per iniziare, seleziona **[!UICONTROL Add]** accanto a **[!UICONTROL Mixins]** nella barra a sinistra.
 
 ![](../../images/ui/resources/schemas/add-mixin-button.png)
 
-Viene visualizzata una finestra di dialogo con un elenco di mixin selezionabili per lo schema. Poiché i mixin sono compatibili con una sola classe, saranno elencati solo i mixin associati alla classe selezionata dello schema. Per impostazione predefinita, i mixin elencati vengono ordinati in base alla loro popolarità di utilizzo all&#39;interno dell&#39;organizzazione.
+Viene visualizzata una finestra di dialogo in cui viene visualizzato un elenco di mixin selezionabili per lo schema. Poiché i mixin sono compatibili solo con una classe, verranno elencati solo i mixin associati alla classe selezionata dello schema. Per impostazione predefinita, i mixin elencati vengono ordinati in base alla loro popolarità d&#39;uso all&#39;interno della tua organizzazione.
 
 ![](../../images/ui/resources/schemas/mixin-popularity.png)
 
-Potete usare la barra di ricerca per individuare il mixin desiderato. Le miscele il cui nome corrisponde alla query vengono visualizzate in cima all’elenco. In **[!UICONTROL Standard Fields]** vengono visualizzati i mixin contenenti campi che descrivono gli attributi di dati desiderati.
+Se conosci l’attività generale o l’area aziendale dei campi mixin che desideri aggiungere, seleziona una o più categorie verticali del settore nella barra a sinistra per filtrare l’elenco visualizzato di mixin.
+
+![](../../images/ui/resources/schemas/industry-filter.png)
+
+>[!NOTE]
+>
+>Per ulteriori informazioni sulle best practice per la modellazione di dati specifici per il settore in XDM, consulta la documentazione sui [modelli di dati del settore](../../schema/industries/overview.md).
+
+Puoi anche usare la barra di ricerca per individuare il mixin desiderato. I mixin il cui nome corrisponde alla query vengono visualizzati nella parte superiore dell’elenco. In **[!UICONTROL Standard Fields]** vengono visualizzati i mixin contenenti i campi che descrivono gli attributi di dati desiderati.
 
 ![](../../images/ui/resources/schemas/mixin-search.png)
 
-Selezionate la casella di controllo accanto al nome del mixin che desiderate aggiungere allo schema. Potete selezionare più mixin dall’elenco, con ciascun mixin selezionato che appare nella barra a destra.
+Seleziona la casella di controllo accanto al nome del mixin che desideri aggiungere allo schema. È possibile selezionare più mixin dall’elenco, con ogni mixin selezionato che appare nella barra a destra.
 
 ![](../../images/ui/resources/schemas/add-mixin.png)
 
 >[!TIP]
 >
->Per qualsiasi mixin elencato, potete passare il puntatore del mouse sull&#39;icona delle informazioni (![](../../images/ui/resources/schemas/info-icon.png)) per visualizzare una breve descrizione del tipo di dati acquisito dal mixin. È inoltre possibile selezionare l&#39;icona di anteprima (![](../../images/ui/resources/schemas/preview-icon.png)) per visualizzare la struttura dei campi forniti dal mixin prima di decidere di aggiungerlo allo schema.
+>Per qualsiasi mixin elencato, puoi passare il cursore del mouse sull&#39;icona delle informazioni (![](../../images/ui/resources/schemas/info-icon.png)) per visualizzare una breve descrizione del tipo di dati che il mixin acquisisce. È inoltre possibile selezionare l&#39;icona di anteprima (![](../../images/ui/resources/schemas/preview-icon.png)) per visualizzare la struttura dei campi forniti dal mixin prima di decidere di aggiungerlo allo schema.
 
-Dopo aver selezionato i mixin, selezionare **[!UICONTROL Add mixin]** per aggiungerli allo schema.
+Una volta selezionati i mixin, seleziona **[!UICONTROL Add mixin]** per aggiungerli allo schema.
 
 ![](../../images/ui/resources/schemas/add-mixin-finish.png)
 
-La [!DNL Schema Editor] viene visualizzata di nuovo con i campi forniti dal mixin rappresentati nel quadro.
+La [!DNL Schema Editor] viene visualizzata nuovamente con i campi forniti dal mixin rappresentati nell&#39;area di lavoro.
 
 ![](../../images/ui/resources/schemas/mixins-added.png)
 
-## Abilita uno schema per il profilo cliente in tempo reale {#profile}
+## Abilitare uno schema per il profilo cliente in tempo reale {#profile}
 
-[I ](../../../profile/home.md) profili cliente in tempo reale consentono di acquisire dati da fonti diverse per creare una visione completa di ogni singolo cliente. Se si desidera che i dati acquisiti da uno schema partecipino a questo processo, è necessario abilitare lo schema per l&#39;utilizzo in [!DNL Profile].
+[Real-time Customer ](../../../profile/home.md) Profilages raccoglie dati da fonti diverse per creare una visione completa di ogni singolo cliente. Se si desidera che i dati acquisiti da uno schema partecipino a questo processo, è necessario abilitare lo schema per l&#39;utilizzo in [!DNL Profile].
 
 >[!IMPORTANT]
 >
->Per abilitare uno schema per [!DNL Profile], è necessario che sia definito un campo di identità principale. Per ulteriori informazioni, vedere la guida relativa alla [definizione dei campi identità](../fields/identity.md).
+>Per abilitare uno schema per [!DNL Profile], è necessario che sia definito un campo di identità principale. Per ulteriori informazioni, consulta la guida sulla [definizione dei campi di identità](../fields/identity.md) .
 
-Per abilitare lo schema, iniziare selezionando il nome dello schema nella barra a sinistra, quindi selezionare l&#39;opzione **[!UICONTROL Profile]** nella barra a destra.
+Per abilitare lo schema, inizia selezionando il nome dello schema nella barra a sinistra, quindi seleziona l’opzione **[!UICONTROL Profile]** nella barra a destra.
 
 ![](../../images/ui/resources/schemas/profile-toggle.png)
 
-Viene visualizzato un messaggio di avviso che avvisa che, una volta attivato e salvato, uno schema non può essere disabilitato. Selezionare **[!UICONTROL Enable]** per continuare.
+Viene visualizzato un puntatore che avvisa che, una volta abilitato e salvato uno schema, non può essere disabilitato. Seleziona **[!UICONTROL Enable]** per continuare.
 
 ![](../../images/ui/resources/schemas/profile-confirm.png)
 
-Il quadro viene nuovamente visualizzato con l&#39;attivazione dell&#39;opzione [!UICONTROL Profile].
+L’area di lavoro viene visualizzata nuovamente con l’opzione [!UICONTROL Profile] attivata.
 
 >[!IMPORTANT]
 >
->Poiché lo schema non è ancora salvato, questo è il punto di non ritorno se si cambia idea di consentire allo schema di partecipare al profilo cliente in tempo reale: dopo aver salvato uno schema abilitato, non sarà più possibile disattivarlo. Selezionare di nuovo l&#39;opzione **[!UICONTROL Profile]** per disabilitare lo schema.
+>Poiché lo schema non è ancora stato salvato, questo è il punto di non ritorno se cambi idea di consentire allo schema di partecipare al Profilo cliente in tempo reale: una volta salvato uno schema abilitato, non è più possibile disattivarlo. Seleziona nuovamente l&#39;interruttore **[!UICONTROL Profile]** per disabilitare lo schema.
 
 Per completare il processo, selezionare **[!UICONTROL Save]** per salvare lo schema.
 
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
-Lo schema ora è abilitato per l&#39;uso in Real-time Customer Profile (Profilo cliente in tempo reale). Quando Platform (Piattaforma) trasferisce i dati in set di dati basati su questo schema, questi verranno incorporati nei dati del profilo amalgamato.
+Lo schema è ora abilitato per l’utilizzo in Profilo cliente in tempo reale. Quando Platform acquisisce dati in set di dati basati su questo schema, questi verranno incorporati nei dati del profilo amalgamato.
 
 ## Modificare i nomi visualizzati per i campi dello schema {#display-names}
 
-Dopo aver assegnato una classe e aggiunto mixin a uno schema, è possibile modificare i nomi visualizzati di qualsiasi campo dello schema, indipendentemente dal fatto che tali campi siano stati forniti da risorse XDM standard o personalizzate.
+Dopo aver assegnato una classe e aggiunto dei mixin a uno schema, puoi modificare i nomi visualizzati di qualsiasi campo dello schema, indipendentemente dal fatto che tali campi siano stati forniti da risorse XDM standard o personalizzate.
 
 >[!NOTE]
 >
->Tenere presente che i nomi visualizzati dei campi appartenenti a classi o mixin standard possono essere modificati solo nel contesto di uno schema specifico. In altre parole, la modifica del nome visualizzato di un campo standard in uno schema non ha effetto sugli altri schemi che utilizzano la stessa classe o lo stesso mixin associato.
+>Tenere presente che i nomi visualizzati dei campi appartenenti a classi o mixin standard possono essere modificati solo nel contesto di uno schema specifico. In altre parole, la modifica del nome visualizzato di un campo standard in uno schema non influisce su altri schemi che utilizzano la stessa classe o mixin associata.
 
-Per modificare il nome visualizzato di un campo dello schema, selezionare il campo nell&#39;area di lavoro. Nella barra a destra, immettete il nuovo nome in **[!UICONTROL Display name]**.
+Per modificare il nome visualizzato di un campo schema, selezionare il campo nell’area di lavoro. Nella barra a destra, inserisci il nuovo nome in **[!UICONTROL Display name]**.
 
 ![](../../images/ui/resources/schemas/display-name.png)
 
-Selezionate **[!UICONTROL Apply]** nella barra a destra e gli aggiornamenti del quadro mostrano il nuovo nome visualizzato del campo. Selezionare **[!UICONTROL Save]** per applicare le modifiche allo schema.
+Seleziona **[!UICONTROL Apply]** nella barra a destra e l’area di lavoro viene aggiornata per mostrare il nuovo nome visualizzato del campo. Seleziona **[!UICONTROL Save]** per applicare le modifiche allo schema.
 
 ![](../../images/ui/resources/schemas/display-name-changed.png)
 
 ## Modificare la classe di uno schema {#change-class}
 
-È possibile modificare la classe di uno schema in qualsiasi punto del processo di composizione iniziale prima che lo schema sia stato salvato.
+È possibile modificare la classe di uno schema in qualsiasi punto durante il processo di composizione iniziale prima che lo schema sia stato salvato.
 
 >[!WARNING]
 >
->La riassegnazione della classe per uno schema deve essere eseguita con estrema cautela. I mixin sono compatibili solo con determinate classi, pertanto la modifica della classe reimposterà il quadro e tutti i campi aggiunti.
+>La riassegnazione della classe per uno schema deve essere eseguita con estrema cautela. I mixin sono compatibili solo con determinate classi e pertanto la modifica della classe reimposterà l’area di lavoro e gli eventuali campi aggiunti.
 
-Per riassegnare una classe, selezionate **[!UICONTROL Assign]** nella parte sinistra del quadro.
+Per riassegnare una classe, seleziona **[!UICONTROL Assign]** nella parte sinistra dell’area di lavoro.
 
 ![](../../images/ui/resources/schemas/assign-class-button.png)
 
-Viene visualizzata una finestra di dialogo in cui sono elencate tutte le classi disponibili, incluse quelle definite dall&#39;organizzazione (il proprietario è &quot;[!UICONTROL Customer]&quot;), nonché le classi standard definite dal Adobe .
+Viene visualizzata una finestra di dialogo in cui sono elencate tutte le classi disponibili, incluse quelle definite dall&#39;organizzazione (il proprietario è &quot;[!UICONTROL Customer]&quot;) e le classi standard definite dall&#39;Adobe.
 
-Selezionate una classe dall’elenco per visualizzarne la descrizione sul lato destro della finestra di dialogo. Potete anche selezionare **[!UICONTROL Preview class structure]** per visualizzare i campi e i metadati associati alla classe. Selezionare **[!UICONTROL Assign class]** per continuare.
+Selezionare una classe dall’elenco per visualizzarne la descrizione sul lato destro della finestra di dialogo. Puoi anche selezionare **[!UICONTROL Preview class structure]** per visualizzare i campi e i metadati associati alla classe. Seleziona **[!UICONTROL Assign class]** per continuare.
 
 ![](../../images/ui/resources/schemas/assign-class.png)
 
-Viene visualizzata una nuova finestra di dialogo in cui viene richiesto di confermare l&#39;assegnazione di una nuova classe. Selezionare **[!UICONTROL Assign]** per confermare.
+Viene visualizzata una nuova finestra di dialogo in cui viene richiesto di confermare l’assegnazione di una nuova classe. Selezionare **[!UICONTROL Assign]** per confermare.
 
 ![](../../images/ui/resources/schemas/assign-confirm.png)
 
-Dopo aver confermato la modifica della classe, il quadro verrà reimpostato e tutti i progressi della composizione andranno persi.
+Dopo aver confermato la modifica della classe, l&#39;area di lavoro verrà reimpostata e tutti i progressi della composizione andranno persi.
 
 ## Passaggi successivi
 
-In questo documento sono state illustrate le nozioni di base per la creazione e la modifica degli schemi nell’interfaccia utente della piattaforma. È vivamente consigliato di consultare l&#39;esercitazione sulla creazione di [schemi](../../tutorials/create-schema-ui.md) per un flusso di lavoro completo per la creazione di uno schema completo nell&#39;interfaccia utente, inclusa la creazione di mixin personalizzati e di tipi di dati per casi di utilizzo univoci.
+Questo documento illustra le nozioni di base per la creazione e la modifica degli schemi nell’interfaccia utente di Platform. Si consiglia vivamente di rivedere l&#39; [esercitazione sulla creazione dello schema](../../tutorials/create-schema-ui.md) per un flusso di lavoro completo per la creazione di uno schema completo nell&#39;interfaccia utente, inclusa la creazione di mixin personalizzati e tipi di dati per casi d&#39;uso univoci.
 
-Per ulteriori informazioni sulle funzionalità dell&#39;area di lavoro [!UICONTROL Schemas], vedere la panoramica dell&#39;area di lavoro [[!UICONTROL Schemas]](../overview.md).
+Per ulteriori informazioni sulle funzionalità dell&#39;area di lavoro [!UICONTROL Schemas], consulta la [[!UICONTROL Schemas] panoramica dell&#39;area di lavoro](../overview.md).
 
-Per informazioni su come gestire gli schemi nell&#39;API [!DNL Schema Registry], consulta la [guida dell&#39;endpoint degli schemi](../../api/schemas.md).
+Per informazioni su come gestire gli schemi nell’ API [!DNL Schema Registry], consulta la [guida all’endpoint per gli schemi](../../api/schemas.md).
