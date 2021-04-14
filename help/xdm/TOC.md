@@ -6,10 +6,10 @@ breadcrumb-title: Guida di Data Model (XDM)
 user-guide-description: Utilizza le classi e i mixin Experience Data Model (XDM) per standardizzare i dati dell’esperienza.
 feature: Schemi
 translation-type: tm+mt
-source-git-commit: 3e1005aa11b648bd633ee4f64d527cae56cca620
+source-git-commit: 8b88a828f8680ac4d064f7f84e0db9e315526833
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 21%
+source-wordcount: '279'
+ht-degree: 19%
 
 ---
 
@@ -36,6 +36,7 @@ ht-degree: 21%
       * [IdentityMap](./mixins/profile/identitymap.md)
       * [Dettagli demografici](./mixins/profile/person-details.md)
       * [Dati di contatto personali](./mixins/profile/personal-details.md)
+      * [Privacy/Personalizzazione/Preferenze di marketing (Consensi)](./mixins/profile/consents.md)
       * [Dettagli di appartenenza al segmento](./mixins/profile/segmentation.md)
       * [Dettagli contatto lavoro](./mixins/profile/work-details.md)
    * Mixer eventi {#event}
@@ -51,6 +52,10 @@ ht-degree: 21%
    * [Dispositivo](./data-types/device.md)
    * [Indirizzo e-mail](./data-types/email-address.md)
    * [Ambiente](./data-types/environment.md)
+   * [Campo di consenso generico](./data-types/consent-field.md)
+   * [Campo preferenza marketing generico](./data-types/marketing-field.md)
+   * [Campo preferenza marketing generico con sottoscrizioni](./data-types/marketing-field-subscriptions.md)
+   * [Campo preferenza personalizzazione generica](./data-types/personalization-field.md)
    * [Geo](./data-types/geo.md)
    * [Cerchio geografico](./data-types/geo-circle.md)
    * [Coordinate geografiche](./data-types/geo-coordinates.md)
