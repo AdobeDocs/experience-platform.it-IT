@@ -4,11 +4,12 @@ solution: Experience Platform
 title: Creare una connessione in streaming utilizzando l’API
 topic: tutorial
 type: Tutorial
-description: Questa esercitazione ti aiuterà a iniziare a utilizzare le API Streaming Ingestion, parte delle API di Adobe Experience Platform Data Ingestion Service.
+description: Questa esercitazione ti aiuterà a iniziare a utilizzare le API Streaming Ingestion, parte delle API del servizio Adobe Experience Platform Data Ingestion.
+exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 69abc982c4a820b850096d83761552ca526bca29
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '884'
 ht-degree: 2%
 
 ---
@@ -16,7 +17,7 @@ ht-degree: 2%
 
 # Creazione di una connessione in streaming tramite API
 
-Il servizio Flusso viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti diverse all’interno di Adobe Experience Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui è possibile connettere tutte le sorgenti supportate.
+Flow Service viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti diverse all’interno di Adobe Experience Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui è possibile connettere tutte le sorgenti supportate.
 
 Questa esercitazione utilizza l’ API [!DNL Flow Service] per seguire i passaggi necessari per creare una connessione in streaming utilizzando l’API del servizio di flusso.
 
@@ -69,7 +70,7 @@ POST /flowservice/connections
 
 **Richiesta**
 
-Per creare una connessione in streaming, è necessario fornire l’ID del provider e l’ID della specifica di connessione come parte della richiesta POST. L&#39;ID provider è `521eee4d-8cbe-4906-bb48-fb6bd4450033` e l&#39;ID della specifica di connessione è `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+Per creare una connessione in streaming, è necessario fornire l’ID del provider e l’ID della specifica di connessione come parte della richiesta di POST. L&#39;ID provider è `521eee4d-8cbe-4906-bb48-fb6bd4450033` e l&#39;ID della specifica di connessione è `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -132,7 +133,7 @@ POST /flowservice/connections
 
 **Richiesta**
 
-Per creare una connessione in streaming, è necessario fornire l’ID del provider e l’ID della specifica di connessione come parte della richiesta POST. L&#39;ID provider è `521eee4d-8cbe-4906-bb48-fb6bd4450033` e l&#39;ID della specifica di connessione è `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+Per creare una connessione in streaming, è necessario fornire l’ID del provider e l’ID della specifica di connessione come parte della richiesta di POST. L&#39;ID provider è `521eee4d-8cbe-4906-bb48-fb6bd4450033` e l&#39;ID della specifica di connessione è `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
