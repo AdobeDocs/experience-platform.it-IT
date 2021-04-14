@@ -1,14 +1,14 @@
 ---
 title: Tipi di elementi dati nell’estensione Adobe Experience Platform Web SDK
 description: Scopri i diversi tipi di elementi dati forniti dall’estensione Adobe Experience Platform Web SDK in Adobe Experience Platform Launch.
+exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
 translation-type: tm+mt
-source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
+source-git-commit: 3f7808a08d033c5940d2115006c269b8c4079822
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 47%
 
 ---
-
 
 # Tipi di elementi dati
 
@@ -26,9 +26,9 @@ L&#39;elemento dati Mappa delle identità consente di creare identità da altri 
 
 ![](./assets/identity-map-data-element.png)
 
-## Oggetto XDM
+## Oggetto XDM {#xdm-object}
 
-Utilizza il formato XDM per inviare qualsiasi dato all’SDK web di Adobe Experience Platform. La formattazione dei dati è più semplice con l&#39;elemento dati dell&#39;oggetto XDM. La prima volta che apri questo elemento dati, seleziona la sandbox e lo schema di Adobe Experience Platform corretti. Dopo aver selezionato lo schema, viene visualizzata la struttura dello schema, che è possibile compilare facilmente.
+Usa il formato XDM per inviare qualsiasi dato all&#39;SDK Web di Adobe Experience Platform. La formattazione dei dati è più semplice con l&#39;elemento dati dell&#39;oggetto XDM. La prima volta che apri questo elemento dati, seleziona la sandbox e lo schema di Adobe Experience Platform corretti. Dopo aver selezionato lo schema, viene visualizzata la struttura dello schema, che è possibile compilare facilmente.
 
 ![](./assets/XDM-object.png)
 
