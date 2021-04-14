@@ -1,23 +1,23 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari'
+keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
 title: Panoramica su governance, privacy e sicurezza
-topic: overview
-description: Adobe Experience Platform offre diversi servizi e strumenti che consentono di controllare in modo sicuro i dati sulle esperienze raccolti al fine di rispettare le prassi aziendali, gli obblighi legali e il processo di sviluppo.
+topic: ' - Panoramica'
+description: Adobe Experience Platform offre diversi servizi e strumenti che ti consentono di controllare in modo affidabile i dati relativi all’esperienza raccolti per rispettare le tue pratiche commerciali, gli obblighi legali e il processo di sviluppo.
+exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 3f7808a08d033c5940d2115006c269b8c4079822
 workflow-type: tm+mt
-source-wordcount: '811'
-ht-degree: 0%
+source-wordcount: '833'
+ht-degree: 1%
 
 ---
 
-
 # Governance, privacy e sicurezza in Adobe Experience Platform
 
-Adobe Experience Platform consente di assimilare, analizzare, ottimizzare e intervenire sui dati per migliorare notevolmente le esperienze dei clienti. Questi dati sono vasti, complessi e incredibilmente preziosi. A seconda della natura delle operazioni sui dati, delle giurisdizioni legali in cui opera la tua azienda e delle politiche organizzative relative all&#39;utilizzo dei dati, devi controllare e monitorare attentamente la raccolta e l&#39;utilizzo dei dati relativi all&#39;esperienza cliente al fine di proteggere i tuoi interessi commerciali.
+Adobe Experience Platform consente di acquisire, analizzare, ottimizzare e intervenire sui dati per migliorare notevolmente l’esperienza dei clienti. Questi dati sono vasti, complessi e incredibilmente preziosi. A seconda della natura delle operazioni sui dati, delle giurisdizioni legali in cui opera la tua azienda e delle politiche organizzative relative all’utilizzo dei dati, devi controllare e monitorare attentamente la raccolta e l’utilizzo dei dati sulla customer experience al fine di proteggere i tuoi interessi aziendali.
 
- Experience Platform offre diversi servizi e strumenti che consentono di controllare in modo sicuro i dati relativi all&#39;esperienza raccolti al fine di rispettare le prassi aziendali, gli obblighi legali e i processi di sviluppo. Le sezioni seguenti forniscono un&#39;introduzione a ciascuno di questi servizi, insieme ai link alla documentazione per ulteriori informazioni.
+Experience Platform offre diversi servizi e strumenti che ti consentono di controllare in modo sicuro i dati relativi all’esperienza raccolti per rispettare le tue pratiche commerciali, gli obblighi legali e i processi di sviluppo. Le sezioni seguenti forniscono un’introduzione a ciascuno di questi servizi, insieme a collegamenti alla documentazione per ulteriori informazioni.
 
 I servizi possono essere suddivisi in tre domini:
 
@@ -25,62 +25,62 @@ I servizi possono essere suddivisi in tre domini:
 * [Privacy](#privacy)
 * [Sicurezza](#security)
 
-## Gestione dei dati {#governance}
+## Governance dei dati {#governance}
 
-La governance dei dati è un concetto essenziale che si intreccia con tutte le capacità  Experience Platform. La governance dei dati rappresenta la capacità di controllare e comprendere i dati in tutto il percorso attraverso la piattaforma. Ciò comporta il mantenimento della qualità dei dati, della linea di dati, della catalogazione dei dati e altro ancora.
+La governance dei dati è un concetto essenziale che si intreccia con ogni funzionalità di Experience Platform. La governance dei dati rappresenta la tua capacità di controllare e comprendere i tuoi dati in tutto il percorso tramite Platform. Ciò comporta il mantenimento della qualità dei dati, della derivazione dei dati, della catalogazione dei dati e altro ancora.
 
-### Governance dei dati Adobe Experience Platform {#data-governance}
+### Governance dei dati di Adobe Experience Platform {#data-governance}
 
-Come servizio della piattaforma, Adobe Experience Platform Data Governance consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all&#39;uso dei dati. Esso svolge un ruolo chiave all&#39;interno  Experience Platform a vari livelli, tra cui l&#39;etichettatura dell&#39;uso dei dati, i criteri di utilizzo dei dati, l&#39;applicazione dei criteri e la linea di dati.
+In qualità di servizio Platform, la governance dei dati di Adobe Experience Platform ti consente di gestire i dati dei clienti e di garantire la conformità a normative, restrizioni e criteri applicabili all’utilizzo dei dati. svolge un ruolo chiave all’interno di Experience Platform a vari livelli, tra cui l’etichettatura dell’utilizzo dei dati, le politiche di utilizzo dei dati, l’applicazione delle regole e la derivazione dei dati.
 
-Per ulteriori informazioni, vedere [Panoramica sulla governance dei dati](../../data-governance/home.md).
+Per ulteriori informazioni, consulta la [Panoramica sulla governance dei dati](../../data-governance/home.md) .
 
 ### Catalogo e set di dati {#catalog}
 
-Catalog Service è il sistema di record per la posizione dei dati e la linea di collegamento all&#39;interno della piattaforma. Mentre tutti i dati acquisiti  Experience Platform vengono memorizzati nel Data Lake come file e directory, Catalog contiene i metadati e la descrizione di tali file e directory a scopo di ricerca e monitoraggio.
+Servizio catalogo è il sistema di registrazione per la posizione e la derivazione dei dati all’interno di Platform. Mentre tutti i dati acquisiti in Experience Platform vengono memorizzati nel Data Lake come file e directory, Catalog contiene i metadati e la descrizione di tali file e directory a scopo di ricerca e monitoraggio.
 
-Catalog organizza i dati acquisiti in set di dati, con ogni dataset contenente metadati che possono essere utilizzati per etichettare e classificare i dati in esso contenuti.
+Il catalogo organizza i dati acquisiti nei set di dati, con ogni set di dati contenente i metadati che possono essere utilizzati per etichettare e classificare i dati in esso contenuti.
 
-Per ulteriori informazioni sul servizio, vedere [Panoramica del servizio Catalogo](../../catalog/home.md). Per informazioni su come gestire i set di dati in  Experience Platform, vedere la [panoramica dei set di dati](../../catalog/datasets/overview.md).
+Per ulteriori informazioni sul servizio, consulta la [Panoramica del servizio catalogo](../../catalog/home.md) . Per informazioni su come gestire i set di dati in Experience Platform, consulta la [panoramica dei set di dati](../../catalog/datasets/overview.md).
 
 ## Privacy {#privacy}
 
-La privacy è un problema critico per il vostro business, legislatori e i vostri clienti. Poiché i dati personali raccolti dai clienti sono al centro di quasi tutti i flussi di lavoro  Experience Platform, Platform fornisce servizi per supportare queste iniziative.
+La privacy è un problema critico per il tuo business, legislatori e i tuoi clienti. Poiché i dati personali raccolti dai clienti sono al centro di quasi tutti i flussi di lavoro di Experience Platform, Platform fornisce servizi per supportare queste iniziative.
 
-###  Adobe Experience Platform Privacy Service {#privacy-service}
+### Adobe Experience Platform Privacy Service {#privacy-service}
 
-Le norme sulla privacy legale, come il Regolamento generale sulla protezione dei dati (General Data Protection Regulation, GDPR) dell&#39;Unione Europea e il California Consumer Privacy Act (CCPA), concedono ai cittadini all&#39;interno delle loro giurisdizioni il diritto di accedere ed eliminare i dati personali raccolti e conservati da loro.
+Le normative sulla privacy legale, come il Regolamento generale sulla protezione dei dati (RGPD) dell&#39;Unione Europea e il California Consumer Privacy Act (CCPA), concedono ai cittadini all&#39;interno delle loro giurisdizioni il diritto di accedere e cancellare i dati personali raccolti e memorizzati da essi.
 
- Adobe Experience Platform Privacy Service fornisce un&#39;API RESTful e un&#39;interfaccia utente per aiutare a gestire queste richieste. Con Privacy Service, puoi inviare richieste di accesso o eliminazione di dati di clienti privati o personali dalle applicazioni Adobe Experience Cloud, facilitando la conformità automatica alle normative sulla privacy legali e organizzative.
+Adobe Experience Platform Privacy Service fornisce un’API RESTful e un’interfaccia utente per gestire queste richieste. Con Privacy Service puoi inviare richieste di accesso o cancellazione di dati di clienti privati o personali da applicazioni Adobe Experience Cloud, facilitando la conformità automatica alle normative legali e organizzative sulla privacy.
 
-Per ulteriori informazioni, vedere [Privacy Service overview](../../privacy-service/home.md).
+Per ulteriori informazioni, consulta la sezione [Panoramica di Privacy Service](../../privacy-service/home.md) .
 
-### Raccolta di consenso {#consent}
+### Elaborazione del consenso {#consent}
 
-Molte normative legali sulla privacy hanno introdotto requisiti per il consenso attivo e specifico quando si tratta di raccolta di dati, personalizzazione e altri casi di utilizzo del marketing. Per soddisfare questi requisiti,  Experience Platform consente di acquisire le informazioni sul consenso nei profili dei clienti individuali e di utilizzare tali preferenze come fattore determinante per l&#39;utilizzo dei dati di ciascun cliente nei flussi di lavoro della piattaforma a valle.
+Molte normative legali sulla privacy hanno introdotto requisiti per il consenso attivo e specifico in relazione alla raccolta dei dati, alla personalizzazione e ad altri casi d’uso del marketing. Per soddisfare questi requisiti, l’Experience Platform ti consente di acquisire le informazioni sul consenso nei profili dei singoli clienti e di utilizzarle come fattore determinante per l’utilizzo dei dati di ciascun cliente nei flussi di lavoro della piattaforma a valle.
 
-Per informazioni su come raccogliere ed elaborare i dati di consenso dei clienti in conformità con lo IAB Transparency and Consent Framework (TCF) 2.0, vedere la panoramica sul supporto di [IAB TCF 2.0 in Platform](./consent/iab/overview.md).
+Per informazioni su come elaborare i dati sul consenso e sulle preferenze dei clienti utilizzando lo standard Adobe, consulta la panoramica sull’ [elaborazione del consenso in Experience Platform](./consent/adobe/overview.md).
 
-<!-- For more information on the consent collection process using the Adobe standard, see the [consent collection overview]. -->
+Per informazioni su come elaborare i dati di consenso dei clienti in conformità con IAB Transparency and Consent Framework (TCF) 2.0, consulta la panoramica sul supporto [IAB TCF 2.0 in Platform](./consent/iab/overview.md).
 
 ## Sicurezza {#security}
 
-L&#39;integrità e la sicurezza dei dati sono indispensabili per la tua attività e questo rischio richiede capacità di sicurezza leader del settore. Per affrontare questa sfida, Platform offre diversi strumenti per la salvaguardia delle operazioni sui dati.
+L’integrità e la sicurezza dei dati sono indispensabili per la tua attività e questo rischio richiede funzionalità di sicurezza leader del settore. Per soddisfare questa sfida, Platform offre diversi strumenti per la protezione delle operazioni sui dati.
 
 ### Controllo degli accessi {#access-control}
 
- Experience Platform utilizza l&#39;Adobe Admin Console per fornire un controllo dell&#39;accesso basato sui ruoli a varie funzionalità della piattaforma. Questa funzionalità sfrutta i profili di prodotto in  Admin Console, che collegano gli utenti con autorizzazioni e sandbox.
+Experience Platform utilizza Adobe Admin Console per fornire un controllo degli accessi basato sui ruoli a varie funzionalità di Platform. Questa funzionalità sfrutta i profili di prodotto in Admin Console, che collegano gli utenti con autorizzazioni e sandbox.
 
-Per ulteriori informazioni, vedere la [panoramica sul controllo degli accessi](../../access-control/home.md).
+Per ulteriori informazioni, consulta la [panoramica sul controllo degli accessi](../../access-control/home.md) .
 
 ### Sandbox {#sandboxes}
 
- Experience Platform è stato creato per arricchire le applicazioni per esperienze digitali su scala globale. Le aziende spesso eseguono più applicazioni di esperienza digitale in parallelo e devono provvedere allo sviluppo, al test e all&#39;implementazione di tali applicazioni, garantendo al contempo la conformità operativa.
+Experience Platform è progettato per arricchire le applicazioni di esperienza digitale su scala globale. Le aziende spesso eseguono più applicazioni di esperienza digitale in parallelo e devono provvedere allo sviluppo, al test e alla distribuzione di queste applicazioni, garantendo al contempo la conformità operativa.
 
-Per rispondere alla necessità di flessibilità di sviluppo,  Experience Platform fornisce sandbox che dividono una singola istanza della piattaforma in ambienti virtuali separati per aiutarvi a sviluppare le vostre applicazioni di esperienza digitale basate sul vostro ciclo di vita di sviluppo.
+Al fine di soddisfare la necessità di flessibilità di sviluppo, Experience Platform fornisce sandbox che suddividono una singola istanza Platform in ambienti virtuali separati per consentire di sviluppare le applicazioni di esperienza digitale in base al proprio ciclo di vita di sviluppo.
 
-Per ulteriori informazioni, consultate la [panoramica sulle sandbox](../../sandboxes/home.md).
+Per ulteriori informazioni, consulta la [panoramica sulle sandbox](../../sandboxes/home.md) .
 
 ## Passaggi successivi
 
-Questo documento fornisce una panoramica dei vari servizi e strumenti della Piattaforma relativi a governance dei dati, privacy e sicurezza. Per ulteriori informazioni su queste funzionalità, consulta la documentazione collegata a questa guida.
+Questo documento fornisce una panoramica dei vari servizi e strumenti di Platform che riguardano la governance dei dati, la privacy e la sicurezza. Per ulteriori informazioni su queste funzionalità, consulta la documentazione collegata a in questa guida.
