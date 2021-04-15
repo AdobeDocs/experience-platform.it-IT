@@ -1,167 +1,192 @@
 ---
-keywords: ' Experience Platform;informazioni;customer ai;argomenti più comuni;informazioni approfondite sui clienti'
+keywords: Experience Platform;approfondimenti;customer ai;argomenti popolari;approfondimenti sull'ai clienti
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Scopri informazioni approfondite con l'AI del cliente
-topic: Discovering insights
-description: Questo documento funge da guida per l'interazione con le informazioni sulle istanze del servizio nell'interfaccia utente AI del cliente di Servizi intelligenti.
+title: Scopri informazioni approfondite con Customer AI
+topic: Esplorazione delle informazioni
+description: Questo documento funge da guida per interagire con le informazioni sulle istanze del servizio nell’interfaccia utente di Intelligent Services Customer AI.
+exl-id: 8aaae963-4029-471e-be9b-814147a5f160
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: ff953cf0aed2b9122b78126a87625e88f1ca4506
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1572'
 ht-degree: 1%
 
 ---
 
+# Scopri informazioni approfondite con Customer AI
 
-# Scopri informazioni approfondite con l&#39;AI del cliente
+Customer AI, come parte di Intelligent Services, fornisce agli addetti al marketing il potere di sfruttare Adobe Sensei per anticipare quali saranno le prossime azioni dei clienti. Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala. Ciò viene realizzato senza dover trasformare le esigenze aziendali in un problema di apprendimento automatico, scegliendo un algoritmo, una formazione o un&#39;implementazione.
 
-L&#39;AI del cliente, come parte di Intelligent Services, fornisce agli esperti di marketing la possibilità di sfruttare  Adobe Sensei per anticipare quali saranno le prossime azioni da intraprendere per i clienti. Customer AI viene utilizzato per generare punteggi di propensione personalizzati, come abbandono e conversione per singoli profili su grande scala. Ciò è possibile senza dover trasformare le esigenze aziendali in un problema di machine learning, scegliendo un algoritmo, una formazione o un&#39;implementazione.
-
-Questo documento funge da guida per l&#39;interazione con le informazioni sulle istanze del servizio nell&#39;interfaccia utente AI del cliente di Servizi intelligenti.
+Questo documento funge da guida per interagire con le informazioni sulle istanze del servizio nell’interfaccia utente di Intelligent Services Customer AI.
 
 ## Introduzione
 
-Per utilizzare le informazioni per l&#39;AI cliente, è necessario disporre di un&#39;istanza di servizio con uno stato di esecuzione riuscito. Per creare una nuova istanza del servizio, visita [Configurazione di un&#39;istanza dell&#39;API del cliente](./configure.md). Se avete creato di recente un&#39;istanza di servizio che continua a essere formativa e valutazione, lasciate 24 ore per completare l&#39;esecuzione.
+Per utilizzare le informazioni per Customer AI, è necessario disporre di un’istanza di servizio con uno stato di esecuzione riuscito. Per creare una nuova istanza di servizio, visita [Configurazione di un&#39;istanza di Customer AI](./configure.md). Se hai creato di recente un&#39;istanza di servizio ed è ancora in fase di formazione e valutazione, ti preghiamo di consentire 24 ore per il completamento dell&#39;esecuzione.
 
-## Panoramica dell’istanza del servizio
+## Panoramica dell&#39;istanza del servizio
 
-Nell&#39;interfaccia di [!DNL Adobe Experience Platform], fare clic su **[!UICONTROL Services]** nella barra di navigazione a sinistra. Viene visualizzato il browser *Services* e vengono visualizzati i servizi intelligenti disponibili. Nel contenitore per l&#39;API del cliente, fate clic su **[!UICONTROL Open]**.
+Nell’interfaccia utente di [!DNL Adobe Experience Platform], fai clic su **[!UICONTROL Services]** nel menu di navigazione a sinistra. Viene visualizzato il browser *Servizi* e vengono visualizzati i servizi intelligenti disponibili. Nel contenitore per Customer AI, fai clic su **[!UICONTROL Open]**.
 
 ![Accesso all’istanza](../images/insights/navigate-to-service.png)
 
-Viene visualizzata la pagina del servizio AI del cliente. In questa pagina sono elencate le istanze di servizio dell&#39;API cliente e vengono visualizzate informazioni su di esse, incluso il nome dell&#39;istanza, il tipo di propensione, la frequenza di esecuzione dell&#39;istanza e lo stato dell&#39;ultimo aggiornamento.
+Viene visualizzata la pagina del servizio Customer AI. In questa pagina sono elencate le istanze di servizio di Customer AI e vengono visualizzate informazioni su di esse, tra cui il nome dell’istanza, il tipo di propensione, la frequenza di esecuzione dell’istanza e lo stato dell’ultimo aggiornamento.
 
 >[!NOTE]
 >
->Sono disponibili informazioni approfondite solo le istanze del servizio che hanno completato con successo l’esecuzione del punteggio.
+>Solo le istanze del servizio che hanno completato con successo le esecuzioni con punteggio dispongono di informazioni approfondite.
 
 ![Crea istanza](../images/insights/dashboard.png)
 
-Fate clic sul nome di un&#39;istanza di servizio per iniziare.
+Seleziona un nome di istanza del servizio da iniziare.
 
 ![Crea istanza](../images/insights/click-the-name.png)
 
-Viene quindi visualizzata la pagina delle informazioni relative all’istanza del servizio in cui vengono fornite le visualizzazioni dei dati. Le visualizzazioni e le operazioni che puoi eseguire con i dati sono descritte più dettagliatamente in questa guida.
+Quindi, viene visualizzata la pagina delle informazioni per l’istanza del servizio con l’opzione per selezionare **[!UICONTROL Latest scores]** o **[!UICONTROL Performance summary]**. La scheda predefinita **[!UICONTROL Latest scores]** fornisce visualizzazioni dei dati. Le visualizzazioni e le operazioni che puoi eseguire con i dati sono descritte più dettagliatamente in questa guida.
 
-![pagina di configurazione](../images/insights/landing-page.png)
+La scheda **[!UICONTROL Performance summary]** mostra i tassi di abbandono o di conversione effettivi per ciascun intervallo di propensione. Per ulteriori informazioni, consulta la sezione sulle [metriche di riepilogo delle prestazioni](#performance-metrics).
 
+![pagina di configurazione](../images/insights/landing_page_insights.png)
 
-### Dettagli dell&#39;istanza del servizio
+### Dettagli istanza servizio
 
 Esistono due modi per visualizzare i dettagli dell’istanza del servizio: dal dashboard o all&#39;interno dell&#39;istanza del servizio.
 
-Per visualizzare una panoramica dei dettagli dell&#39;istanza del servizio all&#39;interno del dashboard, selezionate un contenitore di istanza del servizio, evitando il collegamento ipertestuale associato al nome. Si apre una barra laterale destra con dettagli aggiuntivi. I controlli contengono le seguenti informazioni:
+Per visualizzare una panoramica dei dettagli dell&#39;istanza del servizio all&#39;interno del dashboard, selezionare un contenitore di istanza del servizio, evitando il collegamento ipertestuale associato al nome. Viene visualizzata la barra a destra con ulteriori dettagli. I controlli contengono i seguenti elementi:
 
-- **[!UICONTROL Edit]**: La selezione  **[!UICONTROL Edit]** consente di modificare un&#39;istanza di servizio esistente. Potete modificare il nome, la descrizione e la frequenza di punteggio dell’istanza.
-- **[!UICONTROL Clone]**: Selezionando  **[!UICONTROL Clone]** copia l&#39;istanza di servizio attualmente selezionata. Potete quindi modificare il flusso di lavoro per apportare modifiche minori e rinominarlo come nuova istanza.
-- **[!UICONTROL Delete]**: È possibile eliminare un&#39;istanza di servizio, comprese eventuali esecuzioni cronologiche.
+- **[!UICONTROL Edit]**: La selezione  **[!UICONTROL Edit]** ti consente di modificare un’istanza di servizio esistente. Puoi modificare il nome, la descrizione e la frequenza di punteggio dell’istanza.
+- **[!UICONTROL Clone]**: Selezionando  **[!UICONTROL Clone]** copia l&#39;impostazione dell&#39;istanza di servizio attualmente selezionata. Puoi quindi modificare il flusso di lavoro per apportare modifiche minori e rinominarlo come nuova istanza.
+- **[!UICONTROL Delete]**: Puoi eliminare un’istanza di servizio, comprese eventuali esecuzioni cronologiche.
 - **[!UICONTROL Data source]**: Un collegamento al set di dati utilizzato da questa istanza.
-- **[!UICONTROL Run Frequency]**: Con quale frequenza si svolge e quando viene eseguito un punteggio.
-- **[!UICONTROL Score definition]**: Panoramica rapida dell’obiettivo configurato per l’istanza.
+- **[!UICONTROL Run Frequency]**: Con quale frequenza e quando si svolge un’esecuzione del punteggio.
+- **[!UICONTROL Score definition]**: Panoramica rapida dell’obiettivo configurato per questa istanza.
 
 ![](../images/user-guide/service-instance-panel.png)
 
 >[!NOTE]
 >
->Nel caso in cui un&#39;esecuzione del punteggio non riesca, viene visualizzato un messaggio di errore. Il messaggio di errore è elencato in **Dettagli ultima esecuzione** nella barra a destra, visibile solo per le esecuzioni non riuscite.
+>Se un’esecuzione del punteggio non riesce, viene visualizzato un messaggio di errore. Il messaggio di errore è elencato in **Dettagli ultima esecuzione** nella barra a destra, visibile solo per le esecuzioni non riuscite.
 
 ![messaggio di esecuzione non riuscito](../images/insights/failed-run.png)
 
-Il secondo modo per visualizzare i dettagli aggiuntivi per un’istanza di servizio si trova nella pagina delle informazioni. È possibile fare clic su **[!UICONTROL Show more]** in alto a destra per compilare un elenco a discesa. Vengono elencati i dettagli, ad esempio la definizione del punteggio, la data di creazione e il tipo di propensione. Per ulteriori informazioni su una delle proprietà elencate, consultare [Configuring a Customer AI instance](./configure.md) (Configurazione di un&#39;istanza AI del cliente).
+Il secondo modo per visualizzare dettagli aggiuntivi per un’istanza di servizio si trova nella pagina approfondimenti. Per compilare un elenco a discesa, fai clic su **[!UICONTROL Show more]** in alto a destra. Sono elencati i dettagli, ad esempio la definizione del punteggio, la data di creazione e il tipo di propensione. Per ulteriori informazioni su una delle proprietà elencate, visita [Configurazione di un&#39;istanza di Customer AI](./configure.md).
 
-![mostra di più](../images/insights/landing-show-more.png)
+![mostrare di più](../images/insights/landing-show-more.png)
 
-![mostra di più](../images/insights/show-more.png)
+![mostrare di più](../images/insights/show-more.png)
 
 ### Modificare un’istanza
 
-Per modificare un&#39;istanza, fate clic su **[!UICONTROL Edit]** nella barra di navigazione in alto a destra.
+Per modificare un’istanza, fai clic su **[!UICONTROL Edit]** nella navigazione in alto a destra.
 
-![fare clic sul pulsante Modifica](../images/insights/edit-button.png)
+![fai clic sul pulsante modifica](../images/insights/edit-button.png)
 
-Viene visualizzata la finestra di dialogo di modifica, che consente di modificare il nome, la descrizione, lo stato e la frequenza di punteggio dell’istanza. Per confermare le modifiche e chiudere la finestra di dialogo, selezionare **[!UICONTROL Save]** nell&#39;angolo inferiore destro.
+Viene visualizzata la finestra di dialogo di modifica, che consente di modificare il nome, la descrizione, lo stato e la frequenza di punteggio dell’istanza. Per confermare le modifiche e chiudere la finestra di dialogo, seleziona **[!UICONTROL Save]** nell’angolo in basso a destra.
 
-![edit pover](../images/insights/edit-instance.png)
+![pozzo di modifica](../images/insights/edit-instance.png)
 
 ### Altre azioni
 
-Il pulsante **[!UICONTROL More actions]** si trova nella navigazione in alto a destra accanto a **[!UICONTROL Edit]**. Facendo clic su **[!UICONTROL More actions]** si apre un menu a discesa che consente di selezionare una delle operazioni seguenti:
+Il pulsante **[!UICONTROL More actions]** si trova nella navigazione in alto a destra accanto a **[!UICONTROL Edit]**. Facendo clic su **[!UICONTROL More actions]** viene visualizzato un menu a discesa che consente di selezionare una delle operazioni seguenti:
 
-- **[!UICONTROL Clone]**: Selezionando  **[!UICONTROL Clone]** copia l&#39;istanza di servizio impostata. Potete quindi modificare il flusso di lavoro per apportare modifiche minori e rinominarlo come nuova istanza.
-- **[!UICONTROL Delete]**: Elimina l&#39;istanza.
-- **[!UICONTROL Access scores]**: Selezionando  **[!UICONTROL Access scores]** si apre una finestra di dialogo contenente un collegamento ai punteggi di  [download per l&#39;](./download-scores.md) esercitazione AItutorial del cliente, nella finestra di dialogo viene fornito anche l&#39;ID del set di dati necessario per effettuare chiamate API.
-- **[!UICONTROL View run history]**: Viene visualizzata una finestra di dialogo contenente un elenco di tutte le esecuzioni del punteggio associate all&#39;istanza del servizio.
+- **[!UICONTROL Clone]**: Selezionando  **[!UICONTROL Clone]** copia l&#39;impostazione dell&#39;istanza del servizio. Puoi quindi modificare il flusso di lavoro per apportare modifiche minori e rinominarlo come nuova istanza.
+- **[!UICONTROL Delete]**: Elimina l’istanza.
+- **[!UICONTROL Access scores]**: Selezionando  **[!UICONTROL Access scores]** apre una finestra di dialogo che fornisce un collegamento ai punteggi di  [download per Customer ](./download-scores.md) AItutorial, la finestra di dialogo fornisce anche l’ID set di dati necessario per effettuare chiamate API.
+- **[!UICONTROL View run history]**: Viene visualizzata una finestra di dialogo contenente un elenco di tutte le esecuzioni del punteggio associate all’istanza del servizio.
 
 ![altre azioni](../images/insights/more-actions.png)
 
-## Riepilogo punteggio {#scoring-summary}
+## Riepilogo del punteggio {#scoring-summary}
 
-Il riepilogo del punteggio visualizza il numero totale di profili con punteggio e li classifica in bucket contenenti propensione alta, media e bassa. I periodi fissi di propensione sono determinati in base all&#39;intervallo di punteggio, il valore basso è inferiore a 24, il valore medio è compreso tra 25 e 74 e il valore massimo è superiore a 74. Ogni intervallo ha un colore corrispondente alla legenda.
+Riepilogo del punteggio visualizza il numero totale di profili con punteggio e li classifica in blocchi contenenti propensione alta, media e bassa. I periodi fissi di propensione sono determinati in base all’intervallo di punteggio, il valore basso è inferiore a 24, il valore medio è compreso tra 25 e 74 e il valore alto è superiore a 74. Ogni bucket ha un colore corrispondente alla legenda.
 
 >[!NOTE]
 >
->Se si tratta di un punteggio di propensione alla conversione, i punteggi alti sono visualizzati in verde e i punteggi bassi in rosso. Se si prevede la propensione del churn questo è capovolto, i punteggi alti sono in rosso e i punteggi bassi sono in verde. Il bucket medio rimane giallo indipendentemente dal tipo di propensione scelto.
+>Se si tratta di un punteggio di propensione di conversione, i punteggi elevati sono visualizzati in verde e i punteggi bassi in rosso. Se prevedi la propensione di abbandono questo viene capovolto, i punteggi alti sono in rosso e i punteggi bassi sono verdi. Il bucket medio rimane giallo indipendentemente dal tipo di propensione scelto.
 
-![riepilogo punteggio](../images/insights/scoring-summary.png)
+![riepilogo del punteggio](../images/insights/scoring-summary.png)
 
-Puoi passare il cursore del mouse su un colore dell&#39;anello per visualizzare informazioni aggiuntive, ad esempio una percentuale e un numero totale di profili appartenenti a un bucket.
+Passa il cursore del mouse su un colore dell’anello per visualizzare informazioni aggiuntive, ad esempio una percentuale e un numero totale di profili appartenenti a un bucket.
 
 ![](../images/insights/scoring-ring.png)
 
 ## Distribuzione dei punteggi
 
-La scheda **[!UICONTROL Distribution of Scores]** fornisce un riepilogo visivo della popolazione in base al punteggio. I colori visualizzati nella scheda [!UICONTROL Distribution of Scores] rappresentano il tipo di punteggio di propensione generato. Quando si passa il puntatore del mouse su una delle distribuzioni del punteggio, viene visualizzato il conteggio esatto che appartiene a tale distribuzione.
+La scheda **[!UICONTROL Distribution of Scores]** fornisce un riepilogo visivo della popolazione in base al punteggio. I colori visualizzati nella scheda [!UICONTROL Distribution of Scores] rappresentano il tipo di punteggio di propensione generato. Passando il puntatore del mouse su una delle distribuzioni di punteggio, viene fornito il conteggio esatto appartenente a tale distribuzione.
 
 ![distribuzione dei punteggi](../images/insights/distribution-of-scores.png)
 
-## Fattori di influenza
+## Fattori influenti
 
-Per ogni intervallo di punteggio, viene generata una scheda che mostra i primi 10 fattori influenti per tale intervallo. I fattori influenti forniscono ulteriori dettagli sul motivo per cui i clienti appartengono a vari periodi fissi di valutazione.
+Per ogni bucket di punteggio, viene generata una scheda che mostra i primi 10 fattori influenti per tale bucket. I fattori influenti ti forniscono ulteriori dettagli sul motivo per cui i tuoi clienti appartengono a vari periodi fissi di valutazione.
 
-![Fattori di influenza](../images/insights/influential-factors.png)
+![Fattori influenti](../images/insights/influential-factors.png)
 
-### Perdite di fattori influenti
+### Perdita di fattori influenti
 
-Passando il puntatore del mouse su uno dei principali fattori influenti, i dati vengono ulteriormente suddivisi. Viene fornita una panoramica del motivo per cui alcuni profili appartengono a un intervallo di propensione. A seconda del fattore, è possibile assegnare valori numerici, categorici o booleani. Nell&#39;esempio seguente vengono visualizzati i valori categorici per regione.
+Passando il puntatore del mouse su uno dei principali fattori influenti, i dati vengono ulteriormente suddivisi. Viene fornita una panoramica del motivo per cui alcuni profili appartengono a un bucket di propensione. A seconda del fattore, è possibile assegnare valori numerici, categorici o booleani. Nell’esempio seguente vengono visualizzati i valori categorici per regione.
 
-![screenshot](../images/insights/drilldown.png)
+![schermata di drilldown](../images/insights/drilldown.png)
 
-Inoltre, utilizzando le drilldowns, puoi confrontare un fattore di distribuzione se si verifica in due o più bucket di propensione e creare segmenti più specifici con questi valori. L’esempio seguente illustra il primo caso di utilizzo:
+Inoltre, utilizzando i drill-down, puoi confrontare un fattore di distribuzione se si verifica in due o più bucket di propensione e creare segmenti più specifici con questi valori. L’esempio seguente illustra il primo caso d’uso:
 
 ![](../images/insights/drilldown-compare.png)
 
-Potete vedere che i profili con bassa propensione alla conversione hanno meno probabilità di aver effettuato una visita recente alle pagine Web adobe.com. Il fattore &quot;Giorni dall&#39;ultima visita Web&quot; ha una copertura solo dell&#39;8% rispetto al 26% nei profili di probabilità media. Utilizzando questi numeri, è possibile confrontare la distribuzione all&#39;interno di ciascun bucket per il fattore. Queste informazioni possono essere utilizzate per dedurre che la recency in webvisit non è così influente nel periodo fisso di bassa propensione, come è nel periodo fisso di media propensione.
+Puoi notare che i profili con bassa propensione alla conversione hanno meno probabilità di aver effettuato una visita recente alle pagine web adobe.com. Il fattore &quot;Giorni dall’ultima visita web&quot; ha una copertura solo dell’8% rispetto al 26% nei profili di propensione medi. Utilizzando questi numeri, puoi confrontare la distribuzione all’interno di ciascun bucket per il fattore. Queste informazioni possono essere utilizzate per dedurre che la recency nella visita web non è così influente nel bucket di bassa propensione, come è nel secchio di media propensione.
 
-### Creazione di un segmento
+### Creare un segmento
 
-Se si seleziona il pulsante **[!UICONTROL Create Segment]** in uno dei periodi fissi per una propensione bassa, media e alta, si viene reindirizzati al generatore di segmenti.
+Selezionando il pulsante **[!UICONTROL Create Segment]** in uno qualsiasi dei bucket per una propensione bassa, media e alta, si reindirizza al generatore di segmenti.
 
 >[!NOTE]
 >
->Il pulsante **[!UICONTROL Create Segment]** è disponibile solo se per il set di dati è abilitato il profilo cliente in tempo reale. Per ulteriori informazioni su come abilitare il profilo cliente in tempo reale, visita la [Panoramica del profilo cliente in tempo reale](../../../rtcdp/overview.md).
+>Il pulsante **[!UICONTROL Create Segment]** è disponibile solo se per il set di dati è abilitato Profilo cliente in tempo reale. Per ulteriori informazioni su come abilitare il profilo cliente in tempo reale, visita la [Panoramica sul profilo cliente in tempo reale](../../../rtcdp/overview.md).
 
 ![Fai clic su Crea segmento](../images/insights/influential-factors-create-segment.png)
 
-![Creazione di un segmento](../images/insights/create-segment.png)
+![Creare un segmento](../images/insights/create-segment.png)
 
-Il generatore di segmenti viene utilizzato per definire un segmento. Quando si seleziona **[!UICONTROL Create Segment]** dalla pagina Insights (Approfondimenti), l&#39;API del cliente aggiunge automaticamente al segmento le informazioni del bucket selezionato. Per completare la creazione del segmento, è sufficiente compilare i contenitori *Name* e *Description* nella parte destra dell&#39;interfaccia utente del generatore di segmenti. Dopo aver assegnato al segmento un nome e una descrizione, fate clic su **[!UICONTROL Save]** in alto a destra.
+Il generatore di segmenti viene utilizzato per definire un segmento. Quando selezioni **[!UICONTROL Create Segment]** dalla pagina Approfondimenti , Customer AI aggiunge automaticamente al segmento le informazioni sui bucket selezionati. Per completare la creazione del segmento, è sufficiente compilare i contenitori *Name* e *Description* nella barra a destra dell’interfaccia utente del generatore di segmenti. Dopo aver assegnato un nome e una descrizione al segmento, fai clic su **[!UICONTROL Save]** in alto a destra.
 
 >[!NOTE]
 >
->Poiché i punteggi di propensione sono scritti nel singolo profilo, sono disponibili nel generatore di segmenti come qualsiasi altro attributo di profilo. Quando vai al generatore di segmenti per creare nuovi segmenti, puoi vedere tutti i vari punteggi di propensione nello spazio dei nomi Customer AI (AI cliente).
+>Poiché i punteggi di propensione sono scritti sul singolo profilo, sono disponibili nel Generatore di segmenti come qualsiasi altro attributo di profilo. Quando visiti il Generatore di segmenti per creare nuovi segmenti, puoi visualizzare tutti i vari punteggi di propensione nello spazio dei nomi Customer AI.
 
-![Riempimento segmento in](../images/insights/segment-saving.png)
+![Riempimento del segmento](../images/insights/segment-saving.png)
 
-Per visualizzare il nuovo segmento nell&#39;interfaccia utente della piattaforma, fai clic su **[!UICONTROL Segments]** nella barra di navigazione a sinistra. Viene visualizzata la pagina **[!UICONTROL Browse]** con tutti i segmenti disponibili.
+Per visualizzare il nuovo segmento nell’interfaccia utente di Platform, fai clic su **[!UICONTROL Segments]** nel menu di navigazione a sinistra. Viene visualizzata la pagina **[!UICONTROL Browse]** che visualizza tutti i segmenti disponibili.
 
 ![Tutti i segmenti](../images/insights/Segments-dashboard.png)
 
+## Metriche di riepilogo delle prestazioni {#performance-metrics}
+
+La scheda **[!UICONTROL Performance summary]** mostra i tassi di abbandono o di conversione effettivi, separati in ciascuno dei bucket di propensione valutati da Customer AI.
+
+![Scheda Riepilogo prestazioni](../images/insights/summary_tab.png)
+
+Inizialmente vengono visualizzate solo le percentuali previste (linee tratteggiate). Le percentuali previste vengono visualizzate quando non si è verificata un’esecuzione del punteggio e i dati non sono ancora disponibili. Tuttavia, una volta superato un intervallo di risultati, il tasso previsto viene sostituito da un tasso effettivo (linea continua).
+
+Passando il puntatore del mouse sopra le righe viene visualizzata la data e il tasso effettivo/previsto per quel giorno nel periodo fisso.
+
+![Esempio di bucket](../images/insights/churn_tab.png)
+
+Puoi filtrare l’intervallo di tempo per la visualizzazione dei tassi previsti ed effettivi. Seleziona l&#39;icona **Calendario** ![icona](../images/insights/calendar_icon.png)e seleziona un nuovo intervallo di date. I risultati in ciascuno dei bucket vengono aggiornati per essere visualizzati all’interno del nuovo intervallo di date.
+
+![Selettore data](../images/insights/date_selector.png)
+
+### Tassi di esecuzione dei punteggi individuali
+
+Nella parte inferiore della scheda **[!UICONTROL Performance summary]** vengono visualizzati i risultati per ogni singola esecuzione del punteggio. Seleziona la data a discesa in alto a destra per visualizzare i risultati di una diversa esecuzione del punteggio.
+
+A seconda se si prevede la abbandono o la conversione, il grafico [!UICONTROL Distribution of Scores] mostra la distribuzione dei profili eseguiti/convertiti e non eseguiti/non convertiti in ogni incremento.
+
+![punteggio individuale](../images/insights/scoring_tab.png)
+
 ## Passaggi successivi
 
-Questo documento descrive le informazioni fornite da un&#39;istanza del servizio Customer AI. È ora possibile continuare l&#39;esercitazione su [punteggi di download in Customer AI](./download-scores.md) oppure consultare le altre [ guide dei servizi intelligenti ](../../home.md) del Adobe disponibili.
+Questo documento descrive le informazioni fornite da un&#39;istanza del servizio Customer AI. È ora possibile continuare l&#39;esercitazione su [download dei punteggi in Customer AI](./download-scores.md) oppure sfogliare le altre guide [Adobe Intelligent Services](../../home.md) offerte.
 
 ## Risorse aggiuntive
 
-Il seguente video illustra come utilizzare l&#39;API cliente per vedere l&#39;output dei modelli e dei fattori influenti.
+Il video seguente illustra come utilizzare Customer AI per vedere l’output dei modelli e dei fattori influenti.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32666?learn=on&quality=12)
