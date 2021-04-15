@@ -1,133 +1,149 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;Segmentation Service;segmentation service;guida utente;ui guide;segmentation ui guide;Segmentation ui builder;Segmentation builder;Segmentation Builder;'
+keywords: Experience Platform;home;argomenti popolari;servizio di segmentazione;segmentazione;servizio di segmentazione;guida utente;guida utente;guida utente;guida utente di segmentazione;generatore di segmenti;generatore di segmenti;
 solution: Experience Platform
 title: Guida all’interfaccia utente di Generatore di segmenti
-topic: ui guide
-description: 'Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro completa che consente di interagire con gli elementi dei dati del profilo. L’area di lavoro offre controlli intuitivi per la creazione e la modifica di regole, come le sezioni di trascinamento utilizzate per rappresentare le proprietà dei dati. '
+topic: guida all'interfaccia utente
+description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro ricca che consente di interagire con gli elementi dati di profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio riquadri drag-and-drop utilizzati per rappresentare le proprietà dei dati.
+exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 translation-type: tm+mt
-source-git-commit: 354b756e53b360f31c1832c2b0f946b67099a87f
+source-git-commit: bad293cf25b955496897d895169ec494416e9787
 workflow-type: tm+mt
-source-wordcount: '1839'
+source-wordcount: '1942'
 ht-degree: 0%
 
 ---
 
+# [!DNL Segment Builder] Guida all’interfaccia utente
 
-# [!DNL Segment Builder] Guida all&#39;interfaccia
-
-[!DNL Segment Builder] offre un’area di lavoro completa che consente di interagire con gli elementi  [!DNL Profile] dati. L’area di lavoro offre controlli intuitivi per la creazione e la modifica di regole, come le sezioni di trascinamento utilizzate per rappresentare le proprietà dei dati.
+[!DNL Segment Builder] offre un’area di lavoro ricca che consente di interagire con gli elementi  [!DNL Profile] dati. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio riquadri drag-and-drop utilizzati per rappresentare le proprietà dei dati.
 
 ![](../images/ui/segment-builder/segment-builder.png)
 
-## Blocchi di generazione delle definizioni dei segmenti
+## Blocchi di generazione della definizione del segmento
 
-Gli elementi costitutivi di base delle definizioni dei segmenti sono attributi ed eventi. Inoltre, gli attributi e gli eventi contenuti nelle audience esistenti possono essere utilizzati anche come componenti per le nuove definizioni.
+Gli elementi di base delle definizioni dei segmenti sono attributi ed eventi. Inoltre, gli attributi e gli eventi contenuti nei tipi di pubblico esistenti possono essere utilizzati come componenti per nuove definizioni.
 
-Questi blocchi costitutivi sono visibili nella sezione **[!UICONTROL Fields]** a sinistra dell&#39;area di lavoro [!DNL Segment Builder]. **[!UICONTROL Fields]** contiene una scheda per ciascuno dei blocchi di generazione principali: &quot;[!UICONTROL Attributes]&quot;, &quot;[!UICONTROL Events]&quot; e &quot;[!UICONTROL Audiences]&quot;.
+Puoi visualizzare questi blocchi predefiniti nella sezione **[!UICONTROL Fields]** sul lato sinistro dell’ area di lavoro [!DNL Segment Builder] . **[!UICONTROL Fields]** contiene una scheda per ciascuno dei blocchi predefiniti principali: &quot;[!UICONTROL Attributes]&quot;, &quot;[!UICONTROL Events]&quot; e &quot;[!UICONTROL Audiences]&quot;.
 
 ![](../images/ui/segment-builder/segment-fields.png)
 
 ### Attributi
 
-La scheda **[!UICONTROL Attributes]** consente di esplorare gli attributi [!DNL Profile] appartenenti alla classe [!DNL XDM Individual Profile]. Ogni cartella può essere espansa per rivelare altri attributi, in cui ogni attributo è una sezione che può essere trascinata sul quadro del generatore di regole al centro dell’area di lavoro. Il file canvas del generatore di regole [viene descritto più dettagliatamente più avanti in questa guida.](#rule-builder-canvas)
+La scheda **[!UICONTROL Attributes]** ti consente di sfogliare gli attributi [!DNL Profile] appartenenti alla classe [!DNL XDM Individual Profile] . Ogni cartella può essere espansa per visualizzare attributi aggiuntivi, in cui ogni attributo è un riquadro che può essere trascinato sull’area di lavoro del generatore di regole al centro dell’area di lavoro. La sezione [canvas](#rule-builder-canvas) del generatore di regole viene discussa più avanti in questa guida.
 
 ![](../images/ui/segment-builder/attributes.png)
 
 ### Eventi
 
-La scheda **[!UICONTROL Events]** consente di creare un&#39;audience basata su eventi o azioni che si sono verificati utilizzando gli elementi di dati [!DNL XDM ExperienceEvent]. Potete anche trovare i tipi di evento nella scheda **[!UICONTROL Events]**, una raccolta di eventi di uso comune che consente di creare i segmenti più rapidamente.
+La scheda **[!UICONTROL Events]** ti consente di creare un pubblico in base a eventi o azioni che hanno avuto luogo utilizzando gli elementi dati [!DNL XDM ExperienceEvent] . Puoi anche trovare Tipi di eventi nella scheda **[!UICONTROL Events]** , che è una raccolta di eventi comunemente utilizzati per consentire di creare i segmenti più rapidamente.
 
-Oltre a essere in grado di individuare gli elementi [!DNL ExperienceEvent], potete anche cercare i tipi di evento. I tipi di evento utilizzano la stessa logica di codifica di [!DNL ExperienceEvents], senza che sia necessario eseguire ricerche all&#39;interno della classe [!DNL XDM ExperienceEvent] alla ricerca dell&#39;evento corretto. Ad esempio, utilizzando la barra di ricerca per cercare &quot;carrello&quot;, vengono restituiti i tipi di evento &quot;[!UICONTROL AddCart]&quot; e &quot;[!UICONTROL RemoveCart]&quot;, due azioni carrello utilizzate di frequente per la creazione delle definizioni dei segmenti.
+Oltre a essere in grado di cercare gli elementi [!DNL ExperienceEvent], puoi anche cercare i tipi di evento. I tipi di evento utilizzano la stessa logica di codifica di [!DNL ExperienceEvents], senza che sia necessario cercare l’evento corretto nella classe [!DNL XDM ExperienceEvent]. Ad esempio, utilizzando la barra di ricerca per cercare &quot;carrello&quot; vengono restituiti i Tipi di evento &quot;[!UICONTROL AddCart]&quot; e &quot;[!UICONTROL RemoveCart]&quot;, due azioni carrello molto comunemente utilizzate durante la creazione delle definizioni dei segmenti.
 
-Per cercare qualsiasi tipo di componente, digitatene il nome nella barra di ricerca, che utilizza la sintassi di ricerca di [Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). I risultati della ricerca iniziano a essere compilati man mano che vengono inserite parole intere. Ad esempio, per creare una regola basata sul campo XDM `ExperienceEvent.commerce.productViews`, iniziare a digitare &quot;product views&quot; nel campo di ricerca. Una volta digitata la parola &quot;prodotto&quot;, i risultati della ricerca iniziano a comparire. Ogni risultato include la gerarchia di oggetti alla quale appartiene.
+È possibile cercare qualsiasi tipo di componente digitandone il nome nella barra di ricerca, che utilizza la [sintassi di ricerca di Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). I risultati della ricerca iniziano a popolarsi man mano che vengono inserite parole intere. Ad esempio, per creare una regola basata sul campo XDM `ExperienceEvent.commerce.productViews`, inizia a digitare &quot;product views&quot; nel campo di ricerca. Una volta digitata la parola &quot;prodotto&quot;, iniziano ad apparire i risultati della ricerca. Ogni risultato include la gerarchia di oggetti a cui appartiene.
 
 >[!NOTE]
 >
->I campi dello schema personalizzato definiti dall&#39;organizzazione possono richiedere fino a 24 ore per essere visualizzati e diventare disponibili per l&#39;uso nelle regole di creazione.
+>I campi dello schema personalizzato definiti dall&#39;organizzazione possono richiedere fino a 24 ore per essere visualizzati e diventare disponibili per l&#39;utilizzo nella creazione delle regole.
 
-Puoi quindi trascinare [!DNL ExperienceEvents] e &quot;[!UICONTROL Event Types]&quot; facilmente nella definizione del segmento.
+Puoi quindi trascinare facilmente [!DNL ExperienceEvents] e &quot;[!UICONTROL Event Types]&quot; nella definizione del segmento.
 
 ![](../images/ui/segment-builder/events-eventTypes.png)
 
-Per impostazione predefinita, vengono visualizzati solo i campi dello schema compilati dall&#39;archivio dati. Ciò include &quot;[!UICONTROL Event Types]&quot;. Se l&#39;elenco &quot;[!UICONTROL Event Types]&quot; non è visibile, oppure è possibile selezionare &quot;[!UICONTROL Any]&quot; solo come &quot;[!UICONTROL Event Type]&quot;, selezionare l&#39;icona **ingranaggio** accanto a **[!UICONTROL Fields]**, quindi selezionare **[!UICONTROL Show full XDM schema]** in **[!UICONTROL Available Fields]**. Selezionare di nuovo l&#39;icona **ingranaggio** per tornare alla scheda **[!UICONTROL Fields]** e ora è possibile visualizzare più campi &quot;[!UICONTROL Event Types]&quot; e schema, indipendentemente dal fatto che contengano o meno dati.
+Per impostazione predefinita, vengono visualizzati solo i campi dello schema compilati dall’archivio dati. Ciò include &quot;[!UICONTROL Event Types]&quot;. Se l&#39;elenco &quot;[!UICONTROL Event Types]&quot; non è visibile o se è possibile selezionare &quot;[!UICONTROL Any]&quot; solo come &quot;[!UICONTROL Event Type]&quot;, selezionare l&#39;icona **ingranaggio** accanto a **[!UICONTROL Fields]**, quindi selezionare **[!UICONTROL Show full XDM schema]** in **[!UICONTROL Available Fields]**. Seleziona nuovamente l&#39; **icona a forma di ingranaggio** per tornare alla scheda **[!UICONTROL Fields]** e ora dovresti essere in grado di visualizzare più campi &quot;[!UICONTROL Event Types]&quot; e schema, indipendentemente dal fatto che contengano o meno dati.
 
 ![](../images/ui/segment-builder/show-populated.png)
 
 ### Tipi di pubblico
 
-La scheda **[!UICONTROL Audiences]** elenca tutte le audience importate da origini esterne, come Adobe Audience Manager, nonché quelle create all&#39;interno di [!DNL Experience Platform].
+La scheda **[!UICONTROL Audiences]** elenca tutti i tipi di pubblico importati da origini esterne, ad esempio Adobe Audience Manager, e quelli creati in [!DNL Experience Platform].
 
-Nella scheda **[!UICONTROL Audiences]** è possibile visualizzare tutte le origini disponibili come un gruppo di cartelle. Quando selezionate le cartelle, è possibile visualizzare le sottocartelle e i tipi di pubblico disponibili. Inoltre, potete selezionare l’icona della cartella (come illustrato nell’immagine all’estrema destra) per visualizzare la struttura delle cartelle (un segno di spunta indica la cartella in cui ci si trova attualmente) e navigare facilmente tra le cartelle selezionando il nome di una cartella nella struttura.
+Nella scheda **[!UICONTROL Audiences]** è possibile visualizzare tutte le origini disponibili come gruppo di cartelle. Quando selezioni le cartelle, puoi vedere le sottocartelle e i tipi di pubblico disponibili. Inoltre, è possibile selezionare l’icona della cartella (come mostrato nell’immagine all’estrema destra) per visualizzare la struttura della cartella (un segno di spunta indica la cartella in cui ci si trova attualmente) e navigare facilmente tra le cartelle selezionando il nome di una cartella nella struttura.
 
-Puoi passare il cursore del mouse sul ⓘ accanto a un&#39;audience per visualizzare le informazioni relative a quest&#39;ultima, inclusi il relativo ID, la descrizione e la gerarchia di cartelle per individuare l&#39;audience.
+Puoi passare il cursore sul ⓘ accanto a un pubblico per visualizzare informazioni sul pubblico, tra cui il suo ID, la sua descrizione e la gerarchia delle cartelle per individuare il pubblico.
 
 ![](../images/ui/segment-builder/audience-folder-structure.png)
 
-È inoltre possibile cercare audience utilizzando la barra di ricerca, che utilizza la sintassi di ricerca di [Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Nella scheda **[!UICONTROL Audiences]**, se si seleziona una cartella di livello principale viene visualizzata la barra di ricerca, che consente di effettuare ricerche all&#39;interno della cartella. I risultati della ricerca iniziano a essere compilati solo dopo l&#39;immissione di intere parole. Ad esempio, per trovare un&#39;audience denominata `Online Shoppers`, iniziate a digitare &quot;Online&quot; nella barra di ricerca. Una volta digitata la parola &quot;Online&quot;, vengono visualizzati i risultati della ricerca contenenti la parola &quot;Online&quot;.
+Puoi anche cercare il pubblico utilizzando la barra di ricerca, che utilizza la sintassi di ricerca di [Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Nella scheda **[!UICONTROL Audiences]** , se si seleziona una cartella di livello superiore viene visualizzata la barra di ricerca, che consente di eseguire ricerche all’interno della cartella. I risultati della ricerca iniziano a compilarsi solo una volta inserite intere parole. Ad esempio, per trovare un pubblico denominato `Online Shoppers`, inizia a digitare &quot;Online&quot; nella barra di ricerca. Una volta digitata la parola &quot;Online&quot;, vengono visualizzati i risultati della ricerca contenenti la parola &quot;Online&quot;.
 
 ## Area di lavoro del generatore di regole {#rule-builder-canvas}
 
-Una definizione di segmento è una raccolta di regole utilizzate per descrivere le caratteristiche o il comportamento chiave di un&#39;audience target. Queste regole vengono create utilizzando l&#39;area di lavoro del generatore di regole, situata al centro di [!DNL Segment Builder].
+Una definizione di segmento è una raccolta di regole utilizzate per descrivere le caratteristiche o il comportamento chiave di un pubblico target. Queste regole vengono create utilizzando l&#39;area di lavoro del generatore di regole, situata al centro di [!DNL Segment Builder].
 
-Per aggiungere una nuova regola alla definizione del segmento, trascinate una sezione dalla scheda **[!UICONTROL Fields]** e rilasciatela nell’area di lavoro del generatore di regole. Verranno quindi presentate opzioni specifiche per il contesto in base al tipo di dati aggiunto. I tipi di dati disponibili includono: stringhe, date, [!DNL ExperienceEvents], &quot;[!UICONTROL Event Types]&quot; e audience.
+Per aggiungere una nuova regola alla definizione del segmento, trascina un riquadro dalla scheda **[!UICONTROL Fields]** e rilascialo nell’area di lavoro del generatore di regole. Verranno quindi presentate opzioni specifiche per il contesto in base al tipo di dati aggiunti. I tipi di dati disponibili includono: stringhe, date, [!DNL ExperienceEvents], &quot;[!UICONTROL Event Types]&quot; e tipi di pubblico.
 
 ![](../images/ui/segment-builder/rule-builder-canvas.png)
 
 >[!IMPORTANT]
 >
->Le ultime modifiche ad Adobe Experience Platform hanno aggiornato l&#39;utilizzo degli operatori logici `OR` e `AND` tra gli eventi. Questi aggiornamenti non influiranno sui segmenti esistenti. Tuttavia, tutti gli aggiornamenti successivi ai segmenti esistenti e alle nuove creazioni di segmenti saranno interessati da queste modifiche. Per ulteriori informazioni, leggere l&#39; [aggiornamento delle costanti di ora](./segment-refactoring.md).
+>Le ultime modifiche apportate a Adobe Experience Platform hanno aggiornato l’utilizzo degli operatori logici `OR` e `AND` tra gli eventi. Questi aggiornamenti non avranno alcun impatto sui segmenti esistenti. Tuttavia, questi cambiamenti interesseranno tutti gli aggiornamenti successivi ai segmenti esistenti e alle nuove creazioni di segmenti. Per ulteriori informazioni, leggere l&#39; [aggiornamento delle costanti di tempo](./segment-refactoring.md) .
 
-### Aggiunta di audience
+### Aggiunta di tipi di pubblico
 
-Puoi trascinare un&#39;audience dalla scheda **[!UICONTROL Audience]** nell&#39;area di lavoro del generatore di regole per fare riferimento all&#39;appartenenza all&#39;audience nella nuova definizione di segmento. Questo consente di includere o escludere l&#39;appartenenza all&#39;audience come attributo nella nuova regola del segmento.
+Puoi trascinare un pubblico dalla scheda **[!UICONTROL Audience]** nell’area di lavoro del generatore di regole per fare riferimento all’appartenenza al pubblico nella nuova definizione del segmento. Questo ti consente di includere o escludere l’appartenenza al pubblico come attributo nella nuova regola del segmento.
 
-Per i tipi di pubblico [!DNL Platform] creati utilizzando [!DNL Segment Builder], è possibile convertire l&#39;audience in un set di regole utilizzate nella definizione del segmento per tale audience. Questa conversione crea una copia della logica della regola, che può essere modificata senza influenzare la definizione del segmento originale. Prima di convertire le modifiche recenti nella definizione del segmento in logica regola, accertatevi di aver salvato le modifiche recenti.
+Per i tipi di pubblico [!DNL Platform] creati utilizzando [!DNL Segment Builder], puoi convertire il pubblico nel set di regole utilizzate nella definizione del segmento per quel pubblico. Questa conversione crea una copia della logica della regola, che può quindi essere modificata senza influire sulla definizione originale del segmento. Assicurati di aver salvato le modifiche recenti alla definizione del segmento prima di convertirlo in logica di regola.
 
 >[!NOTE]
 >
->Quando si aggiunge un&#39;audience da un&#39;origine esterna, viene fatto riferimento solo all&#39;appartenenza all&#39;audience. Non è possibile convertire l&#39;audience in regole, pertanto le regole utilizzate per creare l&#39;audience originale non possono essere modificate nella nuova definizione di segmento.
+>Quando si aggiunge un pubblico da un’origine esterna, viene fatto riferimento solo all’appartenenza al pubblico. Non è possibile convertire il pubblico in regole e pertanto le regole utilizzate per creare il pubblico originale non possono essere modificate nella nuova definizione del segmento.
 
 ![](../images/ui/segment-builder/add-audience-to-segment.png)
 
-Se si verificano dei conflitti durante la conversione dei tipi di pubblico in regole, [!DNL Segment Builder] tenterà di mantenere le opzioni esistenti al meglio delle proprie capacità.
+In caso di conflitti durante la conversione di tipi di pubblico in regole, [!DNL Segment Builder] tenterà di mantenere al meglio le opzioni esistenti.
 
 ### Vista Codice
 
-In alternativa, è possibile visualizzare una versione basata su codice di una regola creata in [!DNL Segment Builder]. Dopo aver creato la regola nell&#39;area di lavoro del generatore di regole, potete selezionare **[!UICONTROL Code view]** per visualizzare il segmento come PQL.
+In alternativa, puoi visualizzare una versione basata su codice di una regola creata in [!DNL Segment Builder]. Dopo aver creato la regola nell&#39;area di lavoro del generatore di regole, puoi selezionare **[!UICONTROL Code view]** per visualizzare il segmento come PQL.
 
 ![](../images/ui/segment-builder/code-view.png)
 
-La vista Codice fornisce un pulsante che consente di copiare il valore del segmento da utilizzare nelle chiamate API. Per ottenere la versione più recente del segmento, accertati di aver salvato le ultime modifiche al segmento.
+La vista Codice fornisce un pulsante che consente di copiare il valore del segmento da utilizzare nelle chiamate API. Per ottenere la versione più recente del segmento, accertati di aver salvato le modifiche più recenti al segmento.
 
 ![](../images/ui/segment-builder/copy-code.png)
 
 ### Funzioni di aggregazione
 
-Un&#39;aggregazione in [!DNL Segment Builder] è un calcolo su un gruppo di attributi XDM il cui tipo di dati è un numero (un doppio o un numero intero). Le quattro funzioni di aggregazione supportate in Segment Builder (Generatore di segmenti) sono SUM, AVERAGE, MIN e MAX.
+Un&#39;aggregazione in [!DNL Segment Builder] è un calcolo su un gruppo di attributi XDM il cui tipo di dati è un numero (doppio o intero). Le quattro funzioni di aggregazione supportate nel Generatore di segmenti sono SOMMA, MEDIA, MIN e MAX.
 
-Per creare una funzione di aggregazione, selezionare un evento dalla barra a sinistra, quindi inserirlo nel contenitore [!UICONTROL Events].
+Per creare una funzione di aggregazione, seleziona un evento dalla barra a sinistra e inseriscilo nel contenitore [!UICONTROL Events] .
 
 ![](../images/ui/segment-builder/select-event.png)
 
-Dopo aver posizionato l&#39;evento all&#39;interno del contenitore Eventi, selezionate l&#39;icona con le ellissi (...), seguita da **[!UICONTROL Aggregate]**.
+Dopo aver posizionato l’evento all’interno del contenitore Eventi, seleziona l’icona dei puntini di sospensione (...), seguita da **[!UICONTROL Aggregate]**.
 
 ![](../images/ui/segment-builder/add-aggregation.png)
 
-L&#39;aggregazione ora viene aggiunta. È ora possibile selezionare la funzione di aggregazione, scegliere l&#39;attributo da aggregare, la funzione di uguaglianza e il valore. Per l&#39;esempio seguente, questo segmento qualificherebbe qualsiasi profilo con una somma di valori acquistati maggiore di $100, anche se ogni singolo acquisto è inferiore a $100.
+L’aggregazione viene ora aggiunta. Ora puoi selezionare la funzione di aggregazione, scegliere l&#39;attributo da aggregare, la funzione di uguaglianza e il valore. Per l’esempio seguente, questo segmento qualificherebbe qualsiasi profilo con una somma di valori acquistati maggiore di $100, anche se ogni singolo acquisto è inferiore a $100.
 
 ![](../images/ui/segment-builder/filled-aggregation.png)
 
+### Funzioni di conteggio
+
+Le funzioni di conteggio nel Generatore di segmenti vengono utilizzate per cercare eventi specifici e contare il numero di volte in cui vengono eseguiti. Le funzioni di conteggio supportate nel Generatore di segmenti sono &quot;Almeno&quot;, &quot;Al massimo&quot;, &quot;Esattamente&quot;, &quot;Tra&quot; e &quot;Tutto&quot;.
+
+Per creare una funzione di conteggio, seleziona un evento dalla barra a sinistra e inseriscilo nel contenitore [!UICONTROL Events] .
+
+![](../images/ui/segment-builder/add-event.png)
+
+Dopo aver posizionato l’evento all’interno del contenitore Eventi, seleziona il pulsante [!UICONTROL At least 1] .
+
+![](../images/ui/segment-builder/add-count.png)
+
+La funzione di conteggio viene ora aggiunta. Ora puoi selezionare la funzione di conteggio e il valore della funzione. L’esempio seguente includerebbe qualsiasi evento con almeno un clic.
+
+![](../images/ui/segment-builder/select-count.png)
+
 ## Contenitori
 
-Le regole del segmento vengono valutate nell&#39;ordine in cui sono elencate. I contenitori consentono il controllo dell&#39;ordine di esecuzione mediante l&#39;uso di query nidificate.
+Le regole dei segmenti vengono valutate nell’ordine in cui sono elencate. I contenitori consentono il controllo dell’ordine di esecuzione tramite l’utilizzo di query nidificate.
 
-Dopo aver aggiunto almeno una sezione al quadro del generatore di regole, potete iniziare ad aggiungere contenitori. Per creare un nuovo contenitore, selezionate le ellissi (...) nell&#39;angolo superiore destro della sezione, quindi selezionate **[!UICONTROL Add container]**.
+Dopo aver aggiunto almeno un riquadro all’area di lavoro del generatore di regole, puoi iniziare ad aggiungere contenitori. Per creare un nuovo contenitore, seleziona i puntini di sospensione (...) nell’angolo in alto a destra del riquadro, quindi seleziona **[!UICONTROL Add container]**.
 
 ![](../images/ui/segment-builder/add-container.png)
 
-Un nuovo contenitore viene visualizzato come secondario del primo contenitore, ma è possibile regolare la gerarchia trascinando e spostando i contenitori. Il comportamento predefinito di un contenitore è &quot;[!UICONTROL Include]&quot; l&#39;attributo, l&#39;evento o l&#39;audience forniti. Potete impostare la regola su profili &quot;[!UICONTROL Exclude]&quot; che corrispondono ai criteri del contenitore selezionando **[!UICONTROL Include]** nell&#39;angolo superiore sinistro della sezione e selezionando &quot;[!UICONTROL Exclude]&quot;.
+Un nuovo contenitore viene visualizzato come secondario del primo contenitore, ma è possibile regolare la gerarchia trascinando e spostando i contenitori. Il comportamento predefinito di un contenitore è &quot;[!UICONTROL Include]&quot; l&#39;attributo, l&#39;evento o il pubblico fornito. Puoi impostare la regola sui profili &quot;[!UICONTROL Exclude]&quot; che corrispondono ai criteri del contenitore selezionando **[!UICONTROL Include]** nell’angolo in alto a sinistra del riquadro e selezionando &quot;[!UICONTROL Exclude]&quot;.
 
-È inoltre possibile estrarre e aggiungere un contenitore secondario al contenitore principale selezionando &quot;unwrapper contenitore&quot; nel contenitore secondario. Selezionate le ellissi (...) nell’angolo superiore destro del contenitore secondario per accedere a questa opzione.
+È inoltre possibile estrarre un contenitore secondario e aggiungerlo in linea al contenitore principale selezionando &quot;estrae il contenitore&quot; dal contenitore secondario. Seleziona i puntini di sospensione (...) nell’angolo in alto a destra del contenitore secondario per accedere a questa opzione.
 
 ![](../images/ui/segment-builder/include-exclude.png)
 
@@ -135,42 +151,42 @@ Dopo aver selezionato **[!UICONTROL Unwrap container]** il contenitore secondari
 
 >[!NOTE]
 >
->Quando si estrae un contenitore, prestate attenzione affinché la logica continui a soddisfare la definizione del segmento desiderata.
+>Quando scompili i contenitori, fai attenzione a che la logica continui a soddisfare la definizione del segmento desiderata.
 
 ![](../images/ui/segment-builder/unwrapped-container-inline.png)
 
 ## Unisci criteri
 
-[!DNL Experience Platform] consente di unire dati provenienti da più origini e combinarli per visualizzare una visione completa di ogni singolo cliente. Quando si uniscono questi dati, i criteri di unione sono le regole utilizzate da [!DNL Platform] per determinare in che modo i dati verranno classificati come priorità e quali dati verranno combinati per creare un profilo.
+[!DNL Experience Platform] consente di unire dati provenienti da più sorgenti e combinarli per visualizzare una visualizzazione completa di ciascuno dei singoli clienti. Quando si riuniscono questi dati, i criteri di unione sono le regole utilizzate da [!DNL Platform] per determinare in che modo i dati avranno priorità e quali saranno combinati per creare un profilo.
 
-È possibile selezionare un criterio di unione che corrisponda allo scopo di marketing di questo pubblico o utilizzare il criterio di unione predefinito fornito da [!DNL Platform]. È possibile creare più criteri di unione univoci per l&#39;organizzazione, inclusa la creazione di criteri di unione predefiniti. Per istruzioni dettagliate sulla creazione di criteri di unione per l&#39;organizzazione, vedere l&#39;esercitazione su [come utilizzare i criteri di unione utilizzando l&#39;interfaccia utente](../../profile/ui/merge-policies.md).
+Puoi selezionare un criterio di unione che corrisponda allo scopo di marketing per questo pubblico o utilizzare il criterio di unione predefinito fornito da [!DNL Platform]. È possibile creare più criteri di unione univoci per l&#39;organizzazione, inclusa la creazione di un criterio di unione predefinito. Per istruzioni dettagliate sulla creazione di criteri di unione per l&#39;organizzazione, vedere l&#39;esercitazione su [come utilizzare i criteri di unione utilizzando l&#39;interfaccia utente](../../profile/ui/merge-policies.md).
 
-Per selezionare un criterio di unione per la definizione del segmento, selezionate l&#39;icona a forma di ingranaggio nella scheda **[!UICONTROL Fields]**, quindi utilizzate il menu a discesa **[!UICONTROL Merge Policy]** per selezionare il criterio di unione che desiderate utilizzare.
+Per selezionare un criterio di unione per la definizione del segmento, seleziona l’icona a forma di ingranaggio nella scheda **[!UICONTROL Fields]** , quindi utilizza il menu a discesa **[!UICONTROL Merge Policy]** per selezionare il criterio di unione che desideri utilizzare.
 
 ![](../images/ui/segment-builder/merge-policy-selector.png)
 
-## Proprietà dei segmenti
+## Proprietà del segmento
 
-Quando si crea una definizione di segmento, la sezione **[!UICONTROL Segment Properties]** sul lato destro dell&#39;area di lavoro visualizza una stima delle dimensioni del segmento risultante, consentendo di regolare la definizione del segmento come necessario prima di creare l&#39;audience stessa.
+Quando si crea una definizione di segmento, la sezione **[!UICONTROL Segment Properties]** sul lato destro dell’area di lavoro visualizza una stima delle dimensioni del segmento risultante, che consente di regolare la definizione del segmento in base alle esigenze prima di creare il pubblico stesso.
 
-La sezione **[!UICONTROL Segment Properties]** contiene anche informazioni importanti sulla definizione del segmento, incluso nome e descrizione. I nomi delle definizioni dei segmenti vengono utilizzati per identificare il segmento tra quelli definiti dall’organizzazione e devono pertanto essere descrittivi, concisi e univoci.
+La sezione **[!UICONTROL Segment Properties]** contiene inoltre informazioni importanti sulla definizione del segmento, compreso il nome e la descrizione. I nomi delle definizioni dei segmenti vengono utilizzati per identificare il segmento tra quelli definiti dall’organizzazione e devono quindi essere descrittivi, concisi e univoci.
 
-Mentre continuate a generare la definizione del segmento, potete visualizzare un&#39;anteprima impaginata del pubblico selezionando **[!UICONTROL View Profiles]**.
+Continuando a generare la definizione del segmento, puoi visualizzare un’anteprima impaginata del pubblico selezionando **[!UICONTROL View Profiles]**.
 
 ![](../images/ui/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
->Le stime dell&#39;audience vengono generate utilizzando una dimensione di esempio dei dati di quel giorno. Se nell&#39;archivio profili sono presenti meno di 1 milione di entità, viene utilizzato l&#39;intero set di dati; per un periodo compreso tra 1 e 20 milioni di entità, sono utilizzate 1 milione di entità; e per oltre 20 milioni di entità, viene utilizzato il 5% del totale delle entità. Ulteriori informazioni sulla generazione delle stime dei segmenti sono disponibili nella sezione [generazione delle stime](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) dell&#39;esercitazione sulla creazione dei segmenti.
+>Le stime del pubblico sono generate utilizzando una dimensione del campione dei dati del giorno in questione. Se nell’archivio dei profili sono presenti meno di 1 milione di entità, viene utilizzato l’intero set di dati; tra 1 e 20 milioni di entità sono utilizzate 1 milione di entità; e per più di 20 milioni di entità viene utilizzato il 5% del totale delle entità. Ulteriori informazioni sulla generazione delle stime dei segmenti sono disponibili nella sezione [generazione delle stime](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) dell’esercitazione sulla creazione dei segmenti.
 
 ## Passaggi successivi {#next-steps}
 
-Segment Builder (Generatore di segmenti) offre un flusso di lavoro avanzato che consente di isolare i tipi di pubblico commerciabili dai dati [!DNL Real-time Customer Profile]. Dopo aver letto questa guida, è ora possibile:
+Il Generatore di segmenti offre un flusso di lavoro avanzato che consente di isolare i tipi di pubblico negoziabili dai dati [!DNL Real-time Customer Profile]. Dopo aver letto questa guida, ora dovresti essere in grado di:
 
-- Crea le definizioni dei segmenti utilizzando una combinazione di attributi, eventi e audience esistenti come elementi costitutivi.
-- Utilizzate l&#39;area di lavoro e i contenitori del generatore di regole per controllare l&#39;ordine in cui vengono eseguite le regole del segmento.
-- Visualizzare le stime del pubblico potenziale, per regolare le definizioni dei segmenti in base alle esigenze.
-- Abilita tutte le definizioni di segmento per la segmentazione pianificata.
-- Abilita le definizioni di segmento specificate per la segmentazione in streaming.
+- Crea definizioni di segmenti utilizzando una combinazione di attributi, eventi e tipi di pubblico esistenti come blocchi predefiniti.
+- Utilizza l’area di lavoro e i contenitori del generatore di regole per controllare l’ordine in cui vengono eseguite le regole del segmento.
+- Visualizza le stime del pubblico potenziale, che consentono di regolare le definizioni dei segmenti in base alle esigenze.
+- Abilita tutte le definizioni dei segmenti per la segmentazione pianificata.
+- Abilita definizioni di segmenti specifiche per la segmentazione in streaming.
 
-Per saperne di più su [!DNL Segmentation Service], continuate a leggere la documentazione e completate le vostre lezioni guardando i relativi video. Per ulteriori informazioni sulle altre parti dell&#39;interfaccia utente [!DNL Segmentation Service], leggere la [[!DNL Segmentation Service] guida utente](./overview.md)
+Per saperne di più su [!DNL Segmentation Service], continua a leggere la documentazione e completa il tuo apprendimento guardando i relativi video. Per ulteriori informazioni sulle altre parti dell&#39;interfaccia utente di [!DNL Segmentation Service], consulta la [[!DNL Segmentation Service] guida utente](./overview.md)
