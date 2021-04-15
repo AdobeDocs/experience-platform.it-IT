@@ -3,21 +3,21 @@ keywords: Experience Platform;casa;servizi intelligenti;argomenti comuni;servizi
 solution: Experience Platform, Intelligent Services
 title: Preparare i dati da utilizzare nei servizi intelligenti
 topic: Intelligent Services
-description: Affinché i servizi intelligenti possano scoprire informazioni dai dati degli eventi di marketing, i dati devono essere arricchiti e mantenuti in una struttura standard. I servizi intelligenti sfruttano gli schemi Experience Data Model (XDM) per ottenere questo risultato. In particolare, tutti i set di dati utilizzati in Intelligent Services devono essere conformi allo schema XDM (Consumer ExperienceEvent).
+description: Affinché i servizi intelligenti possano scoprire informazioni dai dati degli eventi di marketing, i dati devono essere arricchiti e mantenuti in una struttura standard. Per ottenere questo risultato, i servizi intelligenti utilizzano gli schemi Experience Data Model (XDM).
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 translation-type: tm+mt
-source-git-commit: b311a5970a121a3277bdb72f5a1285216444b339
+source-git-commit: 867c97d58f3496cb9e9e437712f81bd8929ba99f
 workflow-type: tm+mt
-source-wordcount: '2020'
-ht-degree: 1%
+source-wordcount: '2387'
+ht-degree: 0%
 
 ---
 
 # Preparare i dati da utilizzare in [!DNL Intelligent Services]
 
-Per consentire a [!DNL Intelligent Services] di scoprire informazioni provenienti dai dati degli eventi di marketing, i dati devono essere arricchiti e mantenuti in modo semantico in una struttura standard. [!DNL Intelligent Services] sfrutta gli schemi  [!DNL Experience Data Model] (XDM) per ottenere questo risultato. In particolare, tutti i set di dati utilizzati in [!DNL Intelligent Services] devono essere conformi allo schema XDM di Consumer ExperienceEvent (CEE).
+Per consentire a [!DNL Intelligent Services] di scoprire informazioni provenienti dai dati degli eventi di marketing, i dati devono essere arricchiti e mantenuti in modo semantico in una struttura standard. [!DNL Intelligent Services] sfrutta gli schemi  [!DNL Experience Data Model] (XDM) per ottenere questo risultato. In particolare, tutti i set di dati utilizzati in [!DNL Intelligent Services] devono essere conformi allo schema XDM di Consumer ExperienceEvent (CEE) o utilizzare il connettore Adobe Analytics. Inoltre, Customer AI supporta il connettore Adobe Audience Manager.
 
-Questo documento fornisce indicazioni generali sulla mappatura dei dati degli eventi di marketing da più canali a questo schema, delineando informazioni su campi importanti all&#39;interno dello schema per aiutarti a determinare come mappare efficacemente i dati alla struttura.
+Questo documento fornisce indicazioni generali sulla mappatura dei dati degli eventi di marketing da più canali allo schema CEE, delineando informazioni su campi importanti all&#39;interno dello schema per aiutarti a determinare come mappare efficacemente i dati alla struttura. Se prevedi di utilizzare i dati di Adobe Analytics, visualizza la sezione relativa alla [preparazione dei dati di Adobe Analytics](#analytics-data). Se prevedi di utilizzare i dati di Adobe Audience Manager (solo Customer AI), visualizza la sezione per [preparazione dei dati di Adobe Audience Manager](#AAM-data).
 
 ## Riepilogo del flusso di lavoro
 
@@ -31,12 +31,32 @@ Se i dati sono memorizzati al di fuori di [!DNL Experience Platform], segui i pa
 1. Utilizzando le credenziali di accesso, carica i dati nel contenitore BLOB.
 1. Lavora con Adobe Consulting Services per mappare i tuoi dati sullo [schema ExperienceEvent del consumatore](#cee-schema) e acquisirli in [!DNL Intelligent Services].
 
+### Preparazione dei dati Adobe Analytics {#analytics-data}
+
+Customer AI e Attribution AI supportano i dati di Adobe Analytics in modo nativo. Per utilizzare i dati di Adobe Analytics, segui i passaggi descritti nella documentazione per impostare un [connettore di origine di Analytics](../sources/tutorials/ui/create/adobe-applications/analytics.md).
+
+Una volta che il connettore di origine trasmette i dati in Experience Platform, puoi selezionare Adobe Analytics come origine dati seguita da un set di dati durante la configurazione dell’istanza. Tutti i campi e i mixin dello schema richiesti vengono creati automaticamente durante la configurazione della connessione. Non è necessario ETL (Extract, Transform, Load) dei set di dati nel formato CEE.
+
+>[!IMPORTANT]
+>
+>Il connettore Adobe Analytics impiega fino a quattro settimane per eseguire il backfill dei dati. Se hai recentemente configurato una connessione, devi verificare che il set di dati abbia la lunghezza minima dei dati richiesti per Cliente o Attribution AI. Controlla le sezioni dei dati storici in [Customer AI](./customer-ai/input-output.md#data-requirements) o [Attribution AI](./attribution-ai/input-output.md#data-requirements) e verifica di disporre di dati sufficienti per l&#39;obiettivo di previsione.
+
+### Preparazione dei dati Adobe Audience Manager (solo Customer AI) {#AAM-data}
+
+Customer AI supporta in modo nativo i dati di Adobe Audience Manager. Per utilizzare i dati di Audience Manager, segui i passaggi descritti nella documentazione per impostare un [connettore di origine Audience Manager](../sources/tutorials/ui/create/adobe-applications/audience-manager.md).
+
+Una volta che il connettore di origine trasmette i dati in Experience Platform, puoi selezionare Adobe Audience Manager come origine dati seguita da un set di dati durante la configurazione di Customer AI. Tutti i campi e i mixin dello schema richiesti vengono creati automaticamente durante la configurazione della connessione. Non è necessario ETL (Extract, Transform, Load) dei set di dati nel formato CEE.
+
+>[!IMPORTANT]
+>
+>Se recentemente hai impostato un connettore, devi verificare che il set di dati abbia la lunghezza minima necessaria per i dati. Controlla la sezione relativa ai dati storici nella [documentazione di input/output](./customer-ai/input-output.md) per Customer AI e verifica di disporre di dati sufficienti per l&#39;obiettivo di previsione.
+
 ### [!DNL Experience Platform] preparazione dei dati
 
-Se i dati sono già memorizzati in [!DNL Platform], segui i passaggi seguenti:
+Se i dati sono già memorizzati in [!DNL Platform] e non lo streaming tramite i connettori sorgente Adobe Analytics o Adobe Audience Manager (solo Customer AI), segui i passaggi seguenti. Se si intende lavorare con Customer AI, è comunque consigliabile comprendere lo schema CEE.
 
 1. Rivedi la struttura dello [schema di Consumer ExperienceEvent](#cee-schema) e determina se i tuoi dati possono essere mappati ai relativi campi.
-1. Contatta Adobe Consulting Services per facilitare la mappatura dei dati sullo schema e l’acquisizione in [!DNL Intelligent Services] oppure [segui i passaggi descritti in questa guida](#mapping) se desideri mappare i dati da solo.
+2. Contatta Adobe Consulting Services per facilitare la mappatura dei dati sullo schema e l’acquisizione in [!DNL Intelligent Services] oppure [segui i passaggi descritti in questa guida](#mapping) se desideri mappare i dati da solo.
 
 ## Informazioni sullo schema CEE {#cee-schema}
 
@@ -48,7 +68,7 @@ Lo schema CEE, come tutti gli schemi ExperienceEvent XDM, acquisisce lo stato de
 
 ![](./images/data-preparation/schema-expansion.gif)
 
-Come tutti gli schemi XDM, il mixin CEE è estensibile. In altre parole, è possibile aggiungere altri campi al mixin CEE e diverse varianti possono essere incluse in più schemi, se necessario.
+Come tutti gli schemi XDM, il mixin CEE è estensibile. In altre parole, è possibile aggiungere altri campi al mixin CEE e se necessario è possibile includere diverse varianti in più schemi.
 
 Un esempio completo del mixin è disponibile nell&#39; [archivio XDM pubblico](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). Inoltre, è possibile visualizzare e copiare il seguente [file JSON](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) per un esempio di come i dati possono essere strutturati in modo da rispettare lo schema CEE. Per determinare come mappare i dati personalizzati sullo schema, fai riferimento a entrambi gli esempi mentre apprendi i campi chiave descritti nella sezione seguente.
 
