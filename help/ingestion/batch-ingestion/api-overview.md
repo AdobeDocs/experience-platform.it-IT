@@ -1,78 +1,78 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;ingestione batch;inserimento batch;inserimento;guida sviluppatore;api guide;upload;ingest Parquet;ingest json;'
+keywords: Experience Platform;home;argomenti popolari;inserimento batch;inserimento batch;acquisizione;guida per sviluppatori;guida per gli sviluppatori;api;caricare;acquisire parquet;ingest json;
 solution: Experience Platform
-title: Guida API per l'inserimento batch
-topic: developer guide
-description: Questo documento fornisce una panoramica completa dell’utilizzo delle API di assimilazione batch.
+title: Guida all’API di acquisizione in batch
+topic: guida per sviluppatori
+description: Questo documento fornisce una panoramica completa dell’utilizzo delle API di acquisizione batch.
+exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 727c9dbd87bacfd0094ca29157a2d0283c530969
 workflow-type: tm+mt
-source-wordcount: '2698'
-ht-degree: 5%
+source-wordcount: '2558'
+ht-degree: 6%
 
 ---
 
+# Guida all’API per l’acquisizione in batch
 
-# Guida API per l&#39;assimilazione batch
+Questo documento fornisce una panoramica completa sull’utilizzo delle API di acquisizione batch [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
 
-Questo documento fornisce una panoramica completa sull&#39;utilizzo delle [API di caricamento batch](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
-
-L&#39;appendice di questo documento contiene informazioni sulla [formattazione dei dati da utilizzare per l&#39;assimilazione](#data-transformation-for-batch-ingestion), compresi file di dati CSV e JSON di esempio.
+L&#39;appendice di questo documento fornisce informazioni per la [formattazione dei dati da utilizzare per l&#39;acquisizione](#data-transformation-for-batch-ingestion), inclusi file di dati CSV e JSON di esempio.
 
 ## Introduzione
 
-L&#39;assimilazione dei dati fornisce un&#39;API RESTful tramite la quale è possibile eseguire operazioni CRUD di base rispetto ai tipi di oggetto supportati.
+L’acquisizione dei dati fornisce un’API RESTful tramite la quale puoi eseguire operazioni CRUD di base sui tipi di oggetto supportati.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere o avere a disposizione per eseguire correttamente le chiamate all&#39;API di ingestione batch.
+Le sezioni seguenti forniscono informazioni aggiuntive che dovrai conoscere o disporre di disponibilità per effettuare correttamente le chiamate all’API di acquisizione in batch.
 
-Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
-- [Caricamento](./overview.md) batch: Consente di assimilare i dati in Adobe Experience Platform come file batch.
-- [[!DNL Experience Data Model (XDM)] Sistema](../../xdm/home.md): Il framework standard con cui  [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza dei clienti.
-- [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola  [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+- [Acquisizione](./overview.md) batch: Consente di acquisire dati in Adobe Experience Platform come file batch.
+- [[!DNL Experience Data Model (XDM)] Sistema](../../xdm/home.md): Il framework standardizzato in base al quale  [!DNL Experience Platform] vengono organizzati i dati sulla customer experience.
+- [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola  [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 
 ### Lettura di chiamate API di esempio
 
-Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consultate la sezione relativa a [come leggere chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
+Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform] .
 
-### Raccogli valori per le intestazioni richieste
+### Raccogli i valori delle intestazioni richieste
 
-Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](https://www.adobe.com/go/platform-api-authentication-en) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
+Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come mostrato di seguito:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui verrà eseguita l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione di [panoramica sulla sandbox](../../sandboxes/home.md).
+>Per ulteriori informazioni sulle sandbox in [!DNL Platform], consulta la documentazione di panoramica [sandbox](../../sandboxes/home.md).
 
-Le richieste che contengono un payload (POST, PUT, PATCH) possono richiedere un&#39;altra intestazione `Content-Type`. I valori accettati specifici per ogni chiamata vengono forniti nei parametri della chiamata.
+Le richieste che contengono un payload (POST, PUT, PATCH) possono richiedere un’intestazione aggiuntiva `Content-Type`. I valori accettati specifici per ogni chiamata sono forniti nei parametri della chiamata .
 
 ## Tipi
 
-Durante l&#39;assimilazione dei dati, è importante comprendere il funzionamento degli schemi [!DNL Experience Data Model] (XDM). Per ulteriori informazioni sulla mappatura dei tipi di campo XDM in formati diversi, consultare la [Guida per lo sviluppatore del Registro di sistema dello schema](../../xdm/api/getting-started.md).
+Durante l’acquisizione dei dati, è importante comprendere il funzionamento degli schemi [!DNL Experience Data Model] (XDM). Per ulteriori informazioni sulla mappatura dei tipi di campo XDM su formati diversi, consulta la [Guida per gli sviluppatori del Registro di sistema dello schema](../../xdm/api/getting-started.md).
 
-Durante l&#39;assimilazione dei dati vi è una certa flessibilità: se un tipo non corrisponde a quello presente nello schema di destinazione, i dati verranno convertiti nel tipo di destinazione espresso. In caso contrario, il batch non riuscirà con un `TypeCompatibilityException`.
+È possibile acquisire i dati in modo flessibile: se un tipo non corrisponde a quello presente nello schema di destinazione, i dati verranno convertiti nel tipo di destinazione espresso. Se non è in grado di farlo, il batch non verrà completato con un valore `TypeCompatibilityException`.
 
-Ad esempio, né JSON né CSV hanno un tipo data o ora. Di conseguenza, questi valori vengono espressi utilizzando le stringhe formattate [ISO 8061](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) o Unix Time formattate in millisecondi (15312639 59000) e sono convertiti al momento dell&#39;assimilazione nel tipo XDM di destinazione.
+Ad esempio, né JSON né CSV hanno un tipo di data o ora. Di conseguenza, questi valori vengono espressi utilizzando [ISO 8061 stringhe formattate](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) o Unix Time formattato in millisecondi (15312639 59000) e vengono convertiti al momento dell’acquisizione al tipo XDM di destinazione.
 
-La tabella seguente mostra le conversioni supportate durante l’assimilazione dei dati.
+La tabella seguente mostra le conversioni supportate durante l’acquisizione dei dati.
 
-| In entrata (riga) e destinazione (col) | Stringa | Byte | Breve | Intero | Long | Doppio | Data | Data-Ora | Oggetto | Mappa |
+| In entrata (riga) rispetto a Target (col) | Stringa | Byte | Breve | Intero | Lunga | Doppio | Data | Data e ora | Oggetto | Mappa |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Stringa | X | X | X | X | X | X | X | X |  |  |
 | Byte | X | X | X | X | X | X |  |  |  |  |
 | Breve | X | X | X | X | X | X |  |  |  |  |
 | Intero | X | X | X | X | X | X |  |  |  |  |
-| Long | X | X | X | X | X | X | X | X |  |  |
+| Lunga | X | X | X | X | X | X | X | X |  |  |
 | Doppio | X | X | X | X | X | X |  |  |  |  |
 | Data |  |  |  |  |  |  | X |  |  |  |
-| Data-Ora |  |  |  |  |  |  |  | X |  |  |
+| Data e ora |  |  |  |  |  |  |  | X |  |  |
 | Oggetto |  |  |  |  |  |  |  |  | X | X |
 | Mappa |  |  |  |  |  |  |  |  | X | X |
 
@@ -80,27 +80,27 @@ La tabella seguente mostra le conversioni supportate durante l’assimilazione d
 >
 >I booleani e gli array non possono essere convertiti in altri tipi.
 
-## Limiti di inserimento
+## Vincoli di acquisizione
 
-L&#39;assimilazione dei dati del batch presenta alcuni vincoli:
+L’inserimento dei dati in batch presenta alcuni vincoli:
 - Numero massimo di file per batch: 1500
-- Dimensione massima batch: 100 GB
+- Dimensione massima del batch: 100 GB
 - Numero massimo di proprietà o campi per riga: 10000
-- Numero massimo di batch per minuto, per utente: 138
+- Numero massimo di batch al minuto per utente: 138
 
-## Caricamento di file JSON
+## Inserire file JSON
 
 >[!NOTE]
 >
->Per i file di piccole dimensioni (256 MB o inferiore) sono applicabili i seguenti passaggi. Se si verificano errori relativi al timeout del gateway o alla dimensione del corpo della richiesta, è necessario passare al caricamento di file di grandi dimensioni.
+>I seguenti passaggi sono applicabili per i file di piccole dimensioni (256 MB o inferiore). Se si verifica un timeout del gateway o si verificano errori di dimensioni del corpo della richiesta, è necessario passare al caricamento di file di grandi dimensioni.
 
 ### Crea batch
 
-In primo luogo, sarà necessario creare un batch, con JSON come formato di input. Durante la creazione del batch, dovrete fornire un ID di set di dati. Sarà inoltre necessario assicurarsi che tutti i file caricati come parte del batch siano conformi allo schema XDM collegato al set di dati fornito.
+Innanzitutto, devi creare un batch, con JSON come formato di input. Quando crei il batch, dovrai fornire un ID set di dati. Sarà inoltre necessario assicurarsi che tutti i file caricati come parte del batch siano conformi allo schema XDM collegato al set di dati fornito.
 
 >[!NOTE]
 >
->Gli esempi di seguito sono per JSON a riga singola. Per acquisire JSON con più righe, è necessario impostare il flag `isMultiLineJson`. Per ulteriori informazioni, consultare la [guida per la risoluzione dei problemi di inserimento batch](./troubleshooting.md).
+>Gli esempi seguenti sono per JSON a riga singola. Per acquisire JSON con più righe, è necessario impostare il flag `isMultiLineJson` . Per ulteriori informazioni, consulta la [guida alla risoluzione dei problemi di inserimento batch](./troubleshooting.md).
 
 **Formato API**
 
@@ -154,15 +154,15 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `{BATCH_ID}` | ID del batch appena creato. |
-| `{DATASET_ID}` | ID del set di dati di riferimento. |
+| `{DATASET_ID}` | ID del set di dati a cui si fa riferimento. |
 
-### Caricare i file
+### Caricare file
 
-Dopo aver creato un batch, è possibile utilizzare `batchId` da prima per caricare i file nel batch. Potete caricare più file nel batch.
+Dopo aver creato un batch, puoi utilizzare `batchId` da prima per caricare i file nel batch. Puoi caricare più file nel batch.
 
 >[!NOTE]
 >
->Vedere la sezione appendice per un [esempio di un file di dati JSON formattato correttamente](#data-transformation-for-batch-ingestion).
+>Vedi la sezione dell&#39;appendice per un [esempio di un file di dati JSON formattato correttamente](#data-transformation-for-batch-ingestion).
 
 **Formato API**
 
@@ -172,15 +172,15 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{BATCH_ID}` | L’ID del batch in cui desiderate eseguire il caricamento. |
+| `{BATCH_ID}` | ID del batch in cui desideri caricare. |
 | `{DATASET_ID}` | ID del set di dati di riferimento del batch. |
-| `{FILE_NAME}` | Nome del file da caricare. Questo percorso è il percorso in cui il file verrà salvato sul lato del Adobe . |
+| `{FILE_NAME}` | Nome del file da caricare. Questo percorso del file è il percorso in cui il file verrà salvato sul lato Adobe. |
 
 **Richiesta**
 
 >[!NOTE]
 >
->L&#39;API supporta il caricamento di singole parti. Verificate che il tipo di contenuto sia application/ottet-stream.
+>L’API supporta il caricamento in singola parte. Assicurati che il tipo di contenuto sia application/octet-stream.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.json \
@@ -194,7 +194,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. Questo percorso è il percorso locale del file, ad esempio `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. Questo percorso del file è il percorso del file locale, ad esempio `Users/sample-user/Downloads/sample.json`. |
 
 **Risposta**
 
@@ -202,9 +202,9 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 200 OK
 ```
 
-### Completa batch
+### Batch completo
 
-Dopo aver caricato tutte le diverse parti del file, dovrete segnalare che i dati sono stati completamente caricati e che il batch è pronto per la promozione.
+Una volta completato il caricamento di tutte le diverse parti del file, dovrai segnalare che i dati sono stati completamente caricati e che il batch è pronto per la promozione.
 
 **Formato API**
 
@@ -214,7 +214,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{BATCH_ID}` | L’ID del batch in cui desiderate eseguire il caricamento. |
+| `{BATCH_ID}` | ID del batch in cui desideri caricare. |
 
 **Richiesta**
 
@@ -232,15 +232,15 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 200 OK
 ```
 
-## Assegna file di parquet
+## Inserire file di parquet
 
 >[!NOTE]
 >
->Per i file di piccole dimensioni (256 MB o inferiore) sono applicabili i seguenti passaggi. Se si verificano errori di timeout del gateway o di dimensioni del corpo della richiesta, sarà necessario passare al caricamento di file di grandi dimensioni.
+>I seguenti passaggi sono applicabili per i file di piccole dimensioni (256 MB o inferiore). Se raggiungi un timeout del gateway o richiedi errori di dimensione del corpo, dovrai passare al caricamento di file di grandi dimensioni.
 
 ### Crea batch
 
-In primo luogo, sarà necessario creare un batch, con Parquet come formato di input. Durante la creazione del batch, dovrete fornire un ID di set di dati. Sarà inoltre necessario assicurarsi che tutti i file caricati come parte del batch siano conformi allo schema XDM collegato al set di dati fornito.
+In primo luogo, sarà necessario creare un batch, con Parquet come formato di input. Quando crei il batch, dovrai fornire un ID set di dati. Sarà inoltre necessario assicurarsi che tutti i file caricati come parte del batch siano conformi allo schema XDM collegato al set di dati fornito.
 
 **Richiesta**
 
@@ -292,12 +292,12 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `{BATCH_ID}` | ID del batch appena creato. |
-| `{DATASET_ID}` | ID del set di dati di riferimento. |
-| `{USER_ID}` | L&#39;ID dell&#39;utente che ha creato il batch. |
+| `{DATASET_ID}` | ID del set di dati a cui si fa riferimento. |
+| `{USER_ID}` | ID dell&#39;utente che ha creato il batch. |
 
-### Caricare i file
+### Caricare file
 
-Dopo aver creato un batch, è possibile utilizzare `batchId` da prima per caricare i file nel batch. Potete caricare più file nel batch.
+Dopo aver creato un batch, puoi utilizzare `batchId` da prima per caricare i file nel batch. Puoi caricare più file nel batch.
 
 **Formato API**
 
@@ -307,15 +307,15 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{BATCH_ID}` | L’ID del batch in cui desiderate eseguire il caricamento. |
+| `{BATCH_ID}` | ID del batch in cui desideri caricare. |
 | `{DATASET_ID}` | ID del set di dati di riferimento del batch. |
-| `{FILE_NAME}` | Nome del file da caricare. Questo percorso è il percorso in cui il file verrà salvato sul lato del Adobe . |
+| `{FILE_NAME}` | Nome del file da caricare. Questo percorso del file è il percorso in cui il file verrà salvato sul lato Adobe. |
 
 **Richiesta**
 
 >[!CAUTION]
 >
->Questa API supporta il caricamento di singole parti. Verificate che il tipo di contenuto sia application/ottet-stream.
+>Questa API supporta il caricamento in singola parte. Assicurati che il tipo di contenuto sia application/octet-stream.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
@@ -329,7 +329,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. Questo percorso è il percorso locale del file, ad esempio `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. Questo percorso del file è il percorso del file locale, ad esempio `Users/sample-user/Downloads/sample.json`. |
 
 **Risposta**
 
@@ -337,9 +337,9 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 200 OK
 ```
 
-### Completa batch
+### Batch completo
 
-Dopo aver caricato tutte le diverse parti del file, dovrete segnalare che i dati sono stati completamente caricati e che il batch è pronto per la promozione.
+Una volta completato il caricamento di tutte le diverse parti del file, dovrai segnalare che i dati sono stati completamente caricati e che il batch è pronto per la promozione.
 
 **Formato API**
 
@@ -349,7 +349,7 @@ POST /batches/{BATCH_ID}?action=complete
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{BATCH_ID}` | L&#39;ID del batch che si desidera segnalare è pronto per il completamento. |
+| `{BATCH_ID}` | L&#39;ID del batch da segnalare è pronto per il completamento. |
 
 **Richiesta**
 
@@ -367,15 +367,15 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
-## Caricamento di file Parquet di grandi dimensioni
+## Inserire file Parquet di grandi dimensioni
 
 >[!NOTE]
 >
->In questa sezione viene illustrato come caricare i file di dimensioni superiori a 256 MB. I file di grandi dimensioni vengono caricati in blocchi e quindi cuciti tramite un segnale API.
+>Questa sezione descrive come caricare file di dimensioni superiori a 256 MB. I file di grandi dimensioni vengono caricati in blocchi e quindi uniti tramite un segnale API.
 
 ### Crea batch
 
-In primo luogo, sarà necessario creare un batch, con Parquet come formato di input. Durante la creazione del batch, dovrete fornire un ID di set di dati. Sarà inoltre necessario assicurarsi che tutti i file caricati come parte del batch siano conformi allo schema XDM collegato al set di dati fornito.
+In primo luogo, sarà necessario creare un batch, con Parquet come formato di input. Quando crei il batch, dovrai fornire un ID set di dati. Sarà inoltre necessario assicurarsi che tutti i file caricati come parte del batch siano conformi allo schema XDM collegato al set di dati fornito.
 
 **Formato API**
 
@@ -433,10 +433,10 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `{BATCH_ID}` | ID del batch appena creato. |
-| `{DATASET_ID}` | ID del set di dati di riferimento. |
-| `{USER_ID}` | L&#39;ID dell&#39;utente che ha creato il batch. |
+| `{DATASET_ID}` | ID del set di dati a cui si fa riferimento. |
+| `{USER_ID}` | ID dell&#39;utente che ha creato il batch. |
 
-### Inizializza file grande
+### Inizializza file di grandi dimensioni
 
 Dopo aver creato il batch, sarà necessario inizializzare il file di grandi dimensioni prima di caricare i blocchi nel batch.
 
@@ -449,7 +449,7 @@ POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `{BATCH_ID}` | ID del batch appena creato. |
-| `{DATASET_ID}` | ID del set di dati di riferimento. |
+| `{DATASET_ID}` | ID del set di dati a cui si fa riferimento. |
 | `{FILE_NAME}` | Nome del file che sta per essere inizializzato. |
 
 **Richiesta**
@@ -470,7 +470,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### Caricare blocchi di file di grandi dimensioni
 
-Ora che il file è stato creato, tutti i blocchi successivi possono essere caricati effettuando ripetute richieste di PATCH, una per ogni sezione del file.
+Dopo la creazione del file, è possibile caricare tutti i blocchi successivi effettuando richieste PATCH ripetute, una per ogni sezione del file.
 
 **Formato API**
 
@@ -480,15 +480,15 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{BATCH_ID}` | L’ID del batch in cui desiderate eseguire il caricamento. |
+| `{BATCH_ID}` | ID del batch in cui desideri caricare. |
 | `{DATASET_ID}` | ID del set di dati di riferimento del batch. |
-| `{FILE_NAME}` | Nome del file da caricare. Questo percorso è il percorso in cui il file verrà salvato sul lato del Adobe . |
+| `{FILE_NAME}` | Nome del file da caricare. Questo percorso del file è il percorso in cui il file verrà salvato sul lato Adobe. |
 
 **Richiesta**
 
 >[!CAUTION]
 >
->Questa API supporta il caricamento di singole parti. Verificate che il tipo di contenuto sia application/ottet-stream.
+>Questa API supporta il caricamento in singola parte. Assicurati che il tipo di contenuto sia application/octet-stream.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
@@ -503,8 +503,8 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{CONTENT_RANGE}` | In numeri interi, l&#39;inizio e la fine dell&#39;intervallo richiesto. |
-| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. Questo percorso è il percorso locale del file, ad esempio `Users/sample-user/Downloads/sample.json`. |
+| `{CONTENT_RANGE}` | In numeri interi, l’inizio e la fine dell’intervallo richiesto. |
+| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. Questo percorso del file è il percorso del file locale, ad esempio `Users/sample-user/Downloads/sample.json`. |
 
 
 **Risposta**
@@ -513,9 +513,9 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 200 OK
 ```
 
-### Completa file di grandi dimensioni
+### File di grandi dimensioni completi
 
-Dopo aver creato un batch, è possibile utilizzare `batchId` da prima per caricare i file nel batch. Potete caricare più file nel batch.
+Dopo aver creato un batch, puoi utilizzare `batchId` da prima per caricare i file nel batch. Puoi caricare più file nel batch.
 
 **Formato API**
 
@@ -525,7 +525,7 @@ POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{BATCH_ID}` | ID del batch di cui si desidera indicare il completamento. |
+| `{BATCH_ID}` | ID del batch di cui si desidera segnalare il completamento. |
 | `{DATASET_ID}` | ID del set di dati di riferimento del batch. |
 | `{FILE_NAME}` | Nome del file di cui si desidera segnalare il completamento. |
 
@@ -545,9 +545,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 201 Created
 ```
 
-### Completa batch
+### Batch completo
 
-Dopo aver caricato tutte le diverse parti del file, dovrete segnalare che i dati sono stati completamente caricati e che il batch è pronto per la promozione.
+Una volta completato il caricamento di tutte le diverse parti del file, dovrai segnalare che i dati sono stati completamente caricati e che il batch è pronto per la promozione.
 
 **Formato API**
 
@@ -557,7 +557,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{BATCH_ID}` | L&#39;ID del batch che si desidera segnalare è completo. |
+| `{BATCH_ID}` | L&#39;ID del batch da segnalare è completo. |
 
 
 **Richiesta**
@@ -576,17 +576,17 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
-## Caricamento di file CSV
+## Inserire file CSV
 
-Per assimilare i file CSV, dovrete creare una classe, uno schema e un set di dati che supporti il CSV. Per informazioni dettagliate su come creare la classe e lo schema necessari, seguire le istruzioni fornite nell&#39; [tutorial per la creazione di schemi ad hoc](../../xdm/api/ad-hoc.md).
+Per acquisire file CSV, dovrai creare una classe, uno schema e un set di dati che supporti CSV. Per informazioni dettagliate su come creare la classe e lo schema necessari, segui le istruzioni fornite nell&#39; [tutorial per la creazione di schemi ad hoc](../../xdm/api/ad-hoc.md).
 
 >[!NOTE]
 >
->Per i file di piccole dimensioni (256 MB o inferiore) sono applicabili i seguenti passaggi. Se si verificano errori di timeout del gateway o di dimensioni del corpo della richiesta, sarà necessario passare al caricamento di file di grandi dimensioni.
+>I seguenti passaggi sono applicabili per i file di piccole dimensioni (256 MB o inferiore). Se raggiungi un timeout del gateway o richiedi errori di dimensione del corpo, dovrai passare al caricamento di file di grandi dimensioni.
 
-### Crea set di dati
+### Creare un set di dati
 
-Dopo aver seguito le istruzioni riportate sopra per creare la classe e lo schema necessari, dovrete creare un set di dati in grado di supportare il CSV.
+Dopo aver seguito le istruzioni riportate sopra per creare la classe e lo schema necessari, dovrai creare un set di dati che supporti CSV.
 
 **Formato API**
 
@@ -608,52 +608,18 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
       "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
           "contentType": "application/vnd.adobe.xed+json;version=1"
-      },
-      "fileDescription": {
-          "format": "parquet",
-          "delimiters": [","], 
-          "quotes": ["\""],
-          "escapes": ["\\"],
-          "header": true,
-          "charset": "UTF-8"
-      }      
+      }
   }'
 ```
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{TENANT_ID}` | Questo ID viene utilizzato per garantire che le risorse create siano correttamente denominate e contenute all’interno dell’organizzazione IMS. |
+| `{TENANT_ID}` | Questo ID viene utilizzato per garantire che le risorse create siano spaccate correttamente e contenute all’interno dell’organizzazione IMS. |
 | `{SCHEMA_ID}` | ID dello schema creato. |
-
-Una spiegazione di cosa la parte diversa della sezione &quot;fileDescription&quot; del corpo JSON può essere visto di seguito:
-
-```json
-{
-    "fileDescription": {
-        "format": "parquet",
-        "delimiters": [","],
-        "quotes": ["\""],
-        "escapes": ["\\"],
-        "header": true,
-        "charset": "UTF-8"
-    }
-}
-```
-
-| Parametro | Descrizione |
-| --------- | ----------- |
-| `format` | Il formato del file master, non il formato del file di input. |
-| `delimiters` | Il carattere da utilizzare come delimitatore. |
-| `quotes` | Il carattere da utilizzare per le virgolette. |
-| `escapes` | Il carattere da utilizzare come carattere di escape. |
-| `header` | Il file caricato **deve contenere intestazioni**. Poiché la convalida dello schema è stata eseguita, è necessario impostare questo valore su true. Inoltre, le intestazioni possono **not** contenere spazi. Se avete degli spazi nell&#39;intestazione, sostituiteli con caratteri di sottolineatura. |
-| `charset` | Un campo facoltativo. Altri charset supportati includono &quot;US-ASCII&quot; e &quot;ISO-8869-1&quot;. Se lasciato vuoto, per impostazione predefinita viene utilizzato UTF-8. |
-
-Il set di dati a cui si fa riferimento deve avere il blocco di descrizione del file elencato sopra e deve puntare a uno schema valido nel Registro di sistema. In caso contrario, il file non verrà masterizzato in Parquet.
 
 ### Crea batch
 
-Successivamente, sarà necessario creare un batch con CSV come formato di input. Durante la creazione del batch, dovrete fornire un ID di set di dati. Sarà inoltre necessario assicurarsi che tutti i file caricati come parte del batch siano conformi allo schema collegato al set di dati fornito.
+Successivamente, dovrai creare un batch con CSV come formato di input. Quando crei il batch, dovrai fornire un ID set di dati. Inoltre, dovrai accertarti che tutti i file caricati come parte del batch siano conformi allo schema collegato al set di dati fornito.
 
 **Formato API**
 
@@ -711,16 +677,16 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `{BATCH_ID}` | ID del batch appena creato. |
-| `{DATASET_ID}` | ID del set di dati di riferimento. |
-| `{USER_ID}` | L&#39;ID dell&#39;utente che ha creato il batch. |
+| `{DATASET_ID}` | ID del set di dati a cui si fa riferimento. |
+| `{USER_ID}` | ID dell&#39;utente che ha creato il batch. |
 
-### Caricare i file
+### Caricare file
 
-Dopo aver creato un batch, è possibile utilizzare `batchId` da prima per caricare i file nel batch. Potete caricare più file nel batch.
+Dopo aver creato un batch, puoi utilizzare `batchId` da prima per caricare i file nel batch. Puoi caricare più file nel batch.
 
 >[!NOTE]
 >
->Consultate la sezione appendice per un [esempio di file di dati CSV con formattazione corretta](#data-transformation-for-batch-ingestion).
+>Vedi la sezione dell&#39;appendice per un [esempio di un file di dati CSV formattato correttamente](#data-transformation-for-batch-ingestion).
 
 **Formato API**
 
@@ -730,15 +696,15 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{BATCH_ID}` | L’ID del batch in cui desiderate eseguire il caricamento. |
+| `{BATCH_ID}` | ID del batch in cui desideri caricare. |
 | `{DATASET_ID}` | ID del set di dati di riferimento del batch. |
-| `{FILE_NAME}` | Nome del file da caricare. Questo percorso è il percorso in cui il file verrà salvato sul lato del Adobe . |
+| `{FILE_NAME}` | Nome del file da caricare. Questo percorso del file è il percorso in cui il file verrà salvato sul lato Adobe. |
 
 **Richiesta**
 
 >[!CAUTION]
 >
->Questa API supporta il caricamento di singole parti. Verificate che il tipo di contenuto sia application/ottet-stream.
+>Questa API supporta il caricamento in singola parte. Assicurati che il tipo di contenuto sia application/octet-stream.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.csv \
@@ -752,7 +718,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. Questo percorso è il percorso locale del file, ad esempio `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. Questo percorso del file è il percorso del file locale, ad esempio `Users/sample-user/Downloads/sample.json`. |
 
 
 **Risposta**
@@ -761,9 +727,9 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 200 OK
 ```
 
-### Completa batch
+### Batch completo
 
-Dopo aver caricato tutte le diverse parti del file, dovrete segnalare che i dati sono stati completamente caricati e che il batch è pronto per la promozione.
+Una volta completato il caricamento di tutte le diverse parti del file, dovrai segnalare che i dati sono stati completamente caricati e che il batch è pronto per la promozione.
 
 **Formato API**
 
@@ -787,9 +753,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
-## Annullamento di un batch
+## Annullare un batch
 
-Durante l&#39;elaborazione del batch, può essere comunque annullato. Tuttavia, una volta completato un batch (ad esempio uno stato di esito positivo o negativo), il batch non può essere annullato.
+Durante l&#39;elaborazione del batch, può comunque essere annullato. Tuttavia, una volta finalizzato un batch (ad esempio uno stato riuscito o non riuscito), il batch non può essere annullato.
 
 **Formato API**
 
@@ -819,7 +785,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Eliminare un batch {#delete-a-batch}
 
-È possibile eliminare un batch eseguendo la seguente richiesta di POST con il parametro di query `action=REVERT` all&#39;ID del batch che si desidera eliminare. Il batch è contrassegnato come &quot;inattivo&quot; e può quindi essere utilizzato per la raccolta dei rifiuti. Il batch verrà raccolto in modo asincrono, al momento in cui verrà contrassegnato come &quot;eliminato&quot;.
+È possibile eliminare un batch eseguendo la seguente richiesta POST con il parametro di query `action=REVERT` all’ID del batch da eliminare. Il batch è contrassegnato come &quot;inattivo&quot;, rendendolo idoneo per la raccolta degli oggetti inattivi. Il batch verrà raccolto in modo asincrono, in cui verrà contrassegnato come &quot;eliminato&quot;.
 
 **Formato API**
 
@@ -847,13 +813,13 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
-## Riproduzione di un batch
+## Riproduci un batch
 
-Se desiderate sostituire un batch già assimilato, potete farlo con &quot;riproduzione batch&quot;; questa azione equivale a eliminare il vecchio batch e a assimilarne uno nuovo.
+Se si desidera sostituire un batch già acquisito, è possibile farlo con &quot;riproduzione batch&quot;: questa azione equivale all’eliminazione del batch precedente e all’acquisizione di un nuovo batch.
 
 ### Crea batch
 
-In primo luogo, sarà necessario creare un batch, con JSON come formato di input. Durante la creazione del batch, dovrete fornire un ID di set di dati. Sarà inoltre necessario assicurarsi che tutti i file caricati come parte del batch siano conformi allo schema XDM collegato al set di dati fornito. Inoltre, sarà necessario fornire i vecchi batch come riferimento nella sezione di ripetizione. Nell&#39;esempio seguente, vengono riprodotti i batch con ID `batchIdA` e `batchIdB`.
+Innanzitutto, devi creare un batch, con JSON come formato di input. Quando crei il batch, dovrai fornire un ID set di dati. Sarà inoltre necessario assicurarsi che tutti i file caricati come parte del batch siano conformi allo schema XDM collegato al set di dati fornito. Inoltre, sarà necessario fornire i vecchi batch come riferimento nella sezione di ripetizione. Nell’esempio seguente, riproduci batch con ID `batchIdA` e `batchIdB`.
 
 **Formato API**
 
@@ -921,13 +887,13 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 | Parametro | Descrizione |
 | --------- | ----------- |
 | `{BATCH_ID}` | ID del batch appena creato. |
-| `{DATASET_ID}` | ID del set di dati di riferimento. |
-| `{USER_ID}` | L&#39;ID dell&#39;utente che ha creato il batch. |
+| `{DATASET_ID}` | ID del set di dati a cui si fa riferimento. |
+| `{USER_ID}` | ID dell&#39;utente che ha creato il batch. |
 
 
-### Caricare i file
+### Caricare file
 
-Dopo aver creato un batch, è possibile utilizzare `batchId` da prima per caricare i file nel batch. Potete caricare più file nel batch.
+Dopo aver creato un batch, puoi utilizzare `batchId` da prima per caricare i file nel batch. Puoi caricare più file nel batch.
 
 **Formato API**
 
@@ -937,15 +903,15 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{BATCH_ID}` | L’ID del batch in cui desiderate eseguire il caricamento. |
+| `{BATCH_ID}` | ID del batch in cui desideri caricare. |
 | `{DATASET_ID}` | ID del set di dati di riferimento del batch. |
-| `{FILE_NAME}` | Nome del file da caricare. Questo percorso è il percorso in cui il file verrà salvato sul lato del Adobe . |
+| `{FILE_NAME}` | Nome del file da caricare. Questo percorso del file è il percorso in cui il file verrà salvato sul lato Adobe. |
 
 **Richiesta**
 
 >[!CAUTION]
 >
->Questa API supporta il caricamento di singole parti. Verificate che il tipo di contenuto sia application/ottet-stream. Non utilizzate l&#39;opzione curl -F, in quanto per impostazione predefinita la richiesta con più parti è incompatibile con l&#39;API.
+>Questa API supporta il caricamento in singola parte. Assicurati che il tipo di contenuto sia application/octet-stream. Non utilizzare l’opzione curl -F, in quanto per impostazione predefinita viene richiesta in più parti incompatibile con l’API.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.json \
@@ -959,7 +925,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. Questo percorso è il percorso locale del file, ad esempio `Users/sample-user/Downloads/sample.json`. |
+| `{FILE_PATH_AND_NAME}` | Percorso e nome completi del file che si sta tentando di caricare. Questo percorso del file è il percorso del file locale, ad esempio `Users/sample-user/Downloads/sample.json`. |
 
 **Risposta**
 
@@ -967,9 +933,9 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 200 OK
 ```
 
-### Completa batch
+### Batch completo
 
-Dopo aver caricato tutte le diverse parti del file, dovrete segnalare che i dati sono stati completamente caricati e che il batch è pronto per la promozione.
+Una volta completato il caricamento di tutte le diverse parti del file, dovrai segnalare che i dati sono stati completamente caricati e che il batch è pronto per la promozione.
 
 **Formato API**
 
@@ -999,11 +965,11 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Appendice
 
-### Trasformazione dei dati per l’assimilazione batch
+### Trasformazione dei dati per l’acquisizione batch
 
-Per assimilare un file di dati in [!DNL Experience Platform], la struttura gerarchica del file deve essere conforme allo schema [Experience Data Model (XDM)](../../xdm/home.md) associato al set di dati in fase di caricamento.
+Per acquisire un file di dati in [!DNL Experience Platform], la struttura gerarchica del file deve essere conforme allo schema [Experience Data Model (XDM)](../../xdm/home.md) associato al set di dati a cui si sta caricando.
 
-Informazioni su come mappare un file CSV per conformarsi a uno schema XDM sono disponibili nel documento [trasformazioni di esempio](../../etl/transformations.md), insieme a un esempio di file di dati JSON formattato correttamente. I file di esempio forniti nel documento sono disponibili qui:
+Le informazioni su come mappare un file CSV per conformarsi a uno schema XDM si trovano nel documento [trasformazioni di esempio](../../etl/transformations.md), insieme a un esempio di file di dati JSON formattato correttamente. I file di esempio forniti nel documento sono disponibili qui:
 
-- [CRM_profile.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
-- [CRM_profile.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
+- [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
+- [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
