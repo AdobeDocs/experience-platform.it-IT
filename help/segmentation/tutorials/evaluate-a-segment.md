@@ -5,14 +5,14 @@ title: Valutare e accedere ai risultati dei segmenti
 topic: tutorial
 type: Tutorial
 description: Segui questa esercitazione per scoprire come valutare i segmenti e accedere ai risultati dei segmenti utilizzando l’API del servizio di segmentazione di Adobe Experience Platform.
+exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 87729e4996b0b2ac26e1a0abaa80af717825f9e6
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1569'
 ht-degree: 0%
 
 ---
-
 
 # Valutare e accedere ai risultati dei segmenti
 
@@ -43,7 +43,7 @@ Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali 
 >
 >Per ulteriori informazioni sulle sandbox in [!DNL Platform], consulta la documentazione di panoramica [sandbox](../../sandboxes/home.md).
 
-Tutte le richieste POST, PUT e PATCH richiedono un&#39;intestazione aggiuntiva:
+Tutte le richieste di POST, PUT e PATCH richiedono un’intestazione aggiuntiva:
 
 - Tipo di contenuto: application/json
 
@@ -65,13 +65,13 @@ Tramite la valutazione pianificata, l’organizzazione IMS può creare una piani
 
 ### Creare una pianificazione
 
-Effettuando una richiesta POST all&#39;endpoint `/config/schedules`, puoi creare una pianificazione e includere l&#39;ora specifica in cui deve essere attivata la pianificazione.
+Effettuando una richiesta POST all’endpoint `/config/schedules`, puoi creare una pianificazione e includere l’ora specifica in cui deve essere attivata la pianificazione.
 
 Informazioni più dettagliate sull&#39;utilizzo di questo endpoint sono disponibili nella [guida degli endpoint programmati](../api/schedules.md#create)
 
 ### Abilita pianificazione
 
-Per impostazione predefinita, una pianificazione è inattiva quando viene creata a meno che la proprietà `state` non sia impostata su `active` nel corpo della richiesta di creazione (POST). Puoi abilitare una pianificazione (imposta `state` su `active`) effettuando una richiesta PATCH all&#39;endpoint `/config/schedules` e includendo l&#39;ID della pianificazione nel percorso.
+Per impostazione predefinita, una pianificazione è inattiva quando viene creata a meno che la proprietà `state` non sia impostata su `active` nel corpo della richiesta di creazione (POST). Puoi abilitare una pianificazione (imposta `state` su `active`) effettuando una richiesta PATCH all’endpoint `/config/schedules` e includendo l’ID della pianificazione nel percorso.
 
 Informazioni più dettagliate sull&#39;utilizzo di questo endpoint sono disponibili nella [guida degli endpoint programmati](../api/schedules.md#update-state)
 
@@ -89,7 +89,7 @@ La valutazione su richiesta consente di creare un processo di segmento per gener
 
 Un processo di segmento è un processo asincrono che crea un nuovo segmento di pubblico. Fa riferimento a una definizione di segmento, nonché a qualsiasi criterio di unione che controlla in che modo [!DNL Real-time Customer Profile] unisce gli attributi sovrapposti nei frammenti di profilo. Quando un processo di segmento viene completato con successo, puoi raccogliere varie informazioni sul segmento, ad esempio eventuali errori verificatisi durante l’elaborazione e le dimensioni finali del pubblico.
 
-È possibile creare un nuovo processo di segmento effettuando una richiesta POST all&#39;endpoint `/segment/jobs` nell&#39;API [!DNL Real-time Customer Profile].
+Puoi creare un nuovo processo di segmento effettuando una richiesta POST all’endpoint `/segment/jobs` nell’ API [!DNL Real-time Customer Profile] .
 
 Informazioni più dettagliate sull&#39;utilizzo di questo endpoint sono disponibili nella [guida all&#39;endpoint dei processi di segmento](../api/segment-jobs.md#create)
 
@@ -193,9 +193,7 @@ curl -X POST \
         "contentType": "application/vnd.adobe.xed+json;version=1"
     },
     "fileDescription": {
-        "persisted": true,
-        "containerFormat": "parquet",
-        "format": "parquet"
+        "persisted": true
     }
 }'
 ```
@@ -224,7 +222,7 @@ Informazioni più dettagliate sull&#39;utilizzo di questo endpoint sono disponib
 
 ### Monitorare l’avanzamento dell’esportazione
 
-Come processo di esportazione, puoi monitorarne lo stato effettuando una richiesta GET all’ endpoint `/export/jobs` e includendo `id` del processo di esportazione nel percorso. Il processo di esportazione viene completato una volta che il campo `status` restituisce il valore &quot;SUCCEEDED&quot;.
+Come processo di esportazione, puoi monitorarne lo stato effettuando una richiesta di GET all’ endpoint `/export/jobs` e includendo `id` del processo di esportazione nel percorso. Il processo di esportazione viene completato una volta che il campo `status` restituisce il valore &quot;SUCCEEDED&quot;.
 
 Informazioni più dettagliate sull&#39;utilizzo di questo endpoint sono disponibili nella [guida all&#39;endpoint dei processi di esportazione](../api/export-jobs.md#get)
 
