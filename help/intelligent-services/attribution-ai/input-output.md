@@ -6,9 +6,9 @@ topic: Dati di ingresso e uscita per Attribution AI
 description: Il documento seguente illustra i diversi input e output utilizzati nelle Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 translation-type: tm+mt
-source-git-commit: 2ef2a6431865e8ffdc2abd6cf527249e8b5ca4d0
+source-git-commit: 35b3994287d4f556fab8ee75c3bf242ff2690aef
 workflow-type: tm+mt
-source-wordcount: '2091'
+source-wordcount: '2182'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,16 @@ Il documento seguente illustra i diversi input e output utilizzati in [!DNL Attr
 
 ## [!DNL Attribution AI] dati di input
 
-[!DNL Attribution AI] utilizza  [!DNL Consumer Experience Event] i dati per calcolare i punteggi algoritmici. Per ulteriori informazioni su [!DNL Consumer Experience Event], consulta [Preparare i dati da utilizzare nella documentazione di Intelligent Services](../data-preparation.md).
+Attribution AI funziona analizzando uno dei set di dati seguenti per calcolare i punteggi algoritmici:
+
+- Set di dati di Consumer Experience Event (CEE)
+- Set di dati Adobe Analytics utilizzando il [connettore di origine Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
+
+>[!IMPORTANT]
+>
+>Il connettore di origine Adobe Analytics può richiedere fino a quattro settimane per il backfill dei dati. Se hai recentemente configurato un connettore, verifica che il set di dati abbia la lunghezza minima dei dati necessari per Attribution AI. Rivedi la sezione [Dati storici](#data-requirements) per verificare di disporre di dati sufficienti per calcolare i punteggi algoritmici accurati.
+
+Per ulteriori informazioni sulla configurazione dello schema [!DNL Consumer Experience Event] (CEE), fare riferimento alla guida [Preparazione dei dati di Intelligent Services](../data-preparation.md) . Per ulteriori informazioni sulla mappatura dei dati di Adobe Analytics, visita la documentazione [Mappature dei campi di Analytics](../../sources/connectors/adobe-applications/analytics.md) .
 
 Non tutte le colonne dello schema [!DNL Consumer Experience Event] (CEE) sono obbligatorie per Attribution AI.
 
