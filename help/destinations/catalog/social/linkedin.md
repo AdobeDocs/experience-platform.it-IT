@@ -2,14 +2,14 @@
 keywords: collegamento;collegamento;collegamento;collegamento;collegamento;destinazioni;linkedin;
 title: Connessione Linkedin Matched Audiences
 description: Attiva profili per le campagne LinkedIn per il targeting del pubblico, la personalizzazione e la soppressione, in base a e-mail con hash.
+exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '669'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL LinkedIn Matched Audiences] connection
 
@@ -17,9 +17,9 @@ ht-degree: 1%
 
 Attiva profili per le campagne [!DNL LinkedIn] per il targeting del pubblico, la personalizzazione e la soppressione, in base a e-mail con hash e ID mobili.
 
-![Destinazione LinkedIn nell’interfaccia utente Adobe Experience Platform](../../assets/catalog/social/linkedin/catalog.png)
+![Destinazione linkedIn nell’interfaccia utente Adobe Experience Platform](../../assets/catalog/social/linkedin/catalog.png)
 
-## Casi d’uso
+## Casi di utilizzo
 
 Per comprendere meglio come e quando utilizzare la destinazione [!DNL LinkedIn Matched Audiences], ecco un caso d’uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa funzione.
 
@@ -40,11 +40,11 @@ Una società di software organizza una conferenza e desidera mantenere i contatt
 
 **Esportazione segmento** : esporta tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono e altri) utilizzati nella  [!DNL LinkedIn Matched Audiences] destinazione.
 
-## Prerequisiti per l’account LinkedIn {#LinkedIn-account-prerequisites}
+## Prerequisiti per l’account linkedIn {#LinkedIn-account-prerequisites}
 
 Prima di poter utilizzare la destinazione [!UICONTROL LinkedIn Matched Audience] , assicurati che l&#39;account [!DNL LinkedIn Campaign Manager] disponga del livello di autorizzazione [!DNL Creative Manager] o superiore.
 
-Per informazioni su come modificare le [!DNL LinkedIn Campaign Manager] autorizzazioni utente, consulta [Aggiungere, modificare e rimuovere le autorizzazioni utente sugli account pubblicitari](https://www.linkedin.com/help/lms/answer/5753) nella documentazione di LinkedIn.
+Per informazioni su come modificare le autorizzazioni utente [!DNL LinkedIn Campaign Manager], consulta [Aggiungere, modificare e rimuovere le autorizzazioni utente sugli account pubblicitari](https://www.linkedin.com/help/lms/answer/5753) nella documentazione di LinkedIn.
 
 ## Requisiti di corrispondenza ID {#id-matching-requirements}
 
@@ -81,6 +81,10 @@ Se scegli di aggiungere con hash gli indirizzi e-mail, assicurati di soddisfare 
 ## Connetti alla destinazione {#connect-destination}
 
 Per connetterti alla destinazione [!DNL LinkedIn Matched Audiences], vedi [Flusso di lavoro di autenticazione delle destinazioni social network](./workflow.md).
+
+Il video seguente illustra anche i passaggi per configurare una destinazione [!DNL LinkedIn Matched Audiences] e attivare i segmenti.
+
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 ## Attiva i segmenti in [!DNL LinkedIn Matched Audiences] {#activate-segments}
 
