@@ -1,15 +1,15 @@
 ---
-keywords: connessione facebook;connessione facebook;destinazioni facebook;facebook;instagram;messenger;facebook messenger
-title: Connessione Facebook
-description: Attiva profili per le tue campagne Facebook per il targeting del pubblico, la personalizzazione e la soppressione in base a e-mail con hash.
+keywords: Connessione facebook;connessione facebook;destinazioni facebook;facebook;instagram;messenger;messenger facebook messenger
+title: Connessione facebook
+description: Attiva profili per le campagne Facebook per il targeting del pubblico, la personalizzazione e la soppressione in base a e-mail con hash.
+exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 01aed33913b5334263090aea17f75ce181717c50
 workflow-type: tm+mt
-source-wordcount: '1119'
+source-wordcount: '1134'
 ht-degree: 2%
 
 ---
-
 
 # [!DNL Facebook] connection
 
@@ -19,9 +19,9 @@ Attiva profili per le campagne [!DNL Facebook] per il targeting del pubblico, la
 
 Puoi utilizzare questa destinazione per il targeting del pubblico tra [!DNL Facebook’s] la famiglia di app supportate da [!DNL Custom Audiences], inclusi [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] e [!DNL Messenger]. La selezione dell’app su cui desideri eseguire la campagna è indicata al livello di posizionamento in [!DNL Facebook Ads Manager].
 
-![Destinazione Facebook nell’interfaccia utente Adobe Experience Platform](../../assets/catalog/social/facebook/catalog.png)
+![Destinazione facebook nell’interfaccia utente Adobe Experience Platform](../../assets/catalog/social/facebook/catalog.png)
 
-## Casi d’uso
+## Casi di utilizzo
 
 Per comprendere meglio come e quando utilizzare la destinazione [!DNL Facebook], ecco due esempi di casi d’uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa funzione.
 
@@ -57,9 +57,9 @@ Successivamente, possono utilizzare i propri dati offline, inclusi gli ID di app
 
 ## Tipo di esportazione {#export-type}
 
-**Esportazione segmento** : stai esportando tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono o altri) utilizzati nella destinazione Facebook.
+**Esportazione segmento** : esporta tutti i membri di un segmento (pubblico) con gli identificatori (nome, numero di telefono o altri) utilizzati nella destinazione Facebook.
 
-## Prerequisiti per l’account Facebook {#facebook-account-prerequisites}
+## Prerequisiti per l’account facebook {#facebook-account-prerequisites}
 
 Prima di poter inviare i segmenti di pubblico a [!DNL Facebook], assicurati di soddisfare i seguenti requisiti:
 
@@ -113,11 +113,15 @@ Se scegli di aggiungere con hash gli indirizzi e-mail, assicurati di soddisfare 
 
 ## Utilizzo di spazi dei nomi personalizzati {#custom-namespaces}
 
-Prima di poter utilizzare lo spazio dei nomi `Extern_ID` per inviare dati a [!DNL Facebook], assicurati di sincronizzare i tuoi identificatori utilizzando [!DNL Facebook Pixel]. Per informazioni dettagliate, consulta la [documentazione ufficiale](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) .
+Prima di poter utilizzare lo spazio dei nomi `Extern_ID` per inviare dati a [!DNL Facebook], assicurati di sincronizzare i tuoi identificatori utilizzando [!DNL Facebook Pixel]. Per informazioni dettagliate, consulta la [documentazione ufficiale di Facebook](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) .
 
 ## Connetti alla destinazione {#connect-destination}
 
 Per connetterti alla destinazione [!DNL Facebook], vedi [Flusso di lavoro di autenticazione delle destinazioni social network](./workflow.md).
+
+Il video seguente illustra anche i passaggi per configurare una destinazione [!DNL Facebook] e attivare i segmenti.
+
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 ## Attiva i segmenti in [!DNL Facebook] {#activate-segments}
 
@@ -125,7 +129,7 @@ Per istruzioni su come attivare i segmenti su [!DNL Facebook], consulta [Attivar
 
 Nel passaggio **[!UICONTROL Segment schedule]** , devi fornire [!UICONTROL Origin of audience] quando invii segmenti a [!DNL Facebook Custom Audiences].
 
-![Origine del pubblico su Facebook](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+![Origine del pubblico in facebook](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ## Dati esportati {#exported-data}
 
