@@ -7,9 +7,9 @@ description: Attiva i dati in Adobe Experience Platform mappando i segmenti sull
 seo-description: Attiva i dati in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
 translation-type: tm+mt
-source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '2025'
+source-wordcount: '2023'
 ht-degree: 0%
 
 ---
@@ -175,7 +175,7 @@ Nella pagina **[!UICONTROL Segment schedule]** puoi impostare la data di inizio 
 >
 >Per le destinazioni social, in questo passaggio devi selezionare l’origine del pubblico. Puoi passare al passaggio successivo solo dopo aver selezionato una delle opzioni nell’immagine seguente.
 
-![Origine del pubblico su Facebook](../assets/catalog/social/facebook/facebook-origin-audience.png)
+![Origine del pubblico in facebook](../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 >[!IMPORTANT]
 >
@@ -264,7 +264,7 @@ La presenza di questi file nel percorso di archiviazione è la conferma di un&#3
 
 Controlla il tuo account nella rispettiva destinazione pubblicitaria a cui stai attivando i tuoi dati. Se l&#39;attivazione ha avuto successo, i tipi di pubblico vengono popolati nella piattaforma pubblicitaria.
 
-## Destinazioni social network
+## Destinazioni social
 
 Per [!DNL Facebook], una corretta attivazione implica la creazione programmatica di un pubblico personalizzato [!DNL Facebook] in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/) a livello di programmazione. L’appartenenza al segmento nel pubblico verrà aggiunta e rimossa man mano che gli utenti sono qualificati o non qualificati per i segmenti attivati.
 
