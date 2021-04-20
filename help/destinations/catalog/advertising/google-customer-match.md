@@ -2,14 +2,14 @@
 keywords: Google customer match;Google customer match;Google Customer Match;Google Customer Match
 title: Connessione Customer Match di Google
 description: Google Customer Match consente di utilizzare i dati online e offline per raggiungere e coinvolgere nuovamente i clienti tra le proprietà possedute e gestite di Google, come Ricerca, Shopping, Gmail e YouTube.
+exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
 workflow-type: tm+mt
-source-wordcount: '1546'
+source-wordcount: '1574'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Google Customer Match] connection
 
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ![Destinazione Customer Match di Google nell’interfaccia utente di Adobe Experience Platform](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
-## Casi d’uso
+## Casi di utilizzo
 
 Per comprendere meglio come e quando utilizzare la destinazione [!DNL Google Customer Match], di seguito sono riportati alcuni esempi di casi d’uso che i clienti Adobe Experience Platform possono risolvere utilizzando questa funzione.
 
@@ -108,6 +108,12 @@ Prima di poter utilizzare lo spazio dei nomi `User_ID` per inviare dati a Google
 
 Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
 ![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) -->
+
+## Configurare la destinazione - Procedura dettagliata sul video {#video}
+
+Il video seguente illustra i passaggi per configurare una destinazione [!DNL Google Customer Match] e attivare i segmenti. Le fasi sono inoltre illustrate in sequenza nelle sezioni successive.
+
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 ## Connetti alla destinazione {#connect-destination}
 
