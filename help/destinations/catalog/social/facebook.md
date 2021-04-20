@@ -4,9 +4,9 @@ title: Connessione facebook
 description: Attiva profili per le campagne Facebook per il targeting del pubblico, la personalizzazione e la soppressione in base a e-mail con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 translation-type: tm+mt
-source-git-commit: 01aed33913b5334263090aea17f75ce181717c50
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1133'
 ht-degree: 2%
 
 ---
@@ -117,7 +117,7 @@ Prima di poter utilizzare lo spazio dei nomi `Extern_ID` per inviare dati a [!DN
 
 ## Connetti alla destinazione {#connect-destination}
 
-Per connetterti alla destinazione [!DNL Facebook], vedi [Flusso di lavoro di autenticazione delle destinazioni social network](./workflow.md).
+Per connetterti alla destinazione [!DNL Facebook], vedi [Flusso di lavoro di autenticazione delle destinazioni social ](./workflow.md).
 
 Il video seguente illustra anche i passaggi per configurare una destinazione [!DNL Facebook] e attivare i segmenti.
 
