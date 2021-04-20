@@ -1,14 +1,13 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 feature: Acquisizione dei dati, origini
 translation-type: tm+mt
-source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
+source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '602'
 ht-degree: 10%
 
 ---
@@ -27,6 +26,11 @@ ht-degree: 10%
          - [Mappature dei campi di Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Manager di mappature dei campi](connectors/adobe-applications/mapping/audience-manager.md)
          - [Mappature dei campi di destinazione](connectors/adobe-applications/mapping/target.md)
+         - [Mappature dei campi di Marketo Engage](connectors/adobe-applications/mapping/marketo.md)
+      - Marketo Engage {#marketo}
+         - [Connettore Marketo Engage](connectors/adobe-applications/marketo/marketo.md)
+         - [Guida all’autenticazione Marketo Engage](connectors/adobe-applications/marketo/marketo-auth.md)
+         - [spazi dei nomi e schemi di Marketo Engage](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Pubblicità {#advertising}
       - [Connettore Google AdWords](connectors/advertising/ads.md)
    - Archiviazione cloud {#cloud-storage}
@@ -159,6 +163,7 @@ ht-degree: 10%
          - [Adobe Analytics (dati di classificazione)](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Attributi del cliente](tutorials/ui/create/adobe-applications/customer-attributes.md)
+         - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - Pubblicità {#create}
          - [Google AdWords](tutorials/ui/create/advertising/ads.md)
       - Archiviazione cloud {#cloud-storage}
