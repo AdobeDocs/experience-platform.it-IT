@@ -1,22 +1,22 @@
 ---
-keywords: social network;destinazioni social network;Livefyre;facebook;Facebook
-title: Panoramica delle destinazioni social network
-description: Con le destinazioni dei social network, puoi attivare profili per le tue campagne di targeting dell'audience, personalizzazione e soppressione basate su e-mail con hash.
+keywords: social;destinazioni social;Livefyre;facebook;Facebook
+title: Panoramica delle destinazioni social
+description: Con le destinazioni social, puoi attivare profili per le tue campagne per il targeting del pubblico, la personalizzazione e la soppressione in base alle e-mail con hash.
+exl-id: c5da8dae-c1ff-45a8-b769-037d7bb7947a
 translation-type: tm+mt
-source-git-commit: db2e5d51a5ed07b91997df8a566272c86a7c1708
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '76'
+source-wordcount: '69'
 ht-degree: 1%
 
 ---
 
+# Panoramica sulle destinazioni social {#social-network-destinations}
 
-# Panoramica delle destinazioni social network {#social-network-destinations}
+Con le destinazioni social, puoi attivare profili per le tue campagne per il targeting del pubblico, la personalizzazione e la soppressione in base alle e-mail con hash.
 
-Con le destinazioni dei social network, puoi attivare profili per le tue campagne di targeting dell&#39;audience, personalizzazione e soppressione basate su e-mail con hash.
+Adobe Experience Platform supporta attualmente le seguenti destinazioni social:
 
-Adobe Experience Platform supporta attualmente le seguenti destinazioni di social network:
-
-- [Estensione  Adobe Livefyre](./adobe-livefyre.md)
+- [Estensione Adobe Livefyre](./adobe-livefyre.md)
 - [[!DNL Facebook]  Estensione](./facebook.md)
-- [Collegamento in connessione Audiences Matched](./linkedin.md)
+- [Connessione Linkedin Matched Audiences](./linkedin.md)
