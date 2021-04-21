@@ -1,13 +1,13 @@
 ---
 solution: Experience Platform
 title: Settore delle telecomunicazioni Modello dati ERD
-topic: ' - Panoramica'
+topic-legacy: overview
 description: Visualizza un diagramma di relazione tra entità (ERD) che descrive un modello di dati standardizzato per il settore delle telecomunicazioni, compatibile con Experience Data Model (XDM) per l’utilizzo in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: ffc113c0c85c76e6645fb4276c174779682f2b60
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '74'
-ht-degree: 1%
+source-wordcount: '73'
+ht-degree: 0%
 
 ---
 
