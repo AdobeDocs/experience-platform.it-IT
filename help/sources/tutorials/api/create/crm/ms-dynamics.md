@@ -1,33 +1,33 @@
 ---
-keywords: ' Experience Platform;home;argomenti più comuni;Microsoft Dynamics;microsoft dDynamics;dDynamics;Dynamics'
+keywords: Experience Platform;home;argomenti popolari;Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
-title: Creare una connessione di origine Microsoft Dynamics utilizzando l'API del servizio di flusso
-topic: overview
+title: Creare una connessione Microsoft Dynamics Source utilizzando l’API del servizio di flusso
+topic-legacy: overview
 type: Tutorial
-description: Scoprite come collegare la piattaforma a un account Microsoft Dynamics utilizzando l'API del servizio di flusso.
+description: Scopri come collegare Platform a un account Microsoft Dynamics utilizzando l’API del servizio di flusso.
+exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '739'
 ht-degree: 2%
 
 ---
 
+# Creare una connessione sorgente [!DNL Microsoft Dynamics] utilizzando l&#39;API [!DNL Flow Service]
 
-# Creare una connessione di origine [!DNL Microsoft Dynamics] utilizzando l&#39;API [!DNL Flow Service]
+[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti all&#39;interno di Adobe Experience Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui è possibile connettere tutte le sorgenti supportate.
 
-[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
-
-Questa esercitazione utilizza l&#39;API [!DNL Flow Service] per guidarti attraverso i passaggi necessari per connettere la piattaforma a un account [!DNL Microsoft Dynamics] (in seguito denominato &quot;Dynamics&quot;) tramite l&#39;API del servizio di flusso.
+Questa esercitazione utilizza l’ API [!DNL Flow Service] per seguire i passaggi necessari per collegare Platform a un account [!DNL Microsoft Dynamics] (in seguito denominato &quot;Dynamics&quot;) tramite l’API del servizio di flusso.
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../../../home.md):  Experience Platform consente l&#39;acquisizione di dati da varie fonti, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Piattaforma.
-* [Sandbox](../../../../../sandboxes/home.md):  Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [Origini](../../../../home.md): L’Experience Platform consente di acquisire dati da varie sorgenti e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform.
+* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fornisce sandbox virtuali che suddividono una singola istanza di Platform in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per connettere correttamente la piattaforma a un account Dynamics utilizzando l&#39;API [!DNL Flow Service].
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per connettere correttamente Platform a un account Dynamics utilizzando l’ API [!DNL Flow Service] .
 
 ### Raccogli credenziali richieste
 
@@ -36,40 +36,40 @@ Affinché [!DNL Flow Service] possa connettersi a [!DNL Dynamics], è necessario
 | Credenziali | Descrizione |
 | ---------- | ----------- |
 | `serviceUri` | L&#39;URL del servizio dell&#39;istanza [!DNL Dynamics]. |
-| `username` | Il nome utente per l&#39;account utente [!DNL Dynamics]. |
-| `password` | La password dell&#39;account [!DNL Dynamics]. |
-| `servicePrincipalId` | L&#39;ID client dell&#39;account [!DNL Dynamics]. Questo ID è richiesto quando si utilizzano l&#39;entità del servizio e l&#39;autenticazione basata sulle chiavi. |
-| `servicePrincipalKey` | La chiave segreta principale del servizio. Questa credenziale è necessaria quando si utilizzano l&#39;entità del servizio e l&#39;autenticazione basata sulle chiavi. |
+| `username` | Il nome utente dell&#39;account utente [!DNL Dynamics]. |
+| `password` | Password per il tuo account [!DNL Dynamics]. |
+| `servicePrincipalId` | L&#39;ID client del tuo account [!DNL Dynamics]. Questo ID è necessario quando si utilizzano l’entità del servizio e l’autenticazione basata sulle chiavi. |
+| `servicePrincipalKey` | Chiave segreta principale del servizio. Questa credenziale è necessaria quando si utilizza l’entità del servizio e l’autenticazione basata sulle chiavi. |
 
-Per ulteriori informazioni su come iniziare, visitare [this [!DNL Dynamics] document](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
+Per ulteriori informazioni su come iniziare, visita [questo [!DNL Dynamics] documento](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
 
 ### Lettura di chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consultate la sezione relativa a [come leggere chiamate API di esempio](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi del Experience Platform .
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di Experience Platform.
 
-### Raccogli valori per le intestazioni richieste
+### Raccogli i valori delle intestazioni richieste
 
-Per effettuare chiamate alle API della piattaforma, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a1/>. ](https://www.adobe.com/go/platform-api-authentication-en) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API di Experience Platform, come illustrato di seguito:
+Per effettuare chiamate alle API di Platform, devi prima completare l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come mostrato di seguito:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Tutte le risorse in  Experience Platform, incluse quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API della piattaforma richiedono un&#39;intestazione che specifica il nome della sandbox in cui avrà luogo l&#39;operazione:
+Tutte le risorse in Experience Platform, incluse quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API di Platform richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva per il tipo di supporto:
+Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione di tipo multimediale aggiuntiva:
 
 * `Content-Type: application/json`
 
 ## Creare una connessione
 
-Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. È necessaria una sola connessione per ogni account [!DNL Dynamics], in quanto può essere utilizzata per creare più flussi di dati per inserire dati diversi.
+Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. È necessaria una sola connessione per ogni account [!DNL Dynamics] in quanto può essere utilizzata per creare più flussi di dati per inserire dati diversi.
 
 ### Creare una connessione [!DNL Dynamics] utilizzando l&#39;autenticazione di base
 
-Per creare una connessione [!DNL Dynamics] utilizzando l&#39;autenticazione di base, effettuare una richiesta di POST all&#39;API [!DNL Flow Service] fornendo al contempo i valori per le connessioni `serviceUri`, `username` e `password`.
+Per creare una connessione [!DNL Dynamics] utilizzando l’autenticazione di base, invia una richiesta POST all’API [!DNL Flow Service] fornendo al contempo i valori per le connessioni `serviceUri`, `username` e `password`.
 
 **Formato API**
 
@@ -79,7 +79,7 @@ POST /connections
 
 **Richiesta**
 
-Per creare una connessione [!DNL Dynamics], è necessario fornire l&#39;ID univoco della specifica di connessione come parte della richiesta di POST. L&#39;ID della specifica di connessione per [!DNL Dynamics] è `38ad80fe-8b06-4938-94f4-d4ee80266b07`.
+Per creare una connessione [!DNL Dynamics], è necessario fornire l’ID univoco della specifica di connessione come parte della richiesta di POST. L&#39;ID della specifica di connessione per [!DNL Dynamics] è `38ad80fe-8b06-4938-94f4-d4ee80266b07`.
 
 ```shell
 curl -X POST \
@@ -109,14 +109,14 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `auth.params.serviceUri` | URI del servizio associato all&#39;istanza [!DNL Dynamics]. |
+| `auth.params.serviceUri` | URI di servizio associato all&#39;istanza [!DNL Dynamics]. |
 | `auth.params.username` | Il nome utente associato al tuo account [!DNL Dynamics]. |
 | `auth.params.password` | La password associata al tuo account [!DNL Dynamics]. |
 | `connectionSpec.id` | Specifica di connessione `id` dell&#39;account [!DNL Dynamics] recuperato nel passaggio precedente. |
 
 **Risposta**
 
-Una risposta corretta restituisce la nuova connessione creata, incluso il relativo identificatore univoco (`id`). Questo ID è necessario per esplorare il sistema CRM nel passaggio successivo.
+Una risposta corretta restituisce la nuova connessione appena creata, incluso l’identificatore univoco (`id`). Questo ID è necessario per esplorare il tuo sistema CRM nel passaggio successivo.
 
 ```json
 {
@@ -127,7 +127,7 @@ Una risposta corretta restituisce la nuova connessione creata, incluso il relati
 
 ### Creare una connessione [!DNL Dynamics] utilizzando l&#39;autenticazione basata sulle chiavi dell&#39;entità del servizio
 
-Per creare una connessione [!DNL Dynamics] utilizzando l&#39;autenticazione basata sulle chiavi dell&#39;entità del servizio, effettuare una richiesta di POST all&#39;API [!DNL Flow Service] fornendo al contempo i valori per le connessioni `serviceUri`, `servicePrincipalId` e `servicePrincipalKey`.
+Per creare una connessione [!DNL Dynamics] utilizzando l’autenticazione basata sulle chiavi dell’entità servizio, invia una richiesta POST all’API [!DNL Flow Service] fornendo al contempo i valori per le connessioni `serviceUri`, `servicePrincipalId` e `servicePrincipalKey`.
 
 **Formato API**
 
@@ -165,13 +165,13 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `auth.params.serviceUri` | URI del servizio associato all&#39;istanza [!DNL Dynamics]. |
-| `auth.params.servicePrincipalId` | L&#39;ID client dell&#39;account [!DNL Dynamics]. Questo ID è richiesto quando si utilizzano l&#39;entità del servizio e l&#39;autenticazione basata sulle chiavi. |
-| `auth.params.servicePrincipalKey` | La chiave segreta principale del servizio. Questa credenziale è necessaria quando si utilizzano l&#39;entità del servizio e l&#39;autenticazione basata sulle chiavi. |
+| `auth.params.serviceUri` | URI di servizio associato all&#39;istanza [!DNL Dynamics]. |
+| `auth.params.servicePrincipalId` | L&#39;ID client del tuo account [!DNL Dynamics]. Questo ID è necessario quando si utilizzano l’entità del servizio e l’autenticazione basata sulle chiavi. |
+| `auth.params.servicePrincipalKey` | Chiave segreta principale del servizio. Questa credenziale è necessaria quando si utilizza l’entità del servizio e l’autenticazione basata sulle chiavi. |
 
 **Risposta**
 
-Una risposta corretta restituisce la nuova connessione creata, incluso il relativo identificatore univoco (`id`). Questo ID è necessario per esplorare il sistema CRM nel passaggio successivo.
+Una risposta corretta restituisce la nuova connessione appena creata, incluso l’identificatore univoco (`id`). Questo ID è necessario per esplorare il tuo sistema CRM nel passaggio successivo.
 
 ```json
 {
@@ -182,4 +182,4 @@ Una risposta corretta restituisce la nuova connessione creata, incluso il relati
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato una connessione [!DNL Dynamics] utilizzando l&#39;API [!DNL Flow Service] e hai ottenuto il valore ID univoco della connessione. Puoi utilizzare questo ID nell&#39;esercitazione successiva per imparare a esplorare i sistemi CRM utilizzando l&#39;API del servizio di flusso](../../explore/crm.md).[
+Seguendo questa esercitazione, hai creato una connessione [!DNL Dynamics] utilizzando l&#39;API [!DNL Flow Service] e hai ottenuto il valore ID univoco della connessione. Puoi utilizzare questo ID nell&#39;esercitazione successiva quando imparerai a [esplorare i sistemi CRM utilizzando l&#39;API del servizio di flusso](../../explore/crm.md).
