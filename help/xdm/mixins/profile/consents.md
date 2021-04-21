@@ -1,16 +1,16 @@
 ---
 solution: Experience Platform
 title: Combinazione di privacy/personalizzazione/preferenze di marketing (consensi)
-topic: ' - Panoramica'
+topic-legacy: overview
 description: Questo documento fornisce una panoramica del mixin Privacy/Personalization/Marketing Preferences (Consensi).
+exl-id: ec592102-a9d3-4cac-8b94-58296a138573
 translation-type: tm+mt
-source-git-commit: 8c5ab298bad69305358ae961ebaf7836a90a0eaa
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2239'
+source-wordcount: '2238'
 ht-degree: 1%
 
 ---
-
 
 # [!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] mescolina
 
