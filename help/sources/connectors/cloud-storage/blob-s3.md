@@ -1,24 +1,24 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;Azure Blob; Amazon S3;blob;Blob;S3;s3'
+keywords: Experience Platform;home;argomenti popolari;Azure Blob;Amazon S3;blob;Blob;S3;s3
 solution: Experience Platform
-title: Panoramica di Azure Blob e  dei connettori di origine Amazon S3
-topic: overview
-description: Scoprite come collegare Azure Blob e  Amazon S3 ad Adobe Experience Platform utilizzando le API o l'interfaccia utente.
+title: Panoramica dei connettori di origine Azure Blob e Amazon S3
+topic-legacy: overview
+description: Scopri come collegare Azure Blob e Amazon S3 a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
+exl-id: 43a60d4d-1947-43c7-9a13-8e4094ca3604
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
 
 ---
 
+# Connettori BLOB di Azure e Amazon S3
 
-# Connettori Azure Blob e  Amazon S3
+Adobe Experience Platform fornisce connettività nativa per provider cloud come AWS, [!DNL Google Cloud Platform] e [!DNL Azure]. Puoi inserire i tuoi dati da questi sistemi in [!DNL Platform].
 
-Adobe Experience Platform fornisce connettività nativa per i fornitori di cloud come AWS, [!DNL Google Cloud Platform] e [!DNL Azure]. È possibile trasferire i dati da questi sistemi in [!DNL Platform].
+Le origini di archiviazione cloud possono inserire i tuoi dati in [!DNL Platform] senza dover scaricare, formattare o caricare. I dati acquisiti possono essere formattati come JSON XDM, Parquet XDM o delimitati. Ogni passaggio del processo viene integrato nel flusso di lavoro Origini . [!DNL Platform] consente di inserire dati da  [!DNL Azure Blob] e S3 in batch.
 
-Le origini di archiviazione cloud possono portare i tuoi dati in [!DNL Platform] senza bisogno di scaricare, formattare o caricare. I dati ingeriti possono essere formattati come JSON XDM, Parquet XDM o delimitati. Ogni fase del processo è integrata nel flusso di lavoro Origini. [!DNL Platform] consente di inserire dati da  [!DNL Azure Blob] e S3 in batch.
+Per ulteriori informazioni sul connettore [!DNL Azure Blob], leggere la [[!DNL Azure Blob] panoramica del connettore](./blob.md).
 
-Per ulteriori informazioni sul [!DNL Azure Blob] connettore, leggere la [[!DNL Azure Blob] panoramica del connettore](./blob.md).
-
-Per ulteriori informazioni sul [!DNL Amazon S3] connettore, leggere la [[!DNL Amazon S3] panoramica del connettore](./s3.md).
+Per ulteriori informazioni sul connettore [!DNL Amazon S3], leggere la [[!DNL Amazon S3] panoramica del connettore](./s3.md).
