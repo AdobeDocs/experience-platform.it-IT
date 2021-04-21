@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;home;argomenti popolari;autenticare;accedere
 solution: Experience Platform
-title: Autenticazione e accesso alle API di Experience Platform
-topic: tutorial
+title: API di Experience Platform di autenticazione e accesso
+topic-legacy: tutorial
 type: Tutorial
-description: 'Questo documento spiega passo-passo come accedere a un account sviluppatore di Adobe Experience Platform per effettuare chiamate alle API di Experience Platform. '
+description: Questo documento spiega passo-passo come accedere a un account sviluppatore di Adobe Experience Platform per effettuare chiamate alle API di Experience Platform.
+exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
 translation-type: tm+mt
-source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '896'
 ht-degree: 4%
 
 ---
-
 
 # Autenticazione e accesso alle API [!DNL Experience Platform]
 
@@ -29,11 +29,11 @@ Questa esercitazione descrive i passaggi dell’autenticazione tramite la creazi
 
 Per effettuare correttamente le chiamate alle API [!DNL Experience Platform] , è necessario quanto segue:
 
-* Organizzazione IMS con accesso ad Adobe Experience Platform
+* Organizzazione IMS con accesso a Adobe Experience Platform
 * Un account Adobe ID registrato
-* Amministratore Admin Console per aggiungerti come **sviluppatore** e come **utente** per un prodotto.
+* Un amministratore di Admin Console per aggiungerti come **sviluppatore** e come **utente** per un prodotto.
 
-Nelle sezioni seguenti sono descritti i passaggi necessari per creare un Adobe ID e diventare uno sviluppatore e un utente per un’organizzazione.
+Le sezioni seguenti illustrano i passaggi necessari per creare un Adobe ID e diventare uno sviluppatore e un utente per un&#39;organizzazione.
 
 ### Creare un Adobe ID
 
@@ -45,7 +45,7 @@ Se non disponi di un Adobe ID, puoi crearne uno seguendo questi passaggi:
 
 ## Diventa sviluppatore e utente per [!DNL Experience Platform] per un&#39;organizzazione
 
-Prima di creare integrazioni su Adobe I/O, il tuo account deve disporre delle autorizzazioni per gli sviluppatori per un prodotto in un’organizzazione IMS. Per informazioni dettagliate sugli account per sviluppatori nell’Admin Console, consulta il [documento di supporto](https://helpx.adobe.com/enterprise/using/manage-developers.html) per la gestione degli sviluppatori.
+Prima di creare integrazioni su Adobe I/O, il tuo account deve disporre delle autorizzazioni per gli sviluppatori per un prodotto in un’organizzazione IMS. Informazioni dettagliate sugli account sviluppatore nell&#39;Admin Console sono disponibili nel [documento di supporto](https://helpx.adobe.com/enterprise/using/manage-developers.html) per gli sviluppatori di gestione.
 
 **Accesso per sviluppatori**
 
@@ -73,9 +73,9 @@ Analogamente al processo per l’aggiunta di uno sviluppatore, l’amministrator
 
 >[!NOTE]
 >
->Se segui questo documento dalla [guida per gli sviluppatori di Privacy Service](../privacy-service/api/getting-started.md), ora puoi tornare a tale guida per generare le credenziali di accesso univoche per [!DNL Privacy Service].
+>Se segui questo documento dalla [guida per sviluppatori di Privacy Service](../privacy-service/api/getting-started.md), ora puoi tornare a tale guida per generare le credenziali di accesso univoche per [!DNL Privacy Service].
 
-Con Adobe Developer Console è necessario generare le tre credenziali di accesso seguenti:
+Utilizzando Adobe Developer Console, è necessario generare le tre credenziali di accesso seguenti:
 
 * `{IMS_ORG}`
 * `{API_KEY}`
@@ -157,7 +157,7 @@ Se la risposta è simile a quella mostrata di seguito, le credenziali sono valid
 
 ## Usa Postman per l’autenticazione JWT e le chiamate API
 
-[](https://www.postman.com/) Postmanis uno strumento popolare per lavorare con le API RESTful. Questo [post medio](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) descrive come impostare postman per eseguire automaticamente l&#39;autenticazione JWT e utilizzarlo per utilizzare le API di Adobe Experience Platform.
+[](https://www.postman.com/) Postmanis uno strumento popolare per lavorare con le API RESTful. Questo [post medio](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) descrive come impostare postman per eseguire automaticamente l&#39;autenticazione JWT e utilizzarlo per utilizzare le API Adobe Experience Platform.
 
 ## Passaggi successivi
 
