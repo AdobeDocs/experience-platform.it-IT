@@ -7,18 +7,15 @@ type: Tutorial
 description: Scopri come collegare Adobe Experience Platform a un account Hubs di Azure Event utilizzando l’API del servizio di flusso.
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d6f1521470b8dc630060584189690545c724de6b
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '550'
 ht-degree: 2%
 
 ---
 
-# Creare una connessione sorgente [!DNL Azure Event Hubs] utilizzando l&#39;API [!DNL Flow Service]
 
->[!NOTE]
->
-> Il connettore [!DNL Azure Event Hubs] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la [Panoramica delle sorgenti](../../../../home.md#terms-and-conditions) .
+# Creare una connessione sorgente [!DNL Azure Event Hubs] utilizzando l&#39;API [!DNL Flow Service]
 
 [!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti all&#39;interno di Adobe Experience Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui è possibile connettere tutte le sorgenti supportate.
 
