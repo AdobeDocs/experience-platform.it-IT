@@ -2,17 +2,17 @@
 keywords: Experience Platform;pianificare un modello;Data Science Workspace;argomenti comuni;pianificare il punteggio;programmare l'addestramento
 solution: Experience Platform
 title: Pianificare un modello nell’interfaccia utente di Data Science Workspace
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace consente di configurare le esecuzioni programmate di punteggio e formazione su un servizio di apprendimento automatico. L'automazione del processo di formazione e valutazione può contribuire a mantenere e migliorare l'efficienza del Servizio nel tempo, mantenendo al passo i pattern all'interno dei tuoi dati.
+exl-id: 51f6f328-7c63-4de1-9184-2ba526bb82e2
 translation-type: tm+mt
-source-git-commit: 8f5b7018a52d4c5860e03cec3108435ede8815f1
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
-
 
 # Pianificare un modello nell’interfaccia utente di Data Science Workspace
 
