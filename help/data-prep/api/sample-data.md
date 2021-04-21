@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;argomenti comuni;preparazione dati;guida api;dati di esempio;
 solution: Experience Platform
 title: Endpoint API per i dati di esempio
-topic: dati di esempio
+topic-legacy: sample data
 description: 'Puoi utilizzare l''endpoint `/amples` nell''API Adobe Experience Platform per recuperare, creare, aggiornare e convalidare a livello di programmazione i dati di esempio di mappatura. '
 translation-type: tm+mt
-source-git-commit: a2c966ae2401faa572cbba974ce6f572d5280a8f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '401'
 ht-degree: 4%
 
 ---
