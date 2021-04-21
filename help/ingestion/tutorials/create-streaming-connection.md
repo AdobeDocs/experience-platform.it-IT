@@ -1,23 +1,23 @@
 ---
-keywords: ' Experience Platform;home;argomenti più comuni;collegamento in streaming;creare una connessione in streaming;guida API;esercitazione;creare una connessione in streaming;assimilazione in streaming;assimilazione;'
+keywords: Experience Platform;home;argomenti popolari;connessione streaming;creare una connessione streaming;guida api;tutorial;creare una connessione streaming;acquisizione streaming;acquisizione;
 solution: Experience Platform
-title: Creare una connessione in streaming mediante l'API
-topic: tutorial
+title: Creare una connessione in streaming utilizzando l’API
+topic-legacy: tutorial
 type: Tutorial
-description: Questa esercitazione ti aiuterà a iniziare a utilizzare le API di assimilazione in streaming, parte delle API del servizio Adobe Experience Platform Data Ingestion.
+description: Questa esercitazione ti aiuterà a iniziare a utilizzare le API Streaming Ingestion, parte delle API del servizio Adobe Experience Platform Data Ingestion.
+exl-id: 23c03ace-795f-4a92-a220-c47ee86cec64
 translation-type: tm+mt
-source-git-commit: 17eb7b9cb715d7d8d0d7bce930ddec43259149cc
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '128'
 ht-degree: 0%
 
 ---
 
+# Creazione di una connessione in streaming tramite API
 
-# Creazione di una connessione in streaming mediante l&#39;API
+È necessaria la registrazione della connessione in streaming per avviare i dati in streaming su Adobe Experience Platform. Quando si registra una connessione in streaming, è necessario fornire alcuni dettagli chiave come l&#39;origine dei dati in streaming.
 
-Per avviare lo streaming dei dati su Adobe Experience Platform è necessaria la registrazione della connessione. Quando registrate una connessione in streaming, dovete fornire alcuni dettagli chiave come l&#39;origine dei dati in streaming.
+Dopo aver registrato una connessione in streaming, in qualità di produttore dei dati, avrai a disposizione un URL univoco che può essere utilizzato per lo streaming dei dati in Platform.
 
-Dopo la registrazione di una connessione di streaming, l&#39;utente, in qualità di produttore di dati, avrà un URL univoco che può essere utilizzato per lo streaming dei dati su Platform.
-
-Per informazioni su come creare una connessione in streaming autenticata, consultare la [Guida API di origine API HTTP](../../sources/tutorials/api/create/streaming/http.md).
+Per informazioni su come creare una connessione in streaming autenticata, consulta la [Guida API di origine HTTP](../../sources/tutorials/api/create/streaming/http.md).
