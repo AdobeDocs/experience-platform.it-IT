@@ -1,31 +1,31 @@
 ---
-keywords: Experience Platform ;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API
+keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API
 title: Come configurare un campo attributo calcolato
-topic: guida
-type: Documentazione
-description: Gli attributi calcolati sono funzioni utilizzate per aggregare i dati a livello di evento in attributi a livello di profilo. Per configurare un attributo calcolato, è innanzitutto necessario identificare il campo che includerà il valore dell'attributo calcolato. Questo campo può essere creato utilizzando l'API del Registro di sistema dello schema per definire uno schema e un mixin personalizzato che contenga il campo dell'attributo calcolato.
+topic-legacy: guide
+type: Documentation
+description: Gli attributi calcolati sono funzioni utilizzate per aggregare dati a livello di evento in attributi a livello di profilo. Per configurare un attributo calcolato, devi innanzitutto identificare il campo che conterrà il valore dell’attributo calcolato. Questo campo può essere creato utilizzando l’API del Registro di sistema dello schema per definire uno schema e un mixin personalizzato che conterrà il campo dell’attributo calcolato.
+exl-id: 91c5d125-8ab5-4291-a974-48dd44c68a13
 translation-type: tm+mt
-source-git-commit: 2a4fb8af8cd29254c499bfa6bfb8b316a4834526
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '713'
 ht-degree: 2%
 
 ---
 
-
-# (Alfa) Configurare un campo attributo calcolato utilizzando l&#39;API del Registro di sistema dello schema
+# (Alpha) Configura un campo di attributi calcolato utilizzando l’API del Registro di sistema dello schema.
 
 >[!IMPORTANT]
 >
 >La funzionalità dell&#39;attributo calcolato è attualmente in alfa e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
 
-Per configurare un attributo calcolato, è innanzitutto necessario identificare il campo che includerà il valore dell&#39;attributo calcolato. Questo campo può essere creato utilizzando l&#39;API del Registro di sistema dello schema per definire uno schema e un mixin personalizzato che contenga il campo dell&#39;attributo calcolato. È consigliabile creare uno schema e un mixin separati di &quot;Attributi calcolati&quot;, in cui l&#39;organizzazione può aggiungere qualsiasi attributo da utilizzare come attributi calcolati. In questo modo l&#39;organizzazione può separare in modo pulito lo schema di attributi calcolato da altri schemi utilizzati per l&#39;assimilazione dei dati.
+Per configurare un attributo calcolato, devi innanzitutto identificare il campo che conterrà il valore dell’attributo calcolato. Questo campo può essere creato utilizzando l’API del Registro di sistema dello schema per definire uno schema e un mixin personalizzato che conterrà il campo dell’attributo calcolato. È consigliabile creare uno schema e un mixin &quot;Attributi calcolati&quot; separati in cui l’organizzazione può aggiungere qualsiasi attributo da utilizzare come attributi calcolati. Questo consente alla tua organizzazione di separare in modo pulito lo schema degli attributi calcolati da altri schemi utilizzati per l’inserimento dei dati.
 
-Il flusso di lavoro in questo documento descrive come utilizzare l&#39;API del Registro di sistema dello schema per creare uno schema &quot;Attributo calcolato&quot; abilitato per il profilo che fa riferimento a un mixin personalizzato. Questo documento contiene un esempio di codice specifico per gli attributi calcolati, tuttavia, per informazioni dettagliate sulla definizione di mixin e schemi tramite l&#39;API, fare riferimento alla [Guida API del Registro di sistema dello schema](../../xdm/api/overview.md).
+Il flusso di lavoro in questo documento illustra come utilizzare l’API del Registro di sistema dello schema per creare uno schema &quot;Attributo calcolato&quot; abilitato per il profilo che fa riferimento a un mixin personalizzato. Questo documento contiene un codice di esempio specifico per gli attributi calcolati, tuttavia fai riferimento alla [Guida API del Registro di sistema dello schema](../../xdm/api/overview.md) per informazioni dettagliate sulla definizione di mixin e schemi utilizzando l&#39;API.
 
-## Creare un mixin di attributi calcolati
+## Creare un mixin attributi calcolati
 
-Per creare un mixin utilizzando l&#39;API del Registro di sistema dello schema, iniziate effettuando una richiesta di POST all&#39;endpoint `/tenant/mixins` e fornendo i dettagli del mixin nel corpo della richiesta. Per informazioni dettagliate sull&#39;utilizzo dei mixin tramite l&#39;API del Registro di sistema dello schema, fare riferimento alla guida [agli endpoint API dei mixins](../../xdm/api/mixins.md).
+Per creare un mixin utilizzando l’API del Registro di sistema dello schema, inizia effettuando una richiesta POST all’endpoint `/tenant/mixins` e fornendo i dettagli del mixin nel corpo della richiesta. Per informazioni dettagliate sull&#39;utilizzo dei mixin tramite l&#39;API del Registro di sistema dello schema, consulta la [guida all&#39;endpoint API mixins](../../xdm/api/mixins.md).
 
 **Formato API**
 
@@ -81,11 +81,11 @@ curl -X POST \
 | Proprietà | Descrizione |
 |---|---|
 | `title` | Nome del mixin che si sta creando. |
-| `meta:intendedToExtend` | La classe XDM con cui è possibile utilizzare il mixin. |
+| `meta:intendedToExtend` | Classe XDM con cui è possibile utilizzare il mixin. |
 
 **Risposta**
 
-Una richiesta eseguita correttamente restituisce lo stato di risposta HTTP 201 (Creato) con un corpo di risposta contenente i dettagli del mixin appena creato, inclusi `$id`, `meta:altIt` e `version`. Questi valori sono di sola lettura e sono assegnati dal Registro di sistema dello schema.
+Una richiesta corretta restituisce lo stato di risposta HTTP 201 (Creato) con un corpo di risposta contenente i dettagli del mixin appena creato, inclusi i valori `$id`, `meta:altIt` e `version`. Questi valori sono di sola lettura e sono assegnati dal Registro di sistema dello schema.
 
 ```json
 {
@@ -145,11 +145,11 @@ Una richiesta eseguita correttamente restituisce lo stato di risposta HTTP 201 (
 }
 ```
 
-## Aggiorna mixin con altri attributi calcolati
+## Aggiorna mixin con attributi aggiuntivi calcolati
 
-Poiché sono necessari più attributi calcolati, potete aggiornare il mixin di attributi calcolati con attributi aggiuntivi effettuando una richiesta di PUT all&#39;endpoint `/tenant/mixins`. Per questa richiesta è necessario includere l’ID univoco del mixin creato nel percorso e tutti i nuovi campi che si desidera aggiungere nel corpo.
+Poiché sono necessari più attributi calcolati, puoi aggiornare il mixin degli attributi calcolati con attributi aggiuntivi effettuando una richiesta PUT all’endpoint `/tenant/mixins` . Questa richiesta richiede di includere l’ID univoco del mixin creato nel percorso e tutti i nuovi campi che desideri aggiungere nel corpo.
 
-Per ulteriori informazioni sull&#39;aggiornamento di un mixin utilizzando l&#39;API del Registro di sistema dello schema, fare riferimento alla guida [agli endpoint API mixins](../../xdm/api/mixins.md).
+Per ulteriori informazioni sull&#39;aggiornamento di un mixin utilizzando l&#39;API del Registro di sistema dello schema, consulta la [guida all&#39;endpoint API mixins](../../xdm/api/mixins.md).
 
 **Formato API**
 
@@ -159,11 +159,11 @@ PUT /tenant/mixins/{MIXIN_ID}
 
 **Richiesta**
 
-Questa richiesta aggiunge nuovi campi relativi alle informazioni `purchaseSummary`.
+Questa richiesta aggiunge nuovi campi relativi alle informazioni `purchaseSummary` .
 
 >[!NOTE]
 >
->Quando aggiornate un mixin tramite una richiesta di PUT, il corpo deve includere tutti i campi che sarebbero necessari per creare un nuovo mixin in una richiesta di POST.
+>Quando si aggiorna un mixin tramite una richiesta PUT, il corpo deve includere tutti i campi necessari durante la creazione di un nuovo mixin in una richiesta POST.
 
 ```shell
 curl -X PUT \
@@ -312,9 +312,9 @@ Una risposta corretta restituisce i dettagli del mixin aggiornato.
 
 ## Creare uno schema abilitato per il profilo
 
-Per creare uno schema utilizzando l&#39;API del Registro di sistema dello schema, iniziare effettuando una richiesta di POST all&#39;endpoint `/tenant/schemas` e fornendo i dettagli dello schema nel corpo della richiesta. Lo schema deve essere abilitato anche per [!DNL Profile] e deve essere visualizzato come parte dello schema unione per la classe dello schema.
+Per creare uno schema utilizzando l’API del Registro di sistema dello schema, inizia effettuando una richiesta POST all’endpoint `/tenant/schemas` e fornendo i dettagli dello schema nel corpo della richiesta. Lo schema deve essere abilitato anche per [!DNL Profile] e deve essere visualizzato come parte dello schema di unione per la classe dello schema.
 
-Per ulteriori informazioni sugli schemi [!DNL Profile] e gli schemi di unione abilitati, consultare la [[!DNL Schema Registry] Guida API](../../xdm/api/overview.md) e la [documentazione di base sulla composizione dello schema](../../xdm/schema/composition.md).
+Per ulteriori informazioni sugli schemi e sugli schemi di unione abilitati per [!DNL Profile], consulta la [[!DNL Schema Registry] Guida API](../../xdm/api/overview.md) e la [documentazione di base sulla composizione dello schema](../../xdm/schema/composition.md).
 
 **Formato API**
 
@@ -324,7 +324,7 @@ POST /tenants/schemas
 
 **Richiesta**
 
-La richiesta seguente crea un nuovo schema che fa riferimento alla `computedAttributesMixin` creata in precedenza in questo documento (utilizzando il relativo ID univoco) ed è abilitata per lo schema di unione dei profili (utilizzando l&#39;array `meta:immutableTags`). Per istruzioni dettagliate su come creare uno schema utilizzando l&#39;API del Registro di sistema dello schema, fare riferimento alla [guida dell&#39;endpoint API di schema](../../xdm/api/schemas.md).
+La richiesta seguente crea un nuovo schema che fa riferimento a `computedAttributesMixin` creato in precedenza in questo documento (utilizzando il relativo ID univoco) ed è abilitato per lo schema di unione profili (utilizzando l’array `meta:immutableTags`). Per istruzioni dettagliate su come creare uno schema utilizzando l&#39;API del Registro di sistema dello schema, consulta la [guida all&#39;endpoint API degli schemi](../../xdm/api/schemas.md).
 
 ```shell
 curl -X POST \
@@ -435,4 +435,4 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload conten
 
 ## Passaggi successivi
 
-Ora che avete creato uno schema e un mixin in cui memorizzare gli attributi calcolati, potete creare l&#39;attributo calcolato utilizzando l&#39;endpoint `/computedattributes` API. Per la procedura dettagliata per la creazione di un attributo calcolato nell&#39;API, segui i passaggi forniti nella [guida dell&#39;endpoint API degli attributi calcolati](ca-api.md).
+Dopo aver creato uno schema e un mixin in cui verranno memorizzati gli attributi calcolati, puoi creare l’attributo calcolato utilizzando l’endpoint API `/computedattributes`. Per passaggi dettagliati per la creazione di un attributo calcolato nell&#39;API, segui i passaggi descritti nella [guida all&#39;endpoint API degli attributi calcolati](ca-api.md) .
