@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;argomenti popolari;raccolta dati;lancio;sdk web
 solution: Experience Platform
 title: Panoramica sulla raccolta dati
-topic: ' - Panoramica'
+topic-legacy: overview
 description: Scopri le varie tecnologie coinvolte nella raccolta di dati sulle esperienze dei clienti in Adobe Experience Platform.
+exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
 translation-type: tm+mt
-source-git-commit: 629fe68029a9f45e45d5e2d238ffff455c7d6de6
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '320'
 ht-degree: 3%
 
 ---
-
 
 # Panoramica sulla raccolta dati
 
