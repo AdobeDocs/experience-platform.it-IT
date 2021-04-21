@@ -1,25 +1,25 @@
 ---
-keywords: ;guida per sviluppatori;endpoint;Data Science Workspace;argomenti popolari;esperimenti;sensei macchina imparare api
+keywords: Experience Platform;guida per sviluppatori;endpoint;Data Science Workspace;argomenti comuni;esperimenti;api di apprendimento macchina sensei
 solution: Experience Platform
-title: Endpoint API degli esperimenti
-topic: Developer guide
-description: Lo sviluppo di modelli e la formazione si svolgono a livello di Esperimento, dove un Esperimento consiste in un'istanza MLI, in esecuzioni di formazione e in esecuzioni di punteggio.
+title: Endpoint API per gli esperimenti
+topic-legacy: Developer guide
+description: Lo sviluppo e la formazione dei modelli avviene a livello di Esperimento, dove un Esperimento è costituito da un’istanza MLI, da percorsi di formazione e da percorsi di valutazione.
+exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 4%
 
 ---
 
+# Endpoint esperimento
 
-# Punto finale degli esperimenti
-
-Lo sviluppo di modelli e la formazione si svolgono a livello di Esperimento, dove un Esperimento consiste in un&#39;istanza MLI, in esecuzioni di formazione e in esecuzioni di punteggio.
+Lo sviluppo e la formazione dei modelli avviene a livello di Esperimento, dove un Esperimento è costituito da un’istanza MLI, da percorsi di formazione e da percorsi di valutazione.
 
 ## Creare un esperimento {#create-an-experiment}
 
-Potete creare un esperimento eseguendo una richiesta di POST fornendo al contempo un nome e un ID MLInvalido nel payload della richiesta.
+Puoi creare un esperimento eseguendo una richiesta di POST fornendo un nome e un ID istanza MLI valido nel payload della richiesta.
 
 >[!NOTE]
 >
@@ -49,12 +49,12 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `name` | Il nome desiderato per l&#39;esperimento. L’esecuzione della formazione corrispondente a questo esperimento erediterà questo valore per essere visualizzato nell’interfaccia utente come nome dell’esecuzione della formazione. |
-| `mlInstanceId` | Un ID istanza MLI valido. |
+| `name` | Nome desiderato per l’esperimento. L’esecuzione di formazione corrispondente a questo esperimento erediterà questo valore da visualizzare nell’interfaccia utente come nome dell’esecuzione di formazione. |
+| `mlInstanceId` | Un ID istanza valido. |
 
 **Risposta**
 
-Una risposta corretta restituisce un payload contenente i dettagli dell&#39;esperimento appena creato, incluso il relativo identificatore univoco (`id`).
+Una risposta corretta restituisce un payload contenente i dettagli dell’esperimento appena creato, incluso l’identificatore univoco (`id`).
 
 ```json
 {
@@ -72,7 +72,7 @@ Una risposta corretta restituisce un payload contenente i dettagli dell&#39;espe
 
 ## Creazione ed esecuzione di un&#39;esecuzione di formazione o punteggio {#experiment-training-scoring}
 
-Potete creare le esecuzioni di formazione o punteggio eseguendo una richiesta di POST e fornendo un ID esperimento valido e specificando l&#39;attività di esecuzione. Le esecuzioni di punteggio possono essere create solo se l’esperimento dispone di un’esecuzione di formazione esistente e di successo. La creazione di un&#39;esecuzione di formazione corretta inizializzerà la procedura di formazione del modello e il suo completamento genererà un modello qualificato. La generazione di modelli formati sostituirà quelli esistenti in precedenza, in modo che un esperimento possa utilizzare un solo modello addestrato in qualsiasi momento.
+Puoi creare esecuzioni di formazione o di punteggio eseguendo una richiesta di POST e fornendo un ID di esperimento valido e specificando l’attività di esecuzione. Le esecuzioni di valutazione possono essere create solo se l’esperimento dispone di un’esecuzione di formazione esistente e di successo. La creazione corretta di un&#39;esecuzione di formazione inizializzerà la procedura di formazione del modello e il suo completamento con successo genererà un modello addestrato. La generazione di modelli addestrati sostituirà quelli esistenti in precedenza, in modo tale che un esperimento possa utilizzare un solo modello addestrato in un dato momento.
 
 **Formato API**
 
@@ -82,7 +82,7 @@ POST /experiments/{EXPERIMENT_ID}/runs
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{EXPERIMENT_ID}` | Un ID di esperimento valido. |
+| `{EXPERIMENT_ID}` | Un ID esperimento valido. |
 
 **Richiesta**
 
@@ -101,11 +101,11 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `{TASK}` | Specifica l&#39;attività dell&#39;esecuzione. Impostate questo valore come `train` per la formazione, `score` per il punteggio o `featurePipeline` per la pipeline delle caratteristiche. |
+| `{TASK}` | Specifica l&#39;attività dell&#39;esecuzione. Imposta questo valore come `train` per la formazione, `score` per il punteggio o `featurePipeline` per la pipeline delle funzioni. |
 
 **Risposta**
 
-Una risposta corretta restituisce un payload contenente i dettagli della nuova esecuzione creata, inclusi i parametri di formazione o punteggio predefiniti ereditati, e l&#39;ID univoco dell&#39;esecuzione (`{RUN_ID}`).
+Una risposta corretta restituisce un payload contenente i dettagli della nuova esecuzione creata, inclusi i parametri di formazione o punteggio predefiniti ereditati e l’ID univoco dell’esecuzione (`{RUN_ID}`).
 
 ```json
 {
@@ -132,9 +132,9 @@ Una risposta corretta restituisce un payload contenente i dettagli della nuova e
 }
 ```
 
-## Recuperare un elenco di esperimenti
+## Recupera un elenco di esperimenti
 
-Potete recuperare un elenco di Esperimenti appartenenti a una particolare istanza MLIneseguendo una singola richiesta e fornendo un ID MLInvalido come parametro di query. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri di query [per il recupero delle risorse](./appendix.md#query).
+È possibile recuperare un elenco di Esperimenti appartenenti a una particolare istanza MLI eseguendo una singola richiesta di GET e fornendo un ID istanza MLI valido come parametro di query. Per un elenco delle query disponibili, fai riferimento alla sezione dell&#39;appendice sui parametri di query [per il recupero delle risorse](./appendix.md#query).
 
 
 **Formato API**
@@ -146,7 +146,7 @@ GET /experiments?property=mlInstanceId=={MLINSTANCE_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{MLINSTANCE_ID}` | Fornire un ID MLInvalido per recuperare un elenco di Esperimenti appartenenti a tale istanza MLI. |
+| `{MLINSTANCE_ID}` | Specifica un ID istanza valido per recuperare un elenco di esperimenti appartenenti a tale istanza MLI. |
 
 **Richiesta**
 
@@ -198,9 +198,9 @@ Una risposta corretta restituisce un elenco di Esperimenti che condividono lo st
 }
 ```
 
-## Recuperare un esperimento specifico {#retrieve-specific}
+## Recupera un esperimento specifico {#retrieve-specific}
 
-Potete recuperare i dettagli di un esperimento specifico eseguendo una richiesta di GET che include l&#39;ID dell&#39;esperimento desiderato nel percorso della richiesta.
+Puoi recuperare i dettagli di un esperimento specifico eseguendo una richiesta di GET che include l’ID dell’esperimento desiderato nel percorso della richiesta.
 
 **Formato API**
 
@@ -210,7 +210,7 @@ GET /experiments/{EXPERIMENT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{EXPERIMENT_ID}` | Un ID di esperimento valido. |
+| `{EXPERIMENT_ID}` | Un ID esperimento valido. |
 
 **Richiesta**
 
@@ -241,13 +241,13 @@ Una risposta corretta restituisce un payload contenente i dettagli dell’esperi
 }
 ```
 
-## Recuperare un elenco di esecuzioni sperimentali
+## Recupera un elenco di esecuzioni di esperimenti
 
-Potete recuperare un elenco di sessioni di formazione o di valutazione appartenenti a un particolare esperimento eseguendo una singola richiesta di GET e fornendo un ID di esperimento valido. Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco completo dei parametri di query disponibili, consultate la sezione appendice sui parametri di query [per il recupero delle risorse](./appendix.md#query).
+Puoi recuperare un elenco di esecuzioni di formazione o di punteggio appartenenti a un particolare esperimento eseguendo una singola richiesta di GET e fornendo un ID di esperimento valido. Per facilitare il filtro dei risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco completo dei parametri di query disponibili, consulta la sezione dell’appendice sui parametri di query [per il recupero delle risorse](./appendix.md#query).
 
 >[!NOTE]
 >
->Quando si combinano più parametri di query, questi devono essere separati da e commerciale (&amp;).
+>Quando si combinano più parametri di query, devono essere separati da e commerciale (&amp;).
 
 **Formato API**
 
@@ -259,7 +259,7 @@ GET /experiments/{EXPERIMENT_ID}/runs?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAM
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{EXPERIMENT_ID}` | Un ID di esperimento valido. |
+| `{EXPERIMENT_ID}` | Un ID esperimento valido. |
 | `{QUERY_PARAMETER}` | Uno dei [parametri di query disponibili](./appendix.md#query) utilizzati per filtrare i risultati. |
 | `{VALUE}` | Il valore del parametro di query precedente. |
 
@@ -278,7 +278,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un payload contenente un elenco di esecuzioni e ciascuno dei relativi dettagli, compreso l&#39;ID di esecuzione dell&#39;esperimento (`{RUN_ID}`).
+Una risposta corretta restituisce un payload contenente un elenco di esecuzioni e ciascuno dei relativi dettagli, compreso l’ID di esecuzione dell’esperimento (`{RUN_ID}`).
 
 ```json
 {
@@ -304,13 +304,13 @@ Una risposta corretta restituisce un payload contenente un elenco di esecuzioni 
 
 ## Aggiornare un esperimento
 
-Potete aggiornare un esperimento esistente sovrascrivendone le proprietà tramite una richiesta PUT che include l&#39;ID dell&#39;esperimento di destinazione nel percorso della richiesta e fornendo un payload JSON contenente le proprietà aggiornate.
+Puoi aggiornare un esperimento esistente sovrascrivendo le sue proprietà tramite una richiesta PUT che include l’ID dell’esperimento di destinazione nel percorso della richiesta e fornendo un payload JSON contenente proprietà aggiornate.
 
 >[!TIP]
 >
->Per garantire il successo di questa richiesta di PUT, si consiglia innanzitutto di eseguire una richiesta di GET per [recuperare l&#39;esperimento per ID](#retrieve-specific). Quindi, modificate e aggiornate l&#39;oggetto JSON restituito e applicate l&#39;intero oggetto JSON modificato come payload per la richiesta di PUT.
+>Per garantire il successo di questa richiesta di PUT, ti consigliamo prima di eseguire una richiesta di GET per [recuperare l’esperimento per ID](#retrieve-specific). Quindi, modifica e aggiorna l’oggetto JSON restituito e applica l’intero oggetto JSON modificato come payload per la richiesta PUT.
 
-La seguente chiamata API di esempio aggiorna il nome di un Esperimento pur avendo inizialmente queste proprietà:
+La seguente chiamata API di esempio aggiorna il nome di un esperimento quando queste proprietà sono inizialmente disponibili:
 
 ```json
 {
@@ -332,7 +332,7 @@ PUT /experiments/{EXPERIMENT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{EXPERIMENT_ID}` | Un ID di esperimento valido. |
+| `{EXPERIMENT_ID}` | Un ID esperimento valido. |
 
 **Richiesta**
 
@@ -357,7 +357,7 @@ curl -X PUT \
 
 **Risposta**
 
-Una risposta corretta restituisce un payload contenente i dettagli aggiornati dell&#39;esperimento.
+Una risposta corretta restituisce un payload contenente i dettagli aggiornati dell’esperimento.
 
 ```json
 {
@@ -375,7 +375,7 @@ Una risposta corretta restituisce un payload contenente i dettagli aggiornati de
 
 ## Eliminare un esperimento
 
-Potete eliminare un singolo esperimento eseguendo una richiesta DELETE che include l&#39;ID dell&#39;esperimento di destinazione nel percorso della richiesta.
+Puoi eliminare un singolo esperimento eseguendo una richiesta DELETE che include l’ID dell’esperimento di destinazione nel percorso della richiesta.
 
 **Formato API**
 
@@ -385,7 +385,7 @@ DELETE /experiments/{EXPERIMENT_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{EXPERIMENT_ID}` | Un ID di esperimento valido. |
+| `{EXPERIMENT_ID}` | Un ID esperimento valido. |
 
 **Richiesta**
 
@@ -410,7 +410,7 @@ curl -X DELETE \
 
 ## Elimina esperimenti per ID istanza
 
-Potete eliminare tutti gli Esperimenti appartenenti a una particolare istanza MLI eseguendo una richiesta DELETE che include l’ID di istanza MLI come parametro di query.
+Puoi eliminare tutti gli esperimenti appartenenti a una particolare istanza MLI eseguendo una richiesta DELETE che include l’ID istanza MLI come parametro di query.
 
 **Formato API**
 
@@ -420,7 +420,7 @@ DELETE /experiments?mlInstanceId={MLINSTANCE_ID}
 
 | Parametro | Descrizione |
 | --- | ---|
-| `{MLINSTANCE_ID}` | Un ID istanza MLI valido. |
+| `{MLINSTANCE_ID}` | Un ID istanza valido. |
 
 **Richiesta**
 
