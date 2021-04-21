@@ -5,9 +5,9 @@ title: 'namespace Marketo '
 topic-legacy: overview
 description: Questo documento fornisce una panoramica dei namespace personalizzati necessari per la creazione di un connettore di origine del Marketo Engage.
 translation-type: tm+mt
-source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
+source-git-commit: bea6b35627b0e913c894c38ba9553085ba0aa26f
 workflow-type: tm+mt
-source-wordcount: '1176'
+source-wordcount: '1215'
 ht-degree: 3%
 
 ---
@@ -50,6 +50,10 @@ Lo spazio dei nomi [!DNL Marketo] viene utilizzato nell’identità principale d
 
 La tabella seguente contiene informazioni sull’impostazione sottostante per i namespace [!DNL Marketo].
 
+>[!NOTE]
+>
+>Scorri verso sinistra/destra per visualizzare il contenuto completo della tabella.
+
 | Nome visualizzato | Simbolo di identità | Tipo di identità | Tipo di emittente | Tipo di entità emittente | Esempio di ID Munchkin |
 | --- | --- | --- | --- | --- | --- |
 | `marketo_person_{MUNCHKIN_ID}` | generato automaticamente | `CROSS_DEVICE` | [!DNL Marketo] | `person` | `123-ABC-789` |
@@ -70,6 +74,10 @@ Se l’utente è iscritto all’integrazione [!DNL Salesforce], lo spazio dei no
 
 La tabella seguente contiene informazioni sull’impostazione sottostante per i namespace [!DNL Salesforce].
 
+>[!NOTE]
+>
+>Scorri verso sinistra/destra per visualizzare il contenuto completo della tabella.
+
 | Nome visualizzato | Simbolo di identità | Tipo di identità | Tipo di emittente | Tipo di entità emittente | [!DNL Salesforce] esempio di ID organizzazione sottoscrizione |
 | --- | --- | --- | --- | --- | --- |
 | `salesforce_person_{SALESFORCE_ORGANIZATION_ID}` | generato automaticamente | `CROSS_DEVICE` | [!DNL Salesforce] | `person` | `00DA0000000Hz79` |
@@ -87,6 +95,10 @@ Se sei iscritto all’integrazione [!DNL Dynamics], lo spazio dei nomi [!DNL Dyn
 
 La tabella seguente contiene informazioni sull’impostazione sottostante per i namespace [!DNL Dynamics].
 
+>[!NOTE]
+>
+>Scorri verso sinistra/destra per visualizzare il contenuto completo della tabella.
+
 | Nome visualizzato | Simbolo di identità | Tipo di identità | Tipo di emittente | Tipo di entità emittente | [!DNL Salesforce] esempio di ID organizzazione sottoscrizione |
 | --- | --- | --- | --- | --- | --- |
 | `microsoft_person_{DYNAMICS_ID}` | generato automaticamente | `CROSS_DEVICE` | [!DNL Microsoft] | `person` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
@@ -95,6 +107,8 @@ La tabella seguente contiene informazioni sull’impostazione sottostante per i 
 | `microsoft_opportunity_contact_connection_{DYNAMICS_ID}` | generato automaticamente | `B2B_OPPORTUNITY_PERSON` | [!DNL Microsoft] | `opportunity relationship` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
 | `microsoft_campaign_{DYNAMICS_ID}` | generato automaticamente | `B2B_CAMPAIGN` | [!DNL Microsoft] | `campaign` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
 | `microsoft_campaign_member_{DYNAMICS_ID}` | generato automaticamente | `B2B_CAMPAIGN_MEMBER` | [!DNL Microsoft] | `campaign member` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## [!DNL Marketo] schemi
 
