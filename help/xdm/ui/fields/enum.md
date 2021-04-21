@@ -1,19 +1,19 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati;ui;workspace;enum;field;'
+keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati;ui;workspace;enum;campo;
 solution: Experience Platform
-title: Definire campi enumerati nell’interfaccia utente
-description: Scoprite come definire un campo enum nell’interfaccia utente del Experience Platform .
-topic: user guide
+title: Definire i campi Enum nell’interfaccia utente
+description: Scopri come definire un campo enum nell’interfaccia utente di Experience Platform.
+topic-legacy: user guide
+exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 0%
 
 ---
 
-
-# Definire campi enum nell’interfaccia utente
+# Definire i campi enum nell’interfaccia utente
 
 In Experience Data Model (XDM), un campo enum rappresenta un campo vincolato a un elenco predefinito di valori accettabili.
 
@@ -21,20 +21,20 @@ Quando [definisci un nuovo campo](./overview.md#define) nell&#39;interfaccia ute
 
 ![](../../images/ui/fields/special/enum.png)
 
-Dopo aver selezionato la casella di controllo vengono visualizzati controlli aggiuntivi, che consentono di specificare i vincoli di valore per l’enum. Nella colonna **[!UICONTROL Value]** è necessario specificare il valore esatto in cui si desidera vincolare il campo. Questo valore deve essere conforme alla [!UICONTROL Type] selezionata per il campo enum. Facoltativamente è possibile fornire un **[!UICONTROL Label]** descrittivo anche per il vincolo.
+Dopo aver selezionato la casella di controllo vengono visualizzati altri controlli che consentono di specificare i vincoli di valore per l’enum. Nella colonna **[!UICONTROL Value]** è necessario specificare il valore esatto in cui si desidera vincolare il campo. Questo valore deve essere conforme al valore [!UICONTROL Type] selezionato per il campo enum. Facoltativamente, puoi anche fornire un **[!UICONTROL Label]** descrittivo per il vincolo.
 
-Per aggiungere vincoli aggiuntivi all&#39;enum, selezionare **[!UICONTROL Add row]**.
+Per aggiungere vincoli aggiuntivi all’enum, seleziona **[!UICONTROL Add row]**.
 
 ![](../../images/ui/fields/special/enum-add-row.png)
 
-Continuate ad aggiungere i vincoli desiderati e le etichette facoltative all’enum. Al termine, selezionare **[!UICONTROL Apply]** per applicare le modifiche allo schema.
+Continua ad aggiungere all’enum i vincoli desiderati e le etichette facoltative. Al termine, seleziona **[!UICONTROL Apply]** per applicare le modifiche allo schema.
 
 ![](../../images/ui/fields/special/enum-configured.png)
 
-Il quadro si aggiorna per riflettere le modifiche. Quando si esplora questo schema in futuro, è possibile visualizzare e modificare i vincoli per il campo enum all&#39;interno della barra a destra.
+L’area di lavoro viene aggiornata per riflettere le modifiche. Quando esplori questo schema in futuro, puoi visualizzare e modificare i vincoli per il campo enum nella barra a destra.
 
 ![](../../images/ui/fields/special/enum-applied.png)
 
 ## Passaggi successivi
 
-Questa guida descrive come definire un campo enum nell’interfaccia utente. Per informazioni su come definire altri tipi di campi XDM nell&#39; [!DNL Schema Editor], vedere la panoramica relativa alla [definizione dei campi nell&#39;interfaccia utente](./overview.md#special).
+Questa guida illustra come definire un campo enum nell’interfaccia utente di . Per informazioni su come definire altri tipi di campi XDM nell’ [!DNL Schema Editor], consulta la panoramica relativa alla [definizione dei campi nell’interfaccia utente](./overview.md#special) .
