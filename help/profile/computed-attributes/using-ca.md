@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform ;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API
-title: Utilizzo di attributi calcolati nella piattaforma
-topic: guida
-type: Documentazione
-description: 'Gli attributi calcolati sono funzioni che consentono di aggregare i dati a livello di evento in attributi a livello di profilo. Queste funzioni vengono calcolate automaticamente in modo che possano essere utilizzate tra segmentazione, attivazione e personalizzazione. '
+keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API
+title: Utilizzo degli attributi calcolati in Platform
+topic-legacy: guide
+type: Documentation
+description: 'Gli attributi calcolati sono funzioni per aggregare dati a livello di evento in attributi a livello di profilo. Queste funzioni vengono calcolate automaticamente in modo che possano essere utilizzate tra segmentazione, attivazione e personalizzazione. '
 translation-type: tm+mt
-source-git-commit: 08eff53f107549fab0f167a6c206b632f3c8c183
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '73'
-ht-degree: 13%
+source-wordcount: '71'
+ht-degree: 12%
 
 ---
 
 
-# (Alfa) Utilizzo di attributi calcolati in  Experience Platform
+# (Alfa) Utilizzo di attributi calcolati nell’Experience Platform
 
 >[!IMPORTANT]
 >
