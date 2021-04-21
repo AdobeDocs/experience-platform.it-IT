@@ -1,17 +1,17 @@
 ---
-keywords: ' Experience Platform;guida introduttiva;content ai;commerce ai;content ai;commerce ai;keyword estrazione;Keyword Extract'
+keywords: Experience Platform;guida introduttiva;ai contenuti;ai e-commerce;contenuto e ai-commerce;estrazione di parole chiave;estrazione di parole chiave
 solution: Experience Platform, Intelligent Services
-title: Estrazione delle parole chiave nell'API AI di contenuto e Commerce
-topic: Developer guide
-description: Quando viene fornito un documento di testo, il servizio di estrazione delle parole chiave estrae automaticamente le parole chiave o le frasi chiave che meglio descrivono l’oggetto del documento. Per estrarre le parole chiave, viene utilizzata una combinazione di algoritmi di riconoscimento delle entità con nome (NER) e di estrazione delle parole chiave senza supervisione.
+title: Estrazione di parole chiave nell’API Content and Commerce AI
+topic-legacy: Developer guide
+description: Il servizio di estrazione delle parole chiave, quando viene fornito un documento di testo, estrae automaticamente parole chiave o frasi chiave che descrivono al meglio l’oggetto del documento. Per estrarre le parole chiave, viene utilizzata una combinazione di algoritmi di riconoscimento delle entità con nome (NER) e di estrazione delle parole chiave senza supervisione.
+exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
 translation-type: tm+mt
-source-git-commit: d10c00694b0a3b2a9da693bd59615b533cfae468
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 3%
 
 ---
-
 
 # Estrazione di parole chiave
 
@@ -19,27 +19,27 @@ ht-degree: 3%
 >
 >[!DNL Content and Commerce AI] è in versione beta. La documentazione è soggetta a modifiche.
 
-Quando viene fornito un documento di testo, il servizio di estrazione delle parole chiave estrae automaticamente le parole chiave o le frasi chiave che meglio descrivono l’oggetto del documento. Per estrarre le parole chiave, viene utilizzata una combinazione di algoritmi di riconoscimento delle entità con nome (NER) e di estrazione delle parole chiave senza supervisione.
+Il servizio di estrazione delle parole chiave, quando viene fornito un documento di testo, estrae automaticamente parole chiave o frasi chiave che descrivono al meglio l’oggetto del documento. Per estrarre le parole chiave, viene utilizzata una combinazione di algoritmi di riconoscimento delle entità con nome (NER) e di estrazione delle parole chiave senza supervisione.
 
 Le entità denominate riconosciute da [!DNL Content and Commerce AI] sono elencate nella tabella seguente:
 
 | Nome entità | Descrizione |
 | --- | --- |
-| PERSONA | Persone, comprese quelle fittizie. |
+| PERSONA | Persone, incluse le finzioni. |
 | NORP | Nazionalità o gruppi religiosi o politici. |
 | GPE | Paesi, città e stati. |
-| LOC | Località non GPE, catene montuose, corpi idrici. |
+| LOC | Posizioni non GPE, catene montuose, corpi idrici. |
 | FAC | Edifici, aeroporti, autostrade, ponti, ecc. |
-| ORG | Società, agenzie, istituzioni, ecc. |
+| ORO | Aziende, agenzie, istituzioni, ecc. |
 | PRODOTTO | Oggetti, veicoli, alimenti, ecc. (Non servizi.) |
-| EVENTO | Uragani denominati, battaglie, guerre, eventi sportivi, ecc. |
+| EVENTO | Uragani, battaglie, guerre, eventi sportivi, ecc. |
 | WORK_OF_ART | Titoli di libri, canzoni, ecc. |
 | LEGGE | Documenti denominati creati in leggi. |
-| LINGUA | Qualsiasi lingua con nome. |
+| LINGUA | Qualsiasi linguaggio denominato. |
 
 >[!NOTE]
 >
->Se si prevede di elaborare i PDF, passare alle istruzioni per l&#39;estrazione delle parole chiave [PDF](#pdf-extraction) all&#39;interno del documento. Inoltre, il supporto per tipi di file aggiuntivi come docx, ppt, amd xml è impostato per essere rilasciato in una data successiva.
+>Se prevedi di elaborare i PDF, passa alle istruzioni per [estrazione parola chiave PDF](#pdf-extraction) all’interno di questo documento. Inoltre, il supporto per tipi di file aggiuntivi come docx, ppt, amd xml è impostato per essere rilasciato in una data successiva.
 
 **Formato API**
 
@@ -49,7 +49,7 @@ POST /services/v1/predict
 
 **Richiesta**
 
-La richiesta seguente estrae le parole chiave da un documento in base ai parametri di input forniti nel payload.
+La richiesta seguente estrae parole chiave da un documento in base ai parametri di input forniti nel payload.
 
 JSON semplificato del file di input:
 
@@ -74,11 +74,11 @@ JSON semplificato del file di input:
 }
 ```
 
-Per ulteriori informazioni sui parametri di input, vedere la tabella sotto il payload di esempio.
+Per ulteriori informazioni sui parametri di input mostrati, consulta la tabella riportata di seguito.
 
 >[!CAUTION]
 >
->`analyzer_id` determina quale  [!DNL Sensei Content Framework] viene utilizzato. Prima di effettuare la richiesta, verificare di disporre del `analyzer_id` corretto. Per il servizio di estrazione delle parole chiave, l&#39;ID `analyzer_id` è:
+>`analyzer_id` determina quale  [!DNL Sensei Content Framework] viene utilizzato. Prima di effettuare la richiesta, controlla di disporre del `analyzer_id` corretto. Per il servizio di estrazione delle parole chiave, l’ `analyzer_id` ID è:
 >`Feature:cintel-ner:Service-1a35aefb0f0f4dc0a3b5262370ebc709`
 
 ```SHELL
@@ -114,21 +114,21 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Proprietà | Descrizione | Obbligatorio |
 | --- | --- | --- |
-| `analyzer_id` | L&#39;ID del servizio [!DNL Sensei] in cui viene distribuita la richiesta. Questo ID determina quale delle [!DNL Sensei Content Frameworks] vengono utilizzate. Per i servizi personalizzati, contattate il team di Content and Commerce AI per configurare un ID personalizzato. | Sì |
-| `application-id` | ID dell’applicazione creata. | Sì |
-| `data` | Un array che contiene un oggetto JSON con ogni oggetto nell&#39;array che rappresenta un documento. Tutti i parametri passati come parte di questa matrice sostituiscono i parametri globali specificati all&#39;esterno dell&#39;array `data`. Qualsiasi proprietà rimanente descritta in questa tabella può essere ignorata dall&#39;interno di `data`. | Sì |
+| `analyzer_id` | L’ ID del servizio [!DNL Sensei] in cui viene distribuita la richiesta. Questo ID determina quale dei [!DNL Sensei Content Frameworks] viene utilizzato. Per i servizi personalizzati, contatta il team Content and Commerce AI per configurare un ID personalizzato. | Sì |
+| `application-id` | ID dell&#39;applicazione creata. | Sì |
+| `data` | Matrice che contiene un oggetto JSON con ogni oggetto della matrice che rappresenta un documento. Tutti i parametri passati come parte di questa matrice sostituiscono i parametri globali specificati all&#39;esterno della matrice `data`. Qualsiasi proprietà rimanente descritta in questa tabella può essere ignorata da `data`. | Sì |
 | `language` | Lingua del testo di input. Il valore predefinito è `en`. | No |
-| `content-type` | Utilizzato per indicare se l&#39;input fa parte del corpo della richiesta o un URL firmato per un bucket S3. Il valore predefinito di questa proprietà è `inline`. | Sì |
+| `content-type` | Utilizzato per indicare se l’input fa parte del corpo della richiesta o di un url firmato per un bucket S3. Il valore predefinito di questa proprietà è `inline`. | Sì |
 | `encoding` | Formato di codifica del testo di input. Può essere `utf-8` o `utf-16`. Il valore predefinito di questa proprietà è `utf-8`. | No |
-| `threshold` | La soglia di punteggio (da 0 a 1) al di sopra della quale devono essere restituiti i risultati. Utilizzare il valore `0` per restituire tutti i risultati. Il valore predefinito di questa proprietà è `0`. | No |
-| `top-N` | Il numero di risultati da restituire (non può essere un numero intero negativo). Utilizzare il valore `0` per restituire tutti i risultati. Se utilizzato insieme a `threshold`, il numero di risultati restituiti è minore di uno dei due set di limiti. Il valore predefinito di questa proprietà è `0`. | No |
-| `custom` | Eventuali parametri personalizzati da passare. Questa proprietà richiede un oggetto JSON valido per funzionare. Per ulteriori informazioni sui parametri personalizzati, vedere l&#39; [appendice](#appendix). | No |
-| `content-id` | L&#39;ID univoco per l&#39;elemento dati restituito nella risposta. Se non viene passato, viene assegnato un ID generato automaticamente. | No |
-| `content` | Contenuto utilizzato dal servizio di estrazione delle parole chiave. Il contenuto può essere in formato non elaborato (tipo di contenuto &quot;inline&quot;). <br> Se il contenuto è un file su S3 (tipo di contenuto s3-bucket), passare l&#39;URL firmato. Quando il contenuto fa parte del corpo della richiesta, l&#39;elenco degli elementi dati deve avere un solo oggetto. Se vengono passati più oggetti, viene elaborato solo il primo oggetto. | Sì |
+| `threshold` | La soglia del punteggio (da 0 a 1) al di sopra della quale devono essere restituiti i risultati. Utilizza il valore `0` per restituire tutti i risultati. Il valore predefinito di questa proprietà è `0`. | No |
+| `top-N` | Il numero di risultati da restituire (non può essere un numero intero negativo). Utilizza il valore `0` per restituire tutti i risultati. Se utilizzato insieme a `threshold`, il numero di risultati restituiti è il minore tra i due set di limiti. Il valore predefinito di questa proprietà è `0`. | No |
+| `custom` | Eventuali parametri personalizzati da trasmettere. Questa proprietà richiede un oggetto JSON valido per funzionare. Per ulteriori informazioni sui parametri personalizzati, consulta l’ [appendice](#appendix) . | No |
+| `content-id` | L&#39;ID univoco dell&#39;elemento dati restituito nella risposta. Se non viene passato, viene assegnato un ID generato automaticamente. | No |
+| `content` | Il contenuto utilizzato dal servizio di estrazione delle parole chiave. Il contenuto può essere di tipo non elaborato (&quot;inline&quot;). <br> Se il contenuto è un file sul tipo di contenuto S3 (&#39;s3-bucket&#39;), passa l’url firmato. Quando il contenuto fa parte del corpo della richiesta, l’elenco degli elementi dati deve avere un solo oggetto. Se vengono passati più oggetti, viene elaborato solo il primo oggetto. | Sì |
 
 **Risposta**
 
-Una risposta corretta restituisce un oggetto JSON contenente le parole chiave estratte nell&#39;array `response`.
+Una risposta corretta restituisce un oggetto JSON contenente le parole chiave estratte nella matrice `response`.
 
 ```json
 {
@@ -230,7 +230,7 @@ Una risposta corretta restituisce un oggetto JSON contenente le parole chiave es
 
 ## Estrazione di parole chiave PDF {#pdf-extraction}
 
-Il servizio di estrazione delle parole chiave supporta i file PDF, tuttavia, è necessario utilizzare un nuovo AnalyzerID per i file PDF e modificare il tipo di documento in PDF. Per ulteriori informazioni, consulta l’esempio di seguito.
+Il servizio di estrazione delle parole chiave supporta i PDF, tuttavia è necessario utilizzare un nuovo AnalyzerID per i file PDF e modificare il tipo di documento in PDF. Per ulteriori informazioni, consulta l’esempio seguente.
 
 **Formato API**
 
@@ -240,11 +240,11 @@ POST /services/v1/predict
 
 **Richiesta**
 
-La richiesta seguente estrae le parole chiave da un documento PDF in base ai parametri di input forniti nel payload.
+La richiesta seguente estrae parole chiave da un documento PDF in base ai parametri di input forniti nel payload.
 
 >[!CAUTION]
 >
->`analyzer_id` determina quale  [!DNL Sensei Content Framework] viene utilizzato. Prima di effettuare la richiesta, verificare di disporre del `analyzer_id` corretto. Per l&#39;estrazione di parole chiave PDF, l&#39;ID `analyzer_id` è:
+>`analyzer_id` determina quale  [!DNL Sensei Content Framework] viene utilizzato. Prima di effettuare la richiesta, controlla di disporre del `analyzer_id` corretto. Per l’estrazione di parole chiave PDF, l’ `analyzer_id` ID è:
 >`Feature:cintel-ner:Service-7a87cb57461345c280b62470920bcdc5`
 
 ```SHELL
@@ -276,21 +276,21 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Proprietà | Descrizione | Obbligatorio |
 | --- | --- | --- |
-| `analyzer_id` | L&#39;ID del servizio [!DNL Sensei] in cui viene distribuita la richiesta. Questo ID determina quale delle [!DNL Sensei Content Frameworks] vengono utilizzate. Per i servizi personalizzati, contattate il team di Content and Commerce AI per configurare un ID personalizzato. | Sì |
-| `application-id` | ID dell’applicazione creata. | Sì |
-| `data` | Un array che contiene un oggetto JSON con ogni oggetto nell&#39;array che rappresenta un documento. Tutti i parametri passati come parte di questa matrice sostituiscono i parametri globali specificati all&#39;esterno dell&#39;array `data`. Qualsiasi proprietà rimanente descritta in questa tabella può essere ignorata dall&#39;interno di `data`. | Sì |
+| `analyzer_id` | L’ ID del servizio [!DNL Sensei] in cui viene distribuita la richiesta. Questo ID determina quale dei [!DNL Sensei Content Frameworks] viene utilizzato. Per i servizi personalizzati, contatta il team Content and Commerce AI per configurare un ID personalizzato. | Sì |
+| `application-id` | ID dell&#39;applicazione creata. | Sì |
+| `data` | Matrice che contiene un oggetto JSON con ogni oggetto della matrice che rappresenta un documento. Tutti i parametri passati come parte di questa matrice sostituiscono i parametri globali specificati all&#39;esterno della matrice `data`. Qualsiasi proprietà rimanente descritta in questa tabella può essere ignorata da `data`. | Sì |
 | `language` | Lingua di input. Il valore predefinito è `en` (inglese). | No |
 | `content-type` | Utilizzato per indicare il tipo di contenuto in input. Deve essere impostato su `file`. | Sì |
-| `encoding` | Formato di codifica dell&#39;input. Deve essere impostato su `pdf`. Altri tipi di codifica verranno impostati in modo da essere supportati in un secondo momento. | Sì |
-| `threshold` | La soglia di punteggio (da 0 a 1) al di sopra della quale devono essere restituiti i risultati. Utilizzare il valore `0` per restituire tutti i risultati. Il valore predefinito di questa proprietà è `0`. | No |
-| `top-N` | Il numero di risultati da restituire (non può essere un numero intero negativo). Utilizzare il valore `0` per restituire tutti i risultati. Se utilizzato insieme a `threshold`, il numero di risultati restituiti è minore di uno dei due set di limiti. Il valore predefinito di questa proprietà è `0`. | No |
-| `custom` | Eventuali parametri personalizzati da passare. Questa proprietà richiede un oggetto JSON valido per funzionare. Per ulteriori informazioni sui parametri personalizzati, vedere l&#39; [appendice](#appendix). | No |
-| `content-id` | L&#39;ID univoco per l&#39;elemento dati restituito nella risposta. Se non viene passato, viene assegnato un ID generato automaticamente. | No |
+| `encoding` | Formato di codifica dell’input. Deve essere impostato su `pdf`. In un secondo momento saranno supportati altri tipi di codifica. | Sì |
+| `threshold` | La soglia del punteggio (da 0 a 1) al di sopra della quale devono essere restituiti i risultati. Utilizza il valore `0` per restituire tutti i risultati. Il valore predefinito di questa proprietà è `0`. | No |
+| `top-N` | Il numero di risultati da restituire (non può essere un numero intero negativo). Utilizza il valore `0` per restituire tutti i risultati. Se utilizzato insieme a `threshold`, il numero di risultati restituiti è il minore tra i due set di limiti. Il valore predefinito di questa proprietà è `0`. | No |
+| `custom` | Eventuali parametri personalizzati da trasmettere. Questa proprietà richiede un oggetto JSON valido per funzionare. Per ulteriori informazioni sui parametri personalizzati, consulta l’ [appendice](#appendix) . | No |
+| `content-id` | L&#39;ID univoco dell&#39;elemento dati restituito nella risposta. Se non viene passato, viene assegnato un ID generato automaticamente. | No |
 | `content` | Deve essere impostato su `file`. | Sì |
 
 **Risposta**
 
-Una risposta corretta restituisce un oggetto JSON contenente le parole chiave estratte nell&#39;array `response`.
+Una risposta corretta restituisce un oggetto JSON contenente le parole chiave estratte nella matrice `response`.
 
 ```json
 {
@@ -359,13 +359,13 @@ Una risposta corretta restituisce un oggetto JSON contenente le parole chiave es
 }
 ```
 
-Per ulteriori informazioni e un esempio sull’utilizzo dell’estrazione PDF contenente istruzioni su come impostare, implementare e integrare con il servizio cloud AEM. Visita il repository [CCAI PDF Extract github](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-ccai-pdfextract).
+Per ulteriori informazioni e un esempio sull’utilizzo dell’estrazione PDF contenente istruzioni su come impostare, distribuire e integrare con il servizio cloud AEM. Visita l’ [archivio github del processo di estrazione PDF CCAI](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-ccai-pdfextract).
 
 ## Appendice {#appendix}
 
-La tabella seguente contiene i parametri disponibili che è possibile utilizzare dall&#39;interno di `custom`.
+La tabella seguente contiene i parametri disponibili che possono essere utilizzati da `custom`.
 
 | Nome | Descrizione | Obbligatorio |
 | --- | --- | --- |
-| `min-n` | Il numero minimo di parole necessarie nelle parole chiave. | No |
-| `entity-types` | Tipi di entità da restituire. Vedere la tabella di riconoscimento delle entità con nome all&#39;inizio del documento. | No |
+| `min-n` | Numero minimo di parole necessarie nelle parole chiave. | No |
+| `entity-types` | Tipi di entità da restituire. Vedere la tabella di riconoscimento entità denominata all&#39;inizio del documento. | No |
