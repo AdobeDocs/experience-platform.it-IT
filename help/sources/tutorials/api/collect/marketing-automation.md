@@ -2,14 +2,14 @@
 keywords: Experience Platform;home;argomenti popolari;sistema di automazione del marketing;Raccogliere dati di automazione del marketing
 solution: Experience Platform
 title: Raccolta di dati di automazione marketing tramite connettori di origine e API
-topic: ' - Panoramica'
+topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati da un sistema di automazione del marketing e inserirli in Adobe Experience Platform utilizzando i connettori sorgente e le API.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1578'
+source-wordcount: '1576'
 ht-degree: 1%
 
 ---
