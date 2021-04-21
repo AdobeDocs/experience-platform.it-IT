@@ -1,32 +1,32 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;ETL;etl;integrazioni etl;integrazioni ETL'
+keywords: Experience Platform;home;argomenti popolari;ETL;etl;integrazioni etl;integrazioni ETL
 solution: Experience Platform
 title: Sviluppo di integrazioni ETL per Adobe Experience Platform
-topic: overview
-description: La guida all'integrazione ETL descrive i passaggi generali per la creazione di connettori sicuri e ad alte prestazioni per  Experience Platform e l'assimilazione dei dati nella piattaforma.
+topic-legacy: overview
+description: La guida all’integrazione ETL descrive i passaggi generali per la creazione di connettori sicuri e ad alte prestazioni, ad Experience Platform per l’acquisizione di dati in Platform.
+exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '4143'
 ht-degree: 0%
 
 ---
 
-
 # Sviluppo di integrazioni ETL per Adobe Experience Platform
 
-La guida all&#39;integrazione ETL descrive i passaggi generali per la creazione di connettori sicuri e ad alte prestazioni per [!DNL Experience Platform] e l&#39;assimilazione dei dati in [!DNL Platform].
+La guida all’integrazione ETL descrive i passaggi generali per la creazione di connettori sicuri e ad alte prestazioni per [!DNL Experience Platform] e l’acquisizione di dati in [!DNL Platform].
 
 
 - [[!DNL Catalog]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
 - [[!DNL Data Access]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)
 - [[!DNL Data Ingestion]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
-- [Autenticazione e autorizzazione per  API di Experience Platform](https://www.adobe.com/go/platform-api-authentication-en)
+- [Autenticazione e autorizzazione per le API di Experience Platform](https://www.adobe.com/go/platform-api-authentication-en)
 - [[!DNL Schema Registry]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
 
-Questa guida include anche chiamate API di esempio da utilizzare per la progettazione di un connettore ETL, con collegamenti alla documentazione che delinea ogni servizio [!DNL Experience Platform] e l&#39;utilizzo della relativa API, in modo più dettagliato.
+Questa guida include anche esempi di chiamate API da utilizzare durante la progettazione di un connettore ETL, con collegamenti alla documentazione che descrive ogni servizio [!DNL Experience Platform] e l’utilizzo della relativa API, in modo più dettagliato.
 
-Un&#39;integrazione di esempio è disponibile su [!DNL GitHub] tramite il [codice di riferimento dell&#39;integrazione dell&#39;ecosistema ETL](https://github.com/adobe/acp-data-services-etl-reference) nella [!DNL Apache] versione della licenza 2.0.
+Un esempio di integrazione è disponibile su [!DNL GitHub] tramite il [Codice di riferimento per l’integrazione dell’ecosistema ETL](https://github.com/adobe/acp-data-services-etl-reference) nella [!DNL Apache] licenza versione 2.0.
 
 ## Flusso di lavoro
 
@@ -36,80 +36,80 @@ Il seguente diagramma del flusso di lavoro fornisce una panoramica di alto livel
 
 ## Componenti Adobe Experience Platform
 
-Nelle integrazioni di connettori ETL sono coinvolti più componenti  Experience Platform. L&#39;elenco seguente illustra diversi componenti e funzionalità chiave:
+Sono presenti più componenti di Experience Platform coinvolti nelle integrazioni dei connettori ETL. L’elenco seguente illustra diversi componenti e funzionalità chiave:
 
-- **Adobe  Identity Management System (IMS)**  - Fornisce il framework per l&#39;autenticazione  servizi Adobe.
-- **Organizzazione**  IMS - Un&#39;entità aziendale che può possedere o concedere in licenza prodotti e servizi e consentire l&#39;accesso ai propri membri.
-- **Utente**  IMS - Membri di un&#39;organizzazione IMS. La relazione tra l’organizzazione e l’utente è molto complessa.
+- **Adobe Identity Management System (IMS)**  - Fornisce il framework per l’autenticazione ai servizi di Adobe.
+- **Organizzazione IMS** : un&#39;entità aziendale che può possedere o concedere in licenza prodotti e servizi e consentire l&#39;accesso ai propri membri.
+- **Utente IMS** : membri di un’organizzazione IMS. La relazione tra l&#39;organizzazione e l&#39;utente è molto importante per molti.
 - **[!DNL Sandbox]** - Una partizione virtuale una singola  [!DNL Platform] istanza, per aiutare a sviluppare e sviluppare applicazioni di esperienza digitale.
-- **Rilevamento**  dati - Registra i metadati dei dati acquisiti e trasformati in  [!DNL Experience Platform].
+- **Individuazione dati**  - Registra i metadati dei dati acquisiti e trasformati in  [!DNL Experience Platform].
 - **[!DNL Data Access]** - Fornisce agli utenti un&#39;interfaccia per accedere ai loro dati in  [!DNL Experience Platform].
-- **[!DNL Data Ingestion]** - Invia i dati  [!DNL Experience Platform] con  [!DNL Data Ingestion] le API.
+- **[!DNL Data Ingestion]** - Invia dati a  [!DNL Experience Platform] con  [!DNL Data Ingestion] API.
 - **[!DNL Schema Registry]** - Definisce e memorizza lo schema che descrive la struttura dei dati da utilizzare in  [!DNL Experience Platform].
 
 ## Guida introduttiva alle API [!DNL Experience Platform]
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere o avere a disposizione per eseguire correttamente le chiamate alle [!DNL Experience Platform] API.
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere o disporre di disponibili per effettuare correttamente le chiamate alle API [!DNL Experience Platform] .
 
 ### Lettura di chiamate API di esempio
 
-Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consultate la sezione relativa a [come leggere chiamate API di esempio](../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
+Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform] .
 
-### Raccogli valori per le intestazioni richieste
+### Raccogli i valori delle intestazioni richieste
 
-Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](https://www.adobe.com/go/platform-api-authentication-en) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
+Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come mostrato di seguito:
 
 - Autorizzazione: Portatore `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui verrà eseguita l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
-- x-sandbox-name: `{SANDBOX_NAME}`
-
->[!NOTE]
->
->Per ulteriori informazioni sulle sandbox in [!DNL Platform], consultate la documentazione di [panoramica sulla sandbox](../sandboxes/home.md).
-
-Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva:
-
-- Content-Type: application/json
-
-## Flusso generale utente
-
-Per iniziare, un utente ETL accede all&#39; [!DNL Experience Platform] interfaccia utente e crea dei set di dati per l&#39;inserimento utilizzando un connettore standard o un connettore di servizio push.
-
-Nell&#39;interfaccia utente, l&#39;utente crea il set di dati di output selezionando uno schema di set di dati. La scelta dello schema dipende dal tipo di dati (record o serie temporali) che viene assimilato in [!DNL Platform]. Facendo clic sulla scheda Schemi all&#39;interno dell&#39;interfaccia utente, l&#39;utente potrà visualizzare tutti gli schemi disponibili, incluso il tipo di comportamento supportato dallo schema.
-
-Nello strumento ETL, l&#39;utente inizierà a progettare le trasformazioni di mappatura dopo aver configurato la connessione appropriata (utilizzando le proprie credenziali). Si presume che lo strumento ETL abbia già installato [!DNL Experience Platform] connettori (processo non definito in questa Guida all&#39;integrazione).
-
-Mockups per uno strumento e un flusso di lavoro ETL di esempio sono stati forniti nel [flusso di lavoro ETL](./workflow.md). Anche se gli strumenti ETL possono essere diversi in termini di formato, la maggior parte presenta funzionalità simili.
+- nome x-sandbox: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Il connettore ETL deve specificare un filtro di marca temporale che contrassegna la data in cui inserire i dati e l&#39;offset (cioè la finestra per la quale leggere i dati). Lo strumento ETL dovrebbe supportare l’utilizzo di questi due parametri in questa o in un’altra interfaccia utente pertinente. In Adobe Experience Platform, questi parametri saranno mappati sulle date disponibili (se presenti) o sulla data acquisita presente nell&#39;oggetto batch del dataset.
+>Per ulteriori informazioni sulle sandbox in [!DNL Platform], consulta la documentazione di panoramica [sandbox](../sandboxes/home.md).
+
+Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione aggiuntiva:
+
+- Tipo di contenuto: application/json
+
+## Flusso utente generale
+
+Per iniziare, un utente ETL accede all’ interfaccia utente [!DNL Experience Platform] e crea set di dati per l’acquisizione utilizzando un connettore standard o un connettore di servizio push.
+
+Nell’interfaccia utente, l’utente crea il set di dati di output selezionando uno schema di set di dati. La scelta dello schema dipende dal tipo di dati (record o serie temporali) che viene acquisito in [!DNL Platform]. Facendo clic sulla scheda Schemi nell’interfaccia utente, l’utente sarà in grado di visualizzare tutti gli schemi disponibili, compreso il tipo di comportamento supportato dallo schema.
+
+Nello strumento ETL, l’utente inizierà a progettare le trasformazioni di mappatura dopo aver configurato la connessione appropriata (utilizzando le proprie credenziali). Si presume che lo strumento ETL abbia già installato [!DNL Experience Platform] connettori (processo non definito in questa Guida all&#39;integrazione).
+
+Sono stati forniti mapping per uno strumento e un flusso di lavoro ETL di esempio nel [flusso di lavoro ETL](./workflow.md). Anche se gli strumenti ETL possono differire nel formato, la maggior parte espone funzionalità simili.
+
+>[!NOTE]
+>
+>Il connettore ETL deve specificare un filtro di marca temporale che contrassegna la data in cui acquisire i dati e l’offset (ovvero la finestra per la quale i dati devono essere letti). Lo strumento ETL dovrebbe supportare l’acquisizione di questi due parametri in questa o in un’altra interfaccia utente pertinente. In Adobe Experience Platform, questi parametri verranno mappati alle date disponibili (se presenti) o alla data acquisita presente nell’oggetto batch del set di dati.
 
 ### Visualizza elenco di set di dati
 
-Utilizzando l&#39;origine dei dati per la mappatura, è possibile recuperare un elenco di tutti i set di dati disponibili utilizzando la [[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
+Utilizzando l’origine dei dati per la mappatura, è possibile recuperare un elenco di tutti i set di dati disponibili utilizzando il percorso [[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
 
-Potete inviare una singola richiesta API per visualizzare tutti i set di dati disponibili (ad es. `GET /dataSets`), in cui si consiglia di includere parametri di query che limitano la dimensione della risposta.
+Puoi emettere una singola richiesta API per visualizzare tutti i set di dati disponibili (ad esempio `GET /dataSets`), come best practice, include parametri di query che limitano la dimensione della risposta.
 
-Nei casi in cui vengono richieste informazioni complete sui dataset, il payload di risposta può raggiungere oltre 3 GB di dimensioni, il che può rallentare le prestazioni complessive. Pertanto, l&#39;utilizzo di parametri di query per filtrare solo le informazioni necessarie renderà più efficienti le query [!DNL Catalog].
+Nei casi in cui vengono richieste informazioni complete sui set di dati, il payload di risposta può raggiungere dimensioni superiori a 3 GB, il che può rallentare le prestazioni complessive. Pertanto, l’utilizzo di parametri di query per filtrare solo le informazioni necessarie renderà le query [!DNL Catalog] più efficienti.
 
 #### Filtro elenco
 
-Quando filtrate le risposte, potete utilizzare più filtri in una singola chiamata separando i parametri con una e commerciale (`&`). Alcuni parametri di query accettano elenchi di valori separati da virgole, ad esempio il filtro &quot;proprietà&quot; nella richiesta di esempio seguente.
+Quando filtri le risposte, puoi utilizzare più filtri in una singola chiamata separando i parametri con una e commerciale (`&`). Alcuni parametri di query accettano elenchi di valori separati da virgole, come il filtro &quot;proprietà&quot; nella richiesta di esempio seguente.
 
-[!DNL Catalog] le risposte vengono misurate automaticamente in base ai limiti configurati, tuttavia il parametro di query &quot;limit&quot; può essere utilizzato per personalizzare i vincoli e limitare il numero di oggetti restituiti. I limiti di risposta preconfigurati [!DNL Catalog] sono:
+[!DNL Catalog] le risposte vengono misurate automaticamente in base ai limiti configurati, tuttavia il parametro di query &quot;limit&quot; può essere utilizzato per personalizzare i vincoli e limitare il numero di oggetti restituiti. I limiti di risposta preconfigurati [!DNL Catalog] sono i seguenti:
 
 - Se non viene specificato un parametro di limite, il numero massimo di oggetti per payload di risposta è 20.
 - Il limite globale per tutte le altre query [!DNL Catalog] è di 100 oggetti.
-- Per le query del set di dati, se si richiede osservableSchema utilizzando il parametro query delle proprietà, il numero massimo di set di dati restituito è 20.
-- I parametri di limite non validi (incluso `limit=0`) sono soddisfatti con un errore HTTP 400 che indica gli intervalli corretti.
+- Per le query dei set di dati, se si richiede OsservableSchema utilizzando il parametro di query delle proprietà, il numero massimo di set di dati restituiti è 20.
+- I parametri di limite non validi (incluso `limit=0`) sono soddisfatti con un errore HTTP 400 che delinea gli intervalli appropriati.
 - Se i limiti o gli offset vengono passati come parametri di query, hanno la precedenza su quelli passati come intestazioni.
 
-I parametri delle query sono descritti più dettagliatamente nella [Panoramica del servizio catalogo](../catalog/home.md).
+I parametri di query sono descritti più dettagliatamente in [Panoramica del servizio catalogo](../catalog/home.md).
 
 **Formato API**
 
@@ -128,7 +128,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets?limit=3&
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
-Per esempi dettagliati su come effettuare chiamate a [Catalog Service overview](../catalog/home.md), fare riferimento a [[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
+Per esempi dettagliati su come effettuare chiamate a [[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), consulta la [Panoramica del servizio catalogo](../catalog/home.md) .
 
 **Risposta**
 
@@ -165,15 +165,15 @@ La risposta include tre set di dati (`limit=3`) che mostrano &quot;name&quot;, &
 
 ### Visualizza schema set di dati
 
-La proprietà &quot;schemaRef&quot; di un dataset contiene un URI che fa riferimento allo schema XDM su cui si basa il dataset. Lo schema XDM (&quot;schemaRef&quot;) rappresenta tutti i potenziali campi che possono essere utilizzati dal dataset, non necessariamente i campi che vengono utilizzati (vedere &quot;osservableSchema&quot; di seguito).
+La proprietà &quot;schemaRef&quot; di un set di dati contiene un URI che fa riferimento allo schema XDM su cui è basato il set di dati. Lo schema XDM (&quot;schemaRef&quot;) rappresenta tutti i campi potenziali che possono essere utilizzati dal set di dati, non necessariamente i campi in uso (vedi &quot;osservableSchema&quot; di seguito).
 
-Lo schema XDM è lo schema utilizzato per presentare all&#39;utente un elenco di tutti i campi disponibili su cui è possibile scrivere.
+Lo schema XDM è lo schema utilizzato quando è necessario presentare all’utente un elenco di tutti i campi disponibili in cui è possibile scrivere.
 
-Il primo valore &quot;schemaRef.id&quot; nell&#39;oggetto di risposta precedente (`https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18`) è un URI che punta a uno schema XDM specifico in [!DNL Schema Registry]. Lo schema può essere recuperato effettuando una richiesta di ricerca (GET) all&#39;API [!DNL Schema Registry].
+Il primo valore &quot;schemaRef.id&quot; nell&#39;oggetto di risposta precedente (`https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18`) è un URI che punta a uno schema XDM specifico nel [!DNL Schema Registry]. Lo schema può essere recuperato effettuando una richiesta di ricerca (GET) all&#39;API [!DNL Schema Registry].
 
 >[!NOTE]
 >
->La proprietà &quot;schemaRef&quot; sostituisce la proprietà obsoleta &quot;schema&quot;. Se &quot;schemaRef&quot; è assente dal dataset o non contiene un valore, sarà necessario verificare la presenza di una proprietà &quot;schema&quot;. Ciò può essere fatto sostituendo &quot;schemaRef&quot; con &quot;schema&quot; nel parametro di query `properties` nella chiamata precedente. Ulteriori dettagli sulla proprietà &quot;schema&quot; sono disponibili nella sezione [DataSet &quot;schema&quot; Property](#dataset-schema-property-deprecated---eol-2019-05-30) che segue.
+>La proprietà &quot;schemaRef&quot; sostituisce la proprietà &quot;schema&quot; ora obsoleta. Se &quot;schemaRef&quot; è assente dal set di dati o non contiene un valore, dovrai verificare la presenza di una proprietà &quot;schema&quot;. Questo può essere fatto sostituendo &quot;schemaRef&quot; con &quot;schema&quot; nel parametro di query `properties` nella chiamata precedente. Ulteriori dettagli sulla proprietà &quot;schema&quot; sono disponibili nella sezione [Dataset &quot;schema&quot; Property](#dataset-schema-property-deprecated---eol-2019-05-30) che segue.
 
 **Formato API**
 
@@ -183,7 +183,7 @@ GET /schemaregistry/tenant/schemas/{url encoded schemaRef.id}
 
 **Richiesta**
 
-La richiesta utilizza l&#39;URI con codifica URL `id` dello schema (il valore dell&#39;attributo &quot;schemaRef.id&quot;) e richiede un&#39;intestazione Accept.
+La richiesta utilizza l’URI codificato URL `id` dello schema (il valore dell’attributo &quot;schemaRef.id&quot;) e richiede un’intestazione Accept.
 
 ```shell
 curl -X GET \
@@ -195,12 +195,12 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-full+json; version=1' \
 ```
 
-Il formato della risposta dipende dal tipo di intestazione Accetto inviato nella richiesta. Le richieste di ricerca richiedono inoltre che nell’intestazione Accetto sia inclusa una `version`. Nella tabella seguente sono riportati i contorni disponibili Accetta intestazioni per le ricerche:
+Il formato della risposta dipende dal tipo di intestazione Accept inviato nella richiesta. Le richieste di ricerca richiedono anche l’inclusione di un elemento `version` nell’intestazione Accept. La tabella seguente illustra le intestazioni Accept disponibili per le ricerche:
 
 | Accept | Descrizione |
 | ------ | ----------- |
-| `application/vnd.adobe.xed-id+json` | Richieste elenco (GET), titoli, ID e versioni |
-| `application/vnd.adobe.xed-full+json; version={major version}` | $refs e allOf risolti, con titoli e descrizioni |
+| `application/vnd.adobe.xed-id+json` | Richieste elenco (GET), titoli, id e versioni |
+| `application/vnd.adobe.xed-full+json; version={major version}` | $refs e allOf risolti, ha titoli e descrizioni |
 | `application/vnd.adobe.xed+json; version={major version}` | Raw con $ref e allOf, ha titoli e descrizioni |
 | `application/vnd.adobe.xed-notext+json; version={major version}` | Raw con $ref e allOf, senza titoli o descrizioni |
 | `application/vnd.adobe.xed-full-notext+json; version={major version}` | $refs e allOf risolti, senza titoli o descrizioni |
@@ -208,17 +208,17 @@ Il formato della risposta dipende dal tipo di intestazione Accetto inviato nella
 
 >[!NOTE]
 >
->`application/vnd.adobe.xed-id+json` e  `application/vnd.adobe.xed-full+json; version={major version}` sono le intestazioni Accetta più utilizzate. `application/vnd.adobe.xed-id+json` è preferibile elencare le risorse in  [!DNL Schema Registry] quanto restituisce solo &quot;title&quot;, &quot;id&quot; e &quot;version&quot;. `application/vnd.adobe.xed-full+json; version={major version}` è preferibile visualizzare una risorsa specifica (in base al relativo &quot;id&quot;), in quanto restituisce tutti i campi (nidificati sotto &quot;proprietà&quot;), nonché titoli e descrizioni.
+>`application/vnd.adobe.xed-id+json` e  `application/vnd.adobe.xed-full+json; version={major version}` sono le intestazioni Accept più comunemente utilizzate. `application/vnd.adobe.xed-id+json` è da preferire per elencare le risorse in  [!DNL Schema Registry] quanto restituisce solo &quot;title&quot;, &quot;id&quot; e &quot;version&quot;. `application/vnd.adobe.xed-full+json; version={major version}` è da preferirsi per visualizzare una risorsa specifica (in base al suo &quot;id&quot;), in quanto restituisce tutti i campi (nidificati sotto &quot;proprietà&quot;), nonché titoli e descrizioni.
 
 **Risposta**
 
-Lo schema JSON restituito descrive la struttura e le informazioni a livello di campo (&quot;tipo&quot;, &quot;formato&quot;, &quot;minimo&quot;, &quot;massimo&quot;, ecc.) dei dati, serializzati come JSON. Se si utilizza un formato di serializzazione diverso da JSON per l&#39;assimilazione (come Parquet o Scala), la [Schema Registry Guide](../xdm/tutorials/create-schema-api.md) contiene una tabella che mostra il tipo JSON desiderato (&quot;meta:xdmType&quot;) e la corrispondente rappresentazione in altri formati.
+Lo schema JSON restituito descrive la struttura e le informazioni a livello di campo (&quot;tipo&quot;, &quot;formato&quot;, &quot;minimo&quot;, &quot;massimo&quot;, ecc.) dei dati, serializzati come JSON. Se utilizzi un formato di serializzazione diverso da JSON per l’acquisizione (ad esempio Parquet o Scala), la [Guida al Registro di sistema dello schema](../xdm/tutorials/create-schema-api.md) contiene una tabella che mostra il tipo JSON desiderato (&quot;meta:xdmType&quot;) e la relativa rappresentazione corrispondente in altri formati.
 
-Insieme a questa tabella, la [!DNL Schema Registry] Guida per gli sviluppatori contiene esempi dettagliati di tutte le possibili chiamate che è possibile effettuare utilizzando l&#39;API [!DNL Schema Registry].
+Insieme a questa tabella, la [!DNL Schema Registry] Guida per gli sviluppatori contiene esempi dettagliati di tutte le possibili chiamate che possono essere effettuate utilizzando l’ API [!DNL Schema Registry] .
 
-### Proprietà Dataset &quot;schema&quot; (DEPRECATED - EOL 2019-05-30)
+### Proprietà &quot;schema&quot; del set di dati (OBSOLETO - EOL 2019-05-30)
 
-I set di dati possono contenere una proprietà &quot;schema&quot; che ora è obsoleta e rimane temporaneamente disponibile per la compatibilità con le versioni precedenti. Ad esempio, una richiesta di elenco (GET) simile a quella effettuata in precedenza, in cui &quot;schema&quot; è stato sostituito con &quot;schemaRef&quot; nel parametro di query `properties`, potrebbe restituire quanto segue:
+I set di dati possono contenere una proprietà &quot;schema&quot; che ora è obsoleta e rimane temporaneamente disponibile per la compatibilità con le versioni precedenti. Ad esempio, una richiesta di elenco (GET) simile a quella effettuata in precedenza, in cui &quot;schema&quot; è stato sostituito da &quot;schemaRef&quot; nel parametro di query `properties`, potrebbe restituire quanto segue:
 
 ```json
 {
@@ -230,7 +230,7 @@ I set di dati possono contenere una proprietà &quot;schema&quot; che ora è obs
 }
 ```
 
-Se la proprietà &quot;schema&quot; di un dataset è popolata, ciò indica che lo schema è uno schema `/xdms` obsoleto e, laddove supportato, il connettore ETL deve utilizzare il valore nella proprietà &quot;schema&quot; con l&#39;endpoint `/xdms` (un endpoint obsoleto in [[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)) per recuperare lo schema legacy.
+Se la proprietà &quot;schema&quot; di un set di dati è compilata, questo segnala che lo schema è uno schema `/xdms` obsoleto e, se supportato, il connettore ETL deve utilizzare il valore nella proprietà &quot;schema&quot; con l’endpoint `/xdms` (un endpoint obsoleto in [[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)) per recuperare lo schema legacy.
 
 **Formato API**
 
@@ -250,19 +250,19 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/xdms/context/pers
 
 >[!NOTE]
 >
->Un parametro di query facoltativo, `expansion=xdm`, indica all&#39;API di espandere completamente e in linea tutti gli schemi di riferimento. È possibile eseguire questa operazione quando si presenta all&#39;utente un elenco di tutti i campi potenziali.
+>Un parametro di query facoltativo, `expansion=xdm`, indica all’API di espandere completamente e in linea tutti gli schemi di riferimento. È consigliabile eseguire questa operazione quando si presenta all’utente un elenco di tutti i campi potenziali.
 
 **Risposta**
 
-Analogamente ai passaggi per [visualizzare lo schema del set di dati](#view-dataset-schema), la risposta contiene uno schema JSON che descrive la struttura e le informazioni a livello di campo dei dati, serializzati come JSON.
+Simile ai passaggi per [visualizzare lo schema del set di dati](#view-dataset-schema), la risposta contiene uno schema JSON che descrive la struttura e le informazioni a livello di campo dei dati, serializzati come JSON.
 
 >[!NOTE]
 >
 >Quando il campo &quot;schema&quot; è completamente vuoto o assente, il connettore deve leggere il campo &quot;schemaRef&quot; e utilizzare l&#39; [API del Registro di sistema dello schema](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) come mostrato nei passaggi precedenti per [visualizzare uno schema di set di dati](#view-dataset-schema).
 
-### La proprietà &quot;osservableSchema&quot;
+### Proprietà &quot;osservableSchema&quot;
 
-La proprietà &quot;osservableSchema&quot; di un set di dati ha una struttura JSON corrispondente a quella del JSON dello schema XDM. &quot;osservableSchema&quot; contiene i campi presenti nei file di input in arrivo. Quando si scrivono dati in [!DNL Experience Platform], non è necessario utilizzare tutti i campi dello schema di destinazione. Devono invece fornire solo i campi utilizzati.
+La proprietà &quot;osservableSchema&quot; di un set di dati presenta una struttura JSON corrispondente a quella dello schema XDM JSON. Lo &quot;schema osservabile&quot; contiene i campi presenti nei file di input in arrivo. Quando si scrivono dati a [!DNL Experience Platform], non è necessario che un utente utilizzi ogni campo dello schema di destinazione. Dovrebbero invece fornire solo i campi in uso.
 
 Lo schema osservabile è lo schema da utilizzare per la lettura dei dati o la presentazione di un elenco di campi disponibili per la lettura/mappatura.
 
@@ -287,15 +287,15 @@ Lo schema osservabile è lo schema da utilizzare per la lettura dei dati o la pr
 
 ### Anteprima dati
 
-L&#39;applicazione ETL può fornire una capacità di visualizzare in anteprima i dati ([&quot;Figura 8&quot; nel flusso di lavoro ETL](./workflow.md)). L&#39;API di accesso ai dati offre diverse opzioni per visualizzare l&#39;anteprima dei dati.
+L&#39;applicazione ETL può fornire una capacità di visualizzare in anteprima i dati ([&quot;Figura 8&quot; nel flusso di lavoro ETL](./workflow.md)). L’API di accesso ai dati fornisce diverse opzioni per l’anteprima dei dati.
 
-Ulteriori informazioni, comprese le istruzioni dettagliate per visualizzare l&#39;anteprima dei dati mediante l&#39;API di accesso ai dati, sono reperibili nell&#39;esercitazione sull&#39;accesso ai dati [a](../data-access/tutorials/dataset-data.md).
+Ulteriori informazioni, incluse istruzioni dettagliate per visualizzare in anteprima i dati utilizzando l&#39;API di accesso ai dati, sono disponibili nell&#39; [tutorial sull&#39;accesso ai dati](../data-access/tutorials/dataset-data.md).
 
-### Ottenete i dettagli del dataset utilizzando il parametro di query &quot;proprietà&quot;
+### Ottieni i dettagli del set di dati utilizzando il parametro di query &quot;properties&quot;
 
-Come mostrato nella procedura precedente per visualizzare un elenco di dataset](#view-list-of-datasets), è possibile richiedere &quot;files&quot; utilizzando il parametro di query &quot;properties&quot;.[
+Come mostrato nei passaggi precedenti per [visualizzare un elenco di set di dati](#view-list-of-datasets), puoi richiedere &quot;file&quot; utilizzando il parametro di query &quot;properties&quot;.
 
-Per informazioni dettagliate sulla query dei set di dati e sui filtri di risposta disponibili, fare riferimento alla [Panoramica del servizio catalogo](../catalog/home.md).
+Per informazioni dettagliate sulla query dei set di dati e sui filtri di risposta disponibili, consulta la [Panoramica del servizio catalogo](../catalog/home.md) .
 
 **Formato API**
 
@@ -325,9 +325,9 @@ La risposta includerà un set di dati (`limit=1`) che mostra la proprietà &quot
 }
 ```
 
-### Elenca i file di set di dati utilizzando l&#39;attributo &quot;files&quot;
+### Elencare file di set di dati utilizzando l’attributo &quot;files&quot;
 
-Potete anche utilizzare una richiesta di GET per recuperare i dettagli del file utilizzando l&#39;attributo &quot;files&quot;.
+Puoi anche utilizzare una richiesta GET per recuperare i dettagli del file utilizzando l’attributo &quot;files&quot;.
 
 **Formato API**
 
@@ -348,7 +348,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/5bf479a6
 
 **Risposta**
 
-La risposta include l&#39;ID del file del set di dati come proprietà di primo livello, con i dettagli del file contenuti nell&#39;oggetto ID del file del set di dati.
+La risposta include l&#39;ID del file di set di dati come proprietà di livello principale, con i dettagli del file contenuti nell&#39;oggetto ID del file di set di dati.
 
 ```json
 {
@@ -391,11 +391,11 @@ La risposta include l&#39;ID del file del set di dati come proprietà di primo l
 }
 ```
 
-### Recupero dettagli file
+### Dettagli del file di recupero
 
-Gli ID del file di set di dati restituiti nella risposta precedente possono essere utilizzati in una richiesta di GET per recuperare ulteriori dettagli del file tramite l&#39;API [!DNL Data Access].
+Gli ID del file di set di dati restituiti nella risposta precedente possono essere utilizzati in una richiesta di GET per recuperare ulteriori dettagli del file tramite l’ [!DNL Data Access] API.
 
-La [panoramica sull&#39;accesso ai dati](../data-access/home.md) contiene informazioni sull&#39;utilizzo dell&#39;API [!DNL Data Access].
+La [panoramica sull&#39;accesso ai dati](../data-access/home.md) contiene informazioni dettagliate su come utilizzare l&#39;API [!DNL Data Access].
 
 **Formato API**
 
@@ -429,7 +429,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/ea40946ac031
 ]
 ```
 
-### Anteprima dei dati del file
+### Anteprima dati file
 
 La proprietà &quot;href&quot; può essere utilizzata per recuperare i dati di anteprima tramite [[!DNL Data Access API]](../data-access/home.md).
 
@@ -451,11 +451,11 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/ea40946ac031
 
 La risposta alla richiesta di cui sopra contiene un&#39;anteprima del contenuto del file.
 
-Ulteriori informazioni sull&#39;API [!DNL Data Access], incluse richieste e risposte dettagliate, sono disponibili nella [panoramica sull&#39;accesso ai dati](../data-access/home.md).
+Ulteriori informazioni sull’ API [!DNL Data Access], incluse richieste e risposte dettagliate, sono disponibili nella [panoramica sull’accesso ai dati](../data-access/home.md).
 
-### Ottenere &quot;fileDescription&quot; dal dataset
+### Ottieni &quot;fileDescription&quot; dal set di dati
 
-Il componente di destinazione come output di dati trasformati, Data Engineer sceglierà un DataSet di output ([&quot;Figura 12&quot; nel flusso di lavoro ETL](workflow.md)). Lo schema XDM è associato al set di dati di output. I dati da scrivere saranno identificati dall&#39;attributo &quot;fileDescription&quot; dell&#39;entità dataset dalle API di rilevamento dati. Queste informazioni possono essere recuperate utilizzando un ID dataset (`{DATASET_ID}`). La proprietà &quot;fileDescription&quot; nella risposta JSON fornirà le informazioni richieste.
+Il componente di destinazione come output di dati trasformati, data engineer sceglierà un set di dati di output ([&quot;Figure 12&quot; nel flusso di lavoro ETL](workflow.md)). Lo schema XDM è associato al set di dati di output. I dati da scrivere saranno identificati dall’attributo &quot;fileDescription&quot; dell’entità di set di dati dalle API di individuazione dati. Queste informazioni possono essere recuperate utilizzando un ID set di dati (`{DATASET_ID}`). La proprietà &quot;fileDescription&quot; nella risposta JSON fornirà le informazioni richieste.
 
 **Formato API**
 
@@ -492,21 +492,21 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/59c93f3d
 }
 ```
 
-I dati verranno scritti in [!DNL Experience Platform] utilizzando [Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).  La scrittura dei dati è un processo asincrono. Quando i dati vengono scritti in Adobe Experience Platform, un batch viene creato e contrassegnato come un successo solo dopo che i dati sono stati scritti completamente.
+I dati verranno scritti in [!DNL Experience Platform] utilizzando [API di acquisizione dati](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).  La scrittura di dati è un processo asincrono. Quando i dati vengono scritti in Adobe Experience Platform, un batch viene creato e contrassegnato come un successo solo dopo che i dati sono stati scritti completamente.
 
 I dati in [!DNL Experience Platform] devono essere scritti sotto forma di file Parquet.
 
 ## Fase di esecuzione
 
-All&#39;avvio dell&#39;esecuzione, il connettore (come definito nel componente di origine) leggerà i dati da [!DNL Experience Platform] utilizzando la [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml). Il processo di trasformazione leggerà i dati per un determinato intervallo di tempo. Internamente, esegue una query sui batch di set di dati di origine. Durante l&#39;esecuzione di query, utilizzerà un valore parametrizzato (per i dati delle serie temporali, o per i dati incrementali) per la data di inizio e i file di set di dati per tali batch, quindi inizierà a richiedere i dati per tali file di set di dati.
+All’avvio dell’esecuzione, il connettore (come definito nel componente di origine) leggerà i dati di [!DNL Experience Platform] utilizzando [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml). Il processo di trasformazione leggerà i dati per un determinato intervallo di tempo. Internamente, eseguirà query sui batch di set di dati di origine. Durante l’esecuzione delle query, utilizzerà un valore parametrizzato (che continua per i dati delle serie temporali o i dati incrementali) per la data di inizio e i file di set di dati per tali batch, quindi inizierà a richiedere i dati per tali file di set di dati.
 
 ### Trasformazioni di esempio
 
-Il documento [esempio di trasformazioni ETL](./transformations.md) contiene una serie di trasformazioni di esempio, tra cui la gestione dell&#39;identità e le mappature dei tipi di dati. Utilizzate queste trasformazioni per riferimento.
+Il documento [trasformazioni ETL di esempio](./transformations.md) contiene una serie di trasformazioni di esempio, tra cui la gestione dell&#39;identità e le mappature del tipo di dati. Usa queste trasformazioni per riferimento.
 
 ### Leggi i dati da [!DNL Experience Platform]
 
-Utilizzando [[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), potete recuperare tutti i batch tra un&#39;ora di inizio e una di fine specificate e ordinarli in base all&#39;ordine in cui sono stati creati.
+Utilizzando [[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), è possibile recuperare tutti i batch tra un&#39;ora di inizio e di fine specificate e ordinarli in base all&#39;ordine in cui sono stati creati.
 
 **Richiesta**
 
@@ -519,11 +519,11 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches?dataSet=D
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
-Per informazioni dettagliate sul filtro dei batch, vedere l&#39;[esercitazione sull&#39;accesso ai dati](../data-access/tutorials/dataset-data.md).
+I dettagli sui batch di filtri si trovano in [Esercitazione sull&#39;accesso ai dati](../data-access/tutorials/dataset-data.md).
 
-### Estrarre i file da un batch
+### Estrarre file da un batch
 
-Una volta ottenuto l&#39;ID per il batch che si sta cercando (`{BATCH_ID}`), è possibile recuperare un elenco di file appartenenti a uno specifico batch tramite [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml).  I dettagli relativi a tale operazione sono disponibili nell&#39; [[!DNL Data Access] tutorial](../data-access/tutorials/dataset-data.md).
+Una volta ottenuto l&#39;ID per il batch che stai cercando (`{BATCH_ID}`), è possibile recuperare un elenco di file appartenenti a un batch specifico tramite [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml).  I dettagli per farlo sono disponibili nell’ [[!DNL Data Access] esercitazione](../data-access/tutorials/dataset-data.md).
 
 **Richiesta**
 
@@ -535,9 +535,9 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
   -H "x-api-key : {API_KEY}"
 ```
 
-### Accedere ai file utilizzando l&#39;ID file
+### Accedere ai file utilizzando l’ID file
 
-Utilizzando l&#39;ID univoco di un file (`{FILE_ID`), è possibile utilizzare [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) per accedere ai dettagli specifici del file, incluso il nome, la dimensione in byte e un collegamento per scaricarlo.
+Utilizzando l&#39;ID univoco di un file (`{FILE_ID`), è possibile utilizzare [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) per accedere ai dettagli specifici del file, inclusi nome, dimensioni in byte e un collegamento per scaricarlo.
 
 **Richiesta**
 
@@ -549,11 +549,11 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{FILE_ID}" \
   -H "x-api-key : {API_KEY}"
 ```
 
-La risposta può puntare a un singolo file o a una directory. Per maggiori informazioni, vedere l&#39;esercitazione [[!DNL Data Access] tutorial](../data-access/tutorials/dataset-data.md).
+La risposta può puntare a un singolo file o a una directory. I dettagli su ciascuno di essi sono disponibili nel tutorial [[!DNL Data Access] tutorial](../data-access/tutorials/dataset-data.md).
 
 ### Accedere al contenuto del file
 
-È possibile utilizzare [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) per accedere al contenuto di un file specifico. Per recuperare il contenuto, viene effettuata una richiesta di GET utilizzando il valore restituito per `_links.self.href` quando si accede a un file utilizzando l&#39;ID file.
+È possibile utilizzare [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) per accedere al contenuto di un file specifico. Per recuperare il contenuto, viene effettuata una richiesta di GET utilizzando il valore restituito per `_links.self.href` quando si accede a un file utilizzando l’ID file.
 
 **Richiesta**
 
@@ -565,23 +565,23 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{DATASET_FIL
   -H "x-api-key: {API_KEY}"
 ```
 
-La risposta a questa richiesta contiene il contenuto del file. Per ulteriori informazioni, inclusi dettagli sull&#39;impaginazione delle risposte, vedere l&#39;esercitazione [How to Query Data via data access API](../data-access/tutorials/dataset-data.md) tutorial.
+La risposta a questa richiesta contiene il contenuto del file. Per ulteriori informazioni, compresi i dettagli sull&#39;impaginazione delle risposte, consulta l&#39; esercitazione [Come eseguire query sui dati tramite API di accesso ai dati](../data-access/tutorials/dataset-data.md) .
 
 ### Convalida dei record per la conformità allo schema
 
-Durante la scrittura dei dati, gli utenti possono scegliere di convalidare i dati in base alle regole di convalida definite nello schema XDM. Ulteriori informazioni sulla convalida dello schema sono disponibili nel [Codice di riferimento dell&#39;integrazione dell&#39;ecosistema ETL in [!DNL GitHub]](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md#validation).
+Quando i dati vengono scritti, gli utenti possono scegliere di convalidare i dati in base alle regole di convalida definite nello schema XDM. Ulteriori informazioni sulla convalida dello schema sono disponibili nel [Codice di riferimento per l&#39;integrazione dell&#39;ecosistema ETL su [!DNL GitHub]](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md#validation).
 
-Se si utilizza l&#39;implementazione di riferimento trovata in [[!DNL GitHub]](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md), è possibile attivare la convalida dello schema in questa implementazione utilizzando la proprietà di sistema `-DenableSchemaValidation=true`.
+Se utilizzi l&#39;implementazione di riferimento trovata in [[!DNL GitHub]](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md), puoi attivare la convalida dello schema in questa implementazione utilizzando la proprietà di sistema `-DenableSchemaValidation=true`.
 
-La convalida può essere eseguita per i tipi XDM logici, utilizzando attributi quali `minLength` e `maxlength` per le stringhe, `minimum` e `maximum` per i numeri interi e altro ancora. La [Guida per gli sviluppatori API del Registro di sistema dello schema](../xdm/api/getting-started.md) contiene una tabella che delinea i tipi XDM e le proprietà che è possibile utilizzare per la convalida.
+La convalida può essere eseguita per i tipi XDM logici, utilizzando attributi come `minLength` e `maxlength` per le stringhe, `minimum` e `maximum` per i numeri interi e altro ancora. La [Guida per gli sviluppatori API del Registro di sistema dello schema](../xdm/api/getting-started.md) contiene una tabella che descrive i tipi XDM e le proprietà che possono essere utilizzate per la convalida.
 
 >[!NOTE]
 >
->I valori minimo e massimo forniti per vari tipi `integer` sono i valori MIN e MAX che il tipo può supportare, ma questi valori possono essere ulteriormente limitati a valori minimi e massimi scelti.
+>I valori minimo e massimo forniti per vari tipi `integer` sono i valori MIN e MAX che il tipo può supportare, ma questi valori possono essere ulteriormente vincolati a valori minimi e massimi scelti.
 
 ### Creare un batch
 
-Una volta elaborati i dati, lo strumento ETL riscrive i dati in [!DNL Experience Platform] utilizzando l&#39; [API di inserimento batch](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Prima di poter aggiungere dati a un set di dati, questi devono essere collegati a un batch che verrà successivamente caricato in un set di dati specifico.
+Una volta elaborati i dati, lo strumento ETL restituirà i dati a [!DNL Experience Platform] utilizzando l’ [API di acquisizione batch](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Prima di poter aggiungere dati a un set di dati, questi devono essere collegati a un batch che verrà successivamente caricato in un set di dati specifico.
 
 **Richiesta**
 
@@ -597,11 +597,11 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
       }'
 ```
 
-I dettagli per la creazione di un batch, incluse le richieste di esempio e le risposte, sono disponibili nella [Panoramica sull&#39;inserimento dei batch](../ingestion/batch-ingestion/overview.md).
+I dettagli per la creazione di un batch, incluse le richieste di esempio e le risposte, sono disponibili nella [Panoramica sull&#39;acquisizione in batch](../ingestion/batch-ingestion/overview.md).
 
-### Scrivi in dataset
+### Scrivi nel set di dati
 
-Dopo aver creato un nuovo batch, i file possono essere caricati in un set di dati specifico. È possibile pubblicare più file in un batch finché non vengono promossi. I file possono essere caricati utilizzando l&#39;API di caricamento dei file di piccole dimensioni; tuttavia, se i file sono troppo grandi e il limite del gateway viene superato, potete utilizzare l&#39;API di caricamento dei file grandi. I dettagli per l&#39;utilizzo del caricamento di file grandi e piccoli sono disponibili nella [Panoramica sull&#39;inserimento dei batch](../ingestion/batch-ingestion/overview.md).
+Dopo aver creato correttamente un nuovo batch, i file possono quindi essere caricati in un set di dati specifico. È possibile pubblicare più file in un batch fino a quando non viene promosso. I file possono essere caricati utilizzando l’API di caricamento file di piccole dimensioni; tuttavia, se i file sono troppo grandi e il limite del gateway viene superato, puoi utilizzare l’API di caricamento file di grandi dimensioni. I dettagli sull&#39;utilizzo di Caricamento file di grandi e piccole dimensioni sono disponibili nella [Panoramica sull&#39;acquisizione in batch](../ingestion/batch-ingestion/overview.md).
 
 **Richiesta**
 
@@ -619,9 +619,9 @@ curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### Contrassegna caricamento batch completato
 
-Dopo aver caricato tutti i file nel batch, il batch può essere segnalato per il completamento. A tal fine, le voci [!DNL Catalog] &quot;DataSetFile&quot; vengono create per i file completati e associate al batch di generazione. Il batch [!DNL Catalog] viene quindi contrassegnato come riuscito, che attiva i flussi a valle per l&#39;acquisizione dei dati disponibili.
+Dopo che tutti i file sono stati caricati nel batch, il batch può essere segnalato per il completamento. In questo modo, le voci [!DNL Catalog] &quot;DataSetFile&quot; vengono create per i file completati e associate al batch di generazione. Il batch [!DNL Catalog] viene quindi contrassegnato come riuscito, il che attiva i flussi a valle per acquisire i dati disponibili.
 
-I dati verranno prima inseriti nella posizione di staging su Adobe Experience Platform e quindi spostati nella posizione finale dopo la catalogazione e la convalida. I batch verranno contrassegnati come validi quando tutti i dati vengono spostati in una posizione permanente.
+I dati verranno prima trasferiti nella posizione di staging su Adobe Experience Platform e quindi spostati nella posizione finale dopo la catalogazione e la convalida. I batch verranno contrassegnati come completati una volta che tutti i dati saranno stati spostati in una posizione permanente.
 
 **Richiesta**
 
@@ -635,13 +635,13 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 In caso di esito positivo, la risposta restituirà lo stato HTTP 200 OK e il corpo della risposta sarà vuoto.
 
-Lo strumento ETL farà in modo di notare la marca temporale dei set di dati di origine durante la lettura dei dati.
+Lo strumento ETL si accerterà di annotare la marca temporale dei set di dati di origine durante la lettura dei dati.
 
-Nella successiva esecuzione della trasformazione, probabilmente per pianificazione o chiamata dell&#39;evento, l&#39;ETL inizierà a richiedere i dati dalla marca temporale precedentemente salvata e tutti i dati in futuro.
+Nell’esecuzione della trasformazione successiva, probabilmente per pianificazione o chiamata dell’evento, l’ETL inizierà a richiedere i dati dalla marca temporale salvata in precedenza e tutti i dati in corso.
 
 ### Ottieni stato ultimo batch
 
-Prima di eseguire le nuove attività nello strumento ETL, è necessario assicurarsi che l&#39;ultimo batch sia stato completato correttamente. [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) offre un&#39;opzione specifica per il batch che fornisce i dettagli dei batch pertinenti.
+Prima di eseguire nuove attività nello strumento ETL, è necessario assicurarsi che l&#39;ultimo batch sia stato completato correttamente. Il [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) fornisce un&#39;opzione specifica per il batch che fornisce i dettagli dei batch pertinenti.
 
 **Richiesta**
 
@@ -656,7 +656,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches?limit=1&s
 
 **Risposta**
 
-Le nuove attività possono essere pianificate se il precedente valore &quot;stato&quot; del batch è &quot;successo&quot;, come mostrato di seguito:
+È possibile programmare nuove attività se il precedente valore di &quot;stato&quot; del batch è &quot;successo&quot;, come illustrato di seguito:
 
 ```json
 "{BATCH_ID}": {
@@ -675,7 +675,7 @@ Le nuove attività possono essere pianificate se il precedente valore &quot;stat
 
 ### Ottieni stato ultimo batch per ID
 
-È possibile recuperare un singolo stato batch tramite la [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) inviando una richiesta di GET utilizzando la `{BATCH_ID}`. L&#39; `{BATCH_ID}` utilizzato corrisponde all&#39;ID restituito al momento della creazione del batch.
+È possibile recuperare uno stato batch singolo attraverso [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) emettendo una richiesta di GET utilizzando `{BATCH_ID}`. Il `{BATCH_ID}` utilizzato corrisponde all&#39;ID restituito al momento della creazione del batch.
 
 **Richiesta**
 
@@ -688,7 +688,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
   -H "x-api-key: {API_KEY}"
 ```
 
-**Risposta - Successo**
+**Risposta - Operazione riuscita**
 
 La risposta seguente mostra un &quot;successo&quot;:
 
@@ -732,63 +732,63 @@ In caso di errore, gli &quot;errori&quot; possono essere estratti dalla risposta
 }
 ```
 
-## Dati ed eventi incrementali e snapshot rispetto ai profili
+## Dati ed eventi incrementali e snapshot e profili
 
-I dati possono essere rappresentati in due da due matrici, come segue:
+I dati possono essere rappresentati in due da due matrici come segue:
 
 | Eventi incrementali | Profili incrementali |
 |-------------------------------|----------------------|
-| Eventi snapshot (meno probabile) | Profili snapshot |
+| Eventi di snapshot (con minore probabilità) | Profili snapshot |
 
-I dati dell&#39;evento sono generalmente utilizzati quando in ogni riga sono presenti colonne di marca temporale indicizzate.
+I dati evento sono in genere presenti nelle colonne di marca temporale indicizzate di ogni riga.
 
-I dati del profilo sono generalmente quando non è presente una marca temporale nei dati e ogni riga può essere identificata da una chiave primaria o composita.
+I dati del profilo si verificano in genere quando non è presente una marca temporale nei dati e ogni riga può essere identificata da una chiave primaria/composita.
 
-Per dati incrementali si intendono solo i dati nuovi/aggiornati che entrano nel sistema e che vengono aggiunti ai dati correnti nei set di dati.
+I dati incrementali sono il punto in cui solo i dati nuovi/aggiornati vengono inseriti nel sistema e vengono aggiunti ai dati correnti nei set di dati.
 
-I dati snapshot sono quando tutti i dati entrano nel sistema e sostituiscono alcuni o tutti i dati precedenti in un dataset.
+I dati snapshot vengono generati quando tutti i dati vengono inseriti nel sistema e sostituiscono alcuni o tutti i dati precedenti in un set di dati.
 
-Nel caso di eventi incrementali, lo strumento ETL deve utilizzare le date disponibili/creare la data dell&#39;entità batch. Nel caso del servizio push, le date disponibili non saranno presenti, quindi lo strumento utilizzerà la data di creazione/aggiornamento batch per contrassegnare gli incrementi. È necessario elaborare ogni batch di eventi incrementali.
+Nel caso di eventi incrementali, lo strumento ETL deve utilizzare le date disponibili/creare la data dell’entità batch. Nel caso del servizio push, le date disponibili non saranno presenti, quindi lo strumento utilizzerà la data di creazione/aggiornamento in batch per contrassegnare gli incrementi. È necessario elaborare ogni batch di eventi incrementali.
 
-Per i profili incrementali, lo strumento ETL utilizzerà le date create/aggiornate dell&#39;entità batch. Comunemente ogni batch di dati di profilo incrementali è necessario per essere elaborato.
+Per i profili incrementali, lo strumento ETL utilizzerà date create/aggiornate di entità batch. Di solito, ogni batch di dati di profilo incrementali deve essere elaborato.
 
-Gli eventi snapshot sono molto meno probabili a causa delle dimensioni ridotte dei dati. Ma se questo fosse necessario, lo strumento ETL deve selezionare solo l&#39;ultimo batch per l&#39;elaborazione.
+Gli eventi snapshot sono molto meno probabili a causa della dimensione pura dei dati. Tuttavia, se ciò dovesse essere necessario, lo strumento ETL deve selezionare solo l&#39;ultimo batch da elaborare.
 
-Quando si utilizzano i profili snapshot, lo strumento ETL dovrà selezionare l&#39;ultimo batch di dati arrivati nel sistema. Ma se il requisito è quello di tenere traccia delle versioni delle modifiche, tutti i batch saranno richiesti per essere elaborati. L&#39;elaborazione della deduplicazione all&#39;interno del processo ETL contribuirà a controllare i costi di storage.
+Quando si utilizzano i profili di snapshot, lo strumento ETL dovrà scegliere l&#39;ultimo batch di dati arrivati nel sistema. Ma se il requisito è quello di tenere traccia delle versioni delle modifiche, tutti i batch saranno tenuti ad essere elaborati. L&#39;elaborazione della deduplicazione all&#39;interno del processo ETL contribuirà a controllare i costi di storage.
 
-## Riproduzione batch e rielaborazione dati
+## Riproduzione in batch e rielaborazione dei dati
 
-La riproduzione batch e il ritrattamento dei dati possono essere richiesti nei casi in cui un cliente scopre che negli ultimi &#39;n&#39; giorni, i dati elaborati da ETL non si sono verificati come previsto o che i dati di origine stessi non sono stati corretti.
+La riproduzione in batch e la rielaborazione dei dati possono essere necessarie nei casi in cui un cliente scopra che, negli ultimi &quot;n&quot; giorni, i dati in fase di elaborazione ETL non si sono verificati come previsto o che i dati sorgente stessi potrebbero non essere stati corretti.
 
-A tal fine, gli amministratori dei dati del client utilizzeranno l&#39;interfaccia [!DNL Platform] per rimuovere i batch che contengono dati danneggiati. Quindi, è probabile che l&#39;ETL debba essere rieseguito, ripopolando con dati corretti. Se l&#39;origine stessa conteneva dati danneggiati, l&#39;ingegnere/amministratore dei dati dovrà correggere i batch di origine e riacquisire i dati (sia in Adobe Experience Platform che tramite connettori ETL).
+A questo scopo, gli amministratori di dati del client utilizzeranno l’ [!DNL Platform] interfaccia utente per rimuovere i batch contenenti dati corrotti. Quindi, sarà probabilmente necessario rieseguire l’ETL, ripopolando in tal modo i dati corretti. Se l’origine stessa conteneva dati corrotti, l’ingegnere/amministratore dei dati dovrà correggere i batch di origine e riacquisire i dati (in Adobe Experience Platform o tramite connettori ETL).
 
-In base al tipo di dati generato, sarà l&#39;ingegnere dei dati a scegliere se rimuovere un singolo batch o tutti i batch da determinati dataset. I dati verranno rimossi/archiviati come indicato nelle [!DNL Experience Platform] linee guida.
+In base al tipo di dati generato, sarà l’ingegnere dei dati a scegliere di rimuovere un singolo batch o tutti i batch da determinati set di dati. I dati verranno rimossi/archiviati secondo le linee guida [!DNL Experience Platform] .
 
 È probabile che la funzionalità ETL per eliminare i dati sia importante.
 
-Una volta completata l&#39;eliminazione, gli amministratori client dovranno riconfigurare Adobe Experience Platform per riavviare l&#39;elaborazione per i servizi di base dal momento in cui i batch vengono eliminati.
+Una volta completata l&#39;eliminazione, gli amministratori client dovranno riconfigurare Adobe Experience Platform per riavviare l&#39;elaborazione dei servizi principali dal momento in cui i batch vengono eliminati.
 
 ## Elaborazione batch simultanea
 
-A discrezione del cliente, gli amministratori/ingegneri dei dati possono decidere di estrarre, trasformare e caricare i dati in modo sequenziale o simultaneo, a seconda delle caratteristiche di un particolare dataset. Questo sarà anche basato sul caso di utilizzo in cui il client esegue il targeting con i dati trasformati.
+A discrezione del cliente, gli amministratori/ingegneri dei dati possono decidere di estrarre, trasformare e caricare i dati in modo sequenziale o simultaneo a seconda delle caratteristiche di un particolare set di dati. Questo sarà anche basato sul caso d’uso in cui il cliente esegue il targeting con i dati trasformati.
 
-Ad esempio, se il client è persistente in un archivio di persistenza aggiornabile e la sequenza o l&#39;ordine degli eventi è importante, il client potrebbe dover elaborare rigorosamente i processi con trasformazioni ETL sequenziali.
+Ad esempio, se il client persiste in un archivio di persistenza aggiornabile e la sequenza o l’ordine degli eventi è importante, potrebbe essere necessario elaborare rigorosamente i processi con trasformazioni ETL sequenziali.
 
-In altri casi, i dati non ordinati possono essere elaborati da applicazioni/processi a valle che eseguono l&#39;ordinamento interno utilizzando una data e un&#39;ora specificate. In questi casi, le trasformazioni ETL parallele possono essere realizzabili per migliorare i tempi di elaborazione.
+In altri casi, i dati fuori ordine possono essere elaborati da applicazioni/processi a valle che eseguono l’ordinamento interno utilizzando una data marca temporale. In questi casi, le trasformazioni parallele ETL possono essere fattibili per migliorare i tempi di elaborazione.
 
-Per i batch di origine, dipenderà di nuovo dalla preferenza del cliente e dal vincolo del consumatore. Se i dati di origine possono essere raccolti in parallelo senza tener conto della reggenza/ordinamento di una riga, il processo di trasformazione può creare batch di processi con un livello più elevato di parallelismo (ottimizzazione basata sull&#39;elaborazione fuori ordine). Tuttavia, se la trasformazione deve rispettare i timestamp o modificare l&#39;ordine di precedenza, l&#39;API di accesso ai dati o l&#39;utilità di pianificazione/chiamata dello strumento ETL dovrà garantire che i batch non vengano elaborati in modo non ordinato, ove possibile.
+Per i batch di origine, dipenderà nuovamente dalla preferenza del cliente e dal vincolo del consumatore. Se i dati di origine possono essere raccolti in parallelo senza tenere conto della regenza/ordinamento di una riga, allora il processo di trasformazione può creare batch di processi con un più alto grado di parallelismo (ottimizzazione basata sull&#39;elaborazione fuori ordine). Tuttavia, se la trasformazione deve rispettare timestamp o modificare l’ordine di precedenza, la pianificazione/chiamata dell’API di accesso ai dati o dello strumento ETL dovrà garantire che i batch non vengano elaborati in modo non ordinato, ove possibile.
 
-## Rinvio
+## Differenza
 
-Il differimento è un processo in cui i dati di input non sono ancora sufficientemente completi per essere inviati ai processi a valle, ma possono essere utilizzati in futuro. I client determineranno la propria tolleranza individuale per la finestra dei dati per future corrispondenze rispetto al costo dell&#39;elaborazione per informare la loro decisione di mettere da parte i dati e rielaborarli nella successiva esecuzione della trasformazione, sperando che possa essere arricchita e riconciliata/cucita in un momento futuro all&#39;interno della finestra di conservazione. Questo ciclo è in corso finché la riga non viene elaborata a sufficienza o si ritiene che sia troppo stantio per continuare a investire in. Ogni iterazione genererà dati differiti, ovvero un superset di tutti i dati differiti nelle iterazioni precedenti.
+Il differimento è un processo in cui i dati di input non sono ancora abbastanza completi da essere inviati ai processi a valle, ma possono essere utilizzabili in futuro. I clienti determineranno la propria tolleranza individuale per l&#39;ottimizzazione dei dati per future corrispondenze rispetto al costo del trattamento per informare la loro decisione di mettere da parte i dati e rielaborarli nella successiva esecuzione della trasformazione, sperando che possano essere arricchiti e riconciliati/uniti in un futuro momento all&#39;interno della finestra di conservazione. Questo ciclo è in corso fino a quando la riga non viene elaborata a sufficienza o è considerato troppo vecchio per continuare ad investire in. Ogni iterazione genera dati differiti che è un superset di tutti i dati differiti nelle iterazioni precedenti.
 
-Adobe Experience Platform non identifica i dati differiti al momento, pertanto le implementazioni client devono basarsi sulle configurazioni manuali ETL e Dataset per creare un altro dataset in [!DNL Platform] mirroring del dataset di origine che può essere utilizzato per mantenere i dati differiti. In questo caso, i dati differiti saranno simili ai dati snapshot. In ogni esecuzione della trasformazione ETL, i dati di origine saranno uniti ai dati differiti e inviati per l&#39;elaborazione.
+Adobe Experience Platform non identifica i dati differiti al momento, pertanto le implementazioni client devono basarsi sulle configurazioni ETL e del manuale del set di dati per creare un altro set di dati in [!DNL Platform] mirroring del set di dati sorgente che può essere utilizzato per mantenere i dati differiti. In questo caso, i dati differiti saranno simili ai dati snapshot. In ogni esecuzione della trasformazione ETL, i dati di origine saranno uniti ai dati differiti e inviati per l’elaborazione.
 
 ## Changelog
 
 | Data | Azione | Descrizione |
 | ---- | ------ | ----------- |
-| 2019-01-19 | Proprietà &quot;fields&quot; rimossa dai set di dati | I set di dati in precedenza includevano una proprietà &quot;fields&quot; che conteneva una copia dello schema. Questa funzionalità non deve più essere utilizzata. Se la proprietà &quot;fields&quot; viene trovata, deve essere ignorata e deve essere utilizzata &quot;OsservaSchema&quot; o &quot;schemaRef&quot;. |
-| 2019-03-15 | proprietà &quot;schemaRef&quot; aggiunta ai dataset | La proprietà &quot;schemaRef&quot; di un dataset contiene un URI che fa riferimento allo schema XDM su cui si basa il dataset e rappresenta tutti i potenziali campi che possono essere utilizzati dal dataset. |
-| 2019-03-15 | Tutti gli identificatori utente finale vengono mappati sulla proprietà &quot;identityMap&quot; | &quot;identityMap&quot; è un&#39;incapsulazione di tutti gli identificatori univoci di un oggetto, come l&#39;ID CRM, l&#39;ECID o l&#39;ID del programma fedeltà. Questa mappa viene utilizzata da [[!DNL Identity Service]](../identity-service/home.md) per risolvere tutte le identità note e anonime di un oggetto, formando un singolo grafico di identità per ogni utente finale. |
-| 2019-05-30 | EOL e Rimuovi proprietà &quot;schema&quot; dai set di dati | La proprietà dataset &quot;schema&quot; ha fornito un collegamento di riferimento allo schema utilizzando l&#39;endpoint `/xdms` obsoleto nell&#39;API [!DNL Catalog]. Questo è stato sostituito da un &quot;schemaRef&quot; che fornisce &quot;id&quot;, &quot;version&quot; e &quot;contentType&quot; dello schema come indicato nella nuova API [!DNL Schema Registry]. |
+| 01/01/2019 | Proprietà &quot;fields&quot; rimossa dai set di dati | I set di dati in precedenza includevano una proprietà &quot;field&quot; che conteneva una copia dello schema. Questa funzionalità non deve più essere utilizzata. Se viene trovata la proprietà &quot;fields&quot;, ignorarla e utilizzare invece &quot;osservSchema&quot; o &quot;schemaRef&quot;. |
+| 03/03/2019 | proprietà &quot;schemaRef&quot; aggiunta ai set di dati | La proprietà &quot;schemaRef&quot; di un set di dati contiene un URI che fa riferimento allo schema XDM su cui è basato il set di dati e rappresenta tutti i campi potenziali che possono essere utilizzati dal set di dati. |
+| 03/03/2019 | Tutti gli identificatori dell&#39;utente finale vengono mappati sulla proprietà &quot;identityMap&quot; | &quot;identityMap&quot; è un&#39;incapsulazione di tutti gli identificatori univoci di un soggetto, come ID CRM, ECID o ID programma fedeltà. Questa mappa viene utilizzata da [[!DNL Identity Service]](../identity-service/home.md) per risolvere tutte le identità note e anonime di un soggetto, creando un unico grafico di identità per ogni utente finale. |
+| 05/05/2019 | Fine del ciclo vita e rimozione della proprietà &quot;schema&quot; dai set di dati | La proprietà &quot;schema&quot; del set di dati ha fornito un collegamento di riferimento allo schema utilizzando l’endpoint `/xdms` obsoleto nell’ API [!DNL Catalog] . Questo è stato sostituito da un &quot;schemaRef&quot; che fornisce &quot;id&quot;, &quot;version&quot; e &quot;contentType&quot; dello schema come indicato nella nuova API [!DNL Schema Registry]. |
