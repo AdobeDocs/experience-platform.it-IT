@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;argomenti comuni;archiviazione cloud;archiviazione cloud
 solution: Experience Platform
 title: Esplorare un sistema di storage ad alta voce utilizzando l’API del servizio di flusso
-topic: ' - Panoramica'
+topic-legacy: overview
 description: Questa esercitazione utilizza l’API del servizio Flusso per esplorare un sistema di archiviazione cloud di terze parti.
+exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
 translation-type: tm+mt
-source-git-commit: 457fc9e1b0c445233f0f574fefd31bc1fc3bafc8
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '821'
-ht-degree: 2%
+source-wordcount: '820'
+ht-degree: 1%
 
 ---
-
 
 # Esplorare un sistema di archiviazione cloud utilizzando l&#39;API [!DNL Flow Service]
 
