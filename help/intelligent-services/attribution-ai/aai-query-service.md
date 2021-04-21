@@ -2,16 +2,16 @@
 keywords: insights;attribution ai;attribution ai insights;AAI query service;query di attribuzione;punteggi di attribuzione
 solution: Intelligent Services, Experience Platform
 title: Analisi dei punteggi di attribuzione tramite Query Service
-topic: Query Attribution AI
+topic-legacy: Attribution AI queries
 description: Scopri come utilizzare Adobe Experience Platform Query Service per analizzare i punteggi delle Attribution AI.
+exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
 translation-type: tm+mt
-source-git-commit: d83244ac93830b0e40f6d14e87497d4cb78544d9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
-
 
 # Analisi dei punteggi di attribuzione tramite Query Service
 
