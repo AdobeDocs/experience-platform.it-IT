@@ -2,16 +2,16 @@
 keywords: Experience Platform;guida per sviluppatori;Data Science Workspace;argomenti comuni;apprendimento automatico in tempo reale;
 solution: Experience Platform
 title: Panoramica sull’apprendimento automatico in tempo reale
-topic: Panoramica
+topic-legacy: Overview
 description: L'apprendimento automatico in tempo reale può migliorare notevolmente la pertinenza dei contenuti dell'esperienza digitale per gli utenti finali. Questo è possibile sfruttando l’inferenza in tempo reale e l’apprendimento continuo su Experience Edge.
+exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 2%
+source-wordcount: '547'
+ht-degree: 1%
 
 ---
-
 
 # Panoramica sull’apprendimento automatico in tempo reale (Alpha)
 
@@ -37,11 +37,11 @@ Il flusso di lavoro seguente illustra i passaggi e i risultati tipici necessari 
 
 ### Acquisizione e preparazione dei dati
 
-I dati vengono acquisiti e trasformati con [!DNL Experience Data Model] (XDM) su Adobe Experience Platform. Questi dati vengono utilizzati per l’addestramento dei modelli. Per ulteriori informazioni su XDM, visita la [panoramica XDM](../../xdm/home.md).
+I dati vengono acquisiti e trasformati con [!DNL Experience Data Model] (XDM) in Adobe Experience Platform. Questi dati vengono utilizzati per l’addestramento dei modelli. Per ulteriori informazioni su XDM, visita la [panoramica XDM](../../xdm/home.md).
 
 ### Authoring
 
-Crea un modello di apprendimento automatico in tempo reale creando un nuovo modello da zero o inserendolo come modello ONNX serializzato pre-addestrato nei notebook Jupyter di Adobe Experience Platform.
+Crea un modello di apprendimento automatico in tempo reale creando un nuovo modello da zero o inserendolo come modello ONNX serializzato pre-addestrato in Adobe Experience Platform Jupyter Notebooks.
 
 ### Implementazione
 
@@ -53,7 +53,7 @@ Utilizza l’endpoint API REST di previsione per generare informazioni sull’ap
 
 ### Consegna
 
-Gli addetti al marketing possono quindi definire segmenti e regole che mappano i punteggi di apprendimento automatico in tempo reale sulle esperienze che utilizzano Adobe Target. Questo consente ai visitatori del sito web del tuo marchio di visualizzare in tempo reale un’esperienza iper-personalizzata della stessa pagina o della pagina successiva.
+Gli addetti al marketing possono quindi definire segmenti e regole che mappano i punteggi di apprendimento automatico in tempo reale sulle esperienze utilizzando Adobe Target. Questo consente ai visitatori del sito web del tuo marchio di visualizzare in tempo reale un’esperienza iper-personalizzata della stessa pagina o della pagina successiva.
 
 ## Funzionalità corrente
 
@@ -73,7 +73,7 @@ L&#39;apprendimento automatico in tempo reale è attualmente in alfa. La funzion
 
 |  | Alfa (maggio) |
 | --- | --- |
-| **Funzioni** | - Utilizzo del modello di blocco appunti RTML, creazione, test e distribuzione di un modello di apprendimento automatico personalizzato. <br> - Supporto per l&#39;importazione di modelli di apprendimento automatico preformati. <br> - SDK per l’apprendimento automatico in tempo reale. <br> - Set iniziale di nodi di authoring. <br> : implementato su Adobe Experience Platform Hub. |
+| **Funzioni** | - Utilizzo del modello di blocco appunti RTML, creazione, test e distribuzione di un modello di apprendimento automatico personalizzato. <br> - Supporto per l&#39;importazione di modelli di apprendimento automatico preformati. <br> - SDK per l’apprendimento automatico in tempo reale. <br> - Set iniziale di nodi di authoring. <br> - Distribuito su Adobe Experience Platform Hub. |
 | **Disponibilità** | America del Nord |
 | **Nodi di authoring** | - Panda <br> - ScikitImpara <br> - ONNXNode <br> - Split <br> - ModelUpload <br> - OneHotEncoder |
 | **Tempi di esecuzione dei punteggi** | ONNX |
@@ -81,4 +81,3 @@ L&#39;apprendimento automatico in tempo reale è attualmente in alfa. La funzion
 ## Passaggi successivi
 
 Per iniziare, segui la guida [guida introduttiva](./getting-started.md) . Questa guida descrive come impostare tutti i prerequisiti necessari per la creazione di un modello di apprendimento automatico in tempo reale.
-
