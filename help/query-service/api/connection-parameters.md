@@ -1,27 +1,27 @@
 ---
-keywords: ' Experience Platform;home;argomenti comuni;servizio query;guida API;parametri di connessione;servizio query;'
+keywords: Experience Platform;home;argomenti popolari;servizio query;guida api;parametri di connessione;servizio query;
 solution: Experience Platform
-title: Endpoint API parametri di connessione
-topic: connection parameters
-description: È possibile recuperare i parametri di connessione per l'utilizzo del servizio interattivo effettuando una richiesta di GET all'endpoint /connection_parameters.
+title: Endpoint API per i parametri di connessione
+topic-legacy: connection parameters
+description: È possibile recuperare i parametri di connessione per l'utilizzo del servizio interattivo effettuando una richiesta GET all'endpoint /connection_parameters.
+exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 1%
 
 ---
 
-
-# Endpoint parametri di connessione
+# Endpoint di connessione
 
 ## Chiamate API di esempio
 
-Ora che hai compreso quali intestazioni utilizzare, sei pronto a iniziare a effettuare chiamate all&#39;API [!DNL Query Service]. Le sezioni seguenti descrivono le varie chiamate API che potete effettuare tramite l&#39;API [!DNL Query Service]. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
+Ora che conosci le intestazioni da utilizzare, sei pronto per iniziare a effettuare chiamate all’ API [!DNL Query Service]. Le sezioni seguenti illustrano le varie chiamate API che puoi effettuare tramite l’ API [!DNL Query Service] . Ciascuna chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e una risposta di esempio.
 
-### Richiedi parametri di connessione
+### Parametri di connessione della richiesta
 
-È possibile recuperare i parametri di connessione effettuando una richiesta di GET all&#39;endpoint `/connection_parameters`. Per ulteriori informazioni sui client che utilizzano i parametri di connessione per connettersi tramite il servizio interattivo, consultare la documentazione sui client [Query Service](../clients/overview.md).
+Puoi recuperare i parametri di connessione effettuando una richiesta GET all’endpoint `/connection_parameters` . Per ulteriori informazioni sui client che utilizzano i parametri di connessione per la connessione tramite il servizio interattivo, consulta la documentazione sui [client del servizio query](../clients/overview.md).
 
 **Formato API**
 
