@@ -3,7 +3,7 @@ audience: user
 user-guide-title: Guida ai dashboard di Adobe Experience Platform
 breadcrumb-title: Guida ai dashboard
 user-guide-description: Visualizza i dati di Experience Platform in dashboard personalizzabili.
-feature: Gestione dati
+feature: Data Management
 translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt

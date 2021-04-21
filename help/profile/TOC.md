@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Guida di Real-time Customer Profile
 user-guide-description: Unisci i dati dei clienti per creare una visualizzazione unificata delle interazioni dei clienti nei diversi canali.
-feature: Profili
+feature: Profiles
 translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt

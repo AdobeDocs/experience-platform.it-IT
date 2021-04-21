@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Guida al catalogo e ai set di dati
 user-guide-description: Esplora la derivazione dei dati, i metadati, le descrizioni dei file, le directory e i set di dati all’interno del Data Lake.
-feature: Gestione dati
+feature: Data Management
 translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;argomenti popolari;Marketo Engage;marketing da coinvolgere;marketo
 solution: Experience Platform
 title: Autenticazione del connettore sorgente Marketo
-topic: ' - Panoramica'
+topic: overview
 description: Questo documento fornisce informazioni su come generare le credenziali di autenticazione Marketo.
 translation-type: tm+mt
 source-git-commit: 2563b413ec35cb4c5f05a54bce6f7271917e51f3

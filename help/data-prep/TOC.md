@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Guida alla preparazione dei dati
 user-guide-description: Prepara i dati per l’inserimento in Adobe Experience Platform.
-feature: Gestione dei dati, acquisizione dei dati
+feature: Data Management, Data Ingestion
 translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt

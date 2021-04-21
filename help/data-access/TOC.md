@@ -3,7 +3,7 @@ audience: user
 user-guide-title: Accesso ai dati di Adobe Experience Platform
 breadcrumb-title: Guida all’accesso ai dati
 user-guide-description: Scopri e accedi ai set di dati acquisiti all’interno di Platform.
-feature: Gestione dei dati, acquisizione dei dati
+feature: Data Management, Data Ingestion
 translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt

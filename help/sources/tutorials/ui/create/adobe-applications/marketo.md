@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;argomenti comuni;connettore sorgente Marketo;connettore Marketo;sorgente Marketo;Marketo
 solution: Experience Platform
 title: Creare un connettore sorgente di Marketo Engage nell’interfaccia utente
-topic: ' - Panoramica'
+topic: overview
 type: Tutorial
 description: Questa esercitazione fornisce passaggi per creare un connettore di origine di Marketo Engage nell’interfaccia utente per inserire dati B2B in Adobe Experience Platform.
 translation-type: tm+mt

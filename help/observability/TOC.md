@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Guida alle informazioni sull’osservabilità
 user-guide-description: Monitora le attività di Platform mediante l’uso di metriche statistiche e notifiche di eventi.
-feature: Gestione dati
+feature: Data Management
 translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt

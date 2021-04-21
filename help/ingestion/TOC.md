@@ -3,7 +3,7 @@ audience: user
 user-guide-title: Guida all’acquisizione dei dati di Adobe Experience Platform
 breadcrumb-title: Guida all’acquisizione dei dati
 user-guide-description: Trasferisci i tuoi dati in Platform tramite l’acquisizione in batch o in streaming.
-feature: Acquisizione dei dati
+feature: Data Ingestion
 translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt

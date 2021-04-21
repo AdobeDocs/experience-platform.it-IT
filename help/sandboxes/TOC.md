@@ -3,7 +3,7 @@ audience: user
 user-guide-title: Guida alle sandbox di Adobe Experience Platform
 breadcrumb-title: Guida alle sandbox
 user-guide-description: Suddividi un’istanza di Platform in ambienti virtuali per lo sviluppo, il test e la distribuzione di applicazioni.
-feature: Gestione dati
+feature: Data Management
 translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
