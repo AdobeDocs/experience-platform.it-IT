@@ -7,18 +7,14 @@ type: Tutorial
 description: Scopri come creare una connessione sorgente Oracle DB utilizzando l’interfaccia utente Adobe Experience Platform.
 exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '448'
 ht-degree: 1%
 
 ---
 
 # Creare una connessione sorgente [!DNL Oracle DB] nell&#39;interfaccia utente
-
->[!NOTE]
->
-> Il connettore [!DNL Oracle DB] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la [Panoramica delle sorgenti](../../../../home.md#terms-and-conditions) .
 
 I connettori sorgente in Adobe Experience Platform consentono di acquisire dati provenienti dall’esterno su base pianificata. Questa esercitazione descrive i passaggi necessari per creare un connettore sorgente [!DNL Oracle DB] utilizzando l&#39;interfaccia utente [!DNL Platform].
 
