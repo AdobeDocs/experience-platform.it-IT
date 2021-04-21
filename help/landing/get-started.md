@@ -1,11 +1,11 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari'
+keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
-title: Guida introduttiva ad Adobe Experience Platform
-topic: getting started
-description: Questo video fornisce un'introduzione rapida  Experience Platform e illustra le sfide aziendali che risolve.
+title: Guida introduttiva a Adobe Experience Platform
+topic-legacy: getting started
+description: Questo video fornisce un rapido Experience Platform e illustra le problematiche aziendali che risolve.
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 12%
@@ -15,6 +15,6 @@ ht-degree: 12%
 
 # Introduzione ad Adobe Experience Platform
 
-Questo video fornisce una breve introduzione a [!DNL Experience Platform] e illustra alcune delle sfide aziendali che risolve.
+Questo video fornisce una breve introduzione a [!DNL Experience Platform] e illustra alcune delle problematiche aziendali che risolve.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)
