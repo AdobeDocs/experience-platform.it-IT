@@ -2,17 +2,17 @@
 keywords: Experience Platform;JupyterLab;notebook;Data Science Workspace;argomenti comuni;servizio query
 solution: Experience Platform
 title: Servizio query nel blocco appunti Jupyter
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform consente di utilizzare SQL (Structured Query Language) in Data Science Workspace integrando Query Service in JupyterLab come funzionalità standard. Questa esercitazione illustra query SQL di esempio per casi d'uso comuni per l'esplorazione, la trasformazione e l'analisi dei dati di Adobe Analytics.
+exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
 translation-type: tm+mt
-source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '810'
 ht-degree: 1%
 
 ---
-
 
 # Servizio query nel blocco appunti Jupyter
 
