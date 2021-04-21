@@ -1,19 +1,19 @@
 ---
-keywords: ' Experience Platform;home;argomenti comuni;elenco dei nomi;elenco dei nomi'
+keywords: Experience Platform;home;argomenti popolari;elenco dei namespace;elenco dei namespace
 solution: Experience Platform
-title: Elenca spazi dei nomi identità disponibili
-topic: API guide
-description: Elenca tutti gli spazi dei nomi disponibili.
+title: Elencare spazi dei nomi di identità disponibili
+topic-legacy: API guide
+description: Elenca tutti i namespace disponibili.
+exl-id: b65e5f86-143d-4ca5-8b3f-2c0a24433bbf
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '79'
 ht-degree: 5%
 
 ---
 
-
-# Elenca spazi dei nomi di identità disponibili
+# Elencare spazi dei nomi di identità disponibili
 
 **Formato API**
 
@@ -34,7 +34,7 @@ curl -X GET \
 
 **Risposta**
 
-La risposta include un array di oggetti, con ogni oggetto che rappresenta uno spazio dei nomi disponibile. Gli spazi dei nomi con il valore &quot;[!UICONTROL custom]&quot; di &quot;[!UICONTROL false]&quot; sono spazi dei nomi standard, mentre quelli con il valore &quot;[!UICONTROL custom]&quot; di &quot;[!UICONTROL true]&quot; sono spazi dei nomi creati dall&#39;organizzazione.
+La risposta include un array di oggetti, ciascuno dei quali rappresenta uno spazio dei nomi disponibile. I namespace con un valore &quot;[!UICONTROL custom]&quot; di &quot;[!UICONTROL false]&quot; sono spazi dei nomi standard, mentre quelli con un valore &quot;[!UICONTROL custom]&quot; di &quot;[!UICONTROL true]&quot; sono spazi dei nomi creati dalla tua organizzazione.
 
 >[!NOTE]
 >
@@ -80,4 +80,4 @@ La risposta include un array di oggetti, con ogni oggetto che rappresenta uno sp
 
 ## Passaggi successivi
 
-Passate all&#39;esercitazione successiva per [creare uno spazio dei nomi personalizzato](./create-custom-namespace.md)
+Procedi all’esercitazione successiva su [creare uno spazio dei nomi personalizzato](./create-custom-namespace.md)
