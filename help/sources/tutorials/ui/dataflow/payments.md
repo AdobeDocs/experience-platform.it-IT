@@ -1,184 +1,184 @@
 ---
-keywords: ' Experience Platform;casa;argomenti comuni;connettore pagamento'
+keywords: Experience Platform;home;argomenti comuni;connettore pagamenti
 solution: Experience Platform
-title: Configurare un flusso di dati per una connessione all'origine del pagamento nell'interfaccia utente
-topic: overview
+title: Configurare un flusso di dati per una connessione all’origine del pagamento nell’interfaccia utente
+topic-legacy: overview
 type: Tutorial
-description: Un flusso di dati è un'attività pianificata che recupera e trasferisce dati da un'origine a un set di dati Adobe Experience Platform. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando il tuo account di pagamento.
+description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati Adobe Experience Platform. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando il tuo account di pagamento.
+exl-id: 7355435b-c038-4310-b04a-8ac6b6723b9b
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1400'
 ht-degree: 0%
 
 ---
 
+# Configurare un flusso di dati per una connessione di pagamento nell’interfaccia utente
 
-# Configurare un flusso di dati per una connessione di pagamento nell&#39;interfaccia utente
-
-Un flusso di dati è un&#39;attività pianificata che recupera e trasferisce dati da un&#39;origine a un set di dati Adobe Experience Platform. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando il tuo account di pagamento.
+Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati Adobe Experience Platform. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando il tuo account di pagamento.
 
 ## Introduzione
 
-Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa esercitazione richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)] Sistema](../../../../xdm/home.md): Il framework standard con cui  [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza dei clienti.
-   - [Nozioni di base sulla composizione](../../../../xdm/schema/composition.md) dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
-   - [Esercitazione](../../../../xdm/tutorials/create-schema-ui.md) sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
-- [[!DNL Real-time Customer Profile]](../../../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+- [[!DNL Experience Data Model (XDM)] Sistema](../../../../xdm/home.md): Il framework standardizzato in base al quale  [!DNL Experience Platform] vengono organizzati i dati sulla customer experience.
+   - [Nozioni di base sulla composizione](../../../../xdm/schema/composition.md) dello schema: Scopri i blocchi di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
+   - [Esercitazione](../../../../xdm/tutorials/create-schema-ui.md) dell’Editor di schema: Scopri come creare schemi personalizzati utilizzando l’interfaccia utente dell’Editor di schema.
+- [[!DNL Real-time Customer Profile]](../../../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
-Inoltre, questa esercitazione richiede che sia già stato creato un conto pagamenti. Un elenco di esercitazioni per la creazione di diversi connettori di pagamento nell&#39;interfaccia utente è disponibile nella [panoramica dei connettori di origine](../../../home.md).
+Inoltre, questa esercitazione richiede che tu abbia già creato un account di pagamento. Un elenco di esercitazioni per la creazione di diversi connettori di pagamento nell&#39;interfaccia utente è disponibile nella [panoramica dei connettori sorgente](../../../home.md).
 
 ## Seleziona dati
 
-Dopo aver creato il conto pagamenti, viene visualizzato il passaggio **[!UICONTROL Select data]**, che fornisce un&#39;interfaccia interattiva per esplorare la gerarchia dei file.
+Dopo aver creato l&#39;account di pagamento, viene visualizzato il passaggio **[!UICONTROL Select data]** , che fornisce un&#39;interfaccia interattiva per esplorare la gerarchia dei file.
 
 - La metà sinistra dell&#39;interfaccia è un browser di directory che visualizza i file e le directory del server.
-- La metà destra dell&#39;interfaccia consente di visualizzare in anteprima fino a 100 righe di dati da un file compatibile.
+- La metà destra dell’interfaccia consente di visualizzare in anteprima fino a 100 righe di dati da un file compatibile.
 
-È possibile utilizzare l&#39;opzione **[!UICONTROL Search]** nella parte superiore della pagina per identificare rapidamente i dati di origine che si intende utilizzare.
+Puoi utilizzare l’opzione **[!UICONTROL Search]** nella parte superiore della pagina per identificare rapidamente i dati di origine che intendi utilizzare.
 
 >[!NOTE]
 >
->L&#39;opzione per i dati dell&#39;origine di ricerca è disponibile per tutti i connettori sorgente basati su tabelle, ad eccezione dei connettori Analytics, Classifications, Event Hubs e Kinesis.
+>L’opzione per i dati dell’origine di ricerca è disponibile per tutti i connettori sorgente basati su tabelle, esclusi i connettori Analytics, Classificazioni, Hubs evento e Kinesis.
 
-Una volta trovati i dati di origine, selezionate la directory, quindi fate clic su **[!UICONTROL Next]**.
+Una volta trovati i dati di origine, seleziona la directory, quindi fai clic su **[!UICONTROL Next]**.
 
 ![select-data](../../../images/tutorials/dataflow/all-tabular/select-data.png)
 
-## Mappatura dei campi dati su uno schema XDM
+## Mappatura di campi dati su uno schema XDM
 
-Viene visualizzato il passaggio **[!UICONTROL Mapping]**, che fornisce un&#39;interfaccia interattiva per mappare i dati di origine su un set di dati [!DNL Platform].
+Viene visualizzato il passaggio **[!UICONTROL Mapping]** che fornisce un&#39;interfaccia interattiva per mappare i dati di origine a un set di dati [!DNL Platform].
 
-Scegliere un set di dati in entrata in cui assimilare i dati. È possibile utilizzare un set di dati esistente o crearne uno nuovo.
+Scegli un set di dati in entrata in cui acquisire i dati. Puoi utilizzare un set di dati esistente o crearne uno nuovo.
 
-### Utilizzare un dataset esistente
+### Utilizzare un set di dati esistente
 
-Per assimilare i dati in un dataset esistente, selezionare **[!UICONTROL Use existing dataset]**, quindi fare clic sull&#39;icona del dataset.
+Per acquisire dati in un set di dati esistente, seleziona **[!UICONTROL Use existing dataset]**, quindi fai clic sull’icona del set di dati.
 
 ![use-existing-dataset](../../../images/tutorials/dataflow/payments/existing-dataset.png)
 
-Viene visualizzata la finestra di dialogo **[!UICONTROL Select dataset]**. Trovare il set di dati che si desidera utilizzare, selezionarlo, quindi fare clic su **[!UICONTROL Continue]**.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Select dataset]**. Trova il set di dati che desideri utilizzare, selezionalo, quindi fai clic su **[!UICONTROL Continue]**.
 
 ![select-existing-dataset](../../../images/tutorials/dataflow/payments/select-dataset.png)
 
-### Utilizza un nuovo set di dati
+### Utilizzare un nuovo set di dati
 
-Per inserire i dati in un nuovo dataset, selezionare **[!UICONTROL Create new dataset]** e immettere un nome e una descrizione per il dataset nei campi forniti.
+Per acquisire dati in un nuovo set di dati, seleziona **[!UICONTROL Create new dataset]** e immetti un nome e una descrizione per il set di dati nei campi forniti.
 
-È possibile allegare un campo dello schema immettendo un nome dello schema nella barra di ricerca **[!UICONTROL Select schema]**. Potete anche selezionare l&#39;icona a discesa per visualizzare un elenco degli schemi esistenti. In alternativa, potete selezionare **[!UICONTROL Advanced search]** per accedere alla schermata degli schemi esistenti, inclusi i rispettivi dettagli.
+È possibile allegare un campo schema immettendo un nome schema nella barra di ricerca **[!UICONTROL Select schema]**. Puoi anche selezionare l’icona a discesa per visualizzare un elenco degli schemi esistenti. In alternativa, puoi selezionare **[!UICONTROL Advanced search]** per accedere alla schermata degli schemi esistenti, inclusi i rispettivi dettagli.
 
-Durante questo passaggio, potete abilitare il dataset per [!DNL Real-time Customer Profile] e creare una visualizzazione olistica degli attributi e dei comportamenti di un&#39;entità. I dati di tutti i set di dati abilitati saranno inclusi in [!DNL Profile] e le modifiche verranno applicate al salvataggio del flusso di dati.
+Durante questo passaggio, puoi abilitare il set di dati per [!DNL Real-time Customer Profile] e creare una visualizzazione olistica degli attributi e dei comportamenti di un’entità. I dati di tutti i set di dati abilitati verranno inclusi in [!DNL Profile] e le modifiche vengono applicate al salvataggio del flusso di dati.
 
-Attivate il pulsante **[!UICONTROL Profile dataset]** per abilitare il set di dati di destinazione per [!DNL Profile].
+Attiva il pulsante **[!UICONTROL Profile dataset]** per abilitare il set di dati di destinazione per [!DNL Profile].
 
 ![create-new-dataset](../../../images/tutorials/dataflow/payments/new-dataset.png)
 
-Viene visualizzata la finestra di dialogo **[!UICONTROL Select schema]**. Selezionare lo schema che si desidera applicare al nuovo dataset, quindi fare clic su **[!UICONTROL Done]**.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Select schema]**. Seleziona lo schema da applicare al nuovo set di dati, quindi fai clic su **[!UICONTROL Done]**.
 
 ![select-schema](../../../images/tutorials/dataflow/payments/select-schema.png)
 
-In base alle esigenze, è possibile scegliere di mappare direttamente i campi oppure utilizzare le funzioni di mappatura per trasformare i dati di origine in modo da derivare i valori calcolati o calcolati. Per ulteriori informazioni sulla mappatura dei dati e sulle funzioni di mappatura, fare riferimento all&#39;esercitazione sulla [mappatura dei dati CSV ai campi dello schema XDM](../../../../ingestion/tutorials/map-a-csv-file.md).
+In base alle tue esigenze, puoi scegliere di mappare direttamente i campi oppure utilizzare funzioni di mappatura per trasformare i dati di origine in valori calcolati o calcolati. Per ulteriori informazioni sulla mappatura dei dati e sulle funzioni di mappatura, consulta l’esercitazione sulla [mappatura dei dati CSV nei campi dello schema XDM](../../../../ingestion/tutorials/map-a-csv-file.md).
 
 >[!TIP]
 >
->[!DNL Platform] fornisce raccomandazioni intelligenti per i campi mappati automaticamente in base allo schema di destinazione o al dataset selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi di utilizzo.
+>[!DNL Platform] fornisce consigli intelligenti per i campi mappati automaticamente in base allo schema o al set di dati di destinazione selezionato. Puoi regolare manualmente le regole di mappatura in base ai tuoi casi d’uso.
 
 ![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
 
-Selezionare **[!UICONTROL Preview data]** per visualizzare i risultati della mappatura fino a 100 righe di dati di esempio dal set di dati selezionato.
+Seleziona **[!UICONTROL Preview data]** per visualizzare i risultati della mappatura di fino a 100 righe di dati di esempio dal set di dati selezionato.
 
-Durante l&#39;anteprima, la colonna dell&#39;identità ha priorità come primo campo, in quanto rappresenta le informazioni chiave necessarie per convalidare i risultati della mappatura.
+Durante l’anteprima, la colonna Identity ha la priorità come primo campo, in quanto rappresenta le informazioni chiave necessarie per la convalida dei risultati della mappatura.
 
 ![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
 
-Una volta mappati i dati di origine, selezionare **[!UICONTROL Close]**.
+Una volta mappati i dati di origine, seleziona **[!UICONTROL Close]**.
 
-## Pianificare le esecuzioni dell&#39;assimilazione
+## Pianifica esecuzioni di acquisizione
 
-Viene visualizzato il passaggio **[!UICONTROL Scheduling]**, che consente di configurare una pianificazione di assimilazione per l&#39;acquisizione automatica dei dati di origine selezionati tramite le mappature configurate. Nella tabella seguente sono riportati i diversi campi configurabili per la pianificazione:
+Viene visualizzato il passaggio **[!UICONTROL Scheduling]** , che consente di configurare una pianificazione dell’acquisizione per acquisire automaticamente i dati di origine selezionati utilizzando le mappature configurate. La tabella seguente illustra i diversi campi configurabili per la pianificazione:
 
 | Campo | Descrizione |
 | --- | --- |
 | Frequenza | Le frequenze selezionabili sono `Once`, `Minute`, `Hour`, `Day` e `Week`. |
 | Intervallo | Un numero intero che imposta l&#39;intervallo per la frequenza selezionata. |
-| Ora di inizio | Una marca temporale UTC che indica quando è impostata la prima assimilazione. |
-| Backfill | Un valore booleano che determina i dati inizialmente acquisiti. Se **[!UICONTROL Backfill]** è abilitato, tutti i file correnti nel percorso specificato verranno acquisiti durante la prima assimilazione pianificata. Se **[!UICONTROL Backfill]** è disattivato, verranno acquisiti solo i file caricati tra la prima esecuzione dell&#39;assimilazione e l&#39;ora di inizio. I file caricati prima dell&#39;ora di inizio non vengono assimilati. |
-| Colonna Delta | Opzione con un set filtrato di campi dello schema di origine di tipo, data o ora. Questo campo è utilizzato per distinguere tra dati nuovi ed esistenti. I dati incrementali verranno acquisiti in base alla marca temporale della colonna selezionata. |
+| Ora di inizio | Una marca temporale UTC che indica quando è impostata la prima acquisizione. |
+| Backfill | Un valore booleano che determina i dati inizialmente acquisiti. Se **[!UICONTROL Backfill]** è abilitato, tutti i file correnti nel percorso specificato verranno acquisiti durante la prima acquisizione pianificata. Se **[!UICONTROL Backfill]** è disabilitato, verranno acquisiti solo i file caricati tra la prima esecuzione dell’acquisizione e l’ora di inizio. I file caricati prima dell’ora di inizio non vengono acquisiti. |
+| Colonna Delta | Opzione con un set filtrato di campi dello schema di origine di tipo, data o ora. Questo campo viene utilizzato per distinguere tra dati nuovi ed esistenti. I dati incrementali verranno acquisiti in base al timestamp della colonna selezionata. |
 
-I flussi di dati sono progettati per l&#39;acquisizione automatica dei dati su base programmata. Per iniziare, selezionate la frequenza di assimilazione. Quindi, impostare l&#39;intervallo per specificare il periodo tra due esecuzioni di flusso. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero e deve essere impostato su maggiore o uguale a 15.
+I flussi di dati sono progettati per acquisire automaticamente i dati su base pianificata. Inizia selezionando la frequenza di acquisizione. Quindi, impostare l&#39;intervallo per indicare il periodo tra due esecuzioni di flusso. Il valore dell&#39;intervallo deve essere un numero intero diverso da zero e deve essere impostato su maggiore o uguale a 15.
 
-Per impostare l’ora di inizio dell’assimilazione, regolate la data e l’ora visualizzate nella casella Ora di inizio. In alternativa, potete selezionare l&#39;icona del calendario per modificare il valore dell&#39;ora di inizio. L&#39;ora di inizio deve essere maggiore o uguale all&#39;ora UTC corrente.
+Per impostare l’ora di inizio per l’acquisizione, regola la data e l’ora visualizzate nella casella dell’ora di inizio. In alternativa, puoi selezionare l’icona del calendario per modificare il valore dell’ora di inizio. L’ora di inizio deve essere maggiore o uguale all’ora UTC corrente.
 
-Selezionare **[!UICONTROL Load incremental data by]** per assegnare la colonna delta. Questo campo consente di distinguere tra dati nuovi ed esistenti.
+Seleziona **[!UICONTROL Load incremental data by]** per assegnare la colonna delta. Questo campo distingue tra dati nuovi ed esistenti.
 
 ![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
 
-### Impostazione di un flusso di dati per l’assimilazione una tantum
+### Configurare un flusso di dati di acquisizione una tantum
 
-Per impostare l&#39;inserimento una tantum, selezionate la freccia a discesa di frequenza e selezionate **[!UICONTROL Once]**.
+Per impostare l’acquisizione una tantum, seleziona la freccia a discesa della frequenza e seleziona **[!UICONTROL Once]**.
 
 >[!TIP]
 >
->**[!UICONTROL Interval]** e non  **[!UICONTROL Backfill]** sono visibili durante un&#39;assimilazione una tantum.
+>**[!UICONTROL Interval]** e non  **[!UICONTROL Backfill]** sono visibili durante un’acquisizione una tantum.
 
-Dopo aver fornito i valori appropriati alla pianificazione, selezionare **[!UICONTROL Next]**.
+Dopo aver fornito i valori appropriati alla pianificazione, seleziona **[!UICONTROL Next]**.
 
 ![](../../../images/tutorials/dataflow/databases/schedule-once.png)
 
 ## Fornire i dettagli del flusso di dati
 
-Viene visualizzato il passaggio **[!UICONTROL Dataflow detail]**, che consente di assegnare un nome e una breve descrizione al nuovo flusso di dati.
+Viene visualizzato il passaggio **[!UICONTROL Dataflow detail]** , che consente di assegnare un nome e una breve descrizione del nuovo flusso di dati.
 
-Durante questo processo, è inoltre possibile abilitare **[!UICONTROL Partial ingestion]** e **[!UICONTROL Error diagnostics]**. L&#39;abilitazione di **[!UICONTROL Partial ingestion]** consente di assimilare i dati contenenti errori fino a una determinata soglia. Una volta che **[!UICONTROL Partial ingestion]** è abilitato, trascinare il quadrante **[!UICONTROL Error threshold %]** per regolare la soglia di errore del batch. In alternativa, è possibile regolare manualmente la soglia selezionando la casella di input. Per ulteriori informazioni, vedere la [panoramica sull&#39;assimilazione parziale dei batch](../../../../ingestion/batch-ingestion/partial.md).
+Durante questo processo, puoi anche abilitare **[!UICONTROL Partial ingestion]** e **[!UICONTROL Error diagnostics]**. L’abilitazione di **[!UICONTROL Partial ingestion]** consente di acquisire dati contenenti errori fino a una determinata soglia. Una volta abilitato **[!UICONTROL Partial ingestion]**, trascina il comando **[!UICONTROL Error threshold %]** per regolare la soglia di errore del batch. In alternativa, è possibile regolare manualmente la soglia selezionando la casella di input. Per ulteriori informazioni, consulta la [panoramica sull’acquisizione parziale dei batch](../../../../ingestion/batch-ingestion/partial.md).
 
-Immettete i valori per il flusso di dati e selezionate **[!UICONTROL Next]**.
+Immetti i valori per il flusso di dati e seleziona **[!UICONTROL Next]**.
 
 ![dataflow-details](../../../images/tutorials/dataflow/all-tabular/dataflow-detail.png)
 
-## Controllare il flusso di dati
+## Controlla il tuo flusso di dati
 
-Viene visualizzato il passaggio **[!UICONTROL Review]**, che consente di rivedere il nuovo flusso di dati prima che venga creato. I dettagli sono raggruppati nelle seguenti categorie:
+Viene visualizzato il passaggio **[!UICONTROL Review]** , che consente di rivedere il nuovo flusso di dati prima della creazione. I dettagli sono raggruppati nelle seguenti categorie:
 
 - **[!UICONTROL Connection]**: Mostra il tipo di origine, il percorso pertinente del file di origine scelto e la quantità di colonne all&#39;interno del file di origine.
 - **[!UICONTROL Assign dataset & map fields]**: Mostra il set di dati in cui vengono acquisiti i dati di origine, incluso lo schema a cui il set di dati aderisce.
-- **[!UICONTROL Scheduling]**: Mostra il periodo, la frequenza e l’intervallo attivi della pianificazione di assimilazione.
+- **[!UICONTROL Scheduling]**: Mostra il periodo, la frequenza e l’intervallo attivi della pianificazione dell’acquisizione.
 
-Dopo aver rivisto il flusso di dati, fate clic su **[!UICONTROL Finish]** e lasciate che sia possibile creare il flusso di dati.
+Dopo aver esaminato il flusso di dati, fai clic su **[!UICONTROL Finish]** e consenti la creazione del flusso di dati.
 
-![review](../../../images/tutorials/dataflow/payments/review.png)
+![revisione](../../../images/tutorials/dataflow/payments/review.png)
 
 ## Monitorare il flusso di dati
 
-Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti attraverso di esso per visualizzare informazioni su velocità di assimilazione, successo ed errori. Per ulteriori informazioni su come monitorare il flusso di dati, consulta l&#39;esercitazione su [monitorare gli account e i flussi di dati nell&#39;interfaccia utente](../monitor.md).
+Una volta creato il flusso di dati, puoi monitorare i dati che vengono acquisiti tramite di esso per visualizzare informazioni sui tassi di acquisizione, sul successo e sugli errori. Per ulteriori informazioni su come monitorare il flusso di dati, consulta l’esercitazione su [monitoraggio di account e flussi di dati nell’interfaccia utente](../monitor.md).
 
-## Eliminare il flusso di dati
+## Elimina il flusso di dati
 
-È possibile eliminare i flussi di dati che non sono più necessari o che sono stati creati in modo non corretto utilizzando la funzione **[!UICONTROL Delete]** disponibile nell&#39;area di lavoro **[!UICONTROL Dataflows]**. Per ulteriori informazioni sull&#39;eliminazione dei flussi di dati, vedere l&#39;esercitazione sull&#39;eliminazione dei flussi di dati nell&#39;interfaccia utente](../delete.md).[
+È possibile eliminare i flussi di dati che non sono più necessari o che sono stati creati in modo errato utilizzando la funzione **[!UICONTROL Delete]** disponibile nell&#39;area di lavoro **[!UICONTROL Dataflows]**. Per ulteriori informazioni su come eliminare i flussi di dati, consulta l’esercitazione sull’ [eliminazione dei flussi di dati nell’interfaccia utente](../delete.md).
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato con successo un flusso di dati per inserire i dati da un sistema di automazione del marketing e hai acquisito informazioni approfondite sul monitoraggio dei set di dati. I dati in entrata possono ora essere utilizzati dai servizi a valle [!DNL Platform] quali [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i documenti seguenti:
+Seguendo questa esercitazione, hai creato correttamente un flusso di dati per inserire i dati da un sistema di automazione del marketing e hai acquisito informazioni sul monitoraggio dei set di dati. I dati in entrata possono ora essere utilizzati dai servizi a valle [!DNL Platform] come [!DNL Real-time Customer Profile] e [!DNL Data Science Workspace]. Per ulteriori informazioni, consulta i seguenti documenti:
 
 - [[!DNL Real-time Customer Profile] panoramica](../../../../profile/home.md)
 - [[!DNL Data Science Workspace] panoramica](../../../../data-science-workspace/home.md)
 
 ## Appendice
 
-Le sezioni seguenti forniscono informazioni aggiuntive sull&#39;utilizzo dei connettori di origine.
+Le sezioni seguenti forniscono informazioni aggiuntive per l’utilizzo dei connettori sorgente.
 
-### Disattivazione di un flusso di dati
+### Disattiva un flusso di dati
 
-Quando un flusso di dati viene creato, diventa immediatamente attivo e i dati vengono acquisiti in base alla pianificazione specificata. Puoi disattivare un flusso di dati attivo in qualsiasi momento seguendo le istruzioni riportate di seguito.
+Quando un flusso di dati viene creato, diventa immediatamente attivo e acquisisce i dati in base alla pianificazione specificata. Puoi disattivare un flusso di dati attivo in qualsiasi momento seguendo le istruzioni riportate di seguito.
 
-Nella schermata **[!UICONTROL Dataflows]**, selezionate il nome del flusso di dati da disattivare.
+Nella schermata **[!UICONTROL Dataflows]** , seleziona il nome del flusso di dati da disattivare.
 
 ![browse-dataset-flow](../../../images/tutorials/dataflow/payments/view-dataset-flows.png)
 
-La colonna **[!UICONTROL Properties]** viene visualizzata sul lato destro dello schermo. Questo pannello contiene un pulsante di attivazione/disattivazione **[!UICONTROL Enabled]**. Fate clic sull’interruttore per disattivare il flusso di dati. La stessa opzione può essere utilizzata per riattivare un flusso di dati dopo che è stato disabilitato.
+La colonna **[!UICONTROL Properties]** viene visualizzata sul lato destro dello schermo. Questo pannello contiene un pulsante di attivazione/disattivazione **[!UICONTROL Enabled]**. Fai clic sull’interruttore per disattivare il flusso di dati. La stessa opzione può essere utilizzata per riattivare un flusso di dati dopo che è stato disabilitato.
 
 ![disable](../../../images/tutorials/dataflow/payments/disable.png)
 
 ### Attivare i dati in entrata per la popolazione [!DNL Profile]
 
-I dati in entrata provenienti dal connettore di origine possono essere utilizzati per arricchire e compilare i dati [!DNL Real-time Customer Profile]. Per ulteriori informazioni sulla compilazione dei dati [!DNL Real-time Customer Profile], vedere l&#39;esercitazione sulla popolazione di [profili](../profile.md).
+I dati in entrata provenienti dal connettore di origine possono essere utilizzati per arricchire e popolare i dati [!DNL Real-time Customer Profile]. Per ulteriori informazioni sulla compilazione dei dati [!DNL Real-time Customer Profile], consulta l’esercitazione su [Popolazione di profili](../profile.md).
