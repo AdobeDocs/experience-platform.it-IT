@@ -3,16 +3,16 @@ keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
 title: Connettiti alle destinazioni di marketing e-mail e attiva i dati utilizzando l’API del servizio di flusso
 description: Questo documento tratta la creazione di destinazioni di marketing e-mail utilizzando l’API Adobe Experience Platform
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1702'
+source-wordcount: '1700'
 ht-degree: 1%
 
 ---
-
 
 # Connettiti alle destinazioni di marketing e-mail e attiva i dati utilizzando l’API del servizio di flusso
 
@@ -594,7 +594,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 * `{DATAFLOW_ID}`: Utilizza il flusso di dati ottenuto nel passaggio precedente.
 * `{ETAG}`: Utilizza il tag ottenuto nel passaggio precedente.
 * `{SEGMENT_ID}`: Fornisci l’ID del segmento da esportare a questa destinazione. Per recuperare gli ID del segmento per i segmenti che si desidera attivare, vai su **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, seleziona **[!UICONTROL Segmentation Service API]** nel menu di navigazione a sinistra e cerca l&#39;operazione `GET /segment/definitions` in **[!UICONTROL Segment Definitions]**.
-* `{PROFILE_ATTRIBUTE}`: Ad esempio, `"person.lastName"`
+* `{PROFILE_ATTRIBUTE}`: Esempio, `"person.lastName"`
 
 **Risposta**
 
