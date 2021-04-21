@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 73ecf6e6f9796088e2d14f9dc3d9667104b22a8e
+source-git-commit: 875d3838e16a3b79fa9ab3ec61e4ffb15ea1cf20
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 14%
+source-wordcount: '728'
+ht-degree: 12%
 
 ---
 
@@ -21,6 +21,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Intelligent Services]](#intelligent-services)
+- [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
@@ -61,6 +62,21 @@ Attribution AI viene utilizzato per attribuire il merito ai punti di contatto da
 | Supporto per i dati di Adobe Analytics | È stata aggiornata la funzionalità per supportare i set di dati Adobe Analytics tramite il connettore di origine Analytics senza la necessità di ETL dei dati per conformarsi allo schema CEE (Consumer Experience Event). |
 
 Per ulteriori informazioni sui set di dati supportati, consulta la [[!DNL Intelligent Services] documentazione sulla preparazione dei dati](../../intelligent-services/data-preparation.md).
+
+## Servizio di segmentazione {#segmentation}
+
+Il servizio di segmentazione di Adobe Experience Platform fornisce un’interfaccia utente e un’API RESTful che consente di creare segmenti e generare tipi di pubblico dai dati [!DNL Real-time Customer Profile]. Questi segmenti sono configurati e mantenuti a livello centrale su [!DNL Platform], rendendoli facilmente accessibili da qualsiasi applicazione Adobe.
+
+[!DNL Segmentation Service] definisce un particolare sottoinsieme di profili descrivendo i criteri che distinguono un gruppo di persone commerciabili all’interno della base cliente. I segmenti possono essere basati su dati di record (come informazioni demografiche) o su eventi di serie temporali che rappresentano le interazioni dei clienti con il tuo marchio.
+
+**Nuove funzionalità**
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Funzioni di aggregazione aggiuntive | Le funzioni di conteggio sono state aggiunte nel Generatore di segmenti. Le funzioni di conteggio consentono di contare il numero di volte in cui l’evento specificato è stato eseguito. Ulteriori informazioni sulle funzioni di conteggio sono disponibili nella sezione delle funzioni di conteggio della [guida del Generatore di segmenti](../../segmentation/ui/segment-builder.md#count-functions) |
+
+Per ulteriori informazioni su [!DNL Segmentation Service], consulta la [Panoramica sulla segmentazione](../../segmentation/home.md).
+
 
 ## [!DNL Sources] {#sources}
 
