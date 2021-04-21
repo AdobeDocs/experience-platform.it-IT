@@ -1,37 +1,37 @@
 ---
-keywords: Experience Platform ;Esercitazione;tubazione delle funzioni;Area di lavoro delle scienze dei dati;argomenti più comuni
+keywords: Experience Platform;Tutorial;pipeline delle funzioni;Data Science Workspace;argomenti comuni
 title: Creare una pipeline di feature utilizzando l’SDK per l’authoring dei modelli
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: Adobe Experience Platform consente di creare e creare condutture di funzionalità personalizzate per eseguire la progettazione di funzionalità su scala tramite il runtime Sensei Machine Learning Framework. Questo documento descrive le varie classi rilevate in una pipeline delle funzioni e fornisce un'esercitazione dettagliata per la creazione di una pipeline delle funzioni personalizzata tramite l'SDK per l'authoring dei modelli in PySpark.
+description: Adobe Experience Platform consente di creare e creare pipeline di funzioni personalizzate per eseguire l’ingegneria delle funzioni su larga scala tramite il runtime Sensei Machine Learning Framework. Questo documento descrive le varie classi presenti in una pipeline di funzioni e fornisce un’esercitazione dettagliata per la creazione di una pipeline di funzioni personalizzata tramite l’SDK per l’authoring dei modelli in PySpark.
+exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1441'
 ht-degree: 0%
 
 ---
 
-
-# Creazione di una pipeline di feature mediante l’SDK per l’authoring dei modelli
+# Creare una pipeline di feature utilizzando l’SDK per l’authoring dei modelli
 
 >[!IMPORTANT]
 >
-> Le pipeline delle funzioni sono attualmente disponibili solo tramite API.
+> Le pipeline di funzioni sono attualmente disponibili solo tramite API.
 
-Adobe Experience Platform consente di creare e creare tubazioni di feature personalizzate per eseguire la progettazione di feature in scala tramite il runtime Sensei Machine Learning Framework (di seguito &quot;Runtime&quot;).
+Adobe Experience Platform consente di creare e creare pipeline di funzioni personalizzate per eseguire l’ingegneria delle funzioni su larga scala tramite il runtime Sensei Machine Learning Framework (in seguito denominato &quot;Runtime&quot;).
 
-Questo documento descrive le varie classi rilevate in una pipeline delle funzioni e fornisce un&#39;esercitazione dettagliata per la creazione di una pipeline delle funzioni personalizzata tramite l&#39; [Model Authoring SDK](./sdk.md) in PySpark.
+Questo documento descrive le varie classi presenti in una pipeline di funzioni e fornisce un’esercitazione dettagliata per la creazione di una pipeline di funzioni personalizzata tramite l’ [SDK per l’authoring dei modelli](./sdk.md) in PySpark.
 
-Il flusso di lavoro seguente viene eseguito quando viene eseguita una pipeline delle funzioni:
+Il flusso di lavoro seguente viene eseguito quando viene eseguita una pipeline di funzioni:
 
-1. La ricetta carica il dataset in una pipeline.
-2. La trasformazione della funzione viene eseguita sul set di dati e riscritta in Adobe Experience Platform.
+1. La ricetta carica il set di dati in una pipeline.
+2. La trasformazione delle funzionalità viene eseguita sul set di dati e riscritta in Adobe Experience Platform.
 3. I dati trasformati vengono caricati per la formazione.
-4. La tubazione di feature definisce le fasi con il Regressore di incremento della sfumatura come modello scelto.
-5. La pipeline viene utilizzata per adattare i dati di formazione e viene creato il modello addestrato.
+4. La pipeline di feature definisce le fasi con Regressore di incremento della sfumatura come modello scelto.
+5. La pipeline viene utilizzata per inserire i dati di formazione e viene creato il modello addestrato.
 6. Il modello viene trasformato con il set di dati di punteggio.
-7. Le colonne interessanti dell&#39;output vengono quindi selezionate e salvate nuovamente in [!DNL Experience Platform] con i dati associati.
+7. Le colonne interessanti dell’output vengono quindi selezionate e salvate nuovamente in [!DNL Experience Platform] con i dati associati.
 
 ## Introduzione
 
@@ -39,37 +39,37 @@ Per eseguire una ricetta in qualsiasi organizzazione, è necessario quanto segue
 - Un set di dati di input.
 - Schema del set di dati.
 - Uno schema trasformato e un set di dati vuoto basato su tale schema.
-- Uno schema di output e un dataset vuoto basato su tale schema.
+- Uno schema di output e un set di dati vuoto in base a tale schema.
 
-Tutti i set di dati di cui sopra devono essere caricati nell&#39; [!DNL Platform] interfaccia utente. Per configurare questa impostazione, utilizzare lo script di avvio [avvio ](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap) fornito dal Adobe .
+Tutti i set di dati di cui sopra devono essere caricati nell’ [!DNL Platform] interfaccia utente. Per configurarlo, utilizza lo script di avvio [bootstrap fornito dall&#39;Adobe](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap).
 
 ## Classi di pipeline delle funzioni
 
-Nella tabella seguente sono descritte le principali classi astratte che è necessario estendere per creare una pipeline delle funzioni:
+La tabella seguente descrive le principali classi astratte che è necessario estendere per creare una pipeline di funzioni:
 
 | Classe astratta | Descrizione |
 | -------------- | ----------- |
 | DataLoader | Una classe DataLoader fornisce l&#39;implementazione per il recupero dei dati di input. |
-| DatasetTransformer | Una classe DatasetTransformer fornisce implementazioni per trasformare il dataset di input. È possibile scegliere di non fornire una classe DatasetTransformer e implementare la logica di progettazione delle funzionalità all&#39;interno della classe FeaturePipelineFactory. |
-| FeaturePipelineFactory | Una classe FeaturePipelineFactory crea una tubazione Spark costituita da una serie di trasformatori Spark per eseguire la progettazione di funzionalità. È possibile scegliere di non fornire una classe FeaturePipelineFactory e implementare la logica di progettazione delle funzionalità all&#39;interno della classe DatasetTransformer. |
+| DatasetTransformer | Una classe DatasetTransformer fornisce implementazioni per trasformare il set di dati di input. È possibile scegliere di non fornire una classe DatasetTransformer e implementare la logica di ingegneria delle funzioni all&#39;interno della classe FeaturePipelineFactory. |
+| FeaturePipelineFactory | Una classe FeaturePipelineFactory crea una pipeline Spark costituita da una serie di trasformatori Spark per eseguire l&#39;ingegneria delle funzioni. È possibile scegliere di non fornire una classe FeaturePipelineFactory e implementare la logica di ingegneria delle funzioni all&#39;interno della classe DatasetTransformer. |
 | DataSaver | Una classe DataSaver fornisce la logica per l&#39;archiviazione di un set di dati di una funzione. |
 
-Quando viene avviato un processo di pipeline delle feature, il runtime esegue innanzitutto DataLoader per caricare i dati di input come DataFrame, quindi modifica il DataFrame eseguendo DatasetTransformer, FeaturePipelineFactory o entrambi. Infine, il set di dati della funzionalità risultante viene memorizzato tramite DataSaver.
+Quando viene avviato un processo di pipeline di funzionalità, Runtime esegue prima il DataLoader per caricare i dati di input come DataFrame e quindi modifica il DataFrame eseguendo DatasetTransformer, FeaturePipelineFactory o entrambi. Infine, il set di dati della funzione risultante viene memorizzato tramite DataSaver.
 
-Il seguente diagramma di flusso mostra l&#39;ordine di esecuzione del runtime:
+Il seguente diagramma di flusso mostra l’ordine di esecuzione di Runtime:
 
 ![](../images/authoring/feature-pipeline/FeaturePipeline_Runtime_flow.png)
 
 
-## Implementare le classi di tubazione delle funzioni {#implement-your-feature-pipeline-classes}
+## Implementa le classi di pipeline delle funzioni {#implement-your-feature-pipeline-classes}
 
-Le sezioni seguenti forniscono dettagli ed esempi sull&#39;implementazione delle classi necessarie per una tubazione di feature.
+Le sezioni seguenti forniscono dettagli ed esempi sull’implementazione delle classi richieste per una pipeline di funzionalità.
 
 ### Definire le variabili nel file JSON di configurazione {#define-variables-in-the-configuration-json-file}
 
-Il file JSON di configurazione è costituito da coppie chiave-valore ed è destinato all&#39;utente a specificare eventuali variabili da definire successivamente durante il runtime. Queste coppie chiave-valore possono definire proprietà quali la posizione del set di dati di input, l&#39;ID del set di dati di output, l&#39;ID tenant, le intestazioni di colonna e così via.
+Il file JSON di configurazione è costituito da coppie chiave-valore e ha lo scopo di specificare qualsiasi variabile da definire successivamente durante il runtime. Queste coppie chiave-valore possono definire proprietà quali la posizione del set di dati di input, l’ID del set di dati di output, l’ID tenant, le intestazioni di colonna e così via.
 
-L&#39;esempio seguente illustra le coppie chiave-valore rilevate all&#39;interno di un file di configurazione:
+L&#39;esempio seguente illustra le coppie chiave-valore presenti all&#39;interno di un file di configurazione:
 
 **Esempio JSON di configurazione**
 
@@ -95,7 +95,7 @@ L&#39;esempio seguente illustra le coppie chiave-valore rilevate all&#39;interno
 ]
 ```
 
-Potete accedere alla configurazione JSON tramite qualsiasi metodo di classe che definisce `config_properties` come parametro. Esempio:
+Puoi accedere alla configurazione JSON tramite qualsiasi metodo di classe che definisce `config_properties` come parametro. Esempio:
 
 **PySpark**
 
@@ -103,13 +103,13 @@ Potete accedere alla configurazione JSON tramite qualsiasi metodo di classe che 
 dataset_id = str(config_properties.get(dataset_id))
 ```
 
-Per un esempio di configurazione più dettagliato, vedi il file [pipeline.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/feature_pipeline_recipes/pyspark/pipeline.json) fornito da Data Science Workspace.
+Per un esempio di configurazione più approfondito, consulta il file [pipeline.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/feature_pipeline_recipes/pyspark/pipeline.json) fornito da Data Science Workspace .
 
-### Preparare i dati di input con DataLoader {#prepare-the-input-data-with-dataloader}
+### Prepara i dati di input con DataLoader {#prepare-the-input-data-with-dataloader}
 
-DataLoader è responsabile del recupero e del filtraggio dei dati di input. L&#39;implementazione di DataLoader deve estendere la classe astratta `DataLoader` e ignorare il metodo astratto `load`.
+DataLoader è responsabile del recupero e del filtraggio dei dati di input. L&#39;implementazione di DataLoader deve estendere la classe astratta `DataLoader` e sovrascrivere il metodo astratto `load`.
 
-L&#39;esempio seguente recupera un dataset [!DNL Platform] per ID e lo restituisce come DataFrame, dove l&#39;ID dataset (`dataset_id`) è una proprietà definita nel file di configurazione.
+L&#39;esempio seguente recupera un set di dati [!DNL Platform] per ID e lo restituisce come DataFrame, dove l&#39;ID del set di dati (`dataset_id`) è una proprietà definita nel file di configurazione.
 
 **Esempio di PySpark**
 
@@ -160,7 +160,7 @@ class MyDataLoader(DataLoader):
 
 ### Trasforma un set di dati con DatasetTransformer {#transform-a-dataset-with-datasettransformer}
 
-Un oggetto DatasetTransformer fornisce la logica necessaria per trasformare un DataFrame di input e restituisce un nuovo DataFrame derivato. Questa classe può essere implementata in modo collaborativo con FeaturePipelineFactory, può essere utilizzata come unico componente di ingegneria delle funzioni, oppure è possibile scegliere di non implementare questa classe.
+Un DatasetTransformer fornisce la logica necessaria per trasformare un DataFrame di input e restituisce un nuovo DataFrame derivato. Questa classe può essere implementata in modo cooperativo con FeaturePipelineFactory, funzionare come l&#39;unico componente di ingegneria delle funzioni, oppure è possibile scegliere di non implementare questa classe.
 
 L&#39;esempio seguente estende la classe DatasetTransformer:
 
@@ -219,11 +219,11 @@ class MyDatasetTransformer(DatasetTransformer):
         return pd
 ```
 
-### Caratteristiche tecniche dei dati con FeaturePipelineFactory {#engineer-data-features-with-featurepipelinefactory}
+### Caratteristiche dei dati tecnici con FeaturePipelineFactory {#engineer-data-features-with-featurepipelinefactory}
 
-FeaturePipelineFactory consente di implementare la logica di progettazione delle funzionalità definendo e concatenando una serie di trasformatori Spark attraverso una tubazione Spark. Questa classe può essere implementata per lavorare in collaborazione con un DataSetTransformer, come unico componente di ingegneria delle funzionalità, oppure è possibile scegliere di non implementare questa classe.
+Una FeaturePipelineFactory consente di implementare la logica di ingegneria delle funzioni definendo e concatenando una serie di trasformatori di scintille attraverso una pipeline di scintilla. Questa classe può essere implementata per lavorare in collaborazione con un DatasetTransformer, funzionare come unico componente di ingegneria delle funzioni, oppure è possibile scegliere di non implementare questa classe.
 
-L&#39;esempio seguente estende la classe FeaturePipelineFactory:
+L’esempio seguente estende la classe FeaturePipelineFactory :
 
 **Esempio di PySpark**
 
@@ -284,11 +284,11 @@ class MyFeaturePipelineFactory(FeaturePipelineFactory):
         return None
 ```
 
-### Memorizzare il set di dati della funzionalità con DataSaver {#store-your-feature-dataset-with-datasaver}
+### Archivia il set di dati delle funzioni con DataSaver {#store-your-feature-dataset-with-datasaver}
 
-DataSaver è responsabile della memorizzazione dei set di dati delle funzionalità risultanti in una posizione di archiviazione. L&#39;implementazione di DataSaver deve estendere la classe astratta `DataSaver` e ignorare il metodo astratto `save`.
+DataSaver è responsabile della memorizzazione dei set di dati delle funzioni risultanti in una posizione di archiviazione. L&#39;implementazione di DataSaver deve estendere la classe astratta `DataSaver` e sovrascrivere il metodo astratto `save`.
 
-L&#39;esempio seguente estende la classe DataSaver che memorizza i dati in un [!DNL Platform] dataset per ID, dove l&#39;ID dataset (`featureDatasetId`) e l&#39;ID tenant (`tenantId`) sono proprietà definite nella configurazione.
+L&#39;esempio seguente estende la classe DataSaver che memorizza i dati in un set di dati [!DNL Platform] per ID, dove l&#39;ID set di dati (`featureDatasetId`) e l&#39;ID tenant (`tenantId`) sono proprietà definite nella configurazione.
 
 **Esempio di PySpark**
 
@@ -354,7 +354,7 @@ class MyDataSaver(DataSaver):
 
 ### Specificare i nomi delle classi implementate nel file dell&#39;applicazione {#specify-your-implemented-class-names-in-the-application-file}
 
-Una volta definite e implementate le classi di pipeline delle funzionalità, è necessario specificare i nomi delle classi nel file YAML dell&#39;applicazione.
+Una volta definite e implementate le classi della pipeline di caratteristiche, è necessario specificare i nomi delle classi nel file YAML dell’applicazione.
 
 Gli esempi seguenti specificano i nomi di classe implementati:
 
@@ -387,56 +387,56 @@ scoring.dataLoader: ScoringDataLoader
 scoring.dataSaver: MyDatasetSaver
 ```
 
-## Creare il motore della pipeline delle funzionalità utilizzando l&#39;API {#create-feature-pipeline-engine-api}
+## Crea il motore di pipeline delle funzioni utilizzando l’API {#create-feature-pipeline-engine-api}
 
-Dopo aver creato la pipeline delle funzioni, è necessario creare un&#39;immagine Docker per effettuare una chiamata agli endpoint della pipeline delle funzioni nell&#39;API [!DNL Sensei Machine Learning]. È necessario un URL immagine Docker per effettuare una chiamata agli endpoint della pipeline delle funzioni.
+Dopo aver creato la pipeline di funzioni, devi creare un’immagine Docker per effettuare una chiamata agli endpoint della pipeline di funzioni nell’ API [!DNL Sensei Machine Learning] . È necessario un URL immagine Docker per effettuare una chiamata agli endpoint della pipeline di funzionalità.
 
 >[!TIP]
 >
->Se non disponete di un URL Docker, visitate i [File sorgente del pacchetto in un&#39;esercitazione di ricetta](../models-recipes/package-source-files-recipe.md) per un&#39;esercitazione dettagliata sulla creazione di un URL host Docker.
+>Se non disponi di un URL Docker, visita il tutorial [Crea un pacchetto di file sorgente in una ricetta](../models-recipes/package-source-files-recipe.md) per una guida dettagliata alla creazione di un URL host Docker.
 
-Facoltativamente, potete anche utilizzare la seguente raccolta Postman per facilitare il completamento del flusso di lavoro API della pipeline delle funzioni:
+Facoltativamente, puoi anche utilizzare la seguente raccolta Postman per aiutare a completare il flusso di lavoro API della pipeline di funzioni:
 
 https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
-### Creare un motore di pipeline delle funzionalità {#create-engine-api}
+### Creare un motore di pipeline delle funzioni {#create-engine-api}
 
-Una volta raggiunta la posizione dell&#39;immagine Docker, è possibile [creare un motore di pipeline delle funzionalità](../api/engines.md#feature-pipeline-docker) utilizzando l&#39;API [!DNL Sensei Machine Learning] eseguendo un POST su `/engines`. La creazione di un motore della pipeline delle funzioni completata fornisce un identificatore univoco del motore (`id`). Prima di continuare, salvate questo valore.
+Una volta raggiunta la posizione dell&#39;immagine Docker, è possibile [creare un motore di pipeline delle funzioni](../api/engines.md#feature-pipeline-docker) utilizzando l&#39;API [!DNL Sensei Machine Learning] eseguendo un POST su `/engines`. La creazione corretta di un motore di pipeline delle funzioni fornisce un identificatore univoco del motore (`id`). Assicurati di salvare questo valore prima di continuare.
 
-### Creare un&#39;istanza MLI {#create-mlinstance}
+### Crea un&#39;istanza MLI {#create-mlinstance}
 
-Utilizzando la nuova `engineID` creata, è necessario [creare un MLIposition](../api/mlinstances.md#create-an-mlinstance) effettuando una richiesta POST all&#39;endpoint `/mlInstance`. Una risposta corretta restituisce un payload contenente i dettagli dell’istanza MLI appena creata, incluso il relativo identificatore univoco (`id`) utilizzato nella chiamata API successiva.
+Utilizzando il `engineID` appena creato, è necessario [creare un MLIposition](../api/mlinstances.md#create-an-mlinstance) effettuando una richiesta POST all&#39;endpoint `/mlInstance`. Una risposta corretta restituisce un payload contenente i dettagli dell’istanza MLI appena creata, incluso l’identificatore univoco (`id`) utilizzato nella successiva chiamata API.
 
 ### Creare un esperimento {#create-experiment}
 
-Successivamente, è necessario [creare un esperimento](../api/experiments.md#create-an-experiment). Per creare un esperimento è necessario avere il proprio identificatore univoco MLIposition (`id`) ed effettuare una richiesta POST all&#39;endpoint `/experiment`. Una risposta corretta restituisce un payload contenente i dettagli dell’esperimento appena creato, compreso l’identificatore univoco (`id`) utilizzato nella chiamata API successiva.
+Successivamente, devi [creare un esperimento](../api/experiments.md#create-an-experiment). Per creare un esperimento è necessario disporre dell&#39;identificatore univoco MLIposition (`id`) e inviare una richiesta POST all&#39;endpoint `/experiment`. Una risposta corretta restituisce un payload contenente i dettagli dell’esperimento appena creato, incluso l’identificatore univoco (`id`) utilizzato nella chiamata API successiva.
 
-### Specificare l&#39;attività della pipeline delle funzionalità di esecuzione degli esperimenti {#specify-feature-pipeline-task}
+### Specifica l’attività della pipeline delle funzioni di esecuzione dell’esperimento {#specify-feature-pipeline-task}
 
-Dopo aver creato un esperimento, dovete modificare la modalità dell&#39;esperimento su `featurePipeline`. Per modificare la modalità, impostare un POST aggiuntivo su [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) con il `EXPERIMENT_ID` e inviare `{ "mode":"featurePipeline"}` nel corpo per specificare un&#39;esecuzione sperimentale della pipeline delle caratteristiche.
+Dopo aver creato un esperimento, devi modificare la modalità dell’esperimento su `featurePipeline`. Per modificare la modalità , imposta un POST aggiuntivo su [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) con il `EXPERIMENT_ID` e nel corpo invia `{ "mode":"featurePipeline"}` per specificare un’esecuzione di esperimento della pipeline di funzionalità.
 
-Al termine, effettuate una richiesta di GET a `/experiments/{EXPERIMENT_ID}` per [recuperare lo stato dell&#39;esperimento](../api/experiments.md#retrieve-specific) e attendete che lo stato dell&#39;esperimento venga aggiornato per essere completato.
+Al termine, effettua una richiesta di GET a `/experiments/{EXPERIMENT_ID}` a [recupera lo stato dell&#39;esperimento](../api/experiments.md#retrieve-specific) e attendi che lo stato dell&#39;esperimento venga aggiornato per essere completato.
 
 ### Specificare l&#39;attività di formazione di esecuzione dell&#39;esperimento {#training}
 
-Successivamente, è necessario [specificare l&#39;attività di esecuzione della formazione](../api/experiments.md#experiment-training-scoring). Impostate un POST su `experiments/{EXPERIMENT_ID}/runs` e nel corpo impostate la modalità su `train` e inviate una serie di attività che contengono i parametri di formazione. Una risposta corretta restituisce un payload contenente i dettagli dell’esperimento richiesto.
+Successivamente, è necessario [specificare l&#39;attività di esecuzione della formazione](../api/experiments.md#experiment-training-scoring). Imposta un POST su `experiments/{EXPERIMENT_ID}/runs` e nel corpo imposta la modalità su `train` e invia un array di attività che contengono i parametri di formazione. Una risposta corretta restituisce un payload contenente i dettagli dell’esperimento richiesto.
 
-Al termine, effettuate una richiesta di GET a `/experiments/{EXPERIMENT_ID}` per [recuperare lo stato dell&#39;esperimento](../api/experiments.md#retrieve-specific) e attendete che lo stato dell&#39;esperimento venga aggiornato per essere completato.
+Al termine, effettua una richiesta di GET a `/experiments/{EXPERIMENT_ID}` a [recupera lo stato dell&#39;esperimento](../api/experiments.md#retrieve-specific) e attendi che lo stato dell&#39;esperimento venga aggiornato per essere completato.
 
-### Specificare l&#39;attività di punteggio dell&#39;esecuzione dell&#39;esperimento {#scoring}
+### Specifica l’attività di punteggio dell’esecuzione dell’esperimento {#scoring}
 
 >[!NOTE]
 >
-> Per completare questo passaggio è necessario che almeno un&#39;esecuzione di formazione di successo sia associata all&#39;esperimento.
+> Per completare questo passaggio è necessario che almeno un&#39;esecuzione di formazione di successo sia associata al tuo esperimento.
 
-Dopo un&#39;esecuzione di formazione riuscita, è necessario [specificare l&#39;attività di esecuzione del punteggio](../api/experiments.md#experiment-training-scoring). Impostate un POST su `experiments/{EXPERIMENT_ID}/runs` e nel corpo impostate l&#39;attributo `mode` su &quot;score&quot;. Viene avviata l&#39;esecuzione del punteggio dell&#39;esperimento.
+Dopo un&#39;esecuzione di formazione riuscita, è necessario [specificare l&#39;attività di esecuzione del punteggio](../api/experiments.md#experiment-training-scoring). Imposta un POST su `experiments/{EXPERIMENT_ID}/runs` e nel corpo imposta l&#39;attributo `mode` su &quot;score&quot;. Viene avviato l’esecuzione dell’esperimento di punteggio.
 
-Al termine, effettuate una richiesta di GET a `/experiments/{EXPERIMENT_ID}` per [recuperare lo stato dell&#39;esperimento](../api/experiments.md#retrieve-specific) e attendete che lo stato dell&#39;esperimento venga aggiornato per essere completato.
+Al termine, effettua una richiesta di GET a `/experiments/{EXPERIMENT_ID}` a [recupera lo stato dell&#39;esperimento](../api/experiments.md#retrieve-specific) e attendi che lo stato dell&#39;esperimento venga aggiornato per essere completato.
 
-Una volta completato il punteggio, la pipeline delle caratteristiche deve essere operativa.
+Al termine del punteggio, la pipeline delle funzioni deve essere operativa.
 
 ## Passaggi successivi {#next-steps}
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-Leggendo questo documento, hai creato una pipeline di feature utilizzando l&#39;SDK per l&#39;authoring dei modelli, creato un&#39;immagine Docker e utilizzato l&#39;URL dell&#39;immagine Docker per creare un modello di pipeline di feature utilizzando l&#39;API [!DNL Sensei Machine Learning]. È ora possibile continuare a trasformare i set di dati ed estrarre le funzioni di dati in scala utilizzando la [[!DNL Sensei Machine Learning API]](../api/getting-started.md).
+Leggendo questo documento, hai creato una pipeline di feature utilizzando l’SDK per l’authoring del modello, hai creato un’immagine Docker e hai utilizzato l’URL dell’immagine Docker per creare un modello di pipeline di feature utilizzando l’ API [!DNL Sensei Machine Learning] . Ora puoi continuare a trasformare i set di dati ed estrarre le funzioni di dati in scala utilizzando [[!DNL Sensei Machine Learning API]](../api/getting-started.md).
