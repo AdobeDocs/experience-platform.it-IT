@@ -2,14 +2,14 @@
 keywords: Experience Platform;home;argomenti comuni;dati di archiviazione cloud
 solution: Experience Platform
 title: Raccolta di dati di archiviazione cloud tramite connettori di origine e API
-topic: ' - Panoramica'
+topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati da un archivio cloud di terze parti e inserirli in Platform utilizzando i connettori sorgente e le API.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1806'
+source-wordcount: '1804'
 ht-degree: 1%
 
 ---
