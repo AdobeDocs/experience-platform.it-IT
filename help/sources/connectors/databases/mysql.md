@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;argomenti comuni;MySQL;mysql;My sql;My SQL
 solution: Experience Platform
 title: Panoramica del connettore di origine MySQL
-topic: ' - Panoramica'
+topic-legacy: overview
 description: Scopri come collegare MySQL a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
+exl-id: a18e8e69-880f-4bee-b339-726091d6f858
 translation-type: tm+mt
-source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
-
 
 # Connettore MySQL
 
