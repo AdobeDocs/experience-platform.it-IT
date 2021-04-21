@@ -3,15 +3,15 @@ keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;mo
 solution: Experience Platform
 title: Endpoint API per i dati di esempio
 description: L’endpoint /sampledata nell’API del Registro di sistema dello schema consente di generare dati di esempio mappati alla struttura di qualsiasi schema XDM esistente.
-topic: guida per sviluppatori
+topic-legacy: developer guide
+exl-id: 424d33ca-0624-4891-bf83-044ac2861579
 translation-type: tm+mt
-source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '319'
 ht-degree: 1%
 
 ---
-
 
 # Endpoint dati di esempio
 
