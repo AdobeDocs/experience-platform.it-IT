@@ -1,49 +1,49 @@
 ---
-keywords: ' Experience Platform;home;argomenti più comuni;schema;schema;XDM;campi;schemi;schemi;ambiente;tipo di dati;tipo di dati;tipo di dati;'
+keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;ambiente;tipo di dati;tipo di dati;tipo di dati;tipo di dati;
 solution: Experience Platform
-title: Tipo dati ambiente
-topic: overview
-description: Questo documento fornisce una panoramica del tipo di dati XDM di ambiente.
+title: Tipo di dati ambiente
+topic-legacy: overview
+description: Questo documento fornisce una panoramica del tipo di dati XDM per l’ambiente.
+exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 4%
 
 ---
 
-
 # [!UICONTROL Environment] tipo di dati
 
-[!UICONTROL Environment] è un tipo di dati XDM standard che descrive l&#39;ambiente circostante di un evento osservato, con informazioni dettagliate specifiche sul passaggio, come le versioni di rete e software.
+[!UICONTROL Environment] è un tipo di dati XDM standard che descrive l’ambiente circostante di un evento osservato, specificando informazioni transitorie come le versioni di rete e software.
 
 >[!IMPORTANT]
 >
->Tutti i valori devono essere allineati con il database [DeviceAtlas](https://deviceatlas.com), concesso in licenza per  Adobe.
+>Tutti i valori devono essere allineati con il database [DeviceAtlas](https://deviceatlas.com), concesso in licenza dall&#39;Adobe.
 
 <img src="../images/data-types/environment.png" width="400" /><br />
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `_dc` | Oggetto | Un oggetto che contiene un singolo campo, `language`, che indica la lingua dell&#39;ambiente per rappresentare le preferenze linguistiche, geografiche o culturali dell&#39;utente per la presentazione dei dati. Le lingue sono specificate nel codice della lingua come definito in [IETF RFC 3066](https://www.ietf.org/rfc/rfc3066.txt). |
-| `browserDetails` | [Dettagli del browser](./browser-details.md) | Descrive i dettagli specifici dell&#39;ambiente del browser, come nome del browser, versione, versione JavaScript, stringa agente utente e linguaggio di accettazione. |
+| `_dc` | Oggetto | Oggetto che contiene un singolo campo, `language`, che indica la lingua dell’ambiente in cui rappresentare le preferenze linguistiche, geografiche o culturali dell’utente per la presentazione dei dati. Le lingue sono specificate nel codice della lingua come definito in [IETF RFC 3066](https://www.ietf.org/rfc/rfc3066.txt). |
+| `browserDetails` | [Dettagli del browser](./browser-details.md) | Descrive i dettagli dell&#39;ambiente specifici del browser, ad esempio nome del browser, versione, versione JavaScript, stringa dell&#39;agente utente e linguaggio di accettazione. |
 | `ISP` | Stringa | Nome del provider di servizi Internet dell&#39;utente. |
-| `carrier` | Stringa | Nome del gestore della rete mobile o MNO (noto anche come fornitore di servizi wireless, vettore wireless, società cellulare o vettore di rete mobile) che vende e fornisce servizi di comunicazione all&#39;utente. |
-| `colorDepth` | Intero | Il numero di bit utilizzati per ciascun componente colore di un singolo pixel. |
+| `carrier` | Stringa | Nome del gestore della rete mobile o dell&#39;operatore MNO (noto anche come fornitore di servizi wireless, vettore wireless, società cellulare o gestore della rete mobile) che vende e fornisce servizi di comunicazione all&#39;utente. |
+| `colorDepth` | Intero | Il numero di bit utilizzati per ogni componente colore di un singolo pixel. |
 | `connectionType` | Stringa | Tipo di connessione Internet. I valori accettati includono: <ul><li>`dialup`</li><li>`isdn`</li><li>`bisdn`</li><li>`dsl`</li><li>`cable`</li><li>`wireless_wifi`</li><li>`mobile`</li><li>`mobile_edge`</li><li>`mobile_2g`</li><li>`mobile_3g`</li><li>`mobile_lte`</li><li>`t1`</li><li>`t3`</li><li>`oc3`</li><li>`lan`</li><li>`modem`</li></ul> |
-| `domain` | Stringa | Il dominio dell&#39;ISP dell&#39;utente. |
+| `domain` | Stringa | Dominio dell&#39;ISP dell&#39;utente. |
 | `ipV4` | Stringa | Etichetta numerica assegnata a un dispositivo che partecipa a una rete di computer che utilizza il protocollo Internet per la comunicazione (32 bit). |
 | `ipV6` | Stringa | Etichetta numerica assegnata a un dispositivo che partecipa a una rete di computer che utilizza il protocollo Internet per la comunicazione (128 bit). |
-| `operatingSystem` | Stringa | Nome del sistema operativo utilizzato al momento dell&#39;osservazione. L&#39;attributo non deve contenere informazioni sulla versione, ad esempio `10.5.3`, ma deve contenere denominazioni &quot;edition&quot; quali `Ultimate` o `Professional`. |
+| `operatingSystem` | Stringa | Nome del sistema operativo utilizzato al momento dell&#39;osservazione. L&#39;attributo non deve contenere informazioni sulla versione come `10.5.3`, ma deve contenere designazioni &quot;edition&quot; come ad esempio `Ultimate` o `Professional`. |
 | `operatingSystemVendor` | Stringa | Nome del fornitore del sistema operativo utilizzato al momento dell&#39;osservazione. |
-| `operatingSystemVersion` | Stringa | Identificatore completo della versione per il sistema operativo utilizzato al momento dell&#39;osservazione. Le versioni sono generalmente composte numericamente, ma possono essere in un formato definito dal fornitore. |
-| `type` | Stringa | Il tipo di ambiente dell&#39;applicazione. Per i valori accettati, vedere l&#39; [appendice](#type). |
-| `viewportHeight` | Intero | La dimensione verticale in pixel della finestra in cui è stata visualizzata l&#39;esperienza. Per un evento di visualizzazione Web, si tratta dell&#39;altezza della finestra del browser. |
-| `viewPortWidth` | Intero | La dimensione orizzontale in pixel della finestra in cui è stata visualizzata l&#39;esperienza. Per un evento di visualizzazione Web, si tratta della larghezza di visualizzazione del browser. |
+| `operatingSystemVersion` | Stringa | Identificatore della versione completa del sistema operativo utilizzato al momento dell&#39;osservazione. Le versioni sono generalmente composte numericamente ma possono essere in un formato definito dal fornitore. |
+| `type` | Stringa | Il tipo di ambiente dell&#39;applicazione. Vedere l&#39; [appendice](#type) per i valori accettati. |
+| `viewportHeight` | Intero | Dimensione verticale in pixel della finestra in cui veniva visualizzata l’esperienza. Per un evento di visualizzazione web, si tratta dell&#39;altezza del riquadro di visualizzazione del browser. |
+| `viewPortWidth` | Intero | Dimensione orizzontale in pixel della finestra in cui veniva visualizzata l’esperienza. Per un evento di visualizzazione web, si tratta della larghezza del riquadro di visualizzazione del browser. |
 
-Per ulteriori dettagli sul mixin, fare riferimento al repository XDM pubblico:
+Per ulteriori dettagli sul mixin, consulta l’archivio XDM pubblico:
 
-* [Esempio compilato](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.example.1.json)
+* [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.example.1.json)
 * [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.schema.json)
 
 ## Appendice
@@ -52,7 +52,7 @@ La sezione seguente contiene informazioni aggiuntive sul tipo di dati [!UICONTRO
 
 ## Valori accettati per il tipo {#type}
 
-Nella tabella seguente sono riportati i valori accettati per `type` e i significati associati:
+La tabella seguente illustra i valori accettati per `type` e i relativi significati associati:
 
 | Valore | Descrizione |
 | --- | --- |
