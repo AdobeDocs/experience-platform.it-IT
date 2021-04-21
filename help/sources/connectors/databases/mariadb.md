@@ -5,19 +5,15 @@ title: Panoramica del connettore di origine MariaDB
 topic-legacy: overview
 description: Scopri come collegare MariaDB a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '230'
 ht-degree: 0%
 
 ---
 
 
-# (Beta) Connettore [!DNL MariaDB]
-
->[!NOTE]
->
->Il connettore [!DNL MariaDB] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la [Panoramica delle sorgenti](../../home.md#terms-and-conditions) .
+# [!DNL MariaDB] connettore
 
 Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo utilizzando i servizi [!DNL Platform] . È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
 
