@@ -1,25 +1,25 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;schema;schema;XDM;profilo singolo;campi;schemi;schemi;dettagli personali;schema di progettazione;mixin;Mixin;'
+keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;profilo individuale;campi;schemi;schemi;dettagli personali;progettazione schema;mixin;Mixin;
 solution: Experience Platform
-title: Dati personali di contatto Mixin
-topic: overview
-description: Questo documento fornisce una panoramica del mixin Dettagli contatto personali.
+title: Dati di contatto personali Mixin
+topic-legacy: overview
+description: Questo documento fornisce una panoramica del mixin Dati personali di contatto.
+exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 2%
 
 ---
 
-
-# [!UICONTROL Personal Contact Details] mixin
+# [!UICONTROL Personal Contact Details] mescolina
 
 >[!NOTE]
 >
->I nomi di diversi mixin sono cambiati. Per ulteriori informazioni, consulta il documento relativo agli [aggiornamenti del nome del mixin](../name-updates.md).
+>I nomi di diversi mixin sono cambiati. Per ulteriori informazioni, consulta il documento sugli [aggiornamenti dei nomi mixin](../name-updates.md) .
 
-[!UICONTROL Personal Contact Details] è un mixin standard per l&#39; [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) aula che descrive le informazioni di contatto per una singola persona.
+[!UICONTROL Personal Contact Details] è un mixin standard per la  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) classe che descrive le informazioni di contatto per una singola persona.
 
 <img src="../../images/mixins/profile-personal-details.png" width="700" /><br />
 
@@ -28,10 +28,10 @@ ht-degree: 2%
 | `faxPhone` | [Numero di telefono](../../data-types/phone-number.md) | Descrive il numero di fax della persona. |
 | `homeAddress` | [Indirizzo postale](../../data-types/postal-address.md) | Descrive l&#39;indirizzo residenziale della persona. |
 | `homePhone` | [Numero di telefono](../../data-types/phone-number.md) | Descrive il numero di telefono di casa della persona. |
-| `mobilePhone` | [Numero di telefono](../../data-types/phone-number.md) | Descrive il numero di telefono cellulare della persona. |
+| `mobilePhone` | [Numero di telefono](../../data-types/phone-number.md) | Descrive il numero di cellulare della persona. |
 | `personalEmail` | [Indirizzo e-mail](../../data-types/email-address.md) | Descrive l&#39;indirizzo e-mail della persona. |
 
-Per ulteriori dettagli sul mixin, fare riferimento al repository XDM pubblico:
+Per ulteriori dettagli sul mixin, consulta l’archivio XDM pubblico:
 
-* [Esempio compilato](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.example.1.json)
+* [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.example.1.json)
 * [Schema completo](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.schema.json)
