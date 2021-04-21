@@ -2,17 +2,17 @@
 keywords: Experience Platform;JupyterLab;ricetta;notebook;Data Science Workspace;argomenti popolari;creare ricetta
 solution: Experience Platform
 title: Creare una ricetta utilizzando i notebook Jupyter
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione si articola su due sezioni principali. Innanzitutto, creerai un modello di apprendimento automatico utilizzando un modello all'interno di JupyterLab Notebook. Successivamente, si eserciterà il notebook per creare un flusso di lavoro di ricetta all'interno di JupyterLab per creare una ricetta all'interno di Data Science Workspace.
+exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
 translation-type: tm+mt
-source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2347'
+source-wordcount: '2345'
 ht-degree: 0%
 
 ---
-
 
 # Creare una ricetta utilizzando Jupyter Notebooks
 
@@ -500,5 +500,3 @@ Per continuare a imparare a lavorare con le risorse all’interno di [!DNL Data 
 Il video seguente è progettato per aiutarti a comprendere come creare e distribuire modelli.
 
 >[!VIDEO](https://video.tv.adobe.com/v/30575?quality=12&enable10seconds=on&speedcontrol=on)
-
-
