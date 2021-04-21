@@ -2,17 +2,17 @@
 keywords: Experience Platform;importazione di ricetta confezionata;Data Science Workspace;argomenti popolari;ricette;ui;crea motore
 solution: Experience Platform
 title: Importare una composizione in pacchetto nell’interfaccia utente di Data Science Workspace
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione fornisce informazioni su come configurare e importare una ricetta in pacchetto utilizzando l'esempio di vendita al dettaglio fornito. Al termine di questa esercitazione, sarai in grado di creare, addestrare e valutare un modello in Adobe Experience Platform Data Science Workspace.
+exl-id: 2556e1f0-3f9c-4884-a699-06c041d5c4d1
 translation-type: tm+mt
-source-git-commit: 13fa4af388c6f31768a6b7e1da05cb56c5635c9e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1740'
+source-wordcount: '1738'
 ht-degree: 0%
 
 ---
-
 
 # Importare una ricetta confezionata nell’interfaccia utente di Data Science Workspace
 
