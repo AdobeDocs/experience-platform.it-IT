@@ -1,33 +1,33 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;servizio query;query di esempio;query di esempio;analisi adobe;'
+keywords: Experience Platform;home;argomenti popolari;servizio query;query di esempio;query di esempio;query di esempio;adobe analytics;
 solution: Experience Platform
-title: Query di esempio per  dati Adobe Analytics
-topic: queries
-description: I dati provenienti da suite di rapporti Adobe Analytics selezionate  vengono trasformati in XDM ExperienceEvents e quindi trasferiti in Adobe Experience Platform come set di dati. In questo documento vengono illustrati alcuni casi di utilizzo in cui Adobe Experience Platform Query Service utilizza questi dati e le query di esempio incluse devono essere compatibili con i set di dati Adobe Analytics .
+title: Query di esempio per i dati di Adobe Analytics
+topic-legacy: queries
+description: I dati provenienti da suite di rapporti Adobe Analytics selezionate vengono trasformati in XDM ExperienceEvents e acquisiti in Adobe Experience Platform come set di dati per te. Questo documento delinea una serie di casi d’uso in cui Adobe Experience Platform Query Service utilizza questi dati e le query di esempio incluse devono funzionare con i set di dati Adobe Analytics.
+exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1021'
 ht-degree: 1%
 
 ---
 
+# Query di esempio per i dati di Adobe Analytics
 
-# Query di esempio per  dati Adobe Analytics
+I dati provenienti da suite di rapporti Adobe Analytics selezionate vengono trasformati in dati conformi alla classe [!DNL XDM ExperienceEvent] e acquisiti in Adobe Experience Platform come set di dati.
 
-I dati di  suite di rapporti Adobe Analytics selezionate vengono trasformati in dati conformi alla classe [!DNL XDM ExperienceEvent] e quindi trasferiti in Adobe Experience Platform come set di dati.
-
-In questo documento vengono illustrati alcuni casi d&#39;uso in cui Adobe Experience Platform [!DNL Query Service] utilizza questi dati, incluse le query di esempio che devono funzionare con i set di dati Adobe Analytics . Per ulteriori informazioni sulla mappatura a [Analytics field mapping](../../sources/connectors/adobe-applications/mapping/analytics.md), consulta la documentazione relativa alla [!DNL Experience Events].
+Questo documento delinea una serie di casi d&#39;uso in cui Adobe Experience Platform [!DNL Query Service] utilizza questi dati, incluse le query di esempio che devono funzionare con i set di dati Adobe Analytics. Per ulteriori informazioni sulla mappatura su [!DNL Experience Events], consulta la documentazione sulla [mappatura dei campi di Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) .
 
 ## Introduzione
 
-Gli esempi SQL presenti in questo documento richiedono la modifica dell&#39;SQL e la compilazione dei parametri previsti per le query in base al dataset,  eVar, evento o intervallo di tempo che si desidera valutare. Fornire i parametri ovunque si trovi `{ }` negli esempi SQL che seguono.
+Gli esempi SQL presenti in questo documento richiedono la modifica dell&#39;SQL e la compilazione dei parametri previsti per le query in base al set di dati, all&#39;eVar, all&#39;evento o all&#39;intervallo di tempo che si desidera valutare. Fornisci parametri ovunque vedi `{ }` negli esempi SQL seguenti.
 
-## Esempi SQL usati comunemente
+## Esempi SQL comunemente utilizzati
 
-Gli esempi seguenti mostrano le query SQL comunemente utilizzate per analizzare i dati Adobe Analytics .
+Gli esempi seguenti mostrano le query SQL comunemente utilizzate per analizzare i dati di Adobe Analytics.
 
-### Conteggio orario dei visitatori per un dato giorno
+### Numero di visitatori orari per un dato giorno
 
 ```sql
 SELECT Substring(from_utc_timestamp(timestamp, 'America/New_York'), 1, 10) AS Day,
@@ -106,7 +106,7 @@ ORDER BY total_order_revenue DESC
 LIMIT  10;
 ```
 
-### Conteggio eventi per giorno
+### Conteggi degli eventi per giorno
 
 ```sql
 SELECT Substring(from_utc_timestamp(timestamp, 'America/New_York'), 1, 10) AS Day, 
@@ -119,18 +119,18 @@ GROUP BY Day, Hour
 ORDER BY Hour;
 ```
 
-## Variabili di merchandising (sintassi del prodotto)
+## Variabili merchandising (sintassi del prodotto)
 
 
 ### Sintassi del prodotto
 
-In  Adobe Analytics, i dati personalizzati a livello di prodotto possono essere raccolti tramite variabili configurate appositamente denominate variabili merchandising. Questi si basano su un eVar  o su eventi personalizzati. La differenza tra queste variabili e il loro uso standard è che rappresentano un valore separato per ogni prodotto trovato nell’hit, anziché un solo valore per l’hit.
+In Adobe Analytics, i dati personalizzati a livello di prodotto possono essere raccolti attraverso variabili appositamente configurate denominate variabili merchandising. Sono basati su eventi eVar o personalizzati. La differenza tra queste variabili e il loro utilizzo standard è che rappresentano un valore separato per ogni prodotto trovato sull&#39;hit, anziché un solo valore per l&#39;hit.
 
-Queste variabili sono denominate variabili merchandising della sintassi di prodotto. Questo consente la raccolta di informazioni, ad esempio un &quot;importo sconto&quot; per ogni prodotto o informazioni sulla &quot;posizione sulla pagina&quot; del prodotto nei risultati di ricerca del cliente.
+Queste variabili sono denominate variabili di merchandising con sintassi di prodotto. Ciò consente la raccolta di informazioni, ad esempio un &quot;importo sconto&quot; per prodotto o informazioni sulla &quot;posizione sulla pagina&quot; del prodotto nei risultati di ricerca del cliente.
 
-Per ulteriori informazioni sull&#39;utilizzo della sintassi del prodotto, consultare la documentazione  Adobe Analytics in [implementazione di eVar utilizzando la sintassi del prodotto](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-product-syntax).
+Per ulteriori informazioni sull&#39;utilizzo della sintassi del prodotto, consulta la documentazione di Adobe Analytics in [implementazione di eVar utilizzando la sintassi del prodotto](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-product-syntax).
 
-Le sezioni seguenti descrivono i campi XDM necessari per accedere alle variabili di merchandising nel set di dati [!DNL Analytics]:
+Le sezioni seguenti delineano i campi XDM necessari per accedere alle variabili merchandising nel set di dati [!DNL Analytics] :
 
 #### eVar
 
@@ -139,7 +139,7 @@ productListItems[#]._experience.analytics.customDimensions.evars.evar#
 ```
 
 - `#`: Indice della matrice a cui si accede.
-- `evar#`: Variabile  eVar specifica a cui si accede.
+- `evar#`: Variabile eVar specifica a cui si accede.
 
 #### Eventi personalizzati
 
@@ -148,11 +148,11 @@ productListItems[#]._experience.analytics.event1to100.event#.value
 ```
 
 - `#`: Indice della matrice a cui si accede.
-- `event#`: La specifica variabile evento personalizzata a cui si accede.
+- `event#`: La variabile evento personalizzata specifica a cui si accede.
 
 #### Query di esempio
 
-Di seguito è riportata una query di esempio che restituisce un eVar e un evento  merchandising per il primo prodotto trovato in `productListItems`.
+Ecco una query di esempio che restituisce un eVar e un evento di merchandising per il primo prodotto trovato in `productListItems`.
 
 ```sql
 SELECT
@@ -166,7 +166,7 @@ WHERE timestamp = to_timestamp('2019-07-23')
 LIMIT 10
 ```
 
-Questa query successiva esplode l&#39;array `productListItems` e restituisce ogni merchandising  eVar ed evento per prodotto. Il campo `_id` è incluso per mostrare la relazione con l’hit originale. Il valore `_id` è una chiave primaria univoca per il dataset.
+Questa query successiva esplode la matrice `productListItems` e restituisce ogni eVar e evento di merchandising per prodotto. Il campo `_id` è incluso per mostrare la relazione con l’hit originale. Il valore `_id` è una chiave primaria univoca per il set di dati.
 
 ```sql
 SELECT
@@ -188,7 +188,7 @@ LIMIT 20
 
 >[!NOTE]
 >
-> Se si tenta di recuperare un campo che non esiste nel set di dati corrente, si verificherà l&#39;errore &quot;Nessun campo struttura&quot;. Valutare il motivo restituito nel messaggio di errore per identificare un campo disponibile, quindi aggiornare la query ed eseguire nuovamente.
+> Se tenti di recuperare un campo che non esiste nel set di dati corrente, si verificherà l’errore &quot;Nessun campo di struttura&quot;. Valuta il motivo restituito nel messaggio di errore per identificare un campo disponibile, quindi aggiorna la query ed esegui nuovamente.
 >
 >
 ```console
@@ -197,30 +197,30 @@ LIMIT 20
 
 ### Sintassi di conversione
 
-Un altro tipo di variabile merchandising presente in  Adobe Analytics è la sintassi di conversione. Con la sintassi del prodotto, il valore viene raccolto contemporaneamente al prodotto, ma ciò richiede che i dati siano presenti sulla stessa pagina. Esistono scenari in cui i dati si verificano su una pagina prima della conversione o dell’evento di interesse relativo al prodotto. Ad esempio, prendere in considerazione il caso di utilizzo per il metodo di ricerca dei prodotti.
+Un altro tipo di variabile di merchandising trovato in Adobe Analytics è la sintassi di conversione. Con la sintassi del prodotto, il valore viene raccolto contemporaneamente al prodotto, ma ciò richiede che i dati siano presenti sulla stessa pagina. Esistono scenari in cui i dati si verificano su una pagina prima della conversione o dell’evento di interesse relativo al prodotto. Ad esempio, considerare il caso d’uso per il metodo di ricerca dei prodotti.
 
-1. Un utente esegue una ricerca interna per &quot;cappello invernale&quot; che imposta il merchandising abilitato per la sintassi di conversione  eVar6 su &quot;ricerca interna:cappello invernale&quot;
-2. L&#39;utente fa clic su &quot;waffle beanie&quot; e arriva sulla pagina dei dettagli del prodotto.\
-   a. Qui di destinazione si attiva un evento `Product View` per il &quot;waffle beanie&quot; per $12.99.\
-   b. Poiché `Product View` è configurato come un evento di binding, il prodotto &quot;waffle beanie&quot; è ora associato al valore di  eVar6 &quot;internal search:Winter hat&quot;. Ogni volta che il prodotto &quot;waffle beanie&quot; viene raccolto, viene associato a &quot;internal search:Winter hat&quot; fino a quando (1) viene raggiunta l&#39;impostazione di scadenza o (2) viene impostato un nuovo valore  eVar6 e l&#39;evento di binding si verifica nuovamente con quel prodotto.
-3. L&#39;utente aggiunge il prodotto al carrello attivando l&#39;evento `Cart Add`.
-4. L&#39;utente esegue un&#39;altra ricerca interna per &quot;summer shirt&quot; che imposta Conversione Syntax abilitato Merchandising  eVar6 su &quot;internal search:summer shirt&quot;
-5. L&#39;utente clicca su &quot;sportiva t-shirt&quot; e atterra sulla pagina dei dettagli del prodotto.\
-   a. A questo punto è attivato un evento `Product View` per &quot;sportiva t-shirt per $19.99.\
-   b. L&#39;evento `Product View` è ancora il nostro evento di rilegatura, quindi ora il prodotto &quot;sportivo t-shirt&quot; è legato al valore di  eVar6 di &quot;ricerca interna:camicia estiva&quot; e il precedente prodotto &quot;waffle beanie&quot; è ancora legato a un  valore di eVar 6 di &quot;ricerca interna:waffle beanie&quot;.
-6. L&#39;utente aggiunge il prodotto al carrello attivando l&#39;evento `Cart Add`.
-7. L&#39;utente esegue il check-out con entrambi i prodotti.
+1. Un utente esegue e ricerca interna per &quot;cappello invernale&quot; che imposta l&#39;eVar merchandising abilitato della sintassi di conversione su &quot;ricerca interna:cappello invernale&quot;
+2. L&#39;utente clicca su &quot;waffle beanie&quot; e arriva sulla pagina dei dettagli del prodotto.\
+   a) L&#39;atterraggio qui si attiva un evento `Product View` per il &quot;waffle beanie&quot; per $12.99.\
+   b) Poiché `Product View` è configurato come evento di binding, il prodotto &quot;waffle beanie&quot; è ora associato al valore eVar6 di &quot;internal search:Winter hat&quot;. Ogni volta che viene raccolto il prodotto &quot;waffle beanie&quot;, questo verrà associato a &quot;internal search:Winter hat&quot; fino a quando (1) l&#39;impostazione di scadenza viene raggiunta o (2) viene impostato un nuovo valore eVar6 e l&#39;evento di associazione si verifica nuovamente con quel prodotto.
+3. L’utente aggiunge il prodotto al carrello attivando l’evento `Cart Add` .
+4. L&#39;utente esegue un&#39;altra ricerca interna per &quot;camicia estiva&quot; che imposta l&#39;eVar merchandising abilitato della sintassi di conversione su &quot;ricerca interna:camicia estiva&quot;
+5. L&#39;utente clicca su &quot;t-shirt sportiva&quot; e arriva sulla pagina dei dettagli del prodotto.\
+   a) L&#39;atterraggio qui si attiva su un evento `Product View` per &quot;t-shirt sportiva per $19.99.\
+   b) L&#39;evento `Product View` è ancora il nostro evento vincolante quindi ora il prodotto &quot;t-shirt sportiva&quot; è ora legato al valore eVar6 di &quot;interno search:Summer shirt&quot; e il precedente prodotto &quot;waffle beanie&quot; è ancora legato a un valore eVar6 di &quot;interno search:waffle beanie&quot;.
+6. L’utente aggiunge il prodotto al carrello attivando l’evento `Cart Add` .
+7. L’utente esegue il check-out con entrambi i prodotti.
 
-Nel reporting, gli ordini, le entrate, le visualizzazioni dei prodotti e gli importi del carrello verranno riportati rispetto &#39;eVar 6 e verranno allineati all&#39;attività del prodotto associato.
+Nel reporting, gli ordini, le entrate, le visualizzazioni dei prodotti e gli attributi del carrello verranno riportati rispetto ad eVar6 e verranno allineati all’attività del prodotto associato.
 
-|  eVar 6 (metodo di ricerca dei prodotti) | ricavo | order | viste prodotto | aggiunta carrello |
+| eVar6 (metodo di ricerca dei prodotti) | ricavi | ordini | visualizzazioni di prodotto | aggiunta carrello |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
-| ricerca interna:camicia estiva | 19,99 | 1 | 3 | 1 |
+| ricerca interna:camicia estiva | 19,99 | 1 | 3 | 3 |
 | ricerca interna:cappello invernale | 12,99 | 3 | 3 | 3 |
 
-Per ulteriori informazioni sull&#39;utilizzo della sintassi di conversione, consultare la documentazione di Adobe Analytics  in [implementazione di eVar utilizzando la sintassi di conversione](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax).
+Per ulteriori informazioni sull&#39;utilizzo della sintassi di conversione, consulta la documentazione di Adobe Analytics in [implementazione di eVar utilizzando la sintassi di conversione](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax).
 
-Di seguito sono riportati i campi XDM per generare la sintassi di conversione nel set di dati [!DNL Analytics]:
+Di seguito sono riportati i campi XDM per produrre la sintassi di conversione nel set di dati [!DNL Analytics] :
 
 #### eVar
 
@@ -228,7 +228,7 @@ Di seguito sono riportati i campi XDM per generare la sintassi di conversione ne
 _experience.analytics.customDimensions.evars.evar#
 ```
 
-- `evar#`: Variabile  eVar specifica a cui si accede.
+- `evar#`: Variabile eVar specifica a cui si accede.
 
 #### Prodotto
 
@@ -240,7 +240,7 @@ productListItems[#].sku
 
 #### Query di esempio
 
-Di seguito è riportata una query di esempio che esegue il binding del valore con la coppia prodotto/evento specifica, in questo caso l&#39;evento visualizzazione prodotto.
+Di seguito è riportato un esempio di query che collega il valore alla coppia di prodotti ed eventi specifica, in questo caso l’evento di visualizzazione del prodotto.
 
 ```sql
 SELECT
@@ -259,7 +259,7 @@ WHERE commerce.productViews.value = 1 OR commerce.purchases.value = 1 OR _experi
 LIMIT 100
 ```
 
-Di seguito è riportata una query di esempio che persiste il valore associato alle occorrenze successive del prodotto corrispondente. La sottoquery più bassa stabilisce la relazione tra i valori e il prodotto nell&#39;evento di binding dichiarato. La sottoquery successiva esegue l&#39;attribuzione di tale valore associato nelle successive interazioni con il rispettivo prodotto. E la selezione di livello principale aggrega i risultati per generare il reporting.
+Ecco una query di esempio che persiste il valore associato alle occorrenze successive del rispettivo prodotto. La sottoquery più bassa stabilisce la relazione dei valori con il prodotto nell&#39;evento di binding dichiarato. La sottoquery successiva esegue l’attribuzione di tale valore associato nelle interazioni successive con il rispettivo prodotto. E il livello superiore seleziona aggrega i risultati per produrre il reporting.
 
 ```sql
 SELECT
