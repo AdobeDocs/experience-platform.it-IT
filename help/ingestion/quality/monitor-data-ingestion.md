@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;home;argomenti comuni;monitoraggio;monitorare;flussi di dati;monitorare l’acquisizione;inserimento dati;inserimento dati;visualizzare record;visualizzare batch;
+keywords: Experience Platform;home;argomenti popolari;monitoraggio;monitorare;flussi di dati;monitorare l’acquisizione;inserimento dati;inserimento dati;visualizzare record;visualizzare batch;
 solution: Experience Platform
 title: Monitoraggio dell’acquisizione dei dati
-topic: ' - Panoramica'
-description: Questa guida utente descrive come monitorare i dati all’interno dell’interfaccia utente di Adobe Experience Platform. Questa guida richiede un Adobe ID e l’accesso ad Adobe Experience Platform.
+topic-legacy: overview
+description: Questa guida utente descrive come monitorare i dati all’interno dell’interfaccia utente di Adobe Experience Platform. Questa guida richiede un Adobe ID e l’accesso a Adobe Experience Platform.
+exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '564'
 ht-degree: 0%
 
 ---
 
-
 # Monitoraggio dell’acquisizione di dati
 
-L’acquisizione dei dati ti consente di acquisire i dati in Adobe Experience Platform. Puoi utilizzare l’acquisizione batch, che ti consente di inserire i dati utilizzando vari tipi di file (come CSV), o l’acquisizione in streaming, che ti consente di acquisire i dati in [!DNL Platform] utilizzando gli endpoint di streaming in tempo reale.
+L’inserimento dei dati consente di acquisire i dati in Adobe Experience Platform. Puoi utilizzare l’acquisizione batch, che ti consente di inserire i dati utilizzando vari tipi di file (come CSV), o l’acquisizione in streaming, che ti consente di acquisire i dati in [!DNL Platform] utilizzando gli endpoint di streaming in tempo reale.
 
-Questa guida utente descrive come monitorare i dati all’interno dell’interfaccia utente di Adobe Experience Platform. Questa guida richiede un Adobe ID e l’accesso ad Adobe Experience Platform.
+Questa guida utente descrive come monitorare i dati all’interno dell’interfaccia utente di Adobe Experience Platform. Questa guida richiede un Adobe ID e l’accesso a Adobe Experience Platform.
 
 ## Monitorare l’acquisizione di dati end-to-end in streaming
 
-Nel [Interfaccia utente di Experience Platform](https://platform.adobe.com), fai clic su **[!UICONTROL Monitoring]** nel menu di navigazione a sinistra, quindi fai clic su **[!UICONTROL Streaming end-to-end]**.
+Nell&#39; [Interfaccia Experience Platform](https://platform.adobe.com), fai clic su **[!UICONTROL Monitoring]** nel menu di navigazione a sinistra, quindi fai clic su **[!UICONTROL Streaming end-to-end]**.
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
