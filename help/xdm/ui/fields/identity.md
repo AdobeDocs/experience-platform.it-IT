@@ -1,29 +1,29 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati;ui;workspace;identity;field;'
+keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati;ui;area di lavoro;identità;campo;
 solution: Experience Platform
-title: Definire i campi identità nell’interfaccia utente
-description: Scoprite come definire un campo di identità nell'interfaccia utente del Experience Platform .
-topic: user guide
+title: Definire i campi di identità nell’interfaccia utente
+description: Scopri come definire un campo di identità nell’interfaccia utente di Experience Platform.
+topic-legacy: user guide
+exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 0%
 
 ---
 
+# Definire i campi di identità nell’interfaccia utente
 
-# Definire i campi di identità nell&#39;interfaccia utente
-
-In Experience Data Model (XDM), un campo di identità rappresenta un campo che può essere utilizzato per identificare una singola persona correlata a un record o a un evento della serie temporale. Questo documento descrive come definire un campo di identità nell’interfaccia utente di Adobe Experience Platform.
+In Experience Data Model (XDM), un campo identità rappresenta un campo che può essere utilizzato per identificare una persona singola correlata a un record o a un evento della serie temporale. Questo documento illustra come definire un campo di identità nell’interfaccia utente di Adobe Experience Platform.
 
 ## Prerequisiti
 
-I campi di identità sono un componente fondamentale del modo in cui i grafici di identità del cliente vengono creati in Piattaforma, il che influisce sul modo in cui il profilo cliente in tempo reale unisce diversi frammenti di dati per ottenere una visione completa del cliente. Prima di definire i campi di identità negli schemi, consultate la seguente documentazione per informazioni sui servizi chiave e sui concetti correlati ai campi di identità:
+I campi di identità sono un componente fondamentale per la creazione dei grafici di identità del cliente in Platform, che in ultima analisi influisce sul modo in cui Profilo cliente in tempo reale unisce diversi frammenti di dati per ottenere una visione completa del cliente. Prima di definire i campi di identità negli schemi, consulta la seguente documentazione per informazioni sui servizi chiave e sui concetti relativi ai campi di identità:
 
-* [Servizio](../../../identity-service/home.md) identità Adobe Experience Platform: Collega le identità tra dispositivi e sistemi, collegando i dataset in base ai campi di identità definiti dagli schemi XDM a cui sono conformi.
-   * [Spazi dei nomi](../../../identity-service/namespaces.md) di identità: Gli spazi dei nomi delle identità definiscono i diversi tipi di informazioni di identità che possono riferirsi a una singola persona e sono un componente richiesto per ciascun campo di identità.
-* [Profilo](../../../profile/home.md) cliente in tempo reale: Utilizza i grafici dell&#39;identità del cliente per fornire un profilo del consumatore unificato basato su dati aggregati provenienti da più origini, aggiornati in tempo quasi reale.
+* [Servizio](../../../identity-service/home.md) Adobe Experience Platform Identity: Collega le identità tra dispositivi e sistemi, collegando i set di dati in base ai campi di identità definiti dagli schemi XDM a cui sono conformi.
+   * [Namespace](../../../identity-service/namespaces.md) di identità: Gli spazi dei nomi delle identità definiscono i diversi tipi di informazioni di identità che possono riferirsi a una singola persona e sono un componente obbligatorio per ciascun campo di identità.
+* [Profilo](../../../profile/home.md) cliente in tempo reale: Sfrutta i grafici di identità dei clienti per fornire un profilo di consumatore unificato basato su dati aggregati provenienti da più sorgenti, aggiornati in tempo quasi reale.
 
 ## Definire un campo di identità
 
@@ -31,28 +31,28 @@ Quando [definisci un nuovo campo](./overview.md#define) nell&#39;interfaccia ute
 
 ![](../../images/ui/fields/special/identity.png)
 
-Dopo aver selezionato la casella di controllo vengono visualizzati altri controlli. Se si desidera che questo campo sia l&#39;identità principale dello schema, selezionare la casella di controllo **[!UICONTROL Primary identity]**.
+Dopo aver selezionato la casella di controllo vengono visualizzati altri controlli. Se desideri che questo campo sia l’identità principale dello schema, seleziona la casella di controllo **[!UICONTROL Primary identity]** .
 
 >[!NOTE]
 >
->Uno schema può avere molti campi di identità definiti, ma può avere una sola identità primaria. Tutti i campi di identità (primari o di altro tipo) contribuiscono al grafico dell&#39;identità per un singolo cliente, ma il profilo cliente in tempo reale utilizza solo l&#39;identità principale come origine di verità quando si uniscono i frammenti di dati. Se si desidera abilitare uno schema per l&#39;utilizzo in Profile, lo schema deve avere un&#39;identità primaria definita.
+>Un singolo schema può avere molti campi di identità definiti, ma può avere una sola identità primaria. Tutti i campi di identità (primari o di altro tipo) contribuiscono al grafico dell’identità per un singolo cliente, ma il profilo cliente in tempo reale utilizza solo l’identità principale come origine della verità durante l’unione dei frammenti di dati. Se desideri abilitare uno schema da utilizzare in Profilo, è necessario che lo schema disponga di un&#39;identità primaria definita.
 
-In **[!UICONTROL Identity namespace]**, utilizzare il menu a discesa per selezionare lo spazio dei nomi appropriato per il campo identità. Vengono elencati gli spazi dei nomi standard forniti  Adobe, insieme a eventuali spazi dei nomi personalizzati definiti dall&#39;organizzazione.
+In **[!UICONTROL Identity namespace]**, utilizza il menu a discesa per selezionare lo spazio dei nomi appropriato per il campo identity. Sono elencati gli spazi dei nomi standard forniti da Adobe, insieme a eventuali spazi dei nomi personalizzati definiti dall’organizzazione.
 
-Al termine, selezionare **[!UICONTROL Apply]** per applicare la modifica allo schema.
+Al termine, seleziona **[!UICONTROL Apply]** per applicare la modifica allo schema.
 
 ![](../../images/ui/fields/special/identity-config.png)
 
-Il quadro si aggiorna per riflettere le modifiche, con il campo selezionato che acquisisce un simbolo di impronta digitale (![](../../images/ui/fields/special/identity-symbol.png)) per specificarlo come identità. Nella barra a sinistra, il campo identità ora è elencato sotto il nome della classe o del mixin che fornisce il campo allo schema.
+L’area di lavoro viene aggiornata per riflettere le modifiche, con il campo selezionato che acquisisce un simbolo di impronta digitale (![](../../images/ui/fields/special/identity-symbol.png)) per designarlo come identità. Nella barra a sinistra, il campo identity è ora elencato sotto il nome della classe o del mixin che fornisce il campo allo schema.
 
-Poiché tutti i campi di identità sono obbligatori per impostazione predefinita, il campo è ora elencato in **[!UICONTROL Required fields]** nella barra a sinistra. Se il campo identità è nidificato all&#39;interno della struttura dello schema, anche tutti i campi principali saranno elencati come obbligatori.
+Poiché tutti i campi di identità sono obbligatori per impostazione predefinita, il campo è ora elencato in **[!UICONTROL Required fields]** nella barra a sinistra. Se il campo Identity è nidificato all’interno della struttura dello schema, verranno elencati anche tutti i campi principali come richiesto.
 
 ![](../../images/ui/fields/special/identity-applied.png)
 
-Se è stata definita un&#39;identità primaria per lo schema, ora è possibile attivare [lo schema da utilizzare nel profilo cliente in tempo reale](../resources/schemas.md#profile).
+Se hai definito un&#39;identità primaria per lo schema, ora puoi procedere all&#39;abilitazione di [lo schema da utilizzare nel Profilo del cliente in tempo reale](../resources/schemas.md#profile).
 
 ## Passaggi successivi
 
-Questa guida descrive come definire un campo di identità nell’interfaccia utente. Durante l&#39;assimilazione dei dati con questo schema, i grafici dell&#39;identità del cliente si aggiorneranno per riflettere i campi dell&#39;identità dello schema. Per informazioni su come esplorare il grafico privato dell&#39;organizzazione nell&#39;interfaccia utente, consulta la guida sul [visualizzatore grafico dell&#39;identità](../../../identity-service/ui/identity-graph-viewer.md).
+Questa guida illustra come definire un campo di identità nell’interfaccia utente di . Poiché i dati vengono acquisiti utilizzando questo schema, i grafici delle identità del cliente vengono aggiornati per riflettere i campi di identità dello schema. Per informazioni su come esplorare il grafico privato dell’organizzazione nell’interfaccia utente, consulta la guida sul [visualizzatore grafico delle identità](../../../identity-service/ui/identity-graph-viewer.md) .
 
-Per informazioni su come definire altri tipi di campi XDM nell&#39; [!DNL Schema Editor], vedere la panoramica relativa alla [definizione dei campi nell&#39;interfaccia utente](./overview.md#special).
+Per informazioni su come definire altri tipi di campi XDM nell’ [!DNL Schema Editor], consulta la panoramica relativa alla [definizione dei campi nell’interfaccia utente](./overview.md#special) .
