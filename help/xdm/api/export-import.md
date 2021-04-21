@@ -3,15 +3,15 @@ keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;mo
 solution: Experience Platform
 title: Esporta/Importa endpoint API
 description: Gli endpoint /export e /import nell’API del Registro di sistema dello schema consentono di condividere risorse XDM tra organizzazioni IMS e sandbox.
-topic: guida per sviluppatori
+topic-legacy: developer guide
+exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
 translation-type: tm+mt
-source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '500'
 ht-degree: 1%
 
 ---
-
 
 # Endpoint di esportazione/importazione
 
