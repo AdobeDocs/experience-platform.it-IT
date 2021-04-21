@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;Adobe Experience Platform;guida API;guida API Platform;introduzione a Platform;guida per sviluppatori
+keywords: Experience Platform;home;argomenti popolari;Adobe Experience Platform;guida API;guida API Platform;introduzione alla piattaforma;guida per gli sviluppatori
 solution: Experience Platform
 title: Postman in Adobe Experience Platform
-topic: guida all’api
+topic-legacy: api guide
 description: Questo documento contiene passaggi che descrivono come impostare un ambiente Postman, importare raccolte Postman e un elenco di raccolte disponibili per ogni servizio Platform.
+exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
 translation-type: tm+mt
-source-git-commit: effc8fef666ffbf62c2e0874d048245f19c12111
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
-
 
 # Postman in Adobe Experience Platform
 
@@ -25,7 +25,7 @@ La seguente guida video illustra la creazione e la configurazione dell’ambient
 
 ## Raccolte Postman {#collections}
 
-Una cartella contenente tutte le raccolte Postman disponibili può essere trovata da , visitando l’ [Experience Platform Postman sample archivio GitHub](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). In alternativa, puoi trovare un collegamento alla raccolta Postman in ogni singolo file swagger nella [documentazione di riferimento API](http://www.adobe.com/go/platform-api-reference-en) su Adobe I/O.
+Una cartella contenente tutte le raccolte Postman disponibili può essere trovata da, visitando l&#39; [Experience Platform Postman amples archivio GitHub](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). In alternativa, un collegamento alla raccolta Postman può essere trovato in ogni singolo file swagger nella [documentazione di riferimento API](http://www.adobe.com/go/platform-api-reference-en) all&#39;Adobe I/O.
 
 Per scaricare una raccolta Postman, seleziona **[!DNL Raw]** dalla pagina GitHub per caricare il file JSON non elaborato in una nuova scheda. Quindi, fai clic con il pulsante destro del mouse e seleziona **[!DNL Save as]** per salvare il file in una destinazione locale di tua scelta.
 
@@ -53,9 +53,9 @@ Per ulteriori informazioni sull&#39;interfaccia utente di Postman e sulle sue fu
 
 >[!WARNING]
 >
->Come indicato nella raccolta Postman di generazione del token di accesso Adobe I/O, i metodi di generazione indicati sono adatti per **uso non di produzione**. La firma locale carica una libreria JavaScript da un host di terze parti e la firma remota invia la chiave privata a un servizio Web di proprietà e gestito da Adobe. Anche se Adobe non memorizza questa chiave privata, le chiavi di produzione non devono mai essere condivise con nessuno.
+>Come indicato nell&#39;insieme Postman di generazione del token di accesso di Adobe I/O, i metodi di generazione indicati sono adatti per **uso non di produzione**. La firma locale carica una libreria JavaScript da un host di terze parti e la firma remota invia la chiave privata a un servizio Web di proprietà e gestito da Adobe. Sebbene Adobe non memorizzi questa chiave privata, le chiavi di produzione non devono mai essere condivise con nessuno.
 
-Il video seguente utilizza la [raccolta di generazione del token di accesso Adobe I/O](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Adobe%20IO%20Access%20Token%20Generation.postman_collection.json) che può essere scaricata dall’archivio GitHub pubblico.
+Il video seguente utilizza la [raccolta di generazione del token di accesso di Adobe I/O](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Adobe%20IO%20Access%20Token%20Generation.postman_collection.json) che può essere scaricata dall’archivio GitHub pubblico.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29698/?quality=12&learn=on)
 
