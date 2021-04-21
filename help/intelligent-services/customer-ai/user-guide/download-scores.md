@@ -1,46 +1,46 @@
 ---
-keywords: ' Experience Platform;scaricare valutazioni;customer ai;argomenti più comuni;Esportare;esportare;ai download del cliente;ai punteggi del cliente'
+keywords: Experience Platform;download dei punteggi;customer ai;argomenti popolari;esportazione;esportazione;download degli ai clienti;punteggi degli ai clienti
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Download dei punteggi nell'AI del cliente
-topic: Downloading scores
-description: L'AI del cliente consente di scaricare i punteggi nel formato file Parquet.
+title: Scaricare i punteggi in Customer AI
+topic-legacy: Downloading scores
+description: Customer AI consente di scaricare i punteggi in formato file Parquet.
+exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 2%
 
 ---
 
+# Scaricare i punteggi in Customer AI
 
-# Download dei punteggi in Customer AI
-
-Questo documento funge da guida per il download dei punteggi per l&#39;AI del cliente.
+Questo documento funge da guida per il download dei punteggi per Customer AI.
 
 ## Introduzione
 
-L&#39;AI del cliente consente di scaricare i punteggi nel formato file Parquet. Questa esercitazione richiede che sia stata letta e completata la sezione Download dei punteggi AI del cliente nella [guida introduttiva](../getting-started.md).
+Customer AI consente di scaricare i punteggi in formato file Parquet. Questa esercitazione richiede di aver letto e completato il download dei punteggi di Customer AI nella guida [guida introduttiva](../getting-started.md) .
 
-Inoltre, per accedere ai punteggi per l&#39;AI cliente, è necessario che sia disponibile un&#39;istanza di servizio con uno stato di esecuzione riuscito. Per creare una nuova istanza del servizio, visitare la pagina [Configuring a Customer AI instance](./configure.md) (Configurazione di un&#39;istanza dell&#39;AI del cliente). Se avete creato di recente un&#39;istanza di servizio che continua a essere formativa e valutazione, lasciate 24 ore per completare l&#39;esecuzione.
+Inoltre, per accedere ai punteggi per Customer AI, è necessario che sia disponibile un’istanza di servizio con uno stato di esecuzione riuscito. Per creare una nuova istanza di servizio, visita [Configurazione di un&#39;istanza di Customer AI](./configure.md). Se hai creato di recente un&#39;istanza di servizio ed è ancora in fase di formazione e valutazione, ti preghiamo di consentire 24 ore per il completamento dell&#39;esecuzione.
 
-Al momento, sono disponibili due modi per scaricare i punteggi AI del cliente:
+Al momento, sono disponibili due modi per scaricare i punteggi di Customer AI:
 
-1. Se desideri scaricare i punteggi a livello individuale e/o non hai abilitato il profilo cliente in tempo reale, inizia andando a [trovare il tuo ID dataset](#dataset-id).
-2. Se il profilo è abilitato e desideri scaricare i segmenti configurati utilizzando l&#39;API del cliente, vai a [scaricare un segmento configurato con l&#39;AI del cliente](#segment).
+1. Se desideri scaricare i punteggi a livello individuale e/o non hai abilitato Profilo cliente in tempo reale, passa a [trova l&#39;ID set di dati](#dataset-id).
+2. Se il profilo è abilitato e desideri scaricare i segmenti configurati utilizzando Customer AI, passa a [scarica un segmento configurato con Customer AI](#segment).
 
 ## Trova l&#39;ID del set di dati {#dataset-id}
 
-Nell&#39;istanza del servizio per informazioni approfondite sull&#39;intelligenza artificiale del cliente, fai clic sul menu a discesa *Altre azioni* nella barra di navigazione in alto a destra, quindi seleziona **[!UICONTROL Access scores]**.
+Nell’istanza del servizio per informazioni di Customer AI, fai clic sul menu a discesa *Altre azioni* nella navigazione in alto a destra, quindi seleziona **[!UICONTROL Access scores]**.
 
 ![altre azioni](../images/insights/more-actions.png)
 
-Viene visualizzata una nuova finestra di dialogo contenente un collegamento alla documentazione del punteggio di download e l&#39;ID del set di dati per l&#39;istanza corrente. Copia l’ID del set di dati negli Appunti e passa al passaggio successivo.
+Viene visualizzata una nuova finestra di dialogo contenente un collegamento alla documentazione del download dei punteggi e l’ID del set di dati per l’istanza corrente. Copia l’ID del set di dati negli Appunti e procedi al passaggio successivo.
 
 ![ID set di dati](../images/download-scores/access-scores.png)
 
 ## Recupera l&#39;ID batch {#retrieve-your-batch-id}
 
-Utilizzando l’ID del set di dati del passaggio precedente, è necessario effettuare una chiamata all’API del catalogo per recuperare un ID batch. Per questa chiamata API vengono utilizzati parametri di query aggiuntivi per restituire l’ultimo batch di successo invece di un elenco di batch appartenenti all’organizzazione. Per restituire altri batch, aumentare il numero per il parametro della query dei limiti fino alla quantità desiderata che si desidera restituire. Per ulteriori informazioni sui tipi di parametri di query disponibili, consultare la guida sul [filtro dei dati del catalogo tramite parametri di query](../../../catalog/api/filter-data.md).
+Utilizzando l’ID del set di dati del passaggio precedente, devi effettuare una chiamata all’API del catalogo per recuperare un ID batch. Per questa chiamata API vengono utilizzati parametri di query aggiuntivi per restituire l’ultimo batch di successo anziché un elenco di batch appartenenti all’organizzazione. Per restituire batch aggiuntivi, aumenta il numero del parametro della query dei limiti alla quantità desiderata da restituire. Per ulteriori informazioni sui tipi di parametri di query disponibili, visita la guida sul [filtraggio dei dati del catalogo utilizzando i parametri di query](../../../catalog/api/filter-data.md).
 
 **Formato API**
 
@@ -50,7 +50,7 @@ GET /batches?&dataSet={DATASET_ID}&createdClient=acp_foundation_push&status=succ
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{DATASET_ID}` | L&#39;ID del set di dati disponibile nella finestra di dialogo &quot;Access Scores&quot;. |
+| `{DATASET_ID}` | L’ID del set di dati disponibile nella finestra di dialogo &quot;Access Scores&quot; (Punteggi di accesso). |
 
 **Richiesta**
 
@@ -64,7 +64,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 
 **Risposta**
 
-Una risposta corretta restituisce un payload contenente un oggetto ID batch. In questo esempio, il valore chiave per l&#39;oggetto restituito è l&#39;ID batch `01E5QSWCAASFQ054FNBKYV6TIQ`. Copia l’ID batch da utilizzare nella prossima chiamata API.
+Una risposta corretta restituisce un payload contenente un oggetto ID batch. In questo esempio, il valore chiave per l&#39;oggetto restituito è l&#39;ID batch `01E5QSWCAASFQ054FNBKYV6TIQ`. Copia il tuo ID batch da utilizzare nella prossima chiamata API.
 
 ```json
 {
@@ -113,9 +113,9 @@ Una risposta corretta restituisce un payload contenente un oggetto ID batch. In 
 }
 ```
 
-## Recuperate la prossima chiamata API con l&#39;ID batch {#retrieve-the-next-api-call-with-your-batch-id}
+## Recupera la prossima chiamata API con il tuo ID batch {#retrieve-the-next-api-call-with-your-batch-id}
 
-Una volta ottenuto l&#39;ID batch, potete effettuare una nuova richiesta di GET a `/batches`. La richiesta restituisce un collegamento utilizzato come richiesta API successiva.
+Una volta ottenuto l’ID batch, puoi effettuare una nuova richiesta GET a `/batches`. La richiesta restituisce un collegamento utilizzato come richiesta API successiva.
 
 **Formato API**
 
@@ -129,7 +129,7 @@ GET batches/{BATCH_ID}/files
 
 **Richiesta**
 
-Utilizzando il proprio ID batch, effettua la seguente richiesta.
+Utilizzando il tuo ID batch, effettua la seguente richiesta.
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/035e2520-5e69-11ea-b624-51evfeba55d1/files' \
@@ -141,7 +141,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/035e2520-5
 
 **Risposta**
 
-Una risposta corretta restituisce un payload contenente un oggetto `_links`. All&#39;interno dell&#39;oggetto `_links` è presente una chiamata `href` con un nuovo valore API. Copiate questo valore per passare al passaggio successivo.
+Una risposta corretta restituisce un payload contenente un oggetto `_links` . All’interno dell’oggetto `_links` è presente una chiamata `href` con un nuovo valore API. Copia questo valore per passare al passaggio successivo.
 
 ```json
 {
@@ -167,9 +167,9 @@ Una risposta corretta restituisce un payload contenente un oggetto `_links`. All
 }
 ```
 
-## Recuperare i file {#retrieving-your-files}
+## Recupera i file {#retrieving-your-files}
 
-Utilizzando il valore `href` ottenuto nel passaggio precedente come chiamata API, effettua una nuova richiesta di GET per recuperare la directory del file.
+Utilizzando il valore `href` ottenuto nel passaggio precedente come chiamata API, effettua una nuova richiesta GET per recuperare la directory dei file.
 
 **Formato API**
 
@@ -179,7 +179,7 @@ GET files/{DATASETFILE_ID}
 
 | Parametro | Descrizione |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | L&#39;ID dataSetFile viene restituito nel valore `href` dal [passaggio precedente](#retrieve-the-next-api-call-with-your-batch-id). È accessibile anche nell&#39;array `data` sotto il tipo di oggetto `dataSetFileId`. |
+| `{DATASETFILE_ID}` | L&#39;ID dataSetFile viene restituito nel valore `href` dal [passaggio precedente](#retrieve-the-next-api-call-with-your-batch-id). È accessibile anche nella matrice `data` sotto il tipo di oggetto `dataSetFileId`. |
 
 **Richiesta**
 
@@ -193,7 +193,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 **Risposta**
 
-La risposta contiene un array di dati che può contenere una singola voce o un elenco di file appartenenti a tale directory. L&#39;esempio seguente contiene un elenco di file ed è stato condensato per la leggibilità. In questo scenario, per accedere al file è necessario seguire l&#39;URL di ciascun file.
+La risposta contiene un array di dati che può avere una singola voce o un elenco di file appartenenti a tale directory. L&#39;esempio seguente contiene un elenco di file ed è stato condensato per la leggibilità. In questo scenario, devi seguire l’URL di ciascun file per accedere al file .
 
 ```json
 {
@@ -242,11 +242,11 @@ Copiare il valore `href` per qualsiasi oggetto file nell&#39;array `data`, quind
 
 ## Scaricare i dati del file
 
-Per scaricare i dati del file, effettuare una richiesta di GET al valore `"href"` copiato nel passaggio precedente [recupero dei file](#retrieving-your-files).
+Per scaricare i dati del file, effettua una richiesta di GET al valore `"href"` copiato nel passaggio precedente [recupero dei file](#retrieving-your-files).
 
 >[!NOTE]
 >
->Se effettui questa richiesta direttamente nella riga di comando, potrebbe essere richiesto di aggiungere un output dopo le intestazioni della richiesta. Nell&#39;esempio di richiesta seguente viene utilizzato `--output {FILENAME.FILETYPE}`.
+>Se effettui questa richiesta direttamente nella riga di comando, potrebbe essere richiesto di aggiungere un output dopo le intestazioni della richiesta. L’esempio di richiesta seguente utilizza `--output {FILENAME.FILETYPE}`.
 
 **Formato API**
 
@@ -272,29 +272,29 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 >[!TIP]
 >
->Prima di effettuare la richiesta, verificate di essere nella directory o nella cartella corretta in cui desiderate salvare il file.
+>Assicurati di essere nella directory o nella cartella corretta in cui desideri salvare il file prima di effettuare la richiesta GET.
 
 **Risposta**
 
-La risposta scarica il file richiesto nella directory corrente. In questo esempio il nome del file è &quot;nomefile.parquet&quot;.
+La risposta scarica il file richiesto nella directory corrente. In questo esempio il nome del file è &quot;filename.parquet&quot;.
 
 ![Terminale](../images/download-scores/response.png)
 
-## Scarica un segmento configurato con l&#39;API cliente {#segment}
+## Scaricare un segmento configurato con Customer AI {#segment}
 
-Un metodo alternativo per scaricare i dati della valutazione consiste nell&#39;esportare il pubblico in un dataset. Dopo che un processo di segmentazione è stato completato correttamente (il valore dell&#39;attributo `status` è &quot;SUCCEEDED&quot;), potete esportare il pubblico in un set di dati in cui è possibile accedervi e agire. Per ulteriori informazioni sulla segmentazione, visitare la [panoramica sulla segmentazione](../../../segmentation/home.md).
+Un modo alternativo per scaricare i dati del punteggio è quello di esportare il pubblico in un set di dati. Dopo che un processo di segmentazione è stato completato correttamente (il valore dell’attributo `status` è &quot;SUCCEEDED&quot;), puoi esportare il pubblico in un set di dati a cui è possibile accedere e agire. Per ulteriori informazioni sulla segmentazione, visita la [panoramica sulla segmentazione](../../../segmentation/home.md).
 
 >[!IMPORTANT]
 >
->Per utilizzare questo metodo di esportazione, è necessario abilitare il profilo cliente in tempo reale per il set di dati.
+>Per utilizzare questo metodo di esportazione, è necessario abilitare Profilo cliente in tempo reale per il set di dati.
 
-La sezione [esporta un segmento](../../../segmentation/tutorials/evaluate-a-segment.md) nella guida alla valutazione dei segmenti descrive i passaggi necessari per esportare un set di dati per l&#39;audience. La guida fornisce alcuni esempi di quanto segue:
+La sezione [esportazione di un segmento](../../../segmentation/tutorials/evaluate-a-segment.md) nella guida alla valutazione dei segmenti descrive i passaggi necessari per esportare un set di dati per il pubblico. La guida illustra e fornisce esempi di quanto segue:
 
-- **Creare un set di dati di destinazione:** creare il set di dati per contenere i membri del pubblico.
-- **Genera profili di pubblico nel set di dati:** compila il set di dati con i singoli profili XDM in base ai risultati di un processo di segmento.
-- **Monitorare l’avanzamento dell’esportazione:** verificare l’avanzamento corrente del processo di esportazione.
+- **Creare un set di dati di destinazione:**  crea il set di dati per contenere i membri del pubblico.
+- **Genera profili di pubblico nel set di dati:** compila il set di dati con profili singoli XDM in base ai risultati di un lavoro di segmento.
+- **Monitora l’avanzamento dell’esportazione:**  controlla l’avanzamento corrente del processo di esportazione.
 - **Leggi i dati sul pubblico:** recupera i singoli profili XDM risultanti che rappresentano i membri del pubblico.
 
 ## Passaggi successivi
 
-Questo documento descrive i passaggi necessari per scaricare i punteggi dell&#39;intelligenza artificiale dei clienti. È ora possibile continuare a esplorare gli altri [Servizi intelligenti](../../home.md) e le altre guide disponibili.
+Questo documento descrive i passaggi necessari per scaricare i punteggi di Customer AI. Ora puoi continuare a sfogliare le altre [Intelligent Services](../../home.md) e le guide offerte.
