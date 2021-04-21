@@ -2,14 +2,14 @@
 title: Note sulla versione di Adobe Experience Platform
 description: Note sulla versione di Experience Platform per il 21 aprile 2021.
 doc-type: release notes
-last-update: March 31, 2021
-author: ens70167
+last-update: April 21, 2021
+author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 translation-type: tm+mt
-source-git-commit: 0c9b60fe0777286819841c520a41007634622578
+source-git-commit: 9b63a47a8da07830313c0a8e690c7247dc3fbe6b
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 12%
+source-wordcount: '868'
+ht-degree: 10%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 12%
 Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Experience Data Model (XDM)]](#xdm)
 - [[!DNL Intelligent Services]](#intelligent-services)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
@@ -37,6 +38,14 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 | Supporto per l’acquisizione in streaming | È ora possibile utilizzare le funzioni di preparazione dei dati durante la creazione di una connessione sorgente di streaming. Per ulteriori informazioni, consulta l’esercitazione su [creazione di una connessione sorgente di streaming nell’interfaccia utente](../../sources/tutorials/ui/create/streaming/http.md). |
 
 Per ulteriori informazioni, consulta la [[!DNL Data Prep] panoramica](../../data-prep/home.md).
+
+## [!DNL Experience Data Model (XDM)] {#xdm}
+
+Experience Data Model (XDM) è una specifica open-source progettata per migliorare la potenza delle esperienze digitali. Fornisce strutture e definizioni comuni per qualsiasi applicazione per comunicare con i servizi su Adobe Experience Platform. Aderendo agli standard XDM, tutti i dati sulla customer experience possono essere incorporati in una rappresentazione comune per fornire informazioni in modo più rapido e integrato. Puoi ottenere informazioni utili dalle azioni dei clienti, definire il pubblico dei clienti attraverso i segmenti e utilizzare gli attributi del cliente a scopo di personalizzazione.
+
+| Funzione | Descrizione |
+| --- | --- |
+| Raccomandazioni in base allo schema per settore | Quando selezioni le classi e i mixin nell’interfaccia utente dell’Editor schema, puoi utilizzare un nuovo filtro per visualizzare i componenti standard consigliati in base al settore specifico. Consulta la documentazione sui [modelli di dati del settore](https://www.adobe.com/go/xdm-industry-erds-en) per ulteriori informazioni su come questi componenti si relazionano tra loro per diversi casi d&#39;uso del settore. |
 
 ## [!DNL Intelligent Services] {#intelligent-services}
 
