@@ -1,55 +1,55 @@
 ---
-keywords: ' Experience Platform;casa;argomenti popolari;GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;panoramica;panoramica;regolamento;regolamentazione;regolamenti;privacy;privacy;privacy;panoramica;panoramica generale;regolamentazione;regolamentazione;regolamentazione;regolamento;privacy;privacy;;'
+keywords: Experience Platform;home;argomenti popolari;RGPD;RGPD;CCPA;CCPA;PDPA;PDPA;LGPD;LGPD;lgpd;panoramica;panoramica;regolamento;regolamenti;regolamenti;privacy;privacy;privacy;
 solution: Experience Platform
 title: Terminologia delle normative sulla privacy
-topic: troubleshooting
-description: Questo documento contiene le definizioni per i termini chiave relativi alle normative sulla privacy supportate da Adobe Experience Cloud.
+topic-legacy: troubleshooting
+description: Questo documento fornisce le definizioni dei termini chiave relativi alle normative sulla privacy supportate da Adobe Experience Cloud.
+exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 3%
 
 ---
 
-
 # Terminologia delle normative sulla privacy
 
-Questo documento contiene le definizioni per i termini chiave relativi alle normative sulla privacy supportate da Adobe Experience Cloud.
+Questo documento fornisce le definizioni dei termini chiave relativi alle normative sulla privacy supportate da Adobe Experience Cloud.
 
 ## A
 
 ## B
 
-**Regole aziendali di binding (BCR)**: Una serie di norme vincolanti messe in atto per consentire alle multinazionali e alle organizzazioni di trasferire i dati personali che controllano dall&#39;UE alle loro affiliate al di fuori dell&#39;UE (ma all&#39;interno dell&#39;organizzazione).
+**Regole aziendali di binding (BCR)**: Una serie di norme vincolanti messe in atto per consentire alle multinazionali e alle organizzazioni di trasferire i dati personali che controllano dall&#39;UE alle loro consociate al di fuori dell&#39;UE (ma all&#39;interno dell&#39;organizzazione).
 
-**Dati biometrici:** qualsiasi dato personale relativo alle caratteristiche fisiche, fisiologiche o comportamentali di un individuo che ne consenta l&#39;identificazione univoca.
+**Dati biometrici** Qualsiasi dato personale relativo alle caratteristiche fisiche, fisiologiche o comportamentali di un individuo che ne consenta l&#39;identificazione univoca.
 
 ## C
 
-**CCPA**: L&#39; [!DNL California Consumer Privacy Act] (CCPA) offre ai residenti californiani un maggiore controllo sulle informazioni personali che le aziende raccolgono da allora. La legge prevede diversi nuovi diritti per i consumatori, tra cui il diritto di accesso e le informazioni personali da essi raccolte, e il diritto di non cedere alla vendita delle loro informazioni personali a terzi.
+**CCPA**: Il  [!DNL California Consumer Privacy Act] (CCPA) offre ai residenti della California un maggiore controllo sulle informazioni personali che le aziende raccolgono da allora. La legge prevede diversi nuovi diritti per i consumatori, tra cui il diritto di accesso e le informazioni personali da essi raccolte, e il diritto di negare la vendita delle loro informazioni personali a terzi.
 
-**Consenso**: Consenso esplicito, specifico, informato e libero, per dichiarazione o per azione che significhi l&#39;accettazione del trattamento dei loro dati personali.
+**Consenso**: Consenso specifico, informato ed esplicito, concesso liberamente mediante dichiarazione o azione che implica l&#39;accettazione del trattamento dei propri dati personali.
 
 ## D
 
-**Dati relativi alla salute**: Tutti i dati personali relativi alla salute fisica o mentale di un individuo o alla prestazione di servizi sanitari a quest&#39;ultimo.
+**Dati relativi alla salute**: Qualsiasi dato personale relativo alla salute fisica o mentale di un individuo o alla fornitura di servizi sanitari a quest&#39;ultimo.
 
-**Controller** dati: L&#39;entità che determina le finalità, le condizioni e i mezzi del trattamento dei dati personali.
+**Titolare del trattamento** dei dati: L’entità che determina le finalità, le condizioni e i mezzi del trattamento dei dati personali.
 
-**Cancellazione** dati: Noto anche come Diritto di essere Dimenticato, esso autorizza l&#39;interessato a far cancellare i propri dati personali al titolare del trattamento, a cessare l&#39;ulteriore diffusione dei dati e a far cessare potenzialmente a terzi il trattamento dei dati.
+**Cancellazione** dati: Noto anche come Diritto all’oblio, esso autorizza la persona interessata a chiedere al titolare del trattamento di cancellare i propri dati personali, cessare l’ulteriore diffusione dei dati e potenzialmente anche a terzi di cessare il trattamento dei dati.
 
-**Portabilità** dei dati: L&#39;obbligo per i responsabili del trattamento di fornire all&#39;interessato una copia dei suoi dati in un formato che consenta un facile utilizzo con un altro responsabile del trattamento.
+**Portabilità** dei dati: L’obbligo per i titolari del trattamento di fornire alla persona interessata una copia dei propri dati in un formato che consenta un facile utilizzo con un altro titolare del trattamento.
 
-**Processore** dati: L&#39;entità che elabora i dati per conto del Titolare del trattamento dei dati.
+**Processore** dati: L’entità che elabora i dati per conto del Titolare del trattamento dei dati.
 
 **Autorità** per la protezione dei dati: Le autorità nazionali incaricate della protezione dei dati e della vita privata, nonché del controllo e dell&#39;applicazione delle norme sulla protezione dei dati all&#39;interno dell&#39;Unione.
 
-**Responsabile** della protezione dei dati: Un esperto di privacy dei dati che lavora in modo indipendente per assicurare che un&#39;entità aderisca alle politiche e alle procedure stabilite nel GDPR.
+**Responsabile** della protezione dei dati: Un esperto in privacy dei dati che lavora in modo indipendente per garantire che un’entità aderisca ai criteri e alle procedure stabiliti nel RGPD.
 
-**Oggetto** dati: Persona fisica i cui dati personali sono trattati da un titolare del trattamento o da un responsabile del trattamento.
+**Interessato**: Persona fisica i cui dati personali sono trattati da un titolare del trattamento o da un responsabile del trattamento.
 
-**Atti** delegati: Atti non legislativi adottati per completare la legislazione esistente e fornire criteri o chiarezza.
+**Atti** delegati: Atti non legislativi adottati al fine di integrare la legislazione esistente e fornire criteri o chiarezza.
 
 **Deroga**: Un&#39;esenzione da una legge.
 
@@ -57,19 +57,19 @@ Questo documento contiene le definizioni per i termini chiave relativi alle norm
 
 ## E
 
-**Dati** crittografati: Dati personali protetti tramite misure tecnologiche per garantire che i dati siano accessibili e leggibili solo da coloro che dispongono di un accesso specifico.
+**Dati** crittografati: Dati personali protetti mediante misure tecnologiche per garantire che i dati siano accessibili e leggibili solo da coloro che hanno un accesso specifico.
 
-**Enterprise**: Qualsiasi entità impegnata in attività economica, indipendentemente dalla forma giuridica, comprese persone, associazioni, associazioni, ecc.
+**Enterprise**: Qualsiasi entità impegnata in attività economica, indipendentemente dalla forma giuridica, comprese persone, società di persone, associazioni, ecc.
 
-**Consenso** esplicito: Uno standard di consenso che prevede un’indicazione specifica, informata e univoca dei desideri dell’interessato in forma orale o scritta. In parole povere, l&#39;interessato deve dire letteralmente ed esplicitamente &quot;io consenso&quot; o &quot;io sono d&#39;accordo&quot; affinché il consenso sia considerato esplicito. Inoltre, il consenso deve essere revocato con la stessa facilità con cui viene dato.
+**Consenso** esplicito: Norma di consenso che comporta un’indicazione specifica, informata e inequivocabile della volontà della persona interessata in forma orale o scritta. In parole povere, la persona interessata deve dire letteralmente ed esplicitamente &quot;Io acconsento&quot; o &quot;Io sono d&#39;accordo&quot; affinché il consenso sia considerato esplicito. Inoltre, il ritiro del consenso deve essere altrettanto semplice di quello che lo è.
 
 ## F
 
-**Sistema** di archiviazione: Qualsiasi insieme specifico di dati personali che sia accessibile in base a criteri specifici, o che possa essere interrogato.
+**Sistema** di archiviazione: Qualsiasi insieme specifico di dati personali accessibile in base a criteri specifici o in grado di essere interrogato.
 
 ## G
 
-**GDPR**: Il  [!DNL General Data Protection Regulation] (GDPR) è un quadro giuridico che definisce linee guida per la raccolta e il trattamento di informazioni personali di individui all&#39;interno dell&#39;Unione europea (UE). Il GDPR stabilisce i principi per la gestione dei dati e i diritti dei singoli, imponendo allo stesso tempo multe che possono essere basate sulle entrate. Il GDPR copre tutte le aziende che si occupano dei dati dei cittadini dell&#39;UE, pertanto si tratta di una regolamentazione critica per i funzionari responsabili della conformità aziendale presso banche, assicuratori e altre società finanziarie.
+**RGPD**: Il  [!DNL General Data Protection Regulation] (RGPD) è un quadro giuridico che stabilisce le linee guida per la raccolta e il trattamento di informazioni personali di persone all’interno dell’Unione europea (UE). Il RGPD stabilisce i principi per la gestione dei dati e i diritti dei singoli individui, imponendo al tempo stesso multe che possono essere basate sui ricavi. Il RGPD riguarda tutte le aziende che si occupano dei dati dei cittadini dell&#39;UE, pertanto si tratta di una regolamentazione critica per i responsabili della conformità aziendale presso banche, assicuratori e altre società finanziarie.
 
 **Dati** genetici: Dati relativi alle caratteristiche di una persona ereditata o acquisita che forniscono informazioni univoche sulla salute o sulla fisiologia dell&#39;individuo.
 
@@ -79,11 +79,11 @@ Questo documento contiene le definizioni per i termini chiave relativi alle norm
 
 ## I
 
-**Identity Management Services (IMS)**: L&#39;implementazione  Adobe di Federated ID e OAuth 2.0 per l&#39;autenticazione degli utenti  Adobe ID e l&#39;autorizzazione per  risorse di Adobe. È necessario integrare IMS con l’applicazione o il servizio Adobe per consentire agli utenti di entrare e accedere ai servizi di Adobe. Gli utenti possono accedere direttamente con Renga (il provider di servizi di identità del Adobe ), oppure tramite un dominio di autenticazione di terze parti trusted (ad esempio [!DNL Google], [!DNL Facebook] o un LDAP aziendale/organizzazione).
+**Servizi Identity Management (IMS)**: Adobe di implementazione di Federated ID e OAuth 2.0 per l’autenticazione degli utenti Adobe ID e l’autorizzazione per le risorse di Adobe. È necessario integrare IMS con l’applicazione o il servizio Adobe per consentire agli utenti di entrare e accedere ai servizi di Adobe. Gli utenti possono accedere direttamente con Renga (il provider di servizi di identità Adobe) o tramite un dominio di autenticazione terzo affidabile (ad esempio [!DNL Google], [!DNL Facebook] o un LDAP aziendale/organizzazione).
 
-**Consenso** implicito: Noto anche come consenso inequivocabile, si tratta di un consenso che non è stato esplicitamente fornito dall’interessato, ma che è comunque privo di ambiguità. Ad esempio, durante il processo di registrazione per un sito Web aziendale, viene segnalato che fornendo un indirizzo e-mail, l&#39;interessato accetta di ricevere e-mail su offerte speciali. Se l&#39;interessato legge l&#39;avviso, l&#39;azione affermativa di immettere l&#39;e-mail è sufficiente per essere considerato un consenso implicito.
+**Consenso implicito**: Anche noto come consenso non ambiguo, si riferisce al consenso che non è stato esplicitamente dato dalla persona interessata, ma che tuttavia è di natura inequivocabile. Ad esempio, durante il processo di registrazione per un sito web aziendale, viene comunicato che, fornendo un indirizzo e-mail, l’interessato acconsente a ricevere e-mail su offerte speciali. Se l’interessato legge l’avviso, l’azione positiva di inserire l’e-mail è sufficiente per essere considerato un consenso implicito.
 
-**ID** organizzazione IMS: Si riferisce a un token di autorizzazione  Adobe per l&#39;autenticazione servizio-servizio, che non richiede l&#39;accesso utente. Viene emesso a un client IMS e non ha alcun utente associato. Un client IMS necessita di un token di servizio per autorizzare le richieste del canale indietro tra i servizi. (Il termine “token di sistema” viene usato saltuariamente per indicare il token di servizio).
+**ID organizzazione IMS**: Fa riferimento a un token di autorizzazione Adobe per l’autenticazione da servizio a servizio, che non richiede l’accesso dell’utente. Viene rilasciato a un client IMS e non ha un utente associato. Un client IMS necessita di un token di servizio per autorizzare le richieste di back-channel tra i servizi. (Il termine “token di sistema” viene usato saltuariamente per indicare il token di servizio).
 
 ## J
 
@@ -91,11 +91,11 @@ Questo documento contiene le definizioni per i termini chiave relativi alle norm
 
 ## L
 
-**LGPD**: La  [!DNL Lei Geral de Proteção de Dados] (LGPD) mira a regolamentare il trattamento dei dati personali di tutte le persone fisiche o giuridiche in Brasile. La LGPD conferisce ai cittadini brasiliani il diritto di accedere ai propri dati personali e di cancellarli, di sapere se i loro dati personali sono stati venduti o divulgati (e a chi), nonché il diritto di non far vendere i propri dati a terzi.
+**LGPD**: La  [!DNL Lei Geral de Proteção de Dados] (LGPD) mira a regolamentare il trattamento dei dati personali di tutte le persone fisiche o giuridiche in Brasile. La LGPD conferisce ai cittadini brasiliani il diritto di accedere ai propri dati personali e di cancellarli, di sapere se i propri dati personali vengono venduti o divulgati (e a chi), e il diritto di negare la possibilità di vendere i propri dati a terzi.
 
 ## M
 
-**Principale stabilimento**: il luogo all&#39;interno dell&#39;Unione in cui vengono prese le principali decisioni relative al trattamento dei dati; per quanto riguarda il trasformatore.
+**Principale stabilimento**: il luogo all&#39;interno dell&#39;Unione in cui vengono prese le decisioni principali sul trattamento dei dati; per quanto riguarda il processore.
 
 ## N
 
@@ -103,51 +103,51 @@ Questo documento contiene le definizioni per i termini chiave relativi alle norm
 
 ## P
 
-**PDPA**: Il PDPA ( [!DNL Personal Data Protection Act] di Thailandia) è stato introdotto per proteggere i proprietari di dati thailandesi dalla raccolta, dall&#39;uso o dalla divulgazione illecita dei loro dati personali. Ispirandosi al GDPR dell&#39;Unione europea, il regolamento concede ai cittadini thailandesi il diritto di chiedere l&#39;accesso ai loro dati personali conservati o di eliminarli.
+**PDPA**: Il  [!DNL Personal Data Protection Act] programma di protezione dei dati thailandesi (PDPA) è stato introdotto per proteggere i proprietari di dati thailandesi dalla raccolta, dall&#39;utilizzo o dalla divulgazione illegali dei loro dati personali. Il regolamento, ispirato al RGPD dell&#39;Unione europea, conferisce ai cittadini thailandesi il diritto di richiedere l&#39;accesso ai loro dati personali memorizzati o la loro cancellazione.
 
-**Dati** personali: Qualsiasi informazione relativa a una persona fisica o a una persona fisica o a una persona fisica o a una persona fisica, che può essere utilizzata per identificare direttamente o indirettamente la persona.
+**Dati** personali: Qualsiasi informazione correlata a una persona fisica o a una &quot;persona interessata&quot;, che può essere utilizzata per identificare direttamente o indirettamente la persona.
 
-**Violazione** dei dati personali: Una violazione della sicurezza che comporta l&#39;accesso accidentale o illecito, la distruzione, l&#39;uso improprio, ecc. di dati personali.
+**Violazione** dei dati personali: Una violazione della sicurezza che comporta l&#39;accesso accidentale o illegale, la distruzione, l&#39;uso improprio, ecc. di dati personali.
 
-**Privacy per progettazione**: Un principio che richiede l&#39;inclusione della protezione dei dati dall&#39;inizio della progettazione dei sistemi, piuttosto che un&#39;aggiunta.
+**Privacy per progettazione**: Un principio che richiede l&#39;inclusione della protezione dei dati fin dall&#39;inizio della progettazione dei sistemi, piuttosto che un&#39;aggiunta.
 
-**Valutazione** dell&#39;impatto sulla privacy: Strumento utilizzato per identificare e ridurre i rischi per la privacy delle entità analizzando i dati personali trattati e le politiche in vigore per la protezione dei dati.
+**Valutazione** d’impatto sulla privacy: Strumento utilizzato per identificare e ridurre i rischi di privacy degli enti analizzando i dati personali elaborati e le politiche in vigore per proteggere i dati.
 
-**Elaborazione**: Qualsiasi operazione eseguita su dati personali, anche con mezzi automatizzati, compresi raccolta, uso, registrazione, ecc.
+**Elaborazione**: Qualsiasi operazione eseguita sui dati personali, anche con mezzi automatizzati, compresi raccolta, uso, registrazione, ecc.
 
-**Profiling**: Qualsiasi trattamento automatizzato di dati personali inteso a valutare, analizzare o prevedere il comportamento degli interessati.
+**Profiling**: Qualsiasi trattamento automatizzato di dati personali inteso a valutare, analizzare o prevedere il comportamento della persona interessata.
 
-**Pseudonimizzazione**: Il trattamento dei dati personali in modo che non possa più essere attribuito a un solo soggetto senza l&#39;uso di dati supplementari, purché tali dati supplementari restino separati per garantire la non attribuzione.
+**Pseudonimizzazione**: Trattamento di dati personali in modo che non possano più essere attribuiti a un singolo soggetto interessato senza l’uso di dati aggiuntivi, purché tali dati supplementari siano separati per garantire la non attribuzione.
 
 ## Q
 
 ## R
 
-**Destinatario**: Entità a cui sono comunicati i dati personali.
+**Destinatario**: Entità a cui i dati personali sono comunicati.
 
-**Regolamento**: Un atto legislativo vincolante che deve essere applicato integralmente in tutta l&#39;Unione.
+**Regolamento**: Un atto legislativo vincolante che deve essere applicato nella sua interezza in tutta l&#39;Unione.
 
-**Rappresentante**: Qualsiasi persona nell&#39;Unione esplicitamente designata dal responsabile del trattamento che deve essere indirizzata dalle autorità di vigilanza.
+**Rappresentante**: Qualsiasi persona nell&#39;Unione indicata esplicitamente dal titolare del trattamento cui devono rivolgersi le autorità di controllo.
 
-**Diritto di essere dimenticato**: Conosciuta anche come cancellazione dei dati, essa autorizza l&#39;interessato a far cancellare i propri dati personali al titolare del trattamento, a cessare l&#39;ulteriore diffusione dei dati e a far cessare il trattamento dei dati da parte di terzi.
+**Diritto all&#39;oblio**: Anche nota come cancellazione dei dati, concede alla persona interessata il diritto di richiedere al titolare del trattamento di cancellare i propri dati personali, cessare l’ulteriore diffusione dei dati e potenzialmente a terzi di cessare il trattamento dei dati.
 
-**Diritto di accesso**: Conosciuto anche come Diritto di accesso al soggetto, esso autorizza l&#39;interessato ad avere accesso ai dati personali che un titolare del trattamento ha nei suoi confronti e ad informarli in merito.
+**Diritto di accesso**: Noto anche come Diritto di accesso della persona interessata, concede alla persona interessata il diritto di accedere ai dati personali e alle relative informazioni sulla persona interessata di cui il titolare del trattamento dispone.
 
 ## S
 
 **Dati** sensibili: Dati personali relativi all&#39;origine razziale o etnica, opinioni politiche, religioni o convinzioni filosofiche, comportamenti sessuali, casellari giudiziari, dati sanitari, disabilità, informazioni sindacali, dati genetici, dati biometrici o qualsiasi dato che possa incidere sulla persona interessata.
 
-**Oggetto Diritto** di accesso: Conosciuto anche come Diritto di accesso, esso autorizza l&#39;interessato ad avere accesso ai dati personali e alle informazioni relative ai dati personali che il titolare del trattamento ha nei suoi confronti.
+**Diritto** di accesso dell&#39;interessato: Noto anche come Diritto di accesso, concede alla persona interessata il diritto di accedere ai dati personali e alle relative informazioni sulla persona interessata possedute dal titolare.
 
-**Autorità** di vigilanza: Un&#39;autorità pubblica stabilita da uno Stato membro conformemente all&#39;articolo 46.
+**Autorità** di vigilanza: Un&#39;autorità pubblica istituita da uno Stato membro a norma dell&#39;articolo 46.
 
 ## T
 
-**Triloghi**: NEGOZIATI INFORMALI TRA LA COMMISSIONE EUROPEA, IL PARLAMENTO EUROPEO E il Consiglio dell&#39;Unione europea, Tenutisi Di Solito in SEGUITO Alle PRIME LETTURE della legislazione PROPOSTE, AL FINE DI ACCETTARE PIÙ RAPIDAMENTE Un testo di compromesso da adottare.
+**Triloghi**: Negoziati INFORMALI Tra LA COMMISSIONE EUROPEA, il Parlamento Europeo e il Consiglio dell&#39;Unione europea, Solitamente Tenuti in SEGUITO Alle PRIME letture della legislazione proposta, PER CONSENTIRE più rapidamente L&#39;adozione di un testo di compromesso.
 
 ## U
 
-**Consenso** chiaro: Noto anche come consenso implicito, si tratta di un consenso che non è stato esplicitamente fornito dall’interessato, ma che è comunque privo di ambiguità. Ad esempio, durante il processo di registrazione per un sito Web aziendale, viene segnalato che fornendo un indirizzo e-mail, l&#39;interessato accetta di ricevere e-mail su offerte speciali. Se l&#39;interessato legge l&#39;avviso, l&#39;azione affermativa di immettere l&#39;e-mail è sufficiente per essere considerato un consenso non ambiguo.
+**Consenso** non ambiguo: Conosciuto anche come consenso implicito, si riferisce al consenso che non è stato esplicitamente dato dalla persona interessata, ma che tuttavia è di natura inequivocabile. Ad esempio, durante il processo di registrazione per un sito web aziendale, viene comunicato che, fornendo un indirizzo e-mail, l’interessato acconsente a ricevere e-mail su offerte speciali. Se l’interessato legge l’avviso, l’azione positiva di inserire l’e-mail è sufficiente per essere considerato un consenso non ambiguo.
 
 ## V
 
