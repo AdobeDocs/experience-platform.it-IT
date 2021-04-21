@@ -1,35 +1,35 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Segmentation Service;Segmentation job;Segment job;API;api;'
+keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Servizio di segmentazione;lavori di segmento;processo di segmento;API;api;
 solution: Experience Platform
-title: Endpoint API processi segmento
-topic: developer guide
-description: L’endpoint dei processi del segmento nell’API di Adobe Experience Platform Segmentation Service consente di gestire i processi del segmento a livello di programmazione per la propria organizzazione.
+title: Endpoint API per i processi di segmento
+topic-legacy: developer guide
+description: L’endpoint per i processi di segmento nell’API del servizio di segmentazione di Adobe Experience Platform consente di gestire i processi di segmento a livello di programmazione per la tua organizzazione.
+exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 2%
 
 ---
 
+# Endpoint per processi di segmento
 
-# Endpoint processi segmento
+Un processo di segmento è un processo asincrono che crea un nuovo segmento di pubblico. Fa riferimento a una [definizione del segmento](./segment-definitions.md), nonché a qualsiasi [criteri di unione](../../profile/api/merge-policies.md) che controlla come [!DNL Real-time Customer Profile] unisce gli attributi sovrapposti nei frammenti di profilo. Quando un processo di segmento viene completato con successo, puoi raccogliere varie informazioni sul segmento, ad esempio eventuali errori verificatisi durante l’elaborazione e le dimensioni finali del pubblico.
 
-Un processo di segmento è un processo asincrono che crea un nuovo segmento di pubblico. Fa riferimento a una [definizione del segmento](./segment-definitions.md), nonché a qualsiasi [criteri di unione](../../profile/api/merge-policies.md) che controlla in che modo [!DNL Real-time Customer Profile] unisce gli attributi di sovrapposizione nei frammenti di profilo. Quando un processo del segmento viene completato correttamente, potete raccogliere varie informazioni sul segmento, ad esempio eventuali errori che si sono verificati durante l&#39;elaborazione e le dimensioni finali del pubblico.
-
-Questa guida fornisce informazioni utili per comprendere meglio i processi dei segmenti e include chiamate API di esempio per eseguire azioni di base tramite l&#39;API.
+Questa guida fornisce informazioni utili per comprendere meglio i processi dei segmenti e include chiamate API di esempio per l’esecuzione di azioni di base tramite l’API.
 
 ## Introduzione
 
-Gli endpoint utilizzati in questa guida fanno parte dell&#39;API [!DNL Adobe Experience Platform Segmentation Service]. Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all&#39;API, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
+Gli endpoint utilizzati in questa guida fanno parte dell’ API [!DNL Adobe Experience Platform Segmentation Service] . Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all&#39;API, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
 
-## Recuperare un elenco di processi di segmento {#retrieve-list}
+## Recupera un elenco di processi di segmento {#retrieve-list}
 
-È possibile recuperare un elenco di tutti i processi del segmento per l&#39;organizzazione IMS effettuando una richiesta di GET all&#39;endpoint `/segment/jobs`.
+Puoi recuperare un elenco di tutti i processi di segmento per la tua organizzazione IMS effettuando una richiesta di GET all’ endpoint `/segment/jobs` .
 
 **Formato API**
 
-L&#39;endpoint `/segment/jobs` supporta diversi parametri di query per facilitare il filtro dei risultati. Anche se questi parametri sono opzionali, il loro utilizzo è fortemente consigliato per ridurre i costi di sovraccarico. Effettuando una chiamata a questo endpoint senza parametri, tutti i processi di esportazione disponibili per la vostra organizzazione verranno recuperati. È possibile includere più parametri, separati da e-mail (`&`).
+L’endpoint `/segment/jobs` supporta diversi parametri di query per filtrare i risultati. Sebbene questi parametri siano opzionali, si consiglia vivamente di utilizzarli per ridurre i costi di overhead. Effettuare una chiamata a questo endpoint senza parametri recupererà tutti i processi di esportazione disponibili per la tua organizzazione. È possibile includere più parametri, separati da e commerciali (`&`).
 
 ```http
 GET /segment/jobs
@@ -42,9 +42,9 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | --------- | ----------- | ------- |
 | `start` | Specifica l&#39;offset iniziale per i processi del segmento restituiti. | `start=1` |
 | `limit` | Specifica il numero di processi di segmento restituiti per pagina. | `limit=20` |
-| `status` | Filtra i risultati in base allo stato. I valori supportati sono NUOVO, IN CODA, ELABORAZIONE, SUCCESSO, NON RIUSCITO, ANNULLAMENTO, ANNULLATO | `status=NEW` |
-| `sort` | Ordina i processi del segmento restituiti. È scritto nel formato `[attributeName]:[desc|asc]`. | `sort=creationTime:desc` |
-| `property` | Filtra i processi del segmento e ottiene corrispondenze esatte per il filtro specificato. Può essere scritto in uno dei seguenti formati: <ul><li>`[jsonObjectPath]==[value]` - filtraggio sulla chiave dell&#39;oggetto</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtraggio all&#39;interno dell&#39;array</li></ul> | `property=segments~segmentId==workInUS` |
+| `status` | Filtra i risultati in base allo stato. I valori supportati sono NEW, QUEUED, PROCESSING, SUCCEEDED, FAILED, CANCELING, CANCELLED | `status=NEW` |
+| `sort` | Ordina i lavori del segmento restituiti. È scritto nel formato `[attributeName]:[desc|asc]`. | `sort=creationTime:desc` |
+| `property` | Filtra i processi del segmento e ottiene corrispondenze esatte per il filtro specificato. Può essere scritto in uno dei seguenti formati: <ul><li>`[jsonObjectPath]==[value]` - filtro sul tasto oggetto</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtro all&#39;interno dell&#39;array</li></ul> | `property=segments~segmentId==workInUS` |
 
 **Richiesta**
 
@@ -58,11 +58,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **Risposta**
 
-Una risposta corretta restituisce lo stato HTTP 200 con un elenco di processi di segmento per l’organizzazione IMS specificata come JSON. La risposta seguente restituisce un elenco di tutti i processi del segmento riusciti per l&#39;organizzazione IMS.
+Una risposta corretta restituisce lo stato HTTP 200 con un elenco di processi di segmento per l’organizzazione IMS specificata come JSON. La risposta seguente restituisce un elenco di tutti i processi di segmento riusciti per l’organizzazione IMS.
 
 >[!NOTE]
 >
->La risposta seguente è stata troncata per lo spazio e mostrerà solo il primo processo restituito.
+>La risposta seguente è stata troncata per lo spazio e mostrerà solo il primo lavoro restituito.
 
 ```json
 {
@@ -168,21 +168,21 @@ Una risposta corretta restituisce lo stato HTTP 200 con un elenco di processi di
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `id` | Identificatore di sola lettura generato dal sistema per il processo del segmento. |
-| `status` | Lo stato corrente per il processo del segmento. I valori potenziali per lo stato includono &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;ANNULLAMENTO&quot;, &quot;ANNULLATO&quot;, &quot;FAILED&quot; e &quot;SUCCESSO&quot;. |
-| `segments` | Un oggetto che contiene informazioni sulle definizioni del segmento restituite all&#39;interno del processo del segmento. |
+| `status` | Lo stato corrente del processo del segmento. I valori potenziali dello stato includono &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;CANCELING&quot;, &quot;CANCELLED&quot;, &quot;FAILED&quot; e &quot;SUCCEEDED&quot;. |
+| `segments` | Un oggetto che contiene informazioni sulle definizioni dei segmenti restituite all&#39;interno del processo di segmento. |
 | `segments.segment.id` | ID della definizione del segmento. |
 | `segments.segment.expression` | Un oggetto che contiene informazioni sull&#39;espressione della definizione del segmento, scritta in PQL. |
-| `metrics` | Un oggetto che contiene informazioni diagnostiche sul processo del segmento. |
-| `metrics.totalTime` | Un oggetto che contiene informazioni sulle ore di inizio e fine del processo di segmentazione, nonché sul tempo totale impiegato. |
-| `metrics.profileSegmentationTime` | Un oggetto che contiene informazioni sulle ore di inizio e fine della valutazione della segmentazione, nonché sul tempo totale impiegato. |
-| `metrics.segmentProfileCounter` | Il numero di profili qualificati per segmento. |
-| `metrics.segmentedProfileByNamespaceCounter` | Il numero di profili qualificati per ogni namespace di identità per segmento. |
-| `metrics.segmentProfileByStatusCounter` | Il numero di profili per ogni stato. Sono supportati i tre stati seguenti: <ul><li>&quot;realizzato&quot; - Il numero di nuovi profili immessi nel segmento.</li><li>&quot;existing&quot; - Il numero di profili che continuano a esistere nel segmento.</li><li>&quot;uscito&quot; - Il numero di segmenti di profilo che non esistono più nel segmento.</li></ul> |
+| `metrics` | Oggetto che contiene informazioni di diagnostica sul processo del segmento. |
+| `metrics.totalTime` | Un oggetto che contiene informazioni sui tempi di inizio e fine del processo di segmentazione, nonché sul tempo totale impiegato. |
+| `metrics.profileSegmentationTime` | Un oggetto che contiene informazioni sui tempi di avvio e fine della valutazione della segmentazione, nonché sul tempo totale impiegato. |
+| `metrics.segmentProfileCounter` | Il numero di profili qualificati in base a segmento. |
+| `metrics.segmentedProfileByNamespaceCounter` | Il numero di profili qualificati per ogni namespace di identità in base a segmento. |
+| `metrics.segmentProfileByStatusCounter` | Il conteggio dei profili per ogni stato. Sono supportati i tre stati seguenti: <ul><li>&quot;Realizzato&quot; - Il numero di nuovi profili immessi nel segmento.</li><li>&quot;esiste&quot; - Il numero di profili che continuano a esistere nel segmento.</li><li>&quot;uscito&quot; - Il numero di segmenti di profilo che non esistono più nel segmento.</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | Numero totale di profili uniti in base ai criteri di unione. |
 
-## Crea un nuovo processo segmento {#create}
+## Crea un nuovo processo di segmento {#create}
 
-Puoi creare un nuovo processo per segmenti effettuando una richiesta di POST all&#39;endpoint `/segment/jobs` e includendo nel corpo l&#39;ID della definizione del segmento da cui desideri creare una nuova audience.
+Puoi creare un nuovo processo di segmento effettuando una richiesta di POST all’ endpoint `/segment/jobs` e includendo nel corpo l’ID della definizione del segmento da cui desideri creare un nuovo pubblico.
 
 **Formato API**
 
@@ -209,7 +209,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `segmentId` | L’ID della definizione del segmento per cui desiderate creare un processo di segmento. Queste definizioni di segmento possono appartenere a criteri di unione diversi. Ulteriori informazioni sulle definizioni dei segmenti sono disponibili nella guida [alla definizione dell&#39;endpoint ](./segment-definitions.md). |
+| `segmentId` | ID della definizione del segmento per cui si desidera creare un processo del segmento. Queste definizioni di segmenti possono appartenere a diversi criteri di unione. Ulteriori informazioni sulle definizioni dei segmenti sono disponibili nella [guida per gli endpoint per la definizione dei segmenti](./segment-definitions.md). |
 
 **Risposta**
 
@@ -268,15 +268,15 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del processo 
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `id` | Identificatore di sola lettura generato dal sistema per il processo di segmento appena creato. |
-| `status` | Lo stato corrente per il processo del segmento. Poiché il processo del segmento viene creato di recente, lo stato sarà sempre &quot;NEW&quot;. |
-| `segments` | Un oggetto che contiene informazioni sulle definizioni di segmento per le quali il processo di segmento è in esecuzione. |
+| `id` | Identificatore di sola lettura generato dal sistema per il processo del segmento appena creato. |
+| `status` | Lo stato corrente del processo del segmento. Poiché il processo del segmento è stato appena creato, lo stato sarà sempre &quot;NEW&quot;. |
+| `segments` | Oggetto che contiene informazioni sulle definizioni dei segmenti per cui è in esecuzione il processo di segmento. |
 | `segments.segment.id` | ID della definizione del segmento fornita. |
 | `segments.segment.expression` | Un oggetto che contiene informazioni sull&#39;espressione della definizione del segmento, scritta in PQL. |
 
-## Recuperare un processo segmento specifico {#get}
+## Recupera un processo di segmento specifico {#get}
 
-Potete recuperare informazioni dettagliate su un processo di segmento specifico effettuando una richiesta di GET all&#39;endpoint `/segment/jobs` e fornendo l&#39;ID del processo di segmento che desiderate recuperare nel percorso della richiesta.
+Puoi recuperare informazioni dettagliate su un processo di segmento specifico effettuando una richiesta di GET all’ endpoint `/segment/jobs` e fornendo l’ID del processo di segmento che desideri recuperare nel percorso della richiesta.
 
 **Formato API**
 
@@ -286,7 +286,7 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 
 | Proprietà | Descrizione |
 | -------- | ----------- | 
-| `{SEGMENT_JOB_ID}` | Il valore `id` del processo del segmento da recuperare. |
+| `{SEGMENT_JOB_ID}` | Il valore `id` del processo del segmento che si desidera recuperare. |
 
 **Richiesta**
 
@@ -365,15 +365,15 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `id` | Identificatore di sola lettura generato dal sistema per il processo del segmento. |
-| `status` | Lo stato corrente per il processo del segmento. I valori potenziali per lo stato includono &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;ANNULLAMENTO&quot;, &quot;ANNULLATO&quot;, &quot;FAILED&quot; e &quot;SUCCESSO&quot;. |
-| `segments` | Un oggetto che contiene informazioni sulle definizioni del segmento restituite all&#39;interno del processo del segmento. |
+| `status` | Lo stato corrente del processo del segmento. I valori potenziali dello stato includono &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;CANCELING&quot;, &quot;CANCELLED&quot;, &quot;FAILED&quot; e &quot;SUCCEEDED&quot;. |
+| `segments` | Un oggetto che contiene informazioni sulle definizioni dei segmenti restituite all&#39;interno del processo di segmento. |
 | `segments.segment.id` | ID della definizione del segmento. |
 | `segments.segment.expression` | Un oggetto che contiene informazioni sull&#39;espressione della definizione del segmento, scritta in PQL. |
-| `metrics` | Un oggetto che contiene informazioni diagnostiche sul processo del segmento. |
+| `metrics` | Oggetto che contiene informazioni di diagnostica sul processo del segmento. |
 
-## Recupero in blocco dei processi del segmento {#bulk-get}
+## Processi di recupero in blocco dei segmenti {#bulk-get}
 
-Potete recuperare informazioni dettagliate su più processi di segmento eseguendo una richiesta POST all&#39;endpoint `/segment/jobs/bulk-get` e fornendo i valori `id` dei processi di segmento nel corpo della richiesta.
+Puoi recuperare informazioni dettagliate su più processi di segmento effettuando una richiesta POST all’endpoint `/segment/jobs/bulk-get` e fornendo i valori `id` dei processi di segmento nel corpo della richiesta.
 
 **Formato API**
 
@@ -408,7 +408,7 @@ Una risposta corretta restituisce lo stato HTTP 207 con i processi di segmento r
 
 >[!NOTE]
 >
->La risposta seguente è stata troncata per lo spazio, mostrando solo dettagli parziali di ciascun processo del segmento. La risposta completa elenca tutti i dettagli per i processi del segmento richiesti.
+>La risposta seguente è stata troncata per lo spazio, mostrando solo dettagli parziali di ciascun processo di segmento. La risposta completa elencherà tutti i dettagli per i processi del segmento richiesti.
 
 ```json
 {
@@ -472,18 +472,18 @@ Una risposta corretta restituisce lo stato HTTP 207 con i processi di segmento r
 | Proprietà | Descrizione |
 | -------- | ----------- |
 | `id` | Identificatore di sola lettura generato dal sistema per il processo del segmento. |
-| `status` | Lo stato corrente per il processo del segmento. I valori potenziali per lo stato includono &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;ANNULLAMENTO&quot;, &quot;ANNULLATO&quot;, &quot;FAILED&quot; e &quot;SUCCESSO&quot;. |
-| `segments` | Un oggetto che contiene informazioni sulle definizioni del segmento restituite all&#39;interno del processo del segmento. |
+| `status` | Lo stato corrente del processo del segmento. I valori potenziali dello stato includono &quot;NEW&quot;, &quot;PROCESSING&quot;, &quot;CANCELING&quot;, &quot;CANCELLED&quot;, &quot;FAILED&quot; e &quot;SUCCEEDED&quot;. |
+| `segments` | Un oggetto che contiene informazioni sulle definizioni dei segmenti restituite all&#39;interno del processo di segmento. |
 | `segments.segment.id` | ID della definizione del segmento. |
 | `segments.segment.expression` | Un oggetto che contiene informazioni sull&#39;espressione della definizione del segmento, scritta in PQL. |
 
-## Annullare o eliminare un processo di segmento specifico{#delete}
+## Annullare o eliminare un processo di segmento specifico {#delete}
 
-Potete eliminare un processo di segmento specifico eseguendo una richiesta di DELETE all&#39;endpoint `/segment/jobs` e fornendo l&#39;ID del processo di segmento da eliminare nel percorso della richiesta.
+È possibile eliminare un processo di segmento specifico effettuando una richiesta di DELETE all’ endpoint `/segment/jobs` e fornendo l’ID del processo di segmento da eliminare nel percorso della richiesta.
 
 >[!NOTE]
 >
->La risposta API alla richiesta di eliminazione è immediata. Tuttavia, l&#39;eliminazione effettiva del processo del segmento è asincrona. In altre parole, esiste una differenza di tempo tra quando viene effettuata la richiesta di eliminazione al processo del segmento e quando viene applicata.
+>La risposta API alla richiesta di cancellazione è immediata. Tuttavia, l’eliminazione effettiva del processo del segmento è asincrona. In altre parole, esiste una differenza di tempo tra quando viene effettuata la richiesta di eliminazione al processo del segmento e quando viene applicata.
 
 **Formato API**
 
@@ -518,4 +518,4 @@ Una risposta corretta restituisce lo stato HTTP 204 con le seguenti informazioni
 
 ## Passaggi successivi
 
-Dopo aver letto questa guida è ora possibile comprendere meglio come funzionano i processi di segmento.
+Dopo aver letto questa guida hai ora una migliore comprensione di come funzionano i lavori dei segmenti.
