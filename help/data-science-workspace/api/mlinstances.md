@@ -1,27 +1,27 @@
 ---
-keywords: ', Experience Platform;guida sviluppatore;endpoint;Data Science Workspace;argomenti comuni;mlinstance;sensei macchina imparare api'
+keywords: Experience Platform;guida per sviluppatori;endpoint;Data Science Workspace;argomenti popolari;istanze multiple;api di apprendimento automatico sensei
 solution: Experience Platform
-title: Endpoint API MLInances
-topic: Developer guide
-description: Un'istanza MLI è un accoppiamento di un motore esistente con un set appropriato di configurazioni che definisce eventuali parametri di formazione, parametri di punteggio o configurazioni di risorse hardware.
+title: Endpoint API per le istanze mobili
+topic-legacy: Developer guide
+description: Un'istanza MLI è un'associazione di un motore esistente con un set appropriato di configurazioni che definisce eventuali parametri di formazione, parametri di punteggio o configurazioni di risorse hardware.
+exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 4%
 
 ---
 
+# Endpoint MLInases
 
-# Endpoint MLInances
+Un&#39;istanza MLI è un&#39;associazione di un [motore](./engines.md) esistente con un set appropriato di configurazioni che definisce eventuali parametri di formazione, parametri di punteggio o configurazioni di risorse hardware.
 
-Un&#39;istanza MLI è un accoppiamento di un [Engine](./engines.md) esistente con un set appropriato di configurazioni che definisce eventuali parametri di formazione, parametri di punteggio o configurazioni di risorse hardware.
+## Crea un&#39;istanza MLI {#create-an-mlinstance}
 
-## Creare un&#39;istanza MLI {#create-an-mlinstance}
+Puoi creare un’istanza MLI eseguendo una richiesta POST fornendo al contempo un payload di richiesta costituito da un ID motore valido (`{ENGINE_ID}`) e da un set appropriato di configurazioni predefinite.
 
-È possibile creare un&#39;istanza MLI eseguendo una richiesta di POST durante la fornitura di un payload di richiesta costituito da un ID motore valido (`{ENGINE_ID}`) e da un set appropriato di configurazioni predefinite.
-
-Se l’ID del motore fa riferimento a un motore PySpark o Spark Engine, potete configurare la quantità di risorse di calcolo, ad esempio il numero di core o la quantità di memoria. Se viene fatto riferimento a un Motore Python, potete scegliere se utilizzare una CPU o una GPU a scopo di formazione e valutazione. Per ulteriori informazioni, consultare le sezioni dell&#39;appendice sulle [configurazioni delle risorse PySpark e Spark](./appendix.md#resource-config) e [configurazioni della CPU e della GPU Python](./appendix.md#cpu-gpu-config).
+Se l&#39;ID del motore fa riferimento a un PySpark o a un motore Spark, puoi configurare la quantità di risorse di calcolo, ad esempio il numero di core o la quantità di memoria. Se si fa riferimento a un motore Python, è possibile scegliere se utilizzare una CPU o una GPU a scopo di formazione e valutazione. Per ulteriori informazioni, fai riferimento alle sezioni dell&#39;appendice sulle configurazioni delle risorse [PySpark e Spark](./appendix.md#resource-config) e [Python CPU e GPU](./appendix.md#cpu-gpu-config).
 
 **Formato API**
 
@@ -77,14 +77,14 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `name` | Il nome desiderato per l&#39;istanza MLIn. Il modello che corrisponde a questa istanza MLI erediterà questo valore per essere visualizzato nell&#39;interfaccia utente come nome del modello. |
-| `description` | Una descrizione facoltativa per l&#39;istanza MLI. Il modello che corrisponde a questa istanza MLI erediterà questo valore per essere visualizzato nell&#39;interfaccia utente come descrizione del modello. Questa proprietà è obbligatoria. Se non si desidera fornire una descrizione, impostare il relativo valore su una stringa vuota. |
+| `name` | Nome desiderato per l&#39;istanza MLI. Il modello corrispondente a questa istanza MLI erediterà questo valore da visualizzare nell&#39;interfaccia utente come nome del modello. |
+| `description` | Una descrizione facoltativa per l&#39;istanza MLI. Il modello corrispondente a questa istanza MLI erediterà questo valore da visualizzare nell&#39;interfaccia utente come descrizione del modello. Questa proprietà è obbligatoria. Se non si desidera fornire una descrizione, impostare il relativo valore su una stringa vuota. |
 | `engineId` | ID di un motore esistente. |
-| `tasks` | Set di configurazioni per la formazione, il punteggio o le tubazioni di feature. |
+| `tasks` | Un insieme di configurazioni per la formazione, il punteggio o le pipeline di funzioni. |
 
 **Risposta**
 
-Una risposta corretta restituisce un payload contenente i dettagli dell’istanza MLI appena creata, incluso il relativo identificatore univoco (`id`).
+Una risposta corretta restituisce un payload contenente i dettagli dell’istanza MLI appena creata, incluso l’identificatore univoco (`id`).
 
 ```json
 {
@@ -129,9 +129,9 @@ Una risposta corretta restituisce un payload contenente i dettagli dell’istanz
 }
 ```
 
-## Recuperare un elenco di istanze MLI
+## Recupera un elenco di istanze MLI
 
-Potete recuperare un elenco di istanze MLI eseguendo una singola richiesta di GET. Per facilitare il filtraggio dei risultati, potete specificare i parametri di query nel percorso di richiesta. Per un elenco delle query disponibili, consultate la sezione appendice sui parametri di query [per il recupero delle risorse](./appendix.md#query).
+È possibile recuperare un elenco di istanze MLI eseguendo una singola richiesta di GET. Per facilitare il filtro dei risultati, puoi specificare i parametri di query nel percorso della richiesta. Per un elenco delle query disponibili, fai riferimento alla sezione dell&#39;appendice sui parametri di query [per il recupero delle risorse](./appendix.md#query).
 
 **Formato API**
 
@@ -159,7 +159,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di istanze MLI e i relativi dettagli.
+Una risposta corretta restituisce un elenco di istanze MLI e relativi dettagli.
 
 ```json
 {
@@ -197,9 +197,9 @@ Una risposta corretta restituisce un elenco di istanze MLI e i relativi dettagli
 }
 ```
 
-## Recuperare un&#39;istanza MLI specifica {#retrieve-specific}
+## Recupera un&#39;istanza MLI specifica {#retrieve-specific}
 
-Potete recuperare i dettagli di una specifica istanza MLIneseguendo una richiesta che include l&#39;ID dell&#39;istanza MLI desiderata nel percorso della richiesta.
+Puoi recuperare i dettagli di un’istanza MLI specifica eseguendo una richiesta di GET che include l’ID dell’istanza MLI desiderata nel percorso della richiesta.
 
 **Formato API**
 
@@ -209,7 +209,7 @@ GET /mlInstances/{MLINSTANCE_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{MLINSTANCE_ID}` | L’ID dell’istanza MLI desiderata. |
+| `{MLINSTANCE_ID}` | ID dell&#39;istanza MLI desiderata. |
 
 **Richiesta**
 
@@ -224,7 +224,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell&#39;istanza MLIninstance.
+Una risposta corretta restituisce i dettagli dell&#39;istanza MLI.
 
 ```json
 {
@@ -270,15 +270,15 @@ Una risposta corretta restituisce i dettagli dell&#39;istanza MLIninstance.
 }
 ```
 
-## Aggiornare un&#39;istanza MLI
+## Aggiornare un’istanza MLI
 
-Potete aggiornare un&#39;istanza MLI esistente sovrascrivendone le proprietà tramite una richiesta PUT che include l&#39;ID dell&#39;istanza MLI di destinazione nel percorso di richiesta e fornisce un payload JSON contenente le proprietà aggiornate.
+Puoi aggiornare un’istanza MLI esistente sovrascrivendo le sue proprietà tramite una richiesta PUT che include l’ID dell’istanza MLI di destinazione nel percorso della richiesta e fornendo un payload JSON contenente proprietà aggiornate.
 
 >[!TIP]
 >
->Per garantire il successo di questa richiesta di PUT, si consiglia innanzitutto di eseguire una richiesta di GET per [recuperare l&#39;istanza MLI per ID](#retrieve-specific). Quindi, modificate e aggiornate l&#39;oggetto JSON restituito e applicate l&#39;intero oggetto JSON modificato come payload per la richiesta di PUT.
+>Per garantire il successo di questa richiesta di PUT, ti consigliamo prima di eseguire una richiesta di GET a [recuperare l’istanza MLI per ID](#retrieve-specific). Quindi, modifica e aggiorna l’oggetto JSON restituito e applica l’intero oggetto JSON modificato come payload per la richiesta PUT.
 
-La seguente chiamata API di esempio aggiornerà i parametri di formazione e punteggio di un&#39;istanza MLIn, pur disponendo inizialmente di queste proprietà:
+La seguente chiamata API di esempio aggiornerà i parametri di formazione e valutazione di un MLInance quando queste proprietà sono inizialmente disponibili:
 
 ```json
 {
@@ -321,7 +321,7 @@ PUT /mlInstances/{MLINSTANCE_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{MLINSTANCE_ID}` | Un ID istanza MLI valido. |
+| `{MLINSTANCE_ID}` | Un ID istanza valido. |
 
 **Richiesta**
 
@@ -367,7 +367,7 @@ curl -X PUT \
 
 **Risposta**
 
-Una risposta corretta restituisce un payload contenente i dettagli aggiornati dell&#39;istanza MLI.
+Una risposta corretta restituisce un payload contenente i dettagli aggiornati dell’istanza MLI.
 
 ```json
 {
@@ -406,7 +406,7 @@ Una risposta corretta restituisce un payload contenente i dettagli aggiornati de
 
 ## Eliminare le istanze MLI per ID motore
 
-Potete eliminare tutte le istanze MLI che condividono lo stesso motore eseguendo una richiesta di DELETE che include l’ID del motore come parametro di query.
+Puoi eliminare tutte le istanze MLI che condividono lo stesso motore eseguendo una richiesta DELETE che include l’ID del motore come parametro di query.
 
 **Formato API**
 
@@ -441,7 +441,7 @@ curl -X DELETE \
 
 ## Eliminare un&#39;istanza MLI
 
-È possibile eliminare una singola istanza MLI eseguendo una richiesta DELETE che include l&#39;ID MLInance di destinazione nel percorso della richiesta.
+Puoi eliminare una singola istanza MLI eseguendo una richiesta DELETE che include l’ID MLInance di destinazione nel percorso della richiesta.
 
 **Formato API**
 
@@ -451,7 +451,7 @@ DELETE /mlInstances/{MLINSTANCE_ID}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{MLINSTANCE_ID}` | Un ID istanza MLI valido. |
+| `{MLINSTANCE_ID}` | Un ID istanza valido. |
 
 **Richiesta**
 
