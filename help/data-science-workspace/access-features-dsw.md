@@ -1,75 +1,75 @@
 ---
-keywords: ' Experience Platform;home;Data Science Workspace;argomenti più comuni;controllo degli accessi;sandbox;intelligence pack;dsw features;dsw access;Adobe Experience Platform Intelligence;intelligence;aep intelligence package'
+keywords: Experience Platform;home;Data Science Workspace;argomenti comuni;controllo accessi;sandbox;pacchetto di informazioni;funzioni dsw;accesso dsw;Adobe Experience Platform Intelligence;intelligence;pacchetto di informazioni aep
 solution: Experience Platform
-title: Accesso e funzionalità di Data Science Workspace
-topic: Access and features for data science workspace
-description: 'Nel seguente documento vengono delineate le autorizzazioni di Data Science Workspace e l’accesso alle funzioni. '
+title: Accesso e funzioni di Data Science Workspace
+topic-legacy: Access and features for data science workspace
+description: Il seguente documento delinea le autorizzazioni di Data Science Workspace e l’accesso alle funzioni.
+exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '644'
 ht-degree: 3%
 
 ---
 
+# Accesso e funzioni di Data Science Workspace
 
-# Accesso e funzionalità di Data Science Workspace
-
-Nel seguente documento vengono delineate le autorizzazioni di Data Science Workspace e l’accesso alle funzioni.
+Il seguente documento delinea le autorizzazioni di Data Science Workspace e l’accesso alle funzioni.
 
 ![Schede DSW](./images/access/platform-tabs.png)
 
-- **Notebook:** Fornisce un ambiente di sviluppo interattivo ([JupyterLab](./jupyterlab/overview.md)) per esplorare, analizzare e modellare i dati  Experience Platform.
-- **Modelli:** Fornisce gli strumenti utilizzati per creare, pubblicare e memorizzare ricette e modelli di machine learning avanzati. Per ulteriori informazioni, vedere l&#39;esercitazione [creare e pubblicare un modello di apprendimento automatico](./models-recipes/create-publish-model.md).
-- **Servizi:** Contiene  servizi forniti dal Adobe, ad esempio  [servizi intelligenti e ](../intelligent-services/home.md) qualsiasi servizio personalizzato creato con Data Science Workspace.
+- **Notebook:** fornisce un ambiente di sviluppo interattivo ([JupyterLab](./jupyterlab/overview.md)) per esplorare, analizzare e modellare i dati su Experience Platform.
+- **Modelli:** fornisce gli strumenti utilizzati per creare, pubblicare e memorizzare ricette e modelli avanzati di apprendimento automatico. Per ulteriori informazioni, visita il tutorial [creare e pubblicare un modello di apprendimento automatico](./models-recipes/create-publish-model.md) .
+- **Servizi:** contiene sia servizi forniti da Adobe, come i servizi  [intelligenti ](../intelligent-services/home.md) e tutti i servizi personalizzati creati con Data Science Workspace.
 
-Perché è possibile visualizzare solo la scheda Servizi?
+Perché viene visualizzata solo la scheda Servizi?
 
-- La tua organizzazione può avere diritto solo alla piattaforma RTCDP (Real-time Customer Data Platform), che include l&#39;AI del cliente del servizio intelligente.
+- La tua organizzazione può avere diritto solo a Real-time Customer Data Platform (RTCDP) che include Intelligent Service Customer AI.
 
-Se non riesci a visualizzare nessuna delle schede **Data Science** e desideri utilizzare le funzionalità di Data Science Workspace, contatta l&#39;amministratore della società per verificare se disponi di una licenza Adobe Experience Platform Intelligence.
+Se non riesci a visualizzare nessuna delle schede **Data Science** e desideri utilizzare le funzioni di Data Science Workspace, contatta l’amministratore della tua azienda per verificare se disponi di una licenza Adobe Experience Platform Intelligence.
 
 ## Aggiungi pacchetto Adobe Experience Platform Intelligence
 
-Nella tabella seguente sono illustrate alcune delle differenze chiave per l’area di lavoro di analisi dati con e senza l’aggiunta del pacchetto Adobe Experience Platform Intelligence:
+La tabella seguente illustra alcune delle differenze chiave per Data Science Workspace con e senza l’aggiunta del pacchetto Adobe Experience Platform Intelligence:
 
 >[!NOTE]
 >
->Potete ottenere la licenza per più di un componente aggiuntivo per il pacchetto Intelligence e l&#39;aumento della capacità viene aggiunto all&#39;adesione globale. Ad esempio, se avete concesso la licenza per 2 addons per il pacchetto Adobe Experience Platform Intelligence, avete diritto a un totale di 20 utenti simultanei per i notebook.
+>È possibile concedere in licenza più di un componente aggiuntivo del pacchetto Intelligence e l&#39;aumento della capacità viene aggiunto all&#39;adesione complessiva. Ad esempio, se hai concesso la licenza per 2 addons del pacchetto Adobe Experience Platform Intelligence, hai diritto a un totale di 20 utenti simultanei di Notebook.
 
-|  | [!DNL Data Science Workspace] | [!DNL Data Science Workspace] con aggiunta del pacchetto Intelligence |
+|  | [!DNL Data Science Workspace] | [!DNL Data Science Workspace] con l&#39;aggiunta del pacchetto &quot;Intelligence&quot; |
 | --- | :---: | :---: |
-| Numero di utenti per notebook supportati. | 5 utenti simultanei | Il primo pacchetto aggiunge 5 utenti simultanei e altri 10 utenti simultanei per pacchetto. |
-| Permette l&#39;integrazione di Jupyter Notebooks per l&#39;analisi dei dati esplorativi e l&#39;authoring dei modelli (R, Python, Scala, PySpark) | X | X |
-| Integrazione nativa con Query Service. Possibilità di esplorare e modellare i set di dati utilizzando SQL nei notebook. | X | X |
-| Accesso ai modelli di notebook pregenerati per l&#39;analisi predittiva. | X | X |
-| Addestrare e segnare manualmente i modelli con i notebook Jupyter. | X | X |
-| Implementare e rendere operativi i modelli con la possibilità di pianificare corsi di formazione e di deduzione. |  | X |
-| Il framework di ricetta consente di configurare, valutare, formare, valutare e pubblicare facilmente i modelli in produzione. |  | X |
-| Sperimentazione e valutazione basata sull’interfaccia utente. |  | X |
-| Supporto per l&#39;apprendimento approfondito per i modelli Tensorflow (GPU Compute). |  | X |
-| Calcolo distribuito basato su Spark per la formazione e il punteggio rispetto a set di dati di grandi dimensioni (10MM + righe). |  | X |
+| Numero di utenti di notebook supportati. | 5 utenti simultanei | Il primo pacchetto aggiunge 5 utenti simultanei e gli acquisti aggiuntivi aggiungono 10 utenti simultanei per pacchetto. |
+| Permette l&#39;integrazione di Jupyter Notebooks per l&#39;analisi dei dati esplorativi e l&#39;authoring di modelli (R, Python, Scala, PySpark) | X | X |
+| Integrazione nativa con Query Service. Possibilità di esplorare e modellare i set di dati utilizzando SQL nei blocchi appunti. | X | X |
+| Accesso a modelli di notebook predefiniti per analisi predittive. | X | X |
+| Addestrare e valutare manualmente i modelli con Jupyter Notebooks. | X | X |
+| Distribuire e rendere operativi modelli con la possibilità di programmare processi di formazione e di deduzione. |  | X |
+| framework di ricetta per configurare, valutare, addestrare, valutare e pubblicare facilmente i modelli in produzione. |  | X |
+| Sperimentazione e valutazione dei modelli basati sull’interfaccia utente. |  | X |
+| Supporto per l&#39;apprendimento profondo per i modelli di flusso di tensione (GPU Compute). |  | X |
+| Calcolo distribuito basato su scintille per addestrare e valutare in base a set di dati di grandi dimensioni (10MM + righe). |  | X |
 
-## Controllo di accesso
+## Controllo dell&#39;accesso
 
-Il controllo di accesso per  Experience Platform è gestito tramite [Adobe Admin Console](https://adminconsole.adobe.com). Questa funzionalità sfrutta i profili di prodotto in  Admin Console, che collegano gli utenti con autorizzazioni e sandbox. Per ulteriori informazioni, vedere la [panoramica sul controllo degli accessi](../access-control/home.md).
+Il controllo degli accessi, ad Experience Platform, è gestito tramite [Adobe Admin Console](https://adminconsole.adobe.com). Questa funzionalità sfrutta i profili di prodotto in Admin Console, che collegano gli utenti con autorizzazioni e sandbox. Per ulteriori informazioni, consulta la [panoramica sul controllo degli accessi](../access-control/home.md) .
 
-Per poter utilizzare Data Science Workspace, è necessario abilitare l&#39;autorizzazione &quot;Gestisci Data Science Workspace&quot;. Nella tabella seguente sono riportati gli effetti di tale autorizzazione attivata o disattivata:
+Per utilizzare Data Science Workspace, è necessario abilitare l’autorizzazione &quot;Gestisci Data Science Workspace&quot;. La tabella seguente illustra gli effetti dell’abilitazione o della disabilitazione di questa autorizzazione:
 
 | Autorizzazione | Abilitata | Disabilitata |
 |---|---|---|
-| Gestisci area di lavoro Data Science | Fornisce l&#39;accesso a tutti i servizi in Data Science Workspace. | L&#39;accesso alle API e all&#39;interfaccia utente a tutti i servizi in Data Science Workspace è disattivato. Se disattivata, la selezione delle pagine **Notebook**, **Modelli** e **Servizi** è disabilitata. <li>L&#39;accesso a **Services** potrebbe essere ancora disponibile tramite RTCDP (Real-time Customer Data Platform).</li> |
+| Gestione di Data Science Workspace | Consente l&#39;accesso a tutti i servizi in Data Science Workspace. | L’accesso API e interfaccia utente a tutti i servizi in Data Science Workspace è disattivato. Quando è disabilitata, la selezione delle pagine **Notebook**, **Modelli** e **Servizi** non è consentita. <li>L&#39;accesso a **Servizi** può essere ancora disponibile tramite Real-time Customer Data Platform (RTCDP).</li> |
 
-## Supporto sandbox
+## Supporto per sandbox
 
-Le sandbox sono partizioni virtuali all&#39;interno di una singola istanza di  Experience Platform. Ogni istanza della piattaforma supporta una sandbox di produzione e più sandbox non di produzione, ciascuna con una propria libreria di risorse della piattaforma. Le sandbox non di produzione consentono di testare le funzioni, eseguire esperimenti e creare configurazioni personalizzate senza influire sulla sandbox di produzione. Per ulteriori informazioni sulle sandbox, consultate la [panoramica sulle sandbox](../sandboxes/home.md).
+Le sandbox sono partizioni virtuali all’interno di una singola istanza di Experience Platform. Ogni istanza di Platform supporta una sandbox di produzione e più sandbox non di produzione, ciascuna con una propria libreria di risorse di Platform. Le sandbox non di produzione consentono di testare le funzioni, eseguire esperimenti e creare configurazioni personalizzate senza influire sulla sandbox di produzione. Per ulteriori informazioni sulle sandbox, consulta la [panoramica sulle sandbox](../sandboxes/home.md).
 
-Al momento, Data Science Workspace dispone delle seguenti limitazioni sandbox:
+Attualmente, Data Science Workspace presenta la seguente limitazione sandbox:
 
-- Le risorse di calcolo sono condivise tra le sandbox di produzione e quelle non di produzione.
+- Le risorse di elaborazione sono condivise tra le sandbox di produzione e le sandbox non di produzione.
 
 ## Passaggi successivi
 
-Questo documento descrive i diversi tipi di accesso e le funzionalità disponibili in Data Science Workspace.
+Questo documento descrive i diversi tipi di accesso e le funzioni disponibili in Data Science Workspace.
 
-Per ulteriori informazioni su Data Science Workspace, ad esempio un flusso di lavoro giornaliero completo, consultare la [Guida dettagliata di Data Science Workspace](./walkthrough.md). Per ulteriori informazioni generali, visitare la [panoramica di Data Science Workspace](./home.md).
+Per ulteriori informazioni su Data Science Workspace, ad esempio un flusso di lavoro giornaliero completo, consulta la documentazione dettagliata [Data Science Workspace](./walkthrough.md) . Per informazioni più generali, visita la [panoramica di Data Science Workspace](./home.md).
