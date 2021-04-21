@@ -1,25 +1,25 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Segmentation Service;pql;PQL;Profile Query Language;funzioni varie;misc;'
+keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Servizio di segmentazione;pql;PQL;Lingua query profilo;funzioni varie;varie;varie;
 solution: Experience Platform
 title: Funzioni varie PQL
-topic: developer guide
-description: La seguente funzione è una funzione diversa per la lingua query profilo (PQL, Profile Query Language).
+topic-legacy: developer guide
+description: La funzione seguente è una funzione diversa per Profile Query Language (PQL).
+exl-id: a6ed31a2-a649-4dc8-89b1-48c1170b7f16
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 3%
 
 ---
 
-
 # Funzioni varie
 
-La seguente funzione è una funzione diversa per [!DNL Profile Query Language] (PQL). Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
+La funzione seguente è una funzione vari per [!DNL Profile Query Language] (PQL). Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
 
-## Lascia
+## Lasciare
 
-La funzione `let` consente di memorizzare un&#39;espressione come variabile da utilizzare successivamente in una query.
+La funzione `let` consente di memorizzare un’espressione come variabile da utilizzare successivamente in una query.
 
 **Formato**
 
@@ -29,7 +29,7 @@ let {VARIABLE} = {EXPRESSION}
 
 **Esempio**
 
-La seguente query PQL ottiene tutte le somme dei totali di prodotto con la transazione in USD, dove la somma è maggiore di $100 e inferiore a $1000.
+La seguente query PQL ottiene tutte le somme dei totali di prodotto con la transazione in USD dove la somma è maggiore di $100 e inferiore a $1000.
 
 ```sql
 let S = (sum X.commerce.order.priceTotal over X from xEvent where X.commerce.order.currencyCode = "USD") in (S > 100 and S < 1000)
@@ -37,4 +37,4 @@ let S = (sum X.commerce.order.priceTotal over X from xEvent where X.commerce.ord
 
 ## Passaggi successivi
 
-Ora che avete appreso le varie funzioni, potete utilizzarle nelle query PQL. Per ulteriori informazioni sulle altre funzioni PQL, leggere la [Panoramica del linguaggio di query profilo](./overview.md).
+Dopo aver appreso le varie funzioni, è possibile utilizzarle nelle query PQL. Per ulteriori informazioni sulle altre funzioni PQL, consulta la [Panoramica di Profile Query Language](./overview.md).
