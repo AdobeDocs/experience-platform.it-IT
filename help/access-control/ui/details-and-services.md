@@ -1,40 +1,40 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;profilo di prodotto'
+keywords: Experience Platform;home;argomenti popolari;profilo di prodotto
 solution: Experience Platform
-title: Gestione di dettagli e servizi aggiuntivi per un profilo di prodotto
-topic: user guide
-description: Questo documento descrive i passaggi necessari per gestire i dettagli e i servizi aggiuntivi per un profilo di prodotto in Adobe Admin Console. Puoi configurare i dettagli di un profilo e accedere ad altri servizi dal menu Impostazioni profilo.
+title: Gestire i dettagli e i servizi aggiuntivi per un profilo di prodotto
+topic-legacy: user guide
+description: Questo documento descrive i passaggi necessari per gestire i dettagli e i servizi aggiuntivi per un profilo di prodotto in Adobe Admin Console. Puoi configurare i dettagli di un profilo e l’accesso a servizi aggiuntivi dal menu Impostazioni profilo .
+exl-id: ac9c2213-f2fb-44be-9334-87fada8a4717
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '199'
 ht-degree: 1%
 
 ---
 
+# Gestire dettagli e servizi aggiuntivi per un profilo di prodotto
 
-# Gestione di dettagli e servizi aggiuntivi per un profilo di prodotto
+Puoi configurare i dettagli di un profilo e l’accesso a servizi aggiuntivi dal menu **[!UICONTROL Profile Settings]** . Per accedere al menu, fai clic su **[!UICONTROL Settings]** nella pagina **[!UICONTROL Product Profile]** .
 
-Puoi configurare i dettagli di un profilo e accedere ai servizi aggiuntivi dal menu **[!UICONTROL Profile Settings]**. Per accedere al menu, fare clic su **[!UICONTROL Settings]** dalla pagina **[!UICONTROL Product Profile]**.
+![impostazioni profilo](../images/profile-settings.png)
 
-![profilo-impostazioni](../images/profile-settings.png)
-
-Viene visualizzato il menu **[!UICONTROL Profile Settings]**, a partire dalla scheda **[!UICONTROL Details]**. Questa scheda consente di inserire e modificare il nome e la descrizione del profilo. Potete inoltre modificare il vostro nome visualizzato e le impostazioni di notifica e-mail per il vostro account.
+Viene visualizzato il menu **[!UICONTROL Profile Settings]** a partire dalla scheda **[!UICONTROL Details]** . Questa scheda ti consente di inserire e modificare il nome e la descrizione del profilo. Puoi anche modificare il tuo nome visualizzato e le impostazioni di notifica e-mail per il tuo account.
 
 ![edit-details-settings](../images/edit-details-settings.png)
 
-Fare clic su **[!UICONTROL Services]** per accedere alla pagina **[!UICONTROL Services]**.
+Fai clic su **[!UICONTROL Services]** per accedere alla pagina **[!UICONTROL Services]**.
 
-![services-page](../images/services-page.png)
+![pagina dei servizi](../images/services-page.png)
 
-Il menu **[!UICONTROL Services]** consente di modificare l&#39;accesso di un profilo a servizi [!DNL Platform] aggiuntivi che erano stati inizialmente configurati al momento della creazione del profilo. A seconda dell&#39;iscrizione [!DNL Platform], questi servizi possono includere:
+Il menu **[!UICONTROL Services]** ti consente di modificare l’accesso di un profilo a servizi aggiuntivi [!DNL Platform] inizialmente configurati al momento della creazione del profilo. A seconda dell’abbonamento [!DNL Platform], questi servizi possono includere:
 
 - [!DNL Data Science Workspace]
 - [!DNL Query Service]
-- [!DNL Real-Time Customer Data Platform] Interfaccia utente (solo per CDP in tempo reale)
+- [!DNL Real-Time Customer Data Platform] Interfaccia utente (solo per Real-time CDP)
 
-Fate clic sull&#39;interruttore a destra di un particolare servizio per attivarlo o disattivarlo. È inoltre possibile fare clic sulla casella di controllo **[!UICONTROL All on]** per attivare o disattivare tutti i servizi elencati.
+Fai clic sull’interruttore a destra di un particolare servizio per attivarlo o disattivarlo. Puoi anche fare clic sulla casella di controllo **[!UICONTROL All on]** per abilitare o disabilitare tutti i servizi elencati.
 
 Al termine, fai clic su **[!UICONTROL Save]**.
 
-![edit-Additional-services](../images/edit-additional-services.png)
+![edit-additional-services](../images/edit-additional-services.png)
