@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;spazio dei nomi;namespace;namespace;spazi dei nomi;spazio dei nomi identità;spazio dei nomi identità;identità;identità;servizio Identity;servizio Identity
+keywords: Experience Platform;home;argomenti popolari;spazio dei nomi;spazio dei nomi;spazi dei nomi;spazi dei nomi;spazio dei nomi identità;spazio dei nomi identità;identità;identità;servizio Identity;servizio Identity
 solution: Experience Platform
 title: Panoramica dello spazio dei nomi identità
-topic: ' - Panoramica'
-description: 'Gli spazi dei nomi di identità sono un componente del servizio Identity che funge da indicatori del contesto a cui si riferisce un’identità. Ad esempio, distinguono un valore di "name@email.com" come indirizzo e-mail o "443522" come ID CRM numerico. '
+topic-legacy: overview
+description: Gli spazi dei nomi di identità sono un componente del servizio Identity che funge da indicatori del contesto a cui si riferisce un’identità. Ad esempio, distinguono un valore di "name@email.com" come indirizzo e-mail o "443522" come ID CRM numerico.
+exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1451'
+source-wordcount: '1450'
 ht-degree: 1%
 
 ---
-
 
 # Panoramica dello spazio dei nomi identità
 
@@ -19,7 +19,7 @@ Gli spazi dei nomi di identità sono un componente di [[!DNL Identity Service]](
 
 ## Introduzione
 
-Per utilizzare i namespace di identità è necessario comprendere i vari servizi Adobe Experience Platform coinvolti. Prima di iniziare a utilizzare i namespace, controlla la documentazione relativa ai seguenti servizi:
+Per utilizzare i namespace di identità è necessario comprendere i vari servizi Adobe Experience Platform interessati. Prima di iniziare a utilizzare i namespace, controlla la documentazione relativa ai seguenti servizi:
 
 - [[!DNL Real-time Customer Profile]](../profile/home.md): Fornisce un profilo cliente unificato in tempo reale basato su dati aggregati provenienti da più origini.
 - [[!DNL Identity Service]](./home.md): Ottieni una visione migliore dei singoli clienti e del loro comportamento attraverso il collegamento delle identità tra dispositivi e sistemi.
@@ -57,10 +57,10 @@ I seguenti namespace standard vengono forniti per l’utilizzo da parte di tutte
 | Nome visualizzato | Descrizione |
 | ------------ | ----------- |
 | AdCloud | Spazio dei nomi che rappresenta Adobe AdCloud. |
-| Adobe Analytics (ID legacy) | Spazio dei nomi che rappresenta Adobe Analytics. Per ulteriori informazioni, consulta il seguente documento sugli [spazi dei nomi di Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=en#namespaces) . |
+| Adobe Analytics (ID legacy) | Spazio dei nomi che rappresenta Adobe Analytics. Per ulteriori informazioni, consulta il seguente documento su [namespace Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=en#namespaces) . |
 | Apple IDFA (ID per inserzionisti) | Spazio dei nomi che rappresenta Apple ID per gli inserzionisti. Per ulteriori informazioni, consulta il seguente documento su [annunci basati su interessi](https://support.apple.com/en-us/HT202074) . |
 | Servizio notifiche push Apple | Spazio dei nomi che rappresenta le identità raccolte utilizzando il servizio di notifica push Apple. Per ulteriori informazioni, consulta il seguente documento su [Apple Push Notification Service](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) . |
-| CORE | Spazio dei nomi che rappresenta Adobe Audience Manager. Lo spazio dei nomi può essere indicato anche dal nome legacy: &quot;Adobe Audience Manager&quot;. Per ulteriori informazioni, consulta il seguente documento su [ID di Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids) . |
+| CORE | Spazio dei nomi che rappresenta Adobe Audience Manager. Lo spazio dei nomi può essere indicato anche dal nome legacy: &quot;Adobe AudienceManager&quot;. Per ulteriori informazioni, consulta il seguente documento su [ID Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids) . |
 | ECID | Spazio dei nomi che rappresenta ECID. Questo namespace può essere indicato anche dai seguenti alias: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Per ulteriori informazioni, consulta il seguente documento su [ECID](./ecid.md) . |
 | E-mail | Spazio dei nomi che rappresenta un indirizzo e-mail. Questo tipo di spazio dei nomi è spesso associato a una singola persona e può quindi essere utilizzato per identificarla tra canali diversi. |
 | E-mail (SHA256, minuscolo) | Spazio dei nomi per l’indirizzo e-mail con hash predefinito. I valori forniti in questo namespace vengono convertiti in minuscole prima di eseguire l’hashing con SHA-256. È necessario tagliare gli spazi iniziali e finali prima di normalizzare l’indirizzo e-mail. Questa impostazione non può essere modificata retroattivamente. Per ulteriori informazioni, consulta il seguente documento sul [supporto di hashing SHA-256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) . |
