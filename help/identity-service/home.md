@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;argomenti popolari;identità;identità;grafici XDM;servizio identità;servizio Identity
 solution: Experience Platform
 title: Panoramica del servizio Identity
-topic: ' - Panoramica'
+topic-legacy: overview
 description: Il servizio Adobe Experience Platform Identity consente di acquisire una visione migliore del cliente e del suo comportamento attraverso il collegamento di identità tra dispositivi e sistemi, consentendo di fornire in tempo reale esperienze digitali personali e di forte impatto.
+exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
 translation-type: tm+mt
-source-git-commit: bb218fc0cca6fe74693e99747963058bd0dc962a
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1717'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Identity Service]panoramica
 
