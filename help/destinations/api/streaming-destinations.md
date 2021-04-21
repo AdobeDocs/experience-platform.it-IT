@@ -3,16 +3,16 @@ keywords: Experience Platform;home;argomenti popolari; Esercitazioni API; API pe
 solution: Experience Platform
 title: Connettiti alle destinazioni di streaming e attiva i dati utilizzando l’API del servizio di flusso in Adobe Experience Platform
 description: Questo documento tratta la creazione di destinazioni di streaming utilizzando l’API Adobe Experience Platform
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2024'
+source-wordcount: '2022'
 ht-degree: 1%
 
 ---
-
 
 # Connettiti alle destinazioni di streaming e attiva i dati utilizzando l’API del servizio di flusso
 
