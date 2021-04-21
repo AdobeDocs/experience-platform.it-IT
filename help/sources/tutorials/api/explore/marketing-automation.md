@@ -1,60 +1,60 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;automazione marketing'
+keywords: Experience Platform;home;argomenti popolari;automazione del marketing
 solution: Experience Platform
-title: Esplora un sistema di automazione di marketing utilizzando l'API di servizio di flusso
-topic: overview
-description: Questa esercitazione utilizza l’API del servizio di flusso per esplorare i sistemi di automazione di marketing.
+title: Esplorare un sistema di automazione di marketing utilizzando l’API del servizio di flusso
+topic-legacy: overview
+description: Questa esercitazione utilizza l’API del servizio Flusso per esplorare i sistemi di automazione del marketing.
+exl-id: 250c1ba0-1baa-444f-ab2b-58b3a025561e
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 2%
 
 ---
 
+# Esplora un sistema di automazione di marketing utilizzando l’ API [!DNL Flow Service]
 
-# Esplora un sistema di automazione di marketing utilizzando l&#39;API [!DNL Flow Service]
+[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie fonti all&#39;interno di Adobe Experience Platform. Il servizio fornisce un’interfaccia utente e un’API RESTful da cui è possibile connettere tutte le sorgenti supportate.
 
-[!DNL Flow Service] viene utilizzato per raccogliere e centralizzare i dati dei clienti da varie origini all&#39;interno di Adobe Experience Platform. Il servizio fornisce un&#39;interfaccia utente e RESTful API da cui sono collegate tutte le origini supportate.
-
-Questa esercitazione utilizza l&#39;API [!DNL Flow Service] per esplorare i sistemi di automazione di marketing.
+Questa esercitazione utilizza l’ API [!DNL Flow Service] per esplorare i sistemi di automazione del marketing.
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../../home.md):  [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite  [!DNL Platform] i servizi.
-* [Sandbox](../../../../sandboxes/home.md):  [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola  [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [Origini](../../../home.md):  [!DNL Experience Platform] consente l’acquisizione di dati da varie sorgenti, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite  [!DNL Platform] i servizi.
+* [Sandbox](../../../../sandboxes/home.md):  [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola  [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegarsi correttamente a un sistema di automazione di marketing utilizzando l&#39;API [!DNL Flow Service].
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per connettersi correttamente a un sistema di automazione del marketing utilizzando l’ [!DNL Flow Service] API .
 
 ### Raccogli credenziali richieste
 
-Questa esercitazione richiede una connessione valida con l&#39;applicazione di automazione marketing di terze parti da cui si desidera acquisire i dati. Una connessione valida include l&#39;ID della specifica di connessione dell&#39;applicazione e l&#39;ID di connessione. Ulteriori informazioni sulla creazione di una connessione di automazione marketing e il recupero di tali valori sono disponibili nella [connessione di un&#39;origine di automazione marketing a Platform](../../api/create/marketing-automation/hubspot.md) tutorial.
+Questa esercitazione richiede una connessione valida con l’applicazione di automazione marketing di terze parti da cui desideri acquisire i dati. Una connessione valida include l&#39;ID delle specifiche di connessione dell&#39;applicazione e l&#39;ID di connessione. Ulteriori informazioni sulla creazione di una connessione di automazione marketing e sul recupero di tali valori sono disponibili nell’ esercitazione [collegare un’origine di automazione marketing a Platform](../../api/create/marketing-automation/hubspot.md) .
 
 ### Lettura di chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consultate la sezione relativa a [come leggere chiamate API di esempio](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform] .
 
-### Raccogli valori per le intestazioni richieste
+### Raccogli i valori delle intestazioni richieste
 
-Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](https://www.adobe.com/go/platform-api-authentication-en) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
+Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come mostrato di seguito:
 
 * Autorizzazione: Portatore `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Tutte le risorse in [!DNL Experience Platform], incluse quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui verrà eseguita l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* nome x-sandbox: `{SANDBOX_NAME}`
 
-Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva per il tipo di supporto:
+Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione di tipo multimediale aggiuntiva:
 
 * Content-Type: `application/json`
 
-## Esplora le tabelle di dati
+## Esplorare le tabelle di dati
 
-Utilizzando la connessione di base per il sistema di automazione marketing, puoi esplorare le tabelle di dati eseguendo le richieste di GET. Utilizzate la seguente chiamata per trovare il percorso della tabella che desiderate ispezionare o assimilare in [!DNL Platform].
+Utilizzando la connessione di base per il sistema di automazione di marketing, puoi esplorare le tabelle di dati eseguendo richieste di GET. Utilizza la seguente chiamata per trovare il percorso della tabella che desideri controllare o acquisire in [!DNL Platform].
 
 **Formato API**
 
@@ -79,7 +79,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta di successo è un array di tabelle da al sistema di automazione di marketing. Trovare la tabella che si desidera inserire in [!DNL Platform] e prendere nota della relativa proprietà `path`, in quanto è necessario fornirla nel passaggio successivo per ispezionare la struttura.
+Una risposta di successo è un array di tabelle dal al sistema di automazione di marketing. Trova la tabella da inserire in [!DNL Platform] e prendi nota della relativa proprietà `path`, in quanto devi fornirla nel passaggio successivo per ispezionarne la struttura.
 
 ```json
 [
@@ -114,9 +114,9 @@ Una risposta di successo è un array di tabelle da al sistema di automazione di 
 ]
 ```
 
-##  Inspect la struttura di una tabella
+## Inspect la struttura di una tabella
 
-Per esaminare la struttura di una tabella dal sistema di automazione di marketing, eseguire una richiesta di GET specificando il percorso di una tabella come parametro di query.
+Per esaminare la struttura di una tabella dal sistema di automazione di marketing, esegui una richiesta di GET specificando il percorso di una tabella come parametro di query.
 
 **Formato API**
 
@@ -126,8 +126,8 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | ID connessione per il sistema di automazione di marketing. |
-| `{TABLE_PATH}` | Percorso di una tabella all&#39;interno del sistema di automazione di marketing. |
+| `{BASE_CONNECTION_ID}` | ID di connessione per il sistema di automazione di marketing. |
+| `{TABLE_PATH}` | Percorso di una tabella all’interno del sistema di automazione del marketing. |
 
 **Richiesta**
 
@@ -142,7 +142,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce la struttura di una tabella. I dettagli relativi a ciascuna colonna della tabella si trovano all&#39;interno degli elementi dell&#39;array `columns`.
+Una risposta corretta restituisce la struttura di una tabella. I dettagli relativi a ciascuna colonna della tabella si trovano all’interno degli elementi della matrice `columns`.
 
 ```json
 {
@@ -186,4 +186,4 @@ Una risposta corretta restituisce la struttura di una tabella. I dettagli relati
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai esplorato il sistema di automazione del marketing, trovato il percorso della tabella che desideri portare in [!DNL Platform] e ottenuto informazioni sulla sua struttura. Puoi utilizzare queste informazioni nell&#39;esercitazione successiva per [raccogliere i dati dal sistema di automazione marketing e inserirli nella piattaforma](../collect/marketing-automation.md).
+Seguendo questa esercitazione, hai esplorato il tuo sistema di automazione del marketing, trovato il percorso della tabella che desideri inserire in [!DNL Platform] e ottenuto informazioni sulla sua struttura. Puoi utilizzare queste informazioni nell’esercitazione successiva per [raccogliere dati dal sistema di automazione del marketing e inserirli in Platform](../collect/marketing-automation.md).
