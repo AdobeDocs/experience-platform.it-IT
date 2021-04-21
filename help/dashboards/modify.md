@@ -2,15 +2,15 @@
 keywords: Experience Platform;interfaccia utente;interfaccia utente;dashboard;dashboard;profili;segmenti;destinazioni;utilizzo licenza
 title: Modificare le dashboard di Platform nell’interfaccia utente
 description: 'Questa guida fornisce istruzioni dettagliate su come personalizzare la visualizzazione dei dati Adobe Experience Platform dell’organizzazione all’interno delle dashboard. '
-topic: guida
+topic-legacy: guide
+exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
 translation-type: tm+mt
-source-git-commit: 5cc973a5db88eb23c6e1aeee3695820a0555e4cf
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '455'
 ht-degree: 2%
 
 ---
-
 
 # (Beta) Modificare le dashboard {#modify-dashboards}
 
