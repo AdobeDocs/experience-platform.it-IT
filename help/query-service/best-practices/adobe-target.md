@@ -1,49 +1,49 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;servizio query;query di esempio;query di esempio;target adobe;'
+keywords: Experience Platform;home;argomenti popolari;servizio query;query di esempio;query di esempio;query di esempio;adobe target;
 solution: Experience Platform
-title: Query di esempio per  dati Adobe Target
-topic: queries
-description: I dati di  Adobe Target vengono trasformati in schema XDM di Experience Event e assimilati  Experience Platform come set di dati. Questo documento contiene query di esempio per l'utilizzo di Query Service con i set di dati Adobe Target .
+title: Query di esempio per i dati di Adobe Target
+topic-legacy: queries
+description: I dati di Adobe Target vengono trasformati in schema XDM di Experience Event e acquisiti in Experience Platform come set di dati per te. Questo documento contiene query di esempio per l’utilizzo di Query Service con i set di dati Adobe Target.
+exl-id: 0ab3cd6e-25ed-43dc-b8f0-a2b71621ae50
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 1%
 
 ---
 
+# Query di esempio per i dati di Adobe Target
 
-# Query di esempio per  dati Adobe Target
+I dati di Adobe Target vengono trasformati in schema XDM di Experience Event e acquisiti in Adobe Experience Platform come set di dati per te. Esistono molti casi d’uso per Adobe Experience Platform Query Service con questi dati e le seguenti query di esempio devono funzionare con i set di dati Adobe Target.
 
-I dati di  Adobe Target vengono trasformati in schema XDM di Experience Event e trasferiti in Adobe Experience Platform come set di dati. Esistono molti casi d&#39;uso per Adobe Experience Platform Query Service con questi dati e le seguenti query di esempio devono funzionare con i set di dati Adobe Target .
-
-In  Experience Platform, il nome del set di dati creato automaticamente è &quot; Eventi esperienza Adobe Target&quot;. Quando si utilizza questo dataset con le query, è necessario utilizzare il nome `adobe_target_experience_events`.
+Ad Experience Platform, il nome del set di dati creato automaticamente è &quot;Adobe Target Experience Events&quot;. Quando utilizzi questo set di dati con le query, utilizza il nome `adobe_target_experience_events`.
 
 ## Mappatura del campo XDM parziale di alto livello
 
-Nell&#39;elenco seguente sono elencati i campi di Target associati ai campi XDM corrispondenti.
+L’elenco seguente mostra i campi di Target che vengono mappati sui campi XDM corrispondenti.
 
 >[!NOTE]
 >
-> L&#39;uso di `[ ]` all&#39;interno del campo XDM indica un array.
+> L&#39;utilizzo di `[ ]` all&#39;interno del campo XDM denota un array.
 
 - mboxName: `_experience.target.mboxname`
 - Attività ID: `_experience.target.activities.activityID`
 - ID esperienza: `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID`
 - ID segmento: `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id`
 - Ambito evento: `_experience.target.activities[].activityEvents[].eventScope`
-   - Questo campo tiene traccia di nuovi visitatori e visite.
-- ID passo: `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID`
-   - Questo campo è un ID passaggio personalizzato per  Adobe Campaign.
+   - Questo campo traccia i nuovi visitatori e visite.
+- ID passaggio: `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID`
+   - Questo campo è un ID passaggio personalizzato per Adobe Campaign.
 - Totale prezzo: `commerce.order.priceTotal`
 
 ## Query di esempio
 
-Nelle query seguenti sono riportati alcuni esempi di query utilizzate comunemente con  Adobe Target.
+Le query seguenti mostrano esempi di query comunemente utilizzate con Adobe Target.
 
-Negli esempi seguenti, sarà necessario modificare l&#39;SQL per compilare i parametri previsti per le query in base al set di dati, alle variabili o all&#39;intervallo di tempo che si desidera valutare. Fornire i parametri ovunque si trovi `{ }` nell&#39;SQL.
+Negli esempi seguenti, sarà necessario modificare l&#39;SQL per compilare i parametri previsti per le query in base al set di dati, alle variabili o al periodo di tempo di cui si è interessati a valutare. Fornisci parametri ovunque vedi `{ }` nel SQL.
 
-### Conteggio delle attività orarie per un dato giorno
+### L’attività oraria conta per un dato giorno
 
 ```sql
 SELECT
@@ -81,7 +81,7 @@ ORDER BY Hour DESC
 LIMIT 24
 ```
 
-### ID esperienza per una specifica attività per un dato giorno
+### ID esperienza per un’attività specifica per un dato giorno
 
 ```sql
 SELECT
@@ -142,7 +142,7 @@ ORDER BY Day DESC, Instances DESC
 LIMIT 30
 ```
 
-### Restituisce il numero di visitatori, visite, impression per attività per un dato giorno
+### Restituisce il conteggio di visitatori, visite, impression per attività per un dato giorno
 
 ```sql
 SELECT
@@ -166,7 +166,7 @@ ORDER BY Hour DESC, Visitors DESC
 LIMIT 30
 ```
 
-### Restituisci visitatori, visite, impression per Experience ID, Segment ID e EventScope per un dato giorno
+### Visitatori di ritorno, visite, impression per Experience ID, Segment ID e EventScope per un dato giorno
 
 ```sql
 SELECT
