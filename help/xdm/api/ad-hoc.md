@@ -1,18 +1,18 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;schema di registro;schema di registro;ad hoc;ad hoc;ad hoc;ad hoc;ad hoc;Adhoc;Adhoc;'
+keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;modello dati;registro schema;registro schema;ad hoc;ad hoc;ad hoc;Ad hoc;Ad hoc;Adhoc;Adhoc;
 solution: Experience Platform
-title: Regimi ad hoc
-description: In circostanze specifiche, potrebbe essere necessario creare uno schema XDM con campi che vengono denominati separati per l'uso solo da un singolo dataset. Questo viene definito schema ad hoc.
-topic: developer guide
+title: Schemi ad hoc
+description: In circostanze specifiche, potrebbe essere necessario creare uno schema XDM con campi che vengono spazi dei nomi per l’utilizzo solo da un singolo set di dati. Questo è denominato schema ad hoc.
+topic-legacy: developer guide
+exl-id: 8ee43bdc-3f16-4ec9-b17a-9942e4599023
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 0%
 
 ---
 
-
 # Schemi ad hoc
 
-In circostanze specifiche, potrebbe essere necessario creare uno schema [!DNL Experience Data Model] (XDM) con campi che vengono denominati separati per l&#39;uso solo da un singolo dataset. Questo viene definito schema ad hoc. Gli schemi ad hoc sono utilizzati in diversi flussi di lavoro di assimilazione dei dati, inclusi l’assimilazione di file CSV e la creazione di alcuni tipi di connettori sorgente. Per ulteriori informazioni sugli schemi ad hoc, compresi i passaggi per la creazione di uno nell&#39;API [!DNL Schema Registry], fare riferimento all&#39; [esercitazione sullo schema ad hoc](../tutorials/ad-hoc.md).
+In circostanze specifiche, potrebbe essere necessario creare uno schema [!DNL Experience Data Model] (XDM) con campi che vengono spazi dei nomi per l’utilizzo solo da un singolo set di dati. Questo è denominato schema ad hoc. Gli schemi ad hoc vengono utilizzati in diversi flussi di lavoro di acquisizione dei dati, tra cui l’acquisizione di file CSV e la creazione di determinati tipi di connettori sorgente. Per ulteriori informazioni sugli schemi ad-hoc, compresi i passaggi per crearne uno nell&#39;API [!DNL Schema Registry], consulta l&#39; [esercitazione sullo schema ad-hoc](../tutorials/ad-hoc.md) .
