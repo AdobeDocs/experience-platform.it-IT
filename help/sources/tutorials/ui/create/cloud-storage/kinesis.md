@@ -7,18 +7,14 @@ type: Tutorial
 description: Scopri come creare una connessione sorgente Amazon Kinesis utilizzando l’interfaccia utente di Adobe Experience Platform.
 exl-id: 4152e48b-bec7-4b05-a172-eea71c9d9880
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d6f1521470b8dc630060584189690545c724de6b
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '448'
 ht-degree: 1%
 
 ---
 
 # Creare una connessione sorgente [!DNL Amazon Kinesis] nell&#39;interfaccia utente
-
->[!NOTE]
->
->Il connettore [!DNL Amazon Kinesis] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la [Panoramica delle sorgenti](../../../../home.md#terms-and-conditions) .
 
 I connettori sorgente in Adobe Experience Platform consentono di acquisire dati provenienti dall’esterno su base pianificata. Questa esercitazione fornisce passaggi per l&#39;autenticazione di un connettore sorgente [!DNL Amazon Kinesis] (in seguito denominato [!DNL "Kinesis"]) tramite l&#39;interfaccia utente [!DNL Platform].
 
