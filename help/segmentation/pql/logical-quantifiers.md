@@ -1,25 +1,25 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Segmentation Service;pql;PQL;Profile Query Language;metriche logiche;quantificatore logico;'
+keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Servizio di segmentazione;pql;PQL;Lingua query profilo;quantificatori logici;quantificatore logico;
 solution: Experience Platform
 title: Quantificatori logici PQL
-topic: developer guide
+topic-legacy: developer guide
 description: I quantificatori logici possono essere utilizzati per asserire condizioni con gli array in Profile Query Language (PQL).
+exl-id: 8b1c9560-02e2-46e0-9646-c64dd4a15df1
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 4%
 
 ---
 
+# Funzioni quantificatore logico
 
-# Funzioni quantificatore logiche
+I quantificatori logici possono essere utilizzati per asserire condizioni con array in [!DNL Profile Query Language] (PQL). Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
 
-I quantificatori logici possono essere utilizzati per affermare condizioni con array in [!DNL Profile Query Language] (PQL). Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
+## Esiste
 
-## Exists
-
-La funzione `exists` determina l&#39;esistenza di un elemento in un array, a condizione che soddisfi la condizione specificata.
+La funzione `exists` determina l&#39;esistenza di un elemento in una matrice, purché soddisfi la condizione specificata.
 
 **Formato**
 
@@ -36,7 +36,7 @@ exists {VARIABLE} from {EXPRESSION} : {CONDITION}
 
 **Esempio**
 
-La seguente query PQL ottiene tutti gli eventi con un prezzo superiore a $50 o con uno SKU di &quot;PS&quot;.
+La seguente query PQL ottiene tutti gli eventi con un prezzo superiore a $50 o con SKU di &quot;PS&quot;.
 
 ```sql
 exists E from xEvent where (E.commerce.item.price > 50), I from E.productListItems where I.SKU = "PS"
@@ -44,7 +44,7 @@ exists E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## Per tutti
 
-La funzione `forall` determina tutti gli elementi di un array che soddisfano tutte le condizioni specificate.
+La funzione `forall` determina tutti gli elementi di una matrice che soddisfano tutte le condizioni specificate.
 
 **Formato**
 
@@ -61,7 +61,7 @@ forall {VARIABLE} from {EXPRESSION} : {CONDITION}
 
 **Esempio**
 
-La seguente query PQL ottiene tutti gli eventi con un prezzo superiore a $50 e un SKU pari a &quot;PS&quot;.
+La seguente query PQL ottiene tutti gli eventi che hanno un prezzo superiore a 50 $ e ha una SKU di &quot;PS&quot;.
 
 ```sql
 forall E from xEvent where (E.commerce.item.price > 50), I from E.productListItems where I.SKU = "PS"
@@ -69,4 +69,4 @@ forall E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## Passaggi successivi
 
-Ora che hai imparato i quantificatori logici, puoi usarli nelle tue query PQL. Per ulteriori informazioni sulle altre funzioni PQL, leggere la [Panoramica del linguaggio di query profilo](./overview.md).
+Ora che hai imparato i quantificatori logici, puoi utilizzarli nelle query PQL. Per ulteriori informazioni sulle altre funzioni PQL, consulta la [Panoramica di Profile Query Language](./overview.md).
