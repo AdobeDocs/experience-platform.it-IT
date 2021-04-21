@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;argomenti popolari;servizio di flusso;aggiornare account
 solution: Experience Platform
 title: Aggiornare gli account utilizzando l’API del servizio di flusso
-topic: ' - Panoramica'
+topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per aggiornare i dettagli e le credenziali di un account utilizzando l’API del servizio di flusso.
+exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
 translation-type: tm+mt
-source-git-commit: 37be5f5ffa4640d7d4442a24cc257069237f15cb
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '687'
 ht-degree: 2%
 
 ---
-
 
 # Aggiornare gli account utilizzando l’API del servizio di flusso
 
