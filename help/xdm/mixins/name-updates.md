@@ -1,23 +1,23 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;schema;schema;XDM;ExperienceEvent;fields;schemas;Schema design;mixin;mixin;enduserids;end user;end user;ids;updates;'
+keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;ExperienceEvent;campi;schemi;progettazione schema;mixin;mixin;enduserids;utente finale;utente finale;id;aggiornamenti;
 solution: Experience Platform
-title: Aggiornamenti dei nomi dei mixin
-topic: overview
-description: Viene visualizzato un elenco delle modifiche recenti apportate al nome del mixin XDM.
+title: Aggiornamenti dei nomi misti
+topic-legacy: overview
+description: Viene modificato un elenco del nome del mixin XDM recente.
+exl-id: 2c775b86-7262-4f05-b421-c626867de0a4
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%
 
 ---
 
-
 # Aggiornamenti dei nomi misti
 
-I nomi di diversi mixin XDM (Experience Data Model) sono cambiati. Poiché la struttura dei campi di questi mixin rimane invariata, le modifiche dei nomi da sole non devono influenzare gli schemi esistenti che utilizzano questi mixin. Tuttavia, per cercare e utilizzare questi mixin nell&#39;interfaccia utente di Adobe Experience Platform, è necessario utilizzarne i nuovi nomi.
+I nomi di diversi mixin Experience Data Model (XDM) sono cambiati. Poiché la struttura del campo di questi mixin rimane invariata, le sole modifiche del nome non devono influenzare gli schemi esistenti che utilizzano questi mixin. Tuttavia, per cercare e utilizzare questi mixin nell’interfaccia utente di Adobe Experience Platform, è necessario utilizzare i loro nuovi nomi.
 
-Nella tabella seguente sono riportati i mixin esistenti che sono stati aggiornati, insieme ai relativi nuovi nomi corrispondenti:
+La tabella seguente illustra i mixin esistenti che sono stati aggiornati, insieme ai relativi nuovi nomi:
 
 | Nome precedente | Nome aggiornato |
 | --- | --- |
