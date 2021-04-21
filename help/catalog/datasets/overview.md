@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;posizione dati;posizione dati;gestione dati;gestione dati;linea;linea;tipo di dati;tipi di dati;tipi di dati;tipo di dati
+keywords: Experience Platform;home;argomenti popolari;posizione dati;posizione dati;gestione dati;gestione dati;linea;linea;linea;tipo di dati;tipi di dati;tipi di dati;tipo di dati
 solution: Experience Platform
 title: Panoramica dei set di dati
-topic: set di dati
+topic-legacy: datasets
 description: Questo documento fornisce una panoramica di alto livello dei set di dati in Experience Platform.
+exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '707'
 ht-degree: 2%
 
 ---
 
-
 # Panoramica dei set di dati
 
-Tutti i dati correttamente acquisiti in Adobe Experience Platform vengono memorizzati all’interno di [!DNL Data Lake] come set di dati. Un set di dati è un costrutto di archiviazione e gestione per una raccolta di dati, in genere una tabella, che contiene uno schema (colonne) e campi (righe). I set di dati contengono anche metadati che descrivono vari aspetti dei dati memorizzati.
+Tutti i dati correttamente acquisiti in Adobe Experience Platform vengono memorizzati come set di dati all’interno di [!DNL Data Lake]. Un set di dati è un costrutto di archiviazione e gestione per una raccolta di dati, in genere una tabella, che contiene uno schema (colonne) e campi (righe). I set di dati contengono anche metadati che descrivono vari aspetti dei dati memorizzati.
 
 Questo documento fornisce una panoramica di alto livello dei set di dati in [!DNL Experience Platform].
 
@@ -35,7 +35,7 @@ Per ulteriori informazioni su XDM, consulta la [Panoramica del sistema XDM](../.
 
 ## Acquisizione di dati nei set di dati
 
-L’acquisizione dei dati in Adobe Experience Platform rappresenta i diversi metodi con cui [!DNL Platform] acquisisce i dati da varie sorgenti. Indipendentemente dal metodo di acquisizione, tutti i dati correttamente acquisiti vengono convertiti in file batch. I batch sono unità di dati costituite da uno o più file da acquisire come una singola unità. Questi file batch vengono quindi aggiunti ai set di dati dedicati e mantenuti all&#39;interno di [!DNL Data Lake].
+L’acquisizione dei dati di Adobe Experience Platform rappresenta i diversi metodi con cui [!DNL Platform] acquisisce i dati da varie sorgenti. Indipendentemente dal metodo di acquisizione, tutti i dati correttamente acquisiti vengono convertiti in file batch. I batch sono unità di dati costituite da uno o più file da acquisire come una singola unità. Questi file batch vengono quindi aggiunti ai set di dati dedicati e mantenuti all&#39;interno di [!DNL Data Lake].
 
 Per ulteriori informazioni, consulta la [Panoramica sull’acquisizione dei dati](../../ingestion/home.md) .
 
@@ -61,7 +61,7 @@ Di seguito è riportato un elenco di servizi a valle che utilizzano set di dati 
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Utilizza  [!DNL Identity Service] per creare profili cliente dettagliati dai set di dati in tempo reale. [!DNL Real-time Customer Profile] richiama i dati dai profili cliente  [!DNL Data Lake] e persiste nel proprio archivio dati separato.
 * [Servizio](../../segmentation/home.md) di segmentazione di Adobe Experience Platform: Ti consente di creare segmenti e generare tipi di pubblico dai  [!DNL Real-time Customer Profile] dati. Questi tipi di pubblico possono quindi essere esportati nei rispettivi set di dati all’interno di [!DNL Data Lake].
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md): Utilizza l’apprendimento automatico e l’intelligenza artificiale per individuare informazioni in set di dati di grandi dimensioni.
-* [Servizio](../../query-service/home.md) query di Adobe Experience Platform: Consente di utilizzare SQL standard per eseguire query sui dati in  [!DNL Experience Platform], unire qualsiasi set di dati all’interno di  [!DNL Data Lake] e acquisire i risultati della query come nuovo set di dati da utilizzare nel reporting,  [!DNL Data Science Workspace]o  [!DNL Real-time Customer Profile].
+* [Servizio](../../query-service/home.md) query Adobe Experience Platform: Consente di utilizzare SQL standard per eseguire query sui dati in  [!DNL Experience Platform], unire qualsiasi set di dati all’interno di  [!DNL Data Lake] e acquisire i risultati della query come nuovo set di dati da utilizzare nel reporting,  [!DNL Data Science Workspace]o  [!DNL Real-time Customer Profile].
 
 ## Passaggi successivi
 
