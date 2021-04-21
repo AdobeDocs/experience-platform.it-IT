@@ -2,17 +2,17 @@
 keywords: Experience Platform;segnare un modello;Data Science Workspace;argomenti comuni;interfaccia utente;esecuzione del punteggio;risultati del punteggio
 solution: Experience Platform
 title: Punteggio di un modello nell’interfaccia utente di Data Science Workspace
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: 'Il punteggio in Adobe Experience Platform Data Science Workspace può essere ottenuto inserendo i dati di input in un modello addestrato esistente. I risultati del punteggio vengono quindi memorizzati e visualizzati in un set di dati di output specificato come nuovo batch. '
+description: Il punteggio in Adobe Experience Platform Data Science Workspace può essere ottenuto inserendo i dati di input in un modello addestrato esistente. I risultati del punteggio vengono quindi memorizzati e visualizzati in un set di dati di output specificato come nuovo batch.
+exl-id: 00d6a872-d71a-47f4-8625-92621d4eed56
 translation-type: tm+mt
-source-git-commit: 7feda18351061600b05dc7be8afbbfb9a0fa7ec1
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '619'
 ht-degree: 0%
 
 ---
-
 
 # Punteggio di un modello nell’interfaccia utente di Data Science Workspace
 
