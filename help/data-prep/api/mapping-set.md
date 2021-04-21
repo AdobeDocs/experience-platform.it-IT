@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;argomenti popolari;preparazione dati;guida api;set di mappatura;
 solution: Experience Platform
 title: Endpoint API per set di mappature
-topic: set di mappature
-description: 'Puoi utilizzare l''endpoint `/mappingSets` nell''API Adobe Experience Platform per recuperare, creare, aggiornare e convalidare a livello di programmazione i set di mappatura. '
+topic-legacy: mapping sets
+description: Puoi utilizzare l'endpoint `/mappingSets` nell'API Adobe Experience Platform per recuperare, creare, aggiornare e convalidare a livello di programmazione i set di mappatura.
+exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
 translation-type: tm+mt
-source-git-commit: 73bf6abb143c0866a400aafe984f9a553ffc1abf
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '809'
+source-wordcount: '807'
 ht-degree: 3%
 
 ---
-
 
 # Endpoint di mapping
 
