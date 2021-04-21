@@ -1,15 +1,15 @@
 ---
-keywords: pubblicità; il banco commerciale;
+keywords: pubblicità; il banco commerciale; ufficio commerciale pubblicitario
 title: Il collegamento del Trade Desk
-description: 'Il Trade Desk è una piattaforma self-service per gli acquirenti di annunci che esegue il retargeting e campagne digitali mirate per il pubblico tra le varie fonti di visualizzazione, video e inventario mobile. '
+description: Il Trade Desk è una piattaforma self-service per gli acquirenti di annunci che esegue il retargeting e campagne digitali mirate per il pubblico tra le varie fonti di visualizzazione, video e inventario mobile.
+exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
 translation-type: tm+mt
-source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
+source-git-commit: 5b72433fcf2318f98538278c6d2650b366e391a2
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '595'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL The Trade Desk] connection
 
