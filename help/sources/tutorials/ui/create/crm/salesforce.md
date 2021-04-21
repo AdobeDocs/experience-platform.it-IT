@@ -1,71 +1,71 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;Salesforce;salesforce'
+keywords: Experience Platform;home;argomenti popolari;Salesforce;salesforce
 solution: Experience Platform
 title: Creare una connessione sorgente Salesforce nell’interfaccia utente
-topic: overview
+topic-legacy: overview
 type: Tutorial
-description: Scopri come creare una connessione sorgente Salesforce utilizzando l’interfaccia utente di Adobe Experience Platform.
+description: Scopri come creare una connessione sorgente Salesforce utilizzando l’interfaccia utente Adobe Experience Platform.
+exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 1%
 
 ---
 
+# Creare una connessione sorgente [!DNL Salesforce] nell&#39;interfaccia utente
 
-# Creare una connessione di origine [!DNL Salesforce] nell&#39;interfaccia utente
-
-I connettori di origine in Adobe Experience Platform consentono di trasferire i dati CRM di origine esterna su base programmata. Questa esercitazione fornisce i passaggi necessari per creare un connettore di origine [!DNL Salesforce] utilizzando l&#39;interfaccia utente [!DNL Platform].
+I connettori di origine in Adobe Experience Platform consentono di acquisire dati CRM di origine esterna su base pianificata. Questa esercitazione descrive i passaggi necessari per creare un connettore sorgente [!DNL Salesforce] utilizzando l&#39;interfaccia utente [!DNL Platform] .
 
 ## Introduzione
 
-Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa esercitazione richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): Il framework standard con cui  [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza dei clienti.
-   * [Nozioni di base sulla composizione](../../../../../xdm/schema/composition.md) dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
-   * [Esercitazione](../../../../../xdm/tutorials/create-schema-ui.md) sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): Il framework standardizzato in base al quale  [!DNL Experience Platform] vengono organizzati i dati sulla customer experience.
+   * [Nozioni di base sulla composizione](../../../../../xdm/schema/composition.md) dello schema: Scopri i blocchi di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
+   * [Esercitazione](../../../../../xdm/tutorials/create-schema-ui.md) dell’Editor di schema: Scopri come creare schemi personalizzati utilizzando l’interfaccia utente dell’Editor di schema.
+* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
-Se si dispone già di un account [!DNL Salesforce] valido, è possibile ignorare il resto del documento e procedere all&#39;esercitazione su [configurazione di un flusso di dati](../../dataflow/crm.md).
+Se disponi già di un account [!DNL Salesforce] valido, puoi saltare il resto del documento e procedere all&#39;esercitazione su [configurazione di un flusso di dati](../../dataflow/crm.md).
 
 ### Raccogli credenziali richieste
 
 | Credenziali | Descrizione |
 | ---------- | ----------- |
-| `environmentUrl` | L&#39;URL dell&#39;istanza di origine [!DNL Salesforce]. |
+| `environmentUrl` | URL dell&#39;istanza sorgente [!DNL Salesforce]. |
 | `username` | Il nome utente per l&#39;account utente [!DNL Salesforce]. |
-| `password` | La password per l&#39;account utente [!DNL Salesforce]. |
+| `password` | Password dell&#39;account utente [!DNL Salesforce]. |
 | `securityToken` | Token di sicurezza per l&#39;account utente [!DNL Salesforce]. |
 
-Per ulteriori informazioni su come iniziare, consultare [questo documento Salesforce](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
+Per ulteriori informazioni su come iniziare, consulta [questo documento Salesforce](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
 
-## Collegare l&#39;account [!DNL Salesforce]
+## Connetti il tuo account [!DNL Salesforce]
 
-Dopo aver raccolto le credenziali necessarie, puoi seguire i passaggi descritti di seguito per collegare l&#39;account [!DNL Salesforce] a [!DNL Platform].
+Dopo aver raccolto le credenziali richieste, puoi seguire i passaggi seguenti per collegare il tuo account [!DNL Salesforce] a [!DNL Platform].
 
-Accedete a [Adobe Experience Platform](https://platform.adobe.com), quindi selezionate **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro **[!UICONTROL Sources]**. Nella schermata **[!UICONTROL Catalog]** sono visualizzate diverse sorgenti con le quali è possibile creare un account.
+Accedi a [Adobe Experience Platform](https://platform.adobe.com) e seleziona **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro **[!UICONTROL Sources]**. Nella schermata **[!UICONTROL Catalog]** sono visualizzate diverse origini per le quali è possibile creare un account.
 
-Potete selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare l&#39;origine specifica con cui si desidera lavorare utilizzando l&#39;opzione di ricerca.
+Puoi selezionare la categoria appropriata dal catalogo sul lato sinistro dello schermo. In alternativa, è possibile trovare la sorgente specifica con cui si desidera lavorare utilizzando l’opzione di ricerca.
 
-Sotto la categoria **[!UICONTROL Databases]**, selezionare **[!UICONTROL Salesforce]**. Se si tratta della prima volta che si utilizza questo connettore, selezionare **[!UICONTROL Configure]**. In caso contrario, selezionare **[!UICONTROL Add data]** per creare un nuovo connettore Salesforce.
+Sotto la categoria **[!UICONTROL Databases]**, selezionare **[!UICONTROL Salesforce]**. Se questa è la prima volta che utilizzi questo connettore, seleziona **[!UICONTROL Configure]**. In caso contrario, seleziona **[!UICONTROL Add data]** per creare un nuovo connettore Salesforce.
 
 ![catalogo](../../../../images/tutorials/create/salesforce/catalog.png)
 
-Viene visualizzata la pagina **[!UICONTROL Connect to Salesforce]**. In questa pagina è possibile utilizzare credenziali nuove o già esistenti.
+Viene visualizzata la pagina **[!UICONTROL Connect to Salesforce]** . In questa pagina è possibile utilizzare le nuove credenziali o le credenziali esistenti.
 
 ### Nuovo account
 
-Se si utilizzano nuove credenziali, selezionare **[!UICONTROL New account]**. Nel modulo di input visualizzato, specificare un nome, una descrizione facoltativa e le credenziali [!DNL Salesforce]. Al termine, selezionare **[!UICONTROL Connect]**, quindi concedere un po&#39; di tempo per stabilire la nuova connessione.
+Se utilizzi nuove credenziali, seleziona **[!UICONTROL New account]**. Nel modulo di input visualizzato, specificare un nome, una descrizione facoltativa e le credenziali [!DNL Salesforce]. Al termine, selezionare **[!UICONTROL Connect]** e quindi concedere un po&#39; di tempo per l&#39;impostazione della nuova connessione.
 
 ![connect](../../../../images/tutorials/create/salesforce/new.png)
 
 ### Account esistente
 
-Per collegare un account esistente, selezionate l&#39;account [!DNL Salesforce] con cui desiderate connettervi, quindi selezionate **[!UICONTROL Next]** nell&#39;angolo superiore destro per continuare.
+Per collegare un account esistente, seleziona l&#39;account [!DNL Salesforce] con cui desideri connetterti, quindi seleziona **[!UICONTROL Next]** nell&#39;angolo in alto a destra per continuare.
 
-![esistenti](../../../../images/tutorials/create/salesforce/existing.png)
+![esistente](../../../../images/tutorials/create/salesforce/existing.png)
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, è stata stabilita una connessione all&#39;account [!DNL Salesforce]. Ora puoi continuare con l&#39;esercitazione successiva e [configurare un flusso di dati per l&#39;inserimento di dati in [!DNL Platform]](../../dataflow/crm.md).
+Seguendo questa esercitazione, hai stabilito una connessione al tuo account [!DNL Salesforce] . Ora puoi continuare l’esercitazione successiva e [configurare un flusso di dati per inserire i dati in [!DNL Platform]](../../dataflow/crm.md).
