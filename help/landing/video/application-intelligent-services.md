@@ -1,27 +1,25 @@
 ---
-title: Applicazioni e servizi intelligenti  Experience Platform
-description: Questo video offre una panoramica dei servizi applicativi e intelligenti creati con Adobe Experience Platform, che completano il  Experience Cloud Applications&mdash;Real-time Customer Data Platform, Journey Orchestration, Customer Journey Analytics, Attribution AI  e AI cliente.
-feature: platform
-topics: null
+title: Experience Platform basato su applicazioni e servizi intelligenti
+description: Questo video offre una panoramica dei servizi applicativi e intelligenti basati su Adobe Experience Platform, che integrano l'Experience Cloud Applications&mdash;Real-time Customer Data Platform, Journey Orchestration, Customer Journey Analytics, Attribution AI e Customer AI.
 kt: 4333
 audience: all
 doc-type: video
 activity: understand
 thumbnail: 32554.jpg
+exl-id: d2f30bba-4b49-40b2-9f2a-80905894baa6
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 22%
 
 ---
 
+# Experience Platform di applicazioni e servizi intelligenti
 
-# Servizi intelligenti e applicativi basati su  Experience Platform
+Questo video fornisce una panoramica dell&#39;applicazione e dei servizi intelligenti incorporati nell&#39;Experience Platform.
 
-Questo video fornisce una panoramica dell&#39;applicazione e dei servizi intelligenti creati sopra  Experience Platform.
-
-Per saperne di più, utilizzate i collegamenti per consultare la documentazione di ogni singola applicazione:
+Per ulteriori informazioni, utilizza i collegamenti per consultare la documentazione di ogni singola applicazione:
 
 * [[!DNL Customer Journey Analytics]](https://docs.adobe.com/content/help/it-IT/analytics-platform/using/cja-landing.html)
 * [Intelligent Services](https://experienceleague.adobe.com/docs/intelligent-services.html)
@@ -30,7 +28,3 @@ Per saperne di più, utilizzate i collegamenti per consultare la documentazione 
 * [[!DNL Real-time Customer Data Platform (Real-time CDP)]](../../rtcdp/overview.md)
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554?quality=12&learn=on)
-
-
-
-
