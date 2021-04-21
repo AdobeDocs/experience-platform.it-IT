@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;argomenti popolari;inserimento dati;dati acquisiti;streaming;panoramica;acquisizione streaming;latenza;latenza streaming;
 solution: Experience Platform
 title: Panoramica dell’acquisizione in streaming
-topic: ' - Panoramica'
-description: L’acquisizione in streaming per Adobe Experience Platform fornisce agli utenti un metodo per inviare in tempo reale dati da dispositivi lato client e lato server a Experience Platform.
+topic-legacy: overview
+description: L’acquisizione in streaming per Adobe Experience Platform fornisce agli utenti un metodo per inviare in tempo reale dati da dispositivi lato client e lato server ad Experience Platform.
+exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '285'
 ht-degree: 3%
 
 ---
-
 
 # Panoramica sull’acquisizione in streaming
 
@@ -19,7 +19,7 @@ L’acquisizione in streaming per Adobe Experience Platform fornisce agli utenti
 
 ## Cosa puoi fare con l’acquisizione in streaming?
 
-Adobe Experience Platform ti consente di gestire esperienze coordinate, coerenti e rilevanti generando un [!DNL Real-time Customer Profile] per ogni singolo cliente. L’acquisizione in streaming svolge un ruolo chiave nella creazione di questi profili e consente di fornire i dati [!DNL Profile] in [!DNL Data Lake] con la minima latenza possibile.
+Adobe Experience Platform consente di gestire esperienze coordinate, coerenti e rilevanti generando un [!DNL Real-time Customer Profile] per ogni singolo cliente. L’acquisizione in streaming svolge un ruolo chiave nella creazione di questi profili e consente di fornire i dati [!DNL Profile] in [!DNL Data Lake] con la minima latenza possibile.
 
 Il video seguente è stato progettato per aiutarti a comprendere lo streaming ingestion e illustra i concetti illustrati sopra.
 
@@ -46,4 +46,4 @@ Per ulteriori informazioni sull&#39;abilitazione di un set di dati per [!DNL Pro
 
 ## Estensione Adobe Experience Platform
 
-Puoi utilizzare l’estensione Adobe Experience Platform per creare una nuova connessione in streaming. L&#39;estensione [!DNL Experience Platform] fornisce azioni per inviare beacon formattati in [!DNL Experience Data Model] (XDM) per l&#39;acquisizione in tempo reale a [!DNL Experience Platform]. Per ulteriori informazioni, consulta la documentazione [Estensione Experience Platform](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/adobe-experience-platform-extension.html) .
+Puoi utilizzare l’estensione Adobe Experience Platform per creare una nuova connessione in streaming. L&#39;estensione [!DNL Experience Platform] fornisce azioni per inviare beacon formattati in [!DNL Experience Data Model] (XDM) per l&#39;acquisizione in tempo reale a [!DNL Experience Platform]. Per ulteriori informazioni, visita la documentazione [Estensione Experience Platform](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/adobe-experience-platform-extension.html) .
