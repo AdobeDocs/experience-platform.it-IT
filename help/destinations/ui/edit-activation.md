@@ -1,5 +1,5 @@
 ---
-keywords: attivazione della modifica; modificare la destinazione;
+keywords: modificare l'attivazione, modificare la destinazione, modificare la destinazione
 title: Modifica flussi di attivazione
 type: Tutorial
 seo-title: Modifica flussi di attivazione
@@ -7,9 +7,9 @@ description: Segui i passaggi descritti in questo articolo per modificare un flu
 seo-description: Segui i passaggi descritti in questo articolo per modificare un flusso di attivazione esistente in Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
 translation-type: tm+mt
-source-git-commit: e436d7147c613dad5b2ff596a412759fd60d228c
+source-git-commit: 5b72433fcf2318f98538278c6d2650b366e391a2
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '193'
 ht-degree: 0%
 
 ---
