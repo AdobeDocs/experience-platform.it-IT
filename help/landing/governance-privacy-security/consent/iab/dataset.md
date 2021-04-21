@@ -2,20 +2,20 @@
 keywords: Experience Platform;home;IAB;IAB 2.0;consenso;consenso
 solution: Experience Platform
 title: Creare set di dati per l’acquisizione dei dati di consenso IAB TCF 2.0
-topic: eventi di privacy
+topic-legacy: privacy events
 description: Questo documento fornisce passaggi per impostare i due set di dati necessari per raccogliere i dati di consenso IAB TCF 2.0.
+exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1566'
+source-wordcount: '1564'
 ht-degree: 0%
 
 ---
 
-
 # Creare set di dati per l’acquisizione dei dati di consenso IAB TCF 2.0
 
-Affinché Adobe Experience Platform possa elaborare i dati di consenso dei clienti in conformità con IAB [!DNL Transparency & Consent Framework] (TCF) 2.0, tali dati devono essere inviati ai set di dati i cui schemi contengono campi di consenso TCF 2.0.
+Affinché Adobe Experience Platform possa elaborare i dati di consenso dei clienti in conformità a IAB [!DNL Transparency & Consent Framework] (TCF) 2.0, tali dati devono essere inviati ai set di dati i cui schemi contengono campi di consenso TCF 2.0.
 
 In particolare, per acquisire i dati di consenso TCF 2.0 sono necessari due set di dati:
 
@@ -65,7 +65,7 @@ Per gli schemi basati su [!DNL XDM Individual Profile], il mixin [!UICONTROL Pri
 }
 ```
 
-Come illustrato nell’esempio, ogni chiave a livello principale di `xdm:identityPrivacyInfo` corrisponde a uno spazio dei nomi di identità riconosciuto dal servizio Identity. A sua volta, ogni proprietà dello spazio dei nomi deve avere almeno una sottoproprietà la cui chiave corrisponde al valore di identità corrispondente del cliente per tale spazio dei nomi. In questo esempio, il cliente è identificato con un valore Experience Cloud ID (`ECID`) di `13782522493631189`.
+Come illustrato nell’esempio, ogni chiave a livello principale di `xdm:identityPrivacyInfo` corrisponde a uno spazio dei nomi di identità riconosciuto dal servizio Identity. A sua volta, ogni proprietà dello spazio dei nomi deve avere almeno una sottoproprietà la cui chiave corrisponde al valore di identità corrispondente del cliente per tale spazio dei nomi. In questo esempio, il cliente è identificato con un valore ID Experience Cloud (`ECID`) di `13782522493631189`.
 
 >[!NOTE]
 >
