@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;argomenti popolari;Google PubSub;google pubsub
 solution: Experience Platform
 title: Panoramica del connettore di origine Google PubSub
-topic: ' - Panoramica'
-description: Scopri come collegare Google PubSub ad Adobe Experience Platform utilizzando le API o l’interfaccia utente.
+topic-legacy: overview
+description: Scopri come collegare Google PubSub a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
+exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
-
 
 # (Beta) Connettore [!DNL Google PubSub]
 
@@ -23,9 +23,9 @@ Adobe Experience Platform fornisce connettività nativa per provider di cloud co
 
 Le origini di archiviazione cloud possono importare i dati in Platform senza dover scaricare, formattare o caricare. I dati acquisiti possono essere formattati come JSON XDM, Parquet XDM o delimitati. Ogni fase del processo viene integrata nel flusso di lavoro delle sorgenti. Platform ti consente di inserire dati da [!DNL Azure Event Hubs] in tempo reale.
 
-## Elenco indirizzi IP consentiti
+## ELENCO CONSENTITI di indirizzo IP
 
-Prima di utilizzare i connettori sorgente, è necessario aggiungere a un elenco di indirizzi IP un elenco di indirizzi IP consentiti . Se non aggiungi gli indirizzi IP specifici per l’area geografica all’elenco Consentiti, potrebbero verificarsi errori o prestazioni non soddisfacenti durante l’utilizzo delle origini. Per ulteriori informazioni, consulta la pagina [Elenco indirizzi IP consentiti](../../ip-address-allow-list.md) .
+Prima di utilizzare i connettori sorgente, è necessario aggiungere a un elenco consentiti un elenco di indirizzi IP. Se l’utente non aggiunge all’elenco consentiti gli indirizzi IP specifici per l’area geografica, potrebbero verificarsi errori o prestazioni non soddisfacenti durante l’utilizzo delle origini. Per ulteriori informazioni, consulta la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md) .
 
 ## Connetti [!DNL Google PubSub] alla piattaforma
 
