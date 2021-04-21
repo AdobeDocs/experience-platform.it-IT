@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;argomenti popolari;elenco sandbox
 solution: Experience Platform
 title: Elencare i tipi di sandbox supportati nell’API
-topic: guida per sviluppatori
+topic-legacy: developer guide
 description: Puoi recuperare un elenco dei tipi di sandbox supportati per la tua organizzazione effettuando una richiesta GET all’endpoint /sandboxTypes .
+exl-id: eb5e1b44-37f5-4ed5-98f5-ac8db8792c7d
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '83'
+source-wordcount: '81'
 ht-degree: 2%
 
 ---
-
 
 # Elencare i tipi di sandbox supportati nell’API
 
