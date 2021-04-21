@@ -1,25 +1,25 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;catalogo;ricerca di più oggetti;api'
+keywords: Experience Platform;home;argomenti popolari;catalogo;ricerca di più oggetti;api
 solution: Experience Platform
 title: Ricerca di più oggetti catalogo
-topic: developer guide
-description: Se si desidera visualizzare diversi oggetti specifici, anziché effettuare una richiesta per oggetto, Catalog fornisce una semplice scelta rapida per richiedere più oggetti dello stesso tipo. Potete utilizzare una singola richiesta di GET per restituire più oggetti specifici includendo un elenco di ID separati da virgola.
+topic-legacy: developer guide
+description: Se si desidera visualizzare più oggetti specifici, anziché effettuare una richiesta per oggetto, Catalog fornisce una semplice scelta rapida per richiedere più oggetti dello stesso tipo. È possibile utilizzare una singola richiesta di GET per restituire più oggetti specifici includendo un elenco di ID separati da virgole.
+exl-id: b2329b32-6139-4557-aff3-a584e03b09f3
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 1%
 
 ---
 
+# Cercare più oggetti Catalogo
 
-# Cercare più oggetti catalogo
-
-Se si desidera visualizzare diversi oggetti specifici, invece di effettuare una richiesta per oggetto, [!DNL Catalog] fornisce una semplice scelta rapida per richiedere più oggetti dello stesso tipo. Potete utilizzare una singola richiesta di GET per restituire più oggetti specifici includendo un elenco di ID separati da virgola.
+Se si desidera visualizzare più oggetti specifici, invece di effettuare una richiesta per oggetto, [!DNL Catalog] fornisce un semplice collegamento per richiedere più oggetti dello stesso tipo. È possibile utilizzare una singola richiesta di GET per restituire più oggetti specifici includendo un elenco di ID separati da virgole.
 
 >[!NOTE]
 >
->Anche quando si richiedono specifici oggetti [!DNL Catalog], è comunque consigliabile utilizzare il parametro di query `properties` per restituire solo le proprietà necessarie.
+>Anche quando si richiedono oggetti [!DNL Catalog] specifici, è comunque consigliabile `properties` restituire solo le proprietà necessarie.
 
 **Formato API**
 
@@ -35,7 +35,7 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY
 
 **Richiesta**
 
-La richiesta seguente include un elenco separato da virgole di ID di set di dati e un elenco separato da virgole di proprietà da restituire per ogni set di dati.
+La richiesta seguente include un elenco di ID di set di dati separati da virgole e un elenco di proprietà separate da virgola da restituire per ogni set di dati.
 
 ```shell
 curl -X GET \
@@ -52,7 +52,7 @@ Una risposta corretta restituisce un elenco dei set di dati specificati, contene
 
 >[!NOTE]
 >
->Se un oggetto restituito non contiene una o più delle proprietà richieste indicate dalla query `properties`, la risposta restituisce solo le proprietà richieste che non include, come mostrato in ***`Sample Dataset 3`*** e ***`Sample Dataset 4`*** di seguito.
+>Se un oggetto restituito non contiene una o più delle proprietà richieste indicate dalla query `properties`, la risposta restituisce solo le proprietà richieste che include, come mostrato in ***`Sample Dataset 3`*** e ***`Sample Dataset 4`*** di seguito.
 
 ```json
 {
