@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;argomenti comuni;mysql;MySQL
 solution: Experience Platform
 title: Creare una connessione sorgente MySQL nell'interfaccia utente
-topic: ' - Panoramica'
+topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente MySQL utilizzando l’interfaccia utente Adobe Experience Platform.
+exl-id: 75e74bde-6199-4970-93d2-f95ec3a59aa5
 translation-type: tm+mt
-source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '404'
+source-wordcount: '402'
 ht-degree: 1%
 
 ---
-
 
 # Creare una connessione sorgente [!DNL MySQL] nell&#39;interfaccia utente
 
