@@ -7,18 +7,14 @@ type: Tutorial
 description: Informazioni su come creare una connessione di origine Microsoft SQL Server utilizzando l'interfaccia utente di Adobe Experience Platform.
 exl-id: aba4e317-1c59-4999-a525-dba15f8d4df9
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '442'
 ht-degree: 1%
 
 ---
 
 # Creare una connessione sorgente [!DNL Microsoft SQL Server] nell&#39;interfaccia utente
-
->[!NOTE]
->
-> Il connettore [!DNL Microsoft SQL Server] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la [Panoramica delle sorgenti](../../../../home.md#terms-and-conditions) .
 
 I connettori sorgente in Adobe Experience Platform consentono di acquisire dati provenienti dall’esterno su base pianificata. Questa esercitazione descrive i passaggi necessari per creare un connettore sorgente [!DNL Microsoft SQL Server] (in seguito denominato &quot;[!DNL SQL Server]&quot;) utilizzando l&#39;interfaccia utente [!DNL Platform].
 
