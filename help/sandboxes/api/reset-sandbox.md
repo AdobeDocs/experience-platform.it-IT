@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;argomenti popolari;reimpostare sandbox
 solution: Experience Platform
 title: Reimpostare una sandbox nell’API
-topic: guida per sviluppatori
+topic-legacy: developer guide
 description: Le sandbox di sviluppo dispongono di una funzione di "reimpostazione di fabbrica" che elimina tutte le risorse non predefinite da una sandbox. Puoi reimpostare una sandbox effettuando una richiesta di PUT che include il nome della sandbox nel percorso della richiesta.
+exl-id: 3a82735d-a043-4fe4-9042-1eb373748d35
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '169'
 ht-degree: 3%
 
 ---
-
 
 # Reimpostare una sandbox nell’API
 
