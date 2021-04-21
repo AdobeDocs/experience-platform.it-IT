@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;argomenti popolari;sandbox;sandbox;test;test
 solution: Experience Platform
 title: Panoramica delle sandbox
-topic: ' - Panoramica'
+topic-legacy: overview
 description: Le sandbox sono partizioni virtuali all’interno di una singola istanza di Experience Platform, che consentono un’integrazione perfetta con il processo di sviluppo delle applicazioni di esperienza digitale.
+exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '754'
 ht-degree: 0%
 
 ---
-
 
 # Panoramica delle sandbox
 
