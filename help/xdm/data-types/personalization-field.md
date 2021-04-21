@@ -1,16 +1,16 @@
 ---
 solution: Experience Platform
 title: Tipo di dati campo preferenza personalizzazione generica
-topic: ' - Panoramica'
+topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM del campo delle preferenze di personalizzazione generica.
+exl-id: 3f6a3c31-19f3-4bad-921e-9ad33c6b9ac9
 translation-type: tm+mt
-source-git-commit: 9ca0978cdf42926303d622a4d536ac48bca32e70
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 2%
+source-wordcount: '465'
+ht-degree: 1%
 
 ---
-
 
 # [!UICONTROL Generic Personalization Preference Field] tipo di dati
 
