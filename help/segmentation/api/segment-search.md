@@ -1,34 +1,34 @@
 ---
-keywords: ' Experience Platform;segmentazione;servizio di segmentazione;risoluzione dei problemi;API;seg;segmento;Segmento;ricerca;segmento;'
-title: Endpoint API di ricerca segmenti
-topic: guide
-description: Nell’API di Adobe Experience Platform Segmentation Service, Segment Search (Ricerca segmenti) viene utilizzato per cercare i campi contenuti in varie origini dati e restituirli in tempo quasi reale. Questa guida fornisce informazioni utili per comprendere meglio la ricerca dei segmenti e include chiamate API di esempio per l'esecuzione di azioni di base tramite l'API.
+keywords: Experience Platform;segmentazione;servizio di segmentazione;risoluzione dei problemi;API;seg;segmento;Segmento;ricerca;ricerca di segmenti;
+title: Endpoint API per la ricerca dei segmenti
+topic-legacy: guide
+description: Nell’API del servizio di segmentazione di Adobe Experience Platform, la ricerca dei segmenti viene utilizzata per cercare i campi contenuti in diverse origini di dati e per restituirli in tempo quasi reale. Questa guida fornisce informazioni utili per comprendere meglio la funzione di ricerca dei segmenti e include chiamate API di esempio per l’esecuzione di azioni di base tramite l’API.
+exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1201'
 ht-degree: 2%
 
 ---
 
+# Endpoint di ricerca per segmenti
 
-# Endpoint di ricerca del segmento
+La ricerca dei segmenti viene utilizzata per cercare i campi contenuti nelle varie origini dati e per restituirli in tempo quasi reale.
 
-La ricerca dei segmenti viene utilizzata per cercare i campi contenuti in varie origini dati e restituirli in tempo quasi reale.
-
-Questa guida fornisce informazioni utili per comprendere meglio la ricerca dei segmenti e include chiamate API di esempio per l&#39;esecuzione di azioni di base tramite l&#39;API.
+Questa guida fornisce informazioni utili per comprendere meglio la funzione di ricerca dei segmenti e include chiamate API di esempio per l’esecuzione di azioni di base tramite l’API.
 
 ## Introduzione
 
-Gli endpoint utilizzati in questa guida fanno parte dell&#39;API [!DNL Adobe Experience Platform Segmentation Service]. Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all&#39;API, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
+Gli endpoint utilizzati in questa guida fanno parte dell’ API [!DNL Adobe Experience Platform Segmentation Service] . Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all&#39;API, comprese le intestazioni richieste e come leggere le chiamate API di esempio.
 
-Oltre alle intestazioni richieste indicate nella sezione introduttiva, tutte le richieste all’endpoint di ricerca dei segmenti richiedono l’intestazione aggiuntiva seguente:
+Oltre alle intestazioni richieste descritte nella sezione guida introduttiva, tutte le richieste all’endpoint di ricerca segmenti richiedono la seguente intestazione aggiuntiva:
 
-- x-ups-search-version: &quot;1.0&quot;
+- x-ups-search-version: &quot;1,0&quot;
 
-### Ricerca tra più spazi dei nomi
+### Ricerca in più spazi dei nomi
 
-Questo endpoint di ricerca può essere utilizzato per eseguire ricerche in vari spazi dei nomi, restituendo un elenco dei risultati del conteggio di ricerca. È possibile utilizzare più parametri, separati da e commerciale (&amp;).
+Questo endpoint di ricerca può essere utilizzato per la ricerca in vari namespace, restituendo un elenco di risultati del conteggio di ricerca. È possibile utilizzare più parametri, separati da e commerciale (&amp;).
 
 **Formato API**
 
@@ -40,7 +40,7 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 | Parametri | Descrizione |
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Obbligatorio)** Dove {SCHEMA} rappresenta il valore della classe dello schema associato agli oggetti di ricerca. Attualmente, è supportato solo `_xdm.context.segmentdefinition`. |
-| `s={SEARCH_TERM}` | *(Facoltativo)* Dove {SEARCH_TERM} rappresenta una query conforme all&#39;implementazione Microsoft della sintassi [ di ricerca di ](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Se non viene specificato alcun termine di ricerca, verranno restituiti tutti i record associati a `schema.name`. Una spiegazione più dettagliata è reperibile nell&#39; [appendice](#appendix) di questo documento. |
+| `s={SEARCH_TERM}` | *(Facoltativo)* Dove {SEARCH_TERM} rappresenta una query conforme all&#39;implementazione di Microsoft della sintassi di ricerca di  [Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Se non viene specificato alcun termine di ricerca, verranno restituiti tutti i record associati a `schema.name`. Una spiegazione più dettagliata è disponibile nell&#39; [appendice](#appendix) del presente documento. |
 
 **Richiesta**
 
@@ -87,7 +87,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con le seguenti informazioni
 
 ### Ricerca di singole entità
 
-Questo endpoint di ricerca può essere utilizzato per recuperare un elenco di tutti gli oggetti con indicizzazione full text all&#39;interno dello spazio nomi specificato. È possibile utilizzare più parametri, separati da e commerciale (&amp;).
+Questo endpoint di ricerca può essere utilizzato per recuperare un elenco di tutti gli oggetti full text indicizzati all’interno dello spazio dei nomi specificato. È possibile utilizzare più parametri, separati da e commerciale (&amp;).
 
 **Formato API**
 
@@ -99,12 +99,12 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Parametri | Descrizione |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **(Obbligatorio)** Dove {SCHEMA} contiene il valore della classe dello schema associato agli oggetti di ricerca. Attualmente, è supportato solo `_xdm.context.segmentdefinition`. |
-| `namespace={NAMESPACE}` | **(Obbligatorio)** Dove {NAMESPACE} contiene lo spazio dei nomi in cui eseguire la ricerca. |
-| `s={SEARCH_TERM}` | *(Facoltativo)* Dove {SEARCH_TERM} contiene una query conforme all&#39;implementazione Microsoft della sintassi [ di ricerca di ](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Se non viene specificato alcun termine di ricerca, verranno restituiti tutti i record associati a `schema.name`. Una spiegazione più dettagliata è reperibile nell&#39; [appendice](#appendix) di questo documento. |
+| `schema.name={SCHEMA}` | **(Obbligatorio)** Se {SCHEMA} contiene il valore della classe dello schema associato agli oggetti di ricerca. Attualmente, è supportato solo `_xdm.context.segmentdefinition`. |
+| `namespace={NAMESPACE}` | **(Obbligatorio)** Dove {NAMESPACE} contiene lo spazio dei nomi in cui si desidera eseguire la ricerca. |
+| `s={SEARCH_TERM}` | *(Facoltativo)* Dove {SEARCH_TERM} contiene una query conforme all&#39;implementazione di Microsoft della sintassi di ricerca di  [Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Se non viene specificato alcun termine di ricerca, verranno restituiti tutti i record associati a `schema.name`. Una spiegazione più dettagliata è disponibile nell&#39; [appendice](#appendix) del presente documento. |
 | `entityId={ENTITY_ID}` | *(Facoltativo)* Limita la ricerca all&#39;interno della cartella designata, specificata con {ENTITY_ID}. |
 | `limit={LIMIT}` | *(Facoltativo)* Dove {LIMIT} rappresenta il numero di risultati di ricerca da restituire. Il valore predefinito è 50. |
-| `page={PAGE}` | *(Facoltativo)* Dove {PAGE} rappresenta il numero di pagina utilizzato per impaginare i risultati della query ricercata. Il numero di pagina inizia da **0**. |
+| `page={PAGE}` | *(Facoltativo)* Dove {PAGE} rappresenta il numero di pagina utilizzato per impaginare i risultati della query cercata. Il numero della pagina inizia da **0**. |
 
 
 **Richiesta**
@@ -170,8 +170,8 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Parametri | Descrizione |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **(Obbligatorio)** Dove {SCHEMA} contiene il valore della classe dello schema associato agli oggetti di ricerca. Attualmente, è supportato solo `_xdm.context.segmentdefinition`. |
-| `namespace={NAMESPACE}` | **(Obbligatorio)** Dove {NAMESPACE} contiene lo spazio dei nomi in cui eseguire la ricerca. |
+| `schema.name={SCHEMA}` | **(Obbligatorio)** Se {SCHEMA} contiene il valore della classe dello schema associato agli oggetti di ricerca. Attualmente, è supportato solo `_xdm.context.segmentdefinition`. |
+| `namespace={NAMESPACE}` | **(Obbligatorio)** Dove {NAMESPACE} contiene lo spazio dei nomi in cui si desidera eseguire la ricerca. |
 | `entityId={ENTITY_ID}` | **(Obbligatorio)** L&#39;ID dell&#39;oggetto di ricerca di cui si desidera ottenere le informazioni strutturali, specificato con {ENTITY_ID}. |
 
 **Richiesta**
@@ -221,45 +221,45 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni strutturali
 
 ## Passaggi successivi
 
-Dopo aver letto questa guida è ora possibile comprendere meglio il funzionamento della ricerca segmenti.
+Dopo aver letto questa guida hai ora una migliore comprensione del funzionamento della ricerca dei segmenti.
 
 ## Appendice {#appendix}
 
-Le sezioni seguenti forniscono informazioni aggiuntive sul funzionamento dei termini di ricerca. Le query di ricerca vengono scritte nel modo seguente: `s={FieldName}:{SearchExpression}`. Per cercare, ad esempio, un segmento denominato AAM o [!DNL Platform], si utilizza la seguente query di ricerca: `s=segmentName:AAM%20OR%20Platform`.
+Le sezioni seguenti forniscono informazioni aggiuntive sul funzionamento dei termini di ricerca. Le query di ricerca vengono scritte nel modo seguente: `s={FieldName}:{SearchExpression}`. Ad esempio, per cercare un segmento denominato AAM o [!DNL Platform], utilizza la seguente query di ricerca: `s=segmentName:AAM%20OR%20Platform`.
 
-> !![NOTE] Per le procedure ottimali, l&#39;espressione di ricerca deve essere codificata in HTML, come nell&#39;esempio riportato sopra.
+> !![NOTE] Per le best practice, l’espressione di ricerca deve essere codificata in HTML, come nell’esempio precedente.
 
 ### Campi di ricerca {#search-fields}
 
-Nella tabella seguente sono elencati i campi che è possibile cercare all’interno del parametro della query di ricerca.
+Nella tabella seguente sono elencati i campi che è possibile cercare all’interno del parametro di query di ricerca.
 
 | Nome campo | Descrizione |
 | ---------- | ----------- |
-| folderId | Cartella o cartelle con l’ID cartella della ricerca specificata. |
-| folderLocation | Il percorso o i percorsi in cui si trova la cartella della ricerca specificata. |
-| parentFolderId | Segmento o cartella con l’ID cartella principale della ricerca specificata. |
+| folderId | Cartella o cartelle con l&#39;ID cartella della ricerca specificata. |
+| folderLocation | La posizione o le posizioni in cui si trova la cartella della ricerca specificata. |
+| parentFolderId | Il segmento o la cartella con l’ID della cartella principale della ricerca specificata. |
 | segmentId | Il segmento corrisponde all’ID del segmento della ricerca specificata. |
 | segmentName | Il segmento corrisponde al nome del segmento della ricerca specificata. |
 | segmentDescription | Il segmento corrisponde alla descrizione del segmento della ricerca specificata. |
 
 ### Espressione di ricerca {#search-expression}
 
-Nella tabella seguente sono elencate le specifiche del funzionamento delle query di ricerca quando si utilizza l&#39;API di ricerca segmenti.
+Nella tabella seguente sono elencate le specifiche del funzionamento delle query di ricerca quando si utilizza l’API di ricerca segmenti.
 
->!![NOTE] Gli esempi seguenti sono mostrati in un formato non codificato HTML per una maggiore chiarezza. Per le procedure ottimali, l&#39;HTML codifica l&#39;espressione di ricerca.
+>!![NOTE] Gli esempi seguenti sono visualizzati in un formato non HTML codificato per una maggiore chiarezza. Per le best practice, l’HTML codifica l’espressione di ricerca.
 
-| Esempio di espressione di ricerca | Descrizione |
+| Espressione di ricerca di esempio | Descrizione |
 | ------------------------- | ----------- |
-| foo | Cerca qualsiasi parola. Questo restituisce dei risultati se la parola &quot;foo&quot; è presente in uno qualsiasi dei campi ricercabili. |
-| foo AND bar | Una ricerca booleana. Questo restituirà risultati se **sia** le parole &quot;foo&quot; che &quot;bar&quot; si trovano in uno qualsiasi dei campi ricercabili. |
-| barra dei menu o dei menu | Una ricerca booleana. Questo restituirà dei risultati se **o** la parola &quot;foo&quot; o la parola &quot;bar&quot; si trovano in uno qualsiasi dei campi ricercabili. |
-| barra NON | Una ricerca booleana. Questo restituisce dei risultati se la parola &quot;foo&quot; è trovata ma la parola &quot;bar&quot; non è trovata in nessuno dei campi ricercabili. |
-| name: foo AND bar | Una ricerca booleana. Questo restituirà risultati se **sia** le parole &quot;foo&quot; che &quot;bar&quot; sono presenti nel campo &quot;name&quot;. |
-| run* | Ricerca con caratteri jolly. L&#39;utilizzo di un asterisco (*) corrisponde a 0 o più caratteri, il che significa che restituirà risultati se il contenuto di uno qualsiasi dei campi ricercabili contiene una parola che inizia con &quot;run&quot;. Ad esempio, questo restituisce i risultati se vengono visualizzate le parole &quot;run&quot;, &quot;run&quot;, &quot;runner&quot; o &quot;runt&quot;. |
-| cam? | Ricerca con caratteri jolly. Utilizzo di un punto interrogativo (?) rileva solo un carattere, il che significa che restituirà risultati se il contenuto di uno qualsiasi dei campi ricercabili inizia con &quot;cam&quot; e una lettera aggiuntiva. Ad esempio, questo restituisce i risultati se vengono visualizzate le parole &quot;campeggio&quot; o &quot;cams&quot;, ma non restituisce i risultati se vengono visualizzate le parole &quot;camera&quot; o &quot;fuoco&quot;. |
-| &quot;ombrello blu&quot; | Una ricerca di frasi. Questo restituisce dei risultati se il contenuto di uno qualsiasi dei campi ricercabili contiene la frase completa &quot;ombrello blu&quot;. |
-| blue\~ | Una ricerca sfocata. Facoltativamente, potete inserire un numero compreso tra 0 e 2 dopo la tilde (~) per specificare la distanza di modifica. Ad esempio, &quot;blue\~1&quot; restituisce &quot;blue&quot;, &quot;blues&quot; o &quot;colla&quot;. La ricerca Fuzzy può **solo** essere applicata ai termini, non alle frasi. Tuttavia, è possibile aggiungere piastrelle alla fine di ogni parola di una frase. Così, ad esempio, &quot;campeggio\~ in\~ la\~ estate\~&quot; avrebbe giocato con &quot;campeggio in estate&quot;. |
-| &quot;hotel Airport&quot;\~5 | Una ricerca di prossimità. Questo tipo di ricerca viene utilizzato per trovare i termini che si trovano l&#39;uno accanto all&#39;altro in un documento. Ad esempio, la frase `"hotel airport"~5` troverà i termini &quot;hotel&quot; e &quot;aeroporto&quot; entro 5 parole l&#39;una dall&#39;altra in un documento. |
-| `/a[0-9]+b$/` | Una ricerca con espressione regolare. Questo tipo di ricerca trova una corrispondenza basata sul contenuto tra le barre &quot;/&quot;, come documentato nella classe RegExp. Ad esempio, per trovare documenti contenenti &quot;motel&quot; o &quot;hotel&quot;, specificare `/[mh]otel/`. Le ricerche di espressioni regolari vengono confrontate con singole parole. |
+| foo | Cerca qualsiasi parola. Se la parola &quot;foo&quot; si trova in uno qualsiasi dei campi ricercabili, verranno restituiti i risultati. |
+| bar e piedi | Una ricerca booleana. Questo restituisce i risultati se **sia** le parole &quot;foo&quot; che &quot;bar&quot; si trovano in uno qualsiasi dei campi ricercabili. |
+| barra dei piedi O | Una ricerca booleana. Questo restituirà risultati se **o** la parola &quot;foo&quot; o la parola &quot;bar&quot; si trovano in uno qualsiasi dei campi ricercabili. |
+| barra NON | Una ricerca booleana. Questo restituisce i risultati se la parola &quot;foo&quot; è trovata ma la parola &quot;bar&quot; non è trovata in nessuno dei campi ricercabili. |
+| nome: bar e piedi | Una ricerca booleana. Questo restituisce i risultati se **entrambe** le parole &quot;foo&quot; e &quot;bar&quot; si trovano nel campo &quot;name&quot;. |
+| run* | Ricerca con carattere jolly. L’utilizzo di un asterisco (*) corrisponde a 0 o più caratteri, ovvero restituisce risultati se il contenuto di uno dei campi ricercabili contiene una parola che inizia con &quot;run&quot;. Ad esempio, questo restituirà i risultati se compaiono le parole &quot;run&quot;, &quot;running&quot;, &quot;runner&quot; o &quot;runt&quot;. |
+| cam? | Ricerca con carattere jolly. Utilizzando un punto interrogativo (?) rileva esattamente un solo carattere, il che significa che restituirà risultati se il contenuto di uno qualsiasi dei campi ricercabili inizia con &quot;cam&quot; e una lettera aggiuntiva. Ad esempio, questo restituisce i risultati se compaiono le parole &quot;camp&quot; o &quot;cams&quot;, ma non restituisce i risultati se compaiono le parole &quot;camera&quot; o &quot;campfire&quot;. |
+| &quot;ombrello blu&quot; | Ricerca di frasi. Questo restituisce i risultati se il contenuto di uno qualsiasi dei campi ricercabili contiene la frase completa &quot;ombrello blu&quot;. |
+| blu\~ | Una ricerca sfocata. Facoltativamente, è possibile inserire un numero compreso tra 0 e 2 dopo la tilde (~) per specificare la distanza di modifica. Ad esempio, &quot;blue\~1&quot; restituirà &quot;blue&quot;, &quot;blues&quot; o &quot;colla&quot;. La ricerca fuzzy può **solo** essere applicata a termini e non a frasi. Tuttavia, è possibile aggiungere riquadri alla fine di ogni parola in una frase. Così, per esempio, &quot;campeggio\~ in\~ the\~ estate\~&quot; avrebbe una partita su &quot;campeggio in estate&quot;. |
+| &quot;hotel airport&quot;\~5 | Una ricerca di prossimità. Questo tipo di ricerca viene utilizzato per trovare termini vicini tra loro in un documento. Ad esempio, la frase `"hotel airport"~5` troverà i termini &quot;hotel&quot; e &quot;aeroporto&quot; entro 5 parole l&#39;uno dall&#39;altro in un documento. |
+| `/a[0-9]+b$/` | Una ricerca con espressione regolare. Questo tipo di ricerca trova una corrispondenza basata sul contenuto tra barre &quot;/&quot;, come documentato nella classe RegExp. Ad esempio, per trovare i documenti contenenti &quot;motel&quot; o &quot;hotel&quot;, specificare `/[mh]otel/`. Le ricerche con espressione regolare vengono confrontate con parole singole. |
 
-Per una documentazione più dettagliata sulla sintassi della query, consultare la [documentazione relativa alla sintassi della query Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax).
+Per una documentazione più dettagliata sulla sintassi della query, leggi la [documentazione relativa alla sintassi della query Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax).
