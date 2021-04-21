@@ -1,121 +1,121 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;schema di registro;schema di registro;compatibilità;compatibilità;modalità compatibilità;modalità compatibilità;tipo di campo;tipi di campo;'
+keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;modello dati;registro schema;registro schema;compatibilità;modalità compatibilità;modalità compatibilità;tipo di campo;tipi di campo;
 solution: Experience Platform
-title: Appendice API del Registro di sistema
+title: Appendice della guida API del registro dello schema
 description: Questo documento fornisce informazioni supplementari relative all'utilizzo dell'API del Registro di sistema dello schema.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
 translation-type: tm+mt
-source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 0%
 
 ---
 
+# Appendice della guida API del registro dello schema
 
-# Appendice della guida API del Registro di sistema
-
-Questo documento fornisce informazioni supplementari relative all&#39;utilizzo dell&#39;API [!DNL Schema Registry].
+Questo documento fornisce informazioni supplementari relative all’utilizzo dell’API [!DNL Schema Registry].
 
 ## Utilizzo dei parametri di query {#query}
 
-La [!DNL Schema Registry] supporta l&#39;utilizzo di parametri di query per visualizzare la pagina e filtrare i risultati durante l&#39;elencazione delle risorse.
+Il [!DNL Schema Registry] supporta l’utilizzo di parametri di query per la pagina e filtrare i risultati durante l’elenco delle risorse.
 
 >[!NOTE]
 >
->Quando si combinano più parametri di query, questi devono essere separati da e-mail (`&`).
+>Quando si combinano più parametri di query, questi devono essere separati da e commerciali (`&`).
 
-### Pagine {#paging}
+### Paging {#paging}
 
 I parametri di query più comuni per il paging includono:
 
 | Parametro | Descrizione |
 | --- | --- |
-| `start` | Specificate dove devono iniziare i risultati elencati. Questo valore può essere ottenuto dall&#39;attributo `_page.next` di una risposta a un elenco e utilizzato per accedere alla pagina successiva dei risultati. Se il valore `_page.next` è null, non è disponibile alcuna pagina aggiuntiva. |
-| `limit` | Limita il numero di risorse restituite. Esempio: `limit=5` restituirà un elenco di cinque risorse. |
-| `orderby` | Ordinare i risultati in base a una proprietà specifica. Esempio: `orderby=title` ordinerà i risultati in ordine crescente (A-Z) in base al titolo. Se si aggiunge `-` prima del valore del parametro (`orderby=-title`), gli elementi vengono ordinati in base al titolo in ordine decrescente (Z-A). |
+| `start` | Specifica da dove devono iniziare i risultati elencati. Questo valore può essere ottenuto dall&#39;attributo `_page.next` di una risposta a elenco e utilizzato per accedere alla pagina successiva di risultati. Se il valore `_page.next` è null, non è disponibile alcuna pagina aggiuntiva. |
+| `limit` | Limita il numero di risorse restituite. Esempio: `limit=5` restituisce un elenco di cinque risorse. |
+| `orderby` | Ordinare i risultati per una proprietà specifica. Esempio: `orderby=title` ordinerà i risultati per titolo in ordine crescente (A-Z). Se si aggiunge un `-` prima del valore del parametro (`orderby=-title`), gli elementi vengono ordinati per titolo in ordine decrescente (Z-A). |
 
 ### Filtro {#filtering}
 
-Potete filtrare i risultati utilizzando il parametro `property`, utilizzato per applicare un operatore specifico a una determinata proprietà JSON all&#39;interno delle risorse recuperate. Gli operatori supportati includono:
+Puoi filtrare i risultati utilizzando il parametro `property` , utilizzato per applicare un operatore specifico a una determinata proprietà JSON all’interno delle risorse recuperate. Gli operatori supportati includono:
 
 | Operatore | Descrizione | Esempio |
 | --- | --- | --- |
 | `==` | Filtra in base al fatto che la proprietà sia uguale al valore fornito. | `property=title==test` |
 | `!=` | Filtra in base al fatto che la proprietà non sia uguale al valore fornito. | `property=title!=test` |
-| `<` | Filtra in base al fatto che la proprietà sia minore del valore fornito. | `property=version<5` |
-| `>` | Filtra in base al fatto che la proprietà sia maggiore del valore fornito. | `property=version>5` |
-| `<=` | Filtra se la proprietà è minore o uguale al valore specificato. | `property=version<=5` |
-| `>=` | Filtra in base al fatto che la proprietà sia maggiore o uguale al valore fornito. | `property=version>=5` |
-| `~` | Filtra in base al fatto che la proprietà corrisponda o meno a un&#39;espressione regolare specificata. | `property=title~test$` |
-| (Nessuna) | Se si specifica solo il nome della proprietà, vengono restituite solo le voci in cui esiste la proprietà. | `property=title` |
+| `<` | Filtra in base al fatto che la proprietà sia minore del valore specificato. | `property=version<5` |
+| `>` | Filtra per determinare se la proprietà è maggiore del valore specificato. | `property=version>5` |
+| `<=` | Filtra per specificare se la proprietà è minore o uguale al valore specificato. | `property=version<=5` |
+| `>=` | Filtra per specificare se la proprietà è maggiore o uguale al valore specificato. | `property=version>=5` |
+| `~` | Filtra per stabilire se la proprietà corrisponde a un&#39;espressione regolare specificata. | `property=title~test$` |
+| (Nessuna) | Se si imposta solo il nome della proprietà, vengono restituite solo le voci in cui esiste la proprietà. | `property=title` |
 
 >[!TIP]
 >
->Potete utilizzare il parametro `property` per filtrare i mixin in base alla classe compatibile. Ad esempio, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` restituisce solo i mixin compatibili con la classe [!DNL XDM Individual Profile].
+>Puoi usare il parametro `property` per filtrare i mixin in base alla classe compatibile. Ad esempio, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` restituisce solo i mixin compatibili con la classe [!DNL XDM Individual Profile] .
 
-## Modalità compatibilità
+## Modalità di compatibilità
 
-[!DNL Experience Data Model] (XDM) è una specifica documentata pubblicamente, spinta da  Adobe per migliorare l&#39;interoperabilità, l&#39;espressività e il potere delle esperienze digitali.  Adobe mantiene il codice sorgente e le definizioni XDM formali in un progetto [open source su GitHub](https://github.com/adobe/xdm/). Queste definizioni sono scritte in Notazione standard XDM, utilizzando la Notazione oggetto JSON-LD (JavaScript Object Notation for Linked Data) e lo schema JSON come grammatica per la definizione degli schemi XDM.
+[!DNL Experience Data Model] (XDM) è una specifica documentata pubblicamente, spinta dall&#39;Adobe per migliorare l&#39;interoperabilità, l&#39;espressività e il potere delle esperienze digitali. Adobe mantiene il codice sorgente e le definizioni XDM formali in un progetto [open source su GitHub](https://github.com/adobe/xdm/). Queste definizioni sono scritte in Notazione standard XDM e utilizzano JSON-LD (JavaScript Object Notation for Linked Data) e lo schema JSON come grammatica per la definizione degli schemi XDM.
 
-Quando si esaminano le definizioni XDM formali nell&#39;archivio pubblico, è possibile notare che lo standard XDM è diverso da quello visualizzato in Adobe Experience Platform. Ciò che si vede in [!DNL Experience Platform] è denominata Modalità compatibilità e fornisce una semplice mappatura tra XDM standard e il modo in cui viene utilizzato all&#39;interno di [!DNL Platform].
+Quando osservi le definizioni XDM formali nell&#39;archivio pubblico, puoi notare che XDM standard è diverso da quello visualizzato in Adobe Experience Platform. Ciò che visualizzi in [!DNL Experience Platform] si chiama Modalità di compatibilità e fornisce una semplice mappatura tra XDM standard e il modo in cui viene utilizzato in [!DNL Platform].
 
 ### Funzionamento della modalità di compatibilità
 
-La modalità di compatibilità consente al modello XDM JSON-LD di funzionare con l&#39;infrastruttura dati esistente modificando i valori all&#39;interno di XDM standard mantenendo la stessa semantica. Utilizza una struttura JSON nidificata, mostrando gli schemi in un formato simile a un albero.
+La modalità di compatibilità consente al modello XDM JSON-LD di funzionare con l’infrastruttura di dati esistente modificando i valori all’interno di XDM standard mantenendo la stessa semantica. Utilizza una struttura JSON nidificata, visualizzando gli schemi in un formato simile a una struttura.
 
-La differenza principale che noterete tra XDM standard e Modalità compatibilità è la rimozione del prefisso &quot;xdm:&quot; per i nomi dei campi.
+La differenza principale che noterai tra XDM standard e Modalità di compatibilità è la rimozione del prefisso &quot;xdm:&quot; per i nomi di campo.
 
 Di seguito è riportato un confronto affiancato che mostra i campi relativi al compleanno (con gli attributi &quot;description&quot; rimossi) sia in XDM standard che in Modalità compatibilità. I campi Modalità compatibilità includono un riferimento al campo XDM e al relativo tipo di dati negli attributi &quot;meta:xdmField&quot; e &quot;meta:xdmType&quot;.
 
 <table>
   <th>XDM standard</th>
-  <th>Modalità compatibilità</th>
+  <th>Modalità di compatibilità</th>
   <tr>
   <td>
   <pre class="JSON language-JSON hljs">
         {
-          "xdm:bornDate": {
+          "xdm:nascitaDate": {
               "title": "Data di nascita",
               "type": "string",
               "format": "date",
           },
-          "xdm:bornDayAndMonth": {
+          "xdm:nascitaDayAndMonth": {
               "title": "Data di nascita",
               "type": "string",
               "pattern": "[0-1][0-9]-[0-9][0-9]",
           },
-          "xdm:bornYear": {
+          "xdm:nascitaYear": {
               "title": "Anno di nascita",
               "type": "integer",
-              "minimo": 1,
-              "massima": 32767
+              "minimo": 1
+              "massimo": 32767
         }
   </pre>
   </td>
   <td>
   <pre class="JSON language-JSON hljs">
         {
-          "bornDate": {
+          "data di nascita": {
               "title": "Data di nascita",
               "type": "string",
               "format": "date",
-              "meta:xdmField": "xdm:bornDate",
+              "meta:xdmField": "xdm:nascitaDate",
               "meta:xdmType": "date"
           },
-          "bornDayAndMonth": {
+          "nascitaDayAndMonth": {
               "title": "Data di nascita",
               "type": "string",
               "pattern": "[0-1][0-9]-[0-9][0-9]",
-              "meta:xdmField": "xdm:bornDayAndMonth",
+              "meta:xdmField": "xdm:nascitaDayAndMonth",
               "meta:xdmType": "string"
           },
-          "bornYear": {
+          "nataleYear": {
               "title": "Anno di nascita",
               "type": "integer",
-              "minimo": 1,
-              "massima": 32767,
-              "meta:xdmField": "xdm:bornYear",
+              "minimo": 1
+              "massimo": 32767,
+              "meta:xdmField": "xdm:nascitaYear",
               "meta:xdmType": "short"
         }
       </pre>
@@ -125,10 +125,10 @@ Di seguito è riportato un confronto affiancato che mostra i campi relativi al c
 
 ### Perché è necessaria la modalità di compatibilità?
 
-Adobe Experience Platform è progettato per lavorare con più soluzioni e servizi, ciascuno con le proprie problematiche e limitazioni tecniche (ad esempio, come alcune tecnologie gestiscono caratteri speciali). Per superare questi limiti, è stata sviluppata la Modalità di compatibilità.
+Adobe Experience Platform è progettato per lavorare con più soluzioni e servizi, ognuno con le proprie sfide e limitazioni tecniche (ad esempio, come alcune tecnologie gestiscono caratteri speciali). Per superare queste limitazioni, è stata sviluppata la Modalità di compatibilità.
 
-La maggior parte dei servizi [!DNL Experience Platform], inclusi [!DNL Catalog], [!DNL Data Lake] e [!DNL Real-time Customer Profile] utilizzano [!DNL Compatibility Mode] al posto di XDM standard. Anche l&#39;API [!DNL Schema Registry] utilizza [!DNL Compatibility Mode], e gli esempi in questo documento vengono visualizzati utilizzando [!DNL Compatibility Mode].
+La maggior parte dei servizi [!DNL Experience Platform], inclusi [!DNL Catalog], [!DNL Data Lake] e [!DNL Real-time Customer Profile] utilizza [!DNL Compatibility Mode] al posto di XDM standard. L’ API [!DNL Schema Registry] utilizza anche [!DNL Compatibility Mode] e gli esempi contenuti in questo documento vengono visualizzati utilizzando [!DNL Compatibility Mode].
 
-Vale la pena sapere che una mappatura viene eseguita tra XDM standard e il modo in cui viene eseguita in [!DNL Experience Platform], ma non deve influenzare l&#39;utilizzo dei servizi [!DNL Platform].
+Vale la pena sapere che una mappatura avviene tra XDM standard e il modo in cui viene operazionale in [!DNL Experience Platform], ma non dovrebbe influenzare l&#39;utilizzo dei servizi [!DNL Platform].
 
-Il progetto open source è disponibile, ma quando si tratta di interagire con le risorse tramite [!DNL Schema Registry], gli esempi di API in questo documento forniscono le best practice che dovreste conoscere e seguire.
+Il progetto open source è a tua disposizione, ma quando si tratta di interagire con le risorse tramite [!DNL Schema Registry], gli esempi di API in questo documento forniscono le best practice da conoscere e seguire.
