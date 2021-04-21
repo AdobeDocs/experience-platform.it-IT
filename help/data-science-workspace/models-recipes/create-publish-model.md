@@ -2,17 +2,17 @@
 keywords: Experience Platform;modello di apprendimento automatico;Data Science Workspace;argomenti comuni;creare e pubblicare un modello
 solution: Experience Platform
 title: Creare e pubblicare un modello di apprendimento automatico
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace fornisce i mezzi per raggiungere il tuo obiettivo utilizzando la composizione predefinita del Recommendations prodotto. Segui questa esercitazione per scoprire come accedere e comprendere i dati retail, creare e ottimizzare un modello di apprendimento automatico e generare informazioni in Data Science Workspace.
+exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
 translation-type: tm+mt
-source-git-commit: b5d42c6a38a50d39e1ca46e18623dde59c33833b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1531'
 ht-degree: 0%
 
 ---
-
 
 # Creare e pubblicare un modello di apprendimento automatico
 
