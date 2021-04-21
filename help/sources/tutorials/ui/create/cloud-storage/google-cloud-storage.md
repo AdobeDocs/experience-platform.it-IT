@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;argomenti popolari;Google Cloud Storage;Google cloud storage;GCS;gcs
 solution: Experience Platform
 title: Creare una connessione Google Cloud Storage Source nell'interfaccia utente
-topic: ' - Panoramica'
+topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente di archiviazione Google Cloud utilizzando l’interfaccia utente di Adobe Experience Platform.
+exl-id: 3258ccd7-757c-4c4a-b7bb-0e8c9de3b50a
 translation-type: tm+mt
-source-git-commit: f6a63ca1e21b3c3f6a55574f31fdf04038b7e5c4
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '575'
 ht-degree: 1%
 
 ---
-
 
 # Creare una connessione sorgente [!DNL Google Cloud Storage] nell&#39;interfaccia utente
 
