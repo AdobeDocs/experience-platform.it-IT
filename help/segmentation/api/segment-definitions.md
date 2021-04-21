@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Servizio di segmentazione;definizione del segmento;definizioni del segmento;API;API;
 solution: Experience Platform
 title: Endpoint API per le definizioni dei segmenti
-topic: guida per sviluppatori
+topic-legacy: developer guide
 description: L’endpoint per le definizioni dei segmenti nell’API del servizio di segmentazione di Adobe Experience Platform consente di gestire in modo programmatico le definizioni dei segmenti per la tua organizzazione.
+exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
 translation-type: tm+mt
-source-git-commit: 4e4672f4101f92f035985d187512d917890aab6b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1172'
 ht-degree: 3%
 
 ---
-
 
 # Endpoint per le definizioni dei segmenti
 
