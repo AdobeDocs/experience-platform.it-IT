@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;argomenti popolari;opt-out;segmentazione;servizio di segmentazione;servizio di segmentazione;onorare le rinunce;opt-out;opt-out;opt-out; opt-out;
 solution: Experience Platform
 title: Rispetto delle richieste di rinuncia nei segmenti
-topic: ' - Panoramica'
-description: 'Adobe Experience Platform consente ai clienti di inviare richieste di rinuncia relative all’utilizzo e all’archiviazione dei propri dati all’interno di Profilo cliente in tempo reale]. Queste richieste di rinuncia fanno parte del California Consumer Privacy Act (CCPA), che conferisce ai residenti della California il diritto di accedere e cancellare i loro dati personali e di sapere se i loro dati personali vengono venduti o divulgati (e a chi). '
+topic-legacy: overview
+description: Adobe Experience Platform consente ai clienti di inviare richieste di rinuncia relative all’utilizzo e all’archiviazione dei propri dati all’interno di Profilo cliente in tempo reale]. Queste richieste di rinuncia fanno parte del California Consumer Privacy Act (CCPA), che conferisce ai residenti della California il diritto di accedere e cancellare i loro dati personali e di sapere se i loro dati personali vengono venduti o divulgati (e a chi).
+exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: '1013'
 ht-degree: 0%
 
 ---
-
 
 # Rispetto delle richieste di rinuncia nei segmenti
 
