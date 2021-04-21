@@ -3,13 +3,13 @@ keywords: Experience Platform;home;argomenti popolari;aggiornare i flussi di dat
 description: Questa esercitazione descrive i passaggi per aggiornare una pianificazione del flusso di dati, inclusa la frequenza di acquisizione e la frequenza di intervallo, utilizzando l’area di lavoro Origini.
 solution: Experience Platform
 title: Aggiornare un flusso di dati di connessione sorgente nell’interfaccia utente
-topic: ' - Panoramica'
+topic-legacy: overview
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 translation-type: tm+mt
-source-git-commit: 3a36996b43760bc9161b8d4750a1121e9ada8d30
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '717'
 ht-degree: 1%
 
 ---
