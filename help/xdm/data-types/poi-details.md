@@ -1,17 +1,17 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;poi;dettagli;punto di interesse;punto di interesse dettagli;tipo di dati;tipo di dati;tipo di dati;'
+keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;schemi;poi;dettagli;punto di interesse;dettagli del punto di interesse;tipo di dati;tipo di dati;tipo di dati;
 solution: Experience Platform
-title: Tipo di dati Dettagli punto di interesse
-topic: overview
-description: Questo documento fornisce una panoramica del tipo di dati XDM Dettagli punto di interesse.
+title: Tipo di dati dei dettagli del punto di interesse
+topic-legacy: overview
+description: Questo documento fornisce una panoramica del tipo di dati XDM dei dettagli del punto di interesse.
+exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 4%
 
 ---
-
 
 # [!UICONTROL Point of interest details] tipo di dati
 
@@ -21,16 +21,16 @@ ht-degree: 4%
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `beaconInteractionDetails` | [[!UICONTROL Beacon]](./beacon.md) | Descrive i dettagli beacon attivi per l’interazione POI. |
+| `beaconInteractionDetails` | [[!UICONTROL Beacon]](./beacon.md) | Descrive i dettagli del beacon attivi per l’interazione POI. |
 | `geoInteractionDetails` | [[!UICONTROL Geo interaction details]](./geo-interaction-details.md) | Descrive i dettagli geografici attivi per l’interazione POI. |
-| `category` | Stringa | Categoria generale assegnata dall’amministratore delle definizioni dei punti di interesse (POI) per l’organizzazione dei punti di interesse. |
+| `category` | Stringa | Una categoria generale assegnata dall’amministratore delle definizioni dei punti di interesse per l’organizzazione dei punti di interesse. |
 | `distanceToPOICenter` | Doppio | La distanza stimata dal centro POI in metri. |
 | `locatingType` | Stringa | Meccanismo utilizzato per determinare la posizione. I valori accettati includono: <ul><li>`beacon`</li><li>`gps`</li><li>`ip`</li><li>`ip+wifi`</li><li>`wifi-triangulation`</li></ul> |
-| `name` | Stringa | Un nome dato al POI. |
+| `name` | Stringa | Nome assegnato al POI. |
 | `poiID` | Stringa | Identificatore univoco del POI. |
-| `type` | Stringa | Il tipo generale di POI che utilizza uno schema di digitazione selezionato dall’amministratore delle definizioni dei POI. |
+| `type` | Stringa | Il tipo generale del POI utilizzando uno schema di digitazione selezionato dall&#39;amministratore delle definizioni dei POI. |
 
-Per ulteriori dettagli sul mixin, fare riferimento al repository XDM pubblico:
+Per ulteriori dettagli sul mixin, consulta l’archivio XDM pubblico:
 
-* [Esempio compilato](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.example.1.json)
+* [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.example.1.json)
 * [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json)
