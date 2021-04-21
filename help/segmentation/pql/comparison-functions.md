@@ -1,21 +1,21 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Segmentation Service;pql;PQL;Profile Query Language;funzioni di confronto;confronto;'
+keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Servizio di segmentazione;pql;PQL;Lingua query profilo;funzioni di confronto;confronto;
 solution: Experience Platform
 title: Funzioni di confronto PQL
-topic: developer guide
-description: Le funzioni di confronto sono utilizzate per confrontare espressioni e valori diversi, restituendo "true" o "false" di conseguenza.
+topic-legacy: developer guide
+description: Le funzioni di confronto vengono utilizzate per confrontare espressioni e valori diversi e restituiscono di conseguenza "true" o "false".
+exl-id: 15f106c7-b88b-4042-b925-703e2a309573
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 9%
 
 ---
 
-
 # Funzioni di confronto
 
-Le funzioni di confronto sono utilizzate per confrontare espressioni e valori diversi, restituendo `true` o `false` di conseguenza. Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
+Le funzioni di confronto vengono utilizzate per confrontare espressioni e valori diversi e restituiscono `true` o `false` di conseguenza. Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
 
 ## È uguale a
 
@@ -29,7 +29,7 @@ La funzione `=` (equals) controlla se un valore o un&#39;espressione è uguale a
 
 **Esempio**
 
-La seguente query PQL verifica se il paese dell&#39;indirizzo di origine è in Canada.
+La seguente query PQL controlla se il paese dell&#39;indirizzo di origine è in Canada.
 
 ```sql
 homeAddress.countryISO = "CA"
@@ -37,7 +37,7 @@ homeAddress.countryISO = "CA"
 
 ## Non uguale
 
-La funzione `!=` (non uguale) controlla se un valore o un&#39;espressione è **not** uguale a un altro valore o espressione.
+La funzione `!=` (non uguale) controlla se un valore o un&#39;espressione è **non** uguale a un altro valore o espressione.
 
 **Formato**
 
@@ -47,7 +47,7 @@ La funzione `!=` (non uguale) controlla se un valore o un&#39;espressione è **n
 
 **Esempio**
 
-La seguente query PQL verifica se il paese dell&#39;indirizzo di origine non è in Canada.
+La seguente query PQL controlla se il paese dell&#39;indirizzo di origine non è in Canada.
 
 ```sql
 homeAddress.countryISO != "CA"
@@ -55,7 +55,7 @@ homeAddress.countryISO != "CA"
 
 ## Maggiore di
 
-La funzione `>` (maggiore di) viene utilizzata per verificare se il primo valore è maggiore del secondo.
+La funzione `>` (maggiore di) viene utilizzata per verificare se il primo valore è maggiore del secondo valore.
 
 **Formato**
 
@@ -91,7 +91,7 @@ person.birthMonth >= 3
 
 ## Minore di
 
-La funzione di confronto `<` (minore di) viene utilizzata per verificare se il primo valore è minore del secondo.
+La funzione di confronto `<` (minore di) viene utilizzata per verificare se il primo valore è minore del secondo valore.
 
 **Formato**
 
@@ -101,7 +101,7 @@ La funzione di confronto `<` (minore di) viene utilizzata per verificare se il p
 
 **Esempio**
 
-La seguente query PQL definisce le persone il cui compleanno è in gennaio.
+La seguente query PQL definisce le persone il cui compleanno è a gennaio.
 
 ```sql
 person.birthMonth < 2
@@ -127,4 +127,4 @@ person.birthMonth <= 2
 
 ## Passaggi successivi
 
-Ora che hai imparato le funzioni di confronto, puoi usarle nelle tue query PQL. Per ulteriori informazioni sulle altre funzioni PQL, leggere la [Panoramica del linguaggio di query profilo](./overview.md).
+Ora che hai imparato le funzioni di confronto, puoi utilizzarle nelle query PQL. Per ulteriori informazioni sulle altre funzioni PQL, consulta la [Panoramica di Profile Query Language](./overview.md).
