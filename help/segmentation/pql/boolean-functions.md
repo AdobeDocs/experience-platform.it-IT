@@ -1,25 +1,25 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Segmentation Service;pql;PQL;Profile Query Language;funzioni booleane;booleane;'
+keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Servizio di segmentazione;pql;PQL;Lingua query profilo;funzioni booleane;booleano;
 solution: Experience Platform
 title: Funzioni booleane PQL
-topic: developer guide
-description: Le funzioni booleane vengono utilizzate per eseguire logica booleana su elementi diversi in PQL (Profile Query Language).
+topic-legacy: developer guide
+description: Le funzioni booleane vengono utilizzate per eseguire la logica booleana su diversi elementi in Profile Query Language (PQL).
+exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 5%
 
 ---
 
-
 # Funzioni booleane
 
-Le funzioni booleane vengono utilizzate per eseguire logica booleana su elementi diversi in [!DNL Profile Query Language] (PQL).  Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
+Le funzioni booleane vengono utilizzate per eseguire la logica booleana su diversi elementi in [!DNL Profile Query Language] (PQL).  Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
 
-## And
+## E
 
-La funzione `and` viene utilizzata per creare una combinazione logica.
+La funzione `and` viene utilizzata per creare una congiunzione logica.
 
 **Formato**
 
@@ -47,13 +47,13 @@ La funzione `or` viene utilizzata per creare una disgiunzione logica.
 
 **Esempio**
 
-La seguente query PQL restituirà tutte le persone con il paese di origine come Canada o anno di nascita del 1985.
+La seguente query PQL restituirà tutte le persone con il paese di origine come Canada o l&#39;anno di nascita del 1985.
 
 ```sql
 homeAddress.countryISO = "CA" or person.birthYear = 1985
 ```
 
-## Not
+## Non
 
 La funzione `not` (o `!`) viene utilizzata per creare una negazione logica.
 
@@ -72,9 +72,9 @@ La seguente query PQL restituirà tutte le persone che non hanno il proprio paes
 not (homeAddress.countryISO = "CA")
 ```
 
-## If
+## Se
 
-La funzione `if` viene utilizzata per risolvere un&#39;espressione a seconda che una condizione specificata sia vera.
+La funzione `if` viene utilizzata per risolvere un&#39;espressione a seconda che una condizione specificata sia vera o meno.
 
 **Formato**
 
@@ -84,13 +84,13 @@ if ({TEST_EXPRESSION}, {TRUE_EXPRESSION}, {FALSE_EXPRESSION})
 
 | Argomento | Descrizione |
 | --------- | ----------- |
-| `{TEST_EXPRESSION}` | L&#39;espressione booleana in fase di test. |
+| `{TEST_EXPRESSION}` | Espressione booleana in fase di test. |
 | `{TRUE_EXPRESSION}` | L&#39;espressione il cui valore verrà utilizzato se `{TEST_EXPRESSION}` è true. |
 | `{FALSE_EXPRESSION}` | L&#39;espressione il cui valore verrà utilizzato se `{TEST_EXPRESSION}` è false. |
 
 **Esempio**
 
-La seguente query PQL imposta il valore come `1` se il paese di origine è il Canada e `2` se il paese di origine non è il Canada.
+La seguente query PQL imposta il valore come `1` se il paese di origine è Canada e `2` se il paese di origine non è Canada.
 
 ```sql
 if (homeAddress.countryISO = "CA", 1, 2)
@@ -98,4 +98,4 @@ if (homeAddress.countryISO = "CA", 1, 2)
 
 ## Passaggi successivi
 
-Dopo aver appreso le funzioni booleane, è possibile utilizzarle nelle query PQL. Per ulteriori informazioni sulle altre funzioni PQL, leggere la [Panoramica del linguaggio di query profilo](./overview.md).
+Dopo aver appreso le funzioni booleane, puoi utilizzarle nelle query PQL. Per ulteriori informazioni sulle altre funzioni PQL, consulta la [Panoramica di Profile Query Language](./overview.md).
