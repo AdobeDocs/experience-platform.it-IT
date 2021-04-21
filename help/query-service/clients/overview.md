@@ -1,23 +1,23 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;servizio query;servizio query;connect;connect to query service;aqua data studio;Aqua Data Studio;Looker;Looker;postico;postico;Power BI;power bi;psql;rstudio;PSQL;RStudio;Tableau;tableau;'
+keywords: Experience Platform;home;argomenti popolari;Query service;query service;connect;connect to query service;aqua data studio;Aqua Data Studio;Looker;looker;Postico;postico;Power BI;power bi;psql;rstudio;PSQL;RStudio;Tableau;tableau;
 solution: Experience Platform
-title: Connessione dei client al servizio di query
-topic: connect
-description: In questo documento viene illustrato come connettersi a Query Service da diverse applicazioni client desktop e come verificare tali connessioni.
+title: Connetti client al servizio query
+topic-legacy: connect
+description: Questo documento spiega come connettersi a Query Service da diverse applicazioni client desktop e come verificare tali connessioni.
+exl-id: 2ba20179-5adb-4259-a120-231a40e78054
 translation-type: tm+mt
-source-git-commit: 2b8c08dad34bcd69368c00050323835f05379c82
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 0%
 
 ---
 
+# Connetti i client a [!DNL Query Service]
 
-# Collegare i client a [!DNL Query Service]
+Questa sezione spiega come connettersi a [!DNL Query Service] da diverse applicazioni client desktop e come verificare tali connessioni. [!DNL Query Service] utilizza il  [!DNL PostgreSQL] protocollo, pertanto le istruzioni contenute in questa sezione spiegano come utilizzare  [!DNL PostgreSQL] strumenti e driver per connettersi e scrivere query.
 
-Questa sezione spiega come connettersi a [!DNL Query Service] da diverse applicazioni client desktop e come verificare tali connessioni. [!DNL Query Service] utilizza il  [!DNL PostgreSQL] protocollo, pertanto le istruzioni riportate in questa sezione spiegano come utilizzare  [!DNL PostgreSQL] gli strumenti e i driver per connettersi e scrivere query.
-
-Sono fornite istruzioni per i seguenti client:
+Vengono fornite istruzioni per i seguenti client:
 
 - [[!DNL Aqua Data Studio]](./aqua-data-studio.md)
 - [[!DNL Looker]](./looker.md)
