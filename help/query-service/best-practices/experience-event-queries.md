@@ -1,30 +1,30 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;servizio query;servizio query;query evento esperienza;query evento esperienza;query evento esperienza;query evento esperienza;'
+keywords: Experience Platform;home;argomenti popolari;servizio query;servizio query;query experienceevent;query experienceevent;query Experience Event;
 solution: Experience Platform
-title: Query di esempio per gli eventi di esperienza
-topic: queries
+title: Query di esempio per eventi di esperienza
+topic-legacy: queries
 type: Tutorial
-description: Nel seguente documento sono riportati alcuni esempi di query relative agli eventi di esperienza in Adobe Experience Platform Query Service.
+description: Il seguente documento fornisce esempi di query che coinvolgono eventi di esperienza in Adobe Experience Platform Query Service.
+exl-id: e6793a03-e474-4ae4-acb2-a052ff1c6d68
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 0%
 
 ---
 
-
 # Query di esempio per [!DNL Experience Events]
 
-Oltre alle query SQL standard, Adobe Experience Platform [!DNL Query Service] supporta la scrittura di query utilizzando [!DNL Experience Events]. Gli eventi esperienza sono rappresentati dalla classe Experience Data Model (XDM) ExperienceEvent, che acquisisce uno snapshot immutabile e non aggregato del sistema quando un utente interagisce con un sito Web o un servizio, e può quindi essere utilizzato per l&#39;analisi del dominio temporale.
+Oltre alle query SQL standard, Adobe Experience Platform [!DNL Query Service] supporta la scrittura di query utilizzando [!DNL Experience Events]. Gli eventi di esperienza sono rappresentati dalla classe Experience Data Model (XDM) ExperienceEvent , che acquisisce uno snapshot immutabile e non aggregato del sistema quando un utente interagisce con un sito web o un servizio, e possono quindi essere utilizzati per l’analisi del dominio del tempo.
 
-Ulteriori informazioni su XDM e [!DNL Experience Events] sono disponibili nella [[!DNL XDM System] panoramica](../../xdm/home.md). Combinando [!DNL Query Service] con [!DNL Experience Events], puoi tenere traccia delle tendenze comportamentali tra i tuoi utenti. Nel seguente documento sono riportati alcuni esempi di query relative a [!DNL Experience Events].
+Ulteriori informazioni su XDM e [!DNL Experience Events] sono disponibili in [[!DNL XDM System] panoramica](../../xdm/home.md). Combinando [!DNL Query Service] con [!DNL Experience Events], è possibile monitorare efficacemente le tendenze comportamentali tra gli utenti. Il seguente documento fornisce esempi di query che coinvolgono [!DNL Experience Events].
 
-## Creazione di un rapporto con tendenze per giorno su un intervallo di date specifico
+## Creazione di un rapporto con tendenze di eventi per giorno su un intervallo di date specifico
 
-L&#39;esempio seguente crea un rapporto con tendenze di eventi su un intervallo di date specificato, raggruppati per data. Nello specifico, riassume vari valori di analisi come A, B e C, quindi riassume il numero di volte in cui i parchi sono stati visualizzati.
+Nell&#39;esempio seguente viene creato un report con tendenze di eventi su un intervallo di date specificato, raggruppati per data. In particolare, riassume vari valori di analisi come A, B e C, quindi riassume il numero di volte in cui i parchi sono stati visualizzati.
 
-La colonna timestamp trovata nei set di dati [!DNL Experience Event] è in UTC. Nell&#39;esempio seguente viene utilizzata la funzione `from_utc_timestamp()` per trasformare la marca temporale da UTC a EDT. Quindi utilizza la funzione `date_format()` per isolare la data dal resto della marca temporale.
+La colonna timestamp trovata nei set di dati [!DNL Experience Event] è in UTC. Nell&#39;esempio seguente viene utilizzata la funzione `from_utc_timestamp()` per trasformare il timestamp da UTC a EDT. Quindi utilizza la funzione `date_format()` per isolare la data dal resto della marca temporale.
 
 ```sql
 SELECT 
@@ -84,7 +84,7 @@ ORDER BY Day ASC, pageViews DESC;
 
 ## Recupero di un elenco di visitatori organizzati per numero di visualizzazioni di pagina.
 
-Nell&#39;esempio seguente viene creato un rapporto in cui sono elencati gli ID degli utenti che hanno visualizzato più pagine.
+Nell’esempio seguente viene creato un rapporto in cui sono elencati gli ID degli utenti che hanno visualizzato più pagine.
 
 ```sql
 SELECT 
@@ -114,7 +114,7 @@ LIMIT 10;
 
 ## Riproduzione delle sessioni di un visitatore
 
-L&#39;esempio seguente elenca le ultime 100 pagine visualizzate da un utente specificato.
+Nell&#39;esempio seguente sono elencate le ultime 100 pagine visualizzate da un utente specificato.
 
 
 ```sql
@@ -160,7 +160,7 @@ LIMIT 100;
 
 ## Visualizzazione di un rapporto rollup di un visitatore
 
-L&#39;esempio seguente mostra un rapporto aggregato di vari valori di analisi per un utente specificato.
+L’esempio seguente mostra un rapporto aggregato di vari valori di analisi per un utente specificato.
 
 ```sql
 SELECT 
@@ -189,5 +189,4 @@ ORDER BY pageViews DESC;
 
 ## Passaggi successivi
 
-Per ulteriori informazioni sulle query di esempio che utilizzano  funzioni definite dal Adobe (ADF), consultare la guida  Funzioni definite dal Adobe. Per informazioni generali sull&#39;esecuzione della query, leggere la guida [sull&#39;esecuzione della query in Query Service](./writing-queries.md).
-
+Per ulteriori informazioni sulle query di esempio che utilizzano le funzioni definite in Adobe (ADF, Defined Functions), consulta la guida Funzioni definite in Adobe . Per informazioni generali sull&#39;esecuzione della query, leggere la guida [sull&#39;esecuzione della query in Query Service](./writing-queries.md).
