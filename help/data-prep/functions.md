@@ -2,13 +2,13 @@
 keywords: Experience Platform;home;argomenti popolari;mappare csv;mappare file csv;mappare file csv su xdm;mappare da csv a xdm;guida interfaccia utente;mappatura;mappatura;campi di mappatura;funzioni di mappatura;
 solution: Experience Platform
 title: Funzioni di mappatura della preparazione dei dati
-topic: ' - Panoramica'
+topic-legacy: overview
 description: Questo documento introduce le funzioni di mappatura utilizzate con Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 translation-type: tm+mt
-source-git-commit: c3939d4ce30bf12748b898f461a166f28f010abf
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '3798'
+source-wordcount: '3797'
 ht-degree: 3%
 
 ---
