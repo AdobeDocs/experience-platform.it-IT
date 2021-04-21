@@ -1,29 +1,29 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari'
+keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
-title: Endpoint API Labels
-topic: developer guide
-description: Scoprite come gestire le etichette di utilizzo dei dati in  Experience Platform utilizzando l'API del servizio criteri.
+title: Endpoint API per le etichette
+topic-legacy: developer guide
+description: Scopri come gestire le etichette di utilizzo dei dati in Experience Platform utilizzando l’API del servizio criteri.
+exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 3%
 
 ---
 
-
 # Endpoint etichette
 
-Le etichette di utilizzo dei dati consentono di classificare i dati in base ai criteri di utilizzo che possono essere applicati a tali dati. L&#39;endpoint `/labels` in [!DNL Policy Service API] consente di gestire le etichette di utilizzo dei dati a livello di codice all&#39;interno dell&#39;applicazione dell&#39;esperienza.
+Le etichette per l’utilizzo dei dati ti consentono di classificare i dati in base a criteri di utilizzo che possono essere applicati a tali dati. L’endpoint `/labels` in [!DNL Policy Service API] consente di gestire in modo programmatico le etichette di utilizzo dei dati all’interno dell’applicazione di esperienza.
 
 >[!NOTE]
 >
->L&#39;endpoint `/labels` viene utilizzato solo per recuperare, creare e aggiornare le etichette di utilizzo dei dati. Per i passaggi su come aggiungere etichette ai set di dati e ai campi utilizzando le chiamate API, fare riferimento alla guida sulla [gestione delle etichette dei set di dati](../labels/dataset-api.md).
+>L’endpoint `/labels` viene utilizzato solo per recuperare, creare e aggiornare le etichette di utilizzo dei dati. Per i passaggi su come aggiungere etichette ai set di dati e ai campi utilizzando le chiamate API, consulta la guida sulla [gestione delle etichette dei set di dati](../labels/dataset-api.md).
 
 ## Introduzione
 
-L&#39;endpoint API utilizzato in questa guida è parte del [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Prima di continuare, consultare la [guida introduttiva](getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per eseguire correttamente chiamate a qualsiasi API [!DNL Experience Platform].
+L&#39;endpoint API utilizzato in questa guida fa parte del [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Prima di continuare, controlla la [guida introduttiva](getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API [!DNL Experience Platform].
 
 ## Recupera un elenco di etichette {#list}
 
@@ -38,7 +38,7 @@ GET /labels/custom
 
 **Richiesta**
 
-Nella richiesta seguente sono elencate tutte le etichette personalizzate create all&#39;interno dell&#39;organizzazione.
+Nella richiesta seguente sono elencate tutte le etichette personalizzate create all’interno dell’organizzazione.
 
 ```shell
 curl -X GET \
@@ -51,7 +51,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un elenco di etichette personalizzate recuperate dal sistema. Poiché la richiesta di esempio sopra è stata effettuata su `/labels/custom`, la risposta riportata di seguito mostra solo etichette personalizzate.
+Una risposta corretta restituisce un elenco di etichette personalizzate recuperate dal sistema. Poiché la richiesta di esempio precedente è stata effettuata su `/labels/custom`, la risposta seguente mostra solo etichette personalizzate.
 
 ```json
 {
@@ -107,9 +107,9 @@ Una risposta corretta restituisce un elenco di etichette personalizzate recupera
 }
 ```
 
-## Cercare un&#39;etichetta {#look-up}
+## Cerca un&#39;etichetta {#look-up}
 
-È possibile ricercare un&#39;etichetta specifica inserendo la proprietà `name` dell&#39;etichetta nel percorso di una richiesta di GET all&#39;API [!DNL Policy Service].
+Puoi cercare un’etichetta specifica includendo la proprietà `name` dell’etichetta nel percorso di una richiesta di GET all’ [!DNL Policy Service] API.
 
 **Formato API**
 
@@ -120,11 +120,11 @@ GET /labels/custom/{LABEL_NAME}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{LABEL_NAME}` | La proprietà `name` dell&#39;etichetta personalizzata da ricercare. |
+| `{LABEL_NAME}` | La proprietà `name` dell&#39;etichetta personalizzata che si desidera cercare. |
 
 **Richiesta**
 
-La richiesta seguente recupera l&#39;etichetta personalizzata `L2`, come indicato nel percorso.
+La richiesta seguente recupera l’etichetta personalizzata `L2`, come indicato nel percorso.
 
 ```shell
 curl -X GET \
@@ -137,7 +137,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell&#39;etichetta personalizzata.
+Una risposta corretta restituisce i dettagli dell’etichetta personalizzata.
 
 ```json
 {
@@ -163,7 +163,7 @@ Una risposta corretta restituisce i dettagli dell&#39;etichetta personalizzata.
 
 ## Creare o aggiornare un&#39;etichetta personalizzata {#create-update}
 
-Per creare o aggiornare un&#39;etichetta personalizzata, è necessario effettuare una richiesta di PUT all&#39;API [!DNL Policy Service].
+Per creare o aggiornare un’etichetta personalizzata, devi effettuare una richiesta PUT all’API [!DNL Policy Service] .
 
 **Formato API**
 
@@ -173,11 +173,11 @@ PUT /labels/custom/{LABEL_NAME}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{LABEL_NAME}` | La proprietà `name` di un&#39;etichetta personalizzata. Se non esiste un&#39;etichetta personalizzata con questo nome, verrà creata una nuova etichetta. Se ne esiste uno, l&#39;etichetta verrà aggiornata. |
+| `{LABEL_NAME}` | La proprietà `name` di un&#39;etichetta personalizzata. Se non esiste un’etichetta personalizzata con questo nome, verrà creata una nuova etichetta. Se esiste, l’etichetta verrà aggiornata. |
 
 **Richiesta**
 
-La richiesta seguente crea una nuova etichetta, `L3`, che ha lo scopo di descrivere i dati che contengono informazioni relative ai piani di pagamento selezionati dai clienti.
+La seguente richiesta crea una nuova etichetta, `L3`, che ha lo scopo di descrivere i dati che contengono informazioni relative ai piani di pagamento selezionati dai clienti.
 
 ```shell
 curl -X PUT \
@@ -196,14 +196,14 @@ curl -X PUT \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `name` | Identificatore stringa univoco per l&#39;etichetta. Questo valore viene utilizzato a scopo di ricerca e l&#39;etichetta viene applicata a set di dati e campi, pertanto si consiglia di utilizzarlo in modo breve e conciso. |
-| `category` | La categoria dell&#39;etichetta. Sebbene sia possibile creare le proprie categorie per le etichette personalizzate, si consiglia vivamente di utilizzare `Custom` se si desidera che l&#39;etichetta venga visualizzata nell&#39;interfaccia utente. |
-| `friendlyName` | Un nome descrittivo per l&#39;etichetta, utilizzato a scopo di visualizzazione. |
-| `description` | (Facoltativo) Una descrizione dell&#39;etichetta per fornire ulteriore contesto. |
+| `name` | Identificatore stringa univoco per l&#39;etichetta. Questo valore viene utilizzato a scopo di ricerca e applica l’etichetta ai set di dati e ai campi, pertanto si consiglia di breve e concisa. |
+| `category` | La categoria dell&#39;etichetta. Mentre puoi creare categorie personalizzate per le etichette personalizzate, è consigliabile utilizzare `Custom` per visualizzare l’etichetta nell’interfaccia utente. |
+| `friendlyName` | Un nome descrittivo per l’etichetta, utilizzato a scopo di visualizzazione. |
+| `description` | (Facoltativo) Una descrizione dell’etichetta per fornire ulteriore contesto. |
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell&#39;etichetta personalizzata, con codice HTTP 200 (OK) se un&#39;etichetta esistente è stata aggiornata, oppure 201 (Creato) se è stata creata una nuova etichetta.
+Una risposta corretta restituisce i dettagli dell’etichetta personalizzata, con codice HTTP 200 (OK) se è stata aggiornata un’etichetta esistente, oppure 201 (Creato) se è stata creata una nuova etichetta.
 
 ```json
 {
@@ -229,4 +229,4 @@ Una risposta corretta restituisce i dettagli dell&#39;etichetta personalizzata, 
 
 ## Passaggi successivi
 
-Questa guida riguardava l&#39;utilizzo dell&#39;endpoint `/labels` nell&#39;API del servizio criteri. Per i passaggi su come applicare etichette a set di dati e campi, fare riferimento alla [Guida API per le etichette di set di dati](../labels/dataset-api.md).
+Questa guida ha trattato l’utilizzo dell’endpoint `/labels` nell’API dei servizi criteri. Per i passaggi su come applicare le etichette ai set di dati e ai campi, consulta la [guida API delle etichette dei set di dati](../labels/dataset-api.md).
