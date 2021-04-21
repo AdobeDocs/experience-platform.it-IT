@@ -1,55 +1,55 @@
 ---
-keywords: ' Experience Platform;ottimizzare;modello;Data Science Workspace;argomenti popolari;approfondimenti modello'
+keywords: Experience Platform;ottimizzare;modello;Data Science Workspace;argomenti popolari;informazioni sul modello
 solution: Experience Platform
-title: Ottimizzare un modello utilizzando il framework di approfondimenti del modello
-topic: tutorial
+title: Ottimizzare un modello utilizzando il Framework di informazioni sul modello
+topic-legacy: tutorial
 type: Tutorial
-description: Model Insights Framework fornisce agli esperti di dati strumenti in Data Science Workspace per effettuare scelte rapide e informate per modelli ottimali di machine learning basati su esperimenti.
+description: Il Framework di informazioni sul modello fornisce allo scienziato dei dati gli strumenti in Data Science Workspace per effettuare scelte rapide e informate per modelli di apprendimento automatico ottimali basati su esperimenti.
+exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 0%
 
 ---
 
-
 # Ottimizzare un modello utilizzando il framework Model Insights
 
-Model Insights Framework fornisce agli esperti di dati strumenti in [!DNL Data Science Workspace] per effettuare scelte rapide e informate per modelli ottimali di machine learning basati su esperimenti. Il quadro migliorerà la velocità e l&#39;efficacia del flusso di lavoro di apprendimento automatico e migliorerà la facilità d&#39;uso per gli esperti in materia di dati. A tal fine, viene fornito un modello predefinito per ciascun tipo di algoritmo di machine learning per facilitare l&#39;ottimizzazione del modello. Il risultato finale consente agli esperti di data mining e ai cittadini di prendere decisioni migliori in merito all&#39;ottimizzazione dei modelli per i clienti finali.
+Il Framework di informazioni sul modello fornisce allo scienziato dei dati gli strumenti in [!DNL Data Science Workspace] per effettuare scelte rapide e informate per modelli ottimali di apprendimento automatico basati su esperimenti. Il quadro migliorerà la velocità e l&#39;efficacia del flusso di lavoro di apprendimento automatico e migliorerà la facilità d&#39;uso per gli scienziati dei dati. Questo viene fatto fornendo un modello predefinito per ogni tipo di algoritmo di apprendimento automatico per assistere con la regolazione del modello. Il risultato finale consente agli scienziati dei dati e ai cittadini scienziati dei dati di prendere migliori decisioni di ottimizzazione dei modelli per i loro clienti finali.
 
 ## Cosa sono le metriche?
 
-Dopo aver implementato e addestrato un modello, il passo successivo che uno scienziato farebbe è quello di trovare le prestazioni del modello. Varie metriche vengono utilizzate per determinare l&#39;efficacia del confronto tra un modello e gli altri. Alcuni esempi di metriche utilizzate:
+Dopo aver implementato e addestrato un modello, il passo successivo che uno scienziato farebbe è quello di trovare le prestazioni del modello. Varie metriche vengono utilizzate per determinare l’efficacia di un modello rispetto ad altre. Alcuni esempi di metriche utilizzate includono:
 - Precisione della classificazione
 - Area sotto curva
-- Matrice di fusione
-- Report classificazione
+- Matrice di confusione
+- Rapporto di classificazione
 
 ## Configurazione del codice di ricetta
 
-Al momento, Model Insights Framework supporta i seguenti runtime:
+Attualmente, il framework di Insights del modello supporta i seguenti runtime:
 - [Scala](#scala)
 - [Python/Tensorflow](#pythontensorflow)
 - [R](#r)
 
-Il codice di esempio per le ricette è disponibile nell&#39;archivio [experience-platform-dsw-reference](https://github.com/adobe/experience-platform-dsw-reference) in `recipes`. Per questa esercitazione verranno utilizzati riferimenti a file specifici provenienti da questo archivio.
+Il codice di esempio per le ricette può essere trovato nell&#39;archivio [experience-platform-dsw-reference](https://github.com/adobe/experience-platform-dsw-reference) in `recipes`. In questa esercitazione verrà fatto riferimento a file specifici provenienti da questo archivio.
 
 ### Scala {#scala}
 
-Esistono due modi per inserire le metriche nelle ricette. Uno consiste nell’utilizzare le metriche di valutazione predefinite fornite dall’SDK e l’altro nel scrivere metriche di valutazione personalizzate.
+Esistono due modi per inserire le metriche nelle ricette. Una consiste nell&#39;utilizzare le metriche di valutazione predefinite fornite dall&#39;SDK e l&#39;altra è quella di scrivere metriche di valutazione personalizzate.
 
 #### Metriche di valutazione predefinite per Scala
 
 Le valutazioni predefinite sono calcolate come parte degli algoritmi di classificazione. Di seguito sono riportati alcuni valori predefiniti per i valutatori attualmente implementati:
 
-| Classe Valutatore | `evaluation.class` |
+| Classe valutatore | `evaluation.class` |
 --- | ---
-| DefaultBinaryClassificationEevaluate | `com.adobe.platform.ml.impl.DefaultBinaryClassificationEvaluator` |
-| DefaultMultiClassificationEevaluate | `com.adobe.platform.ml.impl.DefaultMultiClassificationEvaluator` |
-| RecommendationsEevaluate | `com.adobe.platform.ml.impl.RecommendationsEvaluator` |
+| DefaultBinaryClassificationEvaluator | `com.adobe.platform.ml.impl.DefaultBinaryClassificationEvaluator` |
+| DefaultMultiClassificationEvaluator | `com.adobe.platform.ml.impl.DefaultMultiClassificationEvaluator` |
+| ConsigliValutatore | `com.adobe.platform.ml.impl.RecommendationsEvaluator` |
 
-Il valutatore può essere definito nella ricetta nel file [application.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) nella cartella `recipe`. Di seguito è riportato un esempio di codice che abilita la `DefaultBinaryClassificationEvaluator`:
+Il valutatore può essere definito nella ricetta nel file [application.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) nella cartella `recipe`. Di seguito è riportato un codice di esempio che abilita `DefaultBinaryClassificationEvaluator`:
 
 ```scala
 evaluation.class=com.adobe.platform.ml.impl.DefaultBinaryClassificationEvaluator
@@ -58,7 +58,7 @@ evaluation.predictionColumn=prediction
 training.evaluate=true
 ```
 
-Una volta attivata la classe di un valutatore, per impostazione predefinita durante la formazione vengono calcolate alcune metriche. Le metriche predefinite possono essere dichiarate esplicitamente aggiungendo la seguente riga al `application.properties`.
+Dopo che una classe di valutatore è abilitata, per impostazione predefinita verrà calcolato un certo numero di metriche durante la formazione. Le metriche predefinite possono essere dichiarate esplicitamente aggiungendo la seguente riga al `application.properties`.
 
 ```scala
 evaluation.metrics.com=com.adobe.platform.ml.impl.Constants.DEFAULT
@@ -68,62 +68,62 @@ evaluation.metrics.com=com.adobe.platform.ml.impl.Constants.DEFAULT
 >
 >Se la metrica non è definita, le metriche predefinite saranno attive.
 
-È possibile abilitare una metrica specifica modificando il valore di `evaluation.metrics.com`. Nell&#39;esempio seguente, la metrica F-Score è abilitata.
+Per abilitare una metrica specifica, modifica il valore di `evaluation.metrics.com`. Nell’esempio seguente, la metrica Punteggio F è abilitata.
 
 ```scala
 evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 ```
 
-Nella tabella seguente sono riportate le metriche predefinite per ciascuna classe. Un utente può inoltre utilizzare i valori nella colonna `evaluation.metric` per abilitare una metrica specifica.
+Nella tabella seguente sono riportate le metriche predefinite per ogni classe. Un utente può inoltre utilizzare i valori nella colonna `evaluation.metric` per abilitare una metrica specifica.
 
 | `evaluator.class` | Metriche predefinite | `evaluation.metric` |
 --- | --- | ---
-| `DefaultBinaryClassificationEvaluator` | -Precisione <br>-Richiamo <br>-Matrice di Confusione <br>-F-Punteggio <br>-Precisione <br>-Caratteristiche operative del ricevitore <br>-Area sotto le caratteristiche operative del ricevitore | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
-| `DefaultMultiClassificationEvaluator` | -Precisione <br>-Richiamo <br>-Matrice di Confusione <br>-F-Punteggio <br>-Precisione <br>-Caratteristiche operative del ricevitore <br>-Area sotto le caratteristiche operative del ricevitore | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
-| `RecommendationsEvaluator` | -Media di precisione (MAP) <br>-Normalizzata Gain Cumulative Scontate <br>-Media Rank Reciproca <br>-Metric K | -`MEAN_AVERAGE_PRECISION` <br>-`NDCG` <br>-`MRR` <br>-`METRIC_K` |
+| `DefaultBinaryClassificationEvaluator` | -Precisione <br>-Richiama <br>-Matrice di confusione <br>-F-Punteggio <br>-Precisione <br>-Caratteristiche operative del ricevitore <br>-Area sotto le caratteristiche operative del ricevitore | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
+| `DefaultMultiClassificationEvaluator` | -Precisione <br>-Richiama <br>-Matrice di confusione <br>-F-Punteggio <br>-Precisione <br>-Caratteristiche operative del ricevitore <br>-Area sotto le caratteristiche operative del ricevitore | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
+| `RecommendationsEvaluator` | -Precisione media media (MAP) <br>-Guadagno cumulativo attualizzato normalizzato <br>-Classificazione reciproca media <br>-Metrica K | -`MEAN_AVERAGE_PRECISION` <br>-`NDCG` <br>-`MRR` <br>-`METRIC_K` |
 
 
 #### Metriche di valutazione personalizzate per Scala
 
-Il valutatore personalizzato può essere fornito estendendo l&#39;interfaccia di `MLEvaluator.scala` nel file `Evaluator.scala`. Nel file di esempio [Eevaluate.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/Evaluator.scala), definiamo le funzioni `split()` e `evaluate()` personalizzate. La nostra funzione `split()` suddivide i nostri dati in modo casuale con un rapporto di 8:2 e la nostra funzione `evaluate()` definisce e restituisce 3 metriche: MAPE, MAE e RMSE.
+Il valutatore personalizzato può essere fornito estendendo l&#39;interfaccia di `MLEvaluator.scala` nel file `Evaluator.scala`. Nel file di esempio [Evaluator.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/Evaluator.scala), definiamo le funzioni `split()` e `evaluate()` personalizzate. La nostra funzione `split()` suddivide i nostri dati in modo casuale con un rapporto di 8:2 e la nostra funzione `evaluate()` definisce e restituisce 3 metriche: MAPE, MAE e RMSE.
 
 >[!IMPORTANT]
 >
->Per la classe `MLMetric`, non utilizzare `"measures"` per `valueType` quando si crea una nuova `MLMetric` altrimenti la metrica non verrà compilata nella tabella delle metriche di valutazione personalizzate.
+>Per la classe `MLMetric`, non utilizzare `"measures"` per `valueType` durante la creazione di un nuovo `MLMetric` altrimenti la metrica non verrà compilata nella tabella delle metriche di valutazione personalizzate.
 >  
-> Effettuate le seguenti operazioni: `metrics.add(new MLMetric("MAPE", mape, "double"))`\
+> Esegui questa operazione: `metrics.add(new MLMetric("MAPE", mape, "double"))`\
 > Non questo: `metrics.add(new MLMetric("MAPE", mape, "measures"))`
 
 
-Una volta definito nella ricetta, il passo successivo consiste nell&#39;attivarlo nelle ricette. Ciò viene fatto nel file [application.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) nella cartella `resources` del progetto. Qui la `evaluation.class` è impostata sulla classe `Evaluator` definita in `Evaluator.scala`
+Una volta definita nella ricetta, il passo successivo è quello di abilitarla nelle ricette. Questa operazione viene eseguita nel file [application.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) nella cartella `resources` del progetto. Qui il `evaluation.class` è impostato sulla classe `Evaluator` definita in `Evaluator.scala`
 
 ```scala
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
-In [!DNL Data Science Workspace], l&#39;utente potrebbe visualizzare le informazioni nella scheda &quot;Metriche di valutazione&quot; nella pagina dell&#39;esperimento.
+In [!DNL Data Science Workspace], l&#39;utente sarebbe in grado di visualizzare le informazioni nella scheda &quot;Metriche di valutazione&quot; nella pagina dell&#39;esperimento.
 
 ### [!DNL Python/Tensorflow] {#pythontensorflow}
 
-Al momento non sono disponibili metriche di valutazione predefinite per [!DNL Python] o [!DNL Tensorflow]. Pertanto, per ottenere le metriche di valutazione per [!DNL Python] o [!DNL Tensorflow], sarà necessario creare una metrica di valutazione personalizzata. Questo può essere fatto implementando la classe `Evaluator`.
+Al momento non sono disponibili metriche di valutazione predefinite per [!DNL Python] o [!DNL Tensorflow]. Pertanto, per ottenere le metriche di valutazione per [!DNL Python] o [!DNL Tensorflow], dovrai creare una metrica di valutazione personalizzata. Questo può essere fatto implementando la classe `Evaluator` .
 
 #### Metriche di valutazione personalizzate per [!DNL Python]
 
 Per le metriche di valutazione personalizzate, è necessario implementare due metodi principali per il valutatore: `split()` e `evaluate()`.
 
-Per [!DNL Python], questi metodi saranno definiti in [evaluate.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) per la classe `Evaluator`. Seguire il collegamento [evaluate.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) per un esempio della `Evaluator`.
+Per [!DNL Python], questi metodi saranno definiti in [valutator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) per la classe `Evaluator`. Segui il collegamento [valutator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) per un esempio di `Evaluator`.
 
-La creazione di metriche di valutazione in [!DNL Python] richiede l&#39;implementazione dei metodi `evaluate()` e `split()`.
+La creazione di metriche di valutazione in [!DNL Python] richiede l’implementazione dei metodi `evaluate()` e `split()` .
 
-Il metodo `evaluate()` restituisce l&#39;oggetto della metrica che contiene un array di oggetti della metrica con proprietà di `name`, `value` e `valueType`.
+Il metodo `evaluate()` restituisce l&#39;oggetto metrico che contiene una matrice di oggetti metrici con proprietà di `name`, `value` e `valueType`.
 
-Lo scopo del metodo `split()` è quello di inserire i dati e inviare un set di dati per la formazione e il test. Nel nostro esempio, il metodo `split()` immette i dati utilizzando l&#39;SDK `DataSetReader`, quindi li pulisce rimuovendo le colonne non correlate. Da qui vengono create funzioni aggiuntive a partire dalle feature non elaborate esistenti nei dati.
+Lo scopo del metodo `split()` è quello di inserire i dati e trasmettere un training e un set di dati di prova. Nel nostro esempio, il metodo `split()` immette i dati utilizzando l&#39;SDK `DataSetReader` e quindi li pulisce rimuovendo le colonne non collegate. Da lì vengono create funzionalità aggiuntive a partire dalle feature non elaborate esistenti nei dati.
 
-Il metodo `split()` deve restituire un dataframe di formazione e di prova che viene quindi utilizzato dai metodi `pipeline()` per addestrare e testare il modello ML.
+Il metodo `split()` deve restituire un dataframe di addestramento e test che viene poi utilizzato dai metodi `pipeline()` per addestrare e testare il modello ML.
 
 #### Metriche di valutazione personalizzate per Tensorflow
 
-Per [!DNL Tensorflow], analogamente a [!DNL Python], è necessario implementare i metodi `evaluate()` e `split()` della classe `Evaluator`. Per `evaluate()`, le metriche devono essere restituite mentre `split()` restituisce i set di dati del treno e del test.
+Per [!DNL Tensorflow], simili a [!DNL Python], è necessario implementare i metodi `evaluate()` e `split()` nella classe `Evaluator`. Per `evaluate()`, è necessario restituire le metriche mentre `split()` restituisce i set di dati del treno e delle prove.
 
 ```PYTHON
 from ml.runtime.python.Interfaces.AbstractEvaluator import AbstractEvaluator
@@ -143,30 +143,30 @@ class Evaluator(AbstractEvaluator):
 
 ### R {#r}
 
-Al momento, non esistono metriche di valutazione predefinite per R. Pertanto, per ottenere le metriche di valutazione per R, è necessario definire la classe `applicationEvaluator` come parte della ricetta.
+A partire da ora, non ci sono metriche di valutazione predefinite per R. Pertanto, per ottenere le metriche di valutazione per R, sarà necessario definire la classe `applicationEvaluator` come parte della ricetta.
 
 #### Metriche di valutazione personalizzate per R
 
-Lo scopo principale di `applicationEvaluator` è restituire un oggetto JSON contenente coppie chiave-valore di metriche.
+Lo scopo principale di `applicationEvaluator` è quello di restituire un oggetto JSON contenente coppie chiave-valore di metriche.
 
-Questo [applicationEevaluate.R](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/R/Retail%20-%20GradientBoosting/R/applicationEvaluator.R) può essere utilizzato come esempio. In questo esempio, la sezione `applicationEvaluator` è suddivisa in tre sezioni familiari:
-- Carica dati
-- Preparazione/progettazione di funzioni
-- Recuperare il modello salvato e valutare
+Questo [applicationEvaluator.R](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/R/Retail%20-%20GradientBoosting/R/applicationEvaluator.R) può essere utilizzato come esempio. In questo esempio, la sezione `applicationEvaluator` è suddivisa in tre sezioni familiari:
+- Caricare dati
+- Preparazione dei dati/ingegneria delle funzioni
+- Recupera modello salvato e valuta
 
-I dati vengono caricati per la prima volta in un dataset da un&#39;origine come definita in [retail.config.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/R/Retail%20-%20GradientBoosting/retail.config.json). Da qui, i dati vengono puliti e progettati per adattarsi al modello di apprendimento della macchina. Infine, il modello è utilizzato per fare una previsione utilizzando il nostro dataset e dai valori previsti e dai valori effettivi, le metriche sono calcolate. In questo caso, MAPE, MAE e RMSE vengono definiti e restituiti nell&#39;oggetto `metrics`.
+I dati vengono caricati per la prima volta in un set di dati da un&#39;origine come definita in [retail.config.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/R/Retail%20-%20GradientBoosting/retail.config.json). Da lì i dati vengono puliti e progettati per adattarsi al modello di apprendimento automatico. Infine, il modello viene utilizzato per fare una previsione utilizzando il nostro set di dati e dai valori previsti e dai valori effettivi, le metriche vengono calcolate. In questo caso, MAPE, MAE e RMSE vengono definiti e restituiti nell&#39;oggetto `metrics` .
 
 ## Utilizzo di metriche e grafici di visualizzazione predefiniti
 
-[!DNL Sensei Model Insights Framework] supporterà un modello predefinito per ciascun tipo di algoritmo di machine learning. La tabella seguente mostra le classi comuni di algoritmi di machine learning ad alto livello e le metriche di valutazione e le visualizzazioni corrispondenti.
+Il [!DNL Sensei Model Insights Framework] supporterà un modello predefinito per ogni tipo di algoritmo di apprendimento automatico. La tabella seguente mostra le classi comuni di algoritmi di apprendimento automatico di alto livello e le metriche di valutazione e le visualizzazioni corrispondenti.
 
 | Tipo di algoritmo ML | Metriche di valutazione | Visualizzazioni |
 --- | --- | ---
-| Regressione | - RMSE<br>- MAPE<br>- MASE<br>- MAE | Curva di sovrapposizione valori previsti e valori effettivi |
-| Classificazione binaria | - Matrice di confusione<br>- Precisione-richiamo<br>- Precisione<br>- F-score (in particolare F1,F2)<br>- AUC<br>- ROC | Curva ROC e matrice confusione |
-| Classificazione multiclasse | -Matrice di conversione <br>- Per ogni classe: <br>- precisione del richiamo <br>- punteggio F (in particolare F1, F2) | Curva ROC e matrice confusione |
-| Clustering (con verità a terra) | - NMI (valutazione normalizzata delle informazioni reciproche), AMI (valutazione rettificata delle informazioni reciproche)<br>- RI (indice Rand), ARI (indice Rand rettificato)<br>- punteggio di omogeneità, punteggio di completezza e V-measurement<br>- FMI (indice Fowlkes-Mallow)<br>- Purity<br>- indice Jaccard | Grafico cluster che mostra cluster e centroidi con dimensioni cluster relative che riflettono i punti dati del cluster |
-| Clustering (senza verità di fondo) | - Inertia<br>- Coefficiente di silhouette<br>- CHI (indice di Calinski-Harabaz)<br>- DBI (indice di Davies-Bouldin)<br>- Indice di Dunn | Grafico cluster che mostra cluster e centroidi con dimensioni cluster relative che riflettono i punti dati del cluster |
-| Consiglio | -Media di precisione (MAP) <br>-Normalizzata Gain Cumulative Scontate <br>-Media Rank Reciproca <br>-Metric K | TBD |
-| TensorFlow, casi di utilizzo | Analisi modello TensorFlow (TFMA) | Confronto tra il modello di rete neurale e la visualizzazione |
-| Meccanismo di acquisizione di altri/errori | Logica metrica personalizzata (e grafici di valutazione corrispondenti) definita dall&#39;autore del modello. Gestione degli errori in caso di mancata corrispondenza del modello | Tabella con coppie chiave-valore per le metriche di valutazione |
+| Regressione | - RMSE<br>- MAPE<br>- MASE<br>- MAE | Curva di sovrapposizione dei valori previsti e effettivi |
+| Classificazione binaria | - Matrice di confusione<br>- Precision-richiamo<br>- Accuratezza<br>- Punteggio F (nello specifico F1 ,F2)<br>- AUC<br>- ROC | Curva ROC e matrice della confusione |
+| Classificazione multiclasse | -Matrice di confusione <br>- Per ogni classe: <br>- precisione del richiamo <br>- Punteggio F (in particolare F1, F2) | Curva ROC e matrice della confusione |
+| Clustering (con verità di fondo) | - NMI (punteggio di reciproca informazione normalizzato), AMI (punteggio di mutua informazione corretto)<br>- RI (indice Rand), ARI (indice Rand corretto)<br>- punteggio di omogeneità, punteggio di completezza e misurazione V<br>- FMI (indice Fowlkes-Mallow)<br>- Purezza<br>- Indice Jaccard | Grafico cluster che mostra cluster e centroid con dimensioni relative dei cluster che riflettono i punti dati che rientrano nel cluster |
+| Clustering (senza verità) | - Inerzia<br>- Coefficiente di siluetta<br>- CHI (indice Calinski-Harabaz)<br>- DBI (indice Davies-Bouldin)<br>- Indice Dunn | Grafico cluster che mostra cluster e centroid con dimensioni relative dei cluster che riflettono i punti dati che rientrano nel cluster |
+| Consiglio | -Precisione media media (MAP) <br>-Guadagno cumulativo attualizzato normalizzato <br>-Classificazione reciproca media <br>-Metrica K | TBD |
+| Casi d’uso di TensorFlow | Analisi del modello TensorFlow (TFMA) | Confronto profondo tra il modello di rete neurale e la visualizzazione |
+| Meccanismo di acquisizione di altri/errori | Logica metrica personalizzata (e grafici di valutazione corrispondenti) definita dall’autore del modello. Gestione accurata degli errori in caso di mancata corrispondenza dei modelli | Tabella con coppie chiave-valore per le metriche di valutazione |
