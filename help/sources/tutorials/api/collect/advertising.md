@@ -2,14 +2,14 @@
 keywords: Experience Platform;home;argomenti popolari;servizio di flusso;pubblicità;google adwords;pubblicità
 solution: Experience Platform
 title: Raccogliere dati pubblicitari utilizzando connettori sorgente e API
-topic: ' - Panoramica'
+topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati da un’applicazione pubblicitaria di terze parti e acquisirli in Platform utilizzando i connettori sorgente e l’API del servizio di flusso.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1551'
 ht-degree: 1%
 
 ---
