@@ -1,41 +1,41 @@
 ---
 solution: Experience Platform
-title: Esportare schemi XDM nell’interfaccia utente
-description: Scoprite come esportare uno schema esistente in una sandbox o in un’organizzazione IMS diversa nell’interfaccia utente di Adobe Experience Platform.
-topic: user guide
+title: Esportare gli schemi XDM nell’interfaccia utente
+description: Scopri come esportare uno schema esistente in un’organizzazione sandbox o IMS diversa nell’interfaccia utente di Adobe Experience Platform.
+topic-legacy: user guide
 type: Tutorial
+exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
 translation-type: tm+mt
-source-git-commit: 8d6916890a94300dc68d018d56579df9616c177c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 0%
 
 ---
 
-
 # Esportare schemi XDM nell’interfaccia utente
 
-Tutte le risorse all&#39;interno della Libreria schema sono contenute in una sandbox specifica all&#39;interno di un&#39;organizzazione IMS. In alcuni casi, potrebbe essere utile condividere le risorse Experience Data Model (XDM) tra sandbox e organizzazioni IMS.
+Tutte le risorse all’interno della Libreria schema sono contenute in una sandbox specifica all’interno di un’organizzazione IMS. In alcuni casi, puoi condividere risorse Experience Data Model (XDM) tra le sandbox e le organizzazioni IMS.
 
-Per rispondere a questa esigenza, l&#39;area di lavoro [!UICONTROL Schemas] nell&#39;interfaccia utente di Adobe Experience Platform consente di generare un payload di esportazione per qualsiasi schema all&#39;interno della Libreria schema. Questo payload può quindi essere utilizzato in una chiamata all&#39;API del Registro di sistema dello schema per importare lo schema (e tutte le risorse dipendenti) in una sandbox di destinazione e in un&#39;organizzazione IMS.
+Per soddisfare questa esigenza, l’area di lavoro [!UICONTROL Schemas] nell’interfaccia utente di Adobe Experience Platform consente di generare un payload di esportazione per qualsiasi schema all’interno della Libreria schema. Questo payload può quindi essere utilizzato in una chiamata all’API del Registro di sistema dello schema per importare lo schema (e tutte le risorse dipendenti) in una sandbox di destinazione e nell’organizzazione IMS.
 
 >[!NOTE]
 >
->È inoltre possibile utilizzare l&#39;API del Registro di sistema dello schema per esportare altre risorse oltre agli schemi, incluse classi, mixin e tipi di dati. Per ulteriori informazioni, consulta la guida sugli endpoint [di esportazione/importazione](../api/export-import.md).
+>È inoltre possibile utilizzare l’API del Registro di sistema dello schema per esportare altre risorse oltre agli schemi, tra cui classi, mixin e tipi di dati. Per ulteriori informazioni, consulta la guida sugli endpoint di [esportazione/importazione](../api/export-import.md) .
 
 ## Prerequisiti
 
-Mentre l&#39;interfaccia utente della piattaforma consente di esportare risorse XDM, è necessario utilizzare l&#39;API del Registro di sistema dello schema per importare tali risorse in altre sandbox o organizzazioni IMS per completare il flusso di lavoro. Per informazioni importanti sulle intestazioni di autenticazione necessarie prima di seguire questa guida, fare riferimento alla guida [guida introduttiva all&#39;API del Registro di sistema dello schema](../api/getting-started.md).
+Sebbene l’interfaccia utente di Platform consenta di esportare risorse XDM, è necessario utilizzare l’API del Registro di sistema dello schema per importare tali risorse in altre sandbox o organizzazioni IMS per completare il flusso di lavoro. Per informazioni importanti sulle intestazioni di autenticazione richieste prima di seguire questa guida, consulta la guida introduttiva [all’API del Registro di sistema dello schema](../api/getting-started.md) .
 
-## Generazione di un payload di esportazione
+## Generare un payload di esportazione
 
-Nell&#39;interfaccia utente della piattaforma, selezionate **[!UICONTROL Schemas]** nel menu di navigazione a sinistra. Nell&#39;area di lavoro [!UICONTROL Schemas], individuare lo schema da esportare e aprirlo in [!DNL Schema Editor].
+Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Schemas]** nel menu di navigazione a sinistra. Nell&#39;area di lavoro [!UICONTROL Schemas] individuare lo schema da esportare e aprirlo nel percorso [!DNL Schema Editor].
 
 >[!TIP]
 >
->Per informazioni su come trovare la risorsa XDM desiderata, consultate la guida [Esplora risorse XDM](./explore.md).
+>Per informazioni dettagliate su come trovare la risorsa XDM desiderata, consulta la guida sull’ [esplorazione delle risorse XDM](./explore.md) .
 
-Una volta aperto lo schema, selezionare l&#39;icona **[!UICONTROL Copy JSON]** (![Copia icona](../images/ui/export/icon.png)) in alto a destra del quadro.
+Una volta aperto lo schema, seleziona l’icona **[!UICONTROL Copy JSON]** (![Copia icona](../images/ui/export/icon.png)) in alto a destra nell’area di lavoro.
 
 ![](../images/ui/export/copy-json.png)
 
@@ -203,14 +203,14 @@ Questo copia un payload JSON negli Appunti, generato in base alla struttura dell
 ]
 ```
 
-Il payload assume la forma di un array, in cui ogni elemento di array è un oggetto che rappresenta una risorsa XDM personalizzata da esportare. Nell&#39;esempio precedente, sono inclusi il mixin personalizzato &quot;[!DNL Loyalty details]&quot; e lo schema &quot;[!DNL Loyalty Members]&quot;. Tutte le risorse di base utilizzate dallo schema non sono incluse nell&#39;esportazione, in quanto sono disponibili in tutte le sandbox e le organizzazioni IMS.
+Il payload si presenta come una matrice e ogni elemento della matrice è un oggetto che rappresenta una risorsa XDM personalizzata da esportare. Nell&#39;esempio precedente, sono inclusi il mixin personalizzato &quot;[!DNL Loyalty details]&quot; e lo schema &quot;[!DNL Loyalty Members]&quot;. Tutte le risorse di base utilizzate dallo schema non sono incluse nell’esportazione, in quanto sono disponibili in tutte le sandbox e le organizzazioni IMS.
 
-Ogni istanza dell&#39;ID tenant dell&#39;organizzazione viene visualizzata come `<XDM_TENANTID_PLACEHOLDER>` nel payload. Questi segnaposto verranno sostituiti automaticamente con il valore ID tenant appropriato a seconda della posizione in cui si importa lo schema nel passaggio successivo.
+Tieni presente che ogni istanza dell’ID tenant dell’organizzazione viene visualizzata come `<XDM_TENANTID_PLACEHOLDER>` nel payload. Questi segnaposto verranno sostituiti automaticamente con il valore ID tenant appropriato a seconda della posizione in cui si importa lo schema nel passaggio successivo.
 
-## Importare la risorsa tramite l&#39;API
+## Importare la risorsa utilizzando l’API
 
-Dopo aver copiato il JSON di esportazione per lo schema, potete usarlo come payload per una richiesta di POST all&#39;endpoint `/import` nell&#39;API del Registro di sistema dello schema. Consultate la sezione sull [importazione di una risorsa XDM nell&#39;API](../api/export-import.md#import) per informazioni dettagliate su come configurare la chiamata per l&#39;invio dello schema all&#39;organizzazione IMS e alla sandbox desiderata.
+Dopo aver copiato il JSON di esportazione per lo schema, puoi utilizzarlo come payload per una richiesta POST all’endpoint `/import` nell’API del Registro di sistema dello schema. Per informazioni dettagliate su come configurare la chiamata per l’invio dello schema all’organizzazione IMS e alla sandbox desiderata, consulta la sezione sull’ [importazione di una risorsa XDM nell’API](../api/export-import.md#import) .
 
 ## Passaggi successivi
 
-Seguendo questa guida, è stato esportato correttamente uno schema XDM in un&#39;organizzazione IMS o sandbox diversa. Per ulteriori informazioni sulle funzionalità dell&#39;interfaccia utente [!UICONTROL Schemas], fare riferimento alla [[!UICONTROL Schemas] panoramica dell&#39;interfaccia utente](./overview.md).
+Seguendo questa guida, hai esportato correttamente uno schema XDM in un’organizzazione IMS o sandbox diversa. Per ulteriori informazioni sulle funzionalità dell&#39;interfaccia utente di [!UICONTROL Schemas], consulta la [[!UICONTROL Schemas] panoramica dell&#39;interfaccia utente](./overview.md).
