@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API
 title: Guida introduttiva all’API del profilo cliente in tempo reale
-topic: guida
-type: Documentazione
+topic-legacy: guide
+type: Documentation
 description: La guida introduttiva all’API di profilo descrive i concetti chiave e le funzionalità di base che devi conoscere per utilizzare gli endpoint API del profilo cliente in tempo reale per eseguire operazioni CRUD di base rispetto ai dati del profilo.
+exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
-
 
 # Guida introduttiva all’ [!DNL Real-time Customer Profile] API {#getting-started}
 
@@ -45,7 +45,7 @@ Tutte le risorse in [!DNL Experience Platform] sono isolate in sandbox virtuali 
 
 Per ulteriori informazioni sulle sandbox in [!DNL Platform], consulta la documentazione di panoramica [sandbox](../../sandboxes/home.md).
 
-Tutte le richieste con un payload nel corpo della richiesta (come le chiamate POST, PUT e PATCH) devono includere un&#39;intestazione `Content-Type`. I valori accettati specifici per ogni chiamata sono forniti nei parametri della chiamata .
+Tutte le richieste con un payload nel corpo della richiesta (come le chiamate POST, PUT e PATCH) devono includere un’intestazione `Content-Type`. I valori accettati specifici per ogni chiamata sono forniti nei parametri della chiamata .
 
 ## Passaggi successivi
 
