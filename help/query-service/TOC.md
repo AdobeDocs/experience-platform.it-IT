@@ -1,20 +1,19 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Guida al servizio query di Adobe Experience Platform
 breadcrumb-title: Guida al servizio query
 user-guide-description: Utilizza SQL standard per eseguire query sui dati in Platform Data Lake.
 feature: Query
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 16%
+ht-degree: 18%
 
 ---
 
 
-# Servizio query di Adobe Experience Platform {#query}
+# Servizio query Adobe Experience Platform {#query}
 
 - [Panoramica del servizio query](home.md)
 - [Guida rapida](quickstart.md)
@@ -33,12 +32,12 @@ ht-degree: 16%
    - [Indicazioni generali per l’esecuzione delle query](best-practices/writing-queries.md)
    - [Deduplicazione dati](best-practices/deduplication.md)
    - [Query Evento esperienza di esempio](best-practices/experience-event-queries.md)
-   - [Esempio di query Adobe Analytics](best-practices/adobe-analytics.md)
+   - [Query Adobe Analytics di esempio](best-practices/adobe-analytics.md)
    - [Query Adobe Target di esempio](best-practices/adobe-target.md)
 - Riferimento SQL {#sql}
    - [Panoramica SQL](sql/overview.md)
    - [Sintassi SQL](sql/syntax.md)
-   - [Funzioni definite da Adobe](sql/adobe-defined-functions.md)
+   - [Funzioni definite dall&#39;Adobe](sql/adobe-defined-functions.md)
    - [Funzioni SQL di Spark](sql/spark-sql-functions.md)
    - [Comandi metadati](sql/metadata.md)
    - [Dichiarazioni preparate](sql/prepared-statements.md)
