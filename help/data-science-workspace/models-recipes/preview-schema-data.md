@@ -2,17 +2,17 @@
 keywords: Experience Platform;visualizzare in anteprima i dati dello schema;Data Science Workspace;argomenti comuni
 solution: Experience Platform
 title: Anteprima dello schema di vendita al dettaglio e del set di dati
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Il documento seguente illustra l’anteprima di schemi e set di dati su Adobe Experience Platform.
+exl-id: dca9835b-4f76-42cc-b262-b20323bf4356
 translation-type: tm+mt
-source-git-commit: 5129a75071af680bc54a7f60bb89ce32d3216d09
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '234'
-ht-degree: 1%
+source-wordcount: '232'
+ht-degree: 0%
 
 ---
-
 
 # Anteprima dello schema e del set di dati di vendita al dettaglio
 
