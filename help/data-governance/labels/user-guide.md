@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;argomenti popolari;governance dei dati;etichetta di utilizzo dei dati;servizio criteri;guida utente per le etichette di utilizzo dei dati
 solution: Experience Platform
 title: Gestire le etichette di utilizzo dei dati nell’interfaccia utente
-topic: etichette
+topic-legacy: labels
 description: Questa guida descrive i passaggi per l’utilizzo delle etichette di utilizzo dei dati all’interno dell’interfaccia utente di Adobe Experience Platform.
+exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 translation-type: tm+mt
-source-git-commit: 41d01b3aec0afa60dd602716a30cc94402702a70
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1067'
 ht-degree: 0%
 
 ---
-
 
 # Gestire le etichette di utilizzo dei dati nell’interfaccia utente
 
