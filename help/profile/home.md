@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API;profilo unificato;profilo unificato;unificato;profilo;rtcp;grafici XDM
 title: Panoramica del profilo cliente in tempo reale
-topic: guida
+topic-legacy: guide
 description: Profilo cliente in tempo reale è un archivio di entità di ricerca generico che unisce i dati da varie risorse di dati aziendali e fornisce l’accesso a tali dati sotto forma di profili cliente individuali ed eventi serie temporali correlati. Questa funzione consente agli esperti di marketing di promuovere esperienze coordinate, coerenti e rilevanti con i loro tipi di pubblico su più canali.
+exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1827'
+source-wordcount: '1826'
 ht-degree: 0%
 
 ---
 
-
 # [!DNL Real-time Customer Profile]panoramica
 
-Adobe Experience Platform ti consente di promuovere esperienze coordinate, coerenti e rilevanti per i clienti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con [!DNL Real-time Customer Profile] puoi visualizzare una visualizzazione olistica di ogni singolo cliente combinando dati provenienti da più canali, inclusi online, offline, CRM e di terze parti. [!DNL Profile] consente di consolidare i dati dei clienti in una visualizzazione unificata che offre un account utilizzabile e con marca temporale per ogni interazione con il cliente. Questa panoramica ti aiuterà a comprendere il ruolo e l’utilizzo di [!DNL Real-time Customer Profile] in [!DNL Experience Platform].
+Adobe Experience Platform ti consente di fornire ai clienti esperienze coordinate, coerenti e pertinenti, indipendentemente da dove e quando interagiscono con il tuo marchio. Con [!DNL Real-time Customer Profile] puoi visualizzare una visualizzazione olistica di ogni singolo cliente combinando dati provenienti da più canali, inclusi online, offline, CRM e di terze parti. [!DNL Profile] consente di consolidare i dati dei clienti in una visualizzazione unificata che offre un account utilizzabile e con marca temporale per ogni interazione con il cliente. Questa panoramica ti aiuterà a comprendere il ruolo e l’utilizzo di [!DNL Real-time Customer Profile] in [!DNL Experience Platform].
 
 ## [!DNL Profile] in Experience Platform
 
@@ -28,13 +28,13 @@ Il rapporto tra Profilo cliente in tempo reale e altri servizi all’interno di 
 
 ### Archiviazione dati profilo
 
-Sebbene [!DNL Real-time Customer Profile] elabori i dati acquisiti e utilizzi Adobe Experience Platform [!DNL Identity Service] per unire i dati correlati tramite la mappatura dell’identità, mantiene i propri dati nell’archivio dati [!DNL Profile]. L&#39;archivio [!DNL Profile] è separato dai dati del catalogo nel data lake e dai dati [!DNL Identity Service] nel grafico delle identità.
+Anche se [!DNL Real-time Customer Profile] elabora i dati acquisiti e utilizza Adobe Experience Platform [!DNL Identity Service] per unire i dati correlati tramite la mappatura dell&#39;identità, mantiene i propri dati nell&#39;archivio dati [!DNL Profile]. L&#39;archivio [!DNL Profile] è separato dai dati del catalogo nel data lake e dai dati [!DNL Identity Service] nel grafico delle identità.
 
 L’archivio profili utilizza un’infrastruttura database Cosmos di Microsoft Azure e Platform Data Lake utilizza l’archiviazione Data Lake di Microsoft Azure.
 
 ### Guardrail profilo
 
-Experience Platform offre una serie di protezioni per evitare di creare schemi [Experience Data Model (XDM)](../xdm/home.md) che non possono essere supportati dal Profilo cliente in tempo reale. Ciò include i limiti soft che si traducono in deterioramento delle prestazioni, nonché i limiti rigidi che si traducono in errori e interruzioni del sistema. Per ulteriori informazioni, tra cui un elenco di linee guida e casi di utilizzo di esempio, consulta la documentazione [Profile guardrails](guardrails.md) .
+Experience Platform fornisce una serie di protezioni per evitare di creare schemi [Experience Data Model (XDM)](../xdm/home.md) che non possono essere supportati dal Profilo cliente in tempo reale. Ciò include i limiti soft che si traducono in deterioramento delle prestazioni, nonché i limiti rigidi che si traducono in errori e interruzioni del sistema. Per ulteriori informazioni, tra cui un elenco di linee guida e casi di utilizzo di esempio, consulta la documentazione [Profile guardrails](guardrails.md) .
 
 ### (Beta) Dashboard del profilo {#profile-dashboard}
 
@@ -42,7 +42,7 @@ Experience Platform offre una serie di protezioni per evitare di creare schemi [
 >
 >La funzionalità del dashboard è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
 
-L’interfaccia utente di Experience Platform offre un dashboard in cui è possibile visualizzare informazioni importanti sui dati del profilo cliente in tempo reale, acquisite durante un’istantanea giornaliera. Per informazioni su come accedere e lavorare con il dashboard [!DNL Profile] nell’interfaccia utente e sulle metriche visualizzate nel dashboard, consulta la [Guida all’interfaccia utente del dashboard del profilo](ui/profile-dashboard.md) .
+L’interfaccia utente di Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sui dati del profilo cliente in tempo reale, acquisiti durante un’istantanea giornaliera. Per informazioni su come accedere e lavorare con il dashboard [!DNL Profile] nell’interfaccia utente e sulle metriche visualizzate nel dashboard, consulta la [Guida all’interfaccia utente del dashboard del profilo](ui/profile-dashboard.md) .
 
 ### Frammenti di profilo e profili uniti {#profile-fragments-vs-merged-profiles}
 
@@ -80,11 +80,11 @@ Per ulteriori informazioni sugli schemi di unione, tra cui come accedere agli sc
 >
 >La funzionalità dell&#39;attributo calcolato è in alfa. La documentazione e le funzionalità sono soggette a modifiche.
 
-Gli attributi calcolati sono funzioni utilizzate per aggregare dati a livello di evento in attributi a livello di profilo. Queste funzioni vengono calcolate automaticamente in modo che possano essere utilizzate tra segmentazione, attivazione e personalizzazione. Questi calcoli consentono di rispondere facilmente a domande relative a fattori quali il valore di acquisto a vita, il tempo tra gli acquisti o il numero di aperture di applicazioni, senza che sia necessario eseguire manualmente calcoli complessi ogni volta che le informazioni sono necessarie. Per ulteriori informazioni sugli attributi calcolati, compreso il ruolo svolto dagli attributi calcolati all’interno di Adobe Experience Platform, consulta la [panoramica sugli attributi calcolati](computed-attributes/overview.md).
+Gli attributi calcolati sono funzioni utilizzate per aggregare dati a livello di evento in attributi a livello di profilo. Queste funzioni vengono calcolate automaticamente in modo che possano essere utilizzate tra segmentazione, attivazione e personalizzazione. Questi calcoli consentono di rispondere facilmente a domande relative a fattori quali il valore di acquisto a vita, il tempo tra gli acquisti o il numero di aperture di applicazioni, senza che sia necessario eseguire manualmente calcoli complessi ogni volta che le informazioni sono necessarie. Per ulteriori informazioni sugli attributi calcolati, compreso il ruolo svolto dagli attributi calcolati in Adobe Experience Platform, iniziare leggendo la [panoramica sugli attributi calcolati](computed-attributes/overview.md).
 
 ## Profili e segmenti
 
-Adobe Experience Platform [!DNL Segmentation Service] produce i tipi di pubblico necessari per fornire ai singoli clienti esperienze personalizzate. Quando crei un segmento di pubblico, l’ID di quel segmento viene aggiunto all’elenco delle appartenenze al segmento per tutti i profili qualificati. Le regole dei segmenti vengono create e applicate ai dati [!DNL Real-time Customer Profile] utilizzando le API RESTful e l’interfaccia utente di Generatore di segmenti. Per ulteriori informazioni sulla segmentazione, inizia leggendo la [Panoramica del servizio di segmentazione](../segmentation/home.md).
+Adobe Experience Platform [!DNL Segmentation Service] produce i tipi di pubblico necessari per sviluppare esperienze personalizzate per i singoli clienti. Quando crei un segmento di pubblico, l’ID di quel segmento viene aggiunto all’elenco delle appartenenze al segmento per tutti i profili qualificati. Le regole dei segmenti vengono create e applicate ai dati [!DNL Real-time Customer Profile] utilizzando le API RESTful e l’interfaccia utente di Generatore di segmenti. Per ulteriori informazioni sulla segmentazione, inizia leggendo la [Panoramica del servizio di segmentazione](../segmentation/home.md).
 
 ### Acquisizione in streaming e segmentazione in streaming
 
@@ -92,7 +92,7 @@ L’ingresso in tempo reale è possibile tramite un processo chiamato acquisizio
 
 ## Proiezioni del bordo
 
-Al fine di promuovere in tempo reale esperienze coordinate, coerenti e personalizzate per i clienti su più canali, i dati giusti devono essere prontamente disponibili e costantemente aggiornati man mano che si verificano cambiamenti. Adobe Experience Platform consente l’accesso in tempo reale ai dati tramite l’utilizzo dei cosiddetti edge. Un server perimetrale è un server collocato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni. Ad esempio, le applicazioni Adobe come Adobe Target e Adobe Campaign utilizzano i bordi per fornire esperienze cliente personalizzate in tempo reale. I dati vengono indirizzati a un bordo da una proiezione, con una destinazione di proiezione che definisce il bordo a cui i dati saranno inviati, e una configurazione di proiezione che definisce le informazioni specifiche che saranno rese disponibili sul bordo. Per ulteriori informazioni e iniziare a lavorare con le proiezioni utilizzando l&#39;API [!DNL Real-time Customer Profile], consulta la [guida agli endpoint di proiezione edge](api/edge-projections.md) .
+Al fine di promuovere in tempo reale esperienze coordinate, coerenti e personalizzate per i clienti su più canali, i dati giusti devono essere prontamente disponibili e costantemente aggiornati man mano che si verificano cambiamenti. Adobe Experience Platform consente l’accesso in tempo reale ai dati tramite l’utilizzo dei cosiddetti edge. Un server perimetrale è un server collocato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni. Ad Adobe, applicazioni come Adobe Target e Adobe Campaign utilizzano i bordi per offrire esperienze cliente personalizzate in tempo reale. I dati vengono indirizzati a un bordo da una proiezione, con una destinazione di proiezione che definisce il bordo a cui i dati saranno inviati, e una configurazione di proiezione che definisce le informazioni specifiche che saranno rese disponibili sul bordo. Per ulteriori informazioni e iniziare a lavorare con le proiezioni utilizzando l&#39;API [!DNL Real-time Customer Profile], consulta la [guida agli endpoint di proiezione edge](api/edge-projections.md) .
 
 ## Acquisizione di dati in [!DNL Profile]
 
@@ -100,7 +100,7 @@ Al fine di promuovere in tempo reale esperienze coordinate, coerenti e personali
 
 >[!NOTE]
 >
->I dati raccolti attraverso le soluzioni Adobe, compresi [!DNL Analytics Cloud], [!DNL Marketing Cloud] e [!DNL Advertising Cloud], scorrono in [!DNL Experience Platform] e vengono acquisiti in [!DNL Profile].
+>I dati raccolti attraverso le soluzioni di Adobe, compresi [!DNL Analytics Cloud], [!DNL Marketing Cloud] e [!DNL Advertising Cloud], scorrono in [!DNL Experience Platform] e vengono acquisiti in [!DNL Profile].
 
 ### Metriche di acquisizione del profilo
 
@@ -123,4 +123,4 @@ Per quanto riguarda l’accesso ai dati, la governance dei dati svolge un ruolo 
 
 ## Passaggi successivi e risorse aggiuntive
 
-Per ulteriori informazioni sull’utilizzo dei dati [!DNL Real-time Customer Profile] tramite l’interfaccia utente di Experience Platform o l’API di profilo, inizia leggendo rispettivamente la [guida all’interfaccia utente di profilo](ui/user-guide.md) o la [guida per gli sviluppatori API](api/overview.md) .
+Per ulteriori informazioni sull’utilizzo dei dati [!DNL Real-time Customer Profile] tramite l’interfaccia utente di Experience Platform o l’API di profilo, inizia leggendo rispettivamente la [Guida per gli sviluppatori dell’interfaccia utente di profilo](ui/user-guide.md) o la [Guida per gli sviluppatori API](api/overview.md) .
