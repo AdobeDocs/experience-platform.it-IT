@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;argomenti popolari;shopify;Shopify
 solution: Experience Platform
 title: Creare una connessione sorgente casuale nell’interfaccia utente
-topic: ' - Panoramica'
+topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione Shopify sorgente utilizzando l’interfaccia utente Adobe Experience Platform.
+exl-id: 527cac95-3d9a-4089-98e4-66d746641b85
 translation-type: tm+mt
-source-git-commit: cc23228cb410dc4c70a56c5142be00c2ca1c40d3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '435'
 ht-degree: 1%
 
 ---
-
 
 # Creare una connessione sorgente [!DNL Shopify] nell&#39;interfaccia utente
 
