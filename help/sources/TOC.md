@@ -3,11 +3,11 @@ audience: user
 user-guide-title: Guida ai connettori di origini di Adobe Experience Platform
 breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
-feature: Data Ingestion, Sources
+feature: Acquisizione dei dati, origini
 translation-type: tm+mt
-source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
+source-git-commit: fb24f7cf82038a38c2861bd84404531062e47485
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '606'
 ht-degree: 10%
 
 ---
@@ -65,6 +65,7 @@ ht-degree: 10%
       - [Connettore GreenPlum](connectors/databases/greenplum.md)
       - [Connettore HP Vertica](connectors/databases/hp-vertica.md)
       - [Connettore IBM DB2](connectors/databases/ibm-db2.md)
+      - [Connettore MariaDB](connectors/databases/mariadb.md)
       - [Connettore Microsoft SQL Server](connectors/databases/sql-server.md)
       - [Connettore MySQL](connectors/databases/mysql.md)
       - [Connettore Oracle](connectors/databases/oracle.md)
@@ -113,6 +114,7 @@ ht-degree: 10%
          - [Plum verde](tutorials/api/create/databases/greenplum.md)
          - [HP Vertica](tutorials/api/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/api/create/databases/ibm-db2.md)
+         - [MariaDB](tutorials/api/create/databases/mariadb.md)
          - [MySQL](tutorials/api/create/databases/mysql.md)
          - [ Oracle](tutorials/api/create/databases/oracle.md)
          - [Fenice](tutorials/api/create/databases/phoenix.md)
@@ -198,6 +200,7 @@ ht-degree: 10%
          - [Plum verde](tutorials/ui/create/databases/greenplum.md)
          - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
+         - [MariaDB](tutorials/ui/create/databases/mariadb.md)
          - [Microsoft SQL Server](tutorials/ui/create/databases/sql-server.md)
          - [MySQL](tutorials/ui/create/databases/mysql.md)
          - [ Oracle](tutorials/ui/create/databases/oracle.md)
