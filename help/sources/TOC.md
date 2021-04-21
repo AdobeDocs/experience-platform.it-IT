@@ -5,9 +5,9 @@ breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 feature: Acquisizione dei dati, origini
 translation-type: tm+mt
-source-git-commit: fb24f7cf82038a38c2861bd84404531062e47485
+source-git-commit: 121e2f410acdcd6de3953c6063a15901c853dd07
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '610'
 ht-degree: 10%
 
 ---
@@ -79,6 +79,8 @@ ht-degree: 10%
       - [Connettore PayPal](connectors/payments/paypal.md)
    - Protocolli {#protocols}
       - [Connettore OData generico](connectors/protocols/odata.md)
+   - Streaming {#streaming}
+      - [Connettore API HTTP](connectors/streaming/http.md)
 - Esercitazioni API {#api-tutorials}
    - Creare una connessione sorgente {#create}
       - Pubblicità {#advertising}
