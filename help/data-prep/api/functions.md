@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;argomenti popolari;preparazione dati;guida api;schemi;
 solution: Experience Platform
 title: Endpoint API per gli schemi
-topic: schemi
-description: 'Puoi utilizzare l''endpoint `/function` nell''API di Adobe Experience Platform per convalidare le espressioni di mappatura e elencare le funzioni disponibili per i set di mappatura. '
+topic-legacy: schemas
+description: Puoi utilizzare l'endpoint `/function` nell'API di Adobe Experience Platform per convalidare le espressioni di mappatura e elencare le funzioni disponibili per i set di mappatura.
+exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
 translation-type: tm+mt
-source-git-commit: 60c80a73deb8c77f19d5963cc3319d46143fb4c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '210'
 ht-degree: 2%
 
 ---
-
 
 # Endpoint delle funzioni
 
