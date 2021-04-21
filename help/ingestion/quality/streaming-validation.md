@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;argomenti comuni;streaming;acquisizione streaming;convalida streaming ingestion;convalida;convalida Streaming ingestion;convalida;convalida sincrona;convalida sincrona;convalida asincrona;convalida asincrona;
 solution: Experience Platform
 title: Convalida dell’acquisizione in streaming
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: L’acquisizione in streaming ti consente di caricare i dati in Adobe Experience Platform utilizzando gli endpoint di streaming in tempo reale. Le API Streaming Ingestion supportano due modalità di convalida, sincrone e asincrona.
+exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '898'
 ht-degree: 3%
 
 ---
-
 
 # Convalida dell’acquisizione in streaming
 
