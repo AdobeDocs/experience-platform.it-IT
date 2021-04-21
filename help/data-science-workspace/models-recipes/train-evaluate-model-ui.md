@@ -2,17 +2,17 @@
 keywords: Experience Platform;formazione e valutazione;Data Science Workspace;argomenti comuni;creare un modello;creare un'esecuzione di formazione
 solution: Experience Platform
 title: Formazione e valutazione di un modello nell’interfaccia utente di Data Science Workspace
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: In Adobe Experience Platform Data Science Workspace, viene creato un modello di apprendimento automatico incorporando una composizione esistente appropriata per l'intento del modello. Il modello viene quindi addestrato e valutato per ottimizzarne l'efficienza operativa e l'efficacia, regolando con precisione i relativi Hyperparameters associati. Le ricette sono riutilizzabili, il che significa che è possibile creare più modelli e personalizzarli per scopi specifici con un'unica ricetta.
+exl-id: 6f674cfa-c123-46a3-80e2-9342fe687976
 translation-type: tm+mt
-source-git-commit: 52415eb572a82f18f6daa3f45be1c670cae98b83
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1085'
+source-wordcount: '1083'
 ht-degree: 1%
 
 ---
-
 
 # Formazione e valutazione di un modello nell’interfaccia utente di Data Science Workspace
 
