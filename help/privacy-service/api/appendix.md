@@ -1,63 +1,63 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari'
+keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
-title: Appendice della guida API Privacy Service
-topic: developer guide
-description: Questo documento contiene informazioni aggiuntive per l'utilizzo dell'API Privacy Service.
+title: Appendice della guida API di Privacy Service
+topic-legacy: developer guide
+description: Questo documento contiene informazioni aggiuntive sull’utilizzo dell’API Privacy Service.
+exl-id: 7099e002-b802-486e-8863-0630d66e330f
 translation-type: tm+mt
-source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 9%
 
 ---
 
+# Appendice della guida API di Privacy Service
 
-# Appendice della guida API Privacy Service
+Le sezioni seguenti contengono informazioni aggiuntive per l’utilizzo dell’API Adobe Experience Platform Privacy Service.
 
-Le sezioni seguenti contengono informazioni aggiuntive per l&#39;utilizzo dell&#39;API Adobe Experience Platform Privacy Service .
+## Namespace di identità standard {#standard-namespaces}
 
-## Spazi dei nomi identità standard {#standard-namespaces}
+Tutte le identità inviate a [!DNL Privacy Service] devono essere fornite in uno specifico spazio dei nomi di identità. Gli spazi dei nomi di identità sono un componente di [Servizio Adobe Experience Platform Identity](../../identity-service/home.md) che indica il contesto a cui si riferisce un’identità.
 
-Tutte le identità inviate a [!DNL Privacy Service] devono essere fornite in uno spazio nomi identità specifico. Gli spazi dei nomi delle identità sono un componente di [Adobe Experience Platform Identity Service](../../identity-service/home.md) che indica il contesto a cui si riferisce un&#39;identità.
-
-Nella tabella seguente sono riportati diversi tipi di identità predefiniti di uso comune resi disponibili da [!DNL Experience Platform], insieme ai relativi valori `namespace` associati:
+La tabella seguente illustra diversi tipi di identità predefiniti di uso comune resi disponibili da [!DNL Experience Platform], insieme ai relativi valori `namespace` associati:
 
 | Tipo di identità | `namespace` | `namespaceId` |
 | --- | --- | --- |
 | E-mail | E-mail | 6 |
 | Telefono | Telefono | 7 |
 | ID Adobe Advertising Cloud | AdCloud | 411 |
-| Adobe Audience Manager UUID | CORE | 0 |
+| UUID Adobe Audience Manager | CORE | 0 |
 | ID Adobe Experience Cloud | ECID | 4 |
-| ID Adobe Target  | TNTID | 9 |
-| [!DNL Apple] ID per inserzionisti | IDFA | 2015 |
-| [!DNL Google] ID annuncio | GAID | 2014 |
-| [!DNL Windows] AID | WAID | 8 |
+| Adobe Target ID | TNTID | 9 |
+| [!DNL Apple] ID per gli inserzionisti | IDFA | 20915 |
+| [!DNL Google] ID annuncio | GAID | 20914 |
+| [!DNL Windows] AIUTO | WAID | 8 |
 
 >[!NOTE]
 >
->Ogni tipo di identità ha anche un valore intero `namespaceId`, che può essere utilizzato al posto della stringa `namespace` quando si imposta la proprietà `type` dell&#39;identità su &quot;namespaceId&quot;. Per ulteriori informazioni, vedere la sezione relativa ai [qualificatori dello spazio nomi](#namespace-qualifiers).
+>Ogni tipo di identità ha anche un valore intero `namespaceId`, che può essere utilizzato al posto della stringa `namespace` quando si imposta la proprietà `type` dell&#39;identità su &quot;namespaceId&quot;. Per ulteriori informazioni, consulta la sezione sui [qualificatori dello spazio dei nomi](#namespace-qualifiers) .
 
-È possibile recuperare un elenco di spazi dei nomi di identità utilizzati dalla propria organizzazione effettuando una richiesta di GET all&#39;endpoint `idnamespace/identities` nell&#39;API [!DNL Identity Service]. Per ulteriori informazioni, vedere la [Guida per gli sviluppatori del servizio identità](../../identity-service/api/getting-started.md).
+Puoi recuperare un elenco di namespace di identità utilizzati dalla tua organizzazione effettuando una richiesta di GET all’ endpoint `idnamespace/identities` nell’ API [!DNL Identity Service] . Per ulteriori informazioni, consulta la [Guida per gli sviluppatori del servizio Identity](../../identity-service/api/getting-started.md) .
 
 ## Qualificatori dello spazio dei nomi
 
-Quando si specifica un valore `namespace` nell&#39;API [!DNL Privacy Service], è necessario includere un **qualificatore dello spazio dei nomi** in un parametro `type` corrispondente. La tabella seguente delinea i diversi qualificatori dello spazio nomi accettati.
+Quando si specifica un valore `namespace` nell&#39;API [!DNL Privacy Service], un **qualificatore dello spazio dei nomi** deve essere incluso in un parametro corrispondente `type`. Nella tabella seguente sono descritti i diversi qualificatori dello spazio dei nomi accettati.
 
 | Qualificatore | Definizione |
 | --------- | ---------- |
-| Standard | Uno degli spazi dei nomi standard definiti a livello globale, non legato a un singolo set di dati organizzazione (ad esempio, e-mail, numero di telefono, ecc.). ID spazio nomi fornito. |
-| custom | Uno spazio nomi univoco creato nel contesto di un&#39;organizzazione, non condiviso tra [!DNL Experience Cloud]. Il valore rappresenta il nome descrittivo (&quot;nome&quot; campo) da cercare. ID spazio nomi fornito. |
-| integrationCode | Codice di integrazione - simile a &quot;personalizzato&quot;, ma specificamente definito come codice di integrazione di un&#39;origine dati da cercare. ID spazio nomi fornito. |
-| namespaceId | Indica che il valore è l&#39;ID effettivo dello spazio dei nomi che è stato creato o mappato tramite il servizio dello spazio dei nomi. |
-| non registrato | Stringa a forma libera non definita nel servizio namespace e utilizzata come &quot;as is&quot;. Tutte le applicazioni che gestiscono questi tipi di spazi dei nomi li confrontano e gestiscono, se appropriato, il contesto della società e il set di dati. Non è stato fornito alcun ID spazio nomi. |
-| analytics | Spazio dei nomi personalizzato mappato internamente in [!DNL Analytics], non nel servizio namespace. Questo viene passato direttamente come specificato dalla richiesta originale, senza un ID spazio nomi |
-| target | Uno spazio nomi personalizzato compreso internamente da [!DNL Target], non nel servizio namespace. Questo viene passato direttamente come specificato dalla richiesta originale, senza un ID spazio nomi |
+| Standard | Uno dei namespace standard definiti a livello globale, non associato a un singolo set di dati dell’organizzazione (ad esempio e-mail, numero di telefono, ecc.). ID dello spazio dei nomi fornito. |
+| personalizzato | Uno spazio dei nomi univoco creato nel contesto di un&#39;organizzazione, non condiviso in [!DNL Experience Cloud]. Il valore rappresenta il nome descrittivo (&quot;nome&quot; campo) da cercare. ID dello spazio dei nomi fornito. |
+| integrationCode | Codice di integrazione : simile a &quot;personalizzato&quot;, ma definito in modo specifico come codice di integrazione di un’origine dati da cercare. ID dello spazio dei nomi fornito. |
+| namespaceId | Indica che il valore è l&#39;ID effettivo dello spazio dei nomi creato o mappato tramite il servizio namespace. |
+| non registrato | Una stringa a forma libera non definita nel servizio namespace e acquisita &quot;così com&#39;è&quot;. Qualsiasi applicazione che gestisce questi tipi di spazi dei nomi li confronta e gestisce, se appropriato, il contesto aziendale e il set di dati. Non viene fornito alcun ID spazio dei nomi. |
+| analytics | Spazio dei nomi personalizzato mappato internamente in [!DNL Analytics], non nel servizio namespace. Viene passato direttamente come specificato dalla richiesta originale, senza un ID dello spazio dei nomi |
+| target | Uno spazio dei nomi personalizzato compreso internamente da [!DNL Target], non nel servizio namespace. Viene passato direttamente come specificato dalla richiesta originale, senza un ID dello spazio dei nomi |
 
 ## Valori di prodotto accettati
 
-Nella tabella seguente sono riportati i valori accettati per specificare un prodotto  Adobe nell&#39;attributo `include` di una richiesta di creazione di un processo.
+La tabella seguente illustra i valori accettati per specificare un prodotto di Adobe nell&#39;attributo `include` di una richiesta di creazione di un processo.
 
 | Prodotto | Valore da utilizzare nell&#39;attributo `include` |
 --- | ---
@@ -66,7 +66,7 @@ Nella tabella seguente sono riportati i valori accettati per specificare un prod
 | Adobe Audience Manager | &quot;AudienceManager&quot; |
 | Adobe Campaign | &quot;Campaign&quot; |
 | Adobe Experience Platform | &quot;aepDataLake&quot; |
-| Autenticazione  Adobe Primetime | &quot;primetimeAuthentication&quot; |
+| Autenticazione Adobe Primetime | &quot;primetimeAuthentication&quot; |
 | Adobe Target | &quot;Target&quot; |
 | Servizio Record cliente | &quot;CRS&quot; |
 | Profilo cliente in tempo reale | &quot;ProfileService&quot; |
