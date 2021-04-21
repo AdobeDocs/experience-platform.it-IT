@@ -1,21 +1,21 @@
 ---
-keywords: ' Experience Platform;home;argomenti più comuni;schema;schema;XDM;campi;schemi;schemi;geo;cerchio;tipo di dati;tipo di dati;tipo di dati;'
+keywords: Experience Platform;home;argomenti comuni;schema;schema;XDM;campi;schemi;schemi;schemi;geo;cerchio;tipo di dati;tipo di dati;tipo di dati;tipo di dati;
 solution: Experience Platform
 title: Tipo di dati del cerchio geografico
-topic: overview
-description: Questo documento fornisce una panoramica del tipo di dati XDM Geo Circle.
+topic-legacy: overview
+description: Questo documento fornisce una panoramica del tipo di dati XDM di Geo Circle.
+exl-id: fa041f4f-9955-44e9-b235-a643e07d402c
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '127'
 ht-degree: 3%
 
 ---
 
-
 # [!UICONTROL Geo Circle] tipo di dati
 
-[!UICONTROL Geo Circle] è un tipo di dati XDM standard che descrive l&#39;area geografica circolare, in base a un raggio particolare centrato su un insieme specifico di coordinate. Questo tipo di dati è basato sulle specifiche pubbliche documentate in [schema.org](http://schema.org/GeoCircle).
+[!UICONTROL Geo Circle] è un tipo di dati XDM standard che descrive una regione geografica circolare, in base a un raggio particolare centrato su un insieme specifico di coordinate. Questo tipo di dati si basa sulle specifiche pubbliche documentate su [schema.org](http://schema.org/GeoCircle).
 
 <img src="../images/data-types/geo-circle.png" width="400" /><br />
 
