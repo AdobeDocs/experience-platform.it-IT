@@ -1,35 +1,35 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;schema;schema;XDM;ExperienceEvent;fields;schemi;Schema design;mixin;mixin;environment;environment details;'
+keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;ExperienceEvent;campi;schemi;schemi;progettazione schema;mixin;mixin;ambiente;dettagli ambiente;
 solution: Experience Platform
-title: Mixin dettagli ambiente
-topic: overview
-description: Questo documento fornisce una panoramica del mixin Dettagli ambiente ExperienceEvent.
+title: Dettagli ambiente Mixin
+topic-legacy: overview
+description: Questo documento fornisce una panoramica del mixin Dettagli ambiente ExperienceEvent .
+exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '194'
 ht-degree: 2%
 
 ---
 
-
-# [!UICONTROL Environment Details] mixin
+# [!UICONTROL Environment Details] mescolina
 
 >[!NOTE]
 >
->I nomi di diversi mixin sono cambiati. Per ulteriori informazioni, consulta il documento relativo agli [aggiornamenti del nome del mixin](../name-updates.md).
+>I nomi di diversi mixin sono cambiati. Per ulteriori informazioni, consulta il documento sugli [aggiornamenti dei nomi mixin](../name-updates.md) .
 
-[!UICONTROL Environment Details] è un mixin standard per l&#39; [[!DNL XDM ExperienceEvent] ](../../classes/individual-profile.md) aula utilizzata per acquisire informazioni relative ai dettagli dell&#39;ambiente relativi a un evento di esperienza, come i dettagli del dispositivo, le informazioni del browser, l&#39;ora locale e altre informazioni geografiche.
+[!UICONTROL Environment Details] è un mixin standard per la  [[!DNL XDM ExperienceEvent] ](../../classes/individual-profile.md) classe utilizzata per acquisire informazioni relative ai dettagli dell’ambiente relativi a un evento di esperienza, come dettagli del dispositivo, informazioni sul browser, ora locale e altre informazioni geografiche.
 
 <img src="../../images/mixins/environment-details.png" width="500" /><br />
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `device` | [Dispositivo](../../data-types/device.md) | Descrive un&#39;istanza del browser del dispositivo, dell&#39;applicazione o del dispositivo identificata che può essere tracciata tra le sessioni, in genere dai cookie. |
-| `environment` | [Ambiente](../../data-types/environment.md) | Descrive le informazioni sul contesto situazionale dell&#39;osservazione dell&#39;evento, specificando in particolare le informazioni transitorie come le versioni di rete o software. |
-| `placeContext` | [Inserisci contesto](../../data-types/place-context.md) | Descrive le circostanze transitorie relative all&#39;osservazione dell&#39;evento. Alcuni esempi includono informazioni specifiche per le impostazioni internazionali come il tempo, l&#39;ora locale, il traffico, il giorno della settimana, il giorno lavorativo rispetto alle festività e l&#39;orario di lavoro. |
+| `device` | [Dispositivo](../../data-types/device.md) | Descrive un&#39;istanza identificata del browser del dispositivo, dell&#39;applicazione o del dispositivo che può essere monitorata tra sessioni, normalmente tramite cookie. |
+| `environment` | [Ambiente](../../data-types/environment.md) | Descrive le informazioni sul contesto situazionale dell&#39;osservazione dell&#39;evento, specificatamente specificando informazioni transitorie come le versioni di rete o software. |
+| `placeContext` | [Posizionare il contesto](../../data-types/place-context.md) | Descrive le circostanze transitorie relative all&#39;osservazione dell&#39;evento. Gli esempi includono informazioni specifiche per le impostazioni internazionali, ad esempio il tempo, l’ora locale, il traffico, il giorno della settimana, il giorno lavorativo rispetto a festivo e l’orario di lavoro. |
 
-Per ulteriori dettagli sul mixin, fare riferimento al repository XDM pubblico:
+Per ulteriori dettagli sul mixin, consulta l’archivio XDM pubblico:
 
-* [Esempio compilato](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-environment-details.example.1.json)
+* [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-environment-details.example.1.json)
 * [Schema completo](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-environment-details.schema.json)
