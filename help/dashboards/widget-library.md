@@ -2,15 +2,15 @@
 keywords: Experience Platform;interfaccia utente;interfaccia utente;dashboard;dashboard;profili;segmenti;destinazioni;utilizzo licenza
 title: Utilizzo della libreria Widget per aggiungere e creare widget dashboard
 description: 'Questa guida fornisce istruzioni dettagliate per l’aggiunta di widget standard e la creazione di widget personalizzati per la visualizzazione dei dati del dashboard in Adobe Experience Platform. '
-topic: guida
+topic-legacy: guide
+exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
 translation-type: tm+mt
-source-git-commit: 27444a0106eacbd69149168d7439773ebbb26119
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '974'
 ht-degree: 1%
 
 ---
-
 
 # (Beta) Libreria widget {#widget-library}
 
