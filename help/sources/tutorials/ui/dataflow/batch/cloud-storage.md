@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;argomenti popolari;flusso di dati;Flusso di dati
 solution: Experience Platform
 title: Configurare un flusso di dati per un connettore batch di archiviazione cloud nell’interfaccia utente
-topic: ' - Panoramica'
+topic-legacy: overview
 type: Tutorial
 description: Un flusso di dati è un’attività pianificata che recupera e acquisisce dati da un’origine a un set di dati della Platform. Questa esercitazione fornisce i passaggi per configurare un nuovo flusso di dati utilizzando l'account di archiviazione cloud.
+exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
 translation-type: tm+mt
-source-git-commit: 1fb4a272a914bf4ce7653f3f4f7fff63f36f9a48
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1853'
+source-wordcount: '1851'
 ht-degree: 0%
 
 ---
-
 
 # Configurare un flusso di dati per una connessione batch di archiviazione cloud nell’interfaccia utente
 
@@ -106,7 +106,7 @@ Viene visualizzata la finestra di dialogo **[!UICONTROL Select dataset]**. Trova
 
 **Utilizzare un nuovo set di dati**
 
-Per acquisire dati in un nuovo set di dati, seleziona **[!UICONTROL New dataset]** e immetti un nome e una descrizione per il set di dati nei campi forniti. Per aggiungere uno schema, è possibile immettere un nome di schema esistente nella finestra di dialogo **[!UICONTROL Select schema]**. In alternativa, è possibile selezionare **[!UICONTROL Schema advanced search]** per cercare uno schema appropriato.
+Per acquisire i dati in un nuovo set di dati, seleziona **[!UICONTROL New dataset]** e immetti un nome e una descrizione per il set di dati nei campi forniti. Per aggiungere uno schema, è possibile immettere un nome di schema esistente nella finestra di dialogo **[!UICONTROL Select schema]**. In alternativa, è possibile selezionare **[!UICONTROL Schema advanced search]** per cercare uno schema appropriato.
 
 Durante questo passaggio, puoi abilitare il set di dati per [!DNL Real-time Customer Profile] e creare una visualizzazione olistica degli attributi e dei comportamenti di un’entità. I dati di tutti i set di dati abilitati verranno inclusi in [!DNL Profile] e le modifiche vengono applicate al salvataggio del flusso di dati.
 
