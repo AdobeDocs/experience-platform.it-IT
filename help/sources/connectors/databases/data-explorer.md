@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;argomenti popolari;Azure Data Explorer;azure data explorer
 solution: Experience Platform
 title: Panoramica del connettore di origine di Azure Data Explorer
-topic: ' - Panoramica'
+topic-legacy: overview
 description: Scopri come collegare Azure Data Explorer a Adobe Experience Platform utilizzando le API o l’interfaccia utente.
+exl-id: 869bd8bb-51e6-4e0c-a3ec-ff083dda5789
 translation-type: tm+mt
-source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
-
 
 # (Beta) Connettore [!DNL Azure Data Explorer]
 
@@ -23,9 +23,9 @@ Adobe Experience Platform fornisce connettività nativa per provider di database
 
 Sono supportati diversi tipi di database di terze parti, tra cui relazionale, NoSQL o data warehouse. Il supporto per i provider di database include [!DNL Azure Data Explorer].
 
-## Elenco indirizzi IP consentiti
+## ELENCO CONSENTITI di indirizzo IP
 
-Prima di utilizzare i connettori sorgente, è necessario aggiungere a un elenco di indirizzi IP un elenco di indirizzi IP consentiti . Se non aggiungi gli indirizzi IP specifici per l’area geografica all’elenco Consentiti, potrebbero verificarsi errori o prestazioni non soddisfacenti durante l’utilizzo delle origini. Per ulteriori informazioni, consulta la pagina [Elenco indirizzi IP consentiti](../../ip-address-allow-list.md) .
+Prima di utilizzare i connettori sorgente, è necessario aggiungere a un elenco consentiti un elenco di indirizzi IP. Se l’utente non aggiunge all’elenco consentiti gli indirizzi IP specifici per l’area geografica, potrebbero verificarsi errori o prestazioni non soddisfacenti durante l’utilizzo delle origini. Per ulteriori informazioni, consulta la pagina [elenco consentiti indirizzo IP](../../ip-address-allow-list.md) .
 
 >[!IMPORTANT]
 >
