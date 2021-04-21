@@ -1,24 +1,23 @@
 ---
-keywords: Experience Platform ;home;argomenti popolari;panoramica sandbox
+keywords: Experience Platform;home;argomenti popolari;panoramica sandbox
 solution: Experience Platform
 title: Panoramica dell’interfaccia utente sandbox
-topic: user guide
-description: Adobe Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati e isolati. L’interfaccia utente della sandbox si trova nell’interfaccia  Experience Platform.
+topic-legacy: user guide
+description: Adobe Experience Platform fornisce sandbox virtuali che suddividono una singola istanza di Platform in ambienti virtuali separati e isolati. L’interfaccia utente della sandbox si trova all’interno dell’interfaccia utente di Experience Platform.
+exl-id: d86e282c-6231-490f-a6c8-dbd12bf2341e
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 0%
 
 ---
 
-
 # Panoramica dell’interfaccia utente sandbox
 
 
-Adobe Experience Platform fornisce sandbox virtuali che dividono una singola istanza della piattaforma in ambienti virtuali separati e isolati. L&#39;interfaccia utente sandbox si trova all&#39;interno dell&#39; [ interfaccia utente del Experience Platform](https://platform.adobe.com).
+Adobe Experience Platform fornisce sandbox virtuali che suddividono una singola istanza di Platform in ambienti virtuali separati e isolati. L’interfaccia utente della sandbox si trova all’interno dell’ [interfaccia utente di Experience Platform](https://platform.adobe.com).
 
-Dopo aver eseguito l&#39;accesso all&#39;interfaccia utente del Experience Platform , andate alla guida utente della sandbox [guida utente](user-guide.md) per informazioni su come eseguire varie attività nell&#39;area di lavoro della sandbox.
+Dopo aver effettuato l&#39;accesso all&#39;interfaccia utente Experience Platform, accedi alla [guida utente della sandbox](user-guide.md) per informazioni su come eseguire varie attività nell&#39;area di lavoro sandbox.
 
-Per istruzioni su come eseguire diverse operazioni mediante l&#39;API Sandbox, consultate la guida per gli sviluppatori [sandbox](../api/getting-started.md). Per una panoramica di alto livello delle sandbox in  Experience Platform, fate riferimento alla [documentazione di panoramica](../home.md).
-
+Per i passaggi sull’esecuzione di diverse operazioni tramite l’API Sandbox, consulta la [guida per gli sviluppatori di sandbox](../api/getting-started.md). Per una panoramica di alto livello delle sandbox in Experience Platform, fai riferimento alla [documentazione di panoramica](../home.md).
