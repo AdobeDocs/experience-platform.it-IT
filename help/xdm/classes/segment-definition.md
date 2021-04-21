@@ -1,16 +1,16 @@
 ---
 solution: Experience Platform
 title: Classe di definizione del segmento
-topic: ' - Panoramica'
+topic-legacy: overview
 description: Questo documento fornisce una panoramica della classe di definizione del segmento in Experience Data Model (XDM).
+exl-id: c0f7b04c-2266-4d08-89a1-67ba758a51a7
 translation-type: tm+mt
-source-git-commit: f4e80cc6a5e5e135bedb77b2d56ae5cb2c8d8c53
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '378'
 ht-degree: 0%
 
 ---
-
 
 # [!UICONTROL Segment definition] Classe
 
