@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;spazio dei nomi identità;spazio dei nomi identità
+keywords: Experience Platform;home;argomenti comuni;spazio dei nomi identità;spazio dei nomi identità
 solution: Experience Platform
 title: Guida alla risoluzione dei problemi del servizio Identity
-topic: risoluzione
+topic-legacy: troubleshooting
 description: Questo documento fornisce le risposte alle domande frequenti sul servizio Adobe Experience Platform Identity e una guida alla risoluzione dei problemi relativi agli errori comuni.
+exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2190'
+source-wordcount: '2189'
 ht-degree: 0%
 
 ---
 
-
 # Guida alla risoluzione dei problemi del servizio Identity
 
-Questo documento fornisce le risposte alle domande frequenti su Adobe Experience Platform [!DNL Identity Service] e una guida alla risoluzione dei problemi relativi agli errori comuni. Per domande e risoluzione dei problemi relativi alle [!DNL Platform] API in generale, consulta la [Guida alla risoluzione dei problemi relativi all’API di Adobe Experience Platform](../landing/troubleshooting.md).
+Questo documento fornisce le risposte alle domande frequenti su Adobe Experience Platform [!DNL Identity Service] e una guida alla risoluzione dei problemi relativi agli errori comuni. Per domande e risoluzione dei problemi relativi alle [!DNL Platform] API in generale, consulta la [Guida alla risoluzione dei problemi delle API Adobe Experience Platform](../landing/troubleshooting.md).
 
 I dati che identificano un singolo cliente sono spesso frammentati tra i vari dispositivi e sistemi utilizzati per interagire con il tuo marchio. [!DNL Identity Service] riunisce queste identità frammentate, facilitando una comprensione completa del comportamento dei clienti in modo da poter offrire esperienze digitali di impatto in tempo reale. Per ulteriori informazioni, consulta la [Panoramica del servizio Identity](./home.md).
 
@@ -25,7 +25,7 @@ Di seguito è riportato un elenco delle risposte alle domande frequenti su [!DNL
 
 ## Cosa sono i dati di identità?
 
-I dati di identità sono tutti i dati che possono essere utilizzati per identificare una singola persona. A seconda del contesto in cui i dati vengono utilizzati all’interno della tua organizzazione, i dati di identità possono includere nomi utente, indirizzi e-mail e ID dai sistemi CRM. I dati di identità non sono limitati agli utenti registrati del sito web o del servizio, in quanto gli utenti anonimi possono essere identificati anche dal loro ID dispositivo o cookie.
+I dati di identità sono tutti i dati che possono essere utilizzati per identificare una singola persona. A seconda del contesto in cui i dati vengono utilizzati all’interno della tua organizzazione, i dati di identità possono includere nomi utente, indirizzi e-mail e ID dai sistemi CRM. I dati di identità non sono limitati agli utenti registrati del tuo sito web o servizio, in quanto gli utenti anonimi possono essere identificati anche dal loro ID dispositivo o cookie.
 
 ## Qual è il vantaggio dell&#39;etichettatura dei campi di dati come identità?
 
@@ -79,11 +79,11 @@ I namespace di identità standard sono spazi dei nomi disponibili per tutte le o
 
 ## Dove posso trovare l’elenco dei namespace identità disponibili per la mia organizzazione?
 
-Utilizzando l’ [API del servizio Identity](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml), puoi elencare tutti i namespace di identità disponibili per la tua organizzazione effettuando una richiesta GET all’endpoint `/idnamespace/identities`. Per ulteriori informazioni, consulta la sezione su [elencare i namespace disponibili](./api/list-namespaces.md) nella panoramica API del servizio Identity .
+Utilizzando l’ [API del servizio Identity](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml), puoi elencare tutti i namespace di identità disponibili per la tua organizzazione effettuando una richiesta di GET all’endpoint `/idnamespace/identities`. Per ulteriori informazioni, consulta la sezione su [elencare i namespace disponibili](./api/list-namespaces.md) nella panoramica API del servizio Identity .
 
 ## Come si crea uno spazio dei nomi personalizzato per la mia organizzazione?
 
-Utilizzando l’ [API del servizio Identity](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml), puoi creare uno spazio dei nomi di identità personalizzato per la tua organizzazione effettuando una richiesta POST all’endpoint `/idnamespace/identities`. Per ulteriori informazioni, consulta la sezione su [creazione di uno spazio dei nomi personalizzato](./api/create-custom-namespace.md) nella panoramica API del servizio Identity .
+Utilizzando l’ [API del servizio Identity](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml), puoi creare uno spazio dei nomi di identità personalizzato per la tua organizzazione effettuando una richiesta di POST all’endpoint `/idnamespace/identities`. Per ulteriori informazioni, consulta la sezione su [creazione di uno spazio dei nomi personalizzato](./api/create-custom-namespace.md) nella panoramica API del servizio Identity .
 
 ## Cosa sono le identità composite e gli XID?
 
