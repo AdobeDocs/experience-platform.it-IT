@@ -6,7 +6,7 @@ topic-legacy: ui guide
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro ricca che consente di interagire con gli elementi dati di profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio riquadri drag-and-drop utilizzati per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 875d3838e16a3b79fa9ab3ec61e4ffb15ea1cf20
 workflow-type: tm+mt
 source-wordcount: '1940'
 ht-degree: 0%
@@ -117,7 +117,7 @@ L’aggregazione viene ora aggiunta. Ora puoi selezionare la funzione di aggrega
 
 ![](../images/ui/segment-builder/filled-aggregation.png)
 
-### Funzioni di conteggio
+### Funzioni di conteggio {#count-functions}
 
 Le funzioni di conteggio nel Generatore di segmenti vengono utilizzate per cercare eventi specifici e contare il numero di volte in cui vengono eseguiti. Le funzioni di conteggio supportate nel Generatore di segmenti sono &quot;Almeno&quot;, &quot;Al massimo&quot;, &quot;Esattamente&quot;, &quot;Tra&quot; e &quot;Tutto&quot;.
 
