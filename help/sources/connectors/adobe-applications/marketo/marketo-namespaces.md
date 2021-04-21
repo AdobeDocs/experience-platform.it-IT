@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;argomenti comuni;connettore sorgente Marketo;spazi dei nomi;schemi
 solution: Experience Platform
 title: 'namespace Marketo '
-topic: overview
+topic-legacy: overview
 description: Questo documento fornisce una panoramica dei namespace personalizzati necessari per la creazione di un connettore di origine del Marketo Engage.
 translation-type: tm+mt
-source-git-commit: 2563b413ec35cb4c5f05a54bce6f7271917e51f3
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1176'
 ht-degree: 3%
 
 ---
