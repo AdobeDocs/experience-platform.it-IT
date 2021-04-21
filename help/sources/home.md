@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 translation-type: tm+mt
-source-git-commit: 412d7c247353bfd30e134656140ba13f55d2ca07
+source-git-commit: 8edcb3697337edd0043f26553b92c31e52d3c87c
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '945'
 ht-degree: 0%
 
 ---
@@ -115,6 +115,13 @@ Experience Platform fornisce il supporto per l’acquisizione di dati da un sist
 Experience Platform fornisce il supporto per l’acquisizione di dati da un sistema di pagamenti di terze parti. Per ulteriori informazioni su connettori sorgente specifici, consulta i seguenti documenti correlati:
 
 - [[!DNL PayPal] connettore](connectors/payments/paypal.md)
+
+### Streaming
+
+Experience Platform supporta l’acquisizione di dati da sorgenti in streaming. Per ulteriori informazioni su connettori sorgente specifici, consulta i seguenti documenti correlati:
+
+- [[!DNL HTTP API]](connectors/streaming/http.md)
+
 
 ### Protocolli
 
