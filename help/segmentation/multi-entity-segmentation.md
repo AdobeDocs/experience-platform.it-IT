@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;servizio segmenti;segmenti;segmenti;multi-entità;segmentazione multi-entità;segmenti multi-entità;
 solution: Experience Platform
 title: Panoramica sulla segmentazione su più entità
-topic: ' - Panoramica'
+topic-legacy: overview
 description: La segmentazione su più entità consente di estendere i dati di profilo con dati aggiuntivi basati su prodotti, store o altre classi non di profilo. Una volta connessi, i dati provenienti da classi aggiuntive diventano disponibili come se fossero nativi dello schema Profilo.
+exl-id: 01a37fdc-2abe-4a84-b7da-fcbd141ff51f
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
-
 
 # Panoramica sulla segmentazione su più entità
 
@@ -24,7 +24,7 @@ La segmentazione su più entità richiede una comprensione funzionante dei vari 
 * [[!DNL Real-time Customer Profile]](../profile/home.md): Fornisce un profilo di consumatore unificato in tempo reale, basato su dati aggregati provenienti da più origini.
    * [Profili](../profile/guardrails.md): Best practice per la creazione di modelli di dati supportati da  [!DNL Profile].
 * [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Ti consente di creare segmenti dai  [!DNL Real-time Customer Profile] dati.
-* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Il framework standardizzato tramite il quale Experience Platform organizza i dati sulla customer experience.
+* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Il framework standardizzato in base al quale l’Experience Platform organizza i dati sulla customer experience.
    * [Nozioni di base sulla composizione](../xdm/schema/composition.md#union) dello schema: Scopri le best practice per la composizione degli schemi da utilizzare in Experience Platform.
 
 ## Casi di utilizzo
