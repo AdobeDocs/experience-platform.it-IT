@@ -1,39 +1,39 @@
 ---
-keywords: ' Experience Platform;guida allo sviluppo;SDK;Data Access SDK;Data Science Workspace;argomenti più comuni'
+keywords: Experience Platform;guida per sviluppatori;SDK;Data Access SDK;Data Science Workspace;argomenti comuni
 solution: Experience Platform
 title: Authoring dei modelli con l’SDK della piattaforma Adobe Experience Platform
-topic: SDK authoring
+topic-legacy: SDK authoring
 description: Questa esercitazione fornisce informazioni sulla conversione di data_access_sdk_python nel nuovo Python platform_sdk sia in Python che in R.
+exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 5%
 
 ---
 
+# Authoring del modello con l’SDK Adobe Experience Platform [!DNL Platform]
 
-# Authoring dei modelli con l&#39;SDK Adobe Experience Platform [!DNL Platform]
+Questa esercitazione fornisce informazioni sulla conversione di `data_access_sdk_python` nel nuovo Python `platform_sdk` sia in Python che in R. Questa esercitazione fornisce informazioni sulle seguenti operazioni:
 
-Questa esercitazione fornisce informazioni sulla conversione di `data_access_sdk_python` nel nuovo Python `platform_sdk` sia in Python che in R. Questa esercitazione fornisce informazioni sulle operazioni seguenti:
-
-- [Autenticazione build](#build-authentication)
+- [Creare l’autenticazione](#build-authentication)
 - [Lettura di base dei dati](#basic-reading-of-data)
-- [Scrittura di base dei dati](#basic-writing-of-data)
+- [Scrittura dei dati di base](#basic-writing-of-data)
 
-## Autenticazione build {#build-authentication}
+## Genera autenticazione {#build-authentication}
 
-L&#39;autenticazione è necessaria per effettuare chiamate a [!DNL Adobe Experience Platform] ed è composta da chiave API, ID organizzazione IMS, token utente e token di servizio.
+L’autenticazione è necessaria per effettuare chiamate a [!DNL Adobe Experience Platform] ed è composta da chiave API, ID organizzazione IMS, un token utente e un token di servizio.
 
-### Python
+### Pitone
 
-Se si utilizza il blocco appunti Jupyter, utilizzare il codice seguente per creare il `client_context`:
+Se utilizzi Jupyter Notebook, utilizza il codice seguente per creare il `client_context`:
 
 ```python
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Se non si utilizza il blocco appunti Jupyter o è necessario modificare l&#39;organizzazione IMS, utilizzare il seguente esempio di codice:
+Se non utilizzi Jupyter Notebook o hai bisogno di modificare l&#39;organizzazione IMS, utilizza il seguente codice di esempio:
 
 ```python
 from platform_sdk.client_context import ClientContext
@@ -45,7 +45,7 @@ client_context = ClientContext(api_key={API_KEY},
 
 ### R
 
-Se si utilizza il blocco appunti Jupyter, utilizzare il codice seguente per creare il `client_context`:
+Se utilizzi Jupyter Notebook, utilizza il codice seguente per creare il `client_context`:
 
 ```r
 library(reticulate)
@@ -56,7 +56,7 @@ py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
 client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Se non si utilizza il blocco appunti Jupyter o è necessario modificare l&#39;organizzazione IMS, utilizzare il seguente esempio di codice:
+Se non utilizzi Jupyter Notebook o hai bisogno di modificare l&#39;organizzazione IMS, utilizza il seguente codice di esempio:
 
 ```r
 library(reticulate)
@@ -70,22 +70,22 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## Lettura di base dei dati {#basic-reading-of-data}
 
-Con il nuovo SDK [!DNL Platform], la dimensione massima di lettura è 32 GB, con un tempo massimo di lettura di 10 minuti.
+Con il nuovo [!DNL Platform] SDK, la dimensione massima di lettura è di 32 GB, con un tempo massimo di lettura di 10 minuti.
 
-Se il tempo di lettura è troppo lungo, è possibile provare a utilizzare una delle seguenti opzioni di filtro:
+Se il tempo di lettura è troppo lungo, puoi provare a utilizzare una delle seguenti opzioni di filtro:
 
 - [Filtrare i dati per offset e limite](#filter-by-offset-and-limit)
 - [Filtrare i dati per data](#filter-by-date)
 - [Filtrare i dati per colonna](#filter-by-selected-columns)
-- [Ottenimento dei risultati ordinati](#get-sorted-results)
+- [Risultati ordinati](#get-sorted-results)
 
 >[!NOTE]
 >
->L&#39;organizzazione IMS è impostata all&#39;interno di `client_context`.
+>L’organizzazione IMS è impostata all’interno di `client_context`.
 
-### Python
+### Pitone
 
-Per leggere i dati in Python, si prega di utilizzare l&#39;esempio di codice seguente:
+Per leggere i dati in Python, si prega di utilizzare il codice di esempio qui sotto:
 
 ```python
 from platform_sdk.dataset_reader import DatasetReader
@@ -96,7 +96,7 @@ df.head()
 
 ### R
 
-Per leggere i dati in R, utilizzare l&#39;esempio di codice seguente:
+Per leggere i dati in R, utilizza il codice di esempio qui sotto:
 
 ```r
 DatasetReader <- psdk$dataset_reader$DatasetReader
@@ -105,11 +105,11 @@ df <- dataset_reader$read()
 df
 ```
 
-## Filtrare per offset e limite {#filter-by-offset-and-limit}
+## Filtra per offset e limite {#filter-by-offset-and-limit}
 
-Poiché il filtro per ID batch non è più supportato, per estendere la lettura dei dati è necessario utilizzare `offset` e `limit`.
+Poiché il filtro per ID batch non è più supportato, per poter estendere la lettura dei dati è necessario utilizzare `offset` e `limit`.
 
-### Python
+### Pitone
 
 ```python
 df = dataset_reader.limit(100).offset(1).read()
@@ -123,11 +123,11 @@ df <- dataset_reader$limit(100L)$offset(1L)$read()
 df
 ```
 
-## Filtrare per data {#filter-by-date}
+## Filtra per data {#filter-by-date}
 
-La granularità del filtro delle date ora è definita dalla marca temporale, anziché essere impostata dal giorno.
+La granularità del filtro data è ora definita dalla marca temporale, anziché essere impostata dal giorno.
 
-### Python
+### Pitone
 
 ```python
 df = dataset_reader.where(\
@@ -147,7 +147,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-Il nuovo SDK [!DNL Platform] supporta le seguenti operazioni:
+Il nuovo [!DNL Platform] SDK supporta le seguenti operazioni:
 
 | Funzionamento | Funzione |
 | --------- | -------- |
@@ -159,11 +159,11 @@ Il nuovo SDK [!DNL Platform] supporta le seguenti operazioni:
 | E (`&`) | `And()` |
 | Oppure (`|`) | `Or()` |
 
-## Filtra per colonne selezionate {#filter-by-selected-columns}
+## Filtra per le colonne selezionate {#filter-by-selected-columns}
 
-Per migliorare ulteriormente la lettura dei dati, è inoltre possibile filtrare in base al nome della colonna.
+Per perfezionare ulteriormente la lettura dei dati, puoi anche filtrare per nome della colonna.
 
-### Python
+### Pitone
 
 ```python
 df = dataset_reader.select(['column-a','column-b']).read()
@@ -177,11 +177,11 @@ df <- dataset_reader$select(c('column-a','column-b'))$read()
 
 ## Ottieni risultati ordinati {#get-sorted-results}
 
-I risultati ricevuti possono essere ordinati in base alle colonne specificate del dataset di destinazione e nel relativo ordine (asc/desc), rispettivamente.
+I risultati ricevuti possono essere ordinati in base a colonne specifiche del set di dati di destinazione e nell’ordine corrispondente (rispettivamente asc/desc).
 
-Nell&#39;esempio seguente, i dataframe vengono ordinati per &quot;colonna-a&quot; in ordine crescente. Le righe con gli stessi valori per &quot;colonna-a&quot; vengono quindi ordinate per &quot;colonna-b&quot; in ordine decrescente.
+Nell&#39;esempio seguente, il dataframe viene ordinato per &quot;column-a&quot; prima in ordine crescente. Le righe con gli stessi valori per &quot;colonna-a&quot; vengono quindi ordinate per &quot;colonna-b&quot; in ordine decrescente.
 
-### Python
+### Pitone
 
 ```python
 df = dataset_reader.sort([('column-a', 'asc'), ('column-b', 'desc')])
@@ -197,11 +197,11 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 >[!NOTE]
 >
->L&#39;organizzazione IMS è impostata all&#39;interno di `client_context`.
+>L’organizzazione IMS è impostata all’interno di `client_context`.
 
-Per scrivere dati in Python e R, utilizzare uno dei seguenti esempi:
+Per scrivere dati in Python e R, utilizza uno dei seguenti esempi:
 
-### Python
+### Pitone
 
 ```python
 from platform_sdk.models import Dataset
@@ -222,4 +222,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Passaggi successivi
 
-Una volta configurato il caricatore di dati `platform_sdk`, i dati vengono preparati e quindi suddivisi nei set di dati `train` e `val`. Per informazioni sulla preparazione dei dati e sulla progettazione di funzionalità, consultare la sezione relativa alla [preparazione dei dati e alla progettazione di funzionalità](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) nell&#39;esercitazione per la creazione di una ricetta con [!DNL JupyterLab] notebook.
+Dopo aver configurato il caricatore dati `platform_sdk`, i dati vengono preparati e quindi suddivisi nei set di dati `train` e `val`. Per informazioni sulla preparazione dei dati e sull&#39;ingegneria delle funzioni, visita la sezione relativa alla [preparazione dei dati e all&#39;ingegneria delle funzioni](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) nell&#39;esercitazione per la creazione di una ricetta utilizzando i notebook [!DNL JupyterLab].
