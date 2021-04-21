@@ -1,23 +1,23 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;segmentazione;segmentazione;Segmentation Service;pql;PQL;Profile Query Language;object function;object;'
+keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Servizio di segmentazione;pql;PQL;Lingua query profilo;funzioni oggetto;oggetto;
 solution: Experience Platform
 title: Funzioni dell'oggetto PQL
-topic: developer guide
-description: Il linguaggio PQL (Profile Query Language) offre funzioni che semplificano l'interazione con gli oggetti.
+topic-legacy: developer guide
+description: Il Profile Query Language (PQL) offre funzioni che semplificano l’interazione con gli oggetti.
+exl-id: e65257d8-5bc8-46c8-8487-33bc7ce4059b
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 4%
 
 ---
 
-
 # Funzioni dell&#39;oggetto
 
-[!DNL Profile Query Language] (PQL) offre funzioni che semplificano l&#39;interazione con gli oggetti. Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
+[!DNL Profile Query Language] (PQL) offre funzioni che semplificano l’interazione con gli oggetti. Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
 
-## Null
+## È nullo
 
 La funzione `isNull` determina se un riferimento a un oggetto non esiste.
 
@@ -29,7 +29,7 @@ La funzione `isNull` determina se un riferimento a un oggetto non esiste.
 
 **Esempio**
 
-La seguente query PQL verifica se l&#39;indirizzo della persona non esiste.
+La seguente query PQL controlla se l&#39;indirizzo di origine della persona non esiste.
 
 ```sql
 person.homeAddress.isNull()
@@ -47,7 +47,7 @@ La funzione `isNotNull` determina se esiste un riferimento a un oggetto.
 
 **Esempio**
 
-La seguente query PQL verifica se l&#39;indirizzo della persona esiste.
+La seguente query PQL controlla se l&#39;indirizzo di casa della persona esiste.
 
 ```sql
 person.homeAddress.isNotNull()
@@ -55,4 +55,4 @@ person.homeAddress.isNotNull()
 
 ## Passaggi successivi
 
-Dopo aver appreso le funzioni oggetto, è possibile utilizzarle nelle query PQL. Per ulteriori informazioni sulle altre funzioni PQL, leggere la [Panoramica del linguaggio di query profilo](./overview.md).
+Dopo aver appreso le funzioni oggetto, è possibile utilizzarle all&#39;interno delle query PQL. Per ulteriori informazioni sulle altre funzioni PQL, consulta la [Panoramica di Profile Query Language](./overview.md).
