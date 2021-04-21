@@ -1,21 +1,21 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;politiche efficaci;accedere all''API di controllo'
+keywords: Experience Platform;home;argomenti popolari;criteri efficaci;api di controllo accessi
 solution: Experience Platform
-title: Endpoint API criteri effettivi
-topic: developer guide
-description: Il controllo degli accessi in Adobe Experience Platform consente di gestire ruoli e autorizzazioni per diverse funzionalità della piattaforma utilizzando l'Adobe Admin Console. Questo documento funge da guida per la visualizzazione dei criteri effettivi tramite l'API di controllo degli accessi per Adobe Experience Platform.
+title: Endpoint API per criteri efficaci
+topic-legacy: developer guide
+description: Il controllo degli accessi in Adobe Experience Platform consente di gestire ruoli e autorizzazioni per varie funzionalità di Platform utilizzando Adobe Admin Console. Questo documento funge da guida per visualizzare i criteri efficaci utilizzando l’API di controllo accessi per Adobe Experience Platform.
+exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 1%
 
 ---
 
+# Endpoint criteri efficaci
 
-# Endpoint criteri effettivi
-
-Per visualizzare i criteri effettivi per l&#39;utente corrente, effettua una richiesta di POST all&#39;endpoint `/acl/effective-policies` nell&#39;API [!DNL Access Control]. Le autorizzazioni e i tipi di risorse che si desidera recuperare devono essere forniti nel payload della richiesta sotto forma di array. Questo è dimostrato nella chiamata API di esempio riportata di seguito.
+Per visualizzare i criteri effettivi per l’utente corrente, invia una richiesta POST all’endpoint `/acl/effective-policies` nell’ API [!DNL Access Control] . Le autorizzazioni e i tipi di risorse che si desidera recuperare devono essere forniti nel payload della richiesta sotto forma di array. Questo è dimostrato nell’esempio di chiamata API di seguito.
 
 **Formato API**
 
@@ -25,7 +25,7 @@ POST /acl/effective-policies
 
 **Richiesta**
 
-Le seguenti richieste recuperano informazioni sull&#39;autorizzazione &quot;[!UICONTROL Manage Datasets]&quot; e sull&#39;accesso al tipo di risorsa &quot;[!UICONTROL schemas]&quot; per l&#39;utente corrente.
+Le richieste seguenti recuperano informazioni sull&#39;autorizzazione &quot;[!UICONTROL Manage Datasets]&quot; e sull&#39;accesso al tipo di risorsa &quot;[!UICONTROL schemas]&quot; per l&#39;utente corrente.
 
 ```shell
 curl -X POST \
@@ -43,11 +43,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->Per un elenco completo delle autorizzazioni e dei tipi di risorse che possono essere forniti nell&#39;array di payload, vedere la sezione dell&#39;appendice sulle [autorizzazioni e sui tipi di risorse accettati](#accepted-permissions-and-resource-types).
+>Per un elenco completo delle autorizzazioni e dei tipi di risorse che possono essere forniti nell&#39;array di payload, consulta la sezione dell&#39;appendice sulle [autorizzazioni accettate e sui tipi di risorse](#accepted-permissions-and-resource-types).
 
 **Risposta**
 
-Una risposta corretta restituisce informazioni sulle autorizzazioni e i tipi di risorse forniti nella richiesta. La risposta include le autorizzazioni attive dell&#39;utente corrente per i tipi di risorse specificati nella richiesta. Se le autorizzazioni incluse nel payload della richiesta sono attive per l&#39;utente corrente, l&#39;API restituisce l&#39;autorizzazione con un asterisco (`*`) per indicare che l&#39;autorizzazione è attiva. Eventuali autorizzazioni fornite nella richiesta che non sono attive per l&#39;utente vengono omesse dal payload della risposta.
+Una risposta corretta restituisce informazioni sulle autorizzazioni e sui tipi di risorse forniti nella richiesta. La risposta include le autorizzazioni attive dell&#39;utente corrente per i tipi di risorse specificati nella richiesta. Se le autorizzazioni incluse nel payload della richiesta sono attive per l’utente corrente, l’API restituisce l’autorizzazione con un asterisco (`*`) per indicare che l’autorizzazione è attiva. Eventuali autorizzazioni fornite nella richiesta che non sono attive per l’utente vengono omesse dal payload della risposta.
 
 ```json
 {
@@ -66,15 +66,15 @@ Una risposta corretta restituisce informazioni sulle autorizzazioni e i tipi di 
 
 ## Passaggi successivi
 
-In questo documento è stato illustrato come effettuare chiamate all&#39;API [!DNL Access Control] per restituire informazioni sulle autorizzazioni attive e sui criteri correlati per i tipi di risorse. Per ulteriori informazioni sul controllo degli accessi per [!DNL Experience Platform], vedere la [panoramica sul controllo degli accessi](../home.md).
+Questo documento illustra come effettuare chiamate all’ API [!DNL Access Control] per restituire informazioni sulle autorizzazioni attive e sui criteri correlati per i tipi di risorse. Per ulteriori informazioni sul controllo degli accessi per [!DNL Experience Platform], consulta la [panoramica sul controllo degli accessi](../home.md).
 
 ## Appendice
 
-Questa sezione fornisce informazioni supplementari per l&#39;utilizzo dell&#39;API [!DNL Access Control].
+Questa sezione fornisce informazioni supplementari sull’utilizzo dell’API [!DNL Access Control].
 
 ### Autorizzazioni accettate e tipi di risorse
 
-Di seguito è riportato un elenco di autorizzazioni e tipi di risorse che potete includere nel payload di una richiesta di POST all&#39;endpoint `/acl/active-permissions`.
+Di seguito è riportato un elenco di autorizzazioni e tipi di risorse che è possibile includere nel payload di una richiesta POST per l’endpoint `/acl/active-permissions` .
 
 **Autorizzazioni**
 
