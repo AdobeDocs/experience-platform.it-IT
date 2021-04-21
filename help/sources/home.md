@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo tramite i servizi Platform. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, database e molti altri.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 translation-type: tm+mt
-source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
+source-git-commit: 412d7c247353bfd30e134656140ba13f55d2ca07
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '922'
 ht-degree: 0%
 
 ---
@@ -91,6 +91,7 @@ Experience Platform supporta l’acquisizione di dati da un database di terze pa
 - [[!DNL GreenPlum] connettore](connectors/databases/greenplum.md)
 - [[!DNL HP Vertica] connettore](connectors/databases/hp-vertica.md)
 - [[!DNL IBM DB2] connettore](connectors/databases/ibm-db2.md)
+- [[!DNL MariaDB] connettore](connectors/databases/mariadb.md)
 - [[!DNL Microsoft SQL Server] connettore](connectors/databases/sql-server.md)
 - [[!DNL MySQL] connettore](connectors/databases/mysql.md)
 - [[!DNL Oracle] connettore](connectors/databases/oracle.md)
