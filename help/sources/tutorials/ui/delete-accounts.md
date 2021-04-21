@@ -1,55 +1,55 @@
 ---
-keywords: ' Experience Platform;casa;argomenti popolari; delete accounts'
-description: I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente originati su base programmata. Questa esercitazione fornisce i passaggi per eliminare gli account dall'area di lavoro Origini.
+keywords: Experience Platform;home;argomenti popolari; eliminare gli account
+description: I connettori sorgente in Adobe Experience Platform consentono di acquisire dati provenienti dall’esterno su base pianificata. Questa esercitazione fornisce i passaggi per l'eliminazione degli account dall'area di lavoro Origini.
 solution: Experience Platform
 title: Eliminare gli account di connessione sorgente nell’interfaccia utente
-topic: overview
+topic-legacy: overview
 type: Tutorial
+exl-id: 7cb65d17-d99d-46ff-b28f-7469d0b57d07
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 0%
 
 ---
 
+# Elimina account di connessione di origine
 
-# Eliminazione degli account di connessione di origine
-
-I connettori di origine in Adobe Experience Platform consentono di trasferire i dati esternamente originati su base programmata. Questa esercitazione fornisce i passaggi per eliminare gli account dall&#39;area di lavoro **[!UICONTROL Sources]**.
+I connettori sorgente in Adobe Experience Platform consentono di acquisire dati provenienti dall’esterno su base pianificata. Questa esercitazione descrive i passaggi necessari per eliminare gli account dall&#39;area di lavoro **[!UICONTROL Sources]**.
 
 ## Introduzione
 
-Questa esercitazione richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa esercitazione richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)] Sistema](../../../xdm/home.md): Il framework standard con cui  [!DNL Experience Platform] organizzare i dati relativi all&#39;esperienza dei clienti.
-   - [Nozioni di base sulla composizione](../../../xdm/schema/composition.md) dello schema: Scoprite i componenti di base degli schemi XDM, inclusi i principi chiave e le procedure ottimali nella composizione dello schema.
-   - [Esercitazione](../../../xdm/tutorials/create-schema-ui.md) sull&#39;Editor di schema: Scoprite come creare schemi personalizzati utilizzando l&#39;interfaccia utente dell&#39;Editor di schema.
-- [[!DNL Real-time Customer Profile]](../../../profile/home.md): Fornisce un profilo di consumo unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+- [[!DNL Experience Data Model (XDM)] Sistema](../../../xdm/home.md): Il framework standardizzato in base al quale  [!DNL Experience Platform] vengono organizzati i dati sulla customer experience.
+   - [Nozioni di base sulla composizione](../../../xdm/schema/composition.md) dello schema: Scopri i blocchi di base degli schemi XDM, inclusi i principi chiave e le best practice nella composizione dello schema.
+   - [Esercitazione](../../../xdm/tutorials/create-schema-ui.md) dell’Editor di schema: Scopri come creare schemi personalizzati utilizzando l’interfaccia utente dell’Editor di schema.
+- [[!DNL Real-time Customer Profile]](../../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
-## Eliminazione di account tramite l&#39;interfaccia utente
+## Eliminare gli account tramite l’interfaccia utente
 
-Accedete a [Adobe Experience Platform](https://platform.adobe.com), quindi selezionate **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro **[!UICONTROL Sources]**. Nella schermata **[!UICONTROL Catalog]** sono visualizzate diverse origini per le quali è possibile creare account e flussi di dati. Ogni origine mostra il numero di account e di flussi di dati esistenti ad essi associati.
+Accedi a [Adobe Experience Platform](https://platform.adobe.com) e seleziona **[!UICONTROL Sources]** dalla barra di navigazione a sinistra per accedere all&#39;area di lavoro **[!UICONTROL Sources]**. La schermata **[!UICONTROL Catalog]** visualizza una varietà di sorgenti con cui è possibile creare account e flussi di dati. Ciascuna origine mostra il numero di account e flussi di dati esistenti ad essi associati.
 
-Selezionare **[!UICONTROL Accounts]** per accedere alla pagina **[!UICONTROL Accounts]**.
+Seleziona **[!UICONTROL Accounts]** per accedere alla pagina **[!UICONTROL Accounts]**.
 
-![catalog-accounts](../../images/tutorials/delete-accounts/catalog.png)
+![cataloghi](../../images/tutorials/delete-accounts/catalog.png)
 
-Viene visualizzato un elenco di account esistenti. In questa pagina è presente un elenco di informazioni ordinabili per gli account esistenti, quali origine, nome utente, flussi di dati associati e data di creazione. Selezionate l&#39;icona **imbuto** in alto a sinistra per ordinare.
+Viene visualizzato un elenco di account esistenti. In questa pagina è riportato un elenco di informazioni ordinabili per account esistenti come origine, nome utente, flussi di dati associati e data di creazione. Seleziona l&#39;icona **funnel** in alto a sinistra per ordinare.
 
-![elenco dei flussi di dati](../../images/tutorials/delete-accounts/accounts.png)
+![elenco di dati](../../images/tutorials/delete-accounts/accounts.png)
 
-Il pannello di ordinamento viene visualizzato sul lato sinistro dello schermo, contenente un elenco delle sorgenti disponibili. È possibile selezionare più origini utilizzando la funzione di ordinamento.
+Il pannello di ordinamento viene visualizzato sul lato sinistro dello schermo, contenente un elenco delle sorgenti disponibili. È possibile selezionare più sorgenti utilizzando la funzione di ordinamento.
 
-Selezionare l&#39;origine a cui si desidera accedere e individuare l&#39;account che si desidera eliminare dall&#39;elenco degli account nell&#39;interfaccia principale. Nell&#39;esempio, l&#39;origine selezionata è **[!DNL Azure Blob Storage]** e il nome account è **[!UICONTROL blobTestConnector]**. Quando si selezionano più origini dal pannello di ordinamento, gli account creati più di recente vengono visualizzati per primi, perché l&#39;elenco è ordinato in base alla data di creazione.
+Selezionare l&#39;origine a cui si desidera accedere e individuare l&#39;account che si desidera eliminare dall&#39;elenco degli account nell&#39;interfaccia principale. Nell’esempio, l’origine selezionata è **[!DNL Azure Blob Storage]** e il nome dell’account è **[!UICONTROL blobTestConnector]**. Quando selezioni più sorgenti dal pannello di ordinamento, vengono visualizzati per primi gli account creati più di recente, perché l’elenco viene ordinato in base alla data di creazione.
 
-Selezionate l’account da eliminare.
+Seleziona l’account da eliminare.
 
 ![ordinamento dei dati](../../images/tutorials/delete-accounts/sort.png)
 
-Il pannello **[!UICONTROL Properties]** viene visualizzato sul lato destro dello schermo, contenente le informazioni relative all&#39;account selezionato.
+Il pannello **[!UICONTROL Properties]** viene visualizzato sul lato destro dello schermo, contenente informazioni relative all’account selezionato.
 
-Selezionate le ellissi (`...`) accanto al nome dell&#39;account che intendete eliminare. Viene visualizzato un pannello a comparsa contenente le opzioni per **[!UICONTROL Add data]**, **[!UICONTROL Edit details]** e **[!UICONTROL Delete]**. Selezionare **[!UICONTROL Delete]** per eliminare l&#39;account.
+Selezionare i puntini di sospensione (`...`) accanto al nome dell&#39;account che si desidera eliminare. Viene visualizzato un pannello a comparsa che fornisce opzioni per **[!UICONTROL Add data]**, **[!UICONTROL Edit details]** e **[!UICONTROL Delete]**. Seleziona **[!UICONTROL Delete]** per eliminare l’account.
 
 ![ordinamento dei dati](../../images/tutorials/delete-accounts/delete.png)
 
@@ -59,6 +59,6 @@ Viene visualizzata una finestra di dialogo di conferma finale, selezionare **[!U
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, è stata utilizzata l&#39;area di lavoro **[!UICONTROL Sources]** per eliminare gli account esistenti.
+Seguendo questa esercitazione, hai utilizzato correttamente l’area di lavoro **[!UICONTROL Sources]** per eliminare gli account esistenti.
 
-Per i passaggi su come eseguire queste operazioni a livello di programmazione utilizzando l&#39;API [!DNL Flow Service], fare riferimento all&#39;esercitazione sull&#39;eliminazione delle connessioni mediante l&#39;API del servizio di flusso](../../tutorials/api/delete.md)[
+Per i passaggi su come eseguire queste operazioni a livello di programmazione utilizzando l&#39;API [!DNL Flow Service], fai riferimento all&#39;esercitazione su [eliminazione di connessioni utilizzando l&#39;API del servizio di flusso](../../tutorials/api/delete.md)
