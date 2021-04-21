@@ -1,27 +1,27 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari'
+keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
-title: Endpoint API Consenso
-topic: developer guide
-description: Scoprite come gestire le richieste di consenso dei clienti per  applicazioni di Experience Cloud utilizzando l'API Privacy Service.
+title: Endpoint API per il consenso
+topic-legacy: developer guide
+description: Scopri come gestire le richieste di consenso dei clienti per applicazioni di Experience Cloud utilizzando l’API di Privacy Service.
+exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 1%
 
 ---
 
-
 # Endpoint di consenso
 
-Alcune normative richiedono un consenso esplicito da parte dei clienti prima che i loro dati personali possano essere raccolti. L&#39;endpoint `/consent` nell&#39;API [!DNL Privacy Service] consente di elaborare le richieste di consenso dei clienti e integrarle nel flusso di lavoro per la privacy.
+Alcune normative richiedono un consenso esplicito dei clienti prima che i loro dati personali possano essere raccolti. L’ endpoint `/consent` nell’ API [!DNL Privacy Service] consente di elaborare le richieste di consenso dei clienti e di integrarle nel flusso di lavoro per la privacy.
 
-Prima di utilizzare questa guida, fare riferimento alla sezione [guida introduttiva](./getting-started.md) per informazioni sulle intestazioni di autenticazione richieste presentate nella chiamata API di esempio di seguito.
+Prima di utilizzare questa guida, consulta la sezione [guida introduttiva](./getting-started.md) per informazioni sulle intestazioni di autenticazione richieste presentate nella chiamata API di esempio di seguito.
 
-## Elaborazione di una richiesta di consenso del cliente
+## Elabora una richiesta di consenso del cliente
 
-Le richieste di consenso vengono elaborate effettuando una richiesta di POST all&#39;endpoint `/consent`.
+Le richieste di consenso vengono elaborate effettuando una richiesta POST all’endpoint `/consent` .
 
 **Formato API**
 
@@ -31,7 +31,7 @@ POST /consent
 
 **Richiesta**
 
-La richiesta seguente crea un nuovo processo di consenso per gli ID utente forniti nell&#39;array `entities`.
+La seguente richiesta crea un nuovo processo di consenso per gli ID utente forniti nell&#39;array `entities` .
 
 ```shell
 curl -X POST \
@@ -63,13 +63,13 @@ curl -X POST \
 | Proprietà | Descrizione |
 | --- | --- |
 | `optOutOfSale` | Se impostato su true, indica che gli utenti forniti in `entities` desiderano rinunciare alla vendita o alla condivisione dei propri dati personali. |
-| `entities` | Un array di oggetti che indica gli utenti a cui si applica la richiesta di consenso. Ogni oggetto contiene un `namespace` e un array di `values` per far corrispondere i singoli utenti a tale spazio nomi. |
-| `nameSpace` | Ogni oggetto nell&#39;array `entities` deve contenere uno degli [spazi dei nomi di identità standard](./appendix.md#standard-namespaces) riconosciuti dall&#39;API Privacy Service. |
-| `values` | Un array di valori per ciascun utente, corrispondente al valore `nameSpace` fornito. |
+| `entities` | Matrice di oggetti che indica gli utenti a cui si applica la richiesta di consenso. Ogni oggetto contiene un `namespace` e una matrice di `values` per far corrispondere i singoli utenti a tale spazio dei nomi. |
+| `nameSpace` | Ogni oggetto dell&#39;array `entities` deve contenere uno dei [namespace di identità standard](./appendix.md#standard-namespaces) riconosciuti dall&#39;API Privacy Service. |
+| `values` | Matrice di valori per ogni utente, corrispondente al valore `nameSpace` fornito. |
 
 >[!NOTE]
 >
->Per ulteriori informazioni su come determinare quali valori di identità del cliente inviare a [!DNL Privacy Service], consultare la guida in [provider di dati di identità](../identity-data.md).
+>Per ulteriori informazioni su come determinare i valori di identità del cliente da inviare a [!DNL Privacy Service], consulta la guida [fornitura di dati di identità](../identity-data.md).
 
 **Risposta**
 
