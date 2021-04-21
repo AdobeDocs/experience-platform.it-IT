@@ -1,97 +1,97 @@
 ---
-keywords: ', Experience Platform;risoluzione dei problemi;Data Science Workspace;argomenti più comuni'
+keywords: Experience Platform;risoluzione dei problemi;Data Science Workspace;argomenti comuni
 solution: Experience Platform
 title: Guida alla risoluzione dei problemi di Data Science Workspace
-topic: Troubleshooting
-description: Questo documento contiene le risposte alle domande frequenti su Adobe Experience Platform Data Science Workspace.
+topic-legacy: Troubleshooting
+description: Questo documento fornisce le risposte alle domande frequenti su Adobe Experience Platform Data Science Workspace.
+exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
 translation-type: tm+mt
-source-git-commit: 10ccccf72ff7a2fd726066332b9771dff1929af6
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '925'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-
 # [!DNL Data Science Workspace] guida alla risoluzione dei problemi
 
-Questo documento contiene le risposte alle domande frequenti su Adobe Experience Platform [!DNL Data Science Workspace]. Per domande e risoluzione dei problemi relativi alle [!DNL Platform] API in generale, consultare la [Guida alla risoluzione dei problemi delle API di Adobe Experience Platform](../landing/troubleshooting.md).
+Questo documento contiene le risposte alle domande più frequenti su Adobe Experience Platform [!DNL Data Science Workspace]. Per domande e risoluzione dei problemi relativi alle [!DNL Platform] API in generale, consulta la [Guida alla risoluzione dei problemi delle API Adobe Experience Platform](../landing/troubleshooting.md).
 
-## [!DNL JupyterLab] l&#39;ambiente non si sta caricando  [!DNL Google Chrome]
+## [!DNL JupyterLab] ambiente non caricato in  [!DNL Google Chrome]
 
 >[!IMPORTANT]
 >
->Questo problema è stato risolto ma potrebbe essere ancora presente nel browser Google Chrome 80.x. Verificare che il browser Chrome sia aggiornato.
+>Questo problema è stato risolto ma potrebbe essere ancora presente nel browser Google Chrome 80.x. Assicurati che il tuo browser Chrome sia aggiornato.
 
-Con la versione del browser [!DNL Google Chrome] 80.x, tutti i cookie di terze parti sono bloccati per impostazione predefinita. Questo criterio può impedire il caricamento di [!DNL JupyterLab] in Adobe Experience Platform.
+Con la versione 80.x del browser [!DNL Google Chrome], tutti i cookie di terze parti sono bloccati per impostazione predefinita. Questo criterio può impedire il caricamento di [!DNL JupyterLab] in Adobe Experience Platform.
 
-Per risolvere questo problema, attenersi alla procedura seguente:
+Per risolvere questo problema, procedi come segue:
 
-Nel browser [!DNL Chrome], andate in alto a destra e selezionate **Impostazioni** (in alternativa, potete copiare e incollare &quot;chrome://settings/&quot; nella barra degli indirizzi). Quindi, scorrete fino in fondo alla pagina e fate clic sul menu a discesa **Avanzate**.
+Nel browser [!DNL Chrome], vai in alto a destra e seleziona **Impostazioni** (in alternativa puoi copiare e incollare &quot;chrome://settings/&quot; nella barra degli indirizzi). Quindi, scorri fino alla parte inferiore della pagina e fai clic sul menu a discesa **Avanzate** .
 
-![chrome avanzato](./images/faq/chrome-advanced.png)
+![cromatura avanzata](./images/faq/chrome-advanced.png)
 
-Viene visualizzata la sezione **Privacy e sicurezza**. Fare clic su **Impostazioni del sito** seguito da **Cookie e dati del sito**.
+Viene visualizzata la sezione **Privacy e sicurezza** . Quindi, fai clic su **Impostazioni sito** seguito da **Cookie e dati sito**.
 
-![chrome avanzato](./images/faq/privacy-security.png)
+![cromatura avanzata](./images/faq/privacy-security.png)
 
-![chrome avanzato](./images/faq/cookies.png)
+![cromatura avanzata](./images/faq/cookies.png)
 
-Infine, scegliete &quot;Blocca cookie di terze parti&quot; su &quot;OFF&quot;.
+Infine, seleziona &quot;Blocca cookie di terze parti&quot; su &quot;OFF&quot;.
 
-![chrome avanzato](./images/faq/toggle-off.png)
+![cromatura avanzata](./images/faq/toggle-off.png)
 
 >[!NOTE]
 >
->In alternativa, puoi disattivare i cookie di terze parti e aggiungere [*.]ds.adobe.net all&#39;elenco consentiti .
+>In alternativa, puoi disabilitare i cookie di terze parti e aggiungere [*.]ds.adobe.net all’elenco consentiti.
 
-Andate a &quot;chrome://flags/&quot; nella barra degli indirizzi. Cercare e disabilitare il flag denominato *&quot;SameSite by default cookies&quot;* utilizzando il menu a discesa a destra.
+Passa a &quot;chrome://flags/&quot; nella barra degli indirizzi. Cerca e disabilita il flag *&quot;SameSite by default cookies&quot;* utilizzando il menu a discesa a destra.
 
-![disattiva flag samesite](./images/faq/samesite-flag.png)
+![disabilita flag samesite](./images/faq/samesite-flag.png)
 
 Dopo il passaggio 2, viene richiesto di riavviare il browser. Dopo il riavvio, [!DNL Jupyterlab] deve essere accessibile.
 
-## Perché non è possibile accedere a [!DNL JupyterLab] in Safari?
+## Perché non riesco ad accedere a [!DNL JupyterLab] in Safari?
 
-Per impostazione predefinita, Safari disattiva i cookie di terze parti in Safari &lt; 12. Poiché l&#39;istanza della macchina virtuale [!DNL Jupyter] risiede in un dominio diverso da quello del relativo frame principale, Adobe Experience Platform richiede attualmente l&#39;abilitazione dei cookie di terze parti. Abilitare i cookie di terze parti o passare a un altro browser, ad esempio [!DNL Google Chrome].
+Safari disabilita i cookie di terze parti per impostazione predefinita in Safari &lt; 12. Poiché l’istanza della macchina virtuale [!DNL Jupyter] risiede in un dominio diverso rispetto al frame principale, Adobe Experience Platform attualmente richiede l’abilitazione dei cookie di terze parti. Abilita i cookie di terze parti o passa a un altro browser come [!DNL Google Chrome].
 
-Per Safari 12, è necessario sostituire l&#39;agente utente con &#39;[!DNL Chrome]&#39; o &#39;[!DNL Firefox]&#39;. Per cambiare agente utente, aprite il menu *Safari* e selezionate **Preferenze**. Viene visualizzata la finestra delle preferenze.
+Per Safari 12, è necessario passare l&#39;agente utente a &#39;[!DNL Chrome]&#39; o a &#39;[!DNL Firefox]&#39;. Per cambiare l&#39;agente utente, inizia aprendo il menu *Safari* e seleziona **Preferenze**. Viene visualizzata la finestra delle preferenze.
 
 ![Preferenze di Safari](./images/faq/preferences.png)
 
-Nella finestra delle preferenze di Safari, selezionare **Avanzate**. Quindi, selezionate il menu *Mostra sviluppo nella barra dei menu*. Al termine di questo passaggio, potete chiudere la finestra delle preferenze.
+Nella finestra delle preferenze di Safari, seleziona **Avanzate**. Quindi selezionare la casella *Mostra menu di sviluppo nella barra dei menu*. Al termine di questo passaggio, è possibile chiudere la finestra delle preferenze.
 
 ![Safari avanzato](./images/faq/advanced.png)
 
-Quindi, dalla barra di navigazione superiore, selezionate il menu **Sviluppo**. Dall&#39;interno del menu a discesa **Sviluppa**, passare il puntatore del mouse sull&#39; **Agente utente**. È possibile selezionare la stringa **[!DNL Chrome]** o **[!DNL Firefox]** Agente utente che si desidera utilizzare.
+Successivamente, dalla barra di navigazione superiore selezionare il menu **Develop**. Dall&#39;interno del menu a discesa **Develop**, passa il puntatore del mouse su **User Agent**. È possibile selezionare la stringa dell&#39;agente utente **[!DNL Chrome]** o **[!DNL Firefox]** che si desidera utilizzare.
 
-![Menu Sviluppo](./images/faq/user-agent.png)
+![Menu Sviluppa](./images/faq/user-agent.png)
 
-## Perché viene visualizzato un messaggio &#39;403 Vietato&#39; quando si tenta di caricare o eliminare un file in [!DNL JupyterLab]?
+## Perché viene visualizzato un messaggio &quot;403 Forbidden&quot; quando si tenta di caricare o eliminare un file in [!DNL JupyterLab]?
 
-Se il browser è abilitato con un software di blocco dell&#39;annuncio pubblicitario, ad esempio [!DNL Ghostery] o [!DNL AdBlock] Plus, il dominio &quot;\*.adobe.net&quot; deve essere consentito in ogni software di blocco dell&#39;annuncio per [!DNL JupyterLab] funzionare normalmente. Questo perché le [!DNL JupyterLab] macchine virtuali vengono eseguite su un dominio diverso da quello del [!DNL Experience Platform].
+Se il browser è abilitato con software di blocco dell&#39;annuncio, ad esempio [!DNL Ghostery] o [!DNL AdBlock] Plus, il dominio &quot;\*.adobe.net&quot; deve essere consentito in ogni software di blocco dell&#39;annuncio affinché [!DNL JupyterLab] funzioni normalmente. Questo perché le macchine virtuali [!DNL JupyterLab] vengono eseguite su un dominio diverso da quello [!DNL Experience Platform].
 
-## Perché alcune parti del mio [!DNL Jupyter Notebook] sembrano frammentate o non vengono rappresentate come codice?
+## Perché alcune parti del mio [!DNL Jupyter Notebook] sembrano frammentate o non vengono renderizzate come codice?
 
-Ciò può accadere se la cella in questione viene accidentalmente modificata da &quot;Code&quot; a &quot;Markdown&quot;. Mentre una cella di codice è attiva, premendo la combinazione di tasti **ESC+M** il tipo di cella viene cambiato in Markdown. Il tipo di cella può essere modificato dall&#39;indicatore a discesa nella parte superiore del blocco appunti per le celle selezionate. Per modificare un tipo di cella in codice, iniziare selezionando la cella specificata da modificare. Fare clic sul menu a discesa che indica il tipo corrente della cella, quindi selezionare &quot;Codice&quot;.
+Questo può accadere se la cella in questione viene accidentalmente cambiata da &quot;Codice&quot; a &quot;Markdown&quot;. Mentre una cella di codice è concentrata, premendo la combinazione di tasti **ESC+M** il tipo di cella viene modificato in Markdown. Il tipo di cella può essere modificato dall&#39;indicatore a discesa nella parte superiore del blocco appunti per le celle selezionate. Per modificare un tipo di cella in codice, inizia selezionando la cella specificata da modificare. Quindi, fai clic sul menu a discesa che indica il tipo corrente della cella, quindi seleziona &quot;Codice&quot;.
 
 ![](./images/faq/code_type.png)
 
 ## Come si installano le librerie [!DNL Python] personalizzate?
 
-Il kernel [!DNL Python] è preinstallato con molte librerie di machine learning popolari. Tuttavia, potete installare librerie personalizzate aggiuntive eseguendo il comando seguente all’interno di una cella di codice:
+Il kernel [!DNL Python] viene preinstallato con molte librerie di apprendimento automatico popolari. Tuttavia, puoi installare librerie personalizzate aggiuntive eseguendo il seguente comando all’interno di una cella di codice:
 
 ```shell
 !pip install {LIBRARY_NAME}
 ```
 
-Per un elenco completo delle [!DNL Python] librerie preinstallate, consultate la sezione [appendice della Guida utente di JupyterLab](./jupyterlab/overview.md#supported-libraries).
+Per un elenco completo delle librerie [!DNL Python] preinstallate, consulta la sezione [appendice della Guida utente di JupyterLab](./jupyterlab/overview.md#supported-libraries).
 
-## È possibile installare librerie PySpark personalizzate?
+## Posso installare librerie PySpark personalizzate?
 
-Purtroppo non è possibile installare librerie aggiuntive per il kernel PySpark. Tuttavia, potete contattare il rappresentante del servizio clienti  Adobe per ottenere librerie PySpark personalizzate installate.
+Purtroppo non è possibile installare librerie aggiuntive per il kernel PySpark. Tuttavia, è possibile contattare il proprio rappresentante del servizio clienti Adobe per avere le librerie PySpark personalizzate installate per voi.
 
-Per un elenco delle librerie PySpark preinstallate, consultate la sezione [appendice della Guida utente di JupyterLab](./jupyterlab/overview.md#supported-libraries).
+Per un elenco delle librerie PySpark preinstallate, consulta la sezione [appendice della Guida utente di JupyterLab](./jupyterlab/overview.md#supported-libraries).
 
 ## È possibile configurare le risorse del cluster [!DNL Spark] per il kernel [!DNL JupyterLab] [!DNL Spark] o PySpark?
 
@@ -111,16 +111,16 @@ Per un elenco delle librerie PySpark preinstallate, consultate la sezione [appen
 }
 ```
 
-Per ulteriori informazioni sulla [!DNL Spark] configurazione delle risorse del cluster, compreso l&#39;elenco completo delle proprietà configurabili, vedere la [Guida utente di JupyterLab](./jupyterlab/overview.md#kernels).
+Per ulteriori informazioni sulla configurazione delle risorse del cluster [!DNL Spark], incluso l&#39;elenco completo delle proprietà configurabili, consulta la [Guida utente di JupyterLab](./jupyterlab/overview.md#kernels).
 
-## Perché si verifica un errore durante l&#39;esecuzione di determinate attività per set di dati più grandi?
+## Perché ricevo un errore quando si tentano di eseguire determinate attività per set di dati più grandi?
 
-Se si riceve un errore per un motivo come `Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues.` Questo indica in genere che il driver o l&#39;esecutore non dispongono di memoria sufficiente. Per ulteriori informazioni sui limiti dei dati e su come eseguire attività su set di dati di grandi dimensioni, consultare la documentazione relativa ai notebook JupyterLab [data access](./jupyterlab/access-notebook-data.md). In genere questo errore può essere risolto modificando il `mode` da `interactive` a `batch`.
+Se ricevi un errore per un motivo come `Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues.` Questo significa in genere che il driver o un esecutore non dispongono di memoria sufficiente. Consulta la documentazione JupyterLab Notebooks [accesso ai dati](./jupyterlab/access-notebook-data.md) per ulteriori informazioni sui limiti dei dati e su come eseguire attività su set di dati di grandi dimensioni. In genere questo errore può essere risolto cambiando `mode` da `interactive` a `batch`.
 
 ## [!DNL Docker Hub] limitazioni in Data Science Workspace
 
-A partire dal 20 novembre 2020, i limiti di tariffa per l&#39;uso anonimo e gratuito autenticato di Docker Hub sono entrati in vigore. Gli utenti anonimi e gratuiti [!DNL Docker Hub] sono limitati a 100 richieste di immagini contenitore ogni sei ore. Se queste modifiche interessano, riceverai questo messaggio di errore: `ERROR: toomanyrequests: Too Many Requests.` o `You have reached your pull rate limit. You may increase the limit by authenticating and upgrading: https://www.docker.com/increase-rate-limits.`.
+A partire dal 20 novembre 2020 sono entrati in vigore i limiti di tariffa per l’utilizzo anonimo e gratuito autenticato di Docker Hub. Gli utenti anonimi e gratuiti [!DNL Docker Hub] sono limitati a 100 richieste di pull di immagini da contenitori ogni sei ore. Se sei interessato da queste modifiche riceverai questo messaggio di errore: `ERROR: toomanyrequests: Too Many Requests.` o `You have reached your pull rate limit. You may increase the limit by authenticating and upgrading: https://www.docker.com/increase-rate-limits.`.
 
-Al momento, questo limite interesserà la tua organizzazione solo se stai tentando di creare 100 notebook in Ricette entro i sei orari o se stai utilizzando notebook basati su Spark in Data Science Workspace che vengono spesso ridimensionati. Tuttavia, ciò è improbabile, dal momento che il cluster su cui viene eseguito rimane attivo per due ore prima di essere disattivato. Questo riduce il numero di pull necessari quando il cluster è attivo. Se ricevi uno degli errori di cui sopra, dovrai aspettare che il limite [!DNL Docker] venga reimpostato.
+Al momento, questo limite influisce solo sulla tua organizzazione se stai tentando di costruire 100 notebook in Recipes entro un arco di tempo di sei ore o se utilizzi i notebook basati su Spark all’interno di Data Science Workspace che vengono spesso ridimensionati. Tuttavia, questo è improbabile, dal momento che il cluster su cui vengono eseguiti rimane attivo per due ore prima di essere disattivato. Questo riduce il numero di pull necessari quando il cluster è attivo. Se ricevi uno qualsiasi degli errori di cui sopra, dovrai aspettare che il tuo limite [!DNL Docker] venga reimpostato.
 
-Per ulteriori informazioni sui limiti di tariffa [!DNL Docker Hub], consultare la [Documentazione DockerHub](https://www.docker.com/increase-rate-limits). Una soluzione a questo problema è in fase di elaborazione e prevista in una versione successiva.
+Per ulteriori informazioni sui limiti di velocità [!DNL Docker Hub], visita la documentazione di DockerHub](https://www.docker.com/increase-rate-limits). [ Una soluzione a questo problema è in fase di elaborazione e prevista in una versione successiva.
