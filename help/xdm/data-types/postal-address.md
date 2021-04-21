@@ -1,17 +1,17 @@
 ---
-keywords: ' Experience Platform;home;argomenti più comuni;schema;schema;XDM;campi;schemi;indirizzi;xdm:address;data type;data type;data type;'
+keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;indirizzo;xdm:address;tipo di dati;tipo di dati;tipo di dati;
 solution: Experience Platform
-title: Tipo dati indirizzo postale
-topic: overview
+title: Tipo di dati indirizzo postale
+topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM Indirizzo postale.
+exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 0%
 
 ---
-
 
 # [!UICONTROL Postal address] tipo di dati
 
@@ -22,26 +22,26 @@ ht-degree: 0%
 | Proprietà | Descrizione |
 | --- | --- |
 | `city` | Il nome della città. |
-| `country` | Nome del territorio amministrato dal governo. Si tratta di un campo a forma libera che può avere il nome del paese in qualsiasi lingua. |
-| `countryCode` | Codice <a href="https://datahub.io/core/country-list">ISO 3166-1 alpha-2</a> a due caratteri per il paese. |
-| `createdByBatchID` | ID del file batch assimilato che ha creato il record di indirizzo. |
-| `dmaID` | Nielsen Media Research ha designato un&#39;area di mercato. |
-| `label` | Un nome a forma libera per l&#39;indirizzo. |
-| `lastVerifiedDate` | Data in cui l’indirizzo è stato verificato per l’ultima volta come ancora associato alla persona. |
-| `modifiedByBatchID` | ID del file batch assimilato che ha modificato per ultimo il record. |
+| `country` | Nome del territorio amministrato dal governo. Questo è un campo in formato libero che può avere il nome del paese in qualsiasi lingua. |
+| `countryCode` | Il codice a due caratteri <a href="https://datahub.io/core/country-list">ISO 3166-1 alpha-2</a> per il paese. |
+| `createdByBatchID` | ID del file batch acquisito che ha creato il record di indirizzi. |
+| `dmaID` | La ricerca sui media Nielsen ha designato un&#39;area di mercato. |
+| `label` | Nome a forma libera per l’indirizzo. |
+| `lastVerifiedDate` | Data dell&#39;ultima verifica dell&#39;indirizzo associata alla persona. |
+| `modifiedByBatchID` | ID del file batch acquisito che ha modificato per ultimo il record. |
 | `msaID` | L&#39;area statistica metropolitana negli Stati Uniti dove si è verificata l&#39;osservazione. |
 | `postOfficeBox` | La casella postale dell&#39;indirizzo. |
 | `postalCode` | Codice postale della posizione. I codici postali non sono disponibili per tutti i paesi. In alcuni paesi ciò conterrà solo una parte del codice postale. |
 | `primary` | Un valore booleano che indica se si tratta dell&#39;indirizzo principale dell&#39;individuo. Un profilo può avere un solo indirizzo `primary` in un dato momento. |
-| `region` | La regione, la contea o la parte del distretto dell&#39;indirizzo. |
-| `repositoryCreatedBy` | L&#39;ID dell&#39;utente che ha creato il record. |
-| `repositoryLastModifiedBy` | L&#39;ID dell&#39;ultimo utente che ha modificato il record. |
-| `stateProvince` | La parte dell&#39;osservazione relativa allo stato o alla provincia. Il formato è conforme allo standard [ISO 3166-2 (paese e suddivisione)](http://www.unece.org/cefact/locode/subdivisions.html). |
-| `status` | Indica se l&#39;indirizzo può essere utilizzato al momento. |
-| `statusReason` | Una descrizione della `status` corrente. |
-| `street1` - `street4` | Questi quattro campi sono destinati a contenere informazioni primarie a livello di strada, numero di appartamento, numero di strada e nome della strada. `street2` to  `street4` sono facoltativi. |
+| `region` | La parte dell&#39;indirizzo relativa alla regione, alla provincia o al distretto. |
+| `repositoryCreatedBy` | ID dell&#39;utente che ha creato il record. |
+| `repositoryLastModifiedBy` | ID dell&#39;utente che ha modificato il record per l&#39;ultima volta. |
+| `stateProvince` | La parte dello stato o della provincia dell&#39;osservazione. Il formato è conforme allo standard [ISO 3166-2 (paese e suddivisione)](http://www.unece.org/cefact/locode/subdivisions.html). |
+| `status` | Indica se l’indirizzo può essere attualmente utilizzato. |
+| `statusReason` | Una descrizione del `status` corrente. |
+| `street1` - `street4` | Questi quattro campi devono contenere informazioni primarie a livello di strada, numero di appartamento, numero di strada e nome della strada. `street2` to  `street4` sono facoltativi. |
 
-Per ulteriori dettagli sul tipo di dati dell&#39;indirizzo postale, fare riferimento al repository XDM pubblico:
+Per ulteriori dettagli sul tipo di dati dell’indirizzo postale, consulta l’archivio XDM pubblico:
 
-* [Esempio compilato](https://github.com/adobe/xdm/blob/master/components/datatypes/address.example.1.json)
+* [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/datatypes/address.example.1.json)
 * [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/address.schema.json)
