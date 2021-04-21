@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;servizio catalogo;catalogo;servizio catalogo;catalogo
+keywords: Experience Platform;home;argomenti popolari;servizio catalogo;catalogo;servizio catalogo;Catalogo;Catalogo
 solution: Experience Platform
 title: Guida all’API del servizio catalogo
-topic: guida per sviluppatori
+topic-legacy: developer guide
 description: L’API del servizio catalogo consente agli sviluppatori di gestire i metadati del set di dati in Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
+exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
 
-
 # [!DNL Catalog Service] Guida all’API
 
-[!DNL Catalog Service] è il sistema di registrazione per la posizione e la derivazione dei dati all’interno di Adobe Experience Platform. [!DNL Catalog] funge da archivio di metadati o &quot;catalogo&quot; in cui è possibile trovare informazioni sui dati all’interno di  [!DNL Experience Platform], senza dover accedere ai dati stessi. Per ulteriori informazioni, consulta la sezione [[!DNL Catalog] panoramica](../home.md) .
+[!DNL Catalog Service] è il sistema di registrazione per la posizione e la derivazione dei dati in Adobe Experience Platform. [!DNL Catalog] funge da archivio di metadati o &quot;catalogo&quot; in cui è possibile trovare informazioni sui dati all’interno di  [!DNL Experience Platform], senza dover accedere ai dati stessi. Per ulteriori informazioni, consulta la sezione [[!DNL Catalog] panoramica](../home.md) .
 
 Questa guida per gli sviluppatori descrive i passaggi necessari per iniziare a utilizzare l’ API [!DNL Catalog] . La guida fornisce quindi un esempio di chiamate API per eseguire operazioni chiave utilizzando [!DNL Catalog].
 
@@ -55,7 +55,7 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 ## Best practice per le chiamate API [!DNL Catalog]
 
-Quando si eseguono richieste GET all’API [!DNL Catalog], è consigliabile includere nelle richieste i parametri di query al fine di restituire solo gli oggetti e le proprietà necessari. Le richieste non filtrate possono causare il raggiungimento da parte dei payload di risposta di dimensioni superiori a 3 GB, il che può rallentare le prestazioni complessive.
+Quando si eseguono richieste GET all&#39;API [!DNL Catalog], è consigliabile includere nelle richieste i parametri di query al fine di restituire solo gli oggetti e le proprietà necessari. Le richieste non filtrate possono causare il raggiungimento da parte dei payload di risposta di dimensioni superiori a 3 GB, il che può rallentare le prestazioni complessive.
 
 Puoi visualizzare oggetti specifici includendo il loro ID nel percorso della richiesta o utilizzare parametri di query come `properties` e `limit` per filtrare le risposte. I filtri possono essere passati come intestazioni e come parametri di query, con quelli passati come parametri di query che hanno la precedenza. Per ulteriori informazioni, consulta il documento sul [filtraggio dei dati del catalogo](filter-data.md) .
 
