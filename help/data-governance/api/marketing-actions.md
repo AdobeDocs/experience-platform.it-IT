@@ -1,31 +1,31 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;Applicazione delle regole;azioni di marketing api;applicazione basata sulle API;governance dei dati'
+keywords: Experience Platform;home;argomenti popolari;applicazione dei criteri;api delle azioni di marketing;applicazione basata su API;governance dei dati
 solution: Experience Platform
-title: Endpoint API di Marketing Actions
-topic: developer guide
-description: Un'azione di marketing, nel contesto di Adobe Experience Platform Data Governance, è un'azione che un consumatore di dati di Experience Platform  intraprende, per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati.
+title: Endpoint API per le azioni di marketing
+topic-legacy: developer guide
+description: Un’azione di marketing, nel contesto della governance dei dati di Adobe Experience Platform, è un’azione eseguita da un consumatore di dati di Experience Platform per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati.
+exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '734'
 ht-degree: 2%
 
 ---
 
+# Endpoint azione marketing
 
-# Endpoint delle azioni di marketing
+Un’azione di marketing, nel contesto di Adobe Experience Platform [!DNL Data Governance], è un’azione eseguita da un consumatore di dati [!DNL Experience Platform] per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati.
 
-Un&#39;azione di marketing, nel contesto dell&#39;Adobe Experience Platform [!DNL Data Governance], è un&#39;azione eseguita da un consumatore di dati [!DNL Experience Platform] per la quale è necessario verificare la presenza di violazioni dei criteri di utilizzo dei dati.
-
-Puoi gestire le azioni di marketing per la tua organizzazione utilizzando l&#39;endpoint `/marketingActions` nell&#39;API del servizio criteri.
+Puoi gestire le azioni di marketing per la tua organizzazione utilizzando l’endpoint `/marketingActions` nell’API del servizio criteri.
 
 ## Introduzione
 
-Gli endpoint API utilizzati in questa guida fanno parte dell&#39; [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Prima di continuare, consultare la [guida introduttiva](./getting-started.md) per i collegamenti alla documentazione correlata, una guida alla lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per eseguire correttamente chiamate a qualsiasi API [!DNL Experience Platform].
+Gli endpoint API utilizzati in questa guida fanno parte di [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Prima di continuare, controlla la [guida introduttiva](./getting-started.md) per i collegamenti alla relativa documentazione, una guida per la lettura delle chiamate API di esempio in questo documento e informazioni importanti sulle intestazioni necessarie per effettuare correttamente le chiamate a qualsiasi API [!DNL Experience Platform].
 
 ## Recupera un elenco di azioni di marketing {#list}
 
-Puoi recuperare un elenco di azioni di marketing di base o personalizzate effettuando una richiesta di GET a `/marketingActions/core` o `/marketingActions/custom`, rispettivamente.
+Puoi recuperare un elenco delle azioni di marketing principali o personalizzate effettuando una richiesta di GET rispettivamente a `/marketingActions/core` o `/marketingActions/custom`.
 
 **Formato API**
 
@@ -49,7 +49,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli per ogni azione di marketing recuperata, inclusi i valori `name` e `href`. Il valore `href` viene utilizzato per identificare l&#39;azione di marketing durante la creazione di [criteri di utilizzo dei dati](policies.md#create-policy).
+Una risposta corretta restituisce i dettagli di ogni azione di marketing recuperata, compresi i relativi `name` e `href`. Il valore `href` viene utilizzato per identificare l&#39;azione di marketing durante la [creazione di un criterio di utilizzo dei dati](policies.md#create-policy).
 
 ```json
 {
@@ -102,13 +102,13 @@ Una risposta corretta restituisce i dettagli per ogni azione di marketing recupe
 | Proprietà | Descrizione |
 | --- | --- |
 | `_page.count` | Numero totale di azioni di marketing restituite. |
-| `children` | Un array di oggetti che contiene i dettagli delle azioni di marketing recuperate. |
-| `name` | Nome dell&#39;azione di marketing, che funge da identificatore univoco quando [cerca un&#39;azione di marketing specifica](#lookup). |
-| `_links.self.href` | Un riferimento URI per l&#39;azione di marketing, che può essere utilizzato per completare l&#39;array `marketingActionsRefs` durante la creazione di un criterio di utilizzo dei dati](policies.md#create-policy).[ |
+| `children` | Matrice di oggetti che contiene i dettagli delle azioni di marketing recuperate. |
+| `name` | Il nome dell&#39;azione di marketing, che agisce come identificatore univoco quando [cerca un&#39;azione di marketing specifica](#lookup). |
+| `_links.self.href` | Un riferimento URI per l’azione di marketing, che può essere utilizzato per completare la matrice `marketingActionsRefs` durante la creazione di un criterio di utilizzo dei dati](policies.md#create-policy).[ |
 
 ## Cerca un&#39;azione di marketing specifica {#lookup}
 
-Puoi cercare i dettagli di una specifica azione di marketing inserendo la proprietà `name` dell&#39;azione di marketing nel percorso di una richiesta di GET.
+Puoi cercare i dettagli di una specifica azione di marketing includendo la proprietà `name` dell’azione di marketing nel percorso di una richiesta di GET.
 
 **Formato API**
 
@@ -119,7 +119,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | La proprietà `name` dell&#39;azione di marketing da ricercare. |
+| `{MARKETING_ACTION_NAME}` | La proprietà `name` dell’azione di marketing che desideri cercare. |
 
 **Richiesta**
 
@@ -136,7 +136,7 @@ curl -X GET \
 
 **Risposta**
 
-L&#39;oggetto response contiene i dettagli dell&#39;azione di marketing, incluso il percorso (`_links.self.href`) necessario per fare riferimento all&#39;azione di marketing quando si definisce un criterio di utilizzo dei dati [](policies.md#create-policy) (`marketingActionsRefs`).
+L&#39;oggetto response contiene i dettagli dell&#39;azione di marketing, incluso il percorso (`_links.self.href`) necessario per fare riferimento all&#39;azione di marketing quando [si definisce un criterio di utilizzo dei dati](policies.md#create-policy) (`marketingActionsRefs`).
 
 ```JSON
 {
@@ -157,9 +157,9 @@ L&#39;oggetto response contiene i dettagli dell&#39;azione di marketing, incluso
 }
 ```
 
-## Creare o aggiornare un&#39;azione di marketing personalizzata {#create-update}
+## Crea o aggiorna un&#39;azione di marketing personalizzata {#create-update}
 
-Puoi creare una nuova azione di marketing personalizzata, o aggiornarne una esistente, includendo il nome esistente o previsto dell&#39;azione di marketing nel percorso di una richiesta di PUT.
+Puoi creare una nuova azione di marketing personalizzata o aggiornare una esistente includendo il nome esistente o previsto dell’azione di marketing nel percorso di una richiesta di PUT.
 
 **Formato API**
 
@@ -169,11 +169,11 @@ PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 | Parametro | Descrizione |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Nome dell&#39;azione di marketing da creare o aggiornare. Se nel sistema esiste già un&#39;azione di marketing con il nome specificato, tale azione di marketing viene aggiornata. Se non esiste, viene creata una nuova azione di marketing per il nome fornito. |
+| `{MARKETING_ACTION_NAME}` | Nome dell’azione di marketing da creare o aggiornare. Se nel sistema esiste già un’azione di marketing con il nome specificato, l’azione di marketing viene aggiornata. Se non esiste, viene creata una nuova azione di marketing per il nome fornito. |
 
 **Richiesta**
 
-La richiesta seguente crea una nuova azione di marketing denominata `crossSiteTargeting`, a condizione che nel sistema non esista ancora un&#39;azione di marketing con lo stesso nome. Se esiste un&#39;azione di marketing `crossSiteTargeting`, questa chiamata aggiorna l&#39;azione di marketing in base alle proprietà fornite nel payload.
+La richiesta seguente crea una nuova azione di marketing denominata `crossSiteTargeting`, purché nel sistema non sia ancora presente un’azione di marketing con lo stesso nome. Se esiste un’azione di marketing `crossSiteTargeting`, questa chiamata aggiorna invece tale azione di marketing in base alle proprietà fornite nel payload.
 
 ```shell
 curl -X PUT \
@@ -191,12 +191,12 @@ curl -X PUT \
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `name` | Nome dell&#39;azione di marketing da creare o aggiornare. <br><br>**IMPORTANTE**: Questa proprietà deve corrispondere al percorso,  `{MARKETING_ACTION_NAME}` in caso contrario si verificherà un errore HTTP 400 (Richiesta non valida). In altre parole, una volta creata un&#39;azione di marketing, la relativa proprietà `name` non può essere modificata. |
-| `description` | Una descrizione facoltativa per fornire ulteriore contesto all&#39;azione di marketing. |
+| `name` | Nome dell’azione di marketing da creare o aggiornare. <br><br>**IMPORTANTE**: Questa proprietà deve corrispondere a  `{MARKETING_ACTION_NAME}` nel percorso, altrimenti si verificherà un errore HTTP 400 (Bad Request). In altre parole, una volta creata un’azione di marketing, la relativa proprietà `name` non può essere modificata. |
+| `description` | Una descrizione facoltativa per fornire ulteriore contesto per l’azione di marketing. |
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dell’azione di marketing. Se un&#39;azione di marketing esistente è stata aggiornata, la risposta restituisce lo stato HTTP 200 (OK). Se è stata creata una nuova azione di marketing, la risposta restituisce lo stato HTTP 201 (Creato).
+Una risposta corretta restituisce i dettagli dell’azione di marketing. Se è stata aggiornata un&#39;azione di marketing esistente, la risposta restituisce lo stato HTTP 200 (OK). Se è stata creata una nuova azione di marketing, la risposta restituisce lo stato HTTP 201 (Creato).
 
 ```JSON
 {
@@ -217,13 +217,13 @@ Una risposta corretta restituisce i dettagli dell’azione di marketing. Se un&#
 }
 ```
 
-## Eliminazione di un&#39;azione di marketing personalizzata {#delete}
+## Eliminare un’azione di marketing personalizzata {#delete}
 
-Puoi eliminare un&#39;azione di marketing personalizzata inserendone il nome nel percorso di una richiesta di DELETE.
+Puoi eliminare un’azione di marketing personalizzata includendone il nome nel percorso di una richiesta DELETE.
 
 >[!NOTE]
 >
->Le azioni di marketing cui fanno riferimento i criteri esistenti non possono essere eliminate. Se si tenta di eliminare una di queste azioni di marketing, si verificherà un errore HTTP 400 (Richiesta non valida) con un messaggio che include gli ID di tutti i criteri che fanno riferimento all&#39;azione di marketing.
+>Le azioni di marketing a cui fanno riferimento i criteri esistenti non possono essere eliminate. Il tentativo di eliminare una di queste azioni di marketing si tradurrà in un errore HTTP 400 (Bad Request) insieme a un messaggio che include gli ID di tutti i criteri che fanno riferimento all&#39;azione di marketing.
 
 **Formato API**
 
@@ -250,4 +250,4 @@ curl -X DELETE \
 
 Una risposta corretta restituisce lo stato HTTP 200 (OK) con un corpo di risposta vuoto.
 
-Puoi confermare l&#39;eliminazione cercando di [ricercare l&#39;azione di marketing](#look-up). Se l’azione di marketing è stata rimossa dal sistema, riceverai un errore HTTP 404 (non trovato).
+Puoi confermare l’eliminazione tentando di [cercare l’azione di marketing](#look-up). Dovresti ricevere un errore HTTP 404 (Non trovato) se l’azione di marketing è stata rimossa dal sistema.
