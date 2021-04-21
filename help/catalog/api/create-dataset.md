@@ -2,13 +2,13 @@
 keywords: Experience Platform;home;argomenti popolari;set di dati;set di dati;creare un set di dati;creare un set di dati;abilitare un set di dati
 solution: Experience Platform
 title: Creare un set di dati nell’API
-topic: guida per sviluppatori
+topic-legacy: developer guide
 description: Questo documento illustra come creare un oggetto set di dati nell’API del servizio catalogo.
 exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
 translation-type: tm+mt
-source-git-commit: 727c9dbd87bacfd0094ca29157a2d0283c530969
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '254'
 ht-degree: 1%
 
 ---
