@@ -1,48 +1,48 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;guida per lo sviluppo di sandbox'
+keywords: Experience Platform;home;argomenti popolari;guida per gli sviluppatori sandbox
 solution: Experience Platform
-title: Guida API per sandbox
-topic: developer guide
-description: L'API Sandbox consente agli sviluppatori di gestire in modo programmatico le sandbox in Adobe Experience Platform. Seguite questa guida per apprendere come eseguire operazioni chiave tramite l'API.
+title: Guida all’API per sandbox
+topic-legacy: developer guide
+description: L’API Sandbox consente agli sviluppatori di gestire in modo programmatico le sandbox in Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
+exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '373'
 ht-degree: 0%
 
 ---
 
+# Guida all’API per sandbox
 
-# Guida API sandbox
+Le sandbox in Adobe Experience Platform forniscono ambienti di sviluppo isolati che consentono di testare le funzioni, eseguire esperimenti e creare configurazioni personalizzate senza influire sull’ambiente di produzione.
 
-Le sandbox in Adobe Experience Platform forniscono ambienti di sviluppo isolati che consentono di testare le funzionalità, eseguire esperimenti e creare configurazioni personalizzate senza influire sull&#39;ambiente di produzione.
+Questa guida per gli sviluppatori descrive i passaggi necessari per utilizzare l’API Sandbox per gestire le sandbox in Experience Platform e include chiamate API di esempio per eseguire varie operazioni.
 
-Questa guida per gli sviluppatori fornisce passaggi utili per utilizzare l&#39;API Sandbox per gestire le sandbox in  Experience Platform e include chiamate API di esempio per eseguire varie operazioni.
+## Guida introduttiva all’API Sandbox
 
-## Guida introduttiva all&#39;API Sandbox
-
-Per gestire le sandbox per l’organizzazione IMS, è necessario disporre delle autorizzazioni Amministrazione sandbox. Gli utenti senza autorizzazioni di accesso possono utilizzare l&#39;endpoint solo per [elencare le sandbox attive per l&#39;utente corrente](./list-active-sandboxes.md). Per ulteriori informazioni sull&#39;assegnazione delle autorizzazioni sandbox per  Experience Platform, consultate la [panoramica sul controllo degli accessi](../../access-control/home.md).
+Per gestire le sandbox per l’organizzazione IMS, è necessario disporre delle autorizzazioni di amministrazione sandbox. Gli utenti senza autorizzazioni di accesso possono utilizzare solo l&#39;endpoint per [elencare le sandbox attive per l&#39;utente corrente](./list-active-sandboxes.md). Per ulteriori informazioni, ad Experience Platform, su come assegnare le autorizzazioni sandbox, consulta la [panoramica sul controllo degli accessi](../../access-control/home.md) .
 
 ### Lettura di chiamate API di esempio
 
-Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consultate la sezione relativa a [come leggere chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi del Experience Platform .
+Questa guida fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di Experience Platform.
 
-### Raccogli valori per le intestazioni richieste
+### Raccogli i valori delle intestazioni richieste
 
-Per effettuare correttamente le chiamate alle API della piattaforma, questa guida richiede che sia stata completata l&#39; [esercitazione sull&#39;autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte  chiamate API di Experience Platform, come illustrato di seguito:
+Questa guida richiede di aver completato l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en) per effettuare correttamente le chiamate alle API di Platform. Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API di Experience Platform, come mostrato di seguito:
 
 * Autorizzazione: Portatore `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Oltre alle intestazioni di autenticazione, tutte le richieste richiedono un&#39;intestazione che specifica il nome della sandbox in cui si svolgerà l&#39;operazione:
+Oltre alle intestazioni di autenticazione, tutte le richieste richiedono un&#39;intestazione che specifica il nome della sandbox in cui verrà effettuata l&#39;operazione:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* nome x-sandbox: `{SANDBOX_NAME}`
 
-Tutte le richieste che contengono un payload (POST, PUT e PATCH) richiedono un&#39;intestazione aggiuntiva:
+Tutte le richieste che contengono un payload (POST, PUT e PATCH) richiedono un’intestazione aggiuntiva:
 
-* Content-Type: application/json
+* Tipo di contenuto: application/json
 
 ## Passaggi successivi
 
-Ora che avete raccolto le credenziali richieste, potete continuare a leggere il resto della guida per gli sviluppatori. Ogni sezione fornisce informazioni importanti sui relativi endpoint e illustra le chiamate API di esempio per l&#39;esecuzione di operazioni CRUD. Ogni chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e i payload formattati correttamente e una risposta di esempio per una chiamata riuscita.
+Dopo aver raccolto le credenziali richieste, puoi continuare a leggere il resto della guida per gli sviluppatori. Ogni sezione fornisce informazioni importanti sui loro endpoint e illustra chiamate API di esempio per l’esecuzione di operazioni CRUD. Ciascuna chiamata include il formato API generale, una richiesta di esempio che mostra le intestazioni richieste e i payload formattati correttamente e una risposta di esempio per una chiamata riuscita.
