@@ -2,14 +2,14 @@
 keywords: Experience Platform;home;argomenti comuni;Raccogliere dati di pagamento;dati di pagamento
 solution: Experience Platform
 title: Raccolta dei dati di pagamento tramite connettori di origine e API
-topic: ' - Panoramica'
+topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati da un’applicazione di pagamento e acquisirli in Platform utilizzando i connettori sorgente e le API.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1600'
+source-wordcount: '1598'
 ht-degree: 1%
 
 ---
