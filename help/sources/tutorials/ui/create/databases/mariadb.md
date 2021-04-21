@@ -6,19 +6,15 @@ topic-legacy: overview
 type: Tutorial
 description: Scopri come creare una connessione sorgente Maria DB utilizzando l’interfaccia utente Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '399'
 ht-degree: 1%
 
 ---
 
 
 # Creare una connessione sorgente [!DNL MariaDB] nell&#39;interfaccia utente
-
->[!NOTE]
->
-> Il connettore [!DNL MariaDB] è in versione beta. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la [Panoramica delle sorgenti](../../../../home.md#terms-and-conditions) .
 
 I connettori sorgente in Adobe Experience Platform consentono di acquisire dati provenienti dall’esterno su base pianificata. Questa esercitazione descrive i passaggi necessari per creare un connettore sorgente Maria DB utilizzando l&#39;interfaccia utente [!DNL Platform] .
 
