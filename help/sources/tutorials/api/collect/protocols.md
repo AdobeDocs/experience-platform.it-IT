@@ -2,14 +2,14 @@
 keywords: Experience Platform;home;argomenti popolari;raccogliere dati del protocollo;dati del protocollo
 solution: Experience Platform
 title: Raccolta di dati dei protocolli utilizzando connettori di origine e API
-topic: ' - Panoramica'
+topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati da un’applicazione protocolli e acquisirli in Platform utilizzando i connettori sorgente e le API.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1549'
+source-wordcount: '1547'
 ht-degree: 1%
 
 ---
