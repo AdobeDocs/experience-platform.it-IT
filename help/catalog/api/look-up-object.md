@@ -1,25 +1,25 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;catalogo;ricerca oggetti;api'
+keywords: Experience Platform;home;argomenti popolari;catalogo;ricerca oggetti;api
 solution: Experience Platform
-title: Cercare un oggetto catalogo
-topic: developer guide
-description: 'Se si conosce l''identificatore univoco di un oggetto Catalog specifico, è possibile eseguire una richiesta di GET per visualizzare i dettagli dell''oggetto. '
+title: Ricerca di un oggetto catalogo
+topic-legacy: developer guide
+description: Se si conosce l'identificatore univoco di un oggetto Catalog specifico, è possibile eseguire una richiesta GET per visualizzare i dettagli dell'oggetto.
+exl-id: fd6fbe72-0108-4be3-a065-c753e7a19d24
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 2%
 
 ---
 
+# Cercare un oggetto Catalogo
 
-# Cercare un oggetto Catalog
-
-Se si conosce l&#39;identificatore univoco di un oggetto specifico [!DNL Catalog], è possibile eseguire una richiesta di GET per visualizzare i dettagli dell&#39;oggetto.
+Se si conosce l&#39;identificatore univoco di un oggetto specifico [!DNL Catalog], è possibile eseguire una richiesta GET per visualizzare i dettagli dell&#39;oggetto.
 
 >[!NOTE]
 >
->Durante la visualizzazione di oggetti specifici, è comunque consigliabile filtrare in base alle proprietà [e restituire solo le proprietà interessate.](filter-data.md)
+>Durante la visualizzazione di oggetti specifici, è comunque consigliabile [filtrare in base alle proprietà](filter-data.md) e restituire solo le proprietà di interesse.
 
 **Formato API**
 
@@ -35,7 +35,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 **Richiesta**
 
-La richiesta seguente recupera un dataset dal relativo ID, restituendo le proprietà `name`, `description`, `state`, `tags` e `files`.
+La richiesta seguente recupera un set di dati dal relativo ID e restituisce le proprietà `name`, `description`, `state`, `tags` e `files`.
 
 ```shell
 curl -X GET \
@@ -48,7 +48,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce il set di dati specificato con solo la `properties` richiesta nel corpo.
+Una risposta corretta restituisce il set di dati specificato con solo il `properties` richiesto nel corpo.
 
 ```json
 {
@@ -68,4 +68,4 @@ Una risposta corretta restituisce il set di dati specificato con solo la `proper
 
 >[!NOTE]
 >
->Le proprietà i cui valori hanno il prefisso `@` rappresentano oggetti correlati. Per informazioni su come visualizzare i dettagli di questi oggetti, vedere la sezione dell&#39;appendice relativa alla [visualizzazione di oggetti correlati](appendix.md#view-interrelated-objects).
+>Le proprietà i cui valori sono preceduti da `@` rappresentano oggetti correlati. Per istruzioni su come visualizzare i dettagli di questi oggetti, vedere la sezione dell&#39;appendice relativa alla [visualizzazione di oggetti correlati](appendix.md#view-interrelated-objects).
