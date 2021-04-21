@@ -2,14 +2,14 @@
 keywords: Experience Platform;home;argomenti popolari;interfaccia utente;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;modello dati;editor schema;Editor schema;schema;schema;schemi;schemi;schemi;creare
 solution: Experience Platform
 title: Creare uno schema utilizzando l’Editor di schema
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Questa esercitazione illustra i passaggi necessari per creare uno schema utilizzando Schema Editor all’interno di Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
 translation-type: tm+mt
-source-git-commit: 53bf2ad757b24ad294af32101124e8047580807a
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '3533'
+source-wordcount: '3532'
 ht-degree: 0%
 
 ---
@@ -120,7 +120,7 @@ Per questa esercitazione, seleziona il mixin &quot;[!DNL Personal Contact Detail
 
 Una volta aggiunto, l’area di lavoro viene visualizzata nuovamente. &quot;[!UICONTROL Personal Contact Details]&quot; è ora elencato in **[!UICONTROL Mixins]** nella sezione **[!UICONTROL Composition]** e i campi per l&#39;indirizzo della casa, il telefono cellulare e altro sono stati aggiunti in **[!UICONTROL Structure]**.
 
-Analogamente al campo `name` , i campi appena aggiunti rappresentano concetti relativi a più campi. Ad esempio, `homeAddress` ha un tipo di dati &quot;[!UICONTROL Postal address]&quot; e `mobilePhone` ha un tipo di dati &quot;[!UICONTROL Phone number]&quot;. Puoi selezionare ciascuno di questi campi per espanderli e visualizzare i campi aggiuntivi inclusi nel tipo di dati.
+Analogamente al campo `name` , i campi appena aggiunti rappresentano concetti relativi a più campi. Ad esempio, `homeAddress` ha un tipo di dati &quot;[!UICONTROL Postal address]&quot; e `mobilePhone` ha un tipo di dati &quot;[!UICONTROL Phone number]&quot;. È possibile selezionare ciascuno di questi campi per espanderli e visualizzare i campi aggiuntivi inclusi nel tipo di dati.
 
 ![](../images/tutorials/create-schema/personal_details_structure.png)
 
