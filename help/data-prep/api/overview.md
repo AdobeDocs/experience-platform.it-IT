@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;preparazione dati;api preparazione dati;risoluzione dei problemi;API
 title: Panoramica API di preparazione dei dati
-topic: guida
+topic-legacy: guide
 description: L’API di preparazione dei dati consente di creare a livello di programmazione set e funzioni di mappatura che consentono di trasformare i dati tra schemi di origine e di destinazione.
+exl-id: 740944ae-93ba-4099-a65e-18d6b384c307
 translation-type: tm+mt
-source-git-commit: cae6dc80d0394db51dc97478b92459be64c64498
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '258'
 ht-degree: 1%
 
 ---
-
 
 # Guida all’API del servizio di mappatura
 
