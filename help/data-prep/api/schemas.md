@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;preparazione dati;guida api;schemi;
 solution: Experience Platform
 title: Endpoint API per gli schemi
-topic: schemi
+topic-legacy: schemas
 description: 'Puoi utilizzare l’endpoint `/schemas` nell’API Adobe Experience Platform per recuperare, creare e aggiornare programmaticamente gli schemi da utilizzare con Mapper in Platform. '
 translation-type: tm+mt
-source-git-commit: 435d27f7187074c78209948c0e57b610b63d2055
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '613'
 ht-degree: 3%
 
 ---
