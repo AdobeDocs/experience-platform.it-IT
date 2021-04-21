@@ -1,17 +1,17 @@
 ---
-keywords: ' Experience Platform;home;argomenti più comuni;schema;schema;XDM;campi;schemi;emailAddress;xdm:emailAddress;email;email;email address;dattype;data-type;data type;'
+keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;campi;schemi;schemi;emailAddress;xdm:emailAddress;email;indirizzo e-mail;tipo di dati;tipo di dati;tipo di dati;
 solution: Experience Platform
-title: Tipo dati indirizzo e-mail
-topic: overview
+title: Tipo di dati indirizzo e-mail
+topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM Indirizzo e-mail.
+exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 1%
 
 ---
-
 
 # [!UICONTROL Email address] tipo di dati
 
@@ -21,15 +21,15 @@ ht-degree: 1%
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `address` | L&#39;indirizzo tecnico dell&#39;e-mail comunemente definito in RFC2822 e negli standard successivi (ad esempio, `name@domain.com`). |
-| `label` | Ulteriori informazioni di visualizzazione che potrebbero essere disponibili. Ad esempio, se un&#39;e-mail con un indirizzo RTF di Microsoft Outlook è `John Smith smithjr@company.uk`, `John Smith` viene inserito in questo campo. |
-| `primary` | Indica se si tratta dell&#39;indirizzo e-mail principale dell&#39;utente. Un profilo può avere un solo indirizzo `primary` di posta elettronica in un dato momento. |
-| `status` | Indica se l&#39;indirizzo e-mail può essere utilizzato al momento |
-| `statusReason` | Una descrizione della `status` corrente. |
-| `type` | Il modo in cui l&#39;account si riferisce alla persona (ad esempio `work` o `personal`). |
+| `address` | L’indirizzo tecnico dell’e-mail come comunemente definito nella RFC2822 e negli standard successivi (ad esempio, `name@domain.com`). |
+| `label` | Informazioni aggiuntive disponibili. Ad esempio, se un&#39;e-mail presenta un indirizzo RTF di Microsoft Outlook pari a `John Smith smithjr@company.uk`, `John Smith` viene posizionato in questo campo. |
+| `primary` | Indica se si tratta dell&#39;indirizzo e-mail principale dell&#39;utente. Un profilo può avere un solo indirizzo e-mail `primary` in un dato momento. |
+| `status` | Indica se l’indirizzo e-mail può essere attualmente utilizzato |
+| `statusReason` | Una descrizione del `status` corrente. |
+| `type` | Il modo in cui l’account si riferisce alla persona (ad esempio `work` o `personal`). |
 
 
-Per ulteriori dettagli sul tipo di dati dell&#39;indirizzo e-mail, fare riferimento al repository XDM pubblico:
+Per ulteriori dettagli sul tipo di dati dell’indirizzo e-mail, consulta l’archivio XDM pubblico:
 
-* [Esempio compilato](https://github.com/adobe/xdm/blob/master/components/datatypes/emailaddress.example.1.json)
+* [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/datatypes/emailaddress.example.1.json)
 * [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/emailaddress.schema.json)
