@@ -3,16 +3,16 @@ keywords: Experience Platform;home;argomenti popolari;aggiornare account
 description: In alcuni casi, potrebbe essere necessario aggiornare i dettagli di un account di origini esistente. L'area di lavoro Origini consente di aggiungere, modificare ed eliminare i dettagli di una connessione batch o in streaming esistente, inclusi nome, descrizione e credenziali.
 solution: Experience Platform
 title: Aggiorna i dettagli dell'account di connessione sorgente nell'interfaccia utente
-topic: ' - Panoramica'
+topic-legacy: overview
 type: Tutorial
+exl-id: de264bd4-fe3d-4622-9f24-f1612d8334c9
 translation-type: tm+mt
-source-git-commit: 4a7405e2c8c97442d2781295dd827c6940aa33eb
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '437'
-ht-degree: 1%
+source-wordcount: '435'
+ht-degree: 0%
 
 ---
-
 
 # Aggiornare i dettagli dell’account nell’interfaccia utente
 
