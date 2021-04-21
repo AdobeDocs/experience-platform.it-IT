@@ -2,13 +2,13 @@
 keywords: Experience Platform;home;argomenti popolari;servizio di segmentazione;segmentazione;servizio di segmentazione;guida utente;guida utente;guida utente;guida utente di segmentazione;generatore di segmenti;generatore di segmenti;
 solution: Experience Platform
 title: Guida all’interfaccia utente di Generatore di segmenti
-topic: guida all'interfaccia utente
+topic-legacy: ui guide
 description: Il Generatore di segmenti nell’interfaccia utente di Adobe Experience Platform offre un’area di lavoro ricca che consente di interagire con gli elementi dati di profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio riquadri drag-and-drop utilizzati per rappresentare le proprietà dei dati.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 translation-type: tm+mt
-source-git-commit: bad293cf25b955496897d895169ec494416e9787
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1942'
+source-wordcount: '1940'
 ht-degree: 0%
 
 ---
