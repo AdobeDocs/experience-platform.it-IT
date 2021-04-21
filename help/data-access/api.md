@@ -1,38 +1,38 @@
 ---
-keywords: ' Experience Platform;home;temi comuni;accesso ai dati;python sdk;spark sdk;data access api;export;Export'
+keywords: Experience Platform;home;argomenti popolari;accesso ai dati;sdk python;scintilla sdk;api di accesso ai dati;esportazione;esportazione
 solution: Experience Platform
-title: Guida API per l'accesso ai dati
-topic: developer guide
-description: L'API Data Access supporta Adobe Experience Platform fornendo agli sviluppatori un'interfaccia RESTful incentrata sulla scoperta e l'accessibilità dei set di dati acquisiti all'interno  Experience Platform.
+title: Guida all’API di accesso ai dati
+topic-legacy: developer guide
+description: L’API di accesso ai dati supporta Adobe Experience Platform fornendo agli sviluppatori un’interfaccia RESTful incentrata sulla scoperta e l’accessibilità dei set di dati acquisiti all’interno di Experience Platform.
+exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '528'
 ht-degree: 4%
 
 ---
 
+# Guida all’API di accesso ai dati
 
-# Guida API per l&#39;accesso ai dati
+L’API di accesso ai dati supporta Adobe Experience Platform fornendo agli utenti un’interfaccia RESTful incentrata sulla scoperta e l’accessibilità dei set di dati acquisiti all’interno di [!DNL Experience Platform].
 
-L&#39;API Data Access supporta Adobe Experience Platform fornendo agli utenti un&#39;interfaccia RESTful incentrata sulla possibilità di individuare e accedere ai set di dati acquisiti all&#39;interno di [!DNL Experience Platform].
+![Accesso ai dati su Experience Platform](images/Data_Access_Experience_Platform.png)
 
-![Accesso ai dati  Experience Platform](images/Data_Access_Experience_Platform.png)
+## Riferimento alle specifiche API
 
-## Riferimento della specifica API
-
-La documentazione di riferimento per le API Swagger è disponibile qui [qui](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml).
+La documentazione di riferimento dell’API Swagger si trova [qui](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml).
 
 ## Terminologia
 
-Una descrizione di alcuni termini comunemente utilizzati in tutto il documento.
+Una descrizione di alcuni termini comunemente utilizzati in questo documento.
 
 | Termine | Descrizione |
 | ----- | ------------ |
 | Set di dati | Raccolta di dati che include schema e campi. |
-| Batch | Un insieme di dati raccolti in un determinato periodo di tempo ed elaborati insieme come un&#39;unica unità. |
+| Batch | Un insieme di dati raccolti in un periodo di tempo ed elaborati insieme come un’unica unità. |
 
-## Recupera elenco di file all&#39;interno di un batch
+## Recupera elenco di file all’interno di un batch
 
 Utilizzando un identificatore batch (batchID), l&#39;API di accesso ai dati può recuperare un elenco di file appartenenti a quel particolare batch.
 
@@ -95,16 +95,16 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 }
 ```
 
-L&#39;array `"data"` contiene un elenco di tutti i file all&#39;interno del batch specificato. Ogni file restituito ha un ID univoco (`{FILE_ID}`) contenuto nel campo `"dataSetFileId"`. Questo ID univoco può quindi essere utilizzato per accedere o scaricare il file.
+L&#39;array `"data"` contiene un elenco di tutti i file all&#39;interno del batch specificato. Ogni file restituito ha il proprio ID univoco (`{FILE_ID}`) all&#39;interno del campo `"dataSetFileId"` . Questo ID univoco può quindi essere utilizzato per accedere o scaricare il file.
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `data.dataSetFileId` | ID file per ciascun file del batch specificato. |
+| `data.dataSetFileId` | ID file per ogni file nel batch specificato. |
 | `data._links.self.href` | URL per accedere al file. |
 
-## Accedere e scaricare i file in un batch
+## Accedere e scaricare file in un batch
 
-Utilizzando un identificatore di file (`{FILE_ID}`), l&#39;API di accesso ai dati può essere utilizzata per accedere ai dettagli specifici di un file, incluso il nome, la dimensione in byte e un collegamento da scaricare.
+Utilizzando un identificatore di file (`{FILE_ID}`), l&#39;API di accesso ai dati può essere utilizzata per accedere a dettagli specifici di un file, tra cui il nome, le dimensioni in byte e un collegamento da scaricare.
 
 La risposta conterrà un array di dati. A seconda che il file a cui fa riferimento l’ID sia un singolo file o una directory, l’array di dati restituito può contenere una singola voce o un elenco di file appartenenti a tale directory. Ogni elemento file includerà i dettagli del file.
 
@@ -128,7 +128,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Risposta a un singolo file**
+**Risposta a file singolo**
 
 ```JSON
 {
@@ -152,8 +152,8 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `data.name` | Nome del file (ad esempio, profile.csv). |
-| `data.length` | Dimensione del file (in byte). |
+| `data.name` | Nome del file (ad esempio profiles.csv). |
+| `data.length` | Dimensioni del file (in byte). |
 | `data._links.self.href` | URL per scaricare il file. |
 
 **Risposta directory**
@@ -195,16 +195,16 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 }
 ```
 
-Quando viene restituita una directory, essa contiene un array di tutti i file all’interno della directory.
+Quando viene restituita una directory, contiene una matrice di tutti i file all’interno della directory.
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `data.name` | Nome del file (ad esempio, profile.csv). |
+| `data.name` | Nome del file (ad esempio profiles.csv). |
 | `data._links.self.href` | URL per scaricare il file. |
 
-## Accesso al contenuto di un file
+## Accedere al contenuto di un file
 
-L&#39;API [!DNL Data Access] può essere utilizzata anche per accedere al contenuto di un file. Questo può essere utilizzato per scaricare il contenuto in un&#39;origine esterna.
+L’ API [!DNL Data Access] può essere utilizzata anche per accedere ai contenuti di un file. Può quindi essere utilizzato per scaricare i contenuti in un’origine esterna.
 
 **Formato API**
 
@@ -228,8 +228,8 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{FILE_ID}` | L&#39;ID del file all&#39;interno di un set di dati. |
-| `{FILE_NAME}` | Nome completo del file (ad esempio, profile.csv). |
+| `{FILE_ID}` | ID del file all’interno di un set di dati. |
+| `{FILE_NAME}` | Nome completo del file (ad esempio profiles.csv). |
 
 **Risposta**
 
@@ -237,8 +237,8 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 ## Esempi di codice aggiuntivi
 
-Per ulteriori esempi, fare riferimento all&#39; [esercitazione sull&#39;accesso ai dati](tutorials/dataset-data.md).
+Per ulteriori esempi, consulta l’ [esercitazione sull’accesso ai dati](tutorials/dataset-data.md).
 
-## Iscrizione agli eventi di assimilazione dei dati
+## Iscriviti agli eventi di inserimento dati
 
-[!DNL Platform] rende disponibili per l&#39;iscrizione specifici eventi di alto valore tramite la  [ Developer Console](https://www.adobe.com/go/devs_console_ui). Ad esempio, puoi abbonarti agli eventi di inserimento dei dati per ricevere una notifica di potenziali ritardi e guasti. Per ulteriori informazioni, vedere l&#39;esercitazione su [iscrizione alle notifiche di assimilazione dei dati](../ingestion/quality/subscribe-events.md).
+[!DNL Platform] rende disponibili per l’abbonamento eventi specifici di alto valore tramite  [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Ad esempio, puoi abbonarti a eventi di inserimento dati per ricevere notifiche su potenziali ritardi e errori. Per ulteriori informazioni, consulta l’esercitazione su [iscrizione alle notifiche di inserimento dati](../ingestion/quality/subscribe-events.md) .
