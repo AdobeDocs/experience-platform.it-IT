@@ -1,22 +1,22 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari'
+keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
 title: Connettori sorgente
-topic: overview
-description: Le connessioni di origine consentono di autenticare i sistemi di storage e i servizi CRM, impostare i tempi di esecuzione dell'assimilazione e gestire il throughput di assimilazione dei dati.
+topic-legacy: overview
+description: Le connessioni sorgente consentono di autenticare i sistemi di storage e i servizi CRM, impostare i tempi di esecuzione dell’acquisizione e gestire il throughput di inserimento dei dati.
+exl-id: 6e4f1688-6fe8-4ee7-996e-bcdf942cea17
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%
 
 ---
 
-
 # Connettori sorgente
 
-Adobe Experience Platform consente l&#39;acquisizione di dati da origini esterne, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo utilizzando i servizi [!DNL Platform]. È possibile acquisire dati da origini diverse, come applicazioni  Adobe, storage basato su cloud, software di terze parti e CRM.
+Adobe Experience Platform consente di acquisire dati da sorgenti esterne e allo stesso tempo di strutturare, etichettare e migliorare i dati in arrivo utilizzando i servizi [!DNL Platform] . È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, software di terze parti e CRM.
 
-[!DNL Experience Platform] fornisce un&#39;API RESTful e un&#39;interfaccia utente interattiva che consente di configurare con facilità le connessioni di origine a vari provider di dati. Queste connessioni di origine consentono di autenticare i sistemi di storage e i servizi CRM, impostare i tempi di esecuzione dell&#39;assimilazione e gestire il throughput di assimilazione dei dati.
+[!DNL Experience Platform] fornisce un’API RESTful e un’interfaccia utente interattiva che consente di configurare facilmente le connessioni sorgente a vari provider di dati. Queste connessioni di origine ti consentono di autenticare i sistemi di storage e i servizi CRM, impostare i tempi di esecuzione dell’acquisizione e gestire il throughput di inserimento dei dati.
 
-Ulteriori informazioni su questi connettori di origine sono disponibili nella [documentazione dei connettori di origine](../sources/home.md).
+Ulteriori informazioni su questi connettori sorgente sono disponibili nella documentazione [connettori sorgente](../sources/home.md).
