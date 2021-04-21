@@ -2,13 +2,13 @@
 keywords: Experience Platform;home;argomenti comuni;connettore sorgente Marketo;connettore Marketo;sorgente Marketo;Marketo
 solution: Experience Platform
 title: Creare un connettore sorgente di Marketo Engage nell’interfaccia utente
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione fornisce passaggi per creare un connettore di origine di Marketo Engage nell’interfaccia utente per inserire dati B2B in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 5d4d88f88ab184c679a4cf425283a71983c929f3
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
-source-wordcount: '1318'
+source-wordcount: '1317'
 ht-degree: 0%
 
 ---
@@ -103,7 +103,7 @@ Viene visualizzata la finestra di dialogo **[!UICONTROL Select dataset]**. Trova
 
 ### Utilizzare un nuovo set di dati
 
-Per acquisire i dati in un nuovo set di dati, seleziona **[!UICONTROL Create new dataset]** e immetti un nome e una descrizione per il set di dati nei campi forniti.
+Per acquisire dati in un nuovo set di dati, seleziona **[!UICONTROL Create new dataset]** e immetti un nome e una descrizione per il set di dati nei campi forniti.
 
 È possibile cercare uno schema immettendone il nome nella barra di ricerca **[!UICONTROL Select schema]**. Puoi anche selezionare l’icona a discesa per visualizzare un elenco degli schemi esistenti. In alternativa, puoi selezionare **[!UICONTROL Advanced search]** per accedere alla pagina degli schemi esistenti, inclusi i rispettivi dettagli.
 
