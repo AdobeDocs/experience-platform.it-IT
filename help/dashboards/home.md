@@ -1,17 +1,17 @@
 ---
 solution: Experience Platform
-title: Introduzione  dashboard di Experience Platform
-topic: overview
+title: Introduzione alle dashboard di Experience Platform
+topic-legacy: overview
 type: Documentation
-description: 'Esplora più dashboard in Adobe Experience Platform per visualizzare informazioni importanti sui dati aziendali, come acquisito durante le istantanee giornaliere. '
+description: Esplora più dashboard in Adobe Experience Platform per visualizzare informazioni importanti sui dati dell’organizzazione, acquisite durante le istantanee giornaliere.
+exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
 translation-type: tm+mt
-source-git-commit: d97fd09b382877608edf665d7559a684be00c0bb
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 3%
 
 ---
-
 
 # (Beta) Panoramica delle dashboard {#dashboards}
 
@@ -19,24 +19,24 @@ ht-degree: 3%
 >
 >La funzionalità del dashboard è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
 
-Adobe Experience Platform fornisce diverse dashboard attraverso le quali è possibile visualizzare informazioni importanti sui dati aziendali, come acquisito durante le istantanee giornaliere.
+Adobe Experience Platform offre diverse dashboard attraverso le quali è possibile visualizzare informazioni importanti sui dati dell’organizzazione, acquisite durante le istantanee giornaliere.
 
 ## Introduzione alle dashboard
 
-I dashboard forniscono rapporti out-of-the-box sui dati aziendali e sono integrati direttamente nel flusso di lavoro di marketing all&#39;interno di Platform. Queste dashboard sono disponibili senza bisogno di ulteriore supporto IT e senza il tempo e lo sforzo altrimenti necessari per esportare ed elaborare i dati con un&#39;ulteriore progettazione e implementazione del data warehouse.
+Le dashboard forniscono rapporti predefiniti sui dati dell’organizzazione e sono integrate direttamente nel flusso di lavoro dell’addetto al marketing all’interno di Platform. Queste dashboard sono disponibili senza la necessità di ulteriore supporto IT o il tempo e lo sforzo necessari per esportare ed elaborare i dati con una progettazione e un&#39;implementazione aggiuntive per il data warehouse.
 
 ## Guida introduttiva alle dashboard
 
-Per accedere ai dashboard, passa alla sezione appropriata all&#39;interno dell&#39;interfaccia utente della piattaforma. Una volta nella sezione, selezionare la scheda **[!UICONTROL Overview]**, se non è selezionata automaticamente, per visualizzare il dashboard.
+Per accedere alle dashboard, passa alla sezione appropriata all’interno dell’interfaccia utente di Platform (UI). Una volta nella sezione , seleziona la scheda **[!UICONTROL Overview]** , se non è selezionata automaticamente, per visualizzare il dashboard.
 
-I dati nello snapshot mostrano esattamente come appaiono nel momento in cui è stata scattata l&#39;istantanea. In altre parole, l&#39;istantanea non è un&#39;approssimazione o un esempio dei dati e le dashboard non vengono aggiornate in tempo reale.
+I dati nello snapshot mostrano esattamente come vengono visualizzati nel momento specifico in cui è stata acquisita l&#39;istantanea. In altre parole, l&#39;istantanea non è un&#39;approssimazione o un esempio dei dati e i dashboard non vengono aggiornati in tempo reale.
 
 >[!NOTE]
 >
->Eventuali modifiche o aggiornamenti apportati ai dati dopo l&#39;acquisizione dell&#39;istantanea non verranno visualizzati nel dashboard fino all&#39;acquisizione dell&#39;istantanea successiva.
+>Eventuali modifiche o aggiornamenti apportati ai dati dall&#39;acquisizione dello snapshot non verranno visualizzati nel dashboard fino all&#39;acquisizione dello snapshot successivo.
 
 ## Dashboard disponibili
 
-Al momento sono disponibili diverse dashboard all&#39;interno  Experience Platform, ciascuna delle quali fornisce trasparenza ai dati dei clienti della tua organizzazione.
+Al momento sono disponibili diverse dashboard all’interno di Experience Platform, ciascuna delle quali fornisce trasparenza ai dati dei clienti della tua organizzazione.
 
-Per saperne di più su queste dashboard e sulle relative metriche disponibili, seleziona dall&#39;elenco delle dashboard disponibili nella navigazione della documentazione.
+Per ulteriori informazioni su queste dashboard e sulle relative metriche disponibili, seleziona dall’elenco delle dashboard disponibili nella navigazione della documentazione.
