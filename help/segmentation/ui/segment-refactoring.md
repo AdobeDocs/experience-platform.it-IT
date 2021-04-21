@@ -1,32 +1,32 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Generatore di segmenti;Generatore di segmenti'
+keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Generatore di segmenti;Generatore di segmenti
 solution: Experience Platform
-title: Guida all’interfaccia utente per i vincoli temporali di segmentazione ristrutturati
-topic: ui guide
-description: 'Segment Builder (Generatore di segmenti) fornisce un’area di lavoro completa che consente di interagire con gli elementi dati del profilo. L’area di lavoro offre controlli intuitivi per la creazione e la modifica di regole, come le sezioni di trascinamento utilizzate per rappresentare le proprietà dei dati. '
+title: Guida all’interfaccia utente dei vincoli di tempo di segmentazione refactoring
+topic-legacy: ui guide
+description: Segment Builder (Generatore di segmenti) fornisce un’area di lavoro ricca che consente di interagire con gli elementi dati di profilo. L’area di lavoro fornisce controlli intuitivi per la creazione e la modifica di regole, ad esempio riquadri drag-and-drop utilizzati per rappresentare le proprietà dei dati.
+exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '259'
 ht-degree: 0%
 
 ---
 
+# Ripristino dei vincoli di tempo
 
-# Refactorizzazione dei vincoli temporali
+La versione di ottobre 2020 per Adobe Experience Platform ha introdotto modifiche alle prestazioni del servizio di segmentazione Adobe Experience Platform che aggiungono nuove restrizioni all’utilizzo degli operatori logici OR e AND. Queste modifiche interesseranno i segmenti appena creati o modificati creati utilizzando l’interfaccia utente di Generatore di segmenti. Questa guida spiega come attenuare queste modifiche.
 
-La release di ottobre 2020 per Adobe Experience Platform ha introdotto modifiche alle prestazioni di Adobe Experience Platform Segmentation Service che aggiungono nuove restrizioni all&#39;uso degli operatori OR e AND logici. Queste modifiche interesseranno i segmenti appena creati o modificati creati utilizzando l’interfaccia utente di Generatore di segmenti. Questa guida spiega come attenuare tali modifiche.
+Prima della versione di ottobre 2020, tutti i vincoli di tempo a livello di regola, di gruppo e a livello di evento facevano riferimento in modo ridondante alla stessa marca temporale. Per chiarire l’utilizzo dei vincoli di tempo, i vincoli di tempo a livello di regola e di gruppo sono stati rimossi. Per adattarsi a questa modifica, tutti i vincoli di tempo devono essere riscritti come vincoli di tempo a livello di evento.
 
-Prima della release di ottobre 2020, tutti i vincoli temporali a livello di regola, gruppo e a livello di evento si riferivano in modo ridondante alla stessa marca temporale. Per chiarire l&#39;uso dei vincoli temporali, i vincoli temporali a livello di regola e a livello di gruppo sono stati rimossi. Per tenere conto di questa modifica, tutti i vincoli temporali devono essere riscritti come vincoli temporali a livello di evento.
-
-In precedenza, un singolo evento poteva presentare più regole di vincolo temporale associate.
+In precedenza, un singolo evento poteva avere più regole di vincolo di tempo associate ad esso.
 
 ![](../images/ui/segment-refactoring/former-time-constraint.png)
 
-Come potete vedere, questo segmento ha due vincoli a livello di regola: Uno per &quot;[!UICONTROL Today]&quot; e l&#39;altro per &quot;[!UICONTROL Yesterday]&quot;.
+Come puoi vedere, questo segmento ha due vincoli a livello di regola: Uno per &quot;[!UICONTROL Today]&quot; e l&#39;altro per &quot;[!UICONTROL Yesterday]&quot;.
 
-Il segmento precedente è equivalente al segmento seguente — entrambi i vincoli temporali a livello di evento sono stati collegati tramite un operatore AND. Il primo vincolo temporale a livello di evento fa riferimento a un evento click il cui nome è uguale a &quot;Formazione&quot; e si verifica oggi, mentre il secondo vincolo temporale a livello di evento fa riferimento a un evento click il cui nome è uguale a &quot;Animali domestici&quot; e si è verificato ieri.
+Il segmento precedente è equivalente al segmento seguente: entrambi i vincoli di tempo a livello di evento sono stati collegati utilizzando un operatore AND. Il primo vincolo di tempo a livello di evento fa riferimento a un evento click il cui nome è uguale a &quot;Training&quot; e si verifica oggi, mentre il secondo vincolo di tempo a livello di evento fa riferimento a un evento click il cui nome è uguale a &quot;Animali domestici&quot; ed è successo ieri.
 
 ![](../images/ui/segment-refactoring/time-constraint-1.png) ![](../images/ui/segment-refactoring/time-constraint-2.png)
 
-Questo refactoring dei vincoli di tempo influisce anche sui vincoli di tempo che vengono collegati tramite un operatore OR.
+Questo refactoring dei vincoli di tempo influisce anche sui vincoli di tempo collegati tramite un operatore OR.
