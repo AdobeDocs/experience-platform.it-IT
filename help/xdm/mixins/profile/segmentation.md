@@ -1,37 +1,37 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;schema;schema;XDM;profilo singolo;campi;schemi;schemi;segmento;appartenenza al segmento;appartenenza al segmento;schema;mappa;mappa;'
+keywords: Experience Platform;home;argomenti popolari;schema;schema;XDM;profilo individuale;campi;schemi;schemi;segmenti;appartenenza segmento;appartenenza segmento;struttura schema;mappa;mappa;
 solution: Experience Platform
-title: Mixin Dettagli Appartenenza Segmento
-topic: overview
+title: Mixin dettagli iscrizione segmento
+topic-legacy: overview
 description: Questo documento fornisce una panoramica del mixin Segment Membership Details (Dettagli appartenenza al segmento).
+exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 1%
 
 ---
 
-
-# [!UICONTROL Segment Membership Details] mixin
+# [!UICONTROL Segment Membership Details] mescolina
 
 >[!NOTE]
 >
->I nomi di diversi mixin sono cambiati. Per ulteriori informazioni, consulta il documento relativo agli [aggiornamenti del nome del mixin](../name-updates.md).
+>I nomi di diversi mixin sono cambiati. Per ulteriori informazioni, consulta il documento sugli [aggiornamenti dei nomi mixin](../name-updates.md) .
 
-[!UICONTROL Segment Membership Details] è un mixin standard per la  [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Il mixin fornisce un singolo campo mappa che acquisisce le informazioni relative all&#39;appartenenza al segmento, inclusi i segmenti a cui appartiene l&#39;individuo, l&#39;ultima ora di qualifica e quando l&#39;appartenenza è valida fino a quando.
+[!UICONTROL Segment Membership Details] è un mixin standard per la  [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Il mixin fornisce un singolo campo mappa che acquisisce le informazioni relative all’appartenenza al segmento, compresi i segmenti a cui appartiene l’individuo, l’ultimo tempo di qualificazione e quando l’iscrizione è valida fino a quando.
 
 >[!WARNING]
 >
->Mentre il campo `segmentMembership` deve essere aggiunto manualmente allo schema del profilo utilizzando questo mixin, non è necessario tentare di compilare o aggiornare manualmente questo campo. Il sistema aggiorna automaticamente la mappatura `segmentMembership` per ogni profilo durante l&#39;esecuzione dei processi di segmentazione.
+>Mentre il campo `segmentMembership` deve essere aggiunto manualmente allo schema del profilo utilizzando questo mixin, non devi tentare di compilare o aggiornare manualmente questo campo. Il sistema aggiorna automaticamente la mappa `segmentMembership` per ciascun profilo durante l’esecuzione dei processi di segmentazione.
 
 <img src="../../images/data-types/profile-segmentation.png" width="400" /><br />
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `segmentMembership` | Mappa | Un oggetto map che descrive le appartenenze al segmento del singolo. La struttura dell&#39;oggetto è descritta in dettaglio di seguito. |
+| `segmentMembership` | Mappa | Un oggetto map che descrive le appartenenze al segmento del singolo utente. La struttura dell&#39;oggetto è descritta in dettaglio di seguito. |
 
-Di seguito è riportata una `segmentMembership` mappa di esempio compilata dal sistema per un particolare profilo. Le appartenenze ai segmenti sono ordinate per namespace, come indicato dalle chiavi di livello principale dell&#39;oggetto. A sua volta, le singole chiavi sotto ogni namespace rappresentano gli ID dei segmenti di cui il profilo è membro. Ciascun oggetto segmento contiene diversi sottocampi che forniscono ulteriori dettagli sull&#39;appartenenza:
+Di seguito è riportato un esempio di `segmentMembership` mappa che il sistema ha popolato per un particolare profilo. Le appartenenze ai segmenti sono ordinate per namespace, come indicato dalle chiavi a livello principale dell’oggetto. A sua volta, le singole chiavi sotto ogni namespace rappresentano gli ID dei segmenti di cui il profilo è membro. Ogni oggetto segmento contiene diversi sottocampi che forniscono ulteriori dettagli sull’appartenenza:
 
 ```json
 {
@@ -72,13 +72,13 @@ Di seguito è riportata una `segmentMembership` mappa di esempio compilata dal s
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `xdm:version` | La versione del segmento per il quale questo profilo è qualificato. |
-| `xdm:lastQualificationTime` | Marca temporale dell&#39;ultima volta che questo profilo è qualificato per il segmento. |
-| `xdm:validUntil` | Una marca temporale che indica quando non si deve più presumere che l&#39;appartenenza al segmento sia valida. |
+| `xdm:version` | Versione del segmento per cui si è qualificato questo profilo. |
+| `xdm:lastQualificationTime` | Una marca temporale dell’ultima volta che il profilo è qualificato per il segmento. |
+| `xdm:validUntil` | Una marca temporale di quando non si deve più presumere che l’appartenenza al segmento sia valida. |
 | `xdm:status` | Indica se l’appartenenza al segmento è stata realizzata come parte della richiesta corrente. Sono accettati i seguenti valori: <ul><li>`existing`: Il profilo faceva già parte del segmento prima della richiesta e continua a mantenere la sua appartenenza.</li><li>`realized`: Il profilo sta entrando nel segmento come parte della richiesta corrente.</li><li>`exited`: Il profilo sta uscendo dal segmento come parte della richiesta corrente.</li></ul> |
-| `xdm:payload` | Alcune appartenenze al segmento includono un payload che descrive valori aggiuntivi direttamente correlati all&#39;appartenenza. Per ogni appartenenza è possibile fornire un solo payload di un determinato tipo. `xdm:payloadType` indica il tipo di payload (`boolean`,  `number`,  `propensity` o  `string`), mentre la relativa proprietà di pari livello fornisce il valore per il tipo di payload. |
+| `xdm:payload` | Alcune appartenenze a segmenti includono un payload che descrive i valori aggiuntivi direttamente correlati all’appartenenza. È possibile fornire un solo payload di un determinato tipo per ogni appartenenza. `xdm:payloadType` indica il tipo di payload (`boolean`,  `number`,  `propensity` o  `string`), mentre la relativa proprietà di pari livello fornisce il valore per il tipo di payload. |
 
-Per ulteriori dettagli sul mixin, fare riferimento al repository XDM pubblico:
+Per ulteriori dettagli sul mixin, consulta l’archivio XDM pubblico:
 
-* [Esempio compilato](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.example.1.json)
+* [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.example.1.json)
 * [Schema completo](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.schema.json)
