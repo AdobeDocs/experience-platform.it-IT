@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;argomenti popolari;schema;schema;enum;mixin;mixin;mixin;mixin;mixins;tipo di dati;tipi di dati;tipi di dati;tipo di dati;identità primaria;identità principale;profilo individuale XDM;campi XDM;tipo di dati enum;evento esperienza XDM;evento esperienza XDM;ExperienceEvent;experienceevent;XDM Experienceevenet;schema;progettazione;classe Classe;classi;classi;tipo di dati;tipo di dati;tipo di dati;schemi;schemi;mappa identità;mappa identità;mappa identità;progettazione schema;mappa;mappa;schema unione;schema unione
 solution: Experience Platform
 title: Nozioni di base sulla composizione dello schema
-topic: ' - Panoramica'
+topic-legacy: overview
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
+exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
 translation-type: tm+mt
-source-git-commit: ae2c5f9fa4e732fefe55a8536894844986aea1e2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '3461'
+source-wordcount: '3460'
 ht-degree: 0%
 
 ---
-
 
 # Nozioni di base sulla composizione dello schema
 
