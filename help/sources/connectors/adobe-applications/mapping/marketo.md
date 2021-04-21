@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;argomenti popolari;Marketo Engage;marketing da coinvolgere;Marketo;mappatura
 solution: Experience Platform
 title: Campi di mappatura per l'origine Marketo Engage
-topic: overview
+topic-legacy: overview
 description: Le tabelle seguenti contengono le mappature tra i campi nei set di dati Marketo e i campi XDM corrispondenti.
 translation-type: tm+mt
-source-git-commit: 2563b413ec35cb4c5f05a54bce6f7271917e51f3
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '425'
 ht-degree: 3%
 
 ---
