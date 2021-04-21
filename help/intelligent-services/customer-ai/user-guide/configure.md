@@ -2,13 +2,13 @@
 keywords: Experience Platform;guida utente;customer ai;argomenti comuni;configurare l’istanza;creare un’istanza;
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Configurare un’istanza di Customer AI
-topic: Creazione di istanze
+topic-legacy: Instance creation
 description: I servizi intelligenti forniscono Customer AI come servizio Adobe Sensei semplice da utilizzare che può essere configurato per diversi casi d’uso. Le sezioni seguenti forniscono i passaggi per configurare un’istanza di Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
 translation-type: tm+mt
-source-git-commit: 2ef2a6431865e8ffdc2abd6cf527249e8b5ca4d0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1231'
 ht-degree: 0%
 
 ---
