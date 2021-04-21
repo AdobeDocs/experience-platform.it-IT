@@ -1,21 +1,21 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Segmentation Service;pql;PQL;Profile Query Language;funzioni stringa;stringa;'
+keywords: Experience Platform;home;argomenti popolari;segmentazione;Segmentazione;Servizio di segmentazione;pql;PQL;Lingua query profilo;funzioni stringa;stringa;
 solution: Experience Platform
 title: Funzioni stringa PQL
-topic: developer guide
-description: Il linguaggio PQL (Profile Query Language) offre funzioni che semplificano l'interazione con le stringhe.
+topic-legacy: developer guide
+description: Il linguaggio PQL (Profile Query Language) offre funzioni che semplificano l’interazione con le stringhe.
+exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '784'
 ht-degree: 6%
 
 ---
 
-
 # Funzioni stringa
 
-[!DNL Profile Query Language] (PQL) offre funzioni che semplificano l&#39;interazione con le stringhe. Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
+[!DNL Profile Query Language] (PQL) offre funzioni che semplificano l’interazione con le stringhe. Ulteriori informazioni sulle altre funzioni PQL sono disponibili nella [[!DNL Profile Query Language] panoramica](./overview.md).
 
 ## Simile
 
@@ -29,8 +29,8 @@ La funzione `like` viene utilizzata per determinare se una stringa corrisponde a
 
 | Argomento | Descrizione |
 | --------- | ----------- |
-| `{STRING_1}` | Stringa su cui eseguire il controllo. |
-| `{STRING_2}` | L&#39;espressione da confrontare con la prima stringa. Esistono due caratteri speciali supportati per la creazione di un&#39;espressione: `%` e `_`. <ul><li>`%` viene utilizzato per rappresentare zero o più caratteri.</li><li>`_` viene utilizzato per rappresentare esattamente un carattere.</li></ul> |
+| `{STRING_1}` | Stringa da cui eseguire il controllo. |
+| `{STRING_2}` | Espressione da confrontare con la prima stringa. Sono disponibili due caratteri speciali supportati per la creazione di un’espressione: `%` e `_`. <ul><li>`%` viene utilizzato per rappresentare zero o più caratteri.</li><li>`_` viene utilizzato per rappresentare esattamente un carattere.</li></ul> |
 
 **Esempio**
 
@@ -52,9 +52,9 @@ La funzione `startsWith` viene utilizzata per determinare se una stringa inizia 
 
 | Argomento | Descrizione |
 | --------- | ----------- |
-| `{STRING_1}` | Stringa su cui eseguire il controllo. |
-| `{STRING_2}` | Stringa da cercare all&#39;interno della prima stringa. |
-| `{BOOLEAN}` | Un parametro facoltativo per determinare se il controllo è basato sulla distinzione tra maiuscole e minuscole. Per impostazione predefinita, è impostata su true. |
+| `{STRING_1}` | Stringa da cui eseguire il controllo. |
+| `{STRING_2}` | Stringa da cercare all’interno della prima stringa. |
+| `{BOOLEAN}` | Un parametro facoltativo per determinare se il controllo è sensibile a maiuscole e minuscole. Per impostazione predefinita, è impostato su true. |
 
 **Esempio**
 
@@ -76,9 +76,9 @@ La funzione `doesNotStartWith` viene utilizzata per determinare se una stringa n
 
 | Argomento | Descrizione |
 | --------- | ----------- |
-| `{STRING_1}` | Stringa su cui eseguire il controllo. |
-| `{STRING_2}` | Stringa da cercare all&#39;interno della prima stringa. |
-| `{BOOLEAN}` | Un parametro facoltativo per determinare se il controllo è basato sulla distinzione tra maiuscole e minuscole. Per impostazione predefinita, è impostata su true. |
+| `{STRING_1}` | Stringa da cui eseguire il controllo. |
+| `{STRING_2}` | Stringa da cercare all’interno della prima stringa. |
+| `{BOOLEAN}` | Un parametro facoltativo per determinare se il controllo è sensibile a maiuscole e minuscole. Per impostazione predefinita, è impostato su true. |
 
 **Esempio**
 
@@ -100,13 +100,13 @@ La funzione `endsWith` viene utilizzata per determinare se una stringa termina c
 
 | Argomento | Descrizione |
 | --------- | ----------- |
-| `{STRING_1}` | Stringa su cui eseguire il controllo. |
-| `{STRING_2}` | Stringa da cercare all&#39;interno della prima stringa. |
-| `{BOOLEAN}` | Un parametro facoltativo per determinare se il controllo è basato sulla distinzione tra maiuscole e minuscole. Per impostazione predefinita, è impostata su true. |
+| `{STRING_1}` | Stringa da cui eseguire il controllo. |
+| `{STRING_2}` | Stringa da cercare all’interno della prima stringa. |
+| `{BOOLEAN}` | Un parametro facoltativo per determinare se il controllo è sensibile a maiuscole e minuscole. Per impostazione predefinita, è impostato su true. |
 
 **Esempio**
 
-La seguente query PQL determina, con distinzione tra maiuscole e minuscole, se l&#39;indirizzo e-mail della persona termina con &quot;.com&quot;.
+La seguente query PQL determina, con distinzione tra maiuscole e minuscole, se l’indirizzo e-mail della persona termina con &quot;.com&quot;.
 
 ```sql
 person.emailAddress.endsWith(".com")
@@ -124,13 +124,13 @@ La funzione `doesNotEndWith` viene utilizzata per determinare se una stringa non
 
 | Argomento | Descrizione |
 | --------- | ----------- |
-| `{STRING_1}` | Stringa su cui eseguire il controllo. |
-| `{STRING_2}` | Stringa da cercare all&#39;interno della prima stringa. |
-| `{BOOLEAN}` | Un parametro facoltativo per determinare se il controllo è basato sulla distinzione tra maiuscole e minuscole. Per impostazione predefinita, è impostata su true. |
+| `{STRING_1}` | Stringa da cui eseguire il controllo. |
+| `{STRING_2}` | Stringa da cercare all’interno della prima stringa. |
+| `{BOOLEAN}` | Un parametro facoltativo per determinare se il controllo è sensibile a maiuscole e minuscole. Per impostazione predefinita, è impostato su true. |
 
 **Esempio**
 
-La seguente query PQL determina, con distinzione tra maiuscole e minuscole, se l&#39;indirizzo e-mail della persona non termina con &quot;.com&quot;.
+La seguente query PQL determina, con distinzione tra maiuscole e minuscole, se l’indirizzo e-mail della persona non termina con &quot;.com&quot;.
 
 ```sql
 person.emailAddress.doesNotEndWith(".com")
@@ -148,13 +148,13 @@ La funzione `contains` viene utilizzata per determinare se una stringa contiene 
 
 | Argomento | Descrizione |
 | --------- | ----------- |
-| `{STRING_1}` | Stringa su cui eseguire il controllo. |
-| `{STRING_2}` | Stringa da cercare all&#39;interno della prima stringa. |
-| `{BOOLEAN}` | Un parametro facoltativo per determinare se il controllo è basato sulla distinzione tra maiuscole e minuscole. Per impostazione predefinita, è impostata su true. |
+| `{STRING_1}` | Stringa da cui eseguire il controllo. |
+| `{STRING_2}` | Stringa da cercare all’interno della prima stringa. |
+| `{BOOLEAN}` | Un parametro facoltativo per determinare se il controllo è sensibile a maiuscole e minuscole. Per impostazione predefinita, è impostato su true. |
 
 **Esempio**
 
-La seguente query PQL determina, con distinzione tra maiuscole e minuscole, se l&#39;indirizzo e-mail della persona contiene la stringa &quot;2010@gm&quot;.
+La seguente query PQL determina, con distinzione tra maiuscole e minuscole, se l’indirizzo e-mail della persona contiene la stringa &quot;2010@gm&quot;.
 
 ```sql
 person.emailAddress.contains("2010@gm")
@@ -172,13 +172,13 @@ La funzione `doesNotContain` viene utilizzata per determinare se una stringa non
 
 | Argomento | Descrizione |
 | --------- | ----------- |
-| `{STRING_1}` | Stringa su cui eseguire il controllo. |
-| `{STRING_2}` | Stringa da cercare all&#39;interno della prima stringa. |
-| `{BOOLEAN}` | Un parametro facoltativo per determinare se il controllo è basato sulla distinzione tra maiuscole e minuscole. Per impostazione predefinita, è impostata su true. |
+| `{STRING_1}` | Stringa da cui eseguire il controllo. |
+| `{STRING_2}` | Stringa da cercare all’interno della prima stringa. |
+| `{BOOLEAN}` | Un parametro facoltativo per determinare se il controllo è sensibile a maiuscole e minuscole. Per impostazione predefinita, è impostato su true. |
 
 **Esempio**
 
-La seguente query PQL determina, con distinzione tra maiuscole e minuscole, se l&#39;indirizzo e-mail della persona non contiene la stringa &quot;2010@gm&quot;.
+La seguente query PQL determina, con distinzione tra maiuscole e minuscole, se l’indirizzo e-mail della persona non contiene la stringa &quot;2010@gm&quot;.
 
 ```sql
 person.emailAddress.doesNotContain("2010@gm")
@@ -196,7 +196,7 @@ La funzione `equals` viene utilizzata per determinare se una stringa è uguale a
 
 | Argomento | Descrizione |
 | --------- | ----------- |
-| `{STRING_1}` | Stringa su cui eseguire il controllo. |
+| `{STRING_1}` | Stringa da cui eseguire il controllo. |
 | `{STRING_2}` | Stringa da confrontare con la prima stringa. |
 
 **Esempio**
@@ -219,7 +219,7 @@ La funzione `notEqualTo` viene utilizzata per determinare se una stringa non è 
 
 | Argomento | Descrizione |
 | --------- | ----------- |
-| `{STRING_1}` | Stringa su cui eseguire il controllo. |
+| `{STRING_1}` | Stringa da cui eseguire il controllo. |
 | `{STRING_2}` | Stringa da confrontare con la prima stringa. |
 
 **Esempio**
@@ -232,7 +232,7 @@ person.name.notEqualTo("John")
 
 ## Corrisponde
 
-La funzione `matches` viene utilizzata per determinare se una stringa corrisponde a una specifica espressione regolare. Per ulteriori informazioni sui pattern di corrispondenza nelle espressioni regolari, fare riferimento a [questo documento](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html).
+La funzione `matches` viene utilizzata per determinare se una stringa corrisponde a una specifica espressione regolare. Fare riferimento a [questo documento](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) per ulteriori informazioni sui pattern corrispondenti nelle espressioni regolari.
 
 **Formato**
 
@@ -268,5 +268,4 @@ emailAddress.regexGroup("@(\w+)", 1)
 
 ## Passaggi successivi
 
-Ora che hai imparato le funzioni stringa, puoi usarle nelle tue query PQL. Per ulteriori informazioni sulle altre funzioni PQL, leggere la [Panoramica del linguaggio di query profilo](./overview.md).
-
+Dopo aver appreso le funzioni stringa, è possibile utilizzarle all&#39;interno delle query PQL. Per ulteriori informazioni sulle altre funzioni PQL, consulta la [Panoramica di Profile Query Language](./overview.md).
