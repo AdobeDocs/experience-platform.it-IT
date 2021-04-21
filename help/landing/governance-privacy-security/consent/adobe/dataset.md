@@ -2,16 +2,16 @@
 keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
 title: Configurare un set di dati per acquisire dati di consenso e preferenza
-topic: guida introduttiva
+topic-legacy: getting started
 description: Scopri come configurare uno schema e un set di dati Experience Data Model (XDM) per acquisire i dati di consenso e preferenza in Adobe Experience Platform.
+exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
 translation-type: tm+mt
-source-git-commit: 980bff169659d3ffc92a0678f8a0b153b3189906
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1405'
+source-wordcount: '1403'
 ht-degree: 0%
 
 ---
-
 
 # Configurare un set di dati per acquisire dati di consenso e preferenza
 
