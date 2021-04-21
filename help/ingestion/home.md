@@ -2,20 +2,20 @@
 keywords: Experience Platform;home;argomenti comuni;inserimento dati;posizione dati;posizione dati;gestione dati;gestione dati;gestione dati;linea;linea;linea;batch;batch;dati acquisiti
 solution: Experience Platform
 title: Panoramica sull’acquisizione dei dati
-topic: ' - Panoramica'
+topic-legacy: overview
 description: Questo documento presenta i tre modi principali in cui i dati vengono acquisiti in Platform, con collegamenti alla rispettiva documentazione di panoramica per informazioni più dettagliate.
+exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '461'
 ht-degree: 9%
 
 ---
 
-
 # Panoramica sull’acquisizione dei dati
 
-Adobe Experience Platform riunisce dati provenienti da più sorgenti per aiutare gli esperti di marketing a comprendere meglio il comportamento dei loro clienti. L’acquisizione dei dati in Adobe Experience Platform rappresenta i diversi metodi con cui [!DNL Platform] acquisisce i dati da queste sorgenti, nonché il modo in cui tali dati vengono mantenuti all’interno del Data Lake e possono essere utilizzati dai servizi a valle [!DNL Platform].
+Adobe Experience Platform riunisce dati provenienti da più sorgenti per aiutare gli esperti di marketing a comprendere meglio il comportamento dei loro clienti. L’acquisizione dei dati di Adobe Experience Platform rappresenta i diversi metodi con cui [!DNL Platform] acquisisce i dati da queste sorgenti, nonché il modo in cui tali dati vengono memorizzati all’interno del Data Lake e possono essere utilizzati dai servizi a valle [!DNL Platform].
 
 Questo documento introduce i tre modi principali in cui i dati vengono acquisiti in [!DNL Platform], con collegamenti alla rispettiva documentazione di panoramica per informazioni più dettagliate.
 
@@ -33,11 +33,11 @@ L’acquisizione in streaming ti consente di inviare in tempo reale dati da disp
 
 Per ulteriori informazioni, consulta la [panoramica sull’acquisizione in streaming](./streaming-ingestion/overview.md) .
 
-## Origini
+## Fonti
 
 [!DNL Experience Platform] consente di impostare connessioni di origine a vari provider di dati. Queste connessioni consentono di eseguire l’autenticazione alle origini dati esterne, impostare i tempi di esecuzione dell’acquisizione e gestire il throughput di acquisizione.
 
-Le connessioni sorgente possono essere configurate per raccogliere dati da altre applicazioni Adobe (come Adobe Analytics e Adobe Audience Manager), origini di archiviazione cloud di terze parti (come [!DNL Azure Blob], [!DNL Amazon] S3, server FTP e server SFTP) e sistemi CRM di terze parti (come [!DNL Microsoft Dynamics] e [!DNL Salesforce]).
+Le connessioni sorgente possono essere configurate per raccogliere dati da altre applicazioni Adobe (come Adobe Analytics e Adobe Audience Manager), da sorgenti di archiviazione cloud di terze parti (come [!DNL Azure Blob], [!DNL Amazon] S3, server FTP e server SFTP) e da sistemi CRM di terze parti (come [!DNL Microsoft Dynamics] e [!DNL Salesforce]).
 
 Per ulteriori informazioni, consulta la [Panoramica delle sorgenti](../sources/home.md) .
 
