@@ -1,21 +1,21 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari;indirizzo ip;indirizzi ip;indirizzo ip  elenco consentiti; elenco consentiti '
-description: Gli indirizzi IP devono essere aggiunti a un elenco consentiti  prima di utilizzare i connettori di origine.
+keywords: Experience Platform;home;argomenti popolari;indirizzo ip;indirizzi ip;elenco consentiti indirizzo ip; elenco consentiti
+description: Gli indirizzi IP devono essere aggiunti a un elenco consentiti prima di lavorare con i connettori sorgente.
 solution: Experience Platform
-title: ELENCO CONSENTITI di indirizzi IP  connessioni di origine
-topic: ' - Panoramica'
+title: ELENCO CONSENTITI di indirizzi IP per le connessioni di origine
+topic-legacy: overview
+exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
 translation-type: tm+mt
-source-git-commit: 6ee71de86d487a38ca4acc76813111994eb44bd9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '117'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
 
+# ELENCO CONSENTITI di indirizzo IP
 
-# Indirizzo IP  elenco consentiti
-
-È possibile definire i controlli di accesso alla rete attraverso il firewall di rete. Specificando l&#39;intervallo IP di origine appropriato, potete consentire il traffico per il servizio di trasferimento dati. I seguenti indirizzi IP devono essere aggiunti a un elenco consentiti  prima di utilizzare i connettori di origine. Se non si aggiungono al elenco consentiti  gli indirizzi IP specifici per la regione, potrebbero verificarsi errori o prestazioni insufficienti quando si utilizzano le origini.
+È possibile definire controlli di accesso alla rete tramite il firewall di rete. Specificando l&#39;intervallo IP di origine appropriato, puoi consentire il traffico per il servizio di trasferimento dati. I seguenti indirizzi IP devono essere aggiunti a un elenco consentiti prima di lavorare con i connettori sorgente. Se l’utente non aggiunge all’elenco consentiti gli indirizzi IP specifici per l’area geografica, potrebbero verificarsi errori o prestazioni non soddisfacenti durante l’utilizzo delle origini.
 
 ## Regione degli Stati Uniti d&#39;America
 
@@ -26,7 +26,7 @@ ht-degree: 0%
 - `40.71.14.32/28`
 - `40.78.229.96/28`
 
-## Regione degli Stati Uniti orientali 2
+## Regione degli Stati Uniti dell&#39;Est 2
 
 - `20.41.2.0/23`
 - `20.41.4.0/26`
@@ -35,7 +35,7 @@ ht-degree: 0%
 - `40.70.148.160/28`
 - `52.167.107.224/28`
 
-## Europa occidentale
+## regione dell&#39;Europa occidentale
 
 - `13.69.67.192/28`
 - `13.69.107.112/28`
