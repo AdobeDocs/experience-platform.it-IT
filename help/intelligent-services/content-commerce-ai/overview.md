@@ -1,17 +1,17 @@
 ---
-keywords: Experience Cloud ;iniziare;contenuto e commercio ai;argomenti più comuni;Servizi intelligenti;ccai
+keywords: Experience Cloud;guida introduttiva;contenuti e commerce;argomenti comuni;servizi intelligenti;ccai
 solution: Experience Cloud, Intelligent Services, Experience Platform
-title: Panoramica di AI su contenuto e commercio
-topic: Content and Commerce AI
-description: Content and Commerce AI è un set di servizi AI che consente di estrarre funzionalità intelligenti dai contenuti, organizzare, ottimizzare il flusso dei contenuti e fornire esperienze più coinvolgenti e personalizzate ai clienti.
+title: Panoramica di Content and Commerce AI
+topic-legacy: Content and Commerce AI
+description: Content and Commerce AI è un set di servizi di intelligenza artificiale che ti consente di estrarre funzionalità intelligenti dai contenuti, organizzare, semplificare il flusso dei contenuti e fornire ai clienti esperienze più coinvolgenti e personalizzate.
+exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 1%
 
 ---
-
 
 # Panoramica di Content and Commerce AI
 
@@ -19,39 +19,38 @@ ht-degree: 1%
 >
 >Content and Commerce AI è in versione beta. La documentazione è soggetta a modifiche.
 
-Content and Commerce AI è un insieme di servizi AI che consentono di estrarre funzionalità intelligenti dai contenuti, organizzare e semplificare il flusso dei contenuti e fornire esperienze più coinvolgenti e personalizzate ai clienti.
+Content and Commerce AI è un set di servizi di intelligenza artificiale che ti consentono di estrarre funzionalità intelligenti dai contenuti, organizzare e semplificare il flusso dei contenuti e fornire ai clienti esperienze più coinvolgenti e personalizzate.
 
-Tutti i marchi cercano di offrire un&#39;esperienza cliente perfetta. Cerchi sempre di trovare risposte migliori a tutti gli aspetti dei punti di contatto dei clienti.
+Tutti i marchi si sforzano di offrire una customer experience perfetta. Cerchi costantemente di trovare risposte migliori a tutti gli aspetti dei punti di contatto dei clienti.
 
-Il contenuto è un componente essenziale di queste esperienze. Per rispondere meglio alle domande di marketing, devi comprendere il contenuto e le interazioni con i clienti. Con Content and Commerce AI puoi scoprire quali funzioni del contenuto fornisci corrispondono ai tuoi clienti. L&#39;utilizzo di queste informazioni consente di personalizzare le esperienze e di incrementare i KPI.
+Il contenuto è un componente essenziale di queste esperienze. Per rispondere meglio alle domande di marketing, devi comprendere il contenuto e le interazioni dei clienti con esso. Con Content and Commerce AI puoi scoprire quali funzioni del contenuto forniscono ai tuoi clienti. L’utilizzo di queste informazioni consente di personalizzare le esperienze e incrementare i KPI.
 
-## Funzionalità del servizio AI di contenuto e Commerce
+## Funzionalità del servizio Content and Commerce AI
 
 | Tipo di contenuto | Funzioni | Panoramica delle funzionalità |
 | --- | --- | --- |
-| Testo | - Estrazione parole chiave ed entità <br>- Classificatori personalizzati | - Estrarre automaticamente parole chiave e tag da documenti aziendali e pagine Web utilizzando un servizio AI fornito con il prodotto. <br> - Etichettare automaticamente i documenti o le pagine Web aziendali per una tassonomia aziendale utilizzando un servizio basato su modelli AI personalizzati. |
-| Immagini | - Raccomandazioni visive <br> - Estrazione del colore | - Offrite ai consumatori consigli visivamente simili sui prodotti, basati su un modello AI sviluppato su caratteristiche di prodotto intuitive (design, colore, forma). <br> - Estrarre accuratamente i colori dominanti (etichette e valori esadecimali) e il loro peso da un&#39;immagine di prodotto. |
+| Testo | - Parola chiave ed estrazione entità <br>- Classificatori personalizzati | - Estrarre automaticamente parole chiave e tag da documenti aziendali e pagine web utilizzando un servizio AI preconfigurato. <br> - Etichettare automaticamente i documenti o le pagine web aziendali per una tassonomia aziendale utilizzando un servizio basato su modelli AI personalizzati. |
+| Immagini | - Raccomandazioni visive <br> - Estrazione del colore | - Fornire ai consumatori consigli di prodotto visivamente simili, basati su un modello AI sviluppato su caratteristiche di prodotto intuitive (design, colore, forma). <br> - Estrarre accuratamente i colori dominanti (etichette e valori esadecimali) e il loro peso da un&#39;immagine di prodotto. |
 
-## Informazioni su contenuto e AI per il commercio
+## Informazioni su Content and Commerce AI
 
-La visione globale di Content and Commerce AI è suddivisa in tre fasi per realizzare un coinvolgimento cliente ottimale e massimizzare i KPI guidati dai clienti.
+La visione globale di Content and Commerce AI è suddivisa in tre passaggi per realizzare un coinvolgimento cliente ottimale e massimizzare i KPI (Key Performance Indicator) guidati dai clienti.
 
 >[!NOTE]
 >
->Per la versione beta, Content and Commerce AI è incentrato sul test della fase di base nel percorso (passaggio 1). I passaggi 2 e 3 dovrebbero essere documentati in una versione successiva e non essere espansi nella documentazione corrente.
+>Per Beta, Content and Commerce AI è incentrato sul test della fase di base nel percorso (passaggio 1). I passaggi 2 e 3 devono essere documentati in una versione successiva e non sono espansi nella documentazione corrente.
 
 **Passaggio 1: Informazioni sul contenuto**
 - Estrarre funzioni intelligenti e metadati.
-- Organizzate il contenuto (tag, categorizzare, raggruppare, deduplicare).
+- Organizza il contenuto (tag, categorizza, raggruppa, deduplica).
 - Associare i dati del contenuto alle risorse.
 
-**Passaggio 2: Conoscenza del cliente**
+**Passaggio 2: Informazioni sul cliente**
 - Associare le azioni del cliente alle funzioni di contenuto.
-- Ottieni le preferenze e le affinità dei clienti dai contenuti e dalle azioni.
-- Aggiungi le preferenze al profilo del cliente.
+- Ottieni le preferenze e le affinità del cliente dal contenuto e dalle azioni.
+- Aggiungi preferenze al profilo del cliente.
 
-**Passaggio 3: Abilitazione dell&#39;ottimizzazione dell&#39;esperienza**
-- Utilizza il profilo del cliente per offrire esperienze migliorate e personalizzate, nelle sessioni e per le esperienze successive.
-- Utilizzate le funzionalità di contenuto per acquisire informazioni sui comportamenti dei clienti che guidano i KPI.
-- Utilizzate le informazioni sul contenuto per migliorare la creazione, l&#39;authoring e la selezione dei contenuti.
-
+**Passaggio 3: Abilitazione dell’ottimizzazione delle esperienze**
+- Utilizza il profilo del cliente per fornire esperienze migliorate e personalizzate, sia durante la sessione che per le esperienze successive.
+- Utilizza le funzionalità dei contenuti per ottenere informazioni sui comportamenti dei clienti che guidano i KPI.
+- Utilizza le informazioni sui contenuti per migliorare la creazione, l’authoring e la selezione dei contenuti.
