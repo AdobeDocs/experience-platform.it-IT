@@ -1,35 +1,35 @@
 ---
-keywords: ' Experience Platform;casa;argomenti popolari; protocollo di trasferimento file; protocollo di trasferimento file'
+keywords: Experience Platform;home;argomenti popolari; protocollo di trasferimento dei file; protocollo di trasferimento file
 solution: Experience Platform
-title: Creare una connessione di origine FTP utilizzando l'API del servizio di flusso
-topic: overview
+title: Creare una connessione sorgente FTP utilizzando l’API del servizio di flusso
+topic-legacy: overview
 type: Tutorial
-description: Scopri come collegare Adobe Experience Platform a un server FTP (File Transfer Protocol) tramite l’API del servizio di flusso.
+description: Scopri come collegare Adobe Experience Platform a un server FTP (File Transfer Protocol) utilizzando l’API del servizio di flusso.
+exl-id: a7bef346-b357-49bc-ac54-ac8b42adac50
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 2%
 
 ---
 
-
 # Creare una connessione sorgente FTP utilizzando l&#39;API [!DNL Flow Service]
 
 >[!NOTE]
 >
->Il connettore FTP è in versione beta. Le funzioni e la documentazione sono soggette a modifiche. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, vedere [Panoramica delle sorgenti](../../../../home.md#terms-and-conditions).
+>Il connettore FTP è in versione beta. Le funzioni e la documentazione sono soggette a modifiche. Per ulteriori informazioni sull&#39;utilizzo dei connettori con etichetta beta, consulta la [Panoramica delle sorgenti](../../../../home.md#terms-and-conditions) .
 
-Questa esercitazione utilizza l&#39;API [!DNL Flow Service] per guidarti attraverso i passaggi necessari per connettersi [!DNL Experience Platform] a un server FTP (File Transfer Protocol).
+Questa esercitazione utilizza l’ [!DNL Flow Service] API per seguire i passaggi necessari per la connessione di [!DNL Experience Platform] a un server FTP (File Transfer Protocol).
 
 ## Introduzione
 
-Questa guida richiede una buona conoscenza dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
-* [Origini](../../../../home.md):  [!DNL Experience Platform] consente l&#39;acquisizione di dati da varie origini, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite  [!DNL Platform] i servizi.
-* [Sandbox](../../../../../sandboxes/home.md):  [!DNL Experience Platform] fornisce sandbox virtuali che dividono una singola  [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni per esperienze digitali.
+* [Origini](../../../../home.md):  [!DNL Experience Platform] consente l’acquisizione di dati da varie sorgenti, fornendo al contempo la possibilità di strutturare, etichettare e migliorare i dati in arrivo tramite  [!DNL Platform] i servizi.
+* [Sandbox](../../../../../sandboxes/home.md):  [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola  [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 
-Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per collegarsi correttamente a un server FTP utilizzando l&#39;API [!DNL Flow Service].
+Le sezioni seguenti forniscono informazioni aggiuntive che sarà necessario conoscere per connettersi correttamente a un server FTP utilizzando l&#39;API [!DNL Flow Service] .
 
 ### Raccogli credenziali richieste
 
@@ -39,35 +39,35 @@ Affinché [!DNL Flow Service] possa connettersi all&#39;FTP, è necessario forni
 | ---------- | ----------- |
 | `host` | Nome o indirizzo IP associato al server FTP. |
 | `username` | Il nome utente con accesso al server FTP. |
-| `password` | La password per il server FTP. |
+| `password` | Password per il server FTP. |
 
 ### Lettura di chiamate API di esempio
 
-Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richieste formattati correttamente. Viene inoltre fornito un JSON di esempio restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consultate la sezione relativa a [come leggere chiamate API di esempio](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform].
+Questa esercitazione fornisce esempi di chiamate API per dimostrare come formattare le richieste. Questi includono percorsi, intestazioni richieste e payload di richiesta formattati correttamente. Viene inoltre fornito un esempio di codice JSON restituito nelle risposte API. Per informazioni sulle convenzioni utilizzate nella documentazione per le chiamate API di esempio, consulta la sezione su [come leggere le chiamate API di esempio](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) nella guida alla risoluzione dei problemi di [!DNL Experience Platform] .
 
-### Raccogli valori per le intestazioni richieste
+### Raccogli i valori delle intestazioni richieste
 
-Per effettuare chiamate alle [!DNL Platform] API, è innanzitutto necessario completare l&#39;esercitazione sull&#39;autenticazione [a2/>. ](https://www.adobe.com/go/platform-api-authentication-en) Completando l&#39;esercitazione sull&#39;autenticazione, vengono forniti i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come illustrato di seguito:
+Per effettuare chiamate alle API [!DNL Platform], devi prima completare l’ [esercitazione sull’autenticazione](https://www.adobe.com/go/platform-api-authentication-en). Il completamento dell’esercitazione di autenticazione fornisce i valori per ciascuna delle intestazioni richieste in tutte le chiamate API [!DNL Experience Platform], come mostrato di seguito:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Tutte le risorse in [!DNL Experience Platform], incluse quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle [!DNL Platform] API richiedono un&#39;intestazione che specifica il nome della sandbox in cui verrà eseguita l&#39;operazione:
+Tutte le risorse in [!DNL Experience Platform], comprese quelle appartenenti a [!DNL Flow Service], sono isolate in sandbox virtuali specifiche. Tutte le richieste alle API [!DNL Platform] richiedono un’intestazione che specifichi il nome della sandbox in cui avrà luogo l’operazione:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un&#39;intestazione aggiuntiva per il tipo di supporto:
+Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’intestazione di tipo multimediale aggiuntiva:
 
 * `Content-Type: application/json`
 
 ## Creare una connessione
 
-Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. È necessaria una sola connessione per account FTP, in quanto può essere utilizzata per creare più connettori sorgente per inserire dati diversi.
+Una connessione specifica un&#39;origine e contiene le credenziali per tale origine. È necessaria una sola connessione per account FTP in quanto può essere utilizzata per creare più connettori sorgente per inserire dati diversi.
 
-### Creazione di una connessione FTP tramite autenticazione di base
+### Creare una connessione FTP utilizzando l’autenticazione di base
 
-Per creare una connessione FTP utilizzando l&#39;autenticazione di base, effettuare una richiesta POST all&#39;API [!DNL Flow Service] fornendo al contempo i valori per le connessioni `host`, `userName` e `password`.
+Per creare una connessione FTP utilizzando l’autenticazione di base, effettua una richiesta POST all’API [!DNL Flow Service] fornendo al contempo i valori per le connessioni `host`, `userName` e `password`.
 
 **Formato API**
 
@@ -77,7 +77,7 @@ POST /connections
 
 **Richiesta**
 
-Per creare una connessione FTP, è necessario fornire l&#39;ID univoco della specifica di connessione come parte della richiesta POST. L&#39;ID della specifica di connessione per l&#39;FTP è `fb2e94c9-c031-467d-8103-6bd6e0a432f2`.
+Per creare una connessione FTP, è necessario fornire l’ID univoco della specifica di connessione come parte della richiesta POST. L&#39;ID della specifica di connessione per l&#39;FTP è `fb2e94c9-c031-467d-8103-6bd6e0a432f2`.
 
 ```shell
 curl -X POST \
@@ -109,12 +109,12 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.host` | Il nome host del server FTP. |
 | `auth.params.username` | Nome utente associato al server FTP. |
-| `auth.params.password` | La password associata al server FTP. |
-| `connectionSpec.id` | ID specifica connessione server FTP: `fb2e94c9-c031-467d-8103-6bd6e0a432f2` |
+| `auth.params.password` | Password associata al server FTP. |
+| `connectionSpec.id` | ID delle specifiche di connessione del server FTP: `fb2e94c9-c031-467d-8103-6bd6e0a432f2` |
 
 **Risposta**
 
-Una risposta corretta restituisce l&#39;identificatore univoco (`id`) della connessione appena creata. Questo ID è necessario per esplorare il server FTP nell&#39;esercitazione successiva.
+Una risposta corretta restituisce l&#39;identificatore univoco (`id`) della nuova connessione creata. Questo ID è necessario per esplorare il server FTP nella prossima esercitazione.
 
 ```json
 {
@@ -125,4 +125,4 @@ Una risposta corretta restituisce l&#39;identificatore univoco (`id`) della conn
 
 ## Passaggi successivi
 
-Seguendo questa esercitazione, hai creato una connessione FTP utilizzando l&#39;API [!DNL Flow Service] e hai ottenuto il valore ID univoco della connessione. Puoi utilizzare questo ID connessione per [esplorare gli archivi cloud utilizzando l&#39;API del servizio di flusso](../../explore/cloud-storage.md) o i dati del parquet di acquisizione [tramite l&#39;API del servizio di flusso](../../cloud-storage-parquet.md).
+Seguendo questa esercitazione, hai creato una connessione FTP utilizzando l&#39;API [!DNL Flow Service] e hai ottenuto il valore ID univoco della connessione. Puoi utilizzare questo ID connessione per [esplorare gli archivi cloud utilizzando l&#39;API del servizio di flusso](../../explore/cloud-storage.md) o [acquisire i dati del parquet utilizzando l&#39;API del servizio di flusso](../../cloud-storage-parquet.md).
