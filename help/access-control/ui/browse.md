@@ -1,34 +1,34 @@
 ---
-keywords: ' Experience Platform;home;argomenti popolari'
+keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
-title: Selezionare un profilo di prodotto per modificare le autorizzazioni di controllo degli accessi
-topic: user guide
-description: Questo documento descrive i passaggi necessari per esplorare l'area di lavoro del controllo degli accessi. Per configurare il controllo di accesso per  Experience Platform tramite l'Adobe Admin Console, è necessario essere un amministratore per un'organizzazione IMS che dispone di un'iscrizione a  Experience Platform.
+title: Selezionare un profilo di prodotto per modificare le autorizzazioni di controllo accessi
+topic-legacy: user guide
+description: Questo documento descrive i passaggi necessari per sfogliare l’area di lavoro di controllo accessi. Per configurare il controllo degli accessi, ad Experience Platform tramite Adobe Admin Console, devi essere un amministratore per un’organizzazione IMS con sottoscrizione ad Experience Platform.
+exl-id: 1d3c894e-b412-43ba-ba91-ddfa35303d73
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 4%
 
 ---
 
+# Selezionare un profilo di prodotto per gestire le relative autorizzazioni di controllo degli accessi
 
-# Selezionare un profilo di prodotto per gestire le autorizzazioni di controllo di accesso
+Per configurare il controllo degli accessi per [!DNL Experience Platform] tramite Adobe Admin Console, devi essere un amministratore per un’organizzazione IMS con sottoscrizione a [!DNL Experience Platform]. Sebbene Adobe supporti gerarchie di amministratori flessibili per le organizzazioni IMS, per configurare il controllo degli accessi è necessario disporre dei privilegi di amministratore di sistema, amministratore di prodotto o amministratore del profilo di prodotto. Per ulteriori informazioni, consulta l’articolo Adobe Help Center sui [ruoli amministrativi](https://helpx.adobe.com/enterprise/using/admin-roles.html) .
 
-Per configurare il controllo di accesso per [!DNL Experience Platform] tramite Adobe Admin Console, è necessario essere un amministratore per un&#39;organizzazione IMS con sottoscrizione a [!DNL Experience Platform]. Sebbene  Adobe supporti gerarchie di amministratori flessibili per le organizzazioni IMS, per configurare il controllo di accesso è necessario disporre dei privilegi di amministratore di sistema, amministratore di prodotto o amministratore del profilo di prodotto. Per ulteriori informazioni, consultate l&#39;articolo Adobe Help Center sui [ruoli amministrativi](https://helpx.adobe.com/enterprise/using/admin-roles.html).
+Se non disponi di privilegi di amministratore, contatta l’amministratore di sistema per ottenere l’accesso.
 
-Se non disponete dei privilegi di amministratore, contattate l&#39;amministratore di sistema per ottenere l&#39;accesso.
+Una volta disponibili i privilegi di amministratore, vai a [Adobe Admin Console](https://adminconsole.adobe.com) e accedi utilizzando le tue credenziali Adobi. Una volta effettuato l’accesso, viene visualizzata la pagina **[!UICONTROL Overview]** per l’organizzazione IMS per la quale disponi dei privilegi di amministratore. Questa pagina mostra i prodotti a cui è abbonata l’organizzazione IMS, insieme ad altri controlli per aggiungere utenti e amministratori all’organizzazione IMS nel suo complesso. Fai clic su **[!UICONTROL Adobe Experience Platform]** per aprire l&#39;area di lavoro di controllo accessi per l&#39;integrazione [!DNL Platform].
 
-Una volta disponibili i privilegi di amministratore, andate a [Adobe Admin Console](https://adminconsole.adobe.com) ed effettuate l&#39;accesso utilizzando le credenziali del Adobe . Una volta effettuato l&#39;accesso, viene visualizzata la pagina **[!UICONTROL Overview]** dell&#39;organizzazione IMS per la quale disponete dei privilegi di amministratore. Questa pagina mostra i prodotti a cui è stata sottoscritta l’organizzazione IMS, insieme ad altri controlli per aggiungere utenti e amministratori all’organizzazione IMS nel suo insieme. Fare clic su **[!UICONTROL Adobe Experience Platform]** per aprire l&#39;area di lavoro del controllo di accesso per l&#39;integrazione [!DNL Platform].
+![pagina panoramica](../images/overview-page.png)
 
-![overview-page](../images/overview-page.png)
+Viene visualizzata l’area di lavoro del controllo accessi per Adobe Experience Platform, che si apre nella scheda **[!UICONTROL Product Profiles]** . Questa scheda ti consente di visualizzare tutti i profili di prodotto e di gestire diverse impostazioni come descritto in questo documento.
 
-Viene visualizzata l&#39;area di lavoro del controllo di accesso per Adobe Experience Platform, che si apre sulla scheda **[!UICONTROL Product Profiles]**. Questa scheda consente di visualizzare tutti i profili di prodotto e gestire le varie impostazioni come indicato in questo documento.
+![piattaforma-controllo accessi](../images/platform-access-control.png)
 
-![platform-access-control](../images/platform-access-control.png)
-
-Questa guida utente è incentrata su come utilizzare [!DNL Admin Console] per assegnare le autorizzazioni di accesso a [!DNL Platform]. Per informazioni generali su come navigare all&#39;interno del [!DNL Admin Console], vedere la [guida utente  Admin Console](https://helpx.adobe.com/it/enterprise/using/admin-console.html).
+Questa guida utente si concentra su come utilizzare [!DNL Admin Console] per assegnare le autorizzazioni di accesso a [!DNL Platform]. Per informazioni più generali su come navigare all&#39;interno di [!DNL Admin Console], consulta la [guida utente di Admin Console](https://helpx.adobe.com/it/enterprise/using/admin-console.html).
 
 ## Passaggi successivi
 
-Dopo aver navigato nell&#39;area di lavoro del controllo di accesso, passare al passaggio successivo per [creare un nuovo profilo di prodotto](create-profile.md)
+Dopo aver navigato nell&#39;area di lavoro del controllo accessi, procedi al passaggio successivo a [creare un nuovo profilo di prodotto](create-profile.md)
