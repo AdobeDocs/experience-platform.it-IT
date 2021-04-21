@@ -3,12 +3,12 @@ keywords: Experience Platform;home;argomenti popolari;api;API;XDM;sistema XDM;mo
 solution: Experience Platform
 title: Endpoint API Unions
 description: L’endpoint /sindacati nell’API del Registro di sistema dello schema ti consente di gestire programmaticamente gli schemi di unione XDM nell’applicazione di esperienza.
-topic: guida per sviluppatori
+topic-legacy: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '900'
 ht-degree: 1%
 
 ---
