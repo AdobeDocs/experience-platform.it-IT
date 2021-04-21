@@ -2,17 +2,17 @@
 keywords: Experience Platform;home;argomenti popolari;Profilo cliente in tempo reale;servizio Identity;
 solution: Experience Platform
 title: Esercitazioni sul profilo cliente in tempo reale
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Questo documento illustra i passaggi necessari e fornisce collegamenti alle esercitazioni per il completamento di ogni singolo flusso di lavoro.
+exl-id: cda6e7a7-9498-454c-94df-c6271a5a4fd4
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '793'
 ht-degree: 0%
 
 ---
-
 
 # Configurare gli [!DNL Real-time Customer Profile]
 
@@ -63,7 +63,7 @@ Per iniziare, segui l’esercitazione API per [configurare un set di dati per Pr
 
 ## Configurare i criteri di unione
 
-Adobe Experience Platform ti consente di unire dati provenienti da più sorgenti e combinarli per visualizzare una visualizzazione completa di ciascuno dei tuoi clienti. Quando si riuniscono questi dati, i criteri di unione sono le regole utilizzate da [!DNL Platform] per determinare in che modo i dati verranno definiti come prioritari e quali dati verranno combinati per creare tale visualizzazione unificata.
+Adobe Experience Platform consente di unire dati provenienti da più sorgenti e combinarli per visualizzare una visione completa di ciascuno dei singoli clienti. Quando si riuniscono questi dati, i criteri di unione sono le regole utilizzate da [!DNL Platform] per determinare in che modo i dati verranno definiti come prioritari e quali dati verranno combinati per creare tale visualizzazione unificata.
 
 **Questa guida ti aiuterà a:**
 - Creare nuovi criteri di unione.
@@ -75,7 +75,7 @@ Per utilizzare i criteri di unione nell&#39;interfaccia utente [!DNL Platform], 
 
 ## Configurare le proiezioni edge
 
-Al fine di promuovere in tempo reale esperienze coordinate, coerenti e personalizzate per i clienti su più canali, i dati giusti devono essere prontamente disponibili e costantemente aggiornati man mano che si verificano cambiamenti. Adobe [!DNL Experience Platform] consente l’accesso in tempo reale ai dati tramite l’utilizzo dei cosiddetti edge. Un server perimetrale è un server collocato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni. I dati vengono indirizzati a un bordo da una proiezione, con una destinazione di proiezione che definisce il bordo a cui i dati saranno inviati, e una configurazione di proiezione che definisce le informazioni specifiche che saranno rese disponibili sul bordo.
+Al fine di promuovere in tempo reale esperienze coordinate, coerenti e personalizzate per i clienti su più canali, i dati giusti devono essere prontamente disponibili e costantemente aggiornati man mano che si verificano cambiamenti. L’Adobe [!DNL Experience Platform] consente l’accesso in tempo reale ai dati tramite l’utilizzo di elementi noti come edge. Un server perimetrale è un server collocato geograficamente che memorizza i dati e li rende facilmente accessibili alle applicazioni. I dati vengono indirizzati a un bordo da una proiezione, con una destinazione di proiezione che definisce il bordo a cui i dati saranno inviati, e una configurazione di proiezione che definisce le informazioni specifiche che saranno rese disponibili sul bordo.
 
 **Questa guida ti aiuterà a:**
 - Elencare, creare, visualizzare, aggiornare ed eliminare una destinazione di proiezione Edge.
@@ -86,7 +86,7 @@ Per ulteriori informazioni e per iniziare a lavorare con i bordi, consulta la gu
 
 ## Personalizzare la visualizzazione dei dati del profilo nell’interfaccia utente
 
-Nell’interfaccia utente di Experience Platform puoi visualizzare e interagire con i dati del profilo cliente in tempo reale sotto forma di profili cliente. Le informazioni di profilo visualizzate nell’interfaccia utente sono state unite da più frammenti di profilo per formare una singola visualizzazione per ogni singolo cliente. Ciò include dettagli quali attributi di base, identità collegate e preferenze del canale. I campi predefiniti visualizzati nei profili possono essere modificati anche a livello organizzativo per visualizzare gli attributi di profilo preferiti.
+Nell’interfaccia utente di Experience Platform, puoi visualizzare e interagire con i dati del profilo cliente in tempo reale sotto forma di profili cliente. Le informazioni di profilo visualizzate nell’interfaccia utente sono state unite da più frammenti di profilo per formare una singola visualizzazione per ogni singolo cliente. Ciò include dettagli quali attributi di base, identità collegate e preferenze del canale. I campi predefiniti visualizzati nei profili possono essere modificati anche a livello organizzativo per visualizzare gli attributi di profilo preferiti.
 
 **Questa guida ti aiuterà a:**
 - Riordinare, ridimensionare, modificare e rimuovere le schede.
