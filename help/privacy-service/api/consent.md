@@ -6,9 +6,9 @@ topic-legacy: developer guide
 description: Scopri come gestire le richieste di consenso dei clienti per applicazioni di Experience Cloud utilizzando l’API di Privacy Service.
 exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '247'
 ht-degree: 1%
 
 ---
@@ -66,6 +66,8 @@ curl -X POST \
 | `entities` | Matrice di oggetti che indica gli utenti a cui si applica la richiesta di consenso. Ogni oggetto contiene un `namespace` e una matrice di `values` per far corrispondere i singoli utenti a tale spazio dei nomi. |
 | `nameSpace` | Ogni oggetto dell&#39;array `entities` deve contenere uno dei [namespace di identità standard](./appendix.md#standard-namespaces) riconosciuti dall&#39;API Privacy Service. |
 | `values` | Matrice di valori per ogni utente, corrispondente al valore `nameSpace` fornito. |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
