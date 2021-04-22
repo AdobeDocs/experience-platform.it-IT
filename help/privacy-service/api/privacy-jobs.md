@@ -6,9 +6,9 @@ topic-legacy: developer guide
 description: Scopri come gestire i processi relativi alla privacy per le applicazioni di Experience Cloud utilizzando l’API di Privacy Service.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '1344'
+source-wordcount: '1362'
 ht-degree: 1%
 
 ---
@@ -41,6 +41,8 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 | `{REGULATION}` | Il tipo di regolamento per cui eseguire la query. I valori accettati includono: <ul><li>`gdpr` (Unione europea)</li><li>`ccpa` (California)</li><li>`lgpd_bra` (Brasile)</li><li>`nzpa_nzl` (Nuova Zelanda)</li><li>`pdpa_tha` (Thailandia)</li></ul> |
 | `{PAGE}` | Pagina di dati da visualizzare, utilizzando la numerazione basata su 0. Il valore predefinito è `0`. |
 | `{SIZE}` | Il numero di risultati da visualizzare su ogni pagina. Il valore predefinito è `1` e il valore massimo è `100`. Se si supera il valore massimo, l&#39;API restituisce un errore di codice 400. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
@@ -160,6 +162,8 @@ curl -X POST \
 | `analyticsDeleteMethod` | Proprietà facoltativa che specifica come Adobe Analytics deve gestire i dati personali. Per questo attributo sono accettati due possibili valori: <ul><li>`anonymize`: Tutti i dati a cui fa riferimento la raccolta di ID utente specificata vengono resi anonimi. Se `analyticsDeleteMethod` viene omesso, si tratta del comportamento predefinito.</li><li>`purge`: Tutti i dati vengono rimossi completamente.</li></ul> |
 | `regulation` **(Obbligatorio)** | Il regolamento per il lavoro sulla privacy. Sono accettati i seguenti valori: <ul><li>`gdpr` (Unione europea)</li><li>`ccpa` (California)</li><li>`lgpd_bra` (Brasile)</li><li>`nzpa_nzl` (Nuova Zelanda)</li><li>`pdpa_tha` (Thailandia)</li></ul> |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Risposta**
 
 Una risposta corretta restituisce i dettagli dei nuovi processi creati.
@@ -210,6 +214,8 @@ Una risposta corretta restituisce i dettagli dei nuovi processi creati.
 | --- | --- |
 | `jobId` | ID univoco e di sola lettura generato dal sistema per un processo. Questo valore viene utilizzato nel passaggio successivo per cercare un lavoro specifico. |
 
+{style=&quot;table-layout:auto&quot;}
+
 Dopo aver inviato correttamente la richiesta di lavoro, puoi procedere al passaggio successivo di [controllare lo stato del processo](#check-status).
 
 ## Controllare lo stato di un processo {#check-status}
@@ -229,6 +235,8 @@ GET /jobs/{JOB_ID}
 | Parametro | Descrizione |
 | --- | --- |
 | `{JOB_ID}` | ID del processo da cercare. Questo ID viene restituito in `jobId` nelle risposte API per [creazione di un processo](#create-job) e [elencazione di tutti i processi](#list). |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
@@ -326,6 +334,8 @@ Una risposta corretta restituisce i dettagli del processo specificato.
 | `productStatusResponse.results` | Per alcuni stati, alcuni prodotti possono restituire un oggetto `results` che fornisce informazioni aggiuntive non coperte da `responseMsgDetail`. |
 | `downloadURL` | Se lo stato del processo è `complete`, questo attributo fornisce un URL per scaricare i risultati del processo come file ZIP. Questo file è disponibile per il download per 60 giorni al termine del processo. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### Categorie di stato del processo {#status-categories}
 
 Nella tabella seguente sono elencate le diverse possibili categorie di stato del processo e il relativo significato:
@@ -336,6 +346,8 @@ Nella tabella seguente sono elencate le diverse possibili categorie di stato del
 | `processing` | Le applicazioni hanno riconosciuto il processo e sono in fase di elaborazione. |
 | `submitted` | Il processo viene inviato a ogni applicazione applicabile. |
 | `error` | Errore durante l&#39;elaborazione del processo. È possibile ottenere informazioni più specifiche recuperando i dettagli dei singoli processi. |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
