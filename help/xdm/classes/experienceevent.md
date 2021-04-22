@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Questo documento fornisce una panoramica della classe ExperienceEvent XDM.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9b63b38e664e5776ca638f8ed407896f185bcab0
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '861'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ La classe [!DNL XDM ExperienceEvent] fornisce a uno schema diversi campi relativ
 | `eventMergeId` | ID del batch acquisito che ha causato la creazione del record. Questo campo viene compilato automaticamente dal sistema al momento dell’inserimento dei dati. |
 | `eventType` | Una stringa che indica il tipo di evento principale per il record. I valori accettati e le relative definizioni sono forniti nella sezione [appendice](#eventType). |
 | `identityMap` | Campo mappa contenente un set di identità con spazi dei nomi per l’individuo a cui si applica l’evento. Questo campo viene aggiornato automaticamente dal sistema durante l’acquisizione dei dati di identità. Per utilizzare correttamente questo campo per [Profilo cliente in tempo reale](../../profile/home.md), non tentare di aggiornare manualmente il contenuto del campo nelle operazioni sui dati.<br /><br />Per ulteriori informazioni sul relativo caso d’uso, consulta la sezione sulle mappe di identità nelle  [nozioni di base sulla ](../schema/composition.md#identityMap) composizione degli schemi . |
-| `timestamp` | Il momento in cui si è verificato l’evento o l’osservazione, formattato in base alla [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)). |
+| `timestamp` | Una marca temporale ISO 8601 di quando si è verificato l’evento, formattata in base alla sezione 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) della RFC 3339.[<br><br>Questa marca temporale può rappresentare  **** solo l&#39;osservazione dell&#39;evento stesso e deve verificarsi in passato. Se i casi di utilizzo della segmentazione richiedono l’uso di marche temporali che possono verificarsi in futuro (ad esempio una data di partenza), questi valori devono essere vincolati altrove nello schema Evento esperienza. |
 
 ## Mixins compatibili {#mixins}
 
