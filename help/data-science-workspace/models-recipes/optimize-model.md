@@ -7,7 +7,7 @@ type: Tutorial
 description: Il Framework di informazioni sul modello fornisce allo scienziato dei dati gli strumenti in Data Science Workspace per effettuare scelte rapide e informate per modelli di apprendimento automatico ottimali basati su esperimenti.
 exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 0%
@@ -77,7 +77,7 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 Nella tabella seguente sono riportate le metriche predefinite per ogni classe. Un utente può inoltre utilizzare i valori nella colonna `evaluation.metric` per abilitare una metrica specifica.
 
 | `evaluator.class` | Metriche predefinite | `evaluation.metric` |
---- | --- | ---
+| --- | --- | --- |
 | `DefaultBinaryClassificationEvaluator` | -Precisione <br>-Richiama <br>-Matrice di confusione <br>-F-Punteggio <br>-Precisione <br>-Caratteristiche operative del ricevitore <br>-Area sotto le caratteristiche operative del ricevitore | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
 | `DefaultMultiClassificationEvaluator` | -Precisione <br>-Richiama <br>-Matrice di confusione <br>-F-Punteggio <br>-Precisione <br>-Caratteristiche operative del ricevitore <br>-Area sotto le caratteristiche operative del ricevitore | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
 | `RecommendationsEvaluator` | -Precisione media media (MAP) <br>-Guadagno cumulativo attualizzato normalizzato <br>-Classificazione reciproca media <br>-Metrica K | -`MEAN_AVERAGE_PRECISION` <br>-`NDCG` <br>-`MRR` <br>-`METRIC_K` |
@@ -161,7 +161,7 @@ I dati vengono caricati per la prima volta in un set di dati da un&#39;origine c
 Il [!DNL Sensei Model Insights Framework] supporterà un modello predefinito per ogni tipo di algoritmo di apprendimento automatico. La tabella seguente mostra le classi comuni di algoritmi di apprendimento automatico di alto livello e le metriche di valutazione e le visualizzazioni corrispondenti.
 
 | Tipo di algoritmo ML | Metriche di valutazione | Visualizzazioni |
---- | --- | ---
+| --- | --- | --- |
 | Regressione | - RMSE<br>- MAPE<br>- MASE<br>- MAE | Curva di sovrapposizione dei valori previsti e effettivi |
 | Classificazione binaria | - Matrice di confusione<br>- Precision-richiamo<br>- Accuratezza<br>- Punteggio F (nello specifico F1 ,F2)<br>- AUC<br>- ROC | Curva ROC e matrice della confusione |
 | Classificazione multiclasse | -Matrice di confusione <br>- Per ogni classe: <br>- precisione del richiamo <br>- Punteggio F (in particolare F1, F2) | Curva ROC e matrice della confusione |
