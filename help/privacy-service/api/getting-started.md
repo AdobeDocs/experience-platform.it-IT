@@ -6,9 +6,9 @@ description: L’API di Privacy Service consente agli sviluppatori di creare e g
 topic-legacy: developer guide
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '757'
 ht-degree: 0%
 
 ---
@@ -35,9 +35,9 @@ Questa esercitazione fornisce esempi di chiamate API per dimostrare come formatt
 
 Per effettuare chiamate all&#39;API [!DNL Privacy Service], devi prima raccogliere le credenziali di accesso da utilizzare nelle intestazioni richieste:
 
-* Autorizzazione: Portatore `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 Ciò comporta l’ottenimento delle autorizzazioni per gli sviluppatori per [!DNL Experience Platform] in Adobe Admin Console e la generazione delle credenziali in Adobe Developer Console.
 
