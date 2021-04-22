@@ -6,7 +6,7 @@ topic-legacy: overview
 description: La ricetta Vendite al dettaglio consente di prevedere le previsioni di vendita per tutti i negozi predefiniti per un determinato periodo di tempo. Con un modello di previsione accurato, il rivenditore sarebbe in grado di trovare il rapporto tra le politiche di domanda e di prezzo e di prendere decisioni di prezzo ottimizzate per massimizzare le vendite e i ricavi.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 2%
@@ -41,7 +41,7 @@ Questa esercitazione passerà alla creazione della ricetta Vendite al dettaglio 
 Questa ricetta utilizza [schemi XDM](../../xdm/schema/field-dictionary.md) per modellare i dati. Lo schema utilizzato per questa ricetta è mostrato di seguito:
 
 | Nome campo | Tipo |
---- | ---
+| --- | --- |
 | data | Stringa |
 | archiviare | Intero |
 | storeType | Stringa |
