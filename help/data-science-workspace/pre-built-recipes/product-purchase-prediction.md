@@ -6,7 +6,7 @@ topic-legacy: overview
 description: La ricetta Predizione di acquisto del prodotto ti consente di prevedere la probabilità di un certo tipo di evento di acquisto del cliente, ad esempio un acquisto di prodotto.
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 6%
@@ -36,7 +36,7 @@ La ricetta Predizione di acquisto del prodotto utilizza l&#39;apprendimento auto
 Questa ricetta utilizza [schemi XDM](../../xdm/home.md) per modellare i dati. Lo schema utilizzato per questa ricetta è mostrato di seguito:
 
 | Nome campo | Tipo |
---- | ---
+| --- | --- |
 | userId | Stringa |
 | genderRatio | Numero |
 | ageY | Numero |
