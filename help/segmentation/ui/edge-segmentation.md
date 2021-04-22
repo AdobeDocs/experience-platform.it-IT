@@ -6,9 +6,9 @@ topic-legacy: ui guide
 description: La segmentazione dei bordi è la capacità di valutare istantaneamente i segmenti in Platform sul bordo, abilitando casi d’uso di personalizzazione della pagina e della stessa pagina.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5256c2a13fc75f7d46911f2ad368188d9e818921
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '349'
 ht-degree: 4%
 
 ---
@@ -41,7 +41,7 @@ I seguenti tipi di query sono **non** attualmente supportati per la segmentazion
 | Tipo di query | Dettagli |
 | ---------- | ------- |
 | Intervallo di tempo relativo | Se una query fa riferimento a una finestra temporale, non può essere valutata utilizzando la segmentazione edge. |
-| Negazione | Se una query contiene una negazione, non può essere valutata utilizzando la segmentazione edge. |
+| Negazione | Se una query contiene una negazione o un evento `not`, non può essere valutata utilizzando la segmentazione edge. |
 | Eventi multipli | Se una query contiene più di un evento, non può essere valutata utilizzando la segmentazione edge. |
 
 ## Passaggi successivi
