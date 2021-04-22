@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Questo documento fornisce un riferimento su come configurare diverse applicazioni Experience Cloud per le operazioni relative alla privacy.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '582'
 ht-degree: 19%
 
 ---
@@ -29,7 +29,7 @@ Per informazioni su come formattare le richieste di accesso a dati personali e q
 Di seguito è riportato un elenco delle applicazioni [!DNL Experience Cloud] integrate con [!DNL Privacy Service], incluse le funzionalità [!DNL Privacy Service] con cui sono compatibili, e sono presenti collegamenti alla documentazione per ulteriori informazioni.
 
 | Applicazione | Accedere/eliminare | Rinuncia alla vendita | Documentazione e considerazioni |
---- | :---: | :---: | ---
+| --- | :---: | :---: | --- |
 | Adobe Advertising Cloud | . | . | <ul><li>[Accedere/eliminare la documentazione relativa al RGPD](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[Accedere/eliminare la documentazione relativa al CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[Documentazione di rifiuto del CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
 | Adobe Analytics | . | . | <ul><li>[Accedere/eliminare la documentazione](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html)</li><li>[!DNL Analytics] gestisce le richieste di rinuncia utilizzando le variabili di reporting  [sulla privacy](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/consent-variables.html)</li></ul> |
 | Adobe Audience Manager | . | . | <ul><li>[Accedere/eliminare la documentazione](https://docs.adobe.com/content/help/it-IT/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[Documentazione di rinuncia](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
@@ -39,6 +39,7 @@ Di seguito è riportato un elenco delle applicazioni [!DNL Experience Cloud] int
 | Autenticazione Adobe Primetime | . | N/D | <ul><li>[Accedere/eliminare la documentazione](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>[!DNL Primetime] non dispone della capacità di trasferire i dati, pertanto le richieste di rinuncia alla vendita non sono applicabili.</li></ul> |
 | Adobe Target | . | N/D | <ul><li>[Accedere/eliminare la documentazione](https://docs.adobe.com/content/help/it-IT/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html)</li><li>[!DNL Target] non dispone della capacità di trasferire i dati, pertanto le richieste di rinuncia alla vendita non sono applicabili.</li></ul> |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## Applicazioni self-service {#self-serve}
 
@@ -51,3 +52,5 @@ Di seguito è riportato un elenco delle applicazioni [!DNL Experience Cloud] non
 | [Adobe Experience Manager](https://helpx.adobe.com/experience-manager/6-4/managing/using/gdpr-compliance.html) | Panoramica sulla gestione delle richieste RGPD da parte di un amministratore della privacy dei clienti o AEM amministratore. |
 | [Adobe Experience Manager Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Passaggi per effettuare le richieste di accesso e di cancellazione RGPD utilizzando Livefyre. |
 | [Adobe Experience Platform Launch](https://docs.adobelaunch.com/client-side-information/deploy-javascript-tags-to-opt-in-to-launch) | Come gli sviluppatori possono utilizzare le estensioni e il generatore di regole per definire soluzioni di gestione dei consensi e delle rinunce. |
+
+{style=&quot;table-layout:auto&quot;}
