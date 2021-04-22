@@ -7,7 +7,7 @@ type: Tutorial
 description: Questa esercitazione descrive il processo di pubblicazione di un modello come un servizio utilizzando l’API di apprendimento automatico di Sensei.
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a6d047d52dad085ba662bd684c896bdffe3eef2e
 workflow-type: tm+mt
 source-wordcount: '1516'
 ht-degree: 1%
@@ -39,7 +39,7 @@ Tutte le richieste di POST, PUT e PATCH richiedono un’intestazione aggiuntiva:
 La tabella seguente illustra alcuni termini comuni utilizzati in questa esercitazione:
 
 | Termine | Definizione |
---- | ---
+| --- | --- |
 | **Istanza di apprendimento automatico (Istanza ML)** | Un’istanza di un motore [!DNL Sensei] per un tenant specifico, contenente dati, parametri e codice [!DNL Sensei] specifici. |
 | **Esperimento** | Un&#39;entità ombrello per tenere in esecuzione un esperimento di formazione, eseguire un esperimento di punteggio o entrambi. |
 | **Esperimento pianificato** | Termine per descrivere l&#39;automazione della formazione o del punteggio Eseguiti da un esperimento, governato da un programma definito dall&#39;utente. |
@@ -83,7 +83,7 @@ curl -X POST
 ```
 
 | Proprietà | Descrizione |
---- | ---
+| --- | --- |
 | `mlInstanceId` | L&#39;identificazione dell&#39;istanza ML esistente, l&#39;esecuzione dell&#39;esperimento di formazione utilizzato per creare il servizio ML deve corrispondere a questa particolare istanza ML. |
 | `trainingExperimentId` | Identificazione dell&#39;esperimento corrispondente all&#39;identificazione dell&#39;istanza ML. |
 | `trainingExperimentRunId` | Una particolare esercitazione Experience Run da utilizzare per la pubblicazione del servizio ML. |
