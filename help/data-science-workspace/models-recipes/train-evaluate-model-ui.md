@@ -7,9 +7,9 @@ type: Tutorial
 description: In Adobe Experience Platform Data Science Workspace, viene creato un modello di apprendimento automatico incorporando una composizione esistente appropriata per l'intento del modello. Il modello viene quindi addestrato e valutato per ottimizzarne l'efficienza operativa e l'efficacia, regolando con precisione i relativi Hyperparameters associati. Le ricette sono riutilizzabili, il che significa che è possibile creare più modelli e personalizzarli per scopi specifici con un'unica ricetta.
 exl-id: 6f674cfa-c123-46a3-80e2-9342fe687976
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1078'
 ht-degree: 1%
 
 ---
@@ -110,10 +110,10 @@ Questa esercitazione illustra come creare, addestrare e valutare un modello in [
 I parametri ipertestuali determinano il comportamento di formazione del Modello, la modifica di Hyperparameters influenzerà la precisione e la precisione del Modello:
 
 | Iperparametro | Descrizione | Intervallo consigliato |
---- | --- | ---
-| learning_rate | Il tasso di apprendimento riduce il contributo di ogni albero tramite learning_rate. C&#39;è un compromesso tra learning_rate e n_estimatori. | 0,1 | [2 - 10] / numero di stimatori |
-| n_estimatori | Numero di fasi di incremento da eseguire. Il miglioramento della sfumatura è abbastanza robusto per l&#39;installazione eccessiva, quindi un numero elevato di solito si traduce in prestazioni migliori. | 100 | 100 - 1000 |
-| max_depth | Profondità massima dei singoli stimatori di regressione. La profondità massima limita il numero di nodi nella struttura. Sintonizza questo parametro per ottenere prestazioni migliori; il valore migliore dipende dall’interazione delle variabili di input. | 3 | 4 - 10 |
+| --- | --- | --- |
+| learning_rate | Il tasso di apprendimento riduce il contributo di ogni albero tramite learning_rate. C&#39;è un compromesso tra learning_rate e n_estimatori. | 0,1 |
+| n_estimatori | Numero di fasi di incremento da eseguire. Il miglioramento della sfumatura è abbastanza robusto per l&#39;installazione eccessiva, quindi un numero elevato di solito si traduce in prestazioni migliori. | 100 |
+| max_depth | Profondità massima dei singoli stimatori di regressione. La profondità massima limita il numero di nodi nella struttura. Sintonizza questo parametro per ottenere prestazioni migliori; il valore migliore dipende dall’interazione delle variabili di input. | 3 |
 
 I parametri aggiuntivi determinano le proprietà tecniche del modello:
 
