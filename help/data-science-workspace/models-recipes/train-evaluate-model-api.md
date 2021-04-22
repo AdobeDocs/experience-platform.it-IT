@@ -7,9 +7,9 @@ type: Tutorial
 description: Questa esercitazione ti mostrerà come creare, addestrare e valutare un modello utilizzando le chiamate API Sensei Machine Learning.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
-source-wordcount: '1237'
+source-wordcount: '1235'
 ht-degree: 1%
 
 ---
@@ -41,16 +41,14 @@ Utilizzeremo le API per creare un Experience Run per la formazione. Per questa e
 
 >[!NOTE]
 >
->I termini &quot;Engine&quot;, &quot;MLInance&quot;, &quot;MLService&quot;, &quot;Experiment&quot; e &quot;Model&quot; sono indicati come termini diversi nell’interfaccia utente. Se provieni dall’interfaccia utente, nella tabella seguente vengono mappate le differenze.
-> 
-> | Termine interfaccia utente | Termine API |
-> --- | ---
-> | Ricetta | Motore |
-> | Modello | MLInance |
-> | Corsi di formazione | Esperimento |
-> | Servizio | MLService |
+>I termini &quot;Engine&quot;, &quot;MLInance&quot;, &quot;MLService&quot;, &quot;Experiment&quot; e &quot;Model&quot; sono indicati come termini diversi nell’interfaccia utente. Se provieni dall’interfaccia utente, la tabella seguente mappa le differenze.
 
-
+| Termine interfaccia utente | Termine API |
+| --- | --- |
+| Ricetta | Motore |
+| Modello | MLInance |
+| Corsi di formazione | Esperimento |
+| Servizio | MLService |
 
 ### Creare un&#39;istanza MLI
 
@@ -128,7 +126,7 @@ curl -X POST \
 >
 >Nell’array `{JSON_PAYLOAD}` vengono definiti i parametri utilizzati per la formazione e il punteggio nell’array `tasks`. Il `{ENGINE_ID}` è l&#39;ID del motore che si desidera utilizzare e il campo `tag` è un parametro facoltativo utilizzato per identificare l&#39;istanza.
 
-La risposta conterrà il `{INSTANCE_ID}` che rappresenta l’istanza MLI creata. È possibile creare più istanze modello MLI con diverse configurazioni.
+La risposta contiene il `{INSTANCE_ID}` che rappresenta l’istanza MLI creata. È possibile creare più istanze modello MLI con diverse configurazioni.
 
 **Risposta**
 
