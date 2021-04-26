@@ -6,7 +6,7 @@ topic-legacy: ui guide
 description: Il servizio di segmentazione di Adobe Experience Platform fornisce un’interfaccia utente per la creazione e la gestione delle definizioni dei segmenti.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: fa2f4e046c6210137aa3e98d9f18010c1058275a
 workflow-type: tm+mt
 source-wordcount: '1479'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Per lavorare con le definizioni dei segmenti è necessario conoscere i vari serv
 
 ## Panoramica
 
-Nel menu di navigazione [[!DNL Experience Platform] UI](http://platform.adobe.com/), seleziona **[!UICONTROL Segments]** nel menu di navigazione a sinistra per aprire la scheda **[!UICONTROL Overview]** . Questa scheda fornisce collegamenti alla documentazione e ai video per comprendere e iniziare a lavorare con i segmenti.
+Nel menu di navigazione [[!DNL Experience Platform] UI](https://platform.adobe.com/), seleziona **[!UICONTROL Segments]** nel menu di navigazione a sinistra per aprire la scheda **[!UICONTROL Overview]** . Questa scheda fornisce collegamenti alla documentazione e ai video per comprendere e iniziare a lavorare con i segmenti.
 
 ![](../images/ui/overview/segment-overview.png)
 
@@ -44,14 +44,14 @@ Seleziona la scheda **[!UICONTROL Browse]** per visualizzare un elenco di tutte 
 
 Questa visualizzazione elenca informazioni sulla definizione del segmento, tra cui suddivisione, abbandono, conteggio dei profili, metodo di valutazione, data di creazione e data dell’ultima modifica.
 
-La suddivisione mostra un grafico a barre che mostra la percentuale di profili che appartengono a ciascuno dei seguenti stati: [!UICONTROL Entered], [!UICONTROL Realized] e [!UICONTROL Exiting].
+La suddivisione mostra un grafico a barre che mostra la percentuale di profili che appartengono a ciascuno dei seguenti stati: [!UICONTROL Realized], [!UICONTROL Existing] e [!UICONTROL Exiting].
 
 ![](../images/ui/overview/segment-browse-breakdown.png)
 
 | Stato | Descrizione |
 | ------ | ----------- |
-| Inserito | Un nuovo profilo all’interno del segmento. |
-| Realizzato | Un profilo esistente rimasto all’interno del segmento. |
+| Realizzato | Un nuovo profilo all’interno del segmento. |
+| Esistente | Un profilo esistente rimasto all’interno del segmento. |
 | Uscita | Un profilo esistente che sta lasciando il segmento. |
 
 L’abbandono rappresenta la percentuale di profili che cambiano all’interno di una definizione di segmento rispetto all’ultima esecuzione del processo di segmento, mentre il conteggio del profilo rappresenta il numero totale di profili idonei per il segmento.
