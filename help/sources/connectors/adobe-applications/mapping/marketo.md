@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Campi di mappatura per l'origine Marketo Engage
 topic-legacy: overview
 description: Le tabelle seguenti contengono le mappature tra i campi nei set di dati Marketo e i campi XDM corrispondenti.
+exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 translation-type: tm+mt
-source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
+source-git-commit: 8f03b2e8a10d57fcae77dedecdce0e0176ba04fd
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '453'
 ht-degree: 3%
 
 ---
-
 
 # (Beta) [!DNL Marketo Engage] mappature dei campi
 
@@ -158,6 +158,7 @@ Le tabelle seguenti contengono le mappature tra i campi dei nove set di dati [!D
 | `company` | `accountName` |
 | `companyNotes` | `accountDescription` |
 | `site` | `accountSite` |
+| `mktoCdpParentOrgId` | `accountParentID` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -177,8 +178,8 @@ Le tabelle seguenti contengono le mappature tra i campi dei nove set di dati [!D
 
 | Set di dati sorgente | Campo di destinazione XDM | Note |
 | -------------- | ---------------- | ----- |
-| `marketingListMemberID` | `staticListMemberID` | Identità principale |
-| `marketingListID` | `staticListID` | Relazione |
+| `staticListMemberID` | `marketingListMemberID` | Identità principale |
+| `staticListID` | `marketingListID` | Relazione |
 | `personID` | `personID` | Relazione |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 
@@ -234,7 +235,7 @@ Le tabelle seguenti contengono le mappature tra i campi dei nove set di dati [!D
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `Campaign-ID` | `campaignID` | Consigliato solo se utilizzi l’integrazione Salesforce. |
+| `mktoCdpSourceCampaignId` | `campaignID` | Consigliato solo se utilizzi l’integrazione Salesforce. |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
@@ -279,7 +280,7 @@ Come soluzione alternativa, è possibile aggiornare il campo di unione ID da `No
 | `mktoCdpCnvContactPersonId` | `b2b.convertedContactID` |
 | `mktoCdpIsConverted` | `b2b.isConverted` |
 | `mktoCdpConvertedDate` | `b2b.convertedDate` |
-| `sfdcId` | `extSourceSystemAudit.externalID` | Identità secondaria |
+| `sfdcLeadId` | `extSourceSystemAudit.externalID` | Identità secondaria |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `title` | `extendedWorkDetails.jobTitle` |
@@ -308,8 +309,13 @@ Come soluzione alternativa, è possibile aggiornare il campo di unione ID da `No
 | `id` | `personComponents.sourcePersonID` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
+| `to_object('ECID',arrays_to_objects('id',explode(ecids)))` | `identityMap` |
 
 {style=&quot;table-layout:auto&quot;}
+
+>[!TIP]
+>
+>Il campo di origine `to_object('ECID',arrays_to_objects('id',explode(ecids)))` è un campo calcolato che deve essere aggiunto utilizzando l’opzione [!UICONTROL Add calculated field] nell’interfaccia utente di Platform. Per ulteriori informazioni, consulta l’esercitazione sull’ [aggiunta di campi calcolati](../../../../ingestion/tutorials/map-a-csv-file.md) .
 
 ## Passaggi successivi
 
