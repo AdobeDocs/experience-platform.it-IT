@@ -8,9 +8,9 @@ topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a03d851f3e0037b8241ca1f1de890903b08feac4
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1768'
 ht-degree: 4%
 
 ---
@@ -179,6 +179,16 @@ Questo messaggio di errore viene visualizzato quando l’utente o l’integrazio
 
 Questo messaggio di errore viene visualizzato quando una richiesta di POST, PUT o PATCH presenta un&#39;intestazione `Content-Type` non valida o mancante. Verifica che l’intestazione sia inclusa nella richiesta e che il relativo valore sia `application/json`.
 
+### Area utente mancante
+
+```json
+{
+    "error_code": "403027",
+    "message": "User region is missing"
+}
+```
+
+Questo messaggio di errore viene visualizzato quando l’account (rappresentato dalle credenziali di autenticazione fornite) non è associato, ad Experience Platform, a un profilo di prodotto. Segui i passaggi descritti in [generazione di credenziali di accesso](./api-authentication.md#authentication-for-each-session) nell’esercitazione sull’autenticazione dell’API Platform per aggiungere Platform al tuo account e aggiornare di conseguenza le tue credenziali di autenticazione.
 
 ## Directory dei servizi per la risoluzione dei problemi {#service-troubleshooting-directory}
 
