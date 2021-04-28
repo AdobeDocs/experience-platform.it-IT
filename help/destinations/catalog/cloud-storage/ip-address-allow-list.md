@@ -5,9 +5,9 @@ type: Documentation
 description: Questa pagina fornisce intervalli IP che è possibile aggiungere all’elenco consentiti per esportare in modo sicuro i dati dall’Experience Platform al server SFTP, all’archiviazione Amazon S3 o Azure Blob.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
 translation-type: tm+mt
-source-git-commit: ac62ebcc7b00a96f718a3c39725bcf21ce3d56cf
+source-git-commit: 4cc7fb2714f6df8065a0531f7e507983940d662c
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## Panoramica {#overview}
 
-Questa pagina fornisce intervalli IP che è possibile aggiungere all&#39;elenco consentiti per esportare in modo sicuro i dati dall&#39;Experience Platform al server [SFTP](./sftp.md), [Amazon S3](./amazon-s3.md) o all&#39;archiviazione [Azure Blob](./azure-blob.md).
+Questa pagina fornisce intervalli IP che puoi aggiungere al tuo elenco consentiti per esportare in modo sicuro i dati dall&#39;Experience Platform al tuo [server SFTP](./sftp.md).
 
 È possibile definire controlli di accesso alla rete tramite il firewall di rete. Specificando l’intervallo IP appropriato, puoi consentire il traffico per il servizio di trasferimento dati.
 
