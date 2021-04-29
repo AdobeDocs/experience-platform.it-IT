@@ -3,11 +3,11 @@ audience: user
 user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
-feature: Destinations
+feature: Destinazioni
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 020192469127e8f25f0d61e33b4b5dc60da6b57d
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '471'
 ht-degree: 10%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 10%
    * Destinazioni di archiviazione cloud {#cloud-storage}
       * [Panoramica delle destinazioni di archiviazione cloud](./catalog/cloud-storage/overview.md)
       * [Creare una destinazione di archiviazione cloud](./catalog/cloud-storage/workflow.md)
-      * [Connessione Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
+      * [(Beta) Connessione Amazon Kinesis](./catalog/cloud-storage/amazon-kinesis.md)
       * [Connessione Amazon S3](./catalog/cloud-storage/amazon-s3.md)
       * [Connessione BLOB di Azure](./catalog/cloud-storage/azure-blob.md)
       * [(Beta) Connessione ad Azure Event Hubs](./catalog/cloud-storage/azure-event-hubs.md)
@@ -122,7 +122,7 @@ ht-degree: 10%
       * [Creare una destinazione social](./catalog/social/workflow.md)
       * [Estensione Adobe Livefyre](./catalog/social/adobe-livefyre.md)
       * [Connessione facebook](./catalog/social/facebook.md)
-      * [Connessione Linkedin Matched Audiences](./catalog/social/linkedin.md)
+      * [Connessione linkedIn Matched Audiences](./catalog/social/linkedin.md)
    * Destinazioni sondaggio {#survey}
       * [Panoramica sulle destinazioni del sondaggio](./catalog/survey/overview.md)
       * [Destinazione dell&#39;estensione Foresee](./catalog/survey/foresee.md)
