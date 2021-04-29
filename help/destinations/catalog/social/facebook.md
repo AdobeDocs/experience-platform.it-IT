@@ -4,9 +4,9 @@ title: Connessione facebook
 description: Attiva profili per le campagne Facebook per il targeting del pubblico, la personalizzazione e la soppressione in base a e-mail con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: 1e9e5831b19738285affeb0337985c7cb0d45ebf
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1089'
 ht-degree: 2%
 
 ---
@@ -36,12 +36,6 @@ Una compagnia aerea ha diversi livelli di clienti (Bronze, Silver e Gold) e vuol
 Per eseguire il targeting su tali utenti attraverso i social media, possono integrare i dati del cliente dal CRM in Adobe Experience Platform, utilizzando gli indirizzi e-mail come identificatori.
 
 Successivamente, possono utilizzare i propri dati offline, inclusi gli ID di appartenenza associati e i livelli di cliente, per creare nuovi segmenti di pubblico di cui possono eseguire il targeting attraverso la destinazione [!DNL Facebook].
-
-## Governance dei dati per le destinazioni [!DNL Facebook] {#data-governance}
-
->[!IMPORTANT]
->
->I dati inviati a [!DNL Facebook] non possono includere identità unite. L’utente è responsabile del rispetto di questo obbligo e può farlo assicurando che i segmenti selezionati per l’attivazione non utilizzino un’opzione di unione nei propri criteri di unione. Ulteriori informazioni su [criteri di unione](/help/profile/ui/merge-policies.md).
 
 ## Identità supportate {#supported-identities}
 
