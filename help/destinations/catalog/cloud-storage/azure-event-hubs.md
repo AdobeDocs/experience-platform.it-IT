@@ -1,15 +1,15 @@
 ---
 keywords: Destinazione hub eventi Azure;hub eventi azure;azure eventhub
-title: (Beta) Connessione ad Azure Event Hubs
-description: Crea una connessione in uscita in tempo reale all’archiviazione Azure Event Hubs per lo streaming dei dati dall’Experience Platform.
+title: (Beta) Connessione a !DNL Azure Event Hubs]
+description: Crea una connessione in uscita in tempo reale all’archivio !DNL Azure Event Hubs] per lo streaming dei dati dall’Experience Platform.
+exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: ce5001d0a1c95901089915ae9836fdd436f12297
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '534'
 ht-degree: 2%
 
 ---
-
 
 # (Beta) Connessione [!DNL Azure Event Hubs]
 
@@ -113,3 +113,4 @@ I dati esportati [!DNL Experience Platform] arrivano in [!DNL Azure Event Hubs] 
 >* [Connettersi agli hub eventi di Azure e attivare i dati utilizzando l’API del servizio di flusso](../../api/streaming-destinations.md)
 >* [Destinazione AWS Kinesis](./amazon-kinesis.md)
 >* [Tipi di destinazione e categorie](../../destination-types.md)
+
