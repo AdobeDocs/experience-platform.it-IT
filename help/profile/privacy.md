@@ -2,12 +2,11 @@
 keywords: Experience Platform;home;argomenti popolari
 solution: Experience Platform
 title: Elaborazione delle richieste di privacy in Profilo cliente in tempo reale
-topic-legacy: overview
 type: Documentation
 description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti relative all’accesso, alla rinuncia alla vendita o alla cancellazione dei propri dati personali come delineato da numerose normative sulla privacy. Questo documento tratta i concetti essenziali relativi all’elaborazione delle richieste di privacy per Profilo cliente in tempo reale.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8d16a3030c663d40daed6c5105af07b2d2d5c7bf
 workflow-type: tm+mt
 source-wordcount: '1091'
 ht-degree: 0%
@@ -24,9 +23,9 @@ Questo documento tratta i concetti essenziali relativi all’elaborazione delle 
 
 Prima di leggere questa guida, è consigliabile avere familiarità con i seguenti servizi [!DNL Experience Platform] :
 
-* [[!DNL Privacy Service]](home.md): Gestisce le richieste dei clienti relative all’accesso, alla rinuncia alla vendita o all’eliminazione dei loro dati personali tra le applicazioni Adobe Experience Cloud.
+* [[!DNL Privacy Service]](../privacy-service/home.md): Gestisce le richieste dei clienti relative all’accesso, alla rinuncia alla vendita o all’eliminazione dei loro dati personali tra le applicazioni Adobe Experience Cloud.
 * [[!DNL Identity Service]](../identity-service/home.md): Risolve la sfida fondamentale rappresentata dalla frammentazione dei dati sulla customer experience attraverso il collegamento di identità tra dispositivi e sistemi.
-* [[!DNL Real-time Customer Profile]](../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
+* [[!DNL Real-time Customer Profile]](home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
 ## Informazioni sugli spazi dei nomi delle identità {#namespaces}
 
@@ -48,7 +47,7 @@ Le sezioni seguenti descrivono come effettuare richieste di privacy per [!DNL Re
 >
 >È inoltre importante notare che il tempo necessario per completare una richiesta di accesso a dati personali non può essere garantito. Se si verificano modifiche nei dati [!DNL Profile] durante l&#39;elaborazione di una richiesta, non è possibile garantire l&#39;elaborazione di tali record.
 
-### Utilizzo dell’API
+### Mediante l’API
 
 Quando crei richieste di lavoro nell&#39;API, qualsiasi ID fornito in `userIDs` deve utilizzare un `namespace` e `type` specifici. Per il valore `namespace` deve essere fornito un [namespace di identità](#namespaces) valido riconosciuto da [!DNL Identity Service], mentre il valore `type` deve essere `standard` o `unregistered` (rispettivamente per i namespace standard e personalizzati).
 
