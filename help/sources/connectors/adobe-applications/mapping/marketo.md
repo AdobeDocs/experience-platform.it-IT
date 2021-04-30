@@ -6,10 +6,10 @@ topic-legacy: overview
 description: Le tabelle seguenti contengono le mappature tra i campi nei set di dati Marketo e i campi XDM corrispondenti.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 translation-type: tm+mt
-source-git-commit: 8f03b2e8a10d57fcae77dedecdce0e0176ba04fd
+source-git-commit: 5d37c9664f60e9d962e866c6d480d2ef2e0bfff3
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 3%
+source-wordcount: '330'
+ht-degree: 4%
 
 ---
 
@@ -259,10 +259,6 @@ Le tabelle seguenti contengono le mappature tra i campi dei nove set di dati [!D
 
 ## Persone {#persons}
 
-Nel dashboard [!DNL Profiles] dell’interfaccia utente di Platform, se il valore di unione ID nel criterio di unione utilizzato per sfogliare è impostato su `None`, nella finestra delle identità collegate verrà visualizzato solo l’attributo di identità principale.
-
-Come soluzione alternativa, è possibile aggiornare il campo di unione ID da `None` a `Private graph` per visualizzare tutte le identità collegate a una [!DNL Profile]. In alternativa, è possibile creare un nuovo criterio di unione oppure utilizzare un criterio di unione diverso contenente un valore di unione ID impostato su `Private graph`. Se si sceglie di creare un nuovo criterio di unione o di utilizzare un criterio di unione diverso, è necessario assicurarsi che il criterio contenga lo stesso tipo di schema utilizzato per il set di mapping [!DNL Marketo] Persone. Per ulteriori informazioni, consulta la [guida all&#39;interfaccia utente dei criteri di unione](../../../../profile/ui/merge-policies.md).
-
 | Set di dati sorgente | Campo di destinazione XDM | Note |
 | -------------- | ---------------- | ----- |
 | `id` | `personID` | Identità principale |
@@ -313,7 +309,7 @@ Come soluzione alternativa, è possibile aggiornare il campo di unione ID da `No
 
 {style=&quot;table-layout:auto&quot;}
 
->[!TIP]
+>[!NOTE]
 >
 >Il campo di origine `to_object('ECID',arrays_to_objects('id',explode(ecids)))` è un campo calcolato che deve essere aggiunto utilizzando l’opzione [!UICONTROL Add calculated field] nell’interfaccia utente di Platform. Per ulteriori informazioni, consulta l’esercitazione sull’ [aggiunta di campi calcolati](../../../../ingestion/tutorials/map-a-csv-file.md) .
 
