@@ -5,14 +5,14 @@ title: Creare un connettore sorgente di Marketo Engage nell’interfaccia utente
 topic-legacy: overview
 type: Tutorial
 description: Questa esercitazione fornisce passaggi per creare un connettore di origine di Marketo Engage nell’interfaccia utente per inserire dati B2B in Adobe Experience Platform.
+exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
 translation-type: tm+mt
-source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
+source-git-commit: 5322adb4b3a244de92300e7ce9d942ad4b968454
 workflow-type: tm+mt
-source-wordcount: '1317'
+source-wordcount: '1324'
 ht-degree: 0%
 
 ---
-
 
 # (Beta) Crea un connettore sorgente [!DNL Marketo Engage] nell’interfaccia utente
 
@@ -75,25 +75,25 @@ Per creare un flusso di dati con un account esistente, selezionare **[!UICONTROL
 
 Dopo aver creato l’account [!DNL Marketo], il passaggio successivo fornisce un’interfaccia per esplorare i set di dati [!DNL Marketo].
 
-La metà sinistra dell&#39;interfaccia è un browser di directory che visualizza i 10 set di dati [!DNL Marketo]. Una connessione di origine [!DNL Marketo] completamente funzionante richiede l’acquisizione di nove set di dati diversi. Se utilizzi anche la funzione di marketing basato su account ( [!DNL Marketo's] ), devi anche creare un decimo flusso di dati per acquisire il set di dati [!UICONTROL Named Accounts] .
+La metà sinistra dell&#39;interfaccia è un browser di directory che visualizza i 10 set di dati [!DNL Marketo]. Una connessione di origine [!DNL Marketo] completamente funzionante richiede l’acquisizione di nove set di dati diversi. Se utilizzi anche la funzione di marketing basato su account (ABM) [!DNL Marketo] , devi anche creare un decimo flusso di dati per acquisire il set di dati [!UICONTROL Named Accounts] .
 
 >[!NOTE]
 >
->Per motivi di brevità, l’esercitazione seguente utilizza [!UICONTROL Named Acccounts] come esempio, ma i passaggi descritti di seguito si applicano a uno qualsiasi dei 10 set di dati [!DNL Marketo].
+>Per motivi di brevità, l’esercitazione seguente utilizza [!UICONTROL Named Accounts] come esempio, ma i passaggi descritti di seguito si applicano a uno qualsiasi dei 10 set di dati [!DNL Marketo].
 
 Seleziona il set di dati da acquisire prima, quindi seleziona **[!UICONTROL Next]**.
 
 ![select-data](../../../../images/tutorials/create/marketo/select-data.png)
 
-## Mappatura di campi dati su uno schema XDM
+## Mappatura di schemi [!DNL Marketo] su Platform
 
-Viene visualizzato il passaggio [!UICONTROL Mapping] , che fornisce un’interfaccia per mappare il set di dati [!DNL Marketo] a un set di dati di Platform.
+Viene visualizzato il passaggio [!UICONTROL Mapping] , che fornisce un’interfaccia per mappare gli schemi [!DNL Marketo] su Platform.
 
 Scegli un set di dati in entrata in cui acquisire i dati. Puoi utilizzare un set di dati esistente o crearne uno nuovo.
 
 ### Utilizzare un set di dati esistente
 
-Per acquisire dati in un set di dati esistente, seleziona **[!UICONTROL Use existing dataset]**, quindi seleziona l’icona del set di dati.
+Per acquisire dati in un set di dati esistente, seleziona **[!UICONTROL Existing dataset]**, quindi seleziona l’icona del set di dati.
 
 ![set di dati esistente](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
@@ -103,7 +103,7 @@ Viene visualizzata la finestra di dialogo **[!UICONTROL Select dataset]**. Trova
 
 ### Utilizzare un nuovo set di dati
 
-Per acquisire dati in un nuovo set di dati, seleziona **[!UICONTROL Create new dataset]** e immetti un nome e una descrizione per il set di dati nei campi forniti.
+Per acquisire dati in un nuovo set di dati, seleziona **[!UICONTROL New dataset]** e immetti un nome e una descrizione per il set di dati nei campi forniti.
 
 È possibile cercare uno schema immettendone il nome nella barra di ricerca **[!UICONTROL Select schema]**. Puoi anche selezionare l’icona a discesa per visualizzare un elenco degli schemi esistenti. In alternativa, puoi selezionare **[!UICONTROL Advanced search]** per accedere alla pagina degli schemi esistenti, inclusi i rispettivi dettagli.
 
@@ -144,7 +144,7 @@ Viene visualizzato il passaggio [!UICONTROL Dataflow detail] , che consente di f
 
 ![dettaglio del flusso di dati](../../../../images/tutorials/create/marketo/dataflow-detail.png)
 
-Abilita l’opzione **[!UICONTROL Error diagnostics]** per consentire la generazione di messaggi di errore dettagliati per i batch appena acquisiti, che puoi scaricare utilizzando l’API.
+Abilita l’opzione **[!UICONTROL Error diagnostics]** per consentire la generazione di messaggi di errore dettagliati per i batch appena acquisiti, che puoi scaricare utilizzando l’API. Per ulteriori informazioni, consulta l’esercitazione su [recupero della diagnostica degli errori di inserimento dati](../../../../../ingestion/quality/error-diagnostics.md).
 
 ![errori](../../../../images/tutorials/create/marketo/errors.png)
 
@@ -160,7 +160,7 @@ Dopo aver fornito i dettagli del flusso di dati e impostato la soglia di errore 
 
 Viene visualizzato il passaggio **[!UICONTROL Review]** , che consente di rivedere il nuovo flusso di dati prima della creazione. I dettagli sono raggruppati nelle seguenti categorie:
 
-* **[!UICONTROL Connection]**: Mostra il tipo di origine, il percorso pertinente del file di origine scelto e la quantità di colonne all&#39;interno del file di origine.
+* **[!UICONTROL Connection]**: Mostra il tipo di origine, il percorso pertinente dell&#39;entità di origine selezionata e la quantità di colonne all&#39;interno dell&#39;entità di origine.
 * **[!UICONTROL Assign dataset & map fields]**: Mostra il set di dati in cui vengono acquisiti i dati di origine, incluso lo schema a cui il set di dati aderisce.
 
 Dopo aver esaminato il flusso di dati, seleziona **[!UICONTROL Finish]** e consenti la creazione del flusso di dati.
