@@ -7,9 +7,9 @@ type: Tutorial
 description: Questa esercitazione descrive i passaggi per recuperare i dati in streaming e inserirli in Platform utilizzando i connettori sorgente e le API.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f35c59843451267d0a054cfd594aea3e5d5ea8c6
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1526'
 ht-degree: 2%
 
 ---
@@ -202,7 +202,6 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
 }
 ```
 
-
 ## Creare uno schema XDM di destinazione {#target-schema}
 
 Affinché i dati di origine siano utilizzati in [!DNL Platform], è necessario creare uno schema di destinazione per strutturare i dati di origine in base alle proprie esigenze. Lo schema di destinazione viene quindi utilizzato per creare un set di dati [!DNL Platform] in cui sono contenuti i dati di origine. Questo schema XDM di destinazione estende anche la classe XDM [!DNL Individual Profile] .
@@ -334,6 +333,7 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
+        "name": "Test streaming dataset",
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -345,15 +345,15 @@ curl -X POST \
             "profile": [
             "enabled:true"
             ]
-        },
-        "name": "Test streaming dataset"
+        }
     }'
 ```
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `schemaRef.id` | ID dello schema XDM di destinazione. |
-| `schemaRef.contentType` | Versione dello schema. Questo valore deve essere impostato `application/vnd.adobe.xed-full-notext+json;version=1`, che restituisce la versione secondaria più recente dello schema. |
+| `name` | Nome del set di dati da creare. |
+| `schemaRef.id` | URI `$id` per lo schema XDM su cui verrà basato il set di dati. |
+| `schemaRef.contentType` | Versione dello schema. Questo valore deve essere impostato su `application/vnd.adobe.xed-full-notext+json;version=1`, che restituisce la versione secondaria più recente dello schema. Per ulteriori informazioni, consulta la sezione sul [controllo delle versioni dello schema](../../../../xdm/api/getting-started.md#versioning) nella guida API XDM . |
 
 **Risposta**
 
