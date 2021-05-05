@@ -5,7 +5,7 @@ description: 'L''area di lavoro Destinazioni è composta da quattro sezioni: Cat
 seo-description: In Adobe Experience Platform, seleziona Destinazioni dalla barra di navigazione a sinistra per accedere all’area di lavoro delle destinazioni.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
 translation-type: tm+mt
-source-git-commit: cc432f7c07f0f82deec653864154016638ec8138
+source-git-commit: eaa4a7efc248104d823267eca574f2eca16edc3f
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 1%
@@ -38,7 +38,7 @@ L&#39;interfaccia utente [!DNL Platform] fornisce diverse opzioni di ricerca e f
 Le schede di destinazione contengono un controllo **[!UICONTROL Configure]** o **[!UICONTROL Activate]** e un controllo secondario che offre più opzioni. Questi controlli sono descritti di seguito:
 
 | Controllo | Descrizione |
----------|----------
+|---------|----------|
 | [!UICONTROL Configure] | Consente di creare una connessione alla destinazione. |
 | [!UICONTROL Activate] | Una volta stabilita una connessione alla destinazione, puoi attivare i segmenti. |
 | [!UICONTROL View account] | Visualizzare gli account connessi a una destinazione. |
@@ -72,7 +72,7 @@ La scheda **[!UICONTROL Browse]** visualizza le destinazioni con le quali hai st
 ![Scheda Sfoglia](../assets/ui/workspace/browse-tab.png)
 
 | Elemento | Descrizione |
----------|----------
+|---------|----------|
 | Nome | Nome fornito per il flusso di attivazione a questa destinazione. La stessa colonna include due controlli: [!UICONTROL Activate ] e [!UICONTROL Delete destination]. |
 | [!UICONTROL Last Flow Run Status] | Lo stato dell’ultima esecuzione del flusso di dati. Per ulteriori informazioni sulle esecuzioni dei flussi di dati, consulta [Visualizzare i dettagli di destinazione](destination-details-page.md) . |
 | [!UICONTROL Last Flow Run Date] | Ora e data dell’ultima esecuzione del flusso di dati. Per ulteriori informazioni sulle esecuzioni dei flussi di dati, consulta [Visualizzare i dettagli di destinazione](destination-details-page.md) . |
