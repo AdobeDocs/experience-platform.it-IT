@@ -7,9 +7,9 @@ type: Tutorial
 description: Questa esercitazione ti aiuterà a iniziare a utilizzare le API Streaming Ingestion, parte delle API del servizio Adobe Experience Platform Data Ingestion.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 96f400466366d8a79babc194bc2ba8bf19ede6bb
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '1090'
 ht-degree: 2%
 
 ---
@@ -27,6 +27,8 @@ Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Ex
 
 - [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): Il framework standardizzato tramite il quale  [!DNL Platform] organizza i dati relativi alle esperienze.
 - [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fornisce un profilo consumatore unificato in tempo reale basato su dati aggregati provenienti da più origini.
+
+Inoltre, per creare una connessione in streaming è necessario disporre di uno schema XDM di destinazione e di un set di dati. Per informazioni su come crearli, leggi l&#39;esercitazione su [streaming record data](../../../../../ingestion/tutorials/streaming-record-data.md) o l&#39;esercitazione su [streaming time-series data](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 
 Le sezioni seguenti forniscono informazioni aggiuntive che dovrai conoscere per effettuare correttamente le chiamate alle API di acquisizione in streaming.
 
@@ -54,9 +56,9 @@ Tutte le richieste che contengono un payload (POST, PUT, PATCH) richiedono un’
 
 - Tipo di contenuto: application/json
 
-## Creare una connessione
+## Creare una connessione di base
 
-Una connessione specifica l’origine e contiene le informazioni necessarie per rendere il flusso compatibile con le API di acquisizione in streaming. Durante la creazione di una connessione, è possibile creare una connessione non autenticata e una connessione autenticata.
+Una connessione di base specifica l’origine e contiene le informazioni necessarie per rendere il flusso compatibile con le API di acquisizione in streaming. Durante la creazione di una connessione di base, è possibile creare una connessione non autenticata e una connessione autenticata.
 
 ### Connessione non autenticata
 
@@ -95,7 +97,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
              "name": "Sample connection"
          }
      }
- }
+ }'
 ```
 
 | Proprietà | Descrizione |
@@ -189,7 +191,7 @@ Una risposta corretta restituisce lo stato HTTP 201 con i dettagli della nuova c
 
 ## Ottieni URL endpoint di streaming
 
-Con la connessione creata, ora puoi recuperare l’URL dell’endpoint di streaming.
+Con la connessione di base creata, ora puoi recuperare l’URL dell’endpoint di streaming.
 
 **Formato API**
 
@@ -247,6 +249,142 @@ Una risposta corretta restituisce lo stato HTTP 200 con informazioni dettagliate
             "etag": "\"56008aee-0000-0200-0000-5e697e150000\""
         }
     ]
+}
+```
+
+## Creazione di una connessione sorgente
+
+Dopo aver creato la connessione di base, sarà necessario creare una connessione di origine. Quando crei una connessione sorgente, è necessario il valore `id` dalla connessione di base creata.
+
+**Formato API**
+
+```http
+POST /flowservice/sourceConnections
+```
+
+**Richiesta**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "name": "Sample source connection",
+    "description": "Sample source connection description",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
+    "connectionSpec": {
+        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+        "version": "1.0"
+    }
+}'
+```
+
+**Risposta**
+
+Una risposta corretta restituisce lo stato HTTP 201 con informazioni dettagliate sulla nuova connessione sorgente creata, incluso l’identificatore univoco (`id`).
+
+```json
+{
+    "id": "63070871-ec3f-4cb5-af47-cf7abb25e8bb",
+    "etag": "\"28000b90-0000-0200-0000-6091b0150000\""
+}
+```
+
+## Creare una connessione di destinazione
+
+Dopo aver creato la connessione sorgente, è possibile creare una connessione di destinazione. Quando crei la connessione di destinazione, è necessario il valore `id` del set di dati creato in precedenza.
+
+**Formato API**
+
+```http
+POST /flowservice/targetConnections
+```
+
+**Richiesta**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "name": "Sample target connection",
+    "description": "Sample target connection description",
+    "connectionSpec": {
+        "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+        "version": "1.0"
+    },
+    "data": {
+        "format": "parquet_xdm"
+    },
+    "params": {
+        "dataSetId": "{DATASET_ID}"
+    }
+}'
+```
+
+**Risposta**
+
+Una risposta corretta restituisce lo stato HTTP 201 con i dettagli della nuova connessione di destinazione creata, incluso il relativo identificatore univoco (`id`).
+
+```json
+{
+    "id": "98a2a72e-a80f-49ae-aaa3-4783cc9404c2",
+    "etag": "\"0500b73f-0000-0200-0000-6091b0b90000\""
+}
+```
+
+## Creare un flusso di dati
+
+Con le connessioni di origine e destinazione create, ora puoi creare un flusso di dati. Il flusso di dati è responsabile della pianificazione e della raccolta dei dati da un’origine. È possibile creare un flusso di dati eseguendo una richiesta POST all&#39;endpoint `/flows`.
+
+**Formato API**
+
+```http
+POST /flows
+```
+
+**Richiesta**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "name": "Sample flow",
+    "description": "Sample flow description",
+    "flowSpec": {
+        "id": "d8a6f005-7eaf-4153-983e-e8574508b877",
+        "version": "1.0"
+    },
+    "sourceConnectionIds": [
+        "{SOURCE_CONNECTION_ID}"
+    ],
+    "targetConnectionIds": [
+        "{TARGET_CONNECTION_ID}"
+    ]
+}'
+```
+
+**Risposta**
+
+Una risposta corretta restituisce lo stato HTTP 201 con i dettagli del flusso di dati appena creato, incluso il relativo identificatore univoco (`id`).
+
+```json
+{
+    "id": "ab03bde0-86f2-45c7-b6a5-ad8374f7db1f",
+    "etag": "\"1200c123-0000-0200-0000-6091b1730000\""
 }
 ```
 
