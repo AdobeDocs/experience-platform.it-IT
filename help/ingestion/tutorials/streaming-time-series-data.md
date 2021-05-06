@@ -7,9 +7,9 @@ type: Tutorial
 description: Questa esercitazione ti aiuterà a iniziare a utilizzare le API Streaming Ingestion, parte delle API del servizio Adobe Experience Platform Data Ingestion.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 544eeb3a27d0b218885e3000deb214f21c8e9fcd
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1349'
 ht-degree: 2%
 
 ---
@@ -290,9 +290,16 @@ Una risposta corretta restituisce lo stato HTTP 201 e un array contenente l&#39;
 ]
 ```
 
+
+## Creare una connessione in streaming
+
+Dopo aver creato lo schema e il set di dati, dovrai creare una connessione in streaming per acquisire i dati.
+
+Per ulteriori informazioni sulla creazione di una connessione in streaming, leggi l&#39; [esercitazione sulla connessione in streaming](./create-streaming-connection.md).
+
 ## Inserire dati della serie temporale nella connessione streaming
 
-Con il set di dati e la connessione in streaming attivo, puoi acquisire record JSON in formato XDM per acquisire dati di serie temporali all’interno di [!DNL Platform].
+Con il set di dati, la connessione in streaming e il flusso di dati creati, puoi acquisire record JSON in formato XDM per acquisire dati di serie temporali all’interno di [!DNL Platform].
 
 **Formato API**
 
@@ -326,7 +333,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
             "id": "{SCHEMA_REF_ID}",
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "flowId": "{FLOW_ID}",
         "datasetId": "{DATASET_ID}"
     },
     "body": {
@@ -413,7 +420,7 @@ Una risposta corretta restituisce lo stato HTTP 200 con i dettagli del nuovo str
 
 | Proprietà | Descrizione |
 | -------- | ----------- |
-| `{CONNECTION_ID}` | ID della connessione in streaming creata in precedenza. |
+| `{CONNECTION_ID}` | La `inletId` della connessione streaming creata in precedenza. |
 | `xactionId` | Un identificatore univoco generato lato server per il record appena inviato. Questo ID consente ad Adobe di tracciare il ciclo di vita di questo record attraverso vari sistemi e con il debug. |
 | `receivedTimeMs`: Una marca temporale (epoch in millisecondi) che mostra a che ora è stata ricevuta la richiesta. |
 | `synchronousValidation.status` | Poiché è stato aggiunto il parametro di query `synchronousValidation=true`, questo valore viene visualizzato. Se la convalida è riuscita, lo stato sarà `pass`. |
@@ -445,7 +452,7 @@ GET /access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name
 
 ```shell
 curl -X GET \
-  https://platform-stage.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=janedoe@example.com&relatedEntityIdNS=email \
+  https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=janedoe@example.com&relatedEntityIdNS=email \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
