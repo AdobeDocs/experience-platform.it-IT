@@ -5,9 +5,9 @@ user-guide-description: Attiva i dati noti e sconosciuti per campagne di marketi
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinazioni
 translation-type: tm+mt
-source-git-commit: 020192469127e8f25f0d61e33b4b5dc60da6b57d
+source-git-commit: 9b383f09a3a73f785b0e3a415deda126b9ef6b39
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '474'
 ht-degree: 10%
 
 ---
@@ -104,9 +104,9 @@ ht-degree: 10%
       * [Panoramica dell&#39;estensione Adobe Experience Platform Launch](./catalog/launch-extensions/overview.md)
    * Destinazioni di coinvolgimento mobile {#mobile-engagement}
       * [Panoramica delle destinazioni di coinvolgimento mobile](./catalog/mobile-engagement/overview.md)
-      * [Collegamento Attributi del volo](./catalog/mobile-engagement/airship-attributes.md)
-      * [Collegamento dei tag dell&#39;aeroporto](./catalog/mobile-engagement/airship-tags.md)
-      * [Collegamento del freno](./catalog/mobile-engagement/braze.md)
+      * [(Beta) Collegamento Attributi dell&#39;aeromobile](./catalog/mobile-engagement/airship-attributes.md)
+      * [(Beta) Collegamento con i tag dell’aeromobile](./catalog/mobile-engagement/airship-tags.md)
+      * [(Beta) Collegamento del freno](./catalog/mobile-engagement/braze.md)
    * Destinazioni di personalizzazione {#personalization}
       * [Panoramica sulle destinazioni di personalizzazione](./catalog/personalization/overview.md)
       * [Estensione Adobe Target](./catalog/personalization/adobe-target.md)
