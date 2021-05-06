@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Questo documento introduce Data Prep in Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: daefd977cd09bd9cd7f8d6101b45be98f30d24ae
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,8 @@ Per ulteriori informazioni sulle diverse funzioni di mappatura, leggere la [guid
 ## Set di mappature
 
 Un set di mappature che trasformano uno schema in un altro è noto collettivamente come set di mappature. Viene creato un singolo set di mappatura come parte di ciascun flusso di dati. Un set di mappatura è parte integrante dei flussi di dati e viene creato, modificato e monitorato come parte dei flussi di dati.
+
+Per ulteriori informazioni sui set di mappatura, tra cui come utilizzare i campi all&#39;interno di un set di mappatura, consulta la [guida ai set di mappatura](./mapping-set.md). Per informazioni su come creare un set di mappatura e utilizzare altre chiamate API relative ai set di mappatura, consulta la sezione del set di mappatura nella [guida per gli sviluppatori](./api/mapping-set.md).
 
 ## Gestione del formato dati
 
