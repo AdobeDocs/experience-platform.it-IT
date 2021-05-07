@@ -5,9 +5,9 @@ topic-legacy: overview
 description: Scopri i modelli di dati standardizzati per vari settori verticali che possono essere costruiti utilizzando componenti XDM (Experience Data Model) standard.
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '514'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Per guidare la strategia di modellazione dei dati in base al settore specifico, 
 Per leggere gli ERD a cui si fa riferimento in questa guida, è necessario avere una conoscenza approfondita del modo in cui i componenti XDM interagiscono con gli schemi dei moduli e del funzionamento degli schemi XDM nell’Experience Platform nel suo complesso. Prima di continuare, leggi la seguente documentazione di panoramica:
 
 * [Panoramica](../../home.md) del sistema XDM: Scopri come funziona XDM nell’ecosistema Platform.
-* [Nozioni di base sulla composizione](../../schema/composition.md) dello schema: Scopri in che modo i componenti XDM (come mixin, classi e tipi di dati) contribuiscono alla struttura di uno schema e al ruolo dei campi di identità.
+* [Nozioni di base sulla composizione](../../schema/composition.md) dello schema: Scopri in che modo i componenti XDM (come gruppi di campi di schema, classi e tipi di dati) contribuiscono alla struttura di uno schema e al ruolo dei campi di identità.
 
 È inoltre consigliabile consultare la [guida alle best practice per la modellazione dei dati](../../schema/best-practices.md) per le linee guida generali su come mappare i dati in XDM.
 
@@ -37,7 +37,7 @@ Per leggere gli ERD a cui si fa riferimento in questa guida, è necessario avere
 
 I modelli verticali del settore rappresentati dalle ERD di seguito sono intenzionalmente creati in modo denormalizzato e tenendo conto del modo in cui i dati vengono memorizzati in Platform.
 
-Per un dato ERD, ogni entità mostrata in si basa su una classe XDM sottostante. Per una determinata entità, ogni riga contrassegnata in **bold** rappresenta un mixin o un tipo di dati, con i campi pertinenti che fornisce elencati di seguito in un testo senza bolle. I campi più importanti per una determinata entità sono evidenziati in rosso.
+Per un dato ERD, ogni entità mostrata in si basa su una classe XDM sottostante. Per una determinata entità, ogni riga contrassegnata in **grassetto** rappresenta un gruppo di campi o un tipo di dati, con i campi pertinenti che fornisce elencati di seguito nel testo senza bolli. I campi più importanti per una determinata entità sono evidenziati in rosso.
 
 >[!NOTE]
 >
