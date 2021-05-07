@@ -6,9 +6,9 @@ topic-legacy: user guide
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Per soddisfare questa esigenza, l’area di lavoro [!UICONTROL Schemas] nell’i
 
 >[!NOTE]
 >
->È inoltre possibile utilizzare l’API del Registro di sistema dello schema per esportare altre risorse oltre agli schemi, tra cui classi, mixin e tipi di dati. Per ulteriori informazioni, consulta la guida sugli endpoint di [esportazione/importazione](../api/export-import.md) .
+>È inoltre possibile utilizzare l’API del Registro di sistema dello schema per esportare altre risorse oltre agli schemi, tra cui classi, gruppi di campi dello schema e tipi di dati. Per ulteriori informazioni, consulta la guida sugli endpoint di [esportazione/importazione](../api/export-import.md) .
 
 ## Prerequisiti
 
@@ -44,9 +44,9 @@ Questo copia un payload JSON negli Appunti, generato in base alla struttura dell
 ```json
 [
   {
-    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-    "meta:resourceType": "mixins",
+    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:resourceType": "fieldgroups",
     "version": "1.0",
     "title": "Loyalty details",
     "type": "object",
@@ -171,12 +171,12 @@ Questo copia un payload JSON negli Appunti, generato in base alla struttura dell
         "meta:xdmType": "object"
       },
       {
-        "$ref": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+        "$ref": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
         "type": "object",
         "meta:xdmType": "object"
       },
       {
-        "$ref": "https://ns.adobe.com/xdm/mixins/profile-consents",
+        "$ref": "https://ns.adobe.com/xdm/fieldgroups/profile-consents",
         "type": "object",
         "meta:xdmType": "object"
       }
@@ -189,8 +189,8 @@ Questo copia un payload JSON negli Appunti, generato in base alla struttura dell
       "https://ns.adobe.com/xdm/common/auditable",
       "https://ns.adobe.com/xdm/data/record",
       "https://ns.adobe.com/xdm/context/profile",
-      "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-      "https://ns.adobe.com/xdm/mixins/profile-consents"
+      "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+      "https://ns.adobe.com/xdm/fieldgroups/profile-consents"
     ],
     "meta:xdmType": "object",
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -203,7 +203,7 @@ Questo copia un payload JSON negli Appunti, generato in base alla struttura dell
 ]
 ```
 
-Il payload si presenta come una matrice e ogni elemento della matrice è un oggetto che rappresenta una risorsa XDM personalizzata da esportare. Nell&#39;esempio precedente, sono inclusi il mixin personalizzato &quot;[!DNL Loyalty details]&quot; e lo schema &quot;[!DNL Loyalty Members]&quot;. Tutte le risorse di base utilizzate dallo schema non sono incluse nell’esportazione, in quanto sono disponibili in tutte le sandbox e le organizzazioni IMS.
+Il payload si presenta come una matrice e ogni elemento della matrice è un oggetto che rappresenta una risorsa XDM personalizzata da esportare. Nell&#39;esempio precedente, sono inclusi il gruppo di campi personalizzati &quot;[!DNL Loyalty details]&quot; e lo schema &quot;[!DNL Loyalty Members]&quot;. Tutte le risorse di base utilizzate dallo schema non sono incluse nell’esportazione, in quanto sono disponibili in tutte le sandbox e le organizzazioni IMS.
 
 Tieni presente che ogni istanza dell’ID tenant dell’organizzazione viene visualizzata come `<XDM_TENANTID_PLACEHOLDER>` nel payload. Questi segnaposto verranno sostituiti automaticamente con il valore ID tenant appropriato a seconda della posizione in cui si importa lo schema nel passaggio successivo.
 
