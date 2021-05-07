@@ -6,9 +6,9 @@ topic-legacy: getting started
 description: Un glossario di terminologia importante in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '7131'
+source-wordcount: '7147'
 ht-degree: 1%
 
 ---
@@ -239,6 +239,8 @@ ht-degree: 1%
 
 **Campo**: Un campo è l’elemento di livello più basso di un set di dati, come definito dallo schema XDM del set di dati. Ogni campo ha un nome a scopo di riferimento e un tipo per indicare il tipo di dati che contiene. I tipi di campo possono includere (ma non sono limitati a) numeri interi, numeri, stringhe, booleani e oggetti.
 
+**Gruppo** di campi: Vedere &quot;Gruppo di campi schema&quot;.
+
 **Etichette** campo: Le etichette dei campi sono etichette di governance dei dati ereditate da un set di dati o applicate direttamente a un campo.
 
 **Nome** campo: Un nome di campo viene utilizzato per fare riferimento al valore di un campo nelle query e nei servizi a valle.
@@ -323,7 +325,7 @@ ht-degree: 1%
 
 **Criteri** di unione: I criteri di unione sono regole utilizzate da Experience Platform per determinare in che modo i frammenti di dati del cliente provenienti da più origini verranno combinati per creare un singolo profilo. Quando si verifica un conflitto di dati, il criterio di unione determina quali dati devono avere la priorità per l’inclusione nel profilo.
 
-**Mixin**: In Experience Data Model (XDM), un mixin consente agli utenti di estendere i campi riutilizzabili per definire uno o più attributi destinati a essere inclusi in uno schema.
+**Mixin**: Vedere &quot;Gruppo di campi schema&quot;.
 
 **Modulo**: In  [!DNL Platform Launch], un modulo è un frammento di JavaScript eseguibile fornito da un&#39;estensione, che esegue azioni in un ambiente client senza dover creare una regola.
 
@@ -437,7 +439,9 @@ ht-degree: 1%
 
 **Punteggio**: Il punteggio è il processo di generazione di informazioni dai dati utilizzando un modello qualificato.
 
-**Schema**: Uno schema è un insieme di regole che rappresentano e convalidano la struttura e il formato dei dati. Uno schema è composto da una classe e da mixin facoltativi e viene utilizzato per creare set di dati e datastreams. Uno schema può includere attributi comportamentali, marche temporali, identità, definizioni di attributi, relazioni e altro ancora.
+**Schema**: Uno schema è un insieme di regole che rappresentano e convalidano la struttura e il formato dei dati. Uno schema è composto da una classe e da gruppi di campi facoltativi e viene utilizzato per creare set di dati e datastreams. Uno schema può includere attributi comportamentali, marche temporali, identità, definizioni di attributi, relazioni e altro ancora.
+
+**Gruppo** di campi schema: In Experience Data Model (XDM), un gruppo di campi schema consente agli utenti di estendere i campi riutilizzabili per definire uno o più attributi destinati a essere inclusi in uno schema.
 
 **Libreria** schema: La Libreria schema contiene risorse XDM standard di settore, rese disponibili da Adobe, nonché risorse personalizzate definite dalla tua organizzazione.
 
