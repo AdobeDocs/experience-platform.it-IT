@@ -6,9 +6,9 @@ description: Questo documento fornisce un'introduzione ai concetti di base che �
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1363'
+source-wordcount: '1367'
 ht-degree: 0%
 
 ---
@@ -85,16 +85,16 @@ Una risposta corretta restituisce informazioni sull&#39;utilizzo di [!DNL Schema
   "tenantId":"{TENANT_ID}",
   "counts": {
     "schemas": 4,
-    "mixins": 3,
+    "fieldgroups": 3,
     "datatypes": 1,
     "classes": 2,
     "unions": 0,
   },
   "recentlyCreatedResources": [ 
     {
-      "title": "Sample Mixin",
-      "description": "New Sample Mixin.",
-      "meta:resourceType": "mixins",
+      "title": "Sample Field Group",
+      "description": "New Sample Field Group.",
+      "meta:resourceType": "fieldgroups",
       "meta:created": "Sat Feb 02 2019 00:24:30 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -109,9 +109,9 @@ Una risposta corretta restituisce informazioni sull&#39;utilizzo di [!DNL Schema
   ],
   "recentlyUpdatedResources": [
     {
-      "title": "Sample Mixin",
-      "description": "New Sample Mixin.",
-      "meta:resourceType": "mixins",
+      "title": "Sample Field Group",
+      "description": "New Sample Field Group.",
+      "meta:resourceType": "fieldgroups",
       "meta:updated": "Sat Feb 02 2019 00:34:06 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -160,7 +160,7 @@ Le chiamate all&#39;API [!DNL Schema Registry] richiedono l&#39;utilizzo di un `
 
 ### Contenitore globale
 
-Il contenitore `global` contiene tutti gli Adobi standard e il partner [!DNL Experience Platform] ha fornito classi, mixin, tipi di dati e schemi. È possibile eseguire richieste di elenco e ricerca (GET) solo per il contenitore `global` .
+Il contenitore `global` contiene tutti gli Adobi standard e il partner [!DNL Experience Platform] ha fornito classi, gruppi di campi di schema, tipi di dati e schemi. È possibile eseguire richieste di elenco e ricerca (GET) solo per il contenitore `global` .
 
 Un esempio di chiamata che utilizza il contenitore `global` ha il seguente aspetto:
 
@@ -170,15 +170,15 @@ GET /global/classes
 
 ### Contenitore tenant
 
-Da non confondere con il tuo `TENANT_ID` univoco, il contenitore `tenant` contiene tutte le classi, i mixin, i tipi di dati, gli schemi e i descrittori definiti da un&#39;organizzazione IMS. Sono esclusive per ogni organizzazione, il che significa che non sono visibili o gestibili da altre organizzazioni IMS. Puoi eseguire tutte le operazioni CRUD (GET, POST, PUT, PATCH, DELETE) rispetto alle risorse create nel contenitore `tenant` .
+Da non confondere con il `TENANT_ID` univoco, il contenitore `tenant` contiene tutte le classi, i gruppi di campi, i tipi di dati, gli schemi e i descrittori definiti da un&#39;organizzazione IMS. Sono esclusive per ogni organizzazione, il che significa che non sono visibili o gestibili da altre organizzazioni IMS. Puoi eseguire tutte le operazioni CRUD (GET, POST, PUT, PATCH, DELETE) rispetto alle risorse create nel contenitore `tenant` .
 
 Un esempio di chiamata che utilizza il contenitore `tenant` ha il seguente aspetto:
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
-Quando crei una classe, un mixin, uno schema o un tipo di dati nel contenitore `tenant`, questo viene salvato nel [!DNL Schema Registry] e gli viene assegnato un URI `$id` che include il `TENANT_ID`. Questo `$id` viene utilizzato in tutta l’API per fare riferimento a risorse specifiche. Esempi di valori `$id` sono forniti nella sezione successiva.
+Quando crei una classe, un gruppo di campi, uno schema o un tipo di dati nel contenitore `tenant`, questo viene salvato nel [!DNL Schema Registry] e gli viene assegnato un URI `$id` che include il `TENANT_ID`. Questo `$id` viene utilizzato in tutta l’API per fare riferimento a risorse specifiche. Esempi di valori `$id` sono forniti nella sezione successiva.
 
 ## Identificazione della risorsa {#resource-identification}
 
