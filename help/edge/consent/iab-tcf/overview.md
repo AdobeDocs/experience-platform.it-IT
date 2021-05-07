@@ -1,58 +1,58 @@
 ---
-title: Supporto per IAB TCF 2.0 nell’SDK Web per Adobe Experience Platform
-description: Scoprite come supportare le preferenze di consenso di IAB TCF 2.0 tramite Adobe Experience Platform Web SDK
-keywords: consenso;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Profile
+title: Supporto IAB TCF 2.0 nell’SDK Web per Adobe Experience Platform
+description: Scopri come supportare le preferenze di consenso IAB TCF 2.0 utilizzando l’SDK web di Adobe Experience Platform
+keywords: consenso;setConsent;gruppo di campi per la privacy dei profili;gruppo di campi per la privacy degli eventi di esperienza;gruppo di campi per la privacy;IAB TCF 2.0;Real-time CDP;Profilo dati cliente in tempo reale
+exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
 translation-type: tm+mt
-source-git-commit: 1c6238a0cf72230e019fd10d9a72f30444bd9fb9
+source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '883'
 ht-degree: 0%
 
 ---
 
+# Supporto di IAB TCF 2.0 nell’SDK Web per Adobe Experience Platform
 
-# Supporto per IAB TCF 2.0 nell’SDK Web per Adobe Experience Platform
+Adobe Experience Platform Web SDK supporta la versione 2.0 di Interactive Advertising Bureau Transparency &amp; Consent Framework (IAB TCF 2.0). Questa guida mostra i requisiti per supportare IAB TCF 2.0 tramite Adobe Experience Platform Web SDK integrato con Real-time Customer Data Platform, Audience Manager, Experience Events, Adobe Analytics ed Experience Edge.
 
-Adobe Experience Platform Web SDK supporta Interactive Advertising Bureau Transparency &amp; Consent Framework, versione 2.0 (IAB TCF 2.0). Questa guida illustra i requisiti per il supporto di IAB TCF 2.0 tramite Adobe Experience Platform Web SDK integrato con Real-time Customer Data Platform,  Audience Manager, Eventi esperienza,  Adobe Analytics ed Experience Edge.
+Sono inoltre disponibili le seguenti guide per aiutarti a integrare IAB TCF 2.0 con e senza Adobe Experience Platform Launch.
 
-Sono inoltre disponibili le seguenti guide per facilitare l&#39;apprendimento di come integrare IAB TCF 2.0 con e senza  Adobe Experience Platform Launch.
-
-- [Con  Adobe Experience Platform Launch](./with-launch.md)
-- [Senza  Adobe Experience Platform Launch](./without-launch.md)
+- [Con Adobe Experience Platform Launch](./with-launch.md)
+- [Senza Adobe Experience Platform Launch](./without-launch.md)
 
 ## Introduzione
 
-Per implementare l’SDK Web con IAB TCF 2.0, è necessario avere una conoscenza approfondita del modello dati esperienza (XDM) e degli eventi esperienza. Prima di iniziare, consulta il seguente documento:
+Per implementare l’SDK web con IAB TCF 2.0, è necessario avere una comprensione funzionante di Experience Data Model (XDM) e degli eventi Experience. Prima di iniziare, controlla il seguente documento:
 
-- [Panoramica](../../../xdm/home.md) del sistema XDM (Experience Data Model): Standardizzazione e interoperabilità sono concetti chiave di Adobe Experience Platform. [!DNL Experience Data Model (XDM)], guidato da  Adobe, è uno sforzo per standardizzare i dati sull&#39;esperienza cliente e definire schemi per la gestione dell&#39;esperienza cliente.
+- [Panoramica](../../../xdm/home.md) del sistema Experience Data Model (XDM): La standardizzazione e l&#39;interoperabilità sono concetti chiave alla base di Adobe Experience Platform. [!DNL Experience Data Model (XDM)], guidato da un Adobe, è uno sforzo per standardizzare i dati sulla customer experience e definire schemi per la gestione della customer experience.
 
-## Integrazione  Experience Platform
+## Integrazione Experience Platform
 
-Per inviare i dati di consenso ad Adobe Experience Platform tramite l’SDK, è necessario quanto segue:
+Per inviare i dati di consenso a Adobe Experience Platform utilizzando l’SDK, è necessario quanto segue:
 
-- Un dataset il cui schema è basato sulla classe [!DNL XDM Individual Profile] e contiene i campi di consenso TCF 2.0, abilitati per l&#39;uso in [!DNL Real-time Customer Profile].
-- Configurazione edge configurata con Piattaforma e il dataset basato su profilo sopra menzionato.
+- Un set di dati il cui schema è basato sulla classe [!DNL XDM Individual Profile] e contiene i campi di consenso TCF 2.0, abilitato per l’utilizzo in [!DNL Real-time Customer Profile].
+- Configurazione edge configurata con Platform e il set di dati abilitati per il profilo di cui sopra.
 
-Per istruzioni sulla creazione dei set di dati e sulla configurazione dei bordi, consultare la guida sulla [conformità TCF 2.0](../../../landing/governance-privacy-security/consent/iab/overview.md).
+Per istruzioni su come creare i set di dati e la configurazione edge richiesti, consulta la guida sulla [conformità TCF 2.0](../../../landing/governance-privacy-security/consent/iab/overview.md) .
 
-## Integrazione  Audience Manager
+## Integrazione Audience Manager
 
-Adobe Audience Manager (AAM) include il supporto per IAB TCF 2.0, che consente di valutare, onorare e inoltrare le scelte sulla privacy dei clienti ai partner a valle. <!--For more information, read the documentation on [Sending Data to Audience Manager](../audience-manager/audience-manager-overview.md).-->
+Adobe Audience Manager (AAM) include il supporto per IAB TCF 2.0, che ti consente di valutare, onorare e inoltrare le scelte relative alla privacy dei clienti ai partner a valle. <!--For more information, read the documentation on [Sending Data to Audience Manager](../audience-manager/audience-manager-overview.md).-->
 
 >[!TIP]
 >
->Per effettuare l’integrazione con  Audience Manager tramite Adobe Experience Platform Web SDK, accertatevi di disporre di una configurazione Edge impostata per l’inoltro ad Adobe Audience Manager.
+>Per eseguire l’integrazione con Audience Manager tramite Adobe Experience Platform Web SDK, assicurati di disporre di una configurazione Edge impostata per l’inoltro a Adobe Audience Manager.
 
-## Eventi esperienza e integrazione  Adobe Analytics
+## Integrazione di Experience Events e Adobe Analytics
 
-Mentre il CDP in tempo reale e  Audienci Manager  pubblico tengono traccia delle preferenze di consenso correnti di un cliente, gli Eventi esperienza possono contenere le preferenze di consenso del cliente attive al momento della raccolta dell&#39;evento.
+Mentre il pubblico di Real-time CDP e Audience Manager tiene traccia delle preferenze di consenso correnti di un cliente, gli eventi di esperienza possono contenere le preferenze di consenso di un cliente che erano attive al momento della raccolta dell&#39;evento.
 
-Per raccogliere le informazioni di consenso sugli eventi, è necessario quanto segue:
+Per raccogliere le informazioni sul consenso sugli eventi, è necessario quanto segue:
 
-- Un dataset basato sulla classe [!DNL XDM Experience Event], con il mixin [!DNL Experience Event] della privacy.
-- Configurazione edge configurata con il set di dati [!DNL XDM Experience Event] sopra.
+- Un set di dati basato sulla classe [!DNL XDM Experience Event], con il gruppo di campi dello schema di privacy [!DNL Experience Event].
+- Configurazione Edge impostata con il set di dati [!DNL XDM Experience Event] riportato sopra.
 
-Per ulteriori informazioni su come convertire un evento esperienza XDM in un hit Analytics, leggete la documentazione [Analytics overview](../../data-collection/adobe-analytics/analytics-overview.md).
+Per ulteriori informazioni su come convertire un evento esperienza XDM in un hit di Analytics, inizia leggendo la documentazione [Panoramica di Analytics](../../data-collection/adobe-analytics/analytics-overview.md) .
 
 ## Integrazione Adobe Experience Platform Web SDK
 
@@ -60,35 +60,35 @@ Le sezioni seguenti descrivono i punti di integrazione principali tra IAB TCF 2.
 
 >[!NOTE]
 >
->Anche senza l&#39;impostazione del CDP in tempo reale o del Audience Manager , è comunque possibile integrare IAB TCF 2.0 con l&#39;SDK Web. Le preferenze di consenso possono essere utilizzate per controllare la raccolta di Experience Events e per impostare un cookie di identità.
+>Anche senza la configurazione di Real-time CDP o Audience Manager, puoi comunque integrare IAB TCF 2.0 con l’SDK web. Le preferenze di consenso possono essere utilizzate per controllare la raccolta di Experience Events e per impostare un cookie di identità.
 
 ### Consenso predefinito
 
-Il consenso predefinito viene utilizzato quando non esiste già una preferenza di consenso salvata per un cliente. Ciò significa che le opzioni di consenso predefinite possono controllare il comportamento di Adobe Experience Platform Web SDK e apportare modifiche in base all&#39;area geografica del cliente.
+Il consenso predefinito viene utilizzato quando per un cliente non è già stata salvata alcuna preferenza di consenso. Ciò significa che le opzioni di consenso predefinite possono controllare il comportamento di Adobe Experience Platform Web SDK e cambiare in base all&#39;area geografica del cliente.
 
-Ad esempio, se hai un cliente che non rientra nella giurisdizione del Regolamento generale sulla protezione dei dati (General Data Protection Regulation, GDPR), il consenso predefinito potrebbe essere impostato su `in`, ma all&#39;interno della giurisdizione del GDPR, il consenso predefinito potrebbe essere impostato su `pending`. La vostra piattaforma di gestione del consenso (CMP) potrebbe rilevare la regione del cliente e fornire il flag `gdprApplies` a IAB TCF 2.0. Questo flag può essere utilizzato per impostare il consenso predefinito.
+Ad esempio, se un cliente non rientra nella giurisdizione del Regolamento generale sulla protezione dei dati (RGPD), il consenso predefinito può essere impostato su `in`, ma all’interno della giurisdizione del RGPD, il consenso predefinito può essere impostato su `pending`. La piattaforma di gestione del consenso (CMP) potrebbe rilevare l’area geografica del cliente e fornire il flag `gdprApplies` a IAB TCF 2.0. Questo flag può essere utilizzato per impostare il consenso predefinito.
 
 Per ulteriori informazioni sul consenso predefinito, consulta la sezione [consenso predefinito](../../fundamentals/configuring-the-sdk.md#default-consent) nella documentazione di configurazione dell&#39;SDK.
 
 ### Impostazione del consenso quando cambia
 
-Adobe Experience Platform Web SDK dispone di un comando `setConsent` che comunica le preferenze di consenso del cliente a tutti i servizi del Adobe  utilizzando IAB TCF 2.0. Se vi state integrando con CDP in tempo reale, questo aggiorna il profilo del cliente. Se vi state integrando con  Audience Manager, questo aggiorna le informazioni del cliente. La chiamata imposta anche un cookie con una preferenza di consenso totale o nulla che controlla se gli eventi esperienza futuri possono essere inviati o meno. Si intende che questa azione venga chiamata ogni volta che il consenso cambia. Al caricamento delle pagine future, il cookie di consenso di Experience Edge verrà letto per determinare se gli Eventi esperienza possono essere inviati e se è possibile impostare un cookie di identità.
+Adobe Experience Platform Web SDK dispone di un comando `setConsent` che comunica le preferenze di consenso del cliente a tutti i servizi di Adobe utilizzando IAB TCF 2.0. Se si esegue l&#39;integrazione con Real-time CDP, questo aggiorna il profilo del cliente. Se esegui l’integrazione con Audience Manager, le informazioni del cliente vengono aggiornate. Una chiamata di questo imposta anche un cookie con una preferenza di consenso all-or-nothing che controlla se gli eventi Experience futuri possono essere inviati. Questa azione viene chiamata ogni volta che cambia il consenso. Nei caricamenti di pagine future, il cookie di consenso di Experience Edge verrà letto per determinare se gli eventi di esperienza possono essere inviati e se è possibile impostare un cookie di identità.
 
-Come per  Audience Manager  integrazione IAB TCF 2.0, Experience Edge fornisce il consenso quando un cliente ha fornito il proprio consenso esplicito ai seguenti scopi:
+Analogamente all’integrazione IAB TCF 2.0 di Audience Manager, Experience Edge fornisce il consenso quando un cliente ha fornito il proprio consenso esplicito alle seguenti finalità:
 
-- **Finalità 1:** Archiviare e/o accedere alle informazioni su un dispositivo
-- **Finalità 10:** Sviluppare e migliorare i prodotti
-- **Scopo speciale 1:** Protezione, prevenzione di frodi e debug. (Per i regolamenti IAB TCF, questo è sempre consentito)
-- **Autorizzazione fornitore  Adobe:** Consenso per  Adobe (fornitore 565)
+- **Finalità 1:** archiviare e/o accedere alle informazioni su un dispositivo
+- **Finalità 10:** sviluppare e migliorare i prodotti
+- **Scopo speciale 1:** garantire la sicurezza, prevenire frodi ed eseguire il debug. (Per le normative IAB TCF, questo è sempre consentito)
+- **Autorizzazione fornitore Adobe:** consenso per Adobe (fornitore 565)
 
-Per ulteriori informazioni sul comando `setConsent`, leggere la documentazione in [Supporting Consent](../../consent/supporting-consent.md).
+Per ulteriori informazioni sul comando `setConsent`, consulta la documentazione su [Supporto del consenso](../../consent/supporting-consent.md).
 
-### Aggiunta di contenuto agli eventi esperienza
+### Aggiunta di consenso agli eventi Experience
 
-Adobe Experience Platform Web SDK dispone di un comando `sendEvent` che raccoglie un evento esperienza. Se effettui l’integrazione con Experience Events o  Adobe Analytics e desideri ottenere le preferenze di consenso per ogni Experience Event, devi aggiungere le informazioni di consenso a ogni `sendEvent` comando.
+Adobe Experience Platform Web SDK dispone di un comando `sendEvent` che raccoglie un evento esperienza. Se effettui l’integrazione con Experience Events o Adobe Analytics e desideri le preferenze di consenso per ogni Experience Event, devi aggiungere le informazioni di consenso a ogni comando `sendEvent`.
 
-Per ulteriori informazioni sul comando `sendEvent`, consultare la documentazione relativa agli eventi di tracciamento [](../../fundamentals/tracking-events.md).
+Per ulteriori informazioni sul comando `sendEvent`, consulta la documentazione relativa agli [eventi di tracciamento](../../fundamentals/tracking-events.md).
 
 ## Passaggi successivi
 
-Ora che si dispone di una conoscenza di base di IAB Transparency &amp; Consent Framework 2.0, fare riferimento a una delle guide sull&#39;utilizzo di IAB TCF 2.0 [con  Adobe Experience Platform Launch](./with-launch.md) o [senza  Adobe Experience Platform Launch](./without-launch.md).
+Ora che conosci le nozioni di base di IAB Transparency &amp; Consent Framework 2.0, fai riferimento a una delle guide sull&#39;utilizzo di IAB TCF 2.0 [con Adobe Experience Platform Launch](./with-launch.md) o [senza Adobe Experience Platform Launch](./without-launch.md).
