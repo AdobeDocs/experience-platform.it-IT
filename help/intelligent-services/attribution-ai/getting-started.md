@@ -6,7 +6,7 @@ topic-legacy: Getting started
 description: Le guide seguenti richiedono una comprensione dei vari servizi Adobe Experience Platform coinvolti nell’utilizzo di Attribution AI. Prima di iniziare le esercitazioni, controlla i seguenti documenti.
 exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Le guide seguenti richiedono una comprensione dei vari servizi [!DNL Adobe Exper
 - [Nozioni di base sulla composizione](../../xdm/schema/composition.md) dello schema: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in  [!DNL Adobe Experience Platform].
 - [Creazione di schemi](../../xdm/tutorials/create-schema-ui.md): Questa esercitazione descrive i passaggi per la creazione di uno schema utilizzando l’Editor di schema in Experience Platform.
 
-Attribution AI richiede che i set di dati siano conformi allo schema CEE (Consumer Experience Events), un mixin in [Experience Data Model](../../xdm/home.md) (XDM). Per implementare o apportare modifiche a questi dati, contatta il supporto Adobe all’indirizzo attributionai-support@adobe.com. Se sono presenti dati sulla spesa dei supporti, puoi eseguire ulteriori analisi, ad esempio ricavi incrementali e ROI. Se i dati del profilo cliente sono disponibili, puoi attribuire ulteriormente i crediti a livello di profilo cliente.
+Attribution AI richiede che i set di dati siano conformi allo schema CEE (Consumer Experience Events), che è un gruppo di campi di schema [Experience Data Model (XDM)](../../xdm/home.md). Per implementare o apportare modifiche a questi dati, contatta il supporto Adobe all’indirizzo attributionai-support@adobe.com. Se sono presenti dati sulla spesa dei supporti, puoi eseguire ulteriori analisi, ad esempio ricavi incrementali e ROI. Se i dati del profilo cliente sono disponibili, puoi attribuire ulteriormente i crediti a livello di profilo cliente.
 
 ## Terminologia
 
