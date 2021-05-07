@@ -6,9 +6,9 @@ topic-legacy: Getting started
 description: Ulteriori informazioni sugli eventi, gli input e gli output richiesti utilizzati da Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2865'
+source-wordcount: '2878'
 ht-degree: 0%
 
 ---
@@ -36,10 +36,10 @@ La tabella seguente illustra alcuni termini comuni utilizzati in questo document
 | Termine | Definizione |
 | --- | --- |
 | [Experience Data Model (XDM)](../../xdm/home.md) | XDM è il framework fondamentale che consente a Adobe Experience Cloud, basato su Adobe Experience Platform, di inviare il messaggio giusto alla persona giusta, sul canale giusto, al momento giusto. La metodologia su cui viene generato l’Experience Platform, sistema XDM, rende operativi gli schemi Experience Data Model per l’utilizzo da parte dei servizi Platform. |
-| Schema XDM | Experience Platform utilizza gli schemi per descrivere la struttura dei dati in modo coerente e riutilizzabile. Definendo i dati in modo coerente tra i diversi sistemi, diventa più facile mantenere il significato e quindi ottenere valore dai dati. Prima di poter acquisire i dati in Platform, è necessario comporre uno schema per descrivere la struttura dei dati e fornire vincoli al tipo di dati che possono essere contenuti all’interno di ciascun campo. Gli schemi sono costituiti da una classe XDM di base e da zero o più mixin. |
+| Schema XDM | Experience Platform utilizza gli schemi per descrivere la struttura dei dati in modo coerente e riutilizzabile. Definendo i dati in modo coerente tra i diversi sistemi, diventa più facile mantenere il significato e quindi ottenere valore dai dati. Prima di poter acquisire i dati in Platform, è necessario comporre uno schema per descrivere la struttura dei dati e fornire vincoli al tipo di dati che possono essere contenuti all’interno di ciascun campo. Gli schemi sono costituiti da una classe XDM di base e da zero o più gruppi di campi dello schema. |
 | Classe XDM | Tutti gli schemi XDM descrivono i dati che possono essere classificati come record o serie temporali. Il comportamento dei dati di uno schema è definito dalla classe dello schema, che viene assegnata a uno schema al momento della sua creazione. Le classi XDM descrivono il numero minimo di proprietà che uno schema deve contenere per rappresentare un particolare comportamento di dati. |
-| [Mixins](../../xdm/schema/composition.md) | Componente che definisce uno o più campi in uno schema. I mixin applicano la modalità di visualizzazione dei campi nella gerarchia dello schema e quindi presentano la stessa struttura in ogni schema in cui sono inclusi. I mixin sono compatibili solo con classi specifiche, come identificato dal loro attributo `meta:intendedToExtend` . |
-| [Tipo di dati](../../xdm/schema/composition.md) | Componente che può anche fornire uno o più campi per uno schema. Tuttavia, a differenza dei mixin, i tipi di dati non sono vincolati a una particolare classe. Questo rende i tipi di dati un’opzione più flessibile per descrivere le strutture di dati comuni riutilizzabili tra più schemi con classi potenzialmente diverse. I tipi di dati descritti in questo documento sono supportati dagli schemi CEE e Adobe Analytics. |
+| [Gruppi di campi](../../xdm/schema/composition.md) | Componente che definisce uno o più campi in uno schema. I gruppi di campi impongono la modalità di visualizzazione dei campi nella gerarchia dello schema e quindi presentano la stessa struttura in ogni schema in cui sono inclusi. I gruppi di campi sono compatibili solo con classi specifiche, identificate dall’attributo `meta:intendedToExtend` corrispondente. |
+| [Tipo di dati](../../xdm/schema/composition.md) | Componente che può anche fornire uno o più campi per uno schema. Tuttavia, a differenza dei gruppi di campi, i tipi di dati non sono vincolati a una particolare classe. Questo rende i tipi di dati un’opzione più flessibile per descrivere le strutture di dati comuni riutilizzabili tra più schemi con classi potenzialmente diverse. I tipi di dati descritti in questo documento sono supportati dagli schemi CEE e Adobe Analytics. |
 | Abbandono | Misurazione della percentuale di account che annullano o scelgono di non rinnovare gli abbonamenti. Un elevato tasso di abbandono può avere un impatto negativo sui ricavi mensili ricorrenti (MRR) e può anche indicare insoddisfazione per un prodotto o servizio. |
 | [Profilo cliente in tempo reale](../../profile/home.md) | Profilo cliente in tempo reale fornisce un profilo consumatore centralizzato per una gestione delle esperienze mirata e personalizzata. Ogni profilo contiene dati aggregati in tutti i sistemi, nonché account con marca temporale utilizzabili per eventi che coinvolgono il singolo utente che si sono verificati in uno dei sistemi utilizzati con Experience Platform. |
 
@@ -49,7 +49,7 @@ La tabella seguente illustra alcuni termini comuni utilizzati in questo document
 >
 > Customer AI determina automaticamente quali eventi sono utili per le previsioni e genera un avviso se i dati disponibili non sono sufficienti a generare previsioni di qualità.
 
-Customer AI supporta i set di dati CEE, Adobe Analytics e Adobe Audience Manager. Lo schema CEE richiede l’aggiunta di mixin durante il processo di creazione dello schema. Se utilizzi set di dati Adobe Analytics o Adobe Audience Manager, il connettore di origine mappa direttamente gli eventi standard (Commerce, Dettagli pagina Web, Applicazione e Ricerca) elencati di seguito durante il processo di connessione.
+Customer AI supporta i set di dati CEE, Adobe Analytics e Adobe Audience Manager. Lo schema CEE richiede l’aggiunta di gruppi di campi durante il processo di creazione dello schema. Se utilizzi set di dati Adobe Analytics o Adobe Audience Manager, il connettore di origine mappa direttamente gli eventi standard (Commerce, Dettagli pagina Web, Applicazione e Ricerca) elencati di seguito durante il processo di connessione.
 
 Per ulteriori informazioni sulla mappatura dei dati di Adobe Analytics o dei dati di Audience Manager, visita la guida [Mappature dei campi di Analytics](../../sources/connectors/adobe-applications/analytics.md) o [Mappature dei campi di Audience Manager](../../sources/connectors/adobe-applications/mapping/audience-manager.md) .
 
@@ -57,18 +57,17 @@ Per ulteriori informazioni sulla mappatura dei dati di Adobe Analytics o dei dat
 
 Gli eventi esperienza XDM vengono utilizzati per determinare vari comportamenti dei clienti. A seconda della struttura dei dati, i tipi di evento elencati di seguito potrebbero non includere tutti i comportamenti del cliente. Spetta a te determinare quali campi contengono i dati necessari per identificare in modo chiaro e inequivocabile l’attività degli utenti web. A seconda dell’obiettivo di previsione, i campi obbligatori necessari possono cambiare.
 
-Customer AI si basa su diversi tipi di eventi per la creazione di feature modello. Questi tipi di evento vengono aggiunti automaticamente allo schema utilizzando più mixin XDM.
+Customer AI si basa su diversi tipi di eventi per la creazione di feature modello. Questi tipi di evento vengono aggiunti automaticamente allo schema utilizzando più gruppi di campi XDM.
 
 >[!NOTE]
 >
->Se utilizzi dati Adobe Analytics o Adobe Audience Manager, lo schema viene creato automaticamente con gli eventi standard richiesti necessari per acquisire i dati. Se si sta creando uno schema CEE personalizzato per l&#39;acquisizione dei dati, è necessario considerare quali mixin sono necessari per acquisire i dati.
+>Se utilizzi dati Adobe Analytics o Adobe Audience Manager, lo schema viene creato automaticamente con gli eventi standard richiesti necessari per acquisire i dati. Se si sta creando uno schema CEE personalizzato per l’acquisizione dei dati, è necessario considerare quali gruppi di campi sono necessari per acquisire i dati.
 
 Non è necessario disporre di dati per ciascuno degli eventi standard elencati di seguito, ma per alcuni scenari sono necessari alcuni eventi. Se sono disponibili dati di eventi standard, è consigliabile includerli nello schema. Ad esempio, se desideri creare un’applicazione Customer AI per prevedere gli eventi di acquisto, è utile disporre di dati dei tipi di dati `Commerce` e `Web page details`.
 
-Per visualizzare un mixin nell’interfaccia utente di Platform, seleziona la scheda **[!UICONTROL Schemas]** nella barra a sinistra, quindi seleziona la scheda **[!UICONTROL Mixins]** .
+Per visualizzare un gruppo di campi nell’interfaccia utente di Platform, seleziona la scheda **[!UICONTROL Schemas]** nella barra a sinistra, quindi seleziona la scheda **[!UICONTROL Field groups]** .
 
-
-| Mixina | Tipo evento | Percorso campo XDM |
+| Gruppo di campi | Tipo evento | Percorso campo XDM |
 | --- | --- | --- |
 | [!UICONTROL Commerce Details] | ordine | <li> commerce.order.purchaseID </li> <li> productListItems.SKU </li> |
 |  | productListViews | <li> commerce.productListViews.value </li> <li> productListItems.SKU </li> |
@@ -118,7 +117,7 @@ Oltre ai dati minimi richiesti, Customer AI funziona al meglio anche con i dati 
 
 ### Scenari di esempio
 
-In questa sezione sono descritti diversi scenari per le istanze di Customer AI e i tipi di evento richiesti e consigliati. Per ulteriori informazioni sul mixin e sul relativo percorso del campo, consulta la [tabella eventi standard](#standard-events) precedente .
+In questa sezione sono descritti diversi scenari per le istanze di Customer AI e i tipi di evento richiesti e consigliati. Per ulteriori informazioni sul gruppo di campi e sul relativo percorso del campo, consulta la [tabella eventi standard](#standard-events) precedente .
 
 >[!NOTE]
 >
@@ -249,7 +248,7 @@ Uno qualsiasi dei tipi di evento [rimanenti](#standard-events) può essere richi
 
 **Tipi di eventi standard richiesti:**
 
-Per utilizzare le caratteristiche di Adobe Audience Manager, è necessario creare una connessione sorgente utilizzando il [connettore sorgente Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). Il connettore di origine crea automaticamente lo schema con i mixin appropriati. Non è necessario aggiungere manualmente altri tipi di eventi affinché lo schema funzioni con Customer AI.
+Per utilizzare le caratteristiche di Adobe Audience Manager, è necessario creare una connessione sorgente utilizzando il [connettore sorgente Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). Il connettore di origine crea automaticamente lo schema con i gruppi di campi appropriati. Non è necessario aggiungere manualmente altri tipi di eventi affinché lo schema funzioni con Customer AI.
 
 Quando configuri una nuova istanza AI del cliente, puoi utilizzare `audienceName` e `audienceID` per selezionare una caratteristica particolare per il punteggio durante la definizione dell’obiettivo.
 
