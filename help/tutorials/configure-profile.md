@@ -7,9 +7,9 @@ type: Tutorial
 description: Questo documento illustra i passaggi necessari e fornisce collegamenti alle esercitazioni per il completamento di ogni singolo flusso di lavoro.
 exl-id: cda6e7a7-9498-454c-94df-c6271a5a4fd4
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '795'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Prima di poter acquisire i dati in Adobe Experience Platform e utilizzarli nella
 **Questa guida ti aiuterà a:**
 - Sfoglia gli schemi esistenti.
 - Creare e denominare uno schema.
-- Aggiungi e definisci i mixin XDM.
+- Aggiungi e definisci i gruppi di campi dello schema XDM.
 - Imposta i campi dello schema come campi di identità.
 - Abilita profilo per il tuo schema.
 
