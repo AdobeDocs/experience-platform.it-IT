@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Adobe Experience Platform consente ai clienti di inviare richieste di rinuncia relative all’utilizzo e all’archiviazione dei propri dati all’interno di Profilo cliente in tempo reale]. Queste richieste di rinuncia fanno parte del California Consumer Privacy Act (CCPA), che conferisce ai residenti della California il diritto di accedere e cancellare i loro dati personali e di sapere se i loro dati personali vengono venduti o divulgati (e a chi).
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1030'
 ht-degree: 0%
 
 ---
@@ -28,33 +28,33 @@ Il rispetto delle richieste di rinuncia richiede una comprensione dei vari servi
 - [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Il framework standardizzato tramite il quale Platform organizza i dati sulla customer experience.
 - [[!DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md): Consente alle organizzazioni di automatizzare la conformità alle normative sulla privacy dei dati che coinvolgono i dati dei clienti all&#39;interno di  [!DNL Platform].
 
-## Mixins di rinuncia
+## Gruppi di campi dello schema di rinuncia
 
-Per soddisfare le richieste di rinuncia CCPA, uno degli schemi che fa parte dello schema di unione deve contenere i campi di rinuncia [!DNL Experience Data Model] (XDM) necessari. Esistono due mixin che possono essere utilizzati per aggiungere campi di rinuncia a uno schema, ciascuno dei quali è trattato in modo più dettagliato nelle sezioni seguenti:
+Per soddisfare le richieste di rinuncia CCPA, uno degli schemi che fa parte dello schema di unione deve contenere i campi di rinuncia [!DNL Experience Data Model] (XDM) necessari. Esistono due gruppi di campi di schema che possono essere utilizzati per aggiungere campi di rinuncia a uno schema, ciascuno dei quali è trattato in modo più dettagliato nelle sezioni seguenti:
 
 - [Privacy](#profile-privacy) profilo: Utilizzato per acquisire diversi tipi di rinuncia (generale o vendite/condivisione).
 - [Dettagli](#profile-preferences-details) preferenze profilo: Utilizzato per acquisire richieste di rinuncia per canali XDM specifici.
 
-Per istruzioni dettagliate su come aggiungere un mixin a uno schema, consulta la sezione &quot;Aggiungi un mixin&quot; nella seguente documentazione XDM:
+Per istruzioni dettagliate su come aggiungere un gruppo di campi a uno schema, consulta la sezione &quot;Aggiungi un gruppo di campi&quot; nella seguente documentazione XDM:
 - [Esercitazione API del Registro di sistema dello schema](../xdm/api/getting-started.md).: Creazione di uno schema tramite l’API del Registro di sistema dello schema.
 - [Esercitazione](../xdm/tutorials/create-schema-ui.md) dell’Editor di schema: Creazione di uno schema tramite l’interfaccia utente di Platform.
 
-Ecco un esempio di immagine che mostra i mixin di rinuncia aggiunti a uno schema nell’interfaccia utente:
+Ecco un esempio di immagine che mostra i gruppi di campi di rinuncia aggiunti a uno schema nell’interfaccia utente:
 
-![](images/opt-outs/opt-out-mixins-user-interface.png)
+![](images/opt-outs/opt-out-field-groups-user-interface.png)
 
-La struttura di ciascun mixin, nonché una descrizione dei campi che contribuiscono allo schema, sono descritte più dettagliatamente nelle sezioni seguenti.
+La struttura di ciascun gruppo di campi, nonché una descrizione dei campi che contribuiscono allo schema, sono descritte più dettagliatamente nelle sezioni seguenti.
 
 ### [!DNL Profile Privacy] {#profile-privacy}
 
-Il mixin [!DNL Profile Privacy] consente di acquisire due tipi di richieste di rinuncia CCPA da parte dei clienti:
+Il gruppo di campi [!DNL Profile Privacy] ti consente di acquisire due tipi di richieste di rinuncia CCPA da parte dei clienti:
 
 1. Rinuncia generale
 2. Rinuncia alla vendita/condivisione
 
 ![](images/opt-outs/profile-privacy.png)
 
-Il mixin [!DNL Profile Privacy] contiene i campi seguenti:
+Il gruppo di campi [!DNL Profile Privacy] contiene i campi seguenti:
 
 - Rinuncia alla privacy (`privacyOptOuts`): Matrice contenente un elenco di oggetti di rinuncia.
 - Tipo di rinuncia (`optOutType`): Tipo di rinuncia. Questo campo è un enum con due possibili valori:
@@ -67,15 +67,15 @@ Il mixin [!DNL Profile Privacy] contiene i campi seguenti:
    - Consenso (`in`): Il cliente ha acconsentito.
 - Timestamp rinuncia (`timestamp`): Timestamp del segnale di rinuncia ricevuto.
 
-Per visualizzare l’intera struttura del mixin [!DNL Profile Privacy], consulta l’ [archivio GitHub pubblico XDM](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) o visualizza l’anteprima del mixin tramite l’interfaccia utente di Platform.
+Per visualizzare la struttura completa del gruppo di campi [!DNL Profile Privacy], fai riferimento all’ [archivio GitHub pubblico XDM](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) o visualizza in anteprima il gruppo di campi utilizzando l’interfaccia utente di Platform.
 
 ### [!DNL Profile Preferences Details] {#profile-preferences-details}
 
-Il mixin [!DNL Profile Preferences Details] fornisce diversi campi che rappresentano le preferenze per i profili dei clienti (ad esempio il formato e-mail, la lingua preferita e il fuso orario). Uno dei campi inclusi in questo mixin, OptInOut (`optInOut`), consente di impostare i valori di rinuncia per i singoli canali.
+Il gruppo di campi [!DNL Profile Preferences Details] fornisce diversi campi che rappresentano le preferenze per i profili dei clienti (ad esempio il formato e-mail, la lingua preferita e il fuso orario). Uno dei campi inclusi in questo gruppo di campi, OptInOut (`optInOut`), consente di impostare i valori di rinuncia per i singoli canali.
 
 ![](images/opt-outs/profile-preferences-details.png)
 
-Il mixin [!DNL Profile Preferences Details] contiene i seguenti campi relativi alle rinunce:
+Il gruppo di campi [!DNL Profile Preferences Details] contiene i seguenti campi relativi alle rinunce:
 
 - OptInOut (`optInOut`): Un oggetto in cui ogni chiave rappresenta un URI valido e noto per un canale di comunicazione e lo stato attivo della rinuncia per ciascun canale. Ogni canale può avere uno dei quattro valori possibili:
    - Non fornito (`not_provided`): Per questo canale non è stata fornita una richiesta di rinuncia.
@@ -100,7 +100,7 @@ L&#39;esempio JSON riportato di seguito evidenzia come l&#39;oggetto OptInOut pu
 }
 ```
 
-Per visualizzare l&#39;intera struttura del mixin Dettagli preferenze profilo, visita l&#39; [archivio GitHub pubblico XDM](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json) o visualizza l&#39;anteprima del mixin utilizzando l&#39;interfaccia utente [!DNL Platform].
+Per visualizzare la struttura completa del gruppo di campi Dettagli preferenze profilo, visita l’ [archivio GitHub pubblico XDM](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json) o visualizza in anteprima il gruppo di campi utilizzando l’ [!DNL Platform] interfaccia utente.
 
 ## Gestione delle rinunce nella segmentazione
 
