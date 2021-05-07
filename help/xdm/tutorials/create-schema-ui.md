@@ -7,9 +7,9 @@ type: Tutorial
 description: Questa esercitazione illustra i passaggi necessari per creare uno schema utilizzando Schema Editor all’interno di Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '3532'
+source-wordcount: '3588'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Se invece preferisci comporre uno schema utilizzando l&#39;API [!DNL Schema Regi
 Questa esercitazione richiede una comprensione approfondita dei vari aspetti di Adobe Experience Platform coinvolti nella creazione dello schema. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti concetti:
 
 * [[!DNL Experience Data Model (XDM)]](../home.md): Il framework standardizzato in base al quale  [!DNL Platform] vengono organizzati i dati sulla customer experience.
-   * [Nozioni di base sulla composizione](../schema/composition.md) dello schema: Panoramica degli schemi XDM e dei relativi blocchi predefiniti, inclusi classi, mixin, tipi di dati e campi.
+   * [Nozioni di base sulla composizione](../schema/composition.md) dello schema: Panoramica degli schemi XDM e dei relativi blocchi predefiniti, inclusi classi, gruppi di campi di schema, tipi di dati e singoli campi.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 
 ## Apri l&#39;area di lavoro [!UICONTROL Schemas] {#browse}
@@ -48,9 +48,9 @@ Ai fini di questa esercitazione, seleziona **[!UICONTROL XDM Individual Profile]
 
 ![](../images/tutorials/create-schema/create_schema_button.png)
 
-Poiché hai scelto una classe XDM standard su cui basare lo schema, viene visualizzata la finestra di dialogo **[!UICONTROL Add mixin]**, che consente di iniziare immediatamente ad aggiungere campi allo schema. Per il momento, seleziona **[!UICONTROL Cancel]** per uscire dalla finestra di dialogo.
+Poiché hai scelto una classe XDM standard su cui basare lo schema, viene visualizzata la finestra di dialogo **[!UICONTROL Add field group]**, che consente di iniziare immediatamente ad aggiungere campi allo schema. Per il momento, seleziona **[!UICONTROL Cancel]** per uscire dalla finestra di dialogo.
 
-![](../images/tutorials/create-schema/cancel-mixin.png)
+![](../images/tutorials/create-schema/cancel-field-group.png)
 
 Viene visualizzato il simbolo [!DNL Schema Editor]. Questa è l&#39;area di lavoro su cui comporre lo schema. All’arrivo nell’editor viene automaticamente creato uno schema senza titolo nella sezione **[!UICONTROL Structure]** dell’area di lavoro, insieme ai campi standard inclusi in tutti gli schemi basati su tale classe. La classe assegnata per lo schema è inoltre elencata in **[!UICONTROL Class]** nella sezione **[!UICONTROL Composition]** .
 
@@ -58,7 +58,7 @@ Viene visualizzato il simbolo [!DNL Schema Editor]. Questa è l&#39;area di lavo
 
 >[!NOTE]
 >
->È possibile [modificare la classe di uno schema](#change-class) in qualsiasi momento durante il processo di composizione iniziale prima che lo schema sia stato salvato, ma questo deve essere fatto con estrema cautela. I mixin sono compatibili solo con determinate classi e pertanto la modifica della classe reimposterà l’area di lavoro e gli eventuali campi aggiunti.
+>È possibile [modificare la classe di uno schema](#change-class) in qualsiasi momento durante il processo di composizione iniziale prima che lo schema sia stato salvato, ma questo deve essere fatto con estrema cautela. I gruppi di campi sono compatibili solo con determinate classi e pertanto la modifica della classe reimposterà l’area di lavoro e gli eventuali campi aggiunti.
 
 Utilizza i campi a destra dell’editor per fornire un nome visualizzato e una descrizione facoltativa per lo schema. Una volta immesso un nome, l’area di lavoro viene aggiornata per riflettere il nuovo nome dello schema.
 
@@ -72,35 +72,35 @@ Quando si decide un nome per lo schema, è necessario tenere presenti diverse co
 
 Questa esercitazione crea uno schema per acquisire i dati relativi ai membri di un programma fedeltà e pertanto lo schema è denominato &quot;Membri fedeltà&quot;.
 
-## Aggiungi un mixin {#mixin}
+## Aggiungi un gruppo di campi {#field-group}
 
-Ora puoi iniziare ad aggiungere campi allo schema aggiungendo mixin. Un mixin è un gruppo di uno o più campi che vengono spesso utilizzati insieme per descrivere un particolare concetto. Questa esercitazione utilizza i mixin per descrivere i membri del programma fedeltà e acquisire informazioni chiave come nome, compleanno, numero di telefono, indirizzo e altro ancora.
+È ora possibile iniziare ad aggiungere campi allo schema aggiungendo gruppi di campi. Un gruppo di campi è un gruppo di uno o più campi che vengono spesso utilizzati insieme per descrivere un particolare concetto. Questa esercitazione utilizza gruppi di campi per descrivere i membri del programma fedeltà e acquisire informazioni chiave come nome, compleanno, numero di telefono, indirizzo e altro ancora.
 
-Per aggiungere un mixin, seleziona **[!UICONTROL Add]** nella sottosezione **[!UICONTROL Mixins]** .
+Per aggiungere un gruppo di campi, seleziona **[!UICONTROL Add]** nella sottosezione **[!UICONTROL Field groups]** .
 
-![](../images/tutorials/create-schema/add_mixin_button.png)
+![](../images/tutorials/create-schema/add-field-group-button.png)
 
-Viene visualizzata una nuova finestra di dialogo con un elenco dei mixin disponibili. Ogni mixin è destinato solo a una classe specifica, pertanto la finestra di dialogo elenca solo i mixin compatibili con la classe selezionata (in questo caso, la classe [!DNL XDM Individual Profile]). Se utilizzi una classe XDM standard, l’elenco dei mixin verrà ordinato in modo intelligente in base alla popolarità dell’utilizzo.
+Viene visualizzata una nuova finestra di dialogo con un elenco dei gruppi di campi disponibili. Ogni gruppo di campi è destinato solo all’utilizzo con una classe specifica, pertanto la finestra di dialogo elenca solo i gruppi di campi compatibili con la classe selezionata (in questo caso, la classe [!DNL XDM Individual Profile]). Se utilizzi una classe XDM standard, l’elenco dei gruppi di campi verrà ordinato in modo intelligente in base alla popolarità dell’utilizzo.
 
-![](../images/tutorials/create-schema/mixin-popularity.png)
+![](../images/tutorials/create-schema/field-group-popularity.png)
 
-Quando si seleziona un mixin dall’elenco, questo viene visualizzato nella barra a destra. Puoi selezionare più mixin, se lo desideri, aggiungendo ciascuno di essi all’elenco nella barra a destra, prima di confermare. Inoltre, sul lato destro del mixin attualmente selezionato viene visualizzata un’icona che consente di visualizzare in anteprima la struttura dei campi disponibili.
+Quando si seleziona un gruppo di campi dall’elenco, questo viene visualizzato nella barra a destra. Puoi selezionare più gruppi di campi, se lo desideri, aggiungendo ciascuno di essi all’elenco nella barra a destra prima di confermare. Inoltre, sul lato destro del gruppo di campi attualmente selezionato viene visualizzata un’icona che consente di visualizzare in anteprima la struttura dei campi disponibili.
 
-![](../images/tutorials/create-schema/preview-mixin-button.png)
+![](../images/tutorials/create-schema/preview-field-group-button.png)
 
-Quando visualizzi l’anteprima di un mixin, nella barra a destra viene fornita una descrizione dettagliata dello schema del mixin. Puoi anche navigare tra i campi del mixin nell’area di lavoro fornita. Quando selezioni campi diversi, la barra a destra si aggiorna e mostra i dettagli del campo in questione. Seleziona **[!UICONTROL Back]** una volta terminata l&#39;anteprima per tornare alla finestra di dialogo di selezione del mixin.
+Quando visualizzi l’anteprima di un gruppo di campi, nella barra a destra viene fornita una descrizione dettagliata dello schema del gruppo di campi. È inoltre possibile spostarsi tra i campi del gruppo di campi nell’area di lavoro fornita. Quando selezioni campi diversi, la barra a destra si aggiorna e mostra i dettagli del campo in questione. Al termine della visualizzazione dell’anteprima, seleziona **[!UICONTROL Back]** per tornare alla finestra di dialogo di selezione del gruppo di campi.
 
-![](../images/tutorials/create-schema/preview-mixin.png)
+![](../images/tutorials/create-schema/preview-field-group.png)
 
-Per questa esercitazione, seleziona il mixin **[!UICONTROL Demographic Details]**, quindi seleziona **[!UICONTROL Add mixin]**.
+Per questa esercitazione, seleziona il gruppo di campi **[!UICONTROL Demographic Details]** , quindi seleziona **[!UICONTROL Add field group]**.
 
-![](../images/tutorials/create-schema/add_mixin_person_details.png)
+![](../images/tutorials/create-schema/demographic-details.png)
 
-L&#39;area di lavoro dello schema viene visualizzata nuovamente. La sezione **[!UICONTROL Mixins]** ora elenca &quot;[!UICONTROL Demographic Details]&quot; e la sezione **[!UICONTROL Structure]** include i campi aggiunti dal mixin. Puoi selezionare il nome del mixin sotto la sezione **[!UICONTROL Mixins]** per evidenziare i campi specifici che fornisce all&#39;interno dell&#39;area di lavoro.
+L&#39;area di lavoro dello schema viene visualizzata nuovamente. La sezione **[!UICONTROL Field groups]** ora elenca &quot;[!UICONTROL Demographic Details]&quot; e la sezione **[!UICONTROL Structure]** include i campi forniti dal gruppo di campi. Puoi selezionare il nome del gruppo di campi sotto la sezione **[!UICONTROL Field groups]** per evidenziare i campi specifici che fornisce all’interno dell’area di lavoro.
 
-![](../images/tutorials/create-schema/person_details_structure.png)
+![](../images/tutorials/create-schema/demographic-details-structure.png)
 
-Questo mixin contribuisce a diversi campi sotto il nome di livello principale `person` con il tipo di dati &quot;[!UICONTROL Person]&quot;. Questo gruppo di campi descrive informazioni su un individuo, tra cui nome, data di nascita e genere.
+Questo gruppo di campi contribuisce a diversi campi sotto il nome di livello principale `person` con il tipo di dati &quot;[!UICONTROL Person]&quot;. Questo gruppo di campi descrive informazioni su un individuo, tra cui nome, data di nascita e genere.
 
 >[!NOTE]
 >
@@ -110,49 +110,49 @@ Il campo `name` ha un tipo di dati &quot;[!UICONTROL Person name]&quot;, il che 
 
 Seleziona i diversi campi all’interno dell’area di lavoro per visualizzare eventuali campi aggiuntivi che contribuiscono alla struttura dello schema.
 
-## Aggiungi un altro mixin {#mixin-2}
+## Aggiungi un altro gruppo di campi {#field-group-2}
 
-Ora puoi ripetere gli stessi passaggi per aggiungere un altro mixin. Quando visualizzi la finestra di dialogo **[!UICONTROL Add mixin]**, noterai che il mixin &quot;[!UICONTROL Demographic Details]&quot; è stato disattivato e che la casella di controllo accanto non può essere selezionata. Questo impedisce la duplicazione accidentale di mixin già inclusi nello schema corrente.
+È ora possibile ripetere gli stessi passaggi per aggiungere un altro gruppo di campi. Quando visualizzi la finestra di dialogo **[!UICONTROL Add field group]**, noterai che il gruppo di campi &quot;[!UICONTROL Demographic Details]&quot; è stato disattivato e che non è possibile selezionare la casella di controllo accanto. Questo impedisce la duplicazione accidentale di gruppi di campi già inclusi nello schema corrente.
 
-Per questa esercitazione, seleziona il mixin &quot;[!DNL Personal Contact Details]&quot; dalla finestra di dialogo, quindi seleziona **[!UICONTROL Add mixin]** per aggiungerlo allo schema.
+Per questa esercitazione, seleziona il gruppo di campi &quot;[!DNL Personal Contact Details]&quot; dalla finestra di dialogo, quindi seleziona **[!UICONTROL Add field group]** per aggiungerlo allo schema.
 
-![](../images/tutorials/create-schema/add_mixin_personal_details.png)
+![](../images/tutorials/create-schema/personal-contact-details.png)
 
-Una volta aggiunto, l’area di lavoro viene visualizzata nuovamente. &quot;[!UICONTROL Personal Contact Details]&quot; è ora elencato in **[!UICONTROL Mixins]** nella sezione **[!UICONTROL Composition]** e i campi per l&#39;indirizzo della casa, il telefono cellulare e altro sono stati aggiunti in **[!UICONTROL Structure]**.
+Una volta aggiunto, l’area di lavoro viene visualizzata nuovamente. &quot;[!UICONTROL Personal Contact Details]&quot; è ora elencato in **[!UICONTROL Field groups]** nella sezione **[!UICONTROL Composition]** e i campi per l&#39;indirizzo della casa, il telefono cellulare e altro sono stati aggiunti in **[!UICONTROL Structure]**.
 
-Analogamente al campo `name` , i campi appena aggiunti rappresentano concetti relativi a più campi. Ad esempio, `homeAddress` ha un tipo di dati &quot;[!UICONTROL Postal address]&quot; e `mobilePhone` ha un tipo di dati &quot;[!UICONTROL Phone number]&quot;. È possibile selezionare ciascuno di questi campi per espanderli e visualizzare i campi aggiuntivi inclusi nel tipo di dati.
+Analogamente al campo `name` , i campi appena aggiunti rappresentano concetti relativi a più campi. Ad esempio, `homeAddress` ha un tipo di dati &quot;[!UICONTROL Postal address]&quot; e `mobilePhone` ha un tipo di dati &quot;[!UICONTROL Phone number]&quot;. Puoi selezionare ciascuno di questi campi per espanderli e visualizzare i campi aggiuntivi inclusi nel tipo di dati.
 
-![](../images/tutorials/create-schema/personal_details_structure.png)
+![](../images/tutorials/create-schema/personal-contact-details-structure.png)
 
-## Definire un mixin personalizzato {#define-mixin}
+## Definire un gruppo di campi personalizzato {#define-field-group}
 
 Lo schema &quot;[!UICONTROL Loyalty Members]&quot; è inteso per acquisire dati relativi ai membri di un programma fedeltà, pertanto richiederà alcuni campi specifici relativi alla fidelizzazione.
 
-Esiste un mixin standard [!UICONTROL Loyalty Details] che puoi aggiungere allo schema per acquisire i campi comuni relativi a un programma fedeltà. Anche se sei fortemente incoraggiato a utilizzare mixin standard per rappresentare i concetti acquisiti dai tuoi schemi, la struttura del mixin fedeltà standard potrebbe non essere in grado di acquisire tutti i dati rilevanti per il tuo particolare programma fedeltà. In questo scenario, puoi scegliere di definire un nuovo mixin personalizzato per acquisire invece questi campi.
+È disponibile un gruppo di campi [!UICONTROL Loyalty Details] standard che è possibile aggiungere allo schema per acquisire i campi comuni relativi a un programma fedeltà. Anche se si è vivamente incoraggiati a utilizzare gruppi di campi standard per rappresentare i concetti acquisiti dai propri schemi, la struttura del gruppo di campi fedeltà standard potrebbe non essere in grado di acquisire tutti i dati rilevanti per il proprio programma fedeltà specifico. In questo scenario, è possibile scegliere di definire un nuovo gruppo di campi personalizzato per acquisire tali campi.
 
-Apri nuovamente la finestra di dialogo **[!UICONTROL Add Mixin]**, ma questa volta seleziona **[!UICONTROL Create New Mixin]** vicino alla parte superiore. Ti viene quindi chiesto di fornire un nome e una descrizione visualizzati per il tuo mixin.
+Apri nuovamente la finestra di dialogo **[!UICONTROL Add Field group]**, ma questa volta seleziona **[!UICONTROL Create New Field group]** vicino alla parte superiore. Viene quindi richiesto di fornire un nome visualizzato e una descrizione per il gruppo di campi.
 
-![](../images/tutorials/create-schema/mixin_create_new.png)
+![](../images/tutorials/create-schema/create-new-field-group.png)
 
-Come per i nomi delle classi, il nome del mixin deve essere breve e semplice, descrivendo il contributo del mixin allo schema. Anche questi sono univoci, quindi non potrai riutilizzare il nome e devi quindi assicurarti che sia sufficientemente specifico.
+Come per i nomi delle classi, il nome del gruppo di campi deve essere breve e semplice, descrivendo il contributo del gruppo di campi allo schema. Anche questi sono univoci, quindi non potrai riutilizzare il nome e devi quindi assicurarti che sia sufficientemente specifico.
 
-Per questa esercitazione, denomina il nuovo mixin &quot;Dettagli fedeltà&quot;.
+Per questa esercitazione, denomina il nuovo gruppo di campi &quot;Dettagli fedeltà&quot;.
 
-Seleziona **[!UICONTROL Add mixin]** per tornare al percorso [!DNL Schema Editor]. &quot;[!UICONTROL Loyalty Details]&quot; dovrebbe ora apparire sotto **[!UICONTROL Mixins]** sul lato sinistro dell&#39;area di lavoro, ma non sono ancora presenti campi associati ad essa e quindi non vengono visualizzati nuovi campi sotto **[!UICONTROL Structure]**.
+Seleziona **[!UICONTROL Add field group]** per tornare al percorso [!DNL Schema Editor]. &quot;[!UICONTROL Loyalty Details]&quot; dovrebbe ora apparire sotto **[!UICONTROL Field groups]** sul lato sinistro dell&#39;area di lavoro, ma non sono ancora presenti campi associati ad essa e quindi non vengono visualizzati nuovi campi sotto **[!UICONTROL Structure]**.
 
-## Aggiungi campi al mixin {#mixin-fields}
+## Aggiungi campi al gruppo di campi {#field-group-fields}
 
-Dopo aver creato il mixin &quot;Dettagli fedeltà&quot;, è ora di definire i campi che il mixin contribuirà allo schema.
+Dopo aver creato il gruppo di campi &quot;Dettagli fedeltà&quot;, è ora di definire i campi che il gruppo di campi contribuirà allo schema.
 
-Per iniziare, seleziona il nome del mixin nella sezione **[!UICONTROL Mixins]** . Una volta fatto questo, le proprietà del mixin appaiono sul lato destro dell&#39;editor e un&#39;icona **più (+)** appare accanto al nome dello schema sotto **[!UICONTROL Structure]**.
+Per iniziare, seleziona il nome del gruppo di campi nella sezione **[!UICONTROL Field groups]** . Una volta effettuata questa operazione, le proprietà del gruppo di campi vengono visualizzate sul lato destro dell’editor e accanto al nome dello schema in **[!UICONTROL Structure]** viene visualizzata l’icona **più (+)**.
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
 Seleziona l&#39;icona **più (+)** accanto a &quot;[!DNL Loyalty Members]&quot; per creare un nuovo nodo nella struttura. Questo nodo (denominato `_tenantId` in questo esempio) rappresenta l’ID tenant dell’organizzazione IMS, preceduto da un trattino basso. La presenza dell’ID tenant indica che i campi da aggiungere sono contenuti nello spazio dei nomi dell’organizzazione.
 
-In altre parole, i campi che stai aggiungendo sono univoci per la tua organizzazione e verranno salvati in [!DNL Schema Registry] in un’area specifica accessibile solo dalla tua organizzazione. I campi definiti devono sempre essere aggiunti allo spazio dei nomi del tenant per evitare conflitti con nomi di altre classi, mixin, tipi di dati e campi standard.
+In altre parole, i campi che stai aggiungendo sono univoci per la tua organizzazione e verranno salvati in [!DNL Schema Registry] in un’area specifica accessibile solo dalla tua organizzazione. Per evitare conflitti con nomi di altre classi standard, gruppi di campi, tipi di dati e campi, è sempre necessario aggiungere i campi definiti al namespace del tenant.
 
-All&#39;interno di quel nodo con namespace c&#39;è un &quot;[!UICONTROL New Field]&quot;. Questo è l&#39;inizio del mixin &quot;[!UICONTROL Loyalty Details]&quot;.
+All&#39;interno di quel nodo con namespace c&#39;è un &quot;[!UICONTROL New Field]&quot;. Questo è l&#39;inizio del gruppo di campi &quot;[!UICONTROL Loyalty Details]&quot;.
 
 ![](../images/tutorials/create-schema/new_field_loyalty.png)
 
@@ -179,7 +179,7 @@ Sono disponibili diverse opzioni di vincolo a seconda del tipo di dati seleziona
 
 ![](../images/tutorials/create-schema/loyaltyId_field.png)
 
-## Aggiungi altri campi al mixin {#mixin-fields-2}
+## Aggiungi altri campi al gruppo di campi {#field-group-fields-2}
 
 Dopo aver aggiunto il campo `loyaltyId` , puoi aggiungere altri campi per acquisire informazioni relative alla fidelizzazione, ad esempio:
 
@@ -192,7 +192,7 @@ Una volta completato, l’oggetto Fedeltà conterrà campi per ID fedeltà, punt
 
 ![](../images/tutorials/create-schema/loyalty_object_fields.png)
 
-## Aggiungi un campo enum al mixin {#enum}
+## Aggiungi un campo enum al gruppo di campi {#enum}
 
 Durante la definizione dei campi in [!DNL Schema Editor], è possibile applicare alcune opzioni aggiuntive ai tipi di campi di base per fornire ulteriori vincoli sui dati che il campo può contenere. I casi d’uso per questi vincoli sono descritti nella tabella seguente:
 
@@ -226,7 +226,7 @@ Dopo aver completato tutte le proprietà del campo, selezionare **[!UICONTROL Ap
 
 L’oggetto `loyalty` ora contiene diversi campi specifici per la fidelizzazione e rappresenta una struttura dati comune che potrebbe essere utile in altri schemi. La funzione [!DNL Schema Editor] consente di applicare rapidamente oggetti multicampo riutilizzabili convertendo la struttura di tali oggetti in tipi di dati.
 
-I tipi di dati consentono l’uso coerente di strutture a più campi e offrono maggiore flessibilità rispetto a un mixin, in quanto possono essere utilizzati ovunque all’interno di uno schema. A questo scopo, imposta il valore **[!UICONTROL Type]** del campo su quello di qualsiasi tipo di dati definito in [!DNL Schema Registry].
+I tipi di dati consentono l’uso coerente di strutture con più campi e offrono maggiore flessibilità rispetto a un gruppo di campi, in quanto possono essere utilizzati ovunque all’interno di uno schema. A questo scopo, imposta il valore **[!UICONTROL Type]** del campo su quello di qualsiasi tipo di dati definito in [!DNL Schema Registry].
 
 Per convertire l&#39;oggetto `loyalty` in un tipo di dati, selezionare il campo `loyalty` in **[!UICONTROL Structure]**, quindi selezionare **[!UICONTROL Convert to new data type]** sul lato destro dell&#39;editor in **[!UICONTROL Field properties]**. Viene visualizzato un puntatore verde che conferma la corretta conversione dell’oggetto.
 
@@ -244,17 +244,17 @@ In uno schema futuro, ora puoi assegnare un campo come tipo &quot;[!DNL Loyalty]
 
 ## Campi dello schema di ricerca e filtro
 
-Lo schema ora contiene diversi mixin oltre ai campi forniti dalla relativa classe base. Quando lavori con schemi di grandi dimensioni, puoi selezionare le caselle di controllo accanto ai nomi misti nella barra a sinistra per filtrare i campi visualizzati in base solo a quelli forniti dai mixin interessati.
+Lo schema ora contiene diversi gruppi di campi oltre ai campi forniti dalla relativa classe base. Quando si utilizzano schemi di dimensioni maggiori, è possibile selezionare le caselle di controllo accanto ai nomi dei gruppi di campi nella barra a sinistra per filtrare i campi visualizzati in base solo a quelli forniti dai gruppi di campi interessati.
 
-![](../images/tutorials/create-schema/filter-by-mixin.png)
+![](../images/tutorials/create-schema/filter-by-field-group.png)
 
-Se si cerca un campo specifico nello schema, è anche possibile utilizzare la barra di ricerca per filtrare i campi visualizzati per nome, indipendentemente dal mixin in cui sono forniti.
+Se si cerca un campo specifico nello schema, è inoltre possibile utilizzare la barra di ricerca per filtrare i campi visualizzati per nome, indipendentemente dal gruppo di campi in cui sono forniti.
 
 ![](../images/tutorials/create-schema/search.png)
 
 >[!IMPORTANT]
 >
->Quando si visualizzano i campi corrispondenti, la funzione di ricerca tiene conto dei filtri mixin selezionati. Se una query di ricerca non visualizza i risultati previsti, potrebbe essere necessario verificare di non filtrare i mixin rilevanti.
+>Quando si visualizzano i campi corrispondenti, la funzione di ricerca tiene conto dei filtri selezionati per i gruppi di campi. Se una query di ricerca non visualizza i risultati previsti, potrebbe essere necessario verificare di non filtrare i gruppi di campi pertinenti.
 
 ## Imposta un campo schema come campo di identità {#identity-field}
 
@@ -334,7 +334,7 @@ Il video seguente mostra come creare uno schema semplice nell’ interfaccia ute
 
 >[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
 
-Il seguente video è pensato per comprendere meglio come si lavora con mixin e classi.
+Il video seguente ha lo scopo di comprendere meglio come lavorare con gruppi di campi e classi.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
 
@@ -352,6 +352,6 @@ Le sezioni seguenti forniscono informazioni aggiuntive relative all&#39;utilizzo
 
 >[!WARNING]
 >
->La riassegnazione della classe per uno schema deve essere eseguita con estrema cautela. I mixin sono compatibili solo con determinate classi e pertanto la modifica della classe reimposterà l’area di lavoro e gli eventuali campi aggiunti.
+>La riassegnazione della classe per uno schema deve essere eseguita con estrema cautela. I gruppi di campi sono compatibili solo con determinate classi e pertanto la modifica della classe reimposterà l’area di lavoro e gli eventuali campi aggiunti.
 
 Per informazioni su come modificare la classe di uno schema, consulta la guida alla [gestione degli schemi nell&#39;interfaccia utente](../ui/resources/schemas.md).
