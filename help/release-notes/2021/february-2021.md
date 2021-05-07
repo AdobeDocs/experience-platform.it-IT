@@ -4,14 +4,14 @@ description: Note sulla versione di Experience Platform per il 24 febbraio 2021.
 doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
+exl-id: 8c3142af-4021-4f7e-acbd-c5277dd188d1
 translation-type: tm+mt
-source-git-commit: 398e55f442a2c8ecab0c3d9315fbdd5c02946e45
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1138'
 ht-degree: 7%
 
 ---
-
 
 # Note sulla versione di Adobe Experience Platform
 
@@ -89,7 +89,7 @@ XDM è una specifica documentata pubblicamente progettata per migliorare il pote
 
 | Funzione | Descrizione |
 | --- | --- |
-| Interfaccia utente di ricerca aggiornata | Le funzionalità di ricerca migliorate sono ora disponibili nella scheda [!UICONTROL Browse] nell&#39;area di lavoro [!UICONTROL Schemas] e nella finestra di dialogo di selezione del mixin [!DNL Schema Editor].<br><br>Durante la ricerca di un termine in precedenza, i risultati includevano solo risorse XDM il cui nome corrisponde alla query di ricerca. Ora, oltre alle risorse il cui nome corrisponde alla query, verranno incluse anche le risorse contenenti attributi singoli che corrispondono al termine. Ciò ti consente di cercare le risorse XDM in base agli attributi che contengono anziché in base al nome della risorsa.<br><br>Per ulteriori informazioni, consulta i documenti sull’ [esplorazione ](../../xdm/ui/explore.md) delle risorse XDM e sulla  [gestione ](../../xdm/ui/resources/schemas.md) degli schemi nell’interfaccia utente. |
+| Interfaccia utente di ricerca aggiornata | Le funzionalità di ricerca migliorate sono ora disponibili nella scheda [!UICONTROL Browse] nell&#39;area di lavoro [!UICONTROL Schemas] e nella finestra di dialogo per la selezione dei gruppi di campi dello schema in [!DNL Schema Editor].<br><br>Durante la ricerca di un termine in precedenza, i risultati includevano solo risorse XDM il cui nome corrisponde alla query di ricerca. Ora, oltre alle risorse il cui nome corrisponde alla query, verranno incluse anche le risorse contenenti attributi singoli che corrispondono al termine. Ciò ti consente di cercare le risorse XDM in base agli attributi che contengono anziché in base al nome della risorsa.<br><br>Per ulteriori informazioni, consulta i documenti sull’ [esplorazione ](../../xdm/ui/explore.md) delle risorse XDM e sulla  [gestione ](../../xdm/ui/resources/schemas.md) degli schemi nell’interfaccia utente. |
 
 Per informazioni generali su XDM, consulta la [Panoramica del sistema XDM](../../xdm/home.md).
 
