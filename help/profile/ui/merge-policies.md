@@ -6,9 +6,9 @@ type: Documentation
 description: Adobe Experience Platform consente di unire frammenti di dati provenienti da più sorgenti e di combinarli per ottenere una visualizzazione completa di ciascuno dei singoli clienti. Quando si riuniscono questi dati, i criteri di unione sono le regole utilizzate da Platform per determinare in che modo i dati verranno definiti come prioritari e quali dati verranno combinati per creare una visualizzazione unificata.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2873'
+source-wordcount: '2879'
 ht-degree: 0%
 
 ---
@@ -49,15 +49,15 @@ Poiché i record di profilo vengono acquisiti in Experience Platform, al momento
 
 Talvolta possono verificarsi casi d’uso in cui è necessario fornire una marca temporale personalizzata e il criterio di unione rispetta la marca temporale personalizzata anziché quella di sistema. Esempi di ciò includono il recupero dei dati o la garanzia dell’ordine corretto degli eventi se i record vengono acquisiti in modo errato.
 
-Per utilizzare una marca temporale personalizzata, è necessario aggiungere la **[!UICONTROL External Source System Audit Details Mixin]** allo schema del profilo. Una volta aggiunta, la marca temporale personalizzata può essere compilata utilizzando il campo `lastUpdatedDate` . Quando un record viene acquisito con il campo `lastUpdatedDate` popolato, Experience Platform lo utilizzerà per unire i record tra i set di dati. Se `lastUpdatedDate` non è presente o non è popolato, Platform continuerà a utilizzare la marca temporale del sistema.
+Per utilizzare una marca temporale personalizzata, è necessario aggiungere allo schema del profilo il gruppo di campi **[!UICONTROL External Source System Audit Details]dello schema**. Una volta aggiunta, la marca temporale personalizzata può essere compilata utilizzando il campo `lastUpdatedDate` . Quando un record viene acquisito con il campo `lastUpdatedDate` popolato, Experience Platform lo utilizzerà per unire i record tra i set di dati. Se `lastUpdatedDate` non è presente o non è popolato, Platform continuerà a utilizzare la marca temporale del sistema.
 
 >[!NOTE]
 >
 >È necessario assicurarsi che la marca temporale `lastUpdatedDate` sia compilata quando si acquisisce un aggiornamento sullo stesso record.
 
-La schermata seguente mostra i campi nel [!UICONTROL External Source System Audit Details Mixin]. Per istruzioni dettagliate sull’utilizzo degli schemi tramite l’interfaccia utente di Platform, incluso come aggiungere mixin agli schemi, visita l’ [esercitazione per creare uno schema utilizzando l’interfaccia utente](../../xdm/tutorials/create-schema-ui.md) .
+La schermata seguente mostra i campi nel gruppo di campi [!UICONTROL External Source System Audit Details] . Per istruzioni dettagliate sull’utilizzo degli schemi tramite l’interfaccia utente di Platform e su come aggiungere gruppi di campi agli schemi, visita l’ [esercitazione per creare uno schema utilizzando l’interfaccia utente](../../xdm/tutorials/create-schema-ui.md) .
 
-![](../images/merge-policies/custom-timestamp-mixin.png)
+![](../images/merge-policies/custom-timestamp-field-group.png)
 
 Per utilizzare le marche temporali personalizzate utilizzando l&#39;API, consulta la sezione [guida all&#39;endpoint dei criteri di unione sull&#39;utilizzo di marche temporali personalizzate](../api/merge-policies.md#custom-timestamps).
 
