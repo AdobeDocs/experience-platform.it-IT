@@ -6,9 +6,9 @@ topic-legacy: getting started
 description: Questo documento fornisce una breve panoramica di alcune tecnologie e sintassi sottostanti coinvolte con le API di Experience Platform.
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '516'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ JSON Pointer è una sintassi di stringa standardizzata ([RFC 6901](https://tools
 
 ### Esempio di oggetto schema JSON
 
-Il seguente JSON rappresenta uno schema XDM semplificato ai cui campi può essere fatto riferimento utilizzando le stringhe JSON Pointer. Tutti i campi aggiunti tramite mixin personalizzati (ad esempio `loyaltyLevel`) sono delimitati da un namespace in un oggetto `_{TENANT_ID}`, mentre i campi aggiunti tramite mixin principali (ad esempio `fullName`) non vengono aggiunti.
+Il seguente JSON rappresenta uno schema XDM semplificato ai cui campi può essere fatto riferimento utilizzando le stringhe JSON Pointer. Tenere presente che tutti i campi aggiunti utilizzando i gruppi di campi di schema personalizzati (ad esempio `loyaltyLevel`) sono preceduti da un namespace in un oggetto `_{TENANT_ID}`, mentre i campi aggiunti utilizzando i gruppi di campi di base (ad esempio `fullName`) non vengono aggiunti.
 
 ```json
 {
@@ -87,8 +87,8 @@ Il seguente JSON rappresenta uno schema XDM semplificato ai cui campi può esser
 | Puntatore JSON | Risolve in |
 | --- | --- |
 | `"/title"` | `"Example schema"` |
-| `"/properties/person/properties/name/properties/fullName"` | (Restituisce un riferimento al campo `fullName`, fornito da un mixin principale.) |
-| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Restituisce un riferimento al campo `loyaltyLevel`, fornito da un mixin personalizzato.) |
+| `"/properties/person/properties/name/properties/fullName"` | (Restituisce un riferimento al campo `fullName`, fornito da un gruppo di campi di base.) |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Restituisce un riferimento al campo `loyaltyLevel`, fornito da un gruppo di campi personalizzato.) |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
