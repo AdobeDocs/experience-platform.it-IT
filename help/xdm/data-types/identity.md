@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM di identità.
 exl-id: fb02b6b4-255b-442f-895c-600022231a1c
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '281'
 ht-degree: 3%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 3%
 | `primary` | Booleano | Indica se si tratta dell&#39;identità principale dell&#39;individuo. Ogni individuo può avere una sola identità primaria. |
 | `xid` | Stringa | Se presente, questo valore rappresenta un identificatore dello spazio dei nomi incrociato univoco per tutti gli identificatori con ambito dello spazio dei nomi in tutti i namespace. |
 
-Per ulteriori dettagli sul mixin, consulta l’archivio XDM pubblico:
+Per ulteriori dettagli sul tipo di dati, consulta l’archivio XDM pubblico:
 
 * [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.example.1.json)
 * [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.schema.json)
