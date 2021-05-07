@@ -3,12 +3,12 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Come configurare un campo attributo calcolato
 topic-legacy: guide
 type: Documentation
-description: Gli attributi calcolati sono funzioni utilizzate per aggregare dati a livello di evento in attributi a livello di profilo. Per configurare un attributo calcolato, devi innanzitutto identificare il campo che conterrà il valore dell’attributo calcolato. Questo campo può essere creato utilizzando l’API del Registro di sistema dello schema per definire uno schema e un mixin personalizzato che conterrà il campo dell’attributo calcolato.
+description: Gli attributi calcolati sono funzioni utilizzate per aggregare dati a livello di evento in attributi a livello di profilo. Per configurare un attributo calcolato, devi innanzitutto identificare il campo che conterrà il valore dell’attributo calcolato. Questo campo può essere creato utilizzando l’API del Registro di sistema dello schema per definire uno schema e un gruppo di campi personalizzati che conterrà il campo dell’attributo calcolato.
 exl-id: 91c5d125-8ab5-4291-a974-48dd44c68a13
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '736'
 ht-degree: 2%
 
 ---
@@ -19,33 +19,33 @@ ht-degree: 2%
 >
 >La funzionalità dell&#39;attributo calcolato è attualmente in alfa e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
 
-Per configurare un attributo calcolato, devi innanzitutto identificare il campo che conterrà il valore dell’attributo calcolato. Questo campo può essere creato utilizzando l’API del Registro di sistema dello schema per definire uno schema e un mixin personalizzato che conterrà il campo dell’attributo calcolato. È consigliabile creare uno schema e un mixin &quot;Attributi calcolati&quot; separati in cui l’organizzazione può aggiungere qualsiasi attributo da utilizzare come attributi calcolati. Questo consente alla tua organizzazione di separare in modo pulito lo schema degli attributi calcolati da altri schemi utilizzati per l’inserimento dei dati.
+Per configurare un attributo calcolato, devi innanzitutto identificare il campo che conterrà il valore dell’attributo calcolato. Questo campo può essere creato utilizzando l’API del Registro di sistema dello schema per definire uno schema e un gruppo di campi dello schema personalizzato che conterrà il campo dell’attributo calcolato. È consigliabile creare uno schema e un gruppo di campi &quot;Attributi calcolati&quot; separati in cui l’organizzazione può aggiungere qualsiasi attributo da utilizzare come attributi calcolati. Questo consente alla tua organizzazione di separare in modo pulito lo schema degli attributi calcolati da altri schemi utilizzati per l’inserimento dei dati.
 
-Il flusso di lavoro in questo documento illustra come utilizzare l’API del Registro di sistema dello schema per creare uno schema &quot;Attributo calcolato&quot; abilitato per il profilo che fa riferimento a un mixin personalizzato. Questo documento contiene un codice di esempio specifico per gli attributi calcolati, tuttavia fai riferimento alla [Guida API del Registro di sistema dello schema](../../xdm/api/overview.md) per informazioni dettagliate sulla definizione di mixin e schemi utilizzando l&#39;API.
+Il flusso di lavoro in questo documento illustra come utilizzare l’API del Registro di sistema dello schema per creare uno schema &quot;Attributo calcolato&quot; abilitato per il profilo che fa riferimento a un gruppo di campi personalizzato. Questo documento contiene un codice di esempio specifico per gli attributi calcolati, tuttavia fai riferimento alla [Guida API del Registro di sistema dello schema](../../xdm/api/overview.md) per informazioni dettagliate sulla definizione dei gruppi di campi e degli schemi utilizzando l&#39;API.
 
-## Creare un mixin attributi calcolati
+## Creare un gruppo di campi attributi calcolati
 
-Per creare un mixin utilizzando l’API del Registro di sistema dello schema, inizia effettuando una richiesta POST all’endpoint `/tenant/mixins` e fornendo i dettagli del mixin nel corpo della richiesta. Per informazioni dettagliate sull&#39;utilizzo dei mixin tramite l&#39;API del Registro di sistema dello schema, consulta la [guida all&#39;endpoint API mixins](../../xdm/api/mixins.md).
+Per creare un gruppo di campi utilizzando l’API del Registro di sistema dello schema, inizia effettuando una richiesta POST all’endpoint `/tenant/fieldgroups` e fornendo i dettagli del gruppo di campi nel corpo della richiesta. Per informazioni dettagliate sull&#39;utilizzo dei gruppi di campi tramite l&#39;API del Registro di sistema dello schema, fare riferimento alla [guida dell&#39;endpoint API dei gruppi di campi](../../xdm/api/field-groups.md).
 
 **Formato API**
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
 **Richiesta**
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins\
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups\
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'content-type: application/json' \
   -d '{
-        "title":"Computed Attributes Mixin",
-        "description":"Description of the mixin.",
+        "title":"Computed Attributes Field Group",
+        "description":"Description of the field group.",
         "type":"object",
         "meta:extensible": true,
         "meta:abstract": true,
@@ -53,7 +53,7 @@ curl -X POST \
           "https://ns.adobe.com/xdm/context/profile"
         ],
         "definitions": {
-          "computedAttributesMixin": {
+          "computedAttributesFieldGroup": {
             "type": "object",
             "meta:xdmType": "object",
             "properties": {
@@ -72,7 +72,7 @@ curl -X POST \
         },
         "allOf": [
           {
-            "$ref": "#/definitions/computedAttributesMixin"
+            "$ref": "#/definitions/computedAttributesFieldGroup"
           }
         ]
       }'
@@ -80,24 +80,24 @@ curl -X POST \
 
 | Proprietà | Descrizione |
 |---|---|
-| `title` | Nome del mixin che si sta creando. |
-| `meta:intendedToExtend` | Classe XDM con cui è possibile utilizzare il mixin. |
+| `title` | Nome del gruppo di campi che si sta creando. |
+| `meta:intendedToExtend` | Classe XDM con cui è possibile utilizzare il gruppo di campi. |
 
 **Risposta**
 
-Una richiesta corretta restituisce lo stato di risposta HTTP 201 (Creato) con un corpo di risposta contenente i dettagli del mixin appena creato, inclusi i valori `$id`, `meta:altIt` e `version`. Questi valori sono di sola lettura e sono assegnati dal Registro di sistema dello schema.
+Una richiesta corretta restituisce lo stato di risposta HTTP 201 (Creato) con un corpo di risposta contenente i dettagli del gruppo di campi appena creato, inclusi i campi `$id`, `meta:altIt` e `version`. Questi valori sono di sola lettura e sono assegnati dal Registro di sistema dello schema.
 
 ```json
 {
-  "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
-  "meta:altId": "_{TENANT_ID}.mixins.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
-  "meta:resourceType": "mixins",
+  "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+  "meta:altId": "_{TENANT_ID}.fieldgroups.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+  "meta:resourceType": "fieldgroups",
   "version": "1.0",
-  "title": "Computed Attributes Mixin",
+  "title": "Computed Attributes Field Group",
   "type": "object",
-  "description": "Description of the mixin.",
+  "description": "Description of the field group.",
   "definitions": {
-    "computedAttributesMixin": {
+    "computedAttributesFieldGroup": {
       "type": "object",
       "meta:xdmType": "object",
       "properties": {
@@ -116,7 +116,7 @@ Una richiesta corretta restituisce lo stato di risposta HTTP 201 (Creato) con un
   },
   "allOf": [
     {
-      "$ref": "#/definitions/computedAttributesMixin",
+      "$ref": "#/definitions/computedAttributesFieldGroup",
       "type": "object",
       "meta:xdmType": "object"
     }
@@ -145,16 +145,16 @@ Una richiesta corretta restituisce lo stato di risposta HTTP 201 (Creato) con un
 }
 ```
 
-## Aggiorna mixin con attributi aggiuntivi calcolati
+## Aggiorna gruppo di campi con attributi calcolati aggiuntivi
 
-Poiché sono necessari più attributi calcolati, puoi aggiornare il mixin degli attributi calcolati con attributi aggiuntivi effettuando una richiesta PUT all’endpoint `/tenant/mixins` . Questa richiesta richiede di includere l’ID univoco del mixin creato nel percorso e tutti i nuovi campi che desideri aggiungere nel corpo.
+Poiché sono necessari più attributi calcolati, è possibile aggiornare il gruppo di campi attributi calcolati con attributi aggiuntivi effettuando una richiesta di PUT all&#39;endpoint `/tenant/fieldgroups`. Questa richiesta richiede di includere l’ID univoco del gruppo di campi creato nel percorso e tutti i nuovi campi che si desidera aggiungere nel corpo.
 
-Per ulteriori informazioni sull&#39;aggiornamento di un mixin utilizzando l&#39;API del Registro di sistema dello schema, consulta la [guida all&#39;endpoint API mixins](../../xdm/api/mixins.md).
+Per ulteriori informazioni sull&#39;aggiornamento di un gruppo di campi utilizzando l&#39;API del Registro di sistema dello schema, fare riferimento alla [guida dell&#39;endpoint API dei gruppi di campi](../../xdm/api/field-groups.md).
 
 **Formato API**
 
 ```http
-PUT /tenant/mixins/{MIXIN_ID}
+PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 ```
 
 **Richiesta**
@@ -163,11 +163,11 @@ Questa richiesta aggiunge nuovi campi relativi alle informazioni `purchaseSummar
 
 >[!NOTE]
 >
->Quando si aggiorna un mixin tramite una richiesta PUT, il corpo deve includere tutti i campi necessari durante la creazione di un nuovo mixin in una richiesta POST.
+>Quando si aggiorna un gruppo di campi tramite una richiesta di PUT, il corpo deve includere tutti i campi che sarebbero necessari durante la creazione di un nuovo gruppo di campi in una richiesta di POST.
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins/_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
@@ -175,15 +175,15 @@ curl -X PUT \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "type": "object",
-        "title": "Computed Attributes Mixin",
+        "title": "Computed Attributes Field Group",
         "meta:extensible": true,
         "meta:abstract": true,
         "meta:intendedToExtend": [
           "https://ns.adobe.com/xdm/context/profile"
         ],
-        "description": "Description of mixin.",
+        "description": "Description of field group.",
         "definitions": {
-          "computedAttributesMixin": {
+          "computedAttributesFieldGroup": {
             "type": "object",
             "meta:xdmType": "object",
             "properties": {
@@ -222,7 +222,7 @@ curl -X PUT \
         },
         "allOf": [
           {
-            "$ref": "#/definitions/computedAttributesMixin"
+            "$ref": "#/definitions/computedAttributesFieldGroup"
           }
         ]
       }'
@@ -230,19 +230,19 @@ curl -X PUT \
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli del mixin aggiornato.
+Una risposta corretta restituisce i dettagli del gruppo di campi aggiornato.
 
 ```json
 {
-  "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
-  "meta:altId": "_{TENANT_ID}.mixins.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
-  "meta:resourceType": "mixins",
+  "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+  "meta:altId": "_{TENANT_ID}.fieldgroups.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+  "meta:resourceType": "fieldgroups",
   "version": "1.0",
-  "title": "Computed Attributes Mixin",
+  "title": "Computed Attributes Field Group",
   "type": "object",
-  "description": "Description of mixin.",
+  "description": "Description of field group.",
   "definitions": {
-    "computedAttributesMixin": {
+    "computedAttributesFieldGroup": {
       "type": "object",
       "meta:xdmType": "object",
       "properties": {
@@ -281,7 +281,7 @@ Una risposta corretta restituisce i dettagli del mixin aggiornato.
   },
   "allOf": [
     {
-      "$ref": "#/definitions/computedAttributesMixin",
+      "$ref": "#/definitions/computedAttributesFieldGroup",
       "type": "object",
       "meta:xdmType": "object"
     }
@@ -324,7 +324,7 @@ POST /tenants/schemas
 
 **Richiesta**
 
-La richiesta seguente crea un nuovo schema che fa riferimento a `computedAttributesMixin` creato in precedenza in questo documento (utilizzando il relativo ID univoco) ed è abilitato per lo schema di unione profili (utilizzando l’array `meta:immutableTags`). Per istruzioni dettagliate su come creare uno schema utilizzando l&#39;API del Registro di sistema dello schema, consulta la [guida all&#39;endpoint API degli schemi](../../xdm/api/schemas.md).
+La richiesta seguente crea un nuovo schema che fa riferimento a `computedAttributesFieldGroup` creato in precedenza in questo documento (utilizzando il relativo ID univoco) ed è abilitato per lo schema di unione profili (utilizzando l’array `meta:immutableTags`). Per istruzioni dettagliate su come creare uno schema utilizzando l&#39;API del Registro di sistema dello schema, consulta la [guida all&#39;endpoint API degli schemi](../../xdm/api/schemas.md).
 
 ```shell
 curl -X POST \
@@ -345,7 +345,7 @@ curl -X POST \
         "meta:extends": [
           "https://ns.adobe.com/xdm/context/profile",
           "https://ns.adobe.com/xdm/context/identitymap",
-          "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+          "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
         ],
         "description": "Description of schema.",
         "definitions": {
@@ -358,7 +358,7 @@ curl -X POST \
             "$ref": "https://ns.adobe.com/xdm/context/identitymap"
           },
           {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
           }
         ],
         "meta:class": "https://ns.adobe.com/xdm/context/profile"
@@ -391,7 +391,7 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload conten
       "meta:xdmType": "object"
     },
     {
-      "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+      "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
       "type": "object",
       "meta:xdmType": "object"
     }
@@ -399,7 +399,7 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload conten
   "refs": [
     "https://ns.adobe.com/xdm/context/profile",
     "https://ns.adobe.com/xdm/context/identitymap",
-    "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+    "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
   ],
   "imsOrg": "{IMS_ORG}",
   "meta:extensible": false,
@@ -409,7 +409,7 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload conten
     "https://ns.adobe.com/xdm/data/record",
     "https://ns.adobe.com/xdm/context/profile",
     "https://ns.adobe.com/xdm/context/identitymap",
-    "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+    "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
   ],
   "meta:xdmType": "object",
   "meta:registryMetadata": {
@@ -435,4 +435,4 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload conten
 
 ## Passaggi successivi
 
-Dopo aver creato uno schema e un mixin in cui verranno memorizzati gli attributi calcolati, puoi creare l’attributo calcolato utilizzando l’endpoint API `/computedattributes`. Per passaggi dettagliati per la creazione di un attributo calcolato nell&#39;API, segui i passaggi descritti nella [guida all&#39;endpoint API degli attributi calcolati](ca-api.md) .
+Dopo aver creato uno schema e un gruppo di campi in cui verranno memorizzati gli attributi calcolati, puoi creare l’attributo calcolato utilizzando l’endpoint API `/computedattributes`. Per passaggi dettagliati per la creazione di un attributo calcolato nell&#39;API, segui i passaggi descritti nella [guida all&#39;endpoint API degli attributi calcolati](ca-api.md) .
