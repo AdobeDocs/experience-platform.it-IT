@@ -6,16 +6,16 @@ description: L’endpoint /auditlog nell’API del Registro di sistema dello sch
 topic-legacy: developer guide
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '400'
 ht-degree: 2%
 
 ---
 
 # Endpoint del registro di controllo
 
-Per ogni risorsa Experience Data Model (XDM), il [!DNL Schema Registry] mantiene un registro di tutte le modifiche che si sono verificate tra diversi aggiornamenti. L’endpoint `/auditlog` nell’ API [!DNL Schema Registry] consente di recuperare un registro di controllo per qualsiasi classe, mixin, tipo di dati o schema specificato dall’ID.
+Per ogni risorsa Experience Data Model (XDM), il [!DNL Schema Registry] mantiene un registro di tutte le modifiche che si sono verificate tra diversi aggiornamenti. L’endpoint `/auditlog` nell’ API [!DNL Schema Registry] consente di recuperare un registro di controllo per qualsiasi classe, gruppo di campi dello schema, tipo di dati o schema specificato dall’ID.
 
 ## Introduzione
 
@@ -25,7 +25,7 @@ L&#39;endpoint `/auditlog` fa parte delle chiamate di procedura remota (RPC) sup
 
 ## Recuperare un registro di controllo per una risorsa
 
-È possibile recuperare un registro di controllo per qualsiasi classe, mixin, tipo di dati o schema nella Libreria schema specificando l&#39;ID della risorsa nel percorso di una richiesta di GET all&#39;endpoint `/auditlog`.
+È possibile recuperare un registro di controllo per qualsiasi classe, gruppo di campi, tipo di dati o schema nella Libreria schema specificando l&#39;ID della risorsa nel percorso di una richiesta di GET all&#39;endpoint `/auditlog`.
 
 **Formato API**
 
@@ -39,11 +39,11 @@ GET /rpc/auditlog/{RESOURCE_ID}
 
 **Richiesta**
 
-La seguente richiesta recupera il registro di controllo per un mixin `Restaurant`.
+La richiesta seguente recupera il registro di controllo per un gruppo di campi `Restaurant`.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/rpc/auditlog/_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
+  https://platform.adobe.io/data/foundation/schemaregistry/rpc/auditlog/_{TENANT_ID}.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -57,11 +57,11 @@ Una risposta corretta restituisce un elenco cronologico delle modifiche apportat
 ```json
 [
   {
-    "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+    "id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
     "auditTrails": [
       {
-        "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "xdmType": "mixins",
+        "id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "xdmType": "fieldgroups",
         "action": "add",
         "path": "/definitions/customFields/properties/_{TENANT_ID}/properties/brand",
         "value": {
@@ -73,8 +73,8 @@ Una risposta corretta restituisce un elenco cronologico delle modifiche apportat
         }
       },
       {
-        "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "xdmType": "mixins",
+        "id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "xdmType": "fieldgroups",
         "action": "add",
         "path": "/meta:usageCount",
         "value": 0
