@@ -6,16 +6,16 @@ description: Scopri come definire un campo di tipo oggetto nell’interfaccia ut
 topic-legacy: user guide
 exl-id: 5b7b3cf0-7f11-4e15-af87-09127f4423a5
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '304'
 ht-degree: 0%
 
 ---
 
 # Definire i campi oggetto nell’interfaccia utente
 
-Adobe Experience Platform ti consente di personalizzare completamente la struttura delle classi, dei mixin e dei tipi di dati personalizzati Experience Data Model (XDM). Per organizzare e nidificare i campi correlati nelle risorse XDM personalizzate, è possibile definire campi di tipo oggetto che possono contenere campi secondari aggiuntivi.
+Adobe Experience Platform ti consente di personalizzare completamente la struttura delle classi Experience Data Model (XDM) personalizzate, dei gruppi di campi dello schema e dei tipi di dati. Per organizzare e nidificare i campi correlati nelle risorse XDM personalizzate, è possibile definire campi di tipo oggetto che possono contenere campi secondari aggiuntivi.
 
 Quando [definisci un nuovo campo](./overview.md#define) nell&#39;interfaccia utente di Adobe Experience Platform, utilizza il menu a discesa **[!UICONTROL Type]** e seleziona &quot;[!UICONTROL Object]&quot; dall&#39;elenco.
 
@@ -33,7 +33,7 @@ Dopo aver configurato il sottocampo e aver selezionato **[!UICONTROL Apply]**, �
 
 ![](../../images/ui/fields/special/object-nested.png)
 
-Una volta completata la costruzione dell’oggetto, potrebbe essere necessario riutilizzarne la struttura in classi e mixin diverse. In questo caso, è possibile scegliere di convertire l’oggetto in un tipo di dati. Per ulteriori informazioni, consulta la sezione sulla [conversione di oggetti in tipi di dati](../resources/data-types.md#convert) nella guida dell’interfaccia utente per i tipi di dati .
+Una volta completata la costruzione dell’oggetto, potrebbe essere necessario riutilizzarne la struttura in classi e gruppi di campi diversi. In questo caso, è possibile scegliere di convertire l’oggetto in un tipo di dati. Per ulteriori informazioni, consulta la sezione sulla [conversione di oggetti in tipi di dati](../resources/data-types.md#convert) nella guida dell’interfaccia utente per i tipi di dati .
 
 ## Passaggi successivi
 
