@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;schema;schema;enum;mixin;mixin;mixin;mixin;mixins;tipo di dati;tipi di dati;tipi di dati;tipo di dati;identità primaria;identità principale;profilo individuale XDM;campi XDM;tipo di dati enum;evento esperienza XDM;evento esperienza XDM;ExperienceEvent;experienceevent;XDM Experienceevenet;schema;progettazione;classe Classe;classi;classi;tipo di dati;tipo di dati;tipo di dati;schemi;schemi;mappa identità;mappa identità;mappa identità;progettazione schema;mappa;mappa;schema unione;schema unione
+keywords: Experience Platform;home;argomenti popolari;schema;schema;enum;mixin;gruppo di campi;gruppi di campi;mixins;tipo di dati;tipi di dati;tipi di dati;tipo di dati;identità primaria;profilo individuale XDM;campi XDM;tipo di dati enum;evento esperienza XDM;evento esperienza XDM ExperienceEvent;experienceEvent;XDM Experienceevent;XDM Experienceevenet;schema;classe;Classe classi;Classi;tipo di dati;tipo di dati;tipo di dati;schemi;schemi;mappa identità;mappa identità;mappa identità;progettazione schema;mappa;mappa;schema unione;schema unione
 solution: Experience Platform
 title: Nozioni di base sulla composizione dello schema
 topic-legacy: overview
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '3460'
+source-wordcount: '3497'
 ht-degree: 0%
 
 ---
@@ -123,49 +123,49 @@ Per acquisire i dati in [!DNL Experience Platform], è necessario creare prima u
 
 Gli schemi sono composti con la seguente formula:
 
-**Classe + Mixin&amp;ast; = Schema XDM**
+**Classe + Schema Field Group&amp;ast; = Schema XDM**
 
-&amp;ast;Uno schema è composto da una classe e da zero o più mixin. Ciò significa che puoi comporre uno schema di set di dati senza utilizzare affatto i mixin.
+&amp;ast;Uno schema è composto da una classe e da zero o più gruppi di campi dello schema. Ciò significa che è possibile comporre uno schema di set di dati senza utilizzare affatto i gruppi di campi.
 
 ### Classe {#class}
 
 La composizione di uno schema inizia con l’assegnazione di una classe. Le classi definiscono gli aspetti comportamentali dei dati che lo schema conterrà (record o serie temporali). Inoltre, le classi descrivono il numero più piccolo di proprietà comuni che tutti gli schemi basati su tale classe dovrebbero includere e forniscono un modo per unire più set di dati compatibili.
 
-La classe di uno schema determina quali mixin saranno idonei per essere utilizzati in tale schema. Questo è discusso più dettagliatamente nella [sezione successiva](#mixin).
+La classe di uno schema determina quali gruppi di campi saranno idonei per essere utilizzati in tale schema. Questo è discusso più dettagliatamente nella [sezione successiva](#field-group).
 
 Adobe fornisce diverse classi XDM standard (&quot;core&quot;). Due di queste classi, [!DNL XDM Individual Profile] e [!DNL XDM ExperienceEvent], sono necessarie per quasi tutti i processi della piattaforma a valle. Inoltre, puoi creare classi personalizzate per descrivere casi d’uso più specifici per la tua organizzazione. Le classi personalizzate sono definite da un&#39;organizzazione quando non sono disponibili classi principali definite da Adobi per descrivere un caso d&#39;uso univoco.
 
-La schermata seguente illustra come le classi sono rappresentate nell’interfaccia utente di Platform. Poiché lo schema di esempio mostrato non contiene mixin, tutti i campi visualizzati sono forniti dalla classe dello schema ([!UICONTROL XDM Individual Profile]).
+La schermata seguente illustra come le classi sono rappresentate nell’interfaccia utente di Platform. Poiché lo schema di esempio mostrato non contiene gruppi di campi, tutti i campi visualizzati sono forniti dalla classe dello schema ([!UICONTROL XDM Individual Profile]).
 
 ![](../images/schema-composition/class.png)
 
 Per l&#39;elenco più aggiornato delle classi XDM standard disponibili, fare riferimento al [repository XDM ufficiale](https://github.com/adobe/xdm/tree/master/components/classes). In alternativa, se preferisci visualizzare le risorse nell’interfaccia utente, puoi consultare la guida sull’ [esplorazione dei componenti XDM](../ui/explore.md) .
 
-### Mixin {#mixin}
+### Gruppo di campi {#field-group}
 
-Un mixin è un componente riutilizzabile che definisce uno o più campi che implementano determinate funzioni come dettagli personali, preferenze alberghiere o indirizzo. I mixin devono essere inclusi come parte di uno schema che implementa una classe compatibile.
+Un gruppo di campi è un componente riutilizzabile che definisce uno o più campi che implementano determinate funzioni quali dettagli personali, preferenze alberghiere o indirizzo. I gruppi di campi devono essere inclusi come parte di uno schema che implementa una classe compatibile.
 
-I mixin definiscono con quali classi sono compatibili in base al comportamento dei dati che rappresentano (record o serie temporali). Ciò significa che non tutti i mixin sono disponibili per l&#39;uso con tutte le classi.
+I gruppi di campi definiscono le classi con cui sono compatibili in base al comportamento dei dati che rappresentano (record o serie temporali). Ciò significa che non tutti i gruppi di campi sono disponibili per l&#39;uso con tutte le classi.
 
-[!DNL Experience Platform] include molti mixin di Adobe standard, consentendo al contempo ai fornitori di definire mixin per i propri utenti e ai singoli utenti di definire mixin base ai propri concetti specifici.
+[!DNL Experience Platform] include molti gruppi di campi di Adobe standard, consentendo al contempo ai fornitori di definire gruppi di campi per i propri utenti e ai singoli utenti di definire gruppi di campi per i propri concetti specifici.
 
-Ad esempio, per acquisire dettagli quali &quot;[!UICONTROL First Name]&quot; e &quot;[!UICONTROL Home Address]&quot; per lo schema &quot;[!UICONTROL Loyalty Members]&quot;, puoi utilizzare mixin standard che definiscono tali concetti comuni. Tuttavia, i concetti specifici dei casi di utilizzo meno comuni (come &quot;[!UICONTROL Loyalty Program Level]&quot;) spesso non hanno un mixin predefinito. In questo caso, è necessario definire il proprio mixin per acquisire queste informazioni.
+Ad esempio, per acquisire dettagli quali &quot;[!UICONTROL First Name]&quot; e &quot;[!UICONTROL Home Address]&quot; per lo schema &quot;[!UICONTROL Loyalty Members]&quot;, puoi utilizzare gruppi di campi standard che definiscono tali concetti comuni. Tuttavia, i concetti specifici dei casi di utilizzo meno comuni (come &quot;[!UICONTROL Loyalty Program Level]&quot;) spesso non dispongono di un gruppo di campi predefinito. In questo caso, è necessario definire un proprio gruppo di campi per acquisire queste informazioni.
 
-Gli schemi sono composti da &quot;zero o più&quot; mixin, quindi è possibile comporre uno schema valido senza utilizzare alcun mixin.
+Gli schemi sono composti da gruppi di campi &quot;zero o più&quot;, pertanto è possibile comporre uno schema valido senza utilizzare alcun gruppo di campi.
 
-La schermata seguente mostra come i mixin sono rappresentati nell’interfaccia utente di Platform. In questo esempio viene aggiunto un singolo mixin ([!UICONTROL Demographic Details]) a uno schema che fornisce un raggruppamento di campi alla struttura dello schema.
+La schermata seguente illustra come i gruppi di campi sono rappresentati nell’interfaccia utente di Platform. Un singolo gruppo di campi ([!UICONTROL Demographic Details]) viene aggiunto a uno schema in questo esempio, che fornisce un raggruppamento di campi alla struttura dello schema.
 
-![](../images/schema-composition/mixin.png)
+![](../images/schema-composition/field-group.png)
 
-Per l&#39;elenco più aggiornato dei mixin XDM standard disponibili, fai riferimento al [repository XDM ufficiale](https://github.com/adobe/xdm/tree/master/components/mixins). In alternativa, se preferisci visualizzare le risorse nell’interfaccia utente, puoi consultare la guida sull’ [esplorazione dei componenti XDM](../ui/explore.md) .
+Per l&#39;elenco più aggiornato dei gruppi di campi XDM standard disponibili, consulta l&#39; [archivio XDM ufficiale](https://github.com/adobe/xdm/tree/master/components/mixins). In alternativa, se preferisci visualizzare le risorse nell’interfaccia utente, puoi consultare la guida sull’ [esplorazione dei componenti XDM](../ui/explore.md) .
 
 ### Tipo di dati {#data-type}
 
-I tipi di dati vengono utilizzati come tipi di campi di riferimento in classi o schemi allo stesso modo dei campi letterali di base. La differenza principale consiste nel fatto che i tipi di dati possono definire più campi secondari. Simile a un mixin, un tipo di dati consente l’utilizzo coerente di una struttura a più campi, ma offre maggiore flessibilità rispetto a un mixin perché un tipo di dati può essere incluso ovunque in uno schema, aggiungendolo come &quot;tipo di dati&quot; di un campo.
+I tipi di dati vengono utilizzati come tipi di campi di riferimento in classi o schemi allo stesso modo dei campi letterali di base. La differenza principale consiste nel fatto che i tipi di dati possono definire più campi secondari. Analogamente a un gruppo di campi, un tipo di dati consente l’utilizzo coerente di una struttura a più campi, ma offre una flessibilità maggiore rispetto a un gruppo di campi, in quanto un tipo di dati può essere incluso in qualsiasi punto di uno schema, aggiungendolo come &quot;tipo di dati&quot; di un campo.
 
 [!DNL Experience Platform] fornisce una serie di tipi di dati comuni come parte del  [!DNL Schema Registry] per supportare l&#39;uso di pattern standard per descrivere le strutture di dati comuni. Questo è spiegato più dettagliatamente nelle [!DNL Schema Registry] esercitazioni, dove diventerà più chiaro man mano che segui i passaggi per definire i tipi di dati.
 
-La schermata seguente illustra come i tipi di dati sono rappresentati nell’interfaccia utente di Platform. Uno dei campi forniti dal mixin [!UICONTROL Demographic Details] utilizza il tipo di dati &quot;[!UICONTROL Person name]&quot;, come indicato dal testo che segue il carattere di barra verticale (`|`) accanto al nome del campo. Questo particolare tipo di dati fornisce diversi sottocampi relativi al nome di una singola persona, un costrutto che può essere riutilizzato per altri campi in cui il nome di una persona deve essere catturato.
+La schermata seguente illustra come i tipi di dati sono rappresentati nell’interfaccia utente di Platform. Uno dei campi forniti dal gruppo di campi [!UICONTROL Demographic Details] utilizza il tipo di dati &quot;[!UICONTROL Person name]&quot;, come indicato dal testo che segue il carattere di barra verticale (`|`) accanto al nome del campo. Questo particolare tipo di dati fornisce diversi sottocampi relativi al nome di una singola persona, un costrutto che può essere riutilizzato per altri campi in cui il nome di una persona deve essere catturato.
 
 ![](../images/schema-composition/data-type.png)
 
@@ -220,13 +220,13 @@ Per un elenco completo dei campi XDM disponibili, vedere il [dizionario dei camp
 
 ## Esempio di composizione
 
-Gli schemi rappresentano il formato e la struttura dei dati che verranno acquisiti in [!DNL Platform] e vengono generati utilizzando un modello di composizione. Come accennato in precedenza, questi schemi sono composti da una classe e da zero o più mixin compatibili con tale classe.
+Gli schemi rappresentano il formato e la struttura dei dati che verranno acquisiti in [!DNL Platform] e vengono generati utilizzando un modello di composizione. Come accennato in precedenza, questi schemi sono composti da una classe e da zero o più gruppi di campi compatibili con tale classe.
 
-Ad esempio, uno schema che descrive gli acquisti effettuati in un negozio al dettaglio potrebbe essere denominato &quot;[!UICONTROL Store Transactions]&quot;. Lo schema implementa la classe [!DNL XDM ExperienceEvent] combinata con il mixin standard [!UICONTROL Commerce] e un mixin definito dall&#39;utente [!UICONTROL Product Info].
+Ad esempio, uno schema che descrive gli acquisti effettuati in un negozio al dettaglio potrebbe essere denominato &quot;[!UICONTROL Store Transactions]&quot;. Lo schema implementa la classe [!DNL XDM ExperienceEvent] combinata con il gruppo di campi [!UICONTROL Commerce] standard e un gruppo di campi [!UICONTROL Product Info] definito dall&#39;utente.
 
-Un altro schema che tiene traccia del traffico del sito web potrebbe essere denominato &quot;[!UICONTROL Web Visits]&quot;. Implementa anche la classe [!DNL XDM ExperienceEvent], ma questa volta combina il mixin standard [!UICONTROL Web].
+Un altro schema che tiene traccia del traffico del sito web potrebbe essere denominato &quot;[!UICONTROL Web Visits]&quot;. Implementa anche la classe [!DNL XDM ExperienceEvent], ma questa volta combina il gruppo di campi [!UICONTROL Web] standard.
 
-Il diagramma seguente mostra questi schemi e i campi a cui ciascun mixin ha contribuito. Contiene inoltre due schemi basati sulla classe [!DNL XDM Individual Profile] , incluso lo schema &quot;[!UICONTROL Loyalty Members]&quot; menzionato in precedenza in questa guida.
+Il diagramma seguente mostra questi schemi e i campi a cui contribuiscono ciascun gruppo di campi. Contiene inoltre due schemi basati sulla classe [!DNL XDM Individual Profile] , incluso lo schema &quot;[!UICONTROL Loyalty Members]&quot; menzionato in precedenza in questa guida.
 
 ![](../images/schema-composition/composition.png)
 
@@ -249,18 +249,18 @@ Tutti i file di dati acquisiti in [!DNL Experience Platform] devono essere confo
 Se porti segmenti da sistemi esterni in Platform, devi utilizzare i seguenti componenti per acquisirli negli schemi:
 
 * [[!UICONTROL Segment definition] Classe](../classes/segment-definition.md): Utilizza questa classe standard per acquisire gli attributi chiave di una definizione di segmento esterna.
-* [[!UICONTROL Segment Membership Details] mixin](../mixins/profile/segmentation.md): Aggiungi questo mixin al tuo  [!UICONTROL XDM Individual Profile] schema per associare i profili dei clienti a segmenti specifici.
+* [[!UICONTROL Segment Membership Details] gruppo](../field-groups/profile/segmentation.md) di campi: Aggiungi questo gruppo di campi allo  [!UICONTROL XDM Individual Profile] schema per associare i profili cliente a segmenti specifici.
 
 ## Passaggi successivi
 
 Ora che conosci le nozioni di base della composizione dello schema, sei pronto per iniziare a esplorare e creare schemi utilizzando il [!DNL Schema Registry].
 
-Per rivedere la struttura delle due classi XDM principali e dei rispettivi mixin compatibili comunemente utilizzati, consulta la seguente documentazione di riferimento:
+Per esaminare la struttura delle due classi XDM principali e dei relativi gruppi di campi compatibili di uso comune, consulta la seguente documentazione di riferimento:
 
 * [[!DNL XDM Individual Profile]](../classes/individual-profile.md)
 * [[!DNL XDM ExperienceEvent]](../classes/experienceevent.md)
 
-L’ [!DNL Schema Registry] viene utilizzato per accedere a [!DNL Schema Library] all’interno di Adobe Experience Platform e fornisce un’interfaccia utente e un’API RESTful da cui sono accessibili tutte le risorse della libreria disponibili. Il [!DNL Schema Library] contiene risorse di settore definite da Adobe, risorse fornitore definite dai partner [!DNL Experience Platform] e classi, mixin, tipi di dati e schemi che sono stati composti da membri dell&#39;organizzazione.
+L’ [!DNL Schema Registry] viene utilizzato per accedere a [!DNL Schema Library] all’interno di Adobe Experience Platform e fornisce un’interfaccia utente e un’API RESTful da cui sono accessibili tutte le risorse della libreria disponibili. Il [!DNL Schema Library] contiene le risorse di settore definite da Adobe, le risorse del fornitore definite dai partner [!DNL Experience Platform] e le classi, i gruppi di campi, i tipi di dati e gli schemi che sono stati composti da membri dell&#39;organizzazione.
 
 Per iniziare a comporre lo schema utilizzando l&#39;interfaccia utente, segui insieme all&#39; [tutorial Editor di schema](../tutorials/create-schema-ui.md) per creare lo schema &quot;Membri fedeltà&quot; menzionato in questo documento.
 
