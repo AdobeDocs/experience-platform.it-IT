@@ -6,16 +6,16 @@ description: L’endpoint /classes nell’API del Registro di sistema dello sche
 topic-legacy: developer guide
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '1495'
+source-wordcount: '1505'
 ht-degree: 1%
 
 ---
 
 # Endpoint delle classi
 
-Tutti gli schemi Experience Data Model (XDM) devono essere basati su una classe . Una classe determina la struttura di base delle proprietà comuni che devono contenere tutti gli schemi basati su tale classe e quali mixin possono essere utilizzati in tali schemi. Inoltre, la classe di uno schema determina gli aspetti comportamentali dei dati contenuti in uno schema, di cui esistono due tipi:
+Tutti gli schemi Experience Data Model (XDM) devono essere basati su una classe . Una classe determina la struttura di base delle proprietà comuni che devono contenere tutti gli schemi basati su tale classe, nonché i gruppi di campi dello schema idonei all&#39;utilizzo in tali schemi. Inoltre, la classe di uno schema determina gli aspetti comportamentali dei dati contenuti in uno schema, di cui esistono due tipi:
 
 * **[!UICONTROL Record]**: Fornisce informazioni sugli attributi di un oggetto. Un soggetto potrebbe essere un&#39;organizzazione o un individuo.
 * **[!UICONTROL Time-series]**: Fornisce un&#39;istantanea del sistema al momento in cui un&#39;azione è stata eseguita direttamente o indirettamente da un soggetto del record.
@@ -246,7 +246,7 @@ Puoi definire una classe personalizzata sotto il contenitore `tenant` effettuand
 
 >[!IMPORTANT]
 >
->Quando si compone uno schema basato su una classe personalizzata definita dall&#39;utente, non sarà possibile utilizzare mixin standard. Ogni mixin definisce le classi con cui è compatibile nel relativo attributo `meta:intendedToExtend` . Una volta iniziato a definire mixin compatibili con la nuova classe (utilizzando `$id` della nuova classe nel campo `meta:intendedToExtend` del mixin), potrai riutilizzare tali mixin ogni volta che definisci uno schema che implementa la classe definita. Per ulteriori informazioni, consulta le sezioni su [creazione di mixins](./mixins.md#create) e [creazione di schemi](./schemas.md#create) nelle rispettive guide dei punti finali.
+>Quando si compone uno schema basato su una classe personalizzata definita dall&#39;utente, non è possibile utilizzare gruppi di campi standard. Ogni gruppo di campi definisce le classi con cui è compatibile nel relativo attributo `meta:intendedToExtend` . Una volta iniziati a definire gruppi di campi compatibili con la nuova classe (utilizzando `$id` della nuova classe nel campo `meta:intendedToExtend` del gruppo di campi), potrai riutilizzare tali gruppi di campi ogni volta che definisci uno schema che implementa la classe definita. Per ulteriori informazioni, consulta le sezioni su [creazione di gruppi di campi](./field-groups.md#create) e [creazione di schemi](./schemas.md#create) nelle rispettive guide dei punti finali.
 >
 >Se prevedi di utilizzare schemi basati su classi personalizzate in Profilo cliente in tempo reale, è anche importante tenere presente che gli schemi di unione sono costruiti solo in base a schemi che condividono la stessa classe. Se si desidera includere nell&#39;unione uno schema di classe personalizzato per un&#39;altra classe come [!UICONTROL XDM Individual Profile] o [!UICONTROL XDM ExperienceEvent], è necessario stabilire una relazione con un altro schema che utilizza tale classe. Per ulteriori informazioni, consulta l’esercitazione su [stabilire una relazione tra due schemi nell’API](../tutorials/relationship-api.md) .
 
@@ -260,7 +260,7 @@ POST /tenant/classes
 
 La richiesta di creare (POST) una classe deve includere un attributo `allOf` contenente `$ref` a uno dei due valori seguenti: `https://ns.adobe.com/xdm/data/record` o `https://ns.adobe.com/xdm/data/time-series`. Questi valori rappresentano il comportamento su cui si basa la classe (record o serie temporali, rispettivamente). Per ulteriori informazioni sulle differenze tra i dati dei record e i dati delle serie temporali, consulta la sezione sui tipi di comportamento all&#39;interno delle [nozioni di base sulla composizione dello schema](../schema/composition.md).
 
-Quando definisci una classe, puoi anche includere mixin o campi personalizzati nella definizione della classe. In questo modo i mixin e i campi aggiunti verranno inclusi in tutti gli schemi che implementano la classe . La richiesta di esempio seguente definisce una classe denominata &quot;Property&quot;, che acquisisce informazioni relative a proprietà diverse possedute e gestite da un&#39;azienda. Include un campo `propertyId` da includere ogni volta che la classe viene utilizzata.
+Quando si definisce una classe, è anche possibile includere gruppi di campi o campi personalizzati nella definizione della classe. In questo modo i gruppi di campi e i campi aggiunti verranno inclusi in tutti gli schemi che implementano la classe. La richiesta di esempio seguente definisce una classe denominata &quot;Property&quot;, che acquisisce informazioni relative a proprietà diverse possedute e gestite da un&#39;azienda. Include un campo `propertyId` da includere ogni volta che la classe viene utilizzata.
 
 ```SHELL
 curl -X POST \
