@@ -5,16 +5,16 @@ title: Endpoint API per i tipi di dati
 description: L’endpoint /datatypes nell’API del Registro di sistema dello schema consente di gestire programmaticamente i tipi di dati XDM all’interno dell’applicazione di esperienza.
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1151'
 ht-degree: 2%
 
 ---
 
 # Endpoint per tipi di dati
 
-I tipi di dati vengono utilizzati come campi di tipo riferimento nelle classi o nei mixin allo stesso modo dei campi letterali di base, con la differenza chiave che i tipi di dati possono definire più campi secondari. Sebbene siano simili ai mixin in quanto consentono un uso coerente di una struttura a più campi, i tipi di dati sono più flessibili perché possono essere inclusi in qualsiasi punto della struttura dello schema, mentre i mixin possono essere aggiunti solo a livello principale. L’endpoint `/datatypes` nell’ API [!DNL Schema Registry] consente di gestire i tipi di dati a livello di programmazione all’interno dell’applicazione di esperienza.
+I tipi di dati vengono utilizzati come campi di tipo riferimento nelle classi o nei gruppi di campi dello schema allo stesso modo dei campi letterali di base, con la differenza chiave che i tipi di dati possono definire più campi secondari. Sebbene siano simili ai gruppi di campi in quanto consentono un uso coerente di una struttura a più campi, i tipi di dati sono più flessibili perché possono essere inclusi in qualsiasi punto della struttura dello schema, mentre i gruppi di campi possono essere aggiunti solo a livello principale. L’endpoint `/datatypes` nell’ API [!DNL Schema Registry] consente di gestire i tipi di dati a livello di programmazione all’interno dell’applicazione di esperienza.
 
 ## Introduzione
 
