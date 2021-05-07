@@ -6,9 +6,9 @@ type: Documentation
 description: Adobe Experience Platform consente di unire frammenti di dati provenienti da più sorgenti e di combinarli per ottenere una visualizzazione completa di ciascuno dei singoli clienti. Quando si riuniscono questi dati, i criteri di unione sono le regole utilizzate da Platform per determinare in che modo i dati verranno definiti come prioritari e quali dati verranno combinati per creare una visualizzazione unificata.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2560'
+source-wordcount: '2569'
 ht-degree: 1%
 
 ---
@@ -752,19 +752,19 @@ Man mano che i record vengono acquisiti in Experience Platform, una marca tempor
 
 Talvolta possono verificarsi casi d’uso, ad esempio il backfill dei dati o la verifica dell’ordine corretto degli eventi se i record vengono acquisiti in modo non ordinato, dove è necessario fornire una marca temporale personalizzata e far rispettare alla policy di unione la marca temporale personalizzata anziché la marca temporale di sistema.
 
-Per utilizzare una marca temporale personalizzata, è necessario aggiungere la [[!DNL External Source System Audit Details Mixin]](#mixin-details) allo schema del profilo. Una volta aggiunta, la marca temporale personalizzata può essere compilata utilizzando il campo `xdm:lastUpdatedDate` . Quando un record viene acquisito con il campo `xdm:lastUpdatedDate` popolato, Experience Platform lo utilizzerà per unire record o frammenti di profilo all’interno e tra set di dati. Se `xdm:lastUpdatedDate` non è presente o non è popolato, Platform continuerà a utilizzare la marca temporale del sistema.
+Per utilizzare una marca temporale personalizzata, è necessario aggiungere allo schema del profilo il [[!DNL External Source System Audit Details] gruppo di campi dello schema](#field-group-details). Una volta aggiunta, la marca temporale personalizzata può essere compilata utilizzando il campo `xdm:lastUpdatedDate` . Quando un record viene acquisito con il campo `xdm:lastUpdatedDate` popolato, Experience Platform lo utilizzerà per unire record o frammenti di profilo all’interno e tra set di dati. Se `xdm:lastUpdatedDate` non è presente o non è popolato, Platform continuerà a utilizzare la marca temporale del sistema.
 
 >[!NOTE]
 >
 >È necessario assicurarsi che la marca temporale `xdm:lastUpdatedDate` sia compilata quando si invia un PATCH sullo stesso record.
 
-Per istruzioni dettagliate sull’utilizzo degli schemi tramite l’API del Registro di sistema dello schema, tra cui come aggiungere i mixin agli schemi, visita l’ [esercitazione per creare uno schema utilizzando l’API](../../xdm/tutorials/create-schema-api.md).
+Per istruzioni dettagliate sull’utilizzo degli schemi tramite l’API del Registro di sistema dello schema, tra cui come aggiungere gruppi di campi agli schemi, visita l’ [esercitazione per creare uno schema utilizzando l’API](../../xdm/tutorials/create-schema-api.md).
 
 Per utilizzare le marche temporali personalizzate utilizzando l&#39;interfaccia utente, consulta la sezione su [uso delle marche temporali personalizzate](../ui/merge-policies.md#custom-timestamps) nella [guida utente dei criteri di unione](../ui/merge-policies.md).
 
-#### [!DNL External Source System Audit Details Mixin] dettagli  {#mixin-details}
+#### [!DNL External Source System Audit Details] dettagli gruppo di campi  {#field-group-details}
 
-L&#39;esempio seguente mostra i campi compilati correttamente in [!DNL External Source System Audit Details Mixin]. Il mixin completo JSON può essere visualizzato anche nel repository [public Experience Data Model (XDM)](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) su GitHub.
+L’esempio seguente mostra i campi compilati correttamente nel gruppo di campi [!DNL External Source System Audit Details] . Il gruppo di campi completo JSON può essere visualizzato anche nel repository [public Experience Data Model (XDM)](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) su GitHub.
 
 ```json
 {
