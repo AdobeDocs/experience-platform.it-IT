@@ -7,9 +7,9 @@ topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1337'
+source-wordcount: '1354'
 ht-degree: 1%
 
 ---
@@ -111,35 +111,35 @@ Registra i valori `$id` dei due schemi che desideri definire una relazione tra d
 
 ## Definire un campo di riferimento per lo schema di origine
 
-All&#39;interno di [!DNL Schema Registry], i descrittori di relazione funzionano in modo simile alle chiavi esterne nelle tabelle di database relazionali: un campo nello schema di origine funge da riferimento al campo di identità principale di uno schema di destinazione. Se lo schema di origine non dispone di un campo per questo scopo, potrebbe essere necessario creare un mixin con il nuovo campo e aggiungerlo allo schema. Questo nuovo campo deve avere un valore `type` di &quot;[!DNL string]&quot;.
+All&#39;interno di [!DNL Schema Registry], i descrittori di relazione funzionano in modo simile alle chiavi esterne nelle tabelle di database relazionali: un campo nello schema di origine funge da riferimento al campo di identità principale di uno schema di destinazione. Se lo schema di origine non dispone di un campo per questo scopo, potrebbe essere necessario creare un gruppo di campi dello schema con il nuovo campo e aggiungerlo allo schema. Questo nuovo campo deve avere un valore `type` di &quot;[!DNL string]&quot;.
 
 >[!IMPORTANT]
 >
 >A differenza dello schema di destinazione, lo schema di origine non può utilizzare la propria identità primaria come campo di riferimento.
 
-In questa esercitazione, lo schema di destinazione &quot;[!DNL Hotels]&quot; contiene un campo `hotelId` che funge da identità principale dello schema e agisce quindi anche come campo di riferimento. Tuttavia, lo schema di origine &quot;[!DNL Loyalty Members]&quot; non dispone di un campo dedicato da utilizzare come riferimento e deve essere assegnato un nuovo mixin che aggiunge un nuovo campo allo schema: `favoriteHotel`.
+In questa esercitazione, lo schema di destinazione &quot;[!DNL Hotels]&quot; contiene un campo `hotelId` che funge da identità principale dello schema e agisce quindi anche come campo di riferimento. Tuttavia, lo schema di origine &quot;[!DNL Loyalty Members]&quot; non dispone di un campo dedicato da utilizzare come riferimento e deve essere assegnato un nuovo gruppo di campi che aggiunge un nuovo campo allo schema: `favoriteHotel`.
 
 >[!NOTE]
 >
 >Se lo schema di origine dispone già di un campo dedicato che si intende utilizzare come campo di riferimento, è possibile passare al passaggio [creazione di un descrittore di riferimento](#reference-identity).
 
-### Crea un nuovo mixin
+### Crea un nuovo gruppo di campi
 
-Per aggiungere un nuovo campo a uno schema, è innanzitutto necessario definirlo in un mixin. Puoi creare un nuovo mixin effettuando una richiesta POST all&#39;endpoint `/tenant/mixins`.
+Per aggiungere un nuovo campo a uno schema, è innanzitutto necessario definirlo in un gruppo di campi. È possibile creare un nuovo gruppo di campi effettuando una richiesta POST all&#39;endpoint `/tenant/fieldgroups`.
 
 **Formato API**
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
 **Richiesta**
 
-La seguente richiesta crea un nuovo mixin che aggiunge un campo `favoriteHotel` nello spazio dei nomi `_{TENANT_ID}` di qualsiasi schema a cui viene aggiunto.
+La richiesta seguente crea un nuovo gruppo di campi che aggiunge un campo `favoriteHotel` nello spazio dei nomi `_{TENANT_ID}` di qualsiasi schema a cui viene aggiunto.
 
 ```shell
 curl -X POST\
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -149,7 +149,7 @@ curl -X POST\
         "type": "object",
         "title": "Favorite Hotel",
         "meta:intendedToExtend": ["https://ns.adobe.com/xdm/context/profile"],
-        "description": "Favorite hotel mixin for the Loyalty Members schema.",
+        "description": "Favorite hotel field group for the Loyalty Members schema.",
         "definitions": {
             "favoriteHotel": {
               "properties": {
@@ -176,20 +176,20 @@ curl -X POST\
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli del mixin appena creato.
+Una risposta corretta restituisce i dettagli del gruppo di campi appena creato.
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220",
-    "meta:altId": "_{TENANT_ID}.mixins.3387945212ad76ee59b6d2b964afb220",
-    "meta:resourceType": "mixins",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220",
+    "meta:altId": "_{TENANT_ID}.fieldgroups.3387945212ad76ee59b6d2b964afb220",
+    "meta:resourceType": "fieldgroups",
     "version": "1.0",
     "type": "object",
     "title": "Favorite Hotel",
     "meta:intendedToExtend": [
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "description": "Favorite hotel mixin for the Loyalty Members schema.",
+    "description": "Favorite hotel field group for the Loyalty Members schema.",
     "definitions": {
         "favoriteHotel": {
             "properties": {
@@ -229,13 +229,13 @@ Una risposta corretta restituisce i dettagli del mixin appena creato.
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `$id` | Identificatore univoco del nuovo mixin generato dal sistema di sola lettura. Si presenta sotto forma di URI. |
+| `$id` | Identificatore univoco del nuovo gruppo di campi generato dal sistema di sola lettura. Si presenta sotto forma di URI. |
 
-Registra l&#39;URI `$id` del mixin, da utilizzare nel passaggio successivo dell&#39;aggiunta del mixin allo schema di origine.
+Registra l&#39; URI `$id` del gruppo di campi, da utilizzare nel passaggio successivo dell&#39;aggiunta del gruppo di campi allo schema di origine.
 
-### Aggiungi il mixin allo schema di origine
+### Aggiungi il gruppo di campi allo schema di origine
 
-Dopo aver creato un mixin, puoi aggiungerlo allo schema di origine effettuando una richiesta PATCH all&#39;endpoint `/tenant/schemas/{SCHEMA_ID}`.
+Dopo aver creato un gruppo di campi, è possibile aggiungerlo allo schema di origine effettuando una richiesta PATCH all&#39;endpoint `/tenant/schemas/{SCHEMA_ID}`.
 
 **Formato API**
 
@@ -249,7 +249,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **Richiesta**
 
-La richiesta seguente aggiunge il mixin &quot;[!DNL Favorite Hotel]&quot; allo schema &quot;[!DNL Loyalty Members]&quot;.
+La richiesta seguente aggiunge il gruppo di campi &quot;[!DNL Favorite Hotel]&quot; allo schema &quot;[!DNL Loyalty Members]&quot;.
 
 ```shell
 curl -X PATCH \
@@ -264,7 +264,7 @@ curl -X PATCH \
       "op": "add", 
       "path": "/allOf/-", 
       "value":  {
-        "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220"
+        "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220"
       }
     }
   ]'
@@ -273,12 +273,12 @@ curl -X PATCH \
 | Proprietà | Descrizione |
 | --- | --- |
 | `op` | Operazione PATCH da eseguire. Questa richiesta utilizza l&#39;operazione `add` . |
-| `path` | Percorso del campo schema in cui verrà aggiunta la nuova risorsa. Quando si aggiungono mixin agli schemi, il valore deve essere &quot;/allOf/-&quot;. |
-| `value.$ref` | Il `$id` del mixin da aggiungere. |
+| `path` | Percorso del campo schema in cui verrà aggiunta la nuova risorsa. Quando si aggiungono gruppi di campi agli schemi, il valore deve essere &quot;/allOf/-&quot;. |
+| `value.$ref` | Il `$id` del gruppo di campi da aggiungere. |
 
 **Risposta**
 
-Una risposta corretta restituisce i dettagli dello schema aggiornato, che ora include il valore `$ref` del mixin aggiunto sotto la relativa matrice `allOf`.
+Una risposta corretta restituisce i dettagli dello schema aggiornato, che ora include il valore `$ref` del gruppo di campi aggiunti sotto la relativa matrice `allOf`.
 
 ```json
 {
@@ -300,13 +300,13 @@ Una risposta corretta restituisce i dettagli dello schema aggiornato, che ora in
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/ec16dfa484358f80478b75cde8c430d3"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/ec16dfa484358f80478b75cde8c430d3"
         },
         {
             "$ref": "https://ns.adobe.com/xdm/context/identitymap"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220"
         }
     ],
     "meta:containerId": "tenant",
@@ -323,8 +323,8 @@ Una risposta corretta restituisce i dettagli dello schema aggiornato, che ora in
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/ec16dfa484358f80478b75cde8c430d3",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/61969bc646b66a6230a7e8840f4a4d33"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/ec16dfa484358f80478b75cde8c430d3",
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/61969bc646b66a6230a7e8840f4a4d33"
     ],
     "meta:xdmType": "object",
     "meta:registryMetadata": {
