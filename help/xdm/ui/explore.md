@@ -1,28 +1,28 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;interfaccia utente;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;esplorare;classe;mixin;tipo di dati;schema;
+keywords: Experience Platform;home;argomenti popolari;interfaccia utente;XDM;sistema XDM;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati esperienza;modello dati;modello dati;esplorare;classe;gruppo di campi;tipo di dati;schema;
 solution: Experience Platform
 title: Esplorare le risorse XDM nell’interfaccia utente
-description: Scopri come esplorare schemi, classi, mixin e tipi di dati esistenti nell’interfaccia utente di Experience Platform.
+description: Scopri come esplorare gli schemi, le classi, i gruppi di campi dello schema e i tipi di dati esistenti nell’interfaccia utente di Experience Platform.
 topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '919'
 ht-degree: 0%
 
 ---
 
 # Esplorare le risorse XDM nell’interfaccia utente
 
-In Adobe Experience Platform, tutte le risorse Experience Data Model (XDM) sono memorizzate in [!DNL Schema Library], incluse le risorse standard fornite da risorse Adobe e personalizzate definite dalla tua organizzazione. Nell’interfaccia utente di Experience Platform, puoi visualizzare la struttura e i campi di qualsiasi schema, classe, mixin o tipo di dati esistente in [!DNL Schema Library]. Questa funzione è particolarmente utile nella pianificazione e preparazione dell’acquisizione dei dati, in quanto l’interfaccia utente fornisce informazioni sui tipi di dati previsti e sui casi d’uso di ciascun campo fornito da queste risorse XDM.
+In Adobe Experience Platform, tutte le risorse Experience Data Model (XDM) sono memorizzate in [!DNL Schema Library], incluse le risorse standard fornite da risorse Adobe e personalizzate definite dalla tua organizzazione. Nell’interfaccia utente di Experience Platform, è possibile visualizzare la struttura e i campi di qualsiasi schema, classe, gruppo di campi dello schema o tipo di dati esistente in [!DNL Schema Library]. Questa funzione è particolarmente utile nella pianificazione e preparazione dell’acquisizione dei dati, in quanto l’interfaccia utente fornisce informazioni sui tipi di dati previsti e sui casi d’uso di ciascun campo fornito da queste risorse XDM.
 
-Questa esercitazione descrive i passaggi per esplorare gli schemi, le classi, i mixin e i tipi di dati esistenti nell’interfaccia utente di Experience Platform.
+Questa esercitazione descrive i passaggi necessari per esplorare gli schemi, le classi, i gruppi di campi e i tipi di dati esistenti nell’interfaccia utente di Experience Platform.
 
 ## Cerca una risorsa XDM {#lookup}
 
-Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Schemas]** nel menu di navigazione a sinistra. L’area di lavoro [!UICONTROL Schemas] fornisce una scheda **[!UICONTROL Browse]** per esplorare tutte le risorse XDM esistenti nell’organizzazione, insieme a schede dedicate aggiuntive per l’esplorazione specifica di **[!UICONTROL Classes]**, **[!UICONTROL Mixins]** e **[!UICONTROL Data types]** .
+Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Schemas]** nel menu di navigazione a sinistra. L’area di lavoro [!UICONTROL Schemas] fornisce una scheda **[!UICONTROL Browse]** per esplorare tutte le risorse XDM esistenti nell’organizzazione, insieme a schede dedicate aggiuntive per l’esplorazione specifica di **[!UICONTROL Classes]**, **[!UICONTROL Field groups]** e **[!UICONTROL Data types]** .
 
 ![](../images/ui/explore/tabs.png)
 
@@ -80,7 +80,7 @@ Se il campo che stai analizzando è un campo enum, nella barra a destra vengono 
 
 ### Campi di identità {#identity}
 
-Quando si esaminano gli schemi che contengono campi di identità, questi campi sono elencati nella barra a sinistra sotto la classe o il mixin che li fornisce allo schema. Seleziona il nome del campo di identità nella barra a sinistra per visualizzare il campo nell’area di lavoro, indipendentemente dalla sua profondità di nidificazione.
+Quando si esaminano gli schemi che contengono campi di identità, questi campi sono elencati nella barra a sinistra sotto la classe o il gruppo di campi che li fornisce allo schema. Seleziona il nome del campo di identità nella barra a sinistra per visualizzare il campo nell’area di lavoro, indipendentemente dalla sua profondità di nidificazione.
 
 I campi di identità sono evidenziati nell&#39;area di lavoro con l&#39;icona dell&#39;impronta digitale (![Icona dell&#39;impronta digitale Immagine](../images/ui/explore/identity-symbol.png)). Se si seleziona il nome del campo identità, è possibile visualizzare informazioni aggiuntive, ad esempio [spazio dei nomi identità](../../identity-service/namespaces.md) e specificare se il campo è o meno l&#39;identità principale dello schema.
 
