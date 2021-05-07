@@ -6,9 +6,9 @@ topic-legacy: privacy events
 description: Scopri come configurare le operazioni e gli schemi di dati per trasmettere le scelte di consenso dei clienti quando si attivano i segmenti nelle destinazioni in Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2459'
+source-wordcount: '2466'
 ht-degree: 0%
 
 ---
@@ -104,7 +104,7 @@ I dati di consenso del cliente devono essere inviati ai set di dati i cui schemi
 
 Dopo aver creato un set di dati abilitato [!DNL Profile] per la raccolta dei dati di consenso, assicurati che i criteri di unione siano stati configurati in modo da includere sempre i campi di consenso TCF nei profili dei clienti. Ciò comporta l’impostazione della precedenza del set di dati in modo che il set di dati di consenso abbia priorità rispetto ad altri set di dati potenzialmente in conflitto.
 
-Per ulteriori informazioni su come utilizzare i criteri di unione, consultare la [guida utente dei criteri di unione](../../../../profile/ui/merge-policies.md). Quando imposti i criteri di unione, devi accertarti che i segmenti includano tutti gli attributi di consenso richiesti dal [mixin privacy XDM](./dataset.md#privacy-mixin), come descritto nella guida sulla preparazione dei set di dati.
+Per ulteriori informazioni su come utilizzare i criteri di unione, consultare la [guida utente dei criteri di unione](../../../../profile/ui/merge-policies.md). Quando imposti i criteri di unione, devi accertarti che i segmenti includano tutti gli attributi di consenso richiesti dal gruppo di campi [schema privacy XDM](./dataset.md#privacy-field-group), come descritto nella guida sulla preparazione dei set di dati.
 
 ## Integra l’SDK web per Experience Platform per raccogliere i dati sul consenso dei clienti {#sdk}
 
@@ -196,7 +196,7 @@ Puoi anche raccogliere i dati di consenso TCF 2.0 su ogni evento attivato in Pla
 
 >[!NOTE]
 >
->Per utilizzare questo metodo, devi aver aggiunto il [!DNL Experience Event Privacy mixin] allo schema [!DNL Profile] abilitato [!DNL XDM ExperienceEvent]. Consulta la sezione sull’ [aggiornamento dello schema ExperienceEvent](./dataset.md#event-schema) nella guida alla preparazione dei set di dati per i passaggi su come configurarlo.
+>Per utilizzare questo metodo, devi aver aggiunto il gruppo di campi Privacy dell’evento esperienza allo schema [!DNL Profile] abilitato [!DNL XDM ExperienceEvent] . Consulta la sezione sull’ [aggiornamento dello schema ExperienceEvent](./dataset.md#event-schema) nella guida alla preparazione dei set di dati per i passaggi su come configurarlo.
 
 Il comando `sendEvent` deve essere utilizzato come callback nei listener di eventi appropriati sul sito web. Il comando prevede due argomenti: (1) una stringa che indica il tipo di comando (in questo caso, `sendEvent`) e (2) un payload contenente un oggetto `xdm` che fornisce i campi di consenso richiesti come JSON:
 
