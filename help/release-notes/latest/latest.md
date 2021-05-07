@@ -6,9 +6,9 @@ last-update: April 21, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 translation-type: tm+mt
-source-git-commit: f0350be580394516016373b1754a49951b58e846
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '885'
 ht-degree: 10%
 
 ---
@@ -45,7 +45,7 @@ Experience Data Model (XDM) è una specifica open-source progettata per migliora
 
 | Funzione | Descrizione |
 | --- | --- |
-| Raccomandazioni in base allo schema per settore | Quando selezioni le classi e i mixin nell’interfaccia utente dell’Editor schema, puoi utilizzare un nuovo filtro per visualizzare i componenti standard consigliati in base al settore specifico. Consulta la documentazione sui [modelli di dati del settore](https://www.adobe.com/go/xdm-industry-erds-en) per ulteriori informazioni su come questi componenti si relazionano tra loro per diversi casi d&#39;uso del settore. |
+| Raccomandazioni in base allo schema per settore | Quando si selezionano le classi e i gruppi di campi dello schema nell’interfaccia utente dell’Editor di schema, è possibile utilizzare un nuovo filtro per visualizzare i componenti standard consigliati in base al settore specifico. Consulta la documentazione sui [modelli di dati del settore](https://www.adobe.com/go/xdm-industry-erds-en) per ulteriori informazioni su come questi componenti si relazionano tra loro per diversi casi d&#39;uso del settore. |
 
 ## [!DNL Intelligent Services] {#intelligent-services}
 
