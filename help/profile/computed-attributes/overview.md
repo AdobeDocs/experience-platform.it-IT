@@ -6,9 +6,9 @@ type: Documentation
 description: Gli attributi calcolati sono funzioni per aggregare dati a livello di evento in attributi a livello di profilo. Queste funzioni vengono calcolate automaticamente in modo che possano essere utilizzate tra segmentazione, attivazione e personalizzazione.
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '723'
+source-wordcount: '725'
 ht-degree: 1%
 
 ---
@@ -55,4 +55,4 @@ Gli attributi dello schema già utilizzati in un’espressione di definizione de
 
 Poiché non è stata rilevata alcuna dipendenza, Experience Platform non valuterà automaticamente l’attributo calcolato associato ogni volta che viene valutata la definizione del segmento.
 
-In alternativa, la creazione di attributi calcolati può essere gestita tramite un mixin specifico che aggiunge nuovi attributi calcolati che non sono in conflitto con gli attributi esistenti. Un’altra alternativa è quella di ricreare il segmento con il tracciamento corretto della dipendenza per i nuovi attributi calcolati.
+In alternativa, la creazione di attributi calcolati può essere gestita tramite un gruppo di campi schema specifico che aggiunge nuovi attributi calcolati che non sono in conflitto con gli attributi esistenti. Un’altra alternativa è quella di ricreare il segmento con il tracciamento corretto della dipendenza per i nuovi attributi calcolati.
