@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Questo documento fornisce una panoramica della classe Profilo individuale XDM.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
 translation-type: tm+mt
-source-git-commit: 81d96b629ce628f663a86701d8f076eb771fdf77
+source-git-commit: 612917b23d1841556a71f6378497e1d033bc3b62
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 I profili possono variare da segnali comportamentali anonimi (come i cookie del browser) a profili altamente identificati contenenti informazioni dettagliate come nome, data di nascita, posizione e indirizzo e-mail. Man mano che un profilo cresce, diventa un solido archivio di informazioni personali, identità, dettagli di contatto e preferenze di comunicazione per un individuo. Per ulteriori informazioni di alto livello sull’utilizzo di questa classe nell’ecosistema della piattaforma, consulta la [panoramica XDM](../home.md#data-behaviors).
 
-La classe [!DNL XDM Individual Profile] fornisce direttamente diversi valori generati dal sistema che vengono compilati automaticamente al momento dell’acquisizione dei dati, mentre tutti gli altri campi devono essere aggiunti tramite l’uso di [mixins compatibili](#mixins):
+La classe [!DNL XDM Individual Profile] fornisce direttamente diversi valori generati dal sistema che vengono compilati automaticamente al momento dell&#39;acquisizione dei dati, mentre tutti gli altri campi devono essere aggiunti tramite l&#39;uso di [gruppi di campi dello schema compatibili](#field-groups):
 
 ![](../images/classes/individual-profile.png)
 
@@ -33,18 +33,18 @@ La classe [!DNL XDM Individual Profile] fornisce direttamente diversi valori gen
 | `repositoryCreatedBy` | ID dell&#39;utente che ha creato il record. |
 | `repositoryLastModifiedBy` | ID dell&#39;utente che ha modificato il record per l&#39;ultima volta. |
 
-## Mixins compatibili {#mixins}
+## Gruppi di campi compatibili {#field-groups}
 
 >[!NOTE]
 >
->I nomi di diversi mixin sono cambiati. Per ulteriori informazioni, consulta il documento sugli [aggiornamenti dei nomi mixin](../mixins/name-updates.md) .
+>I nomi di diversi gruppi di campi sono cambiati. Per ulteriori informazioni, consulta il documento sugli [aggiornamenti dei nomi dei gruppi di campi](../field-groups/name-updates.md) .
 
-Adobe fornisce diversi mixin standard da utilizzare con la classe [!DNL XDM Individual Profile] . Di seguito è riportato un elenco di alcuni mixin comunemente utilizzati per la classe:
+Adobe fornisce diversi gruppi di campi standard da utilizzare con la classe [!DNL XDM Individual Profile] . Di seguito è riportato un elenco di alcuni gruppi di campi di uso comune per la classe:
 
-* [[!UICONTROL IdentityMap]](../mixins/profile/identitymap.md)
-* [[!UICONTROL Demographic Details]](../mixins/profile/person-details.md)
-* [[!UICONTROL Personal Contact Details]](../mixins/profile/personal-details.md)
-* [[!UICONTROL Work Contact Details]](../mixins/profile/work-details.md)
-* [[!UICONTROL Segment Membership Details]](../mixins/profile/segmentation.md)
+* [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
+* [[!UICONTROL Demographic Details]](../field-groups/profile/demographic-details.md)
+* [[!UICONTROL Personal Contact Details]](../field-groups/profile/personal-contact-details.md)
+* [[!UICONTROL Work Contact Details]](../field-groups/profile/work-contact-details.md)
+* [[!UICONTROL Segment Membership Details]](../field-groups/profile/segmentation.md)
 
-Per un elenco completo di tutti i mixin compatibili per [!DNL XDM Individual Profile], fai riferimento al [repository GitHub XDM](https://github.com/adobe/xdm/tree/master/components/mixins/profile).
+Per un elenco completo di tutti i gruppi di campi compatibili per [!DNL XDM Individual Profile], consulta l’ [repository GitHub XDM](https://github.com/adobe/xdm/tree/master/components/mixins/profile).
