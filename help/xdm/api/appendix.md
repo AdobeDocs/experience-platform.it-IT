@@ -6,9 +6,9 @@ description: Questo documento fornisce informazioni supplementari relative all'u
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '775'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Puoi filtrare i risultati utilizzando il parametro `property` , utilizzato per a
 
 >[!TIP]
 >
->Puoi usare il parametro `property` per filtrare i mixin in base alla classe compatibile. Ad esempio, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` restituisce solo i mixin compatibili con la classe [!DNL XDM Individual Profile] .
+>Puoi utilizzare il parametro `property` per filtrare i gruppi di campi dello schema in base alla relativa classe compatibile. Ad esempio, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` restituisce solo i gruppi di campi compatibili con la classe [!DNL XDM Individual Profile] .
 
 ## Modalità di compatibilità
 
