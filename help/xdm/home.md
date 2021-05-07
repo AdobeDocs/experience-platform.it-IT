@@ -6,7 +6,7 @@ topic-legacy: overview
 description: La standardizzazione e l'interoperabilità sono concetti chiave alla base di Adobe Experience Platform. Experience Data Model (XDM), basato su un Adobe, è uno sforzo per standardizzare i dati sulla customer experience e definire schemi per la gestione della customer experience.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 translation-type: tm+mt
-source-git-commit: 58f6c5e3ac77070807f7486bf429493d14fdda9e
+source-git-commit: b70e693b4ffeda561de4d4c8dd8fd1adeec489f7
 workflow-type: tm+mt
 source-wordcount: '1694'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Il termine &quot;mixin&quot; è stato aggiornato a &quot;schema field group&quot; per promuovere la comprensione. I gruppi di campi sono insiemi di campi riutilizzabili per supportare i casi di utilizzo aziendali. Questa modifica si riflette ora nell’API del Registro di sistema dello schema, nell’interfaccia utente di Adobe Experience Platform e in tutta la documentazione di Platform.
+>Il termine &quot;mixin&quot; è stato aggiornato allo schema &quot;gruppo di campi&quot; per promuovere la comprensione. I gruppi di campi sono insiemi di campi riutilizzabili per supportare i casi di utilizzo aziendali. Questa modifica si riflette ora nell’API del Registro di sistema dello schema, nell’interfaccia utente di Adobe Experience Platform e in tutta la documentazione di Platform.
 
 La standardizzazione e l&#39;interoperabilità sono concetti chiave alla base di Adobe Experience Platform. [!DNL Experience Data Model] (XDM), guidato da un Adobe, è uno sforzo per standardizzare i dati sulla customer experience e definire schemi per la gestione della customer experience.
 
