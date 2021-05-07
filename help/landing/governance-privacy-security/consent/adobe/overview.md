@@ -6,9 +6,9 @@ topic-legacy: getting started
 description: Scopri come elaborare i segnali di consenso dei clienti in Adobe Experience Platform utilizzando lo standard Adobe 2.0.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1563'
+source-wordcount: '1565'
 ht-degree: 0%
 
 ---
@@ -77,7 +77,7 @@ Dopo aver creato un set di dati abilitato [!DNL Profile] per l’elaborazione de
 >
 >Se non si dispone di set di dati in conflitto, è invece necessario impostare la precedenza delle marche temporali per il criterio di unione. In questo modo è possibile garantire che l’impostazione di consenso utilizzata sia l’impostazione più recente del consenso specificato da un cliente.
 
-Per ulteriori informazioni su come utilizzare i criteri di unione, consultare la [guida utente dei criteri di unione](../../../../profile/ui/merge-policies.md). Quando imposti i criteri di unione, devi assicurarti che i profili includano tutti gli attributi di consenso richiesti dal mixin Consensi e preferenze, come descritto nella guida sulla [preparazione dei set di dati](./dataset.md).
+Per ulteriori informazioni su come utilizzare i criteri di unione, consultare la [guida utente dei criteri di unione](../../../../profile/ui/merge-policies.md). Quando si impostano i criteri di unione, è necessario assicurarsi che i profili includano tutti gli attributi di consenso richiesti forniti dal gruppo di campi dello schema Consensi e preferenze, come descritto nella guida sulla [preparazione dei set di dati](./dataset.md).
 
 ## Inserire i dati di consenso in Platform
 
