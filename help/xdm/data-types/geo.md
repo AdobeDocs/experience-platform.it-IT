@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati Geo XDM.
 exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '193'
 ht-degree: 4%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 4%
 | `postalCode` | Stringa | Codice postale della posizione. I codici postali non sono disponibili per tutti i paesi. In alcuni paesi ciò conterrà solo una parte del codice postale. |
 | `stateProvince` | Stringa | La parte dello stato o della provincia dell&#39;osservazione. Il formato è conforme allo standard [ISO 3166-2 (paese e suddivisione)](http://www.unece.org/cefact/locode/subdivisions.html). |
 
-Per ulteriori dettagli sul mixin, consulta l’archivio XDM pubblico:
+Per ulteriori dettagli sul tipo di dati, consulta l’archivio XDM pubblico:
 
 * [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/datatypes/geo.example.1.json)
 * [Schema completo](https://github.com/adobe/xdm/blob/master/components/datatypes/geo.schema.json)
