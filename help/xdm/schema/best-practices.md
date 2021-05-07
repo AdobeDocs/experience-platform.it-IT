@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2502'
+source-wordcount: '2511'
 ht-degree: 1%
 
 ---
@@ -193,26 +193,26 @@ Ad Experience Platform, i campi XDM contrassegnati come identità vengono utiliz
 
 Durante la progettazione degli schemi, qualsiasi chiave primaria nelle tabelle di database relazionali sarà probabilmente candidato per le identità principali. Altri esempi di campi di identità applicabili sono gli indirizzi e-mail dei clienti, i numeri di telefono, gli ID account e [ECID](../../identity-service/ecid.md).
 
-### Adobe di mixins dell&#39;applicazione
+### Adobe di gruppi di campi dello schema dell&#39;applicazione
 
-Experience Platform fornisce diversi mixin XDM predefiniti per l’acquisizione di dati relativi alle seguenti applicazioni di Adobe:
+Experience Platform fornisce diversi gruppi di campi di schema XDM predefiniti per l’acquisizione di dati relativi alle seguenti applicazioni di Adobe:
 
 * Adobe Analytics
 * Adobe Audience Manager
 * Adobe Campaign
 * Adobe Target
 
-Ad esempio, il [[!UICONTROL Adobe Analytics ExperienceEvent Template Mixin]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) consente di mappare i campi specifici di [!DNL Analytics] agli schemi XDM. A seconda delle applicazioni di Adobe con cui stai lavorando, dovresti utilizzare questi mixin forniti da Adobe nei tuoi schemi.
+Ad esempio, il gruppo di campi [[!UICONTROL Adobe Analytics ExperienceEvent Template]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) consente di mappare i campi specifici di [!DNL Analytics] agli schemi XDM. A seconda delle applicazioni di Adobe con cui stai lavorando, devi utilizzare questi gruppi di campi forniti da Adobe nei tuoi schemi.
 
-<img src="../images/best-practices/analytics-mixin.png" width="700"><br>
+<img src="../images/best-practices/analytics-field-group.png" width="700"><br>
 
-I mixin di applicazioni di Adobe assegnano automaticamente un&#39;identità primaria predefinita tramite l&#39;uso del campo `identityMap` , che è un oggetto di sola lettura generato dal sistema che mappa i valori di identità standard per un singolo cliente.
+I gruppi di campi dell&#39;applicazione di Adobe assegnano automaticamente un&#39;identità primaria predefinita tramite l&#39;uso del campo `identityMap` , che è un oggetto di sola lettura generato dal sistema che mappa i valori di identità standard di un singolo cliente.
 
 Per Adobe Analytics, ECID è l’identità principale predefinita. Se un cliente non fornisce un valore ECID, l’identità principale viene impostata invece come predefinita su AAID.
 
 >[!IMPORTANT]
 >
->Quando utilizzi i mixin dell’applicazione Adobe, nessun altro campo deve essere contrassegnato come identità principale. Se vi sono proprietà aggiuntive che devono essere contrassegnate come identità, questi campi devono essere invece assegnati come identità secondarie.
+>Quando si utilizzano gruppi di campi dell’applicazione Adobe, nessun altro campo deve essere contrassegnato come identità principale. Se vi sono proprietà aggiuntive che devono essere contrassegnate come identità, questi campi devono essere invece assegnati come identità secondarie.
 
 ## Passaggi successivi
 
