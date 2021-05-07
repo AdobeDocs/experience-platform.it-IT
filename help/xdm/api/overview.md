@@ -6,9 +6,9 @@ description: L’API del Registro di sistema dello schema consente agli sviluppa
 topic-legacy: developer guide
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '973'
+source-wordcount: '987'
 ht-degree: 0%
 
 ---
@@ -29,9 +29,9 @@ Per visualizzare tutti gli endpoint disponibili e le operazioni CRUD, visita il 
 
 ## Schemi
 
-Gli schemi XDM rappresentano e convalidano la struttura e il formato dei dati acquisiti in Platform. Uno schema è composto da una classe e da zero o più mixin. Puoi creare, visualizzare, modificare ed eliminare gli schemi utilizzando l’endpoint `/schemas`. Per informazioni su come utilizzare questo endpoint, consulta la [guida all’endpoint degli schemi](./schemas.md).
+Gli schemi XDM rappresentano e convalidano la struttura e il formato dei dati acquisiti in Platform. Uno schema è composto da una classe e da zero o più gruppi di campi dello schema. Puoi creare, visualizzare, modificare ed eliminare gli schemi utilizzando l’endpoint `/schemas`. Per informazioni su come utilizzare questo endpoint, consulta la [guida all’endpoint degli schemi](./schemas.md).
 
-Per una guida dettagliata su come creare uno schema completo nell’API del Registro di sistema dello schema, inclusa la creazione e l’aggiunta di mixin e tipi di dati, consulta l’ [esercitazione sulla creazione dello schema API](../tutorials/create-schema-api.md).
+Per una guida dettagliata su come creare uno schema completo nell’API del Registro di sistema dello schema, inclusa la creazione e l’aggiunta di gruppi di campi e tipi di dati, consulta l’ [esercitazione sulla creazione dello schema API](../tutorials/create-schema-api.md).
 
 ## Comportamenti
 
@@ -39,15 +39,15 @@ I comportamenti definiscono la natura dei dati descritti da uno schema. Ogni cla
 
 ## Classi
 
-Una classe definisce la struttura di base delle proprietà comuni che devono contenere tutti gli schemi basati su tale classe e determina quali mixin possono essere utilizzati in tali schemi. Ogni classe deve essere associata a un comportamento esistente. Per informazioni dettagliate sulle operazioni con le classi nell&#39;API, consulta la [guida endpoint classi](./classes.md) .
+Una classe definisce la struttura di base delle proprietà comuni che devono contenere tutti gli schemi basati su tale classe e determina quali gruppi di campi sono idonei per essere utilizzati in tali schemi. Ogni classe deve essere associata a un comportamento esistente. Per informazioni dettagliate sulle operazioni con le classi nell&#39;API, consulta la [guida endpoint classi](./classes.md) .
 
-## Mixins
+## Gruppi di campi
 
-I mixin sono componenti riutilizzabili che definiscono uno o più campi che rappresentano un concetto particolare, ad esempio una persona singola, un indirizzo postale o un ambiente browser web. I mixin sono destinati a essere inclusi come parte di uno schema che implementa una classe compatibile, a seconda del comportamento dei dati che rappresentano (record o serie temporali). Per informazioni su come lavorare con i mixin nell&#39;API, consulta la [guida all&#39;endpoint dei mixins](./mixins.md) .
+I gruppi di campi sono componenti riutilizzabili che definiscono uno o più campi che rappresentano un concetto particolare, ad esempio una singola persona, un indirizzo di posta o un ambiente browser web. I gruppi di campi sono destinati a essere inclusi come parte di uno schema che implementa una classe compatibile, a seconda del comportamento dei dati che rappresentano (record o serie temporali). Per informazioni su come lavorare con i gruppi di campi nell’API, consulta la [guida endpoint dei gruppi di campi](./field-groups.md) .
 
 ## Tipi di dati
 
-I tipi di dati vengono utilizzati come campi di tipo riferimento nelle classi o nei mixin allo stesso modo dei campi letterali di base, con la differenza chiave che i tipi di dati possono definire più campi secondari. Sebbene siano simili ai mixin in quanto consentono un uso coerente di una struttura a più campi, i tipi di dati sono più flessibili perché possono essere inclusi in qualsiasi punto della struttura dello schema, mentre i mixin possono essere aggiunti solo a livello principale. Per ulteriori informazioni sulle operazioni con i tipi di dati nell&#39;API, consulta la [guida endpoint per i tipi di dati](./data-types.md) .
+I tipi di dati vengono utilizzati come campi di tipo riferimento nelle classi o nei gruppi di campi allo stesso modo dei campi letterali di base, con una differenza chiave che consiste nel fatto che i tipi di dati possono definire più campi secondari. Sebbene siano simili ai gruppi di campi in quanto consentono un uso coerente di una struttura a più campi, i tipi di dati sono più flessibili perché possono essere inclusi in qualsiasi punto della struttura dello schema, mentre i gruppi di campi possono essere aggiunti solo a livello principale. Per ulteriori informazioni sulle operazioni con i tipi di dati nell&#39;API, consulta la [guida endpoint per i tipi di dati](./data-types.md) .
 
 ## Descrittori
 
@@ -61,7 +61,7 @@ Per informazioni su come visualizzare i sindacati nell&#39;API del Registro di s
 
 ## Esporta/Importa
 
-L’API del Registro di sistema dello schema consente di trasferire e condividere risorse XDM tra sandbox e organizzazioni IMS. Per qualsiasi schema, mixin o tipo di dati, puoi generare un payload di esportazione contenente la struttura della risorsa e le risorse dipendenti. Questo payload può quindi essere utilizzato per importare la risorsa in una sandbox di destinazione e in un’organizzazione IMS.
+L’API del Registro di sistema dello schema consente di trasferire e condividere risorse XDM tra sandbox e organizzazioni IMS. Per qualsiasi schema, gruppo di campi o tipo di dati, puoi generare un payload di esportazione contenente la struttura della risorsa e le risorse dipendenti. Questo payload può quindi essere utilizzato per importare la risorsa in una sandbox di destinazione e in un’organizzazione IMS.
 
 Per ulteriori informazioni sull’utilizzo di questi endpoint, consulta la [guida all’esportazione/importazione](./export-import.md) .
 
@@ -73,7 +73,7 @@ Per ulteriori informazioni sull&#39;utilizzo di questo endpoint, consulta la [gu
 
 ## Registro di controllo
 
-Il Registro di sistema dello schema mantiene un registro di tutte le modifiche apportate a una risorsa (classe, mixin, tipo di dati o schema) tra diversi aggiornamenti. Puoi recuperare il registro per una particolare risorsa fornendo il relativo `$id` o `meta:altId` nel percorso di una richiesta di GET a questo endpoint.
+Il Registro di sistema dello schema mantiene un registro di tutte le modifiche apportate a una risorsa (classe, gruppo di campi, tipo di dati o schema) tra diversi aggiornamenti. Puoi recuperare il registro per una particolare risorsa fornendo il relativo `$id` o `meta:altId` nel percorso di una richiesta di GET a questo endpoint.
 
 Per ulteriori informazioni sull’utilizzo di questo endpoint, consulta la [guida dell’endpoint del registro di controllo](./audit-log.md) .
 
