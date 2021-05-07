@@ -6,14 +6,21 @@ description: L’endpoint /mixins nell’API del Registro di sistema dello schem
 topic-legacy: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a19a89d347b9197ab2766bd8a57018f5ac4f058d
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1193'
 ht-degree: 2%
 
 ---
 
-# Endpoint Mixins
+
+# Endpoint Mixins (obsoleto)
+
+>[!IMPORTANT]
+>
+>I mixin sono stati rinominati in gruppi di campi di schema e pertanto l’endpoint `/mixins` è stato dichiarato obsoleto a favore dell’endpoint `/fieldgroups`.
+>
+>Anche se `/mixins` continuerà a essere mantenuto come endpoint legacy, si consiglia vivamente di utilizzare `/fieldgroups` per le nuove implementazioni dell’API del Registro di sistema dello schema nelle applicazioni di esperienza. Per ulteriori informazioni, consulta la [guida endpoint dei gruppi di campi](./field-groups.md) .
 
 I mixin sono componenti riutilizzabili che definiscono uno o più campi che rappresentano un concetto particolare, ad esempio una persona singola, un indirizzo postale o un ambiente browser web. I mixin sono destinati a essere inclusi come parte di uno schema che implementa una classe compatibile, a seconda del comportamento dei dati che rappresentano (record o serie temporali). L’endpoint `/mixins` nell’ API [!DNL Schema Registry] consente di gestire i mixin modo programmatico all’interno dell’applicazione di esperienza.
 
@@ -154,7 +161,7 @@ Una risposta corretta restituisce i dettagli del mixin. I campi restituiti dipen
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Favorite Hotel",
   "type": "object",
@@ -300,7 +307,7 @@ Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload conten
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -480,7 +487,7 @@ Una risposta corretta restituisce i dettagli del mixin aggiornato.
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -621,7 +628,7 @@ La risposta indica che entrambe le operazioni sono state eseguite correttamente.
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
