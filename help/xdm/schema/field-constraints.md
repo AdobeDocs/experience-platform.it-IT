@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;schema;schema;mixin;mixin;mixin;mixin;mixins;tipo di dati;tipi di dati;tipi di dati;tipo di dati;schema;tipo di dati;tipo di dati;tipo di dati;tipo di dati;schemi;schema;progettazione schema;mappa;mappa;
+keywords: Experience Platform;home;argomenti popolari;schema;schema;gruppo di campi;gruppo di campi;gruppi di campi;tipo di dati;tipi di dati;tipi di dati;tipo di dati;struttura dello schema;tipo di dati;tipo di dati;tipo di dati;tipo di dati;schemi;schema;progettazione dello schema;mappa;mappa;
 solution: Experience Platform
 title: Vincoli del tipo di campo XDM
 topic-legacy: overview
 description: Un riferimento per i vincoli di tipo di campo in Experience Data Model (XDM), inclusi gli altri formati di serializzazione a cui possono essere mappati e le modalità di definizione dei tipi di campo personalizzati nell’API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1063'
 ht-degree: 1%
 
 ---
@@ -19,9 +19,9 @@ Negli schemi Experience Data Model (XDM), il tipo di campo limita il tipo di dat
 
 ## Introduzione
 
-Prima di utilizzare questa guida, controlla le [nozioni di base sulla composizione dello schema](./composition.md) per un&#39;introduzione agli schemi, alle classi e ai mixin XDM.
+Prima di utilizzare questa guida, controlla le [nozioni di base sulla composizione dello schema](./composition.md) per un&#39;introduzione agli schemi, alle classi e ai gruppi di campi dello schema XDM.
 
-Se prevedi di definire i tuoi tipi di campo nell&#39;API, ti consigliamo vivamente di iniziare con la [Guida per gli sviluppatori del Registro di sistema dello schema](../api/getting-started.md) per scoprire come creare mixin e tipi di dati in cui includere i campi personalizzati. Se utilizzi l’interfaccia utente di Experience Platform per creare gli schemi, consulta la guida [Definizione dei campi nell’interfaccia utente](../ui/fields/overview.md) per scoprire come implementare i vincoli sui campi definiti all’interno di mixin personalizzati e tipi di dati.
+Se prevedi di definire i tuoi tipi di campo nell&#39;API, ti consigliamo vivamente di iniziare con la [Guida per gli sviluppatori del Registro di sistema dello schema](../api/getting-started.md) per scoprire come creare gruppi di campi e tipi di dati in cui includere i campi personalizzati. Se utilizzi l’interfaccia utente Experience Platform per creare gli schemi, consulta la guida [Definizione dei campi nell’interfaccia utente](../ui/fields/overview.md) per scoprire come implementare i vincoli sui campi definiti all’interno di gruppi di campi personalizzati e tipi di dati.
 
 ## Struttura di base ed esempi
 
@@ -214,7 +214,7 @@ Tutti i campi XDM sono definiti utilizzando i vincoli standard [JSON Schema](htt
 
 La tabella seguente delinea la formattazione appropriata per definire diversi tipi di campi, compresi quelli con proprietà facoltative. Ulteriori informazioni sulle proprietà facoltative e sulle parole chiave specifiche per tipo sono disponibili tramite la [documentazione dello schema JSON](https://json-schema.org/understanding-json-schema/reference/type.html).
 
-Per iniziare, trova il tipo di campo desiderato e utilizza il codice di esempio fornito per generare la richiesta API per [creare un mixin](../api/mixins.md#create) o [creare un tipo di dati](../api/data-types.md#create).
+Per iniziare, trova il tipo di campo desiderato e utilizza il codice di esempio fornito per generare la richiesta API per [creare un gruppo di campi](../api/field-groups.md#create) o [creare un tipo di dati](../api/data-types.md#create).
 
 <table style="table-layout:auto">
   <tr>
