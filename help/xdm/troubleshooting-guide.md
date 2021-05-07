@@ -6,9 +6,9 @@ description: Questo documento fornisce le risposte alle domande più frequenti s
 topic-legacy: troubleshooting
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '1869'
+source-wordcount: '1888'
 ht-degree: 0%
 
 ---
@@ -25,19 +25,19 @@ Di seguito è riportato un elenco delle risposte alle domande frequenti sul sist
 
 ### Come si aggiungono campi a uno schema?
 
-È possibile aggiungere campi a uno schema utilizzando un mixin. Ogni mixin è compatibile con una o più classi, consentendo l&#39;utilizzo del mixin in qualsiasi schema che implementa una di queste classi compatibili. Mentre Adobe Experience Platform fornisce diversi mixin di settore con i propri campi predefiniti, puoi aggiungere i tuoi campi a uno schema creando nuovi mixin utilizzando l’API o l’interfaccia utente.
+È possibile aggiungere campi a uno schema utilizzando un gruppo di campi dello schema. Ogni gruppo di campi è compatibile con una o più classi, consentendo l&#39;utilizzo del gruppo di campi in qualsiasi schema che implementa una di queste classi compatibili. Mentre Adobe Experience Platform fornisce diversi gruppi di campi del settore con i propri campi predefiniti, è possibile aggiungere campi personalizzati a uno schema creando nuovi gruppi di campi utilizzando l’API o l’interfaccia utente.
 
-Per informazioni dettagliate sulla creazione di nuovi mixin nell&#39;API [!DNL Schema Registry], consulta la [guida all&#39;endpoint mixin](api/mixins.md#create). Se utilizzi l’interfaccia utente, consulta l’ [esercitazione Editor di schema](./tutorials/create-schema-ui.md).
+Per informazioni dettagliate sulla creazione di nuovi gruppi di campi nell&#39; API [!DNL Schema Registry], consulta la [guida all&#39;endpoint del gruppo di campi](api/field-groups.md#create). Se utilizzi l’interfaccia utente, consulta l’ [esercitazione Editor di schema](./tutorials/create-schema-ui.md).
 
-### Quali sono gli usi migliori per i mixin rispetto ai tipi di dati?
+### Quali sono gli usi migliori per i gruppi di campi e i tipi di dati?
 
-[](./schema/composition.md#mixin) I mixin sono componenti che definiscono uno o più campi in uno schema. I mixin applicano la modalità di visualizzazione dei campi nella gerarchia dello schema e quindi presentano la stessa struttura in ogni schema in cui sono inclusi. I mixin sono compatibili solo con classi specifiche, come identificato dal loro attributo `meta:intendedToExtend` .
+[I ](./schema/composition.md#field-group) gruppi di campi sono componenti che definiscono uno o più campi in uno schema. I gruppi di campi impongono la modalità di visualizzazione dei campi nella gerarchia dello schema e quindi presentano la stessa struttura in ogni schema in cui sono inclusi. I gruppi di campi sono compatibili solo con classi specifiche, identificate dall’attributo `meta:intendedToExtend` corrispondente.
 
-[I ](./schema/composition.md#data-type) tipi di dati possono inoltre fornire uno o più campi per uno schema. Tuttavia, a differenza dei mixin, i tipi di dati non sono vincolati a una particolare classe. Questo rende i tipi di dati un’opzione più flessibile per descrivere le strutture di dati comuni riutilizzabili tra più schemi con classi potenzialmente diverse.
+[I ](./schema/composition.md#data-type) tipi di dati possono inoltre fornire uno o più campi per uno schema. Tuttavia, a differenza dei gruppi di campi, i tipi di dati non sono vincolati a una particolare classe. Questo rende i tipi di dati un’opzione più flessibile per descrivere le strutture di dati comuni riutilizzabili tra più schemi con classi potenzialmente diverse.
 
 ### Qual è l&#39;ID univoco di uno schema?
 
-Tutte le risorse [!DNL Schema Registry] (schemi, mixin, tipi di dati, classi) hanno un URI che agisce come ID univoco a scopo di riferimento e ricerca. Quando si visualizza uno schema nell’API, questo si trova negli attributi di livello principale `$id` e `meta:altId` .
+Tutte le risorse [!DNL Schema Registry] (schemi, gruppi di campi, tipi di dati, classi) hanno un URI che agisce come ID univoco a scopo di riferimento e ricerca. Quando si visualizza uno schema nell’API, questo si trova negli attributi di livello principale `$id` e `meta:altId` .
 
 Per ulteriori informazioni, consulta la sezione [identificazione delle risorse](api/getting-started.md#resource-identification) nella guida per gli sviluppatori API [!DNL Schema Registry].
 
@@ -135,7 +135,7 @@ Per ulteriori informazioni sulla costruzione dei percorsi di ricerca nell’API,
 }
 ```
 
-Questo messaggio di errore viene visualizzato quando si tenta di creare una risorsa con un titolo già utilizzato da un’altra risorsa. I titoli devono essere univoci per tutti i tipi di risorse. Ad esempio, se tenti di creare un mixin con un titolo già utilizzato da uno schema, riceverai questo errore.
+Questo messaggio di errore viene visualizzato quando si tenta di creare una risorsa con un titolo già utilizzato da un’altra risorsa. I titoli devono essere univoci per tutti i tipi di risorse. Ad esempio, se tenti di creare un gruppo di campi con un titolo già utilizzato da uno schema, riceverai questo errore.
 
 ### I campi personalizzati devono utilizzare un campo di primo livello
 
@@ -149,7 +149,7 @@ Questo messaggio di errore viene visualizzato quando si tenta di creare una riso
 }
 ```
 
-Questo messaggio di errore viene visualizzato quando si tenta di creare un nuovo mixin con campi con spazi dei nomi non appropriati. Per evitare conflitti con altre risorse del settore e del fornitore, i mixin definiti dall’organizzazione IMS devono assegnare ai rispettivi campi uno spazio dei nomi `TENANT_ID`. Esempi dettagliati di strutture dati appropriate per i mixin sono disponibili nella [guida endpoint mixins](./api/mixins.md#create).
+Questo messaggio di errore viene visualizzato quando si tenta di creare un nuovo gruppo di campi con campi con spazi dei nomi non appropriati. Per evitare conflitti con altre risorse del settore e del fornitore, i gruppi di campi definiti dall’organizzazione IMS devono assegnare ai rispettivi campi uno spazio dei nomi `TENANT_ID`. Esempi dettagliati di strutture dati appropriate per i gruppi di campi sono disponibili nella [guida endpoint dei gruppi di campi](./api/field-groups.md#create).
 
 
 ### [!DNL Real-time Customer Profile] errori
