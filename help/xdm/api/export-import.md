@@ -6,16 +6,16 @@ description: Gli endpoint /export e /import nell’API del Registro di sistema d
 topic-legacy: developer guide
 exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '507'
 ht-degree: 1%
 
 ---
 
 # Endpoint di esportazione/importazione
 
-Tutte le risorse all’interno di [!DNL Schema Library] sono contenute in una sandbox specifica all’interno di un’organizzazione IMS. In alcuni casi, puoi condividere risorse Experience Data Model (XDM) tra le sandbox e le organizzazioni IMS. L&#39;API [!DNL Schema Registry] fornisce due endpoint che consentono di generare un payload di esportazione per qualsiasi schema, mixin o tipo di dati in[!DNL  Schema Library], quindi di utilizzare tale payload per importare la risorsa (e tutte le risorse dipendenti) in una sandbox di destinazione e nell&#39;organizzazione IMS.
+Tutte le risorse all’interno di [!DNL Schema Library] sono contenute in una sandbox specifica all’interno di un’organizzazione IMS. In alcuni casi, puoi condividere risorse Experience Data Model (XDM) tra le sandbox e le organizzazioni IMS. L&#39;API [!DNL Schema Registry] fornisce due endpoint che consentono di generare un payload di esportazione per qualsiasi schema, gruppo di campi di schema o tipo di dati in[!DNL  Schema Library], quindi di utilizzare tale payload per importare la risorsa (e tutte le risorse dipendenti) in una sandbox di destinazione e nell&#39;organizzazione IMS.
 
 ## Introduzione
 
@@ -25,7 +25,7 @@ Gli endpoint di esportazione/importazione fanno parte delle chiamate di procedur
 
 ## Recupera un payload di esportazione per una risorsa {#export}
 
-Per qualsiasi schema, mixin o tipo di dati esistente nel [!DNL Schema Library], puoi generare un payload di esportazione effettuando una richiesta di GET all’ endpoint `/export`, fornendo l’ID della risorsa nel percorso.
+Per qualsiasi schema, gruppo di campi o tipo di dati esistente nel [!DNL Schema Library], puoi generare un payload di esportazione effettuando una richiesta di GET all’ endpoint `/export`, fornendo l’ID della risorsa nel percorso.
 
 **Formato API**
 
@@ -39,11 +39,11 @@ GET /rpc/export/{RESOURCE_ID}
 
 **Richiesta**
 
-La richiesta seguente recupera un payload di esportazione per un mixin `Restaurant`.
+La richiesta seguente recupera un payload di esportazione per un gruppo di campi `Restaurant`.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/rpc/export/_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
+  https://platform.adobe.io/data/foundation/schemaregistry/rpc/export/_{TENANT_ID}.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -53,7 +53,7 @@ curl -X GET \
 
 **Risposta**
 
-Una risposta corretta restituisce un array di oggetti che rappresentano la risorsa XDM di destinazione e tutte le relative risorse dipendenti. In questo esempio, il primo oggetto dell&#39;array è un tipo di dati `Property` creato dal tenant utilizzato dal mixin `Restaurant`, mentre il secondo è il mixin `Restaurant` stesso. Questo payload può quindi essere utilizzato per [importare la risorsa](#import) in un’organizzazione sandbox o IMS diversa.
+Una risposta corretta restituisce un array di oggetti che rappresentano la risorsa XDM di destinazione e tutte le relative risorse dipendenti. In questo esempio, il primo oggetto dell&#39;array è un tipo di dati `Property` creato dal tenant utilizzato dal gruppo di campi `Restaurant`, mentre il secondo è il gruppo di campi `Restaurant` stesso. Questo payload può quindi essere utilizzato per [importare la risorsa](#import) in un’organizzazione sandbox o IMS diversa.
 
 Tieni presente che tutte le istanze dell’ID tenant della risorsa vengono sostituite con `<XDM_TENANTID_PLACEHOLDER>`. Questo consente al Registro di sistema dello schema di applicare automaticamente l’ID tenant corretto alle risorse a seconda della posizione in cui vengono inviate nella successiva chiamata di importazione.
 
@@ -129,9 +129,9 @@ Tieni presente che tutte le istanze dell’ID tenant della risorsa vengono sosti
         "meta:sandboxType": "production"
     },
     {
-        "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:resourceType": "mixins",
+        "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:resourceType": "fieldgroups",
         "version": "1.0",
         "title": "Restaurant",
         "type": "object",
@@ -207,7 +207,7 @@ POST /rpc/import
 
 **Richiesta**
 
-La richiesta seguente prende il payload restituito nell’ esempio di esportazione precedente [](#export) per importare il mixin `Restaurant` in una nuova organizzazione IMS e sandbox, come determinato rispettivamente dalle intestazioni `x-gw-ims-org-id` e `x-sandbox-name` .
+La richiesta seguente prende il payload restituito nell’ esempio di esportazione precedente [](#export) per importare il gruppo di campi `Restaurant` in una nuova organizzazione IMS e sandbox, come determinato rispettivamente dalle intestazioni `x-gw-ims-org-id` e `x-sandbox-name` .
 
 ```shell
 curl -X POST \
@@ -288,9 +288,9 @@ curl -X POST \
           "meta:sandboxType": "production"
         },
         {
-          "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-          "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-          "meta:resourceType": "mixins",
+          "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+          "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+          "meta:resourceType": "fieldgroups",
           "version": "1.0",
           "title": "Restaurant",
           "type": "object",
@@ -446,9 +446,9 @@ Una risposta corretta restituisce un elenco delle risorse importate, a cui sono 
         "meta:tenantNamespace": "_{TENANT_ID}"
     },
     {
-        "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:altId": "_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:resourceType": "mixins",
+        "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:altId": "_{TENANT_ID}.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:resourceType": "fieldgroups",
         "version": "1.0",
         "title": "Restaurant",
         "type": "object",
