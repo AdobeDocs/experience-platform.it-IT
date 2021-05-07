@@ -2,14 +2,14 @@
 keywords: targhette di bordo;destinazione di volo
 title: Collegamento dei tag dell'aeroporto
 description: Trasmetti facilmente i dati di pubblico Adobe a Airship come tag di pubblico per il targeting all’interno di Airship.
+exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1123'
 ht-degree: 1%
 
 ---
-
 
 # (Beta) [!DNL Airship Tags] connessione {#airship-tags-destination}
 
@@ -43,7 +43,7 @@ Prima di inviare i segmenti Adobe Experience Platform a [!DNL Airship], devi:
 
 ## Gruppi di tag
 
-Il concetto di segmenti in Adobe Experience Platform è simile a [Tag](https://docs.airship.com/guides/audience/tags/) in Airship, con lievi differenze nell’implementazione. Questa integrazione mappa lo stato dell’ [appartenenza di un utente in un segmento di Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/xdm/mixins/profile/segmentation.html?lang=en#mixins) alla presenza o alla non presenza di un tag [!DNL Airship]. Ad esempio, in un segmento di Platform in cui `xdm:status` cambia in `realized`, il tag viene aggiunto al canale [!DNL Airship] o all’utente con nome a cui è mappato questo profilo. Se il tag `xdm:status` diventa `exited`, viene rimosso.
+Il concetto di segmenti in Adobe Experience Platform è simile a [Tag](https://docs.airship.com/guides/audience/tags/) in Airship, con lievi differenze nell’implementazione. Questa integrazione mappa lo stato dell’ [appartenenza di un utente in un segmento di Experience Platform](../../../xdm/field-groups/profile/segmentation.md) alla presenza o alla non presenza di un tag [!DNL Airship]. Ad esempio, in un segmento di Platform in cui `xdm:status` cambia in `realized`, il tag viene aggiunto al canale [!DNL Airship] o all’utente con nome a cui è mappato questo profilo. Se il tag `xdm:status` diventa `exited`, viene rimosso.
 
 Per abilitare questa integrazione, crea un *gruppo di tag* in [!DNL Airship] denominato `adobe-segments`.
 
@@ -157,4 +157,3 @@ Se non sono state rilevate violazioni dei criteri, seleziona **[!UICONTROL Finis
 ## Utilizzo e governance dei dati {#data-usage-governance}
 
 Tutte le destinazioni [!DNL Adobe Experience Platform] sono conformi ai criteri di utilizzo dei dati durante la gestione dei dati. Per informazioni dettagliate su come [!DNL Adobe Experience Platform] applica la governance dei dati, consulta [Panoramica sulla governance dei dati](../../../data-governance/home.md).
-
