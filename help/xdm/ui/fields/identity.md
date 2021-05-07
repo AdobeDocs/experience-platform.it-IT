@@ -6,9 +6,9 @@ description: Scopri come definire un campo di identità nell’interfaccia utent
 topic-legacy: user guide
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Al termine, seleziona **[!UICONTROL Apply]** per applicare la modifica allo sche
 
 ![](../../images/ui/fields/special/identity-config.png)
 
-L’area di lavoro viene aggiornata per riflettere le modifiche, con il campo selezionato che acquisisce un simbolo di impronta digitale (![](../../images/ui/fields/special/identity-symbol.png)) per designarlo come identità. Nella barra a sinistra, il campo identity è ora elencato sotto il nome della classe o del mixin che fornisce il campo allo schema.
+L’area di lavoro viene aggiornata per riflettere le modifiche, con il campo selezionato che acquisisce un simbolo di impronta digitale (![](../../images/ui/fields/special/identity-symbol.png)) per designarlo come identità. Nella barra a sinistra, il campo identity è ora elencato sotto il nome del gruppo di campi classe o schema che fornisce il campo allo schema.
 
 Poiché tutti i campi di identità sono obbligatori per impostazione predefinita, il campo è ora elencato in **[!UICONTROL Required fields]** nella barra a sinistra. Se il campo Identity è nidificato all’interno della struttura dello schema, verranno elencati anche tutti i campi principali come richiesto.
 
