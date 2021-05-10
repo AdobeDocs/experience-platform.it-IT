@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Gli spazi dei nomi di identità sono un componente del servizio Identity che funge da indicatori del contesto a cui si riferisce un’identità. Ad esempio, distinguono un valore di "name@email.com" come indirizzo e-mail o "443522" come ID CRM numerico.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ca092af61ac26fcfb6839b7ba0887178c899f89f
 workflow-type: tm+mt
-source-wordcount: '1450'
+source-wordcount: '1526'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ Ad esempio, due frammenti di profilo possono contenere ID primari diversi ma con
 
 ### Tipi di identità
 
-I dati possono essere identificati da diversi tipi di identità. Il tipo di identità viene specificato al momento della creazione dello spazio dei nomi identità e controlla se i dati sono persistenti o meno nel grafico identità, nonché eventuali istruzioni speciali per la gestione di tali dati.
+I dati possono essere identificati da diversi tipi di identità. Il tipo di identità viene specificato al momento della creazione dello spazio dei nomi identità e controlla se i dati sono persistenti o meno nel grafico identità, nonché eventuali istruzioni speciali per la gestione di tali dati. Tutti i tipi di identità eccetto **Identificatore non personale** seguono lo stesso comportamento di unione di uno spazio dei nomi e del relativo valore ID a un cluster di grafici di identità. I dati non vengono uniti quando si utilizza **Identificatore non personale**.
 
 I seguenti tipi di identità sono disponibili in [!DNL Platform]:
 
@@ -92,7 +92,9 @@ Per creare uno spazio dei nomi personalizzato utilizzando l’interfaccia utente
 
 ![](./images/create.png)
 
-Viene visualizzata la finestra di dialogo **[!UICONTROL Create identity namespace]**. Specifica un **[!UICONTROL Display name]** e **[!UICONTROL Identity symbol]** univoci, quindi seleziona il tipo di identità da creare. Puoi anche aggiungere una descrizione facoltativa per ulteriori informazioni sullo spazio dei nomi. Al termine, seleziona **[!UICONTROL Create]**.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Create identity namespace]**. Specifica un **[!UICONTROL Display name]** e **[!UICONTROL Identity symbol]** univoci, quindi seleziona il tipo di identità da creare. Puoi anche aggiungere una descrizione facoltativa per ulteriori informazioni sullo spazio dei nomi. Tutti i tipi di identità eccetto **Identificatore non personale** seguono lo stesso comportamento di unione. Se durante la creazione di uno spazio dei nomi selezioni **Identificatore non personale** come tipo di identità, la unione non viene eseguita. Per informazioni specifiche su ciascun tipo di identità, consulta la tabella relativa ai [tipi di identità](#identity-types).
+
+Al termine, seleziona **[!UICONTROL Create]**.
 
 >[!IMPORTANT]
 >
