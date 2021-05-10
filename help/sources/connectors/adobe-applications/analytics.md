@@ -1,37 +1,37 @@
 ---
-keywords: Experience Platform;home;argomenti popolari;Connettore dati Analytics;Analytics;Analytics
+keywords: Experience Platform;home;argomenti popolari;Connettore origine Analytics;analytics;Analytics
 solution: Experience Platform
 title: Connettore sorgente Adobe Analytics per i dati della suite di rapporti
 topic-legacy: overview
 description: Questo documento fornisce una panoramica di Analytics e descrive i casi d’uso per i dati di Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: af5ad975bbfd6a67fe66c90e33da1365d49c8899
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '513'
 ht-degree: 2%
 
 ---
 
-# Connettore Adobe Analytics per i dati della suite di rapporti
+# Connettore sorgente Adobe Analytics per i dati della suite di rapporti
 
-Adobe Experience Platform consente di acquisire i dati di Adobe Analytics tramite Analytics Data Connector (ADC). ADC trasferisce in tempo reale i dati raccolti da [!DNL Analytics] a [!DNL Platform], convertendo i dati in formato SCDS [!DNL Analytics] in campi [!DNL Experience Data Model] (XDM) destinati all’uso da parte di [!DNL Platform].
+Adobe Experience Platform consente di acquisire i dati di Adobe Analytics tramite il connettore di origine di Analytics. Il connettore di origine [!DNL Analytics] invia in tempo reale i dati raccolti da [!DNL Analytics] a Platform, convertendo i dati in formato SCDS [!DNL Analytics] in campi [!DNL Experience Data Model] (XDM) destinati all’utilizzo da parte di Platform.
 
 Questo documento fornisce una panoramica di [!DNL Analytics] e descrive i casi d’uso per i dati [!DNL Analytics].
 
 ## Dati di Adobe Analytics e Analytics
 
-[!DNL Analytics] è un potente motore per aiutarti a scoprire di più sui tuoi clienti, su come interagiscono con le tue proprietà web, su dove le tue spese di marketing digitale sono efficaci e individuare le aree di miglioramento. [!DNL Analytics] gestisce migliaia di miliardi di transazioni web all&#39;anno e ADC ti consente di sfruttare facilmente questi ricchi dati comportamentali e arricchire i dati  [!DNL Real-time Customer Profile] in pochi minuti.
+[!DNL Analytics] è un motore potente che ti aiuta a scoprire di più sui tuoi clienti, su come interagiscono con le tue proprietà web, su dove le tue spese di marketing digitale sono efficaci e individua le aree di miglioramento. [!DNL Analytics] gestisce migliaia di miliardi di transazioni web all&#39;anno e il connettore  [!DNL Analytics] sorgente ti permette di sfruttare facilmente questi dati comportamentali e arricchire il  [!DNL Real-time Customer Profile] in pochi minuti.
 
 ![](./images/analytics-data-experience-platform.png)
 
-Ad alto livello, [!DNL Analytics] raccoglie dati da diversi canali digitali e da più centri dati in tutto il mondo. Una volta raccolti i dati, le regole VISTA (Visitor Identification, Segmentation and Transformation Architecture) e le regole di elaborazione vengono applicate per modellare i dati in arrivo. Dopo che i dati grezzi sono stati sottoposti a questa elaborazione leggera, vengono considerati pronti per il consumo da [!DNL Real-time Customer Profile]. In un processo parallelo a quanto sopra, gli stessi dati elaborati vengono micro-batch e acquisiti nei set di dati Platform per l’utilizzo da parte di [!DNL Data Science Workspace], [!DNL Query Service] e altre applicazioni di rilevamento dati.
+Ad alto livello, [!DNL Analytics] raccoglie dati da diversi canali digitali e da più centri dati in tutto il mondo. Una volta raccolti i dati, vengono applicate le regole VISTA (Visitor Identification, Segmentation and Transformation Architecture) e le regole di elaborazione per modellare i dati in arrivo. Dopo che i dati grezzi sono stati sottoposti a questa elaborazione leggera, vengono considerati pronti per il consumo da [!DNL Real-time Customer Profile]. In un processo parallelo a quanto sopra, gli stessi dati elaborati vengono micro-batch e acquisiti nei set di dati Platform per l’utilizzo da parte di [!DNL Data Science Workspace], [!DNL Query Service] e altre applicazioni di rilevamento dati.
 
-Per ulteriori informazioni sulle regole di elaborazione, consulta [Panoramica sulle regole di elaborazione](https://docs.adobe.com/content/help/it-IT/analytics/admin/admin-tools/processing-rules/processing-rules.html) .
+Per ulteriori informazioni sulle regole di elaborazione, consulta la [panoramica delle regole di elaborazione](https://docs.adobe.com/content/help/it-IT/analytics/admin/admin-tools/processing-rules/processing-rules.html) .
 
 ## Experience Data Model (XDM)
 
-XDM è una specifica documentata pubblicamente che fornisce strutture e definizioni comuni per un&#39;applicazione da utilizzare per comunicare con i servizi su [!DNL Experience Platform].
+XDM è una specifica documentata pubblicamente che fornisce strutture e definizioni comuni per un&#39;applicazione da utilizzare per comunicare con i servizi su Experience Platform.
 
 Il rispetto degli standard XDM consente l&#39;integrazione uniforme dei dati, facilitando la distribuzione dei dati e la raccolta delle informazioni.
 
@@ -39,9 +39,9 @@ Per ulteriori informazioni su XDM, consulta la [Panoramica del sistema XDM](../.
 
 ## Come vengono mappati i campi da Adobe Analytics a XDM?
 
-Quando viene stabilita una connessione di origine per l’inserimento di dati [!DNL Analytics] in [!DNL Experience Platform] utilizzando l’interfaccia utente [!DNL Platform], i campi dati vengono mappati automaticamente e acquisiti in [!DNL Real-time Customer Profile] in pochi minuti. Per istruzioni su come creare una connessione sorgente con [!DNL Analytics] utilizzando l&#39;interfaccia utente [!DNL Platform], consulta l&#39; [esercitazione sui connettori dati di Analytics](../../tutorials/ui/create/adobe-applications/analytics.md).
+Quando viene stabilita una connessione di origine per l’inserimento di dati [!DNL Analytics] in Experience Platform tramite l’interfaccia utente di Platform, i campi di dati vengono mappati e acquisiti automaticamente in [!DNL Real-time Customer Profile] in pochi minuti. Per istruzioni su come creare una connessione sorgente con [!DNL Analytics] utilizzando l’interfaccia utente di Platform, consulta l’ [esercitazione sul connettore sorgente di Analytics](../../tutorials/ui/create/adobe-applications/analytics.md) .
 
-Per informazioni dettagliate sulla mappatura dei campi che si verifica tra [!DNL Analytics] e [!DNL Experience Platform], visita la guida [Mappatura dei campi Adobe Analytics](./mapping/analytics.md) .
+Per informazioni dettagliate sulla mappatura dei campi che si verifica tra [!DNL Analytics] e l&#39;Experience Platform, consulta la guida [Mappatura dei campi Adobe Analytics](./mapping/analytics.md) .
 
 ## Qual è la latenza prevista per i dati di Analytics su Platform?
 
@@ -54,8 +54,8 @@ Per informazioni dettagliate sulla mappatura dei campi che si verifica tra [!DNL
 
 >[!NOTE]
 >
->La latenza varia a seconda della configurazione del cliente, dei volumi di dati e delle applicazioni consumer. Ad esempio, se l’implementazione di Analytics è configurata con `A4T` la latenza alla pipeline aumenterà a 5-10 minuti.
+>La latenza varia a seconda della configurazione del cliente, dei volumi di dati e delle applicazioni consumer. Ad esempio, se l’implementazione [!DNL Analytics] è configurata con `A4T` la latenza alla pipeline aumenterà a 5-10 minuti.
 
-## Identificatori principali nei dati di Analytics
+## Identificatori principali nei dati [!DNL Analytics]
 
-Ogni hit dal connettore dati di Analytics contiene un identificatore principale che dipende dall’esistenza di un ECID o di un AAID. Se è presente un ECID, questo viene designato come identificatore principale. Se è presente un AAID, l’AAID è indicato come primario.
+Ogni hit dal connettore di origine [!DNL Analytics] contiene un identificatore principale che dipende dall&#39;esistenza di un ECID o di un AAID. Se è presente un ECID, questo viene designato come identificatore principale. Se è presente un AAID, l’AAID è indicato come primario.
