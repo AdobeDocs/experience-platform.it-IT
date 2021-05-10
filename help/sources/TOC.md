@@ -5,9 +5,9 @@ breadcrumb-title: Guida ai connettori di origini
 user-guide-description: Acquisisci dati da varie sorgenti, strutture o etichette e migliora i dati già acquisiti.
 feature: Acquisizione dei dati, origini
 translation-type: tm+mt
-source-git-commit: 121e2f410acdcd6de3953c6063a15901c853dd07
+source-git-commit: 32a6d0311169486b1273129c0ee87c242bee1e47
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '612'
 ht-degree: 10%
 
 ---
@@ -18,10 +18,10 @@ ht-degree: 10%
 - [Panoramica dei connettori sorgente](home.md)
 - Connettori sorgente disponibili {#connectors}
    - Applicazioni Adobe {#adobe-applications}
-      - [Connettore dati classificazioni di Analytics](connectors/adobe-applications/classifications.md)
-      - [Connettore dati di Analytics](connectors/adobe-applications/analytics.md)
-      - [Connettore Audience Manager](connectors/adobe-applications/audience-manager.md)
-      - [Connettore attributi del cliente](connectors/adobe-applications/customer-attributes.md)
+      - [Connettore sorgente classificazioni di Analytics](connectors/adobe-applications/classifications.md)
+      - [Connettore sorgente di Analytics](connectors/adobe-applications/analytics.md)
+      - [Connettore sorgente di Audience Manager](connectors/adobe-applications/audience-manager.md)
+      - [Connettore origine attributi del cliente](connectors/adobe-applications/customer-attributes.md)
       - Adobe di mappature dei campi dell&#39;applicazione {#mapping}
          - [Mappature dei campi di Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Manager di mappature dei campi](connectors/adobe-applications/mapping/audience-manager.md)
