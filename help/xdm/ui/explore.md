@@ -7,9 +7,9 @@ topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: ddf66ab277e5882afe7ffbdd87ee5df958c3e7b0
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '992'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,12 @@ L’opzione **[!UICONTROL Included in Profile]** ti consente di filtrare i risul
 È inoltre possibile utilizzare la barra di ricerca per limitare ulteriormente i risultati. Quando si cerca un termine, gli elementi principali rappresentano le risorse i cui nomi corrispondono alla query di ricerca. Sotto questi elementi, sotto **[!UICONTROL Standard Fields]** verranno elencate tutte le risorse contenenti campi corrispondenti alla query. Ciò ti consente di cercare risorse XDM in base al tipo di dati che contengono, senza dover prima conoscere il nome della risorsa.
 
 ![](../images/ui/explore/search.png)
+
+Le risorse visualizzate nei risultati della ricerca vengono ordinate prima per corrispondenza del titolo e poi per corrispondenza della descrizione. A sua volta, più parole corrispondono in una di queste categorie, più la risorsa viene visualizzata nell’elenco.
+
+>[!NOTE]
+>
+>Per le risorse XDM standard, la funzione di ricerca restituisce solo singoli campi che contengono uno spazio dei nomi `xdm`. I campi che si trovano in uno spazio dei nomi diverso (ad esempio l’ID tenant) vengono restituiti solo se sono contenuti in una risorsa personalizzata.
 
 Dopo aver trovato la risorsa da esplorare, selezionane il nome dall’elenco per visualizzarne la struttura nell’area di lavoro.
 
@@ -100,7 +106,7 @@ I campi di relazione vengono inoltre evidenziati in modo univoco nell’area di 
 
 >[!NOTE]
 >
->Per ulteriori informazioni sull’utilizzo delle relazioni negli schemi XDM, consulta l’esercitazione su [creazione di una relazione nell’interfaccia utente](../tutorials/create-schema-ui.md) .
+>Per ulteriori informazioni sull’utilizzo delle relazioni negli schemi XDM, consulta l’esercitazione su [creazione di una relazione nell’interfaccia utente](../tutorials/relationship-ui.md) .
 
 ## Passaggi successivi
 
