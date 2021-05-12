@@ -1,16 +1,15 @@
 ---
-title: Estensione di Adobe Experience Platform Web SDK Panoramica
+title: Panoramica dell’estensione Adobe Experience Platform Web SDK
 description: Scopri l’estensione Adobe Experience Platform Web SDK per Adobe Experience Platform Launch
-translation-type: tm+mt
-source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
+exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
+source-git-commit: b70fe5f3a4de2501730cc799125a7181b61186c0
 workflow-type: tm+mt
-source-wordcount: '555'
-ht-degree: 18%
+source-wordcount: '553'
+ht-degree: 19%
 
 ---
 
-
-# Panoramica dell&#39;estensione Adobe Experience Platform Web SDK
+# Panoramica dell’estensione Adobe Experience Platform Web SDK
 
 L’estensione Adobe Experience Platform Web SDK invia i dati a Adobe Experience Cloud dalle proprietà web tramite Adobe Experience Platform Edge Network. L’estensione ti consente di inviare dati in streaming a Platform, sincronizzare le identità, elaborare i segnali di consenso dei clienti e raccogliere automaticamente i dati contestuali.
 
@@ -48,11 +47,12 @@ L&#39;[!UICONTROL IMS Organization ID] è l&#39;organizzazione a cui si desidera
 
 [!UICONTROL Edge Domain] è il dominio da cui l’estensione Adobe Experience Platform invia e riceve i dati. L&#39;estensione richiede l&#39;utilizzo di un first party CNAME per il traffico di produzione. Il dominio predefinito di terze parti funziona per gli ambienti di sviluppo ma non è adatto per gli ambienti di produzione. Le istruzioni su come impostare un first party CNAME sono disponibili [qui](https://docs.adobe.com/content/help/it-IT/core-services/interface/ec-cookies/cookies-first-party.html).
 
-## [!UICONTROL Edge Configurations]
+## [!UICONTROL Datastreams]
 
-Quando una richiesta viene inviata ad Adobe Experience Platform Edge Network, viene utilizzato un ID di configurazione perimetrale per fare riferimento alla configurazione lato server. Puoi aggiornare la configurazione senza dover apportare modifiche al codice sul sito web.
+Quando viene inviata una richiesta a Adobe Experience Platform Edge Network, viene utilizzato un ID di datastream per fare riferimento alla configurazione lato server. Puoi aggiornare la configurazione senza dover apportare modifiche al codice sul sito web.
 
-Per ulteriori informazioni, consulta la guida sulle [configurazioni edge](../fundamentals/edge-configuration.md) .
+Per ulteriori informazioni, consulta la guida su [datastreams](../fundamentals/datastreams.md) .
+
 
 ## [!UICONTROL Privacy]
 
