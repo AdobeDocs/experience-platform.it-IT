@@ -5,8 +5,7 @@ title: Configurare un set di dati per acquisire dati di consenso e preferenza
 topic-legacy: getting started
 description: Scopri come configurare uno schema e un set di dati Experience Data Model (XDM) per acquisire i dati di consenso e preferenza in Adobe Experience Platform.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-translation-type: tm+mt
-source-git-commit: 30a2ddb875b035b4509b4be3692b95d0d3ef50b3
+source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
 workflow-type: tm+mt
 source-wordcount: '1424'
 ht-degree: 0%
@@ -151,7 +150,7 @@ Infine, seleziona **[!UICONTROL Enable]** nel puntatore di conferma per abilitar
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-Il set di dati viene ora salvato e abilitato per l’utilizzo in [!DNL Profile]. Se prevedi di utilizzare Platform Web SDK per inviare i dati di consenso a Profilo, devi selezionare questo set di dati come [!UICONTROL Profile Dataset] al momento di configurare la [configurazione perimetrale](../../../../edge/fundamentals/edge-configuration.md).
+Il set di dati viene ora salvato e abilitato per l’utilizzo in [!DNL Profile]. Se prevedi di utilizzare Platform Web SDK per inviare i dati di consenso a Profilo, devi selezionare questo set di dati come [!UICONTROL Profile Dataset] al momento di configurare la [configurazione perimetrale](../../../../edge/fundamentals/datastreams.md).
 
 ## Passaggi successivi
 
