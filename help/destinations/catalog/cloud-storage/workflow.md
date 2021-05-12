@@ -5,10 +5,9 @@ type: Tutorial
 description: Istruzioni per la connessione alle posizioni di archiviazione cloud
 seo-description: Istruzioni per la connessione alle posizioni di archiviazione cloud
 exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
-translation-type: tm+mt
-source-git-commit: ecda1f1c4a2829124aedaae2395a74e54929c7ad
+source-git-commit: 4dff8a95af79d14cf0c79fa1468df36f040ab1ad
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '594'
 ht-degree: 0%
 
 ---
@@ -63,7 +62,7 @@ Per le destinazioni [!DNL Azure Event Hubs] , fornisci il nome del flusso di dat
 
 La destinazione viene ora creata. Puoi selezionare **[!UICONTROL Save & Exit]** se desideri attivare i segmenti in un secondo momento oppure puoi selezionare **[!UICONTROL Next]** per continuare il flusso di lavoro e selezionare i segmenti da attivare. Leggi la sezione [Attiva segmenti](#activate-segments) per il resto del flusso di lavoro per esportare i dati.
 
-## Utilizzare le macro per creare una cartella nel percorso di archiviazione{#use-macros}
+## Utilizzare le macro per creare una cartella nel percorso di archiviazione {#use-macros}
 
 >[!NOTE]
 >
