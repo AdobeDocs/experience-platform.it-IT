@@ -2,15 +2,14 @@
 title: Tipi di azioni nell’estensione Adobe Experience Platform Web SDK
 description: Scopri i diversi tipi di azioni forniti dall’estensione Adobe Experience Platform Web SDK in Adobe Experience Platform Launch.
 solution: Experience Platform
-feature: Web SDK
-translation-type: tm+mt
-source-git-commit: 9ce6dd5a290b55da04f4ae185cab96c120777775
+feature: SDK per web
+exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
+source-git-commit: 7e87f5b29d388b34681217e392c3f1ae8f2b67ee
 workflow-type: tm+mt
-source-wordcount: '535'
-ht-degree: 8%
+source-wordcount: '534'
+ht-degree: 9%
 
 ---
-
 
 # Tipi di azioni
 
@@ -26,7 +25,7 @@ Ci sono alcuni altri campi nel tipo di azione Invia evento che potrebbero essere
 
 - **Tipo:** questo campo consente di specificare un tipo di evento che verrà registrato nello schema XDM. Per ulteriori informazioni sui tipi di evento predefiniti, consulta la [documentazione](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) .
 - **ID unione:** se desideri specificare un  [ID unione ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/merging-event-data.html?lang=en#fundamentals) per l’evento, puoi farlo in questo campo. Tieni presente che le soluzioni a valle non sono in grado di unire i dati dell’evento in questo momento.
-- **ID set di dati:** se devi inviare dati a un set di dati diverso da quello specificato nella configurazione perimetrale, puoi specificarlo qui.
+- **ID set di dati:** se devi inviare dati a un set di dati diverso da quello specificato nel tuo datastream, puoi specificarlo qui.
 - **Il documento verrà scaricato:** se desideri che gli eventi raggiungano il server anche se l’utente si allontana dalla pagina, seleziona la  **[!UICONTROL Document will unload]** casella di controllo . Questo consente agli eventi di raggiungere il server ma le risposte vengono ignorate.
 - **Decisioni relative al rendering della personalizzazione visiva:** se desideri eseguire il rendering di contenuto personalizzato sulla pagina, seleziona la  **[!UICONTROL Render visual personalization decisions]** casella di controllo. Se necessario, puoi anche specificare gli ambiti decisionali. Per ulteriori informazioni sul rendering di contenuti personalizzati, consulta la [documentazione sulla personalizzazione](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) .
 
@@ -40,6 +39,6 @@ In questa azione, ti viene anche fornito un campo facoltativo per includere una 
 
 Se desideri reimpostare l’ID unione eventi sulla pagina, puoi farlo con questa azione. Per reimpostare l’ID, seleziona l’ID unione da reimpostare e attiva l’azione in base alle esigenze.
 
-## Ulteriori informazioni
+## Cosa succede ora
 
 Dopo aver impostato le azioni, [configura i tipi di elementi dati](data-element-types.md).
