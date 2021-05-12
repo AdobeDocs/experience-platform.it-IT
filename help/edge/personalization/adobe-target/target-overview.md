@@ -3,10 +3,9 @@ title: Utilizzo di Adobe Target con Platform Web SDK
 description: Scopri come eseguire il rendering di contenuti personalizzati con Experience Platform Web SDK tramite Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderdecisions;decisionScopes;pre-hiding snippet;vec;Compositore esperienza basato su moduli;xdm;tipi di pubblico;decisioni;ambito;schema;
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-translation-type: tm+mt
-source-git-commit: e12b1337c44095ee8731f99c5829ab83bba14889
+source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '658'
 ht-degree: 4%
 
 ---
@@ -29,7 +28,7 @@ Le seguenti funzioni sono state testate e sono attualmente supportate in Target:
 
 Per abilitare [!DNL Target], procedi come segue:
 
-1. Abilita target nella [configurazione perimetrale](../../fundamentals/edge-configuration.md) con il codice client appropriato.
+1. Abilita Target nel tuo [datastream](../../fundamentals/datastreams.md) con il codice client appropriato.
 1. Aggiungi l’opzione `renderDecisions` agli eventi.
 
 Quindi, facoltativamente, puoi anche aggiungere le seguenti opzioni:
