@@ -5,8 +5,7 @@ title: Supporto IAB TCF 2.0 in Experience Platform
 topic-legacy: privacy events
 description: Scopri come configurare le operazioni e gli schemi di dati per trasmettere le scelte di consenso dei clienti quando si attivano i segmenti nelle destinazioni in Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
 workflow-type: tm+mt
 source-wordcount: '2466'
 ht-degree: 0%
@@ -48,7 +47,7 @@ Questa guida richiede anche una buona comprensione dei seguenti servizi Platform
 
 Oltre ai servizi Platform elencati sopra, devi anche conoscere [destinazioni](../../../../data-governance/home.md) e il loro ruolo nell’ecosistema della piattaforma.
 
-## Riepilogo del flusso di consenso del cliente {#summary}
+## Riepilogo del flusso del consenso del cliente {#summary}
 
 Le sezioni seguenti descrivono come i dati di consenso vengono raccolti e applicati dopo che il sistema è stato configurato correttamente.
 
@@ -106,7 +105,7 @@ Dopo aver creato un set di dati abilitato [!DNL Profile] per la raccolta dei dat
 
 Per ulteriori informazioni su come utilizzare i criteri di unione, consultare la [guida utente dei criteri di unione](../../../../profile/ui/merge-policies.md). Quando imposti i criteri di unione, devi accertarti che i segmenti includano tutti gli attributi di consenso richiesti dal gruppo di campi [schema privacy XDM](./dataset.md#privacy-field-group), come descritto nella guida sulla preparazione dei set di dati.
 
-## Integra l’SDK web per Experience Platform per raccogliere i dati sul consenso dei clienti {#sdk}
+## Integra l’SDK web per Experience Platform per raccogliere i dati sul consenso dei clienti. {#sdk}
 
 >[!NOTE]
 >
@@ -120,7 +119,7 @@ Dopo aver configurato la CMP per generare le stringhe di consenso, è necessario
 
 ### Creare una nuova configurazione perimetrale
 
-Affinché l’SDK invii dati ad Experience Platform, devi prima creare una nuova configurazione edge per Platform in [!DNL Adobe Experience Platform Launch]. I passaggi specifici per la creazione di una nuova configurazione sono descritti nella documentazione [SDK](../../../../edge/fundamentals/edge-configuration.md).
+Affinché l’SDK invii dati ad Experience Platform, devi prima creare una nuova configurazione edge per Platform in [!DNL Adobe Experience Platform Launch]. I passaggi specifici per la creazione di una nuova configurazione sono descritti nella documentazione [SDK](../../../../edge/fundamentals/datastreams.md).
 
 Dopo aver fornito un nome univoco per la configurazione, seleziona il pulsante di attivazione accanto a **[!UICONTROL Adobe Experience Platform]**. Quindi, utilizzare i seguenti valori per completare il resto del modulo:
 
