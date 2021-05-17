@@ -5,31 +5,55 @@ title: Classe ExperienceEvent XDM
 topic-legacy: overview
 description: Questo documento fornisce una panoramica della classe ExperienceEvent XDM.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 9fbb40a401250496761dcce63a3f033a8746ae7e
 workflow-type: tm+mt
-source-wordcount: '867'
+source-wordcount: '1466'
 ht-degree: 1%
 
 ---
 
 # [!DNL XDM ExperienceEvent] Classe
 
-[!DNL XDM ExperienceEvent] è una classe XDM standard che consente di creare un’istantanea con marca temporale del sistema quando si verifica un evento specifico o viene raggiunto un determinato insieme di condizioni.
+[!DNL XDM ExperienceEvent] è una classe standard Experience Data Model (XDM) che consente di creare un’istantanea con marca temporale del sistema quando si verifica un evento specifico o quando viene raggiunto un determinato set di condizioni.
 
 Un evento di esperienza è un record di fatto di ciò che si è verificato, compreso il momento nel tempo e l&#39;identità dell&#39;individuo coinvolto. Gli eventi possono essere espliciti (azioni umane direttamente osservabili) o impliciti (generati senza un&#39;azione umana diretta) e sono registrati senza aggregazione o interpretazione. Per ulteriori informazioni di alto livello sull’utilizzo di questa classe nell’ecosistema della piattaforma, consulta la [panoramica XDM](../home.md#data-behaviors).
 
 La classe [!DNL XDM ExperienceEvent] fornisce a uno schema diversi campi relativi alle serie temporali. I valori di alcuni di questi campi vengono compilati automaticamente al momento dell’acquisizione dei dati:
 
-<img src="../images/classes/experienceevent.png" width="650" /><br />
+![](../images/classes/experienceevent/structure.png)
 
 | Proprietà | Descrizione |
 | --- | --- |
-| `_id` | Identificatore stringa univoco generato dal sistema per l&#39;evento. Questo campo viene utilizzato per tenere traccia dell’univocità di un singolo evento, prevenire la duplicazione dei dati e per cercare tale evento nei servizi a valle. Poiché questo campo è generato dal sistema, non deve essere fornito un valore esplicito durante l’inserimento dei dati.<br><br>È importante distinguere che questo campo  **non** rappresenta un&#39;identità correlata a una singola persona, ma piuttosto il record dei dati stessi. I dati di identità relativi a una persona devono essere invece relegati a [campi di identità](../schema/composition.md#identity). |
-| `eventMergeId` | ID del batch acquisito che ha causato la creazione del record. Questo campo viene compilato automaticamente dal sistema al momento dell’inserimento dei dati. |
-| `eventType` | Una stringa che indica il tipo di evento principale per il record. I valori accettati e le relative definizioni sono forniti nella sezione [appendice](#eventType). |
+| `_id` | Identificatore stringa univoco per l&#39;evento. Questo campo viene utilizzato per tenere traccia dell’univocità di un singolo evento, per impedire la duplicazione dei dati e per cercare l’evento nei servizi a valle.<br><br>In alcuni casi,  `_id` può essere un identificatore univoco  [universale (UUID)](https://tools.ietf.org/html/rfc4122) o un identificatore univoco  [globale (GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0). In Adobe Experience Platform Data Prep, questo valore può essere generato utilizzando le funzioni di mappatura [`uuid` o `guid`](../../data-prep/functions.md#special-operations).<br><br>Se stai eseguendo lo streaming dei dati da una connessione di origine o l’acquisizione diretta da un file Parquet, devi generare questo valore concatenando una determinata combinazione di campi che rendono l’elemento uniforme univoco, ad esempio un ID principale, una marca temporale, un tipo di evento e così via.<br><br>È importante distinguere che  **questo campo non rappresenta un&#39;identità correlata a una persona**, ma piuttosto il record dei dati stessi. I dati di identità relativi a una persona devono essere relegati ai [campi di identità](../schema/composition.md#identity) forniti invece da mixin compatibili. |
+| `eventMergeId` | Se si utilizza [Adobe Experience Platform Web SDK](../../edge/home.md) per l’acquisizione dei dati, questo rappresenta l’ID del batch acquisito che ha causato la creazione del record. Questo campo viene compilato automaticamente dal sistema al momento dell’inserimento dei dati. L’utilizzo di questo campo al di fuori del contesto di un’implementazione SDK per web non è supportato. |
+| `eventType` | Una stringa che indica il tipo o la categoria per l&#39;evento. Questo campo può essere utilizzato se desideri distinguere diversi tipi di eventi all’interno dello stesso schema e dello stesso set di dati, ad esempio distinguere un evento di visualizzazione prodotto da un evento add-to-shopping-cart per una società di vendita al dettaglio.<br><br>I valori standard per questa proprietà sono forniti nella sezione [ dell&#39;](#eventType)appendice, con le descrizioni del relativo caso d&#39;uso previsto. Questo campo è un enum estensibile, il che significa che puoi utilizzare anche stringhe del tipo di evento personalizzate per classificare gli eventi che stai tracciando. |
+| `producedBy` | Valore stringa che descrive il produttore o l&#39;origine dell&#39;evento. Questo campo può essere utilizzato per filtrare alcuni produttori di eventi se necessario a scopo di segmentazione.<br><br>Alcuni valori consigliati per questa proprietà sono forniti nella sezione  [dell&#39;appendice](#producedBy). Questo campo è un enum estensibile, il che significa che è possibile utilizzare anche le proprie stringhe per rappresentare diversi produttori di eventi. |
 | `identityMap` | Campo mappa contenente un set di identità con spazi dei nomi per l’individuo a cui si applica l’evento. Questo campo viene aggiornato automaticamente dal sistema durante l’acquisizione dei dati di identità. Per utilizzare correttamente questo campo per [Profilo cliente in tempo reale](../../profile/home.md), non tentare di aggiornare manualmente il contenuto del campo nelle operazioni sui dati.<br /><br />Per ulteriori informazioni sul relativo caso d’uso, consulta la sezione sulle mappe di identità nelle  [nozioni di base sulla ](../schema/composition.md#identityMap) composizione degli schemi . |
-| `timestamp` | Una marca temporale ISO 8601 di quando si è verificato l’evento, formattata in base alla sezione 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) della RFC 3339.[<br><br>Questa marca temporale può rappresentare  **** solo l&#39;osservazione dell&#39;evento stesso e deve verificarsi in passato. Se i casi di utilizzo della segmentazione richiedono l’uso di marche temporali che possono verificarsi in futuro (ad esempio una data di partenza), questi valori devono essere vincolati altrove nello schema Evento esperienza. |
+| `timestamp` | Una marca temporale ISO 8601 di quando si è verificato l’evento, formattata in base alla sezione 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) della RFC 3339. [ Questa marca temporale deve essere presente in passato. Per le best practice sull’utilizzo di questo campo, consulta la sezione seguente sulle [marche temporali](#timestamps) . |
+
+## Best practice per la modellazione degli eventi
+
+Le sezioni seguenti descrivono le best practice per la progettazione degli schemi Experience Data Model (XDM) basati su eventi in Adobe Experience Platform.
+
+### Marca temporale {#timestamps}
+
+Il campo principale `timestamp` di uno schema evento può **solo** rappresentare l&#39;osservazione dell&#39;evento stesso e deve verificarsi nel passato. Se i casi di utilizzo della segmentazione richiedono l’uso di marche temporali che possono verificarsi in futuro, questi valori devono essere vincolati altrove nello schema Evento esperienza.
+
+Ad esempio, se un&#39;azienda nel settore dei viaggi e dell&#39;ospitalità sta modellando un evento di prenotazione del volo, il campo a livello di classe `timestamp` rappresenta il momento in cui è stato osservato l&#39;evento di prenotazione. Gli altri timestamp relativi all’evento, come la data di inizio della prenotazione, devono essere acquisiti in campi separati forniti da mixin standard o personalizzati.
+
+![](../images/classes/experienceevent/timestamps.png)
+
+Mantenendo la marca temporale a livello di classe separata dagli altri valori datetime correlati negli schemi di evento, puoi implementare casi d’uso di segmentazione flessibili mantenendo un account con marca temporale dei percorsi cliente nell’applicazione di esperienza.
+
+### Uso dei campi calcolati
+
+Alcune interazioni nelle applicazioni di esperienza possono causare più eventi correlati che condividono tecnicamente la stessa marca temporale dell’evento e possono quindi essere rappresentati come un singolo record di eventi. Ad esempio, se un cliente visualizza un prodotto sul sito web, questo può causare un record evento che contiene sia gli attributi di &quot;visualizzazione prodotto&quot; che alcuni attributi generici di &quot;visualizzazione pagina&quot; sovrapposti. In questi casi, è possibile utilizzare i campi calcolati per acquisire gli attributi più importanti quando più eventi vengono acquisiti in un record.
+
+[Adobe Experience Platform Data ](../../data-prep/home.md) Preppiede consente di mappare, trasformare e convalidare i dati da e verso XDM. Utilizzando le funzioni di mappatura [disponibili](../../data-prep/functions.md) fornite dal servizio, è possibile richiamare operatori logici per assegnare la priorità, trasformare e/o consolidare i dati dai record con più eventi durante l&#39;acquisizione in Experience Platform.
+
+Se acquisisci manualmente i dati in Platform tramite l’interfaccia utente, consulta la guida sulla [mappatura di un file CSV in XDM](../../ingestion/tutorials/map-a-csv-file.md) per passaggi specifici su come creare i campi calcolati.
+
+Se i dati vengono inviati in streaming a Platform tramite una connessione sorgente, è possibile configurare l’origine in modo da utilizzare i campi calcolati. Per istruzioni su come implementare i campi calcolati durante la configurazione della connessione, consulta la [documentazione relativa alla specifica origine](../../sources/home.md) .
 
 ## Gruppi di campi dello schema compatibili {#field-groups}
 
@@ -39,16 +63,16 @@ La classe [!DNL XDM ExperienceEvent] fornisce a uno schema diversi campi relativ
 
 Adobe fornisce diversi gruppi di campi standard da utilizzare con la classe [!DNL XDM ExperienceEvent] . Di seguito è riportato un elenco di alcuni gruppi di campi di uso comune per la classe:
 
-* [[!UICONTROL End User ID Details]](../field-groups/event/enduserids.md)
-* [[!UICONTROL Environment Details]](../field-groups/event/environment-details.md)
+* [[!UICONTROL Dettagli ID utente finale]](../field-groups/event/enduserids.md)
+* [[!UICONTROL Dettagli dell&#39;ambiente]](../field-groups/event/environment-details.md)
 
 ## Appendice
 
 La sezione seguente contiene informazioni aggiuntive sulla classe [!UICONTROL XDM ExperienceEvent] .
 
-### Valori accettati per xdm:eventType {#eventType}
+### Valori accettati per `eventType` {#eventType}
 
-La tabella seguente illustra i valori accettati per `xdm:eventType`, insieme alle relative definizioni:
+La tabella seguente illustra i valori accettati per `eventType`, insieme alle relative definizioni:
 
 | Valore | Definizione |
 | --- | --- |
@@ -76,3 +100,14 @@ La tabella seguente illustra i valori accettati per `xdm:eventType`, insieme all
 | `delivery.feedback` | Eventi di feedback per una consegna, ad esempio una consegna e-mail. |
 | `message.feedback` | Eventi di feedback come sent/bounce/error per i messaggi inviati a un cliente. |
 | `message.tracking` | Tracciamento di eventi come azioni aperte/clic/personalizzate sui messaggi inviati a un cliente. |
+
+### Valori consigliati per `producedBy` {#producedBy}
+
+La tabella seguente illustra alcuni valori accettati per `producedBy`:
+
+| Valore | Definizione |
+| --- | --- |
+| `self` | Self |
+| `system` | Sistema |
+| `salesRef` | Rappresentante commerciale |
+| `customerRep` | Rappresentante |
