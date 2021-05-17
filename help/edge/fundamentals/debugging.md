@@ -1,29 +1,28 @@
 ---
 title: Debug in Adobe Experience Platform Web SDK
-description: Scoprite come attivare/disattivare le funzionalità di debug nell’SDK Web per Experience Platform .
-keywords: debugging web sdk;debugging;configure;configure command;debug command;edgeConfigId;setDebug;debugEnabled;debug;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+description: Scopri come attivare/disattivare le funzionalità di debug nell’SDK per web di Experience Platform.
+keywords: debugging sdk Web;debugging;configurare;comando di configurazione;comando di debug;edgeConfigId;setDebug;debugEnabled;debug;
+exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
+source-git-commit: 0f671a967a67761e0cfef6fa0d022e3c3790c2d8
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
 
-
 # Eseguire il debug di
 
-Quando il debug è abilitato, l’SDK invia messaggi alla console del browser che possono essere utili per eseguire il debug dell’implementazione e comprendere il funzionamento dell’SDK. Il debug comporta inoltre una convalida sincrona lato server dei dati raccolti rispetto allo schema configurato.
+Quando il debug è abilitato, l’SDK invia messaggi alla console del browser che possono essere utili per eseguire il debug dell’implementazione e comprendere il comportamento dell’SDK. Il debug comporta anche una convalida sincrona lato server dei dati raccolti rispetto allo schema configurato.
 
 Il debug è disattivato per impostazione predefinita, ma può essere attivato in tre modi diversi:
 
 * `configure` command
 * `setDebug` command
-* parametro stringa query
+* parametro della stringa di query
 
-## Attivazione del debug con il comando Configura
+## Attivazione del debugging con il comando Configura
 
-Per configurare l&#39;SDK con il comando `configure`, abilita il debug impostando l&#39;opzione `debugEnabled` su `true`.
+Durante la configurazione dell&#39;SDK tramite il comando `configure`, abilita il debug impostando l&#39;opzione `debugEnabled` su `true`.
 
 ```javascript
 alloy("configure", {
@@ -35,11 +34,11 @@ alloy("configure", {
 
 >[!TIP]
 >
->Questo consente il debug per tutti gli utenti della pagina Web anziché solo per il browser personale.
+>Questo consente il debug di tutti gli utenti della pagina web anziché solo del browser personale.
 
-## Attivazione del debug con il comando Debug
+## Attivazione del debugging con il comando Debug
 
-Attiva il debug con un comando `debug` separato, come segue:
+Attiva il debug con un comando `debug` separato come segue:
 
 ```javascript
 alloy("setDebug", {
@@ -47,29 +46,29 @@ alloy("setDebug", {
 });
 ```
 
-Se si preferisce non modificare il codice della pagina Web o non si desidera che i messaggi di registrazione vengano prodotti per tutti gli utenti del sito Web, ciò è particolarmente utile perché è possibile eseguire il comando `debug` nella console JavaScript del browser in qualsiasi momento.
+Se si preferisce non modificare il codice sulla pagina web o non si desidera che i messaggi di log vengano prodotti per tutti gli utenti del sito web, questo è particolarmente utile perché è possibile eseguire il comando `debug` nella console JavaScript del browser in qualsiasi momento.
 
-## Attivazione del debug con un parametro di stringa di query
+## Attivazione del debugging con un parametro della stringa di query
 
-Per attivare o disattivare il debug, impostare un parametro di stringa di query `alloy_debug` su `true` o `false` come segue:
+Attiva il debug impostando un parametro della stringa di query `alloy_debug` su `true` o `false` come segue:
 
 ```HTTP
 http://example.com/?alloy_debug=true
 ```
 
-Simile al comando `debug`, se si preferisce non modificare il codice della pagina Web o non si desidera che i messaggi di registrazione vengano prodotti per tutti gli utenti del sito Web, questo è particolarmente utile perché è possibile impostare il parametro della stringa di query quando si carica la pagina Web all&#39;interno del browser.
+Simile al comando `debug`, se preferisci non modificare il codice sulla pagina web o non vuoi produrre messaggi di registrazione per tutti gli utenti del sito web, questo è particolarmente utile perché puoi impostare il parametro della stringa query quando carichi la pagina web all’interno del browser.
 
 ## Priorità e durata
 
-Quando il debug viene impostato tramite il parametro `debug` del comando o della stringa di query, sostituisce qualsiasi opzione `debug` impostata nel comando `configure`. In questi due casi, anche il debug rimane attivato per tutta la durata della sessione. In altre parole, se si abilita il debug utilizzando il comando di debug o il parametro della stringa di query, rimane attivato fino a quando non viene eseguita una delle operazioni seguenti:
+Quando il debug viene impostato tramite il parametro `debug` del comando o della stringa di query, sostituisce qualsiasi opzione `debug` impostata nel comando `configure`. In questi due casi, il debug rimane attivato anche per la durata della sessione. In altre parole, se si abilita il debug utilizzando il comando di debug o il parametro della stringa di query, rimane abilitato fino a una delle seguenti operazioni:
 
 * Fine della sessione
-* Eseguire il comando `debug`
-* Impostare di nuovo il parametro della stringa di query
+* Esegui il comando `debug`
+* Impostare nuovamente il parametro della stringa query
 
 ## Recupero delle informazioni sulla libreria
 
-Spesso è utile accedere ad alcuni dei dettagli della libreria caricata sul sito Web. A tal fine, eseguite il comando `getLibraryInfo` come segue:
+Spesso è utile accedere ad alcuni dei dettagli della libreria caricata sul sito web. A questo scopo, esegui il comando `getLibraryInfo` come segue:
 
 ```js
 alloy("getLibraryInfo").then(function(result) {
@@ -77,6 +76,6 @@ alloy("getLibraryInfo").then(function(result) {
 });
 ```
 
-Attualmente, l&#39;oggetto `libraryInfo` fornito contiene le proprietà seguenti:
+Attualmente, l&#39;oggetto `libraryInfo` fornito contiene le seguenti proprietà:
 
-* `version` Questa è la versione della libreria caricata. Ad esempio, se la versione della libreria caricata fosse 1.0.0, il valore sarebbe `1.0.0`.
+* `version` Questa è la versione della libreria caricata. Ad esempio, se la versione della libreria caricata fosse 1.0.0, il valore sarebbe `1.0.0`. Quando la libreria viene eseguita all&#39;interno dell&#39;estensione Adobe Experience Platform Launch (denominata &quot;AEP Web SDK&quot;), la versione è la versione della libreria e la versione dell&#39;estensione del Platform launch è unita a un segno &quot;+&quot;. Ad esempio, se la versione della libreria fosse 1.0.0 e l&#39;estensione Platform launch fosse 1.2.0, il valore sarebbe `1.0.0+1.2.0`.
