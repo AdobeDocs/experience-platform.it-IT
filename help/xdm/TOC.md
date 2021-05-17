@@ -4,11 +4,10 @@ user-guide-title: Guida del sistema Experience Data Model (XDM)
 breadcrumb-title: Guida di Data Model (XDM)
 user-guide-description: Utilizza le classi Experience Data Model (XDM) e i gruppi di campi dello schema per standardizzare i dati dell’esperienza.
 feature: Schemi
-translation-type: tm+mt
-source-git-commit: a19a89d347b9197ab2766bd8a57018f5ac4f058d
+source-git-commit: dcfdc9c479e8a77296f7cb0bf9f5bb36e9261b75
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 16%
+source-wordcount: '295'
+ht-degree: 15%
 
 ---
 
@@ -20,6 +19,7 @@ ht-degree: 16%
    * [Nozioni di base sulla composizione dello schema](schema/composition.md)
    * [Best practice per la modellazione dei dati](schema/best-practices.md)
    * [Vincoli del tipo di campo XDM](schema/field-constraints.md)
+   * [Spaziatura dei nomi in XDM](./schema/namespaces.md)
    * [Dizionario dei campi XDM](schema/field-dictionary.md)
    * Modelli di dati di settore {#industries}
       * [Panoramica](./schema/industries/overview.md)
@@ -71,11 +71,11 @@ ht-degree: 16%
    * [Dettagli POI](./data-types/poi-details.md)
    * [Interazione POI](./data-types/poi-interaction.md)
    * [Indirizzo postale](./data-types/postal-address.md)
-   * [Ricerca](./data-types/search.md)
+   * [Cerca](./data-types/search.md)
    * [Abbonamento](./data-types/subscription.md)
    * [Interazione web](./data-types/web-interactions.md)
    * [Dettagli della pagina web](./data-types/webpage-details.md)
-* [!UICONTROL Schemas] Interfaccia {#ui}
+* [!UICONTROL Interfaccia utente degli schemi ]   {#ui}
    * [Panoramica](./ui/overview.md)
    * [Esplorare le risorse XDM](./ui/explore.md)
    * Creare e modificare risorse {#resources}
