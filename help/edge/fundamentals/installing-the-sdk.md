@@ -2,14 +2,13 @@
 title: Installare Adobe Experience Platform Web SDK
 description: Scopri come installare Experience Platform Web SDK.
 keywords: installazione sdk web;installazione sdk web;internet explorer;promise;pacchetto npm
-translation-type: tm+mt
-source-git-commit: 63c0c5cae5ca2800b1f049b2b33e2a6f36ee7255
+exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
+source-git-commit: 07f598a9fd7c0e5af7802fe979a44bbafa7afae4
 workflow-type: tm+mt
-source-wordcount: '901'
-ht-degree: 4%
+source-wordcount: '939'
+ht-degree: 3%
 
 ---
-
 
 # Installa l&#39;SDK {#installing-the-sdk}
 
@@ -130,6 +129,10 @@ const alloy = createInstance({ name: "alloy" });
 alloy("config", { ... });
 alloy("sendEvent", { ... });
 ```
+
+>[!NOTE]
+>
+>Il pacchetto NPM si basa su moduli CommonJS; pertanto, quando utilizzi un bundler, assicurati che il bundler supporti i moduli CommonJS. Alcuni bundler, come [Rollup](https://rollupjs.org), richiedono un [plug-in](https://www.npmjs.com/package/@rollup/plugin-commonjs) che fornisca il supporto CommonJS.
 
 ### Utilizzo del pacchetto come modulo ECMAScript 5
 
