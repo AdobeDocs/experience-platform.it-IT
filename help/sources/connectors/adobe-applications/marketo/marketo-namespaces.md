@@ -5,10 +5,9 @@ title: namespace Marketo
 topic-legacy: overview
 description: Questo documento fornisce una panoramica dei namespace personalizzati necessari per la creazione di un connettore di origine del Marketo Engage.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-translation-type: tm+mt
-source-git-commit: 8dd7b1724f3de12bf6a3a1b77ee8050fd1a9eaf3
+source-git-commit: af728fb508c514db3d5871114f9a406c1ed428f2
 workflow-type: tm+mt
-source-wordcount: '1602'
+source-wordcount: '1670'
 ht-degree: 3%
 
 ---
@@ -56,6 +55,20 @@ La tabella seguente contiene valori di esempio e informazioni aggiuntive sulla c
 | `has_msi` | Un valore booleano che indica se sei iscritto a [!DNL Marketo Sales Insight]. | `false` |
 
 {style=&quot;table-layout:auto&quot;}
+
+### Esecuzione degli script
+
+Con la raccolta [!DNL Postman] e l&#39;ambiente impostati, ora puoi eseguire lo script tramite l&#39;interfaccia [!DNL Postman].
+
+Nell&#39;interfaccia [!DNL Postman], seleziona la cartella principale dell&#39;utilità di generazione automatica e seleziona **[!DNL Run]** dall&#39;intestazione superiore.
+
+![cartella principale](../images/marketo/root-folder.png)
+
+Viene visualizzata l&#39;interfaccia [!DNL Runner]. Da qui, accertati che tutte le caselle di controllo siano selezionate e quindi seleziona **[!DNL Run Adobe I/O Access Token Generation + Automate Namespace creation]**.
+
+![generatore di corrente](../images/marketo/run-generator.png)
+
+Una richiesta corretta crea i namespace e gli schemi B2B in base alle specifiche beta.
 
 ## [!DNL Marketo] spazi dei nomi
 
