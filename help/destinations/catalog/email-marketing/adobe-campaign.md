@@ -3,10 +3,9 @@ keywords: e-mail;e-mail;e-mail;destinazioni;adobe campaign;campaign
 title: Connessione Adobe Campaign
 description: Adobe Campaign è un set di soluzioni che consentono di personalizzare e distribuire campagne su tutti i canali online e offline.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-translation-type: tm+mt
-source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
+source-git-commit: 70be44e919070df910d618af4507b600ad51123c
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '871'
 ht-degree: 0%
 
 ---
@@ -21,7 +20,7 @@ Per inviare i dati dei segmenti ad Adobe Campaign, è necessario prima [collegar
 
 ## Tipo di esportazione {#export-type}
 
-**Basato su profilo** : stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nel  **[!UICONTROL Select attributes]** passaggio del flusso di lavoro [ di attivazione della ](../../ui/activate-destinations.md#select-attributes)destinazione.
+**Basato su profilo** : stai esportando tutti i membri di un segmento, insieme ai campi dello schema desiderati (ad esempio: indirizzo e-mail, numero di telefono, cognome), come scelto nel passaggio  **[!UICONTROL Seleziona]** attributi del flusso di lavoro [ di attivazione della ](../../ui/activate-destinations.md#select-attributes)destinazione.
 
 ## ELENCO CONSENTITI di indirizzi IP {#allow-list}
 
@@ -31,40 +30,40 @@ Per aggiungere IP di Adobe al tuo elenco consentiti, fai riferimento all’ [ele
 
 ## Collegare la destinazione {#connect-destination}
 
-In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, seleziona Adobe Campaign, quindi seleziona **[!UICONTROL Configure]**.
+In **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]**, seleziona Adobe Campaign, quindi seleziona **[!UICONTROL Configura]**.
 
 >[!NOTE]
 >
->Se esiste già una connessione con questa destinazione, è possibile visualizzare un pulsante **[!UICONTROL Activate]** sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra [!UICONTROL Activate] e [!UICONTROL Configure], consulta la sezione [Catalogo](../../ui/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
+>Se esiste già una connessione con questa destinazione, è possibile visualizzare un pulsante **[!UICONTROL Attiva]** sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra [!UICONTROL Attiva] e [!UICONTROL Configura], consulta la sezione [Catalogo](../../ui/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
 
 ![Connettersi ad Adobe Campaign](../../assets/catalog/email-marketing/adobe-campaign/catalog.png)
 
-Nel passaggio **[!UICONTROL Account]** del flusso di lavoro di destinazione Connetti , seleziona **[!UICONTROL Connection type]** per il percorso di archiviazione. Per Adobe Campaign, puoi selezionare tra **[!UICONTROL Amazon S3]**, **[!UICONTROL SFTP with Password]**, **[!UICONTROL SFTP with SSH Key]** e **[!UICONTROL Azure Blob]**. Il metodo preferito per inviare dati ad Adobe Campaign è tramite [!DNL Amazon S3] o [!DNL Azure Blob]. Compila le informazioni seguenti, a seconda del tipo di connessione, quindi seleziona **[!UICONTROL Connect]**.
+Nel passaggio **[!UICONTROL Account]** del flusso di lavoro di destinazione Connetti, selezionare il **[!UICONTROL Tipo di connessione]** per il percorso di archiviazione. Per Adobe Campaign, puoi selezionare tra **[!UICONTROL Amazon S3]**, **[!UICONTROL SFTP con password]**, **[!UICONTROL SFTP con chiave SSH]** e **[!UICONTROL Azure Blob]**. Il metodo preferito per inviare dati ad Adobe Campaign è tramite [!DNL Amazon S3] o [!DNL Azure Blob]. Compila le informazioni seguenti, a seconda del tipo di connessione, quindi seleziona **[!UICONTROL Connetti]**.
 
 
 ![Configurazione guidata Campaign](../../assets/catalog/email-marketing/adobe-campaign/connection-type.png)
 
-- Per le connessioni **[!UICONTROL Amazon S3]**, è necessario fornire i valori [!UICONTROL Access Key ID] e [!UICONTROL Secret Access Key].
-- Per le connessioni **[!UICONTROL SFTP with Password]**, è necessario specificare [!UICONTROL Domain], [!UICONTROL Port], [!UICONTROL Username] e [!UICONTROL Password].
-- Per le connessioni **[!UICONTROL SFTP with SSH Key]**, è necessario specificare [!UICONTROL Domain], [!UICONTROL Port], [!UICONTROL Username] e [!UICONTROL SSH Key].
+- Per le connessioni **[!UICONTROL Amazon S3]**, devi fornire il tuo [!UICONTROL ID chiave di accesso] e [!UICONTROL Chiave di accesso segreto].
+- Per le connessioni **[!UICONTROL SFTP con password]**, è necessario fornire [!UICONTROL Dominio], [!UICONTROL Porta], [!UICONTROL Nome utente] e [!UICONTROL Password].
+- Per le connessioni **[!UICONTROL SFTP con chiave SSH]**, è necessario fornire [!UICONTROL Dominio], [!UICONTROL Porta], [!UICONTROL Nome utente] e [!UICONTROL Chiave SSH].
 - Per le connessioni **[!UICONTROL Azure Blob]**, è necessario fornire una stringa di connessione.
 
-Facoltativamente, puoi allegare la tua chiave pubblica in formato RSA per aggiungere la crittografia con PGP/GPG ai file esportati nella sezione **[!UICONTROL Key]** . La chiave pubblica deve essere scritta come stringa codificata [!DNL Base64].
+Facoltativamente, puoi allegare la tua chiave pubblica in formato RSA per aggiungere la crittografia con PGP/GPG ai file esportati nella sezione **[!UICONTROL Chiave]** . La chiave pubblica deve essere scritta come stringa codificata [!DNL Base64].
 
 ![Compila le informazioni di Campaign](../../assets/catalog/email-marketing/adobe-campaign/account-info.png)
 
-In **[!UICONTROL Account authentication]**, compila le informazioni rilevanti per la tua destinazione, come mostrato di seguito:
-- **[!UICONTROL Name]**: Scegli un nome appropriato per la destinazione.
-- **[!UICONTROL Description]**: Inserisci una descrizione per la destinazione.
-- **[!UICONTROL Bucket Name]**:  *Per connessioni* S3. Immetti la posizione del bucket S3 in cui [!DNL Platform] depositerà i dati di esportazione come file CSV o delimitati da tabulazioni.
-- **[!UICONTROL Folder Path]**: Fornisci il percorso nel percorso di archiviazione in cui  [!DNL Platform] verranno depositati i dati di esportazione come file CSV o delimitati da tabulazioni.
-- **[!UICONTROL Container]**:  *Per connessioni* Blob. Il contenitore contenente il BLOB nel percorso della cartella è in.
-- **[!UICONTROL File Format]**:  **** CSVo  **TAB_DELIMITTED**. Selezionare il formato di file da esportare nel percorso di archiviazione.
-- **[!UICONTROL Marketing actions]**: Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite da Adobi o creare una tua azione di marketing. Per ulteriori informazioni sulle azioni di marketing, consulta la pagina [Panoramica dei criteri di utilizzo dei dati](../../../data-governance/policies/overview.md) .
+In **[!UICONTROL Autenticazione account]**, compila le informazioni pertinenti per la tua destinazione, come mostrato di seguito:
+- **[!UICONTROL Nome]**: Scegli un nome appropriato per la destinazione.
+- **[!UICONTROL Descrizione]**: Inserisci una descrizione per la destinazione.
+- **[!UICONTROL Nome]** blocco:  *Per connessioni* S3. Immetti la posizione del bucket S3 in cui [!DNL Platform] depositerà i dati di esportazione come file CSV o delimitati da tabulazioni.
+- **[!UICONTROL Percorso]** cartella: Fornisci il percorso nel percorso di archiviazione in cui  [!DNL Platform] verranno depositati i dati di esportazione come file CSV o delimitati da tabulazioni.
+- **[!UICONTROL Contenitore]**:  *Per connessioni* Blob. Il contenitore contenente il BLOB nel percorso della cartella è in.
+- **[!UICONTROL Formato]** file:  **** CSVo  **TAB_DELIMITTED**. Selezionare il formato di file da esportare nel percorso di archiviazione.
+- **[!UICONTROL Azioni]** di marketing: Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite da Adobi o creare una tua azione di marketing. Per ulteriori informazioni sulle azioni di marketing, consulta la pagina [Panoramica dei criteri di utilizzo dei dati](../../../data-governance/policies/overview.md) .
 
 ![Informazioni di base su Campaign](../../assets/catalog/email-marketing/adobe-campaign/basic-information.png)
 
-Selezionare **[!UICONTROL Create destination]** dopo aver compilato i campi precedenti. La destinazione è ora connessa ed è possibile [attivare segmenti](../../ui/activate-destinations.md) alla destinazione.
+Selezionare **[!UICONTROL Crea destinazione]** dopo aver compilato i campi sopra riportati. La destinazione è ora connessa ed è possibile [attivare segmenti](../../ui/activate-destinations.md) alla destinazione.
 
 ## Attiva segmenti {#activate-segments}
 
@@ -76,13 +75,13 @@ Quando si attivano [segmenti](../../ui/activate-destinations.md) nella destinazi
 
 ## Dati esportati {#exported-data}
 
-Per le destinazioni [!DNL Adobe Campaign], [!DNL Platform] crea un file `.txt` o `.csv` delimitato da tabulazioni nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, consulta [Destinazioni di e-mail marketing e destinazioni di archiviazione Cloud](../../ui/activate-destinations.md#esp-and-cloud-storage) nell’esercitazione sull’attivazione dei segmenti.
+Per le destinazioni [!DNL Adobe Campaign], [!DNL Platform] crea un file `.csv` delimitato da tabulazioni nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, consulta [Destinazioni di e-mail marketing e destinazioni di archiviazione Cloud](../../ui/activate-destinations.md#esp-and-cloud-storage) nell’esercitazione sull’attivazione dei segmenti.
 
 ## Configurare l’importazione di dati in Adobe Campaign {#import-data-into-campaign}
 
 >[!IMPORTANT]
 >
->- Tieni presente i limiti di archiviazione SFTP, i limiti di archiviazione del database e i limiti dei profili attivi in base al contratto Adobe Campaign durante l’esecuzione di questa integrazione.
+>- Tieni presente i limiti di archiviazione [!DNL SFTP], i limiti di archiviazione del database e i limiti dei profili attivi in base al contratto Adobe Campaign durante l&#39;esecuzione dell&#39;integrazione.
 >- Devi pianificare, importare e mappare i segmenti esportati in Adobe Campaign utilizzando i flussi di lavoro [!DNL Campaign] . Consulta [Impostazione di un&#39;importazione ricorrente](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html) nella documentazione di Adobe Campaign Classic e [Informazioni sulle attività di gestione dati](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) nella documentazione di Adobe Campaign Standard.
 >- Il metodo preferito per inviare dati ad Adobe Campaign è tramite [!DNL Amazon S3] o [!DNL Azure Blob].
 
