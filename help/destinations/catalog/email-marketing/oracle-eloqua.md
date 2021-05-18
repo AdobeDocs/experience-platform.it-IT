@@ -3,10 +3,9 @@ keywords: e-mail;e-mail;e-mail;destinazioni e-mail;oracle eloqua;oracle
 title: Oracle collegamento Eloqua
 description: Oracle Eloqua è una piattaforma software as a service (SaaS) per l'automazione del marketing offerta da Oracle che ha lo scopo di aiutare gli esperti di marketing e le organizzazioni B2B a gestire le campagne di marketing e la generazione di lead di vendita.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-translation-type: tm+mt
-source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
+source-git-commit: 70be44e919070df910d618af4507b600ad51123c
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '672'
 ht-degree: 0%
 
 ---
@@ -29,33 +28,33 @@ Per aggiungere IP di Adobe al tuo elenco consentiti, fai riferimento all’ [ele
 
 ## Connetti alla destinazione {#connect-destination}
 
-In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, selezionare [!DNL Oracle Eloqua], quindi selezionare **[!UICONTROL Configure]**.
+In **[!UICONTROL Connessioni]** > **[!UICONTROL Destinazioni]**, seleziona [!DNL Oracle Eloqua], quindi seleziona **[!UICONTROL Configura]**.
 
 >[!NOTE]
 >
->Se esiste già una connessione con questa destinazione, è possibile visualizzare un pulsante **[!UICONTROL Activate]** sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra [!UICONTROL Activate] e [!UICONTROL Configure], consulta la sezione [Catalogo](../../ui/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
+>Se esiste già una connessione con questa destinazione, è possibile visualizzare un pulsante **[!UICONTROL Attiva]** sulla scheda di destinazione. Per ulteriori informazioni sulla differenza tra [!UICONTROL Attiva] e [!UICONTROL Configura], consulta la sezione [Catalogo](../../ui/destinations-workspace.md#catalog) della documentazione dell&#39;area di lavoro di destinazione.
 
 ![Connettiti a Eloqua](../../assets/catalog/email-marketing/oracle-eloqua/catalog.png)
 
-Nel passaggio **[!UICONTROL Account]**, se in precedenza hai impostato una connessione alla destinazione di archiviazione cloud, seleziona **[!UICONTROL Existing Account]** e seleziona una delle connessioni esistenti. In alternativa, è possibile selezionare **[!UICONTROL New Account]** per impostare una nuova connessione. Immetti le credenziali di autenticazione del tuo account e seleziona **[!UICONTROL Connect to destination]**. Per [!DNL Oracle Eloqua], puoi selezionare tra **[!UICONTROL SFTP with Password]** e **[!UICONTROL SFTP with SSH Key]**.
+Nel passaggio **[!UICONTROL Account]**, se in precedenza era stata impostata una connessione alla destinazione di archiviazione cloud, selezionare **[!UICONTROL Account esistente]** e selezionare una delle connessioni esistenti. In alternativa, è possibile selezionare **[!UICONTROL Nuovo account]** per impostare una nuova connessione. Inserisci le credenziali di autenticazione del tuo account e seleziona **[!UICONTROL Connetti a destinazione]**. Per [!DNL Oracle Eloqua], puoi scegliere tra **[!UICONTROL SFTP con password]** e **[!UICONTROL SFTP con chiave SSH]**.
 
 ![Connetti account Eloqua](../../assets/catalog/email-marketing/oracle-eloqua/connection-type.png)
 
-Compila le informazioni seguenti, a seconda del tipo di connessione, e seleziona **[!UICONTROL Connect to destination]**.
+Compila le informazioni seguenti, a seconda del tipo di connessione, e seleziona **[!UICONTROL Connetti a destinazione]**.
 
-- Per le connessioni **[!UICONTROL SFTP with Password]**, è necessario specificare [!UICONTROL Domain], [!UICONTROL Port], [!UICONTROL Username] e [!UICONTROL Password].
-- Per le connessioni **[!UICONTROL SFTP with SSH Key]**, è necessario specificare [!UICONTROL Domain], [!UICONTROL Port], [!UICONTROL Username] e [!UICONTROL SSH Key].
+- Per le connessioni **[!UICONTROL SFTP con password]**, è necessario fornire [!UICONTROL Dominio], [!UICONTROL Porta], [!UICONTROL Nome utente] e [!UICONTROL Password].
+- Per le connessioni **[!UICONTROL SFTP con chiave SSH]**, è necessario fornire [!UICONTROL Dominio], [!UICONTROL Porta], [!UICONTROL Nome utente] e [!UICONTROL Chiave SSH].
 
-Facoltativamente, puoi allegare la tua chiave pubblica in formato RSA per aggiungere la crittografia con PGP/GPG ai file esportati nella sezione **[!UICONTROL Key]** . La chiave pubblica deve essere scritta come stringa codificata [!DNL Base64].
+Facoltativamente, puoi allegare la tua chiave pubblica in formato RSA per aggiungere la crittografia con PGP/GPG ai file esportati nella sezione **[!UICONTROL Chiave]** . La chiave pubblica deve essere scritta come stringa codificata [!DNL Base64].
 
 ![Eloqua connessione a destinazione](../../assets/catalog/email-marketing/oracle-eloqua/account-info.png)
 
-Nel passaggio **[!UICONTROL Authentication]** , compila le informazioni rilevanti per la tua destinazione come mostrato di seguito:
-- **[!UICONTROL Name]**: Scegli un nome appropriato per la destinazione.
-- **[!UICONTROL Description]**: Inserisci una descrizione per la destinazione.
-- **[!UICONTROL Folder Path]**: Fornisci il percorso nel percorso di archiviazione in cui Platform depositerà i dati di esportazione come file CSV o delimitati da tabulazioni.
-- **[!UICONTROL File Format]**:  **** CSVo  **TAB_DELIMITTED**. Selezionare il formato di file da esportare nel percorso di archiviazione.
-- **[!UICONTROL Marketing actions]**: Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite da Adobi o creare una tua azione di marketing. Per ulteriori informazioni sulle azioni di marketing, consulta la [Panoramica sui criteri di utilizzo dei dati](../../../data-governance/policies/overview.md).
+Nel passaggio **[!UICONTROL Autenticazione]**, compila le informazioni rilevanti per la tua destinazione come mostrato di seguito:
+- **[!UICONTROL Nome]**: Scegli un nome appropriato per la destinazione.
+- **[!UICONTROL Descrizione]**: Inserisci una descrizione per la destinazione.
+- **[!UICONTROL Percorso]** cartella: Fornisci il percorso nel percorso di archiviazione in cui Platform depositerà i dati di esportazione come file CSV o delimitati da tabulazioni.
+- **[!UICONTROL Formato]** file:  **** CSVo  **TAB_DELIMITTED**. Selezionare il formato di file da esportare nel percorso di archiviazione.
+- **[!UICONTROL Azioni]** di marketing: Le azioni di marketing indicano l’intento per il quale i dati verranno esportati nella destinazione. Puoi scegliere tra azioni di marketing definite da Adobi o creare una tua azione di marketing. Per ulteriori informazioni sulle azioni di marketing, consulta la [Panoramica sui criteri di utilizzo dei dati](../../../data-governance/policies/overview.md).
 
 <!--
 
@@ -67,7 +66,7 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ![Informazioni di base Eloqua](../../assets/catalog/email-marketing/oracle-eloqua/basic-information.png)
 
-Fai clic su **[!UICONTROL Create destination]** dopo aver compilato i campi sopra riportati. La destinazione viene ora creata ed è possibile [attivare segmenti](../../ui/activate-destinations.md) alla destinazione.
+Fai clic su **[!UICONTROL Crea destinazione]** dopo aver compilato i campi sopra riportati. La destinazione viene ora creata ed è possibile [attivare segmenti](../../ui/activate-destinations.md) alla destinazione.
 
 ## Attiva segmenti {#activate-segments}
 
@@ -79,8 +78,8 @@ Quando si attivano [i segmenti](../../ui/activate-destinations.md) alla destinaz
 
 ## Dati esportati {#exported-data}
 
-Per le destinazioni [!DNL Oracle Eloqua], Platform crea un file `.txt` o `.csv` delimitato da tabulazioni nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, consulta [Destinazioni di e-mail marketing e destinazioni di archiviazione Cloud](../../ui/activate-destinations.md#esp-and-cloud-storage) nell’esercitazione sull’attivazione dei segmenti.
+Per le destinazioni [!DNL Oracle Eloqua], Platform crea un file `.csv` delimitato da tabulazioni nel percorso di archiviazione fornito. Per ulteriori informazioni sui file, consulta [Destinazioni di e-mail marketing e destinazioni di archiviazione Cloud](../../ui/activate-destinations.md#esp-and-cloud-storage) nell’esercitazione sull’attivazione dei segmenti.
 
 ## Imposta l’importazione di dati in [!DNL Oracle Eloqua] {#import-data-into-eloqua}
 
-Dopo aver effettuato la connessione di [!DNL Platform] all&#39;archiviazione SFTP, devi impostare l&#39;importazione di dati dal percorso di archiviazione in [!DNL Oracle Eloqua]. Per informazioni su come eseguire questa operazione, consulta [Importazione di contatti o account](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm) in [!DNL Oracle Eloqua Help Center].
+Dopo aver collegato [!DNL Platform] allo storage [!DNL SFTP], è necessario impostare l&#39;importazione dei dati dal percorso di archiviazione in [!DNL Oracle Eloqua]. Per informazioni su come eseguire questa operazione, consulta [Importazione di contatti o account](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm) in [!DNL Oracle Eloqua Help Center].
