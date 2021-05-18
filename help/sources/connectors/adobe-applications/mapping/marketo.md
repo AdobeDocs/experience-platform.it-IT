@@ -5,10 +5,9 @@ title: Campi di mappatura per l'origine Marketo Engage
 topic-legacy: overview
 description: Le tabelle seguenti contengono le mappature tra i campi nei set di dati Marketo e i campi XDM corrispondenti.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-translation-type: tm+mt
-source-git-commit: e4823a2b787667fc181f8a4d474c7d2eb73c8eec
+source-git-commit: db7fde343b3ebf4428020c8256df2b9cfa1486ad
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '333'
 ht-degree: 4%
 
 ---
@@ -261,9 +260,6 @@ Le tabelle seguenti contengono le mappature tra i campi dei nove set di dati [!D
 | Set di dati sorgente | Campo di destinazione XDM | Note |
 | -------------- | ---------------- | ----- |
 | `id` | `personID` | Identità principale |
-| `emailSuspended` | `b2b.personOptInOut._channels.email` |
-| `emailSuspendedAt` | `b2b.personOptInOut.optOutDetails.email.optOutDate` |
-| `emailSuspendedCause` | `b2b.personOptInOut.optOutDetails.email.optOutReason` |
 | `contactCompany` | `b2b.accountID` |
 | `marketingSuspended` | `b2b.isMarketingSuspended` |
 | `marketingSuspendedCause` | `b2b.marketingSuspendedCause` |
@@ -310,7 +306,7 @@ Le tabelle seguenti contengono le mappature tra i campi dei nove set di dati [!D
 
 >[!NOTE]
 >
->Il campo di origine `to_object('ECID',arrays_to_objects('id',explode(ecids)))` è un campo calcolato che deve essere aggiunto utilizzando l’opzione [!UICONTROL Add calculated field] nell’interfaccia utente di Platform. Per ulteriori informazioni, consulta l’esercitazione sull’ [aggiunta di campi calcolati](../../../../ingestion/tutorials/map-a-csv-file.md) .
+>Il campo di origine `to_object('ECID',arrays_to_objects('id',explode(ecids)))` è un campo calcolato che deve essere aggiunto utilizzando l’opzione [!UICONTROL Aggiungi campo calcolato] nell’interfaccia utente di Platform. Per ulteriori informazioni, consulta l’esercitazione sull’ [aggiunta di campi calcolati](../../../../ingestion/tutorials/map-a-csv-file.md) .
 
 ## Passaggi successivi
 
