@@ -5,10 +5,9 @@ title: Ingresso e uscita in Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: Il documento seguente illustra i diversi input e output utilizzati nelle Attribution AI.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 91f586746c8d1db4e9219b261d7be36e572f1b50
 workflow-type: tm+mt
-source-wordcount: '2175'
+source-wordcount: '2230'
 ht-degree: 3%
 
 ---
@@ -48,7 +47,11 @@ Non tutte le colonne dello schema [!DNL Consumer Experience Event] (CEE) sono ob
 | Marketing.campaigngroup | Punto di contatto |
 | Commerce | Conversione |
 
-In genere, l’attribuzione viene eseguita su colonne di conversione quali ordine, acquisti e checkout in &quot;commerce&quot;. Le colonne &quot;canale&quot; e &quot;marketing&quot; sono altamente raccomandate per definire punti di contatto per ottenere informazioni utili. Tuttavia, puoi includere qualsiasi altra colonna aggiuntiva insieme alle colonne precedenti da configurare come definizione di conversione o punto di contatto.
+In genere, l’attribuzione viene eseguita su colonne di conversione quali ordine, acquisti e checkout in &quot;commerce&quot;. Le colonne per &quot;canale&quot; e &quot;marketing&quot; vengono utilizzate per definire i punti di contatto per Attribution AI (ad esempio, `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`). Per risultati e informazioni ottimali, si consiglia vivamente di includere il maggior numero possibile di colonne di conversione e punto di contatto. Inoltre, non sei limitato alle sole colonne di cui sopra. Puoi includere qualsiasi altra colonna consigliata o personalizzata come definizione di conversione o punto di contatto.
+
+>[!TIP]
+>
+>Se utilizzi i dati Adobe Analytics nello schema CEE, le informazioni sui punti di contatto per Analytics vengono generalmente memorizzate in `channel.typeAtSource` (ad esempio, `channel.typeAtSource = 'email'`).
 
 Le colonne riportate di seguito non sono obbligatorie, ma è consigliabile includerle nello schema CEE se sono disponibili le informazioni.
 
@@ -58,7 +61,7 @@ Le colonne riportate di seguito non sono obbligatorie, ma è consigliabile inclu
 - web.webPageDetails
 - xdm:productListItems
 
-### Dati storici {#data-requirements}
+## Dati storici {#data-requirements}
 
 >[!IMPORTANT]
 >
@@ -145,11 +148,11 @@ La tabella seguente delinea i campi dello schema nell’output di esempio di pun
 
 ### Visualizzazione dei percorsi dei punti non elaborati (interfaccia utente) {#raw-score-path}
 
-Puoi visualizzare il percorso dei punteggi non elaborati nell’interfaccia utente. Inizia selezionando **[!UICONTROL Schemas]** nell’interfaccia utente di Platform, quindi cerca e seleziona lo schema dei punteggi di attribuzione AI dalla scheda **[!UICONTROL Browse]** .
+Puoi visualizzare il percorso dei punteggi non elaborati nell’interfaccia utente. Inizia selezionando **[!UICONTROL Schemi]** nell’interfaccia utente di Platform, quindi cerca e seleziona lo schema dei punteggi di attribuzione AI dalla scheda **[!UICONTROL Sfoglia]** .
 
 ![Scegli lo schema](./images/input-output/schemas_browse.png)
 
-Quindi, seleziona un campo all’interno della finestra **[!UICONTROL Structure]** dell’interfaccia utente, viene visualizzata la scheda **[!UICONTROL Field properties]** . All&#39;interno di **[!UICONTROL Field properties]** è il campo del percorso che viene mappato sui punteggi non elaborati.
+Quindi, seleziona un campo all&#39;interno della finestra **[!UICONTROL Struttura]** dell&#39;interfaccia utente; viene visualizzata la scheda **[!UICONTROL Proprietà campo]** . All&#39;interno di **[!UICONTROL Proprietà campo]** è il campo percorso che viene mappato sui punteggi non elaborati.
 
 ![Selezionare uno schema](./images/input-output/field_properties.png)
 
