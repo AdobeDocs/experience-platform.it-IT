@@ -2,19 +2,18 @@
 audience: user
 user-guide-title: Guida di Real-time Customer Profile
 user-guide-description: Unisci i dati dei clienti per creare una visualizzazione unificata delle interazioni dei clienti nei diversi canali.
-feature: Profiles
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+feature: Profili
+source-git-commit: 167407a8103acecb9846a6e0f8e38c66f3f3292d
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 20%
+source-wordcount: '128'
+ht-degree: 19%
 
 ---
 
 
 # [!DNL Real-time Customer Profile] {#profile}
 
-* [[!DNL Profile] panoramica](home.md)
+* [[!DNL Profile]panoramica](home.md)
 * [Panoramica del profilo (video)](video/profile-overview.md)
 * [[!DNL Profile] guardrail](guardrails.md)
 * [!DNL Profile] API {#api}
@@ -22,9 +21,9 @@ ht-degree: 20%
    * [Introduzione](api/getting-started.md)
    * [Proiezioni del bordo](api/edge-projections.md)
    * [Entità ([!DNL Profile] accesso)](api/entities.md)
-   * [Attività di esportazione ([!DNL Profile] esportazione)](api/export-jobs.md)
+   * [Processi di esportazione ([!DNL Profile] esportazione)](api/export-jobs.md)
    * [Unisci criteri](api/merge-policies.md)
-   * [Stato del campione dell’anteprima ([!DNL Profile] anteprima)](api/preview-sample-status.md)
+   * [Anteprima stato campione ([!DNL Profile] anteprima)](api/preview-sample-status.md)
    * [[!DNL Profile] processi di sistema (richieste di eliminazione)](api/profile-system-jobs.md)
 * Guide all&#39;interfaccia utente del profilo {#ui}
    * [[!DNL Profile] Guida all’interfaccia utente](ui/user-guide.md)
@@ -41,7 +40,8 @@ ht-degree: 20%
    * [Espressioni di esempio](computed-attributes/expressions.md)
 * Tutorial {#tutorials}
    * [Aggiungi dati a [!DNL Profile]](tutorials/add-profile-data.md)
-   * [Configurare un set di dati  [!DNL Profile] & [!DNL Identity] per il servizio](tutorials/dataset-configuration.md)
+   * [Configurare un set di dati per il servizio [!DNL Profile] & [!DNL Identity] service](tutorials/dataset-configuration.md)
+   * [Genera il rapporto di sovrapposizione dei set di dati](tutorials/dataset-overlap-report.md)
    * [Altre esercitazioni](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Elaborazione delle richieste di privacy](privacy.md)
 * [[!DNL Profile] guida alla risoluzione dei problemi](troubleshooting.md)
