@@ -2,13 +2,12 @@
 solution: Experience Platform, Intelligent Services
 audience: user
 user-guide-title: Guida ai servizi intelligenti
-breadcrumb-title: Guida a Intelligent Services
+breadcrumb-title: Guida di Intelligent Services
 user-guide-description: Utilizza i servizi di intelligenza artificiale per generare valutazioni, scoprire informazioni approfondite e creare segmenti dai dati degli eventi di marketing.
 feature: Data Science Workspace
-translation-type: tm+mt
-source-git-commit: a26b07302a47ceb0ba2af5267e7995118b70683f
+source-git-commit: 31b584d3e28a6f15254cf60fa673cd0c5c16ea73
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '124'
 ht-degree: 25%
 
 ---
@@ -20,7 +19,7 @@ ht-degree: 25%
 - [Preparare i dati da utilizzare in Intelligent Services](data-preparation.md)
 - Attribution AI {#attribution-ai}
    - [Panoramica](attribution-ai/overview.md)
-   - [Guida introduttiva di Attribution AI](attribution-ai/getting-started.md)
+   - [Guida introduttiva ad Attribution AI](attribution-ai/getting-started.md)
    - [Ingresso e uscita](attribution-ai/input-output.md)
    - [Guida all’interfaccia utente](attribution-ai/user-guide.md)
    - [Scopri informazioni](attribution-ai/discover-insights.md)
@@ -44,4 +43,5 @@ ht-degree: 25%
       - [Scopri informazioni](customer-ai/user-guide/discover-insights.md)
       - [Creare segmenti utilizzando i punteggi di Customer AI](customer-ai/user-guide/create-segment.md)
       - [Scaricare i punteggi](customer-ai/user-guide/download-scores.md)
+   - [Risoluzione dei problemi](customer-ai/troubleshooting.md)
 - [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
