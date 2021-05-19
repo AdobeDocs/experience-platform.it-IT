@@ -5,10 +5,9 @@ title: Importazione e utilizzo di tipi di pubblico esterni
 description: Segui questa esercitazione per scoprire come utilizzare i tipi di pubblico esterni con Adobe Experience Platform.
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 82aa38c7bce05faeea5a9f42d0d86776737e04be
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '785'
 ht-degree: 0%
 
 ---
@@ -19,17 +18,31 @@ Adobe Experience Platform supporta la possibilità di importare tipi di pubblico
 
 ## Introduzione
 
+Questa esercitazione richiede una comprensione approfondita dei vari servizi [!DNL Adobe Experience Platform] coinvolti nella creazione di segmenti di pubblico. Prima di iniziare questa esercitazione, consulta la documentazione relativa ai seguenti servizi:
+
 - [Servizio](../home.md) di segmentazione: Consente di creare segmenti di pubblico dai dati Profilo cliente in tempo reale.
 - [Profilo](../../profile/home.md) cliente in tempo reale: Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 - [Experience Data Model (XDM)](../../xdm/home.md): Il framework standardizzato tramite il quale Platform organizza i dati sulla customer experience.
 - [Set di dati](../../catalog/datasets/overview.md): Il costrutto di archiviazione e gestione per la persistenza dei dati in Experience Platform.
 - [Acquisizione](../../ingestion/streaming-ingestion/overview.md) in streaming: In che modo Experience Platform acquisisce e memorizza in tempo reale i dati da dispositivi lato client e lato server.
 
+### Dati del segmento e metadati del segmento
+
+Prima di iniziare a importare e utilizzare tipi di pubblico esterni, è importante comprendere la differenza tra i dati dei segmenti e i metadati dei segmenti.
+
+I dati dei segmenti si riferiscono ai profili che soddisfano i criteri di qualificazione dei segmenti e quindi fanno parte del pubblico.
+
+I metadati del segmento sono informazioni sul segmento stesso, che includono nome, descrizione, espressione (se applicabile), data di creazione, data dell’ultima modifica e un ID. L’ID collega i metadati del segmento ai singoli profili che soddisfano la qualifica del segmento e fanno parte del pubblico risultante.
+
+| Dati del segmento | Metadati del segmento |
+| ------------ | ---------------- |
+| Profili che soddisfano la qualifica dei segmenti | Informazioni sul segmento stesso |
+
 ## Creare uno spazio dei nomi di identità per il pubblico esterno
 
 Il primo passaggio per l’utilizzo di tipi di pubblico esterni consiste nella creazione di uno spazio dei nomi di identità. I namespace di identità consentono a Platform di associare la posizione di origine di un segmento.
 
-Per creare uno spazio dei nomi di identità, segui le istruzioni contenute nella [guida allo spazio dei nomi di identità](../../identity-service/namespaces.md#manage-namespaces). Durante la creazione dello spazio dei nomi di identità, aggiungi i dettagli di origine allo spazio dei nomi di identità e contrassegna il relativo [!UICONTROL Type] come **[!UICONTROL Non-people identifier]**.
+Per creare uno spazio dei nomi di identità, segui le istruzioni contenute nella [guida allo spazio dei nomi di identità](../../identity-service/namespaces.md#manage-namespaces). Durante la creazione dello spazio dei nomi di identità, aggiungi i dettagli di origine allo spazio dei nomi di identità e contrassegna il relativo [!UICONTROL Tipo] come **[!UICONTROL Identificatore non-people]**.
 
 ![](../images/tutorials/external-audiences/identity-namespace-info.png)
 
@@ -37,11 +50,11 @@ Per creare uno spazio dei nomi di identità, segui le istruzioni contenute nella
 
 Dopo aver creato uno spazio dei nomi di identità, devi creare un nuovo schema per il segmento che creerai.
 
-Per iniziare a comporre uno schema, seleziona prima **[!UICONTROL Schemas]** nella barra di navigazione a sinistra, seguita da **[!UICONTROL Create schema]** nell’angolo in alto a destra dell’area di lavoro Schemi. Da qui, seleziona **[!UICONTROL Browse]** per visualizzare una selezione completa dei tipi di schema disponibili.
+Per iniziare a comporre uno schema, seleziona prima **[!UICONTROL Schemi]** nella barra di navigazione a sinistra, quindi **[!UICONTROL Crea schema]** nell&#39;angolo in alto a destra dell&#39;area di lavoro Schemi. Da qui, seleziona **[!UICONTROL Sfoglia]** per visualizzare una selezione completa dei tipi di schema disponibili.
 
 ![](../images/tutorials/external-audiences/create-schema-browse.png)
 
-Poiché stai creando una definizione di segmento, che è una classe predefinita, seleziona **[!UICONTROL Use existing class]**. A questo punto, seleziona la classe **[!UICONTROL Segment definition]** , seguita da **[!UICONTROL Assign class]**.
+Poiché stai creando una definizione di segmento, che è una classe predefinita, seleziona **[!UICONTROL Usa classe esistente]**. A questo punto, seleziona la classe **[!UICONTROL Definizione segmento]** , seguita da **[!UICONTROL Assegna classe]**.
 
 ![](../images/tutorials/external-audiences/assign-class.png)
 
@@ -49,7 +62,7 @@ Dopo la creazione dello schema, dovrai specificare quale campo conterrà l’ID 
 
 ![](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
-Dopo aver contrassegnato il campo `_id` come identità principale, seleziona il titolo dello schema, seguito dall’interruttore **[!UICONTROL Profile]**. Selezionare **[!UICONTROL Enable]** per abilitare lo schema per [!DNL Real-time Customer Profile].
+Dopo aver contrassegnato il campo `_id` come identità principale, seleziona il titolo dello schema, seguito dall’interruttore **[!UICONTROL Profilo]**. Selezionare **[!UICONTROL Abilita]** per abilitare lo schema per [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/external-audiences/schema-profile.png)
 
@@ -59,7 +72,7 @@ Ora, questo schema è abilitato per Profilo, con l’identificazione principale 
 
 Dopo aver configurato lo schema, dovrai creare un set di dati per i metadati del segmento.
 
-Per creare un set di dati, segui le istruzioni contenute nella [guida utente del set di dati](../../catalog/datasets/user-guide.md#create). Segui l’opzione **[!UICONTROL Create dataset from schema]** , utilizzando lo schema creato in precedenza.
+Per creare un set di dati, segui le istruzioni contenute nella [guida utente del set di dati](../../catalog/datasets/user-guide.md#create). Segui l&#39;opzione **[!UICONTROL Crea set di dati da schema]**, utilizzando lo schema creato in precedenza.
 
 ![](../images/tutorials/external-audiences/select-schema.png)
 
@@ -79,7 +92,7 @@ Una volta creata la connessione streaming, avrai accesso all&#39;endpoint stream
 
 ## Creazione di segmenti utilizzando i tipi di pubblico importati
 
-Una volta configurati i tipi di pubblico importati, possono essere utilizzati come parte del processo di segmentazione. Per trovare tipi di pubblico esterni, vai a Generatore di segmenti e seleziona la scheda **[!UICONTROL Audiences]** nella sezione **[!UICONTROL Fields]** .
+Una volta configurati i tipi di pubblico importati, possono essere utilizzati come parte del processo di segmentazione. Per trovare tipi di pubblico esterni, vai al Generatore di segmenti e seleziona la scheda **[!UICONTROL Tipi di pubblico]** nella sezione **[!UICONTROL Campi]** .
 
 ![](../images/tutorials/external-audiences/external-audiences.png)
 
