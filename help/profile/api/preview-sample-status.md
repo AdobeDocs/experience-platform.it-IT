@@ -1,27 +1,20 @@
 ---
 keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione dei problemi;API;anteprima;esempio
 title: Endpoint API di anteprima dello stato del campione (anteprima profilo)
-description: Utilizzando l’endpoint di stato di esempio per l’anteprima, parte dell’API Profilo cliente in tempo reale, puoi visualizzare in anteprima l’ultimo campione di dati di profilo riusciti, nonché elencare la distribuzione dei profili per set di dati e per namespace di identità in Adobe Experience Platform.
-topic-legacy: guide
+description: Utilizzando l’endpoint di stato di esempio di anteprima, parte dell’API Profilo cliente in tempo reale, puoi visualizzare in anteprima l’ultimo campione di successo dei dati del profilo, elencare la distribuzione del profilo per set di dati e per identità e generare un rapporto di sovrapposizione dei set di dati.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 459eb626101b7382b8fe497835cc19f7d7adc6b2
 workflow-type: tm+mt
-source-wordcount: '1652'
+source-wordcount: '2066'
 ht-degree: 1%
 
 ---
 
 # Anteprima dell’endpoint di stato di esempio (anteprima profilo)
 
-Adobe Experience Platform consente di acquisire dati dei clienti da più sorgenti per creare solidi profili unificati per i singoli clienti. Poiché i dati abilitati per Profilo cliente in tempo reale vengono acquisiti in [!DNL Platform], vengono memorizzati nell’archivio dati Profilo.
+Adobe Experience Platform consente di acquisire dati dei clienti da più sorgenti per creare un profilo solido e unificato per ciascuno dei singoli clienti. Man mano che i dati vengono acquisiti in Platform, viene eseguito un processo di esempio per aggiornare il conteggio del profilo e altre metriche relative al profilo.
 
-Quando l’acquisizione dei record nell’archivio profili aumenta o diminuisce il conteggio totale dei profili di oltre il 5%, viene attivato un processo di campionamento per aggiornare il conteggio. Il modo in cui il campione viene attivato dipende dal tipo di acquisizione utilizzato:
-
-* Per **flussi di lavoro di dati in streaming**, viene eseguito un controllo su base oraria per determinare se la soglia di aumento o diminuzione del 5% è stata soddisfatta. In caso affermativo, viene attivato automaticamente un processo di esempio per aggiornare il conteggio.
-* Per **l&#39;acquisizione batch**, entro 15 minuti dal corretto inserimento di un batch nell&#39;archivio profili, se viene soddisfatta la soglia di aumento o diminuzione del 5%, viene eseguito un processo per aggiornare il conteggio. Utilizzando l’API di profilo puoi visualizzare in anteprima il processo di esempio più recente, oltre a elencare la distribuzione dei profili per set di dati e per namespace di identità.
-
-Queste metriche sono disponibili anche nella sezione [!UICONTROL Profiles] dell’interfaccia utente di Experience Platform. Per informazioni su come accedere ai dati del profilo utilizzando l&#39;interfaccia utente, visita la [[!DNL Profile] guida utente](../ui/user-guide.md).
+I risultati di questo lavoro di esempio possono essere visualizzati utilizzando l’ `/previewsamplestatus` endpoint dell’API Profilo cliente in tempo reale. Questo endpoint può essere utilizzato anche per elencare le distribuzioni dei profili per set di dati e namespace di identità, nonché per generare un rapporto di sovrapposizione dei set di dati per acquisire visibilità nella composizione dell’archivio profili della tua organizzazione. Questa guida descrive i passaggi necessari per visualizzare queste metriche utilizzando l’ endpoint API `/previewsamplestatus` .
 
 >[!NOTE]
 >
@@ -35,11 +28,26 @@ L&#39;endpoint API utilizzato in questa guida fa parte dell&#39; [[!DNL Real-tim
 
 Questa guida fa riferimento sia ai &quot;frammenti di profilo&quot; che ai &quot;profili uniti&quot;. È importante comprendere la differenza tra questi termini prima di procedere.
 
-Ogni singolo profilo cliente è composto da più frammenti di profilo che sono stati uniti per formare una singola vista del cliente. Ad esempio, se un cliente interagisce con il tuo marchio su più canali, la tua organizzazione avrà più frammenti di profilo relativi al singolo cliente che compaiono in più set di dati. Quando questi frammenti vengono acquisiti in Platform, vengono uniti (in base al criterio di unione) per creare un unico profilo per il cliente. Pertanto, è probabile che il numero totale di frammenti di profilo sia sempre superiore al numero totale di profili uniti, in quanto ogni profilo è composto da più frammenti.
+Ogni singolo profilo cliente è composto da più frammenti di profilo che sono stati uniti per formare una singola vista del cliente. Ad esempio, se un cliente interagisce con il tuo marchio su più canali, è probabile che la tua organizzazione abbia più frammenti di profilo relativi al singolo cliente che appaiono in più set di dati.
+
+Quando i frammenti di profilo vengono acquisiti in Platform, vengono uniti (in base a un criterio di unione) per creare un singolo profilo per quel cliente. Pertanto, è probabile che il numero totale di frammenti di profilo sia sempre superiore al numero totale di profili uniti, in quanto ogni profilo è composto da più frammenti.
+
+Per ulteriori informazioni sui profili e il loro ruolo all&#39;interno dell&#39;Experience Platform, inizia leggendo la [Panoramica sul profilo cliente in tempo reale](../home.md).
+
+## Modalità di attivazione del processo di esempio
+
+Poiché i dati abilitati per Profilo cliente in tempo reale vengono acquisiti in [!DNL Platform], vengono memorizzati nell’archivio dati Profilo. Quando l’acquisizione dei record nell’archivio profili aumenta o diminuisce il conteggio totale dei profili di oltre il 5%, viene attivato un processo di campionamento per aggiornare il conteggio. Il modo in cui il campione viene attivato dipende dal tipo di acquisizione utilizzato:
+
+* Per **flussi di lavoro di dati in streaming**, viene eseguito un controllo su base oraria per determinare se la soglia di aumento o diminuzione del 5% è stata soddisfatta. In caso affermativo, viene attivato automaticamente un processo di esempio per aggiornare il conteggio.
+* Per **l&#39;acquisizione batch**, entro 15 minuti dal corretto inserimento di un batch nell&#39;archivio profili, se viene soddisfatta la soglia di aumento o diminuzione del 5%, viene eseguito un processo per aggiornare il conteggio. Utilizzando l’API di profilo puoi visualizzare in anteprima il processo di esempio più recente, oltre a elencare la distribuzione dei profili per set di dati e per namespace di identità.
+
+Il conteggio dei profili e i profili per metriche dello spazio dei nomi sono disponibili anche nella sezione [!UICONTROL Profiles] dell’interfaccia utente di Experience Platform. Per informazioni su come accedere ai dati del profilo utilizzando l&#39;interfaccia utente, visita la [[!DNL Profile] guida all&#39;interfaccia utente](../ui/user-guide.md).
 
 ## Visualizza lo stato dell&#39;ultimo esempio {#view-last-sample-status}
 
-Puoi eseguire una richiesta di GET all’endpoint `/previewsamplestatus` per visualizzare i dettagli dell’ultimo processo di esempio riuscito eseguito per l’organizzazione IMS. Ciò include il numero totale di profili nel campione, nonché la metrica di conteggio dei profili, o il numero totale di profili di cui la tua organizzazione dispone all’interno dell’Experience Platform. Il conteggio dei profili viene generato dopo l’unione dei frammenti di profilo per formare un singolo profilo per ogni singolo cliente. In altre parole, l’organizzazione può disporre di più frammenti di profilo relativi a un singolo cliente che interagisce con il tuo marchio su diversi canali, ma questi frammenti verranno uniti (in base al criterio di unione predefinito) e restituiranno un conteggio di &quot;1&quot; profilo perché sono tutti correlati allo stesso individuo.
+Puoi eseguire una richiesta di GET all’endpoint `/previewsamplestatus` per visualizzare i dettagli dell’ultimo processo di esempio riuscito eseguito per l’organizzazione IMS. Ciò include il numero totale di profili nel campione, nonché la metrica di conteggio dei profili, o il numero totale di profili di cui la tua organizzazione dispone all’interno dell’Experience Platform.
+
+Il conteggio dei profili viene generato dopo l’unione dei frammenti di profilo per formare un singolo profilo per ogni singolo cliente. In altre parole, quando i frammenti di profilo vengono uniti restituiscono un conteggio di &quot;1&quot; profilo perché sono tutti correlati allo stesso individuo.
 
 Il conteggio dei profili include anche profili con attributi (dati record) e profili contenenti solo dati di serie temporali (eventi), ad esempio profili Adobe Analytics. Il processo di esempio viene aggiornato regolarmente man mano che i dati del profilo vengono acquisiti, al fine di fornire un numero totale aggiornato di profili all’interno di Platform.
 
@@ -62,7 +70,7 @@ curl -X GET \
 
 **Risposta**
 
-La risposta include i dettagli dell’ultimo processo di esempio riuscito eseguito per l’organizzazione IMS.
+La risposta include i dettagli dell&#39;ultimo processo di esempio eseguito correttamente per l&#39;organizzazione.
 
 >[!NOTE]
 >
@@ -137,7 +145,7 @@ La risposta include un array `data` contenente un elenco di oggetti set di dati.
 
 >[!NOTE]
 >
->Se esistono più rapporti per la data, viene restituita solo l’ultima. Se non esisteva un rapporto del set di dati per la data fornita, verrebbe restituito lo stato HTTP 404 (Non trovato).
+>Se per la data sono presenti più rapporti, viene restituito solo l’ultimo rapporto. Se non esiste un rapporto del set di dati per la data fornita, viene restituito lo stato HTTP 404 (Non trovato).
 
 ```json
 {
@@ -198,7 +206,9 @@ La risposta include un array `data` contenente un elenco di oggetti set di dati.
 
 ## Distribuzione del profilo di elenco in base allo spazio dei nomi
 
-Puoi eseguire una richiesta di GET all’endpoint `/previewsamplestatus/report/namespace` per visualizzare la suddivisione per namespace di identità in tutti i profili uniti nell’archivio profili. Gli spazi dei nomi di identità sono un componente importante del servizio Adobe Experience Platform Identity che funge da indicatori del contesto a cui si riferiscono i dati dei clienti. Per ulteriori informazioni, visita la [panoramica dello spazio dei nomi identità](../../identity-service/namespaces.md).
+Puoi eseguire una richiesta di GET all’endpoint `/previewsamplestatus/report/namespace` per visualizzare la suddivisione per namespace di identità in tutti i profili uniti nell’archivio profili.
+
+Gli spazi dei nomi di identità sono un componente importante del servizio Adobe Experience Platform Identity che funge da indicatori del contesto a cui si riferiscono i dati dei clienti. Per ulteriori informazioni, inizia leggendo la [panoramica dello spazio dei nomi di identità](../../identity-service/namespaces.md).
 
 >[!NOTE]
 >
@@ -288,9 +298,75 @@ La risposta include un array `data` con singoli oggetti contenenti i dettagli di
 | `fullIDsFragmentCount` | Numero totale di frammenti di profilo nello spazio dei nomi. |
 | `fullIDsCount` | Numero totale di profili uniti nello spazio dei nomi. |
 | `fullIDsPercentage` | Il `fullIDsCount` come percentuale del totale dei profili uniti (il valore `totalRows` restituito nello stato [ultimo campione](#view-last-sample-status)), espresso in formato decimale. |
-| `code` | Il `code` per lo spazio dei nomi. Questo si può trovare quando si lavora con i namespace utilizzando l’ [API del servizio Adobe Experience Platform Identity](../../identity-service/api/list-namespaces.md) ed è indicato anche come [!UICONTROL Identity symbol] nell’interfaccia utente di Experience Platform. Per ulteriori informazioni, visita la [panoramica dello spazio dei nomi identità](../../identity-service/namespaces.md). |
+| `code` | Il `code` per lo spazio dei nomi. Questo si può trovare quando si lavora con i namespace utilizzando l’ [API del servizio Adobe Experience Platform Identity](../../identity-service/api/list-namespaces.md) ed è indicato anche come [!UICONTROL simbolo di identità] nell’interfaccia utente di Experience Platform. Per ulteriori informazioni, visita la [panoramica dello spazio dei nomi identità](../../identity-service/namespaces.md). |
 | `value` | Il valore `id` per lo spazio dei nomi. Questo si può trovare quando si utilizzano i namespace utilizzando l’ [API del servizio Identity](../../identity-service/api/list-namespaces.md). |
+
+## Genera report di sovrapposizione set di dati
+
+Il rapporto di sovrapposizione dei set di dati fornisce visibilità nella composizione dell’archivio profili della tua organizzazione esponendo i set di dati che contribuiscono maggiormente al pubblico indirizzabile (profili). Oltre a fornire informazioni approfondite sui dati, questo rapporto può essere utile per ottimizzare l’utilizzo della licenza, ad esempio per impostare un TTL per alcuni set di dati.
+
+Puoi generare il rapporto di sovrapposizione dei set di dati eseguendo una richiesta di GET all’ endpoint `/previewsamplestatus/report/dataset/overlap` .
+
+Per istruzioni dettagliate su come generare il rapporto di sovrapposizione dei set di dati utilizzando la riga di comando o l’interfaccia utente Postman, consulta l’ [esercitazione sulla generazione del rapporto di sovrapposizione dei set di dati](../tutorials/dataset-overlap-report.md).
+
+**Formato API**
+
+```http
+GET /previewsamplestatus/report/dataset/overlap
+GET /previewsamplestatus/report/dataset/overlap?{QUERY_PARAMETERS}
+```
+
+| Parametro | Descrizione |
+|---|---|
+| `date` | Specifica la data del rapporto da restituire. Se più rapporti sono stati eseguiti nella stessa data, viene restituito il rapporto più recente per tale data. Se un report non esiste per la data specificata, viene restituito un errore 404 (Non trovato). Se non viene specificata alcuna data, viene restituito il rapporto più recente. Formato: AAAA-MM-GG. Esempio: `date=2024-12-31` |
+
+**Richiesta**
+
+La richiesta seguente utilizza il parametro `date` per restituire il report più recente per la data specificata.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset/overlap?date=2021-12-29 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+```
+
+**Risposta**
+
+Una richiesta corretta restituisce lo stato HTTP 200 (OK) e il rapporto di sovrapposizione del set di dati.
+
+```json
+{
+    "data": {
+        "5d92921872831c163452edc8,5da7292579975918a851db57,5eb2cdc6fa3f9a18a7592a98": 123,
+        "5d92921872831c163452edc8,5eb2cdc6fa3f9a18a7592a98": 454412,
+        "5eeda0032af7bb19162172a7": 107
+    },
+    "reportTimestamp": "2021-12-29T19:55:31.147"
+}
+```
+
+| Proprietà | Descrizione |
+|---|---|
+| `data` | L&#39;oggetto `data` contiene elenchi di set di dati separati da virgole e i rispettivi conteggi dei profili. |
+| `reportTimestamp` | La marca temporale del rapporto. Se durante la richiesta è stato fornito un parametro `date` , il rapporto restituito è relativo alla data fornita. Se non viene fornito alcun parametro `date`, viene restituito il rapporto più recente. |
+
+I risultati del rapporto possono essere interpretati dai set di dati e dai conteggi dei profili nella risposta. Considera l&#39;oggetto report di esempio `data` seguente:
+
+```json
+  "5d92921872831c163452edc8,5da7292579975918a851db57,5eb2cdc6fa3f9a18a7592a98": 123,
+  "5d92921872831c163452edc8,5eb2cdc6fa3f9a18a7592a98": 454412,
+  "5eeda0032af7bb19162172a7": 107
+```
+
+Questo rapporto fornisce le seguenti informazioni:
+* Esistono 123 profili composti da dati provenienti dai seguenti set di dati: `5d92921872831c163452edc8`, `5da7292579975918a851db57`, `5eb2cdc6fa3f9a18a7592a98`.
+* Esistono 454.412 profili composti da dati provenienti da questi due set di dati: `5d92921872831c163452edc8` e `5eb2cdc6fa3f9a18a7592a98`.
+* Esistono 107 profili costituiti solo da dati del set di dati `5eeda0032af7bb19162172a7`.
+* L’organizzazione dispone di un totale di 454.642 profili.
 
 ## Passaggi successivi
 
-Ora che sai come visualizzare in anteprima i dati di esempio nell’archivio profili, puoi anche utilizzare gli endpoint stimati e visualizzati in anteprima dell’API del servizio di segmentazione per visualizzare informazioni di riepilogo relative alle definizioni dei segmenti. Queste informazioni consentono di isolare il pubblico previsto nel segmento. Per ulteriori informazioni sulle operazioni con le anteprime e le stime dei segmenti utilizzando l&#39;API di segmentazione, visita la [guida all&#39;anteprima e alla stima degli endpoint](../../segmentation/api/previews-and-estimates.md).
+Ora che sai come visualizzare in anteprima i dati di esempio nell’archivio profili ed eseguire il rapporto di sovrapposizione dei set di dati, puoi anche utilizzare gli endpoint stimati e di anteprima dell’API del servizio di segmentazione per visualizzare informazioni di riepilogo relative alle definizioni dei segmenti. Queste informazioni consentono di isolare il pubblico previsto nel segmento. Per ulteriori informazioni sulle operazioni con le anteprime e le stime dei segmenti utilizzando l&#39;API di segmentazione, visita la [guida all&#39;anteprima e alla stima degli endpoint](../../segmentation/api/previews-and-estimates.md).
+
