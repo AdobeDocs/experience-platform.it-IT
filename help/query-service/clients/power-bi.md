@@ -5,11 +5,10 @@ title: Connetti Power BI a Query Service
 topic-legacy: connect
 description: Questo documento descrive i passaggi necessari per la connessione di Power BI con Adobe Experience Platform Query Service.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 2109abd02b9c6c321c21a8fe3826509d22b1c2e2
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 0%
+source-wordcount: '468'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +18,7 @@ Questo documento descrive i passaggi per la connessione di Power BI con Adobe Ex
 
 >[!NOTE]
 >
-> Questa guida presuppone che tu abbia già accesso a [!DNL Power BI] e che tu abbia familiarità con come navigare nella relativa interfaccia. Ulteriori informazioni su [!DNL Power BI] sono disponibili nella [documentazione [!DNL Power BI] ufficiale](https://docs.looker.com/).
+> Questa guida presuppone che tu abbia già accesso a [!DNL Power BI] e che tu abbia familiarità con come navigare nella relativa interfaccia. Ulteriori informazioni su [!DNL Power BI] sono disponibili nella [documentazione [!DNL Power BI] ufficiale](https://docs.microsoft.com/it-it/power-bi/).
 >
 > Inoltre, Power BI è disponibile **solo** sui dispositivi Windows.
 
@@ -43,7 +42,7 @@ Selezionare **[!DNL PostgreSQL database]**, seguito da **[!DNL Connect]**.
 
 ![](../images/clients/power-bi/get-data.png)
 
-È ora possibile immettere i valori per il server e il database. Per ulteriori informazioni su come trovare il nome del database, l&#39;host, la porta e le credenziali di accesso, visita la pagina delle credenziali [su Platform](https://platform.adobe.com/query/configuration). Per trovare le tue credenziali, accedi a [!DNL Platform], quindi seleziona **[!UICONTROL Queries]**, seguito da **[!UICONTROL Credentials]**.
+È ora possibile immettere i valori per il server e il database. Per ulteriori informazioni su come trovare il nome del database, l&#39;host, la porta e le credenziali di accesso, visita la pagina delle credenziali [su Platform](https://platform.adobe.com/query/configuration). Per trovare le tue credenziali, accedi a [!DNL Platform], quindi seleziona **[!UICONTROL Query]**, seguito da **[!UICONTROL Credenziali]**.
 
 **[!DNL Server]** è l&#39;host trovato nei dettagli della connessione. Per la produzione, aggiungi la porta `:80` alla fine della stringa host. **[!DNL Database]** può essere &quot;all&quot; o un nome di tabella di set di dati.
 
@@ -57,7 +56,7 @@ Viene visualizzata una richiesta per richiedere il nome utente, la password e le
 
 ![](../images/clients/power-bi/import-mode.png)
 
-## Visualizzare in anteprima e importare una tabella {#preview}
+## Anteprima e importazione di una tabella {#preview}
 
 Se è stata selezionata la modalità **[!DNL Import]**, viene visualizzata una finestra di dialogo contenente un elenco di tutte le tabelle disponibili. Seleziona la tabella da visualizzare in anteprima, seguita da **[!DNL Load]** per inserire il set di dati in [!DNL Power BI].
 
@@ -67,7 +66,7 @@ La tabella viene ora importata in Power BI.
 
 ![](../images/clients/power-bi/import-table.png)
 
-## Crea istruzioni SQL {#create}
+## Creare istruzioni SQL {#create}
 
 Se è stata selezionata la modalità **[!DNL DirectQuery]**, è necessario compilare la sezione Opzioni avanzate con la query SQL che si desidera creare.
 
