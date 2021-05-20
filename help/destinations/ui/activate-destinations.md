@@ -6,9 +6,9 @@ seo-title: Attivare profili e segmenti in una destinazione
 description: Attiva i dati in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
 seo-description: Attiva i dati in Adobe Experience Platform mappando i segmenti sulle destinazioni. A questo scopo, segui i passaggi seguenti.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 70be44e919070df910d618af4507b600ad51123c
+source-git-commit: 27aafcbfc8f52491387561514e3b34313cc5d943
 workflow-type: tm+mt
-source-wordcount: '2566'
+source-wordcount: '2565'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Nel flusso di lavoro **[!UICONTROL Attiva destinazione]**, nella pagina **[!UICO
 
 ![da segmenti a destinazione](../assets/ui/activate-destinations/email-select-segments.png)
 
-## [!UICONTROL Passaggio ] di mappatura identità  {#identity-mapping}
+##  Mappingstep {#mapping}
 
 Si applica a: destinazioni social e destinazione pubblicitaria Google Customer Match
 
