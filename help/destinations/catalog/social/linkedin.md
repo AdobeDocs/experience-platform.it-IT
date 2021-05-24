@@ -3,10 +3,9 @@ keywords: collegamento;collegamento;collegamento;collegamento;collegamento;desti
 title: Connessione Linkedin Matched Audiences
 description: Attiva profili per le campagne LinkedIn per il targeting del pubblico, la personalizzazione e la soppressione, in base a e-mail con hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: 8ec6f1eb38f4865daaa4fe4cd749a9014742dce6
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '677'
 ht-degree: 1%
 
 ---
@@ -33,7 +32,7 @@ Una società di software organizza una conferenza e desidera mantenere i contatt
 |---|---|---|
 | GAID | Google Advertising ID | Seleziona questa identità di destinazione quando l’identità di origine è uno spazio dei nomi GAID. |
 | IDFA | Apple ID per gli inserzionisti | Seleziona questa identità di destinazione quando l’identità di origine è uno spazio dei nomi IDFA. |
-| email_lc_sha256 | Indirizzi e-mail con hash con l’algoritmo SHA256 | Gli indirizzi e-mail con hash SHA256 e di testo normale sono supportati da Adobe Experience Platform. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza rispettivamente i namespace appropriati per le e-mail in testo normale e con hash. Quando il campo di origine contiene attributi senza hash, seleziona l’opzione **[!UICONTROL Apply transformation]** per fare in modo che [!DNL Platform] hash automaticamente i dati all’attivazione. |
+| email_lc_sha256 | Indirizzi e-mail con hash con l’algoritmo SHA256 | Gli indirizzi e-mail con hash SHA256 e di testo normale sono supportati da Adobe Experience Platform. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza rispettivamente i namespace appropriati per le e-mail in testo normale e con hash. Quando il campo di origine contiene attributi senza hash, seleziona l&#39;opzione **[!UICONTROL Applica trasformazione]** per fare in modo che [!DNL Platform] hash automaticamente i dati all&#39;attivazione. |
 
 
 ## Tipo di esportazione {#export-type}
@@ -42,7 +41,7 @@ Una società di software organizza una conferenza e desidera mantenere i contatt
 
 ## Prerequisiti per l’account linkedIn {#LinkedIn-account-prerequisites}
 
-Prima di poter utilizzare la destinazione [!UICONTROL LinkedIn Matched Audience] , assicurati che l&#39;account [!DNL LinkedIn Campaign Manager] disponga del livello di autorizzazione [!DNL Creative Manager] o superiore.
+Prima di poter utilizzare la destinazione [!UICONTROL LinkedIn Matched Audience] , assicurati che il tuo account [!DNL LinkedIn Campaign Manager] disponga del livello di autorizzazione [!DNL Creative Manager] o superiore.
 
 Per informazioni su come modificare le autorizzazioni utente [!DNL LinkedIn Campaign Manager], consulta [Aggiungere, modificare e rimuovere le autorizzazioni utente sugli account pubblicitari](https://www.linkedin.com/help/lms/answer/5753) nella documentazione di LinkedIn.
 
@@ -72,9 +71,9 @@ Se scegli di aggiungere con hash gli indirizzi e-mail, assicurati di soddisfare 
 >I dati provenienti da spazi dei nomi senza hash vengono automaticamente hashing da [!DNL Platform] al momento dell’attivazione.
 > I dati di origine degli attributi non vengono crittografati automaticamente.
 > 
-> Durante il passaggio [Mappatura identità](../../ui/activate-destinations.md#identity-mapping), quando il campo di origine contiene attributi senza hash, seleziona l’opzione **[!UICONTROL Apply transformation]** per fare in modo che [!DNL Platform] hash automaticamente i dati all’attivazione.
+> Durante il passaggio [Mappatura identità](../../ui/activate-destinations.md#mapping), quando il campo di origine contiene attributi senza hash, seleziona l’opzione **[!UICONTROL Applica trasformazione]** per fare in modo che [!DNL Platform] hash automaticamente i dati all’attivazione.
 > 
-> L’opzione **[!UICONTROL Apply transformation]** viene visualizzata solo quando selezioni gli attributi come campi di origine. Non viene visualizzato quando si selezionano i namespace.
+> L&#39;opzione **[!UICONTROL Applica trasformazione]** viene visualizzata solo quando selezioni gli attributi come campi di origine. Non viene visualizzato quando si selezionano i namespace.
 
 ![Trasformazione mappatura identità](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
