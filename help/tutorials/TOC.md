@@ -4,16 +4,15 @@ user-guide-title: Tutorial su Adobe Experience Platform
 breadcrumb-title: Esercitazioni su Platform
 user-guide-description: Inizia a usare Platform in modo rapido e semplice seguendo insieme a esercitazioni passo passo, che comprendono tutto, dalla preparazione dei dati per l’acquisizione al lavoro con algoritmi avanzati di apprendimento automatico.
 type: Tutorial
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
 workflow-type: tm+mt
-source-wordcount: '74'
-ht-degree: 13%
+source-wordcount: '71'
+ht-degree: 14%
 
 ---
 
 
-# Esercitazioni Adobe Experience Platform {#tutorials}
+# Tutorial su Adobe Experience Platform {#tutorials}
 
 * [Panoramica sui Tutorials](home.md)
 * [Autenticazione nelle API di Experience Platform](https://www.adobe.com/go/platform-api-authentication-en)
@@ -22,7 +21,6 @@ ht-degree: 13%
 * [Data Science Workspace](data-science-workspace.md)
 * [Destinazioni](destinations-tutorials.md)
 * [Inserire dati in Platform](data-ingestion.md)
-* [Profili e identità](configure-profile.md)
 * [Schemi e descrittori di relazione](schemas.md)
 * [Segmenti e tipi di pubblico](segmentation.md)
 
