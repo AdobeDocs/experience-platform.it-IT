@@ -1,18 +1,22 @@
 ---
 keywords: destinazioni; domande; domande frequenti; faq; FAQ sulle destinazioni
-title: Domande frequenti sulle destinazioni
-seo-title: Domande frequenti sulle destinazioni
+title: 'Domande frequenti '
+seo-title: 'Domande frequenti '
 description: Risposte alle domande più frequenti sulle destinazioni Adobe Experience Platform
 seo-description: Risposte alle domande più frequenti sulle destinazioni Adobe Experience Platform
-source-git-commit: 61678c5a62980cdb81714420016b7c4b2093f5c6
+source-git-commit: 47b3ef28281e3480e8b194486845f4fb4326b7d4
 workflow-type: tm+mt
-source-wordcount: '597'
-ht-degree: 5%
+source-wordcount: '636'
+ht-degree: 6%
 
 ---
 
 
-# Domande frequenti sulle destinazioni {#faq}
+# Domande frequenti  {#faq}
+
+## Panoramica {#overview}
+
+Questo documento fornisce le risposte alle domande frequenti sulle destinazioni Adobe Experience Platform. Per domande e risoluzione dei problemi relativi ad altri servizi [!DNL Platform], inclusi quelli riscontrati in tutte le API [!DNL Platform], consulta la [guida alla risoluzione dei problemi di Experience Platform](../landing/troubleshooting.md).
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
