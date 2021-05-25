@@ -4,10 +4,9 @@ title: Panoramica del profilo cliente in tempo reale
 topic-legacy: guide
 description: Profilo cliente in tempo reale è un archivio di entità di ricerca generico che unisce i dati da varie risorse di dati aziendali e fornisce l’accesso a tali dati sotto forma di profili cliente individuali ed eventi serie temporali correlati. Questa funzione consente agli esperti di marketing di promuovere esperienze coordinate, coerenti e rilevanti con i loro tipi di pubblico su più canali.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 598f86188bcd9bde22333ccafb85f3f566aaae44
 workflow-type: tm+mt
-source-wordcount: '1826'
+source-wordcount: '1813'
 ht-degree: 0%
 
 ---
@@ -64,9 +63,11 @@ Ogni azienda vuole comunicare con i propri clienti in un modo che si sente perso
 
 ### Unisci criteri
 
-Quando si uniscono frammenti di dati da più origini e si combinano per visualizzare una visualizzazione completa di ciascuno dei singoli clienti, i criteri di unione sono le regole utilizzate da [!DNL Platform] per determinare come assegnare la priorità ai dati e quali saranno i dati utilizzati per creare il profilo cliente. In presenza di dati in conflitto provenienti da più set di dati, il criterio di unione determinerà come trattare tali dati e quale valore utilizzare. Utilizzando le API RESTful o l&#39;interfaccia utente, è possibile creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la propria organizzazione.
+Quando si uniscono frammenti di dati da più origini e si combinano per visualizzare una visualizzazione completa di ciascuno dei singoli clienti, i criteri di unione sono le regole utilizzate da [!DNL Platform] per determinare come assegnare la priorità ai dati e quali saranno i dati utilizzati per creare il profilo cliente.
 
-Per ulteriori informazioni sulle operazioni con i criteri di unione utilizzando l&#39;API [!DNL Real-time Customer Profile], vedere la [guida all&#39;endpoint dei criteri di unione](api/merge-policies.md). Per utilizzare i criteri di unione utilizzando l&#39;interfaccia utente [!DNL Experience Platform], fare riferimento alla [guida all&#39;interfaccia utente dei criteri di unione](ui/merge-policies.md).
+In presenza di dati in conflitto provenienti da più set di dati, il criterio di unione determina il modo in cui tali dati devono essere trattati e il valore da utilizzare. Tramite le API RESTful o l&#39;interfaccia utente è possibile creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la propria organizzazione.
+
+Per ulteriori informazioni sui criteri di unione e sul loro ruolo all&#39;interno dell&#39;Experience Platform, leggere la [panoramica dei criteri di unione](merge-policies/overview.md).
 
 ### Schemi dell’Unione {#profile-fragments-and-union-schemas}
 
