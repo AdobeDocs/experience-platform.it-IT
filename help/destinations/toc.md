@@ -4,19 +4,18 @@ user-guide-title: Guida alle destinazioni
 user-guide-description: Attiva i dati noti e sconosciuti per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 description: Questo documento elenca il sommario delle destinazioni Adobe Experience Platform
 feature: Destinazioni
-source-git-commit: d62b2df54357449f35894f9c8ab45f87d97363d2
+source-git-commit: 47b3ef28281e3480e8b194486845f4fb4326b7d4
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 10%
+source-wordcount: '477'
+ht-degree: 11%
 
 ---
 
 
 # Destinazioni {#destinations}
 
-* [Panoramica sulle destinazioni](./home.md)
+* [Destinazioni - Panoramica](./home.md)
 * [Tipi di destinazione e categorie](./destination-types.md)
-* [Domande frequenti sulle destinazioni](./destinations-faq.md)
 * Esercitazioni API {#api}
    * [Connettiti alle destinazioni di streaming e attiva i dati utilizzando l’API del servizio di flusso](./api/streaming-destinations.md)
    * [Connettiti alle destinazioni di marketing e-mail e attiva i dati utilizzando l’API del servizio di flusso](./api/email-marketing.md)
@@ -135,4 +134,5 @@ ht-degree: 10%
       * [Estensione Invoca Tags](./catalog/voice/invoca.md)
       * [Estensione Medallia](./catalog/voice/medallia.md)
       * [Estensione casella in entrata Talk URL](./catalog/voice/talkurl.md)
+* [Domande frequenti ](./destinations-faq.md)
 * [Note sulla versione di Platform](https://www.adobe.com/go/platform-release-notes-en)
