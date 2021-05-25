@@ -5,27 +5,26 @@ description: Adobe Experience Platform fornisce un dashboard tramite il quale è
 topic-legacy: guide
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
 workflow-type: tm+mt
-source-wordcount: '1066'
-ht-degree: 1%
+source-wordcount: '1123'
+ht-degree: 0%
 
 ---
 
-# (Beta) [!UICONTROL Profiles] dashboard
+# (Beta) [!UICONTROL Dashboard dei profili]
 
 >[!IMPORTANT]
 >
 >La funzionalità del dashboard descritta in questo documento è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
 
-L’interfaccia utente di Adobe Experience Platform fornisce una dashboard attraverso la quale è possibile visualizzare informazioni importanti sui dati [!DNL Real-time Customer Profile] acquisiti durante un’istantanea giornaliera. Questa guida illustra come accedere e lavorare con il dashboard [!UICONTROL Profiles] nell’interfaccia utente e fornisce informazioni sulle metriche visualizzate nel dashboard.
+L’interfaccia utente di Adobe Experience Platform fornisce una dashboard attraverso la quale è possibile visualizzare informazioni importanti sui dati [!DNL Real-time Customer Profile] acquisiti durante un’istantanea giornaliera. Questa guida illustra come accedere e lavorare con il dashboard [!UICONTROL Profiles] nell&#39;interfaccia utente e fornisce informazioni sulle metriche visualizzate nel dashboard.
 
 Per una panoramica di tutte le funzioni Profilo nell’interfaccia utente di Experience Platform, visita la [Guida all’interfaccia utente del profilo cliente in tempo reale](../../profile/ui/user-guide.md).
 
 ## Dati del dashboard del profilo
 
-Il dashboard [!UICONTROL Profiles] visualizza un&#39;istantanea dei dati dell&#39;attributo (record) della tua organizzazione all&#39;interno dell&#39;archivio profili in Experience Platform. Lo snapshot non include dati di eventi (serie temporali).
+Il dashboard [!UICONTROL Profiles] visualizza in Experience Platform un&#39;istantanea dei dati dell&#39;attributo (record) della tua organizzazione all&#39;interno dell&#39;archivio profili. Lo snapshot non include dati di eventi (serie temporali).
 
 I dati attributo nello snapshot mostrano esattamente come vengono visualizzati nel momento specifico in cui è stata acquisita l&#39;istantanea. In altre parole, lo snapshot non è un&#39;approssimazione o un esempio dei dati e il dashboard Profilo non viene aggiornato in tempo reale.
 
@@ -33,15 +32,15 @@ I dati attributo nello snapshot mostrano esattamente come vengono visualizzati n
 >
 >Eventuali modifiche o aggiornamenti apportati ai dati dall&#39;acquisizione dello snapshot non verranno visualizzati nel dashboard fino all&#39;acquisizione dello snapshot successivo.
 
-## Esplorazione del dashboard [!UICONTROL Profiles]
+## Esplorazione del dashboard [!UICONTROL Profili]
 
-Per passare al dashboard [!UICONTROL Profiles] nell’interfaccia utente di Platform, seleziona **[!UICONTROL Profiles]** nella barra a sinistra, quindi seleziona la scheda **[!UICONTROL Overview]** per visualizzare il dashboard.
+Per passare al dashboard [!UICONTROL Profili] nell’interfaccia utente di Platform, seleziona **[!UICONTROL Profili]** nella barra a sinistra, quindi seleziona la scheda **[!UICONTROL Panoramica]** per visualizzare il dashboard.
 
 ![](../images/profiles/dashboard-overview.png)
 
 ### Selezione dei criteri di unione
 
-Le metriche visualizzate nel dashboard [!UICONTROL Profiles] si basano sui criteri di unione applicati ai dati del profilo cliente in tempo reale. Quando i dati vengono riuniti da più origini, è possibile che contengano valori in conflitto (ad esempio, un set di dati può elencare un cliente come &quot;singolo&quot;, mentre un altro set di dati può elencare il cliente come &quot;sposato&quot;) ed è compito del criterio di unione determinare quali dati dare priorità e visualizzare come parte del profilo.
+Le metriche visualizzate nel dashboard [!UICONTROL Profili] si basano sui criteri di unione applicati ai dati del profilo cliente in tempo reale. Quando i dati vengono riuniti da più origini, è possibile che contengano valori in conflitto (ad esempio, un set di dati può elencare un cliente come &quot;singolo&quot;, mentre un altro set di dati può elencare il cliente come &quot;sposato&quot;) ed è compito del criterio di unione determinare quali dati dare priorità e visualizzare come parte del profilo.
 
 Il dashboard selezionerà automaticamente un criterio di unione da visualizzare, ma sarà possibile modificare il criterio di unione selezionato utilizzando il menu a discesa. Per scegliere un criterio di unione diverso, selezionare il menu a discesa accanto al nome del criterio di unione, quindi selezionare il criterio di unione che si desidera visualizzare.
 
@@ -49,7 +48,7 @@ Il dashboard selezionerà automaticamente un criterio di unione da visualizzare,
 >
 >Il menu a discesa mostra solo i criteri di unione relativi alla classe di profilo individuale XDM. Tuttavia, se l&#39;organizzazione ha creato più criteri di unione, potrebbe essere necessario scorrere per visualizzare l&#39;elenco completo dei criteri di unione disponibili.
 
-Per ulteriori informazioni sui criteri di unione, tra cui come creare, modificare e dichiarare un criterio di unione predefinito per l&#39;organizzazione, visitare la [guida all&#39;interfaccia utente dei criteri di unione](../../profile/ui/merge-policies.md).
+Per ulteriori informazioni sui criteri di unione, tra cui come creare, modificare e dichiarare un criterio di unione predefinito per l&#39;organizzazione, leggere la [panoramica dei criteri di unione](../../profile/merge-policies/overview.md).
 
 ![](../images/profiles/select-merge-policy.png)
 
@@ -63,49 +62,49 @@ Il dashboard è composto da widget, che sono metriche di sola lettura che fornis
 
 Experience Platform fornisce più widget che puoi utilizzare per visualizzare diverse metriche correlate ai dati del profilo. Seleziona il nome di un widget qui sotto per ulteriori informazioni:
 
-* [[!UICONTROL Audience size]](#audience-size)
-* [[!UICONTROL Profiles added]](#profiles-added)
-* [[!UICONTROL Profiles added over time]](#profiles-added-over-time)
-* [[!UICONTROL Profiles by namespace]](#profiles-by-namespace)
-* [[!UICONTROL Namespace overlap]](#namespace-overlap)
+* [[!UICONTROL Dimensione del pubblico]](#audience-size)
+* [[!UICONTROL Profili aggiunti]](#profiles-added)
+* [[!UICONTROL Profili aggiunti nel tempo]](#profiles-added-over-time)
+* [[!UICONTROL Profili per namespace]](#profiles-by-namespace)
+* [[!UICONTROL Sovrapposizione dello spazio dei nomi]](#namespace-overlap)
 
-### [!UICONTROL Audience size] {#audience-size}
+### [!UICONTROL Dimensione del pubblico] {#audience-size}
 
-Il widget **[!UICONTROL Audience size]** visualizza il numero totale di profili uniti all’interno dell’archivio dati del profilo al momento dell’acquisizione dello snapshot. Questo numero è il risultato dell’applicazione del criterio di unione selezionato ai dati del profilo per unire i frammenti di profilo in modo da formare un unico profilo per ogni singolo utente.
+Il widget **[!UICONTROL Dimensione pubblico]** visualizza il numero totale di profili uniti all’interno dell’archivio dati del profilo al momento dell’acquisizione dello snapshot. Questo numero è il risultato dell’applicazione del criterio di unione selezionato ai dati del profilo per unire i frammenti di profilo in modo da formare un unico profilo per ogni singolo utente.
 
 Per ulteriori informazioni sui frammenti e i profili uniti, inizia leggendo la sezione *Profili di profilo e profili uniti* della [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
 
 >[!NOTE]
 >
->Il criterio di unione utilizzato per calcolare questa metrica non è lo stesso del criterio di unione generato dal sistema utilizzato per calcolare [!UICONTROL Addressable audiences] nel dashboard [!UICONTROL License usage], pertanto è improbabile che il conteggio del pubblico nei dashboard [!UICONTROL Profiles] e [!UICONTROL License usage] sia esattamente lo stesso.
+>Il criterio di unione utilizzato per calcolare questa metrica non è lo stesso del criterio di unione generato dal sistema utilizzato per calcolare [!UICONTROL Tipi di pubblico utilizzabili] nel dashboard [!UICONTROL Utilizzo licenze], pertanto è improbabile che il conteggio del pubblico nei dashboard [!UICONTROL Profili] e [!UICONTROL Utilizzo licenze] sia esattamente lo stesso.
 
 ![](../images/profiles/audience-size.png)
 
-### [!UICONTROL Profiles added] {#profiles-added}
+### [!UICONTROL Profili aggiunti] {#profiles-added}
 
-Il widget **[!UICONTROL Profiles added]** visualizza il numero totale di profili uniti che sono stati aggiunti all’archivio dati del profilo dopo l’ultima istantanea. Questo numero è il risultato dell’applicazione del criterio di unione selezionato ai dati del profilo per unire i frammenti di profilo in modo da formare un unico profilo per ogni singolo utente.
+Il widget **[!UICONTROL Profili aggiunti]** visualizza il numero totale di profili uniti che sono stati aggiunti all’archivio dati del profilo dopo l’ultima istantanea. Questo numero è il risultato dell’applicazione del criterio di unione selezionato ai dati del profilo per unire i frammenti di profilo in modo da formare un unico profilo per ogni singolo utente.
 
 ![](../images/profiles/profiles-added.png)
 
-### [!UICONTROL Profiles added over time] {#profiles-added-over-time}
+### [!UICONTROL Profili aggiunti nel tempo] {#profiles-added-over-time}
 
-Il widget **[!UICONTROL Profiles added over time]** visualizza il numero totale di profili uniti che sono stati aggiunti giornalmente all’archivio dati del profilo negli ultimi 30 giorni. Questo numero viene aggiornato ogni giorno in cui viene acquisita l’istantanea, pertanto se desideri acquisire profili in Platform, il numero di profili non verrà riportato fino a quando non viene acquisita l’istantanea successiva.
+Il widget **[!UICONTROL Profili aggiunti nel tempo]** visualizza il numero totale di profili uniti che sono stati aggiunti all’archivio dati del profilo ogni giorno negli ultimi 30 giorni. Questo numero viene aggiornato ogni giorno in cui viene acquisita l’istantanea, pertanto se desideri acquisire profili in Platform, il numero di profili non verrà riportato fino a quando non viene acquisita l’istantanea successiva.
 
 Il conteggio dei profili aggiunti è il risultato dell’applicazione dei criteri di unione selezionati ai dati del profilo per unire i frammenti di profilo in modo da formare un unico profilo per ogni singolo utente.
 
 ![](../images/profiles/profiles-added-over-time.png)
 
-### [!UICONTROL Profiles by namespace] {#profiles-by-namespace}
+### [!UICONTROL Profili per namespace] {#profiles-by-namespace}
 
-Il widget **[!UICONTROL Profiles by namespace]** visualizza la suddivisione dei namespace di identità in tutti i profili uniti nel tuo archivio profili. Il numero totale di profili per [!UICONTROL ID namespace] (in altre parole, aggiungendo insieme i valori mostrati per ogni spazio dei nomi) può essere maggiore del numero totale di profili di unione, perché a un profilo potrebbero essere associati più spazi dei nomi. Ad esempio, se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente saranno associati più namespace.
+Il widget **[!UICONTROL Profili per namespace]** visualizza la suddivisione dei namespace di identità in tutti i profili uniti nel tuo archivio profili. Il numero totale di profili per [!UICONTROL ID namespace] (in altre parole, aggiungendo insieme i valori mostrati per ogni namespace) può essere superiore al numero totale di profili di unione, perché a un profilo potrebbero essere associati più namespace. Ad esempio, se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente saranno associati più namespace.
 
 Per ulteriori informazioni sugli spazi dei nomi delle identità, visita la [documentazione del servizio Adobe Experience Platform Identity](../../identity-service/home.md).
 
 ![](../images/profiles/profiles-by-namespace.png)
 
-### [!UICONTROL Namespace overlap] {#namespace-overlap}
+### [!UICONTROL Sovrapposizione dello spazio dei nomi] {#namespace-overlap}
 
-Il widget **[!UICONTROL Namespace overlap]** visualizza un diagramma di Venn, o diagramma di set, che mostra la sovrapposizione di profili nell’archivio profili contenenti più spazi dei nomi di identità.
+Il widget **[!UICONTROL Sovrapposizione namespace]** visualizza un diagramma di Venn, o un diagramma di set, che mostra la sovrapposizione di profili nell’archivio profili contenenti più spazi dei nomi di identità.
 
 Dopo aver utilizzato i menu a discesa del widget per selezionare i namespace di identità da confrontare, i cerchi visualizzano la dimensione relativa di ogni namespace, con il numero di profili contenenti entrambi i namespace rappresentato dalla dimensione della sovrapposizione tra i cerchi.
 
