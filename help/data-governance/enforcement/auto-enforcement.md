@@ -5,10 +5,9 @@ title: Applicazione automatica dei criteri
 topic-legacy: guide
 description: Questo documento illustra come i criteri di utilizzo dei dati vengono applicati automaticamente quando si attivano segmenti nelle destinazioni in Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '1127'
 ht-degree: 0%
 
 ---
@@ -63,7 +62,7 @@ Ogni fase nella timeline di cui sopra rappresenta un’entità che può contribu
 | Fase di derivazione dei dati | Ruolo nell&#39;applicazione delle politiche |
 | --- | --- |
 | Set di dati | I set di dati contengono etichette di utilizzo dei dati (applicate a livello di set di dati o di campo) che definiscono per quali casi d’uso può essere utilizzato l’intero set di dati o campi specifici. Le violazioni dei criteri si verificano se un set di dati o un campo contenente determinate etichette viene utilizzato per uno scopo limitato da un criterio. |
-| Criteri di unione | I criteri di unione sono regole utilizzate da Platform per determinare la priorità dei dati durante l’unione di frammenti da più set di dati. Le violazioni dei criteri si verificano se i criteri di unione sono configurati in modo che i set di dati con etichette limitate vengano attivati in una destinazione. Per ulteriori informazioni, consulta la guida sull’ [unione dei criteri](../../profile/ui/merge-policies.md) . |
+| Criteri di unione | I criteri di unione sono regole utilizzate da Platform per determinare la priorità dei dati durante l’unione di frammenti da più set di dati. Le violazioni dei criteri si verificano se i criteri di unione sono configurati in modo che i set di dati con etichette limitate vengano attivati in una destinazione. Per ulteriori informazioni, consulta la [panoramica dei criteri di unione](../../profile/merge-policies/overview.md) . |
 | Segmento | Le regole del segmento definiscono quali attributi includere dai profili cliente. A seconda dei campi inclusi nella definizione di un segmento, il segmento eredita eventuali etichette di utilizzo applicate a tali campi. Le violazioni dei criteri si verificano se attivi un segmento le cui etichette ereditate sono limitate dai criteri applicabili della destinazione di destinazione, in base al relativo caso d’uso di marketing. |
 | Destinazione | Quando si imposta una destinazione, è possibile definire un’azione di marketing (a volte denominata caso d’uso di marketing). Questo caso d’uso è correlato a un’azione di marketing definita in un criterio di utilizzo dei dati. In altre parole, il caso di utilizzo marketing definito per una destinazione determina quali criteri di utilizzo dei dati sono applicabili a tale destinazione. Le violazioni dei criteri si verificano se attivi un segmento le cui etichette di utilizzo sono limitate dai criteri applicabili della destinazione di destinazione. |
 
@@ -71,7 +70,7 @@ Quando si verificano violazioni dei criteri, i messaggi risultanti visualizzati 
 
 ## Messaggi di violazione dei criteri {#enforcement}
 
-Se si verifica una violazione dei criteri durante l&#39;attivazione di un segmento (o [l&#39;apposizione di modifiche a un segmento già attivato](#policy-enforcement-for-activated-segments)), l&#39;azione viene impedita e viene visualizzato un puntatore che indica che uno o più criteri sono stati violati. Una volta attivata la violazione, il pulsante **[!UICONTROL Save]** viene disattivato per l’entità che stai modificando fino a quando i componenti appropriati non vengono aggiornati per conformarsi ai criteri di utilizzo dei dati.
+Se si verifica una violazione dei criteri durante l&#39;attivazione di un segmento (o [l&#39;apposizione di modifiche a un segmento già attivato](#policy-enforcement-for-activated-segments)), l&#39;azione viene impedita e viene visualizzato un puntatore che indica che uno o più criteri sono stati violati. Una volta attivata la violazione, il pulsante **[!UICONTROL Salva]** viene disattivato per l&#39;entità che stai modificando fino a quando i componenti appropriati non vengono aggiornati per conformarsi ai criteri di utilizzo dei dati.
 
 Seleziona una violazione di criteri nella colonna a sinistra del puntatore per visualizzare i dettagli relativi a tale violazione.
 
@@ -85,11 +84,11 @@ Sotto il riepilogo delle violazioni viene visualizzato un grafico della derivazi
 
 ![](../images/enforcement/data-lineage.png)
 
-È inoltre possibile utilizzare l&#39;icona **[!UICONTROL Filter]** (![](../images/enforcement/filter.png)) per filtrare le entità visualizzate per categoria. Affinché i dati possano essere visualizzati, è necessario selezionare almeno due categorie.
+È inoltre possibile utilizzare l&#39;icona **[!UICONTROL Filtro]** (![](../images/enforcement/filter.png)) per filtrare le entità visualizzate per categoria. Affinché i dati possano essere visualizzati, è necessario selezionare almeno due categorie.
 
 ![](../images/enforcement/lineage-filter.png)
 
-Selezionare **[!UICONTROL List view]** per visualizzare la derivazione dati come elenco. Per tornare al grafico visivo, seleziona **[!UICONTROL Path view]**.
+Seleziona **[!UICONTROL Vista a elenco]** per visualizzare la derivazione di dati come elenco. Per tornare al grafico visivo, seleziona **[!UICONTROL Vista percorso]**.
 
 ![](../images/enforcement/list-view.png)
 
