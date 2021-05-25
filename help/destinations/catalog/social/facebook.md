@@ -3,7 +3,7 @@ keywords: Connessione facebook;connessione facebook;destinazioni facebook;facebo
 title: Connessione facebook
 description: Attiva profili per le campagne Facebook per il targeting del pubblico, la personalizzazione e la soppressione in base a e-mail con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: d82eb1a839518dbd9831808485d9d5029e3dcaf5
+source-git-commit: 41cfa5b30d8816baf55b8b4e1609ca724e9efe24
 workflow-type: tm+mt
 source-wordcount: '1160'
 ht-degree: 2%
