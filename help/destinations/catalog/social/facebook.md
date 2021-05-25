@@ -3,10 +3,9 @@ keywords: Connessione facebook;connessione facebook;destinazioni facebook;facebo
 title: Connessione facebook
 description: Attiva profili per le campagne Facebook per il targeting del pubblico, la personalizzazione e la soppressione in base a e-mail con hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-translation-type: tm+mt
-source-git-commit: 1e9e5831b19738285affeb0337985c7cb0d45ebf
+source-git-commit: d82eb1a839518dbd9831808485d9d5029e3dcaf5
 workflow-type: tm+mt
-source-wordcount: '1089'
+source-wordcount: '1160'
 ht-degree: 2%
 
 ---
@@ -45,8 +44,8 @@ Successivamente, possono utilizzare i propri dati offline, inclusi gli ID di app
 |---|---|---|
 | GAID | Google Advertising ID | Selezionare l&#39;identità di destinazione GAID quando l&#39;identità di origine è uno spazio dei nomi GAID. |
 | IDFA | Apple ID per gli inserzionisti | Seleziona l’identità di destinazione IDFA quando l’identità di origine è uno spazio dei nomi IDFA. |
-| phone_sha256 | Hash dei numeri di telefono con l&#39;algoritmo SHA256 | Sia il testo normale che i numeri di telefono con hash SHA256 sono supportati da Adobe Experience Platform. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza rispettivamente i namespace appropriati per il testo normale e i numeri di telefono con hash. Quando il campo di origine contiene attributi senza hash, seleziona l’opzione **[!UICONTROL Apply transformation]** per fare in modo che [!DNL Platform] hash automaticamente i dati all’attivazione. |
-| email_lc_sha256 | Indirizzi e-mail con hash con l’algoritmo SHA256 | Gli indirizzi e-mail con hash SHA256 e di testo normale sono supportati da Adobe Experience Platform. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza rispettivamente i namespace appropriati per gli indirizzi e-mail in testo normale e con hash. Quando il campo di origine contiene attributi senza hash, seleziona l’opzione **[!UICONTROL Apply transformation]** per fare in modo che [!DNL Platform] hash automaticamente i dati all’attivazione. |
+| phone_sha256 | Hash dei numeri di telefono con l&#39;algoritmo SHA256 | Sia il testo normale che i numeri di telefono con hash SHA256 sono supportati da Adobe Experience Platform. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza rispettivamente i namespace appropriati per il testo normale e i numeri di telefono con hash. Quando il campo di origine contiene attributi senza hash, seleziona l&#39;opzione **[!UICONTROL Applica trasformazione]** per fare in modo che [!DNL Platform] hash automaticamente i dati all&#39;attivazione. |
+| email_lc_sha256 | Indirizzi e-mail con hash con l’algoritmo SHA256 | Gli indirizzi e-mail con hash SHA256 e di testo normale sono supportati da Adobe Experience Platform. Segui le istruzioni riportate nella sezione [Requisiti di corrispondenza ID](#id-matching-requirements-id-matching-requirements) e utilizza rispettivamente i namespace appropriati per gli indirizzi e-mail in testo normale e con hash. Quando il campo di origine contiene attributi senza hash, seleziona l&#39;opzione **[!UICONTROL Applica trasformazione]** per fare in modo che [!DNL Platform] hash automaticamente i dati all&#39;attivazione. |
 | extern_id | ID utente personalizzati | Seleziona questa identità di destinazione quando l’identità di origine è uno spazio dei nomi personalizzato. |
 
 ## Tipo di esportazione {#export-type}
@@ -100,8 +99,8 @@ Se scegli di aggiungere con hash gli indirizzi e-mail, assicurati di soddisfare 
 >[!NOTE]
 >
 >I dati provenienti da spazi dei nomi senza hash vengono automaticamente hashing da [!DNL Platform] al momento dell’attivazione.
-> I dati di origine degli attributi non vengono crittografati automaticamente. Quando il campo di origine contiene attributi senza hash, seleziona l’opzione **[!UICONTROL Apply transformation]** per fare in modo che [!DNL Platform] hash automaticamente i dati all’attivazione.
-> L’opzione **[!UICONTROL Apply transformation]** viene visualizzata solo quando selezioni gli attributi come campi di origine. Non viene visualizzato quando si selezionano i namespace.
+> I dati di origine degli attributi non vengono crittografati automaticamente. Quando il campo di origine contiene attributi senza hash, seleziona l&#39;opzione **[!UICONTROL Applica trasformazione]** per fare in modo che [!DNL Platform] hash automaticamente i dati all&#39;attivazione.
+> L&#39;opzione **[!UICONTROL Applica trasformazione]** viene visualizzata solo quando selezioni gli attributi come campi di origine. Non viene visualizzato quando si selezionano i namespace.
 
 ![Trasformazione mappatura identità](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
@@ -121,7 +120,7 @@ Il video seguente illustra anche i passaggi per configurare una destinazione [!D
 
 Per istruzioni su come attivare i segmenti su [!DNL Facebook], consulta [Attivare i dati sulle destinazioni](../../ui/activate-destinations.md).
 
-Nel passaggio **[!UICONTROL Segment schedule]** , devi fornire [!UICONTROL Origin of audience] quando invii segmenti a [!DNL Facebook Custom Audiences].
+Nel passaggio **[!UICONTROL Pianificazione segmento]** , devi fornire l’ [!UICONTROL Origine del pubblico] quando invii segmenti a [!DNL Facebook Custom Audiences].
 
 ![Origine del pubblico in facebook](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
@@ -132,3 +131,15 @@ Per [!DNL Facebook], una corretta attivazione implica la creazione programmatica
 >[!TIP]
 >
 >L’integrazione tra Adobe Experience Platform e [!DNL Facebook] supporta le versioni precedenti del pubblico. Tutte le qualifiche dei segmenti storici vengono inviate a [!DNL Facebook] quando attivi i segmenti nella destinazione.
+
+## Risoluzione dei problemi {#troubleshooting}
+
+### 400 Messaggio di errore di richiesta non valida {#bad-request}
+
+Quando attivi i segmenti su [!DNL Facebook], potresti ricevere il seguente errore:
+
+`{"message":"Facebook Error: Permission error","code":"400 BAD_REQUEST"}`
+
+Questo errore si verifica quando i clienti utilizzano account appena creati e le autorizzazioni [!DNL Facebook] non sono ancora attive.
+
+Se ricevi il messaggio di errore `400 Bad Request` dopo aver seguito i passaggi descritti in [Prerequisiti per l’account Facebook](#facebook-account-prerequisites), ti preghiamo di concedere alcuni giorni per l’entrata in vigore delle autorizzazioni [!DNL Facebook] .
