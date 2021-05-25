@@ -5,10 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform consente di unire frammenti di dati provenienti da più sorgenti e di combinarli per ottenere una visualizzazione completa di ciascuno dei singoli clienti. Quando si riuniscono questi dati, i criteri di unione sono le regole utilizzate da Platform per determinare in che modo i dati verranno definiti come prioritari e quali dati verranno combinati per creare una visualizzazione unificata.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 6864e4518b17dc843b3e74c0f9b03ab756d9c581
 workflow-type: tm+mt
-source-wordcount: '2569'
+source-wordcount: '2590'
 ht-degree: 1%
 
 ---
@@ -21,7 +20,7 @@ Ad esempio, se un cliente interagisce con il tuo marchio su più canali, la tua 
 
 Utilizzando le API RESTful o l&#39;interfaccia utente, è possibile creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la propria organizzazione. Questa guida descrive i passaggi necessari per l’utilizzo delle API per l’unione dei criteri.
 
-Per utilizzare i criteri di unione utilizzando l&#39;interfaccia utente, fare riferimento alla [guida all&#39;interfaccia utente dei criteri di unione](../ui/merge-policies.md).
+Per utilizzare i criteri di unione utilizzando l&#39;interfaccia utente, fare riferimento alla [guida all&#39;interfaccia utente dei criteri di unione](../merge-policies/ui-guide.md). Per ulteriori informazioni sui criteri di unione in generale e sul loro ruolo all&#39;interno dell&#39;Experience Platform, leggere la [panoramica dei criteri di unione](../merge-policies/overview.md).
 
 ## Introduzione
 
@@ -760,7 +759,7 @@ Per utilizzare una marca temporale personalizzata, è necessario aggiungere allo
 
 Per istruzioni dettagliate sull’utilizzo degli schemi tramite l’API del Registro di sistema dello schema, tra cui come aggiungere gruppi di campi agli schemi, visita l’ [esercitazione per creare uno schema utilizzando l’API](../../xdm/tutorials/create-schema-api.md).
 
-Per utilizzare le marche temporali personalizzate utilizzando l&#39;interfaccia utente, consulta la sezione su [uso delle marche temporali personalizzate](../ui/merge-policies.md#custom-timestamps) nella [guida utente dei criteri di unione](../ui/merge-policies.md).
+Per utilizzare le marche temporali personalizzate utilizzando l&#39;interfaccia utente, consulta la sezione su [uso delle marche temporali personalizzate](../merge-policies/overview.md#custom-timestamps) nella [panoramica dei criteri di unione](../merge-policies/overview.md).
 
 #### [!DNL External Source System Audit Details] dettagli gruppo di campi  {#field-group-details}
 
