@@ -6,10 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Il servizio di segmentazione di Adobe Experience Platform fornisce un’interfaccia utente e RESTful API che consente di creare segmenti e generare tipi di pubblico dai dati del profilo cliente in tempo reale. Questi segmenti sono configurati e mantenuti a livello centrale su Platform e sono facilmente accessibili da qualsiasi soluzione Adobe.
 exl-id: e45de6b5-ff71-4908-ad79-898084763704
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 36f64b3a1e75c9badaee29e28408504eabac64fe
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '583'
 ht-degree: 0%
 
 ---
@@ -32,7 +31,7 @@ Per esportare i segmenti contenenti dati [!DNL Profile] è necessario prima [cre
 
 ## Configurare i criteri di unione
 
-Adobe Experience Platform consente di unire dati provenienti da più sorgenti e combinarli per visualizzare una visione completa di ciascuno dei singoli clienti. Quando si riuniscono questi dati, i criteri di unione sono le regole utilizzate da [!DNL Platform] per determinare in che modo i dati verranno definiti come prioritari e quali dati verranno combinati per creare tale visualizzazione unificata. Utilizzando le API RESTful o l&#39;interfaccia utente, è possibile creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la propria organizzazione. Per utilizzare i criteri di unione nell&#39;interfaccia utente [!DNL Platform], visita la [guida utente dei criteri di unione](../profile/ui/merge-policies.md). Per utilizzare i criteri di unione utilizzando l&#39;API [!DNL Real-time Customer Profile], consulta la [guida per gli sviluppatori dei criteri di unione](../profile/api/merge-policies.md).
+Adobe Experience Platform consente di unire dati provenienti da più sorgenti e combinarli per visualizzare una visione completa di ciascuno dei singoli clienti. Quando si riuniscono questi dati, i criteri di unione sono le regole utilizzate da [!DNL Platform] per determinare in che modo i dati verranno definiti come prioritari e quali dati verranno combinati per creare tale visualizzazione unificata. Utilizzando le API RESTful o l&#39;interfaccia utente, è possibile creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la propria organizzazione. Per ulteriori informazioni sui criteri di unione e sul ruolo svolto in Experience Platform, leggere la [panoramica dei criteri di unione](../profile/merge-policies/overview.md).
 
 ## Applicare la conformità per l’utilizzo dei dati per i segmenti
 
