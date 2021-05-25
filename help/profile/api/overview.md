@@ -3,9 +3,9 @@ keywords: Experience Platform;profilo;profilo cliente in tempo reale;risoluzione
 title: Guida all’API del profilo cliente in tempo reale
 description: L’API Profilo cliente in tempo reale consente agli sviluppatori di esplorare e lavorare con i dati del profilo, tra cui visualizzare i profili, creare e aggiornare criteri di unione, esportare o dati del profilo di esempio ed eliminare i dati del profilo che non sono più necessari o che sono stati aggiunti per errore. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 77bf6f4634987900bea1280290e8049120bb8856
+source-git-commit: 1c2e4cd2b4070f3844a9848b5574e9d5b1688926
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '891'
 ht-degree: 0%
 
 ---
@@ -46,9 +46,9 @@ Tramite Adobe Experience Platform è possibile accedere ai dati [!DNL Real-time 
 
 ## Criteri di unione {#merge-policies}
 
-Quando si riuniscono dati provenienti da più origini in [!DNL Experience Platform], i criteri di unione sono le regole utilizzate da [!DNL Platform] per determinare come assegnare la priorità ai dati e quali dati verranno combinati per creare profili cliente individuali. Utilizzando l&#39;API [!DNL Real-time Customer Profile] è possibile creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la propria organizzazione. Per ulteriori informazioni sull&#39;utilizzo dei criteri di unione tramite l&#39;API, visita la [guida all&#39;endpoint dei criteri di unione](merge-policies.md).
+Quando si riuniscono dati provenienti da più origini in [!DNL Experience Platform], i criteri di unione sono le regole utilizzate da [!DNL Platform] per determinare come assegnare la priorità ai dati e quali dati verranno combinati per creare profili cliente individuali. Utilizzando l&#39;API [!DNL Real-time Customer Profile] è possibile creare nuovi criteri di unione, gestire i criteri esistenti e impostare un criterio di unione predefinito per la propria organizzazione. Per utilizzare i criteri di unione utilizzando l&#39;API, visita la [guida per l&#39;endpoint dei criteri di unione](merge-policies.md).
 
-Per una guida all&#39;utilizzo dei criteri di unione tramite l&#39;interfaccia utente [!DNL Platform], vedere la [guida utente dei criteri di unione](../ui/merge-policies.md).
+Per ulteriori informazioni sui criteri di unione e sul loro ruolo in Platform, consulta la [panoramica dei criteri di unione](../merge-policies/overview.md).
 
 ## Anteprima dello stato del campione ([!DNL Profile] anteprima) {#profile-preview}
 
