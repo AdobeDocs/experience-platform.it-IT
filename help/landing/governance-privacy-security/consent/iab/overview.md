@@ -5,9 +5,9 @@ title: Supporto IAB TCF 2.0 in Experience Platform
 topic-legacy: privacy events
 description: Scopri come configurare le operazioni e gli schemi di dati per trasmettere le scelte di consenso dei clienti quando si attivano i segmenti nelle destinazioni in Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
+source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
 workflow-type: tm+mt
-source-wordcount: '2466'
+source-wordcount: '2476'
 ht-degree: 0%
 
 ---
@@ -103,7 +103,7 @@ I dati di consenso del cliente devono essere inviati ai set di dati i cui schemi
 
 Dopo aver creato un set di dati abilitato [!DNL Profile] per la raccolta dei dati di consenso, assicurati che i criteri di unione siano stati configurati in modo da includere sempre i campi di consenso TCF nei profili dei clienti. Ciò comporta l’impostazione della precedenza del set di dati in modo che il set di dati di consenso abbia priorità rispetto ad altri set di dati potenzialmente in conflitto.
 
-Per ulteriori informazioni su come utilizzare i criteri di unione, consultare la [guida utente dei criteri di unione](../../../../profile/ui/merge-policies.md). Quando imposti i criteri di unione, devi accertarti che i segmenti includano tutti gli attributi di consenso richiesti dal gruppo di campi [schema privacy XDM](./dataset.md#privacy-field-group), come descritto nella guida sulla preparazione dei set di dati.
+Per ulteriori informazioni su come utilizzare i criteri di unione, vedere [panoramica dei criteri di unione](../../../../profile/merge-policies/overview.md). Quando imposti i criteri di unione, devi accertarti che i segmenti includano tutti gli attributi di consenso richiesti dal gruppo di campi [schema privacy XDM](./dataset.md#privacy-field-group), come descritto nella guida sulla preparazione dei set di dati.
 
 ## Integra l’SDK web per Experience Platform per raccogliere i dati sul consenso dei clienti. {#sdk}
 
@@ -126,13 +126,13 @@ Dopo aver fornito un nome univoco per la configurazione, seleziona il pulsante d
 | Campo di configurazione perimetrale | Valore |
 | --- | --- |
 | [!UICONTROL Sandbox] | Il nome della piattaforma [sandbox](../../../../sandboxes/home.md) che contiene la connessione in streaming e i set di dati richiesti per impostare la configurazione Edge. |
-| [!UICONTROL Streaming Inlet] | Una connessione in streaming valida, ad Experience Platform. Se non disponi di un&#39;entrata in streaming, consulta l&#39;esercitazione su [creazione di una connessione in streaming](../../../../ingestion/tutorials/create-streaming-connection-ui.md) . |
-| [!UICONTROL Event Dataset] | Seleziona il set di dati [!DNL XDM ExperienceEvent] creato nel [passaggio precedente](#datasets). |
-| [!UICONTROL Profile Dataset] | Seleziona il set di dati [!DNL XDM Individual Profile] creato nel [passaggio precedente](#datasets). |
+| [!UICONTROL Ingresso streaming] | Una connessione in streaming valida, ad Experience Platform. Se non disponi di un&#39;entrata in streaming, consulta l&#39;esercitazione su [creazione di una connessione in streaming](../../../../ingestion/tutorials/create-streaming-connection-ui.md) . |
+| [!UICONTROL Set di dati evento] | Seleziona il set di dati [!DNL XDM ExperienceEvent] creato nel [passaggio precedente](#datasets). |
+| [!UICONTROL Set di dati del profilo] | Seleziona il set di dati [!DNL XDM Individual Profile] creato nel [passaggio precedente](#datasets). |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
 
-Al termine, seleziona **[!UICONTROL Save]** nella parte inferiore dello schermo e continua a seguire tutte le istruzioni aggiuntive per completare la configurazione.
+Al termine, seleziona **[!UICONTROL Salva]** nella parte inferiore dello schermo e continua a seguire tutte le istruzioni aggiuntive per completare la configurazione.
 
 ### Esecuzione di comandi di modifica del consenso
 
