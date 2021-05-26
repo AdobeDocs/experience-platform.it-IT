@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: d78f2d0fc8d1117614b0d8add0cada21619d8357
+source-git-commit: 91f75f5b6a8e5adb251455f65bc2b693934ef8e2
 workflow-type: tm+mt
-source-wordcount: '978'
-ht-degree: 4%
+source-wordcount: '1070'
+ht-degree: 3%
 
 ---
 
@@ -62,6 +62,8 @@ Per ulteriori informazioni, consulta la [[!DNL Data Prep] panoramica](../../data
 | Funzione | Descrizione |
 | ------- | ----------- |
 | Monitoraggio migliorato (versione beta) | Aumento delle funzionalità di monitoraggio delle destinazioni, comprese le informazioni per le destinazioni batch e in streaming |
+| [Esportazione più rapida dei file incrementali (beta)](../../destinations/ui/activate-destinations.md#export-incremental-files) | È stata aggiunta la possibilità di esportare file incrementali nelle destinazioni ogni 3, 6, 8 o 12 ore. <br> <br>Questa funzionalità è attualmente in versione beta ed è disponibile solo per un numero selezionato di clienti. I clienti non beta possono esportare file incrementali una volta al giorno. |
+| [Supporto chiave di deduplicazione (beta)](../../destinations/ui/activate-destinations.md#deduplication-keys) | È stata aggiunta la possibilità di impostare spazi dei nomi di identità o attributi di profilo come chiavi di deduplicazione. Le chiavi di deduplicazione eliminano la possibilità di avere più record dello stesso profilo in un unico file di esportazione. <br> <br>Questa funzionalità è attualmente in versione beta ed è disponibile solo per un numero selezionato di clienti. |
 
 Per informazioni più generali sulle destinazioni, consulta la [panoramica delle destinazioni](../../destinations/home.md).
 
