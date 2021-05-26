@@ -5,10 +5,9 @@ title: Guida all’interfaccia utente del servizio di segmentazione
 topic-legacy: ui guide
 description: Il servizio di segmentazione di Adobe Experience Platform fornisce un’interfaccia utente per la creazione e la gestione delle definizioni dei segmenti.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-translation-type: tm+mt
-source-git-commit: fa2f4e046c6210137aa3e98d9f18010c1058275a
+source-git-commit: 998332007465c1f8457b5d8cf0e153d513505d39
 workflow-type: tm+mt
-source-wordcount: '1479'
+source-wordcount: '1547'
 ht-degree: 0%
 
 ---
@@ -32,19 +31,25 @@ Per lavorare con le definizioni dei segmenti è necessario conoscere i vari serv
 
 ## Panoramica
 
-Nel menu di navigazione [[!DNL Experience Platform] UI](https://platform.adobe.com/), seleziona **[!UICONTROL Segments]** nel menu di navigazione a sinistra per aprire la scheda **[!UICONTROL Overview]** . Questa scheda fornisce collegamenti alla documentazione e ai video per comprendere e iniziare a lavorare con i segmenti.
+Nella [[!DNL Experience Platform] Interfaccia](https://platform.adobe.com/), seleziona **[!UICONTROL Segmenti]** nel menu di navigazione a sinistra per aprire la scheda **[!UICONTROL Panoramica]** . Questa scheda fornisce collegamenti alla documentazione e ai video per comprendere e iniziare a lavorare con i segmenti.
 
 ![](../images/ui/overview/segment-overview.png)
 
+### Dashboard dei segmenti
+
+Per alcuni utenti, la selezione di **[!UICONTROL Segmenti]** nella navigazione a sinistra e l&#39;apertura della scheda **[!UICONTROL Panoramica]** fornisce una dashboard che delinea le metriche chiave correlate ai dati del segmento.
+
+Per ulteriori informazioni, visita la [guida al dashboard dei segmenti](segment-dashboard.md).
+
 ## Sfoglia
 
-Seleziona la scheda **[!UICONTROL Browse]** per visualizzare un elenco di tutte le definizioni di segmenti per la tua organizzazione IMS.
+Seleziona la scheda **[!UICONTROL Sfoglia]** per visualizzare un elenco di tutte le definizioni di segmenti per la tua organizzazione IMS.
 
 ![](../images/ui/overview/segment-browse-all.png)
 
 Questa visualizzazione elenca informazioni sulla definizione del segmento, tra cui suddivisione, abbandono, conteggio dei profili, metodo di valutazione, data di creazione e data dell’ultima modifica.
 
-La suddivisione mostra un grafico a barre che mostra la percentuale di profili che appartengono a ciascuno dei seguenti stati: [!UICONTROL Realized], [!UICONTROL Existing] e [!UICONTROL Exiting].
+La suddivisione mostra un grafico a barre che mostra la percentuale di profili che appartengono a ciascuno dei seguenti stati: [!UICONTROL Realizzato], [!UICONTROL Esistente] e [!UICONTROL Uscita].
 
 ![](../images/ui/overview/segment-browse-breakdown.png)
 
@@ -62,9 +67,9 @@ Il metodo di valutazione può essere in streaming o batch. I segmenti in streami
 
 Nella parte superiore della pagina sono disponibili le opzioni per aggiungere tutti i segmenti a una pianificazione e per creare un nuovo segmento.
 
-Attivando **[!UICONTROL Add all segments to schedule]** la segmentazione programmata verrà attivata. Ulteriori informazioni sulla segmentazione pianificata sono disponibili nella sezione [segmentazione pianificata di questa guida utente](#scheduled-segmentation).
+Attivando **[!UICONTROL Aggiungi tutti i segmenti alla pianificazione]** la segmentazione pianificata verrà abilitata. Ulteriori informazioni sulla segmentazione pianificata sono disponibili nella sezione [segmentazione pianificata di questa guida utente](#scheduled-segmentation).
 
-Selezionando **[!UICONTROL Create segment]** verrai indirizzato al Generatore di segmenti. Per ulteriori informazioni sulla creazione di segmenti, consulta la sezione su [creazione di un segmento nella guida utente](#create-segment).
+Selezionando **[!UICONTROL Crea segmento]** verrai indirizzato al Generatore di segmenti. Per ulteriori informazioni sulla creazione di segmenti, consulta la sezione su [creazione di un segmento nella guida utente](#create-segment).
 
 ![](../images/ui/overview/segment-browse-top.png)
 
@@ -78,7 +83,7 @@ Selezionando la riga della definizione del segmento viene fornito un riepilogo d
 
 ## Dettagli della definizione del segmento {#segment-details}
 
-Per visualizzare ulteriori dettagli su una definizione di segmento specifica, seleziona il nome di un segmento nella scheda **[!UICONTROL Browse]** .
+Per visualizzare ulteriori dettagli su una definizione di segmento specifica, seleziona il nome di un segmento nella scheda **[!UICONTROL Sfoglia]** .
 
 Viene visualizzata la pagina dei dettagli del segmento. Nella parte superiore, è presente un riepilogo della definizione del segmento, delle informazioni sulla dimensione del pubblico qualificato e delle destinazioni per le quali il segmento viene attivato.
 
@@ -86,19 +91,19 @@ Viene visualizzata la pagina dei dettagli del segmento. Nella parte superiore, �
 
 ### Riepilogo del segmento
 
-La sezione **[!UICONTROL Segment summary]** fornisce informazioni quali ID, nome, descrizione e dettagli degli attributi.
+La sezione **[!UICONTROL Riepilogo segmenti]** fornisce informazioni quali ID, nome, descrizione e dettagli degli attributi.
 
-Inoltre, puoi modificare il segmento. Selezionando **[!UICONTROL Edit segment]** potrai accedere al percorso [!DNL Segment Builder]. Per informazioni più dettagliate sull&#39;utilizzo dell&#39;area di lavoro [!DNL Segment Builder], leggere la [[!DNL Segment Builder] guida utente](./segment-builder.md).
+Inoltre, puoi modificare il segmento. Selezionando **[!UICONTROL Modifica segmento]** potrai accedere al percorso [!DNL Segment Builder]. Per informazioni più dettagliate sull&#39;utilizzo dell&#39;area di lavoro [!DNL Segment Builder], leggere la [[!DNL Segment Builder] guida utente](./segment-builder.md).
 
 ### Pubblico totale nel segmento
 
-La sezione **[!UICONTROL Total audience in segment]** mostra il numero totale di profili idonei per il segmento.
+La sezione **[!UICONTROL Pubblico totale nel segmento]** mostra il numero totale di profili idonei per il segmento.
 
 Le stime vengono generate utilizzando una dimensione del campione dei dati di esempio del giorno in questione. Se nell’archivio dei profili sono presenti meno di 1 milione di entità, viene utilizzato l’intero set di dati; tra 1 e 20 milioni di entità sono utilizzate 1 milione di entità; e per più di 20 milioni di entità viene utilizzato il 5% del totale delle entità. Ulteriori informazioni sulla generazione delle stime dei segmenti sono disponibili nella sezione [generazione delle stime](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) dell’esercitazione sulla creazione dei segmenti.
 
 ### Destinazioni attivate
 
-La sezione **[!UICONTROL Activated destinations]** mostra le destinazioni per le quali questo segmento è attivato.
+La sezione **[!UICONTROL Destinazioni attivate]** mostra le destinazioni per le quali questo segmento è attivato.
 
 >[!NOTE]
 >
@@ -128,7 +133,7 @@ Per informazioni più dettagliate su ciascun [!DNL Profile], seleziona l’ID [!
 
 ## Creazione di un segmento {#create-segment}
 
-Selezionando **[!UICONTROL Create segment]** nell’angolo in alto a destra, si apre l’area di lavoro [!DNL Segment Builder] in cui puoi iniziare a creare una definizione di segmento.
+Selezionando **[!UICONTROL Crea segmento]** nell’angolo in alto a destra, si apre l’area di lavoro [!DNL Segment Builder] in cui puoi iniziare a creare una definizione di segmento.
 
 ![](../images/ui/overview/segment-browse-create.png)
 
@@ -148,7 +153,7 @@ La valutazione su richiesta comporta l’utilizzo dell’API per eseguire valuta
 
 ### Abilita segmentazione pianificata {#enable-scheduled-segmentation}
 
-Puoi abilitare le definizioni dei segmenti per la valutazione pianificata utilizzando l’interfaccia utente o l’API. Nell’interfaccia utente, torna alla scheda **[!UICONTROL Browse]** in **[!UICONTROL Segments]** e attiva **[!UICONTROL Add all segments to schedule]**. In questo modo tutti i segmenti verranno valutati in base alla pianificazione impostata dall’organizzazione.
+Puoi abilitare le definizioni dei segmenti per la valutazione pianificata utilizzando l’interfaccia utente o l’API. Nell’interfaccia utente, torna alla scheda **[!UICONTROL Sfoglia]** all’interno di **[!UICONTROL Segmenti]** e attiva **[!UICONTROL Aggiungi tutti i segmenti da pianificare]**. In questo modo tutti i segmenti verranno valutati in base alla pianificazione impostata dall’organizzazione.
 
 >[!NOTE]
 >
