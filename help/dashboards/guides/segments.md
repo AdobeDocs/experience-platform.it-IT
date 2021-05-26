@@ -2,22 +2,16 @@
 keywords: Experience Platform;profilo;segmento;segmenti;segmentazione;interfaccia utente;interfaccia utente;personalizzazione;dashboard segmenti;dashboard dashboard
 title: Dashboard dei segmenti
 description: 'Adobe Experience Platform fornisce una dashboard tramite la quale è possibile visualizzare informazioni importanti sui segmenti creati dalla tua organizzazione. '
-topic-legacy: guide
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
 workflow-type: tm+mt
-source-wordcount: '727'
-ht-degree: 1%
+source-wordcount: '900'
+ht-degree: 0%
 
 ---
 
-# (Beta) Dashboard dei segmenti {#segment-dashboard}
-
->[!IMPORTANT]
->
->La funzionalità del dashboard descritta in questo documento è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
+# Dashboard dei segmenti {#segment-dashboard}
 
 L’interfaccia utente di Adobe Experience Platform offre una dashboard attraverso la quale è possibile visualizzare informazioni importanti sui segmenti, acquisite durante un’istantanea giornaliera. Questa guida illustra come accedere e lavorare con il dashboard dei segmenti nell’interfaccia utente e fornisce ulteriori informazioni sulle visualizzazioni visualizzate nel dashboard.
 
@@ -35,23 +29,31 @@ I dati attributo nello snapshot mostrano esattamente come vengono visualizzati n
 
 ## Esplorazione del dashboard dei segmenti
 
-Per passare al dashboard dei segmenti all’interno dell’interfaccia utente di Platform, seleziona **[!UICONTROL Segments]** nella barra a sinistra, quindi seleziona la scheda **[!UICONTROL Overview]** per visualizzare il dashboard.
+Per passare al dashboard dei segmenti all’interno dell’interfaccia utente di Platform, seleziona **[!UICONTROL Segmenti]** nella barra a sinistra, quindi seleziona la scheda **[!UICONTROL Panoramica]** per visualizzare il dashboard.
 
 ![](../images/segments/dashboard-overview.png)
 
-### Selezionare un segmento
+### Modifica del dashboard [!UICONTROL Segmenti]
 
-Il dashboard seleziona automaticamente un segmento da visualizzare, ma puoi modificare il segmento visualizzato utilizzando il menu a discesa. Per scegliere un segmento diverso, seleziona il menu a discesa accanto al nome del segmento, quindi seleziona il segmento da visualizzare.
+Puoi modificare l&#39;aspetto del dashboard [!UICONTROL Segmenti] selezionando **[!UICONTROL Modifica dashboard]**. Questo consente di spostare, aggiungere e rimuovere i widget dal dashboard e di accedere alla [!UICONTROL Libreria widget] per esplorare i widget disponibili e creare widget personalizzati per la tua organizzazione.
 
->[!NOTE]
->
->Il menu a discesa mostra tutti i segmenti creati finora dalla tua organizzazione. Questo può significare che dovrai scorrere per visualizzare l’elenco completo dei segmenti disponibili.
+Per ulteriori informazioni, consulta la documentazione [modifica di dashboard](../modify.md) e [libreria widget](../widget-library.md) .
+
+## Selezionare un segmento
+
+Il dashboard seleziona automaticamente un segmento da visualizzare, tuttavia puoi modificare il segmento utilizzando il menu a discesa o il selettore di segmenti.
+
+Per scegliere un segmento diverso, seleziona il menu a discesa accanto al nome del segmento o utilizza il selettore del segmento per aprire la finestra di dialogo di selezione del segmento.
 
 ![](../images/segments/change-segment.png)
 
-### Widget e metriche
+![](../images/segments/select-segment-dialog.png)
 
-Il dashboard dei segmenti è composto da widget, che sono metriche di sola lettura che forniscono informazioni importanti sul segmento selezionato. La data e l&#39;ora &quot;ultimo aggiornamento&quot; del widget mostrano quando è stata effettuata l&#39;ultima istantanea dei dati.
+## Widget e metriche
+
+Il dashboard dei segmenti è composto da widget, che sono metriche di sola lettura che forniscono informazioni importanti sul segmento selezionato.
+
+La data e l’ora &quot;ultimo aggiornamento&quot; di un widget mostrano quando è stata acquisita l’ultima istantanea dei dati. La data e l’ora dell’istantanea sono indicate in UTC; non si trova nel fuso orario del singolo utente o dell’organizzazione IMS.
 
 ![](../images/segments/widget-timestamp.png)
 
@@ -59,33 +61,46 @@ Il dashboard dei segmenti è composto da widget, che sono metriche di sola lettu
 
 Experience Platform fornisce più widget che puoi utilizzare per visualizzare diverse metriche correlate al tuo segmento. Seleziona il nome di un widget qui sotto per ulteriori informazioni:
 
-* [[!UICONTROL Segment size]](#segment-size)
-* [[!UICONTROL Profiles added over time]](#profiles-added-over-time)
-* [[!UICONTROL Profiles by namespace]](#profiles-by-namespace)
+* [[!UICONTROL Dimensione del pubblico]](#audience-size)
+* [[!UICONTROL Tendenza delle dimensioni del pubblico]](#audience-size-trend)
+* [[!UICONTROL Sovrapposizione identità]](#identity-overlap)
+* [[!UICONTROL Profili per identità]](#profiles-by-identity)
 
-### [!UICONTROL Segment size] {#segment-size}
+### [!UICONTROL Dimensione del pubblico] {#audience-size}
 
-Il widget **[!UICONTROL Segment size]** visualizza il numero totale di profili uniti all’interno del segmento selezionato al momento dell’acquisizione dello snapshot. Questo numero è il risultato dell’applicazione dei criteri di unione dei segmenti ai dati del profilo per unire i frammenti di profilo in modo da formare un unico profilo per ogni individuo nel segmento.
+Il widget **[!UICONTROL Dimensione pubblico]** visualizza il numero totale di profili uniti all’interno del segmento selezionato al momento in cui è stata acquisita l’istantanea. Questo numero è il risultato dell’applicazione dei criteri di unione dei segmenti ai dati del profilo per unire i frammenti di profilo in modo da formare un unico profilo per ogni individuo nel segmento.
 
 Per ulteriori informazioni sui frammenti e i profili uniti, inizia leggendo la [Panoramica del profilo cliente in tempo reale](../../profile/home.md).
 
-![](../images/segments/segment-size.png)
+![](../images/segments/audience-size.png)
 
-### [!UICONTROL Profiles added over time] {#profiles-added-over-time}
+### [!UICONTROL Tendenza delle dimensioni del pubblico] {#audience-size-trend}
 
-Il widget **[!UICONTROL Profiles added over time]** fornisce informazioni sul numero totale di profili nel segmento acquisiti durante lo snapshot giornaliero, per gli ultimi 30 giorni. Questo widget mostra come la dimensione del segmento potrebbe essere cambiata in un periodo di 30 giorni, in quanto i nuovi profili si qualificano per o escono dal segmento.
+Il widget **[!UICONTROL Tendenza dimensione pubblico]** fornisce informazioni sul numero totale di profili nel segmento acquisiti durante lo snapshot giornaliero, per gli ultimi 30 giorni, 90 giorni o 12 mesi. Questo widget mostra come la dimensione del segmento potrebbe essere cambiata nel tempo, in quanto i nuovi profili si qualificano o escono dal segmento.
 
 Per ulteriori informazioni sulla valutazione dei segmenti e su come i profili si qualificano e se escono dai segmenti, consulta la [documentazione Servizio di segmentazione](../../segmentation/home.md).
 
-![](../images/segments/profiles-added-over-time.png)
+![](../images/segments/audience-size-trend.png)
 
-### [!UICONTROL Profiles by namespace] {#profiles-by-namespace}
+### [!UICONTROL Sovrapposizione identità] {#identity-overlap}
 
-Il widget **[!UICONTROL Profiles by namespace]** visualizza la suddivisione dei namespace in tutti i profili uniti nel segmento selezionato. Il numero totale di profili per namespace di identità ([!UICONTROL ID namespace] nel widget) può essere superiore al numero totale di profili nel segmento, perché a un profilo potrebbero essere associati più namespace. In altre parole, l’aggiunta dei valori mostrati per ogni namespace può avere un totale superiore ai profili totali nel segmento, perché se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente possono essere associati più namespace.
+Il widget **[!UICONTROL Sovrapposizione identità]** visualizza un diagramma di Venn, o un diagramma di set, che mostra la sovrapposizione di profili nel segmento contenente più identità.
 
-Per ulteriori informazioni sugli spazi dei nomi delle identità, visita la [documentazione del servizio Adobe Experience Platform Identity](../../identity-service/home.md).
+Dopo aver utilizzato i menu a discesa del widget per selezionare le identità da confrontare, i cerchi visualizzano la dimensione relativa di ogni identità, con il numero di profili contenenti entrambi i namespace rappresentati dalla dimensione della sovrapposizione tra i cerchi.
 
-![](../images/segments/profiles-by-namespace.png)
+Se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente saranno associate più identità, pertanto è probabile che la tua organizzazione abbia più profili contenenti frammenti da più di una identità.
+
+Per ulteriori informazioni sulle identità, visita la [documentazione del servizio Adobe Experience Platform Identity](../../identity-service/home.md).
+
+![](../images/segments/identity-overlap.png)
+
+### [!UICONTROL Profili per identità] {#profiles-by-identity}
+
+Il widget **[!UICONTROL Profili per identità]** visualizza la suddivisione delle identità in tutti i profili uniti nel segmento selezionato. Il numero totale di profili per identità può essere superiore al numero totale di profili nel segmento, perché a un profilo potrebbero essere associate più identità. In altre parole, l’aggiunta dei valori mostrati per ogni identità può avere un totale superiore alla dimensione totale del pubblico nel segmento, perché se un cliente interagisce con il tuo marchio su più di un canale, a quel singolo cliente possono essere associate più identità.
+
+Per ulteriori informazioni sulle identità, visita la [documentazione del servizio Adobe Experience Platform Identity](../../identity-service/home.md).
+
+![](../images/segments/profiles-by-identity.png)
 
 ## Passaggi successivi
 
