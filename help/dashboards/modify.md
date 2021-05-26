@@ -2,25 +2,19 @@
 keywords: Experience Platform;interfaccia utente;interfaccia utente;dashboard;dashboard;profili;segmenti;destinazioni;utilizzo licenza
 title: Modificare le dashboard di Platform nell’interfaccia utente
 description: 'Questa guida fornisce istruzioni dettagliate su come personalizzare la visualizzazione dei dati Adobe Experience Platform dell’organizzazione all’interno delle dashboard. '
-topic-legacy: guide
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 63f855d7dd3c3591da76a23ca8d673477378c1c3
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 2%
+source-wordcount: '466'
+ht-degree: 0%
 
 ---
 
-# (Beta) Modificare le dashboard {#modify-dashboards}
+# Modifica dashboard {#modify-dashboards}
 
->[!IMPORTANT]
->
->La funzionalità del dashboard è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
+Nell’interfaccia utente di Adobe Experience Platform è possibile visualizzare e interagire con i dati dell’organizzazione utilizzando più dashboard. I widget e le metriche predefiniti visualizzati nelle dashboard possono essere regolati a livello di singolo utente per visualizzare i dati preferiti, e i widget possono essere creati e condivisi tra gli utenti della stessa organizzazione.
 
-Nell’interfaccia utente di Adobe Experience Platform è possibile visualizzare e interagire con i dati dell’organizzazione utilizzando più dashboard. I widget e le metriche predefiniti visualizzati nelle dashboard possono essere regolati a livello di singolo utente per visualizzare i dati e i widget preferiti possono essere creati e condivisi tra gli utenti della stessa organizzazione.
-
-Questa guida fornisce istruzioni dettagliate su come personalizzare la visualizzazione dei dati del dashboard nei dashboard [!UICONTROL Profiles], [!UICONTROL Segments] e [!UICONTROL Destinations] nell’interfaccia utente di Platform.
+Questa guida fornisce istruzioni dettagliate su come personalizzare la visualizzazione dei dati del dashboard nei dashboard [!UICONTROL Profili], [!UICONTROL Segmenti] e [!UICONTROL Destinazioni] nell’interfaccia utente di Platform.
 
 >[!NOTE]
 >
@@ -28,19 +22,19 @@ Questa guida fornisce istruzioni dettagliate su come personalizzare la visualizz
 
 ## Introduzione
 
-Da qualsiasi dashboard (ad esempio, il dashboard [!UICONTROL Profiles]), è possibile selezionare **[!UICONTROL Modify dashboard]** per ridimensionare e riordinare i widget esistenti.
+Da qualsiasi dashboard (ad esempio, il dashboard [!UICONTROL Profili]), è possibile selezionare **[!UICONTROL Modifica dashboard]** per ridimensionare e riordinare i widget esistenti.
 
 ![](images/customization/modify-dashboard.png)
 
 ## Riordina widget
 
-Dopo aver scelto di modificare il dashboard, è possibile riordinare i widget selezionando il titolo del widget e trascinando e rilasciando i widget nell&#39;ordine desiderato. In questo esempio, il widget **[!UICONTROL Profiles by identity namespace]** viene spostato nella riga superiore e il widget [!UICONTROL Profile Count] viene ora visualizzato nella seconda riga.
+Dopo aver scelto di modificare il dashboard, è possibile riordinare i widget selezionando il titolo del widget e trascinando e rilasciando i widget nell&#39;ordine desiderato. In questo esempio, il widget **[!UICONTROL Tendenza del conteggio dei profili]** viene spostato nella riga superiore e il widget [!UICONTROL Conteggio profili] viene ora visualizzato nella seconda riga.
 
 ![](images/customization/move-widget.png)
 
 ## Ridimensiona widget
 
-Puoi anche ridimensionare un widget selezionando il simbolo dell&#39;angolo nell&#39;angolo in basso a destra del widget (`⌟`) e trascinandolo nella dimensione desiderata. In questo esempio, il widget **[!UICONTROL Profiles by identity namespace]** viene ridimensionato per riempire l&#39;intera riga superiore, spostando automaticamente gli altri widget nella seconda riga. L&#39;asse orizzontale si regola per fornire incrementi più dettagliati man mano che il widget si ingrandisce.
+Puoi anche ridimensionare un widget selezionando il simbolo dell&#39;angolo nell&#39;angolo in basso a destra del widget (`⌟`) e trascinandolo nella dimensione desiderata. In questo esempio, il widget **[!UICONTROL Profili per identità]** viene ridimensionato in modo da riempire l&#39;intera riga superiore, spostando automaticamente gli altri widget nella seconda riga. L&#39;asse orizzontale si regola per fornire incrementi più dettagliati man mano che il widget si ingrandisce.
 
 >[!NOTE]
 >
@@ -50,15 +44,17 @@ Puoi anche ridimensionare un widget selezionando il simbolo dell&#39;angolo nell
 
 ## Salvare gli aggiornamenti del dashboard
 
-Dopo aver spostato e ridimensionato i widget, seleziona **[!UICONTROL Save]** per salvare le modifiche e tornare alla vista dashboard principale. Se non desideri mantenere le modifiche, seleziona **[!UICONTROL Cancel]** per reimpostare il dashboard e tornare alla vista dashboard principale.
+Dopo aver spostato e ridimensionato i widget, seleziona **[!UICONTROL Salva]** per salvare le modifiche e tornare alla vista dashboard principale. Se non desideri mantenere le modifiche, seleziona **[!UICONTROL Annulla]** per reimpostare il dashboard e tornare alla vista dashboard principale.
 
 ![](images/customization/save-changes.png)
 
 ## Libreria widget
 
-Oltre a ridimensionare e riordinare i widget, nei dashboard [!UICONTROL Profiles] e [!UICONTROL Segments] è possibile selezionare altri widget per visualizzare o creare widget utilizzando **[!UICONTROL Widget library]**.
+Oltre a ridimensionare e riordinare i widget, la selezione di **[!UICONTROL Modifica dashboard]** in [!UICONTROL Profili], [!UICONTROL Segmenti] e di [!UICONTROL Destinazioni] consente di accedere alla **[!UICONTROL Libreria widget]** in cui è possibile trovare altri widget da visualizzare o creare widget per la tua organizzazione.
 
-Per istruzioni dettagliate su come accedere e utilizzare [!UICONTROL Widget library], consulta la [guida alla libreria di widget](widget-library.md) .
+Per istruzioni dettagliate su come accedere e utilizzare la [!UICONTROL Libreria widget], consulta la [guida alla libreria widget](widget-library.md).
+
+![](images/customization/widget-library.png)
 
 ## Passaggi successivi
 
