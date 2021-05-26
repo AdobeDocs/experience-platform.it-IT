@@ -5,10 +5,9 @@ title: Funzioni di mappatura della preparazione dei dati
 topic-legacy: overview
 description: Questo documento introduce le funzioni di mappatura utilizzate con Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8193045079bbd8a61c4bc2aee0bf9412e4e2ae31
 workflow-type: tm+mt
-source-wordcount: '3797'
+source-wordcount: '3934'
 ht-degree: 3%
 
 ---
@@ -73,7 +72,7 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 
 {style=&quot;table-layout:auto&quot;}
 
-### Funzioni di hash {#hashing}
+### Funzioni di hashing {#hashing}
 
 >[!NOTE]
 >
@@ -144,6 +143,8 @@ Nelle tabelle seguenti sono elencate tutte le funzioni di mappatura supportate, 
 | str_to_object | Crea un oggetto dalla stringa di input. | <ul><li>STRINGA: **Obbligatorio** Stringa che viene analizzata per creare un oggetto.</li><li>VALUE_DELIMITER: *Facoltativo* Il delimitatore che separa un campo dal valore. Il delimitatore predefinito è `:`.</li><li>FIELD_DELIMITER: *Facoltativo* Il delimitatore che separa le coppie di valori di campo. Il delimitatore predefinito è `,`.</li></ul> | str_to_object &#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object(&quot;firstName - John | lastName - | telefono - 123 456 7890&quot;, &quot;-&quot;, &quot; | &quot;) | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
 | is_set | Controlla se l&#39;oggetto esiste all&#39;interno dei dati di origine. | <ul><li>INGRESSO: **Obbligatorio** Il percorso da controllare se esiste all&#39;interno dei dati di origine.</li></ul> | is_set(INPUT) | is_set &#x200B;(&quot;evar.evar.field1&quot;) | true |
 | annullare | Imposta il valore dell&#39;attributo su `null`. Da utilizzare quando non si desidera copiare il campo nello schema di destinazione. |  | nullify() | nullify() | `null` |
+| get_keys | Analizza le coppie chiave/valore e restituisce tutte le chiavi. | <ul><li>OGGETTO: **Obbligatorio** L&#39;oggetto da cui verranno estratti i tasti.</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;): &quot;Orgoglio e pregiudizio&quot;, &quot;libro2&quot;: &quot;1984&quot;}) | `["book1", "book2"]` |
+| get_values | Analizza le coppie chiave/valore e restituisce il valore della stringa, in base alla chiave specificata. | <ul><li>STRINGA: **Obbligatorio** Stringa da analizzare.</li><li>CHIAVE: **Obbligatorio** Chiave per la quale estrarre il valore.</li><li>VALUE_DELIMITER: **Obbligatorio** Il delimitatore che separa il campo e il valore. Se viene fornito un valore `null` o una stringa vuota, questo valore è `:`.</li><li>FIELD_DELIMITER: *Facoltativo* Il delimitatore che separa le coppie di campi e valori. Se viene fornito un valore `null` o una stringa vuota, questo valore è `,`.</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\&quot;firstName - John , lastName - Cena , telefono - 555 420 8692\&quot;, \&quot;firstName\&quot;, \&quot;-\&quot;, \&quot;,\&quot;) | John |
 
 {style=&quot;table-layout:auto&quot;}
 
