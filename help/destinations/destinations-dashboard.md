@@ -2,22 +2,16 @@
 keywords: Experience Platform;interfaccia utente;interfaccia utente;personalizzazione;dashboard utilizzo licenza;dashboard;utilizzo licenza;adesione;consumo
 title: Dashboard delle destinazioni
 description: 'L’interfaccia utente di Adobe Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sulle destinazioni attive dell’organizzazione. '
-topic-legacy: guide
 type: Documentation
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 998332007465c1f8457b5d8cf0e153d513505d39
 workflow-type: tm+mt
-source-wordcount: '143'
-ht-degree: 6%
+source-wordcount: '121'
+ht-degree: 0%
 
 ---
 
 
-# (Beta) [!UICONTROL Destinations] dashboard {#destinations-dashboard}
-
->[!IMPORTANT]
->
->La funzionalità del dashboard è attualmente in versione beta e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
+# [!UICONTROL Dashboard delle destinazioni ]   {#destinations-dashboard}
 
 L’interfaccia utente di Adobe Experience Platform fornisce un dashboard tramite il quale è possibile visualizzare informazioni importanti sulle destinazioni attive dell’organizzazione, acquisite durante un’istantanea giornaliera.
 
