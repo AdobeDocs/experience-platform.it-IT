@@ -4,10 +4,10 @@ title: Guida all’interfaccia utente del profilo cliente in tempo reale
 topic-legacy: guide
 description: Profilo cliente in tempo reale crea una visualizzazione olistica di ciascuno dei tuoi singoli clienti, combinando dati provenienti da più canali tra cui online, offline, CRM e dati di terze parti. Questo documento funge da guida per l’interazione con Profilo cliente in tempo reale nell’interfaccia utente di Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 2696dab922d9c1992b61ffefe50a4e3155793282
+source-git-commit: db094aac82b1d0a6671c213f3e98824f828771ab
 workflow-type: tm+mt
-source-wordcount: '1327'
-ht-degree: 1%
+source-wordcount: '1303'
+ht-degree: 0%
 
 ---
 
@@ -29,11 +29,7 @@ Nell’interfaccia utente di Experience Platform, seleziona **[!UICONTROL Profil
 
 ![](../images/user-guide/profiles-overview.png)
 
-### Dashboard del profilo (alfa)
-
->[!IMPORTANT]
->
->La funzionalità del dashboard è attualmente in alfa e non è disponibile per tutti gli utenti. La documentazione e le funzionalità sono soggette a modifiche.
+### Dashboard dei profili
 
 Per alcuni utenti, la selezione di **[!UICONTROL Profiles]** nel menu di navigazione a sinistra e l&#39;apertura della scheda **[!UICONTROL Panoramica]** fornisce una dashboard che descrive le metriche chiave correlate ai dati del profilo.
 
