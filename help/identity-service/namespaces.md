@@ -5,10 +5,9 @@ title: Panoramica dello spazio dei nomi identità
 topic-legacy: overview
 description: Gli spazi dei nomi di identità sono un componente del servizio Identity che funge da indicatori del contesto a cui si riferisce un’identità. Ad esempio, distinguono un valore di "name@email.com" come indirizzo e-mail o "443522" come ID CRM numerico.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-translation-type: tm+mt
-source-git-commit: ca092af61ac26fcfb6839b7ba0887178c899f89f
+source-git-commit: c2db929a96883607ea99f08bffc92a5a9bafd01a
 workflow-type: tm+mt
-source-wordcount: '1526'
+source-wordcount: '1635'
 ht-degree: 1%
 
 ---
@@ -74,35 +73,41 @@ I seguenti namespace standard vengono forniti per l’utilizzo da parte di tutte
 | TNTID | Spazio dei nomi che rappresenta Adobe Target. Per ulteriori informazioni, consulta il seguente documento su [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) . |
 | Windows AID | Spazio dei nomi che rappresenta un ID pubblicitario di Windows. Per ulteriori informazioni, consulta il seguente documento su [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) . |
 
-Per visualizzare i namespace standard nell’interfaccia utente, seleziona **[!UICONTROL Identities]** nel menu di navigazione a sinistra, quindi seleziona la scheda **[!UICONTROL Browse]** per visualizzare un elenco di namespace di identità standard accessibili all’organizzazione. È possibile ordinare alfabeticamente gli spazi dei nomi in base ai rispettivi **[!UICONTROL Display name]**, **[!UICONTROL Identity symbol]** o **[!UICONTROL Owner]**. In alternativa, è possibile ordinare i namespace in ordine cronologico in base alla data di aggiornamento più recente.
+Per visualizzare i namespace delle identità nell&#39;interfaccia utente, seleziona **[!UICONTROL Identità]** nel menu di navigazione a sinistra, quindi seleziona **[!UICONTROL Sfoglia]**.
 
-Seleziona uno spazio dei nomi per visualizzare informazioni più specifiche nella barra a destra.
+![navigare](./images/browse.png)
 
->[!NOTE]
->
->Platform fornisce inoltre spazi dei nomi a scopo di integrazione. Questi spazi dei nomi sono nascosti per impostazione predefinita in quanto vengono utilizzati per connettersi ad altri sistemi e non per unire le identità. Per visualizzare i namespace dell’integrazione, seleziona **[!UICONTROL View integration identities]**.
+Nell’interfaccia principale della pagina viene visualizzato un elenco di spazi dei nomi delle identità, con informazioni sui nomi, i simboli di identità, la data dell’ultimo aggiornamento e se si tratta di uno spazio dei nomi standard o personalizzato. La barra a destra contiene informazioni su [!UICONTROL Identità univoche] e [!UICONTROL Forza grafico identità]. [!UICONTROL Le ] identità univoche fanno riferimento al numero di identità esistenti nella particolare sandbox che stai utilizzando, mentre la forza del grafico di  [!UICONTROL identità ] mostra informazioni sul numero di ID di cookie e non cookie all’interno della sandbox.
 
-![](./images/browse-namespaces.png)
+![identità](./images/identities.png)
+
+Platform fornisce inoltre spazi dei nomi a scopo di integrazione. Questi spazi dei nomi sono nascosti per impostazione predefinita in quanto vengono utilizzati per connettersi ad altri sistemi e non per unire le identità. Per visualizzare i namespace dell’integrazione, seleziona **[!UICONTROL Visualizza identità integrazione]**.
+
+![view-integration-identity](./images/view-integration-identities.png)
+
+Seleziona uno spazio dei nomi di identità dall’elenco per visualizzare le informazioni su uno specifico spazio dei nomi. Quando si seleziona uno spazio dei nomi di identità, la visualizzazione nella barra a destra viene aggiornata per mostrare i metadati relativi allo spazio dei nomi di identità selezionato, compreso il numero di identità acquisite e il numero di record non riusciti e saltati.
+
+![select-namespace](./images/select-namespace.png)
 
 ## Gestione dei namespace personalizzati {#manage-namespaces}
 
 A seconda dei dati organizzativi e dei casi di utilizzo, è possibile che siano necessari spazi dei nomi personalizzati. Gli spazi dei nomi personalizzati possono essere creati utilizzando l’ API [[!DNL Identity Service]](./api/create-custom-namespace.md) o tramite l’interfaccia utente.
 
-Per creare uno spazio dei nomi personalizzato utilizzando l’interfaccia utente, passa all’area di lavoro **[!UICONTROL Identities]**, seleziona **[!UICONTROL Browse]**, quindi seleziona **[!UICONTROL Create identity namespace]**.
+Per creare uno spazio dei nomi personalizzato utilizzando l&#39;interfaccia utente, passa all&#39;area di lavoro **[!UICONTROL Identità]**, seleziona **[!UICONTROL Sfoglia]**, quindi seleziona **[!UICONTROL Crea spazio dei nomi delle identità]**.
 
-![](./images/create.png)
+![select-create](./images/select-create.png)
 
-Viene visualizzata la finestra di dialogo **[!UICONTROL Create identity namespace]**. Specifica un **[!UICONTROL Display name]** e **[!UICONTROL Identity symbol]** univoci, quindi seleziona il tipo di identità da creare. Puoi anche aggiungere una descrizione facoltativa per ulteriori informazioni sullo spazio dei nomi. Tutti i tipi di identità eccetto **Identificatore non personale** seguono lo stesso comportamento di unione. Se durante la creazione di uno spazio dei nomi selezioni **Identificatore non personale** come tipo di identità, la unione non viene eseguita. Per informazioni specifiche su ciascun tipo di identità, consulta la tabella relativa ai [tipi di identità](#identity-types).
+Viene visualizzata la finestra di dialogo **[!UICONTROL Crea namespace identità]** . Fornisci un **[!UICONTROL Nome visualizzato univoco]** e **[!UICONTROL Simbolo di identità]**, quindi seleziona il tipo di identità da creare. Puoi anche aggiungere una descrizione facoltativa per aggiungere ulteriori informazioni sullo spazio dei nomi. Tutti i tipi di identità eccetto **Identificatore non personale** seguono lo stesso comportamento di unione. Se durante la creazione di uno spazio dei nomi selezioni **Identificatore non personale** come tipo di identità, la unione non viene eseguita. Per informazioni specifiche su ciascun tipo di identità, consulta la tabella relativa ai [tipi di identità](#identity-types).
 
-Al termine, seleziona **[!UICONTROL Create]**.
+Al termine, seleziona **[!UICONTROL Crea]**.
 
 >[!IMPORTANT]
 >
 >I namespace definiti dall’utente sono privati dell’organizzazione e richiedono un simbolo di identità univoco per poter essere creati correttamente.
 
-![](./images/create-namespace.png)
+![create-identity-namespace](./images/create-identity-namespace.png)
 
-Analogamente agli spazi dei nomi standard, è possibile selezionare uno spazio dei nomi personalizzato dalla scheda **[!UICONTROL Browse]** per visualizzarne i dettagli. Tuttavia, con uno spazio dei nomi personalizzato è anche possibile modificarne il nome visualizzato e la descrizione dall’area dei dettagli.
+Analogamente agli spazi dei nomi standard, è possibile selezionare uno spazio dei nomi personalizzato dalla scheda **[!UICONTROL Sfoglia]** per visualizzarne i dettagli. Tuttavia, con uno spazio dei nomi personalizzato è anche possibile modificarne il nome visualizzato e la descrizione dall’area dei dettagli.
 
 >[!NOTE]
 >
