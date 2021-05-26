@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Esplorare ed elaborare set di dati grezzi che alimentano dashboard di Experience Platform
 type: Documentation
 description: Scopri come utilizzare Query Service per esplorare ed elaborare set di dati non elaborati che alimentano dashboard di profili, segmenti e destinazioni in Experience Platform.
-source-git-commit: 743367431144e9714a967b0340c755bf2120559c
+source-git-commit: 1facf7079213918c2ef966b704319827eaa4a53d
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '614'
 ht-degree: 1%
 
 ---
@@ -29,27 +29,27 @@ Puoi utilizzare Query Service per eseguire query sui set di dati non elaborati p
 
 Per ogni criterio di unione attivo nel Profilo cliente in tempo reale, è disponibile un set di dati di attributi di profilo nel lago di dati.
 
-La convenzione di denominazione di questo set di dati è **Attributo profilo** seguito da un valore alfanumerico. Ad esempio: `Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
+La convenzione di denominazione di questi set di dati è **Attributo profilo** seguita da un valore alfanumerico. Ad esempio: `Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
 
-Per comprendere lo schema completo del set di dati, puoi visualizzare in anteprima ed esplorare lo schema utilizzando il visualizzatore di set di dati nell’interfaccia utente di Experience Platform.
+Per comprendere lo schema completo di ciascun set di dati, puoi visualizzare in anteprima ed esplorare i set di dati utilizzando il visualizzatore di set di dati nell’interfaccia utente di Experience Platform.
 
 ### Set di dati dei metadati del segmento
 
-Nel data lake è disponibile un set di dati per i metadati del segmento per ciascuno dei segmenti della tua organizzazione.
+È disponibile un set di dati per metadati del segmento nel lago di dati contenente metadati per ciascuno dei segmenti della tua organizzazione.
 
 La convenzione di denominazione di questo set di dati è **Definizione del segmento di profilo** seguita da un valore alfanumerico. Ad esempio: `Profile Segment Definition 6591ba8f-1422-499d-822a-543b2f7613a3`
 
-L’immagine seguente mostra lo schema del set di dati dei metadati del segmento.
+Per comprendere lo schema completo del set di dati, puoi visualizzare in anteprima ed esplorare lo schema utilizzando il visualizzatore di set di dati nell’interfaccia utente di Experience Platform.
 
 ![](images/query/segment-metadata.png)
 
 ### Set di dati metadati di destinazione
 
-I metadati per le destinazioni attivate sono disponibili come set di dati non elaborati nel data lake.
+I metadati per tutte le destinazioni attivate della tua organizzazione sono disponibili come set di dati non elaborati nel lago di dati.
 
 La convenzione di denominazione di questo set di dati è **DIM_Destination**.
 
-L’immagine seguente mostra lo schema del set di dati dei metadati di destinazione.
+Per comprendere lo schema completo del set di dati, puoi visualizzare in anteprima ed esplorare lo schema utilizzando il visualizzatore di set di dati nell’interfaccia utente di Experience Platform.
 
 ![](images/query/destinations-metadata.png)
 
@@ -102,8 +102,6 @@ Select
       group by
       segment_id
 ```
-
-### Numero di segmenti attivati per destinazione per tutte le destinazioni
 
 ## Passaggi successivi
 
