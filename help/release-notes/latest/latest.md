@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 8508d213834bb21951df4fe118732b60465b6d73
+source-git-commit: d78f2d0fc8d1117614b0d8add0cada21619d8357
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '978'
 ht-degree: 4%
 
 ---
@@ -27,6 +27,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 - [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM)]](#xdm)
 - [Profilo cliente in tempo reale](#profile)
+- [Fonti](#sources)
 
 ## Dashboard {#dashboards}
 
@@ -82,3 +83,15 @@ Adobe Experience Platform ti consente di fornire ai clienti esperienze coordinat
 | Rapporto di sovrapposizione set di dati | Il rapporto di sovrapposizione dei set di dati fornisce visibilità nella composizione dell’archivio profili esponendo i set di dati che contribuiscono maggiormente al pubblico indirizzabile. Oltre a fornire informazioni approfondite sui dati di Profilo, questo rapporto consente agli utenti di intraprendere azioni per ottimizzare l’utilizzo della licenza, ad esempio per impostare un limite di vita di determinati dati. Per ulteriori informazioni, segui l’esercitazione su [generazione del rapporto di sovrapposizione dei set di dati](../../profile/tutorials/dataset-overlap-report.md). |
 
 Per ulteriori informazioni sul Profilo del cliente in tempo reale, comprese esercitazioni e best practice per l’utilizzo dei dati [!DNL Profile], si prega di iniziare leggendo la [Panoramica del profilo del cliente in tempo reale](../../profile/home.md).
+
+## [!DNL Sources] {#sources}
+
+Adobe Experience Platform può acquisire dati da sorgenti esterne e allo stesso tempo strutturare, etichettare e migliorare tali dati utilizzando i servizi Platform. È possibile acquisire dati da diverse sorgenti, come applicazioni di Adobe, archiviazione basata su cloud, software di terze parti e il sistema CRM in uso.
+
+L’Experience Platform fornisce un’API RESTful e un’interfaccia utente interattiva che consente di impostare facilmente le connessioni sorgente per vari provider di dati. Queste connessioni di origine ti consentono di autenticare e connettersi a sistemi di archiviazione esterni e servizi CRM, impostare i tempi di esecuzione dell’acquisizione e gestire il throughput di inserimento dei dati.
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Supporto dell’interfaccia utente per l’acquisizione di file compressi | Ora puoi visualizzare in anteprima e acquisire file JSON compressi o delimitati utilizzando origini di archiviazione cloud nell’interfaccia utente. Per ulteriori informazioni, consulta l’esercitazione su [configurazione di un flusso di dati per una connessione sorgente di archiviazione cloud nell’interfaccia utente](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
+
+Per ulteriori informazioni sulle origini, consulta la [panoramica origini](../../sources/home.md).
