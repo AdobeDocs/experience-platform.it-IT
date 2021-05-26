@@ -6,11 +6,10 @@ title: Monitorare i flussi di dati per le destinazioni nell’interfaccia utente
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1d40ef02bd0bdb48bb999c3308f78824f75e3459
 workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 1%
+source-wordcount: '1117'
+ht-degree: 0%
 
 ---
 
@@ -20,14 +19,14 @@ Le destinazioni ti consentono di attivare i tuoi dati da Adobe Experience Platfo
 
 ## Introduzione
 
-Questa esercitazione richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
+Questa guida richiede una buona comprensione dei seguenti componenti di Adobe Experience Platform:
 
 - [Destinazioni](../../destinations/home.md): Le destinazioni sono integrazioni predefinite con applicazioni comunemente utilizzate che consentono l’attivazione senza soluzione di continuità dei dati da Platform per campagne di marketing cross-channel, campagne e-mail, pubblicità mirata e molti altri casi d’uso.
 - [Sandbox](../../sandboxes/home.md):  [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola  [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 
 ## Monitorare i flussi di dati
 
-Nell’area di lavoro **[!UICONTROL Destinations]** all’interno dell’interfaccia utente di Platform, passa alla scheda **[!UICONTROL Browse]** e seleziona il nome di una destinazione da visualizzare.
+Nell’area di lavoro **[!UICONTROL Destinazioni]** nell’interfaccia utente di Platform, passa alla scheda **[!UICONTROL Sfoglia]** e seleziona il nome di una destinazione da visualizzare.
 
 ![](../assets/ui/monitor-destinations/select-destination.png)
 
@@ -42,19 +41,79 @@ Per ulteriori informazioni sugli stati, consulta la tabella seguente:
 | Elaborazione | Lo stato `Processing` indica che un flusso di dati non è ancora attivo. Questo stato viene spesso rilevato immediatamente dopo la creazione di un nuovo flusso di dati. |
 | Errore | Lo stato `Error` indica che il processo di attivazione di un flusso di dati è stato interrotto. |
 
-## [!UICONTROL Dataflow runs]
+## Il flusso di dati viene eseguito per le destinazioni di streaming
 
-La scheda [!UICONTROL Dataflow runs] fornisce dati metrici sul flusso di dati da eseguire su destinazioni batch. Viene visualizzato un elenco di singole esecuzioni e delle relative metriche specifiche, insieme ai seguenti totali per i record di profilo:
+Per le destinazioni di streaming, la scheda [!UICONTROL Flusso di dati esegue] fornisce un aggiornamento orario per i dati delle metriche nel flusso di dati in esecuzione. Le statistiche più importanti etichettate sono quelle sulle identità.
 
-- **[!UICONTROL Profile records activated]**: Numero totale di record di profilo creati o aggiornati per l’attivazione.
-- **[!UICONTROL Profile records skipped]**: Numero totale di record di profilo saltati per l’attivazione in base alle uscite di profilo o agli attributi mancanti.
+Le identità rappresentano i diversi facet di un profilo. Ad esempio, se un profilo contiene sia un numero di telefono che un indirizzo e-mail, questo avrà due identità.
 
-![](../assets/ui/monitor-destinations/dataflow-runs.png)
+Viene visualizzato un elenco di singole esecuzioni e le relative metriche specifiche, insieme ai seguenti totali per le identità:
+
+- **[!UICONTROL Identità attivate]**: Numero totale di identità di profilo create o aggiornate per l’attivazione.
+- **[!UICONTROL Identità escluse]**: Numero totale di identità di profilo saltate per l’attivazione in base agli attributi mancanti e alla violazione del consenso.
+- **[!UICONTROL Identità non riuscite]**: Numero totale di identità di profilo non attivate nella destinazione a causa di errori.
+
+![](../assets/ui/monitor-destinations/dataflow-runs-stream.png)
+
+Ogni singola esecuzione di un flusso di dati mostra i seguenti dettagli:
+
+- **[!UICONTROL Inizio]** esecuzione flusso di dati: Data di inizio dell&#39;esecuzione del flusso di dati.
+- **[!UICONTROL Tempo]** di elaborazione: Il tempo necessario all’elaborazione del flusso di dati.
+- **[!UICONTROL Profili ricevuti]**: Numero totale di profili ricevuti nel flusso di dati.
+- **[!UICONTROL Identità attivate]**: Numero totale di identità di profilo attivate correttamente nella destinazione selezionata.
+- **[!UICONTROL Identità escluse]**: Il numero totale di identità di profilo escluse per l’attivazione in base agli attributi mancanti e alla violazione del consenso.
+- **[!UICONTROL Identità]** non riusciteIl numero totale di identità di profilo non attivate nella destinazione a causa di errori.
+- **[!UICONTROL Tasso]** di attivazione: Percentuale di identità ricevute che sono state attivate o saltate correttamente. La formula seguente illustra come viene calcolato questo valore:
+   ![](../assets/ui/monitor-destinations/activation-rate-formula.png)
+- **[!UICONTROL Stato]**: Rappresenta lo stato in cui si trova il flusso di dati: Completato   o  [!UICONTROL Elaborazione].  Completato significa che tutte le identità per l’esecuzione del flusso di dati corrispondente sono state acquisite entro un’ora.  L’elaborazione indica che l’esecuzione del flusso di dati non è ancora stata completata.
+
+Per visualizzare i dettagli di una particolare esecuzione di un flusso di dati, selezionare l’ora di inizio dell’esecuzione dall’elenco.
+
+La pagina dei dettagli di un’esecuzione del flusso di dati contiene informazioni aggiuntive, come il numero di profili ricevuti, il numero di identità attivate, il numero di identità non riuscite e il numero di identità escluse.
+
+![](../assets/ui/monitor-destinations/dataflow-details-stream.png)
+
+Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con errore e identità escluse. Vengono visualizzate informazioni sia per le identità non riuscite che per quelle escluse, incluso il codice di errore, il conteggio delle identità e la descrizione. Per impostazione predefinita, nell’elenco sono visualizzate le identità non riuscite. Per mostrare le identità saltate, seleziona l’opzione **[!UICONTROL Identità escluse]** .
+
+![](../assets/ui/monitor-destinations/dataflow-records-stream.png)
+
+## Esecuzione del flusso di dati per le destinazioni batch
+
+Per le destinazioni batch, la scheda [!UICONTROL Flusso di dati esegue] fornisce i dati della metrica per le esecuzioni del flusso di dati. Viene visualizzato un elenco di singole esecuzioni e le relative metriche specifiche, insieme ai seguenti totali per le identità:
+
+- **[!UICONTROL Identità attivate]**: Numero di singole identità di profilo attivate correttamente nella destinazione selezionata.
+- **[!UICONTROL Identità escluse]**: Il conteggio delle singole identità di profilo escluse per l’attivazione per la destinazione selezionata, in base agli attributi mancanti e alla violazione del consenso.
+
+![](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
+
+Ogni singola esecuzione di un flusso di dati mostra i seguenti dettagli:
+
+- **[!UICONTROL Inizio]** esecuzione flusso di dati: Data di inizio dell&#39;esecuzione del flusso di dati.
+- **[!UICONTROL Tempo]** di elaborazione: Il tempo necessario all’elaborazione dell’esecuzione del flusso di dati.
+- **[!UICONTROL Profili ricevuti]**: Numero totale di profili ricevuti nel flusso di dati. Questo valore viene aggiornato ogni 60 minuti.
+- **[!UICONTROL Identità attivate]**: Numero totale di identità di profilo attivate correttamente nella destinazione selezionata.
+- **[!UICONTROL Identità escluse]**: Il numero totale di identità di profilo escluse per l’attivazione in base agli attributi mancanti e alla violazione del consenso.
+- **[!UICONTROL Stato]**: Rappresenta lo stato in cui si trova il flusso di dati. Può essere uno dei tre stati seguenti: [!UICONTROL Riuscito], [!UICONTROL Non riuscito] e [!UICONTROL Elaborazione].  Il flusso di dati è attivo e acquisisce i dati in base alla pianificazione fornita.  Non riuscito significa che l’attivazione dei dati è stata sospesa a causa di errori.  L’elaborazione indica che il flusso di dati non è ancora attivo e viene generalmente rilevato quando viene creato un nuovo flusso di dati.
+
+Per visualizzare i dettagli di un’esecuzione di un flusso di dati specifico, selezionare l’ora di inizio dell’esecuzione dall’elenco.
 
 >[!NOTE]
 >
 >Le esecuzioni dei flussi di dati vengono generate in base alla frequenza di pianificazione del flusso di dati di destinazione. Viene eseguita un&#39;esecuzione separata del flusso di dati per ogni criterio di unione applicato a un segmento.
 
-Per visualizzare i dettagli di una particolare esecuzione di un flusso di dati, selezionare l’ora di inizio dell’esecuzione dall’elenco. La pagina dei dettagli di un&#39;esecuzione del flusso di dati contiene informazioni aggiuntive, come la dimensione dei dati elaborati e un elenco degli eventuali errori che si sono verificati con i dettagli relativi alla diagnostica degli errori.
+La pagina dei dettagli di un flusso di dati, oltre ai dettagli mostrati nell’elenco dei flussi di dati, visualizza informazioni più specifiche sul flusso di dati:
 
-![](../assets/ui/monitor-destinations/dataflow.png)
+- **[!UICONTROL Dimensione dei dati]**: Dimensione del flusso di dati che viene acquisito.
+- **[!UICONTROL File]** totali: Numero totale di file acquisiti nel flusso di dati.
+- **[!UICONTROL Ultimo aggiornamento]**: L’ora dell’ultimo aggiornamento del flusso di dati.
+
+![](../assets/ui/monitor-destinations/dataflow-batch.png)
+
+Nella pagina dei dettagli viene inoltre visualizzato un elenco di identità con errore e identità escluse. Vengono visualizzate le informazioni sia per le identità non riuscite che per quelle escluse, compreso il codice di errore e la descrizione. Per impostazione predefinita, nell’elenco sono visualizzate le identità non riuscite. Per mostrare le identità escluse, seleziona l’opzione **[!UICONTROL Identità escluse]** .
+
+![](../assets/ui/monitor-destinations/dataflow-records-batch.png)
+
+
+## Passaggi successivi
+
+Seguendo questa guida, ora sai come monitorare i flussi di dati sia per le destinazioni batch che per quelle in streaming, comprese tutte le informazioni rilevanti quali il tempo di elaborazione, il tasso di attivazione e lo stato. Per ulteriori informazioni sui flussi di dati in Platform, consulta la [panoramica dei flussi di dati](../home.md). Per ulteriori informazioni sulle destinazioni, consulta la [panoramica delle destinazioni](../../destinations/home.md).
