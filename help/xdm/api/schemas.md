@@ -5,10 +5,9 @@ title: Endpoint API per gli schemi
 description: L’endpoint /schemas nell’API del Registro di sistema dello schema ti consente di gestire programmaticamente gli schemi XDM all’interno dell’applicazione di esperienza.
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1431'
+source-wordcount: '1458'
 ht-degree: 2%
 
 ---
@@ -40,6 +39,8 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | Il contenitore che ospita gli schemi da recuperare: `global` per schemi creati da Adobi o `tenant` per schemi di proprietà della tua organizzazione. |
 | `{QUERY_PARAMS}` | Parametri di query opzionali per filtrare i risultati in base a. Per un elenco dei parametri disponibili, vedere il [documento dell&#39;appendice](./appendix.md#query). |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Richiesta**
 
 La richiesta seguente recupera un elenco di schemi dal contenitore `tenant` utilizzando un parametro di query `orderby` per ordinare i risultati in base al relativo attributo `title`.
@@ -60,6 +61,8 @@ Il formato della risposta dipende dall’intestazione `Accept` inviata nella ric
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Restituisce un breve riepilogo di ciascuna risorsa. Intestazione consigliata per l’elenco delle risorse. (Limite: 300) |
 | `application/vnd.adobe.xed+json` | Restituisce lo schema JSON completo per ogni risorsa, con i valori originali `$ref` e `allOf` inclusi. (Limite: 300) |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
@@ -110,6 +113,8 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 | `{CONTAINER_ID}` | Il contenitore che ospita lo schema da recuperare: `global` per uno schema creato da un Adobe o `tenant` per uno schema di proprietà dell&#39;organizzazione. |
 | `{SCHEMA_ID}` | Il `meta:altId` o il codice URL `$id` dello schema da cercare. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Richiesta**
 
 La richiesta seguente recupera uno schema specificato dal relativo valore `meta:altId` nel percorso.
@@ -133,6 +138,8 @@ Il formato della risposta dipende dall’intestazione `Accept` inviata nella ric
 | `application/vnd.adobe.xed-notext+json; version=1` | Non elaborato con `$ref` e `allOf`, senza titoli o descrizioni. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` e  `allOf` risolti, senza titoli o descrizioni. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` e  `allOf` risolti, descrittori inclusi. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
@@ -229,6 +236,8 @@ curl -X POST \
 | --- | --- |
 | `allOf` | Matrice di oggetti, con ogni oggetto che fa riferimento a una classe o a un gruppo di campi i cui campi vengono implementati dallo schema. Ogni oggetto contiene una singola proprietà (`$ref`) il cui valore rappresenta `$id` della classe o del gruppo di campi che verrà implementato dal nuovo schema. È necessario specificare una classe con zero o più gruppi di campi aggiuntivi. Nell&#39;esempio precedente, l&#39;oggetto singolo nell&#39;array `allOf` è la classe dello schema. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Risposta**
 
 Una risposta corretta restituisce lo stato HTTP 201 (Creato) e un payload contenente i dettagli dello schema appena creato, inclusi `$id`, `meta:altId` e `version`. Questi valori sono di sola lettura e sono assegnati da [!DNL Schema Registry].
@@ -287,6 +296,8 @@ PUT /tenant/schemas/{SCHEMA_ID}
 | Parametro | Descrizione |
 | --- | --- |
 | `{SCHEMA_ID}` | La `meta:altId` o la codifica URL `$id` dello schema che si desidera riscrivere. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
@@ -369,6 +380,8 @@ PATCH /tenant/schema/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | URI con codifica URL `$id` o `meta:altId` dello schema da aggiornare. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Richiesta**
 
 La richiesta di esempio seguente aggiunge un nuovo gruppo di campi a uno schema aggiungendo il valore `$id` del gruppo di campi sia agli array `meta:extends` che `allOf`.
@@ -440,7 +453,7 @@ La risposta indica che entrambe le operazioni sono state eseguite correttamente.
 }
 ```
 
-## Abilita uno schema da utilizzare nel profilo cliente in tempo reale {#union}
+## Abilitare uno schema da utilizzare nel profilo cliente in tempo reale {#union}
 
 Affinché uno schema possa partecipare a [Profilo cliente in tempo reale](../../profile/home.md), è necessario aggiungere un tag `union` all&#39;array dello schema `meta:immutableTags`. Puoi eseguire questa operazione effettuando una richiesta PATCH per lo schema in questione.
 
@@ -457,6 +470,8 @@ PATCH /tenant/schema/{SCHEMA_ID}
 | Parametro | Descrizione |
 | --- | --- |
 | `{SCHEMA_ID}` | URI con codifica URL `$id` o `meta:altId` dello schema da abilitare. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
@@ -538,6 +553,8 @@ DELETE /tenant/schemas/{SCHEMA_ID}
 | Parametro | Descrizione |
 | --- | --- |
 | `{SCHEMA_ID}` | URI con codifica URL `$id` o `meta:altId` dello schema da eliminare. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
