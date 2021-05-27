@@ -5,10 +5,9 @@ title: Endpoint API per le classi
 description: L’endpoint /classes nell’API del Registro di sistema dello schema consente di gestire in modo programmatico le classi XDM all’interno dell’applicazione di esperienza.
 topic-legacy: developer guide
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
-translation-type: tm+mt
-source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1505'
+source-wordcount: '1536'
 ht-degree: 1%
 
 ---
@@ -18,7 +17,7 @@ ht-degree: 1%
 Tutti gli schemi Experience Data Model (XDM) devono essere basati su una classe . Una classe determina la struttura di base delle proprietà comuni che devono contenere tutti gli schemi basati su tale classe, nonché i gruppi di campi dello schema idonei all&#39;utilizzo in tali schemi. Inoltre, la classe di uno schema determina gli aspetti comportamentali dei dati contenuti in uno schema, di cui esistono due tipi:
 
 * **[!UICONTROL Record]**: Fornisce informazioni sugli attributi di un oggetto. Un soggetto potrebbe essere un&#39;organizzazione o un individuo.
-* **[!UICONTROL Time-series]**: Fornisce un&#39;istantanea del sistema al momento in cui un&#39;azione è stata eseguita direttamente o indirettamente da un soggetto del record.
+* **[!UICONTROL Serie]** temporali: Fornisce un&#39;istantanea del sistema al momento in cui un&#39;azione è stata eseguita direttamente o indirettamente da un soggetto del record.
 
 >[!NOTE]
 >
@@ -49,6 +48,8 @@ GET /{CONTAINER_ID}/classes?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | Il contenitore da cui si desidera recuperare le classi: `global` per le classi create da un Adobe o `tenant` per le classi di proprietà dell&#39;organizzazione. |
 | `{QUERY_PARAMS}` | Parametri di query opzionali per filtrare i risultati in base a. Per un elenco dei parametri disponibili, vedere il [documento dell&#39;appendice](./appendix.md#query). |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Richiesta**
 
 La richiesta seguente recupera un elenco di classi dal contenitore `tenant` utilizzando un parametro di query `orderby` per ordinare le classi in base al relativo attributo `title`.
@@ -69,6 +70,8 @@ Il formato della risposta dipende dall’intestazione `Accept` inviata nella ric
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Restituisce un breve riepilogo di ciascuna risorsa. Intestazione consigliata per l’elenco delle risorse. (Limite: 300) |
 | `application/vnd.adobe.xed+json` | Restituisce la classe JSON completa per ogni risorsa, con i valori originali `$ref` e `allOf` inclusi. (Limite: 300) |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
@@ -125,6 +128,8 @@ GET /{CONTAINER_ID}/classes/{CLASS_ID}
 | `{CONTAINER_ID}` | Il contenitore che ospita la classe da recuperare: `global` per una classe creata da un Adobe o `tenant` per una classe di proprietà della tua organizzazione. |
 | `{CLASS_ID}` | Il `meta:altId` o l&#39;URL-encoded `$id` della classe che si desidera cercare. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Richiesta**
 
 La richiesta seguente recupera una classe in base al valore `meta:altId` fornito nel percorso.
@@ -148,6 +153,8 @@ Il formato della risposta dipende dall’intestazione `Accept` inviata nella ric
 | `application/vnd.adobe.xed-notext+json; version=1` | Non elaborato con `$ref` e `allOf`, senza titoli o descrizioni. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` e  `allOf` risolti, senza titoli o descrizioni. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` e  `allOf` risolti, descrittori inclusi. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
@@ -240,7 +247,7 @@ Una risposta corretta restituisce i dettagli della classe. I campi restituiti di
 }
 ```
 
-## Crea una classe {#create}
+## Creare una classe {#create}
 
 Puoi definire una classe personalizzata sotto il contenitore `tenant` effettuando una richiesta POST.
 
@@ -248,7 +255,7 @@ Puoi definire una classe personalizzata sotto il contenitore `tenant` effettuand
 >
 >Quando si compone uno schema basato su una classe personalizzata definita dall&#39;utente, non è possibile utilizzare gruppi di campi standard. Ogni gruppo di campi definisce le classi con cui è compatibile nel relativo attributo `meta:intendedToExtend` . Una volta iniziati a definire gruppi di campi compatibili con la nuova classe (utilizzando `$id` della nuova classe nel campo `meta:intendedToExtend` del gruppo di campi), potrai riutilizzare tali gruppi di campi ogni volta che definisci uno schema che implementa la classe definita. Per ulteriori informazioni, consulta le sezioni su [creazione di gruppi di campi](./field-groups.md#create) e [creazione di schemi](./schemas.md#create) nelle rispettive guide dei punti finali.
 >
->Se prevedi di utilizzare schemi basati su classi personalizzate in Profilo cliente in tempo reale, è anche importante tenere presente che gli schemi di unione sono costruiti solo in base a schemi che condividono la stessa classe. Se si desidera includere nell&#39;unione uno schema di classe personalizzato per un&#39;altra classe come [!UICONTROL XDM Individual Profile] o [!UICONTROL XDM ExperienceEvent], è necessario stabilire una relazione con un altro schema che utilizza tale classe. Per ulteriori informazioni, consulta l’esercitazione su [stabilire una relazione tra due schemi nell’API](../tutorials/relationship-api.md) .
+>Se prevedi di utilizzare schemi basati su classi personalizzate in Profilo cliente in tempo reale, è anche importante tenere presente che gli schemi di unione sono costruiti solo in base a schemi che condividono la stessa classe. Se desideri includere nell&#39;unione uno schema di classe personalizzato per un&#39;altra classe come [!UICONTROL XDM Singolo profilo] o [!UICONTROL XDM ExperienceEvent], devi stabilire una relazione con un altro schema che utilizza tale classe. Per ulteriori informazioni, consulta l’esercitazione su [stabilire una relazione tra due schemi nell’API](../tutorials/relationship-api.md) .
 
 **Formato API**
 
@@ -313,6 +320,8 @@ curl -X POST \
 | --- | --- |
 | `_{TENANT_ID}` | Lo spazio dei nomi `TENANT_ID` della tua organizzazione. Tutte le risorse create dall&#39;organizzazione devono includere questa proprietà per evitare conflitti con altre risorse in [!DNL Schema Registry]. |
 | `allOf` | Elenco di risorse le cui proprietà devono essere ereditate dalla nuova classe. Uno degli oggetti `$ref` all&#39;interno della matrice definisce il comportamento della classe. In questo esempio, la classe eredita il comportamento &quot;record&quot;. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
@@ -399,6 +408,8 @@ PUT /tenant/classes/{CLASS_ID}
 | Parametro | Descrizione |
 | --- | --- |
 | `{CLASS_ID}` | Il `meta:altId` o l&#39;URL-encoded `$id` della classe che si desidera riscrivere. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
@@ -535,6 +546,8 @@ PATCH /tenant/class/{CLASS_ID}
 | --- | --- |
 | `{CLASS_ID}` | URI con codifica URL `$id` o `meta:altId` della classe da aggiornare. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Richiesta**
 
 La richiesta di esempio seguente aggiorna la `description` di una classe esistente e la `title` di uno dei suoi campi.
@@ -634,6 +647,8 @@ DELETE /tenant/classes/{CLASS_ID}
 | Parametro | Descrizione |
 | --- | --- |
 | `{CLASS_ID}` | URI con codifica URL `$id` o `meta:altId` della classe da eliminare. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
