@@ -1,0 +1,110 @@
+---
+keywords: Experience Platform;home;argomenti popolari;elenco sandbox disponibili;elenco sandbox
+solution: Experience Platform
+title: Endpoint API per le sandbox disponibili
+topic-legacy: developer guide
+description: È possibile elencare le sandbox disponibili per l’utente corrente effettuando una richiesta GET all’endpoint sandbox disponibile.
+exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
+source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
+workflow-type: tm+mt
+source-wordcount: '256'
+ht-degree: 2%
+
+---
+
+# Endpoint sandbox disponibili
+
+>[!NOTE]
+>
+>A differenza di altri endpoint forniti nell’API Sandbox, questo endpoint è disponibile per tutti gli utenti, inclusi quelli senza autorizzazioni di accesso di amministrazione sandbox.
+
+È possibile elencare le sandbox disponibili per l’utente corrente effettuando una richiesta GET all’endpoint sandbox disponibile.
+
+**Formato API**
+
+```http
+GET /{QUERY_PARAMS}
+```
+
+| Parametro | Descrizione |
+| --------- | ----------- |
+| `{QUERY_PARAMS}` | Parametri di query opzionali per filtrare i risultati in base a. Per un elenco dei parametri disponibili, vedere il [documento dell&#39;appendice](./appendix.md#query). |
+
+**Richiesta**
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/foundation/sandbox-management/?&limit=3&offset=1 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}'
+```
+
+**Risposta**
+
+Una risposta corretta restituisce un elenco di sandbox disponibili per l’utente corrente, inclusi dettagli quali `name`, `title`, `state` e `type`.
+
+```json
+{
+    "sandboxes": [
+        {
+            "name": "prod",
+            "title": "Production",
+            "state": "active",
+            "type": "production",
+            "region": "VA7",
+            "isDefault": true,
+            "eTag": 2,
+            "createdDate": "2019-09-04 04:57:24",
+            "lastModifiedDate": "2019-09-04 04:57:24",
+            "createdBy": "{USER_ID}",
+            "modifiedBy": "{USER_ID}"
+        },
+        {
+            "name": "dev",
+            "title": "Development",
+            "state": "active",
+            "type": "development",
+            "region": "VA7",
+            "isDefault": false,
+            "eTag": 1,
+            "createdDate": "2019-09-03 22:27:48",
+            "lastModifiedDate": "2019-09-03 22:27:48",
+            "createdBy": "{USER_ID}",
+            "modifiedBy": "{USER_ID}"
+        },
+        {
+            "name": "stage",
+            "title": "Staging",
+            "state": "active",
+            "type": "development",
+            "region": "VA7",
+            "isDefault": false,
+            "eTag": 1,
+            "createdDate": "2019-09-03 22:27:48",
+            "lastModifiedDate": "2019-09-03 22:27:48",
+            "createdBy": "{USER_ID}",
+            "modifiedBy": "{USER_ID}"
+        }
+    ],
+    "_page": {
+        "limit": 3,
+        "count": 1
+    },
+    "_links": {
+        "page": {
+            "href": "https://platform.adobe.io:443/data/foundation/sandbox-management/?limit={limit}&offset={offset}",
+            "templated": true
+        }
+    }
+}
+```
+
+| Proprietà | Descrizione |
+| --- | --- |
+| `name` | Nome della sandbox. Utilizzato a scopo di ricerca nelle chiamate API. |
+| `title` | Nome visualizzato della sandbox. |
+| `state` | Lo stato di elaborazione corrente della sandbox. Lo stato di una sandbox può essere uno dei seguenti: <ul><li>`creating`: La sandbox è stata creata, ma viene comunque fornita dal sistema.</li><li>`active`: La sandbox viene creata e attiva.</li><li>`failed`: A causa di un errore, il sistema non è in grado di eseguire il provisioning della sandbox ed è disabilitato.</li><li>`deleted`: La sandbox è stata disabilitata manualmente.</li></ul> |
+| `type` | Il tipo di sandbox, &quot;sviluppo&quot; o &quot;produzione&quot;. |
+| `isDefault` | Proprietà booleana che indica se questa sandbox è la sandbox di produzione predefinita per l’organizzazione. |
+| `eTag` | Identificatore per una versione specifica della sandbox. Utilizzato per il controllo delle versioni e l’efficienza del caching, questo valore viene aggiornato ogni volta che viene apportata una modifica alla sandbox. |
