@@ -5,9 +5,9 @@ title: Guida all’interfaccia utente sandbox
 topic-legacy: user guide
 description: Questo documento fornisce passaggi su come eseguire varie operazioni relative alle sandbox nell’interfaccia utente di Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 8c1c7b6b01b55bd15c492b0f62d280c1e9a98070
+source-git-commit: ba03ec805d29a95ee7d0d1a23a756feaadcea407
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '833'
 ht-degree: 0%
 
 ---
@@ -84,6 +84,28 @@ Nella finestra di conferma finale, immetti il nome della sandbox nella finestra 
 
 ![reset-confirm](../images/ui/reset-confirm.png)
 
+Dopo alcuni istanti, nella parte inferiore dello schermo viene visualizzata una casella di conferma per confermare il corretto ripristino.
+
+![success](../images/ui/success.png)
+
+### Messaggi di errore
+
+Una sandbox di produzione predefinita contenente dati CDA non può essere reimpostata e restituisce il seguente errore.
+
+![cda](../images/ui/cda.png)
+
+Anche una sandbox di produzione predefinita contenente dati PBD non può essere reimpostata e restituisce il seguente errore.
+
+![pbd](../images/ui/pbd.png)
+
+Anche una sandbox di produzione predefinita che contiene dati sia per CDA che per PBD non può essere reimpostata e restituisce il seguente errore.
+
+![entrambi](../images/ui/both.png)
+
+Anche una sandbox di produzione utilizzata per la condivisione di segmenti bidirezionale con Adobe Audience Manager o il servizio core Audience non può essere reimpostata e restituisce il seguente errore.
+
+![cucire](../images/ui/seg.png)
+
 ## Eliminare una sandbox
 
 >[!IMPORTANT]
@@ -103,6 +125,10 @@ Viene visualizzata una finestra di dialogo che richiede di confermare la scelta.
 Nella finestra di conferma finale, immetti il nome della sandbox nella finestra di dialogo e seleziona **[!UICONTROL Continua]**
 
 ![delete-confirm](../images/ui/delete-confirm.png)
+
+Non è possibile eliminare una sandbox di produzione utilizzata per la condivisione di segmenti bidirezionale con Adobe Audience Manager o con il servizio core Audience e restituisce il seguente errore.
+
+![cucire](../images/ui/seg.png)
 
 ## Passaggi successivi
 
