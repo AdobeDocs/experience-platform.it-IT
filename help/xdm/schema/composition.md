@@ -5,9 +5,9 @@ title: Nozioni di base sulla composizione dello schema
 topic-legacy: overview
 description: Questo documento fornisce un’introduzione agli schemi Experience Data Model (XDM) e ai blocchi predefiniti, ai principi e alle best practice per la composizione degli schemi da utilizzare in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 632ea4e2a94bfcad098a5fc5a5ed8985c0f41e0e
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '3621'
+source-wordcount: '3624'
 ht-degree: 0%
 
 ---
@@ -293,6 +293,8 @@ Durante la progettazione degli schemi, è necessario tenere in considerazione al
 | --- | --- |
 | Aumenta la nidificazione | Minore o nessuna nidificazione |
 | Crea raggruppamenti di campi logici | I campi sono posizionati in posizioni ad hoc |
+
+{style=&quot;table-layout:auto&quot;}
 
 #### Oggetti
 
