@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 0cef5f1a0033bed987799c26b99e71145a85c1a9
+source-git-commit: c608ee8360fd07d6f98b31eed3b4691dc7124e12
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1340'
 ht-degree: 3%
 
 ---
@@ -27,6 +27,7 @@ Aggiornamenti alle funzioni esistenti in Adobe Experience Platform:
 - [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM)]](#xdm)
 - [Profilo cliente in tempo reale](#profile)
+- [Sandbox](#sandboxes)
 - [Fonti](#sources)
 
 ## Dashboard {#dashboards}
@@ -85,6 +86,22 @@ Adobe Experience Platform ti consente di fornire ai clienti esperienze coordinat
 | Rapporto di sovrapposizione set di dati | Il rapporto di sovrapposizione dei set di dati fornisce visibilità nella composizione dell’archivio profili esponendo i set di dati che contribuiscono maggiormente al pubblico indirizzabile. Oltre a fornire informazioni approfondite sui dati di Profilo, questo rapporto consente agli utenti di intraprendere azioni per ottimizzare l’utilizzo della licenza, ad esempio per impostare un limite di vita di determinati dati. Per ulteriori informazioni, segui l’esercitazione su [generazione del rapporto di sovrapposizione dei set di dati](../../profile/tutorials/dataset-overlap-report.md). |
 
 Per ulteriori informazioni sul Profilo del cliente in tempo reale, comprese esercitazioni e best practice per l’utilizzo dei dati [!DNL Profile], si prega di iniziare leggendo la [Panoramica del profilo del cliente in tempo reale](../../profile/home.md).
+
+## [!DNL Sandboxes] {#sandboxes}
+
+Adobe Experience Platform è progettato per arricchire le applicazioni di esperienza digitale su scala globale. Le aziende spesso eseguono più applicazioni di esperienza digitale in parallelo e devono provvedere allo sviluppo, al test e alla distribuzione di queste applicazioni, garantendo al contempo la conformità operativa. Per soddisfare questa esigenza, Experience Platform fornisce sandbox che suddividono una singola istanza di Platform in ambienti virtuali separati per contribuire a sviluppare e sviluppare applicazioni di esperienza digitale.
+
+| Funzione | Descrizione |
+| ------- | ----------- |
+| Sandbox di produzione multiple | Ora puoi creare e gestire più sandbox di produzione nell’organizzazione IMS e dedicare specifiche sandbox di produzione a linee di business, marchi, progetti o aree geografiche diverse. Per ulteriori informazioni, consulta le esercitazioni sulla creazione di una sandbox di produzione [nell’interfaccia utente](../../sandboxes/ui/user-guide.md) o [utilizzando l’API](../../sandboxes/api/overview.md) . |
+
+### Limitazioni note
+
+- Ogni organizzazione Experience Cloud viene fornita con una sandbox di produzione predefinita precreata. Questa sandbox funge da destinazione predefinita per ogni richiesta inviata a Platform da un’altra applicazione Adobe o da un’applicazione non Adobe non conforme alla Sandbox. Non è possibile ripristinare la sandbox di produzione predefinita se il grafico di identità ospitato al suo interno viene utilizzato anche da Adobe Analytics per la funzione [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) o se il grafico di identità ospitato al suo interno viene utilizzato anche da Adobe Audience Manager per la funzione [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) .
+- Le sandbox di produzione utilizzate per la condivisione di segmenti bidirezionale con Adobe Audience Manager o Audience Core Service non possono essere né reimpostate né eliminate.
+- È possibile eliminare tutte le sandbox di produzione e sviluppo create dall’utente, ad eccezione della sandbox di produzione predefinita.
+
+Per ulteriori informazioni sulle sandbox, consulta la [panoramica sulle sandbox](../../sandboxes/home.md).
 
 ## [!DNL Sources] {#sources}
 
