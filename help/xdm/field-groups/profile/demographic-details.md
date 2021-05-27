@@ -5,22 +5,21 @@ title: Gruppo campi schema dettagli demografici
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del gruppo di campi schema Dettagli demografici.
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
-translation-type: tm+mt
-source-git-commit: f5beb57acf4cc1827bf08b549cd2b3a02fd82b18
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '282'
 ht-degree: 3%
 
 ---
 
 
-# [!UICONTROL Demographic Details] gruppo di campi schema
+# [!UICONTROL Gruppo di campi ] Detailsschema demografico
 
 >[!NOTE]
 >
 >Sono stati modificati i nomi di diversi gruppi di campi dello schema. Per ulteriori informazioni, consulta il documento sugli [aggiornamenti dei nomi dei gruppi di campi](../name-updates.md) .
 
-[!UICONTROL Demographic Details] è un gruppo di campi di schema standard per la  [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Il gruppo di campi fornisce un oggetto a livello principale `person` i cui sottocampi descrivono le informazioni relative a una singola persona.
+[!UICONTROL Demographic ] Detailsis un gruppo di campi schema standard per la  [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Il gruppo di campi fornisce un oggetto a livello principale `person` i cui sottocampi descrivono le informazioni relative a una singola persona.
 
 ![](../../images/field-groups/demographic-details.png)
 
@@ -34,6 +33,8 @@ ht-degree: 3%
 | `person.martialStatus` | Stringa | Descrive il rapporto di una persona con un altro significativo. |
 | `person.nationality` | Stringa | Il rapporto giuridico tra una persona e il suo stato rappresentato utilizzando il codice Alpha-2 ISO 3166-1. |
 | `person.taxId` | Stringa | ID fiscale/fiscale della persona, ad esempio il TIN negli Stati Uniti o il CIF/NIF in Spagna. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Per ulteriori dettagli sul gruppo di campi, consulta l’archivio XDM pubblico:
 
