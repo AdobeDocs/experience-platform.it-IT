@@ -5,11 +5,10 @@ title: Accesso ai dati nei notebook Jupyterlab
 topic-legacy: Developer Guide
 description: Questa guida si concentra su come utilizzare i notebook Jupyter, creati all’interno di Data Science Workspace per accedere ai tuoi dati.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c2c2b1684e2c2c3c76dc23ad1df720abd6c4356c
 workflow-type: tm+mt
-source-wordcount: '3031'
-ht-degree: 9%
+source-wordcount: '3290'
+ht-degree: 8%
 
 ---
 
@@ -35,7 +34,7 @@ I dati dello schema ExperienceEvent utilizzati variano a partire da mille (1K) r
 
 I dati dello schema ad-hoc sono stati preelaborati utilizzando [!DNL Query Service] Crea tabella come selezione (CTAS). Questi dati sono anche variati in dimensioni a partire da mille (1K) righe che vanno fino a un miliardo (1B) righe.
 
-### Quando utilizzare la modalità batch rispetto alla modalità interattiva {#mode}
+### Quando utilizzare la modalità batch e la modalità interattiva {#mode}
 
 Quando si leggono i set di dati con i blocchi appunti PySpark e Scala, è possibile utilizzare la modalità interattiva o la modalità batch per leggere il set di dati. La modalità interattiva viene eseguita per risultati rapidi, mentre la modalità batch è per set di dati di grandi dimensioni.
 
@@ -150,13 +149,13 @@ df = dataset_reader.limit(100).offset(10).read()
 
 ### Scrivi in un set di dati in Python {#write-python}
 
-Per scrivere in un set di dati nel notebook JupyterLab, seleziona la scheda Icona Dati (evidenziata di seguito) nella navigazione a sinistra di JupyterLab. Vengono visualizzate le directory **[!UICONTROL Datasets]** e **[!UICONTROL Schemas]** . Seleziona **[!UICONTROL Datasets]** e fai clic con il pulsante destro del mouse, quindi seleziona l’opzione **[!UICONTROL Write Data in Notebook]** dal menu a discesa del set di dati che desideri utilizzare. Nella parte inferiore del blocco appunti viene visualizzata una voce di codice eseguibile.
+Per scrivere in un set di dati nel notebook JupyterLab, seleziona la scheda Icona Dati (evidenziata di seguito) nella navigazione a sinistra di JupyterLab. Vengono visualizzate le directory **[!UICONTROL Set di dati]** e **[!UICONTROL Schemi]**. Selezionare **[!UICONTROL Set di dati]** e fare clic con il pulsante destro del mouse, quindi selezionare l&#39;opzione **[!UICONTROL Scrivi dati nel blocco appunti]** dal menu a discesa del set di dati che si desidera utilizzare. Nella parte inferiore del blocco appunti viene visualizzata una voce di codice eseguibile.
 
 ![](../images/jupyterlab/data-access/write-dataset.png)
 
-- Utilizza **[!UICONTROL Write Data in Notebook]** per generare una cella di scrittura con il set di dati selezionato.
-- Utilizza **[!UICONTROL Explore Data in Notebook]** per generare una cella di lettura con il set di dati selezionato.
-- Utilizza **[!UICONTROL Query Data in Notebook]** per generare una cella di query di base con il set di dati selezionato.
+- Utilizza **[!UICONTROL Scrivi dati nel blocco appunti]** per generare una cella di scrittura con il set di dati selezionato.
+- Utilizza **[!UICONTROL Esplora dati nel blocco appunti]** per generare una cella di lettura con il set di dati selezionato.
+- Utilizza **[!UICONTROL Dati query nel blocco appunti]** per generare una cella query di base con il set di dati selezionato.
 
 In alternativa, puoi copiare e incollare la seguente cella di codice. Sostituisci sia `{DATASET_ID}` che `{PANDA_DATAFRAME}`.
 
@@ -175,7 +174,7 @@ write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 
 Prima di utilizzare [!DNL Query Service] in [!DNL JupyterLab], assicurati di avere familiarità con la [[!DNL Query Service] sintassi SQL](https://www.adobe.com/go/query-service-sql-syntax-en).
 
-Per eseguire la query dei dati utilizzando [!DNL Query Service] è necessario fornire il nome del set di dati di destinazione. Puoi generare le celle di codice necessarie trovando il set di dati desiderato utilizzando **[!UICONTROL Data explorer]**. Fai clic con il pulsante destro del mouse sull’elenco dei set di dati e fai clic su **[!UICONTROL Query Data in Notebook]** per generare due celle di codice nel blocco appunti. Queste due celle sono descritte più dettagliatamente di seguito.
+Per eseguire la query dei dati utilizzando [!DNL Query Service] è necessario fornire il nome del set di dati di destinazione. Puoi generare le celle di codice necessarie trovando il set di dati desiderato utilizzando **[!UICONTROL Data explorer]**. Fai clic con il pulsante destro del mouse sull&#39;elenco dei set di dati e fai clic su **[!UICONTROL Query Data in Notebook]** per generare due celle di codice nel blocco appunti. Queste due celle sono descritte più dettagliatamente di seguito.
 
 ![](../images/jupyterlab/data-access/python-query-dataset.png)
 
@@ -286,12 +285,12 @@ df0 <- dataset_reader$limit(100L)$offset(10L)$read()
 
 ### Scrivi in un set di dati in R {#write-r}
 
-Per scrivere in un set di dati nel notebook JupyterLab, seleziona la scheda Icona Dati (evidenziata di seguito) nella navigazione a sinistra di JupyterLab. Vengono visualizzate le directory **[!UICONTROL Datasets]** e **[!UICONTROL Schemas]** . Seleziona **[!UICONTROL Datasets]** e fai clic con il pulsante destro del mouse, quindi seleziona l’opzione **[!UICONTROL Write Data in Notebook]** dal menu a discesa del set di dati che desideri utilizzare. Nella parte inferiore del blocco appunti viene visualizzata una voce di codice eseguibile.
+Per scrivere in un set di dati nel notebook JupyterLab, seleziona la scheda Icona Dati (evidenziata di seguito) nella navigazione a sinistra di JupyterLab. Vengono visualizzate le directory **[!UICONTROL Set di dati]** e **[!UICONTROL Schemi]**. Selezionare **[!UICONTROL Set di dati]** e fare clic con il pulsante destro del mouse, quindi selezionare l&#39;opzione **[!UICONTROL Scrivi dati nel blocco appunti]** dal menu a discesa del set di dati che si desidera utilizzare. Nella parte inferiore del blocco appunti viene visualizzata una voce di codice eseguibile.
 
 ![](../images/jupyterlab/data-access/r-write-dataset.png)
 
-- Utilizza **[!UICONTROL Write Data in Notebook]** per generare una cella di scrittura con il set di dati selezionato.
-- Utilizza **[!UICONTROL Explore Data in Notebook]** per generare una cella di lettura con il set di dati selezionato.
+- Utilizza **[!UICONTROL Scrivi dati nel blocco appunti]** per generare una cella di scrittura con il set di dati selezionato.
+- Utilizza **[!UICONTROL Esplora dati nel blocco appunti]** per generare una cella di lettura con il set di dati selezionato.
 
 In alternativa, puoi copiare e incollare la seguente cella di codice:
 
@@ -386,12 +385,24 @@ Comando [!DNL Data Science Workspace] magico personalizzato per la lettura o la 
 - **Esempio** di lettura:  `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
 - **Esempio** di scrittura:  `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
 
+>[!IMPORTANT]
+>
+> La memorizzazione nella cache dei dati utilizzando `df.cache()` prima di scrivere i dati può migliorare notevolmente le prestazioni del blocco appunti. Questo può essere utile se si riceve uno dei seguenti errori:
+> 
+> - Processo interrotto a causa di un errore dell&#39;area di visualizzazione... È possibile comprimere solo gli RDD con lo stesso numero di elementi in ogni partizione.
+> - Client RPC remoto non associato e altri errori di memoria.
+> - Scarse prestazioni durante la lettura e la scrittura di set di dati.
+
+> 
+> 
+Per ulteriori informazioni, consulta la [guida alla risoluzione dei problemi](../troubleshooting-guide.md) .
+
 Puoi generare automaticamente gli esempi di cui sopra in JupyterLab buy utilizzando il seguente metodo:
 
-Seleziona la scheda Icona Dati (evidenziata di seguito) nella navigazione a sinistra di JupyterLab. Vengono visualizzate le directory **[!UICONTROL Datasets]** e **[!UICONTROL Schemas]** . Seleziona **[!UICONTROL Datasets]** e fai clic con il pulsante destro del mouse, quindi seleziona l’opzione **[!UICONTROL Write Data in Notebook]** dal menu a discesa del set di dati che desideri utilizzare. Nella parte inferiore del blocco appunti viene visualizzata una voce di codice eseguibile.
+Seleziona la scheda Icona Dati (evidenziata di seguito) nella navigazione a sinistra di JupyterLab. Vengono visualizzate le directory **[!UICONTROL Set di dati]** e **[!UICONTROL Schemi]**. Selezionare **[!UICONTROL Set di dati]** e fare clic con il pulsante destro del mouse, quindi selezionare l&#39;opzione **[!UICONTROL Scrivi dati nel blocco appunti]** dal menu a discesa del set di dati che si desidera utilizzare. Nella parte inferiore del blocco appunti viene visualizzata una voce di codice eseguibile.
 
-- Utilizzare **[!UICONTROL Explore Data in Notebook]** per generare una cella di lettura.
-- Utilizza **[!UICONTROL Write Data in Notebook]** per generare una cella di scrittura.
+- Utilizzare **[!UICONTROL Esplora dati nel notebook]** per generare una cella di lettura.
+- Utilizzare **[!UICONTROL Scrivi dati nel notebook]** per generare una cella di scrittura.
 
 ![](../images/jupyterlab/data-access/pyspark-write-dataset.png)
 
@@ -476,6 +487,18 @@ val spark = SparkSession
 
 In Scala, puoi importare `clientContext` per ottenere e restituire i valori di Platform, eliminando la necessità di definire variabili quali `var userToken`. Nell’esempio di Scala seguente, `clientContext` viene utilizzato per ottenere e restituire tutti i valori richiesti necessari per la lettura di un set di dati.
 
+>[!IMPORTANT]
+>
+> La memorizzazione nella cache dei dati utilizzando `df.cache()` prima di scrivere i dati può migliorare notevolmente le prestazioni del blocco appunti. Questo può essere utile se si riceve uno dei seguenti errori:
+> 
+> - Processo interrotto a causa di un errore dell&#39;area di visualizzazione... È possibile comprimere solo gli RDD con lo stesso numero di elementi in ogni partizione.
+> - Client RPC remoto non associato e altri errori di memoria.
+> - Scarse prestazioni durante la lettura e la scrittura di set di dati.
+
+> 
+> 
+Per ulteriori informazioni, consulta la [guida alla risoluzione dei problemi](../troubleshooting-guide.md) .
+
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
 import com.adobe.platform.token.ClientContext
@@ -510,16 +533,28 @@ df1.show(10)
 
 Puoi generare automaticamente l&#39;esempio precedente in JupyterLab buy utilizzando il seguente metodo:
 
-Seleziona la scheda Icona Dati (evidenziata di seguito) nella navigazione a sinistra di JupyterLab. Vengono visualizzate le directory **[!UICONTROL Datasets]** e **[!UICONTROL Schemas]** . Seleziona **[!UICONTROL Datasets]** e fai clic con il pulsante destro del mouse, quindi seleziona l’opzione **[!UICONTROL Explore Data in Notebook]** dal menu a discesa del set di dati che desideri utilizzare. Nella parte inferiore del blocco appunti viene visualizzata una voce di codice eseguibile.
+Seleziona la scheda Icona Dati (evidenziata di seguito) nella navigazione a sinistra di JupyterLab. Vengono visualizzate le directory **[!UICONTROL Set di dati]** e **[!UICONTROL Schemi]**. Selezionare **[!UICONTROL Set di dati]** e fare clic con il pulsante destro del mouse, quindi selezionare l&#39;opzione **[!UICONTROL Esplora dati nel blocco appunti]** dal menu a discesa del set di dati che si desidera utilizzare. Nella parte inferiore del blocco appunti viene visualizzata una voce di codice eseguibile.
 E
-- Utilizzare **[!UICONTROL Explore Data in Notebook]** per generare una cella di lettura.
-- Utilizza **[!UICONTROL Write Data in Notebook]** per generare una cella di scrittura.
+- Utilizzare **[!UICONTROL Esplora dati nel notebook]** per generare una cella di lettura.
+- Utilizzare **[!UICONTROL Scrivi dati nel notebook]** per generare una cella di scrittura.
 
 ![](../images/jupyterlab/data-access/scala-write-dataset.png)
 
 ### Scrivere in un set di dati {#scala-write-dataset}
 
 In Scala, puoi importare `clientContext` per ottenere e restituire i valori di Platform, eliminando la necessità di definire variabili quali `var userToken`. Nell’esempio di Scala seguente, `clientContext` viene utilizzato per definire e restituire tutti i valori richiesti necessari per la scrittura in un set di dati.
+
+>[!IMPORTANT]
+>
+> La memorizzazione nella cache dei dati utilizzando `df.cache()` prima di scrivere i dati può migliorare notevolmente le prestazioni del blocco appunti. Questo può essere utile se si riceve uno dei seguenti errori:
+> 
+> - Processo interrotto a causa di un errore dell&#39;area di visualizzazione... È possibile comprimere solo gli RDD con lo stesso numero di elementi in ogni partizione.
+> - Client RPC remoto non associato e altri errori di memoria.
+> - Scarse prestazioni durante la lettura e la scrittura di set di dati.
+
+> 
+> 
+Per ulteriori informazioni, consulta la [guida alla risoluzione dei problemi](../troubleshooting-guide.md) .
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
