@@ -4,21 +4,20 @@ title: Tipo di dati campo preferenza di marketing generico
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM del campo preferenza di marketing generico.
 exl-id: d4c53885-f34f-4721-aa34-1fe02dc7006f
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '541'
 ht-degree: 1%
 
 ---
 
-# [!UICONTROL Generic Marketing Preference Field] tipo di dati
+# [!UICONTROL Tipo di dati ] campo preferenza di marketing generico
 
-[!UICONTROL Generic Marketing Preference Field] è un tipo di dati XDM standard che descrive la selezione di un cliente per una particolare preferenza di marketing.
+[!UICONTROL I ] campi Preferenze di marketing generiche sono un tipo di dati XDM standard che descrive la selezione di un cliente per una particolare preferenza di marketing.
 
 >[!NOTE]
 >
->Questo tipo di dati è destinato a essere utilizzato per personalizzare la struttura degli schemi di consenso dell’organizzazione utilizzando il gruppo di campi [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]](../field-groups/profile/consents.md) come linea di base.
+>Questo tipo di dati è destinato a essere utilizzato per personalizzare la struttura degli schemi di consenso dell’organizzazione utilizzando come base di riferimento [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consensi)] gruppo di campi](../field-groups/profile/consents.md).
 >
 >Se hai bisogno di una mappatura `subscriptions` per un particolare campo delle preferenze di marketing, devi invece utilizzare il campo [marketing con tipo di dati delle sottoscrizioni](./marketing-field-subscriptions.md).
 
@@ -29,6 +28,8 @@ ht-degree: 1%
 | `reason` | Stringa | Quando un cliente rinuncia a un caso di utilizzo marketing, questo campo stringa rappresenta il motivo per cui il cliente ha rinunciato. |
 | `time` | DateTime | Una marca temporale ISO 8601 di quando la preferenza di marketing è cambiata, se applicabile. |
 | `val` | Stringa | La scelta della preferenza fornita dal cliente per questo caso d’uso di marketing. Vedi la tabella seguente per i valori e le definizioni accettati. |
+
+{style=&quot;table-layout:auto&quot;}
 
 La tabella seguente illustra i valori accettati per `val`:
 
@@ -43,6 +44,8 @@ La tabella seguente illustra i valori accettati per `val`:
 | `CP` | Rispetto di un obbligo giuridico | La raccolta dei dati per lo scopo specificato è necessaria per soddisfare gli obblighi legali dell&#39;impresa. |
 | `VI` | Interesse fondamentale del singolo | La raccolta dei dati per lo scopo specifico è necessaria per tutelare gli interessi vitali dell&#39;individuo. |
 | `PI` | Interesse pubblico | La raccolta dei dati per lo scopo specificato è necessaria per svolgere un compito di interesse pubblico o nell&#39;esercizio di un&#39;autorità ufficiale. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Per ulteriori dettagli sul tipo di dati, consulta l’archivio XDM pubblico:
 
