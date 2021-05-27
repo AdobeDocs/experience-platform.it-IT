@@ -5,17 +5,16 @@ title: Tipo di dati indirizzo e-mail
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM Indirizzo e-mail.
 exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '190'
 ht-degree: 1%
 
 ---
 
-# [!UICONTROL Email address] tipo di dati
+# [!UICONTROL Tipo di dati ] indirizzo e-mail
 
-[!UICONTROL Email address] è un tipo di dati XDM standard che descrive i dettagli di un indirizzo e-mail.
+[!UICONTROL L’] indirizzo e-mail è un tipo di dati XDM standard che descrive i dettagli di un indirizzo e-mail.
 
 <img src="../images/data-types/email-address.png" width="450" /><br />
 
@@ -27,6 +26,8 @@ ht-degree: 1%
 | `status` | Indica se l’indirizzo e-mail può essere attualmente utilizzato |
 | `statusReason` | Una descrizione del `status` corrente. |
 | `type` | Il modo in cui l’account si riferisce alla persona (ad esempio `work` o `personal`). |
+
+{style=&quot;table-layout:auto&quot;}
 
 
 Per ulteriori dettagli sul tipo di dati dell’indirizzo e-mail, consulta l’archivio XDM pubblico:
