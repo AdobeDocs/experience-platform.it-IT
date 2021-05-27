@@ -5,22 +5,21 @@ title: Gruppo campi schema dettagli ID utente finale
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del gruppo di campi dello schema Dettagli ID utente finale.
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '214'
 ht-degree: 0%
 
 ---
 
 
-# [!UICONTROL End User ID Details] gruppo di campi schema
+# [!UICONTROL Gruppo di campi ] Dettagli ID utente finale
 
 >[!NOTE]
 >
 >Sono stati modificati i nomi di diversi gruppi di campi dello schema. Per ulteriori informazioni, consulta il documento sugli [aggiornamenti dei nomi dei gruppi di campi](../name-updates.md) .
 
-[!UICONTROL End User ID Details] è un gruppo di campi di schema standard per la  [[!DNL XDM ExperienceEvent] classe](../../classes/individual-profile.md), utilizzato per descrivere le informazioni di identità di un individuo in diverse applicazioni di Adobe. Il gruppo di campi fornisce un oggetto a livello principale `endUserIDs`, che a sua volta contiene un campo di sola lettura `_experience` i cui valori vengono aggiornati automaticamente al momento dell’acquisizione dei dati.
+[!UICONTROL ID utente finale ] Consente di specificare un gruppo di campi di schema standard per la  [[!DNL XDM ExperienceEvent] classe](../../classes/individual-profile.md), utilizzato per descrivere le informazioni di identità di un individuo in diverse applicazioni di Adobe. Il gruppo di campi fornisce un oggetto a livello principale `endUserIDs`, che a sua volta contiene un campo di sola lettura `_experience` i cui valori vengono aggiornati automaticamente al momento dell’acquisizione dei dati.
 
 <img src="../../images/field-groups/enduserids.png" width="700" /><br />
 
@@ -34,6 +33,8 @@ ht-degree: 0%
 | `mcid` | [Identità](../../data-types/identity.md) | Adobe Marketing Cloud ID. |
 | `phonenumberid` | [Identità](../../data-types/identity.md) | ID dei numeri di telefono. |
 | `tntid` | [Identità](../../data-types/identity.md) | ID utente finale per Adobe Target. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Per ulteriori dettagli sul gruppo di campi, consulta l’archivio XDM pubblico:
 
