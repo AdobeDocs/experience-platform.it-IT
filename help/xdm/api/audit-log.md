@@ -5,11 +5,10 @@ title: Endpoint API del registro di controllo
 description: L’endpoint /auditlog nell’API del Registro di sistema dello schema consente di recuperare un elenco cronologico delle modifiche apportate a una risorsa XDM esistente.
 topic-legacy: developer guide
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 2%
+source-wordcount: '406'
+ht-degree: 1%
 
 ---
 
@@ -36,6 +35,8 @@ GET /rpc/auditlog/{RESOURCE_ID}
 | Parametro | Descrizione |
 | --- | --- |
 | `{RESOURCE_ID}` | La `meta:altId` o la codifica URL `$id` della risorsa di cui si desidera recuperare il registro di controllo. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
@@ -96,3 +97,5 @@ Una risposta corretta restituisce un elenco cronologico delle modifiche apportat
 | `action` | Tipo di modifica apportata. |
 | `path` | Una stringa [JSON Pointer](../../landing/api-fundamentals.md#json-pointer) che indica il percorso del campo specifico che è stato modificato o aggiunto. |
 | `value` | Valore assegnato al campo nuovo o aggiornato. |
+
+{style=&quot;table-layout:auto&quot;}
