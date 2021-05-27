@@ -5,17 +5,16 @@ title: Tipo di dati dispositivo
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati Device XDM.
 exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '329'
 ht-degree: 4%
 
 ---
 
-# [!UICONTROL Device] tipo di dati
+#  Tipo di dati Devicedata
 
-[!UICONTROL Device] è un tipo di dati XDM standard che descrive un dispositivo identificato. Un dispositivo è un&#39;applicazione o un&#39;istanza del browser che può essere monitorata attraverso le sessioni, normalmente tramite i cookie.
+ Il dispositivo è un tipo di dati XDM standard che descrive un dispositivo identificato. Un dispositivo è un&#39;applicazione o un&#39;istanza del browser che può essere monitorata attraverso le sessioni, normalmente tramite i cookie.
 
 <img src="../images/data-types/device.png" width="450" /><br />
 
@@ -32,6 +31,8 @@ ht-degree: 4%
 | `typeID` | Stringa | Identificatore del dispositivo. Può trattarsi di un identificatore di DeviceAtlas o di un altro servizio che identifica l&#39;hardware in uso. |
 | `typeIDService` | Stringa | Spazio dei nomi del servizio utilizzato per identificare il tipo di dispositivo. Per informazioni dettagliate sui valori accettati, vedere l&#39; [appendice](#typeIDService). |
 
+{style=&quot;table-layout:auto&quot;}
+
 Per ulteriori dettagli sul gruppo di campi, consulta l’archivio XDM pubblico:
 
 * [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/datatypes/device.example.1.json)
@@ -39,7 +40,7 @@ Per ulteriori dettagli sul gruppo di campi, consulta l’archivio XDM pubblico:
 
 ## Appendice
 
-La sezione seguente contiene informazioni aggiuntive sul tipo di dati [!UICONTROL Device].
+La sezione seguente contiene informazioni aggiuntive sul tipo di dati [!UICONTROL Dispositivo].
 
 ## Valori accettati per typeIDService {#typeIDService}
 
