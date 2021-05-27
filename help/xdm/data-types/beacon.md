@@ -5,17 +5,16 @@ title: Tipo di dati beacon
 topic-legacy: overview
 description: Questo documento fornisce una panoramica della classe Profilo individuale XDM.
 exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '251'
 ht-degree: 3%
 
 ---
 
-# [!UICONTROL Beacon] tipo di dati
+#  Tipo di dati beacon
 
-[!UICONTROL Beacon] è un tipo di dati XDM standard che descrive il dispositivo wireless che comunica le informazioni di identità alle applicazioni mobili man mano che i dispositivi mobili rientrano nella gamma.
+ Beaconis un tipo di dati XDM standard che descrive il dispositivo wireless che comunica le informazioni di identità alle applicazioni mobili man mano che i dispositivi mobili rientrano nell’intervallo.
 
 <img src="../images/data-types/beacon.png" width="450" /><br />
 
@@ -25,6 +24,8 @@ ht-degree: 3%
 | `beaconMinor` | Doppio | Valori secondari identificano e distinguono un singolo e un numero intero senza segno compreso tra 1 e 65.535. |
 | `proximity` | Stringa | Distanza stimata dal beacon. Per i valori e le definizioni accettati, consultare l&#39; [appendice](#proximity) . |
 | `proximityUUID` | Stringa | Un UUID di prossimità (Universally Unique Identifier) è un tipo speciale di identificatore utilizzato per distinguere i beacon nella rete da tutti gli altri beacon presenti nelle reti esterne al controllo. L’UUID di prossimità è configurato in un beacon, da trasmettere a dispositivi mobili nella gamma per identificare i beacon di un’organizzazione. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Per ulteriori dettagli sul tipo di dati, consulta l’archivio XDM pubblico:
 
