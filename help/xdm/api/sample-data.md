@@ -5,10 +5,9 @@ title: Endpoint API per i dati di esempio
 description: L’endpoint /sampledata nell’API del Registro di sistema dello schema consente di generare dati di esempio mappati alla struttura di qualsiasi schema XDM esistente.
 topic-legacy: developer guide
 exl-id: 424d33ca-0624-4891-bf83-044ac2861579
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '322'
 ht-degree: 1%
 
 ---
@@ -38,6 +37,8 @@ GET /rpc/sampledata/{SCHEMA_ID}
 | Parametro | Descrizione |
 | --- | --- |
 | `{SCHEMA_ID}` | La `meta:altId` o la codifica URL `$id` dello schema per cui si desidera generare i dati di esempio. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
