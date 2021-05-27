@@ -5,11 +5,10 @@ title: Vincoli del tipo di campo XDM
 topic-legacy: overview
 description: Un riferimento per i vincoli di tipo di campo in Experience Data Model (XDM), inclusi gli altri formati di serializzazione a cui possono essere mappati e le modalità di definizione dei tipi di campo personalizzati nell’API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-translation-type: tm+mt
-source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
+source-git-commit: 61025ada3a900a5bd7682e3bb7d4f6cd23347231
 workflow-type: tm+mt
-source-wordcount: '1063'
-ht-degree: 1%
+source-wordcount: '1097'
+ht-degree: 2%
 
 ---
 
@@ -159,31 +158,33 @@ Le sezioni seguenti descrivono come ogni tipo XDM viene mappato su altri formati
 
 | Tipo XDM | Parquet | SQL Spark | Java |
 | --- | --- | --- | --- |
-| [!UICONTROL String] | Tipo: `BYTE_ARRAY`<br>Annotazione: `UTF8` | `StringType` | `java.lang.String` |
-| [!UICONTROL Double] | Tipo: `DOUBLE` | `LongType` | `java.lang.Double` |
-| [!UICONTROL Long] | Tipo: `INT64` | `LongType` | `java.lang.Long` |
-| [!UICONTROL Integer] | Tipo: `INT32`<br>Annotazione: `INT_32` | `IntegerType` | `java.lang.Integer` |
-| [!UICONTROL Short] | Tipo: `INT32`<br>Annotazione: `INT_16` | `ShortType` | `java.lang.Short` |
+| [!UICONTROL Stringa] | Tipo: `BYTE_ARRAY`<br>Annotazione: `UTF8` | `StringType` | `java.lang.String` |
+| [!UICONTROL Doppio] | Tipo: `DOUBLE` | `LongType` | `java.lang.Double` |
+| [!UICONTROL Lunga] | Tipo: `INT64` | `LongType` | `java.lang.Long` |
+| [!UICONTROL Intero] | Tipo: `INT32`<br>Annotazione: `INT_32` | `IntegerType` | `java.lang.Integer` |
+| [!UICONTROL Breve] | Tipo: `INT32`<br>Annotazione: `INT_16` | `ShortType` | `java.lang.Short` |
 | [!UICONTROL Byte] | Tipo: `INT32`<br>Annotazione: `INT_8` | `ByteType` | `java.lang.Short` |
-| [!UICONTROL Date] | Tipo: `INT32`<br>Annotazione: `DATE` | `DateType` | `java.util.Date` |
+| [!UICONTROL Data] | Tipo: `INT32`<br>Annotazione: `DATE` | `DateType` | `java.util.Date` |
 | [!UICONTROL DateTime] | Tipo: `INT64`<br>Annotazione: `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
-| [!UICONTROL Boolean] | Tipo: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
-| [!UICONTROL Map] | `MAP`-gruppo<br><br> annotato(`<key-type>` deve essere  `STRING`) | `MapType`<br><br>(`keyType` deve essere  `StringType`) | `java.util.Map` |
+| [!UICONTROL Booleano] | Tipo: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
+| [!UICONTROL Mappa] | `MAP`-gruppo<br><br> annotato(`<key-type>` deve essere  `STRING`) | `MapType`<br><br>(`keyType` deve essere  `StringType`) | `java.util.Map` |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Scala, .NET e CosmosDB {#scala}
 
 | Tipo XDM | Scala | .NET | CosmosDB |
 | --- | --- | --- | --- |
-| [!UICONTROL String] | `String` | `System.String` | `String` |
-| [!UICONTROL Double] | `Double` | `System.Double` | `Number` |
-| [!UICONTROL Long] | `Long` | `System.Int64` | `Number` |
-| [!UICONTROL Integer] | `Int` | `System.Int32` | `Number` |
-| [!UICONTROL Short] | `Short` | `System.Int16` | `Number` |
+| [!UICONTROL Stringa] | `String` | `System.String` | `String` |
+| [!UICONTROL Doppio] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL Lunga] | `Long` | `System.Int64` | `Number` |
+| [!UICONTROL Intero] | `Int` | `System.Int32` | `Number` |
+| [!UICONTROL Breve] | `Short` | `System.Int16` | `Number` |
 | [!UICONTROL Byte] | `Byte` | `System.SByte` | `Number` |
-| [!UICONTROL Date] | `java.util.Date` | `System.DateTime` | `String` |
+| [!UICONTROL Data] | `java.util.Date` | `System.DateTime` | `String` |
 | [!UICONTROL DateTime] | `java.util.Date` | `System.DateTime` | `String` |
-| [!UICONTROL Boolean] | `Boolean` | `System.Boolean` | `Boolean` |
-| [!UICONTROL Map] | `Map` | (N/D) | `object` |
+| [!UICONTROL Booleano] | `Boolean` | `System.Boolean` | `Boolean` |
+| [!UICONTROL Mappa] | `Map` | (N/D) | `object` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -191,16 +192,16 @@ Le sezioni seguenti descrivono come ogni tipo XDM viene mappato su altri formati
 
 | Tipo XDM | MongoDB | Aerospik | Protobuf 2 |
 | --- | --- | --- | --- |
-| [!UICONTROL String] | `string` | `String` | `string` |
-| [!UICONTROL Double] | `double` | `Double` | `double` |
-| [!UICONTROL Long] | `long` | `Integer` | `int64` |
-| [!UICONTROL Integer] | `int` | `Integer` | `int32` |
-| [!UICONTROL Short] | `int` | `Integer` | `int32` |
+| [!UICONTROL Stringa] | `string` | `String` | `string` |
+| [!UICONTROL Doppio] | `double` | `Double` | `double` |
+| [!UICONTROL Lunga] | `long` | `Integer` | `int64` |
+| [!UICONTROL Intero] | `int` | `Integer` | `int32` |
+| [!UICONTROL Breve] | `int` | `Integer` | `int32` |
 | [!UICONTROL Byte] | `int` | `Integer` | `int32` |
-| [!UICONTROL Date] | `date` | `Integer`<br>(millisecondi Unix) | `int64`<br>(millisecondi Unix) |
+| [!UICONTROL Data] | `date` | `Integer`<br>(millisecondi Unix) | `int64`<br>(millisecondi Unix) |
 | [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(millisecondi Unix) | `int64`<br>(millisecondi Unix) |
-| [!UICONTROL Boolean] | `bool` | `Integer`<br>(0/1 binario) | `bool` |
-| [!UICONTROL Map] | `object` | `map` | `map<key_type, value_type>` |
+| [!UICONTROL Booleano] | `bool` | `Integer`<br>(0/1 binario) | `bool` |
+| [!UICONTROL Mappa] | `object` | `map` | `map<key_type, value_type>` |
 
 {style=&quot;table-layout:auto&quot;}
 
