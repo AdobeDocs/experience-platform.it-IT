@@ -5,25 +5,24 @@ title: Tipo di dati sottoscrizione
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM (Subscription Experience Data Model).
 exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '419'
 ht-degree: 9%
 
 ---
 
-# [!UICONTROL Subscription] tipo di dati
+#  Tipo di dati della sottoscrizione
 
-[!UICONTROL Subscription] è un tipo di dati XDM (Experience Data Model) standard che descrive le adesioni concesse in licenza a software, servizi o beni utilizzati in base all’ora o all’utilizzo.
+ Abbonamento è un tipo di dati XDM (Experience Data Model) standard che descrive le adesioni con licenza a software, servizi o beni utilizzati in base all’ora o all’utilizzo.
 
 <img src="../images/data-types/subscription-data-type.png" width="500" /><br />
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `device` | [[!UICONTROL Device]](./device.md) | Descrive i dettagli del dispositivo collegato alla sottoscrizione. |
-| `environment` | [[!UICONTROL Environment]](./environment.md) | Contiene informazioni sulla situazione circostante in cui si è verificata l&#39;osservazione dell&#39;evento, in particolare informazioni transitorie come le versioni di rete o software. |
-| `subscriber` | [[!UICONTROL Person]](./person.md) | Descrive una singola persona. Può anche rappresentare una persona che agisce in vari ruoli, ad esempio un cliente, un contatto o un proprietario. |
+| `device` | [[!UICONTROL Dispositivo]](./device.md) | Descrive i dettagli del dispositivo collegato alla sottoscrizione. |
+| `environment` | [[!UICONTROL Ambiente]](./environment.md) | Contiene informazioni sulla situazione circostante in cui si è verificata l&#39;osservazione dell&#39;evento, in particolare informazioni transitorie come le versioni di rete o software. |
+| `subscriber` | [[!UICONTROL Persona]](./person.md) | Descrive una singola persona. Può anche rappresentare una persona che agisce in vari ruoli, ad esempio un cliente, un contatto o un proprietario. |
 | `SKU` | Stringa | L&#39;unità di conservazione delle scorte (SKU), un identificatore univoco per un prodotto. |
 | `billingPeriod` | Stringa | La durata tra le fatture. |
 | `billingStartDate` | Data | Data di scadenza della prima fattura. Il formato della data (senza tempo) deve seguire lo standard [RFC 3339, sezione 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) . |
@@ -45,6 +44,8 @@ ht-degree: 9%
 | `termUnitOfTime` | Stringa | Unità di tempo per il periodo di tempo. |
 | `topUp` | Stringa | Descrive i termini concordati per il modo in cui gli aspetti di consumo di un abbonamento vengono riacquistati durante un periodo di fatturazione. |
 | `type` | Stringa | La portata del diritto in relazione al numero di persone che rientrano nel campo di applicazione della sottoscrizione. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Per ulteriori dettagli sul tipo di dati, consulta l’archivio XDM pubblico:
 
