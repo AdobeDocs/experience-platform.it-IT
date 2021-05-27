@@ -4,27 +4,28 @@ title: Tipo di dati campo preferenza personalizzazione generica
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM del campo delle preferenze di personalizzazione generica.
 exl-id: 3f6a3c31-19f3-4bad-921e-9ad33c6b9ac9
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '485'
 ht-degree: 1%
 
 ---
 
-# [!UICONTROL Generic Personalization Preference Field] tipo di dati
+# [!UICONTROL Tipo di dati ] campo preferenza personalizzazione generica
 
-[!UICONTROL Generic Personalization Preference Field] è un tipo di dati XDM standard che descrive la selezione di un cliente per una particolare preferenza di personalizzazione.
+[!UICONTROL I ] campi Preferenze personalizzazione generica sono un tipo di dati XDM standard che descrive la selezione di un cliente per una particolare preferenza di personalizzazione.
 
 >[!NOTE]
 >
->Questo tipo di dati è destinato a essere utilizzato per personalizzare la struttura degli schemi di consenso dell’organizzazione utilizzando il gruppo di campi [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]](../field-groups/profile/consents.md) come linea di base.
+>Questo tipo di dati è destinato a essere utilizzato per personalizzare la struttura degli schemi di consenso dell’organizzazione utilizzando come base di riferimento [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consensi)] gruppo di campi](../field-groups/profile/consents.md).
 
 ![](../images/data-types/personalization-field.png)
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
 | `val` | Stringa | La scelta preferenziale fornita dal cliente per questo caso di utilizzo di personalizzazione. Vedi la tabella seguente per i valori e le definizioni accettati. |
+
+{style=&quot;table-layout:auto&quot;}
 
 La tabella seguente illustra i valori accettati per `val`:
 
@@ -39,6 +40,8 @@ La tabella seguente illustra i valori accettati per `val`:
 | `CP` | Rispetto di un obbligo giuridico | La raccolta dei dati per lo scopo specificato è necessaria per soddisfare gli obblighi legali dell&#39;impresa. |
 | `VI` | Interesse fondamentale del singolo | La raccolta dei dati per lo scopo specifico è necessaria per tutelare gli interessi vitali dell&#39;individuo. |
 | `PI` | Interesse pubblico | La raccolta dei dati per lo scopo specificato è necessaria per svolgere un compito di interesse pubblico o nell&#39;esercizio di un&#39;autorità ufficiale. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Per ulteriori dettagli sul tipo di dati, consulta l’archivio XDM pubblico:
 
