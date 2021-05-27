@@ -6,10 +6,9 @@ description: Questo documento fornisce un'esercitazione per definire una relazio
 topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1354'
+source-wordcount: '1369'
 ht-degree: 1%
 
 ---
@@ -31,7 +30,7 @@ Questa esercitazione richiede una buona comprensione di [!DNL Experience Data Mo
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Fornisce un profilo di consumatore unificato e in tempo reale basato su dati aggregati provenienti da più origini.
 * [Sandbox](../../sandboxes/home.md):  [!DNL Experience Platform] fornisce sandbox virtuali che suddividono una singola  [!DNL Platform] istanza in ambienti virtuali separati per sviluppare e sviluppare applicazioni di esperienza digitale.
 
-Prima di avviare questa esercitazione, controlla la [guida per gli sviluppatori](../api/getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all’ API [!DNL Schema Registry]. Questo include il tuo `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni richieste per effettuare richieste (con particolare attenzione all&#39;intestazione [!DNL Accept] e ai suoi possibili valori).
+Prima di avviare questa esercitazione, controlla la [guida per gli sviluppatori](../api/getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all’ [!DNL Schema Registry] API. Questo include il tuo `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni richieste per effettuare richieste (con particolare attenzione all&#39;intestazione [!DNL Accept] e ai suoi possibili valori).
 
 ## Definire uno schema di origine e destinazione {#define-schemas}
 
@@ -231,6 +230,8 @@ Una risposta corretta restituisce i dettagli del gruppo di campi appena creato.
 | --- | --- |
 | `$id` | Identificatore univoco del nuovo gruppo di campi generato dal sistema di sola lettura. Si presenta sotto forma di URI. |
 
+{style=&quot;table-layout:auto&quot;}
+
 Registra l&#39; URI `$id` del gruppo di campi, da utilizzare nel passaggio successivo dell&#39;aggiunta del gruppo di campi allo schema di origine.
 
 ### Aggiungi il gruppo di campi allo schema di origine
@@ -246,6 +247,8 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 | Parametro | Descrizione |
 | --- | --- |
 | `{SCHEMA_ID}` | URI con codifica URL `$id` o `meta:altId` dello schema di origine. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
@@ -275,6 +278,8 @@ curl -X PATCH \
 | `op` | Operazione PATCH da eseguire. Questa richiesta utilizza l&#39;operazione `add` . |
 | `path` | Percorso del campo schema in cui verrà aggiunta la nuova risorsa. Quando si aggiungono gruppi di campi agli schemi, il valore deve essere &quot;/allOf/-&quot;. |
 | `value.$ref` | Il `$id` del gruppo di campi da aggiungere. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
@@ -378,6 +383,8 @@ curl -X POST \
 | `sourceProperty` | Percorso del campo di identità principale dello schema di destinazione. |
 | `xdm:identityNamespace` | Spazio dei nomi identità del campo di riferimento. Deve essere lo stesso namespace utilizzato quando si definisce il campo come identità principale dello schema. Per ulteriori informazioni, consulta la [panoramica dello spazio dei nomi di identità](../../identity-service/home.md) . |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Risposta**
 
 Una risposta corretta restituisce i dettagli del descrittore di riferimento appena creato per lo schema di destinazione.
@@ -436,6 +443,8 @@ curl -X POST \
 | `xdm:destinationSchema` | URL `$id` dello schema di destinazione. |
 | `xdm:destinationVersion` | Numero di versione dello schema di destinazione. |
 | `xdm:destinationProperty` | Percorso del campo di riferimento nello schema di destinazione. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Risposta
 
