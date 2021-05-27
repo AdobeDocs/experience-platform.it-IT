@@ -5,11 +5,10 @@ title: Elaborazione delle richieste di privacy in Data Lake
 topic-legacy: overview
 description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti relative all’accesso, alla rinuncia alla vendita o all’eliminazione dei propri dati personali come delineato dalle normative legali e organizzative sulla privacy. Questo documento tratta i concetti essenziali relativi all’elaborazione delle richieste di privacy per i dati dei clienti archiviati nel Data Lake.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e94482532e0c5698cfe5e51ba260f89c67fa64f0
 workflow-type: tm+mt
-source-wordcount: '1279'
-ht-degree: 0%
+source-wordcount: '1351'
+ht-degree: 1%
 
 ---
 
@@ -18,6 +17,12 @@ ht-degree: 0%
 Adobe Experience Platform [!DNL Privacy Service] elabora le richieste dei clienti relative all’accesso, alla rinuncia alla vendita o alla cancellazione dei propri dati personali secondo quanto delineato dalle normative legali e organizzative sulla privacy.
 
 Questo documento tratta i concetti essenziali relativi all’elaborazione delle richieste di privacy per i dati dei clienti memorizzati in [!DNL Data Lake].
+
+>[!NOTE]
+>
+>Questa guida descrive solo come effettuare richieste di privacy per Data Lake in Experience Platform. Se prevedi anche di effettuare richieste di privacy per l’archivio dati Profilo cliente in tempo reale, fai riferimento alla guida sull’ [elaborazione delle richieste di accesso a dati personali per Profilo](../profile/privacy.md) in aggiunta a questa esercitazione.
+>
+>Per i passaggi su come effettuare richieste di privacy per altre applicazioni Adobe Experience Cloud, consulta la [documentazione Privacy Service](../privacy-service/experience-cloud-apps.md).
 
 ## Introduzione
 
@@ -53,15 +58,15 @@ Questa sezione descrive i passaggi necessari per aggiungere un descrittore di id
 Esistono due metodi per aggiungere un descrittore di identità a uno schema di set di dati:
 
 * [Utilizzo dell’interfaccia](#identity-ui)
-* [Utilizzo dell’API](#identity-api)
+* [Mediante l’API](#identity-api)
 
 ### Utilizzo dell&#39;interfaccia utente {#identity-ui}
 
-Nell’interfaccia utente [!DNL Experience Platform ]l’area di lavoro **[!UICONTROL Schemas]** consente di modificare gli schemi XDM esistenti. Per aggiungere un descrittore di identità a uno schema, seleziona lo schema dall’elenco e segui i passaggi per [impostare un campo di schema come campo di identità](../xdm/tutorials/create-schema-ui.md#identity-field) nell’esercitazione [!DNL Schema Editor].
+Nell’interfaccia utente [!DNL Experience Platform ]schema, l’area di lavoro **[!UICONTROL Schemi]** consente di modificare gli schemi XDM esistenti. Per aggiungere un descrittore di identità a uno schema, seleziona lo schema dall’elenco e segui i passaggi per [impostare un campo di schema come campo di identità](../xdm/tutorials/create-schema-ui.md#identity-field) nell’esercitazione [!DNL Schema Editor].
 
 Dopo aver impostato come campi di identità i campi appropriati all&#39;interno dello schema, puoi passare alla sezione successiva in [invio di richieste di privacy](#submit).
 
-### Utilizzo dell&#39;API {#identity-api}
+### Mediante l’API {#identity-api}
 
 >[!NOTE]
 >
@@ -143,11 +148,11 @@ La sezione seguente illustra come effettuare richieste di privacy per [!DNL Data
 
 ### Utilizzo dell’interfaccia
 
-Durante la creazione di richieste di lavoro nell&#39;interfaccia utente, assicurati di selezionare **[!UICONTROL AEP Data Lake]** e/o **[!UICONTROL Profile]** in **[!UICONTROL Products]** per elaborare i processi per i dati memorizzati rispettivamente in [!DNL Data Lake] o [!DNL Real-time Customer Profile].
+Durante la creazione di richieste di lavoro nell&#39;interfaccia utente, assicurati di selezionare **[!UICONTROL AEP Data Lake]** e/o **[!UICONTROL Profilo]** in **[!UICONTROL Prodotti]** per elaborare i processi per i dati memorizzati rispettivamente in [!DNL Data Lake] o [!DNL Real-time Customer Profile].
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
-### Utilizzo dell’API
+### Mediante l’API
 
 Durante la creazione di richieste di lavoro nell’API, qualsiasi `userIDs` fornito deve utilizzare un `namespace` e `type` specifici a seconda dell’archivio dati a cui si applica. Gli ID per [!DNL Data Lake] devono utilizzare &quot;non registrato&quot; per il loro valore `type` e un valore `namespace` che corrisponde a una delle etichette [privacy](#privacy-labels) aggiunte ai set di dati applicabili.
 
