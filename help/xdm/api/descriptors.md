@@ -5,10 +5,9 @@ title: Endpoint API per descrittori
 description: L’endpoint /descriptors nell’API del Registro di sistema dello schema ti consente di gestire programmaticamente i descrittori XDM all’interno dell’applicazione di esperienza.
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1634'
 ht-degree: 1%
 
 ---
@@ -62,6 +61,8 @@ Il formato della risposta dipende dall’intestazione `Accept` inviata nella ric
 | `application/vnd.adobe.xdm+json` | Restituisce una matrice di oggetti descrittivi espansi |
 | `application/vnd.adobe.xdm-v2+json` | Questa intestazione `Accept` deve essere utilizzata per utilizzare le funzionalità di paging. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Risposta**
 
 La risposta include una matrice per ogni tipo di descrittore con descrittori definiti. In altre parole, se non sono presenti descrittori di un determinato `@type` definito, il Registro di sistema non restituirà una matrice vuota per quel tipo di descrittore.
@@ -97,6 +98,8 @@ GET /tenant/descriptors/{DESCRIPTOR_ID}
 | Parametro | Descrizione |
 | --- | --- |
 | `{DESCRIPTOR_ID}` | Il `@id` del descrittore da cercare. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
@@ -205,6 +208,8 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 | --- | --- |
 | `{DESCRIPTOR_ID}` | Il `@id` del descrittore da aggiornare. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Richiesta**
 
 Questa richiesta essenzialmente riscrive il descrittore, pertanto il corpo della richiesta deve includere tutti i campi necessari per definire un descrittore di quel tipo. In altre parole, il payload della richiesta per aggiornare (PUT) un descrittore è lo stesso del payload per [creare (POST) un descrittore](#create) dello stesso tipo.
@@ -260,6 +265,8 @@ DELETE /tenant/descriptors/{DESCRIPTOR_ID}
 | --- | --- |
 | `{DESCRIPTOR_ID}` | Il `@id` del descrittore da eliminare. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Richiesta**
 
 ```SHELL
@@ -287,7 +294,7 @@ Le sezioni seguenti forniscono una panoramica dei tipi di descrittori disponibil
 
 #### Descrittore di identità
 
-Un descrittore di identità segnala che &quot;[!UICONTROL sourceProperty]&quot; del campo &quot;[!UICONTROL sourceSchema]&quot; è un campo [!DNL Identity] come descritto da [Servizio Adobe Experience Platform Identity](../../identity-service/home.md).
+Un descrittore di identità segnala che &quot;[!UICONTROL sourceProperty]&quot; di &quot;[!UICONTROL sourceSchema]&quot; è un campo [!DNL Identity] come descritto da [Servizio Adobe Experience Platform Identity](../../identity-service/home.md).
 
 ```json
 {
@@ -311,6 +318,8 @@ Un descrittore di identità segnala che &quot;[!UICONTROL sourceProperty]&quot; 
 | `xdm:namespace` | Il valore `id` o `code` dello spazio dei nomi di identità. È possibile trovare un elenco di namespace utilizzando [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
 | `xdm:property` | A seconda del `xdm:namespace` utilizzato, è possibile utilizzare `xdm:id` o `xdm:code`. |
 | `xdm:isPrimary` | Un valore booleano facoltativo. Se true, indica il campo come identità principale. Gli schemi possono contenere una sola identità principale. |
+
+{style=&quot;table-layout:auto&quot;}
 
 #### descrittore di nome descrittivo
 
@@ -346,6 +355,8 @@ I descrittori di nomi descrittivi consentono a un utente di modificare i valori 
 | `xdm:description` | È possibile aggiungere una descrizione facoltativa insieme al titolo. |
 | `meta:enum` | Se il campo indicato da `xdm:sourceProperty` è un campo stringa, `meta:enum` determina l’elenco dei valori suggeriti per il campo nell’ [!DNL Experience Platform] interfaccia utente. È importante notare che `meta:enum` non dichiara un&#39;enumerazione né fornisce alcuna convalida di dati per il campo XDM.<br><br>Deve essere utilizzato solo per i campi XDM di base definiti da Adobe. Se la proprietà sorgente è un campo personalizzato definito dall’organizzazione, è invece necessario modificare la proprietà `meta:enum` del campo direttamente tramite una richiesta di PATCH alla risorsa principale del campo. |
 
+{style=&quot;table-layout:auto&quot;}
+
 #### Descrittore di relazione
 
 I descrittori di relazione descrivono una relazione tra due schemi diversi, basati sulle proprietà descritte in `sourceProperty` e `destinationProperty`. Per ulteriori informazioni, consulta l’esercitazione su [definizione di una relazione tra due schemi](../tutorials/relationship-api.md) .
@@ -373,6 +384,8 @@ I descrittori di relazione descrivono una relazione tra due schemi diversi, basa
 | `xdm:destinationSchema` | URI `$id` dello schema di destinazione con cui questo descrittore sta definendo una relazione. |
 | `xdm:destinationVersion` | Versione principale dello schema di destinazione. |
 | `xdm:destinationProperty` | Percorso facoltativo di un campo di destinazione nello schema di destinazione. Se questa proprietà viene omessa, il campo di destinazione viene dedotto da qualsiasi campo contenente un descrittore di identità di riferimento corrispondente (vedere di seguito). |
+
+{style=&quot;table-layout:auto&quot;}
 
 
 #### Descrittore di identità di riferimento
