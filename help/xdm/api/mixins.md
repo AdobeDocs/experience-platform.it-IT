@@ -5,10 +5,9 @@ title: Endpoint API per mixins
 description: L’endpoint /mixins nell’API del Registro di sistema dello schema ti consente di gestire programmaticamente i mixin XDM all’interno dell’applicazione di esperienza.
 topic-legacy: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
-translation-type: tm+mt
-source-git-commit: a19a89d347b9197ab2766bd8a57018f5ac4f058d
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1214'
 ht-degree: 2%
 
 ---
@@ -47,6 +46,8 @@ GET /{CONTAINER_ID}/mixins?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | Il contenitore da cui si desidera recuperare i mixin da: `global` per i mixin creati da Adobi o `tenant` per i mixin di proprietà della tua organizzazione. |
 | `{QUERY_PARAMS}` | Parametri di query opzionali per filtrare i risultati in base a. Per un elenco dei parametri disponibili, vedere il [documento dell&#39;appendice](./appendix.md#query). |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Richiesta**
 
 La richiesta seguente recupera un elenco di mixin dal contenitore `tenant` utilizzando un parametro di query `orderby` per ordinare i mixin base al relativo attributo `title`.
@@ -67,6 +68,8 @@ Il formato della risposta dipende dall’intestazione `Accept` inviata nella ric
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Restituisce un breve riepilogo di ciascuna risorsa. Intestazione consigliata per l’elenco delle risorse. (Limite: 300) |
 | `application/vnd.adobe.xed+json` | Restituisce il mixin JSON completo per ogni risorsa, con i valori originali `$ref` e `allOf` inclusi. (Limite: 300) |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
@@ -129,6 +132,8 @@ GET /{CONTAINER_ID}/mixins/{MIXIN_ID}
 | `{CONTAINER_ID}` | Il contenitore che ospita il mixin da recuperare: `global` per un mixin creato in Adobe o `tenant` per un mixin di proprietà della tua organizzazione. |
 | `{MIXIN_ID}` | Il `meta:altId` o URL-encoded `$id` del mixin che desideri cercare. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Richiesta**
 
 La richiesta seguente recupera un mixin dal relativo valore `meta:altId` fornito nel percorso.
@@ -152,6 +157,8 @@ Il formato della risposta dipende dall’intestazione `Accept` inviata nella ric
 | `application/vnd.adobe.xed-notext+json; version=1` | Non elaborato con `$ref` e `allOf`, senza titoli o descrizioni. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` e  `allOf` risolti, senza titoli o descrizioni. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` e  `allOf` risolti, descrittori inclusi. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
@@ -216,7 +223,7 @@ Una risposta corretta restituisce i dettagli del mixin. I campi restituiti dipen
 }
 ```
 
-## Crea un mixin {#create}
+## Creare un mixin {#create}
 
 Puoi definire un mixin personalizzato sotto il contenitore `tenant` effettuando una richiesta POST.
 
@@ -405,6 +412,8 @@ PUT /tenant/mixins/{MIXIN_ID}
 | --- | --- |
 | `{MIXIN_ID}` | Il `meta:altId` o l&#39;URL-encoded `$id` del mixin che desideri riscrivere. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Richiesta**
 
 La seguente richiesta riscrive un mixin esistente, aggiungendo un nuovo campo `propertyCountry` .
@@ -570,7 +579,7 @@ Una risposta corretta restituisce i dettagli del mixin aggiornato.
 }
 ```
 
-## Aggiorna una parte di un mixin {#patch}
+## Aggiornare una parte di un mixin {#patch}
 
 È possibile aggiornare una parte di un mixin utilizzando una richiesta PATCH. Il [!DNL Schema Registry] supporta tutte le operazioni standard di patch JSON, tra cui `add`, `remove` e `replace`. Per ulteriori informazioni sulla patch JSON, consulta la guida [Principi di base API](../../landing/api-fundamentals.md#json-patch).
 
@@ -587,6 +596,8 @@ PATCH /tenant/mixin/{MIXIN_ID}
 | Parametro | Descrizione |
 | --- | --- |
 | `{MIXIN_ID}` | URI con codifica URL `$id` o `meta:altId` del mixin che si desidera aggiornare. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
@@ -724,6 +735,8 @@ DELETE /tenant/mixins/{MIXIN_ID}
 | Parametro | Descrizione |
 | --- | --- |
 | `{MIXIN_ID}` | URI con codifica URL `$id` o `meta:altId` del mixin che si desidera eliminare. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
