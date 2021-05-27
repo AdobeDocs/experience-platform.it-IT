@@ -5,10 +5,9 @@ title: Elaborazione delle richieste di privacy in Profilo cliente in tempo reale
 type: Documentation
 description: Adobe Experience Platform Privacy Service elabora le richieste dei clienti relative all’accesso, alla rinuncia alla vendita o alla cancellazione dei propri dati personali come delineato da numerose normative sulla privacy. Questo documento tratta i concetti essenziali relativi all’elaborazione delle richieste di privacy per Profilo cliente in tempo reale.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-translation-type: tm+mt
-source-git-commit: 8d16a3030c663d40daed6c5105af07b2d2d5c7bf
+source-git-commit: e94482532e0c5698cfe5e51ba260f89c67fa64f0
 workflow-type: tm+mt
-source-wordcount: '1091'
+source-wordcount: '1173'
 ht-degree: 0%
 
 ---
@@ -17,7 +16,13 @@ ht-degree: 0%
 
 Adobe Experience Platform [!DNL Privacy Service] elabora le richieste dei clienti per accedere, rinunciare alla vendita o cancellare i propri dati personali come delineato dalle normative sulla privacy, come il Regolamento generale sulla protezione dei dati (RGPD) e [!DNL California Consumer Privacy Act] (CCPA).
 
-Questo documento tratta i concetti essenziali relativi all’elaborazione delle richieste di privacy per [!DNL Real-time Customer Profile].
+Questo documento tratta i concetti essenziali relativi all’elaborazione delle richieste di privacy per [!DNL Real-time Customer Profile] all’interno di Adobe Experience Platform.
+
+>[!NOTE]
+>
+>Questa guida descrive solo come effettuare richieste sulla privacy per i dati del profilo archiviati in Experience Platform. Se prevedi anche di effettuare richieste di privacy per Platform Data Lake, fai riferimento alla guida sull’ elaborazione delle richieste di privacy in Data Lake](../catalog/privacy.md) in aggiunta a questa esercitazione.[
+>
+>Per i passaggi su come effettuare richieste di privacy per altre applicazioni Adobe Experience Cloud, consulta la [documentazione Privacy Service](../privacy-service/experience-cloud-apps.md).
 
 ## Introduzione
 
@@ -41,7 +46,7 @@ Le sezioni seguenti descrivono come effettuare richieste di privacy per [!DNL Re
 
 >[!IMPORTANT]
 >
->Privacy Service è in grado di elaborare solo i dati [!DNL Profile] utilizzando un criterio di unione che non esegue l’unione delle identità. Se utilizzi l’interfaccia utente per confermare se le richieste di privacy sono in fase di elaborazione, assicurati di utilizzare un criterio con &quot;[!DNL None]&quot; come tipo [!UICONTROL ID stitching]. In altre parole, non è possibile utilizzare un criterio di unione in cui [!UICONTROL ID stitching] è impostato su &quot;[!UICONTROL Private graph]&quot;.
+>Privacy Service è in grado di elaborare solo i dati [!DNL Profile] utilizzando un criterio di unione che non esegue l’unione delle identità. Se utilizzi l’interfaccia utente per confermare se le richieste di privacy sono in fase di elaborazione, assicurati di utilizzare un criterio con &quot;[!DNL None]&quot; come tipo [!UICONTROL ID stitching]. In altre parole, non è possibile utilizzare un criterio di unione in cui [!UICONTROL ID stitching] è impostato su &quot;[!UICONTROL Grafico privato]&quot;.
 >
 >![](./images/privacy/no-id-stitch.png)
 >
@@ -95,14 +100,13 @@ curl -X POST \
     "include": ["ProfileService"],
     "expandIds": false,
     "priority": "normal",
-    "analyticsDeleteMethod": "anonymize",
     "regulation": "ccpa"
 }'
 ```
 
 ### Utilizzo dell’interfaccia
 
-Durante la creazione di richieste di lavoro nell&#39;interfaccia utente, assicurati di selezionare **[!UICONTROL AEP Data Lake]** e/o **[!UICONTROL Profile]** in **[!UICONTROL Products]** per elaborare i processi per i dati memorizzati rispettivamente in [!DNL Data Lake] o [!DNL Real-time Customer Profile].
+Durante la creazione di richieste di lavoro nell&#39;interfaccia utente, assicurati di selezionare **[!UICONTROL AEP Data Lake]** e/o **[!UICONTROL Profilo]** in **[!UICONTROL Prodotti]** per elaborare i processi per i dati memorizzati rispettivamente in [!DNL Data Lake] o [!DNL Real-time Customer Profile].
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
