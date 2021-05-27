@@ -5,17 +5,16 @@ title: Tipo di dati ambiente
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM per l’ambiente.
 exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '468'
 ht-degree: 4%
 
 ---
 
-# [!UICONTROL Environment] tipo di dati
+#  Tipo di dati ambientali
 
-[!UICONTROL Environment] è un tipo di dati XDM standard che descrive l’ambiente circostante di un evento osservato, specificando informazioni transitorie come le versioni di rete e software.
+ L&#39;ambiente è un tipo di dati XDM standard che descrive l&#39;ambiente circostante di un evento osservato, specificandone le informazioni transitorie, come le versioni di rete e software.
 
 >[!IMPORTANT]
 >
@@ -41,6 +40,8 @@ ht-degree: 4%
 | `viewportHeight` | Intero | Dimensione verticale in pixel della finestra in cui veniva visualizzata l’esperienza. Per un evento di visualizzazione web, si tratta dell&#39;altezza del riquadro di visualizzazione del browser. |
 | `viewPortWidth` | Intero | Dimensione orizzontale in pixel della finestra in cui veniva visualizzata l’esperienza. Per un evento di visualizzazione web, si tratta della larghezza del riquadro di visualizzazione del browser. |
 
+{style=&quot;table-layout:auto&quot;}
+
 Per ulteriori dettagli sul tipo di dati, consulta l’archivio XDM pubblico:
 
 * [Esempio popolato](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.example.1.json)
@@ -48,9 +49,9 @@ Per ulteriori dettagli sul tipo di dati, consulta l’archivio XDM pubblico:
 
 ## Appendice
 
-La sezione seguente contiene informazioni aggiuntive sul tipo di dati [!UICONTROL Device].
+La sezione seguente contiene informazioni aggiuntive sul tipo di dati [!UICONTROL Dispositivo].
 
-## Valori accettati per il tipo {#type}
+## Valori accettati per tipo {#type}
 
 La tabella seguente illustra i valori accettati per `type` e i relativi significati associati:
 
