@@ -4,21 +4,20 @@ title: Campo Preferenza Di Marketing Generico Con Tipo Di Dati Di Abbonamento
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del campo Preferenze di marketing generiche con tipo di dati XDM sottoscrizioni.
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '738'
 ht-degree: 2%
 
 ---
 
-# [!UICONTROL Generic Marketing Preference Field with Subscriptions] tipo di dati
+# [!UICONTROL Campo preferenza di marketing generico con tipo di dati ] Subscriptionsdata
 
-[!UICONTROL Generic Marketing Preference Field with Subscriptions] è un tipo di dati XDM standard che descrive la selezione di un cliente per una particolare preferenza di marketing.
+[!UICONTROL Campo preferenza marketing generico con ] sottoscrizione è un tipo di dati XDM standard che descrive la selezione di un cliente per una particolare preferenza di marketing.
 
 >[!NOTE]
 >
->Questo tipo di dati è destinato a essere utilizzato per personalizzare la struttura degli schemi di consenso dell’organizzazione utilizzando il gruppo di campi [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]](../field-groups/profile/consents.md) come linea di base.
+>Questo tipo di dati è destinato a essere utilizzato per personalizzare la struttura degli schemi di consenso dell’organizzazione utilizzando come base di riferimento [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consensi)] gruppo di campi](../field-groups/profile/consents.md).
 >
 >Se non hai bisogno di una mappatura `subscriptions` per un particolare campo delle preferenze di marketing, puoi invece utilizzare il tipo di dati del campo di marketing [base](./marketing-field.md).
 
@@ -30,6 +29,8 @@ ht-degree: 2%
 | `subscriptions` | Mappa | Mappa delle preferenze di marketing dei clienti per abbonamenti specifici. Per ulteriori informazioni, consulta la sezione sulle [sottoscrizioni](#subscriptions) . |
 | `time` | DateTime | Una marca temporale ISO 8601 di quando la preferenza di marketing è cambiata, se applicabile. |
 | `val` | Stringa | La scelta della preferenza fornita dal cliente per questo caso d’uso di marketing. Per i valori e le definizioni accettati, consulta la sezione [successiva](#val) . |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## `val` {#val}
 
@@ -46,6 +47,8 @@ La tabella seguente illustra i valori accettati per `val`:
 | `CP` | Rispetto di un obbligo giuridico | La raccolta dei dati per lo scopo specificato è necessaria per soddisfare gli obblighi legali dell&#39;impresa. |
 | `VI` | Interesse fondamentale del singolo | La raccolta dei dati per lo scopo specifico è necessaria per tutelare gli interessi vitali dell&#39;individuo. |
 | `PI` | Interesse pubblico | La raccolta dei dati per lo scopo specificato è necessaria per svolgere un compito di interesse pubblico o nell&#39;esercizio di un&#39;autorità ufficiale. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## `subscriptions` {#subscriptions}
 
@@ -90,6 +93,8 @@ Il seguente JSON rappresenta un campo di marketing di esempio per un canale di m
 | --- | --- |
 | `type` | Tipo di sottoscrizione. Può trattarsi di una qualsiasi stringa descrittiva, purché non contenga più di 15 caratteri. |
 | `subscribers` | Un campo di tipo mappa facoltativo che rappresenta un insieme di identificatori (ad esempio indirizzi e-mail o numeri di telefono) che hanno effettuato la sottoscrizione a una particolare sottoscrizione. Ogni chiave in questo oggetto rappresenta l&#39;identificatore in questione e contiene due sottoproprietà: <ul><li>`time`: Una marca temporale ISO 8601 del momento in cui l’identità è stata sottoscritta, se applicabile.</li><li>`source`: Origine dell&#39;utente che ha effettuato l&#39;abbonamento. Può trattarsi di una qualsiasi stringa descrittiva, purché non contenga più di 15 caratteri.</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Risorse aggiuntive
 
