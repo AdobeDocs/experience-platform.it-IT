@@ -5,10 +5,9 @@ title: Guida all’API per sandbox
 topic-legacy: developer guide
 description: L’API Sandbox consente agli sviluppatori di gestire in modo programmatico le sandbox in Adobe Experience Platform. Segui questa guida per scoprire come eseguire operazioni chiave utilizzando l’API.
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '375'
 ht-degree: 0%
 
 ---
@@ -21,7 +20,7 @@ Questa guida per gli sviluppatori descrive i passaggi necessari per utilizzare l
 
 ## Guida introduttiva all’API Sandbox
 
-Per gestire le sandbox per l’organizzazione IMS, è necessario disporre delle autorizzazioni di amministrazione sandbox. Gli utenti senza autorizzazioni di accesso possono utilizzare solo l&#39;endpoint per [elencare le sandbox attive per l&#39;utente corrente](./list-active-sandboxes.md). Per ulteriori informazioni, ad Experience Platform, su come assegnare le autorizzazioni sandbox, consulta la [panoramica sul controllo degli accessi](../../access-control/home.md) .
+Per gestire le sandbox per l’organizzazione IMS, è necessario disporre delle autorizzazioni di amministrazione sandbox. Gli utenti senza autorizzazioni di accesso possono utilizzare solo l’ [endpoint sandbox disponibili](./available.md) per elencare le sandbox attive per l’utente corrente. Per ulteriori informazioni, ad Experience Platform, su come assegnare le autorizzazioni sandbox, consulta la [panoramica sul controllo degli accessi](../../access-control/home.md) .
 
 ### Lettura di chiamate API di esempio
 
