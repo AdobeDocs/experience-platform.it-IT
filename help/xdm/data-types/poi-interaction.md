@@ -5,25 +5,26 @@ title: Tipo di dati di interazione del punto di interesse
 topic-legacy: overview
 description: Questo documento fornisce una panoramica del tipo di dati XDM del punto di interesse per l’interazione.
 exl-id: 398f56d9-1802-458d-b565-4096beb5b014
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '186'
 ht-degree: 2%
 
 ---
 
-# [!UICONTROL Point of interest interaction] tipo di dati
+# [!UICONTROL Tipo di dati ] interazioni punto di interesse
 
-[!UICONTROL Point of interest interaction] è un tipo di dati XDM standard che descrive il dispositivo wireless che comunica le informazioni di identità alle applicazioni mobili man mano che i dispositivi mobili rientrano nella gamma.
+[!UICONTROL L’] interazione dei punti di interesse è un tipo di dati XDM standard che descrive il dispositivo wireless che comunica le informazioni di identità alle applicazioni mobili man mano che i dispositivi mobili rientrano nella gamma.
 
 <img src="../images/data-types/poi-interaction.png" width="400" /><br />
 
 | Proprietà | Tipo di dati | Descrizione |
 | --- | --- | --- |
-| `poiDetail` | [[!UICONTROL Point of interest details]](./poi-details.md) | Descrive i dettagli del POI che ha causato l’evento. |
+| `poiDetail` | [[!UICONTROL Dettagli del punto di interesse]](./poi-details.md) | Descrive i dettagli del POI che ha causato l’evento. |
 | `poiEntries` | Oggetto | Descrive il numero di volte in cui una persona è entrata nel POI. Contiene due proprietà: <ul><li>`id`: Identificatore univoco della misura.</li><li>`value`: Valore quantificabile della misura.</li></ul> |
 | `poiExits` | Oggetto | Descrive il numero di volte in cui una persona è uscita dal POI. Contiene due proprietà: <ul><li>`id`: Identificatore univoco della misura.</li><li>`value`: Valore quantificabile della misura.</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 Per ulteriori dettagli sul tipo di dati, consulta l’archivio XDM pubblico:
 
