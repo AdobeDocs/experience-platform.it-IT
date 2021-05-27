@@ -5,10 +5,9 @@ title: Esporta/Importa endpoint API
 description: Gli endpoint /export e /import nell’API del Registro di sistema dello schema consentono di condividere risorse XDM tra organizzazioni IMS e sandbox.
 topic-legacy: developer guide
 exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '510'
 ht-degree: 1%
 
 ---
@@ -23,7 +22,7 @@ Gli endpoint utilizzati in questa guida fanno parte dell’ [[!DNL Schema Regist
 
 Gli endpoint di esportazione/importazione fanno parte delle chiamate di procedura remota (RPC) supportate da [!DNL Schema Registry]. A differenza di altri endpoint nell&#39;API [!DNL Schema Registry], gli endpoint RPC non richiedono intestazioni aggiuntive come `Accept` o `Content-Type` e non utilizzano un `CONTAINER_ID`. Devono invece utilizzare lo spazio dei nomi `/rpc` , come illustrato nelle chiamate API riportate di seguito.
 
-## Recupera un payload di esportazione per una risorsa {#export}
+## Recuperare un payload di esportazione per una risorsa {#export}
 
 Per qualsiasi schema, gruppo di campi o tipo di dati esistente nel [!DNL Schema Library], puoi generare un payload di esportazione effettuando una richiesta di GET all’ endpoint `/export`, fornendo l’ID della risorsa nel percorso.
 
@@ -36,6 +35,8 @@ GET /rpc/export/{RESOURCE_ID}
 | Parametro | Descrizione |
 | --- | --- |
 | `{RESOURCE_ID}` | La `meta:altId` o la codifica URL `$id` della risorsa XDM da esportare. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
