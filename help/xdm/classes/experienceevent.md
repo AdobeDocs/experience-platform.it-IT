@@ -5,9 +5,9 @@ title: Classe ExperienceEvent XDM
 topic-legacy: overview
 description: Questo documento fornisce una panoramica della classe ExperienceEvent XDM e delle best practice per la modellazione dei dati degli eventi.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 4f1fe7ca5f09bb1e8e1b913d1dee1cff347d6a24
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1482'
 ht-degree: 1%
 
 ---
@@ -30,6 +30,8 @@ La classe [!DNL XDM ExperienceEvent] fornisce a uno schema diversi campi relativ
 | `producedBy` | Valore stringa che descrive il produttore o l&#39;origine dell&#39;evento. Questo campo può essere utilizzato per filtrare alcuni produttori di eventi se necessario a scopo di segmentazione.<br><br>Alcuni valori consigliati per questa proprietà sono forniti nella sezione  [dell&#39;appendice](#producedBy). Questo campo è un enum estensibile, il che significa che è possibile utilizzare anche le proprie stringhe per rappresentare diversi produttori di eventi. |
 | `identityMap` | Campo mappa contenente un set di identità con spazi dei nomi per l’individuo a cui si applica l’evento. Questo campo viene aggiornato automaticamente dal sistema durante l’acquisizione dei dati di identità. Per utilizzare correttamente questo campo per [Profilo cliente in tempo reale](../../profile/home.md), non tentare di aggiornare manualmente il contenuto del campo nelle operazioni sui dati.<br /><br />Per ulteriori informazioni sul relativo caso d’uso, consulta la sezione sulle mappe di identità nelle  [nozioni di base sulla ](../schema/composition.md#identityMap) composizione degli schemi . |
 | `timestamp` | Una marca temporale ISO 8601 di quando si è verificato l’evento, formattata in base alla sezione 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) della RFC 3339. [ Questa marca temporale deve essere presente in passato. Per le best practice sull’utilizzo di questo campo, consulta la sezione seguente sulle [marche temporali](#timestamps) . |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Best practice per la modellazione degli eventi
 
@@ -100,6 +102,8 @@ La tabella seguente illustra i valori accettati per `eventType`, insieme alle re
 | `delivery.feedback` | Eventi di feedback per una consegna, ad esempio una consegna e-mail. |
 | `message.feedback` | Eventi di feedback come sent/bounce/error per i messaggi inviati a un cliente. |
 | `message.tracking` | Tracciamento di eventi come azioni aperte/clic/personalizzate sui messaggi inviati a un cliente. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Valori consigliati per `producedBy` {#producedBy}
 
