@@ -6,10 +6,9 @@ description: In circostanze specifiche, potrebbe essere necessario creare uno sc
 topic-legacy: tutorial
 type: Tutorial
 exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '832'
 ht-degree: 2%
 
 ---
@@ -27,7 +26,7 @@ Questa esercitazione richiede una buona comprensione del sistema [!DNL Experienc
 - [Panoramica](../home.md) del sistema XDM: Panoramica di alto livello di XDM e della sua implementazione in  [!DNL Experience Platform].
 - [Nozioni di base sulla composizione](../schema/composition.md) dello schema: Panoramica dei componenti di base degli schemi XDM.
 
-Prima di avviare questa esercitazione, controlla la [guida per gli sviluppatori](../api/getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all’ API [!DNL Schema Registry]. Questo include il tuo `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni richieste per fare richieste (con particolare attenzione all&#39;intestazione Accept e ai suoi possibili valori).
+Prima di avviare questa esercitazione, controlla la [guida per gli sviluppatori](../api/getting-started.md) per informazioni importanti che devi conoscere per effettuare correttamente le chiamate all’ [!DNL Schema Registry] API. Questo include il tuo `{TENANT_ID}`, il concetto di &quot;contenitori&quot; e le intestazioni richieste per fare richieste (con particolare attenzione all&#39;intestazione Accept e ai suoi possibili valori).
 
 ## Creare una classe ad hoc
 
@@ -86,6 +85,8 @@ curl -X POST \
 | --- | --- |
 | `$ref` | Il comportamento dei dati per la nuova classe. Per le classi ad-hoc, questo valore deve essere impostato su `https://ns.adobe.com/xdm/data/adhoc`. |
 | `properties._adhoc` | Oggetto che contiene i campi personalizzati per la classe, espressi come coppie chiave-valore di nomi di campo e tipi di dati. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Risposta**
 
@@ -147,6 +148,8 @@ Una risposta corretta restituisce i dettagli della nuova classe, sostituendo il 
 | Proprietà | Descrizione |
 | --- | --- |
 | `$id` | URI che funge da identificatore univoco generato dal sistema di sola lettura per la nuova classe ad-hoc. Questo valore viene utilizzato nel passaggio successivo della creazione di uno schema ad hoc. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Creare uno schema ad hoc
 
@@ -238,6 +241,8 @@ GET /tenant/schemas/{SCHEMA_ID}
 | Parametro | Descrizione |
 | --- | --- |
 | `{SCHEMA_ID}` | URI con codifica URL `$id` o `meta:altId` dello schema ad-hoc a cui si desidera accedere. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Richiesta**
 
