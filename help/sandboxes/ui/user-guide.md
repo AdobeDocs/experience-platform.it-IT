@@ -5,10 +5,9 @@ title: Guida all’interfaccia utente sandbox
 topic-legacy: user guide
 description: Questo documento fornisce passaggi su come eseguire varie operazioni relative alle sandbox nell’interfaccia utente di Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8c1c7b6b01b55bd15c492b0f62d280c1e9a98070
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '699'
 ht-degree: 0%
 
 ---
@@ -19,7 +18,7 @@ Questo documento fornisce passaggi su come eseguire varie operazioni relative al
 
 ## Visualizzare le sandbox
 
-Nell’interfaccia utente di Experience Platform, seleziona **[!UICONTROL Sandboxes]** nel menu di navigazione a sinistra per aprire il dashboard **[!UICONTROL Sandboxes]**. Il dashboard elenca tutte le sandbox disponibili per la tua organizzazione, inclusi il tipo di sandbox (produzione o sviluppo) e lo stato (attivo, creazione, eliminato o non riuscito).
+Nell’interfaccia utente di Platform, seleziona **[!UICONTROL Sandbox]** nel menu di navigazione a sinistra per aprire il dashboard [!UICONTROL Sandbox]. Il dashboard elenca tutte le sandbox disponibili per la tua organizzazione, inclusi il tipo di sandbox (produzione o sviluppo) e lo stato (attivo, creazione, eliminato o non riuscito).
 
 ![](../images/ui/view-sandboxes.png)
 
@@ -49,61 +48,61 @@ Utilizza il seguente video per una rapida panoramica sull’utilizzo delle sandb
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
-Per creare una nuova sandbox nell’interfaccia utente, seleziona il pulsante **[!UICONTROL Create Sandbox]** in alto a destra nella schermata.
+Per creare una nuova sandbox, seleziona **[!UICONTROL Crea sandbox]** nell’angolo in alto a destra dello schermo.
 
-![](../images/ui/create-sandbox.png)
+![creare](../images/ui/create.png)
 
-Viene visualizzata la finestra di dialogo **[!UICONTROL Create Sandbox]** in cui viene richiesto di specificare un titolo e un nome da visualizzare per la sandbox. Il **titolo di visualizzazione** deve essere leggibile dall&#39;uomo e deve essere sufficientemente descrittivo da essere facilmente identificabile. La sandbox **[!UICONTROL Name]** è un identificatore in minuscolo da utilizzare nelle chiamate API e deve pertanto essere univoca e concisa. La sandbox **[!UICONTROL Name]** deve essere costituita solo da caratteri alfanumerici e trattini **(-)**, deve iniziare con una lettera e deve contenere un massimo di 256 caratteri.
+Viene visualizzata la finestra di dialogo **[!UICONTROL Crea sandbox]** . Se stai creando una sandbox di sviluppo, seleziona **[!UICONTROL Sviluppo]** nel pannello a discesa . Per creare una nuova sandbox di produzione, seleziona **[!UICONTROL Produzione]**.
 
-Al termine, seleziona **[!UICONTROL Create]**.
+![type](../images/ui/type.png)
 
-![](../images/ui/create-dialog.png)
+Dopo aver selezionato il tipo, fornisci alla sandbox un nome e un titolo. Il titolo deve essere leggibile dall’uomo e deve essere sufficientemente descrittivo da essere facilmente identificabile. Il nome della sandbox è un identificatore in minuscolo da utilizzare nelle chiamate API e dovrebbe pertanto essere univoco e conciso. Il nome della sandbox deve iniziare con una lettera, contenere un massimo di 256 caratteri e contenere solo caratteri alfanumerici e trattini (-).
 
->[!NOTE]
->
->Poiché sei limitato alla creazione di soli tipi di sandbox non di produzione, l’opzione **[!UICONTROL type]** è bloccata in &quot;Non produzione&quot; e non può essere manipolata.
+Al termine, seleziona **[!UICONTROL Crea]**.
 
-Una volta completata la creazione della sandbox, aggiorna la pagina e la nuova sandbox viene visualizzata nel dashboard **[!UICONTROL Sandboxes]** con lo stato &quot;[!UICONTROL Creating]&quot;. Il provisioning delle nuove sandbox richiede circa 15 minuti dal sistema, dopodiché il loro stato cambia in &quot;[!UICONTROL Active]&quot;.
+![info](../images/ui/info.png)
 
-![](../images/ui/creating.png)
+Dopo aver completato la creazione della sandbox, aggiorna la pagina e la nuova sandbox viene visualizzata nel dashboard **[!UICONTROL Sandbox]** con lo stato &quot;[!UICONTROL Creazione]&quot;. Il provisioning delle nuove sandbox richiede circa 30 secondi dal sistema, dopodiché il loro stato cambia in &quot;[!UICONTROL Attivo]&quot;.
 
 ## Reimpostare una sandbox
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Questa funzionalità è disponibile solo per sandbox non di produzione. Impossibile ripristinare le sandbox di produzione.
+>Non è possibile ripristinare la sandbox di produzione predefinita se il grafico di identità ospitato al suo interno viene utilizzato anche da Adobe Analytics per la funzione [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) o se il grafico di identità ospitato al suo interno viene utilizzato anche da Adobe Audience Manager per la funzione [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) . Non è inoltre possibile ripristinare le sandbox di produzione utilizzate per la condivisione di segmenti bidirezionali con Adobe Audience Manager o il servizio core Audience.
 
-Se si reimposta una sandbox non di produzione, vengono eliminate tutte le risorse associate a tale sandbox (schemi, set di dati e così via), mantenendo il nome della sandbox e le relative autorizzazioni. Questa sandbox &quot;pulita&quot; continua a essere disponibile con lo stesso nome per gli utenti che vi hanno accesso.
+Se si reimposta una sandbox di produzione o sviluppo, vengono eliminate tutte le risorse associate a tale sandbox (schemi, set di dati e così via), mantenendo il nome della sandbox e le relative autorizzazioni. Questa sandbox &quot;pulita&quot; continua a essere disponibile con lo stesso nome per gli utenti che vi hanno accesso.
 
-Per ripristinare una sandbox nell’interfaccia utente, seleziona **[!UICONTROL Sandboxes]** nel menu di navigazione a sinistra, quindi seleziona la sandbox da reimpostare. Nella finestra di dialogo visualizzata sul lato destro dello schermo, seleziona **[!UICONTROL Reset Sandbox]**.
+Seleziona la sandbox da reimpostare dall’elenco delle sandbox. Nel pannello di navigazione a destra visualizzato, seleziona **[!UICONTROL Ripristino sandbox]**.
 
-![](../images/ui/reset-sandbox.png)
+![reset](../images/ui/reset.png)
 
-Viene visualizzata una finestra di dialogo che richiede di confermare la scelta. Seleziona **[!UICONTROL Reset]** per continuare.
+Viene visualizzata una finestra di dialogo che richiede di confermare la scelta. Selezionare **[!UICONTROL Continua]** per continuare.
 
-![](../images/ui/reset-confirm.png)
+![avviso di reset](../images/ui/reset-warning.png)
 
-Viene visualizzato un messaggio di conferma e lo stato della sandbox diventa &quot;**[!UICONTROL Resetting]&quot;**. Una volta effettuato il provisioning dal sistema, il relativo stato verrà aggiornato a **&quot;[!UICONTROL Active]&quot;** o **&quot;[!UICONTROL Failed]&quot;**.
+Nella finestra di conferma finale, immetti il nome della sandbox nella finestra di dialogo e seleziona **[!UICONTROL Ripristina]**
 
-![](../images/ui/resetting.png)
+![reset-confirm](../images/ui/reset-confirm.png)
 
 ## Eliminare una sandbox
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Questa funzionalità è disponibile solo per sandbox non di produzione. Non è possibile eliminare le sandbox di produzione.
+>Non è possibile eliminare la sandbox di produzione predefinita e non è possibile eliminare anche le sandbox di produzione utilizzate per la condivisione di segmenti bidirezionali con Adobe Audience Manager o con il servizio core Audience.
 
-L’eliminazione di una sandbox non di produzione rimuove definitivamente tutte le risorse associate a tale sandbox, comprese le autorizzazioni.
+L’eliminazione di una sandbox di produzione o di sviluppo comporta la rimozione definitiva di tutte le risorse associate a tale sandbox, comprese le autorizzazioni.
 
-Per eliminare una sandbox nell’interfaccia utente, seleziona **[!UICONTROL Sandboxes]** nel menu di navigazione a sinistra, quindi seleziona la sandbox da eliminare. Nella finestra di dialogo visualizzata sul lato destro dello schermo, seleziona **[!UICONTROL Delete Sandbox]**.
+Seleziona la sandbox da eliminare dall’elenco delle sandbox. Nel pannello di navigazione a destra visualizzato, seleziona **[!UICONTROL Elimina]**.
 
-![](../images/ui/delete-sandbox.png)
+![delete](../images/ui/delete.png)
 
-Viene visualizzata una finestra di dialogo che richiede di confermare la scelta. Seleziona **[!UICONTROL Delete]** per continuare.
+Viene visualizzata una finestra di dialogo che richiede di confermare la scelta. Selezionare **[!UICONTROL Continua]** per continuare.
 
-![](../images/ui/delete-confirm.png)
+![avviso di cancellazione](../images/ui/delete-warning.png)
 
-Viene visualizzato un messaggio di conferma e la sandbox viene rimossa dall’area di lavoro **[!UICONTROL Sandboxes]**.
+Nella finestra di conferma finale, immetti il nome della sandbox nella finestra di dialogo e seleziona **[!UICONTROL Continua]**
+
+![delete-confirm](../images/ui/delete-confirm.png)
 
 ## Passaggi successivi
 
